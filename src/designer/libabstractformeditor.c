@@ -36,8 +36,8 @@ void q_designerformeditorinterface_on_meta_object(void* self, const QMetaObject*
     QDesignerFormEditorInterface_OnMetaObject((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerformeditorinterface_qbase_meta_object(void* self) {
-    return QDesignerFormEditorInterface_QBaseMetaObject((QDesignerFormEditorInterface*)self);
+const QMetaObject* q_designerformeditorinterface_super_meta_object(void* self) {
+    return QDesignerFormEditorInterface_SuperMetaObject((QDesignerFormEditorInterface*)self);
 }
 
 void* q_designerformeditorinterface_metacast(void* self, const char* param1) {
@@ -48,8 +48,8 @@ void q_designerformeditorinterface_on_metacast(void* self, void* (*callback)(voi
     QDesignerFormEditorInterface_OnMetacast((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void* q_designerformeditorinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerFormEditorInterface_QBaseMetacast((QDesignerFormEditorInterface*)self, param1);
+void* q_designerformeditorinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerFormEditorInterface_SuperMetacast((QDesignerFormEditorInterface*)self, param1);
 }
 
 int32_t q_designerformeditorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -60,8 +60,8 @@ void q_designerformeditorinterface_on_metacall(void* self, int32_t (*callback)(v
     QDesignerFormEditorInterface_OnMetacall((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerformeditorinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerFormEditorInterface_QBaseMetacall((QDesignerFormEditorInterface*)self, param1, param2, param3);
+int32_t q_designerformeditorinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerFormEditorInterface_SuperMetacall((QDesignerFormEditorInterface*)self, param1, param2, param3);
 }
 
 const char* q_designerformeditorinterface_tr(const char* s) {
@@ -184,8 +184,8 @@ void q_designerformeditorinterface_on_set_form_manager(void* self, void (*callba
     QDesignerFormEditorInterface_OnSetFormManager((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformeditorinterface_qbase_set_form_manager(void* self, void* formWindowManager) {
-    QDesignerFormEditorInterface_QBaseSetFormManager((QDesignerFormEditorInterface*)self, (QDesignerFormWindowManagerInterface*)formWindowManager);
+void q_designerformeditorinterface_super_set_form_manager(void* self, void* formWindowManager) {
+    QDesignerFormEditorInterface_SuperSetFormManager((QDesignerFormEditorInterface*)self, (QDesignerFormWindowManagerInterface*)formWindowManager);
 }
 
 void q_designerformeditorinterface_set_meta_data_base(void* self, void* metaDataBase) {
@@ -196,8 +196,8 @@ void q_designerformeditorinterface_on_set_meta_data_base(void* self, void (*call
     QDesignerFormEditorInterface_OnSetMetaDataBase((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformeditorinterface_qbase_set_meta_data_base(void* self, void* metaDataBase) {
-    QDesignerFormEditorInterface_QBaseSetMetaDataBase((QDesignerFormEditorInterface*)self, (QDesignerMetaDataBaseInterface*)metaDataBase);
+void q_designerformeditorinterface_super_set_meta_data_base(void* self, void* metaDataBase) {
+    QDesignerFormEditorInterface_SuperSetMetaDataBase((QDesignerFormEditorInterface*)self, (QDesignerMetaDataBaseInterface*)metaDataBase);
 }
 
 void q_designerformeditorinterface_set_widget_data_base(void* self, void* widgetDataBase) {
@@ -208,8 +208,8 @@ void q_designerformeditorinterface_on_set_widget_data_base(void* self, void (*ca
     QDesignerFormEditorInterface_OnSetWidgetDataBase((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformeditorinterface_qbase_set_widget_data_base(void* self, void* widgetDataBase) {
-    QDesignerFormEditorInterface_QBaseSetWidgetDataBase((QDesignerFormEditorInterface*)self, (QDesignerWidgetDataBaseInterface*)widgetDataBase);
+void q_designerformeditorinterface_super_set_widget_data_base(void* self, void* widgetDataBase) {
+    QDesignerFormEditorInterface_SuperSetWidgetDataBase((QDesignerFormEditorInterface*)self, (QDesignerWidgetDataBaseInterface*)widgetDataBase);
 }
 
 void q_designerformeditorinterface_set_promotion(void* self, void* promotion) {
@@ -220,8 +220,8 @@ void q_designerformeditorinterface_on_set_promotion(void* self, void (*callback)
     QDesignerFormEditorInterface_OnSetPromotion((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformeditorinterface_qbase_set_promotion(void* self, void* promotion) {
-    QDesignerFormEditorInterface_QBaseSetPromotion((QDesignerFormEditorInterface*)self, (QDesignerPromotionInterface*)promotion);
+void q_designerformeditorinterface_super_set_promotion(void* self, void* promotion) {
+    QDesignerFormEditorInterface_SuperSetPromotion((QDesignerFormEditorInterface*)self, (QDesignerPromotionInterface*)promotion);
 }
 
 void q_designerformeditorinterface_set_widget_factory(void* self, void* widgetFactory) {
@@ -232,8 +232,8 @@ void q_designerformeditorinterface_on_set_widget_factory(void* self, void (*call
     QDesignerFormEditorInterface_OnSetWidgetFactory((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformeditorinterface_qbase_set_widget_factory(void* self, void* widgetFactory) {
-    QDesignerFormEditorInterface_QBaseSetWidgetFactory((QDesignerFormEditorInterface*)self, (QDesignerWidgetFactoryInterface*)widgetFactory);
+void q_designerformeditorinterface_super_set_widget_factory(void* self, void* widgetFactory) {
+    QDesignerFormEditorInterface_SuperSetWidgetFactory((QDesignerFormEditorInterface*)self, (QDesignerWidgetFactoryInterface*)widgetFactory);
 }
 
 void q_designerformeditorinterface_set_extension_manager(void* self, void* extensionManager) {
@@ -244,8 +244,8 @@ void q_designerformeditorinterface_on_set_extension_manager(void* self, void (*c
     QDesignerFormEditorInterface_OnSetExtensionManager((QDesignerFormEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerformeditorinterface_qbase_set_extension_manager(void* self, void* extensionManager) {
-    QDesignerFormEditorInterface_QBaseSetExtensionManager((QDesignerFormEditorInterface*)self, (QExtensionManager*)extensionManager);
+void q_designerformeditorinterface_super_set_extension_manager(void* self, void* extensionManager) {
+    QDesignerFormEditorInterface_SuperSetExtensionManager((QDesignerFormEditorInterface*)self, (QExtensionManager*)extensionManager);
 }
 
 const char* q_designerformeditorinterface_tr2(const char* s, const char* c) {
@@ -477,8 +477,8 @@ bool q_designerformeditorinterface_event(void* self, void* event) {
     return QDesignerFormEditorInterface_Event((QDesignerFormEditorInterface*)self, (QEvent*)event);
 }
 
-bool q_designerformeditorinterface_qbase_event(void* self, void* event) {
-    return QDesignerFormEditorInterface_QBaseEvent((QDesignerFormEditorInterface*)self, (QEvent*)event);
+bool q_designerformeditorinterface_super_event(void* self, void* event) {
+    return QDesignerFormEditorInterface_SuperEvent((QDesignerFormEditorInterface*)self, (QEvent*)event);
 }
 
 void q_designerformeditorinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -489,8 +489,8 @@ bool q_designerformeditorinterface_event_filter(void* self, void* watched, void*
     return QDesignerFormEditorInterface_EventFilter((QDesignerFormEditorInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designerformeditorinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerFormEditorInterface_QBaseEventFilter((QDesignerFormEditorInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designerformeditorinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerFormEditorInterface_SuperEventFilter((QDesignerFormEditorInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designerformeditorinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -501,8 +501,8 @@ void q_designerformeditorinterface_timer_event(void* self, void* event) {
     QDesignerFormEditorInterface_TimerEvent((QDesignerFormEditorInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designerformeditorinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerFormEditorInterface_QBaseTimerEvent((QDesignerFormEditorInterface*)self, (QTimerEvent*)event);
+void q_designerformeditorinterface_super_timer_event(void* self, void* event) {
+    QDesignerFormEditorInterface_SuperTimerEvent((QDesignerFormEditorInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designerformeditorinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -513,8 +513,8 @@ void q_designerformeditorinterface_child_event(void* self, void* event) {
     QDesignerFormEditorInterface_ChildEvent((QDesignerFormEditorInterface*)self, (QChildEvent*)event);
 }
 
-void q_designerformeditorinterface_qbase_child_event(void* self, void* event) {
-    QDesignerFormEditorInterface_QBaseChildEvent((QDesignerFormEditorInterface*)self, (QChildEvent*)event);
+void q_designerformeditorinterface_super_child_event(void* self, void* event) {
+    QDesignerFormEditorInterface_SuperChildEvent((QDesignerFormEditorInterface*)self, (QChildEvent*)event);
 }
 
 void q_designerformeditorinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -525,8 +525,8 @@ void q_designerformeditorinterface_custom_event(void* self, void* event) {
     QDesignerFormEditorInterface_CustomEvent((QDesignerFormEditorInterface*)self, (QEvent*)event);
 }
 
-void q_designerformeditorinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerFormEditorInterface_QBaseCustomEvent((QDesignerFormEditorInterface*)self, (QEvent*)event);
+void q_designerformeditorinterface_super_custom_event(void* self, void* event) {
+    QDesignerFormEditorInterface_SuperCustomEvent((QDesignerFormEditorInterface*)self, (QEvent*)event);
 }
 
 void q_designerformeditorinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -537,8 +537,8 @@ void q_designerformeditorinterface_connect_notify(void* self, void* signal) {
     QDesignerFormEditorInterface_ConnectNotify((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformeditorinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerFormEditorInterface_QBaseConnectNotify((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
+void q_designerformeditorinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerFormEditorInterface_SuperConnectNotify((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerformeditorinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -549,8 +549,8 @@ void q_designerformeditorinterface_disconnect_notify(void* self, void* signal) {
     QDesignerFormEditorInterface_DisconnectNotify((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerformeditorinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerFormEditorInterface_QBaseDisconnectNotify((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
+void q_designerformeditorinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerFormEditorInterface_SuperDisconnectNotify((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerformeditorinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -561,8 +561,8 @@ QObject* q_designerformeditorinterface_sender(void* self) {
     return QDesignerFormEditorInterface_Sender((QDesignerFormEditorInterface*)self);
 }
 
-QObject* q_designerformeditorinterface_qbase_sender(void* self) {
-    return QDesignerFormEditorInterface_QBaseSender((QDesignerFormEditorInterface*)self);
+QObject* q_designerformeditorinterface_super_sender(void* self) {
+    return QDesignerFormEditorInterface_SuperSender((QDesignerFormEditorInterface*)self);
 }
 
 void q_designerformeditorinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -573,8 +573,8 @@ int32_t q_designerformeditorinterface_sender_signal_index(void* self) {
     return QDesignerFormEditorInterface_SenderSignalIndex((QDesignerFormEditorInterface*)self);
 }
 
-int32_t q_designerformeditorinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerFormEditorInterface_QBaseSenderSignalIndex((QDesignerFormEditorInterface*)self);
+int32_t q_designerformeditorinterface_super_sender_signal_index(void* self) {
+    return QDesignerFormEditorInterface_SuperSenderSignalIndex((QDesignerFormEditorInterface*)self);
 }
 
 void q_designerformeditorinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -585,8 +585,8 @@ int32_t q_designerformeditorinterface_receivers(void* self, const char* signal) 
     return QDesignerFormEditorInterface_Receivers((QDesignerFormEditorInterface*)self, signal);
 }
 
-int32_t q_designerformeditorinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerFormEditorInterface_QBaseReceivers((QDesignerFormEditorInterface*)self, signal);
+int32_t q_designerformeditorinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerFormEditorInterface_SuperReceivers((QDesignerFormEditorInterface*)self, signal);
 }
 
 void q_designerformeditorinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -597,8 +597,8 @@ bool q_designerformeditorinterface_is_signal_connected(void* self, void* signal)
     return QDesignerFormEditorInterface_IsSignalConnected((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designerformeditorinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerFormEditorInterface_QBaseIsSignalConnected((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
+bool q_designerformeditorinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerFormEditorInterface_SuperIsSignalConnected((QDesignerFormEditorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerformeditorinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

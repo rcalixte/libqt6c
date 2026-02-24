@@ -32,13 +32,17 @@ const QMetaObject* q_style_meta_object(void* self);
 ///
 void q_style_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_style_super_meta_object` instead
+///
+#define q_style_qbase_meta_object q_style_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QStyle*
 ///
-const QMetaObject* q_style_qbase_meta_object(void* self);
+const QMetaObject* q_style_super_meta_object(void* self);
 
 /// @param self QStyle*
 /// @param param1 const char*
@@ -52,12 +56,16 @@ void* q_style_metacast(void* self, const char* param1);
 ///
 void q_style_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_style_super_metacast` instead
+///
+#define q_style_qbase_metacast q_style_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QStyle*
 /// @param param1 const char*
 ///
-void* q_style_qbase_metacast(void* self, const char* param1);
+void* q_style_super_metacast(void* self, const char* param1);
 
 /// @param self QStyle*
 /// @param param1 enum QMetaObject__Call
@@ -73,6 +81,10 @@ int32_t q_style_metacall(void* self, int32_t param1, int param2, void* param3);
 ///
 void q_style_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_metacall` instead
+///
+#define q_style_qbase_metacall q_style_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QStyle*
@@ -80,7 +92,7 @@ void q_style_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_style_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_style_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ void q_style_polish(void* self, void* widget);
 ///
 void q_style_on_polish(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_polish` instead
+///
+#define q_style_qbase_polish q_style_super_polish
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void q_style_on_polish(void* self, void (*callback)(void*, void*));
 /// @param self QStyle*
 /// @param widget QWidget*
 ///
-void q_style_qbase_polish(void* self, void* widget);
+void q_style_super_polish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
@@ -139,6 +155,10 @@ void q_style_unpolish(void* self, void* widget);
 ///
 void q_style_on_unpolish(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_unpolish` instead
+///
+#define q_style_qbase_unpolish q_style_super_unpolish
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// Base class method implementation
@@ -146,7 +166,7 @@ void q_style_on_unpolish(void* self, void (*callback)(void*, void*));
 /// @param self QStyle*
 /// @param widget QWidget*
 ///
-void q_style_qbase_unpolish(void* self, void* widget);
+void q_style_super_unpolish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
@@ -164,6 +184,10 @@ void q_style_polish2(void* self, void* application);
 ///
 void q_style_on_polish2(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_polish2` instead
+///
+#define q_style_qbase_polish2 q_style_super_polish2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
@@ -171,7 +195,7 @@ void q_style_on_polish2(void* self, void (*callback)(void*, void*));
 /// @param self QStyle*
 /// @param application QApplication*
 ///
-void q_style_qbase_polish2(void* self, void* application);
+void q_style_super_polish2(void* self, void* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
@@ -189,6 +213,10 @@ void q_style_unpolish2(void* self, void* application);
 ///
 void q_style_on_unpolish2(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_unpolish2` instead
+///
+#define q_style_qbase_unpolish2 q_style_super_unpolish2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#unpolish)
 ///
 /// Base class method implementation
@@ -196,7 +224,7 @@ void q_style_on_unpolish2(void* self, void (*callback)(void*, void*));
 /// @param self QStyle*
 /// @param application QApplication*
 ///
-void q_style_qbase_unpolish2(void* self, void* application);
+void q_style_super_unpolish2(void* self, void* application);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
@@ -214,6 +242,10 @@ void q_style_polish3(void* self, void* palette);
 ///
 void q_style_on_polish3(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_polish3` instead
+///
+#define q_style_qbase_polish3 q_style_super_polish3
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#polish)
 ///
 /// Base class method implementation
@@ -221,7 +253,7 @@ void q_style_on_polish3(void* self, void (*callback)(void*, void*));
 /// @param self QStyle*
 /// @param palette QPalette*
 ///
-void q_style_qbase_polish3(void* self, void* palette);
+void q_style_super_polish3(void* self, void* palette);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
 ///
@@ -243,6 +275,10 @@ QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool ena
 ///
 void q_style_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
+/// @warning DEPRECATED: Use `q_style_super_item_text_rect` instead
+///
+#define q_style_qbase_item_text_rect q_style_super_item_text_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemTextRect)
 ///
 /// Base class method implementation
@@ -254,7 +290,7 @@ void q_style_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void
 /// @param enabled bool
 /// @param text const char*
 ///
-QRect* q_style_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
+QRect* q_style_super_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
 ///
@@ -274,6 +310,10 @@ QRect* q_style_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 ///
 void q_style_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_item_pixmap_rect` instead
+///
+#define q_style_qbase_item_pixmap_rect q_style_super_item_pixmap_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#itemPixmapRect)
 ///
 /// Base class method implementation
@@ -283,7 +323,7 @@ void q_style_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, in
 /// @param flags int
 /// @param pixmap QPixmap*
 ///
-QRect* q_style_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
+QRect* q_style_super_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
@@ -307,6 +347,10 @@ void q_style_draw_item_text(void* self, void* painter, void* rect, int flags, vo
 ///
 void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `q_style_super_draw_item_text` instead
+///
+#define q_style_qbase_draw_item_text q_style_super_draw_item_text
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemText)
 ///
 /// Base class method implementation
@@ -320,7 +364,7 @@ void q_style_on_draw_item_text(void* self, void (*callback)(void*, void*, void*,
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
 ///
-void q_style_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
+void q_style_super_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
 ///
@@ -341,6 +385,10 @@ void q_style_draw_item_pixmap(void* self, void* painter, void* rect, int alignme
 ///
 void q_style_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_draw_item_pixmap` instead
+///
+#define q_style_qbase_draw_item_pixmap q_style_super_draw_item_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawItemPixmap)
 ///
 /// Base class method implementation
@@ -351,7 +399,7 @@ void q_style_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void
 /// @param alignment int
 /// @param pixmap QPixmap*
 ///
-void q_style_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
+void q_style_super_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
 ///
@@ -368,13 +416,17 @@ QPalette* q_style_standard_palette(void* self);
 ///
 void q_style_on_standard_palette(void* self, QPalette* (*callback)());
 
+/// @warning DEPRECATED: Use `q_style_super_standard_palette` instead
+///
+#define q_style_qbase_standard_palette q_style_super_standard_palette
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPalette)
 ///
 /// Base class method implementation
 ///
 /// @param self QStyle*
 ///
-QPalette* q_style_qbase_standard_palette(void* self);
+QPalette* q_style_super_standard_palette(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
 ///
@@ -395,6 +447,10 @@ void q_style_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w)
 ///
 void q_style_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_draw_primitive` instead
+///
+#define q_style_qbase_draw_primitive q_style_super_draw_primitive
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawPrimitive)
 ///
 /// Base class method implementation
@@ -405,7 +461,7 @@ void q_style_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void
 /// @param p QPainter*
 /// @param w QWidget*
 ///
-void q_style_qbase_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
+void q_style_super_draw_primitive(void* self, int32_t pe, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
 ///
@@ -426,6 +482,10 @@ void q_style_draw_control(void* self, int32_t element, void* opt, void* p, void*
 ///
 void q_style_on_draw_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_draw_control` instead
+///
+#define q_style_qbase_draw_control q_style_super_draw_control
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawControl)
 ///
 /// Base class method implementation
@@ -436,7 +496,7 @@ void q_style_on_draw_control(void* self, void (*callback)(void*, int32_t, void*,
 /// @param p QPainter*
 /// @param w QWidget*
 ///
-void q_style_qbase_draw_control(void* self, int32_t element, void* opt, void* p, void* w);
+void q_style_super_draw_control(void* self, int32_t element, void* opt, void* p, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
 ///
@@ -456,6 +516,10 @@ QRect* q_style_sub_element_rect(void* self, int32_t subElement, void* option, vo
 ///
 void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_sub_element_rect` instead
+///
+#define q_style_qbase_sub_element_rect q_style_super_sub_element_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subElementRect)
 ///
 /// Base class method implementation
@@ -465,7 +529,7 @@ void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, 
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QRect* q_style_qbase_sub_element_rect(void* self, int32_t subElement, void* option, void* widget);
+QRect* q_style_super_sub_element_rect(void* self, int32_t subElement, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
 ///
@@ -486,6 +550,10 @@ void q_style_draw_complex_control(void* self, int32_t cc, void* opt, void* p, vo
 ///
 void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_draw_complex_control` instead
+///
+#define q_style_qbase_draw_complex_control q_style_super_draw_complex_control
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#drawComplexControl)
 ///
 /// Base class method implementation
@@ -496,7 +564,7 @@ void q_style_on_draw_complex_control(void* self, void (*callback)(void*, int32_t
 /// @param p QPainter*
 /// @param widget QWidget*
 ///
-void q_style_qbase_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* widget);
+void q_style_super_draw_complex_control(void* self, int32_t cc, void* opt, void* p, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
 ///
@@ -519,6 +587,10 @@ int32_t q_style_hit_test_complex_control(void* self, int32_t cc, void* opt, void
 ///
 void q_style_on_hit_test_complex_control(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_hit_test_complex_control` instead
+///
+#define q_style_qbase_hit_test_complex_control q_style_super_hit_test_complex_control
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#hitTestComplexControl)
 ///
 /// Base class method implementation
@@ -531,7 +603,7 @@ void q_style_on_hit_test_complex_control(void* self, int32_t (*callback)(void*, 
 ///
 /// @return enum QStyle__SubControl
 ///
-int32_t q_style_qbase_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* widget);
+int32_t q_style_super_hit_test_complex_control(void* self, int32_t cc, void* opt, void* pt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
 ///
@@ -552,6 +624,10 @@ QRect* q_style_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, v
 ///
 void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_sub_control_rect` instead
+///
+#define q_style_qbase_sub_control_rect q_style_super_sub_control_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#subControlRect)
 ///
 /// Base class method implementation
@@ -562,7 +638,7 @@ void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, 
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
 ///
-QRect* q_style_qbase_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
+QRect* q_style_super_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
 ///
@@ -582,6 +658,10 @@ int32_t q_style_pixel_metric(void* self, int32_t metric, void* option, void* wid
 ///
 void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_pixel_metric` instead
+///
+#define q_style_qbase_pixel_metric q_style_super_pixel_metric
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#pixelMetric)
 ///
 /// Base class method implementation
@@ -591,7 +671,7 @@ void q_style_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_t, voi
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_style_qbase_pixel_metric(void* self, int32_t metric, void* option, void* widget);
+int32_t q_style_super_pixel_metric(void* self, int32_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
 ///
@@ -612,6 +692,10 @@ QSize* q_style_size_from_contents(void* self, int32_t ct, void* opt, void* conte
 ///
 void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_size_from_contents` instead
+///
+#define q_style_qbase_size_from_contents q_style_super_size_from_contents
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#sizeFromContents)
 ///
 /// Base class method implementation
@@ -622,7 +706,7 @@ void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t
 /// @param contentsSize QSize*
 /// @param w QWidget*
 ///
-QSize* q_style_qbase_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* w);
+QSize* q_style_super_size_from_contents(void* self, int32_t ct, void* opt, void* contentsSize, void* w);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
 ///
@@ -643,6 +727,10 @@ int32_t q_style_style_hint(void* self, int32_t stylehint, void* opt, void* widge
 ///
 void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_style_hint` instead
+///
+#define q_style_qbase_style_hint q_style_super_style_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#styleHint)
 ///
 /// Base class method implementation
@@ -653,7 +741,7 @@ void q_style_on_style_hint(void* self, int32_t (*callback)(void*, int32_t, void*
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
 ///
-int32_t q_style_qbase_style_hint(void* self, int32_t stylehint, void* opt, void* widget, void* returnData);
+int32_t q_style_super_style_hint(void* self, int32_t stylehint, void* opt, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
 ///
@@ -673,6 +761,10 @@ QPixmap* q_style_standard_pixmap(void* self, int32_t standardPixmap, void* opt, 
 ///
 void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_standard_pixmap` instead
+///
+#define q_style_qbase_standard_pixmap q_style_super_standard_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardPixmap)
 ///
 /// Base class method implementation
@@ -682,7 +774,7 @@ void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t,
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 ///
-QPixmap* q_style_qbase_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
+QPixmap* q_style_super_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
 ///
@@ -702,6 +794,10 @@ QIcon* q_style_standard_icon(void* self, int32_t standardIcon, void* option, voi
 ///
 void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_standard_icon` instead
+///
+#define q_style_qbase_standard_icon q_style_super_standard_icon
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#standardIcon)
 ///
 /// Base class method implementation
@@ -711,7 +807,7 @@ void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, voi
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QIcon* q_style_qbase_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
+QIcon* q_style_super_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
 ///
@@ -731,6 +827,10 @@ QPixmap* q_style_generated_icon_pixmap(void* self, int32_t iconMode, void* pixma
 ///
 void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_generated_icon_pixmap` instead
+///
+#define q_style_qbase_generated_icon_pixmap q_style_super_generated_icon_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#generatedIconPixmap)
 ///
 /// Base class method implementation
@@ -740,7 +840,7 @@ void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, in
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
 ///
-QPixmap* q_style_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
+QPixmap* q_style_super_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#visualRect)
 ///
@@ -814,6 +914,10 @@ int32_t q_style_layout_spacing(void* self, int32_t control1, int32_t control2, i
 ///
 void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_style_super_layout_spacing` instead
+///
+#define q_style_qbase_layout_spacing q_style_super_layout_spacing
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#layoutSpacing)
 ///
 /// Base class method implementation
@@ -825,7 +929,7 @@ void q_style_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, i
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_style_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
+int32_t q_style_super_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstyle.html#combinedLayoutSpacing)
 ///
@@ -1360,6 +1464,10 @@ void q_style_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_style_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_style_super_event` instead
+///
+#define q_style_qbase_event q_style_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1369,7 +1477,7 @@ bool q_style_event(void* self, void* event);
 /// @param self QStyle*
 /// @param event QEvent*
 ///
-bool q_style_qbase_event(void* self, void* event);
+bool q_style_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1394,6 +1502,10 @@ void q_style_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_style_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_style_super_event_filter` instead
+///
+#define q_style_qbase_event_filter q_style_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1404,7 +1516,7 @@ bool q_style_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_style_qbase_event_filter(void* self, void* watched, void* event);
+bool q_style_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1428,6 +1540,10 @@ void q_style_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 ///
 void q_style_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_style_super_timer_event` instead
+///
+#define q_style_qbase_timer_event q_style_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1437,7 +1553,7 @@ void q_style_timer_event(void* self, void* event);
 /// @param self QStyle*
 /// @param event QTimerEvent*
 ///
-void q_style_qbase_timer_event(void* self, void* event);
+void q_style_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1461,6 +1577,10 @@ void q_style_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_style_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_style_super_child_event` instead
+///
+#define q_style_qbase_child_event q_style_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1470,7 +1590,7 @@ void q_style_child_event(void* self, void* event);
 /// @param self QStyle*
 /// @param event QChildEvent*
 ///
-void q_style_qbase_child_event(void* self, void* event);
+void q_style_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1494,6 +1614,10 @@ void q_style_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_style_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_style_super_custom_event` instead
+///
+#define q_style_qbase_custom_event q_style_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1503,7 +1627,7 @@ void q_style_custom_event(void* self, void* event);
 /// @param self QStyle*
 /// @param event QEvent*
 ///
-void q_style_qbase_custom_event(void* self, void* event);
+void q_style_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1527,6 +1651,10 @@ void q_style_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_style_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_style_super_connect_notify` instead
+///
+#define q_style_qbase_connect_notify q_style_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1536,7 +1664,7 @@ void q_style_connect_notify(void* self, void* signal);
 /// @param self QStyle*
 /// @param signal QMetaMethod*
 ///
-void q_style_qbase_connect_notify(void* self, void* signal);
+void q_style_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1560,6 +1688,10 @@ void q_style_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_style_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_style_super_disconnect_notify` instead
+///
+#define q_style_qbase_disconnect_notify q_style_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1569,7 +1701,7 @@ void q_style_disconnect_notify(void* self, void* signal);
 /// @param self QStyle*
 /// @param signal QMetaMethod*
 ///
-void q_style_qbase_disconnect_notify(void* self, void* signal);
+void q_style_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1592,6 +1724,10 @@ void q_style_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 ///
 QObject* q_style_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_style_super_sender` instead
+///
+#define q_style_qbase_sender q_style_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1600,7 +1736,7 @@ QObject* q_style_sender(void* self);
 ///
 /// @param self QStyle*
 ///
-QObject* q_style_qbase_sender(void* self);
+QObject* q_style_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1623,6 +1759,10 @@ void q_style_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_style_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_style_super_sender_signal_index` instead
+///
+#define q_style_qbase_sender_signal_index q_style_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1631,7 +1771,7 @@ int32_t q_style_sender_signal_index(void* self);
 ///
 /// @param self QStyle*
 ///
-int32_t q_style_qbase_sender_signal_index(void* self);
+int32_t q_style_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1655,6 +1795,10 @@ void q_style_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_style_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_style_super_receivers` instead
+///
+#define q_style_qbase_receivers q_style_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1664,7 +1808,7 @@ int32_t q_style_receivers(void* self, const char* signal);
 /// @param self QStyle*
 /// @param signal const char*
 ///
-int32_t q_style_qbase_receivers(void* self, const char* signal);
+int32_t q_style_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1688,6 +1832,10 @@ void q_style_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 bool q_style_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_style_super_is_signal_connected` instead
+///
+#define q_style_qbase_is_signal_connected q_style_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1697,7 +1845,7 @@ bool q_style_is_signal_connected(void* self, void* signal);
 /// @param self QStyle*
 /// @param signal QMetaMethod*
 ///
-bool q_style_qbase_is_signal_connected(void* self, void* signal);
+bool q_style_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

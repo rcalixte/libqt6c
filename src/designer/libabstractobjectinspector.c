@@ -31,8 +31,8 @@ void q_designerobjectinspectorinterface_on_meta_object(void* self, const QMetaOb
     QDesignerObjectInspectorInterface_OnMetaObject((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designerobjectinspectorinterface_qbase_meta_object(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseMetaObject((QDesignerObjectInspectorInterface*)self);
+const QMetaObject* q_designerobjectinspectorinterface_super_meta_object(void* self) {
+    return QDesignerObjectInspectorInterface_SuperMetaObject((QDesignerObjectInspectorInterface*)self);
 }
 
 void* q_designerobjectinspectorinterface_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_designerobjectinspectorinterface_on_metacast(void* self, void* (*callback
     QDesignerObjectInspectorInterface_OnMetacast((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-void* q_designerobjectinspectorinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerObjectInspectorInterface_QBaseMetacast((QDesignerObjectInspectorInterface*)self, param1);
+void* q_designerobjectinspectorinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerObjectInspectorInterface_SuperMetacast((QDesignerObjectInspectorInterface*)self, param1);
 }
 
 int32_t q_designerobjectinspectorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_designerobjectinspectorinterface_on_metacall(void* self, int32_t (*callba
     QDesignerObjectInspectorInterface_OnMetacall((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designerobjectinspectorinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerObjectInspectorInterface_QBaseMetacall((QDesignerObjectInspectorInterface*)self, param1, param2, param3);
+int32_t q_designerobjectinspectorinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerObjectInspectorInterface_SuperMetacall((QDesignerObjectInspectorInterface*)self, param1, param2, param3);
 }
 
 const char* q_designerobjectinspectorinterface_tr(const char* s) {
@@ -74,8 +74,8 @@ void q_designerobjectinspectorinterface_on_core(void* self, QDesignerFormEditorI
     QDesignerObjectInspectorInterface_OnCore((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designerobjectinspectorinterface_qbase_core(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseCore((QDesignerObjectInspectorInterface*)self);
+QDesignerFormEditorInterface* q_designerobjectinspectorinterface_super_core(void* self) {
+    return QDesignerObjectInspectorInterface_SuperCore((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_set_form_window(void* self, void* formWindow) {
@@ -86,8 +86,8 @@ void q_designerobjectinspectorinterface_on_set_form_window(void* self, void (*ca
     QDesignerObjectInspectorInterface_OnSetFormWindow((QDesignerObjectInspectorInterface*)self, (intptr_t)callback);
 }
 
-void q_designerobjectinspectorinterface_qbase_set_form_window(void* self, void* formWindow) {
-    QDesignerObjectInspectorInterface_QBaseSetFormWindow((QDesignerObjectInspectorInterface*)self, (QDesignerFormWindowInterface*)formWindow);
+void q_designerobjectinspectorinterface_super_set_form_window(void* self, void* formWindow) {
+    QDesignerObjectInspectorInterface_SuperSetFormWindow((QDesignerObjectInspectorInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 const char* q_designerobjectinspectorinterface_tr2(const char* s, const char* c) {
@@ -1489,8 +1489,8 @@ int32_t q_designerobjectinspectorinterface_dev_type(void* self) {
     return QDesignerObjectInspectorInterface_DevType((QDesignerObjectInspectorInterface*)self);
 }
 
-int32_t q_designerobjectinspectorinterface_qbase_dev_type(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseDevType((QDesignerObjectInspectorInterface*)self);
+int32_t q_designerobjectinspectorinterface_super_dev_type(void* self) {
+    return QDesignerObjectInspectorInterface_SuperDevType((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1501,8 +1501,8 @@ void q_designerobjectinspectorinterface_set_visible(void* self, bool visible) {
     QDesignerObjectInspectorInterface_SetVisible((QDesignerObjectInspectorInterface*)self, visible);
 }
 
-void q_designerobjectinspectorinterface_qbase_set_visible(void* self, bool visible) {
-    QDesignerObjectInspectorInterface_QBaseSetVisible((QDesignerObjectInspectorInterface*)self, visible);
+void q_designerobjectinspectorinterface_super_set_visible(void* self, bool visible) {
+    QDesignerObjectInspectorInterface_SuperSetVisible((QDesignerObjectInspectorInterface*)self, visible);
 }
 
 void q_designerobjectinspectorinterface_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1513,8 +1513,8 @@ QSize* q_designerobjectinspectorinterface_size_hint(void* self) {
     return QDesignerObjectInspectorInterface_SizeHint((QDesignerObjectInspectorInterface*)self);
 }
 
-QSize* q_designerobjectinspectorinterface_qbase_size_hint(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseSizeHint((QDesignerObjectInspectorInterface*)self);
+QSize* q_designerobjectinspectorinterface_super_size_hint(void* self) {
+    return QDesignerObjectInspectorInterface_SuperSizeHint((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1525,8 +1525,8 @@ QSize* q_designerobjectinspectorinterface_minimum_size_hint(void* self) {
     return QDesignerObjectInspectorInterface_MinimumSizeHint((QDesignerObjectInspectorInterface*)self);
 }
 
-QSize* q_designerobjectinspectorinterface_qbase_minimum_size_hint(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseMinimumSizeHint((QDesignerObjectInspectorInterface*)self);
+QSize* q_designerobjectinspectorinterface_super_minimum_size_hint(void* self) {
+    return QDesignerObjectInspectorInterface_SuperMinimumSizeHint((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1537,8 +1537,8 @@ int32_t q_designerobjectinspectorinterface_height_for_width(void* self, int para
     return QDesignerObjectInspectorInterface_HeightForWidth((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-int32_t q_designerobjectinspectorinterface_qbase_height_for_width(void* self, int param1) {
-    return QDesignerObjectInspectorInterface_QBaseHeightForWidth((QDesignerObjectInspectorInterface*)self, param1);
+int32_t q_designerobjectinspectorinterface_super_height_for_width(void* self, int param1) {
+    return QDesignerObjectInspectorInterface_SuperHeightForWidth((QDesignerObjectInspectorInterface*)self, param1);
 }
 
 void q_designerobjectinspectorinterface_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1549,8 +1549,8 @@ bool q_designerobjectinspectorinterface_has_height_for_width(void* self) {
     return QDesignerObjectInspectorInterface_HasHeightForWidth((QDesignerObjectInspectorInterface*)self);
 }
 
-bool q_designerobjectinspectorinterface_qbase_has_height_for_width(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseHasHeightForWidth((QDesignerObjectInspectorInterface*)self);
+bool q_designerobjectinspectorinterface_super_has_height_for_width(void* self) {
+    return QDesignerObjectInspectorInterface_SuperHasHeightForWidth((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1561,8 +1561,8 @@ QPaintEngine* q_designerobjectinspectorinterface_paint_engine(void* self) {
     return QDesignerObjectInspectorInterface_PaintEngine((QDesignerObjectInspectorInterface*)self);
 }
 
-QPaintEngine* q_designerobjectinspectorinterface_qbase_paint_engine(void* self) {
-    return QDesignerObjectInspectorInterface_QBasePaintEngine((QDesignerObjectInspectorInterface*)self);
+QPaintEngine* q_designerobjectinspectorinterface_super_paint_engine(void* self) {
+    return QDesignerObjectInspectorInterface_SuperPaintEngine((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1573,8 +1573,8 @@ bool q_designerobjectinspectorinterface_event(void* self, void* event) {
     return QDesignerObjectInspectorInterface_Event((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
 }
 
-bool q_designerobjectinspectorinterface_qbase_event(void* self, void* event) {
-    return QDesignerObjectInspectorInterface_QBaseEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
+bool q_designerobjectinspectorinterface_super_event(void* self, void* event) {
+    return QDesignerObjectInspectorInterface_SuperEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1585,8 +1585,8 @@ void q_designerobjectinspectorinterface_mouse_press_event(void* self, void* even
     QDesignerObjectInspectorInterface_MousePressEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_mouse_press_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseMousePressEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
+void q_designerobjectinspectorinterface_super_mouse_press_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperMousePressEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1597,8 +1597,8 @@ void q_designerobjectinspectorinterface_mouse_release_event(void* self, void* ev
     QDesignerObjectInspectorInterface_MouseReleaseEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_mouse_release_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseMouseReleaseEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
+void q_designerobjectinspectorinterface_super_mouse_release_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperMouseReleaseEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1609,8 +1609,8 @@ void q_designerobjectinspectorinterface_mouse_double_click_event(void* self, voi
     QDesignerObjectInspectorInterface_MouseDoubleClickEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_mouse_double_click_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseMouseDoubleClickEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
+void q_designerobjectinspectorinterface_super_mouse_double_click_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperMouseDoubleClickEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1621,8 +1621,8 @@ void q_designerobjectinspectorinterface_mouse_move_event(void* self, void* event
     QDesignerObjectInspectorInterface_MouseMoveEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_mouse_move_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseMouseMoveEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
+void q_designerobjectinspectorinterface_super_mouse_move_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperMouseMoveEvent((QDesignerObjectInspectorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1633,8 +1633,8 @@ void q_designerobjectinspectorinterface_wheel_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_WheelEvent((QDesignerObjectInspectorInterface*)self, (QWheelEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_wheel_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseWheelEvent((QDesignerObjectInspectorInterface*)self, (QWheelEvent*)event);
+void q_designerobjectinspectorinterface_super_wheel_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperWheelEvent((QDesignerObjectInspectorInterface*)self, (QWheelEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1645,8 +1645,8 @@ void q_designerobjectinspectorinterface_key_press_event(void* self, void* event)
     QDesignerObjectInspectorInterface_KeyPressEvent((QDesignerObjectInspectorInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_key_press_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseKeyPressEvent((QDesignerObjectInspectorInterface*)self, (QKeyEvent*)event);
+void q_designerobjectinspectorinterface_super_key_press_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperKeyPressEvent((QDesignerObjectInspectorInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1657,8 +1657,8 @@ void q_designerobjectinspectorinterface_key_release_event(void* self, void* even
     QDesignerObjectInspectorInterface_KeyReleaseEvent((QDesignerObjectInspectorInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_key_release_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseKeyReleaseEvent((QDesignerObjectInspectorInterface*)self, (QKeyEvent*)event);
+void q_designerobjectinspectorinterface_super_key_release_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperKeyReleaseEvent((QDesignerObjectInspectorInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1669,8 +1669,8 @@ void q_designerobjectinspectorinterface_focus_in_event(void* self, void* event) 
     QDesignerObjectInspectorInterface_FocusInEvent((QDesignerObjectInspectorInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_focus_in_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseFocusInEvent((QDesignerObjectInspectorInterface*)self, (QFocusEvent*)event);
+void q_designerobjectinspectorinterface_super_focus_in_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperFocusInEvent((QDesignerObjectInspectorInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1681,8 +1681,8 @@ void q_designerobjectinspectorinterface_focus_out_event(void* self, void* event)
     QDesignerObjectInspectorInterface_FocusOutEvent((QDesignerObjectInspectorInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_focus_out_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseFocusOutEvent((QDesignerObjectInspectorInterface*)self, (QFocusEvent*)event);
+void q_designerobjectinspectorinterface_super_focus_out_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperFocusOutEvent((QDesignerObjectInspectorInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1693,8 +1693,8 @@ void q_designerobjectinspectorinterface_enter_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_EnterEvent((QDesignerObjectInspectorInterface*)self, (QEnterEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_enter_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseEnterEvent((QDesignerObjectInspectorInterface*)self, (QEnterEvent*)event);
+void q_designerobjectinspectorinterface_super_enter_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperEnterEvent((QDesignerObjectInspectorInterface*)self, (QEnterEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1705,8 +1705,8 @@ void q_designerobjectinspectorinterface_leave_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_LeaveEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_leave_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseLeaveEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
+void q_designerobjectinspectorinterface_super_leave_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperLeaveEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1717,8 +1717,8 @@ void q_designerobjectinspectorinterface_paint_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_PaintEvent((QDesignerObjectInspectorInterface*)self, (QPaintEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_paint_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBasePaintEvent((QDesignerObjectInspectorInterface*)self, (QPaintEvent*)event);
+void q_designerobjectinspectorinterface_super_paint_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperPaintEvent((QDesignerObjectInspectorInterface*)self, (QPaintEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1729,8 +1729,8 @@ void q_designerobjectinspectorinterface_move_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_MoveEvent((QDesignerObjectInspectorInterface*)self, (QMoveEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_move_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseMoveEvent((QDesignerObjectInspectorInterface*)self, (QMoveEvent*)event);
+void q_designerobjectinspectorinterface_super_move_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperMoveEvent((QDesignerObjectInspectorInterface*)self, (QMoveEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1741,8 +1741,8 @@ void q_designerobjectinspectorinterface_resize_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_ResizeEvent((QDesignerObjectInspectorInterface*)self, (QResizeEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_resize_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseResizeEvent((QDesignerObjectInspectorInterface*)self, (QResizeEvent*)event);
+void q_designerobjectinspectorinterface_super_resize_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperResizeEvent((QDesignerObjectInspectorInterface*)self, (QResizeEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1753,8 +1753,8 @@ void q_designerobjectinspectorinterface_close_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_CloseEvent((QDesignerObjectInspectorInterface*)self, (QCloseEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_close_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseCloseEvent((QDesignerObjectInspectorInterface*)self, (QCloseEvent*)event);
+void q_designerobjectinspectorinterface_super_close_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperCloseEvent((QDesignerObjectInspectorInterface*)self, (QCloseEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1765,8 +1765,8 @@ void q_designerobjectinspectorinterface_context_menu_event(void* self, void* eve
     QDesignerObjectInspectorInterface_ContextMenuEvent((QDesignerObjectInspectorInterface*)self, (QContextMenuEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_context_menu_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseContextMenuEvent((QDesignerObjectInspectorInterface*)self, (QContextMenuEvent*)event);
+void q_designerobjectinspectorinterface_super_context_menu_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperContextMenuEvent((QDesignerObjectInspectorInterface*)self, (QContextMenuEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1777,8 +1777,8 @@ void q_designerobjectinspectorinterface_tablet_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_TabletEvent((QDesignerObjectInspectorInterface*)self, (QTabletEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_tablet_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseTabletEvent((QDesignerObjectInspectorInterface*)self, (QTabletEvent*)event);
+void q_designerobjectinspectorinterface_super_tablet_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperTabletEvent((QDesignerObjectInspectorInterface*)self, (QTabletEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1789,8 +1789,8 @@ void q_designerobjectinspectorinterface_action_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_ActionEvent((QDesignerObjectInspectorInterface*)self, (QActionEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_action_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseActionEvent((QDesignerObjectInspectorInterface*)self, (QActionEvent*)event);
+void q_designerobjectinspectorinterface_super_action_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperActionEvent((QDesignerObjectInspectorInterface*)self, (QActionEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1801,8 +1801,8 @@ void q_designerobjectinspectorinterface_drag_enter_event(void* self, void* event
     QDesignerObjectInspectorInterface_DragEnterEvent((QDesignerObjectInspectorInterface*)self, (QDragEnterEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_drag_enter_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseDragEnterEvent((QDesignerObjectInspectorInterface*)self, (QDragEnterEvent*)event);
+void q_designerobjectinspectorinterface_super_drag_enter_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperDragEnterEvent((QDesignerObjectInspectorInterface*)self, (QDragEnterEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1813,8 +1813,8 @@ void q_designerobjectinspectorinterface_drag_move_event(void* self, void* event)
     QDesignerObjectInspectorInterface_DragMoveEvent((QDesignerObjectInspectorInterface*)self, (QDragMoveEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_drag_move_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseDragMoveEvent((QDesignerObjectInspectorInterface*)self, (QDragMoveEvent*)event);
+void q_designerobjectinspectorinterface_super_drag_move_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperDragMoveEvent((QDesignerObjectInspectorInterface*)self, (QDragMoveEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1825,8 +1825,8 @@ void q_designerobjectinspectorinterface_drag_leave_event(void* self, void* event
     QDesignerObjectInspectorInterface_DragLeaveEvent((QDesignerObjectInspectorInterface*)self, (QDragLeaveEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_drag_leave_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseDragLeaveEvent((QDesignerObjectInspectorInterface*)self, (QDragLeaveEvent*)event);
+void q_designerobjectinspectorinterface_super_drag_leave_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperDragLeaveEvent((QDesignerObjectInspectorInterface*)self, (QDragLeaveEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1837,8 +1837,8 @@ void q_designerobjectinspectorinterface_drop_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_DropEvent((QDesignerObjectInspectorInterface*)self, (QDropEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_drop_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseDropEvent((QDesignerObjectInspectorInterface*)self, (QDropEvent*)event);
+void q_designerobjectinspectorinterface_super_drop_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperDropEvent((QDesignerObjectInspectorInterface*)self, (QDropEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1849,8 +1849,8 @@ void q_designerobjectinspectorinterface_show_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_ShowEvent((QDesignerObjectInspectorInterface*)self, (QShowEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_show_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseShowEvent((QDesignerObjectInspectorInterface*)self, (QShowEvent*)event);
+void q_designerobjectinspectorinterface_super_show_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperShowEvent((QDesignerObjectInspectorInterface*)self, (QShowEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1861,8 +1861,8 @@ void q_designerobjectinspectorinterface_hide_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_HideEvent((QDesignerObjectInspectorInterface*)self, (QHideEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_hide_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseHideEvent((QDesignerObjectInspectorInterface*)self, (QHideEvent*)event);
+void q_designerobjectinspectorinterface_super_hide_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperHideEvent((QDesignerObjectInspectorInterface*)self, (QHideEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1873,8 +1873,8 @@ bool q_designerobjectinspectorinterface_native_event(void* self, char* eventType
     return QDesignerObjectInspectorInterface_NativeEvent((QDesignerObjectInspectorInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designerobjectinspectorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QDesignerObjectInspectorInterface_QBaseNativeEvent((QDesignerObjectInspectorInterface*)self, qstring(eventType), message, result);
+bool q_designerobjectinspectorinterface_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QDesignerObjectInspectorInterface_SuperNativeEvent((QDesignerObjectInspectorInterface*)self, qstring(eventType), message, result);
 }
 
 void q_designerobjectinspectorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1885,8 +1885,8 @@ void q_designerobjectinspectorinterface_change_event(void* self, void* param1) {
     QDesignerObjectInspectorInterface_ChangeEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)param1);
 }
 
-void q_designerobjectinspectorinterface_qbase_change_event(void* self, void* param1) {
-    QDesignerObjectInspectorInterface_QBaseChangeEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)param1);
+void q_designerobjectinspectorinterface_super_change_event(void* self, void* param1) {
+    QDesignerObjectInspectorInterface_SuperChangeEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)param1);
 }
 
 void q_designerobjectinspectorinterface_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1897,8 +1897,8 @@ int32_t q_designerobjectinspectorinterface_metric(void* self, int32_t param1) {
     return QDesignerObjectInspectorInterface_Metric((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-int32_t q_designerobjectinspectorinterface_qbase_metric(void* self, int32_t param1) {
-    return QDesignerObjectInspectorInterface_QBaseMetric((QDesignerObjectInspectorInterface*)self, param1);
+int32_t q_designerobjectinspectorinterface_super_metric(void* self, int32_t param1) {
+    return QDesignerObjectInspectorInterface_SuperMetric((QDesignerObjectInspectorInterface*)self, param1);
 }
 
 void q_designerobjectinspectorinterface_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1909,8 +1909,8 @@ void q_designerobjectinspectorinterface_init_painter(void* self, void* painter) 
     QDesignerObjectInspectorInterface_InitPainter((QDesignerObjectInspectorInterface*)self, (QPainter*)painter);
 }
 
-void q_designerobjectinspectorinterface_qbase_init_painter(void* self, void* painter) {
-    QDesignerObjectInspectorInterface_QBaseInitPainter((QDesignerObjectInspectorInterface*)self, (QPainter*)painter);
+void q_designerobjectinspectorinterface_super_init_painter(void* self, void* painter) {
+    QDesignerObjectInspectorInterface_SuperInitPainter((QDesignerObjectInspectorInterface*)self, (QPainter*)painter);
 }
 
 void q_designerobjectinspectorinterface_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1921,8 +1921,8 @@ QPaintDevice* q_designerobjectinspectorinterface_redirected(void* self, void* of
     return QDesignerObjectInspectorInterface_Redirected((QDesignerObjectInspectorInterface*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_designerobjectinspectorinterface_qbase_redirected(void* self, void* offset) {
-    return QDesignerObjectInspectorInterface_QBaseRedirected((QDesignerObjectInspectorInterface*)self, (QPoint*)offset);
+QPaintDevice* q_designerobjectinspectorinterface_super_redirected(void* self, void* offset) {
+    return QDesignerObjectInspectorInterface_SuperRedirected((QDesignerObjectInspectorInterface*)self, (QPoint*)offset);
 }
 
 void q_designerobjectinspectorinterface_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1933,8 +1933,8 @@ QPainter* q_designerobjectinspectorinterface_shared_painter(void* self) {
     return QDesignerObjectInspectorInterface_SharedPainter((QDesignerObjectInspectorInterface*)self);
 }
 
-QPainter* q_designerobjectinspectorinterface_qbase_shared_painter(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseSharedPainter((QDesignerObjectInspectorInterface*)self);
+QPainter* q_designerobjectinspectorinterface_super_shared_painter(void* self) {
+    return QDesignerObjectInspectorInterface_SuperSharedPainter((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1945,8 +1945,8 @@ void q_designerobjectinspectorinterface_input_method_event(void* self, void* par
     QDesignerObjectInspectorInterface_InputMethodEvent((QDesignerObjectInspectorInterface*)self, (QInputMethodEvent*)param1);
 }
 
-void q_designerobjectinspectorinterface_qbase_input_method_event(void* self, void* param1) {
-    QDesignerObjectInspectorInterface_QBaseInputMethodEvent((QDesignerObjectInspectorInterface*)self, (QInputMethodEvent*)param1);
+void q_designerobjectinspectorinterface_super_input_method_event(void* self, void* param1) {
+    QDesignerObjectInspectorInterface_SuperInputMethodEvent((QDesignerObjectInspectorInterface*)self, (QInputMethodEvent*)param1);
 }
 
 void q_designerobjectinspectorinterface_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1957,8 +1957,8 @@ QVariant* q_designerobjectinspectorinterface_input_method_query(void* self, int3
     return QDesignerObjectInspectorInterface_InputMethodQuery((QDesignerObjectInspectorInterface*)self, param1);
 }
 
-QVariant* q_designerobjectinspectorinterface_qbase_input_method_query(void* self, int32_t param1) {
-    return QDesignerObjectInspectorInterface_QBaseInputMethodQuery((QDesignerObjectInspectorInterface*)self, param1);
+QVariant* q_designerobjectinspectorinterface_super_input_method_query(void* self, int32_t param1) {
+    return QDesignerObjectInspectorInterface_SuperInputMethodQuery((QDesignerObjectInspectorInterface*)self, param1);
 }
 
 void q_designerobjectinspectorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1969,8 +1969,8 @@ bool q_designerobjectinspectorinterface_focus_next_prev_child(void* self, bool n
     return QDesignerObjectInspectorInterface_FocusNextPrevChild((QDesignerObjectInspectorInterface*)self, next);
 }
 
-bool q_designerobjectinspectorinterface_qbase_focus_next_prev_child(void* self, bool next) {
-    return QDesignerObjectInspectorInterface_QBaseFocusNextPrevChild((QDesignerObjectInspectorInterface*)self, next);
+bool q_designerobjectinspectorinterface_super_focus_next_prev_child(void* self, bool next) {
+    return QDesignerObjectInspectorInterface_SuperFocusNextPrevChild((QDesignerObjectInspectorInterface*)self, next);
 }
 
 void q_designerobjectinspectorinterface_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1981,8 +1981,8 @@ bool q_designerobjectinspectorinterface_event_filter(void* self, void* watched, 
     return QDesignerObjectInspectorInterface_EventFilter((QDesignerObjectInspectorInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designerobjectinspectorinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerObjectInspectorInterface_QBaseEventFilter((QDesignerObjectInspectorInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designerobjectinspectorinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerObjectInspectorInterface_SuperEventFilter((QDesignerObjectInspectorInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1993,8 +1993,8 @@ void q_designerobjectinspectorinterface_timer_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_TimerEvent((QDesignerObjectInspectorInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseTimerEvent((QDesignerObjectInspectorInterface*)self, (QTimerEvent*)event);
+void q_designerobjectinspectorinterface_super_timer_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperTimerEvent((QDesignerObjectInspectorInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2005,8 +2005,8 @@ void q_designerobjectinspectorinterface_child_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_ChildEvent((QDesignerObjectInspectorInterface*)self, (QChildEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_child_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseChildEvent((QDesignerObjectInspectorInterface*)self, (QChildEvent*)event);
+void q_designerobjectinspectorinterface_super_child_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperChildEvent((QDesignerObjectInspectorInterface*)self, (QChildEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2017,8 +2017,8 @@ void q_designerobjectinspectorinterface_custom_event(void* self, void* event) {
     QDesignerObjectInspectorInterface_CustomEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
 }
 
-void q_designerobjectinspectorinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerObjectInspectorInterface_QBaseCustomEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
+void q_designerobjectinspectorinterface_super_custom_event(void* self, void* event) {
+    QDesignerObjectInspectorInterface_SuperCustomEvent((QDesignerObjectInspectorInterface*)self, (QEvent*)event);
 }
 
 void q_designerobjectinspectorinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2029,8 +2029,8 @@ void q_designerobjectinspectorinterface_connect_notify(void* self, void* signal)
     QDesignerObjectInspectorInterface_ConnectNotify((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerobjectinspectorinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerObjectInspectorInterface_QBaseConnectNotify((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
+void q_designerobjectinspectorinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerObjectInspectorInterface_SuperConnectNotify((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerobjectinspectorinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2041,8 +2041,8 @@ void q_designerobjectinspectorinterface_disconnect_notify(void* self, void* sign
     QDesignerObjectInspectorInterface_DisconnectNotify((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designerobjectinspectorinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerObjectInspectorInterface_QBaseDisconnectNotify((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
+void q_designerobjectinspectorinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerObjectInspectorInterface_SuperDisconnectNotify((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerobjectinspectorinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2053,8 +2053,8 @@ void q_designerobjectinspectorinterface_update_micro_focus(void* self) {
     QDesignerObjectInspectorInterface_UpdateMicroFocus((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_qbase_update_micro_focus(void* self) {
-    QDesignerObjectInspectorInterface_QBaseUpdateMicroFocus((QDesignerObjectInspectorInterface*)self);
+void q_designerobjectinspectorinterface_super_update_micro_focus(void* self) {
+    QDesignerObjectInspectorInterface_SuperUpdateMicroFocus((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2065,8 +2065,8 @@ void q_designerobjectinspectorinterface_create(void* self) {
     QDesignerObjectInspectorInterface_Create((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_qbase_create(void* self) {
-    QDesignerObjectInspectorInterface_QBaseCreate((QDesignerObjectInspectorInterface*)self);
+void q_designerobjectinspectorinterface_super_create(void* self) {
+    QDesignerObjectInspectorInterface_SuperCreate((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_create(void* self, void (*callback)()) {
@@ -2077,8 +2077,8 @@ void q_designerobjectinspectorinterface_destroy(void* self) {
     QDesignerObjectInspectorInterface_Destroy((QDesignerObjectInspectorInterface*)self);
 }
 
-void q_designerobjectinspectorinterface_qbase_destroy(void* self) {
-    QDesignerObjectInspectorInterface_QBaseDestroy((QDesignerObjectInspectorInterface*)self);
+void q_designerobjectinspectorinterface_super_destroy(void* self) {
+    QDesignerObjectInspectorInterface_SuperDestroy((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_destroy(void* self, void (*callback)()) {
@@ -2089,8 +2089,8 @@ bool q_designerobjectinspectorinterface_focus_next_child(void* self) {
     return QDesignerObjectInspectorInterface_FocusNextChild((QDesignerObjectInspectorInterface*)self);
 }
 
-bool q_designerobjectinspectorinterface_qbase_focus_next_child(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseFocusNextChild((QDesignerObjectInspectorInterface*)self);
+bool q_designerobjectinspectorinterface_super_focus_next_child(void* self) {
+    return QDesignerObjectInspectorInterface_SuperFocusNextChild((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2101,8 +2101,8 @@ bool q_designerobjectinspectorinterface_focus_previous_child(void* self) {
     return QDesignerObjectInspectorInterface_FocusPreviousChild((QDesignerObjectInspectorInterface*)self);
 }
 
-bool q_designerobjectinspectorinterface_qbase_focus_previous_child(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseFocusPreviousChild((QDesignerObjectInspectorInterface*)self);
+bool q_designerobjectinspectorinterface_super_focus_previous_child(void* self) {
+    return QDesignerObjectInspectorInterface_SuperFocusPreviousChild((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2113,8 +2113,8 @@ QObject* q_designerobjectinspectorinterface_sender(void* self) {
     return QDesignerObjectInspectorInterface_Sender((QDesignerObjectInspectorInterface*)self);
 }
 
-QObject* q_designerobjectinspectorinterface_qbase_sender(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseSender((QDesignerObjectInspectorInterface*)self);
+QObject* q_designerobjectinspectorinterface_super_sender(void* self) {
+    return QDesignerObjectInspectorInterface_SuperSender((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -2125,8 +2125,8 @@ int32_t q_designerobjectinspectorinterface_sender_signal_index(void* self) {
     return QDesignerObjectInspectorInterface_SenderSignalIndex((QDesignerObjectInspectorInterface*)self);
 }
 
-int32_t q_designerobjectinspectorinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerObjectInspectorInterface_QBaseSenderSignalIndex((QDesignerObjectInspectorInterface*)self);
+int32_t q_designerobjectinspectorinterface_super_sender_signal_index(void* self) {
+    return QDesignerObjectInspectorInterface_SuperSenderSignalIndex((QDesignerObjectInspectorInterface*)self);
 }
 
 void q_designerobjectinspectorinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2137,8 +2137,8 @@ int32_t q_designerobjectinspectorinterface_receivers(void* self, const char* sig
     return QDesignerObjectInspectorInterface_Receivers((QDesignerObjectInspectorInterface*)self, signal);
 }
 
-int32_t q_designerobjectinspectorinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerObjectInspectorInterface_QBaseReceivers((QDesignerObjectInspectorInterface*)self, signal);
+int32_t q_designerobjectinspectorinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerObjectInspectorInterface_SuperReceivers((QDesignerObjectInspectorInterface*)self, signal);
 }
 
 void q_designerobjectinspectorinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2149,8 +2149,8 @@ bool q_designerobjectinspectorinterface_is_signal_connected(void* self, void* si
     return QDesignerObjectInspectorInterface_IsSignalConnected((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designerobjectinspectorinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerObjectInspectorInterface_QBaseIsSignalConnected((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
+bool q_designerobjectinspectorinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerObjectInspectorInterface_SuperIsSignalConnected((QDesignerObjectInspectorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designerobjectinspectorinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2161,8 +2161,8 @@ double q_designerobjectinspectorinterface_get_decoded_metric_f(void* self, int32
     return QDesignerObjectInspectorInterface_GetDecodedMetricF((QDesignerObjectInspectorInterface*)self, metricA, metricB);
 }
 
-double q_designerobjectinspectorinterface_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QDesignerObjectInspectorInterface_QBaseGetDecodedMetricF((QDesignerObjectInspectorInterface*)self, metricA, metricB);
+double q_designerobjectinspectorinterface_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QDesignerObjectInspectorInterface_SuperGetDecodedMetricF((QDesignerObjectInspectorInterface*)self, metricA, metricB);
 }
 
 void q_designerobjectinspectorinterface_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -23,8 +23,8 @@ void q_validator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QValidator_OnMetaObject((QValidator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_validator_qbase_meta_object(void* self) {
-    return QValidator_QBaseMetaObject((QValidator*)self);
+const QMetaObject* q_validator_super_meta_object(void* self) {
+    return QValidator_SuperMetaObject((QValidator*)self);
 }
 
 void* q_validator_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_validator_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QValidator_OnMetacast((QValidator*)self, (intptr_t)callback);
 }
 
-void* q_validator_qbase_metacast(void* self, const char* param1) {
-    return QValidator_QBaseMetacast((QValidator*)self, param1);
+void* q_validator_super_metacast(void* self, const char* param1) {
+    return QValidator_SuperMetacast((QValidator*)self, param1);
 }
 
 int32_t q_validator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_validator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QValidator_OnMetacall((QValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_validator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QValidator_QBaseMetacall((QValidator*)self, param1, param2, param3);
+int32_t q_validator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QValidator_SuperMetacall((QValidator*)self, param1, param2, param3);
 }
 
 const char* q_validator_tr(const char* s) {
@@ -74,8 +74,8 @@ void q_validator_on_validate(void* self, int32_t (*callback)(void*, const char*,
     QValidator_OnValidate((QValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_validator_qbase_validate(void* self, const char* param1, int* param2) {
-    return QValidator_QBaseValidate((QValidator*)self, qstring(param1), param2);
+int32_t q_validator_super_validate(void* self, const char* param1, int* param2) {
+    return QValidator_SuperValidate((QValidator*)self, qstring(param1), param2);
 }
 
 void q_validator_fixup(void* self, const char* param1) {
@@ -86,8 +86,8 @@ void q_validator_on_fixup(void* self, void (*callback)(void*, const char*)) {
     QValidator_OnFixup((QValidator*)self, (intptr_t)callback);
 }
 
-void q_validator_qbase_fixup(void* self, const char* param1) {
-    QValidator_QBaseFixup((QValidator*)self, qstring(param1));
+void q_validator_super_fixup(void* self, const char* param1) {
+    QValidator_SuperFixup((QValidator*)self, qstring(param1));
 }
 
 void q_validator_changed(void* self) {
@@ -327,8 +327,8 @@ bool q_validator_event(void* self, void* event) {
     return QValidator_Event((QValidator*)self, (QEvent*)event);
 }
 
-bool q_validator_qbase_event(void* self, void* event) {
-    return QValidator_QBaseEvent((QValidator*)self, (QEvent*)event);
+bool q_validator_super_event(void* self, void* event) {
+    return QValidator_SuperEvent((QValidator*)self, (QEvent*)event);
 }
 
 void q_validator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -339,8 +339,8 @@ bool q_validator_event_filter(void* self, void* watched, void* event) {
     return QValidator_EventFilter((QValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_validator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QValidator_QBaseEventFilter((QValidator*)self, (QObject*)watched, (QEvent*)event);
+bool q_validator_super_event_filter(void* self, void* watched, void* event) {
+    return QValidator_SuperEventFilter((QValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_validator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -351,8 +351,8 @@ void q_validator_timer_event(void* self, void* event) {
     QValidator_TimerEvent((QValidator*)self, (QTimerEvent*)event);
 }
 
-void q_validator_qbase_timer_event(void* self, void* event) {
-    QValidator_QBaseTimerEvent((QValidator*)self, (QTimerEvent*)event);
+void q_validator_super_timer_event(void* self, void* event) {
+    QValidator_SuperTimerEvent((QValidator*)self, (QTimerEvent*)event);
 }
 
 void q_validator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -363,8 +363,8 @@ void q_validator_child_event(void* self, void* event) {
     QValidator_ChildEvent((QValidator*)self, (QChildEvent*)event);
 }
 
-void q_validator_qbase_child_event(void* self, void* event) {
-    QValidator_QBaseChildEvent((QValidator*)self, (QChildEvent*)event);
+void q_validator_super_child_event(void* self, void* event) {
+    QValidator_SuperChildEvent((QValidator*)self, (QChildEvent*)event);
 }
 
 void q_validator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -375,8 +375,8 @@ void q_validator_custom_event(void* self, void* event) {
     QValidator_CustomEvent((QValidator*)self, (QEvent*)event);
 }
 
-void q_validator_qbase_custom_event(void* self, void* event) {
-    QValidator_QBaseCustomEvent((QValidator*)self, (QEvent*)event);
+void q_validator_super_custom_event(void* self, void* event) {
+    QValidator_SuperCustomEvent((QValidator*)self, (QEvent*)event);
 }
 
 void q_validator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ void q_validator_connect_notify(void* self, void* signal) {
     QValidator_ConnectNotify((QValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_validator_qbase_connect_notify(void* self, void* signal) {
-    QValidator_QBaseConnectNotify((QValidator*)self, (QMetaMethod*)signal);
+void q_validator_super_connect_notify(void* self, void* signal) {
+    QValidator_SuperConnectNotify((QValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_validator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ void q_validator_disconnect_notify(void* self, void* signal) {
     QValidator_DisconnectNotify((QValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_validator_qbase_disconnect_notify(void* self, void* signal) {
-    QValidator_QBaseDisconnectNotify((QValidator*)self, (QMetaMethod*)signal);
+void q_validator_super_disconnect_notify(void* self, void* signal) {
+    QValidator_SuperDisconnectNotify((QValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_validator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ QObject* q_validator_sender(void* self) {
     return QValidator_Sender((QValidator*)self);
 }
 
-QObject* q_validator_qbase_sender(void* self) {
-    return QValidator_QBaseSender((QValidator*)self);
+QObject* q_validator_super_sender(void* self) {
+    return QValidator_SuperSender((QValidator*)self);
 }
 
 void q_validator_on_sender(void* self, QObject* (*callback)()) {
@@ -423,8 +423,8 @@ int32_t q_validator_sender_signal_index(void* self) {
     return QValidator_SenderSignalIndex((QValidator*)self);
 }
 
-int32_t q_validator_qbase_sender_signal_index(void* self) {
-    return QValidator_QBaseSenderSignalIndex((QValidator*)self);
+int32_t q_validator_super_sender_signal_index(void* self) {
+    return QValidator_SuperSenderSignalIndex((QValidator*)self);
 }
 
 void q_validator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -435,8 +435,8 @@ int32_t q_validator_receivers(void* self, const char* signal) {
     return QValidator_Receivers((QValidator*)self, signal);
 }
 
-int32_t q_validator_qbase_receivers(void* self, const char* signal) {
-    return QValidator_QBaseReceivers((QValidator*)self, signal);
+int32_t q_validator_super_receivers(void* self, const char* signal) {
+    return QValidator_SuperReceivers((QValidator*)self, signal);
 }
 
 void q_validator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -447,8 +447,8 @@ bool q_validator_is_signal_connected(void* self, void* signal) {
     return QValidator_IsSignalConnected((QValidator*)self, (QMetaMethod*)signal);
 }
 
-bool q_validator_qbase_is_signal_connected(void* self, void* signal) {
-    return QValidator_QBaseIsSignalConnected((QValidator*)self, (QMetaMethod*)signal);
+bool q_validator_super_is_signal_connected(void* self, void* signal) {
+    return QValidator_SuperIsSignalConnected((QValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_validator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -487,8 +487,8 @@ void q_intvalidator_on_meta_object(void* self, const QMetaObject* (*callback)())
     QIntValidator_OnMetaObject((QIntValidator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_intvalidator_qbase_meta_object(void* self) {
-    return QIntValidator_QBaseMetaObject((QIntValidator*)self);
+const QMetaObject* q_intvalidator_super_meta_object(void* self) {
+    return QIntValidator_SuperMetaObject((QIntValidator*)self);
 }
 
 void* q_intvalidator_metacast(void* self, const char* param1) {
@@ -499,8 +499,8 @@ void q_intvalidator_on_metacast(void* self, void* (*callback)(void*, const char*
     QIntValidator_OnMetacast((QIntValidator*)self, (intptr_t)callback);
 }
 
-void* q_intvalidator_qbase_metacast(void* self, const char* param1) {
-    return QIntValidator_QBaseMetacast((QIntValidator*)self, param1);
+void* q_intvalidator_super_metacast(void* self, const char* param1) {
+    return QIntValidator_SuperMetacast((QIntValidator*)self, param1);
 }
 
 int32_t q_intvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -511,8 +511,8 @@ void q_intvalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QIntValidator_OnMetacall((QIntValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_intvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QIntValidator_QBaseMetacall((QIntValidator*)self, param1, param2, param3);
+int32_t q_intvalidator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QIntValidator_SuperMetacall((QIntValidator*)self, param1, param2, param3);
 }
 
 const char* q_intvalidator_tr(const char* s) {
@@ -530,8 +530,8 @@ void q_intvalidator_on_validate(void* self, int32_t (*callback)(void*, const cha
     QIntValidator_OnValidate((QIntValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_intvalidator_qbase_validate(void* self, const char* param1, int* param2) {
-    return QIntValidator_QBaseValidate((QIntValidator*)self, qstring(param1), param2);
+int32_t q_intvalidator_super_validate(void* self, const char* param1, int* param2) {
+    return QIntValidator_SuperValidate((QIntValidator*)self, qstring(param1), param2);
 }
 
 void q_intvalidator_fixup(void* self, const char* input) {
@@ -542,8 +542,8 @@ void q_intvalidator_on_fixup(void* self, void (*callback)(void*, const char*)) {
     QIntValidator_OnFixup((QIntValidator*)self, (intptr_t)callback);
 }
 
-void q_intvalidator_qbase_fixup(void* self, const char* input) {
-    QIntValidator_QBaseFixup((QIntValidator*)self, qstring(input));
+void q_intvalidator_super_fixup(void* self, const char* input) {
+    QIntValidator_SuperFixup((QIntValidator*)self, qstring(input));
 }
 
 void q_intvalidator_set_bottom(void* self, int bottom) {
@@ -827,8 +827,8 @@ bool q_intvalidator_event(void* self, void* event) {
     return QIntValidator_Event((QIntValidator*)self, (QEvent*)event);
 }
 
-bool q_intvalidator_qbase_event(void* self, void* event) {
-    return QIntValidator_QBaseEvent((QIntValidator*)self, (QEvent*)event);
+bool q_intvalidator_super_event(void* self, void* event) {
+    return QIntValidator_SuperEvent((QIntValidator*)self, (QEvent*)event);
 }
 
 void q_intvalidator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -839,8 +839,8 @@ bool q_intvalidator_event_filter(void* self, void* watched, void* event) {
     return QIntValidator_EventFilter((QIntValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_intvalidator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QIntValidator_QBaseEventFilter((QIntValidator*)self, (QObject*)watched, (QEvent*)event);
+bool q_intvalidator_super_event_filter(void* self, void* watched, void* event) {
+    return QIntValidator_SuperEventFilter((QIntValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_intvalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -851,8 +851,8 @@ void q_intvalidator_timer_event(void* self, void* event) {
     QIntValidator_TimerEvent((QIntValidator*)self, (QTimerEvent*)event);
 }
 
-void q_intvalidator_qbase_timer_event(void* self, void* event) {
-    QIntValidator_QBaseTimerEvent((QIntValidator*)self, (QTimerEvent*)event);
+void q_intvalidator_super_timer_event(void* self, void* event) {
+    QIntValidator_SuperTimerEvent((QIntValidator*)self, (QTimerEvent*)event);
 }
 
 void q_intvalidator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -863,8 +863,8 @@ void q_intvalidator_child_event(void* self, void* event) {
     QIntValidator_ChildEvent((QIntValidator*)self, (QChildEvent*)event);
 }
 
-void q_intvalidator_qbase_child_event(void* self, void* event) {
-    QIntValidator_QBaseChildEvent((QIntValidator*)self, (QChildEvent*)event);
+void q_intvalidator_super_child_event(void* self, void* event) {
+    QIntValidator_SuperChildEvent((QIntValidator*)self, (QChildEvent*)event);
 }
 
 void q_intvalidator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -875,8 +875,8 @@ void q_intvalidator_custom_event(void* self, void* event) {
     QIntValidator_CustomEvent((QIntValidator*)self, (QEvent*)event);
 }
 
-void q_intvalidator_qbase_custom_event(void* self, void* event) {
-    QIntValidator_QBaseCustomEvent((QIntValidator*)self, (QEvent*)event);
+void q_intvalidator_super_custom_event(void* self, void* event) {
+    QIntValidator_SuperCustomEvent((QIntValidator*)self, (QEvent*)event);
 }
 
 void q_intvalidator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -887,8 +887,8 @@ void q_intvalidator_connect_notify(void* self, void* signal) {
     QIntValidator_ConnectNotify((QIntValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_intvalidator_qbase_connect_notify(void* self, void* signal) {
-    QIntValidator_QBaseConnectNotify((QIntValidator*)self, (QMetaMethod*)signal);
+void q_intvalidator_super_connect_notify(void* self, void* signal) {
+    QIntValidator_SuperConnectNotify((QIntValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_intvalidator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -899,8 +899,8 @@ void q_intvalidator_disconnect_notify(void* self, void* signal) {
     QIntValidator_DisconnectNotify((QIntValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_intvalidator_qbase_disconnect_notify(void* self, void* signal) {
-    QIntValidator_QBaseDisconnectNotify((QIntValidator*)self, (QMetaMethod*)signal);
+void q_intvalidator_super_disconnect_notify(void* self, void* signal) {
+    QIntValidator_SuperDisconnectNotify((QIntValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_intvalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -911,8 +911,8 @@ QObject* q_intvalidator_sender(void* self) {
     return QIntValidator_Sender((QIntValidator*)self);
 }
 
-QObject* q_intvalidator_qbase_sender(void* self) {
-    return QIntValidator_QBaseSender((QIntValidator*)self);
+QObject* q_intvalidator_super_sender(void* self) {
+    return QIntValidator_SuperSender((QIntValidator*)self);
 }
 
 void q_intvalidator_on_sender(void* self, QObject* (*callback)()) {
@@ -923,8 +923,8 @@ int32_t q_intvalidator_sender_signal_index(void* self) {
     return QIntValidator_SenderSignalIndex((QIntValidator*)self);
 }
 
-int32_t q_intvalidator_qbase_sender_signal_index(void* self) {
-    return QIntValidator_QBaseSenderSignalIndex((QIntValidator*)self);
+int32_t q_intvalidator_super_sender_signal_index(void* self) {
+    return QIntValidator_SuperSenderSignalIndex((QIntValidator*)self);
 }
 
 void q_intvalidator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -935,8 +935,8 @@ int32_t q_intvalidator_receivers(void* self, const char* signal) {
     return QIntValidator_Receivers((QIntValidator*)self, signal);
 }
 
-int32_t q_intvalidator_qbase_receivers(void* self, const char* signal) {
-    return QIntValidator_QBaseReceivers((QIntValidator*)self, signal);
+int32_t q_intvalidator_super_receivers(void* self, const char* signal) {
+    return QIntValidator_SuperReceivers((QIntValidator*)self, signal);
 }
 
 void q_intvalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -947,8 +947,8 @@ bool q_intvalidator_is_signal_connected(void* self, void* signal) {
     return QIntValidator_IsSignalConnected((QIntValidator*)self, (QMetaMethod*)signal);
 }
 
-bool q_intvalidator_qbase_is_signal_connected(void* self, void* signal) {
-    return QIntValidator_QBaseIsSignalConnected((QIntValidator*)self, (QMetaMethod*)signal);
+bool q_intvalidator_super_is_signal_connected(void* self, void* signal) {
+    return QIntValidator_SuperIsSignalConnected((QIntValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_intvalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -987,8 +987,8 @@ void q_doublevalidator_on_meta_object(void* self, const QMetaObject* (*callback)
     QDoubleValidator_OnMetaObject((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_doublevalidator_qbase_meta_object(void* self) {
-    return QDoubleValidator_QBaseMetaObject((QDoubleValidator*)self);
+const QMetaObject* q_doublevalidator_super_meta_object(void* self) {
+    return QDoubleValidator_SuperMetaObject((QDoubleValidator*)self);
 }
 
 void* q_doublevalidator_metacast(void* self, const char* param1) {
@@ -999,8 +999,8 @@ void q_doublevalidator_on_metacast(void* self, void* (*callback)(void*, const ch
     QDoubleValidator_OnMetacast((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-void* q_doublevalidator_qbase_metacast(void* self, const char* param1) {
-    return QDoubleValidator_QBaseMetacast((QDoubleValidator*)self, param1);
+void* q_doublevalidator_super_metacast(void* self, const char* param1) {
+    return QDoubleValidator_SuperMetacast((QDoubleValidator*)self, param1);
 }
 
 int32_t q_doublevalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1011,8 +1011,8 @@ void q_doublevalidator_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QDoubleValidator_OnMetacall((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_doublevalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDoubleValidator_QBaseMetacall((QDoubleValidator*)self, param1, param2, param3);
+int32_t q_doublevalidator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDoubleValidator_SuperMetacall((QDoubleValidator*)self, param1, param2, param3);
 }
 
 const char* q_doublevalidator_tr(const char* s) {
@@ -1030,8 +1030,8 @@ void q_doublevalidator_on_validate(void* self, int32_t (*callback)(void*, const 
     QDoubleValidator_OnValidate((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_doublevalidator_qbase_validate(void* self, const char* param1, int* param2) {
-    return QDoubleValidator_QBaseValidate((QDoubleValidator*)self, qstring(param1), param2);
+int32_t q_doublevalidator_super_validate(void* self, const char* param1, int* param2) {
+    return QDoubleValidator_SuperValidate((QDoubleValidator*)self, qstring(param1), param2);
 }
 
 void q_doublevalidator_fixup(void* self, const char* input) {
@@ -1042,8 +1042,8 @@ void q_doublevalidator_on_fixup(void* self, void (*callback)(void*, const char*)
     QDoubleValidator_OnFixup((QDoubleValidator*)self, (intptr_t)callback);
 }
 
-void q_doublevalidator_qbase_fixup(void* self, const char* input) {
-    QDoubleValidator_QBaseFixup((QDoubleValidator*)self, qstring(input));
+void q_doublevalidator_super_fixup(void* self, const char* input) {
+    QDoubleValidator_SuperFixup((QDoubleValidator*)self, qstring(input));
 }
 
 void q_doublevalidator_set_range(void* self, double bottom, double top, int decimals) {
@@ -1363,8 +1363,8 @@ bool q_doublevalidator_event(void* self, void* event) {
     return QDoubleValidator_Event((QDoubleValidator*)self, (QEvent*)event);
 }
 
-bool q_doublevalidator_qbase_event(void* self, void* event) {
-    return QDoubleValidator_QBaseEvent((QDoubleValidator*)self, (QEvent*)event);
+bool q_doublevalidator_super_event(void* self, void* event) {
+    return QDoubleValidator_SuperEvent((QDoubleValidator*)self, (QEvent*)event);
 }
 
 void q_doublevalidator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1375,8 +1375,8 @@ bool q_doublevalidator_event_filter(void* self, void* watched, void* event) {
     return QDoubleValidator_EventFilter((QDoubleValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_doublevalidator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDoubleValidator_QBaseEventFilter((QDoubleValidator*)self, (QObject*)watched, (QEvent*)event);
+bool q_doublevalidator_super_event_filter(void* self, void* watched, void* event) {
+    return QDoubleValidator_SuperEventFilter((QDoubleValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_doublevalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1387,8 +1387,8 @@ void q_doublevalidator_timer_event(void* self, void* event) {
     QDoubleValidator_TimerEvent((QDoubleValidator*)self, (QTimerEvent*)event);
 }
 
-void q_doublevalidator_qbase_timer_event(void* self, void* event) {
-    QDoubleValidator_QBaseTimerEvent((QDoubleValidator*)self, (QTimerEvent*)event);
+void q_doublevalidator_super_timer_event(void* self, void* event) {
+    QDoubleValidator_SuperTimerEvent((QDoubleValidator*)self, (QTimerEvent*)event);
 }
 
 void q_doublevalidator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1399,8 +1399,8 @@ void q_doublevalidator_child_event(void* self, void* event) {
     QDoubleValidator_ChildEvent((QDoubleValidator*)self, (QChildEvent*)event);
 }
 
-void q_doublevalidator_qbase_child_event(void* self, void* event) {
-    QDoubleValidator_QBaseChildEvent((QDoubleValidator*)self, (QChildEvent*)event);
+void q_doublevalidator_super_child_event(void* self, void* event) {
+    QDoubleValidator_SuperChildEvent((QDoubleValidator*)self, (QChildEvent*)event);
 }
 
 void q_doublevalidator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1411,8 +1411,8 @@ void q_doublevalidator_custom_event(void* self, void* event) {
     QDoubleValidator_CustomEvent((QDoubleValidator*)self, (QEvent*)event);
 }
 
-void q_doublevalidator_qbase_custom_event(void* self, void* event) {
-    QDoubleValidator_QBaseCustomEvent((QDoubleValidator*)self, (QEvent*)event);
+void q_doublevalidator_super_custom_event(void* self, void* event) {
+    QDoubleValidator_SuperCustomEvent((QDoubleValidator*)self, (QEvent*)event);
 }
 
 void q_doublevalidator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1423,8 +1423,8 @@ void q_doublevalidator_connect_notify(void* self, void* signal) {
     QDoubleValidator_ConnectNotify((QDoubleValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_doublevalidator_qbase_connect_notify(void* self, void* signal) {
-    QDoubleValidator_QBaseConnectNotify((QDoubleValidator*)self, (QMetaMethod*)signal);
+void q_doublevalidator_super_connect_notify(void* self, void* signal) {
+    QDoubleValidator_SuperConnectNotify((QDoubleValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_doublevalidator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1435,8 +1435,8 @@ void q_doublevalidator_disconnect_notify(void* self, void* signal) {
     QDoubleValidator_DisconnectNotify((QDoubleValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_doublevalidator_qbase_disconnect_notify(void* self, void* signal) {
-    QDoubleValidator_QBaseDisconnectNotify((QDoubleValidator*)self, (QMetaMethod*)signal);
+void q_doublevalidator_super_disconnect_notify(void* self, void* signal) {
+    QDoubleValidator_SuperDisconnectNotify((QDoubleValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_doublevalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1447,8 +1447,8 @@ QObject* q_doublevalidator_sender(void* self) {
     return QDoubleValidator_Sender((QDoubleValidator*)self);
 }
 
-QObject* q_doublevalidator_qbase_sender(void* self) {
-    return QDoubleValidator_QBaseSender((QDoubleValidator*)self);
+QObject* q_doublevalidator_super_sender(void* self) {
+    return QDoubleValidator_SuperSender((QDoubleValidator*)self);
 }
 
 void q_doublevalidator_on_sender(void* self, QObject* (*callback)()) {
@@ -1459,8 +1459,8 @@ int32_t q_doublevalidator_sender_signal_index(void* self) {
     return QDoubleValidator_SenderSignalIndex((QDoubleValidator*)self);
 }
 
-int32_t q_doublevalidator_qbase_sender_signal_index(void* self) {
-    return QDoubleValidator_QBaseSenderSignalIndex((QDoubleValidator*)self);
+int32_t q_doublevalidator_super_sender_signal_index(void* self) {
+    return QDoubleValidator_SuperSenderSignalIndex((QDoubleValidator*)self);
 }
 
 void q_doublevalidator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1471,8 +1471,8 @@ int32_t q_doublevalidator_receivers(void* self, const char* signal) {
     return QDoubleValidator_Receivers((QDoubleValidator*)self, signal);
 }
 
-int32_t q_doublevalidator_qbase_receivers(void* self, const char* signal) {
-    return QDoubleValidator_QBaseReceivers((QDoubleValidator*)self, signal);
+int32_t q_doublevalidator_super_receivers(void* self, const char* signal) {
+    return QDoubleValidator_SuperReceivers((QDoubleValidator*)self, signal);
 }
 
 void q_doublevalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1483,8 +1483,8 @@ bool q_doublevalidator_is_signal_connected(void* self, void* signal) {
     return QDoubleValidator_IsSignalConnected((QDoubleValidator*)self, (QMetaMethod*)signal);
 }
 
-bool q_doublevalidator_qbase_is_signal_connected(void* self, void* signal) {
-    return QDoubleValidator_QBaseIsSignalConnected((QDoubleValidator*)self, (QMetaMethod*)signal);
+bool q_doublevalidator_super_is_signal_connected(void* self, void* signal) {
+    return QDoubleValidator_SuperIsSignalConnected((QDoubleValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_doublevalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1523,8 +1523,8 @@ void q_regularexpressionvalidator_on_meta_object(void* self, const QMetaObject* 
     QRegularExpressionValidator_OnMetaObject((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_regularexpressionvalidator_qbase_meta_object(void* self) {
-    return QRegularExpressionValidator_QBaseMetaObject((QRegularExpressionValidator*)self);
+const QMetaObject* q_regularexpressionvalidator_super_meta_object(void* self) {
+    return QRegularExpressionValidator_SuperMetaObject((QRegularExpressionValidator*)self);
 }
 
 void* q_regularexpressionvalidator_metacast(void* self, const char* param1) {
@@ -1535,8 +1535,8 @@ void q_regularexpressionvalidator_on_metacast(void* self, void* (*callback)(void
     QRegularExpressionValidator_OnMetacast((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
-void* q_regularexpressionvalidator_qbase_metacast(void* self, const char* param1) {
-    return QRegularExpressionValidator_QBaseMetacast((QRegularExpressionValidator*)self, param1);
+void* q_regularexpressionvalidator_super_metacast(void* self, const char* param1) {
+    return QRegularExpressionValidator_SuperMetacast((QRegularExpressionValidator*)self, param1);
 }
 
 int32_t q_regularexpressionvalidator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1547,8 +1547,8 @@ void q_regularexpressionvalidator_on_metacall(void* self, int32_t (*callback)(vo
     QRegularExpressionValidator_OnMetacall((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_regularexpressionvalidator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QRegularExpressionValidator_QBaseMetacall((QRegularExpressionValidator*)self, param1, param2, param3);
+int32_t q_regularexpressionvalidator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QRegularExpressionValidator_SuperMetacall((QRegularExpressionValidator*)self, param1, param2, param3);
 }
 
 const char* q_regularexpressionvalidator_tr(const char* s) {
@@ -1566,8 +1566,8 @@ void q_regularexpressionvalidator_on_validate(void* self, int32_t (*callback)(vo
     QRegularExpressionValidator_OnValidate((QRegularExpressionValidator*)self, (intptr_t)callback);
 }
 
-int32_t q_regularexpressionvalidator_qbase_validate(void* self, const char* input, int* pos) {
-    return QRegularExpressionValidator_QBaseValidate((QRegularExpressionValidator*)self, qstring(input), pos);
+int32_t q_regularexpressionvalidator_super_validate(void* self, const char* input, int* pos) {
+    return QRegularExpressionValidator_SuperValidate((QRegularExpressionValidator*)self, qstring(input), pos);
 }
 
 QRegularExpression* q_regularexpressionvalidator_regular_expression(void* self) {
@@ -1831,8 +1831,8 @@ void q_regularexpressionvalidator_fixup(void* self, const char* param1) {
     QRegularExpressionValidator_Fixup((QRegularExpressionValidator*)self, qstring(param1));
 }
 
-void q_regularexpressionvalidator_qbase_fixup(void* self, const char* param1) {
-    QRegularExpressionValidator_QBaseFixup((QRegularExpressionValidator*)self, qstring(param1));
+void q_regularexpressionvalidator_super_fixup(void* self, const char* param1) {
+    QRegularExpressionValidator_SuperFixup((QRegularExpressionValidator*)self, qstring(param1));
 }
 
 void q_regularexpressionvalidator_on_fixup(void* self, void (*callback)(void*, const char*)) {
@@ -1843,8 +1843,8 @@ bool q_regularexpressionvalidator_event(void* self, void* event) {
     return QRegularExpressionValidator_Event((QRegularExpressionValidator*)self, (QEvent*)event);
 }
 
-bool q_regularexpressionvalidator_qbase_event(void* self, void* event) {
-    return QRegularExpressionValidator_QBaseEvent((QRegularExpressionValidator*)self, (QEvent*)event);
+bool q_regularexpressionvalidator_super_event(void* self, void* event) {
+    return QRegularExpressionValidator_SuperEvent((QRegularExpressionValidator*)self, (QEvent*)event);
 }
 
 void q_regularexpressionvalidator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ bool q_regularexpressionvalidator_event_filter(void* self, void* watched, void* 
     return QRegularExpressionValidator_EventFilter((QRegularExpressionValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_regularexpressionvalidator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QRegularExpressionValidator_QBaseEventFilter((QRegularExpressionValidator*)self, (QObject*)watched, (QEvent*)event);
+bool q_regularexpressionvalidator_super_event_filter(void* self, void* watched, void* event) {
+    return QRegularExpressionValidator_SuperEventFilter((QRegularExpressionValidator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_regularexpressionvalidator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1867,8 +1867,8 @@ void q_regularexpressionvalidator_timer_event(void* self, void* event) {
     QRegularExpressionValidator_TimerEvent((QRegularExpressionValidator*)self, (QTimerEvent*)event);
 }
 
-void q_regularexpressionvalidator_qbase_timer_event(void* self, void* event) {
-    QRegularExpressionValidator_QBaseTimerEvent((QRegularExpressionValidator*)self, (QTimerEvent*)event);
+void q_regularexpressionvalidator_super_timer_event(void* self, void* event) {
+    QRegularExpressionValidator_SuperTimerEvent((QRegularExpressionValidator*)self, (QTimerEvent*)event);
 }
 
 void q_regularexpressionvalidator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ void q_regularexpressionvalidator_child_event(void* self, void* event) {
     QRegularExpressionValidator_ChildEvent((QRegularExpressionValidator*)self, (QChildEvent*)event);
 }
 
-void q_regularexpressionvalidator_qbase_child_event(void* self, void* event) {
-    QRegularExpressionValidator_QBaseChildEvent((QRegularExpressionValidator*)self, (QChildEvent*)event);
+void q_regularexpressionvalidator_super_child_event(void* self, void* event) {
+    QRegularExpressionValidator_SuperChildEvent((QRegularExpressionValidator*)self, (QChildEvent*)event);
 }
 
 void q_regularexpressionvalidator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ void q_regularexpressionvalidator_custom_event(void* self, void* event) {
     QRegularExpressionValidator_CustomEvent((QRegularExpressionValidator*)self, (QEvent*)event);
 }
 
-void q_regularexpressionvalidator_qbase_custom_event(void* self, void* event) {
-    QRegularExpressionValidator_QBaseCustomEvent((QRegularExpressionValidator*)self, (QEvent*)event);
+void q_regularexpressionvalidator_super_custom_event(void* self, void* event) {
+    QRegularExpressionValidator_SuperCustomEvent((QRegularExpressionValidator*)self, (QEvent*)event);
 }
 
 void q_regularexpressionvalidator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ void q_regularexpressionvalidator_connect_notify(void* self, void* signal) {
     QRegularExpressionValidator_ConnectNotify((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_regularexpressionvalidator_qbase_connect_notify(void* self, void* signal) {
-    QRegularExpressionValidator_QBaseConnectNotify((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
+void q_regularexpressionvalidator_super_connect_notify(void* self, void* signal) {
+    QRegularExpressionValidator_SuperConnectNotify((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_regularexpressionvalidator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void q_regularexpressionvalidator_disconnect_notify(void* self, void* signal) {
     QRegularExpressionValidator_DisconnectNotify((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
 }
 
-void q_regularexpressionvalidator_qbase_disconnect_notify(void* self, void* signal) {
-    QRegularExpressionValidator_QBaseDisconnectNotify((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
+void q_regularexpressionvalidator_super_disconnect_notify(void* self, void* signal) {
+    QRegularExpressionValidator_SuperDisconnectNotify((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_regularexpressionvalidator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ QObject* q_regularexpressionvalidator_sender(void* self) {
     return QRegularExpressionValidator_Sender((QRegularExpressionValidator*)self);
 }
 
-QObject* q_regularexpressionvalidator_qbase_sender(void* self) {
-    return QRegularExpressionValidator_QBaseSender((QRegularExpressionValidator*)self);
+QObject* q_regularexpressionvalidator_super_sender(void* self) {
+    return QRegularExpressionValidator_SuperSender((QRegularExpressionValidator*)self);
 }
 
 void q_regularexpressionvalidator_on_sender(void* self, QObject* (*callback)()) {
@@ -1939,8 +1939,8 @@ int32_t q_regularexpressionvalidator_sender_signal_index(void* self) {
     return QRegularExpressionValidator_SenderSignalIndex((QRegularExpressionValidator*)self);
 }
 
-int32_t q_regularexpressionvalidator_qbase_sender_signal_index(void* self) {
-    return QRegularExpressionValidator_QBaseSenderSignalIndex((QRegularExpressionValidator*)self);
+int32_t q_regularexpressionvalidator_super_sender_signal_index(void* self) {
+    return QRegularExpressionValidator_SuperSenderSignalIndex((QRegularExpressionValidator*)self);
 }
 
 void q_regularexpressionvalidator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1951,8 +1951,8 @@ int32_t q_regularexpressionvalidator_receivers(void* self, const char* signal) {
     return QRegularExpressionValidator_Receivers((QRegularExpressionValidator*)self, signal);
 }
 
-int32_t q_regularexpressionvalidator_qbase_receivers(void* self, const char* signal) {
-    return QRegularExpressionValidator_QBaseReceivers((QRegularExpressionValidator*)self, signal);
+int32_t q_regularexpressionvalidator_super_receivers(void* self, const char* signal) {
+    return QRegularExpressionValidator_SuperReceivers((QRegularExpressionValidator*)self, signal);
 }
 
 void q_regularexpressionvalidator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1963,8 +1963,8 @@ bool q_regularexpressionvalidator_is_signal_connected(void* self, void* signal) 
     return QRegularExpressionValidator_IsSignalConnected((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
 }
 
-bool q_regularexpressionvalidator_qbase_is_signal_connected(void* self, void* signal) {
-    return QRegularExpressionValidator_QBaseIsSignalConnected((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
+bool q_regularexpressionvalidator_super_is_signal_connected(void* self, void* signal) {
+    return QRegularExpressionValidator_SuperIsSignalConnected((QRegularExpressionValidator*)self, (QMetaMethod*)signal);
 }
 
 void q_regularexpressionvalidator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

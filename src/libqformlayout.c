@@ -26,8 +26,8 @@ void q_formlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QFormLayout_OnMetaObject((QFormLayout*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_formlayout_qbase_meta_object(void* self) {
-    return QFormLayout_QBaseMetaObject((QFormLayout*)self);
+const QMetaObject* q_formlayout_super_meta_object(void* self) {
+    return QFormLayout_SuperMetaObject((QFormLayout*)self);
 }
 
 void* q_formlayout_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_formlayout_on_metacast(void* self, void* (*callback)(void*, const char*))
     QFormLayout_OnMetacast((QFormLayout*)self, (intptr_t)callback);
 }
 
-void* q_formlayout_qbase_metacast(void* self, const char* param1) {
-    return QFormLayout_QBaseMetacast((QFormLayout*)self, param1);
+void* q_formlayout_super_metacast(void* self, const char* param1) {
+    return QFormLayout_SuperMetacast((QFormLayout*)self, param1);
 }
 
 int32_t q_formlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_formlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QFormLayout_OnMetacall((QFormLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_formlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFormLayout_QBaseMetacall((QFormLayout*)self, param1, param2, param3);
+int32_t q_formlayout_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFormLayout_SuperMetacall((QFormLayout*)self, param1, param2, param3);
 }
 
 const char* q_formlayout_tr(const char* s) {
@@ -117,8 +117,8 @@ void q_formlayout_on_spacing(void* self, int32_t (*callback)()) {
     QFormLayout_OnSpacing((QFormLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_formlayout_qbase_spacing(void* self) {
-    return QFormLayout_QBaseSpacing((QFormLayout*)self);
+int32_t q_formlayout_super_spacing(void* self) {
+    return QFormLayout_SuperSpacing((QFormLayout*)self);
 }
 
 void q_formlayout_set_spacing(void* self, int spacing) {
@@ -129,8 +129,8 @@ void q_formlayout_on_set_spacing(void* self, void (*callback)(void*, int)) {
     QFormLayout_OnSetSpacing((QFormLayout*)self, (intptr_t)callback);
 }
 
-void q_formlayout_qbase_set_spacing(void* self, int spacing) {
-    QFormLayout_QBaseSetSpacing((QFormLayout*)self, spacing);
+void q_formlayout_super_set_spacing(void* self, int spacing) {
+    QFormLayout_SuperSetSpacing((QFormLayout*)self, spacing);
 }
 
 void q_formlayout_add_row(void* self, void* label, void* field) {
@@ -273,8 +273,8 @@ void q_formlayout_on_add_item(void* self, void (*callback)(void*, void*)) {
     QFormLayout_OnAddItem((QFormLayout*)self, (intptr_t)callback);
 }
 
-void q_formlayout_qbase_add_item(void* self, void* item) {
-    QFormLayout_QBaseAddItem((QFormLayout*)self, (QLayoutItem*)item);
+void q_formlayout_super_add_item(void* self, void* item) {
+    QFormLayout_SuperAddItem((QFormLayout*)self, (QLayoutItem*)item);
 }
 
 QLayoutItem* q_formlayout_item_at2(void* self, int index) {
@@ -285,8 +285,8 @@ void q_formlayout_on_item_at2(void* self, QLayoutItem* (*callback)(void*, int)) 
     QFormLayout_OnItemAt2((QFormLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_formlayout_qbase_item_at2(void* self, int index) {
-    return QFormLayout_QBaseItemAt2((QFormLayout*)self, index);
+QLayoutItem* q_formlayout_super_item_at2(void* self, int index) {
+    return QFormLayout_SuperItemAt2((QFormLayout*)self, index);
 }
 
 QLayoutItem* q_formlayout_take_at(void* self, int index) {
@@ -297,8 +297,8 @@ void q_formlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int)) {
     QFormLayout_OnTakeAt((QFormLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_formlayout_qbase_take_at(void* self, int index) {
-    return QFormLayout_QBaseTakeAt((QFormLayout*)self, index);
+QLayoutItem* q_formlayout_super_take_at(void* self, int index) {
+    return QFormLayout_SuperTakeAt((QFormLayout*)self, index);
 }
 
 void q_formlayout_set_geometry(void* self, void* rect) {
@@ -309,8 +309,8 @@ void q_formlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
     QFormLayout_OnSetGeometry((QFormLayout*)self, (intptr_t)callback);
 }
 
-void q_formlayout_qbase_set_geometry(void* self, void* rect) {
-    QFormLayout_QBaseSetGeometry((QFormLayout*)self, (QRect*)rect);
+void q_formlayout_super_set_geometry(void* self, void* rect) {
+    QFormLayout_SuperSetGeometry((QFormLayout*)self, (QRect*)rect);
 }
 
 QSize* q_formlayout_minimum_size(void* self) {
@@ -321,8 +321,8 @@ void q_formlayout_on_minimum_size(void* self, QSize* (*callback)()) {
     QFormLayout_OnMinimumSize((QFormLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_formlayout_qbase_minimum_size(void* self) {
-    return QFormLayout_QBaseMinimumSize((QFormLayout*)self);
+QSize* q_formlayout_super_minimum_size(void* self) {
+    return QFormLayout_SuperMinimumSize((QFormLayout*)self);
 }
 
 QSize* q_formlayout_size_hint(void* self) {
@@ -333,8 +333,8 @@ void q_formlayout_on_size_hint(void* self, QSize* (*callback)()) {
     QFormLayout_OnSizeHint((QFormLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_formlayout_qbase_size_hint(void* self) {
-    return QFormLayout_QBaseSizeHint((QFormLayout*)self);
+QSize* q_formlayout_super_size_hint(void* self) {
+    return QFormLayout_SuperSizeHint((QFormLayout*)self);
 }
 
 void q_formlayout_invalidate(void* self) {
@@ -345,8 +345,8 @@ void q_formlayout_on_invalidate(void* self, void (*callback)()) {
     QFormLayout_OnInvalidate((QFormLayout*)self, (intptr_t)callback);
 }
 
-void q_formlayout_qbase_invalidate(void* self) {
-    QFormLayout_QBaseInvalidate((QFormLayout*)self);
+void q_formlayout_super_invalidate(void* self) {
+    QFormLayout_SuperInvalidate((QFormLayout*)self);
 }
 
 bool q_formlayout_has_height_for_width(void* self) {
@@ -357,8 +357,8 @@ void q_formlayout_on_has_height_for_width(void* self, bool (*callback)()) {
     QFormLayout_OnHasHeightForWidth((QFormLayout*)self, (intptr_t)callback);
 }
 
-bool q_formlayout_qbase_has_height_for_width(void* self) {
-    return QFormLayout_QBaseHasHeightForWidth((QFormLayout*)self);
+bool q_formlayout_super_has_height_for_width(void* self) {
+    return QFormLayout_SuperHasHeightForWidth((QFormLayout*)self);
 }
 
 int32_t q_formlayout_height_for_width(void* self, int width) {
@@ -369,8 +369,8 @@ void q_formlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int
     QFormLayout_OnHeightForWidth((QFormLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_formlayout_qbase_height_for_width(void* self, int width) {
-    return QFormLayout_QBaseHeightForWidth((QFormLayout*)self, width);
+int32_t q_formlayout_super_height_for_width(void* self, int width) {
+    return QFormLayout_SuperHeightForWidth((QFormLayout*)self, width);
 }
 
 int32_t q_formlayout_expanding_directions(void* self) {
@@ -381,8 +381,8 @@ void q_formlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QFormLayout_OnExpandingDirections((QFormLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_formlayout_qbase_expanding_directions(void* self) {
-    return QFormLayout_QBaseExpandingDirections((QFormLayout*)self);
+int32_t q_formlayout_super_expanding_directions(void* self) {
+    return QFormLayout_SuperExpandingDirections((QFormLayout*)self);
 }
 
 int32_t q_formlayout_count(void* self) {
@@ -393,8 +393,8 @@ void q_formlayout_on_count(void* self, int32_t (*callback)()) {
     QFormLayout_OnCount((QFormLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_formlayout_qbase_count(void* self) {
-    return QFormLayout_QBaseCount((QFormLayout*)self);
+int32_t q_formlayout_super_count(void* self) {
+    return QFormLayout_SuperCount((QFormLayout*)self);
 }
 
 int32_t q_formlayout_row_count(void* self) {
@@ -495,8 +495,8 @@ void q_formlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_formlayout_qbase_index_of2(void* self, void* param1) {
-    return QLayout_QBaseIndexOf2((QLayout*)self, (QLayoutItem*)param1);
+int32_t q_formlayout_super_index_of2(void* self, void* param1) {
+    return QLayout_SuperIndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
 int32_t q_formlayout_total_minimum_height_for_width(void* self, int w) {
@@ -750,8 +750,8 @@ QRect* q_formlayout_geometry(void* self) {
     return QFormLayout_Geometry((QFormLayout*)self);
 }
 
-QRect* q_formlayout_qbase_geometry(void* self) {
-    return QFormLayout_QBaseGeometry((QFormLayout*)self);
+QRect* q_formlayout_super_geometry(void* self) {
+    return QFormLayout_SuperGeometry((QFormLayout*)self);
 }
 
 void q_formlayout_on_geometry(void* self, QRect* (*callback)()) {
@@ -762,8 +762,8 @@ QSize* q_formlayout_maximum_size(void* self) {
     return QFormLayout_MaximumSize((QFormLayout*)self);
 }
 
-QSize* q_formlayout_qbase_maximum_size(void* self) {
-    return QFormLayout_QBaseMaximumSize((QFormLayout*)self);
+QSize* q_formlayout_super_maximum_size(void* self) {
+    return QFormLayout_SuperMaximumSize((QFormLayout*)self);
 }
 
 void q_formlayout_on_maximum_size(void* self, QSize* (*callback)()) {
@@ -774,8 +774,8 @@ int32_t q_formlayout_index_of(void* self, void* param1) {
     return QFormLayout_IndexOf((QFormLayout*)self, (QWidget*)param1);
 }
 
-int32_t q_formlayout_qbase_index_of(void* self, void* param1) {
-    return QFormLayout_QBaseIndexOf((QFormLayout*)self, (QWidget*)param1);
+int32_t q_formlayout_super_index_of(void* self, void* param1) {
+    return QFormLayout_SuperIndexOf((QFormLayout*)self, (QWidget*)param1);
 }
 
 void q_formlayout_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
@@ -786,8 +786,8 @@ bool q_formlayout_is_empty(void* self) {
     return QFormLayout_IsEmpty((QFormLayout*)self);
 }
 
-bool q_formlayout_qbase_is_empty(void* self) {
-    return QFormLayout_QBaseIsEmpty((QFormLayout*)self);
+bool q_formlayout_super_is_empty(void* self) {
+    return QFormLayout_SuperIsEmpty((QFormLayout*)self);
 }
 
 void q_formlayout_on_is_empty(void* self, bool (*callback)()) {
@@ -798,8 +798,8 @@ int32_t q_formlayout_control_types(void* self) {
     return QFormLayout_ControlTypes((QFormLayout*)self);
 }
 
-int32_t q_formlayout_qbase_control_types(void* self) {
-    return QFormLayout_QBaseControlTypes((QFormLayout*)self);
+int32_t q_formlayout_super_control_types(void* self) {
+    return QFormLayout_SuperControlTypes((QFormLayout*)self);
 }
 
 void q_formlayout_on_control_types(void* self, int32_t (*callback)()) {
@@ -810,8 +810,8 @@ QLayoutItem* q_formlayout_replace_widget(void* self, void* from, void* to, int32
     return QFormLayout_ReplaceWidget((QFormLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_formlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
-    return QFormLayout_QBaseReplaceWidget((QFormLayout*)self, (QWidget*)from, (QWidget*)to, options);
+QLayoutItem* q_formlayout_super_replace_widget(void* self, void* from, void* to, int32_t options) {
+    return QFormLayout_SuperReplaceWidget((QFormLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
 void q_formlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
@@ -822,8 +822,8 @@ QLayout* q_formlayout_layout(void* self) {
     return QFormLayout_Layout((QFormLayout*)self);
 }
 
-QLayout* q_formlayout_qbase_layout(void* self) {
-    return QFormLayout_QBaseLayout((QFormLayout*)self);
+QLayout* q_formlayout_super_layout(void* self) {
+    return QFormLayout_SuperLayout((QFormLayout*)self);
 }
 
 void q_formlayout_on_layout(void* self, QLayout* (*callback)()) {
@@ -834,8 +834,8 @@ void q_formlayout_child_event(void* self, void* e) {
     QFormLayout_ChildEvent((QFormLayout*)self, (QChildEvent*)e);
 }
 
-void q_formlayout_qbase_child_event(void* self, void* e) {
-    QFormLayout_QBaseChildEvent((QFormLayout*)self, (QChildEvent*)e);
+void q_formlayout_super_child_event(void* self, void* e) {
+    QFormLayout_SuperChildEvent((QFormLayout*)self, (QChildEvent*)e);
 }
 
 void q_formlayout_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -846,8 +846,8 @@ bool q_formlayout_event(void* self, void* event) {
     return QFormLayout_Event((QFormLayout*)self, (QEvent*)event);
 }
 
-bool q_formlayout_qbase_event(void* self, void* event) {
-    return QFormLayout_QBaseEvent((QFormLayout*)self, (QEvent*)event);
+bool q_formlayout_super_event(void* self, void* event) {
+    return QFormLayout_SuperEvent((QFormLayout*)self, (QEvent*)event);
 }
 
 void q_formlayout_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -858,8 +858,8 @@ bool q_formlayout_event_filter(void* self, void* watched, void* event) {
     return QFormLayout_EventFilter((QFormLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_formlayout_qbase_event_filter(void* self, void* watched, void* event) {
-    return QFormLayout_QBaseEventFilter((QFormLayout*)self, (QObject*)watched, (QEvent*)event);
+bool q_formlayout_super_event_filter(void* self, void* watched, void* event) {
+    return QFormLayout_SuperEventFilter((QFormLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_formlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -870,8 +870,8 @@ void q_formlayout_timer_event(void* self, void* event) {
     QFormLayout_TimerEvent((QFormLayout*)self, (QTimerEvent*)event);
 }
 
-void q_formlayout_qbase_timer_event(void* self, void* event) {
-    QFormLayout_QBaseTimerEvent((QFormLayout*)self, (QTimerEvent*)event);
+void q_formlayout_super_timer_event(void* self, void* event) {
+    QFormLayout_SuperTimerEvent((QFormLayout*)self, (QTimerEvent*)event);
 }
 
 void q_formlayout_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -882,8 +882,8 @@ void q_formlayout_custom_event(void* self, void* event) {
     QFormLayout_CustomEvent((QFormLayout*)self, (QEvent*)event);
 }
 
-void q_formlayout_qbase_custom_event(void* self, void* event) {
-    QFormLayout_QBaseCustomEvent((QFormLayout*)self, (QEvent*)event);
+void q_formlayout_super_custom_event(void* self, void* event) {
+    QFormLayout_SuperCustomEvent((QFormLayout*)self, (QEvent*)event);
 }
 
 void q_formlayout_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -894,8 +894,8 @@ void q_formlayout_connect_notify(void* self, void* signal) {
     QFormLayout_ConnectNotify((QFormLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_formlayout_qbase_connect_notify(void* self, void* signal) {
-    QFormLayout_QBaseConnectNotify((QFormLayout*)self, (QMetaMethod*)signal);
+void q_formlayout_super_connect_notify(void* self, void* signal) {
+    QFormLayout_SuperConnectNotify((QFormLayout*)self, (QMetaMethod*)signal);
 }
 
 void q_formlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -906,8 +906,8 @@ void q_formlayout_disconnect_notify(void* self, void* signal) {
     QFormLayout_DisconnectNotify((QFormLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_formlayout_qbase_disconnect_notify(void* self, void* signal) {
-    QFormLayout_QBaseDisconnectNotify((QFormLayout*)self, (QMetaMethod*)signal);
+void q_formlayout_super_disconnect_notify(void* self, void* signal) {
+    QFormLayout_SuperDisconnectNotify((QFormLayout*)self, (QMetaMethod*)signal);
 }
 
 void q_formlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -918,8 +918,8 @@ int32_t q_formlayout_minimum_height_for_width(void* self, int param1) {
     return QFormLayout_MinimumHeightForWidth((QFormLayout*)self, param1);
 }
 
-int32_t q_formlayout_qbase_minimum_height_for_width(void* self, int param1) {
-    return QFormLayout_QBaseMinimumHeightForWidth((QFormLayout*)self, param1);
+int32_t q_formlayout_super_minimum_height_for_width(void* self, int param1) {
+    return QFormLayout_SuperMinimumHeightForWidth((QFormLayout*)self, param1);
 }
 
 void q_formlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -930,8 +930,8 @@ QWidget* q_formlayout_widget(void* self) {
     return QFormLayout_Widget((QFormLayout*)self);
 }
 
-QWidget* q_formlayout_qbase_widget(void* self) {
-    return QFormLayout_QBaseWidget((QFormLayout*)self);
+QWidget* q_formlayout_super_widget(void* self) {
+    return QFormLayout_SuperWidget((QFormLayout*)self);
 }
 
 void q_formlayout_on_widget(void* self, QWidget* (*callback)()) {
@@ -942,8 +942,8 @@ QSpacerItem* q_formlayout_spacer_item(void* self) {
     return QFormLayout_SpacerItem((QFormLayout*)self);
 }
 
-QSpacerItem* q_formlayout_qbase_spacer_item(void* self) {
-    return QFormLayout_QBaseSpacerItem((QFormLayout*)self);
+QSpacerItem* q_formlayout_super_spacer_item(void* self) {
+    return QFormLayout_SuperSpacerItem((QFormLayout*)self);
 }
 
 void q_formlayout_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
@@ -954,8 +954,8 @@ void q_formlayout_widget_event(void* self, void* param1) {
     QFormLayout_WidgetEvent((QFormLayout*)self, (QEvent*)param1);
 }
 
-void q_formlayout_qbase_widget_event(void* self, void* param1) {
-    QFormLayout_QBaseWidgetEvent((QFormLayout*)self, (QEvent*)param1);
+void q_formlayout_super_widget_event(void* self, void* param1) {
+    QFormLayout_SuperWidgetEvent((QFormLayout*)self, (QEvent*)param1);
 }
 
 void q_formlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
@@ -966,8 +966,8 @@ void q_formlayout_add_child_layout(void* self, void* l) {
     QFormLayout_AddChildLayout((QFormLayout*)self, (QLayout*)l);
 }
 
-void q_formlayout_qbase_add_child_layout(void* self, void* l) {
-    QFormLayout_QBaseAddChildLayout((QFormLayout*)self, (QLayout*)l);
+void q_formlayout_super_add_child_layout(void* self, void* l) {
+    QFormLayout_SuperAddChildLayout((QFormLayout*)self, (QLayout*)l);
 }
 
 void q_formlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)) {
@@ -978,8 +978,8 @@ void q_formlayout_add_child_widget(void* self, void* w) {
     QFormLayout_AddChildWidget((QFormLayout*)self, (QWidget*)w);
 }
 
-void q_formlayout_qbase_add_child_widget(void* self, void* w) {
-    QFormLayout_QBaseAddChildWidget((QFormLayout*)self, (QWidget*)w);
+void q_formlayout_super_add_child_widget(void* self, void* w) {
+    QFormLayout_SuperAddChildWidget((QFormLayout*)self, (QWidget*)w);
 }
 
 void q_formlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)) {
@@ -990,8 +990,8 @@ bool q_formlayout_adopt_layout(void* self, void* layout) {
     return QFormLayout_AdoptLayout((QFormLayout*)self, (QLayout*)layout);
 }
 
-bool q_formlayout_qbase_adopt_layout(void* self, void* layout) {
-    return QFormLayout_QBaseAdoptLayout((QFormLayout*)self, (QLayout*)layout);
+bool q_formlayout_super_adopt_layout(void* self, void* layout) {
+    return QFormLayout_SuperAdoptLayout((QFormLayout*)self, (QLayout*)layout);
 }
 
 void q_formlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*)) {
@@ -1002,8 +1002,8 @@ QRect* q_formlayout_alignment_rect(void* self, void* param1) {
     return QFormLayout_AlignmentRect((QFormLayout*)self, (QRect*)param1);
 }
 
-QRect* q_formlayout_qbase_alignment_rect(void* self, void* param1) {
-    return QFormLayout_QBaseAlignmentRect((QFormLayout*)self, (QRect*)param1);
+QRect* q_formlayout_super_alignment_rect(void* self, void* param1) {
+    return QFormLayout_SuperAlignmentRect((QFormLayout*)self, (QRect*)param1);
 }
 
 void q_formlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)) {
@@ -1014,8 +1014,8 @@ QObject* q_formlayout_sender(void* self) {
     return QFormLayout_Sender((QFormLayout*)self);
 }
 
-QObject* q_formlayout_qbase_sender(void* self) {
-    return QFormLayout_QBaseSender((QFormLayout*)self);
+QObject* q_formlayout_super_sender(void* self) {
+    return QFormLayout_SuperSender((QFormLayout*)self);
 }
 
 void q_formlayout_on_sender(void* self, QObject* (*callback)()) {
@@ -1026,8 +1026,8 @@ int32_t q_formlayout_sender_signal_index(void* self) {
     return QFormLayout_SenderSignalIndex((QFormLayout*)self);
 }
 
-int32_t q_formlayout_qbase_sender_signal_index(void* self) {
-    return QFormLayout_QBaseSenderSignalIndex((QFormLayout*)self);
+int32_t q_formlayout_super_sender_signal_index(void* self) {
+    return QFormLayout_SuperSenderSignalIndex((QFormLayout*)self);
 }
 
 void q_formlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1038,8 +1038,8 @@ int32_t q_formlayout_receivers(void* self, const char* signal) {
     return QFormLayout_Receivers((QFormLayout*)self, signal);
 }
 
-int32_t q_formlayout_qbase_receivers(void* self, const char* signal) {
-    return QFormLayout_QBaseReceivers((QFormLayout*)self, signal);
+int32_t q_formlayout_super_receivers(void* self, const char* signal) {
+    return QFormLayout_SuperReceivers((QFormLayout*)self, signal);
 }
 
 void q_formlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1050,8 +1050,8 @@ bool q_formlayout_is_signal_connected(void* self, void* signal) {
     return QFormLayout_IsSignalConnected((QFormLayout*)self, (QMetaMethod*)signal);
 }
 
-bool q_formlayout_qbase_is_signal_connected(void* self, void* signal) {
-    return QFormLayout_QBaseIsSignalConnected((QFormLayout*)self, (QMetaMethod*)signal);
+bool q_formlayout_super_is_signal_connected(void* self, void* signal) {
+    return QFormLayout_SuperIsSignalConnected((QFormLayout*)self, (QMetaMethod*)signal);
 }
 
 void q_formlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

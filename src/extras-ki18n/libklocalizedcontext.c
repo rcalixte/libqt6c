@@ -22,8 +22,8 @@ void k_localizedcontext_on_meta_object(void* self, const QMetaObject* (*callback
     KLocalizedContext_OnMetaObject((KLocalizedContext*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_localizedcontext_qbase_meta_object(void* self) {
-    return KLocalizedContext_QBaseMetaObject((KLocalizedContext*)self);
+const QMetaObject* k_localizedcontext_super_meta_object(void* self) {
+    return KLocalizedContext_SuperMetaObject((KLocalizedContext*)self);
 }
 
 void* k_localizedcontext_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_localizedcontext_on_metacast(void* self, void* (*callback)(void*, const c
     KLocalizedContext_OnMetacast((KLocalizedContext*)self, (intptr_t)callback);
 }
 
-void* k_localizedcontext_qbase_metacast(void* self, const char* param1) {
-    return KLocalizedContext_QBaseMetacast((KLocalizedContext*)self, param1);
+void* k_localizedcontext_super_metacast(void* self, const char* param1) {
+    return KLocalizedContext_SuperMetacast((KLocalizedContext*)self, param1);
 }
 
 int32_t k_localizedcontext_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_localizedcontext_on_metacall(void* self, int32_t (*callback)(void*, int32
     KLocalizedContext_OnMetacall((KLocalizedContext*)self, (intptr_t)callback);
 }
 
-int32_t k_localizedcontext_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KLocalizedContext_QBaseMetacall((KLocalizedContext*)self, param1, param2, param3);
+int32_t k_localizedcontext_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KLocalizedContext_SuperMetacall((KLocalizedContext*)self, param1, param2, param3);
 }
 
 const char* k_localizedcontext_tr(const char* s) {
@@ -1537,8 +1537,8 @@ bool k_localizedcontext_event(void* self, void* event) {
     return KLocalizedContext_Event((KLocalizedContext*)self, (QEvent*)event);
 }
 
-bool k_localizedcontext_qbase_event(void* self, void* event) {
-    return KLocalizedContext_QBaseEvent((KLocalizedContext*)self, (QEvent*)event);
+bool k_localizedcontext_super_event(void* self, void* event) {
+    return KLocalizedContext_SuperEvent((KLocalizedContext*)self, (QEvent*)event);
 }
 
 void k_localizedcontext_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1549,8 +1549,8 @@ bool k_localizedcontext_event_filter(void* self, void* watched, void* event) {
     return KLocalizedContext_EventFilter((KLocalizedContext*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_localizedcontext_qbase_event_filter(void* self, void* watched, void* event) {
-    return KLocalizedContext_QBaseEventFilter((KLocalizedContext*)self, (QObject*)watched, (QEvent*)event);
+bool k_localizedcontext_super_event_filter(void* self, void* watched, void* event) {
+    return KLocalizedContext_SuperEventFilter((KLocalizedContext*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_localizedcontext_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1561,8 +1561,8 @@ void k_localizedcontext_timer_event(void* self, void* event) {
     KLocalizedContext_TimerEvent((KLocalizedContext*)self, (QTimerEvent*)event);
 }
 
-void k_localizedcontext_qbase_timer_event(void* self, void* event) {
-    KLocalizedContext_QBaseTimerEvent((KLocalizedContext*)self, (QTimerEvent*)event);
+void k_localizedcontext_super_timer_event(void* self, void* event) {
+    KLocalizedContext_SuperTimerEvent((KLocalizedContext*)self, (QTimerEvent*)event);
 }
 
 void k_localizedcontext_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1573,8 +1573,8 @@ void k_localizedcontext_child_event(void* self, void* event) {
     KLocalizedContext_ChildEvent((KLocalizedContext*)self, (QChildEvent*)event);
 }
 
-void k_localizedcontext_qbase_child_event(void* self, void* event) {
-    KLocalizedContext_QBaseChildEvent((KLocalizedContext*)self, (QChildEvent*)event);
+void k_localizedcontext_super_child_event(void* self, void* event) {
+    KLocalizedContext_SuperChildEvent((KLocalizedContext*)self, (QChildEvent*)event);
 }
 
 void k_localizedcontext_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1585,8 +1585,8 @@ void k_localizedcontext_custom_event(void* self, void* event) {
     KLocalizedContext_CustomEvent((KLocalizedContext*)self, (QEvent*)event);
 }
 
-void k_localizedcontext_qbase_custom_event(void* self, void* event) {
-    KLocalizedContext_QBaseCustomEvent((KLocalizedContext*)self, (QEvent*)event);
+void k_localizedcontext_super_custom_event(void* self, void* event) {
+    KLocalizedContext_SuperCustomEvent((KLocalizedContext*)self, (QEvent*)event);
 }
 
 void k_localizedcontext_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1597,8 +1597,8 @@ void k_localizedcontext_connect_notify(void* self, void* signal) {
     KLocalizedContext_ConnectNotify((KLocalizedContext*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedcontext_qbase_connect_notify(void* self, void* signal) {
-    KLocalizedContext_QBaseConnectNotify((KLocalizedContext*)self, (QMetaMethod*)signal);
+void k_localizedcontext_super_connect_notify(void* self, void* signal) {
+    KLocalizedContext_SuperConnectNotify((KLocalizedContext*)self, (QMetaMethod*)signal);
 }
 
 void k_localizedcontext_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1609,8 +1609,8 @@ void k_localizedcontext_disconnect_notify(void* self, void* signal) {
     KLocalizedContext_DisconnectNotify((KLocalizedContext*)self, (QMetaMethod*)signal);
 }
 
-void k_localizedcontext_qbase_disconnect_notify(void* self, void* signal) {
-    KLocalizedContext_QBaseDisconnectNotify((KLocalizedContext*)self, (QMetaMethod*)signal);
+void k_localizedcontext_super_disconnect_notify(void* self, void* signal) {
+    KLocalizedContext_SuperDisconnectNotify((KLocalizedContext*)self, (QMetaMethod*)signal);
 }
 
 void k_localizedcontext_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1621,8 +1621,8 @@ QObject* k_localizedcontext_sender(void* self) {
     return KLocalizedContext_Sender((KLocalizedContext*)self);
 }
 
-QObject* k_localizedcontext_qbase_sender(void* self) {
-    return KLocalizedContext_QBaseSender((KLocalizedContext*)self);
+QObject* k_localizedcontext_super_sender(void* self) {
+    return KLocalizedContext_SuperSender((KLocalizedContext*)self);
 }
 
 void k_localizedcontext_on_sender(void* self, QObject* (*callback)()) {
@@ -1633,8 +1633,8 @@ int32_t k_localizedcontext_sender_signal_index(void* self) {
     return KLocalizedContext_SenderSignalIndex((KLocalizedContext*)self);
 }
 
-int32_t k_localizedcontext_qbase_sender_signal_index(void* self) {
-    return KLocalizedContext_QBaseSenderSignalIndex((KLocalizedContext*)self);
+int32_t k_localizedcontext_super_sender_signal_index(void* self) {
+    return KLocalizedContext_SuperSenderSignalIndex((KLocalizedContext*)self);
 }
 
 void k_localizedcontext_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1645,8 +1645,8 @@ int32_t k_localizedcontext_receivers(void* self, const char* signal) {
     return KLocalizedContext_Receivers((KLocalizedContext*)self, signal);
 }
 
-int32_t k_localizedcontext_qbase_receivers(void* self, const char* signal) {
-    return KLocalizedContext_QBaseReceivers((KLocalizedContext*)self, signal);
+int32_t k_localizedcontext_super_receivers(void* self, const char* signal) {
+    return KLocalizedContext_SuperReceivers((KLocalizedContext*)self, signal);
 }
 
 void k_localizedcontext_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1657,8 +1657,8 @@ bool k_localizedcontext_is_signal_connected(void* self, void* signal) {
     return KLocalizedContext_IsSignalConnected((KLocalizedContext*)self, (QMetaMethod*)signal);
 }
 
-bool k_localizedcontext_qbase_is_signal_connected(void* self, void* signal) {
-    return KLocalizedContext_QBaseIsSignalConnected((KLocalizedContext*)self, (QMetaMethod*)signal);
+bool k_localizedcontext_super_is_signal_connected(void* self, void* signal) {
+    return KLocalizedContext_SuperIsSignalConnected((KLocalizedContext*)self, (QMetaMethod*)signal);
 }
 
 void k_localizedcontext_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

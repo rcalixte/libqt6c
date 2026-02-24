@@ -25,8 +25,8 @@ void q_pielegendmarker_on_meta_object(void* self, const QMetaObject* (*callback)
     QPieLegendMarker_OnMetaObject((QPieLegendMarker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pielegendmarker_qbase_meta_object(void* self) {
-    return QPieLegendMarker_QBaseMetaObject((QPieLegendMarker*)self);
+const QMetaObject* q_pielegendmarker_super_meta_object(void* self) {
+    return QPieLegendMarker_SuperMetaObject((QPieLegendMarker*)self);
 }
 
 void* q_pielegendmarker_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void q_pielegendmarker_on_metacast(void* self, void* (*callback)(void*, const ch
     QPieLegendMarker_OnMetacast((QPieLegendMarker*)self, (intptr_t)callback);
 }
 
-void* q_pielegendmarker_qbase_metacast(void* self, const char* param1) {
-    return QPieLegendMarker_QBaseMetacast((QPieLegendMarker*)self, param1);
+void* q_pielegendmarker_super_metacast(void* self, const char* param1) {
+    return QPieLegendMarker_SuperMetacast((QPieLegendMarker*)self, param1);
 }
 
 int32_t q_pielegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void q_pielegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QPieLegendMarker_OnMetacall((QPieLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_pielegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPieLegendMarker_QBaseMetacall((QPieLegendMarker*)self, param1, param2, param3);
+int32_t q_pielegendmarker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPieLegendMarker_SuperMetacall((QPieLegendMarker*)self, param1, param2, param3);
 }
 
 const char* q_pielegendmarker_tr(const char* s) {
@@ -68,8 +68,8 @@ void q_pielegendmarker_on_type(void* self, int32_t (*callback)()) {
     QPieLegendMarker_OnType((QPieLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_pielegendmarker_qbase_type(void* self) {
-    return QPieLegendMarker_QBaseType((QPieLegendMarker*)self);
+int32_t q_pielegendmarker_super_type(void* self) {
+    return QPieLegendMarker_SuperType((QPieLegendMarker*)self);
 }
 
 QPieSeries* q_pielegendmarker_series(void* self) {
@@ -80,8 +80,8 @@ void q_pielegendmarker_on_series(void* self, QPieSeries* (*callback)()) {
     QPieLegendMarker_OnSeries((QPieLegendMarker*)self, (intptr_t)callback);
 }
 
-QPieSeries* q_pielegendmarker_qbase_series(void* self) {
-    return QPieLegendMarker_QBaseSeries((QPieLegendMarker*)self);
+QPieSeries* q_pielegendmarker_super_series(void* self) {
+    return QPieLegendMarker_SuperSeries((QPieLegendMarker*)self);
 }
 
 QPieSlice* q_pielegendmarker_slice(void* self) {
@@ -448,8 +448,8 @@ bool q_pielegendmarker_event(void* self, void* event) {
     return QPieLegendMarker_Event((QPieLegendMarker*)self, (QEvent*)event);
 }
 
-bool q_pielegendmarker_qbase_event(void* self, void* event) {
-    return QPieLegendMarker_QBaseEvent((QPieLegendMarker*)self, (QEvent*)event);
+bool q_pielegendmarker_super_event(void* self, void* event) {
+    return QPieLegendMarker_SuperEvent((QPieLegendMarker*)self, (QEvent*)event);
 }
 
 void q_pielegendmarker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -460,8 +460,8 @@ bool q_pielegendmarker_event_filter(void* self, void* watched, void* event) {
     return QPieLegendMarker_EventFilter((QPieLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pielegendmarker_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPieLegendMarker_QBaseEventFilter((QPieLegendMarker*)self, (QObject*)watched, (QEvent*)event);
+bool q_pielegendmarker_super_event_filter(void* self, void* watched, void* event) {
+    return QPieLegendMarker_SuperEventFilter((QPieLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pielegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -472,8 +472,8 @@ void q_pielegendmarker_timer_event(void* self, void* event) {
     QPieLegendMarker_TimerEvent((QPieLegendMarker*)self, (QTimerEvent*)event);
 }
 
-void q_pielegendmarker_qbase_timer_event(void* self, void* event) {
-    QPieLegendMarker_QBaseTimerEvent((QPieLegendMarker*)self, (QTimerEvent*)event);
+void q_pielegendmarker_super_timer_event(void* self, void* event) {
+    QPieLegendMarker_SuperTimerEvent((QPieLegendMarker*)self, (QTimerEvent*)event);
 }
 
 void q_pielegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -484,8 +484,8 @@ void q_pielegendmarker_child_event(void* self, void* event) {
     QPieLegendMarker_ChildEvent((QPieLegendMarker*)self, (QChildEvent*)event);
 }
 
-void q_pielegendmarker_qbase_child_event(void* self, void* event) {
-    QPieLegendMarker_QBaseChildEvent((QPieLegendMarker*)self, (QChildEvent*)event);
+void q_pielegendmarker_super_child_event(void* self, void* event) {
+    QPieLegendMarker_SuperChildEvent((QPieLegendMarker*)self, (QChildEvent*)event);
 }
 
 void q_pielegendmarker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -496,8 +496,8 @@ void q_pielegendmarker_custom_event(void* self, void* event) {
     QPieLegendMarker_CustomEvent((QPieLegendMarker*)self, (QEvent*)event);
 }
 
-void q_pielegendmarker_qbase_custom_event(void* self, void* event) {
-    QPieLegendMarker_QBaseCustomEvent((QPieLegendMarker*)self, (QEvent*)event);
+void q_pielegendmarker_super_custom_event(void* self, void* event) {
+    QPieLegendMarker_SuperCustomEvent((QPieLegendMarker*)self, (QEvent*)event);
 }
 
 void q_pielegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -508,8 +508,8 @@ void q_pielegendmarker_connect_notify(void* self, void* signal) {
     QPieLegendMarker_ConnectNotify((QPieLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_pielegendmarker_qbase_connect_notify(void* self, void* signal) {
-    QPieLegendMarker_QBaseConnectNotify((QPieLegendMarker*)self, (QMetaMethod*)signal);
+void q_pielegendmarker_super_connect_notify(void* self, void* signal) {
+    QPieLegendMarker_SuperConnectNotify((QPieLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_pielegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -520,8 +520,8 @@ void q_pielegendmarker_disconnect_notify(void* self, void* signal) {
     QPieLegendMarker_DisconnectNotify((QPieLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_pielegendmarker_qbase_disconnect_notify(void* self, void* signal) {
-    QPieLegendMarker_QBaseDisconnectNotify((QPieLegendMarker*)self, (QMetaMethod*)signal);
+void q_pielegendmarker_super_disconnect_notify(void* self, void* signal) {
+    QPieLegendMarker_SuperDisconnectNotify((QPieLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_pielegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -532,8 +532,8 @@ QObject* q_pielegendmarker_sender(void* self) {
     return QPieLegendMarker_Sender((QPieLegendMarker*)self);
 }
 
-QObject* q_pielegendmarker_qbase_sender(void* self) {
-    return QPieLegendMarker_QBaseSender((QPieLegendMarker*)self);
+QObject* q_pielegendmarker_super_sender(void* self) {
+    return QPieLegendMarker_SuperSender((QPieLegendMarker*)self);
 }
 
 void q_pielegendmarker_on_sender(void* self, QObject* (*callback)()) {
@@ -544,8 +544,8 @@ int32_t q_pielegendmarker_sender_signal_index(void* self) {
     return QPieLegendMarker_SenderSignalIndex((QPieLegendMarker*)self);
 }
 
-int32_t q_pielegendmarker_qbase_sender_signal_index(void* self) {
-    return QPieLegendMarker_QBaseSenderSignalIndex((QPieLegendMarker*)self);
+int32_t q_pielegendmarker_super_sender_signal_index(void* self) {
+    return QPieLegendMarker_SuperSenderSignalIndex((QPieLegendMarker*)self);
 }
 
 void q_pielegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -556,8 +556,8 @@ int32_t q_pielegendmarker_receivers(void* self, const char* signal) {
     return QPieLegendMarker_Receivers((QPieLegendMarker*)self, signal);
 }
 
-int32_t q_pielegendmarker_qbase_receivers(void* self, const char* signal) {
-    return QPieLegendMarker_QBaseReceivers((QPieLegendMarker*)self, signal);
+int32_t q_pielegendmarker_super_receivers(void* self, const char* signal) {
+    return QPieLegendMarker_SuperReceivers((QPieLegendMarker*)self, signal);
 }
 
 void q_pielegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -568,8 +568,8 @@ bool q_pielegendmarker_is_signal_connected(void* self, void* signal) {
     return QPieLegendMarker_IsSignalConnected((QPieLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-bool q_pielegendmarker_qbase_is_signal_connected(void* self, void* signal) {
-    return QPieLegendMarker_QBaseIsSignalConnected((QPieLegendMarker*)self, (QMetaMethod*)signal);
+bool q_pielegendmarker_super_is_signal_connected(void* self, void* signal) {
+    return QPieLegendMarker_SuperIsSignalConnected((QPieLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_pielegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

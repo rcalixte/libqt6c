@@ -55,8 +55,8 @@ void q_filesystemwatcher_on_meta_object(void* self, const QMetaObject* (*callbac
     QFileSystemWatcher_OnMetaObject((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_filesystemwatcher_qbase_meta_object(void* self) {
-    return QFileSystemWatcher_QBaseMetaObject((QFileSystemWatcher*)self);
+const QMetaObject* q_filesystemwatcher_super_meta_object(void* self) {
+    return QFileSystemWatcher_SuperMetaObject((QFileSystemWatcher*)self);
 }
 
 void* q_filesystemwatcher_metacast(void* self, const char* param1) {
@@ -67,8 +67,8 @@ void q_filesystemwatcher_on_metacast(void* self, void* (*callback)(void*, const 
     QFileSystemWatcher_OnMetacast((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
-void* q_filesystemwatcher_qbase_metacast(void* self, const char* param1) {
-    return QFileSystemWatcher_QBaseMetacast((QFileSystemWatcher*)self, param1);
+void* q_filesystemwatcher_super_metacast(void* self, const char* param1) {
+    return QFileSystemWatcher_SuperMetacast((QFileSystemWatcher*)self, param1);
 }
 
 int32_t q_filesystemwatcher_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -79,8 +79,8 @@ void q_filesystemwatcher_on_metacall(void* self, int32_t (*callback)(void*, int3
     QFileSystemWatcher_OnMetacall((QFileSystemWatcher*)self, (intptr_t)callback);
 }
 
-int32_t q_filesystemwatcher_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFileSystemWatcher_QBaseMetacall((QFileSystemWatcher*)self, param1, param2, param3);
+int32_t q_filesystemwatcher_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFileSystemWatcher_SuperMetacall((QFileSystemWatcher*)self, param1, param2, param3);
 }
 
 const char* q_filesystemwatcher_tr(const char* s) {
@@ -425,8 +425,8 @@ bool q_filesystemwatcher_event(void* self, void* event) {
     return QFileSystemWatcher_Event((QFileSystemWatcher*)self, (QEvent*)event);
 }
 
-bool q_filesystemwatcher_qbase_event(void* self, void* event) {
-    return QFileSystemWatcher_QBaseEvent((QFileSystemWatcher*)self, (QEvent*)event);
+bool q_filesystemwatcher_super_event(void* self, void* event) {
+    return QFileSystemWatcher_SuperEvent((QFileSystemWatcher*)self, (QEvent*)event);
 }
 
 void q_filesystemwatcher_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -437,8 +437,8 @@ bool q_filesystemwatcher_event_filter(void* self, void* watched, void* event) {
     return QFileSystemWatcher_EventFilter((QFileSystemWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_filesystemwatcher_qbase_event_filter(void* self, void* watched, void* event) {
-    return QFileSystemWatcher_QBaseEventFilter((QFileSystemWatcher*)self, (QObject*)watched, (QEvent*)event);
+bool q_filesystemwatcher_super_event_filter(void* self, void* watched, void* event) {
+    return QFileSystemWatcher_SuperEventFilter((QFileSystemWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_filesystemwatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -449,8 +449,8 @@ void q_filesystemwatcher_timer_event(void* self, void* event) {
     QFileSystemWatcher_TimerEvent((QFileSystemWatcher*)self, (QTimerEvent*)event);
 }
 
-void q_filesystemwatcher_qbase_timer_event(void* self, void* event) {
-    QFileSystemWatcher_QBaseTimerEvent((QFileSystemWatcher*)self, (QTimerEvent*)event);
+void q_filesystemwatcher_super_timer_event(void* self, void* event) {
+    QFileSystemWatcher_SuperTimerEvent((QFileSystemWatcher*)self, (QTimerEvent*)event);
 }
 
 void q_filesystemwatcher_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -461,8 +461,8 @@ void q_filesystemwatcher_child_event(void* self, void* event) {
     QFileSystemWatcher_ChildEvent((QFileSystemWatcher*)self, (QChildEvent*)event);
 }
 
-void q_filesystemwatcher_qbase_child_event(void* self, void* event) {
-    QFileSystemWatcher_QBaseChildEvent((QFileSystemWatcher*)self, (QChildEvent*)event);
+void q_filesystemwatcher_super_child_event(void* self, void* event) {
+    QFileSystemWatcher_SuperChildEvent((QFileSystemWatcher*)self, (QChildEvent*)event);
 }
 
 void q_filesystemwatcher_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -473,8 +473,8 @@ void q_filesystemwatcher_custom_event(void* self, void* event) {
     QFileSystemWatcher_CustomEvent((QFileSystemWatcher*)self, (QEvent*)event);
 }
 
-void q_filesystemwatcher_qbase_custom_event(void* self, void* event) {
-    QFileSystemWatcher_QBaseCustomEvent((QFileSystemWatcher*)self, (QEvent*)event);
+void q_filesystemwatcher_super_custom_event(void* self, void* event) {
+    QFileSystemWatcher_SuperCustomEvent((QFileSystemWatcher*)self, (QEvent*)event);
 }
 
 void q_filesystemwatcher_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -485,8 +485,8 @@ void q_filesystemwatcher_connect_notify(void* self, void* signal) {
     QFileSystemWatcher_ConnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_filesystemwatcher_qbase_connect_notify(void* self, void* signal) {
-    QFileSystemWatcher_QBaseConnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
+void q_filesystemwatcher_super_connect_notify(void* self, void* signal) {
+    QFileSystemWatcher_SuperConnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_filesystemwatcher_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -497,8 +497,8 @@ void q_filesystemwatcher_disconnect_notify(void* self, void* signal) {
     QFileSystemWatcher_DisconnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_filesystemwatcher_qbase_disconnect_notify(void* self, void* signal) {
-    QFileSystemWatcher_QBaseDisconnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
+void q_filesystemwatcher_super_disconnect_notify(void* self, void* signal) {
+    QFileSystemWatcher_SuperDisconnectNotify((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_filesystemwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -509,8 +509,8 @@ QObject* q_filesystemwatcher_sender(void* self) {
     return QFileSystemWatcher_Sender((QFileSystemWatcher*)self);
 }
 
-QObject* q_filesystemwatcher_qbase_sender(void* self) {
-    return QFileSystemWatcher_QBaseSender((QFileSystemWatcher*)self);
+QObject* q_filesystemwatcher_super_sender(void* self) {
+    return QFileSystemWatcher_SuperSender((QFileSystemWatcher*)self);
 }
 
 void q_filesystemwatcher_on_sender(void* self, QObject* (*callback)()) {
@@ -521,8 +521,8 @@ int32_t q_filesystemwatcher_sender_signal_index(void* self) {
     return QFileSystemWatcher_SenderSignalIndex((QFileSystemWatcher*)self);
 }
 
-int32_t q_filesystemwatcher_qbase_sender_signal_index(void* self) {
-    return QFileSystemWatcher_QBaseSenderSignalIndex((QFileSystemWatcher*)self);
+int32_t q_filesystemwatcher_super_sender_signal_index(void* self) {
+    return QFileSystemWatcher_SuperSenderSignalIndex((QFileSystemWatcher*)self);
 }
 
 void q_filesystemwatcher_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -533,8 +533,8 @@ int32_t q_filesystemwatcher_receivers(void* self, const char* signal) {
     return QFileSystemWatcher_Receivers((QFileSystemWatcher*)self, signal);
 }
 
-int32_t q_filesystemwatcher_qbase_receivers(void* self, const char* signal) {
-    return QFileSystemWatcher_QBaseReceivers((QFileSystemWatcher*)self, signal);
+int32_t q_filesystemwatcher_super_receivers(void* self, const char* signal) {
+    return QFileSystemWatcher_SuperReceivers((QFileSystemWatcher*)self, signal);
 }
 
 void q_filesystemwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -545,8 +545,8 @@ bool q_filesystemwatcher_is_signal_connected(void* self, void* signal) {
     return QFileSystemWatcher_IsSignalConnected((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
-bool q_filesystemwatcher_qbase_is_signal_connected(void* self, void* signal) {
-    return QFileSystemWatcher_QBaseIsSignalConnected((QFileSystemWatcher*)self, (QMetaMethod*)signal);
+bool q_filesystemwatcher_super_is_signal_connected(void* self, void* signal) {
+    return QFileSystemWatcher_SuperIsSignalConnected((QFileSystemWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_filesystemwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

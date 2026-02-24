@@ -22,8 +22,8 @@ void k_globalshortcutinfo_on_meta_object(void* self, const QMetaObject* (*callba
     KGlobalShortcutInfo_OnMetaObject((KGlobalShortcutInfo*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_globalshortcutinfo_qbase_meta_object(void* self) {
-    return KGlobalShortcutInfo_QBaseMetaObject((KGlobalShortcutInfo*)self);
+const QMetaObject* k_globalshortcutinfo_super_meta_object(void* self) {
+    return KGlobalShortcutInfo_SuperMetaObject((KGlobalShortcutInfo*)self);
 }
 
 void* k_globalshortcutinfo_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_globalshortcutinfo_on_metacast(void* self, void* (*callback)(void*, const
     KGlobalShortcutInfo_OnMetacast((KGlobalShortcutInfo*)self, (intptr_t)callback);
 }
 
-void* k_globalshortcutinfo_qbase_metacast(void* self, const char* param1) {
-    return KGlobalShortcutInfo_QBaseMetacast((KGlobalShortcutInfo*)self, param1);
+void* k_globalshortcutinfo_super_metacast(void* self, const char* param1) {
+    return KGlobalShortcutInfo_SuperMetacast((KGlobalShortcutInfo*)self, param1);
 }
 
 int32_t k_globalshortcutinfo_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_globalshortcutinfo_on_metacall(void* self, int32_t (*callback)(void*, int
     KGlobalShortcutInfo_OnMetacall((KGlobalShortcutInfo*)self, (intptr_t)callback);
 }
 
-int32_t k_globalshortcutinfo_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KGlobalShortcutInfo_QBaseMetacall((KGlobalShortcutInfo*)self, param1, param2, param3);
+int32_t k_globalshortcutinfo_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KGlobalShortcutInfo_SuperMetacall((KGlobalShortcutInfo*)self, param1, param2, param3);
 }
 
 const char* k_globalshortcutinfo_tr(const char* s) {
@@ -342,8 +342,8 @@ bool k_globalshortcutinfo_event(void* self, void* event) {
     return KGlobalShortcutInfo_Event((KGlobalShortcutInfo*)self, (QEvent*)event);
 }
 
-bool k_globalshortcutinfo_qbase_event(void* self, void* event) {
-    return KGlobalShortcutInfo_QBaseEvent((KGlobalShortcutInfo*)self, (QEvent*)event);
+bool k_globalshortcutinfo_super_event(void* self, void* event) {
+    return KGlobalShortcutInfo_SuperEvent((KGlobalShortcutInfo*)self, (QEvent*)event);
 }
 
 void k_globalshortcutinfo_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ bool k_globalshortcutinfo_event_filter(void* self, void* watched, void* event) {
     return KGlobalShortcutInfo_EventFilter((KGlobalShortcutInfo*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_globalshortcutinfo_qbase_event_filter(void* self, void* watched, void* event) {
-    return KGlobalShortcutInfo_QBaseEventFilter((KGlobalShortcutInfo*)self, (QObject*)watched, (QEvent*)event);
+bool k_globalshortcutinfo_super_event_filter(void* self, void* watched, void* event) {
+    return KGlobalShortcutInfo_SuperEventFilter((KGlobalShortcutInfo*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_globalshortcutinfo_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -366,8 +366,8 @@ void k_globalshortcutinfo_timer_event(void* self, void* event) {
     KGlobalShortcutInfo_TimerEvent((KGlobalShortcutInfo*)self, (QTimerEvent*)event);
 }
 
-void k_globalshortcutinfo_qbase_timer_event(void* self, void* event) {
-    KGlobalShortcutInfo_QBaseTimerEvent((KGlobalShortcutInfo*)self, (QTimerEvent*)event);
+void k_globalshortcutinfo_super_timer_event(void* self, void* event) {
+    KGlobalShortcutInfo_SuperTimerEvent((KGlobalShortcutInfo*)self, (QTimerEvent*)event);
 }
 
 void k_globalshortcutinfo_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void k_globalshortcutinfo_child_event(void* self, void* event) {
     KGlobalShortcutInfo_ChildEvent((KGlobalShortcutInfo*)self, (QChildEvent*)event);
 }
 
-void k_globalshortcutinfo_qbase_child_event(void* self, void* event) {
-    KGlobalShortcutInfo_QBaseChildEvent((KGlobalShortcutInfo*)self, (QChildEvent*)event);
+void k_globalshortcutinfo_super_child_event(void* self, void* event) {
+    KGlobalShortcutInfo_SuperChildEvent((KGlobalShortcutInfo*)self, (QChildEvent*)event);
 }
 
 void k_globalshortcutinfo_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ void k_globalshortcutinfo_custom_event(void* self, void* event) {
     KGlobalShortcutInfo_CustomEvent((KGlobalShortcutInfo*)self, (QEvent*)event);
 }
 
-void k_globalshortcutinfo_qbase_custom_event(void* self, void* event) {
-    KGlobalShortcutInfo_QBaseCustomEvent((KGlobalShortcutInfo*)self, (QEvent*)event);
+void k_globalshortcutinfo_super_custom_event(void* self, void* event) {
+    KGlobalShortcutInfo_SuperCustomEvent((KGlobalShortcutInfo*)self, (QEvent*)event);
 }
 
 void k_globalshortcutinfo_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -402,8 +402,8 @@ void k_globalshortcutinfo_connect_notify(void* self, void* signal) {
     KGlobalShortcutInfo_ConnectNotify((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
 }
 
-void k_globalshortcutinfo_qbase_connect_notify(void* self, void* signal) {
-    KGlobalShortcutInfo_QBaseConnectNotify((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
+void k_globalshortcutinfo_super_connect_notify(void* self, void* signal) {
+    KGlobalShortcutInfo_SuperConnectNotify((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_globalshortcutinfo_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -414,8 +414,8 @@ void k_globalshortcutinfo_disconnect_notify(void* self, void* signal) {
     KGlobalShortcutInfo_DisconnectNotify((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
 }
 
-void k_globalshortcutinfo_qbase_disconnect_notify(void* self, void* signal) {
-    KGlobalShortcutInfo_QBaseDisconnectNotify((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
+void k_globalshortcutinfo_super_disconnect_notify(void* self, void* signal) {
+    KGlobalShortcutInfo_SuperDisconnectNotify((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_globalshortcutinfo_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ QObject* k_globalshortcutinfo_sender(void* self) {
     return KGlobalShortcutInfo_Sender((KGlobalShortcutInfo*)self);
 }
 
-QObject* k_globalshortcutinfo_qbase_sender(void* self) {
-    return KGlobalShortcutInfo_QBaseSender((KGlobalShortcutInfo*)self);
+QObject* k_globalshortcutinfo_super_sender(void* self) {
+    return KGlobalShortcutInfo_SuperSender((KGlobalShortcutInfo*)self);
 }
 
 void k_globalshortcutinfo_on_sender(void* self, QObject* (*callback)()) {
@@ -438,8 +438,8 @@ int32_t k_globalshortcutinfo_sender_signal_index(void* self) {
     return KGlobalShortcutInfo_SenderSignalIndex((KGlobalShortcutInfo*)self);
 }
 
-int32_t k_globalshortcutinfo_qbase_sender_signal_index(void* self) {
-    return KGlobalShortcutInfo_QBaseSenderSignalIndex((KGlobalShortcutInfo*)self);
+int32_t k_globalshortcutinfo_super_sender_signal_index(void* self) {
+    return KGlobalShortcutInfo_SuperSenderSignalIndex((KGlobalShortcutInfo*)self);
 }
 
 void k_globalshortcutinfo_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -450,8 +450,8 @@ int32_t k_globalshortcutinfo_receivers(void* self, const char* signal) {
     return KGlobalShortcutInfo_Receivers((KGlobalShortcutInfo*)self, signal);
 }
 
-int32_t k_globalshortcutinfo_qbase_receivers(void* self, const char* signal) {
-    return KGlobalShortcutInfo_QBaseReceivers((KGlobalShortcutInfo*)self, signal);
+int32_t k_globalshortcutinfo_super_receivers(void* self, const char* signal) {
+    return KGlobalShortcutInfo_SuperReceivers((KGlobalShortcutInfo*)self, signal);
 }
 
 void k_globalshortcutinfo_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -462,8 +462,8 @@ bool k_globalshortcutinfo_is_signal_connected(void* self, void* signal) {
     return KGlobalShortcutInfo_IsSignalConnected((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
 }
 
-bool k_globalshortcutinfo_qbase_is_signal_connected(void* self, void* signal) {
-    return KGlobalShortcutInfo_QBaseIsSignalConnected((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
+bool k_globalshortcutinfo_super_is_signal_connected(void* self, void* signal) {
+    return KGlobalShortcutInfo_SuperIsSignalConnected((KGlobalShortcutInfo*)self, (QMetaMethod*)signal);
 }
 
 void k_globalshortcutinfo_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

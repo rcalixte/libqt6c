@@ -26,8 +26,8 @@ void q_coreapplication_on_meta_object(void* self, const QMetaObject* (*callback)
     QCoreApplication_OnMetaObject((QCoreApplication*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_coreapplication_qbase_meta_object(void* self) {
-    return QCoreApplication_QBaseMetaObject((QCoreApplication*)self);
+const QMetaObject* q_coreapplication_super_meta_object(void* self) {
+    return QCoreApplication_SuperMetaObject((QCoreApplication*)self);
 }
 
 void* q_coreapplication_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_coreapplication_on_metacast(void* self, void* (*callback)(void*, const ch
     QCoreApplication_OnMetacast((QCoreApplication*)self, (intptr_t)callback);
 }
 
-void* q_coreapplication_qbase_metacast(void* self, const char* param1) {
-    return QCoreApplication_QBaseMetacast((QCoreApplication*)self, param1);
+void* q_coreapplication_super_metacast(void* self, const char* param1) {
+    return QCoreApplication_SuperMetacast((QCoreApplication*)self, param1);
 }
 
 int32_t q_coreapplication_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_coreapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QCoreApplication_OnMetacall((QCoreApplication*)self, (intptr_t)callback);
 }
 
-int32_t q_coreapplication_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCoreApplication_QBaseMetacall((QCoreApplication*)self, param1, param2, param3);
+int32_t q_coreapplication_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCoreApplication_SuperMetacall((QCoreApplication*)self, param1, param2, param3);
 }
 
 const char* q_coreapplication_tr(const char* s) {
@@ -192,8 +192,8 @@ void q_coreapplication_on_notify(void* self, bool (*callback)(void*, void*, void
     QCoreApplication_OnNotify((QCoreApplication*)self, (intptr_t)callback);
 }
 
-bool q_coreapplication_qbase_notify(void* self, void* param1, void* param2) {
-    return QCoreApplication_QBaseNotify((QCoreApplication*)self, (QObject*)param1, (QEvent*)param2);
+bool q_coreapplication_super_notify(void* self, void* param1, void* param2) {
+    return QCoreApplication_SuperNotify((QCoreApplication*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 bool q_coreapplication_starting_up() {
@@ -291,8 +291,8 @@ void q_coreapplication_on_resolve_interface(void* self, void* (*callback)(void*,
     QCoreApplication_OnResolveInterface((QCoreApplication*)self, (intptr_t)callback);
 }
 
-void* q_coreapplication_qbase_resolve_interface(void* self, const char* name, int revision) {
-    return QCoreApplication_QBaseResolveInterface((QCoreApplication*)self, name, revision);
+void* q_coreapplication_super_resolve_interface(void* self, const char* name, int revision) {
+    return QCoreApplication_SuperResolveInterface((QCoreApplication*)self, name, revision);
 }
 
 void q_coreapplication_install_native_event_filter(void* self, void* filterObj) {
@@ -367,8 +367,8 @@ void q_coreapplication_on_event(void* self, bool (*callback)(void*, void*)) {
     QCoreApplication_OnEvent((QCoreApplication*)self, (intptr_t)callback);
 }
 
-bool q_coreapplication_qbase_event(void* self, void* param1) {
-    return QCoreApplication_QBaseEvent((QCoreApplication*)self, (QEvent*)param1);
+bool q_coreapplication_super_event(void* self, void* param1) {
+    return QCoreApplication_SuperEvent((QCoreApplication*)self, (QEvent*)param1);
 }
 
 const char* q_coreapplication_tr2(const char* s, const char* c) {
@@ -642,8 +642,8 @@ bool q_coreapplication_event_filter(void* self, void* watched, void* event) {
     return QCoreApplication_EventFilter((QCoreApplication*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_coreapplication_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCoreApplication_QBaseEventFilter((QCoreApplication*)self, (QObject*)watched, (QEvent*)event);
+bool q_coreapplication_super_event_filter(void* self, void* watched, void* event) {
+    return QCoreApplication_SuperEventFilter((QCoreApplication*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_coreapplication_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -654,8 +654,8 @@ void q_coreapplication_timer_event(void* self, void* event) {
     QCoreApplication_TimerEvent((QCoreApplication*)self, (QTimerEvent*)event);
 }
 
-void q_coreapplication_qbase_timer_event(void* self, void* event) {
-    QCoreApplication_QBaseTimerEvent((QCoreApplication*)self, (QTimerEvent*)event);
+void q_coreapplication_super_timer_event(void* self, void* event) {
+    QCoreApplication_SuperTimerEvent((QCoreApplication*)self, (QTimerEvent*)event);
 }
 
 void q_coreapplication_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -666,8 +666,8 @@ void q_coreapplication_child_event(void* self, void* event) {
     QCoreApplication_ChildEvent((QCoreApplication*)self, (QChildEvent*)event);
 }
 
-void q_coreapplication_qbase_child_event(void* self, void* event) {
-    QCoreApplication_QBaseChildEvent((QCoreApplication*)self, (QChildEvent*)event);
+void q_coreapplication_super_child_event(void* self, void* event) {
+    QCoreApplication_SuperChildEvent((QCoreApplication*)self, (QChildEvent*)event);
 }
 
 void q_coreapplication_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -678,8 +678,8 @@ void q_coreapplication_custom_event(void* self, void* event) {
     QCoreApplication_CustomEvent((QCoreApplication*)self, (QEvent*)event);
 }
 
-void q_coreapplication_qbase_custom_event(void* self, void* event) {
-    QCoreApplication_QBaseCustomEvent((QCoreApplication*)self, (QEvent*)event);
+void q_coreapplication_super_custom_event(void* self, void* event) {
+    QCoreApplication_SuperCustomEvent((QCoreApplication*)self, (QEvent*)event);
 }
 
 void q_coreapplication_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -690,8 +690,8 @@ void q_coreapplication_connect_notify(void* self, void* signal) {
     QCoreApplication_ConnectNotify((QCoreApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_coreapplication_qbase_connect_notify(void* self, void* signal) {
-    QCoreApplication_QBaseConnectNotify((QCoreApplication*)self, (QMetaMethod*)signal);
+void q_coreapplication_super_connect_notify(void* self, void* signal) {
+    QCoreApplication_SuperConnectNotify((QCoreApplication*)self, (QMetaMethod*)signal);
 }
 
 void q_coreapplication_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -702,8 +702,8 @@ void q_coreapplication_disconnect_notify(void* self, void* signal) {
     QCoreApplication_DisconnectNotify((QCoreApplication*)self, (QMetaMethod*)signal);
 }
 
-void q_coreapplication_qbase_disconnect_notify(void* self, void* signal) {
-    QCoreApplication_QBaseDisconnectNotify((QCoreApplication*)self, (QMetaMethod*)signal);
+void q_coreapplication_super_disconnect_notify(void* self, void* signal) {
+    QCoreApplication_SuperDisconnectNotify((QCoreApplication*)self, (QMetaMethod*)signal);
 }
 
 void q_coreapplication_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -714,8 +714,8 @@ QObject* q_coreapplication_sender(void* self) {
     return QCoreApplication_Sender((QCoreApplication*)self);
 }
 
-QObject* q_coreapplication_qbase_sender(void* self) {
-    return QCoreApplication_QBaseSender((QCoreApplication*)self);
+QObject* q_coreapplication_super_sender(void* self) {
+    return QCoreApplication_SuperSender((QCoreApplication*)self);
 }
 
 void q_coreapplication_on_sender(void* self, QObject* (*callback)()) {
@@ -726,8 +726,8 @@ int32_t q_coreapplication_sender_signal_index(void* self) {
     return QCoreApplication_SenderSignalIndex((QCoreApplication*)self);
 }
 
-int32_t q_coreapplication_qbase_sender_signal_index(void* self) {
-    return QCoreApplication_QBaseSenderSignalIndex((QCoreApplication*)self);
+int32_t q_coreapplication_super_sender_signal_index(void* self) {
+    return QCoreApplication_SuperSenderSignalIndex((QCoreApplication*)self);
 }
 
 void q_coreapplication_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -738,8 +738,8 @@ int32_t q_coreapplication_receivers(void* self, const char* signal) {
     return QCoreApplication_Receivers((QCoreApplication*)self, signal);
 }
 
-int32_t q_coreapplication_qbase_receivers(void* self, const char* signal) {
-    return QCoreApplication_QBaseReceivers((QCoreApplication*)self, signal);
+int32_t q_coreapplication_super_receivers(void* self, const char* signal) {
+    return QCoreApplication_SuperReceivers((QCoreApplication*)self, signal);
 }
 
 void q_coreapplication_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -750,8 +750,8 @@ bool q_coreapplication_is_signal_connected(void* self, void* signal) {
     return QCoreApplication_IsSignalConnected((QCoreApplication*)self, (QMetaMethod*)signal);
 }
 
-bool q_coreapplication_qbase_is_signal_connected(void* self, void* signal) {
-    return QCoreApplication_QBaseIsSignalConnected((QCoreApplication*)self, (QMetaMethod*)signal);
+bool q_coreapplication_super_is_signal_connected(void* self, void* signal) {
+    return QCoreApplication_SuperIsSignalConnected((QCoreApplication*)self, (QMetaMethod*)signal);
 }
 
 void q_coreapplication_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -32,8 +32,8 @@ void q_audiobufferinput_on_meta_object(void* self, const QMetaObject* (*callback
     QAudioBufferInput_OnMetaObject((QAudioBufferInput*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_audiobufferinput_qbase_meta_object(void* self) {
-    return QAudioBufferInput_QBaseMetaObject((QAudioBufferInput*)self);
+const QMetaObject* q_audiobufferinput_super_meta_object(void* self) {
+    return QAudioBufferInput_SuperMetaObject((QAudioBufferInput*)self);
 }
 
 void* q_audiobufferinput_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_audiobufferinput_on_metacast(void* self, void* (*callback)(void*, const c
     QAudioBufferInput_OnMetacast((QAudioBufferInput*)self, (intptr_t)callback);
 }
 
-void* q_audiobufferinput_qbase_metacast(void* self, const char* param1) {
-    return QAudioBufferInput_QBaseMetacast((QAudioBufferInput*)self, param1);
+void* q_audiobufferinput_super_metacast(void* self, const char* param1) {
+    return QAudioBufferInput_SuperMetacast((QAudioBufferInput*)self, param1);
 }
 
 int32_t q_audiobufferinput_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_audiobufferinput_on_metacall(void* self, int32_t (*callback)(void*, int32
     QAudioBufferInput_OnMetacall((QAudioBufferInput*)self, (intptr_t)callback);
 }
 
-int32_t q_audiobufferinput_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAudioBufferInput_QBaseMetacall((QAudioBufferInput*)self, param1, param2, param3);
+int32_t q_audiobufferinput_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAudioBufferInput_SuperMetacall((QAudioBufferInput*)self, param1, param2, param3);
 }
 
 const char* q_audiobufferinput_tr(const char* s) {
@@ -316,8 +316,8 @@ bool q_audiobufferinput_event(void* self, void* event) {
     return QAudioBufferInput_Event((QAudioBufferInput*)self, (QEvent*)event);
 }
 
-bool q_audiobufferinput_qbase_event(void* self, void* event) {
-    return QAudioBufferInput_QBaseEvent((QAudioBufferInput*)self, (QEvent*)event);
+bool q_audiobufferinput_super_event(void* self, void* event) {
+    return QAudioBufferInput_SuperEvent((QAudioBufferInput*)self, (QEvent*)event);
 }
 
 void q_audiobufferinput_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -328,8 +328,8 @@ bool q_audiobufferinput_event_filter(void* self, void* watched, void* event) {
     return QAudioBufferInput_EventFilter((QAudioBufferInput*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_audiobufferinput_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAudioBufferInput_QBaseEventFilter((QAudioBufferInput*)self, (QObject*)watched, (QEvent*)event);
+bool q_audiobufferinput_super_event_filter(void* self, void* watched, void* event) {
+    return QAudioBufferInput_SuperEventFilter((QAudioBufferInput*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_audiobufferinput_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -340,8 +340,8 @@ void q_audiobufferinput_timer_event(void* self, void* event) {
     QAudioBufferInput_TimerEvent((QAudioBufferInput*)self, (QTimerEvent*)event);
 }
 
-void q_audiobufferinput_qbase_timer_event(void* self, void* event) {
-    QAudioBufferInput_QBaseTimerEvent((QAudioBufferInput*)self, (QTimerEvent*)event);
+void q_audiobufferinput_super_timer_event(void* self, void* event) {
+    QAudioBufferInput_SuperTimerEvent((QAudioBufferInput*)self, (QTimerEvent*)event);
 }
 
 void q_audiobufferinput_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -352,8 +352,8 @@ void q_audiobufferinput_child_event(void* self, void* event) {
     QAudioBufferInput_ChildEvent((QAudioBufferInput*)self, (QChildEvent*)event);
 }
 
-void q_audiobufferinput_qbase_child_event(void* self, void* event) {
-    QAudioBufferInput_QBaseChildEvent((QAudioBufferInput*)self, (QChildEvent*)event);
+void q_audiobufferinput_super_child_event(void* self, void* event) {
+    QAudioBufferInput_SuperChildEvent((QAudioBufferInput*)self, (QChildEvent*)event);
 }
 
 void q_audiobufferinput_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -364,8 +364,8 @@ void q_audiobufferinput_custom_event(void* self, void* event) {
     QAudioBufferInput_CustomEvent((QAudioBufferInput*)self, (QEvent*)event);
 }
 
-void q_audiobufferinput_qbase_custom_event(void* self, void* event) {
-    QAudioBufferInput_QBaseCustomEvent((QAudioBufferInput*)self, (QEvent*)event);
+void q_audiobufferinput_super_custom_event(void* self, void* event) {
+    QAudioBufferInput_SuperCustomEvent((QAudioBufferInput*)self, (QEvent*)event);
 }
 
 void q_audiobufferinput_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -376,8 +376,8 @@ void q_audiobufferinput_connect_notify(void* self, void* signal) {
     QAudioBufferInput_ConnectNotify((QAudioBufferInput*)self, (QMetaMethod*)signal);
 }
 
-void q_audiobufferinput_qbase_connect_notify(void* self, void* signal) {
-    QAudioBufferInput_QBaseConnectNotify((QAudioBufferInput*)self, (QMetaMethod*)signal);
+void q_audiobufferinput_super_connect_notify(void* self, void* signal) {
+    QAudioBufferInput_SuperConnectNotify((QAudioBufferInput*)self, (QMetaMethod*)signal);
 }
 
 void q_audiobufferinput_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ void q_audiobufferinput_disconnect_notify(void* self, void* signal) {
     QAudioBufferInput_DisconnectNotify((QAudioBufferInput*)self, (QMetaMethod*)signal);
 }
 
-void q_audiobufferinput_qbase_disconnect_notify(void* self, void* signal) {
-    QAudioBufferInput_QBaseDisconnectNotify((QAudioBufferInput*)self, (QMetaMethod*)signal);
+void q_audiobufferinput_super_disconnect_notify(void* self, void* signal) {
+    QAudioBufferInput_SuperDisconnectNotify((QAudioBufferInput*)self, (QMetaMethod*)signal);
 }
 
 void q_audiobufferinput_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ QObject* q_audiobufferinput_sender(void* self) {
     return QAudioBufferInput_Sender((QAudioBufferInput*)self);
 }
 
-QObject* q_audiobufferinput_qbase_sender(void* self) {
-    return QAudioBufferInput_QBaseSender((QAudioBufferInput*)self);
+QObject* q_audiobufferinput_super_sender(void* self) {
+    return QAudioBufferInput_SuperSender((QAudioBufferInput*)self);
 }
 
 void q_audiobufferinput_on_sender(void* self, QObject* (*callback)()) {
@@ -412,8 +412,8 @@ int32_t q_audiobufferinput_sender_signal_index(void* self) {
     return QAudioBufferInput_SenderSignalIndex((QAudioBufferInput*)self);
 }
 
-int32_t q_audiobufferinput_qbase_sender_signal_index(void* self) {
-    return QAudioBufferInput_QBaseSenderSignalIndex((QAudioBufferInput*)self);
+int32_t q_audiobufferinput_super_sender_signal_index(void* self) {
+    return QAudioBufferInput_SuperSenderSignalIndex((QAudioBufferInput*)self);
 }
 
 void q_audiobufferinput_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -424,8 +424,8 @@ int32_t q_audiobufferinput_receivers(void* self, const char* signal) {
     return QAudioBufferInput_Receivers((QAudioBufferInput*)self, signal);
 }
 
-int32_t q_audiobufferinput_qbase_receivers(void* self, const char* signal) {
-    return QAudioBufferInput_QBaseReceivers((QAudioBufferInput*)self, signal);
+int32_t q_audiobufferinput_super_receivers(void* self, const char* signal) {
+    return QAudioBufferInput_SuperReceivers((QAudioBufferInput*)self, signal);
 }
 
 void q_audiobufferinput_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -436,8 +436,8 @@ bool q_audiobufferinput_is_signal_connected(void* self, void* signal) {
     return QAudioBufferInput_IsSignalConnected((QAudioBufferInput*)self, (QMetaMethod*)signal);
 }
 
-bool q_audiobufferinput_qbase_is_signal_connected(void* self, void* signal) {
-    return QAudioBufferInput_QBaseIsSignalConnected((QAudioBufferInput*)self, (QMetaMethod*)signal);
+bool q_audiobufferinput_super_is_signal_connected(void* self, void* signal) {
+    return QAudioBufferInput_SuperIsSignalConnected((QAudioBufferInput*)self, (QMetaMethod*)signal);
 }
 
 void q_audiobufferinput_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

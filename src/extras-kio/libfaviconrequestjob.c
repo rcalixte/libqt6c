@@ -28,8 +28,8 @@ void k_io__faviconrequestjob_on_meta_object(void* self, const QMetaObject* (*cal
     KIO__FavIconRequestJob_OnMetaObject((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__faviconrequestjob_qbase_meta_object(void* self) {
-    return KIO__FavIconRequestJob_QBaseMetaObject((KIO__FavIconRequestJob*)self);
+const QMetaObject* k_io__faviconrequestjob_super_meta_object(void* self) {
+    return KIO__FavIconRequestJob_SuperMetaObject((KIO__FavIconRequestJob*)self);
 }
 
 void* k_io__faviconrequestjob_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void k_io__faviconrequestjob_on_metacast(void* self, void* (*callback)(void*, co
     KIO__FavIconRequestJob_OnMetacast((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 
-void* k_io__faviconrequestjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__FavIconRequestJob_QBaseMetacast((KIO__FavIconRequestJob*)self, param1);
+void* k_io__faviconrequestjob_super_metacast(void* self, const char* param1) {
+    return KIO__FavIconRequestJob_SuperMetacast((KIO__FavIconRequestJob*)self, param1);
 }
 
 int32_t k_io__faviconrequestjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void k_io__faviconrequestjob_on_metacall(void* self, int32_t (*callback)(void*, 
     KIO__FavIconRequestJob_OnMetacall((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 
-int32_t k_io__faviconrequestjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__FavIconRequestJob_QBaseMetacall((KIO__FavIconRequestJob*)self, param1, param2, param3);
+int32_t k_io__faviconrequestjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__FavIconRequestJob_SuperMetacall((KIO__FavIconRequestJob*)self, param1, param2, param3);
 }
 
 const char* k_io__faviconrequestjob_tr(const char* s) {
@@ -86,8 +86,8 @@ void k_io__faviconrequestjob_on_start(void* self, void (*callback)()) {
     KIO__FavIconRequestJob_OnStart((KIO__FavIconRequestJob*)self, (intptr_t)callback);
 }
 
-void k_io__faviconrequestjob_qbase_start(void* self) {
-    KIO__FavIconRequestJob_QBaseStart((KIO__FavIconRequestJob*)self);
+void k_io__faviconrequestjob_super_start(void* self) {
+    KIO__FavIconRequestJob_SuperStart((KIO__FavIconRequestJob*)self);
 }
 
 const char* k_io__faviconrequestjob_tr2(const char* s, const char* c) {
@@ -446,8 +446,8 @@ bool k_io__faviconrequestjob_add_subjob(void* self, void* job) {
     return KIO__FavIconRequestJob_AddSubjob((KIO__FavIconRequestJob*)self, (KJob*)job);
 }
 
-bool k_io__faviconrequestjob_qbase_add_subjob(void* self, void* job) {
-    return KIO__FavIconRequestJob_QBaseAddSubjob((KIO__FavIconRequestJob*)self, (KJob*)job);
+bool k_io__faviconrequestjob_super_add_subjob(void* self, void* job) {
+    return KIO__FavIconRequestJob_SuperAddSubjob((KIO__FavIconRequestJob*)self, (KJob*)job);
 }
 
 void k_io__faviconrequestjob_on_add_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -458,8 +458,8 @@ bool k_io__faviconrequestjob_remove_subjob(void* self, void* job) {
     return KIO__FavIconRequestJob_RemoveSubjob((KIO__FavIconRequestJob*)self, (KJob*)job);
 }
 
-bool k_io__faviconrequestjob_qbase_remove_subjob(void* self, void* job) {
-    return KIO__FavIconRequestJob_QBaseRemoveSubjob((KIO__FavIconRequestJob*)self, (KJob*)job);
+bool k_io__faviconrequestjob_super_remove_subjob(void* self, void* job) {
+    return KIO__FavIconRequestJob_SuperRemoveSubjob((KIO__FavIconRequestJob*)self, (KJob*)job);
 }
 
 void k_io__faviconrequestjob_on_remove_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -470,8 +470,8 @@ void k_io__faviconrequestjob_slot_info_message(void* self, void* job, const char
     KIO__FavIconRequestJob_SlotInfoMessage((KIO__FavIconRequestJob*)self, (KJob*)job, qstring(message));
 }
 
-void k_io__faviconrequestjob_qbase_slot_info_message(void* self, void* job, const char* message) {
-    KIO__FavIconRequestJob_QBaseSlotInfoMessage((KIO__FavIconRequestJob*)self, (KJob*)job, qstring(message));
+void k_io__faviconrequestjob_super_slot_info_message(void* self, void* job, const char* message) {
+    KIO__FavIconRequestJob_SuperSlotInfoMessage((KIO__FavIconRequestJob*)self, (KJob*)job, qstring(message));
 }
 
 void k_io__faviconrequestjob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*)) {
@@ -482,8 +482,8 @@ bool k_io__faviconrequestjob_do_kill(void* self) {
     return KIO__FavIconRequestJob_DoKill((KIO__FavIconRequestJob*)self);
 }
 
-bool k_io__faviconrequestjob_qbase_do_kill(void* self) {
-    return KIO__FavIconRequestJob_QBaseDoKill((KIO__FavIconRequestJob*)self);
+bool k_io__faviconrequestjob_super_do_kill(void* self) {
+    return KIO__FavIconRequestJob_SuperDoKill((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_do_kill(void* self, bool (*callback)()) {
@@ -494,8 +494,8 @@ bool k_io__faviconrequestjob_do_suspend(void* self) {
     return KIO__FavIconRequestJob_DoSuspend((KIO__FavIconRequestJob*)self);
 }
 
-bool k_io__faviconrequestjob_qbase_do_suspend(void* self) {
-    return KIO__FavIconRequestJob_QBaseDoSuspend((KIO__FavIconRequestJob*)self);
+bool k_io__faviconrequestjob_super_do_suspend(void* self) {
+    return KIO__FavIconRequestJob_SuperDoSuspend((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -506,8 +506,8 @@ bool k_io__faviconrequestjob_do_resume(void* self) {
     return KIO__FavIconRequestJob_DoResume((KIO__FavIconRequestJob*)self);
 }
 
-bool k_io__faviconrequestjob_qbase_do_resume(void* self) {
-    return KIO__FavIconRequestJob_QBaseDoResume((KIO__FavIconRequestJob*)self);
+bool k_io__faviconrequestjob_super_do_resume(void* self) {
+    return KIO__FavIconRequestJob_SuperDoResume((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_do_resume(void* self, bool (*callback)()) {
@@ -521,8 +521,8 @@ const char* k_io__faviconrequestjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__faviconrequestjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__FavIconRequestJob_QBaseErrorString((KIO__FavIconRequestJob*)self);
+const char* k_io__faviconrequestjob_super_error_string(void* self) {
+    libqt_string _str = KIO__FavIconRequestJob_SuperErrorString((KIO__FavIconRequestJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -536,8 +536,8 @@ bool k_io__faviconrequestjob_event(void* self, void* event) {
     return KIO__FavIconRequestJob_Event((KIO__FavIconRequestJob*)self, (QEvent*)event);
 }
 
-bool k_io__faviconrequestjob_qbase_event(void* self, void* event) {
-    return KIO__FavIconRequestJob_QBaseEvent((KIO__FavIconRequestJob*)self, (QEvent*)event);
+bool k_io__faviconrequestjob_super_event(void* self, void* event) {
+    return KIO__FavIconRequestJob_SuperEvent((KIO__FavIconRequestJob*)self, (QEvent*)event);
 }
 
 void k_io__faviconrequestjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -548,8 +548,8 @@ bool k_io__faviconrequestjob_event_filter(void* self, void* watched, void* event
     return KIO__FavIconRequestJob_EventFilter((KIO__FavIconRequestJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__faviconrequestjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__FavIconRequestJob_QBaseEventFilter((KIO__FavIconRequestJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__faviconrequestjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__FavIconRequestJob_SuperEventFilter((KIO__FavIconRequestJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__faviconrequestjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -560,8 +560,8 @@ void k_io__faviconrequestjob_timer_event(void* self, void* event) {
     KIO__FavIconRequestJob_TimerEvent((KIO__FavIconRequestJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__faviconrequestjob_qbase_timer_event(void* self, void* event) {
-    KIO__FavIconRequestJob_QBaseTimerEvent((KIO__FavIconRequestJob*)self, (QTimerEvent*)event);
+void k_io__faviconrequestjob_super_timer_event(void* self, void* event) {
+    KIO__FavIconRequestJob_SuperTimerEvent((KIO__FavIconRequestJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__faviconrequestjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -572,8 +572,8 @@ void k_io__faviconrequestjob_child_event(void* self, void* event) {
     KIO__FavIconRequestJob_ChildEvent((KIO__FavIconRequestJob*)self, (QChildEvent*)event);
 }
 
-void k_io__faviconrequestjob_qbase_child_event(void* self, void* event) {
-    KIO__FavIconRequestJob_QBaseChildEvent((KIO__FavIconRequestJob*)self, (QChildEvent*)event);
+void k_io__faviconrequestjob_super_child_event(void* self, void* event) {
+    KIO__FavIconRequestJob_SuperChildEvent((KIO__FavIconRequestJob*)self, (QChildEvent*)event);
 }
 
 void k_io__faviconrequestjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -584,8 +584,8 @@ void k_io__faviconrequestjob_custom_event(void* self, void* event) {
     KIO__FavIconRequestJob_CustomEvent((KIO__FavIconRequestJob*)self, (QEvent*)event);
 }
 
-void k_io__faviconrequestjob_qbase_custom_event(void* self, void* event) {
-    KIO__FavIconRequestJob_QBaseCustomEvent((KIO__FavIconRequestJob*)self, (QEvent*)event);
+void k_io__faviconrequestjob_super_custom_event(void* self, void* event) {
+    KIO__FavIconRequestJob_SuperCustomEvent((KIO__FavIconRequestJob*)self, (QEvent*)event);
 }
 
 void k_io__faviconrequestjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -596,8 +596,8 @@ void k_io__faviconrequestjob_connect_notify(void* self, void* signal) {
     KIO__FavIconRequestJob_ConnectNotify((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__faviconrequestjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__FavIconRequestJob_QBaseConnectNotify((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
+void k_io__faviconrequestjob_super_connect_notify(void* self, void* signal) {
+    KIO__FavIconRequestJob_SuperConnectNotify((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__faviconrequestjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -608,8 +608,8 @@ void k_io__faviconrequestjob_disconnect_notify(void* self, void* signal) {
     KIO__FavIconRequestJob_DisconnectNotify((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__faviconrequestjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__FavIconRequestJob_QBaseDisconnectNotify((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
+void k_io__faviconrequestjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__FavIconRequestJob_SuperDisconnectNotify((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__faviconrequestjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -620,8 +620,8 @@ bool k_io__faviconrequestjob_has_subjobs(void* self) {
     return KIO__FavIconRequestJob_HasSubjobs((KIO__FavIconRequestJob*)self);
 }
 
-bool k_io__faviconrequestjob_qbase_has_subjobs(void* self) {
-    return KIO__FavIconRequestJob_QBaseHasSubjobs((KIO__FavIconRequestJob*)self);
+bool k_io__faviconrequestjob_super_has_subjobs(void* self) {
+    return KIO__FavIconRequestJob_SuperHasSubjobs((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_has_subjobs(void* self, bool (*callback)()) {
@@ -633,8 +633,8 @@ libqt_list /* of KJob* */ k_io__faviconrequestjob_subjobs(void* self) {
     return _arr;
 }
 
-libqt_list /* of KJob* */ k_io__faviconrequestjob_qbase_subjobs(void* self) {
-    libqt_list _arr = KIO__FavIconRequestJob_QBaseSubjobs((KIO__FavIconRequestJob*)self);
+libqt_list /* of KJob* */ k_io__faviconrequestjob_super_subjobs(void* self) {
+    libqt_list _arr = KIO__FavIconRequestJob_SuperSubjobs((KIO__FavIconRequestJob*)self);
     return _arr;
 }
 
@@ -646,8 +646,8 @@ void k_io__faviconrequestjob_clear_subjobs(void* self) {
     KIO__FavIconRequestJob_ClearSubjobs((KIO__FavIconRequestJob*)self);
 }
 
-void k_io__faviconrequestjob_qbase_clear_subjobs(void* self) {
-    KIO__FavIconRequestJob_QBaseClearSubjobs((KIO__FavIconRequestJob*)self);
+void k_io__faviconrequestjob_super_clear_subjobs(void* self) {
+    KIO__FavIconRequestJob_SuperClearSubjobs((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_clear_subjobs(void* self, void (*callback)()) {
@@ -658,8 +658,8 @@ void k_io__faviconrequestjob_set_capabilities(void* self, int32_t capabilities) 
     KIO__FavIconRequestJob_SetCapabilities((KIO__FavIconRequestJob*)self, capabilities);
 }
 
-void k_io__faviconrequestjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__FavIconRequestJob_QBaseSetCapabilities((KIO__FavIconRequestJob*)self, capabilities);
+void k_io__faviconrequestjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__FavIconRequestJob_SuperSetCapabilities((KIO__FavIconRequestJob*)self, capabilities);
 }
 
 void k_io__faviconrequestjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -670,8 +670,8 @@ bool k_io__faviconrequestjob_is_finished(void* self) {
     return KIO__FavIconRequestJob_IsFinished((KIO__FavIconRequestJob*)self);
 }
 
-bool k_io__faviconrequestjob_qbase_is_finished(void* self) {
-    return KIO__FavIconRequestJob_QBaseIsFinished((KIO__FavIconRequestJob*)self);
+bool k_io__faviconrequestjob_super_is_finished(void* self) {
+    return KIO__FavIconRequestJob_SuperIsFinished((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_is_finished(void* self, bool (*callback)()) {
@@ -682,8 +682,8 @@ void k_io__faviconrequestjob_set_error(void* self, int errorCode) {
     KIO__FavIconRequestJob_SetError((KIO__FavIconRequestJob*)self, errorCode);
 }
 
-void k_io__faviconrequestjob_qbase_set_error(void* self, int errorCode) {
-    KIO__FavIconRequestJob_QBaseSetError((KIO__FavIconRequestJob*)self, errorCode);
+void k_io__faviconrequestjob_super_set_error(void* self, int errorCode) {
+    KIO__FavIconRequestJob_SuperSetError((KIO__FavIconRequestJob*)self, errorCode);
 }
 
 void k_io__faviconrequestjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -694,8 +694,8 @@ void k_io__faviconrequestjob_set_error_text(void* self, const char* errorText) {
     KIO__FavIconRequestJob_SetErrorText((KIO__FavIconRequestJob*)self, qstring(errorText));
 }
 
-void k_io__faviconrequestjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__FavIconRequestJob_QBaseSetErrorText((KIO__FavIconRequestJob*)self, qstring(errorText));
+void k_io__faviconrequestjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__FavIconRequestJob_SuperSetErrorText((KIO__FavIconRequestJob*)self, qstring(errorText));
 }
 
 void k_io__faviconrequestjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -706,8 +706,8 @@ void k_io__faviconrequestjob_set_processed_amount(void* self, int32_t unit, uint
     KIO__FavIconRequestJob_SetProcessedAmount((KIO__FavIconRequestJob*)self, unit, amount);
 }
 
-void k_io__faviconrequestjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__FavIconRequestJob_QBaseSetProcessedAmount((KIO__FavIconRequestJob*)self, unit, amount);
+void k_io__faviconrequestjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__FavIconRequestJob_SuperSetProcessedAmount((KIO__FavIconRequestJob*)self, unit, amount);
 }
 
 void k_io__faviconrequestjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -718,8 +718,8 @@ void k_io__faviconrequestjob_set_total_amount(void* self, int32_t unit, uint64_t
     KIO__FavIconRequestJob_SetTotalAmount((KIO__FavIconRequestJob*)self, unit, amount);
 }
 
-void k_io__faviconrequestjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__FavIconRequestJob_QBaseSetTotalAmount((KIO__FavIconRequestJob*)self, unit, amount);
+void k_io__faviconrequestjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__FavIconRequestJob_SuperSetTotalAmount((KIO__FavIconRequestJob*)self, unit, amount);
 }
 
 void k_io__faviconrequestjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -730,8 +730,8 @@ void k_io__faviconrequestjob_set_progress_unit(void* self, int32_t unit) {
     KIO__FavIconRequestJob_SetProgressUnit((KIO__FavIconRequestJob*)self, unit);
 }
 
-void k_io__faviconrequestjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__FavIconRequestJob_QBaseSetProgressUnit((KIO__FavIconRequestJob*)self, unit);
+void k_io__faviconrequestjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__FavIconRequestJob_SuperSetProgressUnit((KIO__FavIconRequestJob*)self, unit);
 }
 
 void k_io__faviconrequestjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -742,8 +742,8 @@ void k_io__faviconrequestjob_set_percent(void* self, uint64_t percentage) {
     KIO__FavIconRequestJob_SetPercent((KIO__FavIconRequestJob*)self, percentage);
 }
 
-void k_io__faviconrequestjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__FavIconRequestJob_QBaseSetPercent((KIO__FavIconRequestJob*)self, percentage);
+void k_io__faviconrequestjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__FavIconRequestJob_SuperSetPercent((KIO__FavIconRequestJob*)self, percentage);
 }
 
 void k_io__faviconrequestjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -754,8 +754,8 @@ void k_io__faviconrequestjob_emit_result(void* self) {
     KIO__FavIconRequestJob_EmitResult((KIO__FavIconRequestJob*)self);
 }
 
-void k_io__faviconrequestjob_qbase_emit_result(void* self) {
-    KIO__FavIconRequestJob_QBaseEmitResult((KIO__FavIconRequestJob*)self);
+void k_io__faviconrequestjob_super_emit_result(void* self) {
+    KIO__FavIconRequestJob_SuperEmitResult((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_emit_result(void* self, void (*callback)()) {
@@ -766,8 +766,8 @@ void k_io__faviconrequestjob_emit_percent(void* self, uint64_t processedAmount, 
     KIO__FavIconRequestJob_EmitPercent((KIO__FavIconRequestJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__faviconrequestjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__FavIconRequestJob_QBaseEmitPercent((KIO__FavIconRequestJob*)self, processedAmount, totalAmount);
+void k_io__faviconrequestjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__FavIconRequestJob_SuperEmitPercent((KIO__FavIconRequestJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__faviconrequestjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -778,8 +778,8 @@ void k_io__faviconrequestjob_emit_speed(void* self, uint64_t speed) {
     KIO__FavIconRequestJob_EmitSpeed((KIO__FavIconRequestJob*)self, speed);
 }
 
-void k_io__faviconrequestjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__FavIconRequestJob_QBaseEmitSpeed((KIO__FavIconRequestJob*)self, speed);
+void k_io__faviconrequestjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__FavIconRequestJob_SuperEmitSpeed((KIO__FavIconRequestJob*)self, speed);
 }
 
 void k_io__faviconrequestjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -790,8 +790,8 @@ void k_io__faviconrequestjob_start_elapsed_timer(void* self) {
     KIO__FavIconRequestJob_StartElapsedTimer((KIO__FavIconRequestJob*)self);
 }
 
-void k_io__faviconrequestjob_qbase_start_elapsed_timer(void* self) {
-    KIO__FavIconRequestJob_QBaseStartElapsedTimer((KIO__FavIconRequestJob*)self);
+void k_io__faviconrequestjob_super_start_elapsed_timer(void* self) {
+    KIO__FavIconRequestJob_SuperStartElapsedTimer((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -802,8 +802,8 @@ QObject* k_io__faviconrequestjob_sender(void* self) {
     return KIO__FavIconRequestJob_Sender((KIO__FavIconRequestJob*)self);
 }
 
-QObject* k_io__faviconrequestjob_qbase_sender(void* self) {
-    return KIO__FavIconRequestJob_QBaseSender((KIO__FavIconRequestJob*)self);
+QObject* k_io__faviconrequestjob_super_sender(void* self) {
+    return KIO__FavIconRequestJob_SuperSender((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_sender(void* self, QObject* (*callback)()) {
@@ -814,8 +814,8 @@ int32_t k_io__faviconrequestjob_sender_signal_index(void* self) {
     return KIO__FavIconRequestJob_SenderSignalIndex((KIO__FavIconRequestJob*)self);
 }
 
-int32_t k_io__faviconrequestjob_qbase_sender_signal_index(void* self) {
-    return KIO__FavIconRequestJob_QBaseSenderSignalIndex((KIO__FavIconRequestJob*)self);
+int32_t k_io__faviconrequestjob_super_sender_signal_index(void* self) {
+    return KIO__FavIconRequestJob_SuperSenderSignalIndex((KIO__FavIconRequestJob*)self);
 }
 
 void k_io__faviconrequestjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -826,8 +826,8 @@ int32_t k_io__faviconrequestjob_receivers(void* self, const char* signal) {
     return KIO__FavIconRequestJob_Receivers((KIO__FavIconRequestJob*)self, signal);
 }
 
-int32_t k_io__faviconrequestjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__FavIconRequestJob_QBaseReceivers((KIO__FavIconRequestJob*)self, signal);
+int32_t k_io__faviconrequestjob_super_receivers(void* self, const char* signal) {
+    return KIO__FavIconRequestJob_SuperReceivers((KIO__FavIconRequestJob*)self, signal);
 }
 
 void k_io__faviconrequestjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -838,8 +838,8 @@ bool k_io__faviconrequestjob_is_signal_connected(void* self, void* signal) {
     return KIO__FavIconRequestJob_IsSignalConnected((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__faviconrequestjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__FavIconRequestJob_QBaseIsSignalConnected((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
+bool k_io__faviconrequestjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__FavIconRequestJob_SuperIsSignalConnected((KIO__FavIconRequestJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__faviconrequestjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

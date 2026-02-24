@@ -79,6 +79,10 @@ bool k_7zip_do_write_sym_link(void* self, const char* name, const char* target, 
 ///
 void k_7zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_7zip_super_do_write_sym_link` instead
+///
+#define k_7zip_qbase_do_write_sym_link k_7zip_super_do_write_sym_link
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteSymLink)
 ///
 /// Base class method implementation
@@ -93,7 +97,7 @@ void k_7zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteDir)
 ///
@@ -117,6 +121,10 @@ bool k_7zip_do_write_dir(void* self, const char* name, const char* user, const c
 ///
 void k_7zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_7zip_super_do_write_dir` instead
+///
+#define k_7zip_qbase_do_write_dir k_7zip_super_do_write_dir
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteDir)
 ///
 /// Base class method implementation
@@ -130,7 +138,7 @@ void k_7zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, con
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doPrepareWriting)
 ///
@@ -155,6 +163,10 @@ bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, c
 ///
 void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, long long, mode_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_7zip_super_do_prepare_writing` instead
+///
+#define k_7zip_qbase_do_prepare_writing k_7zip_super_do_prepare_writing
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#doPrepareWriting)
 ///
 /// Base class method implementation
@@ -169,7 +181,7 @@ void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_7zip_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_7zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doFinishWriting)
 ///
@@ -187,6 +199,10 @@ bool k_7zip_do_finish_writing(void* self, long long size);
 ///
 void k_7zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
 
+/// @warning DEPRECATED: Use `k_7zip_super_do_finish_writing` instead
+///
+#define k_7zip_qbase_do_finish_writing k_7zip_super_do_finish_writing
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#doFinishWriting)
 ///
 /// Base class method implementation
@@ -194,7 +210,7 @@ void k_7zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long))
 /// @param self K7Zip*
 /// @param size long long
 ///
-bool k_7zip_qbase_do_finish_writing(void* self, long long size);
+bool k_7zip_super_do_finish_writing(void* self, long long size);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteData)
 ///
@@ -213,6 +229,10 @@ bool k_7zip_do_write_data(void* self, const char* data, long long size);
 ///
 void k_7zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long));
 
+/// @warning DEPRECATED: Use `k_7zip_super_do_write_data` instead
+///
+#define k_7zip_qbase_do_write_data k_7zip_super_do_write_data
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#doWriteData)
 ///
 /// Base class method implementation
@@ -221,7 +241,7 @@ void k_7zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, lo
 /// @param data const char*
 /// @param size long long
 ///
-bool k_7zip_qbase_do_write_data(void* self, const char* data, long long size);
+bool k_7zip_super_do_write_data(void* self, const char* data, long long size);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#openArchive)
 ///
@@ -239,6 +259,10 @@ bool k_7zip_open_archive(void* self, int32_t mode);
 ///
 void k_7zip_on_open_archive(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_7zip_super_open_archive` instead
+///
+#define k_7zip_qbase_open_archive k_7zip_super_open_archive
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#openArchive)
 ///
 /// Base class method implementation
@@ -246,7 +270,7 @@ void k_7zip_on_open_archive(void* self, bool (*callback)(void*, int32_t));
 /// @param self K7Zip*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool k_7zip_qbase_open_archive(void* self, int32_t mode);
+bool k_7zip_super_open_archive(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#closeArchive)
 ///
@@ -263,13 +287,17 @@ bool k_7zip_close_archive(void* self);
 ///
 void k_7zip_on_close_archive(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_7zip_super_close_archive` instead
+///
+#define k_7zip_qbase_close_archive k_7zip_super_close_archive
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#closeArchive)
 ///
 /// Base class method implementation
 ///
 /// @param self K7Zip*
 ///
-bool k_7zip_qbase_close_archive(void* self);
+bool k_7zip_super_close_archive(void* self);
 
 /// [Upstream resources](https://api.kde.org/k7zip.html#virtual_hook)
 ///
@@ -288,6 +316,10 @@ void k_7zip_virtual_hook(void* self, int id, void* data);
 ///
 void k_7zip_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_7zip_super_virtual_hook` instead
+///
+#define k_7zip_qbase_virtual_hook k_7zip_super_virtual_hook
+
 /// [Upstream resources](https://api.kde.org/k7zip.html#virtual_hook)
 ///
 /// Base class method implementation
@@ -296,7 +328,7 @@ void k_7zip_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 /// @param id int
 /// @param data void*
 ///
-void k_7zip_qbase_virtual_hook(void* self, int id, void* data);
+void k_7zip_super_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -766,6 +798,10 @@ bool k_7zip_prepare_writing8(void* self, const char* name, const char* user, con
 ///
 bool k_7zip_open(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_7zip_super_open` instead
+///
+#define k_7zip_qbase_open k_7zip_super_open
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#open)
@@ -775,7 +811,7 @@ bool k_7zip_open(void* self, int32_t mode);
 /// @param self K7Zip*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool k_7zip_qbase_open(void* self, int32_t mode);
+bool k_7zip_super_open(void* self, int32_t mode);
 
 /// Inherited from KArchive
 ///
@@ -798,6 +834,10 @@ void k_7zip_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 bool k_7zip_close(void* self);
 
+/// @warning DEPRECATED: Use `k_7zip_super_close` instead
+///
+#define k_7zip_qbase_close k_7zip_super_close
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#close)
@@ -806,7 +846,7 @@ bool k_7zip_close(void* self);
 ///
 /// @param self K7Zip*
 ///
-bool k_7zip_qbase_close(void* self);
+bool k_7zip_super_close(void* self);
 
 /// Inherited from KArchive
 ///
@@ -829,6 +869,10 @@ void k_7zip_on_close(void* self, bool (*callback)());
 ///
 KArchiveDirectory* k_7zip_root_dir(void* self);
 
+/// @warning DEPRECATED: Use `k_7zip_super_root_dir` instead
+///
+#define k_7zip_qbase_root_dir k_7zip_super_root_dir
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#rootDir)
@@ -837,7 +881,7 @@ KArchiveDirectory* k_7zip_root_dir(void* self);
 ///
 /// @param self K7Zip*
 ///
-KArchiveDirectory* k_7zip_qbase_root_dir(void* self);
+KArchiveDirectory* k_7zip_super_root_dir(void* self);
 
 /// Inherited from KArchive
 ///
@@ -861,6 +905,10 @@ void k_7zip_on_root_dir(void* self, KArchiveDirectory* (*callback)());
 ///
 bool k_7zip_create_device(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_7zip_super_create_device` instead
+///
+#define k_7zip_qbase_create_device k_7zip_super_create_device
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#createDevice)
@@ -870,7 +918,7 @@ bool k_7zip_create_device(void* self, int32_t mode);
 /// @param self K7Zip*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool k_7zip_qbase_create_device(void* self, int32_t mode);
+bool k_7zip_super_create_device(void* self, int32_t mode);
 
 /// Inherited from KArchive
 ///
@@ -894,6 +942,10 @@ void k_7zip_on_create_device(void* self, bool (*callback)(void*, int32_t));
 ///
 void k_7zip_set_error_string(void* self, const char* errorStr);
 
+/// @warning DEPRECATED: Use `k_7zip_super_set_error_string` instead
+///
+#define k_7zip_qbase_set_error_string k_7zip_super_set_error_string
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setErrorString)
@@ -903,7 +955,7 @@ void k_7zip_set_error_string(void* self, const char* errorStr);
 /// @param self K7Zip*
 /// @param errorStr const char*
 ///
-void k_7zip_qbase_set_error_string(void* self, const char* errorStr);
+void k_7zip_super_set_error_string(void* self, const char* errorStr);
 
 /// Inherited from KArchive
 ///
@@ -927,6 +979,10 @@ void k_7zip_on_set_error_string(void* self, void (*callback)(void*, const char*)
 ///
 KArchiveDirectory* k_7zip_find_or_create(void* self, const char* path);
 
+/// @warning DEPRECATED: Use `k_7zip_super_find_or_create` instead
+///
+#define k_7zip_qbase_find_or_create k_7zip_super_find_or_create
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#findOrCreate)
@@ -936,7 +992,7 @@ KArchiveDirectory* k_7zip_find_or_create(void* self, const char* path);
 /// @param self K7Zip*
 /// @param path const char*
 ///
-KArchiveDirectory* k_7zip_qbase_find_or_create(void* self, const char* path);
+KArchiveDirectory* k_7zip_super_find_or_create(void* self, const char* path);
 
 /// Inherited from KArchive
 ///
@@ -960,6 +1016,10 @@ void k_7zip_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, 
 ///
 void k_7zip_set_device(void* self, void* dev);
 
+/// @warning DEPRECATED: Use `k_7zip_super_set_device` instead
+///
+#define k_7zip_qbase_set_device k_7zip_super_set_device
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setDevice)
@@ -969,7 +1029,7 @@ void k_7zip_set_device(void* self, void* dev);
 /// @param self K7Zip*
 /// @param dev QIODevice*
 ///
-void k_7zip_qbase_set_device(void* self, void* dev);
+void k_7zip_super_set_device(void* self, void* dev);
 
 /// Inherited from KArchive
 ///
@@ -993,6 +1053,10 @@ void k_7zip_on_set_device(void* self, void (*callback)(void*, void*));
 ///
 void k_7zip_set_root_dir(void* self, void* rootDir);
 
+/// @warning DEPRECATED: Use `k_7zip_super_set_root_dir` instead
+///
+#define k_7zip_qbase_set_root_dir k_7zip_super_set_root_dir
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setRootDir)
@@ -1002,7 +1066,7 @@ void k_7zip_set_root_dir(void* self, void* rootDir);
 /// @param self K7Zip*
 /// @param rootDir KArchiveDirectory*
 ///
-void k_7zip_qbase_set_root_dir(void* self, void* rootDir);
+void k_7zip_super_set_root_dir(void* self, void* rootDir);
 
 /// Inherited from KArchive
 ///

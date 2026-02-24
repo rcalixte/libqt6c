@@ -18,8 +18,8 @@ void k_texteditor__texthintprovider_on_text_hint(void* self, const char* (*callb
     KTextEditor__TextHintProvider_OnTextHint((KTextEditor__TextHintProvider*)self, (intptr_t)callback);
 }
 
-const char* k_texteditor__texthintprovider_qbase_text_hint(void* self, void* view, void* position) {
-    libqt_string _str = KTextEditor__TextHintProvider_QBaseTextHint((KTextEditor__TextHintProvider*)self, (KTextEditor__View*)view, (KTextEditor__Cursor*)position);
+const char* k_texteditor__texthintprovider_super_text_hint(void* self, void* view, void* position) {
+    libqt_string _str = KTextEditor__TextHintProvider_SuperTextHint((KTextEditor__TextHintProvider*)self, (KTextEditor__View*)view, (KTextEditor__Cursor*)position);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

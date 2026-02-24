@@ -24,8 +24,8 @@ void q_vboxplotmodelmapper_on_meta_object(void* self, const QMetaObject* (*callb
     QVBoxPlotModelMapper_OnMetaObject((QVBoxPlotModelMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_vboxplotmodelmapper_qbase_meta_object(void* self) {
-    return QVBoxPlotModelMapper_QBaseMetaObject((QVBoxPlotModelMapper*)self);
+const QMetaObject* q_vboxplotmodelmapper_super_meta_object(void* self) {
+    return QVBoxPlotModelMapper_SuperMetaObject((QVBoxPlotModelMapper*)self);
 }
 
 void* q_vboxplotmodelmapper_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_vboxplotmodelmapper_on_metacast(void* self, void* (*callback)(void*, cons
     QVBoxPlotModelMapper_OnMetacast((QVBoxPlotModelMapper*)self, (intptr_t)callback);
 }
 
-void* q_vboxplotmodelmapper_qbase_metacast(void* self, const char* param1) {
-    return QVBoxPlotModelMapper_QBaseMetacast((QVBoxPlotModelMapper*)self, param1);
+void* q_vboxplotmodelmapper_super_metacast(void* self, const char* param1) {
+    return QVBoxPlotModelMapper_SuperMetacast((QVBoxPlotModelMapper*)self, param1);
 }
 
 int32_t q_vboxplotmodelmapper_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_vboxplotmodelmapper_on_metacall(void* self, int32_t (*callback)(void*, in
     QVBoxPlotModelMapper_OnMetacall((QVBoxPlotModelMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QVBoxPlotModelMapper_QBaseMetacall((QVBoxPlotModelMapper*)self, param1, param2, param3);
+int32_t q_vboxplotmodelmapper_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QVBoxPlotModelMapper_SuperMetacall((QVBoxPlotModelMapper*)self, param1, param2, param3);
 }
 
 const char* q_vboxplotmodelmapper_tr(const char* s) {
@@ -384,8 +384,8 @@ bool q_vboxplotmodelmapper_event(void* self, void* event) {
     return QVBoxPlotModelMapper_Event((QVBoxPlotModelMapper*)self, (QEvent*)event);
 }
 
-bool q_vboxplotmodelmapper_qbase_event(void* self, void* event) {
-    return QVBoxPlotModelMapper_QBaseEvent((QVBoxPlotModelMapper*)self, (QEvent*)event);
+bool q_vboxplotmodelmapper_super_event(void* self, void* event) {
+    return QVBoxPlotModelMapper_SuperEvent((QVBoxPlotModelMapper*)self, (QEvent*)event);
 }
 
 void q_vboxplotmodelmapper_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -396,8 +396,8 @@ bool q_vboxplotmodelmapper_event_filter(void* self, void* watched, void* event) 
     return QVBoxPlotModelMapper_EventFilter((QVBoxPlotModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_vboxplotmodelmapper_qbase_event_filter(void* self, void* watched, void* event) {
-    return QVBoxPlotModelMapper_QBaseEventFilter((QVBoxPlotModelMapper*)self, (QObject*)watched, (QEvent*)event);
+bool q_vboxplotmodelmapper_super_event_filter(void* self, void* watched, void* event) {
+    return QVBoxPlotModelMapper_SuperEventFilter((QVBoxPlotModelMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_vboxplotmodelmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -408,8 +408,8 @@ void q_vboxplotmodelmapper_timer_event(void* self, void* event) {
     QVBoxPlotModelMapper_TimerEvent((QVBoxPlotModelMapper*)self, (QTimerEvent*)event);
 }
 
-void q_vboxplotmodelmapper_qbase_timer_event(void* self, void* event) {
-    QVBoxPlotModelMapper_QBaseTimerEvent((QVBoxPlotModelMapper*)self, (QTimerEvent*)event);
+void q_vboxplotmodelmapper_super_timer_event(void* self, void* event) {
+    QVBoxPlotModelMapper_SuperTimerEvent((QVBoxPlotModelMapper*)self, (QTimerEvent*)event);
 }
 
 void q_vboxplotmodelmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void q_vboxplotmodelmapper_child_event(void* self, void* event) {
     QVBoxPlotModelMapper_ChildEvent((QVBoxPlotModelMapper*)self, (QChildEvent*)event);
 }
 
-void q_vboxplotmodelmapper_qbase_child_event(void* self, void* event) {
-    QVBoxPlotModelMapper_QBaseChildEvent((QVBoxPlotModelMapper*)self, (QChildEvent*)event);
+void q_vboxplotmodelmapper_super_child_event(void* self, void* event) {
+    QVBoxPlotModelMapper_SuperChildEvent((QVBoxPlotModelMapper*)self, (QChildEvent*)event);
 }
 
 void q_vboxplotmodelmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void q_vboxplotmodelmapper_custom_event(void* self, void* event) {
     QVBoxPlotModelMapper_CustomEvent((QVBoxPlotModelMapper*)self, (QEvent*)event);
 }
 
-void q_vboxplotmodelmapper_qbase_custom_event(void* self, void* event) {
-    QVBoxPlotModelMapper_QBaseCustomEvent((QVBoxPlotModelMapper*)self, (QEvent*)event);
+void q_vboxplotmodelmapper_super_custom_event(void* self, void* event) {
+    QVBoxPlotModelMapper_SuperCustomEvent((QVBoxPlotModelMapper*)self, (QEvent*)event);
 }
 
 void q_vboxplotmodelmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ void q_vboxplotmodelmapper_connect_notify(void* self, void* signal) {
     QVBoxPlotModelMapper_ConnectNotify((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vboxplotmodelmapper_qbase_connect_notify(void* self, void* signal) {
-    QVBoxPlotModelMapper_QBaseConnectNotify((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
+void q_vboxplotmodelmapper_super_connect_notify(void* self, void* signal) {
+    QVBoxPlotModelMapper_SuperConnectNotify((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_vboxplotmodelmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ void q_vboxplotmodelmapper_disconnect_notify(void* self, void* signal) {
     QVBoxPlotModelMapper_DisconnectNotify((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_vboxplotmodelmapper_qbase_disconnect_notify(void* self, void* signal) {
-    QVBoxPlotModelMapper_QBaseDisconnectNotify((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
+void q_vboxplotmodelmapper_super_disconnect_notify(void* self, void* signal) {
+    QVBoxPlotModelMapper_SuperDisconnectNotify((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_vboxplotmodelmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -468,8 +468,8 @@ int32_t q_vboxplotmodelmapper_first(void* self) {
     return QVBoxPlotModelMapper_First((QVBoxPlotModelMapper*)self);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_first(void* self) {
-    return QVBoxPlotModelMapper_QBaseFirst((QVBoxPlotModelMapper*)self);
+int32_t q_vboxplotmodelmapper_super_first(void* self) {
+    return QVBoxPlotModelMapper_SuperFirst((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_first(void* self, int32_t (*callback)()) {
@@ -480,8 +480,8 @@ void q_vboxplotmodelmapper_set_first(void* self, int first) {
     QVBoxPlotModelMapper_SetFirst((QVBoxPlotModelMapper*)self, first);
 }
 
-void q_vboxplotmodelmapper_qbase_set_first(void* self, int first) {
-    QVBoxPlotModelMapper_QBaseSetFirst((QVBoxPlotModelMapper*)self, first);
+void q_vboxplotmodelmapper_super_set_first(void* self, int first) {
+    QVBoxPlotModelMapper_SuperSetFirst((QVBoxPlotModelMapper*)self, first);
 }
 
 void q_vboxplotmodelmapper_on_set_first(void* self, void (*callback)(void*, int)) {
@@ -492,8 +492,8 @@ int32_t q_vboxplotmodelmapper_count(void* self) {
     return QVBoxPlotModelMapper_Count((QVBoxPlotModelMapper*)self);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_count(void* self) {
-    return QVBoxPlotModelMapper_QBaseCount((QVBoxPlotModelMapper*)self);
+int32_t q_vboxplotmodelmapper_super_count(void* self) {
+    return QVBoxPlotModelMapper_SuperCount((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_count(void* self, int32_t (*callback)()) {
@@ -504,8 +504,8 @@ void q_vboxplotmodelmapper_set_count(void* self, int count) {
     QVBoxPlotModelMapper_SetCount((QVBoxPlotModelMapper*)self, count);
 }
 
-void q_vboxplotmodelmapper_qbase_set_count(void* self, int count) {
-    QVBoxPlotModelMapper_QBaseSetCount((QVBoxPlotModelMapper*)self, count);
+void q_vboxplotmodelmapper_super_set_count(void* self, int count) {
+    QVBoxPlotModelMapper_SuperSetCount((QVBoxPlotModelMapper*)self, count);
 }
 
 void q_vboxplotmodelmapper_on_set_count(void* self, void (*callback)(void*, int)) {
@@ -516,8 +516,8 @@ int32_t q_vboxplotmodelmapper_first_box_set_section(void* self) {
     return QVBoxPlotModelMapper_FirstBoxSetSection((QVBoxPlotModelMapper*)self);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_first_box_set_section(void* self) {
-    return QVBoxPlotModelMapper_QBaseFirstBoxSetSection((QVBoxPlotModelMapper*)self);
+int32_t q_vboxplotmodelmapper_super_first_box_set_section(void* self) {
+    return QVBoxPlotModelMapper_SuperFirstBoxSetSection((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_first_box_set_section(void* self, int32_t (*callback)()) {
@@ -528,8 +528,8 @@ void q_vboxplotmodelmapper_set_first_box_set_section(void* self, int firstBoxSet
     QVBoxPlotModelMapper_SetFirstBoxSetSection((QVBoxPlotModelMapper*)self, firstBoxSetSection);
 }
 
-void q_vboxplotmodelmapper_qbase_set_first_box_set_section(void* self, int firstBoxSetSection) {
-    QVBoxPlotModelMapper_QBaseSetFirstBoxSetSection((QVBoxPlotModelMapper*)self, firstBoxSetSection);
+void q_vboxplotmodelmapper_super_set_first_box_set_section(void* self, int firstBoxSetSection) {
+    QVBoxPlotModelMapper_SuperSetFirstBoxSetSection((QVBoxPlotModelMapper*)self, firstBoxSetSection);
 }
 
 void q_vboxplotmodelmapper_on_set_first_box_set_section(void* self, void (*callback)(void*, int)) {
@@ -540,8 +540,8 @@ int32_t q_vboxplotmodelmapper_last_box_set_section(void* self) {
     return QVBoxPlotModelMapper_LastBoxSetSection((QVBoxPlotModelMapper*)self);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_last_box_set_section(void* self) {
-    return QVBoxPlotModelMapper_QBaseLastBoxSetSection((QVBoxPlotModelMapper*)self);
+int32_t q_vboxplotmodelmapper_super_last_box_set_section(void* self) {
+    return QVBoxPlotModelMapper_SuperLastBoxSetSection((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_last_box_set_section(void* self, int32_t (*callback)()) {
@@ -552,8 +552,8 @@ void q_vboxplotmodelmapper_set_last_box_set_section(void* self, int lastBoxSetSe
     QVBoxPlotModelMapper_SetLastBoxSetSection((QVBoxPlotModelMapper*)self, lastBoxSetSection);
 }
 
-void q_vboxplotmodelmapper_qbase_set_last_box_set_section(void* self, int lastBoxSetSection) {
-    QVBoxPlotModelMapper_QBaseSetLastBoxSetSection((QVBoxPlotModelMapper*)self, lastBoxSetSection);
+void q_vboxplotmodelmapper_super_set_last_box_set_section(void* self, int lastBoxSetSection) {
+    QVBoxPlotModelMapper_SuperSetLastBoxSetSection((QVBoxPlotModelMapper*)self, lastBoxSetSection);
 }
 
 void q_vboxplotmodelmapper_on_set_last_box_set_section(void* self, void (*callback)(void*, int)) {
@@ -564,8 +564,8 @@ int32_t q_vboxplotmodelmapper_orientation(void* self) {
     return QVBoxPlotModelMapper_Orientation((QVBoxPlotModelMapper*)self);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_orientation(void* self) {
-    return QVBoxPlotModelMapper_QBaseOrientation((QVBoxPlotModelMapper*)self);
+int32_t q_vboxplotmodelmapper_super_orientation(void* self) {
+    return QVBoxPlotModelMapper_SuperOrientation((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_orientation(void* self, int32_t (*callback)()) {
@@ -576,8 +576,8 @@ void q_vboxplotmodelmapper_set_orientation(void* self, int32_t orientation) {
     QVBoxPlotModelMapper_SetOrientation((QVBoxPlotModelMapper*)self, orientation);
 }
 
-void q_vboxplotmodelmapper_qbase_set_orientation(void* self, int32_t orientation) {
-    QVBoxPlotModelMapper_QBaseSetOrientation((QVBoxPlotModelMapper*)self, orientation);
+void q_vboxplotmodelmapper_super_set_orientation(void* self, int32_t orientation) {
+    QVBoxPlotModelMapper_SuperSetOrientation((QVBoxPlotModelMapper*)self, orientation);
 }
 
 void q_vboxplotmodelmapper_on_set_orientation(void* self, void (*callback)(void*, int32_t)) {
@@ -588,8 +588,8 @@ QObject* q_vboxplotmodelmapper_sender(void* self) {
     return QVBoxPlotModelMapper_Sender((QVBoxPlotModelMapper*)self);
 }
 
-QObject* q_vboxplotmodelmapper_qbase_sender(void* self) {
-    return QVBoxPlotModelMapper_QBaseSender((QVBoxPlotModelMapper*)self);
+QObject* q_vboxplotmodelmapper_super_sender(void* self) {
+    return QVBoxPlotModelMapper_SuperSender((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_sender(void* self, QObject* (*callback)()) {
@@ -600,8 +600,8 @@ int32_t q_vboxplotmodelmapper_sender_signal_index(void* self) {
     return QVBoxPlotModelMapper_SenderSignalIndex((QVBoxPlotModelMapper*)self);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_sender_signal_index(void* self) {
-    return QVBoxPlotModelMapper_QBaseSenderSignalIndex((QVBoxPlotModelMapper*)self);
+int32_t q_vboxplotmodelmapper_super_sender_signal_index(void* self) {
+    return QVBoxPlotModelMapper_SuperSenderSignalIndex((QVBoxPlotModelMapper*)self);
 }
 
 void q_vboxplotmodelmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -612,8 +612,8 @@ int32_t q_vboxplotmodelmapper_receivers(void* self, const char* signal) {
     return QVBoxPlotModelMapper_Receivers((QVBoxPlotModelMapper*)self, signal);
 }
 
-int32_t q_vboxplotmodelmapper_qbase_receivers(void* self, const char* signal) {
-    return QVBoxPlotModelMapper_QBaseReceivers((QVBoxPlotModelMapper*)self, signal);
+int32_t q_vboxplotmodelmapper_super_receivers(void* self, const char* signal) {
+    return QVBoxPlotModelMapper_SuperReceivers((QVBoxPlotModelMapper*)self, signal);
 }
 
 void q_vboxplotmodelmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -624,8 +624,8 @@ bool q_vboxplotmodelmapper_is_signal_connected(void* self, void* signal) {
     return QVBoxPlotModelMapper_IsSignalConnected((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
 }
 
-bool q_vboxplotmodelmapper_qbase_is_signal_connected(void* self, void* signal) {
-    return QVBoxPlotModelMapper_QBaseIsSignalConnected((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
+bool q_vboxplotmodelmapper_super_is_signal_connected(void* self, void* signal) {
+    return QVBoxPlotModelMapper_SuperIsSignalConnected((QVBoxPlotModelMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_vboxplotmodelmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

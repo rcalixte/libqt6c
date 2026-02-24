@@ -26,8 +26,8 @@ void q_timeline_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTimeLine_OnMetaObject((QTimeLine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_timeline_qbase_meta_object(void* self) {
-    return QTimeLine_QBaseMetaObject((QTimeLine*)self);
+const QMetaObject* q_timeline_super_meta_object(void* self) {
+    return QTimeLine_SuperMetaObject((QTimeLine*)self);
 }
 
 void* q_timeline_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_timeline_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QTimeLine_OnMetacast((QTimeLine*)self, (intptr_t)callback);
 }
 
-void* q_timeline_qbase_metacast(void* self, const char* param1) {
-    return QTimeLine_QBaseMetacast((QTimeLine*)self, param1);
+void* q_timeline_super_metacast(void* self, const char* param1) {
+    return QTimeLine_SuperMetacast((QTimeLine*)self, param1);
 }
 
 int32_t q_timeline_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_timeline_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QTimeLine_OnMetacall((QTimeLine*)self, (intptr_t)callback);
 }
 
-int32_t q_timeline_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTimeLine_QBaseMetacall((QTimeLine*)self, param1, param2, param3);
+int32_t q_timeline_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTimeLine_SuperMetacall((QTimeLine*)self, param1, param2, param3);
 }
 
 const char* q_timeline_tr(const char* s) {
@@ -149,8 +149,8 @@ void q_timeline_on_value_for_time(void* self, double (*callback)(void*, int)) {
     QTimeLine_OnValueForTime((QTimeLine*)self, (intptr_t)callback);
 }
 
-double q_timeline_qbase_value_for_time(void* self, int msec) {
-    return QTimeLine_QBaseValueForTime((QTimeLine*)self, msec);
+double q_timeline_super_value_for_time(void* self, int msec) {
+    return QTimeLine_SuperValueForTime((QTimeLine*)self, msec);
 }
 
 void q_timeline_start(void* self) {
@@ -185,8 +185,8 @@ void q_timeline_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QTimeLine_OnTimerEvent((QTimeLine*)self, (intptr_t)callback);
 }
 
-void q_timeline_qbase_timer_event(void* self, void* event) {
-    QTimeLine_QBaseTimerEvent((QTimeLine*)self, (QTimerEvent*)event);
+void q_timeline_super_timer_event(void* self, void* event) {
+    QTimeLine_SuperTimerEvent((QTimeLine*)self, (QTimerEvent*)event);
 }
 
 const char* q_timeline_tr2(const char* s, const char* c) {
@@ -418,8 +418,8 @@ bool q_timeline_event(void* self, void* event) {
     return QTimeLine_Event((QTimeLine*)self, (QEvent*)event);
 }
 
-bool q_timeline_qbase_event(void* self, void* event) {
-    return QTimeLine_QBaseEvent((QTimeLine*)self, (QEvent*)event);
+bool q_timeline_super_event(void* self, void* event) {
+    return QTimeLine_SuperEvent((QTimeLine*)self, (QEvent*)event);
 }
 
 void q_timeline_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -430,8 +430,8 @@ bool q_timeline_event_filter(void* self, void* watched, void* event) {
     return QTimeLine_EventFilter((QTimeLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_timeline_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTimeLine_QBaseEventFilter((QTimeLine*)self, (QObject*)watched, (QEvent*)event);
+bool q_timeline_super_event_filter(void* self, void* watched, void* event) {
+    return QTimeLine_SuperEventFilter((QTimeLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_timeline_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -442,8 +442,8 @@ void q_timeline_child_event(void* self, void* event) {
     QTimeLine_ChildEvent((QTimeLine*)self, (QChildEvent*)event);
 }
 
-void q_timeline_qbase_child_event(void* self, void* event) {
-    QTimeLine_QBaseChildEvent((QTimeLine*)self, (QChildEvent*)event);
+void q_timeline_super_child_event(void* self, void* event) {
+    QTimeLine_SuperChildEvent((QTimeLine*)self, (QChildEvent*)event);
 }
 
 void q_timeline_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -454,8 +454,8 @@ void q_timeline_custom_event(void* self, void* event) {
     QTimeLine_CustomEvent((QTimeLine*)self, (QEvent*)event);
 }
 
-void q_timeline_qbase_custom_event(void* self, void* event) {
-    QTimeLine_QBaseCustomEvent((QTimeLine*)self, (QEvent*)event);
+void q_timeline_super_custom_event(void* self, void* event) {
+    QTimeLine_SuperCustomEvent((QTimeLine*)self, (QEvent*)event);
 }
 
 void q_timeline_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -466,8 +466,8 @@ void q_timeline_connect_notify(void* self, void* signal) {
     QTimeLine_ConnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
-void q_timeline_qbase_connect_notify(void* self, void* signal) {
-    QTimeLine_QBaseConnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
+void q_timeline_super_connect_notify(void* self, void* signal) {
+    QTimeLine_SuperConnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
 void q_timeline_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -478,8 +478,8 @@ void q_timeline_disconnect_notify(void* self, void* signal) {
     QTimeLine_DisconnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
-void q_timeline_qbase_disconnect_notify(void* self, void* signal) {
-    QTimeLine_QBaseDisconnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
+void q_timeline_super_disconnect_notify(void* self, void* signal) {
+    QTimeLine_SuperDisconnectNotify((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
 void q_timeline_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -490,8 +490,8 @@ QObject* q_timeline_sender(void* self) {
     return QTimeLine_Sender((QTimeLine*)self);
 }
 
-QObject* q_timeline_qbase_sender(void* self) {
-    return QTimeLine_QBaseSender((QTimeLine*)self);
+QObject* q_timeline_super_sender(void* self) {
+    return QTimeLine_SuperSender((QTimeLine*)self);
 }
 
 void q_timeline_on_sender(void* self, QObject* (*callback)()) {
@@ -502,8 +502,8 @@ int32_t q_timeline_sender_signal_index(void* self) {
     return QTimeLine_SenderSignalIndex((QTimeLine*)self);
 }
 
-int32_t q_timeline_qbase_sender_signal_index(void* self) {
-    return QTimeLine_QBaseSenderSignalIndex((QTimeLine*)self);
+int32_t q_timeline_super_sender_signal_index(void* self) {
+    return QTimeLine_SuperSenderSignalIndex((QTimeLine*)self);
 }
 
 void q_timeline_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -514,8 +514,8 @@ int32_t q_timeline_receivers(void* self, const char* signal) {
     return QTimeLine_Receivers((QTimeLine*)self, signal);
 }
 
-int32_t q_timeline_qbase_receivers(void* self, const char* signal) {
-    return QTimeLine_QBaseReceivers((QTimeLine*)self, signal);
+int32_t q_timeline_super_receivers(void* self, const char* signal) {
+    return QTimeLine_SuperReceivers((QTimeLine*)self, signal);
 }
 
 void q_timeline_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -526,8 +526,8 @@ bool q_timeline_is_signal_connected(void* self, void* signal) {
     return QTimeLine_IsSignalConnected((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
-bool q_timeline_qbase_is_signal_connected(void* self, void* signal) {
-    return QTimeLine_QBaseIsSignalConnected((QTimeLine*)self, (QMetaMethod*)signal);
+bool q_timeline_super_is_signal_connected(void* self, void* signal) {
+    return QTimeLine_SuperIsSignalConnected((QTimeLine*)self, (QMetaMethod*)signal);
 }
 
 void q_timeline_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

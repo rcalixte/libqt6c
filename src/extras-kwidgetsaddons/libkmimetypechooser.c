@@ -148,8 +148,8 @@ void k_mimetypechooser_on_meta_object(void* self, const QMetaObject* (*callback)
     KMimeTypeChooser_OnMetaObject((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_mimetypechooser_qbase_meta_object(void* self) {
-    return KMimeTypeChooser_QBaseMetaObject((KMimeTypeChooser*)self);
+const QMetaObject* k_mimetypechooser_super_meta_object(void* self) {
+    return KMimeTypeChooser_SuperMetaObject((KMimeTypeChooser*)self);
 }
 
 void* k_mimetypechooser_metacast(void* self, const char* param1) {
@@ -160,8 +160,8 @@ void k_mimetypechooser_on_metacast(void* self, void* (*callback)(void*, const ch
     KMimeTypeChooser_OnMetacast((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
-void* k_mimetypechooser_qbase_metacast(void* self, const char* param1) {
-    return KMimeTypeChooser_QBaseMetacast((KMimeTypeChooser*)self, param1);
+void* k_mimetypechooser_super_metacast(void* self, const char* param1) {
+    return KMimeTypeChooser_SuperMetacast((KMimeTypeChooser*)self, param1);
 }
 
 int32_t k_mimetypechooser_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -172,8 +172,8 @@ void k_mimetypechooser_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KMimeTypeChooser_OnMetacall((KMimeTypeChooser*)self, (intptr_t)callback);
 }
 
-int32_t k_mimetypechooser_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KMimeTypeChooser_QBaseMetacall((KMimeTypeChooser*)self, param1, param2, param3);
+int32_t k_mimetypechooser_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KMimeTypeChooser_SuperMetacall((KMimeTypeChooser*)self, param1, param2, param3);
 }
 
 const char* k_mimetypechooser_tr(const char* s) {
@@ -1620,8 +1620,8 @@ int32_t k_mimetypechooser_dev_type(void* self) {
     return KMimeTypeChooser_DevType((KMimeTypeChooser*)self);
 }
 
-int32_t k_mimetypechooser_qbase_dev_type(void* self) {
-    return KMimeTypeChooser_QBaseDevType((KMimeTypeChooser*)self);
+int32_t k_mimetypechooser_super_dev_type(void* self) {
+    return KMimeTypeChooser_SuperDevType((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1632,8 +1632,8 @@ void k_mimetypechooser_set_visible(void* self, bool visible) {
     KMimeTypeChooser_SetVisible((KMimeTypeChooser*)self, visible);
 }
 
-void k_mimetypechooser_qbase_set_visible(void* self, bool visible) {
-    KMimeTypeChooser_QBaseSetVisible((KMimeTypeChooser*)self, visible);
+void k_mimetypechooser_super_set_visible(void* self, bool visible) {
+    KMimeTypeChooser_SuperSetVisible((KMimeTypeChooser*)self, visible);
 }
 
 void k_mimetypechooser_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1644,8 +1644,8 @@ QSize* k_mimetypechooser_size_hint(void* self) {
     return KMimeTypeChooser_SizeHint((KMimeTypeChooser*)self);
 }
 
-QSize* k_mimetypechooser_qbase_size_hint(void* self) {
-    return KMimeTypeChooser_QBaseSizeHint((KMimeTypeChooser*)self);
+QSize* k_mimetypechooser_super_size_hint(void* self) {
+    return KMimeTypeChooser_SuperSizeHint((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1656,8 +1656,8 @@ QSize* k_mimetypechooser_minimum_size_hint(void* self) {
     return KMimeTypeChooser_MinimumSizeHint((KMimeTypeChooser*)self);
 }
 
-QSize* k_mimetypechooser_qbase_minimum_size_hint(void* self) {
-    return KMimeTypeChooser_QBaseMinimumSizeHint((KMimeTypeChooser*)self);
+QSize* k_mimetypechooser_super_minimum_size_hint(void* self) {
+    return KMimeTypeChooser_SuperMinimumSizeHint((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1668,8 +1668,8 @@ int32_t k_mimetypechooser_height_for_width(void* self, int param1) {
     return KMimeTypeChooser_HeightForWidth((KMimeTypeChooser*)self, param1);
 }
 
-int32_t k_mimetypechooser_qbase_height_for_width(void* self, int param1) {
-    return KMimeTypeChooser_QBaseHeightForWidth((KMimeTypeChooser*)self, param1);
+int32_t k_mimetypechooser_super_height_for_width(void* self, int param1) {
+    return KMimeTypeChooser_SuperHeightForWidth((KMimeTypeChooser*)self, param1);
 }
 
 void k_mimetypechooser_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1680,8 +1680,8 @@ bool k_mimetypechooser_has_height_for_width(void* self) {
     return KMimeTypeChooser_HasHeightForWidth((KMimeTypeChooser*)self);
 }
 
-bool k_mimetypechooser_qbase_has_height_for_width(void* self) {
-    return KMimeTypeChooser_QBaseHasHeightForWidth((KMimeTypeChooser*)self);
+bool k_mimetypechooser_super_has_height_for_width(void* self) {
+    return KMimeTypeChooser_SuperHasHeightForWidth((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1692,8 +1692,8 @@ QPaintEngine* k_mimetypechooser_paint_engine(void* self) {
     return KMimeTypeChooser_PaintEngine((KMimeTypeChooser*)self);
 }
 
-QPaintEngine* k_mimetypechooser_qbase_paint_engine(void* self) {
-    return KMimeTypeChooser_QBasePaintEngine((KMimeTypeChooser*)self);
+QPaintEngine* k_mimetypechooser_super_paint_engine(void* self) {
+    return KMimeTypeChooser_SuperPaintEngine((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1704,8 +1704,8 @@ bool k_mimetypechooser_event(void* self, void* event) {
     return KMimeTypeChooser_Event((KMimeTypeChooser*)self, (QEvent*)event);
 }
 
-bool k_mimetypechooser_qbase_event(void* self, void* event) {
-    return KMimeTypeChooser_QBaseEvent((KMimeTypeChooser*)self, (QEvent*)event);
+bool k_mimetypechooser_super_event(void* self, void* event) {
+    return KMimeTypeChooser_SuperEvent((KMimeTypeChooser*)self, (QEvent*)event);
 }
 
 void k_mimetypechooser_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1716,8 +1716,8 @@ void k_mimetypechooser_mouse_press_event(void* self, void* event) {
     KMimeTypeChooser_MousePressEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooser_qbase_mouse_press_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseMousePressEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
+void k_mimetypechooser_super_mouse_press_event(void* self, void* event) {
+    KMimeTypeChooser_SuperMousePressEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooser_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1728,8 +1728,8 @@ void k_mimetypechooser_mouse_release_event(void* self, void* event) {
     KMimeTypeChooser_MouseReleaseEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooser_qbase_mouse_release_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseMouseReleaseEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
+void k_mimetypechooser_super_mouse_release_event(void* self, void* event) {
+    KMimeTypeChooser_SuperMouseReleaseEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooser_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1740,8 +1740,8 @@ void k_mimetypechooser_mouse_double_click_event(void* self, void* event) {
     KMimeTypeChooser_MouseDoubleClickEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooser_qbase_mouse_double_click_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseMouseDoubleClickEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
+void k_mimetypechooser_super_mouse_double_click_event(void* self, void* event) {
+    KMimeTypeChooser_SuperMouseDoubleClickEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1752,8 +1752,8 @@ void k_mimetypechooser_mouse_move_event(void* self, void* event) {
     KMimeTypeChooser_MouseMoveEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooser_qbase_mouse_move_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseMouseMoveEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
+void k_mimetypechooser_super_mouse_move_event(void* self, void* event) {
+    KMimeTypeChooser_SuperMouseMoveEvent((KMimeTypeChooser*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooser_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1764,8 +1764,8 @@ void k_mimetypechooser_wheel_event(void* self, void* event) {
     KMimeTypeChooser_WheelEvent((KMimeTypeChooser*)self, (QWheelEvent*)event);
 }
 
-void k_mimetypechooser_qbase_wheel_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseWheelEvent((KMimeTypeChooser*)self, (QWheelEvent*)event);
+void k_mimetypechooser_super_wheel_event(void* self, void* event) {
+    KMimeTypeChooser_SuperWheelEvent((KMimeTypeChooser*)self, (QWheelEvent*)event);
 }
 
 void k_mimetypechooser_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1776,8 +1776,8 @@ void k_mimetypechooser_key_press_event(void* self, void* event) {
     KMimeTypeChooser_KeyPressEvent((KMimeTypeChooser*)self, (QKeyEvent*)event);
 }
 
-void k_mimetypechooser_qbase_key_press_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseKeyPressEvent((KMimeTypeChooser*)self, (QKeyEvent*)event);
+void k_mimetypechooser_super_key_press_event(void* self, void* event) {
+    KMimeTypeChooser_SuperKeyPressEvent((KMimeTypeChooser*)self, (QKeyEvent*)event);
 }
 
 void k_mimetypechooser_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1788,8 +1788,8 @@ void k_mimetypechooser_key_release_event(void* self, void* event) {
     KMimeTypeChooser_KeyReleaseEvent((KMimeTypeChooser*)self, (QKeyEvent*)event);
 }
 
-void k_mimetypechooser_qbase_key_release_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseKeyReleaseEvent((KMimeTypeChooser*)self, (QKeyEvent*)event);
+void k_mimetypechooser_super_key_release_event(void* self, void* event) {
+    KMimeTypeChooser_SuperKeyReleaseEvent((KMimeTypeChooser*)self, (QKeyEvent*)event);
 }
 
 void k_mimetypechooser_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1800,8 +1800,8 @@ void k_mimetypechooser_focus_in_event(void* self, void* event) {
     KMimeTypeChooser_FocusInEvent((KMimeTypeChooser*)self, (QFocusEvent*)event);
 }
 
-void k_mimetypechooser_qbase_focus_in_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseFocusInEvent((KMimeTypeChooser*)self, (QFocusEvent*)event);
+void k_mimetypechooser_super_focus_in_event(void* self, void* event) {
+    KMimeTypeChooser_SuperFocusInEvent((KMimeTypeChooser*)self, (QFocusEvent*)event);
 }
 
 void k_mimetypechooser_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1812,8 +1812,8 @@ void k_mimetypechooser_focus_out_event(void* self, void* event) {
     KMimeTypeChooser_FocusOutEvent((KMimeTypeChooser*)self, (QFocusEvent*)event);
 }
 
-void k_mimetypechooser_qbase_focus_out_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseFocusOutEvent((KMimeTypeChooser*)self, (QFocusEvent*)event);
+void k_mimetypechooser_super_focus_out_event(void* self, void* event) {
+    KMimeTypeChooser_SuperFocusOutEvent((KMimeTypeChooser*)self, (QFocusEvent*)event);
 }
 
 void k_mimetypechooser_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1824,8 +1824,8 @@ void k_mimetypechooser_enter_event(void* self, void* event) {
     KMimeTypeChooser_EnterEvent((KMimeTypeChooser*)self, (QEnterEvent*)event);
 }
 
-void k_mimetypechooser_qbase_enter_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseEnterEvent((KMimeTypeChooser*)self, (QEnterEvent*)event);
+void k_mimetypechooser_super_enter_event(void* self, void* event) {
+    KMimeTypeChooser_SuperEnterEvent((KMimeTypeChooser*)self, (QEnterEvent*)event);
 }
 
 void k_mimetypechooser_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1836,8 +1836,8 @@ void k_mimetypechooser_leave_event(void* self, void* event) {
     KMimeTypeChooser_LeaveEvent((KMimeTypeChooser*)self, (QEvent*)event);
 }
 
-void k_mimetypechooser_qbase_leave_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseLeaveEvent((KMimeTypeChooser*)self, (QEvent*)event);
+void k_mimetypechooser_super_leave_event(void* self, void* event) {
+    KMimeTypeChooser_SuperLeaveEvent((KMimeTypeChooser*)self, (QEvent*)event);
 }
 
 void k_mimetypechooser_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1848,8 +1848,8 @@ void k_mimetypechooser_paint_event(void* self, void* event) {
     KMimeTypeChooser_PaintEvent((KMimeTypeChooser*)self, (QPaintEvent*)event);
 }
 
-void k_mimetypechooser_qbase_paint_event(void* self, void* event) {
-    KMimeTypeChooser_QBasePaintEvent((KMimeTypeChooser*)self, (QPaintEvent*)event);
+void k_mimetypechooser_super_paint_event(void* self, void* event) {
+    KMimeTypeChooser_SuperPaintEvent((KMimeTypeChooser*)self, (QPaintEvent*)event);
 }
 
 void k_mimetypechooser_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_mimetypechooser_move_event(void* self, void* event) {
     KMimeTypeChooser_MoveEvent((KMimeTypeChooser*)self, (QMoveEvent*)event);
 }
 
-void k_mimetypechooser_qbase_move_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseMoveEvent((KMimeTypeChooser*)self, (QMoveEvent*)event);
+void k_mimetypechooser_super_move_event(void* self, void* event) {
+    KMimeTypeChooser_SuperMoveEvent((KMimeTypeChooser*)self, (QMoveEvent*)event);
 }
 
 void k_mimetypechooser_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ void k_mimetypechooser_resize_event(void* self, void* event) {
     KMimeTypeChooser_ResizeEvent((KMimeTypeChooser*)self, (QResizeEvent*)event);
 }
 
-void k_mimetypechooser_qbase_resize_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseResizeEvent((KMimeTypeChooser*)self, (QResizeEvent*)event);
+void k_mimetypechooser_super_resize_event(void* self, void* event) {
+    KMimeTypeChooser_SuperResizeEvent((KMimeTypeChooser*)self, (QResizeEvent*)event);
 }
 
 void k_mimetypechooser_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1884,8 +1884,8 @@ void k_mimetypechooser_close_event(void* self, void* event) {
     KMimeTypeChooser_CloseEvent((KMimeTypeChooser*)self, (QCloseEvent*)event);
 }
 
-void k_mimetypechooser_qbase_close_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseCloseEvent((KMimeTypeChooser*)self, (QCloseEvent*)event);
+void k_mimetypechooser_super_close_event(void* self, void* event) {
+    KMimeTypeChooser_SuperCloseEvent((KMimeTypeChooser*)self, (QCloseEvent*)event);
 }
 
 void k_mimetypechooser_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ void k_mimetypechooser_context_menu_event(void* self, void* event) {
     KMimeTypeChooser_ContextMenuEvent((KMimeTypeChooser*)self, (QContextMenuEvent*)event);
 }
 
-void k_mimetypechooser_qbase_context_menu_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseContextMenuEvent((KMimeTypeChooser*)self, (QContextMenuEvent*)event);
+void k_mimetypechooser_super_context_menu_event(void* self, void* event) {
+    KMimeTypeChooser_SuperContextMenuEvent((KMimeTypeChooser*)self, (QContextMenuEvent*)event);
 }
 
 void k_mimetypechooser_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1908,8 +1908,8 @@ void k_mimetypechooser_tablet_event(void* self, void* event) {
     KMimeTypeChooser_TabletEvent((KMimeTypeChooser*)self, (QTabletEvent*)event);
 }
 
-void k_mimetypechooser_qbase_tablet_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseTabletEvent((KMimeTypeChooser*)self, (QTabletEvent*)event);
+void k_mimetypechooser_super_tablet_event(void* self, void* event) {
+    KMimeTypeChooser_SuperTabletEvent((KMimeTypeChooser*)self, (QTabletEvent*)event);
 }
 
 void k_mimetypechooser_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1920,8 +1920,8 @@ void k_mimetypechooser_action_event(void* self, void* event) {
     KMimeTypeChooser_ActionEvent((KMimeTypeChooser*)self, (QActionEvent*)event);
 }
 
-void k_mimetypechooser_qbase_action_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseActionEvent((KMimeTypeChooser*)self, (QActionEvent*)event);
+void k_mimetypechooser_super_action_event(void* self, void* event) {
+    KMimeTypeChooser_SuperActionEvent((KMimeTypeChooser*)self, (QActionEvent*)event);
 }
 
 void k_mimetypechooser_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1932,8 +1932,8 @@ void k_mimetypechooser_drag_enter_event(void* self, void* event) {
     KMimeTypeChooser_DragEnterEvent((KMimeTypeChooser*)self, (QDragEnterEvent*)event);
 }
 
-void k_mimetypechooser_qbase_drag_enter_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseDragEnterEvent((KMimeTypeChooser*)self, (QDragEnterEvent*)event);
+void k_mimetypechooser_super_drag_enter_event(void* self, void* event) {
+    KMimeTypeChooser_SuperDragEnterEvent((KMimeTypeChooser*)self, (QDragEnterEvent*)event);
 }
 
 void k_mimetypechooser_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1944,8 +1944,8 @@ void k_mimetypechooser_drag_move_event(void* self, void* event) {
     KMimeTypeChooser_DragMoveEvent((KMimeTypeChooser*)self, (QDragMoveEvent*)event);
 }
 
-void k_mimetypechooser_qbase_drag_move_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseDragMoveEvent((KMimeTypeChooser*)self, (QDragMoveEvent*)event);
+void k_mimetypechooser_super_drag_move_event(void* self, void* event) {
+    KMimeTypeChooser_SuperDragMoveEvent((KMimeTypeChooser*)self, (QDragMoveEvent*)event);
 }
 
 void k_mimetypechooser_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1956,8 +1956,8 @@ void k_mimetypechooser_drag_leave_event(void* self, void* event) {
     KMimeTypeChooser_DragLeaveEvent((KMimeTypeChooser*)self, (QDragLeaveEvent*)event);
 }
 
-void k_mimetypechooser_qbase_drag_leave_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseDragLeaveEvent((KMimeTypeChooser*)self, (QDragLeaveEvent*)event);
+void k_mimetypechooser_super_drag_leave_event(void* self, void* event) {
+    KMimeTypeChooser_SuperDragLeaveEvent((KMimeTypeChooser*)self, (QDragLeaveEvent*)event);
 }
 
 void k_mimetypechooser_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1968,8 +1968,8 @@ void k_mimetypechooser_drop_event(void* self, void* event) {
     KMimeTypeChooser_DropEvent((KMimeTypeChooser*)self, (QDropEvent*)event);
 }
 
-void k_mimetypechooser_qbase_drop_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseDropEvent((KMimeTypeChooser*)self, (QDropEvent*)event);
+void k_mimetypechooser_super_drop_event(void* self, void* event) {
+    KMimeTypeChooser_SuperDropEvent((KMimeTypeChooser*)self, (QDropEvent*)event);
 }
 
 void k_mimetypechooser_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1980,8 +1980,8 @@ void k_mimetypechooser_show_event(void* self, void* event) {
     KMimeTypeChooser_ShowEvent((KMimeTypeChooser*)self, (QShowEvent*)event);
 }
 
-void k_mimetypechooser_qbase_show_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseShowEvent((KMimeTypeChooser*)self, (QShowEvent*)event);
+void k_mimetypechooser_super_show_event(void* self, void* event) {
+    KMimeTypeChooser_SuperShowEvent((KMimeTypeChooser*)self, (QShowEvent*)event);
 }
 
 void k_mimetypechooser_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1992,8 +1992,8 @@ void k_mimetypechooser_hide_event(void* self, void* event) {
     KMimeTypeChooser_HideEvent((KMimeTypeChooser*)self, (QHideEvent*)event);
 }
 
-void k_mimetypechooser_qbase_hide_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseHideEvent((KMimeTypeChooser*)self, (QHideEvent*)event);
+void k_mimetypechooser_super_hide_event(void* self, void* event) {
+    KMimeTypeChooser_SuperHideEvent((KMimeTypeChooser*)self, (QHideEvent*)event);
 }
 
 void k_mimetypechooser_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2004,8 +2004,8 @@ bool k_mimetypechooser_native_event(void* self, char* eventType, void* message, 
     return KMimeTypeChooser_NativeEvent((KMimeTypeChooser*)self, qstring(eventType), message, result);
 }
 
-bool k_mimetypechooser_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KMimeTypeChooser_QBaseNativeEvent((KMimeTypeChooser*)self, qstring(eventType), message, result);
+bool k_mimetypechooser_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KMimeTypeChooser_SuperNativeEvent((KMimeTypeChooser*)self, qstring(eventType), message, result);
 }
 
 void k_mimetypechooser_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2016,8 +2016,8 @@ void k_mimetypechooser_change_event(void* self, void* param1) {
     KMimeTypeChooser_ChangeEvent((KMimeTypeChooser*)self, (QEvent*)param1);
 }
 
-void k_mimetypechooser_qbase_change_event(void* self, void* param1) {
-    KMimeTypeChooser_QBaseChangeEvent((KMimeTypeChooser*)self, (QEvent*)param1);
+void k_mimetypechooser_super_change_event(void* self, void* param1) {
+    KMimeTypeChooser_SuperChangeEvent((KMimeTypeChooser*)self, (QEvent*)param1);
 }
 
 void k_mimetypechooser_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2028,8 +2028,8 @@ int32_t k_mimetypechooser_metric(void* self, int32_t param1) {
     return KMimeTypeChooser_Metric((KMimeTypeChooser*)self, param1);
 }
 
-int32_t k_mimetypechooser_qbase_metric(void* self, int32_t param1) {
-    return KMimeTypeChooser_QBaseMetric((KMimeTypeChooser*)self, param1);
+int32_t k_mimetypechooser_super_metric(void* self, int32_t param1) {
+    return KMimeTypeChooser_SuperMetric((KMimeTypeChooser*)self, param1);
 }
 
 void k_mimetypechooser_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2040,8 +2040,8 @@ void k_mimetypechooser_init_painter(void* self, void* painter) {
     KMimeTypeChooser_InitPainter((KMimeTypeChooser*)self, (QPainter*)painter);
 }
 
-void k_mimetypechooser_qbase_init_painter(void* self, void* painter) {
-    KMimeTypeChooser_QBaseInitPainter((KMimeTypeChooser*)self, (QPainter*)painter);
+void k_mimetypechooser_super_init_painter(void* self, void* painter) {
+    KMimeTypeChooser_SuperInitPainter((KMimeTypeChooser*)self, (QPainter*)painter);
 }
 
 void k_mimetypechooser_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ QPaintDevice* k_mimetypechooser_redirected(void* self, void* offset) {
     return KMimeTypeChooser_Redirected((KMimeTypeChooser*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_mimetypechooser_qbase_redirected(void* self, void* offset) {
-    return KMimeTypeChooser_QBaseRedirected((KMimeTypeChooser*)self, (QPoint*)offset);
+QPaintDevice* k_mimetypechooser_super_redirected(void* self, void* offset) {
+    return KMimeTypeChooser_SuperRedirected((KMimeTypeChooser*)self, (QPoint*)offset);
 }
 
 void k_mimetypechooser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2064,8 +2064,8 @@ QPainter* k_mimetypechooser_shared_painter(void* self) {
     return KMimeTypeChooser_SharedPainter((KMimeTypeChooser*)self);
 }
 
-QPainter* k_mimetypechooser_qbase_shared_painter(void* self) {
-    return KMimeTypeChooser_QBaseSharedPainter((KMimeTypeChooser*)self);
+QPainter* k_mimetypechooser_super_shared_painter(void* self) {
+    return KMimeTypeChooser_SuperSharedPainter((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2076,8 +2076,8 @@ void k_mimetypechooser_input_method_event(void* self, void* param1) {
     KMimeTypeChooser_InputMethodEvent((KMimeTypeChooser*)self, (QInputMethodEvent*)param1);
 }
 
-void k_mimetypechooser_qbase_input_method_event(void* self, void* param1) {
-    KMimeTypeChooser_QBaseInputMethodEvent((KMimeTypeChooser*)self, (QInputMethodEvent*)param1);
+void k_mimetypechooser_super_input_method_event(void* self, void* param1) {
+    KMimeTypeChooser_SuperInputMethodEvent((KMimeTypeChooser*)self, (QInputMethodEvent*)param1);
 }
 
 void k_mimetypechooser_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ QVariant* k_mimetypechooser_input_method_query(void* self, int32_t param1) {
     return KMimeTypeChooser_InputMethodQuery((KMimeTypeChooser*)self, param1);
 }
 
-QVariant* k_mimetypechooser_qbase_input_method_query(void* self, int32_t param1) {
-    return KMimeTypeChooser_QBaseInputMethodQuery((KMimeTypeChooser*)self, param1);
+QVariant* k_mimetypechooser_super_input_method_query(void* self, int32_t param1) {
+    return KMimeTypeChooser_SuperInputMethodQuery((KMimeTypeChooser*)self, param1);
 }
 
 void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2100,8 +2100,8 @@ bool k_mimetypechooser_focus_next_prev_child(void* self, bool next) {
     return KMimeTypeChooser_FocusNextPrevChild((KMimeTypeChooser*)self, next);
 }
 
-bool k_mimetypechooser_qbase_focus_next_prev_child(void* self, bool next) {
-    return KMimeTypeChooser_QBaseFocusNextPrevChild((KMimeTypeChooser*)self, next);
+bool k_mimetypechooser_super_focus_next_prev_child(void* self, bool next) {
+    return KMimeTypeChooser_SuperFocusNextPrevChild((KMimeTypeChooser*)self, next);
 }
 
 void k_mimetypechooser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2112,8 +2112,8 @@ bool k_mimetypechooser_event_filter(void* self, void* watched, void* event) {
     return KMimeTypeChooser_EventFilter((KMimeTypeChooser*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_mimetypechooser_qbase_event_filter(void* self, void* watched, void* event) {
-    return KMimeTypeChooser_QBaseEventFilter((KMimeTypeChooser*)self, (QObject*)watched, (QEvent*)event);
+bool k_mimetypechooser_super_event_filter(void* self, void* watched, void* event) {
+    return KMimeTypeChooser_SuperEventFilter((KMimeTypeChooser*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_mimetypechooser_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2124,8 +2124,8 @@ void k_mimetypechooser_timer_event(void* self, void* event) {
     KMimeTypeChooser_TimerEvent((KMimeTypeChooser*)self, (QTimerEvent*)event);
 }
 
-void k_mimetypechooser_qbase_timer_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseTimerEvent((KMimeTypeChooser*)self, (QTimerEvent*)event);
+void k_mimetypechooser_super_timer_event(void* self, void* event) {
+    KMimeTypeChooser_SuperTimerEvent((KMimeTypeChooser*)self, (QTimerEvent*)event);
 }
 
 void k_mimetypechooser_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2136,8 +2136,8 @@ void k_mimetypechooser_child_event(void* self, void* event) {
     KMimeTypeChooser_ChildEvent((KMimeTypeChooser*)self, (QChildEvent*)event);
 }
 
-void k_mimetypechooser_qbase_child_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseChildEvent((KMimeTypeChooser*)self, (QChildEvent*)event);
+void k_mimetypechooser_super_child_event(void* self, void* event) {
+    KMimeTypeChooser_SuperChildEvent((KMimeTypeChooser*)self, (QChildEvent*)event);
 }
 
 void k_mimetypechooser_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2148,8 +2148,8 @@ void k_mimetypechooser_custom_event(void* self, void* event) {
     KMimeTypeChooser_CustomEvent((KMimeTypeChooser*)self, (QEvent*)event);
 }
 
-void k_mimetypechooser_qbase_custom_event(void* self, void* event) {
-    KMimeTypeChooser_QBaseCustomEvent((KMimeTypeChooser*)self, (QEvent*)event);
+void k_mimetypechooser_super_custom_event(void* self, void* event) {
+    KMimeTypeChooser_SuperCustomEvent((KMimeTypeChooser*)self, (QEvent*)event);
 }
 
 void k_mimetypechooser_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2160,8 +2160,8 @@ void k_mimetypechooser_connect_notify(void* self, void* signal) {
     KMimeTypeChooser_ConnectNotify((KMimeTypeChooser*)self, (QMetaMethod*)signal);
 }
 
-void k_mimetypechooser_qbase_connect_notify(void* self, void* signal) {
-    KMimeTypeChooser_QBaseConnectNotify((KMimeTypeChooser*)self, (QMetaMethod*)signal);
+void k_mimetypechooser_super_connect_notify(void* self, void* signal) {
+    KMimeTypeChooser_SuperConnectNotify((KMimeTypeChooser*)self, (QMetaMethod*)signal);
 }
 
 void k_mimetypechooser_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2172,8 +2172,8 @@ void k_mimetypechooser_disconnect_notify(void* self, void* signal) {
     KMimeTypeChooser_DisconnectNotify((KMimeTypeChooser*)self, (QMetaMethod*)signal);
 }
 
-void k_mimetypechooser_qbase_disconnect_notify(void* self, void* signal) {
-    KMimeTypeChooser_QBaseDisconnectNotify((KMimeTypeChooser*)self, (QMetaMethod*)signal);
+void k_mimetypechooser_super_disconnect_notify(void* self, void* signal) {
+    KMimeTypeChooser_SuperDisconnectNotify((KMimeTypeChooser*)self, (QMetaMethod*)signal);
 }
 
 void k_mimetypechooser_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2184,8 +2184,8 @@ void k_mimetypechooser_update_micro_focus(void* self) {
     KMimeTypeChooser_UpdateMicroFocus((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_qbase_update_micro_focus(void* self) {
-    KMimeTypeChooser_QBaseUpdateMicroFocus((KMimeTypeChooser*)self);
+void k_mimetypechooser_super_update_micro_focus(void* self) {
+    KMimeTypeChooser_SuperUpdateMicroFocus((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2196,8 +2196,8 @@ void k_mimetypechooser_create(void* self) {
     KMimeTypeChooser_Create((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_qbase_create(void* self) {
-    KMimeTypeChooser_QBaseCreate((KMimeTypeChooser*)self);
+void k_mimetypechooser_super_create(void* self) {
+    KMimeTypeChooser_SuperCreate((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_create(void* self, void (*callback)()) {
@@ -2208,8 +2208,8 @@ void k_mimetypechooser_destroy(void* self) {
     KMimeTypeChooser_Destroy((KMimeTypeChooser*)self);
 }
 
-void k_mimetypechooser_qbase_destroy(void* self) {
-    KMimeTypeChooser_QBaseDestroy((KMimeTypeChooser*)self);
+void k_mimetypechooser_super_destroy(void* self) {
+    KMimeTypeChooser_SuperDestroy((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_destroy(void* self, void (*callback)()) {
@@ -2220,8 +2220,8 @@ bool k_mimetypechooser_focus_next_child(void* self) {
     return KMimeTypeChooser_FocusNextChild((KMimeTypeChooser*)self);
 }
 
-bool k_mimetypechooser_qbase_focus_next_child(void* self) {
-    return KMimeTypeChooser_QBaseFocusNextChild((KMimeTypeChooser*)self);
+bool k_mimetypechooser_super_focus_next_child(void* self) {
+    return KMimeTypeChooser_SuperFocusNextChild((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2232,8 +2232,8 @@ bool k_mimetypechooser_focus_previous_child(void* self) {
     return KMimeTypeChooser_FocusPreviousChild((KMimeTypeChooser*)self);
 }
 
-bool k_mimetypechooser_qbase_focus_previous_child(void* self) {
-    return KMimeTypeChooser_QBaseFocusPreviousChild((KMimeTypeChooser*)self);
+bool k_mimetypechooser_super_focus_previous_child(void* self) {
+    return KMimeTypeChooser_SuperFocusPreviousChild((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2244,8 +2244,8 @@ QObject* k_mimetypechooser_sender(void* self) {
     return KMimeTypeChooser_Sender((KMimeTypeChooser*)self);
 }
 
-QObject* k_mimetypechooser_qbase_sender(void* self) {
-    return KMimeTypeChooser_QBaseSender((KMimeTypeChooser*)self);
+QObject* k_mimetypechooser_super_sender(void* self) {
+    return KMimeTypeChooser_SuperSender((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_sender(void* self, QObject* (*callback)()) {
@@ -2256,8 +2256,8 @@ int32_t k_mimetypechooser_sender_signal_index(void* self) {
     return KMimeTypeChooser_SenderSignalIndex((KMimeTypeChooser*)self);
 }
 
-int32_t k_mimetypechooser_qbase_sender_signal_index(void* self) {
-    return KMimeTypeChooser_QBaseSenderSignalIndex((KMimeTypeChooser*)self);
+int32_t k_mimetypechooser_super_sender_signal_index(void* self) {
+    return KMimeTypeChooser_SuperSenderSignalIndex((KMimeTypeChooser*)self);
 }
 
 void k_mimetypechooser_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2268,8 +2268,8 @@ int32_t k_mimetypechooser_receivers(void* self, const char* signal) {
     return KMimeTypeChooser_Receivers((KMimeTypeChooser*)self, signal);
 }
 
-int32_t k_mimetypechooser_qbase_receivers(void* self, const char* signal) {
-    return KMimeTypeChooser_QBaseReceivers((KMimeTypeChooser*)self, signal);
+int32_t k_mimetypechooser_super_receivers(void* self, const char* signal) {
+    return KMimeTypeChooser_SuperReceivers((KMimeTypeChooser*)self, signal);
 }
 
 void k_mimetypechooser_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2280,8 +2280,8 @@ bool k_mimetypechooser_is_signal_connected(void* self, void* signal) {
     return KMimeTypeChooser_IsSignalConnected((KMimeTypeChooser*)self, (QMetaMethod*)signal);
 }
 
-bool k_mimetypechooser_qbase_is_signal_connected(void* self, void* signal) {
-    return KMimeTypeChooser_QBaseIsSignalConnected((KMimeTypeChooser*)self, (QMetaMethod*)signal);
+bool k_mimetypechooser_super_is_signal_connected(void* self, void* signal) {
+    return KMimeTypeChooser_SuperIsSignalConnected((KMimeTypeChooser*)self, (QMetaMethod*)signal);
 }
 
 void k_mimetypechooser_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2292,8 +2292,8 @@ double k_mimetypechooser_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KMimeTypeChooser_GetDecodedMetricF((KMimeTypeChooser*)self, metricA, metricB);
 }
 
-double k_mimetypechooser_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KMimeTypeChooser_QBaseGetDecodedMetricF((KMimeTypeChooser*)self, metricA, metricB);
+double k_mimetypechooser_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KMimeTypeChooser_SuperGetDecodedMetricF((KMimeTypeChooser*)self, metricA, metricB);
 }
 
 void k_mimetypechooser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2480,8 +2480,8 @@ void k_mimetypechooserdialog_on_meta_object(void* self, const QMetaObject* (*cal
     KMimeTypeChooserDialog_OnMetaObject((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_mimetypechooserdialog_qbase_meta_object(void* self) {
-    return KMimeTypeChooserDialog_QBaseMetaObject((KMimeTypeChooserDialog*)self);
+const QMetaObject* k_mimetypechooserdialog_super_meta_object(void* self) {
+    return KMimeTypeChooserDialog_SuperMetaObject((KMimeTypeChooserDialog*)self);
 }
 
 void* k_mimetypechooserdialog_metacast(void* self, const char* param1) {
@@ -2492,8 +2492,8 @@ void k_mimetypechooserdialog_on_metacast(void* self, void* (*callback)(void*, co
     KMimeTypeChooserDialog_OnMetacast((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
-void* k_mimetypechooserdialog_qbase_metacast(void* self, const char* param1) {
-    return KMimeTypeChooserDialog_QBaseMetacast((KMimeTypeChooserDialog*)self, param1);
+void* k_mimetypechooserdialog_super_metacast(void* self, const char* param1) {
+    return KMimeTypeChooserDialog_SuperMetacast((KMimeTypeChooserDialog*)self, param1);
 }
 
 int32_t k_mimetypechooserdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2504,8 +2504,8 @@ void k_mimetypechooserdialog_on_metacall(void* self, int32_t (*callback)(void*, 
     KMimeTypeChooserDialog_OnMetacall((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_mimetypechooserdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KMimeTypeChooserDialog_QBaseMetacall((KMimeTypeChooserDialog*)self, param1, param2, param3);
+int32_t k_mimetypechooserdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KMimeTypeChooserDialog_SuperMetacall((KMimeTypeChooserDialog*)self, param1, param2, param3);
 }
 
 const char* k_mimetypechooserdialog_tr(const char* s) {
@@ -2527,8 +2527,8 @@ void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)()) {
     KMimeTypeChooserDialog_OnSizeHint((KMimeTypeChooserDialog*)self, (intptr_t)callback);
 }
 
-QSize* k_mimetypechooserdialog_qbase_size_hint(void* self) {
-    return KMimeTypeChooserDialog_QBaseSizeHint((KMimeTypeChooserDialog*)self);
+QSize* k_mimetypechooserdialog_super_size_hint(void* self) {
+    return KMimeTypeChooserDialog_SuperSizeHint((KMimeTypeChooserDialog*)self);
 }
 
 const char* k_mimetypechooserdialog_tr2(const char* s, const char* c) {
@@ -3974,8 +3974,8 @@ void k_mimetypechooserdialog_set_visible(void* self, bool visible) {
     KMimeTypeChooserDialog_SetVisible((KMimeTypeChooserDialog*)self, visible);
 }
 
-void k_mimetypechooserdialog_qbase_set_visible(void* self, bool visible) {
-    KMimeTypeChooserDialog_QBaseSetVisible((KMimeTypeChooserDialog*)self, visible);
+void k_mimetypechooserdialog_super_set_visible(void* self, bool visible) {
+    KMimeTypeChooserDialog_SuperSetVisible((KMimeTypeChooserDialog*)self, visible);
 }
 
 void k_mimetypechooserdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -3986,8 +3986,8 @@ QSize* k_mimetypechooserdialog_minimum_size_hint(void* self) {
     return KMimeTypeChooserDialog_MinimumSizeHint((KMimeTypeChooserDialog*)self);
 }
 
-QSize* k_mimetypechooserdialog_qbase_minimum_size_hint(void* self) {
-    return KMimeTypeChooserDialog_QBaseMinimumSizeHint((KMimeTypeChooserDialog*)self);
+QSize* k_mimetypechooserdialog_super_minimum_size_hint(void* self) {
+    return KMimeTypeChooserDialog_SuperMinimumSizeHint((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -3998,8 +3998,8 @@ void k_mimetypechooserdialog_open(void* self) {
     KMimeTypeChooserDialog_Open((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_qbase_open(void* self) {
-    KMimeTypeChooserDialog_QBaseOpen((KMimeTypeChooserDialog*)self);
+void k_mimetypechooserdialog_super_open(void* self) {
+    KMimeTypeChooserDialog_SuperOpen((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_open(void* self, void (*callback)()) {
@@ -4010,8 +4010,8 @@ int32_t k_mimetypechooserdialog_exec(void* self) {
     return KMimeTypeChooserDialog_Exec((KMimeTypeChooserDialog*)self);
 }
 
-int32_t k_mimetypechooserdialog_qbase_exec(void* self) {
-    return KMimeTypeChooserDialog_QBaseExec((KMimeTypeChooserDialog*)self);
+int32_t k_mimetypechooserdialog_super_exec(void* self) {
+    return KMimeTypeChooserDialog_SuperExec((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -4022,8 +4022,8 @@ void k_mimetypechooserdialog_done(void* self, int param1) {
     KMimeTypeChooserDialog_Done((KMimeTypeChooserDialog*)self, param1);
 }
 
-void k_mimetypechooserdialog_qbase_done(void* self, int param1) {
-    KMimeTypeChooserDialog_QBaseDone((KMimeTypeChooserDialog*)self, param1);
+void k_mimetypechooserdialog_super_done(void* self, int param1) {
+    KMimeTypeChooserDialog_SuperDone((KMimeTypeChooserDialog*)self, param1);
 }
 
 void k_mimetypechooserdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -4034,8 +4034,8 @@ void k_mimetypechooserdialog_accept(void* self) {
     KMimeTypeChooserDialog_Accept((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_qbase_accept(void* self) {
-    KMimeTypeChooserDialog_QBaseAccept((KMimeTypeChooserDialog*)self);
+void k_mimetypechooserdialog_super_accept(void* self) {
+    KMimeTypeChooserDialog_SuperAccept((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_accept(void* self, void (*callback)()) {
@@ -4046,8 +4046,8 @@ void k_mimetypechooserdialog_reject(void* self) {
     KMimeTypeChooserDialog_Reject((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_qbase_reject(void* self) {
-    KMimeTypeChooserDialog_QBaseReject((KMimeTypeChooserDialog*)self);
+void k_mimetypechooserdialog_super_reject(void* self) {
+    KMimeTypeChooserDialog_SuperReject((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_reject(void* self, void (*callback)()) {
@@ -4058,8 +4058,8 @@ void k_mimetypechooserdialog_key_press_event(void* self, void* param1) {
     KMimeTypeChooserDialog_KeyPressEvent((KMimeTypeChooserDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_key_press_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseKeyPressEvent((KMimeTypeChooserDialog*)self, (QKeyEvent*)param1);
+void k_mimetypechooserdialog_super_key_press_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperKeyPressEvent((KMimeTypeChooserDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4070,8 +4070,8 @@ void k_mimetypechooserdialog_close_event(void* self, void* param1) {
     KMimeTypeChooserDialog_CloseEvent((KMimeTypeChooserDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_close_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseCloseEvent((KMimeTypeChooserDialog*)self, (QCloseEvent*)param1);
+void k_mimetypechooserdialog_super_close_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperCloseEvent((KMimeTypeChooserDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -4082,8 +4082,8 @@ void k_mimetypechooserdialog_show_event(void* self, void* param1) {
     KMimeTypeChooserDialog_ShowEvent((KMimeTypeChooserDialog*)self, (QShowEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_show_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseShowEvent((KMimeTypeChooserDialog*)self, (QShowEvent*)param1);
+void k_mimetypechooserdialog_super_show_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperShowEvent((KMimeTypeChooserDialog*)self, (QShowEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -4094,8 +4094,8 @@ void k_mimetypechooserdialog_resize_event(void* self, void* param1) {
     KMimeTypeChooserDialog_ResizeEvent((KMimeTypeChooserDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_resize_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseResizeEvent((KMimeTypeChooserDialog*)self, (QResizeEvent*)param1);
+void k_mimetypechooserdialog_super_resize_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperResizeEvent((KMimeTypeChooserDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -4106,8 +4106,8 @@ void k_mimetypechooserdialog_context_menu_event(void* self, void* param1) {
     KMimeTypeChooserDialog_ContextMenuEvent((KMimeTypeChooserDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_context_menu_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseContextMenuEvent((KMimeTypeChooserDialog*)self, (QContextMenuEvent*)param1);
+void k_mimetypechooserdialog_super_context_menu_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperContextMenuEvent((KMimeTypeChooserDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -4118,8 +4118,8 @@ bool k_mimetypechooserdialog_event_filter(void* self, void* param1, void* param2
     return KMimeTypeChooserDialog_EventFilter((KMimeTypeChooserDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_mimetypechooserdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KMimeTypeChooserDialog_QBaseEventFilter((KMimeTypeChooserDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_mimetypechooserdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KMimeTypeChooserDialog_SuperEventFilter((KMimeTypeChooserDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_mimetypechooserdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -4130,8 +4130,8 @@ int32_t k_mimetypechooserdialog_dev_type(void* self) {
     return KMimeTypeChooserDialog_DevType((KMimeTypeChooserDialog*)self);
 }
 
-int32_t k_mimetypechooserdialog_qbase_dev_type(void* self) {
-    return KMimeTypeChooserDialog_QBaseDevType((KMimeTypeChooserDialog*)self);
+int32_t k_mimetypechooserdialog_super_dev_type(void* self) {
+    return KMimeTypeChooserDialog_SuperDevType((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -4142,8 +4142,8 @@ int32_t k_mimetypechooserdialog_height_for_width(void* self, int param1) {
     return KMimeTypeChooserDialog_HeightForWidth((KMimeTypeChooserDialog*)self, param1);
 }
 
-int32_t k_mimetypechooserdialog_qbase_height_for_width(void* self, int param1) {
-    return KMimeTypeChooserDialog_QBaseHeightForWidth((KMimeTypeChooserDialog*)self, param1);
+int32_t k_mimetypechooserdialog_super_height_for_width(void* self, int param1) {
+    return KMimeTypeChooserDialog_SuperHeightForWidth((KMimeTypeChooserDialog*)self, param1);
 }
 
 void k_mimetypechooserdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -4154,8 +4154,8 @@ bool k_mimetypechooserdialog_has_height_for_width(void* self) {
     return KMimeTypeChooserDialog_HasHeightForWidth((KMimeTypeChooserDialog*)self);
 }
 
-bool k_mimetypechooserdialog_qbase_has_height_for_width(void* self) {
-    return KMimeTypeChooserDialog_QBaseHasHeightForWidth((KMimeTypeChooserDialog*)self);
+bool k_mimetypechooserdialog_super_has_height_for_width(void* self) {
+    return KMimeTypeChooserDialog_SuperHasHeightForWidth((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -4166,8 +4166,8 @@ QPaintEngine* k_mimetypechooserdialog_paint_engine(void* self) {
     return KMimeTypeChooserDialog_PaintEngine((KMimeTypeChooserDialog*)self);
 }
 
-QPaintEngine* k_mimetypechooserdialog_qbase_paint_engine(void* self) {
-    return KMimeTypeChooserDialog_QBasePaintEngine((KMimeTypeChooserDialog*)self);
+QPaintEngine* k_mimetypechooserdialog_super_paint_engine(void* self) {
+    return KMimeTypeChooserDialog_SuperPaintEngine((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -4178,8 +4178,8 @@ bool k_mimetypechooserdialog_event(void* self, void* event) {
     return KMimeTypeChooserDialog_Event((KMimeTypeChooserDialog*)self, (QEvent*)event);
 }
 
-bool k_mimetypechooserdialog_qbase_event(void* self, void* event) {
-    return KMimeTypeChooserDialog_QBaseEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
+bool k_mimetypechooserdialog_super_event(void* self, void* event) {
+    return KMimeTypeChooserDialog_SuperEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -4190,8 +4190,8 @@ void k_mimetypechooserdialog_mouse_press_event(void* self, void* event) {
     KMimeTypeChooserDialog_MousePressEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_mouse_press_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseMousePressEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
+void k_mimetypechooserdialog_super_mouse_press_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperMousePressEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4202,8 +4202,8 @@ void k_mimetypechooserdialog_mouse_release_event(void* self, void* event) {
     KMimeTypeChooserDialog_MouseReleaseEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_mouse_release_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseMouseReleaseEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
+void k_mimetypechooserdialog_super_mouse_release_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperMouseReleaseEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4214,8 +4214,8 @@ void k_mimetypechooserdialog_mouse_double_click_event(void* self, void* event) {
     KMimeTypeChooserDialog_MouseDoubleClickEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseMouseDoubleClickEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
+void k_mimetypechooserdialog_super_mouse_double_click_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperMouseDoubleClickEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -4226,8 +4226,8 @@ void k_mimetypechooserdialog_mouse_move_event(void* self, void* event) {
     KMimeTypeChooserDialog_MouseMoveEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_mouse_move_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseMouseMoveEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
+void k_mimetypechooserdialog_super_mouse_move_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperMouseMoveEvent((KMimeTypeChooserDialog*)self, (QMouseEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4238,8 +4238,8 @@ void k_mimetypechooserdialog_wheel_event(void* self, void* event) {
     KMimeTypeChooserDialog_WheelEvent((KMimeTypeChooserDialog*)self, (QWheelEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_wheel_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseWheelEvent((KMimeTypeChooserDialog*)self, (QWheelEvent*)event);
+void k_mimetypechooserdialog_super_wheel_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperWheelEvent((KMimeTypeChooserDialog*)self, (QWheelEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -4250,8 +4250,8 @@ void k_mimetypechooserdialog_key_release_event(void* self, void* event) {
     KMimeTypeChooserDialog_KeyReleaseEvent((KMimeTypeChooserDialog*)self, (QKeyEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_key_release_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseKeyReleaseEvent((KMimeTypeChooserDialog*)self, (QKeyEvent*)event);
+void k_mimetypechooserdialog_super_key_release_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperKeyReleaseEvent((KMimeTypeChooserDialog*)self, (QKeyEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4262,8 +4262,8 @@ void k_mimetypechooserdialog_focus_in_event(void* self, void* event) {
     KMimeTypeChooserDialog_FocusInEvent((KMimeTypeChooserDialog*)self, (QFocusEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_focus_in_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseFocusInEvent((KMimeTypeChooserDialog*)self, (QFocusEvent*)event);
+void k_mimetypechooserdialog_super_focus_in_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperFocusInEvent((KMimeTypeChooserDialog*)self, (QFocusEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -4274,8 +4274,8 @@ void k_mimetypechooserdialog_focus_out_event(void* self, void* event) {
     KMimeTypeChooserDialog_FocusOutEvent((KMimeTypeChooserDialog*)self, (QFocusEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_focus_out_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseFocusOutEvent((KMimeTypeChooserDialog*)self, (QFocusEvent*)event);
+void k_mimetypechooserdialog_super_focus_out_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperFocusOutEvent((KMimeTypeChooserDialog*)self, (QFocusEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -4286,8 +4286,8 @@ void k_mimetypechooserdialog_enter_event(void* self, void* event) {
     KMimeTypeChooserDialog_EnterEvent((KMimeTypeChooserDialog*)self, (QEnterEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_enter_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseEnterEvent((KMimeTypeChooserDialog*)self, (QEnterEvent*)event);
+void k_mimetypechooserdialog_super_enter_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperEnterEvent((KMimeTypeChooserDialog*)self, (QEnterEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4298,8 +4298,8 @@ void k_mimetypechooserdialog_leave_event(void* self, void* event) {
     KMimeTypeChooserDialog_LeaveEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_leave_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseLeaveEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
+void k_mimetypechooserdialog_super_leave_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperLeaveEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4310,8 +4310,8 @@ void k_mimetypechooserdialog_paint_event(void* self, void* event) {
     KMimeTypeChooserDialog_PaintEvent((KMimeTypeChooserDialog*)self, (QPaintEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_paint_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBasePaintEvent((KMimeTypeChooserDialog*)self, (QPaintEvent*)event);
+void k_mimetypechooserdialog_super_paint_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperPaintEvent((KMimeTypeChooserDialog*)self, (QPaintEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -4322,8 +4322,8 @@ void k_mimetypechooserdialog_move_event(void* self, void* event) {
     KMimeTypeChooserDialog_MoveEvent((KMimeTypeChooserDialog*)self, (QMoveEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_move_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseMoveEvent((KMimeTypeChooserDialog*)self, (QMoveEvent*)event);
+void k_mimetypechooserdialog_super_move_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperMoveEvent((KMimeTypeChooserDialog*)self, (QMoveEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4334,8 +4334,8 @@ void k_mimetypechooserdialog_tablet_event(void* self, void* event) {
     KMimeTypeChooserDialog_TabletEvent((KMimeTypeChooserDialog*)self, (QTabletEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_tablet_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseTabletEvent((KMimeTypeChooserDialog*)self, (QTabletEvent*)event);
+void k_mimetypechooserdialog_super_tablet_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperTabletEvent((KMimeTypeChooserDialog*)self, (QTabletEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -4346,8 +4346,8 @@ void k_mimetypechooserdialog_action_event(void* self, void* event) {
     KMimeTypeChooserDialog_ActionEvent((KMimeTypeChooserDialog*)self, (QActionEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_action_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseActionEvent((KMimeTypeChooserDialog*)self, (QActionEvent*)event);
+void k_mimetypechooserdialog_super_action_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperActionEvent((KMimeTypeChooserDialog*)self, (QActionEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -4358,8 +4358,8 @@ void k_mimetypechooserdialog_drag_enter_event(void* self, void* event) {
     KMimeTypeChooserDialog_DragEnterEvent((KMimeTypeChooserDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_drag_enter_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseDragEnterEvent((KMimeTypeChooserDialog*)self, (QDragEnterEvent*)event);
+void k_mimetypechooserdialog_super_drag_enter_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperDragEnterEvent((KMimeTypeChooserDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4370,8 +4370,8 @@ void k_mimetypechooserdialog_drag_move_event(void* self, void* event) {
     KMimeTypeChooserDialog_DragMoveEvent((KMimeTypeChooserDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_drag_move_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseDragMoveEvent((KMimeTypeChooserDialog*)self, (QDragMoveEvent*)event);
+void k_mimetypechooserdialog_super_drag_move_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperDragMoveEvent((KMimeTypeChooserDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4382,8 +4382,8 @@ void k_mimetypechooserdialog_drag_leave_event(void* self, void* event) {
     KMimeTypeChooserDialog_DragLeaveEvent((KMimeTypeChooserDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_drag_leave_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseDragLeaveEvent((KMimeTypeChooserDialog*)self, (QDragLeaveEvent*)event);
+void k_mimetypechooserdialog_super_drag_leave_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperDragLeaveEvent((KMimeTypeChooserDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4394,8 +4394,8 @@ void k_mimetypechooserdialog_drop_event(void* self, void* event) {
     KMimeTypeChooserDialog_DropEvent((KMimeTypeChooserDialog*)self, (QDropEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_drop_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseDropEvent((KMimeTypeChooserDialog*)self, (QDropEvent*)event);
+void k_mimetypechooserdialog_super_drop_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperDropEvent((KMimeTypeChooserDialog*)self, (QDropEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -4406,8 +4406,8 @@ void k_mimetypechooserdialog_hide_event(void* self, void* event) {
     KMimeTypeChooserDialog_HideEvent((KMimeTypeChooserDialog*)self, (QHideEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_hide_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseHideEvent((KMimeTypeChooserDialog*)self, (QHideEvent*)event);
+void k_mimetypechooserdialog_super_hide_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperHideEvent((KMimeTypeChooserDialog*)self, (QHideEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -4418,8 +4418,8 @@ bool k_mimetypechooserdialog_native_event(void* self, char* eventType, void* mes
     return KMimeTypeChooserDialog_NativeEvent((KMimeTypeChooserDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_mimetypechooserdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KMimeTypeChooserDialog_QBaseNativeEvent((KMimeTypeChooserDialog*)self, qstring(eventType), message, result);
+bool k_mimetypechooserdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KMimeTypeChooserDialog_SuperNativeEvent((KMimeTypeChooserDialog*)self, qstring(eventType), message, result);
 }
 
 void k_mimetypechooserdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -4430,8 +4430,8 @@ void k_mimetypechooserdialog_change_event(void* self, void* param1) {
     KMimeTypeChooserDialog_ChangeEvent((KMimeTypeChooserDialog*)self, (QEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_change_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseChangeEvent((KMimeTypeChooserDialog*)self, (QEvent*)param1);
+void k_mimetypechooserdialog_super_change_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperChangeEvent((KMimeTypeChooserDialog*)self, (QEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -4442,8 +4442,8 @@ int32_t k_mimetypechooserdialog_metric(void* self, int32_t param1) {
     return KMimeTypeChooserDialog_Metric((KMimeTypeChooserDialog*)self, param1);
 }
 
-int32_t k_mimetypechooserdialog_qbase_metric(void* self, int32_t param1) {
-    return KMimeTypeChooserDialog_QBaseMetric((KMimeTypeChooserDialog*)self, param1);
+int32_t k_mimetypechooserdialog_super_metric(void* self, int32_t param1) {
+    return KMimeTypeChooserDialog_SuperMetric((KMimeTypeChooserDialog*)self, param1);
 }
 
 void k_mimetypechooserdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -4454,8 +4454,8 @@ void k_mimetypechooserdialog_init_painter(void* self, void* painter) {
     KMimeTypeChooserDialog_InitPainter((KMimeTypeChooserDialog*)self, (QPainter*)painter);
 }
 
-void k_mimetypechooserdialog_qbase_init_painter(void* self, void* painter) {
-    KMimeTypeChooserDialog_QBaseInitPainter((KMimeTypeChooserDialog*)self, (QPainter*)painter);
+void k_mimetypechooserdialog_super_init_painter(void* self, void* painter) {
+    KMimeTypeChooserDialog_SuperInitPainter((KMimeTypeChooserDialog*)self, (QPainter*)painter);
 }
 
 void k_mimetypechooserdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -4466,8 +4466,8 @@ QPaintDevice* k_mimetypechooserdialog_redirected(void* self, void* offset) {
     return KMimeTypeChooserDialog_Redirected((KMimeTypeChooserDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_mimetypechooserdialog_qbase_redirected(void* self, void* offset) {
-    return KMimeTypeChooserDialog_QBaseRedirected((KMimeTypeChooserDialog*)self, (QPoint*)offset);
+QPaintDevice* k_mimetypechooserdialog_super_redirected(void* self, void* offset) {
+    return KMimeTypeChooserDialog_SuperRedirected((KMimeTypeChooserDialog*)self, (QPoint*)offset);
 }
 
 void k_mimetypechooserdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -4478,8 +4478,8 @@ QPainter* k_mimetypechooserdialog_shared_painter(void* self) {
     return KMimeTypeChooserDialog_SharedPainter((KMimeTypeChooserDialog*)self);
 }
 
-QPainter* k_mimetypechooserdialog_qbase_shared_painter(void* self) {
-    return KMimeTypeChooserDialog_QBaseSharedPainter((KMimeTypeChooserDialog*)self);
+QPainter* k_mimetypechooserdialog_super_shared_painter(void* self) {
+    return KMimeTypeChooserDialog_SuperSharedPainter((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -4490,8 +4490,8 @@ void k_mimetypechooserdialog_input_method_event(void* self, void* param1) {
     KMimeTypeChooserDialog_InputMethodEvent((KMimeTypeChooserDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_input_method_event(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseInputMethodEvent((KMimeTypeChooserDialog*)self, (QInputMethodEvent*)param1);
+void k_mimetypechooserdialog_super_input_method_event(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperInputMethodEvent((KMimeTypeChooserDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_mimetypechooserdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -4502,8 +4502,8 @@ QVariant* k_mimetypechooserdialog_input_method_query(void* self, int32_t param1)
     return KMimeTypeChooserDialog_InputMethodQuery((KMimeTypeChooserDialog*)self, param1);
 }
 
-QVariant* k_mimetypechooserdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KMimeTypeChooserDialog_QBaseInputMethodQuery((KMimeTypeChooserDialog*)self, param1);
+QVariant* k_mimetypechooserdialog_super_input_method_query(void* self, int32_t param1) {
+    return KMimeTypeChooserDialog_SuperInputMethodQuery((KMimeTypeChooserDialog*)self, param1);
 }
 
 void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -4514,8 +4514,8 @@ bool k_mimetypechooserdialog_focus_next_prev_child(void* self, bool next) {
     return KMimeTypeChooserDialog_FocusNextPrevChild((KMimeTypeChooserDialog*)self, next);
 }
 
-bool k_mimetypechooserdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KMimeTypeChooserDialog_QBaseFocusNextPrevChild((KMimeTypeChooserDialog*)self, next);
+bool k_mimetypechooserdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KMimeTypeChooserDialog_SuperFocusNextPrevChild((KMimeTypeChooserDialog*)self, next);
 }
 
 void k_mimetypechooserdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -4526,8 +4526,8 @@ void k_mimetypechooserdialog_timer_event(void* self, void* event) {
     KMimeTypeChooserDialog_TimerEvent((KMimeTypeChooserDialog*)self, (QTimerEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_timer_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseTimerEvent((KMimeTypeChooserDialog*)self, (QTimerEvent*)event);
+void k_mimetypechooserdialog_super_timer_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperTimerEvent((KMimeTypeChooserDialog*)self, (QTimerEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -4538,8 +4538,8 @@ void k_mimetypechooserdialog_child_event(void* self, void* event) {
     KMimeTypeChooserDialog_ChildEvent((KMimeTypeChooserDialog*)self, (QChildEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_child_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseChildEvent((KMimeTypeChooserDialog*)self, (QChildEvent*)event);
+void k_mimetypechooserdialog_super_child_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperChildEvent((KMimeTypeChooserDialog*)self, (QChildEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -4550,8 +4550,8 @@ void k_mimetypechooserdialog_custom_event(void* self, void* event) {
     KMimeTypeChooserDialog_CustomEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
 }
 
-void k_mimetypechooserdialog_qbase_custom_event(void* self, void* event) {
-    KMimeTypeChooserDialog_QBaseCustomEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
+void k_mimetypechooserdialog_super_custom_event(void* self, void* event) {
+    KMimeTypeChooserDialog_SuperCustomEvent((KMimeTypeChooserDialog*)self, (QEvent*)event);
 }
 
 void k_mimetypechooserdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -4562,8 +4562,8 @@ void k_mimetypechooserdialog_connect_notify(void* self, void* signal) {
     KMimeTypeChooserDialog_ConnectNotify((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_mimetypechooserdialog_qbase_connect_notify(void* self, void* signal) {
-    KMimeTypeChooserDialog_QBaseConnectNotify((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
+void k_mimetypechooserdialog_super_connect_notify(void* self, void* signal) {
+    KMimeTypeChooserDialog_SuperConnectNotify((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_mimetypechooserdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4574,8 +4574,8 @@ void k_mimetypechooserdialog_disconnect_notify(void* self, void* signal) {
     KMimeTypeChooserDialog_DisconnectNotify((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_mimetypechooserdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KMimeTypeChooserDialog_QBaseDisconnectNotify((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
+void k_mimetypechooserdialog_super_disconnect_notify(void* self, void* signal) {
+    KMimeTypeChooserDialog_SuperDisconnectNotify((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_mimetypechooserdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4586,8 +4586,8 @@ void k_mimetypechooserdialog_adjust_position(void* self, void* param1) {
     KMimeTypeChooserDialog_AdjustPosition((KMimeTypeChooserDialog*)self, (QWidget*)param1);
 }
 
-void k_mimetypechooserdialog_qbase_adjust_position(void* self, void* param1) {
-    KMimeTypeChooserDialog_QBaseAdjustPosition((KMimeTypeChooserDialog*)self, (QWidget*)param1);
+void k_mimetypechooserdialog_super_adjust_position(void* self, void* param1) {
+    KMimeTypeChooserDialog_SuperAdjustPosition((KMimeTypeChooserDialog*)self, (QWidget*)param1);
 }
 
 void k_mimetypechooserdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -4598,8 +4598,8 @@ void k_mimetypechooserdialog_update_micro_focus(void* self) {
     KMimeTypeChooserDialog_UpdateMicroFocus((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_qbase_update_micro_focus(void* self) {
-    KMimeTypeChooserDialog_QBaseUpdateMicroFocus((KMimeTypeChooserDialog*)self);
+void k_mimetypechooserdialog_super_update_micro_focus(void* self) {
+    KMimeTypeChooserDialog_SuperUpdateMicroFocus((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -4610,8 +4610,8 @@ void k_mimetypechooserdialog_create(void* self) {
     KMimeTypeChooserDialog_Create((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_qbase_create(void* self) {
-    KMimeTypeChooserDialog_QBaseCreate((KMimeTypeChooserDialog*)self);
+void k_mimetypechooserdialog_super_create(void* self) {
+    KMimeTypeChooserDialog_SuperCreate((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_create(void* self, void (*callback)()) {
@@ -4622,8 +4622,8 @@ void k_mimetypechooserdialog_destroy(void* self) {
     KMimeTypeChooserDialog_Destroy((KMimeTypeChooserDialog*)self);
 }
 
-void k_mimetypechooserdialog_qbase_destroy(void* self) {
-    KMimeTypeChooserDialog_QBaseDestroy((KMimeTypeChooserDialog*)self);
+void k_mimetypechooserdialog_super_destroy(void* self) {
+    KMimeTypeChooserDialog_SuperDestroy((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_destroy(void* self, void (*callback)()) {
@@ -4634,8 +4634,8 @@ bool k_mimetypechooserdialog_focus_next_child(void* self) {
     return KMimeTypeChooserDialog_FocusNextChild((KMimeTypeChooserDialog*)self);
 }
 
-bool k_mimetypechooserdialog_qbase_focus_next_child(void* self) {
-    return KMimeTypeChooserDialog_QBaseFocusNextChild((KMimeTypeChooserDialog*)self);
+bool k_mimetypechooserdialog_super_focus_next_child(void* self) {
+    return KMimeTypeChooserDialog_SuperFocusNextChild((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -4646,8 +4646,8 @@ bool k_mimetypechooserdialog_focus_previous_child(void* self) {
     return KMimeTypeChooserDialog_FocusPreviousChild((KMimeTypeChooserDialog*)self);
 }
 
-bool k_mimetypechooserdialog_qbase_focus_previous_child(void* self) {
-    return KMimeTypeChooserDialog_QBaseFocusPreviousChild((KMimeTypeChooserDialog*)self);
+bool k_mimetypechooserdialog_super_focus_previous_child(void* self) {
+    return KMimeTypeChooserDialog_SuperFocusPreviousChild((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -4658,8 +4658,8 @@ QObject* k_mimetypechooserdialog_sender(void* self) {
     return KMimeTypeChooserDialog_Sender((KMimeTypeChooserDialog*)self);
 }
 
-QObject* k_mimetypechooserdialog_qbase_sender(void* self) {
-    return KMimeTypeChooserDialog_QBaseSender((KMimeTypeChooserDialog*)self);
+QObject* k_mimetypechooserdialog_super_sender(void* self) {
+    return KMimeTypeChooserDialog_SuperSender((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -4670,8 +4670,8 @@ int32_t k_mimetypechooserdialog_sender_signal_index(void* self) {
     return KMimeTypeChooserDialog_SenderSignalIndex((KMimeTypeChooserDialog*)self);
 }
 
-int32_t k_mimetypechooserdialog_qbase_sender_signal_index(void* self) {
-    return KMimeTypeChooserDialog_QBaseSenderSignalIndex((KMimeTypeChooserDialog*)self);
+int32_t k_mimetypechooserdialog_super_sender_signal_index(void* self) {
+    return KMimeTypeChooserDialog_SuperSenderSignalIndex((KMimeTypeChooserDialog*)self);
 }
 
 void k_mimetypechooserdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -4682,8 +4682,8 @@ int32_t k_mimetypechooserdialog_receivers(void* self, const char* signal) {
     return KMimeTypeChooserDialog_Receivers((KMimeTypeChooserDialog*)self, signal);
 }
 
-int32_t k_mimetypechooserdialog_qbase_receivers(void* self, const char* signal) {
-    return KMimeTypeChooserDialog_QBaseReceivers((KMimeTypeChooserDialog*)self, signal);
+int32_t k_mimetypechooserdialog_super_receivers(void* self, const char* signal) {
+    return KMimeTypeChooserDialog_SuperReceivers((KMimeTypeChooserDialog*)self, signal);
 }
 
 void k_mimetypechooserdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -4694,8 +4694,8 @@ bool k_mimetypechooserdialog_is_signal_connected(void* self, void* signal) {
     return KMimeTypeChooserDialog_IsSignalConnected((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_mimetypechooserdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KMimeTypeChooserDialog_QBaseIsSignalConnected((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
+bool k_mimetypechooserdialog_super_is_signal_connected(void* self, void* signal) {
+    return KMimeTypeChooserDialog_SuperIsSignalConnected((KMimeTypeChooserDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_mimetypechooserdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -4706,8 +4706,8 @@ double k_mimetypechooserdialog_get_decoded_metric_f(void* self, int32_t metricA,
     return KMimeTypeChooserDialog_GetDecodedMetricF((KMimeTypeChooserDialog*)self, metricA, metricB);
 }
 
-double k_mimetypechooserdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KMimeTypeChooserDialog_QBaseGetDecodedMetricF((KMimeTypeChooserDialog*)self, metricA, metricB);
+double k_mimetypechooserdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KMimeTypeChooserDialog_SuperGetDecodedMetricF((KMimeTypeChooserDialog*)self, metricA, metricB);
 }
 
 void k_mimetypechooserdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

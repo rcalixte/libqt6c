@@ -41,8 +41,8 @@ void k_treewidgetsearchline_on_meta_object(void* self, const QMetaObject* (*call
     KTreeWidgetSearchLine_OnMetaObject((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_treewidgetsearchline_qbase_meta_object(void* self) {
-    return KTreeWidgetSearchLine_QBaseMetaObject((KTreeWidgetSearchLine*)self);
+const QMetaObject* k_treewidgetsearchline_super_meta_object(void* self) {
+    return KTreeWidgetSearchLine_SuperMetaObject((KTreeWidgetSearchLine*)self);
 }
 
 void* k_treewidgetsearchline_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_treewidgetsearchline_on_metacast(void* self, void* (*callback)(void*, con
     KTreeWidgetSearchLine_OnMetacast((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void* k_treewidgetsearchline_qbase_metacast(void* self, const char* param1) {
-    return KTreeWidgetSearchLine_QBaseMetacast((KTreeWidgetSearchLine*)self, param1);
+void* k_treewidgetsearchline_super_metacast(void* self, const char* param1) {
+    return KTreeWidgetSearchLine_SuperMetacast((KTreeWidgetSearchLine*)self, param1);
 }
 
 int32_t k_treewidgetsearchline_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_treewidgetsearchline_on_metacall(void* self, int32_t (*callback)(void*, i
     KTreeWidgetSearchLine_OnMetacall((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-int32_t k_treewidgetsearchline_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTreeWidgetSearchLine_QBaseMetacall((KTreeWidgetSearchLine*)self, param1, param2, param3);
+int32_t k_treewidgetsearchline_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTreeWidgetSearchLine_SuperMetacall((KTreeWidgetSearchLine*)self, param1, param2, param3);
 }
 
 const char* k_treewidgetsearchline_tr(const char* s) {
@@ -146,8 +146,8 @@ void k_treewidgetsearchline_on_update_search(void* self, void (*callback)(void*,
     KTreeWidgetSearchLine_OnUpdateSearch((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void k_treewidgetsearchline_qbase_update_search(void* self, const char* pattern) {
-    KTreeWidgetSearchLine_QBaseUpdateSearch((KTreeWidgetSearchLine*)self, qstring(pattern));
+void k_treewidgetsearchline_super_update_search(void* self, const char* pattern) {
+    KTreeWidgetSearchLine_SuperUpdateSearch((KTreeWidgetSearchLine*)self, qstring(pattern));
 }
 
 void k_treewidgetsearchline_set_case_sensitivity(void* self, int32_t caseSensitivity) {
@@ -178,8 +178,8 @@ void k_treewidgetsearchline_on_item_matches(void* self, bool (*callback)(void*, 
     KTreeWidgetSearchLine_OnItemMatches((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-bool k_treewidgetsearchline_qbase_item_matches(void* self, void* item, const char* pattern) {
-    return KTreeWidgetSearchLine_QBaseItemMatches((KTreeWidgetSearchLine*)self, (QTreeWidgetItem*)item, qstring(pattern));
+bool k_treewidgetsearchline_super_item_matches(void* self, void* item, const char* pattern) {
+    return KTreeWidgetSearchLine_SuperItemMatches((KTreeWidgetSearchLine*)self, (QTreeWidgetItem*)item, qstring(pattern));
 }
 
 void k_treewidgetsearchline_context_menu_event(void* self, void* param1) {
@@ -190,8 +190,8 @@ void k_treewidgetsearchline_on_context_menu_event(void* self, void (*callback)(v
     KTreeWidgetSearchLine_OnContextMenuEvent((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void k_treewidgetsearchline_qbase_context_menu_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseContextMenuEvent((KTreeWidgetSearchLine*)self, (QContextMenuEvent*)param1);
+void k_treewidgetsearchline_super_context_menu_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperContextMenuEvent((KTreeWidgetSearchLine*)self, (QContextMenuEvent*)param1);
 }
 
 void k_treewidgetsearchline_update_search2(void* self, void* treeWidget) {
@@ -202,8 +202,8 @@ void k_treewidgetsearchline_on_update_search2(void* self, void (*callback)(void*
     KTreeWidgetSearchLine_OnUpdateSearch2((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void k_treewidgetsearchline_qbase_update_search2(void* self, void* treeWidget) {
-    KTreeWidgetSearchLine_QBaseUpdateSearch2((KTreeWidgetSearchLine*)self, (QTreeWidget*)treeWidget);
+void k_treewidgetsearchline_super_update_search2(void* self, void* treeWidget) {
+    KTreeWidgetSearchLine_SuperUpdateSearch2((KTreeWidgetSearchLine*)self, (QTreeWidget*)treeWidget);
 }
 
 void k_treewidgetsearchline_connect_tree_widget(void* self, void* param1) {
@@ -214,8 +214,8 @@ void k_treewidgetsearchline_on_connect_tree_widget(void* self, void (*callback)(
     KTreeWidgetSearchLine_OnConnectTreeWidget((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void k_treewidgetsearchline_qbase_connect_tree_widget(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseConnectTreeWidget((KTreeWidgetSearchLine*)self, (QTreeWidget*)param1);
+void k_treewidgetsearchline_super_connect_tree_widget(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperConnectTreeWidget((KTreeWidgetSearchLine*)self, (QTreeWidget*)param1);
 }
 
 void k_treewidgetsearchline_disconnect_tree_widget(void* self, void* param1) {
@@ -226,8 +226,8 @@ void k_treewidgetsearchline_on_disconnect_tree_widget(void* self, void (*callbac
     KTreeWidgetSearchLine_OnDisconnectTreeWidget((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-void k_treewidgetsearchline_qbase_disconnect_tree_widget(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseDisconnectTreeWidget((KTreeWidgetSearchLine*)self, (QTreeWidget*)param1);
+void k_treewidgetsearchline_super_disconnect_tree_widget(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperDisconnectTreeWidget((KTreeWidgetSearchLine*)self, (QTreeWidget*)param1);
 }
 
 bool k_treewidgetsearchline_can_choose_columns_check(void* self) {
@@ -238,8 +238,8 @@ void k_treewidgetsearchline_on_can_choose_columns_check(void* self, bool (*callb
     KTreeWidgetSearchLine_OnCanChooseColumnsCheck((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-bool k_treewidgetsearchline_qbase_can_choose_columns_check(void* self) {
-    return KTreeWidgetSearchLine_QBaseCanChooseColumnsCheck((KTreeWidgetSearchLine*)self);
+bool k_treewidgetsearchline_super_can_choose_columns_check(void* self) {
+    return KTreeWidgetSearchLine_SuperCanChooseColumnsCheck((KTreeWidgetSearchLine*)self);
 }
 
 bool k_treewidgetsearchline_event(void* self, void* event) {
@@ -250,8 +250,8 @@ void k_treewidgetsearchline_on_event(void* self, bool (*callback)(void*, void*))
     KTreeWidgetSearchLine_OnEvent((KTreeWidgetSearchLine*)self, (intptr_t)callback);
 }
 
-bool k_treewidgetsearchline_qbase_event(void* self, void* event) {
-    return KTreeWidgetSearchLine_QBaseEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
+bool k_treewidgetsearchline_super_event(void* self, void* event) {
+    return KTreeWidgetSearchLine_SuperEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
 }
 
 const char* k_treewidgetsearchline_tr2(const char* s, const char* c) {
@@ -1984,8 +1984,8 @@ QSize* k_treewidgetsearchline_size_hint(void* self) {
     return KTreeWidgetSearchLine_SizeHint((KTreeWidgetSearchLine*)self);
 }
 
-QSize* k_treewidgetsearchline_qbase_size_hint(void* self) {
-    return KTreeWidgetSearchLine_QBaseSizeHint((KTreeWidgetSearchLine*)self);
+QSize* k_treewidgetsearchline_super_size_hint(void* self) {
+    return KTreeWidgetSearchLine_SuperSizeHint((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1996,8 +1996,8 @@ QSize* k_treewidgetsearchline_minimum_size_hint(void* self) {
     return KTreeWidgetSearchLine_MinimumSizeHint((KTreeWidgetSearchLine*)self);
 }
 
-QSize* k_treewidgetsearchline_qbase_minimum_size_hint(void* self) {
-    return KTreeWidgetSearchLine_QBaseMinimumSizeHint((KTreeWidgetSearchLine*)self);
+QSize* k_treewidgetsearchline_super_minimum_size_hint(void* self) {
+    return KTreeWidgetSearchLine_SuperMinimumSizeHint((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2008,8 +2008,8 @@ void k_treewidgetsearchline_mouse_press_event(void* self, void* param1) {
     KTreeWidgetSearchLine_MousePressEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_mouse_press_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseMousePressEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_treewidgetsearchline_super_mouse_press_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperMousePressEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ void k_treewidgetsearchline_mouse_move_event(void* self, void* param1) {
     KTreeWidgetSearchLine_MouseMoveEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_mouse_move_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseMouseMoveEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_treewidgetsearchline_super_mouse_move_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperMouseMoveEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2032,8 +2032,8 @@ void k_treewidgetsearchline_mouse_release_event(void* self, void* param1) {
     KTreeWidgetSearchLine_MouseReleaseEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_mouse_release_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseMouseReleaseEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_treewidgetsearchline_super_mouse_release_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperMouseReleaseEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ void k_treewidgetsearchline_mouse_double_click_event(void* self, void* param1) {
     KTreeWidgetSearchLine_MouseDoubleClickEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_mouse_double_click_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseMouseDoubleClickEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
+void k_treewidgetsearchline_super_mouse_double_click_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperMouseDoubleClickEvent((KTreeWidgetSearchLine*)self, (QMouseEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2056,8 +2056,8 @@ void k_treewidgetsearchline_key_press_event(void* self, void* param1) {
     KTreeWidgetSearchLine_KeyPressEvent((KTreeWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_key_press_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseKeyPressEvent((KTreeWidgetSearchLine*)self, (QKeyEvent*)param1);
+void k_treewidgetsearchline_super_key_press_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperKeyPressEvent((KTreeWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2068,8 +2068,8 @@ void k_treewidgetsearchline_key_release_event(void* self, void* param1) {
     KTreeWidgetSearchLine_KeyReleaseEvent((KTreeWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_key_release_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseKeyReleaseEvent((KTreeWidgetSearchLine*)self, (QKeyEvent*)param1);
+void k_treewidgetsearchline_super_key_release_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperKeyReleaseEvent((KTreeWidgetSearchLine*)self, (QKeyEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2080,8 +2080,8 @@ void k_treewidgetsearchline_focus_in_event(void* self, void* param1) {
     KTreeWidgetSearchLine_FocusInEvent((KTreeWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_focus_in_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseFocusInEvent((KTreeWidgetSearchLine*)self, (QFocusEvent*)param1);
+void k_treewidgetsearchline_super_focus_in_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperFocusInEvent((KTreeWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2092,8 +2092,8 @@ void k_treewidgetsearchline_focus_out_event(void* self, void* param1) {
     KTreeWidgetSearchLine_FocusOutEvent((KTreeWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_focus_out_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseFocusOutEvent((KTreeWidgetSearchLine*)self, (QFocusEvent*)param1);
+void k_treewidgetsearchline_super_focus_out_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperFocusOutEvent((KTreeWidgetSearchLine*)self, (QFocusEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2104,8 +2104,8 @@ void k_treewidgetsearchline_paint_event(void* self, void* param1) {
     KTreeWidgetSearchLine_PaintEvent((KTreeWidgetSearchLine*)self, (QPaintEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_paint_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBasePaintEvent((KTreeWidgetSearchLine*)self, (QPaintEvent*)param1);
+void k_treewidgetsearchline_super_paint_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperPaintEvent((KTreeWidgetSearchLine*)self, (QPaintEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2116,8 +2116,8 @@ void k_treewidgetsearchline_drag_enter_event(void* self, void* param1) {
     KTreeWidgetSearchLine_DragEnterEvent((KTreeWidgetSearchLine*)self, (QDragEnterEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_drag_enter_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseDragEnterEvent((KTreeWidgetSearchLine*)self, (QDragEnterEvent*)param1);
+void k_treewidgetsearchline_super_drag_enter_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperDragEnterEvent((KTreeWidgetSearchLine*)self, (QDragEnterEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2128,8 +2128,8 @@ void k_treewidgetsearchline_drag_move_event(void* self, void* e) {
     KTreeWidgetSearchLine_DragMoveEvent((KTreeWidgetSearchLine*)self, (QDragMoveEvent*)e);
 }
 
-void k_treewidgetsearchline_qbase_drag_move_event(void* self, void* e) {
-    KTreeWidgetSearchLine_QBaseDragMoveEvent((KTreeWidgetSearchLine*)self, (QDragMoveEvent*)e);
+void k_treewidgetsearchline_super_drag_move_event(void* self, void* e) {
+    KTreeWidgetSearchLine_SuperDragMoveEvent((KTreeWidgetSearchLine*)self, (QDragMoveEvent*)e);
 }
 
 void k_treewidgetsearchline_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void k_treewidgetsearchline_drag_leave_event(void* self, void* e) {
     KTreeWidgetSearchLine_DragLeaveEvent((KTreeWidgetSearchLine*)self, (QDragLeaveEvent*)e);
 }
 
-void k_treewidgetsearchline_qbase_drag_leave_event(void* self, void* e) {
-    KTreeWidgetSearchLine_QBaseDragLeaveEvent((KTreeWidgetSearchLine*)self, (QDragLeaveEvent*)e);
+void k_treewidgetsearchline_super_drag_leave_event(void* self, void* e) {
+    KTreeWidgetSearchLine_SuperDragLeaveEvent((KTreeWidgetSearchLine*)self, (QDragLeaveEvent*)e);
 }
 
 void k_treewidgetsearchline_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2152,8 +2152,8 @@ void k_treewidgetsearchline_drop_event(void* self, void* param1) {
     KTreeWidgetSearchLine_DropEvent((KTreeWidgetSearchLine*)self, (QDropEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_drop_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseDropEvent((KTreeWidgetSearchLine*)self, (QDropEvent*)param1);
+void k_treewidgetsearchline_super_drop_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperDropEvent((KTreeWidgetSearchLine*)self, (QDropEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ void k_treewidgetsearchline_change_event(void* self, void* param1) {
     KTreeWidgetSearchLine_ChangeEvent((KTreeWidgetSearchLine*)self, (QEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_change_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseChangeEvent((KTreeWidgetSearchLine*)self, (QEvent*)param1);
+void k_treewidgetsearchline_super_change_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperChangeEvent((KTreeWidgetSearchLine*)self, (QEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ void k_treewidgetsearchline_input_method_event(void* self, void* param1) {
     KTreeWidgetSearchLine_InputMethodEvent((KTreeWidgetSearchLine*)self, (QInputMethodEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_input_method_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseInputMethodEvent((KTreeWidgetSearchLine*)self, (QInputMethodEvent*)param1);
+void k_treewidgetsearchline_super_input_method_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperInputMethodEvent((KTreeWidgetSearchLine*)self, (QInputMethodEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2188,8 +2188,8 @@ void k_treewidgetsearchline_init_style_option(void* self, void* option) {
     KTreeWidgetSearchLine_InitStyleOption((KTreeWidgetSearchLine*)self, (QStyleOptionFrame*)option);
 }
 
-void k_treewidgetsearchline_qbase_init_style_option(void* self, void* option) {
-    KTreeWidgetSearchLine_QBaseInitStyleOption((KTreeWidgetSearchLine*)self, (QStyleOptionFrame*)option);
+void k_treewidgetsearchline_super_init_style_option(void* self, void* option) {
+    KTreeWidgetSearchLine_SuperInitStyleOption((KTreeWidgetSearchLine*)self, (QStyleOptionFrame*)option);
 }
 
 void k_treewidgetsearchline_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ QVariant* k_treewidgetsearchline_input_method_query(void* self, int32_t param1) 
     return KTreeWidgetSearchLine_InputMethodQuery((KTreeWidgetSearchLine*)self, param1);
 }
 
-QVariant* k_treewidgetsearchline_qbase_input_method_query(void* self, int32_t param1) {
-    return KTreeWidgetSearchLine_QBaseInputMethodQuery((KTreeWidgetSearchLine*)self, param1);
+QVariant* k_treewidgetsearchline_super_input_method_query(void* self, int32_t param1) {
+    return KTreeWidgetSearchLine_SuperInputMethodQuery((KTreeWidgetSearchLine*)self, param1);
 }
 
 void k_treewidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2212,8 +2212,8 @@ void k_treewidgetsearchline_timer_event(void* self, void* param1) {
     KTreeWidgetSearchLine_TimerEvent((KTreeWidgetSearchLine*)self, (QTimerEvent*)param1);
 }
 
-void k_treewidgetsearchline_qbase_timer_event(void* self, void* param1) {
-    KTreeWidgetSearchLine_QBaseTimerEvent((KTreeWidgetSearchLine*)self, (QTimerEvent*)param1);
+void k_treewidgetsearchline_super_timer_event(void* self, void* param1) {
+    KTreeWidgetSearchLine_SuperTimerEvent((KTreeWidgetSearchLine*)self, (QTimerEvent*)param1);
 }
 
 void k_treewidgetsearchline_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2224,8 +2224,8 @@ int32_t k_treewidgetsearchline_dev_type(void* self) {
     return KTreeWidgetSearchLine_DevType((KTreeWidgetSearchLine*)self);
 }
 
-int32_t k_treewidgetsearchline_qbase_dev_type(void* self) {
-    return KTreeWidgetSearchLine_QBaseDevType((KTreeWidgetSearchLine*)self);
+int32_t k_treewidgetsearchline_super_dev_type(void* self) {
+    return KTreeWidgetSearchLine_SuperDevType((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2236,8 +2236,8 @@ void k_treewidgetsearchline_set_visible(void* self, bool visible) {
     KTreeWidgetSearchLine_SetVisible((KTreeWidgetSearchLine*)self, visible);
 }
 
-void k_treewidgetsearchline_qbase_set_visible(void* self, bool visible) {
-    KTreeWidgetSearchLine_QBaseSetVisible((KTreeWidgetSearchLine*)self, visible);
+void k_treewidgetsearchline_super_set_visible(void* self, bool visible) {
+    KTreeWidgetSearchLine_SuperSetVisible((KTreeWidgetSearchLine*)self, visible);
 }
 
 void k_treewidgetsearchline_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2248,8 +2248,8 @@ int32_t k_treewidgetsearchline_height_for_width(void* self, int param1) {
     return KTreeWidgetSearchLine_HeightForWidth((KTreeWidgetSearchLine*)self, param1);
 }
 
-int32_t k_treewidgetsearchline_qbase_height_for_width(void* self, int param1) {
-    return KTreeWidgetSearchLine_QBaseHeightForWidth((KTreeWidgetSearchLine*)self, param1);
+int32_t k_treewidgetsearchline_super_height_for_width(void* self, int param1) {
+    return KTreeWidgetSearchLine_SuperHeightForWidth((KTreeWidgetSearchLine*)self, param1);
 }
 
 void k_treewidgetsearchline_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2260,8 +2260,8 @@ bool k_treewidgetsearchline_has_height_for_width(void* self) {
     return KTreeWidgetSearchLine_HasHeightForWidth((KTreeWidgetSearchLine*)self);
 }
 
-bool k_treewidgetsearchline_qbase_has_height_for_width(void* self) {
-    return KTreeWidgetSearchLine_QBaseHasHeightForWidth((KTreeWidgetSearchLine*)self);
+bool k_treewidgetsearchline_super_has_height_for_width(void* self) {
+    return KTreeWidgetSearchLine_SuperHasHeightForWidth((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2272,8 +2272,8 @@ QPaintEngine* k_treewidgetsearchline_paint_engine(void* self) {
     return KTreeWidgetSearchLine_PaintEngine((KTreeWidgetSearchLine*)self);
 }
 
-QPaintEngine* k_treewidgetsearchline_qbase_paint_engine(void* self) {
-    return KTreeWidgetSearchLine_QBasePaintEngine((KTreeWidgetSearchLine*)self);
+QPaintEngine* k_treewidgetsearchline_super_paint_engine(void* self) {
+    return KTreeWidgetSearchLine_SuperPaintEngine((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2284,8 +2284,8 @@ void k_treewidgetsearchline_wheel_event(void* self, void* event) {
     KTreeWidgetSearchLine_WheelEvent((KTreeWidgetSearchLine*)self, (QWheelEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_wheel_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseWheelEvent((KTreeWidgetSearchLine*)self, (QWheelEvent*)event);
+void k_treewidgetsearchline_super_wheel_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperWheelEvent((KTreeWidgetSearchLine*)self, (QWheelEvent*)event);
 }
 
 void k_treewidgetsearchline_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2296,8 +2296,8 @@ void k_treewidgetsearchline_enter_event(void* self, void* event) {
     KTreeWidgetSearchLine_EnterEvent((KTreeWidgetSearchLine*)self, (QEnterEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_enter_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseEnterEvent((KTreeWidgetSearchLine*)self, (QEnterEvent*)event);
+void k_treewidgetsearchline_super_enter_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperEnterEvent((KTreeWidgetSearchLine*)self, (QEnterEvent*)event);
 }
 
 void k_treewidgetsearchline_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2308,8 +2308,8 @@ void k_treewidgetsearchline_leave_event(void* self, void* event) {
     KTreeWidgetSearchLine_LeaveEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_leave_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseLeaveEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
+void k_treewidgetsearchline_super_leave_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperLeaveEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
 }
 
 void k_treewidgetsearchline_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2320,8 +2320,8 @@ void k_treewidgetsearchline_move_event(void* self, void* event) {
     KTreeWidgetSearchLine_MoveEvent((KTreeWidgetSearchLine*)self, (QMoveEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_move_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseMoveEvent((KTreeWidgetSearchLine*)self, (QMoveEvent*)event);
+void k_treewidgetsearchline_super_move_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperMoveEvent((KTreeWidgetSearchLine*)self, (QMoveEvent*)event);
 }
 
 void k_treewidgetsearchline_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2332,8 +2332,8 @@ void k_treewidgetsearchline_resize_event(void* self, void* event) {
     KTreeWidgetSearchLine_ResizeEvent((KTreeWidgetSearchLine*)self, (QResizeEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_resize_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseResizeEvent((KTreeWidgetSearchLine*)self, (QResizeEvent*)event);
+void k_treewidgetsearchline_super_resize_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperResizeEvent((KTreeWidgetSearchLine*)self, (QResizeEvent*)event);
 }
 
 void k_treewidgetsearchline_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2344,8 +2344,8 @@ void k_treewidgetsearchline_close_event(void* self, void* event) {
     KTreeWidgetSearchLine_CloseEvent((KTreeWidgetSearchLine*)self, (QCloseEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_close_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseCloseEvent((KTreeWidgetSearchLine*)self, (QCloseEvent*)event);
+void k_treewidgetsearchline_super_close_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperCloseEvent((KTreeWidgetSearchLine*)self, (QCloseEvent*)event);
 }
 
 void k_treewidgetsearchline_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2356,8 +2356,8 @@ void k_treewidgetsearchline_tablet_event(void* self, void* event) {
     KTreeWidgetSearchLine_TabletEvent((KTreeWidgetSearchLine*)self, (QTabletEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_tablet_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseTabletEvent((KTreeWidgetSearchLine*)self, (QTabletEvent*)event);
+void k_treewidgetsearchline_super_tablet_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperTabletEvent((KTreeWidgetSearchLine*)self, (QTabletEvent*)event);
 }
 
 void k_treewidgetsearchline_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2368,8 +2368,8 @@ void k_treewidgetsearchline_action_event(void* self, void* event) {
     KTreeWidgetSearchLine_ActionEvent((KTreeWidgetSearchLine*)self, (QActionEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_action_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseActionEvent((KTreeWidgetSearchLine*)self, (QActionEvent*)event);
+void k_treewidgetsearchline_super_action_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperActionEvent((KTreeWidgetSearchLine*)self, (QActionEvent*)event);
 }
 
 void k_treewidgetsearchline_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2380,8 +2380,8 @@ void k_treewidgetsearchline_show_event(void* self, void* event) {
     KTreeWidgetSearchLine_ShowEvent((KTreeWidgetSearchLine*)self, (QShowEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_show_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseShowEvent((KTreeWidgetSearchLine*)self, (QShowEvent*)event);
+void k_treewidgetsearchline_super_show_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperShowEvent((KTreeWidgetSearchLine*)self, (QShowEvent*)event);
 }
 
 void k_treewidgetsearchline_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2392,8 +2392,8 @@ void k_treewidgetsearchline_hide_event(void* self, void* event) {
     KTreeWidgetSearchLine_HideEvent((KTreeWidgetSearchLine*)self, (QHideEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_hide_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseHideEvent((KTreeWidgetSearchLine*)self, (QHideEvent*)event);
+void k_treewidgetsearchline_super_hide_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperHideEvent((KTreeWidgetSearchLine*)self, (QHideEvent*)event);
 }
 
 void k_treewidgetsearchline_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2404,8 +2404,8 @@ bool k_treewidgetsearchline_native_event(void* self, char* eventType, void* mess
     return KTreeWidgetSearchLine_NativeEvent((KTreeWidgetSearchLine*)self, qstring(eventType), message, result);
 }
 
-bool k_treewidgetsearchline_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KTreeWidgetSearchLine_QBaseNativeEvent((KTreeWidgetSearchLine*)self, qstring(eventType), message, result);
+bool k_treewidgetsearchline_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KTreeWidgetSearchLine_SuperNativeEvent((KTreeWidgetSearchLine*)self, qstring(eventType), message, result);
 }
 
 void k_treewidgetsearchline_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2416,8 +2416,8 @@ int32_t k_treewidgetsearchline_metric(void* self, int32_t param1) {
     return KTreeWidgetSearchLine_Metric((KTreeWidgetSearchLine*)self, param1);
 }
 
-int32_t k_treewidgetsearchline_qbase_metric(void* self, int32_t param1) {
-    return KTreeWidgetSearchLine_QBaseMetric((KTreeWidgetSearchLine*)self, param1);
+int32_t k_treewidgetsearchline_super_metric(void* self, int32_t param1) {
+    return KTreeWidgetSearchLine_SuperMetric((KTreeWidgetSearchLine*)self, param1);
 }
 
 void k_treewidgetsearchline_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2428,8 +2428,8 @@ void k_treewidgetsearchline_init_painter(void* self, void* painter) {
     KTreeWidgetSearchLine_InitPainter((KTreeWidgetSearchLine*)self, (QPainter*)painter);
 }
 
-void k_treewidgetsearchline_qbase_init_painter(void* self, void* painter) {
-    KTreeWidgetSearchLine_QBaseInitPainter((KTreeWidgetSearchLine*)self, (QPainter*)painter);
+void k_treewidgetsearchline_super_init_painter(void* self, void* painter) {
+    KTreeWidgetSearchLine_SuperInitPainter((KTreeWidgetSearchLine*)self, (QPainter*)painter);
 }
 
 void k_treewidgetsearchline_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2440,8 +2440,8 @@ QPaintDevice* k_treewidgetsearchline_redirected(void* self, void* offset) {
     return KTreeWidgetSearchLine_Redirected((KTreeWidgetSearchLine*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_treewidgetsearchline_qbase_redirected(void* self, void* offset) {
-    return KTreeWidgetSearchLine_QBaseRedirected((KTreeWidgetSearchLine*)self, (QPoint*)offset);
+QPaintDevice* k_treewidgetsearchline_super_redirected(void* self, void* offset) {
+    return KTreeWidgetSearchLine_SuperRedirected((KTreeWidgetSearchLine*)self, (QPoint*)offset);
 }
 
 void k_treewidgetsearchline_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2452,8 +2452,8 @@ QPainter* k_treewidgetsearchline_shared_painter(void* self) {
     return KTreeWidgetSearchLine_SharedPainter((KTreeWidgetSearchLine*)self);
 }
 
-QPainter* k_treewidgetsearchline_qbase_shared_painter(void* self) {
-    return KTreeWidgetSearchLine_QBaseSharedPainter((KTreeWidgetSearchLine*)self);
+QPainter* k_treewidgetsearchline_super_shared_painter(void* self) {
+    return KTreeWidgetSearchLine_SuperSharedPainter((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2464,8 +2464,8 @@ bool k_treewidgetsearchline_focus_next_prev_child(void* self, bool next) {
     return KTreeWidgetSearchLine_FocusNextPrevChild((KTreeWidgetSearchLine*)self, next);
 }
 
-bool k_treewidgetsearchline_qbase_focus_next_prev_child(void* self, bool next) {
-    return KTreeWidgetSearchLine_QBaseFocusNextPrevChild((KTreeWidgetSearchLine*)self, next);
+bool k_treewidgetsearchline_super_focus_next_prev_child(void* self, bool next) {
+    return KTreeWidgetSearchLine_SuperFocusNextPrevChild((KTreeWidgetSearchLine*)self, next);
 }
 
 void k_treewidgetsearchline_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2476,8 +2476,8 @@ bool k_treewidgetsearchline_event_filter(void* self, void* watched, void* event)
     return KTreeWidgetSearchLine_EventFilter((KTreeWidgetSearchLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_treewidgetsearchline_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTreeWidgetSearchLine_QBaseEventFilter((KTreeWidgetSearchLine*)self, (QObject*)watched, (QEvent*)event);
+bool k_treewidgetsearchline_super_event_filter(void* self, void* watched, void* event) {
+    return KTreeWidgetSearchLine_SuperEventFilter((KTreeWidgetSearchLine*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_treewidgetsearchline_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2488,8 +2488,8 @@ void k_treewidgetsearchline_child_event(void* self, void* event) {
     KTreeWidgetSearchLine_ChildEvent((KTreeWidgetSearchLine*)self, (QChildEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_child_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseChildEvent((KTreeWidgetSearchLine*)self, (QChildEvent*)event);
+void k_treewidgetsearchline_super_child_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperChildEvent((KTreeWidgetSearchLine*)self, (QChildEvent*)event);
 }
 
 void k_treewidgetsearchline_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2500,8 +2500,8 @@ void k_treewidgetsearchline_custom_event(void* self, void* event) {
     KTreeWidgetSearchLine_CustomEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
 }
 
-void k_treewidgetsearchline_qbase_custom_event(void* self, void* event) {
-    KTreeWidgetSearchLine_QBaseCustomEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
+void k_treewidgetsearchline_super_custom_event(void* self, void* event) {
+    KTreeWidgetSearchLine_SuperCustomEvent((KTreeWidgetSearchLine*)self, (QEvent*)event);
 }
 
 void k_treewidgetsearchline_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2512,8 +2512,8 @@ void k_treewidgetsearchline_connect_notify(void* self, void* signal) {
     KTreeWidgetSearchLine_ConnectNotify((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
-void k_treewidgetsearchline_qbase_connect_notify(void* self, void* signal) {
-    KTreeWidgetSearchLine_QBaseConnectNotify((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
+void k_treewidgetsearchline_super_connect_notify(void* self, void* signal) {
+    KTreeWidgetSearchLine_SuperConnectNotify((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
 void k_treewidgetsearchline_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2524,8 +2524,8 @@ void k_treewidgetsearchline_disconnect_notify(void* self, void* signal) {
     KTreeWidgetSearchLine_DisconnectNotify((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
-void k_treewidgetsearchline_qbase_disconnect_notify(void* self, void* signal) {
-    KTreeWidgetSearchLine_QBaseDisconnectNotify((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
+void k_treewidgetsearchline_super_disconnect_notify(void* self, void* signal) {
+    KTreeWidgetSearchLine_SuperDisconnectNotify((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
 void k_treewidgetsearchline_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2536,8 +2536,8 @@ QRect* k_treewidgetsearchline_cursor_rect(void* self) {
     return KTreeWidgetSearchLine_CursorRect((KTreeWidgetSearchLine*)self);
 }
 
-QRect* k_treewidgetsearchline_qbase_cursor_rect(void* self) {
-    return KTreeWidgetSearchLine_QBaseCursorRect((KTreeWidgetSearchLine*)self);
+QRect* k_treewidgetsearchline_super_cursor_rect(void* self) {
+    return KTreeWidgetSearchLine_SuperCursorRect((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_cursor_rect(void* self, QRect* (*callback)()) {
@@ -2548,8 +2548,8 @@ void k_treewidgetsearchline_update_micro_focus(void* self) {
     KTreeWidgetSearchLine_UpdateMicroFocus((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_qbase_update_micro_focus(void* self) {
-    KTreeWidgetSearchLine_QBaseUpdateMicroFocus((KTreeWidgetSearchLine*)self);
+void k_treewidgetsearchline_super_update_micro_focus(void* self) {
+    KTreeWidgetSearchLine_SuperUpdateMicroFocus((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2560,8 +2560,8 @@ void k_treewidgetsearchline_create(void* self) {
     KTreeWidgetSearchLine_Create((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_qbase_create(void* self) {
-    KTreeWidgetSearchLine_QBaseCreate((KTreeWidgetSearchLine*)self);
+void k_treewidgetsearchline_super_create(void* self) {
+    KTreeWidgetSearchLine_SuperCreate((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_create(void* self, void (*callback)()) {
@@ -2572,8 +2572,8 @@ void k_treewidgetsearchline_destroy(void* self) {
     KTreeWidgetSearchLine_Destroy((KTreeWidgetSearchLine*)self);
 }
 
-void k_treewidgetsearchline_qbase_destroy(void* self) {
-    KTreeWidgetSearchLine_QBaseDestroy((KTreeWidgetSearchLine*)self);
+void k_treewidgetsearchline_super_destroy(void* self) {
+    KTreeWidgetSearchLine_SuperDestroy((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_destroy(void* self, void (*callback)()) {
@@ -2584,8 +2584,8 @@ bool k_treewidgetsearchline_focus_next_child(void* self) {
     return KTreeWidgetSearchLine_FocusNextChild((KTreeWidgetSearchLine*)self);
 }
 
-bool k_treewidgetsearchline_qbase_focus_next_child(void* self) {
-    return KTreeWidgetSearchLine_QBaseFocusNextChild((KTreeWidgetSearchLine*)self);
+bool k_treewidgetsearchline_super_focus_next_child(void* self) {
+    return KTreeWidgetSearchLine_SuperFocusNextChild((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2596,8 +2596,8 @@ bool k_treewidgetsearchline_focus_previous_child(void* self) {
     return KTreeWidgetSearchLine_FocusPreviousChild((KTreeWidgetSearchLine*)self);
 }
 
-bool k_treewidgetsearchline_qbase_focus_previous_child(void* self) {
-    return KTreeWidgetSearchLine_QBaseFocusPreviousChild((KTreeWidgetSearchLine*)self);
+bool k_treewidgetsearchline_super_focus_previous_child(void* self) {
+    return KTreeWidgetSearchLine_SuperFocusPreviousChild((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2608,8 +2608,8 @@ QObject* k_treewidgetsearchline_sender(void* self) {
     return KTreeWidgetSearchLine_Sender((KTreeWidgetSearchLine*)self);
 }
 
-QObject* k_treewidgetsearchline_qbase_sender(void* self) {
-    return KTreeWidgetSearchLine_QBaseSender((KTreeWidgetSearchLine*)self);
+QObject* k_treewidgetsearchline_super_sender(void* self) {
+    return KTreeWidgetSearchLine_SuperSender((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_sender(void* self, QObject* (*callback)()) {
@@ -2620,8 +2620,8 @@ int32_t k_treewidgetsearchline_sender_signal_index(void* self) {
     return KTreeWidgetSearchLine_SenderSignalIndex((KTreeWidgetSearchLine*)self);
 }
 
-int32_t k_treewidgetsearchline_qbase_sender_signal_index(void* self) {
-    return KTreeWidgetSearchLine_QBaseSenderSignalIndex((KTreeWidgetSearchLine*)self);
+int32_t k_treewidgetsearchline_super_sender_signal_index(void* self) {
+    return KTreeWidgetSearchLine_SuperSenderSignalIndex((KTreeWidgetSearchLine*)self);
 }
 
 void k_treewidgetsearchline_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2632,8 +2632,8 @@ int32_t k_treewidgetsearchline_receivers(void* self, const char* signal) {
     return KTreeWidgetSearchLine_Receivers((KTreeWidgetSearchLine*)self, signal);
 }
 
-int32_t k_treewidgetsearchline_qbase_receivers(void* self, const char* signal) {
-    return KTreeWidgetSearchLine_QBaseReceivers((KTreeWidgetSearchLine*)self, signal);
+int32_t k_treewidgetsearchline_super_receivers(void* self, const char* signal) {
+    return KTreeWidgetSearchLine_SuperReceivers((KTreeWidgetSearchLine*)self, signal);
 }
 
 void k_treewidgetsearchline_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2644,8 +2644,8 @@ bool k_treewidgetsearchline_is_signal_connected(void* self, void* signal) {
     return KTreeWidgetSearchLine_IsSignalConnected((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
-bool k_treewidgetsearchline_qbase_is_signal_connected(void* self, void* signal) {
-    return KTreeWidgetSearchLine_QBaseIsSignalConnected((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
+bool k_treewidgetsearchline_super_is_signal_connected(void* self, void* signal) {
+    return KTreeWidgetSearchLine_SuperIsSignalConnected((KTreeWidgetSearchLine*)self, (QMetaMethod*)signal);
 }
 
 void k_treewidgetsearchline_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2656,8 +2656,8 @@ double k_treewidgetsearchline_get_decoded_metric_f(void* self, int32_t metricA, 
     return KTreeWidgetSearchLine_GetDecodedMetricF((KTreeWidgetSearchLine*)self, metricA, metricB);
 }
 
-double k_treewidgetsearchline_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KTreeWidgetSearchLine_QBaseGetDecodedMetricF((KTreeWidgetSearchLine*)self, metricA, metricB);
+double k_treewidgetsearchline_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KTreeWidgetSearchLine_SuperGetDecodedMetricF((KTreeWidgetSearchLine*)self, metricA, metricB);
 }
 
 void k_treewidgetsearchline_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

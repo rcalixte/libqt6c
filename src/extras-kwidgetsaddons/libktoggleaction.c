@@ -28,8 +28,8 @@ void k_toggleaction_on_meta_object(void* self, const QMetaObject* (*callback)())
     KToggleAction_OnMetaObject((KToggleAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_toggleaction_qbase_meta_object(void* self) {
-    return KToggleAction_QBaseMetaObject((KToggleAction*)self);
+const QMetaObject* k_toggleaction_super_meta_object(void* self) {
+    return KToggleAction_SuperMetaObject((KToggleAction*)self);
 }
 
 void* k_toggleaction_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void k_toggleaction_on_metacast(void* self, void* (*callback)(void*, const char*
     KToggleAction_OnMetacast((KToggleAction*)self, (intptr_t)callback);
 }
 
-void* k_toggleaction_qbase_metacast(void* self, const char* param1) {
-    return KToggleAction_QBaseMetacast((KToggleAction*)self, param1);
+void* k_toggleaction_super_metacast(void* self, const char* param1) {
+    return KToggleAction_SuperMetacast((KToggleAction*)self, param1);
 }
 
 int32_t k_toggleaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void k_toggleaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KToggleAction_OnMetacall((KToggleAction*)self, (intptr_t)callback);
 }
 
-int32_t k_toggleaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KToggleAction_QBaseMetacall((KToggleAction*)self, param1, param2, param3);
+int32_t k_toggleaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KToggleAction_SuperMetacall((KToggleAction*)self, param1, param2, param3);
 }
 
 const char* k_toggleaction_tr(const char* s) {
@@ -75,8 +75,8 @@ void k_toggleaction_on_slot_toggled(void* self, void (*callback)(void*, bool)) {
     KToggleAction_OnSlotToggled((KToggleAction*)self, (intptr_t)callback);
 }
 
-void k_toggleaction_qbase_slot_toggled(void* self, bool checked) {
-    KToggleAction_QBaseSlotToggled((KToggleAction*)self, checked);
+void k_toggleaction_super_slot_toggled(void* self, bool checked) {
+    KToggleAction_SuperSlotToggled((KToggleAction*)self, checked);
 }
 
 const char* k_toggleaction_tr2(const char* s, const char* c) {
@@ -605,8 +605,8 @@ bool k_toggleaction_event(void* self, void* param1) {
     return KToggleAction_Event((KToggleAction*)self, (QEvent*)param1);
 }
 
-bool k_toggleaction_qbase_event(void* self, void* param1) {
-    return KToggleAction_QBaseEvent((KToggleAction*)self, (QEvent*)param1);
+bool k_toggleaction_super_event(void* self, void* param1) {
+    return KToggleAction_SuperEvent((KToggleAction*)self, (QEvent*)param1);
 }
 
 void k_toggleaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -617,8 +617,8 @@ bool k_toggleaction_event_filter(void* self, void* watched, void* event) {
     return KToggleAction_EventFilter((KToggleAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_toggleaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KToggleAction_QBaseEventFilter((KToggleAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_toggleaction_super_event_filter(void* self, void* watched, void* event) {
+    return KToggleAction_SuperEventFilter((KToggleAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_toggleaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -629,8 +629,8 @@ void k_toggleaction_timer_event(void* self, void* event) {
     KToggleAction_TimerEvent((KToggleAction*)self, (QTimerEvent*)event);
 }
 
-void k_toggleaction_qbase_timer_event(void* self, void* event) {
-    KToggleAction_QBaseTimerEvent((KToggleAction*)self, (QTimerEvent*)event);
+void k_toggleaction_super_timer_event(void* self, void* event) {
+    KToggleAction_SuperTimerEvent((KToggleAction*)self, (QTimerEvent*)event);
 }
 
 void k_toggleaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -641,8 +641,8 @@ void k_toggleaction_child_event(void* self, void* event) {
     KToggleAction_ChildEvent((KToggleAction*)self, (QChildEvent*)event);
 }
 
-void k_toggleaction_qbase_child_event(void* self, void* event) {
-    KToggleAction_QBaseChildEvent((KToggleAction*)self, (QChildEvent*)event);
+void k_toggleaction_super_child_event(void* self, void* event) {
+    KToggleAction_SuperChildEvent((KToggleAction*)self, (QChildEvent*)event);
 }
 
 void k_toggleaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -653,8 +653,8 @@ void k_toggleaction_custom_event(void* self, void* event) {
     KToggleAction_CustomEvent((KToggleAction*)self, (QEvent*)event);
 }
 
-void k_toggleaction_qbase_custom_event(void* self, void* event) {
-    KToggleAction_QBaseCustomEvent((KToggleAction*)self, (QEvent*)event);
+void k_toggleaction_super_custom_event(void* self, void* event) {
+    KToggleAction_SuperCustomEvent((KToggleAction*)self, (QEvent*)event);
 }
 
 void k_toggleaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -665,8 +665,8 @@ void k_toggleaction_connect_notify(void* self, void* signal) {
     KToggleAction_ConnectNotify((KToggleAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toggleaction_qbase_connect_notify(void* self, void* signal) {
-    KToggleAction_QBaseConnectNotify((KToggleAction*)self, (QMetaMethod*)signal);
+void k_toggleaction_super_connect_notify(void* self, void* signal) {
+    KToggleAction_SuperConnectNotify((KToggleAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toggleaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -677,8 +677,8 @@ void k_toggleaction_disconnect_notify(void* self, void* signal) {
     KToggleAction_DisconnectNotify((KToggleAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toggleaction_qbase_disconnect_notify(void* self, void* signal) {
-    KToggleAction_QBaseDisconnectNotify((KToggleAction*)self, (QMetaMethod*)signal);
+void k_toggleaction_super_disconnect_notify(void* self, void* signal) {
+    KToggleAction_SuperDisconnectNotify((KToggleAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toggleaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -689,8 +689,8 @@ QObject* k_toggleaction_sender(void* self) {
     return KToggleAction_Sender((KToggleAction*)self);
 }
 
-QObject* k_toggleaction_qbase_sender(void* self) {
-    return KToggleAction_QBaseSender((KToggleAction*)self);
+QObject* k_toggleaction_super_sender(void* self) {
+    return KToggleAction_SuperSender((KToggleAction*)self);
 }
 
 void k_toggleaction_on_sender(void* self, QObject* (*callback)()) {
@@ -701,8 +701,8 @@ int32_t k_toggleaction_sender_signal_index(void* self) {
     return KToggleAction_SenderSignalIndex((KToggleAction*)self);
 }
 
-int32_t k_toggleaction_qbase_sender_signal_index(void* self) {
-    return KToggleAction_QBaseSenderSignalIndex((KToggleAction*)self);
+int32_t k_toggleaction_super_sender_signal_index(void* self) {
+    return KToggleAction_SuperSenderSignalIndex((KToggleAction*)self);
 }
 
 void k_toggleaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -713,8 +713,8 @@ int32_t k_toggleaction_receivers(void* self, const char* signal) {
     return KToggleAction_Receivers((KToggleAction*)self, signal);
 }
 
-int32_t k_toggleaction_qbase_receivers(void* self, const char* signal) {
-    return KToggleAction_QBaseReceivers((KToggleAction*)self, signal);
+int32_t k_toggleaction_super_receivers(void* self, const char* signal) {
+    return KToggleAction_SuperReceivers((KToggleAction*)self, signal);
 }
 
 void k_toggleaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -725,8 +725,8 @@ bool k_toggleaction_is_signal_connected(void* self, void* signal) {
     return KToggleAction_IsSignalConnected((KToggleAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_toggleaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KToggleAction_QBaseIsSignalConnected((KToggleAction*)self, (QMetaMethod*)signal);
+bool k_toggleaction_super_is_signal_connected(void* self, void* signal) {
+    return KToggleAction_SuperIsSignalConnected((KToggleAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toggleaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -39,8 +39,8 @@ void q_columnview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QColumnView_OnMetaObject((QColumnView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_columnview_qbase_meta_object(void* self) {
-    return QColumnView_QBaseMetaObject((QColumnView*)self);
+const QMetaObject* q_columnview_super_meta_object(void* self) {
+    return QColumnView_SuperMetaObject((QColumnView*)self);
 }
 
 void* q_columnview_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_columnview_on_metacast(void* self, void* (*callback)(void*, const char*))
     QColumnView_OnMetacast((QColumnView*)self, (intptr_t)callback);
 }
 
-void* q_columnview_qbase_metacast(void* self, const char* param1) {
-    return QColumnView_QBaseMetacast((QColumnView*)self, param1);
+void* q_columnview_super_metacast(void* self, const char* param1) {
+    return QColumnView_SuperMetacast((QColumnView*)self, param1);
 }
 
 int32_t q_columnview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_columnview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QColumnView_OnMetacall((QColumnView*)self, (intptr_t)callback);
 }
 
-int32_t q_columnview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QColumnView_QBaseMetacall((QColumnView*)self, param1, param2, param3);
+int32_t q_columnview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QColumnView_SuperMetacall((QColumnView*)self, param1, param2, param3);
 }
 
 const char* q_columnview_tr(const char* s) {
@@ -90,8 +90,8 @@ void q_columnview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)
     QColumnView_OnIndexAt((QColumnView*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_columnview_qbase_index_at(void* self, void* point) {
-    return QColumnView_QBaseIndexAt((QColumnView*)self, (QPoint*)point);
+QModelIndex* q_columnview_super_index_at(void* self, void* point) {
+    return QColumnView_SuperIndexAt((QColumnView*)self, (QPoint*)point);
 }
 
 void q_columnview_scroll_to(void* self, void* index, int32_t hint) {
@@ -102,8 +102,8 @@ void q_columnview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_
     QColumnView_OnScrollTo((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_scroll_to(void* self, void* index, int32_t hint) {
-    QColumnView_QBaseScrollTo((QColumnView*)self, (QModelIndex*)index, hint);
+void q_columnview_super_scroll_to(void* self, void* index, int32_t hint) {
+    QColumnView_SuperScrollTo((QColumnView*)self, (QModelIndex*)index, hint);
 }
 
 QSize* q_columnview_size_hint(void* self) {
@@ -114,8 +114,8 @@ void q_columnview_on_size_hint(void* self, QSize* (*callback)()) {
     QColumnView_OnSizeHint((QColumnView*)self, (intptr_t)callback);
 }
 
-QSize* q_columnview_qbase_size_hint(void* self) {
-    return QColumnView_QBaseSizeHint((QColumnView*)self);
+QSize* q_columnview_super_size_hint(void* self) {
+    return QColumnView_SuperSizeHint((QColumnView*)self);
 }
 
 QRect* q_columnview_visual_rect(void* self, void* index) {
@@ -126,8 +126,8 @@ void q_columnview_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
     QColumnView_OnVisualRect((QColumnView*)self, (intptr_t)callback);
 }
 
-QRect* q_columnview_qbase_visual_rect(void* self, void* index) {
-    return QColumnView_QBaseVisualRect((QColumnView*)self, (QModelIndex*)index);
+QRect* q_columnview_super_visual_rect(void* self, void* index) {
+    return QColumnView_SuperVisualRect((QColumnView*)self, (QModelIndex*)index);
 }
 
 void q_columnview_set_model(void* self, void* model) {
@@ -138,8 +138,8 @@ void q_columnview_on_set_model(void* self, void (*callback)(void*, void*)) {
     QColumnView_OnSetModel((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_set_model(void* self, void* model) {
-    QColumnView_QBaseSetModel((QColumnView*)self, (QAbstractItemModel*)model);
+void q_columnview_super_set_model(void* self, void* model) {
+    QColumnView_SuperSetModel((QColumnView*)self, (QAbstractItemModel*)model);
 }
 
 void q_columnview_set_selection_model(void* self, void* selectionModel) {
@@ -150,8 +150,8 @@ void q_columnview_on_set_selection_model(void* self, void (*callback)(void*, voi
     QColumnView_OnSetSelectionModel((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_set_selection_model(void* self, void* selectionModel) {
-    QColumnView_QBaseSetSelectionModel((QColumnView*)self, (QItemSelectionModel*)selectionModel);
+void q_columnview_super_set_selection_model(void* self, void* selectionModel) {
+    QColumnView_SuperSetSelectionModel((QColumnView*)self, (QItemSelectionModel*)selectionModel);
 }
 
 void q_columnview_set_root_index(void* self, void* index) {
@@ -162,8 +162,8 @@ void q_columnview_on_set_root_index(void* self, void (*callback)(void*, void*)) 
     QColumnView_OnSetRootIndex((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_set_root_index(void* self, void* index) {
-    QColumnView_QBaseSetRootIndex((QColumnView*)self, (QModelIndex*)index);
+void q_columnview_super_set_root_index(void* self, void* index) {
+    QColumnView_SuperSetRootIndex((QColumnView*)self, (QModelIndex*)index);
 }
 
 void q_columnview_select_all(void* self) {
@@ -174,8 +174,8 @@ void q_columnview_on_select_all(void* self, void (*callback)()) {
     QColumnView_OnSelectAll((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_select_all(void* self) {
-    QColumnView_QBaseSelectAll((QColumnView*)self);
+void q_columnview_super_select_all(void* self) {
+    QColumnView_SuperSelectAll((QColumnView*)self);
 }
 
 void q_columnview_set_resize_grips_visible(void* self, bool visible) {
@@ -211,8 +211,8 @@ void q_columnview_on_is_index_hidden(void* self, bool (*callback)(void*, void*))
     QColumnView_OnIsIndexHidden((QColumnView*)self, (intptr_t)callback);
 }
 
-bool q_columnview_qbase_is_index_hidden(void* self, void* index) {
-    return QColumnView_QBaseIsIndexHidden((QColumnView*)self, (QModelIndex*)index);
+bool q_columnview_super_is_index_hidden(void* self, void* index) {
+    return QColumnView_SuperIsIndexHidden((QColumnView*)self, (QModelIndex*)index);
 }
 
 QModelIndex* q_columnview_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
@@ -223,8 +223,8 @@ void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int
     QColumnView_OnMoveCursor((QColumnView*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_columnview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
-    return QColumnView_QBaseMoveCursor((QColumnView*)self, cursorAction, modifiers);
+QModelIndex* q_columnview_super_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
+    return QColumnView_SuperMoveCursor((QColumnView*)self, cursorAction, modifiers);
 }
 
 void q_columnview_resize_event(void* self, void* event) {
@@ -235,8 +235,8 @@ void q_columnview_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QColumnView_OnResizeEvent((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_resize_event(void* self, void* event) {
-    QColumnView_QBaseResizeEvent((QColumnView*)self, (QResizeEvent*)event);
+void q_columnview_super_resize_event(void* self, void* event) {
+    QColumnView_SuperResizeEvent((QColumnView*)self, (QResizeEvent*)event);
 }
 
 void q_columnview_set_selection(void* self, void* rect, int32_t command) {
@@ -247,8 +247,8 @@ void q_columnview_on_set_selection(void* self, void (*callback)(void*, void*, in
     QColumnView_OnSetSelection((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_set_selection(void* self, void* rect, int32_t command) {
-    QColumnView_QBaseSetSelection((QColumnView*)self, (QRect*)rect, command);
+void q_columnview_super_set_selection(void* self, void* rect, int32_t command) {
+    QColumnView_SuperSetSelection((QColumnView*)self, (QRect*)rect, command);
 }
 
 QRegion* q_columnview_visual_region_for_selection(void* self, void* selection) {
@@ -259,8 +259,8 @@ void q_columnview_on_visual_region_for_selection(void* self, QRegion* (*callback
     QColumnView_OnVisualRegionForSelection((QColumnView*)self, (intptr_t)callback);
 }
 
-QRegion* q_columnview_qbase_visual_region_for_selection(void* self, void* selection) {
-    return QColumnView_QBaseVisualRegionForSelection((QColumnView*)self, (QItemSelection*)selection);
+QRegion* q_columnview_super_visual_region_for_selection(void* self, void* selection) {
+    return QColumnView_SuperVisualRegionForSelection((QColumnView*)self, (QItemSelection*)selection);
 }
 
 int32_t q_columnview_horizontal_offset(void* self) {
@@ -271,8 +271,8 @@ void q_columnview_on_horizontal_offset(void* self, int32_t (*callback)()) {
     QColumnView_OnHorizontalOffset((QColumnView*)self, (intptr_t)callback);
 }
 
-int32_t q_columnview_qbase_horizontal_offset(void* self) {
-    return QColumnView_QBaseHorizontalOffset((QColumnView*)self);
+int32_t q_columnview_super_horizontal_offset(void* self) {
+    return QColumnView_SuperHorizontalOffset((QColumnView*)self);
 }
 
 int32_t q_columnview_vertical_offset(void* self) {
@@ -283,8 +283,8 @@ void q_columnview_on_vertical_offset(void* self, int32_t (*callback)()) {
     QColumnView_OnVerticalOffset((QColumnView*)self, (intptr_t)callback);
 }
 
-int32_t q_columnview_qbase_vertical_offset(void* self) {
-    return QColumnView_QBaseVerticalOffset((QColumnView*)self);
+int32_t q_columnview_super_vertical_offset(void* self) {
+    return QColumnView_SuperVerticalOffset((QColumnView*)self);
 }
 
 void q_columnview_rows_inserted(void* self, void* parent, int start, int end) {
@@ -295,8 +295,8 @@ void q_columnview_on_rows_inserted(void* self, void (*callback)(void*, void*, in
     QColumnView_OnRowsInserted((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_rows_inserted(void* self, void* parent, int start, int end) {
-    QColumnView_QBaseRowsInserted((QColumnView*)self, (QModelIndex*)parent, start, end);
+void q_columnview_super_rows_inserted(void* self, void* parent, int start, int end) {
+    QColumnView_SuperRowsInserted((QColumnView*)self, (QModelIndex*)parent, start, end);
 }
 
 void q_columnview_current_changed(void* self, void* current, void* previous) {
@@ -307,8 +307,8 @@ void q_columnview_on_current_changed(void* self, void (*callback)(void*, void*, 
     QColumnView_OnCurrentChanged((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_current_changed(void* self, void* current, void* previous) {
-    QColumnView_QBaseCurrentChanged((QColumnView*)self, (QModelIndex*)current, (QModelIndex*)previous);
+void q_columnview_super_current_changed(void* self, void* current, void* previous) {
+    QColumnView_SuperCurrentChanged((QColumnView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
 void q_columnview_scroll_contents_by(void* self, int dx, int dy) {
@@ -319,8 +319,8 @@ void q_columnview_on_scroll_contents_by(void* self, void (*callback)(void*, int,
     QColumnView_OnScrollContentsBy((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QColumnView_QBaseScrollContentsBy((QColumnView*)self, dx, dy);
+void q_columnview_super_scroll_contents_by(void* self, int dx, int dy) {
+    QColumnView_SuperScrollContentsBy((QColumnView*)self, dx, dy);
 }
 
 QAbstractItemView* q_columnview_create_column(void* self, void* rootIndex) {
@@ -331,8 +331,8 @@ void q_columnview_on_create_column(void* self, QAbstractItemView* (*callback)(vo
     QColumnView_OnCreateColumn((QColumnView*)self, (intptr_t)callback);
 }
 
-QAbstractItemView* q_columnview_qbase_create_column(void* self, void* rootIndex) {
-    return QColumnView_QBaseCreateColumn((QColumnView*)self, (QModelIndex*)rootIndex);
+QAbstractItemView* q_columnview_super_create_column(void* self, void* rootIndex) {
+    return QColumnView_SuperCreateColumn((QColumnView*)self, (QModelIndex*)rootIndex);
 }
 
 void q_columnview_initialize_column(void* self, void* column) {
@@ -343,8 +343,8 @@ void q_columnview_on_initialize_column(void* self, void (*callback)(void*, void*
     QColumnView_OnInitializeColumn((QColumnView*)self, (intptr_t)callback);
 }
 
-void q_columnview_qbase_initialize_column(void* self, void* column) {
-    QColumnView_QBaseInitializeColumn((QColumnView*)self, (QAbstractItemView*)column);
+void q_columnview_super_initialize_column(void* self, void* column) {
+    QColumnView_SuperInitializeColumn((QColumnView*)self, (QAbstractItemView*)column);
 }
 
 const char* q_columnview_tr2(const char* s, const char* c) {
@@ -2147,8 +2147,8 @@ void q_columnview_keyboard_search(void* self, const char* search) {
     QColumnView_KeyboardSearch((QColumnView*)self, qstring(search));
 }
 
-void q_columnview_qbase_keyboard_search(void* self, const char* search) {
-    QColumnView_QBaseKeyboardSearch((QColumnView*)self, qstring(search));
+void q_columnview_super_keyboard_search(void* self, const char* search) {
+    QColumnView_SuperKeyboardSearch((QColumnView*)self, qstring(search));
 }
 
 void q_columnview_on_keyboard_search(void* self, void (*callback)(void*, const char*)) {
@@ -2159,8 +2159,8 @@ int32_t q_columnview_size_hint_for_row(void* self, int row) {
     return QColumnView_SizeHintForRow((QColumnView*)self, row);
 }
 
-int32_t q_columnview_qbase_size_hint_for_row(void* self, int row) {
-    return QColumnView_QBaseSizeHintForRow((QColumnView*)self, row);
+int32_t q_columnview_super_size_hint_for_row(void* self, int row) {
+    return QColumnView_SuperSizeHintForRow((QColumnView*)self, row);
 }
 
 void q_columnview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
@@ -2171,8 +2171,8 @@ int32_t q_columnview_size_hint_for_column(void* self, int column) {
     return QColumnView_SizeHintForColumn((QColumnView*)self, column);
 }
 
-int32_t q_columnview_qbase_size_hint_for_column(void* self, int column) {
-    return QColumnView_QBaseSizeHintForColumn((QColumnView*)self, column);
+int32_t q_columnview_super_size_hint_for_column(void* self, int column) {
+    return QColumnView_SuperSizeHintForColumn((QColumnView*)self, column);
 }
 
 void q_columnview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
@@ -2183,8 +2183,8 @@ QAbstractItemDelegate* q_columnview_item_delegate_for_index(void* self, void* in
     return QColumnView_ItemDelegateForIndex((QColumnView*)self, (QModelIndex*)index);
 }
 
-QAbstractItemDelegate* q_columnview_qbase_item_delegate_for_index(void* self, void* index) {
-    return QColumnView_QBaseItemDelegateForIndex((QColumnView*)self, (QModelIndex*)index);
+QAbstractItemDelegate* q_columnview_super_item_delegate_for_index(void* self, void* index) {
+    return QColumnView_SuperItemDelegateForIndex((QColumnView*)self, (QModelIndex*)index);
 }
 
 void q_columnview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
@@ -2195,8 +2195,8 @@ QVariant* q_columnview_input_method_query(void* self, int32_t query) {
     return QColumnView_InputMethodQuery((QColumnView*)self, query);
 }
 
-QVariant* q_columnview_qbase_input_method_query(void* self, int32_t query) {
-    return QColumnView_QBaseInputMethodQuery((QColumnView*)self, query);
+QVariant* q_columnview_super_input_method_query(void* self, int32_t query) {
+    return QColumnView_SuperInputMethodQuery((QColumnView*)self, query);
 }
 
 void q_columnview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2207,8 +2207,8 @@ void q_columnview_reset(void* self) {
     QColumnView_Reset((QColumnView*)self);
 }
 
-void q_columnview_qbase_reset(void* self) {
-    QColumnView_QBaseReset((QColumnView*)self);
+void q_columnview_super_reset(void* self) {
+    QColumnView_SuperReset((QColumnView*)self);
 }
 
 void q_columnview_on_reset(void* self, void (*callback)()) {
@@ -2219,8 +2219,8 @@ void q_columnview_do_items_layout(void* self) {
     QColumnView_DoItemsLayout((QColumnView*)self);
 }
 
-void q_columnview_qbase_do_items_layout(void* self) {
-    QColumnView_QBaseDoItemsLayout((QColumnView*)self);
+void q_columnview_super_do_items_layout(void* self) {
+    QColumnView_SuperDoItemsLayout((QColumnView*)self);
 }
 
 void q_columnview_on_do_items_layout(void* self, void (*callback)()) {
@@ -2231,8 +2231,8 @@ void q_columnview_data_changed(void* self, void* topLeft, void* bottomRight, lib
     QColumnView_DataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_columnview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
-    QColumnView_QBaseDataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
+void q_columnview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+    QColumnView_SuperDataChanged((QColumnView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
 void q_columnview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
@@ -2243,8 +2243,8 @@ void q_columnview_rows_about_to_be_removed(void* self, void* parent, int start, 
     QColumnView_RowsAboutToBeRemoved((QColumnView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_columnview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
-    QColumnView_QBaseRowsAboutToBeRemoved((QColumnView*)self, (QModelIndex*)parent, start, end);
+void q_columnview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
+    QColumnView_SuperRowsAboutToBeRemoved((QColumnView*)self, (QModelIndex*)parent, start, end);
 }
 
 void q_columnview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
@@ -2255,8 +2255,8 @@ void q_columnview_selection_changed(void* self, void* selected, void* deselected
     QColumnView_SelectionChanged((QColumnView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void q_columnview_qbase_selection_changed(void* self, void* selected, void* deselected) {
-    QColumnView_QBaseSelectionChanged((QColumnView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
+void q_columnview_super_selection_changed(void* self, void* selected, void* deselected) {
+    QColumnView_SuperSelectionChanged((QColumnView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
 void q_columnview_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
@@ -2267,8 +2267,8 @@ void q_columnview_update_editor_data(void* self) {
     QColumnView_UpdateEditorData((QColumnView*)self);
 }
 
-void q_columnview_qbase_update_editor_data(void* self) {
-    QColumnView_QBaseUpdateEditorData((QColumnView*)self);
+void q_columnview_super_update_editor_data(void* self) {
+    QColumnView_SuperUpdateEditorData((QColumnView*)self);
 }
 
 void q_columnview_on_update_editor_data(void* self, void (*callback)()) {
@@ -2279,8 +2279,8 @@ void q_columnview_update_editor_geometries(void* self) {
     QColumnView_UpdateEditorGeometries((QColumnView*)self);
 }
 
-void q_columnview_qbase_update_editor_geometries(void* self) {
-    QColumnView_QBaseUpdateEditorGeometries((QColumnView*)self);
+void q_columnview_super_update_editor_geometries(void* self) {
+    QColumnView_SuperUpdateEditorGeometries((QColumnView*)self);
 }
 
 void q_columnview_on_update_editor_geometries(void* self, void (*callback)()) {
@@ -2291,8 +2291,8 @@ void q_columnview_update_geometries(void* self) {
     QColumnView_UpdateGeometries((QColumnView*)self);
 }
 
-void q_columnview_qbase_update_geometries(void* self) {
-    QColumnView_QBaseUpdateGeometries((QColumnView*)self);
+void q_columnview_super_update_geometries(void* self) {
+    QColumnView_SuperUpdateGeometries((QColumnView*)self);
 }
 
 void q_columnview_on_update_geometries(void* self, void (*callback)()) {
@@ -2303,8 +2303,8 @@ void q_columnview_vertical_scrollbar_action(void* self, int action) {
     QColumnView_VerticalScrollbarAction((QColumnView*)self, action);
 }
 
-void q_columnview_qbase_vertical_scrollbar_action(void* self, int action) {
-    QColumnView_QBaseVerticalScrollbarAction((QColumnView*)self, action);
+void q_columnview_super_vertical_scrollbar_action(void* self, int action) {
+    QColumnView_SuperVerticalScrollbarAction((QColumnView*)self, action);
 }
 
 void q_columnview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2315,8 +2315,8 @@ void q_columnview_horizontal_scrollbar_action(void* self, int action) {
     QColumnView_HorizontalScrollbarAction((QColumnView*)self, action);
 }
 
-void q_columnview_qbase_horizontal_scrollbar_action(void* self, int action) {
-    QColumnView_QBaseHorizontalScrollbarAction((QColumnView*)self, action);
+void q_columnview_super_horizontal_scrollbar_action(void* self, int action) {
+    QColumnView_SuperHorizontalScrollbarAction((QColumnView*)self, action);
 }
 
 void q_columnview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2327,8 +2327,8 @@ void q_columnview_vertical_scrollbar_value_changed(void* self, int value) {
     QColumnView_VerticalScrollbarValueChanged((QColumnView*)self, value);
 }
 
-void q_columnview_qbase_vertical_scrollbar_value_changed(void* self, int value) {
-    QColumnView_QBaseVerticalScrollbarValueChanged((QColumnView*)self, value);
+void q_columnview_super_vertical_scrollbar_value_changed(void* self, int value) {
+    QColumnView_SuperVerticalScrollbarValueChanged((QColumnView*)self, value);
 }
 
 void q_columnview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2339,8 +2339,8 @@ void q_columnview_horizontal_scrollbar_value_changed(void* self, int value) {
     QColumnView_HorizontalScrollbarValueChanged((QColumnView*)self, value);
 }
 
-void q_columnview_qbase_horizontal_scrollbar_value_changed(void* self, int value) {
-    QColumnView_QBaseHorizontalScrollbarValueChanged((QColumnView*)self, value);
+void q_columnview_super_horizontal_scrollbar_value_changed(void* self, int value) {
+    QColumnView_SuperHorizontalScrollbarValueChanged((QColumnView*)self, value);
 }
 
 void q_columnview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2351,8 +2351,8 @@ void q_columnview_close_editor(void* self, void* editor, int32_t hint) {
     QColumnView_CloseEditor((QColumnView*)self, (QWidget*)editor, hint);
 }
 
-void q_columnview_qbase_close_editor(void* self, void* editor, int32_t hint) {
-    QColumnView_QBaseCloseEditor((QColumnView*)self, (QWidget*)editor, hint);
+void q_columnview_super_close_editor(void* self, void* editor, int32_t hint) {
+    QColumnView_SuperCloseEditor((QColumnView*)self, (QWidget*)editor, hint);
 }
 
 void q_columnview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2363,8 +2363,8 @@ void q_columnview_commit_data(void* self, void* editor) {
     QColumnView_CommitData((QColumnView*)self, (QWidget*)editor);
 }
 
-void q_columnview_qbase_commit_data(void* self, void* editor) {
-    QColumnView_QBaseCommitData((QColumnView*)self, (QWidget*)editor);
+void q_columnview_super_commit_data(void* self, void* editor) {
+    QColumnView_SuperCommitData((QColumnView*)self, (QWidget*)editor);
 }
 
 void q_columnview_on_commit_data(void* self, void (*callback)(void*, void*)) {
@@ -2375,8 +2375,8 @@ void q_columnview_editor_destroyed(void* self, void* editor) {
     QColumnView_EditorDestroyed((QColumnView*)self, (QObject*)editor);
 }
 
-void q_columnview_qbase_editor_destroyed(void* self, void* editor) {
-    QColumnView_QBaseEditorDestroyed((QColumnView*)self, (QObject*)editor);
+void q_columnview_super_editor_destroyed(void* self, void* editor) {
+    QColumnView_SuperEditorDestroyed((QColumnView*)self, (QObject*)editor);
 }
 
 void q_columnview_on_editor_destroyed(void* self, void (*callback)(void*, void*)) {
@@ -2388,8 +2388,8 @@ libqt_list /* of QModelIndex* */ q_columnview_selected_indexes(void* self) {
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_columnview_qbase_selected_indexes(void* self) {
-    libqt_list _arr = QColumnView_QBaseSelectedIndexes((QColumnView*)self);
+libqt_list /* of QModelIndex* */ q_columnview_super_selected_indexes(void* self) {
+    libqt_list _arr = QColumnView_SuperSelectedIndexes((QColumnView*)self);
     return _arr;
 }
 
@@ -2401,8 +2401,8 @@ bool q_columnview_edit2(void* self, void* index, int32_t trigger, void* event) {
     return QColumnView_Edit2((QColumnView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-bool q_columnview_qbase_edit2(void* self, void* index, int32_t trigger, void* event) {
-    return QColumnView_QBaseEdit2((QColumnView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
+bool q_columnview_super_edit2(void* self, void* index, int32_t trigger, void* event) {
+    return QColumnView_SuperEdit2((QColumnView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
 void q_columnview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*)) {
@@ -2413,8 +2413,8 @@ int32_t q_columnview_selection_command(void* self, void* index, void* event) {
     return QColumnView_SelectionCommand((QColumnView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int32_t q_columnview_qbase_selection_command(void* self, void* index, void* event) {
-    return QColumnView_QBaseSelectionCommand((QColumnView*)self, (QModelIndex*)index, (QEvent*)event);
+int32_t q_columnview_super_selection_command(void* self, void* index, void* event) {
+    return QColumnView_SuperSelectionCommand((QColumnView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
 void q_columnview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
@@ -2425,8 +2425,8 @@ void q_columnview_start_drag(void* self, int32_t supportedActions) {
     QColumnView_StartDrag((QColumnView*)self, supportedActions);
 }
 
-void q_columnview_qbase_start_drag(void* self, int32_t supportedActions) {
-    QColumnView_QBaseStartDrag((QColumnView*)self, supportedActions);
+void q_columnview_super_start_drag(void* self, int32_t supportedActions) {
+    QColumnView_SuperStartDrag((QColumnView*)self, supportedActions);
 }
 
 void q_columnview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
@@ -2437,8 +2437,8 @@ void q_columnview_init_view_item_option(void* self, void* option) {
     QColumnView_InitViewItemOption((QColumnView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_columnview_qbase_init_view_item_option(void* self, void* option) {
-    QColumnView_QBaseInitViewItemOption((QColumnView*)self, (QStyleOptionViewItem*)option);
+void q_columnview_super_init_view_item_option(void* self, void* option) {
+    QColumnView_SuperInitViewItemOption((QColumnView*)self, (QStyleOptionViewItem*)option);
 }
 
 void q_columnview_on_init_view_item_option(void* self, void (*callback)(void*, void*)) {
@@ -2449,8 +2449,8 @@ bool q_columnview_focus_next_prev_child(void* self, bool next) {
     return QColumnView_FocusNextPrevChild((QColumnView*)self, next);
 }
 
-bool q_columnview_qbase_focus_next_prev_child(void* self, bool next) {
-    return QColumnView_QBaseFocusNextPrevChild((QColumnView*)self, next);
+bool q_columnview_super_focus_next_prev_child(void* self, bool next) {
+    return QColumnView_SuperFocusNextPrevChild((QColumnView*)self, next);
 }
 
 void q_columnview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2461,8 +2461,8 @@ bool q_columnview_event(void* self, void* event) {
     return QColumnView_Event((QColumnView*)self, (QEvent*)event);
 }
 
-bool q_columnview_qbase_event(void* self, void* event) {
-    return QColumnView_QBaseEvent((QColumnView*)self, (QEvent*)event);
+bool q_columnview_super_event(void* self, void* event) {
+    return QColumnView_SuperEvent((QColumnView*)self, (QEvent*)event);
 }
 
 void q_columnview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2473,8 +2473,8 @@ bool q_columnview_viewport_event(void* self, void* event) {
     return QColumnView_ViewportEvent((QColumnView*)self, (QEvent*)event);
 }
 
-bool q_columnview_qbase_viewport_event(void* self, void* event) {
-    return QColumnView_QBaseViewportEvent((QColumnView*)self, (QEvent*)event);
+bool q_columnview_super_viewport_event(void* self, void* event) {
+    return QColumnView_SuperViewportEvent((QColumnView*)self, (QEvent*)event);
 }
 
 void q_columnview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2485,8 +2485,8 @@ void q_columnview_mouse_press_event(void* self, void* event) {
     QColumnView_MousePressEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
-void q_columnview_qbase_mouse_press_event(void* self, void* event) {
-    QColumnView_QBaseMousePressEvent((QColumnView*)self, (QMouseEvent*)event);
+void q_columnview_super_mouse_press_event(void* self, void* event) {
+    QColumnView_SuperMousePressEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
 void q_columnview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2497,8 +2497,8 @@ void q_columnview_mouse_move_event(void* self, void* event) {
     QColumnView_MouseMoveEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
-void q_columnview_qbase_mouse_move_event(void* self, void* event) {
-    QColumnView_QBaseMouseMoveEvent((QColumnView*)self, (QMouseEvent*)event);
+void q_columnview_super_mouse_move_event(void* self, void* event) {
+    QColumnView_SuperMouseMoveEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
 void q_columnview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2509,8 +2509,8 @@ void q_columnview_mouse_release_event(void* self, void* event) {
     QColumnView_MouseReleaseEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
-void q_columnview_qbase_mouse_release_event(void* self, void* event) {
-    QColumnView_QBaseMouseReleaseEvent((QColumnView*)self, (QMouseEvent*)event);
+void q_columnview_super_mouse_release_event(void* self, void* event) {
+    QColumnView_SuperMouseReleaseEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
 void q_columnview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2521,8 +2521,8 @@ void q_columnview_mouse_double_click_event(void* self, void* event) {
     QColumnView_MouseDoubleClickEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
-void q_columnview_qbase_mouse_double_click_event(void* self, void* event) {
-    QColumnView_QBaseMouseDoubleClickEvent((QColumnView*)self, (QMouseEvent*)event);
+void q_columnview_super_mouse_double_click_event(void* self, void* event) {
+    QColumnView_SuperMouseDoubleClickEvent((QColumnView*)self, (QMouseEvent*)event);
 }
 
 void q_columnview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2533,8 +2533,8 @@ void q_columnview_drag_enter_event(void* self, void* event) {
     QColumnView_DragEnterEvent((QColumnView*)self, (QDragEnterEvent*)event);
 }
 
-void q_columnview_qbase_drag_enter_event(void* self, void* event) {
-    QColumnView_QBaseDragEnterEvent((QColumnView*)self, (QDragEnterEvent*)event);
+void q_columnview_super_drag_enter_event(void* self, void* event) {
+    QColumnView_SuperDragEnterEvent((QColumnView*)self, (QDragEnterEvent*)event);
 }
 
 void q_columnview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2545,8 +2545,8 @@ void q_columnview_drag_move_event(void* self, void* event) {
     QColumnView_DragMoveEvent((QColumnView*)self, (QDragMoveEvent*)event);
 }
 
-void q_columnview_qbase_drag_move_event(void* self, void* event) {
-    QColumnView_QBaseDragMoveEvent((QColumnView*)self, (QDragMoveEvent*)event);
+void q_columnview_super_drag_move_event(void* self, void* event) {
+    QColumnView_SuperDragMoveEvent((QColumnView*)self, (QDragMoveEvent*)event);
 }
 
 void q_columnview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2557,8 +2557,8 @@ void q_columnview_drag_leave_event(void* self, void* event) {
     QColumnView_DragLeaveEvent((QColumnView*)self, (QDragLeaveEvent*)event);
 }
 
-void q_columnview_qbase_drag_leave_event(void* self, void* event) {
-    QColumnView_QBaseDragLeaveEvent((QColumnView*)self, (QDragLeaveEvent*)event);
+void q_columnview_super_drag_leave_event(void* self, void* event) {
+    QColumnView_SuperDragLeaveEvent((QColumnView*)self, (QDragLeaveEvent*)event);
 }
 
 void q_columnview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2569,8 +2569,8 @@ void q_columnview_drop_event(void* self, void* event) {
     QColumnView_DropEvent((QColumnView*)self, (QDropEvent*)event);
 }
 
-void q_columnview_qbase_drop_event(void* self, void* event) {
-    QColumnView_QBaseDropEvent((QColumnView*)self, (QDropEvent*)event);
+void q_columnview_super_drop_event(void* self, void* event) {
+    QColumnView_SuperDropEvent((QColumnView*)self, (QDropEvent*)event);
 }
 
 void q_columnview_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2581,8 +2581,8 @@ void q_columnview_focus_in_event(void* self, void* event) {
     QColumnView_FocusInEvent((QColumnView*)self, (QFocusEvent*)event);
 }
 
-void q_columnview_qbase_focus_in_event(void* self, void* event) {
-    QColumnView_QBaseFocusInEvent((QColumnView*)self, (QFocusEvent*)event);
+void q_columnview_super_focus_in_event(void* self, void* event) {
+    QColumnView_SuperFocusInEvent((QColumnView*)self, (QFocusEvent*)event);
 }
 
 void q_columnview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2593,8 +2593,8 @@ void q_columnview_focus_out_event(void* self, void* event) {
     QColumnView_FocusOutEvent((QColumnView*)self, (QFocusEvent*)event);
 }
 
-void q_columnview_qbase_focus_out_event(void* self, void* event) {
-    QColumnView_QBaseFocusOutEvent((QColumnView*)self, (QFocusEvent*)event);
+void q_columnview_super_focus_out_event(void* self, void* event) {
+    QColumnView_SuperFocusOutEvent((QColumnView*)self, (QFocusEvent*)event);
 }
 
 void q_columnview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2605,8 +2605,8 @@ void q_columnview_key_press_event(void* self, void* event) {
     QColumnView_KeyPressEvent((QColumnView*)self, (QKeyEvent*)event);
 }
 
-void q_columnview_qbase_key_press_event(void* self, void* event) {
-    QColumnView_QBaseKeyPressEvent((QColumnView*)self, (QKeyEvent*)event);
+void q_columnview_super_key_press_event(void* self, void* event) {
+    QColumnView_SuperKeyPressEvent((QColumnView*)self, (QKeyEvent*)event);
 }
 
 void q_columnview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2617,8 +2617,8 @@ void q_columnview_timer_event(void* self, void* event) {
     QColumnView_TimerEvent((QColumnView*)self, (QTimerEvent*)event);
 }
 
-void q_columnview_qbase_timer_event(void* self, void* event) {
-    QColumnView_QBaseTimerEvent((QColumnView*)self, (QTimerEvent*)event);
+void q_columnview_super_timer_event(void* self, void* event) {
+    QColumnView_SuperTimerEvent((QColumnView*)self, (QTimerEvent*)event);
 }
 
 void q_columnview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2629,8 +2629,8 @@ void q_columnview_input_method_event(void* self, void* event) {
     QColumnView_InputMethodEvent((QColumnView*)self, (QInputMethodEvent*)event);
 }
 
-void q_columnview_qbase_input_method_event(void* self, void* event) {
-    QColumnView_QBaseInputMethodEvent((QColumnView*)self, (QInputMethodEvent*)event);
+void q_columnview_super_input_method_event(void* self, void* event) {
+    QColumnView_SuperInputMethodEvent((QColumnView*)self, (QInputMethodEvent*)event);
 }
 
 void q_columnview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2641,8 +2641,8 @@ bool q_columnview_event_filter(void* self, void* object, void* event) {
     return QColumnView_EventFilter((QColumnView*)self, (QObject*)object, (QEvent*)event);
 }
 
-bool q_columnview_qbase_event_filter(void* self, void* object, void* event) {
-    return QColumnView_QBaseEventFilter((QColumnView*)self, (QObject*)object, (QEvent*)event);
+bool q_columnview_super_event_filter(void* self, void* object, void* event) {
+    return QColumnView_SuperEventFilter((QColumnView*)self, (QObject*)object, (QEvent*)event);
 }
 
 void q_columnview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2653,8 +2653,8 @@ QSize* q_columnview_viewport_size_hint(void* self) {
     return QColumnView_ViewportSizeHint((QColumnView*)self);
 }
 
-QSize* q_columnview_qbase_viewport_size_hint(void* self) {
-    return QColumnView_QBaseViewportSizeHint((QColumnView*)self);
+QSize* q_columnview_super_viewport_size_hint(void* self) {
+    return QColumnView_SuperViewportSizeHint((QColumnView*)self);
 }
 
 void q_columnview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2665,8 +2665,8 @@ QSize* q_columnview_minimum_size_hint(void* self) {
     return QColumnView_MinimumSizeHint((QColumnView*)self);
 }
 
-QSize* q_columnview_qbase_minimum_size_hint(void* self) {
-    return QColumnView_QBaseMinimumSizeHint((QColumnView*)self);
+QSize* q_columnview_super_minimum_size_hint(void* self) {
+    return QColumnView_SuperMinimumSizeHint((QColumnView*)self);
 }
 
 void q_columnview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2677,8 +2677,8 @@ void q_columnview_setup_viewport(void* self, void* viewport) {
     QColumnView_SetupViewport((QColumnView*)self, (QWidget*)viewport);
 }
 
-void q_columnview_qbase_setup_viewport(void* self, void* viewport) {
-    QColumnView_QBaseSetupViewport((QColumnView*)self, (QWidget*)viewport);
+void q_columnview_super_setup_viewport(void* self, void* viewport) {
+    QColumnView_SuperSetupViewport((QColumnView*)self, (QWidget*)viewport);
 }
 
 void q_columnview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2689,8 +2689,8 @@ void q_columnview_paint_event(void* self, void* param1) {
     QColumnView_PaintEvent((QColumnView*)self, (QPaintEvent*)param1);
 }
 
-void q_columnview_qbase_paint_event(void* self, void* param1) {
-    QColumnView_QBasePaintEvent((QColumnView*)self, (QPaintEvent*)param1);
+void q_columnview_super_paint_event(void* self, void* param1) {
+    QColumnView_SuperPaintEvent((QColumnView*)self, (QPaintEvent*)param1);
 }
 
 void q_columnview_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2701,8 +2701,8 @@ void q_columnview_wheel_event(void* self, void* param1) {
     QColumnView_WheelEvent((QColumnView*)self, (QWheelEvent*)param1);
 }
 
-void q_columnview_qbase_wheel_event(void* self, void* param1) {
-    QColumnView_QBaseWheelEvent((QColumnView*)self, (QWheelEvent*)param1);
+void q_columnview_super_wheel_event(void* self, void* param1) {
+    QColumnView_SuperWheelEvent((QColumnView*)self, (QWheelEvent*)param1);
 }
 
 void q_columnview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2713,8 +2713,8 @@ void q_columnview_context_menu_event(void* self, void* param1) {
     QColumnView_ContextMenuEvent((QColumnView*)self, (QContextMenuEvent*)param1);
 }
 
-void q_columnview_qbase_context_menu_event(void* self, void* param1) {
-    QColumnView_QBaseContextMenuEvent((QColumnView*)self, (QContextMenuEvent*)param1);
+void q_columnview_super_context_menu_event(void* self, void* param1) {
+    QColumnView_SuperContextMenuEvent((QColumnView*)self, (QContextMenuEvent*)param1);
 }
 
 void q_columnview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2725,8 +2725,8 @@ void q_columnview_change_event(void* self, void* param1) {
     QColumnView_ChangeEvent((QColumnView*)self, (QEvent*)param1);
 }
 
-void q_columnview_qbase_change_event(void* self, void* param1) {
-    QColumnView_QBaseChangeEvent((QColumnView*)self, (QEvent*)param1);
+void q_columnview_super_change_event(void* self, void* param1) {
+    QColumnView_SuperChangeEvent((QColumnView*)self, (QEvent*)param1);
 }
 
 void q_columnview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2737,8 +2737,8 @@ void q_columnview_init_style_option(void* self, void* option) {
     QColumnView_InitStyleOption((QColumnView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_columnview_qbase_init_style_option(void* self, void* option) {
-    QColumnView_QBaseInitStyleOption((QColumnView*)self, (QStyleOptionFrame*)option);
+void q_columnview_super_init_style_option(void* self, void* option) {
+    QColumnView_SuperInitStyleOption((QColumnView*)self, (QStyleOptionFrame*)option);
 }
 
 void q_columnview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2749,8 +2749,8 @@ int32_t q_columnview_dev_type(void* self) {
     return QColumnView_DevType((QColumnView*)self);
 }
 
-int32_t q_columnview_qbase_dev_type(void* self) {
-    return QColumnView_QBaseDevType((QColumnView*)self);
+int32_t q_columnview_super_dev_type(void* self) {
+    return QColumnView_SuperDevType((QColumnView*)self);
 }
 
 void q_columnview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2761,8 +2761,8 @@ void q_columnview_set_visible(void* self, bool visible) {
     QColumnView_SetVisible((QColumnView*)self, visible);
 }
 
-void q_columnview_qbase_set_visible(void* self, bool visible) {
-    QColumnView_QBaseSetVisible((QColumnView*)self, visible);
+void q_columnview_super_set_visible(void* self, bool visible) {
+    QColumnView_SuperSetVisible((QColumnView*)self, visible);
 }
 
 void q_columnview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2773,8 +2773,8 @@ int32_t q_columnview_height_for_width(void* self, int param1) {
     return QColumnView_HeightForWidth((QColumnView*)self, param1);
 }
 
-int32_t q_columnview_qbase_height_for_width(void* self, int param1) {
-    return QColumnView_QBaseHeightForWidth((QColumnView*)self, param1);
+int32_t q_columnview_super_height_for_width(void* self, int param1) {
+    return QColumnView_SuperHeightForWidth((QColumnView*)self, param1);
 }
 
 void q_columnview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2785,8 +2785,8 @@ bool q_columnview_has_height_for_width(void* self) {
     return QColumnView_HasHeightForWidth((QColumnView*)self);
 }
 
-bool q_columnview_qbase_has_height_for_width(void* self) {
-    return QColumnView_QBaseHasHeightForWidth((QColumnView*)self);
+bool q_columnview_super_has_height_for_width(void* self) {
+    return QColumnView_SuperHasHeightForWidth((QColumnView*)self);
 }
 
 void q_columnview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2797,8 +2797,8 @@ QPaintEngine* q_columnview_paint_engine(void* self) {
     return QColumnView_PaintEngine((QColumnView*)self);
 }
 
-QPaintEngine* q_columnview_qbase_paint_engine(void* self) {
-    return QColumnView_QBasePaintEngine((QColumnView*)self);
+QPaintEngine* q_columnview_super_paint_engine(void* self) {
+    return QColumnView_SuperPaintEngine((QColumnView*)self);
 }
 
 void q_columnview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2809,8 +2809,8 @@ void q_columnview_key_release_event(void* self, void* event) {
     QColumnView_KeyReleaseEvent((QColumnView*)self, (QKeyEvent*)event);
 }
 
-void q_columnview_qbase_key_release_event(void* self, void* event) {
-    QColumnView_QBaseKeyReleaseEvent((QColumnView*)self, (QKeyEvent*)event);
+void q_columnview_super_key_release_event(void* self, void* event) {
+    QColumnView_SuperKeyReleaseEvent((QColumnView*)self, (QKeyEvent*)event);
 }
 
 void q_columnview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2821,8 +2821,8 @@ void q_columnview_enter_event(void* self, void* event) {
     QColumnView_EnterEvent((QColumnView*)self, (QEnterEvent*)event);
 }
 
-void q_columnview_qbase_enter_event(void* self, void* event) {
-    QColumnView_QBaseEnterEvent((QColumnView*)self, (QEnterEvent*)event);
+void q_columnview_super_enter_event(void* self, void* event) {
+    QColumnView_SuperEnterEvent((QColumnView*)self, (QEnterEvent*)event);
 }
 
 void q_columnview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2833,8 +2833,8 @@ void q_columnview_leave_event(void* self, void* event) {
     QColumnView_LeaveEvent((QColumnView*)self, (QEvent*)event);
 }
 
-void q_columnview_qbase_leave_event(void* self, void* event) {
-    QColumnView_QBaseLeaveEvent((QColumnView*)self, (QEvent*)event);
+void q_columnview_super_leave_event(void* self, void* event) {
+    QColumnView_SuperLeaveEvent((QColumnView*)self, (QEvent*)event);
 }
 
 void q_columnview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2845,8 +2845,8 @@ void q_columnview_move_event(void* self, void* event) {
     QColumnView_MoveEvent((QColumnView*)self, (QMoveEvent*)event);
 }
 
-void q_columnview_qbase_move_event(void* self, void* event) {
-    QColumnView_QBaseMoveEvent((QColumnView*)self, (QMoveEvent*)event);
+void q_columnview_super_move_event(void* self, void* event) {
+    QColumnView_SuperMoveEvent((QColumnView*)self, (QMoveEvent*)event);
 }
 
 void q_columnview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2857,8 +2857,8 @@ void q_columnview_close_event(void* self, void* event) {
     QColumnView_CloseEvent((QColumnView*)self, (QCloseEvent*)event);
 }
 
-void q_columnview_qbase_close_event(void* self, void* event) {
-    QColumnView_QBaseCloseEvent((QColumnView*)self, (QCloseEvent*)event);
+void q_columnview_super_close_event(void* self, void* event) {
+    QColumnView_SuperCloseEvent((QColumnView*)self, (QCloseEvent*)event);
 }
 
 void q_columnview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2869,8 +2869,8 @@ void q_columnview_tablet_event(void* self, void* event) {
     QColumnView_TabletEvent((QColumnView*)self, (QTabletEvent*)event);
 }
 
-void q_columnview_qbase_tablet_event(void* self, void* event) {
-    QColumnView_QBaseTabletEvent((QColumnView*)self, (QTabletEvent*)event);
+void q_columnview_super_tablet_event(void* self, void* event) {
+    QColumnView_SuperTabletEvent((QColumnView*)self, (QTabletEvent*)event);
 }
 
 void q_columnview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2881,8 +2881,8 @@ void q_columnview_action_event(void* self, void* event) {
     QColumnView_ActionEvent((QColumnView*)self, (QActionEvent*)event);
 }
 
-void q_columnview_qbase_action_event(void* self, void* event) {
-    QColumnView_QBaseActionEvent((QColumnView*)self, (QActionEvent*)event);
+void q_columnview_super_action_event(void* self, void* event) {
+    QColumnView_SuperActionEvent((QColumnView*)self, (QActionEvent*)event);
 }
 
 void q_columnview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2893,8 +2893,8 @@ void q_columnview_show_event(void* self, void* event) {
     QColumnView_ShowEvent((QColumnView*)self, (QShowEvent*)event);
 }
 
-void q_columnview_qbase_show_event(void* self, void* event) {
-    QColumnView_QBaseShowEvent((QColumnView*)self, (QShowEvent*)event);
+void q_columnview_super_show_event(void* self, void* event) {
+    QColumnView_SuperShowEvent((QColumnView*)self, (QShowEvent*)event);
 }
 
 void q_columnview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2905,8 +2905,8 @@ void q_columnview_hide_event(void* self, void* event) {
     QColumnView_HideEvent((QColumnView*)self, (QHideEvent*)event);
 }
 
-void q_columnview_qbase_hide_event(void* self, void* event) {
-    QColumnView_QBaseHideEvent((QColumnView*)self, (QHideEvent*)event);
+void q_columnview_super_hide_event(void* self, void* event) {
+    QColumnView_SuperHideEvent((QColumnView*)self, (QHideEvent*)event);
 }
 
 void q_columnview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2917,8 +2917,8 @@ bool q_columnview_native_event(void* self, char* eventType, void* message, intpt
     return QColumnView_NativeEvent((QColumnView*)self, qstring(eventType), message, result);
 }
 
-bool q_columnview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QColumnView_QBaseNativeEvent((QColumnView*)self, qstring(eventType), message, result);
+bool q_columnview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QColumnView_SuperNativeEvent((QColumnView*)self, qstring(eventType), message, result);
 }
 
 void q_columnview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2929,8 +2929,8 @@ int32_t q_columnview_metric(void* self, int32_t param1) {
     return QColumnView_Metric((QColumnView*)self, param1);
 }
 
-int32_t q_columnview_qbase_metric(void* self, int32_t param1) {
-    return QColumnView_QBaseMetric((QColumnView*)self, param1);
+int32_t q_columnview_super_metric(void* self, int32_t param1) {
+    return QColumnView_SuperMetric((QColumnView*)self, param1);
 }
 
 void q_columnview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2941,8 +2941,8 @@ void q_columnview_init_painter(void* self, void* painter) {
     QColumnView_InitPainter((QColumnView*)self, (QPainter*)painter);
 }
 
-void q_columnview_qbase_init_painter(void* self, void* painter) {
-    QColumnView_QBaseInitPainter((QColumnView*)self, (QPainter*)painter);
+void q_columnview_super_init_painter(void* self, void* painter) {
+    QColumnView_SuperInitPainter((QColumnView*)self, (QPainter*)painter);
 }
 
 void q_columnview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2953,8 +2953,8 @@ QPaintDevice* q_columnview_redirected(void* self, void* offset) {
     return QColumnView_Redirected((QColumnView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_columnview_qbase_redirected(void* self, void* offset) {
-    return QColumnView_QBaseRedirected((QColumnView*)self, (QPoint*)offset);
+QPaintDevice* q_columnview_super_redirected(void* self, void* offset) {
+    return QColumnView_SuperRedirected((QColumnView*)self, (QPoint*)offset);
 }
 
 void q_columnview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2965,8 +2965,8 @@ QPainter* q_columnview_shared_painter(void* self) {
     return QColumnView_SharedPainter((QColumnView*)self);
 }
 
-QPainter* q_columnview_qbase_shared_painter(void* self) {
-    return QColumnView_QBaseSharedPainter((QColumnView*)self);
+QPainter* q_columnview_super_shared_painter(void* self) {
+    return QColumnView_SuperSharedPainter((QColumnView*)self);
 }
 
 void q_columnview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2977,8 +2977,8 @@ void q_columnview_child_event(void* self, void* event) {
     QColumnView_ChildEvent((QColumnView*)self, (QChildEvent*)event);
 }
 
-void q_columnview_qbase_child_event(void* self, void* event) {
-    QColumnView_QBaseChildEvent((QColumnView*)self, (QChildEvent*)event);
+void q_columnview_super_child_event(void* self, void* event) {
+    QColumnView_SuperChildEvent((QColumnView*)self, (QChildEvent*)event);
 }
 
 void q_columnview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2989,8 +2989,8 @@ void q_columnview_custom_event(void* self, void* event) {
     QColumnView_CustomEvent((QColumnView*)self, (QEvent*)event);
 }
 
-void q_columnview_qbase_custom_event(void* self, void* event) {
-    QColumnView_QBaseCustomEvent((QColumnView*)self, (QEvent*)event);
+void q_columnview_super_custom_event(void* self, void* event) {
+    QColumnView_SuperCustomEvent((QColumnView*)self, (QEvent*)event);
 }
 
 void q_columnview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -3001,8 +3001,8 @@ void q_columnview_connect_notify(void* self, void* signal) {
     QColumnView_ConnectNotify((QColumnView*)self, (QMetaMethod*)signal);
 }
 
-void q_columnview_qbase_connect_notify(void* self, void* signal) {
-    QColumnView_QBaseConnectNotify((QColumnView*)self, (QMetaMethod*)signal);
+void q_columnview_super_connect_notify(void* self, void* signal) {
+    QColumnView_SuperConnectNotify((QColumnView*)self, (QMetaMethod*)signal);
 }
 
 void q_columnview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3013,8 +3013,8 @@ void q_columnview_disconnect_notify(void* self, void* signal) {
     QColumnView_DisconnectNotify((QColumnView*)self, (QMetaMethod*)signal);
 }
 
-void q_columnview_qbase_disconnect_notify(void* self, void* signal) {
-    QColumnView_QBaseDisconnectNotify((QColumnView*)self, (QMetaMethod*)signal);
+void q_columnview_super_disconnect_notify(void* self, void* signal) {
+    QColumnView_SuperDisconnectNotify((QColumnView*)self, (QMetaMethod*)signal);
 }
 
 void q_columnview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3025,8 +3025,8 @@ int32_t q_columnview_state(void* self) {
     return QColumnView_State((QColumnView*)self);
 }
 
-int32_t q_columnview_qbase_state(void* self) {
-    return QColumnView_QBaseState((QColumnView*)self);
+int32_t q_columnview_super_state(void* self) {
+    return QColumnView_SuperState((QColumnView*)self);
 }
 
 void q_columnview_on_state(void* self, int32_t (*callback)()) {
@@ -3037,8 +3037,8 @@ void q_columnview_set_state(void* self, int32_t state) {
     QColumnView_SetState((QColumnView*)self, state);
 }
 
-void q_columnview_qbase_set_state(void* self, int32_t state) {
-    QColumnView_QBaseSetState((QColumnView*)self, state);
+void q_columnview_super_set_state(void* self, int32_t state) {
+    QColumnView_SuperSetState((QColumnView*)self, state);
 }
 
 void q_columnview_on_set_state(void* self, void (*callback)(void*, int32_t)) {
@@ -3049,8 +3049,8 @@ void q_columnview_schedule_delayed_items_layout(void* self) {
     QColumnView_ScheduleDelayedItemsLayout((QColumnView*)self);
 }
 
-void q_columnview_qbase_schedule_delayed_items_layout(void* self) {
-    QColumnView_QBaseScheduleDelayedItemsLayout((QColumnView*)self);
+void q_columnview_super_schedule_delayed_items_layout(void* self) {
+    QColumnView_SuperScheduleDelayedItemsLayout((QColumnView*)self);
 }
 
 void q_columnview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
@@ -3061,8 +3061,8 @@ void q_columnview_execute_delayed_items_layout(void* self) {
     QColumnView_ExecuteDelayedItemsLayout((QColumnView*)self);
 }
 
-void q_columnview_qbase_execute_delayed_items_layout(void* self) {
-    QColumnView_QBaseExecuteDelayedItemsLayout((QColumnView*)self);
+void q_columnview_super_execute_delayed_items_layout(void* self) {
+    QColumnView_SuperExecuteDelayedItemsLayout((QColumnView*)self);
 }
 
 void q_columnview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
@@ -3073,8 +3073,8 @@ void q_columnview_set_dirty_region(void* self, void* region) {
     QColumnView_SetDirtyRegion((QColumnView*)self, (QRegion*)region);
 }
 
-void q_columnview_qbase_set_dirty_region(void* self, void* region) {
-    QColumnView_QBaseSetDirtyRegion((QColumnView*)self, (QRegion*)region);
+void q_columnview_super_set_dirty_region(void* self, void* region) {
+    QColumnView_SuperSetDirtyRegion((QColumnView*)self, (QRegion*)region);
 }
 
 void q_columnview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
@@ -3085,8 +3085,8 @@ void q_columnview_scroll_dirty_region(void* self, int dx, int dy) {
     QColumnView_ScrollDirtyRegion((QColumnView*)self, dx, dy);
 }
 
-void q_columnview_qbase_scroll_dirty_region(void* self, int dx, int dy) {
-    QColumnView_QBaseScrollDirtyRegion((QColumnView*)self, dx, dy);
+void q_columnview_super_scroll_dirty_region(void* self, int dx, int dy) {
+    QColumnView_SuperScrollDirtyRegion((QColumnView*)self, dx, dy);
 }
 
 void q_columnview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
@@ -3097,8 +3097,8 @@ QPoint* q_columnview_dirty_region_offset(void* self) {
     return QColumnView_DirtyRegionOffset((QColumnView*)self);
 }
 
-QPoint* q_columnview_qbase_dirty_region_offset(void* self) {
-    return QColumnView_QBaseDirtyRegionOffset((QColumnView*)self);
+QPoint* q_columnview_super_dirty_region_offset(void* self) {
+    return QColumnView_SuperDirtyRegionOffset((QColumnView*)self);
 }
 
 void q_columnview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
@@ -3109,8 +3109,8 @@ void q_columnview_start_auto_scroll(void* self) {
     QColumnView_StartAutoScroll((QColumnView*)self);
 }
 
-void q_columnview_qbase_start_auto_scroll(void* self) {
-    QColumnView_QBaseStartAutoScroll((QColumnView*)self);
+void q_columnview_super_start_auto_scroll(void* self) {
+    QColumnView_SuperStartAutoScroll((QColumnView*)self);
 }
 
 void q_columnview_on_start_auto_scroll(void* self, void (*callback)()) {
@@ -3121,8 +3121,8 @@ void q_columnview_stop_auto_scroll(void* self) {
     QColumnView_StopAutoScroll((QColumnView*)self);
 }
 
-void q_columnview_qbase_stop_auto_scroll(void* self) {
-    QColumnView_QBaseStopAutoScroll((QColumnView*)self);
+void q_columnview_super_stop_auto_scroll(void* self) {
+    QColumnView_SuperStopAutoScroll((QColumnView*)self);
 }
 
 void q_columnview_on_stop_auto_scroll(void* self, void (*callback)()) {
@@ -3133,8 +3133,8 @@ void q_columnview_do_auto_scroll(void* self) {
     QColumnView_DoAutoScroll((QColumnView*)self);
 }
 
-void q_columnview_qbase_do_auto_scroll(void* self) {
-    QColumnView_QBaseDoAutoScroll((QColumnView*)self);
+void q_columnview_super_do_auto_scroll(void* self) {
+    QColumnView_SuperDoAutoScroll((QColumnView*)self);
 }
 
 void q_columnview_on_do_auto_scroll(void* self, void (*callback)()) {
@@ -3145,8 +3145,8 @@ int32_t q_columnview_drop_indicator_position(void* self) {
     return QColumnView_DropIndicatorPosition((QColumnView*)self);
 }
 
-int32_t q_columnview_qbase_drop_indicator_position(void* self) {
-    return QColumnView_QBaseDropIndicatorPosition((QColumnView*)self);
+int32_t q_columnview_super_drop_indicator_position(void* self) {
+    return QColumnView_SuperDropIndicatorPosition((QColumnView*)self);
 }
 
 void q_columnview_on_drop_indicator_position(void* self, int32_t (*callback)()) {
@@ -3157,8 +3157,8 @@ void q_columnview_set_viewport_margins(void* self, int left, int top, int right,
     QColumnView_SetViewportMargins((QColumnView*)self, left, top, right, bottom);
 }
 
-void q_columnview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QColumnView_QBaseSetViewportMargins((QColumnView*)self, left, top, right, bottom);
+void q_columnview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QColumnView_SuperSetViewportMargins((QColumnView*)self, left, top, right, bottom);
 }
 
 void q_columnview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -3169,8 +3169,8 @@ QMargins* q_columnview_viewport_margins(void* self) {
     return QColumnView_ViewportMargins((QColumnView*)self);
 }
 
-QMargins* q_columnview_qbase_viewport_margins(void* self) {
-    return QColumnView_QBaseViewportMargins((QColumnView*)self);
+QMargins* q_columnview_super_viewport_margins(void* self) {
+    return QColumnView_SuperViewportMargins((QColumnView*)self);
 }
 
 void q_columnview_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -3181,8 +3181,8 @@ void q_columnview_draw_frame(void* self, void* param1) {
     QColumnView_DrawFrame((QColumnView*)self, (QPainter*)param1);
 }
 
-void q_columnview_qbase_draw_frame(void* self, void* param1) {
-    QColumnView_QBaseDrawFrame((QColumnView*)self, (QPainter*)param1);
+void q_columnview_super_draw_frame(void* self, void* param1) {
+    QColumnView_SuperDrawFrame((QColumnView*)self, (QPainter*)param1);
 }
 
 void q_columnview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -3193,8 +3193,8 @@ void q_columnview_update_micro_focus(void* self) {
     QColumnView_UpdateMicroFocus((QColumnView*)self);
 }
 
-void q_columnview_qbase_update_micro_focus(void* self) {
-    QColumnView_QBaseUpdateMicroFocus((QColumnView*)self);
+void q_columnview_super_update_micro_focus(void* self) {
+    QColumnView_SuperUpdateMicroFocus((QColumnView*)self);
 }
 
 void q_columnview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3205,8 +3205,8 @@ void q_columnview_create(void* self) {
     QColumnView_Create((QColumnView*)self);
 }
 
-void q_columnview_qbase_create(void* self) {
-    QColumnView_QBaseCreate((QColumnView*)self);
+void q_columnview_super_create(void* self) {
+    QColumnView_SuperCreate((QColumnView*)self);
 }
 
 void q_columnview_on_create(void* self, void (*callback)()) {
@@ -3217,8 +3217,8 @@ void q_columnview_destroy(void* self) {
     QColumnView_Destroy((QColumnView*)self);
 }
 
-void q_columnview_qbase_destroy(void* self) {
-    QColumnView_QBaseDestroy((QColumnView*)self);
+void q_columnview_super_destroy(void* self) {
+    QColumnView_SuperDestroy((QColumnView*)self);
 }
 
 void q_columnview_on_destroy(void* self, void (*callback)()) {
@@ -3229,8 +3229,8 @@ bool q_columnview_focus_next_child(void* self) {
     return QColumnView_FocusNextChild((QColumnView*)self);
 }
 
-bool q_columnview_qbase_focus_next_child(void* self) {
-    return QColumnView_QBaseFocusNextChild((QColumnView*)self);
+bool q_columnview_super_focus_next_child(void* self) {
+    return QColumnView_SuperFocusNextChild((QColumnView*)self);
 }
 
 void q_columnview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3241,8 +3241,8 @@ bool q_columnview_focus_previous_child(void* self) {
     return QColumnView_FocusPreviousChild((QColumnView*)self);
 }
 
-bool q_columnview_qbase_focus_previous_child(void* self) {
-    return QColumnView_QBaseFocusPreviousChild((QColumnView*)self);
+bool q_columnview_super_focus_previous_child(void* self) {
+    return QColumnView_SuperFocusPreviousChild((QColumnView*)self);
 }
 
 void q_columnview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3253,8 +3253,8 @@ QObject* q_columnview_sender(void* self) {
     return QColumnView_Sender((QColumnView*)self);
 }
 
-QObject* q_columnview_qbase_sender(void* self) {
-    return QColumnView_QBaseSender((QColumnView*)self);
+QObject* q_columnview_super_sender(void* self) {
+    return QColumnView_SuperSender((QColumnView*)self);
 }
 
 void q_columnview_on_sender(void* self, QObject* (*callback)()) {
@@ -3265,8 +3265,8 @@ int32_t q_columnview_sender_signal_index(void* self) {
     return QColumnView_SenderSignalIndex((QColumnView*)self);
 }
 
-int32_t q_columnview_qbase_sender_signal_index(void* self) {
-    return QColumnView_QBaseSenderSignalIndex((QColumnView*)self);
+int32_t q_columnview_super_sender_signal_index(void* self) {
+    return QColumnView_SuperSenderSignalIndex((QColumnView*)self);
 }
 
 void q_columnview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3277,8 +3277,8 @@ int32_t q_columnview_receivers(void* self, const char* signal) {
     return QColumnView_Receivers((QColumnView*)self, signal);
 }
 
-int32_t q_columnview_qbase_receivers(void* self, const char* signal) {
-    return QColumnView_QBaseReceivers((QColumnView*)self, signal);
+int32_t q_columnview_super_receivers(void* self, const char* signal) {
+    return QColumnView_SuperReceivers((QColumnView*)self, signal);
 }
 
 void q_columnview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3289,8 +3289,8 @@ bool q_columnview_is_signal_connected(void* self, void* signal) {
     return QColumnView_IsSignalConnected((QColumnView*)self, (QMetaMethod*)signal);
 }
 
-bool q_columnview_qbase_is_signal_connected(void* self, void* signal) {
-    return QColumnView_QBaseIsSignalConnected((QColumnView*)self, (QMetaMethod*)signal);
+bool q_columnview_super_is_signal_connected(void* self, void* signal) {
+    return QColumnView_SuperIsSignalConnected((QColumnView*)self, (QMetaMethod*)signal);
 }
 
 void q_columnview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3301,8 +3301,8 @@ double q_columnview_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QColumnView_GetDecodedMetricF((QColumnView*)self, metricA, metricB);
 }
 
-double q_columnview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QColumnView_QBaseGetDecodedMetricF((QColumnView*)self, metricA, metricB);
+double q_columnview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QColumnView_SuperGetDecodedMetricF((QColumnView*)self, metricA, metricB);
 }
 
 void q_columnview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

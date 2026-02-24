@@ -32,13 +32,17 @@ QAction* q_designertaskmenuextension_preferred_edit_action(void* self);
 ///
 void q_designertaskmenuextension_on_preferred_edit_action(void* self, QAction* (*callback)());
 
+/// @warning DEPRECATED: Use `q_designertaskmenuextension_super_preferred_edit_action` instead
+///
+#define q_designertaskmenuextension_qbase_preferred_edit_action q_designertaskmenuextension_super_preferred_edit_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#preferredEditAction)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerTaskMenuExtension*
 ///
-QAction* q_designertaskmenuextension_qbase_preferred_edit_action(void* self);
+QAction* q_designertaskmenuextension_super_preferred_edit_action(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
 ///
@@ -57,6 +61,10 @@ libqt_list q_designertaskmenuextension_task_actions(void* self);
 ///
 void q_designertaskmenuextension_on_task_actions(void* self, libqt_list (*callback)());
 
+/// @warning DEPRECATED: Use `q_designertaskmenuextension_super_task_actions` instead
+///
+#define q_designertaskmenuextension_qbase_task_actions q_designertaskmenuextension_super_task_actions
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#taskActions)
 ///
 /// Base class method implementation
@@ -65,7 +73,7 @@ void q_designertaskmenuextension_on_task_actions(void* self, libqt_list (*callba
 ///
 /// @return libqt_list of QAction*
 ///
-libqt_list q_designertaskmenuextension_qbase_task_actions(void* self);
+libqt_list q_designertaskmenuextension_super_task_actions(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignertaskmenuextension.html#dtor.QDesignerTaskMenuExtension)
 ///

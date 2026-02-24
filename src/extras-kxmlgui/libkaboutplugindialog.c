@@ -39,8 +39,8 @@ void k_aboutplugindialog_on_meta_object(void* self, const QMetaObject* (*callbac
     KAboutPluginDialog_OnMetaObject((KAboutPluginDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_aboutplugindialog_qbase_meta_object(void* self) {
-    return KAboutPluginDialog_QBaseMetaObject((KAboutPluginDialog*)self);
+const QMetaObject* k_aboutplugindialog_super_meta_object(void* self) {
+    return KAboutPluginDialog_SuperMetaObject((KAboutPluginDialog*)self);
 }
 
 void* k_aboutplugindialog_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void k_aboutplugindialog_on_metacast(void* self, void* (*callback)(void*, const 
     KAboutPluginDialog_OnMetacast((KAboutPluginDialog*)self, (intptr_t)callback);
 }
 
-void* k_aboutplugindialog_qbase_metacast(void* self, const char* param1) {
-    return KAboutPluginDialog_QBaseMetacast((KAboutPluginDialog*)self, param1);
+void* k_aboutplugindialog_super_metacast(void* self, const char* param1) {
+    return KAboutPluginDialog_SuperMetacast((KAboutPluginDialog*)self, param1);
 }
 
 int32_t k_aboutplugindialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void k_aboutplugindialog_on_metacall(void* self, int32_t (*callback)(void*, int3
     KAboutPluginDialog_OnMetacall((KAboutPluginDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_aboutplugindialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KAboutPluginDialog_QBaseMetacall((KAboutPluginDialog*)self, param1, param2, param3);
+int32_t k_aboutplugindialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KAboutPluginDialog_SuperMetacall((KAboutPluginDialog*)self, param1, param2, param3);
 }
 
 const char* k_aboutplugindialog_tr(const char* s) {
@@ -1517,8 +1517,8 @@ void k_aboutplugindialog_set_visible(void* self, bool visible) {
     KAboutPluginDialog_SetVisible((KAboutPluginDialog*)self, visible);
 }
 
-void k_aboutplugindialog_qbase_set_visible(void* self, bool visible) {
-    KAboutPluginDialog_QBaseSetVisible((KAboutPluginDialog*)self, visible);
+void k_aboutplugindialog_super_set_visible(void* self, bool visible) {
+    KAboutPluginDialog_SuperSetVisible((KAboutPluginDialog*)self, visible);
 }
 
 void k_aboutplugindialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1529,8 +1529,8 @@ QSize* k_aboutplugindialog_size_hint(void* self) {
     return KAboutPluginDialog_SizeHint((KAboutPluginDialog*)self);
 }
 
-QSize* k_aboutplugindialog_qbase_size_hint(void* self) {
-    return KAboutPluginDialog_QBaseSizeHint((KAboutPluginDialog*)self);
+QSize* k_aboutplugindialog_super_size_hint(void* self) {
+    return KAboutPluginDialog_SuperSizeHint((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1541,8 +1541,8 @@ QSize* k_aboutplugindialog_minimum_size_hint(void* self) {
     return KAboutPluginDialog_MinimumSizeHint((KAboutPluginDialog*)self);
 }
 
-QSize* k_aboutplugindialog_qbase_minimum_size_hint(void* self) {
-    return KAboutPluginDialog_QBaseMinimumSizeHint((KAboutPluginDialog*)self);
+QSize* k_aboutplugindialog_super_minimum_size_hint(void* self) {
+    return KAboutPluginDialog_SuperMinimumSizeHint((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1553,8 +1553,8 @@ void k_aboutplugindialog_open(void* self) {
     KAboutPluginDialog_Open((KAboutPluginDialog*)self);
 }
 
-void k_aboutplugindialog_qbase_open(void* self) {
-    KAboutPluginDialog_QBaseOpen((KAboutPluginDialog*)self);
+void k_aboutplugindialog_super_open(void* self) {
+    KAboutPluginDialog_SuperOpen((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_open(void* self, void (*callback)()) {
@@ -1565,8 +1565,8 @@ int32_t k_aboutplugindialog_exec(void* self) {
     return KAboutPluginDialog_Exec((KAboutPluginDialog*)self);
 }
 
-int32_t k_aboutplugindialog_qbase_exec(void* self) {
-    return KAboutPluginDialog_QBaseExec((KAboutPluginDialog*)self);
+int32_t k_aboutplugindialog_super_exec(void* self) {
+    return KAboutPluginDialog_SuperExec((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1577,8 +1577,8 @@ void k_aboutplugindialog_done(void* self, int param1) {
     KAboutPluginDialog_Done((KAboutPluginDialog*)self, param1);
 }
 
-void k_aboutplugindialog_qbase_done(void* self, int param1) {
-    KAboutPluginDialog_QBaseDone((KAboutPluginDialog*)self, param1);
+void k_aboutplugindialog_super_done(void* self, int param1) {
+    KAboutPluginDialog_SuperDone((KAboutPluginDialog*)self, param1);
 }
 
 void k_aboutplugindialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1589,8 +1589,8 @@ void k_aboutplugindialog_accept(void* self) {
     KAboutPluginDialog_Accept((KAboutPluginDialog*)self);
 }
 
-void k_aboutplugindialog_qbase_accept(void* self) {
-    KAboutPluginDialog_QBaseAccept((KAboutPluginDialog*)self);
+void k_aboutplugindialog_super_accept(void* self) {
+    KAboutPluginDialog_SuperAccept((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_accept(void* self, void (*callback)()) {
@@ -1601,8 +1601,8 @@ void k_aboutplugindialog_reject(void* self) {
     KAboutPluginDialog_Reject((KAboutPluginDialog*)self);
 }
 
-void k_aboutplugindialog_qbase_reject(void* self) {
-    KAboutPluginDialog_QBaseReject((KAboutPluginDialog*)self);
+void k_aboutplugindialog_super_reject(void* self) {
+    KAboutPluginDialog_SuperReject((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_reject(void* self, void (*callback)()) {
@@ -1613,8 +1613,8 @@ void k_aboutplugindialog_key_press_event(void* self, void* param1) {
     KAboutPluginDialog_KeyPressEvent((KAboutPluginDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_key_press_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseKeyPressEvent((KAboutPluginDialog*)self, (QKeyEvent*)param1);
+void k_aboutplugindialog_super_key_press_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperKeyPressEvent((KAboutPluginDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_aboutplugindialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1625,8 +1625,8 @@ void k_aboutplugindialog_close_event(void* self, void* param1) {
     KAboutPluginDialog_CloseEvent((KAboutPluginDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_close_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseCloseEvent((KAboutPluginDialog*)self, (QCloseEvent*)param1);
+void k_aboutplugindialog_super_close_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperCloseEvent((KAboutPluginDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_aboutplugindialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1637,8 +1637,8 @@ void k_aboutplugindialog_show_event(void* self, void* param1) {
     KAboutPluginDialog_ShowEvent((KAboutPluginDialog*)self, (QShowEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_show_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseShowEvent((KAboutPluginDialog*)self, (QShowEvent*)param1);
+void k_aboutplugindialog_super_show_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperShowEvent((KAboutPluginDialog*)self, (QShowEvent*)param1);
 }
 
 void k_aboutplugindialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1649,8 +1649,8 @@ void k_aboutplugindialog_resize_event(void* self, void* param1) {
     KAboutPluginDialog_ResizeEvent((KAboutPluginDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_resize_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseResizeEvent((KAboutPluginDialog*)self, (QResizeEvent*)param1);
+void k_aboutplugindialog_super_resize_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperResizeEvent((KAboutPluginDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_aboutplugindialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1661,8 +1661,8 @@ void k_aboutplugindialog_context_menu_event(void* self, void* param1) {
     KAboutPluginDialog_ContextMenuEvent((KAboutPluginDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_context_menu_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseContextMenuEvent((KAboutPluginDialog*)self, (QContextMenuEvent*)param1);
+void k_aboutplugindialog_super_context_menu_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperContextMenuEvent((KAboutPluginDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_aboutplugindialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1673,8 +1673,8 @@ bool k_aboutplugindialog_event_filter(void* self, void* param1, void* param2) {
     return KAboutPluginDialog_EventFilter((KAboutPluginDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_aboutplugindialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KAboutPluginDialog_QBaseEventFilter((KAboutPluginDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_aboutplugindialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KAboutPluginDialog_SuperEventFilter((KAboutPluginDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_aboutplugindialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1685,8 +1685,8 @@ int32_t k_aboutplugindialog_dev_type(void* self) {
     return KAboutPluginDialog_DevType((KAboutPluginDialog*)self);
 }
 
-int32_t k_aboutplugindialog_qbase_dev_type(void* self) {
-    return KAboutPluginDialog_QBaseDevType((KAboutPluginDialog*)self);
+int32_t k_aboutplugindialog_super_dev_type(void* self) {
+    return KAboutPluginDialog_SuperDevType((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1697,8 +1697,8 @@ int32_t k_aboutplugindialog_height_for_width(void* self, int param1) {
     return KAboutPluginDialog_HeightForWidth((KAboutPluginDialog*)self, param1);
 }
 
-int32_t k_aboutplugindialog_qbase_height_for_width(void* self, int param1) {
-    return KAboutPluginDialog_QBaseHeightForWidth((KAboutPluginDialog*)self, param1);
+int32_t k_aboutplugindialog_super_height_for_width(void* self, int param1) {
+    return KAboutPluginDialog_SuperHeightForWidth((KAboutPluginDialog*)self, param1);
 }
 
 void k_aboutplugindialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1709,8 +1709,8 @@ bool k_aboutplugindialog_has_height_for_width(void* self) {
     return KAboutPluginDialog_HasHeightForWidth((KAboutPluginDialog*)self);
 }
 
-bool k_aboutplugindialog_qbase_has_height_for_width(void* self) {
-    return KAboutPluginDialog_QBaseHasHeightForWidth((KAboutPluginDialog*)self);
+bool k_aboutplugindialog_super_has_height_for_width(void* self) {
+    return KAboutPluginDialog_SuperHasHeightForWidth((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1721,8 +1721,8 @@ QPaintEngine* k_aboutplugindialog_paint_engine(void* self) {
     return KAboutPluginDialog_PaintEngine((KAboutPluginDialog*)self);
 }
 
-QPaintEngine* k_aboutplugindialog_qbase_paint_engine(void* self) {
-    return KAboutPluginDialog_QBasePaintEngine((KAboutPluginDialog*)self);
+QPaintEngine* k_aboutplugindialog_super_paint_engine(void* self) {
+    return KAboutPluginDialog_SuperPaintEngine((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1733,8 +1733,8 @@ bool k_aboutplugindialog_event(void* self, void* event) {
     return KAboutPluginDialog_Event((KAboutPluginDialog*)self, (QEvent*)event);
 }
 
-bool k_aboutplugindialog_qbase_event(void* self, void* event) {
-    return KAboutPluginDialog_QBaseEvent((KAboutPluginDialog*)self, (QEvent*)event);
+bool k_aboutplugindialog_super_event(void* self, void* event) {
+    return KAboutPluginDialog_SuperEvent((KAboutPluginDialog*)self, (QEvent*)event);
 }
 
 void k_aboutplugindialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1745,8 +1745,8 @@ void k_aboutplugindialog_mouse_press_event(void* self, void* event) {
     KAboutPluginDialog_MousePressEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_mouse_press_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseMousePressEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
+void k_aboutplugindialog_super_mouse_press_event(void* self, void* event) {
+    KAboutPluginDialog_SuperMousePressEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
 void k_aboutplugindialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1757,8 +1757,8 @@ void k_aboutplugindialog_mouse_release_event(void* self, void* event) {
     KAboutPluginDialog_MouseReleaseEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_mouse_release_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseMouseReleaseEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
+void k_aboutplugindialog_super_mouse_release_event(void* self, void* event) {
+    KAboutPluginDialog_SuperMouseReleaseEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
 void k_aboutplugindialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ void k_aboutplugindialog_mouse_double_click_event(void* self, void* event) {
     KAboutPluginDialog_MouseDoubleClickEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseMouseDoubleClickEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
+void k_aboutplugindialog_super_mouse_double_click_event(void* self, void* event) {
+    KAboutPluginDialog_SuperMouseDoubleClickEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
 void k_aboutplugindialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1781,8 +1781,8 @@ void k_aboutplugindialog_mouse_move_event(void* self, void* event) {
     KAboutPluginDialog_MouseMoveEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_mouse_move_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseMouseMoveEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
+void k_aboutplugindialog_super_mouse_move_event(void* self, void* event) {
+    KAboutPluginDialog_SuperMouseMoveEvent((KAboutPluginDialog*)self, (QMouseEvent*)event);
 }
 
 void k_aboutplugindialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1793,8 +1793,8 @@ void k_aboutplugindialog_wheel_event(void* self, void* event) {
     KAboutPluginDialog_WheelEvent((KAboutPluginDialog*)self, (QWheelEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_wheel_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseWheelEvent((KAboutPluginDialog*)self, (QWheelEvent*)event);
+void k_aboutplugindialog_super_wheel_event(void* self, void* event) {
+    KAboutPluginDialog_SuperWheelEvent((KAboutPluginDialog*)self, (QWheelEvent*)event);
 }
 
 void k_aboutplugindialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1805,8 +1805,8 @@ void k_aboutplugindialog_key_release_event(void* self, void* event) {
     KAboutPluginDialog_KeyReleaseEvent((KAboutPluginDialog*)self, (QKeyEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_key_release_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseKeyReleaseEvent((KAboutPluginDialog*)self, (QKeyEvent*)event);
+void k_aboutplugindialog_super_key_release_event(void* self, void* event) {
+    KAboutPluginDialog_SuperKeyReleaseEvent((KAboutPluginDialog*)self, (QKeyEvent*)event);
 }
 
 void k_aboutplugindialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1817,8 +1817,8 @@ void k_aboutplugindialog_focus_in_event(void* self, void* event) {
     KAboutPluginDialog_FocusInEvent((KAboutPluginDialog*)self, (QFocusEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_focus_in_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseFocusInEvent((KAboutPluginDialog*)self, (QFocusEvent*)event);
+void k_aboutplugindialog_super_focus_in_event(void* self, void* event) {
+    KAboutPluginDialog_SuperFocusInEvent((KAboutPluginDialog*)self, (QFocusEvent*)event);
 }
 
 void k_aboutplugindialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1829,8 +1829,8 @@ void k_aboutplugindialog_focus_out_event(void* self, void* event) {
     KAboutPluginDialog_FocusOutEvent((KAboutPluginDialog*)self, (QFocusEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_focus_out_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseFocusOutEvent((KAboutPluginDialog*)self, (QFocusEvent*)event);
+void k_aboutplugindialog_super_focus_out_event(void* self, void* event) {
+    KAboutPluginDialog_SuperFocusOutEvent((KAboutPluginDialog*)self, (QFocusEvent*)event);
 }
 
 void k_aboutplugindialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1841,8 +1841,8 @@ void k_aboutplugindialog_enter_event(void* self, void* event) {
     KAboutPluginDialog_EnterEvent((KAboutPluginDialog*)self, (QEnterEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_enter_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseEnterEvent((KAboutPluginDialog*)self, (QEnterEvent*)event);
+void k_aboutplugindialog_super_enter_event(void* self, void* event) {
+    KAboutPluginDialog_SuperEnterEvent((KAboutPluginDialog*)self, (QEnterEvent*)event);
 }
 
 void k_aboutplugindialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1853,8 +1853,8 @@ void k_aboutplugindialog_leave_event(void* self, void* event) {
     KAboutPluginDialog_LeaveEvent((KAboutPluginDialog*)self, (QEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_leave_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseLeaveEvent((KAboutPluginDialog*)self, (QEvent*)event);
+void k_aboutplugindialog_super_leave_event(void* self, void* event) {
+    KAboutPluginDialog_SuperLeaveEvent((KAboutPluginDialog*)self, (QEvent*)event);
 }
 
 void k_aboutplugindialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void k_aboutplugindialog_paint_event(void* self, void* event) {
     KAboutPluginDialog_PaintEvent((KAboutPluginDialog*)self, (QPaintEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_paint_event(void* self, void* event) {
-    KAboutPluginDialog_QBasePaintEvent((KAboutPluginDialog*)self, (QPaintEvent*)event);
+void k_aboutplugindialog_super_paint_event(void* self, void* event) {
+    KAboutPluginDialog_SuperPaintEvent((KAboutPluginDialog*)self, (QPaintEvent*)event);
 }
 
 void k_aboutplugindialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void k_aboutplugindialog_move_event(void* self, void* event) {
     KAboutPluginDialog_MoveEvent((KAboutPluginDialog*)self, (QMoveEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_move_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseMoveEvent((KAboutPluginDialog*)self, (QMoveEvent*)event);
+void k_aboutplugindialog_super_move_event(void* self, void* event) {
+    KAboutPluginDialog_SuperMoveEvent((KAboutPluginDialog*)self, (QMoveEvent*)event);
 }
 
 void k_aboutplugindialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void k_aboutplugindialog_tablet_event(void* self, void* event) {
     KAboutPluginDialog_TabletEvent((KAboutPluginDialog*)self, (QTabletEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_tablet_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseTabletEvent((KAboutPluginDialog*)self, (QTabletEvent*)event);
+void k_aboutplugindialog_super_tablet_event(void* self, void* event) {
+    KAboutPluginDialog_SuperTabletEvent((KAboutPluginDialog*)self, (QTabletEvent*)event);
 }
 
 void k_aboutplugindialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void k_aboutplugindialog_action_event(void* self, void* event) {
     KAboutPluginDialog_ActionEvent((KAboutPluginDialog*)self, (QActionEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_action_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseActionEvent((KAboutPluginDialog*)self, (QActionEvent*)event);
+void k_aboutplugindialog_super_action_event(void* self, void* event) {
+    KAboutPluginDialog_SuperActionEvent((KAboutPluginDialog*)self, (QActionEvent*)event);
 }
 
 void k_aboutplugindialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void k_aboutplugindialog_drag_enter_event(void* self, void* event) {
     KAboutPluginDialog_DragEnterEvent((KAboutPluginDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_drag_enter_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseDragEnterEvent((KAboutPluginDialog*)self, (QDragEnterEvent*)event);
+void k_aboutplugindialog_super_drag_enter_event(void* self, void* event) {
+    KAboutPluginDialog_SuperDragEnterEvent((KAboutPluginDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_aboutplugindialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void k_aboutplugindialog_drag_move_event(void* self, void* event) {
     KAboutPluginDialog_DragMoveEvent((KAboutPluginDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_drag_move_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseDragMoveEvent((KAboutPluginDialog*)self, (QDragMoveEvent*)event);
+void k_aboutplugindialog_super_drag_move_event(void* self, void* event) {
+    KAboutPluginDialog_SuperDragMoveEvent((KAboutPluginDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_aboutplugindialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void k_aboutplugindialog_drag_leave_event(void* self, void* event) {
     KAboutPluginDialog_DragLeaveEvent((KAboutPluginDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_drag_leave_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseDragLeaveEvent((KAboutPluginDialog*)self, (QDragLeaveEvent*)event);
+void k_aboutplugindialog_super_drag_leave_event(void* self, void* event) {
+    KAboutPluginDialog_SuperDragLeaveEvent((KAboutPluginDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_aboutplugindialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void k_aboutplugindialog_drop_event(void* self, void* event) {
     KAboutPluginDialog_DropEvent((KAboutPluginDialog*)self, (QDropEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_drop_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseDropEvent((KAboutPluginDialog*)self, (QDropEvent*)event);
+void k_aboutplugindialog_super_drop_event(void* self, void* event) {
+    KAboutPluginDialog_SuperDropEvent((KAboutPluginDialog*)self, (QDropEvent*)event);
 }
 
 void k_aboutplugindialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void k_aboutplugindialog_hide_event(void* self, void* event) {
     KAboutPluginDialog_HideEvent((KAboutPluginDialog*)self, (QHideEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_hide_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseHideEvent((KAboutPluginDialog*)self, (QHideEvent*)event);
+void k_aboutplugindialog_super_hide_event(void* self, void* event) {
+    KAboutPluginDialog_SuperHideEvent((KAboutPluginDialog*)self, (QHideEvent*)event);
 }
 
 void k_aboutplugindialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ bool k_aboutplugindialog_native_event(void* self, char* eventType, void* message
     return KAboutPluginDialog_NativeEvent((KAboutPluginDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_aboutplugindialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KAboutPluginDialog_QBaseNativeEvent((KAboutPluginDialog*)self, qstring(eventType), message, result);
+bool k_aboutplugindialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KAboutPluginDialog_SuperNativeEvent((KAboutPluginDialog*)self, qstring(eventType), message, result);
 }
 
 void k_aboutplugindialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1985,8 +1985,8 @@ void k_aboutplugindialog_change_event(void* self, void* param1) {
     KAboutPluginDialog_ChangeEvent((KAboutPluginDialog*)self, (QEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_change_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseChangeEvent((KAboutPluginDialog*)self, (QEvent*)param1);
+void k_aboutplugindialog_super_change_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperChangeEvent((KAboutPluginDialog*)self, (QEvent*)param1);
 }
 
 void k_aboutplugindialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ int32_t k_aboutplugindialog_metric(void* self, int32_t param1) {
     return KAboutPluginDialog_Metric((KAboutPluginDialog*)self, param1);
 }
 
-int32_t k_aboutplugindialog_qbase_metric(void* self, int32_t param1) {
-    return KAboutPluginDialog_QBaseMetric((KAboutPluginDialog*)self, param1);
+int32_t k_aboutplugindialog_super_metric(void* self, int32_t param1) {
+    return KAboutPluginDialog_SuperMetric((KAboutPluginDialog*)self, param1);
 }
 
 void k_aboutplugindialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2009,8 +2009,8 @@ void k_aboutplugindialog_init_painter(void* self, void* painter) {
     KAboutPluginDialog_InitPainter((KAboutPluginDialog*)self, (QPainter*)painter);
 }
 
-void k_aboutplugindialog_qbase_init_painter(void* self, void* painter) {
-    KAboutPluginDialog_QBaseInitPainter((KAboutPluginDialog*)self, (QPainter*)painter);
+void k_aboutplugindialog_super_init_painter(void* self, void* painter) {
+    KAboutPluginDialog_SuperInitPainter((KAboutPluginDialog*)self, (QPainter*)painter);
 }
 
 void k_aboutplugindialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ QPaintDevice* k_aboutplugindialog_redirected(void* self, void* offset) {
     return KAboutPluginDialog_Redirected((KAboutPluginDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_aboutplugindialog_qbase_redirected(void* self, void* offset) {
-    return KAboutPluginDialog_QBaseRedirected((KAboutPluginDialog*)self, (QPoint*)offset);
+QPaintDevice* k_aboutplugindialog_super_redirected(void* self, void* offset) {
+    return KAboutPluginDialog_SuperRedirected((KAboutPluginDialog*)self, (QPoint*)offset);
 }
 
 void k_aboutplugindialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ QPainter* k_aboutplugindialog_shared_painter(void* self) {
     return KAboutPluginDialog_SharedPainter((KAboutPluginDialog*)self);
 }
 
-QPainter* k_aboutplugindialog_qbase_shared_painter(void* self) {
-    return KAboutPluginDialog_QBaseSharedPainter((KAboutPluginDialog*)self);
+QPainter* k_aboutplugindialog_super_shared_painter(void* self) {
+    return KAboutPluginDialog_SuperSharedPainter((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2045,8 +2045,8 @@ void k_aboutplugindialog_input_method_event(void* self, void* param1) {
     KAboutPluginDialog_InputMethodEvent((KAboutPluginDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_aboutplugindialog_qbase_input_method_event(void* self, void* param1) {
-    KAboutPluginDialog_QBaseInputMethodEvent((KAboutPluginDialog*)self, (QInputMethodEvent*)param1);
+void k_aboutplugindialog_super_input_method_event(void* self, void* param1) {
+    KAboutPluginDialog_SuperInputMethodEvent((KAboutPluginDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_aboutplugindialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ QVariant* k_aboutplugindialog_input_method_query(void* self, int32_t param1) {
     return KAboutPluginDialog_InputMethodQuery((KAboutPluginDialog*)self, param1);
 }
 
-QVariant* k_aboutplugindialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KAboutPluginDialog_QBaseInputMethodQuery((KAboutPluginDialog*)self, param1);
+QVariant* k_aboutplugindialog_super_input_method_query(void* self, int32_t param1) {
+    return KAboutPluginDialog_SuperInputMethodQuery((KAboutPluginDialog*)self, param1);
 }
 
 void k_aboutplugindialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2069,8 +2069,8 @@ bool k_aboutplugindialog_focus_next_prev_child(void* self, bool next) {
     return KAboutPluginDialog_FocusNextPrevChild((KAboutPluginDialog*)self, next);
 }
 
-bool k_aboutplugindialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KAboutPluginDialog_QBaseFocusNextPrevChild((KAboutPluginDialog*)self, next);
+bool k_aboutplugindialog_super_focus_next_prev_child(void* self, bool next) {
+    return KAboutPluginDialog_SuperFocusNextPrevChild((KAboutPluginDialog*)self, next);
 }
 
 void k_aboutplugindialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2081,8 +2081,8 @@ void k_aboutplugindialog_timer_event(void* self, void* event) {
     KAboutPluginDialog_TimerEvent((KAboutPluginDialog*)self, (QTimerEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_timer_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseTimerEvent((KAboutPluginDialog*)self, (QTimerEvent*)event);
+void k_aboutplugindialog_super_timer_event(void* self, void* event) {
+    KAboutPluginDialog_SuperTimerEvent((KAboutPluginDialog*)self, (QTimerEvent*)event);
 }
 
 void k_aboutplugindialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ void k_aboutplugindialog_child_event(void* self, void* event) {
     KAboutPluginDialog_ChildEvent((KAboutPluginDialog*)self, (QChildEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_child_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseChildEvent((KAboutPluginDialog*)self, (QChildEvent*)event);
+void k_aboutplugindialog_super_child_event(void* self, void* event) {
+    KAboutPluginDialog_SuperChildEvent((KAboutPluginDialog*)self, (QChildEvent*)event);
 }
 
 void k_aboutplugindialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ void k_aboutplugindialog_custom_event(void* self, void* event) {
     KAboutPluginDialog_CustomEvent((KAboutPluginDialog*)self, (QEvent*)event);
 }
 
-void k_aboutplugindialog_qbase_custom_event(void* self, void* event) {
-    KAboutPluginDialog_QBaseCustomEvent((KAboutPluginDialog*)self, (QEvent*)event);
+void k_aboutplugindialog_super_custom_event(void* self, void* event) {
+    KAboutPluginDialog_SuperCustomEvent((KAboutPluginDialog*)self, (QEvent*)event);
 }
 
 void k_aboutplugindialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2117,8 +2117,8 @@ void k_aboutplugindialog_connect_notify(void* self, void* signal) {
     KAboutPluginDialog_ConnectNotify((KAboutPluginDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_aboutplugindialog_qbase_connect_notify(void* self, void* signal) {
-    KAboutPluginDialog_QBaseConnectNotify((KAboutPluginDialog*)self, (QMetaMethod*)signal);
+void k_aboutplugindialog_super_connect_notify(void* self, void* signal) {
+    KAboutPluginDialog_SuperConnectNotify((KAboutPluginDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_aboutplugindialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ void k_aboutplugindialog_disconnect_notify(void* self, void* signal) {
     KAboutPluginDialog_DisconnectNotify((KAboutPluginDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_aboutplugindialog_qbase_disconnect_notify(void* self, void* signal) {
-    KAboutPluginDialog_QBaseDisconnectNotify((KAboutPluginDialog*)self, (QMetaMethod*)signal);
+void k_aboutplugindialog_super_disconnect_notify(void* self, void* signal) {
+    KAboutPluginDialog_SuperDisconnectNotify((KAboutPluginDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_aboutplugindialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2141,8 +2141,8 @@ void k_aboutplugindialog_adjust_position(void* self, void* param1) {
     KAboutPluginDialog_AdjustPosition((KAboutPluginDialog*)self, (QWidget*)param1);
 }
 
-void k_aboutplugindialog_qbase_adjust_position(void* self, void* param1) {
-    KAboutPluginDialog_QBaseAdjustPosition((KAboutPluginDialog*)self, (QWidget*)param1);
+void k_aboutplugindialog_super_adjust_position(void* self, void* param1) {
+    KAboutPluginDialog_SuperAdjustPosition((KAboutPluginDialog*)self, (QWidget*)param1);
 }
 
 void k_aboutplugindialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2153,8 +2153,8 @@ void k_aboutplugindialog_update_micro_focus(void* self) {
     KAboutPluginDialog_UpdateMicroFocus((KAboutPluginDialog*)self);
 }
 
-void k_aboutplugindialog_qbase_update_micro_focus(void* self) {
-    KAboutPluginDialog_QBaseUpdateMicroFocus((KAboutPluginDialog*)self);
+void k_aboutplugindialog_super_update_micro_focus(void* self) {
+    KAboutPluginDialog_SuperUpdateMicroFocus((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2165,8 +2165,8 @@ void k_aboutplugindialog_create(void* self) {
     KAboutPluginDialog_Create((KAboutPluginDialog*)self);
 }
 
-void k_aboutplugindialog_qbase_create(void* self) {
-    KAboutPluginDialog_QBaseCreate((KAboutPluginDialog*)self);
+void k_aboutplugindialog_super_create(void* self) {
+    KAboutPluginDialog_SuperCreate((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_create(void* self, void (*callback)()) {
@@ -2177,8 +2177,8 @@ void k_aboutplugindialog_destroy(void* self) {
     KAboutPluginDialog_Destroy((KAboutPluginDialog*)self);
 }
 
-void k_aboutplugindialog_qbase_destroy(void* self) {
-    KAboutPluginDialog_QBaseDestroy((KAboutPluginDialog*)self);
+void k_aboutplugindialog_super_destroy(void* self) {
+    KAboutPluginDialog_SuperDestroy((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_destroy(void* self, void (*callback)()) {
@@ -2189,8 +2189,8 @@ bool k_aboutplugindialog_focus_next_child(void* self) {
     return KAboutPluginDialog_FocusNextChild((KAboutPluginDialog*)self);
 }
 
-bool k_aboutplugindialog_qbase_focus_next_child(void* self) {
-    return KAboutPluginDialog_QBaseFocusNextChild((KAboutPluginDialog*)self);
+bool k_aboutplugindialog_super_focus_next_child(void* self) {
+    return KAboutPluginDialog_SuperFocusNextChild((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2201,8 +2201,8 @@ bool k_aboutplugindialog_focus_previous_child(void* self) {
     return KAboutPluginDialog_FocusPreviousChild((KAboutPluginDialog*)self);
 }
 
-bool k_aboutplugindialog_qbase_focus_previous_child(void* self) {
-    return KAboutPluginDialog_QBaseFocusPreviousChild((KAboutPluginDialog*)self);
+bool k_aboutplugindialog_super_focus_previous_child(void* self) {
+    return KAboutPluginDialog_SuperFocusPreviousChild((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2213,8 +2213,8 @@ QObject* k_aboutplugindialog_sender(void* self) {
     return KAboutPluginDialog_Sender((KAboutPluginDialog*)self);
 }
 
-QObject* k_aboutplugindialog_qbase_sender(void* self) {
-    return KAboutPluginDialog_QBaseSender((KAboutPluginDialog*)self);
+QObject* k_aboutplugindialog_super_sender(void* self) {
+    return KAboutPluginDialog_SuperSender((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2225,8 +2225,8 @@ int32_t k_aboutplugindialog_sender_signal_index(void* self) {
     return KAboutPluginDialog_SenderSignalIndex((KAboutPluginDialog*)self);
 }
 
-int32_t k_aboutplugindialog_qbase_sender_signal_index(void* self) {
-    return KAboutPluginDialog_QBaseSenderSignalIndex((KAboutPluginDialog*)self);
+int32_t k_aboutplugindialog_super_sender_signal_index(void* self) {
+    return KAboutPluginDialog_SuperSenderSignalIndex((KAboutPluginDialog*)self);
 }
 
 void k_aboutplugindialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2237,8 +2237,8 @@ int32_t k_aboutplugindialog_receivers(void* self, const char* signal) {
     return KAboutPluginDialog_Receivers((KAboutPluginDialog*)self, signal);
 }
 
-int32_t k_aboutplugindialog_qbase_receivers(void* self, const char* signal) {
-    return KAboutPluginDialog_QBaseReceivers((KAboutPluginDialog*)self, signal);
+int32_t k_aboutplugindialog_super_receivers(void* self, const char* signal) {
+    return KAboutPluginDialog_SuperReceivers((KAboutPluginDialog*)self, signal);
 }
 
 void k_aboutplugindialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2249,8 +2249,8 @@ bool k_aboutplugindialog_is_signal_connected(void* self, void* signal) {
     return KAboutPluginDialog_IsSignalConnected((KAboutPluginDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_aboutplugindialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KAboutPluginDialog_QBaseIsSignalConnected((KAboutPluginDialog*)self, (QMetaMethod*)signal);
+bool k_aboutplugindialog_super_is_signal_connected(void* self, void* signal) {
+    return KAboutPluginDialog_SuperIsSignalConnected((KAboutPluginDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_aboutplugindialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2261,8 +2261,8 @@ double k_aboutplugindialog_get_decoded_metric_f(void* self, int32_t metricA, int
     return KAboutPluginDialog_GetDecodedMetricF((KAboutPluginDialog*)self, metricA, metricB);
 }
 
-double k_aboutplugindialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KAboutPluginDialog_QBaseGetDecodedMetricF((KAboutPluginDialog*)self, metricA, metricB);
+double k_aboutplugindialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KAboutPluginDialog_SuperGetDecodedMetricF((KAboutPluginDialog*)self, metricA, metricB);
 }
 
 void k_aboutplugindialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

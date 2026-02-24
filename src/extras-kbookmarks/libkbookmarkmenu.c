@@ -26,8 +26,8 @@ void k_bookmarkmenu_on_meta_object(void* self, const QMetaObject* (*callback)())
     KBookmarkMenu_OnMetaObject((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_bookmarkmenu_qbase_meta_object(void* self) {
-    return KBookmarkMenu_QBaseMetaObject((KBookmarkMenu*)self);
+const QMetaObject* k_bookmarkmenu_super_meta_object(void* self) {
+    return KBookmarkMenu_SuperMetaObject((KBookmarkMenu*)self);
 }
 
 void* k_bookmarkmenu_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_bookmarkmenu_on_metacast(void* self, void* (*callback)(void*, const char*
     KBookmarkMenu_OnMetacast((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void* k_bookmarkmenu_qbase_metacast(void* self, const char* param1) {
-    return KBookmarkMenu_QBaseMetacast((KBookmarkMenu*)self, param1);
+void* k_bookmarkmenu_super_metacast(void* self, const char* param1) {
+    return KBookmarkMenu_SuperMetacast((KBookmarkMenu*)self, param1);
 }
 
 int32_t k_bookmarkmenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_bookmarkmenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KBookmarkMenu_OnMetacall((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_bookmarkmenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBookmarkMenu_QBaseMetacall((KBookmarkMenu*)self, param1, param2, param3);
+int32_t k_bookmarkmenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBookmarkMenu_SuperMetacall((KBookmarkMenu*)self, param1, param2, param3);
 }
 
 const char* k_bookmarkmenu_tr(const char* s) {
@@ -101,8 +101,8 @@ void k_bookmarkmenu_on_slot_about_to_show(void* self, void (*callback)()) {
     KBookmarkMenu_OnSlotAboutToShow((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_slot_about_to_show(void* self) {
-    KBookmarkMenu_QBaseSlotAboutToShow((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_slot_about_to_show(void* self) {
+    KBookmarkMenu_SuperSlotAboutToShow((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_slot_add_bookmarks_list(void* self) {
@@ -113,8 +113,8 @@ void k_bookmarkmenu_on_slot_add_bookmarks_list(void* self, void (*callback)()) {
     KBookmarkMenu_OnSlotAddBookmarksList((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_slot_add_bookmarks_list(void* self) {
-    KBookmarkMenu_QBaseSlotAddBookmarksList((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_slot_add_bookmarks_list(void* self) {
+    KBookmarkMenu_SuperSlotAddBookmarksList((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_slot_add_bookmark(void* self) {
@@ -125,8 +125,8 @@ void k_bookmarkmenu_on_slot_add_bookmark(void* self, void (*callback)()) {
     KBookmarkMenu_OnSlotAddBookmark((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_slot_add_bookmark(void* self) {
-    KBookmarkMenu_QBaseSlotAddBookmark((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_slot_add_bookmark(void* self) {
+    KBookmarkMenu_SuperSlotAddBookmark((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_slot_new_folder(void* self) {
@@ -137,8 +137,8 @@ void k_bookmarkmenu_on_slot_new_folder(void* self, void (*callback)()) {
     KBookmarkMenu_OnSlotNewFolder((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_slot_new_folder(void* self) {
-    KBookmarkMenu_QBaseSlotNewFolder((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_slot_new_folder(void* self) {
+    KBookmarkMenu_SuperSlotNewFolder((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_slot_open_folder_in_tabs(void* self) {
@@ -149,8 +149,8 @@ void k_bookmarkmenu_on_slot_open_folder_in_tabs(void* self, void (*callback)()) 
     KBookmarkMenu_OnSlotOpenFolderInTabs((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_slot_open_folder_in_tabs(void* self) {
-    KBookmarkMenu_QBaseSlotOpenFolderInTabs((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_slot_open_folder_in_tabs(void* self) {
+    KBookmarkMenu_SuperSlotOpenFolderInTabs((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_clear(void* self) {
@@ -161,8 +161,8 @@ void k_bookmarkmenu_on_clear(void* self, void (*callback)()) {
     KBookmarkMenu_OnClear((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_clear(void* self) {
-    KBookmarkMenu_QBaseClear((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_clear(void* self) {
+    KBookmarkMenu_SuperClear((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_refill(void* self) {
@@ -173,8 +173,8 @@ void k_bookmarkmenu_on_refill(void* self, void (*callback)()) {
     KBookmarkMenu_OnRefill((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_refill(void* self) {
-    KBookmarkMenu_QBaseRefill((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_refill(void* self) {
+    KBookmarkMenu_SuperRefill((KBookmarkMenu*)self);
 }
 
 QAction* k_bookmarkmenu_action_for_bookmark(void* self, void* bm) {
@@ -185,8 +185,8 @@ void k_bookmarkmenu_on_action_for_bookmark(void* self, QAction* (*callback)(void
     KBookmarkMenu_OnActionForBookmark((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-QAction* k_bookmarkmenu_qbase_action_for_bookmark(void* self, void* bm) {
-    return KBookmarkMenu_QBaseActionForBookmark((KBookmarkMenu*)self, (KBookmark*)bm);
+QAction* k_bookmarkmenu_super_action_for_bookmark(void* self, void* bm) {
+    return KBookmarkMenu_SuperActionForBookmark((KBookmarkMenu*)self, (KBookmark*)bm);
 }
 
 QMenu* k_bookmarkmenu_context_menu(void* self, void* action) {
@@ -197,8 +197,8 @@ void k_bookmarkmenu_on_context_menu(void* self, QMenu* (*callback)(void*, void*)
     KBookmarkMenu_OnContextMenu((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-QMenu* k_bookmarkmenu_qbase_context_menu(void* self, void* action) {
-    return KBookmarkMenu_QBaseContextMenu((KBookmarkMenu*)self, (QAction*)action);
+QMenu* k_bookmarkmenu_super_context_menu(void* self, void* action) {
+    return KBookmarkMenu_SuperContextMenu((KBookmarkMenu*)self, (QAction*)action);
 }
 
 void k_bookmarkmenu_add_actions(void* self) {
@@ -209,8 +209,8 @@ void k_bookmarkmenu_on_add_actions(void* self, void (*callback)()) {
     KBookmarkMenu_OnAddActions((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_add_actions(void* self) {
-    KBookmarkMenu_QBaseAddActions((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_add_actions(void* self) {
+    KBookmarkMenu_SuperAddActions((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_fill_bookmarks(void* self) {
@@ -221,8 +221,8 @@ void k_bookmarkmenu_on_fill_bookmarks(void* self, void (*callback)()) {
     KBookmarkMenu_OnFillBookmarks((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_fill_bookmarks(void* self) {
-    KBookmarkMenu_QBaseFillBookmarks((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_fill_bookmarks(void* self) {
+    KBookmarkMenu_SuperFillBookmarks((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_add_add_bookmark(void* self) {
@@ -233,8 +233,8 @@ void k_bookmarkmenu_on_add_add_bookmark(void* self, void (*callback)()) {
     KBookmarkMenu_OnAddAddBookmark((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_add_add_bookmark(void* self) {
-    KBookmarkMenu_QBaseAddAddBookmark((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_add_add_bookmark(void* self) {
+    KBookmarkMenu_SuperAddAddBookmark((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_add_add_bookmarks_list(void* self) {
@@ -245,8 +245,8 @@ void k_bookmarkmenu_on_add_add_bookmarks_list(void* self, void (*callback)()) {
     KBookmarkMenu_OnAddAddBookmarksList((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_add_add_bookmarks_list(void* self) {
-    KBookmarkMenu_QBaseAddAddBookmarksList((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_add_add_bookmarks_list(void* self) {
+    KBookmarkMenu_SuperAddAddBookmarksList((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_add_edit_bookmarks(void* self) {
@@ -257,8 +257,8 @@ void k_bookmarkmenu_on_add_edit_bookmarks(void* self, void (*callback)()) {
     KBookmarkMenu_OnAddEditBookmarks((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_add_edit_bookmarks(void* self) {
-    KBookmarkMenu_QBaseAddEditBookmarks((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_add_edit_bookmarks(void* self) {
+    KBookmarkMenu_SuperAddEditBookmarks((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_add_new_folder(void* self) {
@@ -269,8 +269,8 @@ void k_bookmarkmenu_on_add_new_folder(void* self, void (*callback)()) {
     KBookmarkMenu_OnAddNewFolder((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_add_new_folder(void* self) {
-    KBookmarkMenu_QBaseAddNewFolder((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_add_new_folder(void* self) {
+    KBookmarkMenu_SuperAddNewFolder((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_add_open_in_tabs(void* self) {
@@ -281,8 +281,8 @@ void k_bookmarkmenu_on_add_open_in_tabs(void* self, void (*callback)()) {
     KBookmarkMenu_OnAddOpenInTabs((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-void k_bookmarkmenu_qbase_add_open_in_tabs(void* self) {
-    KBookmarkMenu_QBaseAddOpenInTabs((KBookmarkMenu*)self);
+void k_bookmarkmenu_super_add_open_in_tabs(void* self) {
+    KBookmarkMenu_SuperAddOpenInTabs((KBookmarkMenu*)self);
 }
 
 bool k_bookmarkmenu_is_root(void* self) {
@@ -293,8 +293,8 @@ void k_bookmarkmenu_on_is_root(void* self, bool (*callback)()) {
     KBookmarkMenu_OnIsRoot((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-bool k_bookmarkmenu_qbase_is_root(void* self) {
-    return KBookmarkMenu_QBaseIsRoot((KBookmarkMenu*)self);
+bool k_bookmarkmenu_super_is_root(void* self) {
+    return KBookmarkMenu_SuperIsRoot((KBookmarkMenu*)self);
 }
 
 bool k_bookmarkmenu_is_dirty(void* self) {
@@ -305,8 +305,8 @@ void k_bookmarkmenu_on_is_dirty(void* self, bool (*callback)()) {
     KBookmarkMenu_OnIsDirty((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-bool k_bookmarkmenu_qbase_is_dirty(void* self) {
-    return KBookmarkMenu_QBaseIsDirty((KBookmarkMenu*)self);
+bool k_bookmarkmenu_super_is_dirty(void* self) {
+    return KBookmarkMenu_SuperIsDirty((KBookmarkMenu*)self);
 }
 
 const char* k_bookmarkmenu_parent_address(void* self) {
@@ -320,8 +320,8 @@ void k_bookmarkmenu_on_parent_address(void* self, const char* (*callback)()) {
     KBookmarkMenu_OnParentAddress((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-const char* k_bookmarkmenu_qbase_parent_address(void* self) {
-    libqt_string _str = KBookmarkMenu_QBaseParentAddress((KBookmarkMenu*)self);
+const char* k_bookmarkmenu_super_parent_address(void* self) {
+    libqt_string _str = KBookmarkMenu_SuperParentAddress((KBookmarkMenu*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -335,8 +335,8 @@ void k_bookmarkmenu_on_manager(void* self, KBookmarkManager* (*callback)()) {
     KBookmarkMenu_OnManager((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-KBookmarkManager* k_bookmarkmenu_qbase_manager(void* self) {
-    return KBookmarkMenu_QBaseManager((KBookmarkMenu*)self);
+KBookmarkManager* k_bookmarkmenu_super_manager(void* self) {
+    return KBookmarkMenu_SuperManager((KBookmarkMenu*)self);
 }
 
 KBookmarkOwner* k_bookmarkmenu_owner(void* self) {
@@ -347,8 +347,8 @@ void k_bookmarkmenu_on_owner(void* self, KBookmarkOwner* (*callback)()) {
     KBookmarkMenu_OnOwner((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-KBookmarkOwner* k_bookmarkmenu_qbase_owner(void* self) {
-    return KBookmarkMenu_QBaseOwner((KBookmarkMenu*)self);
+KBookmarkOwner* k_bookmarkmenu_super_owner(void* self) {
+    return KBookmarkMenu_SuperOwner((KBookmarkMenu*)self);
 }
 
 QMenu* k_bookmarkmenu_parent_menu(void* self) {
@@ -359,8 +359,8 @@ void k_bookmarkmenu_on_parent_menu(void* self, QMenu* (*callback)()) {
     KBookmarkMenu_OnParentMenu((KBookmarkMenu*)self, (intptr_t)callback);
 }
 
-QMenu* k_bookmarkmenu_qbase_parent_menu(void* self) {
-    return KBookmarkMenu_QBaseParentMenu((KBookmarkMenu*)self);
+QMenu* k_bookmarkmenu_super_parent_menu(void* self) {
+    return KBookmarkMenu_SuperParentMenu((KBookmarkMenu*)self);
 }
 
 const char* k_bookmarkmenu_tr2(const char* s, const char* c) {
@@ -592,8 +592,8 @@ bool k_bookmarkmenu_event(void* self, void* event) {
     return KBookmarkMenu_Event((KBookmarkMenu*)self, (QEvent*)event);
 }
 
-bool k_bookmarkmenu_qbase_event(void* self, void* event) {
-    return KBookmarkMenu_QBaseEvent((KBookmarkMenu*)self, (QEvent*)event);
+bool k_bookmarkmenu_super_event(void* self, void* event) {
+    return KBookmarkMenu_SuperEvent((KBookmarkMenu*)self, (QEvent*)event);
 }
 
 void k_bookmarkmenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -604,8 +604,8 @@ bool k_bookmarkmenu_event_filter(void* self, void* watched, void* event) {
     return KBookmarkMenu_EventFilter((KBookmarkMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_bookmarkmenu_qbase_event_filter(void* self, void* watched, void* event) {
-    return KBookmarkMenu_QBaseEventFilter((KBookmarkMenu*)self, (QObject*)watched, (QEvent*)event);
+bool k_bookmarkmenu_super_event_filter(void* self, void* watched, void* event) {
+    return KBookmarkMenu_SuperEventFilter((KBookmarkMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_bookmarkmenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -616,8 +616,8 @@ void k_bookmarkmenu_timer_event(void* self, void* event) {
     KBookmarkMenu_TimerEvent((KBookmarkMenu*)self, (QTimerEvent*)event);
 }
 
-void k_bookmarkmenu_qbase_timer_event(void* self, void* event) {
-    KBookmarkMenu_QBaseTimerEvent((KBookmarkMenu*)self, (QTimerEvent*)event);
+void k_bookmarkmenu_super_timer_event(void* self, void* event) {
+    KBookmarkMenu_SuperTimerEvent((KBookmarkMenu*)self, (QTimerEvent*)event);
 }
 
 void k_bookmarkmenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -628,8 +628,8 @@ void k_bookmarkmenu_child_event(void* self, void* event) {
     KBookmarkMenu_ChildEvent((KBookmarkMenu*)self, (QChildEvent*)event);
 }
 
-void k_bookmarkmenu_qbase_child_event(void* self, void* event) {
-    KBookmarkMenu_QBaseChildEvent((KBookmarkMenu*)self, (QChildEvent*)event);
+void k_bookmarkmenu_super_child_event(void* self, void* event) {
+    KBookmarkMenu_SuperChildEvent((KBookmarkMenu*)self, (QChildEvent*)event);
 }
 
 void k_bookmarkmenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -640,8 +640,8 @@ void k_bookmarkmenu_custom_event(void* self, void* event) {
     KBookmarkMenu_CustomEvent((KBookmarkMenu*)self, (QEvent*)event);
 }
 
-void k_bookmarkmenu_qbase_custom_event(void* self, void* event) {
-    KBookmarkMenu_QBaseCustomEvent((KBookmarkMenu*)self, (QEvent*)event);
+void k_bookmarkmenu_super_custom_event(void* self, void* event) {
+    KBookmarkMenu_SuperCustomEvent((KBookmarkMenu*)self, (QEvent*)event);
 }
 
 void k_bookmarkmenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -652,8 +652,8 @@ void k_bookmarkmenu_connect_notify(void* self, void* signal) {
     KBookmarkMenu_ConnectNotify((KBookmarkMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkmenu_qbase_connect_notify(void* self, void* signal) {
-    KBookmarkMenu_QBaseConnectNotify((KBookmarkMenu*)self, (QMetaMethod*)signal);
+void k_bookmarkmenu_super_connect_notify(void* self, void* signal) {
+    KBookmarkMenu_SuperConnectNotify((KBookmarkMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkmenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -664,8 +664,8 @@ void k_bookmarkmenu_disconnect_notify(void* self, void* signal) {
     KBookmarkMenu_DisconnectNotify((KBookmarkMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkmenu_qbase_disconnect_notify(void* self, void* signal) {
-    KBookmarkMenu_QBaseDisconnectNotify((KBookmarkMenu*)self, (QMetaMethod*)signal);
+void k_bookmarkmenu_super_disconnect_notify(void* self, void* signal) {
+    KBookmarkMenu_SuperDisconnectNotify((KBookmarkMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkmenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -676,8 +676,8 @@ QObject* k_bookmarkmenu_sender(void* self) {
     return KBookmarkMenu_Sender((KBookmarkMenu*)self);
 }
 
-QObject* k_bookmarkmenu_qbase_sender(void* self) {
-    return KBookmarkMenu_QBaseSender((KBookmarkMenu*)self);
+QObject* k_bookmarkmenu_super_sender(void* self) {
+    return KBookmarkMenu_SuperSender((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_on_sender(void* self, QObject* (*callback)()) {
@@ -688,8 +688,8 @@ int32_t k_bookmarkmenu_sender_signal_index(void* self) {
     return KBookmarkMenu_SenderSignalIndex((KBookmarkMenu*)self);
 }
 
-int32_t k_bookmarkmenu_qbase_sender_signal_index(void* self) {
-    return KBookmarkMenu_QBaseSenderSignalIndex((KBookmarkMenu*)self);
+int32_t k_bookmarkmenu_super_sender_signal_index(void* self) {
+    return KBookmarkMenu_SuperSenderSignalIndex((KBookmarkMenu*)self);
 }
 
 void k_bookmarkmenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -700,8 +700,8 @@ int32_t k_bookmarkmenu_receivers(void* self, const char* signal) {
     return KBookmarkMenu_Receivers((KBookmarkMenu*)self, signal);
 }
 
-int32_t k_bookmarkmenu_qbase_receivers(void* self, const char* signal) {
-    return KBookmarkMenu_QBaseReceivers((KBookmarkMenu*)self, signal);
+int32_t k_bookmarkmenu_super_receivers(void* self, const char* signal) {
+    return KBookmarkMenu_SuperReceivers((KBookmarkMenu*)self, signal);
 }
 
 void k_bookmarkmenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -712,8 +712,8 @@ bool k_bookmarkmenu_is_signal_connected(void* self, void* signal) {
     return KBookmarkMenu_IsSignalConnected((KBookmarkMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_bookmarkmenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KBookmarkMenu_QBaseIsSignalConnected((KBookmarkMenu*)self, (QMetaMethod*)signal);
+bool k_bookmarkmenu_super_is_signal_connected(void* self, void* signal) {
+    return KBookmarkMenu_SuperIsSignalConnected((KBookmarkMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkmenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

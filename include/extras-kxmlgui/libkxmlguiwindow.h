@@ -49,13 +49,17 @@ const QMetaObject* k_xmlguiwindow_meta_object(void* self);
 ///
 void k_xmlguiwindow_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_meta_object` instead
+///
+#define k_xmlguiwindow_qbase_meta_object k_xmlguiwindow_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 ///
-const QMetaObject* k_xmlguiwindow_qbase_meta_object(void* self);
+const QMetaObject* k_xmlguiwindow_super_meta_object(void* self);
 
 /// @param self KXmlGuiWindow*
 /// @param param1 const char*
@@ -69,12 +73,16 @@ void* k_xmlguiwindow_metacast(void* self, const char* param1);
 ///
 void k_xmlguiwindow_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_metacast` instead
+///
+#define k_xmlguiwindow_qbase_metacast k_xmlguiwindow_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 /// @param param1 const char*
 ///
-void* k_xmlguiwindow_qbase_metacast(void* self, const char* param1);
+void* k_xmlguiwindow_super_metacast(void* self, const char* param1);
 
 /// @param self KXmlGuiWindow*
 /// @param param1 enum QMetaObject__Call
@@ -90,6 +98,10 @@ int32_t k_xmlguiwindow_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void k_xmlguiwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_metacall` instead
+///
+#define k_xmlguiwindow_qbase_metacall k_xmlguiwindow_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
@@ -97,7 +109,7 @@ void k_xmlguiwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_xmlguiwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_xmlguiwindow_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -134,13 +146,17 @@ KXMLGUIFactory* k_xmlguiwindow_gui_factory(void* self);
 ///
 void k_xmlguiwindow_on_gui_factory(void* self, KXMLGUIFactory* (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_gui_factory` instead
+///
+#define k_xmlguiwindow_qbase_gui_factory k_xmlguiwindow_super_gui_factory
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#guiFactory)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 ///
-KXMLGUIFactory* k_xmlguiwindow_qbase_gui_factory(void* self);
+KXMLGUIFactory* k_xmlguiwindow_super_gui_factory(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#createGUI)
 ///
@@ -223,6 +239,10 @@ void k_xmlguiwindow_apply_main_window_settings(void* self, void* config);
 ///
 void k_xmlguiwindow_on_apply_main_window_settings(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_apply_main_window_settings` instead
+///
+#define k_xmlguiwindow_qbase_apply_main_window_settings k_xmlguiwindow_super_apply_main_window_settings
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#applyMainWindowSettings)
 ///
 /// Base class method implementation
@@ -230,7 +250,7 @@ void k_xmlguiwindow_on_apply_main_window_settings(void* self, void (*callback)(v
 /// @param self KXmlGuiWindow*
 /// @param config KConfigGroup*
 ///
-void k_xmlguiwindow_qbase_apply_main_window_settings(void* self, void* config);
+void k_xmlguiwindow_super_apply_main_window_settings(void* self, void* config);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#setCommandBarEnabled)
 ///
@@ -260,13 +280,17 @@ void k_xmlguiwindow_configure_toolbars(void* self);
 ///
 void k_xmlguiwindow_on_configure_toolbars(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_configure_toolbars` instead
+///
+#define k_xmlguiwindow_qbase_configure_toolbars k_xmlguiwindow_super_configure_toolbars
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#configureToolbars)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_configure_toolbars(void* self);
+void k_xmlguiwindow_super_configure_toolbars(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
@@ -284,6 +308,10 @@ void k_xmlguiwindow_slot_state_changed(void* self, const char* newstate);
 ///
 void k_xmlguiwindow_on_slot_state_changed(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_slot_state_changed` instead
+///
+#define k_xmlguiwindow_qbase_slot_state_changed k_xmlguiwindow_super_slot_state_changed
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
 /// Base class method implementation
@@ -291,7 +319,7 @@ void k_xmlguiwindow_on_slot_state_changed(void* self, void (*callback)(void*, co
 /// @param self KXmlGuiWindow*
 /// @param newstate const char*
 ///
-void k_xmlguiwindow_qbase_slot_state_changed(void* self, const char* newstate);
+void k_xmlguiwindow_super_slot_state_changed(void* self, const char* newstate);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#slotStateChanged)
 ///
@@ -332,6 +360,10 @@ bool k_xmlguiwindow_event(void* self, void* event);
 ///
 void k_xmlguiwindow_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_event` instead
+///
+#define k_xmlguiwindow_qbase_event k_xmlguiwindow_super_event
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#event)
 ///
 /// Base class method implementation
@@ -339,7 +371,7 @@ void k_xmlguiwindow_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self KXmlGuiWindow*
 /// @param event QEvent*
 ///
-bool k_xmlguiwindow_qbase_event(void* self, void* event);
+bool k_xmlguiwindow_super_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
@@ -356,13 +388,17 @@ void k_xmlguiwindow_check_ambiguous_shortcuts(void* self);
 ///
 void k_xmlguiwindow_on_check_ambiguous_shortcuts(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_check_ambiguous_shortcuts` instead
+///
+#define k_xmlguiwindow_qbase_check_ambiguous_shortcuts k_xmlguiwindow_super_check_ambiguous_shortcuts
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#checkAmbiguousShortcuts)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_check_ambiguous_shortcuts(void* self);
+void k_xmlguiwindow_super_check_ambiguous_shortcuts(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
 ///
@@ -379,13 +415,17 @@ void k_xmlguiwindow_save_new_toolbar_config(void* self);
 ///
 void k_xmlguiwindow_on_save_new_toolbar_config(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_save_new_toolbar_config` instead
+///
+#define k_xmlguiwindow_qbase_save_new_toolbar_config k_xmlguiwindow_super_save_new_toolbar_config
+
 /// [Upstream resources](https://api.kde.org/kxmlguiwindow.html#saveNewToolbarConfig)
 ///
 /// Base class method implementation
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_save_new_toolbar_config(void* self);
+void k_xmlguiwindow_super_save_new_toolbar_config(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -621,6 +661,10 @@ void k_xmlguiwindow_set_caption2(void* self, const char* caption, bool modified)
 ///
 void k_xmlguiwindow_on_set_caption2(void* self, void (*callback)(void*, const char*, bool));
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_caption2` instead
+///
+#define k_xmlguiwindow_qbase_set_caption2 k_xmlguiwindow_super_set_caption2
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
@@ -631,7 +675,7 @@ void k_xmlguiwindow_on_set_caption2(void* self, void (*callback)(void*, const ch
 /// @param caption const char*
 /// @param modified bool
 ///
-void k_xmlguiwindow_qbase_set_caption2(void* self, const char* caption, bool modified);
+void k_xmlguiwindow_super_set_caption2(void* self, const char* caption, bool modified);
 
 /// Inherited from KMainWindow
 ///
@@ -4468,6 +4512,10 @@ void k_xmlguiwindow_replace_x_m_l_file3(void* self, const char* xmlfile, const c
 ///
 void k_xmlguiwindow_set_caption(void* self, const char* caption);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_caption` instead
+///
+#define k_xmlguiwindow_qbase_set_caption k_xmlguiwindow_super_set_caption
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#setCaption)
@@ -4477,7 +4525,7 @@ void k_xmlguiwindow_set_caption(void* self, const char* caption);
 /// @param self KXmlGuiWindow*
 /// @param caption const char*
 ///
-void k_xmlguiwindow_qbase_set_caption(void* self, const char* caption);
+void k_xmlguiwindow_super_set_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
@@ -4501,6 +4549,10 @@ void k_xmlguiwindow_on_set_caption(void* self, void (*callback)(void*, const cha
 ///
 void k_xmlguiwindow_set_plain_caption(void* self, const char* caption);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_plain_caption` instead
+///
+#define k_xmlguiwindow_qbase_set_plain_caption k_xmlguiwindow_super_set_plain_caption
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#setPlainCaption)
@@ -4510,7 +4562,7 @@ void k_xmlguiwindow_set_plain_caption(void* self, const char* caption);
 /// @param self KXmlGuiWindow*
 /// @param caption const char*
 ///
-void k_xmlguiwindow_qbase_set_plain_caption(void* self, const char* caption);
+void k_xmlguiwindow_super_set_plain_caption(void* self, const char* caption);
 
 /// Inherited from KMainWindow
 ///
@@ -4534,6 +4586,10 @@ void k_xmlguiwindow_on_set_plain_caption(void* self, void (*callback)(void*, con
 ///
 void k_xmlguiwindow_key_press_event(void* self, void* keyEvent);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_key_press_event` instead
+///
+#define k_xmlguiwindow_qbase_key_press_event k_xmlguiwindow_super_key_press_event
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#keyPressEvent)
@@ -4543,7 +4599,7 @@ void k_xmlguiwindow_key_press_event(void* self, void* keyEvent);
 /// @param self KXmlGuiWindow*
 /// @param keyEvent QKeyEvent*
 ///
-void k_xmlguiwindow_qbase_key_press_event(void* self, void* keyEvent);
+void k_xmlguiwindow_super_key_press_event(void* self, void* keyEvent);
 
 /// Inherited from KMainWindow
 ///
@@ -4567,6 +4623,10 @@ void k_xmlguiwindow_on_key_press_event(void* self, void (*callback)(void*, void*
 ///
 void k_xmlguiwindow_close_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_close_event` instead
+///
+#define k_xmlguiwindow_qbase_close_event k_xmlguiwindow_super_close_event
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#closeEvent)
@@ -4576,7 +4636,7 @@ void k_xmlguiwindow_close_event(void* self, void* param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 QCloseEvent*
 ///
-void k_xmlguiwindow_qbase_close_event(void* self, void* param1);
+void k_xmlguiwindow_super_close_event(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
@@ -4599,6 +4659,10 @@ void k_xmlguiwindow_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_xmlguiwindow_query_close(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_query_close` instead
+///
+#define k_xmlguiwindow_qbase_query_close k_xmlguiwindow_super_query_close
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#queryClose)
@@ -4607,7 +4671,7 @@ bool k_xmlguiwindow_query_close(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-bool k_xmlguiwindow_qbase_query_close(void* self);
+bool k_xmlguiwindow_super_query_close(void* self);
 
 /// Inherited from KMainWindow
 ///
@@ -4631,6 +4695,10 @@ void k_xmlguiwindow_on_query_close(void* self, bool (*callback)());
 ///
 void k_xmlguiwindow_save_properties(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_save_properties` instead
+///
+#define k_xmlguiwindow_qbase_save_properties k_xmlguiwindow_super_save_properties
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#saveProperties)
@@ -4640,7 +4708,7 @@ void k_xmlguiwindow_save_properties(void* self, void* param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 KConfigGroup*
 ///
-void k_xmlguiwindow_qbase_save_properties(void* self, void* param1);
+void k_xmlguiwindow_super_save_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
@@ -4664,6 +4732,10 @@ void k_xmlguiwindow_on_save_properties(void* self, void (*callback)(void*, void*
 ///
 void k_xmlguiwindow_read_properties(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_read_properties` instead
+///
+#define k_xmlguiwindow_qbase_read_properties k_xmlguiwindow_super_read_properties
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#readProperties)
@@ -4673,7 +4745,7 @@ void k_xmlguiwindow_read_properties(void* self, void* param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 KConfigGroup*
 ///
-void k_xmlguiwindow_qbase_read_properties(void* self, void* param1);
+void k_xmlguiwindow_super_read_properties(void* self, void* param1);
 
 /// Inherited from KMainWindow
 ///
@@ -4697,6 +4769,10 @@ void k_xmlguiwindow_on_read_properties(void* self, void (*callback)(void*, void*
 ///
 void k_xmlguiwindow_save_global_properties(void* self, void* sessionConfig);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_save_global_properties` instead
+///
+#define k_xmlguiwindow_qbase_save_global_properties k_xmlguiwindow_super_save_global_properties
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#saveGlobalProperties)
@@ -4706,7 +4782,7 @@ void k_xmlguiwindow_save_global_properties(void* self, void* sessionConfig);
 /// @param self KXmlGuiWindow*
 /// @param sessionConfig KConfig*
 ///
-void k_xmlguiwindow_qbase_save_global_properties(void* self, void* sessionConfig);
+void k_xmlguiwindow_super_save_global_properties(void* self, void* sessionConfig);
 
 /// Inherited from KMainWindow
 ///
@@ -4730,6 +4806,10 @@ void k_xmlguiwindow_on_save_global_properties(void* self, void (*callback)(void*
 ///
 void k_xmlguiwindow_read_global_properties(void* self, void* sessionConfig);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_read_global_properties` instead
+///
+#define k_xmlguiwindow_qbase_read_global_properties k_xmlguiwindow_super_read_global_properties
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#readGlobalProperties)
@@ -4739,7 +4819,7 @@ void k_xmlguiwindow_read_global_properties(void* self, void* sessionConfig);
 /// @param self KXmlGuiWindow*
 /// @param sessionConfig KConfig*
 ///
-void k_xmlguiwindow_qbase_read_global_properties(void* self, void* sessionConfig);
+void k_xmlguiwindow_super_read_global_properties(void* self, void* sessionConfig);
 
 /// Inherited from KMainWindow
 ///
@@ -4762,6 +4842,10 @@ void k_xmlguiwindow_on_read_global_properties(void* self, void (*callback)(void*
 ///
 QMenu* k_xmlguiwindow_create_popup_menu(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_create_popup_menu` instead
+///
+#define k_xmlguiwindow_qbase_create_popup_menu k_xmlguiwindow_super_create_popup_menu
+
 /// Inherited from QMainWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#createPopupMenu)
@@ -4770,7 +4854,7 @@ QMenu* k_xmlguiwindow_create_popup_menu(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QMenu* k_xmlguiwindow_qbase_create_popup_menu(void* self);
+QMenu* k_xmlguiwindow_super_create_popup_menu(void* self);
 
 /// Inherited from QMainWindow
 ///
@@ -4794,6 +4878,10 @@ void k_xmlguiwindow_on_create_popup_menu(void* self, QMenu* (*callback)());
 ///
 void k_xmlguiwindow_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_context_menu_event` instead
+///
+#define k_xmlguiwindow_qbase_context_menu_event k_xmlguiwindow_super_context_menu_event
+
 /// Inherited from QMainWindow
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmainwindow.html#contextMenuEvent)
@@ -4803,7 +4891,7 @@ void k_xmlguiwindow_context_menu_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QContextMenuEvent*
 ///
-void k_xmlguiwindow_qbase_context_menu_event(void* self, void* event);
+void k_xmlguiwindow_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QMainWindow
 ///
@@ -4826,6 +4914,10 @@ void k_xmlguiwindow_on_context_menu_event(void* self, void (*callback)(void*, vo
 ///
 int32_t k_xmlguiwindow_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_dev_type` instead
+///
+#define k_xmlguiwindow_qbase_dev_type k_xmlguiwindow_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4834,7 +4926,7 @@ int32_t k_xmlguiwindow_dev_type(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-int32_t k_xmlguiwindow_qbase_dev_type(void* self);
+int32_t k_xmlguiwindow_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4858,6 +4950,10 @@ void k_xmlguiwindow_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_xmlguiwindow_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_visible` instead
+///
+#define k_xmlguiwindow_qbase_set_visible k_xmlguiwindow_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4867,7 +4963,7 @@ void k_xmlguiwindow_set_visible(void* self, bool visible);
 /// @param self KXmlGuiWindow*
 /// @param visible bool
 ///
-void k_xmlguiwindow_qbase_set_visible(void* self, bool visible);
+void k_xmlguiwindow_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -4890,6 +4986,10 @@ void k_xmlguiwindow_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_xmlguiwindow_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_size_hint` instead
+///
+#define k_xmlguiwindow_qbase_size_hint k_xmlguiwindow_super_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sizeHint)
@@ -4898,7 +4998,7 @@ QSize* k_xmlguiwindow_size_hint(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QSize* k_xmlguiwindow_qbase_size_hint(void* self);
+QSize* k_xmlguiwindow_super_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4921,6 +5021,10 @@ void k_xmlguiwindow_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_xmlguiwindow_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_minimum_size_hint` instead
+///
+#define k_xmlguiwindow_qbase_minimum_size_hint k_xmlguiwindow_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -4929,7 +5033,7 @@ QSize* k_xmlguiwindow_minimum_size_hint(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QSize* k_xmlguiwindow_qbase_minimum_size_hint(void* self);
+QSize* k_xmlguiwindow_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4953,6 +5057,10 @@ void k_xmlguiwindow_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_xmlguiwindow_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_height_for_width` instead
+///
+#define k_xmlguiwindow_qbase_height_for_width k_xmlguiwindow_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4962,7 +5070,7 @@ int32_t k_xmlguiwindow_height_for_width(void* self, int param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 int
 ///
-int32_t k_xmlguiwindow_qbase_height_for_width(void* self, int param1);
+int32_t k_xmlguiwindow_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4985,6 +5093,10 @@ void k_xmlguiwindow_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool k_xmlguiwindow_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_has_height_for_width` instead
+///
+#define k_xmlguiwindow_qbase_has_height_for_width k_xmlguiwindow_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4993,7 +5105,7 @@ bool k_xmlguiwindow_has_height_for_width(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-bool k_xmlguiwindow_qbase_has_height_for_width(void* self);
+bool k_xmlguiwindow_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5016,6 +5128,10 @@ void k_xmlguiwindow_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_xmlguiwindow_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_paint_engine` instead
+///
+#define k_xmlguiwindow_qbase_paint_engine k_xmlguiwindow_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -5024,7 +5140,7 @@ QPaintEngine* k_xmlguiwindow_paint_engine(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QPaintEngine* k_xmlguiwindow_qbase_paint_engine(void* self);
+QPaintEngine* k_xmlguiwindow_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5048,6 +5164,10 @@ void k_xmlguiwindow_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_xmlguiwindow_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_mouse_press_event` instead
+///
+#define k_xmlguiwindow_qbase_mouse_press_event k_xmlguiwindow_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -5057,7 +5177,7 @@ void k_xmlguiwindow_mouse_press_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QMouseEvent*
 ///
-void k_xmlguiwindow_qbase_mouse_press_event(void* self, void* event);
+void k_xmlguiwindow_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5081,6 +5201,10 @@ void k_xmlguiwindow_on_mouse_press_event(void* self, void (*callback)(void*, voi
 ///
 void k_xmlguiwindow_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_mouse_release_event` instead
+///
+#define k_xmlguiwindow_qbase_mouse_release_event k_xmlguiwindow_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -5090,7 +5214,7 @@ void k_xmlguiwindow_mouse_release_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QMouseEvent*
 ///
-void k_xmlguiwindow_qbase_mouse_release_event(void* self, void* event);
+void k_xmlguiwindow_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5114,6 +5238,10 @@ void k_xmlguiwindow_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void k_xmlguiwindow_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_mouse_double_click_event` instead
+///
+#define k_xmlguiwindow_qbase_mouse_double_click_event k_xmlguiwindow_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -5123,7 +5251,7 @@ void k_xmlguiwindow_mouse_double_click_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QMouseEvent*
 ///
-void k_xmlguiwindow_qbase_mouse_double_click_event(void* self, void* event);
+void k_xmlguiwindow_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5147,6 +5275,10 @@ void k_xmlguiwindow_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void k_xmlguiwindow_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_mouse_move_event` instead
+///
+#define k_xmlguiwindow_qbase_mouse_move_event k_xmlguiwindow_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -5156,7 +5288,7 @@ void k_xmlguiwindow_mouse_move_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QMouseEvent*
 ///
-void k_xmlguiwindow_qbase_mouse_move_event(void* self, void* event);
+void k_xmlguiwindow_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5180,6 +5312,10 @@ void k_xmlguiwindow_on_mouse_move_event(void* self, void (*callback)(void*, void
 ///
 void k_xmlguiwindow_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_wheel_event` instead
+///
+#define k_xmlguiwindow_qbase_wheel_event k_xmlguiwindow_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -5189,7 +5325,7 @@ void k_xmlguiwindow_wheel_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QWheelEvent*
 ///
-void k_xmlguiwindow_qbase_wheel_event(void* self, void* event);
+void k_xmlguiwindow_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5213,6 +5349,10 @@ void k_xmlguiwindow_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_key_release_event` instead
+///
+#define k_xmlguiwindow_qbase_key_release_event k_xmlguiwindow_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -5222,7 +5362,7 @@ void k_xmlguiwindow_key_release_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QKeyEvent*
 ///
-void k_xmlguiwindow_qbase_key_release_event(void* self, void* event);
+void k_xmlguiwindow_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5246,6 +5386,10 @@ void k_xmlguiwindow_on_key_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_xmlguiwindow_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_focus_in_event` instead
+///
+#define k_xmlguiwindow_qbase_focus_in_event k_xmlguiwindow_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -5255,7 +5399,7 @@ void k_xmlguiwindow_focus_in_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QFocusEvent*
 ///
-void k_xmlguiwindow_qbase_focus_in_event(void* self, void* event);
+void k_xmlguiwindow_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5279,6 +5423,10 @@ void k_xmlguiwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)
 ///
 void k_xmlguiwindow_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_focus_out_event` instead
+///
+#define k_xmlguiwindow_qbase_focus_out_event k_xmlguiwindow_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -5288,7 +5436,7 @@ void k_xmlguiwindow_focus_out_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QFocusEvent*
 ///
-void k_xmlguiwindow_qbase_focus_out_event(void* self, void* event);
+void k_xmlguiwindow_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5312,6 +5460,10 @@ void k_xmlguiwindow_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 void k_xmlguiwindow_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_enter_event` instead
+///
+#define k_xmlguiwindow_qbase_enter_event k_xmlguiwindow_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -5321,7 +5473,7 @@ void k_xmlguiwindow_enter_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QEnterEvent*
 ///
-void k_xmlguiwindow_qbase_enter_event(void* self, void* event);
+void k_xmlguiwindow_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5345,6 +5497,10 @@ void k_xmlguiwindow_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_leave_event` instead
+///
+#define k_xmlguiwindow_qbase_leave_event k_xmlguiwindow_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5354,7 +5510,7 @@ void k_xmlguiwindow_leave_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QEvent*
 ///
-void k_xmlguiwindow_qbase_leave_event(void* self, void* event);
+void k_xmlguiwindow_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5378,6 +5534,10 @@ void k_xmlguiwindow_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_paint_event` instead
+///
+#define k_xmlguiwindow_qbase_paint_event k_xmlguiwindow_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -5387,7 +5547,7 @@ void k_xmlguiwindow_paint_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QPaintEvent*
 ///
-void k_xmlguiwindow_qbase_paint_event(void* self, void* event);
+void k_xmlguiwindow_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5411,6 +5571,10 @@ void k_xmlguiwindow_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_move_event` instead
+///
+#define k_xmlguiwindow_qbase_move_event k_xmlguiwindow_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5420,7 +5584,7 @@ void k_xmlguiwindow_move_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QMoveEvent*
 ///
-void k_xmlguiwindow_qbase_move_event(void* self, void* event);
+void k_xmlguiwindow_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5444,6 +5608,10 @@ void k_xmlguiwindow_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_resize_event` instead
+///
+#define k_xmlguiwindow_qbase_resize_event k_xmlguiwindow_super_resize_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -5453,7 +5621,7 @@ void k_xmlguiwindow_resize_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QResizeEvent*
 ///
-void k_xmlguiwindow_qbase_resize_event(void* self, void* event);
+void k_xmlguiwindow_super_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5477,6 +5645,10 @@ void k_xmlguiwindow_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_tablet_event` instead
+///
+#define k_xmlguiwindow_qbase_tablet_event k_xmlguiwindow_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -5486,7 +5658,7 @@ void k_xmlguiwindow_tablet_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QTabletEvent*
 ///
-void k_xmlguiwindow_qbase_tablet_event(void* self, void* event);
+void k_xmlguiwindow_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5510,6 +5682,10 @@ void k_xmlguiwindow_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_action_event` instead
+///
+#define k_xmlguiwindow_qbase_action_event k_xmlguiwindow_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5519,7 +5695,7 @@ void k_xmlguiwindow_action_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QActionEvent*
 ///
-void k_xmlguiwindow_qbase_action_event(void* self, void* event);
+void k_xmlguiwindow_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5543,6 +5719,10 @@ void k_xmlguiwindow_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_drag_enter_event` instead
+///
+#define k_xmlguiwindow_qbase_drag_enter_event k_xmlguiwindow_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -5552,7 +5732,7 @@ void k_xmlguiwindow_drag_enter_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QDragEnterEvent*
 ///
-void k_xmlguiwindow_qbase_drag_enter_event(void* self, void* event);
+void k_xmlguiwindow_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5576,6 +5756,10 @@ void k_xmlguiwindow_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void k_xmlguiwindow_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_drag_move_event` instead
+///
+#define k_xmlguiwindow_qbase_drag_move_event k_xmlguiwindow_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -5585,7 +5769,7 @@ void k_xmlguiwindow_drag_move_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QDragMoveEvent*
 ///
-void k_xmlguiwindow_qbase_drag_move_event(void* self, void* event);
+void k_xmlguiwindow_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5609,6 +5793,10 @@ void k_xmlguiwindow_on_drag_move_event(void* self, void (*callback)(void*, void*
 ///
 void k_xmlguiwindow_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_drag_leave_event` instead
+///
+#define k_xmlguiwindow_qbase_drag_leave_event k_xmlguiwindow_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5618,7 +5806,7 @@ void k_xmlguiwindow_drag_leave_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QDragLeaveEvent*
 ///
-void k_xmlguiwindow_qbase_drag_leave_event(void* self, void* event);
+void k_xmlguiwindow_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5642,6 +5830,10 @@ void k_xmlguiwindow_on_drag_leave_event(void* self, void (*callback)(void*, void
 ///
 void k_xmlguiwindow_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_drop_event` instead
+///
+#define k_xmlguiwindow_qbase_drop_event k_xmlguiwindow_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -5651,7 +5843,7 @@ void k_xmlguiwindow_drop_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QDropEvent*
 ///
-void k_xmlguiwindow_qbase_drop_event(void* self, void* event);
+void k_xmlguiwindow_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5675,6 +5867,10 @@ void k_xmlguiwindow_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_show_event` instead
+///
+#define k_xmlguiwindow_qbase_show_event k_xmlguiwindow_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -5684,7 +5880,7 @@ void k_xmlguiwindow_show_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QShowEvent*
 ///
-void k_xmlguiwindow_qbase_show_event(void* self, void* event);
+void k_xmlguiwindow_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5708,6 +5904,10 @@ void k_xmlguiwindow_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_hide_event` instead
+///
+#define k_xmlguiwindow_qbase_hide_event k_xmlguiwindow_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -5717,7 +5917,7 @@ void k_xmlguiwindow_hide_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QHideEvent*
 ///
-void k_xmlguiwindow_qbase_hide_event(void* self, void* event);
+void k_xmlguiwindow_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5743,6 +5943,10 @@ void k_xmlguiwindow_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_xmlguiwindow_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_native_event` instead
+///
+#define k_xmlguiwindow_qbase_native_event k_xmlguiwindow_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5754,7 +5958,7 @@ bool k_xmlguiwindow_native_event(void* self, char* eventType, void* message, int
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_xmlguiwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_xmlguiwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5778,6 +5982,10 @@ void k_xmlguiwindow_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 void k_xmlguiwindow_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_change_event` instead
+///
+#define k_xmlguiwindow_qbase_change_event k_xmlguiwindow_super_change_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -5787,7 +5995,7 @@ void k_xmlguiwindow_change_event(void* self, void* param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 QEvent*
 ///
-void k_xmlguiwindow_qbase_change_event(void* self, void* param1);
+void k_xmlguiwindow_super_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5811,6 +6019,10 @@ void k_xmlguiwindow_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t k_xmlguiwindow_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_metric` instead
+///
+#define k_xmlguiwindow_qbase_metric k_xmlguiwindow_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5820,7 +6032,7 @@ int32_t k_xmlguiwindow_metric(void* self, int32_t param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_xmlguiwindow_qbase_metric(void* self, int32_t param1);
+int32_t k_xmlguiwindow_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5844,6 +6056,10 @@ void k_xmlguiwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_xmlguiwindow_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_init_painter` instead
+///
+#define k_xmlguiwindow_qbase_init_painter k_xmlguiwindow_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5853,7 +6069,7 @@ void k_xmlguiwindow_init_painter(void* self, void* painter);
 /// @param self KXmlGuiWindow*
 /// @param painter QPainter*
 ///
-void k_xmlguiwindow_qbase_init_painter(void* self, void* painter);
+void k_xmlguiwindow_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5877,6 +6093,10 @@ void k_xmlguiwindow_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_xmlguiwindow_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_redirected` instead
+///
+#define k_xmlguiwindow_qbase_redirected k_xmlguiwindow_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5886,7 +6106,7 @@ QPaintDevice* k_xmlguiwindow_redirected(void* self, void* offset);
 /// @param self KXmlGuiWindow*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_xmlguiwindow_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_xmlguiwindow_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5909,6 +6129,10 @@ void k_xmlguiwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* k_xmlguiwindow_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_shared_painter` instead
+///
+#define k_xmlguiwindow_qbase_shared_painter k_xmlguiwindow_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5917,7 +6141,7 @@ QPainter* k_xmlguiwindow_shared_painter(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QPainter* k_xmlguiwindow_qbase_shared_painter(void* self);
+QPainter* k_xmlguiwindow_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5941,6 +6165,10 @@ void k_xmlguiwindow_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_xmlguiwindow_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_input_method_event` instead
+///
+#define k_xmlguiwindow_qbase_input_method_event k_xmlguiwindow_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5950,7 +6178,7 @@ void k_xmlguiwindow_input_method_event(void* self, void* param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 QInputMethodEvent*
 ///
-void k_xmlguiwindow_qbase_input_method_event(void* self, void* param1);
+void k_xmlguiwindow_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5974,6 +6202,10 @@ void k_xmlguiwindow_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 QVariant* k_xmlguiwindow_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_input_method_query` instead
+///
+#define k_xmlguiwindow_qbase_input_method_query k_xmlguiwindow_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -5983,7 +6215,7 @@ QVariant* k_xmlguiwindow_input_method_query(void* self, int32_t param1);
 /// @param self KXmlGuiWindow*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_xmlguiwindow_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_xmlguiwindow_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -6007,6 +6239,10 @@ void k_xmlguiwindow_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 bool k_xmlguiwindow_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_focus_next_prev_child` instead
+///
+#define k_xmlguiwindow_qbase_focus_next_prev_child k_xmlguiwindow_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -6016,7 +6252,7 @@ bool k_xmlguiwindow_focus_next_prev_child(void* self, bool next);
 /// @param self KXmlGuiWindow*
 /// @param next bool
 ///
-bool k_xmlguiwindow_qbase_focus_next_prev_child(void* self, bool next);
+bool k_xmlguiwindow_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -6041,6 +6277,10 @@ void k_xmlguiwindow_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 ///
 bool k_xmlguiwindow_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_event_filter` instead
+///
+#define k_xmlguiwindow_qbase_event_filter k_xmlguiwindow_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -6051,7 +6291,7 @@ bool k_xmlguiwindow_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_xmlguiwindow_qbase_event_filter(void* self, void* watched, void* event);
+bool k_xmlguiwindow_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -6075,6 +6315,10 @@ void k_xmlguiwindow_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void k_xmlguiwindow_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_timer_event` instead
+///
+#define k_xmlguiwindow_qbase_timer_event k_xmlguiwindow_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -6084,7 +6328,7 @@ void k_xmlguiwindow_timer_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QTimerEvent*
 ///
-void k_xmlguiwindow_qbase_timer_event(void* self, void* event);
+void k_xmlguiwindow_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6108,6 +6352,10 @@ void k_xmlguiwindow_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_child_event` instead
+///
+#define k_xmlguiwindow_qbase_child_event k_xmlguiwindow_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6117,7 +6365,7 @@ void k_xmlguiwindow_child_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QChildEvent*
 ///
-void k_xmlguiwindow_qbase_child_event(void* self, void* event);
+void k_xmlguiwindow_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6141,6 +6389,10 @@ void k_xmlguiwindow_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_custom_event` instead
+///
+#define k_xmlguiwindow_qbase_custom_event k_xmlguiwindow_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6150,7 +6402,7 @@ void k_xmlguiwindow_custom_event(void* self, void* event);
 /// @param self KXmlGuiWindow*
 /// @param event QEvent*
 ///
-void k_xmlguiwindow_qbase_custom_event(void* self, void* event);
+void k_xmlguiwindow_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6174,6 +6426,10 @@ void k_xmlguiwindow_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_xmlguiwindow_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_connect_notify` instead
+///
+#define k_xmlguiwindow_qbase_connect_notify k_xmlguiwindow_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6183,7 +6439,7 @@ void k_xmlguiwindow_connect_notify(void* self, void* signal);
 /// @param self KXmlGuiWindow*
 /// @param signal QMetaMethod*
 ///
-void k_xmlguiwindow_qbase_connect_notify(void* self, void* signal);
+void k_xmlguiwindow_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6207,6 +6463,10 @@ void k_xmlguiwindow_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_xmlguiwindow_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_disconnect_notify` instead
+///
+#define k_xmlguiwindow_qbase_disconnect_notify k_xmlguiwindow_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6216,7 +6476,7 @@ void k_xmlguiwindow_disconnect_notify(void* self, void* signal);
 /// @param self KXmlGuiWindow*
 /// @param signal QMetaMethod*
 ///
-void k_xmlguiwindow_qbase_disconnect_notify(void* self, void* signal);
+void k_xmlguiwindow_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6241,6 +6501,10 @@ void k_xmlguiwindow_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 const char** k_xmlguiwindow_container_tags(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_container_tags` instead
+///
+#define k_xmlguiwindow_qbase_container_tags k_xmlguiwindow_super_container_tags
+
 /// Inherited from KXMLGUIBuilder
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
@@ -6251,7 +6515,7 @@ const char** k_xmlguiwindow_container_tags(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-const char** k_xmlguiwindow_qbase_container_tags(void* self);
+const char** k_xmlguiwindow_super_container_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6278,6 +6542,10 @@ void k_xmlguiwindow_on_container_tags(void* self, const char** (*callback)());
 ///
 QWidget* k_xmlguiwindow_create_container(void* self, void* parent, int index, void* element, void** containerAction);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_create_container` instead
+///
+#define k_xmlguiwindow_qbase_create_container k_xmlguiwindow_super_create_container
+
 /// Inherited from KXMLGUIBuilder
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
@@ -6290,7 +6558,7 @@ QWidget* k_xmlguiwindow_create_container(void* self, void* parent, int index, vo
 /// @param element QDomElement*
 /// @param containerAction QAction**
 ///
-QWidget* k_xmlguiwindow_qbase_create_container(void* self, void* parent, int index, void* element, void** containerAction);
+QWidget* k_xmlguiwindow_super_create_container(void* self, void* parent, int index, void* element, void** containerAction);
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6317,6 +6585,10 @@ void k_xmlguiwindow_on_create_container(void* self, QWidget* (*callback)(void*, 
 ///
 void k_xmlguiwindow_remove_container(void* self, void* container, void* parent, void* element, void* containerAction);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_remove_container` instead
+///
+#define k_xmlguiwindow_qbase_remove_container k_xmlguiwindow_super_remove_container
+
 /// Inherited from KXMLGUIBuilder
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
@@ -6329,7 +6601,7 @@ void k_xmlguiwindow_remove_container(void* self, void* container, void* parent, 
 /// @param element QDomElement*
 /// @param containerAction QAction*
 ///
-void k_xmlguiwindow_qbase_remove_container(void* self, void* container, void* parent, void* element, void* containerAction);
+void k_xmlguiwindow_super_remove_container(void* self, void* container, void* parent, void* element, void* containerAction);
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6354,6 +6626,10 @@ void k_xmlguiwindow_on_remove_container(void* self, void (*callback)(void*, void
 ///
 const char** k_xmlguiwindow_custom_tags(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_custom_tags` instead
+///
+#define k_xmlguiwindow_qbase_custom_tags k_xmlguiwindow_super_custom_tags
+
 /// Inherited from KXMLGUIBuilder
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
@@ -6364,7 +6640,7 @@ const char** k_xmlguiwindow_custom_tags(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-const char** k_xmlguiwindow_qbase_custom_tags(void* self);
+const char** k_xmlguiwindow_super_custom_tags(void* self);
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6390,6 +6666,10 @@ void k_xmlguiwindow_on_custom_tags(void* self, const char** (*callback)());
 ///
 QAction* k_xmlguiwindow_create_custom_element(void* self, void* parent, int index, void* element);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_create_custom_element` instead
+///
+#define k_xmlguiwindow_qbase_create_custom_element k_xmlguiwindow_super_create_custom_element
+
 /// Inherited from KXMLGUIBuilder
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
@@ -6401,7 +6681,7 @@ QAction* k_xmlguiwindow_create_custom_element(void* self, void* parent, int inde
 /// @param index int
 /// @param element QDomElement*
 ///
-QAction* k_xmlguiwindow_qbase_create_custom_element(void* self, void* parent, int index, void* element);
+QAction* k_xmlguiwindow_super_create_custom_element(void* self, void* parent, int index, void* element);
 
 /// Inherited from KXMLGUIBuilder
 ///
@@ -6425,6 +6705,10 @@ void k_xmlguiwindow_on_create_custom_element(void* self, QAction* (*callback)(vo
 ///
 QAction* k_xmlguiwindow_action2(void* self, void* element);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_action2` instead
+///
+#define k_xmlguiwindow_qbase_action2 k_xmlguiwindow_super_action2
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#action)
@@ -6434,7 +6718,7 @@ QAction* k_xmlguiwindow_action2(void* self, void* element);
 /// @param self KXmlGuiWindow*
 /// @param element QDomElement*
 ///
-QAction* k_xmlguiwindow_qbase_action2(void* self, void* element);
+QAction* k_xmlguiwindow_super_action2(void* self, void* element);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6457,6 +6741,10 @@ void k_xmlguiwindow_on_action2(void* self, QAction* (*callback)(void*, void*));
 ///
 KActionCollection* k_xmlguiwindow_action_collection(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_action_collection` instead
+///
+#define k_xmlguiwindow_qbase_action_collection k_xmlguiwindow_super_action_collection
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#actionCollection)
@@ -6465,7 +6753,7 @@ KActionCollection* k_xmlguiwindow_action_collection(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-KActionCollection* k_xmlguiwindow_qbase_action_collection(void* self);
+KActionCollection* k_xmlguiwindow_super_action_collection(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6490,6 +6778,10 @@ void k_xmlguiwindow_on_action_collection(void* self, KActionCollection* (*callba
 ///
 const char* k_xmlguiwindow_component_name(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_component_name` instead
+///
+#define k_xmlguiwindow_qbase_component_name k_xmlguiwindow_super_component_name
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#componentName)
@@ -6500,7 +6792,7 @@ const char* k_xmlguiwindow_component_name(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-const char* k_xmlguiwindow_qbase_component_name(void* self);
+const char* k_xmlguiwindow_super_component_name(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6523,6 +6815,10 @@ void k_xmlguiwindow_on_component_name(void* self, const char* (*callback)());
 ///
 QDomDocument* k_xmlguiwindow_dom_document(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_dom_document` instead
+///
+#define k_xmlguiwindow_qbase_dom_document k_xmlguiwindow_super_dom_document
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#domDocument)
@@ -6531,7 +6827,7 @@ QDomDocument* k_xmlguiwindow_dom_document(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QDomDocument* k_xmlguiwindow_qbase_dom_document(void* self);
+QDomDocument* k_xmlguiwindow_super_dom_document(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6556,6 +6852,10 @@ void k_xmlguiwindow_on_dom_document(void* self, QDomDocument* (*callback)());
 ///
 const char* k_xmlguiwindow_xml_file(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_xml_file` instead
+///
+#define k_xmlguiwindow_qbase_xml_file k_xmlguiwindow_super_xml_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#xmlFile)
@@ -6566,7 +6866,7 @@ const char* k_xmlguiwindow_xml_file(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-const char* k_xmlguiwindow_qbase_xml_file(void* self);
+const char* k_xmlguiwindow_super_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6591,6 +6891,10 @@ void k_xmlguiwindow_on_xml_file(void* self, const char* (*callback)());
 ///
 const char* k_xmlguiwindow_local_x_m_l_file(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_local_x_m_l_file` instead
+///
+#define k_xmlguiwindow_qbase_local_x_m_l_file k_xmlguiwindow_super_local_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#localXMLFile)
@@ -6601,7 +6905,7 @@ const char* k_xmlguiwindow_local_x_m_l_file(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-const char* k_xmlguiwindow_qbase_local_x_m_l_file(void* self);
+const char* k_xmlguiwindow_super_local_x_m_l_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6626,6 +6930,10 @@ void k_xmlguiwindow_on_local_x_m_l_file(void* self, const char* (*callback)());
 ///
 void k_xmlguiwindow_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_component_name` instead
+///
+#define k_xmlguiwindow_qbase_set_component_name k_xmlguiwindow_super_set_component_name
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setComponentName)
@@ -6636,7 +6944,7 @@ void k_xmlguiwindow_set_component_name(void* self, const char* componentName, co
 /// @param componentName const char*
 /// @param componentDisplayName const char*
 ///
-void k_xmlguiwindow_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
+void k_xmlguiwindow_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6662,6 +6970,10 @@ void k_xmlguiwindow_on_set_component_name(void* self, void (*callback)(void*, co
 ///
 void k_xmlguiwindow_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_x_m_l_file` instead
+///
+#define k_xmlguiwindow_qbase_set_x_m_l_file k_xmlguiwindow_super_set_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXMLFile)
@@ -6673,7 +6985,7 @@ void k_xmlguiwindow_set_x_m_l_file(void* self, const char* file, bool merge, boo
 /// @param merge bool
 /// @param setXMLDoc bool
 ///
-void k_xmlguiwindow_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
+void k_xmlguiwindow_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6697,6 +7009,10 @@ void k_xmlguiwindow_on_set_x_m_l_file(void* self, void (*callback)(void*, const 
 ///
 void k_xmlguiwindow_set_local_x_m_l_file(void* self, const char* file);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_local_x_m_l_file` instead
+///
+#define k_xmlguiwindow_qbase_set_local_x_m_l_file k_xmlguiwindow_super_set_local_x_m_l_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setLocalXMLFile)
@@ -6706,7 +7022,7 @@ void k_xmlguiwindow_set_local_x_m_l_file(void* self, const char* file);
 /// @param self KXmlGuiWindow*
 /// @param file const char*
 ///
-void k_xmlguiwindow_qbase_set_local_x_m_l_file(void* self, const char* file);
+void k_xmlguiwindow_super_set_local_x_m_l_file(void* self, const char* file);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6731,6 +7047,10 @@ void k_xmlguiwindow_on_set_local_x_m_l_file(void* self, void (*callback)(void*, 
 ///
 void k_xmlguiwindow_set_x_m_l(void* self, const char* document, bool merge);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_x_m_l` instead
+///
+#define k_xmlguiwindow_qbase_set_x_m_l k_xmlguiwindow_super_set_x_m_l
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setXML)
@@ -6741,7 +7061,7 @@ void k_xmlguiwindow_set_x_m_l(void* self, const char* document, bool merge);
 /// @param document const char*
 /// @param merge bool
 ///
-void k_xmlguiwindow_qbase_set_x_m_l(void* self, const char* document, bool merge);
+void k_xmlguiwindow_super_set_x_m_l(void* self, const char* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6766,6 +7086,10 @@ void k_xmlguiwindow_on_set_x_m_l(void* self, void (*callback)(void*, const char*
 ///
 void k_xmlguiwindow_set_d_o_m_document(void* self, void* document, bool merge);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_set_d_o_m_document` instead
+///
+#define k_xmlguiwindow_qbase_set_d_o_m_document k_xmlguiwindow_super_set_d_o_m_document
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#setDOMDocument)
@@ -6776,7 +7100,7 @@ void k_xmlguiwindow_set_d_o_m_document(void* self, void* document, bool merge);
 /// @param document QDomDocument*
 /// @param merge bool
 ///
-void k_xmlguiwindow_qbase_set_d_o_m_document(void* self, void* document, bool merge);
+void k_xmlguiwindow_super_set_d_o_m_document(void* self, void* document, bool merge);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6801,6 +7125,10 @@ void k_xmlguiwindow_on_set_d_o_m_document(void* self, void (*callback)(void*, vo
 ///
 void k_xmlguiwindow_state_changed(void* self, const char* newstate, int32_t reverse);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_state_changed` instead
+///
+#define k_xmlguiwindow_qbase_state_changed k_xmlguiwindow_super_state_changed
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#stateChanged)
@@ -6811,7 +7139,7 @@ void k_xmlguiwindow_state_changed(void* self, const char* newstate, int32_t reve
 /// @param newstate const char*
 /// @param reverse enum KXMLGUIClient__ReverseStateChange
 ///
-void k_xmlguiwindow_qbase_state_changed(void* self, const char* newstate, int32_t reverse);
+void k_xmlguiwindow_super_state_changed(void* self, const char* newstate, int32_t reverse);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -6836,6 +7164,10 @@ void k_xmlguiwindow_on_state_changed(void* self, void (*callback)(void*, const c
 ///
 void k_xmlguiwindow_save_properties_internal(void* self, void* param1, int param2);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_save_properties_internal` instead
+///
+#define k_xmlguiwindow_qbase_save_properties_internal k_xmlguiwindow_super_save_properties_internal
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#savePropertiesInternal)
@@ -6846,7 +7178,7 @@ void k_xmlguiwindow_save_properties_internal(void* self, void* param1, int param
 /// @param param1 KConfig*
 /// @param param2 int
 ///
-void k_xmlguiwindow_qbase_save_properties_internal(void* self, void* param1, int param2);
+void k_xmlguiwindow_super_save_properties_internal(void* self, void* param1, int param2);
 
 /// Inherited from KMainWindow
 ///
@@ -6871,6 +7203,10 @@ void k_xmlguiwindow_on_save_properties_internal(void* self, void (*callback)(voi
 ///
 bool k_xmlguiwindow_read_properties_internal(void* self, void* param1, int param2);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_read_properties_internal` instead
+///
+#define k_xmlguiwindow_qbase_read_properties_internal k_xmlguiwindow_super_read_properties_internal
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#readPropertiesInternal)
@@ -6881,7 +7217,7 @@ bool k_xmlguiwindow_read_properties_internal(void* self, void* param1, int param
 /// @param param1 KConfig*
 /// @param param2 int
 ///
-bool k_xmlguiwindow_qbase_read_properties_internal(void* self, void* param1, int param2);
+bool k_xmlguiwindow_super_read_properties_internal(void* self, void* param1, int param2);
 
 /// Inherited from KMainWindow
 ///
@@ -6904,6 +7240,10 @@ void k_xmlguiwindow_on_read_properties_internal(void* self, bool (*callback)(voi
 ///
 bool k_xmlguiwindow_settings_dirty(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_settings_dirty` instead
+///
+#define k_xmlguiwindow_qbase_settings_dirty k_xmlguiwindow_super_settings_dirty
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#settingsDirty)
@@ -6912,7 +7252,7 @@ bool k_xmlguiwindow_settings_dirty(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-bool k_xmlguiwindow_qbase_settings_dirty(void* self);
+bool k_xmlguiwindow_super_settings_dirty(void* self);
 
 /// Inherited from KMainWindow
 ///
@@ -6935,6 +7275,10 @@ void k_xmlguiwindow_on_settings_dirty(void* self, bool (*callback)());
 ///
 void k_xmlguiwindow_save_auto_save_settings(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_save_auto_save_settings` instead
+///
+#define k_xmlguiwindow_qbase_save_auto_save_settings k_xmlguiwindow_super_save_auto_save_settings
+
 /// Inherited from KMainWindow
 ///
 /// [Upstream resources](https://api.kde.org/kmainwindow.html#saveAutoSaveSettings)
@@ -6943,7 +7287,7 @@ void k_xmlguiwindow_save_auto_save_settings(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_save_auto_save_settings(void* self);
+void k_xmlguiwindow_super_save_auto_save_settings(void* self);
 
 /// Inherited from KMainWindow
 ///
@@ -6966,6 +7310,10 @@ void k_xmlguiwindow_on_save_auto_save_settings(void* self, void (*callback)());
 ///
 void k_xmlguiwindow_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_update_micro_focus` instead
+///
+#define k_xmlguiwindow_qbase_update_micro_focus k_xmlguiwindow_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6974,7 +7322,7 @@ void k_xmlguiwindow_update_micro_focus(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_update_micro_focus(void* self);
+void k_xmlguiwindow_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6997,6 +7345,10 @@ void k_xmlguiwindow_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_xmlguiwindow_create(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_create` instead
+///
+#define k_xmlguiwindow_qbase_create k_xmlguiwindow_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -7005,7 +7357,7 @@ void k_xmlguiwindow_create(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_create(void* self);
+void k_xmlguiwindow_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7028,6 +7380,10 @@ void k_xmlguiwindow_on_create(void* self, void (*callback)());
 ///
 void k_xmlguiwindow_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_destroy` instead
+///
+#define k_xmlguiwindow_qbase_destroy k_xmlguiwindow_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -7036,7 +7392,7 @@ void k_xmlguiwindow_destroy(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_destroy(void* self);
+void k_xmlguiwindow_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7059,6 +7415,10 @@ void k_xmlguiwindow_on_destroy(void* self, void (*callback)());
 ///
 bool k_xmlguiwindow_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_focus_next_child` instead
+///
+#define k_xmlguiwindow_qbase_focus_next_child k_xmlguiwindow_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -7067,7 +7427,7 @@ bool k_xmlguiwindow_focus_next_child(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-bool k_xmlguiwindow_qbase_focus_next_child(void* self);
+bool k_xmlguiwindow_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7090,6 +7450,10 @@ void k_xmlguiwindow_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_xmlguiwindow_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_focus_previous_child` instead
+///
+#define k_xmlguiwindow_qbase_focus_previous_child k_xmlguiwindow_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -7098,7 +7462,7 @@ bool k_xmlguiwindow_focus_previous_child(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-bool k_xmlguiwindow_qbase_focus_previous_child(void* self);
+bool k_xmlguiwindow_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7121,6 +7485,10 @@ void k_xmlguiwindow_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_xmlguiwindow_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_sender` instead
+///
+#define k_xmlguiwindow_qbase_sender k_xmlguiwindow_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -7129,7 +7497,7 @@ QObject* k_xmlguiwindow_sender(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-QObject* k_xmlguiwindow_qbase_sender(void* self);
+QObject* k_xmlguiwindow_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -7152,6 +7520,10 @@ void k_xmlguiwindow_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_xmlguiwindow_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_sender_signal_index` instead
+///
+#define k_xmlguiwindow_qbase_sender_signal_index k_xmlguiwindow_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -7160,7 +7532,7 @@ int32_t k_xmlguiwindow_sender_signal_index(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-int32_t k_xmlguiwindow_qbase_sender_signal_index(void* self);
+int32_t k_xmlguiwindow_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -7184,6 +7556,10 @@ void k_xmlguiwindow_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_xmlguiwindow_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_receivers` instead
+///
+#define k_xmlguiwindow_qbase_receivers k_xmlguiwindow_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -7193,7 +7569,7 @@ int32_t k_xmlguiwindow_receivers(void* self, const char* signal);
 /// @param self KXmlGuiWindow*
 /// @param signal const char*
 ///
-int32_t k_xmlguiwindow_qbase_receivers(void* self, const char* signal);
+int32_t k_xmlguiwindow_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -7217,6 +7593,10 @@ void k_xmlguiwindow_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_xmlguiwindow_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_is_signal_connected` instead
+///
+#define k_xmlguiwindow_qbase_is_signal_connected k_xmlguiwindow_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -7226,7 +7606,7 @@ bool k_xmlguiwindow_is_signal_connected(void* self, void* signal);
 /// @param self KXmlGuiWindow*
 /// @param signal QMetaMethod*
 ///
-bool k_xmlguiwindow_qbase_is_signal_connected(void* self, void* signal);
+bool k_xmlguiwindow_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -7251,6 +7631,10 @@ void k_xmlguiwindow_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 double k_xmlguiwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_get_decoded_metric_f` instead
+///
+#define k_xmlguiwindow_qbase_get_decoded_metric_f k_xmlguiwindow_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -7261,7 +7645,7 @@ double k_xmlguiwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_xmlguiwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_xmlguiwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -7286,6 +7670,10 @@ void k_xmlguiwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*
 ///
 const char* k_xmlguiwindow_standards_xml_file_location(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_standards_xml_file_location` instead
+///
+#define k_xmlguiwindow_qbase_standards_xml_file_location k_xmlguiwindow_super_standards_xml_file_location
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#standardsXmlFileLocation)
@@ -7296,7 +7684,7 @@ const char* k_xmlguiwindow_standards_xml_file_location(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-const char* k_xmlguiwindow_qbase_standards_xml_file_location(void* self);
+const char* k_xmlguiwindow_super_standards_xml_file_location(void* self);
 
 /// Inherited from KXMLGUIClient
 ///
@@ -7319,6 +7707,10 @@ void k_xmlguiwindow_on_standards_xml_file_location(void* self, const char* (*cal
 ///
 void k_xmlguiwindow_load_standards_xml_file(void* self);
 
+/// @warning DEPRECATED: Use `k_xmlguiwindow_super_load_standards_xml_file` instead
+///
+#define k_xmlguiwindow_qbase_load_standards_xml_file k_xmlguiwindow_super_load_standards_xml_file
+
 /// Inherited from KXMLGUIClient
 ///
 /// [Upstream resources](https://api.kde.org/kxmlguiclient.html#loadStandardsXmlFile)
@@ -7327,7 +7719,7 @@ void k_xmlguiwindow_load_standards_xml_file(void* self);
 ///
 /// @param self KXmlGuiWindow*
 ///
-void k_xmlguiwindow_qbase_load_standards_xml_file(void* self);
+void k_xmlguiwindow_super_load_standards_xml_file(void* self);
 
 /// Inherited from KXMLGUIClient
 ///

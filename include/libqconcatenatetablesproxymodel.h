@@ -40,13 +40,17 @@ const QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self);
 ///
 void q_concatenatetablesproxymodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_meta_object` instead
+///
+#define q_concatenatetablesproxymodel_qbase_meta_object q_concatenatetablesproxymodel_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-const QMetaObject* q_concatenatetablesproxymodel_qbase_meta_object(void* self);
+const QMetaObject* q_concatenatetablesproxymodel_super_meta_object(void* self);
 
 /// @param self QConcatenateTablesProxyModel*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_concatenatetablesproxymodel_metacast(void* self, const char* param1);
 ///
 void q_concatenatetablesproxymodel_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_metacast` instead
+///
+#define q_concatenatetablesproxymodel_qbase_metacast q_concatenatetablesproxymodel_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param param1 const char*
 ///
-void* q_concatenatetablesproxymodel_qbase_metacast(void* self, const char* param1);
+void* q_concatenatetablesproxymodel_super_metacast(void* self, const char* param1);
 
 /// @param self QConcatenateTablesProxyModel*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_concatenatetablesproxymodel_metacall(void* self, int32_t param1, int p
 ///
 void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_metacall` instead
+///
+#define q_concatenatetablesproxymodel_qbase_metacall q_concatenatetablesproxymodel_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QConcatenateTablesProxyModel*
@@ -88,7 +100,7 @@ void q_concatenatetablesproxymodel_on_metacall(void* self, int32_t (*callback)(v
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_concatenatetablesproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_concatenatetablesproxymodel_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -151,6 +163,10 @@ QVariant* q_concatenatetablesproxymodel_data(void* self, void* index, int role);
 ///
 void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_data q_concatenatetablesproxymodel_super_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#data)
 ///
 /// Base class method implementation
@@ -159,7 +175,7 @@ void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*callback)(voi
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* q_concatenatetablesproxymodel_qbase_data(void* self, void* index, int role);
+QVariant* q_concatenatetablesproxymodel_super_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
 ///
@@ -179,6 +195,10 @@ bool q_concatenatetablesproxymodel_set_data(void* self, void* index, void* value
 ///
 void q_concatenatetablesproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_set_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_set_data q_concatenatetablesproxymodel_super_set_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setData)
 ///
 /// Base class method implementation
@@ -188,7 +208,7 @@ void q_concatenatetablesproxymodel_on_set_data(void* self, bool (*callback)(void
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_concatenatetablesproxymodel_qbase_set_data(void* self, void* index, void* value, int role);
+bool q_concatenatetablesproxymodel_super_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
 ///
@@ -219,6 +239,10 @@ libqt_map q_concatenatetablesproxymodel_item_data(void* self, void* proxyIndex);
 ///
 void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_item_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_item_data q_concatenatetablesproxymodel_super_item_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#itemData)
 ///
 /// Base class method implementation
@@ -228,7 +252,7 @@ void q_concatenatetablesproxymodel_on_item_data(void* self, libqt_map (*callback
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map q_concatenatetablesproxymodel_qbase_item_data(void* self, void* proxyIndex);
+libqt_map q_concatenatetablesproxymodel_super_item_data(void* self, void* proxyIndex);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
 ///
@@ -247,6 +271,10 @@ bool q_concatenatetablesproxymodel_set_item_data(void* self, void* index, libqt_
 ///
 void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libqt_map));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_set_item_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_set_item_data q_concatenatetablesproxymodel_super_set_item_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#setItemData)
 ///
 /// Base class method implementation
@@ -255,7 +283,7 @@ void q_concatenatetablesproxymodel_on_set_item_data(void* self, bool (*callback)
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool q_concatenatetablesproxymodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
+bool q_concatenatetablesproxymodel_super_set_item_data(void* self, void* index, libqt_map roles);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
 ///
@@ -275,6 +303,10 @@ int32_t q_concatenatetablesproxymodel_flags(void* self, void* index);
 ///
 void q_concatenatetablesproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_flags` instead
+///
+#define q_concatenatetablesproxymodel_qbase_flags q_concatenatetablesproxymodel_super_flags
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#flags)
 ///
 /// Base class method implementation
@@ -284,7 +316,7 @@ void q_concatenatetablesproxymodel_on_flags(void* self, int32_t (*callback)(void
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t q_concatenatetablesproxymodel_qbase_flags(void* self, void* index);
+int32_t q_concatenatetablesproxymodel_super_flags(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
 ///
@@ -304,6 +336,10 @@ QModelIndex* q_concatenatetablesproxymodel_index(void* self, int row, int column
 ///
 void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_index` instead
+///
+#define q_concatenatetablesproxymodel_qbase_index q_concatenatetablesproxymodel_super_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#index)
 ///
 /// Base class method implementation
@@ -313,7 +349,7 @@ void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*callback)
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* q_concatenatetablesproxymodel_qbase_index(void* self, int row, int column, void* parent);
+QModelIndex* q_concatenatetablesproxymodel_super_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
 ///
@@ -331,6 +367,10 @@ QModelIndex* q_concatenatetablesproxymodel_parent(void* self, void* index);
 ///
 void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_parent` instead
+///
+#define q_concatenatetablesproxymodel_qbase_parent q_concatenatetablesproxymodel_super_parent
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#parent)
 ///
 /// Base class method implementation
@@ -338,7 +378,7 @@ void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*callback
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_concatenatetablesproxymodel_qbase_parent(void* self, void* index);
+QModelIndex* q_concatenatetablesproxymodel_super_parent(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
 ///
@@ -356,6 +396,10 @@ int32_t q_concatenatetablesproxymodel_row_count(void* self, void* parent);
 ///
 void q_concatenatetablesproxymodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_row_count` instead
+///
+#define q_concatenatetablesproxymodel_qbase_row_count q_concatenatetablesproxymodel_super_row_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -363,7 +407,7 @@ void q_concatenatetablesproxymodel_on_row_count(void* self, int32_t (*callback)(
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_concatenatetablesproxymodel_qbase_row_count(void* self, void* parent);
+int32_t q_concatenatetablesproxymodel_super_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
 ///
@@ -383,6 +427,10 @@ QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int
 ///
 void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_header_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_header_data q_concatenatetablesproxymodel_super_header_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#headerData)
 ///
 /// Base class method implementation
@@ -392,7 +440,7 @@ void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callba
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* q_concatenatetablesproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* q_concatenatetablesproxymodel_super_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
 ///
@@ -410,6 +458,10 @@ int32_t q_concatenatetablesproxymodel_column_count(void* self, void* parent);
 ///
 void q_concatenatetablesproxymodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_column_count` instead
+///
+#define q_concatenatetablesproxymodel_qbase_column_count q_concatenatetablesproxymodel_super_column_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#columnCount)
 ///
 /// Base class method implementation
@@ -417,7 +469,7 @@ void q_concatenatetablesproxymodel_on_column_count(void* self, int32_t (*callbac
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
 ///
-int32_t q_concatenatetablesproxymodel_qbase_column_count(void* self, void* parent);
+int32_t q_concatenatetablesproxymodel_super_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
 ///
@@ -436,13 +488,17 @@ const char** q_concatenatetablesproxymodel_mime_types(void* self);
 ///
 void q_concatenatetablesproxymodel_on_mime_types(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_mime_types` instead
+///
+#define q_concatenatetablesproxymodel_qbase_mime_types q_concatenatetablesproxymodel_super_mime_types
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeTypes)
 ///
 /// Base class method implementation
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-const char** q_concatenatetablesproxymodel_qbase_mime_types(void* self);
+const char** q_concatenatetablesproxymodel_super_mime_types(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
@@ -460,6 +516,10 @@ QMimeData* q_concatenatetablesproxymodel_mime_data(void* self, libqt_list indexe
 ///
 void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_mime_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_mime_data q_concatenatetablesproxymodel_super_mime_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#mimeData)
 ///
 /// Base class method implementation
@@ -467,7 +527,7 @@ void q_concatenatetablesproxymodel_on_mime_data(void* self, QMimeData* (*callbac
 /// @param self QConcatenateTablesProxyModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* q_concatenatetablesproxymodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* q_concatenatetablesproxymodel_super_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
 ///
@@ -489,6 +549,10 @@ bool q_concatenatetablesproxymodel_can_drop_mime_data(void* self, void* data, in
 ///
 void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_can_drop_mime_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_can_drop_mime_data q_concatenatetablesproxymodel_super_can_drop_mime_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#canDropMimeData)
 ///
 /// Base class method implementation
@@ -500,7 +564,7 @@ void q_concatenatetablesproxymodel_on_can_drop_mime_data(void* self, bool (*call
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_concatenatetablesproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
 ///
@@ -522,6 +586,10 @@ bool q_concatenatetablesproxymodel_drop_mime_data(void* self, void* data, int32_
 ///
 void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_drop_mime_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_drop_mime_data q_concatenatetablesproxymodel_super_drop_mime_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -533,7 +601,7 @@ void q_concatenatetablesproxymodel_on_drop_mime_data(void* self, bool (*callback
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool q_concatenatetablesproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
 ///
@@ -551,6 +619,10 @@ QSize* q_concatenatetablesproxymodel_span(void* self, void* index);
 ///
 void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_span` instead
+///
+#define q_concatenatetablesproxymodel_qbase_span q_concatenatetablesproxymodel_super_span
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qconcatenatetablesproxymodel.html#span)
 ///
 /// Base class method implementation
@@ -558,7 +630,7 @@ void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*callback)(void*,
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 ///
-QSize* q_concatenatetablesproxymodel_qbase_span(void* self, void* index);
+QSize* q_concatenatetablesproxymodel_super_span(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1338,6 +1410,10 @@ void q_concatenatetablesproxymodel_on_destroyed1(void* self, void (*callback)(vo
 ///
 QModelIndex* q_concatenatetablesproxymodel_sibling(void* self, int row, int column, void* idx);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_sibling` instead
+///
+#define q_concatenatetablesproxymodel_qbase_sibling q_concatenatetablesproxymodel_super_sibling
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sibling)
@@ -1349,7 +1425,7 @@ QModelIndex* q_concatenatetablesproxymodel_sibling(void* self, int row, int colu
 /// @param column int
 /// @param idx QModelIndex*
 ///
-QModelIndex* q_concatenatetablesproxymodel_qbase_sibling(void* self, int row, int column, void* idx);
+QModelIndex* q_concatenatetablesproxymodel_super_sibling(void* self, int row, int column, void* idx);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1373,6 +1449,10 @@ void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*callbac
 ///
 bool q_concatenatetablesproxymodel_has_children(void* self, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_has_children` instead
+///
+#define q_concatenatetablesproxymodel_qbase_has_children q_concatenatetablesproxymodel_super_has_children
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#hasChildren)
@@ -1382,7 +1462,7 @@ bool q_concatenatetablesproxymodel_has_children(void* self, void* parent);
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_has_children(void* self, void* parent);
+bool q_concatenatetablesproxymodel_super_has_children(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1409,6 +1489,10 @@ void q_concatenatetablesproxymodel_on_has_children(void* self, bool (*callback)(
 ///
 bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_set_header_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_set_header_data q_concatenatetablesproxymodel_super_set_header_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
@@ -1421,7 +1505,7 @@ bool q_concatenatetablesproxymodel_set_header_data(void* self, int section, int3
 /// @param value QVariant*
 /// @param role int
 ///
-bool q_concatenatetablesproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool q_concatenatetablesproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1445,6 +1529,10 @@ void q_concatenatetablesproxymodel_on_set_header_data(void* self, bool (*callbac
 ///
 bool q_concatenatetablesproxymodel_clear_item_data(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_clear_item_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_clear_item_data q_concatenatetablesproxymodel_super_clear_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
@@ -1454,7 +1542,7 @@ bool q_concatenatetablesproxymodel_clear_item_data(void* self, void* index);
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_clear_item_data(void* self, void* index);
+bool q_concatenatetablesproxymodel_super_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1479,6 +1567,10 @@ void q_concatenatetablesproxymodel_on_clear_item_data(void* self, bool (*callbac
 ///
 int32_t q_concatenatetablesproxymodel_supported_drop_actions(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_supported_drop_actions` instead
+///
+#define q_concatenatetablesproxymodel_qbase_supported_drop_actions q_concatenatetablesproxymodel_super_supported_drop_actions
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDropActions)
@@ -1489,7 +1581,7 @@ int32_t q_concatenatetablesproxymodel_supported_drop_actions(void* self);
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_concatenatetablesproxymodel_qbase_supported_drop_actions(void* self);
+int32_t q_concatenatetablesproxymodel_super_supported_drop_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1514,6 +1606,10 @@ void q_concatenatetablesproxymodel_on_supported_drop_actions(void* self, int32_t
 ///
 int32_t q_concatenatetablesproxymodel_supported_drag_actions(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_supported_drag_actions` instead
+///
+#define q_concatenatetablesproxymodel_qbase_supported_drag_actions q_concatenatetablesproxymodel_super_supported_drag_actions
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
@@ -1524,7 +1620,7 @@ int32_t q_concatenatetablesproxymodel_supported_drag_actions(void* self);
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t q_concatenatetablesproxymodel_qbase_supported_drag_actions(void* self);
+int32_t q_concatenatetablesproxymodel_super_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1550,6 +1646,10 @@ void q_concatenatetablesproxymodel_on_supported_drag_actions(void* self, int32_t
 ///
 bool q_concatenatetablesproxymodel_insert_rows(void* self, int row, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_insert_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_insert_rows q_concatenatetablesproxymodel_super_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
@@ -1561,7 +1661,7 @@ bool q_concatenatetablesproxymodel_insert_rows(void* self, int row, int count, v
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent);
+bool q_concatenatetablesproxymodel_super_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1587,6 +1687,10 @@ void q_concatenatetablesproxymodel_on_insert_rows(void* self, bool (*callback)(v
 ///
 bool q_concatenatetablesproxymodel_insert_columns(void* self, int column, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_insert_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_insert_columns q_concatenatetablesproxymodel_super_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -1598,7 +1702,7 @@ bool q_concatenatetablesproxymodel_insert_columns(void* self, int column, int co
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent);
+bool q_concatenatetablesproxymodel_super_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1624,6 +1728,10 @@ void q_concatenatetablesproxymodel_on_insert_columns(void* self, bool (*callback
 ///
 bool q_concatenatetablesproxymodel_remove_rows(void* self, int row, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_remove_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_remove_rows q_concatenatetablesproxymodel_super_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -1635,7 +1743,7 @@ bool q_concatenatetablesproxymodel_remove_rows(void* self, int row, int count, v
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent);
+bool q_concatenatetablesproxymodel_super_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1661,6 +1769,10 @@ void q_concatenatetablesproxymodel_on_remove_rows(void* self, bool (*callback)(v
 ///
 bool q_concatenatetablesproxymodel_remove_columns(void* self, int column, int count, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_remove_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_remove_columns q_concatenatetablesproxymodel_super_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
@@ -1672,7 +1784,7 @@ bool q_concatenatetablesproxymodel_remove_columns(void* self, int column, int co
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent);
+bool q_concatenatetablesproxymodel_super_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1700,6 +1812,10 @@ void q_concatenatetablesproxymodel_on_remove_columns(void* self, bool (*callback
 ///
 bool q_concatenatetablesproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_move_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_move_rows q_concatenatetablesproxymodel_super_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
@@ -1713,7 +1829,7 @@ bool q_concatenatetablesproxymodel_move_rows(void* self, void* sourceParent, int
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_concatenatetablesproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool q_concatenatetablesproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1741,6 +1857,10 @@ void q_concatenatetablesproxymodel_on_move_rows(void* self, bool (*callback)(voi
 ///
 bool q_concatenatetablesproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_move_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_move_columns q_concatenatetablesproxymodel_super_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -1754,7 +1874,7 @@ bool q_concatenatetablesproxymodel_move_columns(void* self, void* sourceParent, 
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool q_concatenatetablesproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool q_concatenatetablesproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1778,6 +1898,10 @@ void q_concatenatetablesproxymodel_on_move_columns(void* self, bool (*callback)(
 ///
 void q_concatenatetablesproxymodel_fetch_more(void* self, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_fetch_more` instead
+///
+#define q_concatenatetablesproxymodel_qbase_fetch_more q_concatenatetablesproxymodel_super_fetch_more
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#fetchMore)
@@ -1787,7 +1911,7 @@ void q_concatenatetablesproxymodel_fetch_more(void* self, void* parent);
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
 ///
-void q_concatenatetablesproxymodel_qbase_fetch_more(void* self, void* parent);
+void q_concatenatetablesproxymodel_super_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1811,6 +1935,10 @@ void q_concatenatetablesproxymodel_on_fetch_more(void* self, void (*callback)(vo
 ///
 bool q_concatenatetablesproxymodel_can_fetch_more(void* self, void* parent);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_can_fetch_more` instead
+///
+#define q_concatenatetablesproxymodel_qbase_can_fetch_more q_concatenatetablesproxymodel_super_can_fetch_more
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canFetchMore)
@@ -1820,7 +1948,7 @@ bool q_concatenatetablesproxymodel_can_fetch_more(void* self, void* parent);
 /// @param self QConcatenateTablesProxyModel*
 /// @param parent QModelIndex*
 ///
-bool q_concatenatetablesproxymodel_qbase_can_fetch_more(void* self, void* parent);
+bool q_concatenatetablesproxymodel_super_can_fetch_more(void* self, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1845,6 +1973,10 @@ void q_concatenatetablesproxymodel_on_can_fetch_more(void* self, bool (*callback
 ///
 void q_concatenatetablesproxymodel_sort(void* self, int column, int32_t order);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_sort` instead
+///
+#define q_concatenatetablesproxymodel_qbase_sort q_concatenatetablesproxymodel_super_sort
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#sort)
@@ -1855,7 +1987,7 @@ void q_concatenatetablesproxymodel_sort(void* self, int column, int32_t order);
 /// @param column int
 /// @param order enum Qt__SortOrder
 ///
-void q_concatenatetablesproxymodel_qbase_sort(void* self, int column, int32_t order);
+void q_concatenatetablesproxymodel_super_sort(void* self, int column, int32_t order);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1879,6 +2011,10 @@ void q_concatenatetablesproxymodel_on_sort(void* self, void (*callback)(void*, i
 ///
 QModelIndex* q_concatenatetablesproxymodel_buddy(void* self, void* index);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_buddy` instead
+///
+#define q_concatenatetablesproxymodel_qbase_buddy q_concatenatetablesproxymodel_super_buddy
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
@@ -1888,7 +2024,7 @@ QModelIndex* q_concatenatetablesproxymodel_buddy(void* self, void* index);
 /// @param self QConcatenateTablesProxyModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* q_concatenatetablesproxymodel_qbase_buddy(void* self, void* index);
+QModelIndex* q_concatenatetablesproxymodel_super_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1918,6 +2054,10 @@ void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*callback)
 ///
 libqt_list q_concatenatetablesproxymodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_match` instead
+///
+#define q_concatenatetablesproxymodel_qbase_match q_concatenatetablesproxymodel_super_match
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -1933,7 +2073,7 @@ libqt_list q_concatenatetablesproxymodel_match(void* self, void* start, int role
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_concatenatetablesproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list q_concatenatetablesproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1969,6 +2109,10 @@ void q_concatenatetablesproxymodel_on_match(void* self, libqt_list (*callback)(v
 ///
 libqt_map q_concatenatetablesproxymodel_role_names(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_role_names` instead
+///
+#define q_concatenatetablesproxymodel_qbase_role_names q_concatenatetablesproxymodel_super_role_names
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#roleNames)
@@ -1990,7 +2134,7 @@ libqt_map q_concatenatetablesproxymodel_role_names(void* self);
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map q_concatenatetablesproxymodel_qbase_role_names(void* self);
+libqt_map q_concatenatetablesproxymodel_super_role_names(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2015,6 +2159,10 @@ void q_concatenatetablesproxymodel_on_role_names(void* self, libqt_map (*callbac
 ///
 void q_concatenatetablesproxymodel_multi_data(void* self, void* index, void* roleDataSpan);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_multi_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_multi_data q_concatenatetablesproxymodel_super_multi_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2025,7 +2173,7 @@ void q_concatenatetablesproxymodel_multi_data(void* self, void* index, void* rol
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void q_concatenatetablesproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
+void q_concatenatetablesproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2048,6 +2196,10 @@ void q_concatenatetablesproxymodel_on_multi_data(void* self, void (*callback)(vo
 ///
 bool q_concatenatetablesproxymodel_submit(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_submit` instead
+///
+#define q_concatenatetablesproxymodel_qbase_submit q_concatenatetablesproxymodel_super_submit
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -2056,7 +2208,7 @@ bool q_concatenatetablesproxymodel_submit(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-bool q_concatenatetablesproxymodel_qbase_submit(void* self);
+bool q_concatenatetablesproxymodel_super_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2079,6 +2231,10 @@ void q_concatenatetablesproxymodel_on_submit(void* self, bool (*callback)());
 ///
 void q_concatenatetablesproxymodel_revert(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_revert` instead
+///
+#define q_concatenatetablesproxymodel_qbase_revert q_concatenatetablesproxymodel_super_revert
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
@@ -2087,7 +2243,7 @@ void q_concatenatetablesproxymodel_revert(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_revert(void* self);
+void q_concatenatetablesproxymodel_super_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2110,6 +2266,10 @@ void q_concatenatetablesproxymodel_on_revert(void* self, void (*callback)());
 ///
 void q_concatenatetablesproxymodel_reset_internal_data(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_reset_internal_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_reset_internal_data q_concatenatetablesproxymodel_super_reset_internal_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2118,7 +2278,7 @@ void q_concatenatetablesproxymodel_reset_internal_data(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_reset_internal_data(void* self);
+void q_concatenatetablesproxymodel_super_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2142,6 +2302,10 @@ void q_concatenatetablesproxymodel_on_reset_internal_data(void* self, void (*cal
 ///
 bool q_concatenatetablesproxymodel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_event` instead
+///
+#define q_concatenatetablesproxymodel_qbase_event q_concatenatetablesproxymodel_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2151,7 +2315,7 @@ bool q_concatenatetablesproxymodel_event(void* self, void* event);
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QEvent*
 ///
-bool q_concatenatetablesproxymodel_qbase_event(void* self, void* event);
+bool q_concatenatetablesproxymodel_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2176,6 +2340,10 @@ void q_concatenatetablesproxymodel_on_event(void* self, bool (*callback)(void*, 
 ///
 bool q_concatenatetablesproxymodel_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_event_filter` instead
+///
+#define q_concatenatetablesproxymodel_qbase_event_filter q_concatenatetablesproxymodel_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2186,7 +2354,7 @@ bool q_concatenatetablesproxymodel_event_filter(void* self, void* watched, void*
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_concatenatetablesproxymodel_qbase_event_filter(void* self, void* watched, void* event);
+bool q_concatenatetablesproxymodel_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2210,6 +2378,10 @@ void q_concatenatetablesproxymodel_on_event_filter(void* self, bool (*callback)(
 ///
 void q_concatenatetablesproxymodel_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_timer_event` instead
+///
+#define q_concatenatetablesproxymodel_qbase_timer_event q_concatenatetablesproxymodel_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2219,7 +2391,7 @@ void q_concatenatetablesproxymodel_timer_event(void* self, void* event);
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QTimerEvent*
 ///
-void q_concatenatetablesproxymodel_qbase_timer_event(void* self, void* event);
+void q_concatenatetablesproxymodel_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2243,6 +2415,10 @@ void q_concatenatetablesproxymodel_on_timer_event(void* self, void (*callback)(v
 ///
 void q_concatenatetablesproxymodel_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_child_event` instead
+///
+#define q_concatenatetablesproxymodel_qbase_child_event q_concatenatetablesproxymodel_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2252,7 +2428,7 @@ void q_concatenatetablesproxymodel_child_event(void* self, void* event);
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QChildEvent*
 ///
-void q_concatenatetablesproxymodel_qbase_child_event(void* self, void* event);
+void q_concatenatetablesproxymodel_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2276,6 +2452,10 @@ void q_concatenatetablesproxymodel_on_child_event(void* self, void (*callback)(v
 ///
 void q_concatenatetablesproxymodel_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_custom_event` instead
+///
+#define q_concatenatetablesproxymodel_qbase_custom_event q_concatenatetablesproxymodel_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2285,7 +2465,7 @@ void q_concatenatetablesproxymodel_custom_event(void* self, void* event);
 /// @param self QConcatenateTablesProxyModel*
 /// @param event QEvent*
 ///
-void q_concatenatetablesproxymodel_qbase_custom_event(void* self, void* event);
+void q_concatenatetablesproxymodel_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2309,6 +2489,10 @@ void q_concatenatetablesproxymodel_on_custom_event(void* self, void (*callback)(
 ///
 void q_concatenatetablesproxymodel_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_connect_notify` instead
+///
+#define q_concatenatetablesproxymodel_qbase_connect_notify q_concatenatetablesproxymodel_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2318,7 +2502,7 @@ void q_concatenatetablesproxymodel_connect_notify(void* self, void* signal);
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
 ///
-void q_concatenatetablesproxymodel_qbase_connect_notify(void* self, void* signal);
+void q_concatenatetablesproxymodel_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2342,6 +2526,10 @@ void q_concatenatetablesproxymodel_on_connect_notify(void* self, void (*callback
 ///
 void q_concatenatetablesproxymodel_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_disconnect_notify` instead
+///
+#define q_concatenatetablesproxymodel_qbase_disconnect_notify q_concatenatetablesproxymodel_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2351,7 +2539,7 @@ void q_concatenatetablesproxymodel_disconnect_notify(void* self, void* signal);
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
 ///
-void q_concatenatetablesproxymodel_qbase_disconnect_notify(void* self, void* signal);
+void q_concatenatetablesproxymodel_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2376,6 +2564,10 @@ void q_concatenatetablesproxymodel_on_disconnect_notify(void* self, void (*callb
 ///
 QModelIndex* q_concatenatetablesproxymodel_create_index(void* self, int row, int column);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_create_index` instead
+///
+#define q_concatenatetablesproxymodel_qbase_create_index q_concatenatetablesproxymodel_super_create_index
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2386,7 +2578,7 @@ QModelIndex* q_concatenatetablesproxymodel_create_index(void* self, int row, int
 /// @param row int
 /// @param column int
 ///
-QModelIndex* q_concatenatetablesproxymodel_qbase_create_index(void* self, int row, int column);
+QModelIndex* q_concatenatetablesproxymodel_super_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2411,6 +2603,10 @@ void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*ca
 ///
 void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, void* stream);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_encode_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_encode_data q_concatenatetablesproxymodel_super_encode_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2421,7 +2617,7 @@ void q_concatenatetablesproxymodel_encode_data(void* self, libqt_list indexes, v
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void q_concatenatetablesproxymodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void q_concatenatetablesproxymodel_super_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2448,6 +2644,10 @@ void q_concatenatetablesproxymodel_on_encode_data(void* self, void (*callback)(v
 ///
 bool q_concatenatetablesproxymodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_decode_data` instead
+///
+#define q_concatenatetablesproxymodel_qbase_decode_data q_concatenatetablesproxymodel_super_decode_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
@@ -2460,7 +2660,7 @@ bool q_concatenatetablesproxymodel_decode_data(void* self, int row, int column, 
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool q_concatenatetablesproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool q_concatenatetablesproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2486,6 +2686,10 @@ void q_concatenatetablesproxymodel_on_decode_data(void* self, bool (*callback)(v
 ///
 void q_concatenatetablesproxymodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_insert_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_insert_rows q_concatenatetablesproxymodel_super_begin_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2497,7 +2701,7 @@ void q_concatenatetablesproxymodel_begin_insert_rows(void* self, void* parent, i
 /// @param first int
 /// @param last int
 ///
-void q_concatenatetablesproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
+void q_concatenatetablesproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2520,6 +2724,10 @@ void q_concatenatetablesproxymodel_on_begin_insert_rows(void* self, void (*callb
 ///
 void q_concatenatetablesproxymodel_end_insert_rows(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_insert_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_insert_rows q_concatenatetablesproxymodel_super_end_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
@@ -2528,7 +2736,7 @@ void q_concatenatetablesproxymodel_end_insert_rows(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_insert_rows(void* self);
+void q_concatenatetablesproxymodel_super_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2554,6 +2762,10 @@ void q_concatenatetablesproxymodel_on_end_insert_rows(void* self, void (*callbac
 ///
 void q_concatenatetablesproxymodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_remove_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_remove_rows q_concatenatetablesproxymodel_super_begin_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -2565,7 +2777,7 @@ void q_concatenatetablesproxymodel_begin_remove_rows(void* self, void* parent, i
 /// @param first int
 /// @param last int
 ///
-void q_concatenatetablesproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
+void q_concatenatetablesproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2588,6 +2800,10 @@ void q_concatenatetablesproxymodel_on_begin_remove_rows(void* self, void (*callb
 ///
 void q_concatenatetablesproxymodel_end_remove_rows(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_remove_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_remove_rows q_concatenatetablesproxymodel_super_end_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
@@ -2596,7 +2812,7 @@ void q_concatenatetablesproxymodel_end_remove_rows(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_remove_rows(void* self);
+void q_concatenatetablesproxymodel_super_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2624,6 +2840,10 @@ void q_concatenatetablesproxymodel_on_end_remove_rows(void* self, void (*callbac
 ///
 bool q_concatenatetablesproxymodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_move_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_move_rows q_concatenatetablesproxymodel_super_begin_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -2637,7 +2857,7 @@ bool q_concatenatetablesproxymodel_begin_move_rows(void* self, void* sourceParen
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool q_concatenatetablesproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool q_concatenatetablesproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2660,6 +2880,10 @@ void q_concatenatetablesproxymodel_on_begin_move_rows(void* self, bool (*callbac
 ///
 void q_concatenatetablesproxymodel_end_move_rows(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_move_rows` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_move_rows q_concatenatetablesproxymodel_super_end_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -2668,7 +2892,7 @@ void q_concatenatetablesproxymodel_end_move_rows(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_move_rows(void* self);
+void q_concatenatetablesproxymodel_super_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2694,6 +2918,10 @@ void q_concatenatetablesproxymodel_on_end_move_rows(void* self, void (*callback)
 ///
 void q_concatenatetablesproxymodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_insert_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_insert_columns q_concatenatetablesproxymodel_super_begin_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
@@ -2705,7 +2933,7 @@ void q_concatenatetablesproxymodel_begin_insert_columns(void* self, void* parent
 /// @param first int
 /// @param last int
 ///
-void q_concatenatetablesproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
+void q_concatenatetablesproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2728,6 +2956,10 @@ void q_concatenatetablesproxymodel_on_begin_insert_columns(void* self, void (*ca
 ///
 void q_concatenatetablesproxymodel_end_insert_columns(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_insert_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_insert_columns q_concatenatetablesproxymodel_super_end_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -2736,7 +2968,7 @@ void q_concatenatetablesproxymodel_end_insert_columns(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_insert_columns(void* self);
+void q_concatenatetablesproxymodel_super_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2762,6 +2994,10 @@ void q_concatenatetablesproxymodel_on_end_insert_columns(void* self, void (*call
 ///
 void q_concatenatetablesproxymodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_remove_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_remove_columns q_concatenatetablesproxymodel_super_begin_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -2773,7 +3009,7 @@ void q_concatenatetablesproxymodel_begin_remove_columns(void* self, void* parent
 /// @param first int
 /// @param last int
 ///
-void q_concatenatetablesproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
+void q_concatenatetablesproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2796,6 +3032,10 @@ void q_concatenatetablesproxymodel_on_begin_remove_columns(void* self, void (*ca
 ///
 void q_concatenatetablesproxymodel_end_remove_columns(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_remove_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_remove_columns q_concatenatetablesproxymodel_super_end_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
@@ -2804,7 +3044,7 @@ void q_concatenatetablesproxymodel_end_remove_columns(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_remove_columns(void* self);
+void q_concatenatetablesproxymodel_super_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2832,6 +3072,10 @@ void q_concatenatetablesproxymodel_on_end_remove_columns(void* self, void (*call
 ///
 bool q_concatenatetablesproxymodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_move_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_move_columns q_concatenatetablesproxymodel_super_begin_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -2845,7 +3089,7 @@ bool q_concatenatetablesproxymodel_begin_move_columns(void* self, void* sourcePa
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool q_concatenatetablesproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool q_concatenatetablesproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2868,6 +3112,10 @@ void q_concatenatetablesproxymodel_on_begin_move_columns(void* self, bool (*call
 ///
 void q_concatenatetablesproxymodel_end_move_columns(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_move_columns` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_move_columns q_concatenatetablesproxymodel_super_end_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -2876,7 +3124,7 @@ void q_concatenatetablesproxymodel_end_move_columns(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_move_columns(void* self);
+void q_concatenatetablesproxymodel_super_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2899,6 +3147,10 @@ void q_concatenatetablesproxymodel_on_end_move_columns(void* self, void (*callba
 ///
 void q_concatenatetablesproxymodel_begin_reset_model(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_begin_reset_model` instead
+///
+#define q_concatenatetablesproxymodel_qbase_begin_reset_model q_concatenatetablesproxymodel_super_begin_reset_model
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -2907,7 +3159,7 @@ void q_concatenatetablesproxymodel_begin_reset_model(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_begin_reset_model(void* self);
+void q_concatenatetablesproxymodel_super_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2930,6 +3182,10 @@ void q_concatenatetablesproxymodel_on_begin_reset_model(void* self, void (*callb
 ///
 void q_concatenatetablesproxymodel_end_reset_model(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_end_reset_model` instead
+///
+#define q_concatenatetablesproxymodel_qbase_end_reset_model q_concatenatetablesproxymodel_super_end_reset_model
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
@@ -2938,7 +3194,7 @@ void q_concatenatetablesproxymodel_end_reset_model(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-void q_concatenatetablesproxymodel_qbase_end_reset_model(void* self);
+void q_concatenatetablesproxymodel_super_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2963,6 +3219,10 @@ void q_concatenatetablesproxymodel_on_end_reset_model(void* self, void (*callbac
 ///
 void q_concatenatetablesproxymodel_change_persistent_index(void* self, void* from, void* to);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_change_persistent_index` instead
+///
+#define q_concatenatetablesproxymodel_qbase_change_persistent_index q_concatenatetablesproxymodel_super_change_persistent_index
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
@@ -2973,7 +3233,7 @@ void q_concatenatetablesproxymodel_change_persistent_index(void* self, void* fro
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void q_concatenatetablesproxymodel_qbase_change_persistent_index(void* self, void* from, void* to);
+void q_concatenatetablesproxymodel_super_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2998,6 +3258,10 @@ void q_concatenatetablesproxymodel_on_change_persistent_index(void* self, void (
 ///
 void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_change_persistent_index_list` instead
+///
+#define q_concatenatetablesproxymodel_qbase_change_persistent_index_list q_concatenatetablesproxymodel_super_change_persistent_index_list
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3008,7 +3272,7 @@ void q_concatenatetablesproxymodel_change_persistent_index_list(void* self, libq
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void q_concatenatetablesproxymodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void q_concatenatetablesproxymodel_super_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3033,6 +3297,10 @@ void q_concatenatetablesproxymodel_on_change_persistent_index_list(void* self, v
 ///
 libqt_list q_concatenatetablesproxymodel_persistent_index_list(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_persistent_index_list` instead
+///
+#define q_concatenatetablesproxymodel_qbase_persistent_index_list q_concatenatetablesproxymodel_super_persistent_index_list
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3043,7 +3311,7 @@ libqt_list q_concatenatetablesproxymodel_persistent_index_list(void* self);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list q_concatenatetablesproxymodel_qbase_persistent_index_list(void* self);
+libqt_list q_concatenatetablesproxymodel_super_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3066,6 +3334,10 @@ void q_concatenatetablesproxymodel_on_persistent_index_list(void* self, libqt_li
 ///
 QObject* q_concatenatetablesproxymodel_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_sender` instead
+///
+#define q_concatenatetablesproxymodel_qbase_sender q_concatenatetablesproxymodel_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3074,7 +3346,7 @@ QObject* q_concatenatetablesproxymodel_sender(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-QObject* q_concatenatetablesproxymodel_qbase_sender(void* self);
+QObject* q_concatenatetablesproxymodel_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3097,6 +3369,10 @@ void q_concatenatetablesproxymodel_on_sender(void* self, QObject* (*callback)())
 ///
 int32_t q_concatenatetablesproxymodel_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_sender_signal_index` instead
+///
+#define q_concatenatetablesproxymodel_qbase_sender_signal_index q_concatenatetablesproxymodel_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3105,7 +3381,7 @@ int32_t q_concatenatetablesproxymodel_sender_signal_index(void* self);
 ///
 /// @param self QConcatenateTablesProxyModel*
 ///
-int32_t q_concatenatetablesproxymodel_qbase_sender_signal_index(void* self);
+int32_t q_concatenatetablesproxymodel_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3129,6 +3405,10 @@ void q_concatenatetablesproxymodel_on_sender_signal_index(void* self, int32_t (*
 ///
 int32_t q_concatenatetablesproxymodel_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_receivers` instead
+///
+#define q_concatenatetablesproxymodel_qbase_receivers q_concatenatetablesproxymodel_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3138,7 +3418,7 @@ int32_t q_concatenatetablesproxymodel_receivers(void* self, const char* signal);
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal const char*
 ///
-int32_t q_concatenatetablesproxymodel_qbase_receivers(void* self, const char* signal);
+int32_t q_concatenatetablesproxymodel_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3162,6 +3442,10 @@ void q_concatenatetablesproxymodel_on_receivers(void* self, int32_t (*callback)(
 ///
 bool q_concatenatetablesproxymodel_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_is_signal_connected` instead
+///
+#define q_concatenatetablesproxymodel_qbase_is_signal_connected q_concatenatetablesproxymodel_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3171,7 +3455,7 @@ bool q_concatenatetablesproxymodel_is_signal_connected(void* self, void* signal)
 /// @param self QConcatenateTablesProxyModel*
 /// @param signal QMetaMethod*
 ///
-bool q_concatenatetablesproxymodel_qbase_is_signal_connected(void* self, void* signal);
+bool q_concatenatetablesproxymodel_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

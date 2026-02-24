@@ -40,13 +40,17 @@ const QMetaObject* k_svg__framesvg_meta_object(void* self);
 ///
 void k_svg__framesvg_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_meta_object` instead
+///
+#define k_svg__framesvg_qbase_meta_object k_svg__framesvg_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KSvg__FrameSvg*
 ///
-const QMetaObject* k_svg__framesvg_qbase_meta_object(void* self);
+const QMetaObject* k_svg__framesvg_super_meta_object(void* self);
 
 /// @param self KSvg__FrameSvg*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_svg__framesvg_metacast(void* self, const char* param1);
 ///
 void k_svg__framesvg_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_metacast` instead
+///
+#define k_svg__framesvg_qbase_metacast k_svg__framesvg_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KSvg__FrameSvg*
 /// @param param1 const char*
 ///
-void* k_svg__framesvg_qbase_metacast(void* self, const char* param1);
+void* k_svg__framesvg_super_metacast(void* self, const char* param1);
 
 /// @param self KSvg__FrameSvg*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_svg__framesvg_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void k_svg__framesvg_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_metacall` instead
+///
+#define k_svg__framesvg_qbase_metacall k_svg__framesvg_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KSvg__FrameSvg*
@@ -88,7 +100,7 @@ void k_svg__framesvg_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_svg__framesvg_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_svg__framesvg_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ void k_svg__framesvg_set_image_path(void* self, const char* path);
 ///
 void k_svg__framesvg_on_set_image_path(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_set_image_path` instead
+///
+#define k_svg__framesvg_qbase_set_image_path k_svg__framesvg_super_set_image_path
+
 /// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setImagePath)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void k_svg__framesvg_on_set_image_path(void* self, void (*callback)(void*, const
 /// @param self KSvg__FrameSvg*
 /// @param path const char*
 ///
-void k_svg__framesvg_qbase_set_image_path(void* self, const char* path);
+void k_svg__framesvg_super_set_image_path(void* self, const char* path);
 
 /// [Upstream resources](https://api.kde.org/ksvg-framesvg.html#setEnabledBorders)
 ///
@@ -875,6 +891,10 @@ bool k_svg__framesvg_event_filter(void* self, void* watched, void* event);
 ///
 void k_svg__framesvg_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_event_filter` instead
+///
+#define k_svg__framesvg_qbase_event_filter k_svg__framesvg_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -885,7 +905,7 @@ void k_svg__framesvg_on_event_filter(void* self, bool (*callback)(void*, void*, 
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_svg__framesvg_qbase_event_filter(void* self, void* watched, void* event);
+bool k_svg__framesvg_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1345,6 +1365,10 @@ void k_svg__framesvg_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_svg__framesvg_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_event` instead
+///
+#define k_svg__framesvg_qbase_event k_svg__framesvg_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1354,7 +1378,7 @@ bool k_svg__framesvg_event(void* self, void* event);
 /// @param self KSvg__FrameSvg*
 /// @param event QEvent*
 ///
-bool k_svg__framesvg_qbase_event(void* self, void* event);
+bool k_svg__framesvg_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1378,6 +1402,10 @@ void k_svg__framesvg_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_svg__framesvg_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_timer_event` instead
+///
+#define k_svg__framesvg_qbase_timer_event k_svg__framesvg_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1387,7 +1415,7 @@ void k_svg__framesvg_timer_event(void* self, void* event);
 /// @param self KSvg__FrameSvg*
 /// @param event QTimerEvent*
 ///
-void k_svg__framesvg_qbase_timer_event(void* self, void* event);
+void k_svg__framesvg_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1411,6 +1439,10 @@ void k_svg__framesvg_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_svg__framesvg_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_child_event` instead
+///
+#define k_svg__framesvg_qbase_child_event k_svg__framesvg_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1420,7 +1452,7 @@ void k_svg__framesvg_child_event(void* self, void* event);
 /// @param self KSvg__FrameSvg*
 /// @param event QChildEvent*
 ///
-void k_svg__framesvg_qbase_child_event(void* self, void* event);
+void k_svg__framesvg_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1444,6 +1476,10 @@ void k_svg__framesvg_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_svg__framesvg_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_custom_event` instead
+///
+#define k_svg__framesvg_qbase_custom_event k_svg__framesvg_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1453,7 +1489,7 @@ void k_svg__framesvg_custom_event(void* self, void* event);
 /// @param self KSvg__FrameSvg*
 /// @param event QEvent*
 ///
-void k_svg__framesvg_qbase_custom_event(void* self, void* event);
+void k_svg__framesvg_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1477,6 +1513,10 @@ void k_svg__framesvg_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void k_svg__framesvg_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_connect_notify` instead
+///
+#define k_svg__framesvg_qbase_connect_notify k_svg__framesvg_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1486,7 +1526,7 @@ void k_svg__framesvg_connect_notify(void* self, void* signal);
 /// @param self KSvg__FrameSvg*
 /// @param signal QMetaMethod*
 ///
-void k_svg__framesvg_qbase_connect_notify(void* self, void* signal);
+void k_svg__framesvg_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1510,6 +1550,10 @@ void k_svg__framesvg_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_svg__framesvg_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_disconnect_notify` instead
+///
+#define k_svg__framesvg_qbase_disconnect_notify k_svg__framesvg_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1519,7 +1563,7 @@ void k_svg__framesvg_disconnect_notify(void* self, void* signal);
 /// @param self KSvg__FrameSvg*
 /// @param signal QMetaMethod*
 ///
-void k_svg__framesvg_qbase_disconnect_notify(void* self, void* signal);
+void k_svg__framesvg_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1542,6 +1586,10 @@ void k_svg__framesvg_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* k_svg__framesvg_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_sender` instead
+///
+#define k_svg__framesvg_qbase_sender k_svg__framesvg_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1550,7 +1598,7 @@ QObject* k_svg__framesvg_sender(void* self);
 ///
 /// @param self KSvg__FrameSvg*
 ///
-QObject* k_svg__framesvg_qbase_sender(void* self);
+QObject* k_svg__framesvg_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1573,6 +1621,10 @@ void k_svg__framesvg_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_svg__framesvg_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_sender_signal_index` instead
+///
+#define k_svg__framesvg_qbase_sender_signal_index k_svg__framesvg_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1581,7 +1633,7 @@ int32_t k_svg__framesvg_sender_signal_index(void* self);
 ///
 /// @param self KSvg__FrameSvg*
 ///
-int32_t k_svg__framesvg_qbase_sender_signal_index(void* self);
+int32_t k_svg__framesvg_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1605,6 +1657,10 @@ void k_svg__framesvg_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_svg__framesvg_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_receivers` instead
+///
+#define k_svg__framesvg_qbase_receivers k_svg__framesvg_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1614,7 +1670,7 @@ int32_t k_svg__framesvg_receivers(void* self, const char* signal);
 /// @param self KSvg__FrameSvg*
 /// @param signal const char*
 ///
-int32_t k_svg__framesvg_qbase_receivers(void* self, const char* signal);
+int32_t k_svg__framesvg_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1638,6 +1694,10 @@ void k_svg__framesvg_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool k_svg__framesvg_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_svg__framesvg_super_is_signal_connected` instead
+///
+#define k_svg__framesvg_qbase_is_signal_connected k_svg__framesvg_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1647,7 +1707,7 @@ bool k_svg__framesvg_is_signal_connected(void* self, void* signal);
 /// @param self KSvg__FrameSvg*
 /// @param signal QMetaMethod*
 ///
-bool k_svg__framesvg_qbase_is_signal_connected(void* self, void* signal);
+bool k_svg__framesvg_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

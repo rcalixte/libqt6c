@@ -136,8 +136,8 @@ QAction* k_parts__partbase_action2(void* self, void* element) {
     return KParts__PartBase_Action2((KParts__PartBase*)self, (QDomElement*)element);
 }
 
-QAction* k_parts__partbase_qbase_action2(void* self, void* element) {
-    return KParts__PartBase_QBaseAction2((KParts__PartBase*)self, (QDomElement*)element);
+QAction* k_parts__partbase_super_action2(void* self, void* element) {
+    return KParts__PartBase_SuperAction2((KParts__PartBase*)self, (QDomElement*)element);
 }
 
 void k_parts__partbase_on_action2(void* self, QAction* (*callback)(void*, void*)) {
@@ -148,8 +148,8 @@ KActionCollection* k_parts__partbase_action_collection(void* self) {
     return KParts__PartBase_ActionCollection((KParts__PartBase*)self);
 }
 
-KActionCollection* k_parts__partbase_qbase_action_collection(void* self) {
-    return KParts__PartBase_QBaseActionCollection((KParts__PartBase*)self);
+KActionCollection* k_parts__partbase_super_action_collection(void* self) {
+    return KParts__PartBase_SuperActionCollection((KParts__PartBase*)self);
 }
 
 void k_parts__partbase_on_action_collection(void* self, KActionCollection* (*callback)()) {
@@ -163,8 +163,8 @@ const char* k_parts__partbase_component_name(void* self) {
     return _ret;
 }
 
-const char* k_parts__partbase_qbase_component_name(void* self) {
-    libqt_string _str = KParts__PartBase_QBaseComponentName((KParts__PartBase*)self);
+const char* k_parts__partbase_super_component_name(void* self) {
+    libqt_string _str = KParts__PartBase_SuperComponentName((KParts__PartBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -178,8 +178,8 @@ QDomDocument* k_parts__partbase_dom_document(void* self) {
     return KParts__PartBase_DomDocument((KParts__PartBase*)self);
 }
 
-QDomDocument* k_parts__partbase_qbase_dom_document(void* self) {
-    return KParts__PartBase_QBaseDomDocument((KParts__PartBase*)self);
+QDomDocument* k_parts__partbase_super_dom_document(void* self) {
+    return KParts__PartBase_SuperDomDocument((KParts__PartBase*)self);
 }
 
 void k_parts__partbase_on_dom_document(void* self, QDomDocument* (*callback)()) {
@@ -193,8 +193,8 @@ const char* k_parts__partbase_xml_file(void* self) {
     return _ret;
 }
 
-const char* k_parts__partbase_qbase_xml_file(void* self) {
-    libqt_string _str = KParts__PartBase_QBaseXmlFile((KParts__PartBase*)self);
+const char* k_parts__partbase_super_xml_file(void* self) {
+    libqt_string _str = KParts__PartBase_SuperXmlFile((KParts__PartBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -211,8 +211,8 @@ const char* k_parts__partbase_local_x_m_l_file(void* self) {
     return _ret;
 }
 
-const char* k_parts__partbase_qbase_local_x_m_l_file(void* self) {
-    libqt_string _str = KParts__PartBase_QBaseLocalXMLFile((KParts__PartBase*)self);
+const char* k_parts__partbase_super_local_x_m_l_file(void* self) {
+    libqt_string _str = KParts__PartBase_SuperLocalXMLFile((KParts__PartBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -226,8 +226,8 @@ void k_parts__partbase_set_component_name(void* self, const char* componentName,
     KParts__PartBase_SetComponentName((KParts__PartBase*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
-void k_parts__partbase_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
-    KParts__PartBase_QBaseSetComponentName((KParts__PartBase*)self, qstring(componentName), qstring(componentDisplayName));
+void k_parts__partbase_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
+    KParts__PartBase_SuperSetComponentName((KParts__PartBase*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
 void k_parts__partbase_on_set_component_name(void* self, void (*callback)(void*, const char*, const char*)) {
@@ -238,8 +238,8 @@ void k_parts__partbase_set_x_m_l_file(void* self, const char* file, bool merge, 
     KParts__PartBase_SetXMLFile((KParts__PartBase*)self, qstring(file), merge, setXMLDoc);
 }
 
-void k_parts__partbase_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
-    KParts__PartBase_QBaseSetXMLFile((KParts__PartBase*)self, qstring(file), merge, setXMLDoc);
+void k_parts__partbase_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
+    KParts__PartBase_SuperSetXMLFile((KParts__PartBase*)self, qstring(file), merge, setXMLDoc);
 }
 
 void k_parts__partbase_on_set_x_m_l_file(void* self, void (*callback)(void*, const char*, bool, bool)) {
@@ -250,8 +250,8 @@ void k_parts__partbase_set_local_x_m_l_file(void* self, const char* file) {
     KParts__PartBase_SetLocalXMLFile((KParts__PartBase*)self, qstring(file));
 }
 
-void k_parts__partbase_qbase_set_local_x_m_l_file(void* self, const char* file) {
-    KParts__PartBase_QBaseSetLocalXMLFile((KParts__PartBase*)self, qstring(file));
+void k_parts__partbase_super_set_local_x_m_l_file(void* self, const char* file) {
+    KParts__PartBase_SuperSetLocalXMLFile((KParts__PartBase*)self, qstring(file));
 }
 
 void k_parts__partbase_on_set_local_x_m_l_file(void* self, void (*callback)(void*, const char*)) {
@@ -262,8 +262,8 @@ void k_parts__partbase_set_x_m_l(void* self, const char* document, bool merge) {
     KParts__PartBase_SetXML((KParts__PartBase*)self, qstring(document), merge);
 }
 
-void k_parts__partbase_qbase_set_x_m_l(void* self, const char* document, bool merge) {
-    KParts__PartBase_QBaseSetXML((KParts__PartBase*)self, qstring(document), merge);
+void k_parts__partbase_super_set_x_m_l(void* self, const char* document, bool merge) {
+    KParts__PartBase_SuperSetXML((KParts__PartBase*)self, qstring(document), merge);
 }
 
 void k_parts__partbase_on_set_x_m_l(void* self, void (*callback)(void*, const char*, bool)) {
@@ -274,8 +274,8 @@ void k_parts__partbase_set_d_o_m_document(void* self, void* document, bool merge
     KParts__PartBase_SetDOMDocument((KParts__PartBase*)self, (QDomDocument*)document, merge);
 }
 
-void k_parts__partbase_qbase_set_d_o_m_document(void* self, void* document, bool merge) {
-    KParts__PartBase_QBaseSetDOMDocument((KParts__PartBase*)self, (QDomDocument*)document, merge);
+void k_parts__partbase_super_set_d_o_m_document(void* self, void* document, bool merge) {
+    KParts__PartBase_SuperSetDOMDocument((KParts__PartBase*)self, (QDomDocument*)document, merge);
 }
 
 void k_parts__partbase_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool)) {
@@ -286,8 +286,8 @@ void k_parts__partbase_state_changed(void* self, const char* newstate, int32_t r
     KParts__PartBase_StateChanged((KParts__PartBase*)self, qstring(newstate), reverse);
 }
 
-void k_parts__partbase_qbase_state_changed(void* self, const char* newstate, int32_t reverse) {
-    KParts__PartBase_QBaseStateChanged((KParts__PartBase*)self, qstring(newstate), reverse);
+void k_parts__partbase_super_state_changed(void* self, const char* newstate, int32_t reverse) {
+    KParts__PartBase_SuperStateChanged((KParts__PartBase*)self, qstring(newstate), reverse);
 }
 
 void k_parts__partbase_on_state_changed(void* self, void (*callback)(void*, const char*, int32_t)) {
@@ -301,8 +301,8 @@ const char* k_parts__partbase_standards_xml_file_location(void* self) {
     return _ret;
 }
 
-const char* k_parts__partbase_qbase_standards_xml_file_location(void* self) {
-    libqt_string _str = KParts__PartBase_QBaseStandardsXmlFileLocation((KParts__PartBase*)self);
+const char* k_parts__partbase_super_standards_xml_file_location(void* self) {
+    libqt_string _str = KParts__PartBase_SuperStandardsXmlFileLocation((KParts__PartBase*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -316,8 +316,8 @@ void k_parts__partbase_load_standards_xml_file(void* self) {
     KParts__PartBase_LoadStandardsXmlFile((KParts__PartBase*)self);
 }
 
-void k_parts__partbase_qbase_load_standards_xml_file(void* self) {
-    KParts__PartBase_QBaseLoadStandardsXmlFile((KParts__PartBase*)self);
+void k_parts__partbase_super_load_standards_xml_file(void* self) {
+    KParts__PartBase_SuperLoadStandardsXmlFile((KParts__PartBase*)self);
 }
 
 void k_parts__partbase_on_load_standards_xml_file(void* self, void (*callback)()) {

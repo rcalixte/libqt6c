@@ -40,13 +40,17 @@ const QMetaObject* k_completionbox_meta_object(void* self);
 ///
 void k_completionbox_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_completionbox_super_meta_object` instead
+///
+#define k_completionbox_qbase_meta_object k_completionbox_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 ///
-const QMetaObject* k_completionbox_qbase_meta_object(void* self);
+const QMetaObject* k_completionbox_super_meta_object(void* self);
 
 /// @param self KCompletionBox*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_completionbox_metacast(void* self, const char* param1);
 ///
 void k_completionbox_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_completionbox_super_metacast` instead
+///
+#define k_completionbox_qbase_metacast k_completionbox_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 /// @param param1 const char*
 ///
-void* k_completionbox_qbase_metacast(void* self, const char* param1);
+void* k_completionbox_super_metacast(void* self, const char* param1);
 
 /// @param self KCompletionBox*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_completionbox_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void k_completionbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_completionbox_super_metacall` instead
+///
+#define k_completionbox_qbase_metacall k_completionbox_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
@@ -88,7 +100,7 @@ void k_completionbox_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_completionbox_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_completionbox_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -113,13 +125,17 @@ QSize* k_completionbox_size_hint(void* self);
 ///
 void k_completionbox_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `k_completionbox_super_size_hint` instead
+///
+#define k_completionbox_qbase_size_hint k_completionbox_super_size_hint
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 ///
-QSize* k_completionbox_qbase_size_hint(void* self);
+QSize* k_completionbox_super_size_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#activateOnSelect)
 ///
@@ -178,13 +194,17 @@ void k_completionbox_popup(void* self);
 ///
 void k_completionbox_on_popup(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_completionbox_super_popup` instead
+///
+#define k_completionbox_qbase_popup k_completionbox_super_popup
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#popup)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_popup(void* self);
+void k_completionbox_super_popup(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#setTabHandling)
 ///
@@ -259,6 +279,10 @@ void k_completionbox_set_visible(void* self, bool visible);
 ///
 void k_completionbox_on_set_visible(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_visible` instead
+///
+#define k_completionbox_qbase_set_visible k_completionbox_super_set_visible
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#setVisible)
 ///
 /// Base class method implementation
@@ -266,7 +290,7 @@ void k_completionbox_on_set_visible(void* self, void (*callback)(void*, bool));
 /// @param self KCompletionBox*
 /// @param visible bool
 ///
-void k_completionbox_qbase_set_visible(void* self, bool visible);
+void k_completionbox_super_set_visible(void* self, bool visible);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#textActivated)
 ///
@@ -311,13 +335,17 @@ QRect* k_completionbox_calculate_geometry(void* self);
 ///
 void k_completionbox_on_calculate_geometry(void* self, QRect* (*callback)());
 
+/// @warning DEPRECATED: Use `k_completionbox_super_calculate_geometry` instead
+///
+#define k_completionbox_qbase_calculate_geometry k_completionbox_super_calculate_geometry
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#calculateGeometry)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 ///
-QRect* k_completionbox_qbase_calculate_geometry(void* self);
+QRect* k_completionbox_super_calculate_geometry(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
 ///
@@ -334,13 +362,17 @@ void k_completionbox_resize_and_reposition(void* self);
 ///
 void k_completionbox_on_resize_and_reposition(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_completionbox_super_resize_and_reposition` instead
+///
+#define k_completionbox_qbase_resize_and_reposition k_completionbox_super_resize_and_reposition
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#resizeAndReposition)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_resize_and_reposition(void* self);
+void k_completionbox_super_resize_and_reposition(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#eventFilter)
 ///
@@ -359,6 +391,10 @@ bool k_completionbox_event_filter(void* self, void* param1, void* param2);
 ///
 void k_completionbox_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_completionbox_super_event_filter` instead
+///
+#define k_completionbox_qbase_event_filter k_completionbox_super_event_filter
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#eventFilter)
 ///
 /// Base class method implementation
@@ -367,7 +403,7 @@ void k_completionbox_on_event_filter(void* self, bool (*callback)(void*, void*, 
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool k_completionbox_qbase_event_filter(void* self, void* param1, void* param2);
+bool k_completionbox_super_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
@@ -384,13 +420,17 @@ QPoint* k_completionbox_global_position_hint(void* self);
 ///
 void k_completionbox_on_global_position_hint(void* self, QPoint* (*callback)());
 
+/// @warning DEPRECATED: Use `k_completionbox_super_global_position_hint` instead
+///
+#define k_completionbox_qbase_global_position_hint k_completionbox_super_global_position_hint
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#globalPositionHint)
 ///
 /// Base class method implementation
 ///
 /// @param self KCompletionBox*
 ///
-QPoint* k_completionbox_qbase_global_position_hint(void* self);
+QPoint* k_completionbox_super_global_position_hint(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#slotActivated)
 ///
@@ -408,6 +448,10 @@ void k_completionbox_slot_activated(void* self, void* param1);
 ///
 void k_completionbox_on_slot_activated(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_completionbox_super_slot_activated` instead
+///
+#define k_completionbox_qbase_slot_activated k_completionbox_super_slot_activated
+
 /// [Upstream resources](https://api.kde.org/kcompletionbox.html#slotActivated)
 ///
 /// Base class method implementation
@@ -415,7 +459,7 @@ void k_completionbox_on_slot_activated(void* self, void (*callback)(void*, void*
 /// @param self KCompletionBox*
 /// @param param1 QListWidgetItem*
 ///
-void k_completionbox_qbase_slot_activated(void* self, void* param1);
+void k_completionbox_super_slot_activated(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1268,6 +1312,10 @@ void k_completionbox_set_model(void* self, void* model);
 ///
 void k_completionbox_on_set_model(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_model` instead
+///
+#define k_completionbox_qbase_set_model k_completionbox_super_set_model
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setModel)
@@ -1277,7 +1325,7 @@ void k_completionbox_on_set_model(void* self, void (*callback)(void*, void*));
 /// @param self KCompletionBox*
 /// @param model QAbstractItemModel*
 ///
-void k_completionbox_qbase_set_model(void* self, void* model);
+void k_completionbox_super_set_model(void* self, void* model);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5111,6 +5159,10 @@ int32_t k_completionbox_encode_metric_f(int32_t metric, double value);
 ///
 void k_completionbox_set_selection_model(void* self, void* selectionModel);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_selection_model` instead
+///
+#define k_completionbox_qbase_set_selection_model k_completionbox_super_set_selection_model
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#setSelectionModel)
@@ -5120,7 +5172,7 @@ void k_completionbox_set_selection_model(void* self, void* selectionModel);
 /// @param self KCompletionBox*
 /// @param selectionModel QItemSelectionModel*
 ///
-void k_completionbox_qbase_set_selection_model(void* self, void* selectionModel);
+void k_completionbox_super_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QListWidget
 ///
@@ -5144,6 +5196,10 @@ void k_completionbox_on_set_selection_model(void* self, void (*callback)(void*, 
 ///
 void k_completionbox_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_drop_event` instead
+///
+#define k_completionbox_qbase_drop_event k_completionbox_super_drop_event
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropEvent)
@@ -5153,7 +5209,7 @@ void k_completionbox_drop_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QDropEvent*
 ///
-void k_completionbox_qbase_drop_event(void* self, void* event);
+void k_completionbox_super_drop_event(void* self, void* event);
 
 /// Inherited from QListWidget
 ///
@@ -5177,6 +5233,10 @@ void k_completionbox_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_completionbox_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_event` instead
+///
+#define k_completionbox_qbase_event k_completionbox_super_event
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#event)
@@ -5186,7 +5246,7 @@ bool k_completionbox_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QEvent*
 ///
-bool k_completionbox_qbase_event(void* self, void* e);
+bool k_completionbox_super_event(void* self, void* e);
 
 /// Inherited from QListWidget
 ///
@@ -5211,6 +5271,10 @@ void k_completionbox_on_event(void* self, bool (*callback)(void*, void*));
 ///
 const char** k_completionbox_mime_types(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_mime_types` instead
+///
+#define k_completionbox_qbase_mime_types k_completionbox_super_mime_types
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeTypes)
@@ -5221,7 +5285,7 @@ const char** k_completionbox_mime_types(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-const char** k_completionbox_qbase_mime_types(void* self);
+const char** k_completionbox_super_mime_types(void* self);
 
 /// Inherited from QListWidget
 ///
@@ -5245,6 +5309,10 @@ void k_completionbox_on_mime_types(void* self, const char** (*callback)());
 ///
 QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_mime_data` instead
+///
+#define k_completionbox_qbase_mime_data k_completionbox_super_mime_data
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#mimeData)
@@ -5254,7 +5322,7 @@ QMimeData* k_completionbox_mime_data(void* self, libqt_list items);
 /// @param self KCompletionBox*
 /// @param items libqt_list of QListWidgetItem*
 ///
-QMimeData* k_completionbox_qbase_mime_data(void* self, libqt_list items);
+QMimeData* k_completionbox_super_mime_data(void* self, libqt_list items);
 
 /// Inherited from QListWidget
 ///
@@ -5280,6 +5348,10 @@ void k_completionbox_on_mime_data(void* self, QMimeData* (*callback)(void*, libq
 ///
 bool k_completionbox_drop_mime_data(void* self, int index, void* data, int32_t action);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_drop_mime_data` instead
+///
+#define k_completionbox_qbase_drop_mime_data k_completionbox_super_drop_mime_data
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#dropMimeData)
@@ -5291,7 +5363,7 @@ bool k_completionbox_drop_mime_data(void* self, int index, void* data, int32_t a
 /// @param data QMimeData*
 /// @param action enum Qt__DropAction
 ///
-bool k_completionbox_qbase_drop_mime_data(void* self, int index, void* data, int32_t action);
+bool k_completionbox_super_drop_mime_data(void* self, int index, void* data, int32_t action);
 
 /// Inherited from QListWidget
 ///
@@ -5316,6 +5388,10 @@ void k_completionbox_on_drop_mime_data(void* self, bool (*callback)(void*, int, 
 ///
 int32_t k_completionbox_supported_drop_actions(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_supported_drop_actions` instead
+///
+#define k_completionbox_qbase_supported_drop_actions k_completionbox_super_supported_drop_actions
+
 /// Inherited from QListWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistwidget.html#supportedDropActions)
@@ -5326,7 +5402,7 @@ int32_t k_completionbox_supported_drop_actions(void* self);
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_completionbox_qbase_supported_drop_actions(void* self);
+int32_t k_completionbox_super_supported_drop_actions(void* self);
 
 /// Inherited from QListWidget
 ///
@@ -5350,6 +5426,10 @@ void k_completionbox_on_supported_drop_actions(void* self, int32_t (*callback)()
 ///
 QRect* k_completionbox_visual_rect(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_visual_rect` instead
+///
+#define k_completionbox_qbase_visual_rect k_completionbox_super_visual_rect
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#visualRect)
@@ -5359,7 +5439,7 @@ QRect* k_completionbox_visual_rect(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-QRect* k_completionbox_qbase_visual_rect(void* self, void* index);
+QRect* k_completionbox_super_visual_rect(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -5384,6 +5464,10 @@ void k_completionbox_on_visual_rect(void* self, QRect* (*callback)(void*, void*)
 ///
 void k_completionbox_scroll_to(void* self, void* index, int32_t hint);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_scroll_to` instead
+///
+#define k_completionbox_qbase_scroll_to k_completionbox_super_scroll_to
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#scrollTo)
@@ -5394,7 +5478,7 @@ void k_completionbox_scroll_to(void* self, void* index, int32_t hint);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_completionbox_qbase_scroll_to(void* self, void* index, int32_t hint);
+void k_completionbox_super_scroll_to(void* self, void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5418,6 +5502,10 @@ void k_completionbox_on_scroll_to(void* self, void (*callback)(void*, void*, int
 ///
 QModelIndex* k_completionbox_index_at(void* self, void* p);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_index_at` instead
+///
+#define k_completionbox_qbase_index_at k_completionbox_super_index_at
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#indexAt)
@@ -5427,7 +5515,7 @@ QModelIndex* k_completionbox_index_at(void* self, void* p);
 /// @param self KCompletionBox*
 /// @param p QPoint*
 ///
-QModelIndex* k_completionbox_qbase_index_at(void* self, void* p);
+QModelIndex* k_completionbox_super_index_at(void* self, void* p);
 
 /// Inherited from QListView
 ///
@@ -5450,6 +5538,10 @@ void k_completionbox_on_index_at(void* self, QModelIndex* (*callback)(void*, voi
 ///
 void k_completionbox_do_items_layout(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_do_items_layout` instead
+///
+#define k_completionbox_qbase_do_items_layout k_completionbox_super_do_items_layout
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#doItemsLayout)
@@ -5458,7 +5550,7 @@ void k_completionbox_do_items_layout(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_do_items_layout(void* self);
+void k_completionbox_super_do_items_layout(void* self);
 
 /// Inherited from QListView
 ///
@@ -5481,6 +5573,10 @@ void k_completionbox_on_do_items_layout(void* self, void (*callback)());
 ///
 void k_completionbox_reset(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_reset` instead
+///
+#define k_completionbox_qbase_reset k_completionbox_super_reset
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#reset)
@@ -5489,7 +5585,7 @@ void k_completionbox_reset(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_reset(void* self);
+void k_completionbox_super_reset(void* self);
 
 /// Inherited from QListView
 ///
@@ -5513,6 +5609,10 @@ void k_completionbox_on_reset(void* self, void (*callback)());
 ///
 void k_completionbox_set_root_index(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_root_index` instead
+///
+#define k_completionbox_qbase_set_root_index k_completionbox_super_set_root_index
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setRootIndex)
@@ -5522,7 +5622,7 @@ void k_completionbox_set_root_index(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-void k_completionbox_qbase_set_root_index(void* self, void* index);
+void k_completionbox_super_set_root_index(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -5547,6 +5647,10 @@ void k_completionbox_on_set_root_index(void* self, void (*callback)(void*, void*
 ///
 void k_completionbox_scroll_contents_by(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_scroll_contents_by` instead
+///
+#define k_completionbox_qbase_scroll_contents_by k_completionbox_super_scroll_contents_by
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#scrollContentsBy)
@@ -5557,7 +5661,7 @@ void k_completionbox_scroll_contents_by(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void k_completionbox_qbase_scroll_contents_by(void* self, int dx, int dy);
+void k_completionbox_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QListView
 ///
@@ -5583,6 +5687,10 @@ void k_completionbox_on_scroll_contents_by(void* self, void (*callback)(void*, i
 ///
 void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_data_changed` instead
+///
+#define k_completionbox_qbase_data_changed k_completionbox_super_data_changed
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#dataChanged)
@@ -5594,7 +5702,7 @@ void k_completionbox_data_changed(void* self, void* topLeft, void* bottomRight, 
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_completionbox_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_completionbox_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// Inherited from QListView
 ///
@@ -5620,6 +5728,10 @@ void k_completionbox_on_data_changed(void* self, void (*callback)(void*, void*, 
 ///
 void k_completionbox_rows_inserted(void* self, void* parent, int start, int end);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_rows_inserted` instead
+///
+#define k_completionbox_qbase_rows_inserted k_completionbox_super_rows_inserted
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rowsInserted)
@@ -5631,7 +5743,7 @@ void k_completionbox_rows_inserted(void* self, void* parent, int start, int end)
 /// @param start int
 /// @param end int
 ///
-void k_completionbox_qbase_rows_inserted(void* self, void* parent, int start, int end);
+void k_completionbox_super_rows_inserted(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5657,6 +5769,10 @@ void k_completionbox_on_rows_inserted(void* self, void (*callback)(void*, void*,
 ///
 void k_completionbox_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_rows_about_to_be_removed` instead
+///
+#define k_completionbox_qbase_rows_about_to_be_removed k_completionbox_super_rows_about_to_be_removed
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rowsAboutToBeRemoved)
@@ -5668,7 +5784,7 @@ void k_completionbox_rows_about_to_be_removed(void* self, void* parent, int star
 /// @param start int
 /// @param end int
 ///
-void k_completionbox_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void k_completionbox_super_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// Inherited from QListView
 ///
@@ -5692,6 +5808,10 @@ void k_completionbox_on_rows_about_to_be_removed(void* self, void (*callback)(vo
 ///
 void k_completionbox_mouse_move_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_mouse_move_event` instead
+///
+#define k_completionbox_qbase_mouse_move_event k_completionbox_super_mouse_move_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#mouseMoveEvent)
@@ -5701,7 +5821,7 @@ void k_completionbox_mouse_move_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QMouseEvent*
 ///
-void k_completionbox_qbase_mouse_move_event(void* self, void* e);
+void k_completionbox_super_mouse_move_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5725,6 +5845,10 @@ void k_completionbox_on_mouse_move_event(void* self, void (*callback)(void*, voi
 ///
 void k_completionbox_mouse_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_mouse_release_event` instead
+///
+#define k_completionbox_qbase_mouse_release_event k_completionbox_super_mouse_release_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#mouseReleaseEvent)
@@ -5734,7 +5858,7 @@ void k_completionbox_mouse_release_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QMouseEvent*
 ///
-void k_completionbox_qbase_mouse_release_event(void* self, void* e);
+void k_completionbox_super_mouse_release_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5758,6 +5882,10 @@ void k_completionbox_on_mouse_release_event(void* self, void (*callback)(void*, 
 ///
 void k_completionbox_wheel_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_wheel_event` instead
+///
+#define k_completionbox_qbase_wheel_event k_completionbox_super_wheel_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wheelEvent)
@@ -5767,7 +5895,7 @@ void k_completionbox_wheel_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QWheelEvent*
 ///
-void k_completionbox_qbase_wheel_event(void* self, void* e);
+void k_completionbox_super_wheel_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5791,6 +5919,10 @@ void k_completionbox_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_timer_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_timer_event` instead
+///
+#define k_completionbox_qbase_timer_event k_completionbox_super_timer_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#timerEvent)
@@ -5800,7 +5932,7 @@ void k_completionbox_timer_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QTimerEvent*
 ///
-void k_completionbox_qbase_timer_event(void* self, void* e);
+void k_completionbox_super_timer_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5824,6 +5956,10 @@ void k_completionbox_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_resize_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_resize_event` instead
+///
+#define k_completionbox_qbase_resize_event k_completionbox_super_resize_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeEvent)
@@ -5833,7 +5969,7 @@ void k_completionbox_resize_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QResizeEvent*
 ///
-void k_completionbox_qbase_resize_event(void* self, void* e);
+void k_completionbox_super_resize_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5857,6 +5993,10 @@ void k_completionbox_on_resize_event(void* self, void (*callback)(void*, void*))
 ///
 void k_completionbox_drag_move_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_drag_move_event` instead
+///
+#define k_completionbox_qbase_drag_move_event k_completionbox_super_drag_move_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#dragMoveEvent)
@@ -5866,7 +6006,7 @@ void k_completionbox_drag_move_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QDragMoveEvent*
 ///
-void k_completionbox_qbase_drag_move_event(void* self, void* e);
+void k_completionbox_super_drag_move_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5890,6 +6030,10 @@ void k_completionbox_on_drag_move_event(void* self, void (*callback)(void*, void
 ///
 void k_completionbox_drag_leave_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_drag_leave_event` instead
+///
+#define k_completionbox_qbase_drag_leave_event k_completionbox_super_drag_leave_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#dragLeaveEvent)
@@ -5899,7 +6043,7 @@ void k_completionbox_drag_leave_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QDragLeaveEvent*
 ///
-void k_completionbox_qbase_drag_leave_event(void* self, void* e);
+void k_completionbox_super_drag_leave_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5923,6 +6067,10 @@ void k_completionbox_on_drag_leave_event(void* self, void (*callback)(void*, voi
 ///
 void k_completionbox_start_drag(void* self, int32_t supportedActions);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_start_drag` instead
+///
+#define k_completionbox_qbase_start_drag k_completionbox_super_start_drag
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#startDrag)
@@ -5932,7 +6080,7 @@ void k_completionbox_start_drag(void* self, int32_t supportedActions);
 /// @param self KCompletionBox*
 /// @param supportedActions flag of enum Qt__DropAction
 ///
-void k_completionbox_qbase_start_drag(void* self, int32_t supportedActions);
+void k_completionbox_super_start_drag(void* self, int32_t supportedActions);
 
 /// Inherited from QListView
 ///
@@ -5956,6 +6104,10 @@ void k_completionbox_on_start_drag(void* self, void (*callback)(void*, int32_t))
 ///
 void k_completionbox_init_view_item_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_init_view_item_option` instead
+///
+#define k_completionbox_qbase_init_view_item_option k_completionbox_super_init_view_item_option
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#initViewItemOption)
@@ -5965,7 +6117,7 @@ void k_completionbox_init_view_item_option(void* self, void* option);
 /// @param self KCompletionBox*
 /// @param option QStyleOptionViewItem*
 ///
-void k_completionbox_qbase_init_view_item_option(void* self, void* option);
+void k_completionbox_super_init_view_item_option(void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5989,6 +6141,10 @@ void k_completionbox_on_init_view_item_option(void* self, void (*callback)(void*
 ///
 void k_completionbox_paint_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_paint_event` instead
+///
+#define k_completionbox_qbase_paint_event k_completionbox_super_paint_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#paintEvent)
@@ -5998,7 +6154,7 @@ void k_completionbox_paint_event(void* self, void* e);
 /// @param self KCompletionBox*
 /// @param e QPaintEvent*
 ///
-void k_completionbox_qbase_paint_event(void* self, void* e);
+void k_completionbox_super_paint_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -6021,6 +6177,10 @@ void k_completionbox_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t k_completionbox_horizontal_offset(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_horizontal_offset` instead
+///
+#define k_completionbox_qbase_horizontal_offset k_completionbox_super_horizontal_offset
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#horizontalOffset)
@@ -6029,7 +6189,7 @@ int32_t k_completionbox_horizontal_offset(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-int32_t k_completionbox_qbase_horizontal_offset(void* self);
+int32_t k_completionbox_super_horizontal_offset(void* self);
 
 /// Inherited from QListView
 ///
@@ -6052,6 +6212,10 @@ void k_completionbox_on_horizontal_offset(void* self, int32_t (*callback)());
 ///
 int32_t k_completionbox_vertical_offset(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_vertical_offset` instead
+///
+#define k_completionbox_qbase_vertical_offset k_completionbox_super_vertical_offset
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#verticalOffset)
@@ -6060,7 +6224,7 @@ int32_t k_completionbox_vertical_offset(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-int32_t k_completionbox_qbase_vertical_offset(void* self);
+int32_t k_completionbox_super_vertical_offset(void* self);
 
 /// Inherited from QListView
 ///
@@ -6085,6 +6249,10 @@ void k_completionbox_on_vertical_offset(void* self, int32_t (*callback)());
 ///
 QModelIndex* k_completionbox_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_move_cursor` instead
+///
+#define k_completionbox_qbase_move_cursor k_completionbox_super_move_cursor
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#moveCursor)
@@ -6095,7 +6263,7 @@ QModelIndex* k_completionbox_move_cursor(void* self, int32_t cursorAction, int32
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QModelIndex* k_completionbox_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
+QModelIndex* k_completionbox_super_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
 /// Inherited from QListView
 ///
@@ -6120,6 +6288,10 @@ void k_completionbox_on_move_cursor(void* self, QModelIndex* (*callback)(void*, 
 ///
 void k_completionbox_set_selection(void* self, void* rect, int32_t command);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_selection` instead
+///
+#define k_completionbox_qbase_set_selection k_completionbox_super_set_selection
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setSelection)
@@ -6130,7 +6302,7 @@ void k_completionbox_set_selection(void* self, void* rect, int32_t command);
 /// @param rect QRect*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_completionbox_qbase_set_selection(void* self, void* rect, int32_t command);
+void k_completionbox_super_set_selection(void* self, void* rect, int32_t command);
 
 /// Inherited from QListView
 ///
@@ -6154,6 +6326,10 @@ void k_completionbox_on_set_selection(void* self, void (*callback)(void*, void*,
 ///
 QRegion* k_completionbox_visual_region_for_selection(void* self, void* selection);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_visual_region_for_selection` instead
+///
+#define k_completionbox_qbase_visual_region_for_selection k_completionbox_super_visual_region_for_selection
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#visualRegionForSelection)
@@ -6163,7 +6339,7 @@ QRegion* k_completionbox_visual_region_for_selection(void* self, void* selection
 /// @param self KCompletionBox*
 /// @param selection QItemSelection*
 ///
-QRegion* k_completionbox_qbase_visual_region_for_selection(void* self, void* selection);
+QRegion* k_completionbox_super_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QListView
 ///
@@ -6188,6 +6364,10 @@ void k_completionbox_on_visual_region_for_selection(void* self, QRegion* (*callb
 ///
 libqt_list k_completionbox_selected_indexes(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_selected_indexes` instead
+///
+#define k_completionbox_qbase_selected_indexes k_completionbox_super_selected_indexes
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectedIndexes)
@@ -6198,7 +6378,7 @@ libqt_list k_completionbox_selected_indexes(void* self);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_completionbox_qbase_selected_indexes(void* self);
+libqt_list k_completionbox_super_selected_indexes(void* self);
 
 /// Inherited from QListView
 ///
@@ -6221,6 +6401,10 @@ void k_completionbox_on_selected_indexes(void* self, libqt_list (*callback)());
 ///
 void k_completionbox_update_geometries(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_update_geometries` instead
+///
+#define k_completionbox_qbase_update_geometries k_completionbox_super_update_geometries
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#updateGeometries)
@@ -6229,7 +6413,7 @@ void k_completionbox_update_geometries(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_update_geometries(void* self);
+void k_completionbox_super_update_geometries(void* self);
 
 /// Inherited from QListView
 ///
@@ -6253,6 +6437,10 @@ void k_completionbox_on_update_geometries(void* self, void (*callback)());
 ///
 bool k_completionbox_is_index_hidden(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_is_index_hidden` instead
+///
+#define k_completionbox_qbase_is_index_hidden k_completionbox_super_is_index_hidden
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isIndexHidden)
@@ -6262,7 +6450,7 @@ bool k_completionbox_is_index_hidden(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-bool k_completionbox_qbase_is_index_hidden(void* self, void* index);
+bool k_completionbox_super_is_index_hidden(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -6287,6 +6475,10 @@ void k_completionbox_on_is_index_hidden(void* self, bool (*callback)(void*, void
 ///
 void k_completionbox_selection_changed(void* self, void* selected, void* deselected);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_selection_changed` instead
+///
+#define k_completionbox_qbase_selection_changed k_completionbox_super_selection_changed
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectionChanged)
@@ -6297,7 +6489,7 @@ void k_completionbox_selection_changed(void* self, void* selected, void* deselec
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_completionbox_qbase_selection_changed(void* self, void* selected, void* deselected);
+void k_completionbox_super_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QListView
 ///
@@ -6322,6 +6514,10 @@ void k_completionbox_on_selection_changed(void* self, void (*callback)(void*, vo
 ///
 void k_completionbox_current_changed(void* self, void* current, void* previous);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_current_changed` instead
+///
+#define k_completionbox_qbase_current_changed k_completionbox_super_current_changed
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#currentChanged)
@@ -6332,7 +6528,7 @@ void k_completionbox_current_changed(void* self, void* current, void* previous);
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_completionbox_qbase_current_changed(void* self, void* current, void* previous);
+void k_completionbox_super_current_changed(void* self, void* current, void* previous);
 
 /// Inherited from QListView
 ///
@@ -6355,6 +6551,10 @@ void k_completionbox_on_current_changed(void* self, void (*callback)(void*, void
 ///
 QSize* k_completionbox_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_viewport_size_hint` instead
+///
+#define k_completionbox_qbase_viewport_size_hint k_completionbox_super_viewport_size_hint
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#viewportSizeHint)
@@ -6363,7 +6563,7 @@ QSize* k_completionbox_viewport_size_hint(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QSize* k_completionbox_qbase_viewport_size_hint(void* self);
+QSize* k_completionbox_super_viewport_size_hint(void* self);
 
 /// Inherited from QListView
 ///
@@ -6387,6 +6587,10 @@ void k_completionbox_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void k_completionbox_keyboard_search(void* self, const char* search);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_keyboard_search` instead
+///
+#define k_completionbox_qbase_keyboard_search k_completionbox_super_keyboard_search
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
@@ -6396,7 +6600,7 @@ void k_completionbox_keyboard_search(void* self, const char* search);
 /// @param self KCompletionBox*
 /// @param search const char*
 ///
-void k_completionbox_qbase_keyboard_search(void* self, const char* search);
+void k_completionbox_super_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6420,6 +6624,10 @@ void k_completionbox_on_keyboard_search(void* self, void (*callback)(void*, cons
 ///
 int32_t k_completionbox_size_hint_for_row(void* self, int row);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_size_hint_for_row` instead
+///
+#define k_completionbox_qbase_size_hint_for_row k_completionbox_super_size_hint_for_row
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
@@ -6429,7 +6637,7 @@ int32_t k_completionbox_size_hint_for_row(void* self, int row);
 /// @param self KCompletionBox*
 /// @param row int
 ///
-int32_t k_completionbox_qbase_size_hint_for_row(void* self, int row);
+int32_t k_completionbox_super_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6453,6 +6661,10 @@ void k_completionbox_on_size_hint_for_row(void* self, int32_t (*callback)(void*,
 ///
 int32_t k_completionbox_size_hint_for_column(void* self, int column);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_size_hint_for_column` instead
+///
+#define k_completionbox_qbase_size_hint_for_column k_completionbox_super_size_hint_for_column
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
@@ -6462,7 +6674,7 @@ int32_t k_completionbox_size_hint_for_column(void* self, int column);
 /// @param self KCompletionBox*
 /// @param column int
 ///
-int32_t k_completionbox_qbase_size_hint_for_column(void* self, int column);
+int32_t k_completionbox_super_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6486,6 +6698,10 @@ void k_completionbox_on_size_hint_for_column(void* self, int32_t (*callback)(voi
 ///
 QAbstractItemDelegate* k_completionbox_item_delegate_for_index(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_item_delegate_for_index` instead
+///
+#define k_completionbox_qbase_item_delegate_for_index k_completionbox_super_item_delegate_for_index
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
@@ -6495,7 +6711,7 @@ QAbstractItemDelegate* k_completionbox_item_delegate_for_index(void* self, void*
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_completionbox_qbase_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* k_completionbox_super_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6519,6 +6735,10 @@ void k_completionbox_on_item_delegate_for_index(void* self, QAbstractItemDelegat
 ///
 QVariant* k_completionbox_input_method_query(void* self, int32_t query);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_input_method_query` instead
+///
+#define k_completionbox_qbase_input_method_query k_completionbox_super_input_method_query
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
@@ -6528,7 +6748,7 @@ QVariant* k_completionbox_input_method_query(void* self, int32_t query);
 /// @param self KCompletionBox*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_completionbox_qbase_input_method_query(void* self, int32_t query);
+QVariant* k_completionbox_super_input_method_query(void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6551,6 +6771,10 @@ void k_completionbox_on_input_method_query(void* self, QVariant* (*callback)(voi
 ///
 void k_completionbox_select_all(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_select_all` instead
+///
+#define k_completionbox_qbase_select_all k_completionbox_super_select_all
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
@@ -6559,7 +6783,7 @@ void k_completionbox_select_all(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_select_all(void* self);
+void k_completionbox_super_select_all(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6582,6 +6806,10 @@ void k_completionbox_on_select_all(void* self, void (*callback)());
 ///
 void k_completionbox_update_editor_data(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_update_editor_data` instead
+///
+#define k_completionbox_qbase_update_editor_data k_completionbox_super_update_editor_data
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
@@ -6590,7 +6818,7 @@ void k_completionbox_update_editor_data(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_update_editor_data(void* self);
+void k_completionbox_super_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6613,6 +6841,10 @@ void k_completionbox_on_update_editor_data(void* self, void (*callback)());
 ///
 void k_completionbox_update_editor_geometries(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_update_editor_geometries` instead
+///
+#define k_completionbox_qbase_update_editor_geometries k_completionbox_super_update_editor_geometries
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
@@ -6621,7 +6853,7 @@ void k_completionbox_update_editor_geometries(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_update_editor_geometries(void* self);
+void k_completionbox_super_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6645,6 +6877,10 @@ void k_completionbox_on_update_editor_geometries(void* self, void (*callback)())
 ///
 void k_completionbox_vertical_scrollbar_action(void* self, int action);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_vertical_scrollbar_action` instead
+///
+#define k_completionbox_qbase_vertical_scrollbar_action k_completionbox_super_vertical_scrollbar_action
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
@@ -6654,7 +6890,7 @@ void k_completionbox_vertical_scrollbar_action(void* self, int action);
 /// @param self KCompletionBox*
 /// @param action int
 ///
-void k_completionbox_qbase_vertical_scrollbar_action(void* self, int action);
+void k_completionbox_super_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6678,6 +6914,10 @@ void k_completionbox_on_vertical_scrollbar_action(void* self, void (*callback)(v
 ///
 void k_completionbox_horizontal_scrollbar_action(void* self, int action);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_horizontal_scrollbar_action` instead
+///
+#define k_completionbox_qbase_horizontal_scrollbar_action k_completionbox_super_horizontal_scrollbar_action
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
@@ -6687,7 +6927,7 @@ void k_completionbox_horizontal_scrollbar_action(void* self, int action);
 /// @param self KCompletionBox*
 /// @param action int
 ///
-void k_completionbox_qbase_horizontal_scrollbar_action(void* self, int action);
+void k_completionbox_super_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6711,6 +6951,10 @@ void k_completionbox_on_horizontal_scrollbar_action(void* self, void (*callback)
 ///
 void k_completionbox_vertical_scrollbar_value_changed(void* self, int value);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_vertical_scrollbar_value_changed` instead
+///
+#define k_completionbox_qbase_vertical_scrollbar_value_changed k_completionbox_super_vertical_scrollbar_value_changed
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
@@ -6720,7 +6964,7 @@ void k_completionbox_vertical_scrollbar_value_changed(void* self, int value);
 /// @param self KCompletionBox*
 /// @param value int
 ///
-void k_completionbox_qbase_vertical_scrollbar_value_changed(void* self, int value);
+void k_completionbox_super_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6744,6 +6988,10 @@ void k_completionbox_on_vertical_scrollbar_value_changed(void* self, void (*call
 ///
 void k_completionbox_horizontal_scrollbar_value_changed(void* self, int value);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_horizontal_scrollbar_value_changed` instead
+///
+#define k_completionbox_qbase_horizontal_scrollbar_value_changed k_completionbox_super_horizontal_scrollbar_value_changed
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
@@ -6753,7 +7001,7 @@ void k_completionbox_horizontal_scrollbar_value_changed(void* self, int value);
 /// @param self KCompletionBox*
 /// @param value int
 ///
-void k_completionbox_qbase_horizontal_scrollbar_value_changed(void* self, int value);
+void k_completionbox_super_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6778,6 +7026,10 @@ void k_completionbox_on_horizontal_scrollbar_value_changed(void* self, void (*ca
 ///
 void k_completionbox_close_editor(void* self, void* editor, int32_t hint);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_close_editor` instead
+///
+#define k_completionbox_qbase_close_editor k_completionbox_super_close_editor
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
@@ -6788,7 +7040,7 @@ void k_completionbox_close_editor(void* self, void* editor, int32_t hint);
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
 ///
-void k_completionbox_qbase_close_editor(void* self, void* editor, int32_t hint);
+void k_completionbox_super_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6812,6 +7064,10 @@ void k_completionbox_on_close_editor(void* self, void (*callback)(void*, void*, 
 ///
 void k_completionbox_commit_data(void* self, void* editor);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_commit_data` instead
+///
+#define k_completionbox_qbase_commit_data k_completionbox_super_commit_data
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
@@ -6821,7 +7077,7 @@ void k_completionbox_commit_data(void* self, void* editor);
 /// @param self KCompletionBox*
 /// @param editor QWidget*
 ///
-void k_completionbox_qbase_commit_data(void* self, void* editor);
+void k_completionbox_super_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6845,6 +7101,10 @@ void k_completionbox_on_commit_data(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_editor_destroyed(void* self, void* editor);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_editor_destroyed` instead
+///
+#define k_completionbox_qbase_editor_destroyed k_completionbox_super_editor_destroyed
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
@@ -6854,7 +7114,7 @@ void k_completionbox_editor_destroyed(void* self, void* editor);
 /// @param self KCompletionBox*
 /// @param editor QObject*
 ///
-void k_completionbox_qbase_editor_destroyed(void* self, void* editor);
+void k_completionbox_super_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6880,6 +7140,10 @@ void k_completionbox_on_editor_destroyed(void* self, void (*callback)(void*, voi
 ///
 bool k_completionbox_edit2(void* self, void* index, int32_t trigger, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_edit2` instead
+///
+#define k_completionbox_qbase_edit2 k_completionbox_super_edit2
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
@@ -6891,7 +7155,7 @@ bool k_completionbox_edit2(void* self, void* index, int32_t trigger, void* event
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool k_completionbox_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
+bool k_completionbox_super_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6918,6 +7182,10 @@ void k_completionbox_on_edit2(void* self, bool (*callback)(void*, void*, int32_t
 ///
 int32_t k_completionbox_selection_command(void* self, void* index, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_selection_command` instead
+///
+#define k_completionbox_qbase_selection_command k_completionbox_super_selection_command
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
@@ -6930,7 +7198,7 @@ int32_t k_completionbox_selection_command(void* self, void* index, void* event);
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t k_completionbox_qbase_selection_command(void* self, void* index, void* event);
+int32_t k_completionbox_super_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6954,6 +7222,10 @@ void k_completionbox_on_selection_command(void* self, int32_t (*callback)(void*,
 ///
 bool k_completionbox_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_focus_next_prev_child` instead
+///
+#define k_completionbox_qbase_focus_next_prev_child k_completionbox_super_focus_next_prev_child
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
@@ -6963,7 +7235,7 @@ bool k_completionbox_focus_next_prev_child(void* self, bool next);
 /// @param self KCompletionBox*
 /// @param next bool
 ///
-bool k_completionbox_qbase_focus_next_prev_child(void* self, bool next);
+bool k_completionbox_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6987,6 +7259,10 @@ void k_completionbox_on_focus_next_prev_child(void* self, bool (*callback)(void*
 ///
 bool k_completionbox_viewport_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_viewport_event` instead
+///
+#define k_completionbox_qbase_viewport_event k_completionbox_super_viewport_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEvent)
@@ -6996,7 +7272,7 @@ bool k_completionbox_viewport_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QEvent*
 ///
-bool k_completionbox_qbase_viewport_event(void* self, void* event);
+bool k_completionbox_super_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7020,6 +7296,10 @@ void k_completionbox_on_viewport_event(void* self, bool (*callback)(void*, void*
 ///
 void k_completionbox_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_mouse_press_event` instead
+///
+#define k_completionbox_qbase_mouse_press_event k_completionbox_super_mouse_press_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#mousePressEvent)
@@ -7029,7 +7309,7 @@ void k_completionbox_mouse_press_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QMouseEvent*
 ///
-void k_completionbox_qbase_mouse_press_event(void* self, void* event);
+void k_completionbox_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7053,6 +7333,10 @@ void k_completionbox_on_mouse_press_event(void* self, void (*callback)(void*, vo
 ///
 void k_completionbox_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_mouse_double_click_event` instead
+///
+#define k_completionbox_qbase_mouse_double_click_event k_completionbox_super_mouse_double_click_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#mouseDoubleClickEvent)
@@ -7062,7 +7346,7 @@ void k_completionbox_mouse_double_click_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QMouseEvent*
 ///
-void k_completionbox_qbase_mouse_double_click_event(void* self, void* event);
+void k_completionbox_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7086,6 +7370,10 @@ void k_completionbox_on_mouse_double_click_event(void* self, void (*callback)(vo
 ///
 void k_completionbox_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_drag_enter_event` instead
+///
+#define k_completionbox_qbase_drag_enter_event k_completionbox_super_drag_enter_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dragEnterEvent)
@@ -7095,7 +7383,7 @@ void k_completionbox_drag_enter_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QDragEnterEvent*
 ///
-void k_completionbox_qbase_drag_enter_event(void* self, void* event);
+void k_completionbox_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7119,6 +7407,10 @@ void k_completionbox_on_drag_enter_event(void* self, void (*callback)(void*, voi
 ///
 void k_completionbox_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_focus_in_event` instead
+///
+#define k_completionbox_qbase_focus_in_event k_completionbox_super_focus_in_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
@@ -7128,7 +7420,7 @@ void k_completionbox_focus_in_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QFocusEvent*
 ///
-void k_completionbox_qbase_focus_in_event(void* self, void* event);
+void k_completionbox_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7152,6 +7444,10 @@ void k_completionbox_on_focus_in_event(void* self, void (*callback)(void*, void*
 ///
 void k_completionbox_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_focus_out_event` instead
+///
+#define k_completionbox_qbase_focus_out_event k_completionbox_super_focus_out_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
@@ -7161,7 +7457,7 @@ void k_completionbox_focus_out_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QFocusEvent*
 ///
-void k_completionbox_qbase_focus_out_event(void* self, void* event);
+void k_completionbox_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7185,6 +7481,10 @@ void k_completionbox_on_focus_out_event(void* self, void (*callback)(void*, void
 ///
 void k_completionbox_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_key_press_event` instead
+///
+#define k_completionbox_qbase_key_press_event k_completionbox_super_key_press_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
@@ -7194,7 +7494,7 @@ void k_completionbox_key_press_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QKeyEvent*
 ///
-void k_completionbox_qbase_key_press_event(void* self, void* event);
+void k_completionbox_super_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7218,6 +7518,10 @@ void k_completionbox_on_key_press_event(void* self, void (*callback)(void*, void
 ///
 void k_completionbox_input_method_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_input_method_event` instead
+///
+#define k_completionbox_qbase_input_method_event k_completionbox_super_input_method_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
@@ -7227,7 +7531,7 @@ void k_completionbox_input_method_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QInputMethodEvent*
 ///
-void k_completionbox_qbase_input_method_event(void* self, void* event);
+void k_completionbox_super_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7250,6 +7554,10 @@ void k_completionbox_on_input_method_event(void* self, void (*callback)(void*, v
 ///
 QSize* k_completionbox_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_minimum_size_hint` instead
+///
+#define k_completionbox_qbase_minimum_size_hint k_completionbox_super_minimum_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -7258,7 +7566,7 @@ QSize* k_completionbox_minimum_size_hint(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QSize* k_completionbox_qbase_minimum_size_hint(void* self);
+QSize* k_completionbox_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7282,6 +7590,10 @@ void k_completionbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void k_completionbox_setup_viewport(void* self, void* viewport);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_setup_viewport` instead
+///
+#define k_completionbox_qbase_setup_viewport k_completionbox_super_setup_viewport
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -7291,7 +7603,7 @@ void k_completionbox_setup_viewport(void* self, void* viewport);
 /// @param self KCompletionBox*
 /// @param viewport QWidget*
 ///
-void k_completionbox_qbase_setup_viewport(void* self, void* viewport);
+void k_completionbox_super_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7315,6 +7627,10 @@ void k_completionbox_on_setup_viewport(void* self, void (*callback)(void*, void*
 ///
 void k_completionbox_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_context_menu_event` instead
+///
+#define k_completionbox_qbase_context_menu_event k_completionbox_super_context_menu_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -7324,7 +7640,7 @@ void k_completionbox_context_menu_event(void* self, void* param1);
 /// @param self KCompletionBox*
 /// @param param1 QContextMenuEvent*
 ///
-void k_completionbox_qbase_context_menu_event(void* self, void* param1);
+void k_completionbox_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7348,6 +7664,10 @@ void k_completionbox_on_context_menu_event(void* self, void (*callback)(void*, v
 ///
 void k_completionbox_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_change_event` instead
+///
+#define k_completionbox_qbase_change_event k_completionbox_super_change_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -7357,7 +7677,7 @@ void k_completionbox_change_event(void* self, void* param1);
 /// @param self KCompletionBox*
 /// @param param1 QEvent*
 ///
-void k_completionbox_qbase_change_event(void* self, void* param1);
+void k_completionbox_super_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -7381,6 +7701,10 @@ void k_completionbox_on_change_event(void* self, void (*callback)(void*, void*))
 ///
 void k_completionbox_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_init_style_option` instead
+///
+#define k_completionbox_qbase_init_style_option k_completionbox_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -7390,7 +7714,7 @@ void k_completionbox_init_style_option(void* self, void* option);
 /// @param self KCompletionBox*
 /// @param option QStyleOptionFrame*
 ///
-void k_completionbox_qbase_init_style_option(void* self, void* option);
+void k_completionbox_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -7413,6 +7737,10 @@ void k_completionbox_on_init_style_option(void* self, void (*callback)(void*, vo
 ///
 int32_t k_completionbox_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_dev_type` instead
+///
+#define k_completionbox_qbase_dev_type k_completionbox_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -7421,7 +7749,7 @@ int32_t k_completionbox_dev_type(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-int32_t k_completionbox_qbase_dev_type(void* self);
+int32_t k_completionbox_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7445,6 +7773,10 @@ void k_completionbox_on_dev_type(void* self, int32_t (*callback)());
 ///
 int32_t k_completionbox_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_height_for_width` instead
+///
+#define k_completionbox_qbase_height_for_width k_completionbox_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -7454,7 +7786,7 @@ int32_t k_completionbox_height_for_width(void* self, int param1);
 /// @param self KCompletionBox*
 /// @param param1 int
 ///
-int32_t k_completionbox_qbase_height_for_width(void* self, int param1);
+int32_t k_completionbox_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -7477,6 +7809,10 @@ void k_completionbox_on_height_for_width(void* self, int32_t (*callback)(void*, 
 ///
 bool k_completionbox_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_has_height_for_width` instead
+///
+#define k_completionbox_qbase_has_height_for_width k_completionbox_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -7485,7 +7821,7 @@ bool k_completionbox_has_height_for_width(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-bool k_completionbox_qbase_has_height_for_width(void* self);
+bool k_completionbox_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7508,6 +7844,10 @@ void k_completionbox_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_completionbox_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_paint_engine` instead
+///
+#define k_completionbox_qbase_paint_engine k_completionbox_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -7516,7 +7856,7 @@ QPaintEngine* k_completionbox_paint_engine(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QPaintEngine* k_completionbox_qbase_paint_engine(void* self);
+QPaintEngine* k_completionbox_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7540,6 +7880,10 @@ void k_completionbox_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_completionbox_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_key_release_event` instead
+///
+#define k_completionbox_qbase_key_release_event k_completionbox_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -7549,7 +7893,7 @@ void k_completionbox_key_release_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QKeyEvent*
 ///
-void k_completionbox_qbase_key_release_event(void* self, void* event);
+void k_completionbox_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7573,6 +7917,10 @@ void k_completionbox_on_key_release_event(void* self, void (*callback)(void*, vo
 ///
 void k_completionbox_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_enter_event` instead
+///
+#define k_completionbox_qbase_enter_event k_completionbox_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -7582,7 +7930,7 @@ void k_completionbox_enter_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QEnterEvent*
 ///
-void k_completionbox_qbase_enter_event(void* self, void* event);
+void k_completionbox_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7606,6 +7954,10 @@ void k_completionbox_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_leave_event` instead
+///
+#define k_completionbox_qbase_leave_event k_completionbox_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -7615,7 +7967,7 @@ void k_completionbox_leave_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QEvent*
 ///
-void k_completionbox_qbase_leave_event(void* self, void* event);
+void k_completionbox_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7639,6 +7991,10 @@ void k_completionbox_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_move_event` instead
+///
+#define k_completionbox_qbase_move_event k_completionbox_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -7648,7 +8004,7 @@ void k_completionbox_move_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QMoveEvent*
 ///
-void k_completionbox_qbase_move_event(void* self, void* event);
+void k_completionbox_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7672,6 +8028,10 @@ void k_completionbox_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_close_event` instead
+///
+#define k_completionbox_qbase_close_event k_completionbox_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -7681,7 +8041,7 @@ void k_completionbox_close_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QCloseEvent*
 ///
-void k_completionbox_qbase_close_event(void* self, void* event);
+void k_completionbox_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7705,6 +8065,10 @@ void k_completionbox_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_tablet_event` instead
+///
+#define k_completionbox_qbase_tablet_event k_completionbox_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -7714,7 +8078,7 @@ void k_completionbox_tablet_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QTabletEvent*
 ///
-void k_completionbox_qbase_tablet_event(void* self, void* event);
+void k_completionbox_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7738,6 +8102,10 @@ void k_completionbox_on_tablet_event(void* self, void (*callback)(void*, void*))
 ///
 void k_completionbox_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_action_event` instead
+///
+#define k_completionbox_qbase_action_event k_completionbox_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -7747,7 +8115,7 @@ void k_completionbox_action_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QActionEvent*
 ///
-void k_completionbox_qbase_action_event(void* self, void* event);
+void k_completionbox_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7771,6 +8139,10 @@ void k_completionbox_on_action_event(void* self, void (*callback)(void*, void*))
 ///
 void k_completionbox_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_show_event` instead
+///
+#define k_completionbox_qbase_show_event k_completionbox_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -7780,7 +8152,7 @@ void k_completionbox_show_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QShowEvent*
 ///
-void k_completionbox_qbase_show_event(void* self, void* event);
+void k_completionbox_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7804,6 +8176,10 @@ void k_completionbox_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_hide_event` instead
+///
+#define k_completionbox_qbase_hide_event k_completionbox_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -7813,7 +8189,7 @@ void k_completionbox_hide_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QHideEvent*
 ///
-void k_completionbox_qbase_hide_event(void* self, void* event);
+void k_completionbox_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -7839,6 +8215,10 @@ void k_completionbox_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_completionbox_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_native_event` instead
+///
+#define k_completionbox_qbase_native_event k_completionbox_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -7850,7 +8230,7 @@ bool k_completionbox_native_event(void* self, char* eventType, void* message, in
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_completionbox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_completionbox_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -7874,6 +8254,10 @@ void k_completionbox_on_native_event(void* self, bool (*callback)(void*, libqt_s
 ///
 int32_t k_completionbox_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_metric` instead
+///
+#define k_completionbox_qbase_metric k_completionbox_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -7883,7 +8267,7 @@ int32_t k_completionbox_metric(void* self, int32_t param1);
 /// @param self KCompletionBox*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_completionbox_qbase_metric(void* self, int32_t param1);
+int32_t k_completionbox_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7907,6 +8291,10 @@ void k_completionbox_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_completionbox_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_init_painter` instead
+///
+#define k_completionbox_qbase_init_painter k_completionbox_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -7916,7 +8304,7 @@ void k_completionbox_init_painter(void* self, void* painter);
 /// @param self KCompletionBox*
 /// @param painter QPainter*
 ///
-void k_completionbox_qbase_init_painter(void* self, void* painter);
+void k_completionbox_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7940,6 +8328,10 @@ void k_completionbox_on_init_painter(void* self, void (*callback)(void*, void*))
 ///
 QPaintDevice* k_completionbox_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_redirected` instead
+///
+#define k_completionbox_qbase_redirected k_completionbox_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -7949,7 +8341,7 @@ QPaintDevice* k_completionbox_redirected(void* self, void* offset);
 /// @param self KCompletionBox*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_completionbox_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_completionbox_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7972,6 +8364,10 @@ void k_completionbox_on_redirected(void* self, QPaintDevice* (*callback)(void*, 
 ///
 QPainter* k_completionbox_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_shared_painter` instead
+///
+#define k_completionbox_qbase_shared_painter k_completionbox_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -7980,7 +8376,7 @@ QPainter* k_completionbox_shared_painter(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QPainter* k_completionbox_qbase_shared_painter(void* self);
+QPainter* k_completionbox_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8004,6 +8400,10 @@ void k_completionbox_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_completionbox_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_child_event` instead
+///
+#define k_completionbox_qbase_child_event k_completionbox_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -8013,7 +8413,7 @@ void k_completionbox_child_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QChildEvent*
 ///
-void k_completionbox_qbase_child_event(void* self, void* event);
+void k_completionbox_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -8037,6 +8437,10 @@ void k_completionbox_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_custom_event` instead
+///
+#define k_completionbox_qbase_custom_event k_completionbox_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -8046,7 +8450,7 @@ void k_completionbox_custom_event(void* self, void* event);
 /// @param self KCompletionBox*
 /// @param event QEvent*
 ///
-void k_completionbox_qbase_custom_event(void* self, void* event);
+void k_completionbox_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -8070,6 +8474,10 @@ void k_completionbox_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void k_completionbox_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_connect_notify` instead
+///
+#define k_completionbox_qbase_connect_notify k_completionbox_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -8079,7 +8487,7 @@ void k_completionbox_connect_notify(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-void k_completionbox_qbase_connect_notify(void* self, void* signal);
+void k_completionbox_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -8103,6 +8511,10 @@ void k_completionbox_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_completionbox_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_disconnect_notify` instead
+///
+#define k_completionbox_qbase_disconnect_notify k_completionbox_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -8112,7 +8524,7 @@ void k_completionbox_disconnect_notify(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-void k_completionbox_qbase_disconnect_notify(void* self, void* signal);
+void k_completionbox_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -8137,6 +8549,10 @@ void k_completionbox_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_completionbox_resize_contents(void* self, int width, int height);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_resize_contents` instead
+///
+#define k_completionbox_qbase_resize_contents k_completionbox_super_resize_contents
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeContents)
@@ -8147,7 +8563,7 @@ void k_completionbox_resize_contents(void* self, int width, int height);
 /// @param width int
 /// @param height int
 ///
-void k_completionbox_qbase_resize_contents(void* self, int width, int height);
+void k_completionbox_super_resize_contents(void* self, int width, int height);
 
 /// Inherited from QListView
 ///
@@ -8170,6 +8586,10 @@ void k_completionbox_on_resize_contents(void* self, void (*callback)(void*, int,
 ///
 QSize* k_completionbox_contents_size(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_contents_size` instead
+///
+#define k_completionbox_qbase_contents_size k_completionbox_super_contents_size
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#contentsSize)
@@ -8178,7 +8598,7 @@ QSize* k_completionbox_contents_size(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QSize* k_completionbox_qbase_contents_size(void* self);
+QSize* k_completionbox_super_contents_size(void* self);
 
 /// Inherited from QListView
 ///
@@ -8202,6 +8622,10 @@ void k_completionbox_on_contents_size(void* self, QSize* (*callback)());
 ///
 QRect* k_completionbox_rect_for_index(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_rect_for_index` instead
+///
+#define k_completionbox_qbase_rect_for_index k_completionbox_super_rect_for_index
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rectForIndex)
@@ -8211,7 +8635,7 @@ QRect* k_completionbox_rect_for_index(void* self, void* index);
 /// @param self KCompletionBox*
 /// @param index QModelIndex*
 ///
-QRect* k_completionbox_qbase_rect_for_index(void* self, void* index);
+QRect* k_completionbox_super_rect_for_index(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -8236,6 +8660,10 @@ void k_completionbox_on_rect_for_index(void* self, QRect* (*callback)(void*, voi
 ///
 void k_completionbox_set_position_for_index(void* self, void* position, void* index);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_position_for_index` instead
+///
+#define k_completionbox_qbase_set_position_for_index k_completionbox_super_set_position_for_index
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setPositionForIndex)
@@ -8246,7 +8674,7 @@ void k_completionbox_set_position_for_index(void* self, void* position, void* in
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void k_completionbox_qbase_set_position_for_index(void* self, void* position, void* index);
+void k_completionbox_super_set_position_for_index(void* self, void* position, void* index);
 
 /// Inherited from QListView
 ///
@@ -8271,6 +8699,10 @@ void k_completionbox_on_set_position_for_index(void* self, void (*callback)(void
 ///
 int32_t k_completionbox_state(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_state` instead
+///
+#define k_completionbox_qbase_state k_completionbox_super_state
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#state)
@@ -8281,7 +8713,7 @@ int32_t k_completionbox_state(void* self);
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t k_completionbox_qbase_state(void* self);
+int32_t k_completionbox_super_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8305,6 +8737,10 @@ void k_completionbox_on_state(void* self, int32_t (*callback)());
 ///
 void k_completionbox_set_state(void* self, int32_t state);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_state` instead
+///
+#define k_completionbox_qbase_set_state k_completionbox_super_set_state
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
@@ -8314,7 +8750,7 @@ void k_completionbox_set_state(void* self, int32_t state);
 /// @param self KCompletionBox*
 /// @param state enum QAbstractItemView__State
 ///
-void k_completionbox_qbase_set_state(void* self, int32_t state);
+void k_completionbox_super_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8337,6 +8773,10 @@ void k_completionbox_on_set_state(void* self, void (*callback)(void*, int32_t));
 ///
 void k_completionbox_schedule_delayed_items_layout(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_schedule_delayed_items_layout` instead
+///
+#define k_completionbox_qbase_schedule_delayed_items_layout k_completionbox_super_schedule_delayed_items_layout
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
@@ -8345,7 +8785,7 @@ void k_completionbox_schedule_delayed_items_layout(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_schedule_delayed_items_layout(void* self);
+void k_completionbox_super_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8368,6 +8808,10 @@ void k_completionbox_on_schedule_delayed_items_layout(void* self, void (*callbac
 ///
 void k_completionbox_execute_delayed_items_layout(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_execute_delayed_items_layout` instead
+///
+#define k_completionbox_qbase_execute_delayed_items_layout k_completionbox_super_execute_delayed_items_layout
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
@@ -8376,7 +8820,7 @@ void k_completionbox_execute_delayed_items_layout(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_execute_delayed_items_layout(void* self);
+void k_completionbox_super_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8400,6 +8844,10 @@ void k_completionbox_on_execute_delayed_items_layout(void* self, void (*callback
 ///
 void k_completionbox_set_dirty_region(void* self, void* region);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_dirty_region` instead
+///
+#define k_completionbox_qbase_set_dirty_region k_completionbox_super_set_dirty_region
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
@@ -8409,7 +8857,7 @@ void k_completionbox_set_dirty_region(void* self, void* region);
 /// @param self KCompletionBox*
 /// @param region QRegion*
 ///
-void k_completionbox_qbase_set_dirty_region(void* self, void* region);
+void k_completionbox_super_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8434,6 +8882,10 @@ void k_completionbox_on_set_dirty_region(void* self, void (*callback)(void*, voi
 ///
 void k_completionbox_scroll_dirty_region(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_scroll_dirty_region` instead
+///
+#define k_completionbox_qbase_scroll_dirty_region k_completionbox_super_scroll_dirty_region
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
@@ -8444,7 +8896,7 @@ void k_completionbox_scroll_dirty_region(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void k_completionbox_qbase_scroll_dirty_region(void* self, int dx, int dy);
+void k_completionbox_super_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8467,6 +8919,10 @@ void k_completionbox_on_scroll_dirty_region(void* self, void (*callback)(void*, 
 ///
 QPoint* k_completionbox_dirty_region_offset(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_dirty_region_offset` instead
+///
+#define k_completionbox_qbase_dirty_region_offset k_completionbox_super_dirty_region_offset
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
@@ -8475,7 +8931,7 @@ QPoint* k_completionbox_dirty_region_offset(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QPoint* k_completionbox_qbase_dirty_region_offset(void* self);
+QPoint* k_completionbox_super_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8498,6 +8954,10 @@ void k_completionbox_on_dirty_region_offset(void* self, QPoint* (*callback)());
 ///
 void k_completionbox_start_auto_scroll(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_start_auto_scroll` instead
+///
+#define k_completionbox_qbase_start_auto_scroll k_completionbox_super_start_auto_scroll
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
@@ -8506,7 +8966,7 @@ void k_completionbox_start_auto_scroll(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_start_auto_scroll(void* self);
+void k_completionbox_super_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8529,6 +8989,10 @@ void k_completionbox_on_start_auto_scroll(void* self, void (*callback)());
 ///
 void k_completionbox_stop_auto_scroll(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_stop_auto_scroll` instead
+///
+#define k_completionbox_qbase_stop_auto_scroll k_completionbox_super_stop_auto_scroll
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
@@ -8537,7 +9001,7 @@ void k_completionbox_stop_auto_scroll(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_stop_auto_scroll(void* self);
+void k_completionbox_super_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8560,6 +9024,10 @@ void k_completionbox_on_stop_auto_scroll(void* self, void (*callback)());
 ///
 void k_completionbox_do_auto_scroll(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_do_auto_scroll` instead
+///
+#define k_completionbox_qbase_do_auto_scroll k_completionbox_super_do_auto_scroll
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
@@ -8568,7 +9036,7 @@ void k_completionbox_do_auto_scroll(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_do_auto_scroll(void* self);
+void k_completionbox_super_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8593,6 +9061,10 @@ void k_completionbox_on_do_auto_scroll(void* self, void (*callback)());
 ///
 int32_t k_completionbox_drop_indicator_position(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_drop_indicator_position` instead
+///
+#define k_completionbox_qbase_drop_indicator_position k_completionbox_super_drop_indicator_position
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
@@ -8603,7 +9075,7 @@ int32_t k_completionbox_drop_indicator_position(void* self);
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t k_completionbox_qbase_drop_indicator_position(void* self);
+int32_t k_completionbox_super_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -8630,6 +9102,10 @@ void k_completionbox_on_drop_indicator_position(void* self, int32_t (*callback)(
 ///
 void k_completionbox_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_set_viewport_margins` instead
+///
+#define k_completionbox_qbase_set_viewport_margins k_completionbox_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -8642,7 +9118,7 @@ void k_completionbox_set_viewport_margins(void* self, int left, int top, int rig
 /// @param right int
 /// @param bottom int
 ///
-void k_completionbox_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void k_completionbox_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8665,6 +9141,10 @@ void k_completionbox_on_set_viewport_margins(void* self, void (*callback)(void*,
 ///
 QMargins* k_completionbox_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_viewport_margins` instead
+///
+#define k_completionbox_qbase_viewport_margins k_completionbox_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -8673,7 +9153,7 @@ QMargins* k_completionbox_viewport_margins(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QMargins* k_completionbox_qbase_viewport_margins(void* self);
+QMargins* k_completionbox_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -8697,6 +9177,10 @@ void k_completionbox_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void k_completionbox_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_draw_frame` instead
+///
+#define k_completionbox_qbase_draw_frame k_completionbox_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -8706,7 +9190,7 @@ void k_completionbox_draw_frame(void* self, void* param1);
 /// @param self KCompletionBox*
 /// @param param1 QPainter*
 ///
-void k_completionbox_qbase_draw_frame(void* self, void* param1);
+void k_completionbox_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -8729,6 +9213,10 @@ void k_completionbox_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void k_completionbox_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_update_micro_focus` instead
+///
+#define k_completionbox_qbase_update_micro_focus k_completionbox_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -8737,7 +9225,7 @@ void k_completionbox_update_micro_focus(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_update_micro_focus(void* self);
+void k_completionbox_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8760,6 +9248,10 @@ void k_completionbox_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_completionbox_create(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_create` instead
+///
+#define k_completionbox_qbase_create k_completionbox_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -8768,7 +9260,7 @@ void k_completionbox_create(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_create(void* self);
+void k_completionbox_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8791,6 +9283,10 @@ void k_completionbox_on_create(void* self, void (*callback)());
 ///
 void k_completionbox_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_destroy` instead
+///
+#define k_completionbox_qbase_destroy k_completionbox_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -8799,7 +9295,7 @@ void k_completionbox_destroy(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-void k_completionbox_qbase_destroy(void* self);
+void k_completionbox_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8822,6 +9318,10 @@ void k_completionbox_on_destroy(void* self, void (*callback)());
 ///
 bool k_completionbox_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_focus_next_child` instead
+///
+#define k_completionbox_qbase_focus_next_child k_completionbox_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -8830,7 +9330,7 @@ bool k_completionbox_focus_next_child(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-bool k_completionbox_qbase_focus_next_child(void* self);
+bool k_completionbox_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8853,6 +9353,10 @@ void k_completionbox_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_completionbox_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_focus_previous_child` instead
+///
+#define k_completionbox_qbase_focus_previous_child k_completionbox_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -8861,7 +9365,7 @@ bool k_completionbox_focus_previous_child(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-bool k_completionbox_qbase_focus_previous_child(void* self);
+bool k_completionbox_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8884,6 +9388,10 @@ void k_completionbox_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_completionbox_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_sender` instead
+///
+#define k_completionbox_qbase_sender k_completionbox_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -8892,7 +9400,7 @@ QObject* k_completionbox_sender(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-QObject* k_completionbox_qbase_sender(void* self);
+QObject* k_completionbox_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -8915,6 +9423,10 @@ void k_completionbox_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_completionbox_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_sender_signal_index` instead
+///
+#define k_completionbox_qbase_sender_signal_index k_completionbox_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -8923,7 +9435,7 @@ int32_t k_completionbox_sender_signal_index(void* self);
 ///
 /// @param self KCompletionBox*
 ///
-int32_t k_completionbox_qbase_sender_signal_index(void* self);
+int32_t k_completionbox_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -8947,6 +9459,10 @@ void k_completionbox_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_completionbox_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_receivers` instead
+///
+#define k_completionbox_qbase_receivers k_completionbox_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -8956,7 +9472,7 @@ int32_t k_completionbox_receivers(void* self, const char* signal);
 /// @param self KCompletionBox*
 /// @param signal const char*
 ///
-int32_t k_completionbox_qbase_receivers(void* self, const char* signal);
+int32_t k_completionbox_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -8980,6 +9496,10 @@ void k_completionbox_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool k_completionbox_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_is_signal_connected` instead
+///
+#define k_completionbox_qbase_is_signal_connected k_completionbox_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -8989,7 +9509,7 @@ bool k_completionbox_is_signal_connected(void* self, void* signal);
 /// @param self KCompletionBox*
 /// @param signal QMetaMethod*
 ///
-bool k_completionbox_qbase_is_signal_connected(void* self, void* signal);
+bool k_completionbox_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -9014,6 +9534,10 @@ void k_completionbox_on_is_signal_connected(void* self, bool (*callback)(void*, 
 ///
 double k_completionbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_completionbox_super_get_decoded_metric_f` instead
+///
+#define k_completionbox_qbase_get_decoded_metric_f k_completionbox_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -9024,7 +9548,7 @@ double k_completionbox_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_completionbox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_completionbox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

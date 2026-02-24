@@ -35,13 +35,17 @@ const QMetaObject* k_configdialogmanager_meta_object(void* self);
 ///
 void k_configdialogmanager_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_meta_object` instead
+///
+#define k_configdialogmanager_qbase_meta_object k_configdialogmanager_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialogManager*
 ///
-const QMetaObject* k_configdialogmanager_qbase_meta_object(void* self);
+const QMetaObject* k_configdialogmanager_super_meta_object(void* self);
 
 /// @param self KConfigDialogManager*
 /// @param param1 const char*
@@ -55,12 +59,16 @@ void* k_configdialogmanager_metacast(void* self, const char* param1);
 ///
 void k_configdialogmanager_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_metacast` instead
+///
+#define k_configdialogmanager_qbase_metacast k_configdialogmanager_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KConfigDialogManager*
 /// @param param1 const char*
 ///
-void* k_configdialogmanager_qbase_metacast(void* self, const char* param1);
+void* k_configdialogmanager_super_metacast(void* self, const char* param1);
 
 /// @param self KConfigDialogManager*
 /// @param param1 enum QMetaObject__Call
@@ -76,6 +84,10 @@ int32_t k_configdialogmanager_metacall(void* self, int32_t param1, int param2, v
 ///
 void k_configdialogmanager_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_metacall` instead
+///
+#define k_configdialogmanager_qbase_metacall k_configdialogmanager_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KConfigDialogManager*
@@ -83,7 +95,7 @@ void k_configdialogmanager_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_configdialogmanager_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_configdialogmanager_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -198,6 +210,10 @@ void k_configdialogmanager_init(void* self, bool trackChanges);
 ///
 void k_configdialogmanager_on_init(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_init` instead
+///
+#define k_configdialogmanager_qbase_init k_configdialogmanager_super_init
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#init)
 ///
 /// Base class method implementation
@@ -205,7 +221,7 @@ void k_configdialogmanager_on_init(void* self, void (*callback)(void*, bool));
 /// @param self KConfigDialogManager*
 /// @param trackChanges bool
 ///
-void k_configdialogmanager_qbase_init(void* self, bool trackChanges);
+void k_configdialogmanager_super_init(void* self, bool trackChanges);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
@@ -224,6 +240,10 @@ bool k_configdialogmanager_parse_children(void* self, void* widget, bool trackCh
 ///
 void k_configdialogmanager_on_parse_children(void* self, bool (*callback)(void*, void*, bool));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_parse_children` instead
+///
+#define k_configdialogmanager_qbase_parse_children k_configdialogmanager_super_parse_children
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#parseChildren)
 ///
 /// Base class method implementation
@@ -232,7 +252,7 @@ void k_configdialogmanager_on_parse_children(void* self, bool (*callback)(void*,
 /// @param widget QWidget*
 /// @param trackChanges bool
 ///
-bool k_configdialogmanager_qbase_parse_children(void* self, void* widget, bool trackChanges);
+bool k_configdialogmanager_super_parse_children(void* self, void* widget, bool trackChanges);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
@@ -252,6 +272,10 @@ char* k_configdialogmanager_get_user_property(void* self, void* widget);
 ///
 void k_configdialogmanager_on_get_user_property(void* self, libqt_string (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_get_user_property` instead
+///
+#define k_configdialogmanager_qbase_get_user_property k_configdialogmanager_super_get_user_property
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserProperty)
 ///
 /// Base class method implementation
@@ -259,7 +283,7 @@ void k_configdialogmanager_on_get_user_property(void* self, libqt_string (*callb
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_qbase_get_user_property(void* self, void* widget);
+char* k_configdialogmanager_super_get_user_property(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
@@ -279,6 +303,10 @@ char* k_configdialogmanager_get_custom_property(void* self, void* widget);
 ///
 void k_configdialogmanager_on_get_custom_property(void* self, libqt_string (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_get_custom_property` instead
+///
+#define k_configdialogmanager_qbase_get_custom_property k_configdialogmanager_super_get_custom_property
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomProperty)
 ///
 /// Base class method implementation
@@ -286,7 +314,7 @@ void k_configdialogmanager_on_get_custom_property(void* self, libqt_string (*cal
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_qbase_get_custom_property(void* self, void* widget);
+char* k_configdialogmanager_super_get_custom_property(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
@@ -306,6 +334,10 @@ char* k_configdialogmanager_get_user_property_changed_signal(void* self, void* w
 ///
 void k_configdialogmanager_on_get_user_property_changed_signal(void* self, libqt_string (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_get_user_property_changed_signal` instead
+///
+#define k_configdialogmanager_qbase_get_user_property_changed_signal k_configdialogmanager_super_get_user_property_changed_signal
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getUserPropertyChangedSignal)
 ///
 /// Base class method implementation
@@ -313,7 +345,7 @@ void k_configdialogmanager_on_get_user_property_changed_signal(void* self, libqt
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_qbase_get_user_property_changed_signal(void* self, void* widget);
+char* k_configdialogmanager_super_get_user_property_changed_signal(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
@@ -333,6 +365,10 @@ char* k_configdialogmanager_get_custom_property_changed_signal(void* self, void*
 ///
 void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, libqt_string (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_get_custom_property_changed_signal` instead
+///
+#define k_configdialogmanager_qbase_get_custom_property_changed_signal k_configdialogmanager_super_get_custom_property_changed_signal
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#getCustomPropertyChangedSignal)
 ///
 /// Base class method implementation
@@ -340,7 +376,7 @@ void k_configdialogmanager_on_get_custom_property_changed_signal(void* self, lib
 /// @param self KConfigDialogManager*
 /// @param widget QWidget*
 ///
-char* k_configdialogmanager_qbase_get_custom_property_changed_signal(void* self, void* widget);
+char* k_configdialogmanager_super_get_custom_property_changed_signal(void* self, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
@@ -359,6 +395,10 @@ void k_configdialogmanager_set_property(void* self, void* w, void* v);
 ///
 void k_configdialogmanager_on_set_property(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_set_property` instead
+///
+#define k_configdialogmanager_qbase_set_property k_configdialogmanager_super_set_property
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setProperty)
 ///
 /// Base class method implementation
@@ -367,7 +407,7 @@ void k_configdialogmanager_on_set_property(void* self, void (*callback)(void*, v
 /// @param w QWidget*
 /// @param v QVariant*
 ///
-void k_configdialogmanager_qbase_set_property(void* self, void* w, void* v);
+void k_configdialogmanager_super_set_property(void* self, void* w, void* v);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
@@ -385,6 +425,10 @@ QVariant* k_configdialogmanager_property(void* self, void* w);
 ///
 void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_property` instead
+///
+#define k_configdialogmanager_qbase_property k_configdialogmanager_super_property
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#property)
 ///
 /// Base class method implementation
@@ -392,7 +436,7 @@ void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, 
 /// @param self KConfigDialogManager*
 /// @param w QWidget*
 ///
-QVariant* k_configdialogmanager_qbase_property(void* self, void* w);
+QVariant* k_configdialogmanager_super_property(void* self, void* w);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
@@ -411,6 +455,10 @@ void k_configdialogmanager_setup_widget(void* self, void* widget, void* item);
 ///
 void k_configdialogmanager_on_setup_widget(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_setup_widget` instead
+///
+#define k_configdialogmanager_qbase_setup_widget k_configdialogmanager_super_setup_widget
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#setupWidget)
 ///
 /// Base class method implementation
@@ -419,7 +467,7 @@ void k_configdialogmanager_on_setup_widget(void* self, void (*callback)(void*, v
 /// @param widget QWidget*
 /// @param item KConfigSkeletonItem*
 ///
-void k_configdialogmanager_qbase_setup_widget(void* self, void* widget, void* item);
+void k_configdialogmanager_super_setup_widget(void* self, void* widget, void* item);
 
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
@@ -436,13 +484,17 @@ void k_configdialogmanager_init_maps(void* self);
 ///
 void k_configdialogmanager_on_init_maps(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_init_maps` instead
+///
+#define k_configdialogmanager_qbase_init_maps k_configdialogmanager_super_init_maps
+
 /// [Upstream resources](https://api.kde.org/kconfigdialogmanager.html#initMaps)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfigDialogManager*
 ///
-void k_configdialogmanager_qbase_init_maps(void* self);
+void k_configdialogmanager_super_init_maps(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -902,6 +954,10 @@ void k_configdialogmanager_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool k_configdialogmanager_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_event` instead
+///
+#define k_configdialogmanager_qbase_event k_configdialogmanager_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -911,7 +967,7 @@ bool k_configdialogmanager_event(void* self, void* event);
 /// @param self KConfigDialogManager*
 /// @param event QEvent*
 ///
-bool k_configdialogmanager_qbase_event(void* self, void* event);
+bool k_configdialogmanager_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -936,6 +992,10 @@ void k_configdialogmanager_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_configdialogmanager_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_event_filter` instead
+///
+#define k_configdialogmanager_qbase_event_filter k_configdialogmanager_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -946,7 +1006,7 @@ bool k_configdialogmanager_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_configdialogmanager_qbase_event_filter(void* self, void* watched, void* event);
+bool k_configdialogmanager_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -970,6 +1030,10 @@ void k_configdialogmanager_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_configdialogmanager_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_timer_event` instead
+///
+#define k_configdialogmanager_qbase_timer_event k_configdialogmanager_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -979,7 +1043,7 @@ void k_configdialogmanager_timer_event(void* self, void* event);
 /// @param self KConfigDialogManager*
 /// @param event QTimerEvent*
 ///
-void k_configdialogmanager_qbase_timer_event(void* self, void* event);
+void k_configdialogmanager_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1003,6 +1067,10 @@ void k_configdialogmanager_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 void k_configdialogmanager_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_child_event` instead
+///
+#define k_configdialogmanager_qbase_child_event k_configdialogmanager_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1012,7 +1080,7 @@ void k_configdialogmanager_child_event(void* self, void* event);
 /// @param self KConfigDialogManager*
 /// @param event QChildEvent*
 ///
-void k_configdialogmanager_qbase_child_event(void* self, void* event);
+void k_configdialogmanager_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1036,6 +1104,10 @@ void k_configdialogmanager_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_configdialogmanager_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_custom_event` instead
+///
+#define k_configdialogmanager_qbase_custom_event k_configdialogmanager_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1045,7 +1117,7 @@ void k_configdialogmanager_custom_event(void* self, void* event);
 /// @param self KConfigDialogManager*
 /// @param event QEvent*
 ///
-void k_configdialogmanager_qbase_custom_event(void* self, void* event);
+void k_configdialogmanager_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1069,6 +1141,10 @@ void k_configdialogmanager_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_configdialogmanager_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_connect_notify` instead
+///
+#define k_configdialogmanager_qbase_connect_notify k_configdialogmanager_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1078,7 +1154,7 @@ void k_configdialogmanager_connect_notify(void* self, void* signal);
 /// @param self KConfigDialogManager*
 /// @param signal QMetaMethod*
 ///
-void k_configdialogmanager_qbase_connect_notify(void* self, void* signal);
+void k_configdialogmanager_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1102,6 +1178,10 @@ void k_configdialogmanager_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void k_configdialogmanager_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_disconnect_notify` instead
+///
+#define k_configdialogmanager_qbase_disconnect_notify k_configdialogmanager_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1111,7 +1191,7 @@ void k_configdialogmanager_disconnect_notify(void* self, void* signal);
 /// @param self KConfigDialogManager*
 /// @param signal QMetaMethod*
 ///
-void k_configdialogmanager_qbase_disconnect_notify(void* self, void* signal);
+void k_configdialogmanager_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1134,6 +1214,10 @@ void k_configdialogmanager_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 QObject* k_configdialogmanager_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_sender` instead
+///
+#define k_configdialogmanager_qbase_sender k_configdialogmanager_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1142,7 +1226,7 @@ QObject* k_configdialogmanager_sender(void* self);
 ///
 /// @param self KConfigDialogManager*
 ///
-QObject* k_configdialogmanager_qbase_sender(void* self);
+QObject* k_configdialogmanager_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1165,6 +1249,10 @@ void k_configdialogmanager_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_configdialogmanager_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_sender_signal_index` instead
+///
+#define k_configdialogmanager_qbase_sender_signal_index k_configdialogmanager_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1173,7 +1261,7 @@ int32_t k_configdialogmanager_sender_signal_index(void* self);
 ///
 /// @param self KConfigDialogManager*
 ///
-int32_t k_configdialogmanager_qbase_sender_signal_index(void* self);
+int32_t k_configdialogmanager_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1197,6 +1285,10 @@ void k_configdialogmanager_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_configdialogmanager_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_receivers` instead
+///
+#define k_configdialogmanager_qbase_receivers k_configdialogmanager_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1206,7 +1298,7 @@ int32_t k_configdialogmanager_receivers(void* self, const char* signal);
 /// @param self KConfigDialogManager*
 /// @param signal const char*
 ///
-int32_t k_configdialogmanager_qbase_receivers(void* self, const char* signal);
+int32_t k_configdialogmanager_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1230,6 +1322,10 @@ void k_configdialogmanager_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool k_configdialogmanager_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_configdialogmanager_super_is_signal_connected` instead
+///
+#define k_configdialogmanager_qbase_is_signal_connected k_configdialogmanager_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1239,7 +1335,7 @@ bool k_configdialogmanager_is_signal_connected(void* self, void* signal);
 /// @param self KConfigDialogManager*
 /// @param signal QMetaMethod*
 ///
-bool k_configdialogmanager_qbase_is_signal_connected(void* self, void* signal);
+bool k_configdialogmanager_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

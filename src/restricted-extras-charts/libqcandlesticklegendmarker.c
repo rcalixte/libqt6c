@@ -24,8 +24,8 @@ void q_candlesticklegendmarker_on_meta_object(void* self, const QMetaObject* (*c
     QCandlestickLegendMarker_OnMetaObject((QCandlestickLegendMarker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_candlesticklegendmarker_qbase_meta_object(void* self) {
-    return QCandlestickLegendMarker_QBaseMetaObject((QCandlestickLegendMarker*)self);
+const QMetaObject* q_candlesticklegendmarker_super_meta_object(void* self) {
+    return QCandlestickLegendMarker_SuperMetaObject((QCandlestickLegendMarker*)self);
 }
 
 void* q_candlesticklegendmarker_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_candlesticklegendmarker_on_metacast(void* self, void* (*callback)(void*, 
     QCandlestickLegendMarker_OnMetacast((QCandlestickLegendMarker*)self, (intptr_t)callback);
 }
 
-void* q_candlesticklegendmarker_qbase_metacast(void* self, const char* param1) {
-    return QCandlestickLegendMarker_QBaseMetacast((QCandlestickLegendMarker*)self, param1);
+void* q_candlesticklegendmarker_super_metacast(void* self, const char* param1) {
+    return QCandlestickLegendMarker_SuperMetacast((QCandlestickLegendMarker*)self, param1);
 }
 
 int32_t q_candlesticklegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_candlesticklegendmarker_on_metacall(void* self, int32_t (*callback)(void*
     QCandlestickLegendMarker_OnMetacall((QCandlestickLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_candlesticklegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCandlestickLegendMarker_QBaseMetacall((QCandlestickLegendMarker*)self, param1, param2, param3);
+int32_t q_candlesticklegendmarker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCandlestickLegendMarker_SuperMetacall((QCandlestickLegendMarker*)self, param1, param2, param3);
 }
 
 const char* q_candlesticklegendmarker_tr(const char* s) {
@@ -67,8 +67,8 @@ void q_candlesticklegendmarker_on_type(void* self, int32_t (*callback)()) {
     QCandlestickLegendMarker_OnType((QCandlestickLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_candlesticklegendmarker_qbase_type(void* self) {
-    return QCandlestickLegendMarker_QBaseType((QCandlestickLegendMarker*)self);
+int32_t q_candlesticklegendmarker_super_type(void* self) {
+    return QCandlestickLegendMarker_SuperType((QCandlestickLegendMarker*)self);
 }
 
 QCandlestickSeries* q_candlesticklegendmarker_series(void* self) {
@@ -79,8 +79,8 @@ void q_candlesticklegendmarker_on_series(void* self, QCandlestickSeries* (*callb
     QCandlestickLegendMarker_OnSeries((QCandlestickLegendMarker*)self, (intptr_t)callback);
 }
 
-QCandlestickSeries* q_candlesticklegendmarker_qbase_series(void* self) {
-    return QCandlestickLegendMarker_QBaseSeries((QCandlestickLegendMarker*)self);
+QCandlestickSeries* q_candlesticklegendmarker_super_series(void* self) {
+    return QCandlestickLegendMarker_SuperSeries((QCandlestickLegendMarker*)self);
 }
 
 const char* q_candlesticklegendmarker_tr2(const char* s, const char* c) {
@@ -443,8 +443,8 @@ bool q_candlesticklegendmarker_event(void* self, void* event) {
     return QCandlestickLegendMarker_Event((QCandlestickLegendMarker*)self, (QEvent*)event);
 }
 
-bool q_candlesticklegendmarker_qbase_event(void* self, void* event) {
-    return QCandlestickLegendMarker_QBaseEvent((QCandlestickLegendMarker*)self, (QEvent*)event);
+bool q_candlesticklegendmarker_super_event(void* self, void* event) {
+    return QCandlestickLegendMarker_SuperEvent((QCandlestickLegendMarker*)self, (QEvent*)event);
 }
 
 void q_candlesticklegendmarker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ bool q_candlesticklegendmarker_event_filter(void* self, void* watched, void* eve
     return QCandlestickLegendMarker_EventFilter((QCandlestickLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_candlesticklegendmarker_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCandlestickLegendMarker_QBaseEventFilter((QCandlestickLegendMarker*)self, (QObject*)watched, (QEvent*)event);
+bool q_candlesticklegendmarker_super_event_filter(void* self, void* watched, void* event) {
+    return QCandlestickLegendMarker_SuperEventFilter((QCandlestickLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_candlesticklegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -467,8 +467,8 @@ void q_candlesticklegendmarker_timer_event(void* self, void* event) {
     QCandlestickLegendMarker_TimerEvent((QCandlestickLegendMarker*)self, (QTimerEvent*)event);
 }
 
-void q_candlesticklegendmarker_qbase_timer_event(void* self, void* event) {
-    QCandlestickLegendMarker_QBaseTimerEvent((QCandlestickLegendMarker*)self, (QTimerEvent*)event);
+void q_candlesticklegendmarker_super_timer_event(void* self, void* event) {
+    QCandlestickLegendMarker_SuperTimerEvent((QCandlestickLegendMarker*)self, (QTimerEvent*)event);
 }
 
 void q_candlesticklegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_candlesticklegendmarker_child_event(void* self, void* event) {
     QCandlestickLegendMarker_ChildEvent((QCandlestickLegendMarker*)self, (QChildEvent*)event);
 }
 
-void q_candlesticklegendmarker_qbase_child_event(void* self, void* event) {
-    QCandlestickLegendMarker_QBaseChildEvent((QCandlestickLegendMarker*)self, (QChildEvent*)event);
+void q_candlesticklegendmarker_super_child_event(void* self, void* event) {
+    QCandlestickLegendMarker_SuperChildEvent((QCandlestickLegendMarker*)self, (QChildEvent*)event);
 }
 
 void q_candlesticklegendmarker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_candlesticklegendmarker_custom_event(void* self, void* event) {
     QCandlestickLegendMarker_CustomEvent((QCandlestickLegendMarker*)self, (QEvent*)event);
 }
 
-void q_candlesticklegendmarker_qbase_custom_event(void* self, void* event) {
-    QCandlestickLegendMarker_QBaseCustomEvent((QCandlestickLegendMarker*)self, (QEvent*)event);
+void q_candlesticklegendmarker_super_custom_event(void* self, void* event) {
+    QCandlestickLegendMarker_SuperCustomEvent((QCandlestickLegendMarker*)self, (QEvent*)event);
 }
 
 void q_candlesticklegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_candlesticklegendmarker_connect_notify(void* self, void* signal) {
     QCandlestickLegendMarker_ConnectNotify((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_candlesticklegendmarker_qbase_connect_notify(void* self, void* signal) {
-    QCandlestickLegendMarker_QBaseConnectNotify((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
+void q_candlesticklegendmarker_super_connect_notify(void* self, void* signal) {
+    QCandlestickLegendMarker_SuperConnectNotify((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_candlesticklegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ void q_candlesticklegendmarker_disconnect_notify(void* self, void* signal) {
     QCandlestickLegendMarker_DisconnectNotify((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_candlesticklegendmarker_qbase_disconnect_notify(void* self, void* signal) {
-    QCandlestickLegendMarker_QBaseDisconnectNotify((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
+void q_candlesticklegendmarker_super_disconnect_notify(void* self, void* signal) {
+    QCandlestickLegendMarker_SuperDisconnectNotify((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_candlesticklegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -527,8 +527,8 @@ QObject* q_candlesticklegendmarker_sender(void* self) {
     return QCandlestickLegendMarker_Sender((QCandlestickLegendMarker*)self);
 }
 
-QObject* q_candlesticklegendmarker_qbase_sender(void* self) {
-    return QCandlestickLegendMarker_QBaseSender((QCandlestickLegendMarker*)self);
+QObject* q_candlesticklegendmarker_super_sender(void* self) {
+    return QCandlestickLegendMarker_SuperSender((QCandlestickLegendMarker*)self);
 }
 
 void q_candlesticklegendmarker_on_sender(void* self, QObject* (*callback)()) {
@@ -539,8 +539,8 @@ int32_t q_candlesticklegendmarker_sender_signal_index(void* self) {
     return QCandlestickLegendMarker_SenderSignalIndex((QCandlestickLegendMarker*)self);
 }
 
-int32_t q_candlesticklegendmarker_qbase_sender_signal_index(void* self) {
-    return QCandlestickLegendMarker_QBaseSenderSignalIndex((QCandlestickLegendMarker*)self);
+int32_t q_candlesticklegendmarker_super_sender_signal_index(void* self) {
+    return QCandlestickLegendMarker_SuperSenderSignalIndex((QCandlestickLegendMarker*)self);
 }
 
 void q_candlesticklegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -551,8 +551,8 @@ int32_t q_candlesticklegendmarker_receivers(void* self, const char* signal) {
     return QCandlestickLegendMarker_Receivers((QCandlestickLegendMarker*)self, signal);
 }
 
-int32_t q_candlesticklegendmarker_qbase_receivers(void* self, const char* signal) {
-    return QCandlestickLegendMarker_QBaseReceivers((QCandlestickLegendMarker*)self, signal);
+int32_t q_candlesticklegendmarker_super_receivers(void* self, const char* signal) {
+    return QCandlestickLegendMarker_SuperReceivers((QCandlestickLegendMarker*)self, signal);
 }
 
 void q_candlesticklegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -563,8 +563,8 @@ bool q_candlesticklegendmarker_is_signal_connected(void* self, void* signal) {
     return QCandlestickLegendMarker_IsSignalConnected((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-bool q_candlesticklegendmarker_qbase_is_signal_connected(void* self, void* signal) {
-    return QCandlestickLegendMarker_QBaseIsSignalConnected((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
+bool q_candlesticklegendmarker_super_is_signal_connected(void* self, void* signal) {
+    return QCandlestickLegendMarker_SuperIsSignalConnected((QCandlestickLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_candlesticklegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

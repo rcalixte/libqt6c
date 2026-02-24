@@ -21,8 +21,8 @@ void k_bookmarkaction_on_meta_object(void* self, const QMetaObject* (*callback)(
     KBookmarkAction_OnMetaObject((KBookmarkAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_bookmarkaction_qbase_meta_object(void* self) {
-    return KBookmarkAction_QBaseMetaObject((KBookmarkAction*)self);
+const QMetaObject* k_bookmarkaction_super_meta_object(void* self) {
+    return KBookmarkAction_SuperMetaObject((KBookmarkAction*)self);
 }
 
 void* k_bookmarkaction_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_bookmarkaction_on_metacast(void* self, void* (*callback)(void*, const cha
     KBookmarkAction_OnMetacast((KBookmarkAction*)self, (intptr_t)callback);
 }
 
-void* k_bookmarkaction_qbase_metacast(void* self, const char* param1) {
-    return KBookmarkAction_QBaseMetacast((KBookmarkAction*)self, param1);
+void* k_bookmarkaction_super_metacast(void* self, const char* param1) {
+    return KBookmarkAction_SuperMetacast((KBookmarkAction*)self, param1);
 }
 
 int32_t k_bookmarkaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_bookmarkaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KBookmarkAction_OnMetacall((KBookmarkAction*)self, (intptr_t)callback);
 }
 
-int32_t k_bookmarkaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBookmarkAction_QBaseMetacall((KBookmarkAction*)self, param1, param2, param3);
+int32_t k_bookmarkaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBookmarkAction_SuperMetacall((KBookmarkAction*)self, param1, param2, param3);
 }
 
 const char* k_bookmarkaction_tr(const char* s) {
@@ -590,8 +590,8 @@ bool k_bookmarkaction_event(void* self, void* param1) {
     return KBookmarkAction_Event((KBookmarkAction*)self, (QEvent*)param1);
 }
 
-bool k_bookmarkaction_qbase_event(void* self, void* param1) {
-    return KBookmarkAction_QBaseEvent((KBookmarkAction*)self, (QEvent*)param1);
+bool k_bookmarkaction_super_event(void* self, void* param1) {
+    return KBookmarkAction_SuperEvent((KBookmarkAction*)self, (QEvent*)param1);
 }
 
 void k_bookmarkaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -602,8 +602,8 @@ bool k_bookmarkaction_event_filter(void* self, void* watched, void* event) {
     return KBookmarkAction_EventFilter((KBookmarkAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_bookmarkaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KBookmarkAction_QBaseEventFilter((KBookmarkAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_bookmarkaction_super_event_filter(void* self, void* watched, void* event) {
+    return KBookmarkAction_SuperEventFilter((KBookmarkAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_bookmarkaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -614,8 +614,8 @@ void k_bookmarkaction_timer_event(void* self, void* event) {
     KBookmarkAction_TimerEvent((KBookmarkAction*)self, (QTimerEvent*)event);
 }
 
-void k_bookmarkaction_qbase_timer_event(void* self, void* event) {
-    KBookmarkAction_QBaseTimerEvent((KBookmarkAction*)self, (QTimerEvent*)event);
+void k_bookmarkaction_super_timer_event(void* self, void* event) {
+    KBookmarkAction_SuperTimerEvent((KBookmarkAction*)self, (QTimerEvent*)event);
 }
 
 void k_bookmarkaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -626,8 +626,8 @@ void k_bookmarkaction_child_event(void* self, void* event) {
     KBookmarkAction_ChildEvent((KBookmarkAction*)self, (QChildEvent*)event);
 }
 
-void k_bookmarkaction_qbase_child_event(void* self, void* event) {
-    KBookmarkAction_QBaseChildEvent((KBookmarkAction*)self, (QChildEvent*)event);
+void k_bookmarkaction_super_child_event(void* self, void* event) {
+    KBookmarkAction_SuperChildEvent((KBookmarkAction*)self, (QChildEvent*)event);
 }
 
 void k_bookmarkaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -638,8 +638,8 @@ void k_bookmarkaction_custom_event(void* self, void* event) {
     KBookmarkAction_CustomEvent((KBookmarkAction*)self, (QEvent*)event);
 }
 
-void k_bookmarkaction_qbase_custom_event(void* self, void* event) {
-    KBookmarkAction_QBaseCustomEvent((KBookmarkAction*)self, (QEvent*)event);
+void k_bookmarkaction_super_custom_event(void* self, void* event) {
+    KBookmarkAction_SuperCustomEvent((KBookmarkAction*)self, (QEvent*)event);
 }
 
 void k_bookmarkaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -650,8 +650,8 @@ void k_bookmarkaction_connect_notify(void* self, void* signal) {
     KBookmarkAction_ConnectNotify((KBookmarkAction*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkaction_qbase_connect_notify(void* self, void* signal) {
-    KBookmarkAction_QBaseConnectNotify((KBookmarkAction*)self, (QMetaMethod*)signal);
+void k_bookmarkaction_super_connect_notify(void* self, void* signal) {
+    KBookmarkAction_SuperConnectNotify((KBookmarkAction*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -662,8 +662,8 @@ void k_bookmarkaction_disconnect_notify(void* self, void* signal) {
     KBookmarkAction_DisconnectNotify((KBookmarkAction*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkaction_qbase_disconnect_notify(void* self, void* signal) {
-    KBookmarkAction_QBaseDisconnectNotify((KBookmarkAction*)self, (QMetaMethod*)signal);
+void k_bookmarkaction_super_disconnect_notify(void* self, void* signal) {
+    KBookmarkAction_SuperDisconnectNotify((KBookmarkAction*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -674,8 +674,8 @@ QObject* k_bookmarkaction_sender(void* self) {
     return KBookmarkAction_Sender((KBookmarkAction*)self);
 }
 
-QObject* k_bookmarkaction_qbase_sender(void* self) {
-    return KBookmarkAction_QBaseSender((KBookmarkAction*)self);
+QObject* k_bookmarkaction_super_sender(void* self) {
+    return KBookmarkAction_SuperSender((KBookmarkAction*)self);
 }
 
 void k_bookmarkaction_on_sender(void* self, QObject* (*callback)()) {
@@ -686,8 +686,8 @@ int32_t k_bookmarkaction_sender_signal_index(void* self) {
     return KBookmarkAction_SenderSignalIndex((KBookmarkAction*)self);
 }
 
-int32_t k_bookmarkaction_qbase_sender_signal_index(void* self) {
-    return KBookmarkAction_QBaseSenderSignalIndex((KBookmarkAction*)self);
+int32_t k_bookmarkaction_super_sender_signal_index(void* self) {
+    return KBookmarkAction_SuperSenderSignalIndex((KBookmarkAction*)self);
 }
 
 void k_bookmarkaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -698,8 +698,8 @@ int32_t k_bookmarkaction_receivers(void* self, const char* signal) {
     return KBookmarkAction_Receivers((KBookmarkAction*)self, signal);
 }
 
-int32_t k_bookmarkaction_qbase_receivers(void* self, const char* signal) {
-    return KBookmarkAction_QBaseReceivers((KBookmarkAction*)self, signal);
+int32_t k_bookmarkaction_super_receivers(void* self, const char* signal) {
+    return KBookmarkAction_SuperReceivers((KBookmarkAction*)self, signal);
 }
 
 void k_bookmarkaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -710,8 +710,8 @@ bool k_bookmarkaction_is_signal_connected(void* self, void* signal) {
     return KBookmarkAction_IsSignalConnected((KBookmarkAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_bookmarkaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KBookmarkAction_QBaseIsSignalConnected((KBookmarkAction*)self, (QMetaMethod*)signal);
+bool k_bookmarkaction_super_is_signal_connected(void* self, void* signal) {
+    return KBookmarkAction_SuperIsSignalConnected((KBookmarkAction*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

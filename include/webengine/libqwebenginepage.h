@@ -57,13 +57,17 @@ const QMetaObject* q_webenginepage_meta_object(void* self);
 ///
 void q_webenginepage_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_meta_object` instead
+///
+#define q_webenginepage_qbase_meta_object q_webenginepage_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QWebEnginePage*
 ///
-const QMetaObject* q_webenginepage_qbase_meta_object(void* self);
+const QMetaObject* q_webenginepage_super_meta_object(void* self);
 
 /// @param self QWebEnginePage*
 /// @param param1 const char*
@@ -77,12 +81,16 @@ void* q_webenginepage_metacast(void* self, const char* param1);
 ///
 void q_webenginepage_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_metacast` instead
+///
+#define q_webenginepage_qbase_metacast q_webenginepage_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QWebEnginePage*
 /// @param param1 const char*
 ///
-void* q_webenginepage_qbase_metacast(void* self, const char* param1);
+void* q_webenginepage_super_metacast(void* self, const char* param1);
 
 /// @param self QWebEnginePage*
 /// @param param1 enum QMetaObject__Call
@@ -98,6 +106,10 @@ int32_t q_webenginepage_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void q_webenginepage_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_metacall` instead
+///
+#define q_webenginepage_qbase_metacall q_webenginepage_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QWebEnginePage*
@@ -105,7 +117,7 @@ void q_webenginepage_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_webenginepage_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_webenginepage_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -165,6 +177,10 @@ void q_webenginepage_trigger_action(void* self, int32_t action, bool checked);
 ///
 void q_webenginepage_on_trigger_action(void* self, void (*callback)(void*, int32_t, bool));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_trigger_action` instead
+///
+#define q_webenginepage_qbase_trigger_action q_webenginepage_super_trigger_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#triggerAction)
 ///
 /// Base class method implementation
@@ -173,7 +189,7 @@ void q_webenginepage_on_trigger_action(void* self, void (*callback)(void*, int32
 /// @param action enum QWebEnginePage__WebAction
 /// @param checked bool
 ///
-void q_webenginepage_qbase_trigger_action(void* self, int32_t action, bool checked);
+void q_webenginepage_super_trigger_action(void* self, int32_t action, bool checked);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#replaceMisspelledWord)
 ///
@@ -198,6 +214,10 @@ bool q_webenginepage_event(void* self, void* param1);
 ///
 void q_webenginepage_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_event` instead
+///
+#define q_webenginepage_qbase_event q_webenginepage_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#event)
 ///
 /// Base class method implementation
@@ -205,7 +225,7 @@ void q_webenginepage_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QWebEnginePage*
 /// @param param1 QEvent*
 ///
-bool q_webenginepage_qbase_event(void* self, void* param1);
+bool q_webenginepage_super_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#findText)
 ///
@@ -1099,6 +1119,10 @@ QWebEnginePage* q_webenginepage_create_window(void* self, int32_t type);
 ///
 void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_create_window` instead
+///
+#define q_webenginepage_qbase_create_window q_webenginepage_super_create_window
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#createWindow)
 ///
 /// Base class method implementation
@@ -1106,7 +1130,7 @@ void q_webenginepage_on_create_window(void* self, QWebEnginePage* (*callback)(vo
 /// @param self QWebEnginePage*
 /// @param type enum QWebEnginePage__WebWindowType
 ///
-QWebEnginePage* q_webenginepage_qbase_create_window(void* self, int32_t type);
+QWebEnginePage* q_webenginepage_super_create_window(void* self, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
@@ -1128,6 +1152,10 @@ const char** q_webenginepage_choose_files(void* self, int32_t mode, const char* 
 ///
 void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*, int32_t, const char**, const char**));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_choose_files` instead
+///
+#define q_webenginepage_qbase_choose_files q_webenginepage_super_choose_files
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#chooseFiles)
 ///
 /// Base class method implementation
@@ -1137,7 +1165,7 @@ void q_webenginepage_on_choose_files(void* self, const char** (*callback)(void*,
 /// @param oldFiles const char**
 /// @param acceptedMimeTypes const char**
 ///
-const char** q_webenginepage_qbase_choose_files(void* self, int32_t mode, const char* oldFiles[static 1], const char* acceptedMimeTypes[static 1]);
+const char** q_webenginepage_super_choose_files(void* self, int32_t mode, const char* oldFiles[static 1], const char* acceptedMimeTypes[static 1]);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptAlert)
 ///
@@ -1156,6 +1184,10 @@ void q_webenginepage_java_script_alert(void* self, void* securityOrigin, const c
 ///
 void q_webenginepage_on_java_script_alert(void* self, void (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_java_script_alert` instead
+///
+#define q_webenginepage_qbase_java_script_alert q_webenginepage_super_java_script_alert
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptAlert)
 ///
 /// Base class method implementation
@@ -1164,7 +1196,7 @@ void q_webenginepage_on_java_script_alert(void* self, void (*callback)(void*, vo
 /// @param securityOrigin QUrl*
 /// @param msg const char*
 ///
-void q_webenginepage_qbase_java_script_alert(void* self, void* securityOrigin, const char* msg);
+void q_webenginepage_super_java_script_alert(void* self, void* securityOrigin, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConfirm)
 ///
@@ -1183,6 +1215,10 @@ bool q_webenginepage_java_script_confirm(void* self, void* securityOrigin, const
 ///
 void q_webenginepage_on_java_script_confirm(void* self, bool (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_java_script_confirm` instead
+///
+#define q_webenginepage_qbase_java_script_confirm q_webenginepage_super_java_script_confirm
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConfirm)
 ///
 /// Base class method implementation
@@ -1191,7 +1227,7 @@ void q_webenginepage_on_java_script_confirm(void* self, bool (*callback)(void*, 
 /// @param securityOrigin QUrl*
 /// @param msg const char*
 ///
-bool q_webenginepage_qbase_java_script_confirm(void* self, void* securityOrigin, const char* msg);
+bool q_webenginepage_super_java_script_confirm(void* self, void* securityOrigin, const char* msg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConsoleMessage)
 ///
@@ -1212,6 +1248,10 @@ void q_webenginepage_java_script_console_message(void* self, int32_t level, cons
 ///
 void q_webenginepage_on_java_script_console_message(void* self, void (*callback)(void*, int32_t, const char*, int, const char*));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_java_script_console_message` instead
+///
+#define q_webenginepage_qbase_java_script_console_message q_webenginepage_super_java_script_console_message
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#javaScriptConsoleMessage)
 ///
 /// Base class method implementation
@@ -1222,7 +1262,7 @@ void q_webenginepage_on_java_script_console_message(void* self, void (*callback)
 /// @param lineNumber int
 /// @param sourceID const char*
 ///
-void q_webenginepage_qbase_java_script_console_message(void* self, int32_t level, const char* message, int lineNumber, const char* sourceID);
+void q_webenginepage_super_java_script_console_message(void* self, int32_t level, const char* message, int lineNumber, const char* sourceID);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
 ///
@@ -1242,6 +1282,10 @@ bool q_webenginepage_accept_navigation_request(void* self, void* url, int32_t ty
 ///
 void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(void*, void*, int32_t, bool));
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_accept_navigation_request` instead
+///
+#define q_webenginepage_qbase_accept_navigation_request q_webenginepage_super_accept_navigation_request
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#acceptNavigationRequest)
 ///
 /// Base class method implementation
@@ -1251,7 +1295,7 @@ void q_webenginepage_on_accept_navigation_request(void* self, bool (*callback)(v
 /// @param type enum QWebEnginePage__NavigationType
 /// @param isMainFrame bool
 ///
-bool q_webenginepage_qbase_accept_navigation_request(void* self, void* url, int32_t type, bool isMainFrame);
+bool q_webenginepage_super_accept_navigation_request(void* self, void* url, int32_t type, bool isMainFrame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1813,6 +1857,10 @@ void q_webenginepage_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_webenginepage_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_event_filter` instead
+///
+#define q_webenginepage_qbase_event_filter q_webenginepage_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1823,7 +1871,7 @@ bool q_webenginepage_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_webenginepage_qbase_event_filter(void* self, void* watched, void* event);
+bool q_webenginepage_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1847,6 +1895,10 @@ void q_webenginepage_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_webenginepage_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_timer_event` instead
+///
+#define q_webenginepage_qbase_timer_event q_webenginepage_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1856,7 +1908,7 @@ void q_webenginepage_timer_event(void* self, void* event);
 /// @param self QWebEnginePage*
 /// @param event QTimerEvent*
 ///
-void q_webenginepage_qbase_timer_event(void* self, void* event);
+void q_webenginepage_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1880,6 +1932,10 @@ void q_webenginepage_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_webenginepage_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_child_event` instead
+///
+#define q_webenginepage_qbase_child_event q_webenginepage_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1889,7 +1945,7 @@ void q_webenginepage_child_event(void* self, void* event);
 /// @param self QWebEnginePage*
 /// @param event QChildEvent*
 ///
-void q_webenginepage_qbase_child_event(void* self, void* event);
+void q_webenginepage_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1913,6 +1969,10 @@ void q_webenginepage_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_webenginepage_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_custom_event` instead
+///
+#define q_webenginepage_qbase_custom_event q_webenginepage_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1922,7 +1982,7 @@ void q_webenginepage_custom_event(void* self, void* event);
 /// @param self QWebEnginePage*
 /// @param event QEvent*
 ///
-void q_webenginepage_qbase_custom_event(void* self, void* event);
+void q_webenginepage_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1946,6 +2006,10 @@ void q_webenginepage_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_webenginepage_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_connect_notify` instead
+///
+#define q_webenginepage_qbase_connect_notify q_webenginepage_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1955,7 +2019,7 @@ void q_webenginepage_connect_notify(void* self, void* signal);
 /// @param self QWebEnginePage*
 /// @param signal QMetaMethod*
 ///
-void q_webenginepage_qbase_connect_notify(void* self, void* signal);
+void q_webenginepage_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1979,6 +2043,10 @@ void q_webenginepage_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_webenginepage_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_disconnect_notify` instead
+///
+#define q_webenginepage_qbase_disconnect_notify q_webenginepage_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1988,7 +2056,7 @@ void q_webenginepage_disconnect_notify(void* self, void* signal);
 /// @param self QWebEnginePage*
 /// @param signal QMetaMethod*
 ///
-void q_webenginepage_qbase_disconnect_notify(void* self, void* signal);
+void q_webenginepage_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2011,6 +2079,10 @@ void q_webenginepage_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 QObject* q_webenginepage_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_sender` instead
+///
+#define q_webenginepage_qbase_sender q_webenginepage_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2019,7 +2091,7 @@ QObject* q_webenginepage_sender(void* self);
 ///
 /// @param self QWebEnginePage*
 ///
-QObject* q_webenginepage_qbase_sender(void* self);
+QObject* q_webenginepage_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2042,6 +2114,10 @@ void q_webenginepage_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_webenginepage_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_sender_signal_index` instead
+///
+#define q_webenginepage_qbase_sender_signal_index q_webenginepage_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2050,7 +2126,7 @@ int32_t q_webenginepage_sender_signal_index(void* self);
 ///
 /// @param self QWebEnginePage*
 ///
-int32_t q_webenginepage_qbase_sender_signal_index(void* self);
+int32_t q_webenginepage_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2074,6 +2150,10 @@ void q_webenginepage_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_webenginepage_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_receivers` instead
+///
+#define q_webenginepage_qbase_receivers q_webenginepage_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2083,7 +2163,7 @@ int32_t q_webenginepage_receivers(void* self, const char* signal);
 /// @param self QWebEnginePage*
 /// @param signal const char*
 ///
-int32_t q_webenginepage_qbase_receivers(void* self, const char* signal);
+int32_t q_webenginepage_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2107,6 +2187,10 @@ void q_webenginepage_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_webenginepage_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_webenginepage_super_is_signal_connected` instead
+///
+#define q_webenginepage_qbase_is_signal_connected q_webenginepage_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2116,7 +2200,7 @@ bool q_webenginepage_is_signal_connected(void* self, void* signal);
 /// @param self QWebEnginePage*
 /// @param signal QMetaMethod*
 ///
-bool q_webenginepage_qbase_is_signal_connected(void* self, void* signal);
+bool q_webenginepage_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

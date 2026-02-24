@@ -42,8 +42,8 @@ void k_codecaction_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KCodecAction_OnMetaObject((KCodecAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_codecaction_qbase_meta_object(void* self) {
-    return KCodecAction_QBaseMetaObject((KCodecAction*)self);
+const QMetaObject* k_codecaction_super_meta_object(void* self) {
+    return KCodecAction_SuperMetaObject((KCodecAction*)self);
 }
 
 void* k_codecaction_metacast(void* self, const char* param1) {
@@ -54,8 +54,8 @@ void k_codecaction_on_metacast(void* self, void* (*callback)(void*, const char*)
     KCodecAction_OnMetacast((KCodecAction*)self, (intptr_t)callback);
 }
 
-void* k_codecaction_qbase_metacast(void* self, const char* param1) {
-    return KCodecAction_QBaseMetacast((KCodecAction*)self, param1);
+void* k_codecaction_super_metacast(void* self, const char* param1) {
+    return KCodecAction_SuperMetacast((KCodecAction*)self, param1);
 }
 
 int32_t k_codecaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -66,8 +66,8 @@ void k_codecaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KCodecAction_OnMetacall((KCodecAction*)self, (intptr_t)callback);
 }
 
-int32_t k_codecaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCodecAction_QBaseMetacall((KCodecAction*)self, param1, param2, param3);
+int32_t k_codecaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCodecAction_SuperMetacall((KCodecAction*)self, param1, param2, param3);
 }
 
 const char* k_codecaction_tr(const char* s) {
@@ -112,8 +112,8 @@ void k_codecaction_on_slot_action_triggered(void* self, void (*callback)(void*, 
     KCodecAction_OnSlotActionTriggered((KCodecAction*)self, (intptr_t)callback);
 }
 
-void k_codecaction_qbase_slot_action_triggered(void* self, void* param1) {
-    KCodecAction_QBaseSlotActionTriggered((KCodecAction*)self, (QAction*)param1);
+void k_codecaction_super_slot_action_triggered(void* self, void* param1) {
+    KCodecAction_SuperSlotActionTriggered((KCodecAction*)self, (QAction*)param1);
 }
 
 const char* k_codecaction_tr2(const char* s, const char* c) {
@@ -836,8 +836,8 @@ QAction* k_codecaction_remove_action(void* self, void* action) {
     return KCodecAction_RemoveAction((KCodecAction*)self, (QAction*)action);
 }
 
-QAction* k_codecaction_qbase_remove_action(void* self, void* action) {
-    return KCodecAction_QBaseRemoveAction((KCodecAction*)self, (QAction*)action);
+QAction* k_codecaction_super_remove_action(void* self, void* action) {
+    return KCodecAction_SuperRemoveAction((KCodecAction*)self, (QAction*)action);
 }
 
 void k_codecaction_on_remove_action(void* self, QAction* (*callback)(void*, void*)) {
@@ -848,8 +848,8 @@ void k_codecaction_insert_action(void* self, void* before, void* action) {
     KCodecAction_InsertAction((KCodecAction*)self, (QAction*)before, (QAction*)action);
 }
 
-void k_codecaction_qbase_insert_action(void* self, void* before, void* action) {
-    KCodecAction_QBaseInsertAction((KCodecAction*)self, (QAction*)before, (QAction*)action);
+void k_codecaction_super_insert_action(void* self, void* before, void* action) {
+    KCodecAction_SuperInsertAction((KCodecAction*)self, (QAction*)before, (QAction*)action);
 }
 
 void k_codecaction_on_insert_action(void* self, void (*callback)(void*, void*, void*)) {
@@ -860,8 +860,8 @@ QWidget* k_codecaction_create_widget(void* self, void* parent) {
     return KCodecAction_CreateWidget((KCodecAction*)self, (QWidget*)parent);
 }
 
-QWidget* k_codecaction_qbase_create_widget(void* self, void* parent) {
-    return KCodecAction_QBaseCreateWidget((KCodecAction*)self, (QWidget*)parent);
+QWidget* k_codecaction_super_create_widget(void* self, void* parent) {
+    return KCodecAction_SuperCreateWidget((KCodecAction*)self, (QWidget*)parent);
 }
 
 void k_codecaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*)) {
@@ -872,8 +872,8 @@ void k_codecaction_delete_widget(void* self, void* widget) {
     KCodecAction_DeleteWidget((KCodecAction*)self, (QWidget*)widget);
 }
 
-void k_codecaction_qbase_delete_widget(void* self, void* widget) {
-    KCodecAction_QBaseDeleteWidget((KCodecAction*)self, (QWidget*)widget);
+void k_codecaction_super_delete_widget(void* self, void* widget) {
+    KCodecAction_SuperDeleteWidget((KCodecAction*)self, (QWidget*)widget);
 }
 
 void k_codecaction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -884,8 +884,8 @@ bool k_codecaction_event(void* self, void* event) {
     return KCodecAction_Event((KCodecAction*)self, (QEvent*)event);
 }
 
-bool k_codecaction_qbase_event(void* self, void* event) {
-    return KCodecAction_QBaseEvent((KCodecAction*)self, (QEvent*)event);
+bool k_codecaction_super_event(void* self, void* event) {
+    return KCodecAction_SuperEvent((KCodecAction*)self, (QEvent*)event);
 }
 
 void k_codecaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -896,8 +896,8 @@ bool k_codecaction_event_filter(void* self, void* watched, void* event) {
     return KCodecAction_EventFilter((KCodecAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_codecaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCodecAction_QBaseEventFilter((KCodecAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_codecaction_super_event_filter(void* self, void* watched, void* event) {
+    return KCodecAction_SuperEventFilter((KCodecAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_codecaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -908,8 +908,8 @@ void k_codecaction_timer_event(void* self, void* event) {
     KCodecAction_TimerEvent((KCodecAction*)self, (QTimerEvent*)event);
 }
 
-void k_codecaction_qbase_timer_event(void* self, void* event) {
-    KCodecAction_QBaseTimerEvent((KCodecAction*)self, (QTimerEvent*)event);
+void k_codecaction_super_timer_event(void* self, void* event) {
+    KCodecAction_SuperTimerEvent((KCodecAction*)self, (QTimerEvent*)event);
 }
 
 void k_codecaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -920,8 +920,8 @@ void k_codecaction_child_event(void* self, void* event) {
     KCodecAction_ChildEvent((KCodecAction*)self, (QChildEvent*)event);
 }
 
-void k_codecaction_qbase_child_event(void* self, void* event) {
-    KCodecAction_QBaseChildEvent((KCodecAction*)self, (QChildEvent*)event);
+void k_codecaction_super_child_event(void* self, void* event) {
+    KCodecAction_SuperChildEvent((KCodecAction*)self, (QChildEvent*)event);
 }
 
 void k_codecaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -932,8 +932,8 @@ void k_codecaction_custom_event(void* self, void* event) {
     KCodecAction_CustomEvent((KCodecAction*)self, (QEvent*)event);
 }
 
-void k_codecaction_qbase_custom_event(void* self, void* event) {
-    KCodecAction_QBaseCustomEvent((KCodecAction*)self, (QEvent*)event);
+void k_codecaction_super_custom_event(void* self, void* event) {
+    KCodecAction_SuperCustomEvent((KCodecAction*)self, (QEvent*)event);
 }
 
 void k_codecaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -944,8 +944,8 @@ void k_codecaction_connect_notify(void* self, void* signal) {
     KCodecAction_ConnectNotify((KCodecAction*)self, (QMetaMethod*)signal);
 }
 
-void k_codecaction_qbase_connect_notify(void* self, void* signal) {
-    KCodecAction_QBaseConnectNotify((KCodecAction*)self, (QMetaMethod*)signal);
+void k_codecaction_super_connect_notify(void* self, void* signal) {
+    KCodecAction_SuperConnectNotify((KCodecAction*)self, (QMetaMethod*)signal);
 }
 
 void k_codecaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -956,8 +956,8 @@ void k_codecaction_disconnect_notify(void* self, void* signal) {
     KCodecAction_DisconnectNotify((KCodecAction*)self, (QMetaMethod*)signal);
 }
 
-void k_codecaction_qbase_disconnect_notify(void* self, void* signal) {
-    KCodecAction_QBaseDisconnectNotify((KCodecAction*)self, (QMetaMethod*)signal);
+void k_codecaction_super_disconnect_notify(void* self, void* signal) {
+    KCodecAction_SuperDisconnectNotify((KCodecAction*)self, (QMetaMethod*)signal);
 }
 
 void k_codecaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -968,8 +968,8 @@ void k_codecaction_slot_toggled(void* self, bool param1) {
     KCodecAction_SlotToggled((KCodecAction*)self, param1);
 }
 
-void k_codecaction_qbase_slot_toggled(void* self, bool param1) {
-    KCodecAction_QBaseSlotToggled((KCodecAction*)self, param1);
+void k_codecaction_super_slot_toggled(void* self, bool param1) {
+    KCodecAction_SuperSlotToggled((KCodecAction*)self, param1);
 }
 
 void k_codecaction_on_slot_toggled(void* self, void (*callback)(void*, bool)) {
@@ -981,8 +981,8 @@ libqt_list /* of QWidget* */ k_codecaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_codecaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KCodecAction_QBaseCreatedWidgets((KCodecAction*)self);
+libqt_list /* of QWidget* */ k_codecaction_super_created_widgets(void* self) {
+    libqt_list _arr = KCodecAction_SuperCreatedWidgets((KCodecAction*)self);
     return _arr;
 }
 
@@ -994,8 +994,8 @@ QObject* k_codecaction_sender(void* self) {
     return KCodecAction_Sender((KCodecAction*)self);
 }
 
-QObject* k_codecaction_qbase_sender(void* self) {
-    return KCodecAction_QBaseSender((KCodecAction*)self);
+QObject* k_codecaction_super_sender(void* self) {
+    return KCodecAction_SuperSender((KCodecAction*)self);
 }
 
 void k_codecaction_on_sender(void* self, QObject* (*callback)()) {
@@ -1006,8 +1006,8 @@ int32_t k_codecaction_sender_signal_index(void* self) {
     return KCodecAction_SenderSignalIndex((KCodecAction*)self);
 }
 
-int32_t k_codecaction_qbase_sender_signal_index(void* self) {
-    return KCodecAction_QBaseSenderSignalIndex((KCodecAction*)self);
+int32_t k_codecaction_super_sender_signal_index(void* self) {
+    return KCodecAction_SuperSenderSignalIndex((KCodecAction*)self);
 }
 
 void k_codecaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1018,8 +1018,8 @@ int32_t k_codecaction_receivers(void* self, const char* signal) {
     return KCodecAction_Receivers((KCodecAction*)self, signal);
 }
 
-int32_t k_codecaction_qbase_receivers(void* self, const char* signal) {
-    return KCodecAction_QBaseReceivers((KCodecAction*)self, signal);
+int32_t k_codecaction_super_receivers(void* self, const char* signal) {
+    return KCodecAction_SuperReceivers((KCodecAction*)self, signal);
 }
 
 void k_codecaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1030,8 +1030,8 @@ bool k_codecaction_is_signal_connected(void* self, void* signal) {
     return KCodecAction_IsSignalConnected((KCodecAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_codecaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KCodecAction_QBaseIsSignalConnected((KCodecAction*)self, (QMetaMethod*)signal);
+bool k_codecaction_super_is_signal_connected(void* self, void* signal) {
+    return KCodecAction_SuperIsSignalConnected((KCodecAction*)self, (QMetaMethod*)signal);
 }
 
 void k_codecaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -20,8 +20,8 @@ void k_io__dndpopupmenuplugin_on_meta_object(void* self, const QMetaObject* (*ca
     KIO__DndPopupMenuPlugin_OnMetaObject((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__dndpopupmenuplugin_qbase_meta_object(void* self) {
-    return KIO__DndPopupMenuPlugin_QBaseMetaObject((KIO__DndPopupMenuPlugin*)self);
+const QMetaObject* k_io__dndpopupmenuplugin_super_meta_object(void* self) {
+    return KIO__DndPopupMenuPlugin_SuperMetaObject((KIO__DndPopupMenuPlugin*)self);
 }
 
 void* k_io__dndpopupmenuplugin_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_io__dndpopupmenuplugin_on_metacast(void* self, void* (*callback)(void*, c
     KIO__DndPopupMenuPlugin_OnMetacast((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
 }
 
-void* k_io__dndpopupmenuplugin_qbase_metacast(void* self, const char* param1) {
-    return KIO__DndPopupMenuPlugin_QBaseMetacast((KIO__DndPopupMenuPlugin*)self, param1);
+void* k_io__dndpopupmenuplugin_super_metacast(void* self, const char* param1) {
+    return KIO__DndPopupMenuPlugin_SuperMetacast((KIO__DndPopupMenuPlugin*)self, param1);
 }
 
 int32_t k_io__dndpopupmenuplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_io__dndpopupmenuplugin_on_metacall(void* self, int32_t (*callback)(void*,
     KIO__DndPopupMenuPlugin_OnMetacall((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
 }
 
-int32_t k_io__dndpopupmenuplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__DndPopupMenuPlugin_QBaseMetacall((KIO__DndPopupMenuPlugin*)self, param1, param2, param3);
+int32_t k_io__dndpopupmenuplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__DndPopupMenuPlugin_SuperMetacall((KIO__DndPopupMenuPlugin*)self, param1, param2, param3);
 }
 
 const char* k_io__dndpopupmenuplugin_tr(const char* s) {
@@ -64,8 +64,8 @@ void k_io__dndpopupmenuplugin_on_setup(void* self, libqt_list /* of QAction* */ 
     KIO__DndPopupMenuPlugin_OnSetup((KIO__DndPopupMenuPlugin*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QAction* */ k_io__dndpopupmenuplugin_qbase_setup(void* self, void* popupMenuInfo, void* destination) {
-    libqt_list _arr = KIO__DndPopupMenuPlugin_QBaseSetup((KIO__DndPopupMenuPlugin*)self, (KFileItemListProperties*)popupMenuInfo, (QUrl*)destination);
+libqt_list /* of QAction* */ k_io__dndpopupmenuplugin_super_setup(void* self, void* popupMenuInfo, void* destination) {
+    libqt_list _arr = KIO__DndPopupMenuPlugin_SuperSetup((KIO__DndPopupMenuPlugin*)self, (KFileItemListProperties*)popupMenuInfo, (QUrl*)destination);
     return _arr;
 }
 
@@ -298,8 +298,8 @@ bool k_io__dndpopupmenuplugin_event(void* self, void* event) {
     return KIO__DndPopupMenuPlugin_Event((KIO__DndPopupMenuPlugin*)self, (QEvent*)event);
 }
 
-bool k_io__dndpopupmenuplugin_qbase_event(void* self, void* event) {
-    return KIO__DndPopupMenuPlugin_QBaseEvent((KIO__DndPopupMenuPlugin*)self, (QEvent*)event);
+bool k_io__dndpopupmenuplugin_super_event(void* self, void* event) {
+    return KIO__DndPopupMenuPlugin_SuperEvent((KIO__DndPopupMenuPlugin*)self, (QEvent*)event);
 }
 
 void k_io__dndpopupmenuplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -310,8 +310,8 @@ bool k_io__dndpopupmenuplugin_event_filter(void* self, void* watched, void* even
     return KIO__DndPopupMenuPlugin_EventFilter((KIO__DndPopupMenuPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__dndpopupmenuplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__DndPopupMenuPlugin_QBaseEventFilter((KIO__DndPopupMenuPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__dndpopupmenuplugin_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__DndPopupMenuPlugin_SuperEventFilter((KIO__DndPopupMenuPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__dndpopupmenuplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -322,8 +322,8 @@ void k_io__dndpopupmenuplugin_timer_event(void* self, void* event) {
     KIO__DndPopupMenuPlugin_TimerEvent((KIO__DndPopupMenuPlugin*)self, (QTimerEvent*)event);
 }
 
-void k_io__dndpopupmenuplugin_qbase_timer_event(void* self, void* event) {
-    KIO__DndPopupMenuPlugin_QBaseTimerEvent((KIO__DndPopupMenuPlugin*)self, (QTimerEvent*)event);
+void k_io__dndpopupmenuplugin_super_timer_event(void* self, void* event) {
+    KIO__DndPopupMenuPlugin_SuperTimerEvent((KIO__DndPopupMenuPlugin*)self, (QTimerEvent*)event);
 }
 
 void k_io__dndpopupmenuplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -334,8 +334,8 @@ void k_io__dndpopupmenuplugin_child_event(void* self, void* event) {
     KIO__DndPopupMenuPlugin_ChildEvent((KIO__DndPopupMenuPlugin*)self, (QChildEvent*)event);
 }
 
-void k_io__dndpopupmenuplugin_qbase_child_event(void* self, void* event) {
-    KIO__DndPopupMenuPlugin_QBaseChildEvent((KIO__DndPopupMenuPlugin*)self, (QChildEvent*)event);
+void k_io__dndpopupmenuplugin_super_child_event(void* self, void* event) {
+    KIO__DndPopupMenuPlugin_SuperChildEvent((KIO__DndPopupMenuPlugin*)self, (QChildEvent*)event);
 }
 
 void k_io__dndpopupmenuplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -346,8 +346,8 @@ void k_io__dndpopupmenuplugin_custom_event(void* self, void* event) {
     KIO__DndPopupMenuPlugin_CustomEvent((KIO__DndPopupMenuPlugin*)self, (QEvent*)event);
 }
 
-void k_io__dndpopupmenuplugin_qbase_custom_event(void* self, void* event) {
-    KIO__DndPopupMenuPlugin_QBaseCustomEvent((KIO__DndPopupMenuPlugin*)self, (QEvent*)event);
+void k_io__dndpopupmenuplugin_super_custom_event(void* self, void* event) {
+    KIO__DndPopupMenuPlugin_SuperCustomEvent((KIO__DndPopupMenuPlugin*)self, (QEvent*)event);
 }
 
 void k_io__dndpopupmenuplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ void k_io__dndpopupmenuplugin_connect_notify(void* self, void* signal) {
     KIO__DndPopupMenuPlugin_ConnectNotify((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_io__dndpopupmenuplugin_qbase_connect_notify(void* self, void* signal) {
-    KIO__DndPopupMenuPlugin_QBaseConnectNotify((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
+void k_io__dndpopupmenuplugin_super_connect_notify(void* self, void* signal) {
+    KIO__DndPopupMenuPlugin_SuperConnectNotify((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_io__dndpopupmenuplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void k_io__dndpopupmenuplugin_disconnect_notify(void* self, void* signal) {
     KIO__DndPopupMenuPlugin_DisconnectNotify((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_io__dndpopupmenuplugin_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__DndPopupMenuPlugin_QBaseDisconnectNotify((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
+void k_io__dndpopupmenuplugin_super_disconnect_notify(void* self, void* signal) {
+    KIO__DndPopupMenuPlugin_SuperDisconnectNotify((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_io__dndpopupmenuplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ QObject* k_io__dndpopupmenuplugin_sender(void* self) {
     return KIO__DndPopupMenuPlugin_Sender((KIO__DndPopupMenuPlugin*)self);
 }
 
-QObject* k_io__dndpopupmenuplugin_qbase_sender(void* self) {
-    return KIO__DndPopupMenuPlugin_QBaseSender((KIO__DndPopupMenuPlugin*)self);
+QObject* k_io__dndpopupmenuplugin_super_sender(void* self) {
+    return KIO__DndPopupMenuPlugin_SuperSender((KIO__DndPopupMenuPlugin*)self);
 }
 
 void k_io__dndpopupmenuplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -394,8 +394,8 @@ int32_t k_io__dndpopupmenuplugin_sender_signal_index(void* self) {
     return KIO__DndPopupMenuPlugin_SenderSignalIndex((KIO__DndPopupMenuPlugin*)self);
 }
 
-int32_t k_io__dndpopupmenuplugin_qbase_sender_signal_index(void* self) {
-    return KIO__DndPopupMenuPlugin_QBaseSenderSignalIndex((KIO__DndPopupMenuPlugin*)self);
+int32_t k_io__dndpopupmenuplugin_super_sender_signal_index(void* self) {
+    return KIO__DndPopupMenuPlugin_SuperSenderSignalIndex((KIO__DndPopupMenuPlugin*)self);
 }
 
 void k_io__dndpopupmenuplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -406,8 +406,8 @@ int32_t k_io__dndpopupmenuplugin_receivers(void* self, const char* signal) {
     return KIO__DndPopupMenuPlugin_Receivers((KIO__DndPopupMenuPlugin*)self, signal);
 }
 
-int32_t k_io__dndpopupmenuplugin_qbase_receivers(void* self, const char* signal) {
-    return KIO__DndPopupMenuPlugin_QBaseReceivers((KIO__DndPopupMenuPlugin*)self, signal);
+int32_t k_io__dndpopupmenuplugin_super_receivers(void* self, const char* signal) {
+    return KIO__DndPopupMenuPlugin_SuperReceivers((KIO__DndPopupMenuPlugin*)self, signal);
 }
 
 void k_io__dndpopupmenuplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -418,8 +418,8 @@ bool k_io__dndpopupmenuplugin_is_signal_connected(void* self, void* signal) {
     return KIO__DndPopupMenuPlugin_IsSignalConnected((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__dndpopupmenuplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__DndPopupMenuPlugin_QBaseIsSignalConnected((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
+bool k_io__dndpopupmenuplugin_super_is_signal_connected(void* self, void* signal) {
+    return KIO__DndPopupMenuPlugin_SuperIsSignalConnected((KIO__DndPopupMenuPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_io__dndpopupmenuplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

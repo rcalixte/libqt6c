@@ -23,8 +23,8 @@ void k_keysequencerecorder_on_meta_object(void* self, const QMetaObject* (*callb
     KKeySequenceRecorder_OnMetaObject((KKeySequenceRecorder*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_keysequencerecorder_qbase_meta_object(void* self) {
-    return KKeySequenceRecorder_QBaseMetaObject((KKeySequenceRecorder*)self);
+const QMetaObject* k_keysequencerecorder_super_meta_object(void* self) {
+    return KKeySequenceRecorder_SuperMetaObject((KKeySequenceRecorder*)self);
 }
 
 void* k_keysequencerecorder_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_keysequencerecorder_on_metacast(void* self, void* (*callback)(void*, cons
     KKeySequenceRecorder_OnMetacast((KKeySequenceRecorder*)self, (intptr_t)callback);
 }
 
-void* k_keysequencerecorder_qbase_metacast(void* self, const char* param1) {
-    return KKeySequenceRecorder_QBaseMetacast((KKeySequenceRecorder*)self, param1);
+void* k_keysequencerecorder_super_metacast(void* self, const char* param1) {
+    return KKeySequenceRecorder_SuperMetacast((KKeySequenceRecorder*)self, param1);
 }
 
 int32_t k_keysequencerecorder_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_keysequencerecorder_on_metacall(void* self, int32_t (*callback)(void*, in
     KKeySequenceRecorder_OnMetacall((KKeySequenceRecorder*)self, (intptr_t)callback);
 }
 
-int32_t k_keysequencerecorder_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KKeySequenceRecorder_QBaseMetacall((KKeySequenceRecorder*)self, param1, param2, param3);
+int32_t k_keysequencerecorder_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KKeySequenceRecorder_SuperMetacall((KKeySequenceRecorder*)self, param1, param2, param3);
 }
 
 const char* k_keysequencerecorder_tr(const char* s) {
@@ -411,8 +411,8 @@ bool k_keysequencerecorder_event(void* self, void* event) {
     return KKeySequenceRecorder_Event((KKeySequenceRecorder*)self, (QEvent*)event);
 }
 
-bool k_keysequencerecorder_qbase_event(void* self, void* event) {
-    return KKeySequenceRecorder_QBaseEvent((KKeySequenceRecorder*)self, (QEvent*)event);
+bool k_keysequencerecorder_super_event(void* self, void* event) {
+    return KKeySequenceRecorder_SuperEvent((KKeySequenceRecorder*)self, (QEvent*)event);
 }
 
 void k_keysequencerecorder_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ bool k_keysequencerecorder_event_filter(void* self, void* watched, void* event) 
     return KKeySequenceRecorder_EventFilter((KKeySequenceRecorder*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_keysequencerecorder_qbase_event_filter(void* self, void* watched, void* event) {
-    return KKeySequenceRecorder_QBaseEventFilter((KKeySequenceRecorder*)self, (QObject*)watched, (QEvent*)event);
+bool k_keysequencerecorder_super_event_filter(void* self, void* watched, void* event) {
+    return KKeySequenceRecorder_SuperEventFilter((KKeySequenceRecorder*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_keysequencerecorder_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -435,8 +435,8 @@ void k_keysequencerecorder_timer_event(void* self, void* event) {
     KKeySequenceRecorder_TimerEvent((KKeySequenceRecorder*)self, (QTimerEvent*)event);
 }
 
-void k_keysequencerecorder_qbase_timer_event(void* self, void* event) {
-    KKeySequenceRecorder_QBaseTimerEvent((KKeySequenceRecorder*)self, (QTimerEvent*)event);
+void k_keysequencerecorder_super_timer_event(void* self, void* event) {
+    KKeySequenceRecorder_SuperTimerEvent((KKeySequenceRecorder*)self, (QTimerEvent*)event);
 }
 
 void k_keysequencerecorder_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ void k_keysequencerecorder_child_event(void* self, void* event) {
     KKeySequenceRecorder_ChildEvent((KKeySequenceRecorder*)self, (QChildEvent*)event);
 }
 
-void k_keysequencerecorder_qbase_child_event(void* self, void* event) {
-    KKeySequenceRecorder_QBaseChildEvent((KKeySequenceRecorder*)self, (QChildEvent*)event);
+void k_keysequencerecorder_super_child_event(void* self, void* event) {
+    KKeySequenceRecorder_SuperChildEvent((KKeySequenceRecorder*)self, (QChildEvent*)event);
 }
 
 void k_keysequencerecorder_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ void k_keysequencerecorder_custom_event(void* self, void* event) {
     KKeySequenceRecorder_CustomEvent((KKeySequenceRecorder*)self, (QEvent*)event);
 }
 
-void k_keysequencerecorder_qbase_custom_event(void* self, void* event) {
-    KKeySequenceRecorder_QBaseCustomEvent((KKeySequenceRecorder*)self, (QEvent*)event);
+void k_keysequencerecorder_super_custom_event(void* self, void* event) {
+    KKeySequenceRecorder_SuperCustomEvent((KKeySequenceRecorder*)self, (QEvent*)event);
 }
 
 void k_keysequencerecorder_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ void k_keysequencerecorder_connect_notify(void* self, void* signal) {
     KKeySequenceRecorder_ConnectNotify((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
 }
 
-void k_keysequencerecorder_qbase_connect_notify(void* self, void* signal) {
-    KKeySequenceRecorder_QBaseConnectNotify((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
+void k_keysequencerecorder_super_connect_notify(void* self, void* signal) {
+    KKeySequenceRecorder_SuperConnectNotify((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
 }
 
 void k_keysequencerecorder_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -483,8 +483,8 @@ void k_keysequencerecorder_disconnect_notify(void* self, void* signal) {
     KKeySequenceRecorder_DisconnectNotify((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
 }
 
-void k_keysequencerecorder_qbase_disconnect_notify(void* self, void* signal) {
-    KKeySequenceRecorder_QBaseDisconnectNotify((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
+void k_keysequencerecorder_super_disconnect_notify(void* self, void* signal) {
+    KKeySequenceRecorder_SuperDisconnectNotify((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
 }
 
 void k_keysequencerecorder_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -495,8 +495,8 @@ QObject* k_keysequencerecorder_sender(void* self) {
     return KKeySequenceRecorder_Sender((KKeySequenceRecorder*)self);
 }
 
-QObject* k_keysequencerecorder_qbase_sender(void* self) {
-    return KKeySequenceRecorder_QBaseSender((KKeySequenceRecorder*)self);
+QObject* k_keysequencerecorder_super_sender(void* self) {
+    return KKeySequenceRecorder_SuperSender((KKeySequenceRecorder*)self);
 }
 
 void k_keysequencerecorder_on_sender(void* self, QObject* (*callback)()) {
@@ -507,8 +507,8 @@ int32_t k_keysequencerecorder_sender_signal_index(void* self) {
     return KKeySequenceRecorder_SenderSignalIndex((KKeySequenceRecorder*)self);
 }
 
-int32_t k_keysequencerecorder_qbase_sender_signal_index(void* self) {
-    return KKeySequenceRecorder_QBaseSenderSignalIndex((KKeySequenceRecorder*)self);
+int32_t k_keysequencerecorder_super_sender_signal_index(void* self) {
+    return KKeySequenceRecorder_SuperSenderSignalIndex((KKeySequenceRecorder*)self);
 }
 
 void k_keysequencerecorder_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -519,8 +519,8 @@ int32_t k_keysequencerecorder_receivers(void* self, const char* signal) {
     return KKeySequenceRecorder_Receivers((KKeySequenceRecorder*)self, signal);
 }
 
-int32_t k_keysequencerecorder_qbase_receivers(void* self, const char* signal) {
-    return KKeySequenceRecorder_QBaseReceivers((KKeySequenceRecorder*)self, signal);
+int32_t k_keysequencerecorder_super_receivers(void* self, const char* signal) {
+    return KKeySequenceRecorder_SuperReceivers((KKeySequenceRecorder*)self, signal);
 }
 
 void k_keysequencerecorder_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -531,8 +531,8 @@ bool k_keysequencerecorder_is_signal_connected(void* self, void* signal) {
     return KKeySequenceRecorder_IsSignalConnected((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
 }
 
-bool k_keysequencerecorder_qbase_is_signal_connected(void* self, void* signal) {
-    return KKeySequenceRecorder_QBaseIsSignalConnected((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
+bool k_keysequencerecorder_super_is_signal_connected(void* self, void* signal) {
+    return KKeySequenceRecorder_SuperIsSignalConnected((KKeySequenceRecorder*)self, (QMetaMethod*)signal);
 }
 
 void k_keysequencerecorder_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

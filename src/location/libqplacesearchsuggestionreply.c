@@ -22,8 +22,8 @@ void q_placesearchsuggestionreply_on_meta_object(void* self, const QMetaObject* 
     QPlaceSearchSuggestionReply_OnMetaObject((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_placesearchsuggestionreply_qbase_meta_object(void* self) {
-    return QPlaceSearchSuggestionReply_QBaseMetaObject((QPlaceSearchSuggestionReply*)self);
+const QMetaObject* q_placesearchsuggestionreply_super_meta_object(void* self) {
+    return QPlaceSearchSuggestionReply_SuperMetaObject((QPlaceSearchSuggestionReply*)self);
 }
 
 void* q_placesearchsuggestionreply_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_placesearchsuggestionreply_on_metacast(void* self, void* (*callback)(void
     QPlaceSearchSuggestionReply_OnMetacast((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 
-void* q_placesearchsuggestionreply_qbase_metacast(void* self, const char* param1) {
-    return QPlaceSearchSuggestionReply_QBaseMetacast((QPlaceSearchSuggestionReply*)self, param1);
+void* q_placesearchsuggestionreply_super_metacast(void* self, const char* param1) {
+    return QPlaceSearchSuggestionReply_SuperMetacast((QPlaceSearchSuggestionReply*)self, param1);
 }
 
 int32_t q_placesearchsuggestionreply_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_placesearchsuggestionreply_on_metacall(void* self, int32_t (*callback)(vo
     QPlaceSearchSuggestionReply_OnMetacall((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 
-int32_t q_placesearchsuggestionreply_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPlaceSearchSuggestionReply_QBaseMetacall((QPlaceSearchSuggestionReply*)self, param1, param2, param3);
+int32_t q_placesearchsuggestionreply_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPlaceSearchSuggestionReply_SuperMetacall((QPlaceSearchSuggestionReply*)self, param1, param2, param3);
 }
 
 const char* q_placesearchsuggestionreply_tr(const char* s) {
@@ -84,8 +84,8 @@ void q_placesearchsuggestionreply_on_type(void* self, int32_t (*callback)()) {
     QPlaceSearchSuggestionReply_OnType((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 
-int32_t q_placesearchsuggestionreply_qbase_type(void* self) {
-    return QPlaceSearchSuggestionReply_QBaseType((QPlaceSearchSuggestionReply*)self);
+int32_t q_placesearchsuggestionreply_super_type(void* self) {
+    return QPlaceSearchSuggestionReply_SuperType((QPlaceSearchSuggestionReply*)self);
 }
 
 void q_placesearchsuggestionreply_set_suggestions(void* self, const char* suggestions[static 1]) {
@@ -107,7 +107,7 @@ void q_placesearchsuggestionreply_on_set_suggestions(void* self, void (*callback
     QPlaceSearchSuggestionReply_OnSetSuggestions((QPlaceSearchSuggestionReply*)self, (intptr_t)callback);
 }
 
-void q_placesearchsuggestionreply_qbase_set_suggestions(void* self, const char* suggestions[static 1]) {
+void q_placesearchsuggestionreply_super_set_suggestions(void* self, const char* suggestions[static 1]) {
     size_t suggestions_len = libqt_strv_length(suggestions);
     libqt_string* suggestions_qstr = (libqt_string*)malloc(suggestions_len * sizeof(libqt_string));
     if (suggestions_qstr == NULL) {
@@ -118,7 +118,7 @@ void q_placesearchsuggestionreply_qbase_set_suggestions(void* self, const char* 
         suggestions_qstr[i] = qstring(suggestions[i]);
     }
     libqt_list suggestions_list = qlist(suggestions_qstr, suggestions_len);
-    QPlaceSearchSuggestionReply_QBaseSetSuggestions((QPlaceSearchSuggestionReply*)self, suggestions_list);
+    QPlaceSearchSuggestionReply_SuperSetSuggestions((QPlaceSearchSuggestionReply*)self, suggestions_list);
 }
 
 const char* q_placesearchsuggestionreply_tr2(const char* s, const char* c) {
@@ -405,8 +405,8 @@ void q_placesearchsuggestionreply_abort(void* self) {
     QPlaceSearchSuggestionReply_Abort((QPlaceSearchSuggestionReply*)self);
 }
 
-void q_placesearchsuggestionreply_qbase_abort(void* self) {
-    QPlaceSearchSuggestionReply_QBaseAbort((QPlaceSearchSuggestionReply*)self);
+void q_placesearchsuggestionreply_super_abort(void* self) {
+    QPlaceSearchSuggestionReply_SuperAbort((QPlaceSearchSuggestionReply*)self);
 }
 
 void q_placesearchsuggestionreply_on_abort(void* self, void (*callback)()) {
@@ -417,8 +417,8 @@ bool q_placesearchsuggestionreply_event(void* self, void* event) {
     return QPlaceSearchSuggestionReply_Event((QPlaceSearchSuggestionReply*)self, (QEvent*)event);
 }
 
-bool q_placesearchsuggestionreply_qbase_event(void* self, void* event) {
-    return QPlaceSearchSuggestionReply_QBaseEvent((QPlaceSearchSuggestionReply*)self, (QEvent*)event);
+bool q_placesearchsuggestionreply_super_event(void* self, void* event) {
+    return QPlaceSearchSuggestionReply_SuperEvent((QPlaceSearchSuggestionReply*)self, (QEvent*)event);
 }
 
 void q_placesearchsuggestionreply_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -429,8 +429,8 @@ bool q_placesearchsuggestionreply_event_filter(void* self, void* watched, void* 
     return QPlaceSearchSuggestionReply_EventFilter((QPlaceSearchSuggestionReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_placesearchsuggestionreply_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPlaceSearchSuggestionReply_QBaseEventFilter((QPlaceSearchSuggestionReply*)self, (QObject*)watched, (QEvent*)event);
+bool q_placesearchsuggestionreply_super_event_filter(void* self, void* watched, void* event) {
+    return QPlaceSearchSuggestionReply_SuperEventFilter((QPlaceSearchSuggestionReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_placesearchsuggestionreply_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -441,8 +441,8 @@ void q_placesearchsuggestionreply_timer_event(void* self, void* event) {
     QPlaceSearchSuggestionReply_TimerEvent((QPlaceSearchSuggestionReply*)self, (QTimerEvent*)event);
 }
 
-void q_placesearchsuggestionreply_qbase_timer_event(void* self, void* event) {
-    QPlaceSearchSuggestionReply_QBaseTimerEvent((QPlaceSearchSuggestionReply*)self, (QTimerEvent*)event);
+void q_placesearchsuggestionreply_super_timer_event(void* self, void* event) {
+    QPlaceSearchSuggestionReply_SuperTimerEvent((QPlaceSearchSuggestionReply*)self, (QTimerEvent*)event);
 }
 
 void q_placesearchsuggestionreply_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -453,8 +453,8 @@ void q_placesearchsuggestionreply_child_event(void* self, void* event) {
     QPlaceSearchSuggestionReply_ChildEvent((QPlaceSearchSuggestionReply*)self, (QChildEvent*)event);
 }
 
-void q_placesearchsuggestionreply_qbase_child_event(void* self, void* event) {
-    QPlaceSearchSuggestionReply_QBaseChildEvent((QPlaceSearchSuggestionReply*)self, (QChildEvent*)event);
+void q_placesearchsuggestionreply_super_child_event(void* self, void* event) {
+    QPlaceSearchSuggestionReply_SuperChildEvent((QPlaceSearchSuggestionReply*)self, (QChildEvent*)event);
 }
 
 void q_placesearchsuggestionreply_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -465,8 +465,8 @@ void q_placesearchsuggestionreply_custom_event(void* self, void* event) {
     QPlaceSearchSuggestionReply_CustomEvent((QPlaceSearchSuggestionReply*)self, (QEvent*)event);
 }
 
-void q_placesearchsuggestionreply_qbase_custom_event(void* self, void* event) {
-    QPlaceSearchSuggestionReply_QBaseCustomEvent((QPlaceSearchSuggestionReply*)self, (QEvent*)event);
+void q_placesearchsuggestionreply_super_custom_event(void* self, void* event) {
+    QPlaceSearchSuggestionReply_SuperCustomEvent((QPlaceSearchSuggestionReply*)self, (QEvent*)event);
 }
 
 void q_placesearchsuggestionreply_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -477,8 +477,8 @@ void q_placesearchsuggestionreply_connect_notify(void* self, void* signal) {
     QPlaceSearchSuggestionReply_ConnectNotify((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placesearchsuggestionreply_qbase_connect_notify(void* self, void* signal) {
-    QPlaceSearchSuggestionReply_QBaseConnectNotify((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
+void q_placesearchsuggestionreply_super_connect_notify(void* self, void* signal) {
+    QPlaceSearchSuggestionReply_SuperConnectNotify((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
 }
 
 void q_placesearchsuggestionreply_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -489,8 +489,8 @@ void q_placesearchsuggestionreply_disconnect_notify(void* self, void* signal) {
     QPlaceSearchSuggestionReply_DisconnectNotify((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
 }
 
-void q_placesearchsuggestionreply_qbase_disconnect_notify(void* self, void* signal) {
-    QPlaceSearchSuggestionReply_QBaseDisconnectNotify((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
+void q_placesearchsuggestionreply_super_disconnect_notify(void* self, void* signal) {
+    QPlaceSearchSuggestionReply_SuperDisconnectNotify((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
 }
 
 void q_placesearchsuggestionreply_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -501,8 +501,8 @@ void q_placesearchsuggestionreply_set_finished(void* self, bool finished) {
     QPlaceSearchSuggestionReply_SetFinished((QPlaceSearchSuggestionReply*)self, finished);
 }
 
-void q_placesearchsuggestionreply_qbase_set_finished(void* self, bool finished) {
-    QPlaceSearchSuggestionReply_QBaseSetFinished((QPlaceSearchSuggestionReply*)self, finished);
+void q_placesearchsuggestionreply_super_set_finished(void* self, bool finished) {
+    QPlaceSearchSuggestionReply_SuperSetFinished((QPlaceSearchSuggestionReply*)self, finished);
 }
 
 void q_placesearchsuggestionreply_on_set_finished(void* self, void (*callback)(void*, bool)) {
@@ -513,8 +513,8 @@ void q_placesearchsuggestionreply_set_error(void* self, int32_t error, const cha
     QPlaceSearchSuggestionReply_SetError((QPlaceSearchSuggestionReply*)self, error, qstring(errorString));
 }
 
-void q_placesearchsuggestionreply_qbase_set_error(void* self, int32_t error, const char* errorString) {
-    QPlaceSearchSuggestionReply_QBaseSetError((QPlaceSearchSuggestionReply*)self, error, qstring(errorString));
+void q_placesearchsuggestionreply_super_set_error(void* self, int32_t error, const char* errorString) {
+    QPlaceSearchSuggestionReply_SuperSetError((QPlaceSearchSuggestionReply*)self, error, qstring(errorString));
 }
 
 void q_placesearchsuggestionreply_on_set_error(void* self, void (*callback)(void*, int32_t, const char*)) {
@@ -525,8 +525,8 @@ QObject* q_placesearchsuggestionreply_sender(void* self) {
     return QPlaceSearchSuggestionReply_Sender((QPlaceSearchSuggestionReply*)self);
 }
 
-QObject* q_placesearchsuggestionreply_qbase_sender(void* self) {
-    return QPlaceSearchSuggestionReply_QBaseSender((QPlaceSearchSuggestionReply*)self);
+QObject* q_placesearchsuggestionreply_super_sender(void* self) {
+    return QPlaceSearchSuggestionReply_SuperSender((QPlaceSearchSuggestionReply*)self);
 }
 
 void q_placesearchsuggestionreply_on_sender(void* self, QObject* (*callback)()) {
@@ -537,8 +537,8 @@ int32_t q_placesearchsuggestionreply_sender_signal_index(void* self) {
     return QPlaceSearchSuggestionReply_SenderSignalIndex((QPlaceSearchSuggestionReply*)self);
 }
 
-int32_t q_placesearchsuggestionreply_qbase_sender_signal_index(void* self) {
-    return QPlaceSearchSuggestionReply_QBaseSenderSignalIndex((QPlaceSearchSuggestionReply*)self);
+int32_t q_placesearchsuggestionreply_super_sender_signal_index(void* self) {
+    return QPlaceSearchSuggestionReply_SuperSenderSignalIndex((QPlaceSearchSuggestionReply*)self);
 }
 
 void q_placesearchsuggestionreply_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -549,8 +549,8 @@ int32_t q_placesearchsuggestionreply_receivers(void* self, const char* signal) {
     return QPlaceSearchSuggestionReply_Receivers((QPlaceSearchSuggestionReply*)self, signal);
 }
 
-int32_t q_placesearchsuggestionreply_qbase_receivers(void* self, const char* signal) {
-    return QPlaceSearchSuggestionReply_QBaseReceivers((QPlaceSearchSuggestionReply*)self, signal);
+int32_t q_placesearchsuggestionreply_super_receivers(void* self, const char* signal) {
+    return QPlaceSearchSuggestionReply_SuperReceivers((QPlaceSearchSuggestionReply*)self, signal);
 }
 
 void q_placesearchsuggestionreply_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -561,8 +561,8 @@ bool q_placesearchsuggestionreply_is_signal_connected(void* self, void* signal) 
     return QPlaceSearchSuggestionReply_IsSignalConnected((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
 }
 
-bool q_placesearchsuggestionreply_qbase_is_signal_connected(void* self, void* signal) {
-    return QPlaceSearchSuggestionReply_QBaseIsSignalConnected((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
+bool q_placesearchsuggestionreply_super_is_signal_connected(void* self, void* signal) {
+    return QPlaceSearchSuggestionReply_SuperIsSignalConnected((QPlaceSearchSuggestionReply*)self, (QMetaMethod*)signal);
 }
 
 void q_placesearchsuggestionreply_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

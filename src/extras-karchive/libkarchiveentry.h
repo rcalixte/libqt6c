@@ -84,13 +84,17 @@ bool k_archiveentry_is_file(void* self);
 ///
 void k_archiveentry_on_is_file(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_archiveentry_super_is_file` instead
+///
+#define k_archiveentry_qbase_is_file k_archiveentry_super_is_file
+
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isFile)
 ///
 /// Base class method implementation
 ///
 /// @param self KArchiveEntry*
 ///
-bool k_archiveentry_qbase_is_file(void* self);
+bool k_archiveentry_super_is_file(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
 ///
@@ -107,13 +111,17 @@ bool k_archiveentry_is_directory(void* self);
 ///
 void k_archiveentry_on_is_directory(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_archiveentry_super_is_directory` instead
+///
+#define k_archiveentry_qbase_is_directory k_archiveentry_super_is_directory
+
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
 ///
 /// Base class method implementation
 ///
 /// @param self KArchiveEntry*
 ///
-bool k_archiveentry_qbase_is_directory(void* self);
+bool k_archiveentry_super_is_directory(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
 ///
@@ -130,13 +138,17 @@ KArchive* k_archiveentry_archive(void* self);
 ///
 void k_archiveentry_on_archive(void* self, KArchive* (*callback)());
 
+/// @warning DEPRECATED: Use `k_archiveentry_super_archive` instead
+///
+#define k_archiveentry_qbase_archive k_archiveentry_super_archive
+
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
 ///
 /// Base class method implementation
 ///
 /// @param self KArchiveEntry*
 ///
-KArchive* k_archiveentry_qbase_archive(void* self);
+KArchive* k_archiveentry_super_archive(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#virtual_hook)
 ///
@@ -155,6 +167,10 @@ void k_archiveentry_virtual_hook(void* self, int id, void* data);
 ///
 void k_archiveentry_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_archiveentry_super_virtual_hook` instead
+///
+#define k_archiveentry_qbase_virtual_hook k_archiveentry_super_virtual_hook
+
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#virtual_hook)
 ///
 /// Base class method implementation
@@ -163,7 +179,7 @@ void k_archiveentry_on_virtual_hook(void* self, void (*callback)(void*, int, voi
 /// @param id int
 /// @param data void*
 ///
-void k_archiveentry_qbase_virtual_hook(void* self, int id, void* data);
+void k_archiveentry_super_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#dtor.KArchiveEntry)
 ///

@@ -32,8 +32,8 @@ void q_abstractbutton_on_meta_object(void* self, const QMetaObject* (*callback)(
     QAbstractButton_OnMetaObject((QAbstractButton*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_abstractbutton_qbase_meta_object(void* self) {
-    return QAbstractButton_QBaseMetaObject((QAbstractButton*)self);
+const QMetaObject* q_abstractbutton_super_meta_object(void* self) {
+    return QAbstractButton_SuperMetaObject((QAbstractButton*)self);
 }
 
 void* q_abstractbutton_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_abstractbutton_on_metacast(void* self, void* (*callback)(void*, const cha
     QAbstractButton_OnMetacast((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void* q_abstractbutton_qbase_metacast(void* self, const char* param1) {
-    return QAbstractButton_QBaseMetacast((QAbstractButton*)self, param1);
+void* q_abstractbutton_super_metacast(void* self, const char* param1) {
+    return QAbstractButton_SuperMetacast((QAbstractButton*)self, param1);
 }
 
 int32_t q_abstractbutton_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_abstractbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QAbstractButton_OnMetacall((QAbstractButton*)self, (intptr_t)callback);
 }
 
-int32_t q_abstractbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAbstractButton_QBaseMetacall((QAbstractButton*)self, param1, param2, param3);
+int32_t q_abstractbutton_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAbstractButton_SuperMetacall((QAbstractButton*)self, param1, param2, param3);
 }
 
 const char* q_abstractbutton_tr(const char* s) {
@@ -214,8 +214,8 @@ void q_abstractbutton_on_paint_event(void* self, void (*callback)(void*, void*))
     QAbstractButton_OnPaintEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_paint_event(void* self, void* e) {
-    QAbstractButton_QBasePaintEvent((QAbstractButton*)self, (QPaintEvent*)e);
+void q_abstractbutton_super_paint_event(void* self, void* e) {
+    QAbstractButton_SuperPaintEvent((QAbstractButton*)self, (QPaintEvent*)e);
 }
 
 bool q_abstractbutton_hit_button(void* self, void* pos) {
@@ -226,8 +226,8 @@ void q_abstractbutton_on_hit_button(void* self, bool (*callback)(void*, void*)) 
     QAbstractButton_OnHitButton((QAbstractButton*)self, (intptr_t)callback);
 }
 
-bool q_abstractbutton_qbase_hit_button(void* self, void* pos) {
-    return QAbstractButton_QBaseHitButton((QAbstractButton*)self, (QPoint*)pos);
+bool q_abstractbutton_super_hit_button(void* self, void* pos) {
+    return QAbstractButton_SuperHitButton((QAbstractButton*)self, (QPoint*)pos);
 }
 
 void q_abstractbutton_check_state_set(void* self) {
@@ -238,8 +238,8 @@ void q_abstractbutton_on_check_state_set(void* self, void (*callback)()) {
     QAbstractButton_OnCheckStateSet((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_check_state_set(void* self) {
-    QAbstractButton_QBaseCheckStateSet((QAbstractButton*)self);
+void q_abstractbutton_super_check_state_set(void* self) {
+    QAbstractButton_SuperCheckStateSet((QAbstractButton*)self);
 }
 
 void q_abstractbutton_next_check_state(void* self) {
@@ -250,8 +250,8 @@ void q_abstractbutton_on_next_check_state(void* self, void (*callback)()) {
     QAbstractButton_OnNextCheckState((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_next_check_state(void* self) {
-    QAbstractButton_QBaseNextCheckState((QAbstractButton*)self);
+void q_abstractbutton_super_next_check_state(void* self) {
+    QAbstractButton_SuperNextCheckState((QAbstractButton*)self);
 }
 
 bool q_abstractbutton_event(void* self, void* e) {
@@ -262,8 +262,8 @@ void q_abstractbutton_on_event(void* self, bool (*callback)(void*, void*)) {
     QAbstractButton_OnEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-bool q_abstractbutton_qbase_event(void* self, void* e) {
-    return QAbstractButton_QBaseEvent((QAbstractButton*)self, (QEvent*)e);
+bool q_abstractbutton_super_event(void* self, void* e) {
+    return QAbstractButton_SuperEvent((QAbstractButton*)self, (QEvent*)e);
 }
 
 void q_abstractbutton_key_press_event(void* self, void* e) {
@@ -274,8 +274,8 @@ void q_abstractbutton_on_key_press_event(void* self, void (*callback)(void*, voi
     QAbstractButton_OnKeyPressEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_key_press_event(void* self, void* e) {
-    QAbstractButton_QBaseKeyPressEvent((QAbstractButton*)self, (QKeyEvent*)e);
+void q_abstractbutton_super_key_press_event(void* self, void* e) {
+    QAbstractButton_SuperKeyPressEvent((QAbstractButton*)self, (QKeyEvent*)e);
 }
 
 void q_abstractbutton_key_release_event(void* self, void* e) {
@@ -286,8 +286,8 @@ void q_abstractbutton_on_key_release_event(void* self, void (*callback)(void*, v
     QAbstractButton_OnKeyReleaseEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_key_release_event(void* self, void* e) {
-    QAbstractButton_QBaseKeyReleaseEvent((QAbstractButton*)self, (QKeyEvent*)e);
+void q_abstractbutton_super_key_release_event(void* self, void* e) {
+    QAbstractButton_SuperKeyReleaseEvent((QAbstractButton*)self, (QKeyEvent*)e);
 }
 
 void q_abstractbutton_mouse_press_event(void* self, void* e) {
@@ -298,8 +298,8 @@ void q_abstractbutton_on_mouse_press_event(void* self, void (*callback)(void*, v
     QAbstractButton_OnMousePressEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_mouse_press_event(void* self, void* e) {
-    QAbstractButton_QBaseMousePressEvent((QAbstractButton*)self, (QMouseEvent*)e);
+void q_abstractbutton_super_mouse_press_event(void* self, void* e) {
+    QAbstractButton_SuperMousePressEvent((QAbstractButton*)self, (QMouseEvent*)e);
 }
 
 void q_abstractbutton_mouse_release_event(void* self, void* e) {
@@ -310,8 +310,8 @@ void q_abstractbutton_on_mouse_release_event(void* self, void (*callback)(void*,
     QAbstractButton_OnMouseReleaseEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_mouse_release_event(void* self, void* e) {
-    QAbstractButton_QBaseMouseReleaseEvent((QAbstractButton*)self, (QMouseEvent*)e);
+void q_abstractbutton_super_mouse_release_event(void* self, void* e) {
+    QAbstractButton_SuperMouseReleaseEvent((QAbstractButton*)self, (QMouseEvent*)e);
 }
 
 void q_abstractbutton_mouse_move_event(void* self, void* e) {
@@ -322,8 +322,8 @@ void q_abstractbutton_on_mouse_move_event(void* self, void (*callback)(void*, vo
     QAbstractButton_OnMouseMoveEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_mouse_move_event(void* self, void* e) {
-    QAbstractButton_QBaseMouseMoveEvent((QAbstractButton*)self, (QMouseEvent*)e);
+void q_abstractbutton_super_mouse_move_event(void* self, void* e) {
+    QAbstractButton_SuperMouseMoveEvent((QAbstractButton*)self, (QMouseEvent*)e);
 }
 
 void q_abstractbutton_focus_in_event(void* self, void* e) {
@@ -334,8 +334,8 @@ void q_abstractbutton_on_focus_in_event(void* self, void (*callback)(void*, void
     QAbstractButton_OnFocusInEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_focus_in_event(void* self, void* e) {
-    QAbstractButton_QBaseFocusInEvent((QAbstractButton*)self, (QFocusEvent*)e);
+void q_abstractbutton_super_focus_in_event(void* self, void* e) {
+    QAbstractButton_SuperFocusInEvent((QAbstractButton*)self, (QFocusEvent*)e);
 }
 
 void q_abstractbutton_focus_out_event(void* self, void* e) {
@@ -346,8 +346,8 @@ void q_abstractbutton_on_focus_out_event(void* self, void (*callback)(void*, voi
     QAbstractButton_OnFocusOutEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_focus_out_event(void* self, void* e) {
-    QAbstractButton_QBaseFocusOutEvent((QAbstractButton*)self, (QFocusEvent*)e);
+void q_abstractbutton_super_focus_out_event(void* self, void* e) {
+    QAbstractButton_SuperFocusOutEvent((QAbstractButton*)self, (QFocusEvent*)e);
 }
 
 void q_abstractbutton_change_event(void* self, void* e) {
@@ -358,8 +358,8 @@ void q_abstractbutton_on_change_event(void* self, void (*callback)(void*, void*)
     QAbstractButton_OnChangeEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_change_event(void* self, void* e) {
-    QAbstractButton_QBaseChangeEvent((QAbstractButton*)self, (QEvent*)e);
+void q_abstractbutton_super_change_event(void* self, void* e) {
+    QAbstractButton_SuperChangeEvent((QAbstractButton*)self, (QEvent*)e);
 }
 
 void q_abstractbutton_timer_event(void* self, void* e) {
@@ -370,8 +370,8 @@ void q_abstractbutton_on_timer_event(void* self, void (*callback)(void*, void*))
     QAbstractButton_OnTimerEvent((QAbstractButton*)self, (intptr_t)callback);
 }
 
-void q_abstractbutton_qbase_timer_event(void* self, void* e) {
-    QAbstractButton_QBaseTimerEvent((QAbstractButton*)self, (QTimerEvent*)e);
+void q_abstractbutton_super_timer_event(void* self, void* e) {
+    QAbstractButton_SuperTimerEvent((QAbstractButton*)self, (QTimerEvent*)e);
 }
 
 const char* q_abstractbutton_tr2(const char* s, const char* c) {
@@ -1781,8 +1781,8 @@ int32_t q_abstractbutton_dev_type(void* self) {
     return QAbstractButton_DevType((QAbstractButton*)self);
 }
 
-int32_t q_abstractbutton_qbase_dev_type(void* self) {
-    return QAbstractButton_QBaseDevType((QAbstractButton*)self);
+int32_t q_abstractbutton_super_dev_type(void* self) {
+    return QAbstractButton_SuperDevType((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1793,8 +1793,8 @@ void q_abstractbutton_set_visible(void* self, bool visible) {
     QAbstractButton_SetVisible((QAbstractButton*)self, visible);
 }
 
-void q_abstractbutton_qbase_set_visible(void* self, bool visible) {
-    QAbstractButton_QBaseSetVisible((QAbstractButton*)self, visible);
+void q_abstractbutton_super_set_visible(void* self, bool visible) {
+    QAbstractButton_SuperSetVisible((QAbstractButton*)self, visible);
 }
 
 void q_abstractbutton_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1805,8 +1805,8 @@ QSize* q_abstractbutton_size_hint(void* self) {
     return QAbstractButton_SizeHint((QAbstractButton*)self);
 }
 
-QSize* q_abstractbutton_qbase_size_hint(void* self) {
-    return QAbstractButton_QBaseSizeHint((QAbstractButton*)self);
+QSize* q_abstractbutton_super_size_hint(void* self) {
+    return QAbstractButton_SuperSizeHint((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1817,8 +1817,8 @@ QSize* q_abstractbutton_minimum_size_hint(void* self) {
     return QAbstractButton_MinimumSizeHint((QAbstractButton*)self);
 }
 
-QSize* q_abstractbutton_qbase_minimum_size_hint(void* self) {
-    return QAbstractButton_QBaseMinimumSizeHint((QAbstractButton*)self);
+QSize* q_abstractbutton_super_minimum_size_hint(void* self) {
+    return QAbstractButton_SuperMinimumSizeHint((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1829,8 +1829,8 @@ int32_t q_abstractbutton_height_for_width(void* self, int param1) {
     return QAbstractButton_HeightForWidth((QAbstractButton*)self, param1);
 }
 
-int32_t q_abstractbutton_qbase_height_for_width(void* self, int param1) {
-    return QAbstractButton_QBaseHeightForWidth((QAbstractButton*)self, param1);
+int32_t q_abstractbutton_super_height_for_width(void* self, int param1) {
+    return QAbstractButton_SuperHeightForWidth((QAbstractButton*)self, param1);
 }
 
 void q_abstractbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1841,8 +1841,8 @@ bool q_abstractbutton_has_height_for_width(void* self) {
     return QAbstractButton_HasHeightForWidth((QAbstractButton*)self);
 }
 
-bool q_abstractbutton_qbase_has_height_for_width(void* self) {
-    return QAbstractButton_QBaseHasHeightForWidth((QAbstractButton*)self);
+bool q_abstractbutton_super_has_height_for_width(void* self) {
+    return QAbstractButton_SuperHasHeightForWidth((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1853,8 +1853,8 @@ QPaintEngine* q_abstractbutton_paint_engine(void* self) {
     return QAbstractButton_PaintEngine((QAbstractButton*)self);
 }
 
-QPaintEngine* q_abstractbutton_qbase_paint_engine(void* self) {
-    return QAbstractButton_QBasePaintEngine((QAbstractButton*)self);
+QPaintEngine* q_abstractbutton_super_paint_engine(void* self) {
+    return QAbstractButton_SuperPaintEngine((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1865,8 +1865,8 @@ void q_abstractbutton_mouse_double_click_event(void* self, void* event) {
     QAbstractButton_MouseDoubleClickEvent((QAbstractButton*)self, (QMouseEvent*)event);
 }
 
-void q_abstractbutton_qbase_mouse_double_click_event(void* self, void* event) {
-    QAbstractButton_QBaseMouseDoubleClickEvent((QAbstractButton*)self, (QMouseEvent*)event);
+void q_abstractbutton_super_mouse_double_click_event(void* self, void* event) {
+    QAbstractButton_SuperMouseDoubleClickEvent((QAbstractButton*)self, (QMouseEvent*)event);
 }
 
 void q_abstractbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void q_abstractbutton_wheel_event(void* self, void* event) {
     QAbstractButton_WheelEvent((QAbstractButton*)self, (QWheelEvent*)event);
 }
 
-void q_abstractbutton_qbase_wheel_event(void* self, void* event) {
-    QAbstractButton_QBaseWheelEvent((QAbstractButton*)self, (QWheelEvent*)event);
+void q_abstractbutton_super_wheel_event(void* self, void* event) {
+    QAbstractButton_SuperWheelEvent((QAbstractButton*)self, (QWheelEvent*)event);
 }
 
 void q_abstractbutton_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void q_abstractbutton_enter_event(void* self, void* event) {
     QAbstractButton_EnterEvent((QAbstractButton*)self, (QEnterEvent*)event);
 }
 
-void q_abstractbutton_qbase_enter_event(void* self, void* event) {
-    QAbstractButton_QBaseEnterEvent((QAbstractButton*)self, (QEnterEvent*)event);
+void q_abstractbutton_super_enter_event(void* self, void* event) {
+    QAbstractButton_SuperEnterEvent((QAbstractButton*)self, (QEnterEvent*)event);
 }
 
 void q_abstractbutton_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void q_abstractbutton_leave_event(void* self, void* event) {
     QAbstractButton_LeaveEvent((QAbstractButton*)self, (QEvent*)event);
 }
 
-void q_abstractbutton_qbase_leave_event(void* self, void* event) {
-    QAbstractButton_QBaseLeaveEvent((QAbstractButton*)self, (QEvent*)event);
+void q_abstractbutton_super_leave_event(void* self, void* event) {
+    QAbstractButton_SuperLeaveEvent((QAbstractButton*)self, (QEvent*)event);
 }
 
 void q_abstractbutton_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void q_abstractbutton_move_event(void* self, void* event) {
     QAbstractButton_MoveEvent((QAbstractButton*)self, (QMoveEvent*)event);
 }
 
-void q_abstractbutton_qbase_move_event(void* self, void* event) {
-    QAbstractButton_QBaseMoveEvent((QAbstractButton*)self, (QMoveEvent*)event);
+void q_abstractbutton_super_move_event(void* self, void* event) {
+    QAbstractButton_SuperMoveEvent((QAbstractButton*)self, (QMoveEvent*)event);
 }
 
 void q_abstractbutton_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void q_abstractbutton_resize_event(void* self, void* event) {
     QAbstractButton_ResizeEvent((QAbstractButton*)self, (QResizeEvent*)event);
 }
 
-void q_abstractbutton_qbase_resize_event(void* self, void* event) {
-    QAbstractButton_QBaseResizeEvent((QAbstractButton*)self, (QResizeEvent*)event);
+void q_abstractbutton_super_resize_event(void* self, void* event) {
+    QAbstractButton_SuperResizeEvent((QAbstractButton*)self, (QResizeEvent*)event);
 }
 
 void q_abstractbutton_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void q_abstractbutton_close_event(void* self, void* event) {
     QAbstractButton_CloseEvent((QAbstractButton*)self, (QCloseEvent*)event);
 }
 
-void q_abstractbutton_qbase_close_event(void* self, void* event) {
-    QAbstractButton_QBaseCloseEvent((QAbstractButton*)self, (QCloseEvent*)event);
+void q_abstractbutton_super_close_event(void* self, void* event) {
+    QAbstractButton_SuperCloseEvent((QAbstractButton*)self, (QCloseEvent*)event);
 }
 
 void q_abstractbutton_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void q_abstractbutton_context_menu_event(void* self, void* event) {
     QAbstractButton_ContextMenuEvent((QAbstractButton*)self, (QContextMenuEvent*)event);
 }
 
-void q_abstractbutton_qbase_context_menu_event(void* self, void* event) {
-    QAbstractButton_QBaseContextMenuEvent((QAbstractButton*)self, (QContextMenuEvent*)event);
+void q_abstractbutton_super_context_menu_event(void* self, void* event) {
+    QAbstractButton_SuperContextMenuEvent((QAbstractButton*)self, (QContextMenuEvent*)event);
 }
 
 void q_abstractbutton_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void q_abstractbutton_tablet_event(void* self, void* event) {
     QAbstractButton_TabletEvent((QAbstractButton*)self, (QTabletEvent*)event);
 }
 
-void q_abstractbutton_qbase_tablet_event(void* self, void* event) {
-    QAbstractButton_QBaseTabletEvent((QAbstractButton*)self, (QTabletEvent*)event);
+void q_abstractbutton_super_tablet_event(void* self, void* event) {
+    QAbstractButton_SuperTabletEvent((QAbstractButton*)self, (QTabletEvent*)event);
 }
 
 void q_abstractbutton_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ void q_abstractbutton_action_event(void* self, void* event) {
     QAbstractButton_ActionEvent((QAbstractButton*)self, (QActionEvent*)event);
 }
 
-void q_abstractbutton_qbase_action_event(void* self, void* event) {
-    QAbstractButton_QBaseActionEvent((QAbstractButton*)self, (QActionEvent*)event);
+void q_abstractbutton_super_action_event(void* self, void* event) {
+    QAbstractButton_SuperActionEvent((QAbstractButton*)self, (QActionEvent*)event);
 }
 
 void q_abstractbutton_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ void q_abstractbutton_drag_enter_event(void* self, void* event) {
     QAbstractButton_DragEnterEvent((QAbstractButton*)self, (QDragEnterEvent*)event);
 }
 
-void q_abstractbutton_qbase_drag_enter_event(void* self, void* event) {
-    QAbstractButton_QBaseDragEnterEvent((QAbstractButton*)self, (QDragEnterEvent*)event);
+void q_abstractbutton_super_drag_enter_event(void* self, void* event) {
+    QAbstractButton_SuperDragEnterEvent((QAbstractButton*)self, (QDragEnterEvent*)event);
 }
 
 void q_abstractbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void q_abstractbutton_drag_move_event(void* self, void* event) {
     QAbstractButton_DragMoveEvent((QAbstractButton*)self, (QDragMoveEvent*)event);
 }
 
-void q_abstractbutton_qbase_drag_move_event(void* self, void* event) {
-    QAbstractButton_QBaseDragMoveEvent((QAbstractButton*)self, (QDragMoveEvent*)event);
+void q_abstractbutton_super_drag_move_event(void* self, void* event) {
+    QAbstractButton_SuperDragMoveEvent((QAbstractButton*)self, (QDragMoveEvent*)event);
 }
 
 void q_abstractbutton_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void q_abstractbutton_drag_leave_event(void* self, void* event) {
     QAbstractButton_DragLeaveEvent((QAbstractButton*)self, (QDragLeaveEvent*)event);
 }
 
-void q_abstractbutton_qbase_drag_leave_event(void* self, void* event) {
-    QAbstractButton_QBaseDragLeaveEvent((QAbstractButton*)self, (QDragLeaveEvent*)event);
+void q_abstractbutton_super_drag_leave_event(void* self, void* event) {
+    QAbstractButton_SuperDragLeaveEvent((QAbstractButton*)self, (QDragLeaveEvent*)event);
 }
 
 void q_abstractbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void q_abstractbutton_drop_event(void* self, void* event) {
     QAbstractButton_DropEvent((QAbstractButton*)self, (QDropEvent*)event);
 }
 
-void q_abstractbutton_qbase_drop_event(void* self, void* event) {
-    QAbstractButton_QBaseDropEvent((QAbstractButton*)self, (QDropEvent*)event);
+void q_abstractbutton_super_drop_event(void* self, void* event) {
+    QAbstractButton_SuperDropEvent((QAbstractButton*)self, (QDropEvent*)event);
 }
 
 void q_abstractbutton_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void q_abstractbutton_show_event(void* self, void* event) {
     QAbstractButton_ShowEvent((QAbstractButton*)self, (QShowEvent*)event);
 }
 
-void q_abstractbutton_qbase_show_event(void* self, void* event) {
-    QAbstractButton_QBaseShowEvent((QAbstractButton*)self, (QShowEvent*)event);
+void q_abstractbutton_super_show_event(void* self, void* event) {
+    QAbstractButton_SuperShowEvent((QAbstractButton*)self, (QShowEvent*)event);
 }
 
 void q_abstractbutton_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ void q_abstractbutton_hide_event(void* self, void* event) {
     QAbstractButton_HideEvent((QAbstractButton*)self, (QHideEvent*)event);
 }
 
-void q_abstractbutton_qbase_hide_event(void* self, void* event) {
-    QAbstractButton_QBaseHideEvent((QAbstractButton*)self, (QHideEvent*)event);
+void q_abstractbutton_super_hide_event(void* self, void* event) {
+    QAbstractButton_SuperHideEvent((QAbstractButton*)self, (QHideEvent*)event);
 }
 
 void q_abstractbutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ bool q_abstractbutton_native_event(void* self, char* eventType, void* message, i
     return QAbstractButton_NativeEvent((QAbstractButton*)self, qstring(eventType), message, result);
 }
 
-bool q_abstractbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QAbstractButton_QBaseNativeEvent((QAbstractButton*)self, qstring(eventType), message, result);
+bool q_abstractbutton_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QAbstractButton_SuperNativeEvent((QAbstractButton*)self, qstring(eventType), message, result);
 }
 
 void q_abstractbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2069,8 +2069,8 @@ int32_t q_abstractbutton_metric(void* self, int32_t param1) {
     return QAbstractButton_Metric((QAbstractButton*)self, param1);
 }
 
-int32_t q_abstractbutton_qbase_metric(void* self, int32_t param1) {
-    return QAbstractButton_QBaseMetric((QAbstractButton*)self, param1);
+int32_t q_abstractbutton_super_metric(void* self, int32_t param1) {
+    return QAbstractButton_SuperMetric((QAbstractButton*)self, param1);
 }
 
 void q_abstractbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2081,8 +2081,8 @@ void q_abstractbutton_init_painter(void* self, void* painter) {
     QAbstractButton_InitPainter((QAbstractButton*)self, (QPainter*)painter);
 }
 
-void q_abstractbutton_qbase_init_painter(void* self, void* painter) {
-    QAbstractButton_QBaseInitPainter((QAbstractButton*)self, (QPainter*)painter);
+void q_abstractbutton_super_init_painter(void* self, void* painter) {
+    QAbstractButton_SuperInitPainter((QAbstractButton*)self, (QPainter*)painter);
 }
 
 void q_abstractbutton_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ QPaintDevice* q_abstractbutton_redirected(void* self, void* offset) {
     return QAbstractButton_Redirected((QAbstractButton*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_abstractbutton_qbase_redirected(void* self, void* offset) {
-    return QAbstractButton_QBaseRedirected((QAbstractButton*)self, (QPoint*)offset);
+QPaintDevice* q_abstractbutton_super_redirected(void* self, void* offset) {
+    return QAbstractButton_SuperRedirected((QAbstractButton*)self, (QPoint*)offset);
 }
 
 void q_abstractbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ QPainter* q_abstractbutton_shared_painter(void* self) {
     return QAbstractButton_SharedPainter((QAbstractButton*)self);
 }
 
-QPainter* q_abstractbutton_qbase_shared_painter(void* self) {
-    return QAbstractButton_QBaseSharedPainter((QAbstractButton*)self);
+QPainter* q_abstractbutton_super_shared_painter(void* self) {
+    return QAbstractButton_SuperSharedPainter((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2117,8 +2117,8 @@ void q_abstractbutton_input_method_event(void* self, void* param1) {
     QAbstractButton_InputMethodEvent((QAbstractButton*)self, (QInputMethodEvent*)param1);
 }
 
-void q_abstractbutton_qbase_input_method_event(void* self, void* param1) {
-    QAbstractButton_QBaseInputMethodEvent((QAbstractButton*)self, (QInputMethodEvent*)param1);
+void q_abstractbutton_super_input_method_event(void* self, void* param1) {
+    QAbstractButton_SuperInputMethodEvent((QAbstractButton*)self, (QInputMethodEvent*)param1);
 }
 
 void q_abstractbutton_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ QVariant* q_abstractbutton_input_method_query(void* self, int32_t param1) {
     return QAbstractButton_InputMethodQuery((QAbstractButton*)self, param1);
 }
 
-QVariant* q_abstractbutton_qbase_input_method_query(void* self, int32_t param1) {
-    return QAbstractButton_QBaseInputMethodQuery((QAbstractButton*)self, param1);
+QVariant* q_abstractbutton_super_input_method_query(void* self, int32_t param1) {
+    return QAbstractButton_SuperInputMethodQuery((QAbstractButton*)self, param1);
 }
 
 void q_abstractbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2141,8 +2141,8 @@ bool q_abstractbutton_focus_next_prev_child(void* self, bool next) {
     return QAbstractButton_FocusNextPrevChild((QAbstractButton*)self, next);
 }
 
-bool q_abstractbutton_qbase_focus_next_prev_child(void* self, bool next) {
-    return QAbstractButton_QBaseFocusNextPrevChild((QAbstractButton*)self, next);
+bool q_abstractbutton_super_focus_next_prev_child(void* self, bool next) {
+    return QAbstractButton_SuperFocusNextPrevChild((QAbstractButton*)self, next);
 }
 
 void q_abstractbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2153,8 +2153,8 @@ bool q_abstractbutton_event_filter(void* self, void* watched, void* event) {
     return QAbstractButton_EventFilter((QAbstractButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_abstractbutton_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAbstractButton_QBaseEventFilter((QAbstractButton*)self, (QObject*)watched, (QEvent*)event);
+bool q_abstractbutton_super_event_filter(void* self, void* watched, void* event) {
+    return QAbstractButton_SuperEventFilter((QAbstractButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_abstractbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2165,8 +2165,8 @@ void q_abstractbutton_child_event(void* self, void* event) {
     QAbstractButton_ChildEvent((QAbstractButton*)self, (QChildEvent*)event);
 }
 
-void q_abstractbutton_qbase_child_event(void* self, void* event) {
-    QAbstractButton_QBaseChildEvent((QAbstractButton*)self, (QChildEvent*)event);
+void q_abstractbutton_super_child_event(void* self, void* event) {
+    QAbstractButton_SuperChildEvent((QAbstractButton*)self, (QChildEvent*)event);
 }
 
 void q_abstractbutton_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ void q_abstractbutton_custom_event(void* self, void* event) {
     QAbstractButton_CustomEvent((QAbstractButton*)self, (QEvent*)event);
 }
 
-void q_abstractbutton_qbase_custom_event(void* self, void* event) {
-    QAbstractButton_QBaseCustomEvent((QAbstractButton*)self, (QEvent*)event);
+void q_abstractbutton_super_custom_event(void* self, void* event) {
+    QAbstractButton_SuperCustomEvent((QAbstractButton*)self, (QEvent*)event);
 }
 
 void q_abstractbutton_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2189,8 +2189,8 @@ void q_abstractbutton_connect_notify(void* self, void* signal) {
     QAbstractButton_ConnectNotify((QAbstractButton*)self, (QMetaMethod*)signal);
 }
 
-void q_abstractbutton_qbase_connect_notify(void* self, void* signal) {
-    QAbstractButton_QBaseConnectNotify((QAbstractButton*)self, (QMetaMethod*)signal);
+void q_abstractbutton_super_connect_notify(void* self, void* signal) {
+    QAbstractButton_SuperConnectNotify((QAbstractButton*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractbutton_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2201,8 +2201,8 @@ void q_abstractbutton_disconnect_notify(void* self, void* signal) {
     QAbstractButton_DisconnectNotify((QAbstractButton*)self, (QMetaMethod*)signal);
 }
 
-void q_abstractbutton_qbase_disconnect_notify(void* self, void* signal) {
-    QAbstractButton_QBaseDisconnectNotify((QAbstractButton*)self, (QMetaMethod*)signal);
+void q_abstractbutton_super_disconnect_notify(void* self, void* signal) {
+    QAbstractButton_SuperDisconnectNotify((QAbstractButton*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ void q_abstractbutton_update_micro_focus(void* self) {
     QAbstractButton_UpdateMicroFocus((QAbstractButton*)self);
 }
 
-void q_abstractbutton_qbase_update_micro_focus(void* self) {
-    QAbstractButton_QBaseUpdateMicroFocus((QAbstractButton*)self);
+void q_abstractbutton_super_update_micro_focus(void* self) {
+    QAbstractButton_SuperUpdateMicroFocus((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2225,8 +2225,8 @@ void q_abstractbutton_create(void* self) {
     QAbstractButton_Create((QAbstractButton*)self);
 }
 
-void q_abstractbutton_qbase_create(void* self) {
-    QAbstractButton_QBaseCreate((QAbstractButton*)self);
+void q_abstractbutton_super_create(void* self) {
+    QAbstractButton_SuperCreate((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_create(void* self, void (*callback)()) {
@@ -2237,8 +2237,8 @@ void q_abstractbutton_destroy(void* self) {
     QAbstractButton_Destroy((QAbstractButton*)self);
 }
 
-void q_abstractbutton_qbase_destroy(void* self) {
-    QAbstractButton_QBaseDestroy((QAbstractButton*)self);
+void q_abstractbutton_super_destroy(void* self) {
+    QAbstractButton_SuperDestroy((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_destroy(void* self, void (*callback)()) {
@@ -2249,8 +2249,8 @@ bool q_abstractbutton_focus_next_child(void* self) {
     return QAbstractButton_FocusNextChild((QAbstractButton*)self);
 }
 
-bool q_abstractbutton_qbase_focus_next_child(void* self) {
-    return QAbstractButton_QBaseFocusNextChild((QAbstractButton*)self);
+bool q_abstractbutton_super_focus_next_child(void* self) {
+    return QAbstractButton_SuperFocusNextChild((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2261,8 +2261,8 @@ bool q_abstractbutton_focus_previous_child(void* self) {
     return QAbstractButton_FocusPreviousChild((QAbstractButton*)self);
 }
 
-bool q_abstractbutton_qbase_focus_previous_child(void* self) {
-    return QAbstractButton_QBaseFocusPreviousChild((QAbstractButton*)self);
+bool q_abstractbutton_super_focus_previous_child(void* self) {
+    return QAbstractButton_SuperFocusPreviousChild((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2273,8 +2273,8 @@ QObject* q_abstractbutton_sender(void* self) {
     return QAbstractButton_Sender((QAbstractButton*)self);
 }
 
-QObject* q_abstractbutton_qbase_sender(void* self) {
-    return QAbstractButton_QBaseSender((QAbstractButton*)self);
+QObject* q_abstractbutton_super_sender(void* self) {
+    return QAbstractButton_SuperSender((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_sender(void* self, QObject* (*callback)()) {
@@ -2285,8 +2285,8 @@ int32_t q_abstractbutton_sender_signal_index(void* self) {
     return QAbstractButton_SenderSignalIndex((QAbstractButton*)self);
 }
 
-int32_t q_abstractbutton_qbase_sender_signal_index(void* self) {
-    return QAbstractButton_QBaseSenderSignalIndex((QAbstractButton*)self);
+int32_t q_abstractbutton_super_sender_signal_index(void* self) {
+    return QAbstractButton_SuperSenderSignalIndex((QAbstractButton*)self);
 }
 
 void q_abstractbutton_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2297,8 +2297,8 @@ int32_t q_abstractbutton_receivers(void* self, const char* signal) {
     return QAbstractButton_Receivers((QAbstractButton*)self, signal);
 }
 
-int32_t q_abstractbutton_qbase_receivers(void* self, const char* signal) {
-    return QAbstractButton_QBaseReceivers((QAbstractButton*)self, signal);
+int32_t q_abstractbutton_super_receivers(void* self, const char* signal) {
+    return QAbstractButton_SuperReceivers((QAbstractButton*)self, signal);
 }
 
 void q_abstractbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2309,8 +2309,8 @@ bool q_abstractbutton_is_signal_connected(void* self, void* signal) {
     return QAbstractButton_IsSignalConnected((QAbstractButton*)self, (QMetaMethod*)signal);
 }
 
-bool q_abstractbutton_qbase_is_signal_connected(void* self, void* signal) {
-    return QAbstractButton_QBaseIsSignalConnected((QAbstractButton*)self, (QMetaMethod*)signal);
+bool q_abstractbutton_super_is_signal_connected(void* self, void* signal) {
+    return QAbstractButton_SuperIsSignalConnected((QAbstractButton*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2321,8 +2321,8 @@ double q_abstractbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return QAbstractButton_GetDecodedMetricF((QAbstractButton*)self, metricA, metricB);
 }
 
-double q_abstractbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QAbstractButton_QBaseGetDecodedMetricF((QAbstractButton*)self, metricA, metricB);
+double q_abstractbutton_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QAbstractButton_SuperGetDecodedMetricF((QAbstractButton*)self, metricA, metricB);
 }
 
 void q_abstractbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

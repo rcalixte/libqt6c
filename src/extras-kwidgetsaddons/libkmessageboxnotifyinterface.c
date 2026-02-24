@@ -14,8 +14,8 @@ void k_messageboxnotifyinterface_on_send_notification(void* self, void (*callbac
     KMessageBoxNotifyInterface_OnSendNotification((KMessageBoxNotifyInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxnotifyinterface_qbase_send_notification(void* self, int32_t notificationType, const char* message, void* parent) {
-    KMessageBoxNotifyInterface_QBaseSendNotification((KMessageBoxNotifyInterface*)self, notificationType, qstring(message), (QWidget*)parent);
+void k_messageboxnotifyinterface_super_send_notification(void* self, int32_t notificationType, const char* message, void* parent) {
+    KMessageBoxNotifyInterface_SuperSendNotification((KMessageBoxNotifyInterface*)self, notificationType, qstring(message), (QWidget*)parent);
 }
 
 void k_messageboxnotifyinterface_operator_assign(void* self, void* param1) {

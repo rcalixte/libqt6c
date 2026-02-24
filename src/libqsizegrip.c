@@ -25,8 +25,8 @@ void q_sizegrip_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QSizeGrip_OnMetaObject((QSizeGrip*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sizegrip_qbase_meta_object(void* self) {
-    return QSizeGrip_QBaseMetaObject((QSizeGrip*)self);
+const QMetaObject* q_sizegrip_super_meta_object(void* self) {
+    return QSizeGrip_SuperMetaObject((QSizeGrip*)self);
 }
 
 void* q_sizegrip_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void q_sizegrip_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QSizeGrip_OnMetacast((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void* q_sizegrip_qbase_metacast(void* self, const char* param1) {
-    return QSizeGrip_QBaseMetacast((QSizeGrip*)self, param1);
+void* q_sizegrip_super_metacast(void* self, const char* param1) {
+    return QSizeGrip_SuperMetacast((QSizeGrip*)self, param1);
 }
 
 int32_t q_sizegrip_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void q_sizegrip_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QSizeGrip_OnMetacall((QSizeGrip*)self, (intptr_t)callback);
 }
 
-int32_t q_sizegrip_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSizeGrip_QBaseMetacall((QSizeGrip*)self, param1, param2, param3);
+int32_t q_sizegrip_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSizeGrip_SuperMetacall((QSizeGrip*)self, param1, param2, param3);
 }
 
 const char* q_sizegrip_tr(const char* s) {
@@ -68,8 +68,8 @@ void q_sizegrip_on_size_hint(void* self, QSize* (*callback)()) {
     QSizeGrip_OnSizeHint((QSizeGrip*)self, (intptr_t)callback);
 }
 
-QSize* q_sizegrip_qbase_size_hint(void* self) {
-    return QSizeGrip_QBaseSizeHint((QSizeGrip*)self);
+QSize* q_sizegrip_super_size_hint(void* self) {
+    return QSizeGrip_SuperSizeHint((QSizeGrip*)self);
 }
 
 void q_sizegrip_set_visible(void* self, bool visible) {
@@ -80,8 +80,8 @@ void q_sizegrip_on_set_visible(void* self, void (*callback)(void*, bool)) {
     QSizeGrip_OnSetVisible((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_set_visible(void* self, bool visible) {
-    QSizeGrip_QBaseSetVisible((QSizeGrip*)self, visible);
+void q_sizegrip_super_set_visible(void* self, bool visible) {
+    QSizeGrip_SuperSetVisible((QSizeGrip*)self, visible);
 }
 
 void q_sizegrip_paint_event(void* self, void* param1) {
@@ -92,8 +92,8 @@ void q_sizegrip_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QSizeGrip_OnPaintEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_paint_event(void* self, void* param1) {
-    QSizeGrip_QBasePaintEvent((QSizeGrip*)self, (QPaintEvent*)param1);
+void q_sizegrip_super_paint_event(void* self, void* param1) {
+    QSizeGrip_SuperPaintEvent((QSizeGrip*)self, (QPaintEvent*)param1);
 }
 
 void q_sizegrip_mouse_press_event(void* self, void* param1) {
@@ -104,8 +104,8 @@ void q_sizegrip_on_mouse_press_event(void* self, void (*callback)(void*, void*))
     QSizeGrip_OnMousePressEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_mouse_press_event(void* self, void* param1) {
-    QSizeGrip_QBaseMousePressEvent((QSizeGrip*)self, (QMouseEvent*)param1);
+void q_sizegrip_super_mouse_press_event(void* self, void* param1) {
+    QSizeGrip_SuperMousePressEvent((QSizeGrip*)self, (QMouseEvent*)param1);
 }
 
 void q_sizegrip_mouse_move_event(void* self, void* param1) {
@@ -116,8 +116,8 @@ void q_sizegrip_on_mouse_move_event(void* self, void (*callback)(void*, void*)) 
     QSizeGrip_OnMouseMoveEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_mouse_move_event(void* self, void* param1) {
-    QSizeGrip_QBaseMouseMoveEvent((QSizeGrip*)self, (QMouseEvent*)param1);
+void q_sizegrip_super_mouse_move_event(void* self, void* param1) {
+    QSizeGrip_SuperMouseMoveEvent((QSizeGrip*)self, (QMouseEvent*)param1);
 }
 
 void q_sizegrip_mouse_release_event(void* self, void* mouseEvent) {
@@ -128,8 +128,8 @@ void q_sizegrip_on_mouse_release_event(void* self, void (*callback)(void*, void*
     QSizeGrip_OnMouseReleaseEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_mouse_release_event(void* self, void* mouseEvent) {
-    QSizeGrip_QBaseMouseReleaseEvent((QSizeGrip*)self, (QMouseEvent*)mouseEvent);
+void q_sizegrip_super_mouse_release_event(void* self, void* mouseEvent) {
+    QSizeGrip_SuperMouseReleaseEvent((QSizeGrip*)self, (QMouseEvent*)mouseEvent);
 }
 
 void q_sizegrip_move_event(void* self, void* moveEvent) {
@@ -140,8 +140,8 @@ void q_sizegrip_on_move_event(void* self, void (*callback)(void*, void*)) {
     QSizeGrip_OnMoveEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_move_event(void* self, void* moveEvent) {
-    QSizeGrip_QBaseMoveEvent((QSizeGrip*)self, (QMoveEvent*)moveEvent);
+void q_sizegrip_super_move_event(void* self, void* moveEvent) {
+    QSizeGrip_SuperMoveEvent((QSizeGrip*)self, (QMoveEvent*)moveEvent);
 }
 
 void q_sizegrip_show_event(void* self, void* showEvent) {
@@ -152,8 +152,8 @@ void q_sizegrip_on_show_event(void* self, void (*callback)(void*, void*)) {
     QSizeGrip_OnShowEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_show_event(void* self, void* showEvent) {
-    QSizeGrip_QBaseShowEvent((QSizeGrip*)self, (QShowEvent*)showEvent);
+void q_sizegrip_super_show_event(void* self, void* showEvent) {
+    QSizeGrip_SuperShowEvent((QSizeGrip*)self, (QShowEvent*)showEvent);
 }
 
 void q_sizegrip_hide_event(void* self, void* hideEvent) {
@@ -164,8 +164,8 @@ void q_sizegrip_on_hide_event(void* self, void (*callback)(void*, void*)) {
     QSizeGrip_OnHideEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-void q_sizegrip_qbase_hide_event(void* self, void* hideEvent) {
-    QSizeGrip_QBaseHideEvent((QSizeGrip*)self, (QHideEvent*)hideEvent);
+void q_sizegrip_super_hide_event(void* self, void* hideEvent) {
+    QSizeGrip_SuperHideEvent((QSizeGrip*)self, (QHideEvent*)hideEvent);
 }
 
 bool q_sizegrip_event_filter(void* self, void* param1, void* param2) {
@@ -176,8 +176,8 @@ void q_sizegrip_on_event_filter(void* self, bool (*callback)(void*, void*, void*
     QSizeGrip_OnEventFilter((QSizeGrip*)self, (intptr_t)callback);
 }
 
-bool q_sizegrip_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QSizeGrip_QBaseEventFilter((QSizeGrip*)self, (QObject*)param1, (QEvent*)param2);
+bool q_sizegrip_super_event_filter(void* self, void* param1, void* param2) {
+    return QSizeGrip_SuperEventFilter((QSizeGrip*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 bool q_sizegrip_event(void* self, void* param1) {
@@ -188,8 +188,8 @@ void q_sizegrip_on_event(void* self, bool (*callback)(void*, void*)) {
     QSizeGrip_OnEvent((QSizeGrip*)self, (intptr_t)callback);
 }
 
-bool q_sizegrip_qbase_event(void* self, void* param1) {
-    return QSizeGrip_QBaseEvent((QSizeGrip*)self, (QEvent*)param1);
+bool q_sizegrip_super_event(void* self, void* param1) {
+    return QSizeGrip_SuperEvent((QSizeGrip*)self, (QEvent*)param1);
 }
 
 const char* q_sizegrip_tr2(const char* s, const char* c) {
@@ -1591,8 +1591,8 @@ int32_t q_sizegrip_dev_type(void* self) {
     return QSizeGrip_DevType((QSizeGrip*)self);
 }
 
-int32_t q_sizegrip_qbase_dev_type(void* self) {
-    return QSizeGrip_QBaseDevType((QSizeGrip*)self);
+int32_t q_sizegrip_super_dev_type(void* self) {
+    return QSizeGrip_SuperDevType((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1603,8 +1603,8 @@ QSize* q_sizegrip_minimum_size_hint(void* self) {
     return QSizeGrip_MinimumSizeHint((QSizeGrip*)self);
 }
 
-QSize* q_sizegrip_qbase_minimum_size_hint(void* self) {
-    return QSizeGrip_QBaseMinimumSizeHint((QSizeGrip*)self);
+QSize* q_sizegrip_super_minimum_size_hint(void* self) {
+    return QSizeGrip_SuperMinimumSizeHint((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1615,8 +1615,8 @@ int32_t q_sizegrip_height_for_width(void* self, int param1) {
     return QSizeGrip_HeightForWidth((QSizeGrip*)self, param1);
 }
 
-int32_t q_sizegrip_qbase_height_for_width(void* self, int param1) {
-    return QSizeGrip_QBaseHeightForWidth((QSizeGrip*)self, param1);
+int32_t q_sizegrip_super_height_for_width(void* self, int param1) {
+    return QSizeGrip_SuperHeightForWidth((QSizeGrip*)self, param1);
 }
 
 void q_sizegrip_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1627,8 +1627,8 @@ bool q_sizegrip_has_height_for_width(void* self) {
     return QSizeGrip_HasHeightForWidth((QSizeGrip*)self);
 }
 
-bool q_sizegrip_qbase_has_height_for_width(void* self) {
-    return QSizeGrip_QBaseHasHeightForWidth((QSizeGrip*)self);
+bool q_sizegrip_super_has_height_for_width(void* self) {
+    return QSizeGrip_SuperHasHeightForWidth((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1639,8 +1639,8 @@ QPaintEngine* q_sizegrip_paint_engine(void* self) {
     return QSizeGrip_PaintEngine((QSizeGrip*)self);
 }
 
-QPaintEngine* q_sizegrip_qbase_paint_engine(void* self) {
-    return QSizeGrip_QBasePaintEngine((QSizeGrip*)self);
+QPaintEngine* q_sizegrip_super_paint_engine(void* self) {
+    return QSizeGrip_SuperPaintEngine((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1651,8 +1651,8 @@ void q_sizegrip_mouse_double_click_event(void* self, void* event) {
     QSizeGrip_MouseDoubleClickEvent((QSizeGrip*)self, (QMouseEvent*)event);
 }
 
-void q_sizegrip_qbase_mouse_double_click_event(void* self, void* event) {
-    QSizeGrip_QBaseMouseDoubleClickEvent((QSizeGrip*)self, (QMouseEvent*)event);
+void q_sizegrip_super_mouse_double_click_event(void* self, void* event) {
+    QSizeGrip_SuperMouseDoubleClickEvent((QSizeGrip*)self, (QMouseEvent*)event);
 }
 
 void q_sizegrip_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1663,8 +1663,8 @@ void q_sizegrip_wheel_event(void* self, void* event) {
     QSizeGrip_WheelEvent((QSizeGrip*)self, (QWheelEvent*)event);
 }
 
-void q_sizegrip_qbase_wheel_event(void* self, void* event) {
-    QSizeGrip_QBaseWheelEvent((QSizeGrip*)self, (QWheelEvent*)event);
+void q_sizegrip_super_wheel_event(void* self, void* event) {
+    QSizeGrip_SuperWheelEvent((QSizeGrip*)self, (QWheelEvent*)event);
 }
 
 void q_sizegrip_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1675,8 +1675,8 @@ void q_sizegrip_key_press_event(void* self, void* event) {
     QSizeGrip_KeyPressEvent((QSizeGrip*)self, (QKeyEvent*)event);
 }
 
-void q_sizegrip_qbase_key_press_event(void* self, void* event) {
-    QSizeGrip_QBaseKeyPressEvent((QSizeGrip*)self, (QKeyEvent*)event);
+void q_sizegrip_super_key_press_event(void* self, void* event) {
+    QSizeGrip_SuperKeyPressEvent((QSizeGrip*)self, (QKeyEvent*)event);
 }
 
 void q_sizegrip_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1687,8 +1687,8 @@ void q_sizegrip_key_release_event(void* self, void* event) {
     QSizeGrip_KeyReleaseEvent((QSizeGrip*)self, (QKeyEvent*)event);
 }
 
-void q_sizegrip_qbase_key_release_event(void* self, void* event) {
-    QSizeGrip_QBaseKeyReleaseEvent((QSizeGrip*)self, (QKeyEvent*)event);
+void q_sizegrip_super_key_release_event(void* self, void* event) {
+    QSizeGrip_SuperKeyReleaseEvent((QSizeGrip*)self, (QKeyEvent*)event);
 }
 
 void q_sizegrip_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1699,8 +1699,8 @@ void q_sizegrip_focus_in_event(void* self, void* event) {
     QSizeGrip_FocusInEvent((QSizeGrip*)self, (QFocusEvent*)event);
 }
 
-void q_sizegrip_qbase_focus_in_event(void* self, void* event) {
-    QSizeGrip_QBaseFocusInEvent((QSizeGrip*)self, (QFocusEvent*)event);
+void q_sizegrip_super_focus_in_event(void* self, void* event) {
+    QSizeGrip_SuperFocusInEvent((QSizeGrip*)self, (QFocusEvent*)event);
 }
 
 void q_sizegrip_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1711,8 +1711,8 @@ void q_sizegrip_focus_out_event(void* self, void* event) {
     QSizeGrip_FocusOutEvent((QSizeGrip*)self, (QFocusEvent*)event);
 }
 
-void q_sizegrip_qbase_focus_out_event(void* self, void* event) {
-    QSizeGrip_QBaseFocusOutEvent((QSizeGrip*)self, (QFocusEvent*)event);
+void q_sizegrip_super_focus_out_event(void* self, void* event) {
+    QSizeGrip_SuperFocusOutEvent((QSizeGrip*)self, (QFocusEvent*)event);
 }
 
 void q_sizegrip_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1723,8 +1723,8 @@ void q_sizegrip_enter_event(void* self, void* event) {
     QSizeGrip_EnterEvent((QSizeGrip*)self, (QEnterEvent*)event);
 }
 
-void q_sizegrip_qbase_enter_event(void* self, void* event) {
-    QSizeGrip_QBaseEnterEvent((QSizeGrip*)self, (QEnterEvent*)event);
+void q_sizegrip_super_enter_event(void* self, void* event) {
+    QSizeGrip_SuperEnterEvent((QSizeGrip*)self, (QEnterEvent*)event);
 }
 
 void q_sizegrip_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1735,8 +1735,8 @@ void q_sizegrip_leave_event(void* self, void* event) {
     QSizeGrip_LeaveEvent((QSizeGrip*)self, (QEvent*)event);
 }
 
-void q_sizegrip_qbase_leave_event(void* self, void* event) {
-    QSizeGrip_QBaseLeaveEvent((QSizeGrip*)self, (QEvent*)event);
+void q_sizegrip_super_leave_event(void* self, void* event) {
+    QSizeGrip_SuperLeaveEvent((QSizeGrip*)self, (QEvent*)event);
 }
 
 void q_sizegrip_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1747,8 +1747,8 @@ void q_sizegrip_resize_event(void* self, void* event) {
     QSizeGrip_ResizeEvent((QSizeGrip*)self, (QResizeEvent*)event);
 }
 
-void q_sizegrip_qbase_resize_event(void* self, void* event) {
-    QSizeGrip_QBaseResizeEvent((QSizeGrip*)self, (QResizeEvent*)event);
+void q_sizegrip_super_resize_event(void* self, void* event) {
+    QSizeGrip_SuperResizeEvent((QSizeGrip*)self, (QResizeEvent*)event);
 }
 
 void q_sizegrip_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1759,8 +1759,8 @@ void q_sizegrip_close_event(void* self, void* event) {
     QSizeGrip_CloseEvent((QSizeGrip*)self, (QCloseEvent*)event);
 }
 
-void q_sizegrip_qbase_close_event(void* self, void* event) {
-    QSizeGrip_QBaseCloseEvent((QSizeGrip*)self, (QCloseEvent*)event);
+void q_sizegrip_super_close_event(void* self, void* event) {
+    QSizeGrip_SuperCloseEvent((QSizeGrip*)self, (QCloseEvent*)event);
 }
 
 void q_sizegrip_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1771,8 +1771,8 @@ void q_sizegrip_context_menu_event(void* self, void* event) {
     QSizeGrip_ContextMenuEvent((QSizeGrip*)self, (QContextMenuEvent*)event);
 }
 
-void q_sizegrip_qbase_context_menu_event(void* self, void* event) {
-    QSizeGrip_QBaseContextMenuEvent((QSizeGrip*)self, (QContextMenuEvent*)event);
+void q_sizegrip_super_context_menu_event(void* self, void* event) {
+    QSizeGrip_SuperContextMenuEvent((QSizeGrip*)self, (QContextMenuEvent*)event);
 }
 
 void q_sizegrip_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1783,8 +1783,8 @@ void q_sizegrip_tablet_event(void* self, void* event) {
     QSizeGrip_TabletEvent((QSizeGrip*)self, (QTabletEvent*)event);
 }
 
-void q_sizegrip_qbase_tablet_event(void* self, void* event) {
-    QSizeGrip_QBaseTabletEvent((QSizeGrip*)self, (QTabletEvent*)event);
+void q_sizegrip_super_tablet_event(void* self, void* event) {
+    QSizeGrip_SuperTabletEvent((QSizeGrip*)self, (QTabletEvent*)event);
 }
 
 void q_sizegrip_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1795,8 +1795,8 @@ void q_sizegrip_action_event(void* self, void* event) {
     QSizeGrip_ActionEvent((QSizeGrip*)self, (QActionEvent*)event);
 }
 
-void q_sizegrip_qbase_action_event(void* self, void* event) {
-    QSizeGrip_QBaseActionEvent((QSizeGrip*)self, (QActionEvent*)event);
+void q_sizegrip_super_action_event(void* self, void* event) {
+    QSizeGrip_SuperActionEvent((QSizeGrip*)self, (QActionEvent*)event);
 }
 
 void q_sizegrip_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1807,8 +1807,8 @@ void q_sizegrip_drag_enter_event(void* self, void* event) {
     QSizeGrip_DragEnterEvent((QSizeGrip*)self, (QDragEnterEvent*)event);
 }
 
-void q_sizegrip_qbase_drag_enter_event(void* self, void* event) {
-    QSizeGrip_QBaseDragEnterEvent((QSizeGrip*)self, (QDragEnterEvent*)event);
+void q_sizegrip_super_drag_enter_event(void* self, void* event) {
+    QSizeGrip_SuperDragEnterEvent((QSizeGrip*)self, (QDragEnterEvent*)event);
 }
 
 void q_sizegrip_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1819,8 +1819,8 @@ void q_sizegrip_drag_move_event(void* self, void* event) {
     QSizeGrip_DragMoveEvent((QSizeGrip*)self, (QDragMoveEvent*)event);
 }
 
-void q_sizegrip_qbase_drag_move_event(void* self, void* event) {
-    QSizeGrip_QBaseDragMoveEvent((QSizeGrip*)self, (QDragMoveEvent*)event);
+void q_sizegrip_super_drag_move_event(void* self, void* event) {
+    QSizeGrip_SuperDragMoveEvent((QSizeGrip*)self, (QDragMoveEvent*)event);
 }
 
 void q_sizegrip_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ void q_sizegrip_drag_leave_event(void* self, void* event) {
     QSizeGrip_DragLeaveEvent((QSizeGrip*)self, (QDragLeaveEvent*)event);
 }
 
-void q_sizegrip_qbase_drag_leave_event(void* self, void* event) {
-    QSizeGrip_QBaseDragLeaveEvent((QSizeGrip*)self, (QDragLeaveEvent*)event);
+void q_sizegrip_super_drag_leave_event(void* self, void* event) {
+    QSizeGrip_SuperDragLeaveEvent((QSizeGrip*)self, (QDragLeaveEvent*)event);
 }
 
 void q_sizegrip_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1843,8 +1843,8 @@ void q_sizegrip_drop_event(void* self, void* event) {
     QSizeGrip_DropEvent((QSizeGrip*)self, (QDropEvent*)event);
 }
 
-void q_sizegrip_qbase_drop_event(void* self, void* event) {
-    QSizeGrip_QBaseDropEvent((QSizeGrip*)self, (QDropEvent*)event);
+void q_sizegrip_super_drop_event(void* self, void* event) {
+    QSizeGrip_SuperDropEvent((QSizeGrip*)self, (QDropEvent*)event);
 }
 
 void q_sizegrip_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ bool q_sizegrip_native_event(void* self, char* eventType, void* message, intptr_
     return QSizeGrip_NativeEvent((QSizeGrip*)self, qstring(eventType), message, result);
 }
 
-bool q_sizegrip_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QSizeGrip_QBaseNativeEvent((QSizeGrip*)self, qstring(eventType), message, result);
+bool q_sizegrip_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QSizeGrip_SuperNativeEvent((QSizeGrip*)self, qstring(eventType), message, result);
 }
 
 void q_sizegrip_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1867,8 +1867,8 @@ void q_sizegrip_change_event(void* self, void* param1) {
     QSizeGrip_ChangeEvent((QSizeGrip*)self, (QEvent*)param1);
 }
 
-void q_sizegrip_qbase_change_event(void* self, void* param1) {
-    QSizeGrip_QBaseChangeEvent((QSizeGrip*)self, (QEvent*)param1);
+void q_sizegrip_super_change_event(void* self, void* param1) {
+    QSizeGrip_SuperChangeEvent((QSizeGrip*)self, (QEvent*)param1);
 }
 
 void q_sizegrip_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ int32_t q_sizegrip_metric(void* self, int32_t param1) {
     return QSizeGrip_Metric((QSizeGrip*)self, param1);
 }
 
-int32_t q_sizegrip_qbase_metric(void* self, int32_t param1) {
-    return QSizeGrip_QBaseMetric((QSizeGrip*)self, param1);
+int32_t q_sizegrip_super_metric(void* self, int32_t param1) {
+    return QSizeGrip_SuperMetric((QSizeGrip*)self, param1);
 }
 
 void q_sizegrip_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1891,8 +1891,8 @@ void q_sizegrip_init_painter(void* self, void* painter) {
     QSizeGrip_InitPainter((QSizeGrip*)self, (QPainter*)painter);
 }
 
-void q_sizegrip_qbase_init_painter(void* self, void* painter) {
-    QSizeGrip_QBaseInitPainter((QSizeGrip*)self, (QPainter*)painter);
+void q_sizegrip_super_init_painter(void* self, void* painter) {
+    QSizeGrip_SuperInitPainter((QSizeGrip*)self, (QPainter*)painter);
 }
 
 void q_sizegrip_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ QPaintDevice* q_sizegrip_redirected(void* self, void* offset) {
     return QSizeGrip_Redirected((QSizeGrip*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_sizegrip_qbase_redirected(void* self, void* offset) {
-    return QSizeGrip_QBaseRedirected((QSizeGrip*)self, (QPoint*)offset);
+QPaintDevice* q_sizegrip_super_redirected(void* self, void* offset) {
+    return QSizeGrip_SuperRedirected((QSizeGrip*)self, (QPoint*)offset);
 }
 
 void q_sizegrip_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ QPainter* q_sizegrip_shared_painter(void* self) {
     return QSizeGrip_SharedPainter((QSizeGrip*)self);
 }
 
-QPainter* q_sizegrip_qbase_shared_painter(void* self) {
-    return QSizeGrip_QBaseSharedPainter((QSizeGrip*)self);
+QPainter* q_sizegrip_super_shared_painter(void* self) {
+    return QSizeGrip_SuperSharedPainter((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1927,8 +1927,8 @@ void q_sizegrip_input_method_event(void* self, void* param1) {
     QSizeGrip_InputMethodEvent((QSizeGrip*)self, (QInputMethodEvent*)param1);
 }
 
-void q_sizegrip_qbase_input_method_event(void* self, void* param1) {
-    QSizeGrip_QBaseInputMethodEvent((QSizeGrip*)self, (QInputMethodEvent*)param1);
+void q_sizegrip_super_input_method_event(void* self, void* param1) {
+    QSizeGrip_SuperInputMethodEvent((QSizeGrip*)self, (QInputMethodEvent*)param1);
 }
 
 void q_sizegrip_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ QVariant* q_sizegrip_input_method_query(void* self, int32_t param1) {
     return QSizeGrip_InputMethodQuery((QSizeGrip*)self, param1);
 }
 
-QVariant* q_sizegrip_qbase_input_method_query(void* self, int32_t param1) {
-    return QSizeGrip_QBaseInputMethodQuery((QSizeGrip*)self, param1);
+QVariant* q_sizegrip_super_input_method_query(void* self, int32_t param1) {
+    return QSizeGrip_SuperInputMethodQuery((QSizeGrip*)self, param1);
 }
 
 void q_sizegrip_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1951,8 +1951,8 @@ bool q_sizegrip_focus_next_prev_child(void* self, bool next) {
     return QSizeGrip_FocusNextPrevChild((QSizeGrip*)self, next);
 }
 
-bool q_sizegrip_qbase_focus_next_prev_child(void* self, bool next) {
-    return QSizeGrip_QBaseFocusNextPrevChild((QSizeGrip*)self, next);
+bool q_sizegrip_super_focus_next_prev_child(void* self, bool next) {
+    return QSizeGrip_SuperFocusNextPrevChild((QSizeGrip*)self, next);
 }
 
 void q_sizegrip_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1963,8 +1963,8 @@ void q_sizegrip_timer_event(void* self, void* event) {
     QSizeGrip_TimerEvent((QSizeGrip*)self, (QTimerEvent*)event);
 }
 
-void q_sizegrip_qbase_timer_event(void* self, void* event) {
-    QSizeGrip_QBaseTimerEvent((QSizeGrip*)self, (QTimerEvent*)event);
+void q_sizegrip_super_timer_event(void* self, void* event) {
+    QSizeGrip_SuperTimerEvent((QSizeGrip*)self, (QTimerEvent*)event);
 }
 
 void q_sizegrip_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1975,8 +1975,8 @@ void q_sizegrip_child_event(void* self, void* event) {
     QSizeGrip_ChildEvent((QSizeGrip*)self, (QChildEvent*)event);
 }
 
-void q_sizegrip_qbase_child_event(void* self, void* event) {
-    QSizeGrip_QBaseChildEvent((QSizeGrip*)self, (QChildEvent*)event);
+void q_sizegrip_super_child_event(void* self, void* event) {
+    QSizeGrip_SuperChildEvent((QSizeGrip*)self, (QChildEvent*)event);
 }
 
 void q_sizegrip_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ void q_sizegrip_custom_event(void* self, void* event) {
     QSizeGrip_CustomEvent((QSizeGrip*)self, (QEvent*)event);
 }
 
-void q_sizegrip_qbase_custom_event(void* self, void* event) {
-    QSizeGrip_QBaseCustomEvent((QSizeGrip*)self, (QEvent*)event);
+void q_sizegrip_super_custom_event(void* self, void* event) {
+    QSizeGrip_SuperCustomEvent((QSizeGrip*)self, (QEvent*)event);
 }
 
 void q_sizegrip_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ void q_sizegrip_connect_notify(void* self, void* signal) {
     QSizeGrip_ConnectNotify((QSizeGrip*)self, (QMetaMethod*)signal);
 }
 
-void q_sizegrip_qbase_connect_notify(void* self, void* signal) {
-    QSizeGrip_QBaseConnectNotify((QSizeGrip*)self, (QMetaMethod*)signal);
+void q_sizegrip_super_connect_notify(void* self, void* signal) {
+    QSizeGrip_SuperConnectNotify((QSizeGrip*)self, (QMetaMethod*)signal);
 }
 
 void q_sizegrip_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2011,8 +2011,8 @@ void q_sizegrip_disconnect_notify(void* self, void* signal) {
     QSizeGrip_DisconnectNotify((QSizeGrip*)self, (QMetaMethod*)signal);
 }
 
-void q_sizegrip_qbase_disconnect_notify(void* self, void* signal) {
-    QSizeGrip_QBaseDisconnectNotify((QSizeGrip*)self, (QMetaMethod*)signal);
+void q_sizegrip_super_disconnect_notify(void* self, void* signal) {
+    QSizeGrip_SuperDisconnectNotify((QSizeGrip*)self, (QMetaMethod*)signal);
 }
 
 void q_sizegrip_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ void q_sizegrip_update_micro_focus(void* self) {
     QSizeGrip_UpdateMicroFocus((QSizeGrip*)self);
 }
 
-void q_sizegrip_qbase_update_micro_focus(void* self) {
-    QSizeGrip_QBaseUpdateMicroFocus((QSizeGrip*)self);
+void q_sizegrip_super_update_micro_focus(void* self) {
+    QSizeGrip_SuperUpdateMicroFocus((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2035,8 +2035,8 @@ void q_sizegrip_create(void* self) {
     QSizeGrip_Create((QSizeGrip*)self);
 }
 
-void q_sizegrip_qbase_create(void* self) {
-    QSizeGrip_QBaseCreate((QSizeGrip*)self);
+void q_sizegrip_super_create(void* self) {
+    QSizeGrip_SuperCreate((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_create(void* self, void (*callback)()) {
@@ -2047,8 +2047,8 @@ void q_sizegrip_destroy(void* self) {
     QSizeGrip_Destroy((QSizeGrip*)self);
 }
 
-void q_sizegrip_qbase_destroy(void* self) {
-    QSizeGrip_QBaseDestroy((QSizeGrip*)self);
+void q_sizegrip_super_destroy(void* self) {
+    QSizeGrip_SuperDestroy((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_destroy(void* self, void (*callback)()) {
@@ -2059,8 +2059,8 @@ bool q_sizegrip_focus_next_child(void* self) {
     return QSizeGrip_FocusNextChild((QSizeGrip*)self);
 }
 
-bool q_sizegrip_qbase_focus_next_child(void* self) {
-    return QSizeGrip_QBaseFocusNextChild((QSizeGrip*)self);
+bool q_sizegrip_super_focus_next_child(void* self) {
+    return QSizeGrip_SuperFocusNextChild((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2071,8 +2071,8 @@ bool q_sizegrip_focus_previous_child(void* self) {
     return QSizeGrip_FocusPreviousChild((QSizeGrip*)self);
 }
 
-bool q_sizegrip_qbase_focus_previous_child(void* self) {
-    return QSizeGrip_QBaseFocusPreviousChild((QSizeGrip*)self);
+bool q_sizegrip_super_focus_previous_child(void* self) {
+    return QSizeGrip_SuperFocusPreviousChild((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2083,8 +2083,8 @@ QObject* q_sizegrip_sender(void* self) {
     return QSizeGrip_Sender((QSizeGrip*)self);
 }
 
-QObject* q_sizegrip_qbase_sender(void* self) {
-    return QSizeGrip_QBaseSender((QSizeGrip*)self);
+QObject* q_sizegrip_super_sender(void* self) {
+    return QSizeGrip_SuperSender((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_sender(void* self, QObject* (*callback)()) {
@@ -2095,8 +2095,8 @@ int32_t q_sizegrip_sender_signal_index(void* self) {
     return QSizeGrip_SenderSignalIndex((QSizeGrip*)self);
 }
 
-int32_t q_sizegrip_qbase_sender_signal_index(void* self) {
-    return QSizeGrip_QBaseSenderSignalIndex((QSizeGrip*)self);
+int32_t q_sizegrip_super_sender_signal_index(void* self) {
+    return QSizeGrip_SuperSenderSignalIndex((QSizeGrip*)self);
 }
 
 void q_sizegrip_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2107,8 +2107,8 @@ int32_t q_sizegrip_receivers(void* self, const char* signal) {
     return QSizeGrip_Receivers((QSizeGrip*)self, signal);
 }
 
-int32_t q_sizegrip_qbase_receivers(void* self, const char* signal) {
-    return QSizeGrip_QBaseReceivers((QSizeGrip*)self, signal);
+int32_t q_sizegrip_super_receivers(void* self, const char* signal) {
+    return QSizeGrip_SuperReceivers((QSizeGrip*)self, signal);
 }
 
 void q_sizegrip_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2119,8 +2119,8 @@ bool q_sizegrip_is_signal_connected(void* self, void* signal) {
     return QSizeGrip_IsSignalConnected((QSizeGrip*)self, (QMetaMethod*)signal);
 }
 
-bool q_sizegrip_qbase_is_signal_connected(void* self, void* signal) {
-    return QSizeGrip_QBaseIsSignalConnected((QSizeGrip*)self, (QMetaMethod*)signal);
+bool q_sizegrip_super_is_signal_connected(void* self, void* signal) {
+    return QSizeGrip_SuperIsSignalConnected((QSizeGrip*)self, (QMetaMethod*)signal);
 }
 
 void q_sizegrip_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2131,8 +2131,8 @@ double q_sizegrip_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return QSizeGrip_GetDecodedMetricF((QSizeGrip*)self, metricA, metricB);
 }
 
-double q_sizegrip_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QSizeGrip_QBaseGetDecodedMetricF((QSizeGrip*)self, metricA, metricB);
+double q_sizegrip_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QSizeGrip_SuperGetDecodedMetricF((QSizeGrip*)self, metricA, metricB);
 }
 
 void q_sizegrip_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

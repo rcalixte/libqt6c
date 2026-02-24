@@ -32,8 +32,8 @@ void k_nswidgets__dialog_on_meta_object(void* self, const QMetaObject* (*callbac
     KNSWidgets__Dialog_OnMetaObject((KNSWidgets__Dialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nswidgets__dialog_qbase_meta_object(void* self) {
-    return KNSWidgets__Dialog_QBaseMetaObject((KNSWidgets__Dialog*)self);
+const QMetaObject* k_nswidgets__dialog_super_meta_object(void* self) {
+    return KNSWidgets__Dialog_SuperMetaObject((KNSWidgets__Dialog*)self);
 }
 
 void* k_nswidgets__dialog_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void k_nswidgets__dialog_on_metacast(void* self, void* (*callback)(void*, const 
     KNSWidgets__Dialog_OnMetacast((KNSWidgets__Dialog*)self, (intptr_t)callback);
 }
 
-void* k_nswidgets__dialog_qbase_metacast(void* self, const char* param1) {
-    return KNSWidgets__Dialog_QBaseMetacast((KNSWidgets__Dialog*)self, param1);
+void* k_nswidgets__dialog_super_metacast(void* self, const char* param1) {
+    return KNSWidgets__Dialog_SuperMetacast((KNSWidgets__Dialog*)self, param1);
 }
 
 int32_t k_nswidgets__dialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void k_nswidgets__dialog_on_metacall(void* self, int32_t (*callback)(void*, int3
     KNSWidgets__Dialog_OnMetacall((KNSWidgets__Dialog*)self, (intptr_t)callback);
 }
 
-int32_t k_nswidgets__dialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSWidgets__Dialog_QBaseMetacall((KNSWidgets__Dialog*)self, param1, param2, param3);
+int32_t k_nswidgets__dialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSWidgets__Dialog_SuperMetacall((KNSWidgets__Dialog*)self, param1, param2, param3);
 }
 
 const char* k_nswidgets__dialog_tr(const char* s) {
@@ -84,8 +84,8 @@ void k_nswidgets__dialog_on_open(void* self, void (*callback)()) {
     KNSWidgets__Dialog_OnOpen((KNSWidgets__Dialog*)self, (intptr_t)callback);
 }
 
-void k_nswidgets__dialog_qbase_open(void* self) {
-    KNSWidgets__Dialog_QBaseOpen((KNSWidgets__Dialog*)self);
+void k_nswidgets__dialog_super_open(void* self) {
+    KNSWidgets__Dialog_SuperOpen((KNSWidgets__Dialog*)self);
 }
 
 const char* k_nswidgets__dialog_tr2(const char* s, const char* c) {
@@ -1531,8 +1531,8 @@ void k_nswidgets__dialog_set_visible(void* self, bool visible) {
     KNSWidgets__Dialog_SetVisible((KNSWidgets__Dialog*)self, visible);
 }
 
-void k_nswidgets__dialog_qbase_set_visible(void* self, bool visible) {
-    KNSWidgets__Dialog_QBaseSetVisible((KNSWidgets__Dialog*)self, visible);
+void k_nswidgets__dialog_super_set_visible(void* self, bool visible) {
+    KNSWidgets__Dialog_SuperSetVisible((KNSWidgets__Dialog*)self, visible);
 }
 
 void k_nswidgets__dialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1543,8 +1543,8 @@ QSize* k_nswidgets__dialog_size_hint(void* self) {
     return KNSWidgets__Dialog_SizeHint((KNSWidgets__Dialog*)self);
 }
 
-QSize* k_nswidgets__dialog_qbase_size_hint(void* self) {
-    return KNSWidgets__Dialog_QBaseSizeHint((KNSWidgets__Dialog*)self);
+QSize* k_nswidgets__dialog_super_size_hint(void* self) {
+    return KNSWidgets__Dialog_SuperSizeHint((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1555,8 +1555,8 @@ QSize* k_nswidgets__dialog_minimum_size_hint(void* self) {
     return KNSWidgets__Dialog_MinimumSizeHint((KNSWidgets__Dialog*)self);
 }
 
-QSize* k_nswidgets__dialog_qbase_minimum_size_hint(void* self) {
-    return KNSWidgets__Dialog_QBaseMinimumSizeHint((KNSWidgets__Dialog*)self);
+QSize* k_nswidgets__dialog_super_minimum_size_hint(void* self) {
+    return KNSWidgets__Dialog_SuperMinimumSizeHint((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1567,8 +1567,8 @@ int32_t k_nswidgets__dialog_exec(void* self) {
     return KNSWidgets__Dialog_Exec((KNSWidgets__Dialog*)self);
 }
 
-int32_t k_nswidgets__dialog_qbase_exec(void* self) {
-    return KNSWidgets__Dialog_QBaseExec((KNSWidgets__Dialog*)self);
+int32_t k_nswidgets__dialog_super_exec(void* self) {
+    return KNSWidgets__Dialog_SuperExec((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1579,8 +1579,8 @@ void k_nswidgets__dialog_done(void* self, int param1) {
     KNSWidgets__Dialog_Done((KNSWidgets__Dialog*)self, param1);
 }
 
-void k_nswidgets__dialog_qbase_done(void* self, int param1) {
-    KNSWidgets__Dialog_QBaseDone((KNSWidgets__Dialog*)self, param1);
+void k_nswidgets__dialog_super_done(void* self, int param1) {
+    KNSWidgets__Dialog_SuperDone((KNSWidgets__Dialog*)self, param1);
 }
 
 void k_nswidgets__dialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1591,8 +1591,8 @@ void k_nswidgets__dialog_accept(void* self) {
     KNSWidgets__Dialog_Accept((KNSWidgets__Dialog*)self);
 }
 
-void k_nswidgets__dialog_qbase_accept(void* self) {
-    KNSWidgets__Dialog_QBaseAccept((KNSWidgets__Dialog*)self);
+void k_nswidgets__dialog_super_accept(void* self) {
+    KNSWidgets__Dialog_SuperAccept((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_accept(void* self, void (*callback)()) {
@@ -1603,8 +1603,8 @@ void k_nswidgets__dialog_reject(void* self) {
     KNSWidgets__Dialog_Reject((KNSWidgets__Dialog*)self);
 }
 
-void k_nswidgets__dialog_qbase_reject(void* self) {
-    KNSWidgets__Dialog_QBaseReject((KNSWidgets__Dialog*)self);
+void k_nswidgets__dialog_super_reject(void* self) {
+    KNSWidgets__Dialog_SuperReject((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_reject(void* self, void (*callback)()) {
@@ -1615,8 +1615,8 @@ void k_nswidgets__dialog_key_press_event(void* self, void* param1) {
     KNSWidgets__Dialog_KeyPressEvent((KNSWidgets__Dialog*)self, (QKeyEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_key_press_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseKeyPressEvent((KNSWidgets__Dialog*)self, (QKeyEvent*)param1);
+void k_nswidgets__dialog_super_key_press_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperKeyPressEvent((KNSWidgets__Dialog*)self, (QKeyEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1627,8 +1627,8 @@ void k_nswidgets__dialog_close_event(void* self, void* param1) {
     KNSWidgets__Dialog_CloseEvent((KNSWidgets__Dialog*)self, (QCloseEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_close_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseCloseEvent((KNSWidgets__Dialog*)self, (QCloseEvent*)param1);
+void k_nswidgets__dialog_super_close_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperCloseEvent((KNSWidgets__Dialog*)self, (QCloseEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1639,8 +1639,8 @@ void k_nswidgets__dialog_show_event(void* self, void* param1) {
     KNSWidgets__Dialog_ShowEvent((KNSWidgets__Dialog*)self, (QShowEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_show_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseShowEvent((KNSWidgets__Dialog*)self, (QShowEvent*)param1);
+void k_nswidgets__dialog_super_show_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperShowEvent((KNSWidgets__Dialog*)self, (QShowEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1651,8 +1651,8 @@ void k_nswidgets__dialog_resize_event(void* self, void* param1) {
     KNSWidgets__Dialog_ResizeEvent((KNSWidgets__Dialog*)self, (QResizeEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_resize_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseResizeEvent((KNSWidgets__Dialog*)self, (QResizeEvent*)param1);
+void k_nswidgets__dialog_super_resize_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperResizeEvent((KNSWidgets__Dialog*)self, (QResizeEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1663,8 +1663,8 @@ void k_nswidgets__dialog_context_menu_event(void* self, void* param1) {
     KNSWidgets__Dialog_ContextMenuEvent((KNSWidgets__Dialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_context_menu_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseContextMenuEvent((KNSWidgets__Dialog*)self, (QContextMenuEvent*)param1);
+void k_nswidgets__dialog_super_context_menu_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperContextMenuEvent((KNSWidgets__Dialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1675,8 +1675,8 @@ bool k_nswidgets__dialog_event_filter(void* self, void* param1, void* param2) {
     return KNSWidgets__Dialog_EventFilter((KNSWidgets__Dialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_nswidgets__dialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KNSWidgets__Dialog_QBaseEventFilter((KNSWidgets__Dialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_nswidgets__dialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KNSWidgets__Dialog_SuperEventFilter((KNSWidgets__Dialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_nswidgets__dialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1687,8 +1687,8 @@ int32_t k_nswidgets__dialog_dev_type(void* self) {
     return KNSWidgets__Dialog_DevType((KNSWidgets__Dialog*)self);
 }
 
-int32_t k_nswidgets__dialog_qbase_dev_type(void* self) {
-    return KNSWidgets__Dialog_QBaseDevType((KNSWidgets__Dialog*)self);
+int32_t k_nswidgets__dialog_super_dev_type(void* self) {
+    return KNSWidgets__Dialog_SuperDevType((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1699,8 +1699,8 @@ int32_t k_nswidgets__dialog_height_for_width(void* self, int param1) {
     return KNSWidgets__Dialog_HeightForWidth((KNSWidgets__Dialog*)self, param1);
 }
 
-int32_t k_nswidgets__dialog_qbase_height_for_width(void* self, int param1) {
-    return KNSWidgets__Dialog_QBaseHeightForWidth((KNSWidgets__Dialog*)self, param1);
+int32_t k_nswidgets__dialog_super_height_for_width(void* self, int param1) {
+    return KNSWidgets__Dialog_SuperHeightForWidth((KNSWidgets__Dialog*)self, param1);
 }
 
 void k_nswidgets__dialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1711,8 +1711,8 @@ bool k_nswidgets__dialog_has_height_for_width(void* self) {
     return KNSWidgets__Dialog_HasHeightForWidth((KNSWidgets__Dialog*)self);
 }
 
-bool k_nswidgets__dialog_qbase_has_height_for_width(void* self) {
-    return KNSWidgets__Dialog_QBaseHasHeightForWidth((KNSWidgets__Dialog*)self);
+bool k_nswidgets__dialog_super_has_height_for_width(void* self) {
+    return KNSWidgets__Dialog_SuperHasHeightForWidth((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1723,8 +1723,8 @@ QPaintEngine* k_nswidgets__dialog_paint_engine(void* self) {
     return KNSWidgets__Dialog_PaintEngine((KNSWidgets__Dialog*)self);
 }
 
-QPaintEngine* k_nswidgets__dialog_qbase_paint_engine(void* self) {
-    return KNSWidgets__Dialog_QBasePaintEngine((KNSWidgets__Dialog*)self);
+QPaintEngine* k_nswidgets__dialog_super_paint_engine(void* self) {
+    return KNSWidgets__Dialog_SuperPaintEngine((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1735,8 +1735,8 @@ bool k_nswidgets__dialog_event(void* self, void* event) {
     return KNSWidgets__Dialog_Event((KNSWidgets__Dialog*)self, (QEvent*)event);
 }
 
-bool k_nswidgets__dialog_qbase_event(void* self, void* event) {
-    return KNSWidgets__Dialog_QBaseEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
+bool k_nswidgets__dialog_super_event(void* self, void* event) {
+    return KNSWidgets__Dialog_SuperEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
 }
 
 void k_nswidgets__dialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1747,8 +1747,8 @@ void k_nswidgets__dialog_mouse_press_event(void* self, void* event) {
     KNSWidgets__Dialog_MousePressEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_mouse_press_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseMousePressEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
+void k_nswidgets__dialog_super_mouse_press_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperMousePressEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
 void k_nswidgets__dialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1759,8 +1759,8 @@ void k_nswidgets__dialog_mouse_release_event(void* self, void* event) {
     KNSWidgets__Dialog_MouseReleaseEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_mouse_release_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseMouseReleaseEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
+void k_nswidgets__dialog_super_mouse_release_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperMouseReleaseEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
 void k_nswidgets__dialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1771,8 +1771,8 @@ void k_nswidgets__dialog_mouse_double_click_event(void* self, void* event) {
     KNSWidgets__Dialog_MouseDoubleClickEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseMouseDoubleClickEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
+void k_nswidgets__dialog_super_mouse_double_click_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperMouseDoubleClickEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
 void k_nswidgets__dialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1783,8 +1783,8 @@ void k_nswidgets__dialog_mouse_move_event(void* self, void* event) {
     KNSWidgets__Dialog_MouseMoveEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_mouse_move_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseMouseMoveEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
+void k_nswidgets__dialog_super_mouse_move_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperMouseMoveEvent((KNSWidgets__Dialog*)self, (QMouseEvent*)event);
 }
 
 void k_nswidgets__dialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1795,8 +1795,8 @@ void k_nswidgets__dialog_wheel_event(void* self, void* event) {
     KNSWidgets__Dialog_WheelEvent((KNSWidgets__Dialog*)self, (QWheelEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_wheel_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseWheelEvent((KNSWidgets__Dialog*)self, (QWheelEvent*)event);
+void k_nswidgets__dialog_super_wheel_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperWheelEvent((KNSWidgets__Dialog*)self, (QWheelEvent*)event);
 }
 
 void k_nswidgets__dialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1807,8 +1807,8 @@ void k_nswidgets__dialog_key_release_event(void* self, void* event) {
     KNSWidgets__Dialog_KeyReleaseEvent((KNSWidgets__Dialog*)self, (QKeyEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_key_release_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseKeyReleaseEvent((KNSWidgets__Dialog*)self, (QKeyEvent*)event);
+void k_nswidgets__dialog_super_key_release_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperKeyReleaseEvent((KNSWidgets__Dialog*)self, (QKeyEvent*)event);
 }
 
 void k_nswidgets__dialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1819,8 +1819,8 @@ void k_nswidgets__dialog_focus_in_event(void* self, void* event) {
     KNSWidgets__Dialog_FocusInEvent((KNSWidgets__Dialog*)self, (QFocusEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_focus_in_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseFocusInEvent((KNSWidgets__Dialog*)self, (QFocusEvent*)event);
+void k_nswidgets__dialog_super_focus_in_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperFocusInEvent((KNSWidgets__Dialog*)self, (QFocusEvent*)event);
 }
 
 void k_nswidgets__dialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ void k_nswidgets__dialog_focus_out_event(void* self, void* event) {
     KNSWidgets__Dialog_FocusOutEvent((KNSWidgets__Dialog*)self, (QFocusEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_focus_out_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseFocusOutEvent((KNSWidgets__Dialog*)self, (QFocusEvent*)event);
+void k_nswidgets__dialog_super_focus_out_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperFocusOutEvent((KNSWidgets__Dialog*)self, (QFocusEvent*)event);
 }
 
 void k_nswidgets__dialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1843,8 +1843,8 @@ void k_nswidgets__dialog_enter_event(void* self, void* event) {
     KNSWidgets__Dialog_EnterEvent((KNSWidgets__Dialog*)self, (QEnterEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_enter_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseEnterEvent((KNSWidgets__Dialog*)self, (QEnterEvent*)event);
+void k_nswidgets__dialog_super_enter_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperEnterEvent((KNSWidgets__Dialog*)self, (QEnterEvent*)event);
 }
 
 void k_nswidgets__dialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ void k_nswidgets__dialog_leave_event(void* self, void* event) {
     KNSWidgets__Dialog_LeaveEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_leave_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseLeaveEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
+void k_nswidgets__dialog_super_leave_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperLeaveEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
 }
 
 void k_nswidgets__dialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1867,8 +1867,8 @@ void k_nswidgets__dialog_paint_event(void* self, void* event) {
     KNSWidgets__Dialog_PaintEvent((KNSWidgets__Dialog*)self, (QPaintEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_paint_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBasePaintEvent((KNSWidgets__Dialog*)self, (QPaintEvent*)event);
+void k_nswidgets__dialog_super_paint_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperPaintEvent((KNSWidgets__Dialog*)self, (QPaintEvent*)event);
 }
 
 void k_nswidgets__dialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ void k_nswidgets__dialog_move_event(void* self, void* event) {
     KNSWidgets__Dialog_MoveEvent((KNSWidgets__Dialog*)self, (QMoveEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_move_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseMoveEvent((KNSWidgets__Dialog*)self, (QMoveEvent*)event);
+void k_nswidgets__dialog_super_move_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperMoveEvent((KNSWidgets__Dialog*)self, (QMoveEvent*)event);
 }
 
 void k_nswidgets__dialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ void k_nswidgets__dialog_tablet_event(void* self, void* event) {
     KNSWidgets__Dialog_TabletEvent((KNSWidgets__Dialog*)self, (QTabletEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_tablet_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseTabletEvent((KNSWidgets__Dialog*)self, (QTabletEvent*)event);
+void k_nswidgets__dialog_super_tablet_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperTabletEvent((KNSWidgets__Dialog*)self, (QTabletEvent*)event);
 }
 
 void k_nswidgets__dialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ void k_nswidgets__dialog_action_event(void* self, void* event) {
     KNSWidgets__Dialog_ActionEvent((KNSWidgets__Dialog*)self, (QActionEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_action_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseActionEvent((KNSWidgets__Dialog*)self, (QActionEvent*)event);
+void k_nswidgets__dialog_super_action_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperActionEvent((KNSWidgets__Dialog*)self, (QActionEvent*)event);
 }
 
 void k_nswidgets__dialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void k_nswidgets__dialog_drag_enter_event(void* self, void* event) {
     KNSWidgets__Dialog_DragEnterEvent((KNSWidgets__Dialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_drag_enter_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseDragEnterEvent((KNSWidgets__Dialog*)self, (QDragEnterEvent*)event);
+void k_nswidgets__dialog_super_drag_enter_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperDragEnterEvent((KNSWidgets__Dialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_nswidgets__dialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ void k_nswidgets__dialog_drag_move_event(void* self, void* event) {
     KNSWidgets__Dialog_DragMoveEvent((KNSWidgets__Dialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_drag_move_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseDragMoveEvent((KNSWidgets__Dialog*)self, (QDragMoveEvent*)event);
+void k_nswidgets__dialog_super_drag_move_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperDragMoveEvent((KNSWidgets__Dialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_nswidgets__dialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ void k_nswidgets__dialog_drag_leave_event(void* self, void* event) {
     KNSWidgets__Dialog_DragLeaveEvent((KNSWidgets__Dialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_drag_leave_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseDragLeaveEvent((KNSWidgets__Dialog*)self, (QDragLeaveEvent*)event);
+void k_nswidgets__dialog_super_drag_leave_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperDragLeaveEvent((KNSWidgets__Dialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_nswidgets__dialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ void k_nswidgets__dialog_drop_event(void* self, void* event) {
     KNSWidgets__Dialog_DropEvent((KNSWidgets__Dialog*)self, (QDropEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_drop_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseDropEvent((KNSWidgets__Dialog*)self, (QDropEvent*)event);
+void k_nswidgets__dialog_super_drop_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperDropEvent((KNSWidgets__Dialog*)self, (QDropEvent*)event);
 }
 
 void k_nswidgets__dialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ void k_nswidgets__dialog_hide_event(void* self, void* event) {
     KNSWidgets__Dialog_HideEvent((KNSWidgets__Dialog*)self, (QHideEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_hide_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseHideEvent((KNSWidgets__Dialog*)self, (QHideEvent*)event);
+void k_nswidgets__dialog_super_hide_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperHideEvent((KNSWidgets__Dialog*)self, (QHideEvent*)event);
 }
 
 void k_nswidgets__dialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1975,8 +1975,8 @@ bool k_nswidgets__dialog_native_event(void* self, char* eventType, void* message
     return KNSWidgets__Dialog_NativeEvent((KNSWidgets__Dialog*)self, qstring(eventType), message, result);
 }
 
-bool k_nswidgets__dialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KNSWidgets__Dialog_QBaseNativeEvent((KNSWidgets__Dialog*)self, qstring(eventType), message, result);
+bool k_nswidgets__dialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KNSWidgets__Dialog_SuperNativeEvent((KNSWidgets__Dialog*)self, qstring(eventType), message, result);
 }
 
 void k_nswidgets__dialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1987,8 +1987,8 @@ void k_nswidgets__dialog_change_event(void* self, void* param1) {
     KNSWidgets__Dialog_ChangeEvent((KNSWidgets__Dialog*)self, (QEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_change_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseChangeEvent((KNSWidgets__Dialog*)self, (QEvent*)param1);
+void k_nswidgets__dialog_super_change_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperChangeEvent((KNSWidgets__Dialog*)self, (QEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ int32_t k_nswidgets__dialog_metric(void* self, int32_t param1) {
     return KNSWidgets__Dialog_Metric((KNSWidgets__Dialog*)self, param1);
 }
 
-int32_t k_nswidgets__dialog_qbase_metric(void* self, int32_t param1) {
-    return KNSWidgets__Dialog_QBaseMetric((KNSWidgets__Dialog*)self, param1);
+int32_t k_nswidgets__dialog_super_metric(void* self, int32_t param1) {
+    return KNSWidgets__Dialog_SuperMetric((KNSWidgets__Dialog*)self, param1);
 }
 
 void k_nswidgets__dialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2011,8 +2011,8 @@ void k_nswidgets__dialog_init_painter(void* self, void* painter) {
     KNSWidgets__Dialog_InitPainter((KNSWidgets__Dialog*)self, (QPainter*)painter);
 }
 
-void k_nswidgets__dialog_qbase_init_painter(void* self, void* painter) {
-    KNSWidgets__Dialog_QBaseInitPainter((KNSWidgets__Dialog*)self, (QPainter*)painter);
+void k_nswidgets__dialog_super_init_painter(void* self, void* painter) {
+    KNSWidgets__Dialog_SuperInitPainter((KNSWidgets__Dialog*)self, (QPainter*)painter);
 }
 
 void k_nswidgets__dialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2023,8 +2023,8 @@ QPaintDevice* k_nswidgets__dialog_redirected(void* self, void* offset) {
     return KNSWidgets__Dialog_Redirected((KNSWidgets__Dialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_nswidgets__dialog_qbase_redirected(void* self, void* offset) {
-    return KNSWidgets__Dialog_QBaseRedirected((KNSWidgets__Dialog*)self, (QPoint*)offset);
+QPaintDevice* k_nswidgets__dialog_super_redirected(void* self, void* offset) {
+    return KNSWidgets__Dialog_SuperRedirected((KNSWidgets__Dialog*)self, (QPoint*)offset);
 }
 
 void k_nswidgets__dialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2035,8 +2035,8 @@ QPainter* k_nswidgets__dialog_shared_painter(void* self) {
     return KNSWidgets__Dialog_SharedPainter((KNSWidgets__Dialog*)self);
 }
 
-QPainter* k_nswidgets__dialog_qbase_shared_painter(void* self) {
-    return KNSWidgets__Dialog_QBaseSharedPainter((KNSWidgets__Dialog*)self);
+QPainter* k_nswidgets__dialog_super_shared_painter(void* self) {
+    return KNSWidgets__Dialog_SuperSharedPainter((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2047,8 +2047,8 @@ void k_nswidgets__dialog_input_method_event(void* self, void* param1) {
     KNSWidgets__Dialog_InputMethodEvent((KNSWidgets__Dialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_nswidgets__dialog_qbase_input_method_event(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseInputMethodEvent((KNSWidgets__Dialog*)self, (QInputMethodEvent*)param1);
+void k_nswidgets__dialog_super_input_method_event(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperInputMethodEvent((KNSWidgets__Dialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_nswidgets__dialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2059,8 +2059,8 @@ QVariant* k_nswidgets__dialog_input_method_query(void* self, int32_t param1) {
     return KNSWidgets__Dialog_InputMethodQuery((KNSWidgets__Dialog*)self, param1);
 }
 
-QVariant* k_nswidgets__dialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KNSWidgets__Dialog_QBaseInputMethodQuery((KNSWidgets__Dialog*)self, param1);
+QVariant* k_nswidgets__dialog_super_input_method_query(void* self, int32_t param1) {
+    return KNSWidgets__Dialog_SuperInputMethodQuery((KNSWidgets__Dialog*)self, param1);
 }
 
 void k_nswidgets__dialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2071,8 +2071,8 @@ bool k_nswidgets__dialog_focus_next_prev_child(void* self, bool next) {
     return KNSWidgets__Dialog_FocusNextPrevChild((KNSWidgets__Dialog*)self, next);
 }
 
-bool k_nswidgets__dialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KNSWidgets__Dialog_QBaseFocusNextPrevChild((KNSWidgets__Dialog*)self, next);
+bool k_nswidgets__dialog_super_focus_next_prev_child(void* self, bool next) {
+    return KNSWidgets__Dialog_SuperFocusNextPrevChild((KNSWidgets__Dialog*)self, next);
 }
 
 void k_nswidgets__dialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2083,8 +2083,8 @@ void k_nswidgets__dialog_timer_event(void* self, void* event) {
     KNSWidgets__Dialog_TimerEvent((KNSWidgets__Dialog*)self, (QTimerEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_timer_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseTimerEvent((KNSWidgets__Dialog*)self, (QTimerEvent*)event);
+void k_nswidgets__dialog_super_timer_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperTimerEvent((KNSWidgets__Dialog*)self, (QTimerEvent*)event);
 }
 
 void k_nswidgets__dialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2095,8 +2095,8 @@ void k_nswidgets__dialog_child_event(void* self, void* event) {
     KNSWidgets__Dialog_ChildEvent((KNSWidgets__Dialog*)self, (QChildEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_child_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseChildEvent((KNSWidgets__Dialog*)self, (QChildEvent*)event);
+void k_nswidgets__dialog_super_child_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperChildEvent((KNSWidgets__Dialog*)self, (QChildEvent*)event);
 }
 
 void k_nswidgets__dialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2107,8 +2107,8 @@ void k_nswidgets__dialog_custom_event(void* self, void* event) {
     KNSWidgets__Dialog_CustomEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
 }
 
-void k_nswidgets__dialog_qbase_custom_event(void* self, void* event) {
-    KNSWidgets__Dialog_QBaseCustomEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
+void k_nswidgets__dialog_super_custom_event(void* self, void* event) {
+    KNSWidgets__Dialog_SuperCustomEvent((KNSWidgets__Dialog*)self, (QEvent*)event);
 }
 
 void k_nswidgets__dialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ void k_nswidgets__dialog_connect_notify(void* self, void* signal) {
     KNSWidgets__Dialog_ConnectNotify((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
 }
 
-void k_nswidgets__dialog_qbase_connect_notify(void* self, void* signal) {
-    KNSWidgets__Dialog_QBaseConnectNotify((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
+void k_nswidgets__dialog_super_connect_notify(void* self, void* signal) {
+    KNSWidgets__Dialog_SuperConnectNotify((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__dialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2131,8 +2131,8 @@ void k_nswidgets__dialog_disconnect_notify(void* self, void* signal) {
     KNSWidgets__Dialog_DisconnectNotify((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
 }
 
-void k_nswidgets__dialog_qbase_disconnect_notify(void* self, void* signal) {
-    KNSWidgets__Dialog_QBaseDisconnectNotify((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
+void k_nswidgets__dialog_super_disconnect_notify(void* self, void* signal) {
+    KNSWidgets__Dialog_SuperDisconnectNotify((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__dialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2143,8 +2143,8 @@ void k_nswidgets__dialog_adjust_position(void* self, void* param1) {
     KNSWidgets__Dialog_AdjustPosition((KNSWidgets__Dialog*)self, (QWidget*)param1);
 }
 
-void k_nswidgets__dialog_qbase_adjust_position(void* self, void* param1) {
-    KNSWidgets__Dialog_QBaseAdjustPosition((KNSWidgets__Dialog*)self, (QWidget*)param1);
+void k_nswidgets__dialog_super_adjust_position(void* self, void* param1) {
+    KNSWidgets__Dialog_SuperAdjustPosition((KNSWidgets__Dialog*)self, (QWidget*)param1);
 }
 
 void k_nswidgets__dialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2155,8 +2155,8 @@ void k_nswidgets__dialog_update_micro_focus(void* self) {
     KNSWidgets__Dialog_UpdateMicroFocus((KNSWidgets__Dialog*)self);
 }
 
-void k_nswidgets__dialog_qbase_update_micro_focus(void* self) {
-    KNSWidgets__Dialog_QBaseUpdateMicroFocus((KNSWidgets__Dialog*)self);
+void k_nswidgets__dialog_super_update_micro_focus(void* self) {
+    KNSWidgets__Dialog_SuperUpdateMicroFocus((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2167,8 +2167,8 @@ void k_nswidgets__dialog_create(void* self) {
     KNSWidgets__Dialog_Create((KNSWidgets__Dialog*)self);
 }
 
-void k_nswidgets__dialog_qbase_create(void* self) {
-    KNSWidgets__Dialog_QBaseCreate((KNSWidgets__Dialog*)self);
+void k_nswidgets__dialog_super_create(void* self) {
+    KNSWidgets__Dialog_SuperCreate((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_create(void* self, void (*callback)()) {
@@ -2179,8 +2179,8 @@ void k_nswidgets__dialog_destroy(void* self) {
     KNSWidgets__Dialog_Destroy((KNSWidgets__Dialog*)self);
 }
 
-void k_nswidgets__dialog_qbase_destroy(void* self) {
-    KNSWidgets__Dialog_QBaseDestroy((KNSWidgets__Dialog*)self);
+void k_nswidgets__dialog_super_destroy(void* self) {
+    KNSWidgets__Dialog_SuperDestroy((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_destroy(void* self, void (*callback)()) {
@@ -2191,8 +2191,8 @@ bool k_nswidgets__dialog_focus_next_child(void* self) {
     return KNSWidgets__Dialog_FocusNextChild((KNSWidgets__Dialog*)self);
 }
 
-bool k_nswidgets__dialog_qbase_focus_next_child(void* self) {
-    return KNSWidgets__Dialog_QBaseFocusNextChild((KNSWidgets__Dialog*)self);
+bool k_nswidgets__dialog_super_focus_next_child(void* self) {
+    return KNSWidgets__Dialog_SuperFocusNextChild((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2203,8 +2203,8 @@ bool k_nswidgets__dialog_focus_previous_child(void* self) {
     return KNSWidgets__Dialog_FocusPreviousChild((KNSWidgets__Dialog*)self);
 }
 
-bool k_nswidgets__dialog_qbase_focus_previous_child(void* self) {
-    return KNSWidgets__Dialog_QBaseFocusPreviousChild((KNSWidgets__Dialog*)self);
+bool k_nswidgets__dialog_super_focus_previous_child(void* self) {
+    return KNSWidgets__Dialog_SuperFocusPreviousChild((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2215,8 +2215,8 @@ QObject* k_nswidgets__dialog_sender(void* self) {
     return KNSWidgets__Dialog_Sender((KNSWidgets__Dialog*)self);
 }
 
-QObject* k_nswidgets__dialog_qbase_sender(void* self) {
-    return KNSWidgets__Dialog_QBaseSender((KNSWidgets__Dialog*)self);
+QObject* k_nswidgets__dialog_super_sender(void* self) {
+    return KNSWidgets__Dialog_SuperSender((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2227,8 +2227,8 @@ int32_t k_nswidgets__dialog_sender_signal_index(void* self) {
     return KNSWidgets__Dialog_SenderSignalIndex((KNSWidgets__Dialog*)self);
 }
 
-int32_t k_nswidgets__dialog_qbase_sender_signal_index(void* self) {
-    return KNSWidgets__Dialog_QBaseSenderSignalIndex((KNSWidgets__Dialog*)self);
+int32_t k_nswidgets__dialog_super_sender_signal_index(void* self) {
+    return KNSWidgets__Dialog_SuperSenderSignalIndex((KNSWidgets__Dialog*)self);
 }
 
 void k_nswidgets__dialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2239,8 +2239,8 @@ int32_t k_nswidgets__dialog_receivers(void* self, const char* signal) {
     return KNSWidgets__Dialog_Receivers((KNSWidgets__Dialog*)self, signal);
 }
 
-int32_t k_nswidgets__dialog_qbase_receivers(void* self, const char* signal) {
-    return KNSWidgets__Dialog_QBaseReceivers((KNSWidgets__Dialog*)self, signal);
+int32_t k_nswidgets__dialog_super_receivers(void* self, const char* signal) {
+    return KNSWidgets__Dialog_SuperReceivers((KNSWidgets__Dialog*)self, signal);
 }
 
 void k_nswidgets__dialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2251,8 +2251,8 @@ bool k_nswidgets__dialog_is_signal_connected(void* self, void* signal) {
     return KNSWidgets__Dialog_IsSignalConnected((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_nswidgets__dialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSWidgets__Dialog_QBaseIsSignalConnected((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
+bool k_nswidgets__dialog_super_is_signal_connected(void* self, void* signal) {
+    return KNSWidgets__Dialog_SuperIsSignalConnected((KNSWidgets__Dialog*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__dialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2263,8 +2263,8 @@ double k_nswidgets__dialog_get_decoded_metric_f(void* self, int32_t metricA, int
     return KNSWidgets__Dialog_GetDecodedMetricF((KNSWidgets__Dialog*)self, metricA, metricB);
 }
 
-double k_nswidgets__dialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KNSWidgets__Dialog_QBaseGetDecodedMetricF((KNSWidgets__Dialog*)self, metricA, metricB);
+double k_nswidgets__dialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KNSWidgets__Dialog_SuperGetDecodedMetricF((KNSWidgets__Dialog*)self, metricA, metricB);
 }
 
 void k_nswidgets__dialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

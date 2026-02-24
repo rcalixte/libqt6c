@@ -22,8 +22,8 @@ void k_windowinsetscontroller_on_meta_object(void* self, const QMetaObject* (*ca
     KWindowInsetsController_OnMetaObject((KWindowInsetsController*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_windowinsetscontroller_qbase_meta_object(void* self) {
-    return KWindowInsetsController_QBaseMetaObject((KWindowInsetsController*)self);
+const QMetaObject* k_windowinsetscontroller_super_meta_object(void* self) {
+    return KWindowInsetsController_SuperMetaObject((KWindowInsetsController*)self);
 }
 
 void* k_windowinsetscontroller_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_windowinsetscontroller_on_metacast(void* self, void* (*callback)(void*, c
     KWindowInsetsController_OnMetacast((KWindowInsetsController*)self, (intptr_t)callback);
 }
 
-void* k_windowinsetscontroller_qbase_metacast(void* self, const char* param1) {
-    return KWindowInsetsController_QBaseMetacast((KWindowInsetsController*)self, param1);
+void* k_windowinsetscontroller_super_metacast(void* self, const char* param1) {
+    return KWindowInsetsController_SuperMetacast((KWindowInsetsController*)self, param1);
 }
 
 int32_t k_windowinsetscontroller_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_windowinsetscontroller_on_metacall(void* self, int32_t (*callback)(void*,
     KWindowInsetsController_OnMetacall((KWindowInsetsController*)self, (intptr_t)callback);
 }
 
-int32_t k_windowinsetscontroller_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KWindowInsetsController_QBaseMetacall((KWindowInsetsController*)self, param1, param2, param3);
+int32_t k_windowinsetscontroller_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KWindowInsetsController_SuperMetacall((KWindowInsetsController*)self, param1, param2, param3);
 }
 
 const char* k_windowinsetscontroller_tr(const char* s) {
@@ -318,8 +318,8 @@ bool k_windowinsetscontroller_event(void* self, void* event) {
     return KWindowInsetsController_Event((KWindowInsetsController*)self, (QEvent*)event);
 }
 
-bool k_windowinsetscontroller_qbase_event(void* self, void* event) {
-    return KWindowInsetsController_QBaseEvent((KWindowInsetsController*)self, (QEvent*)event);
+bool k_windowinsetscontroller_super_event(void* self, void* event) {
+    return KWindowInsetsController_SuperEvent((KWindowInsetsController*)self, (QEvent*)event);
 }
 
 void k_windowinsetscontroller_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -330,8 +330,8 @@ bool k_windowinsetscontroller_event_filter(void* self, void* watched, void* even
     return KWindowInsetsController_EventFilter((KWindowInsetsController*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_windowinsetscontroller_qbase_event_filter(void* self, void* watched, void* event) {
-    return KWindowInsetsController_QBaseEventFilter((KWindowInsetsController*)self, (QObject*)watched, (QEvent*)event);
+bool k_windowinsetscontroller_super_event_filter(void* self, void* watched, void* event) {
+    return KWindowInsetsController_SuperEventFilter((KWindowInsetsController*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_windowinsetscontroller_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -342,8 +342,8 @@ void k_windowinsetscontroller_timer_event(void* self, void* event) {
     KWindowInsetsController_TimerEvent((KWindowInsetsController*)self, (QTimerEvent*)event);
 }
 
-void k_windowinsetscontroller_qbase_timer_event(void* self, void* event) {
-    KWindowInsetsController_QBaseTimerEvent((KWindowInsetsController*)self, (QTimerEvent*)event);
+void k_windowinsetscontroller_super_timer_event(void* self, void* event) {
+    KWindowInsetsController_SuperTimerEvent((KWindowInsetsController*)self, (QTimerEvent*)event);
 }
 
 void k_windowinsetscontroller_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ void k_windowinsetscontroller_child_event(void* self, void* event) {
     KWindowInsetsController_ChildEvent((KWindowInsetsController*)self, (QChildEvent*)event);
 }
 
-void k_windowinsetscontroller_qbase_child_event(void* self, void* event) {
-    KWindowInsetsController_QBaseChildEvent((KWindowInsetsController*)self, (QChildEvent*)event);
+void k_windowinsetscontroller_super_child_event(void* self, void* event) {
+    KWindowInsetsController_SuperChildEvent((KWindowInsetsController*)self, (QChildEvent*)event);
 }
 
 void k_windowinsetscontroller_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -366,8 +366,8 @@ void k_windowinsetscontroller_custom_event(void* self, void* event) {
     KWindowInsetsController_CustomEvent((KWindowInsetsController*)self, (QEvent*)event);
 }
 
-void k_windowinsetscontroller_qbase_custom_event(void* self, void* event) {
-    KWindowInsetsController_QBaseCustomEvent((KWindowInsetsController*)self, (QEvent*)event);
+void k_windowinsetscontroller_super_custom_event(void* self, void* event) {
+    KWindowInsetsController_SuperCustomEvent((KWindowInsetsController*)self, (QEvent*)event);
 }
 
 void k_windowinsetscontroller_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void k_windowinsetscontroller_connect_notify(void* self, void* signal) {
     KWindowInsetsController_ConnectNotify((KWindowInsetsController*)self, (QMetaMethod*)signal);
 }
 
-void k_windowinsetscontroller_qbase_connect_notify(void* self, void* signal) {
-    KWindowInsetsController_QBaseConnectNotify((KWindowInsetsController*)self, (QMetaMethod*)signal);
+void k_windowinsetscontroller_super_connect_notify(void* self, void* signal) {
+    KWindowInsetsController_SuperConnectNotify((KWindowInsetsController*)self, (QMetaMethod*)signal);
 }
 
 void k_windowinsetscontroller_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ void k_windowinsetscontroller_disconnect_notify(void* self, void* signal) {
     KWindowInsetsController_DisconnectNotify((KWindowInsetsController*)self, (QMetaMethod*)signal);
 }
 
-void k_windowinsetscontroller_qbase_disconnect_notify(void* self, void* signal) {
-    KWindowInsetsController_QBaseDisconnectNotify((KWindowInsetsController*)self, (QMetaMethod*)signal);
+void k_windowinsetscontroller_super_disconnect_notify(void* self, void* signal) {
+    KWindowInsetsController_SuperDisconnectNotify((KWindowInsetsController*)self, (QMetaMethod*)signal);
 }
 
 void k_windowinsetscontroller_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -402,8 +402,8 @@ QObject* k_windowinsetscontroller_sender(void* self) {
     return KWindowInsetsController_Sender((KWindowInsetsController*)self);
 }
 
-QObject* k_windowinsetscontroller_qbase_sender(void* self) {
-    return KWindowInsetsController_QBaseSender((KWindowInsetsController*)self);
+QObject* k_windowinsetscontroller_super_sender(void* self) {
+    return KWindowInsetsController_SuperSender((KWindowInsetsController*)self);
 }
 
 void k_windowinsetscontroller_on_sender(void* self, QObject* (*callback)()) {
@@ -414,8 +414,8 @@ int32_t k_windowinsetscontroller_sender_signal_index(void* self) {
     return KWindowInsetsController_SenderSignalIndex((KWindowInsetsController*)self);
 }
 
-int32_t k_windowinsetscontroller_qbase_sender_signal_index(void* self) {
-    return KWindowInsetsController_QBaseSenderSignalIndex((KWindowInsetsController*)self);
+int32_t k_windowinsetscontroller_super_sender_signal_index(void* self) {
+    return KWindowInsetsController_SuperSenderSignalIndex((KWindowInsetsController*)self);
 }
 
 void k_windowinsetscontroller_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -426,8 +426,8 @@ int32_t k_windowinsetscontroller_receivers(void* self, const char* signal) {
     return KWindowInsetsController_Receivers((KWindowInsetsController*)self, signal);
 }
 
-int32_t k_windowinsetscontroller_qbase_receivers(void* self, const char* signal) {
-    return KWindowInsetsController_QBaseReceivers((KWindowInsetsController*)self, signal);
+int32_t k_windowinsetscontroller_super_receivers(void* self, const char* signal) {
+    return KWindowInsetsController_SuperReceivers((KWindowInsetsController*)self, signal);
 }
 
 void k_windowinsetscontroller_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -438,8 +438,8 @@ bool k_windowinsetscontroller_is_signal_connected(void* self, void* signal) {
     return KWindowInsetsController_IsSignalConnected((KWindowInsetsController*)self, (QMetaMethod*)signal);
 }
 
-bool k_windowinsetscontroller_qbase_is_signal_connected(void* self, void* signal) {
-    return KWindowInsetsController_QBaseIsSignalConnected((KWindowInsetsController*)self, (QMetaMethod*)signal);
+bool k_windowinsetscontroller_super_is_signal_connected(void* self, void* signal) {
+    return KWindowInsetsController_SuperIsSignalConnected((KWindowInsetsController*)self, (QMetaMethod*)signal);
 }
 
 void k_windowinsetscontroller_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

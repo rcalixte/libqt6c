@@ -24,8 +24,8 @@ void k_viewstateserializer_on_meta_object(void* self, const QMetaObject* (*callb
     KViewStateSerializer_OnMetaObject((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_viewstateserializer_qbase_meta_object(void* self) {
-    return KViewStateSerializer_QBaseMetaObject((KViewStateSerializer*)self);
+const QMetaObject* k_viewstateserializer_super_meta_object(void* self) {
+    return KViewStateSerializer_SuperMetaObject((KViewStateSerializer*)self);
 }
 
 void* k_viewstateserializer_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_viewstateserializer_on_metacast(void* self, void* (*callback)(void*, cons
     KViewStateSerializer_OnMetacast((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-void* k_viewstateserializer_qbase_metacast(void* self, const char* param1) {
-    return KViewStateSerializer_QBaseMetacast((KViewStateSerializer*)self, param1);
+void* k_viewstateserializer_super_metacast(void* self, const char* param1) {
+    return KViewStateSerializer_SuperMetacast((KViewStateSerializer*)self, param1);
 }
 
 int32_t k_viewstateserializer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_viewstateserializer_on_metacall(void* self, int32_t (*callback)(void*, in
     KViewStateSerializer_OnMetacall((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-int32_t k_viewstateserializer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KViewStateSerializer_QBaseMetacall((KViewStateSerializer*)self, param1, param2, param3);
+int32_t k_viewstateserializer_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KViewStateSerializer_SuperMetacall((KViewStateSerializer*)self, param1, param2, param3);
 }
 
 const char* k_viewstateserializer_tr(const char* s) {
@@ -170,8 +170,8 @@ void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* 
     KViewStateSerializer_OnIndexFromConfigString((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_viewstateserializer_qbase_index_from_config_string(void* self, void* model, const char* key) {
-    return KViewStateSerializer_QBaseIndexFromConfigString((KViewStateSerializer*)self, (QAbstractItemModel*)model, qstring(key));
+QModelIndex* k_viewstateserializer_super_index_from_config_string(void* self, void* model, const char* key) {
+    return KViewStateSerializer_SuperIndexFromConfigString((KViewStateSerializer*)self, (QAbstractItemModel*)model, qstring(key));
 }
 
 const char* k_viewstateserializer_index_to_config_string(void* self, void* index) {
@@ -185,8 +185,8 @@ void k_viewstateserializer_on_index_to_config_string(void* self, const char* (*c
     KViewStateSerializer_OnIndexToConfigString((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-const char* k_viewstateserializer_qbase_index_to_config_string(void* self, void* index) {
-    libqt_string _str = KViewStateSerializer_QBaseIndexToConfigString((KViewStateSerializer*)self, (QModelIndex*)index);
+const char* k_viewstateserializer_super_index_to_config_string(void* self, void* index) {
+    libqt_string _str = KViewStateSerializer_SuperIndexToConfigString((KViewStateSerializer*)self, (QModelIndex*)index);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -200,8 +200,8 @@ void k_viewstateserializer_on_restore_state(void* self, void (*callback)()) {
     KViewStateSerializer_OnRestoreState((KViewStateSerializer*)self, (intptr_t)callback);
 }
 
-void k_viewstateserializer_qbase_restore_state(void* self) {
-    KViewStateSerializer_QBaseRestoreState((KViewStateSerializer*)self);
+void k_viewstateserializer_super_restore_state(void* self) {
+    KViewStateSerializer_SuperRestoreState((KViewStateSerializer*)self);
 }
 
 const char* k_viewstateserializer_tr2(const char* s, const char* c) {
@@ -433,8 +433,8 @@ bool k_viewstateserializer_event(void* self, void* event) {
     return KViewStateSerializer_Event((KViewStateSerializer*)self, (QEvent*)event);
 }
 
-bool k_viewstateserializer_qbase_event(void* self, void* event) {
-    return KViewStateSerializer_QBaseEvent((KViewStateSerializer*)self, (QEvent*)event);
+bool k_viewstateserializer_super_event(void* self, void* event) {
+    return KViewStateSerializer_SuperEvent((KViewStateSerializer*)self, (QEvent*)event);
 }
 
 void k_viewstateserializer_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -445,8 +445,8 @@ bool k_viewstateserializer_event_filter(void* self, void* watched, void* event) 
     return KViewStateSerializer_EventFilter((KViewStateSerializer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_viewstateserializer_qbase_event_filter(void* self, void* watched, void* event) {
-    return KViewStateSerializer_QBaseEventFilter((KViewStateSerializer*)self, (QObject*)watched, (QEvent*)event);
+bool k_viewstateserializer_super_event_filter(void* self, void* watched, void* event) {
+    return KViewStateSerializer_SuperEventFilter((KViewStateSerializer*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_viewstateserializer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -457,8 +457,8 @@ void k_viewstateserializer_timer_event(void* self, void* event) {
     KViewStateSerializer_TimerEvent((KViewStateSerializer*)self, (QTimerEvent*)event);
 }
 
-void k_viewstateserializer_qbase_timer_event(void* self, void* event) {
-    KViewStateSerializer_QBaseTimerEvent((KViewStateSerializer*)self, (QTimerEvent*)event);
+void k_viewstateserializer_super_timer_event(void* self, void* event) {
+    KViewStateSerializer_SuperTimerEvent((KViewStateSerializer*)self, (QTimerEvent*)event);
 }
 
 void k_viewstateserializer_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -469,8 +469,8 @@ void k_viewstateserializer_child_event(void* self, void* event) {
     KViewStateSerializer_ChildEvent((KViewStateSerializer*)self, (QChildEvent*)event);
 }
 
-void k_viewstateserializer_qbase_child_event(void* self, void* event) {
-    KViewStateSerializer_QBaseChildEvent((KViewStateSerializer*)self, (QChildEvent*)event);
+void k_viewstateserializer_super_child_event(void* self, void* event) {
+    KViewStateSerializer_SuperChildEvent((KViewStateSerializer*)self, (QChildEvent*)event);
 }
 
 void k_viewstateserializer_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -481,8 +481,8 @@ void k_viewstateserializer_custom_event(void* self, void* event) {
     KViewStateSerializer_CustomEvent((KViewStateSerializer*)self, (QEvent*)event);
 }
 
-void k_viewstateserializer_qbase_custom_event(void* self, void* event) {
-    KViewStateSerializer_QBaseCustomEvent((KViewStateSerializer*)self, (QEvent*)event);
+void k_viewstateserializer_super_custom_event(void* self, void* event) {
+    KViewStateSerializer_SuperCustomEvent((KViewStateSerializer*)self, (QEvent*)event);
 }
 
 void k_viewstateserializer_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -493,8 +493,8 @@ void k_viewstateserializer_connect_notify(void* self, void* signal) {
     KViewStateSerializer_ConnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstateserializer_qbase_connect_notify(void* self, void* signal) {
-    KViewStateSerializer_QBaseConnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
+void k_viewstateserializer_super_connect_notify(void* self, void* signal) {
+    KViewStateSerializer_SuperConnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
 void k_viewstateserializer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -505,8 +505,8 @@ void k_viewstateserializer_disconnect_notify(void* self, void* signal) {
     KViewStateSerializer_DisconnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-void k_viewstateserializer_qbase_disconnect_notify(void* self, void* signal) {
-    KViewStateSerializer_QBaseDisconnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
+void k_viewstateserializer_super_disconnect_notify(void* self, void* signal) {
+    KViewStateSerializer_SuperDisconnectNotify((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
 void k_viewstateserializer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -517,8 +517,8 @@ QObject* k_viewstateserializer_sender(void* self) {
     return KViewStateSerializer_Sender((KViewStateSerializer*)self);
 }
 
-QObject* k_viewstateserializer_qbase_sender(void* self) {
-    return KViewStateSerializer_QBaseSender((KViewStateSerializer*)self);
+QObject* k_viewstateserializer_super_sender(void* self) {
+    return KViewStateSerializer_SuperSender((KViewStateSerializer*)self);
 }
 
 void k_viewstateserializer_on_sender(void* self, QObject* (*callback)()) {
@@ -529,8 +529,8 @@ int32_t k_viewstateserializer_sender_signal_index(void* self) {
     return KViewStateSerializer_SenderSignalIndex((KViewStateSerializer*)self);
 }
 
-int32_t k_viewstateserializer_qbase_sender_signal_index(void* self) {
-    return KViewStateSerializer_QBaseSenderSignalIndex((KViewStateSerializer*)self);
+int32_t k_viewstateserializer_super_sender_signal_index(void* self) {
+    return KViewStateSerializer_SuperSenderSignalIndex((KViewStateSerializer*)self);
 }
 
 void k_viewstateserializer_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -541,8 +541,8 @@ int32_t k_viewstateserializer_receivers(void* self, const char* signal) {
     return KViewStateSerializer_Receivers((KViewStateSerializer*)self, signal);
 }
 
-int32_t k_viewstateserializer_qbase_receivers(void* self, const char* signal) {
-    return KViewStateSerializer_QBaseReceivers((KViewStateSerializer*)self, signal);
+int32_t k_viewstateserializer_super_receivers(void* self, const char* signal) {
+    return KViewStateSerializer_SuperReceivers((KViewStateSerializer*)self, signal);
 }
 
 void k_viewstateserializer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -553,8 +553,8 @@ bool k_viewstateserializer_is_signal_connected(void* self, void* signal) {
     return KViewStateSerializer_IsSignalConnected((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
-bool k_viewstateserializer_qbase_is_signal_connected(void* self, void* signal) {
-    return KViewStateSerializer_QBaseIsSignalConnected((KViewStateSerializer*)self, (QMetaMethod*)signal);
+bool k_viewstateserializer_super_is_signal_connected(void* self, void* signal) {
+    return KViewStateSerializer_SuperIsSignalConnected((KViewStateSerializer*)self, (QMetaMethod*)signal);
 }
 
 void k_viewstateserializer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

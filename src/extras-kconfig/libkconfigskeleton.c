@@ -30,8 +30,8 @@ void k_configskeleton_on_meta_object(void* self, const QMetaObject* (*callback)(
     KConfigSkeleton_OnMetaObject((KConfigSkeleton*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_configskeleton_qbase_meta_object(void* self) {
-    return KConfigSkeleton_QBaseMetaObject((KConfigSkeleton*)self);
+const QMetaObject* k_configskeleton_super_meta_object(void* self) {
+    return KConfigSkeleton_SuperMetaObject((KConfigSkeleton*)self);
 }
 
 void* k_configskeleton_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_configskeleton_on_metacast(void* self, void* (*callback)(void*, const cha
     KConfigSkeleton_OnMetacast((KConfigSkeleton*)self, (intptr_t)callback);
 }
 
-void* k_configskeleton_qbase_metacast(void* self, const char* param1) {
-    return KConfigSkeleton_QBaseMetacast((KConfigSkeleton*)self, param1);
+void* k_configskeleton_super_metacast(void* self, const char* param1) {
+    return KConfigSkeleton_SuperMetacast((KConfigSkeleton*)self, param1);
 }
 
 int32_t k_configskeleton_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_configskeleton_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KConfigSkeleton_OnMetacall((KConfigSkeleton*)self, (intptr_t)callback);
 }
 
-int32_t k_configskeleton_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KConfigSkeleton_QBaseMetacall((KConfigSkeleton*)self, param1, param2, param3);
+int32_t k_configskeleton_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KConfigSkeleton_SuperMetacall((KConfigSkeleton*)self, param1, param2, param3);
 }
 
 const char* k_configskeleton_tr(const char* s) {
@@ -680,8 +680,8 @@ void k_configskeleton_set_defaults(void* self) {
     KConfigSkeleton_SetDefaults((KConfigSkeleton*)self);
 }
 
-void k_configskeleton_qbase_set_defaults(void* self) {
-    KConfigSkeleton_QBaseSetDefaults((KConfigSkeleton*)self);
+void k_configskeleton_super_set_defaults(void* self) {
+    KConfigSkeleton_SuperSetDefaults((KConfigSkeleton*)self);
 }
 
 void k_configskeleton_on_set_defaults(void* self, void (*callback)()) {
@@ -692,8 +692,8 @@ bool k_configskeleton_use_defaults(void* self, bool b) {
     return KConfigSkeleton_UseDefaults((KConfigSkeleton*)self, b);
 }
 
-bool k_configskeleton_qbase_use_defaults(void* self, bool b) {
-    return KConfigSkeleton_QBaseUseDefaults((KConfigSkeleton*)self, b);
+bool k_configskeleton_super_use_defaults(void* self, bool b) {
+    return KConfigSkeleton_SuperUseDefaults((KConfigSkeleton*)self, b);
 }
 
 void k_configskeleton_on_use_defaults(void* self, bool (*callback)(void*, bool)) {
@@ -704,8 +704,8 @@ bool k_configskeleton_usr_use_defaults(void* self, bool b) {
     return KConfigSkeleton_UsrUseDefaults((KConfigSkeleton*)self, b);
 }
 
-bool k_configskeleton_qbase_usr_use_defaults(void* self, bool b) {
-    return KConfigSkeleton_QBaseUsrUseDefaults((KConfigSkeleton*)self, b);
+bool k_configskeleton_super_usr_use_defaults(void* self, bool b) {
+    return KConfigSkeleton_SuperUsrUseDefaults((KConfigSkeleton*)self, b);
 }
 
 void k_configskeleton_on_usr_use_defaults(void* self, bool (*callback)(void*, bool)) {
@@ -716,8 +716,8 @@ void k_configskeleton_usr_set_defaults(void* self) {
     KConfigSkeleton_UsrSetDefaults((KConfigSkeleton*)self);
 }
 
-void k_configskeleton_qbase_usr_set_defaults(void* self) {
-    KConfigSkeleton_QBaseUsrSetDefaults((KConfigSkeleton*)self);
+void k_configskeleton_super_usr_set_defaults(void* self) {
+    KConfigSkeleton_SuperUsrSetDefaults((KConfigSkeleton*)self);
 }
 
 void k_configskeleton_on_usr_set_defaults(void* self, void (*callback)()) {
@@ -728,8 +728,8 @@ void k_configskeleton_usr_read(void* self) {
     KConfigSkeleton_UsrRead((KConfigSkeleton*)self);
 }
 
-void k_configskeleton_qbase_usr_read(void* self) {
-    KConfigSkeleton_QBaseUsrRead((KConfigSkeleton*)self);
+void k_configskeleton_super_usr_read(void* self) {
+    KConfigSkeleton_SuperUsrRead((KConfigSkeleton*)self);
 }
 
 void k_configskeleton_on_usr_read(void* self, void (*callback)()) {
@@ -740,8 +740,8 @@ bool k_configskeleton_usr_save(void* self) {
     return KConfigSkeleton_UsrSave((KConfigSkeleton*)self);
 }
 
-bool k_configskeleton_qbase_usr_save(void* self) {
-    return KConfigSkeleton_QBaseUsrSave((KConfigSkeleton*)self);
+bool k_configskeleton_super_usr_save(void* self) {
+    return KConfigSkeleton_SuperUsrSave((KConfigSkeleton*)self);
 }
 
 void k_configskeleton_on_usr_save(void* self, bool (*callback)()) {
@@ -752,8 +752,8 @@ bool k_configskeleton_event(void* self, void* event) {
     return KConfigSkeleton_Event((KConfigSkeleton*)self, (QEvent*)event);
 }
 
-bool k_configskeleton_qbase_event(void* self, void* event) {
-    return KConfigSkeleton_QBaseEvent((KConfigSkeleton*)self, (QEvent*)event);
+bool k_configskeleton_super_event(void* self, void* event) {
+    return KConfigSkeleton_SuperEvent((KConfigSkeleton*)self, (QEvent*)event);
 }
 
 void k_configskeleton_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -764,8 +764,8 @@ bool k_configskeleton_event_filter(void* self, void* watched, void* event) {
     return KConfigSkeleton_EventFilter((KConfigSkeleton*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_configskeleton_qbase_event_filter(void* self, void* watched, void* event) {
-    return KConfigSkeleton_QBaseEventFilter((KConfigSkeleton*)self, (QObject*)watched, (QEvent*)event);
+bool k_configskeleton_super_event_filter(void* self, void* watched, void* event) {
+    return KConfigSkeleton_SuperEventFilter((KConfigSkeleton*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_configskeleton_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -776,8 +776,8 @@ void k_configskeleton_timer_event(void* self, void* event) {
     KConfigSkeleton_TimerEvent((KConfigSkeleton*)self, (QTimerEvent*)event);
 }
 
-void k_configskeleton_qbase_timer_event(void* self, void* event) {
-    KConfigSkeleton_QBaseTimerEvent((KConfigSkeleton*)self, (QTimerEvent*)event);
+void k_configskeleton_super_timer_event(void* self, void* event) {
+    KConfigSkeleton_SuperTimerEvent((KConfigSkeleton*)self, (QTimerEvent*)event);
 }
 
 void k_configskeleton_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -788,8 +788,8 @@ void k_configskeleton_child_event(void* self, void* event) {
     KConfigSkeleton_ChildEvent((KConfigSkeleton*)self, (QChildEvent*)event);
 }
 
-void k_configskeleton_qbase_child_event(void* self, void* event) {
-    KConfigSkeleton_QBaseChildEvent((KConfigSkeleton*)self, (QChildEvent*)event);
+void k_configskeleton_super_child_event(void* self, void* event) {
+    KConfigSkeleton_SuperChildEvent((KConfigSkeleton*)self, (QChildEvent*)event);
 }
 
 void k_configskeleton_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -800,8 +800,8 @@ void k_configskeleton_custom_event(void* self, void* event) {
     KConfigSkeleton_CustomEvent((KConfigSkeleton*)self, (QEvent*)event);
 }
 
-void k_configskeleton_qbase_custom_event(void* self, void* event) {
-    KConfigSkeleton_QBaseCustomEvent((KConfigSkeleton*)self, (QEvent*)event);
+void k_configskeleton_super_custom_event(void* self, void* event) {
+    KConfigSkeleton_SuperCustomEvent((KConfigSkeleton*)self, (QEvent*)event);
 }
 
 void k_configskeleton_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -812,8 +812,8 @@ void k_configskeleton_connect_notify(void* self, void* signal) {
     KConfigSkeleton_ConnectNotify((KConfigSkeleton*)self, (QMetaMethod*)signal);
 }
 
-void k_configskeleton_qbase_connect_notify(void* self, void* signal) {
-    KConfigSkeleton_QBaseConnectNotify((KConfigSkeleton*)self, (QMetaMethod*)signal);
+void k_configskeleton_super_connect_notify(void* self, void* signal) {
+    KConfigSkeleton_SuperConnectNotify((KConfigSkeleton*)self, (QMetaMethod*)signal);
 }
 
 void k_configskeleton_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -824,8 +824,8 @@ void k_configskeleton_disconnect_notify(void* self, void* signal) {
     KConfigSkeleton_DisconnectNotify((KConfigSkeleton*)self, (QMetaMethod*)signal);
 }
 
-void k_configskeleton_qbase_disconnect_notify(void* self, void* signal) {
-    KConfigSkeleton_QBaseDisconnectNotify((KConfigSkeleton*)self, (QMetaMethod*)signal);
+void k_configskeleton_super_disconnect_notify(void* self, void* signal) {
+    KConfigSkeleton_SuperDisconnectNotify((KConfigSkeleton*)self, (QMetaMethod*)signal);
 }
 
 void k_configskeleton_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -836,8 +836,8 @@ QObject* k_configskeleton_sender(void* self) {
     return KConfigSkeleton_Sender((KConfigSkeleton*)self);
 }
 
-QObject* k_configskeleton_qbase_sender(void* self) {
-    return KConfigSkeleton_QBaseSender((KConfigSkeleton*)self);
+QObject* k_configskeleton_super_sender(void* self) {
+    return KConfigSkeleton_SuperSender((KConfigSkeleton*)self);
 }
 
 void k_configskeleton_on_sender(void* self, QObject* (*callback)()) {
@@ -848,8 +848,8 @@ int32_t k_configskeleton_sender_signal_index(void* self) {
     return KConfigSkeleton_SenderSignalIndex((KConfigSkeleton*)self);
 }
 
-int32_t k_configskeleton_qbase_sender_signal_index(void* self) {
-    return KConfigSkeleton_QBaseSenderSignalIndex((KConfigSkeleton*)self);
+int32_t k_configskeleton_super_sender_signal_index(void* self) {
+    return KConfigSkeleton_SuperSenderSignalIndex((KConfigSkeleton*)self);
 }
 
 void k_configskeleton_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -860,8 +860,8 @@ int32_t k_configskeleton_receivers(void* self, const char* signal) {
     return KConfigSkeleton_Receivers((KConfigSkeleton*)self, signal);
 }
 
-int32_t k_configskeleton_qbase_receivers(void* self, const char* signal) {
-    return KConfigSkeleton_QBaseReceivers((KConfigSkeleton*)self, signal);
+int32_t k_configskeleton_super_receivers(void* self, const char* signal) {
+    return KConfigSkeleton_SuperReceivers((KConfigSkeleton*)self, signal);
 }
 
 void k_configskeleton_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -872,8 +872,8 @@ bool k_configskeleton_is_signal_connected(void* self, void* signal) {
     return KConfigSkeleton_IsSignalConnected((KConfigSkeleton*)self, (QMetaMethod*)signal);
 }
 
-bool k_configskeleton_qbase_is_signal_connected(void* self, void* signal) {
-    return KConfigSkeleton_QBaseIsSignalConnected((KConfigSkeleton*)self, (QMetaMethod*)signal);
+bool k_configskeleton_super_is_signal_connected(void* self, void* signal) {
+    return KConfigSkeleton_SuperIsSignalConnected((KConfigSkeleton*)self, (QMetaMethod*)signal);
 }
 
 void k_configskeleton_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -904,8 +904,8 @@ void k_configskeleton__itemcolor_on_read_config(void* self, void (*callback)(voi
     KConfigSkeleton__ItemColor_OnReadConfig((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
 }
 
-void k_configskeleton__itemcolor_qbase_read_config(void* self, void* config) {
-    KConfigSkeleton__ItemColor_QBaseReadConfig((KConfigSkeleton__ItemColor*)self, (KConfig*)config);
+void k_configskeleton__itemcolor_super_read_config(void* self, void* config) {
+    KConfigSkeleton__ItemColor_SuperReadConfig((KConfigSkeleton__ItemColor*)self, (KConfig*)config);
 }
 
 void k_configskeleton__itemcolor_set_property(void* self, void* p) {
@@ -916,8 +916,8 @@ void k_configskeleton__itemcolor_on_set_property(void* self, void (*callback)(vo
     KConfigSkeleton__ItemColor_OnSetProperty((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
 }
 
-void k_configskeleton__itemcolor_qbase_set_property(void* self, void* p) {
-    KConfigSkeleton__ItemColor_QBaseSetProperty((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
+void k_configskeleton__itemcolor_super_set_property(void* self, void* p) {
+    KConfigSkeleton__ItemColor_SuperSetProperty((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
 }
 
 bool k_configskeleton__itemcolor_is_equal(void* self, void* p) {
@@ -928,8 +928,8 @@ void k_configskeleton__itemcolor_on_is_equal(void* self, bool (*callback)(void*,
     KConfigSkeleton__ItemColor_OnIsEqual((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
 }
 
-bool k_configskeleton__itemcolor_qbase_is_equal(void* self, void* p) {
-    return KConfigSkeleton__ItemColor_QBaseIsEqual((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
+bool k_configskeleton__itemcolor_super_is_equal(void* self, void* p) {
+    return KConfigSkeleton__ItemColor_SuperIsEqual((KConfigSkeleton__ItemColor*)self, (QVariant*)p);
 }
 
 QVariant* k_configskeleton__itemcolor_property(void* self) {
@@ -940,8 +940,8 @@ void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)()
     KConfigSkeleton__ItemColor_OnProperty((KConfigSkeleton__ItemColor*)self, (intptr_t)callback);
 }
 
-QVariant* k_configskeleton__itemcolor_qbase_property(void* self) {
-    return KConfigSkeleton__ItemColor_QBaseProperty((KConfigSkeleton__ItemColor*)self);
+QVariant* k_configskeleton__itemcolor_super_property(void* self) {
+    return KConfigSkeleton__ItemColor_SuperProperty((KConfigSkeleton__ItemColor*)self);
 }
 
 void k_configskeleton__itemcolor_delete(void* self) {
@@ -964,8 +964,8 @@ void k_configskeleton__itemfont_on_read_config(void* self, void (*callback)(void
     KConfigSkeleton__ItemFont_OnReadConfig((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
 }
 
-void k_configskeleton__itemfont_qbase_read_config(void* self, void* config) {
-    KConfigSkeleton__ItemFont_QBaseReadConfig((KConfigSkeleton__ItemFont*)self, (KConfig*)config);
+void k_configskeleton__itemfont_super_read_config(void* self, void* config) {
+    KConfigSkeleton__ItemFont_SuperReadConfig((KConfigSkeleton__ItemFont*)self, (KConfig*)config);
 }
 
 void k_configskeleton__itemfont_set_property(void* self, void* p) {
@@ -976,8 +976,8 @@ void k_configskeleton__itemfont_on_set_property(void* self, void (*callback)(voi
     KConfigSkeleton__ItemFont_OnSetProperty((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
 }
 
-void k_configskeleton__itemfont_qbase_set_property(void* self, void* p) {
-    KConfigSkeleton__ItemFont_QBaseSetProperty((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
+void k_configskeleton__itemfont_super_set_property(void* self, void* p) {
+    KConfigSkeleton__ItemFont_SuperSetProperty((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
 }
 
 bool k_configskeleton__itemfont_is_equal(void* self, void* p) {
@@ -988,8 +988,8 @@ void k_configskeleton__itemfont_on_is_equal(void* self, bool (*callback)(void*, 
     KConfigSkeleton__ItemFont_OnIsEqual((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
 }
 
-bool k_configskeleton__itemfont_qbase_is_equal(void* self, void* p) {
-    return KConfigSkeleton__ItemFont_QBaseIsEqual((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
+bool k_configskeleton__itemfont_super_is_equal(void* self, void* p) {
+    return KConfigSkeleton__ItemFont_SuperIsEqual((KConfigSkeleton__ItemFont*)self, (QVariant*)p);
 }
 
 QVariant* k_configskeleton__itemfont_property(void* self) {
@@ -1000,8 +1000,8 @@ void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)())
     KConfigSkeleton__ItemFont_OnProperty((KConfigSkeleton__ItemFont*)self, (intptr_t)callback);
 }
 
-QVariant* k_configskeleton__itemfont_qbase_property(void* self) {
-    return KConfigSkeleton__ItemFont_QBaseProperty((KConfigSkeleton__ItemFont*)self);
+QVariant* k_configskeleton__itemfont_super_property(void* self) {
+    return KConfigSkeleton__ItemFont_SuperProperty((KConfigSkeleton__ItemFont*)self);
 }
 
 void k_configskeleton__itemfont_delete(void* self) {

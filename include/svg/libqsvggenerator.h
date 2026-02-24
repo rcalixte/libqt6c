@@ -158,13 +158,17 @@ QPaintEngine* q_svggenerator_paint_engine(void* self);
 ///
 void q_svggenerator_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_paint_engine` instead
+///
+#define q_svggenerator_qbase_paint_engine q_svggenerator_super_paint_engine
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#paintEngine)
 ///
 /// Base class method implementation
 ///
 /// @param self QSvgGenerator*
 ///
-QPaintEngine* q_svggenerator_qbase_paint_engine(void* self);
+QPaintEngine* q_svggenerator_super_paint_engine(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
@@ -182,6 +186,10 @@ int32_t q_svggenerator_metric(void* self, int32_t metric);
 ///
 void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_metric` instead
+///
+#define q_svggenerator_qbase_metric q_svggenerator_super_metric
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qsvggenerator.html#metric)
 ///
 /// Base class method implementation
@@ -189,7 +197,7 @@ void q_svggenerator_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param self QSvgGenerator*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_svggenerator_qbase_metric(void* self, int32_t metric);
+int32_t q_svggenerator_super_metric(void* self, int32_t metric);
 
 /// Inherited from QPaintDevice
 ///
@@ -320,6 +328,10 @@ int32_t q_svggenerator_encode_metric_f(int32_t metric, double value);
 ///
 int32_t q_svggenerator_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_dev_type` instead
+///
+#define q_svggenerator_qbase_dev_type q_svggenerator_super_dev_type
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#devType)
@@ -328,7 +340,7 @@ int32_t q_svggenerator_dev_type(void* self);
 ///
 /// @param self QSvgGenerator*
 ///
-int32_t q_svggenerator_qbase_dev_type(void* self);
+int32_t q_svggenerator_super_dev_type(void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -352,6 +364,10 @@ void q_svggenerator_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_svggenerator_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_init_painter` instead
+///
+#define q_svggenerator_qbase_init_painter q_svggenerator_super_init_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -361,7 +377,7 @@ void q_svggenerator_init_painter(void* self, void* painter);
 /// @param self QSvgGenerator*
 /// @param painter QPainter*
 ///
-void q_svggenerator_qbase_init_painter(void* self, void* painter);
+void q_svggenerator_super_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -385,6 +401,10 @@ void q_svggenerator_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_svggenerator_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_redirected` instead
+///
+#define q_svggenerator_qbase_redirected q_svggenerator_super_redirected
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
@@ -394,7 +414,7 @@ QPaintDevice* q_svggenerator_redirected(void* self, void* offset);
 /// @param self QSvgGenerator*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_svggenerator_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_svggenerator_super_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -417,6 +437,10 @@ void q_svggenerator_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* q_svggenerator_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_shared_painter` instead
+///
+#define q_svggenerator_qbase_shared_painter q_svggenerator_super_shared_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
@@ -425,7 +449,7 @@ QPainter* q_svggenerator_shared_painter(void* self);
 ///
 /// @param self QSvgGenerator*
 ///
-QPainter* q_svggenerator_qbase_shared_painter(void* self);
+QPainter* q_svggenerator_super_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -450,6 +474,10 @@ void q_svggenerator_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 double q_svggenerator_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_svggenerator_super_get_decoded_metric_f` instead
+///
+#define q_svggenerator_qbase_get_decoded_metric_f q_svggenerator_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -460,7 +488,7 @@ double q_svggenerator_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_svggenerator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_svggenerator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

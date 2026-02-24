@@ -32,13 +32,17 @@ const QMetaObject* k_nscore__provider_meta_object(void* self);
 ///
 void k_nscore__provider_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_meta_object` instead
+///
+#define k_nscore__provider_qbase_meta_object k_nscore__provider_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-const QMetaObject* k_nscore__provider_qbase_meta_object(void* self);
+const QMetaObject* k_nscore__provider_super_meta_object(void* self);
 
 /// @param self KNSCore__Provider*
 /// @param param1 const char*
@@ -52,12 +56,16 @@ void* k_nscore__provider_metacast(void* self, const char* param1);
 ///
 void k_nscore__provider_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_metacast` instead
+///
+#define k_nscore__provider_qbase_metacast k_nscore__provider_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 /// @param param1 const char*
 ///
-void* k_nscore__provider_qbase_metacast(void* self, const char* param1);
+void* k_nscore__provider_super_metacast(void* self, const char* param1);
 
 /// @param self KNSCore__Provider*
 /// @param param1 enum QMetaObject__Call
@@ -73,6 +81,10 @@ int32_t k_nscore__provider_metacall(void* self, int32_t param1, int param2, void
 ///
 void k_nscore__provider_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_metacall` instead
+///
+#define k_nscore__provider_qbase_metacall k_nscore__provider_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
@@ -80,7 +92,7 @@ void k_nscore__provider_on_metacall(void* self, int32_t (*callback)(void*, int32
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_nscore__provider_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_nscore__provider_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -107,13 +119,17 @@ const char* k_nscore__provider_id(void* self);
 ///
 void k_nscore__provider_on_id(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_id` instead
+///
+#define k_nscore__provider_qbase_id k_nscore__provider_super_id
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#id)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-const char* k_nscore__provider_qbase_id(void* self);
+const char* k_nscore__provider_super_id(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setProviderXML)
 ///
@@ -131,6 +147,10 @@ bool k_nscore__provider_set_provider_x_m_l(void* self, void* xmldata);
 ///
 void k_nscore__provider_on_set_provider_x_m_l(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_set_provider_x_m_l` instead
+///
+#define k_nscore__provider_qbase_set_provider_x_m_l k_nscore__provider_super_set_provider_x_m_l
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setProviderXML)
 ///
 /// Base class method implementation
@@ -138,7 +158,7 @@ void k_nscore__provider_on_set_provider_x_m_l(void* self, bool (*callback)(void*
 /// @param self KNSCore__Provider*
 /// @param xmldata QDomElement*
 ///
-bool k_nscore__provider_qbase_set_provider_x_m_l(void* self, void* xmldata);
+bool k_nscore__provider_super_set_provider_x_m_l(void* self, void* xmldata);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#isInitialized)
 ///
@@ -155,13 +175,17 @@ bool k_nscore__provider_is_initialized(void* self);
 ///
 void k_nscore__provider_on_is_initialized(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_is_initialized` instead
+///
+#define k_nscore__provider_qbase_is_initialized k_nscore__provider_super_is_initialized
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#isInitialized)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-bool k_nscore__provider_qbase_is_initialized(void* self);
+bool k_nscore__provider_super_is_initialized(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
 ///
@@ -179,6 +203,10 @@ void k_nscore__provider_set_cached_entries(void* self, libqt_list cachedEntries)
 ///
 void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*, libqt_list));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_set_cached_entries` instead
+///
+#define k_nscore__provider_qbase_set_cached_entries k_nscore__provider_super_set_cached_entries
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setCachedEntries)
 ///
 /// Base class method implementation
@@ -186,7 +214,7 @@ void k_nscore__provider_on_set_cached_entries(void* self, void (*callback)(void*
 /// @param self KNSCore__Provider*
 /// @param cachedEntries libqt_list of KNSCore__Entry*
 ///
-void k_nscore__provider_qbase_set_cached_entries(void* self, libqt_list cachedEntries);
+void k_nscore__provider_super_set_cached_entries(void* self, libqt_list cachedEntries);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
@@ -205,13 +233,17 @@ const char* k_nscore__provider_name(void* self);
 ///
 void k_nscore__provider_on_name(void* self, const char* (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_name` instead
+///
+#define k_nscore__provider_qbase_name k_nscore__provider_super_name
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#name)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-const char* k_nscore__provider_qbase_name(void* self);
+const char* k_nscore__provider_super_name(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#icon)
 ///
@@ -228,13 +260,17 @@ QUrl* k_nscore__provider_icon(void* self);
 ///
 void k_nscore__provider_on_icon(void* self, QUrl* (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_icon` instead
+///
+#define k_nscore__provider_qbase_icon k_nscore__provider_super_icon
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#icon)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-QUrl* k_nscore__provider_qbase_icon(void* self);
+QUrl* k_nscore__provider_super_icon(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntries)
 ///
@@ -252,6 +288,10 @@ void k_nscore__provider_load_entries(void* self, void* request);
 ///
 void k_nscore__provider_on_load_entries(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_load_entries` instead
+///
+#define k_nscore__provider_qbase_load_entries k_nscore__provider_super_load_entries
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntries)
 ///
 /// Base class method implementation
@@ -259,7 +299,7 @@ void k_nscore__provider_on_load_entries(void* self, void (*callback)(void*, void
 /// @param self KNSCore__Provider*
 /// @param request KNSCore__Provider__SearchRequest*
 ///
-void k_nscore__provider_qbase_load_entries(void* self, void* request);
+void k_nscore__provider_super_load_entries(void* self, void* request);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntryDetails)
 ///
@@ -277,6 +317,10 @@ void k_nscore__provider_load_entry_details(void* self, void* param1);
 ///
 void k_nscore__provider_on_load_entry_details(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_load_entry_details` instead
+///
+#define k_nscore__provider_qbase_load_entry_details k_nscore__provider_super_load_entry_details
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadEntryDetails)
 ///
 /// Base class method implementation
@@ -284,7 +328,7 @@ void k_nscore__provider_on_load_entry_details(void* self, void (*callback)(void*
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_qbase_load_entry_details(void* self, void* param1);
+void k_nscore__provider_super_load_entry_details(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPayloadLink)
 ///
@@ -303,6 +347,10 @@ void k_nscore__provider_load_payload_link(void* self, void* entry, int linkId);
 ///
 void k_nscore__provider_on_load_payload_link(void* self, void (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_load_payload_link` instead
+///
+#define k_nscore__provider_qbase_load_payload_link k_nscore__provider_super_load_payload_link
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPayloadLink)
 ///
 /// Base class method implementation
@@ -311,7 +359,7 @@ void k_nscore__provider_on_load_payload_link(void* self, void (*callback)(void*,
 /// @param entry KNSCore__Entry*
 /// @param linkId int
 ///
-void k_nscore__provider_qbase_load_payload_link(void* self, void* entry, int linkId);
+void k_nscore__provider_super_load_payload_link(void* self, void* entry, int linkId);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadComments)
 ///
@@ -331,6 +379,10 @@ void k_nscore__provider_load_comments(void* self, void* param1, int param2, int 
 ///
 void k_nscore__provider_on_load_comments(void* self, void (*callback)(void*, void*, int, int));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_load_comments` instead
+///
+#define k_nscore__provider_qbase_load_comments k_nscore__provider_super_load_comments
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadComments)
 ///
 /// Base class method implementation
@@ -340,7 +392,7 @@ void k_nscore__provider_on_load_comments(void* self, void (*callback)(void*, voi
 /// @param param2 int
 /// @param param3 int
 ///
-void k_nscore__provider_qbase_load_comments(void* self, void* param1, int param2, int param3);
+void k_nscore__provider_super_load_comments(void* self, void* param1, int param2, int param3);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPerson)
 ///
@@ -358,6 +410,10 @@ void k_nscore__provider_load_person(void* self, const char* param1);
 ///
 void k_nscore__provider_on_load_person(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_load_person` instead
+///
+#define k_nscore__provider_qbase_load_person k_nscore__provider_super_load_person
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadPerson)
 ///
 /// Base class method implementation
@@ -365,7 +421,7 @@ void k_nscore__provider_on_load_person(void* self, void (*callback)(void*, const
 /// @param self KNSCore__Provider*
 /// @param param1 const char*
 ///
-void k_nscore__provider_qbase_load_person(void* self, const char* param1);
+void k_nscore__provider_super_load_person(void* self, const char* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadBasics)
 ///
@@ -382,13 +438,17 @@ void k_nscore__provider_load_basics(void* self);
 ///
 void k_nscore__provider_on_load_basics(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_load_basics` instead
+///
+#define k_nscore__provider_qbase_load_basics k_nscore__provider_super_load_basics
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#loadBasics)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-void k_nscore__provider_qbase_load_basics(void* self);
+void k_nscore__provider_super_load_basics(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#version)
 ///
@@ -474,13 +534,17 @@ bool k_nscore__provider_user_can_vote(void* self);
 ///
 void k_nscore__provider_on_user_can_vote(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_user_can_vote` instead
+///
+#define k_nscore__provider_qbase_user_can_vote k_nscore__provider_super_user_can_vote
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#userCanVote)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-bool k_nscore__provider_qbase_user_can_vote(void* self);
+bool k_nscore__provider_super_user_can_vote(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#vote)
 ///
@@ -499,6 +563,10 @@ void k_nscore__provider_vote(void* self, void* param1, uint32_t param2);
 ///
 void k_nscore__provider_on_vote(void* self, void (*callback)(void*, void*, uint32_t));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_vote` instead
+///
+#define k_nscore__provider_qbase_vote k_nscore__provider_super_vote
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#vote)
 ///
 /// Base class method implementation
@@ -507,7 +575,7 @@ void k_nscore__provider_on_vote(void* self, void (*callback)(void*, void*, uint3
 /// @param param1 KNSCore__Entry*
 /// @param param2 uint32_t
 ///
-void k_nscore__provider_qbase_vote(void* self, void* param1, uint32_t param2);
+void k_nscore__provider_super_vote(void* self, void* param1, uint32_t param2);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#userCanBecomeFan)
 ///
@@ -524,13 +592,17 @@ bool k_nscore__provider_user_can_become_fan(void* self);
 ///
 void k_nscore__provider_on_user_can_become_fan(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_user_can_become_fan` instead
+///
+#define k_nscore__provider_qbase_user_can_become_fan k_nscore__provider_super_user_can_become_fan
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#userCanBecomeFan)
 ///
 /// Base class method implementation
 ///
 /// @param self KNSCore__Provider*
 ///
-bool k_nscore__provider_qbase_user_can_become_fan(void* self);
+bool k_nscore__provider_super_user_can_become_fan(void* self);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#becomeFan)
 ///
@@ -548,6 +620,10 @@ void k_nscore__provider_become_fan(void* self, void* param1);
 ///
 void k_nscore__provider_on_become_fan(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_become_fan` instead
+///
+#define k_nscore__provider_qbase_become_fan k_nscore__provider_super_become_fan
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#becomeFan)
 ///
 /// Base class method implementation
@@ -555,7 +631,7 @@ void k_nscore__provider_on_become_fan(void* self, void (*callback)(void*, void*)
 /// @param self KNSCore__Provider*
 /// @param param1 KNSCore__Entry*
 ///
-void k_nscore__provider_qbase_become_fan(void* self, void* param1);
+void k_nscore__provider_super_become_fan(void* self, void* param1);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setTagFilter)
 ///
@@ -785,6 +861,10 @@ void k_nscore__provider_set_name(void* self, const char* name);
 ///
 void k_nscore__provider_on_set_name(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_set_name` instead
+///
+#define k_nscore__provider_qbase_set_name k_nscore__provider_super_set_name
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setName)
 ///
 /// Base class method implementation
@@ -792,7 +872,7 @@ void k_nscore__provider_on_set_name(void* self, void (*callback)(void*, const ch
 /// @param self KNSCore__Provider*
 /// @param name const char*
 ///
-void k_nscore__provider_qbase_set_name(void* self, const char* name);
+void k_nscore__provider_super_set_name(void* self, const char* name);
 
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setIcon)
 ///
@@ -810,6 +890,10 @@ void k_nscore__provider_set_icon(void* self, void* icon);
 ///
 void k_nscore__provider_on_set_icon(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_set_icon` instead
+///
+#define k_nscore__provider_qbase_set_icon k_nscore__provider_super_set_icon
+
 /// [Upstream resources](https://api.kde.org/knscore-provider.html#setIcon)
 ///
 /// Base class method implementation
@@ -817,7 +901,7 @@ void k_nscore__provider_on_set_icon(void* self, void (*callback)(void*, void*));
 /// @param self KNSCore__Provider*
 /// @param icon QUrl*
 ///
-void k_nscore__provider_qbase_set_icon(void* self, void* icon);
+void k_nscore__provider_super_set_icon(void* self, void* icon);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1296,6 +1380,10 @@ void k_nscore__provider_on_destroyed1(void* self, void (*callback)(void*, void*)
 ///
 bool k_nscore__provider_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_event` instead
+///
+#define k_nscore__provider_qbase_event k_nscore__provider_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1305,7 +1393,7 @@ bool k_nscore__provider_event(void* self, void* event);
 /// @param self KNSCore__Provider*
 /// @param event QEvent*
 ///
-bool k_nscore__provider_qbase_event(void* self, void* event);
+bool k_nscore__provider_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1330,6 +1418,10 @@ void k_nscore__provider_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_nscore__provider_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_event_filter` instead
+///
+#define k_nscore__provider_qbase_event_filter k_nscore__provider_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1340,7 +1432,7 @@ bool k_nscore__provider_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_nscore__provider_qbase_event_filter(void* self, void* watched, void* event);
+bool k_nscore__provider_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1364,6 +1456,10 @@ void k_nscore__provider_on_event_filter(void* self, bool (*callback)(void*, void
 ///
 void k_nscore__provider_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_timer_event` instead
+///
+#define k_nscore__provider_qbase_timer_event k_nscore__provider_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1373,7 +1469,7 @@ void k_nscore__provider_timer_event(void* self, void* event);
 /// @param self KNSCore__Provider*
 /// @param event QTimerEvent*
 ///
-void k_nscore__provider_qbase_timer_event(void* self, void* event);
+void k_nscore__provider_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1397,6 +1493,10 @@ void k_nscore__provider_on_timer_event(void* self, void (*callback)(void*, void*
 ///
 void k_nscore__provider_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_child_event` instead
+///
+#define k_nscore__provider_qbase_child_event k_nscore__provider_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1406,7 +1506,7 @@ void k_nscore__provider_child_event(void* self, void* event);
 /// @param self KNSCore__Provider*
 /// @param event QChildEvent*
 ///
-void k_nscore__provider_qbase_child_event(void* self, void* event);
+void k_nscore__provider_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1430,6 +1530,10 @@ void k_nscore__provider_on_child_event(void* self, void (*callback)(void*, void*
 ///
 void k_nscore__provider_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_custom_event` instead
+///
+#define k_nscore__provider_qbase_custom_event k_nscore__provider_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1439,7 +1543,7 @@ void k_nscore__provider_custom_event(void* self, void* event);
 /// @param self KNSCore__Provider*
 /// @param event QEvent*
 ///
-void k_nscore__provider_qbase_custom_event(void* self, void* event);
+void k_nscore__provider_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1463,6 +1567,10 @@ void k_nscore__provider_on_custom_event(void* self, void (*callback)(void*, void
 ///
 void k_nscore__provider_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_connect_notify` instead
+///
+#define k_nscore__provider_qbase_connect_notify k_nscore__provider_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1472,7 +1580,7 @@ void k_nscore__provider_connect_notify(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__provider_qbase_connect_notify(void* self, void* signal);
+void k_nscore__provider_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1496,6 +1604,10 @@ void k_nscore__provider_on_connect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_nscore__provider_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_disconnect_notify` instead
+///
+#define k_nscore__provider_qbase_disconnect_notify k_nscore__provider_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1505,7 +1617,7 @@ void k_nscore__provider_disconnect_notify(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-void k_nscore__provider_qbase_disconnect_notify(void* self, void* signal);
+void k_nscore__provider_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1528,6 +1640,10 @@ void k_nscore__provider_on_disconnect_notify(void* self, void (*callback)(void*,
 ///
 QObject* k_nscore__provider_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_sender` instead
+///
+#define k_nscore__provider_qbase_sender k_nscore__provider_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1536,7 +1652,7 @@ QObject* k_nscore__provider_sender(void* self);
 ///
 /// @param self KNSCore__Provider*
 ///
-QObject* k_nscore__provider_qbase_sender(void* self);
+QObject* k_nscore__provider_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1559,6 +1675,10 @@ void k_nscore__provider_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_nscore__provider_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_sender_signal_index` instead
+///
+#define k_nscore__provider_qbase_sender_signal_index k_nscore__provider_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1567,7 +1687,7 @@ int32_t k_nscore__provider_sender_signal_index(void* self);
 ///
 /// @param self KNSCore__Provider*
 ///
-int32_t k_nscore__provider_qbase_sender_signal_index(void* self);
+int32_t k_nscore__provider_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1591,6 +1711,10 @@ void k_nscore__provider_on_sender_signal_index(void* self, int32_t (*callback)()
 ///
 int32_t k_nscore__provider_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_receivers` instead
+///
+#define k_nscore__provider_qbase_receivers k_nscore__provider_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1600,7 +1724,7 @@ int32_t k_nscore__provider_receivers(void* self, const char* signal);
 /// @param self KNSCore__Provider*
 /// @param signal const char*
 ///
-int32_t k_nscore__provider_qbase_receivers(void* self, const char* signal);
+int32_t k_nscore__provider_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1624,6 +1748,10 @@ void k_nscore__provider_on_receivers(void* self, int32_t (*callback)(void*, cons
 ///
 bool k_nscore__provider_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_nscore__provider_super_is_signal_connected` instead
+///
+#define k_nscore__provider_qbase_is_signal_connected k_nscore__provider_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1633,7 +1761,7 @@ bool k_nscore__provider_is_signal_connected(void* self, void* signal);
 /// @param self KNSCore__Provider*
 /// @param signal QMetaMethod*
 ///
-bool k_nscore__provider_qbase_is_signal_connected(void* self, void* signal);
+bool k_nscore__provider_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

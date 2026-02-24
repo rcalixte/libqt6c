@@ -411,8 +411,8 @@ bool k_desktopfile_sync(void* self) {
     return KDesktopFile_Sync((KDesktopFile*)self);
 }
 
-bool k_desktopfile_qbase_sync(void* self) {
-    return KDesktopFile_QBaseSync((KDesktopFile*)self);
+bool k_desktopfile_super_sync(void* self) {
+    return KDesktopFile_SuperSync((KDesktopFile*)self);
 }
 
 void k_desktopfile_on_sync(void* self, bool (*callback)()) {
@@ -423,8 +423,8 @@ void k_desktopfile_mark_as_clean(void* self) {
     KDesktopFile_MarkAsClean((KDesktopFile*)self);
 }
 
-void k_desktopfile_qbase_mark_as_clean(void* self) {
-    KDesktopFile_QBaseMarkAsClean((KDesktopFile*)self);
+void k_desktopfile_super_mark_as_clean(void* self) {
+    KDesktopFile_SuperMarkAsClean((KDesktopFile*)self);
 }
 
 void k_desktopfile_on_mark_as_clean(void* self, void (*callback)()) {
@@ -435,8 +435,8 @@ int32_t k_desktopfile_access_mode(void* self) {
     return KDesktopFile_AccessMode((KDesktopFile*)self);
 }
 
-int32_t k_desktopfile_qbase_access_mode(void* self) {
-    return KDesktopFile_QBaseAccessMode((KDesktopFile*)self);
+int32_t k_desktopfile_super_access_mode(void* self) {
+    return KDesktopFile_SuperAccessMode((KDesktopFile*)self);
 }
 
 void k_desktopfile_on_access_mode(void* self, int32_t (*callback)()) {
@@ -447,8 +447,8 @@ bool k_desktopfile_is_immutable(void* self) {
     return KDesktopFile_IsImmutable((KDesktopFile*)self);
 }
 
-bool k_desktopfile_qbase_is_immutable(void* self) {
-    return KDesktopFile_QBaseIsImmutable((KDesktopFile*)self);
+bool k_desktopfile_super_is_immutable(void* self) {
+    return KDesktopFile_SuperIsImmutable((KDesktopFile*)self);
 }
 
 void k_desktopfile_on_is_immutable(void* self, bool (*callback)()) {
@@ -474,8 +474,8 @@ const char** k_desktopfile_group_list(void* self) {
     return _ret;
 }
 
-const char** k_desktopfile_qbase_group_list(void* self) {
-    libqt_list _arr = KDesktopFile_QBaseGroupList((KDesktopFile*)self);
+const char** k_desktopfile_super_group_list(void* self) {
+    libqt_list _arr = KDesktopFile_SuperGroupList((KDesktopFile*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -501,8 +501,8 @@ bool k_desktopfile_has_group_impl(void* self, const char* groupName) {
     return KDesktopFile_HasGroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-bool k_desktopfile_qbase_has_group_impl(void* self, const char* groupName) {
-    return KDesktopFile_QBaseHasGroupImpl((KDesktopFile*)self, qstring(groupName));
+bool k_desktopfile_super_has_group_impl(void* self, const char* groupName) {
+    return KDesktopFile_SuperHasGroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
 void k_desktopfile_on_has_group_impl(void* self, bool (*callback)(void*, const char*)) {
@@ -513,8 +513,8 @@ KConfigGroup* k_desktopfile_group_impl(void* self, const char* groupName) {
     return KDesktopFile_GroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-KConfigGroup* k_desktopfile_qbase_group_impl(void* self, const char* groupName) {
-    return KDesktopFile_QBaseGroupImpl((KDesktopFile*)self, qstring(groupName));
+KConfigGroup* k_desktopfile_super_group_impl(void* self, const char* groupName) {
+    return KDesktopFile_SuperGroupImpl((KDesktopFile*)self, qstring(groupName));
 }
 
 void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*)) {
@@ -525,8 +525,8 @@ void k_desktopfile_delete_group_impl(void* self, const char* groupName, int32_t 
     KDesktopFile_DeleteGroupImpl((KDesktopFile*)self, qstring(groupName), flags);
 }
 
-void k_desktopfile_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags) {
-    KDesktopFile_QBaseDeleteGroupImpl((KDesktopFile*)self, qstring(groupName), flags);
+void k_desktopfile_super_delete_group_impl(void* self, const char* groupName, int32_t flags) {
+    KDesktopFile_SuperDeleteGroupImpl((KDesktopFile*)self, qstring(groupName), flags);
 }
 
 void k_desktopfile_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t)) {
@@ -537,8 +537,8 @@ bool k_desktopfile_is_group_immutable_impl(void* self, const char* groupName) {
     return KDesktopFile_IsGroupImmutableImpl((KDesktopFile*)self, qstring(groupName));
 }
 
-bool k_desktopfile_qbase_is_group_immutable_impl(void* self, const char* groupName) {
-    return KDesktopFile_QBaseIsGroupImmutableImpl((KDesktopFile*)self, qstring(groupName));
+bool k_desktopfile_super_is_group_immutable_impl(void* self, const char* groupName) {
+    return KDesktopFile_SuperIsGroupImmutableImpl((KDesktopFile*)self, qstring(groupName));
 }
 
 void k_desktopfile_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*)) {
@@ -549,8 +549,8 @@ void k_desktopfile_virtual_hook(void* self, int id, void* data) {
     KDesktopFile_VirtualHook((KDesktopFile*)self, id, data);
 }
 
-void k_desktopfile_qbase_virtual_hook(void* self, int id, void* data) {
-    KDesktopFile_QBaseVirtualHook((KDesktopFile*)self, id, data);
+void k_desktopfile_super_virtual_hook(void* self, int id, void* data) {
+    KDesktopFile_SuperVirtualHook((KDesktopFile*)self, id, data);
 }
 
 void k_desktopfile_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {

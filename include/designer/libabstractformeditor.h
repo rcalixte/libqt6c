@@ -40,13 +40,17 @@ const QMetaObject* q_designerformeditorinterface_meta_object(void* self);
 ///
 void q_designerformeditorinterface_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_meta_object` instead
+///
+#define q_designerformeditorinterface_qbase_meta_object q_designerformeditorinterface_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerFormEditorInterface*
 ///
-const QMetaObject* q_designerformeditorinterface_qbase_meta_object(void* self);
+const QMetaObject* q_designerformeditorinterface_super_meta_object(void* self);
 
 /// @param self QDesignerFormEditorInterface*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_designerformeditorinterface_metacast(void* self, const char* param1);
 ///
 void q_designerformeditorinterface_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_metacast` instead
+///
+#define q_designerformeditorinterface_qbase_metacast q_designerformeditorinterface_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QDesignerFormEditorInterface*
 /// @param param1 const char*
 ///
-void* q_designerformeditorinterface_qbase_metacast(void* self, const char* param1);
+void* q_designerformeditorinterface_super_metacast(void* self, const char* param1);
 
 /// @param self QDesignerFormEditorInterface*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_designerformeditorinterface_metacall(void* self, int32_t param1, int p
 ///
 void q_designerformeditorinterface_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_metacall` instead
+///
+#define q_designerformeditorinterface_qbase_metacall q_designerformeditorinterface_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QDesignerFormEditorInterface*
@@ -88,7 +100,7 @@ void q_designerformeditorinterface_on_metacall(void* self, int32_t (*callback)(v
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_designerformeditorinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_designerformeditorinterface_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -278,6 +290,10 @@ void q_designerformeditorinterface_set_form_manager(void* self, void* formWindow
 ///
 void q_designerformeditorinterface_on_set_form_manager(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_set_form_manager` instead
+///
+#define q_designerformeditorinterface_qbase_set_form_manager q_designerformeditorinterface_super_set_form_manager
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setFormManager)
 ///
 /// Base class method implementation
@@ -285,7 +301,7 @@ void q_designerformeditorinterface_on_set_form_manager(void* self, void (*callba
 /// @param self QDesignerFormEditorInterface*
 /// @param formWindowManager QDesignerFormWindowManagerInterface*
 ///
-void q_designerformeditorinterface_qbase_set_form_manager(void* self, void* formWindowManager);
+void q_designerformeditorinterface_super_set_form_manager(void* self, void* formWindowManager);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setMetaDataBase)
 ///
@@ -303,6 +319,10 @@ void q_designerformeditorinterface_set_meta_data_base(void* self, void* metaData
 ///
 void q_designerformeditorinterface_on_set_meta_data_base(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_set_meta_data_base` instead
+///
+#define q_designerformeditorinterface_qbase_set_meta_data_base q_designerformeditorinterface_super_set_meta_data_base
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setMetaDataBase)
 ///
 /// Base class method implementation
@@ -310,7 +330,7 @@ void q_designerformeditorinterface_on_set_meta_data_base(void* self, void (*call
 /// @param self QDesignerFormEditorInterface*
 /// @param metaDataBase QDesignerMetaDataBaseInterface*
 ///
-void q_designerformeditorinterface_qbase_set_meta_data_base(void* self, void* metaDataBase);
+void q_designerformeditorinterface_super_set_meta_data_base(void* self, void* metaDataBase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setWidgetDataBase)
 ///
@@ -328,6 +348,10 @@ void q_designerformeditorinterface_set_widget_data_base(void* self, void* widget
 ///
 void q_designerformeditorinterface_on_set_widget_data_base(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_set_widget_data_base` instead
+///
+#define q_designerformeditorinterface_qbase_set_widget_data_base q_designerformeditorinterface_super_set_widget_data_base
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setWidgetDataBase)
 ///
 /// Base class method implementation
@@ -335,7 +359,7 @@ void q_designerformeditorinterface_on_set_widget_data_base(void* self, void (*ca
 /// @param self QDesignerFormEditorInterface*
 /// @param widgetDataBase QDesignerWidgetDataBaseInterface*
 ///
-void q_designerformeditorinterface_qbase_set_widget_data_base(void* self, void* widgetDataBase);
+void q_designerformeditorinterface_super_set_widget_data_base(void* self, void* widgetDataBase);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setPromotion)
 ///
@@ -353,6 +377,10 @@ void q_designerformeditorinterface_set_promotion(void* self, void* promotion);
 ///
 void q_designerformeditorinterface_on_set_promotion(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_set_promotion` instead
+///
+#define q_designerformeditorinterface_qbase_set_promotion q_designerformeditorinterface_super_set_promotion
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setPromotion)
 ///
 /// Base class method implementation
@@ -360,7 +388,7 @@ void q_designerformeditorinterface_on_set_promotion(void* self, void (*callback)
 /// @param self QDesignerFormEditorInterface*
 /// @param promotion QDesignerPromotionInterface*
 ///
-void q_designerformeditorinterface_qbase_set_promotion(void* self, void* promotion);
+void q_designerformeditorinterface_super_set_promotion(void* self, void* promotion);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setWidgetFactory)
 ///
@@ -378,6 +406,10 @@ void q_designerformeditorinterface_set_widget_factory(void* self, void* widgetFa
 ///
 void q_designerformeditorinterface_on_set_widget_factory(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_set_widget_factory` instead
+///
+#define q_designerformeditorinterface_qbase_set_widget_factory q_designerformeditorinterface_super_set_widget_factory
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setWidgetFactory)
 ///
 /// Base class method implementation
@@ -385,7 +417,7 @@ void q_designerformeditorinterface_on_set_widget_factory(void* self, void (*call
 /// @param self QDesignerFormEditorInterface*
 /// @param widgetFactory QDesignerWidgetFactoryInterface*
 ///
-void q_designerformeditorinterface_qbase_set_widget_factory(void* self, void* widgetFactory);
+void q_designerformeditorinterface_super_set_widget_factory(void* self, void* widgetFactory);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setExtensionManager)
 ///
@@ -403,6 +435,10 @@ void q_designerformeditorinterface_set_extension_manager(void* self, void* exten
 ///
 void q_designerformeditorinterface_on_set_extension_manager(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_set_extension_manager` instead
+///
+#define q_designerformeditorinterface_qbase_set_extension_manager q_designerformeditorinterface_super_set_extension_manager
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignerformeditorinterface.html#setExtensionManager)
 ///
 /// Base class method implementation
@@ -410,7 +446,7 @@ void q_designerformeditorinterface_on_set_extension_manager(void* self, void (*c
 /// @param self QDesignerFormEditorInterface*
 /// @param extensionManager QExtensionManager*
 ///
-void q_designerformeditorinterface_qbase_set_extension_manager(void* self, void* extensionManager);
+void q_designerformeditorinterface_super_set_extension_manager(void* self, void* extensionManager);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -889,6 +925,10 @@ void q_designerformeditorinterface_on_destroyed1(void* self, void (*callback)(vo
 ///
 bool q_designerformeditorinterface_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_event` instead
+///
+#define q_designerformeditorinterface_qbase_event q_designerformeditorinterface_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -898,7 +938,7 @@ bool q_designerformeditorinterface_event(void* self, void* event);
 /// @param self QDesignerFormEditorInterface*
 /// @param event QEvent*
 ///
-bool q_designerformeditorinterface_qbase_event(void* self, void* event);
+bool q_designerformeditorinterface_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -923,6 +963,10 @@ void q_designerformeditorinterface_on_event(void* self, bool (*callback)(void*, 
 ///
 bool q_designerformeditorinterface_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_event_filter` instead
+///
+#define q_designerformeditorinterface_qbase_event_filter q_designerformeditorinterface_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -933,7 +977,7 @@ bool q_designerformeditorinterface_event_filter(void* self, void* watched, void*
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_designerformeditorinterface_qbase_event_filter(void* self, void* watched, void* event);
+bool q_designerformeditorinterface_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -957,6 +1001,10 @@ void q_designerformeditorinterface_on_event_filter(void* self, bool (*callback)(
 ///
 void q_designerformeditorinterface_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_timer_event` instead
+///
+#define q_designerformeditorinterface_qbase_timer_event q_designerformeditorinterface_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -966,7 +1014,7 @@ void q_designerformeditorinterface_timer_event(void* self, void* event);
 /// @param self QDesignerFormEditorInterface*
 /// @param event QTimerEvent*
 ///
-void q_designerformeditorinterface_qbase_timer_event(void* self, void* event);
+void q_designerformeditorinterface_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -990,6 +1038,10 @@ void q_designerformeditorinterface_on_timer_event(void* self, void (*callback)(v
 ///
 void q_designerformeditorinterface_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_child_event` instead
+///
+#define q_designerformeditorinterface_qbase_child_event q_designerformeditorinterface_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -999,7 +1051,7 @@ void q_designerformeditorinterface_child_event(void* self, void* event);
 /// @param self QDesignerFormEditorInterface*
 /// @param event QChildEvent*
 ///
-void q_designerformeditorinterface_qbase_child_event(void* self, void* event);
+void q_designerformeditorinterface_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1023,6 +1075,10 @@ void q_designerformeditorinterface_on_child_event(void* self, void (*callback)(v
 ///
 void q_designerformeditorinterface_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_custom_event` instead
+///
+#define q_designerformeditorinterface_qbase_custom_event q_designerformeditorinterface_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1032,7 +1088,7 @@ void q_designerformeditorinterface_custom_event(void* self, void* event);
 /// @param self QDesignerFormEditorInterface*
 /// @param event QEvent*
 ///
-void q_designerformeditorinterface_qbase_custom_event(void* self, void* event);
+void q_designerformeditorinterface_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1056,6 +1112,10 @@ void q_designerformeditorinterface_on_custom_event(void* self, void (*callback)(
 ///
 void q_designerformeditorinterface_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_connect_notify` instead
+///
+#define q_designerformeditorinterface_qbase_connect_notify q_designerformeditorinterface_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1065,7 +1125,7 @@ void q_designerformeditorinterface_connect_notify(void* self, void* signal);
 /// @param self QDesignerFormEditorInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerformeditorinterface_qbase_connect_notify(void* self, void* signal);
+void q_designerformeditorinterface_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1089,6 +1149,10 @@ void q_designerformeditorinterface_on_connect_notify(void* self, void (*callback
 ///
 void q_designerformeditorinterface_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_disconnect_notify` instead
+///
+#define q_designerformeditorinterface_qbase_disconnect_notify q_designerformeditorinterface_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1098,7 +1162,7 @@ void q_designerformeditorinterface_disconnect_notify(void* self, void* signal);
 /// @param self QDesignerFormEditorInterface*
 /// @param signal QMetaMethod*
 ///
-void q_designerformeditorinterface_qbase_disconnect_notify(void* self, void* signal);
+void q_designerformeditorinterface_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1121,6 +1185,10 @@ void q_designerformeditorinterface_on_disconnect_notify(void* self, void (*callb
 ///
 QObject* q_designerformeditorinterface_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_sender` instead
+///
+#define q_designerformeditorinterface_qbase_sender q_designerformeditorinterface_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1129,7 +1197,7 @@ QObject* q_designerformeditorinterface_sender(void* self);
 ///
 /// @param self QDesignerFormEditorInterface*
 ///
-QObject* q_designerformeditorinterface_qbase_sender(void* self);
+QObject* q_designerformeditorinterface_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1152,6 +1220,10 @@ void q_designerformeditorinterface_on_sender(void* self, QObject* (*callback)())
 ///
 int32_t q_designerformeditorinterface_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_sender_signal_index` instead
+///
+#define q_designerformeditorinterface_qbase_sender_signal_index q_designerformeditorinterface_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1160,7 +1232,7 @@ int32_t q_designerformeditorinterface_sender_signal_index(void* self);
 ///
 /// @param self QDesignerFormEditorInterface*
 ///
-int32_t q_designerformeditorinterface_qbase_sender_signal_index(void* self);
+int32_t q_designerformeditorinterface_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1184,6 +1256,10 @@ void q_designerformeditorinterface_on_sender_signal_index(void* self, int32_t (*
 ///
 int32_t q_designerformeditorinterface_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_receivers` instead
+///
+#define q_designerformeditorinterface_qbase_receivers q_designerformeditorinterface_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1193,7 +1269,7 @@ int32_t q_designerformeditorinterface_receivers(void* self, const char* signal);
 /// @param self QDesignerFormEditorInterface*
 /// @param signal const char*
 ///
-int32_t q_designerformeditorinterface_qbase_receivers(void* self, const char* signal);
+int32_t q_designerformeditorinterface_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1217,6 +1293,10 @@ void q_designerformeditorinterface_on_receivers(void* self, int32_t (*callback)(
 ///
 bool q_designerformeditorinterface_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_designerformeditorinterface_super_is_signal_connected` instead
+///
+#define q_designerformeditorinterface_qbase_is_signal_connected q_designerformeditorinterface_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1226,7 +1306,7 @@ bool q_designerformeditorinterface_is_signal_connected(void* self, void* signal)
 /// @param self QDesignerFormEditorInterface*
 /// @param signal QMetaMethod*
 ///
-bool q_designerformeditorinterface_qbase_is_signal_connected(void* self, void* signal);
+bool q_designerformeditorinterface_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

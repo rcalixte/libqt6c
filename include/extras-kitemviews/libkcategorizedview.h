@@ -40,13 +40,17 @@ const QMetaObject* k_categorizedview_meta_object(void* self);
 ///
 void k_categorizedview_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_meta_object` instead
+///
+#define k_categorizedview_qbase_meta_object k_categorizedview_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 ///
-const QMetaObject* k_categorizedview_qbase_meta_object(void* self);
+const QMetaObject* k_categorizedview_super_meta_object(void* self);
 
 /// @param self KCategorizedView*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_categorizedview_metacast(void* self, const char* param1);
 ///
 void k_categorizedview_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_metacast` instead
+///
+#define k_categorizedview_qbase_metacast k_categorizedview_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 /// @param param1 const char*
 ///
-void* k_categorizedview_qbase_metacast(void* self, const char* param1);
+void* k_categorizedview_super_metacast(void* self, const char* param1);
 
 /// @param self KCategorizedView*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_categorizedview_metacall(void* self, int32_t param1, int param2, void*
 ///
 void k_categorizedview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_metacall` instead
+///
+#define k_categorizedview_qbase_metacall k_categorizedview_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
@@ -88,7 +100,7 @@ void k_categorizedview_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_categorizedview_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_categorizedview_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ void k_categorizedview_set_model(void* self, void* model);
 ///
 void k_categorizedview_on_set_model(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_model` instead
+///
+#define k_categorizedview_qbase_set_model k_categorizedview_super_set_model
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setModel)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void k_categorizedview_on_set_model(void* self, void (*callback)(void*, void*));
 /// @param self KCategorizedView*
 /// @param model QAbstractItemModel*
 ///
-void k_categorizedview_qbase_set_model(void* self, void* model);
+void k_categorizedview_super_set_model(void* self, void* model);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setGridSize)
 ///
@@ -153,6 +169,10 @@ QRect* k_categorizedview_visual_rect(void* self, void* index);
 ///
 void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_visual_rect` instead
+///
+#define k_categorizedview_qbase_visual_rect k_categorizedview_super_visual_rect
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#visualRect)
 ///
 /// Base class method implementation
@@ -160,7 +180,7 @@ void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-QRect* k_categorizedview_qbase_visual_rect(void* self, void* index);
+QRect* k_categorizedview_super_visual_rect(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#categoryDrawer)
 ///
@@ -248,6 +268,10 @@ QModelIndex* k_categorizedview_index_at(void* self, void* point);
 ///
 void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_index_at` instead
+///
+#define k_categorizedview_qbase_index_at k_categorizedview_super_index_at
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#indexAt)
 ///
 /// Base class method implementation
@@ -255,7 +279,7 @@ void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, v
 /// @param self KCategorizedView*
 /// @param point QPoint*
 ///
-QModelIndex* k_categorizedview_qbase_index_at(void* self, void* point);
+QModelIndex* k_categorizedview_super_index_at(void* self, void* point);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#reset)
 ///
@@ -272,13 +296,17 @@ void k_categorizedview_reset(void* self);
 ///
 void k_categorizedview_on_reset(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_reset` instead
+///
+#define k_categorizedview_qbase_reset k_categorizedview_super_reset
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#reset)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_reset(void* self);
+void k_categorizedview_super_reset(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#categorySpacingChanged)
 ///
@@ -338,6 +366,10 @@ void k_categorizedview_paint_event(void* self, void* event);
 ///
 void k_categorizedview_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_paint_event` instead
+///
+#define k_categorizedview_qbase_paint_event k_categorizedview_super_paint_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#paintEvent)
 ///
 /// Base class method implementation
@@ -345,7 +377,7 @@ void k_categorizedview_on_paint_event(void* self, void (*callback)(void*, void*)
 /// @param self KCategorizedView*
 /// @param event QPaintEvent*
 ///
-void k_categorizedview_qbase_paint_event(void* self, void* event);
+void k_categorizedview_super_paint_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#resizeEvent)
 ///
@@ -363,6 +395,10 @@ void k_categorizedview_resize_event(void* self, void* event);
 ///
 void k_categorizedview_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_resize_event` instead
+///
+#define k_categorizedview_qbase_resize_event k_categorizedview_super_resize_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -370,7 +406,7 @@ void k_categorizedview_on_resize_event(void* self, void (*callback)(void*, void*
 /// @param self KCategorizedView*
 /// @param event QResizeEvent*
 ///
-void k_categorizedview_qbase_resize_event(void* self, void* event);
+void k_categorizedview_super_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
@@ -389,6 +425,10 @@ void k_categorizedview_set_selection(void* self, void* rect, int32_t flags);
 ///
 void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_selection` instead
+///
+#define k_categorizedview_qbase_set_selection k_categorizedview_super_set_selection
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#setSelection)
 ///
 /// Base class method implementation
@@ -397,7 +437,7 @@ void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void
 /// @param rect QRect*
 /// @param flags flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_categorizedview_qbase_set_selection(void* self, void* rect, int32_t flags);
+void k_categorizedview_super_set_selection(void* self, void* rect, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
@@ -415,6 +455,10 @@ void k_categorizedview_mouse_move_event(void* self, void* event);
 ///
 void k_categorizedview_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_mouse_move_event` instead
+///
+#define k_categorizedview_qbase_mouse_move_event k_categorizedview_super_mouse_move_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mouseMoveEvent)
 ///
 /// Base class method implementation
@@ -422,7 +466,7 @@ void k_categorizedview_on_mouse_move_event(void* self, void (*callback)(void*, v
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 ///
-void k_categorizedview_qbase_mouse_move_event(void* self, void* event);
+void k_categorizedview_super_mouse_move_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mousePressEvent)
 ///
@@ -440,6 +484,10 @@ void k_categorizedview_mouse_press_event(void* self, void* event);
 ///
 void k_categorizedview_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_mouse_press_event` instead
+///
+#define k_categorizedview_qbase_mouse_press_event k_categorizedview_super_mouse_press_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -447,7 +495,7 @@ void k_categorizedview_on_mouse_press_event(void* self, void (*callback)(void*, 
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 ///
-void k_categorizedview_qbase_mouse_press_event(void* self, void* event);
+void k_categorizedview_super_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mouseReleaseEvent)
 ///
@@ -465,6 +513,10 @@ void k_categorizedview_mouse_release_event(void* self, void* event);
 ///
 void k_categorizedview_on_mouse_release_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_mouse_release_event` instead
+///
+#define k_categorizedview_qbase_mouse_release_event k_categorizedview_super_mouse_release_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#mouseReleaseEvent)
 ///
 /// Base class method implementation
@@ -472,7 +524,7 @@ void k_categorizedview_on_mouse_release_event(void* self, void (*callback)(void*
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 ///
-void k_categorizedview_qbase_mouse_release_event(void* self, void* event);
+void k_categorizedview_super_mouse_release_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#leaveEvent)
 ///
@@ -490,6 +542,10 @@ void k_categorizedview_leave_event(void* self, void* event);
 ///
 void k_categorizedview_on_leave_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_leave_event` instead
+///
+#define k_categorizedview_qbase_leave_event k_categorizedview_super_leave_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#leaveEvent)
 ///
 /// Base class method implementation
@@ -497,7 +553,7 @@ void k_categorizedview_on_leave_event(void* self, void (*callback)(void*, void*)
 /// @param self KCategorizedView*
 /// @param event QEvent*
 ///
-void k_categorizedview_qbase_leave_event(void* self, void* event);
+void k_categorizedview_super_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#startDrag)
 ///
@@ -515,6 +571,10 @@ void k_categorizedview_start_drag(void* self, int32_t supportedActions);
 ///
 void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_start_drag` instead
+///
+#define k_categorizedview_qbase_start_drag k_categorizedview_super_start_drag
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#startDrag)
 ///
 /// Base class method implementation
@@ -522,7 +582,7 @@ void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t
 /// @param self KCategorizedView*
 /// @param supportedActions flag of enum Qt__DropAction
 ///
-void k_categorizedview_qbase_start_drag(void* self, int32_t supportedActions);
+void k_categorizedview_super_start_drag(void* self, int32_t supportedActions);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dragMoveEvent)
 ///
@@ -540,6 +600,10 @@ void k_categorizedview_drag_move_event(void* self, void* event);
 ///
 void k_categorizedview_on_drag_move_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_drag_move_event` instead
+///
+#define k_categorizedview_qbase_drag_move_event k_categorizedview_super_drag_move_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dragMoveEvent)
 ///
 /// Base class method implementation
@@ -547,7 +611,7 @@ void k_categorizedview_on_drag_move_event(void* self, void (*callback)(void*, vo
 /// @param self KCategorizedView*
 /// @param event QDragMoveEvent*
 ///
-void k_categorizedview_qbase_drag_move_event(void* self, void* event);
+void k_categorizedview_super_drag_move_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dragEnterEvent)
 ///
@@ -565,6 +629,10 @@ void k_categorizedview_drag_enter_event(void* self, void* event);
 ///
 void k_categorizedview_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_drag_enter_event` instead
+///
+#define k_categorizedview_qbase_drag_enter_event k_categorizedview_super_drag_enter_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dragEnterEvent)
 ///
 /// Base class method implementation
@@ -572,7 +640,7 @@ void k_categorizedview_on_drag_enter_event(void* self, void (*callback)(void*, v
 /// @param self KCategorizedView*
 /// @param event QDragEnterEvent*
 ///
-void k_categorizedview_qbase_drag_enter_event(void* self, void* event);
+void k_categorizedview_super_drag_enter_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dragLeaveEvent)
 ///
@@ -590,6 +658,10 @@ void k_categorizedview_drag_leave_event(void* self, void* event);
 ///
 void k_categorizedview_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_drag_leave_event` instead
+///
+#define k_categorizedview_qbase_drag_leave_event k_categorizedview_super_drag_leave_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dragLeaveEvent)
 ///
 /// Base class method implementation
@@ -597,7 +669,7 @@ void k_categorizedview_on_drag_leave_event(void* self, void (*callback)(void*, v
 /// @param self KCategorizedView*
 /// @param event QDragLeaveEvent*
 ///
-void k_categorizedview_qbase_drag_leave_event(void* self, void* event);
+void k_categorizedview_super_drag_leave_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dropEvent)
 ///
@@ -615,6 +687,10 @@ void k_categorizedview_drop_event(void* self, void* event);
 ///
 void k_categorizedview_on_drop_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_drop_event` instead
+///
+#define k_categorizedview_qbase_drop_event k_categorizedview_super_drop_event
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dropEvent)
 ///
 /// Base class method implementation
@@ -622,7 +698,7 @@ void k_categorizedview_on_drop_event(void* self, void (*callback)(void*, void*))
 /// @param self KCategorizedView*
 /// @param event QDropEvent*
 ///
-void k_categorizedview_qbase_drop_event(void* self, void* event);
+void k_categorizedview_super_drop_event(void* self, void* event);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#moveCursor)
 ///
@@ -641,6 +717,10 @@ QModelIndex* k_categorizedview_move_cursor(void* self, int32_t cursorAction, int
 ///
 void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_move_cursor` instead
+///
+#define k_categorizedview_qbase_move_cursor k_categorizedview_super_move_cursor
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#moveCursor)
 ///
 /// Base class method implementation
@@ -649,7 +729,7 @@ void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*
 /// @param cursorAction enum QAbstractItemView__CursorAction
 /// @param modifiers flag of enum Qt__KeyboardModifier
 ///
-QModelIndex* k_categorizedview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
+QModelIndex* k_categorizedview_super_move_cursor(void* self, int32_t cursorAction, int32_t modifiers);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
@@ -669,6 +749,10 @@ void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int st
 ///
 void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_rows_about_to_be_removed` instead
+///
+#define k_categorizedview_qbase_rows_about_to_be_removed k_categorizedview_super_rows_about_to_be_removed
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsAboutToBeRemoved)
 ///
 /// Base class method implementation
@@ -678,7 +762,7 @@ void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(
 /// @param start int
 /// @param end int
 ///
-void k_categorizedview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end);
+void k_categorizedview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
@@ -695,13 +779,17 @@ void k_categorizedview_update_geometries(void* self);
 ///
 void k_categorizedview_on_update_geometries(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_update_geometries` instead
+///
+#define k_categorizedview_qbase_update_geometries k_categorizedview_super_update_geometries
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#updateGeometries)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_update_geometries(void* self);
+void k_categorizedview_super_update_geometries(void* self);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
@@ -720,6 +808,10 @@ void k_categorizedview_current_changed(void* self, void* current, void* previous
 ///
 void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_current_changed` instead
+///
+#define k_categorizedview_qbase_current_changed k_categorizedview_super_current_changed
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#currentChanged)
 ///
 /// Base class method implementation
@@ -728,7 +820,7 @@ void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, vo
 /// @param current QModelIndex*
 /// @param previous QModelIndex*
 ///
-void k_categorizedview_qbase_current_changed(void* self, void* current, void* previous);
+void k_categorizedview_super_current_changed(void* self, void* current, void* previous);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
@@ -748,6 +840,10 @@ void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight
 ///
 void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_data_changed` instead
+///
+#define k_categorizedview_qbase_data_changed k_categorizedview_super_data_changed
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#dataChanged)
 ///
 /// Base class method implementation
@@ -757,7 +853,7 @@ void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*
 /// @param bottomRight QModelIndex*
 /// @param roles libqt_list of int
 ///
-void k_categorizedview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
+void k_categorizedview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list roles);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
@@ -777,6 +873,10 @@ void k_categorizedview_rows_inserted(void* self, void* parent, int start, int en
 ///
 void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int));
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_rows_inserted` instead
+///
+#define k_categorizedview_qbase_rows_inserted k_categorizedview_super_rows_inserted
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#rowsInserted)
 ///
 /// Base class method implementation
@@ -786,7 +886,7 @@ void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void
 /// @param start int
 /// @param end int
 ///
-void k_categorizedview_qbase_rows_inserted(void* self, void* parent, int start, int end);
+void k_categorizedview_super_rows_inserted(void* self, void* parent, int start, int end);
 
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
@@ -803,13 +903,17 @@ void k_categorizedview_slot_layout_changed(void* self);
 ///
 void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_slot_layout_changed` instead
+///
+#define k_categorizedview_qbase_slot_layout_changed k_categorizedview_super_slot_layout_changed
+
 /// [Upstream resources](https://api.kde.org/kcategorizedview.html#slotLayoutChanged)
 ///
 /// Base class method implementation
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_slot_layout_changed(void* self);
+void k_categorizedview_super_slot_layout_changed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4976,6 +5080,10 @@ int32_t k_categorizedview_encode_metric_f(int32_t metric, double value);
 ///
 void k_categorizedview_scroll_to(void* self, void* index, int32_t hint);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_scroll_to` instead
+///
+#define k_categorizedview_qbase_scroll_to k_categorizedview_super_scroll_to
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#scrollTo)
@@ -4986,7 +5094,7 @@ void k_categorizedview_scroll_to(void* self, void* index, int32_t hint);
 /// @param index QModelIndex*
 /// @param hint enum QAbstractItemView__ScrollHint
 ///
-void k_categorizedview_qbase_scroll_to(void* self, void* index, int32_t hint);
+void k_categorizedview_super_scroll_to(void* self, void* index, int32_t hint);
 
 /// Inherited from QListView
 ///
@@ -5009,6 +5117,10 @@ void k_categorizedview_on_scroll_to(void* self, void (*callback)(void*, void*, i
 ///
 void k_categorizedview_do_items_layout(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_do_items_layout` instead
+///
+#define k_categorizedview_qbase_do_items_layout k_categorizedview_super_do_items_layout
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#doItemsLayout)
@@ -5017,7 +5129,7 @@ void k_categorizedview_do_items_layout(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_do_items_layout(void* self);
+void k_categorizedview_super_do_items_layout(void* self);
 
 /// Inherited from QListView
 ///
@@ -5041,6 +5153,10 @@ void k_categorizedview_on_do_items_layout(void* self, void (*callback)());
 ///
 void k_categorizedview_set_root_index(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_root_index` instead
+///
+#define k_categorizedview_qbase_set_root_index k_categorizedview_super_set_root_index
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setRootIndex)
@@ -5050,7 +5166,7 @@ void k_categorizedview_set_root_index(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_qbase_set_root_index(void* self, void* index);
+void k_categorizedview_super_set_root_index(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -5074,6 +5190,10 @@ void k_categorizedview_on_set_root_index(void* self, void (*callback)(void*, voi
 ///
 bool k_categorizedview_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_event` instead
+///
+#define k_categorizedview_qbase_event k_categorizedview_super_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#event)
@@ -5083,7 +5203,7 @@ bool k_categorizedview_event(void* self, void* e);
 /// @param self KCategorizedView*
 /// @param e QEvent*
 ///
-bool k_categorizedview_qbase_event(void* self, void* e);
+bool k_categorizedview_super_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5108,6 +5228,10 @@ void k_categorizedview_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_categorizedview_scroll_contents_by(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_scroll_contents_by` instead
+///
+#define k_categorizedview_qbase_scroll_contents_by k_categorizedview_super_scroll_contents_by
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#scrollContentsBy)
@@ -5118,7 +5242,7 @@ void k_categorizedview_scroll_contents_by(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void k_categorizedview_qbase_scroll_contents_by(void* self, int dx, int dy);
+void k_categorizedview_super_scroll_contents_by(void* self, int dx, int dy);
 
 /// Inherited from QListView
 ///
@@ -5142,6 +5266,10 @@ void k_categorizedview_on_scroll_contents_by(void* self, void (*callback)(void*,
 ///
 void k_categorizedview_wheel_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_wheel_event` instead
+///
+#define k_categorizedview_qbase_wheel_event k_categorizedview_super_wheel_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#wheelEvent)
@@ -5151,7 +5279,7 @@ void k_categorizedview_wheel_event(void* self, void* e);
 /// @param self KCategorizedView*
 /// @param e QWheelEvent*
 ///
-void k_categorizedview_qbase_wheel_event(void* self, void* e);
+void k_categorizedview_super_wheel_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5175,6 +5303,10 @@ void k_categorizedview_on_wheel_event(void* self, void (*callback)(void*, void*)
 ///
 void k_categorizedview_timer_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_timer_event` instead
+///
+#define k_categorizedview_qbase_timer_event k_categorizedview_super_timer_event
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#timerEvent)
@@ -5184,7 +5316,7 @@ void k_categorizedview_timer_event(void* self, void* e);
 /// @param self KCategorizedView*
 /// @param e QTimerEvent*
 ///
-void k_categorizedview_qbase_timer_event(void* self, void* e);
+void k_categorizedview_super_timer_event(void* self, void* e);
 
 /// Inherited from QListView
 ///
@@ -5208,6 +5340,10 @@ void k_categorizedview_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void k_categorizedview_init_view_item_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_init_view_item_option` instead
+///
+#define k_categorizedview_qbase_init_view_item_option k_categorizedview_super_init_view_item_option
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#initViewItemOption)
@@ -5217,7 +5353,7 @@ void k_categorizedview_init_view_item_option(void* self, void* option);
 /// @param self KCategorizedView*
 /// @param option QStyleOptionViewItem*
 ///
-void k_categorizedview_qbase_init_view_item_option(void* self, void* option);
+void k_categorizedview_super_init_view_item_option(void* self, void* option);
 
 /// Inherited from QListView
 ///
@@ -5240,6 +5376,10 @@ void k_categorizedview_on_init_view_item_option(void* self, void (*callback)(voi
 ///
 int32_t k_categorizedview_horizontal_offset(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_horizontal_offset` instead
+///
+#define k_categorizedview_qbase_horizontal_offset k_categorizedview_super_horizontal_offset
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#horizontalOffset)
@@ -5248,7 +5388,7 @@ int32_t k_categorizedview_horizontal_offset(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-int32_t k_categorizedview_qbase_horizontal_offset(void* self);
+int32_t k_categorizedview_super_horizontal_offset(void* self);
 
 /// Inherited from QListView
 ///
@@ -5271,6 +5411,10 @@ void k_categorizedview_on_horizontal_offset(void* self, int32_t (*callback)());
 ///
 int32_t k_categorizedview_vertical_offset(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_vertical_offset` instead
+///
+#define k_categorizedview_qbase_vertical_offset k_categorizedview_super_vertical_offset
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#verticalOffset)
@@ -5279,7 +5423,7 @@ int32_t k_categorizedview_vertical_offset(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-int32_t k_categorizedview_qbase_vertical_offset(void* self);
+int32_t k_categorizedview_super_vertical_offset(void* self);
 
 /// Inherited from QListView
 ///
@@ -5303,6 +5447,10 @@ void k_categorizedview_on_vertical_offset(void* self, int32_t (*callback)());
 ///
 QRegion* k_categorizedview_visual_region_for_selection(void* self, void* selection);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_visual_region_for_selection` instead
+///
+#define k_categorizedview_qbase_visual_region_for_selection k_categorizedview_super_visual_region_for_selection
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#visualRegionForSelection)
@@ -5312,7 +5460,7 @@ QRegion* k_categorizedview_visual_region_for_selection(void* self, void* selecti
 /// @param self KCategorizedView*
 /// @param selection QItemSelection*
 ///
-QRegion* k_categorizedview_qbase_visual_region_for_selection(void* self, void* selection);
+QRegion* k_categorizedview_super_visual_region_for_selection(void* self, void* selection);
 
 /// Inherited from QListView
 ///
@@ -5337,6 +5485,10 @@ void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*cal
 ///
 libqt_list k_categorizedview_selected_indexes(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_selected_indexes` instead
+///
+#define k_categorizedview_qbase_selected_indexes k_categorizedview_super_selected_indexes
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectedIndexes)
@@ -5347,7 +5499,7 @@ libqt_list k_categorizedview_selected_indexes(void* self);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_categorizedview_qbase_selected_indexes(void* self);
+libqt_list k_categorizedview_super_selected_indexes(void* self);
 
 /// Inherited from QListView
 ///
@@ -5371,6 +5523,10 @@ void k_categorizedview_on_selected_indexes(void* self, libqt_list (*callback)())
 ///
 bool k_categorizedview_is_index_hidden(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_is_index_hidden` instead
+///
+#define k_categorizedview_qbase_is_index_hidden k_categorizedview_super_is_index_hidden
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#isIndexHidden)
@@ -5380,7 +5536,7 @@ bool k_categorizedview_is_index_hidden(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-bool k_categorizedview_qbase_is_index_hidden(void* self, void* index);
+bool k_categorizedview_super_is_index_hidden(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -5405,6 +5561,10 @@ void k_categorizedview_on_is_index_hidden(void* self, bool (*callback)(void*, vo
 ///
 void k_categorizedview_selection_changed(void* self, void* selected, void* deselected);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_selection_changed` instead
+///
+#define k_categorizedview_qbase_selection_changed k_categorizedview_super_selection_changed
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#selectionChanged)
@@ -5415,7 +5575,7 @@ void k_categorizedview_selection_changed(void* self, void* selected, void* desel
 /// @param selected QItemSelection*
 /// @param deselected QItemSelection*
 ///
-void k_categorizedview_qbase_selection_changed(void* self, void* selected, void* deselected);
+void k_categorizedview_super_selection_changed(void* self, void* selected, void* deselected);
 
 /// Inherited from QListView
 ///
@@ -5438,6 +5598,10 @@ void k_categorizedview_on_selection_changed(void* self, void (*callback)(void*, 
 ///
 QSize* k_categorizedview_viewport_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_viewport_size_hint` instead
+///
+#define k_categorizedview_qbase_viewport_size_hint k_categorizedview_super_viewport_size_hint
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#viewportSizeHint)
@@ -5446,7 +5610,7 @@ QSize* k_categorizedview_viewport_size_hint(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QSize* k_categorizedview_qbase_viewport_size_hint(void* self);
+QSize* k_categorizedview_super_viewport_size_hint(void* self);
 
 /// Inherited from QListView
 ///
@@ -5470,6 +5634,10 @@ void k_categorizedview_on_viewport_size_hint(void* self, QSize* (*callback)());
 ///
 void k_categorizedview_set_selection_model(void* self, void* selectionModel);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_selection_model` instead
+///
+#define k_categorizedview_qbase_set_selection_model k_categorizedview_super_set_selection_model
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setSelectionModel)
@@ -5479,7 +5647,7 @@ void k_categorizedview_set_selection_model(void* self, void* selectionModel);
 /// @param self KCategorizedView*
 /// @param selectionModel QItemSelectionModel*
 ///
-void k_categorizedview_qbase_set_selection_model(void* self, void* selectionModel);
+void k_categorizedview_super_set_selection_model(void* self, void* selectionModel);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5503,6 +5671,10 @@ void k_categorizedview_on_set_selection_model(void* self, void (*callback)(void*
 ///
 void k_categorizedview_keyboard_search(void* self, const char* search);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_keyboard_search` instead
+///
+#define k_categorizedview_qbase_keyboard_search k_categorizedview_super_keyboard_search
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyboardSearch)
@@ -5512,7 +5684,7 @@ void k_categorizedview_keyboard_search(void* self, const char* search);
 /// @param self KCategorizedView*
 /// @param search const char*
 ///
-void k_categorizedview_qbase_keyboard_search(void* self, const char* search);
+void k_categorizedview_super_keyboard_search(void* self, const char* search);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5536,6 +5708,10 @@ void k_categorizedview_on_keyboard_search(void* self, void (*callback)(void*, co
 ///
 int32_t k_categorizedview_size_hint_for_row(void* self, int row);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_size_hint_for_row` instead
+///
+#define k_categorizedview_qbase_size_hint_for_row k_categorizedview_super_size_hint_for_row
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForRow)
@@ -5545,7 +5721,7 @@ int32_t k_categorizedview_size_hint_for_row(void* self, int row);
 /// @param self KCategorizedView*
 /// @param row int
 ///
-int32_t k_categorizedview_qbase_size_hint_for_row(void* self, int row);
+int32_t k_categorizedview_super_size_hint_for_row(void* self, int row);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5569,6 +5745,10 @@ void k_categorizedview_on_size_hint_for_row(void* self, int32_t (*callback)(void
 ///
 int32_t k_categorizedview_size_hint_for_column(void* self, int column);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_size_hint_for_column` instead
+///
+#define k_categorizedview_qbase_size_hint_for_column k_categorizedview_super_size_hint_for_column
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#sizeHintForColumn)
@@ -5578,7 +5758,7 @@ int32_t k_categorizedview_size_hint_for_column(void* self, int column);
 /// @param self KCategorizedView*
 /// @param column int
 ///
-int32_t k_categorizedview_qbase_size_hint_for_column(void* self, int column);
+int32_t k_categorizedview_super_size_hint_for_column(void* self, int column);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5602,6 +5782,10 @@ void k_categorizedview_on_size_hint_for_column(void* self, int32_t (*callback)(v
 ///
 QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_item_delegate_for_index` instead
+///
+#define k_categorizedview_qbase_item_delegate_for_index k_categorizedview_super_item_delegate_for_index
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#itemDelegateForIndex)
@@ -5611,7 +5795,7 @@ QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(void* self, voi
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-QAbstractItemDelegate* k_categorizedview_qbase_item_delegate_for_index(void* self, void* index);
+QAbstractItemDelegate* k_categorizedview_super_item_delegate_for_index(void* self, void* index);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5635,6 +5819,10 @@ void k_categorizedview_on_item_delegate_for_index(void* self, QAbstractItemDeleg
 ///
 QVariant* k_categorizedview_input_method_query(void* self, int32_t query);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_input_method_query` instead
+///
+#define k_categorizedview_qbase_input_method_query k_categorizedview_super_input_method_query
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodQuery)
@@ -5644,7 +5832,7 @@ QVariant* k_categorizedview_input_method_query(void* self, int32_t query);
 /// @param self KCategorizedView*
 /// @param query enum Qt__InputMethodQuery
 ///
-QVariant* k_categorizedview_qbase_input_method_query(void* self, int32_t query);
+QVariant* k_categorizedview_super_input_method_query(void* self, int32_t query);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5667,6 +5855,10 @@ void k_categorizedview_on_input_method_query(void* self, QVariant* (*callback)(v
 ///
 void k_categorizedview_select_all(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_select_all` instead
+///
+#define k_categorizedview_qbase_select_all k_categorizedview_super_select_all
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectAll)
@@ -5675,7 +5867,7 @@ void k_categorizedview_select_all(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_select_all(void* self);
+void k_categorizedview_super_select_all(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5698,6 +5890,10 @@ void k_categorizedview_on_select_all(void* self, void (*callback)());
 ///
 void k_categorizedview_update_editor_data(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_update_editor_data` instead
+///
+#define k_categorizedview_qbase_update_editor_data k_categorizedview_super_update_editor_data
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorData)
@@ -5706,7 +5902,7 @@ void k_categorizedview_update_editor_data(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_update_editor_data(void* self);
+void k_categorizedview_super_update_editor_data(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5729,6 +5925,10 @@ void k_categorizedview_on_update_editor_data(void* self, void (*callback)());
 ///
 void k_categorizedview_update_editor_geometries(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_update_editor_geometries` instead
+///
+#define k_categorizedview_qbase_update_editor_geometries k_categorizedview_super_update_editor_geometries
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#updateEditorGeometries)
@@ -5737,7 +5937,7 @@ void k_categorizedview_update_editor_geometries(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_update_editor_geometries(void* self);
+void k_categorizedview_super_update_editor_geometries(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5761,6 +5961,10 @@ void k_categorizedview_on_update_editor_geometries(void* self, void (*callback)(
 ///
 void k_categorizedview_vertical_scrollbar_action(void* self, int action);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_vertical_scrollbar_action` instead
+///
+#define k_categorizedview_qbase_vertical_scrollbar_action k_categorizedview_super_vertical_scrollbar_action
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarAction)
@@ -5770,7 +5974,7 @@ void k_categorizedview_vertical_scrollbar_action(void* self, int action);
 /// @param self KCategorizedView*
 /// @param action int
 ///
-void k_categorizedview_qbase_vertical_scrollbar_action(void* self, int action);
+void k_categorizedview_super_vertical_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5794,6 +5998,10 @@ void k_categorizedview_on_vertical_scrollbar_action(void* self, void (*callback)
 ///
 void k_categorizedview_horizontal_scrollbar_action(void* self, int action);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_horizontal_scrollbar_action` instead
+///
+#define k_categorizedview_qbase_horizontal_scrollbar_action k_categorizedview_super_horizontal_scrollbar_action
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarAction)
@@ -5803,7 +6011,7 @@ void k_categorizedview_horizontal_scrollbar_action(void* self, int action);
 /// @param self KCategorizedView*
 /// @param action int
 ///
-void k_categorizedview_qbase_horizontal_scrollbar_action(void* self, int action);
+void k_categorizedview_super_horizontal_scrollbar_action(void* self, int action);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5827,6 +6035,10 @@ void k_categorizedview_on_horizontal_scrollbar_action(void* self, void (*callbac
 ///
 void k_categorizedview_vertical_scrollbar_value_changed(void* self, int value);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_vertical_scrollbar_value_changed` instead
+///
+#define k_categorizedview_qbase_vertical_scrollbar_value_changed k_categorizedview_super_vertical_scrollbar_value_changed
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#verticalScrollbarValueChanged)
@@ -5836,7 +6048,7 @@ void k_categorizedview_vertical_scrollbar_value_changed(void* self, int value);
 /// @param self KCategorizedView*
 /// @param value int
 ///
-void k_categorizedview_qbase_vertical_scrollbar_value_changed(void* self, int value);
+void k_categorizedview_super_vertical_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5860,6 +6072,10 @@ void k_categorizedview_on_vertical_scrollbar_value_changed(void* self, void (*ca
 ///
 void k_categorizedview_horizontal_scrollbar_value_changed(void* self, int value);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_horizontal_scrollbar_value_changed` instead
+///
+#define k_categorizedview_qbase_horizontal_scrollbar_value_changed k_categorizedview_super_horizontal_scrollbar_value_changed
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#horizontalScrollbarValueChanged)
@@ -5869,7 +6085,7 @@ void k_categorizedview_horizontal_scrollbar_value_changed(void* self, int value)
 /// @param self KCategorizedView*
 /// @param value int
 ///
-void k_categorizedview_qbase_horizontal_scrollbar_value_changed(void* self, int value);
+void k_categorizedview_super_horizontal_scrollbar_value_changed(void* self, int value);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5894,6 +6110,10 @@ void k_categorizedview_on_horizontal_scrollbar_value_changed(void* self, void (*
 ///
 void k_categorizedview_close_editor(void* self, void* editor, int32_t hint);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_close_editor` instead
+///
+#define k_categorizedview_qbase_close_editor k_categorizedview_super_close_editor
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#closeEditor)
@@ -5904,7 +6124,7 @@ void k_categorizedview_close_editor(void* self, void* editor, int32_t hint);
 /// @param editor QWidget*
 /// @param hint enum QAbstractItemDelegate__EndEditHint
 ///
-void k_categorizedview_qbase_close_editor(void* self, void* editor, int32_t hint);
+void k_categorizedview_super_close_editor(void* self, void* editor, int32_t hint);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5928,6 +6148,10 @@ void k_categorizedview_on_close_editor(void* self, void (*callback)(void*, void*
 ///
 void k_categorizedview_commit_data(void* self, void* editor);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_commit_data` instead
+///
+#define k_categorizedview_qbase_commit_data k_categorizedview_super_commit_data
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#commitData)
@@ -5937,7 +6161,7 @@ void k_categorizedview_commit_data(void* self, void* editor);
 /// @param self KCategorizedView*
 /// @param editor QWidget*
 ///
-void k_categorizedview_qbase_commit_data(void* self, void* editor);
+void k_categorizedview_super_commit_data(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5961,6 +6185,10 @@ void k_categorizedview_on_commit_data(void* self, void (*callback)(void*, void*)
 ///
 void k_categorizedview_editor_destroyed(void* self, void* editor);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_editor_destroyed` instead
+///
+#define k_categorizedview_qbase_editor_destroyed k_categorizedview_super_editor_destroyed
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#editorDestroyed)
@@ -5970,7 +6198,7 @@ void k_categorizedview_editor_destroyed(void* self, void* editor);
 /// @param self KCategorizedView*
 /// @param editor QObject*
 ///
-void k_categorizedview_qbase_editor_destroyed(void* self, void* editor);
+void k_categorizedview_super_editor_destroyed(void* self, void* editor);
 
 /// Inherited from QAbstractItemView
 ///
@@ -5996,6 +6224,10 @@ void k_categorizedview_on_editor_destroyed(void* self, void (*callback)(void*, v
 ///
 bool k_categorizedview_edit2(void* self, void* index, int32_t trigger, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_edit2` instead
+///
+#define k_categorizedview_qbase_edit2 k_categorizedview_super_edit2
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#edit)
@@ -6007,7 +6239,7 @@ bool k_categorizedview_edit2(void* self, void* index, int32_t trigger, void* eve
 /// @param trigger enum QAbstractItemView__EditTrigger
 /// @param event QEvent*
 ///
-bool k_categorizedview_qbase_edit2(void* self, void* index, int32_t trigger, void* event);
+bool k_categorizedview_super_edit2(void* self, void* index, int32_t trigger, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6034,6 +6266,10 @@ void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32
 ///
 int32_t k_categorizedview_selection_command(void* self, void* index, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_selection_command` instead
+///
+#define k_categorizedview_qbase_selection_command k_categorizedview_super_selection_command
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#selectionCommand)
@@ -6046,7 +6282,7 @@ int32_t k_categorizedview_selection_command(void* self, void* index, void* event
 ///
 /// @return flag of enum QItemSelectionModel__SelectionFlag
 ///
-int32_t k_categorizedview_qbase_selection_command(void* self, void* index, void* event);
+int32_t k_categorizedview_super_selection_command(void* self, void* index, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6070,6 +6306,10 @@ void k_categorizedview_on_selection_command(void* self, int32_t (*callback)(void
 ///
 bool k_categorizedview_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_focus_next_prev_child` instead
+///
+#define k_categorizedview_qbase_focus_next_prev_child k_categorizedview_super_focus_next_prev_child
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusNextPrevChild)
@@ -6079,7 +6319,7 @@ bool k_categorizedview_focus_next_prev_child(void* self, bool next);
 /// @param self KCategorizedView*
 /// @param next bool
 ///
-bool k_categorizedview_qbase_focus_next_prev_child(void* self, bool next);
+bool k_categorizedview_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6103,6 +6343,10 @@ void k_categorizedview_on_focus_next_prev_child(void* self, bool (*callback)(voi
 ///
 bool k_categorizedview_viewport_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_viewport_event` instead
+///
+#define k_categorizedview_qbase_viewport_event k_categorizedview_super_viewport_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#viewportEvent)
@@ -6112,7 +6356,7 @@ bool k_categorizedview_viewport_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QEvent*
 ///
-bool k_categorizedview_qbase_viewport_event(void* self, void* event);
+bool k_categorizedview_super_viewport_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6136,6 +6380,10 @@ void k_categorizedview_on_viewport_event(void* self, bool (*callback)(void*, voi
 ///
 void k_categorizedview_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_mouse_double_click_event` instead
+///
+#define k_categorizedview_qbase_mouse_double_click_event k_categorizedview_super_mouse_double_click_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#mouseDoubleClickEvent)
@@ -6145,7 +6393,7 @@ void k_categorizedview_mouse_double_click_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QMouseEvent*
 ///
-void k_categorizedview_qbase_mouse_double_click_event(void* self, void* event);
+void k_categorizedview_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6169,6 +6417,10 @@ void k_categorizedview_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void k_categorizedview_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_focus_in_event` instead
+///
+#define k_categorizedview_qbase_focus_in_event k_categorizedview_super_focus_in_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusInEvent)
@@ -6178,7 +6430,7 @@ void k_categorizedview_focus_in_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QFocusEvent*
 ///
-void k_categorizedview_qbase_focus_in_event(void* self, void* event);
+void k_categorizedview_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6202,6 +6454,10 @@ void k_categorizedview_on_focus_in_event(void* self, void (*callback)(void*, voi
 ///
 void k_categorizedview_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_focus_out_event` instead
+///
+#define k_categorizedview_qbase_focus_out_event k_categorizedview_super_focus_out_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#focusOutEvent)
@@ -6211,7 +6467,7 @@ void k_categorizedview_focus_out_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QFocusEvent*
 ///
-void k_categorizedview_qbase_focus_out_event(void* self, void* event);
+void k_categorizedview_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6235,6 +6491,10 @@ void k_categorizedview_on_focus_out_event(void* self, void (*callback)(void*, vo
 ///
 void k_categorizedview_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_key_press_event` instead
+///
+#define k_categorizedview_qbase_key_press_event k_categorizedview_super_key_press_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#keyPressEvent)
@@ -6244,7 +6504,7 @@ void k_categorizedview_key_press_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QKeyEvent*
 ///
-void k_categorizedview_qbase_key_press_event(void* self, void* event);
+void k_categorizedview_super_key_press_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6268,6 +6528,10 @@ void k_categorizedview_on_key_press_event(void* self, void (*callback)(void*, vo
 ///
 void k_categorizedview_input_method_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_input_method_event` instead
+///
+#define k_categorizedview_qbase_input_method_event k_categorizedview_super_input_method_event
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#inputMethodEvent)
@@ -6277,7 +6541,7 @@ void k_categorizedview_input_method_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QInputMethodEvent*
 ///
-void k_categorizedview_qbase_input_method_event(void* self, void* event);
+void k_categorizedview_super_input_method_event(void* self, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6302,6 +6566,10 @@ void k_categorizedview_on_input_method_event(void* self, void (*callback)(void*,
 ///
 bool k_categorizedview_event_filter(void* self, void* object, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_event_filter` instead
+///
+#define k_categorizedview_qbase_event_filter k_categorizedview_super_event_filter
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#eventFilter)
@@ -6312,7 +6580,7 @@ bool k_categorizedview_event_filter(void* self, void* object, void* event);
 /// @param object QObject*
 /// @param event QEvent*
 ///
-bool k_categorizedview_qbase_event_filter(void* self, void* object, void* event);
+bool k_categorizedview_super_event_filter(void* self, void* object, void* event);
 
 /// Inherited from QAbstractItemView
 ///
@@ -6335,6 +6603,10 @@ void k_categorizedview_on_event_filter(void* self, bool (*callback)(void*, void*
 ///
 QSize* k_categorizedview_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_minimum_size_hint` instead
+///
+#define k_categorizedview_qbase_minimum_size_hint k_categorizedview_super_minimum_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#minimumSizeHint)
@@ -6343,7 +6615,7 @@ QSize* k_categorizedview_minimum_size_hint(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QSize* k_categorizedview_qbase_minimum_size_hint(void* self);
+QSize* k_categorizedview_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6366,6 +6638,10 @@ void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_categorizedview_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_size_hint` instead
+///
+#define k_categorizedview_qbase_size_hint k_categorizedview_super_size_hint
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#sizeHint)
@@ -6374,7 +6650,7 @@ QSize* k_categorizedview_size_hint(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QSize* k_categorizedview_qbase_size_hint(void* self);
+QSize* k_categorizedview_super_size_hint(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6398,6 +6674,10 @@ void k_categorizedview_on_size_hint(void* self, QSize* (*callback)());
 ///
 void k_categorizedview_setup_viewport(void* self, void* viewport);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_setup_viewport` instead
+///
+#define k_categorizedview_qbase_setup_viewport k_categorizedview_super_setup_viewport
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setupViewport)
@@ -6407,7 +6687,7 @@ void k_categorizedview_setup_viewport(void* self, void* viewport);
 /// @param self KCategorizedView*
 /// @param viewport QWidget*
 ///
-void k_categorizedview_qbase_setup_viewport(void* self, void* viewport);
+void k_categorizedview_super_setup_viewport(void* self, void* viewport);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6431,6 +6711,10 @@ void k_categorizedview_on_setup_viewport(void* self, void (*callback)(void*, voi
 ///
 void k_categorizedview_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_context_menu_event` instead
+///
+#define k_categorizedview_qbase_context_menu_event k_categorizedview_super_context_menu_event
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#contextMenuEvent)
@@ -6440,7 +6724,7 @@ void k_categorizedview_context_menu_event(void* self, void* param1);
 /// @param self KCategorizedView*
 /// @param param1 QContextMenuEvent*
 ///
-void k_categorizedview_qbase_context_menu_event(void* self, void* param1);
+void k_categorizedview_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -6464,6 +6748,10 @@ void k_categorizedview_on_context_menu_event(void* self, void (*callback)(void*,
 ///
 void k_categorizedview_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_change_event` instead
+///
+#define k_categorizedview_qbase_change_event k_categorizedview_super_change_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -6473,7 +6761,7 @@ void k_categorizedview_change_event(void* self, void* param1);
 /// @param self KCategorizedView*
 /// @param param1 QEvent*
 ///
-void k_categorizedview_qbase_change_event(void* self, void* param1);
+void k_categorizedview_super_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -6497,6 +6785,10 @@ void k_categorizedview_on_change_event(void* self, void (*callback)(void*, void*
 ///
 void k_categorizedview_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_init_style_option` instead
+///
+#define k_categorizedview_qbase_init_style_option k_categorizedview_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -6506,7 +6798,7 @@ void k_categorizedview_init_style_option(void* self, void* option);
 /// @param self KCategorizedView*
 /// @param option QStyleOptionFrame*
 ///
-void k_categorizedview_qbase_init_style_option(void* self, void* option);
+void k_categorizedview_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -6529,6 +6821,10 @@ void k_categorizedview_on_init_style_option(void* self, void (*callback)(void*, 
 ///
 int32_t k_categorizedview_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_dev_type` instead
+///
+#define k_categorizedview_qbase_dev_type k_categorizedview_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -6537,7 +6833,7 @@ int32_t k_categorizedview_dev_type(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-int32_t k_categorizedview_qbase_dev_type(void* self);
+int32_t k_categorizedview_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6561,6 +6857,10 @@ void k_categorizedview_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_categorizedview_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_visible` instead
+///
+#define k_categorizedview_qbase_set_visible k_categorizedview_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -6570,7 +6870,7 @@ void k_categorizedview_set_visible(void* self, bool visible);
 /// @param self KCategorizedView*
 /// @param visible bool
 ///
-void k_categorizedview_qbase_set_visible(void* self, bool visible);
+void k_categorizedview_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -6594,6 +6894,10 @@ void k_categorizedview_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 int32_t k_categorizedview_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_height_for_width` instead
+///
+#define k_categorizedview_qbase_height_for_width k_categorizedview_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -6603,7 +6907,7 @@ int32_t k_categorizedview_height_for_width(void* self, int param1);
 /// @param self KCategorizedView*
 /// @param param1 int
 ///
-int32_t k_categorizedview_qbase_height_for_width(void* self, int param1);
+int32_t k_categorizedview_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -6626,6 +6930,10 @@ void k_categorizedview_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 bool k_categorizedview_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_has_height_for_width` instead
+///
+#define k_categorizedview_qbase_has_height_for_width k_categorizedview_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -6634,7 +6942,7 @@ bool k_categorizedview_has_height_for_width(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-bool k_categorizedview_qbase_has_height_for_width(void* self);
+bool k_categorizedview_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6657,6 +6965,10 @@ void k_categorizedview_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_categorizedview_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_paint_engine` instead
+///
+#define k_categorizedview_qbase_paint_engine k_categorizedview_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -6665,7 +6977,7 @@ QPaintEngine* k_categorizedview_paint_engine(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QPaintEngine* k_categorizedview_qbase_paint_engine(void* self);
+QPaintEngine* k_categorizedview_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6689,6 +7001,10 @@ void k_categorizedview_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_categorizedview_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_key_release_event` instead
+///
+#define k_categorizedview_qbase_key_release_event k_categorizedview_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -6698,7 +7014,7 @@ void k_categorizedview_key_release_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QKeyEvent*
 ///
-void k_categorizedview_qbase_key_release_event(void* self, void* event);
+void k_categorizedview_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6722,6 +7038,10 @@ void k_categorizedview_on_key_release_event(void* self, void (*callback)(void*, 
 ///
 void k_categorizedview_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_enter_event` instead
+///
+#define k_categorizedview_qbase_enter_event k_categorizedview_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -6731,7 +7051,7 @@ void k_categorizedview_enter_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QEnterEvent*
 ///
-void k_categorizedview_qbase_enter_event(void* self, void* event);
+void k_categorizedview_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6755,6 +7075,10 @@ void k_categorizedview_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_categorizedview_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_move_event` instead
+///
+#define k_categorizedview_qbase_move_event k_categorizedview_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -6764,7 +7088,7 @@ void k_categorizedview_move_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QMoveEvent*
 ///
-void k_categorizedview_qbase_move_event(void* self, void* event);
+void k_categorizedview_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6788,6 +7112,10 @@ void k_categorizedview_on_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_categorizedview_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_close_event` instead
+///
+#define k_categorizedview_qbase_close_event k_categorizedview_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -6797,7 +7125,7 @@ void k_categorizedview_close_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QCloseEvent*
 ///
-void k_categorizedview_qbase_close_event(void* self, void* event);
+void k_categorizedview_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6821,6 +7149,10 @@ void k_categorizedview_on_close_event(void* self, void (*callback)(void*, void*)
 ///
 void k_categorizedview_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_tablet_event` instead
+///
+#define k_categorizedview_qbase_tablet_event k_categorizedview_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -6830,7 +7162,7 @@ void k_categorizedview_tablet_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QTabletEvent*
 ///
-void k_categorizedview_qbase_tablet_event(void* self, void* event);
+void k_categorizedview_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6854,6 +7186,10 @@ void k_categorizedview_on_tablet_event(void* self, void (*callback)(void*, void*
 ///
 void k_categorizedview_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_action_event` instead
+///
+#define k_categorizedview_qbase_action_event k_categorizedview_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -6863,7 +7199,7 @@ void k_categorizedview_action_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QActionEvent*
 ///
-void k_categorizedview_qbase_action_event(void* self, void* event);
+void k_categorizedview_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6887,6 +7223,10 @@ void k_categorizedview_on_action_event(void* self, void (*callback)(void*, void*
 ///
 void k_categorizedview_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_show_event` instead
+///
+#define k_categorizedview_qbase_show_event k_categorizedview_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -6896,7 +7236,7 @@ void k_categorizedview_show_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QShowEvent*
 ///
-void k_categorizedview_qbase_show_event(void* self, void* event);
+void k_categorizedview_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6920,6 +7260,10 @@ void k_categorizedview_on_show_event(void* self, void (*callback)(void*, void*))
 ///
 void k_categorizedview_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_hide_event` instead
+///
+#define k_categorizedview_qbase_hide_event k_categorizedview_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -6929,7 +7273,7 @@ void k_categorizedview_hide_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QHideEvent*
 ///
-void k_categorizedview_qbase_hide_event(void* self, void* event);
+void k_categorizedview_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -6955,6 +7299,10 @@ void k_categorizedview_on_hide_event(void* self, void (*callback)(void*, void*))
 ///
 bool k_categorizedview_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_native_event` instead
+///
+#define k_categorizedview_qbase_native_event k_categorizedview_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -6966,7 +7314,7 @@ bool k_categorizedview_native_event(void* self, char* eventType, void* message, 
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_categorizedview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_categorizedview_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -6990,6 +7338,10 @@ void k_categorizedview_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 int32_t k_categorizedview_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_metric` instead
+///
+#define k_categorizedview_qbase_metric k_categorizedview_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -6999,7 +7351,7 @@ int32_t k_categorizedview_metric(void* self, int32_t param1);
 /// @param self KCategorizedView*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_categorizedview_qbase_metric(void* self, int32_t param1);
+int32_t k_categorizedview_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7023,6 +7375,10 @@ void k_categorizedview_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 void k_categorizedview_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_init_painter` instead
+///
+#define k_categorizedview_qbase_init_painter k_categorizedview_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -7032,7 +7388,7 @@ void k_categorizedview_init_painter(void* self, void* painter);
 /// @param self KCategorizedView*
 /// @param painter QPainter*
 ///
-void k_categorizedview_qbase_init_painter(void* self, void* painter);
+void k_categorizedview_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -7056,6 +7412,10 @@ void k_categorizedview_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 QPaintDevice* k_categorizedview_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_redirected` instead
+///
+#define k_categorizedview_qbase_redirected k_categorizedview_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -7065,7 +7425,7 @@ QPaintDevice* k_categorizedview_redirected(void* self, void* offset);
 /// @param self KCategorizedView*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_categorizedview_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_categorizedview_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -7088,6 +7448,10 @@ void k_categorizedview_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 QPainter* k_categorizedview_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_shared_painter` instead
+///
+#define k_categorizedview_qbase_shared_painter k_categorizedview_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -7096,7 +7460,7 @@ QPainter* k_categorizedview_shared_painter(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QPainter* k_categorizedview_qbase_shared_painter(void* self);
+QPainter* k_categorizedview_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7120,6 +7484,10 @@ void k_categorizedview_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_categorizedview_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_child_event` instead
+///
+#define k_categorizedview_qbase_child_event k_categorizedview_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -7129,7 +7497,7 @@ void k_categorizedview_child_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QChildEvent*
 ///
-void k_categorizedview_qbase_child_event(void* self, void* event);
+void k_categorizedview_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -7153,6 +7521,10 @@ void k_categorizedview_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_categorizedview_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_custom_event` instead
+///
+#define k_categorizedview_qbase_custom_event k_categorizedview_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -7162,7 +7534,7 @@ void k_categorizedview_custom_event(void* self, void* event);
 /// @param self KCategorizedView*
 /// @param event QEvent*
 ///
-void k_categorizedview_qbase_custom_event(void* self, void* event);
+void k_categorizedview_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -7186,6 +7558,10 @@ void k_categorizedview_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void k_categorizedview_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_connect_notify` instead
+///
+#define k_categorizedview_qbase_connect_notify k_categorizedview_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -7195,7 +7571,7 @@ void k_categorizedview_connect_notify(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-void k_categorizedview_qbase_connect_notify(void* self, void* signal);
+void k_categorizedview_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -7219,6 +7595,10 @@ void k_categorizedview_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_categorizedview_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_disconnect_notify` instead
+///
+#define k_categorizedview_qbase_disconnect_notify k_categorizedview_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -7228,7 +7608,7 @@ void k_categorizedview_disconnect_notify(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-void k_categorizedview_qbase_disconnect_notify(void* self, void* signal);
+void k_categorizedview_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -7253,6 +7633,10 @@ void k_categorizedview_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void k_categorizedview_resize_contents(void* self, int width, int height);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_resize_contents` instead
+///
+#define k_categorizedview_qbase_resize_contents k_categorizedview_super_resize_contents
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#resizeContents)
@@ -7263,7 +7647,7 @@ void k_categorizedview_resize_contents(void* self, int width, int height);
 /// @param width int
 /// @param height int
 ///
-void k_categorizedview_qbase_resize_contents(void* self, int width, int height);
+void k_categorizedview_super_resize_contents(void* self, int width, int height);
 
 /// Inherited from QListView
 ///
@@ -7286,6 +7670,10 @@ void k_categorizedview_on_resize_contents(void* self, void (*callback)(void*, in
 ///
 QSize* k_categorizedview_contents_size(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_contents_size` instead
+///
+#define k_categorizedview_qbase_contents_size k_categorizedview_super_contents_size
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#contentsSize)
@@ -7294,7 +7682,7 @@ QSize* k_categorizedview_contents_size(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QSize* k_categorizedview_qbase_contents_size(void* self);
+QSize* k_categorizedview_super_contents_size(void* self);
 
 /// Inherited from QListView
 ///
@@ -7318,6 +7706,10 @@ void k_categorizedview_on_contents_size(void* self, QSize* (*callback)());
 ///
 QRect* k_categorizedview_rect_for_index(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_rect_for_index` instead
+///
+#define k_categorizedview_qbase_rect_for_index k_categorizedview_super_rect_for_index
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#rectForIndex)
@@ -7327,7 +7719,7 @@ QRect* k_categorizedview_rect_for_index(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param index QModelIndex*
 ///
-QRect* k_categorizedview_qbase_rect_for_index(void* self, void* index);
+QRect* k_categorizedview_super_rect_for_index(void* self, void* index);
 
 /// Inherited from QListView
 ///
@@ -7352,6 +7744,10 @@ void k_categorizedview_on_rect_for_index(void* self, QRect* (*callback)(void*, v
 ///
 void k_categorizedview_set_position_for_index(void* self, void* position, void* index);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_position_for_index` instead
+///
+#define k_categorizedview_qbase_set_position_for_index k_categorizedview_super_set_position_for_index
+
 /// Inherited from QListView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlistview.html#setPositionForIndex)
@@ -7362,7 +7758,7 @@ void k_categorizedview_set_position_for_index(void* self, void* position, void* 
 /// @param position QPoint*
 /// @param index QModelIndex*
 ///
-void k_categorizedview_qbase_set_position_for_index(void* self, void* position, void* index);
+void k_categorizedview_super_set_position_for_index(void* self, void* position, void* index);
 
 /// Inherited from QListView
 ///
@@ -7387,6 +7783,10 @@ void k_categorizedview_on_set_position_for_index(void* self, void (*callback)(vo
 ///
 int32_t k_categorizedview_state(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_state` instead
+///
+#define k_categorizedview_qbase_state k_categorizedview_super_state
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#state)
@@ -7397,7 +7797,7 @@ int32_t k_categorizedview_state(void* self);
 ///
 /// @return enum QAbstractItemView__State
 ///
-int32_t k_categorizedview_qbase_state(void* self);
+int32_t k_categorizedview_super_state(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7421,6 +7821,10 @@ void k_categorizedview_on_state(void* self, int32_t (*callback)());
 ///
 void k_categorizedview_set_state(void* self, int32_t state);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_state` instead
+///
+#define k_categorizedview_qbase_set_state k_categorizedview_super_set_state
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setState)
@@ -7430,7 +7834,7 @@ void k_categorizedview_set_state(void* self, int32_t state);
 /// @param self KCategorizedView*
 /// @param state enum QAbstractItemView__State
 ///
-void k_categorizedview_qbase_set_state(void* self, int32_t state);
+void k_categorizedview_super_set_state(void* self, int32_t state);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7453,6 +7857,10 @@ void k_categorizedview_on_set_state(void* self, void (*callback)(void*, int32_t)
 ///
 void k_categorizedview_schedule_delayed_items_layout(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_schedule_delayed_items_layout` instead
+///
+#define k_categorizedview_qbase_schedule_delayed_items_layout k_categorizedview_super_schedule_delayed_items_layout
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scheduleDelayedItemsLayout)
@@ -7461,7 +7869,7 @@ void k_categorizedview_schedule_delayed_items_layout(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_schedule_delayed_items_layout(void* self);
+void k_categorizedview_super_schedule_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7484,6 +7892,10 @@ void k_categorizedview_on_schedule_delayed_items_layout(void* self, void (*callb
 ///
 void k_categorizedview_execute_delayed_items_layout(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_execute_delayed_items_layout` instead
+///
+#define k_categorizedview_qbase_execute_delayed_items_layout k_categorizedview_super_execute_delayed_items_layout
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#executeDelayedItemsLayout)
@@ -7492,7 +7904,7 @@ void k_categorizedview_execute_delayed_items_layout(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_execute_delayed_items_layout(void* self);
+void k_categorizedview_super_execute_delayed_items_layout(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7516,6 +7928,10 @@ void k_categorizedview_on_execute_delayed_items_layout(void* self, void (*callba
 ///
 void k_categorizedview_set_dirty_region(void* self, void* region);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_dirty_region` instead
+///
+#define k_categorizedview_qbase_set_dirty_region k_categorizedview_super_set_dirty_region
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#setDirtyRegion)
@@ -7525,7 +7941,7 @@ void k_categorizedview_set_dirty_region(void* self, void* region);
 /// @param self KCategorizedView*
 /// @param region QRegion*
 ///
-void k_categorizedview_qbase_set_dirty_region(void* self, void* region);
+void k_categorizedview_super_set_dirty_region(void* self, void* region);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7550,6 +7966,10 @@ void k_categorizedview_on_set_dirty_region(void* self, void (*callback)(void*, v
 ///
 void k_categorizedview_scroll_dirty_region(void* self, int dx, int dy);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_scroll_dirty_region` instead
+///
+#define k_categorizedview_qbase_scroll_dirty_region k_categorizedview_super_scroll_dirty_region
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#scrollDirtyRegion)
@@ -7560,7 +7980,7 @@ void k_categorizedview_scroll_dirty_region(void* self, int dx, int dy);
 /// @param dx int
 /// @param dy int
 ///
-void k_categorizedview_qbase_scroll_dirty_region(void* self, int dx, int dy);
+void k_categorizedview_super_scroll_dirty_region(void* self, int dx, int dy);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7583,6 +8003,10 @@ void k_categorizedview_on_scroll_dirty_region(void* self, void (*callback)(void*
 ///
 QPoint* k_categorizedview_dirty_region_offset(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_dirty_region_offset` instead
+///
+#define k_categorizedview_qbase_dirty_region_offset k_categorizedview_super_dirty_region_offset
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dirtyRegionOffset)
@@ -7591,7 +8015,7 @@ QPoint* k_categorizedview_dirty_region_offset(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QPoint* k_categorizedview_qbase_dirty_region_offset(void* self);
+QPoint* k_categorizedview_super_dirty_region_offset(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7614,6 +8038,10 @@ void k_categorizedview_on_dirty_region_offset(void* self, QPoint* (*callback)())
 ///
 void k_categorizedview_start_auto_scroll(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_start_auto_scroll` instead
+///
+#define k_categorizedview_qbase_start_auto_scroll k_categorizedview_super_start_auto_scroll
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#startAutoScroll)
@@ -7622,7 +8050,7 @@ void k_categorizedview_start_auto_scroll(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_start_auto_scroll(void* self);
+void k_categorizedview_super_start_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7645,6 +8073,10 @@ void k_categorizedview_on_start_auto_scroll(void* self, void (*callback)());
 ///
 void k_categorizedview_stop_auto_scroll(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_stop_auto_scroll` instead
+///
+#define k_categorizedview_qbase_stop_auto_scroll k_categorizedview_super_stop_auto_scroll
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#stopAutoScroll)
@@ -7653,7 +8085,7 @@ void k_categorizedview_stop_auto_scroll(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_stop_auto_scroll(void* self);
+void k_categorizedview_super_stop_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7676,6 +8108,10 @@ void k_categorizedview_on_stop_auto_scroll(void* self, void (*callback)());
 ///
 void k_categorizedview_do_auto_scroll(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_do_auto_scroll` instead
+///
+#define k_categorizedview_qbase_do_auto_scroll k_categorizedview_super_do_auto_scroll
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#doAutoScroll)
@@ -7684,7 +8120,7 @@ void k_categorizedview_do_auto_scroll(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_do_auto_scroll(void* self);
+void k_categorizedview_super_do_auto_scroll(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7709,6 +8145,10 @@ void k_categorizedview_on_do_auto_scroll(void* self, void (*callback)());
 ///
 int32_t k_categorizedview_drop_indicator_position(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_drop_indicator_position` instead
+///
+#define k_categorizedview_qbase_drop_indicator_position k_categorizedview_super_drop_indicator_position
+
 /// Inherited from QAbstractItemView
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemview.html#dropIndicatorPosition)
@@ -7719,7 +8159,7 @@ int32_t k_categorizedview_drop_indicator_position(void* self);
 ///
 /// @return enum QAbstractItemView__DropIndicatorPosition
 ///
-int32_t k_categorizedview_qbase_drop_indicator_position(void* self);
+int32_t k_categorizedview_super_drop_indicator_position(void* self);
 
 /// Inherited from QAbstractItemView
 ///
@@ -7746,6 +8186,10 @@ void k_categorizedview_on_drop_indicator_position(void* self, int32_t (*callback
 ///
 void k_categorizedview_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_set_viewport_margins` instead
+///
+#define k_categorizedview_qbase_set_viewport_margins k_categorizedview_super_set_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#setViewportMargins)
@@ -7758,7 +8202,7 @@ void k_categorizedview_set_viewport_margins(void* self, int left, int top, int r
 /// @param right int
 /// @param bottom int
 ///
-void k_categorizedview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom);
+void k_categorizedview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7781,6 +8225,10 @@ void k_categorizedview_on_set_viewport_margins(void* self, void (*callback)(void
 ///
 QMargins* k_categorizedview_viewport_margins(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_viewport_margins` instead
+///
+#define k_categorizedview_qbase_viewport_margins k_categorizedview_super_viewport_margins
+
 /// Inherited from QAbstractScrollArea
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractscrollarea.html#viewportMargins)
@@ -7789,7 +8237,7 @@ QMargins* k_categorizedview_viewport_margins(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QMargins* k_categorizedview_qbase_viewport_margins(void* self);
+QMargins* k_categorizedview_super_viewport_margins(void* self);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7813,6 +8261,10 @@ void k_categorizedview_on_viewport_margins(void* self, QMargins* (*callback)());
 ///
 void k_categorizedview_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_draw_frame` instead
+///
+#define k_categorizedview_qbase_draw_frame k_categorizedview_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -7822,7 +8274,7 @@ void k_categorizedview_draw_frame(void* self, void* param1);
 /// @param self KCategorizedView*
 /// @param param1 QPainter*
 ///
-void k_categorizedview_qbase_draw_frame(void* self, void* param1);
+void k_categorizedview_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -7845,6 +8297,10 @@ void k_categorizedview_on_draw_frame(void* self, void (*callback)(void*, void*))
 ///
 void k_categorizedview_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_update_micro_focus` instead
+///
+#define k_categorizedview_qbase_update_micro_focus k_categorizedview_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -7853,7 +8309,7 @@ void k_categorizedview_update_micro_focus(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_update_micro_focus(void* self);
+void k_categorizedview_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7876,6 +8332,10 @@ void k_categorizedview_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_categorizedview_create(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_create` instead
+///
+#define k_categorizedview_qbase_create k_categorizedview_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -7884,7 +8344,7 @@ void k_categorizedview_create(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_create(void* self);
+void k_categorizedview_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7907,6 +8367,10 @@ void k_categorizedview_on_create(void* self, void (*callback)());
 ///
 void k_categorizedview_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_destroy` instead
+///
+#define k_categorizedview_qbase_destroy k_categorizedview_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -7915,7 +8379,7 @@ void k_categorizedview_destroy(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-void k_categorizedview_qbase_destroy(void* self);
+void k_categorizedview_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7938,6 +8402,10 @@ void k_categorizedview_on_destroy(void* self, void (*callback)());
 ///
 bool k_categorizedview_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_focus_next_child` instead
+///
+#define k_categorizedview_qbase_focus_next_child k_categorizedview_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -7946,7 +8414,7 @@ bool k_categorizedview_focus_next_child(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-bool k_categorizedview_qbase_focus_next_child(void* self);
+bool k_categorizedview_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -7969,6 +8437,10 @@ void k_categorizedview_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_categorizedview_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_focus_previous_child` instead
+///
+#define k_categorizedview_qbase_focus_previous_child k_categorizedview_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -7977,7 +8449,7 @@ bool k_categorizedview_focus_previous_child(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-bool k_categorizedview_qbase_focus_previous_child(void* self);
+bool k_categorizedview_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -8000,6 +8472,10 @@ void k_categorizedview_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_categorizedview_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_sender` instead
+///
+#define k_categorizedview_qbase_sender k_categorizedview_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -8008,7 +8484,7 @@ QObject* k_categorizedview_sender(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-QObject* k_categorizedview_qbase_sender(void* self);
+QObject* k_categorizedview_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -8031,6 +8507,10 @@ void k_categorizedview_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_categorizedview_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_sender_signal_index` instead
+///
+#define k_categorizedview_qbase_sender_signal_index k_categorizedview_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -8039,7 +8519,7 @@ int32_t k_categorizedview_sender_signal_index(void* self);
 ///
 /// @param self KCategorizedView*
 ///
-int32_t k_categorizedview_qbase_sender_signal_index(void* self);
+int32_t k_categorizedview_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -8063,6 +8543,10 @@ void k_categorizedview_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t k_categorizedview_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_receivers` instead
+///
+#define k_categorizedview_qbase_receivers k_categorizedview_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -8072,7 +8556,7 @@ int32_t k_categorizedview_receivers(void* self, const char* signal);
 /// @param self KCategorizedView*
 /// @param signal const char*
 ///
-int32_t k_categorizedview_qbase_receivers(void* self, const char* signal);
+int32_t k_categorizedview_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -8096,6 +8580,10 @@ void k_categorizedview_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool k_categorizedview_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_is_signal_connected` instead
+///
+#define k_categorizedview_qbase_is_signal_connected k_categorizedview_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -8105,7 +8593,7 @@ bool k_categorizedview_is_signal_connected(void* self, void* signal);
 /// @param self KCategorizedView*
 /// @param signal QMetaMethod*
 ///
-bool k_categorizedview_qbase_is_signal_connected(void* self, void* signal);
+bool k_categorizedview_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -8130,6 +8618,10 @@ void k_categorizedview_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 double k_categorizedview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_categorizedview_super_get_decoded_metric_f` instead
+///
+#define k_categorizedview_qbase_get_decoded_metric_f k_categorizedview_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -8140,7 +8632,7 @@ double k_categorizedview_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_categorizedview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_categorizedview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

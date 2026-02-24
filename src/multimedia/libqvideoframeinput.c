@@ -32,8 +32,8 @@ void q_videoframeinput_on_meta_object(void* self, const QMetaObject* (*callback)
     QVideoFrameInput_OnMetaObject((QVideoFrameInput*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_videoframeinput_qbase_meta_object(void* self) {
-    return QVideoFrameInput_QBaseMetaObject((QVideoFrameInput*)self);
+const QMetaObject* q_videoframeinput_super_meta_object(void* self) {
+    return QVideoFrameInput_SuperMetaObject((QVideoFrameInput*)self);
 }
 
 void* q_videoframeinput_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_videoframeinput_on_metacast(void* self, void* (*callback)(void*, const ch
     QVideoFrameInput_OnMetacast((QVideoFrameInput*)self, (intptr_t)callback);
 }
 
-void* q_videoframeinput_qbase_metacast(void* self, const char* param1) {
-    return QVideoFrameInput_QBaseMetacast((QVideoFrameInput*)self, param1);
+void* q_videoframeinput_super_metacast(void* self, const char* param1) {
+    return QVideoFrameInput_SuperMetacast((QVideoFrameInput*)self, param1);
 }
 
 int32_t q_videoframeinput_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_videoframeinput_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QVideoFrameInput_OnMetacall((QVideoFrameInput*)self, (intptr_t)callback);
 }
 
-int32_t q_videoframeinput_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QVideoFrameInput_QBaseMetacall((QVideoFrameInput*)self, param1, param2, param3);
+int32_t q_videoframeinput_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QVideoFrameInput_SuperMetacall((QVideoFrameInput*)self, param1, param2, param3);
 }
 
 const char* q_videoframeinput_tr(const char* s) {
@@ -316,8 +316,8 @@ bool q_videoframeinput_event(void* self, void* event) {
     return QVideoFrameInput_Event((QVideoFrameInput*)self, (QEvent*)event);
 }
 
-bool q_videoframeinput_qbase_event(void* self, void* event) {
-    return QVideoFrameInput_QBaseEvent((QVideoFrameInput*)self, (QEvent*)event);
+bool q_videoframeinput_super_event(void* self, void* event) {
+    return QVideoFrameInput_SuperEvent((QVideoFrameInput*)self, (QEvent*)event);
 }
 
 void q_videoframeinput_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -328,8 +328,8 @@ bool q_videoframeinput_event_filter(void* self, void* watched, void* event) {
     return QVideoFrameInput_EventFilter((QVideoFrameInput*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_videoframeinput_qbase_event_filter(void* self, void* watched, void* event) {
-    return QVideoFrameInput_QBaseEventFilter((QVideoFrameInput*)self, (QObject*)watched, (QEvent*)event);
+bool q_videoframeinput_super_event_filter(void* self, void* watched, void* event) {
+    return QVideoFrameInput_SuperEventFilter((QVideoFrameInput*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_videoframeinput_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -340,8 +340,8 @@ void q_videoframeinput_timer_event(void* self, void* event) {
     QVideoFrameInput_TimerEvent((QVideoFrameInput*)self, (QTimerEvent*)event);
 }
 
-void q_videoframeinput_qbase_timer_event(void* self, void* event) {
-    QVideoFrameInput_QBaseTimerEvent((QVideoFrameInput*)self, (QTimerEvent*)event);
+void q_videoframeinput_super_timer_event(void* self, void* event) {
+    QVideoFrameInput_SuperTimerEvent((QVideoFrameInput*)self, (QTimerEvent*)event);
 }
 
 void q_videoframeinput_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -352,8 +352,8 @@ void q_videoframeinput_child_event(void* self, void* event) {
     QVideoFrameInput_ChildEvent((QVideoFrameInput*)self, (QChildEvent*)event);
 }
 
-void q_videoframeinput_qbase_child_event(void* self, void* event) {
-    QVideoFrameInput_QBaseChildEvent((QVideoFrameInput*)self, (QChildEvent*)event);
+void q_videoframeinput_super_child_event(void* self, void* event) {
+    QVideoFrameInput_SuperChildEvent((QVideoFrameInput*)self, (QChildEvent*)event);
 }
 
 void q_videoframeinput_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -364,8 +364,8 @@ void q_videoframeinput_custom_event(void* self, void* event) {
     QVideoFrameInput_CustomEvent((QVideoFrameInput*)self, (QEvent*)event);
 }
 
-void q_videoframeinput_qbase_custom_event(void* self, void* event) {
-    QVideoFrameInput_QBaseCustomEvent((QVideoFrameInput*)self, (QEvent*)event);
+void q_videoframeinput_super_custom_event(void* self, void* event) {
+    QVideoFrameInput_SuperCustomEvent((QVideoFrameInput*)self, (QEvent*)event);
 }
 
 void q_videoframeinput_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -376,8 +376,8 @@ void q_videoframeinput_connect_notify(void* self, void* signal) {
     QVideoFrameInput_ConnectNotify((QVideoFrameInput*)self, (QMetaMethod*)signal);
 }
 
-void q_videoframeinput_qbase_connect_notify(void* self, void* signal) {
-    QVideoFrameInput_QBaseConnectNotify((QVideoFrameInput*)self, (QMetaMethod*)signal);
+void q_videoframeinput_super_connect_notify(void* self, void* signal) {
+    QVideoFrameInput_SuperConnectNotify((QVideoFrameInput*)self, (QMetaMethod*)signal);
 }
 
 void q_videoframeinput_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ void q_videoframeinput_disconnect_notify(void* self, void* signal) {
     QVideoFrameInput_DisconnectNotify((QVideoFrameInput*)self, (QMetaMethod*)signal);
 }
 
-void q_videoframeinput_qbase_disconnect_notify(void* self, void* signal) {
-    QVideoFrameInput_QBaseDisconnectNotify((QVideoFrameInput*)self, (QMetaMethod*)signal);
+void q_videoframeinput_super_disconnect_notify(void* self, void* signal) {
+    QVideoFrameInput_SuperDisconnectNotify((QVideoFrameInput*)self, (QMetaMethod*)signal);
 }
 
 void q_videoframeinput_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ QObject* q_videoframeinput_sender(void* self) {
     return QVideoFrameInput_Sender((QVideoFrameInput*)self);
 }
 
-QObject* q_videoframeinput_qbase_sender(void* self) {
-    return QVideoFrameInput_QBaseSender((QVideoFrameInput*)self);
+QObject* q_videoframeinput_super_sender(void* self) {
+    return QVideoFrameInput_SuperSender((QVideoFrameInput*)self);
 }
 
 void q_videoframeinput_on_sender(void* self, QObject* (*callback)()) {
@@ -412,8 +412,8 @@ int32_t q_videoframeinput_sender_signal_index(void* self) {
     return QVideoFrameInput_SenderSignalIndex((QVideoFrameInput*)self);
 }
 
-int32_t q_videoframeinput_qbase_sender_signal_index(void* self) {
-    return QVideoFrameInput_QBaseSenderSignalIndex((QVideoFrameInput*)self);
+int32_t q_videoframeinput_super_sender_signal_index(void* self) {
+    return QVideoFrameInput_SuperSenderSignalIndex((QVideoFrameInput*)self);
 }
 
 void q_videoframeinput_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -424,8 +424,8 @@ int32_t q_videoframeinput_receivers(void* self, const char* signal) {
     return QVideoFrameInput_Receivers((QVideoFrameInput*)self, signal);
 }
 
-int32_t q_videoframeinput_qbase_receivers(void* self, const char* signal) {
-    return QVideoFrameInput_QBaseReceivers((QVideoFrameInput*)self, signal);
+int32_t q_videoframeinput_super_receivers(void* self, const char* signal) {
+    return QVideoFrameInput_SuperReceivers((QVideoFrameInput*)self, signal);
 }
 
 void q_videoframeinput_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -436,8 +436,8 @@ bool q_videoframeinput_is_signal_connected(void* self, void* signal) {
     return QVideoFrameInput_IsSignalConnected((QVideoFrameInput*)self, (QMetaMethod*)signal);
 }
 
-bool q_videoframeinput_qbase_is_signal_connected(void* self, void* signal) {
-    return QVideoFrameInput_QBaseIsSignalConnected((QVideoFrameInput*)self, (QMetaMethod*)signal);
+bool q_videoframeinput_super_is_signal_connected(void* self, void* signal) {
+    return QVideoFrameInput_SuperIsSignalConnected((QVideoFrameInput*)self, (QMetaMethod*)signal);
 }
 
 void q_videoframeinput_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

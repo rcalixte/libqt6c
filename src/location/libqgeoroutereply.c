@@ -23,8 +23,8 @@ void q_georoutereply_on_meta_object(void* self, const QMetaObject* (*callback)()
     QGeoRouteReply_OnMetaObject((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_georoutereply_qbase_meta_object(void* self) {
-    return QGeoRouteReply_QBaseMetaObject((QGeoRouteReply*)self);
+const QMetaObject* q_georoutereply_super_meta_object(void* self) {
+    return QGeoRouteReply_SuperMetaObject((QGeoRouteReply*)self);
 }
 
 void* q_georoutereply_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_georoutereply_on_metacast(void* self, void* (*callback)(void*, const char
     QGeoRouteReply_OnMetacast((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void* q_georoutereply_qbase_metacast(void* self, const char* param1) {
-    return QGeoRouteReply_QBaseMetacast((QGeoRouteReply*)self, param1);
+void* q_georoutereply_super_metacast(void* self, const char* param1) {
+    return QGeoRouteReply_SuperMetacast((QGeoRouteReply*)self, param1);
 }
 
 int32_t q_georoutereply_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_georoutereply_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QGeoRouteReply_OnMetacall((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-int32_t q_georoutereply_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoRouteReply_QBaseMetacall((QGeoRouteReply*)self, param1, param2, param3);
+int32_t q_georoutereply_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoRouteReply_SuperMetacall((QGeoRouteReply*)self, param1, param2, param3);
 }
 
 const char* q_georoutereply_tr(const char* s) {
@@ -90,8 +90,8 @@ void q_georoutereply_on_abort(void* self, void (*callback)()) {
     QGeoRouteReply_OnAbort((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_abort(void* self) {
-    QGeoRouteReply_QBaseAbort((QGeoRouteReply*)self);
+void q_georoutereply_super_abort(void* self) {
+    QGeoRouteReply_SuperAbort((QGeoRouteReply*)self);
 }
 
 void q_georoutereply_finished(void* self) {
@@ -126,8 +126,8 @@ void q_georoutereply_on_set_error(void* self, void (*callback)(void*, int32_t, c
     QGeoRouteReply_OnSetError((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_set_error(void* self, int32_t error, const char* errorString) {
-    QGeoRouteReply_QBaseSetError((QGeoRouteReply*)self, error, qstring(errorString));
+void q_georoutereply_super_set_error(void* self, int32_t error, const char* errorString) {
+    QGeoRouteReply_SuperSetError((QGeoRouteReply*)self, error, qstring(errorString));
 }
 
 void q_georoutereply_set_finished(void* self, bool finished) {
@@ -138,8 +138,8 @@ void q_georoutereply_on_set_finished(void* self, void (*callback)(void*, bool)) 
     QGeoRouteReply_OnSetFinished((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_set_finished(void* self, bool finished) {
-    QGeoRouteReply_QBaseSetFinished((QGeoRouteReply*)self, finished);
+void q_georoutereply_super_set_finished(void* self, bool finished) {
+    QGeoRouteReply_SuperSetFinished((QGeoRouteReply*)self, finished);
 }
 
 void q_georoutereply_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
@@ -150,8 +150,8 @@ void q_georoutereply_on_set_routes(void* self, void (*callback)(void*, libqt_lis
     QGeoRouteReply_OnSetRoutes((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
-    QGeoRouteReply_QBaseSetRoutes((QGeoRouteReply*)self, routes);
+void q_georoutereply_super_set_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
+    QGeoRouteReply_SuperSetRoutes((QGeoRouteReply*)self, routes);
 }
 
 void q_georoutereply_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
@@ -162,8 +162,8 @@ void q_georoutereply_on_add_routes(void* self, void (*callback)(void*, libqt_lis
     QGeoRouteReply_OnAddRoutes((QGeoRouteReply*)self, (intptr_t)callback);
 }
 
-void q_georoutereply_qbase_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
-    QGeoRouteReply_QBaseAddRoutes((QGeoRouteReply*)self, routes);
+void q_georoutereply_super_add_routes(void* self, libqt_list /* of QGeoRoute* */ routes) {
+    QGeoRouteReply_SuperAddRoutes((QGeoRouteReply*)self, routes);
 }
 
 const char* q_georoutereply_tr2(const char* s, const char* c) {
@@ -403,8 +403,8 @@ bool q_georoutereply_event(void* self, void* event) {
     return QGeoRouteReply_Event((QGeoRouteReply*)self, (QEvent*)event);
 }
 
-bool q_georoutereply_qbase_event(void* self, void* event) {
-    return QGeoRouteReply_QBaseEvent((QGeoRouteReply*)self, (QEvent*)event);
+bool q_georoutereply_super_event(void* self, void* event) {
+    return QGeoRouteReply_SuperEvent((QGeoRouteReply*)self, (QEvent*)event);
 }
 
 void q_georoutereply_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -415,8 +415,8 @@ bool q_georoutereply_event_filter(void* self, void* watched, void* event) {
     return QGeoRouteReply_EventFilter((QGeoRouteReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_georoutereply_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoRouteReply_QBaseEventFilter((QGeoRouteReply*)self, (QObject*)watched, (QEvent*)event);
+bool q_georoutereply_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoRouteReply_SuperEventFilter((QGeoRouteReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_georoutereply_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -427,8 +427,8 @@ void q_georoutereply_timer_event(void* self, void* event) {
     QGeoRouteReply_TimerEvent((QGeoRouteReply*)self, (QTimerEvent*)event);
 }
 
-void q_georoutereply_qbase_timer_event(void* self, void* event) {
-    QGeoRouteReply_QBaseTimerEvent((QGeoRouteReply*)self, (QTimerEvent*)event);
+void q_georoutereply_super_timer_event(void* self, void* event) {
+    QGeoRouteReply_SuperTimerEvent((QGeoRouteReply*)self, (QTimerEvent*)event);
 }
 
 void q_georoutereply_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -439,8 +439,8 @@ void q_georoutereply_child_event(void* self, void* event) {
     QGeoRouteReply_ChildEvent((QGeoRouteReply*)self, (QChildEvent*)event);
 }
 
-void q_georoutereply_qbase_child_event(void* self, void* event) {
-    QGeoRouteReply_QBaseChildEvent((QGeoRouteReply*)self, (QChildEvent*)event);
+void q_georoutereply_super_child_event(void* self, void* event) {
+    QGeoRouteReply_SuperChildEvent((QGeoRouteReply*)self, (QChildEvent*)event);
 }
 
 void q_georoutereply_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -451,8 +451,8 @@ void q_georoutereply_custom_event(void* self, void* event) {
     QGeoRouteReply_CustomEvent((QGeoRouteReply*)self, (QEvent*)event);
 }
 
-void q_georoutereply_qbase_custom_event(void* self, void* event) {
-    QGeoRouteReply_QBaseCustomEvent((QGeoRouteReply*)self, (QEvent*)event);
+void q_georoutereply_super_custom_event(void* self, void* event) {
+    QGeoRouteReply_SuperCustomEvent((QGeoRouteReply*)self, (QEvent*)event);
 }
 
 void q_georoutereply_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -463,8 +463,8 @@ void q_georoutereply_connect_notify(void* self, void* signal) {
     QGeoRouteReply_ConnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutereply_qbase_connect_notify(void* self, void* signal) {
-    QGeoRouteReply_QBaseConnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
+void q_georoutereply_super_connect_notify(void* self, void* signal) {
+    QGeoRouteReply_SuperConnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
 void q_georoutereply_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -475,8 +475,8 @@ void q_georoutereply_disconnect_notify(void* self, void* signal) {
     QGeoRouteReply_DisconnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutereply_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoRouteReply_QBaseDisconnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
+void q_georoutereply_super_disconnect_notify(void* self, void* signal) {
+    QGeoRouteReply_SuperDisconnectNotify((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
 void q_georoutereply_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -487,8 +487,8 @@ QObject* q_georoutereply_sender(void* self) {
     return QGeoRouteReply_Sender((QGeoRouteReply*)self);
 }
 
-QObject* q_georoutereply_qbase_sender(void* self) {
-    return QGeoRouteReply_QBaseSender((QGeoRouteReply*)self);
+QObject* q_georoutereply_super_sender(void* self) {
+    return QGeoRouteReply_SuperSender((QGeoRouteReply*)self);
 }
 
 void q_georoutereply_on_sender(void* self, QObject* (*callback)()) {
@@ -499,8 +499,8 @@ int32_t q_georoutereply_sender_signal_index(void* self) {
     return QGeoRouteReply_SenderSignalIndex((QGeoRouteReply*)self);
 }
 
-int32_t q_georoutereply_qbase_sender_signal_index(void* self) {
-    return QGeoRouteReply_QBaseSenderSignalIndex((QGeoRouteReply*)self);
+int32_t q_georoutereply_super_sender_signal_index(void* self) {
+    return QGeoRouteReply_SuperSenderSignalIndex((QGeoRouteReply*)self);
 }
 
 void q_georoutereply_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -511,8 +511,8 @@ int32_t q_georoutereply_receivers(void* self, const char* signal) {
     return QGeoRouteReply_Receivers((QGeoRouteReply*)self, signal);
 }
 
-int32_t q_georoutereply_qbase_receivers(void* self, const char* signal) {
-    return QGeoRouteReply_QBaseReceivers((QGeoRouteReply*)self, signal);
+int32_t q_georoutereply_super_receivers(void* self, const char* signal) {
+    return QGeoRouteReply_SuperReceivers((QGeoRouteReply*)self, signal);
 }
 
 void q_georoutereply_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -523,8 +523,8 @@ bool q_georoutereply_is_signal_connected(void* self, void* signal) {
     return QGeoRouteReply_IsSignalConnected((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
-bool q_georoutereply_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoRouteReply_QBaseIsSignalConnected((QGeoRouteReply*)self, (QMetaMethod*)signal);
+bool q_georoutereply_super_is_signal_connected(void* self, void* signal) {
+    return QGeoRouteReply_SuperIsSignalConnected((QGeoRouteReply*)self, (QMetaMethod*)signal);
 }
 
 void q_georoutereply_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

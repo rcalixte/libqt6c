@@ -39,8 +39,8 @@ void q_colordialog_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QColorDialog_OnMetaObject((QColorDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_colordialog_qbase_meta_object(void* self) {
-    return QColorDialog_QBaseMetaObject((QColorDialog*)self);
+const QMetaObject* q_colordialog_super_meta_object(void* self) {
+    return QColorDialog_SuperMetaObject((QColorDialog*)self);
 }
 
 void* q_colordialog_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_colordialog_on_metacast(void* self, void* (*callback)(void*, const char*)
     QColorDialog_OnMetacast((QColorDialog*)self, (intptr_t)callback);
 }
 
-void* q_colordialog_qbase_metacast(void* self, const char* param1) {
-    return QColorDialog_QBaseMetacast((QColorDialog*)self, param1);
+void* q_colordialog_super_metacast(void* self, const char* param1) {
+    return QColorDialog_SuperMetacast((QColorDialog*)self, param1);
 }
 
 int32_t q_colordialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_colordialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QColorDialog_OnMetacall((QColorDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_colordialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QColorDialog_QBaseMetacall((QColorDialog*)self, param1, param2, param3);
+int32_t q_colordialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QColorDialog_SuperMetacall((QColorDialog*)self, param1, param2, param3);
 }
 
 const char* q_colordialog_tr(const char* s) {
@@ -110,8 +110,8 @@ void q_colordialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
     QColorDialog_OnSetVisible((QColorDialog*)self, (intptr_t)callback);
 }
 
-void q_colordialog_qbase_set_visible(void* self, bool visible) {
-    QColorDialog_QBaseSetVisible((QColorDialog*)self, visible);
+void q_colordialog_super_set_visible(void* self, bool visible) {
+    QColorDialog_SuperSetVisible((QColorDialog*)self, visible);
 }
 
 QColor* q_colordialog_get_color() {
@@ -162,8 +162,8 @@ void q_colordialog_on_change_event(void* self, void (*callback)(void*, void*)) {
     QColorDialog_OnChangeEvent((QColorDialog*)self, (intptr_t)callback);
 }
 
-void q_colordialog_qbase_change_event(void* self, void* event) {
-    QColorDialog_QBaseChangeEvent((QColorDialog*)self, (QEvent*)event);
+void q_colordialog_super_change_event(void* self, void* event) {
+    QColorDialog_SuperChangeEvent((QColorDialog*)self, (QEvent*)event);
 }
 
 void q_colordialog_done(void* self, int result) {
@@ -174,8 +174,8 @@ void q_colordialog_on_done(void* self, void (*callback)(void*, int)) {
     QColorDialog_OnDone((QColorDialog*)self, (intptr_t)callback);
 }
 
-void q_colordialog_qbase_done(void* self, int result) {
-    QColorDialog_QBaseDone((QColorDialog*)self, result);
+void q_colordialog_super_done(void* self, int result) {
+    QColorDialog_SuperDone((QColorDialog*)self, result);
 }
 
 const char* q_colordialog_tr2(const char* s, const char* c) {
@@ -1641,8 +1641,8 @@ QSize* q_colordialog_size_hint(void* self) {
     return QColorDialog_SizeHint((QColorDialog*)self);
 }
 
-QSize* q_colordialog_qbase_size_hint(void* self) {
-    return QColorDialog_QBaseSizeHint((QColorDialog*)self);
+QSize* q_colordialog_super_size_hint(void* self) {
+    return QColorDialog_SuperSizeHint((QColorDialog*)self);
 }
 
 void q_colordialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1653,8 +1653,8 @@ QSize* q_colordialog_minimum_size_hint(void* self) {
     return QColorDialog_MinimumSizeHint((QColorDialog*)self);
 }
 
-QSize* q_colordialog_qbase_minimum_size_hint(void* self) {
-    return QColorDialog_QBaseMinimumSizeHint((QColorDialog*)self);
+QSize* q_colordialog_super_minimum_size_hint(void* self) {
+    return QColorDialog_SuperMinimumSizeHint((QColorDialog*)self);
 }
 
 void q_colordialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1665,8 +1665,8 @@ void q_colordialog_open(void* self) {
     QColorDialog_Open((QColorDialog*)self);
 }
 
-void q_colordialog_qbase_open(void* self) {
-    QColorDialog_QBaseOpen((QColorDialog*)self);
+void q_colordialog_super_open(void* self) {
+    QColorDialog_SuperOpen((QColorDialog*)self);
 }
 
 void q_colordialog_on_open(void* self, void (*callback)()) {
@@ -1677,8 +1677,8 @@ int32_t q_colordialog_exec(void* self) {
     return QColorDialog_Exec((QColorDialog*)self);
 }
 
-int32_t q_colordialog_qbase_exec(void* self) {
-    return QColorDialog_QBaseExec((QColorDialog*)self);
+int32_t q_colordialog_super_exec(void* self) {
+    return QColorDialog_SuperExec((QColorDialog*)self);
 }
 
 void q_colordialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1689,8 +1689,8 @@ void q_colordialog_accept(void* self) {
     QColorDialog_Accept((QColorDialog*)self);
 }
 
-void q_colordialog_qbase_accept(void* self) {
-    QColorDialog_QBaseAccept((QColorDialog*)self);
+void q_colordialog_super_accept(void* self) {
+    QColorDialog_SuperAccept((QColorDialog*)self);
 }
 
 void q_colordialog_on_accept(void* self, void (*callback)()) {
@@ -1701,8 +1701,8 @@ void q_colordialog_reject(void* self) {
     QColorDialog_Reject((QColorDialog*)self);
 }
 
-void q_colordialog_qbase_reject(void* self) {
-    QColorDialog_QBaseReject((QColorDialog*)self);
+void q_colordialog_super_reject(void* self) {
+    QColorDialog_SuperReject((QColorDialog*)self);
 }
 
 void q_colordialog_on_reject(void* self, void (*callback)()) {
@@ -1713,8 +1713,8 @@ void q_colordialog_key_press_event(void* self, void* param1) {
     QColorDialog_KeyPressEvent((QColorDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_colordialog_qbase_key_press_event(void* self, void* param1) {
-    QColorDialog_QBaseKeyPressEvent((QColorDialog*)self, (QKeyEvent*)param1);
+void q_colordialog_super_key_press_event(void* self, void* param1) {
+    QColorDialog_SuperKeyPressEvent((QColorDialog*)self, (QKeyEvent*)param1);
 }
 
 void q_colordialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1725,8 +1725,8 @@ void q_colordialog_close_event(void* self, void* param1) {
     QColorDialog_CloseEvent((QColorDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_colordialog_qbase_close_event(void* self, void* param1) {
-    QColorDialog_QBaseCloseEvent((QColorDialog*)self, (QCloseEvent*)param1);
+void q_colordialog_super_close_event(void* self, void* param1) {
+    QColorDialog_SuperCloseEvent((QColorDialog*)self, (QCloseEvent*)param1);
 }
 
 void q_colordialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1737,8 +1737,8 @@ void q_colordialog_show_event(void* self, void* param1) {
     QColorDialog_ShowEvent((QColorDialog*)self, (QShowEvent*)param1);
 }
 
-void q_colordialog_qbase_show_event(void* self, void* param1) {
-    QColorDialog_QBaseShowEvent((QColorDialog*)self, (QShowEvent*)param1);
+void q_colordialog_super_show_event(void* self, void* param1) {
+    QColorDialog_SuperShowEvent((QColorDialog*)self, (QShowEvent*)param1);
 }
 
 void q_colordialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1749,8 +1749,8 @@ void q_colordialog_resize_event(void* self, void* param1) {
     QColorDialog_ResizeEvent((QColorDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_colordialog_qbase_resize_event(void* self, void* param1) {
-    QColorDialog_QBaseResizeEvent((QColorDialog*)self, (QResizeEvent*)param1);
+void q_colordialog_super_resize_event(void* self, void* param1) {
+    QColorDialog_SuperResizeEvent((QColorDialog*)self, (QResizeEvent*)param1);
 }
 
 void q_colordialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1761,8 +1761,8 @@ void q_colordialog_context_menu_event(void* self, void* param1) {
     QColorDialog_ContextMenuEvent((QColorDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_colordialog_qbase_context_menu_event(void* self, void* param1) {
-    QColorDialog_QBaseContextMenuEvent((QColorDialog*)self, (QContextMenuEvent*)param1);
+void q_colordialog_super_context_menu_event(void* self, void* param1) {
+    QColorDialog_SuperContextMenuEvent((QColorDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void q_colordialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1773,8 +1773,8 @@ bool q_colordialog_event_filter(void* self, void* param1, void* param2) {
     return QColorDialog_EventFilter((QColorDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_colordialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QColorDialog_QBaseEventFilter((QColorDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool q_colordialog_super_event_filter(void* self, void* param1, void* param2) {
+    return QColorDialog_SuperEventFilter((QColorDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_colordialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1785,8 +1785,8 @@ int32_t q_colordialog_dev_type(void* self) {
     return QColorDialog_DevType((QColorDialog*)self);
 }
 
-int32_t q_colordialog_qbase_dev_type(void* self) {
-    return QColorDialog_QBaseDevType((QColorDialog*)self);
+int32_t q_colordialog_super_dev_type(void* self) {
+    return QColorDialog_SuperDevType((QColorDialog*)self);
 }
 
 void q_colordialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1797,8 +1797,8 @@ int32_t q_colordialog_height_for_width(void* self, int param1) {
     return QColorDialog_HeightForWidth((QColorDialog*)self, param1);
 }
 
-int32_t q_colordialog_qbase_height_for_width(void* self, int param1) {
-    return QColorDialog_QBaseHeightForWidth((QColorDialog*)self, param1);
+int32_t q_colordialog_super_height_for_width(void* self, int param1) {
+    return QColorDialog_SuperHeightForWidth((QColorDialog*)self, param1);
 }
 
 void q_colordialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1809,8 +1809,8 @@ bool q_colordialog_has_height_for_width(void* self) {
     return QColorDialog_HasHeightForWidth((QColorDialog*)self);
 }
 
-bool q_colordialog_qbase_has_height_for_width(void* self) {
-    return QColorDialog_QBaseHasHeightForWidth((QColorDialog*)self);
+bool q_colordialog_super_has_height_for_width(void* self) {
+    return QColorDialog_SuperHasHeightForWidth((QColorDialog*)self);
 }
 
 void q_colordialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1821,8 +1821,8 @@ QPaintEngine* q_colordialog_paint_engine(void* self) {
     return QColorDialog_PaintEngine((QColorDialog*)self);
 }
 
-QPaintEngine* q_colordialog_qbase_paint_engine(void* self) {
-    return QColorDialog_QBasePaintEngine((QColorDialog*)self);
+QPaintEngine* q_colordialog_super_paint_engine(void* self) {
+    return QColorDialog_SuperPaintEngine((QColorDialog*)self);
 }
 
 void q_colordialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1833,8 +1833,8 @@ bool q_colordialog_event(void* self, void* event) {
     return QColorDialog_Event((QColorDialog*)self, (QEvent*)event);
 }
 
-bool q_colordialog_qbase_event(void* self, void* event) {
-    return QColorDialog_QBaseEvent((QColorDialog*)self, (QEvent*)event);
+bool q_colordialog_super_event(void* self, void* event) {
+    return QColorDialog_SuperEvent((QColorDialog*)self, (QEvent*)event);
 }
 
 void q_colordialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1845,8 +1845,8 @@ void q_colordialog_mouse_press_event(void* self, void* event) {
     QColorDialog_MousePressEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
-void q_colordialog_qbase_mouse_press_event(void* self, void* event) {
-    QColorDialog_QBaseMousePressEvent((QColorDialog*)self, (QMouseEvent*)event);
+void q_colordialog_super_mouse_press_event(void* self, void* event) {
+    QColorDialog_SuperMousePressEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
 void q_colordialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1857,8 +1857,8 @@ void q_colordialog_mouse_release_event(void* self, void* event) {
     QColorDialog_MouseReleaseEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
-void q_colordialog_qbase_mouse_release_event(void* self, void* event) {
-    QColorDialog_QBaseMouseReleaseEvent((QColorDialog*)self, (QMouseEvent*)event);
+void q_colordialog_super_mouse_release_event(void* self, void* event) {
+    QColorDialog_SuperMouseReleaseEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
 void q_colordialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1869,8 +1869,8 @@ void q_colordialog_mouse_double_click_event(void* self, void* event) {
     QColorDialog_MouseDoubleClickEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
-void q_colordialog_qbase_mouse_double_click_event(void* self, void* event) {
-    QColorDialog_QBaseMouseDoubleClickEvent((QColorDialog*)self, (QMouseEvent*)event);
+void q_colordialog_super_mouse_double_click_event(void* self, void* event) {
+    QColorDialog_SuperMouseDoubleClickEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
 void q_colordialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1881,8 +1881,8 @@ void q_colordialog_mouse_move_event(void* self, void* event) {
     QColorDialog_MouseMoveEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
-void q_colordialog_qbase_mouse_move_event(void* self, void* event) {
-    QColorDialog_QBaseMouseMoveEvent((QColorDialog*)self, (QMouseEvent*)event);
+void q_colordialog_super_mouse_move_event(void* self, void* event) {
+    QColorDialog_SuperMouseMoveEvent((QColorDialog*)self, (QMouseEvent*)event);
 }
 
 void q_colordialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1893,8 +1893,8 @@ void q_colordialog_wheel_event(void* self, void* event) {
     QColorDialog_WheelEvent((QColorDialog*)self, (QWheelEvent*)event);
 }
 
-void q_colordialog_qbase_wheel_event(void* self, void* event) {
-    QColorDialog_QBaseWheelEvent((QColorDialog*)self, (QWheelEvent*)event);
+void q_colordialog_super_wheel_event(void* self, void* event) {
+    QColorDialog_SuperWheelEvent((QColorDialog*)self, (QWheelEvent*)event);
 }
 
 void q_colordialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1905,8 +1905,8 @@ void q_colordialog_key_release_event(void* self, void* event) {
     QColorDialog_KeyReleaseEvent((QColorDialog*)self, (QKeyEvent*)event);
 }
 
-void q_colordialog_qbase_key_release_event(void* self, void* event) {
-    QColorDialog_QBaseKeyReleaseEvent((QColorDialog*)self, (QKeyEvent*)event);
+void q_colordialog_super_key_release_event(void* self, void* event) {
+    QColorDialog_SuperKeyReleaseEvent((QColorDialog*)self, (QKeyEvent*)event);
 }
 
 void q_colordialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1917,8 +1917,8 @@ void q_colordialog_focus_in_event(void* self, void* event) {
     QColorDialog_FocusInEvent((QColorDialog*)self, (QFocusEvent*)event);
 }
 
-void q_colordialog_qbase_focus_in_event(void* self, void* event) {
-    QColorDialog_QBaseFocusInEvent((QColorDialog*)self, (QFocusEvent*)event);
+void q_colordialog_super_focus_in_event(void* self, void* event) {
+    QColorDialog_SuperFocusInEvent((QColorDialog*)self, (QFocusEvent*)event);
 }
 
 void q_colordialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1929,8 +1929,8 @@ void q_colordialog_focus_out_event(void* self, void* event) {
     QColorDialog_FocusOutEvent((QColorDialog*)self, (QFocusEvent*)event);
 }
 
-void q_colordialog_qbase_focus_out_event(void* self, void* event) {
-    QColorDialog_QBaseFocusOutEvent((QColorDialog*)self, (QFocusEvent*)event);
+void q_colordialog_super_focus_out_event(void* self, void* event) {
+    QColorDialog_SuperFocusOutEvent((QColorDialog*)self, (QFocusEvent*)event);
 }
 
 void q_colordialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1941,8 +1941,8 @@ void q_colordialog_enter_event(void* self, void* event) {
     QColorDialog_EnterEvent((QColorDialog*)self, (QEnterEvent*)event);
 }
 
-void q_colordialog_qbase_enter_event(void* self, void* event) {
-    QColorDialog_QBaseEnterEvent((QColorDialog*)self, (QEnterEvent*)event);
+void q_colordialog_super_enter_event(void* self, void* event) {
+    QColorDialog_SuperEnterEvent((QColorDialog*)self, (QEnterEvent*)event);
 }
 
 void q_colordialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1953,8 +1953,8 @@ void q_colordialog_leave_event(void* self, void* event) {
     QColorDialog_LeaveEvent((QColorDialog*)self, (QEvent*)event);
 }
 
-void q_colordialog_qbase_leave_event(void* self, void* event) {
-    QColorDialog_QBaseLeaveEvent((QColorDialog*)self, (QEvent*)event);
+void q_colordialog_super_leave_event(void* self, void* event) {
+    QColorDialog_SuperLeaveEvent((QColorDialog*)self, (QEvent*)event);
 }
 
 void q_colordialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1965,8 +1965,8 @@ void q_colordialog_paint_event(void* self, void* event) {
     QColorDialog_PaintEvent((QColorDialog*)self, (QPaintEvent*)event);
 }
 
-void q_colordialog_qbase_paint_event(void* self, void* event) {
-    QColorDialog_QBasePaintEvent((QColorDialog*)self, (QPaintEvent*)event);
+void q_colordialog_super_paint_event(void* self, void* event) {
+    QColorDialog_SuperPaintEvent((QColorDialog*)self, (QPaintEvent*)event);
 }
 
 void q_colordialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1977,8 +1977,8 @@ void q_colordialog_move_event(void* self, void* event) {
     QColorDialog_MoveEvent((QColorDialog*)self, (QMoveEvent*)event);
 }
 
-void q_colordialog_qbase_move_event(void* self, void* event) {
-    QColorDialog_QBaseMoveEvent((QColorDialog*)self, (QMoveEvent*)event);
+void q_colordialog_super_move_event(void* self, void* event) {
+    QColorDialog_SuperMoveEvent((QColorDialog*)self, (QMoveEvent*)event);
 }
 
 void q_colordialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1989,8 +1989,8 @@ void q_colordialog_tablet_event(void* self, void* event) {
     QColorDialog_TabletEvent((QColorDialog*)self, (QTabletEvent*)event);
 }
 
-void q_colordialog_qbase_tablet_event(void* self, void* event) {
-    QColorDialog_QBaseTabletEvent((QColorDialog*)self, (QTabletEvent*)event);
+void q_colordialog_super_tablet_event(void* self, void* event) {
+    QColorDialog_SuperTabletEvent((QColorDialog*)self, (QTabletEvent*)event);
 }
 
 void q_colordialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2001,8 +2001,8 @@ void q_colordialog_action_event(void* self, void* event) {
     QColorDialog_ActionEvent((QColorDialog*)self, (QActionEvent*)event);
 }
 
-void q_colordialog_qbase_action_event(void* self, void* event) {
-    QColorDialog_QBaseActionEvent((QColorDialog*)self, (QActionEvent*)event);
+void q_colordialog_super_action_event(void* self, void* event) {
+    QColorDialog_SuperActionEvent((QColorDialog*)self, (QActionEvent*)event);
 }
 
 void q_colordialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2013,8 +2013,8 @@ void q_colordialog_drag_enter_event(void* self, void* event) {
     QColorDialog_DragEnterEvent((QColorDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_colordialog_qbase_drag_enter_event(void* self, void* event) {
-    QColorDialog_QBaseDragEnterEvent((QColorDialog*)self, (QDragEnterEvent*)event);
+void q_colordialog_super_drag_enter_event(void* self, void* event) {
+    QColorDialog_SuperDragEnterEvent((QColorDialog*)self, (QDragEnterEvent*)event);
 }
 
 void q_colordialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2025,8 +2025,8 @@ void q_colordialog_drag_move_event(void* self, void* event) {
     QColorDialog_DragMoveEvent((QColorDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_colordialog_qbase_drag_move_event(void* self, void* event) {
-    QColorDialog_QBaseDragMoveEvent((QColorDialog*)self, (QDragMoveEvent*)event);
+void q_colordialog_super_drag_move_event(void* self, void* event) {
+    QColorDialog_SuperDragMoveEvent((QColorDialog*)self, (QDragMoveEvent*)event);
 }
 
 void q_colordialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2037,8 +2037,8 @@ void q_colordialog_drag_leave_event(void* self, void* event) {
     QColorDialog_DragLeaveEvent((QColorDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_colordialog_qbase_drag_leave_event(void* self, void* event) {
-    QColorDialog_QBaseDragLeaveEvent((QColorDialog*)self, (QDragLeaveEvent*)event);
+void q_colordialog_super_drag_leave_event(void* self, void* event) {
+    QColorDialog_SuperDragLeaveEvent((QColorDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void q_colordialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2049,8 +2049,8 @@ void q_colordialog_drop_event(void* self, void* event) {
     QColorDialog_DropEvent((QColorDialog*)self, (QDropEvent*)event);
 }
 
-void q_colordialog_qbase_drop_event(void* self, void* event) {
-    QColorDialog_QBaseDropEvent((QColorDialog*)self, (QDropEvent*)event);
+void q_colordialog_super_drop_event(void* self, void* event) {
+    QColorDialog_SuperDropEvent((QColorDialog*)self, (QDropEvent*)event);
 }
 
 void q_colordialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2061,8 +2061,8 @@ void q_colordialog_hide_event(void* self, void* event) {
     QColorDialog_HideEvent((QColorDialog*)self, (QHideEvent*)event);
 }
 
-void q_colordialog_qbase_hide_event(void* self, void* event) {
-    QColorDialog_QBaseHideEvent((QColorDialog*)self, (QHideEvent*)event);
+void q_colordialog_super_hide_event(void* self, void* event) {
+    QColorDialog_SuperHideEvent((QColorDialog*)self, (QHideEvent*)event);
 }
 
 void q_colordialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2073,8 +2073,8 @@ bool q_colordialog_native_event(void* self, char* eventType, void* message, intp
     return QColorDialog_NativeEvent((QColorDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_colordialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QColorDialog_QBaseNativeEvent((QColorDialog*)self, qstring(eventType), message, result);
+bool q_colordialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QColorDialog_SuperNativeEvent((QColorDialog*)self, qstring(eventType), message, result);
 }
 
 void q_colordialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2085,8 +2085,8 @@ int32_t q_colordialog_metric(void* self, int32_t param1) {
     return QColorDialog_Metric((QColorDialog*)self, param1);
 }
 
-int32_t q_colordialog_qbase_metric(void* self, int32_t param1) {
-    return QColorDialog_QBaseMetric((QColorDialog*)self, param1);
+int32_t q_colordialog_super_metric(void* self, int32_t param1) {
+    return QColorDialog_SuperMetric((QColorDialog*)self, param1);
 }
 
 void q_colordialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2097,8 +2097,8 @@ void q_colordialog_init_painter(void* self, void* painter) {
     QColorDialog_InitPainter((QColorDialog*)self, (QPainter*)painter);
 }
 
-void q_colordialog_qbase_init_painter(void* self, void* painter) {
-    QColorDialog_QBaseInitPainter((QColorDialog*)self, (QPainter*)painter);
+void q_colordialog_super_init_painter(void* self, void* painter) {
+    QColorDialog_SuperInitPainter((QColorDialog*)self, (QPainter*)painter);
 }
 
 void q_colordialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2109,8 +2109,8 @@ QPaintDevice* q_colordialog_redirected(void* self, void* offset) {
     return QColorDialog_Redirected((QColorDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_colordialog_qbase_redirected(void* self, void* offset) {
-    return QColorDialog_QBaseRedirected((QColorDialog*)self, (QPoint*)offset);
+QPaintDevice* q_colordialog_super_redirected(void* self, void* offset) {
+    return QColorDialog_SuperRedirected((QColorDialog*)self, (QPoint*)offset);
 }
 
 void q_colordialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2121,8 +2121,8 @@ QPainter* q_colordialog_shared_painter(void* self) {
     return QColorDialog_SharedPainter((QColorDialog*)self);
 }
 
-QPainter* q_colordialog_qbase_shared_painter(void* self) {
-    return QColorDialog_QBaseSharedPainter((QColorDialog*)self);
+QPainter* q_colordialog_super_shared_painter(void* self) {
+    return QColorDialog_SuperSharedPainter((QColorDialog*)self);
 }
 
 void q_colordialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2133,8 +2133,8 @@ void q_colordialog_input_method_event(void* self, void* param1) {
     QColorDialog_InputMethodEvent((QColorDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_colordialog_qbase_input_method_event(void* self, void* param1) {
-    QColorDialog_QBaseInputMethodEvent((QColorDialog*)self, (QInputMethodEvent*)param1);
+void q_colordialog_super_input_method_event(void* self, void* param1) {
+    QColorDialog_SuperInputMethodEvent((QColorDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void q_colordialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2145,8 +2145,8 @@ QVariant* q_colordialog_input_method_query(void* self, int32_t param1) {
     return QColorDialog_InputMethodQuery((QColorDialog*)self, param1);
 }
 
-QVariant* q_colordialog_qbase_input_method_query(void* self, int32_t param1) {
-    return QColorDialog_QBaseInputMethodQuery((QColorDialog*)self, param1);
+QVariant* q_colordialog_super_input_method_query(void* self, int32_t param1) {
+    return QColorDialog_SuperInputMethodQuery((QColorDialog*)self, param1);
 }
 
 void q_colordialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2157,8 +2157,8 @@ bool q_colordialog_focus_next_prev_child(void* self, bool next) {
     return QColorDialog_FocusNextPrevChild((QColorDialog*)self, next);
 }
 
-bool q_colordialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return QColorDialog_QBaseFocusNextPrevChild((QColorDialog*)self, next);
+bool q_colordialog_super_focus_next_prev_child(void* self, bool next) {
+    return QColorDialog_SuperFocusNextPrevChild((QColorDialog*)self, next);
 }
 
 void q_colordialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2169,8 +2169,8 @@ void q_colordialog_timer_event(void* self, void* event) {
     QColorDialog_TimerEvent((QColorDialog*)self, (QTimerEvent*)event);
 }
 
-void q_colordialog_qbase_timer_event(void* self, void* event) {
-    QColorDialog_QBaseTimerEvent((QColorDialog*)self, (QTimerEvent*)event);
+void q_colordialog_super_timer_event(void* self, void* event) {
+    QColorDialog_SuperTimerEvent((QColorDialog*)self, (QTimerEvent*)event);
 }
 
 void q_colordialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2181,8 +2181,8 @@ void q_colordialog_child_event(void* self, void* event) {
     QColorDialog_ChildEvent((QColorDialog*)self, (QChildEvent*)event);
 }
 
-void q_colordialog_qbase_child_event(void* self, void* event) {
-    QColorDialog_QBaseChildEvent((QColorDialog*)self, (QChildEvent*)event);
+void q_colordialog_super_child_event(void* self, void* event) {
+    QColorDialog_SuperChildEvent((QColorDialog*)self, (QChildEvent*)event);
 }
 
 void q_colordialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2193,8 +2193,8 @@ void q_colordialog_custom_event(void* self, void* event) {
     QColorDialog_CustomEvent((QColorDialog*)self, (QEvent*)event);
 }
 
-void q_colordialog_qbase_custom_event(void* self, void* event) {
-    QColorDialog_QBaseCustomEvent((QColorDialog*)self, (QEvent*)event);
+void q_colordialog_super_custom_event(void* self, void* event) {
+    QColorDialog_SuperCustomEvent((QColorDialog*)self, (QEvent*)event);
 }
 
 void q_colordialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2205,8 +2205,8 @@ void q_colordialog_connect_notify(void* self, void* signal) {
     QColorDialog_ConnectNotify((QColorDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_colordialog_qbase_connect_notify(void* self, void* signal) {
-    QColorDialog_QBaseConnectNotify((QColorDialog*)self, (QMetaMethod*)signal);
+void q_colordialog_super_connect_notify(void* self, void* signal) {
+    QColorDialog_SuperConnectNotify((QColorDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_colordialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2217,8 +2217,8 @@ void q_colordialog_disconnect_notify(void* self, void* signal) {
     QColorDialog_DisconnectNotify((QColorDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_colordialog_qbase_disconnect_notify(void* self, void* signal) {
-    QColorDialog_QBaseDisconnectNotify((QColorDialog*)self, (QMetaMethod*)signal);
+void q_colordialog_super_disconnect_notify(void* self, void* signal) {
+    QColorDialog_SuperDisconnectNotify((QColorDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_colordialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2229,8 +2229,8 @@ void q_colordialog_adjust_position(void* self, void* param1) {
     QColorDialog_AdjustPosition((QColorDialog*)self, (QWidget*)param1);
 }
 
-void q_colordialog_qbase_adjust_position(void* self, void* param1) {
-    QColorDialog_QBaseAdjustPosition((QColorDialog*)self, (QWidget*)param1);
+void q_colordialog_super_adjust_position(void* self, void* param1) {
+    QColorDialog_SuperAdjustPosition((QColorDialog*)self, (QWidget*)param1);
 }
 
 void q_colordialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2241,8 +2241,8 @@ void q_colordialog_update_micro_focus(void* self) {
     QColorDialog_UpdateMicroFocus((QColorDialog*)self);
 }
 
-void q_colordialog_qbase_update_micro_focus(void* self) {
-    QColorDialog_QBaseUpdateMicroFocus((QColorDialog*)self);
+void q_colordialog_super_update_micro_focus(void* self) {
+    QColorDialog_SuperUpdateMicroFocus((QColorDialog*)self);
 }
 
 void q_colordialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2253,8 +2253,8 @@ void q_colordialog_create(void* self) {
     QColorDialog_Create((QColorDialog*)self);
 }
 
-void q_colordialog_qbase_create(void* self) {
-    QColorDialog_QBaseCreate((QColorDialog*)self);
+void q_colordialog_super_create(void* self) {
+    QColorDialog_SuperCreate((QColorDialog*)self);
 }
 
 void q_colordialog_on_create(void* self, void (*callback)()) {
@@ -2265,8 +2265,8 @@ void q_colordialog_destroy(void* self) {
     QColorDialog_Destroy((QColorDialog*)self);
 }
 
-void q_colordialog_qbase_destroy(void* self) {
-    QColorDialog_QBaseDestroy((QColorDialog*)self);
+void q_colordialog_super_destroy(void* self) {
+    QColorDialog_SuperDestroy((QColorDialog*)self);
 }
 
 void q_colordialog_on_destroy(void* self, void (*callback)()) {
@@ -2277,8 +2277,8 @@ bool q_colordialog_focus_next_child(void* self) {
     return QColorDialog_FocusNextChild((QColorDialog*)self);
 }
 
-bool q_colordialog_qbase_focus_next_child(void* self) {
-    return QColorDialog_QBaseFocusNextChild((QColorDialog*)self);
+bool q_colordialog_super_focus_next_child(void* self) {
+    return QColorDialog_SuperFocusNextChild((QColorDialog*)self);
 }
 
 void q_colordialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2289,8 +2289,8 @@ bool q_colordialog_focus_previous_child(void* self) {
     return QColorDialog_FocusPreviousChild((QColorDialog*)self);
 }
 
-bool q_colordialog_qbase_focus_previous_child(void* self) {
-    return QColorDialog_QBaseFocusPreviousChild((QColorDialog*)self);
+bool q_colordialog_super_focus_previous_child(void* self) {
+    return QColorDialog_SuperFocusPreviousChild((QColorDialog*)self);
 }
 
 void q_colordialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2301,8 +2301,8 @@ QObject* q_colordialog_sender(void* self) {
     return QColorDialog_Sender((QColorDialog*)self);
 }
 
-QObject* q_colordialog_qbase_sender(void* self) {
-    return QColorDialog_QBaseSender((QColorDialog*)self);
+QObject* q_colordialog_super_sender(void* self) {
+    return QColorDialog_SuperSender((QColorDialog*)self);
 }
 
 void q_colordialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2313,8 +2313,8 @@ int32_t q_colordialog_sender_signal_index(void* self) {
     return QColorDialog_SenderSignalIndex((QColorDialog*)self);
 }
 
-int32_t q_colordialog_qbase_sender_signal_index(void* self) {
-    return QColorDialog_QBaseSenderSignalIndex((QColorDialog*)self);
+int32_t q_colordialog_super_sender_signal_index(void* self) {
+    return QColorDialog_SuperSenderSignalIndex((QColorDialog*)self);
 }
 
 void q_colordialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2325,8 +2325,8 @@ int32_t q_colordialog_receivers(void* self, const char* signal) {
     return QColorDialog_Receivers((QColorDialog*)self, signal);
 }
 
-int32_t q_colordialog_qbase_receivers(void* self, const char* signal) {
-    return QColorDialog_QBaseReceivers((QColorDialog*)self, signal);
+int32_t q_colordialog_super_receivers(void* self, const char* signal) {
+    return QColorDialog_SuperReceivers((QColorDialog*)self, signal);
 }
 
 void q_colordialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2337,8 +2337,8 @@ bool q_colordialog_is_signal_connected(void* self, void* signal) {
     return QColorDialog_IsSignalConnected((QColorDialog*)self, (QMetaMethod*)signal);
 }
 
-bool q_colordialog_qbase_is_signal_connected(void* self, void* signal) {
-    return QColorDialog_QBaseIsSignalConnected((QColorDialog*)self, (QMetaMethod*)signal);
+bool q_colordialog_super_is_signal_connected(void* self, void* signal) {
+    return QColorDialog_SuperIsSignalConnected((QColorDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_colordialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2349,8 +2349,8 @@ double q_colordialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return QColorDialog_GetDecodedMetricF((QColorDialog*)self, metricA, metricB);
 }
 
-double q_colordialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QColorDialog_QBaseGetDecodedMetricF((QColorDialog*)self, metricA, metricB);
+double q_colordialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QColorDialog_SuperGetDecodedMetricF((QColorDialog*)self, metricA, metricB);
 }
 
 void q_colordialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

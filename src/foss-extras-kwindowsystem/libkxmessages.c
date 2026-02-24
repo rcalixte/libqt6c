@@ -43,8 +43,8 @@ void k_xmessages_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KXMessages_OnMetaObject((KXMessages*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_xmessages_qbase_meta_object(void* self) {
-    return KXMessages_QBaseMetaObject((KXMessages*)self);
+const QMetaObject* k_xmessages_super_meta_object(void* self) {
+    return KXMessages_SuperMetaObject((KXMessages*)self);
 }
 
 void* k_xmessages_metacast(void* self, const char* param1) {
@@ -55,8 +55,8 @@ void k_xmessages_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     KXMessages_OnMetacast((KXMessages*)self, (intptr_t)callback);
 }
 
-void* k_xmessages_qbase_metacast(void* self, const char* param1) {
-    return KXMessages_QBaseMetacast((KXMessages*)self, param1);
+void* k_xmessages_super_metacast(void* self, const char* param1) {
+    return KXMessages_SuperMetacast((KXMessages*)self, param1);
 }
 
 int32_t k_xmessages_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -67,8 +67,8 @@ void k_xmessages_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     KXMessages_OnMetacall((KXMessages*)self, (intptr_t)callback);
 }
 
-int32_t k_xmessages_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KXMessages_QBaseMetacall((KXMessages*)self, param1, param2, param3);
+int32_t k_xmessages_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KXMessages_SuperMetacall((KXMessages*)self, param1, param2, param3);
 }
 
 const char* k_xmessages_tr(const char* s) {
@@ -329,8 +329,8 @@ bool k_xmessages_event(void* self, void* event) {
     return KXMessages_Event((KXMessages*)self, (QEvent*)event);
 }
 
-bool k_xmessages_qbase_event(void* self, void* event) {
-    return KXMessages_QBaseEvent((KXMessages*)self, (QEvent*)event);
+bool k_xmessages_super_event(void* self, void* event) {
+    return KXMessages_SuperEvent((KXMessages*)self, (QEvent*)event);
 }
 
 void k_xmessages_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -341,8 +341,8 @@ bool k_xmessages_event_filter(void* self, void* watched, void* event) {
     return KXMessages_EventFilter((KXMessages*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_xmessages_qbase_event_filter(void* self, void* watched, void* event) {
-    return KXMessages_QBaseEventFilter((KXMessages*)self, (QObject*)watched, (QEvent*)event);
+bool k_xmessages_super_event_filter(void* self, void* watched, void* event) {
+    return KXMessages_SuperEventFilter((KXMessages*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_xmessages_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -353,8 +353,8 @@ void k_xmessages_timer_event(void* self, void* event) {
     KXMessages_TimerEvent((KXMessages*)self, (QTimerEvent*)event);
 }
 
-void k_xmessages_qbase_timer_event(void* self, void* event) {
-    KXMessages_QBaseTimerEvent((KXMessages*)self, (QTimerEvent*)event);
+void k_xmessages_super_timer_event(void* self, void* event) {
+    KXMessages_SuperTimerEvent((KXMessages*)self, (QTimerEvent*)event);
 }
 
 void k_xmessages_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -365,8 +365,8 @@ void k_xmessages_child_event(void* self, void* event) {
     KXMessages_ChildEvent((KXMessages*)self, (QChildEvent*)event);
 }
 
-void k_xmessages_qbase_child_event(void* self, void* event) {
-    KXMessages_QBaseChildEvent((KXMessages*)self, (QChildEvent*)event);
+void k_xmessages_super_child_event(void* self, void* event) {
+    KXMessages_SuperChildEvent((KXMessages*)self, (QChildEvent*)event);
 }
 
 void k_xmessages_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -377,8 +377,8 @@ void k_xmessages_custom_event(void* self, void* event) {
     KXMessages_CustomEvent((KXMessages*)self, (QEvent*)event);
 }
 
-void k_xmessages_qbase_custom_event(void* self, void* event) {
-    KXMessages_QBaseCustomEvent((KXMessages*)self, (QEvent*)event);
+void k_xmessages_super_custom_event(void* self, void* event) {
+    KXMessages_SuperCustomEvent((KXMessages*)self, (QEvent*)event);
 }
 
 void k_xmessages_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -389,8 +389,8 @@ void k_xmessages_connect_notify(void* self, void* signal) {
     KXMessages_ConnectNotify((KXMessages*)self, (QMetaMethod*)signal);
 }
 
-void k_xmessages_qbase_connect_notify(void* self, void* signal) {
-    KXMessages_QBaseConnectNotify((KXMessages*)self, (QMetaMethod*)signal);
+void k_xmessages_super_connect_notify(void* self, void* signal) {
+    KXMessages_SuperConnectNotify((KXMessages*)self, (QMetaMethod*)signal);
 }
 
 void k_xmessages_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -401,8 +401,8 @@ void k_xmessages_disconnect_notify(void* self, void* signal) {
     KXMessages_DisconnectNotify((KXMessages*)self, (QMetaMethod*)signal);
 }
 
-void k_xmessages_qbase_disconnect_notify(void* self, void* signal) {
-    KXMessages_QBaseDisconnectNotify((KXMessages*)self, (QMetaMethod*)signal);
+void k_xmessages_super_disconnect_notify(void* self, void* signal) {
+    KXMessages_SuperDisconnectNotify((KXMessages*)self, (QMetaMethod*)signal);
 }
 
 void k_xmessages_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -413,8 +413,8 @@ QObject* k_xmessages_sender(void* self) {
     return KXMessages_Sender((KXMessages*)self);
 }
 
-QObject* k_xmessages_qbase_sender(void* self) {
-    return KXMessages_QBaseSender((KXMessages*)self);
+QObject* k_xmessages_super_sender(void* self) {
+    return KXMessages_SuperSender((KXMessages*)self);
 }
 
 void k_xmessages_on_sender(void* self, QObject* (*callback)()) {
@@ -425,8 +425,8 @@ int32_t k_xmessages_sender_signal_index(void* self) {
     return KXMessages_SenderSignalIndex((KXMessages*)self);
 }
 
-int32_t k_xmessages_qbase_sender_signal_index(void* self) {
-    return KXMessages_QBaseSenderSignalIndex((KXMessages*)self);
+int32_t k_xmessages_super_sender_signal_index(void* self) {
+    return KXMessages_SuperSenderSignalIndex((KXMessages*)self);
 }
 
 void k_xmessages_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -437,8 +437,8 @@ int32_t k_xmessages_receivers(void* self, const char* signal) {
     return KXMessages_Receivers((KXMessages*)self, signal);
 }
 
-int32_t k_xmessages_qbase_receivers(void* self, const char* signal) {
-    return KXMessages_QBaseReceivers((KXMessages*)self, signal);
+int32_t k_xmessages_super_receivers(void* self, const char* signal) {
+    return KXMessages_SuperReceivers((KXMessages*)self, signal);
 }
 
 void k_xmessages_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -449,8 +449,8 @@ bool k_xmessages_is_signal_connected(void* self, void* signal) {
     return KXMessages_IsSignalConnected((KXMessages*)self, (QMetaMethod*)signal);
 }
 
-bool k_xmessages_qbase_is_signal_connected(void* self, void* signal) {
-    return KXMessages_QBaseIsSignalConnected((KXMessages*)self, (QMetaMethod*)signal);
+bool k_xmessages_super_is_signal_connected(void* self, void* signal) {
+    return KXMessages_SuperIsSignalConnected((KXMessages*)self, (QMetaMethod*)signal);
 }
 
 void k_xmessages_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

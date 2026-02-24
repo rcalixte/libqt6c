@@ -41,8 +41,8 @@ void k_messagewidget_on_meta_object(void* self, const QMetaObject* (*callback)()
     KMessageWidget_OnMetaObject((KMessageWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_messagewidget_qbase_meta_object(void* self) {
-    return KMessageWidget_QBaseMetaObject((KMessageWidget*)self);
+const QMetaObject* k_messagewidget_super_meta_object(void* self) {
+    return KMessageWidget_SuperMetaObject((KMessageWidget*)self);
 }
 
 void* k_messagewidget_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_messagewidget_on_metacast(void* self, void* (*callback)(void*, const char
     KMessageWidget_OnMetacast((KMessageWidget*)self, (intptr_t)callback);
 }
 
-void* k_messagewidget_qbase_metacast(void* self, const char* param1) {
-    return KMessageWidget_QBaseMetacast((KMessageWidget*)self, param1);
+void* k_messagewidget_super_metacast(void* self, const char* param1) {
+    return KMessageWidget_SuperMetacast((KMessageWidget*)self, param1);
 }
 
 int32_t k_messagewidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_messagewidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KMessageWidget_OnMetacall((KMessageWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_messagewidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KMessageWidget_QBaseMetacall((KMessageWidget*)self, param1, param2, param3);
+int32_t k_messagewidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KMessageWidget_SuperMetacall((KMessageWidget*)self, param1, param2, param3);
 }
 
 const char* k_messagewidget_tr(const char* s) {
@@ -127,8 +127,8 @@ void k_messagewidget_on_size_hint(void* self, QSize* (*callback)()) {
     KMessageWidget_OnSizeHint((KMessageWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_messagewidget_qbase_size_hint(void* self) {
-    return KMessageWidget_QBaseSizeHint((KMessageWidget*)self);
+QSize* k_messagewidget_super_size_hint(void* self) {
+    return KMessageWidget_SuperSizeHint((KMessageWidget*)self);
 }
 
 QSize* k_messagewidget_minimum_size_hint(void* self) {
@@ -139,8 +139,8 @@ void k_messagewidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     KMessageWidget_OnMinimumSizeHint((KMessageWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_messagewidget_qbase_minimum_size_hint(void* self) {
-    return KMessageWidget_QBaseMinimumSizeHint((KMessageWidget*)self);
+QSize* k_messagewidget_super_minimum_size_hint(void* self) {
+    return KMessageWidget_SuperMinimumSizeHint((KMessageWidget*)self);
 }
 
 int32_t k_messagewidget_height_for_width(void* self, int width) {
@@ -151,8 +151,8 @@ void k_messagewidget_on_height_for_width(void* self, int32_t (*callback)(void*, 
     KMessageWidget_OnHeightForWidth((KMessageWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_messagewidget_qbase_height_for_width(void* self, int width) {
-    return KMessageWidget_QBaseHeightForWidth((KMessageWidget*)self, width);
+int32_t k_messagewidget_super_height_for_width(void* self, int width) {
+    return KMessageWidget_SuperHeightForWidth((KMessageWidget*)self, width);
 }
 
 QIcon* k_messagewidget_icon(void* self) {
@@ -239,8 +239,8 @@ void k_messagewidget_on_paint_event(void* self, void (*callback)(void*, void*)) 
     KMessageWidget_OnPaintEvent((KMessageWidget*)self, (intptr_t)callback);
 }
 
-void k_messagewidget_qbase_paint_event(void* self, void* event) {
-    KMessageWidget_QBasePaintEvent((KMessageWidget*)self, (QPaintEvent*)event);
+void k_messagewidget_super_paint_event(void* self, void* event) {
+    KMessageWidget_SuperPaintEvent((KMessageWidget*)self, (QPaintEvent*)event);
 }
 
 bool k_messagewidget_event(void* self, void* event) {
@@ -251,8 +251,8 @@ void k_messagewidget_on_event(void* self, bool (*callback)(void*, void*)) {
     KMessageWidget_OnEvent((KMessageWidget*)self, (intptr_t)callback);
 }
 
-bool k_messagewidget_qbase_event(void* self, void* event) {
-    return KMessageWidget_QBaseEvent((KMessageWidget*)self, (QEvent*)event);
+bool k_messagewidget_super_event(void* self, void* event) {
+    return KMessageWidget_SuperEvent((KMessageWidget*)self, (QEvent*)event);
 }
 
 void k_messagewidget_resize_event(void* self, void* event) {
@@ -263,8 +263,8 @@ void k_messagewidget_on_resize_event(void* self, void (*callback)(void*, void*))
     KMessageWidget_OnResizeEvent((KMessageWidget*)self, (intptr_t)callback);
 }
 
-void k_messagewidget_qbase_resize_event(void* self, void* event) {
-    KMessageWidget_QBaseResizeEvent((KMessageWidget*)self, (QResizeEvent*)event);
+void k_messagewidget_super_resize_event(void* self, void* event) {
+    KMessageWidget_SuperResizeEvent((KMessageWidget*)self, (QResizeEvent*)event);
 }
 
 const char* k_messagewidget_tr2(const char* s, const char* c) {
@@ -1710,8 +1710,8 @@ void k_messagewidget_change_event(void* self, void* param1) {
     KMessageWidget_ChangeEvent((KMessageWidget*)self, (QEvent*)param1);
 }
 
-void k_messagewidget_qbase_change_event(void* self, void* param1) {
-    KMessageWidget_QBaseChangeEvent((KMessageWidget*)self, (QEvent*)param1);
+void k_messagewidget_super_change_event(void* self, void* param1) {
+    KMessageWidget_SuperChangeEvent((KMessageWidget*)self, (QEvent*)param1);
 }
 
 void k_messagewidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1722,8 +1722,8 @@ void k_messagewidget_init_style_option(void* self, void* option) {
     KMessageWidget_InitStyleOption((KMessageWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void k_messagewidget_qbase_init_style_option(void* self, void* option) {
-    KMessageWidget_QBaseInitStyleOption((KMessageWidget*)self, (QStyleOptionFrame*)option);
+void k_messagewidget_super_init_style_option(void* self, void* option) {
+    KMessageWidget_SuperInitStyleOption((KMessageWidget*)self, (QStyleOptionFrame*)option);
 }
 
 void k_messagewidget_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1734,8 +1734,8 @@ int32_t k_messagewidget_dev_type(void* self) {
     return KMessageWidget_DevType((KMessageWidget*)self);
 }
 
-int32_t k_messagewidget_qbase_dev_type(void* self) {
-    return KMessageWidget_QBaseDevType((KMessageWidget*)self);
+int32_t k_messagewidget_super_dev_type(void* self) {
+    return KMessageWidget_SuperDevType((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1746,8 +1746,8 @@ void k_messagewidget_set_visible(void* self, bool visible) {
     KMessageWidget_SetVisible((KMessageWidget*)self, visible);
 }
 
-void k_messagewidget_qbase_set_visible(void* self, bool visible) {
-    KMessageWidget_QBaseSetVisible((KMessageWidget*)self, visible);
+void k_messagewidget_super_set_visible(void* self, bool visible) {
+    KMessageWidget_SuperSetVisible((KMessageWidget*)self, visible);
 }
 
 void k_messagewidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1758,8 +1758,8 @@ bool k_messagewidget_has_height_for_width(void* self) {
     return KMessageWidget_HasHeightForWidth((KMessageWidget*)self);
 }
 
-bool k_messagewidget_qbase_has_height_for_width(void* self) {
-    return KMessageWidget_QBaseHasHeightForWidth((KMessageWidget*)self);
+bool k_messagewidget_super_has_height_for_width(void* self) {
+    return KMessageWidget_SuperHasHeightForWidth((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1770,8 +1770,8 @@ QPaintEngine* k_messagewidget_paint_engine(void* self) {
     return KMessageWidget_PaintEngine((KMessageWidget*)self);
 }
 
-QPaintEngine* k_messagewidget_qbase_paint_engine(void* self) {
-    return KMessageWidget_QBasePaintEngine((KMessageWidget*)self);
+QPaintEngine* k_messagewidget_super_paint_engine(void* self) {
+    return KMessageWidget_SuperPaintEngine((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1782,8 +1782,8 @@ void k_messagewidget_mouse_press_event(void* self, void* event) {
     KMessageWidget_MousePressEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
-void k_messagewidget_qbase_mouse_press_event(void* self, void* event) {
-    KMessageWidget_QBaseMousePressEvent((KMessageWidget*)self, (QMouseEvent*)event);
+void k_messagewidget_super_mouse_press_event(void* self, void* event) {
+    KMessageWidget_SuperMousePressEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
 void k_messagewidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1794,8 +1794,8 @@ void k_messagewidget_mouse_release_event(void* self, void* event) {
     KMessageWidget_MouseReleaseEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
-void k_messagewidget_qbase_mouse_release_event(void* self, void* event) {
-    KMessageWidget_QBaseMouseReleaseEvent((KMessageWidget*)self, (QMouseEvent*)event);
+void k_messagewidget_super_mouse_release_event(void* self, void* event) {
+    KMessageWidget_SuperMouseReleaseEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
 void k_messagewidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_messagewidget_mouse_double_click_event(void* self, void* event) {
     KMessageWidget_MouseDoubleClickEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
-void k_messagewidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KMessageWidget_QBaseMouseDoubleClickEvent((KMessageWidget*)self, (QMouseEvent*)event);
+void k_messagewidget_super_mouse_double_click_event(void* self, void* event) {
+    KMessageWidget_SuperMouseDoubleClickEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
 void k_messagewidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_messagewidget_mouse_move_event(void* self, void* event) {
     KMessageWidget_MouseMoveEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
-void k_messagewidget_qbase_mouse_move_event(void* self, void* event) {
-    KMessageWidget_QBaseMouseMoveEvent((KMessageWidget*)self, (QMouseEvent*)event);
+void k_messagewidget_super_mouse_move_event(void* self, void* event) {
+    KMessageWidget_SuperMouseMoveEvent((KMessageWidget*)self, (QMouseEvent*)event);
 }
 
 void k_messagewidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_messagewidget_wheel_event(void* self, void* event) {
     KMessageWidget_WheelEvent((KMessageWidget*)self, (QWheelEvent*)event);
 }
 
-void k_messagewidget_qbase_wheel_event(void* self, void* event) {
-    KMessageWidget_QBaseWheelEvent((KMessageWidget*)self, (QWheelEvent*)event);
+void k_messagewidget_super_wheel_event(void* self, void* event) {
+    KMessageWidget_SuperWheelEvent((KMessageWidget*)self, (QWheelEvent*)event);
 }
 
 void k_messagewidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ void k_messagewidget_key_press_event(void* self, void* event) {
     KMessageWidget_KeyPressEvent((KMessageWidget*)self, (QKeyEvent*)event);
 }
 
-void k_messagewidget_qbase_key_press_event(void* self, void* event) {
-    KMessageWidget_QBaseKeyPressEvent((KMessageWidget*)self, (QKeyEvent*)event);
+void k_messagewidget_super_key_press_event(void* self, void* event) {
+    KMessageWidget_SuperKeyPressEvent((KMessageWidget*)self, (QKeyEvent*)event);
 }
 
 void k_messagewidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ void k_messagewidget_key_release_event(void* self, void* event) {
     KMessageWidget_KeyReleaseEvent((KMessageWidget*)self, (QKeyEvent*)event);
 }
 
-void k_messagewidget_qbase_key_release_event(void* self, void* event) {
-    KMessageWidget_QBaseKeyReleaseEvent((KMessageWidget*)self, (QKeyEvent*)event);
+void k_messagewidget_super_key_release_event(void* self, void* event) {
+    KMessageWidget_SuperKeyReleaseEvent((KMessageWidget*)self, (QKeyEvent*)event);
 }
 
 void k_messagewidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1866,8 +1866,8 @@ void k_messagewidget_focus_in_event(void* self, void* event) {
     KMessageWidget_FocusInEvent((KMessageWidget*)self, (QFocusEvent*)event);
 }
 
-void k_messagewidget_qbase_focus_in_event(void* self, void* event) {
-    KMessageWidget_QBaseFocusInEvent((KMessageWidget*)self, (QFocusEvent*)event);
+void k_messagewidget_super_focus_in_event(void* self, void* event) {
+    KMessageWidget_SuperFocusInEvent((KMessageWidget*)self, (QFocusEvent*)event);
 }
 
 void k_messagewidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1878,8 +1878,8 @@ void k_messagewidget_focus_out_event(void* self, void* event) {
     KMessageWidget_FocusOutEvent((KMessageWidget*)self, (QFocusEvent*)event);
 }
 
-void k_messagewidget_qbase_focus_out_event(void* self, void* event) {
-    KMessageWidget_QBaseFocusOutEvent((KMessageWidget*)self, (QFocusEvent*)event);
+void k_messagewidget_super_focus_out_event(void* self, void* event) {
+    KMessageWidget_SuperFocusOutEvent((KMessageWidget*)self, (QFocusEvent*)event);
 }
 
 void k_messagewidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ void k_messagewidget_enter_event(void* self, void* event) {
     KMessageWidget_EnterEvent((KMessageWidget*)self, (QEnterEvent*)event);
 }
 
-void k_messagewidget_qbase_enter_event(void* self, void* event) {
-    KMessageWidget_QBaseEnterEvent((KMessageWidget*)self, (QEnterEvent*)event);
+void k_messagewidget_super_enter_event(void* self, void* event) {
+    KMessageWidget_SuperEnterEvent((KMessageWidget*)self, (QEnterEvent*)event);
 }
 
 void k_messagewidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void k_messagewidget_leave_event(void* self, void* event) {
     KMessageWidget_LeaveEvent((KMessageWidget*)self, (QEvent*)event);
 }
 
-void k_messagewidget_qbase_leave_event(void* self, void* event) {
-    KMessageWidget_QBaseLeaveEvent((KMessageWidget*)self, (QEvent*)event);
+void k_messagewidget_super_leave_event(void* self, void* event) {
+    KMessageWidget_SuperLeaveEvent((KMessageWidget*)self, (QEvent*)event);
 }
 
 void k_messagewidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ void k_messagewidget_move_event(void* self, void* event) {
     KMessageWidget_MoveEvent((KMessageWidget*)self, (QMoveEvent*)event);
 }
 
-void k_messagewidget_qbase_move_event(void* self, void* event) {
-    KMessageWidget_QBaseMoveEvent((KMessageWidget*)self, (QMoveEvent*)event);
+void k_messagewidget_super_move_event(void* self, void* event) {
+    KMessageWidget_SuperMoveEvent((KMessageWidget*)self, (QMoveEvent*)event);
 }
 
 void k_messagewidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1926,8 +1926,8 @@ void k_messagewidget_close_event(void* self, void* event) {
     KMessageWidget_CloseEvent((KMessageWidget*)self, (QCloseEvent*)event);
 }
 
-void k_messagewidget_qbase_close_event(void* self, void* event) {
-    KMessageWidget_QBaseCloseEvent((KMessageWidget*)self, (QCloseEvent*)event);
+void k_messagewidget_super_close_event(void* self, void* event) {
+    KMessageWidget_SuperCloseEvent((KMessageWidget*)self, (QCloseEvent*)event);
 }
 
 void k_messagewidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ void k_messagewidget_context_menu_event(void* self, void* event) {
     KMessageWidget_ContextMenuEvent((KMessageWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_messagewidget_qbase_context_menu_event(void* self, void* event) {
-    KMessageWidget_QBaseContextMenuEvent((KMessageWidget*)self, (QContextMenuEvent*)event);
+void k_messagewidget_super_context_menu_event(void* self, void* event) {
+    KMessageWidget_SuperContextMenuEvent((KMessageWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_messagewidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ void k_messagewidget_tablet_event(void* self, void* event) {
     KMessageWidget_TabletEvent((KMessageWidget*)self, (QTabletEvent*)event);
 }
 
-void k_messagewidget_qbase_tablet_event(void* self, void* event) {
-    KMessageWidget_QBaseTabletEvent((KMessageWidget*)self, (QTabletEvent*)event);
+void k_messagewidget_super_tablet_event(void* self, void* event) {
+    KMessageWidget_SuperTabletEvent((KMessageWidget*)self, (QTabletEvent*)event);
 }
 
 void k_messagewidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1962,8 +1962,8 @@ void k_messagewidget_action_event(void* self, void* event) {
     KMessageWidget_ActionEvent((KMessageWidget*)self, (QActionEvent*)event);
 }
 
-void k_messagewidget_qbase_action_event(void* self, void* event) {
-    KMessageWidget_QBaseActionEvent((KMessageWidget*)self, (QActionEvent*)event);
+void k_messagewidget_super_action_event(void* self, void* event) {
+    KMessageWidget_SuperActionEvent((KMessageWidget*)self, (QActionEvent*)event);
 }
 
 void k_messagewidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ void k_messagewidget_drag_enter_event(void* self, void* event) {
     KMessageWidget_DragEnterEvent((KMessageWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_messagewidget_qbase_drag_enter_event(void* self, void* event) {
-    KMessageWidget_QBaseDragEnterEvent((KMessageWidget*)self, (QDragEnterEvent*)event);
+void k_messagewidget_super_drag_enter_event(void* self, void* event) {
+    KMessageWidget_SuperDragEnterEvent((KMessageWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_messagewidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ void k_messagewidget_drag_move_event(void* self, void* event) {
     KMessageWidget_DragMoveEvent((KMessageWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_messagewidget_qbase_drag_move_event(void* self, void* event) {
-    KMessageWidget_QBaseDragMoveEvent((KMessageWidget*)self, (QDragMoveEvent*)event);
+void k_messagewidget_super_drag_move_event(void* self, void* event) {
+    KMessageWidget_SuperDragMoveEvent((KMessageWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_messagewidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void k_messagewidget_drag_leave_event(void* self, void* event) {
     KMessageWidget_DragLeaveEvent((KMessageWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_messagewidget_qbase_drag_leave_event(void* self, void* event) {
-    KMessageWidget_QBaseDragLeaveEvent((KMessageWidget*)self, (QDragLeaveEvent*)event);
+void k_messagewidget_super_drag_leave_event(void* self, void* event) {
+    KMessageWidget_SuperDragLeaveEvent((KMessageWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_messagewidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void k_messagewidget_drop_event(void* self, void* event) {
     KMessageWidget_DropEvent((KMessageWidget*)self, (QDropEvent*)event);
 }
 
-void k_messagewidget_qbase_drop_event(void* self, void* event) {
-    KMessageWidget_QBaseDropEvent((KMessageWidget*)self, (QDropEvent*)event);
+void k_messagewidget_super_drop_event(void* self, void* event) {
+    KMessageWidget_SuperDropEvent((KMessageWidget*)self, (QDropEvent*)event);
 }
 
 void k_messagewidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void k_messagewidget_show_event(void* self, void* event) {
     KMessageWidget_ShowEvent((KMessageWidget*)self, (QShowEvent*)event);
 }
 
-void k_messagewidget_qbase_show_event(void* self, void* event) {
-    KMessageWidget_QBaseShowEvent((KMessageWidget*)self, (QShowEvent*)event);
+void k_messagewidget_super_show_event(void* self, void* event) {
+    KMessageWidget_SuperShowEvent((KMessageWidget*)self, (QShowEvent*)event);
 }
 
 void k_messagewidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void k_messagewidget_hide_event(void* self, void* event) {
     KMessageWidget_HideEvent((KMessageWidget*)self, (QHideEvent*)event);
 }
 
-void k_messagewidget_qbase_hide_event(void* self, void* event) {
-    KMessageWidget_QBaseHideEvent((KMessageWidget*)self, (QHideEvent*)event);
+void k_messagewidget_super_hide_event(void* self, void* event) {
+    KMessageWidget_SuperHideEvent((KMessageWidget*)self, (QHideEvent*)event);
 }
 
 void k_messagewidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ bool k_messagewidget_native_event(void* self, char* eventType, void* message, in
     return KMessageWidget_NativeEvent((KMessageWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_messagewidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KMessageWidget_QBaseNativeEvent((KMessageWidget*)self, qstring(eventType), message, result);
+bool k_messagewidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KMessageWidget_SuperNativeEvent((KMessageWidget*)self, qstring(eventType), message, result);
 }
 
 void k_messagewidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2058,8 +2058,8 @@ int32_t k_messagewidget_metric(void* self, int32_t param1) {
     return KMessageWidget_Metric((KMessageWidget*)self, param1);
 }
 
-int32_t k_messagewidget_qbase_metric(void* self, int32_t param1) {
-    return KMessageWidget_QBaseMetric((KMessageWidget*)self, param1);
+int32_t k_messagewidget_super_metric(void* self, int32_t param1) {
+    return KMessageWidget_SuperMetric((KMessageWidget*)self, param1);
 }
 
 void k_messagewidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2070,8 +2070,8 @@ void k_messagewidget_init_painter(void* self, void* painter) {
     KMessageWidget_InitPainter((KMessageWidget*)self, (QPainter*)painter);
 }
 
-void k_messagewidget_qbase_init_painter(void* self, void* painter) {
-    KMessageWidget_QBaseInitPainter((KMessageWidget*)self, (QPainter*)painter);
+void k_messagewidget_super_init_painter(void* self, void* painter) {
+    KMessageWidget_SuperInitPainter((KMessageWidget*)self, (QPainter*)painter);
 }
 
 void k_messagewidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ QPaintDevice* k_messagewidget_redirected(void* self, void* offset) {
     return KMessageWidget_Redirected((KMessageWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_messagewidget_qbase_redirected(void* self, void* offset) {
-    return KMessageWidget_QBaseRedirected((KMessageWidget*)self, (QPoint*)offset);
+QPaintDevice* k_messagewidget_super_redirected(void* self, void* offset) {
+    return KMessageWidget_SuperRedirected((KMessageWidget*)self, (QPoint*)offset);
 }
 
 void k_messagewidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ QPainter* k_messagewidget_shared_painter(void* self) {
     return KMessageWidget_SharedPainter((KMessageWidget*)self);
 }
 
-QPainter* k_messagewidget_qbase_shared_painter(void* self) {
-    return KMessageWidget_QBaseSharedPainter((KMessageWidget*)self);
+QPainter* k_messagewidget_super_shared_painter(void* self) {
+    return KMessageWidget_SuperSharedPainter((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2106,8 +2106,8 @@ void k_messagewidget_input_method_event(void* self, void* param1) {
     KMessageWidget_InputMethodEvent((KMessageWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_messagewidget_qbase_input_method_event(void* self, void* param1) {
-    KMessageWidget_QBaseInputMethodEvent((KMessageWidget*)self, (QInputMethodEvent*)param1);
+void k_messagewidget_super_input_method_event(void* self, void* param1) {
+    KMessageWidget_SuperInputMethodEvent((KMessageWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_messagewidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ QVariant* k_messagewidget_input_method_query(void* self, int32_t param1) {
     return KMessageWidget_InputMethodQuery((KMessageWidget*)self, param1);
 }
 
-QVariant* k_messagewidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KMessageWidget_QBaseInputMethodQuery((KMessageWidget*)self, param1);
+QVariant* k_messagewidget_super_input_method_query(void* self, int32_t param1) {
+    return KMessageWidget_SuperInputMethodQuery((KMessageWidget*)self, param1);
 }
 
 void k_messagewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2130,8 +2130,8 @@ bool k_messagewidget_focus_next_prev_child(void* self, bool next) {
     return KMessageWidget_FocusNextPrevChild((KMessageWidget*)self, next);
 }
 
-bool k_messagewidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KMessageWidget_QBaseFocusNextPrevChild((KMessageWidget*)self, next);
+bool k_messagewidget_super_focus_next_prev_child(void* self, bool next) {
+    return KMessageWidget_SuperFocusNextPrevChild((KMessageWidget*)self, next);
 }
 
 void k_messagewidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2142,8 +2142,8 @@ bool k_messagewidget_event_filter(void* self, void* watched, void* event) {
     return KMessageWidget_EventFilter((KMessageWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_messagewidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KMessageWidget_QBaseEventFilter((KMessageWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_messagewidget_super_event_filter(void* self, void* watched, void* event) {
+    return KMessageWidget_SuperEventFilter((KMessageWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_messagewidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2154,8 +2154,8 @@ void k_messagewidget_timer_event(void* self, void* event) {
     KMessageWidget_TimerEvent((KMessageWidget*)self, (QTimerEvent*)event);
 }
 
-void k_messagewidget_qbase_timer_event(void* self, void* event) {
-    KMessageWidget_QBaseTimerEvent((KMessageWidget*)self, (QTimerEvent*)event);
+void k_messagewidget_super_timer_event(void* self, void* event) {
+    KMessageWidget_SuperTimerEvent((KMessageWidget*)self, (QTimerEvent*)event);
 }
 
 void k_messagewidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2166,8 +2166,8 @@ void k_messagewidget_child_event(void* self, void* event) {
     KMessageWidget_ChildEvent((KMessageWidget*)self, (QChildEvent*)event);
 }
 
-void k_messagewidget_qbase_child_event(void* self, void* event) {
-    KMessageWidget_QBaseChildEvent((KMessageWidget*)self, (QChildEvent*)event);
+void k_messagewidget_super_child_event(void* self, void* event) {
+    KMessageWidget_SuperChildEvent((KMessageWidget*)self, (QChildEvent*)event);
 }
 
 void k_messagewidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2178,8 +2178,8 @@ void k_messagewidget_custom_event(void* self, void* event) {
     KMessageWidget_CustomEvent((KMessageWidget*)self, (QEvent*)event);
 }
 
-void k_messagewidget_qbase_custom_event(void* self, void* event) {
-    KMessageWidget_QBaseCustomEvent((KMessageWidget*)self, (QEvent*)event);
+void k_messagewidget_super_custom_event(void* self, void* event) {
+    KMessageWidget_SuperCustomEvent((KMessageWidget*)self, (QEvent*)event);
 }
 
 void k_messagewidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2190,8 +2190,8 @@ void k_messagewidget_connect_notify(void* self, void* signal) {
     KMessageWidget_ConnectNotify((KMessageWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_messagewidget_qbase_connect_notify(void* self, void* signal) {
-    KMessageWidget_QBaseConnectNotify((KMessageWidget*)self, (QMetaMethod*)signal);
+void k_messagewidget_super_connect_notify(void* self, void* signal) {
+    KMessageWidget_SuperConnectNotify((KMessageWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_messagewidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2202,8 +2202,8 @@ void k_messagewidget_disconnect_notify(void* self, void* signal) {
     KMessageWidget_DisconnectNotify((KMessageWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_messagewidget_qbase_disconnect_notify(void* self, void* signal) {
-    KMessageWidget_QBaseDisconnectNotify((KMessageWidget*)self, (QMetaMethod*)signal);
+void k_messagewidget_super_disconnect_notify(void* self, void* signal) {
+    KMessageWidget_SuperDisconnectNotify((KMessageWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_messagewidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2214,8 +2214,8 @@ void k_messagewidget_draw_frame(void* self, void* param1) {
     KMessageWidget_DrawFrame((KMessageWidget*)self, (QPainter*)param1);
 }
 
-void k_messagewidget_qbase_draw_frame(void* self, void* param1) {
-    KMessageWidget_QBaseDrawFrame((KMessageWidget*)self, (QPainter*)param1);
+void k_messagewidget_super_draw_frame(void* self, void* param1) {
+    KMessageWidget_SuperDrawFrame((KMessageWidget*)self, (QPainter*)param1);
 }
 
 void k_messagewidget_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2226,8 +2226,8 @@ void k_messagewidget_update_micro_focus(void* self) {
     KMessageWidget_UpdateMicroFocus((KMessageWidget*)self);
 }
 
-void k_messagewidget_qbase_update_micro_focus(void* self) {
-    KMessageWidget_QBaseUpdateMicroFocus((KMessageWidget*)self);
+void k_messagewidget_super_update_micro_focus(void* self) {
+    KMessageWidget_SuperUpdateMicroFocus((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2238,8 +2238,8 @@ void k_messagewidget_create(void* self) {
     KMessageWidget_Create((KMessageWidget*)self);
 }
 
-void k_messagewidget_qbase_create(void* self) {
-    KMessageWidget_QBaseCreate((KMessageWidget*)self);
+void k_messagewidget_super_create(void* self) {
+    KMessageWidget_SuperCreate((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_create(void* self, void (*callback)()) {
@@ -2250,8 +2250,8 @@ void k_messagewidget_destroy(void* self) {
     KMessageWidget_Destroy((KMessageWidget*)self);
 }
 
-void k_messagewidget_qbase_destroy(void* self) {
-    KMessageWidget_QBaseDestroy((KMessageWidget*)self);
+void k_messagewidget_super_destroy(void* self) {
+    KMessageWidget_SuperDestroy((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_destroy(void* self, void (*callback)()) {
@@ -2262,8 +2262,8 @@ bool k_messagewidget_focus_next_child(void* self) {
     return KMessageWidget_FocusNextChild((KMessageWidget*)self);
 }
 
-bool k_messagewidget_qbase_focus_next_child(void* self) {
-    return KMessageWidget_QBaseFocusNextChild((KMessageWidget*)self);
+bool k_messagewidget_super_focus_next_child(void* self) {
+    return KMessageWidget_SuperFocusNextChild((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2274,8 +2274,8 @@ bool k_messagewidget_focus_previous_child(void* self) {
     return KMessageWidget_FocusPreviousChild((KMessageWidget*)self);
 }
 
-bool k_messagewidget_qbase_focus_previous_child(void* self) {
-    return KMessageWidget_QBaseFocusPreviousChild((KMessageWidget*)self);
+bool k_messagewidget_super_focus_previous_child(void* self) {
+    return KMessageWidget_SuperFocusPreviousChild((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2286,8 +2286,8 @@ QObject* k_messagewidget_sender(void* self) {
     return KMessageWidget_Sender((KMessageWidget*)self);
 }
 
-QObject* k_messagewidget_qbase_sender(void* self) {
-    return KMessageWidget_QBaseSender((KMessageWidget*)self);
+QObject* k_messagewidget_super_sender(void* self) {
+    return KMessageWidget_SuperSender((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2298,8 +2298,8 @@ int32_t k_messagewidget_sender_signal_index(void* self) {
     return KMessageWidget_SenderSignalIndex((KMessageWidget*)self);
 }
 
-int32_t k_messagewidget_qbase_sender_signal_index(void* self) {
-    return KMessageWidget_QBaseSenderSignalIndex((KMessageWidget*)self);
+int32_t k_messagewidget_super_sender_signal_index(void* self) {
+    return KMessageWidget_SuperSenderSignalIndex((KMessageWidget*)self);
 }
 
 void k_messagewidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2310,8 +2310,8 @@ int32_t k_messagewidget_receivers(void* self, const char* signal) {
     return KMessageWidget_Receivers((KMessageWidget*)self, signal);
 }
 
-int32_t k_messagewidget_qbase_receivers(void* self, const char* signal) {
-    return KMessageWidget_QBaseReceivers((KMessageWidget*)self, signal);
+int32_t k_messagewidget_super_receivers(void* self, const char* signal) {
+    return KMessageWidget_SuperReceivers((KMessageWidget*)self, signal);
 }
 
 void k_messagewidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2322,8 +2322,8 @@ bool k_messagewidget_is_signal_connected(void* self, void* signal) {
     return KMessageWidget_IsSignalConnected((KMessageWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_messagewidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KMessageWidget_QBaseIsSignalConnected((KMessageWidget*)self, (QMetaMethod*)signal);
+bool k_messagewidget_super_is_signal_connected(void* self, void* signal) {
+    return KMessageWidget_SuperIsSignalConnected((KMessageWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_messagewidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2334,8 +2334,8 @@ double k_messagewidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t
     return KMessageWidget_GetDecodedMetricF((KMessageWidget*)self, metricA, metricB);
 }
 
-double k_messagewidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KMessageWidget_QBaseGetDecodedMetricF((KMessageWidget*)self, metricA, metricB);
+double k_messagewidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KMessageWidget_SuperGetDecodedMetricF((KMessageWidget*)self, metricA, metricB);
 }
 
 void k_messagewidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

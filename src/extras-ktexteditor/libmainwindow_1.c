@@ -25,8 +25,8 @@ void k_texteditor__mainwindow_on_meta_object(void* self, const QMetaObject* (*ca
     KTextEditor__MainWindow_OnMetaObject((KTextEditor__MainWindow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_texteditor__mainwindow_qbase_meta_object(void* self) {
-    return KTextEditor__MainWindow_QBaseMetaObject((KTextEditor__MainWindow*)self);
+const QMetaObject* k_texteditor__mainwindow_super_meta_object(void* self) {
+    return KTextEditor__MainWindow_SuperMetaObject((KTextEditor__MainWindow*)self);
 }
 
 void* k_texteditor__mainwindow_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void k_texteditor__mainwindow_on_metacast(void* self, void* (*callback)(void*, c
     KTextEditor__MainWindow_OnMetacast((KTextEditor__MainWindow*)self, (intptr_t)callback);
 }
 
-void* k_texteditor__mainwindow_qbase_metacast(void* self, const char* param1) {
-    return KTextEditor__MainWindow_QBaseMetacast((KTextEditor__MainWindow*)self, param1);
+void* k_texteditor__mainwindow_super_metacast(void* self, const char* param1) {
+    return KTextEditor__MainWindow_SuperMetacast((KTextEditor__MainWindow*)self, param1);
 }
 
 int32_t k_texteditor__mainwindow_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void k_texteditor__mainwindow_on_metacall(void* self, int32_t (*callback)(void*,
     KTextEditor__MainWindow_OnMetacall((KTextEditor__MainWindow*)self, (intptr_t)callback);
 }
 
-int32_t k_texteditor__mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTextEditor__MainWindow_QBaseMetacall((KTextEditor__MainWindow*)self, param1, param2, param3);
+int32_t k_texteditor__mainwindow_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTextEditor__MainWindow_SuperMetacall((KTextEditor__MainWindow*)self, param1, param2, param3);
 }
 
 const char* k_texteditor__mainwindow_tr(const char* s) {
@@ -484,8 +484,8 @@ bool k_texteditor__mainwindow_event(void* self, void* event) {
     return KTextEditor__MainWindow_Event((KTextEditor__MainWindow*)self, (QEvent*)event);
 }
 
-bool k_texteditor__mainwindow_qbase_event(void* self, void* event) {
-    return KTextEditor__MainWindow_QBaseEvent((KTextEditor__MainWindow*)self, (QEvent*)event);
+bool k_texteditor__mainwindow_super_event(void* self, void* event) {
+    return KTextEditor__MainWindow_SuperEvent((KTextEditor__MainWindow*)self, (QEvent*)event);
 }
 
 void k_texteditor__mainwindow_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -496,8 +496,8 @@ bool k_texteditor__mainwindow_event_filter(void* self, void* watched, void* even
     return KTextEditor__MainWindow_EventFilter((KTextEditor__MainWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_texteditor__mainwindow_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTextEditor__MainWindow_QBaseEventFilter((KTextEditor__MainWindow*)self, (QObject*)watched, (QEvent*)event);
+bool k_texteditor__mainwindow_super_event_filter(void* self, void* watched, void* event) {
+    return KTextEditor__MainWindow_SuperEventFilter((KTextEditor__MainWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_texteditor__mainwindow_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -508,8 +508,8 @@ void k_texteditor__mainwindow_timer_event(void* self, void* event) {
     KTextEditor__MainWindow_TimerEvent((KTextEditor__MainWindow*)self, (QTimerEvent*)event);
 }
 
-void k_texteditor__mainwindow_qbase_timer_event(void* self, void* event) {
-    KTextEditor__MainWindow_QBaseTimerEvent((KTextEditor__MainWindow*)self, (QTimerEvent*)event);
+void k_texteditor__mainwindow_super_timer_event(void* self, void* event) {
+    KTextEditor__MainWindow_SuperTimerEvent((KTextEditor__MainWindow*)self, (QTimerEvent*)event);
 }
 
 void k_texteditor__mainwindow_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -520,8 +520,8 @@ void k_texteditor__mainwindow_child_event(void* self, void* event) {
     KTextEditor__MainWindow_ChildEvent((KTextEditor__MainWindow*)self, (QChildEvent*)event);
 }
 
-void k_texteditor__mainwindow_qbase_child_event(void* self, void* event) {
-    KTextEditor__MainWindow_QBaseChildEvent((KTextEditor__MainWindow*)self, (QChildEvent*)event);
+void k_texteditor__mainwindow_super_child_event(void* self, void* event) {
+    KTextEditor__MainWindow_SuperChildEvent((KTextEditor__MainWindow*)self, (QChildEvent*)event);
 }
 
 void k_texteditor__mainwindow_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -532,8 +532,8 @@ void k_texteditor__mainwindow_custom_event(void* self, void* event) {
     KTextEditor__MainWindow_CustomEvent((KTextEditor__MainWindow*)self, (QEvent*)event);
 }
 
-void k_texteditor__mainwindow_qbase_custom_event(void* self, void* event) {
-    KTextEditor__MainWindow_QBaseCustomEvent((KTextEditor__MainWindow*)self, (QEvent*)event);
+void k_texteditor__mainwindow_super_custom_event(void* self, void* event) {
+    KTextEditor__MainWindow_SuperCustomEvent((KTextEditor__MainWindow*)self, (QEvent*)event);
 }
 
 void k_texteditor__mainwindow_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -544,8 +544,8 @@ void k_texteditor__mainwindow_connect_notify(void* self, void* signal) {
     KTextEditor__MainWindow_ConnectNotify((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__mainwindow_qbase_connect_notify(void* self, void* signal) {
-    KTextEditor__MainWindow_QBaseConnectNotify((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
+void k_texteditor__mainwindow_super_connect_notify(void* self, void* signal) {
+    KTextEditor__MainWindow_SuperConnectNotify((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__mainwindow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -556,8 +556,8 @@ void k_texteditor__mainwindow_disconnect_notify(void* self, void* signal) {
     KTextEditor__MainWindow_DisconnectNotify((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__mainwindow_qbase_disconnect_notify(void* self, void* signal) {
-    KTextEditor__MainWindow_QBaseDisconnectNotify((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
+void k_texteditor__mainwindow_super_disconnect_notify(void* self, void* signal) {
+    KTextEditor__MainWindow_SuperDisconnectNotify((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__mainwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -568,8 +568,8 @@ QObject* k_texteditor__mainwindow_sender(void* self) {
     return KTextEditor__MainWindow_Sender((KTextEditor__MainWindow*)self);
 }
 
-QObject* k_texteditor__mainwindow_qbase_sender(void* self) {
-    return KTextEditor__MainWindow_QBaseSender((KTextEditor__MainWindow*)self);
+QObject* k_texteditor__mainwindow_super_sender(void* self) {
+    return KTextEditor__MainWindow_SuperSender((KTextEditor__MainWindow*)self);
 }
 
 void k_texteditor__mainwindow_on_sender(void* self, QObject* (*callback)()) {
@@ -580,8 +580,8 @@ int32_t k_texteditor__mainwindow_sender_signal_index(void* self) {
     return KTextEditor__MainWindow_SenderSignalIndex((KTextEditor__MainWindow*)self);
 }
 
-int32_t k_texteditor__mainwindow_qbase_sender_signal_index(void* self) {
-    return KTextEditor__MainWindow_QBaseSenderSignalIndex((KTextEditor__MainWindow*)self);
+int32_t k_texteditor__mainwindow_super_sender_signal_index(void* self) {
+    return KTextEditor__MainWindow_SuperSenderSignalIndex((KTextEditor__MainWindow*)self);
 }
 
 void k_texteditor__mainwindow_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -592,8 +592,8 @@ int32_t k_texteditor__mainwindow_receivers(void* self, const char* signal) {
     return KTextEditor__MainWindow_Receivers((KTextEditor__MainWindow*)self, signal);
 }
 
-int32_t k_texteditor__mainwindow_qbase_receivers(void* self, const char* signal) {
-    return KTextEditor__MainWindow_QBaseReceivers((KTextEditor__MainWindow*)self, signal);
+int32_t k_texteditor__mainwindow_super_receivers(void* self, const char* signal) {
+    return KTextEditor__MainWindow_SuperReceivers((KTextEditor__MainWindow*)self, signal);
 }
 
 void k_texteditor__mainwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -604,8 +604,8 @@ bool k_texteditor__mainwindow_is_signal_connected(void* self, void* signal) {
     return KTextEditor__MainWindow_IsSignalConnected((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
 }
 
-bool k_texteditor__mainwindow_qbase_is_signal_connected(void* self, void* signal) {
-    return KTextEditor__MainWindow_QBaseIsSignalConnected((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
+bool k_texteditor__mainwindow_super_is_signal_connected(void* self, void* signal) {
+    return KTextEditor__MainWindow_SuperIsSignalConnected((KTextEditor__MainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -48,13 +48,17 @@ const QMetaObject* k_notificationaction_meta_object(void* self);
 ///
 void k_notificationaction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_meta_object` instead
+///
+#define k_notificationaction_qbase_meta_object k_notificationaction_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KNotificationAction*
 ///
-const QMetaObject* k_notificationaction_qbase_meta_object(void* self);
+const QMetaObject* k_notificationaction_super_meta_object(void* self);
 
 /// @param self KNotificationAction*
 /// @param param1 const char*
@@ -68,12 +72,16 @@ void* k_notificationaction_metacast(void* self, const char* param1);
 ///
 void k_notificationaction_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_metacast` instead
+///
+#define k_notificationaction_qbase_metacast k_notificationaction_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KNotificationAction*
 /// @param param1 const char*
 ///
-void* k_notificationaction_qbase_metacast(void* self, const char* param1);
+void* k_notificationaction_super_metacast(void* self, const char* param1);
 
 /// @param self KNotificationAction*
 /// @param param1 enum QMetaObject__Call
@@ -89,6 +97,10 @@ int32_t k_notificationaction_metacall(void* self, int32_t param1, int param2, vo
 ///
 void k_notificationaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_metacall` instead
+///
+#define k_notificationaction_qbase_metacall k_notificationaction_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KNotificationAction*
@@ -96,7 +108,7 @@ void k_notificationaction_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_notificationaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_notificationaction_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -625,6 +637,10 @@ void k_notificationaction_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool k_notificationaction_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_event` instead
+///
+#define k_notificationaction_qbase_event k_notificationaction_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -634,7 +650,7 @@ bool k_notificationaction_event(void* self, void* event);
 /// @param self KNotificationAction*
 /// @param event QEvent*
 ///
-bool k_notificationaction_qbase_event(void* self, void* event);
+bool k_notificationaction_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -659,6 +675,10 @@ void k_notificationaction_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_notificationaction_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_event_filter` instead
+///
+#define k_notificationaction_qbase_event_filter k_notificationaction_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -669,7 +689,7 @@ bool k_notificationaction_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_notificationaction_qbase_event_filter(void* self, void* watched, void* event);
+bool k_notificationaction_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -693,6 +713,10 @@ void k_notificationaction_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void k_notificationaction_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_timer_event` instead
+///
+#define k_notificationaction_qbase_timer_event k_notificationaction_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -702,7 +726,7 @@ void k_notificationaction_timer_event(void* self, void* event);
 /// @param self KNotificationAction*
 /// @param event QTimerEvent*
 ///
-void k_notificationaction_qbase_timer_event(void* self, void* event);
+void k_notificationaction_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -726,6 +750,10 @@ void k_notificationaction_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void k_notificationaction_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_child_event` instead
+///
+#define k_notificationaction_qbase_child_event k_notificationaction_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -735,7 +763,7 @@ void k_notificationaction_child_event(void* self, void* event);
 /// @param self KNotificationAction*
 /// @param event QChildEvent*
 ///
-void k_notificationaction_qbase_child_event(void* self, void* event);
+void k_notificationaction_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -759,6 +787,10 @@ void k_notificationaction_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void k_notificationaction_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_custom_event` instead
+///
+#define k_notificationaction_qbase_custom_event k_notificationaction_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -768,7 +800,7 @@ void k_notificationaction_custom_event(void* self, void* event);
 /// @param self KNotificationAction*
 /// @param event QEvent*
 ///
-void k_notificationaction_qbase_custom_event(void* self, void* event);
+void k_notificationaction_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -792,6 +824,10 @@ void k_notificationaction_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void k_notificationaction_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_connect_notify` instead
+///
+#define k_notificationaction_qbase_connect_notify k_notificationaction_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -801,7 +837,7 @@ void k_notificationaction_connect_notify(void* self, void* signal);
 /// @param self KNotificationAction*
 /// @param signal QMetaMethod*
 ///
-void k_notificationaction_qbase_connect_notify(void* self, void* signal);
+void k_notificationaction_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -825,6 +861,10 @@ void k_notificationaction_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void k_notificationaction_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_disconnect_notify` instead
+///
+#define k_notificationaction_qbase_disconnect_notify k_notificationaction_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -834,7 +874,7 @@ void k_notificationaction_disconnect_notify(void* self, void* signal);
 /// @param self KNotificationAction*
 /// @param signal QMetaMethod*
 ///
-void k_notificationaction_qbase_disconnect_notify(void* self, void* signal);
+void k_notificationaction_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -857,6 +897,10 @@ void k_notificationaction_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* k_notificationaction_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_sender` instead
+///
+#define k_notificationaction_qbase_sender k_notificationaction_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -865,7 +909,7 @@ QObject* k_notificationaction_sender(void* self);
 ///
 /// @param self KNotificationAction*
 ///
-QObject* k_notificationaction_qbase_sender(void* self);
+QObject* k_notificationaction_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -888,6 +932,10 @@ void k_notificationaction_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_notificationaction_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_sender_signal_index` instead
+///
+#define k_notificationaction_qbase_sender_signal_index k_notificationaction_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -896,7 +944,7 @@ int32_t k_notificationaction_sender_signal_index(void* self);
 ///
 /// @param self KNotificationAction*
 ///
-int32_t k_notificationaction_qbase_sender_signal_index(void* self);
+int32_t k_notificationaction_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -920,6 +968,10 @@ void k_notificationaction_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t k_notificationaction_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_receivers` instead
+///
+#define k_notificationaction_qbase_receivers k_notificationaction_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -929,7 +981,7 @@ int32_t k_notificationaction_receivers(void* self, const char* signal);
 /// @param self KNotificationAction*
 /// @param signal const char*
 ///
-int32_t k_notificationaction_qbase_receivers(void* self, const char* signal);
+int32_t k_notificationaction_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -953,6 +1005,10 @@ void k_notificationaction_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 bool k_notificationaction_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_notificationaction_super_is_signal_connected` instead
+///
+#define k_notificationaction_qbase_is_signal_connected k_notificationaction_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -962,7 +1018,7 @@ bool k_notificationaction_is_signal_connected(void* self, void* signal);
 /// @param self KNotificationAction*
 /// @param signal QMetaMethod*
 ///
-bool k_notificationaction_qbase_is_signal_connected(void* self, void* signal);
+bool k_notificationaction_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1036,13 +1092,17 @@ const QMetaObject* k_notification_meta_object(void* self);
 ///
 void k_notification_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_notification_super_meta_object` instead
+///
+#define k_notification_qbase_meta_object k_notification_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KNotification*
 ///
-const QMetaObject* k_notification_qbase_meta_object(void* self);
+const QMetaObject* k_notification_super_meta_object(void* self);
 
 /// @param self KNotification*
 /// @param param1 const char*
@@ -1056,12 +1116,16 @@ void* k_notification_metacast(void* self, const char* param1);
 ///
 void k_notification_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_notification_super_metacast` instead
+///
+#define k_notification_qbase_metacast k_notification_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KNotification*
 /// @param param1 const char*
 ///
-void* k_notification_qbase_metacast(void* self, const char* param1);
+void* k_notification_super_metacast(void* self, const char* param1);
 
 /// @param self KNotification*
 /// @param param1 enum QMetaObject__Call
@@ -1077,6 +1141,10 @@ int32_t k_notification_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void k_notification_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_notification_super_metacall` instead
+///
+#define k_notification_qbase_metacall k_notification_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KNotification*
@@ -1084,7 +1152,7 @@ void k_notification_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_notification_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_notification_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -2231,6 +2299,10 @@ void k_notification_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_notification_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_notification_super_event_filter` instead
+///
+#define k_notification_qbase_event_filter k_notification_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2241,7 +2313,7 @@ bool k_notification_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_notification_qbase_event_filter(void* self, void* watched, void* event);
+bool k_notification_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2265,6 +2337,10 @@ void k_notification_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void k_notification_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notification_super_timer_event` instead
+///
+#define k_notification_qbase_timer_event k_notification_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2274,7 +2350,7 @@ void k_notification_timer_event(void* self, void* event);
 /// @param self KNotification*
 /// @param event QTimerEvent*
 ///
-void k_notification_qbase_timer_event(void* self, void* event);
+void k_notification_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2298,6 +2374,10 @@ void k_notification_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_notification_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notification_super_child_event` instead
+///
+#define k_notification_qbase_child_event k_notification_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2307,7 +2387,7 @@ void k_notification_child_event(void* self, void* event);
 /// @param self KNotification*
 /// @param event QChildEvent*
 ///
-void k_notification_qbase_child_event(void* self, void* event);
+void k_notification_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2331,6 +2411,10 @@ void k_notification_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_notification_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_notification_super_custom_event` instead
+///
+#define k_notification_qbase_custom_event k_notification_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2340,7 +2424,7 @@ void k_notification_custom_event(void* self, void* event);
 /// @param self KNotification*
 /// @param event QEvent*
 ///
-void k_notification_qbase_custom_event(void* self, void* event);
+void k_notification_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2364,6 +2448,10 @@ void k_notification_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_notification_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_notification_super_connect_notify` instead
+///
+#define k_notification_qbase_connect_notify k_notification_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2373,7 +2461,7 @@ void k_notification_connect_notify(void* self, void* signal);
 /// @param self KNotification*
 /// @param signal QMetaMethod*
 ///
-void k_notification_qbase_connect_notify(void* self, void* signal);
+void k_notification_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2397,6 +2485,10 @@ void k_notification_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void k_notification_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_notification_super_disconnect_notify` instead
+///
+#define k_notification_qbase_disconnect_notify k_notification_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2406,7 +2498,7 @@ void k_notification_disconnect_notify(void* self, void* signal);
 /// @param self KNotification*
 /// @param signal QMetaMethod*
 ///
-void k_notification_qbase_disconnect_notify(void* self, void* signal);
+void k_notification_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2429,6 +2521,10 @@ void k_notification_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* k_notification_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_notification_super_sender` instead
+///
+#define k_notification_qbase_sender k_notification_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -2437,7 +2533,7 @@ QObject* k_notification_sender(void* self);
 ///
 /// @param self KNotification*
 ///
-QObject* k_notification_qbase_sender(void* self);
+QObject* k_notification_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2460,6 +2556,10 @@ void k_notification_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_notification_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_notification_super_sender_signal_index` instead
+///
+#define k_notification_qbase_sender_signal_index k_notification_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2468,7 +2568,7 @@ int32_t k_notification_sender_signal_index(void* self);
 ///
 /// @param self KNotification*
 ///
-int32_t k_notification_qbase_sender_signal_index(void* self);
+int32_t k_notification_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2492,6 +2592,10 @@ void k_notification_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_notification_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_notification_super_receivers` instead
+///
+#define k_notification_qbase_receivers k_notification_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2501,7 +2605,7 @@ int32_t k_notification_receivers(void* self, const char* signal);
 /// @param self KNotification*
 /// @param signal const char*
 ///
-int32_t k_notification_qbase_receivers(void* self, const char* signal);
+int32_t k_notification_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2525,6 +2629,10 @@ void k_notification_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool k_notification_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_notification_super_is_signal_connected` instead
+///
+#define k_notification_qbase_is_signal_connected k_notification_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2534,7 +2642,7 @@ bool k_notification_is_signal_connected(void* self, void* signal);
 /// @param self KNotification*
 /// @param signal QMetaMethod*
 ///
-bool k_notification_qbase_is_signal_connected(void* self, void* signal);
+bool k_notification_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

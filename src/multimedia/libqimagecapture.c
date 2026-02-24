@@ -26,8 +26,8 @@ void q_imagecapture_on_meta_object(void* self, const QMetaObject* (*callback)())
     QImageCapture_OnMetaObject((QImageCapture*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_imagecapture_qbase_meta_object(void* self) {
-    return QImageCapture_QBaseMetaObject((QImageCapture*)self);
+const QMetaObject* q_imagecapture_super_meta_object(void* self) {
+    return QImageCapture_SuperMetaObject((QImageCapture*)self);
 }
 
 void* q_imagecapture_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_imagecapture_on_metacast(void* self, void* (*callback)(void*, const char*
     QImageCapture_OnMetacast((QImageCapture*)self, (intptr_t)callback);
 }
 
-void* q_imagecapture_qbase_metacast(void* self, const char* param1) {
-    return QImageCapture_QBaseMetacast((QImageCapture*)self, param1);
+void* q_imagecapture_super_metacast(void* self, const char* param1) {
+    return QImageCapture_SuperMetacast((QImageCapture*)self, param1);
 }
 
 int32_t q_imagecapture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QImageCapture_OnMetacall((QImageCapture*)self, (intptr_t)callback);
 }
 
-int32_t q_imagecapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QImageCapture_QBaseMetacall((QImageCapture*)self, param1, param2, param3);
+int32_t q_imagecapture_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QImageCapture_SuperMetacall((QImageCapture*)self, param1, param2, param3);
 }
 
 const char* q_imagecapture_tr(const char* s) {
@@ -480,8 +480,8 @@ bool q_imagecapture_event(void* self, void* event) {
     return QImageCapture_Event((QImageCapture*)self, (QEvent*)event);
 }
 
-bool q_imagecapture_qbase_event(void* self, void* event) {
-    return QImageCapture_QBaseEvent((QImageCapture*)self, (QEvent*)event);
+bool q_imagecapture_super_event(void* self, void* event) {
+    return QImageCapture_SuperEvent((QImageCapture*)self, (QEvent*)event);
 }
 
 void q_imagecapture_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -492,8 +492,8 @@ bool q_imagecapture_event_filter(void* self, void* watched, void* event) {
     return QImageCapture_EventFilter((QImageCapture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_imagecapture_qbase_event_filter(void* self, void* watched, void* event) {
-    return QImageCapture_QBaseEventFilter((QImageCapture*)self, (QObject*)watched, (QEvent*)event);
+bool q_imagecapture_super_event_filter(void* self, void* watched, void* event) {
+    return QImageCapture_SuperEventFilter((QImageCapture*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_imagecapture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -504,8 +504,8 @@ void q_imagecapture_timer_event(void* self, void* event) {
     QImageCapture_TimerEvent((QImageCapture*)self, (QTimerEvent*)event);
 }
 
-void q_imagecapture_qbase_timer_event(void* self, void* event) {
-    QImageCapture_QBaseTimerEvent((QImageCapture*)self, (QTimerEvent*)event);
+void q_imagecapture_super_timer_event(void* self, void* event) {
+    QImageCapture_SuperTimerEvent((QImageCapture*)self, (QTimerEvent*)event);
 }
 
 void q_imagecapture_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -516,8 +516,8 @@ void q_imagecapture_child_event(void* self, void* event) {
     QImageCapture_ChildEvent((QImageCapture*)self, (QChildEvent*)event);
 }
 
-void q_imagecapture_qbase_child_event(void* self, void* event) {
-    QImageCapture_QBaseChildEvent((QImageCapture*)self, (QChildEvent*)event);
+void q_imagecapture_super_child_event(void* self, void* event) {
+    QImageCapture_SuperChildEvent((QImageCapture*)self, (QChildEvent*)event);
 }
 
 void q_imagecapture_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -528,8 +528,8 @@ void q_imagecapture_custom_event(void* self, void* event) {
     QImageCapture_CustomEvent((QImageCapture*)self, (QEvent*)event);
 }
 
-void q_imagecapture_qbase_custom_event(void* self, void* event) {
-    QImageCapture_QBaseCustomEvent((QImageCapture*)self, (QEvent*)event);
+void q_imagecapture_super_custom_event(void* self, void* event) {
+    QImageCapture_SuperCustomEvent((QImageCapture*)self, (QEvent*)event);
 }
 
 void q_imagecapture_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -540,8 +540,8 @@ void q_imagecapture_connect_notify(void* self, void* signal) {
     QImageCapture_ConnectNotify((QImageCapture*)self, (QMetaMethod*)signal);
 }
 
-void q_imagecapture_qbase_connect_notify(void* self, void* signal) {
-    QImageCapture_QBaseConnectNotify((QImageCapture*)self, (QMetaMethod*)signal);
+void q_imagecapture_super_connect_notify(void* self, void* signal) {
+    QImageCapture_SuperConnectNotify((QImageCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_imagecapture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -552,8 +552,8 @@ void q_imagecapture_disconnect_notify(void* self, void* signal) {
     QImageCapture_DisconnectNotify((QImageCapture*)self, (QMetaMethod*)signal);
 }
 
-void q_imagecapture_qbase_disconnect_notify(void* self, void* signal) {
-    QImageCapture_QBaseDisconnectNotify((QImageCapture*)self, (QMetaMethod*)signal);
+void q_imagecapture_super_disconnect_notify(void* self, void* signal) {
+    QImageCapture_SuperDisconnectNotify((QImageCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_imagecapture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -564,8 +564,8 @@ QObject* q_imagecapture_sender(void* self) {
     return QImageCapture_Sender((QImageCapture*)self);
 }
 
-QObject* q_imagecapture_qbase_sender(void* self) {
-    return QImageCapture_QBaseSender((QImageCapture*)self);
+QObject* q_imagecapture_super_sender(void* self) {
+    return QImageCapture_SuperSender((QImageCapture*)self);
 }
 
 void q_imagecapture_on_sender(void* self, QObject* (*callback)()) {
@@ -576,8 +576,8 @@ int32_t q_imagecapture_sender_signal_index(void* self) {
     return QImageCapture_SenderSignalIndex((QImageCapture*)self);
 }
 
-int32_t q_imagecapture_qbase_sender_signal_index(void* self) {
-    return QImageCapture_QBaseSenderSignalIndex((QImageCapture*)self);
+int32_t q_imagecapture_super_sender_signal_index(void* self) {
+    return QImageCapture_SuperSenderSignalIndex((QImageCapture*)self);
 }
 
 void q_imagecapture_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -588,8 +588,8 @@ int32_t q_imagecapture_receivers(void* self, const char* signal) {
     return QImageCapture_Receivers((QImageCapture*)self, signal);
 }
 
-int32_t q_imagecapture_qbase_receivers(void* self, const char* signal) {
-    return QImageCapture_QBaseReceivers((QImageCapture*)self, signal);
+int32_t q_imagecapture_super_receivers(void* self, const char* signal) {
+    return QImageCapture_SuperReceivers((QImageCapture*)self, signal);
 }
 
 void q_imagecapture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -600,8 +600,8 @@ bool q_imagecapture_is_signal_connected(void* self, void* signal) {
     return QImageCapture_IsSignalConnected((QImageCapture*)self, (QMetaMethod*)signal);
 }
 
-bool q_imagecapture_qbase_is_signal_connected(void* self, void* signal) {
-    return QImageCapture_QBaseIsSignalConnected((QImageCapture*)self, (QMetaMethod*)signal);
+bool q_imagecapture_super_is_signal_connected(void* self, void* signal) {
+    return QImageCapture_SuperIsSignalConnected((QImageCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_imagecapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

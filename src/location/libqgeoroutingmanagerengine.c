@@ -78,8 +78,8 @@ void q_georoutingmanagerengine_on_meta_object(void* self, const QMetaObject* (*c
     QGeoRoutingManagerEngine_OnMetaObject((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_georoutingmanagerengine_qbase_meta_object(void* self) {
-    return QGeoRoutingManagerEngine_QBaseMetaObject((QGeoRoutingManagerEngine*)self);
+const QMetaObject* q_georoutingmanagerengine_super_meta_object(void* self) {
+    return QGeoRoutingManagerEngine_SuperMetaObject((QGeoRoutingManagerEngine*)self);
 }
 
 void* q_georoutingmanagerengine_metacast(void* self, const char* param1) {
@@ -90,8 +90,8 @@ void q_georoutingmanagerengine_on_metacast(void* self, void* (*callback)(void*, 
     QGeoRoutingManagerEngine_OnMetacast((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void* q_georoutingmanagerengine_qbase_metacast(void* self, const char* param1) {
-    return QGeoRoutingManagerEngine_QBaseMetacast((QGeoRoutingManagerEngine*)self, param1);
+void* q_georoutingmanagerengine_super_metacast(void* self, const char* param1) {
+    return QGeoRoutingManagerEngine_SuperMetacast((QGeoRoutingManagerEngine*)self, param1);
 }
 
 int32_t q_georoutingmanagerengine_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -102,8 +102,8 @@ void q_georoutingmanagerengine_on_metacall(void* self, int32_t (*callback)(void*
     QGeoRoutingManagerEngine_OnMetacall((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-int32_t q_georoutingmanagerengine_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoRoutingManagerEngine_QBaseMetacall((QGeoRoutingManagerEngine*)self, param1, param2, param3);
+int32_t q_georoutingmanagerengine_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoRoutingManagerEngine_SuperMetacall((QGeoRoutingManagerEngine*)self, param1, param2, param3);
 }
 
 const char* q_georoutingmanagerengine_tr(const char* s) {
@@ -132,8 +132,8 @@ void q_georoutingmanagerengine_on_calculate_route(void* self, QGeoRouteReply* (*
     QGeoRoutingManagerEngine_OnCalculateRoute((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoRouteReply* q_georoutingmanagerengine_qbase_calculate_route(void* self, void* request) {
-    return QGeoRoutingManagerEngine_QBaseCalculateRoute((QGeoRoutingManagerEngine*)self, (QGeoRouteRequest*)request);
+QGeoRouteReply* q_georoutingmanagerengine_super_calculate_route(void* self, void* request) {
+    return QGeoRoutingManagerEngine_SuperCalculateRoute((QGeoRoutingManagerEngine*)self, (QGeoRouteRequest*)request);
 }
 
 QGeoRouteReply* q_georoutingmanagerengine_update_route(void* self, void* route, void* position) {
@@ -144,8 +144,8 @@ void q_georoutingmanagerengine_on_update_route(void* self, QGeoRouteReply* (*cal
     QGeoRoutingManagerEngine_OnUpdateRoute((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-QGeoRouteReply* q_georoutingmanagerengine_qbase_update_route(void* self, void* route, void* position) {
-    return QGeoRoutingManagerEngine_QBaseUpdateRoute((QGeoRoutingManagerEngine*)self, (QGeoRoute*)route, (QGeoCoordinate*)position);
+QGeoRouteReply* q_georoutingmanagerengine_super_update_route(void* self, void* route, void* position) {
+    return QGeoRoutingManagerEngine_SuperUpdateRoute((QGeoRoutingManagerEngine*)self, (QGeoRoute*)route, (QGeoCoordinate*)position);
 }
 
 int32_t q_georoutingmanagerengine_supported_travel_modes(void* self) {
@@ -212,8 +212,8 @@ void q_georoutingmanagerengine_on_set_supported_travel_modes(void* self, void (*
     QGeoRoutingManagerEngine_OnSetSupportedTravelModes((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_qbase_set_supported_travel_modes(void* self, int32_t travelModes) {
-    QGeoRoutingManagerEngine_QBaseSetSupportedTravelModes((QGeoRoutingManagerEngine*)self, travelModes);
+void q_georoutingmanagerengine_super_set_supported_travel_modes(void* self, int32_t travelModes) {
+    QGeoRoutingManagerEngine_SuperSetSupportedTravelModes((QGeoRoutingManagerEngine*)self, travelModes);
 }
 
 void q_georoutingmanagerengine_set_supported_feature_types(void* self, int32_t featureTypes) {
@@ -224,8 +224,8 @@ void q_georoutingmanagerengine_on_set_supported_feature_types(void* self, void (
     QGeoRoutingManagerEngine_OnSetSupportedFeatureTypes((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_qbase_set_supported_feature_types(void* self, int32_t featureTypes) {
-    QGeoRoutingManagerEngine_QBaseSetSupportedFeatureTypes((QGeoRoutingManagerEngine*)self, featureTypes);
+void q_georoutingmanagerengine_super_set_supported_feature_types(void* self, int32_t featureTypes) {
+    QGeoRoutingManagerEngine_SuperSetSupportedFeatureTypes((QGeoRoutingManagerEngine*)self, featureTypes);
 }
 
 void q_georoutingmanagerengine_set_supported_feature_weights(void* self, int32_t featureWeights) {
@@ -236,8 +236,8 @@ void q_georoutingmanagerengine_on_set_supported_feature_weights(void* self, void
     QGeoRoutingManagerEngine_OnSetSupportedFeatureWeights((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_qbase_set_supported_feature_weights(void* self, int32_t featureWeights) {
-    QGeoRoutingManagerEngine_QBaseSetSupportedFeatureWeights((QGeoRoutingManagerEngine*)self, featureWeights);
+void q_georoutingmanagerengine_super_set_supported_feature_weights(void* self, int32_t featureWeights) {
+    QGeoRoutingManagerEngine_SuperSetSupportedFeatureWeights((QGeoRoutingManagerEngine*)self, featureWeights);
 }
 
 void q_georoutingmanagerengine_set_supported_route_optimizations(void* self, int32_t optimizations) {
@@ -248,8 +248,8 @@ void q_georoutingmanagerengine_on_set_supported_route_optimizations(void* self, 
     QGeoRoutingManagerEngine_OnSetSupportedRouteOptimizations((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_qbase_set_supported_route_optimizations(void* self, int32_t optimizations) {
-    QGeoRoutingManagerEngine_QBaseSetSupportedRouteOptimizations((QGeoRoutingManagerEngine*)self, optimizations);
+void q_georoutingmanagerengine_super_set_supported_route_optimizations(void* self, int32_t optimizations) {
+    QGeoRoutingManagerEngine_SuperSetSupportedRouteOptimizations((QGeoRoutingManagerEngine*)self, optimizations);
 }
 
 void q_georoutingmanagerengine_set_supported_segment_details(void* self, int32_t segmentDetails) {
@@ -260,8 +260,8 @@ void q_georoutingmanagerengine_on_set_supported_segment_details(void* self, void
     QGeoRoutingManagerEngine_OnSetSupportedSegmentDetails((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_qbase_set_supported_segment_details(void* self, int32_t segmentDetails) {
-    QGeoRoutingManagerEngine_QBaseSetSupportedSegmentDetails((QGeoRoutingManagerEngine*)self, segmentDetails);
+void q_georoutingmanagerengine_super_set_supported_segment_details(void* self, int32_t segmentDetails) {
+    QGeoRoutingManagerEngine_SuperSetSupportedSegmentDetails((QGeoRoutingManagerEngine*)self, segmentDetails);
 }
 
 void q_georoutingmanagerengine_set_supported_maneuver_details(void* self, int32_t maneuverDetails) {
@@ -272,8 +272,8 @@ void q_georoutingmanagerengine_on_set_supported_maneuver_details(void* self, voi
     QGeoRoutingManagerEngine_OnSetSupportedManeuverDetails((QGeoRoutingManagerEngine*)self, (intptr_t)callback);
 }
 
-void q_georoutingmanagerengine_qbase_set_supported_maneuver_details(void* self, int32_t maneuverDetails) {
-    QGeoRoutingManagerEngine_QBaseSetSupportedManeuverDetails((QGeoRoutingManagerEngine*)self, maneuverDetails);
+void q_georoutingmanagerengine_super_set_supported_maneuver_details(void* self, int32_t maneuverDetails) {
+    QGeoRoutingManagerEngine_SuperSetSupportedManeuverDetails((QGeoRoutingManagerEngine*)self, maneuverDetails);
 }
 
 const char* q_georoutingmanagerengine_tr2(const char* s, const char* c) {
@@ -513,8 +513,8 @@ bool q_georoutingmanagerengine_event(void* self, void* event) {
     return QGeoRoutingManagerEngine_Event((QGeoRoutingManagerEngine*)self, (QEvent*)event);
 }
 
-bool q_georoutingmanagerengine_qbase_event(void* self, void* event) {
-    return QGeoRoutingManagerEngine_QBaseEvent((QGeoRoutingManagerEngine*)self, (QEvent*)event);
+bool q_georoutingmanagerengine_super_event(void* self, void* event) {
+    return QGeoRoutingManagerEngine_SuperEvent((QGeoRoutingManagerEngine*)self, (QEvent*)event);
 }
 
 void q_georoutingmanagerengine_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -525,8 +525,8 @@ bool q_georoutingmanagerengine_event_filter(void* self, void* watched, void* eve
     return QGeoRoutingManagerEngine_EventFilter((QGeoRoutingManagerEngine*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_georoutingmanagerengine_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoRoutingManagerEngine_QBaseEventFilter((QGeoRoutingManagerEngine*)self, (QObject*)watched, (QEvent*)event);
+bool q_georoutingmanagerengine_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoRoutingManagerEngine_SuperEventFilter((QGeoRoutingManagerEngine*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_georoutingmanagerengine_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -537,8 +537,8 @@ void q_georoutingmanagerengine_timer_event(void* self, void* event) {
     QGeoRoutingManagerEngine_TimerEvent((QGeoRoutingManagerEngine*)self, (QTimerEvent*)event);
 }
 
-void q_georoutingmanagerengine_qbase_timer_event(void* self, void* event) {
-    QGeoRoutingManagerEngine_QBaseTimerEvent((QGeoRoutingManagerEngine*)self, (QTimerEvent*)event);
+void q_georoutingmanagerengine_super_timer_event(void* self, void* event) {
+    QGeoRoutingManagerEngine_SuperTimerEvent((QGeoRoutingManagerEngine*)self, (QTimerEvent*)event);
 }
 
 void q_georoutingmanagerengine_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -549,8 +549,8 @@ void q_georoutingmanagerengine_child_event(void* self, void* event) {
     QGeoRoutingManagerEngine_ChildEvent((QGeoRoutingManagerEngine*)self, (QChildEvent*)event);
 }
 
-void q_georoutingmanagerengine_qbase_child_event(void* self, void* event) {
-    QGeoRoutingManagerEngine_QBaseChildEvent((QGeoRoutingManagerEngine*)self, (QChildEvent*)event);
+void q_georoutingmanagerengine_super_child_event(void* self, void* event) {
+    QGeoRoutingManagerEngine_SuperChildEvent((QGeoRoutingManagerEngine*)self, (QChildEvent*)event);
 }
 
 void q_georoutingmanagerengine_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -561,8 +561,8 @@ void q_georoutingmanagerengine_custom_event(void* self, void* event) {
     QGeoRoutingManagerEngine_CustomEvent((QGeoRoutingManagerEngine*)self, (QEvent*)event);
 }
 
-void q_georoutingmanagerengine_qbase_custom_event(void* self, void* event) {
-    QGeoRoutingManagerEngine_QBaseCustomEvent((QGeoRoutingManagerEngine*)self, (QEvent*)event);
+void q_georoutingmanagerengine_super_custom_event(void* self, void* event) {
+    QGeoRoutingManagerEngine_SuperCustomEvent((QGeoRoutingManagerEngine*)self, (QEvent*)event);
 }
 
 void q_georoutingmanagerengine_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -573,8 +573,8 @@ void q_georoutingmanagerengine_connect_notify(void* self, void* signal) {
     QGeoRoutingManagerEngine_ConnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutingmanagerengine_qbase_connect_notify(void* self, void* signal) {
-    QGeoRoutingManagerEngine_QBaseConnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
+void q_georoutingmanagerengine_super_connect_notify(void* self, void* signal) {
+    QGeoRoutingManagerEngine_SuperConnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_georoutingmanagerengine_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -585,8 +585,8 @@ void q_georoutingmanagerengine_disconnect_notify(void* self, void* signal) {
     QGeoRoutingManagerEngine_DisconnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-void q_georoutingmanagerengine_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoRoutingManagerEngine_QBaseDisconnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
+void q_georoutingmanagerengine_super_disconnect_notify(void* self, void* signal) {
+    QGeoRoutingManagerEngine_SuperDisconnectNotify((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_georoutingmanagerengine_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -597,8 +597,8 @@ QObject* q_georoutingmanagerengine_sender(void* self) {
     return QGeoRoutingManagerEngine_Sender((QGeoRoutingManagerEngine*)self);
 }
 
-QObject* q_georoutingmanagerengine_qbase_sender(void* self) {
-    return QGeoRoutingManagerEngine_QBaseSender((QGeoRoutingManagerEngine*)self);
+QObject* q_georoutingmanagerengine_super_sender(void* self) {
+    return QGeoRoutingManagerEngine_SuperSender((QGeoRoutingManagerEngine*)self);
 }
 
 void q_georoutingmanagerengine_on_sender(void* self, QObject* (*callback)()) {
@@ -609,8 +609,8 @@ int32_t q_georoutingmanagerengine_sender_signal_index(void* self) {
     return QGeoRoutingManagerEngine_SenderSignalIndex((QGeoRoutingManagerEngine*)self);
 }
 
-int32_t q_georoutingmanagerengine_qbase_sender_signal_index(void* self) {
-    return QGeoRoutingManagerEngine_QBaseSenderSignalIndex((QGeoRoutingManagerEngine*)self);
+int32_t q_georoutingmanagerengine_super_sender_signal_index(void* self) {
+    return QGeoRoutingManagerEngine_SuperSenderSignalIndex((QGeoRoutingManagerEngine*)self);
 }
 
 void q_georoutingmanagerengine_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -621,8 +621,8 @@ int32_t q_georoutingmanagerengine_receivers(void* self, const char* signal) {
     return QGeoRoutingManagerEngine_Receivers((QGeoRoutingManagerEngine*)self, signal);
 }
 
-int32_t q_georoutingmanagerengine_qbase_receivers(void* self, const char* signal) {
-    return QGeoRoutingManagerEngine_QBaseReceivers((QGeoRoutingManagerEngine*)self, signal);
+int32_t q_georoutingmanagerengine_super_receivers(void* self, const char* signal) {
+    return QGeoRoutingManagerEngine_SuperReceivers((QGeoRoutingManagerEngine*)self, signal);
 }
 
 void q_georoutingmanagerengine_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -633,8 +633,8 @@ bool q_georoutingmanagerengine_is_signal_connected(void* self, void* signal) {
     return QGeoRoutingManagerEngine_IsSignalConnected((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
-bool q_georoutingmanagerengine_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoRoutingManagerEngine_QBaseIsSignalConnected((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
+bool q_georoutingmanagerengine_super_is_signal_connected(void* self, void* signal) {
+    return QGeoRoutingManagerEngine_SuperIsSignalConnected((QGeoRoutingManagerEngine*)self, (QMetaMethod*)signal);
 }
 
 void q_georoutingmanagerengine_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

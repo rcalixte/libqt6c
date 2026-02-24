@@ -26,8 +26,8 @@ void k_colorschememodel_on_meta_object(void* self, const QMetaObject* (*callback
     KColorSchemeModel_OnMetaObject((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_colorschememodel_qbase_meta_object(void* self) {
-    return KColorSchemeModel_QBaseMetaObject((KColorSchemeModel*)self);
+const QMetaObject* k_colorschememodel_super_meta_object(void* self) {
+    return KColorSchemeModel_SuperMetaObject((KColorSchemeModel*)self);
 }
 
 void* k_colorschememodel_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_colorschememodel_on_metacast(void* self, void* (*callback)(void*, const c
     KColorSchemeModel_OnMetacast((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
-void* k_colorschememodel_qbase_metacast(void* self, const char* param1) {
-    return KColorSchemeModel_QBaseMetacast((KColorSchemeModel*)self, param1);
+void* k_colorschememodel_super_metacast(void* self, const char* param1) {
+    return KColorSchemeModel_SuperMetacast((KColorSchemeModel*)self, param1);
 }
 
 int32_t k_colorschememodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_colorschememodel_on_metacall(void* self, int32_t (*callback)(void*, int32
     KColorSchemeModel_OnMetacall((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
-int32_t k_colorschememodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KColorSchemeModel_QBaseMetacall((KColorSchemeModel*)self, param1, param2, param3);
+int32_t k_colorschememodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KColorSchemeModel_SuperMetacall((KColorSchemeModel*)self, param1, param2, param3);
 }
 
 const char* k_colorschememodel_tr(const char* s) {
@@ -69,8 +69,8 @@ void k_colorschememodel_on_data(void* self, QVariant* (*callback)(void*, void*, 
     KColorSchemeModel_OnData((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_colorschememodel_qbase_data(void* self, void* index, int role) {
-    return KColorSchemeModel_QBaseData((KColorSchemeModel*)self, (QModelIndex*)index, role);
+QVariant* k_colorschememodel_super_data(void* self, void* index, int role) {
+    return KColorSchemeModel_SuperData((KColorSchemeModel*)self, (QModelIndex*)index, role);
 }
 
 int32_t k_colorschememodel_row_count(void* self, void* parent) {
@@ -81,8 +81,8 @@ void k_colorschememodel_on_row_count(void* self, int32_t (*callback)(void*, void
     KColorSchemeModel_OnRowCount((KColorSchemeModel*)self, (intptr_t)callback);
 }
 
-int32_t k_colorschememodel_qbase_row_count(void* self, void* parent) {
-    return KColorSchemeModel_QBaseRowCount((KColorSchemeModel*)self, (QModelIndex*)parent);
+int32_t k_colorschememodel_super_row_count(void* self, void* parent) {
+    return KColorSchemeModel_SuperRowCount((KColorSchemeModel*)self, (QModelIndex*)parent);
 }
 
 const char* k_colorschememodel_tr2(const char* s, const char* c) {
@@ -111,8 +111,8 @@ void k_colorschememodel_on_parent(void* self, QModelIndex* (*callback)(void*, vo
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_colorschememodel_qbase_parent(void* self, void* child) {
-    return QAbstractItemModel_QBaseParent((QAbstractItemModel*)self, (QModelIndex*)child);
+QModelIndex* k_colorschememodel_super_parent(void* self, void* child) {
+    return QAbstractItemModel_SuperParent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
 int32_t k_colorschememodel_column_count(void* self, void* parent) {
@@ -123,8 +123,8 @@ void k_colorschememodel_on_column_count(void* self, int32_t (*callback)(void*, v
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int32_t k_colorschememodel_qbase_column_count(void* self, void* parent) {
-    return QAbstractItemModel_QBaseColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
+int32_t k_colorschememodel_super_column_count(void* self, void* parent) {
+    return QAbstractItemModel_SuperColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool k_colorschememodel_has_children(void* self, void* parent) {
@@ -135,8 +135,8 @@ void k_colorschememodel_on_has_children(void* self, bool (*callback)(void*, void
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_colorschememodel_qbase_has_children(void* self, void* parent) {
-    return QAbstractItemModel_QBaseHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
+bool k_colorschememodel_super_has_children(void* self, void* parent) {
+    return QAbstractItemModel_SuperHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool k_colorschememodel_insert_row(void* self, int row) {
@@ -474,8 +474,8 @@ QModelIndex* k_colorschememodel_index(void* self, int row, int column, void* par
     return KColorSchemeModel_Index((KColorSchemeModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_colorschememodel_qbase_index(void* self, int row, int column, void* parent) {
-    return KColorSchemeModel_QBaseIndex((KColorSchemeModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* k_colorschememodel_super_index(void* self, int row, int column, void* parent) {
+    return KColorSchemeModel_SuperIndex((KColorSchemeModel*)self, row, column, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -486,8 +486,8 @@ QModelIndex* k_colorschememodel_sibling(void* self, int row, int column, void* i
     return KColorSchemeModel_Sibling((KColorSchemeModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_colorschememodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return KColorSchemeModel_QBaseSibling((KColorSchemeModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* k_colorschememodel_super_sibling(void* self, int row, int column, void* idx) {
+    return KColorSchemeModel_SuperSibling((KColorSchemeModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void k_colorschememodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -498,8 +498,8 @@ bool k_colorschememodel_drop_mime_data(void* self, void* data, int32_t action, i
     return KColorSchemeModel_DropMimeData((KColorSchemeModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KColorSchemeModel_QBaseDropMimeData((KColorSchemeModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_colorschememodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KColorSchemeModel_SuperDropMimeData((KColorSchemeModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -510,8 +510,8 @@ int32_t k_colorschememodel_flags(void* self, void* index) {
     return KColorSchemeModel_Flags((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
-int32_t k_colorschememodel_qbase_flags(void* self, void* index) {
-    return KColorSchemeModel_QBaseFlags((KColorSchemeModel*)self, (QModelIndex*)index);
+int32_t k_colorschememodel_super_flags(void* self, void* index) {
+    return KColorSchemeModel_SuperFlags((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
 void k_colorschememodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
@@ -522,8 +522,8 @@ bool k_colorschememodel_set_data(void* self, void* index, void* value, int role)
     return KColorSchemeModel_SetData((KColorSchemeModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_colorschememodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KColorSchemeModel_QBaseSetData((KColorSchemeModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_colorschememodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KColorSchemeModel_SuperSetData((KColorSchemeModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_colorschememodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -534,8 +534,8 @@ QVariant* k_colorschememodel_header_data(void* self, int section, int32_t orient
     return KColorSchemeModel_HeaderData((KColorSchemeModel*)self, section, orientation, role);
 }
 
-QVariant* k_colorschememodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KColorSchemeModel_QBaseHeaderData((KColorSchemeModel*)self, section, orientation, role);
+QVariant* k_colorschememodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KColorSchemeModel_SuperHeaderData((KColorSchemeModel*)self, section, orientation, role);
 }
 
 void k_colorschememodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
@@ -546,8 +546,8 @@ bool k_colorschememodel_set_header_data(void* self, int section, int32_t orienta
     return KColorSchemeModel_SetHeaderData((KColorSchemeModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_colorschememodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KColorSchemeModel_QBaseSetHeaderData((KColorSchemeModel*)self, section, orientation, (QVariant*)value, role);
+bool k_colorschememodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KColorSchemeModel_SuperSetHeaderData((KColorSchemeModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_colorschememodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -564,9 +564,9 @@ libqt_map /* of int to QVariant* */ k_colorschememodel_item_data(void* self, voi
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_colorschememodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_colorschememodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KColorSchemeModel_QBaseItemData((KColorSchemeModel*)self, (QModelIndex*)index);
+    libqt_map _out = KColorSchemeModel_SuperItemData((KColorSchemeModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -607,7 +607,7 @@ bool k_colorschememodel_set_item_data(void* self, void* index, libqt_map /* of i
     return _out;
 }
 
-bool k_colorschememodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_colorschememodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -630,7 +630,7 @@ bool k_colorschememodel_qbase_set_item_data(void* self, void* index, libqt_map /
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KColorSchemeModel_QBaseSetItemData((KColorSchemeModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KColorSchemeModel_SuperSetItemData((KColorSchemeModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -644,8 +644,8 @@ bool k_colorschememodel_clear_item_data(void* self, void* index) {
     return KColorSchemeModel_ClearItemData((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
-bool k_colorschememodel_qbase_clear_item_data(void* self, void* index) {
-    return KColorSchemeModel_QBaseClearItemData((KColorSchemeModel*)self, (QModelIndex*)index);
+bool k_colorschememodel_super_clear_item_data(void* self, void* index) {
+    return KColorSchemeModel_SuperClearItemData((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
 void k_colorschememodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -671,8 +671,8 @@ const char** k_colorschememodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_colorschememodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KColorSchemeModel_QBaseMimeTypes((KColorSchemeModel*)self);
+const char** k_colorschememodel_super_mime_types(void* self) {
+    libqt_list _arr = KColorSchemeModel_SuperMimeTypes((KColorSchemeModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -698,8 +698,8 @@ QMimeData* k_colorschememodel_mime_data(void* self, libqt_list /* of QModelIndex
     return KColorSchemeModel_MimeData((KColorSchemeModel*)self, indexes);
 }
 
-QMimeData* k_colorschememodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KColorSchemeModel_QBaseMimeData((KColorSchemeModel*)self, indexes);
+QMimeData* k_colorschememodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KColorSchemeModel_SuperMimeData((KColorSchemeModel*)self, indexes);
 }
 
 void k_colorschememodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -710,8 +710,8 @@ bool k_colorschememodel_can_drop_mime_data(void* self, void* data, int32_t actio
     return KColorSchemeModel_CanDropMimeData((KColorSchemeModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KColorSchemeModel_QBaseCanDropMimeData((KColorSchemeModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_colorschememodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KColorSchemeModel_SuperCanDropMimeData((KColorSchemeModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -722,8 +722,8 @@ int32_t k_colorschememodel_supported_drop_actions(void* self) {
     return KColorSchemeModel_SupportedDropActions((KColorSchemeModel*)self);
 }
 
-int32_t k_colorschememodel_qbase_supported_drop_actions(void* self) {
-    return KColorSchemeModel_QBaseSupportedDropActions((KColorSchemeModel*)self);
+int32_t k_colorschememodel_super_supported_drop_actions(void* self) {
+    return KColorSchemeModel_SuperSupportedDropActions((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -734,8 +734,8 @@ int32_t k_colorschememodel_supported_drag_actions(void* self) {
     return KColorSchemeModel_SupportedDragActions((KColorSchemeModel*)self);
 }
 
-int32_t k_colorschememodel_qbase_supported_drag_actions(void* self) {
-    return KColorSchemeModel_QBaseSupportedDragActions((KColorSchemeModel*)self);
+int32_t k_colorschememodel_super_supported_drag_actions(void* self) {
+    return KColorSchemeModel_SuperSupportedDragActions((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -746,8 +746,8 @@ bool k_colorschememodel_insert_rows(void* self, int row, int count, void* parent
     return KColorSchemeModel_InsertRows((KColorSchemeModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return KColorSchemeModel_QBaseInsertRows((KColorSchemeModel*)self, row, count, (QModelIndex*)parent);
+bool k_colorschememodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return KColorSchemeModel_SuperInsertRows((KColorSchemeModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -758,8 +758,8 @@ bool k_colorschememodel_insert_columns(void* self, int column, int count, void* 
     return KColorSchemeModel_InsertColumns((KColorSchemeModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return KColorSchemeModel_QBaseInsertColumns((KColorSchemeModel*)self, column, count, (QModelIndex*)parent);
+bool k_colorschememodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return KColorSchemeModel_SuperInsertColumns((KColorSchemeModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -770,8 +770,8 @@ bool k_colorschememodel_remove_rows(void* self, int row, int count, void* parent
     return KColorSchemeModel_RemoveRows((KColorSchemeModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return KColorSchemeModel_QBaseRemoveRows((KColorSchemeModel*)self, row, count, (QModelIndex*)parent);
+bool k_colorschememodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return KColorSchemeModel_SuperRemoveRows((KColorSchemeModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -782,8 +782,8 @@ bool k_colorschememodel_remove_columns(void* self, int column, int count, void* 
     return KColorSchemeModel_RemoveColumns((KColorSchemeModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return KColorSchemeModel_QBaseRemoveColumns((KColorSchemeModel*)self, column, count, (QModelIndex*)parent);
+bool k_colorschememodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return KColorSchemeModel_SuperRemoveColumns((KColorSchemeModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -794,8 +794,8 @@ bool k_colorschememodel_move_rows(void* self, void* sourceParent, int sourceRow,
     return KColorSchemeModel_MoveRows((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_colorschememodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KColorSchemeModel_QBaseMoveRows((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_colorschememodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KColorSchemeModel_SuperMoveRows((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_colorschememodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -806,8 +806,8 @@ bool k_colorschememodel_move_columns(void* self, void* sourceParent, int sourceC
     return KColorSchemeModel_MoveColumns((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_colorschememodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KColorSchemeModel_QBaseMoveColumns((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_colorschememodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KColorSchemeModel_SuperMoveColumns((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_colorschememodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -818,8 +818,8 @@ void k_colorschememodel_fetch_more(void* self, void* parent) {
     KColorSchemeModel_FetchMore((KColorSchemeModel*)self, (QModelIndex*)parent);
 }
 
-void k_colorschememodel_qbase_fetch_more(void* self, void* parent) {
-    KColorSchemeModel_QBaseFetchMore((KColorSchemeModel*)self, (QModelIndex*)parent);
+void k_colorschememodel_super_fetch_more(void* self, void* parent) {
+    KColorSchemeModel_SuperFetchMore((KColorSchemeModel*)self, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -830,8 +830,8 @@ bool k_colorschememodel_can_fetch_more(void* self, void* parent) {
     return KColorSchemeModel_CanFetchMore((KColorSchemeModel*)self, (QModelIndex*)parent);
 }
 
-bool k_colorschememodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KColorSchemeModel_QBaseCanFetchMore((KColorSchemeModel*)self, (QModelIndex*)parent);
+bool k_colorschememodel_super_can_fetch_more(void* self, void* parent) {
+    return KColorSchemeModel_SuperCanFetchMore((KColorSchemeModel*)self, (QModelIndex*)parent);
 }
 
 void k_colorschememodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -842,8 +842,8 @@ void k_colorschememodel_sort(void* self, int column, int32_t order) {
     KColorSchemeModel_Sort((KColorSchemeModel*)self, column, order);
 }
 
-void k_colorschememodel_qbase_sort(void* self, int column, int32_t order) {
-    KColorSchemeModel_QBaseSort((KColorSchemeModel*)self, column, order);
+void k_colorschememodel_super_sort(void* self, int column, int32_t order) {
+    KColorSchemeModel_SuperSort((KColorSchemeModel*)self, column, order);
 }
 
 void k_colorschememodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -854,8 +854,8 @@ QModelIndex* k_colorschememodel_buddy(void* self, void* index) {
     return KColorSchemeModel_Buddy((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_colorschememodel_qbase_buddy(void* self, void* index) {
-    return KColorSchemeModel_QBaseBuddy((KColorSchemeModel*)self, (QModelIndex*)index);
+QModelIndex* k_colorschememodel_super_buddy(void* self, void* index) {
+    return KColorSchemeModel_SuperBuddy((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
 void k_colorschememodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -867,8 +867,8 @@ libqt_list /* of QModelIndex* */ k_colorschememodel_match(void* self, void* star
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_colorschememodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KColorSchemeModel_QBaseMatch((KColorSchemeModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_colorschememodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KColorSchemeModel_SuperMatch((KColorSchemeModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -880,8 +880,8 @@ QSize* k_colorschememodel_span(void* self, void* index) {
     return KColorSchemeModel_Span((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_colorschememodel_qbase_span(void* self, void* index) {
-    return KColorSchemeModel_QBaseSpan((KColorSchemeModel*)self, (QModelIndex*)index);
+QSize* k_colorschememodel_super_span(void* self, void* index) {
+    return KColorSchemeModel_SuperSpan((KColorSchemeModel*)self, (QModelIndex*)index);
 }
 
 void k_colorschememodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -921,9 +921,9 @@ libqt_map /* of int to char* */ k_colorschememodel_role_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_colorschememodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_colorschememodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KColorSchemeModel_QBaseRoleNames((KColorSchemeModel*)self);
+    libqt_map _out = KColorSchemeModel_SuperRoleNames((KColorSchemeModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -962,8 +962,8 @@ void k_colorschememodel_multi_data(void* self, void* index, void* roleDataSpan) 
     KColorSchemeModel_MultiData((KColorSchemeModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_colorschememodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KColorSchemeModel_QBaseMultiData((KColorSchemeModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_colorschememodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KColorSchemeModel_SuperMultiData((KColorSchemeModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_colorschememodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -974,8 +974,8 @@ bool k_colorschememodel_submit(void* self) {
     return KColorSchemeModel_Submit((KColorSchemeModel*)self);
 }
 
-bool k_colorschememodel_qbase_submit(void* self) {
-    return KColorSchemeModel_QBaseSubmit((KColorSchemeModel*)self);
+bool k_colorschememodel_super_submit(void* self) {
+    return KColorSchemeModel_SuperSubmit((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_submit(void* self, bool (*callback)()) {
@@ -986,8 +986,8 @@ void k_colorschememodel_revert(void* self) {
     KColorSchemeModel_Revert((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_revert(void* self) {
-    KColorSchemeModel_QBaseRevert((KColorSchemeModel*)self);
+void k_colorschememodel_super_revert(void* self) {
+    KColorSchemeModel_SuperRevert((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_revert(void* self, void (*callback)()) {
@@ -998,8 +998,8 @@ void k_colorschememodel_reset_internal_data(void* self) {
     KColorSchemeModel_ResetInternalData((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_reset_internal_data(void* self) {
-    KColorSchemeModel_QBaseResetInternalData((KColorSchemeModel*)self);
+void k_colorschememodel_super_reset_internal_data(void* self) {
+    KColorSchemeModel_SuperResetInternalData((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1010,8 +1010,8 @@ bool k_colorschememodel_event(void* self, void* event) {
     return KColorSchemeModel_Event((KColorSchemeModel*)self, (QEvent*)event);
 }
 
-bool k_colorschememodel_qbase_event(void* self, void* event) {
-    return KColorSchemeModel_QBaseEvent((KColorSchemeModel*)self, (QEvent*)event);
+bool k_colorschememodel_super_event(void* self, void* event) {
+    return KColorSchemeModel_SuperEvent((KColorSchemeModel*)self, (QEvent*)event);
 }
 
 void k_colorschememodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1022,8 +1022,8 @@ bool k_colorschememodel_event_filter(void* self, void* watched, void* event) {
     return KColorSchemeModel_EventFilter((KColorSchemeModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_colorschememodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KColorSchemeModel_QBaseEventFilter((KColorSchemeModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_colorschememodel_super_event_filter(void* self, void* watched, void* event) {
+    return KColorSchemeModel_SuperEventFilter((KColorSchemeModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_colorschememodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1034,8 +1034,8 @@ void k_colorschememodel_timer_event(void* self, void* event) {
     KColorSchemeModel_TimerEvent((KColorSchemeModel*)self, (QTimerEvent*)event);
 }
 
-void k_colorschememodel_qbase_timer_event(void* self, void* event) {
-    KColorSchemeModel_QBaseTimerEvent((KColorSchemeModel*)self, (QTimerEvent*)event);
+void k_colorschememodel_super_timer_event(void* self, void* event) {
+    KColorSchemeModel_SuperTimerEvent((KColorSchemeModel*)self, (QTimerEvent*)event);
 }
 
 void k_colorschememodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1046,8 +1046,8 @@ void k_colorschememodel_child_event(void* self, void* event) {
     KColorSchemeModel_ChildEvent((KColorSchemeModel*)self, (QChildEvent*)event);
 }
 
-void k_colorschememodel_qbase_child_event(void* self, void* event) {
-    KColorSchemeModel_QBaseChildEvent((KColorSchemeModel*)self, (QChildEvent*)event);
+void k_colorschememodel_super_child_event(void* self, void* event) {
+    KColorSchemeModel_SuperChildEvent((KColorSchemeModel*)self, (QChildEvent*)event);
 }
 
 void k_colorschememodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1058,8 +1058,8 @@ void k_colorschememodel_custom_event(void* self, void* event) {
     KColorSchemeModel_CustomEvent((KColorSchemeModel*)self, (QEvent*)event);
 }
 
-void k_colorschememodel_qbase_custom_event(void* self, void* event) {
-    KColorSchemeModel_QBaseCustomEvent((KColorSchemeModel*)self, (QEvent*)event);
+void k_colorschememodel_super_custom_event(void* self, void* event) {
+    KColorSchemeModel_SuperCustomEvent((KColorSchemeModel*)self, (QEvent*)event);
 }
 
 void k_colorschememodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1070,8 +1070,8 @@ void k_colorschememodel_connect_notify(void* self, void* signal) {
     KColorSchemeModel_ConnectNotify((KColorSchemeModel*)self, (QMetaMethod*)signal);
 }
 
-void k_colorschememodel_qbase_connect_notify(void* self, void* signal) {
-    KColorSchemeModel_QBaseConnectNotify((KColorSchemeModel*)self, (QMetaMethod*)signal);
+void k_colorschememodel_super_connect_notify(void* self, void* signal) {
+    KColorSchemeModel_SuperConnectNotify((KColorSchemeModel*)self, (QMetaMethod*)signal);
 }
 
 void k_colorschememodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1082,8 +1082,8 @@ void k_colorschememodel_disconnect_notify(void* self, void* signal) {
     KColorSchemeModel_DisconnectNotify((KColorSchemeModel*)self, (QMetaMethod*)signal);
 }
 
-void k_colorschememodel_qbase_disconnect_notify(void* self, void* signal) {
-    KColorSchemeModel_QBaseDisconnectNotify((KColorSchemeModel*)self, (QMetaMethod*)signal);
+void k_colorschememodel_super_disconnect_notify(void* self, void* signal) {
+    KColorSchemeModel_SuperDisconnectNotify((KColorSchemeModel*)self, (QMetaMethod*)signal);
 }
 
 void k_colorschememodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1094,8 +1094,8 @@ QModelIndex* k_colorschememodel_create_index(void* self, int row, int column) {
     return KColorSchemeModel_CreateIndex((KColorSchemeModel*)self, row, column);
 }
 
-QModelIndex* k_colorschememodel_qbase_create_index(void* self, int row, int column) {
-    return KColorSchemeModel_QBaseCreateIndex((KColorSchemeModel*)self, row, column);
+QModelIndex* k_colorschememodel_super_create_index(void* self, int row, int column) {
+    return KColorSchemeModel_SuperCreateIndex((KColorSchemeModel*)self, row, column);
 }
 
 void k_colorschememodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1106,8 +1106,8 @@ void k_colorschememodel_encode_data(void* self, libqt_list /* of QModelIndex* */
     KColorSchemeModel_EncodeData((KColorSchemeModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_colorschememodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KColorSchemeModel_QBaseEncodeData((KColorSchemeModel*)self, indexes, (QDataStream*)stream);
+void k_colorschememodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KColorSchemeModel_SuperEncodeData((KColorSchemeModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_colorschememodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1118,8 +1118,8 @@ bool k_colorschememodel_decode_data(void* self, int row, int column, void* paren
     return KColorSchemeModel_DecodeData((KColorSchemeModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_colorschememodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KColorSchemeModel_QBaseDecodeData((KColorSchemeModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_colorschememodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KColorSchemeModel_SuperDecodeData((KColorSchemeModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_colorschememodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1130,8 +1130,8 @@ void k_colorschememodel_begin_insert_rows(void* self, void* parent, int first, i
     KColorSchemeModel_BeginInsertRows((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_colorschememodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KColorSchemeModel_QBaseBeginInsertRows((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
+void k_colorschememodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KColorSchemeModel_SuperBeginInsertRows((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_colorschememodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1142,8 +1142,8 @@ void k_colorschememodel_end_insert_rows(void* self) {
     KColorSchemeModel_EndInsertRows((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_insert_rows(void* self) {
-    KColorSchemeModel_QBaseEndInsertRows((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_insert_rows(void* self) {
+    KColorSchemeModel_SuperEndInsertRows((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1154,8 +1154,8 @@ void k_colorschememodel_begin_remove_rows(void* self, void* parent, int first, i
     KColorSchemeModel_BeginRemoveRows((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_colorschememodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KColorSchemeModel_QBaseBeginRemoveRows((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
+void k_colorschememodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KColorSchemeModel_SuperBeginRemoveRows((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_colorschememodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1166,8 +1166,8 @@ void k_colorschememodel_end_remove_rows(void* self) {
     KColorSchemeModel_EndRemoveRows((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_remove_rows(void* self) {
-    KColorSchemeModel_QBaseEndRemoveRows((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_remove_rows(void* self) {
+    KColorSchemeModel_SuperEndRemoveRows((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1178,8 +1178,8 @@ bool k_colorschememodel_begin_move_rows(void* self, void* sourceParent, int sour
     return KColorSchemeModel_BeginMoveRows((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_colorschememodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KColorSchemeModel_QBaseBeginMoveRows((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_colorschememodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KColorSchemeModel_SuperBeginMoveRows((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_colorschememodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1190,8 +1190,8 @@ void k_colorschememodel_end_move_rows(void* self) {
     KColorSchemeModel_EndMoveRows((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_move_rows(void* self) {
-    KColorSchemeModel_QBaseEndMoveRows((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_move_rows(void* self) {
+    KColorSchemeModel_SuperEndMoveRows((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1202,8 +1202,8 @@ void k_colorschememodel_begin_insert_columns(void* self, void* parent, int first
     KColorSchemeModel_BeginInsertColumns((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_colorschememodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KColorSchemeModel_QBaseBeginInsertColumns((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
+void k_colorschememodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KColorSchemeModel_SuperBeginInsertColumns((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_colorschememodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1214,8 +1214,8 @@ void k_colorschememodel_end_insert_columns(void* self) {
     KColorSchemeModel_EndInsertColumns((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_insert_columns(void* self) {
-    KColorSchemeModel_QBaseEndInsertColumns((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_insert_columns(void* self) {
+    KColorSchemeModel_SuperEndInsertColumns((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1226,8 +1226,8 @@ void k_colorschememodel_begin_remove_columns(void* self, void* parent, int first
     KColorSchemeModel_BeginRemoveColumns((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_colorschememodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KColorSchemeModel_QBaseBeginRemoveColumns((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
+void k_colorschememodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KColorSchemeModel_SuperBeginRemoveColumns((KColorSchemeModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_colorschememodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1238,8 +1238,8 @@ void k_colorschememodel_end_remove_columns(void* self) {
     KColorSchemeModel_EndRemoveColumns((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_remove_columns(void* self) {
-    KColorSchemeModel_QBaseEndRemoveColumns((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_remove_columns(void* self) {
+    KColorSchemeModel_SuperEndRemoveColumns((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1250,8 +1250,8 @@ bool k_colorschememodel_begin_move_columns(void* self, void* sourceParent, int s
     return KColorSchemeModel_BeginMoveColumns((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_colorschememodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KColorSchemeModel_QBaseBeginMoveColumns((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_colorschememodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KColorSchemeModel_SuperBeginMoveColumns((KColorSchemeModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_colorschememodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1262,8 +1262,8 @@ void k_colorschememodel_end_move_columns(void* self) {
     KColorSchemeModel_EndMoveColumns((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_move_columns(void* self) {
-    KColorSchemeModel_QBaseEndMoveColumns((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_move_columns(void* self) {
+    KColorSchemeModel_SuperEndMoveColumns((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1274,8 +1274,8 @@ void k_colorschememodel_begin_reset_model(void* self) {
     KColorSchemeModel_BeginResetModel((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_begin_reset_model(void* self) {
-    KColorSchemeModel_QBaseBeginResetModel((KColorSchemeModel*)self);
+void k_colorschememodel_super_begin_reset_model(void* self) {
+    KColorSchemeModel_SuperBeginResetModel((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1286,8 +1286,8 @@ void k_colorschememodel_end_reset_model(void* self) {
     KColorSchemeModel_EndResetModel((KColorSchemeModel*)self);
 }
 
-void k_colorschememodel_qbase_end_reset_model(void* self) {
-    KColorSchemeModel_QBaseEndResetModel((KColorSchemeModel*)self);
+void k_colorschememodel_super_end_reset_model(void* self) {
+    KColorSchemeModel_SuperEndResetModel((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1298,8 +1298,8 @@ void k_colorschememodel_change_persistent_index(void* self, void* from, void* to
     KColorSchemeModel_ChangePersistentIndex((KColorSchemeModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_colorschememodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KColorSchemeModel_QBaseChangePersistentIndex((KColorSchemeModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_colorschememodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KColorSchemeModel_SuperChangePersistentIndex((KColorSchemeModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_colorschememodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1310,8 +1310,8 @@ void k_colorschememodel_change_persistent_index_list(void* self, libqt_list /* o
     KColorSchemeModel_ChangePersistentIndexList((KColorSchemeModel*)self, from, to);
 }
 
-void k_colorschememodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KColorSchemeModel_QBaseChangePersistentIndexList((KColorSchemeModel*)self, from, to);
+void k_colorschememodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KColorSchemeModel_SuperChangePersistentIndexList((KColorSchemeModel*)self, from, to);
 }
 
 void k_colorschememodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1323,8 +1323,8 @@ libqt_list /* of QModelIndex* */ k_colorschememodel_persistent_index_list(void* 
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_colorschememodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KColorSchemeModel_QBasePersistentIndexList((KColorSchemeModel*)self);
+libqt_list /* of QModelIndex* */ k_colorschememodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KColorSchemeModel_SuperPersistentIndexList((KColorSchemeModel*)self);
     return _arr;
 }
 
@@ -1336,8 +1336,8 @@ QObject* k_colorschememodel_sender(void* self) {
     return KColorSchemeModel_Sender((KColorSchemeModel*)self);
 }
 
-QObject* k_colorschememodel_qbase_sender(void* self) {
-    return KColorSchemeModel_QBaseSender((KColorSchemeModel*)self);
+QObject* k_colorschememodel_super_sender(void* self) {
+    return KColorSchemeModel_SuperSender((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1348,8 +1348,8 @@ int32_t k_colorschememodel_sender_signal_index(void* self) {
     return KColorSchemeModel_SenderSignalIndex((KColorSchemeModel*)self);
 }
 
-int32_t k_colorschememodel_qbase_sender_signal_index(void* self) {
-    return KColorSchemeModel_QBaseSenderSignalIndex((KColorSchemeModel*)self);
+int32_t k_colorschememodel_super_sender_signal_index(void* self) {
+    return KColorSchemeModel_SuperSenderSignalIndex((KColorSchemeModel*)self);
 }
 
 void k_colorschememodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1360,8 +1360,8 @@ int32_t k_colorschememodel_receivers(void* self, const char* signal) {
     return KColorSchemeModel_Receivers((KColorSchemeModel*)self, signal);
 }
 
-int32_t k_colorschememodel_qbase_receivers(void* self, const char* signal) {
-    return KColorSchemeModel_QBaseReceivers((KColorSchemeModel*)self, signal);
+int32_t k_colorschememodel_super_receivers(void* self, const char* signal) {
+    return KColorSchemeModel_SuperReceivers((KColorSchemeModel*)self, signal);
 }
 
 void k_colorschememodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1372,8 +1372,8 @@ bool k_colorschememodel_is_signal_connected(void* self, void* signal) {
     return KColorSchemeModel_IsSignalConnected((KColorSchemeModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_colorschememodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KColorSchemeModel_QBaseIsSignalConnected((KColorSchemeModel*)self, (QMetaMethod*)signal);
+bool k_colorschememodel_super_is_signal_connected(void* self, void* signal) {
+    return KColorSchemeModel_SuperIsSignalConnected((KColorSchemeModel*)self, (QMetaMethod*)signal);
 }
 
 void k_colorschememodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

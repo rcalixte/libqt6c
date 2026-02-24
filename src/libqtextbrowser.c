@@ -37,8 +37,8 @@ void q_textbrowser_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QTextBrowser_OnMetaObject((QTextBrowser*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_textbrowser_qbase_meta_object(void* self) {
-    return QTextBrowser_QBaseMetaObject((QTextBrowser*)self);
+const QMetaObject* q_textbrowser_super_meta_object(void* self) {
+    return QTextBrowser_SuperMetaObject((QTextBrowser*)self);
 }
 
 void* q_textbrowser_metacast(void* self, const char* param1) {
@@ -49,8 +49,8 @@ void q_textbrowser_on_metacast(void* self, void* (*callback)(void*, const char*)
     QTextBrowser_OnMetacast((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void* q_textbrowser_qbase_metacast(void* self, const char* param1) {
-    return QTextBrowser_QBaseMetacast((QTextBrowser*)self, param1);
+void* q_textbrowser_super_metacast(void* self, const char* param1) {
+    return QTextBrowser_SuperMetacast((QTextBrowser*)self, param1);
 }
 
 int32_t q_textbrowser_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -61,8 +61,8 @@ void q_textbrowser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QTextBrowser_OnMetacall((QTextBrowser*)self, (intptr_t)callback);
 }
 
-int32_t q_textbrowser_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTextBrowser_QBaseMetacall((QTextBrowser*)self, param1, param2, param3);
+int32_t q_textbrowser_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTextBrowser_SuperMetacall((QTextBrowser*)self, param1, param2, param3);
 }
 
 const char* q_textbrowser_tr(const char* s) {
@@ -122,8 +122,8 @@ void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int
     QTextBrowser_OnLoadResource((QTextBrowser*)self, (intptr_t)callback);
 }
 
-QVariant* q_textbrowser_qbase_load_resource(void* self, int type, void* name) {
-    return QTextBrowser_QBaseLoadResource((QTextBrowser*)self, type, (QUrl*)name);
+QVariant* q_textbrowser_super_load_resource(void* self, int type, void* name) {
+    return QTextBrowser_SuperLoadResource((QTextBrowser*)self, type, (QUrl*)name);
 }
 
 bool q_textbrowser_is_backward_available(void* self) {
@@ -185,8 +185,8 @@ void q_textbrowser_on_backward(void* self, void (*callback)()) {
     QTextBrowser_OnBackward((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_backward(void* self) {
-    QTextBrowser_QBaseBackward((QTextBrowser*)self);
+void q_textbrowser_super_backward(void* self) {
+    QTextBrowser_SuperBackward((QTextBrowser*)self);
 }
 
 void q_textbrowser_forward(void* self) {
@@ -197,8 +197,8 @@ void q_textbrowser_on_forward(void* self, void (*callback)()) {
     QTextBrowser_OnForward((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_forward(void* self) {
-    QTextBrowser_QBaseForward((QTextBrowser*)self);
+void q_textbrowser_super_forward(void* self) {
+    QTextBrowser_SuperForward((QTextBrowser*)self);
 }
 
 void q_textbrowser_home(void* self) {
@@ -209,8 +209,8 @@ void q_textbrowser_on_home(void* self, void (*callback)()) {
     QTextBrowser_OnHome((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_home(void* self) {
-    QTextBrowser_QBaseHome((QTextBrowser*)self);
+void q_textbrowser_super_home(void* self) {
+    QTextBrowser_SuperHome((QTextBrowser*)self);
 }
 
 void q_textbrowser_reload(void* self) {
@@ -221,8 +221,8 @@ void q_textbrowser_on_reload(void* self, void (*callback)()) {
     QTextBrowser_OnReload((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_reload(void* self) {
-    QTextBrowser_QBaseReload((QTextBrowser*)self);
+void q_textbrowser_super_reload(void* self) {
+    QTextBrowser_SuperReload((QTextBrowser*)self);
 }
 
 void q_textbrowser_backward_available(void* self, bool param1) {
@@ -281,8 +281,8 @@ void q_textbrowser_on_event(void* self, bool (*callback)(void*, void*)) {
     QTextBrowser_OnEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-bool q_textbrowser_qbase_event(void* self, void* e) {
-    return QTextBrowser_QBaseEvent((QTextBrowser*)self, (QEvent*)e);
+bool q_textbrowser_super_event(void* self, void* e) {
+    return QTextBrowser_SuperEvent((QTextBrowser*)self, (QEvent*)e);
 }
 
 void q_textbrowser_key_press_event(void* self, void* ev) {
@@ -293,8 +293,8 @@ void q_textbrowser_on_key_press_event(void* self, void (*callback)(void*, void*)
     QTextBrowser_OnKeyPressEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_key_press_event(void* self, void* ev) {
-    QTextBrowser_QBaseKeyPressEvent((QTextBrowser*)self, (QKeyEvent*)ev);
+void q_textbrowser_super_key_press_event(void* self, void* ev) {
+    QTextBrowser_SuperKeyPressEvent((QTextBrowser*)self, (QKeyEvent*)ev);
 }
 
 void q_textbrowser_mouse_move_event(void* self, void* ev) {
@@ -305,8 +305,8 @@ void q_textbrowser_on_mouse_move_event(void* self, void (*callback)(void*, void*
     QTextBrowser_OnMouseMoveEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_mouse_move_event(void* self, void* ev) {
-    QTextBrowser_QBaseMouseMoveEvent((QTextBrowser*)self, (QMouseEvent*)ev);
+void q_textbrowser_super_mouse_move_event(void* self, void* ev) {
+    QTextBrowser_SuperMouseMoveEvent((QTextBrowser*)self, (QMouseEvent*)ev);
 }
 
 void q_textbrowser_mouse_press_event(void* self, void* ev) {
@@ -317,8 +317,8 @@ void q_textbrowser_on_mouse_press_event(void* self, void (*callback)(void*, void
     QTextBrowser_OnMousePressEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_mouse_press_event(void* self, void* ev) {
-    QTextBrowser_QBaseMousePressEvent((QTextBrowser*)self, (QMouseEvent*)ev);
+void q_textbrowser_super_mouse_press_event(void* self, void* ev) {
+    QTextBrowser_SuperMousePressEvent((QTextBrowser*)self, (QMouseEvent*)ev);
 }
 
 void q_textbrowser_mouse_release_event(void* self, void* ev) {
@@ -329,8 +329,8 @@ void q_textbrowser_on_mouse_release_event(void* self, void (*callback)(void*, vo
     QTextBrowser_OnMouseReleaseEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_mouse_release_event(void* self, void* ev) {
-    QTextBrowser_QBaseMouseReleaseEvent((QTextBrowser*)self, (QMouseEvent*)ev);
+void q_textbrowser_super_mouse_release_event(void* self, void* ev) {
+    QTextBrowser_SuperMouseReleaseEvent((QTextBrowser*)self, (QMouseEvent*)ev);
 }
 
 void q_textbrowser_focus_out_event(void* self, void* ev) {
@@ -341,8 +341,8 @@ void q_textbrowser_on_focus_out_event(void* self, void (*callback)(void*, void*)
     QTextBrowser_OnFocusOutEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_focus_out_event(void* self, void* ev) {
-    QTextBrowser_QBaseFocusOutEvent((QTextBrowser*)self, (QFocusEvent*)ev);
+void q_textbrowser_super_focus_out_event(void* self, void* ev) {
+    QTextBrowser_SuperFocusOutEvent((QTextBrowser*)self, (QFocusEvent*)ev);
 }
 
 bool q_textbrowser_focus_next_prev_child(void* self, bool next) {
@@ -353,8 +353,8 @@ void q_textbrowser_on_focus_next_prev_child(void* self, bool (*callback)(void*, 
     QTextBrowser_OnFocusNextPrevChild((QTextBrowser*)self, (intptr_t)callback);
 }
 
-bool q_textbrowser_qbase_focus_next_prev_child(void* self, bool next) {
-    return QTextBrowser_QBaseFocusNextPrevChild((QTextBrowser*)self, next);
+bool q_textbrowser_super_focus_next_prev_child(void* self, bool next) {
+    return QTextBrowser_SuperFocusNextPrevChild((QTextBrowser*)self, next);
 }
 
 void q_textbrowser_paint_event(void* self, void* e) {
@@ -365,8 +365,8 @@ void q_textbrowser_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QTextBrowser_OnPaintEvent((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_paint_event(void* self, void* e) {
-    QTextBrowser_QBasePaintEvent((QTextBrowser*)self, (QPaintEvent*)e);
+void q_textbrowser_super_paint_event(void* self, void* e) {
+    QTextBrowser_SuperPaintEvent((QTextBrowser*)self, (QPaintEvent*)e);
 }
 
 void q_textbrowser_do_set_source(void* self, void* name, int32_t type) {
@@ -377,8 +377,8 @@ void q_textbrowser_on_do_set_source(void* self, void (*callback)(void*, void*, i
     QTextBrowser_OnDoSetSource((QTextBrowser*)self, (intptr_t)callback);
 }
 
-void q_textbrowser_qbase_do_set_source(void* self, void* name, int32_t type) {
-    QTextBrowser_QBaseDoSetSource((QTextBrowser*)self, (QUrl*)name, type);
+void q_textbrowser_super_do_set_source(void* self, void* name, int32_t type) {
+    QTextBrowser_SuperDoSetSource((QTextBrowser*)self, (QUrl*)name, type);
 }
 
 const char* q_textbrowser_tr2(const char* s, const char* c) {
@@ -2358,8 +2358,8 @@ QVariant* q_textbrowser_input_method_query(void* self, int32_t property) {
     return QTextBrowser_InputMethodQuery((QTextBrowser*)self, property);
 }
 
-QVariant* q_textbrowser_qbase_input_method_query(void* self, int32_t property) {
-    return QTextBrowser_QBaseInputMethodQuery((QTextBrowser*)self, property);
+QVariant* q_textbrowser_super_input_method_query(void* self, int32_t property) {
+    return QTextBrowser_SuperInputMethodQuery((QTextBrowser*)self, property);
 }
 
 void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2370,8 +2370,8 @@ void q_textbrowser_timer_event(void* self, void* e) {
     QTextBrowser_TimerEvent((QTextBrowser*)self, (QTimerEvent*)e);
 }
 
-void q_textbrowser_qbase_timer_event(void* self, void* e) {
-    QTextBrowser_QBaseTimerEvent((QTextBrowser*)self, (QTimerEvent*)e);
+void q_textbrowser_super_timer_event(void* self, void* e) {
+    QTextBrowser_SuperTimerEvent((QTextBrowser*)self, (QTimerEvent*)e);
 }
 
 void q_textbrowser_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2382,8 +2382,8 @@ void q_textbrowser_key_release_event(void* self, void* e) {
     QTextBrowser_KeyReleaseEvent((QTextBrowser*)self, (QKeyEvent*)e);
 }
 
-void q_textbrowser_qbase_key_release_event(void* self, void* e) {
-    QTextBrowser_QBaseKeyReleaseEvent((QTextBrowser*)self, (QKeyEvent*)e);
+void q_textbrowser_super_key_release_event(void* self, void* e) {
+    QTextBrowser_SuperKeyReleaseEvent((QTextBrowser*)self, (QKeyEvent*)e);
 }
 
 void q_textbrowser_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2394,8 +2394,8 @@ void q_textbrowser_resize_event(void* self, void* e) {
     QTextBrowser_ResizeEvent((QTextBrowser*)self, (QResizeEvent*)e);
 }
 
-void q_textbrowser_qbase_resize_event(void* self, void* e) {
-    QTextBrowser_QBaseResizeEvent((QTextBrowser*)self, (QResizeEvent*)e);
+void q_textbrowser_super_resize_event(void* self, void* e) {
+    QTextBrowser_SuperResizeEvent((QTextBrowser*)self, (QResizeEvent*)e);
 }
 
 void q_textbrowser_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2406,8 +2406,8 @@ void q_textbrowser_mouse_double_click_event(void* self, void* e) {
     QTextBrowser_MouseDoubleClickEvent((QTextBrowser*)self, (QMouseEvent*)e);
 }
 
-void q_textbrowser_qbase_mouse_double_click_event(void* self, void* e) {
-    QTextBrowser_QBaseMouseDoubleClickEvent((QTextBrowser*)self, (QMouseEvent*)e);
+void q_textbrowser_super_mouse_double_click_event(void* self, void* e) {
+    QTextBrowser_SuperMouseDoubleClickEvent((QTextBrowser*)self, (QMouseEvent*)e);
 }
 
 void q_textbrowser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2418,8 +2418,8 @@ void q_textbrowser_context_menu_event(void* self, void* e) {
     QTextBrowser_ContextMenuEvent((QTextBrowser*)self, (QContextMenuEvent*)e);
 }
 
-void q_textbrowser_qbase_context_menu_event(void* self, void* e) {
-    QTextBrowser_QBaseContextMenuEvent((QTextBrowser*)self, (QContextMenuEvent*)e);
+void q_textbrowser_super_context_menu_event(void* self, void* e) {
+    QTextBrowser_SuperContextMenuEvent((QTextBrowser*)self, (QContextMenuEvent*)e);
 }
 
 void q_textbrowser_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2430,8 +2430,8 @@ void q_textbrowser_drag_enter_event(void* self, void* e) {
     QTextBrowser_DragEnterEvent((QTextBrowser*)self, (QDragEnterEvent*)e);
 }
 
-void q_textbrowser_qbase_drag_enter_event(void* self, void* e) {
-    QTextBrowser_QBaseDragEnterEvent((QTextBrowser*)self, (QDragEnterEvent*)e);
+void q_textbrowser_super_drag_enter_event(void* self, void* e) {
+    QTextBrowser_SuperDragEnterEvent((QTextBrowser*)self, (QDragEnterEvent*)e);
 }
 
 void q_textbrowser_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2442,8 +2442,8 @@ void q_textbrowser_drag_leave_event(void* self, void* e) {
     QTextBrowser_DragLeaveEvent((QTextBrowser*)self, (QDragLeaveEvent*)e);
 }
 
-void q_textbrowser_qbase_drag_leave_event(void* self, void* e) {
-    QTextBrowser_QBaseDragLeaveEvent((QTextBrowser*)self, (QDragLeaveEvent*)e);
+void q_textbrowser_super_drag_leave_event(void* self, void* e) {
+    QTextBrowser_SuperDragLeaveEvent((QTextBrowser*)self, (QDragLeaveEvent*)e);
 }
 
 void q_textbrowser_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2454,8 +2454,8 @@ void q_textbrowser_drag_move_event(void* self, void* e) {
     QTextBrowser_DragMoveEvent((QTextBrowser*)self, (QDragMoveEvent*)e);
 }
 
-void q_textbrowser_qbase_drag_move_event(void* self, void* e) {
-    QTextBrowser_QBaseDragMoveEvent((QTextBrowser*)self, (QDragMoveEvent*)e);
+void q_textbrowser_super_drag_move_event(void* self, void* e) {
+    QTextBrowser_SuperDragMoveEvent((QTextBrowser*)self, (QDragMoveEvent*)e);
 }
 
 void q_textbrowser_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2466,8 +2466,8 @@ void q_textbrowser_drop_event(void* self, void* e) {
     QTextBrowser_DropEvent((QTextBrowser*)self, (QDropEvent*)e);
 }
 
-void q_textbrowser_qbase_drop_event(void* self, void* e) {
-    QTextBrowser_QBaseDropEvent((QTextBrowser*)self, (QDropEvent*)e);
+void q_textbrowser_super_drop_event(void* self, void* e) {
+    QTextBrowser_SuperDropEvent((QTextBrowser*)self, (QDropEvent*)e);
 }
 
 void q_textbrowser_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2478,8 +2478,8 @@ void q_textbrowser_focus_in_event(void* self, void* e) {
     QTextBrowser_FocusInEvent((QTextBrowser*)self, (QFocusEvent*)e);
 }
 
-void q_textbrowser_qbase_focus_in_event(void* self, void* e) {
-    QTextBrowser_QBaseFocusInEvent((QTextBrowser*)self, (QFocusEvent*)e);
+void q_textbrowser_super_focus_in_event(void* self, void* e) {
+    QTextBrowser_SuperFocusInEvent((QTextBrowser*)self, (QFocusEvent*)e);
 }
 
 void q_textbrowser_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2490,8 +2490,8 @@ void q_textbrowser_show_event(void* self, void* param1) {
     QTextBrowser_ShowEvent((QTextBrowser*)self, (QShowEvent*)param1);
 }
 
-void q_textbrowser_qbase_show_event(void* self, void* param1) {
-    QTextBrowser_QBaseShowEvent((QTextBrowser*)self, (QShowEvent*)param1);
+void q_textbrowser_super_show_event(void* self, void* param1) {
+    QTextBrowser_SuperShowEvent((QTextBrowser*)self, (QShowEvent*)param1);
 }
 
 void q_textbrowser_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2502,8 +2502,8 @@ void q_textbrowser_change_event(void* self, void* e) {
     QTextBrowser_ChangeEvent((QTextBrowser*)self, (QEvent*)e);
 }
 
-void q_textbrowser_qbase_change_event(void* self, void* e) {
-    QTextBrowser_QBaseChangeEvent((QTextBrowser*)self, (QEvent*)e);
+void q_textbrowser_super_change_event(void* self, void* e) {
+    QTextBrowser_SuperChangeEvent((QTextBrowser*)self, (QEvent*)e);
 }
 
 void q_textbrowser_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2514,8 +2514,8 @@ void q_textbrowser_wheel_event(void* self, void* e) {
     QTextBrowser_WheelEvent((QTextBrowser*)self, (QWheelEvent*)e);
 }
 
-void q_textbrowser_qbase_wheel_event(void* self, void* e) {
-    QTextBrowser_QBaseWheelEvent((QTextBrowser*)self, (QWheelEvent*)e);
+void q_textbrowser_super_wheel_event(void* self, void* e) {
+    QTextBrowser_SuperWheelEvent((QTextBrowser*)self, (QWheelEvent*)e);
 }
 
 void q_textbrowser_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2526,8 +2526,8 @@ QMimeData* q_textbrowser_create_mime_data_from_selection(void* self) {
     return QTextBrowser_CreateMimeDataFromSelection((QTextBrowser*)self);
 }
 
-QMimeData* q_textbrowser_qbase_create_mime_data_from_selection(void* self) {
-    return QTextBrowser_QBaseCreateMimeDataFromSelection((QTextBrowser*)self);
+QMimeData* q_textbrowser_super_create_mime_data_from_selection(void* self) {
+    return QTextBrowser_SuperCreateMimeDataFromSelection((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_create_mime_data_from_selection(void* self, QMimeData* (*callback)()) {
@@ -2538,8 +2538,8 @@ bool q_textbrowser_can_insert_from_mime_data(void* self, void* source) {
     return QTextBrowser_CanInsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
 }
 
-bool q_textbrowser_qbase_can_insert_from_mime_data(void* self, void* source) {
-    return QTextBrowser_QBaseCanInsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
+bool q_textbrowser_super_can_insert_from_mime_data(void* self, void* source) {
+    return QTextBrowser_SuperCanInsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
 }
 
 void q_textbrowser_on_can_insert_from_mime_data(void* self, bool (*callback)(void*, void*)) {
@@ -2550,8 +2550,8 @@ void q_textbrowser_insert_from_mime_data(void* self, void* source) {
     QTextBrowser_InsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
 }
 
-void q_textbrowser_qbase_insert_from_mime_data(void* self, void* source) {
-    QTextBrowser_QBaseInsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
+void q_textbrowser_super_insert_from_mime_data(void* self, void* source) {
+    QTextBrowser_SuperInsertFromMimeData((QTextBrowser*)self, (QMimeData*)source);
 }
 
 void q_textbrowser_on_insert_from_mime_data(void* self, void (*callback)(void*, void*)) {
@@ -2562,8 +2562,8 @@ void q_textbrowser_input_method_event(void* self, void* param1) {
     QTextBrowser_InputMethodEvent((QTextBrowser*)self, (QInputMethodEvent*)param1);
 }
 
-void q_textbrowser_qbase_input_method_event(void* self, void* param1) {
-    QTextBrowser_QBaseInputMethodEvent((QTextBrowser*)self, (QInputMethodEvent*)param1);
+void q_textbrowser_super_input_method_event(void* self, void* param1) {
+    QTextBrowser_SuperInputMethodEvent((QTextBrowser*)self, (QInputMethodEvent*)param1);
 }
 
 void q_textbrowser_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2574,8 +2574,8 @@ void q_textbrowser_scroll_contents_by(void* self, int dx, int dy) {
     QTextBrowser_ScrollContentsBy((QTextBrowser*)self, dx, dy);
 }
 
-void q_textbrowser_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QTextBrowser_QBaseScrollContentsBy((QTextBrowser*)self, dx, dy);
+void q_textbrowser_super_scroll_contents_by(void* self, int dx, int dy) {
+    QTextBrowser_SuperScrollContentsBy((QTextBrowser*)self, dx, dy);
 }
 
 void q_textbrowser_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
@@ -2586,8 +2586,8 @@ void q_textbrowser_do_set_text_cursor(void* self, void* cursor) {
     QTextBrowser_DoSetTextCursor((QTextBrowser*)self, (QTextCursor*)cursor);
 }
 
-void q_textbrowser_qbase_do_set_text_cursor(void* self, void* cursor) {
-    QTextBrowser_QBaseDoSetTextCursor((QTextBrowser*)self, (QTextCursor*)cursor);
+void q_textbrowser_super_do_set_text_cursor(void* self, void* cursor) {
+    QTextBrowser_SuperDoSetTextCursor((QTextBrowser*)self, (QTextCursor*)cursor);
 }
 
 void q_textbrowser_on_do_set_text_cursor(void* self, void (*callback)(void*, void*)) {
@@ -2598,8 +2598,8 @@ QSize* q_textbrowser_minimum_size_hint(void* self) {
     return QTextBrowser_MinimumSizeHint((QTextBrowser*)self);
 }
 
-QSize* q_textbrowser_qbase_minimum_size_hint(void* self) {
-    return QTextBrowser_QBaseMinimumSizeHint((QTextBrowser*)self);
+QSize* q_textbrowser_super_minimum_size_hint(void* self) {
+    return QTextBrowser_SuperMinimumSizeHint((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2610,8 +2610,8 @@ QSize* q_textbrowser_size_hint(void* self) {
     return QTextBrowser_SizeHint((QTextBrowser*)self);
 }
 
-QSize* q_textbrowser_qbase_size_hint(void* self) {
-    return QTextBrowser_QBaseSizeHint((QTextBrowser*)self);
+QSize* q_textbrowser_super_size_hint(void* self) {
+    return QTextBrowser_SuperSizeHint((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2622,8 +2622,8 @@ void q_textbrowser_setup_viewport(void* self, void* viewport) {
     QTextBrowser_SetupViewport((QTextBrowser*)self, (QWidget*)viewport);
 }
 
-void q_textbrowser_qbase_setup_viewport(void* self, void* viewport) {
-    QTextBrowser_QBaseSetupViewport((QTextBrowser*)self, (QWidget*)viewport);
+void q_textbrowser_super_setup_viewport(void* self, void* viewport) {
+    QTextBrowser_SuperSetupViewport((QTextBrowser*)self, (QWidget*)viewport);
 }
 
 void q_textbrowser_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2634,8 +2634,8 @@ bool q_textbrowser_event_filter(void* self, void* param1, void* param2) {
     return QTextBrowser_EventFilter((QTextBrowser*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_textbrowser_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QTextBrowser_QBaseEventFilter((QTextBrowser*)self, (QObject*)param1, (QEvent*)param2);
+bool q_textbrowser_super_event_filter(void* self, void* param1, void* param2) {
+    return QTextBrowser_SuperEventFilter((QTextBrowser*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_textbrowser_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2646,8 +2646,8 @@ bool q_textbrowser_viewport_event(void* self, void* param1) {
     return QTextBrowser_ViewportEvent((QTextBrowser*)self, (QEvent*)param1);
 }
 
-bool q_textbrowser_qbase_viewport_event(void* self, void* param1) {
-    return QTextBrowser_QBaseViewportEvent((QTextBrowser*)self, (QEvent*)param1);
+bool q_textbrowser_super_viewport_event(void* self, void* param1) {
+    return QTextBrowser_SuperViewportEvent((QTextBrowser*)self, (QEvent*)param1);
 }
 
 void q_textbrowser_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2658,8 +2658,8 @@ QSize* q_textbrowser_viewport_size_hint(void* self) {
     return QTextBrowser_ViewportSizeHint((QTextBrowser*)self);
 }
 
-QSize* q_textbrowser_qbase_viewport_size_hint(void* self) {
-    return QTextBrowser_QBaseViewportSizeHint((QTextBrowser*)self);
+QSize* q_textbrowser_super_viewport_size_hint(void* self) {
+    return QTextBrowser_SuperViewportSizeHint((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2670,8 +2670,8 @@ void q_textbrowser_init_style_option(void* self, void* option) {
     QTextBrowser_InitStyleOption((QTextBrowser*)self, (QStyleOptionFrame*)option);
 }
 
-void q_textbrowser_qbase_init_style_option(void* self, void* option) {
-    QTextBrowser_QBaseInitStyleOption((QTextBrowser*)self, (QStyleOptionFrame*)option);
+void q_textbrowser_super_init_style_option(void* self, void* option) {
+    QTextBrowser_SuperInitStyleOption((QTextBrowser*)self, (QStyleOptionFrame*)option);
 }
 
 void q_textbrowser_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2682,8 +2682,8 @@ int32_t q_textbrowser_dev_type(void* self) {
     return QTextBrowser_DevType((QTextBrowser*)self);
 }
 
-int32_t q_textbrowser_qbase_dev_type(void* self) {
-    return QTextBrowser_QBaseDevType((QTextBrowser*)self);
+int32_t q_textbrowser_super_dev_type(void* self) {
+    return QTextBrowser_SuperDevType((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2694,8 +2694,8 @@ void q_textbrowser_set_visible(void* self, bool visible) {
     QTextBrowser_SetVisible((QTextBrowser*)self, visible);
 }
 
-void q_textbrowser_qbase_set_visible(void* self, bool visible) {
-    QTextBrowser_QBaseSetVisible((QTextBrowser*)self, visible);
+void q_textbrowser_super_set_visible(void* self, bool visible) {
+    QTextBrowser_SuperSetVisible((QTextBrowser*)self, visible);
 }
 
 void q_textbrowser_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2706,8 +2706,8 @@ int32_t q_textbrowser_height_for_width(void* self, int param1) {
     return QTextBrowser_HeightForWidth((QTextBrowser*)self, param1);
 }
 
-int32_t q_textbrowser_qbase_height_for_width(void* self, int param1) {
-    return QTextBrowser_QBaseHeightForWidth((QTextBrowser*)self, param1);
+int32_t q_textbrowser_super_height_for_width(void* self, int param1) {
+    return QTextBrowser_SuperHeightForWidth((QTextBrowser*)self, param1);
 }
 
 void q_textbrowser_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2718,8 +2718,8 @@ bool q_textbrowser_has_height_for_width(void* self) {
     return QTextBrowser_HasHeightForWidth((QTextBrowser*)self);
 }
 
-bool q_textbrowser_qbase_has_height_for_width(void* self) {
-    return QTextBrowser_QBaseHasHeightForWidth((QTextBrowser*)self);
+bool q_textbrowser_super_has_height_for_width(void* self) {
+    return QTextBrowser_SuperHasHeightForWidth((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2730,8 +2730,8 @@ QPaintEngine* q_textbrowser_paint_engine(void* self) {
     return QTextBrowser_PaintEngine((QTextBrowser*)self);
 }
 
-QPaintEngine* q_textbrowser_qbase_paint_engine(void* self) {
-    return QTextBrowser_QBasePaintEngine((QTextBrowser*)self);
+QPaintEngine* q_textbrowser_super_paint_engine(void* self) {
+    return QTextBrowser_SuperPaintEngine((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2742,8 +2742,8 @@ void q_textbrowser_enter_event(void* self, void* event) {
     QTextBrowser_EnterEvent((QTextBrowser*)self, (QEnterEvent*)event);
 }
 
-void q_textbrowser_qbase_enter_event(void* self, void* event) {
-    QTextBrowser_QBaseEnterEvent((QTextBrowser*)self, (QEnterEvent*)event);
+void q_textbrowser_super_enter_event(void* self, void* event) {
+    QTextBrowser_SuperEnterEvent((QTextBrowser*)self, (QEnterEvent*)event);
 }
 
 void q_textbrowser_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2754,8 +2754,8 @@ void q_textbrowser_leave_event(void* self, void* event) {
     QTextBrowser_LeaveEvent((QTextBrowser*)self, (QEvent*)event);
 }
 
-void q_textbrowser_qbase_leave_event(void* self, void* event) {
-    QTextBrowser_QBaseLeaveEvent((QTextBrowser*)self, (QEvent*)event);
+void q_textbrowser_super_leave_event(void* self, void* event) {
+    QTextBrowser_SuperLeaveEvent((QTextBrowser*)self, (QEvent*)event);
 }
 
 void q_textbrowser_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2766,8 +2766,8 @@ void q_textbrowser_move_event(void* self, void* event) {
     QTextBrowser_MoveEvent((QTextBrowser*)self, (QMoveEvent*)event);
 }
 
-void q_textbrowser_qbase_move_event(void* self, void* event) {
-    QTextBrowser_QBaseMoveEvent((QTextBrowser*)self, (QMoveEvent*)event);
+void q_textbrowser_super_move_event(void* self, void* event) {
+    QTextBrowser_SuperMoveEvent((QTextBrowser*)self, (QMoveEvent*)event);
 }
 
 void q_textbrowser_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2778,8 +2778,8 @@ void q_textbrowser_close_event(void* self, void* event) {
     QTextBrowser_CloseEvent((QTextBrowser*)self, (QCloseEvent*)event);
 }
 
-void q_textbrowser_qbase_close_event(void* self, void* event) {
-    QTextBrowser_QBaseCloseEvent((QTextBrowser*)self, (QCloseEvent*)event);
+void q_textbrowser_super_close_event(void* self, void* event) {
+    QTextBrowser_SuperCloseEvent((QTextBrowser*)self, (QCloseEvent*)event);
 }
 
 void q_textbrowser_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2790,8 +2790,8 @@ void q_textbrowser_tablet_event(void* self, void* event) {
     QTextBrowser_TabletEvent((QTextBrowser*)self, (QTabletEvent*)event);
 }
 
-void q_textbrowser_qbase_tablet_event(void* self, void* event) {
-    QTextBrowser_QBaseTabletEvent((QTextBrowser*)self, (QTabletEvent*)event);
+void q_textbrowser_super_tablet_event(void* self, void* event) {
+    QTextBrowser_SuperTabletEvent((QTextBrowser*)self, (QTabletEvent*)event);
 }
 
 void q_textbrowser_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2802,8 +2802,8 @@ void q_textbrowser_action_event(void* self, void* event) {
     QTextBrowser_ActionEvent((QTextBrowser*)self, (QActionEvent*)event);
 }
 
-void q_textbrowser_qbase_action_event(void* self, void* event) {
-    QTextBrowser_QBaseActionEvent((QTextBrowser*)self, (QActionEvent*)event);
+void q_textbrowser_super_action_event(void* self, void* event) {
+    QTextBrowser_SuperActionEvent((QTextBrowser*)self, (QActionEvent*)event);
 }
 
 void q_textbrowser_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2814,8 +2814,8 @@ void q_textbrowser_hide_event(void* self, void* event) {
     QTextBrowser_HideEvent((QTextBrowser*)self, (QHideEvent*)event);
 }
 
-void q_textbrowser_qbase_hide_event(void* self, void* event) {
-    QTextBrowser_QBaseHideEvent((QTextBrowser*)self, (QHideEvent*)event);
+void q_textbrowser_super_hide_event(void* self, void* event) {
+    QTextBrowser_SuperHideEvent((QTextBrowser*)self, (QHideEvent*)event);
 }
 
 void q_textbrowser_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2826,8 +2826,8 @@ bool q_textbrowser_native_event(void* self, char* eventType, void* message, intp
     return QTextBrowser_NativeEvent((QTextBrowser*)self, qstring(eventType), message, result);
 }
 
-bool q_textbrowser_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QTextBrowser_QBaseNativeEvent((QTextBrowser*)self, qstring(eventType), message, result);
+bool q_textbrowser_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QTextBrowser_SuperNativeEvent((QTextBrowser*)self, qstring(eventType), message, result);
 }
 
 void q_textbrowser_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2838,8 +2838,8 @@ int32_t q_textbrowser_metric(void* self, int32_t param1) {
     return QTextBrowser_Metric((QTextBrowser*)self, param1);
 }
 
-int32_t q_textbrowser_qbase_metric(void* self, int32_t param1) {
-    return QTextBrowser_QBaseMetric((QTextBrowser*)self, param1);
+int32_t q_textbrowser_super_metric(void* self, int32_t param1) {
+    return QTextBrowser_SuperMetric((QTextBrowser*)self, param1);
 }
 
 void q_textbrowser_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2850,8 +2850,8 @@ void q_textbrowser_init_painter(void* self, void* painter) {
     QTextBrowser_InitPainter((QTextBrowser*)self, (QPainter*)painter);
 }
 
-void q_textbrowser_qbase_init_painter(void* self, void* painter) {
-    QTextBrowser_QBaseInitPainter((QTextBrowser*)self, (QPainter*)painter);
+void q_textbrowser_super_init_painter(void* self, void* painter) {
+    QTextBrowser_SuperInitPainter((QTextBrowser*)self, (QPainter*)painter);
 }
 
 void q_textbrowser_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2862,8 +2862,8 @@ QPaintDevice* q_textbrowser_redirected(void* self, void* offset) {
     return QTextBrowser_Redirected((QTextBrowser*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_textbrowser_qbase_redirected(void* self, void* offset) {
-    return QTextBrowser_QBaseRedirected((QTextBrowser*)self, (QPoint*)offset);
+QPaintDevice* q_textbrowser_super_redirected(void* self, void* offset) {
+    return QTextBrowser_SuperRedirected((QTextBrowser*)self, (QPoint*)offset);
 }
 
 void q_textbrowser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2874,8 +2874,8 @@ QPainter* q_textbrowser_shared_painter(void* self) {
     return QTextBrowser_SharedPainter((QTextBrowser*)self);
 }
 
-QPainter* q_textbrowser_qbase_shared_painter(void* self) {
-    return QTextBrowser_QBaseSharedPainter((QTextBrowser*)self);
+QPainter* q_textbrowser_super_shared_painter(void* self) {
+    return QTextBrowser_SuperSharedPainter((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2886,8 +2886,8 @@ void q_textbrowser_child_event(void* self, void* event) {
     QTextBrowser_ChildEvent((QTextBrowser*)self, (QChildEvent*)event);
 }
 
-void q_textbrowser_qbase_child_event(void* self, void* event) {
-    QTextBrowser_QBaseChildEvent((QTextBrowser*)self, (QChildEvent*)event);
+void q_textbrowser_super_child_event(void* self, void* event) {
+    QTextBrowser_SuperChildEvent((QTextBrowser*)self, (QChildEvent*)event);
 }
 
 void q_textbrowser_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2898,8 +2898,8 @@ void q_textbrowser_custom_event(void* self, void* event) {
     QTextBrowser_CustomEvent((QTextBrowser*)self, (QEvent*)event);
 }
 
-void q_textbrowser_qbase_custom_event(void* self, void* event) {
-    QTextBrowser_QBaseCustomEvent((QTextBrowser*)self, (QEvent*)event);
+void q_textbrowser_super_custom_event(void* self, void* event) {
+    QTextBrowser_SuperCustomEvent((QTextBrowser*)self, (QEvent*)event);
 }
 
 void q_textbrowser_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2910,8 +2910,8 @@ void q_textbrowser_connect_notify(void* self, void* signal) {
     QTextBrowser_ConnectNotify((QTextBrowser*)self, (QMetaMethod*)signal);
 }
 
-void q_textbrowser_qbase_connect_notify(void* self, void* signal) {
-    QTextBrowser_QBaseConnectNotify((QTextBrowser*)self, (QMetaMethod*)signal);
+void q_textbrowser_super_connect_notify(void* self, void* signal) {
+    QTextBrowser_SuperConnectNotify((QTextBrowser*)self, (QMetaMethod*)signal);
 }
 
 void q_textbrowser_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2922,8 +2922,8 @@ void q_textbrowser_disconnect_notify(void* self, void* signal) {
     QTextBrowser_DisconnectNotify((QTextBrowser*)self, (QMetaMethod*)signal);
 }
 
-void q_textbrowser_qbase_disconnect_notify(void* self, void* signal) {
-    QTextBrowser_QBaseDisconnectNotify((QTextBrowser*)self, (QMetaMethod*)signal);
+void q_textbrowser_super_disconnect_notify(void* self, void* signal) {
+    QTextBrowser_SuperDisconnectNotify((QTextBrowser*)self, (QMetaMethod*)signal);
 }
 
 void q_textbrowser_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2934,8 +2934,8 @@ void q_textbrowser_zoom_in_f(void* self, float range) {
     QTextBrowser_ZoomInF((QTextBrowser*)self, range);
 }
 
-void q_textbrowser_qbase_zoom_in_f(void* self, float range) {
-    QTextBrowser_QBaseZoomInF((QTextBrowser*)self, range);
+void q_textbrowser_super_zoom_in_f(void* self, float range) {
+    QTextBrowser_SuperZoomInF((QTextBrowser*)self, range);
 }
 
 void q_textbrowser_on_zoom_in_f(void* self, void (*callback)(void*, float)) {
@@ -2946,8 +2946,8 @@ void q_textbrowser_set_viewport_margins(void* self, int left, int top, int right
     QTextBrowser_SetViewportMargins((QTextBrowser*)self, left, top, right, bottom);
 }
 
-void q_textbrowser_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QTextBrowser_QBaseSetViewportMargins((QTextBrowser*)self, left, top, right, bottom);
+void q_textbrowser_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QTextBrowser_SuperSetViewportMargins((QTextBrowser*)self, left, top, right, bottom);
 }
 
 void q_textbrowser_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -2958,8 +2958,8 @@ QMargins* q_textbrowser_viewport_margins(void* self) {
     return QTextBrowser_ViewportMargins((QTextBrowser*)self);
 }
 
-QMargins* q_textbrowser_qbase_viewport_margins(void* self) {
-    return QTextBrowser_QBaseViewportMargins((QTextBrowser*)self);
+QMargins* q_textbrowser_super_viewport_margins(void* self) {
+    return QTextBrowser_SuperViewportMargins((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -2970,8 +2970,8 @@ void q_textbrowser_draw_frame(void* self, void* param1) {
     QTextBrowser_DrawFrame((QTextBrowser*)self, (QPainter*)param1);
 }
 
-void q_textbrowser_qbase_draw_frame(void* self, void* param1) {
-    QTextBrowser_QBaseDrawFrame((QTextBrowser*)self, (QPainter*)param1);
+void q_textbrowser_super_draw_frame(void* self, void* param1) {
+    QTextBrowser_SuperDrawFrame((QTextBrowser*)self, (QPainter*)param1);
 }
 
 void q_textbrowser_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2982,8 +2982,8 @@ void q_textbrowser_update_micro_focus(void* self) {
     QTextBrowser_UpdateMicroFocus((QTextBrowser*)self);
 }
 
-void q_textbrowser_qbase_update_micro_focus(void* self) {
-    QTextBrowser_QBaseUpdateMicroFocus((QTextBrowser*)self);
+void q_textbrowser_super_update_micro_focus(void* self) {
+    QTextBrowser_SuperUpdateMicroFocus((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2994,8 +2994,8 @@ void q_textbrowser_create(void* self) {
     QTextBrowser_Create((QTextBrowser*)self);
 }
 
-void q_textbrowser_qbase_create(void* self) {
-    QTextBrowser_QBaseCreate((QTextBrowser*)self);
+void q_textbrowser_super_create(void* self) {
+    QTextBrowser_SuperCreate((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_create(void* self, void (*callback)()) {
@@ -3006,8 +3006,8 @@ void q_textbrowser_destroy(void* self) {
     QTextBrowser_Destroy((QTextBrowser*)self);
 }
 
-void q_textbrowser_qbase_destroy(void* self) {
-    QTextBrowser_QBaseDestroy((QTextBrowser*)self);
+void q_textbrowser_super_destroy(void* self) {
+    QTextBrowser_SuperDestroy((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_destroy(void* self, void (*callback)()) {
@@ -3018,8 +3018,8 @@ bool q_textbrowser_focus_next_child(void* self) {
     return QTextBrowser_FocusNextChild((QTextBrowser*)self);
 }
 
-bool q_textbrowser_qbase_focus_next_child(void* self) {
-    return QTextBrowser_QBaseFocusNextChild((QTextBrowser*)self);
+bool q_textbrowser_super_focus_next_child(void* self) {
+    return QTextBrowser_SuperFocusNextChild((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3030,8 +3030,8 @@ bool q_textbrowser_focus_previous_child(void* self) {
     return QTextBrowser_FocusPreviousChild((QTextBrowser*)self);
 }
 
-bool q_textbrowser_qbase_focus_previous_child(void* self) {
-    return QTextBrowser_QBaseFocusPreviousChild((QTextBrowser*)self);
+bool q_textbrowser_super_focus_previous_child(void* self) {
+    return QTextBrowser_SuperFocusPreviousChild((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3042,8 +3042,8 @@ QObject* q_textbrowser_sender(void* self) {
     return QTextBrowser_Sender((QTextBrowser*)self);
 }
 
-QObject* q_textbrowser_qbase_sender(void* self) {
-    return QTextBrowser_QBaseSender((QTextBrowser*)self);
+QObject* q_textbrowser_super_sender(void* self) {
+    return QTextBrowser_SuperSender((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_sender(void* self, QObject* (*callback)()) {
@@ -3054,8 +3054,8 @@ int32_t q_textbrowser_sender_signal_index(void* self) {
     return QTextBrowser_SenderSignalIndex((QTextBrowser*)self);
 }
 
-int32_t q_textbrowser_qbase_sender_signal_index(void* self) {
-    return QTextBrowser_QBaseSenderSignalIndex((QTextBrowser*)self);
+int32_t q_textbrowser_super_sender_signal_index(void* self) {
+    return QTextBrowser_SuperSenderSignalIndex((QTextBrowser*)self);
 }
 
 void q_textbrowser_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3066,8 +3066,8 @@ int32_t q_textbrowser_receivers(void* self, const char* signal) {
     return QTextBrowser_Receivers((QTextBrowser*)self, signal);
 }
 
-int32_t q_textbrowser_qbase_receivers(void* self, const char* signal) {
-    return QTextBrowser_QBaseReceivers((QTextBrowser*)self, signal);
+int32_t q_textbrowser_super_receivers(void* self, const char* signal) {
+    return QTextBrowser_SuperReceivers((QTextBrowser*)self, signal);
 }
 
 void q_textbrowser_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3078,8 +3078,8 @@ bool q_textbrowser_is_signal_connected(void* self, void* signal) {
     return QTextBrowser_IsSignalConnected((QTextBrowser*)self, (QMetaMethod*)signal);
 }
 
-bool q_textbrowser_qbase_is_signal_connected(void* self, void* signal) {
-    return QTextBrowser_QBaseIsSignalConnected((QTextBrowser*)self, (QMetaMethod*)signal);
+bool q_textbrowser_super_is_signal_connected(void* self, void* signal) {
+    return QTextBrowser_SuperIsSignalConnected((QTextBrowser*)self, (QMetaMethod*)signal);
 }
 
 void q_textbrowser_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3090,8 +3090,8 @@ double q_textbrowser_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return QTextBrowser_GetDecodedMetricF((QTextBrowser*)self, metricA, metricB);
 }
 
-double q_textbrowser_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QTextBrowser_QBaseGetDecodedMetricF((QTextBrowser*)self, metricA, metricB);
+double q_textbrowser_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QTextBrowser_SuperGetDecodedMetricF((QTextBrowser*)self, metricA, metricB);
 }
 
 void q_textbrowser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

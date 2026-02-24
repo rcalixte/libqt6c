@@ -27,8 +27,8 @@ void q_scilexerjava_on_meta_object(void* self, const QMetaObject* (*callback)())
     QsciLexerJava_OnMetaObject((QsciLexerJava*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scilexerjava_qbase_meta_object(void* self) {
-    return QsciLexerJava_QBaseMetaObject((QsciLexerJava*)self);
+const QMetaObject* q_scilexerjava_super_meta_object(void* self) {
+    return QsciLexerJava_SuperMetaObject((QsciLexerJava*)self);
 }
 
 void* q_scilexerjava_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void q_scilexerjava_on_metacast(void* self, void* (*callback)(void*, const char*
     QsciLexerJava_OnMetacast((QsciLexerJava*)self, (intptr_t)callback);
 }
 
-void* q_scilexerjava_qbase_metacast(void* self, const char* param1) {
-    return QsciLexerJava_QBaseMetacast((QsciLexerJava*)self, param1);
+void* q_scilexerjava_super_metacast(void* self, const char* param1) {
+    return QsciLexerJava_SuperMetacast((QsciLexerJava*)self, param1);
 }
 
 int32_t q_scilexerjava_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void q_scilexerjava_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QsciLexerJava_OnMetacall((QsciLexerJava*)self, (intptr_t)callback);
 }
 
-int32_t q_scilexerjava_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciLexerJava_QBaseMetacall((QsciLexerJava*)self, param1, param2, param3);
+int32_t q_scilexerjava_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciLexerJava_SuperMetacall((QsciLexerJava*)self, param1, param2, param3);
 }
 
 const char* q_scilexerjava_tr(const char* s) {
@@ -475,8 +475,8 @@ void q_scilexerjava_set_fold_at_else(void* self, bool fold) {
     QsciLexerJava_SetFoldAtElse((QsciLexerJava*)self, fold);
 }
 
-void q_scilexerjava_qbase_set_fold_at_else(void* self, bool fold) {
-    QsciLexerJava_QBaseSetFoldAtElse((QsciLexerJava*)self, fold);
+void q_scilexerjava_super_set_fold_at_else(void* self, bool fold) {
+    QsciLexerJava_SuperSetFoldAtElse((QsciLexerJava*)self, fold);
 }
 
 void q_scilexerjava_on_set_fold_at_else(void* self, void (*callback)(void*, bool)) {
@@ -487,8 +487,8 @@ void q_scilexerjava_set_fold_comments(void* self, bool fold) {
     QsciLexerJava_SetFoldComments((QsciLexerJava*)self, fold);
 }
 
-void q_scilexerjava_qbase_set_fold_comments(void* self, bool fold) {
-    QsciLexerJava_QBaseSetFoldComments((QsciLexerJava*)self, fold);
+void q_scilexerjava_super_set_fold_comments(void* self, bool fold) {
+    QsciLexerJava_SuperSetFoldComments((QsciLexerJava*)self, fold);
 }
 
 void q_scilexerjava_on_set_fold_comments(void* self, void (*callback)(void*, bool)) {
@@ -499,8 +499,8 @@ void q_scilexerjava_set_fold_compact(void* self, bool fold) {
     QsciLexerJava_SetFoldCompact((QsciLexerJava*)self, fold);
 }
 
-void q_scilexerjava_qbase_set_fold_compact(void* self, bool fold) {
-    QsciLexerJava_QBaseSetFoldCompact((QsciLexerJava*)self, fold);
+void q_scilexerjava_super_set_fold_compact(void* self, bool fold) {
+    QsciLexerJava_SuperSetFoldCompact((QsciLexerJava*)self, fold);
 }
 
 void q_scilexerjava_on_set_fold_compact(void* self, void (*callback)(void*, bool)) {
@@ -511,8 +511,8 @@ void q_scilexerjava_set_fold_preprocessor(void* self, bool fold) {
     QsciLexerJava_SetFoldPreprocessor((QsciLexerJava*)self, fold);
 }
 
-void q_scilexerjava_qbase_set_fold_preprocessor(void* self, bool fold) {
-    QsciLexerJava_QBaseSetFoldPreprocessor((QsciLexerJava*)self, fold);
+void q_scilexerjava_super_set_fold_preprocessor(void* self, bool fold) {
+    QsciLexerJava_SuperSetFoldPreprocessor((QsciLexerJava*)self, fold);
 }
 
 void q_scilexerjava_on_set_fold_preprocessor(void* self, void (*callback)(void*, bool)) {
@@ -523,8 +523,8 @@ void q_scilexerjava_set_style_preprocessor(void* self, bool style) {
     QsciLexerJava_SetStylePreprocessor((QsciLexerJava*)self, style);
 }
 
-void q_scilexerjava_qbase_set_style_preprocessor(void* self, bool style) {
-    QsciLexerJava_QBaseSetStylePreprocessor((QsciLexerJava*)self, style);
+void q_scilexerjava_super_set_style_preprocessor(void* self, bool style) {
+    QsciLexerJava_SuperSetStylePreprocessor((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_set_style_preprocessor(void* self, void (*callback)(void*, bool)) {
@@ -535,8 +535,8 @@ const char* q_scilexerjava_lexer(void* self) {
     return QsciLexerJava_Lexer((QsciLexerJava*)self);
 }
 
-const char* q_scilexerjava_qbase_lexer(void* self) {
-    return QsciLexerJava_QBaseLexer((QsciLexerJava*)self);
+const char* q_scilexerjava_super_lexer(void* self) {
+    return QsciLexerJava_SuperLexer((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_lexer(void* self, const char* (*callback)()) {
@@ -547,8 +547,8 @@ int32_t q_scilexerjava_lexer_id(void* self) {
     return QsciLexerJava_LexerId((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_lexer_id(void* self) {
-    return QsciLexerJava_QBaseLexerId((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_lexer_id(void* self) {
+    return QsciLexerJava_SuperLexerId((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_lexer_id(void* self, int32_t (*callback)()) {
@@ -559,8 +559,8 @@ const char* q_scilexerjava_auto_completion_fillups(void* self) {
     return QsciLexerJava_AutoCompletionFillups((QsciLexerJava*)self);
 }
 
-const char* q_scilexerjava_qbase_auto_completion_fillups(void* self) {
-    return QsciLexerJava_QBaseAutoCompletionFillups((QsciLexerJava*)self);
+const char* q_scilexerjava_super_auto_completion_fillups(void* self) {
+    return QsciLexerJava_SuperAutoCompletionFillups((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_auto_completion_fillups(void* self, const char* (*callback)()) {
@@ -586,8 +586,8 @@ const char** q_scilexerjava_auto_completion_word_separators(void* self) {
     return _ret;
 }
 
-const char** q_scilexerjava_qbase_auto_completion_word_separators(void* self) {
-    libqt_list _arr = QsciLexerJava_QBaseAutoCompletionWordSeparators((QsciLexerJava*)self);
+const char** q_scilexerjava_super_auto_completion_word_separators(void* self) {
+    libqt_list _arr = QsciLexerJava_SuperAutoCompletionWordSeparators((QsciLexerJava*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -613,8 +613,8 @@ const char* q_scilexerjava_block_end(void* self, int* style) {
     return QsciLexerJava_BlockEnd((QsciLexerJava*)self, style);
 }
 
-const char* q_scilexerjava_qbase_block_end(void* self, int* style) {
-    return QsciLexerJava_QBaseBlockEnd((QsciLexerJava*)self, style);
+const char* q_scilexerjava_super_block_end(void* self, int* style) {
+    return QsciLexerJava_SuperBlockEnd((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_block_end(void* self, const char* (*callback)(void*, int*)) {
@@ -625,8 +625,8 @@ int32_t q_scilexerjava_block_lookback(void* self) {
     return QsciLexerJava_BlockLookback((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_block_lookback(void* self) {
-    return QsciLexerJava_QBaseBlockLookback((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_block_lookback(void* self) {
+    return QsciLexerJava_SuperBlockLookback((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_block_lookback(void* self, int32_t (*callback)()) {
@@ -637,8 +637,8 @@ const char* q_scilexerjava_block_start(void* self, int* style) {
     return QsciLexerJava_BlockStart((QsciLexerJava*)self, style);
 }
 
-const char* q_scilexerjava_qbase_block_start(void* self, int* style) {
-    return QsciLexerJava_QBaseBlockStart((QsciLexerJava*)self, style);
+const char* q_scilexerjava_super_block_start(void* self, int* style) {
+    return QsciLexerJava_SuperBlockStart((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_block_start(void* self, const char* (*callback)(void*, int*)) {
@@ -649,8 +649,8 @@ const char* q_scilexerjava_block_start_keyword(void* self, int* style) {
     return QsciLexerJava_BlockStartKeyword((QsciLexerJava*)self, style);
 }
 
-const char* q_scilexerjava_qbase_block_start_keyword(void* self, int* style) {
-    return QsciLexerJava_QBaseBlockStartKeyword((QsciLexerJava*)self, style);
+const char* q_scilexerjava_super_block_start_keyword(void* self, int* style) {
+    return QsciLexerJava_SuperBlockStartKeyword((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_block_start_keyword(void* self, const char* (*callback)(void*, int*)) {
@@ -661,8 +661,8 @@ int32_t q_scilexerjava_brace_style(void* self) {
     return QsciLexerJava_BraceStyle((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_brace_style(void* self) {
-    return QsciLexerJava_QBaseBraceStyle((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_brace_style(void* self) {
+    return QsciLexerJava_SuperBraceStyle((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_brace_style(void* self, int32_t (*callback)()) {
@@ -673,8 +673,8 @@ bool q_scilexerjava_case_sensitive(void* self) {
     return QsciLexerJava_CaseSensitive((QsciLexerJava*)self);
 }
 
-bool q_scilexerjava_qbase_case_sensitive(void* self) {
-    return QsciLexerJava_QBaseCaseSensitive((QsciLexerJava*)self);
+bool q_scilexerjava_super_case_sensitive(void* self) {
+    return QsciLexerJava_SuperCaseSensitive((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_case_sensitive(void* self, bool (*callback)()) {
@@ -685,8 +685,8 @@ QColor* q_scilexerjava_color(void* self, int style) {
     return QsciLexerJava_Color((QsciLexerJava*)self, style);
 }
 
-QColor* q_scilexerjava_qbase_color(void* self, int style) {
-    return QsciLexerJava_QBaseColor((QsciLexerJava*)self, style);
+QColor* q_scilexerjava_super_color(void* self, int style) {
+    return QsciLexerJava_SuperColor((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_color(void* self, QColor* (*callback)(void*, int)) {
@@ -697,8 +697,8 @@ bool q_scilexerjava_eol_fill(void* self, int style) {
     return QsciLexerJava_EolFill((QsciLexerJava*)self, style);
 }
 
-bool q_scilexerjava_qbase_eol_fill(void* self, int style) {
-    return QsciLexerJava_QBaseEolFill((QsciLexerJava*)self, style);
+bool q_scilexerjava_super_eol_fill(void* self, int style) {
+    return QsciLexerJava_SuperEolFill((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -709,8 +709,8 @@ QFont* q_scilexerjava_font(void* self, int style) {
     return QsciLexerJava_Font((QsciLexerJava*)self, style);
 }
 
-QFont* q_scilexerjava_qbase_font(void* self, int style) {
-    return QsciLexerJava_QBaseFont((QsciLexerJava*)self, style);
+QFont* q_scilexerjava_super_font(void* self, int style) {
+    return QsciLexerJava_SuperFont((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_font(void* self, QFont* (*callback)(void*, int)) {
@@ -721,8 +721,8 @@ int32_t q_scilexerjava_indentation_guide_view(void* self) {
     return QsciLexerJava_IndentationGuideView((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_indentation_guide_view(void* self) {
-    return QsciLexerJava_QBaseIndentationGuideView((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_indentation_guide_view(void* self) {
+    return QsciLexerJava_SuperIndentationGuideView((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_indentation_guide_view(void* self, int32_t (*callback)()) {
@@ -733,8 +733,8 @@ int32_t q_scilexerjava_default_style(void* self) {
     return QsciLexerJava_DefaultStyle((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_default_style(void* self) {
-    return QsciLexerJava_QBaseDefaultStyle((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_default_style(void* self) {
+    return QsciLexerJava_SuperDefaultStyle((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_default_style(void* self, int32_t (*callback)()) {
@@ -748,8 +748,8 @@ const char* q_scilexerjava_description(void* self, int style) {
     return _ret;
 }
 
-const char* q_scilexerjava_qbase_description(void* self, int style) {
-    libqt_string _str = QsciLexerJava_QBaseDescription((QsciLexerJava*)self, style);
+const char* q_scilexerjava_super_description(void* self, int style) {
+    libqt_string _str = QsciLexerJava_SuperDescription((QsciLexerJava*)self, style);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -763,8 +763,8 @@ QColor* q_scilexerjava_paper(void* self, int style) {
     return QsciLexerJava_Paper((QsciLexerJava*)self, style);
 }
 
-QColor* q_scilexerjava_qbase_paper(void* self, int style) {
-    return QsciLexerJava_QBasePaper((QsciLexerJava*)self, style);
+QColor* q_scilexerjava_super_paper(void* self, int style) {
+    return QsciLexerJava_SuperPaper((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_paper(void* self, QColor* (*callback)(void*, int)) {
@@ -775,8 +775,8 @@ QColor* q_scilexerjava_default_color2(void* self, int style) {
     return QsciLexerJava_DefaultColor2((QsciLexerJava*)self, style);
 }
 
-QColor* q_scilexerjava_qbase_default_color2(void* self, int style) {
-    return QsciLexerJava_QBaseDefaultColor2((QsciLexerJava*)self, style);
+QColor* q_scilexerjava_super_default_color2(void* self, int style) {
+    return QsciLexerJava_SuperDefaultColor2((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
@@ -787,8 +787,8 @@ bool q_scilexerjava_default_eol_fill(void* self, int style) {
     return QsciLexerJava_DefaultEolFill((QsciLexerJava*)self, style);
 }
 
-bool q_scilexerjava_qbase_default_eol_fill(void* self, int style) {
-    return QsciLexerJava_QBaseDefaultEolFill((QsciLexerJava*)self, style);
+bool q_scilexerjava_super_default_eol_fill(void* self, int style) {
+    return QsciLexerJava_SuperDefaultEolFill((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_default_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -799,8 +799,8 @@ QFont* q_scilexerjava_default_font2(void* self, int style) {
     return QsciLexerJava_DefaultFont2((QsciLexerJava*)self, style);
 }
 
-QFont* q_scilexerjava_qbase_default_font2(void* self, int style) {
-    return QsciLexerJava_QBaseDefaultFont2((QsciLexerJava*)self, style);
+QFont* q_scilexerjava_super_default_font2(void* self, int style) {
+    return QsciLexerJava_SuperDefaultFont2((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
@@ -811,8 +811,8 @@ QColor* q_scilexerjava_default_paper2(void* self, int style) {
     return QsciLexerJava_DefaultPaper2((QsciLexerJava*)self, style);
 }
 
-QColor* q_scilexerjava_qbase_default_paper2(void* self, int style) {
-    return QsciLexerJava_QBaseDefaultPaper2((QsciLexerJava*)self, style);
+QColor* q_scilexerjava_super_default_paper2(void* self, int style) {
+    return QsciLexerJava_SuperDefaultPaper2((QsciLexerJava*)self, style);
 }
 
 void q_scilexerjava_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
@@ -823,8 +823,8 @@ void q_scilexerjava_set_editor(void* self, void* editor) {
     QsciLexerJava_SetEditor((QsciLexerJava*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexerjava_qbase_set_editor(void* self, void* editor) {
-    QsciLexerJava_QBaseSetEditor((QsciLexerJava*)self, (QsciScintilla*)editor);
+void q_scilexerjava_super_set_editor(void* self, void* editor) {
+    QsciLexerJava_SuperSetEditor((QsciLexerJava*)self, (QsciScintilla*)editor);
 }
 
 void q_scilexerjava_on_set_editor(void* self, void (*callback)(void*, void*)) {
@@ -835,8 +835,8 @@ void q_scilexerjava_refresh_properties(void* self) {
     QsciLexerJava_RefreshProperties((QsciLexerJava*)self);
 }
 
-void q_scilexerjava_qbase_refresh_properties(void* self) {
-    QsciLexerJava_QBaseRefreshProperties((QsciLexerJava*)self);
+void q_scilexerjava_super_refresh_properties(void* self) {
+    QsciLexerJava_SuperRefreshProperties((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_refresh_properties(void* self, void (*callback)()) {
@@ -847,8 +847,8 @@ int32_t q_scilexerjava_style_bits_needed(void* self) {
     return QsciLexerJava_StyleBitsNeeded((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_style_bits_needed(void* self) {
-    return QsciLexerJava_QBaseStyleBitsNeeded((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_style_bits_needed(void* self) {
+    return QsciLexerJava_SuperStyleBitsNeeded((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_style_bits_needed(void* self, int32_t (*callback)()) {
@@ -859,8 +859,8 @@ const char* q_scilexerjava_word_characters(void* self) {
     return QsciLexerJava_WordCharacters((QsciLexerJava*)self);
 }
 
-const char* q_scilexerjava_qbase_word_characters(void* self) {
-    return QsciLexerJava_QBaseWordCharacters((QsciLexerJava*)self);
+const char* q_scilexerjava_super_word_characters(void* self) {
+    return QsciLexerJava_SuperWordCharacters((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_word_characters(void* self, const char* (*callback)()) {
@@ -871,8 +871,8 @@ void q_scilexerjava_set_auto_indent_style(void* self, int autoindentstyle) {
     QsciLexerJava_SetAutoIndentStyle((QsciLexerJava*)self, autoindentstyle);
 }
 
-void q_scilexerjava_qbase_set_auto_indent_style(void* self, int autoindentstyle) {
-    QsciLexerJava_QBaseSetAutoIndentStyle((QsciLexerJava*)self, autoindentstyle);
+void q_scilexerjava_super_set_auto_indent_style(void* self, int autoindentstyle) {
+    QsciLexerJava_SuperSetAutoIndentStyle((QsciLexerJava*)self, autoindentstyle);
 }
 
 void q_scilexerjava_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
@@ -883,8 +883,8 @@ void q_scilexerjava_set_color(void* self, void* c, int style) {
     QsciLexerJava_SetColor((QsciLexerJava*)self, (QColor*)c, style);
 }
 
-void q_scilexerjava_qbase_set_color(void* self, void* c, int style) {
-    QsciLexerJava_QBaseSetColor((QsciLexerJava*)self, (QColor*)c, style);
+void q_scilexerjava_super_set_color(void* self, void* c, int style) {
+    QsciLexerJava_SuperSetColor((QsciLexerJava*)self, (QColor*)c, style);
 }
 
 void q_scilexerjava_on_set_color(void* self, void (*callback)(void*, void*, int)) {
@@ -895,8 +895,8 @@ void q_scilexerjava_set_eol_fill(void* self, bool eoffill, int style) {
     QsciLexerJava_SetEolFill((QsciLexerJava*)self, eoffill, style);
 }
 
-void q_scilexerjava_qbase_set_eol_fill(void* self, bool eoffill, int style) {
-    QsciLexerJava_QBaseSetEolFill((QsciLexerJava*)self, eoffill, style);
+void q_scilexerjava_super_set_eol_fill(void* self, bool eoffill, int style) {
+    QsciLexerJava_SuperSetEolFill((QsciLexerJava*)self, eoffill, style);
 }
 
 void q_scilexerjava_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
@@ -907,8 +907,8 @@ void q_scilexerjava_set_font(void* self, void* f, int style) {
     QsciLexerJava_SetFont((QsciLexerJava*)self, (QFont*)f, style);
 }
 
-void q_scilexerjava_qbase_set_font(void* self, void* f, int style) {
-    QsciLexerJava_QBaseSetFont((QsciLexerJava*)self, (QFont*)f, style);
+void q_scilexerjava_super_set_font(void* self, void* f, int style) {
+    QsciLexerJava_SuperSetFont((QsciLexerJava*)self, (QFont*)f, style);
 }
 
 void q_scilexerjava_on_set_font(void* self, void (*callback)(void*, void*, int)) {
@@ -919,8 +919,8 @@ void q_scilexerjava_set_paper(void* self, void* c, int style) {
     QsciLexerJava_SetPaper((QsciLexerJava*)self, (QColor*)c, style);
 }
 
-void q_scilexerjava_qbase_set_paper(void* self, void* c, int style) {
-    QsciLexerJava_QBaseSetPaper((QsciLexerJava*)self, (QColor*)c, style);
+void q_scilexerjava_super_set_paper(void* self, void* c, int style) {
+    QsciLexerJava_SuperSetPaper((QsciLexerJava*)self, (QColor*)c, style);
 }
 
 void q_scilexerjava_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
@@ -931,8 +931,8 @@ bool q_scilexerjava_read_properties(void* self, void* qs, const char* prefix) {
     return QsciLexerJava_ReadProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexerjava_qbase_read_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerJava_QBaseReadProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexerjava_super_read_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerJava_SuperReadProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexerjava_on_read_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -943,8 +943,8 @@ bool q_scilexerjava_write_properties(void* self, void* qs, const char* prefix) {
     return QsciLexerJava_WriteProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexerjava_qbase_write_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerJava_QBaseWriteProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexerjava_super_write_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerJava_SuperWriteProperties((QsciLexerJava*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexerjava_on_write_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -955,8 +955,8 @@ bool q_scilexerjava_event(void* self, void* event) {
     return QsciLexerJava_Event((QsciLexerJava*)self, (QEvent*)event);
 }
 
-bool q_scilexerjava_qbase_event(void* self, void* event) {
-    return QsciLexerJava_QBaseEvent((QsciLexerJava*)self, (QEvent*)event);
+bool q_scilexerjava_super_event(void* self, void* event) {
+    return QsciLexerJava_SuperEvent((QsciLexerJava*)self, (QEvent*)event);
 }
 
 void q_scilexerjava_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -967,8 +967,8 @@ bool q_scilexerjava_event_filter(void* self, void* watched, void* event) {
     return QsciLexerJava_EventFilter((QsciLexerJava*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scilexerjava_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciLexerJava_QBaseEventFilter((QsciLexerJava*)self, (QObject*)watched, (QEvent*)event);
+bool q_scilexerjava_super_event_filter(void* self, void* watched, void* event) {
+    return QsciLexerJava_SuperEventFilter((QsciLexerJava*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scilexerjava_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -979,8 +979,8 @@ void q_scilexerjava_timer_event(void* self, void* event) {
     QsciLexerJava_TimerEvent((QsciLexerJava*)self, (QTimerEvent*)event);
 }
 
-void q_scilexerjava_qbase_timer_event(void* self, void* event) {
-    QsciLexerJava_QBaseTimerEvent((QsciLexerJava*)self, (QTimerEvent*)event);
+void q_scilexerjava_super_timer_event(void* self, void* event) {
+    QsciLexerJava_SuperTimerEvent((QsciLexerJava*)self, (QTimerEvent*)event);
 }
 
 void q_scilexerjava_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -991,8 +991,8 @@ void q_scilexerjava_child_event(void* self, void* event) {
     QsciLexerJava_ChildEvent((QsciLexerJava*)self, (QChildEvent*)event);
 }
 
-void q_scilexerjava_qbase_child_event(void* self, void* event) {
-    QsciLexerJava_QBaseChildEvent((QsciLexerJava*)self, (QChildEvent*)event);
+void q_scilexerjava_super_child_event(void* self, void* event) {
+    QsciLexerJava_SuperChildEvent((QsciLexerJava*)self, (QChildEvent*)event);
 }
 
 void q_scilexerjava_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1003,8 +1003,8 @@ void q_scilexerjava_custom_event(void* self, void* event) {
     QsciLexerJava_CustomEvent((QsciLexerJava*)self, (QEvent*)event);
 }
 
-void q_scilexerjava_qbase_custom_event(void* self, void* event) {
-    QsciLexerJava_QBaseCustomEvent((QsciLexerJava*)self, (QEvent*)event);
+void q_scilexerjava_super_custom_event(void* self, void* event) {
+    QsciLexerJava_SuperCustomEvent((QsciLexerJava*)self, (QEvent*)event);
 }
 
 void q_scilexerjava_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1015,8 +1015,8 @@ void q_scilexerjava_connect_notify(void* self, void* signal) {
     QsciLexerJava_ConnectNotify((QsciLexerJava*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerjava_qbase_connect_notify(void* self, void* signal) {
-    QsciLexerJava_QBaseConnectNotify((QsciLexerJava*)self, (QMetaMethod*)signal);
+void q_scilexerjava_super_connect_notify(void* self, void* signal) {
+    QsciLexerJava_SuperConnectNotify((QsciLexerJava*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerjava_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1027,8 +1027,8 @@ void q_scilexerjava_disconnect_notify(void* self, void* signal) {
     QsciLexerJava_DisconnectNotify((QsciLexerJava*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerjava_qbase_disconnect_notify(void* self, void* signal) {
-    QsciLexerJava_QBaseDisconnectNotify((QsciLexerJava*)self, (QMetaMethod*)signal);
+void q_scilexerjava_super_disconnect_notify(void* self, void* signal) {
+    QsciLexerJava_SuperDisconnectNotify((QsciLexerJava*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerjava_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1042,8 +1042,8 @@ char* q_scilexerjava_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-char* q_scilexerjava_qbase_text_as_bytes(void* self, const char* text) {
-    libqt_string _str = QsciLexerJava_QBaseTextAsBytes((QsciLexerJava*)self, qstring(text));
+char* q_scilexerjava_super_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerJava_SuperTextAsBytes((QsciLexerJava*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1060,8 +1060,8 @@ const char* q_scilexerjava_bytes_as_text(void* self, const char* bytes, int size
     return _ret;
 }
 
-const char* q_scilexerjava_qbase_bytes_as_text(void* self, const char* bytes, int size) {
-    libqt_string _str = QsciLexerJava_QBaseBytesAsText((QsciLexerJava*)self, bytes, size);
+const char* q_scilexerjava_super_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerJava_SuperBytesAsText((QsciLexerJava*)self, bytes, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1075,8 +1075,8 @@ QObject* q_scilexerjava_sender(void* self) {
     return QsciLexerJava_Sender((QsciLexerJava*)self);
 }
 
-QObject* q_scilexerjava_qbase_sender(void* self) {
-    return QsciLexerJava_QBaseSender((QsciLexerJava*)self);
+QObject* q_scilexerjava_super_sender(void* self) {
+    return QsciLexerJava_SuperSender((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_sender(void* self, QObject* (*callback)()) {
@@ -1087,8 +1087,8 @@ int32_t q_scilexerjava_sender_signal_index(void* self) {
     return QsciLexerJava_SenderSignalIndex((QsciLexerJava*)self);
 }
 
-int32_t q_scilexerjava_qbase_sender_signal_index(void* self) {
-    return QsciLexerJava_QBaseSenderSignalIndex((QsciLexerJava*)self);
+int32_t q_scilexerjava_super_sender_signal_index(void* self) {
+    return QsciLexerJava_SuperSenderSignalIndex((QsciLexerJava*)self);
 }
 
 void q_scilexerjava_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1099,8 +1099,8 @@ int32_t q_scilexerjava_receivers(void* self, const char* signal) {
     return QsciLexerJava_Receivers((QsciLexerJava*)self, signal);
 }
 
-int32_t q_scilexerjava_qbase_receivers(void* self, const char* signal) {
-    return QsciLexerJava_QBaseReceivers((QsciLexerJava*)self, signal);
+int32_t q_scilexerjava_super_receivers(void* self, const char* signal) {
+    return QsciLexerJava_SuperReceivers((QsciLexerJava*)self, signal);
 }
 
 void q_scilexerjava_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1111,8 +1111,8 @@ bool q_scilexerjava_is_signal_connected(void* self, void* signal) {
     return QsciLexerJava_IsSignalConnected((QsciLexerJava*)self, (QMetaMethod*)signal);
 }
 
-bool q_scilexerjava_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciLexerJava_QBaseIsSignalConnected((QsciLexerJava*)self, (QMetaMethod*)signal);
+bool q_scilexerjava_super_is_signal_connected(void* self, void* signal) {
+    return QsciLexerJava_SuperIsSignalConnected((QsciLexerJava*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerjava_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

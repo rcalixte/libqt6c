@@ -21,8 +21,8 @@ void k_shellcompletion_on_meta_object(void* self, const QMetaObject* (*callback)
     KShellCompletion_OnMetaObject((KShellCompletion*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_shellcompletion_qbase_meta_object(void* self) {
-    return KShellCompletion_QBaseMetaObject((KShellCompletion*)self);
+const QMetaObject* k_shellcompletion_super_meta_object(void* self) {
+    return KShellCompletion_SuperMetaObject((KShellCompletion*)self);
 }
 
 void* k_shellcompletion_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_shellcompletion_on_metacast(void* self, void* (*callback)(void*, const ch
     KShellCompletion_OnMetacast((KShellCompletion*)self, (intptr_t)callback);
 }
 
-void* k_shellcompletion_qbase_metacast(void* self, const char* param1) {
-    return KShellCompletion_QBaseMetacast((KShellCompletion*)self, param1);
+void* k_shellcompletion_super_metacast(void* self, const char* param1) {
+    return KShellCompletion_SuperMetacast((KShellCompletion*)self, param1);
 }
 
 int32_t k_shellcompletion_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_shellcompletion_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KShellCompletion_OnMetacall((KShellCompletion*)self, (intptr_t)callback);
 }
 
-int32_t k_shellcompletion_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KShellCompletion_QBaseMetacall((KShellCompletion*)self, param1, param2, param3);
+int32_t k_shellcompletion_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KShellCompletion_SuperMetacall((KShellCompletion*)self, param1, param2, param3);
 }
 
 const char* k_shellcompletion_tr(const char* s) {
@@ -67,8 +67,8 @@ void k_shellcompletion_on_make_completion(void* self, const char* (*callback)(vo
     KShellCompletion_OnMakeCompletion((KShellCompletion*)self, (intptr_t)callback);
 }
 
-const char* k_shellcompletion_qbase_make_completion(void* self, const char* text) {
-    libqt_string _str = KShellCompletion_QBaseMakeCompletion((KShellCompletion*)self, qstring(text));
+const char* k_shellcompletion_super_make_completion(void* self, const char* text) {
+    libqt_string _str = KShellCompletion_SuperMakeCompletion((KShellCompletion*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -93,7 +93,7 @@ void k_shellcompletion_on_post_process_matches(void* self, void (*callback)(void
     KShellCompletion_OnPostProcessMatches((KShellCompletion*)self, (intptr_t)callback);
 }
 
-void k_shellcompletion_qbase_post_process_matches(void* self, const char* matches[static 1]) {
+void k_shellcompletion_super_post_process_matches(void* self, const char* matches[static 1]) {
     size_t matches_len = libqt_strv_length(matches);
     libqt_string* matches_qstr = (libqt_string*)malloc(matches_len * sizeof(libqt_string));
     if (matches_qstr == NULL) {
@@ -104,7 +104,7 @@ void k_shellcompletion_qbase_post_process_matches(void* self, const char* matche
         matches_qstr[i] = qstring(matches[i]);
     }
     libqt_list matches_list = qlist(matches_qstr, matches_len);
-    KShellCompletion_QBasePostProcessMatches((KShellCompletion*)self, matches_list);
+    KShellCompletion_SuperPostProcessMatches((KShellCompletion*)self, matches_list);
 }
 
 void k_shellcompletion_post_process_matches2(void* self, void* matches) {
@@ -115,8 +115,8 @@ void k_shellcompletion_on_post_process_matches2(void* self, void (*callback)(voi
     KShellCompletion_OnPostProcessMatches2((KShellCompletion*)self, (intptr_t)callback);
 }
 
-void k_shellcompletion_qbase_post_process_matches2(void* self, void* matches) {
-    KShellCompletion_QBasePostProcessMatches2((KShellCompletion*)self, (KCompletionMatches*)matches);
+void k_shellcompletion_super_post_process_matches2(void* self, void* matches) {
+    KShellCompletion_SuperPostProcessMatches2((KShellCompletion*)self, (KCompletionMatches*)matches);
 }
 
 const char* k_shellcompletion_tr2(const char* s, const char* c) {
@@ -591,8 +591,8 @@ void k_shellcompletion_set_dir(void* self, void* dir) {
     KShellCompletion_SetDir((KShellCompletion*)self, (QUrl*)dir);
 }
 
-void k_shellcompletion_qbase_set_dir(void* self, void* dir) {
-    KShellCompletion_QBaseSetDir((KShellCompletion*)self, (QUrl*)dir);
+void k_shellcompletion_super_set_dir(void* self, void* dir) {
+    KShellCompletion_SuperSetDir((KShellCompletion*)self, (QUrl*)dir);
 }
 
 void k_shellcompletion_on_set_dir(void* self, void (*callback)(void*, void*)) {
@@ -603,8 +603,8 @@ QUrl* k_shellcompletion_dir(void* self) {
     return KShellCompletion_Dir((KShellCompletion*)self);
 }
 
-QUrl* k_shellcompletion_qbase_dir(void* self) {
-    return KShellCompletion_QBaseDir((KShellCompletion*)self);
+QUrl* k_shellcompletion_super_dir(void* self) {
+    return KShellCompletion_SuperDir((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_dir(void* self, QUrl* (*callback)()) {
@@ -615,8 +615,8 @@ bool k_shellcompletion_is_running(void* self) {
     return KShellCompletion_IsRunning((KShellCompletion*)self);
 }
 
-bool k_shellcompletion_qbase_is_running(void* self) {
-    return KShellCompletion_QBaseIsRunning((KShellCompletion*)self);
+bool k_shellcompletion_super_is_running(void* self) {
+    return KShellCompletion_SuperIsRunning((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_is_running(void* self, bool (*callback)()) {
@@ -627,8 +627,8 @@ void k_shellcompletion_stop(void* self) {
     KShellCompletion_Stop((KShellCompletion*)self);
 }
 
-void k_shellcompletion_qbase_stop(void* self) {
-    KShellCompletion_QBaseStop((KShellCompletion*)self);
+void k_shellcompletion_super_stop(void* self) {
+    KShellCompletion_SuperStop((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_stop(void* self, void (*callback)()) {
@@ -639,8 +639,8 @@ int32_t k_shellcompletion_mode(void* self) {
     return KShellCompletion_Mode((KShellCompletion*)self);
 }
 
-int32_t k_shellcompletion_qbase_mode(void* self) {
-    return KShellCompletion_QBaseMode((KShellCompletion*)self);
+int32_t k_shellcompletion_super_mode(void* self) {
+    return KShellCompletion_SuperMode((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_mode(void* self, int32_t (*callback)()) {
@@ -651,8 +651,8 @@ void k_shellcompletion_set_mode(void* self, int32_t mode) {
     KShellCompletion_SetMode((KShellCompletion*)self, mode);
 }
 
-void k_shellcompletion_qbase_set_mode(void* self, int32_t mode) {
-    KShellCompletion_QBaseSetMode((KShellCompletion*)self, mode);
+void k_shellcompletion_super_set_mode(void* self, int32_t mode) {
+    KShellCompletion_SuperSetMode((KShellCompletion*)self, mode);
 }
 
 void k_shellcompletion_on_set_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -663,8 +663,8 @@ bool k_shellcompletion_replace_env(void* self) {
     return KShellCompletion_ReplaceEnv((KShellCompletion*)self);
 }
 
-bool k_shellcompletion_qbase_replace_env(void* self) {
-    return KShellCompletion_QBaseReplaceEnv((KShellCompletion*)self);
+bool k_shellcompletion_super_replace_env(void* self) {
+    return KShellCompletion_SuperReplaceEnv((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_replace_env(void* self, bool (*callback)()) {
@@ -675,8 +675,8 @@ void k_shellcompletion_set_replace_env(void* self, bool replace) {
     KShellCompletion_SetReplaceEnv((KShellCompletion*)self, replace);
 }
 
-void k_shellcompletion_qbase_set_replace_env(void* self, bool replace) {
-    KShellCompletion_QBaseSetReplaceEnv((KShellCompletion*)self, replace);
+void k_shellcompletion_super_set_replace_env(void* self, bool replace) {
+    KShellCompletion_SuperSetReplaceEnv((KShellCompletion*)self, replace);
 }
 
 void k_shellcompletion_on_set_replace_env(void* self, void (*callback)(void*, bool)) {
@@ -687,8 +687,8 @@ bool k_shellcompletion_replace_home(void* self) {
     return KShellCompletion_ReplaceHome((KShellCompletion*)self);
 }
 
-bool k_shellcompletion_qbase_replace_home(void* self) {
-    return KShellCompletion_QBaseReplaceHome((KShellCompletion*)self);
+bool k_shellcompletion_super_replace_home(void* self) {
+    return KShellCompletion_SuperReplaceHome((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_replace_home(void* self, bool (*callback)()) {
@@ -699,8 +699,8 @@ void k_shellcompletion_set_replace_home(void* self, bool replace) {
     KShellCompletion_SetReplaceHome((KShellCompletion*)self, replace);
 }
 
-void k_shellcompletion_qbase_set_replace_home(void* self, bool replace) {
-    KShellCompletion_QBaseSetReplaceHome((KShellCompletion*)self, replace);
+void k_shellcompletion_super_set_replace_home(void* self, bool replace) {
+    KShellCompletion_SuperSetReplaceHome((KShellCompletion*)self, replace);
 }
 
 void k_shellcompletion_on_set_replace_home(void* self, void (*callback)(void*, bool)) {
@@ -714,8 +714,8 @@ const char* k_shellcompletion_last_match(void* self) {
     return _ret;
 }
 
-const char* k_shellcompletion_qbase_last_match(void* self) {
-    libqt_string _str = KShellCompletion_QBaseLastMatch((KShellCompletion*)self);
+const char* k_shellcompletion_super_last_match(void* self) {
+    libqt_string _str = KShellCompletion_SuperLastMatch((KShellCompletion*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -729,8 +729,8 @@ void k_shellcompletion_set_completion_mode(void* self, int32_t mode) {
     KShellCompletion_SetCompletionMode((KShellCompletion*)self, mode);
 }
 
-void k_shellcompletion_qbase_set_completion_mode(void* self, int32_t mode) {
-    KShellCompletion_QBaseSetCompletionMode((KShellCompletion*)self, mode);
+void k_shellcompletion_super_set_completion_mode(void* self, int32_t mode) {
+    KShellCompletion_SuperSetCompletionMode((KShellCompletion*)self, mode);
 }
 
 void k_shellcompletion_on_set_completion_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -741,8 +741,8 @@ void k_shellcompletion_set_order(void* self, int32_t order) {
     KShellCompletion_SetOrder((KShellCompletion*)self, order);
 }
 
-void k_shellcompletion_qbase_set_order(void* self, int32_t order) {
-    KShellCompletion_QBaseSetOrder((KShellCompletion*)self, order);
+void k_shellcompletion_super_set_order(void* self, int32_t order) {
+    KShellCompletion_SuperSetOrder((KShellCompletion*)self, order);
 }
 
 void k_shellcompletion_on_set_order(void* self, void (*callback)(void*, int32_t)) {
@@ -753,8 +753,8 @@ void k_shellcompletion_set_ignore_case(void* self, bool ignoreCase) {
     KShellCompletion_SetIgnoreCase((KShellCompletion*)self, ignoreCase);
 }
 
-void k_shellcompletion_qbase_set_ignore_case(void* self, bool ignoreCase) {
-    KShellCompletion_QBaseSetIgnoreCase((KShellCompletion*)self, ignoreCase);
+void k_shellcompletion_super_set_ignore_case(void* self, bool ignoreCase) {
+    KShellCompletion_SuperSetIgnoreCase((KShellCompletion*)self, ignoreCase);
 }
 
 void k_shellcompletion_on_set_ignore_case(void* self, void (*callback)(void*, bool)) {
@@ -765,8 +765,8 @@ void k_shellcompletion_set_sounds_enabled(void* self, bool enable) {
     KShellCompletion_SetSoundsEnabled((KShellCompletion*)self, enable);
 }
 
-void k_shellcompletion_qbase_set_sounds_enabled(void* self, bool enable) {
-    KShellCompletion_QBaseSetSoundsEnabled((KShellCompletion*)self, enable);
+void k_shellcompletion_super_set_sounds_enabled(void* self, bool enable) {
+    KShellCompletion_SuperSetSoundsEnabled((KShellCompletion*)self, enable);
 }
 
 void k_shellcompletion_on_set_sounds_enabled(void* self, void (*callback)(void*, bool)) {
@@ -788,7 +788,7 @@ void k_shellcompletion_set_items(void* self, const char* itemList[static 1]) {
     free(itemList_qstr);
 }
 
-void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1]) {
+void k_shellcompletion_super_set_items(void* self, const char* itemList[static 1]) {
     size_t itemList_len = libqt_strv_length(itemList);
     libqt_string* itemList_qstr = (libqt_string*)malloc(itemList_len * sizeof(libqt_string));
     if (itemList_qstr == NULL) {
@@ -799,7 +799,7 @@ void k_shellcompletion_qbase_set_items(void* self, const char* itemList[static 1
         itemList_qstr[i] = qstring(itemList[i]);
     }
     libqt_list itemList_list = qlist(itemList_qstr, itemList_len);
-    KShellCompletion_QBaseSetItems((KShellCompletion*)self, itemList_list);
+    KShellCompletion_SuperSetItems((KShellCompletion*)self, itemList_list);
     free(itemList_qstr);
 }
 
@@ -811,8 +811,8 @@ void k_shellcompletion_clear(void* self) {
     KShellCompletion_Clear((KShellCompletion*)self);
 }
 
-void k_shellcompletion_qbase_clear(void* self) {
-    KShellCompletion_QBaseClear((KShellCompletion*)self);
+void k_shellcompletion_super_clear(void* self) {
+    KShellCompletion_SuperClear((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_clear(void* self, void (*callback)()) {
@@ -823,8 +823,8 @@ bool k_shellcompletion_event(void* self, void* event) {
     return KShellCompletion_Event((KShellCompletion*)self, (QEvent*)event);
 }
 
-bool k_shellcompletion_qbase_event(void* self, void* event) {
-    return KShellCompletion_QBaseEvent((KShellCompletion*)self, (QEvent*)event);
+bool k_shellcompletion_super_event(void* self, void* event) {
+    return KShellCompletion_SuperEvent((KShellCompletion*)self, (QEvent*)event);
 }
 
 void k_shellcompletion_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -835,8 +835,8 @@ bool k_shellcompletion_event_filter(void* self, void* watched, void* event) {
     return KShellCompletion_EventFilter((KShellCompletion*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_shellcompletion_qbase_event_filter(void* self, void* watched, void* event) {
-    return KShellCompletion_QBaseEventFilter((KShellCompletion*)self, (QObject*)watched, (QEvent*)event);
+bool k_shellcompletion_super_event_filter(void* self, void* watched, void* event) {
+    return KShellCompletion_SuperEventFilter((KShellCompletion*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_shellcompletion_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -847,8 +847,8 @@ void k_shellcompletion_timer_event(void* self, void* event) {
     KShellCompletion_TimerEvent((KShellCompletion*)self, (QTimerEvent*)event);
 }
 
-void k_shellcompletion_qbase_timer_event(void* self, void* event) {
-    KShellCompletion_QBaseTimerEvent((KShellCompletion*)self, (QTimerEvent*)event);
+void k_shellcompletion_super_timer_event(void* self, void* event) {
+    KShellCompletion_SuperTimerEvent((KShellCompletion*)self, (QTimerEvent*)event);
 }
 
 void k_shellcompletion_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -859,8 +859,8 @@ void k_shellcompletion_child_event(void* self, void* event) {
     KShellCompletion_ChildEvent((KShellCompletion*)self, (QChildEvent*)event);
 }
 
-void k_shellcompletion_qbase_child_event(void* self, void* event) {
-    KShellCompletion_QBaseChildEvent((KShellCompletion*)self, (QChildEvent*)event);
+void k_shellcompletion_super_child_event(void* self, void* event) {
+    KShellCompletion_SuperChildEvent((KShellCompletion*)self, (QChildEvent*)event);
 }
 
 void k_shellcompletion_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -871,8 +871,8 @@ void k_shellcompletion_custom_event(void* self, void* event) {
     KShellCompletion_CustomEvent((KShellCompletion*)self, (QEvent*)event);
 }
 
-void k_shellcompletion_qbase_custom_event(void* self, void* event) {
-    KShellCompletion_QBaseCustomEvent((KShellCompletion*)self, (QEvent*)event);
+void k_shellcompletion_super_custom_event(void* self, void* event) {
+    KShellCompletion_SuperCustomEvent((KShellCompletion*)self, (QEvent*)event);
 }
 
 void k_shellcompletion_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -883,8 +883,8 @@ void k_shellcompletion_connect_notify(void* self, void* signal) {
     KShellCompletion_ConnectNotify((KShellCompletion*)self, (QMetaMethod*)signal);
 }
 
-void k_shellcompletion_qbase_connect_notify(void* self, void* signal) {
-    KShellCompletion_QBaseConnectNotify((KShellCompletion*)self, (QMetaMethod*)signal);
+void k_shellcompletion_super_connect_notify(void* self, void* signal) {
+    KShellCompletion_SuperConnectNotify((KShellCompletion*)self, (QMetaMethod*)signal);
 }
 
 void k_shellcompletion_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -895,8 +895,8 @@ void k_shellcompletion_disconnect_notify(void* self, void* signal) {
     KShellCompletion_DisconnectNotify((KShellCompletion*)self, (QMetaMethod*)signal);
 }
 
-void k_shellcompletion_qbase_disconnect_notify(void* self, void* signal) {
-    KShellCompletion_QBaseDisconnectNotify((KShellCompletion*)self, (QMetaMethod*)signal);
+void k_shellcompletion_super_disconnect_notify(void* self, void* signal) {
+    KShellCompletion_SuperDisconnectNotify((KShellCompletion*)self, (QMetaMethod*)signal);
 }
 
 void k_shellcompletion_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -907,8 +907,8 @@ void k_shellcompletion_set_should_auto_suggest(void* self, bool shouldAutosugges
     KShellCompletion_SetShouldAutoSuggest((KShellCompletion*)self, shouldAutosuggest);
 }
 
-void k_shellcompletion_qbase_set_should_auto_suggest(void* self, bool shouldAutosuggest) {
-    KShellCompletion_QBaseSetShouldAutoSuggest((KShellCompletion*)self, shouldAutosuggest);
+void k_shellcompletion_super_set_should_auto_suggest(void* self, bool shouldAutosuggest) {
+    KShellCompletion_SuperSetShouldAutoSuggest((KShellCompletion*)self, shouldAutosuggest);
 }
 
 void k_shellcompletion_on_set_should_auto_suggest(void* self, void (*callback)(void*, bool)) {
@@ -919,8 +919,8 @@ QObject* k_shellcompletion_sender(void* self) {
     return KShellCompletion_Sender((KShellCompletion*)self);
 }
 
-QObject* k_shellcompletion_qbase_sender(void* self) {
-    return KShellCompletion_QBaseSender((KShellCompletion*)self);
+QObject* k_shellcompletion_super_sender(void* self) {
+    return KShellCompletion_SuperSender((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_sender(void* self, QObject* (*callback)()) {
@@ -931,8 +931,8 @@ int32_t k_shellcompletion_sender_signal_index(void* self) {
     return KShellCompletion_SenderSignalIndex((KShellCompletion*)self);
 }
 
-int32_t k_shellcompletion_qbase_sender_signal_index(void* self) {
-    return KShellCompletion_QBaseSenderSignalIndex((KShellCompletion*)self);
+int32_t k_shellcompletion_super_sender_signal_index(void* self) {
+    return KShellCompletion_SuperSenderSignalIndex((KShellCompletion*)self);
 }
 
 void k_shellcompletion_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -943,8 +943,8 @@ int32_t k_shellcompletion_receivers(void* self, const char* signal) {
     return KShellCompletion_Receivers((KShellCompletion*)self, signal);
 }
 
-int32_t k_shellcompletion_qbase_receivers(void* self, const char* signal) {
-    return KShellCompletion_QBaseReceivers((KShellCompletion*)self, signal);
+int32_t k_shellcompletion_super_receivers(void* self, const char* signal) {
+    return KShellCompletion_SuperReceivers((KShellCompletion*)self, signal);
 }
 
 void k_shellcompletion_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -955,8 +955,8 @@ bool k_shellcompletion_is_signal_connected(void* self, void* signal) {
     return KShellCompletion_IsSignalConnected((KShellCompletion*)self, (QMetaMethod*)signal);
 }
 
-bool k_shellcompletion_qbase_is_signal_connected(void* self, void* signal) {
-    return KShellCompletion_QBaseIsSignalConnected((KShellCompletion*)self, (QMetaMethod*)signal);
+bool k_shellcompletion_super_is_signal_connected(void* self, void* signal) {
+    return KShellCompletion_SuperIsSignalConnected((KShellCompletion*)self, (QMetaMethod*)signal);
 }
 
 void k_shellcompletion_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

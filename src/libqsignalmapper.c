@@ -21,8 +21,8 @@ void q_signalmapper_on_meta_object(void* self, const QMetaObject* (*callback)())
     QSignalMapper_OnMetaObject((QSignalMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_signalmapper_qbase_meta_object(void* self) {
-    return QSignalMapper_QBaseMetaObject((QSignalMapper*)self);
+const QMetaObject* q_signalmapper_super_meta_object(void* self) {
+    return QSignalMapper_SuperMetaObject((QSignalMapper*)self);
 }
 
 void* q_signalmapper_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_signalmapper_on_metacast(void* self, void* (*callback)(void*, const char*
     QSignalMapper_OnMetacast((QSignalMapper*)self, (intptr_t)callback);
 }
 
-void* q_signalmapper_qbase_metacast(void* self, const char* param1) {
-    return QSignalMapper_QBaseMetacast((QSignalMapper*)self, param1);
+void* q_signalmapper_super_metacast(void* self, const char* param1) {
+    return QSignalMapper_SuperMetacast((QSignalMapper*)self, param1);
 }
 
 int32_t q_signalmapper_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_signalmapper_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QSignalMapper_OnMetacall((QSignalMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_signalmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSignalMapper_QBaseMetacall((QSignalMapper*)self, param1, param2, param3);
+int32_t q_signalmapper_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSignalMapper_SuperMetacall((QSignalMapper*)self, param1, param2, param3);
 }
 
 const char* q_signalmapper_tr(const char* s) {
@@ -345,8 +345,8 @@ bool q_signalmapper_event(void* self, void* event) {
     return QSignalMapper_Event((QSignalMapper*)self, (QEvent*)event);
 }
 
-bool q_signalmapper_qbase_event(void* self, void* event) {
-    return QSignalMapper_QBaseEvent((QSignalMapper*)self, (QEvent*)event);
+bool q_signalmapper_super_event(void* self, void* event) {
+    return QSignalMapper_SuperEvent((QSignalMapper*)self, (QEvent*)event);
 }
 
 void q_signalmapper_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ bool q_signalmapper_event_filter(void* self, void* watched, void* event) {
     return QSignalMapper_EventFilter((QSignalMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_signalmapper_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSignalMapper_QBaseEventFilter((QSignalMapper*)self, (QObject*)watched, (QEvent*)event);
+bool q_signalmapper_super_event_filter(void* self, void* watched, void* event) {
+    return QSignalMapper_SuperEventFilter((QSignalMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_signalmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -369,8 +369,8 @@ void q_signalmapper_timer_event(void* self, void* event) {
     QSignalMapper_TimerEvent((QSignalMapper*)self, (QTimerEvent*)event);
 }
 
-void q_signalmapper_qbase_timer_event(void* self, void* event) {
-    QSignalMapper_QBaseTimerEvent((QSignalMapper*)self, (QTimerEvent*)event);
+void q_signalmapper_super_timer_event(void* self, void* event) {
+    QSignalMapper_SuperTimerEvent((QSignalMapper*)self, (QTimerEvent*)event);
 }
 
 void q_signalmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -381,8 +381,8 @@ void q_signalmapper_child_event(void* self, void* event) {
     QSignalMapper_ChildEvent((QSignalMapper*)self, (QChildEvent*)event);
 }
 
-void q_signalmapper_qbase_child_event(void* self, void* event) {
-    QSignalMapper_QBaseChildEvent((QSignalMapper*)self, (QChildEvent*)event);
+void q_signalmapper_super_child_event(void* self, void* event) {
+    QSignalMapper_SuperChildEvent((QSignalMapper*)self, (QChildEvent*)event);
 }
 
 void q_signalmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ void q_signalmapper_custom_event(void* self, void* event) {
     QSignalMapper_CustomEvent((QSignalMapper*)self, (QEvent*)event);
 }
 
-void q_signalmapper_qbase_custom_event(void* self, void* event) {
-    QSignalMapper_QBaseCustomEvent((QSignalMapper*)self, (QEvent*)event);
+void q_signalmapper_super_custom_event(void* self, void* event) {
+    QSignalMapper_SuperCustomEvent((QSignalMapper*)self, (QEvent*)event);
 }
 
 void q_signalmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -405,8 +405,8 @@ void q_signalmapper_connect_notify(void* self, void* signal) {
     QSignalMapper_ConnectNotify((QSignalMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_signalmapper_qbase_connect_notify(void* self, void* signal) {
-    QSignalMapper_QBaseConnectNotify((QSignalMapper*)self, (QMetaMethod*)signal);
+void q_signalmapper_super_connect_notify(void* self, void* signal) {
+    QSignalMapper_SuperConnectNotify((QSignalMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_signalmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -417,8 +417,8 @@ void q_signalmapper_disconnect_notify(void* self, void* signal) {
     QSignalMapper_DisconnectNotify((QSignalMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_signalmapper_qbase_disconnect_notify(void* self, void* signal) {
-    QSignalMapper_QBaseDisconnectNotify((QSignalMapper*)self, (QMetaMethod*)signal);
+void q_signalmapper_super_disconnect_notify(void* self, void* signal) {
+    QSignalMapper_SuperDisconnectNotify((QSignalMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_signalmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -429,8 +429,8 @@ QObject* q_signalmapper_sender(void* self) {
     return QSignalMapper_Sender((QSignalMapper*)self);
 }
 
-QObject* q_signalmapper_qbase_sender(void* self) {
-    return QSignalMapper_QBaseSender((QSignalMapper*)self);
+QObject* q_signalmapper_super_sender(void* self) {
+    return QSignalMapper_SuperSender((QSignalMapper*)self);
 }
 
 void q_signalmapper_on_sender(void* self, QObject* (*callback)()) {
@@ -441,8 +441,8 @@ int32_t q_signalmapper_sender_signal_index(void* self) {
     return QSignalMapper_SenderSignalIndex((QSignalMapper*)self);
 }
 
-int32_t q_signalmapper_qbase_sender_signal_index(void* self) {
-    return QSignalMapper_QBaseSenderSignalIndex((QSignalMapper*)self);
+int32_t q_signalmapper_super_sender_signal_index(void* self) {
+    return QSignalMapper_SuperSenderSignalIndex((QSignalMapper*)self);
 }
 
 void q_signalmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -453,8 +453,8 @@ int32_t q_signalmapper_receivers(void* self, const char* signal) {
     return QSignalMapper_Receivers((QSignalMapper*)self, signal);
 }
 
-int32_t q_signalmapper_qbase_receivers(void* self, const char* signal) {
-    return QSignalMapper_QBaseReceivers((QSignalMapper*)self, signal);
+int32_t q_signalmapper_super_receivers(void* self, const char* signal) {
+    return QSignalMapper_SuperReceivers((QSignalMapper*)self, signal);
 }
 
 void q_signalmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -465,8 +465,8 @@ bool q_signalmapper_is_signal_connected(void* self, void* signal) {
     return QSignalMapper_IsSignalConnected((QSignalMapper*)self, (QMetaMethod*)signal);
 }
 
-bool q_signalmapper_qbase_is_signal_connected(void* self, void* signal) {
-    return QSignalMapper_QBaseIsSignalConnected((QSignalMapper*)self, (QMetaMethod*)signal);
+bool q_signalmapper_super_is_signal_connected(void* self, void* signal) {
+    return QSignalMapper_SuperIsSignalConnected((QSignalMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_signalmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

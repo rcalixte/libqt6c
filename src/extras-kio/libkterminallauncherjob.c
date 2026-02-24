@@ -23,8 +23,8 @@ void k_terminallauncherjob_on_meta_object(void* self, const QMetaObject* (*callb
     KTerminalLauncherJob_OnMetaObject((KTerminalLauncherJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_terminallauncherjob_qbase_meta_object(void* self) {
-    return KTerminalLauncherJob_QBaseMetaObject((KTerminalLauncherJob*)self);
+const QMetaObject* k_terminallauncherjob_super_meta_object(void* self) {
+    return KTerminalLauncherJob_SuperMetaObject((KTerminalLauncherJob*)self);
 }
 
 void* k_terminallauncherjob_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_terminallauncherjob_on_metacast(void* self, void* (*callback)(void*, cons
     KTerminalLauncherJob_OnMetacast((KTerminalLauncherJob*)self, (intptr_t)callback);
 }
 
-void* k_terminallauncherjob_qbase_metacast(void* self, const char* param1) {
-    return KTerminalLauncherJob_QBaseMetacast((KTerminalLauncherJob*)self, param1);
+void* k_terminallauncherjob_super_metacast(void* self, const char* param1) {
+    return KTerminalLauncherJob_SuperMetacast((KTerminalLauncherJob*)self, param1);
 }
 
 int32_t k_terminallauncherjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_terminallauncherjob_on_metacall(void* self, int32_t (*callback)(void*, in
     KTerminalLauncherJob_OnMetacall((KTerminalLauncherJob*)self, (intptr_t)callback);
 }
 
-int32_t k_terminallauncherjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTerminalLauncherJob_QBaseMetacall((KTerminalLauncherJob*)self, param1, param2, param3);
+int32_t k_terminallauncherjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTerminalLauncherJob_SuperMetacall((KTerminalLauncherJob*)self, param1, param2, param3);
 }
 
 const char* k_terminallauncherjob_tr(const char* s) {
@@ -78,8 +78,8 @@ void k_terminallauncherjob_on_start(void* self, void (*callback)()) {
     KTerminalLauncherJob_OnStart((KTerminalLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_terminallauncherjob_qbase_start(void* self) {
-    KTerminalLauncherJob_QBaseStart((KTerminalLauncherJob*)self);
+void k_terminallauncherjob_super_start(void* self) {
+    KTerminalLauncherJob_SuperStart((KTerminalLauncherJob*)self);
 }
 
 const char* k_terminallauncherjob_tr2(const char* s, const char* c) {
@@ -438,8 +438,8 @@ bool k_terminallauncherjob_do_kill(void* self) {
     return KTerminalLauncherJob_DoKill((KTerminalLauncherJob*)self);
 }
 
-bool k_terminallauncherjob_qbase_do_kill(void* self) {
-    return KTerminalLauncherJob_QBaseDoKill((KTerminalLauncherJob*)self);
+bool k_terminallauncherjob_super_do_kill(void* self) {
+    return KTerminalLauncherJob_SuperDoKill((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_do_kill(void* self, bool (*callback)()) {
@@ -450,8 +450,8 @@ bool k_terminallauncherjob_do_suspend(void* self) {
     return KTerminalLauncherJob_DoSuspend((KTerminalLauncherJob*)self);
 }
 
-bool k_terminallauncherjob_qbase_do_suspend(void* self) {
-    return KTerminalLauncherJob_QBaseDoSuspend((KTerminalLauncherJob*)self);
+bool k_terminallauncherjob_super_do_suspend(void* self) {
+    return KTerminalLauncherJob_SuperDoSuspend((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -462,8 +462,8 @@ bool k_terminallauncherjob_do_resume(void* self) {
     return KTerminalLauncherJob_DoResume((KTerminalLauncherJob*)self);
 }
 
-bool k_terminallauncherjob_qbase_do_resume(void* self) {
-    return KTerminalLauncherJob_QBaseDoResume((KTerminalLauncherJob*)self);
+bool k_terminallauncherjob_super_do_resume(void* self) {
+    return KTerminalLauncherJob_SuperDoResume((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_do_resume(void* self, bool (*callback)()) {
@@ -477,8 +477,8 @@ const char* k_terminallauncherjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_terminallauncherjob_qbase_error_string(void* self) {
-    libqt_string _str = KTerminalLauncherJob_QBaseErrorString((KTerminalLauncherJob*)self);
+const char* k_terminallauncherjob_super_error_string(void* self) {
+    libqt_string _str = KTerminalLauncherJob_SuperErrorString((KTerminalLauncherJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -492,8 +492,8 @@ bool k_terminallauncherjob_event(void* self, void* event) {
     return KTerminalLauncherJob_Event((KTerminalLauncherJob*)self, (QEvent*)event);
 }
 
-bool k_terminallauncherjob_qbase_event(void* self, void* event) {
-    return KTerminalLauncherJob_QBaseEvent((KTerminalLauncherJob*)self, (QEvent*)event);
+bool k_terminallauncherjob_super_event(void* self, void* event) {
+    return KTerminalLauncherJob_SuperEvent((KTerminalLauncherJob*)self, (QEvent*)event);
 }
 
 void k_terminallauncherjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -504,8 +504,8 @@ bool k_terminallauncherjob_event_filter(void* self, void* watched, void* event) 
     return KTerminalLauncherJob_EventFilter((KTerminalLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_terminallauncherjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTerminalLauncherJob_QBaseEventFilter((KTerminalLauncherJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_terminallauncherjob_super_event_filter(void* self, void* watched, void* event) {
+    return KTerminalLauncherJob_SuperEventFilter((KTerminalLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_terminallauncherjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -516,8 +516,8 @@ void k_terminallauncherjob_timer_event(void* self, void* event) {
     KTerminalLauncherJob_TimerEvent((KTerminalLauncherJob*)self, (QTimerEvent*)event);
 }
 
-void k_terminallauncherjob_qbase_timer_event(void* self, void* event) {
-    KTerminalLauncherJob_QBaseTimerEvent((KTerminalLauncherJob*)self, (QTimerEvent*)event);
+void k_terminallauncherjob_super_timer_event(void* self, void* event) {
+    KTerminalLauncherJob_SuperTimerEvent((KTerminalLauncherJob*)self, (QTimerEvent*)event);
 }
 
 void k_terminallauncherjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -528,8 +528,8 @@ void k_terminallauncherjob_child_event(void* self, void* event) {
     KTerminalLauncherJob_ChildEvent((KTerminalLauncherJob*)self, (QChildEvent*)event);
 }
 
-void k_terminallauncherjob_qbase_child_event(void* self, void* event) {
-    KTerminalLauncherJob_QBaseChildEvent((KTerminalLauncherJob*)self, (QChildEvent*)event);
+void k_terminallauncherjob_super_child_event(void* self, void* event) {
+    KTerminalLauncherJob_SuperChildEvent((KTerminalLauncherJob*)self, (QChildEvent*)event);
 }
 
 void k_terminallauncherjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -540,8 +540,8 @@ void k_terminallauncherjob_custom_event(void* self, void* event) {
     KTerminalLauncherJob_CustomEvent((KTerminalLauncherJob*)self, (QEvent*)event);
 }
 
-void k_terminallauncherjob_qbase_custom_event(void* self, void* event) {
-    KTerminalLauncherJob_QBaseCustomEvent((KTerminalLauncherJob*)self, (QEvent*)event);
+void k_terminallauncherjob_super_custom_event(void* self, void* event) {
+    KTerminalLauncherJob_SuperCustomEvent((KTerminalLauncherJob*)self, (QEvent*)event);
 }
 
 void k_terminallauncherjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -552,8 +552,8 @@ void k_terminallauncherjob_connect_notify(void* self, void* signal) {
     KTerminalLauncherJob_ConnectNotify((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_terminallauncherjob_qbase_connect_notify(void* self, void* signal) {
-    KTerminalLauncherJob_QBaseConnectNotify((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
+void k_terminallauncherjob_super_connect_notify(void* self, void* signal) {
+    KTerminalLauncherJob_SuperConnectNotify((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_terminallauncherjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -564,8 +564,8 @@ void k_terminallauncherjob_disconnect_notify(void* self, void* signal) {
     KTerminalLauncherJob_DisconnectNotify((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_terminallauncherjob_qbase_disconnect_notify(void* self, void* signal) {
-    KTerminalLauncherJob_QBaseDisconnectNotify((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
+void k_terminallauncherjob_super_disconnect_notify(void* self, void* signal) {
+    KTerminalLauncherJob_SuperDisconnectNotify((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_terminallauncherjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -576,8 +576,8 @@ void k_terminallauncherjob_set_capabilities(void* self, int32_t capabilities) {
     KTerminalLauncherJob_SetCapabilities((KTerminalLauncherJob*)self, capabilities);
 }
 
-void k_terminallauncherjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KTerminalLauncherJob_QBaseSetCapabilities((KTerminalLauncherJob*)self, capabilities);
+void k_terminallauncherjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KTerminalLauncherJob_SuperSetCapabilities((KTerminalLauncherJob*)self, capabilities);
 }
 
 void k_terminallauncherjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -588,8 +588,8 @@ bool k_terminallauncherjob_is_finished(void* self) {
     return KTerminalLauncherJob_IsFinished((KTerminalLauncherJob*)self);
 }
 
-bool k_terminallauncherjob_qbase_is_finished(void* self) {
-    return KTerminalLauncherJob_QBaseIsFinished((KTerminalLauncherJob*)self);
+bool k_terminallauncherjob_super_is_finished(void* self) {
+    return KTerminalLauncherJob_SuperIsFinished((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_is_finished(void* self, bool (*callback)()) {
@@ -600,8 +600,8 @@ void k_terminallauncherjob_set_error(void* self, int errorCode) {
     KTerminalLauncherJob_SetError((KTerminalLauncherJob*)self, errorCode);
 }
 
-void k_terminallauncherjob_qbase_set_error(void* self, int errorCode) {
-    KTerminalLauncherJob_QBaseSetError((KTerminalLauncherJob*)self, errorCode);
+void k_terminallauncherjob_super_set_error(void* self, int errorCode) {
+    KTerminalLauncherJob_SuperSetError((KTerminalLauncherJob*)self, errorCode);
 }
 
 void k_terminallauncherjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -612,8 +612,8 @@ void k_terminallauncherjob_set_error_text(void* self, const char* errorText) {
     KTerminalLauncherJob_SetErrorText((KTerminalLauncherJob*)self, qstring(errorText));
 }
 
-void k_terminallauncherjob_qbase_set_error_text(void* self, const char* errorText) {
-    KTerminalLauncherJob_QBaseSetErrorText((KTerminalLauncherJob*)self, qstring(errorText));
+void k_terminallauncherjob_super_set_error_text(void* self, const char* errorText) {
+    KTerminalLauncherJob_SuperSetErrorText((KTerminalLauncherJob*)self, qstring(errorText));
 }
 
 void k_terminallauncherjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -624,8 +624,8 @@ void k_terminallauncherjob_set_processed_amount(void* self, int32_t unit, uint64
     KTerminalLauncherJob_SetProcessedAmount((KTerminalLauncherJob*)self, unit, amount);
 }
 
-void k_terminallauncherjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KTerminalLauncherJob_QBaseSetProcessedAmount((KTerminalLauncherJob*)self, unit, amount);
+void k_terminallauncherjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KTerminalLauncherJob_SuperSetProcessedAmount((KTerminalLauncherJob*)self, unit, amount);
 }
 
 void k_terminallauncherjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -636,8 +636,8 @@ void k_terminallauncherjob_set_total_amount(void* self, int32_t unit, uint64_t a
     KTerminalLauncherJob_SetTotalAmount((KTerminalLauncherJob*)self, unit, amount);
 }
 
-void k_terminallauncherjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KTerminalLauncherJob_QBaseSetTotalAmount((KTerminalLauncherJob*)self, unit, amount);
+void k_terminallauncherjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KTerminalLauncherJob_SuperSetTotalAmount((KTerminalLauncherJob*)self, unit, amount);
 }
 
 void k_terminallauncherjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -648,8 +648,8 @@ void k_terminallauncherjob_set_progress_unit(void* self, int32_t unit) {
     KTerminalLauncherJob_SetProgressUnit((KTerminalLauncherJob*)self, unit);
 }
 
-void k_terminallauncherjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KTerminalLauncherJob_QBaseSetProgressUnit((KTerminalLauncherJob*)self, unit);
+void k_terminallauncherjob_super_set_progress_unit(void* self, int32_t unit) {
+    KTerminalLauncherJob_SuperSetProgressUnit((KTerminalLauncherJob*)self, unit);
 }
 
 void k_terminallauncherjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -660,8 +660,8 @@ void k_terminallauncherjob_set_percent(void* self, uint64_t percentage) {
     KTerminalLauncherJob_SetPercent((KTerminalLauncherJob*)self, percentage);
 }
 
-void k_terminallauncherjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KTerminalLauncherJob_QBaseSetPercent((KTerminalLauncherJob*)self, percentage);
+void k_terminallauncherjob_super_set_percent(void* self, uint64_t percentage) {
+    KTerminalLauncherJob_SuperSetPercent((KTerminalLauncherJob*)self, percentage);
 }
 
 void k_terminallauncherjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -672,8 +672,8 @@ void k_terminallauncherjob_emit_result(void* self) {
     KTerminalLauncherJob_EmitResult((KTerminalLauncherJob*)self);
 }
 
-void k_terminallauncherjob_qbase_emit_result(void* self) {
-    KTerminalLauncherJob_QBaseEmitResult((KTerminalLauncherJob*)self);
+void k_terminallauncherjob_super_emit_result(void* self) {
+    KTerminalLauncherJob_SuperEmitResult((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_emit_result(void* self, void (*callback)()) {
@@ -684,8 +684,8 @@ void k_terminallauncherjob_emit_percent(void* self, uint64_t processedAmount, ui
     KTerminalLauncherJob_EmitPercent((KTerminalLauncherJob*)self, processedAmount, totalAmount);
 }
 
-void k_terminallauncherjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KTerminalLauncherJob_QBaseEmitPercent((KTerminalLauncherJob*)self, processedAmount, totalAmount);
+void k_terminallauncherjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KTerminalLauncherJob_SuperEmitPercent((KTerminalLauncherJob*)self, processedAmount, totalAmount);
 }
 
 void k_terminallauncherjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -696,8 +696,8 @@ void k_terminallauncherjob_emit_speed(void* self, uint64_t speed) {
     KTerminalLauncherJob_EmitSpeed((KTerminalLauncherJob*)self, speed);
 }
 
-void k_terminallauncherjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KTerminalLauncherJob_QBaseEmitSpeed((KTerminalLauncherJob*)self, speed);
+void k_terminallauncherjob_super_emit_speed(void* self, uint64_t speed) {
+    KTerminalLauncherJob_SuperEmitSpeed((KTerminalLauncherJob*)self, speed);
 }
 
 void k_terminallauncherjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -708,8 +708,8 @@ void k_terminallauncherjob_start_elapsed_timer(void* self) {
     KTerminalLauncherJob_StartElapsedTimer((KTerminalLauncherJob*)self);
 }
 
-void k_terminallauncherjob_qbase_start_elapsed_timer(void* self) {
-    KTerminalLauncherJob_QBaseStartElapsedTimer((KTerminalLauncherJob*)self);
+void k_terminallauncherjob_super_start_elapsed_timer(void* self) {
+    KTerminalLauncherJob_SuperStartElapsedTimer((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -720,8 +720,8 @@ QObject* k_terminallauncherjob_sender(void* self) {
     return KTerminalLauncherJob_Sender((KTerminalLauncherJob*)self);
 }
 
-QObject* k_terminallauncherjob_qbase_sender(void* self) {
-    return KTerminalLauncherJob_QBaseSender((KTerminalLauncherJob*)self);
+QObject* k_terminallauncherjob_super_sender(void* self) {
+    return KTerminalLauncherJob_SuperSender((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_sender(void* self, QObject* (*callback)()) {
@@ -732,8 +732,8 @@ int32_t k_terminallauncherjob_sender_signal_index(void* self) {
     return KTerminalLauncherJob_SenderSignalIndex((KTerminalLauncherJob*)self);
 }
 
-int32_t k_terminallauncherjob_qbase_sender_signal_index(void* self) {
-    return KTerminalLauncherJob_QBaseSenderSignalIndex((KTerminalLauncherJob*)self);
+int32_t k_terminallauncherjob_super_sender_signal_index(void* self) {
+    return KTerminalLauncherJob_SuperSenderSignalIndex((KTerminalLauncherJob*)self);
 }
 
 void k_terminallauncherjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -744,8 +744,8 @@ int32_t k_terminallauncherjob_receivers(void* self, const char* signal) {
     return KTerminalLauncherJob_Receivers((KTerminalLauncherJob*)self, signal);
 }
 
-int32_t k_terminallauncherjob_qbase_receivers(void* self, const char* signal) {
-    return KTerminalLauncherJob_QBaseReceivers((KTerminalLauncherJob*)self, signal);
+int32_t k_terminallauncherjob_super_receivers(void* self, const char* signal) {
+    return KTerminalLauncherJob_SuperReceivers((KTerminalLauncherJob*)self, signal);
 }
 
 void k_terminallauncherjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -756,8 +756,8 @@ bool k_terminallauncherjob_is_signal_connected(void* self, void* signal) {
     return KTerminalLauncherJob_IsSignalConnected((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_terminallauncherjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KTerminalLauncherJob_QBaseIsSignalConnected((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
+bool k_terminallauncherjob_super_is_signal_connected(void* self, void* signal) {
+    return KTerminalLauncherJob_SuperIsSignalConnected((KTerminalLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_terminallauncherjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -26,8 +26,8 @@ void q_layoutitem_on_size_hint(void* self, QSize* (*callback)()) {
     QLayoutItem_OnSizeHint((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QSize* q_layoutitem_qbase_size_hint(void* self) {
-    return QLayoutItem_QBaseSizeHint((QLayoutItem*)self);
+QSize* q_layoutitem_super_size_hint(void* self) {
+    return QLayoutItem_SuperSizeHint((QLayoutItem*)self);
 }
 
 QSize* q_layoutitem_minimum_size(void* self) {
@@ -38,8 +38,8 @@ void q_layoutitem_on_minimum_size(void* self, QSize* (*callback)()) {
     QLayoutItem_OnMinimumSize((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QSize* q_layoutitem_qbase_minimum_size(void* self) {
-    return QLayoutItem_QBaseMinimumSize((QLayoutItem*)self);
+QSize* q_layoutitem_super_minimum_size(void* self) {
+    return QLayoutItem_SuperMinimumSize((QLayoutItem*)self);
 }
 
 QSize* q_layoutitem_maximum_size(void* self) {
@@ -50,8 +50,8 @@ void q_layoutitem_on_maximum_size(void* self, QSize* (*callback)()) {
     QLayoutItem_OnMaximumSize((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QSize* q_layoutitem_qbase_maximum_size(void* self) {
-    return QLayoutItem_QBaseMaximumSize((QLayoutItem*)self);
+QSize* q_layoutitem_super_maximum_size(void* self) {
+    return QLayoutItem_SuperMaximumSize((QLayoutItem*)self);
 }
 
 int32_t q_layoutitem_expanding_directions(void* self) {
@@ -62,8 +62,8 @@ void q_layoutitem_on_expanding_directions(void* self, int32_t (*callback)()) {
     QLayoutItem_OnExpandingDirections((QLayoutItem*)self, (intptr_t)callback);
 }
 
-int32_t q_layoutitem_qbase_expanding_directions(void* self) {
-    return QLayoutItem_QBaseExpandingDirections((QLayoutItem*)self);
+int32_t q_layoutitem_super_expanding_directions(void* self) {
+    return QLayoutItem_SuperExpandingDirections((QLayoutItem*)self);
 }
 
 void q_layoutitem_set_geometry(void* self, void* geometry) {
@@ -74,8 +74,8 @@ void q_layoutitem_on_set_geometry(void* self, void (*callback)(void*, void*)) {
     QLayoutItem_OnSetGeometry((QLayoutItem*)self, (intptr_t)callback);
 }
 
-void q_layoutitem_qbase_set_geometry(void* self, void* geometry) {
-    QLayoutItem_QBaseSetGeometry((QLayoutItem*)self, (QRect*)geometry);
+void q_layoutitem_super_set_geometry(void* self, void* geometry) {
+    QLayoutItem_SuperSetGeometry((QLayoutItem*)self, (QRect*)geometry);
 }
 
 QRect* q_layoutitem_geometry(void* self) {
@@ -86,8 +86,8 @@ void q_layoutitem_on_geometry(void* self, QRect* (*callback)()) {
     QLayoutItem_OnGeometry((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QRect* q_layoutitem_qbase_geometry(void* self) {
-    return QLayoutItem_QBaseGeometry((QLayoutItem*)self);
+QRect* q_layoutitem_super_geometry(void* self) {
+    return QLayoutItem_SuperGeometry((QLayoutItem*)self);
 }
 
 bool q_layoutitem_is_empty(void* self) {
@@ -98,8 +98,8 @@ void q_layoutitem_on_is_empty(void* self, bool (*callback)()) {
     QLayoutItem_OnIsEmpty((QLayoutItem*)self, (intptr_t)callback);
 }
 
-bool q_layoutitem_qbase_is_empty(void* self) {
-    return QLayoutItem_QBaseIsEmpty((QLayoutItem*)self);
+bool q_layoutitem_super_is_empty(void* self) {
+    return QLayoutItem_SuperIsEmpty((QLayoutItem*)self);
 }
 
 bool q_layoutitem_has_height_for_width(void* self) {
@@ -110,8 +110,8 @@ void q_layoutitem_on_has_height_for_width(void* self, bool (*callback)()) {
     QLayoutItem_OnHasHeightForWidth((QLayoutItem*)self, (intptr_t)callback);
 }
 
-bool q_layoutitem_qbase_has_height_for_width(void* self) {
-    return QLayoutItem_QBaseHasHeightForWidth((QLayoutItem*)self);
+bool q_layoutitem_super_has_height_for_width(void* self) {
+    return QLayoutItem_SuperHasHeightForWidth((QLayoutItem*)self);
 }
 
 int32_t q_layoutitem_height_for_width(void* self, int param1) {
@@ -122,8 +122,8 @@ void q_layoutitem_on_height_for_width(void* self, int32_t (*callback)(void*, int
     QLayoutItem_OnHeightForWidth((QLayoutItem*)self, (intptr_t)callback);
 }
 
-int32_t q_layoutitem_qbase_height_for_width(void* self, int param1) {
-    return QLayoutItem_QBaseHeightForWidth((QLayoutItem*)self, param1);
+int32_t q_layoutitem_super_height_for_width(void* self, int param1) {
+    return QLayoutItem_SuperHeightForWidth((QLayoutItem*)self, param1);
 }
 
 int32_t q_layoutitem_minimum_height_for_width(void* self, int param1) {
@@ -134,8 +134,8 @@ void q_layoutitem_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
     QLayoutItem_OnMinimumHeightForWidth((QLayoutItem*)self, (intptr_t)callback);
 }
 
-int32_t q_layoutitem_qbase_minimum_height_for_width(void* self, int param1) {
-    return QLayoutItem_QBaseMinimumHeightForWidth((QLayoutItem*)self, param1);
+int32_t q_layoutitem_super_minimum_height_for_width(void* self, int param1) {
+    return QLayoutItem_SuperMinimumHeightForWidth((QLayoutItem*)self, param1);
 }
 
 void q_layoutitem_invalidate(void* self) {
@@ -146,8 +146,8 @@ void q_layoutitem_on_invalidate(void* self, void (*callback)()) {
     QLayoutItem_OnInvalidate((QLayoutItem*)self, (intptr_t)callback);
 }
 
-void q_layoutitem_qbase_invalidate(void* self) {
-    QLayoutItem_QBaseInvalidate((QLayoutItem*)self);
+void q_layoutitem_super_invalidate(void* self) {
+    QLayoutItem_SuperInvalidate((QLayoutItem*)self);
 }
 
 QWidget* q_layoutitem_widget(void* self) {
@@ -158,8 +158,8 @@ void q_layoutitem_on_widget(void* self, QWidget* (*callback)()) {
     QLayoutItem_OnWidget((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QWidget* q_layoutitem_qbase_widget(void* self) {
-    return QLayoutItem_QBaseWidget((QLayoutItem*)self);
+QWidget* q_layoutitem_super_widget(void* self) {
+    return QLayoutItem_SuperWidget((QLayoutItem*)self);
 }
 
 QLayout* q_layoutitem_layout(void* self) {
@@ -170,8 +170,8 @@ void q_layoutitem_on_layout(void* self, QLayout* (*callback)()) {
     QLayoutItem_OnLayout((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QLayout* q_layoutitem_qbase_layout(void* self) {
-    return QLayoutItem_QBaseLayout((QLayoutItem*)self);
+QLayout* q_layoutitem_super_layout(void* self) {
+    return QLayoutItem_SuperLayout((QLayoutItem*)self);
 }
 
 QSpacerItem* q_layoutitem_spacer_item(void* self) {
@@ -182,8 +182,8 @@ void q_layoutitem_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
     QLayoutItem_OnSpacerItem((QLayoutItem*)self, (intptr_t)callback);
 }
 
-QSpacerItem* q_layoutitem_qbase_spacer_item(void* self) {
-    return QLayoutItem_QBaseSpacerItem((QLayoutItem*)self);
+QSpacerItem* q_layoutitem_super_spacer_item(void* self) {
+    return QLayoutItem_SuperSpacerItem((QLayoutItem*)self);
 }
 
 int32_t q_layoutitem_alignment(void* self) {
@@ -202,8 +202,8 @@ void q_layoutitem_on_control_types(void* self, int32_t (*callback)()) {
     QLayoutItem_OnControlTypes((QLayoutItem*)self, (intptr_t)callback);
 }
 
-int32_t q_layoutitem_qbase_control_types(void* self) {
-    return QLayoutItem_QBaseControlTypes((QLayoutItem*)self);
+int32_t q_layoutitem_super_control_types(void* self) {
+    return QLayoutItem_SuperControlTypes((QLayoutItem*)self);
 }
 
 void q_layoutitem_operator_assign(void* self, void* param1) {
@@ -214,8 +214,8 @@ void q_layoutitem_on_operator_assign(void* self, void (*callback)(void*, void*))
     QLayoutItem_OnOperatorAssign((QLayoutItem*)self, (intptr_t)callback);
 }
 
-void q_layoutitem_qbase_operator_assign(void* self, void* param1) {
-    QLayoutItem_QBaseOperatorAssign((QLayoutItem*)self, (QLayoutItem*)param1);
+void q_layoutitem_super_operator_assign(void* self, void* param1) {
+    QLayoutItem_SuperOperatorAssign((QLayoutItem*)self, (QLayoutItem*)param1);
 }
 
 void q_layoutitem_delete(void* self) {
@@ -250,8 +250,8 @@ void q_spaceritem_on_size_hint(void* self, QSize* (*callback)()) {
     QSpacerItem_OnSizeHint((QSpacerItem*)self, (intptr_t)callback);
 }
 
-QSize* q_spaceritem_qbase_size_hint(void* self) {
-    return QSpacerItem_QBaseSizeHint((QSpacerItem*)self);
+QSize* q_spaceritem_super_size_hint(void* self) {
+    return QSpacerItem_SuperSizeHint((QSpacerItem*)self);
 }
 
 QSize* q_spaceritem_minimum_size(void* self) {
@@ -262,8 +262,8 @@ void q_spaceritem_on_minimum_size(void* self, QSize* (*callback)()) {
     QSpacerItem_OnMinimumSize((QSpacerItem*)self, (intptr_t)callback);
 }
 
-QSize* q_spaceritem_qbase_minimum_size(void* self) {
-    return QSpacerItem_QBaseMinimumSize((QSpacerItem*)self);
+QSize* q_spaceritem_super_minimum_size(void* self) {
+    return QSpacerItem_SuperMinimumSize((QSpacerItem*)self);
 }
 
 QSize* q_spaceritem_maximum_size(void* self) {
@@ -274,8 +274,8 @@ void q_spaceritem_on_maximum_size(void* self, QSize* (*callback)()) {
     QSpacerItem_OnMaximumSize((QSpacerItem*)self, (intptr_t)callback);
 }
 
-QSize* q_spaceritem_qbase_maximum_size(void* self) {
-    return QSpacerItem_QBaseMaximumSize((QSpacerItem*)self);
+QSize* q_spaceritem_super_maximum_size(void* self) {
+    return QSpacerItem_SuperMaximumSize((QSpacerItem*)self);
 }
 
 int32_t q_spaceritem_expanding_directions(void* self) {
@@ -286,8 +286,8 @@ void q_spaceritem_on_expanding_directions(void* self, int32_t (*callback)()) {
     QSpacerItem_OnExpandingDirections((QSpacerItem*)self, (intptr_t)callback);
 }
 
-int32_t q_spaceritem_qbase_expanding_directions(void* self) {
-    return QSpacerItem_QBaseExpandingDirections((QSpacerItem*)self);
+int32_t q_spaceritem_super_expanding_directions(void* self) {
+    return QSpacerItem_SuperExpandingDirections((QSpacerItem*)self);
 }
 
 bool q_spaceritem_is_empty(void* self) {
@@ -298,8 +298,8 @@ void q_spaceritem_on_is_empty(void* self, bool (*callback)()) {
     QSpacerItem_OnIsEmpty((QSpacerItem*)self, (intptr_t)callback);
 }
 
-bool q_spaceritem_qbase_is_empty(void* self) {
-    return QSpacerItem_QBaseIsEmpty((QSpacerItem*)self);
+bool q_spaceritem_super_is_empty(void* self) {
+    return QSpacerItem_SuperIsEmpty((QSpacerItem*)self);
 }
 
 void q_spaceritem_set_geometry(void* self, void* geometry) {
@@ -310,8 +310,8 @@ void q_spaceritem_on_set_geometry(void* self, void (*callback)(void*, void*)) {
     QSpacerItem_OnSetGeometry((QSpacerItem*)self, (intptr_t)callback);
 }
 
-void q_spaceritem_qbase_set_geometry(void* self, void* geometry) {
-    QSpacerItem_QBaseSetGeometry((QSpacerItem*)self, (QRect*)geometry);
+void q_spaceritem_super_set_geometry(void* self, void* geometry) {
+    QSpacerItem_SuperSetGeometry((QSpacerItem*)self, (QRect*)geometry);
 }
 
 QRect* q_spaceritem_geometry(void* self) {
@@ -322,8 +322,8 @@ void q_spaceritem_on_geometry(void* self, QRect* (*callback)()) {
     QSpacerItem_OnGeometry((QSpacerItem*)self, (intptr_t)callback);
 }
 
-QRect* q_spaceritem_qbase_geometry(void* self) {
-    return QSpacerItem_QBaseGeometry((QSpacerItem*)self);
+QRect* q_spaceritem_super_geometry(void* self) {
+    return QSpacerItem_SuperGeometry((QSpacerItem*)self);
 }
 
 QSpacerItem* q_spaceritem_spacer_item(void* self) {
@@ -334,8 +334,8 @@ void q_spaceritem_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
     QSpacerItem_OnSpacerItem((QSpacerItem*)self, (intptr_t)callback);
 }
 
-QSpacerItem* q_spaceritem_qbase_spacer_item(void* self) {
-    return QSpacerItem_QBaseSpacerItem((QSpacerItem*)self);
+QSpacerItem* q_spaceritem_super_spacer_item(void* self) {
+    return QSpacerItem_SuperSpacerItem((QSpacerItem*)self);
 }
 
 QSizePolicy* q_spaceritem_size_policy(void* self) {
@@ -362,8 +362,8 @@ bool q_spaceritem_has_height_for_width(void* self) {
     return QSpacerItem_HasHeightForWidth((QSpacerItem*)self);
 }
 
-bool q_spaceritem_qbase_has_height_for_width(void* self) {
-    return QSpacerItem_QBaseHasHeightForWidth((QSpacerItem*)self);
+bool q_spaceritem_super_has_height_for_width(void* self) {
+    return QSpacerItem_SuperHasHeightForWidth((QSpacerItem*)self);
 }
 
 void q_spaceritem_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -374,8 +374,8 @@ int32_t q_spaceritem_height_for_width(void* self, int param1) {
     return QSpacerItem_HeightForWidth((QSpacerItem*)self, param1);
 }
 
-int32_t q_spaceritem_qbase_height_for_width(void* self, int param1) {
-    return QSpacerItem_QBaseHeightForWidth((QSpacerItem*)self, param1);
+int32_t q_spaceritem_super_height_for_width(void* self, int param1) {
+    return QSpacerItem_SuperHeightForWidth((QSpacerItem*)self, param1);
 }
 
 void q_spaceritem_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -386,8 +386,8 @@ int32_t q_spaceritem_minimum_height_for_width(void* self, int param1) {
     return QSpacerItem_MinimumHeightForWidth((QSpacerItem*)self, param1);
 }
 
-int32_t q_spaceritem_qbase_minimum_height_for_width(void* self, int param1) {
-    return QSpacerItem_QBaseMinimumHeightForWidth((QSpacerItem*)self, param1);
+int32_t q_spaceritem_super_minimum_height_for_width(void* self, int param1) {
+    return QSpacerItem_SuperMinimumHeightForWidth((QSpacerItem*)self, param1);
 }
 
 void q_spaceritem_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -398,8 +398,8 @@ void q_spaceritem_invalidate(void* self) {
     QSpacerItem_Invalidate((QSpacerItem*)self);
 }
 
-void q_spaceritem_qbase_invalidate(void* self) {
-    QSpacerItem_QBaseInvalidate((QSpacerItem*)self);
+void q_spaceritem_super_invalidate(void* self) {
+    QSpacerItem_SuperInvalidate((QSpacerItem*)self);
 }
 
 void q_spaceritem_on_invalidate(void* self, void (*callback)()) {
@@ -410,8 +410,8 @@ QWidget* q_spaceritem_widget(void* self) {
     return QSpacerItem_Widget((QSpacerItem*)self);
 }
 
-QWidget* q_spaceritem_qbase_widget(void* self) {
-    return QSpacerItem_QBaseWidget((QSpacerItem*)self);
+QWidget* q_spaceritem_super_widget(void* self) {
+    return QSpacerItem_SuperWidget((QSpacerItem*)self);
 }
 
 void q_spaceritem_on_widget(void* self, QWidget* (*callback)()) {
@@ -422,8 +422,8 @@ QLayout* q_spaceritem_layout(void* self) {
     return QSpacerItem_Layout((QSpacerItem*)self);
 }
 
-QLayout* q_spaceritem_qbase_layout(void* self) {
-    return QSpacerItem_QBaseLayout((QSpacerItem*)self);
+QLayout* q_spaceritem_super_layout(void* self) {
+    return QSpacerItem_SuperLayout((QSpacerItem*)self);
 }
 
 void q_spaceritem_on_layout(void* self, QLayout* (*callback)()) {
@@ -434,8 +434,8 @@ int32_t q_spaceritem_control_types(void* self) {
     return QSpacerItem_ControlTypes((QSpacerItem*)self);
 }
 
-int32_t q_spaceritem_qbase_control_types(void* self) {
-    return QSpacerItem_QBaseControlTypes((QSpacerItem*)self);
+int32_t q_spaceritem_super_control_types(void* self) {
+    return QSpacerItem_SuperControlTypes((QSpacerItem*)self);
 }
 
 void q_spaceritem_on_control_types(void* self, int32_t (*callback)()) {
@@ -458,8 +458,8 @@ void q_widgetitem_on_size_hint(void* self, QSize* (*callback)()) {
     QWidgetItem_OnSizeHint((QWidgetItem*)self, (intptr_t)callback);
 }
 
-QSize* q_widgetitem_qbase_size_hint(void* self) {
-    return QWidgetItem_QBaseSizeHint((QWidgetItem*)self);
+QSize* q_widgetitem_super_size_hint(void* self) {
+    return QWidgetItem_SuperSizeHint((QWidgetItem*)self);
 }
 
 QSize* q_widgetitem_minimum_size(void* self) {
@@ -470,8 +470,8 @@ void q_widgetitem_on_minimum_size(void* self, QSize* (*callback)()) {
     QWidgetItem_OnMinimumSize((QWidgetItem*)self, (intptr_t)callback);
 }
 
-QSize* q_widgetitem_qbase_minimum_size(void* self) {
-    return QWidgetItem_QBaseMinimumSize((QWidgetItem*)self);
+QSize* q_widgetitem_super_minimum_size(void* self) {
+    return QWidgetItem_SuperMinimumSize((QWidgetItem*)self);
 }
 
 QSize* q_widgetitem_maximum_size(void* self) {
@@ -482,8 +482,8 @@ void q_widgetitem_on_maximum_size(void* self, QSize* (*callback)()) {
     QWidgetItem_OnMaximumSize((QWidgetItem*)self, (intptr_t)callback);
 }
 
-QSize* q_widgetitem_qbase_maximum_size(void* self) {
-    return QWidgetItem_QBaseMaximumSize((QWidgetItem*)self);
+QSize* q_widgetitem_super_maximum_size(void* self) {
+    return QWidgetItem_SuperMaximumSize((QWidgetItem*)self);
 }
 
 int32_t q_widgetitem_expanding_directions(void* self) {
@@ -494,8 +494,8 @@ void q_widgetitem_on_expanding_directions(void* self, int32_t (*callback)()) {
     QWidgetItem_OnExpandingDirections((QWidgetItem*)self, (intptr_t)callback);
 }
 
-int32_t q_widgetitem_qbase_expanding_directions(void* self) {
-    return QWidgetItem_QBaseExpandingDirections((QWidgetItem*)self);
+int32_t q_widgetitem_super_expanding_directions(void* self) {
+    return QWidgetItem_SuperExpandingDirections((QWidgetItem*)self);
 }
 
 bool q_widgetitem_is_empty(void* self) {
@@ -506,8 +506,8 @@ void q_widgetitem_on_is_empty(void* self, bool (*callback)()) {
     QWidgetItem_OnIsEmpty((QWidgetItem*)self, (intptr_t)callback);
 }
 
-bool q_widgetitem_qbase_is_empty(void* self) {
-    return QWidgetItem_QBaseIsEmpty((QWidgetItem*)self);
+bool q_widgetitem_super_is_empty(void* self) {
+    return QWidgetItem_SuperIsEmpty((QWidgetItem*)self);
 }
 
 void q_widgetitem_set_geometry(void* self, void* geometry) {
@@ -518,8 +518,8 @@ void q_widgetitem_on_set_geometry(void* self, void (*callback)(void*, void*)) {
     QWidgetItem_OnSetGeometry((QWidgetItem*)self, (intptr_t)callback);
 }
 
-void q_widgetitem_qbase_set_geometry(void* self, void* geometry) {
-    QWidgetItem_QBaseSetGeometry((QWidgetItem*)self, (QRect*)geometry);
+void q_widgetitem_super_set_geometry(void* self, void* geometry) {
+    QWidgetItem_SuperSetGeometry((QWidgetItem*)self, (QRect*)geometry);
 }
 
 QRect* q_widgetitem_geometry(void* self) {
@@ -530,8 +530,8 @@ void q_widgetitem_on_geometry(void* self, QRect* (*callback)()) {
     QWidgetItem_OnGeometry((QWidgetItem*)self, (intptr_t)callback);
 }
 
-QRect* q_widgetitem_qbase_geometry(void* self) {
-    return QWidgetItem_QBaseGeometry((QWidgetItem*)self);
+QRect* q_widgetitem_super_geometry(void* self) {
+    return QWidgetItem_SuperGeometry((QWidgetItem*)self);
 }
 
 QWidget* q_widgetitem_widget(void* self) {
@@ -542,8 +542,8 @@ void q_widgetitem_on_widget(void* self, QWidget* (*callback)()) {
     QWidgetItem_OnWidget((QWidgetItem*)self, (intptr_t)callback);
 }
 
-QWidget* q_widgetitem_qbase_widget(void* self) {
-    return QWidgetItem_QBaseWidget((QWidgetItem*)self);
+QWidget* q_widgetitem_super_widget(void* self) {
+    return QWidgetItem_SuperWidget((QWidgetItem*)self);
 }
 
 bool q_widgetitem_has_height_for_width(void* self) {
@@ -554,8 +554,8 @@ void q_widgetitem_on_has_height_for_width(void* self, bool (*callback)()) {
     QWidgetItem_OnHasHeightForWidth((QWidgetItem*)self, (intptr_t)callback);
 }
 
-bool q_widgetitem_qbase_has_height_for_width(void* self) {
-    return QWidgetItem_QBaseHasHeightForWidth((QWidgetItem*)self);
+bool q_widgetitem_super_has_height_for_width(void* self) {
+    return QWidgetItem_SuperHasHeightForWidth((QWidgetItem*)self);
 }
 
 int32_t q_widgetitem_height_for_width(void* self, int param1) {
@@ -566,8 +566,8 @@ void q_widgetitem_on_height_for_width(void* self, int32_t (*callback)(void*, int
     QWidgetItem_OnHeightForWidth((QWidgetItem*)self, (intptr_t)callback);
 }
 
-int32_t q_widgetitem_qbase_height_for_width(void* self, int param1) {
-    return QWidgetItem_QBaseHeightForWidth((QWidgetItem*)self, param1);
+int32_t q_widgetitem_super_height_for_width(void* self, int param1) {
+    return QWidgetItem_SuperHeightForWidth((QWidgetItem*)self, param1);
 }
 
 int32_t q_widgetitem_minimum_height_for_width(void* self, int param1) {
@@ -578,8 +578,8 @@ void q_widgetitem_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
     QWidgetItem_OnMinimumHeightForWidth((QWidgetItem*)self, (intptr_t)callback);
 }
 
-int32_t q_widgetitem_qbase_minimum_height_for_width(void* self, int param1) {
-    return QWidgetItem_QBaseMinimumHeightForWidth((QWidgetItem*)self, param1);
+int32_t q_widgetitem_super_minimum_height_for_width(void* self, int param1) {
+    return QWidgetItem_SuperMinimumHeightForWidth((QWidgetItem*)self, param1);
 }
 
 int32_t q_widgetitem_control_types(void* self) {
@@ -590,8 +590,8 @@ void q_widgetitem_on_control_types(void* self, int32_t (*callback)()) {
     QWidgetItem_OnControlTypes((QWidgetItem*)self, (intptr_t)callback);
 }
 
-int32_t q_widgetitem_qbase_control_types(void* self) {
-    return QWidgetItem_QBaseControlTypes((QWidgetItem*)self);
+int32_t q_widgetitem_super_control_types(void* self) {
+    return QWidgetItem_SuperControlTypes((QWidgetItem*)self);
 }
 
 int32_t q_widgetitem_alignment(void* self) {
@@ -606,8 +606,8 @@ void q_widgetitem_invalidate(void* self) {
     QWidgetItem_Invalidate((QWidgetItem*)self);
 }
 
-void q_widgetitem_qbase_invalidate(void* self) {
-    QWidgetItem_QBaseInvalidate((QWidgetItem*)self);
+void q_widgetitem_super_invalidate(void* self) {
+    QWidgetItem_SuperInvalidate((QWidgetItem*)self);
 }
 
 void q_widgetitem_on_invalidate(void* self, void (*callback)()) {
@@ -618,8 +618,8 @@ QLayout* q_widgetitem_layout(void* self) {
     return QWidgetItem_Layout((QWidgetItem*)self);
 }
 
-QLayout* q_widgetitem_qbase_layout(void* self) {
-    return QWidgetItem_QBaseLayout((QWidgetItem*)self);
+QLayout* q_widgetitem_super_layout(void* self) {
+    return QWidgetItem_SuperLayout((QWidgetItem*)self);
 }
 
 void q_widgetitem_on_layout(void* self, QLayout* (*callback)()) {
@@ -630,8 +630,8 @@ QSpacerItem* q_widgetitem_spacer_item(void* self) {
     return QWidgetItem_SpacerItem((QWidgetItem*)self);
 }
 
-QSpacerItem* q_widgetitem_qbase_spacer_item(void* self) {
-    return QWidgetItem_QBaseSpacerItem((QWidgetItem*)self);
+QSpacerItem* q_widgetitem_super_spacer_item(void* self) {
+    return QWidgetItem_SuperSpacerItem((QWidgetItem*)self);
 }
 
 void q_widgetitem_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
@@ -654,8 +654,8 @@ void q_widgetitemv2_on_size_hint(void* self, QSize* (*callback)()) {
     QWidgetItemV2_OnSizeHint((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
-QSize* q_widgetitemv2_qbase_size_hint(void* self) {
-    return QWidgetItemV2_QBaseSizeHint((QWidgetItemV2*)self);
+QSize* q_widgetitemv2_super_size_hint(void* self) {
+    return QWidgetItemV2_SuperSizeHint((QWidgetItemV2*)self);
 }
 
 QSize* q_widgetitemv2_minimum_size(void* self) {
@@ -666,8 +666,8 @@ void q_widgetitemv2_on_minimum_size(void* self, QSize* (*callback)()) {
     QWidgetItemV2_OnMinimumSize((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
-QSize* q_widgetitemv2_qbase_minimum_size(void* self) {
-    return QWidgetItemV2_QBaseMinimumSize((QWidgetItemV2*)self);
+QSize* q_widgetitemv2_super_minimum_size(void* self) {
+    return QWidgetItemV2_SuperMinimumSize((QWidgetItemV2*)self);
 }
 
 QSize* q_widgetitemv2_maximum_size(void* self) {
@@ -678,8 +678,8 @@ void q_widgetitemv2_on_maximum_size(void* self, QSize* (*callback)()) {
     QWidgetItemV2_OnMaximumSize((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
-QSize* q_widgetitemv2_qbase_maximum_size(void* self) {
-    return QWidgetItemV2_QBaseMaximumSize((QWidgetItemV2*)self);
+QSize* q_widgetitemv2_super_maximum_size(void* self) {
+    return QWidgetItemV2_SuperMaximumSize((QWidgetItemV2*)self);
 }
 
 int32_t q_widgetitemv2_height_for_width(void* self, int width) {
@@ -690,8 +690,8 @@ void q_widgetitemv2_on_height_for_width(void* self, int32_t (*callback)(void*, i
     QWidgetItemV2_OnHeightForWidth((QWidgetItemV2*)self, (intptr_t)callback);
 }
 
-int32_t q_widgetitemv2_qbase_height_for_width(void* self, int width) {
-    return QWidgetItemV2_QBaseHeightForWidth((QWidgetItemV2*)self, width);
+int32_t q_widgetitemv2_super_height_for_width(void* self, int width) {
+    return QWidgetItemV2_SuperHeightForWidth((QWidgetItemV2*)self, width);
 }
 
 int32_t q_widgetitemv2_alignment(void* self) {
@@ -706,8 +706,8 @@ int32_t q_widgetitemv2_expanding_directions(void* self) {
     return QWidgetItemV2_ExpandingDirections((QWidgetItemV2*)self);
 }
 
-int32_t q_widgetitemv2_qbase_expanding_directions(void* self) {
-    return QWidgetItemV2_QBaseExpandingDirections((QWidgetItemV2*)self);
+int32_t q_widgetitemv2_super_expanding_directions(void* self) {
+    return QWidgetItemV2_SuperExpandingDirections((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_expanding_directions(void* self, int32_t (*callback)()) {
@@ -718,8 +718,8 @@ bool q_widgetitemv2_is_empty(void* self) {
     return QWidgetItemV2_IsEmpty((QWidgetItemV2*)self);
 }
 
-bool q_widgetitemv2_qbase_is_empty(void* self) {
-    return QWidgetItemV2_QBaseIsEmpty((QWidgetItemV2*)self);
+bool q_widgetitemv2_super_is_empty(void* self) {
+    return QWidgetItemV2_SuperIsEmpty((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_is_empty(void* self, bool (*callback)()) {
@@ -730,8 +730,8 @@ void q_widgetitemv2_set_geometry(void* self, void* geometry) {
     QWidgetItemV2_SetGeometry((QWidgetItemV2*)self, (QRect*)geometry);
 }
 
-void q_widgetitemv2_qbase_set_geometry(void* self, void* geometry) {
-    QWidgetItemV2_QBaseSetGeometry((QWidgetItemV2*)self, (QRect*)geometry);
+void q_widgetitemv2_super_set_geometry(void* self, void* geometry) {
+    QWidgetItemV2_SuperSetGeometry((QWidgetItemV2*)self, (QRect*)geometry);
 }
 
 void q_widgetitemv2_on_set_geometry(void* self, void (*callback)(void*, void*)) {
@@ -742,8 +742,8 @@ QRect* q_widgetitemv2_geometry(void* self) {
     return QWidgetItemV2_Geometry((QWidgetItemV2*)self);
 }
 
-QRect* q_widgetitemv2_qbase_geometry(void* self) {
-    return QWidgetItemV2_QBaseGeometry((QWidgetItemV2*)self);
+QRect* q_widgetitemv2_super_geometry(void* self) {
+    return QWidgetItemV2_SuperGeometry((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_geometry(void* self, QRect* (*callback)()) {
@@ -754,8 +754,8 @@ QWidget* q_widgetitemv2_widget(void* self) {
     return QWidgetItemV2_Widget((QWidgetItemV2*)self);
 }
 
-QWidget* q_widgetitemv2_qbase_widget(void* self) {
-    return QWidgetItemV2_QBaseWidget((QWidgetItemV2*)self);
+QWidget* q_widgetitemv2_super_widget(void* self) {
+    return QWidgetItemV2_SuperWidget((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_widget(void* self, QWidget* (*callback)()) {
@@ -766,8 +766,8 @@ bool q_widgetitemv2_has_height_for_width(void* self) {
     return QWidgetItemV2_HasHeightForWidth((QWidgetItemV2*)self);
 }
 
-bool q_widgetitemv2_qbase_has_height_for_width(void* self) {
-    return QWidgetItemV2_QBaseHasHeightForWidth((QWidgetItemV2*)self);
+bool q_widgetitemv2_super_has_height_for_width(void* self) {
+    return QWidgetItemV2_SuperHasHeightForWidth((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -778,8 +778,8 @@ int32_t q_widgetitemv2_minimum_height_for_width(void* self, int param1) {
     return QWidgetItemV2_MinimumHeightForWidth((QWidgetItemV2*)self, param1);
 }
 
-int32_t q_widgetitemv2_qbase_minimum_height_for_width(void* self, int param1) {
-    return QWidgetItemV2_QBaseMinimumHeightForWidth((QWidgetItemV2*)self, param1);
+int32_t q_widgetitemv2_super_minimum_height_for_width(void* self, int param1) {
+    return QWidgetItemV2_SuperMinimumHeightForWidth((QWidgetItemV2*)self, param1);
 }
 
 void q_widgetitemv2_on_minimum_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -790,8 +790,8 @@ int32_t q_widgetitemv2_control_types(void* self) {
     return QWidgetItemV2_ControlTypes((QWidgetItemV2*)self);
 }
 
-int32_t q_widgetitemv2_qbase_control_types(void* self) {
-    return QWidgetItemV2_QBaseControlTypes((QWidgetItemV2*)self);
+int32_t q_widgetitemv2_super_control_types(void* self) {
+    return QWidgetItemV2_SuperControlTypes((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_control_types(void* self, int32_t (*callback)()) {
@@ -802,8 +802,8 @@ void q_widgetitemv2_invalidate(void* self) {
     QWidgetItemV2_Invalidate((QWidgetItemV2*)self);
 }
 
-void q_widgetitemv2_qbase_invalidate(void* self) {
-    QWidgetItemV2_QBaseInvalidate((QWidgetItemV2*)self);
+void q_widgetitemv2_super_invalidate(void* self) {
+    QWidgetItemV2_SuperInvalidate((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_invalidate(void* self, void (*callback)()) {
@@ -814,8 +814,8 @@ QLayout* q_widgetitemv2_layout(void* self) {
     return QWidgetItemV2_Layout((QWidgetItemV2*)self);
 }
 
-QLayout* q_widgetitemv2_qbase_layout(void* self) {
-    return QWidgetItemV2_QBaseLayout((QWidgetItemV2*)self);
+QLayout* q_widgetitemv2_super_layout(void* self) {
+    return QWidgetItemV2_SuperLayout((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_layout(void* self, QLayout* (*callback)()) {
@@ -826,8 +826,8 @@ QSpacerItem* q_widgetitemv2_spacer_item(void* self) {
     return QWidgetItemV2_SpacerItem((QWidgetItemV2*)self);
 }
 
-QSpacerItem* q_widgetitemv2_qbase_spacer_item(void* self) {
-    return QWidgetItemV2_QBaseSpacerItem((QWidgetItemV2*)self);
+QSpacerItem* q_widgetitemv2_super_spacer_item(void* self) {
+    return QWidgetItemV2_SuperSpacerItem((QWidgetItemV2*)self);
 }
 
 void q_widgetitemv2_on_spacer_item(void* self, QSpacerItem* (*callback)()) {

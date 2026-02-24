@@ -19,8 +19,8 @@ void k_onsole__emulation_on_meta_object(void* self, const QMetaObject* (*callbac
     Konsole__Emulation_OnMetaObject((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_onsole__emulation_qbase_meta_object(void* self) {
-    return Konsole__Emulation_QBaseMetaObject((Konsole__Emulation*)self);
+const QMetaObject* k_onsole__emulation_super_meta_object(void* self) {
+    return Konsole__Emulation_SuperMetaObject((Konsole__Emulation*)self);
 }
 
 void* k_onsole__emulation_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void k_onsole__emulation_on_metacast(void* self, void* (*callback)(void*, const 
     Konsole__Emulation_OnMetacast((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void* k_onsole__emulation_qbase_metacast(void* self, const char* param1) {
-    return Konsole__Emulation_QBaseMetacast((Konsole__Emulation*)self, param1);
+void* k_onsole__emulation_super_metacast(void* self, const char* param1) {
+    return Konsole__Emulation_SuperMetacast((Konsole__Emulation*)self, param1);
 }
 
 int32_t k_onsole__emulation_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void k_onsole__emulation_on_metacall(void* self, int32_t (*callback)(void*, int3
     Konsole__Emulation_OnMetacall((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-int32_t k_onsole__emulation_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Konsole__Emulation_QBaseMetacall((Konsole__Emulation*)self, param1, param2, param3);
+int32_t k_onsole__emulation_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Konsole__Emulation_SuperMetacall((Konsole__Emulation*)self, param1, param2, param3);
 }
 
 const char* k_onsole__emulation_tr(const char* s) {
@@ -74,8 +74,8 @@ void k_onsole__emulation_on_erase_char(void* self, char (*callback)()) {
     Konsole__Emulation_OnEraseChar((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-char k_onsole__emulation_qbase_erase_char(void* self) {
-    return Konsole__Emulation_QBaseEraseChar((Konsole__Emulation*)self);
+char k_onsole__emulation_super_erase_char(void* self) {
+    return Konsole__Emulation_SuperEraseChar((Konsole__Emulation*)self);
 }
 
 void k_onsole__emulation_set_key_bindings(void* self, const char* name) {
@@ -97,8 +97,8 @@ void k_onsole__emulation_on_clear_entire_screen(void* self, void (*callback)()) 
     Konsole__Emulation_OnClearEntireScreen((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_clear_entire_screen(void* self) {
-    Konsole__Emulation_QBaseClearEntireScreen((Konsole__Emulation*)self);
+void k_onsole__emulation_super_clear_entire_screen(void* self) {
+    Konsole__Emulation_SuperClearEntireScreen((Konsole__Emulation*)self);
 }
 
 void k_onsole__emulation_reset(void* self) {
@@ -109,8 +109,8 @@ void k_onsole__emulation_on_reset(void* self, void (*callback)()) {
     Konsole__Emulation_OnReset((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_reset(void* self) {
-    Konsole__Emulation_QBaseReset((Konsole__Emulation*)self);
+void k_onsole__emulation_super_reset(void* self) {
+    Konsole__Emulation_SuperReset((Konsole__Emulation*)self);
 }
 
 bool k_onsole__emulation_program_uses_mouse(void* self) {
@@ -129,8 +129,8 @@ void k_onsole__emulation_on_set_image_size(void* self, void (*callback)(void*, i
     Konsole__Emulation_OnSetImageSize((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_set_image_size(void* self, int lines, int columns) {
-    Konsole__Emulation_QBaseSetImageSize((Konsole__Emulation*)self, lines, columns);
+void k_onsole__emulation_super_set_image_size(void* self, int lines, int columns) {
+    Konsole__Emulation_SuperSetImageSize((Konsole__Emulation*)self, lines, columns);
 }
 
 void k_onsole__emulation_send_text(void* self, const char* text) {
@@ -141,8 +141,8 @@ void k_onsole__emulation_on_send_text(void* self, void (*callback)(void*, const 
     Konsole__Emulation_OnSendText((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_send_text(void* self, const char* text) {
-    Konsole__Emulation_QBaseSendText((Konsole__Emulation*)self, qstring(text));
+void k_onsole__emulation_super_send_text(void* self, const char* text) {
+    Konsole__Emulation_SuperSendText((Konsole__Emulation*)self, qstring(text));
 }
 
 void k_onsole__emulation_send_key_event(void* self, void* param1, bool fromPaste) {
@@ -153,8 +153,8 @@ void k_onsole__emulation_on_send_key_event(void* self, void (*callback)(void*, v
     Konsole__Emulation_OnSendKeyEvent((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_send_key_event(void* self, void* param1, bool fromPaste) {
-    Konsole__Emulation_QBaseSendKeyEvent((Konsole__Emulation*)self, (QKeyEvent*)param1, fromPaste);
+void k_onsole__emulation_super_send_key_event(void* self, void* param1, bool fromPaste) {
+    Konsole__Emulation_SuperSendKeyEvent((Konsole__Emulation*)self, (QKeyEvent*)param1, fromPaste);
 }
 
 void k_onsole__emulation_send_mouse_event(void* self, int buttons, int column, int line, int eventType) {
@@ -165,8 +165,8 @@ void k_onsole__emulation_on_send_mouse_event(void* self, void (*callback)(void*,
     Konsole__Emulation_OnSendMouseEvent((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_send_mouse_event(void* self, int buttons, int column, int line, int eventType) {
-    Konsole__Emulation_QBaseSendMouseEvent((Konsole__Emulation*)self, buttons, column, line, eventType);
+void k_onsole__emulation_super_send_mouse_event(void* self, int buttons, int column, int line, int eventType) {
+    Konsole__Emulation_SuperSendMouseEvent((Konsole__Emulation*)self, buttons, column, line, eventType);
 }
 
 void k_onsole__emulation_send_string(void* self, const char* stringVal, int length) {
@@ -177,8 +177,8 @@ void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, cons
     Konsole__Emulation_OnSendString((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_send_string(void* self, const char* stringVal, int length) {
-    Konsole__Emulation_QBaseSendString((Konsole__Emulation*)self, stringVal, length);
+void k_onsole__emulation_super_send_string(void* self, const char* stringVal, int length) {
+    Konsole__Emulation_SuperSendString((Konsole__Emulation*)self, stringVal, length);
 }
 
 void k_onsole__emulation_receive_data(void* self, const char* buffer, int lenVal) {
@@ -337,8 +337,8 @@ void k_onsole__emulation_on_set_mode(void* self, void (*callback)(void*, int)) {
     Konsole__Emulation_OnSetMode((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_set_mode(void* self, int mode) {
-    Konsole__Emulation_QBaseSetMode((Konsole__Emulation*)self, mode);
+void k_onsole__emulation_super_set_mode(void* self, int mode) {
+    Konsole__Emulation_SuperSetMode((Konsole__Emulation*)self, mode);
 }
 
 void k_onsole__emulation_reset_mode(void* self, int mode) {
@@ -349,8 +349,8 @@ void k_onsole__emulation_on_reset_mode(void* self, void (*callback)(void*, int))
     Konsole__Emulation_OnResetMode((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_reset_mode(void* self, int mode) {
-    Konsole__Emulation_QBaseResetMode((Konsole__Emulation*)self, mode);
+void k_onsole__emulation_super_reset_mode(void* self, int mode) {
+    Konsole__Emulation_SuperResetMode((Konsole__Emulation*)self, mode);
 }
 
 void k_onsole__emulation_set_screen(void* self, int index) {
@@ -361,8 +361,8 @@ void k_onsole__emulation_on_set_screen(void* self, void (*callback)(void*, int))
     Konsole__Emulation_OnSetScreen((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_set_screen(void* self, int index) {
-    Konsole__Emulation_QBaseSetScreen((Konsole__Emulation*)self, index);
+void k_onsole__emulation_super_set_screen(void* self, int index) {
+    Konsole__Emulation_SuperSetScreen((Konsole__Emulation*)self, index);
 }
 
 void k_onsole__emulation_set_codec(void* self, int32_t codec) {
@@ -373,8 +373,8 @@ void k_onsole__emulation_on_set_codec(void* self, void (*callback)(void*, int32_
     Konsole__Emulation_OnSetCodec((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_set_codec(void* self, int32_t codec) {
-    Konsole__Emulation_QBaseSetCodec((Konsole__Emulation*)self, codec);
+void k_onsole__emulation_super_set_codec(void* self, int32_t codec) {
+    Konsole__Emulation_SuperSetCodec((Konsole__Emulation*)self, codec);
 }
 
 void k_onsole__emulation_buffered_update(void* self) {
@@ -385,8 +385,8 @@ void k_onsole__emulation_on_buffered_update(void* self, void (*callback)()) {
     Konsole__Emulation_OnBufferedUpdate((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_qbase_buffered_update(void* self) {
-    Konsole__Emulation_QBaseBufferedUpdate((Konsole__Emulation*)self);
+void k_onsole__emulation_super_buffered_update(void* self) {
+    Konsole__Emulation_SuperBufferedUpdate((Konsole__Emulation*)self);
 }
 
 const char* k_onsole__emulation_tr2(const char* s, const char* c) {
@@ -618,8 +618,8 @@ bool k_onsole__emulation_event(void* self, void* event) {
     return Konsole__Emulation_Event((Konsole__Emulation*)self, (QEvent*)event);
 }
 
-bool k_onsole__emulation_qbase_event(void* self, void* event) {
-    return Konsole__Emulation_QBaseEvent((Konsole__Emulation*)self, (QEvent*)event);
+bool k_onsole__emulation_super_event(void* self, void* event) {
+    return Konsole__Emulation_SuperEvent((Konsole__Emulation*)self, (QEvent*)event);
 }
 
 void k_onsole__emulation_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -630,8 +630,8 @@ bool k_onsole__emulation_event_filter(void* self, void* watched, void* event) {
     return Konsole__Emulation_EventFilter((Konsole__Emulation*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_onsole__emulation_qbase_event_filter(void* self, void* watched, void* event) {
-    return Konsole__Emulation_QBaseEventFilter((Konsole__Emulation*)self, (QObject*)watched, (QEvent*)event);
+bool k_onsole__emulation_super_event_filter(void* self, void* watched, void* event) {
+    return Konsole__Emulation_SuperEventFilter((Konsole__Emulation*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_onsole__emulation_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -642,8 +642,8 @@ void k_onsole__emulation_timer_event(void* self, void* event) {
     Konsole__Emulation_TimerEvent((Konsole__Emulation*)self, (QTimerEvent*)event);
 }
 
-void k_onsole__emulation_qbase_timer_event(void* self, void* event) {
-    Konsole__Emulation_QBaseTimerEvent((Konsole__Emulation*)self, (QTimerEvent*)event);
+void k_onsole__emulation_super_timer_event(void* self, void* event) {
+    Konsole__Emulation_SuperTimerEvent((Konsole__Emulation*)self, (QTimerEvent*)event);
 }
 
 void k_onsole__emulation_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -654,8 +654,8 @@ void k_onsole__emulation_child_event(void* self, void* event) {
     Konsole__Emulation_ChildEvent((Konsole__Emulation*)self, (QChildEvent*)event);
 }
 
-void k_onsole__emulation_qbase_child_event(void* self, void* event) {
-    Konsole__Emulation_QBaseChildEvent((Konsole__Emulation*)self, (QChildEvent*)event);
+void k_onsole__emulation_super_child_event(void* self, void* event) {
+    Konsole__Emulation_SuperChildEvent((Konsole__Emulation*)self, (QChildEvent*)event);
 }
 
 void k_onsole__emulation_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -666,8 +666,8 @@ void k_onsole__emulation_custom_event(void* self, void* event) {
     Konsole__Emulation_CustomEvent((Konsole__Emulation*)self, (QEvent*)event);
 }
 
-void k_onsole__emulation_qbase_custom_event(void* self, void* event) {
-    Konsole__Emulation_QBaseCustomEvent((Konsole__Emulation*)self, (QEvent*)event);
+void k_onsole__emulation_super_custom_event(void* self, void* event) {
+    Konsole__Emulation_SuperCustomEvent((Konsole__Emulation*)self, (QEvent*)event);
 }
 
 void k_onsole__emulation_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -678,8 +678,8 @@ void k_onsole__emulation_connect_notify(void* self, void* signal) {
     Konsole__Emulation_ConnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__emulation_qbase_connect_notify(void* self, void* signal) {
-    Konsole__Emulation_QBaseConnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
+void k_onsole__emulation_super_connect_notify(void* self, void* signal) {
+    Konsole__Emulation_SuperConnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__emulation_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -690,8 +690,8 @@ void k_onsole__emulation_disconnect_notify(void* self, void* signal) {
     Konsole__Emulation_DisconnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-void k_onsole__emulation_qbase_disconnect_notify(void* self, void* signal) {
-    Konsole__Emulation_QBaseDisconnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
+void k_onsole__emulation_super_disconnect_notify(void* self, void* signal) {
+    Konsole__Emulation_SuperDisconnectNotify((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__emulation_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -702,8 +702,8 @@ QObject* k_onsole__emulation_sender(void* self) {
     return Konsole__Emulation_Sender((Konsole__Emulation*)self);
 }
 
-QObject* k_onsole__emulation_qbase_sender(void* self) {
-    return Konsole__Emulation_QBaseSender((Konsole__Emulation*)self);
+QObject* k_onsole__emulation_super_sender(void* self) {
+    return Konsole__Emulation_SuperSender((Konsole__Emulation*)self);
 }
 
 void k_onsole__emulation_on_sender(void* self, QObject* (*callback)()) {
@@ -714,8 +714,8 @@ int32_t k_onsole__emulation_sender_signal_index(void* self) {
     return Konsole__Emulation_SenderSignalIndex((Konsole__Emulation*)self);
 }
 
-int32_t k_onsole__emulation_qbase_sender_signal_index(void* self) {
-    return Konsole__Emulation_QBaseSenderSignalIndex((Konsole__Emulation*)self);
+int32_t k_onsole__emulation_super_sender_signal_index(void* self) {
+    return Konsole__Emulation_SuperSenderSignalIndex((Konsole__Emulation*)self);
 }
 
 void k_onsole__emulation_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -726,8 +726,8 @@ int32_t k_onsole__emulation_receivers(void* self, const char* signal) {
     return Konsole__Emulation_Receivers((Konsole__Emulation*)self, signal);
 }
 
-int32_t k_onsole__emulation_qbase_receivers(void* self, const char* signal) {
-    return Konsole__Emulation_QBaseReceivers((Konsole__Emulation*)self, signal);
+int32_t k_onsole__emulation_super_receivers(void* self, const char* signal) {
+    return Konsole__Emulation_SuperReceivers((Konsole__Emulation*)self, signal);
 }
 
 void k_onsole__emulation_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -738,8 +738,8 @@ bool k_onsole__emulation_is_signal_connected(void* self, void* signal) {
     return Konsole__Emulation_IsSignalConnected((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
-bool k_onsole__emulation_qbase_is_signal_connected(void* self, void* signal) {
-    return Konsole__Emulation_QBaseIsSignalConnected((Konsole__Emulation*)self, (QMetaMethod*)signal);
+bool k_onsole__emulation_super_is_signal_connected(void* self, void* signal) {
+    return Konsole__Emulation_SuperIsSignalConnected((Konsole__Emulation*)self, (QMetaMethod*)signal);
 }
 
 void k_onsole__emulation_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

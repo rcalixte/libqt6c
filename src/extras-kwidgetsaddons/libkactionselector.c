@@ -31,8 +31,8 @@ void k_actionselector_on_meta_object(void* self, const QMetaObject* (*callback)(
     KActionSelector_OnMetaObject((KActionSelector*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_actionselector_qbase_meta_object(void* self) {
-    return KActionSelector_QBaseMetaObject((KActionSelector*)self);
+const QMetaObject* k_actionselector_super_meta_object(void* self) {
+    return KActionSelector_SuperMetaObject((KActionSelector*)self);
 }
 
 void* k_actionselector_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_actionselector_on_metacast(void* self, void* (*callback)(void*, const cha
     KActionSelector_OnMetacast((KActionSelector*)self, (intptr_t)callback);
 }
 
-void* k_actionselector_qbase_metacast(void* self, const char* param1) {
-    return KActionSelector_QBaseMetacast((KActionSelector*)self, param1);
+void* k_actionselector_super_metacast(void* self, const char* param1) {
+    return KActionSelector_SuperMetacast((KActionSelector*)self, param1);
 }
 
 int32_t k_actionselector_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_actionselector_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KActionSelector_OnMetacall((KActionSelector*)self, (intptr_t)callback);
 }
 
-int32_t k_actionselector_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KActionSelector_QBaseMetacall((KActionSelector*)self, param1, param2, param3);
+int32_t k_actionselector_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KActionSelector_SuperMetacall((KActionSelector*)self, param1, param2, param3);
 }
 
 const char* k_actionselector_tr(const char* s) {
@@ -196,8 +196,8 @@ void k_actionselector_on_key_press_event(void* self, void (*callback)(void*, voi
     KActionSelector_OnKeyPressEvent((KActionSelector*)self, (intptr_t)callback);
 }
 
-void k_actionselector_qbase_key_press_event(void* self, void* param1) {
-    KActionSelector_QBaseKeyPressEvent((KActionSelector*)self, (QKeyEvent*)param1);
+void k_actionselector_super_key_press_event(void* self, void* param1) {
+    KActionSelector_SuperKeyPressEvent((KActionSelector*)self, (QKeyEvent*)param1);
 }
 
 bool k_actionselector_event_filter(void* self, void* param1, void* param2) {
@@ -208,8 +208,8 @@ void k_actionselector_on_event_filter(void* self, bool (*callback)(void*, void*,
     KActionSelector_OnEventFilter((KActionSelector*)self, (intptr_t)callback);
 }
 
-bool k_actionselector_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KActionSelector_QBaseEventFilter((KActionSelector*)self, (QObject*)param1, (QEvent*)param2);
+bool k_actionselector_super_event_filter(void* self, void* param1, void* param2) {
+    return KActionSelector_SuperEventFilter((KActionSelector*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 const char* k_actionselector_tr2(const char* s, const char* c) {
@@ -1611,8 +1611,8 @@ int32_t k_actionselector_dev_type(void* self) {
     return KActionSelector_DevType((KActionSelector*)self);
 }
 
-int32_t k_actionselector_qbase_dev_type(void* self) {
-    return KActionSelector_QBaseDevType((KActionSelector*)self);
+int32_t k_actionselector_super_dev_type(void* self) {
+    return KActionSelector_SuperDevType((KActionSelector*)self);
 }
 
 void k_actionselector_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1623,8 +1623,8 @@ void k_actionselector_set_visible(void* self, bool visible) {
     KActionSelector_SetVisible((KActionSelector*)self, visible);
 }
 
-void k_actionselector_qbase_set_visible(void* self, bool visible) {
-    KActionSelector_QBaseSetVisible((KActionSelector*)self, visible);
+void k_actionselector_super_set_visible(void* self, bool visible) {
+    KActionSelector_SuperSetVisible((KActionSelector*)self, visible);
 }
 
 void k_actionselector_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1635,8 +1635,8 @@ QSize* k_actionselector_size_hint(void* self) {
     return KActionSelector_SizeHint((KActionSelector*)self);
 }
 
-QSize* k_actionselector_qbase_size_hint(void* self) {
-    return KActionSelector_QBaseSizeHint((KActionSelector*)self);
+QSize* k_actionselector_super_size_hint(void* self) {
+    return KActionSelector_SuperSizeHint((KActionSelector*)self);
 }
 
 void k_actionselector_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1647,8 +1647,8 @@ QSize* k_actionselector_minimum_size_hint(void* self) {
     return KActionSelector_MinimumSizeHint((KActionSelector*)self);
 }
 
-QSize* k_actionselector_qbase_minimum_size_hint(void* self) {
-    return KActionSelector_QBaseMinimumSizeHint((KActionSelector*)self);
+QSize* k_actionselector_super_minimum_size_hint(void* self) {
+    return KActionSelector_SuperMinimumSizeHint((KActionSelector*)self);
 }
 
 void k_actionselector_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1659,8 +1659,8 @@ int32_t k_actionselector_height_for_width(void* self, int param1) {
     return KActionSelector_HeightForWidth((KActionSelector*)self, param1);
 }
 
-int32_t k_actionselector_qbase_height_for_width(void* self, int param1) {
-    return KActionSelector_QBaseHeightForWidth((KActionSelector*)self, param1);
+int32_t k_actionselector_super_height_for_width(void* self, int param1) {
+    return KActionSelector_SuperHeightForWidth((KActionSelector*)self, param1);
 }
 
 void k_actionselector_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1671,8 +1671,8 @@ bool k_actionselector_has_height_for_width(void* self) {
     return KActionSelector_HasHeightForWidth((KActionSelector*)self);
 }
 
-bool k_actionselector_qbase_has_height_for_width(void* self) {
-    return KActionSelector_QBaseHasHeightForWidth((KActionSelector*)self);
+bool k_actionselector_super_has_height_for_width(void* self) {
+    return KActionSelector_SuperHasHeightForWidth((KActionSelector*)self);
 }
 
 void k_actionselector_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1683,8 +1683,8 @@ QPaintEngine* k_actionselector_paint_engine(void* self) {
     return KActionSelector_PaintEngine((KActionSelector*)self);
 }
 
-QPaintEngine* k_actionselector_qbase_paint_engine(void* self) {
-    return KActionSelector_QBasePaintEngine((KActionSelector*)self);
+QPaintEngine* k_actionselector_super_paint_engine(void* self) {
+    return KActionSelector_SuperPaintEngine((KActionSelector*)self);
 }
 
 void k_actionselector_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1695,8 +1695,8 @@ bool k_actionselector_event(void* self, void* event) {
     return KActionSelector_Event((KActionSelector*)self, (QEvent*)event);
 }
 
-bool k_actionselector_qbase_event(void* self, void* event) {
-    return KActionSelector_QBaseEvent((KActionSelector*)self, (QEvent*)event);
+bool k_actionselector_super_event(void* self, void* event) {
+    return KActionSelector_SuperEvent((KActionSelector*)self, (QEvent*)event);
 }
 
 void k_actionselector_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1707,8 +1707,8 @@ void k_actionselector_mouse_press_event(void* self, void* event) {
     KActionSelector_MousePressEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
-void k_actionselector_qbase_mouse_press_event(void* self, void* event) {
-    KActionSelector_QBaseMousePressEvent((KActionSelector*)self, (QMouseEvent*)event);
+void k_actionselector_super_mouse_press_event(void* self, void* event) {
+    KActionSelector_SuperMousePressEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
 void k_actionselector_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1719,8 +1719,8 @@ void k_actionselector_mouse_release_event(void* self, void* event) {
     KActionSelector_MouseReleaseEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
-void k_actionselector_qbase_mouse_release_event(void* self, void* event) {
-    KActionSelector_QBaseMouseReleaseEvent((KActionSelector*)self, (QMouseEvent*)event);
+void k_actionselector_super_mouse_release_event(void* self, void* event) {
+    KActionSelector_SuperMouseReleaseEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
 void k_actionselector_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1731,8 +1731,8 @@ void k_actionselector_mouse_double_click_event(void* self, void* event) {
     KActionSelector_MouseDoubleClickEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
-void k_actionselector_qbase_mouse_double_click_event(void* self, void* event) {
-    KActionSelector_QBaseMouseDoubleClickEvent((KActionSelector*)self, (QMouseEvent*)event);
+void k_actionselector_super_mouse_double_click_event(void* self, void* event) {
+    KActionSelector_SuperMouseDoubleClickEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
 void k_actionselector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1743,8 +1743,8 @@ void k_actionselector_mouse_move_event(void* self, void* event) {
     KActionSelector_MouseMoveEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
-void k_actionselector_qbase_mouse_move_event(void* self, void* event) {
-    KActionSelector_QBaseMouseMoveEvent((KActionSelector*)self, (QMouseEvent*)event);
+void k_actionselector_super_mouse_move_event(void* self, void* event) {
+    KActionSelector_SuperMouseMoveEvent((KActionSelector*)self, (QMouseEvent*)event);
 }
 
 void k_actionselector_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1755,8 +1755,8 @@ void k_actionselector_wheel_event(void* self, void* event) {
     KActionSelector_WheelEvent((KActionSelector*)self, (QWheelEvent*)event);
 }
 
-void k_actionselector_qbase_wheel_event(void* self, void* event) {
-    KActionSelector_QBaseWheelEvent((KActionSelector*)self, (QWheelEvent*)event);
+void k_actionselector_super_wheel_event(void* self, void* event) {
+    KActionSelector_SuperWheelEvent((KActionSelector*)self, (QWheelEvent*)event);
 }
 
 void k_actionselector_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1767,8 +1767,8 @@ void k_actionselector_key_release_event(void* self, void* event) {
     KActionSelector_KeyReleaseEvent((KActionSelector*)self, (QKeyEvent*)event);
 }
 
-void k_actionselector_qbase_key_release_event(void* self, void* event) {
-    KActionSelector_QBaseKeyReleaseEvent((KActionSelector*)self, (QKeyEvent*)event);
+void k_actionselector_super_key_release_event(void* self, void* event) {
+    KActionSelector_SuperKeyReleaseEvent((KActionSelector*)self, (QKeyEvent*)event);
 }
 
 void k_actionselector_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1779,8 +1779,8 @@ void k_actionselector_focus_in_event(void* self, void* event) {
     KActionSelector_FocusInEvent((KActionSelector*)self, (QFocusEvent*)event);
 }
 
-void k_actionselector_qbase_focus_in_event(void* self, void* event) {
-    KActionSelector_QBaseFocusInEvent((KActionSelector*)self, (QFocusEvent*)event);
+void k_actionselector_super_focus_in_event(void* self, void* event) {
+    KActionSelector_SuperFocusInEvent((KActionSelector*)self, (QFocusEvent*)event);
 }
 
 void k_actionselector_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1791,8 +1791,8 @@ void k_actionselector_focus_out_event(void* self, void* event) {
     KActionSelector_FocusOutEvent((KActionSelector*)self, (QFocusEvent*)event);
 }
 
-void k_actionselector_qbase_focus_out_event(void* self, void* event) {
-    KActionSelector_QBaseFocusOutEvent((KActionSelector*)self, (QFocusEvent*)event);
+void k_actionselector_super_focus_out_event(void* self, void* event) {
+    KActionSelector_SuperFocusOutEvent((KActionSelector*)self, (QFocusEvent*)event);
 }
 
 void k_actionselector_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1803,8 +1803,8 @@ void k_actionselector_enter_event(void* self, void* event) {
     KActionSelector_EnterEvent((KActionSelector*)self, (QEnterEvent*)event);
 }
 
-void k_actionselector_qbase_enter_event(void* self, void* event) {
-    KActionSelector_QBaseEnterEvent((KActionSelector*)self, (QEnterEvent*)event);
+void k_actionselector_super_enter_event(void* self, void* event) {
+    KActionSelector_SuperEnterEvent((KActionSelector*)self, (QEnterEvent*)event);
 }
 
 void k_actionselector_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1815,8 +1815,8 @@ void k_actionselector_leave_event(void* self, void* event) {
     KActionSelector_LeaveEvent((KActionSelector*)self, (QEvent*)event);
 }
 
-void k_actionselector_qbase_leave_event(void* self, void* event) {
-    KActionSelector_QBaseLeaveEvent((KActionSelector*)self, (QEvent*)event);
+void k_actionselector_super_leave_event(void* self, void* event) {
+    KActionSelector_SuperLeaveEvent((KActionSelector*)self, (QEvent*)event);
 }
 
 void k_actionselector_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1827,8 +1827,8 @@ void k_actionselector_paint_event(void* self, void* event) {
     KActionSelector_PaintEvent((KActionSelector*)self, (QPaintEvent*)event);
 }
 
-void k_actionselector_qbase_paint_event(void* self, void* event) {
-    KActionSelector_QBasePaintEvent((KActionSelector*)self, (QPaintEvent*)event);
+void k_actionselector_super_paint_event(void* self, void* event) {
+    KActionSelector_SuperPaintEvent((KActionSelector*)self, (QPaintEvent*)event);
 }
 
 void k_actionselector_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1839,8 +1839,8 @@ void k_actionselector_move_event(void* self, void* event) {
     KActionSelector_MoveEvent((KActionSelector*)self, (QMoveEvent*)event);
 }
 
-void k_actionselector_qbase_move_event(void* self, void* event) {
-    KActionSelector_QBaseMoveEvent((KActionSelector*)self, (QMoveEvent*)event);
+void k_actionselector_super_move_event(void* self, void* event) {
+    KActionSelector_SuperMoveEvent((KActionSelector*)self, (QMoveEvent*)event);
 }
 
 void k_actionselector_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1851,8 +1851,8 @@ void k_actionselector_resize_event(void* self, void* event) {
     KActionSelector_ResizeEvent((KActionSelector*)self, (QResizeEvent*)event);
 }
 
-void k_actionselector_qbase_resize_event(void* self, void* event) {
-    KActionSelector_QBaseResizeEvent((KActionSelector*)self, (QResizeEvent*)event);
+void k_actionselector_super_resize_event(void* self, void* event) {
+    KActionSelector_SuperResizeEvent((KActionSelector*)self, (QResizeEvent*)event);
 }
 
 void k_actionselector_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1863,8 +1863,8 @@ void k_actionselector_close_event(void* self, void* event) {
     KActionSelector_CloseEvent((KActionSelector*)self, (QCloseEvent*)event);
 }
 
-void k_actionselector_qbase_close_event(void* self, void* event) {
-    KActionSelector_QBaseCloseEvent((KActionSelector*)self, (QCloseEvent*)event);
+void k_actionselector_super_close_event(void* self, void* event) {
+    KActionSelector_SuperCloseEvent((KActionSelector*)self, (QCloseEvent*)event);
 }
 
 void k_actionselector_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1875,8 +1875,8 @@ void k_actionselector_context_menu_event(void* self, void* event) {
     KActionSelector_ContextMenuEvent((KActionSelector*)self, (QContextMenuEvent*)event);
 }
 
-void k_actionselector_qbase_context_menu_event(void* self, void* event) {
-    KActionSelector_QBaseContextMenuEvent((KActionSelector*)self, (QContextMenuEvent*)event);
+void k_actionselector_super_context_menu_event(void* self, void* event) {
+    KActionSelector_SuperContextMenuEvent((KActionSelector*)self, (QContextMenuEvent*)event);
 }
 
 void k_actionselector_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1887,8 +1887,8 @@ void k_actionselector_tablet_event(void* self, void* event) {
     KActionSelector_TabletEvent((KActionSelector*)self, (QTabletEvent*)event);
 }
 
-void k_actionselector_qbase_tablet_event(void* self, void* event) {
-    KActionSelector_QBaseTabletEvent((KActionSelector*)self, (QTabletEvent*)event);
+void k_actionselector_super_tablet_event(void* self, void* event) {
+    KActionSelector_SuperTabletEvent((KActionSelector*)self, (QTabletEvent*)event);
 }
 
 void k_actionselector_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1899,8 +1899,8 @@ void k_actionselector_action_event(void* self, void* event) {
     KActionSelector_ActionEvent((KActionSelector*)self, (QActionEvent*)event);
 }
 
-void k_actionselector_qbase_action_event(void* self, void* event) {
-    KActionSelector_QBaseActionEvent((KActionSelector*)self, (QActionEvent*)event);
+void k_actionselector_super_action_event(void* self, void* event) {
+    KActionSelector_SuperActionEvent((KActionSelector*)self, (QActionEvent*)event);
 }
 
 void k_actionselector_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1911,8 +1911,8 @@ void k_actionselector_drag_enter_event(void* self, void* event) {
     KActionSelector_DragEnterEvent((KActionSelector*)self, (QDragEnterEvent*)event);
 }
 
-void k_actionselector_qbase_drag_enter_event(void* self, void* event) {
-    KActionSelector_QBaseDragEnterEvent((KActionSelector*)self, (QDragEnterEvent*)event);
+void k_actionselector_super_drag_enter_event(void* self, void* event) {
+    KActionSelector_SuperDragEnterEvent((KActionSelector*)self, (QDragEnterEvent*)event);
 }
 
 void k_actionselector_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1923,8 +1923,8 @@ void k_actionselector_drag_move_event(void* self, void* event) {
     KActionSelector_DragMoveEvent((KActionSelector*)self, (QDragMoveEvent*)event);
 }
 
-void k_actionselector_qbase_drag_move_event(void* self, void* event) {
-    KActionSelector_QBaseDragMoveEvent((KActionSelector*)self, (QDragMoveEvent*)event);
+void k_actionselector_super_drag_move_event(void* self, void* event) {
+    KActionSelector_SuperDragMoveEvent((KActionSelector*)self, (QDragMoveEvent*)event);
 }
 
 void k_actionselector_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1935,8 +1935,8 @@ void k_actionselector_drag_leave_event(void* self, void* event) {
     KActionSelector_DragLeaveEvent((KActionSelector*)self, (QDragLeaveEvent*)event);
 }
 
-void k_actionselector_qbase_drag_leave_event(void* self, void* event) {
-    KActionSelector_QBaseDragLeaveEvent((KActionSelector*)self, (QDragLeaveEvent*)event);
+void k_actionselector_super_drag_leave_event(void* self, void* event) {
+    KActionSelector_SuperDragLeaveEvent((KActionSelector*)self, (QDragLeaveEvent*)event);
 }
 
 void k_actionselector_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1947,8 +1947,8 @@ void k_actionselector_drop_event(void* self, void* event) {
     KActionSelector_DropEvent((KActionSelector*)self, (QDropEvent*)event);
 }
 
-void k_actionselector_qbase_drop_event(void* self, void* event) {
-    KActionSelector_QBaseDropEvent((KActionSelector*)self, (QDropEvent*)event);
+void k_actionselector_super_drop_event(void* self, void* event) {
+    KActionSelector_SuperDropEvent((KActionSelector*)self, (QDropEvent*)event);
 }
 
 void k_actionselector_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1959,8 +1959,8 @@ void k_actionselector_show_event(void* self, void* event) {
     KActionSelector_ShowEvent((KActionSelector*)self, (QShowEvent*)event);
 }
 
-void k_actionselector_qbase_show_event(void* self, void* event) {
-    KActionSelector_QBaseShowEvent((KActionSelector*)self, (QShowEvent*)event);
+void k_actionselector_super_show_event(void* self, void* event) {
+    KActionSelector_SuperShowEvent((KActionSelector*)self, (QShowEvent*)event);
 }
 
 void k_actionselector_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1971,8 +1971,8 @@ void k_actionselector_hide_event(void* self, void* event) {
     KActionSelector_HideEvent((KActionSelector*)self, (QHideEvent*)event);
 }
 
-void k_actionselector_qbase_hide_event(void* self, void* event) {
-    KActionSelector_QBaseHideEvent((KActionSelector*)self, (QHideEvent*)event);
+void k_actionselector_super_hide_event(void* self, void* event) {
+    KActionSelector_SuperHideEvent((KActionSelector*)self, (QHideEvent*)event);
 }
 
 void k_actionselector_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1983,8 +1983,8 @@ bool k_actionselector_native_event(void* self, char* eventType, void* message, i
     return KActionSelector_NativeEvent((KActionSelector*)self, qstring(eventType), message, result);
 }
 
-bool k_actionselector_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KActionSelector_QBaseNativeEvent((KActionSelector*)self, qstring(eventType), message, result);
+bool k_actionselector_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KActionSelector_SuperNativeEvent((KActionSelector*)self, qstring(eventType), message, result);
 }
 
 void k_actionselector_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1995,8 +1995,8 @@ void k_actionselector_change_event(void* self, void* param1) {
     KActionSelector_ChangeEvent((KActionSelector*)self, (QEvent*)param1);
 }
 
-void k_actionselector_qbase_change_event(void* self, void* param1) {
-    KActionSelector_QBaseChangeEvent((KActionSelector*)self, (QEvent*)param1);
+void k_actionselector_super_change_event(void* self, void* param1) {
+    KActionSelector_SuperChangeEvent((KActionSelector*)self, (QEvent*)param1);
 }
 
 void k_actionselector_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ int32_t k_actionselector_metric(void* self, int32_t param1) {
     return KActionSelector_Metric((KActionSelector*)self, param1);
 }
 
-int32_t k_actionselector_qbase_metric(void* self, int32_t param1) {
-    return KActionSelector_QBaseMetric((KActionSelector*)self, param1);
+int32_t k_actionselector_super_metric(void* self, int32_t param1) {
+    return KActionSelector_SuperMetric((KActionSelector*)self, param1);
 }
 
 void k_actionselector_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2019,8 +2019,8 @@ void k_actionselector_init_painter(void* self, void* painter) {
     KActionSelector_InitPainter((KActionSelector*)self, (QPainter*)painter);
 }
 
-void k_actionselector_qbase_init_painter(void* self, void* painter) {
-    KActionSelector_QBaseInitPainter((KActionSelector*)self, (QPainter*)painter);
+void k_actionselector_super_init_painter(void* self, void* painter) {
+    KActionSelector_SuperInitPainter((KActionSelector*)self, (QPainter*)painter);
 }
 
 void k_actionselector_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2031,8 +2031,8 @@ QPaintDevice* k_actionselector_redirected(void* self, void* offset) {
     return KActionSelector_Redirected((KActionSelector*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_actionselector_qbase_redirected(void* self, void* offset) {
-    return KActionSelector_QBaseRedirected((KActionSelector*)self, (QPoint*)offset);
+QPaintDevice* k_actionselector_super_redirected(void* self, void* offset) {
+    return KActionSelector_SuperRedirected((KActionSelector*)self, (QPoint*)offset);
 }
 
 void k_actionselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2043,8 +2043,8 @@ QPainter* k_actionselector_shared_painter(void* self) {
     return KActionSelector_SharedPainter((KActionSelector*)self);
 }
 
-QPainter* k_actionselector_qbase_shared_painter(void* self) {
-    return KActionSelector_QBaseSharedPainter((KActionSelector*)self);
+QPainter* k_actionselector_super_shared_painter(void* self) {
+    return KActionSelector_SuperSharedPainter((KActionSelector*)self);
 }
 
 void k_actionselector_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2055,8 +2055,8 @@ void k_actionselector_input_method_event(void* self, void* param1) {
     KActionSelector_InputMethodEvent((KActionSelector*)self, (QInputMethodEvent*)param1);
 }
 
-void k_actionselector_qbase_input_method_event(void* self, void* param1) {
-    KActionSelector_QBaseInputMethodEvent((KActionSelector*)self, (QInputMethodEvent*)param1);
+void k_actionselector_super_input_method_event(void* self, void* param1) {
+    KActionSelector_SuperInputMethodEvent((KActionSelector*)self, (QInputMethodEvent*)param1);
 }
 
 void k_actionselector_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2067,8 +2067,8 @@ QVariant* k_actionselector_input_method_query(void* self, int32_t param1) {
     return KActionSelector_InputMethodQuery((KActionSelector*)self, param1);
 }
 
-QVariant* k_actionselector_qbase_input_method_query(void* self, int32_t param1) {
-    return KActionSelector_QBaseInputMethodQuery((KActionSelector*)self, param1);
+QVariant* k_actionselector_super_input_method_query(void* self, int32_t param1) {
+    return KActionSelector_SuperInputMethodQuery((KActionSelector*)self, param1);
 }
 
 void k_actionselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2079,8 +2079,8 @@ bool k_actionselector_focus_next_prev_child(void* self, bool next) {
     return KActionSelector_FocusNextPrevChild((KActionSelector*)self, next);
 }
 
-bool k_actionselector_qbase_focus_next_prev_child(void* self, bool next) {
-    return KActionSelector_QBaseFocusNextPrevChild((KActionSelector*)self, next);
+bool k_actionselector_super_focus_next_prev_child(void* self, bool next) {
+    return KActionSelector_SuperFocusNextPrevChild((KActionSelector*)self, next);
 }
 
 void k_actionselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2091,8 +2091,8 @@ void k_actionselector_timer_event(void* self, void* event) {
     KActionSelector_TimerEvent((KActionSelector*)self, (QTimerEvent*)event);
 }
 
-void k_actionselector_qbase_timer_event(void* self, void* event) {
-    KActionSelector_QBaseTimerEvent((KActionSelector*)self, (QTimerEvent*)event);
+void k_actionselector_super_timer_event(void* self, void* event) {
+    KActionSelector_SuperTimerEvent((KActionSelector*)self, (QTimerEvent*)event);
 }
 
 void k_actionselector_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2103,8 +2103,8 @@ void k_actionselector_child_event(void* self, void* event) {
     KActionSelector_ChildEvent((KActionSelector*)self, (QChildEvent*)event);
 }
 
-void k_actionselector_qbase_child_event(void* self, void* event) {
-    KActionSelector_QBaseChildEvent((KActionSelector*)self, (QChildEvent*)event);
+void k_actionselector_super_child_event(void* self, void* event) {
+    KActionSelector_SuperChildEvent((KActionSelector*)self, (QChildEvent*)event);
 }
 
 void k_actionselector_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2115,8 +2115,8 @@ void k_actionselector_custom_event(void* self, void* event) {
     KActionSelector_CustomEvent((KActionSelector*)self, (QEvent*)event);
 }
 
-void k_actionselector_qbase_custom_event(void* self, void* event) {
-    KActionSelector_QBaseCustomEvent((KActionSelector*)self, (QEvent*)event);
+void k_actionselector_super_custom_event(void* self, void* event) {
+    KActionSelector_SuperCustomEvent((KActionSelector*)self, (QEvent*)event);
 }
 
 void k_actionselector_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ void k_actionselector_connect_notify(void* self, void* signal) {
     KActionSelector_ConnectNotify((KActionSelector*)self, (QMetaMethod*)signal);
 }
 
-void k_actionselector_qbase_connect_notify(void* self, void* signal) {
-    KActionSelector_QBaseConnectNotify((KActionSelector*)self, (QMetaMethod*)signal);
+void k_actionselector_super_connect_notify(void* self, void* signal) {
+    KActionSelector_SuperConnectNotify((KActionSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_actionselector_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2139,8 +2139,8 @@ void k_actionselector_disconnect_notify(void* self, void* signal) {
     KActionSelector_DisconnectNotify((KActionSelector*)self, (QMetaMethod*)signal);
 }
 
-void k_actionselector_qbase_disconnect_notify(void* self, void* signal) {
-    KActionSelector_QBaseDisconnectNotify((KActionSelector*)self, (QMetaMethod*)signal);
+void k_actionselector_super_disconnect_notify(void* self, void* signal) {
+    KActionSelector_SuperDisconnectNotify((KActionSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_actionselector_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2151,8 +2151,8 @@ void k_actionselector_update_micro_focus(void* self) {
     KActionSelector_UpdateMicroFocus((KActionSelector*)self);
 }
 
-void k_actionselector_qbase_update_micro_focus(void* self) {
-    KActionSelector_QBaseUpdateMicroFocus((KActionSelector*)self);
+void k_actionselector_super_update_micro_focus(void* self) {
+    KActionSelector_SuperUpdateMicroFocus((KActionSelector*)self);
 }
 
 void k_actionselector_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2163,8 +2163,8 @@ void k_actionselector_create(void* self) {
     KActionSelector_Create((KActionSelector*)self);
 }
 
-void k_actionselector_qbase_create(void* self) {
-    KActionSelector_QBaseCreate((KActionSelector*)self);
+void k_actionselector_super_create(void* self) {
+    KActionSelector_SuperCreate((KActionSelector*)self);
 }
 
 void k_actionselector_on_create(void* self, void (*callback)()) {
@@ -2175,8 +2175,8 @@ void k_actionselector_destroy(void* self) {
     KActionSelector_Destroy((KActionSelector*)self);
 }
 
-void k_actionselector_qbase_destroy(void* self) {
-    KActionSelector_QBaseDestroy((KActionSelector*)self);
+void k_actionselector_super_destroy(void* self) {
+    KActionSelector_SuperDestroy((KActionSelector*)self);
 }
 
 void k_actionselector_on_destroy(void* self, void (*callback)()) {
@@ -2187,8 +2187,8 @@ bool k_actionselector_focus_next_child(void* self) {
     return KActionSelector_FocusNextChild((KActionSelector*)self);
 }
 
-bool k_actionselector_qbase_focus_next_child(void* self) {
-    return KActionSelector_QBaseFocusNextChild((KActionSelector*)self);
+bool k_actionselector_super_focus_next_child(void* self) {
+    return KActionSelector_SuperFocusNextChild((KActionSelector*)self);
 }
 
 void k_actionselector_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2199,8 +2199,8 @@ bool k_actionselector_focus_previous_child(void* self) {
     return KActionSelector_FocusPreviousChild((KActionSelector*)self);
 }
 
-bool k_actionselector_qbase_focus_previous_child(void* self) {
-    return KActionSelector_QBaseFocusPreviousChild((KActionSelector*)self);
+bool k_actionselector_super_focus_previous_child(void* self) {
+    return KActionSelector_SuperFocusPreviousChild((KActionSelector*)self);
 }
 
 void k_actionselector_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2211,8 +2211,8 @@ QObject* k_actionselector_sender(void* self) {
     return KActionSelector_Sender((KActionSelector*)self);
 }
 
-QObject* k_actionselector_qbase_sender(void* self) {
-    return KActionSelector_QBaseSender((KActionSelector*)self);
+QObject* k_actionselector_super_sender(void* self) {
+    return KActionSelector_SuperSender((KActionSelector*)self);
 }
 
 void k_actionselector_on_sender(void* self, QObject* (*callback)()) {
@@ -2223,8 +2223,8 @@ int32_t k_actionselector_sender_signal_index(void* self) {
     return KActionSelector_SenderSignalIndex((KActionSelector*)self);
 }
 
-int32_t k_actionselector_qbase_sender_signal_index(void* self) {
-    return KActionSelector_QBaseSenderSignalIndex((KActionSelector*)self);
+int32_t k_actionselector_super_sender_signal_index(void* self) {
+    return KActionSelector_SuperSenderSignalIndex((KActionSelector*)self);
 }
 
 void k_actionselector_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2235,8 +2235,8 @@ int32_t k_actionselector_receivers(void* self, const char* signal) {
     return KActionSelector_Receivers((KActionSelector*)self, signal);
 }
 
-int32_t k_actionselector_qbase_receivers(void* self, const char* signal) {
-    return KActionSelector_QBaseReceivers((KActionSelector*)self, signal);
+int32_t k_actionselector_super_receivers(void* self, const char* signal) {
+    return KActionSelector_SuperReceivers((KActionSelector*)self, signal);
 }
 
 void k_actionselector_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2247,8 +2247,8 @@ bool k_actionselector_is_signal_connected(void* self, void* signal) {
     return KActionSelector_IsSignalConnected((KActionSelector*)self, (QMetaMethod*)signal);
 }
 
-bool k_actionselector_qbase_is_signal_connected(void* self, void* signal) {
-    return KActionSelector_QBaseIsSignalConnected((KActionSelector*)self, (QMetaMethod*)signal);
+bool k_actionselector_super_is_signal_connected(void* self, void* signal) {
+    return KActionSelector_SuperIsSignalConnected((KActionSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_actionselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2259,8 +2259,8 @@ double k_actionselector_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KActionSelector_GetDecodedMetricF((KActionSelector*)self, metricA, metricB);
 }
 
-double k_actionselector_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KActionSelector_QBaseGetDecodedMetricF((KActionSelector*)self, metricA, metricB);
+double k_actionselector_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KActionSelector_SuperGetDecodedMetricF((KActionSelector*)self, metricA, metricB);
 }
 
 void k_actionselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

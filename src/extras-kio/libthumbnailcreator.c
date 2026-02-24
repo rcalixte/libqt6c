@@ -96,8 +96,8 @@ void k_io__thumbnailcreator_on_meta_object(void* self, const QMetaObject* (*call
     KIO__ThumbnailCreator_OnMetaObject((KIO__ThumbnailCreator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__thumbnailcreator_qbase_meta_object(void* self) {
-    return KIO__ThumbnailCreator_QBaseMetaObject((KIO__ThumbnailCreator*)self);
+const QMetaObject* k_io__thumbnailcreator_super_meta_object(void* self) {
+    return KIO__ThumbnailCreator_SuperMetaObject((KIO__ThumbnailCreator*)self);
 }
 
 void* k_io__thumbnailcreator_metacast(void* self, const char* param1) {
@@ -108,8 +108,8 @@ void k_io__thumbnailcreator_on_metacast(void* self, void* (*callback)(void*, con
     KIO__ThumbnailCreator_OnMetacast((KIO__ThumbnailCreator*)self, (intptr_t)callback);
 }
 
-void* k_io__thumbnailcreator_qbase_metacast(void* self, const char* param1) {
-    return KIO__ThumbnailCreator_QBaseMetacast((KIO__ThumbnailCreator*)self, param1);
+void* k_io__thumbnailcreator_super_metacast(void* self, const char* param1) {
+    return KIO__ThumbnailCreator_SuperMetacast((KIO__ThumbnailCreator*)self, param1);
 }
 
 int32_t k_io__thumbnailcreator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -120,8 +120,8 @@ void k_io__thumbnailcreator_on_metacall(void* self, int32_t (*callback)(void*, i
     KIO__ThumbnailCreator_OnMetacall((KIO__ThumbnailCreator*)self, (intptr_t)callback);
 }
 
-int32_t k_io__thumbnailcreator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__ThumbnailCreator_QBaseMetacall((KIO__ThumbnailCreator*)self, param1, param2, param3);
+int32_t k_io__thumbnailcreator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__ThumbnailCreator_SuperMetacall((KIO__ThumbnailCreator*)self, param1, param2, param3);
 }
 
 const char* k_io__thumbnailcreator_tr(const char* s) {
@@ -139,8 +139,8 @@ void k_io__thumbnailcreator_on_create(void* self, KIO__ThumbnailResult* (*callba
     KIO__ThumbnailCreator_OnCreate((KIO__ThumbnailCreator*)self, (intptr_t)callback);
 }
 
-KIO__ThumbnailResult* k_io__thumbnailcreator_qbase_create(void* self, void* request) {
-    return KIO__ThumbnailCreator_QBaseCreate((KIO__ThumbnailCreator*)self, (KIO__ThumbnailRequest*)request);
+KIO__ThumbnailResult* k_io__thumbnailcreator_super_create(void* self, void* request) {
+    return KIO__ThumbnailCreator_SuperCreate((KIO__ThumbnailCreator*)self, (KIO__ThumbnailRequest*)request);
 }
 
 const char* k_io__thumbnailcreator_tr2(const char* s, const char* c) {
@@ -372,8 +372,8 @@ bool k_io__thumbnailcreator_event(void* self, void* event) {
     return KIO__ThumbnailCreator_Event((KIO__ThumbnailCreator*)self, (QEvent*)event);
 }
 
-bool k_io__thumbnailcreator_qbase_event(void* self, void* event) {
-    return KIO__ThumbnailCreator_QBaseEvent((KIO__ThumbnailCreator*)self, (QEvent*)event);
+bool k_io__thumbnailcreator_super_event(void* self, void* event) {
+    return KIO__ThumbnailCreator_SuperEvent((KIO__ThumbnailCreator*)self, (QEvent*)event);
 }
 
 void k_io__thumbnailcreator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -384,8 +384,8 @@ bool k_io__thumbnailcreator_event_filter(void* self, void* watched, void* event)
     return KIO__ThumbnailCreator_EventFilter((KIO__ThumbnailCreator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__thumbnailcreator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__ThumbnailCreator_QBaseEventFilter((KIO__ThumbnailCreator*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__thumbnailcreator_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__ThumbnailCreator_SuperEventFilter((KIO__ThumbnailCreator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__thumbnailcreator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -396,8 +396,8 @@ void k_io__thumbnailcreator_timer_event(void* self, void* event) {
     KIO__ThumbnailCreator_TimerEvent((KIO__ThumbnailCreator*)self, (QTimerEvent*)event);
 }
 
-void k_io__thumbnailcreator_qbase_timer_event(void* self, void* event) {
-    KIO__ThumbnailCreator_QBaseTimerEvent((KIO__ThumbnailCreator*)self, (QTimerEvent*)event);
+void k_io__thumbnailcreator_super_timer_event(void* self, void* event) {
+    KIO__ThumbnailCreator_SuperTimerEvent((KIO__ThumbnailCreator*)self, (QTimerEvent*)event);
 }
 
 void k_io__thumbnailcreator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -408,8 +408,8 @@ void k_io__thumbnailcreator_child_event(void* self, void* event) {
     KIO__ThumbnailCreator_ChildEvent((KIO__ThumbnailCreator*)self, (QChildEvent*)event);
 }
 
-void k_io__thumbnailcreator_qbase_child_event(void* self, void* event) {
-    KIO__ThumbnailCreator_QBaseChildEvent((KIO__ThumbnailCreator*)self, (QChildEvent*)event);
+void k_io__thumbnailcreator_super_child_event(void* self, void* event) {
+    KIO__ThumbnailCreator_SuperChildEvent((KIO__ThumbnailCreator*)self, (QChildEvent*)event);
 }
 
 void k_io__thumbnailcreator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void k_io__thumbnailcreator_custom_event(void* self, void* event) {
     KIO__ThumbnailCreator_CustomEvent((KIO__ThumbnailCreator*)self, (QEvent*)event);
 }
 
-void k_io__thumbnailcreator_qbase_custom_event(void* self, void* event) {
-    KIO__ThumbnailCreator_QBaseCustomEvent((KIO__ThumbnailCreator*)self, (QEvent*)event);
+void k_io__thumbnailcreator_super_custom_event(void* self, void* event) {
+    KIO__ThumbnailCreator_SuperCustomEvent((KIO__ThumbnailCreator*)self, (QEvent*)event);
 }
 
 void k_io__thumbnailcreator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void k_io__thumbnailcreator_connect_notify(void* self, void* signal) {
     KIO__ThumbnailCreator_ConnectNotify((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
 }
 
-void k_io__thumbnailcreator_qbase_connect_notify(void* self, void* signal) {
-    KIO__ThumbnailCreator_QBaseConnectNotify((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
+void k_io__thumbnailcreator_super_connect_notify(void* self, void* signal) {
+    KIO__ThumbnailCreator_SuperConnectNotify((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
 }
 
 void k_io__thumbnailcreator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ void k_io__thumbnailcreator_disconnect_notify(void* self, void* signal) {
     KIO__ThumbnailCreator_DisconnectNotify((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
 }
 
-void k_io__thumbnailcreator_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__ThumbnailCreator_QBaseDisconnectNotify((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
+void k_io__thumbnailcreator_super_disconnect_notify(void* self, void* signal) {
+    KIO__ThumbnailCreator_SuperDisconnectNotify((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
 }
 
 void k_io__thumbnailcreator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ QObject* k_io__thumbnailcreator_sender(void* self) {
     return KIO__ThumbnailCreator_Sender((KIO__ThumbnailCreator*)self);
 }
 
-QObject* k_io__thumbnailcreator_qbase_sender(void* self) {
-    return KIO__ThumbnailCreator_QBaseSender((KIO__ThumbnailCreator*)self);
+QObject* k_io__thumbnailcreator_super_sender(void* self) {
+    return KIO__ThumbnailCreator_SuperSender((KIO__ThumbnailCreator*)self);
 }
 
 void k_io__thumbnailcreator_on_sender(void* self, QObject* (*callback)()) {
@@ -468,8 +468,8 @@ int32_t k_io__thumbnailcreator_sender_signal_index(void* self) {
     return KIO__ThumbnailCreator_SenderSignalIndex((KIO__ThumbnailCreator*)self);
 }
 
-int32_t k_io__thumbnailcreator_qbase_sender_signal_index(void* self) {
-    return KIO__ThumbnailCreator_QBaseSenderSignalIndex((KIO__ThumbnailCreator*)self);
+int32_t k_io__thumbnailcreator_super_sender_signal_index(void* self) {
+    return KIO__ThumbnailCreator_SuperSenderSignalIndex((KIO__ThumbnailCreator*)self);
 }
 
 void k_io__thumbnailcreator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -480,8 +480,8 @@ int32_t k_io__thumbnailcreator_receivers(void* self, const char* signal) {
     return KIO__ThumbnailCreator_Receivers((KIO__ThumbnailCreator*)self, signal);
 }
 
-int32_t k_io__thumbnailcreator_qbase_receivers(void* self, const char* signal) {
-    return KIO__ThumbnailCreator_QBaseReceivers((KIO__ThumbnailCreator*)self, signal);
+int32_t k_io__thumbnailcreator_super_receivers(void* self, const char* signal) {
+    return KIO__ThumbnailCreator_SuperReceivers((KIO__ThumbnailCreator*)self, signal);
 }
 
 void k_io__thumbnailcreator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -492,8 +492,8 @@ bool k_io__thumbnailcreator_is_signal_connected(void* self, void* signal) {
     return KIO__ThumbnailCreator_IsSignalConnected((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__thumbnailcreator_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__ThumbnailCreator_QBaseIsSignalConnected((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
+bool k_io__thumbnailcreator_super_is_signal_connected(void* self, void* signal) {
+    return KIO__ThumbnailCreator_SuperIsSignalConnected((KIO__ThumbnailCreator*)self, (QMetaMethod*)signal);
 }
 
 void k_io__thumbnailcreator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

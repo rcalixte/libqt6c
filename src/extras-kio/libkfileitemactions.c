@@ -25,8 +25,8 @@ void k_fileitemactions_on_meta_object(void* self, const QMetaObject* (*callback)
     KFileItemActions_OnMetaObject((KFileItemActions*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fileitemactions_qbase_meta_object(void* self) {
-    return KFileItemActions_QBaseMetaObject((KFileItemActions*)self);
+const QMetaObject* k_fileitemactions_super_meta_object(void* self) {
+    return KFileItemActions_SuperMetaObject((KFileItemActions*)self);
 }
 
 void* k_fileitemactions_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void k_fileitemactions_on_metacast(void* self, void* (*callback)(void*, const ch
     KFileItemActions_OnMetacast((KFileItemActions*)self, (intptr_t)callback);
 }
 
-void* k_fileitemactions_qbase_metacast(void* self, const char* param1) {
-    return KFileItemActions_QBaseMetacast((KFileItemActions*)self, param1);
+void* k_fileitemactions_super_metacast(void* self, const char* param1) {
+    return KFileItemActions_SuperMetacast((KFileItemActions*)self, param1);
 }
 
 int32_t k_fileitemactions_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void k_fileitemactions_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KFileItemActions_OnMetacall((KFileItemActions*)self, (intptr_t)callback);
 }
 
-int32_t k_fileitemactions_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileItemActions_QBaseMetacall((KFileItemActions*)self, param1, param2, param3);
+int32_t k_fileitemactions_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileItemActions_SuperMetacall((KFileItemActions*)self, param1, param2, param3);
 }
 
 const char* k_fileitemactions_tr(const char* s) {
@@ -359,8 +359,8 @@ bool k_fileitemactions_event(void* self, void* event) {
     return KFileItemActions_Event((KFileItemActions*)self, (QEvent*)event);
 }
 
-bool k_fileitemactions_qbase_event(void* self, void* event) {
-    return KFileItemActions_QBaseEvent((KFileItemActions*)self, (QEvent*)event);
+bool k_fileitemactions_super_event(void* self, void* event) {
+    return KFileItemActions_SuperEvent((KFileItemActions*)self, (QEvent*)event);
 }
 
 void k_fileitemactions_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -371,8 +371,8 @@ bool k_fileitemactions_event_filter(void* self, void* watched, void* event) {
     return KFileItemActions_EventFilter((KFileItemActions*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_fileitemactions_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFileItemActions_QBaseEventFilter((KFileItemActions*)self, (QObject*)watched, (QEvent*)event);
+bool k_fileitemactions_super_event_filter(void* self, void* watched, void* event) {
+    return KFileItemActions_SuperEventFilter((KFileItemActions*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_fileitemactions_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -383,8 +383,8 @@ void k_fileitemactions_timer_event(void* self, void* event) {
     KFileItemActions_TimerEvent((KFileItemActions*)self, (QTimerEvent*)event);
 }
 
-void k_fileitemactions_qbase_timer_event(void* self, void* event) {
-    KFileItemActions_QBaseTimerEvent((KFileItemActions*)self, (QTimerEvent*)event);
+void k_fileitemactions_super_timer_event(void* self, void* event) {
+    KFileItemActions_SuperTimerEvent((KFileItemActions*)self, (QTimerEvent*)event);
 }
 
 void k_fileitemactions_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -395,8 +395,8 @@ void k_fileitemactions_child_event(void* self, void* event) {
     KFileItemActions_ChildEvent((KFileItemActions*)self, (QChildEvent*)event);
 }
 
-void k_fileitemactions_qbase_child_event(void* self, void* event) {
-    KFileItemActions_QBaseChildEvent((KFileItemActions*)self, (QChildEvent*)event);
+void k_fileitemactions_super_child_event(void* self, void* event) {
+    KFileItemActions_SuperChildEvent((KFileItemActions*)self, (QChildEvent*)event);
 }
 
 void k_fileitemactions_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -407,8 +407,8 @@ void k_fileitemactions_custom_event(void* self, void* event) {
     KFileItemActions_CustomEvent((KFileItemActions*)self, (QEvent*)event);
 }
 
-void k_fileitemactions_qbase_custom_event(void* self, void* event) {
-    KFileItemActions_QBaseCustomEvent((KFileItemActions*)self, (QEvent*)event);
+void k_fileitemactions_super_custom_event(void* self, void* event) {
+    KFileItemActions_SuperCustomEvent((KFileItemActions*)self, (QEvent*)event);
 }
 
 void k_fileitemactions_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -419,8 +419,8 @@ void k_fileitemactions_connect_notify(void* self, void* signal) {
     KFileItemActions_ConnectNotify((KFileItemActions*)self, (QMetaMethod*)signal);
 }
 
-void k_fileitemactions_qbase_connect_notify(void* self, void* signal) {
-    KFileItemActions_QBaseConnectNotify((KFileItemActions*)self, (QMetaMethod*)signal);
+void k_fileitemactions_super_connect_notify(void* self, void* signal) {
+    KFileItemActions_SuperConnectNotify((KFileItemActions*)self, (QMetaMethod*)signal);
 }
 
 void k_fileitemactions_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ void k_fileitemactions_disconnect_notify(void* self, void* signal) {
     KFileItemActions_DisconnectNotify((KFileItemActions*)self, (QMetaMethod*)signal);
 }
 
-void k_fileitemactions_qbase_disconnect_notify(void* self, void* signal) {
-    KFileItemActions_QBaseDisconnectNotify((KFileItemActions*)self, (QMetaMethod*)signal);
+void k_fileitemactions_super_disconnect_notify(void* self, void* signal) {
+    KFileItemActions_SuperDisconnectNotify((KFileItemActions*)self, (QMetaMethod*)signal);
 }
 
 void k_fileitemactions_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -443,8 +443,8 @@ QObject* k_fileitemactions_sender(void* self) {
     return KFileItemActions_Sender((KFileItemActions*)self);
 }
 
-QObject* k_fileitemactions_qbase_sender(void* self) {
-    return KFileItemActions_QBaseSender((KFileItemActions*)self);
+QObject* k_fileitemactions_super_sender(void* self) {
+    return KFileItemActions_SuperSender((KFileItemActions*)self);
 }
 
 void k_fileitemactions_on_sender(void* self, QObject* (*callback)()) {
@@ -455,8 +455,8 @@ int32_t k_fileitemactions_sender_signal_index(void* self) {
     return KFileItemActions_SenderSignalIndex((KFileItemActions*)self);
 }
 
-int32_t k_fileitemactions_qbase_sender_signal_index(void* self) {
-    return KFileItemActions_QBaseSenderSignalIndex((KFileItemActions*)self);
+int32_t k_fileitemactions_super_sender_signal_index(void* self) {
+    return KFileItemActions_SuperSenderSignalIndex((KFileItemActions*)self);
 }
 
 void k_fileitemactions_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -467,8 +467,8 @@ int32_t k_fileitemactions_receivers(void* self, const char* signal) {
     return KFileItemActions_Receivers((KFileItemActions*)self, signal);
 }
 
-int32_t k_fileitemactions_qbase_receivers(void* self, const char* signal) {
-    return KFileItemActions_QBaseReceivers((KFileItemActions*)self, signal);
+int32_t k_fileitemactions_super_receivers(void* self, const char* signal) {
+    return KFileItemActions_SuperReceivers((KFileItemActions*)self, signal);
 }
 
 void k_fileitemactions_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -479,8 +479,8 @@ bool k_fileitemactions_is_signal_connected(void* self, void* signal) {
     return KFileItemActions_IsSignalConnected((KFileItemActions*)self, (QMetaMethod*)signal);
 }
 
-bool k_fileitemactions_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileItemActions_QBaseIsSignalConnected((KFileItemActions*)self, (QMetaMethod*)signal);
+bool k_fileitemactions_super_is_signal_connected(void* self, void* signal) {
+    return KFileItemActions_SuperIsSignalConnected((KFileItemActions*)self, (QMetaMethod*)signal);
 }
 
 void k_fileitemactions_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

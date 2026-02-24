@@ -31,8 +31,8 @@ void q_soundeffect_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QSoundEffect_OnMetaObject((QSoundEffect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_soundeffect_qbase_meta_object(void* self) {
-    return QSoundEffect_QBaseMetaObject((QSoundEffect*)self);
+const QMetaObject* q_soundeffect_super_meta_object(void* self) {
+    return QSoundEffect_SuperMetaObject((QSoundEffect*)self);
 }
 
 void* q_soundeffect_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_soundeffect_on_metacast(void* self, void* (*callback)(void*, const char*)
     QSoundEffect_OnMetacast((QSoundEffect*)self, (intptr_t)callback);
 }
 
-void* q_soundeffect_qbase_metacast(void* self, const char* param1) {
-    return QSoundEffect_QBaseMetacast((QSoundEffect*)self, param1);
+void* q_soundeffect_super_metacast(void* self, const char* param1) {
+    return QSoundEffect_SuperMetacast((QSoundEffect*)self, param1);
 }
 
 int32_t q_soundeffect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_soundeffect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QSoundEffect_OnMetacall((QSoundEffect*)self, (intptr_t)callback);
 }
 
-int32_t q_soundeffect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSoundEffect_QBaseMetacall((QSoundEffect*)self, param1, param2, param3);
+int32_t q_soundeffect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSoundEffect_SuperMetacall((QSoundEffect*)self, param1, param2, param3);
 }
 
 const char* q_soundeffect_tr(const char* s) {
@@ -450,8 +450,8 @@ bool q_soundeffect_event(void* self, void* event) {
     return QSoundEffect_Event((QSoundEffect*)self, (QEvent*)event);
 }
 
-bool q_soundeffect_qbase_event(void* self, void* event) {
-    return QSoundEffect_QBaseEvent((QSoundEffect*)self, (QEvent*)event);
+bool q_soundeffect_super_event(void* self, void* event) {
+    return QSoundEffect_SuperEvent((QSoundEffect*)self, (QEvent*)event);
 }
 
 void q_soundeffect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ bool q_soundeffect_event_filter(void* self, void* watched, void* event) {
     return QSoundEffect_EventFilter((QSoundEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_soundeffect_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSoundEffect_QBaseEventFilter((QSoundEffect*)self, (QObject*)watched, (QEvent*)event);
+bool q_soundeffect_super_event_filter(void* self, void* watched, void* event) {
+    return QSoundEffect_SuperEventFilter((QSoundEffect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_soundeffect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -474,8 +474,8 @@ void q_soundeffect_timer_event(void* self, void* event) {
     QSoundEffect_TimerEvent((QSoundEffect*)self, (QTimerEvent*)event);
 }
 
-void q_soundeffect_qbase_timer_event(void* self, void* event) {
-    QSoundEffect_QBaseTimerEvent((QSoundEffect*)self, (QTimerEvent*)event);
+void q_soundeffect_super_timer_event(void* self, void* event) {
+    QSoundEffect_SuperTimerEvent((QSoundEffect*)self, (QTimerEvent*)event);
 }
 
 void q_soundeffect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -486,8 +486,8 @@ void q_soundeffect_child_event(void* self, void* event) {
     QSoundEffect_ChildEvent((QSoundEffect*)self, (QChildEvent*)event);
 }
 
-void q_soundeffect_qbase_child_event(void* self, void* event) {
-    QSoundEffect_QBaseChildEvent((QSoundEffect*)self, (QChildEvent*)event);
+void q_soundeffect_super_child_event(void* self, void* event) {
+    QSoundEffect_SuperChildEvent((QSoundEffect*)self, (QChildEvent*)event);
 }
 
 void q_soundeffect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -498,8 +498,8 @@ void q_soundeffect_custom_event(void* self, void* event) {
     QSoundEffect_CustomEvent((QSoundEffect*)self, (QEvent*)event);
 }
 
-void q_soundeffect_qbase_custom_event(void* self, void* event) {
-    QSoundEffect_QBaseCustomEvent((QSoundEffect*)self, (QEvent*)event);
+void q_soundeffect_super_custom_event(void* self, void* event) {
+    QSoundEffect_SuperCustomEvent((QSoundEffect*)self, (QEvent*)event);
 }
 
 void q_soundeffect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -510,8 +510,8 @@ void q_soundeffect_connect_notify(void* self, void* signal) {
     QSoundEffect_ConnectNotify((QSoundEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_soundeffect_qbase_connect_notify(void* self, void* signal) {
-    QSoundEffect_QBaseConnectNotify((QSoundEffect*)self, (QMetaMethod*)signal);
+void q_soundeffect_super_connect_notify(void* self, void* signal) {
+    QSoundEffect_SuperConnectNotify((QSoundEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_soundeffect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -522,8 +522,8 @@ void q_soundeffect_disconnect_notify(void* self, void* signal) {
     QSoundEffect_DisconnectNotify((QSoundEffect*)self, (QMetaMethod*)signal);
 }
 
-void q_soundeffect_qbase_disconnect_notify(void* self, void* signal) {
-    QSoundEffect_QBaseDisconnectNotify((QSoundEffect*)self, (QMetaMethod*)signal);
+void q_soundeffect_super_disconnect_notify(void* self, void* signal) {
+    QSoundEffect_SuperDisconnectNotify((QSoundEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_soundeffect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -534,8 +534,8 @@ QObject* q_soundeffect_sender(void* self) {
     return QSoundEffect_Sender((QSoundEffect*)self);
 }
 
-QObject* q_soundeffect_qbase_sender(void* self) {
-    return QSoundEffect_QBaseSender((QSoundEffect*)self);
+QObject* q_soundeffect_super_sender(void* self) {
+    return QSoundEffect_SuperSender((QSoundEffect*)self);
 }
 
 void q_soundeffect_on_sender(void* self, QObject* (*callback)()) {
@@ -546,8 +546,8 @@ int32_t q_soundeffect_sender_signal_index(void* self) {
     return QSoundEffect_SenderSignalIndex((QSoundEffect*)self);
 }
 
-int32_t q_soundeffect_qbase_sender_signal_index(void* self) {
-    return QSoundEffect_QBaseSenderSignalIndex((QSoundEffect*)self);
+int32_t q_soundeffect_super_sender_signal_index(void* self) {
+    return QSoundEffect_SuperSenderSignalIndex((QSoundEffect*)self);
 }
 
 void q_soundeffect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -558,8 +558,8 @@ int32_t q_soundeffect_receivers(void* self, const char* signal) {
     return QSoundEffect_Receivers((QSoundEffect*)self, signal);
 }
 
-int32_t q_soundeffect_qbase_receivers(void* self, const char* signal) {
-    return QSoundEffect_QBaseReceivers((QSoundEffect*)self, signal);
+int32_t q_soundeffect_super_receivers(void* self, const char* signal) {
+    return QSoundEffect_SuperReceivers((QSoundEffect*)self, signal);
 }
 
 void q_soundeffect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -570,8 +570,8 @@ bool q_soundeffect_is_signal_connected(void* self, void* signal) {
     return QSoundEffect_IsSignalConnected((QSoundEffect*)self, (QMetaMethod*)signal);
 }
 
-bool q_soundeffect_qbase_is_signal_connected(void* self, void* signal) {
-    return QSoundEffect_QBaseIsSignalConnected((QSoundEffect*)self, (QMetaMethod*)signal);
+bool q_soundeffect_super_is_signal_connected(void* self, void* signal) {
+    return QSoundEffect_SuperIsSignalConnected((QSoundEffect*)self, (QMetaMethod*)signal);
 }
 
 void q_soundeffect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

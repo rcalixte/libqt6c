@@ -22,8 +22,8 @@ void q_webchannelabstracttransport_on_meta_object(void* self, const QMetaObject*
     QWebChannelAbstractTransport_OnMetaObject((QWebChannelAbstractTransport*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_webchannelabstracttransport_qbase_meta_object(void* self) {
-    return QWebChannelAbstractTransport_QBaseMetaObject((QWebChannelAbstractTransport*)self);
+const QMetaObject* q_webchannelabstracttransport_super_meta_object(void* self) {
+    return QWebChannelAbstractTransport_SuperMetaObject((QWebChannelAbstractTransport*)self);
 }
 
 void* q_webchannelabstracttransport_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_webchannelabstracttransport_on_metacast(void* self, void* (*callback)(voi
     QWebChannelAbstractTransport_OnMetacast((QWebChannelAbstractTransport*)self, (intptr_t)callback);
 }
 
-void* q_webchannelabstracttransport_qbase_metacast(void* self, const char* param1) {
-    return QWebChannelAbstractTransport_QBaseMetacast((QWebChannelAbstractTransport*)self, param1);
+void* q_webchannelabstracttransport_super_metacast(void* self, const char* param1) {
+    return QWebChannelAbstractTransport_SuperMetacast((QWebChannelAbstractTransport*)self, param1);
 }
 
 int32_t q_webchannelabstracttransport_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_webchannelabstracttransport_on_metacall(void* self, int32_t (*callback)(v
     QWebChannelAbstractTransport_OnMetacall((QWebChannelAbstractTransport*)self, (intptr_t)callback);
 }
 
-int32_t q_webchannelabstracttransport_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QWebChannelAbstractTransport_QBaseMetacall((QWebChannelAbstractTransport*)self, param1, param2, param3);
+int32_t q_webchannelabstracttransport_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QWebChannelAbstractTransport_SuperMetacall((QWebChannelAbstractTransport*)self, param1, param2, param3);
 }
 
 const char* q_webchannelabstracttransport_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_webchannelabstracttransport_on_send_message(void* self, void (*callback)(
     QWebChannelAbstractTransport_OnSendMessage((QWebChannelAbstractTransport*)self, (intptr_t)callback);
 }
 
-void q_webchannelabstracttransport_qbase_send_message(void* self, void* message) {
-    QWebChannelAbstractTransport_QBaseSendMessage((QWebChannelAbstractTransport*)self, (QJsonObject*)message);
+void q_webchannelabstracttransport_super_send_message(void* self, void* message) {
+    QWebChannelAbstractTransport_SuperSendMessage((QWebChannelAbstractTransport*)self, (QJsonObject*)message);
 }
 
 void q_webchannelabstracttransport_message_received(void* self, void* message, void* transport) {
@@ -306,8 +306,8 @@ bool q_webchannelabstracttransport_event(void* self, void* event) {
     return QWebChannelAbstractTransport_Event((QWebChannelAbstractTransport*)self, (QEvent*)event);
 }
 
-bool q_webchannelabstracttransport_qbase_event(void* self, void* event) {
-    return QWebChannelAbstractTransport_QBaseEvent((QWebChannelAbstractTransport*)self, (QEvent*)event);
+bool q_webchannelabstracttransport_super_event(void* self, void* event) {
+    return QWebChannelAbstractTransport_SuperEvent((QWebChannelAbstractTransport*)self, (QEvent*)event);
 }
 
 void q_webchannelabstracttransport_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -318,8 +318,8 @@ bool q_webchannelabstracttransport_event_filter(void* self, void* watched, void*
     return QWebChannelAbstractTransport_EventFilter((QWebChannelAbstractTransport*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_webchannelabstracttransport_qbase_event_filter(void* self, void* watched, void* event) {
-    return QWebChannelAbstractTransport_QBaseEventFilter((QWebChannelAbstractTransport*)self, (QObject*)watched, (QEvent*)event);
+bool q_webchannelabstracttransport_super_event_filter(void* self, void* watched, void* event) {
+    return QWebChannelAbstractTransport_SuperEventFilter((QWebChannelAbstractTransport*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_webchannelabstracttransport_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -330,8 +330,8 @@ void q_webchannelabstracttransport_timer_event(void* self, void* event) {
     QWebChannelAbstractTransport_TimerEvent((QWebChannelAbstractTransport*)self, (QTimerEvent*)event);
 }
 
-void q_webchannelabstracttransport_qbase_timer_event(void* self, void* event) {
-    QWebChannelAbstractTransport_QBaseTimerEvent((QWebChannelAbstractTransport*)self, (QTimerEvent*)event);
+void q_webchannelabstracttransport_super_timer_event(void* self, void* event) {
+    QWebChannelAbstractTransport_SuperTimerEvent((QWebChannelAbstractTransport*)self, (QTimerEvent*)event);
 }
 
 void q_webchannelabstracttransport_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -342,8 +342,8 @@ void q_webchannelabstracttransport_child_event(void* self, void* event) {
     QWebChannelAbstractTransport_ChildEvent((QWebChannelAbstractTransport*)self, (QChildEvent*)event);
 }
 
-void q_webchannelabstracttransport_qbase_child_event(void* self, void* event) {
-    QWebChannelAbstractTransport_QBaseChildEvent((QWebChannelAbstractTransport*)self, (QChildEvent*)event);
+void q_webchannelabstracttransport_super_child_event(void* self, void* event) {
+    QWebChannelAbstractTransport_SuperChildEvent((QWebChannelAbstractTransport*)self, (QChildEvent*)event);
 }
 
 void q_webchannelabstracttransport_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ void q_webchannelabstracttransport_custom_event(void* self, void* event) {
     QWebChannelAbstractTransport_CustomEvent((QWebChannelAbstractTransport*)self, (QEvent*)event);
 }
 
-void q_webchannelabstracttransport_qbase_custom_event(void* self, void* event) {
-    QWebChannelAbstractTransport_QBaseCustomEvent((QWebChannelAbstractTransport*)self, (QEvent*)event);
+void q_webchannelabstracttransport_super_custom_event(void* self, void* event) {
+    QWebChannelAbstractTransport_SuperCustomEvent((QWebChannelAbstractTransport*)self, (QEvent*)event);
 }
 
 void q_webchannelabstracttransport_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -366,8 +366,8 @@ void q_webchannelabstracttransport_connect_notify(void* self, void* signal) {
     QWebChannelAbstractTransport_ConnectNotify((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
 }
 
-void q_webchannelabstracttransport_qbase_connect_notify(void* self, void* signal) {
-    QWebChannelAbstractTransport_QBaseConnectNotify((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
+void q_webchannelabstracttransport_super_connect_notify(void* self, void* signal) {
+    QWebChannelAbstractTransport_SuperConnectNotify((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
 }
 
 void q_webchannelabstracttransport_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void q_webchannelabstracttransport_disconnect_notify(void* self, void* signal) {
     QWebChannelAbstractTransport_DisconnectNotify((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
 }
 
-void q_webchannelabstracttransport_qbase_disconnect_notify(void* self, void* signal) {
-    QWebChannelAbstractTransport_QBaseDisconnectNotify((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
+void q_webchannelabstracttransport_super_disconnect_notify(void* self, void* signal) {
+    QWebChannelAbstractTransport_SuperDisconnectNotify((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
 }
 
 void q_webchannelabstracttransport_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ QObject* q_webchannelabstracttransport_sender(void* self) {
     return QWebChannelAbstractTransport_Sender((QWebChannelAbstractTransport*)self);
 }
 
-QObject* q_webchannelabstracttransport_qbase_sender(void* self) {
-    return QWebChannelAbstractTransport_QBaseSender((QWebChannelAbstractTransport*)self);
+QObject* q_webchannelabstracttransport_super_sender(void* self) {
+    return QWebChannelAbstractTransport_SuperSender((QWebChannelAbstractTransport*)self);
 }
 
 void q_webchannelabstracttransport_on_sender(void* self, QObject* (*callback)()) {
@@ -402,8 +402,8 @@ int32_t q_webchannelabstracttransport_sender_signal_index(void* self) {
     return QWebChannelAbstractTransport_SenderSignalIndex((QWebChannelAbstractTransport*)self);
 }
 
-int32_t q_webchannelabstracttransport_qbase_sender_signal_index(void* self) {
-    return QWebChannelAbstractTransport_QBaseSenderSignalIndex((QWebChannelAbstractTransport*)self);
+int32_t q_webchannelabstracttransport_super_sender_signal_index(void* self) {
+    return QWebChannelAbstractTransport_SuperSenderSignalIndex((QWebChannelAbstractTransport*)self);
 }
 
 void q_webchannelabstracttransport_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -414,8 +414,8 @@ int32_t q_webchannelabstracttransport_receivers(void* self, const char* signal) 
     return QWebChannelAbstractTransport_Receivers((QWebChannelAbstractTransport*)self, signal);
 }
 
-int32_t q_webchannelabstracttransport_qbase_receivers(void* self, const char* signal) {
-    return QWebChannelAbstractTransport_QBaseReceivers((QWebChannelAbstractTransport*)self, signal);
+int32_t q_webchannelabstracttransport_super_receivers(void* self, const char* signal) {
+    return QWebChannelAbstractTransport_SuperReceivers((QWebChannelAbstractTransport*)self, signal);
 }
 
 void q_webchannelabstracttransport_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -426,8 +426,8 @@ bool q_webchannelabstracttransport_is_signal_connected(void* self, void* signal)
     return QWebChannelAbstractTransport_IsSignalConnected((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
 }
 
-bool q_webchannelabstracttransport_qbase_is_signal_connected(void* self, void* signal) {
-    return QWebChannelAbstractTransport_QBaseIsSignalConnected((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
+bool q_webchannelabstracttransport_super_is_signal_connected(void* self, void* signal) {
+    return QWebChannelAbstractTransport_SuperIsSignalConnected((QWebChannelAbstractTransport*)self, (QMetaMethod*)signal);
 }
 
 void q_webchannelabstracttransport_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

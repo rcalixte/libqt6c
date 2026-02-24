@@ -23,8 +23,8 @@ void q_screencapture_on_meta_object(void* self, const QMetaObject* (*callback)()
     QScreenCapture_OnMetaObject((QScreenCapture*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_screencapture_qbase_meta_object(void* self) {
-    return QScreenCapture_QBaseMetaObject((QScreenCapture*)self);
+const QMetaObject* q_screencapture_super_meta_object(void* self) {
+    return QScreenCapture_SuperMetaObject((QScreenCapture*)self);
 }
 
 void* q_screencapture_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_screencapture_on_metacast(void* self, void* (*callback)(void*, const char
     QScreenCapture_OnMetacast((QScreenCapture*)self, (intptr_t)callback);
 }
 
-void* q_screencapture_qbase_metacast(void* self, const char* param1) {
-    return QScreenCapture_QBaseMetacast((QScreenCapture*)self, param1);
+void* q_screencapture_super_metacast(void* self, const char* param1) {
+    return QScreenCapture_SuperMetacast((QScreenCapture*)self, param1);
 }
 
 int32_t q_screencapture_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_screencapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QScreenCapture_OnMetacall((QScreenCapture*)self, (intptr_t)callback);
 }
 
-int32_t q_screencapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QScreenCapture_QBaseMetacall((QScreenCapture*)self, param1, param2, param3);
+int32_t q_screencapture_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QScreenCapture_SuperMetacall((QScreenCapture*)self, param1, param2, param3);
 }
 
 const char* q_screencapture_tr(const char* s) {
@@ -358,8 +358,8 @@ bool q_screencapture_event(void* self, void* event) {
     return QScreenCapture_Event((QScreenCapture*)self, (QEvent*)event);
 }
 
-bool q_screencapture_qbase_event(void* self, void* event) {
-    return QScreenCapture_QBaseEvent((QScreenCapture*)self, (QEvent*)event);
+bool q_screencapture_super_event(void* self, void* event) {
+    return QScreenCapture_SuperEvent((QScreenCapture*)self, (QEvent*)event);
 }
 
 void q_screencapture_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ bool q_screencapture_event_filter(void* self, void* watched, void* event) {
     return QScreenCapture_EventFilter((QScreenCapture*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_screencapture_qbase_event_filter(void* self, void* watched, void* event) {
-    return QScreenCapture_QBaseEventFilter((QScreenCapture*)self, (QObject*)watched, (QEvent*)event);
+bool q_screencapture_super_event_filter(void* self, void* watched, void* event) {
+    return QScreenCapture_SuperEventFilter((QScreenCapture*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_screencapture_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -382,8 +382,8 @@ void q_screencapture_timer_event(void* self, void* event) {
     QScreenCapture_TimerEvent((QScreenCapture*)self, (QTimerEvent*)event);
 }
 
-void q_screencapture_qbase_timer_event(void* self, void* event) {
-    QScreenCapture_QBaseTimerEvent((QScreenCapture*)self, (QTimerEvent*)event);
+void q_screencapture_super_timer_event(void* self, void* event) {
+    QScreenCapture_SuperTimerEvent((QScreenCapture*)self, (QTimerEvent*)event);
 }
 
 void q_screencapture_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -394,8 +394,8 @@ void q_screencapture_child_event(void* self, void* event) {
     QScreenCapture_ChildEvent((QScreenCapture*)self, (QChildEvent*)event);
 }
 
-void q_screencapture_qbase_child_event(void* self, void* event) {
-    QScreenCapture_QBaseChildEvent((QScreenCapture*)self, (QChildEvent*)event);
+void q_screencapture_super_child_event(void* self, void* event) {
+    QScreenCapture_SuperChildEvent((QScreenCapture*)self, (QChildEvent*)event);
 }
 
 void q_screencapture_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -406,8 +406,8 @@ void q_screencapture_custom_event(void* self, void* event) {
     QScreenCapture_CustomEvent((QScreenCapture*)self, (QEvent*)event);
 }
 
-void q_screencapture_qbase_custom_event(void* self, void* event) {
-    QScreenCapture_QBaseCustomEvent((QScreenCapture*)self, (QEvent*)event);
+void q_screencapture_super_custom_event(void* self, void* event) {
+    QScreenCapture_SuperCustomEvent((QScreenCapture*)self, (QEvent*)event);
 }
 
 void q_screencapture_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -418,8 +418,8 @@ void q_screencapture_connect_notify(void* self, void* signal) {
     QScreenCapture_ConnectNotify((QScreenCapture*)self, (QMetaMethod*)signal);
 }
 
-void q_screencapture_qbase_connect_notify(void* self, void* signal) {
-    QScreenCapture_QBaseConnectNotify((QScreenCapture*)self, (QMetaMethod*)signal);
+void q_screencapture_super_connect_notify(void* self, void* signal) {
+    QScreenCapture_SuperConnectNotify((QScreenCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_screencapture_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -430,8 +430,8 @@ void q_screencapture_disconnect_notify(void* self, void* signal) {
     QScreenCapture_DisconnectNotify((QScreenCapture*)self, (QMetaMethod*)signal);
 }
 
-void q_screencapture_qbase_disconnect_notify(void* self, void* signal) {
-    QScreenCapture_QBaseDisconnectNotify((QScreenCapture*)self, (QMetaMethod*)signal);
+void q_screencapture_super_disconnect_notify(void* self, void* signal) {
+    QScreenCapture_SuperDisconnectNotify((QScreenCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_screencapture_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -442,8 +442,8 @@ QObject* q_screencapture_sender(void* self) {
     return QScreenCapture_Sender((QScreenCapture*)self);
 }
 
-QObject* q_screencapture_qbase_sender(void* self) {
-    return QScreenCapture_QBaseSender((QScreenCapture*)self);
+QObject* q_screencapture_super_sender(void* self) {
+    return QScreenCapture_SuperSender((QScreenCapture*)self);
 }
 
 void q_screencapture_on_sender(void* self, QObject* (*callback)()) {
@@ -454,8 +454,8 @@ int32_t q_screencapture_sender_signal_index(void* self) {
     return QScreenCapture_SenderSignalIndex((QScreenCapture*)self);
 }
 
-int32_t q_screencapture_qbase_sender_signal_index(void* self) {
-    return QScreenCapture_QBaseSenderSignalIndex((QScreenCapture*)self);
+int32_t q_screencapture_super_sender_signal_index(void* self) {
+    return QScreenCapture_SuperSenderSignalIndex((QScreenCapture*)self);
 }
 
 void q_screencapture_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -466,8 +466,8 @@ int32_t q_screencapture_receivers(void* self, const char* signal) {
     return QScreenCapture_Receivers((QScreenCapture*)self, signal);
 }
 
-int32_t q_screencapture_qbase_receivers(void* self, const char* signal) {
-    return QScreenCapture_QBaseReceivers((QScreenCapture*)self, signal);
+int32_t q_screencapture_super_receivers(void* self, const char* signal) {
+    return QScreenCapture_SuperReceivers((QScreenCapture*)self, signal);
 }
 
 void q_screencapture_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -478,8 +478,8 @@ bool q_screencapture_is_signal_connected(void* self, void* signal) {
     return QScreenCapture_IsSignalConnected((QScreenCapture*)self, (QMetaMethod*)signal);
 }
 
-bool q_screencapture_qbase_is_signal_connected(void* self, void* signal) {
-    return QScreenCapture_QBaseIsSignalConnected((QScreenCapture*)self, (QMetaMethod*)signal);
+bool q_screencapture_super_is_signal_connected(void* self, void* signal) {
+    return QScreenCapture_SuperIsSignalConnected((QScreenCapture*)self, (QMetaMethod*)signal);
 }
 
 void q_screencapture_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -43,13 +43,17 @@ const QMetaObject* k_texteditor__command_meta_object(void* self);
 ///
 void k_texteditor__command_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_meta_object` instead
+///
+#define k_texteditor__command_qbase_meta_object k_texteditor__command_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KTextEditor__Command*
 ///
-const QMetaObject* k_texteditor__command_qbase_meta_object(void* self);
+const QMetaObject* k_texteditor__command_super_meta_object(void* self);
 
 /// @param self KTextEditor__Command*
 /// @param param1 const char*
@@ -63,12 +67,16 @@ void* k_texteditor__command_metacast(void* self, const char* param1);
 ///
 void k_texteditor__command_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_metacast` instead
+///
+#define k_texteditor__command_qbase_metacast k_texteditor__command_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KTextEditor__Command*
 /// @param param1 const char*
 ///
-void* k_texteditor__command_qbase_metacast(void* self, const char* param1);
+void* k_texteditor__command_super_metacast(void* self, const char* param1);
 
 /// @param self KTextEditor__Command*
 /// @param param1 enum QMetaObject__Call
@@ -84,6 +92,10 @@ int32_t k_texteditor__command_metacall(void* self, int32_t param1, int param2, v
 ///
 void k_texteditor__command_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_metacall` instead
+///
+#define k_texteditor__command_qbase_metacall k_texteditor__command_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KTextEditor__Command*
@@ -91,7 +103,7 @@ void k_texteditor__command_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_texteditor__command_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_texteditor__command_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -125,6 +137,10 @@ bool k_texteditor__command_supports_range(void* self, const char* cmd);
 ///
 void k_texteditor__command_on_supports_range(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_supports_range` instead
+///
+#define k_texteditor__command_qbase_supports_range k_texteditor__command_super_supports_range
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#supportsRange)
 ///
 /// Base class method implementation
@@ -132,7 +148,7 @@ void k_texteditor__command_on_supports_range(void* self, bool (*callback)(void*,
 /// @param self KTextEditor__Command*
 /// @param cmd const char*
 ///
-bool k_texteditor__command_qbase_supports_range(void* self, const char* cmd);
+bool k_texteditor__command_super_supports_range(void* self, const char* cmd);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#exec)
 ///
@@ -153,6 +169,10 @@ bool k_texteditor__command_exec(void* self, void* view, const char* cmd, const c
 ///
 void k_texteditor__command_on_exec(void* self, bool (*callback)(void*, void*, const char*, const char*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_exec` instead
+///
+#define k_texteditor__command_qbase_exec k_texteditor__command_super_exec
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#exec)
 ///
 /// Base class method implementation
@@ -163,7 +183,7 @@ void k_texteditor__command_on_exec(void* self, bool (*callback)(void*, void*, co
 /// @param msg const char*
 /// @param range KTextEditor__Range*
 ///
-bool k_texteditor__command_qbase_exec(void* self, void* view, const char* cmd, const char* msg, void* range);
+bool k_texteditor__command_super_exec(void* self, void* view, const char* cmd, const char* msg, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#help)
 ///
@@ -183,6 +203,10 @@ bool k_texteditor__command_help(void* self, void* view, const char* cmd, const c
 ///
 void k_texteditor__command_on_help(void* self, bool (*callback)(void*, void*, const char*, const char*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_help` instead
+///
+#define k_texteditor__command_qbase_help k_texteditor__command_super_help
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#help)
 ///
 /// Base class method implementation
@@ -192,7 +216,7 @@ void k_texteditor__command_on_help(void* self, bool (*callback)(void*, void*, co
 /// @param cmd const char*
 /// @param msg const char*
 ///
-bool k_texteditor__command_qbase_help(void* self, void* view, const char* cmd, const char* msg);
+bool k_texteditor__command_super_help(void* self, void* view, const char* cmd, const char* msg);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#completionObject)
 ///
@@ -211,6 +235,10 @@ KCompletion* k_texteditor__command_completion_object(void* self, void* view, con
 ///
 void k_texteditor__command_on_completion_object(void* self, KCompletion* (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_completion_object` instead
+///
+#define k_texteditor__command_qbase_completion_object k_texteditor__command_super_completion_object
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#completionObject)
 ///
 /// Base class method implementation
@@ -219,7 +247,7 @@ void k_texteditor__command_on_completion_object(void* self, KCompletion* (*callb
 /// @param view KTextEditor__View*
 /// @param cmdname const char*
 ///
-KCompletion* k_texteditor__command_qbase_completion_object(void* self, void* view, const char* cmdname);
+KCompletion* k_texteditor__command_super_completion_object(void* self, void* view, const char* cmdname);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#wantsToProcessText)
 ///
@@ -237,6 +265,10 @@ bool k_texteditor__command_wants_to_process_text(void* self, const char* cmdname
 ///
 void k_texteditor__command_on_wants_to_process_text(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_wants_to_process_text` instead
+///
+#define k_texteditor__command_qbase_wants_to_process_text k_texteditor__command_super_wants_to_process_text
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#wantsToProcessText)
 ///
 /// Base class method implementation
@@ -244,7 +276,7 @@ void k_texteditor__command_on_wants_to_process_text(void* self, bool (*callback)
 /// @param self KTextEditor__Command*
 /// @param cmdname const char*
 ///
-bool k_texteditor__command_qbase_wants_to_process_text(void* self, const char* cmdname);
+bool k_texteditor__command_super_wants_to_process_text(void* self, const char* cmdname);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#processText)
 ///
@@ -263,6 +295,10 @@ void k_texteditor__command_process_text(void* self, void* view, const char* text
 ///
 void k_texteditor__command_on_process_text(void* self, void (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_process_text` instead
+///
+#define k_texteditor__command_qbase_process_text k_texteditor__command_super_process_text
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-command.html#processText)
 ///
 /// Base class method implementation
@@ -271,7 +307,7 @@ void k_texteditor__command_on_process_text(void* self, void (*callback)(void*, v
 /// @param view KTextEditor__View*
 /// @param text const char*
 ///
-void k_texteditor__command_qbase_process_text(void* self, void* view, const char* text);
+void k_texteditor__command_super_process_text(void* self, void* view, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -750,6 +786,10 @@ void k_texteditor__command_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool k_texteditor__command_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_event` instead
+///
+#define k_texteditor__command_qbase_event k_texteditor__command_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -759,7 +799,7 @@ bool k_texteditor__command_event(void* self, void* event);
 /// @param self KTextEditor__Command*
 /// @param event QEvent*
 ///
-bool k_texteditor__command_qbase_event(void* self, void* event);
+bool k_texteditor__command_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -784,6 +824,10 @@ void k_texteditor__command_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_texteditor__command_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_event_filter` instead
+///
+#define k_texteditor__command_qbase_event_filter k_texteditor__command_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -794,7 +838,7 @@ bool k_texteditor__command_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_texteditor__command_qbase_event_filter(void* self, void* watched, void* event);
+bool k_texteditor__command_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -818,6 +862,10 @@ void k_texteditor__command_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_texteditor__command_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_timer_event` instead
+///
+#define k_texteditor__command_qbase_timer_event k_texteditor__command_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -827,7 +875,7 @@ void k_texteditor__command_timer_event(void* self, void* event);
 /// @param self KTextEditor__Command*
 /// @param event QTimerEvent*
 ///
-void k_texteditor__command_qbase_timer_event(void* self, void* event);
+void k_texteditor__command_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -851,6 +899,10 @@ void k_texteditor__command_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 void k_texteditor__command_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_child_event` instead
+///
+#define k_texteditor__command_qbase_child_event k_texteditor__command_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -860,7 +912,7 @@ void k_texteditor__command_child_event(void* self, void* event);
 /// @param self KTextEditor__Command*
 /// @param event QChildEvent*
 ///
-void k_texteditor__command_qbase_child_event(void* self, void* event);
+void k_texteditor__command_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -884,6 +936,10 @@ void k_texteditor__command_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_texteditor__command_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_custom_event` instead
+///
+#define k_texteditor__command_qbase_custom_event k_texteditor__command_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -893,7 +949,7 @@ void k_texteditor__command_custom_event(void* self, void* event);
 /// @param self KTextEditor__Command*
 /// @param event QEvent*
 ///
-void k_texteditor__command_qbase_custom_event(void* self, void* event);
+void k_texteditor__command_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -917,6 +973,10 @@ void k_texteditor__command_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_texteditor__command_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_connect_notify` instead
+///
+#define k_texteditor__command_qbase_connect_notify k_texteditor__command_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -926,7 +986,7 @@ void k_texteditor__command_connect_notify(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-void k_texteditor__command_qbase_connect_notify(void* self, void* signal);
+void k_texteditor__command_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -950,6 +1010,10 @@ void k_texteditor__command_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void k_texteditor__command_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_disconnect_notify` instead
+///
+#define k_texteditor__command_qbase_disconnect_notify k_texteditor__command_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -959,7 +1023,7 @@ void k_texteditor__command_disconnect_notify(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-void k_texteditor__command_qbase_disconnect_notify(void* self, void* signal);
+void k_texteditor__command_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -982,6 +1046,10 @@ void k_texteditor__command_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 QObject* k_texteditor__command_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_sender` instead
+///
+#define k_texteditor__command_qbase_sender k_texteditor__command_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -990,7 +1058,7 @@ QObject* k_texteditor__command_sender(void* self);
 ///
 /// @param self KTextEditor__Command*
 ///
-QObject* k_texteditor__command_qbase_sender(void* self);
+QObject* k_texteditor__command_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1013,6 +1081,10 @@ void k_texteditor__command_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_texteditor__command_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_sender_signal_index` instead
+///
+#define k_texteditor__command_qbase_sender_signal_index k_texteditor__command_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1021,7 +1093,7 @@ int32_t k_texteditor__command_sender_signal_index(void* self);
 ///
 /// @param self KTextEditor__Command*
 ///
-int32_t k_texteditor__command_qbase_sender_signal_index(void* self);
+int32_t k_texteditor__command_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1045,6 +1117,10 @@ void k_texteditor__command_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_texteditor__command_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_receivers` instead
+///
+#define k_texteditor__command_qbase_receivers k_texteditor__command_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1054,7 +1130,7 @@ int32_t k_texteditor__command_receivers(void* self, const char* signal);
 /// @param self KTextEditor__Command*
 /// @param signal const char*
 ///
-int32_t k_texteditor__command_qbase_receivers(void* self, const char* signal);
+int32_t k_texteditor__command_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1078,6 +1154,10 @@ void k_texteditor__command_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool k_texteditor__command_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_texteditor__command_super_is_signal_connected` instead
+///
+#define k_texteditor__command_qbase_is_signal_connected k_texteditor__command_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1087,7 +1167,7 @@ bool k_texteditor__command_is_signal_connected(void* self, void* signal);
 /// @param self KTextEditor__Command*
 /// @param signal QMetaMethod*
 ///
-bool k_texteditor__command_qbase_is_signal_connected(void* self, void* signal);
+bool k_texteditor__command_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

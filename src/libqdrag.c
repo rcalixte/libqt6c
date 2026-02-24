@@ -20,8 +20,8 @@ void q_drag_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QDrag_OnMetaObject((QDrag*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_drag_qbase_meta_object(void* self) {
-    return QDrag_QBaseMetaObject((QDrag*)self);
+const QMetaObject* q_drag_super_meta_object(void* self) {
+    return QDrag_SuperMetaObject((QDrag*)self);
 }
 
 void* q_drag_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void q_drag_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QDrag_OnMetacast((QDrag*)self, (intptr_t)callback);
 }
 
-void* q_drag_qbase_metacast(void* self, const char* param1) {
-    return QDrag_QBaseMetacast((QDrag*)self, param1);
+void* q_drag_super_metacast(void* self, const char* param1) {
+    return QDrag_SuperMetacast((QDrag*)self, param1);
 }
 
 int32_t q_drag_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void q_drag_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, voi
     QDrag_OnMetacall((QDrag*)self, (intptr_t)callback);
 }
 
-int32_t q_drag_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDrag_QBaseMetacall((QDrag*)self, param1, param2, param3);
+int32_t q_drag_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDrag_SuperMetacall((QDrag*)self, param1, param2, param3);
 }
 
 const char* q_drag_tr(const char* s) {
@@ -364,8 +364,8 @@ bool q_drag_event(void* self, void* event) {
     return QDrag_Event((QDrag*)self, (QEvent*)event);
 }
 
-bool q_drag_qbase_event(void* self, void* event) {
-    return QDrag_QBaseEvent((QDrag*)self, (QEvent*)event);
+bool q_drag_super_event(void* self, void* event) {
+    return QDrag_SuperEvent((QDrag*)self, (QEvent*)event);
 }
 
 void q_drag_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -376,8 +376,8 @@ bool q_drag_event_filter(void* self, void* watched, void* event) {
     return QDrag_EventFilter((QDrag*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_drag_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDrag_QBaseEventFilter((QDrag*)self, (QObject*)watched, (QEvent*)event);
+bool q_drag_super_event_filter(void* self, void* watched, void* event) {
+    return QDrag_SuperEventFilter((QDrag*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_drag_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -388,8 +388,8 @@ void q_drag_timer_event(void* self, void* event) {
     QDrag_TimerEvent((QDrag*)self, (QTimerEvent*)event);
 }
 
-void q_drag_qbase_timer_event(void* self, void* event) {
-    QDrag_QBaseTimerEvent((QDrag*)self, (QTimerEvent*)event);
+void q_drag_super_timer_event(void* self, void* event) {
+    QDrag_SuperTimerEvent((QDrag*)self, (QTimerEvent*)event);
 }
 
 void q_drag_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -400,8 +400,8 @@ void q_drag_child_event(void* self, void* event) {
     QDrag_ChildEvent((QDrag*)self, (QChildEvent*)event);
 }
 
-void q_drag_qbase_child_event(void* self, void* event) {
-    QDrag_QBaseChildEvent((QDrag*)self, (QChildEvent*)event);
+void q_drag_super_child_event(void* self, void* event) {
+    QDrag_SuperChildEvent((QDrag*)self, (QChildEvent*)event);
 }
 
 void q_drag_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ void q_drag_custom_event(void* self, void* event) {
     QDrag_CustomEvent((QDrag*)self, (QEvent*)event);
 }
 
-void q_drag_qbase_custom_event(void* self, void* event) {
-    QDrag_QBaseCustomEvent((QDrag*)self, (QEvent*)event);
+void q_drag_super_custom_event(void* self, void* event) {
+    QDrag_SuperCustomEvent((QDrag*)self, (QEvent*)event);
 }
 
 void q_drag_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ void q_drag_connect_notify(void* self, void* signal) {
     QDrag_ConnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
-void q_drag_qbase_connect_notify(void* self, void* signal) {
-    QDrag_QBaseConnectNotify((QDrag*)self, (QMetaMethod*)signal);
+void q_drag_super_connect_notify(void* self, void* signal) {
+    QDrag_SuperConnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
 void q_drag_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -436,8 +436,8 @@ void q_drag_disconnect_notify(void* self, void* signal) {
     QDrag_DisconnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
-void q_drag_qbase_disconnect_notify(void* self, void* signal) {
-    QDrag_QBaseDisconnectNotify((QDrag*)self, (QMetaMethod*)signal);
+void q_drag_super_disconnect_notify(void* self, void* signal) {
+    QDrag_SuperDisconnectNotify((QDrag*)self, (QMetaMethod*)signal);
 }
 
 void q_drag_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ QObject* q_drag_sender(void* self) {
     return QDrag_Sender((QDrag*)self);
 }
 
-QObject* q_drag_qbase_sender(void* self) {
-    return QDrag_QBaseSender((QDrag*)self);
+QObject* q_drag_super_sender(void* self) {
+    return QDrag_SuperSender((QDrag*)self);
 }
 
 void q_drag_on_sender(void* self, QObject* (*callback)()) {
@@ -460,8 +460,8 @@ int32_t q_drag_sender_signal_index(void* self) {
     return QDrag_SenderSignalIndex((QDrag*)self);
 }
 
-int32_t q_drag_qbase_sender_signal_index(void* self) {
-    return QDrag_QBaseSenderSignalIndex((QDrag*)self);
+int32_t q_drag_super_sender_signal_index(void* self) {
+    return QDrag_SuperSenderSignalIndex((QDrag*)self);
 }
 
 void q_drag_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -472,8 +472,8 @@ int32_t q_drag_receivers(void* self, const char* signal) {
     return QDrag_Receivers((QDrag*)self, signal);
 }
 
-int32_t q_drag_qbase_receivers(void* self, const char* signal) {
-    return QDrag_QBaseReceivers((QDrag*)self, signal);
+int32_t q_drag_super_receivers(void* self, const char* signal) {
+    return QDrag_SuperReceivers((QDrag*)self, signal);
 }
 
 void q_drag_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -484,8 +484,8 @@ bool q_drag_is_signal_connected(void* self, void* signal) {
     return QDrag_IsSignalConnected((QDrag*)self, (QMetaMethod*)signal);
 }
 
-bool q_drag_qbase_is_signal_connected(void* self, void* signal) {
-    return QDrag_QBaseIsSignalConnected((QDrag*)self, (QMetaMethod*)signal);
+bool q_drag_super_is_signal_connected(void* self, void* signal) {
+    return QDrag_SuperIsSignalConnected((QDrag*)self, (QMetaMethod*)signal);
 }
 
 void q_drag_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

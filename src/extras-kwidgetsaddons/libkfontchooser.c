@@ -39,8 +39,8 @@ void k_fontchooser_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KFontChooser_OnMetaObject((KFontChooser*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fontchooser_qbase_meta_object(void* self) {
-    return KFontChooser_QBaseMetaObject((KFontChooser*)self);
+const QMetaObject* k_fontchooser_super_meta_object(void* self) {
+    return KFontChooser_SuperMetaObject((KFontChooser*)self);
 }
 
 void* k_fontchooser_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void k_fontchooser_on_metacast(void* self, void* (*callback)(void*, const char*)
     KFontChooser_OnMetacast((KFontChooser*)self, (intptr_t)callback);
 }
 
-void* k_fontchooser_qbase_metacast(void* self, const char* param1) {
-    return KFontChooser_QBaseMetacast((KFontChooser*)self, param1);
+void* k_fontchooser_super_metacast(void* self, const char* param1) {
+    return KFontChooser_SuperMetacast((KFontChooser*)self, param1);
 }
 
 int32_t k_fontchooser_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void k_fontchooser_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KFontChooser_OnMetacall((KFontChooser*)self, (intptr_t)callback);
 }
 
-int32_t k_fontchooser_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFontChooser_QBaseMetacall((KFontChooser*)self, param1, param2, param3);
+int32_t k_fontchooser_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFontChooser_SuperMetacall((KFontChooser*)self, param1, param2, param3);
 }
 
 const char* k_fontchooser_tr(const char* s) {
@@ -167,8 +167,8 @@ void k_fontchooser_on_size_hint(void* self, QSize* (*callback)()) {
     KFontChooser_OnSizeHint((KFontChooser*)self, (intptr_t)callback);
 }
 
-QSize* k_fontchooser_qbase_size_hint(void* self) {
-    return KFontChooser_QBaseSizeHint((KFontChooser*)self);
+QSize* k_fontchooser_super_size_hint(void* self) {
+    return KFontChooser_SuperSizeHint((KFontChooser*)self);
 }
 
 void k_fontchooser_font_selected(void* self, void* font) {
@@ -1574,8 +1574,8 @@ int32_t k_fontchooser_dev_type(void* self) {
     return KFontChooser_DevType((KFontChooser*)self);
 }
 
-int32_t k_fontchooser_qbase_dev_type(void* self) {
-    return KFontChooser_QBaseDevType((KFontChooser*)self);
+int32_t k_fontchooser_super_dev_type(void* self) {
+    return KFontChooser_SuperDevType((KFontChooser*)self);
 }
 
 void k_fontchooser_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1586,8 +1586,8 @@ void k_fontchooser_set_visible(void* self, bool visible) {
     KFontChooser_SetVisible((KFontChooser*)self, visible);
 }
 
-void k_fontchooser_qbase_set_visible(void* self, bool visible) {
-    KFontChooser_QBaseSetVisible((KFontChooser*)self, visible);
+void k_fontchooser_super_set_visible(void* self, bool visible) {
+    KFontChooser_SuperSetVisible((KFontChooser*)self, visible);
 }
 
 void k_fontchooser_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1598,8 +1598,8 @@ QSize* k_fontchooser_minimum_size_hint(void* self) {
     return KFontChooser_MinimumSizeHint((KFontChooser*)self);
 }
 
-QSize* k_fontchooser_qbase_minimum_size_hint(void* self) {
-    return KFontChooser_QBaseMinimumSizeHint((KFontChooser*)self);
+QSize* k_fontchooser_super_minimum_size_hint(void* self) {
+    return KFontChooser_SuperMinimumSizeHint((KFontChooser*)self);
 }
 
 void k_fontchooser_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1610,8 +1610,8 @@ int32_t k_fontchooser_height_for_width(void* self, int param1) {
     return KFontChooser_HeightForWidth((KFontChooser*)self, param1);
 }
 
-int32_t k_fontchooser_qbase_height_for_width(void* self, int param1) {
-    return KFontChooser_QBaseHeightForWidth((KFontChooser*)self, param1);
+int32_t k_fontchooser_super_height_for_width(void* self, int param1) {
+    return KFontChooser_SuperHeightForWidth((KFontChooser*)self, param1);
 }
 
 void k_fontchooser_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1622,8 +1622,8 @@ bool k_fontchooser_has_height_for_width(void* self) {
     return KFontChooser_HasHeightForWidth((KFontChooser*)self);
 }
 
-bool k_fontchooser_qbase_has_height_for_width(void* self) {
-    return KFontChooser_QBaseHasHeightForWidth((KFontChooser*)self);
+bool k_fontchooser_super_has_height_for_width(void* self) {
+    return KFontChooser_SuperHasHeightForWidth((KFontChooser*)self);
 }
 
 void k_fontchooser_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1634,8 +1634,8 @@ QPaintEngine* k_fontchooser_paint_engine(void* self) {
     return KFontChooser_PaintEngine((KFontChooser*)self);
 }
 
-QPaintEngine* k_fontchooser_qbase_paint_engine(void* self) {
-    return KFontChooser_QBasePaintEngine((KFontChooser*)self);
+QPaintEngine* k_fontchooser_super_paint_engine(void* self) {
+    return KFontChooser_SuperPaintEngine((KFontChooser*)self);
 }
 
 void k_fontchooser_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1646,8 +1646,8 @@ bool k_fontchooser_event(void* self, void* event) {
     return KFontChooser_Event((KFontChooser*)self, (QEvent*)event);
 }
 
-bool k_fontchooser_qbase_event(void* self, void* event) {
-    return KFontChooser_QBaseEvent((KFontChooser*)self, (QEvent*)event);
+bool k_fontchooser_super_event(void* self, void* event) {
+    return KFontChooser_SuperEvent((KFontChooser*)self, (QEvent*)event);
 }
 
 void k_fontchooser_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1658,8 +1658,8 @@ void k_fontchooser_mouse_press_event(void* self, void* event) {
     KFontChooser_MousePressEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
-void k_fontchooser_qbase_mouse_press_event(void* self, void* event) {
-    KFontChooser_QBaseMousePressEvent((KFontChooser*)self, (QMouseEvent*)event);
+void k_fontchooser_super_mouse_press_event(void* self, void* event) {
+    KFontChooser_SuperMousePressEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
 void k_fontchooser_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1670,8 +1670,8 @@ void k_fontchooser_mouse_release_event(void* self, void* event) {
     KFontChooser_MouseReleaseEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
-void k_fontchooser_qbase_mouse_release_event(void* self, void* event) {
-    KFontChooser_QBaseMouseReleaseEvent((KFontChooser*)self, (QMouseEvent*)event);
+void k_fontchooser_super_mouse_release_event(void* self, void* event) {
+    KFontChooser_SuperMouseReleaseEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
 void k_fontchooser_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1682,8 +1682,8 @@ void k_fontchooser_mouse_double_click_event(void* self, void* event) {
     KFontChooser_MouseDoubleClickEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
-void k_fontchooser_qbase_mouse_double_click_event(void* self, void* event) {
-    KFontChooser_QBaseMouseDoubleClickEvent((KFontChooser*)self, (QMouseEvent*)event);
+void k_fontchooser_super_mouse_double_click_event(void* self, void* event) {
+    KFontChooser_SuperMouseDoubleClickEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
 void k_fontchooser_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1694,8 +1694,8 @@ void k_fontchooser_mouse_move_event(void* self, void* event) {
     KFontChooser_MouseMoveEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
-void k_fontchooser_qbase_mouse_move_event(void* self, void* event) {
-    KFontChooser_QBaseMouseMoveEvent((KFontChooser*)self, (QMouseEvent*)event);
+void k_fontchooser_super_mouse_move_event(void* self, void* event) {
+    KFontChooser_SuperMouseMoveEvent((KFontChooser*)self, (QMouseEvent*)event);
 }
 
 void k_fontchooser_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1706,8 +1706,8 @@ void k_fontchooser_wheel_event(void* self, void* event) {
     KFontChooser_WheelEvent((KFontChooser*)self, (QWheelEvent*)event);
 }
 
-void k_fontchooser_qbase_wheel_event(void* self, void* event) {
-    KFontChooser_QBaseWheelEvent((KFontChooser*)self, (QWheelEvent*)event);
+void k_fontchooser_super_wheel_event(void* self, void* event) {
+    KFontChooser_SuperWheelEvent((KFontChooser*)self, (QWheelEvent*)event);
 }
 
 void k_fontchooser_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1718,8 +1718,8 @@ void k_fontchooser_key_press_event(void* self, void* event) {
     KFontChooser_KeyPressEvent((KFontChooser*)self, (QKeyEvent*)event);
 }
 
-void k_fontchooser_qbase_key_press_event(void* self, void* event) {
-    KFontChooser_QBaseKeyPressEvent((KFontChooser*)self, (QKeyEvent*)event);
+void k_fontchooser_super_key_press_event(void* self, void* event) {
+    KFontChooser_SuperKeyPressEvent((KFontChooser*)self, (QKeyEvent*)event);
 }
 
 void k_fontchooser_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void k_fontchooser_key_release_event(void* self, void* event) {
     KFontChooser_KeyReleaseEvent((KFontChooser*)self, (QKeyEvent*)event);
 }
 
-void k_fontchooser_qbase_key_release_event(void* self, void* event) {
-    KFontChooser_QBaseKeyReleaseEvent((KFontChooser*)self, (QKeyEvent*)event);
+void k_fontchooser_super_key_release_event(void* self, void* event) {
+    KFontChooser_SuperKeyReleaseEvent((KFontChooser*)self, (QKeyEvent*)event);
 }
 
 void k_fontchooser_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ void k_fontchooser_focus_in_event(void* self, void* event) {
     KFontChooser_FocusInEvent((KFontChooser*)self, (QFocusEvent*)event);
 }
 
-void k_fontchooser_qbase_focus_in_event(void* self, void* event) {
-    KFontChooser_QBaseFocusInEvent((KFontChooser*)self, (QFocusEvent*)event);
+void k_fontchooser_super_focus_in_event(void* self, void* event) {
+    KFontChooser_SuperFocusInEvent((KFontChooser*)self, (QFocusEvent*)event);
 }
 
 void k_fontchooser_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void k_fontchooser_focus_out_event(void* self, void* event) {
     KFontChooser_FocusOutEvent((KFontChooser*)self, (QFocusEvent*)event);
 }
 
-void k_fontchooser_qbase_focus_out_event(void* self, void* event) {
-    KFontChooser_QBaseFocusOutEvent((KFontChooser*)self, (QFocusEvent*)event);
+void k_fontchooser_super_focus_out_event(void* self, void* event) {
+    KFontChooser_SuperFocusOutEvent((KFontChooser*)self, (QFocusEvent*)event);
 }
 
 void k_fontchooser_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void k_fontchooser_enter_event(void* self, void* event) {
     KFontChooser_EnterEvent((KFontChooser*)self, (QEnterEvent*)event);
 }
 
-void k_fontchooser_qbase_enter_event(void* self, void* event) {
-    KFontChooser_QBaseEnterEvent((KFontChooser*)self, (QEnterEvent*)event);
+void k_fontchooser_super_enter_event(void* self, void* event) {
+    KFontChooser_SuperEnterEvent((KFontChooser*)self, (QEnterEvent*)event);
 }
 
 void k_fontchooser_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ void k_fontchooser_leave_event(void* self, void* event) {
     KFontChooser_LeaveEvent((KFontChooser*)self, (QEvent*)event);
 }
 
-void k_fontchooser_qbase_leave_event(void* self, void* event) {
-    KFontChooser_QBaseLeaveEvent((KFontChooser*)self, (QEvent*)event);
+void k_fontchooser_super_leave_event(void* self, void* event) {
+    KFontChooser_SuperLeaveEvent((KFontChooser*)self, (QEvent*)event);
 }
 
 void k_fontchooser_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void k_fontchooser_paint_event(void* self, void* event) {
     KFontChooser_PaintEvent((KFontChooser*)self, (QPaintEvent*)event);
 }
 
-void k_fontchooser_qbase_paint_event(void* self, void* event) {
-    KFontChooser_QBasePaintEvent((KFontChooser*)self, (QPaintEvent*)event);
+void k_fontchooser_super_paint_event(void* self, void* event) {
+    KFontChooser_SuperPaintEvent((KFontChooser*)self, (QPaintEvent*)event);
 }
 
 void k_fontchooser_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void k_fontchooser_move_event(void* self, void* event) {
     KFontChooser_MoveEvent((KFontChooser*)self, (QMoveEvent*)event);
 }
 
-void k_fontchooser_qbase_move_event(void* self, void* event) {
-    KFontChooser_QBaseMoveEvent((KFontChooser*)self, (QMoveEvent*)event);
+void k_fontchooser_super_move_event(void* self, void* event) {
+    KFontChooser_SuperMoveEvent((KFontChooser*)self, (QMoveEvent*)event);
 }
 
 void k_fontchooser_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void k_fontchooser_resize_event(void* self, void* event) {
     KFontChooser_ResizeEvent((KFontChooser*)self, (QResizeEvent*)event);
 }
 
-void k_fontchooser_qbase_resize_event(void* self, void* event) {
-    KFontChooser_QBaseResizeEvent((KFontChooser*)self, (QResizeEvent*)event);
+void k_fontchooser_super_resize_event(void* self, void* event) {
+    KFontChooser_SuperResizeEvent((KFontChooser*)self, (QResizeEvent*)event);
 }
 
 void k_fontchooser_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void k_fontchooser_close_event(void* self, void* event) {
     KFontChooser_CloseEvent((KFontChooser*)self, (QCloseEvent*)event);
 }
 
-void k_fontchooser_qbase_close_event(void* self, void* event) {
-    KFontChooser_QBaseCloseEvent((KFontChooser*)self, (QCloseEvent*)event);
+void k_fontchooser_super_close_event(void* self, void* event) {
+    KFontChooser_SuperCloseEvent((KFontChooser*)self, (QCloseEvent*)event);
 }
 
 void k_fontchooser_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void k_fontchooser_context_menu_event(void* self, void* event) {
     KFontChooser_ContextMenuEvent((KFontChooser*)self, (QContextMenuEvent*)event);
 }
 
-void k_fontchooser_qbase_context_menu_event(void* self, void* event) {
-    KFontChooser_QBaseContextMenuEvent((KFontChooser*)self, (QContextMenuEvent*)event);
+void k_fontchooser_super_context_menu_event(void* self, void* event) {
+    KFontChooser_SuperContextMenuEvent((KFontChooser*)self, (QContextMenuEvent*)event);
 }
 
 void k_fontchooser_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void k_fontchooser_tablet_event(void* self, void* event) {
     KFontChooser_TabletEvent((KFontChooser*)self, (QTabletEvent*)event);
 }
 
-void k_fontchooser_qbase_tablet_event(void* self, void* event) {
-    KFontChooser_QBaseTabletEvent((KFontChooser*)self, (QTabletEvent*)event);
+void k_fontchooser_super_tablet_event(void* self, void* event) {
+    KFontChooser_SuperTabletEvent((KFontChooser*)self, (QTabletEvent*)event);
 }
 
 void k_fontchooser_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void k_fontchooser_action_event(void* self, void* event) {
     KFontChooser_ActionEvent((KFontChooser*)self, (QActionEvent*)event);
 }
 
-void k_fontchooser_qbase_action_event(void* self, void* event) {
-    KFontChooser_QBaseActionEvent((KFontChooser*)self, (QActionEvent*)event);
+void k_fontchooser_super_action_event(void* self, void* event) {
+    KFontChooser_SuperActionEvent((KFontChooser*)self, (QActionEvent*)event);
 }
 
 void k_fontchooser_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void k_fontchooser_drag_enter_event(void* self, void* event) {
     KFontChooser_DragEnterEvent((KFontChooser*)self, (QDragEnterEvent*)event);
 }
 
-void k_fontchooser_qbase_drag_enter_event(void* self, void* event) {
-    KFontChooser_QBaseDragEnterEvent((KFontChooser*)self, (QDragEnterEvent*)event);
+void k_fontchooser_super_drag_enter_event(void* self, void* event) {
+    KFontChooser_SuperDragEnterEvent((KFontChooser*)self, (QDragEnterEvent*)event);
 }
 
 void k_fontchooser_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void k_fontchooser_drag_move_event(void* self, void* event) {
     KFontChooser_DragMoveEvent((KFontChooser*)self, (QDragMoveEvent*)event);
 }
 
-void k_fontchooser_qbase_drag_move_event(void* self, void* event) {
-    KFontChooser_QBaseDragMoveEvent((KFontChooser*)self, (QDragMoveEvent*)event);
+void k_fontchooser_super_drag_move_event(void* self, void* event) {
+    KFontChooser_SuperDragMoveEvent((KFontChooser*)self, (QDragMoveEvent*)event);
 }
 
 void k_fontchooser_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void k_fontchooser_drag_leave_event(void* self, void* event) {
     KFontChooser_DragLeaveEvent((KFontChooser*)self, (QDragLeaveEvent*)event);
 }
 
-void k_fontchooser_qbase_drag_leave_event(void* self, void* event) {
-    KFontChooser_QBaseDragLeaveEvent((KFontChooser*)self, (QDragLeaveEvent*)event);
+void k_fontchooser_super_drag_leave_event(void* self, void* event) {
+    KFontChooser_SuperDragLeaveEvent((KFontChooser*)self, (QDragLeaveEvent*)event);
 }
 
 void k_fontchooser_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void k_fontchooser_drop_event(void* self, void* event) {
     KFontChooser_DropEvent((KFontChooser*)self, (QDropEvent*)event);
 }
 
-void k_fontchooser_qbase_drop_event(void* self, void* event) {
-    KFontChooser_QBaseDropEvent((KFontChooser*)self, (QDropEvent*)event);
+void k_fontchooser_super_drop_event(void* self, void* event) {
+    KFontChooser_SuperDropEvent((KFontChooser*)self, (QDropEvent*)event);
 }
 
 void k_fontchooser_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void k_fontchooser_show_event(void* self, void* event) {
     KFontChooser_ShowEvent((KFontChooser*)self, (QShowEvent*)event);
 }
 
-void k_fontchooser_qbase_show_event(void* self, void* event) {
-    KFontChooser_QBaseShowEvent((KFontChooser*)self, (QShowEvent*)event);
+void k_fontchooser_super_show_event(void* self, void* event) {
+    KFontChooser_SuperShowEvent((KFontChooser*)self, (QShowEvent*)event);
 }
 
 void k_fontchooser_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void k_fontchooser_hide_event(void* self, void* event) {
     KFontChooser_HideEvent((KFontChooser*)self, (QHideEvent*)event);
 }
 
-void k_fontchooser_qbase_hide_event(void* self, void* event) {
-    KFontChooser_QBaseHideEvent((KFontChooser*)self, (QHideEvent*)event);
+void k_fontchooser_super_hide_event(void* self, void* event) {
+    KFontChooser_SuperHideEvent((KFontChooser*)self, (QHideEvent*)event);
 }
 
 void k_fontchooser_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ bool k_fontchooser_native_event(void* self, char* eventType, void* message, intp
     return KFontChooser_NativeEvent((KFontChooser*)self, qstring(eventType), message, result);
 }
 
-bool k_fontchooser_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KFontChooser_QBaseNativeEvent((KFontChooser*)self, qstring(eventType), message, result);
+bool k_fontchooser_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KFontChooser_SuperNativeEvent((KFontChooser*)self, qstring(eventType), message, result);
 }
 
 void k_fontchooser_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1958,8 +1958,8 @@ void k_fontchooser_change_event(void* self, void* param1) {
     KFontChooser_ChangeEvent((KFontChooser*)self, (QEvent*)param1);
 }
 
-void k_fontchooser_qbase_change_event(void* self, void* param1) {
-    KFontChooser_QBaseChangeEvent((KFontChooser*)self, (QEvent*)param1);
+void k_fontchooser_super_change_event(void* self, void* param1) {
+    KFontChooser_SuperChangeEvent((KFontChooser*)self, (QEvent*)param1);
 }
 
 void k_fontchooser_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ int32_t k_fontchooser_metric(void* self, int32_t param1) {
     return KFontChooser_Metric((KFontChooser*)self, param1);
 }
 
-int32_t k_fontchooser_qbase_metric(void* self, int32_t param1) {
-    return KFontChooser_QBaseMetric((KFontChooser*)self, param1);
+int32_t k_fontchooser_super_metric(void* self, int32_t param1) {
+    return KFontChooser_SuperMetric((KFontChooser*)self, param1);
 }
 
 void k_fontchooser_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1982,8 +1982,8 @@ void k_fontchooser_init_painter(void* self, void* painter) {
     KFontChooser_InitPainter((KFontChooser*)self, (QPainter*)painter);
 }
 
-void k_fontchooser_qbase_init_painter(void* self, void* painter) {
-    KFontChooser_QBaseInitPainter((KFontChooser*)self, (QPainter*)painter);
+void k_fontchooser_super_init_painter(void* self, void* painter) {
+    KFontChooser_SuperInitPainter((KFontChooser*)self, (QPainter*)painter);
 }
 
 void k_fontchooser_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ QPaintDevice* k_fontchooser_redirected(void* self, void* offset) {
     return KFontChooser_Redirected((KFontChooser*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_fontchooser_qbase_redirected(void* self, void* offset) {
-    return KFontChooser_QBaseRedirected((KFontChooser*)self, (QPoint*)offset);
+QPaintDevice* k_fontchooser_super_redirected(void* self, void* offset) {
+    return KFontChooser_SuperRedirected((KFontChooser*)self, (QPoint*)offset);
 }
 
 void k_fontchooser_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ QPainter* k_fontchooser_shared_painter(void* self) {
     return KFontChooser_SharedPainter((KFontChooser*)self);
 }
 
-QPainter* k_fontchooser_qbase_shared_painter(void* self) {
-    return KFontChooser_QBaseSharedPainter((KFontChooser*)self);
+QPainter* k_fontchooser_super_shared_painter(void* self) {
+    return KFontChooser_SuperSharedPainter((KFontChooser*)self);
 }
 
 void k_fontchooser_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2018,8 +2018,8 @@ void k_fontchooser_input_method_event(void* self, void* param1) {
     KFontChooser_InputMethodEvent((KFontChooser*)self, (QInputMethodEvent*)param1);
 }
 
-void k_fontchooser_qbase_input_method_event(void* self, void* param1) {
-    KFontChooser_QBaseInputMethodEvent((KFontChooser*)self, (QInputMethodEvent*)param1);
+void k_fontchooser_super_input_method_event(void* self, void* param1) {
+    KFontChooser_SuperInputMethodEvent((KFontChooser*)self, (QInputMethodEvent*)param1);
 }
 
 void k_fontchooser_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ QVariant* k_fontchooser_input_method_query(void* self, int32_t param1) {
     return KFontChooser_InputMethodQuery((KFontChooser*)self, param1);
 }
 
-QVariant* k_fontchooser_qbase_input_method_query(void* self, int32_t param1) {
-    return KFontChooser_QBaseInputMethodQuery((KFontChooser*)self, param1);
+QVariant* k_fontchooser_super_input_method_query(void* self, int32_t param1) {
+    return KFontChooser_SuperInputMethodQuery((KFontChooser*)self, param1);
 }
 
 void k_fontchooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2042,8 +2042,8 @@ bool k_fontchooser_focus_next_prev_child(void* self, bool next) {
     return KFontChooser_FocusNextPrevChild((KFontChooser*)self, next);
 }
 
-bool k_fontchooser_qbase_focus_next_prev_child(void* self, bool next) {
-    return KFontChooser_QBaseFocusNextPrevChild((KFontChooser*)self, next);
+bool k_fontchooser_super_focus_next_prev_child(void* self, bool next) {
+    return KFontChooser_SuperFocusNextPrevChild((KFontChooser*)self, next);
 }
 
 void k_fontchooser_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2054,8 +2054,8 @@ bool k_fontchooser_event_filter(void* self, void* watched, void* event) {
     return KFontChooser_EventFilter((KFontChooser*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_fontchooser_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFontChooser_QBaseEventFilter((KFontChooser*)self, (QObject*)watched, (QEvent*)event);
+bool k_fontchooser_super_event_filter(void* self, void* watched, void* event) {
+    return KFontChooser_SuperEventFilter((KFontChooser*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_fontchooser_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2066,8 +2066,8 @@ void k_fontchooser_timer_event(void* self, void* event) {
     KFontChooser_TimerEvent((KFontChooser*)self, (QTimerEvent*)event);
 }
 
-void k_fontchooser_qbase_timer_event(void* self, void* event) {
-    KFontChooser_QBaseTimerEvent((KFontChooser*)self, (QTimerEvent*)event);
+void k_fontchooser_super_timer_event(void* self, void* event) {
+    KFontChooser_SuperTimerEvent((KFontChooser*)self, (QTimerEvent*)event);
 }
 
 void k_fontchooser_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ void k_fontchooser_child_event(void* self, void* event) {
     KFontChooser_ChildEvent((KFontChooser*)self, (QChildEvent*)event);
 }
 
-void k_fontchooser_qbase_child_event(void* self, void* event) {
-    KFontChooser_QBaseChildEvent((KFontChooser*)self, (QChildEvent*)event);
+void k_fontchooser_super_child_event(void* self, void* event) {
+    KFontChooser_SuperChildEvent((KFontChooser*)self, (QChildEvent*)event);
 }
 
 void k_fontchooser_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ void k_fontchooser_custom_event(void* self, void* event) {
     KFontChooser_CustomEvent((KFontChooser*)self, (QEvent*)event);
 }
 
-void k_fontchooser_qbase_custom_event(void* self, void* event) {
-    KFontChooser_QBaseCustomEvent((KFontChooser*)self, (QEvent*)event);
+void k_fontchooser_super_custom_event(void* self, void* event) {
+    KFontChooser_SuperCustomEvent((KFontChooser*)self, (QEvent*)event);
 }
 
 void k_fontchooser_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ void k_fontchooser_connect_notify(void* self, void* signal) {
     KFontChooser_ConnectNotify((KFontChooser*)self, (QMetaMethod*)signal);
 }
 
-void k_fontchooser_qbase_connect_notify(void* self, void* signal) {
-    KFontChooser_QBaseConnectNotify((KFontChooser*)self, (QMetaMethod*)signal);
+void k_fontchooser_super_connect_notify(void* self, void* signal) {
+    KFontChooser_SuperConnectNotify((KFontChooser*)self, (QMetaMethod*)signal);
 }
 
 void k_fontchooser_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ void k_fontchooser_disconnect_notify(void* self, void* signal) {
     KFontChooser_DisconnectNotify((KFontChooser*)self, (QMetaMethod*)signal);
 }
 
-void k_fontchooser_qbase_disconnect_notify(void* self, void* signal) {
-    KFontChooser_QBaseDisconnectNotify((KFontChooser*)self, (QMetaMethod*)signal);
+void k_fontchooser_super_disconnect_notify(void* self, void* signal) {
+    KFontChooser_SuperDisconnectNotify((KFontChooser*)self, (QMetaMethod*)signal);
 }
 
 void k_fontchooser_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2126,8 +2126,8 @@ void k_fontchooser_update_micro_focus(void* self) {
     KFontChooser_UpdateMicroFocus((KFontChooser*)self);
 }
 
-void k_fontchooser_qbase_update_micro_focus(void* self) {
-    KFontChooser_QBaseUpdateMicroFocus((KFontChooser*)self);
+void k_fontchooser_super_update_micro_focus(void* self) {
+    KFontChooser_SuperUpdateMicroFocus((KFontChooser*)self);
 }
 
 void k_fontchooser_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2138,8 +2138,8 @@ void k_fontchooser_create(void* self) {
     KFontChooser_Create((KFontChooser*)self);
 }
 
-void k_fontchooser_qbase_create(void* self) {
-    KFontChooser_QBaseCreate((KFontChooser*)self);
+void k_fontchooser_super_create(void* self) {
+    KFontChooser_SuperCreate((KFontChooser*)self);
 }
 
 void k_fontchooser_on_create(void* self, void (*callback)()) {
@@ -2150,8 +2150,8 @@ void k_fontchooser_destroy(void* self) {
     KFontChooser_Destroy((KFontChooser*)self);
 }
 
-void k_fontchooser_qbase_destroy(void* self) {
-    KFontChooser_QBaseDestroy((KFontChooser*)self);
+void k_fontchooser_super_destroy(void* self) {
+    KFontChooser_SuperDestroy((KFontChooser*)self);
 }
 
 void k_fontchooser_on_destroy(void* self, void (*callback)()) {
@@ -2162,8 +2162,8 @@ bool k_fontchooser_focus_next_child(void* self) {
     return KFontChooser_FocusNextChild((KFontChooser*)self);
 }
 
-bool k_fontchooser_qbase_focus_next_child(void* self) {
-    return KFontChooser_QBaseFocusNextChild((KFontChooser*)self);
+bool k_fontchooser_super_focus_next_child(void* self) {
+    return KFontChooser_SuperFocusNextChild((KFontChooser*)self);
 }
 
 void k_fontchooser_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2174,8 +2174,8 @@ bool k_fontchooser_focus_previous_child(void* self) {
     return KFontChooser_FocusPreviousChild((KFontChooser*)self);
 }
 
-bool k_fontchooser_qbase_focus_previous_child(void* self) {
-    return KFontChooser_QBaseFocusPreviousChild((KFontChooser*)self);
+bool k_fontchooser_super_focus_previous_child(void* self) {
+    return KFontChooser_SuperFocusPreviousChild((KFontChooser*)self);
 }
 
 void k_fontchooser_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2186,8 +2186,8 @@ QObject* k_fontchooser_sender(void* self) {
     return KFontChooser_Sender((KFontChooser*)self);
 }
 
-QObject* k_fontchooser_qbase_sender(void* self) {
-    return KFontChooser_QBaseSender((KFontChooser*)self);
+QObject* k_fontchooser_super_sender(void* self) {
+    return KFontChooser_SuperSender((KFontChooser*)self);
 }
 
 void k_fontchooser_on_sender(void* self, QObject* (*callback)()) {
@@ -2198,8 +2198,8 @@ int32_t k_fontchooser_sender_signal_index(void* self) {
     return KFontChooser_SenderSignalIndex((KFontChooser*)self);
 }
 
-int32_t k_fontchooser_qbase_sender_signal_index(void* self) {
-    return KFontChooser_QBaseSenderSignalIndex((KFontChooser*)self);
+int32_t k_fontchooser_super_sender_signal_index(void* self) {
+    return KFontChooser_SuperSenderSignalIndex((KFontChooser*)self);
 }
 
 void k_fontchooser_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2210,8 +2210,8 @@ int32_t k_fontchooser_receivers(void* self, const char* signal) {
     return KFontChooser_Receivers((KFontChooser*)self, signal);
 }
 
-int32_t k_fontchooser_qbase_receivers(void* self, const char* signal) {
-    return KFontChooser_QBaseReceivers((KFontChooser*)self, signal);
+int32_t k_fontchooser_super_receivers(void* self, const char* signal) {
+    return KFontChooser_SuperReceivers((KFontChooser*)self, signal);
 }
 
 void k_fontchooser_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2222,8 +2222,8 @@ bool k_fontchooser_is_signal_connected(void* self, void* signal) {
     return KFontChooser_IsSignalConnected((KFontChooser*)self, (QMetaMethod*)signal);
 }
 
-bool k_fontchooser_qbase_is_signal_connected(void* self, void* signal) {
-    return KFontChooser_QBaseIsSignalConnected((KFontChooser*)self, (QMetaMethod*)signal);
+bool k_fontchooser_super_is_signal_connected(void* self, void* signal) {
+    return KFontChooser_SuperIsSignalConnected((KFontChooser*)self, (QMetaMethod*)signal);
 }
 
 void k_fontchooser_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2234,8 +2234,8 @@ double k_fontchooser_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return KFontChooser_GetDecodedMetricF((KFontChooser*)self, metricA, metricB);
 }
 
-double k_fontchooser_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KFontChooser_QBaseGetDecodedMetricF((KFontChooser*)self, metricA, metricB);
+double k_fontchooser_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KFontChooser_SuperGetDecodedMetricF((KFontChooser*)self, metricA, metricB);
 }
 
 void k_fontchooser_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

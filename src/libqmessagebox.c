@@ -62,8 +62,8 @@ void q_messagebox_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QMessageBox_OnMetaObject((QMessageBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_messagebox_qbase_meta_object(void* self) {
-    return QMessageBox_QBaseMetaObject((QMessageBox*)self);
+const QMetaObject* q_messagebox_super_meta_object(void* self) {
+    return QMessageBox_SuperMetaObject((QMessageBox*)self);
 }
 
 void* q_messagebox_metacast(void* self, const char* param1) {
@@ -74,8 +74,8 @@ void q_messagebox_on_metacast(void* self, void* (*callback)(void*, const char*))
     QMessageBox_OnMetacast((QMessageBox*)self, (intptr_t)callback);
 }
 
-void* q_messagebox_qbase_metacast(void* self, const char* param1) {
-    return QMessageBox_QBaseMetacast((QMessageBox*)self, param1);
+void* q_messagebox_super_metacast(void* self, const char* param1) {
+    return QMessageBox_SuperMetacast((QMessageBox*)self, param1);
 }
 
 int32_t q_messagebox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -86,8 +86,8 @@ void q_messagebox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QMessageBox_OnMetacall((QMessageBox*)self, (intptr_t)callback);
 }
 
-int32_t q_messagebox_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMessageBox_QBaseMetacall((QMessageBox*)self, param1, param2, param3);
+int32_t q_messagebox_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMessageBox_SuperMetacall((QMessageBox*)self, param1, param2, param3);
 }
 
 const char* q_messagebox_tr(const char* s) {
@@ -366,8 +366,8 @@ void q_messagebox_on_event(void* self, bool (*callback)(void*, void*)) {
     QMessageBox_OnEvent((QMessageBox*)self, (intptr_t)callback);
 }
 
-bool q_messagebox_qbase_event(void* self, void* e) {
-    return QMessageBox_QBaseEvent((QMessageBox*)self, (QEvent*)e);
+bool q_messagebox_super_event(void* self, void* e) {
+    return QMessageBox_SuperEvent((QMessageBox*)self, (QEvent*)e);
 }
 
 void q_messagebox_resize_event(void* self, void* event) {
@@ -378,8 +378,8 @@ void q_messagebox_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QMessageBox_OnResizeEvent((QMessageBox*)self, (intptr_t)callback);
 }
 
-void q_messagebox_qbase_resize_event(void* self, void* event) {
-    QMessageBox_QBaseResizeEvent((QMessageBox*)self, (QResizeEvent*)event);
+void q_messagebox_super_resize_event(void* self, void* event) {
+    QMessageBox_SuperResizeEvent((QMessageBox*)self, (QResizeEvent*)event);
 }
 
 void q_messagebox_show_event(void* self, void* event) {
@@ -390,8 +390,8 @@ void q_messagebox_on_show_event(void* self, void (*callback)(void*, void*)) {
     QMessageBox_OnShowEvent((QMessageBox*)self, (intptr_t)callback);
 }
 
-void q_messagebox_qbase_show_event(void* self, void* event) {
-    QMessageBox_QBaseShowEvent((QMessageBox*)self, (QShowEvent*)event);
+void q_messagebox_super_show_event(void* self, void* event) {
+    QMessageBox_SuperShowEvent((QMessageBox*)self, (QShowEvent*)event);
 }
 
 void q_messagebox_close_event(void* self, void* event) {
@@ -402,8 +402,8 @@ void q_messagebox_on_close_event(void* self, void (*callback)(void*, void*)) {
     QMessageBox_OnCloseEvent((QMessageBox*)self, (intptr_t)callback);
 }
 
-void q_messagebox_qbase_close_event(void* self, void* event) {
-    QMessageBox_QBaseCloseEvent((QMessageBox*)self, (QCloseEvent*)event);
+void q_messagebox_super_close_event(void* self, void* event) {
+    QMessageBox_SuperCloseEvent((QMessageBox*)self, (QCloseEvent*)event);
 }
 
 void q_messagebox_key_press_event(void* self, void* event) {
@@ -414,8 +414,8 @@ void q_messagebox_on_key_press_event(void* self, void (*callback)(void*, void*))
     QMessageBox_OnKeyPressEvent((QMessageBox*)self, (intptr_t)callback);
 }
 
-void q_messagebox_qbase_key_press_event(void* self, void* event) {
-    QMessageBox_QBaseKeyPressEvent((QMessageBox*)self, (QKeyEvent*)event);
+void q_messagebox_super_key_press_event(void* self, void* event) {
+    QMessageBox_SuperKeyPressEvent((QMessageBox*)self, (QKeyEvent*)event);
 }
 
 void q_messagebox_change_event(void* self, void* event) {
@@ -426,8 +426,8 @@ void q_messagebox_on_change_event(void* self, void (*callback)(void*, void*)) {
     QMessageBox_OnChangeEvent((QMessageBox*)self, (intptr_t)callback);
 }
 
-void q_messagebox_qbase_change_event(void* self, void* event) {
-    QMessageBox_QBaseChangeEvent((QMessageBox*)self, (QEvent*)event);
+void q_messagebox_super_change_event(void* self, void* event) {
+    QMessageBox_SuperChangeEvent((QMessageBox*)self, (QEvent*)event);
 }
 
 const char* q_messagebox_tr2(const char* s, const char* c) {
@@ -1997,8 +1997,8 @@ void q_messagebox_set_visible(void* self, bool visible) {
     QMessageBox_SetVisible((QMessageBox*)self, visible);
 }
 
-void q_messagebox_qbase_set_visible(void* self, bool visible) {
-    QMessageBox_QBaseSetVisible((QMessageBox*)self, visible);
+void q_messagebox_super_set_visible(void* self, bool visible) {
+    QMessageBox_SuperSetVisible((QMessageBox*)self, visible);
 }
 
 void q_messagebox_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2009,8 +2009,8 @@ QSize* q_messagebox_size_hint(void* self) {
     return QMessageBox_SizeHint((QMessageBox*)self);
 }
 
-QSize* q_messagebox_qbase_size_hint(void* self) {
-    return QMessageBox_QBaseSizeHint((QMessageBox*)self);
+QSize* q_messagebox_super_size_hint(void* self) {
+    return QMessageBox_SuperSizeHint((QMessageBox*)self);
 }
 
 void q_messagebox_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2021,8 +2021,8 @@ QSize* q_messagebox_minimum_size_hint(void* self) {
     return QMessageBox_MinimumSizeHint((QMessageBox*)self);
 }
 
-QSize* q_messagebox_qbase_minimum_size_hint(void* self) {
-    return QMessageBox_QBaseMinimumSizeHint((QMessageBox*)self);
+QSize* q_messagebox_super_minimum_size_hint(void* self) {
+    return QMessageBox_SuperMinimumSizeHint((QMessageBox*)self);
 }
 
 void q_messagebox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2033,8 +2033,8 @@ void q_messagebox_open(void* self) {
     QMessageBox_Open((QMessageBox*)self);
 }
 
-void q_messagebox_qbase_open(void* self) {
-    QMessageBox_QBaseOpen((QMessageBox*)self);
+void q_messagebox_super_open(void* self) {
+    QMessageBox_SuperOpen((QMessageBox*)self);
 }
 
 void q_messagebox_on_open(void* self, void (*callback)()) {
@@ -2045,8 +2045,8 @@ int32_t q_messagebox_exec(void* self) {
     return QMessageBox_Exec((QMessageBox*)self);
 }
 
-int32_t q_messagebox_qbase_exec(void* self) {
-    return QMessageBox_QBaseExec((QMessageBox*)self);
+int32_t q_messagebox_super_exec(void* self) {
+    return QMessageBox_SuperExec((QMessageBox*)self);
 }
 
 void q_messagebox_on_exec(void* self, int32_t (*callback)()) {
@@ -2057,8 +2057,8 @@ void q_messagebox_done(void* self, int param1) {
     QMessageBox_Done((QMessageBox*)self, param1);
 }
 
-void q_messagebox_qbase_done(void* self, int param1) {
-    QMessageBox_QBaseDone((QMessageBox*)self, param1);
+void q_messagebox_super_done(void* self, int param1) {
+    QMessageBox_SuperDone((QMessageBox*)self, param1);
 }
 
 void q_messagebox_on_done(void* self, void (*callback)(void*, int)) {
@@ -2069,8 +2069,8 @@ void q_messagebox_accept(void* self) {
     QMessageBox_Accept((QMessageBox*)self);
 }
 
-void q_messagebox_qbase_accept(void* self) {
-    QMessageBox_QBaseAccept((QMessageBox*)self);
+void q_messagebox_super_accept(void* self) {
+    QMessageBox_SuperAccept((QMessageBox*)self);
 }
 
 void q_messagebox_on_accept(void* self, void (*callback)()) {
@@ -2081,8 +2081,8 @@ void q_messagebox_reject(void* self) {
     QMessageBox_Reject((QMessageBox*)self);
 }
 
-void q_messagebox_qbase_reject(void* self) {
-    QMessageBox_QBaseReject((QMessageBox*)self);
+void q_messagebox_super_reject(void* self) {
+    QMessageBox_SuperReject((QMessageBox*)self);
 }
 
 void q_messagebox_on_reject(void* self, void (*callback)()) {
@@ -2093,8 +2093,8 @@ void q_messagebox_context_menu_event(void* self, void* param1) {
     QMessageBox_ContextMenuEvent((QMessageBox*)self, (QContextMenuEvent*)param1);
 }
 
-void q_messagebox_qbase_context_menu_event(void* self, void* param1) {
-    QMessageBox_QBaseContextMenuEvent((QMessageBox*)self, (QContextMenuEvent*)param1);
+void q_messagebox_super_context_menu_event(void* self, void* param1) {
+    QMessageBox_SuperContextMenuEvent((QMessageBox*)self, (QContextMenuEvent*)param1);
 }
 
 void q_messagebox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ bool q_messagebox_event_filter(void* self, void* param1, void* param2) {
     return QMessageBox_EventFilter((QMessageBox*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_messagebox_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QMessageBox_QBaseEventFilter((QMessageBox*)self, (QObject*)param1, (QEvent*)param2);
+bool q_messagebox_super_event_filter(void* self, void* param1, void* param2) {
+    return QMessageBox_SuperEventFilter((QMessageBox*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_messagebox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2117,8 +2117,8 @@ int32_t q_messagebox_dev_type(void* self) {
     return QMessageBox_DevType((QMessageBox*)self);
 }
 
-int32_t q_messagebox_qbase_dev_type(void* self) {
-    return QMessageBox_QBaseDevType((QMessageBox*)self);
+int32_t q_messagebox_super_dev_type(void* self) {
+    return QMessageBox_SuperDevType((QMessageBox*)self);
 }
 
 void q_messagebox_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2129,8 +2129,8 @@ int32_t q_messagebox_height_for_width(void* self, int param1) {
     return QMessageBox_HeightForWidth((QMessageBox*)self, param1);
 }
 
-int32_t q_messagebox_qbase_height_for_width(void* self, int param1) {
-    return QMessageBox_QBaseHeightForWidth((QMessageBox*)self, param1);
+int32_t q_messagebox_super_height_for_width(void* self, int param1) {
+    return QMessageBox_SuperHeightForWidth((QMessageBox*)self, param1);
 }
 
 void q_messagebox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2141,8 +2141,8 @@ bool q_messagebox_has_height_for_width(void* self) {
     return QMessageBox_HasHeightForWidth((QMessageBox*)self);
 }
 
-bool q_messagebox_qbase_has_height_for_width(void* self) {
-    return QMessageBox_QBaseHasHeightForWidth((QMessageBox*)self);
+bool q_messagebox_super_has_height_for_width(void* self) {
+    return QMessageBox_SuperHasHeightForWidth((QMessageBox*)self);
 }
 
 void q_messagebox_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2153,8 +2153,8 @@ QPaintEngine* q_messagebox_paint_engine(void* self) {
     return QMessageBox_PaintEngine((QMessageBox*)self);
 }
 
-QPaintEngine* q_messagebox_qbase_paint_engine(void* self) {
-    return QMessageBox_QBasePaintEngine((QMessageBox*)self);
+QPaintEngine* q_messagebox_super_paint_engine(void* self) {
+    return QMessageBox_SuperPaintEngine((QMessageBox*)self);
 }
 
 void q_messagebox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2165,8 +2165,8 @@ void q_messagebox_mouse_press_event(void* self, void* event) {
     QMessageBox_MousePressEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
-void q_messagebox_qbase_mouse_press_event(void* self, void* event) {
-    QMessageBox_QBaseMousePressEvent((QMessageBox*)self, (QMouseEvent*)event);
+void q_messagebox_super_mouse_press_event(void* self, void* event) {
+    QMessageBox_SuperMousePressEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
 void q_messagebox_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ void q_messagebox_mouse_release_event(void* self, void* event) {
     QMessageBox_MouseReleaseEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
-void q_messagebox_qbase_mouse_release_event(void* self, void* event) {
-    QMessageBox_QBaseMouseReleaseEvent((QMessageBox*)self, (QMouseEvent*)event);
+void q_messagebox_super_mouse_release_event(void* self, void* event) {
+    QMessageBox_SuperMouseReleaseEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
 void q_messagebox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2189,8 +2189,8 @@ void q_messagebox_mouse_double_click_event(void* self, void* event) {
     QMessageBox_MouseDoubleClickEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
-void q_messagebox_qbase_mouse_double_click_event(void* self, void* event) {
-    QMessageBox_QBaseMouseDoubleClickEvent((QMessageBox*)self, (QMouseEvent*)event);
+void q_messagebox_super_mouse_double_click_event(void* self, void* event) {
+    QMessageBox_SuperMouseDoubleClickEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
 void q_messagebox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2201,8 +2201,8 @@ void q_messagebox_mouse_move_event(void* self, void* event) {
     QMessageBox_MouseMoveEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
-void q_messagebox_qbase_mouse_move_event(void* self, void* event) {
-    QMessageBox_QBaseMouseMoveEvent((QMessageBox*)self, (QMouseEvent*)event);
+void q_messagebox_super_mouse_move_event(void* self, void* event) {
+    QMessageBox_SuperMouseMoveEvent((QMessageBox*)self, (QMouseEvent*)event);
 }
 
 void q_messagebox_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ void q_messagebox_wheel_event(void* self, void* event) {
     QMessageBox_WheelEvent((QMessageBox*)self, (QWheelEvent*)event);
 }
 
-void q_messagebox_qbase_wheel_event(void* self, void* event) {
-    QMessageBox_QBaseWheelEvent((QMessageBox*)self, (QWheelEvent*)event);
+void q_messagebox_super_wheel_event(void* self, void* event) {
+    QMessageBox_SuperWheelEvent((QMessageBox*)self, (QWheelEvent*)event);
 }
 
 void q_messagebox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2225,8 +2225,8 @@ void q_messagebox_key_release_event(void* self, void* event) {
     QMessageBox_KeyReleaseEvent((QMessageBox*)self, (QKeyEvent*)event);
 }
 
-void q_messagebox_qbase_key_release_event(void* self, void* event) {
-    QMessageBox_QBaseKeyReleaseEvent((QMessageBox*)self, (QKeyEvent*)event);
+void q_messagebox_super_key_release_event(void* self, void* event) {
+    QMessageBox_SuperKeyReleaseEvent((QMessageBox*)self, (QKeyEvent*)event);
 }
 
 void q_messagebox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2237,8 +2237,8 @@ void q_messagebox_focus_in_event(void* self, void* event) {
     QMessageBox_FocusInEvent((QMessageBox*)self, (QFocusEvent*)event);
 }
 
-void q_messagebox_qbase_focus_in_event(void* self, void* event) {
-    QMessageBox_QBaseFocusInEvent((QMessageBox*)self, (QFocusEvent*)event);
+void q_messagebox_super_focus_in_event(void* self, void* event) {
+    QMessageBox_SuperFocusInEvent((QMessageBox*)self, (QFocusEvent*)event);
 }
 
 void q_messagebox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2249,8 +2249,8 @@ void q_messagebox_focus_out_event(void* self, void* event) {
     QMessageBox_FocusOutEvent((QMessageBox*)self, (QFocusEvent*)event);
 }
 
-void q_messagebox_qbase_focus_out_event(void* self, void* event) {
-    QMessageBox_QBaseFocusOutEvent((QMessageBox*)self, (QFocusEvent*)event);
+void q_messagebox_super_focus_out_event(void* self, void* event) {
+    QMessageBox_SuperFocusOutEvent((QMessageBox*)self, (QFocusEvent*)event);
 }
 
 void q_messagebox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2261,8 +2261,8 @@ void q_messagebox_enter_event(void* self, void* event) {
     QMessageBox_EnterEvent((QMessageBox*)self, (QEnterEvent*)event);
 }
 
-void q_messagebox_qbase_enter_event(void* self, void* event) {
-    QMessageBox_QBaseEnterEvent((QMessageBox*)self, (QEnterEvent*)event);
+void q_messagebox_super_enter_event(void* self, void* event) {
+    QMessageBox_SuperEnterEvent((QMessageBox*)self, (QEnterEvent*)event);
 }
 
 void q_messagebox_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2273,8 +2273,8 @@ void q_messagebox_leave_event(void* self, void* event) {
     QMessageBox_LeaveEvent((QMessageBox*)self, (QEvent*)event);
 }
 
-void q_messagebox_qbase_leave_event(void* self, void* event) {
-    QMessageBox_QBaseLeaveEvent((QMessageBox*)self, (QEvent*)event);
+void q_messagebox_super_leave_event(void* self, void* event) {
+    QMessageBox_SuperLeaveEvent((QMessageBox*)self, (QEvent*)event);
 }
 
 void q_messagebox_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2285,8 +2285,8 @@ void q_messagebox_paint_event(void* self, void* event) {
     QMessageBox_PaintEvent((QMessageBox*)self, (QPaintEvent*)event);
 }
 
-void q_messagebox_qbase_paint_event(void* self, void* event) {
-    QMessageBox_QBasePaintEvent((QMessageBox*)self, (QPaintEvent*)event);
+void q_messagebox_super_paint_event(void* self, void* event) {
+    QMessageBox_SuperPaintEvent((QMessageBox*)self, (QPaintEvent*)event);
 }
 
 void q_messagebox_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2297,8 +2297,8 @@ void q_messagebox_move_event(void* self, void* event) {
     QMessageBox_MoveEvent((QMessageBox*)self, (QMoveEvent*)event);
 }
 
-void q_messagebox_qbase_move_event(void* self, void* event) {
-    QMessageBox_QBaseMoveEvent((QMessageBox*)self, (QMoveEvent*)event);
+void q_messagebox_super_move_event(void* self, void* event) {
+    QMessageBox_SuperMoveEvent((QMessageBox*)self, (QMoveEvent*)event);
 }
 
 void q_messagebox_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2309,8 +2309,8 @@ void q_messagebox_tablet_event(void* self, void* event) {
     QMessageBox_TabletEvent((QMessageBox*)self, (QTabletEvent*)event);
 }
 
-void q_messagebox_qbase_tablet_event(void* self, void* event) {
-    QMessageBox_QBaseTabletEvent((QMessageBox*)self, (QTabletEvent*)event);
+void q_messagebox_super_tablet_event(void* self, void* event) {
+    QMessageBox_SuperTabletEvent((QMessageBox*)self, (QTabletEvent*)event);
 }
 
 void q_messagebox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2321,8 +2321,8 @@ void q_messagebox_action_event(void* self, void* event) {
     QMessageBox_ActionEvent((QMessageBox*)self, (QActionEvent*)event);
 }
 
-void q_messagebox_qbase_action_event(void* self, void* event) {
-    QMessageBox_QBaseActionEvent((QMessageBox*)self, (QActionEvent*)event);
+void q_messagebox_super_action_event(void* self, void* event) {
+    QMessageBox_SuperActionEvent((QMessageBox*)self, (QActionEvent*)event);
 }
 
 void q_messagebox_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2333,8 +2333,8 @@ void q_messagebox_drag_enter_event(void* self, void* event) {
     QMessageBox_DragEnterEvent((QMessageBox*)self, (QDragEnterEvent*)event);
 }
 
-void q_messagebox_qbase_drag_enter_event(void* self, void* event) {
-    QMessageBox_QBaseDragEnterEvent((QMessageBox*)self, (QDragEnterEvent*)event);
+void q_messagebox_super_drag_enter_event(void* self, void* event) {
+    QMessageBox_SuperDragEnterEvent((QMessageBox*)self, (QDragEnterEvent*)event);
 }
 
 void q_messagebox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2345,8 +2345,8 @@ void q_messagebox_drag_move_event(void* self, void* event) {
     QMessageBox_DragMoveEvent((QMessageBox*)self, (QDragMoveEvent*)event);
 }
 
-void q_messagebox_qbase_drag_move_event(void* self, void* event) {
-    QMessageBox_QBaseDragMoveEvent((QMessageBox*)self, (QDragMoveEvent*)event);
+void q_messagebox_super_drag_move_event(void* self, void* event) {
+    QMessageBox_SuperDragMoveEvent((QMessageBox*)self, (QDragMoveEvent*)event);
 }
 
 void q_messagebox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2357,8 +2357,8 @@ void q_messagebox_drag_leave_event(void* self, void* event) {
     QMessageBox_DragLeaveEvent((QMessageBox*)self, (QDragLeaveEvent*)event);
 }
 
-void q_messagebox_qbase_drag_leave_event(void* self, void* event) {
-    QMessageBox_QBaseDragLeaveEvent((QMessageBox*)self, (QDragLeaveEvent*)event);
+void q_messagebox_super_drag_leave_event(void* self, void* event) {
+    QMessageBox_SuperDragLeaveEvent((QMessageBox*)self, (QDragLeaveEvent*)event);
 }
 
 void q_messagebox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2369,8 +2369,8 @@ void q_messagebox_drop_event(void* self, void* event) {
     QMessageBox_DropEvent((QMessageBox*)self, (QDropEvent*)event);
 }
 
-void q_messagebox_qbase_drop_event(void* self, void* event) {
-    QMessageBox_QBaseDropEvent((QMessageBox*)self, (QDropEvent*)event);
+void q_messagebox_super_drop_event(void* self, void* event) {
+    QMessageBox_SuperDropEvent((QMessageBox*)self, (QDropEvent*)event);
 }
 
 void q_messagebox_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2381,8 +2381,8 @@ void q_messagebox_hide_event(void* self, void* event) {
     QMessageBox_HideEvent((QMessageBox*)self, (QHideEvent*)event);
 }
 
-void q_messagebox_qbase_hide_event(void* self, void* event) {
-    QMessageBox_QBaseHideEvent((QMessageBox*)self, (QHideEvent*)event);
+void q_messagebox_super_hide_event(void* self, void* event) {
+    QMessageBox_SuperHideEvent((QMessageBox*)self, (QHideEvent*)event);
 }
 
 void q_messagebox_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2393,8 +2393,8 @@ bool q_messagebox_native_event(void* self, char* eventType, void* message, intpt
     return QMessageBox_NativeEvent((QMessageBox*)self, qstring(eventType), message, result);
 }
 
-bool q_messagebox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QMessageBox_QBaseNativeEvent((QMessageBox*)self, qstring(eventType), message, result);
+bool q_messagebox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QMessageBox_SuperNativeEvent((QMessageBox*)self, qstring(eventType), message, result);
 }
 
 void q_messagebox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2405,8 +2405,8 @@ int32_t q_messagebox_metric(void* self, int32_t param1) {
     return QMessageBox_Metric((QMessageBox*)self, param1);
 }
 
-int32_t q_messagebox_qbase_metric(void* self, int32_t param1) {
-    return QMessageBox_QBaseMetric((QMessageBox*)self, param1);
+int32_t q_messagebox_super_metric(void* self, int32_t param1) {
+    return QMessageBox_SuperMetric((QMessageBox*)self, param1);
 }
 
 void q_messagebox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2417,8 +2417,8 @@ void q_messagebox_init_painter(void* self, void* painter) {
     QMessageBox_InitPainter((QMessageBox*)self, (QPainter*)painter);
 }
 
-void q_messagebox_qbase_init_painter(void* self, void* painter) {
-    QMessageBox_QBaseInitPainter((QMessageBox*)self, (QPainter*)painter);
+void q_messagebox_super_init_painter(void* self, void* painter) {
+    QMessageBox_SuperInitPainter((QMessageBox*)self, (QPainter*)painter);
 }
 
 void q_messagebox_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2429,8 +2429,8 @@ QPaintDevice* q_messagebox_redirected(void* self, void* offset) {
     return QMessageBox_Redirected((QMessageBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_messagebox_qbase_redirected(void* self, void* offset) {
-    return QMessageBox_QBaseRedirected((QMessageBox*)self, (QPoint*)offset);
+QPaintDevice* q_messagebox_super_redirected(void* self, void* offset) {
+    return QMessageBox_SuperRedirected((QMessageBox*)self, (QPoint*)offset);
 }
 
 void q_messagebox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2441,8 +2441,8 @@ QPainter* q_messagebox_shared_painter(void* self) {
     return QMessageBox_SharedPainter((QMessageBox*)self);
 }
 
-QPainter* q_messagebox_qbase_shared_painter(void* self) {
-    return QMessageBox_QBaseSharedPainter((QMessageBox*)self);
+QPainter* q_messagebox_super_shared_painter(void* self) {
+    return QMessageBox_SuperSharedPainter((QMessageBox*)self);
 }
 
 void q_messagebox_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2453,8 +2453,8 @@ void q_messagebox_input_method_event(void* self, void* param1) {
     QMessageBox_InputMethodEvent((QMessageBox*)self, (QInputMethodEvent*)param1);
 }
 
-void q_messagebox_qbase_input_method_event(void* self, void* param1) {
-    QMessageBox_QBaseInputMethodEvent((QMessageBox*)self, (QInputMethodEvent*)param1);
+void q_messagebox_super_input_method_event(void* self, void* param1) {
+    QMessageBox_SuperInputMethodEvent((QMessageBox*)self, (QInputMethodEvent*)param1);
 }
 
 void q_messagebox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2465,8 +2465,8 @@ QVariant* q_messagebox_input_method_query(void* self, int32_t param1) {
     return QMessageBox_InputMethodQuery((QMessageBox*)self, param1);
 }
 
-QVariant* q_messagebox_qbase_input_method_query(void* self, int32_t param1) {
-    return QMessageBox_QBaseInputMethodQuery((QMessageBox*)self, param1);
+QVariant* q_messagebox_super_input_method_query(void* self, int32_t param1) {
+    return QMessageBox_SuperInputMethodQuery((QMessageBox*)self, param1);
 }
 
 void q_messagebox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2477,8 +2477,8 @@ bool q_messagebox_focus_next_prev_child(void* self, bool next) {
     return QMessageBox_FocusNextPrevChild((QMessageBox*)self, next);
 }
 
-bool q_messagebox_qbase_focus_next_prev_child(void* self, bool next) {
-    return QMessageBox_QBaseFocusNextPrevChild((QMessageBox*)self, next);
+bool q_messagebox_super_focus_next_prev_child(void* self, bool next) {
+    return QMessageBox_SuperFocusNextPrevChild((QMessageBox*)self, next);
 }
 
 void q_messagebox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2489,8 +2489,8 @@ void q_messagebox_timer_event(void* self, void* event) {
     QMessageBox_TimerEvent((QMessageBox*)self, (QTimerEvent*)event);
 }
 
-void q_messagebox_qbase_timer_event(void* self, void* event) {
-    QMessageBox_QBaseTimerEvent((QMessageBox*)self, (QTimerEvent*)event);
+void q_messagebox_super_timer_event(void* self, void* event) {
+    QMessageBox_SuperTimerEvent((QMessageBox*)self, (QTimerEvent*)event);
 }
 
 void q_messagebox_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2501,8 +2501,8 @@ void q_messagebox_child_event(void* self, void* event) {
     QMessageBox_ChildEvent((QMessageBox*)self, (QChildEvent*)event);
 }
 
-void q_messagebox_qbase_child_event(void* self, void* event) {
-    QMessageBox_QBaseChildEvent((QMessageBox*)self, (QChildEvent*)event);
+void q_messagebox_super_child_event(void* self, void* event) {
+    QMessageBox_SuperChildEvent((QMessageBox*)self, (QChildEvent*)event);
 }
 
 void q_messagebox_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2513,8 +2513,8 @@ void q_messagebox_custom_event(void* self, void* event) {
     QMessageBox_CustomEvent((QMessageBox*)self, (QEvent*)event);
 }
 
-void q_messagebox_qbase_custom_event(void* self, void* event) {
-    QMessageBox_QBaseCustomEvent((QMessageBox*)self, (QEvent*)event);
+void q_messagebox_super_custom_event(void* self, void* event) {
+    QMessageBox_SuperCustomEvent((QMessageBox*)self, (QEvent*)event);
 }
 
 void q_messagebox_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2525,8 +2525,8 @@ void q_messagebox_connect_notify(void* self, void* signal) {
     QMessageBox_ConnectNotify((QMessageBox*)self, (QMetaMethod*)signal);
 }
 
-void q_messagebox_qbase_connect_notify(void* self, void* signal) {
-    QMessageBox_QBaseConnectNotify((QMessageBox*)self, (QMetaMethod*)signal);
+void q_messagebox_super_connect_notify(void* self, void* signal) {
+    QMessageBox_SuperConnectNotify((QMessageBox*)self, (QMetaMethod*)signal);
 }
 
 void q_messagebox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2537,8 +2537,8 @@ void q_messagebox_disconnect_notify(void* self, void* signal) {
     QMessageBox_DisconnectNotify((QMessageBox*)self, (QMetaMethod*)signal);
 }
 
-void q_messagebox_qbase_disconnect_notify(void* self, void* signal) {
-    QMessageBox_QBaseDisconnectNotify((QMessageBox*)self, (QMetaMethod*)signal);
+void q_messagebox_super_disconnect_notify(void* self, void* signal) {
+    QMessageBox_SuperDisconnectNotify((QMessageBox*)self, (QMetaMethod*)signal);
 }
 
 void q_messagebox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2549,8 +2549,8 @@ void q_messagebox_adjust_position(void* self, void* param1) {
     QMessageBox_AdjustPosition((QMessageBox*)self, (QWidget*)param1);
 }
 
-void q_messagebox_qbase_adjust_position(void* self, void* param1) {
-    QMessageBox_QBaseAdjustPosition((QMessageBox*)self, (QWidget*)param1);
+void q_messagebox_super_adjust_position(void* self, void* param1) {
+    QMessageBox_SuperAdjustPosition((QMessageBox*)self, (QWidget*)param1);
 }
 
 void q_messagebox_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2561,8 +2561,8 @@ void q_messagebox_update_micro_focus(void* self) {
     QMessageBox_UpdateMicroFocus((QMessageBox*)self);
 }
 
-void q_messagebox_qbase_update_micro_focus(void* self) {
-    QMessageBox_QBaseUpdateMicroFocus((QMessageBox*)self);
+void q_messagebox_super_update_micro_focus(void* self) {
+    QMessageBox_SuperUpdateMicroFocus((QMessageBox*)self);
 }
 
 void q_messagebox_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2573,8 +2573,8 @@ void q_messagebox_create(void* self) {
     QMessageBox_Create((QMessageBox*)self);
 }
 
-void q_messagebox_qbase_create(void* self) {
-    QMessageBox_QBaseCreate((QMessageBox*)self);
+void q_messagebox_super_create(void* self) {
+    QMessageBox_SuperCreate((QMessageBox*)self);
 }
 
 void q_messagebox_on_create(void* self, void (*callback)()) {
@@ -2585,8 +2585,8 @@ void q_messagebox_destroy(void* self) {
     QMessageBox_Destroy((QMessageBox*)self);
 }
 
-void q_messagebox_qbase_destroy(void* self) {
-    QMessageBox_QBaseDestroy((QMessageBox*)self);
+void q_messagebox_super_destroy(void* self) {
+    QMessageBox_SuperDestroy((QMessageBox*)self);
 }
 
 void q_messagebox_on_destroy(void* self, void (*callback)()) {
@@ -2597,8 +2597,8 @@ bool q_messagebox_focus_next_child(void* self) {
     return QMessageBox_FocusNextChild((QMessageBox*)self);
 }
 
-bool q_messagebox_qbase_focus_next_child(void* self) {
-    return QMessageBox_QBaseFocusNextChild((QMessageBox*)self);
+bool q_messagebox_super_focus_next_child(void* self) {
+    return QMessageBox_SuperFocusNextChild((QMessageBox*)self);
 }
 
 void q_messagebox_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2609,8 +2609,8 @@ bool q_messagebox_focus_previous_child(void* self) {
     return QMessageBox_FocusPreviousChild((QMessageBox*)self);
 }
 
-bool q_messagebox_qbase_focus_previous_child(void* self) {
-    return QMessageBox_QBaseFocusPreviousChild((QMessageBox*)self);
+bool q_messagebox_super_focus_previous_child(void* self) {
+    return QMessageBox_SuperFocusPreviousChild((QMessageBox*)self);
 }
 
 void q_messagebox_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2621,8 +2621,8 @@ QObject* q_messagebox_sender(void* self) {
     return QMessageBox_Sender((QMessageBox*)self);
 }
 
-QObject* q_messagebox_qbase_sender(void* self) {
-    return QMessageBox_QBaseSender((QMessageBox*)self);
+QObject* q_messagebox_super_sender(void* self) {
+    return QMessageBox_SuperSender((QMessageBox*)self);
 }
 
 void q_messagebox_on_sender(void* self, QObject* (*callback)()) {
@@ -2633,8 +2633,8 @@ int32_t q_messagebox_sender_signal_index(void* self) {
     return QMessageBox_SenderSignalIndex((QMessageBox*)self);
 }
 
-int32_t q_messagebox_qbase_sender_signal_index(void* self) {
-    return QMessageBox_QBaseSenderSignalIndex((QMessageBox*)self);
+int32_t q_messagebox_super_sender_signal_index(void* self) {
+    return QMessageBox_SuperSenderSignalIndex((QMessageBox*)self);
 }
 
 void q_messagebox_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2645,8 +2645,8 @@ int32_t q_messagebox_receivers(void* self, const char* signal) {
     return QMessageBox_Receivers((QMessageBox*)self, signal);
 }
 
-int32_t q_messagebox_qbase_receivers(void* self, const char* signal) {
-    return QMessageBox_QBaseReceivers((QMessageBox*)self, signal);
+int32_t q_messagebox_super_receivers(void* self, const char* signal) {
+    return QMessageBox_SuperReceivers((QMessageBox*)self, signal);
 }
 
 void q_messagebox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2657,8 +2657,8 @@ bool q_messagebox_is_signal_connected(void* self, void* signal) {
     return QMessageBox_IsSignalConnected((QMessageBox*)self, (QMetaMethod*)signal);
 }
 
-bool q_messagebox_qbase_is_signal_connected(void* self, void* signal) {
-    return QMessageBox_QBaseIsSignalConnected((QMessageBox*)self, (QMetaMethod*)signal);
+bool q_messagebox_super_is_signal_connected(void* self, void* signal) {
+    return QMessageBox_SuperIsSignalConnected((QMessageBox*)self, (QMetaMethod*)signal);
 }
 
 void q_messagebox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2669,8 +2669,8 @@ double q_messagebox_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QMessageBox_GetDecodedMetricF((QMessageBox*)self, metricA, metricB);
 }
 
-double q_messagebox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QMessageBox_QBaseGetDecodedMetricF((QMessageBox*)self, metricA, metricB);
+double q_messagebox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QMessageBox_SuperGetDecodedMetricF((QMessageBox*)self, metricA, metricB);
 }
 
 void q_messagebox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -330,13 +330,17 @@ int32_t q_graphicsgridlayout_count(void* self);
 ///
 void q_graphicsgridlayout_on_count(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_count` instead
+///
+#define q_graphicsgridlayout_qbase_count q_graphicsgridlayout_super_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#count)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsGridLayout*
 ///
-int32_t q_graphicsgridlayout_qbase_count(void* self);
+int32_t q_graphicsgridlayout_super_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
@@ -354,6 +358,10 @@ QGraphicsLayoutItem* q_graphicsgridlayout_item_at2(void* self, int index);
 ///
 void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_item_at2` instead
+///
+#define q_graphicsgridlayout_qbase_item_at2 q_graphicsgridlayout_super_item_at2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#itemAt)
 ///
 /// Base class method implementation
@@ -361,7 +369,7 @@ void q_graphicsgridlayout_on_item_at2(void* self, QGraphicsLayoutItem* (*callbac
 /// @param self QGraphicsGridLayout*
 /// @param index int
 ///
-QGraphicsLayoutItem* q_graphicsgridlayout_qbase_item_at2(void* self, int index);
+QGraphicsLayoutItem* q_graphicsgridlayout_super_item_at2(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#removeAt)
 ///
@@ -379,6 +387,10 @@ void q_graphicsgridlayout_remove_at(void* self, int index);
 ///
 void q_graphicsgridlayout_on_remove_at(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_remove_at` instead
+///
+#define q_graphicsgridlayout_qbase_remove_at q_graphicsgridlayout_super_remove_at
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#removeAt)
 ///
 /// Base class method implementation
@@ -386,7 +398,7 @@ void q_graphicsgridlayout_on_remove_at(void* self, void (*callback)(void*, int))
 /// @param self QGraphicsGridLayout*
 /// @param index int
 ///
-void q_graphicsgridlayout_qbase_remove_at(void* self, int index);
+void q_graphicsgridlayout_super_remove_at(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#removeItem)
 ///
@@ -410,13 +422,17 @@ void q_graphicsgridlayout_invalidate(void* self);
 ///
 void q_graphicsgridlayout_on_invalidate(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_invalidate` instead
+///
+#define q_graphicsgridlayout_qbase_invalidate q_graphicsgridlayout_super_invalidate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#invalidate)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsGridLayout*
 ///
-void q_graphicsgridlayout_qbase_invalidate(void* self);
+void q_graphicsgridlayout_super_invalidate(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setGeometry)
 ///
@@ -434,6 +450,10 @@ void q_graphicsgridlayout_set_geometry(void* self, void* rect);
 ///
 void q_graphicsgridlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_set_geometry` instead
+///
+#define q_graphicsgridlayout_qbase_set_geometry q_graphicsgridlayout_super_set_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#setGeometry)
 ///
 /// Base class method implementation
@@ -441,7 +461,7 @@ void q_graphicsgridlayout_on_set_geometry(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsGridLayout*
 /// @param rect QRectF*
 ///
-void q_graphicsgridlayout_qbase_set_geometry(void* self, void* rect);
+void q_graphicsgridlayout_super_set_geometry(void* self, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
 ///
@@ -460,6 +480,10 @@ QSizeF* q_graphicsgridlayout_size_hint(void* self, int32_t which, void* constrai
 ///
 void q_graphicsgridlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_size_hint` instead
+///
+#define q_graphicsgridlayout_qbase_size_hint q_graphicsgridlayout_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#sizeHint)
 ///
 /// Base class method implementation
@@ -468,7 +492,7 @@ void q_graphicsgridlayout_on_size_hint(void* self, QSizeF* (*callback)(void*, in
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_graphicsgridlayout_qbase_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_graphicsgridlayout_super_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicsgridlayout.html#addItem)
 ///
@@ -845,6 +869,10 @@ QSizeF* q_graphicsgridlayout_effective_size_hint2(void* self, int32_t which, voi
 ///
 void q_graphicsgridlayout_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_get_contents_margins` instead
+///
+#define q_graphicsgridlayout_qbase_get_contents_margins q_graphicsgridlayout_super_get_contents_margins
+
 /// Inherited from QGraphicsLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#getContentsMargins)
@@ -857,7 +885,7 @@ void q_graphicsgridlayout_get_contents_margins(void* self, double* left, double*
 /// @param right double*
 /// @param bottom double*
 ///
-void q_graphicsgridlayout_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_graphicsgridlayout_super_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -880,6 +908,10 @@ void q_graphicsgridlayout_on_get_contents_margins(void* self, void (*callback)(v
 ///
 void q_graphicsgridlayout_update_geometry(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_update_geometry` instead
+///
+#define q_graphicsgridlayout_qbase_update_geometry q_graphicsgridlayout_super_update_geometry
+
 /// Inherited from QGraphicsLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#updateGeometry)
@@ -888,7 +920,7 @@ void q_graphicsgridlayout_update_geometry(void* self);
 ///
 /// @param self QGraphicsGridLayout*
 ///
-void q_graphicsgridlayout_qbase_update_geometry(void* self);
+void q_graphicsgridlayout_super_update_geometry(void* self);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -912,6 +944,10 @@ void q_graphicsgridlayout_on_update_geometry(void* self, void (*callback)());
 ///
 void q_graphicsgridlayout_widget_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_widget_event` instead
+///
+#define q_graphicsgridlayout_qbase_widget_event q_graphicsgridlayout_super_widget_event
+
 /// Inherited from QGraphicsLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#widgetEvent)
@@ -921,7 +957,7 @@ void q_graphicsgridlayout_widget_event(void* self, void* e);
 /// @param self QGraphicsGridLayout*
 /// @param e QEvent*
 ///
-void q_graphicsgridlayout_qbase_widget_event(void* self, void* e);
+void q_graphicsgridlayout_super_widget_event(void* self, void* e);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -944,6 +980,10 @@ void q_graphicsgridlayout_on_widget_event(void* self, void (*callback)(void*, vo
 ///
 bool q_graphicsgridlayout_is_empty(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_is_empty` instead
+///
+#define q_graphicsgridlayout_qbase_is_empty q_graphicsgridlayout_super_is_empty
+
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
@@ -952,7 +992,7 @@ bool q_graphicsgridlayout_is_empty(void* self);
 ///
 /// @param self QGraphicsGridLayout*
 ///
-bool q_graphicsgridlayout_qbase_is_empty(void* self);
+bool q_graphicsgridlayout_super_is_empty(void* self);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -976,6 +1016,10 @@ void q_graphicsgridlayout_on_is_empty(void* self, bool (*callback)());
 ///
 void q_graphicsgridlayout_add_child_layout_item(void* self, void* layoutItem);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_add_child_layout_item` instead
+///
+#define q_graphicsgridlayout_qbase_add_child_layout_item q_graphicsgridlayout_super_add_child_layout_item
+
 /// Inherited from QGraphicsLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayout.html#addChildLayoutItem)
@@ -985,7 +1029,7 @@ void q_graphicsgridlayout_add_child_layout_item(void* self, void* layoutItem);
 /// @param self QGraphicsGridLayout*
 /// @param layoutItem QGraphicsLayoutItem*
 ///
-void q_graphicsgridlayout_qbase_add_child_layout_item(void* self, void* layoutItem);
+void q_graphicsgridlayout_super_add_child_layout_item(void* self, void* layoutItem);
 
 /// Inherited from QGraphicsLayout
 ///
@@ -1009,6 +1053,10 @@ void q_graphicsgridlayout_on_add_child_layout_item(void* self, void (*callback)(
 ///
 void q_graphicsgridlayout_set_graphics_item(void* self, void* item);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_set_graphics_item` instead
+///
+#define q_graphicsgridlayout_qbase_set_graphics_item q_graphicsgridlayout_super_set_graphics_item
+
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
@@ -1018,7 +1066,7 @@ void q_graphicsgridlayout_set_graphics_item(void* self, void* item);
 /// @param self QGraphicsGridLayout*
 /// @param item QGraphicsItem*
 ///
-void q_graphicsgridlayout_qbase_set_graphics_item(void* self, void* item);
+void q_graphicsgridlayout_super_set_graphics_item(void* self, void* item);
 
 /// Inherited from QGraphicsLayoutItem
 ///
@@ -1042,6 +1090,10 @@ void q_graphicsgridlayout_on_set_graphics_item(void* self, void (*callback)(void
 ///
 void q_graphicsgridlayout_set_owned_by_layout(void* self, bool ownedByLayout);
 
+/// @warning DEPRECATED: Use `q_graphicsgridlayout_super_set_owned_by_layout` instead
+///
+#define q_graphicsgridlayout_qbase_set_owned_by_layout q_graphicsgridlayout_super_set_owned_by_layout
+
 /// Inherited from QGraphicsLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
@@ -1051,7 +1103,7 @@ void q_graphicsgridlayout_set_owned_by_layout(void* self, bool ownedByLayout);
 /// @param self QGraphicsGridLayout*
 /// @param ownedByLayout bool
 ///
-void q_graphicsgridlayout_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
+void q_graphicsgridlayout_super_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// Inherited from QGraphicsLayoutItem
 ///

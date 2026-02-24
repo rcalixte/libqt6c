@@ -31,8 +31,8 @@ void q_rasterwindow_on_meta_object(void* self, const QMetaObject* (*callback)())
     QRasterWindow_OnMetaObject((QRasterWindow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_rasterwindow_qbase_meta_object(void* self) {
-    return QRasterWindow_QBaseMetaObject((QRasterWindow*)self);
+const QMetaObject* q_rasterwindow_super_meta_object(void* self) {
+    return QRasterWindow_SuperMetaObject((QRasterWindow*)self);
 }
 
 void* q_rasterwindow_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_rasterwindow_on_metacast(void* self, void* (*callback)(void*, const char*
     QRasterWindow_OnMetacast((QRasterWindow*)self, (intptr_t)callback);
 }
 
-void* q_rasterwindow_qbase_metacast(void* self, const char* param1) {
-    return QRasterWindow_QBaseMetacast((QRasterWindow*)self, param1);
+void* q_rasterwindow_super_metacast(void* self, const char* param1) {
+    return QRasterWindow_SuperMetacast((QRasterWindow*)self, param1);
 }
 
 int32_t q_rasterwindow_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_rasterwindow_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QRasterWindow_OnMetacall((QRasterWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_rasterwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QRasterWindow_QBaseMetacall((QRasterWindow*)self, param1, param2, param3);
+int32_t q_rasterwindow_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QRasterWindow_SuperMetacall((QRasterWindow*)self, param1, param2, param3);
 }
 
 const char* q_rasterwindow_tr(const char* s) {
@@ -74,8 +74,8 @@ void q_rasterwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QRasterWindow_OnMetric((QRasterWindow*)self, (intptr_t)callback);
 }
 
-int32_t q_rasterwindow_qbase_metric(void* self, int32_t metric) {
-    return QRasterWindow_QBaseMetric((QRasterWindow*)self, metric);
+int32_t q_rasterwindow_super_metric(void* self, int32_t metric) {
+    return QRasterWindow_SuperMetric((QRasterWindow*)self, metric);
 }
 
 QPaintDevice* q_rasterwindow_redirected(void* self, void* param1) {
@@ -86,8 +86,8 @@ void q_rasterwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
     QRasterWindow_OnRedirected((QRasterWindow*)self, (intptr_t)callback);
 }
 
-QPaintDevice* q_rasterwindow_qbase_redirected(void* self, void* param1) {
-    return QRasterWindow_QBaseRedirected((QRasterWindow*)self, (QPoint*)param1);
+QPaintDevice* q_rasterwindow_super_redirected(void* self, void* param1) {
+    return QRasterWindow_SuperRedirected((QRasterWindow*)self, (QPoint*)param1);
 }
 
 void q_rasterwindow_resize_event(void* self, void* event) {
@@ -98,8 +98,8 @@ void q_rasterwindow_on_resize_event(void* self, void (*callback)(void*, void*)) 
     QRasterWindow_OnResizeEvent((QRasterWindow*)self, (intptr_t)callback);
 }
 
-void q_rasterwindow_qbase_resize_event(void* self, void* event) {
-    QRasterWindow_QBaseResizeEvent((QRasterWindow*)self, (QResizeEvent*)event);
+void q_rasterwindow_super_resize_event(void* self, void* event) {
+    QRasterWindow_SuperResizeEvent((QRasterWindow*)self, (QResizeEvent*)event);
 }
 
 const char* q_rasterwindow_tr2(const char* s, const char* c) {
@@ -981,8 +981,8 @@ void q_rasterwindow_expose_event(void* self, void* param1) {
     QRasterWindow_ExposeEvent((QRasterWindow*)self, (QExposeEvent*)param1);
 }
 
-void q_rasterwindow_qbase_expose_event(void* self, void* param1) {
-    QRasterWindow_QBaseExposeEvent((QRasterWindow*)self, (QExposeEvent*)param1);
+void q_rasterwindow_super_expose_event(void* self, void* param1) {
+    QRasterWindow_SuperExposeEvent((QRasterWindow*)self, (QExposeEvent*)param1);
 }
 
 void q_rasterwindow_on_expose_event(void* self, void (*callback)(void*, void*)) {
@@ -993,8 +993,8 @@ void q_rasterwindow_paint_event(void* self, void* event) {
     QRasterWindow_PaintEvent((QRasterWindow*)self, (QPaintEvent*)event);
 }
 
-void q_rasterwindow_qbase_paint_event(void* self, void* event) {
-    QRasterWindow_QBasePaintEvent((QRasterWindow*)self, (QPaintEvent*)event);
+void q_rasterwindow_super_paint_event(void* self, void* event) {
+    QRasterWindow_SuperPaintEvent((QRasterWindow*)self, (QPaintEvent*)event);
 }
 
 void q_rasterwindow_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1005,8 +1005,8 @@ bool q_rasterwindow_event(void* self, void* event) {
     return QRasterWindow_Event((QRasterWindow*)self, (QEvent*)event);
 }
 
-bool q_rasterwindow_qbase_event(void* self, void* event) {
-    return QRasterWindow_QBaseEvent((QRasterWindow*)self, (QEvent*)event);
+bool q_rasterwindow_super_event(void* self, void* event) {
+    return QRasterWindow_SuperEvent((QRasterWindow*)self, (QEvent*)event);
 }
 
 void q_rasterwindow_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1017,8 +1017,8 @@ int32_t q_rasterwindow_surface_type(void* self) {
     return QRasterWindow_SurfaceType((QRasterWindow*)self);
 }
 
-int32_t q_rasterwindow_qbase_surface_type(void* self) {
-    return QRasterWindow_QBaseSurfaceType((QRasterWindow*)self);
+int32_t q_rasterwindow_super_surface_type(void* self) {
+    return QRasterWindow_SuperSurfaceType((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_surface_type(void* self, int32_t (*callback)()) {
@@ -1029,8 +1029,8 @@ QSurfaceFormat* q_rasterwindow_format(void* self) {
     return QRasterWindow_Format((QRasterWindow*)self);
 }
 
-QSurfaceFormat* q_rasterwindow_qbase_format(void* self) {
-    return QRasterWindow_QBaseFormat((QRasterWindow*)self);
+QSurfaceFormat* q_rasterwindow_super_format(void* self) {
+    return QRasterWindow_SuperFormat((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)()) {
@@ -1041,8 +1041,8 @@ QSize* q_rasterwindow_size(void* self) {
     return QRasterWindow_Size((QRasterWindow*)self);
 }
 
-QSize* q_rasterwindow_qbase_size(void* self) {
-    return QRasterWindow_QBaseSize((QRasterWindow*)self);
+QSize* q_rasterwindow_super_size(void* self) {
+    return QRasterWindow_SuperSize((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_size(void* self, QSize* (*callback)()) {
@@ -1053,8 +1053,8 @@ QAccessibleInterface* q_rasterwindow_accessible_root(void* self) {
     return QRasterWindow_AccessibleRoot((QRasterWindow*)self);
 }
 
-QAccessibleInterface* q_rasterwindow_qbase_accessible_root(void* self) {
-    return QRasterWindow_QBaseAccessibleRoot((QRasterWindow*)self);
+QAccessibleInterface* q_rasterwindow_super_accessible_root(void* self) {
+    return QRasterWindow_SuperAccessibleRoot((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_accessible_root(void* self, QAccessibleInterface* (*callback)()) {
@@ -1065,8 +1065,8 @@ QObject* q_rasterwindow_focus_object(void* self) {
     return QRasterWindow_FocusObject((QRasterWindow*)self);
 }
 
-QObject* q_rasterwindow_qbase_focus_object(void* self) {
-    return QRasterWindow_QBaseFocusObject((QRasterWindow*)self);
+QObject* q_rasterwindow_super_focus_object(void* self) {
+    return QRasterWindow_SuperFocusObject((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_focus_object(void* self, QObject* (*callback)()) {
@@ -1077,8 +1077,8 @@ void q_rasterwindow_move_event(void* self, void* param1) {
     QRasterWindow_MoveEvent((QRasterWindow*)self, (QMoveEvent*)param1);
 }
 
-void q_rasterwindow_qbase_move_event(void* self, void* param1) {
-    QRasterWindow_QBaseMoveEvent((QRasterWindow*)self, (QMoveEvent*)param1);
+void q_rasterwindow_super_move_event(void* self, void* param1) {
+    QRasterWindow_SuperMoveEvent((QRasterWindow*)self, (QMoveEvent*)param1);
 }
 
 void q_rasterwindow_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1089,8 +1089,8 @@ void q_rasterwindow_focus_in_event(void* self, void* param1) {
     QRasterWindow_FocusInEvent((QRasterWindow*)self, (QFocusEvent*)param1);
 }
 
-void q_rasterwindow_qbase_focus_in_event(void* self, void* param1) {
-    QRasterWindow_QBaseFocusInEvent((QRasterWindow*)self, (QFocusEvent*)param1);
+void q_rasterwindow_super_focus_in_event(void* self, void* param1) {
+    QRasterWindow_SuperFocusInEvent((QRasterWindow*)self, (QFocusEvent*)param1);
 }
 
 void q_rasterwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1101,8 +1101,8 @@ void q_rasterwindow_focus_out_event(void* self, void* param1) {
     QRasterWindow_FocusOutEvent((QRasterWindow*)self, (QFocusEvent*)param1);
 }
 
-void q_rasterwindow_qbase_focus_out_event(void* self, void* param1) {
-    QRasterWindow_QBaseFocusOutEvent((QRasterWindow*)self, (QFocusEvent*)param1);
+void q_rasterwindow_super_focus_out_event(void* self, void* param1) {
+    QRasterWindow_SuperFocusOutEvent((QRasterWindow*)self, (QFocusEvent*)param1);
 }
 
 void q_rasterwindow_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1113,8 +1113,8 @@ void q_rasterwindow_show_event(void* self, void* param1) {
     QRasterWindow_ShowEvent((QRasterWindow*)self, (QShowEvent*)param1);
 }
 
-void q_rasterwindow_qbase_show_event(void* self, void* param1) {
-    QRasterWindow_QBaseShowEvent((QRasterWindow*)self, (QShowEvent*)param1);
+void q_rasterwindow_super_show_event(void* self, void* param1) {
+    QRasterWindow_SuperShowEvent((QRasterWindow*)self, (QShowEvent*)param1);
 }
 
 void q_rasterwindow_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1125,8 +1125,8 @@ void q_rasterwindow_hide_event(void* self, void* param1) {
     QRasterWindow_HideEvent((QRasterWindow*)self, (QHideEvent*)param1);
 }
 
-void q_rasterwindow_qbase_hide_event(void* self, void* param1) {
-    QRasterWindow_QBaseHideEvent((QRasterWindow*)self, (QHideEvent*)param1);
+void q_rasterwindow_super_hide_event(void* self, void* param1) {
+    QRasterWindow_SuperHideEvent((QRasterWindow*)self, (QHideEvent*)param1);
 }
 
 void q_rasterwindow_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1137,8 +1137,8 @@ void q_rasterwindow_close_event(void* self, void* param1) {
     QRasterWindow_CloseEvent((QRasterWindow*)self, (QCloseEvent*)param1);
 }
 
-void q_rasterwindow_qbase_close_event(void* self, void* param1) {
-    QRasterWindow_QBaseCloseEvent((QRasterWindow*)self, (QCloseEvent*)param1);
+void q_rasterwindow_super_close_event(void* self, void* param1) {
+    QRasterWindow_SuperCloseEvent((QRasterWindow*)self, (QCloseEvent*)param1);
 }
 
 void q_rasterwindow_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1149,8 +1149,8 @@ void q_rasterwindow_key_press_event(void* self, void* param1) {
     QRasterWindow_KeyPressEvent((QRasterWindow*)self, (QKeyEvent*)param1);
 }
 
-void q_rasterwindow_qbase_key_press_event(void* self, void* param1) {
-    QRasterWindow_QBaseKeyPressEvent((QRasterWindow*)self, (QKeyEvent*)param1);
+void q_rasterwindow_super_key_press_event(void* self, void* param1) {
+    QRasterWindow_SuperKeyPressEvent((QRasterWindow*)self, (QKeyEvent*)param1);
 }
 
 void q_rasterwindow_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1161,8 +1161,8 @@ void q_rasterwindow_key_release_event(void* self, void* param1) {
     QRasterWindow_KeyReleaseEvent((QRasterWindow*)self, (QKeyEvent*)param1);
 }
 
-void q_rasterwindow_qbase_key_release_event(void* self, void* param1) {
-    QRasterWindow_QBaseKeyReleaseEvent((QRasterWindow*)self, (QKeyEvent*)param1);
+void q_rasterwindow_super_key_release_event(void* self, void* param1) {
+    QRasterWindow_SuperKeyReleaseEvent((QRasterWindow*)self, (QKeyEvent*)param1);
 }
 
 void q_rasterwindow_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1173,8 +1173,8 @@ void q_rasterwindow_mouse_press_event(void* self, void* param1) {
     QRasterWindow_MousePressEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_rasterwindow_qbase_mouse_press_event(void* self, void* param1) {
-    QRasterWindow_QBaseMousePressEvent((QRasterWindow*)self, (QMouseEvent*)param1);
+void q_rasterwindow_super_mouse_press_event(void* self, void* param1) {
+    QRasterWindow_SuperMousePressEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_rasterwindow_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1185,8 +1185,8 @@ void q_rasterwindow_mouse_release_event(void* self, void* param1) {
     QRasterWindow_MouseReleaseEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_rasterwindow_qbase_mouse_release_event(void* self, void* param1) {
-    QRasterWindow_QBaseMouseReleaseEvent((QRasterWindow*)self, (QMouseEvent*)param1);
+void q_rasterwindow_super_mouse_release_event(void* self, void* param1) {
+    QRasterWindow_SuperMouseReleaseEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_rasterwindow_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1197,8 +1197,8 @@ void q_rasterwindow_mouse_double_click_event(void* self, void* param1) {
     QRasterWindow_MouseDoubleClickEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_rasterwindow_qbase_mouse_double_click_event(void* self, void* param1) {
-    QRasterWindow_QBaseMouseDoubleClickEvent((QRasterWindow*)self, (QMouseEvent*)param1);
+void q_rasterwindow_super_mouse_double_click_event(void* self, void* param1) {
+    QRasterWindow_SuperMouseDoubleClickEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_rasterwindow_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1209,8 +1209,8 @@ void q_rasterwindow_mouse_move_event(void* self, void* param1) {
     QRasterWindow_MouseMoveEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
-void q_rasterwindow_qbase_mouse_move_event(void* self, void* param1) {
-    QRasterWindow_QBaseMouseMoveEvent((QRasterWindow*)self, (QMouseEvent*)param1);
+void q_rasterwindow_super_mouse_move_event(void* self, void* param1) {
+    QRasterWindow_SuperMouseMoveEvent((QRasterWindow*)self, (QMouseEvent*)param1);
 }
 
 void q_rasterwindow_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1221,8 +1221,8 @@ void q_rasterwindow_wheel_event(void* self, void* param1) {
     QRasterWindow_WheelEvent((QRasterWindow*)self, (QWheelEvent*)param1);
 }
 
-void q_rasterwindow_qbase_wheel_event(void* self, void* param1) {
-    QRasterWindow_QBaseWheelEvent((QRasterWindow*)self, (QWheelEvent*)param1);
+void q_rasterwindow_super_wheel_event(void* self, void* param1) {
+    QRasterWindow_SuperWheelEvent((QRasterWindow*)self, (QWheelEvent*)param1);
 }
 
 void q_rasterwindow_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1233,8 +1233,8 @@ void q_rasterwindow_touch_event(void* self, void* param1) {
     QRasterWindow_TouchEvent((QRasterWindow*)self, (QTouchEvent*)param1);
 }
 
-void q_rasterwindow_qbase_touch_event(void* self, void* param1) {
-    QRasterWindow_QBaseTouchEvent((QRasterWindow*)self, (QTouchEvent*)param1);
+void q_rasterwindow_super_touch_event(void* self, void* param1) {
+    QRasterWindow_SuperTouchEvent((QRasterWindow*)self, (QTouchEvent*)param1);
 }
 
 void q_rasterwindow_on_touch_event(void* self, void (*callback)(void*, void*)) {
@@ -1245,8 +1245,8 @@ void q_rasterwindow_tablet_event(void* self, void* param1) {
     QRasterWindow_TabletEvent((QRasterWindow*)self, (QTabletEvent*)param1);
 }
 
-void q_rasterwindow_qbase_tablet_event(void* self, void* param1) {
-    QRasterWindow_QBaseTabletEvent((QRasterWindow*)self, (QTabletEvent*)param1);
+void q_rasterwindow_super_tablet_event(void* self, void* param1) {
+    QRasterWindow_SuperTabletEvent((QRasterWindow*)self, (QTabletEvent*)param1);
 }
 
 void q_rasterwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1257,8 +1257,8 @@ bool q_rasterwindow_native_event(void* self, char* eventType, void* message, int
     return QRasterWindow_NativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
 }
 
-bool q_rasterwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QRasterWindow_QBaseNativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
+bool q_rasterwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QRasterWindow_SuperNativeEvent((QRasterWindow*)self, qstring(eventType), message, result);
 }
 
 void q_rasterwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1269,8 +1269,8 @@ bool q_rasterwindow_event_filter(void* self, void* watched, void* event) {
     return QRasterWindow_EventFilter((QRasterWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_rasterwindow_qbase_event_filter(void* self, void* watched, void* event) {
-    return QRasterWindow_QBaseEventFilter((QRasterWindow*)self, (QObject*)watched, (QEvent*)event);
+bool q_rasterwindow_super_event_filter(void* self, void* watched, void* event) {
+    return QRasterWindow_SuperEventFilter((QRasterWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_rasterwindow_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1281,8 +1281,8 @@ void q_rasterwindow_timer_event(void* self, void* event) {
     QRasterWindow_TimerEvent((QRasterWindow*)self, (QTimerEvent*)event);
 }
 
-void q_rasterwindow_qbase_timer_event(void* self, void* event) {
-    QRasterWindow_QBaseTimerEvent((QRasterWindow*)self, (QTimerEvent*)event);
+void q_rasterwindow_super_timer_event(void* self, void* event) {
+    QRasterWindow_SuperTimerEvent((QRasterWindow*)self, (QTimerEvent*)event);
 }
 
 void q_rasterwindow_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1293,8 +1293,8 @@ void q_rasterwindow_child_event(void* self, void* event) {
     QRasterWindow_ChildEvent((QRasterWindow*)self, (QChildEvent*)event);
 }
 
-void q_rasterwindow_qbase_child_event(void* self, void* event) {
-    QRasterWindow_QBaseChildEvent((QRasterWindow*)self, (QChildEvent*)event);
+void q_rasterwindow_super_child_event(void* self, void* event) {
+    QRasterWindow_SuperChildEvent((QRasterWindow*)self, (QChildEvent*)event);
 }
 
 void q_rasterwindow_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1305,8 +1305,8 @@ void q_rasterwindow_custom_event(void* self, void* event) {
     QRasterWindow_CustomEvent((QRasterWindow*)self, (QEvent*)event);
 }
 
-void q_rasterwindow_qbase_custom_event(void* self, void* event) {
-    QRasterWindow_QBaseCustomEvent((QRasterWindow*)self, (QEvent*)event);
+void q_rasterwindow_super_custom_event(void* self, void* event) {
+    QRasterWindow_SuperCustomEvent((QRasterWindow*)self, (QEvent*)event);
 }
 
 void q_rasterwindow_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1317,8 +1317,8 @@ void q_rasterwindow_connect_notify(void* self, void* signal) {
     QRasterWindow_ConnectNotify((QRasterWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_rasterwindow_qbase_connect_notify(void* self, void* signal) {
-    QRasterWindow_QBaseConnectNotify((QRasterWindow*)self, (QMetaMethod*)signal);
+void q_rasterwindow_super_connect_notify(void* self, void* signal) {
+    QRasterWindow_SuperConnectNotify((QRasterWindow*)self, (QMetaMethod*)signal);
 }
 
 void q_rasterwindow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1329,8 +1329,8 @@ void q_rasterwindow_disconnect_notify(void* self, void* signal) {
     QRasterWindow_DisconnectNotify((QRasterWindow*)self, (QMetaMethod*)signal);
 }
 
-void q_rasterwindow_qbase_disconnect_notify(void* self, void* signal) {
-    QRasterWindow_QBaseDisconnectNotify((QRasterWindow*)self, (QMetaMethod*)signal);
+void q_rasterwindow_super_disconnect_notify(void* self, void* signal) {
+    QRasterWindow_SuperDisconnectNotify((QRasterWindow*)self, (QMetaMethod*)signal);
 }
 
 void q_rasterwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1341,8 +1341,8 @@ int32_t q_rasterwindow_dev_type(void* self) {
     return QRasterWindow_DevType((QRasterWindow*)self);
 }
 
-int32_t q_rasterwindow_qbase_dev_type(void* self) {
-    return QRasterWindow_QBaseDevType((QRasterWindow*)self);
+int32_t q_rasterwindow_super_dev_type(void* self) {
+    return QRasterWindow_SuperDevType((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1353,8 +1353,8 @@ void q_rasterwindow_init_painter(void* self, void* painter) {
     QRasterWindow_InitPainter((QRasterWindow*)self, (QPainter*)painter);
 }
 
-void q_rasterwindow_qbase_init_painter(void* self, void* painter) {
-    QRasterWindow_QBaseInitPainter((QRasterWindow*)self, (QPainter*)painter);
+void q_rasterwindow_super_init_painter(void* self, void* painter) {
+    QRasterWindow_SuperInitPainter((QRasterWindow*)self, (QPainter*)painter);
 }
 
 void q_rasterwindow_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1365,8 +1365,8 @@ QPainter* q_rasterwindow_shared_painter(void* self) {
     return QRasterWindow_SharedPainter((QRasterWindow*)self);
 }
 
-QPainter* q_rasterwindow_qbase_shared_painter(void* self) {
-    return QRasterWindow_QBaseSharedPainter((QRasterWindow*)self);
+QPainter* q_rasterwindow_super_shared_painter(void* self) {
+    return QRasterWindow_SuperSharedPainter((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1377,8 +1377,8 @@ void* q_rasterwindow_resolve_interface(void* self, const char* name, int revisio
     return QRasterWindow_ResolveInterface((QRasterWindow*)self, name, revision);
 }
 
-void* q_rasterwindow_qbase_resolve_interface(void* self, const char* name, int revision) {
-    return QRasterWindow_QBaseResolveInterface((QRasterWindow*)self, name, revision);
+void* q_rasterwindow_super_resolve_interface(void* self, const char* name, int revision) {
+    return QRasterWindow_SuperResolveInterface((QRasterWindow*)self, name, revision);
 }
 
 void q_rasterwindow_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int)) {
@@ -1389,8 +1389,8 @@ QObject* q_rasterwindow_sender(void* self) {
     return QRasterWindow_Sender((QRasterWindow*)self);
 }
 
-QObject* q_rasterwindow_qbase_sender(void* self) {
-    return QRasterWindow_QBaseSender((QRasterWindow*)self);
+QObject* q_rasterwindow_super_sender(void* self) {
+    return QRasterWindow_SuperSender((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_sender(void* self, QObject* (*callback)()) {
@@ -1401,8 +1401,8 @@ int32_t q_rasterwindow_sender_signal_index(void* self) {
     return QRasterWindow_SenderSignalIndex((QRasterWindow*)self);
 }
 
-int32_t q_rasterwindow_qbase_sender_signal_index(void* self) {
-    return QRasterWindow_QBaseSenderSignalIndex((QRasterWindow*)self);
+int32_t q_rasterwindow_super_sender_signal_index(void* self) {
+    return QRasterWindow_SuperSenderSignalIndex((QRasterWindow*)self);
 }
 
 void q_rasterwindow_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1413,8 +1413,8 @@ int32_t q_rasterwindow_receivers(void* self, const char* signal) {
     return QRasterWindow_Receivers((QRasterWindow*)self, signal);
 }
 
-int32_t q_rasterwindow_qbase_receivers(void* self, const char* signal) {
-    return QRasterWindow_QBaseReceivers((QRasterWindow*)self, signal);
+int32_t q_rasterwindow_super_receivers(void* self, const char* signal) {
+    return QRasterWindow_SuperReceivers((QRasterWindow*)self, signal);
 }
 
 void q_rasterwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1425,8 +1425,8 @@ bool q_rasterwindow_is_signal_connected(void* self, void* signal) {
     return QRasterWindow_IsSignalConnected((QRasterWindow*)self, (QMetaMethod*)signal);
 }
 
-bool q_rasterwindow_qbase_is_signal_connected(void* self, void* signal) {
-    return QRasterWindow_QBaseIsSignalConnected((QRasterWindow*)self, (QMetaMethod*)signal);
+bool q_rasterwindow_super_is_signal_connected(void* self, void* signal) {
+    return QRasterWindow_SuperIsSignalConnected((QRasterWindow*)self, (QMetaMethod*)signal);
 }
 
 void q_rasterwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1437,8 +1437,8 @@ double q_rasterwindow_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return QRasterWindow_GetDecodedMetricF((QRasterWindow*)self, metricA, metricB);
 }
 
-double q_rasterwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QRasterWindow_QBaseGetDecodedMetricF((QRasterWindow*)self, metricA, metricB);
+double q_rasterwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QRasterWindow_SuperGetDecodedMetricF((QRasterWindow*)self, metricA, metricB);
 }
 
 void q_rasterwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

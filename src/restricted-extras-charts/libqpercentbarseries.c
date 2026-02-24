@@ -23,8 +23,8 @@ void q_percentbarseries_on_meta_object(void* self, const QMetaObject* (*callback
     QPercentBarSeries_OnMetaObject((QPercentBarSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_percentbarseries_qbase_meta_object(void* self) {
-    return QPercentBarSeries_QBaseMetaObject((QPercentBarSeries*)self);
+const QMetaObject* q_percentbarseries_super_meta_object(void* self) {
+    return QPercentBarSeries_SuperMetaObject((QPercentBarSeries*)self);
 }
 
 void* q_percentbarseries_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_percentbarseries_on_metacast(void* self, void* (*callback)(void*, const c
     QPercentBarSeries_OnMetacast((QPercentBarSeries*)self, (intptr_t)callback);
 }
 
-void* q_percentbarseries_qbase_metacast(void* self, const char* param1) {
-    return QPercentBarSeries_QBaseMetacast((QPercentBarSeries*)self, param1);
+void* q_percentbarseries_super_metacast(void* self, const char* param1) {
+    return QPercentBarSeries_SuperMetacast((QPercentBarSeries*)self, param1);
 }
 
 int32_t q_percentbarseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_percentbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32
     QPercentBarSeries_OnMetacall((QPercentBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_percentbarseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPercentBarSeries_QBaseMetacall((QPercentBarSeries*)self, param1, param2, param3);
+int32_t q_percentbarseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPercentBarSeries_SuperMetacall((QPercentBarSeries*)self, param1, param2, param3);
 }
 
 const char* q_percentbarseries_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_percentbarseries_on_type(void* self, int32_t (*callback)()) {
     QPercentBarSeries_OnType((QPercentBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_percentbarseries_qbase_type(void* self) {
-    return QPercentBarSeries_QBaseType((QPercentBarSeries*)self);
+int32_t q_percentbarseries_super_type(void* self) {
+    return QPercentBarSeries_SuperType((QPercentBarSeries*)self);
 }
 
 const char* q_percentbarseries_tr2(const char* s, const char* c) {
@@ -591,8 +591,8 @@ bool q_percentbarseries_event(void* self, void* event) {
     return QPercentBarSeries_Event((QPercentBarSeries*)self, (QEvent*)event);
 }
 
-bool q_percentbarseries_qbase_event(void* self, void* event) {
-    return QPercentBarSeries_QBaseEvent((QPercentBarSeries*)self, (QEvent*)event);
+bool q_percentbarseries_super_event(void* self, void* event) {
+    return QPercentBarSeries_SuperEvent((QPercentBarSeries*)self, (QEvent*)event);
 }
 
 void q_percentbarseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -603,8 +603,8 @@ bool q_percentbarseries_event_filter(void* self, void* watched, void* event) {
     return QPercentBarSeries_EventFilter((QPercentBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_percentbarseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPercentBarSeries_QBaseEventFilter((QPercentBarSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_percentbarseries_super_event_filter(void* self, void* watched, void* event) {
+    return QPercentBarSeries_SuperEventFilter((QPercentBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_percentbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -615,8 +615,8 @@ void q_percentbarseries_timer_event(void* self, void* event) {
     QPercentBarSeries_TimerEvent((QPercentBarSeries*)self, (QTimerEvent*)event);
 }
 
-void q_percentbarseries_qbase_timer_event(void* self, void* event) {
-    QPercentBarSeries_QBaseTimerEvent((QPercentBarSeries*)self, (QTimerEvent*)event);
+void q_percentbarseries_super_timer_event(void* self, void* event) {
+    QPercentBarSeries_SuperTimerEvent((QPercentBarSeries*)self, (QTimerEvent*)event);
 }
 
 void q_percentbarseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -627,8 +627,8 @@ void q_percentbarseries_child_event(void* self, void* event) {
     QPercentBarSeries_ChildEvent((QPercentBarSeries*)self, (QChildEvent*)event);
 }
 
-void q_percentbarseries_qbase_child_event(void* self, void* event) {
-    QPercentBarSeries_QBaseChildEvent((QPercentBarSeries*)self, (QChildEvent*)event);
+void q_percentbarseries_super_child_event(void* self, void* event) {
+    QPercentBarSeries_SuperChildEvent((QPercentBarSeries*)self, (QChildEvent*)event);
 }
 
 void q_percentbarseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -639,8 +639,8 @@ void q_percentbarseries_custom_event(void* self, void* event) {
     QPercentBarSeries_CustomEvent((QPercentBarSeries*)self, (QEvent*)event);
 }
 
-void q_percentbarseries_qbase_custom_event(void* self, void* event) {
-    QPercentBarSeries_QBaseCustomEvent((QPercentBarSeries*)self, (QEvent*)event);
+void q_percentbarseries_super_custom_event(void* self, void* event) {
+    QPercentBarSeries_SuperCustomEvent((QPercentBarSeries*)self, (QEvent*)event);
 }
 
 void q_percentbarseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -651,8 +651,8 @@ void q_percentbarseries_connect_notify(void* self, void* signal) {
     QPercentBarSeries_ConnectNotify((QPercentBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_percentbarseries_qbase_connect_notify(void* self, void* signal) {
-    QPercentBarSeries_QBaseConnectNotify((QPercentBarSeries*)self, (QMetaMethod*)signal);
+void q_percentbarseries_super_connect_notify(void* self, void* signal) {
+    QPercentBarSeries_SuperConnectNotify((QPercentBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_percentbarseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -663,8 +663,8 @@ void q_percentbarseries_disconnect_notify(void* self, void* signal) {
     QPercentBarSeries_DisconnectNotify((QPercentBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_percentbarseries_qbase_disconnect_notify(void* self, void* signal) {
-    QPercentBarSeries_QBaseDisconnectNotify((QPercentBarSeries*)self, (QMetaMethod*)signal);
+void q_percentbarseries_super_disconnect_notify(void* self, void* signal) {
+    QPercentBarSeries_SuperDisconnectNotify((QPercentBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_percentbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -675,8 +675,8 @@ QObject* q_percentbarseries_sender(void* self) {
     return QPercentBarSeries_Sender((QPercentBarSeries*)self);
 }
 
-QObject* q_percentbarseries_qbase_sender(void* self) {
-    return QPercentBarSeries_QBaseSender((QPercentBarSeries*)self);
+QObject* q_percentbarseries_super_sender(void* self) {
+    return QPercentBarSeries_SuperSender((QPercentBarSeries*)self);
 }
 
 void q_percentbarseries_on_sender(void* self, QObject* (*callback)()) {
@@ -687,8 +687,8 @@ int32_t q_percentbarseries_sender_signal_index(void* self) {
     return QPercentBarSeries_SenderSignalIndex((QPercentBarSeries*)self);
 }
 
-int32_t q_percentbarseries_qbase_sender_signal_index(void* self) {
-    return QPercentBarSeries_QBaseSenderSignalIndex((QPercentBarSeries*)self);
+int32_t q_percentbarseries_super_sender_signal_index(void* self) {
+    return QPercentBarSeries_SuperSenderSignalIndex((QPercentBarSeries*)self);
 }
 
 void q_percentbarseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -699,8 +699,8 @@ int32_t q_percentbarseries_receivers(void* self, const char* signal) {
     return QPercentBarSeries_Receivers((QPercentBarSeries*)self, signal);
 }
 
-int32_t q_percentbarseries_qbase_receivers(void* self, const char* signal) {
-    return QPercentBarSeries_QBaseReceivers((QPercentBarSeries*)self, signal);
+int32_t q_percentbarseries_super_receivers(void* self, const char* signal) {
+    return QPercentBarSeries_SuperReceivers((QPercentBarSeries*)self, signal);
 }
 
 void q_percentbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -711,8 +711,8 @@ bool q_percentbarseries_is_signal_connected(void* self, void* signal) {
     return QPercentBarSeries_IsSignalConnected((QPercentBarSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_percentbarseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QPercentBarSeries_QBaseIsSignalConnected((QPercentBarSeries*)self, (QMetaMethod*)signal);
+bool q_percentbarseries_super_is_signal_connected(void* self, void* signal) {
+    return QPercentBarSeries_SuperIsSignalConnected((QPercentBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_percentbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

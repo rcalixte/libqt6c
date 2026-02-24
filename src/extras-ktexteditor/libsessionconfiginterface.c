@@ -14,8 +14,8 @@ void k_texteditor__sessionconfiginterface_on_read_session_config(void* self, voi
     KTextEditor__SessionConfigInterface_OnReadSessionConfig((KTextEditor__SessionConfigInterface*)self, (intptr_t)callback);
 }
 
-void k_texteditor__sessionconfiginterface_qbase_read_session_config(void* self, void* config) {
-    KTextEditor__SessionConfigInterface_QBaseReadSessionConfig((KTextEditor__SessionConfigInterface*)self, (KConfigGroup*)config);
+void k_texteditor__sessionconfiginterface_super_read_session_config(void* self, void* config) {
+    KTextEditor__SessionConfigInterface_SuperReadSessionConfig((KTextEditor__SessionConfigInterface*)self, (KConfigGroup*)config);
 }
 
 void k_texteditor__sessionconfiginterface_write_session_config(void* self, void* config) {
@@ -26,8 +26,8 @@ void k_texteditor__sessionconfiginterface_on_write_session_config(void* self, vo
     KTextEditor__SessionConfigInterface_OnWriteSessionConfig((KTextEditor__SessionConfigInterface*)self, (intptr_t)callback);
 }
 
-void k_texteditor__sessionconfiginterface_qbase_write_session_config(void* self, void* config) {
-    KTextEditor__SessionConfigInterface_QBaseWriteSessionConfig((KTextEditor__SessionConfigInterface*)self, (KConfigGroup*)config);
+void k_texteditor__sessionconfiginterface_super_write_session_config(void* self, void* config) {
+    KTextEditor__SessionConfigInterface_SuperWriteSessionConfig((KTextEditor__SessionConfigInterface*)self, (KConfigGroup*)config);
 }
 
 void k_texteditor__sessionconfiginterface_delete(void* self) {

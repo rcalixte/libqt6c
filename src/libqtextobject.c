@@ -567,8 +567,8 @@ void q_textframe_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTextFrame_OnMetaObject((QTextFrame*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_textframe_qbase_meta_object(void* self) {
-    return QTextFrame_QBaseMetaObject((QTextFrame*)self);
+const QMetaObject* q_textframe_super_meta_object(void* self) {
+    return QTextFrame_SuperMetaObject((QTextFrame*)self);
 }
 
 void* q_textframe_metacast(void* self, const char* param1) {
@@ -579,8 +579,8 @@ void q_textframe_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QTextFrame_OnMetacast((QTextFrame*)self, (intptr_t)callback);
 }
 
-void* q_textframe_qbase_metacast(void* self, const char* param1) {
-    return QTextFrame_QBaseMetacast((QTextFrame*)self, param1);
+void* q_textframe_super_metacast(void* self, const char* param1) {
+    return QTextFrame_SuperMetacast((QTextFrame*)self, param1);
 }
 
 int32_t q_textframe_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -591,8 +591,8 @@ void q_textframe_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QTextFrame_OnMetacall((QTextFrame*)self, (intptr_t)callback);
 }
 
-int32_t q_textframe_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTextFrame_QBaseMetacall((QTextFrame*)self, param1, param2, param3);
+int32_t q_textframe_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTextFrame_SuperMetacall((QTextFrame*)self, param1, param2, param3);
 }
 
 const char* q_textframe_tr(const char* s) {
@@ -888,8 +888,8 @@ bool q_textframe_event(void* self, void* event) {
     return QTextFrame_Event((QTextFrame*)self, (QEvent*)event);
 }
 
-bool q_textframe_qbase_event(void* self, void* event) {
-    return QTextFrame_QBaseEvent((QTextFrame*)self, (QEvent*)event);
+bool q_textframe_super_event(void* self, void* event) {
+    return QTextFrame_SuperEvent((QTextFrame*)self, (QEvent*)event);
 }
 
 void q_textframe_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -900,8 +900,8 @@ bool q_textframe_event_filter(void* self, void* watched, void* event) {
     return QTextFrame_EventFilter((QTextFrame*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_textframe_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTextFrame_QBaseEventFilter((QTextFrame*)self, (QObject*)watched, (QEvent*)event);
+bool q_textframe_super_event_filter(void* self, void* watched, void* event) {
+    return QTextFrame_SuperEventFilter((QTextFrame*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_textframe_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -912,8 +912,8 @@ void q_textframe_timer_event(void* self, void* event) {
     QTextFrame_TimerEvent((QTextFrame*)self, (QTimerEvent*)event);
 }
 
-void q_textframe_qbase_timer_event(void* self, void* event) {
-    QTextFrame_QBaseTimerEvent((QTextFrame*)self, (QTimerEvent*)event);
+void q_textframe_super_timer_event(void* self, void* event) {
+    QTextFrame_SuperTimerEvent((QTextFrame*)self, (QTimerEvent*)event);
 }
 
 void q_textframe_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -924,8 +924,8 @@ void q_textframe_child_event(void* self, void* event) {
     QTextFrame_ChildEvent((QTextFrame*)self, (QChildEvent*)event);
 }
 
-void q_textframe_qbase_child_event(void* self, void* event) {
-    QTextFrame_QBaseChildEvent((QTextFrame*)self, (QChildEvent*)event);
+void q_textframe_super_child_event(void* self, void* event) {
+    QTextFrame_SuperChildEvent((QTextFrame*)self, (QChildEvent*)event);
 }
 
 void q_textframe_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -936,8 +936,8 @@ void q_textframe_custom_event(void* self, void* event) {
     QTextFrame_CustomEvent((QTextFrame*)self, (QEvent*)event);
 }
 
-void q_textframe_qbase_custom_event(void* self, void* event) {
-    QTextFrame_QBaseCustomEvent((QTextFrame*)self, (QEvent*)event);
+void q_textframe_super_custom_event(void* self, void* event) {
+    QTextFrame_SuperCustomEvent((QTextFrame*)self, (QEvent*)event);
 }
 
 void q_textframe_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -948,8 +948,8 @@ void q_textframe_connect_notify(void* self, void* signal) {
     QTextFrame_ConnectNotify((QTextFrame*)self, (QMetaMethod*)signal);
 }
 
-void q_textframe_qbase_connect_notify(void* self, void* signal) {
-    QTextFrame_QBaseConnectNotify((QTextFrame*)self, (QMetaMethod*)signal);
+void q_textframe_super_connect_notify(void* self, void* signal) {
+    QTextFrame_SuperConnectNotify((QTextFrame*)self, (QMetaMethod*)signal);
 }
 
 void q_textframe_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -960,8 +960,8 @@ void q_textframe_disconnect_notify(void* self, void* signal) {
     QTextFrame_DisconnectNotify((QTextFrame*)self, (QMetaMethod*)signal);
 }
 
-void q_textframe_qbase_disconnect_notify(void* self, void* signal) {
-    QTextFrame_QBaseDisconnectNotify((QTextFrame*)self, (QMetaMethod*)signal);
+void q_textframe_super_disconnect_notify(void* self, void* signal) {
+    QTextFrame_SuperDisconnectNotify((QTextFrame*)self, (QMetaMethod*)signal);
 }
 
 void q_textframe_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -972,8 +972,8 @@ void q_textframe_set_format(void* self, void* format) {
     QTextFrame_SetFormat((QTextFrame*)self, (QTextFormat*)format);
 }
 
-void q_textframe_qbase_set_format(void* self, void* format) {
-    QTextFrame_QBaseSetFormat((QTextFrame*)self, (QTextFormat*)format);
+void q_textframe_super_set_format(void* self, void* format) {
+    QTextFrame_SuperSetFormat((QTextFrame*)self, (QTextFormat*)format);
 }
 
 void q_textframe_on_set_format(void* self, void (*callback)(void*, void*)) {
@@ -984,8 +984,8 @@ QObject* q_textframe_sender(void* self) {
     return QTextFrame_Sender((QTextFrame*)self);
 }
 
-QObject* q_textframe_qbase_sender(void* self) {
-    return QTextFrame_QBaseSender((QTextFrame*)self);
+QObject* q_textframe_super_sender(void* self) {
+    return QTextFrame_SuperSender((QTextFrame*)self);
 }
 
 void q_textframe_on_sender(void* self, QObject* (*callback)()) {
@@ -996,8 +996,8 @@ int32_t q_textframe_sender_signal_index(void* self) {
     return QTextFrame_SenderSignalIndex((QTextFrame*)self);
 }
 
-int32_t q_textframe_qbase_sender_signal_index(void* self) {
-    return QTextFrame_QBaseSenderSignalIndex((QTextFrame*)self);
+int32_t q_textframe_super_sender_signal_index(void* self) {
+    return QTextFrame_SuperSenderSignalIndex((QTextFrame*)self);
 }
 
 void q_textframe_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1008,8 +1008,8 @@ int32_t q_textframe_receivers(void* self, const char* signal) {
     return QTextFrame_Receivers((QTextFrame*)self, signal);
 }
 
-int32_t q_textframe_qbase_receivers(void* self, const char* signal) {
-    return QTextFrame_QBaseReceivers((QTextFrame*)self, signal);
+int32_t q_textframe_super_receivers(void* self, const char* signal) {
+    return QTextFrame_SuperReceivers((QTextFrame*)self, signal);
 }
 
 void q_textframe_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1020,8 +1020,8 @@ bool q_textframe_is_signal_connected(void* self, void* signal) {
     return QTextFrame_IsSignalConnected((QTextFrame*)self, (QMetaMethod*)signal);
 }
 
-bool q_textframe_qbase_is_signal_connected(void* self, void* signal) {
-    return QTextFrame_QBaseIsSignalConnected((QTextFrame*)self, (QMetaMethod*)signal);
+bool q_textframe_super_is_signal_connected(void* self, void* signal) {
+    return QTextFrame_SuperIsSignalConnected((QTextFrame*)self, (QMetaMethod*)signal);
 }
 
 void q_textframe_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

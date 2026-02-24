@@ -62,8 +62,8 @@ void k_iconloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KIconLoader_OnMetaObject((KIconLoader*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_iconloader_qbase_meta_object(void* self) {
-    return KIconLoader_QBaseMetaObject((KIconLoader*)self);
+const QMetaObject* k_iconloader_super_meta_object(void* self) {
+    return KIconLoader_SuperMetaObject((KIconLoader*)self);
 }
 
 void* k_iconloader_metacast(void* self, const char* param1) {
@@ -74,8 +74,8 @@ void k_iconloader_on_metacast(void* self, void* (*callback)(void*, const char*))
     KIconLoader_OnMetacast((KIconLoader*)self, (intptr_t)callback);
 }
 
-void* k_iconloader_qbase_metacast(void* self, const char* param1) {
-    return KIconLoader_QBaseMetacast((KIconLoader*)self, param1);
+void* k_iconloader_super_metacast(void* self, const char* param1) {
+    return KIconLoader_SuperMetacast((KIconLoader*)self, param1);
 }
 
 int32_t k_iconloader_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -86,8 +86,8 @@ void k_iconloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KIconLoader_OnMetacall((KIconLoader*)self, (intptr_t)callback);
 }
 
-int32_t k_iconloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIconLoader_QBaseMetacall((KIconLoader*)self, param1, param2, param3);
+int32_t k_iconloader_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIconLoader_SuperMetacall((KIconLoader*)self, param1, param2, param3);
 }
 
 const char* k_iconloader_tr(const char* s) {
@@ -725,8 +725,8 @@ bool k_iconloader_event(void* self, void* event) {
     return KIconLoader_Event((KIconLoader*)self, (QEvent*)event);
 }
 
-bool k_iconloader_qbase_event(void* self, void* event) {
-    return KIconLoader_QBaseEvent((KIconLoader*)self, (QEvent*)event);
+bool k_iconloader_super_event(void* self, void* event) {
+    return KIconLoader_SuperEvent((KIconLoader*)self, (QEvent*)event);
 }
 
 void k_iconloader_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -737,8 +737,8 @@ bool k_iconloader_event_filter(void* self, void* watched, void* event) {
     return KIconLoader_EventFilter((KIconLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_iconloader_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIconLoader_QBaseEventFilter((KIconLoader*)self, (QObject*)watched, (QEvent*)event);
+bool k_iconloader_super_event_filter(void* self, void* watched, void* event) {
+    return KIconLoader_SuperEventFilter((KIconLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_iconloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -749,8 +749,8 @@ void k_iconloader_timer_event(void* self, void* event) {
     KIconLoader_TimerEvent((KIconLoader*)self, (QTimerEvent*)event);
 }
 
-void k_iconloader_qbase_timer_event(void* self, void* event) {
-    KIconLoader_QBaseTimerEvent((KIconLoader*)self, (QTimerEvent*)event);
+void k_iconloader_super_timer_event(void* self, void* event) {
+    KIconLoader_SuperTimerEvent((KIconLoader*)self, (QTimerEvent*)event);
 }
 
 void k_iconloader_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -761,8 +761,8 @@ void k_iconloader_child_event(void* self, void* event) {
     KIconLoader_ChildEvent((KIconLoader*)self, (QChildEvent*)event);
 }
 
-void k_iconloader_qbase_child_event(void* self, void* event) {
-    KIconLoader_QBaseChildEvent((KIconLoader*)self, (QChildEvent*)event);
+void k_iconloader_super_child_event(void* self, void* event) {
+    KIconLoader_SuperChildEvent((KIconLoader*)self, (QChildEvent*)event);
 }
 
 void k_iconloader_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -773,8 +773,8 @@ void k_iconloader_custom_event(void* self, void* event) {
     KIconLoader_CustomEvent((KIconLoader*)self, (QEvent*)event);
 }
 
-void k_iconloader_qbase_custom_event(void* self, void* event) {
-    KIconLoader_QBaseCustomEvent((KIconLoader*)self, (QEvent*)event);
+void k_iconloader_super_custom_event(void* self, void* event) {
+    KIconLoader_SuperCustomEvent((KIconLoader*)self, (QEvent*)event);
 }
 
 void k_iconloader_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -785,8 +785,8 @@ void k_iconloader_connect_notify(void* self, void* signal) {
     KIconLoader_ConnectNotify((KIconLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_iconloader_qbase_connect_notify(void* self, void* signal) {
-    KIconLoader_QBaseConnectNotify((KIconLoader*)self, (QMetaMethod*)signal);
+void k_iconloader_super_connect_notify(void* self, void* signal) {
+    KIconLoader_SuperConnectNotify((KIconLoader*)self, (QMetaMethod*)signal);
 }
 
 void k_iconloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -797,8 +797,8 @@ void k_iconloader_disconnect_notify(void* self, void* signal) {
     KIconLoader_DisconnectNotify((KIconLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_iconloader_qbase_disconnect_notify(void* self, void* signal) {
-    KIconLoader_QBaseDisconnectNotify((KIconLoader*)self, (QMetaMethod*)signal);
+void k_iconloader_super_disconnect_notify(void* self, void* signal) {
+    KIconLoader_SuperDisconnectNotify((KIconLoader*)self, (QMetaMethod*)signal);
 }
 
 void k_iconloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -809,8 +809,8 @@ QObject* k_iconloader_sender(void* self) {
     return KIconLoader_Sender((KIconLoader*)self);
 }
 
-QObject* k_iconloader_qbase_sender(void* self) {
-    return KIconLoader_QBaseSender((KIconLoader*)self);
+QObject* k_iconloader_super_sender(void* self) {
+    return KIconLoader_SuperSender((KIconLoader*)self);
 }
 
 void k_iconloader_on_sender(void* self, QObject* (*callback)()) {
@@ -821,8 +821,8 @@ int32_t k_iconloader_sender_signal_index(void* self) {
     return KIconLoader_SenderSignalIndex((KIconLoader*)self);
 }
 
-int32_t k_iconloader_qbase_sender_signal_index(void* self) {
-    return KIconLoader_QBaseSenderSignalIndex((KIconLoader*)self);
+int32_t k_iconloader_super_sender_signal_index(void* self) {
+    return KIconLoader_SuperSenderSignalIndex((KIconLoader*)self);
 }
 
 void k_iconloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -833,8 +833,8 @@ int32_t k_iconloader_receivers(void* self, const char* signal) {
     return KIconLoader_Receivers((KIconLoader*)self, signal);
 }
 
-int32_t k_iconloader_qbase_receivers(void* self, const char* signal) {
-    return KIconLoader_QBaseReceivers((KIconLoader*)self, signal);
+int32_t k_iconloader_super_receivers(void* self, const char* signal) {
+    return KIconLoader_SuperReceivers((KIconLoader*)self, signal);
 }
 
 void k_iconloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -845,8 +845,8 @@ bool k_iconloader_is_signal_connected(void* self, void* signal) {
     return KIconLoader_IsSignalConnected((KIconLoader*)self, (QMetaMethod*)signal);
 }
 
-bool k_iconloader_qbase_is_signal_connected(void* self, void* signal) {
-    return KIconLoader_QBaseIsSignalConnected((KIconLoader*)self, (QMetaMethod*)signal);
+bool k_iconloader_super_is_signal_connected(void* self, void* signal) {
+    return KIconLoader_SuperIsSignalConnected((KIconLoader*)self, (QMetaMethod*)signal);
 }
 
 void k_iconloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

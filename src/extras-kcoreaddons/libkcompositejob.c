@@ -22,8 +22,8 @@ void k_compositejob_on_meta_object(void* self, const QMetaObject* (*callback)())
     KCompositeJob_OnMetaObject((KCompositeJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_compositejob_qbase_meta_object(void* self) {
-    return KCompositeJob_QBaseMetaObject((KCompositeJob*)self);
+const QMetaObject* k_compositejob_super_meta_object(void* self) {
+    return KCompositeJob_SuperMetaObject((KCompositeJob*)self);
 }
 
 void* k_compositejob_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_compositejob_on_metacast(void* self, void* (*callback)(void*, const char*
     KCompositeJob_OnMetacast((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void* k_compositejob_qbase_metacast(void* self, const char* param1) {
-    return KCompositeJob_QBaseMetacast((KCompositeJob*)self, param1);
+void* k_compositejob_super_metacast(void* self, const char* param1) {
+    return KCompositeJob_SuperMetacast((KCompositeJob*)self, param1);
 }
 
 int32_t k_compositejob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_compositejob_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KCompositeJob_OnMetacall((KCompositeJob*)self, (intptr_t)callback);
 }
 
-int32_t k_compositejob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCompositeJob_QBaseMetacall((KCompositeJob*)self, param1, param2, param3);
+int32_t k_compositejob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCompositeJob_SuperMetacall((KCompositeJob*)self, param1, param2, param3);
 }
 
 const char* k_compositejob_tr(const char* s) {
@@ -65,8 +65,8 @@ void k_compositejob_on_add_subjob(void* self, bool (*callback)(void*, void*)) {
     KCompositeJob_OnAddSubjob((KCompositeJob*)self, (intptr_t)callback);
 }
 
-bool k_compositejob_qbase_add_subjob(void* self, void* job) {
-    return KCompositeJob_QBaseAddSubjob((KCompositeJob*)self, (KJob*)job);
+bool k_compositejob_super_add_subjob(void* self, void* job) {
+    return KCompositeJob_SuperAddSubjob((KCompositeJob*)self, (KJob*)job);
 }
 
 bool k_compositejob_remove_subjob(void* self, void* job) {
@@ -77,8 +77,8 @@ void k_compositejob_on_remove_subjob(void* self, bool (*callback)(void*, void*))
     KCompositeJob_OnRemoveSubjob((KCompositeJob*)self, (intptr_t)callback);
 }
 
-bool k_compositejob_qbase_remove_subjob(void* self, void* job) {
-    return KCompositeJob_QBaseRemoveSubjob((KCompositeJob*)self, (KJob*)job);
+bool k_compositejob_super_remove_subjob(void* self, void* job) {
+    return KCompositeJob_SuperRemoveSubjob((KCompositeJob*)self, (KJob*)job);
 }
 
 bool k_compositejob_has_subjobs(void* self) {
@@ -89,8 +89,8 @@ void k_compositejob_on_has_subjobs(void* self, bool (*callback)()) {
     KCompositeJob_OnHasSubjobs((KCompositeJob*)self, (intptr_t)callback);
 }
 
-bool k_compositejob_qbase_has_subjobs(void* self) {
-    return KCompositeJob_QBaseHasSubjobs((KCompositeJob*)self);
+bool k_compositejob_super_has_subjobs(void* self) {
+    return KCompositeJob_SuperHasSubjobs((KCompositeJob*)self);
 }
 
 libqt_list /* of KJob* */ k_compositejob_subjobs(void* self) {
@@ -102,8 +102,8 @@ void k_compositejob_on_subjobs(void* self, libqt_list /* of KJob* */ (*callback)
     KCompositeJob_OnSubjobs((KCompositeJob*)self, (intptr_t)callback);
 }
 
-libqt_list /* of KJob* */ k_compositejob_qbase_subjobs(void* self) {
-    libqt_list _arr = KCompositeJob_QBaseSubjobs((KCompositeJob*)self);
+libqt_list /* of KJob* */ k_compositejob_super_subjobs(void* self) {
+    libqt_list _arr = KCompositeJob_SuperSubjobs((KCompositeJob*)self);
     return _arr;
 }
 
@@ -115,8 +115,8 @@ void k_compositejob_on_clear_subjobs(void* self, void (*callback)()) {
     KCompositeJob_OnClearSubjobs((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_qbase_clear_subjobs(void* self) {
-    KCompositeJob_QBaseClearSubjobs((KCompositeJob*)self);
+void k_compositejob_super_clear_subjobs(void* self) {
+    KCompositeJob_SuperClearSubjobs((KCompositeJob*)self);
 }
 
 void k_compositejob_slot_result(void* self, void* job) {
@@ -127,8 +127,8 @@ void k_compositejob_on_slot_result(void* self, void (*callback)(void*, void*)) {
     KCompositeJob_OnSlotResult((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_qbase_slot_result(void* self, void* job) {
-    KCompositeJob_QBaseSlotResult((KCompositeJob*)self, (KJob*)job);
+void k_compositejob_super_slot_result(void* self, void* job) {
+    KCompositeJob_SuperSlotResult((KCompositeJob*)self, (KJob*)job);
 }
 
 void k_compositejob_slot_info_message(void* self, void* job, const char* message) {
@@ -139,8 +139,8 @@ void k_compositejob_on_slot_info_message(void* self, void (*callback)(void*, voi
     KCompositeJob_OnSlotInfoMessage((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_qbase_slot_info_message(void* self, void* job, const char* message) {
-    KCompositeJob_QBaseSlotInfoMessage((KCompositeJob*)self, (KJob*)job, qstring(message));
+void k_compositejob_super_slot_info_message(void* self, void* job, const char* message) {
+    KCompositeJob_SuperSlotInfoMessage((KCompositeJob*)self, (KJob*)job, qstring(message));
 }
 
 const char* k_compositejob_tr2(const char* s, const char* c) {
@@ -499,8 +499,8 @@ void k_compositejob_start(void* self) {
     KCompositeJob_Start((KCompositeJob*)self);
 }
 
-void k_compositejob_qbase_start(void* self) {
-    KCompositeJob_QBaseStart((KCompositeJob*)self);
+void k_compositejob_super_start(void* self) {
+    KCompositeJob_SuperStart((KCompositeJob*)self);
 }
 
 void k_compositejob_on_start(void* self, void (*callback)()) {
@@ -511,8 +511,8 @@ bool k_compositejob_do_kill(void* self) {
     return KCompositeJob_DoKill((KCompositeJob*)self);
 }
 
-bool k_compositejob_qbase_do_kill(void* self) {
-    return KCompositeJob_QBaseDoKill((KCompositeJob*)self);
+bool k_compositejob_super_do_kill(void* self) {
+    return KCompositeJob_SuperDoKill((KCompositeJob*)self);
 }
 
 void k_compositejob_on_do_kill(void* self, bool (*callback)()) {
@@ -523,8 +523,8 @@ bool k_compositejob_do_suspend(void* self) {
     return KCompositeJob_DoSuspend((KCompositeJob*)self);
 }
 
-bool k_compositejob_qbase_do_suspend(void* self) {
-    return KCompositeJob_QBaseDoSuspend((KCompositeJob*)self);
+bool k_compositejob_super_do_suspend(void* self) {
+    return KCompositeJob_SuperDoSuspend((KCompositeJob*)self);
 }
 
 void k_compositejob_on_do_suspend(void* self, bool (*callback)()) {
@@ -535,8 +535,8 @@ bool k_compositejob_do_resume(void* self) {
     return KCompositeJob_DoResume((KCompositeJob*)self);
 }
 
-bool k_compositejob_qbase_do_resume(void* self) {
-    return KCompositeJob_QBaseDoResume((KCompositeJob*)self);
+bool k_compositejob_super_do_resume(void* self) {
+    return KCompositeJob_SuperDoResume((KCompositeJob*)self);
 }
 
 void k_compositejob_on_do_resume(void* self, bool (*callback)()) {
@@ -550,8 +550,8 @@ const char* k_compositejob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_compositejob_qbase_error_string(void* self) {
-    libqt_string _str = KCompositeJob_QBaseErrorString((KCompositeJob*)self);
+const char* k_compositejob_super_error_string(void* self) {
+    libqt_string _str = KCompositeJob_SuperErrorString((KCompositeJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -565,8 +565,8 @@ bool k_compositejob_event(void* self, void* event) {
     return KCompositeJob_Event((KCompositeJob*)self, (QEvent*)event);
 }
 
-bool k_compositejob_qbase_event(void* self, void* event) {
-    return KCompositeJob_QBaseEvent((KCompositeJob*)self, (QEvent*)event);
+bool k_compositejob_super_event(void* self, void* event) {
+    return KCompositeJob_SuperEvent((KCompositeJob*)self, (QEvent*)event);
 }
 
 void k_compositejob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -577,8 +577,8 @@ bool k_compositejob_event_filter(void* self, void* watched, void* event) {
     return KCompositeJob_EventFilter((KCompositeJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_compositejob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCompositeJob_QBaseEventFilter((KCompositeJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_compositejob_super_event_filter(void* self, void* watched, void* event) {
+    return KCompositeJob_SuperEventFilter((KCompositeJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_compositejob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -589,8 +589,8 @@ void k_compositejob_timer_event(void* self, void* event) {
     KCompositeJob_TimerEvent((KCompositeJob*)self, (QTimerEvent*)event);
 }
 
-void k_compositejob_qbase_timer_event(void* self, void* event) {
-    KCompositeJob_QBaseTimerEvent((KCompositeJob*)self, (QTimerEvent*)event);
+void k_compositejob_super_timer_event(void* self, void* event) {
+    KCompositeJob_SuperTimerEvent((KCompositeJob*)self, (QTimerEvent*)event);
 }
 
 void k_compositejob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -601,8 +601,8 @@ void k_compositejob_child_event(void* self, void* event) {
     KCompositeJob_ChildEvent((KCompositeJob*)self, (QChildEvent*)event);
 }
 
-void k_compositejob_qbase_child_event(void* self, void* event) {
-    KCompositeJob_QBaseChildEvent((KCompositeJob*)self, (QChildEvent*)event);
+void k_compositejob_super_child_event(void* self, void* event) {
+    KCompositeJob_SuperChildEvent((KCompositeJob*)self, (QChildEvent*)event);
 }
 
 void k_compositejob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -613,8 +613,8 @@ void k_compositejob_custom_event(void* self, void* event) {
     KCompositeJob_CustomEvent((KCompositeJob*)self, (QEvent*)event);
 }
 
-void k_compositejob_qbase_custom_event(void* self, void* event) {
-    KCompositeJob_QBaseCustomEvent((KCompositeJob*)self, (QEvent*)event);
+void k_compositejob_super_custom_event(void* self, void* event) {
+    KCompositeJob_SuperCustomEvent((KCompositeJob*)self, (QEvent*)event);
 }
 
 void k_compositejob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -625,8 +625,8 @@ void k_compositejob_connect_notify(void* self, void* signal) {
     KCompositeJob_ConnectNotify((KCompositeJob*)self, (QMetaMethod*)signal);
 }
 
-void k_compositejob_qbase_connect_notify(void* self, void* signal) {
-    KCompositeJob_QBaseConnectNotify((KCompositeJob*)self, (QMetaMethod*)signal);
+void k_compositejob_super_connect_notify(void* self, void* signal) {
+    KCompositeJob_SuperConnectNotify((KCompositeJob*)self, (QMetaMethod*)signal);
 }
 
 void k_compositejob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -637,8 +637,8 @@ void k_compositejob_disconnect_notify(void* self, void* signal) {
     KCompositeJob_DisconnectNotify((KCompositeJob*)self, (QMetaMethod*)signal);
 }
 
-void k_compositejob_qbase_disconnect_notify(void* self, void* signal) {
-    KCompositeJob_QBaseDisconnectNotify((KCompositeJob*)self, (QMetaMethod*)signal);
+void k_compositejob_super_disconnect_notify(void* self, void* signal) {
+    KCompositeJob_SuperDisconnectNotify((KCompositeJob*)self, (QMetaMethod*)signal);
 }
 
 void k_compositejob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -649,8 +649,8 @@ void k_compositejob_set_capabilities(void* self, int32_t capabilities) {
     KCompositeJob_SetCapabilities((KCompositeJob*)self, capabilities);
 }
 
-void k_compositejob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KCompositeJob_QBaseSetCapabilities((KCompositeJob*)self, capabilities);
+void k_compositejob_super_set_capabilities(void* self, int32_t capabilities) {
+    KCompositeJob_SuperSetCapabilities((KCompositeJob*)self, capabilities);
 }
 
 void k_compositejob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -661,8 +661,8 @@ bool k_compositejob_is_finished(void* self) {
     return KCompositeJob_IsFinished((KCompositeJob*)self);
 }
 
-bool k_compositejob_qbase_is_finished(void* self) {
-    return KCompositeJob_QBaseIsFinished((KCompositeJob*)self);
+bool k_compositejob_super_is_finished(void* self) {
+    return KCompositeJob_SuperIsFinished((KCompositeJob*)self);
 }
 
 void k_compositejob_on_is_finished(void* self, bool (*callback)()) {
@@ -673,8 +673,8 @@ void k_compositejob_set_error(void* self, int errorCode) {
     KCompositeJob_SetError((KCompositeJob*)self, errorCode);
 }
 
-void k_compositejob_qbase_set_error(void* self, int errorCode) {
-    KCompositeJob_QBaseSetError((KCompositeJob*)self, errorCode);
+void k_compositejob_super_set_error(void* self, int errorCode) {
+    KCompositeJob_SuperSetError((KCompositeJob*)self, errorCode);
 }
 
 void k_compositejob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -685,8 +685,8 @@ void k_compositejob_set_error_text(void* self, const char* errorText) {
     KCompositeJob_SetErrorText((KCompositeJob*)self, qstring(errorText));
 }
 
-void k_compositejob_qbase_set_error_text(void* self, const char* errorText) {
-    KCompositeJob_QBaseSetErrorText((KCompositeJob*)self, qstring(errorText));
+void k_compositejob_super_set_error_text(void* self, const char* errorText) {
+    KCompositeJob_SuperSetErrorText((KCompositeJob*)self, qstring(errorText));
 }
 
 void k_compositejob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -697,8 +697,8 @@ void k_compositejob_set_processed_amount(void* self, int32_t unit, uint64_t amou
     KCompositeJob_SetProcessedAmount((KCompositeJob*)self, unit, amount);
 }
 
-void k_compositejob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KCompositeJob_QBaseSetProcessedAmount((KCompositeJob*)self, unit, amount);
+void k_compositejob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KCompositeJob_SuperSetProcessedAmount((KCompositeJob*)self, unit, amount);
 }
 
 void k_compositejob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -709,8 +709,8 @@ void k_compositejob_set_total_amount(void* self, int32_t unit, uint64_t amount) 
     KCompositeJob_SetTotalAmount((KCompositeJob*)self, unit, amount);
 }
 
-void k_compositejob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KCompositeJob_QBaseSetTotalAmount((KCompositeJob*)self, unit, amount);
+void k_compositejob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KCompositeJob_SuperSetTotalAmount((KCompositeJob*)self, unit, amount);
 }
 
 void k_compositejob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -721,8 +721,8 @@ void k_compositejob_set_progress_unit(void* self, int32_t unit) {
     KCompositeJob_SetProgressUnit((KCompositeJob*)self, unit);
 }
 
-void k_compositejob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KCompositeJob_QBaseSetProgressUnit((KCompositeJob*)self, unit);
+void k_compositejob_super_set_progress_unit(void* self, int32_t unit) {
+    KCompositeJob_SuperSetProgressUnit((KCompositeJob*)self, unit);
 }
 
 void k_compositejob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -733,8 +733,8 @@ void k_compositejob_set_percent(void* self, uint64_t percentage) {
     KCompositeJob_SetPercent((KCompositeJob*)self, percentage);
 }
 
-void k_compositejob_qbase_set_percent(void* self, uint64_t percentage) {
-    KCompositeJob_QBaseSetPercent((KCompositeJob*)self, percentage);
+void k_compositejob_super_set_percent(void* self, uint64_t percentage) {
+    KCompositeJob_SuperSetPercent((KCompositeJob*)self, percentage);
 }
 
 void k_compositejob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -745,8 +745,8 @@ void k_compositejob_emit_result(void* self) {
     KCompositeJob_EmitResult((KCompositeJob*)self);
 }
 
-void k_compositejob_qbase_emit_result(void* self) {
-    KCompositeJob_QBaseEmitResult((KCompositeJob*)self);
+void k_compositejob_super_emit_result(void* self) {
+    KCompositeJob_SuperEmitResult((KCompositeJob*)self);
 }
 
 void k_compositejob_on_emit_result(void* self, void (*callback)()) {
@@ -757,8 +757,8 @@ void k_compositejob_emit_percent(void* self, uint64_t processedAmount, uint64_t 
     KCompositeJob_EmitPercent((KCompositeJob*)self, processedAmount, totalAmount);
 }
 
-void k_compositejob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KCompositeJob_QBaseEmitPercent((KCompositeJob*)self, processedAmount, totalAmount);
+void k_compositejob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KCompositeJob_SuperEmitPercent((KCompositeJob*)self, processedAmount, totalAmount);
 }
 
 void k_compositejob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -769,8 +769,8 @@ void k_compositejob_emit_speed(void* self, uint64_t speed) {
     KCompositeJob_EmitSpeed((KCompositeJob*)self, speed);
 }
 
-void k_compositejob_qbase_emit_speed(void* self, uint64_t speed) {
-    KCompositeJob_QBaseEmitSpeed((KCompositeJob*)self, speed);
+void k_compositejob_super_emit_speed(void* self, uint64_t speed) {
+    KCompositeJob_SuperEmitSpeed((KCompositeJob*)self, speed);
 }
 
 void k_compositejob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -781,8 +781,8 @@ void k_compositejob_start_elapsed_timer(void* self) {
     KCompositeJob_StartElapsedTimer((KCompositeJob*)self);
 }
 
-void k_compositejob_qbase_start_elapsed_timer(void* self) {
-    KCompositeJob_QBaseStartElapsedTimer((KCompositeJob*)self);
+void k_compositejob_super_start_elapsed_timer(void* self) {
+    KCompositeJob_SuperStartElapsedTimer((KCompositeJob*)self);
 }
 
 void k_compositejob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -793,8 +793,8 @@ QObject* k_compositejob_sender(void* self) {
     return KCompositeJob_Sender((KCompositeJob*)self);
 }
 
-QObject* k_compositejob_qbase_sender(void* self) {
-    return KCompositeJob_QBaseSender((KCompositeJob*)self);
+QObject* k_compositejob_super_sender(void* self) {
+    return KCompositeJob_SuperSender((KCompositeJob*)self);
 }
 
 void k_compositejob_on_sender(void* self, QObject* (*callback)()) {
@@ -805,8 +805,8 @@ int32_t k_compositejob_sender_signal_index(void* self) {
     return KCompositeJob_SenderSignalIndex((KCompositeJob*)self);
 }
 
-int32_t k_compositejob_qbase_sender_signal_index(void* self) {
-    return KCompositeJob_QBaseSenderSignalIndex((KCompositeJob*)self);
+int32_t k_compositejob_super_sender_signal_index(void* self) {
+    return KCompositeJob_SuperSenderSignalIndex((KCompositeJob*)self);
 }
 
 void k_compositejob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -817,8 +817,8 @@ int32_t k_compositejob_receivers(void* self, const char* signal) {
     return KCompositeJob_Receivers((KCompositeJob*)self, signal);
 }
 
-int32_t k_compositejob_qbase_receivers(void* self, const char* signal) {
-    return KCompositeJob_QBaseReceivers((KCompositeJob*)self, signal);
+int32_t k_compositejob_super_receivers(void* self, const char* signal) {
+    return KCompositeJob_SuperReceivers((KCompositeJob*)self, signal);
 }
 
 void k_compositejob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -829,8 +829,8 @@ bool k_compositejob_is_signal_connected(void* self, void* signal) {
     return KCompositeJob_IsSignalConnected((KCompositeJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_compositejob_qbase_is_signal_connected(void* self, void* signal) {
-    return KCompositeJob_QBaseIsSignalConnected((KCompositeJob*)self, (QMetaMethod*)signal);
+bool k_compositejob_super_is_signal_connected(void* self, void* signal) {
+    return KCompositeJob_SuperIsSignalConnected((KCompositeJob*)self, (QMetaMethod*)signal);
 }
 
 void k_compositejob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

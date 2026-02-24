@@ -31,8 +31,8 @@ void q_pluginloader_on_meta_object(void* self, const QMetaObject* (*callback)())
     QPluginLoader_OnMetaObject((QPluginLoader*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pluginloader_qbase_meta_object(void* self) {
-    return QPluginLoader_QBaseMetaObject((QPluginLoader*)self);
+const QMetaObject* q_pluginloader_super_meta_object(void* self) {
+    return QPluginLoader_SuperMetaObject((QPluginLoader*)self);
 }
 
 void* q_pluginloader_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void q_pluginloader_on_metacast(void* self, void* (*callback)(void*, const char*
     QPluginLoader_OnMetacast((QPluginLoader*)self, (intptr_t)callback);
 }
 
-void* q_pluginloader_qbase_metacast(void* self, const char* param1) {
-    return QPluginLoader_QBaseMetacast((QPluginLoader*)self, param1);
+void* q_pluginloader_super_metacast(void* self, const char* param1) {
+    return QPluginLoader_SuperMetacast((QPluginLoader*)self, param1);
 }
 
 int32_t q_pluginloader_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void q_pluginloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QPluginLoader_OnMetacall((QPluginLoader*)self, (intptr_t)callback);
 }
 
-int32_t q_pluginloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPluginLoader_QBaseMetacall((QPluginLoader*)self, param1, param2, param3);
+int32_t q_pluginloader_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPluginLoader_SuperMetacall((QPluginLoader*)self, param1, param2, param3);
 }
 
 const char* q_pluginloader_tr(const char* s) {
@@ -351,8 +351,8 @@ bool q_pluginloader_event(void* self, void* event) {
     return QPluginLoader_Event((QPluginLoader*)self, (QEvent*)event);
 }
 
-bool q_pluginloader_qbase_event(void* self, void* event) {
-    return QPluginLoader_QBaseEvent((QPluginLoader*)self, (QEvent*)event);
+bool q_pluginloader_super_event(void* self, void* event) {
+    return QPluginLoader_SuperEvent((QPluginLoader*)self, (QEvent*)event);
 }
 
 void q_pluginloader_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -363,8 +363,8 @@ bool q_pluginloader_event_filter(void* self, void* watched, void* event) {
     return QPluginLoader_EventFilter((QPluginLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pluginloader_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPluginLoader_QBaseEventFilter((QPluginLoader*)self, (QObject*)watched, (QEvent*)event);
+bool q_pluginloader_super_event_filter(void* self, void* watched, void* event) {
+    return QPluginLoader_SuperEventFilter((QPluginLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pluginloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -375,8 +375,8 @@ void q_pluginloader_timer_event(void* self, void* event) {
     QPluginLoader_TimerEvent((QPluginLoader*)self, (QTimerEvent*)event);
 }
 
-void q_pluginloader_qbase_timer_event(void* self, void* event) {
-    QPluginLoader_QBaseTimerEvent((QPluginLoader*)self, (QTimerEvent*)event);
+void q_pluginloader_super_timer_event(void* self, void* event) {
+    QPluginLoader_SuperTimerEvent((QPluginLoader*)self, (QTimerEvent*)event);
 }
 
 void q_pluginloader_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ void q_pluginloader_child_event(void* self, void* event) {
     QPluginLoader_ChildEvent((QPluginLoader*)self, (QChildEvent*)event);
 }
 
-void q_pluginloader_qbase_child_event(void* self, void* event) {
-    QPluginLoader_QBaseChildEvent((QPluginLoader*)self, (QChildEvent*)event);
+void q_pluginloader_super_child_event(void* self, void* event) {
+    QPluginLoader_SuperChildEvent((QPluginLoader*)self, (QChildEvent*)event);
 }
 
 void q_pluginloader_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ void q_pluginloader_custom_event(void* self, void* event) {
     QPluginLoader_CustomEvent((QPluginLoader*)self, (QEvent*)event);
 }
 
-void q_pluginloader_qbase_custom_event(void* self, void* event) {
-    QPluginLoader_QBaseCustomEvent((QPluginLoader*)self, (QEvent*)event);
+void q_pluginloader_super_custom_event(void* self, void* event) {
+    QPluginLoader_SuperCustomEvent((QPluginLoader*)self, (QEvent*)event);
 }
 
 void q_pluginloader_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -411,8 +411,8 @@ void q_pluginloader_connect_notify(void* self, void* signal) {
     QPluginLoader_ConnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_pluginloader_qbase_connect_notify(void* self, void* signal) {
-    QPluginLoader_QBaseConnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
+void q_pluginloader_super_connect_notify(void* self, void* signal) {
+    QPluginLoader_SuperConnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
 void q_pluginloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void q_pluginloader_disconnect_notify(void* self, void* signal) {
     QPluginLoader_DisconnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_pluginloader_qbase_disconnect_notify(void* self, void* signal) {
-    QPluginLoader_QBaseDisconnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
+void q_pluginloader_super_disconnect_notify(void* self, void* signal) {
+    QPluginLoader_SuperDisconnectNotify((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
 void q_pluginloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ QObject* q_pluginloader_sender(void* self) {
     return QPluginLoader_Sender((QPluginLoader*)self);
 }
 
-QObject* q_pluginloader_qbase_sender(void* self) {
-    return QPluginLoader_QBaseSender((QPluginLoader*)self);
+QObject* q_pluginloader_super_sender(void* self) {
+    return QPluginLoader_SuperSender((QPluginLoader*)self);
 }
 
 void q_pluginloader_on_sender(void* self, QObject* (*callback)()) {
@@ -447,8 +447,8 @@ int32_t q_pluginloader_sender_signal_index(void* self) {
     return QPluginLoader_SenderSignalIndex((QPluginLoader*)self);
 }
 
-int32_t q_pluginloader_qbase_sender_signal_index(void* self) {
-    return QPluginLoader_QBaseSenderSignalIndex((QPluginLoader*)self);
+int32_t q_pluginloader_super_sender_signal_index(void* self) {
+    return QPluginLoader_SuperSenderSignalIndex((QPluginLoader*)self);
 }
 
 void q_pluginloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -459,8 +459,8 @@ int32_t q_pluginloader_receivers(void* self, const char* signal) {
     return QPluginLoader_Receivers((QPluginLoader*)self, signal);
 }
 
-int32_t q_pluginloader_qbase_receivers(void* self, const char* signal) {
-    return QPluginLoader_QBaseReceivers((QPluginLoader*)self, signal);
+int32_t q_pluginloader_super_receivers(void* self, const char* signal) {
+    return QPluginLoader_SuperReceivers((QPluginLoader*)self, signal);
 }
 
 void q_pluginloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -471,8 +471,8 @@ bool q_pluginloader_is_signal_connected(void* self, void* signal) {
     return QPluginLoader_IsSignalConnected((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
-bool q_pluginloader_qbase_is_signal_connected(void* self, void* signal) {
-    return QPluginLoader_QBaseIsSignalConnected((QPluginLoader*)self, (QMetaMethod*)signal);
+bool q_pluginloader_super_is_signal_connected(void* self, void* signal) {
+    return QPluginLoader_SuperIsSignalConnected((QPluginLoader*)self, (QMetaMethod*)signal);
 }
 
 void q_pluginloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

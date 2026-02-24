@@ -29,8 +29,8 @@ void k_dirmodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KDirModel_OnMetaObject((KDirModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_dirmodel_qbase_meta_object(void* self) {
-    return KDirModel_QBaseMetaObject((KDirModel*)self);
+const QMetaObject* k_dirmodel_super_meta_object(void* self) {
+    return KDirModel_SuperMetaObject((KDirModel*)self);
 }
 
 void* k_dirmodel_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_dirmodel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KDirModel_OnMetacast((KDirModel*)self, (intptr_t)callback);
 }
 
-void* k_dirmodel_qbase_metacast(void* self, const char* param1) {
-    return KDirModel_QBaseMetacast((KDirModel*)self, param1);
+void* k_dirmodel_super_metacast(void* self, const char* param1) {
+    return KDirModel_SuperMetacast((KDirModel*)self, param1);
 }
 
 int32_t k_dirmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_dirmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KDirModel_OnMetacall((KDirModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDirModel_QBaseMetacall((KDirModel*)self, param1, param2, param3);
+int32_t k_dirmodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDirModel_SuperMetacall((KDirModel*)self, param1, param2, param3);
 }
 
 const char* k_dirmodel_tr(const char* s) {
@@ -112,8 +112,8 @@ void k_dirmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
     KDirModel_OnCanFetchMore((KDirModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KDirModel_QBaseCanFetchMore((KDirModel*)self, (QModelIndex*)parent);
+bool k_dirmodel_super_can_fetch_more(void* self, void* parent) {
+    return KDirModel_SuperCanFetchMore((KDirModel*)self, (QModelIndex*)parent);
 }
 
 int32_t k_dirmodel_column_count(void* self, void* parent) {
@@ -124,8 +124,8 @@ void k_dirmodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
     KDirModel_OnColumnCount((KDirModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirmodel_qbase_column_count(void* self, void* parent) {
-    return KDirModel_QBaseColumnCount((KDirModel*)self, (QModelIndex*)parent);
+int32_t k_dirmodel_super_column_count(void* self, void* parent) {
+    return KDirModel_SuperColumnCount((KDirModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* k_dirmodel_data(void* self, void* index, int role) {
@@ -136,8 +136,8 @@ void k_dirmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
     KDirModel_OnData((KDirModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_dirmodel_qbase_data(void* self, void* index, int role) {
-    return KDirModel_QBaseData((KDirModel*)self, (QModelIndex*)index, role);
+QVariant* k_dirmodel_super_data(void* self, void* index, int role) {
+    return KDirModel_SuperData((KDirModel*)self, (QModelIndex*)index, role);
 }
 
 bool k_dirmodel_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
@@ -148,8 +148,8 @@ void k_dirmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int
     KDirModel_OnDropMimeData((KDirModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KDirModel_QBaseDropMimeData((KDirModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_dirmodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KDirModel_SuperDropMimeData((KDirModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_dirmodel_fetch_more(void* self, void* parent) {
@@ -160,8 +160,8 @@ void k_dirmodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
     KDirModel_OnFetchMore((KDirModel*)self, (intptr_t)callback);
 }
 
-void k_dirmodel_qbase_fetch_more(void* self, void* parent) {
-    KDirModel_QBaseFetchMore((KDirModel*)self, (QModelIndex*)parent);
+void k_dirmodel_super_fetch_more(void* self, void* parent) {
+    KDirModel_SuperFetchMore((KDirModel*)self, (QModelIndex*)parent);
 }
 
 int32_t k_dirmodel_flags(void* self, void* index) {
@@ -172,8 +172,8 @@ void k_dirmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
     KDirModel_OnFlags((KDirModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirmodel_qbase_flags(void* self, void* index) {
-    return KDirModel_QBaseFlags((KDirModel*)self, (QModelIndex*)index);
+int32_t k_dirmodel_super_flags(void* self, void* index) {
+    return KDirModel_SuperFlags((KDirModel*)self, (QModelIndex*)index);
 }
 
 bool k_dirmodel_has_children(void* self, void* parent) {
@@ -184,8 +184,8 @@ void k_dirmodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
     KDirModel_OnHasChildren((KDirModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_has_children(void* self, void* parent) {
-    return KDirModel_QBaseHasChildren((KDirModel*)self, (QModelIndex*)parent);
+bool k_dirmodel_super_has_children(void* self, void* parent) {
+    return KDirModel_SuperHasChildren((KDirModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* k_dirmodel_header_data(void* self, int section, int32_t orientation, int role) {
@@ -196,8 +196,8 @@ void k_dirmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int
     KDirModel_OnHeaderData((KDirModel*)self, (intptr_t)callback);
 }
 
-QVariant* k_dirmodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KDirModel_QBaseHeaderData((KDirModel*)self, section, orientation, role);
+QVariant* k_dirmodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KDirModel_SuperHeaderData((KDirModel*)self, section, orientation, role);
 }
 
 QModelIndex* k_dirmodel_index(void* self, int row, int column, void* parent) {
@@ -208,8 +208,8 @@ void k_dirmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, v
     KDirModel_OnIndex((KDirModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirmodel_qbase_index(void* self, int row, int column, void* parent) {
-    return KDirModel_QBaseIndex((KDirModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* k_dirmodel_super_index(void* self, int row, int column, void* parent) {
+    return KDirModel_SuperIndex((KDirModel*)self, row, column, (QModelIndex*)parent);
 }
 
 QMimeData* k_dirmodel_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -220,8 +220,8 @@ void k_dirmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_lis
     KDirModel_OnMimeData((KDirModel*)self, (intptr_t)callback);
 }
 
-QMimeData* k_dirmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KDirModel_QBaseMimeData((KDirModel*)self, indexes);
+QMimeData* k_dirmodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KDirModel_SuperMimeData((KDirModel*)self, indexes);
 }
 
 const char** k_dirmodel_mime_types(void* self) {
@@ -247,8 +247,8 @@ void k_dirmodel_on_mime_types(void* self, const char** (*callback)()) {
     KDirModel_OnMimeTypes((KDirModel*)self, (intptr_t)callback);
 }
 
-const char** k_dirmodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KDirModel_QBaseMimeTypes((KDirModel*)self);
+const char** k_dirmodel_super_mime_types(void* self) {
+    libqt_list _arr = KDirModel_SuperMimeTypes((KDirModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -274,8 +274,8 @@ void k_dirmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
     KDirModel_OnParent((KDirModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirmodel_qbase_parent(void* self, void* index) {
-    return KDirModel_QBaseParent((KDirModel*)self, (QModelIndex*)index);
+QModelIndex* k_dirmodel_super_parent(void* self, void* index) {
+    return KDirModel_SuperParent((KDirModel*)self, (QModelIndex*)index);
 }
 
 QModelIndex* k_dirmodel_sibling(void* self, int row, int column, void* index) {
@@ -286,8 +286,8 @@ void k_dirmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int,
     KDirModel_OnSibling((KDirModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_dirmodel_qbase_sibling(void* self, int row, int column, void* index) {
-    return KDirModel_QBaseSibling((KDirModel*)self, row, column, (QModelIndex*)index);
+QModelIndex* k_dirmodel_super_sibling(void* self, int row, int column, void* index) {
+    return KDirModel_SuperSibling((KDirModel*)self, row, column, (QModelIndex*)index);
 }
 
 int32_t k_dirmodel_row_count(void* self, void* parent) {
@@ -298,8 +298,8 @@ void k_dirmodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
     KDirModel_OnRowCount((KDirModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirmodel_qbase_row_count(void* self, void* parent) {
-    return KDirModel_QBaseRowCount((KDirModel*)self, (QModelIndex*)parent);
+int32_t k_dirmodel_super_row_count(void* self, void* parent) {
+    return KDirModel_SuperRowCount((KDirModel*)self, (QModelIndex*)parent);
 }
 
 bool k_dirmodel_set_data(void* self, void* index, void* value, int role) {
@@ -310,8 +310,8 @@ void k_dirmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, in
     KDirModel_OnSetData((KDirModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KDirModel_QBaseSetData((KDirModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_dirmodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KDirModel_SuperSetData((KDirModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_dirmodel_sort(void* self, int column, int32_t order) {
@@ -322,8 +322,8 @@ void k_dirmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
     KDirModel_OnSort((KDirModel*)self, (intptr_t)callback);
 }
 
-void k_dirmodel_qbase_sort(void* self, int column, int32_t order) {
-    KDirModel_QBaseSort((KDirModel*)self, column, order);
+void k_dirmodel_super_sort(void* self, int column, int32_t order) {
+    KDirModel_SuperSort((KDirModel*)self, column, order);
 }
 
 libqt_map /* of int to char* */ k_dirmodel_role_names(void* self) {
@@ -363,9 +363,9 @@ void k_dirmodel_on_role_names(void* self, libqt_map /* of int to char* */ (*call
     KDirModel_OnRoleNames((KDirModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ k_dirmodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_dirmodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KDirModel_QBaseRoleNames((KDirModel*)self);
+    libqt_map _out = KDirModel_SuperRoleNames((KDirModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -421,8 +421,8 @@ void k_dirmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
     KDirModel_OnSupportedDropActions((KDirModel*)self, (intptr_t)callback);
 }
 
-int32_t k_dirmodel_qbase_supported_drop_actions(void* self) {
-    return KDirModel_QBaseSupportedDropActions((KDirModel*)self);
+int32_t k_dirmodel_super_supported_drop_actions(void* self) {
+    return KDirModel_SuperSupportedDropActions((KDirModel*)self);
 }
 
 void k_dirmodel_expand(void* self, void* index) {
@@ -471,8 +471,8 @@ void k_dirmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, voi
     QAbstractItemModel_OnInsertRows((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return QAbstractItemModel_QBaseInsertRows((QAbstractItemModel*)self, row, count, (QModelIndex*)parent);
+bool k_dirmodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return QAbstractItemModel_SuperInsertRows((QAbstractItemModel*)self, row, count, (QModelIndex*)parent);
 }
 
 bool k_dirmodel_insert_columns(void* self, int column, int count, void* parent) {
@@ -483,8 +483,8 @@ void k_dirmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, 
     QAbstractItemModel_OnInsertColumns((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return QAbstractItemModel_QBaseInsertColumns((QAbstractItemModel*)self, column, count, (QModelIndex*)parent);
+bool k_dirmodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return QAbstractItemModel_SuperInsertColumns((QAbstractItemModel*)self, column, count, (QModelIndex*)parent);
 }
 
 bool k_dirmodel_remove_rows(void* self, int row, int count, void* parent) {
@@ -495,8 +495,8 @@ void k_dirmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, voi
     QAbstractItemModel_OnRemoveRows((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return QAbstractItemModel_QBaseRemoveRows((QAbstractItemModel*)self, row, count, (QModelIndex*)parent);
+bool k_dirmodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return QAbstractItemModel_SuperRemoveRows((QAbstractItemModel*)self, row, count, (QModelIndex*)parent);
 }
 
 bool k_dirmodel_remove_columns(void* self, int column, int count, void* parent) {
@@ -507,8 +507,8 @@ void k_dirmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, 
     QAbstractItemModel_OnRemoveColumns((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool k_dirmodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return QAbstractItemModel_QBaseRemoveColumns((QAbstractItemModel*)self, column, count, (QModelIndex*)parent);
+bool k_dirmodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return QAbstractItemModel_SuperRemoveColumns((QAbstractItemModel*)self, column, count, (QModelIndex*)parent);
 }
 
 bool k_dirmodel_insert_row(void* self, int row) {
@@ -846,8 +846,8 @@ bool k_dirmodel_set_header_data(void* self, int section, int32_t orientation, vo
     return KDirModel_SetHeaderData((KDirModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_dirmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KDirModel_QBaseSetHeaderData((KDirModel*)self, section, orientation, (QVariant*)value, role);
+bool k_dirmodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KDirModel_SuperSetHeaderData((KDirModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_dirmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -864,9 +864,9 @@ libqt_map /* of int to QVariant* */ k_dirmodel_item_data(void* self, void* index
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_dirmodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_dirmodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KDirModel_QBaseItemData((KDirModel*)self, (QModelIndex*)index);
+    libqt_map _out = KDirModel_SuperItemData((KDirModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -907,7 +907,7 @@ bool k_dirmodel_set_item_data(void* self, void* index, libqt_map /* of int to QV
     return _out;
 }
 
-bool k_dirmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_dirmodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -930,7 +930,7 @@ bool k_dirmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KDirModel_QBaseSetItemData((KDirModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KDirModel_SuperSetItemData((KDirModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -944,8 +944,8 @@ bool k_dirmodel_clear_item_data(void* self, void* index) {
     return KDirModel_ClearItemData((KDirModel*)self, (QModelIndex*)index);
 }
 
-bool k_dirmodel_qbase_clear_item_data(void* self, void* index) {
-    return KDirModel_QBaseClearItemData((KDirModel*)self, (QModelIndex*)index);
+bool k_dirmodel_super_clear_item_data(void* self, void* index) {
+    return KDirModel_SuperClearItemData((KDirModel*)self, (QModelIndex*)index);
 }
 
 void k_dirmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -956,8 +956,8 @@ bool k_dirmodel_can_drop_mime_data(void* self, void* data, int32_t action, int r
     return KDirModel_CanDropMimeData((KDirModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_dirmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KDirModel_QBaseCanDropMimeData((KDirModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_dirmodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KDirModel_SuperCanDropMimeData((KDirModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_dirmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -968,8 +968,8 @@ int32_t k_dirmodel_supported_drag_actions(void* self) {
     return KDirModel_SupportedDragActions((KDirModel*)self);
 }
 
-int32_t k_dirmodel_qbase_supported_drag_actions(void* self) {
-    return KDirModel_QBaseSupportedDragActions((KDirModel*)self);
+int32_t k_dirmodel_super_supported_drag_actions(void* self) {
+    return KDirModel_SuperSupportedDragActions((KDirModel*)self);
 }
 
 void k_dirmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -980,8 +980,8 @@ bool k_dirmodel_move_rows(void* self, void* sourceParent, int sourceRow, int cou
     return KDirModel_MoveRows((KDirModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_dirmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KDirModel_QBaseMoveRows((KDirModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_dirmodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KDirModel_SuperMoveRows((KDirModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_dirmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -992,8 +992,8 @@ bool k_dirmodel_move_columns(void* self, void* sourceParent, int sourceColumn, i
     return KDirModel_MoveColumns((KDirModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_dirmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KDirModel_QBaseMoveColumns((KDirModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_dirmodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KDirModel_SuperMoveColumns((KDirModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_dirmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1004,8 +1004,8 @@ QModelIndex* k_dirmodel_buddy(void* self, void* index) {
     return KDirModel_Buddy((KDirModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_dirmodel_qbase_buddy(void* self, void* index) {
-    return KDirModel_QBaseBuddy((KDirModel*)self, (QModelIndex*)index);
+QModelIndex* k_dirmodel_super_buddy(void* self, void* index) {
+    return KDirModel_SuperBuddy((KDirModel*)self, (QModelIndex*)index);
 }
 
 void k_dirmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -1017,8 +1017,8 @@ libqt_list /* of QModelIndex* */ k_dirmodel_match(void* self, void* start, int r
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_dirmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KDirModel_QBaseMatch((KDirModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_dirmodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KDirModel_SuperMatch((KDirModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -1030,8 +1030,8 @@ QSize* k_dirmodel_span(void* self, void* index) {
     return KDirModel_Span((KDirModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_dirmodel_qbase_span(void* self, void* index) {
-    return KDirModel_QBaseSpan((KDirModel*)self, (QModelIndex*)index);
+QSize* k_dirmodel_super_span(void* self, void* index) {
+    return KDirModel_SuperSpan((KDirModel*)self, (QModelIndex*)index);
 }
 
 void k_dirmodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -1042,8 +1042,8 @@ void k_dirmodel_multi_data(void* self, void* index, void* roleDataSpan) {
     KDirModel_MultiData((KDirModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_dirmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KDirModel_QBaseMultiData((KDirModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_dirmodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KDirModel_SuperMultiData((KDirModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_dirmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1054,8 +1054,8 @@ bool k_dirmodel_submit(void* self) {
     return KDirModel_Submit((KDirModel*)self);
 }
 
-bool k_dirmodel_qbase_submit(void* self) {
-    return KDirModel_QBaseSubmit((KDirModel*)self);
+bool k_dirmodel_super_submit(void* self) {
+    return KDirModel_SuperSubmit((KDirModel*)self);
 }
 
 void k_dirmodel_on_submit(void* self, bool (*callback)()) {
@@ -1066,8 +1066,8 @@ void k_dirmodel_revert(void* self) {
     KDirModel_Revert((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_revert(void* self) {
-    KDirModel_QBaseRevert((KDirModel*)self);
+void k_dirmodel_super_revert(void* self) {
+    KDirModel_SuperRevert((KDirModel*)self);
 }
 
 void k_dirmodel_on_revert(void* self, void (*callback)()) {
@@ -1078,8 +1078,8 @@ void k_dirmodel_reset_internal_data(void* self) {
     KDirModel_ResetInternalData((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_reset_internal_data(void* self) {
-    KDirModel_QBaseResetInternalData((KDirModel*)self);
+void k_dirmodel_super_reset_internal_data(void* self) {
+    KDirModel_SuperResetInternalData((KDirModel*)self);
 }
 
 void k_dirmodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1090,8 +1090,8 @@ bool k_dirmodel_event(void* self, void* event) {
     return KDirModel_Event((KDirModel*)self, (QEvent*)event);
 }
 
-bool k_dirmodel_qbase_event(void* self, void* event) {
-    return KDirModel_QBaseEvent((KDirModel*)self, (QEvent*)event);
+bool k_dirmodel_super_event(void* self, void* event) {
+    return KDirModel_SuperEvent((KDirModel*)self, (QEvent*)event);
 }
 
 void k_dirmodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1102,8 +1102,8 @@ bool k_dirmodel_event_filter(void* self, void* watched, void* event) {
     return KDirModel_EventFilter((KDirModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_dirmodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDirModel_QBaseEventFilter((KDirModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_dirmodel_super_event_filter(void* self, void* watched, void* event) {
+    return KDirModel_SuperEventFilter((KDirModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_dirmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1114,8 +1114,8 @@ void k_dirmodel_timer_event(void* self, void* event) {
     KDirModel_TimerEvent((KDirModel*)self, (QTimerEvent*)event);
 }
 
-void k_dirmodel_qbase_timer_event(void* self, void* event) {
-    KDirModel_QBaseTimerEvent((KDirModel*)self, (QTimerEvent*)event);
+void k_dirmodel_super_timer_event(void* self, void* event) {
+    KDirModel_SuperTimerEvent((KDirModel*)self, (QTimerEvent*)event);
 }
 
 void k_dirmodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1126,8 +1126,8 @@ void k_dirmodel_child_event(void* self, void* event) {
     KDirModel_ChildEvent((KDirModel*)self, (QChildEvent*)event);
 }
 
-void k_dirmodel_qbase_child_event(void* self, void* event) {
-    KDirModel_QBaseChildEvent((KDirModel*)self, (QChildEvent*)event);
+void k_dirmodel_super_child_event(void* self, void* event) {
+    KDirModel_SuperChildEvent((KDirModel*)self, (QChildEvent*)event);
 }
 
 void k_dirmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1138,8 +1138,8 @@ void k_dirmodel_custom_event(void* self, void* event) {
     KDirModel_CustomEvent((KDirModel*)self, (QEvent*)event);
 }
 
-void k_dirmodel_qbase_custom_event(void* self, void* event) {
-    KDirModel_QBaseCustomEvent((KDirModel*)self, (QEvent*)event);
+void k_dirmodel_super_custom_event(void* self, void* event) {
+    KDirModel_SuperCustomEvent((KDirModel*)self, (QEvent*)event);
 }
 
 void k_dirmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1150,8 +1150,8 @@ void k_dirmodel_connect_notify(void* self, void* signal) {
     KDirModel_ConnectNotify((KDirModel*)self, (QMetaMethod*)signal);
 }
 
-void k_dirmodel_qbase_connect_notify(void* self, void* signal) {
-    KDirModel_QBaseConnectNotify((KDirModel*)self, (QMetaMethod*)signal);
+void k_dirmodel_super_connect_notify(void* self, void* signal) {
+    KDirModel_SuperConnectNotify((KDirModel*)self, (QMetaMethod*)signal);
 }
 
 void k_dirmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1162,8 +1162,8 @@ void k_dirmodel_disconnect_notify(void* self, void* signal) {
     KDirModel_DisconnectNotify((KDirModel*)self, (QMetaMethod*)signal);
 }
 
-void k_dirmodel_qbase_disconnect_notify(void* self, void* signal) {
-    KDirModel_QBaseDisconnectNotify((KDirModel*)self, (QMetaMethod*)signal);
+void k_dirmodel_super_disconnect_notify(void* self, void* signal) {
+    KDirModel_SuperDisconnectNotify((KDirModel*)self, (QMetaMethod*)signal);
 }
 
 void k_dirmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1174,8 +1174,8 @@ QModelIndex* k_dirmodel_create_index(void* self, int row, int column) {
     return KDirModel_CreateIndex((KDirModel*)self, row, column);
 }
 
-QModelIndex* k_dirmodel_qbase_create_index(void* self, int row, int column) {
-    return KDirModel_QBaseCreateIndex((KDirModel*)self, row, column);
+QModelIndex* k_dirmodel_super_create_index(void* self, int row, int column) {
+    return KDirModel_SuperCreateIndex((KDirModel*)self, row, column);
 }
 
 void k_dirmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1186,8 +1186,8 @@ void k_dirmodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes
     KDirModel_EncodeData((KDirModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_dirmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KDirModel_QBaseEncodeData((KDirModel*)self, indexes, (QDataStream*)stream);
+void k_dirmodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KDirModel_SuperEncodeData((KDirModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_dirmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1198,8 +1198,8 @@ bool k_dirmodel_decode_data(void* self, int row, int column, void* parent, void*
     return KDirModel_DecodeData((KDirModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_dirmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KDirModel_QBaseDecodeData((KDirModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_dirmodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KDirModel_SuperDecodeData((KDirModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_dirmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1210,8 +1210,8 @@ void k_dirmodel_begin_insert_rows(void* self, void* parent, int first, int last)
     KDirModel_BeginInsertRows((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_dirmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KDirModel_QBaseBeginInsertRows((KDirModel*)self, (QModelIndex*)parent, first, last);
+void k_dirmodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KDirModel_SuperBeginInsertRows((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_dirmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1222,8 +1222,8 @@ void k_dirmodel_end_insert_rows(void* self) {
     KDirModel_EndInsertRows((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_insert_rows(void* self) {
-    KDirModel_QBaseEndInsertRows((KDirModel*)self);
+void k_dirmodel_super_end_insert_rows(void* self) {
+    KDirModel_SuperEndInsertRows((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1234,8 +1234,8 @@ void k_dirmodel_begin_remove_rows(void* self, void* parent, int first, int last)
     KDirModel_BeginRemoveRows((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_dirmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KDirModel_QBaseBeginRemoveRows((KDirModel*)self, (QModelIndex*)parent, first, last);
+void k_dirmodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KDirModel_SuperBeginRemoveRows((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_dirmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1246,8 +1246,8 @@ void k_dirmodel_end_remove_rows(void* self) {
     KDirModel_EndRemoveRows((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_remove_rows(void* self) {
-    KDirModel_QBaseEndRemoveRows((KDirModel*)self);
+void k_dirmodel_super_end_remove_rows(void* self) {
+    KDirModel_SuperEndRemoveRows((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1258,8 +1258,8 @@ bool k_dirmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst,
     return KDirModel_BeginMoveRows((KDirModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_dirmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KDirModel_QBaseBeginMoveRows((KDirModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_dirmodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KDirModel_SuperBeginMoveRows((KDirModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_dirmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1270,8 +1270,8 @@ void k_dirmodel_end_move_rows(void* self) {
     KDirModel_EndMoveRows((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_move_rows(void* self) {
-    KDirModel_QBaseEndMoveRows((KDirModel*)self);
+void k_dirmodel_super_end_move_rows(void* self) {
+    KDirModel_SuperEndMoveRows((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1282,8 +1282,8 @@ void k_dirmodel_begin_insert_columns(void* self, void* parent, int first, int la
     KDirModel_BeginInsertColumns((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_dirmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KDirModel_QBaseBeginInsertColumns((KDirModel*)self, (QModelIndex*)parent, first, last);
+void k_dirmodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KDirModel_SuperBeginInsertColumns((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_dirmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1294,8 +1294,8 @@ void k_dirmodel_end_insert_columns(void* self) {
     KDirModel_EndInsertColumns((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_insert_columns(void* self) {
-    KDirModel_QBaseEndInsertColumns((KDirModel*)self);
+void k_dirmodel_super_end_insert_columns(void* self) {
+    KDirModel_SuperEndInsertColumns((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1306,8 +1306,8 @@ void k_dirmodel_begin_remove_columns(void* self, void* parent, int first, int la
     KDirModel_BeginRemoveColumns((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_dirmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KDirModel_QBaseBeginRemoveColumns((KDirModel*)self, (QModelIndex*)parent, first, last);
+void k_dirmodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KDirModel_SuperBeginRemoveColumns((KDirModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_dirmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1318,8 +1318,8 @@ void k_dirmodel_end_remove_columns(void* self) {
     KDirModel_EndRemoveColumns((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_remove_columns(void* self) {
-    KDirModel_QBaseEndRemoveColumns((KDirModel*)self);
+void k_dirmodel_super_end_remove_columns(void* self) {
+    KDirModel_SuperEndRemoveColumns((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1330,8 +1330,8 @@ bool k_dirmodel_begin_move_columns(void* self, void* sourceParent, int sourceFir
     return KDirModel_BeginMoveColumns((KDirModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_dirmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KDirModel_QBaseBeginMoveColumns((KDirModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_dirmodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KDirModel_SuperBeginMoveColumns((KDirModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_dirmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1342,8 +1342,8 @@ void k_dirmodel_end_move_columns(void* self) {
     KDirModel_EndMoveColumns((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_move_columns(void* self) {
-    KDirModel_QBaseEndMoveColumns((KDirModel*)self);
+void k_dirmodel_super_end_move_columns(void* self) {
+    KDirModel_SuperEndMoveColumns((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1354,8 +1354,8 @@ void k_dirmodel_begin_reset_model(void* self) {
     KDirModel_BeginResetModel((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_begin_reset_model(void* self) {
-    KDirModel_QBaseBeginResetModel((KDirModel*)self);
+void k_dirmodel_super_begin_reset_model(void* self) {
+    KDirModel_SuperBeginResetModel((KDirModel*)self);
 }
 
 void k_dirmodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1366,8 +1366,8 @@ void k_dirmodel_end_reset_model(void* self) {
     KDirModel_EndResetModel((KDirModel*)self);
 }
 
-void k_dirmodel_qbase_end_reset_model(void* self) {
-    KDirModel_QBaseEndResetModel((KDirModel*)self);
+void k_dirmodel_super_end_reset_model(void* self) {
+    KDirModel_SuperEndResetModel((KDirModel*)self);
 }
 
 void k_dirmodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1378,8 +1378,8 @@ void k_dirmodel_change_persistent_index(void* self, void* from, void* to) {
     KDirModel_ChangePersistentIndex((KDirModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_dirmodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KDirModel_QBaseChangePersistentIndex((KDirModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_dirmodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KDirModel_SuperChangePersistentIndex((KDirModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_dirmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1390,8 +1390,8 @@ void k_dirmodel_change_persistent_index_list(void* self, libqt_list /* of QModel
     KDirModel_ChangePersistentIndexList((KDirModel*)self, from, to);
 }
 
-void k_dirmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KDirModel_QBaseChangePersistentIndexList((KDirModel*)self, from, to);
+void k_dirmodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KDirModel_SuperChangePersistentIndexList((KDirModel*)self, from, to);
 }
 
 void k_dirmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1403,8 +1403,8 @@ libqt_list /* of QModelIndex* */ k_dirmodel_persistent_index_list(void* self) {
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_dirmodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KDirModel_QBasePersistentIndexList((KDirModel*)self);
+libqt_list /* of QModelIndex* */ k_dirmodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KDirModel_SuperPersistentIndexList((KDirModel*)self);
     return _arr;
 }
 
@@ -1416,8 +1416,8 @@ QObject* k_dirmodel_sender(void* self) {
     return KDirModel_Sender((KDirModel*)self);
 }
 
-QObject* k_dirmodel_qbase_sender(void* self) {
-    return KDirModel_QBaseSender((KDirModel*)self);
+QObject* k_dirmodel_super_sender(void* self) {
+    return KDirModel_SuperSender((KDirModel*)self);
 }
 
 void k_dirmodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1428,8 +1428,8 @@ int32_t k_dirmodel_sender_signal_index(void* self) {
     return KDirModel_SenderSignalIndex((KDirModel*)self);
 }
 
-int32_t k_dirmodel_qbase_sender_signal_index(void* self) {
-    return KDirModel_QBaseSenderSignalIndex((KDirModel*)self);
+int32_t k_dirmodel_super_sender_signal_index(void* self) {
+    return KDirModel_SuperSenderSignalIndex((KDirModel*)self);
 }
 
 void k_dirmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1440,8 +1440,8 @@ int32_t k_dirmodel_receivers(void* self, const char* signal) {
     return KDirModel_Receivers((KDirModel*)self, signal);
 }
 
-int32_t k_dirmodel_qbase_receivers(void* self, const char* signal) {
-    return KDirModel_QBaseReceivers((KDirModel*)self, signal);
+int32_t k_dirmodel_super_receivers(void* self, const char* signal) {
+    return KDirModel_SuperReceivers((KDirModel*)self, signal);
 }
 
 void k_dirmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1452,8 +1452,8 @@ bool k_dirmodel_is_signal_connected(void* self, void* signal) {
     return KDirModel_IsSignalConnected((KDirModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_dirmodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KDirModel_QBaseIsSignalConnected((KDirModel*)self, (QMetaMethod*)signal);
+bool k_dirmodel_super_is_signal_connected(void* self, void* signal) {
+    return KDirModel_SuperIsSignalConnected((KDirModel*)self, (QMetaMethod*)signal);
 }
 
 void k_dirmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

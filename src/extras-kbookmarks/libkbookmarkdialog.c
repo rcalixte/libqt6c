@@ -34,8 +34,8 @@ void k_bookmarkdialog_on_meta_object(void* self, const QMetaObject* (*callback)(
     KBookmarkDialog_OnMetaObject((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_bookmarkdialog_qbase_meta_object(void* self) {
-    return KBookmarkDialog_QBaseMetaObject((KBookmarkDialog*)self);
+const QMetaObject* k_bookmarkdialog_super_meta_object(void* self) {
+    return KBookmarkDialog_SuperMetaObject((KBookmarkDialog*)self);
 }
 
 void* k_bookmarkdialog_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void k_bookmarkdialog_on_metacast(void* self, void* (*callback)(void*, const cha
     KBookmarkDialog_OnMetacast((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
-void* k_bookmarkdialog_qbase_metacast(void* self, const char* param1) {
-    return KBookmarkDialog_QBaseMetacast((KBookmarkDialog*)self, param1);
+void* k_bookmarkdialog_super_metacast(void* self, const char* param1) {
+    return KBookmarkDialog_SuperMetacast((KBookmarkDialog*)self, param1);
 }
 
 int32_t k_bookmarkdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void k_bookmarkdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KBookmarkDialog_OnMetacall((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_bookmarkdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBookmarkDialog_QBaseMetacall((KBookmarkDialog*)self, param1, param2, param3);
+int32_t k_bookmarkdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBookmarkDialog_SuperMetacall((KBookmarkDialog*)self, param1, param2, param3);
 }
 
 const char* k_bookmarkdialog_tr(const char* s) {
@@ -97,8 +97,8 @@ void k_bookmarkdialog_on_accept(void* self, void (*callback)()) {
     KBookmarkDialog_OnAccept((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
-void k_bookmarkdialog_qbase_accept(void* self) {
-    KBookmarkDialog_QBaseAccept((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_accept(void* self) {
+    KBookmarkDialog_SuperAccept((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_new_folder_button(void* self) {
@@ -109,8 +109,8 @@ void k_bookmarkdialog_on_new_folder_button(void* self, void (*callback)()) {
     KBookmarkDialog_OnNewFolderButton((KBookmarkDialog*)self, (intptr_t)callback);
 }
 
-void k_bookmarkdialog_qbase_new_folder_button(void* self) {
-    KBookmarkDialog_QBaseNewFolderButton((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_new_folder_button(void* self) {
+    KBookmarkDialog_SuperNewFolderButton((KBookmarkDialog*)self);
 }
 
 const char* k_bookmarkdialog_tr2(const char* s, const char* c) {
@@ -1576,8 +1576,8 @@ void k_bookmarkdialog_set_visible(void* self, bool visible) {
     KBookmarkDialog_SetVisible((KBookmarkDialog*)self, visible);
 }
 
-void k_bookmarkdialog_qbase_set_visible(void* self, bool visible) {
-    KBookmarkDialog_QBaseSetVisible((KBookmarkDialog*)self, visible);
+void k_bookmarkdialog_super_set_visible(void* self, bool visible) {
+    KBookmarkDialog_SuperSetVisible((KBookmarkDialog*)self, visible);
 }
 
 void k_bookmarkdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1588,8 +1588,8 @@ QSize* k_bookmarkdialog_size_hint(void* self) {
     return KBookmarkDialog_SizeHint((KBookmarkDialog*)self);
 }
 
-QSize* k_bookmarkdialog_qbase_size_hint(void* self) {
-    return KBookmarkDialog_QBaseSizeHint((KBookmarkDialog*)self);
+QSize* k_bookmarkdialog_super_size_hint(void* self) {
+    return KBookmarkDialog_SuperSizeHint((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1600,8 +1600,8 @@ QSize* k_bookmarkdialog_minimum_size_hint(void* self) {
     return KBookmarkDialog_MinimumSizeHint((KBookmarkDialog*)self);
 }
 
-QSize* k_bookmarkdialog_qbase_minimum_size_hint(void* self) {
-    return KBookmarkDialog_QBaseMinimumSizeHint((KBookmarkDialog*)self);
+QSize* k_bookmarkdialog_super_minimum_size_hint(void* self) {
+    return KBookmarkDialog_SuperMinimumSizeHint((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1612,8 +1612,8 @@ void k_bookmarkdialog_open(void* self) {
     KBookmarkDialog_Open((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_qbase_open(void* self) {
-    KBookmarkDialog_QBaseOpen((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_open(void* self) {
+    KBookmarkDialog_SuperOpen((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_open(void* self, void (*callback)()) {
@@ -1624,8 +1624,8 @@ int32_t k_bookmarkdialog_exec(void* self) {
     return KBookmarkDialog_Exec((KBookmarkDialog*)self);
 }
 
-int32_t k_bookmarkdialog_qbase_exec(void* self) {
-    return KBookmarkDialog_QBaseExec((KBookmarkDialog*)self);
+int32_t k_bookmarkdialog_super_exec(void* self) {
+    return KBookmarkDialog_SuperExec((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1636,8 +1636,8 @@ void k_bookmarkdialog_done(void* self, int param1) {
     KBookmarkDialog_Done((KBookmarkDialog*)self, param1);
 }
 
-void k_bookmarkdialog_qbase_done(void* self, int param1) {
-    KBookmarkDialog_QBaseDone((KBookmarkDialog*)self, param1);
+void k_bookmarkdialog_super_done(void* self, int param1) {
+    KBookmarkDialog_SuperDone((KBookmarkDialog*)self, param1);
 }
 
 void k_bookmarkdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1648,8 +1648,8 @@ void k_bookmarkdialog_reject(void* self) {
     KBookmarkDialog_Reject((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_qbase_reject(void* self) {
-    KBookmarkDialog_QBaseReject((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_reject(void* self) {
+    KBookmarkDialog_SuperReject((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_reject(void* self, void (*callback)()) {
@@ -1660,8 +1660,8 @@ void k_bookmarkdialog_key_press_event(void* self, void* param1) {
     KBookmarkDialog_KeyPressEvent((KBookmarkDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_key_press_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseKeyPressEvent((KBookmarkDialog*)self, (QKeyEvent*)param1);
+void k_bookmarkdialog_super_key_press_event(void* self, void* param1) {
+    KBookmarkDialog_SuperKeyPressEvent((KBookmarkDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_bookmarkdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1672,8 +1672,8 @@ void k_bookmarkdialog_close_event(void* self, void* param1) {
     KBookmarkDialog_CloseEvent((KBookmarkDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_close_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseCloseEvent((KBookmarkDialog*)self, (QCloseEvent*)param1);
+void k_bookmarkdialog_super_close_event(void* self, void* param1) {
+    KBookmarkDialog_SuperCloseEvent((KBookmarkDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_bookmarkdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1684,8 +1684,8 @@ void k_bookmarkdialog_show_event(void* self, void* param1) {
     KBookmarkDialog_ShowEvent((KBookmarkDialog*)self, (QShowEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_show_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseShowEvent((KBookmarkDialog*)self, (QShowEvent*)param1);
+void k_bookmarkdialog_super_show_event(void* self, void* param1) {
+    KBookmarkDialog_SuperShowEvent((KBookmarkDialog*)self, (QShowEvent*)param1);
 }
 
 void k_bookmarkdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1696,8 +1696,8 @@ void k_bookmarkdialog_resize_event(void* self, void* param1) {
     KBookmarkDialog_ResizeEvent((KBookmarkDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_resize_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseResizeEvent((KBookmarkDialog*)self, (QResizeEvent*)param1);
+void k_bookmarkdialog_super_resize_event(void* self, void* param1) {
+    KBookmarkDialog_SuperResizeEvent((KBookmarkDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_bookmarkdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1708,8 +1708,8 @@ void k_bookmarkdialog_context_menu_event(void* self, void* param1) {
     KBookmarkDialog_ContextMenuEvent((KBookmarkDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_context_menu_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseContextMenuEvent((KBookmarkDialog*)self, (QContextMenuEvent*)param1);
+void k_bookmarkdialog_super_context_menu_event(void* self, void* param1) {
+    KBookmarkDialog_SuperContextMenuEvent((KBookmarkDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_bookmarkdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1720,8 +1720,8 @@ bool k_bookmarkdialog_event_filter(void* self, void* param1, void* param2) {
     return KBookmarkDialog_EventFilter((KBookmarkDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_bookmarkdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KBookmarkDialog_QBaseEventFilter((KBookmarkDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_bookmarkdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KBookmarkDialog_SuperEventFilter((KBookmarkDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_bookmarkdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1732,8 +1732,8 @@ int32_t k_bookmarkdialog_dev_type(void* self) {
     return KBookmarkDialog_DevType((KBookmarkDialog*)self);
 }
 
-int32_t k_bookmarkdialog_qbase_dev_type(void* self) {
-    return KBookmarkDialog_QBaseDevType((KBookmarkDialog*)self);
+int32_t k_bookmarkdialog_super_dev_type(void* self) {
+    return KBookmarkDialog_SuperDevType((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1744,8 +1744,8 @@ int32_t k_bookmarkdialog_height_for_width(void* self, int param1) {
     return KBookmarkDialog_HeightForWidth((KBookmarkDialog*)self, param1);
 }
 
-int32_t k_bookmarkdialog_qbase_height_for_width(void* self, int param1) {
-    return KBookmarkDialog_QBaseHeightForWidth((KBookmarkDialog*)self, param1);
+int32_t k_bookmarkdialog_super_height_for_width(void* self, int param1) {
+    return KBookmarkDialog_SuperHeightForWidth((KBookmarkDialog*)self, param1);
 }
 
 void k_bookmarkdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1756,8 +1756,8 @@ bool k_bookmarkdialog_has_height_for_width(void* self) {
     return KBookmarkDialog_HasHeightForWidth((KBookmarkDialog*)self);
 }
 
-bool k_bookmarkdialog_qbase_has_height_for_width(void* self) {
-    return KBookmarkDialog_QBaseHasHeightForWidth((KBookmarkDialog*)self);
+bool k_bookmarkdialog_super_has_height_for_width(void* self) {
+    return KBookmarkDialog_SuperHasHeightForWidth((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1768,8 +1768,8 @@ QPaintEngine* k_bookmarkdialog_paint_engine(void* self) {
     return KBookmarkDialog_PaintEngine((KBookmarkDialog*)self);
 }
 
-QPaintEngine* k_bookmarkdialog_qbase_paint_engine(void* self) {
-    return KBookmarkDialog_QBasePaintEngine((KBookmarkDialog*)self);
+QPaintEngine* k_bookmarkdialog_super_paint_engine(void* self) {
+    return KBookmarkDialog_SuperPaintEngine((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1780,8 +1780,8 @@ bool k_bookmarkdialog_event(void* self, void* event) {
     return KBookmarkDialog_Event((KBookmarkDialog*)self, (QEvent*)event);
 }
 
-bool k_bookmarkdialog_qbase_event(void* self, void* event) {
-    return KBookmarkDialog_QBaseEvent((KBookmarkDialog*)self, (QEvent*)event);
+bool k_bookmarkdialog_super_event(void* self, void* event) {
+    return KBookmarkDialog_SuperEvent((KBookmarkDialog*)self, (QEvent*)event);
 }
 
 void k_bookmarkdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1792,8 +1792,8 @@ void k_bookmarkdialog_mouse_press_event(void* self, void* event) {
     KBookmarkDialog_MousePressEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_mouse_press_event(void* self, void* event) {
-    KBookmarkDialog_QBaseMousePressEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
+void k_bookmarkdialog_super_mouse_press_event(void* self, void* event) {
+    KBookmarkDialog_SuperMousePressEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
 void k_bookmarkdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1804,8 +1804,8 @@ void k_bookmarkdialog_mouse_release_event(void* self, void* event) {
     KBookmarkDialog_MouseReleaseEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_mouse_release_event(void* self, void* event) {
-    KBookmarkDialog_QBaseMouseReleaseEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
+void k_bookmarkdialog_super_mouse_release_event(void* self, void* event) {
+    KBookmarkDialog_SuperMouseReleaseEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
 void k_bookmarkdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1816,8 +1816,8 @@ void k_bookmarkdialog_mouse_double_click_event(void* self, void* event) {
     KBookmarkDialog_MouseDoubleClickEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KBookmarkDialog_QBaseMouseDoubleClickEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
+void k_bookmarkdialog_super_mouse_double_click_event(void* self, void* event) {
+    KBookmarkDialog_SuperMouseDoubleClickEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
 void k_bookmarkdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1828,8 +1828,8 @@ void k_bookmarkdialog_mouse_move_event(void* self, void* event) {
     KBookmarkDialog_MouseMoveEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_mouse_move_event(void* self, void* event) {
-    KBookmarkDialog_QBaseMouseMoveEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
+void k_bookmarkdialog_super_mouse_move_event(void* self, void* event) {
+    KBookmarkDialog_SuperMouseMoveEvent((KBookmarkDialog*)self, (QMouseEvent*)event);
 }
 
 void k_bookmarkdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1840,8 +1840,8 @@ void k_bookmarkdialog_wheel_event(void* self, void* event) {
     KBookmarkDialog_WheelEvent((KBookmarkDialog*)self, (QWheelEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_wheel_event(void* self, void* event) {
-    KBookmarkDialog_QBaseWheelEvent((KBookmarkDialog*)self, (QWheelEvent*)event);
+void k_bookmarkdialog_super_wheel_event(void* self, void* event) {
+    KBookmarkDialog_SuperWheelEvent((KBookmarkDialog*)self, (QWheelEvent*)event);
 }
 
 void k_bookmarkdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1852,8 +1852,8 @@ void k_bookmarkdialog_key_release_event(void* self, void* event) {
     KBookmarkDialog_KeyReleaseEvent((KBookmarkDialog*)self, (QKeyEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_key_release_event(void* self, void* event) {
-    KBookmarkDialog_QBaseKeyReleaseEvent((KBookmarkDialog*)self, (QKeyEvent*)event);
+void k_bookmarkdialog_super_key_release_event(void* self, void* event) {
+    KBookmarkDialog_SuperKeyReleaseEvent((KBookmarkDialog*)self, (QKeyEvent*)event);
 }
 
 void k_bookmarkdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1864,8 +1864,8 @@ void k_bookmarkdialog_focus_in_event(void* self, void* event) {
     KBookmarkDialog_FocusInEvent((KBookmarkDialog*)self, (QFocusEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_focus_in_event(void* self, void* event) {
-    KBookmarkDialog_QBaseFocusInEvent((KBookmarkDialog*)self, (QFocusEvent*)event);
+void k_bookmarkdialog_super_focus_in_event(void* self, void* event) {
+    KBookmarkDialog_SuperFocusInEvent((KBookmarkDialog*)self, (QFocusEvent*)event);
 }
 
 void k_bookmarkdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1876,8 +1876,8 @@ void k_bookmarkdialog_focus_out_event(void* self, void* event) {
     KBookmarkDialog_FocusOutEvent((KBookmarkDialog*)self, (QFocusEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_focus_out_event(void* self, void* event) {
-    KBookmarkDialog_QBaseFocusOutEvent((KBookmarkDialog*)self, (QFocusEvent*)event);
+void k_bookmarkdialog_super_focus_out_event(void* self, void* event) {
+    KBookmarkDialog_SuperFocusOutEvent((KBookmarkDialog*)self, (QFocusEvent*)event);
 }
 
 void k_bookmarkdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void k_bookmarkdialog_enter_event(void* self, void* event) {
     KBookmarkDialog_EnterEvent((KBookmarkDialog*)self, (QEnterEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_enter_event(void* self, void* event) {
-    KBookmarkDialog_QBaseEnterEvent((KBookmarkDialog*)self, (QEnterEvent*)event);
+void k_bookmarkdialog_super_enter_event(void* self, void* event) {
+    KBookmarkDialog_SuperEnterEvent((KBookmarkDialog*)self, (QEnterEvent*)event);
 }
 
 void k_bookmarkdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void k_bookmarkdialog_leave_event(void* self, void* event) {
     KBookmarkDialog_LeaveEvent((KBookmarkDialog*)self, (QEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_leave_event(void* self, void* event) {
-    KBookmarkDialog_QBaseLeaveEvent((KBookmarkDialog*)self, (QEvent*)event);
+void k_bookmarkdialog_super_leave_event(void* self, void* event) {
+    KBookmarkDialog_SuperLeaveEvent((KBookmarkDialog*)self, (QEvent*)event);
 }
 
 void k_bookmarkdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void k_bookmarkdialog_paint_event(void* self, void* event) {
     KBookmarkDialog_PaintEvent((KBookmarkDialog*)self, (QPaintEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_paint_event(void* self, void* event) {
-    KBookmarkDialog_QBasePaintEvent((KBookmarkDialog*)self, (QPaintEvent*)event);
+void k_bookmarkdialog_super_paint_event(void* self, void* event) {
+    KBookmarkDialog_SuperPaintEvent((KBookmarkDialog*)self, (QPaintEvent*)event);
 }
 
 void k_bookmarkdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void k_bookmarkdialog_move_event(void* self, void* event) {
     KBookmarkDialog_MoveEvent((KBookmarkDialog*)self, (QMoveEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_move_event(void* self, void* event) {
-    KBookmarkDialog_QBaseMoveEvent((KBookmarkDialog*)self, (QMoveEvent*)event);
+void k_bookmarkdialog_super_move_event(void* self, void* event) {
+    KBookmarkDialog_SuperMoveEvent((KBookmarkDialog*)self, (QMoveEvent*)event);
 }
 
 void k_bookmarkdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void k_bookmarkdialog_tablet_event(void* self, void* event) {
     KBookmarkDialog_TabletEvent((KBookmarkDialog*)self, (QTabletEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_tablet_event(void* self, void* event) {
-    KBookmarkDialog_QBaseTabletEvent((KBookmarkDialog*)self, (QTabletEvent*)event);
+void k_bookmarkdialog_super_tablet_event(void* self, void* event) {
+    KBookmarkDialog_SuperTabletEvent((KBookmarkDialog*)self, (QTabletEvent*)event);
 }
 
 void k_bookmarkdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void k_bookmarkdialog_action_event(void* self, void* event) {
     KBookmarkDialog_ActionEvent((KBookmarkDialog*)self, (QActionEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_action_event(void* self, void* event) {
-    KBookmarkDialog_QBaseActionEvent((KBookmarkDialog*)self, (QActionEvent*)event);
+void k_bookmarkdialog_super_action_event(void* self, void* event) {
+    KBookmarkDialog_SuperActionEvent((KBookmarkDialog*)self, (QActionEvent*)event);
 }
 
 void k_bookmarkdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ void k_bookmarkdialog_drag_enter_event(void* self, void* event) {
     KBookmarkDialog_DragEnterEvent((KBookmarkDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_drag_enter_event(void* self, void* event) {
-    KBookmarkDialog_QBaseDragEnterEvent((KBookmarkDialog*)self, (QDragEnterEvent*)event);
+void k_bookmarkdialog_super_drag_enter_event(void* self, void* event) {
+    KBookmarkDialog_SuperDragEnterEvent((KBookmarkDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_bookmarkdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ void k_bookmarkdialog_drag_move_event(void* self, void* event) {
     KBookmarkDialog_DragMoveEvent((KBookmarkDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_drag_move_event(void* self, void* event) {
-    KBookmarkDialog_QBaseDragMoveEvent((KBookmarkDialog*)self, (QDragMoveEvent*)event);
+void k_bookmarkdialog_super_drag_move_event(void* self, void* event) {
+    KBookmarkDialog_SuperDragMoveEvent((KBookmarkDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_bookmarkdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ void k_bookmarkdialog_drag_leave_event(void* self, void* event) {
     KBookmarkDialog_DragLeaveEvent((KBookmarkDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_drag_leave_event(void* self, void* event) {
-    KBookmarkDialog_QBaseDragLeaveEvent((KBookmarkDialog*)self, (QDragLeaveEvent*)event);
+void k_bookmarkdialog_super_drag_leave_event(void* self, void* event) {
+    KBookmarkDialog_SuperDragLeaveEvent((KBookmarkDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_bookmarkdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ void k_bookmarkdialog_drop_event(void* self, void* event) {
     KBookmarkDialog_DropEvent((KBookmarkDialog*)self, (QDropEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_drop_event(void* self, void* event) {
-    KBookmarkDialog_QBaseDropEvent((KBookmarkDialog*)self, (QDropEvent*)event);
+void k_bookmarkdialog_super_drop_event(void* self, void* event) {
+    KBookmarkDialog_SuperDropEvent((KBookmarkDialog*)self, (QDropEvent*)event);
 }
 
 void k_bookmarkdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ void k_bookmarkdialog_hide_event(void* self, void* event) {
     KBookmarkDialog_HideEvent((KBookmarkDialog*)self, (QHideEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_hide_event(void* self, void* event) {
-    KBookmarkDialog_QBaseHideEvent((KBookmarkDialog*)self, (QHideEvent*)event);
+void k_bookmarkdialog_super_hide_event(void* self, void* event) {
+    KBookmarkDialog_SuperHideEvent((KBookmarkDialog*)self, (QHideEvent*)event);
 }
 
 void k_bookmarkdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ bool k_bookmarkdialog_native_event(void* self, char* eventType, void* message, i
     return KBookmarkDialog_NativeEvent((KBookmarkDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_bookmarkdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KBookmarkDialog_QBaseNativeEvent((KBookmarkDialog*)self, qstring(eventType), message, result);
+bool k_bookmarkdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KBookmarkDialog_SuperNativeEvent((KBookmarkDialog*)self, qstring(eventType), message, result);
 }
 
 void k_bookmarkdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2032,8 +2032,8 @@ void k_bookmarkdialog_change_event(void* self, void* param1) {
     KBookmarkDialog_ChangeEvent((KBookmarkDialog*)self, (QEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_change_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseChangeEvent((KBookmarkDialog*)self, (QEvent*)param1);
+void k_bookmarkdialog_super_change_event(void* self, void* param1) {
+    KBookmarkDialog_SuperChangeEvent((KBookmarkDialog*)self, (QEvent*)param1);
 }
 
 void k_bookmarkdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ int32_t k_bookmarkdialog_metric(void* self, int32_t param1) {
     return KBookmarkDialog_Metric((KBookmarkDialog*)self, param1);
 }
 
-int32_t k_bookmarkdialog_qbase_metric(void* self, int32_t param1) {
-    return KBookmarkDialog_QBaseMetric((KBookmarkDialog*)self, param1);
+int32_t k_bookmarkdialog_super_metric(void* self, int32_t param1) {
+    return KBookmarkDialog_SuperMetric((KBookmarkDialog*)self, param1);
 }
 
 void k_bookmarkdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2056,8 +2056,8 @@ void k_bookmarkdialog_init_painter(void* self, void* painter) {
     KBookmarkDialog_InitPainter((KBookmarkDialog*)self, (QPainter*)painter);
 }
 
-void k_bookmarkdialog_qbase_init_painter(void* self, void* painter) {
-    KBookmarkDialog_QBaseInitPainter((KBookmarkDialog*)self, (QPainter*)painter);
+void k_bookmarkdialog_super_init_painter(void* self, void* painter) {
+    KBookmarkDialog_SuperInitPainter((KBookmarkDialog*)self, (QPainter*)painter);
 }
 
 void k_bookmarkdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2068,8 +2068,8 @@ QPaintDevice* k_bookmarkdialog_redirected(void* self, void* offset) {
     return KBookmarkDialog_Redirected((KBookmarkDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_bookmarkdialog_qbase_redirected(void* self, void* offset) {
-    return KBookmarkDialog_QBaseRedirected((KBookmarkDialog*)self, (QPoint*)offset);
+QPaintDevice* k_bookmarkdialog_super_redirected(void* self, void* offset) {
+    return KBookmarkDialog_SuperRedirected((KBookmarkDialog*)self, (QPoint*)offset);
 }
 
 void k_bookmarkdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2080,8 +2080,8 @@ QPainter* k_bookmarkdialog_shared_painter(void* self) {
     return KBookmarkDialog_SharedPainter((KBookmarkDialog*)self);
 }
 
-QPainter* k_bookmarkdialog_qbase_shared_painter(void* self) {
-    return KBookmarkDialog_QBaseSharedPainter((KBookmarkDialog*)self);
+QPainter* k_bookmarkdialog_super_shared_painter(void* self) {
+    return KBookmarkDialog_SuperSharedPainter((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2092,8 +2092,8 @@ void k_bookmarkdialog_input_method_event(void* self, void* param1) {
     KBookmarkDialog_InputMethodEvent((KBookmarkDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_bookmarkdialog_qbase_input_method_event(void* self, void* param1) {
-    KBookmarkDialog_QBaseInputMethodEvent((KBookmarkDialog*)self, (QInputMethodEvent*)param1);
+void k_bookmarkdialog_super_input_method_event(void* self, void* param1) {
+    KBookmarkDialog_SuperInputMethodEvent((KBookmarkDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_bookmarkdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2104,8 +2104,8 @@ QVariant* k_bookmarkdialog_input_method_query(void* self, int32_t param1) {
     return KBookmarkDialog_InputMethodQuery((KBookmarkDialog*)self, param1);
 }
 
-QVariant* k_bookmarkdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KBookmarkDialog_QBaseInputMethodQuery((KBookmarkDialog*)self, param1);
+QVariant* k_bookmarkdialog_super_input_method_query(void* self, int32_t param1) {
+    return KBookmarkDialog_SuperInputMethodQuery((KBookmarkDialog*)self, param1);
 }
 
 void k_bookmarkdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2116,8 +2116,8 @@ bool k_bookmarkdialog_focus_next_prev_child(void* self, bool next) {
     return KBookmarkDialog_FocusNextPrevChild((KBookmarkDialog*)self, next);
 }
 
-bool k_bookmarkdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KBookmarkDialog_QBaseFocusNextPrevChild((KBookmarkDialog*)self, next);
+bool k_bookmarkdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KBookmarkDialog_SuperFocusNextPrevChild((KBookmarkDialog*)self, next);
 }
 
 void k_bookmarkdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2128,8 +2128,8 @@ void k_bookmarkdialog_timer_event(void* self, void* event) {
     KBookmarkDialog_TimerEvent((KBookmarkDialog*)self, (QTimerEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_timer_event(void* self, void* event) {
-    KBookmarkDialog_QBaseTimerEvent((KBookmarkDialog*)self, (QTimerEvent*)event);
+void k_bookmarkdialog_super_timer_event(void* self, void* event) {
+    KBookmarkDialog_SuperTimerEvent((KBookmarkDialog*)self, (QTimerEvent*)event);
 }
 
 void k_bookmarkdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void k_bookmarkdialog_child_event(void* self, void* event) {
     KBookmarkDialog_ChildEvent((KBookmarkDialog*)self, (QChildEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_child_event(void* self, void* event) {
-    KBookmarkDialog_QBaseChildEvent((KBookmarkDialog*)self, (QChildEvent*)event);
+void k_bookmarkdialog_super_child_event(void* self, void* event) {
+    KBookmarkDialog_SuperChildEvent((KBookmarkDialog*)self, (QChildEvent*)event);
 }
 
 void k_bookmarkdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2152,8 +2152,8 @@ void k_bookmarkdialog_custom_event(void* self, void* event) {
     KBookmarkDialog_CustomEvent((KBookmarkDialog*)self, (QEvent*)event);
 }
 
-void k_bookmarkdialog_qbase_custom_event(void* self, void* event) {
-    KBookmarkDialog_QBaseCustomEvent((KBookmarkDialog*)self, (QEvent*)event);
+void k_bookmarkdialog_super_custom_event(void* self, void* event) {
+    KBookmarkDialog_SuperCustomEvent((KBookmarkDialog*)self, (QEvent*)event);
 }
 
 void k_bookmarkdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ void k_bookmarkdialog_connect_notify(void* self, void* signal) {
     KBookmarkDialog_ConnectNotify((KBookmarkDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkdialog_qbase_connect_notify(void* self, void* signal) {
-    KBookmarkDialog_QBaseConnectNotify((KBookmarkDialog*)self, (QMetaMethod*)signal);
+void k_bookmarkdialog_super_connect_notify(void* self, void* signal) {
+    KBookmarkDialog_SuperConnectNotify((KBookmarkDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ void k_bookmarkdialog_disconnect_notify(void* self, void* signal) {
     KBookmarkDialog_DisconnectNotify((KBookmarkDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_bookmarkdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KBookmarkDialog_QBaseDisconnectNotify((KBookmarkDialog*)self, (QMetaMethod*)signal);
+void k_bookmarkdialog_super_disconnect_notify(void* self, void* signal) {
+    KBookmarkDialog_SuperDisconnectNotify((KBookmarkDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2188,8 +2188,8 @@ void k_bookmarkdialog_adjust_position(void* self, void* param1) {
     KBookmarkDialog_AdjustPosition((KBookmarkDialog*)self, (QWidget*)param1);
 }
 
-void k_bookmarkdialog_qbase_adjust_position(void* self, void* param1) {
-    KBookmarkDialog_QBaseAdjustPosition((KBookmarkDialog*)self, (QWidget*)param1);
+void k_bookmarkdialog_super_adjust_position(void* self, void* param1) {
+    KBookmarkDialog_SuperAdjustPosition((KBookmarkDialog*)self, (QWidget*)param1);
 }
 
 void k_bookmarkdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ void k_bookmarkdialog_update_micro_focus(void* self) {
     KBookmarkDialog_UpdateMicroFocus((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_qbase_update_micro_focus(void* self) {
-    KBookmarkDialog_QBaseUpdateMicroFocus((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_update_micro_focus(void* self) {
+    KBookmarkDialog_SuperUpdateMicroFocus((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2212,8 +2212,8 @@ void k_bookmarkdialog_create(void* self) {
     KBookmarkDialog_Create((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_qbase_create(void* self) {
-    KBookmarkDialog_QBaseCreate((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_create(void* self) {
+    KBookmarkDialog_SuperCreate((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_create(void* self, void (*callback)()) {
@@ -2224,8 +2224,8 @@ void k_bookmarkdialog_destroy(void* self) {
     KBookmarkDialog_Destroy((KBookmarkDialog*)self);
 }
 
-void k_bookmarkdialog_qbase_destroy(void* self) {
-    KBookmarkDialog_QBaseDestroy((KBookmarkDialog*)self);
+void k_bookmarkdialog_super_destroy(void* self) {
+    KBookmarkDialog_SuperDestroy((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_destroy(void* self, void (*callback)()) {
@@ -2236,8 +2236,8 @@ bool k_bookmarkdialog_focus_next_child(void* self) {
     return KBookmarkDialog_FocusNextChild((KBookmarkDialog*)self);
 }
 
-bool k_bookmarkdialog_qbase_focus_next_child(void* self) {
-    return KBookmarkDialog_QBaseFocusNextChild((KBookmarkDialog*)self);
+bool k_bookmarkdialog_super_focus_next_child(void* self) {
+    return KBookmarkDialog_SuperFocusNextChild((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2248,8 +2248,8 @@ bool k_bookmarkdialog_focus_previous_child(void* self) {
     return KBookmarkDialog_FocusPreviousChild((KBookmarkDialog*)self);
 }
 
-bool k_bookmarkdialog_qbase_focus_previous_child(void* self) {
-    return KBookmarkDialog_QBaseFocusPreviousChild((KBookmarkDialog*)self);
+bool k_bookmarkdialog_super_focus_previous_child(void* self) {
+    return KBookmarkDialog_SuperFocusPreviousChild((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2260,8 +2260,8 @@ QObject* k_bookmarkdialog_sender(void* self) {
     return KBookmarkDialog_Sender((KBookmarkDialog*)self);
 }
 
-QObject* k_bookmarkdialog_qbase_sender(void* self) {
-    return KBookmarkDialog_QBaseSender((KBookmarkDialog*)self);
+QObject* k_bookmarkdialog_super_sender(void* self) {
+    return KBookmarkDialog_SuperSender((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2272,8 +2272,8 @@ int32_t k_bookmarkdialog_sender_signal_index(void* self) {
     return KBookmarkDialog_SenderSignalIndex((KBookmarkDialog*)self);
 }
 
-int32_t k_bookmarkdialog_qbase_sender_signal_index(void* self) {
-    return KBookmarkDialog_QBaseSenderSignalIndex((KBookmarkDialog*)self);
+int32_t k_bookmarkdialog_super_sender_signal_index(void* self) {
+    return KBookmarkDialog_SuperSenderSignalIndex((KBookmarkDialog*)self);
 }
 
 void k_bookmarkdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2284,8 +2284,8 @@ int32_t k_bookmarkdialog_receivers(void* self, const char* signal) {
     return KBookmarkDialog_Receivers((KBookmarkDialog*)self, signal);
 }
 
-int32_t k_bookmarkdialog_qbase_receivers(void* self, const char* signal) {
-    return KBookmarkDialog_QBaseReceivers((KBookmarkDialog*)self, signal);
+int32_t k_bookmarkdialog_super_receivers(void* self, const char* signal) {
+    return KBookmarkDialog_SuperReceivers((KBookmarkDialog*)self, signal);
 }
 
 void k_bookmarkdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2296,8 +2296,8 @@ bool k_bookmarkdialog_is_signal_connected(void* self, void* signal) {
     return KBookmarkDialog_IsSignalConnected((KBookmarkDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_bookmarkdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KBookmarkDialog_QBaseIsSignalConnected((KBookmarkDialog*)self, (QMetaMethod*)signal);
+bool k_bookmarkdialog_super_is_signal_connected(void* self, void* signal) {
+    return KBookmarkDialog_SuperIsSignalConnected((KBookmarkDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_bookmarkdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2308,8 +2308,8 @@ double k_bookmarkdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KBookmarkDialog_GetDecodedMetricF((KBookmarkDialog*)self, metricA, metricB);
 }
 
-double k_bookmarkdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KBookmarkDialog_QBaseGetDecodedMetricF((KBookmarkDialog*)self, metricA, metricB);
+double k_bookmarkdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KBookmarkDialog_SuperGetDecodedMetricF((KBookmarkDialog*)self, metricA, metricB);
 }
 
 void k_bookmarkdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

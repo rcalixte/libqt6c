@@ -29,8 +29,8 @@ void q_offscreensurface_on_meta_object(void* self, const QMetaObject* (*callback
     QOffscreenSurface_OnMetaObject((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_offscreensurface_qbase_meta_object(void* self) {
-    return QOffscreenSurface_QBaseMetaObject((QOffscreenSurface*)self);
+const QMetaObject* q_offscreensurface_super_meta_object(void* self) {
+    return QOffscreenSurface_SuperMetaObject((QOffscreenSurface*)self);
 }
 
 void* q_offscreensurface_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void q_offscreensurface_on_metacast(void* self, void* (*callback)(void*, const c
     QOffscreenSurface_OnMetacast((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-void* q_offscreensurface_qbase_metacast(void* self, const char* param1) {
-    return QOffscreenSurface_QBaseMetacast((QOffscreenSurface*)self, param1);
+void* q_offscreensurface_super_metacast(void* self, const char* param1) {
+    return QOffscreenSurface_SuperMetacast((QOffscreenSurface*)self, param1);
 }
 
 int32_t q_offscreensurface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void q_offscreensurface_on_metacall(void* self, int32_t (*callback)(void*, int32
     QOffscreenSurface_OnMetacall((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-int32_t q_offscreensurface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOffscreenSurface_QBaseMetacall((QOffscreenSurface*)self, param1, param2, param3);
+int32_t q_offscreensurface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOffscreenSurface_SuperMetacall((QOffscreenSurface*)self, param1, param2, param3);
 }
 
 const char* q_offscreensurface_tr(const char* s) {
@@ -72,8 +72,8 @@ void q_offscreensurface_on_surface_type(void* self, int32_t (*callback)()) {
     QOffscreenSurface_OnSurfaceType((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-int32_t q_offscreensurface_qbase_surface_type(void* self) {
-    return QOffscreenSurface_QBaseSurfaceType((QOffscreenSurface*)self);
+int32_t q_offscreensurface_super_surface_type(void* self) {
+    return QOffscreenSurface_SuperSurfaceType((QOffscreenSurface*)self);
 }
 
 void q_offscreensurface_create(void* self) {
@@ -100,8 +100,8 @@ void q_offscreensurface_on_format(void* self, QSurfaceFormat* (*callback)()) {
     QOffscreenSurface_OnFormat((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-QSurfaceFormat* q_offscreensurface_qbase_format(void* self) {
-    return QOffscreenSurface_QBaseFormat((QOffscreenSurface*)self);
+QSurfaceFormat* q_offscreensurface_super_format(void* self) {
+    return QOffscreenSurface_SuperFormat((QOffscreenSurface*)self);
 }
 
 QSurfaceFormat* q_offscreensurface_requested_format(void* self) {
@@ -116,8 +116,8 @@ void q_offscreensurface_on_size(void* self, QSize* (*callback)()) {
     QOffscreenSurface_OnSize((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-QSize* q_offscreensurface_qbase_size(void* self) {
-    return QOffscreenSurface_QBaseSize((QOffscreenSurface*)self);
+QSize* q_offscreensurface_super_size(void* self) {
+    return QOffscreenSurface_SuperSize((QOffscreenSurface*)self);
 }
 
 QScreen* q_offscreensurface_screen(void* self) {
@@ -136,8 +136,8 @@ void q_offscreensurface_on_resolve_interface(void* self, void* (*callback)(void*
     QOffscreenSurface_OnResolveInterface((QOffscreenSurface*)self, (intptr_t)callback);
 }
 
-void* q_offscreensurface_qbase_resolve_interface(void* self, const char* name, int revision) {
-    return QOffscreenSurface_QBaseResolveInterface((QOffscreenSurface*)self, name, revision);
+void* q_offscreensurface_super_resolve_interface(void* self, const char* name, int revision) {
+    return QOffscreenSurface_SuperResolveInterface((QOffscreenSurface*)self, name, revision);
 }
 
 void q_offscreensurface_screen_changed(void* self, void* screen) {
@@ -385,8 +385,8 @@ bool q_offscreensurface_event(void* self, void* event) {
     return QOffscreenSurface_Event((QOffscreenSurface*)self, (QEvent*)event);
 }
 
-bool q_offscreensurface_qbase_event(void* self, void* event) {
-    return QOffscreenSurface_QBaseEvent((QOffscreenSurface*)self, (QEvent*)event);
+bool q_offscreensurface_super_event(void* self, void* event) {
+    return QOffscreenSurface_SuperEvent((QOffscreenSurface*)self, (QEvent*)event);
 }
 
 void q_offscreensurface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -397,8 +397,8 @@ bool q_offscreensurface_event_filter(void* self, void* watched, void* event) {
     return QOffscreenSurface_EventFilter((QOffscreenSurface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_offscreensurface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOffscreenSurface_QBaseEventFilter((QOffscreenSurface*)self, (QObject*)watched, (QEvent*)event);
+bool q_offscreensurface_super_event_filter(void* self, void* watched, void* event) {
+    return QOffscreenSurface_SuperEventFilter((QOffscreenSurface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_offscreensurface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -409,8 +409,8 @@ void q_offscreensurface_timer_event(void* self, void* event) {
     QOffscreenSurface_TimerEvent((QOffscreenSurface*)self, (QTimerEvent*)event);
 }
 
-void q_offscreensurface_qbase_timer_event(void* self, void* event) {
-    QOffscreenSurface_QBaseTimerEvent((QOffscreenSurface*)self, (QTimerEvent*)event);
+void q_offscreensurface_super_timer_event(void* self, void* event) {
+    QOffscreenSurface_SuperTimerEvent((QOffscreenSurface*)self, (QTimerEvent*)event);
 }
 
 void q_offscreensurface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -421,8 +421,8 @@ void q_offscreensurface_child_event(void* self, void* event) {
     QOffscreenSurface_ChildEvent((QOffscreenSurface*)self, (QChildEvent*)event);
 }
 
-void q_offscreensurface_qbase_child_event(void* self, void* event) {
-    QOffscreenSurface_QBaseChildEvent((QOffscreenSurface*)self, (QChildEvent*)event);
+void q_offscreensurface_super_child_event(void* self, void* event) {
+    QOffscreenSurface_SuperChildEvent((QOffscreenSurface*)self, (QChildEvent*)event);
 }
 
 void q_offscreensurface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -433,8 +433,8 @@ void q_offscreensurface_custom_event(void* self, void* event) {
     QOffscreenSurface_CustomEvent((QOffscreenSurface*)self, (QEvent*)event);
 }
 
-void q_offscreensurface_qbase_custom_event(void* self, void* event) {
-    QOffscreenSurface_QBaseCustomEvent((QOffscreenSurface*)self, (QEvent*)event);
+void q_offscreensurface_super_custom_event(void* self, void* event) {
+    QOffscreenSurface_SuperCustomEvent((QOffscreenSurface*)self, (QEvent*)event);
 }
 
 void q_offscreensurface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -445,8 +445,8 @@ void q_offscreensurface_connect_notify(void* self, void* signal) {
     QOffscreenSurface_ConnectNotify((QOffscreenSurface*)self, (QMetaMethod*)signal);
 }
 
-void q_offscreensurface_qbase_connect_notify(void* self, void* signal) {
-    QOffscreenSurface_QBaseConnectNotify((QOffscreenSurface*)self, (QMetaMethod*)signal);
+void q_offscreensurface_super_connect_notify(void* self, void* signal) {
+    QOffscreenSurface_SuperConnectNotify((QOffscreenSurface*)self, (QMetaMethod*)signal);
 }
 
 void q_offscreensurface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -457,8 +457,8 @@ void q_offscreensurface_disconnect_notify(void* self, void* signal) {
     QOffscreenSurface_DisconnectNotify((QOffscreenSurface*)self, (QMetaMethod*)signal);
 }
 
-void q_offscreensurface_qbase_disconnect_notify(void* self, void* signal) {
-    QOffscreenSurface_QBaseDisconnectNotify((QOffscreenSurface*)self, (QMetaMethod*)signal);
+void q_offscreensurface_super_disconnect_notify(void* self, void* signal) {
+    QOffscreenSurface_SuperDisconnectNotify((QOffscreenSurface*)self, (QMetaMethod*)signal);
 }
 
 void q_offscreensurface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -469,8 +469,8 @@ QObject* q_offscreensurface_sender(void* self) {
     return QOffscreenSurface_Sender((QOffscreenSurface*)self);
 }
 
-QObject* q_offscreensurface_qbase_sender(void* self) {
-    return QOffscreenSurface_QBaseSender((QOffscreenSurface*)self);
+QObject* q_offscreensurface_super_sender(void* self) {
+    return QOffscreenSurface_SuperSender((QOffscreenSurface*)self);
 }
 
 void q_offscreensurface_on_sender(void* self, QObject* (*callback)()) {
@@ -481,8 +481,8 @@ int32_t q_offscreensurface_sender_signal_index(void* self) {
     return QOffscreenSurface_SenderSignalIndex((QOffscreenSurface*)self);
 }
 
-int32_t q_offscreensurface_qbase_sender_signal_index(void* self) {
-    return QOffscreenSurface_QBaseSenderSignalIndex((QOffscreenSurface*)self);
+int32_t q_offscreensurface_super_sender_signal_index(void* self) {
+    return QOffscreenSurface_SuperSenderSignalIndex((QOffscreenSurface*)self);
 }
 
 void q_offscreensurface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -493,8 +493,8 @@ int32_t q_offscreensurface_receivers(void* self, const char* signal) {
     return QOffscreenSurface_Receivers((QOffscreenSurface*)self, signal);
 }
 
-int32_t q_offscreensurface_qbase_receivers(void* self, const char* signal) {
-    return QOffscreenSurface_QBaseReceivers((QOffscreenSurface*)self, signal);
+int32_t q_offscreensurface_super_receivers(void* self, const char* signal) {
+    return QOffscreenSurface_SuperReceivers((QOffscreenSurface*)self, signal);
 }
 
 void q_offscreensurface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -505,8 +505,8 @@ bool q_offscreensurface_is_signal_connected(void* self, void* signal) {
     return QOffscreenSurface_IsSignalConnected((QOffscreenSurface*)self, (QMetaMethod*)signal);
 }
 
-bool q_offscreensurface_qbase_is_signal_connected(void* self, void* signal) {
-    return QOffscreenSurface_QBaseIsSignalConnected((QOffscreenSurface*)self, (QMetaMethod*)signal);
+bool q_offscreensurface_super_is_signal_connected(void* self, void* signal) {
+    return QOffscreenSurface_SuperIsSignalConnected((QOffscreenSurface*)self, (QMetaMethod*)signal);
 }
 
 void q_offscreensurface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

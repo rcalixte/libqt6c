@@ -39,8 +39,8 @@ void k_assistantdialog_on_meta_object(void* self, const QMetaObject* (*callback)
     KAssistantDialog_OnMetaObject((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_assistantdialog_qbase_meta_object(void* self) {
-    return KAssistantDialog_QBaseMetaObject((KAssistantDialog*)self);
+const QMetaObject* k_assistantdialog_super_meta_object(void* self) {
+    return KAssistantDialog_SuperMetaObject((KAssistantDialog*)self);
 }
 
 void* k_assistantdialog_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void k_assistantdialog_on_metacast(void* self, void* (*callback)(void*, const ch
     KAssistantDialog_OnMetacast((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-void* k_assistantdialog_qbase_metacast(void* self, const char* param1) {
-    return KAssistantDialog_QBaseMetacast((KAssistantDialog*)self, param1);
+void* k_assistantdialog_super_metacast(void* self, const char* param1) {
+    return KAssistantDialog_SuperMetacast((KAssistantDialog*)self, param1);
 }
 
 int32_t k_assistantdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void k_assistantdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KAssistantDialog_OnMetacall((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_assistantdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KAssistantDialog_QBaseMetacall((KAssistantDialog*)self, param1, param2, param3);
+int32_t k_assistantdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KAssistantDialog_SuperMetacall((KAssistantDialog*)self, param1, param2, param3);
 }
 
 const char* k_assistantdialog_tr(const char* s) {
@@ -110,8 +110,8 @@ void k_assistantdialog_on_back(void* self, void (*callback)()) {
     KAssistantDialog_OnBack((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-void k_assistantdialog_qbase_back(void* self) {
-    KAssistantDialog_QBaseBack((KAssistantDialog*)self);
+void k_assistantdialog_super_back(void* self) {
+    KAssistantDialog_SuperBack((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_next(void* self) {
@@ -122,8 +122,8 @@ void k_assistantdialog_on_next(void* self, void (*callback)()) {
     KAssistantDialog_OnNext((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-void k_assistantdialog_qbase_next(void* self) {
-    KAssistantDialog_QBaseNext((KAssistantDialog*)self);
+void k_assistantdialog_super_next(void* self) {
+    KAssistantDialog_SuperNext((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_show_event(void* self, void* event) {
@@ -134,8 +134,8 @@ void k_assistantdialog_on_show_event(void* self, void (*callback)(void*, void*))
     KAssistantDialog_OnShowEvent((KAssistantDialog*)self, (intptr_t)callback);
 }
 
-void k_assistantdialog_qbase_show_event(void* self, void* event) {
-    KAssistantDialog_QBaseShowEvent((KAssistantDialog*)self, (QShowEvent*)event);
+void k_assistantdialog_super_show_event(void* self, void* event) {
+    KAssistantDialog_SuperShowEvent((KAssistantDialog*)self, (QShowEvent*)event);
 }
 
 const char* k_assistantdialog_tr2(const char* s, const char* c) {
@@ -1649,8 +1649,8 @@ void k_assistantdialog_set_visible(void* self, bool visible) {
     KAssistantDialog_SetVisible((KAssistantDialog*)self, visible);
 }
 
-void k_assistantdialog_qbase_set_visible(void* self, bool visible) {
-    KAssistantDialog_QBaseSetVisible((KAssistantDialog*)self, visible);
+void k_assistantdialog_super_set_visible(void* self, bool visible) {
+    KAssistantDialog_SuperSetVisible((KAssistantDialog*)self, visible);
 }
 
 void k_assistantdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1661,8 +1661,8 @@ QSize* k_assistantdialog_size_hint(void* self) {
     return KAssistantDialog_SizeHint((KAssistantDialog*)self);
 }
 
-QSize* k_assistantdialog_qbase_size_hint(void* self) {
-    return KAssistantDialog_QBaseSizeHint((KAssistantDialog*)self);
+QSize* k_assistantdialog_super_size_hint(void* self) {
+    return KAssistantDialog_SuperSizeHint((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1673,8 +1673,8 @@ QSize* k_assistantdialog_minimum_size_hint(void* self) {
     return KAssistantDialog_MinimumSizeHint((KAssistantDialog*)self);
 }
 
-QSize* k_assistantdialog_qbase_minimum_size_hint(void* self) {
-    return KAssistantDialog_QBaseMinimumSizeHint((KAssistantDialog*)self);
+QSize* k_assistantdialog_super_minimum_size_hint(void* self) {
+    return KAssistantDialog_SuperMinimumSizeHint((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1685,8 +1685,8 @@ void k_assistantdialog_open(void* self) {
     KAssistantDialog_Open((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_qbase_open(void* self) {
-    KAssistantDialog_QBaseOpen((KAssistantDialog*)self);
+void k_assistantdialog_super_open(void* self) {
+    KAssistantDialog_SuperOpen((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_open(void* self, void (*callback)()) {
@@ -1697,8 +1697,8 @@ int32_t k_assistantdialog_exec(void* self) {
     return KAssistantDialog_Exec((KAssistantDialog*)self);
 }
 
-int32_t k_assistantdialog_qbase_exec(void* self) {
-    return KAssistantDialog_QBaseExec((KAssistantDialog*)self);
+int32_t k_assistantdialog_super_exec(void* self) {
+    return KAssistantDialog_SuperExec((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1709,8 +1709,8 @@ void k_assistantdialog_done(void* self, int param1) {
     KAssistantDialog_Done((KAssistantDialog*)self, param1);
 }
 
-void k_assistantdialog_qbase_done(void* self, int param1) {
-    KAssistantDialog_QBaseDone((KAssistantDialog*)self, param1);
+void k_assistantdialog_super_done(void* self, int param1) {
+    KAssistantDialog_SuperDone((KAssistantDialog*)self, param1);
 }
 
 void k_assistantdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1721,8 +1721,8 @@ void k_assistantdialog_accept(void* self) {
     KAssistantDialog_Accept((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_qbase_accept(void* self) {
-    KAssistantDialog_QBaseAccept((KAssistantDialog*)self);
+void k_assistantdialog_super_accept(void* self) {
+    KAssistantDialog_SuperAccept((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_accept(void* self, void (*callback)()) {
@@ -1733,8 +1733,8 @@ void k_assistantdialog_reject(void* self) {
     KAssistantDialog_Reject((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_qbase_reject(void* self) {
-    KAssistantDialog_QBaseReject((KAssistantDialog*)self);
+void k_assistantdialog_super_reject(void* self) {
+    KAssistantDialog_SuperReject((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_reject(void* self, void (*callback)()) {
@@ -1745,8 +1745,8 @@ void k_assistantdialog_key_press_event(void* self, void* param1) {
     KAssistantDialog_KeyPressEvent((KAssistantDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_assistantdialog_qbase_key_press_event(void* self, void* param1) {
-    KAssistantDialog_QBaseKeyPressEvent((KAssistantDialog*)self, (QKeyEvent*)param1);
+void k_assistantdialog_super_key_press_event(void* self, void* param1) {
+    KAssistantDialog_SuperKeyPressEvent((KAssistantDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_assistantdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1757,8 +1757,8 @@ void k_assistantdialog_close_event(void* self, void* param1) {
     KAssistantDialog_CloseEvent((KAssistantDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_assistantdialog_qbase_close_event(void* self, void* param1) {
-    KAssistantDialog_QBaseCloseEvent((KAssistantDialog*)self, (QCloseEvent*)param1);
+void k_assistantdialog_super_close_event(void* self, void* param1) {
+    KAssistantDialog_SuperCloseEvent((KAssistantDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_assistantdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ void k_assistantdialog_resize_event(void* self, void* param1) {
     KAssistantDialog_ResizeEvent((KAssistantDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_assistantdialog_qbase_resize_event(void* self, void* param1) {
-    KAssistantDialog_QBaseResizeEvent((KAssistantDialog*)self, (QResizeEvent*)param1);
+void k_assistantdialog_super_resize_event(void* self, void* param1) {
+    KAssistantDialog_SuperResizeEvent((KAssistantDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_assistantdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1781,8 +1781,8 @@ void k_assistantdialog_context_menu_event(void* self, void* param1) {
     KAssistantDialog_ContextMenuEvent((KAssistantDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_assistantdialog_qbase_context_menu_event(void* self, void* param1) {
-    KAssistantDialog_QBaseContextMenuEvent((KAssistantDialog*)self, (QContextMenuEvent*)param1);
+void k_assistantdialog_super_context_menu_event(void* self, void* param1) {
+    KAssistantDialog_SuperContextMenuEvent((KAssistantDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_assistantdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1793,8 +1793,8 @@ bool k_assistantdialog_event_filter(void* self, void* param1, void* param2) {
     return KAssistantDialog_EventFilter((KAssistantDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_assistantdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KAssistantDialog_QBaseEventFilter((KAssistantDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_assistantdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KAssistantDialog_SuperEventFilter((KAssistantDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_assistantdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1805,8 +1805,8 @@ int32_t k_assistantdialog_dev_type(void* self) {
     return KAssistantDialog_DevType((KAssistantDialog*)self);
 }
 
-int32_t k_assistantdialog_qbase_dev_type(void* self) {
-    return KAssistantDialog_QBaseDevType((KAssistantDialog*)self);
+int32_t k_assistantdialog_super_dev_type(void* self) {
+    return KAssistantDialog_SuperDevType((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1817,8 +1817,8 @@ int32_t k_assistantdialog_height_for_width(void* self, int param1) {
     return KAssistantDialog_HeightForWidth((KAssistantDialog*)self, param1);
 }
 
-int32_t k_assistantdialog_qbase_height_for_width(void* self, int param1) {
-    return KAssistantDialog_QBaseHeightForWidth((KAssistantDialog*)self, param1);
+int32_t k_assistantdialog_super_height_for_width(void* self, int param1) {
+    return KAssistantDialog_SuperHeightForWidth((KAssistantDialog*)self, param1);
 }
 
 void k_assistantdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1829,8 +1829,8 @@ bool k_assistantdialog_has_height_for_width(void* self) {
     return KAssistantDialog_HasHeightForWidth((KAssistantDialog*)self);
 }
 
-bool k_assistantdialog_qbase_has_height_for_width(void* self) {
-    return KAssistantDialog_QBaseHasHeightForWidth((KAssistantDialog*)self);
+bool k_assistantdialog_super_has_height_for_width(void* self) {
+    return KAssistantDialog_SuperHasHeightForWidth((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1841,8 +1841,8 @@ QPaintEngine* k_assistantdialog_paint_engine(void* self) {
     return KAssistantDialog_PaintEngine((KAssistantDialog*)self);
 }
 
-QPaintEngine* k_assistantdialog_qbase_paint_engine(void* self) {
-    return KAssistantDialog_QBasePaintEngine((KAssistantDialog*)self);
+QPaintEngine* k_assistantdialog_super_paint_engine(void* self) {
+    return KAssistantDialog_SuperPaintEngine((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1853,8 +1853,8 @@ bool k_assistantdialog_event(void* self, void* event) {
     return KAssistantDialog_Event((KAssistantDialog*)self, (QEvent*)event);
 }
 
-bool k_assistantdialog_qbase_event(void* self, void* event) {
-    return KAssistantDialog_QBaseEvent((KAssistantDialog*)self, (QEvent*)event);
+bool k_assistantdialog_super_event(void* self, void* event) {
+    return KAssistantDialog_SuperEvent((KAssistantDialog*)self, (QEvent*)event);
 }
 
 void k_assistantdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void k_assistantdialog_mouse_press_event(void* self, void* event) {
     KAssistantDialog_MousePressEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
-void k_assistantdialog_qbase_mouse_press_event(void* self, void* event) {
-    KAssistantDialog_QBaseMousePressEvent((KAssistantDialog*)self, (QMouseEvent*)event);
+void k_assistantdialog_super_mouse_press_event(void* self, void* event) {
+    KAssistantDialog_SuperMousePressEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
 void k_assistantdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void k_assistantdialog_mouse_release_event(void* self, void* event) {
     KAssistantDialog_MouseReleaseEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
-void k_assistantdialog_qbase_mouse_release_event(void* self, void* event) {
-    KAssistantDialog_QBaseMouseReleaseEvent((KAssistantDialog*)self, (QMouseEvent*)event);
+void k_assistantdialog_super_mouse_release_event(void* self, void* event) {
+    KAssistantDialog_SuperMouseReleaseEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
 void k_assistantdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void k_assistantdialog_mouse_double_click_event(void* self, void* event) {
     KAssistantDialog_MouseDoubleClickEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
-void k_assistantdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KAssistantDialog_QBaseMouseDoubleClickEvent((KAssistantDialog*)self, (QMouseEvent*)event);
+void k_assistantdialog_super_mouse_double_click_event(void* self, void* event) {
+    KAssistantDialog_SuperMouseDoubleClickEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
 void k_assistantdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void k_assistantdialog_mouse_move_event(void* self, void* event) {
     KAssistantDialog_MouseMoveEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
-void k_assistantdialog_qbase_mouse_move_event(void* self, void* event) {
-    KAssistantDialog_QBaseMouseMoveEvent((KAssistantDialog*)self, (QMouseEvent*)event);
+void k_assistantdialog_super_mouse_move_event(void* self, void* event) {
+    KAssistantDialog_SuperMouseMoveEvent((KAssistantDialog*)self, (QMouseEvent*)event);
 }
 
 void k_assistantdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void k_assistantdialog_wheel_event(void* self, void* event) {
     KAssistantDialog_WheelEvent((KAssistantDialog*)self, (QWheelEvent*)event);
 }
 
-void k_assistantdialog_qbase_wheel_event(void* self, void* event) {
-    KAssistantDialog_QBaseWheelEvent((KAssistantDialog*)self, (QWheelEvent*)event);
+void k_assistantdialog_super_wheel_event(void* self, void* event) {
+    KAssistantDialog_SuperWheelEvent((KAssistantDialog*)self, (QWheelEvent*)event);
 }
 
 void k_assistantdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void k_assistantdialog_key_release_event(void* self, void* event) {
     KAssistantDialog_KeyReleaseEvent((KAssistantDialog*)self, (QKeyEvent*)event);
 }
 
-void k_assistantdialog_qbase_key_release_event(void* self, void* event) {
-    KAssistantDialog_QBaseKeyReleaseEvent((KAssistantDialog*)self, (QKeyEvent*)event);
+void k_assistantdialog_super_key_release_event(void* self, void* event) {
+    KAssistantDialog_SuperKeyReleaseEvent((KAssistantDialog*)self, (QKeyEvent*)event);
 }
 
 void k_assistantdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void k_assistantdialog_focus_in_event(void* self, void* event) {
     KAssistantDialog_FocusInEvent((KAssistantDialog*)self, (QFocusEvent*)event);
 }
 
-void k_assistantdialog_qbase_focus_in_event(void* self, void* event) {
-    KAssistantDialog_QBaseFocusInEvent((KAssistantDialog*)self, (QFocusEvent*)event);
+void k_assistantdialog_super_focus_in_event(void* self, void* event) {
+    KAssistantDialog_SuperFocusInEvent((KAssistantDialog*)self, (QFocusEvent*)event);
 }
 
 void k_assistantdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void k_assistantdialog_focus_out_event(void* self, void* event) {
     KAssistantDialog_FocusOutEvent((KAssistantDialog*)self, (QFocusEvent*)event);
 }
 
-void k_assistantdialog_qbase_focus_out_event(void* self, void* event) {
-    KAssistantDialog_QBaseFocusOutEvent((KAssistantDialog*)self, (QFocusEvent*)event);
+void k_assistantdialog_super_focus_out_event(void* self, void* event) {
+    KAssistantDialog_SuperFocusOutEvent((KAssistantDialog*)self, (QFocusEvent*)event);
 }
 
 void k_assistantdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void k_assistantdialog_enter_event(void* self, void* event) {
     KAssistantDialog_EnterEvent((KAssistantDialog*)self, (QEnterEvent*)event);
 }
 
-void k_assistantdialog_qbase_enter_event(void* self, void* event) {
-    KAssistantDialog_QBaseEnterEvent((KAssistantDialog*)self, (QEnterEvent*)event);
+void k_assistantdialog_super_enter_event(void* self, void* event) {
+    KAssistantDialog_SuperEnterEvent((KAssistantDialog*)self, (QEnterEvent*)event);
 }
 
 void k_assistantdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ void k_assistantdialog_leave_event(void* self, void* event) {
     KAssistantDialog_LeaveEvent((KAssistantDialog*)self, (QEvent*)event);
 }
 
-void k_assistantdialog_qbase_leave_event(void* self, void* event) {
-    KAssistantDialog_QBaseLeaveEvent((KAssistantDialog*)self, (QEvent*)event);
+void k_assistantdialog_super_leave_event(void* self, void* event) {
+    KAssistantDialog_SuperLeaveEvent((KAssistantDialog*)self, (QEvent*)event);
 }
 
 void k_assistantdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ void k_assistantdialog_paint_event(void* self, void* event) {
     KAssistantDialog_PaintEvent((KAssistantDialog*)self, (QPaintEvent*)event);
 }
 
-void k_assistantdialog_qbase_paint_event(void* self, void* event) {
-    KAssistantDialog_QBasePaintEvent((KAssistantDialog*)self, (QPaintEvent*)event);
+void k_assistantdialog_super_paint_event(void* self, void* event) {
+    KAssistantDialog_SuperPaintEvent((KAssistantDialog*)self, (QPaintEvent*)event);
 }
 
 void k_assistantdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void k_assistantdialog_move_event(void* self, void* event) {
     KAssistantDialog_MoveEvent((KAssistantDialog*)self, (QMoveEvent*)event);
 }
 
-void k_assistantdialog_qbase_move_event(void* self, void* event) {
-    KAssistantDialog_QBaseMoveEvent((KAssistantDialog*)self, (QMoveEvent*)event);
+void k_assistantdialog_super_move_event(void* self, void* event) {
+    KAssistantDialog_SuperMoveEvent((KAssistantDialog*)self, (QMoveEvent*)event);
 }
 
 void k_assistantdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void k_assistantdialog_tablet_event(void* self, void* event) {
     KAssistantDialog_TabletEvent((KAssistantDialog*)self, (QTabletEvent*)event);
 }
 
-void k_assistantdialog_qbase_tablet_event(void* self, void* event) {
-    KAssistantDialog_QBaseTabletEvent((KAssistantDialog*)self, (QTabletEvent*)event);
+void k_assistantdialog_super_tablet_event(void* self, void* event) {
+    KAssistantDialog_SuperTabletEvent((KAssistantDialog*)self, (QTabletEvent*)event);
 }
 
 void k_assistantdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void k_assistantdialog_action_event(void* self, void* event) {
     KAssistantDialog_ActionEvent((KAssistantDialog*)self, (QActionEvent*)event);
 }
 
-void k_assistantdialog_qbase_action_event(void* self, void* event) {
-    KAssistantDialog_QBaseActionEvent((KAssistantDialog*)self, (QActionEvent*)event);
+void k_assistantdialog_super_action_event(void* self, void* event) {
+    KAssistantDialog_SuperActionEvent((KAssistantDialog*)self, (QActionEvent*)event);
 }
 
 void k_assistantdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void k_assistantdialog_drag_enter_event(void* self, void* event) {
     KAssistantDialog_DragEnterEvent((KAssistantDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_assistantdialog_qbase_drag_enter_event(void* self, void* event) {
-    KAssistantDialog_QBaseDragEnterEvent((KAssistantDialog*)self, (QDragEnterEvent*)event);
+void k_assistantdialog_super_drag_enter_event(void* self, void* event) {
+    KAssistantDialog_SuperDragEnterEvent((KAssistantDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_assistantdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ void k_assistantdialog_drag_move_event(void* self, void* event) {
     KAssistantDialog_DragMoveEvent((KAssistantDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_assistantdialog_qbase_drag_move_event(void* self, void* event) {
-    KAssistantDialog_QBaseDragMoveEvent((KAssistantDialog*)self, (QDragMoveEvent*)event);
+void k_assistantdialog_super_drag_move_event(void* self, void* event) {
+    KAssistantDialog_SuperDragMoveEvent((KAssistantDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_assistantdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ void k_assistantdialog_drag_leave_event(void* self, void* event) {
     KAssistantDialog_DragLeaveEvent((KAssistantDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_assistantdialog_qbase_drag_leave_event(void* self, void* event) {
-    KAssistantDialog_QBaseDragLeaveEvent((KAssistantDialog*)self, (QDragLeaveEvent*)event);
+void k_assistantdialog_super_drag_leave_event(void* self, void* event) {
+    KAssistantDialog_SuperDragLeaveEvent((KAssistantDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_assistantdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2069,8 +2069,8 @@ void k_assistantdialog_drop_event(void* self, void* event) {
     KAssistantDialog_DropEvent((KAssistantDialog*)self, (QDropEvent*)event);
 }
 
-void k_assistantdialog_qbase_drop_event(void* self, void* event) {
-    KAssistantDialog_QBaseDropEvent((KAssistantDialog*)self, (QDropEvent*)event);
+void k_assistantdialog_super_drop_event(void* self, void* event) {
+    KAssistantDialog_SuperDropEvent((KAssistantDialog*)self, (QDropEvent*)event);
 }
 
 void k_assistantdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2081,8 +2081,8 @@ void k_assistantdialog_hide_event(void* self, void* event) {
     KAssistantDialog_HideEvent((KAssistantDialog*)self, (QHideEvent*)event);
 }
 
-void k_assistantdialog_qbase_hide_event(void* self, void* event) {
-    KAssistantDialog_QBaseHideEvent((KAssistantDialog*)self, (QHideEvent*)event);
+void k_assistantdialog_super_hide_event(void* self, void* event) {
+    KAssistantDialog_SuperHideEvent((KAssistantDialog*)self, (QHideEvent*)event);
 }
 
 void k_assistantdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ bool k_assistantdialog_native_event(void* self, char* eventType, void* message, 
     return KAssistantDialog_NativeEvent((KAssistantDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_assistantdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KAssistantDialog_QBaseNativeEvent((KAssistantDialog*)self, qstring(eventType), message, result);
+bool k_assistantdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KAssistantDialog_SuperNativeEvent((KAssistantDialog*)self, qstring(eventType), message, result);
 }
 
 void k_assistantdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2105,8 +2105,8 @@ void k_assistantdialog_change_event(void* self, void* param1) {
     KAssistantDialog_ChangeEvent((KAssistantDialog*)self, (QEvent*)param1);
 }
 
-void k_assistantdialog_qbase_change_event(void* self, void* param1) {
-    KAssistantDialog_QBaseChangeEvent((KAssistantDialog*)self, (QEvent*)param1);
+void k_assistantdialog_super_change_event(void* self, void* param1) {
+    KAssistantDialog_SuperChangeEvent((KAssistantDialog*)self, (QEvent*)param1);
 }
 
 void k_assistantdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2117,8 +2117,8 @@ int32_t k_assistantdialog_metric(void* self, int32_t param1) {
     return KAssistantDialog_Metric((KAssistantDialog*)self, param1);
 }
 
-int32_t k_assistantdialog_qbase_metric(void* self, int32_t param1) {
-    return KAssistantDialog_QBaseMetric((KAssistantDialog*)self, param1);
+int32_t k_assistantdialog_super_metric(void* self, int32_t param1) {
+    return KAssistantDialog_SuperMetric((KAssistantDialog*)self, param1);
 }
 
 void k_assistantdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2129,8 +2129,8 @@ void k_assistantdialog_init_painter(void* self, void* painter) {
     KAssistantDialog_InitPainter((KAssistantDialog*)self, (QPainter*)painter);
 }
 
-void k_assistantdialog_qbase_init_painter(void* self, void* painter) {
-    KAssistantDialog_QBaseInitPainter((KAssistantDialog*)self, (QPainter*)painter);
+void k_assistantdialog_super_init_painter(void* self, void* painter) {
+    KAssistantDialog_SuperInitPainter((KAssistantDialog*)self, (QPainter*)painter);
 }
 
 void k_assistantdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2141,8 +2141,8 @@ QPaintDevice* k_assistantdialog_redirected(void* self, void* offset) {
     return KAssistantDialog_Redirected((KAssistantDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_assistantdialog_qbase_redirected(void* self, void* offset) {
-    return KAssistantDialog_QBaseRedirected((KAssistantDialog*)self, (QPoint*)offset);
+QPaintDevice* k_assistantdialog_super_redirected(void* self, void* offset) {
+    return KAssistantDialog_SuperRedirected((KAssistantDialog*)self, (QPoint*)offset);
 }
 
 void k_assistantdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2153,8 +2153,8 @@ QPainter* k_assistantdialog_shared_painter(void* self) {
     return KAssistantDialog_SharedPainter((KAssistantDialog*)self);
 }
 
-QPainter* k_assistantdialog_qbase_shared_painter(void* self) {
-    return KAssistantDialog_QBaseSharedPainter((KAssistantDialog*)self);
+QPainter* k_assistantdialog_super_shared_painter(void* self) {
+    return KAssistantDialog_SuperSharedPainter((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2165,8 +2165,8 @@ void k_assistantdialog_input_method_event(void* self, void* param1) {
     KAssistantDialog_InputMethodEvent((KAssistantDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_assistantdialog_qbase_input_method_event(void* self, void* param1) {
-    KAssistantDialog_QBaseInputMethodEvent((KAssistantDialog*)self, (QInputMethodEvent*)param1);
+void k_assistantdialog_super_input_method_event(void* self, void* param1) {
+    KAssistantDialog_SuperInputMethodEvent((KAssistantDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_assistantdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ QVariant* k_assistantdialog_input_method_query(void* self, int32_t param1) {
     return KAssistantDialog_InputMethodQuery((KAssistantDialog*)self, param1);
 }
 
-QVariant* k_assistantdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KAssistantDialog_QBaseInputMethodQuery((KAssistantDialog*)self, param1);
+QVariant* k_assistantdialog_super_input_method_query(void* self, int32_t param1) {
+    return KAssistantDialog_SuperInputMethodQuery((KAssistantDialog*)self, param1);
 }
 
 void k_assistantdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2189,8 +2189,8 @@ bool k_assistantdialog_focus_next_prev_child(void* self, bool next) {
     return KAssistantDialog_FocusNextPrevChild((KAssistantDialog*)self, next);
 }
 
-bool k_assistantdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KAssistantDialog_QBaseFocusNextPrevChild((KAssistantDialog*)self, next);
+bool k_assistantdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KAssistantDialog_SuperFocusNextPrevChild((KAssistantDialog*)self, next);
 }
 
 void k_assistantdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2201,8 +2201,8 @@ void k_assistantdialog_timer_event(void* self, void* event) {
     KAssistantDialog_TimerEvent((KAssistantDialog*)self, (QTimerEvent*)event);
 }
 
-void k_assistantdialog_qbase_timer_event(void* self, void* event) {
-    KAssistantDialog_QBaseTimerEvent((KAssistantDialog*)self, (QTimerEvent*)event);
+void k_assistantdialog_super_timer_event(void* self, void* event) {
+    KAssistantDialog_SuperTimerEvent((KAssistantDialog*)self, (QTimerEvent*)event);
 }
 
 void k_assistantdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ void k_assistantdialog_child_event(void* self, void* event) {
     KAssistantDialog_ChildEvent((KAssistantDialog*)self, (QChildEvent*)event);
 }
 
-void k_assistantdialog_qbase_child_event(void* self, void* event) {
-    KAssistantDialog_QBaseChildEvent((KAssistantDialog*)self, (QChildEvent*)event);
+void k_assistantdialog_super_child_event(void* self, void* event) {
+    KAssistantDialog_SuperChildEvent((KAssistantDialog*)self, (QChildEvent*)event);
 }
 
 void k_assistantdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2225,8 +2225,8 @@ void k_assistantdialog_custom_event(void* self, void* event) {
     KAssistantDialog_CustomEvent((KAssistantDialog*)self, (QEvent*)event);
 }
 
-void k_assistantdialog_qbase_custom_event(void* self, void* event) {
-    KAssistantDialog_QBaseCustomEvent((KAssistantDialog*)self, (QEvent*)event);
+void k_assistantdialog_super_custom_event(void* self, void* event) {
+    KAssistantDialog_SuperCustomEvent((KAssistantDialog*)self, (QEvent*)event);
 }
 
 void k_assistantdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2237,8 +2237,8 @@ void k_assistantdialog_connect_notify(void* self, void* signal) {
     KAssistantDialog_ConnectNotify((KAssistantDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_assistantdialog_qbase_connect_notify(void* self, void* signal) {
-    KAssistantDialog_QBaseConnectNotify((KAssistantDialog*)self, (QMetaMethod*)signal);
+void k_assistantdialog_super_connect_notify(void* self, void* signal) {
+    KAssistantDialog_SuperConnectNotify((KAssistantDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_assistantdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2249,8 +2249,8 @@ void k_assistantdialog_disconnect_notify(void* self, void* signal) {
     KAssistantDialog_DisconnectNotify((KAssistantDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_assistantdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KAssistantDialog_QBaseDisconnectNotify((KAssistantDialog*)self, (QMetaMethod*)signal);
+void k_assistantdialog_super_disconnect_notify(void* self, void* signal) {
+    KAssistantDialog_SuperDisconnectNotify((KAssistantDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_assistantdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2261,8 +2261,8 @@ KPageWidget* k_assistantdialog_page_widget(void* self) {
     return KAssistantDialog_PageWidget((KAssistantDialog*)self);
 }
 
-KPageWidget* k_assistantdialog_qbase_page_widget(void* self) {
-    return KAssistantDialog_QBasePageWidget((KAssistantDialog*)self);
+KPageWidget* k_assistantdialog_super_page_widget(void* self) {
+    return KAssistantDialog_SuperPageWidget((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_page_widget(void* self, KPageWidget* (*callback)()) {
@@ -2273,8 +2273,8 @@ void k_assistantdialog_set_page_widget(void* self, void* widget) {
     KAssistantDialog_SetPageWidget((KAssistantDialog*)self, (KPageWidget*)widget);
 }
 
-void k_assistantdialog_qbase_set_page_widget(void* self, void* widget) {
-    KAssistantDialog_QBaseSetPageWidget((KAssistantDialog*)self, (KPageWidget*)widget);
+void k_assistantdialog_super_set_page_widget(void* self, void* widget) {
+    KAssistantDialog_SuperSetPageWidget((KAssistantDialog*)self, (KPageWidget*)widget);
 }
 
 void k_assistantdialog_on_set_page_widget(void* self, void (*callback)(void*, void*)) {
@@ -2285,8 +2285,8 @@ QDialogButtonBox* k_assistantdialog_button_box(void* self) {
     return KAssistantDialog_ButtonBox((KAssistantDialog*)self);
 }
 
-QDialogButtonBox* k_assistantdialog_qbase_button_box(void* self) {
-    return KAssistantDialog_QBaseButtonBox((KAssistantDialog*)self);
+QDialogButtonBox* k_assistantdialog_super_button_box(void* self) {
+    return KAssistantDialog_SuperButtonBox((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_button_box(void* self, QDialogButtonBox* (*callback)()) {
@@ -2297,8 +2297,8 @@ void k_assistantdialog_set_button_box(void* self, void* box) {
     KAssistantDialog_SetButtonBox((KAssistantDialog*)self, (QDialogButtonBox*)box);
 }
 
-void k_assistantdialog_qbase_set_button_box(void* self, void* box) {
-    KAssistantDialog_QBaseSetButtonBox((KAssistantDialog*)self, (QDialogButtonBox*)box);
+void k_assistantdialog_super_set_button_box(void* self, void* box) {
+    KAssistantDialog_SuperSetButtonBox((KAssistantDialog*)self, (QDialogButtonBox*)box);
 }
 
 void k_assistantdialog_on_set_button_box(void* self, void (*callback)(void*, void*)) {
@@ -2309,8 +2309,8 @@ void k_assistantdialog_adjust_position(void* self, void* param1) {
     KAssistantDialog_AdjustPosition((KAssistantDialog*)self, (QWidget*)param1);
 }
 
-void k_assistantdialog_qbase_adjust_position(void* self, void* param1) {
-    KAssistantDialog_QBaseAdjustPosition((KAssistantDialog*)self, (QWidget*)param1);
+void k_assistantdialog_super_adjust_position(void* self, void* param1) {
+    KAssistantDialog_SuperAdjustPosition((KAssistantDialog*)self, (QWidget*)param1);
 }
 
 void k_assistantdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2321,8 +2321,8 @@ void k_assistantdialog_update_micro_focus(void* self) {
     KAssistantDialog_UpdateMicroFocus((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_qbase_update_micro_focus(void* self) {
-    KAssistantDialog_QBaseUpdateMicroFocus((KAssistantDialog*)self);
+void k_assistantdialog_super_update_micro_focus(void* self) {
+    KAssistantDialog_SuperUpdateMicroFocus((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2333,8 +2333,8 @@ void k_assistantdialog_create(void* self) {
     KAssistantDialog_Create((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_qbase_create(void* self) {
-    KAssistantDialog_QBaseCreate((KAssistantDialog*)self);
+void k_assistantdialog_super_create(void* self) {
+    KAssistantDialog_SuperCreate((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_create(void* self, void (*callback)()) {
@@ -2345,8 +2345,8 @@ void k_assistantdialog_destroy(void* self) {
     KAssistantDialog_Destroy((KAssistantDialog*)self);
 }
 
-void k_assistantdialog_qbase_destroy(void* self) {
-    KAssistantDialog_QBaseDestroy((KAssistantDialog*)self);
+void k_assistantdialog_super_destroy(void* self) {
+    KAssistantDialog_SuperDestroy((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_destroy(void* self, void (*callback)()) {
@@ -2357,8 +2357,8 @@ bool k_assistantdialog_focus_next_child(void* self) {
     return KAssistantDialog_FocusNextChild((KAssistantDialog*)self);
 }
 
-bool k_assistantdialog_qbase_focus_next_child(void* self) {
-    return KAssistantDialog_QBaseFocusNextChild((KAssistantDialog*)self);
+bool k_assistantdialog_super_focus_next_child(void* self) {
+    return KAssistantDialog_SuperFocusNextChild((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2369,8 +2369,8 @@ bool k_assistantdialog_focus_previous_child(void* self) {
     return KAssistantDialog_FocusPreviousChild((KAssistantDialog*)self);
 }
 
-bool k_assistantdialog_qbase_focus_previous_child(void* self) {
-    return KAssistantDialog_QBaseFocusPreviousChild((KAssistantDialog*)self);
+bool k_assistantdialog_super_focus_previous_child(void* self) {
+    return KAssistantDialog_SuperFocusPreviousChild((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2381,8 +2381,8 @@ QObject* k_assistantdialog_sender(void* self) {
     return KAssistantDialog_Sender((KAssistantDialog*)self);
 }
 
-QObject* k_assistantdialog_qbase_sender(void* self) {
-    return KAssistantDialog_QBaseSender((KAssistantDialog*)self);
+QObject* k_assistantdialog_super_sender(void* self) {
+    return KAssistantDialog_SuperSender((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2393,8 +2393,8 @@ int32_t k_assistantdialog_sender_signal_index(void* self) {
     return KAssistantDialog_SenderSignalIndex((KAssistantDialog*)self);
 }
 
-int32_t k_assistantdialog_qbase_sender_signal_index(void* self) {
-    return KAssistantDialog_QBaseSenderSignalIndex((KAssistantDialog*)self);
+int32_t k_assistantdialog_super_sender_signal_index(void* self) {
+    return KAssistantDialog_SuperSenderSignalIndex((KAssistantDialog*)self);
 }
 
 void k_assistantdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2405,8 +2405,8 @@ int32_t k_assistantdialog_receivers(void* self, const char* signal) {
     return KAssistantDialog_Receivers((KAssistantDialog*)self, signal);
 }
 
-int32_t k_assistantdialog_qbase_receivers(void* self, const char* signal) {
-    return KAssistantDialog_QBaseReceivers((KAssistantDialog*)self, signal);
+int32_t k_assistantdialog_super_receivers(void* self, const char* signal) {
+    return KAssistantDialog_SuperReceivers((KAssistantDialog*)self, signal);
 }
 
 void k_assistantdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2417,8 +2417,8 @@ bool k_assistantdialog_is_signal_connected(void* self, void* signal) {
     return KAssistantDialog_IsSignalConnected((KAssistantDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_assistantdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KAssistantDialog_QBaseIsSignalConnected((KAssistantDialog*)self, (QMetaMethod*)signal);
+bool k_assistantdialog_super_is_signal_connected(void* self, void* signal) {
+    return KAssistantDialog_SuperIsSignalConnected((KAssistantDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_assistantdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2429,8 +2429,8 @@ double k_assistantdialog_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KAssistantDialog_GetDecodedMetricF((KAssistantDialog*)self, metricA, metricB);
 }
 
-double k_assistantdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KAssistantDialog_QBaseGetDecodedMetricF((KAssistantDialog*)self, metricA, metricB);
+double k_assistantdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KAssistantDialog_SuperGetDecodedMetricF((KAssistantDialog*)self, metricA, metricB);
 }
 
 void k_assistantdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -32,8 +32,8 @@ void q_wavedecoder_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QWaveDecoder_OnMetaObject((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_wavedecoder_qbase_meta_object(void* self) {
-    return QWaveDecoder_QBaseMetaObject((QWaveDecoder*)self);
+const QMetaObject* q_wavedecoder_super_meta_object(void* self) {
+    return QWaveDecoder_SuperMetaObject((QWaveDecoder*)self);
 }
 
 void* q_wavedecoder_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_wavedecoder_on_metacast(void* self, void* (*callback)(void*, const char*)
     QWaveDecoder_OnMetacast((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-void* q_wavedecoder_qbase_metacast(void* self, const char* param1) {
-    return QWaveDecoder_QBaseMetacast((QWaveDecoder*)self, param1);
+void* q_wavedecoder_super_metacast(void* self, const char* param1) {
+    return QWaveDecoder_SuperMetacast((QWaveDecoder*)self, param1);
 }
 
 int32_t q_wavedecoder_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_wavedecoder_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QWaveDecoder_OnMetacall((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-int32_t q_wavedecoder_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QWaveDecoder_QBaseMetacall((QWaveDecoder*)self, param1, param2, param3);
+int32_t q_wavedecoder_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QWaveDecoder_SuperMetacall((QWaveDecoder*)self, param1, param2, param3);
 }
 
 const char* q_wavedecoder_tr(const char* s) {
@@ -91,8 +91,8 @@ void q_wavedecoder_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QWaveDecoder_OnOpen((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-bool q_wavedecoder_qbase_open(void* self, int32_t mode) {
-    return QWaveDecoder_QBaseOpen((QWaveDecoder*)self, mode);
+bool q_wavedecoder_super_open(void* self, int32_t mode) {
+    return QWaveDecoder_SuperOpen((QWaveDecoder*)self, mode);
 }
 
 void q_wavedecoder_close(void* self) {
@@ -103,8 +103,8 @@ void q_wavedecoder_on_close(void* self, void (*callback)()) {
     QWaveDecoder_OnClose((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-void q_wavedecoder_qbase_close(void* self) {
-    QWaveDecoder_QBaseClose((QWaveDecoder*)self);
+void q_wavedecoder_super_close(void* self) {
+    QWaveDecoder_SuperClose((QWaveDecoder*)self);
 }
 
 bool q_wavedecoder_seek(void* self, long long pos) {
@@ -115,8 +115,8 @@ void q_wavedecoder_on_seek(void* self, bool (*callback)(void*, long long)) {
     QWaveDecoder_OnSeek((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-bool q_wavedecoder_qbase_seek(void* self, long long pos) {
-    return QWaveDecoder_QBaseSeek((QWaveDecoder*)self, pos);
+bool q_wavedecoder_super_seek(void* self, long long pos) {
+    return QWaveDecoder_SuperSeek((QWaveDecoder*)self, pos);
 }
 
 long long q_wavedecoder_pos(void* self) {
@@ -127,8 +127,8 @@ void q_wavedecoder_on_pos(void* self, long long (*callback)()) {
     QWaveDecoder_OnPos((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-long long q_wavedecoder_qbase_pos(void* self) {
-    return QWaveDecoder_QBasePos((QWaveDecoder*)self);
+long long q_wavedecoder_super_pos(void* self) {
+    return QWaveDecoder_SuperPos((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_set_i_o_device(void* self, void* device) {
@@ -143,8 +143,8 @@ void q_wavedecoder_on_size(void* self, long long (*callback)()) {
     QWaveDecoder_OnSize((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-long long q_wavedecoder_qbase_size(void* self) {
-    return QWaveDecoder_QBaseSize((QWaveDecoder*)self);
+long long q_wavedecoder_super_size(void* self) {
+    return QWaveDecoder_SuperSize((QWaveDecoder*)self);
 }
 
 bool q_wavedecoder_is_sequential(void* self) {
@@ -155,8 +155,8 @@ void q_wavedecoder_on_is_sequential(void* self, bool (*callback)()) {
     QWaveDecoder_OnIsSequential((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-bool q_wavedecoder_qbase_is_sequential(void* self) {
-    return QWaveDecoder_QBaseIsSequential((QWaveDecoder*)self);
+bool q_wavedecoder_super_is_sequential(void* self) {
+    return QWaveDecoder_SuperIsSequential((QWaveDecoder*)self);
 }
 
 long long q_wavedecoder_bytes_available(void* self) {
@@ -167,8 +167,8 @@ void q_wavedecoder_on_bytes_available(void* self, long long (*callback)()) {
     QWaveDecoder_OnBytesAvailable((QWaveDecoder*)self, (intptr_t)callback);
 }
 
-long long q_wavedecoder_qbase_bytes_available(void* self) {
-    return QWaveDecoder_QBaseBytesAvailable((QWaveDecoder*)self);
+long long q_wavedecoder_super_bytes_available(void* self) {
+    return QWaveDecoder_SuperBytesAvailable((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_format_known(void* self) {
@@ -610,8 +610,8 @@ bool q_wavedecoder_at_end(void* self) {
     return QWaveDecoder_AtEnd((QWaveDecoder*)self);
 }
 
-bool q_wavedecoder_qbase_at_end(void* self) {
-    return QWaveDecoder_QBaseAtEnd((QWaveDecoder*)self);
+bool q_wavedecoder_super_at_end(void* self) {
+    return QWaveDecoder_SuperAtEnd((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_on_at_end(void* self, bool (*callback)()) {
@@ -622,8 +622,8 @@ bool q_wavedecoder_reset(void* self) {
     return QWaveDecoder_Reset((QWaveDecoder*)self);
 }
 
-bool q_wavedecoder_qbase_reset(void* self) {
-    return QWaveDecoder_QBaseReset((QWaveDecoder*)self);
+bool q_wavedecoder_super_reset(void* self) {
+    return QWaveDecoder_SuperReset((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_on_reset(void* self, bool (*callback)()) {
@@ -634,8 +634,8 @@ long long q_wavedecoder_bytes_to_write(void* self) {
     return QWaveDecoder_BytesToWrite((QWaveDecoder*)self);
 }
 
-long long q_wavedecoder_qbase_bytes_to_write(void* self) {
-    return QWaveDecoder_QBaseBytesToWrite((QWaveDecoder*)self);
+long long q_wavedecoder_super_bytes_to_write(void* self) {
+    return QWaveDecoder_SuperBytesToWrite((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_on_bytes_to_write(void* self, long long (*callback)()) {
@@ -646,8 +646,8 @@ bool q_wavedecoder_can_read_line(void* self) {
     return QWaveDecoder_CanReadLine((QWaveDecoder*)self);
 }
 
-bool q_wavedecoder_qbase_can_read_line(void* self) {
-    return QWaveDecoder_QBaseCanReadLine((QWaveDecoder*)self);
+bool q_wavedecoder_super_can_read_line(void* self) {
+    return QWaveDecoder_SuperCanReadLine((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_on_can_read_line(void* self, bool (*callback)()) {
@@ -658,8 +658,8 @@ bool q_wavedecoder_wait_for_ready_read(void* self, int msecs) {
     return QWaveDecoder_WaitForReadyRead((QWaveDecoder*)self, msecs);
 }
 
-bool q_wavedecoder_qbase_wait_for_ready_read(void* self, int msecs) {
-    return QWaveDecoder_QBaseWaitForReadyRead((QWaveDecoder*)self, msecs);
+bool q_wavedecoder_super_wait_for_ready_read(void* self, int msecs) {
+    return QWaveDecoder_SuperWaitForReadyRead((QWaveDecoder*)self, msecs);
 }
 
 void q_wavedecoder_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
@@ -670,8 +670,8 @@ bool q_wavedecoder_wait_for_bytes_written(void* self, int msecs) {
     return QWaveDecoder_WaitForBytesWritten((QWaveDecoder*)self, msecs);
 }
 
-bool q_wavedecoder_qbase_wait_for_bytes_written(void* self, int msecs) {
-    return QWaveDecoder_QBaseWaitForBytesWritten((QWaveDecoder*)self, msecs);
+bool q_wavedecoder_super_wait_for_bytes_written(void* self, int msecs) {
+    return QWaveDecoder_SuperWaitForBytesWritten((QWaveDecoder*)self, msecs);
 }
 
 void q_wavedecoder_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
@@ -682,8 +682,8 @@ long long q_wavedecoder_read_line_data(void* self, char* data, long long maxlen)
     return QWaveDecoder_ReadLineData((QWaveDecoder*)self, data, maxlen);
 }
 
-long long q_wavedecoder_qbase_read_line_data(void* self, char* data, long long maxlen) {
-    return QWaveDecoder_QBaseReadLineData((QWaveDecoder*)self, data, maxlen);
+long long q_wavedecoder_super_read_line_data(void* self, char* data, long long maxlen) {
+    return QWaveDecoder_SuperReadLineData((QWaveDecoder*)self, data, maxlen);
 }
 
 void q_wavedecoder_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
@@ -694,8 +694,8 @@ long long q_wavedecoder_skip_data(void* self, long long maxSize) {
     return QWaveDecoder_SkipData((QWaveDecoder*)self, maxSize);
 }
 
-long long q_wavedecoder_qbase_skip_data(void* self, long long maxSize) {
-    return QWaveDecoder_QBaseSkipData((QWaveDecoder*)self, maxSize);
+long long q_wavedecoder_super_skip_data(void* self, long long maxSize) {
+    return QWaveDecoder_SuperSkipData((QWaveDecoder*)self, maxSize);
 }
 
 void q_wavedecoder_on_skip_data(void* self, long long (*callback)(void*, long long)) {
@@ -706,8 +706,8 @@ bool q_wavedecoder_event(void* self, void* event) {
     return QWaveDecoder_Event((QWaveDecoder*)self, (QEvent*)event);
 }
 
-bool q_wavedecoder_qbase_event(void* self, void* event) {
-    return QWaveDecoder_QBaseEvent((QWaveDecoder*)self, (QEvent*)event);
+bool q_wavedecoder_super_event(void* self, void* event) {
+    return QWaveDecoder_SuperEvent((QWaveDecoder*)self, (QEvent*)event);
 }
 
 void q_wavedecoder_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -718,8 +718,8 @@ bool q_wavedecoder_event_filter(void* self, void* watched, void* event) {
     return QWaveDecoder_EventFilter((QWaveDecoder*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_wavedecoder_qbase_event_filter(void* self, void* watched, void* event) {
-    return QWaveDecoder_QBaseEventFilter((QWaveDecoder*)self, (QObject*)watched, (QEvent*)event);
+bool q_wavedecoder_super_event_filter(void* self, void* watched, void* event) {
+    return QWaveDecoder_SuperEventFilter((QWaveDecoder*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_wavedecoder_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -730,8 +730,8 @@ void q_wavedecoder_timer_event(void* self, void* event) {
     QWaveDecoder_TimerEvent((QWaveDecoder*)self, (QTimerEvent*)event);
 }
 
-void q_wavedecoder_qbase_timer_event(void* self, void* event) {
-    QWaveDecoder_QBaseTimerEvent((QWaveDecoder*)self, (QTimerEvent*)event);
+void q_wavedecoder_super_timer_event(void* self, void* event) {
+    QWaveDecoder_SuperTimerEvent((QWaveDecoder*)self, (QTimerEvent*)event);
 }
 
 void q_wavedecoder_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -742,8 +742,8 @@ void q_wavedecoder_child_event(void* self, void* event) {
     QWaveDecoder_ChildEvent((QWaveDecoder*)self, (QChildEvent*)event);
 }
 
-void q_wavedecoder_qbase_child_event(void* self, void* event) {
-    QWaveDecoder_QBaseChildEvent((QWaveDecoder*)self, (QChildEvent*)event);
+void q_wavedecoder_super_child_event(void* self, void* event) {
+    QWaveDecoder_SuperChildEvent((QWaveDecoder*)self, (QChildEvent*)event);
 }
 
 void q_wavedecoder_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -754,8 +754,8 @@ void q_wavedecoder_custom_event(void* self, void* event) {
     QWaveDecoder_CustomEvent((QWaveDecoder*)self, (QEvent*)event);
 }
 
-void q_wavedecoder_qbase_custom_event(void* self, void* event) {
-    QWaveDecoder_QBaseCustomEvent((QWaveDecoder*)self, (QEvent*)event);
+void q_wavedecoder_super_custom_event(void* self, void* event) {
+    QWaveDecoder_SuperCustomEvent((QWaveDecoder*)self, (QEvent*)event);
 }
 
 void q_wavedecoder_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -766,8 +766,8 @@ void q_wavedecoder_connect_notify(void* self, void* signal) {
     QWaveDecoder_ConnectNotify((QWaveDecoder*)self, (QMetaMethod*)signal);
 }
 
-void q_wavedecoder_qbase_connect_notify(void* self, void* signal) {
-    QWaveDecoder_QBaseConnectNotify((QWaveDecoder*)self, (QMetaMethod*)signal);
+void q_wavedecoder_super_connect_notify(void* self, void* signal) {
+    QWaveDecoder_SuperConnectNotify((QWaveDecoder*)self, (QMetaMethod*)signal);
 }
 
 void q_wavedecoder_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -778,8 +778,8 @@ void q_wavedecoder_disconnect_notify(void* self, void* signal) {
     QWaveDecoder_DisconnectNotify((QWaveDecoder*)self, (QMetaMethod*)signal);
 }
 
-void q_wavedecoder_qbase_disconnect_notify(void* self, void* signal) {
-    QWaveDecoder_QBaseDisconnectNotify((QWaveDecoder*)self, (QMetaMethod*)signal);
+void q_wavedecoder_super_disconnect_notify(void* self, void* signal) {
+    QWaveDecoder_SuperDisconnectNotify((QWaveDecoder*)self, (QMetaMethod*)signal);
 }
 
 void q_wavedecoder_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -790,8 +790,8 @@ void q_wavedecoder_set_open_mode(void* self, int32_t openMode) {
     QWaveDecoder_SetOpenMode((QWaveDecoder*)self, openMode);
 }
 
-void q_wavedecoder_qbase_set_open_mode(void* self, int32_t openMode) {
-    QWaveDecoder_QBaseSetOpenMode((QWaveDecoder*)self, openMode);
+void q_wavedecoder_super_set_open_mode(void* self, int32_t openMode) {
+    QWaveDecoder_SuperSetOpenMode((QWaveDecoder*)self, openMode);
 }
 
 void q_wavedecoder_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -802,8 +802,8 @@ void q_wavedecoder_set_error_string(void* self, const char* errorString) {
     QWaveDecoder_SetErrorString((QWaveDecoder*)self, qstring(errorString));
 }
 
-void q_wavedecoder_qbase_set_error_string(void* self, const char* errorString) {
-    QWaveDecoder_QBaseSetErrorString((QWaveDecoder*)self, qstring(errorString));
+void q_wavedecoder_super_set_error_string(void* self, const char* errorString) {
+    QWaveDecoder_SuperSetErrorString((QWaveDecoder*)self, qstring(errorString));
 }
 
 void q_wavedecoder_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -814,8 +814,8 @@ QObject* q_wavedecoder_sender(void* self) {
     return QWaveDecoder_Sender((QWaveDecoder*)self);
 }
 
-QObject* q_wavedecoder_qbase_sender(void* self) {
-    return QWaveDecoder_QBaseSender((QWaveDecoder*)self);
+QObject* q_wavedecoder_super_sender(void* self) {
+    return QWaveDecoder_SuperSender((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_on_sender(void* self, QObject* (*callback)()) {
@@ -826,8 +826,8 @@ int32_t q_wavedecoder_sender_signal_index(void* self) {
     return QWaveDecoder_SenderSignalIndex((QWaveDecoder*)self);
 }
 
-int32_t q_wavedecoder_qbase_sender_signal_index(void* self) {
-    return QWaveDecoder_QBaseSenderSignalIndex((QWaveDecoder*)self);
+int32_t q_wavedecoder_super_sender_signal_index(void* self) {
+    return QWaveDecoder_SuperSenderSignalIndex((QWaveDecoder*)self);
 }
 
 void q_wavedecoder_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -838,8 +838,8 @@ int32_t q_wavedecoder_receivers(void* self, const char* signal) {
     return QWaveDecoder_Receivers((QWaveDecoder*)self, signal);
 }
 
-int32_t q_wavedecoder_qbase_receivers(void* self, const char* signal) {
-    return QWaveDecoder_QBaseReceivers((QWaveDecoder*)self, signal);
+int32_t q_wavedecoder_super_receivers(void* self, const char* signal) {
+    return QWaveDecoder_SuperReceivers((QWaveDecoder*)self, signal);
 }
 
 void q_wavedecoder_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -850,8 +850,8 @@ bool q_wavedecoder_is_signal_connected(void* self, void* signal) {
     return QWaveDecoder_IsSignalConnected((QWaveDecoder*)self, (QMetaMethod*)signal);
 }
 
-bool q_wavedecoder_qbase_is_signal_connected(void* self, void* signal) {
-    return QWaveDecoder_QBaseIsSignalConnected((QWaveDecoder*)self, (QMetaMethod*)signal);
+bool q_wavedecoder_super_is_signal_connected(void* self, void* signal) {
+    return QWaveDecoder_SuperIsSignalConnected((QWaveDecoder*)self, (QMetaMethod*)signal);
 }
 
 void q_wavedecoder_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

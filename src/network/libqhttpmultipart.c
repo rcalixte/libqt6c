@@ -75,8 +75,8 @@ void q_httpmultipart_on_meta_object(void* self, const QMetaObject* (*callback)()
     QHttpMultiPart_OnMetaObject((QHttpMultiPart*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_httpmultipart_qbase_meta_object(void* self) {
-    return QHttpMultiPart_QBaseMetaObject((QHttpMultiPart*)self);
+const QMetaObject* q_httpmultipart_super_meta_object(void* self) {
+    return QHttpMultiPart_SuperMetaObject((QHttpMultiPart*)self);
 }
 
 void* q_httpmultipart_metacast(void* self, const char* param1) {
@@ -87,8 +87,8 @@ void q_httpmultipart_on_metacast(void* self, void* (*callback)(void*, const char
     QHttpMultiPart_OnMetacast((QHttpMultiPart*)self, (intptr_t)callback);
 }
 
-void* q_httpmultipart_qbase_metacast(void* self, const char* param1) {
-    return QHttpMultiPart_QBaseMetacast((QHttpMultiPart*)self, param1);
+void* q_httpmultipart_super_metacast(void* self, const char* param1) {
+    return QHttpMultiPart_SuperMetacast((QHttpMultiPart*)self, param1);
 }
 
 int32_t q_httpmultipart_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -99,8 +99,8 @@ void q_httpmultipart_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QHttpMultiPart_OnMetacall((QHttpMultiPart*)self, (intptr_t)callback);
 }
 
-int32_t q_httpmultipart_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QHttpMultiPart_QBaseMetacall((QHttpMultiPart*)self, param1, param2, param3);
+int32_t q_httpmultipart_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QHttpMultiPart_SuperMetacall((QHttpMultiPart*)self, param1, param2, param3);
 }
 
 const char* q_httpmultipart_tr(const char* s) {
@@ -358,8 +358,8 @@ bool q_httpmultipart_event(void* self, void* event) {
     return QHttpMultiPart_Event((QHttpMultiPart*)self, (QEvent*)event);
 }
 
-bool q_httpmultipart_qbase_event(void* self, void* event) {
-    return QHttpMultiPart_QBaseEvent((QHttpMultiPart*)self, (QEvent*)event);
+bool q_httpmultipart_super_event(void* self, void* event) {
+    return QHttpMultiPart_SuperEvent((QHttpMultiPart*)self, (QEvent*)event);
 }
 
 void q_httpmultipart_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ bool q_httpmultipart_event_filter(void* self, void* watched, void* event) {
     return QHttpMultiPart_EventFilter((QHttpMultiPart*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_httpmultipart_qbase_event_filter(void* self, void* watched, void* event) {
-    return QHttpMultiPart_QBaseEventFilter((QHttpMultiPart*)self, (QObject*)watched, (QEvent*)event);
+bool q_httpmultipart_super_event_filter(void* self, void* watched, void* event) {
+    return QHttpMultiPart_SuperEventFilter((QHttpMultiPart*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_httpmultipart_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -382,8 +382,8 @@ void q_httpmultipart_timer_event(void* self, void* event) {
     QHttpMultiPart_TimerEvent((QHttpMultiPart*)self, (QTimerEvent*)event);
 }
 
-void q_httpmultipart_qbase_timer_event(void* self, void* event) {
-    QHttpMultiPart_QBaseTimerEvent((QHttpMultiPart*)self, (QTimerEvent*)event);
+void q_httpmultipart_super_timer_event(void* self, void* event) {
+    QHttpMultiPart_SuperTimerEvent((QHttpMultiPart*)self, (QTimerEvent*)event);
 }
 
 void q_httpmultipart_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -394,8 +394,8 @@ void q_httpmultipart_child_event(void* self, void* event) {
     QHttpMultiPart_ChildEvent((QHttpMultiPart*)self, (QChildEvent*)event);
 }
 
-void q_httpmultipart_qbase_child_event(void* self, void* event) {
-    QHttpMultiPart_QBaseChildEvent((QHttpMultiPart*)self, (QChildEvent*)event);
+void q_httpmultipart_super_child_event(void* self, void* event) {
+    QHttpMultiPart_SuperChildEvent((QHttpMultiPart*)self, (QChildEvent*)event);
 }
 
 void q_httpmultipart_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -406,8 +406,8 @@ void q_httpmultipart_custom_event(void* self, void* event) {
     QHttpMultiPart_CustomEvent((QHttpMultiPart*)self, (QEvent*)event);
 }
 
-void q_httpmultipart_qbase_custom_event(void* self, void* event) {
-    QHttpMultiPart_QBaseCustomEvent((QHttpMultiPart*)self, (QEvent*)event);
+void q_httpmultipart_super_custom_event(void* self, void* event) {
+    QHttpMultiPart_SuperCustomEvent((QHttpMultiPart*)self, (QEvent*)event);
 }
 
 void q_httpmultipart_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -418,8 +418,8 @@ void q_httpmultipart_connect_notify(void* self, void* signal) {
     QHttpMultiPart_ConnectNotify((QHttpMultiPart*)self, (QMetaMethod*)signal);
 }
 
-void q_httpmultipart_qbase_connect_notify(void* self, void* signal) {
-    QHttpMultiPart_QBaseConnectNotify((QHttpMultiPart*)self, (QMetaMethod*)signal);
+void q_httpmultipart_super_connect_notify(void* self, void* signal) {
+    QHttpMultiPart_SuperConnectNotify((QHttpMultiPart*)self, (QMetaMethod*)signal);
 }
 
 void q_httpmultipart_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -430,8 +430,8 @@ void q_httpmultipart_disconnect_notify(void* self, void* signal) {
     QHttpMultiPart_DisconnectNotify((QHttpMultiPart*)self, (QMetaMethod*)signal);
 }
 
-void q_httpmultipart_qbase_disconnect_notify(void* self, void* signal) {
-    QHttpMultiPart_QBaseDisconnectNotify((QHttpMultiPart*)self, (QMetaMethod*)signal);
+void q_httpmultipart_super_disconnect_notify(void* self, void* signal) {
+    QHttpMultiPart_SuperDisconnectNotify((QHttpMultiPart*)self, (QMetaMethod*)signal);
 }
 
 void q_httpmultipart_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -442,8 +442,8 @@ QObject* q_httpmultipart_sender(void* self) {
     return QHttpMultiPart_Sender((QHttpMultiPart*)self);
 }
 
-QObject* q_httpmultipart_qbase_sender(void* self) {
-    return QHttpMultiPart_QBaseSender((QHttpMultiPart*)self);
+QObject* q_httpmultipart_super_sender(void* self) {
+    return QHttpMultiPart_SuperSender((QHttpMultiPart*)self);
 }
 
 void q_httpmultipart_on_sender(void* self, QObject* (*callback)()) {
@@ -454,8 +454,8 @@ int32_t q_httpmultipart_sender_signal_index(void* self) {
     return QHttpMultiPart_SenderSignalIndex((QHttpMultiPart*)self);
 }
 
-int32_t q_httpmultipart_qbase_sender_signal_index(void* self) {
-    return QHttpMultiPart_QBaseSenderSignalIndex((QHttpMultiPart*)self);
+int32_t q_httpmultipart_super_sender_signal_index(void* self) {
+    return QHttpMultiPart_SuperSenderSignalIndex((QHttpMultiPart*)self);
 }
 
 void q_httpmultipart_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -466,8 +466,8 @@ int32_t q_httpmultipart_receivers(void* self, const char* signal) {
     return QHttpMultiPart_Receivers((QHttpMultiPart*)self, signal);
 }
 
-int32_t q_httpmultipart_qbase_receivers(void* self, const char* signal) {
-    return QHttpMultiPart_QBaseReceivers((QHttpMultiPart*)self, signal);
+int32_t q_httpmultipart_super_receivers(void* self, const char* signal) {
+    return QHttpMultiPart_SuperReceivers((QHttpMultiPart*)self, signal);
 }
 
 void q_httpmultipart_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -478,8 +478,8 @@ bool q_httpmultipart_is_signal_connected(void* self, void* signal) {
     return QHttpMultiPart_IsSignalConnected((QHttpMultiPart*)self, (QMetaMethod*)signal);
 }
 
-bool q_httpmultipart_qbase_is_signal_connected(void* self, void* signal) {
-    return QHttpMultiPart_QBaseIsSignalConnected((QHttpMultiPart*)self, (QMetaMethod*)signal);
+bool q_httpmultipart_super_is_signal_connected(void* self, void* signal) {
+    return QHttpMultiPart_SuperIsSignalConnected((QHttpMultiPart*)self, (QMetaMethod*)signal);
 }
 
 void q_httpmultipart_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

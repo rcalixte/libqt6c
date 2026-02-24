@@ -26,8 +26,8 @@ void q_gridlayout_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QGridLayout_OnMetaObject((QGridLayout*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_gridlayout_qbase_meta_object(void* self) {
-    return QGridLayout_QBaseMetaObject((QGridLayout*)self);
+const QMetaObject* q_gridlayout_super_meta_object(void* self) {
+    return QGridLayout_SuperMetaObject((QGridLayout*)self);
 }
 
 void* q_gridlayout_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_gridlayout_on_metacast(void* self, void* (*callback)(void*, const char*))
     QGridLayout_OnMetacast((QGridLayout*)self, (intptr_t)callback);
 }
 
-void* q_gridlayout_qbase_metacast(void* self, const char* param1) {
-    return QGridLayout_QBaseMetacast((QGridLayout*)self, param1);
+void* q_gridlayout_super_metacast(void* self, const char* param1) {
+    return QGridLayout_SuperMetacast((QGridLayout*)self, param1);
 }
 
 int32_t q_gridlayout_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_gridlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QGridLayout_OnMetacall((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGridLayout_QBaseMetacall((QGridLayout*)self, param1, param2, param3);
+int32_t q_gridlayout_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGridLayout_SuperMetacall((QGridLayout*)self, param1, param2, param3);
 }
 
 const char* q_gridlayout_tr(const char* s) {
@@ -69,8 +69,8 @@ void q_gridlayout_on_size_hint(void* self, QSize* (*callback)()) {
     QGridLayout_OnSizeHint((QGridLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_gridlayout_qbase_size_hint(void* self) {
-    return QGridLayout_QBaseSizeHint((QGridLayout*)self);
+QSize* q_gridlayout_super_size_hint(void* self) {
+    return QGridLayout_SuperSizeHint((QGridLayout*)self);
 }
 
 QSize* q_gridlayout_minimum_size(void* self) {
@@ -81,8 +81,8 @@ void q_gridlayout_on_minimum_size(void* self, QSize* (*callback)()) {
     QGridLayout_OnMinimumSize((QGridLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_gridlayout_qbase_minimum_size(void* self) {
-    return QGridLayout_QBaseMinimumSize((QGridLayout*)self);
+QSize* q_gridlayout_super_minimum_size(void* self) {
+    return QGridLayout_SuperMinimumSize((QGridLayout*)self);
 }
 
 QSize* q_gridlayout_maximum_size(void* self) {
@@ -93,8 +93,8 @@ void q_gridlayout_on_maximum_size(void* self, QSize* (*callback)()) {
     QGridLayout_OnMaximumSize((QGridLayout*)self, (intptr_t)callback);
 }
 
-QSize* q_gridlayout_qbase_maximum_size(void* self) {
-    return QGridLayout_QBaseMaximumSize((QGridLayout*)self);
+QSize* q_gridlayout_super_maximum_size(void* self) {
+    return QGridLayout_SuperMaximumSize((QGridLayout*)self);
 }
 
 void q_gridlayout_set_horizontal_spacing(void* self, int spacing) {
@@ -121,8 +121,8 @@ void q_gridlayout_on_set_spacing(void* self, void (*callback)(void*, int)) {
     QGridLayout_OnSetSpacing((QGridLayout*)self, (intptr_t)callback);
 }
 
-void q_gridlayout_qbase_set_spacing(void* self, int spacing) {
-    QGridLayout_QBaseSetSpacing((QGridLayout*)self, spacing);
+void q_gridlayout_super_set_spacing(void* self, int spacing) {
+    QGridLayout_SuperSetSpacing((QGridLayout*)self, spacing);
 }
 
 int32_t q_gridlayout_spacing(void* self) {
@@ -133,8 +133,8 @@ void q_gridlayout_on_spacing(void* self, int32_t (*callback)()) {
     QGridLayout_OnSpacing((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_spacing(void* self) {
-    return QGridLayout_QBaseSpacing((QGridLayout*)self);
+int32_t q_gridlayout_super_spacing(void* self) {
+    return QGridLayout_SuperSpacing((QGridLayout*)self);
 }
 
 void q_gridlayout_set_row_stretch(void* self, int row, int stretch) {
@@ -189,8 +189,8 @@ void q_gridlayout_on_has_height_for_width(void* self, bool (*callback)()) {
     QGridLayout_OnHasHeightForWidth((QGridLayout*)self, (intptr_t)callback);
 }
 
-bool q_gridlayout_qbase_has_height_for_width(void* self) {
-    return QGridLayout_QBaseHasHeightForWidth((QGridLayout*)self);
+bool q_gridlayout_super_has_height_for_width(void* self) {
+    return QGridLayout_SuperHasHeightForWidth((QGridLayout*)self);
 }
 
 int32_t q_gridlayout_height_for_width(void* self, int param1) {
@@ -201,8 +201,8 @@ void q_gridlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int
     QGridLayout_OnHeightForWidth((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_height_for_width(void* self, int param1) {
-    return QGridLayout_QBaseHeightForWidth((QGridLayout*)self, param1);
+int32_t q_gridlayout_super_height_for_width(void* self, int param1) {
+    return QGridLayout_SuperHeightForWidth((QGridLayout*)self, param1);
 }
 
 int32_t q_gridlayout_minimum_height_for_width(void* self, int param1) {
@@ -213,8 +213,8 @@ void q_gridlayout_on_minimum_height_for_width(void* self, int32_t (*callback)(vo
     QGridLayout_OnMinimumHeightForWidth((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_minimum_height_for_width(void* self, int param1) {
-    return QGridLayout_QBaseMinimumHeightForWidth((QGridLayout*)self, param1);
+int32_t q_gridlayout_super_minimum_height_for_width(void* self, int param1) {
+    return QGridLayout_SuperMinimumHeightForWidth((QGridLayout*)self, param1);
 }
 
 int32_t q_gridlayout_expanding_directions(void* self) {
@@ -225,8 +225,8 @@ void q_gridlayout_on_expanding_directions(void* self, int32_t (*callback)()) {
     QGridLayout_OnExpandingDirections((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_expanding_directions(void* self) {
-    return QGridLayout_QBaseExpandingDirections((QGridLayout*)self);
+int32_t q_gridlayout_super_expanding_directions(void* self) {
+    return QGridLayout_SuperExpandingDirections((QGridLayout*)self);
 }
 
 void q_gridlayout_invalidate(void* self) {
@@ -237,8 +237,8 @@ void q_gridlayout_on_invalidate(void* self, void (*callback)()) {
     QGridLayout_OnInvalidate((QGridLayout*)self, (intptr_t)callback);
 }
 
-void q_gridlayout_qbase_invalidate(void* self) {
-    QGridLayout_QBaseInvalidate((QGridLayout*)self);
+void q_gridlayout_super_invalidate(void* self) {
+    QGridLayout_SuperInvalidate((QGridLayout*)self);
 }
 
 void q_gridlayout_add_widget(void* self, void* w) {
@@ -277,8 +277,8 @@ void q_gridlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int)) {
     QGridLayout_OnItemAt((QGridLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_gridlayout_qbase_item_at(void* self, int index) {
-    return QGridLayout_QBaseItemAt((QGridLayout*)self, index);
+QLayoutItem* q_gridlayout_super_item_at(void* self, int index) {
+    return QGridLayout_SuperItemAt((QGridLayout*)self, index);
 }
 
 QLayoutItem* q_gridlayout_item_at_position(void* self, int row, int column) {
@@ -293,8 +293,8 @@ void q_gridlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int)) {
     QGridLayout_OnTakeAt((QGridLayout*)self, (intptr_t)callback);
 }
 
-QLayoutItem* q_gridlayout_qbase_take_at(void* self, int index) {
-    return QGridLayout_QBaseTakeAt((QGridLayout*)self, index);
+QLayoutItem* q_gridlayout_super_take_at(void* self, int index) {
+    return QGridLayout_SuperTakeAt((QGridLayout*)self, index);
 }
 
 int32_t q_gridlayout_count(void* self) {
@@ -305,8 +305,8 @@ void q_gridlayout_on_count(void* self, int32_t (*callback)()) {
     QGridLayout_OnCount((QGridLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_count(void* self) {
-    return QGridLayout_QBaseCount((QGridLayout*)self);
+int32_t q_gridlayout_super_count(void* self) {
+    return QGridLayout_SuperCount((QGridLayout*)self);
 }
 
 void q_gridlayout_set_geometry(void* self, void* geometry) {
@@ -317,8 +317,8 @@ void q_gridlayout_on_set_geometry(void* self, void (*callback)(void*, void*)) {
     QGridLayout_OnSetGeometry((QGridLayout*)self, (intptr_t)callback);
 }
 
-void q_gridlayout_qbase_set_geometry(void* self, void* geometry) {
-    QGridLayout_QBaseSetGeometry((QGridLayout*)self, (QRect*)geometry);
+void q_gridlayout_super_set_geometry(void* self, void* geometry) {
+    QGridLayout_SuperSetGeometry((QGridLayout*)self, (QRect*)geometry);
 }
 
 void q_gridlayout_add_item(void* self, void* item, int row, int column) {
@@ -341,8 +341,8 @@ void q_gridlayout_on_add_item2(void* self, void (*callback)(void*, void*)) {
     QGridLayout_OnAddItem2((QGridLayout*)self, (intptr_t)callback);
 }
 
-void q_gridlayout_qbase_add_item2(void* self, void* param1) {
-    QGridLayout_QBaseAddItem2((QGridLayout*)self, (QLayoutItem*)param1);
+void q_gridlayout_super_add_item2(void* self, void* param1) {
+    QGridLayout_SuperAddItem2((QGridLayout*)self, (QLayoutItem*)param1);
 }
 
 const char* q_gridlayout_tr2(const char* s, const char* c) {
@@ -463,8 +463,8 @@ void q_gridlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*)) {
     QLayout_OnIndexOf2((QLayout*)self, (intptr_t)callback);
 }
 
-int32_t q_gridlayout_qbase_index_of2(void* self, void* param1) {
-    return QLayout_QBaseIndexOf2((QLayout*)self, (QLayoutItem*)param1);
+int32_t q_gridlayout_super_index_of2(void* self, void* param1) {
+    return QLayout_SuperIndexOf2((QLayout*)self, (QLayoutItem*)param1);
 }
 
 int32_t q_gridlayout_total_minimum_height_for_width(void* self, int w) {
@@ -718,8 +718,8 @@ QRect* q_gridlayout_geometry(void* self) {
     return QGridLayout_Geometry((QGridLayout*)self);
 }
 
-QRect* q_gridlayout_qbase_geometry(void* self) {
-    return QGridLayout_QBaseGeometry((QGridLayout*)self);
+QRect* q_gridlayout_super_geometry(void* self) {
+    return QGridLayout_SuperGeometry((QGridLayout*)self);
 }
 
 void q_gridlayout_on_geometry(void* self, QRect* (*callback)()) {
@@ -730,8 +730,8 @@ int32_t q_gridlayout_index_of(void* self, void* param1) {
     return QGridLayout_IndexOf((QGridLayout*)self, (QWidget*)param1);
 }
 
-int32_t q_gridlayout_qbase_index_of(void* self, void* param1) {
-    return QGridLayout_QBaseIndexOf((QGridLayout*)self, (QWidget*)param1);
+int32_t q_gridlayout_super_index_of(void* self, void* param1) {
+    return QGridLayout_SuperIndexOf((QGridLayout*)self, (QWidget*)param1);
 }
 
 void q_gridlayout_on_index_of(void* self, int32_t (*callback)(void*, void*)) {
@@ -742,8 +742,8 @@ bool q_gridlayout_is_empty(void* self) {
     return QGridLayout_IsEmpty((QGridLayout*)self);
 }
 
-bool q_gridlayout_qbase_is_empty(void* self) {
-    return QGridLayout_QBaseIsEmpty((QGridLayout*)self);
+bool q_gridlayout_super_is_empty(void* self) {
+    return QGridLayout_SuperIsEmpty((QGridLayout*)self);
 }
 
 void q_gridlayout_on_is_empty(void* self, bool (*callback)()) {
@@ -754,8 +754,8 @@ int32_t q_gridlayout_control_types(void* self) {
     return QGridLayout_ControlTypes((QGridLayout*)self);
 }
 
-int32_t q_gridlayout_qbase_control_types(void* self) {
-    return QGridLayout_QBaseControlTypes((QGridLayout*)self);
+int32_t q_gridlayout_super_control_types(void* self) {
+    return QGridLayout_SuperControlTypes((QGridLayout*)self);
 }
 
 void q_gridlayout_on_control_types(void* self, int32_t (*callback)()) {
@@ -766,8 +766,8 @@ QLayoutItem* q_gridlayout_replace_widget(void* self, void* from, void* to, int32
     return QGridLayout_ReplaceWidget((QGridLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
-QLayoutItem* q_gridlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options) {
-    return QGridLayout_QBaseReplaceWidget((QGridLayout*)self, (QWidget*)from, (QWidget*)to, options);
+QLayoutItem* q_gridlayout_super_replace_widget(void* self, void* from, void* to, int32_t options) {
+    return QGridLayout_SuperReplaceWidget((QGridLayout*)self, (QWidget*)from, (QWidget*)to, options);
 }
 
 void q_gridlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void*, void*, void*, int32_t)) {
@@ -778,8 +778,8 @@ QLayout* q_gridlayout_layout(void* self) {
     return QGridLayout_Layout((QGridLayout*)self);
 }
 
-QLayout* q_gridlayout_qbase_layout(void* self) {
-    return QGridLayout_QBaseLayout((QGridLayout*)self);
+QLayout* q_gridlayout_super_layout(void* self) {
+    return QGridLayout_SuperLayout((QGridLayout*)self);
 }
 
 void q_gridlayout_on_layout(void* self, QLayout* (*callback)()) {
@@ -790,8 +790,8 @@ void q_gridlayout_child_event(void* self, void* e) {
     QGridLayout_ChildEvent((QGridLayout*)self, (QChildEvent*)e);
 }
 
-void q_gridlayout_qbase_child_event(void* self, void* e) {
-    QGridLayout_QBaseChildEvent((QGridLayout*)self, (QChildEvent*)e);
+void q_gridlayout_super_child_event(void* self, void* e) {
+    QGridLayout_SuperChildEvent((QGridLayout*)self, (QChildEvent*)e);
 }
 
 void q_gridlayout_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -802,8 +802,8 @@ bool q_gridlayout_event(void* self, void* event) {
     return QGridLayout_Event((QGridLayout*)self, (QEvent*)event);
 }
 
-bool q_gridlayout_qbase_event(void* self, void* event) {
-    return QGridLayout_QBaseEvent((QGridLayout*)self, (QEvent*)event);
+bool q_gridlayout_super_event(void* self, void* event) {
+    return QGridLayout_SuperEvent((QGridLayout*)self, (QEvent*)event);
 }
 
 void q_gridlayout_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -814,8 +814,8 @@ bool q_gridlayout_event_filter(void* self, void* watched, void* event) {
     return QGridLayout_EventFilter((QGridLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_gridlayout_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGridLayout_QBaseEventFilter((QGridLayout*)self, (QObject*)watched, (QEvent*)event);
+bool q_gridlayout_super_event_filter(void* self, void* watched, void* event) {
+    return QGridLayout_SuperEventFilter((QGridLayout*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_gridlayout_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -826,8 +826,8 @@ void q_gridlayout_timer_event(void* self, void* event) {
     QGridLayout_TimerEvent((QGridLayout*)self, (QTimerEvent*)event);
 }
 
-void q_gridlayout_qbase_timer_event(void* self, void* event) {
-    QGridLayout_QBaseTimerEvent((QGridLayout*)self, (QTimerEvent*)event);
+void q_gridlayout_super_timer_event(void* self, void* event) {
+    QGridLayout_SuperTimerEvent((QGridLayout*)self, (QTimerEvent*)event);
 }
 
 void q_gridlayout_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -838,8 +838,8 @@ void q_gridlayout_custom_event(void* self, void* event) {
     QGridLayout_CustomEvent((QGridLayout*)self, (QEvent*)event);
 }
 
-void q_gridlayout_qbase_custom_event(void* self, void* event) {
-    QGridLayout_QBaseCustomEvent((QGridLayout*)self, (QEvent*)event);
+void q_gridlayout_super_custom_event(void* self, void* event) {
+    QGridLayout_SuperCustomEvent((QGridLayout*)self, (QEvent*)event);
 }
 
 void q_gridlayout_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -850,8 +850,8 @@ void q_gridlayout_connect_notify(void* self, void* signal) {
     QGridLayout_ConnectNotify((QGridLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_gridlayout_qbase_connect_notify(void* self, void* signal) {
-    QGridLayout_QBaseConnectNotify((QGridLayout*)self, (QMetaMethod*)signal);
+void q_gridlayout_super_connect_notify(void* self, void* signal) {
+    QGridLayout_SuperConnectNotify((QGridLayout*)self, (QMetaMethod*)signal);
 }
 
 void q_gridlayout_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -862,8 +862,8 @@ void q_gridlayout_disconnect_notify(void* self, void* signal) {
     QGridLayout_DisconnectNotify((QGridLayout*)self, (QMetaMethod*)signal);
 }
 
-void q_gridlayout_qbase_disconnect_notify(void* self, void* signal) {
-    QGridLayout_QBaseDisconnectNotify((QGridLayout*)self, (QMetaMethod*)signal);
+void q_gridlayout_super_disconnect_notify(void* self, void* signal) {
+    QGridLayout_SuperDisconnectNotify((QGridLayout*)self, (QMetaMethod*)signal);
 }
 
 void q_gridlayout_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -874,8 +874,8 @@ QWidget* q_gridlayout_widget(void* self) {
     return QGridLayout_Widget((QGridLayout*)self);
 }
 
-QWidget* q_gridlayout_qbase_widget(void* self) {
-    return QGridLayout_QBaseWidget((QGridLayout*)self);
+QWidget* q_gridlayout_super_widget(void* self) {
+    return QGridLayout_SuperWidget((QGridLayout*)self);
 }
 
 void q_gridlayout_on_widget(void* self, QWidget* (*callback)()) {
@@ -886,8 +886,8 @@ QSpacerItem* q_gridlayout_spacer_item(void* self) {
     return QGridLayout_SpacerItem((QGridLayout*)self);
 }
 
-QSpacerItem* q_gridlayout_qbase_spacer_item(void* self) {
-    return QGridLayout_QBaseSpacerItem((QGridLayout*)self);
+QSpacerItem* q_gridlayout_super_spacer_item(void* self) {
+    return QGridLayout_SuperSpacerItem((QGridLayout*)self);
 }
 
 void q_gridlayout_on_spacer_item(void* self, QSpacerItem* (*callback)()) {
@@ -898,8 +898,8 @@ void q_gridlayout_widget_event(void* self, void* param1) {
     QGridLayout_WidgetEvent((QGridLayout*)self, (QEvent*)param1);
 }
 
-void q_gridlayout_qbase_widget_event(void* self, void* param1) {
-    QGridLayout_QBaseWidgetEvent((QGridLayout*)self, (QEvent*)param1);
+void q_gridlayout_super_widget_event(void* self, void* param1) {
+    QGridLayout_SuperWidgetEvent((QGridLayout*)self, (QEvent*)param1);
 }
 
 void q_gridlayout_on_widget_event(void* self, void (*callback)(void*, void*)) {
@@ -910,8 +910,8 @@ void q_gridlayout_add_child_layout(void* self, void* l) {
     QGridLayout_AddChildLayout((QGridLayout*)self, (QLayout*)l);
 }
 
-void q_gridlayout_qbase_add_child_layout(void* self, void* l) {
-    QGridLayout_QBaseAddChildLayout((QGridLayout*)self, (QLayout*)l);
+void q_gridlayout_super_add_child_layout(void* self, void* l) {
+    QGridLayout_SuperAddChildLayout((QGridLayout*)self, (QLayout*)l);
 }
 
 void q_gridlayout_on_add_child_layout(void* self, void (*callback)(void*, void*)) {
@@ -922,8 +922,8 @@ void q_gridlayout_add_child_widget(void* self, void* w) {
     QGridLayout_AddChildWidget((QGridLayout*)self, (QWidget*)w);
 }
 
-void q_gridlayout_qbase_add_child_widget(void* self, void* w) {
-    QGridLayout_QBaseAddChildWidget((QGridLayout*)self, (QWidget*)w);
+void q_gridlayout_super_add_child_widget(void* self, void* w) {
+    QGridLayout_SuperAddChildWidget((QGridLayout*)self, (QWidget*)w);
 }
 
 void q_gridlayout_on_add_child_widget(void* self, void (*callback)(void*, void*)) {
@@ -934,8 +934,8 @@ bool q_gridlayout_adopt_layout(void* self, void* layout) {
     return QGridLayout_AdoptLayout((QGridLayout*)self, (QLayout*)layout);
 }
 
-bool q_gridlayout_qbase_adopt_layout(void* self, void* layout) {
-    return QGridLayout_QBaseAdoptLayout((QGridLayout*)self, (QLayout*)layout);
+bool q_gridlayout_super_adopt_layout(void* self, void* layout) {
+    return QGridLayout_SuperAdoptLayout((QGridLayout*)self, (QLayout*)layout);
 }
 
 void q_gridlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*)) {
@@ -946,8 +946,8 @@ QRect* q_gridlayout_alignment_rect(void* self, void* param1) {
     return QGridLayout_AlignmentRect((QGridLayout*)self, (QRect*)param1);
 }
 
-QRect* q_gridlayout_qbase_alignment_rect(void* self, void* param1) {
-    return QGridLayout_QBaseAlignmentRect((QGridLayout*)self, (QRect*)param1);
+QRect* q_gridlayout_super_alignment_rect(void* self, void* param1) {
+    return QGridLayout_SuperAlignmentRect((QGridLayout*)self, (QRect*)param1);
 }
 
 void q_gridlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*)) {
@@ -958,8 +958,8 @@ QObject* q_gridlayout_sender(void* self) {
     return QGridLayout_Sender((QGridLayout*)self);
 }
 
-QObject* q_gridlayout_qbase_sender(void* self) {
-    return QGridLayout_QBaseSender((QGridLayout*)self);
+QObject* q_gridlayout_super_sender(void* self) {
+    return QGridLayout_SuperSender((QGridLayout*)self);
 }
 
 void q_gridlayout_on_sender(void* self, QObject* (*callback)()) {
@@ -970,8 +970,8 @@ int32_t q_gridlayout_sender_signal_index(void* self) {
     return QGridLayout_SenderSignalIndex((QGridLayout*)self);
 }
 
-int32_t q_gridlayout_qbase_sender_signal_index(void* self) {
-    return QGridLayout_QBaseSenderSignalIndex((QGridLayout*)self);
+int32_t q_gridlayout_super_sender_signal_index(void* self) {
+    return QGridLayout_SuperSenderSignalIndex((QGridLayout*)self);
 }
 
 void q_gridlayout_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -982,8 +982,8 @@ int32_t q_gridlayout_receivers(void* self, const char* signal) {
     return QGridLayout_Receivers((QGridLayout*)self, signal);
 }
 
-int32_t q_gridlayout_qbase_receivers(void* self, const char* signal) {
-    return QGridLayout_QBaseReceivers((QGridLayout*)self, signal);
+int32_t q_gridlayout_super_receivers(void* self, const char* signal) {
+    return QGridLayout_SuperReceivers((QGridLayout*)self, signal);
 }
 
 void q_gridlayout_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -994,8 +994,8 @@ bool q_gridlayout_is_signal_connected(void* self, void* signal) {
     return QGridLayout_IsSignalConnected((QGridLayout*)self, (QMetaMethod*)signal);
 }
 
-bool q_gridlayout_qbase_is_signal_connected(void* self, void* signal) {
-    return QGridLayout_QBaseIsSignalConnected((QGridLayout*)self, (QMetaMethod*)signal);
+bool q_gridlayout_super_is_signal_connected(void* self, void* signal) {
+    return QGridLayout_SuperIsSignalConnected((QGridLayout*)self, (QMetaMethod*)signal);
 }
 
 void q_gridlayout_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

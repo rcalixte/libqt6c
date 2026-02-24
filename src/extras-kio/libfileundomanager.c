@@ -376,8 +376,8 @@ void k_io__fileundomanager__uiinterface_on_job_error(void* self, void (*callback
     KIO__FileUndoManager__UiInterface_OnJobError((KIO__FileUndoManager__UiInterface*)self, (intptr_t)callback);
 }
 
-void k_io__fileundomanager__uiinterface_qbase_job_error(void* self, void* job) {
-    KIO__FileUndoManager__UiInterface_QBaseJobError((KIO__FileUndoManager__UiInterface*)self, (KIO__Job*)job);
+void k_io__fileundomanager__uiinterface_super_job_error(void* self, void* job) {
+    KIO__FileUndoManager__UiInterface_SuperJobError((KIO__FileUndoManager__UiInterface*)self, (KIO__Job*)job);
 }
 
 bool k_io__fileundomanager__uiinterface_copied_file_was_modified(void* self, void* src, void* dest, void* srcTime, void* destTime) {
@@ -388,8 +388,8 @@ void k_io__fileundomanager__uiinterface_on_copied_file_was_modified(void* self, 
     KIO__FileUndoManager__UiInterface_OnCopiedFileWasModified((KIO__FileUndoManager__UiInterface*)self, (intptr_t)callback);
 }
 
-bool k_io__fileundomanager__uiinterface_qbase_copied_file_was_modified(void* self, void* src, void* dest, void* srcTime, void* destTime) {
-    return KIO__FileUndoManager__UiInterface_QBaseCopiedFileWasModified((KIO__FileUndoManager__UiInterface*)self, (QUrl*)src, (QUrl*)dest, (QDateTime*)srcTime, (QDateTime*)destTime);
+bool k_io__fileundomanager__uiinterface_super_copied_file_was_modified(void* self, void* src, void* dest, void* srcTime, void* destTime) {
+    return KIO__FileUndoManager__UiInterface_SuperCopiedFileWasModified((KIO__FileUndoManager__UiInterface*)self, (QUrl*)src, (QUrl*)dest, (QDateTime*)srcTime, (QDateTime*)destTime);
 }
 
 void k_io__fileundomanager__uiinterface_virtual_hook(void* self, int id, void* data) {
@@ -400,8 +400,8 @@ void k_io__fileundomanager__uiinterface_on_virtual_hook(void* self, void (*callb
     KIO__FileUndoManager__UiInterface_OnVirtualHook((KIO__FileUndoManager__UiInterface*)self, (intptr_t)callback);
 }
 
-void k_io__fileundomanager__uiinterface_qbase_virtual_hook(void* self, int id, void* data) {
-    KIO__FileUndoManager__UiInterface_QBaseVirtualHook((KIO__FileUndoManager__UiInterface*)self, id, data);
+void k_io__fileundomanager__uiinterface_super_virtual_hook(void* self, int id, void* data) {
+    KIO__FileUndoManager__UiInterface_SuperVirtualHook((KIO__FileUndoManager__UiInterface*)self, id, data);
 }
 
 void k_io__fileundomanager__uiinterface_delete(void* self) {

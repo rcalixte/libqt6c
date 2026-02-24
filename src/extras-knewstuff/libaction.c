@@ -19,8 +19,8 @@ void k_nswidgets__action_on_meta_object(void* self, const QMetaObject* (*callbac
     KNSWidgets__Action_OnMetaObject((KNSWidgets__Action*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nswidgets__action_qbase_meta_object(void* self) {
-    return KNSWidgets__Action_QBaseMetaObject((KNSWidgets__Action*)self);
+const QMetaObject* k_nswidgets__action_super_meta_object(void* self) {
+    return KNSWidgets__Action_SuperMetaObject((KNSWidgets__Action*)self);
 }
 
 void* k_nswidgets__action_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void k_nswidgets__action_on_metacast(void* self, void* (*callback)(void*, const 
     KNSWidgets__Action_OnMetacast((KNSWidgets__Action*)self, (intptr_t)callback);
 }
 
-void* k_nswidgets__action_qbase_metacast(void* self, const char* param1) {
-    return KNSWidgets__Action_QBaseMetacast((KNSWidgets__Action*)self, param1);
+void* k_nswidgets__action_super_metacast(void* self, const char* param1) {
+    return KNSWidgets__Action_SuperMetacast((KNSWidgets__Action*)self, param1);
 }
 
 int32_t k_nswidgets__action_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void k_nswidgets__action_on_metacall(void* self, int32_t (*callback)(void*, int3
     KNSWidgets__Action_OnMetacall((KNSWidgets__Action*)self, (intptr_t)callback);
 }
 
-int32_t k_nswidgets__action_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSWidgets__Action_QBaseMetacall((KNSWidgets__Action*)self, param1, param2, param3);
+int32_t k_nswidgets__action_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSWidgets__Action_SuperMetacall((KNSWidgets__Action*)self, param1, param2, param3);
 }
 
 const char* k_nswidgets__action_tr(const char* s) {
@@ -588,8 +588,8 @@ bool k_nswidgets__action_event(void* self, void* param1) {
     return KNSWidgets__Action_Event((KNSWidgets__Action*)self, (QEvent*)param1);
 }
 
-bool k_nswidgets__action_qbase_event(void* self, void* param1) {
-    return KNSWidgets__Action_QBaseEvent((KNSWidgets__Action*)self, (QEvent*)param1);
+bool k_nswidgets__action_super_event(void* self, void* param1) {
+    return KNSWidgets__Action_SuperEvent((KNSWidgets__Action*)self, (QEvent*)param1);
 }
 
 void k_nswidgets__action_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -600,8 +600,8 @@ bool k_nswidgets__action_event_filter(void* self, void* watched, void* event) {
     return KNSWidgets__Action_EventFilter((KNSWidgets__Action*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_nswidgets__action_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNSWidgets__Action_QBaseEventFilter((KNSWidgets__Action*)self, (QObject*)watched, (QEvent*)event);
+bool k_nswidgets__action_super_event_filter(void* self, void* watched, void* event) {
+    return KNSWidgets__Action_SuperEventFilter((KNSWidgets__Action*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_nswidgets__action_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -612,8 +612,8 @@ void k_nswidgets__action_timer_event(void* self, void* event) {
     KNSWidgets__Action_TimerEvent((KNSWidgets__Action*)self, (QTimerEvent*)event);
 }
 
-void k_nswidgets__action_qbase_timer_event(void* self, void* event) {
-    KNSWidgets__Action_QBaseTimerEvent((KNSWidgets__Action*)self, (QTimerEvent*)event);
+void k_nswidgets__action_super_timer_event(void* self, void* event) {
+    KNSWidgets__Action_SuperTimerEvent((KNSWidgets__Action*)self, (QTimerEvent*)event);
 }
 
 void k_nswidgets__action_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -624,8 +624,8 @@ void k_nswidgets__action_child_event(void* self, void* event) {
     KNSWidgets__Action_ChildEvent((KNSWidgets__Action*)self, (QChildEvent*)event);
 }
 
-void k_nswidgets__action_qbase_child_event(void* self, void* event) {
-    KNSWidgets__Action_QBaseChildEvent((KNSWidgets__Action*)self, (QChildEvent*)event);
+void k_nswidgets__action_super_child_event(void* self, void* event) {
+    KNSWidgets__Action_SuperChildEvent((KNSWidgets__Action*)self, (QChildEvent*)event);
 }
 
 void k_nswidgets__action_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -636,8 +636,8 @@ void k_nswidgets__action_custom_event(void* self, void* event) {
     KNSWidgets__Action_CustomEvent((KNSWidgets__Action*)self, (QEvent*)event);
 }
 
-void k_nswidgets__action_qbase_custom_event(void* self, void* event) {
-    KNSWidgets__Action_QBaseCustomEvent((KNSWidgets__Action*)self, (QEvent*)event);
+void k_nswidgets__action_super_custom_event(void* self, void* event) {
+    KNSWidgets__Action_SuperCustomEvent((KNSWidgets__Action*)self, (QEvent*)event);
 }
 
 void k_nswidgets__action_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -648,8 +648,8 @@ void k_nswidgets__action_connect_notify(void* self, void* signal) {
     KNSWidgets__Action_ConnectNotify((KNSWidgets__Action*)self, (QMetaMethod*)signal);
 }
 
-void k_nswidgets__action_qbase_connect_notify(void* self, void* signal) {
-    KNSWidgets__Action_QBaseConnectNotify((KNSWidgets__Action*)self, (QMetaMethod*)signal);
+void k_nswidgets__action_super_connect_notify(void* self, void* signal) {
+    KNSWidgets__Action_SuperConnectNotify((KNSWidgets__Action*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__action_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -660,8 +660,8 @@ void k_nswidgets__action_disconnect_notify(void* self, void* signal) {
     KNSWidgets__Action_DisconnectNotify((KNSWidgets__Action*)self, (QMetaMethod*)signal);
 }
 
-void k_nswidgets__action_qbase_disconnect_notify(void* self, void* signal) {
-    KNSWidgets__Action_QBaseDisconnectNotify((KNSWidgets__Action*)self, (QMetaMethod*)signal);
+void k_nswidgets__action_super_disconnect_notify(void* self, void* signal) {
+    KNSWidgets__Action_SuperDisconnectNotify((KNSWidgets__Action*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__action_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -672,8 +672,8 @@ QObject* k_nswidgets__action_sender(void* self) {
     return KNSWidgets__Action_Sender((KNSWidgets__Action*)self);
 }
 
-QObject* k_nswidgets__action_qbase_sender(void* self) {
-    return KNSWidgets__Action_QBaseSender((KNSWidgets__Action*)self);
+QObject* k_nswidgets__action_super_sender(void* self) {
+    return KNSWidgets__Action_SuperSender((KNSWidgets__Action*)self);
 }
 
 void k_nswidgets__action_on_sender(void* self, QObject* (*callback)()) {
@@ -684,8 +684,8 @@ int32_t k_nswidgets__action_sender_signal_index(void* self) {
     return KNSWidgets__Action_SenderSignalIndex((KNSWidgets__Action*)self);
 }
 
-int32_t k_nswidgets__action_qbase_sender_signal_index(void* self) {
-    return KNSWidgets__Action_QBaseSenderSignalIndex((KNSWidgets__Action*)self);
+int32_t k_nswidgets__action_super_sender_signal_index(void* self) {
+    return KNSWidgets__Action_SuperSenderSignalIndex((KNSWidgets__Action*)self);
 }
 
 void k_nswidgets__action_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -696,8 +696,8 @@ int32_t k_nswidgets__action_receivers(void* self, const char* signal) {
     return KNSWidgets__Action_Receivers((KNSWidgets__Action*)self, signal);
 }
 
-int32_t k_nswidgets__action_qbase_receivers(void* self, const char* signal) {
-    return KNSWidgets__Action_QBaseReceivers((KNSWidgets__Action*)self, signal);
+int32_t k_nswidgets__action_super_receivers(void* self, const char* signal) {
+    return KNSWidgets__Action_SuperReceivers((KNSWidgets__Action*)self, signal);
 }
 
 void k_nswidgets__action_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -708,8 +708,8 @@ bool k_nswidgets__action_is_signal_connected(void* self, void* signal) {
     return KNSWidgets__Action_IsSignalConnected((KNSWidgets__Action*)self, (QMetaMethod*)signal);
 }
 
-bool k_nswidgets__action_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSWidgets__Action_QBaseIsSignalConnected((KNSWidgets__Action*)self, (QMetaMethod*)signal);
+bool k_nswidgets__action_super_is_signal_connected(void* self, void* signal) {
+    return KNSWidgets__Action_SuperIsSignalConnected((KNSWidgets__Action*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__action_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

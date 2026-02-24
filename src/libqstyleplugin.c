@@ -22,8 +22,8 @@ void q_styleplugin_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QStylePlugin_OnMetaObject((QStylePlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_styleplugin_qbase_meta_object(void* self) {
-    return QStylePlugin_QBaseMetaObject((QStylePlugin*)self);
+const QMetaObject* q_styleplugin_super_meta_object(void* self) {
+    return QStylePlugin_SuperMetaObject((QStylePlugin*)self);
 }
 
 void* q_styleplugin_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_styleplugin_on_metacast(void* self, void* (*callback)(void*, const char*)
     QStylePlugin_OnMetacast((QStylePlugin*)self, (intptr_t)callback);
 }
 
-void* q_styleplugin_qbase_metacast(void* self, const char* param1) {
-    return QStylePlugin_QBaseMetacast((QStylePlugin*)self, param1);
+void* q_styleplugin_super_metacast(void* self, const char* param1) {
+    return QStylePlugin_SuperMetacast((QStylePlugin*)self, param1);
 }
 
 int32_t q_styleplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_styleplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QStylePlugin_OnMetacall((QStylePlugin*)self, (intptr_t)callback);
 }
 
-int32_t q_styleplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QStylePlugin_QBaseMetacall((QStylePlugin*)self, param1, param2, param3);
+int32_t q_styleplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QStylePlugin_SuperMetacall((QStylePlugin*)self, param1, param2, param3);
 }
 
 const char* q_styleplugin_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_styleplugin_on_create(void* self, QStyle* (*callback)(void*, const char*)
     QStylePlugin_OnCreate((QStylePlugin*)self, (intptr_t)callback);
 }
 
-QStyle* q_styleplugin_qbase_create(void* self, const char* key) {
-    return QStylePlugin_QBaseCreate((QStylePlugin*)self, qstring(key));
+QStyle* q_styleplugin_super_create(void* self, const char* key) {
+    return QStylePlugin_SuperCreate((QStylePlugin*)self, qstring(key));
 }
 
 const char* q_styleplugin_tr2(const char* s, const char* c) {
@@ -298,8 +298,8 @@ bool q_styleplugin_event(void* self, void* event) {
     return QStylePlugin_Event((QStylePlugin*)self, (QEvent*)event);
 }
 
-bool q_styleplugin_qbase_event(void* self, void* event) {
-    return QStylePlugin_QBaseEvent((QStylePlugin*)self, (QEvent*)event);
+bool q_styleplugin_super_event(void* self, void* event) {
+    return QStylePlugin_SuperEvent((QStylePlugin*)self, (QEvent*)event);
 }
 
 void q_styleplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -310,8 +310,8 @@ bool q_styleplugin_event_filter(void* self, void* watched, void* event) {
     return QStylePlugin_EventFilter((QStylePlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_styleplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return QStylePlugin_QBaseEventFilter((QStylePlugin*)self, (QObject*)watched, (QEvent*)event);
+bool q_styleplugin_super_event_filter(void* self, void* watched, void* event) {
+    return QStylePlugin_SuperEventFilter((QStylePlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_styleplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -322,8 +322,8 @@ void q_styleplugin_timer_event(void* self, void* event) {
     QStylePlugin_TimerEvent((QStylePlugin*)self, (QTimerEvent*)event);
 }
 
-void q_styleplugin_qbase_timer_event(void* self, void* event) {
-    QStylePlugin_QBaseTimerEvent((QStylePlugin*)self, (QTimerEvent*)event);
+void q_styleplugin_super_timer_event(void* self, void* event) {
+    QStylePlugin_SuperTimerEvent((QStylePlugin*)self, (QTimerEvent*)event);
 }
 
 void q_styleplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -334,8 +334,8 @@ void q_styleplugin_child_event(void* self, void* event) {
     QStylePlugin_ChildEvent((QStylePlugin*)self, (QChildEvent*)event);
 }
 
-void q_styleplugin_qbase_child_event(void* self, void* event) {
-    QStylePlugin_QBaseChildEvent((QStylePlugin*)self, (QChildEvent*)event);
+void q_styleplugin_super_child_event(void* self, void* event) {
+    QStylePlugin_SuperChildEvent((QStylePlugin*)self, (QChildEvent*)event);
 }
 
 void q_styleplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -346,8 +346,8 @@ void q_styleplugin_custom_event(void* self, void* event) {
     QStylePlugin_CustomEvent((QStylePlugin*)self, (QEvent*)event);
 }
 
-void q_styleplugin_qbase_custom_event(void* self, void* event) {
-    QStylePlugin_QBaseCustomEvent((QStylePlugin*)self, (QEvent*)event);
+void q_styleplugin_super_custom_event(void* self, void* event) {
+    QStylePlugin_SuperCustomEvent((QStylePlugin*)self, (QEvent*)event);
 }
 
 void q_styleplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ void q_styleplugin_connect_notify(void* self, void* signal) {
     QStylePlugin_ConnectNotify((QStylePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_styleplugin_qbase_connect_notify(void* self, void* signal) {
-    QStylePlugin_QBaseConnectNotify((QStylePlugin*)self, (QMetaMethod*)signal);
+void q_styleplugin_super_connect_notify(void* self, void* signal) {
+    QStylePlugin_SuperConnectNotify((QStylePlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_styleplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void q_styleplugin_disconnect_notify(void* self, void* signal) {
     QStylePlugin_DisconnectNotify((QStylePlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_styleplugin_qbase_disconnect_notify(void* self, void* signal) {
-    QStylePlugin_QBaseDisconnectNotify((QStylePlugin*)self, (QMetaMethod*)signal);
+void q_styleplugin_super_disconnect_notify(void* self, void* signal) {
+    QStylePlugin_SuperDisconnectNotify((QStylePlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_styleplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ QObject* q_styleplugin_sender(void* self) {
     return QStylePlugin_Sender((QStylePlugin*)self);
 }
 
-QObject* q_styleplugin_qbase_sender(void* self) {
-    return QStylePlugin_QBaseSender((QStylePlugin*)self);
+QObject* q_styleplugin_super_sender(void* self) {
+    return QStylePlugin_SuperSender((QStylePlugin*)self);
 }
 
 void q_styleplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -394,8 +394,8 @@ int32_t q_styleplugin_sender_signal_index(void* self) {
     return QStylePlugin_SenderSignalIndex((QStylePlugin*)self);
 }
 
-int32_t q_styleplugin_qbase_sender_signal_index(void* self) {
-    return QStylePlugin_QBaseSenderSignalIndex((QStylePlugin*)self);
+int32_t q_styleplugin_super_sender_signal_index(void* self) {
+    return QStylePlugin_SuperSenderSignalIndex((QStylePlugin*)self);
 }
 
 void q_styleplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -406,8 +406,8 @@ int32_t q_styleplugin_receivers(void* self, const char* signal) {
     return QStylePlugin_Receivers((QStylePlugin*)self, signal);
 }
 
-int32_t q_styleplugin_qbase_receivers(void* self, const char* signal) {
-    return QStylePlugin_QBaseReceivers((QStylePlugin*)self, signal);
+int32_t q_styleplugin_super_receivers(void* self, const char* signal) {
+    return QStylePlugin_SuperReceivers((QStylePlugin*)self, signal);
 }
 
 void q_styleplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -418,8 +418,8 @@ bool q_styleplugin_is_signal_connected(void* self, void* signal) {
     return QStylePlugin_IsSignalConnected((QStylePlugin*)self, (QMetaMethod*)signal);
 }
 
-bool q_styleplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return QStylePlugin_QBaseIsSignalConnected((QStylePlugin*)self, (QMetaMethod*)signal);
+bool q_styleplugin_super_is_signal_connected(void* self, void* signal) {
+    return QStylePlugin_SuperIsSignalConnected((QStylePlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_styleplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

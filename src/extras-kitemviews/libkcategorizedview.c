@@ -41,8 +41,8 @@ void k_categorizedview_on_meta_object(void* self, const QMetaObject* (*callback)
     KCategorizedView_OnMetaObject((KCategorizedView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_categorizedview_qbase_meta_object(void* self) {
-    return KCategorizedView_QBaseMetaObject((KCategorizedView*)self);
+const QMetaObject* k_categorizedview_super_meta_object(void* self) {
+    return KCategorizedView_SuperMetaObject((KCategorizedView*)self);
 }
 
 void* k_categorizedview_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_categorizedview_on_metacast(void* self, void* (*callback)(void*, const ch
     KCategorizedView_OnMetacast((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void* k_categorizedview_qbase_metacast(void* self, const char* param1) {
-    return KCategorizedView_QBaseMetacast((KCategorizedView*)self, param1);
+void* k_categorizedview_super_metacast(void* self, const char* param1) {
+    return KCategorizedView_SuperMetacast((KCategorizedView*)self, param1);
 }
 
 int32_t k_categorizedview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_categorizedview_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KCategorizedView_OnMetacall((KCategorizedView*)self, (intptr_t)callback);
 }
 
-int32_t k_categorizedview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCategorizedView_QBaseMetacall((KCategorizedView*)self, param1, param2, param3);
+int32_t k_categorizedview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCategorizedView_SuperMetacall((KCategorizedView*)self, param1, param2, param3);
 }
 
 const char* k_categorizedview_tr(const char* s) {
@@ -84,8 +84,8 @@ void k_categorizedview_on_set_model(void* self, void (*callback)(void*, void*)) 
     KCategorizedView_OnSetModel((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_set_model(void* self, void* model) {
-    KCategorizedView_QBaseSetModel((KCategorizedView*)self, (QAbstractItemModel*)model);
+void k_categorizedview_super_set_model(void* self, void* model) {
+    KCategorizedView_SuperSetModel((KCategorizedView*)self, (QAbstractItemModel*)model);
 }
 
 void k_categorizedview_set_grid_size(void* self, void* size) {
@@ -104,8 +104,8 @@ void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void
     KCategorizedView_OnVisualRect((KCategorizedView*)self, (intptr_t)callback);
 }
 
-QRect* k_categorizedview_qbase_visual_rect(void* self, void* index) {
-    return KCategorizedView_QBaseVisualRect((KCategorizedView*)self, (QModelIndex*)index);
+QRect* k_categorizedview_super_visual_rect(void* self, void* index) {
+    return KCategorizedView_SuperVisualRect((KCategorizedView*)self, (QModelIndex*)index);
 }
 
 KCategoryDrawer* k_categorizedview_category_drawer(void* self) {
@@ -158,8 +158,8 @@ void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, v
     KCategorizedView_OnIndexAt((KCategorizedView*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_categorizedview_qbase_index_at(void* self, void* point) {
-    return KCategorizedView_QBaseIndexAt((KCategorizedView*)self, (QPoint*)point);
+QModelIndex* k_categorizedview_super_index_at(void* self, void* point) {
+    return KCategorizedView_SuperIndexAt((KCategorizedView*)self, (QPoint*)point);
 }
 
 void k_categorizedview_reset(void* self) {
@@ -170,8 +170,8 @@ void k_categorizedview_on_reset(void* self, void (*callback)()) {
     KCategorizedView_OnReset((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_reset(void* self) {
-    KCategorizedView_QBaseReset((KCategorizedView*)self);
+void k_categorizedview_super_reset(void* self) {
+    KCategorizedView_SuperReset((KCategorizedView*)self);
 }
 
 void k_categorizedview_category_spacing_changed(void* self, int spacing) {
@@ -206,8 +206,8 @@ void k_categorizedview_on_paint_event(void* self, void (*callback)(void*, void*)
     KCategorizedView_OnPaintEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_paint_event(void* self, void* event) {
-    KCategorizedView_QBasePaintEvent((KCategorizedView*)self, (QPaintEvent*)event);
+void k_categorizedview_super_paint_event(void* self, void* event) {
+    KCategorizedView_SuperPaintEvent((KCategorizedView*)self, (QPaintEvent*)event);
 }
 
 void k_categorizedview_resize_event(void* self, void* event) {
@@ -218,8 +218,8 @@ void k_categorizedview_on_resize_event(void* self, void (*callback)(void*, void*
     KCategorizedView_OnResizeEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_resize_event(void* self, void* event) {
-    KCategorizedView_QBaseResizeEvent((KCategorizedView*)self, (QResizeEvent*)event);
+void k_categorizedview_super_resize_event(void* self, void* event) {
+    KCategorizedView_SuperResizeEvent((KCategorizedView*)self, (QResizeEvent*)event);
 }
 
 void k_categorizedview_set_selection(void* self, void* rect, int32_t flags) {
@@ -230,8 +230,8 @@ void k_categorizedview_on_set_selection(void* self, void (*callback)(void*, void
     KCategorizedView_OnSetSelection((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_set_selection(void* self, void* rect, int32_t flags) {
-    KCategorizedView_QBaseSetSelection((KCategorizedView*)self, (QRect*)rect, flags);
+void k_categorizedview_super_set_selection(void* self, void* rect, int32_t flags) {
+    KCategorizedView_SuperSetSelection((KCategorizedView*)self, (QRect*)rect, flags);
 }
 
 void k_categorizedview_mouse_move_event(void* self, void* event) {
@@ -242,8 +242,8 @@ void k_categorizedview_on_mouse_move_event(void* self, void (*callback)(void*, v
     KCategorizedView_OnMouseMoveEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_mouse_move_event(void* self, void* event) {
-    KCategorizedView_QBaseMouseMoveEvent((KCategorizedView*)self, (QMouseEvent*)event);
+void k_categorizedview_super_mouse_move_event(void* self, void* event) {
+    KCategorizedView_SuperMouseMoveEvent((KCategorizedView*)self, (QMouseEvent*)event);
 }
 
 void k_categorizedview_mouse_press_event(void* self, void* event) {
@@ -254,8 +254,8 @@ void k_categorizedview_on_mouse_press_event(void* self, void (*callback)(void*, 
     KCategorizedView_OnMousePressEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_mouse_press_event(void* self, void* event) {
-    KCategorizedView_QBaseMousePressEvent((KCategorizedView*)self, (QMouseEvent*)event);
+void k_categorizedview_super_mouse_press_event(void* self, void* event) {
+    KCategorizedView_SuperMousePressEvent((KCategorizedView*)self, (QMouseEvent*)event);
 }
 
 void k_categorizedview_mouse_release_event(void* self, void* event) {
@@ -266,8 +266,8 @@ void k_categorizedview_on_mouse_release_event(void* self, void (*callback)(void*
     KCategorizedView_OnMouseReleaseEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_mouse_release_event(void* self, void* event) {
-    KCategorizedView_QBaseMouseReleaseEvent((KCategorizedView*)self, (QMouseEvent*)event);
+void k_categorizedview_super_mouse_release_event(void* self, void* event) {
+    KCategorizedView_SuperMouseReleaseEvent((KCategorizedView*)self, (QMouseEvent*)event);
 }
 
 void k_categorizedview_leave_event(void* self, void* event) {
@@ -278,8 +278,8 @@ void k_categorizedview_on_leave_event(void* self, void (*callback)(void*, void*)
     KCategorizedView_OnLeaveEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_leave_event(void* self, void* event) {
-    KCategorizedView_QBaseLeaveEvent((KCategorizedView*)self, (QEvent*)event);
+void k_categorizedview_super_leave_event(void* self, void* event) {
+    KCategorizedView_SuperLeaveEvent((KCategorizedView*)self, (QEvent*)event);
 }
 
 void k_categorizedview_start_drag(void* self, int32_t supportedActions) {
@@ -290,8 +290,8 @@ void k_categorizedview_on_start_drag(void* self, void (*callback)(void*, int32_t
     KCategorizedView_OnStartDrag((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_start_drag(void* self, int32_t supportedActions) {
-    KCategorizedView_QBaseStartDrag((KCategorizedView*)self, supportedActions);
+void k_categorizedview_super_start_drag(void* self, int32_t supportedActions) {
+    KCategorizedView_SuperStartDrag((KCategorizedView*)self, supportedActions);
 }
 
 void k_categorizedview_drag_move_event(void* self, void* event) {
@@ -302,8 +302,8 @@ void k_categorizedview_on_drag_move_event(void* self, void (*callback)(void*, vo
     KCategorizedView_OnDragMoveEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_drag_move_event(void* self, void* event) {
-    KCategorizedView_QBaseDragMoveEvent((KCategorizedView*)self, (QDragMoveEvent*)event);
+void k_categorizedview_super_drag_move_event(void* self, void* event) {
+    KCategorizedView_SuperDragMoveEvent((KCategorizedView*)self, (QDragMoveEvent*)event);
 }
 
 void k_categorizedview_drag_enter_event(void* self, void* event) {
@@ -314,8 +314,8 @@ void k_categorizedview_on_drag_enter_event(void* self, void (*callback)(void*, v
     KCategorizedView_OnDragEnterEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_drag_enter_event(void* self, void* event) {
-    KCategorizedView_QBaseDragEnterEvent((KCategorizedView*)self, (QDragEnterEvent*)event);
+void k_categorizedview_super_drag_enter_event(void* self, void* event) {
+    KCategorizedView_SuperDragEnterEvent((KCategorizedView*)self, (QDragEnterEvent*)event);
 }
 
 void k_categorizedview_drag_leave_event(void* self, void* event) {
@@ -326,8 +326,8 @@ void k_categorizedview_on_drag_leave_event(void* self, void (*callback)(void*, v
     KCategorizedView_OnDragLeaveEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_drag_leave_event(void* self, void* event) {
-    KCategorizedView_QBaseDragLeaveEvent((KCategorizedView*)self, (QDragLeaveEvent*)event);
+void k_categorizedview_super_drag_leave_event(void* self, void* event) {
+    KCategorizedView_SuperDragLeaveEvent((KCategorizedView*)self, (QDragLeaveEvent*)event);
 }
 
 void k_categorizedview_drop_event(void* self, void* event) {
@@ -338,8 +338,8 @@ void k_categorizedview_on_drop_event(void* self, void (*callback)(void*, void*))
     KCategorizedView_OnDropEvent((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_drop_event(void* self, void* event) {
-    KCategorizedView_QBaseDropEvent((KCategorizedView*)self, (QDropEvent*)event);
+void k_categorizedview_super_drop_event(void* self, void* event) {
+    KCategorizedView_SuperDropEvent((KCategorizedView*)self, (QDropEvent*)event);
 }
 
 QModelIndex* k_categorizedview_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
@@ -350,8 +350,8 @@ void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*
     KCategorizedView_OnMoveCursor((KCategorizedView*)self, (intptr_t)callback);
 }
 
-QModelIndex* k_categorizedview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
-    return KCategorizedView_QBaseMoveCursor((KCategorizedView*)self, cursorAction, modifiers);
+QModelIndex* k_categorizedview_super_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
+    return KCategorizedView_SuperMoveCursor((KCategorizedView*)self, cursorAction, modifiers);
 }
 
 void k_categorizedview_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
@@ -362,8 +362,8 @@ void k_categorizedview_on_rows_about_to_be_removed(void* self, void (*callback)(
     KCategorizedView_OnRowsAboutToBeRemoved((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
-    KCategorizedView_QBaseRowsAboutToBeRemoved((KCategorizedView*)self, (QModelIndex*)parent, start, end);
+void k_categorizedview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
+    KCategorizedView_SuperRowsAboutToBeRemoved((KCategorizedView*)self, (QModelIndex*)parent, start, end);
 }
 
 void k_categorizedview_update_geometries(void* self) {
@@ -374,8 +374,8 @@ void k_categorizedview_on_update_geometries(void* self, void (*callback)()) {
     KCategorizedView_OnUpdateGeometries((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_update_geometries(void* self) {
-    KCategorizedView_QBaseUpdateGeometries((KCategorizedView*)self);
+void k_categorizedview_super_update_geometries(void* self) {
+    KCategorizedView_SuperUpdateGeometries((KCategorizedView*)self);
 }
 
 void k_categorizedview_current_changed(void* self, void* current, void* previous) {
@@ -386,8 +386,8 @@ void k_categorizedview_on_current_changed(void* self, void (*callback)(void*, vo
     KCategorizedView_OnCurrentChanged((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_current_changed(void* self, void* current, void* previous) {
-    KCategorizedView_QBaseCurrentChanged((KCategorizedView*)self, (QModelIndex*)current, (QModelIndex*)previous);
+void k_categorizedview_super_current_changed(void* self, void* current, void* previous) {
+    KCategorizedView_SuperCurrentChanged((KCategorizedView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
 void k_categorizedview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
@@ -398,8 +398,8 @@ void k_categorizedview_on_data_changed(void* self, void (*callback)(void*, void*
     KCategorizedView_OnDataChanged((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
-    KCategorizedView_QBaseDataChanged((KCategorizedView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
+void k_categorizedview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+    KCategorizedView_SuperDataChanged((KCategorizedView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
 void k_categorizedview_rows_inserted(void* self, void* parent, int start, int end) {
@@ -410,8 +410,8 @@ void k_categorizedview_on_rows_inserted(void* self, void (*callback)(void*, void
     KCategorizedView_OnRowsInserted((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_rows_inserted(void* self, void* parent, int start, int end) {
-    KCategorizedView_QBaseRowsInserted((KCategorizedView*)self, (QModelIndex*)parent, start, end);
+void k_categorizedview_super_rows_inserted(void* self, void* parent, int start, int end) {
+    KCategorizedView_SuperRowsInserted((KCategorizedView*)self, (QModelIndex*)parent, start, end);
 }
 
 void k_categorizedview_slot_layout_changed(void* self) {
@@ -422,8 +422,8 @@ void k_categorizedview_on_slot_layout_changed(void* self, void (*callback)()) {
     KCategorizedView_OnSlotLayoutChanged((KCategorizedView*)self, (intptr_t)callback);
 }
 
-void k_categorizedview_qbase_slot_layout_changed(void* self) {
-    KCategorizedView_QBaseSlotLayoutChanged((KCategorizedView*)self);
+void k_categorizedview_super_slot_layout_changed(void* self) {
+    KCategorizedView_SuperSlotLayoutChanged((KCategorizedView*)self);
 }
 
 const char* k_categorizedview_tr2(const char* s, const char* c) {
@@ -2354,8 +2354,8 @@ void k_categorizedview_scroll_to(void* self, void* index, int32_t hint) {
     KCategorizedView_ScrollTo((KCategorizedView*)self, (QModelIndex*)index, hint);
 }
 
-void k_categorizedview_qbase_scroll_to(void* self, void* index, int32_t hint) {
-    KCategorizedView_QBaseScrollTo((KCategorizedView*)self, (QModelIndex*)index, hint);
+void k_categorizedview_super_scroll_to(void* self, void* index, int32_t hint) {
+    KCategorizedView_SuperScrollTo((KCategorizedView*)self, (QModelIndex*)index, hint);
 }
 
 void k_categorizedview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2366,8 +2366,8 @@ void k_categorizedview_do_items_layout(void* self) {
     KCategorizedView_DoItemsLayout((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_do_items_layout(void* self) {
-    KCategorizedView_QBaseDoItemsLayout((KCategorizedView*)self);
+void k_categorizedview_super_do_items_layout(void* self) {
+    KCategorizedView_SuperDoItemsLayout((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_do_items_layout(void* self, void (*callback)()) {
@@ -2378,8 +2378,8 @@ void k_categorizedview_set_root_index(void* self, void* index) {
     KCategorizedView_SetRootIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-void k_categorizedview_qbase_set_root_index(void* self, void* index) {
-    KCategorizedView_QBaseSetRootIndex((KCategorizedView*)self, (QModelIndex*)index);
+void k_categorizedview_super_set_root_index(void* self, void* index) {
+    KCategorizedView_SuperSetRootIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
 void k_categorizedview_on_set_root_index(void* self, void (*callback)(void*, void*)) {
@@ -2390,8 +2390,8 @@ bool k_categorizedview_event(void* self, void* e) {
     return KCategorizedView_Event((KCategorizedView*)self, (QEvent*)e);
 }
 
-bool k_categorizedview_qbase_event(void* self, void* e) {
-    return KCategorizedView_QBaseEvent((KCategorizedView*)self, (QEvent*)e);
+bool k_categorizedview_super_event(void* self, void* e) {
+    return KCategorizedView_SuperEvent((KCategorizedView*)self, (QEvent*)e);
 }
 
 void k_categorizedview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2402,8 +2402,8 @@ void k_categorizedview_scroll_contents_by(void* self, int dx, int dy) {
     KCategorizedView_ScrollContentsBy((KCategorizedView*)self, dx, dy);
 }
 
-void k_categorizedview_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    KCategorizedView_QBaseScrollContentsBy((KCategorizedView*)self, dx, dy);
+void k_categorizedview_super_scroll_contents_by(void* self, int dx, int dy) {
+    KCategorizedView_SuperScrollContentsBy((KCategorizedView*)self, dx, dy);
 }
 
 void k_categorizedview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
@@ -2414,8 +2414,8 @@ void k_categorizedview_wheel_event(void* self, void* e) {
     KCategorizedView_WheelEvent((KCategorizedView*)self, (QWheelEvent*)e);
 }
 
-void k_categorizedview_qbase_wheel_event(void* self, void* e) {
-    KCategorizedView_QBaseWheelEvent((KCategorizedView*)self, (QWheelEvent*)e);
+void k_categorizedview_super_wheel_event(void* self, void* e) {
+    KCategorizedView_SuperWheelEvent((KCategorizedView*)self, (QWheelEvent*)e);
 }
 
 void k_categorizedview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2426,8 +2426,8 @@ void k_categorizedview_timer_event(void* self, void* e) {
     KCategorizedView_TimerEvent((KCategorizedView*)self, (QTimerEvent*)e);
 }
 
-void k_categorizedview_qbase_timer_event(void* self, void* e) {
-    KCategorizedView_QBaseTimerEvent((KCategorizedView*)self, (QTimerEvent*)e);
+void k_categorizedview_super_timer_event(void* self, void* e) {
+    KCategorizedView_SuperTimerEvent((KCategorizedView*)self, (QTimerEvent*)e);
 }
 
 void k_categorizedview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2438,8 +2438,8 @@ void k_categorizedview_init_view_item_option(void* self, void* option) {
     KCategorizedView_InitViewItemOption((KCategorizedView*)self, (QStyleOptionViewItem*)option);
 }
 
-void k_categorizedview_qbase_init_view_item_option(void* self, void* option) {
-    KCategorizedView_QBaseInitViewItemOption((KCategorizedView*)self, (QStyleOptionViewItem*)option);
+void k_categorizedview_super_init_view_item_option(void* self, void* option) {
+    KCategorizedView_SuperInitViewItemOption((KCategorizedView*)self, (QStyleOptionViewItem*)option);
 }
 
 void k_categorizedview_on_init_view_item_option(void* self, void (*callback)(void*, void*)) {
@@ -2450,8 +2450,8 @@ int32_t k_categorizedview_horizontal_offset(void* self) {
     return KCategorizedView_HorizontalOffset((KCategorizedView*)self);
 }
 
-int32_t k_categorizedview_qbase_horizontal_offset(void* self) {
-    return KCategorizedView_QBaseHorizontalOffset((KCategorizedView*)self);
+int32_t k_categorizedview_super_horizontal_offset(void* self) {
+    return KCategorizedView_SuperHorizontalOffset((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_horizontal_offset(void* self, int32_t (*callback)()) {
@@ -2462,8 +2462,8 @@ int32_t k_categorizedview_vertical_offset(void* self) {
     return KCategorizedView_VerticalOffset((KCategorizedView*)self);
 }
 
-int32_t k_categorizedview_qbase_vertical_offset(void* self) {
-    return KCategorizedView_QBaseVerticalOffset((KCategorizedView*)self);
+int32_t k_categorizedview_super_vertical_offset(void* self) {
+    return KCategorizedView_SuperVerticalOffset((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_vertical_offset(void* self, int32_t (*callback)()) {
@@ -2474,8 +2474,8 @@ QRegion* k_categorizedview_visual_region_for_selection(void* self, void* selecti
     return KCategorizedView_VisualRegionForSelection((KCategorizedView*)self, (QItemSelection*)selection);
 }
 
-QRegion* k_categorizedview_qbase_visual_region_for_selection(void* self, void* selection) {
-    return KCategorizedView_QBaseVisualRegionForSelection((KCategorizedView*)self, (QItemSelection*)selection);
+QRegion* k_categorizedview_super_visual_region_for_selection(void* self, void* selection) {
+    return KCategorizedView_SuperVisualRegionForSelection((KCategorizedView*)self, (QItemSelection*)selection);
 }
 
 void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*)) {
@@ -2487,8 +2487,8 @@ libqt_list /* of QModelIndex* */ k_categorizedview_selected_indexes(void* self) 
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_categorizedview_qbase_selected_indexes(void* self) {
-    libqt_list _arr = KCategorizedView_QBaseSelectedIndexes((KCategorizedView*)self);
+libqt_list /* of QModelIndex* */ k_categorizedview_super_selected_indexes(void* self) {
+    libqt_list _arr = KCategorizedView_SuperSelectedIndexes((KCategorizedView*)self);
     return _arr;
 }
 
@@ -2500,8 +2500,8 @@ bool k_categorizedview_is_index_hidden(void* self, void* index) {
     return KCategorizedView_IsIndexHidden((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-bool k_categorizedview_qbase_is_index_hidden(void* self, void* index) {
-    return KCategorizedView_QBaseIsIndexHidden((KCategorizedView*)self, (QModelIndex*)index);
+bool k_categorizedview_super_is_index_hidden(void* self, void* index) {
+    return KCategorizedView_SuperIsIndexHidden((KCategorizedView*)self, (QModelIndex*)index);
 }
 
 void k_categorizedview_on_is_index_hidden(void* self, bool (*callback)(void*, void*)) {
@@ -2512,8 +2512,8 @@ void k_categorizedview_selection_changed(void* self, void* selected, void* desel
     KCategorizedView_SelectionChanged((KCategorizedView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void k_categorizedview_qbase_selection_changed(void* self, void* selected, void* deselected) {
-    KCategorizedView_QBaseSelectionChanged((KCategorizedView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
+void k_categorizedview_super_selection_changed(void* self, void* selected, void* deselected) {
+    KCategorizedView_SuperSelectionChanged((KCategorizedView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
 void k_categorizedview_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
@@ -2524,8 +2524,8 @@ QSize* k_categorizedview_viewport_size_hint(void* self) {
     return KCategorizedView_ViewportSizeHint((KCategorizedView*)self);
 }
 
-QSize* k_categorizedview_qbase_viewport_size_hint(void* self) {
-    return KCategorizedView_QBaseViewportSizeHint((KCategorizedView*)self);
+QSize* k_categorizedview_super_viewport_size_hint(void* self) {
+    return KCategorizedView_SuperViewportSizeHint((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2536,8 +2536,8 @@ void k_categorizedview_set_selection_model(void* self, void* selectionModel) {
     KCategorizedView_SetSelectionModel((KCategorizedView*)self, (QItemSelectionModel*)selectionModel);
 }
 
-void k_categorizedview_qbase_set_selection_model(void* self, void* selectionModel) {
-    KCategorizedView_QBaseSetSelectionModel((KCategorizedView*)self, (QItemSelectionModel*)selectionModel);
+void k_categorizedview_super_set_selection_model(void* self, void* selectionModel) {
+    KCategorizedView_SuperSetSelectionModel((KCategorizedView*)self, (QItemSelectionModel*)selectionModel);
 }
 
 void k_categorizedview_on_set_selection_model(void* self, void (*callback)(void*, void*)) {
@@ -2548,8 +2548,8 @@ void k_categorizedview_keyboard_search(void* self, const char* search) {
     KCategorizedView_KeyboardSearch((KCategorizedView*)self, qstring(search));
 }
 
-void k_categorizedview_qbase_keyboard_search(void* self, const char* search) {
-    KCategorizedView_QBaseKeyboardSearch((KCategorizedView*)self, qstring(search));
+void k_categorizedview_super_keyboard_search(void* self, const char* search) {
+    KCategorizedView_SuperKeyboardSearch((KCategorizedView*)self, qstring(search));
 }
 
 void k_categorizedview_on_keyboard_search(void* self, void (*callback)(void*, const char*)) {
@@ -2560,8 +2560,8 @@ int32_t k_categorizedview_size_hint_for_row(void* self, int row) {
     return KCategorizedView_SizeHintForRow((KCategorizedView*)self, row);
 }
 
-int32_t k_categorizedview_qbase_size_hint_for_row(void* self, int row) {
-    return KCategorizedView_QBaseSizeHintForRow((KCategorizedView*)self, row);
+int32_t k_categorizedview_super_size_hint_for_row(void* self, int row) {
+    return KCategorizedView_SuperSizeHintForRow((KCategorizedView*)self, row);
 }
 
 void k_categorizedview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
@@ -2572,8 +2572,8 @@ int32_t k_categorizedview_size_hint_for_column(void* self, int column) {
     return KCategorizedView_SizeHintForColumn((KCategorizedView*)self, column);
 }
 
-int32_t k_categorizedview_qbase_size_hint_for_column(void* self, int column) {
-    return KCategorizedView_QBaseSizeHintForColumn((KCategorizedView*)self, column);
+int32_t k_categorizedview_super_size_hint_for_column(void* self, int column) {
+    return KCategorizedView_SuperSizeHintForColumn((KCategorizedView*)self, column);
 }
 
 void k_categorizedview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
@@ -2584,8 +2584,8 @@ QAbstractItemDelegate* k_categorizedview_item_delegate_for_index(void* self, voi
     return KCategorizedView_ItemDelegateForIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-QAbstractItemDelegate* k_categorizedview_qbase_item_delegate_for_index(void* self, void* index) {
-    return KCategorizedView_QBaseItemDelegateForIndex((KCategorizedView*)self, (QModelIndex*)index);
+QAbstractItemDelegate* k_categorizedview_super_item_delegate_for_index(void* self, void* index) {
+    return KCategorizedView_SuperItemDelegateForIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
 void k_categorizedview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
@@ -2596,8 +2596,8 @@ QVariant* k_categorizedview_input_method_query(void* self, int32_t query) {
     return KCategorizedView_InputMethodQuery((KCategorizedView*)self, query);
 }
 
-QVariant* k_categorizedview_qbase_input_method_query(void* self, int32_t query) {
-    return KCategorizedView_QBaseInputMethodQuery((KCategorizedView*)self, query);
+QVariant* k_categorizedview_super_input_method_query(void* self, int32_t query) {
+    return KCategorizedView_SuperInputMethodQuery((KCategorizedView*)self, query);
 }
 
 void k_categorizedview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2608,8 +2608,8 @@ void k_categorizedview_select_all(void* self) {
     KCategorizedView_SelectAll((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_select_all(void* self) {
-    KCategorizedView_QBaseSelectAll((KCategorizedView*)self);
+void k_categorizedview_super_select_all(void* self) {
+    KCategorizedView_SuperSelectAll((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_select_all(void* self, void (*callback)()) {
@@ -2620,8 +2620,8 @@ void k_categorizedview_update_editor_data(void* self) {
     KCategorizedView_UpdateEditorData((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_update_editor_data(void* self) {
-    KCategorizedView_QBaseUpdateEditorData((KCategorizedView*)self);
+void k_categorizedview_super_update_editor_data(void* self) {
+    KCategorizedView_SuperUpdateEditorData((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_update_editor_data(void* self, void (*callback)()) {
@@ -2632,8 +2632,8 @@ void k_categorizedview_update_editor_geometries(void* self) {
     KCategorizedView_UpdateEditorGeometries((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_update_editor_geometries(void* self) {
-    KCategorizedView_QBaseUpdateEditorGeometries((KCategorizedView*)self);
+void k_categorizedview_super_update_editor_geometries(void* self) {
+    KCategorizedView_SuperUpdateEditorGeometries((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_update_editor_geometries(void* self, void (*callback)()) {
@@ -2644,8 +2644,8 @@ void k_categorizedview_vertical_scrollbar_action(void* self, int action) {
     KCategorizedView_VerticalScrollbarAction((KCategorizedView*)self, action);
 }
 
-void k_categorizedview_qbase_vertical_scrollbar_action(void* self, int action) {
-    KCategorizedView_QBaseVerticalScrollbarAction((KCategorizedView*)self, action);
+void k_categorizedview_super_vertical_scrollbar_action(void* self, int action) {
+    KCategorizedView_SuperVerticalScrollbarAction((KCategorizedView*)self, action);
 }
 
 void k_categorizedview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2656,8 +2656,8 @@ void k_categorizedview_horizontal_scrollbar_action(void* self, int action) {
     KCategorizedView_HorizontalScrollbarAction((KCategorizedView*)self, action);
 }
 
-void k_categorizedview_qbase_horizontal_scrollbar_action(void* self, int action) {
-    KCategorizedView_QBaseHorizontalScrollbarAction((KCategorizedView*)self, action);
+void k_categorizedview_super_horizontal_scrollbar_action(void* self, int action) {
+    KCategorizedView_SuperHorizontalScrollbarAction((KCategorizedView*)self, action);
 }
 
 void k_categorizedview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2668,8 +2668,8 @@ void k_categorizedview_vertical_scrollbar_value_changed(void* self, int value) {
     KCategorizedView_VerticalScrollbarValueChanged((KCategorizedView*)self, value);
 }
 
-void k_categorizedview_qbase_vertical_scrollbar_value_changed(void* self, int value) {
-    KCategorizedView_QBaseVerticalScrollbarValueChanged((KCategorizedView*)self, value);
+void k_categorizedview_super_vertical_scrollbar_value_changed(void* self, int value) {
+    KCategorizedView_SuperVerticalScrollbarValueChanged((KCategorizedView*)self, value);
 }
 
 void k_categorizedview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2680,8 +2680,8 @@ void k_categorizedview_horizontal_scrollbar_value_changed(void* self, int value)
     KCategorizedView_HorizontalScrollbarValueChanged((KCategorizedView*)self, value);
 }
 
-void k_categorizedview_qbase_horizontal_scrollbar_value_changed(void* self, int value) {
-    KCategorizedView_QBaseHorizontalScrollbarValueChanged((KCategorizedView*)self, value);
+void k_categorizedview_super_horizontal_scrollbar_value_changed(void* self, int value) {
+    KCategorizedView_SuperHorizontalScrollbarValueChanged((KCategorizedView*)self, value);
 }
 
 void k_categorizedview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2692,8 +2692,8 @@ void k_categorizedview_close_editor(void* self, void* editor, int32_t hint) {
     KCategorizedView_CloseEditor((KCategorizedView*)self, (QWidget*)editor, hint);
 }
 
-void k_categorizedview_qbase_close_editor(void* self, void* editor, int32_t hint) {
-    KCategorizedView_QBaseCloseEditor((KCategorizedView*)self, (QWidget*)editor, hint);
+void k_categorizedview_super_close_editor(void* self, void* editor, int32_t hint) {
+    KCategorizedView_SuperCloseEditor((KCategorizedView*)self, (QWidget*)editor, hint);
 }
 
 void k_categorizedview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2704,8 +2704,8 @@ void k_categorizedview_commit_data(void* self, void* editor) {
     KCategorizedView_CommitData((KCategorizedView*)self, (QWidget*)editor);
 }
 
-void k_categorizedview_qbase_commit_data(void* self, void* editor) {
-    KCategorizedView_QBaseCommitData((KCategorizedView*)self, (QWidget*)editor);
+void k_categorizedview_super_commit_data(void* self, void* editor) {
+    KCategorizedView_SuperCommitData((KCategorizedView*)self, (QWidget*)editor);
 }
 
 void k_categorizedview_on_commit_data(void* self, void (*callback)(void*, void*)) {
@@ -2716,8 +2716,8 @@ void k_categorizedview_editor_destroyed(void* self, void* editor) {
     KCategorizedView_EditorDestroyed((KCategorizedView*)self, (QObject*)editor);
 }
 
-void k_categorizedview_qbase_editor_destroyed(void* self, void* editor) {
-    KCategorizedView_QBaseEditorDestroyed((KCategorizedView*)self, (QObject*)editor);
+void k_categorizedview_super_editor_destroyed(void* self, void* editor) {
+    KCategorizedView_SuperEditorDestroyed((KCategorizedView*)self, (QObject*)editor);
 }
 
 void k_categorizedview_on_editor_destroyed(void* self, void (*callback)(void*, void*)) {
@@ -2728,8 +2728,8 @@ bool k_categorizedview_edit2(void* self, void* index, int32_t trigger, void* eve
     return KCategorizedView_Edit2((KCategorizedView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-bool k_categorizedview_qbase_edit2(void* self, void* index, int32_t trigger, void* event) {
-    return KCategorizedView_QBaseEdit2((KCategorizedView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
+bool k_categorizedview_super_edit2(void* self, void* index, int32_t trigger, void* event) {
+    return KCategorizedView_SuperEdit2((KCategorizedView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
 void k_categorizedview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*)) {
@@ -2740,8 +2740,8 @@ int32_t k_categorizedview_selection_command(void* self, void* index, void* event
     return KCategorizedView_SelectionCommand((KCategorizedView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int32_t k_categorizedview_qbase_selection_command(void* self, void* index, void* event) {
-    return KCategorizedView_QBaseSelectionCommand((KCategorizedView*)self, (QModelIndex*)index, (QEvent*)event);
+int32_t k_categorizedview_super_selection_command(void* self, void* index, void* event) {
+    return KCategorizedView_SuperSelectionCommand((KCategorizedView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
 void k_categorizedview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
@@ -2752,8 +2752,8 @@ bool k_categorizedview_focus_next_prev_child(void* self, bool next) {
     return KCategorizedView_FocusNextPrevChild((KCategorizedView*)self, next);
 }
 
-bool k_categorizedview_qbase_focus_next_prev_child(void* self, bool next) {
-    return KCategorizedView_QBaseFocusNextPrevChild((KCategorizedView*)self, next);
+bool k_categorizedview_super_focus_next_prev_child(void* self, bool next) {
+    return KCategorizedView_SuperFocusNextPrevChild((KCategorizedView*)self, next);
 }
 
 void k_categorizedview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2764,8 +2764,8 @@ bool k_categorizedview_viewport_event(void* self, void* event) {
     return KCategorizedView_ViewportEvent((KCategorizedView*)self, (QEvent*)event);
 }
 
-bool k_categorizedview_qbase_viewport_event(void* self, void* event) {
-    return KCategorizedView_QBaseViewportEvent((KCategorizedView*)self, (QEvent*)event);
+bool k_categorizedview_super_viewport_event(void* self, void* event) {
+    return KCategorizedView_SuperViewportEvent((KCategorizedView*)self, (QEvent*)event);
 }
 
 void k_categorizedview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2776,8 +2776,8 @@ void k_categorizedview_mouse_double_click_event(void* self, void* event) {
     KCategorizedView_MouseDoubleClickEvent((KCategorizedView*)self, (QMouseEvent*)event);
 }
 
-void k_categorizedview_qbase_mouse_double_click_event(void* self, void* event) {
-    KCategorizedView_QBaseMouseDoubleClickEvent((KCategorizedView*)self, (QMouseEvent*)event);
+void k_categorizedview_super_mouse_double_click_event(void* self, void* event) {
+    KCategorizedView_SuperMouseDoubleClickEvent((KCategorizedView*)self, (QMouseEvent*)event);
 }
 
 void k_categorizedview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2788,8 +2788,8 @@ void k_categorizedview_focus_in_event(void* self, void* event) {
     KCategorizedView_FocusInEvent((KCategorizedView*)self, (QFocusEvent*)event);
 }
 
-void k_categorizedview_qbase_focus_in_event(void* self, void* event) {
-    KCategorizedView_QBaseFocusInEvent((KCategorizedView*)self, (QFocusEvent*)event);
+void k_categorizedview_super_focus_in_event(void* self, void* event) {
+    KCategorizedView_SuperFocusInEvent((KCategorizedView*)self, (QFocusEvent*)event);
 }
 
 void k_categorizedview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2800,8 +2800,8 @@ void k_categorizedview_focus_out_event(void* self, void* event) {
     KCategorizedView_FocusOutEvent((KCategorizedView*)self, (QFocusEvent*)event);
 }
 
-void k_categorizedview_qbase_focus_out_event(void* self, void* event) {
-    KCategorizedView_QBaseFocusOutEvent((KCategorizedView*)self, (QFocusEvent*)event);
+void k_categorizedview_super_focus_out_event(void* self, void* event) {
+    KCategorizedView_SuperFocusOutEvent((KCategorizedView*)self, (QFocusEvent*)event);
 }
 
 void k_categorizedview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2812,8 +2812,8 @@ void k_categorizedview_key_press_event(void* self, void* event) {
     KCategorizedView_KeyPressEvent((KCategorizedView*)self, (QKeyEvent*)event);
 }
 
-void k_categorizedview_qbase_key_press_event(void* self, void* event) {
-    KCategorizedView_QBaseKeyPressEvent((KCategorizedView*)self, (QKeyEvent*)event);
+void k_categorizedview_super_key_press_event(void* self, void* event) {
+    KCategorizedView_SuperKeyPressEvent((KCategorizedView*)self, (QKeyEvent*)event);
 }
 
 void k_categorizedview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2824,8 +2824,8 @@ void k_categorizedview_input_method_event(void* self, void* event) {
     KCategorizedView_InputMethodEvent((KCategorizedView*)self, (QInputMethodEvent*)event);
 }
 
-void k_categorizedview_qbase_input_method_event(void* self, void* event) {
-    KCategorizedView_QBaseInputMethodEvent((KCategorizedView*)self, (QInputMethodEvent*)event);
+void k_categorizedview_super_input_method_event(void* self, void* event) {
+    KCategorizedView_SuperInputMethodEvent((KCategorizedView*)self, (QInputMethodEvent*)event);
 }
 
 void k_categorizedview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2836,8 +2836,8 @@ bool k_categorizedview_event_filter(void* self, void* object, void* event) {
     return KCategorizedView_EventFilter((KCategorizedView*)self, (QObject*)object, (QEvent*)event);
 }
 
-bool k_categorizedview_qbase_event_filter(void* self, void* object, void* event) {
-    return KCategorizedView_QBaseEventFilter((KCategorizedView*)self, (QObject*)object, (QEvent*)event);
+bool k_categorizedview_super_event_filter(void* self, void* object, void* event) {
+    return KCategorizedView_SuperEventFilter((KCategorizedView*)self, (QObject*)object, (QEvent*)event);
 }
 
 void k_categorizedview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2848,8 +2848,8 @@ QSize* k_categorizedview_minimum_size_hint(void* self) {
     return KCategorizedView_MinimumSizeHint((KCategorizedView*)self);
 }
 
-QSize* k_categorizedview_qbase_minimum_size_hint(void* self) {
-    return KCategorizedView_QBaseMinimumSizeHint((KCategorizedView*)self);
+QSize* k_categorizedview_super_minimum_size_hint(void* self) {
+    return KCategorizedView_SuperMinimumSizeHint((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2860,8 +2860,8 @@ QSize* k_categorizedview_size_hint(void* self) {
     return KCategorizedView_SizeHint((KCategorizedView*)self);
 }
 
-QSize* k_categorizedview_qbase_size_hint(void* self) {
-    return KCategorizedView_QBaseSizeHint((KCategorizedView*)self);
+QSize* k_categorizedview_super_size_hint(void* self) {
+    return KCategorizedView_SuperSizeHint((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2872,8 +2872,8 @@ void k_categorizedview_setup_viewport(void* self, void* viewport) {
     KCategorizedView_SetupViewport((KCategorizedView*)self, (QWidget*)viewport);
 }
 
-void k_categorizedview_qbase_setup_viewport(void* self, void* viewport) {
-    KCategorizedView_QBaseSetupViewport((KCategorizedView*)self, (QWidget*)viewport);
+void k_categorizedview_super_setup_viewport(void* self, void* viewport) {
+    KCategorizedView_SuperSetupViewport((KCategorizedView*)self, (QWidget*)viewport);
 }
 
 void k_categorizedview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2884,8 +2884,8 @@ void k_categorizedview_context_menu_event(void* self, void* param1) {
     KCategorizedView_ContextMenuEvent((KCategorizedView*)self, (QContextMenuEvent*)param1);
 }
 
-void k_categorizedview_qbase_context_menu_event(void* self, void* param1) {
-    KCategorizedView_QBaseContextMenuEvent((KCategorizedView*)self, (QContextMenuEvent*)param1);
+void k_categorizedview_super_context_menu_event(void* self, void* param1) {
+    KCategorizedView_SuperContextMenuEvent((KCategorizedView*)self, (QContextMenuEvent*)param1);
 }
 
 void k_categorizedview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2896,8 +2896,8 @@ void k_categorizedview_change_event(void* self, void* param1) {
     KCategorizedView_ChangeEvent((KCategorizedView*)self, (QEvent*)param1);
 }
 
-void k_categorizedview_qbase_change_event(void* self, void* param1) {
-    KCategorizedView_QBaseChangeEvent((KCategorizedView*)self, (QEvent*)param1);
+void k_categorizedview_super_change_event(void* self, void* param1) {
+    KCategorizedView_SuperChangeEvent((KCategorizedView*)self, (QEvent*)param1);
 }
 
 void k_categorizedview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2908,8 +2908,8 @@ void k_categorizedview_init_style_option(void* self, void* option) {
     KCategorizedView_InitStyleOption((KCategorizedView*)self, (QStyleOptionFrame*)option);
 }
 
-void k_categorizedview_qbase_init_style_option(void* self, void* option) {
-    KCategorizedView_QBaseInitStyleOption((KCategorizedView*)self, (QStyleOptionFrame*)option);
+void k_categorizedview_super_init_style_option(void* self, void* option) {
+    KCategorizedView_SuperInitStyleOption((KCategorizedView*)self, (QStyleOptionFrame*)option);
 }
 
 void k_categorizedview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2920,8 +2920,8 @@ int32_t k_categorizedview_dev_type(void* self) {
     return KCategorizedView_DevType((KCategorizedView*)self);
 }
 
-int32_t k_categorizedview_qbase_dev_type(void* self) {
-    return KCategorizedView_QBaseDevType((KCategorizedView*)self);
+int32_t k_categorizedview_super_dev_type(void* self) {
+    return KCategorizedView_SuperDevType((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2932,8 +2932,8 @@ void k_categorizedview_set_visible(void* self, bool visible) {
     KCategorizedView_SetVisible((KCategorizedView*)self, visible);
 }
 
-void k_categorizedview_qbase_set_visible(void* self, bool visible) {
-    KCategorizedView_QBaseSetVisible((KCategorizedView*)self, visible);
+void k_categorizedview_super_set_visible(void* self, bool visible) {
+    KCategorizedView_SuperSetVisible((KCategorizedView*)self, visible);
 }
 
 void k_categorizedview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2944,8 +2944,8 @@ int32_t k_categorizedview_height_for_width(void* self, int param1) {
     return KCategorizedView_HeightForWidth((KCategorizedView*)self, param1);
 }
 
-int32_t k_categorizedview_qbase_height_for_width(void* self, int param1) {
-    return KCategorizedView_QBaseHeightForWidth((KCategorizedView*)self, param1);
+int32_t k_categorizedview_super_height_for_width(void* self, int param1) {
+    return KCategorizedView_SuperHeightForWidth((KCategorizedView*)self, param1);
 }
 
 void k_categorizedview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2956,8 +2956,8 @@ bool k_categorizedview_has_height_for_width(void* self) {
     return KCategorizedView_HasHeightForWidth((KCategorizedView*)self);
 }
 
-bool k_categorizedview_qbase_has_height_for_width(void* self) {
-    return KCategorizedView_QBaseHasHeightForWidth((KCategorizedView*)self);
+bool k_categorizedview_super_has_height_for_width(void* self) {
+    return KCategorizedView_SuperHasHeightForWidth((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2968,8 +2968,8 @@ QPaintEngine* k_categorizedview_paint_engine(void* self) {
     return KCategorizedView_PaintEngine((KCategorizedView*)self);
 }
 
-QPaintEngine* k_categorizedview_qbase_paint_engine(void* self) {
-    return KCategorizedView_QBasePaintEngine((KCategorizedView*)self);
+QPaintEngine* k_categorizedview_super_paint_engine(void* self) {
+    return KCategorizedView_SuperPaintEngine((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2980,8 +2980,8 @@ void k_categorizedview_key_release_event(void* self, void* event) {
     KCategorizedView_KeyReleaseEvent((KCategorizedView*)self, (QKeyEvent*)event);
 }
 
-void k_categorizedview_qbase_key_release_event(void* self, void* event) {
-    KCategorizedView_QBaseKeyReleaseEvent((KCategorizedView*)self, (QKeyEvent*)event);
+void k_categorizedview_super_key_release_event(void* self, void* event) {
+    KCategorizedView_SuperKeyReleaseEvent((KCategorizedView*)self, (QKeyEvent*)event);
 }
 
 void k_categorizedview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2992,8 +2992,8 @@ void k_categorizedview_enter_event(void* self, void* event) {
     KCategorizedView_EnterEvent((KCategorizedView*)self, (QEnterEvent*)event);
 }
 
-void k_categorizedview_qbase_enter_event(void* self, void* event) {
-    KCategorizedView_QBaseEnterEvent((KCategorizedView*)self, (QEnterEvent*)event);
+void k_categorizedview_super_enter_event(void* self, void* event) {
+    KCategorizedView_SuperEnterEvent((KCategorizedView*)self, (QEnterEvent*)event);
 }
 
 void k_categorizedview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -3004,8 +3004,8 @@ void k_categorizedview_move_event(void* self, void* event) {
     KCategorizedView_MoveEvent((KCategorizedView*)self, (QMoveEvent*)event);
 }
 
-void k_categorizedview_qbase_move_event(void* self, void* event) {
-    KCategorizedView_QBaseMoveEvent((KCategorizedView*)self, (QMoveEvent*)event);
+void k_categorizedview_super_move_event(void* self, void* event) {
+    KCategorizedView_SuperMoveEvent((KCategorizedView*)self, (QMoveEvent*)event);
 }
 
 void k_categorizedview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -3016,8 +3016,8 @@ void k_categorizedview_close_event(void* self, void* event) {
     KCategorizedView_CloseEvent((KCategorizedView*)self, (QCloseEvent*)event);
 }
 
-void k_categorizedview_qbase_close_event(void* self, void* event) {
-    KCategorizedView_QBaseCloseEvent((KCategorizedView*)self, (QCloseEvent*)event);
+void k_categorizedview_super_close_event(void* self, void* event) {
+    KCategorizedView_SuperCloseEvent((KCategorizedView*)self, (QCloseEvent*)event);
 }
 
 void k_categorizedview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -3028,8 +3028,8 @@ void k_categorizedview_tablet_event(void* self, void* event) {
     KCategorizedView_TabletEvent((KCategorizedView*)self, (QTabletEvent*)event);
 }
 
-void k_categorizedview_qbase_tablet_event(void* self, void* event) {
-    KCategorizedView_QBaseTabletEvent((KCategorizedView*)self, (QTabletEvent*)event);
+void k_categorizedview_super_tablet_event(void* self, void* event) {
+    KCategorizedView_SuperTabletEvent((KCategorizedView*)self, (QTabletEvent*)event);
 }
 
 void k_categorizedview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -3040,8 +3040,8 @@ void k_categorizedview_action_event(void* self, void* event) {
     KCategorizedView_ActionEvent((KCategorizedView*)self, (QActionEvent*)event);
 }
 
-void k_categorizedview_qbase_action_event(void* self, void* event) {
-    KCategorizedView_QBaseActionEvent((KCategorizedView*)self, (QActionEvent*)event);
+void k_categorizedview_super_action_event(void* self, void* event) {
+    KCategorizedView_SuperActionEvent((KCategorizedView*)self, (QActionEvent*)event);
 }
 
 void k_categorizedview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -3052,8 +3052,8 @@ void k_categorizedview_show_event(void* self, void* event) {
     KCategorizedView_ShowEvent((KCategorizedView*)self, (QShowEvent*)event);
 }
 
-void k_categorizedview_qbase_show_event(void* self, void* event) {
-    KCategorizedView_QBaseShowEvent((KCategorizedView*)self, (QShowEvent*)event);
+void k_categorizedview_super_show_event(void* self, void* event) {
+    KCategorizedView_SuperShowEvent((KCategorizedView*)self, (QShowEvent*)event);
 }
 
 void k_categorizedview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -3064,8 +3064,8 @@ void k_categorizedview_hide_event(void* self, void* event) {
     KCategorizedView_HideEvent((KCategorizedView*)self, (QHideEvent*)event);
 }
 
-void k_categorizedview_qbase_hide_event(void* self, void* event) {
-    KCategorizedView_QBaseHideEvent((KCategorizedView*)self, (QHideEvent*)event);
+void k_categorizedview_super_hide_event(void* self, void* event) {
+    KCategorizedView_SuperHideEvent((KCategorizedView*)self, (QHideEvent*)event);
 }
 
 void k_categorizedview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -3076,8 +3076,8 @@ bool k_categorizedview_native_event(void* self, char* eventType, void* message, 
     return KCategorizedView_NativeEvent((KCategorizedView*)self, qstring(eventType), message, result);
 }
 
-bool k_categorizedview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KCategorizedView_QBaseNativeEvent((KCategorizedView*)self, qstring(eventType), message, result);
+bool k_categorizedview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KCategorizedView_SuperNativeEvent((KCategorizedView*)self, qstring(eventType), message, result);
 }
 
 void k_categorizedview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -3088,8 +3088,8 @@ int32_t k_categorizedview_metric(void* self, int32_t param1) {
     return KCategorizedView_Metric((KCategorizedView*)self, param1);
 }
 
-int32_t k_categorizedview_qbase_metric(void* self, int32_t param1) {
-    return KCategorizedView_QBaseMetric((KCategorizedView*)self, param1);
+int32_t k_categorizedview_super_metric(void* self, int32_t param1) {
+    return KCategorizedView_SuperMetric((KCategorizedView*)self, param1);
 }
 
 void k_categorizedview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -3100,8 +3100,8 @@ void k_categorizedview_init_painter(void* self, void* painter) {
     KCategorizedView_InitPainter((KCategorizedView*)self, (QPainter*)painter);
 }
 
-void k_categorizedview_qbase_init_painter(void* self, void* painter) {
-    KCategorizedView_QBaseInitPainter((KCategorizedView*)self, (QPainter*)painter);
+void k_categorizedview_super_init_painter(void* self, void* painter) {
+    KCategorizedView_SuperInitPainter((KCategorizedView*)self, (QPainter*)painter);
 }
 
 void k_categorizedview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -3112,8 +3112,8 @@ QPaintDevice* k_categorizedview_redirected(void* self, void* offset) {
     return KCategorizedView_Redirected((KCategorizedView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_categorizedview_qbase_redirected(void* self, void* offset) {
-    return KCategorizedView_QBaseRedirected((KCategorizedView*)self, (QPoint*)offset);
+QPaintDevice* k_categorizedview_super_redirected(void* self, void* offset) {
+    return KCategorizedView_SuperRedirected((KCategorizedView*)self, (QPoint*)offset);
 }
 
 void k_categorizedview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -3124,8 +3124,8 @@ QPainter* k_categorizedview_shared_painter(void* self) {
     return KCategorizedView_SharedPainter((KCategorizedView*)self);
 }
 
-QPainter* k_categorizedview_qbase_shared_painter(void* self) {
-    return KCategorizedView_QBaseSharedPainter((KCategorizedView*)self);
+QPainter* k_categorizedview_super_shared_painter(void* self) {
+    return KCategorizedView_SuperSharedPainter((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -3136,8 +3136,8 @@ void k_categorizedview_child_event(void* self, void* event) {
     KCategorizedView_ChildEvent((KCategorizedView*)self, (QChildEvent*)event);
 }
 
-void k_categorizedview_qbase_child_event(void* self, void* event) {
-    KCategorizedView_QBaseChildEvent((KCategorizedView*)self, (QChildEvent*)event);
+void k_categorizedview_super_child_event(void* self, void* event) {
+    KCategorizedView_SuperChildEvent((KCategorizedView*)self, (QChildEvent*)event);
 }
 
 void k_categorizedview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -3148,8 +3148,8 @@ void k_categorizedview_custom_event(void* self, void* event) {
     KCategorizedView_CustomEvent((KCategorizedView*)self, (QEvent*)event);
 }
 
-void k_categorizedview_qbase_custom_event(void* self, void* event) {
-    KCategorizedView_QBaseCustomEvent((KCategorizedView*)self, (QEvent*)event);
+void k_categorizedview_super_custom_event(void* self, void* event) {
+    KCategorizedView_SuperCustomEvent((KCategorizedView*)self, (QEvent*)event);
 }
 
 void k_categorizedview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -3160,8 +3160,8 @@ void k_categorizedview_connect_notify(void* self, void* signal) {
     KCategorizedView_ConnectNotify((KCategorizedView*)self, (QMetaMethod*)signal);
 }
 
-void k_categorizedview_qbase_connect_notify(void* self, void* signal) {
-    KCategorizedView_QBaseConnectNotify((KCategorizedView*)self, (QMetaMethod*)signal);
+void k_categorizedview_super_connect_notify(void* self, void* signal) {
+    KCategorizedView_SuperConnectNotify((KCategorizedView*)self, (QMetaMethod*)signal);
 }
 
 void k_categorizedview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3172,8 +3172,8 @@ void k_categorizedview_disconnect_notify(void* self, void* signal) {
     KCategorizedView_DisconnectNotify((KCategorizedView*)self, (QMetaMethod*)signal);
 }
 
-void k_categorizedview_qbase_disconnect_notify(void* self, void* signal) {
-    KCategorizedView_QBaseDisconnectNotify((KCategorizedView*)self, (QMetaMethod*)signal);
+void k_categorizedview_super_disconnect_notify(void* self, void* signal) {
+    KCategorizedView_SuperDisconnectNotify((KCategorizedView*)self, (QMetaMethod*)signal);
 }
 
 void k_categorizedview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3184,8 +3184,8 @@ void k_categorizedview_resize_contents(void* self, int width, int height) {
     KCategorizedView_ResizeContents((KCategorizedView*)self, width, height);
 }
 
-void k_categorizedview_qbase_resize_contents(void* self, int width, int height) {
-    KCategorizedView_QBaseResizeContents((KCategorizedView*)self, width, height);
+void k_categorizedview_super_resize_contents(void* self, int width, int height) {
+    KCategorizedView_SuperResizeContents((KCategorizedView*)self, width, height);
 }
 
 void k_categorizedview_on_resize_contents(void* self, void (*callback)(void*, int, int)) {
@@ -3196,8 +3196,8 @@ QSize* k_categorizedview_contents_size(void* self) {
     return KCategorizedView_ContentsSize((KCategorizedView*)self);
 }
 
-QSize* k_categorizedview_qbase_contents_size(void* self) {
-    return KCategorizedView_QBaseContentsSize((KCategorizedView*)self);
+QSize* k_categorizedview_super_contents_size(void* self) {
+    return KCategorizedView_SuperContentsSize((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_contents_size(void* self, QSize* (*callback)()) {
@@ -3208,8 +3208,8 @@ QRect* k_categorizedview_rect_for_index(void* self, void* index) {
     return KCategorizedView_RectForIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
-QRect* k_categorizedview_qbase_rect_for_index(void* self, void* index) {
-    return KCategorizedView_QBaseRectForIndex((KCategorizedView*)self, (QModelIndex*)index);
+QRect* k_categorizedview_super_rect_for_index(void* self, void* index) {
+    return KCategorizedView_SuperRectForIndex((KCategorizedView*)self, (QModelIndex*)index);
 }
 
 void k_categorizedview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*)) {
@@ -3220,8 +3220,8 @@ void k_categorizedview_set_position_for_index(void* self, void* position, void* 
     KCategorizedView_SetPositionForIndex((KCategorizedView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
-void k_categorizedview_qbase_set_position_for_index(void* self, void* position, void* index) {
-    KCategorizedView_QBaseSetPositionForIndex((KCategorizedView*)self, (QPoint*)position, (QModelIndex*)index);
+void k_categorizedview_super_set_position_for_index(void* self, void* position, void* index) {
+    KCategorizedView_SuperSetPositionForIndex((KCategorizedView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
 void k_categorizedview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -3232,8 +3232,8 @@ int32_t k_categorizedview_state(void* self) {
     return KCategorizedView_State((KCategorizedView*)self);
 }
 
-int32_t k_categorizedview_qbase_state(void* self) {
-    return KCategorizedView_QBaseState((KCategorizedView*)self);
+int32_t k_categorizedview_super_state(void* self) {
+    return KCategorizedView_SuperState((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_state(void* self, int32_t (*callback)()) {
@@ -3244,8 +3244,8 @@ void k_categorizedview_set_state(void* self, int32_t state) {
     KCategorizedView_SetState((KCategorizedView*)self, state);
 }
 
-void k_categorizedview_qbase_set_state(void* self, int32_t state) {
-    KCategorizedView_QBaseSetState((KCategorizedView*)self, state);
+void k_categorizedview_super_set_state(void* self, int32_t state) {
+    KCategorizedView_SuperSetState((KCategorizedView*)self, state);
 }
 
 void k_categorizedview_on_set_state(void* self, void (*callback)(void*, int32_t)) {
@@ -3256,8 +3256,8 @@ void k_categorizedview_schedule_delayed_items_layout(void* self) {
     KCategorizedView_ScheduleDelayedItemsLayout((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_schedule_delayed_items_layout(void* self) {
-    KCategorizedView_QBaseScheduleDelayedItemsLayout((KCategorizedView*)self);
+void k_categorizedview_super_schedule_delayed_items_layout(void* self) {
+    KCategorizedView_SuperScheduleDelayedItemsLayout((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
@@ -3268,8 +3268,8 @@ void k_categorizedview_execute_delayed_items_layout(void* self) {
     KCategorizedView_ExecuteDelayedItemsLayout((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_execute_delayed_items_layout(void* self) {
-    KCategorizedView_QBaseExecuteDelayedItemsLayout((KCategorizedView*)self);
+void k_categorizedview_super_execute_delayed_items_layout(void* self) {
+    KCategorizedView_SuperExecuteDelayedItemsLayout((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
@@ -3280,8 +3280,8 @@ void k_categorizedview_set_dirty_region(void* self, void* region) {
     KCategorizedView_SetDirtyRegion((KCategorizedView*)self, (QRegion*)region);
 }
 
-void k_categorizedview_qbase_set_dirty_region(void* self, void* region) {
-    KCategorizedView_QBaseSetDirtyRegion((KCategorizedView*)self, (QRegion*)region);
+void k_categorizedview_super_set_dirty_region(void* self, void* region) {
+    KCategorizedView_SuperSetDirtyRegion((KCategorizedView*)self, (QRegion*)region);
 }
 
 void k_categorizedview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
@@ -3292,8 +3292,8 @@ void k_categorizedview_scroll_dirty_region(void* self, int dx, int dy) {
     KCategorizedView_ScrollDirtyRegion((KCategorizedView*)self, dx, dy);
 }
 
-void k_categorizedview_qbase_scroll_dirty_region(void* self, int dx, int dy) {
-    KCategorizedView_QBaseScrollDirtyRegion((KCategorizedView*)self, dx, dy);
+void k_categorizedview_super_scroll_dirty_region(void* self, int dx, int dy) {
+    KCategorizedView_SuperScrollDirtyRegion((KCategorizedView*)self, dx, dy);
 }
 
 void k_categorizedview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
@@ -3304,8 +3304,8 @@ QPoint* k_categorizedview_dirty_region_offset(void* self) {
     return KCategorizedView_DirtyRegionOffset((KCategorizedView*)self);
 }
 
-QPoint* k_categorizedview_qbase_dirty_region_offset(void* self) {
-    return KCategorizedView_QBaseDirtyRegionOffset((KCategorizedView*)self);
+QPoint* k_categorizedview_super_dirty_region_offset(void* self) {
+    return KCategorizedView_SuperDirtyRegionOffset((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
@@ -3316,8 +3316,8 @@ void k_categorizedview_start_auto_scroll(void* self) {
     KCategorizedView_StartAutoScroll((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_start_auto_scroll(void* self) {
-    KCategorizedView_QBaseStartAutoScroll((KCategorizedView*)self);
+void k_categorizedview_super_start_auto_scroll(void* self) {
+    KCategorizedView_SuperStartAutoScroll((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_start_auto_scroll(void* self, void (*callback)()) {
@@ -3328,8 +3328,8 @@ void k_categorizedview_stop_auto_scroll(void* self) {
     KCategorizedView_StopAutoScroll((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_stop_auto_scroll(void* self) {
-    KCategorizedView_QBaseStopAutoScroll((KCategorizedView*)self);
+void k_categorizedview_super_stop_auto_scroll(void* self) {
+    KCategorizedView_SuperStopAutoScroll((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_stop_auto_scroll(void* self, void (*callback)()) {
@@ -3340,8 +3340,8 @@ void k_categorizedview_do_auto_scroll(void* self) {
     KCategorizedView_DoAutoScroll((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_do_auto_scroll(void* self) {
-    KCategorizedView_QBaseDoAutoScroll((KCategorizedView*)self);
+void k_categorizedview_super_do_auto_scroll(void* self) {
+    KCategorizedView_SuperDoAutoScroll((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_do_auto_scroll(void* self, void (*callback)()) {
@@ -3352,8 +3352,8 @@ int32_t k_categorizedview_drop_indicator_position(void* self) {
     return KCategorizedView_DropIndicatorPosition((KCategorizedView*)self);
 }
 
-int32_t k_categorizedview_qbase_drop_indicator_position(void* self) {
-    return KCategorizedView_QBaseDropIndicatorPosition((KCategorizedView*)self);
+int32_t k_categorizedview_super_drop_indicator_position(void* self) {
+    return KCategorizedView_SuperDropIndicatorPosition((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_drop_indicator_position(void* self, int32_t (*callback)()) {
@@ -3364,8 +3364,8 @@ void k_categorizedview_set_viewport_margins(void* self, int left, int top, int r
     KCategorizedView_SetViewportMargins((KCategorizedView*)self, left, top, right, bottom);
 }
 
-void k_categorizedview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    KCategorizedView_QBaseSetViewportMargins((KCategorizedView*)self, left, top, right, bottom);
+void k_categorizedview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    KCategorizedView_SuperSetViewportMargins((KCategorizedView*)self, left, top, right, bottom);
 }
 
 void k_categorizedview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -3376,8 +3376,8 @@ QMargins* k_categorizedview_viewport_margins(void* self) {
     return KCategorizedView_ViewportMargins((KCategorizedView*)self);
 }
 
-QMargins* k_categorizedview_qbase_viewport_margins(void* self) {
-    return KCategorizedView_QBaseViewportMargins((KCategorizedView*)self);
+QMargins* k_categorizedview_super_viewport_margins(void* self) {
+    return KCategorizedView_SuperViewportMargins((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -3388,8 +3388,8 @@ void k_categorizedview_draw_frame(void* self, void* param1) {
     KCategorizedView_DrawFrame((KCategorizedView*)self, (QPainter*)param1);
 }
 
-void k_categorizedview_qbase_draw_frame(void* self, void* param1) {
-    KCategorizedView_QBaseDrawFrame((KCategorizedView*)self, (QPainter*)param1);
+void k_categorizedview_super_draw_frame(void* self, void* param1) {
+    KCategorizedView_SuperDrawFrame((KCategorizedView*)self, (QPainter*)param1);
 }
 
 void k_categorizedview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -3400,8 +3400,8 @@ void k_categorizedview_update_micro_focus(void* self) {
     KCategorizedView_UpdateMicroFocus((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_update_micro_focus(void* self) {
-    KCategorizedView_QBaseUpdateMicroFocus((KCategorizedView*)self);
+void k_categorizedview_super_update_micro_focus(void* self) {
+    KCategorizedView_SuperUpdateMicroFocus((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3412,8 +3412,8 @@ void k_categorizedview_create(void* self) {
     KCategorizedView_Create((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_create(void* self) {
-    KCategorizedView_QBaseCreate((KCategorizedView*)self);
+void k_categorizedview_super_create(void* self) {
+    KCategorizedView_SuperCreate((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_create(void* self, void (*callback)()) {
@@ -3424,8 +3424,8 @@ void k_categorizedview_destroy(void* self) {
     KCategorizedView_Destroy((KCategorizedView*)self);
 }
 
-void k_categorizedview_qbase_destroy(void* self) {
-    KCategorizedView_QBaseDestroy((KCategorizedView*)self);
+void k_categorizedview_super_destroy(void* self) {
+    KCategorizedView_SuperDestroy((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_destroy(void* self, void (*callback)()) {
@@ -3436,8 +3436,8 @@ bool k_categorizedview_focus_next_child(void* self) {
     return KCategorizedView_FocusNextChild((KCategorizedView*)self);
 }
 
-bool k_categorizedview_qbase_focus_next_child(void* self) {
-    return KCategorizedView_QBaseFocusNextChild((KCategorizedView*)self);
+bool k_categorizedview_super_focus_next_child(void* self) {
+    return KCategorizedView_SuperFocusNextChild((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3448,8 +3448,8 @@ bool k_categorizedview_focus_previous_child(void* self) {
     return KCategorizedView_FocusPreviousChild((KCategorizedView*)self);
 }
 
-bool k_categorizedview_qbase_focus_previous_child(void* self) {
-    return KCategorizedView_QBaseFocusPreviousChild((KCategorizedView*)self);
+bool k_categorizedview_super_focus_previous_child(void* self) {
+    return KCategorizedView_SuperFocusPreviousChild((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3460,8 +3460,8 @@ QObject* k_categorizedview_sender(void* self) {
     return KCategorizedView_Sender((KCategorizedView*)self);
 }
 
-QObject* k_categorizedview_qbase_sender(void* self) {
-    return KCategorizedView_QBaseSender((KCategorizedView*)self);
+QObject* k_categorizedview_super_sender(void* self) {
+    return KCategorizedView_SuperSender((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_sender(void* self, QObject* (*callback)()) {
@@ -3472,8 +3472,8 @@ int32_t k_categorizedview_sender_signal_index(void* self) {
     return KCategorizedView_SenderSignalIndex((KCategorizedView*)self);
 }
 
-int32_t k_categorizedview_qbase_sender_signal_index(void* self) {
-    return KCategorizedView_QBaseSenderSignalIndex((KCategorizedView*)self);
+int32_t k_categorizedview_super_sender_signal_index(void* self) {
+    return KCategorizedView_SuperSenderSignalIndex((KCategorizedView*)self);
 }
 
 void k_categorizedview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3484,8 +3484,8 @@ int32_t k_categorizedview_receivers(void* self, const char* signal) {
     return KCategorizedView_Receivers((KCategorizedView*)self, signal);
 }
 
-int32_t k_categorizedview_qbase_receivers(void* self, const char* signal) {
-    return KCategorizedView_QBaseReceivers((KCategorizedView*)self, signal);
+int32_t k_categorizedview_super_receivers(void* self, const char* signal) {
+    return KCategorizedView_SuperReceivers((KCategorizedView*)self, signal);
 }
 
 void k_categorizedview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3496,8 +3496,8 @@ bool k_categorizedview_is_signal_connected(void* self, void* signal) {
     return KCategorizedView_IsSignalConnected((KCategorizedView*)self, (QMetaMethod*)signal);
 }
 
-bool k_categorizedview_qbase_is_signal_connected(void* self, void* signal) {
-    return KCategorizedView_QBaseIsSignalConnected((KCategorizedView*)self, (QMetaMethod*)signal);
+bool k_categorizedview_super_is_signal_connected(void* self, void* signal) {
+    return KCategorizedView_SuperIsSignalConnected((KCategorizedView*)self, (QMetaMethod*)signal);
 }
 
 void k_categorizedview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3508,8 +3508,8 @@ double k_categorizedview_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KCategorizedView_GetDecodedMetricF((KCategorizedView*)self, metricA, metricB);
 }
 
-double k_categorizedview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KCategorizedView_QBaseGetDecodedMetricF((KCategorizedView*)self, metricA, metricB);
+double k_categorizedview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KCategorizedView_SuperGetDecodedMetricF((KCategorizedView*)self, metricA, metricB);
 }
 
 void k_categorizedview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -43,13 +43,17 @@ const QMetaObject* q_placemanagerengine_meta_object(void* self);
 ///
 void q_placemanagerengine_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_meta_object` instead
+///
+#define q_placemanagerengine_qbase_meta_object q_placemanagerengine_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlaceManagerEngine*
 ///
-const QMetaObject* q_placemanagerengine_qbase_meta_object(void* self);
+const QMetaObject* q_placemanagerengine_super_meta_object(void* self);
 
 /// @param self QPlaceManagerEngine*
 /// @param param1 const char*
@@ -63,12 +67,16 @@ void* q_placemanagerengine_metacast(void* self, const char* param1);
 ///
 void q_placemanagerengine_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_metacast` instead
+///
+#define q_placemanagerengine_qbase_metacast q_placemanagerengine_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QPlaceManagerEngine*
 /// @param param1 const char*
 ///
-void* q_placemanagerengine_qbase_metacast(void* self, const char* param1);
+void* q_placemanagerengine_super_metacast(void* self, const char* param1);
 
 /// @param self QPlaceManagerEngine*
 /// @param param1 enum QMetaObject__Call
@@ -84,6 +92,10 @@ int32_t q_placemanagerengine_metacall(void* self, int32_t param1, int param2, vo
 ///
 void q_placemanagerengine_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_metacall` instead
+///
+#define q_placemanagerengine_qbase_metacall q_placemanagerengine_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QPlaceManagerEngine*
@@ -91,7 +103,7 @@ void q_placemanagerengine_on_metacall(void* self, int32_t (*callback)(void*, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_placemanagerengine_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_placemanagerengine_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -131,6 +143,10 @@ QPlaceDetailsReply* q_placemanagerengine_get_place_details(void* self, const cha
 ///
 void q_placemanagerengine_on_get_place_details(void* self, QPlaceDetailsReply* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_get_place_details` instead
+///
+#define q_placemanagerengine_qbase_get_place_details q_placemanagerengine_super_get_place_details
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#getPlaceDetails)
 ///
 /// Base class method implementation
@@ -138,7 +154,7 @@ void q_placemanagerengine_on_get_place_details(void* self, QPlaceDetailsReply* (
 /// @param self QPlaceManagerEngine*
 /// @param placeId const char*
 ///
-QPlaceDetailsReply* q_placemanagerengine_qbase_get_place_details(void* self, const char* placeId);
+QPlaceDetailsReply* q_placemanagerengine_super_get_place_details(void* self, const char* placeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#getPlaceContent)
 ///
@@ -156,6 +172,10 @@ QPlaceContentReply* q_placemanagerengine_get_place_content(void* self, void* req
 ///
 void q_placemanagerengine_on_get_place_content(void* self, QPlaceContentReply* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_get_place_content` instead
+///
+#define q_placemanagerengine_qbase_get_place_content q_placemanagerengine_super_get_place_content
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#getPlaceContent)
 ///
 /// Base class method implementation
@@ -163,7 +183,7 @@ void q_placemanagerengine_on_get_place_content(void* self, QPlaceContentReply* (
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceContentRequest*
 ///
-QPlaceContentReply* q_placemanagerengine_qbase_get_place_content(void* self, void* request);
+QPlaceContentReply* q_placemanagerengine_super_get_place_content(void* self, void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#search)
 ///
@@ -181,6 +201,10 @@ QPlaceSearchReply* q_placemanagerengine_search(void* self, void* request);
 ///
 void q_placemanagerengine_on_search(void* self, QPlaceSearchReply* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_search` instead
+///
+#define q_placemanagerengine_qbase_search q_placemanagerengine_super_search
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#search)
 ///
 /// Base class method implementation
@@ -188,7 +212,7 @@ void q_placemanagerengine_on_search(void* self, QPlaceSearchReply* (*callback)(v
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchReply* q_placemanagerengine_qbase_search(void* self, void* request);
+QPlaceSearchReply* q_placemanagerengine_super_search(void* self, void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#searchSuggestions)
 ///
@@ -206,6 +230,10 @@ QPlaceSearchSuggestionReply* q_placemanagerengine_search_suggestions(void* self,
 ///
 void q_placemanagerengine_on_search_suggestions(void* self, QPlaceSearchSuggestionReply* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_search_suggestions` instead
+///
+#define q_placemanagerengine_qbase_search_suggestions q_placemanagerengine_super_search_suggestions
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#searchSuggestions)
 ///
 /// Base class method implementation
@@ -213,7 +241,7 @@ void q_placemanagerengine_on_search_suggestions(void* self, QPlaceSearchSuggesti
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceSearchRequest*
 ///
-QPlaceSearchSuggestionReply* q_placemanagerengine_qbase_search_suggestions(void* self, void* request);
+QPlaceSearchSuggestionReply* q_placemanagerengine_super_search_suggestions(void* self, void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#savePlace)
 ///
@@ -231,6 +259,10 @@ QPlaceIdReply* q_placemanagerengine_save_place(void* self, void* place);
 ///
 void q_placemanagerengine_on_save_place(void* self, QPlaceIdReply* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_save_place` instead
+///
+#define q_placemanagerengine_qbase_save_place q_placemanagerengine_super_save_place
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#savePlace)
 ///
 /// Base class method implementation
@@ -238,7 +270,7 @@ void q_placemanagerengine_on_save_place(void* self, QPlaceIdReply* (*callback)(v
 /// @param self QPlaceManagerEngine*
 /// @param place QPlace*
 ///
-QPlaceIdReply* q_placemanagerengine_qbase_save_place(void* self, void* place);
+QPlaceIdReply* q_placemanagerengine_super_save_place(void* self, void* place);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#removePlace)
 ///
@@ -256,6 +288,10 @@ QPlaceIdReply* q_placemanagerengine_remove_place(void* self, const char* placeId
 ///
 void q_placemanagerengine_on_remove_place(void* self, QPlaceIdReply* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_remove_place` instead
+///
+#define q_placemanagerengine_qbase_remove_place q_placemanagerengine_super_remove_place
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#removePlace)
 ///
 /// Base class method implementation
@@ -263,7 +299,7 @@ void q_placemanagerengine_on_remove_place(void* self, QPlaceIdReply* (*callback)
 /// @param self QPlaceManagerEngine*
 /// @param placeId const char*
 ///
-QPlaceIdReply* q_placemanagerengine_qbase_remove_place(void* self, const char* placeId);
+QPlaceIdReply* q_placemanagerengine_super_remove_place(void* self, const char* placeId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#saveCategory)
 ///
@@ -282,6 +318,10 @@ QPlaceIdReply* q_placemanagerengine_save_category(void* self, void* category, co
 ///
 void q_placemanagerengine_on_save_category(void* self, QPlaceIdReply* (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_save_category` instead
+///
+#define q_placemanagerengine_qbase_save_category q_placemanagerengine_super_save_category
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#saveCategory)
 ///
 /// Base class method implementation
@@ -290,7 +330,7 @@ void q_placemanagerengine_on_save_category(void* self, QPlaceIdReply* (*callback
 /// @param category QPlaceCategory*
 /// @param parentId const char*
 ///
-QPlaceIdReply* q_placemanagerengine_qbase_save_category(void* self, void* category, const char* parentId);
+QPlaceIdReply* q_placemanagerengine_super_save_category(void* self, void* category, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#removeCategory)
 ///
@@ -308,6 +348,10 @@ QPlaceIdReply* q_placemanagerengine_remove_category(void* self, const char* cate
 ///
 void q_placemanagerengine_on_remove_category(void* self, QPlaceIdReply* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_remove_category` instead
+///
+#define q_placemanagerengine_qbase_remove_category q_placemanagerengine_super_remove_category
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#removeCategory)
 ///
 /// Base class method implementation
@@ -315,7 +359,7 @@ void q_placemanagerengine_on_remove_category(void* self, QPlaceIdReply* (*callba
 /// @param self QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-QPlaceIdReply* q_placemanagerengine_qbase_remove_category(void* self, const char* categoryId);
+QPlaceIdReply* q_placemanagerengine_super_remove_category(void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#initializeCategories)
 ///
@@ -332,13 +376,17 @@ QPlaceReply* q_placemanagerengine_initialize_categories(void* self);
 ///
 void q_placemanagerengine_on_initialize_categories(void* self, QPlaceReply* (*callback)());
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_initialize_categories` instead
+///
+#define q_placemanagerengine_qbase_initialize_categories q_placemanagerengine_super_initialize_categories
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#initializeCategories)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlaceManagerEngine*
 ///
-QPlaceReply* q_placemanagerengine_qbase_initialize_categories(void* self);
+QPlaceReply* q_placemanagerengine_super_initialize_categories(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#parentCategoryId)
 ///
@@ -358,6 +406,10 @@ const char* q_placemanagerengine_parent_category_id(void* self, const char* cate
 ///
 void q_placemanagerengine_on_parent_category_id(void* self, const char* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_parent_category_id` instead
+///
+#define q_placemanagerengine_qbase_parent_category_id q_placemanagerengine_super_parent_category_id
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#parentCategoryId)
 ///
 /// Base class method implementation
@@ -365,7 +417,7 @@ void q_placemanagerengine_on_parent_category_id(void* self, const char* (*callba
 /// @param self QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-const char* q_placemanagerengine_qbase_parent_category_id(void* self, const char* categoryId);
+const char* q_placemanagerengine_super_parent_category_id(void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategoryIds)
 ///
@@ -385,6 +437,10 @@ const char** q_placemanagerengine_child_category_ids(void* self, const char* cat
 ///
 void q_placemanagerengine_on_child_category_ids(void* self, const char** (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_child_category_ids` instead
+///
+#define q_placemanagerengine_qbase_child_category_ids q_placemanagerengine_super_child_category_ids
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategoryIds)
 ///
 /// Base class method implementation
@@ -392,7 +448,7 @@ void q_placemanagerengine_on_child_category_ids(void* self, const char** (*callb
 /// @param self QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-const char** q_placemanagerengine_qbase_child_category_ids(void* self, const char* categoryId);
+const char** q_placemanagerengine_super_child_category_ids(void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#category)
 ///
@@ -410,6 +466,10 @@ QPlaceCategory* q_placemanagerengine_category(void* self, const char* categoryId
 ///
 void q_placemanagerengine_on_category(void* self, QPlaceCategory* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_category` instead
+///
+#define q_placemanagerengine_qbase_category q_placemanagerengine_super_category
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#category)
 ///
 /// Base class method implementation
@@ -417,7 +477,7 @@ void q_placemanagerengine_on_category(void* self, QPlaceCategory* (*callback)(vo
 /// @param self QPlaceManagerEngine*
 /// @param categoryId const char*
 ///
-QPlaceCategory* q_placemanagerengine_qbase_category(void* self, const char* categoryId);
+QPlaceCategory* q_placemanagerengine_super_category(void* self, const char* categoryId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
@@ -437,6 +497,10 @@ libqt_list q_placemanagerengine_child_categories(void* self, const char* parentI
 ///
 void q_placemanagerengine_on_child_categories(void* self, libqt_list (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_child_categories` instead
+///
+#define q_placemanagerengine_qbase_child_categories q_placemanagerengine_super_child_categories
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#childCategories)
 ///
 /// Base class method implementation
@@ -446,7 +510,7 @@ void q_placemanagerengine_on_child_categories(void* self, libqt_list (*callback)
 ///
 /// @return libqt_list of QPlaceCategory*
 ///
-libqt_list q_placemanagerengine_qbase_child_categories(void* self, const char* parentId);
+libqt_list q_placemanagerengine_super_child_categories(void* self, const char* parentId);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
@@ -465,6 +529,10 @@ libqt_list q_placemanagerengine_locales(void* self);
 ///
 void q_placemanagerengine_on_locales(void* self, libqt_list (*callback)());
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_locales` instead
+///
+#define q_placemanagerengine_qbase_locales q_placemanagerengine_super_locales
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#locales)
 ///
 /// Base class method implementation
@@ -473,7 +541,7 @@ void q_placemanagerengine_on_locales(void* self, libqt_list (*callback)());
 ///
 /// @return libqt_list of QLocale*
 ///
-libqt_list q_placemanagerengine_qbase_locales(void* self);
+libqt_list q_placemanagerengine_super_locales(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
@@ -491,6 +559,10 @@ void q_placemanagerengine_set_locales(void* self, libqt_list locales);
 ///
 void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, libqt_list));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_set_locales` instead
+///
+#define q_placemanagerengine_qbase_set_locales q_placemanagerengine_super_set_locales
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#setLocales)
 ///
 /// Base class method implementation
@@ -498,7 +570,7 @@ void q_placemanagerengine_on_set_locales(void* self, void (*callback)(void*, lib
 /// @param self QPlaceManagerEngine*
 /// @param locales libqt_list of QLocale*
 ///
-void q_placemanagerengine_qbase_set_locales(void* self, libqt_list locales);
+void q_placemanagerengine_super_set_locales(void* self, libqt_list locales);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///
@@ -517,6 +589,10 @@ QUrl* q_placemanagerengine_construct_icon_url(void* self, void* icon, void* size
 ///
 void q_placemanagerengine_on_construct_icon_url(void* self, QUrl* (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_construct_icon_url` instead
+///
+#define q_placemanagerengine_qbase_construct_icon_url q_placemanagerengine_super_construct_icon_url
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#constructIconUrl)
 ///
 /// Base class method implementation
@@ -525,7 +601,7 @@ void q_placemanagerengine_on_construct_icon_url(void* self, QUrl* (*callback)(vo
 /// @param icon QPlaceIcon*
 /// @param size QSize*
 ///
-QUrl* q_placemanagerengine_qbase_construct_icon_url(void* self, void* icon, void* size);
+QUrl* q_placemanagerengine_super_construct_icon_url(void* self, void* icon, void* size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#compatiblePlace)
 ///
@@ -543,6 +619,10 @@ QPlace* q_placemanagerengine_compatible_place(void* self, void* original);
 ///
 void q_placemanagerengine_on_compatible_place(void* self, QPlace* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_compatible_place` instead
+///
+#define q_placemanagerengine_qbase_compatible_place q_placemanagerengine_super_compatible_place
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#compatiblePlace)
 ///
 /// Base class method implementation
@@ -550,7 +630,7 @@ void q_placemanagerengine_on_compatible_place(void* self, QPlace* (*callback)(vo
 /// @param self QPlaceManagerEngine*
 /// @param original QPlace*
 ///
-QPlace* q_placemanagerengine_qbase_compatible_place(void* self, void* original);
+QPlace* q_placemanagerengine_super_compatible_place(void* self, void* original);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#matchingPlaces)
 ///
@@ -568,6 +648,10 @@ QPlaceMatchReply* q_placemanagerengine_matching_places(void* self, void* request
 ///
 void q_placemanagerengine_on_matching_places(void* self, QPlaceMatchReply* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_matching_places` instead
+///
+#define q_placemanagerengine_qbase_matching_places q_placemanagerengine_super_matching_places
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#matchingPlaces)
 ///
 /// Base class method implementation
@@ -575,7 +659,7 @@ void q_placemanagerengine_on_matching_places(void* self, QPlaceMatchReply* (*cal
 /// @param self QPlaceManagerEngine*
 /// @param request QPlaceMatchRequest*
 ///
-QPlaceMatchReply* q_placemanagerengine_qbase_matching_places(void* self, void* request);
+QPlaceMatchReply* q_placemanagerengine_super_matching_places(void* self, void* request);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#finished)
 ///
@@ -721,13 +805,17 @@ QPlaceManager* q_placemanagerengine_manager(void* self);
 ///
 void q_placemanagerengine_on_manager(void* self, QPlaceManager* (*callback)());
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_manager` instead
+///
+#define q_placemanagerengine_qbase_manager q_placemanagerengine_super_manager
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qplacemanagerengine.html#manager)
 ///
 /// Base class method implementation
 ///
 /// @param self QPlaceManagerEngine*
 ///
-QPlaceManager* q_placemanagerengine_qbase_manager(void* self);
+QPlaceManager* q_placemanagerengine_super_manager(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1222,6 +1310,10 @@ void q_placemanagerengine_on_destroyed1(void* self, void (*callback)(void*, void
 ///
 bool q_placemanagerengine_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_event` instead
+///
+#define q_placemanagerengine_qbase_event q_placemanagerengine_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1231,7 +1323,7 @@ bool q_placemanagerengine_event(void* self, void* event);
 /// @param self QPlaceManagerEngine*
 /// @param event QEvent*
 ///
-bool q_placemanagerengine_qbase_event(void* self, void* event);
+bool q_placemanagerengine_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1256,6 +1348,10 @@ void q_placemanagerengine_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_placemanagerengine_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_event_filter` instead
+///
+#define q_placemanagerengine_qbase_event_filter q_placemanagerengine_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1266,7 +1362,7 @@ bool q_placemanagerengine_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_placemanagerengine_qbase_event_filter(void* self, void* watched, void* event);
+bool q_placemanagerengine_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1290,6 +1386,10 @@ void q_placemanagerengine_on_event_filter(void* self, bool (*callback)(void*, vo
 ///
 void q_placemanagerengine_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_timer_event` instead
+///
+#define q_placemanagerengine_qbase_timer_event q_placemanagerengine_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1299,7 +1399,7 @@ void q_placemanagerengine_timer_event(void* self, void* event);
 /// @param self QPlaceManagerEngine*
 /// @param event QTimerEvent*
 ///
-void q_placemanagerengine_qbase_timer_event(void* self, void* event);
+void q_placemanagerengine_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1323,6 +1423,10 @@ void q_placemanagerengine_on_timer_event(void* self, void (*callback)(void*, voi
 ///
 void q_placemanagerengine_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_child_event` instead
+///
+#define q_placemanagerengine_qbase_child_event q_placemanagerengine_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1332,7 +1436,7 @@ void q_placemanagerengine_child_event(void* self, void* event);
 /// @param self QPlaceManagerEngine*
 /// @param event QChildEvent*
 ///
-void q_placemanagerengine_qbase_child_event(void* self, void* event);
+void q_placemanagerengine_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1356,6 +1460,10 @@ void q_placemanagerengine_on_child_event(void* self, void (*callback)(void*, voi
 ///
 void q_placemanagerengine_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_custom_event` instead
+///
+#define q_placemanagerengine_qbase_custom_event q_placemanagerengine_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1365,7 +1473,7 @@ void q_placemanagerengine_custom_event(void* self, void* event);
 /// @param self QPlaceManagerEngine*
 /// @param event QEvent*
 ///
-void q_placemanagerengine_qbase_custom_event(void* self, void* event);
+void q_placemanagerengine_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1389,6 +1497,10 @@ void q_placemanagerengine_on_custom_event(void* self, void (*callback)(void*, vo
 ///
 void q_placemanagerengine_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_connect_notify` instead
+///
+#define q_placemanagerengine_qbase_connect_notify q_placemanagerengine_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1398,7 +1510,7 @@ void q_placemanagerengine_connect_notify(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-void q_placemanagerengine_qbase_connect_notify(void* self, void* signal);
+void q_placemanagerengine_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1422,6 +1534,10 @@ void q_placemanagerengine_on_connect_notify(void* self, void (*callback)(void*, 
 ///
 void q_placemanagerengine_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_disconnect_notify` instead
+///
+#define q_placemanagerengine_qbase_disconnect_notify q_placemanagerengine_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1431,7 +1547,7 @@ void q_placemanagerengine_disconnect_notify(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-void q_placemanagerengine_qbase_disconnect_notify(void* self, void* signal);
+void q_placemanagerengine_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1454,6 +1570,10 @@ void q_placemanagerengine_on_disconnect_notify(void* self, void (*callback)(void
 ///
 QObject* q_placemanagerengine_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_sender` instead
+///
+#define q_placemanagerengine_qbase_sender q_placemanagerengine_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1462,7 +1582,7 @@ QObject* q_placemanagerengine_sender(void* self);
 ///
 /// @param self QPlaceManagerEngine*
 ///
-QObject* q_placemanagerengine_qbase_sender(void* self);
+QObject* q_placemanagerengine_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1485,6 +1605,10 @@ void q_placemanagerengine_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_placemanagerengine_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_sender_signal_index` instead
+///
+#define q_placemanagerengine_qbase_sender_signal_index q_placemanagerengine_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1493,7 +1617,7 @@ int32_t q_placemanagerengine_sender_signal_index(void* self);
 ///
 /// @param self QPlaceManagerEngine*
 ///
-int32_t q_placemanagerengine_qbase_sender_signal_index(void* self);
+int32_t q_placemanagerengine_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1517,6 +1641,10 @@ void q_placemanagerengine_on_sender_signal_index(void* self, int32_t (*callback)
 ///
 int32_t q_placemanagerengine_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_receivers` instead
+///
+#define q_placemanagerengine_qbase_receivers q_placemanagerengine_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1526,7 +1654,7 @@ int32_t q_placemanagerengine_receivers(void* self, const char* signal);
 /// @param self QPlaceManagerEngine*
 /// @param signal const char*
 ///
-int32_t q_placemanagerengine_qbase_receivers(void* self, const char* signal);
+int32_t q_placemanagerengine_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1550,6 +1678,10 @@ void q_placemanagerengine_on_receivers(void* self, int32_t (*callback)(void*, co
 ///
 bool q_placemanagerengine_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_placemanagerengine_super_is_signal_connected` instead
+///
+#define q_placemanagerengine_qbase_is_signal_connected q_placemanagerengine_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1559,7 +1691,7 @@ bool q_placemanagerengine_is_signal_connected(void* self, void* signal);
 /// @param self QPlaceManagerEngine*
 /// @param signal QMetaMethod*
 ///
-bool q_placemanagerengine_qbase_is_signal_connected(void* self, void* signal);
+bool q_placemanagerengine_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

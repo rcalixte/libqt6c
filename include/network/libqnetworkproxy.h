@@ -513,6 +513,10 @@ libqt_list q_networkproxyfactory_query_proxy(void* self, void* query);
 ///
 void q_networkproxyfactory_on_query_proxy(void* self, libqt_list (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_networkproxyfactory_super_query_proxy` instead
+///
+#define q_networkproxyfactory_qbase_query_proxy q_networkproxyfactory_super_query_proxy
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#queryProxy)
 ///
 /// Base class method implementation
@@ -522,7 +526,7 @@ void q_networkproxyfactory_on_query_proxy(void* self, libqt_list (*callback)(voi
 ///
 /// @return libqt_list of QNetworkProxy*
 ///
-libqt_list q_networkproxyfactory_qbase_query_proxy(void* self, void* query);
+libqt_list q_networkproxyfactory_super_query_proxy(void* self, void* query);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkproxyfactory.html#usesSystemConfiguration)
 ///

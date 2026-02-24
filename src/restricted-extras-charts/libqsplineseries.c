@@ -27,8 +27,8 @@ void q_splineseries_on_meta_object(void* self, const QMetaObject* (*callback)())
     QSplineSeries_OnMetaObject((QSplineSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_splineseries_qbase_meta_object(void* self) {
-    return QSplineSeries_QBaseMetaObject((QSplineSeries*)self);
+const QMetaObject* q_splineseries_super_meta_object(void* self) {
+    return QSplineSeries_SuperMetaObject((QSplineSeries*)self);
 }
 
 void* q_splineseries_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void q_splineseries_on_metacast(void* self, void* (*callback)(void*, const char*
     QSplineSeries_OnMetacast((QSplineSeries*)self, (intptr_t)callback);
 }
 
-void* q_splineseries_qbase_metacast(void* self, const char* param1) {
-    return QSplineSeries_QBaseMetacast((QSplineSeries*)self, param1);
+void* q_splineseries_super_metacast(void* self, const char* param1) {
+    return QSplineSeries_SuperMetacast((QSplineSeries*)self, param1);
 }
 
 int32_t q_splineseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void q_splineseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QSplineSeries_OnMetacall((QSplineSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_splineseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSplineSeries_QBaseMetacall((QSplineSeries*)self, param1, param2, param3);
+int32_t q_splineseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSplineSeries_SuperMetacall((QSplineSeries*)self, param1, param2, param3);
 }
 
 const char* q_splineseries_tr(const char* s) {
@@ -70,8 +70,8 @@ void q_splineseries_on_type(void* self, int32_t (*callback)()) {
     QSplineSeries_OnType((QSplineSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_splineseries_qbase_type(void* self) {
-    return QSplineSeries_QBaseType((QSplineSeries*)self);
+int32_t q_splineseries_super_type(void* self) {
+    return QSplineSeries_SuperType((QSplineSeries*)self);
 }
 
 const char* q_splineseries_tr2(const char* s, const char* c) {
@@ -1001,8 +1001,8 @@ void q_splineseries_set_pen(void* self, void* pen) {
     QSplineSeries_SetPen((QSplineSeries*)self, (QPen*)pen);
 }
 
-void q_splineseries_qbase_set_pen(void* self, void* pen) {
-    QSplineSeries_QBaseSetPen((QSplineSeries*)self, (QPen*)pen);
+void q_splineseries_super_set_pen(void* self, void* pen) {
+    QSplineSeries_SuperSetPen((QSplineSeries*)self, (QPen*)pen);
 }
 
 void q_splineseries_on_set_pen(void* self, void (*callback)(void*, void*)) {
@@ -1013,8 +1013,8 @@ void q_splineseries_set_brush(void* self, void* brush) {
     QSplineSeries_SetBrush((QSplineSeries*)self, (QBrush*)brush);
 }
 
-void q_splineseries_qbase_set_brush(void* self, void* brush) {
-    QSplineSeries_QBaseSetBrush((QSplineSeries*)self, (QBrush*)brush);
+void q_splineseries_super_set_brush(void* self, void* brush) {
+    QSplineSeries_SuperSetBrush((QSplineSeries*)self, (QBrush*)brush);
 }
 
 void q_splineseries_on_set_brush(void* self, void (*callback)(void*, void*)) {
@@ -1025,8 +1025,8 @@ void q_splineseries_set_color(void* self, void* color) {
     QSplineSeries_SetColor((QSplineSeries*)self, (QColor*)color);
 }
 
-void q_splineseries_qbase_set_color(void* self, void* color) {
-    QSplineSeries_QBaseSetColor((QSplineSeries*)self, (QColor*)color);
+void q_splineseries_super_set_color(void* self, void* color) {
+    QSplineSeries_SuperSetColor((QSplineSeries*)self, (QColor*)color);
 }
 
 void q_splineseries_on_set_color(void* self, void (*callback)(void*, void*)) {
@@ -1037,8 +1037,8 @@ QColor* q_splineseries_color(void* self) {
     return QSplineSeries_Color((QSplineSeries*)self);
 }
 
-QColor* q_splineseries_qbase_color(void* self) {
-    return QSplineSeries_QBaseColor((QSplineSeries*)self);
+QColor* q_splineseries_super_color(void* self) {
+    return QSplineSeries_SuperColor((QSplineSeries*)self);
 }
 
 void q_splineseries_on_color(void* self, QColor* (*callback)()) {
@@ -1049,8 +1049,8 @@ bool q_splineseries_event(void* self, void* event) {
     return QSplineSeries_Event((QSplineSeries*)self, (QEvent*)event);
 }
 
-bool q_splineseries_qbase_event(void* self, void* event) {
-    return QSplineSeries_QBaseEvent((QSplineSeries*)self, (QEvent*)event);
+bool q_splineseries_super_event(void* self, void* event) {
+    return QSplineSeries_SuperEvent((QSplineSeries*)self, (QEvent*)event);
 }
 
 void q_splineseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1061,8 +1061,8 @@ bool q_splineseries_event_filter(void* self, void* watched, void* event) {
     return QSplineSeries_EventFilter((QSplineSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_splineseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSplineSeries_QBaseEventFilter((QSplineSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_splineseries_super_event_filter(void* self, void* watched, void* event) {
+    return QSplineSeries_SuperEventFilter((QSplineSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_splineseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1073,8 +1073,8 @@ void q_splineseries_timer_event(void* self, void* event) {
     QSplineSeries_TimerEvent((QSplineSeries*)self, (QTimerEvent*)event);
 }
 
-void q_splineseries_qbase_timer_event(void* self, void* event) {
-    QSplineSeries_QBaseTimerEvent((QSplineSeries*)self, (QTimerEvent*)event);
+void q_splineseries_super_timer_event(void* self, void* event) {
+    QSplineSeries_SuperTimerEvent((QSplineSeries*)self, (QTimerEvent*)event);
 }
 
 void q_splineseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1085,8 +1085,8 @@ void q_splineseries_child_event(void* self, void* event) {
     QSplineSeries_ChildEvent((QSplineSeries*)self, (QChildEvent*)event);
 }
 
-void q_splineseries_qbase_child_event(void* self, void* event) {
-    QSplineSeries_QBaseChildEvent((QSplineSeries*)self, (QChildEvent*)event);
+void q_splineseries_super_child_event(void* self, void* event) {
+    QSplineSeries_SuperChildEvent((QSplineSeries*)self, (QChildEvent*)event);
 }
 
 void q_splineseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1097,8 +1097,8 @@ void q_splineseries_custom_event(void* self, void* event) {
     QSplineSeries_CustomEvent((QSplineSeries*)self, (QEvent*)event);
 }
 
-void q_splineseries_qbase_custom_event(void* self, void* event) {
-    QSplineSeries_QBaseCustomEvent((QSplineSeries*)self, (QEvent*)event);
+void q_splineseries_super_custom_event(void* self, void* event) {
+    QSplineSeries_SuperCustomEvent((QSplineSeries*)self, (QEvent*)event);
 }
 
 void q_splineseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1109,8 +1109,8 @@ void q_splineseries_connect_notify(void* self, void* signal) {
     QSplineSeries_ConnectNotify((QSplineSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_splineseries_qbase_connect_notify(void* self, void* signal) {
-    QSplineSeries_QBaseConnectNotify((QSplineSeries*)self, (QMetaMethod*)signal);
+void q_splineseries_super_connect_notify(void* self, void* signal) {
+    QSplineSeries_SuperConnectNotify((QSplineSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_splineseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1121,8 +1121,8 @@ void q_splineseries_disconnect_notify(void* self, void* signal) {
     QSplineSeries_DisconnectNotify((QSplineSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_splineseries_qbase_disconnect_notify(void* self, void* signal) {
-    QSplineSeries_QBaseDisconnectNotify((QSplineSeries*)self, (QMetaMethod*)signal);
+void q_splineseries_super_disconnect_notify(void* self, void* signal) {
+    QSplineSeries_SuperDisconnectNotify((QSplineSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_splineseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1133,8 +1133,8 @@ QObject* q_splineseries_sender(void* self) {
     return QSplineSeries_Sender((QSplineSeries*)self);
 }
 
-QObject* q_splineseries_qbase_sender(void* self) {
-    return QSplineSeries_QBaseSender((QSplineSeries*)self);
+QObject* q_splineseries_super_sender(void* self) {
+    return QSplineSeries_SuperSender((QSplineSeries*)self);
 }
 
 void q_splineseries_on_sender(void* self, QObject* (*callback)()) {
@@ -1145,8 +1145,8 @@ int32_t q_splineseries_sender_signal_index(void* self) {
     return QSplineSeries_SenderSignalIndex((QSplineSeries*)self);
 }
 
-int32_t q_splineseries_qbase_sender_signal_index(void* self) {
-    return QSplineSeries_QBaseSenderSignalIndex((QSplineSeries*)self);
+int32_t q_splineseries_super_sender_signal_index(void* self) {
+    return QSplineSeries_SuperSenderSignalIndex((QSplineSeries*)self);
 }
 
 void q_splineseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1157,8 +1157,8 @@ int32_t q_splineseries_receivers(void* self, const char* signal) {
     return QSplineSeries_Receivers((QSplineSeries*)self, signal);
 }
 
-int32_t q_splineseries_qbase_receivers(void* self, const char* signal) {
-    return QSplineSeries_QBaseReceivers((QSplineSeries*)self, signal);
+int32_t q_splineseries_super_receivers(void* self, const char* signal) {
+    return QSplineSeries_SuperReceivers((QSplineSeries*)self, signal);
 }
 
 void q_splineseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1169,8 +1169,8 @@ bool q_splineseries_is_signal_connected(void* self, void* signal) {
     return QSplineSeries_IsSignalConnected((QSplineSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_splineseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QSplineSeries_QBaseIsSignalConnected((QSplineSeries*)self, (QMetaMethod*)signal);
+bool q_splineseries_super_is_signal_connected(void* self, void* signal) {
+    return QSplineSeries_SuperIsSignalConnected((QSplineSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_splineseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

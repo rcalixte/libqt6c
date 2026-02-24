@@ -14,8 +14,8 @@ void k_messageboxdontaskagaininterface_on_should_be_shown_two_actions(void* self
     KMessageBoxDontAskAgainInterface_OnShouldBeShownTwoActions((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-bool k_messageboxdontaskagaininterface_qbase_should_be_shown_two_actions(void* self, const char* dontShowAgainName, int32_t* result) {
-    return KMessageBoxDontAskAgainInterface_QBaseShouldBeShownTwoActions((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName), result);
+bool k_messageboxdontaskagaininterface_super_should_be_shown_two_actions(void* self, const char* dontShowAgainName, int32_t* result) {
+    return KMessageBoxDontAskAgainInterface_SuperShouldBeShownTwoActions((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName), result);
 }
 
 bool k_messageboxdontaskagaininterface_should_be_shown_continue(void* self, const char* dontShowAgainName) {
@@ -26,8 +26,8 @@ void k_messageboxdontaskagaininterface_on_should_be_shown_continue(void* self, b
     KMessageBoxDontAskAgainInterface_OnShouldBeShownContinue((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-bool k_messageboxdontaskagaininterface_qbase_should_be_shown_continue(void* self, const char* dontShowAgainName) {
-    return KMessageBoxDontAskAgainInterface_QBaseShouldBeShownContinue((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName));
+bool k_messageboxdontaskagaininterface_super_should_be_shown_continue(void* self, const char* dontShowAgainName) {
+    return KMessageBoxDontAskAgainInterface_SuperShouldBeShownContinue((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName));
 }
 
 void k_messageboxdontaskagaininterface_save_dont_show_again_two_actions(void* self, const char* dontShowAgainName, int32_t result) {
@@ -38,8 +38,8 @@ void k_messageboxdontaskagaininterface_on_save_dont_show_again_two_actions(void*
     KMessageBoxDontAskAgainInterface_OnSaveDontShowAgainTwoActions((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxdontaskagaininterface_qbase_save_dont_show_again_two_actions(void* self, const char* dontShowAgainName, int32_t result) {
-    KMessageBoxDontAskAgainInterface_QBaseSaveDontShowAgainTwoActions((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName), result);
+void k_messageboxdontaskagaininterface_super_save_dont_show_again_two_actions(void* self, const char* dontShowAgainName, int32_t result) {
+    KMessageBoxDontAskAgainInterface_SuperSaveDontShowAgainTwoActions((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName), result);
 }
 
 void k_messageboxdontaskagaininterface_save_dont_show_again_continue(void* self, const char* dontShowAgainName) {
@@ -50,8 +50,8 @@ void k_messageboxdontaskagaininterface_on_save_dont_show_again_continue(void* se
     KMessageBoxDontAskAgainInterface_OnSaveDontShowAgainContinue((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxdontaskagaininterface_qbase_save_dont_show_again_continue(void* self, const char* dontShowAgainName) {
-    KMessageBoxDontAskAgainInterface_QBaseSaveDontShowAgainContinue((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName));
+void k_messageboxdontaskagaininterface_super_save_dont_show_again_continue(void* self, const char* dontShowAgainName) {
+    KMessageBoxDontAskAgainInterface_SuperSaveDontShowAgainContinue((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName));
 }
 
 void k_messageboxdontaskagaininterface_enable_all_messages(void* self) {
@@ -62,8 +62,8 @@ void k_messageboxdontaskagaininterface_on_enable_all_messages(void* self, void (
     KMessageBoxDontAskAgainInterface_OnEnableAllMessages((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxdontaskagaininterface_qbase_enable_all_messages(void* self) {
-    KMessageBoxDontAskAgainInterface_QBaseEnableAllMessages((KMessageBoxDontAskAgainInterface*)self);
+void k_messageboxdontaskagaininterface_super_enable_all_messages(void* self) {
+    KMessageBoxDontAskAgainInterface_SuperEnableAllMessages((KMessageBoxDontAskAgainInterface*)self);
 }
 
 void k_messageboxdontaskagaininterface_enable_message(void* self, const char* dontShowAgainName) {
@@ -74,8 +74,8 @@ void k_messageboxdontaskagaininterface_on_enable_message(void* self, void (*call
     KMessageBoxDontAskAgainInterface_OnEnableMessage((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxdontaskagaininterface_qbase_enable_message(void* self, const char* dontShowAgainName) {
-    KMessageBoxDontAskAgainInterface_QBaseEnableMessage((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName));
+void k_messageboxdontaskagaininterface_super_enable_message(void* self, const char* dontShowAgainName) {
+    KMessageBoxDontAskAgainInterface_SuperEnableMessage((KMessageBoxDontAskAgainInterface*)self, qstring(dontShowAgainName));
 }
 
 void k_messageboxdontaskagaininterface_set_config(void* self, void* config) {
@@ -86,8 +86,8 @@ void k_messageboxdontaskagaininterface_on_set_config(void* self, void (*callback
     KMessageBoxDontAskAgainInterface_OnSetConfig((KMessageBoxDontAskAgainInterface*)self, (intptr_t)callback);
 }
 
-void k_messageboxdontaskagaininterface_qbase_set_config(void* self, void* config) {
-    KMessageBoxDontAskAgainInterface_QBaseSetConfig((KMessageBoxDontAskAgainInterface*)self, (KConfig*)config);
+void k_messageboxdontaskagaininterface_super_set_config(void* self, void* config) {
+    KMessageBoxDontAskAgainInterface_SuperSetConfig((KMessageBoxDontAskAgainInterface*)self, (KConfig*)config);
 }
 
 void k_messageboxdontaskagaininterface_operator_assign(void* self, void* param1) {

@@ -33,8 +33,8 @@ void q_toolbutton_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QToolButton_OnMetaObject((QToolButton*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_toolbutton_qbase_meta_object(void* self) {
-    return QToolButton_QBaseMetaObject((QToolButton*)self);
+const QMetaObject* q_toolbutton_super_meta_object(void* self) {
+    return QToolButton_SuperMetaObject((QToolButton*)self);
 }
 
 void* q_toolbutton_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_toolbutton_on_metacast(void* self, void* (*callback)(void*, const char*))
     QToolButton_OnMetacast((QToolButton*)self, (intptr_t)callback);
 }
 
-void* q_toolbutton_qbase_metacast(void* self, const char* param1) {
-    return QToolButton_QBaseMetacast((QToolButton*)self, param1);
+void* q_toolbutton_super_metacast(void* self, const char* param1) {
+    return QToolButton_SuperMetacast((QToolButton*)self, param1);
 }
 
 int32_t q_toolbutton_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_toolbutton_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QToolButton_OnMetacall((QToolButton*)self, (intptr_t)callback);
 }
 
-int32_t q_toolbutton_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QToolButton_QBaseMetacall((QToolButton*)self, param1, param2, param3);
+int32_t q_toolbutton_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QToolButton_SuperMetacall((QToolButton*)self, param1, param2, param3);
 }
 
 const char* q_toolbutton_tr(const char* s) {
@@ -76,8 +76,8 @@ void q_toolbutton_on_size_hint(void* self, QSize* (*callback)()) {
     QToolButton_OnSizeHint((QToolButton*)self, (intptr_t)callback);
 }
 
-QSize* q_toolbutton_qbase_size_hint(void* self) {
-    return QToolButton_QBaseSizeHint((QToolButton*)self);
+QSize* q_toolbutton_super_size_hint(void* self) {
+    return QToolButton_SuperSizeHint((QToolButton*)self);
 }
 
 QSize* q_toolbutton_minimum_size_hint(void* self) {
@@ -88,8 +88,8 @@ void q_toolbutton_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QToolButton_OnMinimumSizeHint((QToolButton*)self, (intptr_t)callback);
 }
 
-QSize* q_toolbutton_qbase_minimum_size_hint(void* self) {
-    return QToolButton_QBaseMinimumSizeHint((QToolButton*)self);
+QSize* q_toolbutton_super_minimum_size_hint(void* self) {
+    return QToolButton_SuperMinimumSizeHint((QToolButton*)self);
 }
 
 int32_t q_toolbutton_tool_button_style(void* self) {
@@ -160,8 +160,8 @@ void q_toolbutton_on_event(void* self, bool (*callback)(void*, void*)) {
     QToolButton_OnEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-bool q_toolbutton_qbase_event(void* self, void* e) {
-    return QToolButton_QBaseEvent((QToolButton*)self, (QEvent*)e);
+bool q_toolbutton_super_event(void* self, void* e) {
+    return QToolButton_SuperEvent((QToolButton*)self, (QEvent*)e);
 }
 
 void q_toolbutton_mouse_press_event(void* self, void* param1) {
@@ -172,8 +172,8 @@ void q_toolbutton_on_mouse_press_event(void* self, void (*callback)(void*, void*
     QToolButton_OnMousePressEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_mouse_press_event(void* self, void* param1) {
-    QToolButton_QBaseMousePressEvent((QToolButton*)self, (QMouseEvent*)param1);
+void q_toolbutton_super_mouse_press_event(void* self, void* param1) {
+    QToolButton_SuperMousePressEvent((QToolButton*)self, (QMouseEvent*)param1);
 }
 
 void q_toolbutton_mouse_release_event(void* self, void* param1) {
@@ -184,8 +184,8 @@ void q_toolbutton_on_mouse_release_event(void* self, void (*callback)(void*, voi
     QToolButton_OnMouseReleaseEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_mouse_release_event(void* self, void* param1) {
-    QToolButton_QBaseMouseReleaseEvent((QToolButton*)self, (QMouseEvent*)param1);
+void q_toolbutton_super_mouse_release_event(void* self, void* param1) {
+    QToolButton_SuperMouseReleaseEvent((QToolButton*)self, (QMouseEvent*)param1);
 }
 
 void q_toolbutton_paint_event(void* self, void* param1) {
@@ -196,8 +196,8 @@ void q_toolbutton_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QToolButton_OnPaintEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_paint_event(void* self, void* param1) {
-    QToolButton_QBasePaintEvent((QToolButton*)self, (QPaintEvent*)param1);
+void q_toolbutton_super_paint_event(void* self, void* param1) {
+    QToolButton_SuperPaintEvent((QToolButton*)self, (QPaintEvent*)param1);
 }
 
 void q_toolbutton_action_event(void* self, void* param1) {
@@ -208,8 +208,8 @@ void q_toolbutton_on_action_event(void* self, void (*callback)(void*, void*)) {
     QToolButton_OnActionEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_action_event(void* self, void* param1) {
-    QToolButton_QBaseActionEvent((QToolButton*)self, (QActionEvent*)param1);
+void q_toolbutton_super_action_event(void* self, void* param1) {
+    QToolButton_SuperActionEvent((QToolButton*)self, (QActionEvent*)param1);
 }
 
 void q_toolbutton_enter_event(void* self, void* param1) {
@@ -220,8 +220,8 @@ void q_toolbutton_on_enter_event(void* self, void (*callback)(void*, void*)) {
     QToolButton_OnEnterEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_enter_event(void* self, void* param1) {
-    QToolButton_QBaseEnterEvent((QToolButton*)self, (QEnterEvent*)param1);
+void q_toolbutton_super_enter_event(void* self, void* param1) {
+    QToolButton_SuperEnterEvent((QToolButton*)self, (QEnterEvent*)param1);
 }
 
 void q_toolbutton_leave_event(void* self, void* param1) {
@@ -232,8 +232,8 @@ void q_toolbutton_on_leave_event(void* self, void (*callback)(void*, void*)) {
     QToolButton_OnLeaveEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_leave_event(void* self, void* param1) {
-    QToolButton_QBaseLeaveEvent((QToolButton*)self, (QEvent*)param1);
+void q_toolbutton_super_leave_event(void* self, void* param1) {
+    QToolButton_SuperLeaveEvent((QToolButton*)self, (QEvent*)param1);
 }
 
 void q_toolbutton_timer_event(void* self, void* param1) {
@@ -244,8 +244,8 @@ void q_toolbutton_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QToolButton_OnTimerEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_timer_event(void* self, void* param1) {
-    QToolButton_QBaseTimerEvent((QToolButton*)self, (QTimerEvent*)param1);
+void q_toolbutton_super_timer_event(void* self, void* param1) {
+    QToolButton_SuperTimerEvent((QToolButton*)self, (QTimerEvent*)param1);
 }
 
 void q_toolbutton_change_event(void* self, void* param1) {
@@ -256,8 +256,8 @@ void q_toolbutton_on_change_event(void* self, void (*callback)(void*, void*)) {
     QToolButton_OnChangeEvent((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_change_event(void* self, void* param1) {
-    QToolButton_QBaseChangeEvent((QToolButton*)self, (QEvent*)param1);
+void q_toolbutton_super_change_event(void* self, void* param1) {
+    QToolButton_SuperChangeEvent((QToolButton*)self, (QEvent*)param1);
 }
 
 bool q_toolbutton_hit_button(void* self, void* pos) {
@@ -268,8 +268,8 @@ void q_toolbutton_on_hit_button(void* self, bool (*callback)(void*, void*)) {
     QToolButton_OnHitButton((QToolButton*)self, (intptr_t)callback);
 }
 
-bool q_toolbutton_qbase_hit_button(void* self, void* pos) {
-    return QToolButton_QBaseHitButton((QToolButton*)self, (QPoint*)pos);
+bool q_toolbutton_super_hit_button(void* self, void* pos) {
+    return QToolButton_SuperHitButton((QToolButton*)self, (QPoint*)pos);
 }
 
 void q_toolbutton_check_state_set(void* self) {
@@ -280,8 +280,8 @@ void q_toolbutton_on_check_state_set(void* self, void (*callback)()) {
     QToolButton_OnCheckStateSet((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_check_state_set(void* self) {
-    QToolButton_QBaseCheckStateSet((QToolButton*)self);
+void q_toolbutton_super_check_state_set(void* self) {
+    QToolButton_SuperCheckStateSet((QToolButton*)self);
 }
 
 void q_toolbutton_next_check_state(void* self) {
@@ -292,8 +292,8 @@ void q_toolbutton_on_next_check_state(void* self, void (*callback)()) {
     QToolButton_OnNextCheckState((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_next_check_state(void* self) {
-    QToolButton_QBaseNextCheckState((QToolButton*)self);
+void q_toolbutton_super_next_check_state(void* self) {
+    QToolButton_SuperNextCheckState((QToolButton*)self);
 }
 
 void q_toolbutton_init_style_option(void* self, void* option) {
@@ -304,8 +304,8 @@ void q_toolbutton_on_init_style_option(void* self, void (*callback)(void*, void*
     QToolButton_OnInitStyleOption((QToolButton*)self, (intptr_t)callback);
 }
 
-void q_toolbutton_qbase_init_style_option(void* self, void* option) {
-    QToolButton_QBaseInitStyleOption((QToolButton*)self, (QStyleOptionToolButton*)option);
+void q_toolbutton_super_init_style_option(void* self, void* option) {
+    QToolButton_SuperInitStyleOption((QToolButton*)self, (QStyleOptionToolButton*)option);
 }
 
 const char* q_toolbutton_tr2(const char* s, const char* c) {
@@ -1854,8 +1854,8 @@ void q_toolbutton_key_press_event(void* self, void* e) {
     QToolButton_KeyPressEvent((QToolButton*)self, (QKeyEvent*)e);
 }
 
-void q_toolbutton_qbase_key_press_event(void* self, void* e) {
-    QToolButton_QBaseKeyPressEvent((QToolButton*)self, (QKeyEvent*)e);
+void q_toolbutton_super_key_press_event(void* self, void* e) {
+    QToolButton_SuperKeyPressEvent((QToolButton*)self, (QKeyEvent*)e);
 }
 
 void q_toolbutton_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1866,8 +1866,8 @@ void q_toolbutton_key_release_event(void* self, void* e) {
     QToolButton_KeyReleaseEvent((QToolButton*)self, (QKeyEvent*)e);
 }
 
-void q_toolbutton_qbase_key_release_event(void* self, void* e) {
-    QToolButton_QBaseKeyReleaseEvent((QToolButton*)self, (QKeyEvent*)e);
+void q_toolbutton_super_key_release_event(void* self, void* e) {
+    QToolButton_SuperKeyReleaseEvent((QToolButton*)self, (QKeyEvent*)e);
 }
 
 void q_toolbutton_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1878,8 +1878,8 @@ void q_toolbutton_mouse_move_event(void* self, void* e) {
     QToolButton_MouseMoveEvent((QToolButton*)self, (QMouseEvent*)e);
 }
 
-void q_toolbutton_qbase_mouse_move_event(void* self, void* e) {
-    QToolButton_QBaseMouseMoveEvent((QToolButton*)self, (QMouseEvent*)e);
+void q_toolbutton_super_mouse_move_event(void* self, void* e) {
+    QToolButton_SuperMouseMoveEvent((QToolButton*)self, (QMouseEvent*)e);
 }
 
 void q_toolbutton_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1890,8 +1890,8 @@ void q_toolbutton_focus_in_event(void* self, void* e) {
     QToolButton_FocusInEvent((QToolButton*)self, (QFocusEvent*)e);
 }
 
-void q_toolbutton_qbase_focus_in_event(void* self, void* e) {
-    QToolButton_QBaseFocusInEvent((QToolButton*)self, (QFocusEvent*)e);
+void q_toolbutton_super_focus_in_event(void* self, void* e) {
+    QToolButton_SuperFocusInEvent((QToolButton*)self, (QFocusEvent*)e);
 }
 
 void q_toolbutton_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void q_toolbutton_focus_out_event(void* self, void* e) {
     QToolButton_FocusOutEvent((QToolButton*)self, (QFocusEvent*)e);
 }
 
-void q_toolbutton_qbase_focus_out_event(void* self, void* e) {
-    QToolButton_QBaseFocusOutEvent((QToolButton*)self, (QFocusEvent*)e);
+void q_toolbutton_super_focus_out_event(void* self, void* e) {
+    QToolButton_SuperFocusOutEvent((QToolButton*)self, (QFocusEvent*)e);
 }
 
 void q_toolbutton_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ int32_t q_toolbutton_dev_type(void* self) {
     return QToolButton_DevType((QToolButton*)self);
 }
 
-int32_t q_toolbutton_qbase_dev_type(void* self) {
-    return QToolButton_QBaseDevType((QToolButton*)self);
+int32_t q_toolbutton_super_dev_type(void* self) {
+    return QToolButton_SuperDevType((QToolButton*)self);
 }
 
 void q_toolbutton_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1926,8 +1926,8 @@ void q_toolbutton_set_visible(void* self, bool visible) {
     QToolButton_SetVisible((QToolButton*)self, visible);
 }
 
-void q_toolbutton_qbase_set_visible(void* self, bool visible) {
-    QToolButton_QBaseSetVisible((QToolButton*)self, visible);
+void q_toolbutton_super_set_visible(void* self, bool visible) {
+    QToolButton_SuperSetVisible((QToolButton*)self, visible);
 }
 
 void q_toolbutton_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1938,8 +1938,8 @@ int32_t q_toolbutton_height_for_width(void* self, int param1) {
     return QToolButton_HeightForWidth((QToolButton*)self, param1);
 }
 
-int32_t q_toolbutton_qbase_height_for_width(void* self, int param1) {
-    return QToolButton_QBaseHeightForWidth((QToolButton*)self, param1);
+int32_t q_toolbutton_super_height_for_width(void* self, int param1) {
+    return QToolButton_SuperHeightForWidth((QToolButton*)self, param1);
 }
 
 void q_toolbutton_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1950,8 +1950,8 @@ bool q_toolbutton_has_height_for_width(void* self) {
     return QToolButton_HasHeightForWidth((QToolButton*)self);
 }
 
-bool q_toolbutton_qbase_has_height_for_width(void* self) {
-    return QToolButton_QBaseHasHeightForWidth((QToolButton*)self);
+bool q_toolbutton_super_has_height_for_width(void* self) {
+    return QToolButton_SuperHasHeightForWidth((QToolButton*)self);
 }
 
 void q_toolbutton_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1962,8 +1962,8 @@ QPaintEngine* q_toolbutton_paint_engine(void* self) {
     return QToolButton_PaintEngine((QToolButton*)self);
 }
 
-QPaintEngine* q_toolbutton_qbase_paint_engine(void* self) {
-    return QToolButton_QBasePaintEngine((QToolButton*)self);
+QPaintEngine* q_toolbutton_super_paint_engine(void* self) {
+    return QToolButton_SuperPaintEngine((QToolButton*)self);
 }
 
 void q_toolbutton_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1974,8 +1974,8 @@ void q_toolbutton_mouse_double_click_event(void* self, void* event) {
     QToolButton_MouseDoubleClickEvent((QToolButton*)self, (QMouseEvent*)event);
 }
 
-void q_toolbutton_qbase_mouse_double_click_event(void* self, void* event) {
-    QToolButton_QBaseMouseDoubleClickEvent((QToolButton*)self, (QMouseEvent*)event);
+void q_toolbutton_super_mouse_double_click_event(void* self, void* event) {
+    QToolButton_SuperMouseDoubleClickEvent((QToolButton*)self, (QMouseEvent*)event);
 }
 
 void q_toolbutton_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ void q_toolbutton_wheel_event(void* self, void* event) {
     QToolButton_WheelEvent((QToolButton*)self, (QWheelEvent*)event);
 }
 
-void q_toolbutton_qbase_wheel_event(void* self, void* event) {
-    QToolButton_QBaseWheelEvent((QToolButton*)self, (QWheelEvent*)event);
+void q_toolbutton_super_wheel_event(void* self, void* event) {
+    QToolButton_SuperWheelEvent((QToolButton*)self, (QWheelEvent*)event);
 }
 
 void q_toolbutton_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void q_toolbutton_move_event(void* self, void* event) {
     QToolButton_MoveEvent((QToolButton*)self, (QMoveEvent*)event);
 }
 
-void q_toolbutton_qbase_move_event(void* self, void* event) {
-    QToolButton_QBaseMoveEvent((QToolButton*)self, (QMoveEvent*)event);
+void q_toolbutton_super_move_event(void* self, void* event) {
+    QToolButton_SuperMoveEvent((QToolButton*)self, (QMoveEvent*)event);
 }
 
 void q_toolbutton_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void q_toolbutton_resize_event(void* self, void* event) {
     QToolButton_ResizeEvent((QToolButton*)self, (QResizeEvent*)event);
 }
 
-void q_toolbutton_qbase_resize_event(void* self, void* event) {
-    QToolButton_QBaseResizeEvent((QToolButton*)self, (QResizeEvent*)event);
+void q_toolbutton_super_resize_event(void* self, void* event) {
+    QToolButton_SuperResizeEvent((QToolButton*)self, (QResizeEvent*)event);
 }
 
 void q_toolbutton_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void q_toolbutton_close_event(void* self, void* event) {
     QToolButton_CloseEvent((QToolButton*)self, (QCloseEvent*)event);
 }
 
-void q_toolbutton_qbase_close_event(void* self, void* event) {
-    QToolButton_QBaseCloseEvent((QToolButton*)self, (QCloseEvent*)event);
+void q_toolbutton_super_close_event(void* self, void* event) {
+    QToolButton_SuperCloseEvent((QToolButton*)self, (QCloseEvent*)event);
 }
 
 void q_toolbutton_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void q_toolbutton_context_menu_event(void* self, void* event) {
     QToolButton_ContextMenuEvent((QToolButton*)self, (QContextMenuEvent*)event);
 }
 
-void q_toolbutton_qbase_context_menu_event(void* self, void* event) {
-    QToolButton_QBaseContextMenuEvent((QToolButton*)self, (QContextMenuEvent*)event);
+void q_toolbutton_super_context_menu_event(void* self, void* event) {
+    QToolButton_SuperContextMenuEvent((QToolButton*)self, (QContextMenuEvent*)event);
 }
 
 void q_toolbutton_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void q_toolbutton_tablet_event(void* self, void* event) {
     QToolButton_TabletEvent((QToolButton*)self, (QTabletEvent*)event);
 }
 
-void q_toolbutton_qbase_tablet_event(void* self, void* event) {
-    QToolButton_QBaseTabletEvent((QToolButton*)self, (QTabletEvent*)event);
+void q_toolbutton_super_tablet_event(void* self, void* event) {
+    QToolButton_SuperTabletEvent((QToolButton*)self, (QTabletEvent*)event);
 }
 
 void q_toolbutton_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void q_toolbutton_drag_enter_event(void* self, void* event) {
     QToolButton_DragEnterEvent((QToolButton*)self, (QDragEnterEvent*)event);
 }
 
-void q_toolbutton_qbase_drag_enter_event(void* self, void* event) {
-    QToolButton_QBaseDragEnterEvent((QToolButton*)self, (QDragEnterEvent*)event);
+void q_toolbutton_super_drag_enter_event(void* self, void* event) {
+    QToolButton_SuperDragEnterEvent((QToolButton*)self, (QDragEnterEvent*)event);
 }
 
 void q_toolbutton_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void q_toolbutton_drag_move_event(void* self, void* event) {
     QToolButton_DragMoveEvent((QToolButton*)self, (QDragMoveEvent*)event);
 }
 
-void q_toolbutton_qbase_drag_move_event(void* self, void* event) {
-    QToolButton_QBaseDragMoveEvent((QToolButton*)self, (QDragMoveEvent*)event);
+void q_toolbutton_super_drag_move_event(void* self, void* event) {
+    QToolButton_SuperDragMoveEvent((QToolButton*)self, (QDragMoveEvent*)event);
 }
 
 void q_toolbutton_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void q_toolbutton_drag_leave_event(void* self, void* event) {
     QToolButton_DragLeaveEvent((QToolButton*)self, (QDragLeaveEvent*)event);
 }
 
-void q_toolbutton_qbase_drag_leave_event(void* self, void* event) {
-    QToolButton_QBaseDragLeaveEvent((QToolButton*)self, (QDragLeaveEvent*)event);
+void q_toolbutton_super_drag_leave_event(void* self, void* event) {
+    QToolButton_SuperDragLeaveEvent((QToolButton*)self, (QDragLeaveEvent*)event);
 }
 
 void q_toolbutton_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void q_toolbutton_drop_event(void* self, void* event) {
     QToolButton_DropEvent((QToolButton*)self, (QDropEvent*)event);
 }
 
-void q_toolbutton_qbase_drop_event(void* self, void* event) {
-    QToolButton_QBaseDropEvent((QToolButton*)self, (QDropEvent*)event);
+void q_toolbutton_super_drop_event(void* self, void* event) {
+    QToolButton_SuperDropEvent((QToolButton*)self, (QDropEvent*)event);
 }
 
 void q_toolbutton_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void q_toolbutton_show_event(void* self, void* event) {
     QToolButton_ShowEvent((QToolButton*)self, (QShowEvent*)event);
 }
 
-void q_toolbutton_qbase_show_event(void* self, void* event) {
-    QToolButton_QBaseShowEvent((QToolButton*)self, (QShowEvent*)event);
+void q_toolbutton_super_show_event(void* self, void* event) {
+    QToolButton_SuperShowEvent((QToolButton*)self, (QShowEvent*)event);
 }
 
 void q_toolbutton_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ void q_toolbutton_hide_event(void* self, void* event) {
     QToolButton_HideEvent((QToolButton*)self, (QHideEvent*)event);
 }
 
-void q_toolbutton_qbase_hide_event(void* self, void* event) {
-    QToolButton_QBaseHideEvent((QToolButton*)self, (QHideEvent*)event);
+void q_toolbutton_super_hide_event(void* self, void* event) {
+    QToolButton_SuperHideEvent((QToolButton*)self, (QHideEvent*)event);
 }
 
 void q_toolbutton_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2130,8 +2130,8 @@ bool q_toolbutton_native_event(void* self, char* eventType, void* message, intpt
     return QToolButton_NativeEvent((QToolButton*)self, qstring(eventType), message, result);
 }
 
-bool q_toolbutton_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QToolButton_QBaseNativeEvent((QToolButton*)self, qstring(eventType), message, result);
+bool q_toolbutton_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QToolButton_SuperNativeEvent((QToolButton*)self, qstring(eventType), message, result);
 }
 
 void q_toolbutton_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2142,8 +2142,8 @@ int32_t q_toolbutton_metric(void* self, int32_t param1) {
     return QToolButton_Metric((QToolButton*)self, param1);
 }
 
-int32_t q_toolbutton_qbase_metric(void* self, int32_t param1) {
-    return QToolButton_QBaseMetric((QToolButton*)self, param1);
+int32_t q_toolbutton_super_metric(void* self, int32_t param1) {
+    return QToolButton_SuperMetric((QToolButton*)self, param1);
 }
 
 void q_toolbutton_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2154,8 +2154,8 @@ void q_toolbutton_init_painter(void* self, void* painter) {
     QToolButton_InitPainter((QToolButton*)self, (QPainter*)painter);
 }
 
-void q_toolbutton_qbase_init_painter(void* self, void* painter) {
-    QToolButton_QBaseInitPainter((QToolButton*)self, (QPainter*)painter);
+void q_toolbutton_super_init_painter(void* self, void* painter) {
+    QToolButton_SuperInitPainter((QToolButton*)self, (QPainter*)painter);
 }
 
 void q_toolbutton_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2166,8 +2166,8 @@ QPaintDevice* q_toolbutton_redirected(void* self, void* offset) {
     return QToolButton_Redirected((QToolButton*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_toolbutton_qbase_redirected(void* self, void* offset) {
-    return QToolButton_QBaseRedirected((QToolButton*)self, (QPoint*)offset);
+QPaintDevice* q_toolbutton_super_redirected(void* self, void* offset) {
+    return QToolButton_SuperRedirected((QToolButton*)self, (QPoint*)offset);
 }
 
 void q_toolbutton_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2178,8 +2178,8 @@ QPainter* q_toolbutton_shared_painter(void* self) {
     return QToolButton_SharedPainter((QToolButton*)self);
 }
 
-QPainter* q_toolbutton_qbase_shared_painter(void* self) {
-    return QToolButton_QBaseSharedPainter((QToolButton*)self);
+QPainter* q_toolbutton_super_shared_painter(void* self) {
+    return QToolButton_SuperSharedPainter((QToolButton*)self);
 }
 
 void q_toolbutton_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2190,8 +2190,8 @@ void q_toolbutton_input_method_event(void* self, void* param1) {
     QToolButton_InputMethodEvent((QToolButton*)self, (QInputMethodEvent*)param1);
 }
 
-void q_toolbutton_qbase_input_method_event(void* self, void* param1) {
-    QToolButton_QBaseInputMethodEvent((QToolButton*)self, (QInputMethodEvent*)param1);
+void q_toolbutton_super_input_method_event(void* self, void* param1) {
+    QToolButton_SuperInputMethodEvent((QToolButton*)self, (QInputMethodEvent*)param1);
 }
 
 void q_toolbutton_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2202,8 +2202,8 @@ QVariant* q_toolbutton_input_method_query(void* self, int32_t param1) {
     return QToolButton_InputMethodQuery((QToolButton*)self, param1);
 }
 
-QVariant* q_toolbutton_qbase_input_method_query(void* self, int32_t param1) {
-    return QToolButton_QBaseInputMethodQuery((QToolButton*)self, param1);
+QVariant* q_toolbutton_super_input_method_query(void* self, int32_t param1) {
+    return QToolButton_SuperInputMethodQuery((QToolButton*)self, param1);
 }
 
 void q_toolbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2214,8 +2214,8 @@ bool q_toolbutton_focus_next_prev_child(void* self, bool next) {
     return QToolButton_FocusNextPrevChild((QToolButton*)self, next);
 }
 
-bool q_toolbutton_qbase_focus_next_prev_child(void* self, bool next) {
-    return QToolButton_QBaseFocusNextPrevChild((QToolButton*)self, next);
+bool q_toolbutton_super_focus_next_prev_child(void* self, bool next) {
+    return QToolButton_SuperFocusNextPrevChild((QToolButton*)self, next);
 }
 
 void q_toolbutton_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2226,8 +2226,8 @@ bool q_toolbutton_event_filter(void* self, void* watched, void* event) {
     return QToolButton_EventFilter((QToolButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_toolbutton_qbase_event_filter(void* self, void* watched, void* event) {
-    return QToolButton_QBaseEventFilter((QToolButton*)self, (QObject*)watched, (QEvent*)event);
+bool q_toolbutton_super_event_filter(void* self, void* watched, void* event) {
+    return QToolButton_SuperEventFilter((QToolButton*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_toolbutton_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2238,8 +2238,8 @@ void q_toolbutton_child_event(void* self, void* event) {
     QToolButton_ChildEvent((QToolButton*)self, (QChildEvent*)event);
 }
 
-void q_toolbutton_qbase_child_event(void* self, void* event) {
-    QToolButton_QBaseChildEvent((QToolButton*)self, (QChildEvent*)event);
+void q_toolbutton_super_child_event(void* self, void* event) {
+    QToolButton_SuperChildEvent((QToolButton*)self, (QChildEvent*)event);
 }
 
 void q_toolbutton_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2250,8 +2250,8 @@ void q_toolbutton_custom_event(void* self, void* event) {
     QToolButton_CustomEvent((QToolButton*)self, (QEvent*)event);
 }
 
-void q_toolbutton_qbase_custom_event(void* self, void* event) {
-    QToolButton_QBaseCustomEvent((QToolButton*)self, (QEvent*)event);
+void q_toolbutton_super_custom_event(void* self, void* event) {
+    QToolButton_SuperCustomEvent((QToolButton*)self, (QEvent*)event);
 }
 
 void q_toolbutton_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2262,8 +2262,8 @@ void q_toolbutton_connect_notify(void* self, void* signal) {
     QToolButton_ConnectNotify((QToolButton*)self, (QMetaMethod*)signal);
 }
 
-void q_toolbutton_qbase_connect_notify(void* self, void* signal) {
-    QToolButton_QBaseConnectNotify((QToolButton*)self, (QMetaMethod*)signal);
+void q_toolbutton_super_connect_notify(void* self, void* signal) {
+    QToolButton_SuperConnectNotify((QToolButton*)self, (QMetaMethod*)signal);
 }
 
 void q_toolbutton_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2274,8 +2274,8 @@ void q_toolbutton_disconnect_notify(void* self, void* signal) {
     QToolButton_DisconnectNotify((QToolButton*)self, (QMetaMethod*)signal);
 }
 
-void q_toolbutton_qbase_disconnect_notify(void* self, void* signal) {
-    QToolButton_QBaseDisconnectNotify((QToolButton*)self, (QMetaMethod*)signal);
+void q_toolbutton_super_disconnect_notify(void* self, void* signal) {
+    QToolButton_SuperDisconnectNotify((QToolButton*)self, (QMetaMethod*)signal);
 }
 
 void q_toolbutton_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2286,8 +2286,8 @@ void q_toolbutton_update_micro_focus(void* self) {
     QToolButton_UpdateMicroFocus((QToolButton*)self);
 }
 
-void q_toolbutton_qbase_update_micro_focus(void* self) {
-    QToolButton_QBaseUpdateMicroFocus((QToolButton*)self);
+void q_toolbutton_super_update_micro_focus(void* self) {
+    QToolButton_SuperUpdateMicroFocus((QToolButton*)self);
 }
 
 void q_toolbutton_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2298,8 +2298,8 @@ void q_toolbutton_create(void* self) {
     QToolButton_Create((QToolButton*)self);
 }
 
-void q_toolbutton_qbase_create(void* self) {
-    QToolButton_QBaseCreate((QToolButton*)self);
+void q_toolbutton_super_create(void* self) {
+    QToolButton_SuperCreate((QToolButton*)self);
 }
 
 void q_toolbutton_on_create(void* self, void (*callback)()) {
@@ -2310,8 +2310,8 @@ void q_toolbutton_destroy(void* self) {
     QToolButton_Destroy((QToolButton*)self);
 }
 
-void q_toolbutton_qbase_destroy(void* self) {
-    QToolButton_QBaseDestroy((QToolButton*)self);
+void q_toolbutton_super_destroy(void* self) {
+    QToolButton_SuperDestroy((QToolButton*)self);
 }
 
 void q_toolbutton_on_destroy(void* self, void (*callback)()) {
@@ -2322,8 +2322,8 @@ bool q_toolbutton_focus_next_child(void* self) {
     return QToolButton_FocusNextChild((QToolButton*)self);
 }
 
-bool q_toolbutton_qbase_focus_next_child(void* self) {
-    return QToolButton_QBaseFocusNextChild((QToolButton*)self);
+bool q_toolbutton_super_focus_next_child(void* self) {
+    return QToolButton_SuperFocusNextChild((QToolButton*)self);
 }
 
 void q_toolbutton_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2334,8 +2334,8 @@ bool q_toolbutton_focus_previous_child(void* self) {
     return QToolButton_FocusPreviousChild((QToolButton*)self);
 }
 
-bool q_toolbutton_qbase_focus_previous_child(void* self) {
-    return QToolButton_QBaseFocusPreviousChild((QToolButton*)self);
+bool q_toolbutton_super_focus_previous_child(void* self) {
+    return QToolButton_SuperFocusPreviousChild((QToolButton*)self);
 }
 
 void q_toolbutton_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2346,8 +2346,8 @@ QObject* q_toolbutton_sender(void* self) {
     return QToolButton_Sender((QToolButton*)self);
 }
 
-QObject* q_toolbutton_qbase_sender(void* self) {
-    return QToolButton_QBaseSender((QToolButton*)self);
+QObject* q_toolbutton_super_sender(void* self) {
+    return QToolButton_SuperSender((QToolButton*)self);
 }
 
 void q_toolbutton_on_sender(void* self, QObject* (*callback)()) {
@@ -2358,8 +2358,8 @@ int32_t q_toolbutton_sender_signal_index(void* self) {
     return QToolButton_SenderSignalIndex((QToolButton*)self);
 }
 
-int32_t q_toolbutton_qbase_sender_signal_index(void* self) {
-    return QToolButton_QBaseSenderSignalIndex((QToolButton*)self);
+int32_t q_toolbutton_super_sender_signal_index(void* self) {
+    return QToolButton_SuperSenderSignalIndex((QToolButton*)self);
 }
 
 void q_toolbutton_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2370,8 +2370,8 @@ int32_t q_toolbutton_receivers(void* self, const char* signal) {
     return QToolButton_Receivers((QToolButton*)self, signal);
 }
 
-int32_t q_toolbutton_qbase_receivers(void* self, const char* signal) {
-    return QToolButton_QBaseReceivers((QToolButton*)self, signal);
+int32_t q_toolbutton_super_receivers(void* self, const char* signal) {
+    return QToolButton_SuperReceivers((QToolButton*)self, signal);
 }
 
 void q_toolbutton_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2382,8 +2382,8 @@ bool q_toolbutton_is_signal_connected(void* self, void* signal) {
     return QToolButton_IsSignalConnected((QToolButton*)self, (QMetaMethod*)signal);
 }
 
-bool q_toolbutton_qbase_is_signal_connected(void* self, void* signal) {
-    return QToolButton_QBaseIsSignalConnected((QToolButton*)self, (QMetaMethod*)signal);
+bool q_toolbutton_super_is_signal_connected(void* self, void* signal) {
+    return QToolButton_SuperIsSignalConnected((QToolButton*)self, (QMetaMethod*)signal);
 }
 
 void q_toolbutton_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2394,8 +2394,8 @@ double q_toolbutton_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QToolButton_GetDecodedMetricF((QToolButton*)self, metricA, metricB);
 }
 
-double q_toolbutton_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QToolButton_QBaseGetDecodedMetricF((QToolButton*)self, metricA, metricB);
+double q_toolbutton_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QToolButton_SuperGetDecodedMetricF((QToolButton*)self, metricA, metricB);
 }
 
 void q_toolbutton_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

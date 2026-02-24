@@ -40,13 +40,17 @@ const QMetaObject* k_dirmodel_meta_object(void* self);
 ///
 void k_dirmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_meta_object` instead
+///
+#define k_dirmodel_qbase_meta_object k_dirmodel_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KDirModel*
 ///
-const QMetaObject* k_dirmodel_qbase_meta_object(void* self);
+const QMetaObject* k_dirmodel_super_meta_object(void* self);
 
 /// @param self KDirModel*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_dirmodel_metacast(void* self, const char* param1);
 ///
 void k_dirmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_metacast` instead
+///
+#define k_dirmodel_qbase_metacast k_dirmodel_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KDirModel*
 /// @param param1 const char*
 ///
-void* k_dirmodel_qbase_metacast(void* self, const char* param1);
+void* k_dirmodel_super_metacast(void* self, const char* param1);
 
 /// @param self KDirModel*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_dirmodel_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void k_dirmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_metacall` instead
+///
+#define k_dirmodel_qbase_metacall k_dirmodel_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KDirModel*
@@ -88,7 +100,7 @@ void k_dirmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_dirmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_dirmodel_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -182,6 +194,10 @@ bool k_dirmodel_can_fetch_more(void* self, void* parent);
 ///
 void k_dirmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_can_fetch_more` instead
+///
+#define k_dirmodel_qbase_can_fetch_more k_dirmodel_super_can_fetch_more
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#canFetchMore)
 ///
 /// Base class method implementation
@@ -189,7 +205,7 @@ void k_dirmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_can_fetch_more(void* self, void* parent);
+bool k_dirmodel_super_can_fetch_more(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#columnCount)
 ///
@@ -207,6 +223,10 @@ int32_t k_dirmodel_column_count(void* self, void* parent);
 ///
 void k_dirmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_column_count` instead
+///
+#define k_dirmodel_qbase_column_count k_dirmodel_super_column_count
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#columnCount)
 ///
 /// Base class method implementation
@@ -214,7 +234,7 @@ void k_dirmodel_on_column_count(void* self, int32_t (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_dirmodel_qbase_column_count(void* self, void* parent);
+int32_t k_dirmodel_super_column_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#data)
 ///
@@ -233,6 +253,10 @@ QVariant* k_dirmodel_data(void* self, void* index, int role);
 ///
 void k_dirmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_data` instead
+///
+#define k_dirmodel_qbase_data k_dirmodel_super_data
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#data)
 ///
 /// Base class method implementation
@@ -241,7 +265,7 @@ void k_dirmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 /// @param index QModelIndex*
 /// @param role int
 ///
-QVariant* k_dirmodel_qbase_data(void* self, void* index, int role);
+QVariant* k_dirmodel_super_data(void* self, void* index, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dropMimeData)
 ///
@@ -263,6 +287,10 @@ bool k_dirmodel_drop_mime_data(void* self, void* data, int32_t action, int row, 
 ///
 void k_dirmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_drop_mime_data` instead
+///
+#define k_dirmodel_qbase_drop_mime_data k_dirmodel_super_drop_mime_data
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#dropMimeData)
 ///
 /// Base class method implementation
@@ -274,7 +302,7 @@ void k_dirmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_dirmodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#fetchMore)
 ///
@@ -292,6 +320,10 @@ void k_dirmodel_fetch_more(void* self, void* parent);
 ///
 void k_dirmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_fetch_more` instead
+///
+#define k_dirmodel_qbase_fetch_more k_dirmodel_super_fetch_more
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#fetchMore)
 ///
 /// Base class method implementation
@@ -299,7 +331,7 @@ void k_dirmodel_on_fetch_more(void* self, void (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param parent QModelIndex*
 ///
-void k_dirmodel_qbase_fetch_more(void* self, void* parent);
+void k_dirmodel_super_fetch_more(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#flags)
 ///
@@ -319,6 +351,10 @@ int32_t k_dirmodel_flags(void* self, void* index);
 ///
 void k_dirmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_flags` instead
+///
+#define k_dirmodel_qbase_flags k_dirmodel_super_flags
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#flags)
 ///
 /// Base class method implementation
@@ -328,7 +364,7 @@ void k_dirmodel_on_flags(void* self, int32_t (*callback)(void*, void*));
 ///
 /// @return flag of enum Qt__ItemFlag
 ///
-int32_t k_dirmodel_qbase_flags(void* self, void* index);
+int32_t k_dirmodel_super_flags(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#hasChildren)
 ///
@@ -346,6 +382,10 @@ bool k_dirmodel_has_children(void* self, void* parent);
 ///
 void k_dirmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_has_children` instead
+///
+#define k_dirmodel_qbase_has_children k_dirmodel_super_has_children
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#hasChildren)
 ///
 /// Base class method implementation
@@ -353,7 +393,7 @@ void k_dirmodel_on_has_children(void* self, bool (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_has_children(void* self, void* parent);
+bool k_dirmodel_super_has_children(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#headerData)
 ///
@@ -373,6 +413,10 @@ QVariant* k_dirmodel_header_data(void* self, int section, int32_t orientation, i
 ///
 void k_dirmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_header_data` instead
+///
+#define k_dirmodel_qbase_header_data k_dirmodel_super_header_data
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#headerData)
 ///
 /// Base class method implementation
@@ -382,7 +426,7 @@ void k_dirmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int
 /// @param orientation enum Qt__Orientation
 /// @param role int
 ///
-QVariant* k_dirmodel_qbase_header_data(void* self, int section, int32_t orientation, int role);
+QVariant* k_dirmodel_super_header_data(void* self, int section, int32_t orientation, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#index)
 ///
@@ -402,6 +446,10 @@ QModelIndex* k_dirmodel_index(void* self, int row, int column, void* parent);
 ///
 void k_dirmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_index` instead
+///
+#define k_dirmodel_qbase_index k_dirmodel_super_index
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#index)
 ///
 /// Base class method implementation
@@ -411,7 +459,7 @@ void k_dirmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, v
 /// @param column int
 /// @param parent QModelIndex*
 ///
-QModelIndex* k_dirmodel_qbase_index(void* self, int row, int column, void* parent);
+QModelIndex* k_dirmodel_super_index(void* self, int row, int column, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeData)
 ///
@@ -429,6 +477,10 @@ QMimeData* k_dirmodel_mime_data(void* self, libqt_list indexes);
 ///
 void k_dirmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_mime_data` instead
+///
+#define k_dirmodel_qbase_mime_data k_dirmodel_super_mime_data
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeData)
 ///
 /// Base class method implementation
@@ -436,7 +488,7 @@ void k_dirmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_lis
 /// @param self KDirModel*
 /// @param indexes libqt_list of QModelIndex*
 ///
-QMimeData* k_dirmodel_qbase_mime_data(void* self, libqt_list indexes);
+QMimeData* k_dirmodel_super_mime_data(void* self, libqt_list indexes);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeTypes)
 ///
@@ -455,13 +507,17 @@ const char** k_dirmodel_mime_types(void* self);
 ///
 void k_dirmodel_on_mime_types(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_mime_types` instead
+///
+#define k_dirmodel_qbase_mime_types k_dirmodel_super_mime_types
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#mimeTypes)
 ///
 /// Base class method implementation
 ///
 /// @param self KDirModel*
 ///
-const char** k_dirmodel_qbase_mime_types(void* self);
+const char** k_dirmodel_super_mime_types(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#parent)
 ///
@@ -479,6 +535,10 @@ QModelIndex* k_dirmodel_parent(void* self, void* index);
 ///
 void k_dirmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_parent` instead
+///
+#define k_dirmodel_qbase_parent k_dirmodel_super_parent
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#parent)
 ///
 /// Base class method implementation
@@ -486,7 +546,7 @@ void k_dirmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_dirmodel_qbase_parent(void* self, void* index);
+QModelIndex* k_dirmodel_super_parent(void* self, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sibling)
 ///
@@ -506,6 +566,10 @@ QModelIndex* k_dirmodel_sibling(void* self, int row, int column, void* index);
 ///
 void k_dirmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_sibling` instead
+///
+#define k_dirmodel_qbase_sibling k_dirmodel_super_sibling
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sibling)
 ///
 /// Base class method implementation
@@ -515,7 +579,7 @@ void k_dirmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int,
 /// @param column int
 /// @param index QModelIndex*
 ///
-QModelIndex* k_dirmodel_qbase_sibling(void* self, int row, int column, void* index);
+QModelIndex* k_dirmodel_super_sibling(void* self, int row, int column, void* index);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#rowCount)
 ///
@@ -533,6 +597,10 @@ int32_t k_dirmodel_row_count(void* self, void* parent);
 ///
 void k_dirmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_row_count` instead
+///
+#define k_dirmodel_qbase_row_count k_dirmodel_super_row_count
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#rowCount)
 ///
 /// Base class method implementation
@@ -540,7 +608,7 @@ void k_dirmodel_on_row_count(void* self, int32_t (*callback)(void*, void*));
 /// @param self KDirModel*
 /// @param parent QModelIndex*
 ///
-int32_t k_dirmodel_qbase_row_count(void* self, void* parent);
+int32_t k_dirmodel_super_row_count(void* self, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setData)
 ///
@@ -560,6 +628,10 @@ bool k_dirmodel_set_data(void* self, void* index, void* value, int role);
 ///
 void k_dirmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_set_data` instead
+///
+#define k_dirmodel_qbase_set_data k_dirmodel_super_set_data
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#setData)
 ///
 /// Base class method implementation
@@ -569,7 +641,7 @@ void k_dirmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, in
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_dirmodel_qbase_set_data(void* self, void* index, void* value, int role);
+bool k_dirmodel_super_set_data(void* self, void* index, void* value, int role);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sort)
 ///
@@ -588,6 +660,10 @@ void k_dirmodel_sort(void* self, int column, int32_t order);
 ///
 void k_dirmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_sort` instead
+///
+#define k_dirmodel_qbase_sort k_dirmodel_super_sort
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#sort)
 ///
 /// Base class method implementation
@@ -596,7 +672,7 @@ void k_dirmodel_on_sort(void* self, void (*callback)(void*, int, int32_t));
 /// @param column int
 /// @param order enum Qt__SortOrder
 ///
-void k_dirmodel_qbase_sort(void* self, int column, int32_t order);
+void k_dirmodel_super_sort(void* self, int column, int32_t order);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#roleNames)
 ///
@@ -626,6 +702,10 @@ libqt_map k_dirmodel_role_names(void* self);
 ///
 void k_dirmodel_on_role_names(void* self, libqt_map (*callback)());
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_role_names` instead
+///
+#define k_dirmodel_qbase_role_names k_dirmodel_super_role_names
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#roleNames)
 ///
 /// Base class method implementation
@@ -634,7 +714,7 @@ void k_dirmodel_on_role_names(void* self, libqt_map (*callback)());
 ///
 /// @return libqt_map of int to char*
 ///
-libqt_map k_dirmodel_qbase_role_names(void* self);
+libqt_map k_dirmodel_super_role_names(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#simplifiedUrlList)
 ///
@@ -682,6 +762,10 @@ int32_t k_dirmodel_supported_drop_actions(void* self);
 ///
 void k_dirmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_supported_drop_actions` instead
+///
+#define k_dirmodel_qbase_supported_drop_actions k_dirmodel_super_supported_drop_actions
+
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#supportedDropActions)
 ///
 /// Base class method implementation
@@ -690,7 +774,7 @@ void k_dirmodel_on_supported_drop_actions(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_dirmodel_qbase_supported_drop_actions(void* self);
+int32_t k_dirmodel_super_supported_drop_actions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdirmodel.html#expand)
 ///
@@ -780,6 +864,10 @@ bool k_dirmodel_insert_rows(void* self, int row, int count, void* parent);
 ///
 void k_dirmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_insert_rows` instead
+///
+#define k_dirmodel_qbase_insert_rows k_dirmodel_super_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertRows)
@@ -791,7 +879,7 @@ void k_dirmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, voi
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_insert_rows(void* self, int row, int count, void* parent);
+bool k_dirmodel_super_insert_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -815,6 +903,10 @@ bool k_dirmodel_insert_columns(void* self, int column, int count, void* parent);
 ///
 void k_dirmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_insert_columns` instead
+///
+#define k_dirmodel_qbase_insert_columns k_dirmodel_super_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#insertColumns)
@@ -826,7 +918,7 @@ void k_dirmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, 
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_insert_columns(void* self, int column, int count, void* parent);
+bool k_dirmodel_super_insert_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -850,6 +942,10 @@ bool k_dirmodel_remove_rows(void* self, int row, int count, void* parent);
 ///
 void k_dirmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_remove_rows` instead
+///
+#define k_dirmodel_qbase_remove_rows k_dirmodel_super_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeRows)
@@ -861,7 +957,7 @@ void k_dirmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, voi
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_remove_rows(void* self, int row, int count, void* parent);
+bool k_dirmodel_super_remove_rows(void* self, int row, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -885,6 +981,10 @@ bool k_dirmodel_remove_columns(void* self, int column, int count, void* parent);
 ///
 void k_dirmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*));
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_remove_columns` instead
+///
+#define k_dirmodel_qbase_remove_columns k_dirmodel_super_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#removeColumns)
@@ -896,7 +996,7 @@ void k_dirmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, 
 /// @param count int
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_remove_columns(void* self, int column, int count, void* parent);
+bool k_dirmodel_super_remove_columns(void* self, int column, int count, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1648,6 +1748,10 @@ void k_dirmodel_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool k_dirmodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_set_header_data` instead
+///
+#define k_dirmodel_qbase_set_header_data k_dirmodel_super_set_header_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setHeaderData)
@@ -1660,7 +1764,7 @@ bool k_dirmodel_set_header_data(void* self, int section, int32_t orientation, vo
 /// @param value QVariant*
 /// @param role int
 ///
-bool k_dirmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
+bool k_dirmodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1697,6 +1801,10 @@ void k_dirmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int3
 ///
 libqt_map k_dirmodel_item_data(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_item_data` instead
+///
+#define k_dirmodel_qbase_item_data k_dirmodel_super_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#itemData)
@@ -1719,7 +1827,7 @@ libqt_map k_dirmodel_item_data(void* self, void* index);
 ///
 /// @return libqt_map of int to QVariant*
 ///
-libqt_map k_dirmodel_qbase_item_data(void* self, void* index);
+libqt_map k_dirmodel_super_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1744,6 +1852,10 @@ void k_dirmodel_on_item_data(void* self, libqt_map (*callback)(void*, void*));
 ///
 bool k_dirmodel_set_item_data(void* self, void* index, libqt_map roles);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_set_item_data` instead
+///
+#define k_dirmodel_qbase_set_item_data k_dirmodel_super_set_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#setItemData)
@@ -1754,7 +1866,7 @@ bool k_dirmodel_set_item_data(void* self, void* index, libqt_map roles);
 /// @param index QModelIndex*
 /// @param roles libqt_map of int to QVariant*
 ///
-bool k_dirmodel_qbase_set_item_data(void* self, void* index, libqt_map roles);
+bool k_dirmodel_super_set_item_data(void* self, void* index, libqt_map roles);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1778,6 +1890,10 @@ void k_dirmodel_on_set_item_data(void* self, bool (*callback)(void*, void*, libq
 ///
 bool k_dirmodel_clear_item_data(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_clear_item_data` instead
+///
+#define k_dirmodel_qbase_clear_item_data k_dirmodel_super_clear_item_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#clearItemData)
@@ -1787,7 +1903,7 @@ bool k_dirmodel_clear_item_data(void* self, void* index);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 ///
-bool k_dirmodel_qbase_clear_item_data(void* self, void* index);
+bool k_dirmodel_super_clear_item_data(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1815,6 +1931,10 @@ void k_dirmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*));
 ///
 bool k_dirmodel_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_can_drop_mime_data` instead
+///
+#define k_dirmodel_qbase_can_drop_mime_data k_dirmodel_super_can_drop_mime_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#canDropMimeData)
@@ -1828,7 +1948,7 @@ bool k_dirmodel_can_drop_mime_data(void* self, void* data, int32_t action, int r
 /// @param column int
 /// @param parent QModelIndex*
 ///
-bool k_dirmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
+bool k_dirmodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1853,6 +1973,10 @@ void k_dirmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*,
 ///
 int32_t k_dirmodel_supported_drag_actions(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_supported_drag_actions` instead
+///
+#define k_dirmodel_qbase_supported_drag_actions k_dirmodel_super_supported_drag_actions
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#supportedDragActions)
@@ -1863,7 +1987,7 @@ int32_t k_dirmodel_supported_drag_actions(void* self);
 ///
 /// @return flag of enum Qt__DropAction
 ///
-int32_t k_dirmodel_qbase_supported_drag_actions(void* self);
+int32_t k_dirmodel_super_supported_drag_actions(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1891,6 +2015,10 @@ void k_dirmodel_on_supported_drag_actions(void* self, int32_t (*callback)());
 ///
 bool k_dirmodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_move_rows` instead
+///
+#define k_dirmodel_qbase_move_rows k_dirmodel_super_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveRows)
@@ -1904,7 +2032,7 @@ bool k_dirmodel_move_rows(void* self, void* sourceParent, int sourceRow, int cou
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_dirmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
+bool k_dirmodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1932,6 +2060,10 @@ void k_dirmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int
 ///
 bool k_dirmodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_move_columns` instead
+///
+#define k_dirmodel_qbase_move_columns k_dirmodel_super_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#moveColumns)
@@ -1945,7 +2077,7 @@ bool k_dirmodel_move_columns(void* self, void* sourceParent, int sourceColumn, i
 /// @param destinationParent QModelIndex*
 /// @param destinationChild int
 ///
-bool k_dirmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
+bool k_dirmodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -1969,6 +2101,10 @@ void k_dirmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, 
 ///
 QModelIndex* k_dirmodel_buddy(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_buddy` instead
+///
+#define k_dirmodel_qbase_buddy k_dirmodel_super_buddy
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#buddy)
@@ -1978,7 +2114,7 @@ QModelIndex* k_dirmodel_buddy(void* self, void* index);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 ///
-QModelIndex* k_dirmodel_qbase_buddy(void* self, void* index);
+QModelIndex* k_dirmodel_super_buddy(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2008,6 +2144,10 @@ void k_dirmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 ///
 libqt_list k_dirmodel_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_match` instead
+///
+#define k_dirmodel_qbase_match k_dirmodel_super_match
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#match)
@@ -2023,7 +2163,7 @@ libqt_list k_dirmodel_match(void* self, void* start, int role, void* value, int 
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_dirmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
+libqt_list k_dirmodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2047,6 +2187,10 @@ void k_dirmodel_on_match(void* self, libqt_list (*callback)(void*, void*, int, v
 ///
 QSize* k_dirmodel_span(void* self, void* index);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_span` instead
+///
+#define k_dirmodel_qbase_span k_dirmodel_super_span
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#span)
@@ -2056,7 +2200,7 @@ QSize* k_dirmodel_span(void* self, void* index);
 /// @param self KDirModel*
 /// @param index QModelIndex*
 ///
-QSize* k_dirmodel_qbase_span(void* self, void* index);
+QSize* k_dirmodel_super_span(void* self, void* index);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2081,6 +2225,10 @@ void k_dirmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 ///
 void k_dirmodel_multi_data(void* self, void* index, void* roleDataSpan);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_multi_data` instead
+///
+#define k_dirmodel_qbase_multi_data k_dirmodel_super_multi_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#multiData)
@@ -2091,7 +2239,7 @@ void k_dirmodel_multi_data(void* self, void* index, void* roleDataSpan);
 /// @param index QModelIndex*
 /// @param roleDataSpan QModelRoleDataSpan*
 ///
-void k_dirmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan);
+void k_dirmodel_super_multi_data(void* self, void* index, void* roleDataSpan);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2114,6 +2262,10 @@ void k_dirmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*))
 ///
 bool k_dirmodel_submit(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_submit` instead
+///
+#define k_dirmodel_qbase_submit k_dirmodel_super_submit
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#submit)
@@ -2122,7 +2274,7 @@ bool k_dirmodel_submit(void* self);
 ///
 /// @param self KDirModel*
 ///
-bool k_dirmodel_qbase_submit(void* self);
+bool k_dirmodel_super_submit(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2145,6 +2297,10 @@ void k_dirmodel_on_submit(void* self, bool (*callback)());
 ///
 void k_dirmodel_revert(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_revert` instead
+///
+#define k_dirmodel_qbase_revert k_dirmodel_super_revert
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#revert)
@@ -2153,7 +2309,7 @@ void k_dirmodel_revert(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_revert(void* self);
+void k_dirmodel_super_revert(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2176,6 +2332,10 @@ void k_dirmodel_on_revert(void* self, void (*callback)());
 ///
 void k_dirmodel_reset_internal_data(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_reset_internal_data` instead
+///
+#define k_dirmodel_qbase_reset_internal_data k_dirmodel_super_reset_internal_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#resetInternalData)
@@ -2184,7 +2344,7 @@ void k_dirmodel_reset_internal_data(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_reset_internal_data(void* self);
+void k_dirmodel_super_reset_internal_data(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2208,6 +2368,10 @@ void k_dirmodel_on_reset_internal_data(void* self, void (*callback)());
 ///
 bool k_dirmodel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_event` instead
+///
+#define k_dirmodel_qbase_event k_dirmodel_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -2217,7 +2381,7 @@ bool k_dirmodel_event(void* self, void* event);
 /// @param self KDirModel*
 /// @param event QEvent*
 ///
-bool k_dirmodel_qbase_event(void* self, void* event);
+bool k_dirmodel_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2242,6 +2406,10 @@ void k_dirmodel_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_dirmodel_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_event_filter` instead
+///
+#define k_dirmodel_qbase_event_filter k_dirmodel_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -2252,7 +2420,7 @@ bool k_dirmodel_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_dirmodel_qbase_event_filter(void* self, void* watched, void* event);
+bool k_dirmodel_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -2276,6 +2444,10 @@ void k_dirmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void k_dirmodel_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_timer_event` instead
+///
+#define k_dirmodel_qbase_timer_event k_dirmodel_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -2285,7 +2457,7 @@ void k_dirmodel_timer_event(void* self, void* event);
 /// @param self KDirModel*
 /// @param event QTimerEvent*
 ///
-void k_dirmodel_qbase_timer_event(void* self, void* event);
+void k_dirmodel_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2309,6 +2481,10 @@ void k_dirmodel_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_dirmodel_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_child_event` instead
+///
+#define k_dirmodel_qbase_child_event k_dirmodel_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -2318,7 +2494,7 @@ void k_dirmodel_child_event(void* self, void* event);
 /// @param self KDirModel*
 /// @param event QChildEvent*
 ///
-void k_dirmodel_qbase_child_event(void* self, void* event);
+void k_dirmodel_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2342,6 +2518,10 @@ void k_dirmodel_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_dirmodel_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_custom_event` instead
+///
+#define k_dirmodel_qbase_custom_event k_dirmodel_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -2351,7 +2531,7 @@ void k_dirmodel_custom_event(void* self, void* event);
 /// @param self KDirModel*
 /// @param event QEvent*
 ///
-void k_dirmodel_qbase_custom_event(void* self, void* event);
+void k_dirmodel_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -2375,6 +2555,10 @@ void k_dirmodel_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_dirmodel_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_connect_notify` instead
+///
+#define k_dirmodel_qbase_connect_notify k_dirmodel_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -2384,7 +2568,7 @@ void k_dirmodel_connect_notify(void* self, void* signal);
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
 ///
-void k_dirmodel_qbase_connect_notify(void* self, void* signal);
+void k_dirmodel_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2408,6 +2592,10 @@ void k_dirmodel_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_dirmodel_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_disconnect_notify` instead
+///
+#define k_dirmodel_qbase_disconnect_notify k_dirmodel_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -2417,7 +2605,7 @@ void k_dirmodel_disconnect_notify(void* self, void* signal);
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
 ///
-void k_dirmodel_qbase_disconnect_notify(void* self, void* signal);
+void k_dirmodel_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -2442,6 +2630,10 @@ void k_dirmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QModelIndex* k_dirmodel_create_index(void* self, int row, int column);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_create_index` instead
+///
+#define k_dirmodel_qbase_create_index k_dirmodel_super_create_index
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#createIndex)
@@ -2452,7 +2644,7 @@ QModelIndex* k_dirmodel_create_index(void* self, int row, int column);
 /// @param row int
 /// @param column int
 ///
-QModelIndex* k_dirmodel_qbase_create_index(void* self, int row, int column);
+QModelIndex* k_dirmodel_super_create_index(void* self, int row, int column);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2477,6 +2669,10 @@ void k_dirmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int,
 ///
 void k_dirmodel_encode_data(void* self, libqt_list indexes, void* stream);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_encode_data` instead
+///
+#define k_dirmodel_qbase_encode_data k_dirmodel_super_encode_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#encodeData)
@@ -2487,7 +2683,7 @@ void k_dirmodel_encode_data(void* self, libqt_list indexes, void* stream);
 /// @param indexes libqt_list of QModelIndex*
 /// @param stream QDataStream*
 ///
-void k_dirmodel_qbase_encode_data(void* self, libqt_list indexes, void* stream);
+void k_dirmodel_super_encode_data(void* self, libqt_list indexes, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2514,6 +2710,10 @@ void k_dirmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list, v
 ///
 bool k_dirmodel_decode_data(void* self, int row, int column, void* parent, void* stream);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_decode_data` instead
+///
+#define k_dirmodel_qbase_decode_data k_dirmodel_super_decode_data
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#decodeData)
@@ -2526,7 +2726,7 @@ bool k_dirmodel_decode_data(void* self, int row, int column, void* parent, void*
 /// @param parent QModelIndex*
 /// @param stream QDataStream*
 ///
-bool k_dirmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream);
+bool k_dirmodel_super_decode_data(void* self, int row, int column, void* parent, void* stream);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2552,6 +2752,10 @@ void k_dirmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, voi
 ///
 void k_dirmodel_begin_insert_rows(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_insert_rows` instead
+///
+#define k_dirmodel_qbase_begin_insert_rows k_dirmodel_super_begin_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertRows)
@@ -2563,7 +2767,7 @@ void k_dirmodel_begin_insert_rows(void* self, void* parent, int first, int last)
 /// @param first int
 /// @param last int
 ///
-void k_dirmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last);
+void k_dirmodel_super_begin_insert_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2586,6 +2790,10 @@ void k_dirmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, 
 ///
 void k_dirmodel_end_insert_rows(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_insert_rows` instead
+///
+#define k_dirmodel_qbase_end_insert_rows k_dirmodel_super_end_insert_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertRows)
@@ -2594,7 +2802,7 @@ void k_dirmodel_end_insert_rows(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_insert_rows(void* self);
+void k_dirmodel_super_end_insert_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2620,6 +2828,10 @@ void k_dirmodel_on_end_insert_rows(void* self, void (*callback)());
 ///
 void k_dirmodel_begin_remove_rows(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_remove_rows` instead
+///
+#define k_dirmodel_qbase_begin_remove_rows k_dirmodel_super_begin_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveRows)
@@ -2631,7 +2843,7 @@ void k_dirmodel_begin_remove_rows(void* self, void* parent, int first, int last)
 /// @param first int
 /// @param last int
 ///
-void k_dirmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last);
+void k_dirmodel_super_begin_remove_rows(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2654,6 +2866,10 @@ void k_dirmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, 
 ///
 void k_dirmodel_end_remove_rows(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_remove_rows` instead
+///
+#define k_dirmodel_qbase_end_remove_rows k_dirmodel_super_end_remove_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveRows)
@@ -2662,7 +2878,7 @@ void k_dirmodel_end_remove_rows(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_remove_rows(void* self);
+void k_dirmodel_super_end_remove_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2690,6 +2906,10 @@ void k_dirmodel_on_end_remove_rows(void* self, void (*callback)());
 ///
 bool k_dirmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_move_rows` instead
+///
+#define k_dirmodel_qbase_begin_move_rows k_dirmodel_super_begin_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveRows)
@@ -2703,7 +2923,7 @@ bool k_dirmodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst,
 /// @param destinationParent QModelIndex*
 /// @param destinationRow int
 ///
-bool k_dirmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
+bool k_dirmodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2726,6 +2946,10 @@ void k_dirmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, in
 ///
 void k_dirmodel_end_move_rows(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_move_rows` instead
+///
+#define k_dirmodel_qbase_end_move_rows k_dirmodel_super_end_move_rows
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveRows)
@@ -2734,7 +2958,7 @@ void k_dirmodel_end_move_rows(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_move_rows(void* self);
+void k_dirmodel_super_end_move_rows(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2760,6 +2984,10 @@ void k_dirmodel_on_end_move_rows(void* self, void (*callback)());
 ///
 void k_dirmodel_begin_insert_columns(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_insert_columns` instead
+///
+#define k_dirmodel_qbase_begin_insert_columns k_dirmodel_super_begin_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginInsertColumns)
@@ -2771,7 +2999,7 @@ void k_dirmodel_begin_insert_columns(void* self, void* parent, int first, int la
 /// @param first int
 /// @param last int
 ///
-void k_dirmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last);
+void k_dirmodel_super_begin_insert_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2794,6 +3022,10 @@ void k_dirmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void
 ///
 void k_dirmodel_end_insert_columns(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_insert_columns` instead
+///
+#define k_dirmodel_qbase_end_insert_columns k_dirmodel_super_end_insert_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endInsertColumns)
@@ -2802,7 +3034,7 @@ void k_dirmodel_end_insert_columns(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_insert_columns(void* self);
+void k_dirmodel_super_end_insert_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2828,6 +3060,10 @@ void k_dirmodel_on_end_insert_columns(void* self, void (*callback)());
 ///
 void k_dirmodel_begin_remove_columns(void* self, void* parent, int first, int last);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_remove_columns` instead
+///
+#define k_dirmodel_qbase_begin_remove_columns k_dirmodel_super_begin_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginRemoveColumns)
@@ -2839,7 +3075,7 @@ void k_dirmodel_begin_remove_columns(void* self, void* parent, int first, int la
 /// @param first int
 /// @param last int
 ///
-void k_dirmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last);
+void k_dirmodel_super_begin_remove_columns(void* self, void* parent, int first, int last);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2862,6 +3098,10 @@ void k_dirmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void
 ///
 void k_dirmodel_end_remove_columns(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_remove_columns` instead
+///
+#define k_dirmodel_qbase_end_remove_columns k_dirmodel_super_end_remove_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endRemoveColumns)
@@ -2870,7 +3110,7 @@ void k_dirmodel_end_remove_columns(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_remove_columns(void* self);
+void k_dirmodel_super_end_remove_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2898,6 +3138,10 @@ void k_dirmodel_on_end_remove_columns(void* self, void (*callback)());
 ///
 bool k_dirmodel_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_move_columns` instead
+///
+#define k_dirmodel_qbase_begin_move_columns k_dirmodel_super_begin_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginMoveColumns)
@@ -2911,7 +3155,7 @@ bool k_dirmodel_begin_move_columns(void* self, void* sourceParent, int sourceFir
 /// @param destinationParent QModelIndex*
 /// @param destinationColumn int
 ///
-bool k_dirmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
+bool k_dirmodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2934,6 +3178,10 @@ void k_dirmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*,
 ///
 void k_dirmodel_end_move_columns(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_move_columns` instead
+///
+#define k_dirmodel_qbase_end_move_columns k_dirmodel_super_end_move_columns
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endMoveColumns)
@@ -2942,7 +3190,7 @@ void k_dirmodel_end_move_columns(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_move_columns(void* self);
+void k_dirmodel_super_end_move_columns(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2965,6 +3213,10 @@ void k_dirmodel_on_end_move_columns(void* self, void (*callback)());
 ///
 void k_dirmodel_begin_reset_model(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_begin_reset_model` instead
+///
+#define k_dirmodel_qbase_begin_reset_model k_dirmodel_super_begin_reset_model
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#beginResetModel)
@@ -2973,7 +3225,7 @@ void k_dirmodel_begin_reset_model(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_begin_reset_model(void* self);
+void k_dirmodel_super_begin_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -2996,6 +3248,10 @@ void k_dirmodel_on_begin_reset_model(void* self, void (*callback)());
 ///
 void k_dirmodel_end_reset_model(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_end_reset_model` instead
+///
+#define k_dirmodel_qbase_end_reset_model k_dirmodel_super_end_reset_model
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#endResetModel)
@@ -3004,7 +3260,7 @@ void k_dirmodel_end_reset_model(void* self);
 ///
 /// @param self KDirModel*
 ///
-void k_dirmodel_qbase_end_reset_model(void* self);
+void k_dirmodel_super_end_reset_model(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3029,6 +3285,10 @@ void k_dirmodel_on_end_reset_model(void* self, void (*callback)());
 ///
 void k_dirmodel_change_persistent_index(void* self, void* from, void* to);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_change_persistent_index` instead
+///
+#define k_dirmodel_qbase_change_persistent_index k_dirmodel_super_change_persistent_index
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndex)
@@ -3039,7 +3299,7 @@ void k_dirmodel_change_persistent_index(void* self, void* from, void* to);
 /// @param from QModelIndex*
 /// @param to QModelIndex*
 ///
-void k_dirmodel_qbase_change_persistent_index(void* self, void* from, void* to);
+void k_dirmodel_super_change_persistent_index(void* self, void* from, void* to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3064,6 +3324,10 @@ void k_dirmodel_on_change_persistent_index(void* self, void (*callback)(void*, v
 ///
 void k_dirmodel_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_change_persistent_index_list` instead
+///
+#define k_dirmodel_qbase_change_persistent_index_list k_dirmodel_super_change_persistent_index_list
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#changePersistentIndexList)
@@ -3074,7 +3338,7 @@ void k_dirmodel_change_persistent_index_list(void* self, libqt_list from, libqt_
 /// @param from libqt_list of QModelIndex*
 /// @param to libqt_list of QModelIndex*
 ///
-void k_dirmodel_qbase_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
+void k_dirmodel_super_change_persistent_index_list(void* self, libqt_list from, libqt_list to);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3099,6 +3363,10 @@ void k_dirmodel_on_change_persistent_index_list(void* self, void (*callback)(voi
 ///
 libqt_list k_dirmodel_persistent_index_list(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_persistent_index_list` instead
+///
+#define k_dirmodel_qbase_persistent_index_list k_dirmodel_super_persistent_index_list
+
 /// Inherited from QAbstractItemModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemmodel.html#persistentIndexList)
@@ -3109,7 +3377,7 @@ libqt_list k_dirmodel_persistent_index_list(void* self);
 ///
 /// @return libqt_list of QModelIndex*
 ///
-libqt_list k_dirmodel_qbase_persistent_index_list(void* self);
+libqt_list k_dirmodel_super_persistent_index_list(void* self);
 
 /// Inherited from QAbstractItemModel
 ///
@@ -3132,6 +3400,10 @@ void k_dirmodel_on_persistent_index_list(void* self, libqt_list (*callback)());
 ///
 QObject* k_dirmodel_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_sender` instead
+///
+#define k_dirmodel_qbase_sender k_dirmodel_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -3140,7 +3412,7 @@ QObject* k_dirmodel_sender(void* self);
 ///
 /// @param self KDirModel*
 ///
-QObject* k_dirmodel_qbase_sender(void* self);
+QObject* k_dirmodel_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -3163,6 +3435,10 @@ void k_dirmodel_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_dirmodel_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_sender_signal_index` instead
+///
+#define k_dirmodel_qbase_sender_signal_index k_dirmodel_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -3171,7 +3447,7 @@ int32_t k_dirmodel_sender_signal_index(void* self);
 ///
 /// @param self KDirModel*
 ///
-int32_t k_dirmodel_qbase_sender_signal_index(void* self);
+int32_t k_dirmodel_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -3195,6 +3471,10 @@ void k_dirmodel_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_dirmodel_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_receivers` instead
+///
+#define k_dirmodel_qbase_receivers k_dirmodel_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -3204,7 +3484,7 @@ int32_t k_dirmodel_receivers(void* self, const char* signal);
 /// @param self KDirModel*
 /// @param signal const char*
 ///
-int32_t k_dirmodel_qbase_receivers(void* self, const char* signal);
+int32_t k_dirmodel_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -3228,6 +3508,10 @@ void k_dirmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool k_dirmodel_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_dirmodel_super_is_signal_connected` instead
+///
+#define k_dirmodel_qbase_is_signal_connected k_dirmodel_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -3237,7 +3521,7 @@ bool k_dirmodel_is_signal_connected(void* self, void* signal);
 /// @param self KDirModel*
 /// @param signal QMetaMethod*
 ///
-bool k_dirmodel_qbase_is_signal_connected(void* self, void* signal);
+bool k_dirmodel_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

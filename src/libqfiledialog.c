@@ -51,8 +51,8 @@ void q_filedialog_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QFileDialog_OnMetaObject((QFileDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_filedialog_qbase_meta_object(void* self) {
-    return QFileDialog_QBaseMetaObject((QFileDialog*)self);
+const QMetaObject* q_filedialog_super_meta_object(void* self) {
+    return QFileDialog_SuperMetaObject((QFileDialog*)self);
 }
 
 void* q_filedialog_metacast(void* self, const char* param1) {
@@ -63,8 +63,8 @@ void q_filedialog_on_metacast(void* self, void* (*callback)(void*, const char*))
     QFileDialog_OnMetacast((QFileDialog*)self, (intptr_t)callback);
 }
 
-void* q_filedialog_qbase_metacast(void* self, const char* param1) {
-    return QFileDialog_QBaseMetacast((QFileDialog*)self, param1);
+void* q_filedialog_super_metacast(void* self, const char* param1) {
+    return QFileDialog_SuperMetacast((QFileDialog*)self, param1);
 }
 
 int32_t q_filedialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -75,8 +75,8 @@ void q_filedialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QFileDialog_OnMetacall((QFileDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_filedialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFileDialog_QBaseMetacall((QFileDialog*)self, param1, param2, param3);
+int32_t q_filedialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFileDialog_SuperMetacall((QFileDialog*)self, param1, param2, param3);
 }
 
 const char* q_filedialog_tr(const char* s) {
@@ -422,8 +422,8 @@ void q_filedialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
     QFileDialog_OnSetVisible((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_qbase_set_visible(void* self, bool visible) {
-    QFileDialog_QBaseSetVisible((QFileDialog*)self, visible);
+void q_filedialog_super_set_visible(void* self, bool visible) {
+    QFileDialog_SuperSetVisible((QFileDialog*)self, visible);
 }
 
 void q_filedialog_file_selected(void* self, const char* file) {
@@ -578,8 +578,8 @@ void q_filedialog_on_done(void* self, void (*callback)(void*, int)) {
     QFileDialog_OnDone((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_qbase_done(void* self, int result) {
-    QFileDialog_QBaseDone((QFileDialog*)self, result);
+void q_filedialog_super_done(void* self, int result) {
+    QFileDialog_SuperDone((QFileDialog*)self, result);
 }
 
 void q_filedialog_accept(void* self) {
@@ -590,8 +590,8 @@ void q_filedialog_on_accept(void* self, void (*callback)()) {
     QFileDialog_OnAccept((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_qbase_accept(void* self) {
-    QFileDialog_QBaseAccept((QFileDialog*)self);
+void q_filedialog_super_accept(void* self) {
+    QFileDialog_SuperAccept((QFileDialog*)self);
 }
 
 void q_filedialog_change_event(void* self, void* e) {
@@ -602,8 +602,8 @@ void q_filedialog_on_change_event(void* self, void (*callback)(void*, void*)) {
     QFileDialog_OnChangeEvent((QFileDialog*)self, (intptr_t)callback);
 }
 
-void q_filedialog_qbase_change_event(void* self, void* e) {
-    QFileDialog_QBaseChangeEvent((QFileDialog*)self, (QEvent*)e);
+void q_filedialog_super_change_event(void* self, void* e) {
+    QFileDialog_SuperChangeEvent((QFileDialog*)self, (QEvent*)e);
 }
 
 const char* q_filedialog_tr2(const char* s, const char* c) {
@@ -2301,8 +2301,8 @@ QSize* q_filedialog_size_hint(void* self) {
     return QFileDialog_SizeHint((QFileDialog*)self);
 }
 
-QSize* q_filedialog_qbase_size_hint(void* self) {
-    return QFileDialog_QBaseSizeHint((QFileDialog*)self);
+QSize* q_filedialog_super_size_hint(void* self) {
+    return QFileDialog_SuperSizeHint((QFileDialog*)self);
 }
 
 void q_filedialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2313,8 +2313,8 @@ QSize* q_filedialog_minimum_size_hint(void* self) {
     return QFileDialog_MinimumSizeHint((QFileDialog*)self);
 }
 
-QSize* q_filedialog_qbase_minimum_size_hint(void* self) {
-    return QFileDialog_QBaseMinimumSizeHint((QFileDialog*)self);
+QSize* q_filedialog_super_minimum_size_hint(void* self) {
+    return QFileDialog_SuperMinimumSizeHint((QFileDialog*)self);
 }
 
 void q_filedialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2325,8 +2325,8 @@ void q_filedialog_open(void* self) {
     QFileDialog_Open((QFileDialog*)self);
 }
 
-void q_filedialog_qbase_open(void* self) {
-    QFileDialog_QBaseOpen((QFileDialog*)self);
+void q_filedialog_super_open(void* self) {
+    QFileDialog_SuperOpen((QFileDialog*)self);
 }
 
 void q_filedialog_on_open(void* self, void (*callback)()) {
@@ -2337,8 +2337,8 @@ int32_t q_filedialog_exec(void* self) {
     return QFileDialog_Exec((QFileDialog*)self);
 }
 
-int32_t q_filedialog_qbase_exec(void* self) {
-    return QFileDialog_QBaseExec((QFileDialog*)self);
+int32_t q_filedialog_super_exec(void* self) {
+    return QFileDialog_SuperExec((QFileDialog*)self);
 }
 
 void q_filedialog_on_exec(void* self, int32_t (*callback)()) {
@@ -2349,8 +2349,8 @@ void q_filedialog_reject(void* self) {
     QFileDialog_Reject((QFileDialog*)self);
 }
 
-void q_filedialog_qbase_reject(void* self) {
-    QFileDialog_QBaseReject((QFileDialog*)self);
+void q_filedialog_super_reject(void* self) {
+    QFileDialog_SuperReject((QFileDialog*)self);
 }
 
 void q_filedialog_on_reject(void* self, void (*callback)()) {
@@ -2361,8 +2361,8 @@ void q_filedialog_key_press_event(void* self, void* param1) {
     QFileDialog_KeyPressEvent((QFileDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_filedialog_qbase_key_press_event(void* self, void* param1) {
-    QFileDialog_QBaseKeyPressEvent((QFileDialog*)self, (QKeyEvent*)param1);
+void q_filedialog_super_key_press_event(void* self, void* param1) {
+    QFileDialog_SuperKeyPressEvent((QFileDialog*)self, (QKeyEvent*)param1);
 }
 
 void q_filedialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2373,8 +2373,8 @@ void q_filedialog_close_event(void* self, void* param1) {
     QFileDialog_CloseEvent((QFileDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_filedialog_qbase_close_event(void* self, void* param1) {
-    QFileDialog_QBaseCloseEvent((QFileDialog*)self, (QCloseEvent*)param1);
+void q_filedialog_super_close_event(void* self, void* param1) {
+    QFileDialog_SuperCloseEvent((QFileDialog*)self, (QCloseEvent*)param1);
 }
 
 void q_filedialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2385,8 +2385,8 @@ void q_filedialog_show_event(void* self, void* param1) {
     QFileDialog_ShowEvent((QFileDialog*)self, (QShowEvent*)param1);
 }
 
-void q_filedialog_qbase_show_event(void* self, void* param1) {
-    QFileDialog_QBaseShowEvent((QFileDialog*)self, (QShowEvent*)param1);
+void q_filedialog_super_show_event(void* self, void* param1) {
+    QFileDialog_SuperShowEvent((QFileDialog*)self, (QShowEvent*)param1);
 }
 
 void q_filedialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2397,8 +2397,8 @@ void q_filedialog_resize_event(void* self, void* param1) {
     QFileDialog_ResizeEvent((QFileDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_filedialog_qbase_resize_event(void* self, void* param1) {
-    QFileDialog_QBaseResizeEvent((QFileDialog*)self, (QResizeEvent*)param1);
+void q_filedialog_super_resize_event(void* self, void* param1) {
+    QFileDialog_SuperResizeEvent((QFileDialog*)self, (QResizeEvent*)param1);
 }
 
 void q_filedialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2409,8 +2409,8 @@ void q_filedialog_context_menu_event(void* self, void* param1) {
     QFileDialog_ContextMenuEvent((QFileDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_filedialog_qbase_context_menu_event(void* self, void* param1) {
-    QFileDialog_QBaseContextMenuEvent((QFileDialog*)self, (QContextMenuEvent*)param1);
+void q_filedialog_super_context_menu_event(void* self, void* param1) {
+    QFileDialog_SuperContextMenuEvent((QFileDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void q_filedialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2421,8 +2421,8 @@ bool q_filedialog_event_filter(void* self, void* param1, void* param2) {
     return QFileDialog_EventFilter((QFileDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_filedialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QFileDialog_QBaseEventFilter((QFileDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool q_filedialog_super_event_filter(void* self, void* param1, void* param2) {
+    return QFileDialog_SuperEventFilter((QFileDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_filedialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2433,8 +2433,8 @@ int32_t q_filedialog_dev_type(void* self) {
     return QFileDialog_DevType((QFileDialog*)self);
 }
 
-int32_t q_filedialog_qbase_dev_type(void* self) {
-    return QFileDialog_QBaseDevType((QFileDialog*)self);
+int32_t q_filedialog_super_dev_type(void* self) {
+    return QFileDialog_SuperDevType((QFileDialog*)self);
 }
 
 void q_filedialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2445,8 +2445,8 @@ int32_t q_filedialog_height_for_width(void* self, int param1) {
     return QFileDialog_HeightForWidth((QFileDialog*)self, param1);
 }
 
-int32_t q_filedialog_qbase_height_for_width(void* self, int param1) {
-    return QFileDialog_QBaseHeightForWidth((QFileDialog*)self, param1);
+int32_t q_filedialog_super_height_for_width(void* self, int param1) {
+    return QFileDialog_SuperHeightForWidth((QFileDialog*)self, param1);
 }
 
 void q_filedialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2457,8 +2457,8 @@ bool q_filedialog_has_height_for_width(void* self) {
     return QFileDialog_HasHeightForWidth((QFileDialog*)self);
 }
 
-bool q_filedialog_qbase_has_height_for_width(void* self) {
-    return QFileDialog_QBaseHasHeightForWidth((QFileDialog*)self);
+bool q_filedialog_super_has_height_for_width(void* self) {
+    return QFileDialog_SuperHasHeightForWidth((QFileDialog*)self);
 }
 
 void q_filedialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2469,8 +2469,8 @@ QPaintEngine* q_filedialog_paint_engine(void* self) {
     return QFileDialog_PaintEngine((QFileDialog*)self);
 }
 
-QPaintEngine* q_filedialog_qbase_paint_engine(void* self) {
-    return QFileDialog_QBasePaintEngine((QFileDialog*)self);
+QPaintEngine* q_filedialog_super_paint_engine(void* self) {
+    return QFileDialog_SuperPaintEngine((QFileDialog*)self);
 }
 
 void q_filedialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2481,8 +2481,8 @@ bool q_filedialog_event(void* self, void* event) {
     return QFileDialog_Event((QFileDialog*)self, (QEvent*)event);
 }
 
-bool q_filedialog_qbase_event(void* self, void* event) {
-    return QFileDialog_QBaseEvent((QFileDialog*)self, (QEvent*)event);
+bool q_filedialog_super_event(void* self, void* event) {
+    return QFileDialog_SuperEvent((QFileDialog*)self, (QEvent*)event);
 }
 
 void q_filedialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2493,8 +2493,8 @@ void q_filedialog_mouse_press_event(void* self, void* event) {
     QFileDialog_MousePressEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_qbase_mouse_press_event(void* self, void* event) {
-    QFileDialog_QBaseMousePressEvent((QFileDialog*)self, (QMouseEvent*)event);
+void q_filedialog_super_mouse_press_event(void* self, void* event) {
+    QFileDialog_SuperMousePressEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
 void q_filedialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2505,8 +2505,8 @@ void q_filedialog_mouse_release_event(void* self, void* event) {
     QFileDialog_MouseReleaseEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_qbase_mouse_release_event(void* self, void* event) {
-    QFileDialog_QBaseMouseReleaseEvent((QFileDialog*)self, (QMouseEvent*)event);
+void q_filedialog_super_mouse_release_event(void* self, void* event) {
+    QFileDialog_SuperMouseReleaseEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
 void q_filedialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2517,8 +2517,8 @@ void q_filedialog_mouse_double_click_event(void* self, void* event) {
     QFileDialog_MouseDoubleClickEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_qbase_mouse_double_click_event(void* self, void* event) {
-    QFileDialog_QBaseMouseDoubleClickEvent((QFileDialog*)self, (QMouseEvent*)event);
+void q_filedialog_super_mouse_double_click_event(void* self, void* event) {
+    QFileDialog_SuperMouseDoubleClickEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
 void q_filedialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2529,8 +2529,8 @@ void q_filedialog_mouse_move_event(void* self, void* event) {
     QFileDialog_MouseMoveEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
-void q_filedialog_qbase_mouse_move_event(void* self, void* event) {
-    QFileDialog_QBaseMouseMoveEvent((QFileDialog*)self, (QMouseEvent*)event);
+void q_filedialog_super_mouse_move_event(void* self, void* event) {
+    QFileDialog_SuperMouseMoveEvent((QFileDialog*)self, (QMouseEvent*)event);
 }
 
 void q_filedialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2541,8 +2541,8 @@ void q_filedialog_wheel_event(void* self, void* event) {
     QFileDialog_WheelEvent((QFileDialog*)self, (QWheelEvent*)event);
 }
 
-void q_filedialog_qbase_wheel_event(void* self, void* event) {
-    QFileDialog_QBaseWheelEvent((QFileDialog*)self, (QWheelEvent*)event);
+void q_filedialog_super_wheel_event(void* self, void* event) {
+    QFileDialog_SuperWheelEvent((QFileDialog*)self, (QWheelEvent*)event);
 }
 
 void q_filedialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2553,8 +2553,8 @@ void q_filedialog_key_release_event(void* self, void* event) {
     QFileDialog_KeyReleaseEvent((QFileDialog*)self, (QKeyEvent*)event);
 }
 
-void q_filedialog_qbase_key_release_event(void* self, void* event) {
-    QFileDialog_QBaseKeyReleaseEvent((QFileDialog*)self, (QKeyEvent*)event);
+void q_filedialog_super_key_release_event(void* self, void* event) {
+    QFileDialog_SuperKeyReleaseEvent((QFileDialog*)self, (QKeyEvent*)event);
 }
 
 void q_filedialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2565,8 +2565,8 @@ void q_filedialog_focus_in_event(void* self, void* event) {
     QFileDialog_FocusInEvent((QFileDialog*)self, (QFocusEvent*)event);
 }
 
-void q_filedialog_qbase_focus_in_event(void* self, void* event) {
-    QFileDialog_QBaseFocusInEvent((QFileDialog*)self, (QFocusEvent*)event);
+void q_filedialog_super_focus_in_event(void* self, void* event) {
+    QFileDialog_SuperFocusInEvent((QFileDialog*)self, (QFocusEvent*)event);
 }
 
 void q_filedialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2577,8 +2577,8 @@ void q_filedialog_focus_out_event(void* self, void* event) {
     QFileDialog_FocusOutEvent((QFileDialog*)self, (QFocusEvent*)event);
 }
 
-void q_filedialog_qbase_focus_out_event(void* self, void* event) {
-    QFileDialog_QBaseFocusOutEvent((QFileDialog*)self, (QFocusEvent*)event);
+void q_filedialog_super_focus_out_event(void* self, void* event) {
+    QFileDialog_SuperFocusOutEvent((QFileDialog*)self, (QFocusEvent*)event);
 }
 
 void q_filedialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2589,8 +2589,8 @@ void q_filedialog_enter_event(void* self, void* event) {
     QFileDialog_EnterEvent((QFileDialog*)self, (QEnterEvent*)event);
 }
 
-void q_filedialog_qbase_enter_event(void* self, void* event) {
-    QFileDialog_QBaseEnterEvent((QFileDialog*)self, (QEnterEvent*)event);
+void q_filedialog_super_enter_event(void* self, void* event) {
+    QFileDialog_SuperEnterEvent((QFileDialog*)self, (QEnterEvent*)event);
 }
 
 void q_filedialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2601,8 +2601,8 @@ void q_filedialog_leave_event(void* self, void* event) {
     QFileDialog_LeaveEvent((QFileDialog*)self, (QEvent*)event);
 }
 
-void q_filedialog_qbase_leave_event(void* self, void* event) {
-    QFileDialog_QBaseLeaveEvent((QFileDialog*)self, (QEvent*)event);
+void q_filedialog_super_leave_event(void* self, void* event) {
+    QFileDialog_SuperLeaveEvent((QFileDialog*)self, (QEvent*)event);
 }
 
 void q_filedialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2613,8 +2613,8 @@ void q_filedialog_paint_event(void* self, void* event) {
     QFileDialog_PaintEvent((QFileDialog*)self, (QPaintEvent*)event);
 }
 
-void q_filedialog_qbase_paint_event(void* self, void* event) {
-    QFileDialog_QBasePaintEvent((QFileDialog*)self, (QPaintEvent*)event);
+void q_filedialog_super_paint_event(void* self, void* event) {
+    QFileDialog_SuperPaintEvent((QFileDialog*)self, (QPaintEvent*)event);
 }
 
 void q_filedialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2625,8 +2625,8 @@ void q_filedialog_move_event(void* self, void* event) {
     QFileDialog_MoveEvent((QFileDialog*)self, (QMoveEvent*)event);
 }
 
-void q_filedialog_qbase_move_event(void* self, void* event) {
-    QFileDialog_QBaseMoveEvent((QFileDialog*)self, (QMoveEvent*)event);
+void q_filedialog_super_move_event(void* self, void* event) {
+    QFileDialog_SuperMoveEvent((QFileDialog*)self, (QMoveEvent*)event);
 }
 
 void q_filedialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2637,8 +2637,8 @@ void q_filedialog_tablet_event(void* self, void* event) {
     QFileDialog_TabletEvent((QFileDialog*)self, (QTabletEvent*)event);
 }
 
-void q_filedialog_qbase_tablet_event(void* self, void* event) {
-    QFileDialog_QBaseTabletEvent((QFileDialog*)self, (QTabletEvent*)event);
+void q_filedialog_super_tablet_event(void* self, void* event) {
+    QFileDialog_SuperTabletEvent((QFileDialog*)self, (QTabletEvent*)event);
 }
 
 void q_filedialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2649,8 +2649,8 @@ void q_filedialog_action_event(void* self, void* event) {
     QFileDialog_ActionEvent((QFileDialog*)self, (QActionEvent*)event);
 }
 
-void q_filedialog_qbase_action_event(void* self, void* event) {
-    QFileDialog_QBaseActionEvent((QFileDialog*)self, (QActionEvent*)event);
+void q_filedialog_super_action_event(void* self, void* event) {
+    QFileDialog_SuperActionEvent((QFileDialog*)self, (QActionEvent*)event);
 }
 
 void q_filedialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2661,8 +2661,8 @@ void q_filedialog_drag_enter_event(void* self, void* event) {
     QFileDialog_DragEnterEvent((QFileDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_filedialog_qbase_drag_enter_event(void* self, void* event) {
-    QFileDialog_QBaseDragEnterEvent((QFileDialog*)self, (QDragEnterEvent*)event);
+void q_filedialog_super_drag_enter_event(void* self, void* event) {
+    QFileDialog_SuperDragEnterEvent((QFileDialog*)self, (QDragEnterEvent*)event);
 }
 
 void q_filedialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2673,8 +2673,8 @@ void q_filedialog_drag_move_event(void* self, void* event) {
     QFileDialog_DragMoveEvent((QFileDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_filedialog_qbase_drag_move_event(void* self, void* event) {
-    QFileDialog_QBaseDragMoveEvent((QFileDialog*)self, (QDragMoveEvent*)event);
+void q_filedialog_super_drag_move_event(void* self, void* event) {
+    QFileDialog_SuperDragMoveEvent((QFileDialog*)self, (QDragMoveEvent*)event);
 }
 
 void q_filedialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2685,8 +2685,8 @@ void q_filedialog_drag_leave_event(void* self, void* event) {
     QFileDialog_DragLeaveEvent((QFileDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_filedialog_qbase_drag_leave_event(void* self, void* event) {
-    QFileDialog_QBaseDragLeaveEvent((QFileDialog*)self, (QDragLeaveEvent*)event);
+void q_filedialog_super_drag_leave_event(void* self, void* event) {
+    QFileDialog_SuperDragLeaveEvent((QFileDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void q_filedialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2697,8 +2697,8 @@ void q_filedialog_drop_event(void* self, void* event) {
     QFileDialog_DropEvent((QFileDialog*)self, (QDropEvent*)event);
 }
 
-void q_filedialog_qbase_drop_event(void* self, void* event) {
-    QFileDialog_QBaseDropEvent((QFileDialog*)self, (QDropEvent*)event);
+void q_filedialog_super_drop_event(void* self, void* event) {
+    QFileDialog_SuperDropEvent((QFileDialog*)self, (QDropEvent*)event);
 }
 
 void q_filedialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2709,8 +2709,8 @@ void q_filedialog_hide_event(void* self, void* event) {
     QFileDialog_HideEvent((QFileDialog*)self, (QHideEvent*)event);
 }
 
-void q_filedialog_qbase_hide_event(void* self, void* event) {
-    QFileDialog_QBaseHideEvent((QFileDialog*)self, (QHideEvent*)event);
+void q_filedialog_super_hide_event(void* self, void* event) {
+    QFileDialog_SuperHideEvent((QFileDialog*)self, (QHideEvent*)event);
 }
 
 void q_filedialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2721,8 +2721,8 @@ bool q_filedialog_native_event(void* self, char* eventType, void* message, intpt
     return QFileDialog_NativeEvent((QFileDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_filedialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QFileDialog_QBaseNativeEvent((QFileDialog*)self, qstring(eventType), message, result);
+bool q_filedialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QFileDialog_SuperNativeEvent((QFileDialog*)self, qstring(eventType), message, result);
 }
 
 void q_filedialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2733,8 +2733,8 @@ int32_t q_filedialog_metric(void* self, int32_t param1) {
     return QFileDialog_Metric((QFileDialog*)self, param1);
 }
 
-int32_t q_filedialog_qbase_metric(void* self, int32_t param1) {
-    return QFileDialog_QBaseMetric((QFileDialog*)self, param1);
+int32_t q_filedialog_super_metric(void* self, int32_t param1) {
+    return QFileDialog_SuperMetric((QFileDialog*)self, param1);
 }
 
 void q_filedialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2745,8 +2745,8 @@ void q_filedialog_init_painter(void* self, void* painter) {
     QFileDialog_InitPainter((QFileDialog*)self, (QPainter*)painter);
 }
 
-void q_filedialog_qbase_init_painter(void* self, void* painter) {
-    QFileDialog_QBaseInitPainter((QFileDialog*)self, (QPainter*)painter);
+void q_filedialog_super_init_painter(void* self, void* painter) {
+    QFileDialog_SuperInitPainter((QFileDialog*)self, (QPainter*)painter);
 }
 
 void q_filedialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2757,8 +2757,8 @@ QPaintDevice* q_filedialog_redirected(void* self, void* offset) {
     return QFileDialog_Redirected((QFileDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_filedialog_qbase_redirected(void* self, void* offset) {
-    return QFileDialog_QBaseRedirected((QFileDialog*)self, (QPoint*)offset);
+QPaintDevice* q_filedialog_super_redirected(void* self, void* offset) {
+    return QFileDialog_SuperRedirected((QFileDialog*)self, (QPoint*)offset);
 }
 
 void q_filedialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2769,8 +2769,8 @@ QPainter* q_filedialog_shared_painter(void* self) {
     return QFileDialog_SharedPainter((QFileDialog*)self);
 }
 
-QPainter* q_filedialog_qbase_shared_painter(void* self) {
-    return QFileDialog_QBaseSharedPainter((QFileDialog*)self);
+QPainter* q_filedialog_super_shared_painter(void* self) {
+    return QFileDialog_SuperSharedPainter((QFileDialog*)self);
 }
 
 void q_filedialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2781,8 +2781,8 @@ void q_filedialog_input_method_event(void* self, void* param1) {
     QFileDialog_InputMethodEvent((QFileDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_filedialog_qbase_input_method_event(void* self, void* param1) {
-    QFileDialog_QBaseInputMethodEvent((QFileDialog*)self, (QInputMethodEvent*)param1);
+void q_filedialog_super_input_method_event(void* self, void* param1) {
+    QFileDialog_SuperInputMethodEvent((QFileDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void q_filedialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2793,8 +2793,8 @@ QVariant* q_filedialog_input_method_query(void* self, int32_t param1) {
     return QFileDialog_InputMethodQuery((QFileDialog*)self, param1);
 }
 
-QVariant* q_filedialog_qbase_input_method_query(void* self, int32_t param1) {
-    return QFileDialog_QBaseInputMethodQuery((QFileDialog*)self, param1);
+QVariant* q_filedialog_super_input_method_query(void* self, int32_t param1) {
+    return QFileDialog_SuperInputMethodQuery((QFileDialog*)self, param1);
 }
 
 void q_filedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2805,8 +2805,8 @@ bool q_filedialog_focus_next_prev_child(void* self, bool next) {
     return QFileDialog_FocusNextPrevChild((QFileDialog*)self, next);
 }
 
-bool q_filedialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return QFileDialog_QBaseFocusNextPrevChild((QFileDialog*)self, next);
+bool q_filedialog_super_focus_next_prev_child(void* self, bool next) {
+    return QFileDialog_SuperFocusNextPrevChild((QFileDialog*)self, next);
 }
 
 void q_filedialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2817,8 +2817,8 @@ void q_filedialog_timer_event(void* self, void* event) {
     QFileDialog_TimerEvent((QFileDialog*)self, (QTimerEvent*)event);
 }
 
-void q_filedialog_qbase_timer_event(void* self, void* event) {
-    QFileDialog_QBaseTimerEvent((QFileDialog*)self, (QTimerEvent*)event);
+void q_filedialog_super_timer_event(void* self, void* event) {
+    QFileDialog_SuperTimerEvent((QFileDialog*)self, (QTimerEvent*)event);
 }
 
 void q_filedialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2829,8 +2829,8 @@ void q_filedialog_child_event(void* self, void* event) {
     QFileDialog_ChildEvent((QFileDialog*)self, (QChildEvent*)event);
 }
 
-void q_filedialog_qbase_child_event(void* self, void* event) {
-    QFileDialog_QBaseChildEvent((QFileDialog*)self, (QChildEvent*)event);
+void q_filedialog_super_child_event(void* self, void* event) {
+    QFileDialog_SuperChildEvent((QFileDialog*)self, (QChildEvent*)event);
 }
 
 void q_filedialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2841,8 +2841,8 @@ void q_filedialog_custom_event(void* self, void* event) {
     QFileDialog_CustomEvent((QFileDialog*)self, (QEvent*)event);
 }
 
-void q_filedialog_qbase_custom_event(void* self, void* event) {
-    QFileDialog_QBaseCustomEvent((QFileDialog*)self, (QEvent*)event);
+void q_filedialog_super_custom_event(void* self, void* event) {
+    QFileDialog_SuperCustomEvent((QFileDialog*)self, (QEvent*)event);
 }
 
 void q_filedialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2853,8 +2853,8 @@ void q_filedialog_connect_notify(void* self, void* signal) {
     QFileDialog_ConnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_filedialog_qbase_connect_notify(void* self, void* signal) {
-    QFileDialog_QBaseConnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
+void q_filedialog_super_connect_notify(void* self, void* signal) {
+    QFileDialog_SuperConnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_filedialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2865,8 +2865,8 @@ void q_filedialog_disconnect_notify(void* self, void* signal) {
     QFileDialog_DisconnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_filedialog_qbase_disconnect_notify(void* self, void* signal) {
-    QFileDialog_QBaseDisconnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
+void q_filedialog_super_disconnect_notify(void* self, void* signal) {
+    QFileDialog_SuperDisconnectNotify((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_filedialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2877,8 +2877,8 @@ void q_filedialog_adjust_position(void* self, void* param1) {
     QFileDialog_AdjustPosition((QFileDialog*)self, (QWidget*)param1);
 }
 
-void q_filedialog_qbase_adjust_position(void* self, void* param1) {
-    QFileDialog_QBaseAdjustPosition((QFileDialog*)self, (QWidget*)param1);
+void q_filedialog_super_adjust_position(void* self, void* param1) {
+    QFileDialog_SuperAdjustPosition((QFileDialog*)self, (QWidget*)param1);
 }
 
 void q_filedialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2889,8 +2889,8 @@ void q_filedialog_update_micro_focus(void* self) {
     QFileDialog_UpdateMicroFocus((QFileDialog*)self);
 }
 
-void q_filedialog_qbase_update_micro_focus(void* self) {
-    QFileDialog_QBaseUpdateMicroFocus((QFileDialog*)self);
+void q_filedialog_super_update_micro_focus(void* self) {
+    QFileDialog_SuperUpdateMicroFocus((QFileDialog*)self);
 }
 
 void q_filedialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2901,8 +2901,8 @@ void q_filedialog_create(void* self) {
     QFileDialog_Create((QFileDialog*)self);
 }
 
-void q_filedialog_qbase_create(void* self) {
-    QFileDialog_QBaseCreate((QFileDialog*)self);
+void q_filedialog_super_create(void* self) {
+    QFileDialog_SuperCreate((QFileDialog*)self);
 }
 
 void q_filedialog_on_create(void* self, void (*callback)()) {
@@ -2913,8 +2913,8 @@ void q_filedialog_destroy(void* self) {
     QFileDialog_Destroy((QFileDialog*)self);
 }
 
-void q_filedialog_qbase_destroy(void* self) {
-    QFileDialog_QBaseDestroy((QFileDialog*)self);
+void q_filedialog_super_destroy(void* self) {
+    QFileDialog_SuperDestroy((QFileDialog*)self);
 }
 
 void q_filedialog_on_destroy(void* self, void (*callback)()) {
@@ -2925,8 +2925,8 @@ bool q_filedialog_focus_next_child(void* self) {
     return QFileDialog_FocusNextChild((QFileDialog*)self);
 }
 
-bool q_filedialog_qbase_focus_next_child(void* self) {
-    return QFileDialog_QBaseFocusNextChild((QFileDialog*)self);
+bool q_filedialog_super_focus_next_child(void* self) {
+    return QFileDialog_SuperFocusNextChild((QFileDialog*)self);
 }
 
 void q_filedialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2937,8 +2937,8 @@ bool q_filedialog_focus_previous_child(void* self) {
     return QFileDialog_FocusPreviousChild((QFileDialog*)self);
 }
 
-bool q_filedialog_qbase_focus_previous_child(void* self) {
-    return QFileDialog_QBaseFocusPreviousChild((QFileDialog*)self);
+bool q_filedialog_super_focus_previous_child(void* self) {
+    return QFileDialog_SuperFocusPreviousChild((QFileDialog*)self);
 }
 
 void q_filedialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2949,8 +2949,8 @@ QObject* q_filedialog_sender(void* self) {
     return QFileDialog_Sender((QFileDialog*)self);
 }
 
-QObject* q_filedialog_qbase_sender(void* self) {
-    return QFileDialog_QBaseSender((QFileDialog*)self);
+QObject* q_filedialog_super_sender(void* self) {
+    return QFileDialog_SuperSender((QFileDialog*)self);
 }
 
 void q_filedialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2961,8 +2961,8 @@ int32_t q_filedialog_sender_signal_index(void* self) {
     return QFileDialog_SenderSignalIndex((QFileDialog*)self);
 }
 
-int32_t q_filedialog_qbase_sender_signal_index(void* self) {
-    return QFileDialog_QBaseSenderSignalIndex((QFileDialog*)self);
+int32_t q_filedialog_super_sender_signal_index(void* self) {
+    return QFileDialog_SuperSenderSignalIndex((QFileDialog*)self);
 }
 
 void q_filedialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2973,8 +2973,8 @@ int32_t q_filedialog_receivers(void* self, const char* signal) {
     return QFileDialog_Receivers((QFileDialog*)self, signal);
 }
 
-int32_t q_filedialog_qbase_receivers(void* self, const char* signal) {
-    return QFileDialog_QBaseReceivers((QFileDialog*)self, signal);
+int32_t q_filedialog_super_receivers(void* self, const char* signal) {
+    return QFileDialog_SuperReceivers((QFileDialog*)self, signal);
 }
 
 void q_filedialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2985,8 +2985,8 @@ bool q_filedialog_is_signal_connected(void* self, void* signal) {
     return QFileDialog_IsSignalConnected((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
-bool q_filedialog_qbase_is_signal_connected(void* self, void* signal) {
-    return QFileDialog_QBaseIsSignalConnected((QFileDialog*)self, (QMetaMethod*)signal);
+bool q_filedialog_super_is_signal_connected(void* self, void* signal) {
+    return QFileDialog_SuperIsSignalConnected((QFileDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_filedialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2997,8 +2997,8 @@ double q_filedialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QFileDialog_GetDecodedMetricF((QFileDialog*)self, metricA, metricB);
 }
 
-double q_filedialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QFileDialog_QBaseGetDecodedMetricF((QFileDialog*)self, metricA, metricB);
+double q_filedialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QFileDialog_SuperGetDecodedMetricF((QFileDialog*)self, metricA, metricB);
 }
 
 void q_filedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

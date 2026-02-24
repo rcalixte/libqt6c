@@ -28,8 +28,8 @@ void k_io__renamefiledialog_on_meta_object(void* self, const QMetaObject* (*call
     KIO__RenameFileDialog_OnMetaObject((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__renamefiledialog_qbase_meta_object(void* self) {
-    return KIO__RenameFileDialog_QBaseMetaObject((KIO__RenameFileDialog*)self);
+const QMetaObject* k_io__renamefiledialog_super_meta_object(void* self) {
+    return KIO__RenameFileDialog_SuperMetaObject((KIO__RenameFileDialog*)self);
 }
 
 void* k_io__renamefiledialog_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void k_io__renamefiledialog_on_metacast(void* self, void* (*callback)(void*, con
     KIO__RenameFileDialog_OnMetacast((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
-void* k_io__renamefiledialog_qbase_metacast(void* self, const char* param1) {
-    return KIO__RenameFileDialog_QBaseMetacast((KIO__RenameFileDialog*)self, param1);
+void* k_io__renamefiledialog_super_metacast(void* self, const char* param1) {
+    return KIO__RenameFileDialog_SuperMetacast((KIO__RenameFileDialog*)self, param1);
 }
 
 int32_t k_io__renamefiledialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void k_io__renamefiledialog_on_metacall(void* self, int32_t (*callback)(void*, i
     KIO__RenameFileDialog_OnMetacall((KIO__RenameFileDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_io__renamefiledialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__RenameFileDialog_QBaseMetacall((KIO__RenameFileDialog*)self, param1, param2, param3);
+int32_t k_io__renamefiledialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__RenameFileDialog_SuperMetacall((KIO__RenameFileDialog*)self, param1, param2, param3);
 }
 
 const char* k_io__renamefiledialog_tr(const char* s) {
@@ -1522,8 +1522,8 @@ void k_io__renamefiledialog_set_visible(void* self, bool visible) {
     KIO__RenameFileDialog_SetVisible((KIO__RenameFileDialog*)self, visible);
 }
 
-void k_io__renamefiledialog_qbase_set_visible(void* self, bool visible) {
-    KIO__RenameFileDialog_QBaseSetVisible((KIO__RenameFileDialog*)self, visible);
+void k_io__renamefiledialog_super_set_visible(void* self, bool visible) {
+    KIO__RenameFileDialog_SuperSetVisible((KIO__RenameFileDialog*)self, visible);
 }
 
 void k_io__renamefiledialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1534,8 +1534,8 @@ QSize* k_io__renamefiledialog_size_hint(void* self) {
     return KIO__RenameFileDialog_SizeHint((KIO__RenameFileDialog*)self);
 }
 
-QSize* k_io__renamefiledialog_qbase_size_hint(void* self) {
-    return KIO__RenameFileDialog_QBaseSizeHint((KIO__RenameFileDialog*)self);
+QSize* k_io__renamefiledialog_super_size_hint(void* self) {
+    return KIO__RenameFileDialog_SuperSizeHint((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1546,8 +1546,8 @@ QSize* k_io__renamefiledialog_minimum_size_hint(void* self) {
     return KIO__RenameFileDialog_MinimumSizeHint((KIO__RenameFileDialog*)self);
 }
 
-QSize* k_io__renamefiledialog_qbase_minimum_size_hint(void* self) {
-    return KIO__RenameFileDialog_QBaseMinimumSizeHint((KIO__RenameFileDialog*)self);
+QSize* k_io__renamefiledialog_super_minimum_size_hint(void* self) {
+    return KIO__RenameFileDialog_SuperMinimumSizeHint((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1558,8 +1558,8 @@ void k_io__renamefiledialog_open(void* self) {
     KIO__RenameFileDialog_Open((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_qbase_open(void* self) {
-    KIO__RenameFileDialog_QBaseOpen((KIO__RenameFileDialog*)self);
+void k_io__renamefiledialog_super_open(void* self) {
+    KIO__RenameFileDialog_SuperOpen((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_open(void* self, void (*callback)()) {
@@ -1570,8 +1570,8 @@ int32_t k_io__renamefiledialog_exec(void* self) {
     return KIO__RenameFileDialog_Exec((KIO__RenameFileDialog*)self);
 }
 
-int32_t k_io__renamefiledialog_qbase_exec(void* self) {
-    return KIO__RenameFileDialog_QBaseExec((KIO__RenameFileDialog*)self);
+int32_t k_io__renamefiledialog_super_exec(void* self) {
+    return KIO__RenameFileDialog_SuperExec((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1582,8 +1582,8 @@ void k_io__renamefiledialog_done(void* self, int param1) {
     KIO__RenameFileDialog_Done((KIO__RenameFileDialog*)self, param1);
 }
 
-void k_io__renamefiledialog_qbase_done(void* self, int param1) {
-    KIO__RenameFileDialog_QBaseDone((KIO__RenameFileDialog*)self, param1);
+void k_io__renamefiledialog_super_done(void* self, int param1) {
+    KIO__RenameFileDialog_SuperDone((KIO__RenameFileDialog*)self, param1);
 }
 
 void k_io__renamefiledialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1594,8 +1594,8 @@ void k_io__renamefiledialog_accept(void* self) {
     KIO__RenameFileDialog_Accept((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_qbase_accept(void* self) {
-    KIO__RenameFileDialog_QBaseAccept((KIO__RenameFileDialog*)self);
+void k_io__renamefiledialog_super_accept(void* self) {
+    KIO__RenameFileDialog_SuperAccept((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_accept(void* self, void (*callback)()) {
@@ -1606,8 +1606,8 @@ void k_io__renamefiledialog_reject(void* self) {
     KIO__RenameFileDialog_Reject((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_qbase_reject(void* self) {
-    KIO__RenameFileDialog_QBaseReject((KIO__RenameFileDialog*)self);
+void k_io__renamefiledialog_super_reject(void* self) {
+    KIO__RenameFileDialog_SuperReject((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_reject(void* self, void (*callback)()) {
@@ -1618,8 +1618,8 @@ void k_io__renamefiledialog_key_press_event(void* self, void* param1) {
     KIO__RenameFileDialog_KeyPressEvent((KIO__RenameFileDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_key_press_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseKeyPressEvent((KIO__RenameFileDialog*)self, (QKeyEvent*)param1);
+void k_io__renamefiledialog_super_key_press_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperKeyPressEvent((KIO__RenameFileDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1630,8 +1630,8 @@ void k_io__renamefiledialog_close_event(void* self, void* param1) {
     KIO__RenameFileDialog_CloseEvent((KIO__RenameFileDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_close_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseCloseEvent((KIO__RenameFileDialog*)self, (QCloseEvent*)param1);
+void k_io__renamefiledialog_super_close_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperCloseEvent((KIO__RenameFileDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1642,8 +1642,8 @@ void k_io__renamefiledialog_show_event(void* self, void* param1) {
     KIO__RenameFileDialog_ShowEvent((KIO__RenameFileDialog*)self, (QShowEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_show_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseShowEvent((KIO__RenameFileDialog*)self, (QShowEvent*)param1);
+void k_io__renamefiledialog_super_show_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperShowEvent((KIO__RenameFileDialog*)self, (QShowEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1654,8 +1654,8 @@ void k_io__renamefiledialog_resize_event(void* self, void* param1) {
     KIO__RenameFileDialog_ResizeEvent((KIO__RenameFileDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_resize_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseResizeEvent((KIO__RenameFileDialog*)self, (QResizeEvent*)param1);
+void k_io__renamefiledialog_super_resize_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperResizeEvent((KIO__RenameFileDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1666,8 +1666,8 @@ void k_io__renamefiledialog_context_menu_event(void* self, void* param1) {
     KIO__RenameFileDialog_ContextMenuEvent((KIO__RenameFileDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_context_menu_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseContextMenuEvent((KIO__RenameFileDialog*)self, (QContextMenuEvent*)param1);
+void k_io__renamefiledialog_super_context_menu_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperContextMenuEvent((KIO__RenameFileDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1678,8 +1678,8 @@ bool k_io__renamefiledialog_event_filter(void* self, void* param1, void* param2)
     return KIO__RenameFileDialog_EventFilter((KIO__RenameFileDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_io__renamefiledialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KIO__RenameFileDialog_QBaseEventFilter((KIO__RenameFileDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_io__renamefiledialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KIO__RenameFileDialog_SuperEventFilter((KIO__RenameFileDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_io__renamefiledialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1690,8 +1690,8 @@ int32_t k_io__renamefiledialog_dev_type(void* self) {
     return KIO__RenameFileDialog_DevType((KIO__RenameFileDialog*)self);
 }
 
-int32_t k_io__renamefiledialog_qbase_dev_type(void* self) {
-    return KIO__RenameFileDialog_QBaseDevType((KIO__RenameFileDialog*)self);
+int32_t k_io__renamefiledialog_super_dev_type(void* self) {
+    return KIO__RenameFileDialog_SuperDevType((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1702,8 +1702,8 @@ int32_t k_io__renamefiledialog_height_for_width(void* self, int param1) {
     return KIO__RenameFileDialog_HeightForWidth((KIO__RenameFileDialog*)self, param1);
 }
 
-int32_t k_io__renamefiledialog_qbase_height_for_width(void* self, int param1) {
-    return KIO__RenameFileDialog_QBaseHeightForWidth((KIO__RenameFileDialog*)self, param1);
+int32_t k_io__renamefiledialog_super_height_for_width(void* self, int param1) {
+    return KIO__RenameFileDialog_SuperHeightForWidth((KIO__RenameFileDialog*)self, param1);
 }
 
 void k_io__renamefiledialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1714,8 +1714,8 @@ bool k_io__renamefiledialog_has_height_for_width(void* self) {
     return KIO__RenameFileDialog_HasHeightForWidth((KIO__RenameFileDialog*)self);
 }
 
-bool k_io__renamefiledialog_qbase_has_height_for_width(void* self) {
-    return KIO__RenameFileDialog_QBaseHasHeightForWidth((KIO__RenameFileDialog*)self);
+bool k_io__renamefiledialog_super_has_height_for_width(void* self) {
+    return KIO__RenameFileDialog_SuperHasHeightForWidth((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1726,8 +1726,8 @@ QPaintEngine* k_io__renamefiledialog_paint_engine(void* self) {
     return KIO__RenameFileDialog_PaintEngine((KIO__RenameFileDialog*)self);
 }
 
-QPaintEngine* k_io__renamefiledialog_qbase_paint_engine(void* self) {
-    return KIO__RenameFileDialog_QBasePaintEngine((KIO__RenameFileDialog*)self);
+QPaintEngine* k_io__renamefiledialog_super_paint_engine(void* self) {
+    return KIO__RenameFileDialog_SuperPaintEngine((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1738,8 +1738,8 @@ bool k_io__renamefiledialog_event(void* self, void* event) {
     return KIO__RenameFileDialog_Event((KIO__RenameFileDialog*)self, (QEvent*)event);
 }
 
-bool k_io__renamefiledialog_qbase_event(void* self, void* event) {
-    return KIO__RenameFileDialog_QBaseEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
+bool k_io__renamefiledialog_super_event(void* self, void* event) {
+    return KIO__RenameFileDialog_SuperEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
 }
 
 void k_io__renamefiledialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1750,8 +1750,8 @@ void k_io__renamefiledialog_mouse_press_event(void* self, void* event) {
     KIO__RenameFileDialog_MousePressEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_mouse_press_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseMousePressEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
+void k_io__renamefiledialog_super_mouse_press_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperMousePressEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamefiledialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1762,8 +1762,8 @@ void k_io__renamefiledialog_mouse_release_event(void* self, void* event) {
     KIO__RenameFileDialog_MouseReleaseEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_mouse_release_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseMouseReleaseEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
+void k_io__renamefiledialog_super_mouse_release_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperMouseReleaseEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamefiledialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1774,8 +1774,8 @@ void k_io__renamefiledialog_mouse_double_click_event(void* self, void* event) {
     KIO__RenameFileDialog_MouseDoubleClickEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseMouseDoubleClickEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
+void k_io__renamefiledialog_super_mouse_double_click_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperMouseDoubleClickEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamefiledialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1786,8 +1786,8 @@ void k_io__renamefiledialog_mouse_move_event(void* self, void* event) {
     KIO__RenameFileDialog_MouseMoveEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_mouse_move_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseMouseMoveEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
+void k_io__renamefiledialog_super_mouse_move_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperMouseMoveEvent((KIO__RenameFileDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamefiledialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1798,8 +1798,8 @@ void k_io__renamefiledialog_wheel_event(void* self, void* event) {
     KIO__RenameFileDialog_WheelEvent((KIO__RenameFileDialog*)self, (QWheelEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_wheel_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseWheelEvent((KIO__RenameFileDialog*)self, (QWheelEvent*)event);
+void k_io__renamefiledialog_super_wheel_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperWheelEvent((KIO__RenameFileDialog*)self, (QWheelEvent*)event);
 }
 
 void k_io__renamefiledialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1810,8 +1810,8 @@ void k_io__renamefiledialog_key_release_event(void* self, void* event) {
     KIO__RenameFileDialog_KeyReleaseEvent((KIO__RenameFileDialog*)self, (QKeyEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_key_release_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseKeyReleaseEvent((KIO__RenameFileDialog*)self, (QKeyEvent*)event);
+void k_io__renamefiledialog_super_key_release_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperKeyReleaseEvent((KIO__RenameFileDialog*)self, (QKeyEvent*)event);
 }
 
 void k_io__renamefiledialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1822,8 +1822,8 @@ void k_io__renamefiledialog_focus_in_event(void* self, void* event) {
     KIO__RenameFileDialog_FocusInEvent((KIO__RenameFileDialog*)self, (QFocusEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_focus_in_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseFocusInEvent((KIO__RenameFileDialog*)self, (QFocusEvent*)event);
+void k_io__renamefiledialog_super_focus_in_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperFocusInEvent((KIO__RenameFileDialog*)self, (QFocusEvent*)event);
 }
 
 void k_io__renamefiledialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1834,8 +1834,8 @@ void k_io__renamefiledialog_focus_out_event(void* self, void* event) {
     KIO__RenameFileDialog_FocusOutEvent((KIO__RenameFileDialog*)self, (QFocusEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_focus_out_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseFocusOutEvent((KIO__RenameFileDialog*)self, (QFocusEvent*)event);
+void k_io__renamefiledialog_super_focus_out_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperFocusOutEvent((KIO__RenameFileDialog*)self, (QFocusEvent*)event);
 }
 
 void k_io__renamefiledialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1846,8 +1846,8 @@ void k_io__renamefiledialog_enter_event(void* self, void* event) {
     KIO__RenameFileDialog_EnterEvent((KIO__RenameFileDialog*)self, (QEnterEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_enter_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseEnterEvent((KIO__RenameFileDialog*)self, (QEnterEvent*)event);
+void k_io__renamefiledialog_super_enter_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperEnterEvent((KIO__RenameFileDialog*)self, (QEnterEvent*)event);
 }
 
 void k_io__renamefiledialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1858,8 +1858,8 @@ void k_io__renamefiledialog_leave_event(void* self, void* event) {
     KIO__RenameFileDialog_LeaveEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_leave_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseLeaveEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
+void k_io__renamefiledialog_super_leave_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperLeaveEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
 }
 
 void k_io__renamefiledialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1870,8 +1870,8 @@ void k_io__renamefiledialog_paint_event(void* self, void* event) {
     KIO__RenameFileDialog_PaintEvent((KIO__RenameFileDialog*)self, (QPaintEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_paint_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBasePaintEvent((KIO__RenameFileDialog*)self, (QPaintEvent*)event);
+void k_io__renamefiledialog_super_paint_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperPaintEvent((KIO__RenameFileDialog*)self, (QPaintEvent*)event);
 }
 
 void k_io__renamefiledialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1882,8 +1882,8 @@ void k_io__renamefiledialog_move_event(void* self, void* event) {
     KIO__RenameFileDialog_MoveEvent((KIO__RenameFileDialog*)self, (QMoveEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_move_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseMoveEvent((KIO__RenameFileDialog*)self, (QMoveEvent*)event);
+void k_io__renamefiledialog_super_move_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperMoveEvent((KIO__RenameFileDialog*)self, (QMoveEvent*)event);
 }
 
 void k_io__renamefiledialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1894,8 +1894,8 @@ void k_io__renamefiledialog_tablet_event(void* self, void* event) {
     KIO__RenameFileDialog_TabletEvent((KIO__RenameFileDialog*)self, (QTabletEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_tablet_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseTabletEvent((KIO__RenameFileDialog*)self, (QTabletEvent*)event);
+void k_io__renamefiledialog_super_tablet_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperTabletEvent((KIO__RenameFileDialog*)self, (QTabletEvent*)event);
 }
 
 void k_io__renamefiledialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1906,8 +1906,8 @@ void k_io__renamefiledialog_action_event(void* self, void* event) {
     KIO__RenameFileDialog_ActionEvent((KIO__RenameFileDialog*)self, (QActionEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_action_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseActionEvent((KIO__RenameFileDialog*)self, (QActionEvent*)event);
+void k_io__renamefiledialog_super_action_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperActionEvent((KIO__RenameFileDialog*)self, (QActionEvent*)event);
 }
 
 void k_io__renamefiledialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1918,8 +1918,8 @@ void k_io__renamefiledialog_drag_enter_event(void* self, void* event) {
     KIO__RenameFileDialog_DragEnterEvent((KIO__RenameFileDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_drag_enter_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseDragEnterEvent((KIO__RenameFileDialog*)self, (QDragEnterEvent*)event);
+void k_io__renamefiledialog_super_drag_enter_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperDragEnterEvent((KIO__RenameFileDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_io__renamefiledialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1930,8 +1930,8 @@ void k_io__renamefiledialog_drag_move_event(void* self, void* event) {
     KIO__RenameFileDialog_DragMoveEvent((KIO__RenameFileDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_drag_move_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseDragMoveEvent((KIO__RenameFileDialog*)self, (QDragMoveEvent*)event);
+void k_io__renamefiledialog_super_drag_move_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperDragMoveEvent((KIO__RenameFileDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_io__renamefiledialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1942,8 +1942,8 @@ void k_io__renamefiledialog_drag_leave_event(void* self, void* event) {
     KIO__RenameFileDialog_DragLeaveEvent((KIO__RenameFileDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_drag_leave_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseDragLeaveEvent((KIO__RenameFileDialog*)self, (QDragLeaveEvent*)event);
+void k_io__renamefiledialog_super_drag_leave_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperDragLeaveEvent((KIO__RenameFileDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_io__renamefiledialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1954,8 +1954,8 @@ void k_io__renamefiledialog_drop_event(void* self, void* event) {
     KIO__RenameFileDialog_DropEvent((KIO__RenameFileDialog*)self, (QDropEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_drop_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseDropEvent((KIO__RenameFileDialog*)self, (QDropEvent*)event);
+void k_io__renamefiledialog_super_drop_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperDropEvent((KIO__RenameFileDialog*)self, (QDropEvent*)event);
 }
 
 void k_io__renamefiledialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1966,8 +1966,8 @@ void k_io__renamefiledialog_hide_event(void* self, void* event) {
     KIO__RenameFileDialog_HideEvent((KIO__RenameFileDialog*)self, (QHideEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_hide_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseHideEvent((KIO__RenameFileDialog*)self, (QHideEvent*)event);
+void k_io__renamefiledialog_super_hide_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperHideEvent((KIO__RenameFileDialog*)self, (QHideEvent*)event);
 }
 
 void k_io__renamefiledialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1978,8 +1978,8 @@ bool k_io__renamefiledialog_native_event(void* self, char* eventType, void* mess
     return KIO__RenameFileDialog_NativeEvent((KIO__RenameFileDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_io__renamefiledialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KIO__RenameFileDialog_QBaseNativeEvent((KIO__RenameFileDialog*)self, qstring(eventType), message, result);
+bool k_io__renamefiledialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KIO__RenameFileDialog_SuperNativeEvent((KIO__RenameFileDialog*)self, qstring(eventType), message, result);
 }
 
 void k_io__renamefiledialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1990,8 +1990,8 @@ void k_io__renamefiledialog_change_event(void* self, void* param1) {
     KIO__RenameFileDialog_ChangeEvent((KIO__RenameFileDialog*)self, (QEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_change_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseChangeEvent((KIO__RenameFileDialog*)self, (QEvent*)param1);
+void k_io__renamefiledialog_super_change_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperChangeEvent((KIO__RenameFileDialog*)self, (QEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2002,8 +2002,8 @@ int32_t k_io__renamefiledialog_metric(void* self, int32_t param1) {
     return KIO__RenameFileDialog_Metric((KIO__RenameFileDialog*)self, param1);
 }
 
-int32_t k_io__renamefiledialog_qbase_metric(void* self, int32_t param1) {
-    return KIO__RenameFileDialog_QBaseMetric((KIO__RenameFileDialog*)self, param1);
+int32_t k_io__renamefiledialog_super_metric(void* self, int32_t param1) {
+    return KIO__RenameFileDialog_SuperMetric((KIO__RenameFileDialog*)self, param1);
 }
 
 void k_io__renamefiledialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2014,8 +2014,8 @@ void k_io__renamefiledialog_init_painter(void* self, void* painter) {
     KIO__RenameFileDialog_InitPainter((KIO__RenameFileDialog*)self, (QPainter*)painter);
 }
 
-void k_io__renamefiledialog_qbase_init_painter(void* self, void* painter) {
-    KIO__RenameFileDialog_QBaseInitPainter((KIO__RenameFileDialog*)self, (QPainter*)painter);
+void k_io__renamefiledialog_super_init_painter(void* self, void* painter) {
+    KIO__RenameFileDialog_SuperInitPainter((KIO__RenameFileDialog*)self, (QPainter*)painter);
 }
 
 void k_io__renamefiledialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2026,8 +2026,8 @@ QPaintDevice* k_io__renamefiledialog_redirected(void* self, void* offset) {
     return KIO__RenameFileDialog_Redirected((KIO__RenameFileDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_io__renamefiledialog_qbase_redirected(void* self, void* offset) {
-    return KIO__RenameFileDialog_QBaseRedirected((KIO__RenameFileDialog*)self, (QPoint*)offset);
+QPaintDevice* k_io__renamefiledialog_super_redirected(void* self, void* offset) {
+    return KIO__RenameFileDialog_SuperRedirected((KIO__RenameFileDialog*)self, (QPoint*)offset);
 }
 
 void k_io__renamefiledialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2038,8 +2038,8 @@ QPainter* k_io__renamefiledialog_shared_painter(void* self) {
     return KIO__RenameFileDialog_SharedPainter((KIO__RenameFileDialog*)self);
 }
 
-QPainter* k_io__renamefiledialog_qbase_shared_painter(void* self) {
-    return KIO__RenameFileDialog_QBaseSharedPainter((KIO__RenameFileDialog*)self);
+QPainter* k_io__renamefiledialog_super_shared_painter(void* self) {
+    return KIO__RenameFileDialog_SuperSharedPainter((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2050,8 +2050,8 @@ void k_io__renamefiledialog_input_method_event(void* self, void* param1) {
     KIO__RenameFileDialog_InputMethodEvent((KIO__RenameFileDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_io__renamefiledialog_qbase_input_method_event(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseInputMethodEvent((KIO__RenameFileDialog*)self, (QInputMethodEvent*)param1);
+void k_io__renamefiledialog_super_input_method_event(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperInputMethodEvent((KIO__RenameFileDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_io__renamefiledialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2062,8 +2062,8 @@ QVariant* k_io__renamefiledialog_input_method_query(void* self, int32_t param1) 
     return KIO__RenameFileDialog_InputMethodQuery((KIO__RenameFileDialog*)self, param1);
 }
 
-QVariant* k_io__renamefiledialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KIO__RenameFileDialog_QBaseInputMethodQuery((KIO__RenameFileDialog*)self, param1);
+QVariant* k_io__renamefiledialog_super_input_method_query(void* self, int32_t param1) {
+    return KIO__RenameFileDialog_SuperInputMethodQuery((KIO__RenameFileDialog*)self, param1);
 }
 
 void k_io__renamefiledialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2074,8 +2074,8 @@ bool k_io__renamefiledialog_focus_next_prev_child(void* self, bool next) {
     return KIO__RenameFileDialog_FocusNextPrevChild((KIO__RenameFileDialog*)self, next);
 }
 
-bool k_io__renamefiledialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KIO__RenameFileDialog_QBaseFocusNextPrevChild((KIO__RenameFileDialog*)self, next);
+bool k_io__renamefiledialog_super_focus_next_prev_child(void* self, bool next) {
+    return KIO__RenameFileDialog_SuperFocusNextPrevChild((KIO__RenameFileDialog*)self, next);
 }
 
 void k_io__renamefiledialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2086,8 +2086,8 @@ void k_io__renamefiledialog_timer_event(void* self, void* event) {
     KIO__RenameFileDialog_TimerEvent((KIO__RenameFileDialog*)self, (QTimerEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_timer_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseTimerEvent((KIO__RenameFileDialog*)self, (QTimerEvent*)event);
+void k_io__renamefiledialog_super_timer_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperTimerEvent((KIO__RenameFileDialog*)self, (QTimerEvent*)event);
 }
 
 void k_io__renamefiledialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2098,8 +2098,8 @@ void k_io__renamefiledialog_child_event(void* self, void* event) {
     KIO__RenameFileDialog_ChildEvent((KIO__RenameFileDialog*)self, (QChildEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_child_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseChildEvent((KIO__RenameFileDialog*)self, (QChildEvent*)event);
+void k_io__renamefiledialog_super_child_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperChildEvent((KIO__RenameFileDialog*)self, (QChildEvent*)event);
 }
 
 void k_io__renamefiledialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2110,8 +2110,8 @@ void k_io__renamefiledialog_custom_event(void* self, void* event) {
     KIO__RenameFileDialog_CustomEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
 }
 
-void k_io__renamefiledialog_qbase_custom_event(void* self, void* event) {
-    KIO__RenameFileDialog_QBaseCustomEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
+void k_io__renamefiledialog_super_custom_event(void* self, void* event) {
+    KIO__RenameFileDialog_SuperCustomEvent((KIO__RenameFileDialog*)self, (QEvent*)event);
 }
 
 void k_io__renamefiledialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2122,8 +2122,8 @@ void k_io__renamefiledialog_connect_notify(void* self, void* signal) {
     KIO__RenameFileDialog_ConnectNotify((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_io__renamefiledialog_qbase_connect_notify(void* self, void* signal) {
-    KIO__RenameFileDialog_QBaseConnectNotify((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
+void k_io__renamefiledialog_super_connect_notify(void* self, void* signal) {
+    KIO__RenameFileDialog_SuperConnectNotify((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__renamefiledialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2134,8 +2134,8 @@ void k_io__renamefiledialog_disconnect_notify(void* self, void* signal) {
     KIO__RenameFileDialog_DisconnectNotify((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_io__renamefiledialog_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__RenameFileDialog_QBaseDisconnectNotify((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
+void k_io__renamefiledialog_super_disconnect_notify(void* self, void* signal) {
+    KIO__RenameFileDialog_SuperDisconnectNotify((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__renamefiledialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2146,8 +2146,8 @@ void k_io__renamefiledialog_adjust_position(void* self, void* param1) {
     KIO__RenameFileDialog_AdjustPosition((KIO__RenameFileDialog*)self, (QWidget*)param1);
 }
 
-void k_io__renamefiledialog_qbase_adjust_position(void* self, void* param1) {
-    KIO__RenameFileDialog_QBaseAdjustPosition((KIO__RenameFileDialog*)self, (QWidget*)param1);
+void k_io__renamefiledialog_super_adjust_position(void* self, void* param1) {
+    KIO__RenameFileDialog_SuperAdjustPosition((KIO__RenameFileDialog*)self, (QWidget*)param1);
 }
 
 void k_io__renamefiledialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2158,8 +2158,8 @@ void k_io__renamefiledialog_update_micro_focus(void* self) {
     KIO__RenameFileDialog_UpdateMicroFocus((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_qbase_update_micro_focus(void* self) {
-    KIO__RenameFileDialog_QBaseUpdateMicroFocus((KIO__RenameFileDialog*)self);
+void k_io__renamefiledialog_super_update_micro_focus(void* self) {
+    KIO__RenameFileDialog_SuperUpdateMicroFocus((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2170,8 +2170,8 @@ void k_io__renamefiledialog_create(void* self) {
     KIO__RenameFileDialog_Create((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_qbase_create(void* self) {
-    KIO__RenameFileDialog_QBaseCreate((KIO__RenameFileDialog*)self);
+void k_io__renamefiledialog_super_create(void* self) {
+    KIO__RenameFileDialog_SuperCreate((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_create(void* self, void (*callback)()) {
@@ -2182,8 +2182,8 @@ void k_io__renamefiledialog_destroy(void* self) {
     KIO__RenameFileDialog_Destroy((KIO__RenameFileDialog*)self);
 }
 
-void k_io__renamefiledialog_qbase_destroy(void* self) {
-    KIO__RenameFileDialog_QBaseDestroy((KIO__RenameFileDialog*)self);
+void k_io__renamefiledialog_super_destroy(void* self) {
+    KIO__RenameFileDialog_SuperDestroy((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_destroy(void* self, void (*callback)()) {
@@ -2194,8 +2194,8 @@ bool k_io__renamefiledialog_focus_next_child(void* self) {
     return KIO__RenameFileDialog_FocusNextChild((KIO__RenameFileDialog*)self);
 }
 
-bool k_io__renamefiledialog_qbase_focus_next_child(void* self) {
-    return KIO__RenameFileDialog_QBaseFocusNextChild((KIO__RenameFileDialog*)self);
+bool k_io__renamefiledialog_super_focus_next_child(void* self) {
+    return KIO__RenameFileDialog_SuperFocusNextChild((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2206,8 +2206,8 @@ bool k_io__renamefiledialog_focus_previous_child(void* self) {
     return KIO__RenameFileDialog_FocusPreviousChild((KIO__RenameFileDialog*)self);
 }
 
-bool k_io__renamefiledialog_qbase_focus_previous_child(void* self) {
-    return KIO__RenameFileDialog_QBaseFocusPreviousChild((KIO__RenameFileDialog*)self);
+bool k_io__renamefiledialog_super_focus_previous_child(void* self) {
+    return KIO__RenameFileDialog_SuperFocusPreviousChild((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2218,8 +2218,8 @@ QObject* k_io__renamefiledialog_sender(void* self) {
     return KIO__RenameFileDialog_Sender((KIO__RenameFileDialog*)self);
 }
 
-QObject* k_io__renamefiledialog_qbase_sender(void* self) {
-    return KIO__RenameFileDialog_QBaseSender((KIO__RenameFileDialog*)self);
+QObject* k_io__renamefiledialog_super_sender(void* self) {
+    return KIO__RenameFileDialog_SuperSender((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2230,8 +2230,8 @@ int32_t k_io__renamefiledialog_sender_signal_index(void* self) {
     return KIO__RenameFileDialog_SenderSignalIndex((KIO__RenameFileDialog*)self);
 }
 
-int32_t k_io__renamefiledialog_qbase_sender_signal_index(void* self) {
-    return KIO__RenameFileDialog_QBaseSenderSignalIndex((KIO__RenameFileDialog*)self);
+int32_t k_io__renamefiledialog_super_sender_signal_index(void* self) {
+    return KIO__RenameFileDialog_SuperSenderSignalIndex((KIO__RenameFileDialog*)self);
 }
 
 void k_io__renamefiledialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2242,8 +2242,8 @@ int32_t k_io__renamefiledialog_receivers(void* self, const char* signal) {
     return KIO__RenameFileDialog_Receivers((KIO__RenameFileDialog*)self, signal);
 }
 
-int32_t k_io__renamefiledialog_qbase_receivers(void* self, const char* signal) {
-    return KIO__RenameFileDialog_QBaseReceivers((KIO__RenameFileDialog*)self, signal);
+int32_t k_io__renamefiledialog_super_receivers(void* self, const char* signal) {
+    return KIO__RenameFileDialog_SuperReceivers((KIO__RenameFileDialog*)self, signal);
 }
 
 void k_io__renamefiledialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2254,8 +2254,8 @@ bool k_io__renamefiledialog_is_signal_connected(void* self, void* signal) {
     return KIO__RenameFileDialog_IsSignalConnected((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__renamefiledialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__RenameFileDialog_QBaseIsSignalConnected((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
+bool k_io__renamefiledialog_super_is_signal_connected(void* self, void* signal) {
+    return KIO__RenameFileDialog_SuperIsSignalConnected((KIO__RenameFileDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__renamefiledialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2266,8 +2266,8 @@ double k_io__renamefiledialog_get_decoded_metric_f(void* self, int32_t metricA, 
     return KIO__RenameFileDialog_GetDecodedMetricF((KIO__RenameFileDialog*)self, metricA, metricB);
 }
 
-double k_io__renamefiledialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KIO__RenameFileDialog_QBaseGetDecodedMetricF((KIO__RenameFileDialog*)self, metricA, metricB);
+double k_io__renamefiledialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KIO__RenameFileDialog_SuperGetDecodedMetricF((KIO__RenameFileDialog*)self, metricA, metricB);
 }
 
 void k_io__renamefiledialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -40,13 +40,17 @@ const QMetaObject* q_abstractitemdelegate_meta_object(void* self);
 ///
 void q_abstractitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_meta_object` instead
+///
+#define q_abstractitemdelegate_qbase_meta_object q_abstractitemdelegate_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractItemDelegate*
 ///
-const QMetaObject* q_abstractitemdelegate_qbase_meta_object(void* self);
+const QMetaObject* q_abstractitemdelegate_super_meta_object(void* self);
 
 /// @param self QAbstractItemDelegate*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_abstractitemdelegate_metacast(void* self, const char* param1);
 ///
 void q_abstractitemdelegate_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_metacast` instead
+///
+#define q_abstractitemdelegate_qbase_metacast q_abstractitemdelegate_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QAbstractItemDelegate*
 /// @param param1 const char*
 ///
-void* q_abstractitemdelegate_qbase_metacast(void* self, const char* param1);
+void* q_abstractitemdelegate_super_metacast(void* self, const char* param1);
 
 /// @param self QAbstractItemDelegate*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_abstractitemdelegate_metacall(void* self, int32_t param1, int param2, 
 ///
 void q_abstractitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_metacall` instead
+///
+#define q_abstractitemdelegate_qbase_metacall q_abstractitemdelegate_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QAbstractItemDelegate*
@@ -88,7 +100,7 @@ void q_abstractitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, i
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_abstractitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_abstractitemdelegate_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -116,6 +128,10 @@ void q_abstractitemdelegate_paint(void* self, void* painter, void* option, void*
 ///
 void q_abstractitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_paint` instead
+///
+#define q_abstractitemdelegate_qbase_paint q_abstractitemdelegate_super_paint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paint)
 ///
 /// Base class method implementation
@@ -125,7 +141,7 @@ void q_abstractitemdelegate_on_paint(void* self, void (*callback)(void*, void*, 
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_qbase_paint(void* self, void* painter, void* option, void* index);
+void q_abstractitemdelegate_super_paint(void* self, void* painter, void* option, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
@@ -144,6 +160,10 @@ QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index);
 ///
 void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_size_hint` instead
+///
+#define q_abstractitemdelegate_qbase_size_hint q_abstractitemdelegate_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#sizeHint)
 ///
 /// Base class method implementation
@@ -152,7 +172,7 @@ void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, v
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QSize* q_abstractitemdelegate_qbase_size_hint(void* self, void* option, void* index);
+QSize* q_abstractitemdelegate_super_size_hint(void* self, void* option, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
@@ -172,6 +192,10 @@ QWidget* q_abstractitemdelegate_create_editor(void* self, void* parent, void* op
 ///
 void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_create_editor` instead
+///
+#define q_abstractitemdelegate_qbase_create_editor q_abstractitemdelegate_super_create_editor
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#createEditor)
 ///
 /// Base class method implementation
@@ -181,7 +205,7 @@ void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*callback)(vo
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-QWidget* q_abstractitemdelegate_qbase_create_editor(void* self, void* parent, void* option, void* index);
+QWidget* q_abstractitemdelegate_super_create_editor(void* self, void* parent, void* option, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
@@ -200,6 +224,10 @@ void q_abstractitemdelegate_destroy_editor(void* self, void* editor, void* index
 ///
 void q_abstractitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_destroy_editor` instead
+///
+#define q_abstractitemdelegate_qbase_destroy_editor q_abstractitemdelegate_super_destroy_editor
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#destroyEditor)
 ///
 /// Base class method implementation
@@ -208,7 +236,7 @@ void q_abstractitemdelegate_on_destroy_editor(void* self, void (*callback)(void*
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_qbase_destroy_editor(void* self, void* editor, void* index);
+void q_abstractitemdelegate_super_destroy_editor(void* self, void* editor, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
@@ -227,6 +255,10 @@ void q_abstractitemdelegate_set_editor_data(void* self, void* editor, void* inde
 ///
 void q_abstractitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_set_editor_data` instead
+///
+#define q_abstractitemdelegate_qbase_set_editor_data q_abstractitemdelegate_super_set_editor_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setEditorData)
 ///
 /// Base class method implementation
@@ -235,7 +267,7 @@ void q_abstractitemdelegate_on_set_editor_data(void* self, void (*callback)(void
 /// @param editor QWidget*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_qbase_set_editor_data(void* self, void* editor, void* index);
+void q_abstractitemdelegate_super_set_editor_data(void* self, void* editor, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
@@ -255,6 +287,10 @@ void q_abstractitemdelegate_set_model_data(void* self, void* editor, void* model
 ///
 void q_abstractitemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_set_model_data` instead
+///
+#define q_abstractitemdelegate_qbase_set_model_data q_abstractitemdelegate_super_set_model_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#setModelData)
 ///
 /// Base class method implementation
@@ -264,7 +300,7 @@ void q_abstractitemdelegate_on_set_model_data(void* self, void (*callback)(void*
 /// @param model QAbstractItemModel*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_qbase_set_model_data(void* self, void* editor, void* model, void* index);
+void q_abstractitemdelegate_super_set_model_data(void* self, void* editor, void* model, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
@@ -284,6 +320,10 @@ void q_abstractitemdelegate_update_editor_geometry(void* self, void* editor, voi
 ///
 void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_update_editor_geometry` instead
+///
+#define q_abstractitemdelegate_qbase_update_editor_geometry q_abstractitemdelegate_super_update_editor_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#updateEditorGeometry)
 ///
 /// Base class method implementation
@@ -293,7 +333,7 @@ void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*callbac
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-void q_abstractitemdelegate_qbase_update_editor_geometry(void* self, void* editor, void* option, void* index);
+void q_abstractitemdelegate_super_update_editor_geometry(void* self, void* editor, void* option, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
@@ -314,6 +354,10 @@ bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, v
 ///
 void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_editor_event` instead
+///
+#define q_abstractitemdelegate_qbase_editor_event q_abstractitemdelegate_super_editor_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#editorEvent)
 ///
 /// Base class method implementation
@@ -324,7 +368,7 @@ void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, 
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool q_abstractitemdelegate_qbase_editor_event(void* self, void* event, void* model, void* option, void* index);
+bool q_abstractitemdelegate_super_editor_event(void* self, void* event, void* model, void* option, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
@@ -345,6 +389,10 @@ bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void
 ///
 void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_help_event` instead
+///
+#define q_abstractitemdelegate_qbase_help_event q_abstractitemdelegate_super_help_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#helpEvent)
 ///
 /// Base class method implementation
@@ -355,7 +403,7 @@ void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, vo
 /// @param option QStyleOptionViewItem*
 /// @param index QModelIndex*
 ///
-bool q_abstractitemdelegate_qbase_help_event(void* self, void* event, void* view, void* option, void* index);
+bool q_abstractitemdelegate_super_help_event(void* self, void* event, void* view, void* option, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
@@ -374,6 +422,10 @@ libqt_list q_abstractitemdelegate_painting_roles(void* self);
 ///
 void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_painting_roles` instead
+///
+#define q_abstractitemdelegate_qbase_painting_roles q_abstractitemdelegate_super_painting_roles
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#paintingRoles)
 ///
 /// Base class method implementation
@@ -382,7 +434,7 @@ void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list (*callback)
 ///
 /// @return libqt_list of int
 ///
-libqt_list q_abstractitemdelegate_qbase_painting_roles(void* self);
+libqt_list q_abstractitemdelegate_super_painting_roles(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractitemdelegate.html#commitData)
 ///
@@ -918,6 +970,10 @@ void q_abstractitemdelegate_on_destroyed1(void* self, void (*callback)(void*, vo
 ///
 bool q_abstractitemdelegate_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_event` instead
+///
+#define q_abstractitemdelegate_qbase_event q_abstractitemdelegate_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -927,7 +983,7 @@ bool q_abstractitemdelegate_event(void* self, void* event);
 /// @param self QAbstractItemDelegate*
 /// @param event QEvent*
 ///
-bool q_abstractitemdelegate_qbase_event(void* self, void* event);
+bool q_abstractitemdelegate_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -952,6 +1008,10 @@ void q_abstractitemdelegate_on_event(void* self, bool (*callback)(void*, void*))
 ///
 bool q_abstractitemdelegate_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_event_filter` instead
+///
+#define q_abstractitemdelegate_qbase_event_filter q_abstractitemdelegate_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -962,7 +1022,7 @@ bool q_abstractitemdelegate_event_filter(void* self, void* watched, void* event)
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_abstractitemdelegate_qbase_event_filter(void* self, void* watched, void* event);
+bool q_abstractitemdelegate_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -986,6 +1046,10 @@ void q_abstractitemdelegate_on_event_filter(void* self, bool (*callback)(void*, 
 ///
 void q_abstractitemdelegate_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_timer_event` instead
+///
+#define q_abstractitemdelegate_qbase_timer_event q_abstractitemdelegate_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -995,7 +1059,7 @@ void q_abstractitemdelegate_timer_event(void* self, void* event);
 /// @param self QAbstractItemDelegate*
 /// @param event QTimerEvent*
 ///
-void q_abstractitemdelegate_qbase_timer_event(void* self, void* event);
+void q_abstractitemdelegate_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1019,6 +1083,10 @@ void q_abstractitemdelegate_on_timer_event(void* self, void (*callback)(void*, v
 ///
 void q_abstractitemdelegate_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_child_event` instead
+///
+#define q_abstractitemdelegate_qbase_child_event q_abstractitemdelegate_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1028,7 +1096,7 @@ void q_abstractitemdelegate_child_event(void* self, void* event);
 /// @param self QAbstractItemDelegate*
 /// @param event QChildEvent*
 ///
-void q_abstractitemdelegate_qbase_child_event(void* self, void* event);
+void q_abstractitemdelegate_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1052,6 +1120,10 @@ void q_abstractitemdelegate_on_child_event(void* self, void (*callback)(void*, v
 ///
 void q_abstractitemdelegate_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_custom_event` instead
+///
+#define q_abstractitemdelegate_qbase_custom_event q_abstractitemdelegate_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1061,7 +1133,7 @@ void q_abstractitemdelegate_custom_event(void* self, void* event);
 /// @param self QAbstractItemDelegate*
 /// @param event QEvent*
 ///
-void q_abstractitemdelegate_qbase_custom_event(void* self, void* event);
+void q_abstractitemdelegate_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1085,6 +1157,10 @@ void q_abstractitemdelegate_on_custom_event(void* self, void (*callback)(void*, 
 ///
 void q_abstractitemdelegate_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_connect_notify` instead
+///
+#define q_abstractitemdelegate_qbase_connect_notify q_abstractitemdelegate_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1094,7 +1170,7 @@ void q_abstractitemdelegate_connect_notify(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void q_abstractitemdelegate_qbase_connect_notify(void* self, void* signal);
+void q_abstractitemdelegate_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1118,6 +1194,10 @@ void q_abstractitemdelegate_on_connect_notify(void* self, void (*callback)(void*
 ///
 void q_abstractitemdelegate_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_disconnect_notify` instead
+///
+#define q_abstractitemdelegate_qbase_disconnect_notify q_abstractitemdelegate_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1127,7 +1207,7 @@ void q_abstractitemdelegate_disconnect_notify(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-void q_abstractitemdelegate_qbase_disconnect_notify(void* self, void* signal);
+void q_abstractitemdelegate_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1150,6 +1230,10 @@ void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*callback)(vo
 ///
 QObject* q_abstractitemdelegate_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_sender` instead
+///
+#define q_abstractitemdelegate_qbase_sender q_abstractitemdelegate_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1158,7 +1242,7 @@ QObject* q_abstractitemdelegate_sender(void* self);
 ///
 /// @param self QAbstractItemDelegate*
 ///
-QObject* q_abstractitemdelegate_qbase_sender(void* self);
+QObject* q_abstractitemdelegate_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1181,6 +1265,10 @@ void q_abstractitemdelegate_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_abstractitemdelegate_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_sender_signal_index` instead
+///
+#define q_abstractitemdelegate_qbase_sender_signal_index q_abstractitemdelegate_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1189,7 +1277,7 @@ int32_t q_abstractitemdelegate_sender_signal_index(void* self);
 ///
 /// @param self QAbstractItemDelegate*
 ///
-int32_t q_abstractitemdelegate_qbase_sender_signal_index(void* self);
+int32_t q_abstractitemdelegate_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1213,6 +1301,10 @@ void q_abstractitemdelegate_on_sender_signal_index(void* self, int32_t (*callbac
 ///
 int32_t q_abstractitemdelegate_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_receivers` instead
+///
+#define q_abstractitemdelegate_qbase_receivers q_abstractitemdelegate_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1222,7 +1314,7 @@ int32_t q_abstractitemdelegate_receivers(void* self, const char* signal);
 /// @param self QAbstractItemDelegate*
 /// @param signal const char*
 ///
-int32_t q_abstractitemdelegate_qbase_receivers(void* self, const char* signal);
+int32_t q_abstractitemdelegate_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1246,6 +1338,10 @@ void q_abstractitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, 
 ///
 bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstractitemdelegate_super_is_signal_connected` instead
+///
+#define q_abstractitemdelegate_qbase_is_signal_connected q_abstractitemdelegate_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1255,7 +1351,7 @@ bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal);
 /// @param self QAbstractItemDelegate*
 /// @param signal QMetaMethod*
 ///
-bool q_abstractitemdelegate_qbase_is_signal_connected(void* self, void* signal);
+bool q_abstractitemdelegate_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

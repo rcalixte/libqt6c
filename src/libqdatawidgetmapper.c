@@ -24,8 +24,8 @@ void q_datawidgetmapper_on_meta_object(void* self, const QMetaObject* (*callback
     QDataWidgetMapper_OnMetaObject((QDataWidgetMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_datawidgetmapper_qbase_meta_object(void* self) {
-    return QDataWidgetMapper_QBaseMetaObject((QDataWidgetMapper*)self);
+const QMetaObject* q_datawidgetmapper_super_meta_object(void* self) {
+    return QDataWidgetMapper_SuperMetaObject((QDataWidgetMapper*)self);
 }
 
 void* q_datawidgetmapper_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_datawidgetmapper_on_metacast(void* self, void* (*callback)(void*, const c
     QDataWidgetMapper_OnMetacast((QDataWidgetMapper*)self, (intptr_t)callback);
 }
 
-void* q_datawidgetmapper_qbase_metacast(void* self, const char* param1) {
-    return QDataWidgetMapper_QBaseMetacast((QDataWidgetMapper*)self, param1);
+void* q_datawidgetmapper_super_metacast(void* self, const char* param1) {
+    return QDataWidgetMapper_SuperMetacast((QDataWidgetMapper*)self, param1);
 }
 
 int32_t q_datawidgetmapper_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_datawidgetmapper_on_metacall(void* self, int32_t (*callback)(void*, int32
     QDataWidgetMapper_OnMetacall((QDataWidgetMapper*)self, (intptr_t)callback);
 }
 
-int32_t q_datawidgetmapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDataWidgetMapper_QBaseMetacall((QDataWidgetMapper*)self, param1, param2, param3);
+int32_t q_datawidgetmapper_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDataWidgetMapper_SuperMetacall((QDataWidgetMapper*)self, param1, param2, param3);
 }
 
 const char* q_datawidgetmapper_tr(const char* s) {
@@ -166,8 +166,8 @@ void q_datawidgetmapper_on_set_current_index(void* self, void (*callback)(void*,
     QDataWidgetMapper_OnSetCurrentIndex((QDataWidgetMapper*)self, (intptr_t)callback);
 }
 
-void q_datawidgetmapper_qbase_set_current_index(void* self, int index) {
-    QDataWidgetMapper_QBaseSetCurrentIndex((QDataWidgetMapper*)self, index);
+void q_datawidgetmapper_super_set_current_index(void* self, int index) {
+    QDataWidgetMapper_SuperSetCurrentIndex((QDataWidgetMapper*)self, index);
 }
 
 void q_datawidgetmapper_set_current_model_index(void* self, void* index) {
@@ -411,8 +411,8 @@ bool q_datawidgetmapper_event(void* self, void* event) {
     return QDataWidgetMapper_Event((QDataWidgetMapper*)self, (QEvent*)event);
 }
 
-bool q_datawidgetmapper_qbase_event(void* self, void* event) {
-    return QDataWidgetMapper_QBaseEvent((QDataWidgetMapper*)self, (QEvent*)event);
+bool q_datawidgetmapper_super_event(void* self, void* event) {
+    return QDataWidgetMapper_SuperEvent((QDataWidgetMapper*)self, (QEvent*)event);
 }
 
 void q_datawidgetmapper_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ bool q_datawidgetmapper_event_filter(void* self, void* watched, void* event) {
     return QDataWidgetMapper_EventFilter((QDataWidgetMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_datawidgetmapper_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDataWidgetMapper_QBaseEventFilter((QDataWidgetMapper*)self, (QObject*)watched, (QEvent*)event);
+bool q_datawidgetmapper_super_event_filter(void* self, void* watched, void* event) {
+    return QDataWidgetMapper_SuperEventFilter((QDataWidgetMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_datawidgetmapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -435,8 +435,8 @@ void q_datawidgetmapper_timer_event(void* self, void* event) {
     QDataWidgetMapper_TimerEvent((QDataWidgetMapper*)self, (QTimerEvent*)event);
 }
 
-void q_datawidgetmapper_qbase_timer_event(void* self, void* event) {
-    QDataWidgetMapper_QBaseTimerEvent((QDataWidgetMapper*)self, (QTimerEvent*)event);
+void q_datawidgetmapper_super_timer_event(void* self, void* event) {
+    QDataWidgetMapper_SuperTimerEvent((QDataWidgetMapper*)self, (QTimerEvent*)event);
 }
 
 void q_datawidgetmapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ void q_datawidgetmapper_child_event(void* self, void* event) {
     QDataWidgetMapper_ChildEvent((QDataWidgetMapper*)self, (QChildEvent*)event);
 }
 
-void q_datawidgetmapper_qbase_child_event(void* self, void* event) {
-    QDataWidgetMapper_QBaseChildEvent((QDataWidgetMapper*)self, (QChildEvent*)event);
+void q_datawidgetmapper_super_child_event(void* self, void* event) {
+    QDataWidgetMapper_SuperChildEvent((QDataWidgetMapper*)self, (QChildEvent*)event);
 }
 
 void q_datawidgetmapper_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ void q_datawidgetmapper_custom_event(void* self, void* event) {
     QDataWidgetMapper_CustomEvent((QDataWidgetMapper*)self, (QEvent*)event);
 }
 
-void q_datawidgetmapper_qbase_custom_event(void* self, void* event) {
-    QDataWidgetMapper_QBaseCustomEvent((QDataWidgetMapper*)self, (QEvent*)event);
+void q_datawidgetmapper_super_custom_event(void* self, void* event) {
+    QDataWidgetMapper_SuperCustomEvent((QDataWidgetMapper*)self, (QEvent*)event);
 }
 
 void q_datawidgetmapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ void q_datawidgetmapper_connect_notify(void* self, void* signal) {
     QDataWidgetMapper_ConnectNotify((QDataWidgetMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_datawidgetmapper_qbase_connect_notify(void* self, void* signal) {
-    QDataWidgetMapper_QBaseConnectNotify((QDataWidgetMapper*)self, (QMetaMethod*)signal);
+void q_datawidgetmapper_super_connect_notify(void* self, void* signal) {
+    QDataWidgetMapper_SuperConnectNotify((QDataWidgetMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_datawidgetmapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -483,8 +483,8 @@ void q_datawidgetmapper_disconnect_notify(void* self, void* signal) {
     QDataWidgetMapper_DisconnectNotify((QDataWidgetMapper*)self, (QMetaMethod*)signal);
 }
 
-void q_datawidgetmapper_qbase_disconnect_notify(void* self, void* signal) {
-    QDataWidgetMapper_QBaseDisconnectNotify((QDataWidgetMapper*)self, (QMetaMethod*)signal);
+void q_datawidgetmapper_super_disconnect_notify(void* self, void* signal) {
+    QDataWidgetMapper_SuperDisconnectNotify((QDataWidgetMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_datawidgetmapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -495,8 +495,8 @@ QObject* q_datawidgetmapper_sender(void* self) {
     return QDataWidgetMapper_Sender((QDataWidgetMapper*)self);
 }
 
-QObject* q_datawidgetmapper_qbase_sender(void* self) {
-    return QDataWidgetMapper_QBaseSender((QDataWidgetMapper*)self);
+QObject* q_datawidgetmapper_super_sender(void* self) {
+    return QDataWidgetMapper_SuperSender((QDataWidgetMapper*)self);
 }
 
 void q_datawidgetmapper_on_sender(void* self, QObject* (*callback)()) {
@@ -507,8 +507,8 @@ int32_t q_datawidgetmapper_sender_signal_index(void* self) {
     return QDataWidgetMapper_SenderSignalIndex((QDataWidgetMapper*)self);
 }
 
-int32_t q_datawidgetmapper_qbase_sender_signal_index(void* self) {
-    return QDataWidgetMapper_QBaseSenderSignalIndex((QDataWidgetMapper*)self);
+int32_t q_datawidgetmapper_super_sender_signal_index(void* self) {
+    return QDataWidgetMapper_SuperSenderSignalIndex((QDataWidgetMapper*)self);
 }
 
 void q_datawidgetmapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -519,8 +519,8 @@ int32_t q_datawidgetmapper_receivers(void* self, const char* signal) {
     return QDataWidgetMapper_Receivers((QDataWidgetMapper*)self, signal);
 }
 
-int32_t q_datawidgetmapper_qbase_receivers(void* self, const char* signal) {
-    return QDataWidgetMapper_QBaseReceivers((QDataWidgetMapper*)self, signal);
+int32_t q_datawidgetmapper_super_receivers(void* self, const char* signal) {
+    return QDataWidgetMapper_SuperReceivers((QDataWidgetMapper*)self, signal);
 }
 
 void q_datawidgetmapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -531,8 +531,8 @@ bool q_datawidgetmapper_is_signal_connected(void* self, void* signal) {
     return QDataWidgetMapper_IsSignalConnected((QDataWidgetMapper*)self, (QMetaMethod*)signal);
 }
 
-bool q_datawidgetmapper_qbase_is_signal_connected(void* self, void* signal) {
-    return QDataWidgetMapper_QBaseIsSignalConnected((QDataWidgetMapper*)self, (QMetaMethod*)signal);
+bool q_datawidgetmapper_super_is_signal_connected(void* self, void* signal) {
+    return QDataWidgetMapper_SuperIsSignalConnected((QDataWidgetMapper*)self, (QMetaMethod*)signal);
 }
 
 void q_datawidgetmapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -31,8 +31,8 @@ void k_breadcrumbselectionmodel_on_meta_object(void* self, const QMetaObject* (*
     KBreadcrumbSelectionModel_OnMetaObject((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_breadcrumbselectionmodel_qbase_meta_object(void* self) {
-    return KBreadcrumbSelectionModel_QBaseMetaObject((KBreadcrumbSelectionModel*)self);
+const QMetaObject* k_breadcrumbselectionmodel_super_meta_object(void* self) {
+    return KBreadcrumbSelectionModel_SuperMetaObject((KBreadcrumbSelectionModel*)self);
 }
 
 void* k_breadcrumbselectionmodel_metacast(void* self, const char* param1) {
@@ -43,8 +43,8 @@ void k_breadcrumbselectionmodel_on_metacast(void* self, void* (*callback)(void*,
     KBreadcrumbSelectionModel_OnMetacast((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
 }
 
-void* k_breadcrumbselectionmodel_qbase_metacast(void* self, const char* param1) {
-    return KBreadcrumbSelectionModel_QBaseMetacast((KBreadcrumbSelectionModel*)self, param1);
+void* k_breadcrumbselectionmodel_super_metacast(void* self, const char* param1) {
+    return KBreadcrumbSelectionModel_SuperMetacast((KBreadcrumbSelectionModel*)self, param1);
 }
 
 int32_t k_breadcrumbselectionmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -55,8 +55,8 @@ void k_breadcrumbselectionmodel_on_metacall(void* self, int32_t (*callback)(void
     KBreadcrumbSelectionModel_OnMetacall((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
 }
 
-int32_t k_breadcrumbselectionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KBreadcrumbSelectionModel_QBaseMetacall((KBreadcrumbSelectionModel*)self, param1, param2, param3);
+int32_t k_breadcrumbselectionmodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KBreadcrumbSelectionModel_SuperMetacall((KBreadcrumbSelectionModel*)self, param1, param2, param3);
 }
 
 const char* k_breadcrumbselectionmodel_tr(const char* s) {
@@ -90,8 +90,8 @@ void k_breadcrumbselectionmodel_on_select(void* self, void (*callback)(void*, vo
     KBreadcrumbSelectionModel_OnSelect((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_breadcrumbselectionmodel_qbase_select(void* self, void* index, int32_t command) {
-    KBreadcrumbSelectionModel_QBaseSelect((KBreadcrumbSelectionModel*)self, (QModelIndex*)index, command);
+void k_breadcrumbselectionmodel_super_select(void* self, void* index, int32_t command) {
+    KBreadcrumbSelectionModel_SuperSelect((KBreadcrumbSelectionModel*)self, (QModelIndex*)index, command);
 }
 
 void k_breadcrumbselectionmodel_select2(void* self, void* selection, int32_t command) {
@@ -102,8 +102,8 @@ void k_breadcrumbselectionmodel_on_select2(void* self, void (*callback)(void*, v
     KBreadcrumbSelectionModel_OnSelect2((KBreadcrumbSelectionModel*)self, (intptr_t)callback);
 }
 
-void k_breadcrumbselectionmodel_qbase_select2(void* self, void* selection, int32_t command) {
-    KBreadcrumbSelectionModel_QBaseSelect2((KBreadcrumbSelectionModel*)self, (QItemSelection*)selection, command);
+void k_breadcrumbselectionmodel_super_select2(void* self, void* selection, int32_t command) {
+    KBreadcrumbSelectionModel_SuperSelect2((KBreadcrumbSelectionModel*)self, (QItemSelection*)selection, command);
 }
 
 const char* k_breadcrumbselectionmodel_tr2(const char* s, const char* c) {
@@ -464,8 +464,8 @@ void k_breadcrumbselectionmodel_set_current_index(void* self, void* index, int32
     KBreadcrumbSelectionModel_SetCurrentIndex((KBreadcrumbSelectionModel*)self, (QModelIndex*)index, command);
 }
 
-void k_breadcrumbselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command) {
-    KBreadcrumbSelectionModel_QBaseSetCurrentIndex((KBreadcrumbSelectionModel*)self, (QModelIndex*)index, command);
+void k_breadcrumbselectionmodel_super_set_current_index(void* self, void* index, int32_t command) {
+    KBreadcrumbSelectionModel_SuperSetCurrentIndex((KBreadcrumbSelectionModel*)self, (QModelIndex*)index, command);
 }
 
 void k_breadcrumbselectionmodel_on_set_current_index(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -476,8 +476,8 @@ void k_breadcrumbselectionmodel_clear(void* self) {
     KBreadcrumbSelectionModel_Clear((KBreadcrumbSelectionModel*)self);
 }
 
-void k_breadcrumbselectionmodel_qbase_clear(void* self) {
-    KBreadcrumbSelectionModel_QBaseClear((KBreadcrumbSelectionModel*)self);
+void k_breadcrumbselectionmodel_super_clear(void* self) {
+    KBreadcrumbSelectionModel_SuperClear((KBreadcrumbSelectionModel*)self);
 }
 
 void k_breadcrumbselectionmodel_on_clear(void* self, void (*callback)()) {
@@ -488,8 +488,8 @@ void k_breadcrumbselectionmodel_reset(void* self) {
     KBreadcrumbSelectionModel_Reset((KBreadcrumbSelectionModel*)self);
 }
 
-void k_breadcrumbselectionmodel_qbase_reset(void* self) {
-    KBreadcrumbSelectionModel_QBaseReset((KBreadcrumbSelectionModel*)self);
+void k_breadcrumbselectionmodel_super_reset(void* self) {
+    KBreadcrumbSelectionModel_SuperReset((KBreadcrumbSelectionModel*)self);
 }
 
 void k_breadcrumbselectionmodel_on_reset(void* self, void (*callback)()) {
@@ -500,8 +500,8 @@ void k_breadcrumbselectionmodel_clear_current_index(void* self) {
     KBreadcrumbSelectionModel_ClearCurrentIndex((KBreadcrumbSelectionModel*)self);
 }
 
-void k_breadcrumbselectionmodel_qbase_clear_current_index(void* self) {
-    KBreadcrumbSelectionModel_QBaseClearCurrentIndex((KBreadcrumbSelectionModel*)self);
+void k_breadcrumbselectionmodel_super_clear_current_index(void* self) {
+    KBreadcrumbSelectionModel_SuperClearCurrentIndex((KBreadcrumbSelectionModel*)self);
 }
 
 void k_breadcrumbselectionmodel_on_clear_current_index(void* self, void (*callback)()) {
@@ -512,8 +512,8 @@ bool k_breadcrumbselectionmodel_event(void* self, void* event) {
     return KBreadcrumbSelectionModel_Event((KBreadcrumbSelectionModel*)self, (QEvent*)event);
 }
 
-bool k_breadcrumbselectionmodel_qbase_event(void* self, void* event) {
-    return KBreadcrumbSelectionModel_QBaseEvent((KBreadcrumbSelectionModel*)self, (QEvent*)event);
+bool k_breadcrumbselectionmodel_super_event(void* self, void* event) {
+    return KBreadcrumbSelectionModel_SuperEvent((KBreadcrumbSelectionModel*)self, (QEvent*)event);
 }
 
 void k_breadcrumbselectionmodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -524,8 +524,8 @@ bool k_breadcrumbselectionmodel_event_filter(void* self, void* watched, void* ev
     return KBreadcrumbSelectionModel_EventFilter((KBreadcrumbSelectionModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_breadcrumbselectionmodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KBreadcrumbSelectionModel_QBaseEventFilter((KBreadcrumbSelectionModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_breadcrumbselectionmodel_super_event_filter(void* self, void* watched, void* event) {
+    return KBreadcrumbSelectionModel_SuperEventFilter((KBreadcrumbSelectionModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_breadcrumbselectionmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -536,8 +536,8 @@ void k_breadcrumbselectionmodel_timer_event(void* self, void* event) {
     KBreadcrumbSelectionModel_TimerEvent((KBreadcrumbSelectionModel*)self, (QTimerEvent*)event);
 }
 
-void k_breadcrumbselectionmodel_qbase_timer_event(void* self, void* event) {
-    KBreadcrumbSelectionModel_QBaseTimerEvent((KBreadcrumbSelectionModel*)self, (QTimerEvent*)event);
+void k_breadcrumbselectionmodel_super_timer_event(void* self, void* event) {
+    KBreadcrumbSelectionModel_SuperTimerEvent((KBreadcrumbSelectionModel*)self, (QTimerEvent*)event);
 }
 
 void k_breadcrumbselectionmodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -548,8 +548,8 @@ void k_breadcrumbselectionmodel_child_event(void* self, void* event) {
     KBreadcrumbSelectionModel_ChildEvent((KBreadcrumbSelectionModel*)self, (QChildEvent*)event);
 }
 
-void k_breadcrumbselectionmodel_qbase_child_event(void* self, void* event) {
-    KBreadcrumbSelectionModel_QBaseChildEvent((KBreadcrumbSelectionModel*)self, (QChildEvent*)event);
+void k_breadcrumbselectionmodel_super_child_event(void* self, void* event) {
+    KBreadcrumbSelectionModel_SuperChildEvent((KBreadcrumbSelectionModel*)self, (QChildEvent*)event);
 }
 
 void k_breadcrumbselectionmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -560,8 +560,8 @@ void k_breadcrumbselectionmodel_custom_event(void* self, void* event) {
     KBreadcrumbSelectionModel_CustomEvent((KBreadcrumbSelectionModel*)self, (QEvent*)event);
 }
 
-void k_breadcrumbselectionmodel_qbase_custom_event(void* self, void* event) {
-    KBreadcrumbSelectionModel_QBaseCustomEvent((KBreadcrumbSelectionModel*)self, (QEvent*)event);
+void k_breadcrumbselectionmodel_super_custom_event(void* self, void* event) {
+    KBreadcrumbSelectionModel_SuperCustomEvent((KBreadcrumbSelectionModel*)self, (QEvent*)event);
 }
 
 void k_breadcrumbselectionmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -572,8 +572,8 @@ void k_breadcrumbselectionmodel_connect_notify(void* self, void* signal) {
     KBreadcrumbSelectionModel_ConnectNotify((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_breadcrumbselectionmodel_qbase_connect_notify(void* self, void* signal) {
-    KBreadcrumbSelectionModel_QBaseConnectNotify((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
+void k_breadcrumbselectionmodel_super_connect_notify(void* self, void* signal) {
+    KBreadcrumbSelectionModel_SuperConnectNotify((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
 }
 
 void k_breadcrumbselectionmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -584,8 +584,8 @@ void k_breadcrumbselectionmodel_disconnect_notify(void* self, void* signal) {
     KBreadcrumbSelectionModel_DisconnectNotify((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-void k_breadcrumbselectionmodel_qbase_disconnect_notify(void* self, void* signal) {
-    KBreadcrumbSelectionModel_QBaseDisconnectNotify((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
+void k_breadcrumbselectionmodel_super_disconnect_notify(void* self, void* signal) {
+    KBreadcrumbSelectionModel_SuperDisconnectNotify((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
 }
 
 void k_breadcrumbselectionmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -596,8 +596,8 @@ void k_breadcrumbselectionmodel_emit_selection_changed(void* self, void* newSele
     KBreadcrumbSelectionModel_EmitSelectionChanged((KBreadcrumbSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
 }
 
-void k_breadcrumbselectionmodel_qbase_emit_selection_changed(void* self, void* newSelection, void* oldSelection) {
-    KBreadcrumbSelectionModel_QBaseEmitSelectionChanged((KBreadcrumbSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
+void k_breadcrumbselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection) {
+    KBreadcrumbSelectionModel_SuperEmitSelectionChanged((KBreadcrumbSelectionModel*)self, (QItemSelection*)newSelection, (QItemSelection*)oldSelection);
 }
 
 void k_breadcrumbselectionmodel_on_emit_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
@@ -608,8 +608,8 @@ QObject* k_breadcrumbselectionmodel_sender(void* self) {
     return KBreadcrumbSelectionModel_Sender((KBreadcrumbSelectionModel*)self);
 }
 
-QObject* k_breadcrumbselectionmodel_qbase_sender(void* self) {
-    return KBreadcrumbSelectionModel_QBaseSender((KBreadcrumbSelectionModel*)self);
+QObject* k_breadcrumbselectionmodel_super_sender(void* self) {
+    return KBreadcrumbSelectionModel_SuperSender((KBreadcrumbSelectionModel*)self);
 }
 
 void k_breadcrumbselectionmodel_on_sender(void* self, QObject* (*callback)()) {
@@ -620,8 +620,8 @@ int32_t k_breadcrumbselectionmodel_sender_signal_index(void* self) {
     return KBreadcrumbSelectionModel_SenderSignalIndex((KBreadcrumbSelectionModel*)self);
 }
 
-int32_t k_breadcrumbselectionmodel_qbase_sender_signal_index(void* self) {
-    return KBreadcrumbSelectionModel_QBaseSenderSignalIndex((KBreadcrumbSelectionModel*)self);
+int32_t k_breadcrumbselectionmodel_super_sender_signal_index(void* self) {
+    return KBreadcrumbSelectionModel_SuperSenderSignalIndex((KBreadcrumbSelectionModel*)self);
 }
 
 void k_breadcrumbselectionmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -632,8 +632,8 @@ int32_t k_breadcrumbselectionmodel_receivers(void* self, const char* signal) {
     return KBreadcrumbSelectionModel_Receivers((KBreadcrumbSelectionModel*)self, signal);
 }
 
-int32_t k_breadcrumbselectionmodel_qbase_receivers(void* self, const char* signal) {
-    return KBreadcrumbSelectionModel_QBaseReceivers((KBreadcrumbSelectionModel*)self, signal);
+int32_t k_breadcrumbselectionmodel_super_receivers(void* self, const char* signal) {
+    return KBreadcrumbSelectionModel_SuperReceivers((KBreadcrumbSelectionModel*)self, signal);
 }
 
 void k_breadcrumbselectionmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -644,8 +644,8 @@ bool k_breadcrumbselectionmodel_is_signal_connected(void* self, void* signal) {
     return KBreadcrumbSelectionModel_IsSignalConnected((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_breadcrumbselectionmodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KBreadcrumbSelectionModel_QBaseIsSignalConnected((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
+bool k_breadcrumbselectionmodel_super_is_signal_connected(void* self, void* signal) {
+    return KBreadcrumbSelectionModel_SuperIsSignalConnected((KBreadcrumbSelectionModel*)self, (QMetaMethod*)signal);
 }
 
 void k_breadcrumbselectionmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

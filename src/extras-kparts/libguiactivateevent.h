@@ -122,6 +122,10 @@ int32_t k_parts__guiactivateevent_register_event_type1(int hint);
 ///
 void k_parts__guiactivateevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `k_parts__guiactivateevent_super_set_accepted` instead
+///
+#define k_parts__guiactivateevent_qbase_set_accepted k_parts__guiactivateevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -131,7 +135,7 @@ void k_parts__guiactivateevent_set_accepted(void* self, bool accepted);
 /// @param self KParts__GUIActivateEvent*
 /// @param accepted bool
 ///
-void k_parts__guiactivateevent_qbase_set_accepted(void* self, bool accepted);
+void k_parts__guiactivateevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -154,6 +158,10 @@ void k_parts__guiactivateevent_on_set_accepted(void* self, void (*callback)(void
 ///
 QEvent* k_parts__guiactivateevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__guiactivateevent_super_clone` instead
+///
+#define k_parts__guiactivateevent_qbase_clone k_parts__guiactivateevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -162,7 +170,7 @@ QEvent* k_parts__guiactivateevent_clone(void* self);
 ///
 /// @param self KParts__GUIActivateEvent*
 ///
-QEvent* k_parts__guiactivateevent_qbase_clone(void* self);
+QEvent* k_parts__guiactivateevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///

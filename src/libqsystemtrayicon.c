@@ -32,8 +32,8 @@ void q_systemtrayicon_on_meta_object(void* self, const QMetaObject* (*callback)(
     QSystemTrayIcon_OnMetaObject((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_systemtrayicon_qbase_meta_object(void* self) {
-    return QSystemTrayIcon_QBaseMetaObject((QSystemTrayIcon*)self);
+const QMetaObject* q_systemtrayicon_super_meta_object(void* self) {
+    return QSystemTrayIcon_SuperMetaObject((QSystemTrayIcon*)self);
 }
 
 void* q_systemtrayicon_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_systemtrayicon_on_metacast(void* self, void* (*callback)(void*, const cha
     QSystemTrayIcon_OnMetacast((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
-void* q_systemtrayicon_qbase_metacast(void* self, const char* param1) {
-    return QSystemTrayIcon_QBaseMetacast((QSystemTrayIcon*)self, param1);
+void* q_systemtrayicon_super_metacast(void* self, const char* param1) {
+    return QSystemTrayIcon_SuperMetacast((QSystemTrayIcon*)self, param1);
 }
 
 int32_t q_systemtrayicon_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_systemtrayicon_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QSystemTrayIcon_OnMetacall((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
-int32_t q_systemtrayicon_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSystemTrayIcon_QBaseMetacall((QSystemTrayIcon*)self, param1, param2, param3);
+int32_t q_systemtrayicon_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSystemTrayIcon_SuperMetacall((QSystemTrayIcon*)self, param1, param2, param3);
 }
 
 const char* q_systemtrayicon_tr(const char* s) {
@@ -154,8 +154,8 @@ void q_systemtrayicon_on_event(void* self, bool (*callback)(void*, void*)) {
     QSystemTrayIcon_OnEvent((QSystemTrayIcon*)self, (intptr_t)callback);
 }
 
-bool q_systemtrayicon_qbase_event(void* self, void* event) {
-    return QSystemTrayIcon_QBaseEvent((QSystemTrayIcon*)self, (QEvent*)event);
+bool q_systemtrayicon_super_event(void* self, void* event) {
+    return QSystemTrayIcon_SuperEvent((QSystemTrayIcon*)self, (QEvent*)event);
 }
 
 const char* q_systemtrayicon_tr2(const char* s, const char* c) {
@@ -399,8 +399,8 @@ bool q_systemtrayicon_event_filter(void* self, void* watched, void* event) {
     return QSystemTrayIcon_EventFilter((QSystemTrayIcon*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_systemtrayicon_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSystemTrayIcon_QBaseEventFilter((QSystemTrayIcon*)self, (QObject*)watched, (QEvent*)event);
+bool q_systemtrayicon_super_event_filter(void* self, void* watched, void* event) {
+    return QSystemTrayIcon_SuperEventFilter((QSystemTrayIcon*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_systemtrayicon_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -411,8 +411,8 @@ void q_systemtrayicon_timer_event(void* self, void* event) {
     QSystemTrayIcon_TimerEvent((QSystemTrayIcon*)self, (QTimerEvent*)event);
 }
 
-void q_systemtrayicon_qbase_timer_event(void* self, void* event) {
-    QSystemTrayIcon_QBaseTimerEvent((QSystemTrayIcon*)self, (QTimerEvent*)event);
+void q_systemtrayicon_super_timer_event(void* self, void* event) {
+    QSystemTrayIcon_SuperTimerEvent((QSystemTrayIcon*)self, (QTimerEvent*)event);
 }
 
 void q_systemtrayicon_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void q_systemtrayicon_child_event(void* self, void* event) {
     QSystemTrayIcon_ChildEvent((QSystemTrayIcon*)self, (QChildEvent*)event);
 }
 
-void q_systemtrayicon_qbase_child_event(void* self, void* event) {
-    QSystemTrayIcon_QBaseChildEvent((QSystemTrayIcon*)self, (QChildEvent*)event);
+void q_systemtrayicon_super_child_event(void* self, void* event) {
+    QSystemTrayIcon_SuperChildEvent((QSystemTrayIcon*)self, (QChildEvent*)event);
 }
 
 void q_systemtrayicon_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ void q_systemtrayicon_custom_event(void* self, void* event) {
     QSystemTrayIcon_CustomEvent((QSystemTrayIcon*)self, (QEvent*)event);
 }
 
-void q_systemtrayicon_qbase_custom_event(void* self, void* event) {
-    QSystemTrayIcon_QBaseCustomEvent((QSystemTrayIcon*)self, (QEvent*)event);
+void q_systemtrayicon_super_custom_event(void* self, void* event) {
+    QSystemTrayIcon_SuperCustomEvent((QSystemTrayIcon*)self, (QEvent*)event);
 }
 
 void q_systemtrayicon_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ void q_systemtrayicon_connect_notify(void* self, void* signal) {
     QSystemTrayIcon_ConnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
-void q_systemtrayicon_qbase_connect_notify(void* self, void* signal) {
-    QSystemTrayIcon_QBaseConnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
+void q_systemtrayicon_super_connect_notify(void* self, void* signal) {
+    QSystemTrayIcon_SuperConnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
 void q_systemtrayicon_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ void q_systemtrayicon_disconnect_notify(void* self, void* signal) {
     QSystemTrayIcon_DisconnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
-void q_systemtrayicon_qbase_disconnect_notify(void* self, void* signal) {
-    QSystemTrayIcon_QBaseDisconnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
+void q_systemtrayicon_super_disconnect_notify(void* self, void* signal) {
+    QSystemTrayIcon_SuperDisconnectNotify((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
 void q_systemtrayicon_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ QObject* q_systemtrayicon_sender(void* self) {
     return QSystemTrayIcon_Sender((QSystemTrayIcon*)self);
 }
 
-QObject* q_systemtrayicon_qbase_sender(void* self) {
-    return QSystemTrayIcon_QBaseSender((QSystemTrayIcon*)self);
+QObject* q_systemtrayicon_super_sender(void* self) {
+    return QSystemTrayIcon_SuperSender((QSystemTrayIcon*)self);
 }
 
 void q_systemtrayicon_on_sender(void* self, QObject* (*callback)()) {
@@ -483,8 +483,8 @@ int32_t q_systemtrayicon_sender_signal_index(void* self) {
     return QSystemTrayIcon_SenderSignalIndex((QSystemTrayIcon*)self);
 }
 
-int32_t q_systemtrayicon_qbase_sender_signal_index(void* self) {
-    return QSystemTrayIcon_QBaseSenderSignalIndex((QSystemTrayIcon*)self);
+int32_t q_systemtrayicon_super_sender_signal_index(void* self) {
+    return QSystemTrayIcon_SuperSenderSignalIndex((QSystemTrayIcon*)self);
 }
 
 void q_systemtrayicon_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -495,8 +495,8 @@ int32_t q_systemtrayicon_receivers(void* self, const char* signal) {
     return QSystemTrayIcon_Receivers((QSystemTrayIcon*)self, signal);
 }
 
-int32_t q_systemtrayicon_qbase_receivers(void* self, const char* signal) {
-    return QSystemTrayIcon_QBaseReceivers((QSystemTrayIcon*)self, signal);
+int32_t q_systemtrayicon_super_receivers(void* self, const char* signal) {
+    return QSystemTrayIcon_SuperReceivers((QSystemTrayIcon*)self, signal);
 }
 
 void q_systemtrayicon_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -507,8 +507,8 @@ bool q_systemtrayicon_is_signal_connected(void* self, void* signal) {
     return QSystemTrayIcon_IsSignalConnected((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
-bool q_systemtrayicon_qbase_is_signal_connected(void* self, void* signal) {
-    return QSystemTrayIcon_QBaseIsSignalConnected((QSystemTrayIcon*)self, (QMetaMethod*)signal);
+bool q_systemtrayicon_super_is_signal_connected(void* self, void* signal) {
+    return QSystemTrayIcon_SuperIsSignalConnected((QSystemTrayIcon*)self, (QMetaMethod*)signal);
 }
 
 void q_systemtrayicon_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

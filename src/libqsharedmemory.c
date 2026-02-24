@@ -38,8 +38,8 @@ void q_sharedmemory_on_meta_object(void* self, const QMetaObject* (*callback)())
     QSharedMemory_OnMetaObject((QSharedMemory*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sharedmemory_qbase_meta_object(void* self) {
-    return QSharedMemory_QBaseMetaObject((QSharedMemory*)self);
+const QMetaObject* q_sharedmemory_super_meta_object(void* self) {
+    return QSharedMemory_SuperMetaObject((QSharedMemory*)self);
 }
 
 void* q_sharedmemory_metacast(void* self, const char* param1) {
@@ -50,8 +50,8 @@ void q_sharedmemory_on_metacast(void* self, void* (*callback)(void*, const char*
     QSharedMemory_OnMetacast((QSharedMemory*)self, (intptr_t)callback);
 }
 
-void* q_sharedmemory_qbase_metacast(void* self, const char* param1) {
-    return QSharedMemory_QBaseMetacast((QSharedMemory*)self, param1);
+void* q_sharedmemory_super_metacast(void* self, const char* param1) {
+    return QSharedMemory_SuperMetacast((QSharedMemory*)self, param1);
 }
 
 int32_t q_sharedmemory_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ void q_sharedmemory_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QSharedMemory_OnMetacall((QSharedMemory*)self, (intptr_t)callback);
 }
 
-int32_t q_sharedmemory_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSharedMemory_QBaseMetacall((QSharedMemory*)self, param1, param2, param3);
+int32_t q_sharedmemory_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSharedMemory_SuperMetacall((QSharedMemory*)self, param1, param2, param3);
 }
 
 const char* q_sharedmemory_tr(const char* s) {
@@ -415,8 +415,8 @@ bool q_sharedmemory_event(void* self, void* event) {
     return QSharedMemory_Event((QSharedMemory*)self, (QEvent*)event);
 }
 
-bool q_sharedmemory_qbase_event(void* self, void* event) {
-    return QSharedMemory_QBaseEvent((QSharedMemory*)self, (QEvent*)event);
+bool q_sharedmemory_super_event(void* self, void* event) {
+    return QSharedMemory_SuperEvent((QSharedMemory*)self, (QEvent*)event);
 }
 
 void q_sharedmemory_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -427,8 +427,8 @@ bool q_sharedmemory_event_filter(void* self, void* watched, void* event) {
     return QSharedMemory_EventFilter((QSharedMemory*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_sharedmemory_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSharedMemory_QBaseEventFilter((QSharedMemory*)self, (QObject*)watched, (QEvent*)event);
+bool q_sharedmemory_super_event_filter(void* self, void* watched, void* event) {
+    return QSharedMemory_SuperEventFilter((QSharedMemory*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_sharedmemory_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -439,8 +439,8 @@ void q_sharedmemory_timer_event(void* self, void* event) {
     QSharedMemory_TimerEvent((QSharedMemory*)self, (QTimerEvent*)event);
 }
 
-void q_sharedmemory_qbase_timer_event(void* self, void* event) {
-    QSharedMemory_QBaseTimerEvent((QSharedMemory*)self, (QTimerEvent*)event);
+void q_sharedmemory_super_timer_event(void* self, void* event) {
+    QSharedMemory_SuperTimerEvent((QSharedMemory*)self, (QTimerEvent*)event);
 }
 
 void q_sharedmemory_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -451,8 +451,8 @@ void q_sharedmemory_child_event(void* self, void* event) {
     QSharedMemory_ChildEvent((QSharedMemory*)self, (QChildEvent*)event);
 }
 
-void q_sharedmemory_qbase_child_event(void* self, void* event) {
-    QSharedMemory_QBaseChildEvent((QSharedMemory*)self, (QChildEvent*)event);
+void q_sharedmemory_super_child_event(void* self, void* event) {
+    QSharedMemory_SuperChildEvent((QSharedMemory*)self, (QChildEvent*)event);
 }
 
 void q_sharedmemory_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -463,8 +463,8 @@ void q_sharedmemory_custom_event(void* self, void* event) {
     QSharedMemory_CustomEvent((QSharedMemory*)self, (QEvent*)event);
 }
 
-void q_sharedmemory_qbase_custom_event(void* self, void* event) {
-    QSharedMemory_QBaseCustomEvent((QSharedMemory*)self, (QEvent*)event);
+void q_sharedmemory_super_custom_event(void* self, void* event) {
+    QSharedMemory_SuperCustomEvent((QSharedMemory*)self, (QEvent*)event);
 }
 
 void q_sharedmemory_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -475,8 +475,8 @@ void q_sharedmemory_connect_notify(void* self, void* signal) {
     QSharedMemory_ConnectNotify((QSharedMemory*)self, (QMetaMethod*)signal);
 }
 
-void q_sharedmemory_qbase_connect_notify(void* self, void* signal) {
-    QSharedMemory_QBaseConnectNotify((QSharedMemory*)self, (QMetaMethod*)signal);
+void q_sharedmemory_super_connect_notify(void* self, void* signal) {
+    QSharedMemory_SuperConnectNotify((QSharedMemory*)self, (QMetaMethod*)signal);
 }
 
 void q_sharedmemory_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -487,8 +487,8 @@ void q_sharedmemory_disconnect_notify(void* self, void* signal) {
     QSharedMemory_DisconnectNotify((QSharedMemory*)self, (QMetaMethod*)signal);
 }
 
-void q_sharedmemory_qbase_disconnect_notify(void* self, void* signal) {
-    QSharedMemory_QBaseDisconnectNotify((QSharedMemory*)self, (QMetaMethod*)signal);
+void q_sharedmemory_super_disconnect_notify(void* self, void* signal) {
+    QSharedMemory_SuperDisconnectNotify((QSharedMemory*)self, (QMetaMethod*)signal);
 }
 
 void q_sharedmemory_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -499,8 +499,8 @@ QObject* q_sharedmemory_sender(void* self) {
     return QSharedMemory_Sender((QSharedMemory*)self);
 }
 
-QObject* q_sharedmemory_qbase_sender(void* self) {
-    return QSharedMemory_QBaseSender((QSharedMemory*)self);
+QObject* q_sharedmemory_super_sender(void* self) {
+    return QSharedMemory_SuperSender((QSharedMemory*)self);
 }
 
 void q_sharedmemory_on_sender(void* self, QObject* (*callback)()) {
@@ -511,8 +511,8 @@ int32_t q_sharedmemory_sender_signal_index(void* self) {
     return QSharedMemory_SenderSignalIndex((QSharedMemory*)self);
 }
 
-int32_t q_sharedmemory_qbase_sender_signal_index(void* self) {
-    return QSharedMemory_QBaseSenderSignalIndex((QSharedMemory*)self);
+int32_t q_sharedmemory_super_sender_signal_index(void* self) {
+    return QSharedMemory_SuperSenderSignalIndex((QSharedMemory*)self);
 }
 
 void q_sharedmemory_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -523,8 +523,8 @@ int32_t q_sharedmemory_receivers(void* self, const char* signal) {
     return QSharedMemory_Receivers((QSharedMemory*)self, signal);
 }
 
-int32_t q_sharedmemory_qbase_receivers(void* self, const char* signal) {
-    return QSharedMemory_QBaseReceivers((QSharedMemory*)self, signal);
+int32_t q_sharedmemory_super_receivers(void* self, const char* signal) {
+    return QSharedMemory_SuperReceivers((QSharedMemory*)self, signal);
 }
 
 void q_sharedmemory_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -535,8 +535,8 @@ bool q_sharedmemory_is_signal_connected(void* self, void* signal) {
     return QSharedMemory_IsSignalConnected((QSharedMemory*)self, (QMetaMethod*)signal);
 }
 
-bool q_sharedmemory_qbase_is_signal_connected(void* self, void* signal) {
-    return QSharedMemory_QBaseIsSignalConnected((QSharedMemory*)self, (QMetaMethod*)signal);
+bool q_sharedmemory_super_is_signal_connected(void* self, void* signal) {
+    return QSharedMemory_SuperIsSignalConnected((QSharedMemory*)self, (QMetaMethod*)signal);
 }
 
 void q_sharedmemory_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

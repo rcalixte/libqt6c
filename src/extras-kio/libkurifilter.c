@@ -36,8 +36,8 @@ void k_urifiltersearchprovider_on_icon_name(void* self, const char* (*callback)(
     KUriFilterSearchProvider_OnIconName((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 
-const char* k_urifiltersearchprovider_qbase_icon_name(void* self) {
-    libqt_string _str = KUriFilterSearchProvider_QBaseIconName((KUriFilterSearchProvider*)self);
+const char* k_urifiltersearchprovider_super_icon_name(void* self) {
+    libqt_string _str = KUriFilterSearchProvider_SuperIconName((KUriFilterSearchProvider*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -81,8 +81,8 @@ void k_urifiltersearchprovider_on_set_desktop_entry_name(void* self, void (*call
     KUriFilterSearchProvider_OnSetDesktopEntryName((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 
-void k_urifiltersearchprovider_qbase_set_desktop_entry_name(void* self, const char* desktopEntryName) {
-    KUriFilterSearchProvider_QBaseSetDesktopEntryName((KUriFilterSearchProvider*)self, qstring(desktopEntryName));
+void k_urifiltersearchprovider_super_set_desktop_entry_name(void* self, const char* desktopEntryName) {
+    KUriFilterSearchProvider_SuperSetDesktopEntryName((KUriFilterSearchProvider*)self, qstring(desktopEntryName));
 }
 
 void k_urifiltersearchprovider_set_icon_name(void* self, const char* iconName) {
@@ -93,8 +93,8 @@ void k_urifiltersearchprovider_on_set_icon_name(void* self, void (*callback)(voi
     KUriFilterSearchProvider_OnSetIconName((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 
-void k_urifiltersearchprovider_qbase_set_icon_name(void* self, const char* iconName) {
-    KUriFilterSearchProvider_QBaseSetIconName((KUriFilterSearchProvider*)self, qstring(iconName));
+void k_urifiltersearchprovider_super_set_icon_name(void* self, const char* iconName) {
+    KUriFilterSearchProvider_SuperSetIconName((KUriFilterSearchProvider*)self, qstring(iconName));
 }
 
 void k_urifiltersearchprovider_set_keys(void* self, const char* keys[static 1]) {
@@ -116,7 +116,7 @@ void k_urifiltersearchprovider_on_set_keys(void* self, void (*callback)(void*, c
     KUriFilterSearchProvider_OnSetKeys((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 
-void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[static 1]) {
+void k_urifiltersearchprovider_super_set_keys(void* self, const char* keys[static 1]) {
     size_t keys_len = libqt_strv_length(keys);
     libqt_string* keys_qstr = (libqt_string*)malloc(keys_len * sizeof(libqt_string));
     if (keys_qstr == NULL) {
@@ -127,7 +127,7 @@ void k_urifiltersearchprovider_qbase_set_keys(void* self, const char* keys[stati
         keys_qstr[i] = qstring(keys[i]);
     }
     libqt_list keys_list = qlist(keys_qstr, keys_len);
-    KUriFilterSearchProvider_QBaseSetKeys((KUriFilterSearchProvider*)self, keys_list);
+    KUriFilterSearchProvider_SuperSetKeys((KUriFilterSearchProvider*)self, keys_list);
 }
 
 void k_urifiltersearchprovider_set_name(void* self, const char* name) {
@@ -138,8 +138,8 @@ void k_urifiltersearchprovider_on_set_name(void* self, void (*callback)(void*, c
     KUriFilterSearchProvider_OnSetName((KUriFilterSearchProvider*)self, (intptr_t)callback);
 }
 
-void k_urifiltersearchprovider_qbase_set_name(void* self, const char* name) {
-    KUriFilterSearchProvider_QBaseSetName((KUriFilterSearchProvider*)self, qstring(name));
+void k_urifiltersearchprovider_super_set_name(void* self, const char* name) {
+    KUriFilterSearchProvider_SuperSetName((KUriFilterSearchProvider*)self, qstring(name));
 }
 
 void k_urifiltersearchprovider_delete(void* self) {

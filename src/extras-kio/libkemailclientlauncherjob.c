@@ -23,8 +23,8 @@ void k_emailclientlauncherjob_on_meta_object(void* self, const QMetaObject* (*ca
     KEMailClientLauncherJob_OnMetaObject((KEMailClientLauncherJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_emailclientlauncherjob_qbase_meta_object(void* self) {
-    return KEMailClientLauncherJob_QBaseMetaObject((KEMailClientLauncherJob*)self);
+const QMetaObject* k_emailclientlauncherjob_super_meta_object(void* self) {
+    return KEMailClientLauncherJob_SuperMetaObject((KEMailClientLauncherJob*)self);
 }
 
 void* k_emailclientlauncherjob_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_emailclientlauncherjob_on_metacast(void* self, void* (*callback)(void*, c
     KEMailClientLauncherJob_OnMetacast((KEMailClientLauncherJob*)self, (intptr_t)callback);
 }
 
-void* k_emailclientlauncherjob_qbase_metacast(void* self, const char* param1) {
-    return KEMailClientLauncherJob_QBaseMetacast((KEMailClientLauncherJob*)self, param1);
+void* k_emailclientlauncherjob_super_metacast(void* self, const char* param1) {
+    return KEMailClientLauncherJob_SuperMetacast((KEMailClientLauncherJob*)self, param1);
 }
 
 int32_t k_emailclientlauncherjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_emailclientlauncherjob_on_metacall(void* self, int32_t (*callback)(void*,
     KEMailClientLauncherJob_OnMetacall((KEMailClientLauncherJob*)self, (intptr_t)callback);
 }
 
-int32_t k_emailclientlauncherjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KEMailClientLauncherJob_QBaseMetacall((KEMailClientLauncherJob*)self, param1, param2, param3);
+int32_t k_emailclientlauncherjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KEMailClientLauncherJob_SuperMetacall((KEMailClientLauncherJob*)self, param1, param2, param3);
 }
 
 const char* k_emailclientlauncherjob_tr(const char* s) {
@@ -127,8 +127,8 @@ void k_emailclientlauncherjob_on_start(void* self, void (*callback)()) {
     KEMailClientLauncherJob_OnStart((KEMailClientLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_emailclientlauncherjob_qbase_start(void* self) {
-    KEMailClientLauncherJob_QBaseStart((KEMailClientLauncherJob*)self);
+void k_emailclientlauncherjob_super_start(void* self) {
+    KEMailClientLauncherJob_SuperStart((KEMailClientLauncherJob*)self);
 }
 
 const char* k_emailclientlauncherjob_tr2(const char* s, const char* c) {
@@ -487,8 +487,8 @@ bool k_emailclientlauncherjob_do_kill(void* self) {
     return KEMailClientLauncherJob_DoKill((KEMailClientLauncherJob*)self);
 }
 
-bool k_emailclientlauncherjob_qbase_do_kill(void* self) {
-    return KEMailClientLauncherJob_QBaseDoKill((KEMailClientLauncherJob*)self);
+bool k_emailclientlauncherjob_super_do_kill(void* self) {
+    return KEMailClientLauncherJob_SuperDoKill((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_do_kill(void* self, bool (*callback)()) {
@@ -499,8 +499,8 @@ bool k_emailclientlauncherjob_do_suspend(void* self) {
     return KEMailClientLauncherJob_DoSuspend((KEMailClientLauncherJob*)self);
 }
 
-bool k_emailclientlauncherjob_qbase_do_suspend(void* self) {
-    return KEMailClientLauncherJob_QBaseDoSuspend((KEMailClientLauncherJob*)self);
+bool k_emailclientlauncherjob_super_do_suspend(void* self) {
+    return KEMailClientLauncherJob_SuperDoSuspend((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -511,8 +511,8 @@ bool k_emailclientlauncherjob_do_resume(void* self) {
     return KEMailClientLauncherJob_DoResume((KEMailClientLauncherJob*)self);
 }
 
-bool k_emailclientlauncherjob_qbase_do_resume(void* self) {
-    return KEMailClientLauncherJob_QBaseDoResume((KEMailClientLauncherJob*)self);
+bool k_emailclientlauncherjob_super_do_resume(void* self) {
+    return KEMailClientLauncherJob_SuperDoResume((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_do_resume(void* self, bool (*callback)()) {
@@ -526,8 +526,8 @@ const char* k_emailclientlauncherjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_emailclientlauncherjob_qbase_error_string(void* self) {
-    libqt_string _str = KEMailClientLauncherJob_QBaseErrorString((KEMailClientLauncherJob*)self);
+const char* k_emailclientlauncherjob_super_error_string(void* self) {
+    libqt_string _str = KEMailClientLauncherJob_SuperErrorString((KEMailClientLauncherJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -541,8 +541,8 @@ bool k_emailclientlauncherjob_event(void* self, void* event) {
     return KEMailClientLauncherJob_Event((KEMailClientLauncherJob*)self, (QEvent*)event);
 }
 
-bool k_emailclientlauncherjob_qbase_event(void* self, void* event) {
-    return KEMailClientLauncherJob_QBaseEvent((KEMailClientLauncherJob*)self, (QEvent*)event);
+bool k_emailclientlauncherjob_super_event(void* self, void* event) {
+    return KEMailClientLauncherJob_SuperEvent((KEMailClientLauncherJob*)self, (QEvent*)event);
 }
 
 void k_emailclientlauncherjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -553,8 +553,8 @@ bool k_emailclientlauncherjob_event_filter(void* self, void* watched, void* even
     return KEMailClientLauncherJob_EventFilter((KEMailClientLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_emailclientlauncherjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KEMailClientLauncherJob_QBaseEventFilter((KEMailClientLauncherJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_emailclientlauncherjob_super_event_filter(void* self, void* watched, void* event) {
+    return KEMailClientLauncherJob_SuperEventFilter((KEMailClientLauncherJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_emailclientlauncherjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -565,8 +565,8 @@ void k_emailclientlauncherjob_timer_event(void* self, void* event) {
     KEMailClientLauncherJob_TimerEvent((KEMailClientLauncherJob*)self, (QTimerEvent*)event);
 }
 
-void k_emailclientlauncherjob_qbase_timer_event(void* self, void* event) {
-    KEMailClientLauncherJob_QBaseTimerEvent((KEMailClientLauncherJob*)self, (QTimerEvent*)event);
+void k_emailclientlauncherjob_super_timer_event(void* self, void* event) {
+    KEMailClientLauncherJob_SuperTimerEvent((KEMailClientLauncherJob*)self, (QTimerEvent*)event);
 }
 
 void k_emailclientlauncherjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -577,8 +577,8 @@ void k_emailclientlauncherjob_child_event(void* self, void* event) {
     KEMailClientLauncherJob_ChildEvent((KEMailClientLauncherJob*)self, (QChildEvent*)event);
 }
 
-void k_emailclientlauncherjob_qbase_child_event(void* self, void* event) {
-    KEMailClientLauncherJob_QBaseChildEvent((KEMailClientLauncherJob*)self, (QChildEvent*)event);
+void k_emailclientlauncherjob_super_child_event(void* self, void* event) {
+    KEMailClientLauncherJob_SuperChildEvent((KEMailClientLauncherJob*)self, (QChildEvent*)event);
 }
 
 void k_emailclientlauncherjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -589,8 +589,8 @@ void k_emailclientlauncherjob_custom_event(void* self, void* event) {
     KEMailClientLauncherJob_CustomEvent((KEMailClientLauncherJob*)self, (QEvent*)event);
 }
 
-void k_emailclientlauncherjob_qbase_custom_event(void* self, void* event) {
-    KEMailClientLauncherJob_QBaseCustomEvent((KEMailClientLauncherJob*)self, (QEvent*)event);
+void k_emailclientlauncherjob_super_custom_event(void* self, void* event) {
+    KEMailClientLauncherJob_SuperCustomEvent((KEMailClientLauncherJob*)self, (QEvent*)event);
 }
 
 void k_emailclientlauncherjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -601,8 +601,8 @@ void k_emailclientlauncherjob_connect_notify(void* self, void* signal) {
     KEMailClientLauncherJob_ConnectNotify((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_emailclientlauncherjob_qbase_connect_notify(void* self, void* signal) {
-    KEMailClientLauncherJob_QBaseConnectNotify((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
+void k_emailclientlauncherjob_super_connect_notify(void* self, void* signal) {
+    KEMailClientLauncherJob_SuperConnectNotify((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_emailclientlauncherjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -613,8 +613,8 @@ void k_emailclientlauncherjob_disconnect_notify(void* self, void* signal) {
     KEMailClientLauncherJob_DisconnectNotify((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-void k_emailclientlauncherjob_qbase_disconnect_notify(void* self, void* signal) {
-    KEMailClientLauncherJob_QBaseDisconnectNotify((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
+void k_emailclientlauncherjob_super_disconnect_notify(void* self, void* signal) {
+    KEMailClientLauncherJob_SuperDisconnectNotify((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_emailclientlauncherjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -625,8 +625,8 @@ void k_emailclientlauncherjob_set_capabilities(void* self, int32_t capabilities)
     KEMailClientLauncherJob_SetCapabilities((KEMailClientLauncherJob*)self, capabilities);
 }
 
-void k_emailclientlauncherjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KEMailClientLauncherJob_QBaseSetCapabilities((KEMailClientLauncherJob*)self, capabilities);
+void k_emailclientlauncherjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KEMailClientLauncherJob_SuperSetCapabilities((KEMailClientLauncherJob*)self, capabilities);
 }
 
 void k_emailclientlauncherjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -637,8 +637,8 @@ bool k_emailclientlauncherjob_is_finished(void* self) {
     return KEMailClientLauncherJob_IsFinished((KEMailClientLauncherJob*)self);
 }
 
-bool k_emailclientlauncherjob_qbase_is_finished(void* self) {
-    return KEMailClientLauncherJob_QBaseIsFinished((KEMailClientLauncherJob*)self);
+bool k_emailclientlauncherjob_super_is_finished(void* self) {
+    return KEMailClientLauncherJob_SuperIsFinished((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_is_finished(void* self, bool (*callback)()) {
@@ -649,8 +649,8 @@ void k_emailclientlauncherjob_set_error(void* self, int errorCode) {
     KEMailClientLauncherJob_SetError((KEMailClientLauncherJob*)self, errorCode);
 }
 
-void k_emailclientlauncherjob_qbase_set_error(void* self, int errorCode) {
-    KEMailClientLauncherJob_QBaseSetError((KEMailClientLauncherJob*)self, errorCode);
+void k_emailclientlauncherjob_super_set_error(void* self, int errorCode) {
+    KEMailClientLauncherJob_SuperSetError((KEMailClientLauncherJob*)self, errorCode);
 }
 
 void k_emailclientlauncherjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -661,8 +661,8 @@ void k_emailclientlauncherjob_set_error_text(void* self, const char* errorText) 
     KEMailClientLauncherJob_SetErrorText((KEMailClientLauncherJob*)self, qstring(errorText));
 }
 
-void k_emailclientlauncherjob_qbase_set_error_text(void* self, const char* errorText) {
-    KEMailClientLauncherJob_QBaseSetErrorText((KEMailClientLauncherJob*)self, qstring(errorText));
+void k_emailclientlauncherjob_super_set_error_text(void* self, const char* errorText) {
+    KEMailClientLauncherJob_SuperSetErrorText((KEMailClientLauncherJob*)self, qstring(errorText));
 }
 
 void k_emailclientlauncherjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -673,8 +673,8 @@ void k_emailclientlauncherjob_set_processed_amount(void* self, int32_t unit, uin
     KEMailClientLauncherJob_SetProcessedAmount((KEMailClientLauncherJob*)self, unit, amount);
 }
 
-void k_emailclientlauncherjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KEMailClientLauncherJob_QBaseSetProcessedAmount((KEMailClientLauncherJob*)self, unit, amount);
+void k_emailclientlauncherjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KEMailClientLauncherJob_SuperSetProcessedAmount((KEMailClientLauncherJob*)self, unit, amount);
 }
 
 void k_emailclientlauncherjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -685,8 +685,8 @@ void k_emailclientlauncherjob_set_total_amount(void* self, int32_t unit, uint64_
     KEMailClientLauncherJob_SetTotalAmount((KEMailClientLauncherJob*)self, unit, amount);
 }
 
-void k_emailclientlauncherjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KEMailClientLauncherJob_QBaseSetTotalAmount((KEMailClientLauncherJob*)self, unit, amount);
+void k_emailclientlauncherjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KEMailClientLauncherJob_SuperSetTotalAmount((KEMailClientLauncherJob*)self, unit, amount);
 }
 
 void k_emailclientlauncherjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -697,8 +697,8 @@ void k_emailclientlauncherjob_set_progress_unit(void* self, int32_t unit) {
     KEMailClientLauncherJob_SetProgressUnit((KEMailClientLauncherJob*)self, unit);
 }
 
-void k_emailclientlauncherjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KEMailClientLauncherJob_QBaseSetProgressUnit((KEMailClientLauncherJob*)self, unit);
+void k_emailclientlauncherjob_super_set_progress_unit(void* self, int32_t unit) {
+    KEMailClientLauncherJob_SuperSetProgressUnit((KEMailClientLauncherJob*)self, unit);
 }
 
 void k_emailclientlauncherjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -709,8 +709,8 @@ void k_emailclientlauncherjob_set_percent(void* self, uint64_t percentage) {
     KEMailClientLauncherJob_SetPercent((KEMailClientLauncherJob*)self, percentage);
 }
 
-void k_emailclientlauncherjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KEMailClientLauncherJob_QBaseSetPercent((KEMailClientLauncherJob*)self, percentage);
+void k_emailclientlauncherjob_super_set_percent(void* self, uint64_t percentage) {
+    KEMailClientLauncherJob_SuperSetPercent((KEMailClientLauncherJob*)self, percentage);
 }
 
 void k_emailclientlauncherjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -721,8 +721,8 @@ void k_emailclientlauncherjob_emit_result(void* self) {
     KEMailClientLauncherJob_EmitResult((KEMailClientLauncherJob*)self);
 }
 
-void k_emailclientlauncherjob_qbase_emit_result(void* self) {
-    KEMailClientLauncherJob_QBaseEmitResult((KEMailClientLauncherJob*)self);
+void k_emailclientlauncherjob_super_emit_result(void* self) {
+    KEMailClientLauncherJob_SuperEmitResult((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_emit_result(void* self, void (*callback)()) {
@@ -733,8 +733,8 @@ void k_emailclientlauncherjob_emit_percent(void* self, uint64_t processedAmount,
     KEMailClientLauncherJob_EmitPercent((KEMailClientLauncherJob*)self, processedAmount, totalAmount);
 }
 
-void k_emailclientlauncherjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KEMailClientLauncherJob_QBaseEmitPercent((KEMailClientLauncherJob*)self, processedAmount, totalAmount);
+void k_emailclientlauncherjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KEMailClientLauncherJob_SuperEmitPercent((KEMailClientLauncherJob*)self, processedAmount, totalAmount);
 }
 
 void k_emailclientlauncherjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -745,8 +745,8 @@ void k_emailclientlauncherjob_emit_speed(void* self, uint64_t speed) {
     KEMailClientLauncherJob_EmitSpeed((KEMailClientLauncherJob*)self, speed);
 }
 
-void k_emailclientlauncherjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KEMailClientLauncherJob_QBaseEmitSpeed((KEMailClientLauncherJob*)self, speed);
+void k_emailclientlauncherjob_super_emit_speed(void* self, uint64_t speed) {
+    KEMailClientLauncherJob_SuperEmitSpeed((KEMailClientLauncherJob*)self, speed);
 }
 
 void k_emailclientlauncherjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -757,8 +757,8 @@ void k_emailclientlauncherjob_start_elapsed_timer(void* self) {
     KEMailClientLauncherJob_StartElapsedTimer((KEMailClientLauncherJob*)self);
 }
 
-void k_emailclientlauncherjob_qbase_start_elapsed_timer(void* self) {
-    KEMailClientLauncherJob_QBaseStartElapsedTimer((KEMailClientLauncherJob*)self);
+void k_emailclientlauncherjob_super_start_elapsed_timer(void* self) {
+    KEMailClientLauncherJob_SuperStartElapsedTimer((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -769,8 +769,8 @@ QObject* k_emailclientlauncherjob_sender(void* self) {
     return KEMailClientLauncherJob_Sender((KEMailClientLauncherJob*)self);
 }
 
-QObject* k_emailclientlauncherjob_qbase_sender(void* self) {
-    return KEMailClientLauncherJob_QBaseSender((KEMailClientLauncherJob*)self);
+QObject* k_emailclientlauncherjob_super_sender(void* self) {
+    return KEMailClientLauncherJob_SuperSender((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_sender(void* self, QObject* (*callback)()) {
@@ -781,8 +781,8 @@ int32_t k_emailclientlauncherjob_sender_signal_index(void* self) {
     return KEMailClientLauncherJob_SenderSignalIndex((KEMailClientLauncherJob*)self);
 }
 
-int32_t k_emailclientlauncherjob_qbase_sender_signal_index(void* self) {
-    return KEMailClientLauncherJob_QBaseSenderSignalIndex((KEMailClientLauncherJob*)self);
+int32_t k_emailclientlauncherjob_super_sender_signal_index(void* self) {
+    return KEMailClientLauncherJob_SuperSenderSignalIndex((KEMailClientLauncherJob*)self);
 }
 
 void k_emailclientlauncherjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -793,8 +793,8 @@ int32_t k_emailclientlauncherjob_receivers(void* self, const char* signal) {
     return KEMailClientLauncherJob_Receivers((KEMailClientLauncherJob*)self, signal);
 }
 
-int32_t k_emailclientlauncherjob_qbase_receivers(void* self, const char* signal) {
-    return KEMailClientLauncherJob_QBaseReceivers((KEMailClientLauncherJob*)self, signal);
+int32_t k_emailclientlauncherjob_super_receivers(void* self, const char* signal) {
+    return KEMailClientLauncherJob_SuperReceivers((KEMailClientLauncherJob*)self, signal);
 }
 
 void k_emailclientlauncherjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -805,8 +805,8 @@ bool k_emailclientlauncherjob_is_signal_connected(void* self, void* signal) {
     return KEMailClientLauncherJob_IsSignalConnected((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_emailclientlauncherjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KEMailClientLauncherJob_QBaseIsSignalConnected((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
+bool k_emailclientlauncherjob_super_is_signal_connected(void* self, void* signal) {
+    return KEMailClientLauncherJob_SuperIsSignalConnected((KEMailClientLauncherJob*)self, (QMetaMethod*)signal);
 }
 
 void k_emailclientlauncherjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

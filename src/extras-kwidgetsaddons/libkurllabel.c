@@ -48,8 +48,8 @@ void k_urllabel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KUrlLabel_OnMetaObject((KUrlLabel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_urllabel_qbase_meta_object(void* self) {
-    return KUrlLabel_QBaseMetaObject((KUrlLabel*)self);
+const QMetaObject* k_urllabel_super_meta_object(void* self) {
+    return KUrlLabel_SuperMetaObject((KUrlLabel*)self);
 }
 
 void* k_urllabel_metacast(void* self, const char* param1) {
@@ -60,8 +60,8 @@ void k_urllabel_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KUrlLabel_OnMetacast((KUrlLabel*)self, (intptr_t)callback);
 }
 
-void* k_urllabel_qbase_metacast(void* self, const char* param1) {
-    return KUrlLabel_QBaseMetacast((KUrlLabel*)self, param1);
+void* k_urllabel_super_metacast(void* self, const char* param1) {
+    return KUrlLabel_SuperMetacast((KUrlLabel*)self, param1);
 }
 
 int32_t k_urllabel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -72,8 +72,8 @@ void k_urllabel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KUrlLabel_OnMetacall((KUrlLabel*)self, (intptr_t)callback);
 }
 
-int32_t k_urllabel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUrlLabel_QBaseMetacall((KUrlLabel*)self, param1, param2, param3);
+int32_t k_urllabel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KUrlLabel_SuperMetacall((KUrlLabel*)self, param1, param2, param3);
 }
 
 const char* k_urllabel_tr(const char* s) {
@@ -133,8 +133,8 @@ void k_urllabel_on_set_font(void* self, void (*callback)(void*, void*)) {
     KUrlLabel_OnSetFont((KUrlLabel*)self, (intptr_t)callback);
 }
 
-void k_urllabel_qbase_set_font(void* self, void* font) {
-    KUrlLabel_QBaseSetFont((KUrlLabel*)self, (QFont*)font);
+void k_urllabel_super_set_font(void* self, void* font) {
+    KUrlLabel_SuperSetFont((KUrlLabel*)self, (QFont*)font);
 }
 
 void k_urllabel_set_use_tips(void* self) {
@@ -225,8 +225,8 @@ void k_urllabel_on_mouse_release_event(void* self, void (*callback)(void*, void*
     KUrlLabel_OnMouseReleaseEvent((KUrlLabel*)self, (intptr_t)callback);
 }
 
-void k_urllabel_qbase_mouse_release_event(void* self, void* param1) {
-    KUrlLabel_QBaseMouseReleaseEvent((KUrlLabel*)self, (QMouseEvent*)param1);
+void k_urllabel_super_mouse_release_event(void* self, void* param1) {
+    KUrlLabel_SuperMouseReleaseEvent((KUrlLabel*)self, (QMouseEvent*)param1);
 }
 
 void k_urllabel_enter_event(void* self, void* event) {
@@ -237,8 +237,8 @@ void k_urllabel_on_enter_event(void* self, void (*callback)(void*, void*)) {
     KUrlLabel_OnEnterEvent((KUrlLabel*)self, (intptr_t)callback);
 }
 
-void k_urllabel_qbase_enter_event(void* self, void* event) {
-    KUrlLabel_QBaseEnterEvent((KUrlLabel*)self, (QEnterEvent*)event);
+void k_urllabel_super_enter_event(void* self, void* event) {
+    KUrlLabel_SuperEnterEvent((KUrlLabel*)self, (QEnterEvent*)event);
 }
 
 void k_urllabel_leave_event(void* self, void* param1) {
@@ -249,8 +249,8 @@ void k_urllabel_on_leave_event(void* self, void (*callback)(void*, void*)) {
     KUrlLabel_OnLeaveEvent((KUrlLabel*)self, (intptr_t)callback);
 }
 
-void k_urllabel_qbase_leave_event(void* self, void* param1) {
-    KUrlLabel_QBaseLeaveEvent((KUrlLabel*)self, (QEvent*)param1);
+void k_urllabel_super_leave_event(void* self, void* param1) {
+    KUrlLabel_SuperLeaveEvent((KUrlLabel*)self, (QEvent*)param1);
 }
 
 bool k_urllabel_event(void* self, void* param1) {
@@ -261,8 +261,8 @@ void k_urllabel_on_event(void* self, bool (*callback)(void*, void*)) {
     KUrlLabel_OnEvent((KUrlLabel*)self, (intptr_t)callback);
 }
 
-bool k_urllabel_qbase_event(void* self, void* param1) {
-    return KUrlLabel_QBaseEvent((KUrlLabel*)self, (QEvent*)param1);
+bool k_urllabel_super_event(void* self, void* param1) {
+    return KUrlLabel_SuperEvent((KUrlLabel*)self, (QEvent*)param1);
 }
 
 const char* k_urllabel_tr2(const char* s, const char* c) {
@@ -1894,8 +1894,8 @@ QSize* k_urllabel_size_hint(void* self) {
     return KUrlLabel_SizeHint((KUrlLabel*)self);
 }
 
-QSize* k_urllabel_qbase_size_hint(void* self) {
-    return KUrlLabel_QBaseSizeHint((KUrlLabel*)self);
+QSize* k_urllabel_super_size_hint(void* self) {
+    return KUrlLabel_SuperSizeHint((KUrlLabel*)self);
 }
 
 void k_urllabel_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1906,8 +1906,8 @@ QSize* k_urllabel_minimum_size_hint(void* self) {
     return KUrlLabel_MinimumSizeHint((KUrlLabel*)self);
 }
 
-QSize* k_urllabel_qbase_minimum_size_hint(void* self) {
-    return KUrlLabel_QBaseMinimumSizeHint((KUrlLabel*)self);
+QSize* k_urllabel_super_minimum_size_hint(void* self) {
+    return KUrlLabel_SuperMinimumSizeHint((KUrlLabel*)self);
 }
 
 void k_urllabel_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1918,8 +1918,8 @@ int32_t k_urllabel_height_for_width(void* self, int param1) {
     return KUrlLabel_HeightForWidth((KUrlLabel*)self, param1);
 }
 
-int32_t k_urllabel_qbase_height_for_width(void* self, int param1) {
-    return KUrlLabel_QBaseHeightForWidth((KUrlLabel*)self, param1);
+int32_t k_urllabel_super_height_for_width(void* self, int param1) {
+    return KUrlLabel_SuperHeightForWidth((KUrlLabel*)self, param1);
 }
 
 void k_urllabel_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1930,8 +1930,8 @@ void k_urllabel_key_press_event(void* self, void* ev) {
     KUrlLabel_KeyPressEvent((KUrlLabel*)self, (QKeyEvent*)ev);
 }
 
-void k_urllabel_qbase_key_press_event(void* self, void* ev) {
-    KUrlLabel_QBaseKeyPressEvent((KUrlLabel*)self, (QKeyEvent*)ev);
+void k_urllabel_super_key_press_event(void* self, void* ev) {
+    KUrlLabel_SuperKeyPressEvent((KUrlLabel*)self, (QKeyEvent*)ev);
 }
 
 void k_urllabel_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1942,8 +1942,8 @@ void k_urllabel_paint_event(void* self, void* param1) {
     KUrlLabel_PaintEvent((KUrlLabel*)self, (QPaintEvent*)param1);
 }
 
-void k_urllabel_qbase_paint_event(void* self, void* param1) {
-    KUrlLabel_QBasePaintEvent((KUrlLabel*)self, (QPaintEvent*)param1);
+void k_urllabel_super_paint_event(void* self, void* param1) {
+    KUrlLabel_SuperPaintEvent((KUrlLabel*)self, (QPaintEvent*)param1);
 }
 
 void k_urllabel_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1954,8 +1954,8 @@ void k_urllabel_change_event(void* self, void* param1) {
     KUrlLabel_ChangeEvent((KUrlLabel*)self, (QEvent*)param1);
 }
 
-void k_urllabel_qbase_change_event(void* self, void* param1) {
-    KUrlLabel_QBaseChangeEvent((KUrlLabel*)self, (QEvent*)param1);
+void k_urllabel_super_change_event(void* self, void* param1) {
+    KUrlLabel_SuperChangeEvent((KUrlLabel*)self, (QEvent*)param1);
 }
 
 void k_urllabel_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1966,8 +1966,8 @@ void k_urllabel_mouse_press_event(void* self, void* ev) {
     KUrlLabel_MousePressEvent((KUrlLabel*)self, (QMouseEvent*)ev);
 }
 
-void k_urllabel_qbase_mouse_press_event(void* self, void* ev) {
-    KUrlLabel_QBaseMousePressEvent((KUrlLabel*)self, (QMouseEvent*)ev);
+void k_urllabel_super_mouse_press_event(void* self, void* ev) {
+    KUrlLabel_SuperMousePressEvent((KUrlLabel*)self, (QMouseEvent*)ev);
 }
 
 void k_urllabel_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1978,8 +1978,8 @@ void k_urllabel_mouse_move_event(void* self, void* ev) {
     KUrlLabel_MouseMoveEvent((KUrlLabel*)self, (QMouseEvent*)ev);
 }
 
-void k_urllabel_qbase_mouse_move_event(void* self, void* ev) {
-    KUrlLabel_QBaseMouseMoveEvent((KUrlLabel*)self, (QMouseEvent*)ev);
+void k_urllabel_super_mouse_move_event(void* self, void* ev) {
+    KUrlLabel_SuperMouseMoveEvent((KUrlLabel*)self, (QMouseEvent*)ev);
 }
 
 void k_urllabel_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1990,8 +1990,8 @@ void k_urllabel_context_menu_event(void* self, void* ev) {
     KUrlLabel_ContextMenuEvent((KUrlLabel*)self, (QContextMenuEvent*)ev);
 }
 
-void k_urllabel_qbase_context_menu_event(void* self, void* ev) {
-    KUrlLabel_QBaseContextMenuEvent((KUrlLabel*)self, (QContextMenuEvent*)ev);
+void k_urllabel_super_context_menu_event(void* self, void* ev) {
+    KUrlLabel_SuperContextMenuEvent((KUrlLabel*)self, (QContextMenuEvent*)ev);
 }
 
 void k_urllabel_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2002,8 +2002,8 @@ void k_urllabel_focus_in_event(void* self, void* ev) {
     KUrlLabel_FocusInEvent((KUrlLabel*)self, (QFocusEvent*)ev);
 }
 
-void k_urllabel_qbase_focus_in_event(void* self, void* ev) {
-    KUrlLabel_QBaseFocusInEvent((KUrlLabel*)self, (QFocusEvent*)ev);
+void k_urllabel_super_focus_in_event(void* self, void* ev) {
+    KUrlLabel_SuperFocusInEvent((KUrlLabel*)self, (QFocusEvent*)ev);
 }
 
 void k_urllabel_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2014,8 +2014,8 @@ void k_urllabel_focus_out_event(void* self, void* ev) {
     KUrlLabel_FocusOutEvent((KUrlLabel*)self, (QFocusEvent*)ev);
 }
 
-void k_urllabel_qbase_focus_out_event(void* self, void* ev) {
-    KUrlLabel_QBaseFocusOutEvent((KUrlLabel*)self, (QFocusEvent*)ev);
+void k_urllabel_super_focus_out_event(void* self, void* ev) {
+    KUrlLabel_SuperFocusOutEvent((KUrlLabel*)self, (QFocusEvent*)ev);
 }
 
 void k_urllabel_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2026,8 +2026,8 @@ bool k_urllabel_focus_next_prev_child(void* self, bool next) {
     return KUrlLabel_FocusNextPrevChild((KUrlLabel*)self, next);
 }
 
-bool k_urllabel_qbase_focus_next_prev_child(void* self, bool next) {
-    return KUrlLabel_QBaseFocusNextPrevChild((KUrlLabel*)self, next);
+bool k_urllabel_super_focus_next_prev_child(void* self, bool next) {
+    return KUrlLabel_SuperFocusNextPrevChild((KUrlLabel*)self, next);
 }
 
 void k_urllabel_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2038,8 +2038,8 @@ void k_urllabel_init_style_option(void* self, void* option) {
     KUrlLabel_InitStyleOption((KUrlLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void k_urllabel_qbase_init_style_option(void* self, void* option) {
-    KUrlLabel_QBaseInitStyleOption((KUrlLabel*)self, (QStyleOptionFrame*)option);
+void k_urllabel_super_init_style_option(void* self, void* option) {
+    KUrlLabel_SuperInitStyleOption((KUrlLabel*)self, (QStyleOptionFrame*)option);
 }
 
 void k_urllabel_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2050,8 +2050,8 @@ int32_t k_urllabel_dev_type(void* self) {
     return KUrlLabel_DevType((KUrlLabel*)self);
 }
 
-int32_t k_urllabel_qbase_dev_type(void* self) {
-    return KUrlLabel_QBaseDevType((KUrlLabel*)self);
+int32_t k_urllabel_super_dev_type(void* self) {
+    return KUrlLabel_SuperDevType((KUrlLabel*)self);
 }
 
 void k_urllabel_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2062,8 +2062,8 @@ void k_urllabel_set_visible(void* self, bool visible) {
     KUrlLabel_SetVisible((KUrlLabel*)self, visible);
 }
 
-void k_urllabel_qbase_set_visible(void* self, bool visible) {
-    KUrlLabel_QBaseSetVisible((KUrlLabel*)self, visible);
+void k_urllabel_super_set_visible(void* self, bool visible) {
+    KUrlLabel_SuperSetVisible((KUrlLabel*)self, visible);
 }
 
 void k_urllabel_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2074,8 +2074,8 @@ bool k_urllabel_has_height_for_width(void* self) {
     return KUrlLabel_HasHeightForWidth((KUrlLabel*)self);
 }
 
-bool k_urllabel_qbase_has_height_for_width(void* self) {
-    return KUrlLabel_QBaseHasHeightForWidth((KUrlLabel*)self);
+bool k_urllabel_super_has_height_for_width(void* self) {
+    return KUrlLabel_SuperHasHeightForWidth((KUrlLabel*)self);
 }
 
 void k_urllabel_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2086,8 +2086,8 @@ QPaintEngine* k_urllabel_paint_engine(void* self) {
     return KUrlLabel_PaintEngine((KUrlLabel*)self);
 }
 
-QPaintEngine* k_urllabel_qbase_paint_engine(void* self) {
-    return KUrlLabel_QBasePaintEngine((KUrlLabel*)self);
+QPaintEngine* k_urllabel_super_paint_engine(void* self) {
+    return KUrlLabel_SuperPaintEngine((KUrlLabel*)self);
 }
 
 void k_urllabel_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2098,8 +2098,8 @@ void k_urllabel_mouse_double_click_event(void* self, void* event) {
     KUrlLabel_MouseDoubleClickEvent((KUrlLabel*)self, (QMouseEvent*)event);
 }
 
-void k_urllabel_qbase_mouse_double_click_event(void* self, void* event) {
-    KUrlLabel_QBaseMouseDoubleClickEvent((KUrlLabel*)self, (QMouseEvent*)event);
+void k_urllabel_super_mouse_double_click_event(void* self, void* event) {
+    KUrlLabel_SuperMouseDoubleClickEvent((KUrlLabel*)self, (QMouseEvent*)event);
 }
 
 void k_urllabel_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2110,8 +2110,8 @@ void k_urllabel_wheel_event(void* self, void* event) {
     KUrlLabel_WheelEvent((KUrlLabel*)self, (QWheelEvent*)event);
 }
 
-void k_urllabel_qbase_wheel_event(void* self, void* event) {
-    KUrlLabel_QBaseWheelEvent((KUrlLabel*)self, (QWheelEvent*)event);
+void k_urllabel_super_wheel_event(void* self, void* event) {
+    KUrlLabel_SuperWheelEvent((KUrlLabel*)self, (QWheelEvent*)event);
 }
 
 void k_urllabel_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2122,8 +2122,8 @@ void k_urllabel_key_release_event(void* self, void* event) {
     KUrlLabel_KeyReleaseEvent((KUrlLabel*)self, (QKeyEvent*)event);
 }
 
-void k_urllabel_qbase_key_release_event(void* self, void* event) {
-    KUrlLabel_QBaseKeyReleaseEvent((KUrlLabel*)self, (QKeyEvent*)event);
+void k_urllabel_super_key_release_event(void* self, void* event) {
+    KUrlLabel_SuperKeyReleaseEvent((KUrlLabel*)self, (QKeyEvent*)event);
 }
 
 void k_urllabel_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2134,8 +2134,8 @@ void k_urllabel_move_event(void* self, void* event) {
     KUrlLabel_MoveEvent((KUrlLabel*)self, (QMoveEvent*)event);
 }
 
-void k_urllabel_qbase_move_event(void* self, void* event) {
-    KUrlLabel_QBaseMoveEvent((KUrlLabel*)self, (QMoveEvent*)event);
+void k_urllabel_super_move_event(void* self, void* event) {
+    KUrlLabel_SuperMoveEvent((KUrlLabel*)self, (QMoveEvent*)event);
 }
 
 void k_urllabel_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2146,8 +2146,8 @@ void k_urllabel_resize_event(void* self, void* event) {
     KUrlLabel_ResizeEvent((KUrlLabel*)self, (QResizeEvent*)event);
 }
 
-void k_urllabel_qbase_resize_event(void* self, void* event) {
-    KUrlLabel_QBaseResizeEvent((KUrlLabel*)self, (QResizeEvent*)event);
+void k_urllabel_super_resize_event(void* self, void* event) {
+    KUrlLabel_SuperResizeEvent((KUrlLabel*)self, (QResizeEvent*)event);
 }
 
 void k_urllabel_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2158,8 +2158,8 @@ void k_urllabel_close_event(void* self, void* event) {
     KUrlLabel_CloseEvent((KUrlLabel*)self, (QCloseEvent*)event);
 }
 
-void k_urllabel_qbase_close_event(void* self, void* event) {
-    KUrlLabel_QBaseCloseEvent((KUrlLabel*)self, (QCloseEvent*)event);
+void k_urllabel_super_close_event(void* self, void* event) {
+    KUrlLabel_SuperCloseEvent((KUrlLabel*)self, (QCloseEvent*)event);
 }
 
 void k_urllabel_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2170,8 +2170,8 @@ void k_urllabel_tablet_event(void* self, void* event) {
     KUrlLabel_TabletEvent((KUrlLabel*)self, (QTabletEvent*)event);
 }
 
-void k_urllabel_qbase_tablet_event(void* self, void* event) {
-    KUrlLabel_QBaseTabletEvent((KUrlLabel*)self, (QTabletEvent*)event);
+void k_urllabel_super_tablet_event(void* self, void* event) {
+    KUrlLabel_SuperTabletEvent((KUrlLabel*)self, (QTabletEvent*)event);
 }
 
 void k_urllabel_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2182,8 +2182,8 @@ void k_urllabel_action_event(void* self, void* event) {
     KUrlLabel_ActionEvent((KUrlLabel*)self, (QActionEvent*)event);
 }
 
-void k_urllabel_qbase_action_event(void* self, void* event) {
-    KUrlLabel_QBaseActionEvent((KUrlLabel*)self, (QActionEvent*)event);
+void k_urllabel_super_action_event(void* self, void* event) {
+    KUrlLabel_SuperActionEvent((KUrlLabel*)self, (QActionEvent*)event);
 }
 
 void k_urllabel_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2194,8 +2194,8 @@ void k_urllabel_drag_enter_event(void* self, void* event) {
     KUrlLabel_DragEnterEvent((KUrlLabel*)self, (QDragEnterEvent*)event);
 }
 
-void k_urllabel_qbase_drag_enter_event(void* self, void* event) {
-    KUrlLabel_QBaseDragEnterEvent((KUrlLabel*)self, (QDragEnterEvent*)event);
+void k_urllabel_super_drag_enter_event(void* self, void* event) {
+    KUrlLabel_SuperDragEnterEvent((KUrlLabel*)self, (QDragEnterEvent*)event);
 }
 
 void k_urllabel_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2206,8 +2206,8 @@ void k_urllabel_drag_move_event(void* self, void* event) {
     KUrlLabel_DragMoveEvent((KUrlLabel*)self, (QDragMoveEvent*)event);
 }
 
-void k_urllabel_qbase_drag_move_event(void* self, void* event) {
-    KUrlLabel_QBaseDragMoveEvent((KUrlLabel*)self, (QDragMoveEvent*)event);
+void k_urllabel_super_drag_move_event(void* self, void* event) {
+    KUrlLabel_SuperDragMoveEvent((KUrlLabel*)self, (QDragMoveEvent*)event);
 }
 
 void k_urllabel_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2218,8 +2218,8 @@ void k_urllabel_drag_leave_event(void* self, void* event) {
     KUrlLabel_DragLeaveEvent((KUrlLabel*)self, (QDragLeaveEvent*)event);
 }
 
-void k_urllabel_qbase_drag_leave_event(void* self, void* event) {
-    KUrlLabel_QBaseDragLeaveEvent((KUrlLabel*)self, (QDragLeaveEvent*)event);
+void k_urllabel_super_drag_leave_event(void* self, void* event) {
+    KUrlLabel_SuperDragLeaveEvent((KUrlLabel*)self, (QDragLeaveEvent*)event);
 }
 
 void k_urllabel_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2230,8 +2230,8 @@ void k_urllabel_drop_event(void* self, void* event) {
     KUrlLabel_DropEvent((KUrlLabel*)self, (QDropEvent*)event);
 }
 
-void k_urllabel_qbase_drop_event(void* self, void* event) {
-    KUrlLabel_QBaseDropEvent((KUrlLabel*)self, (QDropEvent*)event);
+void k_urllabel_super_drop_event(void* self, void* event) {
+    KUrlLabel_SuperDropEvent((KUrlLabel*)self, (QDropEvent*)event);
 }
 
 void k_urllabel_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2242,8 +2242,8 @@ void k_urllabel_show_event(void* self, void* event) {
     KUrlLabel_ShowEvent((KUrlLabel*)self, (QShowEvent*)event);
 }
 
-void k_urllabel_qbase_show_event(void* self, void* event) {
-    KUrlLabel_QBaseShowEvent((KUrlLabel*)self, (QShowEvent*)event);
+void k_urllabel_super_show_event(void* self, void* event) {
+    KUrlLabel_SuperShowEvent((KUrlLabel*)self, (QShowEvent*)event);
 }
 
 void k_urllabel_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2254,8 +2254,8 @@ void k_urllabel_hide_event(void* self, void* event) {
     KUrlLabel_HideEvent((KUrlLabel*)self, (QHideEvent*)event);
 }
 
-void k_urllabel_qbase_hide_event(void* self, void* event) {
-    KUrlLabel_QBaseHideEvent((KUrlLabel*)self, (QHideEvent*)event);
+void k_urllabel_super_hide_event(void* self, void* event) {
+    KUrlLabel_SuperHideEvent((KUrlLabel*)self, (QHideEvent*)event);
 }
 
 void k_urllabel_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2266,8 +2266,8 @@ bool k_urllabel_native_event(void* self, char* eventType, void* message, intptr_
     return KUrlLabel_NativeEvent((KUrlLabel*)self, qstring(eventType), message, result);
 }
 
-bool k_urllabel_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KUrlLabel_QBaseNativeEvent((KUrlLabel*)self, qstring(eventType), message, result);
+bool k_urllabel_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KUrlLabel_SuperNativeEvent((KUrlLabel*)self, qstring(eventType), message, result);
 }
 
 void k_urllabel_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2278,8 +2278,8 @@ int32_t k_urllabel_metric(void* self, int32_t param1) {
     return KUrlLabel_Metric((KUrlLabel*)self, param1);
 }
 
-int32_t k_urllabel_qbase_metric(void* self, int32_t param1) {
-    return KUrlLabel_QBaseMetric((KUrlLabel*)self, param1);
+int32_t k_urllabel_super_metric(void* self, int32_t param1) {
+    return KUrlLabel_SuperMetric((KUrlLabel*)self, param1);
 }
 
 void k_urllabel_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2290,8 +2290,8 @@ void k_urllabel_init_painter(void* self, void* painter) {
     KUrlLabel_InitPainter((KUrlLabel*)self, (QPainter*)painter);
 }
 
-void k_urllabel_qbase_init_painter(void* self, void* painter) {
-    KUrlLabel_QBaseInitPainter((KUrlLabel*)self, (QPainter*)painter);
+void k_urllabel_super_init_painter(void* self, void* painter) {
+    KUrlLabel_SuperInitPainter((KUrlLabel*)self, (QPainter*)painter);
 }
 
 void k_urllabel_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2302,8 +2302,8 @@ QPaintDevice* k_urllabel_redirected(void* self, void* offset) {
     return KUrlLabel_Redirected((KUrlLabel*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_urllabel_qbase_redirected(void* self, void* offset) {
-    return KUrlLabel_QBaseRedirected((KUrlLabel*)self, (QPoint*)offset);
+QPaintDevice* k_urllabel_super_redirected(void* self, void* offset) {
+    return KUrlLabel_SuperRedirected((KUrlLabel*)self, (QPoint*)offset);
 }
 
 void k_urllabel_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2314,8 +2314,8 @@ QPainter* k_urllabel_shared_painter(void* self) {
     return KUrlLabel_SharedPainter((KUrlLabel*)self);
 }
 
-QPainter* k_urllabel_qbase_shared_painter(void* self) {
-    return KUrlLabel_QBaseSharedPainter((KUrlLabel*)self);
+QPainter* k_urllabel_super_shared_painter(void* self) {
+    return KUrlLabel_SuperSharedPainter((KUrlLabel*)self);
 }
 
 void k_urllabel_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2326,8 +2326,8 @@ void k_urllabel_input_method_event(void* self, void* param1) {
     KUrlLabel_InputMethodEvent((KUrlLabel*)self, (QInputMethodEvent*)param1);
 }
 
-void k_urllabel_qbase_input_method_event(void* self, void* param1) {
-    KUrlLabel_QBaseInputMethodEvent((KUrlLabel*)self, (QInputMethodEvent*)param1);
+void k_urllabel_super_input_method_event(void* self, void* param1) {
+    KUrlLabel_SuperInputMethodEvent((KUrlLabel*)self, (QInputMethodEvent*)param1);
 }
 
 void k_urllabel_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2338,8 +2338,8 @@ QVariant* k_urllabel_input_method_query(void* self, int32_t param1) {
     return KUrlLabel_InputMethodQuery((KUrlLabel*)self, param1);
 }
 
-QVariant* k_urllabel_qbase_input_method_query(void* self, int32_t param1) {
-    return KUrlLabel_QBaseInputMethodQuery((KUrlLabel*)self, param1);
+QVariant* k_urllabel_super_input_method_query(void* self, int32_t param1) {
+    return KUrlLabel_SuperInputMethodQuery((KUrlLabel*)self, param1);
 }
 
 void k_urllabel_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2350,8 +2350,8 @@ bool k_urllabel_event_filter(void* self, void* watched, void* event) {
     return KUrlLabel_EventFilter((KUrlLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_urllabel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KUrlLabel_QBaseEventFilter((KUrlLabel*)self, (QObject*)watched, (QEvent*)event);
+bool k_urllabel_super_event_filter(void* self, void* watched, void* event) {
+    return KUrlLabel_SuperEventFilter((KUrlLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_urllabel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2362,8 +2362,8 @@ void k_urllabel_timer_event(void* self, void* event) {
     KUrlLabel_TimerEvent((KUrlLabel*)self, (QTimerEvent*)event);
 }
 
-void k_urllabel_qbase_timer_event(void* self, void* event) {
-    KUrlLabel_QBaseTimerEvent((KUrlLabel*)self, (QTimerEvent*)event);
+void k_urllabel_super_timer_event(void* self, void* event) {
+    KUrlLabel_SuperTimerEvent((KUrlLabel*)self, (QTimerEvent*)event);
 }
 
 void k_urllabel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2374,8 +2374,8 @@ void k_urllabel_child_event(void* self, void* event) {
     KUrlLabel_ChildEvent((KUrlLabel*)self, (QChildEvent*)event);
 }
 
-void k_urllabel_qbase_child_event(void* self, void* event) {
-    KUrlLabel_QBaseChildEvent((KUrlLabel*)self, (QChildEvent*)event);
+void k_urllabel_super_child_event(void* self, void* event) {
+    KUrlLabel_SuperChildEvent((KUrlLabel*)self, (QChildEvent*)event);
 }
 
 void k_urllabel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2386,8 +2386,8 @@ void k_urllabel_custom_event(void* self, void* event) {
     KUrlLabel_CustomEvent((KUrlLabel*)self, (QEvent*)event);
 }
 
-void k_urllabel_qbase_custom_event(void* self, void* event) {
-    KUrlLabel_QBaseCustomEvent((KUrlLabel*)self, (QEvent*)event);
+void k_urllabel_super_custom_event(void* self, void* event) {
+    KUrlLabel_SuperCustomEvent((KUrlLabel*)self, (QEvent*)event);
 }
 
 void k_urllabel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2398,8 +2398,8 @@ void k_urllabel_connect_notify(void* self, void* signal) {
     KUrlLabel_ConnectNotify((KUrlLabel*)self, (QMetaMethod*)signal);
 }
 
-void k_urllabel_qbase_connect_notify(void* self, void* signal) {
-    KUrlLabel_QBaseConnectNotify((KUrlLabel*)self, (QMetaMethod*)signal);
+void k_urllabel_super_connect_notify(void* self, void* signal) {
+    KUrlLabel_SuperConnectNotify((KUrlLabel*)self, (QMetaMethod*)signal);
 }
 
 void k_urllabel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2410,8 +2410,8 @@ void k_urllabel_disconnect_notify(void* self, void* signal) {
     KUrlLabel_DisconnectNotify((KUrlLabel*)self, (QMetaMethod*)signal);
 }
 
-void k_urllabel_qbase_disconnect_notify(void* self, void* signal) {
-    KUrlLabel_QBaseDisconnectNotify((KUrlLabel*)self, (QMetaMethod*)signal);
+void k_urllabel_super_disconnect_notify(void* self, void* signal) {
+    KUrlLabel_SuperDisconnectNotify((KUrlLabel*)self, (QMetaMethod*)signal);
 }
 
 void k_urllabel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2422,8 +2422,8 @@ void k_urllabel_draw_frame(void* self, void* param1) {
     KUrlLabel_DrawFrame((KUrlLabel*)self, (QPainter*)param1);
 }
 
-void k_urllabel_qbase_draw_frame(void* self, void* param1) {
-    KUrlLabel_QBaseDrawFrame((KUrlLabel*)self, (QPainter*)param1);
+void k_urllabel_super_draw_frame(void* self, void* param1) {
+    KUrlLabel_SuperDrawFrame((KUrlLabel*)self, (QPainter*)param1);
 }
 
 void k_urllabel_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2434,8 +2434,8 @@ void k_urllabel_update_micro_focus(void* self) {
     KUrlLabel_UpdateMicroFocus((KUrlLabel*)self);
 }
 
-void k_urllabel_qbase_update_micro_focus(void* self) {
-    KUrlLabel_QBaseUpdateMicroFocus((KUrlLabel*)self);
+void k_urllabel_super_update_micro_focus(void* self) {
+    KUrlLabel_SuperUpdateMicroFocus((KUrlLabel*)self);
 }
 
 void k_urllabel_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2446,8 +2446,8 @@ void k_urllabel_create(void* self) {
     KUrlLabel_Create((KUrlLabel*)self);
 }
 
-void k_urllabel_qbase_create(void* self) {
-    KUrlLabel_QBaseCreate((KUrlLabel*)self);
+void k_urllabel_super_create(void* self) {
+    KUrlLabel_SuperCreate((KUrlLabel*)self);
 }
 
 void k_urllabel_on_create(void* self, void (*callback)()) {
@@ -2458,8 +2458,8 @@ void k_urllabel_destroy(void* self) {
     KUrlLabel_Destroy((KUrlLabel*)self);
 }
 
-void k_urllabel_qbase_destroy(void* self) {
-    KUrlLabel_QBaseDestroy((KUrlLabel*)self);
+void k_urllabel_super_destroy(void* self) {
+    KUrlLabel_SuperDestroy((KUrlLabel*)self);
 }
 
 void k_urllabel_on_destroy(void* self, void (*callback)()) {
@@ -2470,8 +2470,8 @@ bool k_urllabel_focus_next_child(void* self) {
     return KUrlLabel_FocusNextChild((KUrlLabel*)self);
 }
 
-bool k_urllabel_qbase_focus_next_child(void* self) {
-    return KUrlLabel_QBaseFocusNextChild((KUrlLabel*)self);
+bool k_urllabel_super_focus_next_child(void* self) {
+    return KUrlLabel_SuperFocusNextChild((KUrlLabel*)self);
 }
 
 void k_urllabel_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2482,8 +2482,8 @@ bool k_urllabel_focus_previous_child(void* self) {
     return KUrlLabel_FocusPreviousChild((KUrlLabel*)self);
 }
 
-bool k_urllabel_qbase_focus_previous_child(void* self) {
-    return KUrlLabel_QBaseFocusPreviousChild((KUrlLabel*)self);
+bool k_urllabel_super_focus_previous_child(void* self) {
+    return KUrlLabel_SuperFocusPreviousChild((KUrlLabel*)self);
 }
 
 void k_urllabel_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2494,8 +2494,8 @@ QObject* k_urllabel_sender(void* self) {
     return KUrlLabel_Sender((KUrlLabel*)self);
 }
 
-QObject* k_urllabel_qbase_sender(void* self) {
-    return KUrlLabel_QBaseSender((KUrlLabel*)self);
+QObject* k_urllabel_super_sender(void* self) {
+    return KUrlLabel_SuperSender((KUrlLabel*)self);
 }
 
 void k_urllabel_on_sender(void* self, QObject* (*callback)()) {
@@ -2506,8 +2506,8 @@ int32_t k_urllabel_sender_signal_index(void* self) {
     return KUrlLabel_SenderSignalIndex((KUrlLabel*)self);
 }
 
-int32_t k_urllabel_qbase_sender_signal_index(void* self) {
-    return KUrlLabel_QBaseSenderSignalIndex((KUrlLabel*)self);
+int32_t k_urllabel_super_sender_signal_index(void* self) {
+    return KUrlLabel_SuperSenderSignalIndex((KUrlLabel*)self);
 }
 
 void k_urllabel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2518,8 +2518,8 @@ int32_t k_urllabel_receivers(void* self, const char* signal) {
     return KUrlLabel_Receivers((KUrlLabel*)self, signal);
 }
 
-int32_t k_urllabel_qbase_receivers(void* self, const char* signal) {
-    return KUrlLabel_QBaseReceivers((KUrlLabel*)self, signal);
+int32_t k_urllabel_super_receivers(void* self, const char* signal) {
+    return KUrlLabel_SuperReceivers((KUrlLabel*)self, signal);
 }
 
 void k_urllabel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2530,8 +2530,8 @@ bool k_urllabel_is_signal_connected(void* self, void* signal) {
     return KUrlLabel_IsSignalConnected((KUrlLabel*)self, (QMetaMethod*)signal);
 }
 
-bool k_urllabel_qbase_is_signal_connected(void* self, void* signal) {
-    return KUrlLabel_QBaseIsSignalConnected((KUrlLabel*)self, (QMetaMethod*)signal);
+bool k_urllabel_super_is_signal_connected(void* self, void* signal) {
+    return KUrlLabel_SuperIsSignalConnected((KUrlLabel*)self, (QMetaMethod*)signal);
 }
 
 void k_urllabel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2542,8 +2542,8 @@ double k_urllabel_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return KUrlLabel_GetDecodedMetricF((KUrlLabel*)self, metricA, metricB);
 }
 
-double k_urllabel_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KUrlLabel_QBaseGetDecodedMetricF((KUrlLabel*)self, metricA, metricB);
+double k_urllabel_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KUrlLabel_SuperGetDecodedMetricF((KUrlLabel*)self, metricA, metricB);
 }
 
 void k_urllabel_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

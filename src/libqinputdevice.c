@@ -34,8 +34,8 @@ void q_inputdevice_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QInputDevice_OnMetaObject((QInputDevice*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_inputdevice_qbase_meta_object(void* self) {
-    return QInputDevice_QBaseMetaObject((QInputDevice*)self);
+const QMetaObject* q_inputdevice_super_meta_object(void* self) {
+    return QInputDevice_SuperMetaObject((QInputDevice*)self);
 }
 
 void* q_inputdevice_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void q_inputdevice_on_metacast(void* self, void* (*callback)(void*, const char*)
     QInputDevice_OnMetacast((QInputDevice*)self, (intptr_t)callback);
 }
 
-void* q_inputdevice_qbase_metacast(void* self, const char* param1) {
-    return QInputDevice_QBaseMetacast((QInputDevice*)self, param1);
+void* q_inputdevice_super_metacast(void* self, const char* param1) {
+    return QInputDevice_SuperMetacast((QInputDevice*)self, param1);
 }
 
 int32_t q_inputdevice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void q_inputdevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QInputDevice_OnMetacall((QInputDevice*)self, (intptr_t)callback);
 }
 
-int32_t q_inputdevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QInputDevice_QBaseMetacall((QInputDevice*)self, param1, param2, param3);
+int32_t q_inputdevice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QInputDevice_SuperMetacall((QInputDevice*)self, param1, param2, param3);
 }
 
 const char* q_inputdevice_tr(const char* s) {
@@ -376,8 +376,8 @@ bool q_inputdevice_event(void* self, void* event) {
     return QInputDevice_Event((QInputDevice*)self, (QEvent*)event);
 }
 
-bool q_inputdevice_qbase_event(void* self, void* event) {
-    return QInputDevice_QBaseEvent((QInputDevice*)self, (QEvent*)event);
+bool q_inputdevice_super_event(void* self, void* event) {
+    return QInputDevice_SuperEvent((QInputDevice*)self, (QEvent*)event);
 }
 
 void q_inputdevice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ bool q_inputdevice_event_filter(void* self, void* watched, void* event) {
     return QInputDevice_EventFilter((QInputDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_inputdevice_qbase_event_filter(void* self, void* watched, void* event) {
-    return QInputDevice_QBaseEventFilter((QInputDevice*)self, (QObject*)watched, (QEvent*)event);
+bool q_inputdevice_super_event_filter(void* self, void* watched, void* event) {
+    return QInputDevice_SuperEventFilter((QInputDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_inputdevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -400,8 +400,8 @@ void q_inputdevice_timer_event(void* self, void* event) {
     QInputDevice_TimerEvent((QInputDevice*)self, (QTimerEvent*)event);
 }
 
-void q_inputdevice_qbase_timer_event(void* self, void* event) {
-    QInputDevice_QBaseTimerEvent((QInputDevice*)self, (QTimerEvent*)event);
+void q_inputdevice_super_timer_event(void* self, void* event) {
+    QInputDevice_SuperTimerEvent((QInputDevice*)self, (QTimerEvent*)event);
 }
 
 void q_inputdevice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ void q_inputdevice_child_event(void* self, void* event) {
     QInputDevice_ChildEvent((QInputDevice*)self, (QChildEvent*)event);
 }
 
-void q_inputdevice_qbase_child_event(void* self, void* event) {
-    QInputDevice_QBaseChildEvent((QInputDevice*)self, (QChildEvent*)event);
+void q_inputdevice_super_child_event(void* self, void* event) {
+    QInputDevice_SuperChildEvent((QInputDevice*)self, (QChildEvent*)event);
 }
 
 void q_inputdevice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ void q_inputdevice_custom_event(void* self, void* event) {
     QInputDevice_CustomEvent((QInputDevice*)self, (QEvent*)event);
 }
 
-void q_inputdevice_qbase_custom_event(void* self, void* event) {
-    QInputDevice_QBaseCustomEvent((QInputDevice*)self, (QEvent*)event);
+void q_inputdevice_super_custom_event(void* self, void* event) {
+    QInputDevice_SuperCustomEvent((QInputDevice*)self, (QEvent*)event);
 }
 
 void q_inputdevice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -436,8 +436,8 @@ void q_inputdevice_connect_notify(void* self, void* signal) {
     QInputDevice_ConnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdevice_qbase_connect_notify(void* self, void* signal) {
-    QInputDevice_QBaseConnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
+void q_inputdevice_super_connect_notify(void* self, void* signal) {
+    QInputDevice_SuperConnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
 void q_inputdevice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ void q_inputdevice_disconnect_notify(void* self, void* signal) {
     QInputDevice_DisconnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_inputdevice_qbase_disconnect_notify(void* self, void* signal) {
-    QInputDevice_QBaseDisconnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
+void q_inputdevice_super_disconnect_notify(void* self, void* signal) {
+    QInputDevice_SuperDisconnectNotify((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
 void q_inputdevice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -460,8 +460,8 @@ QObject* q_inputdevice_sender(void* self) {
     return QInputDevice_Sender((QInputDevice*)self);
 }
 
-QObject* q_inputdevice_qbase_sender(void* self) {
-    return QInputDevice_QBaseSender((QInputDevice*)self);
+QObject* q_inputdevice_super_sender(void* self) {
+    return QInputDevice_SuperSender((QInputDevice*)self);
 }
 
 void q_inputdevice_on_sender(void* self, QObject* (*callback)()) {
@@ -472,8 +472,8 @@ int32_t q_inputdevice_sender_signal_index(void* self) {
     return QInputDevice_SenderSignalIndex((QInputDevice*)self);
 }
 
-int32_t q_inputdevice_qbase_sender_signal_index(void* self) {
-    return QInputDevice_QBaseSenderSignalIndex((QInputDevice*)self);
+int32_t q_inputdevice_super_sender_signal_index(void* self) {
+    return QInputDevice_SuperSenderSignalIndex((QInputDevice*)self);
 }
 
 void q_inputdevice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -484,8 +484,8 @@ int32_t q_inputdevice_receivers(void* self, const char* signal) {
     return QInputDevice_Receivers((QInputDevice*)self, signal);
 }
 
-int32_t q_inputdevice_qbase_receivers(void* self, const char* signal) {
-    return QInputDevice_QBaseReceivers((QInputDevice*)self, signal);
+int32_t q_inputdevice_super_receivers(void* self, const char* signal) {
+    return QInputDevice_SuperReceivers((QInputDevice*)self, signal);
 }
 
 void q_inputdevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -496,8 +496,8 @@ bool q_inputdevice_is_signal_connected(void* self, void* signal) {
     return QInputDevice_IsSignalConnected((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
-bool q_inputdevice_qbase_is_signal_connected(void* self, void* signal) {
-    return QInputDevice_QBaseIsSignalConnected((QInputDevice*)self, (QMetaMethod*)signal);
+bool q_inputdevice_super_is_signal_connected(void* self, void* signal) {
+    return QInputDevice_SuperIsSignalConnected((QInputDevice*)self, (QMetaMethod*)signal);
 }
 
 void q_inputdevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

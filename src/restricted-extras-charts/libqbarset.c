@@ -25,8 +25,8 @@ void q_barset_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QBarSet_OnMetaObject((QBarSet*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_barset_qbase_meta_object(void* self) {
-    return QBarSet_QBaseMetaObject((QBarSet*)self);
+const QMetaObject* q_barset_super_meta_object(void* self) {
+    return QBarSet_SuperMetaObject((QBarSet*)self);
 }
 
 void* q_barset_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void q_barset_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QBarSet_OnMetacast((QBarSet*)self, (intptr_t)callback);
 }
 
-void* q_barset_qbase_metacast(void* self, const char* param1) {
-    return QBarSet_QBaseMetacast((QBarSet*)self, param1);
+void* q_barset_super_metacast(void* self, const char* param1) {
+    return QBarSet_SuperMetacast((QBarSet*)self, param1);
 }
 
 int32_t q_barset_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void q_barset_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     QBarSet_OnMetacall((QBarSet*)self, (intptr_t)callback);
 }
 
-int32_t q_barset_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QBarSet_QBaseMetacall((QBarSet*)self, param1, param2, param3);
+int32_t q_barset_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QBarSet_SuperMetacall((QBarSet*)self, param1, param2, param3);
 }
 
 const char* q_barset_tr(const char* s) {
@@ -593,8 +593,8 @@ bool q_barset_event(void* self, void* event) {
     return QBarSet_Event((QBarSet*)self, (QEvent*)event);
 }
 
-bool q_barset_qbase_event(void* self, void* event) {
-    return QBarSet_QBaseEvent((QBarSet*)self, (QEvent*)event);
+bool q_barset_super_event(void* self, void* event) {
+    return QBarSet_SuperEvent((QBarSet*)self, (QEvent*)event);
 }
 
 void q_barset_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -605,8 +605,8 @@ bool q_barset_event_filter(void* self, void* watched, void* event) {
     return QBarSet_EventFilter((QBarSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_barset_qbase_event_filter(void* self, void* watched, void* event) {
-    return QBarSet_QBaseEventFilter((QBarSet*)self, (QObject*)watched, (QEvent*)event);
+bool q_barset_super_event_filter(void* self, void* watched, void* event) {
+    return QBarSet_SuperEventFilter((QBarSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_barset_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -617,8 +617,8 @@ void q_barset_timer_event(void* self, void* event) {
     QBarSet_TimerEvent((QBarSet*)self, (QTimerEvent*)event);
 }
 
-void q_barset_qbase_timer_event(void* self, void* event) {
-    QBarSet_QBaseTimerEvent((QBarSet*)self, (QTimerEvent*)event);
+void q_barset_super_timer_event(void* self, void* event) {
+    QBarSet_SuperTimerEvent((QBarSet*)self, (QTimerEvent*)event);
 }
 
 void q_barset_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -629,8 +629,8 @@ void q_barset_child_event(void* self, void* event) {
     QBarSet_ChildEvent((QBarSet*)self, (QChildEvent*)event);
 }
 
-void q_barset_qbase_child_event(void* self, void* event) {
-    QBarSet_QBaseChildEvent((QBarSet*)self, (QChildEvent*)event);
+void q_barset_super_child_event(void* self, void* event) {
+    QBarSet_SuperChildEvent((QBarSet*)self, (QChildEvent*)event);
 }
 
 void q_barset_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -641,8 +641,8 @@ void q_barset_custom_event(void* self, void* event) {
     QBarSet_CustomEvent((QBarSet*)self, (QEvent*)event);
 }
 
-void q_barset_qbase_custom_event(void* self, void* event) {
-    QBarSet_QBaseCustomEvent((QBarSet*)self, (QEvent*)event);
+void q_barset_super_custom_event(void* self, void* event) {
+    QBarSet_SuperCustomEvent((QBarSet*)self, (QEvent*)event);
 }
 
 void q_barset_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -653,8 +653,8 @@ void q_barset_connect_notify(void* self, void* signal) {
     QBarSet_ConnectNotify((QBarSet*)self, (QMetaMethod*)signal);
 }
 
-void q_barset_qbase_connect_notify(void* self, void* signal) {
-    QBarSet_QBaseConnectNotify((QBarSet*)self, (QMetaMethod*)signal);
+void q_barset_super_connect_notify(void* self, void* signal) {
+    QBarSet_SuperConnectNotify((QBarSet*)self, (QMetaMethod*)signal);
 }
 
 void q_barset_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -665,8 +665,8 @@ void q_barset_disconnect_notify(void* self, void* signal) {
     QBarSet_DisconnectNotify((QBarSet*)self, (QMetaMethod*)signal);
 }
 
-void q_barset_qbase_disconnect_notify(void* self, void* signal) {
-    QBarSet_QBaseDisconnectNotify((QBarSet*)self, (QMetaMethod*)signal);
+void q_barset_super_disconnect_notify(void* self, void* signal) {
+    QBarSet_SuperDisconnectNotify((QBarSet*)self, (QMetaMethod*)signal);
 }
 
 void q_barset_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -677,8 +677,8 @@ QObject* q_barset_sender(void* self) {
     return QBarSet_Sender((QBarSet*)self);
 }
 
-QObject* q_barset_qbase_sender(void* self) {
-    return QBarSet_QBaseSender((QBarSet*)self);
+QObject* q_barset_super_sender(void* self) {
+    return QBarSet_SuperSender((QBarSet*)self);
 }
 
 void q_barset_on_sender(void* self, QObject* (*callback)()) {
@@ -689,8 +689,8 @@ int32_t q_barset_sender_signal_index(void* self) {
     return QBarSet_SenderSignalIndex((QBarSet*)self);
 }
 
-int32_t q_barset_qbase_sender_signal_index(void* self) {
-    return QBarSet_QBaseSenderSignalIndex((QBarSet*)self);
+int32_t q_barset_super_sender_signal_index(void* self) {
+    return QBarSet_SuperSenderSignalIndex((QBarSet*)self);
 }
 
 void q_barset_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -701,8 +701,8 @@ int32_t q_barset_receivers(void* self, const char* signal) {
     return QBarSet_Receivers((QBarSet*)self, signal);
 }
 
-int32_t q_barset_qbase_receivers(void* self, const char* signal) {
-    return QBarSet_QBaseReceivers((QBarSet*)self, signal);
+int32_t q_barset_super_receivers(void* self, const char* signal) {
+    return QBarSet_SuperReceivers((QBarSet*)self, signal);
 }
 
 void q_barset_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -713,8 +713,8 @@ bool q_barset_is_signal_connected(void* self, void* signal) {
     return QBarSet_IsSignalConnected((QBarSet*)self, (QMetaMethod*)signal);
 }
 
-bool q_barset_qbase_is_signal_connected(void* self, void* signal) {
-    return QBarSet_QBaseIsSignalConnected((QBarSet*)self, (QMetaMethod*)signal);
+bool q_barset_super_is_signal_connected(void* self, void* signal) {
+    return QBarSet_SuperIsSignalConnected((QBarSet*)self, (QMetaMethod*)signal);
 }
 
 void q_barset_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

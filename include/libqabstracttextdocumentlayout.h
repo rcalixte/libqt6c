@@ -34,13 +34,17 @@ const QMetaObject* q_abstracttextdocumentlayout_meta_object(void* self);
 ///
 void q_abstracttextdocumentlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_meta_object` instead
+///
+#define q_abstracttextdocumentlayout_qbase_meta_object q_abstracttextdocumentlayout_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
-const QMetaObject* q_abstracttextdocumentlayout_qbase_meta_object(void* self);
+const QMetaObject* q_abstracttextdocumentlayout_super_meta_object(void* self);
 
 /// @param self QAbstractTextDocumentLayout*
 /// @param param1 const char*
@@ -54,12 +58,16 @@ void* q_abstracttextdocumentlayout_metacast(void* self, const char* param1);
 ///
 void q_abstracttextdocumentlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_metacast` instead
+///
+#define q_abstracttextdocumentlayout_qbase_metacast q_abstracttextdocumentlayout_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param param1 const char*
 ///
-void* q_abstracttextdocumentlayout_qbase_metacast(void* self, const char* param1);
+void* q_abstracttextdocumentlayout_super_metacast(void* self, const char* param1);
 
 /// @param self QAbstractTextDocumentLayout*
 /// @param param1 enum QMetaObject__Call
@@ -75,6 +83,10 @@ int32_t q_abstracttextdocumentlayout_metacall(void* self, int32_t param1, int pa
 ///
 void q_abstracttextdocumentlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_metacall` instead
+///
+#define q_abstracttextdocumentlayout_qbase_metacall q_abstracttextdocumentlayout_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QAbstractTextDocumentLayout*
@@ -82,7 +94,7 @@ void q_abstracttextdocumentlayout_on_metacall(void* self, int32_t (*callback)(vo
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_abstracttextdocumentlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_abstracttextdocumentlayout_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -109,6 +121,10 @@ void q_abstracttextdocumentlayout_draw(void* self, void* painter, void* context)
 ///
 void q_abstracttextdocumentlayout_on_draw(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_draw` instead
+///
+#define q_abstracttextdocumentlayout_qbase_draw q_abstracttextdocumentlayout_super_draw
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#draw)
 ///
 /// Base class method implementation
@@ -117,7 +133,7 @@ void q_abstracttextdocumentlayout_on_draw(void* self, void (*callback)(void*, vo
 /// @param painter QPainter*
 /// @param context QAbstractTextDocumentLayout__PaintContext*
 ///
-void q_abstracttextdocumentlayout_qbase_draw(void* self, void* painter, void* context);
+void q_abstracttextdocumentlayout_super_draw(void* self, void* painter, void* context);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#hitTest)
 ///
@@ -136,6 +152,10 @@ int32_t q_abstracttextdocumentlayout_hit_test(void* self, void* point, int32_t a
 ///
 void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_hit_test` instead
+///
+#define q_abstracttextdocumentlayout_qbase_hit_test q_abstracttextdocumentlayout_super_hit_test
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#hitTest)
 ///
 /// Base class method implementation
@@ -144,7 +164,7 @@ void q_abstracttextdocumentlayout_on_hit_test(void* self, int32_t (*callback)(vo
 /// @param point QPointF*
 /// @param accuracy enum Qt__HitTestAccuracy
 ///
-int32_t q_abstracttextdocumentlayout_qbase_hit_test(void* self, void* point, int32_t accuracy);
+int32_t q_abstracttextdocumentlayout_super_hit_test(void* self, void* point, int32_t accuracy);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#anchorAt)
 ///
@@ -193,13 +213,17 @@ int32_t q_abstracttextdocumentlayout_page_count(void* self);
 ///
 void q_abstracttextdocumentlayout_on_page_count(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_page_count` instead
+///
+#define q_abstracttextdocumentlayout_qbase_page_count q_abstracttextdocumentlayout_super_page_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#pageCount)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
-int32_t q_abstracttextdocumentlayout_qbase_page_count(void* self);
+int32_t q_abstracttextdocumentlayout_super_page_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSize)
 ///
@@ -216,13 +240,17 @@ QSizeF* q_abstracttextdocumentlayout_document_size(void* self);
 ///
 void q_abstracttextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_document_size` instead
+///
+#define q_abstracttextdocumentlayout_qbase_document_size q_abstracttextdocumentlayout_super_document_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
-QSizeF* q_abstracttextdocumentlayout_qbase_document_size(void* self);
+QSizeF* q_abstracttextdocumentlayout_super_document_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#frameBoundingRect)
 ///
@@ -240,6 +268,10 @@ QRectF* q_abstracttextdocumentlayout_frame_bounding_rect(void* self, void* frame
 ///
 void q_abstracttextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_frame_bounding_rect` instead
+///
+#define q_abstracttextdocumentlayout_qbase_frame_bounding_rect q_abstracttextdocumentlayout_super_frame_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#frameBoundingRect)
 ///
 /// Base class method implementation
@@ -247,7 +279,7 @@ void q_abstracttextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*c
 /// @param self QAbstractTextDocumentLayout*
 /// @param frame QTextFrame*
 ///
-QRectF* q_abstracttextdocumentlayout_qbase_frame_bounding_rect(void* self, void* frame);
+QRectF* q_abstracttextdocumentlayout_super_frame_bounding_rect(void* self, void* frame);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#blockBoundingRect)
 ///
@@ -265,6 +297,10 @@ QRectF* q_abstracttextdocumentlayout_block_bounding_rect(void* self, void* block
 ///
 void q_abstracttextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_block_bounding_rect` instead
+///
+#define q_abstracttextdocumentlayout_qbase_block_bounding_rect q_abstracttextdocumentlayout_super_block_bounding_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#blockBoundingRect)
 ///
 /// Base class method implementation
@@ -272,7 +308,7 @@ void q_abstracttextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*c
 /// @param self QAbstractTextDocumentLayout*
 /// @param block QTextBlock*
 ///
-QRectF* q_abstracttextdocumentlayout_qbase_block_bounding_rect(void* self, void* block);
+QRectF* q_abstracttextdocumentlayout_super_block_bounding_rect(void* self, void* block);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#setPaintDevice)
 ///
@@ -388,6 +424,10 @@ void q_abstracttextdocumentlayout_document_changed(void* self, int from, int cha
 ///
 void q_abstracttextdocumentlayout_on_document_changed(void* self, void (*callback)(void*, int, int, int));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_document_changed` instead
+///
+#define q_abstracttextdocumentlayout_qbase_document_changed q_abstracttextdocumentlayout_super_document_changed
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#documentChanged)
 ///
 /// Base class method implementation
@@ -397,7 +437,7 @@ void q_abstracttextdocumentlayout_on_document_changed(void* self, void (*callbac
 /// @param charsRemoved int
 /// @param charsAdded int
 ///
-void q_abstracttextdocumentlayout_qbase_document_changed(void* self, int from, int charsRemoved, int charsAdded);
+void q_abstracttextdocumentlayout_super_document_changed(void* self, int from, int charsRemoved, int charsAdded);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#resizeInlineObject)
 ///
@@ -417,6 +457,10 @@ void q_abstracttextdocumentlayout_resize_inline_object(void* self, void* item, i
 ///
 void q_abstracttextdocumentlayout_on_resize_inline_object(void* self, void (*callback)(void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_resize_inline_object` instead
+///
+#define q_abstracttextdocumentlayout_qbase_resize_inline_object q_abstracttextdocumentlayout_super_resize_inline_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#resizeInlineObject)
 ///
 /// Base class method implementation
@@ -426,7 +470,7 @@ void q_abstracttextdocumentlayout_on_resize_inline_object(void* self, void (*cal
 /// @param posInDocument int
 /// @param format QTextFormat*
 ///
-void q_abstracttextdocumentlayout_qbase_resize_inline_object(void* self, void* item, int posInDocument, void* format);
+void q_abstracttextdocumentlayout_super_resize_inline_object(void* self, void* item, int posInDocument, void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#positionInlineObject)
 ///
@@ -446,6 +490,10 @@ void q_abstracttextdocumentlayout_position_inline_object(void* self, void* item,
 ///
 void q_abstracttextdocumentlayout_on_position_inline_object(void* self, void (*callback)(void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_position_inline_object` instead
+///
+#define q_abstracttextdocumentlayout_qbase_position_inline_object q_abstracttextdocumentlayout_super_position_inline_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#positionInlineObject)
 ///
 /// Base class method implementation
@@ -455,7 +503,7 @@ void q_abstracttextdocumentlayout_on_position_inline_object(void* self, void (*c
 /// @param posInDocument int
 /// @param format QTextFormat*
 ///
-void q_abstracttextdocumentlayout_qbase_position_inline_object(void* self, void* item, int posInDocument, void* format);
+void q_abstracttextdocumentlayout_super_position_inline_object(void* self, void* item, int posInDocument, void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#drawInlineObject)
 ///
@@ -477,6 +525,10 @@ void q_abstracttextdocumentlayout_draw_inline_object(void* self, void* painter, 
 ///
 void q_abstracttextdocumentlayout_on_draw_inline_object(void* self, void (*callback)(void*, void*, void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_draw_inline_object` instead
+///
+#define q_abstracttextdocumentlayout_qbase_draw_inline_object q_abstracttextdocumentlayout_super_draw_inline_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#drawInlineObject)
 ///
 /// Base class method implementation
@@ -488,7 +540,7 @@ void q_abstracttextdocumentlayout_on_draw_inline_object(void* self, void (*callb
 /// @param posInDocument int
 /// @param format QTextFormat*
 ///
-void q_abstracttextdocumentlayout_qbase_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format);
+void q_abstracttextdocumentlayout_super_draw_inline_object(void* self, void* painter, void* rect, void* object, int posInDocument, void* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#formatIndex)
 ///
@@ -506,6 +558,10 @@ int32_t q_abstracttextdocumentlayout_format_index(void* self, int pos);
 ///
 void q_abstracttextdocumentlayout_on_format_index(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_format_index` instead
+///
+#define q_abstracttextdocumentlayout_qbase_format_index q_abstracttextdocumentlayout_super_format_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#formatIndex)
 ///
 /// Base class method implementation
@@ -513,7 +569,7 @@ void q_abstracttextdocumentlayout_on_format_index(void* self, int32_t (*callback
 /// @param self QAbstractTextDocumentLayout*
 /// @param pos int
 ///
-int32_t q_abstracttextdocumentlayout_qbase_format_index(void* self, int pos);
+int32_t q_abstracttextdocumentlayout_super_format_index(void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#format)
 ///
@@ -531,6 +587,10 @@ QTextCharFormat* q_abstracttextdocumentlayout_format(void* self, int pos);
 ///
 void q_abstracttextdocumentlayout_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_format` instead
+///
+#define q_abstracttextdocumentlayout_qbase_format q_abstracttextdocumentlayout_super_format
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracttextdocumentlayout.html#format)
 ///
 /// Base class method implementation
@@ -538,7 +598,7 @@ void q_abstracttextdocumentlayout_on_format(void* self, QTextCharFormat* (*callb
 /// @param self QAbstractTextDocumentLayout*
 /// @param pos int
 ///
-QTextCharFormat* q_abstracttextdocumentlayout_qbase_format(void* self, int pos);
+QTextCharFormat* q_abstracttextdocumentlayout_super_format(void* self, int pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1039,6 +1099,10 @@ void q_abstracttextdocumentlayout_on_destroyed1(void* self, void (*callback)(voi
 ///
 bool q_abstracttextdocumentlayout_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_event` instead
+///
+#define q_abstracttextdocumentlayout_qbase_event q_abstracttextdocumentlayout_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1048,7 +1112,7 @@ bool q_abstracttextdocumentlayout_event(void* self, void* event);
 /// @param self QAbstractTextDocumentLayout*
 /// @param event QEvent*
 ///
-bool q_abstracttextdocumentlayout_qbase_event(void* self, void* event);
+bool q_abstracttextdocumentlayout_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1073,6 +1137,10 @@ void q_abstracttextdocumentlayout_on_event(void* self, bool (*callback)(void*, v
 ///
 bool q_abstracttextdocumentlayout_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_event_filter` instead
+///
+#define q_abstracttextdocumentlayout_qbase_event_filter q_abstracttextdocumentlayout_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1083,7 +1151,7 @@ bool q_abstracttextdocumentlayout_event_filter(void* self, void* watched, void* 
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_abstracttextdocumentlayout_qbase_event_filter(void* self, void* watched, void* event);
+bool q_abstracttextdocumentlayout_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1107,6 +1175,10 @@ void q_abstracttextdocumentlayout_on_event_filter(void* self, bool (*callback)(v
 ///
 void q_abstracttextdocumentlayout_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_timer_event` instead
+///
+#define q_abstracttextdocumentlayout_qbase_timer_event q_abstracttextdocumentlayout_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1116,7 +1188,7 @@ void q_abstracttextdocumentlayout_timer_event(void* self, void* event);
 /// @param self QAbstractTextDocumentLayout*
 /// @param event QTimerEvent*
 ///
-void q_abstracttextdocumentlayout_qbase_timer_event(void* self, void* event);
+void q_abstracttextdocumentlayout_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1140,6 +1212,10 @@ void q_abstracttextdocumentlayout_on_timer_event(void* self, void (*callback)(vo
 ///
 void q_abstracttextdocumentlayout_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_child_event` instead
+///
+#define q_abstracttextdocumentlayout_qbase_child_event q_abstracttextdocumentlayout_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1149,7 +1225,7 @@ void q_abstracttextdocumentlayout_child_event(void* self, void* event);
 /// @param self QAbstractTextDocumentLayout*
 /// @param event QChildEvent*
 ///
-void q_abstracttextdocumentlayout_qbase_child_event(void* self, void* event);
+void q_abstracttextdocumentlayout_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1173,6 +1249,10 @@ void q_abstracttextdocumentlayout_on_child_event(void* self, void (*callback)(vo
 ///
 void q_abstracttextdocumentlayout_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_custom_event` instead
+///
+#define q_abstracttextdocumentlayout_qbase_custom_event q_abstracttextdocumentlayout_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1182,7 +1262,7 @@ void q_abstracttextdocumentlayout_custom_event(void* self, void* event);
 /// @param self QAbstractTextDocumentLayout*
 /// @param event QEvent*
 ///
-void q_abstracttextdocumentlayout_qbase_custom_event(void* self, void* event);
+void q_abstracttextdocumentlayout_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1206,6 +1286,10 @@ void q_abstracttextdocumentlayout_on_custom_event(void* self, void (*callback)(v
 ///
 void q_abstracttextdocumentlayout_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_connect_notify` instead
+///
+#define q_abstracttextdocumentlayout_qbase_connect_notify q_abstracttextdocumentlayout_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1215,7 +1299,7 @@ void q_abstracttextdocumentlayout_connect_notify(void* self, void* signal);
 /// @param self QAbstractTextDocumentLayout*
 /// @param signal QMetaMethod*
 ///
-void q_abstracttextdocumentlayout_qbase_connect_notify(void* self, void* signal);
+void q_abstracttextdocumentlayout_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1239,6 +1323,10 @@ void q_abstracttextdocumentlayout_on_connect_notify(void* self, void (*callback)
 ///
 void q_abstracttextdocumentlayout_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_disconnect_notify` instead
+///
+#define q_abstracttextdocumentlayout_qbase_disconnect_notify q_abstracttextdocumentlayout_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1248,7 +1336,7 @@ void q_abstracttextdocumentlayout_disconnect_notify(void* self, void* signal);
 /// @param self QAbstractTextDocumentLayout*
 /// @param signal QMetaMethod*
 ///
-void q_abstracttextdocumentlayout_qbase_disconnect_notify(void* self, void* signal);
+void q_abstracttextdocumentlayout_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1271,6 +1359,10 @@ void q_abstracttextdocumentlayout_on_disconnect_notify(void* self, void (*callba
 ///
 QObject* q_abstracttextdocumentlayout_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_sender` instead
+///
+#define q_abstracttextdocumentlayout_qbase_sender q_abstracttextdocumentlayout_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1279,7 +1371,7 @@ QObject* q_abstracttextdocumentlayout_sender(void* self);
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
-QObject* q_abstracttextdocumentlayout_qbase_sender(void* self);
+QObject* q_abstracttextdocumentlayout_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1302,6 +1394,10 @@ void q_abstracttextdocumentlayout_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_abstracttextdocumentlayout_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_sender_signal_index` instead
+///
+#define q_abstracttextdocumentlayout_qbase_sender_signal_index q_abstracttextdocumentlayout_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1310,7 +1406,7 @@ int32_t q_abstracttextdocumentlayout_sender_signal_index(void* self);
 ///
 /// @param self QAbstractTextDocumentLayout*
 ///
-int32_t q_abstracttextdocumentlayout_qbase_sender_signal_index(void* self);
+int32_t q_abstracttextdocumentlayout_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1334,6 +1430,10 @@ void q_abstracttextdocumentlayout_on_sender_signal_index(void* self, int32_t (*c
 ///
 int32_t q_abstracttextdocumentlayout_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_receivers` instead
+///
+#define q_abstracttextdocumentlayout_qbase_receivers q_abstracttextdocumentlayout_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1343,7 +1443,7 @@ int32_t q_abstracttextdocumentlayout_receivers(void* self, const char* signal);
 /// @param self QAbstractTextDocumentLayout*
 /// @param signal const char*
 ///
-int32_t q_abstracttextdocumentlayout_qbase_receivers(void* self, const char* signal);
+int32_t q_abstracttextdocumentlayout_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1367,6 +1467,10 @@ void q_abstracttextdocumentlayout_on_receivers(void* self, int32_t (*callback)(v
 ///
 bool q_abstracttextdocumentlayout_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_is_signal_connected` instead
+///
+#define q_abstracttextdocumentlayout_qbase_is_signal_connected q_abstracttextdocumentlayout_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1376,7 +1480,7 @@ bool q_abstracttextdocumentlayout_is_signal_connected(void* self, void* signal);
 /// @param self QAbstractTextDocumentLayout*
 /// @param signal QMetaMethod*
 ///
-bool q_abstracttextdocumentlayout_qbase_is_signal_connected(void* self, void* signal);
+bool q_abstracttextdocumentlayout_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

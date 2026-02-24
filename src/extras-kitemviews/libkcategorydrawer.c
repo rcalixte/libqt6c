@@ -23,8 +23,8 @@ void k_categorydrawer_on_meta_object(void* self, const QMetaObject* (*callback)(
     KCategoryDrawer_OnMetaObject((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_categorydrawer_qbase_meta_object(void* self) {
-    return KCategoryDrawer_QBaseMetaObject((KCategoryDrawer*)self);
+const QMetaObject* k_categorydrawer_super_meta_object(void* self) {
+    return KCategoryDrawer_SuperMetaObject((KCategoryDrawer*)self);
 }
 
 void* k_categorydrawer_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_categorydrawer_on_metacast(void* self, void* (*callback)(void*, const cha
     KCategoryDrawer_OnMetacast((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void* k_categorydrawer_qbase_metacast(void* self, const char* param1) {
-    return KCategoryDrawer_QBaseMetacast((KCategoryDrawer*)self, param1);
+void* k_categorydrawer_super_metacast(void* self, const char* param1) {
+    return KCategoryDrawer_SuperMetacast((KCategoryDrawer*)self, param1);
 }
 
 int32_t k_categorydrawer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_categorydrawer_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KCategoryDrawer_OnMetacall((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-int32_t k_categorydrawer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCategoryDrawer_QBaseMetacall((KCategoryDrawer*)self, param1, param2, param3);
+int32_t k_categorydrawer_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCategoryDrawer_SuperMetacall((KCategoryDrawer*)self, param1, param2, param3);
 }
 
 const char* k_categorydrawer_tr(const char* s) {
@@ -70,8 +70,8 @@ void k_categorydrawer_on_draw_category(void* self, void (*callback)(void*, void*
     KCategoryDrawer_OnDrawCategory((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void k_categorydrawer_qbase_draw_category(void* self, void* index, int sortRole, void* option, void* painter) {
-    KCategoryDrawer_QBaseDrawCategory((KCategoryDrawer*)self, (QModelIndex*)index, sortRole, (QStyleOption*)option, (QPainter*)painter);
+void k_categorydrawer_super_draw_category(void* self, void* index, int sortRole, void* option, void* painter) {
+    KCategoryDrawer_SuperDrawCategory((KCategoryDrawer*)self, (QModelIndex*)index, sortRole, (QStyleOption*)option, (QPainter*)painter);
 }
 
 int32_t k_categorydrawer_category_height(void* self, void* index, void* option) {
@@ -82,8 +82,8 @@ void k_categorydrawer_on_category_height(void* self, int32_t (*callback)(void*, 
     KCategoryDrawer_OnCategoryHeight((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-int32_t k_categorydrawer_qbase_category_height(void* self, void* index, void* option) {
-    return KCategoryDrawer_QBaseCategoryHeight((KCategoryDrawer*)self, (QModelIndex*)index, (QStyleOption*)option);
+int32_t k_categorydrawer_super_category_height(void* self, void* index, void* option) {
+    return KCategoryDrawer_SuperCategoryHeight((KCategoryDrawer*)self, (QModelIndex*)index, (QStyleOption*)option);
 }
 
 int32_t k_categorydrawer_left_margin(void* self) {
@@ -94,8 +94,8 @@ void k_categorydrawer_on_left_margin(void* self, int32_t (*callback)()) {
     KCategoryDrawer_OnLeftMargin((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-int32_t k_categorydrawer_qbase_left_margin(void* self) {
-    return KCategoryDrawer_QBaseLeftMargin((KCategoryDrawer*)self);
+int32_t k_categorydrawer_super_left_margin(void* self) {
+    return KCategoryDrawer_SuperLeftMargin((KCategoryDrawer*)self);
 }
 
 int32_t k_categorydrawer_right_margin(void* self) {
@@ -106,8 +106,8 @@ void k_categorydrawer_on_right_margin(void* self, int32_t (*callback)()) {
     KCategoryDrawer_OnRightMargin((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-int32_t k_categorydrawer_qbase_right_margin(void* self) {
-    return KCategoryDrawer_QBaseRightMargin((KCategoryDrawer*)self);
+int32_t k_categorydrawer_super_right_margin(void* self) {
+    return KCategoryDrawer_SuperRightMargin((KCategoryDrawer*)self);
 }
 
 void k_categorydrawer_collapse_or_expand_clicked(void* self, void* index) {
@@ -134,8 +134,8 @@ void k_categorydrawer_on_mouse_button_pressed(void* self, void (*callback)(void*
     KCategoryDrawer_OnMouseButtonPressed((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void k_categorydrawer_qbase_mouse_button_pressed(void* self, void* index, void* blockRect, void* event) {
-    KCategoryDrawer_QBaseMouseButtonPressed((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
+void k_categorydrawer_super_mouse_button_pressed(void* self, void* index, void* blockRect, void* event) {
+    KCategoryDrawer_SuperMouseButtonPressed((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
 }
 
 void k_categorydrawer_mouse_button_released(void* self, void* index, void* blockRect, void* event) {
@@ -146,8 +146,8 @@ void k_categorydrawer_on_mouse_button_released(void* self, void (*callback)(void
     KCategoryDrawer_OnMouseButtonReleased((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void k_categorydrawer_qbase_mouse_button_released(void* self, void* index, void* blockRect, void* event) {
-    KCategoryDrawer_QBaseMouseButtonReleased((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
+void k_categorydrawer_super_mouse_button_released(void* self, void* index, void* blockRect, void* event) {
+    KCategoryDrawer_SuperMouseButtonReleased((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
 }
 
 void k_categorydrawer_mouse_moved(void* self, void* index, void* blockRect, void* event) {
@@ -158,8 +158,8 @@ void k_categorydrawer_on_mouse_moved(void* self, void (*callback)(void*, void*, 
     KCategoryDrawer_OnMouseMoved((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void k_categorydrawer_qbase_mouse_moved(void* self, void* index, void* blockRect, void* event) {
-    KCategoryDrawer_QBaseMouseMoved((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
+void k_categorydrawer_super_mouse_moved(void* self, void* index, void* blockRect, void* event) {
+    KCategoryDrawer_SuperMouseMoved((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
 }
 
 void k_categorydrawer_mouse_button_double_clicked(void* self, void* index, void* blockRect, void* event) {
@@ -170,8 +170,8 @@ void k_categorydrawer_on_mouse_button_double_clicked(void* self, void (*callback
     KCategoryDrawer_OnMouseButtonDoubleClicked((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void k_categorydrawer_qbase_mouse_button_double_clicked(void* self, void* index, void* blockRect, void* event) {
-    KCategoryDrawer_QBaseMouseButtonDoubleClicked((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
+void k_categorydrawer_super_mouse_button_double_clicked(void* self, void* index, void* blockRect, void* event) {
+    KCategoryDrawer_SuperMouseButtonDoubleClicked((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect, (QMouseEvent*)event);
 }
 
 void k_categorydrawer_mouse_left(void* self, void* index, void* blockRect) {
@@ -182,8 +182,8 @@ void k_categorydrawer_on_mouse_left(void* self, void (*callback)(void*, void*, v
     KCategoryDrawer_OnMouseLeft((KCategoryDrawer*)self, (intptr_t)callback);
 }
 
-void k_categorydrawer_qbase_mouse_left(void* self, void* index, void* blockRect) {
-    KCategoryDrawer_QBaseMouseLeft((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect);
+void k_categorydrawer_super_mouse_left(void* self, void* index, void* blockRect) {
+    KCategoryDrawer_SuperMouseLeft((KCategoryDrawer*)self, (QModelIndex*)index, (QRect*)blockRect);
 }
 
 const char* k_categorydrawer_tr2(const char* s, const char* c) {
@@ -415,8 +415,8 @@ bool k_categorydrawer_event(void* self, void* event) {
     return KCategoryDrawer_Event((KCategoryDrawer*)self, (QEvent*)event);
 }
 
-bool k_categorydrawer_qbase_event(void* self, void* event) {
-    return KCategoryDrawer_QBaseEvent((KCategoryDrawer*)self, (QEvent*)event);
+bool k_categorydrawer_super_event(void* self, void* event) {
+    return KCategoryDrawer_SuperEvent((KCategoryDrawer*)self, (QEvent*)event);
 }
 
 void k_categorydrawer_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -427,8 +427,8 @@ bool k_categorydrawer_event_filter(void* self, void* watched, void* event) {
     return KCategoryDrawer_EventFilter((KCategoryDrawer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_categorydrawer_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCategoryDrawer_QBaseEventFilter((KCategoryDrawer*)self, (QObject*)watched, (QEvent*)event);
+bool k_categorydrawer_super_event_filter(void* self, void* watched, void* event) {
+    return KCategoryDrawer_SuperEventFilter((KCategoryDrawer*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_categorydrawer_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -439,8 +439,8 @@ void k_categorydrawer_timer_event(void* self, void* event) {
     KCategoryDrawer_TimerEvent((KCategoryDrawer*)self, (QTimerEvent*)event);
 }
 
-void k_categorydrawer_qbase_timer_event(void* self, void* event) {
-    KCategoryDrawer_QBaseTimerEvent((KCategoryDrawer*)self, (QTimerEvent*)event);
+void k_categorydrawer_super_timer_event(void* self, void* event) {
+    KCategoryDrawer_SuperTimerEvent((KCategoryDrawer*)self, (QTimerEvent*)event);
 }
 
 void k_categorydrawer_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -451,8 +451,8 @@ void k_categorydrawer_child_event(void* self, void* event) {
     KCategoryDrawer_ChildEvent((KCategoryDrawer*)self, (QChildEvent*)event);
 }
 
-void k_categorydrawer_qbase_child_event(void* self, void* event) {
-    KCategoryDrawer_QBaseChildEvent((KCategoryDrawer*)self, (QChildEvent*)event);
+void k_categorydrawer_super_child_event(void* self, void* event) {
+    KCategoryDrawer_SuperChildEvent((KCategoryDrawer*)self, (QChildEvent*)event);
 }
 
 void k_categorydrawer_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -463,8 +463,8 @@ void k_categorydrawer_custom_event(void* self, void* event) {
     KCategoryDrawer_CustomEvent((KCategoryDrawer*)self, (QEvent*)event);
 }
 
-void k_categorydrawer_qbase_custom_event(void* self, void* event) {
-    KCategoryDrawer_QBaseCustomEvent((KCategoryDrawer*)self, (QEvent*)event);
+void k_categorydrawer_super_custom_event(void* self, void* event) {
+    KCategoryDrawer_SuperCustomEvent((KCategoryDrawer*)self, (QEvent*)event);
 }
 
 void k_categorydrawer_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -475,8 +475,8 @@ void k_categorydrawer_connect_notify(void* self, void* signal) {
     KCategoryDrawer_ConnectNotify((KCategoryDrawer*)self, (QMetaMethod*)signal);
 }
 
-void k_categorydrawer_qbase_connect_notify(void* self, void* signal) {
-    KCategoryDrawer_QBaseConnectNotify((KCategoryDrawer*)self, (QMetaMethod*)signal);
+void k_categorydrawer_super_connect_notify(void* self, void* signal) {
+    KCategoryDrawer_SuperConnectNotify((KCategoryDrawer*)self, (QMetaMethod*)signal);
 }
 
 void k_categorydrawer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -487,8 +487,8 @@ void k_categorydrawer_disconnect_notify(void* self, void* signal) {
     KCategoryDrawer_DisconnectNotify((KCategoryDrawer*)self, (QMetaMethod*)signal);
 }
 
-void k_categorydrawer_qbase_disconnect_notify(void* self, void* signal) {
-    KCategoryDrawer_QBaseDisconnectNotify((KCategoryDrawer*)self, (QMetaMethod*)signal);
+void k_categorydrawer_super_disconnect_notify(void* self, void* signal) {
+    KCategoryDrawer_SuperDisconnectNotify((KCategoryDrawer*)self, (QMetaMethod*)signal);
 }
 
 void k_categorydrawer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -499,8 +499,8 @@ QObject* k_categorydrawer_sender(void* self) {
     return KCategoryDrawer_Sender((KCategoryDrawer*)self);
 }
 
-QObject* k_categorydrawer_qbase_sender(void* self) {
-    return KCategoryDrawer_QBaseSender((KCategoryDrawer*)self);
+QObject* k_categorydrawer_super_sender(void* self) {
+    return KCategoryDrawer_SuperSender((KCategoryDrawer*)self);
 }
 
 void k_categorydrawer_on_sender(void* self, QObject* (*callback)()) {
@@ -511,8 +511,8 @@ int32_t k_categorydrawer_sender_signal_index(void* self) {
     return KCategoryDrawer_SenderSignalIndex((KCategoryDrawer*)self);
 }
 
-int32_t k_categorydrawer_qbase_sender_signal_index(void* self) {
-    return KCategoryDrawer_QBaseSenderSignalIndex((KCategoryDrawer*)self);
+int32_t k_categorydrawer_super_sender_signal_index(void* self) {
+    return KCategoryDrawer_SuperSenderSignalIndex((KCategoryDrawer*)self);
 }
 
 void k_categorydrawer_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -523,8 +523,8 @@ int32_t k_categorydrawer_receivers(void* self, const char* signal) {
     return KCategoryDrawer_Receivers((KCategoryDrawer*)self, signal);
 }
 
-int32_t k_categorydrawer_qbase_receivers(void* self, const char* signal) {
-    return KCategoryDrawer_QBaseReceivers((KCategoryDrawer*)self, signal);
+int32_t k_categorydrawer_super_receivers(void* self, const char* signal) {
+    return KCategoryDrawer_SuperReceivers((KCategoryDrawer*)self, signal);
 }
 
 void k_categorydrawer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -535,8 +535,8 @@ bool k_categorydrawer_is_signal_connected(void* self, void* signal) {
     return KCategoryDrawer_IsSignalConnected((KCategoryDrawer*)self, (QMetaMethod*)signal);
 }
 
-bool k_categorydrawer_qbase_is_signal_connected(void* self, void* signal) {
-    return KCategoryDrawer_QBaseIsSignalConnected((KCategoryDrawer*)self, (QMetaMethod*)signal);
+bool k_categorydrawer_super_is_signal_connected(void* self, void* signal) {
+    return KCategoryDrawer_SuperIsSignalConnected((KCategoryDrawer*)self, (QMetaMethod*)signal);
 }
 
 void k_categorydrawer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

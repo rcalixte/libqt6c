@@ -34,13 +34,17 @@ const QMetaObject* k_toolbarspaceraction_meta_object(void* self);
 ///
 void k_toolbarspaceraction_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_meta_object` instead
+///
+#define k_toolbarspaceraction_qbase_meta_object k_toolbarspaceraction_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KToolBarSpacerAction*
 ///
-const QMetaObject* k_toolbarspaceraction_qbase_meta_object(void* self);
+const QMetaObject* k_toolbarspaceraction_super_meta_object(void* self);
 
 /// @param self KToolBarSpacerAction*
 /// @param param1 const char*
@@ -54,12 +58,16 @@ void* k_toolbarspaceraction_metacast(void* self, const char* param1);
 ///
 void k_toolbarspaceraction_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_metacast` instead
+///
+#define k_toolbarspaceraction_qbase_metacast k_toolbarspaceraction_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KToolBarSpacerAction*
 /// @param param1 const char*
 ///
-void* k_toolbarspaceraction_qbase_metacast(void* self, const char* param1);
+void* k_toolbarspaceraction_super_metacast(void* self, const char* param1);
 
 /// @param self KToolBarSpacerAction*
 /// @param param1 enum QMetaObject__Call
@@ -75,6 +83,10 @@ int32_t k_toolbarspaceraction_metacall(void* self, int32_t param1, int param2, v
 ///
 void k_toolbarspaceraction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_metacall` instead
+///
+#define k_toolbarspaceraction_qbase_metacall k_toolbarspaceraction_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KToolBarSpacerAction*
@@ -82,7 +94,7 @@ void k_toolbarspaceraction_on_metacall(void* self, int32_t (*callback)(void*, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_toolbarspaceraction_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_toolbarspaceraction_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -108,6 +120,10 @@ QWidget* k_toolbarspaceraction_create_widget(void* self, void* parent);
 ///
 void k_toolbarspaceraction_on_create_widget(void* self, QWidget* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_create_widget` instead
+///
+#define k_toolbarspaceraction_qbase_create_widget k_toolbarspaceraction_super_create_widget
+
 /// [Upstream resources](https://api.kde.org/ktoolbarspaceraction.html#createWidget)
 ///
 /// Base class method implementation
@@ -115,7 +131,7 @@ void k_toolbarspaceraction_on_create_widget(void* self, QWidget* (*callback)(voi
 /// @param self KToolBarSpacerAction*
 /// @param parent QWidget*
 ///
-QWidget* k_toolbarspaceraction_qbase_create_widget(void* self, void* parent);
+QWidget* k_toolbarspaceraction_super_create_widget(void* self, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1247,6 +1263,10 @@ void k_toolbarspaceraction_on_destroyed1(void* self, void (*callback)(void*, voi
 ///
 bool k_toolbarspaceraction_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_event` instead
+///
+#define k_toolbarspaceraction_qbase_event k_toolbarspaceraction_super_event
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#event)
@@ -1256,7 +1276,7 @@ bool k_toolbarspaceraction_event(void* self, void* param1);
 /// @param self KToolBarSpacerAction*
 /// @param param1 QEvent*
 ///
-bool k_toolbarspaceraction_qbase_event(void* self, void* param1);
+bool k_toolbarspaceraction_super_event(void* self, void* param1);
 
 /// Inherited from QWidgetAction
 ///
@@ -1281,6 +1301,10 @@ void k_toolbarspaceraction_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool k_toolbarspaceraction_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_event_filter` instead
+///
+#define k_toolbarspaceraction_qbase_event_filter k_toolbarspaceraction_super_event_filter
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#eventFilter)
@@ -1291,7 +1315,7 @@ bool k_toolbarspaceraction_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool k_toolbarspaceraction_qbase_event_filter(void* self, void* param1, void* param2);
+bool k_toolbarspaceraction_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QWidgetAction
 ///
@@ -1315,6 +1339,10 @@ void k_toolbarspaceraction_on_event_filter(void* self, bool (*callback)(void*, v
 ///
 void k_toolbarspaceraction_delete_widget(void* self, void* widget);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_delete_widget` instead
+///
+#define k_toolbarspaceraction_qbase_delete_widget k_toolbarspaceraction_super_delete_widget
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#deleteWidget)
@@ -1324,7 +1352,7 @@ void k_toolbarspaceraction_delete_widget(void* self, void* widget);
 /// @param self KToolBarSpacerAction*
 /// @param widget QWidget*
 ///
-void k_toolbarspaceraction_qbase_delete_widget(void* self, void* widget);
+void k_toolbarspaceraction_super_delete_widget(void* self, void* widget);
 
 /// Inherited from QWidgetAction
 ///
@@ -1348,6 +1376,10 @@ void k_toolbarspaceraction_on_delete_widget(void* self, void (*callback)(void*, 
 ///
 void k_toolbarspaceraction_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_timer_event` instead
+///
+#define k_toolbarspaceraction_qbase_timer_event k_toolbarspaceraction_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1357,7 +1389,7 @@ void k_toolbarspaceraction_timer_event(void* self, void* event);
 /// @param self KToolBarSpacerAction*
 /// @param event QTimerEvent*
 ///
-void k_toolbarspaceraction_qbase_timer_event(void* self, void* event);
+void k_toolbarspaceraction_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1381,6 +1413,10 @@ void k_toolbarspaceraction_on_timer_event(void* self, void (*callback)(void*, vo
 ///
 void k_toolbarspaceraction_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_child_event` instead
+///
+#define k_toolbarspaceraction_qbase_child_event k_toolbarspaceraction_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1390,7 +1426,7 @@ void k_toolbarspaceraction_child_event(void* self, void* event);
 /// @param self KToolBarSpacerAction*
 /// @param event QChildEvent*
 ///
-void k_toolbarspaceraction_qbase_child_event(void* self, void* event);
+void k_toolbarspaceraction_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1414,6 +1450,10 @@ void k_toolbarspaceraction_on_child_event(void* self, void (*callback)(void*, vo
 ///
 void k_toolbarspaceraction_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_custom_event` instead
+///
+#define k_toolbarspaceraction_qbase_custom_event k_toolbarspaceraction_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1423,7 +1463,7 @@ void k_toolbarspaceraction_custom_event(void* self, void* event);
 /// @param self KToolBarSpacerAction*
 /// @param event QEvent*
 ///
-void k_toolbarspaceraction_qbase_custom_event(void* self, void* event);
+void k_toolbarspaceraction_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1447,6 +1487,10 @@ void k_toolbarspaceraction_on_custom_event(void* self, void (*callback)(void*, v
 ///
 void k_toolbarspaceraction_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_connect_notify` instead
+///
+#define k_toolbarspaceraction_qbase_connect_notify k_toolbarspaceraction_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1456,7 +1500,7 @@ void k_toolbarspaceraction_connect_notify(void* self, void* signal);
 /// @param self KToolBarSpacerAction*
 /// @param signal QMetaMethod*
 ///
-void k_toolbarspaceraction_qbase_connect_notify(void* self, void* signal);
+void k_toolbarspaceraction_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1480,6 +1524,10 @@ void k_toolbarspaceraction_on_connect_notify(void* self, void (*callback)(void*,
 ///
 void k_toolbarspaceraction_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_disconnect_notify` instead
+///
+#define k_toolbarspaceraction_qbase_disconnect_notify k_toolbarspaceraction_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1489,7 +1537,7 @@ void k_toolbarspaceraction_disconnect_notify(void* self, void* signal);
 /// @param self KToolBarSpacerAction*
 /// @param signal QMetaMethod*
 ///
-void k_toolbarspaceraction_qbase_disconnect_notify(void* self, void* signal);
+void k_toolbarspaceraction_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1514,6 +1562,10 @@ void k_toolbarspaceraction_on_disconnect_notify(void* self, void (*callback)(voi
 ///
 libqt_list k_toolbarspaceraction_created_widgets(void* self);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_created_widgets` instead
+///
+#define k_toolbarspaceraction_qbase_created_widgets k_toolbarspaceraction_super_created_widgets
+
 /// Inherited from QWidgetAction
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidgetaction.html#createdWidgets)
@@ -1524,7 +1576,7 @@ libqt_list k_toolbarspaceraction_created_widgets(void* self);
 ///
 /// @return libqt_list of QWidget*
 ///
-libqt_list k_toolbarspaceraction_qbase_created_widgets(void* self);
+libqt_list k_toolbarspaceraction_super_created_widgets(void* self);
 
 /// Inherited from QWidgetAction
 ///
@@ -1547,6 +1599,10 @@ void k_toolbarspaceraction_on_created_widgets(void* self, libqt_list (*callback)
 ///
 QObject* k_toolbarspaceraction_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_sender` instead
+///
+#define k_toolbarspaceraction_qbase_sender k_toolbarspaceraction_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1555,7 +1611,7 @@ QObject* k_toolbarspaceraction_sender(void* self);
 ///
 /// @param self KToolBarSpacerAction*
 ///
-QObject* k_toolbarspaceraction_qbase_sender(void* self);
+QObject* k_toolbarspaceraction_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1578,6 +1634,10 @@ void k_toolbarspaceraction_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_toolbarspaceraction_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_sender_signal_index` instead
+///
+#define k_toolbarspaceraction_qbase_sender_signal_index k_toolbarspaceraction_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1586,7 +1646,7 @@ int32_t k_toolbarspaceraction_sender_signal_index(void* self);
 ///
 /// @param self KToolBarSpacerAction*
 ///
-int32_t k_toolbarspaceraction_qbase_sender_signal_index(void* self);
+int32_t k_toolbarspaceraction_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1610,6 +1670,10 @@ void k_toolbarspaceraction_on_sender_signal_index(void* self, int32_t (*callback
 ///
 int32_t k_toolbarspaceraction_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_receivers` instead
+///
+#define k_toolbarspaceraction_qbase_receivers k_toolbarspaceraction_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1619,7 +1683,7 @@ int32_t k_toolbarspaceraction_receivers(void* self, const char* signal);
 /// @param self KToolBarSpacerAction*
 /// @param signal const char*
 ///
-int32_t k_toolbarspaceraction_qbase_receivers(void* self, const char* signal);
+int32_t k_toolbarspaceraction_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1643,6 +1707,10 @@ void k_toolbarspaceraction_on_receivers(void* self, int32_t (*callback)(void*, c
 ///
 bool k_toolbarspaceraction_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_toolbarspaceraction_super_is_signal_connected` instead
+///
+#define k_toolbarspaceraction_qbase_is_signal_connected k_toolbarspaceraction_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1652,7 +1720,7 @@ bool k_toolbarspaceraction_is_signal_connected(void* self, void* signal);
 /// @param self KToolBarSpacerAction*
 /// @param signal QMetaMethod*
 ///
-bool k_toolbarspaceraction_qbase_is_signal_connected(void* self, void* signal);
+bool k_toolbarspaceraction_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

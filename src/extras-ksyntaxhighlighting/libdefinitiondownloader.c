@@ -22,8 +22,8 @@ void k_syntaxhighlighting__definitiondownloader_on_meta_object(void* self, const
     KSyntaxHighlighting__DefinitionDownloader_OnMetaObject((KSyntaxHighlighting__DefinitionDownloader*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_syntaxhighlighting__definitiondownloader_qbase_meta_object(void* self) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseMetaObject((KSyntaxHighlighting__DefinitionDownloader*)self);
+const QMetaObject* k_syntaxhighlighting__definitiondownloader_super_meta_object(void* self) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperMetaObject((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
 void* k_syntaxhighlighting__definitiondownloader_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_syntaxhighlighting__definitiondownloader_on_metacast(void* self, void* (*
     KSyntaxHighlighting__DefinitionDownloader_OnMetacast((KSyntaxHighlighting__DefinitionDownloader*)self, (intptr_t)callback);
 }
 
-void* k_syntaxhighlighting__definitiondownloader_qbase_metacast(void* self, const char* param1) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseMetacast((KSyntaxHighlighting__DefinitionDownloader*)self, param1);
+void* k_syntaxhighlighting__definitiondownloader_super_metacast(void* self, const char* param1) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperMetacast((KSyntaxHighlighting__DefinitionDownloader*)self, param1);
 }
 
 int32_t k_syntaxhighlighting__definitiondownloader_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_syntaxhighlighting__definitiondownloader_on_metacall(void* self, int32_t 
     KSyntaxHighlighting__DefinitionDownloader_OnMetacall((KSyntaxHighlighting__DefinitionDownloader*)self, (intptr_t)callback);
 }
 
-int32_t k_syntaxhighlighting__definitiondownloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseMetacall((KSyntaxHighlighting__DefinitionDownloader*)self, param1, param2, param3);
+int32_t k_syntaxhighlighting__definitiondownloader_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperMetacall((KSyntaxHighlighting__DefinitionDownloader*)self, param1, param2, param3);
 }
 
 const char* k_syntaxhighlighting__definitiondownloader_tr(const char* s) {
@@ -306,8 +306,8 @@ bool k_syntaxhighlighting__definitiondownloader_event(void* self, void* event) {
     return KSyntaxHighlighting__DefinitionDownloader_Event((KSyntaxHighlighting__DefinitionDownloader*)self, (QEvent*)event);
 }
 
-bool k_syntaxhighlighting__definitiondownloader_qbase_event(void* self, void* event) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QEvent*)event);
+bool k_syntaxhighlighting__definitiondownloader_super_event(void* self, void* event) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QEvent*)event);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -318,8 +318,8 @@ bool k_syntaxhighlighting__definitiondownloader_event_filter(void* self, void* w
     return KSyntaxHighlighting__DefinitionDownloader_EventFilter((KSyntaxHighlighting__DefinitionDownloader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_syntaxhighlighting__definitiondownloader_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseEventFilter((KSyntaxHighlighting__DefinitionDownloader*)self, (QObject*)watched, (QEvent*)event);
+bool k_syntaxhighlighting__definitiondownloader_super_event_filter(void* self, void* watched, void* event) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperEventFilter((KSyntaxHighlighting__DefinitionDownloader*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -330,8 +330,8 @@ void k_syntaxhighlighting__definitiondownloader_timer_event(void* self, void* ev
     KSyntaxHighlighting__DefinitionDownloader_TimerEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QTimerEvent*)event);
 }
 
-void k_syntaxhighlighting__definitiondownloader_qbase_timer_event(void* self, void* event) {
-    KSyntaxHighlighting__DefinitionDownloader_QBaseTimerEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QTimerEvent*)event);
+void k_syntaxhighlighting__definitiondownloader_super_timer_event(void* self, void* event) {
+    KSyntaxHighlighting__DefinitionDownloader_SuperTimerEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QTimerEvent*)event);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -342,8 +342,8 @@ void k_syntaxhighlighting__definitiondownloader_child_event(void* self, void* ev
     KSyntaxHighlighting__DefinitionDownloader_ChildEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QChildEvent*)event);
 }
 
-void k_syntaxhighlighting__definitiondownloader_qbase_child_event(void* self, void* event) {
-    KSyntaxHighlighting__DefinitionDownloader_QBaseChildEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QChildEvent*)event);
+void k_syntaxhighlighting__definitiondownloader_super_child_event(void* self, void* event) {
+    KSyntaxHighlighting__DefinitionDownloader_SuperChildEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QChildEvent*)event);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ void k_syntaxhighlighting__definitiondownloader_custom_event(void* self, void* e
     KSyntaxHighlighting__DefinitionDownloader_CustomEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QEvent*)event);
 }
 
-void k_syntaxhighlighting__definitiondownloader_qbase_custom_event(void* self, void* event) {
-    KSyntaxHighlighting__DefinitionDownloader_QBaseCustomEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QEvent*)event);
+void k_syntaxhighlighting__definitiondownloader_super_custom_event(void* self, void* event) {
+    KSyntaxHighlighting__DefinitionDownloader_SuperCustomEvent((KSyntaxHighlighting__DefinitionDownloader*)self, (QEvent*)event);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -366,8 +366,8 @@ void k_syntaxhighlighting__definitiondownloader_connect_notify(void* self, void*
     KSyntaxHighlighting__DefinitionDownloader_ConnectNotify((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
 }
 
-void k_syntaxhighlighting__definitiondownloader_qbase_connect_notify(void* self, void* signal) {
-    KSyntaxHighlighting__DefinitionDownloader_QBaseConnectNotify((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
+void k_syntaxhighlighting__definitiondownloader_super_connect_notify(void* self, void* signal) {
+    KSyntaxHighlighting__DefinitionDownloader_SuperConnectNotify((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void k_syntaxhighlighting__definitiondownloader_disconnect_notify(void* self, vo
     KSyntaxHighlighting__DefinitionDownloader_DisconnectNotify((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
 }
 
-void k_syntaxhighlighting__definitiondownloader_qbase_disconnect_notify(void* self, void* signal) {
-    KSyntaxHighlighting__DefinitionDownloader_QBaseDisconnectNotify((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
+void k_syntaxhighlighting__definitiondownloader_super_disconnect_notify(void* self, void* signal) {
+    KSyntaxHighlighting__DefinitionDownloader_SuperDisconnectNotify((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ QObject* k_syntaxhighlighting__definitiondownloader_sender(void* self) {
     return KSyntaxHighlighting__DefinitionDownloader_Sender((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
-QObject* k_syntaxhighlighting__definitiondownloader_qbase_sender(void* self) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseSender((KSyntaxHighlighting__DefinitionDownloader*)self);
+QObject* k_syntaxhighlighting__definitiondownloader_super_sender(void* self) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperSender((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_sender(void* self, QObject* (*callback)()) {
@@ -402,8 +402,8 @@ int32_t k_syntaxhighlighting__definitiondownloader_sender_signal_index(void* sel
     return KSyntaxHighlighting__DefinitionDownloader_SenderSignalIndex((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
-int32_t k_syntaxhighlighting__definitiondownloader_qbase_sender_signal_index(void* self) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseSenderSignalIndex((KSyntaxHighlighting__DefinitionDownloader*)self);
+int32_t k_syntaxhighlighting__definitiondownloader_super_sender_signal_index(void* self) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperSenderSignalIndex((KSyntaxHighlighting__DefinitionDownloader*)self);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -414,8 +414,8 @@ int32_t k_syntaxhighlighting__definitiondownloader_receivers(void* self, const c
     return KSyntaxHighlighting__DefinitionDownloader_Receivers((KSyntaxHighlighting__DefinitionDownloader*)self, signal);
 }
 
-int32_t k_syntaxhighlighting__definitiondownloader_qbase_receivers(void* self, const char* signal) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseReceivers((KSyntaxHighlighting__DefinitionDownloader*)self, signal);
+int32_t k_syntaxhighlighting__definitiondownloader_super_receivers(void* self, const char* signal) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperReceivers((KSyntaxHighlighting__DefinitionDownloader*)self, signal);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -426,8 +426,8 @@ bool k_syntaxhighlighting__definitiondownloader_is_signal_connected(void* self, 
     return KSyntaxHighlighting__DefinitionDownloader_IsSignalConnected((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
 }
 
-bool k_syntaxhighlighting__definitiondownloader_qbase_is_signal_connected(void* self, void* signal) {
-    return KSyntaxHighlighting__DefinitionDownloader_QBaseIsSignalConnected((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
+bool k_syntaxhighlighting__definitiondownloader_super_is_signal_connected(void* self, void* signal) {
+    return KSyntaxHighlighting__DefinitionDownloader_SuperIsSignalConnected((KSyntaxHighlighting__DefinitionDownloader*)self, (QMetaMethod*)signal);
 }
 
 void k_syntaxhighlighting__definitiondownloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

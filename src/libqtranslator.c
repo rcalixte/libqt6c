@@ -22,8 +22,8 @@ void q_translator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTranslator_OnMetaObject((QTranslator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_translator_qbase_meta_object(void* self) {
-    return QTranslator_QBaseMetaObject((QTranslator*)self);
+const QMetaObject* q_translator_super_meta_object(void* self) {
+    return QTranslator_SuperMetaObject((QTranslator*)self);
 }
 
 void* q_translator_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_translator_on_metacast(void* self, void* (*callback)(void*, const char*))
     QTranslator_OnMetacast((QTranslator*)self, (intptr_t)callback);
 }
 
-void* q_translator_qbase_metacast(void* self, const char* param1) {
-    return QTranslator_QBaseMetacast((QTranslator*)self, param1);
+void* q_translator_super_metacast(void* self, const char* param1) {
+    return QTranslator_SuperMetacast((QTranslator*)self, param1);
 }
 
 int32_t q_translator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_translator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QTranslator_OnMetacall((QTranslator*)self, (intptr_t)callback);
 }
 
-int32_t q_translator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTranslator_QBaseMetacall((QTranslator*)self, param1, param2, param3);
+int32_t q_translator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTranslator_SuperMetacall((QTranslator*)self, param1, param2, param3);
 }
 
 const char* q_translator_tr(const char* s) {
@@ -68,8 +68,8 @@ void q_translator_on_translate(void* self, const char* (*callback)(void*, const 
     QTranslator_OnTranslate((QTranslator*)self, (intptr_t)callback);
 }
 
-const char* q_translator_qbase_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
-    libqt_string _str = QTranslator_QBaseTranslate((QTranslator*)self, context, sourceText, disambiguation, n);
+const char* q_translator_super_translate(void* self, const char* context, const char* sourceText, const char* disambiguation, int n) {
+    libqt_string _str = QTranslator_SuperTranslate((QTranslator*)self, context, sourceText, disambiguation, n);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -83,8 +83,8 @@ void q_translator_on_is_empty(void* self, bool (*callback)()) {
     QTranslator_OnIsEmpty((QTranslator*)self, (intptr_t)callback);
 }
 
-bool q_translator_qbase_is_empty(void* self) {
-    return QTranslator_QBaseIsEmpty((QTranslator*)self);
+bool q_translator_super_is_empty(void* self) {
+    return QTranslator_SuperIsEmpty((QTranslator*)self);
 }
 
 const char* q_translator_language(void* self) {
@@ -370,8 +370,8 @@ bool q_translator_event(void* self, void* event) {
     return QTranslator_Event((QTranslator*)self, (QEvent*)event);
 }
 
-bool q_translator_qbase_event(void* self, void* event) {
-    return QTranslator_QBaseEvent((QTranslator*)self, (QEvent*)event);
+bool q_translator_super_event(void* self, void* event) {
+    return QTranslator_SuperEvent((QTranslator*)self, (QEvent*)event);
 }
 
 void q_translator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ bool q_translator_event_filter(void* self, void* watched, void* event) {
     return QTranslator_EventFilter((QTranslator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_translator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTranslator_QBaseEventFilter((QTranslator*)self, (QObject*)watched, (QEvent*)event);
+bool q_translator_super_event_filter(void* self, void* watched, void* event) {
+    return QTranslator_SuperEventFilter((QTranslator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_translator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -394,8 +394,8 @@ void q_translator_timer_event(void* self, void* event) {
     QTranslator_TimerEvent((QTranslator*)self, (QTimerEvent*)event);
 }
 
-void q_translator_qbase_timer_event(void* self, void* event) {
-    QTranslator_QBaseTimerEvent((QTranslator*)self, (QTimerEvent*)event);
+void q_translator_super_timer_event(void* self, void* event) {
+    QTranslator_SuperTimerEvent((QTranslator*)self, (QTimerEvent*)event);
 }
 
 void q_translator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -406,8 +406,8 @@ void q_translator_child_event(void* self, void* event) {
     QTranslator_ChildEvent((QTranslator*)self, (QChildEvent*)event);
 }
 
-void q_translator_qbase_child_event(void* self, void* event) {
-    QTranslator_QBaseChildEvent((QTranslator*)self, (QChildEvent*)event);
+void q_translator_super_child_event(void* self, void* event) {
+    QTranslator_SuperChildEvent((QTranslator*)self, (QChildEvent*)event);
 }
 
 void q_translator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -418,8 +418,8 @@ void q_translator_custom_event(void* self, void* event) {
     QTranslator_CustomEvent((QTranslator*)self, (QEvent*)event);
 }
 
-void q_translator_qbase_custom_event(void* self, void* event) {
-    QTranslator_QBaseCustomEvent((QTranslator*)self, (QEvent*)event);
+void q_translator_super_custom_event(void* self, void* event) {
+    QTranslator_SuperCustomEvent((QTranslator*)self, (QEvent*)event);
 }
 
 void q_translator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -430,8 +430,8 @@ void q_translator_connect_notify(void* self, void* signal) {
     QTranslator_ConnectNotify((QTranslator*)self, (QMetaMethod*)signal);
 }
 
-void q_translator_qbase_connect_notify(void* self, void* signal) {
-    QTranslator_QBaseConnectNotify((QTranslator*)self, (QMetaMethod*)signal);
+void q_translator_super_connect_notify(void* self, void* signal) {
+    QTranslator_SuperConnectNotify((QTranslator*)self, (QMetaMethod*)signal);
 }
 
 void q_translator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -442,8 +442,8 @@ void q_translator_disconnect_notify(void* self, void* signal) {
     QTranslator_DisconnectNotify((QTranslator*)self, (QMetaMethod*)signal);
 }
 
-void q_translator_qbase_disconnect_notify(void* self, void* signal) {
-    QTranslator_QBaseDisconnectNotify((QTranslator*)self, (QMetaMethod*)signal);
+void q_translator_super_disconnect_notify(void* self, void* signal) {
+    QTranslator_SuperDisconnectNotify((QTranslator*)self, (QMetaMethod*)signal);
 }
 
 void q_translator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -454,8 +454,8 @@ QObject* q_translator_sender(void* self) {
     return QTranslator_Sender((QTranslator*)self);
 }
 
-QObject* q_translator_qbase_sender(void* self) {
-    return QTranslator_QBaseSender((QTranslator*)self);
+QObject* q_translator_super_sender(void* self) {
+    return QTranslator_SuperSender((QTranslator*)self);
 }
 
 void q_translator_on_sender(void* self, QObject* (*callback)()) {
@@ -466,8 +466,8 @@ int32_t q_translator_sender_signal_index(void* self) {
     return QTranslator_SenderSignalIndex((QTranslator*)self);
 }
 
-int32_t q_translator_qbase_sender_signal_index(void* self) {
-    return QTranslator_QBaseSenderSignalIndex((QTranslator*)self);
+int32_t q_translator_super_sender_signal_index(void* self) {
+    return QTranslator_SuperSenderSignalIndex((QTranslator*)self);
 }
 
 void q_translator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -478,8 +478,8 @@ int32_t q_translator_receivers(void* self, const char* signal) {
     return QTranslator_Receivers((QTranslator*)self, signal);
 }
 
-int32_t q_translator_qbase_receivers(void* self, const char* signal) {
-    return QTranslator_QBaseReceivers((QTranslator*)self, signal);
+int32_t q_translator_super_receivers(void* self, const char* signal) {
+    return QTranslator_SuperReceivers((QTranslator*)self, signal);
 }
 
 void q_translator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -490,8 +490,8 @@ bool q_translator_is_signal_connected(void* self, void* signal) {
     return QTranslator_IsSignalConnected((QTranslator*)self, (QMetaMethod*)signal);
 }
 
-bool q_translator_qbase_is_signal_connected(void* self, void* signal) {
-    return QTranslator_QBaseIsSignalConnected((QTranslator*)self, (QMetaMethod*)signal);
+bool q_translator_super_is_signal_connected(void* self, void* signal) {
+    return QTranslator_SuperIsSignalConnected((QTranslator*)self, (QMetaMethod*)signal);
 }
 
 void q_translator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -30,8 +30,8 @@ void q_undocommand_on_undo(void* self, void (*callback)()) {
     QUndoCommand_OnUndo((QUndoCommand*)self, (intptr_t)callback);
 }
 
-void q_undocommand_qbase_undo(void* self) {
-    QUndoCommand_QBaseUndo((QUndoCommand*)self);
+void q_undocommand_super_undo(void* self) {
+    QUndoCommand_SuperUndo((QUndoCommand*)self);
 }
 
 void q_undocommand_redo(void* self) {
@@ -42,8 +42,8 @@ void q_undocommand_on_redo(void* self, void (*callback)()) {
     QUndoCommand_OnRedo((QUndoCommand*)self, (intptr_t)callback);
 }
 
-void q_undocommand_qbase_redo(void* self) {
-    QUndoCommand_QBaseRedo((QUndoCommand*)self);
+void q_undocommand_super_redo(void* self) {
+    QUndoCommand_SuperRedo((QUndoCommand*)self);
 }
 
 const char* q_undocommand_text(void* self) {
@@ -80,8 +80,8 @@ void q_undocommand_on_id(void* self, int32_t (*callback)()) {
     QUndoCommand_OnId((QUndoCommand*)self, (intptr_t)callback);
 }
 
-int32_t q_undocommand_qbase_id(void* self) {
-    return QUndoCommand_QBaseId((QUndoCommand*)self);
+int32_t q_undocommand_super_id(void* self) {
+    return QUndoCommand_SuperId((QUndoCommand*)self);
 }
 
 bool q_undocommand_merge_with(void* self, void* other) {
@@ -92,8 +92,8 @@ void q_undocommand_on_merge_with(void* self, bool (*callback)(void*, void*)) {
     QUndoCommand_OnMergeWith((QUndoCommand*)self, (intptr_t)callback);
 }
 
-bool q_undocommand_qbase_merge_with(void* self, void* other) {
-    return QUndoCommand_QBaseMergeWith((QUndoCommand*)self, (QUndoCommand*)other);
+bool q_undocommand_super_merge_with(void* self, void* other) {
+    return QUndoCommand_SuperMergeWith((QUndoCommand*)self, (QUndoCommand*)other);
 }
 
 int32_t q_undocommand_child_count(void* self) {
@@ -124,8 +124,8 @@ void q_undostack_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QUndoStack_OnMetaObject((QUndoStack*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_undostack_qbase_meta_object(void* self) {
-    return QUndoStack_QBaseMetaObject((QUndoStack*)self);
+const QMetaObject* q_undostack_super_meta_object(void* self) {
+    return QUndoStack_SuperMetaObject((QUndoStack*)self);
 }
 
 void* q_undostack_metacast(void* self, const char* param1) {
@@ -136,8 +136,8 @@ void q_undostack_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QUndoStack_OnMetacast((QUndoStack*)self, (intptr_t)callback);
 }
 
-void* q_undostack_qbase_metacast(void* self, const char* param1) {
-    return QUndoStack_QBaseMetacast((QUndoStack*)self, param1);
+void* q_undostack_super_metacast(void* self, const char* param1) {
+    return QUndoStack_SuperMetacast((QUndoStack*)self, param1);
 }
 
 int32_t q_undostack_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -148,8 +148,8 @@ void q_undostack_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QUndoStack_OnMetacall((QUndoStack*)self, (intptr_t)callback);
 }
 
-int32_t q_undostack_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QUndoStack_QBaseMetacall((QUndoStack*)self, param1, param2, param3);
+int32_t q_undostack_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QUndoStack_SuperMetacall((QUndoStack*)self, param1, param2, param3);
 }
 
 const char* q_undostack_tr(const char* s) {
@@ -557,8 +557,8 @@ bool q_undostack_event(void* self, void* event) {
     return QUndoStack_Event((QUndoStack*)self, (QEvent*)event);
 }
 
-bool q_undostack_qbase_event(void* self, void* event) {
-    return QUndoStack_QBaseEvent((QUndoStack*)self, (QEvent*)event);
+bool q_undostack_super_event(void* self, void* event) {
+    return QUndoStack_SuperEvent((QUndoStack*)self, (QEvent*)event);
 }
 
 void q_undostack_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -569,8 +569,8 @@ bool q_undostack_event_filter(void* self, void* watched, void* event) {
     return QUndoStack_EventFilter((QUndoStack*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_undostack_qbase_event_filter(void* self, void* watched, void* event) {
-    return QUndoStack_QBaseEventFilter((QUndoStack*)self, (QObject*)watched, (QEvent*)event);
+bool q_undostack_super_event_filter(void* self, void* watched, void* event) {
+    return QUndoStack_SuperEventFilter((QUndoStack*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_undostack_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -581,8 +581,8 @@ void q_undostack_timer_event(void* self, void* event) {
     QUndoStack_TimerEvent((QUndoStack*)self, (QTimerEvent*)event);
 }
 
-void q_undostack_qbase_timer_event(void* self, void* event) {
-    QUndoStack_QBaseTimerEvent((QUndoStack*)self, (QTimerEvent*)event);
+void q_undostack_super_timer_event(void* self, void* event) {
+    QUndoStack_SuperTimerEvent((QUndoStack*)self, (QTimerEvent*)event);
 }
 
 void q_undostack_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -593,8 +593,8 @@ void q_undostack_child_event(void* self, void* event) {
     QUndoStack_ChildEvent((QUndoStack*)self, (QChildEvent*)event);
 }
 
-void q_undostack_qbase_child_event(void* self, void* event) {
-    QUndoStack_QBaseChildEvent((QUndoStack*)self, (QChildEvent*)event);
+void q_undostack_super_child_event(void* self, void* event) {
+    QUndoStack_SuperChildEvent((QUndoStack*)self, (QChildEvent*)event);
 }
 
 void q_undostack_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -605,8 +605,8 @@ void q_undostack_custom_event(void* self, void* event) {
     QUndoStack_CustomEvent((QUndoStack*)self, (QEvent*)event);
 }
 
-void q_undostack_qbase_custom_event(void* self, void* event) {
-    QUndoStack_QBaseCustomEvent((QUndoStack*)self, (QEvent*)event);
+void q_undostack_super_custom_event(void* self, void* event) {
+    QUndoStack_SuperCustomEvent((QUndoStack*)self, (QEvent*)event);
 }
 
 void q_undostack_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -617,8 +617,8 @@ void q_undostack_connect_notify(void* self, void* signal) {
     QUndoStack_ConnectNotify((QUndoStack*)self, (QMetaMethod*)signal);
 }
 
-void q_undostack_qbase_connect_notify(void* self, void* signal) {
-    QUndoStack_QBaseConnectNotify((QUndoStack*)self, (QMetaMethod*)signal);
+void q_undostack_super_connect_notify(void* self, void* signal) {
+    QUndoStack_SuperConnectNotify((QUndoStack*)self, (QMetaMethod*)signal);
 }
 
 void q_undostack_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -629,8 +629,8 @@ void q_undostack_disconnect_notify(void* self, void* signal) {
     QUndoStack_DisconnectNotify((QUndoStack*)self, (QMetaMethod*)signal);
 }
 
-void q_undostack_qbase_disconnect_notify(void* self, void* signal) {
-    QUndoStack_QBaseDisconnectNotify((QUndoStack*)self, (QMetaMethod*)signal);
+void q_undostack_super_disconnect_notify(void* self, void* signal) {
+    QUndoStack_SuperDisconnectNotify((QUndoStack*)self, (QMetaMethod*)signal);
 }
 
 void q_undostack_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -641,8 +641,8 @@ QObject* q_undostack_sender(void* self) {
     return QUndoStack_Sender((QUndoStack*)self);
 }
 
-QObject* q_undostack_qbase_sender(void* self) {
-    return QUndoStack_QBaseSender((QUndoStack*)self);
+QObject* q_undostack_super_sender(void* self) {
+    return QUndoStack_SuperSender((QUndoStack*)self);
 }
 
 void q_undostack_on_sender(void* self, QObject* (*callback)()) {
@@ -653,8 +653,8 @@ int32_t q_undostack_sender_signal_index(void* self) {
     return QUndoStack_SenderSignalIndex((QUndoStack*)self);
 }
 
-int32_t q_undostack_qbase_sender_signal_index(void* self) {
-    return QUndoStack_QBaseSenderSignalIndex((QUndoStack*)self);
+int32_t q_undostack_super_sender_signal_index(void* self) {
+    return QUndoStack_SuperSenderSignalIndex((QUndoStack*)self);
 }
 
 void q_undostack_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -665,8 +665,8 @@ int32_t q_undostack_receivers(void* self, const char* signal) {
     return QUndoStack_Receivers((QUndoStack*)self, signal);
 }
 
-int32_t q_undostack_qbase_receivers(void* self, const char* signal) {
-    return QUndoStack_QBaseReceivers((QUndoStack*)self, signal);
+int32_t q_undostack_super_receivers(void* self, const char* signal) {
+    return QUndoStack_SuperReceivers((QUndoStack*)self, signal);
 }
 
 void q_undostack_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -677,8 +677,8 @@ bool q_undostack_is_signal_connected(void* self, void* signal) {
     return QUndoStack_IsSignalConnected((QUndoStack*)self, (QMetaMethod*)signal);
 }
 
-bool q_undostack_qbase_is_signal_connected(void* self, void* signal) {
-    return QUndoStack_QBaseIsSignalConnected((QUndoStack*)self, (QMetaMethod*)signal);
+bool q_undostack_super_is_signal_connected(void* self, void* signal) {
+    return QUndoStack_SuperIsSignalConnected((QUndoStack*)self, (QMetaMethod*)signal);
 }
 
 void q_undostack_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

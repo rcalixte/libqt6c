@@ -18,8 +18,8 @@ void k_parts__fileinfoextension_on_meta_object(void* self, const QMetaObject* (*
     KParts__FileInfoExtension_OnMetaObject((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__fileinfoextension_qbase_meta_object(void* self) {
-    return KParts__FileInfoExtension_QBaseMetaObject((KParts__FileInfoExtension*)self);
+const QMetaObject* k_parts__fileinfoextension_super_meta_object(void* self) {
+    return KParts__FileInfoExtension_SuperMetaObject((KParts__FileInfoExtension*)self);
 }
 
 void* k_parts__fileinfoextension_metacast(void* self, const char* param1) {
@@ -30,8 +30,8 @@ void k_parts__fileinfoextension_on_metacast(void* self, void* (*callback)(void*,
     KParts__FileInfoExtension_OnMetacast((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
-void* k_parts__fileinfoextension_qbase_metacast(void* self, const char* param1) {
-    return KParts__FileInfoExtension_QBaseMetacast((KParts__FileInfoExtension*)self, param1);
+void* k_parts__fileinfoextension_super_metacast(void* self, const char* param1) {
+    return KParts__FileInfoExtension_SuperMetacast((KParts__FileInfoExtension*)self, param1);
 }
 
 int32_t k_parts__fileinfoextension_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -42,8 +42,8 @@ void k_parts__fileinfoextension_on_metacall(void* self, int32_t (*callback)(void
     KParts__FileInfoExtension_OnMetacall((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__fileinfoextension_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__FileInfoExtension_QBaseMetacall((KParts__FileInfoExtension*)self, param1, param2, param3);
+int32_t k_parts__fileinfoextension_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__FileInfoExtension_SuperMetacall((KParts__FileInfoExtension*)self, param1, param2, param3);
 }
 
 const char* k_parts__fileinfoextension_tr(const char* s) {
@@ -65,8 +65,8 @@ void k_parts__fileinfoextension_on_has_selection(void* self, bool (*callback)())
     KParts__FileInfoExtension_OnHasSelection((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
-bool k_parts__fileinfoextension_qbase_has_selection(void* self) {
-    return KParts__FileInfoExtension_QBaseHasSelection((KParts__FileInfoExtension*)self);
+bool k_parts__fileinfoextension_super_has_selection(void* self) {
+    return KParts__FileInfoExtension_SuperHasSelection((KParts__FileInfoExtension*)self);
 }
 
 int32_t k_parts__fileinfoextension_supported_query_modes(void* self) {
@@ -77,8 +77,8 @@ void k_parts__fileinfoextension_on_supported_query_modes(void* self, int32_t (*c
     KParts__FileInfoExtension_OnSupportedQueryModes((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__fileinfoextension_qbase_supported_query_modes(void* self) {
-    return KParts__FileInfoExtension_QBaseSupportedQueryModes((KParts__FileInfoExtension*)self);
+int32_t k_parts__fileinfoextension_super_supported_query_modes(void* self) {
+    return KParts__FileInfoExtension_SuperSupportedQueryModes((KParts__FileInfoExtension*)self);
 }
 
 KFileItemList* k_parts__fileinfoextension_query_for(void* self, int32_t mode) {
@@ -89,8 +89,8 @@ void k_parts__fileinfoextension_on_query_for(void* self, KFileItemList* (*callba
     KParts__FileInfoExtension_OnQueryFor((KParts__FileInfoExtension*)self, (intptr_t)callback);
 }
 
-KFileItemList* k_parts__fileinfoextension_qbase_query_for(void* self, int32_t mode) {
-    return KParts__FileInfoExtension_QBaseQueryFor((KParts__FileInfoExtension*)self, mode);
+KFileItemList* k_parts__fileinfoextension_super_query_for(void* self, int32_t mode) {
+    return KParts__FileInfoExtension_SuperQueryFor((KParts__FileInfoExtension*)self, mode);
 }
 
 const char* k_parts__fileinfoextension_tr2(const char* s, const char* c) {
@@ -322,8 +322,8 @@ bool k_parts__fileinfoextension_event(void* self, void* event) {
     return KParts__FileInfoExtension_Event((KParts__FileInfoExtension*)self, (QEvent*)event);
 }
 
-bool k_parts__fileinfoextension_qbase_event(void* self, void* event) {
-    return KParts__FileInfoExtension_QBaseEvent((KParts__FileInfoExtension*)self, (QEvent*)event);
+bool k_parts__fileinfoextension_super_event(void* self, void* event) {
+    return KParts__FileInfoExtension_SuperEvent((KParts__FileInfoExtension*)self, (QEvent*)event);
 }
 
 void k_parts__fileinfoextension_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -334,8 +334,8 @@ bool k_parts__fileinfoextension_event_filter(void* self, void* watched, void* ev
     return KParts__FileInfoExtension_EventFilter((KParts__FileInfoExtension*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_parts__fileinfoextension_qbase_event_filter(void* self, void* watched, void* event) {
-    return KParts__FileInfoExtension_QBaseEventFilter((KParts__FileInfoExtension*)self, (QObject*)watched, (QEvent*)event);
+bool k_parts__fileinfoextension_super_event_filter(void* self, void* watched, void* event) {
+    return KParts__FileInfoExtension_SuperEventFilter((KParts__FileInfoExtension*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_parts__fileinfoextension_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -346,8 +346,8 @@ void k_parts__fileinfoextension_timer_event(void* self, void* event) {
     KParts__FileInfoExtension_TimerEvent((KParts__FileInfoExtension*)self, (QTimerEvent*)event);
 }
 
-void k_parts__fileinfoextension_qbase_timer_event(void* self, void* event) {
-    KParts__FileInfoExtension_QBaseTimerEvent((KParts__FileInfoExtension*)self, (QTimerEvent*)event);
+void k_parts__fileinfoextension_super_timer_event(void* self, void* event) {
+    KParts__FileInfoExtension_SuperTimerEvent((KParts__FileInfoExtension*)self, (QTimerEvent*)event);
 }
 
 void k_parts__fileinfoextension_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -358,8 +358,8 @@ void k_parts__fileinfoextension_child_event(void* self, void* event) {
     KParts__FileInfoExtension_ChildEvent((KParts__FileInfoExtension*)self, (QChildEvent*)event);
 }
 
-void k_parts__fileinfoextension_qbase_child_event(void* self, void* event) {
-    KParts__FileInfoExtension_QBaseChildEvent((KParts__FileInfoExtension*)self, (QChildEvent*)event);
+void k_parts__fileinfoextension_super_child_event(void* self, void* event) {
+    KParts__FileInfoExtension_SuperChildEvent((KParts__FileInfoExtension*)self, (QChildEvent*)event);
 }
 
 void k_parts__fileinfoextension_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -370,8 +370,8 @@ void k_parts__fileinfoextension_custom_event(void* self, void* event) {
     KParts__FileInfoExtension_CustomEvent((KParts__FileInfoExtension*)self, (QEvent*)event);
 }
 
-void k_parts__fileinfoextension_qbase_custom_event(void* self, void* event) {
-    KParts__FileInfoExtension_QBaseCustomEvent((KParts__FileInfoExtension*)self, (QEvent*)event);
+void k_parts__fileinfoextension_super_custom_event(void* self, void* event) {
+    KParts__FileInfoExtension_SuperCustomEvent((KParts__FileInfoExtension*)self, (QEvent*)event);
 }
 
 void k_parts__fileinfoextension_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -382,8 +382,8 @@ void k_parts__fileinfoextension_connect_notify(void* self, void* signal) {
     KParts__FileInfoExtension_ConnectNotify((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__fileinfoextension_qbase_connect_notify(void* self, void* signal) {
-    KParts__FileInfoExtension_QBaseConnectNotify((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
+void k_parts__fileinfoextension_super_connect_notify(void* self, void* signal) {
+    KParts__FileInfoExtension_SuperConnectNotify((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__fileinfoextension_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -394,8 +394,8 @@ void k_parts__fileinfoextension_disconnect_notify(void* self, void* signal) {
     KParts__FileInfoExtension_DisconnectNotify((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__fileinfoextension_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__FileInfoExtension_QBaseDisconnectNotify((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
+void k_parts__fileinfoextension_super_disconnect_notify(void* self, void* signal) {
+    KParts__FileInfoExtension_SuperDisconnectNotify((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__fileinfoextension_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -406,8 +406,8 @@ QObject* k_parts__fileinfoextension_sender(void* self) {
     return KParts__FileInfoExtension_Sender((KParts__FileInfoExtension*)self);
 }
 
-QObject* k_parts__fileinfoextension_qbase_sender(void* self) {
-    return KParts__FileInfoExtension_QBaseSender((KParts__FileInfoExtension*)self);
+QObject* k_parts__fileinfoextension_super_sender(void* self) {
+    return KParts__FileInfoExtension_SuperSender((KParts__FileInfoExtension*)self);
 }
 
 void k_parts__fileinfoextension_on_sender(void* self, QObject* (*callback)()) {
@@ -418,8 +418,8 @@ int32_t k_parts__fileinfoextension_sender_signal_index(void* self) {
     return KParts__FileInfoExtension_SenderSignalIndex((KParts__FileInfoExtension*)self);
 }
 
-int32_t k_parts__fileinfoextension_qbase_sender_signal_index(void* self) {
-    return KParts__FileInfoExtension_QBaseSenderSignalIndex((KParts__FileInfoExtension*)self);
+int32_t k_parts__fileinfoextension_super_sender_signal_index(void* self) {
+    return KParts__FileInfoExtension_SuperSenderSignalIndex((KParts__FileInfoExtension*)self);
 }
 
 void k_parts__fileinfoextension_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -430,8 +430,8 @@ int32_t k_parts__fileinfoextension_receivers(void* self, const char* signal) {
     return KParts__FileInfoExtension_Receivers((KParts__FileInfoExtension*)self, signal);
 }
 
-int32_t k_parts__fileinfoextension_qbase_receivers(void* self, const char* signal) {
-    return KParts__FileInfoExtension_QBaseReceivers((KParts__FileInfoExtension*)self, signal);
+int32_t k_parts__fileinfoextension_super_receivers(void* self, const char* signal) {
+    return KParts__FileInfoExtension_SuperReceivers((KParts__FileInfoExtension*)self, signal);
 }
 
 void k_parts__fileinfoextension_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -442,8 +442,8 @@ bool k_parts__fileinfoextension_is_signal_connected(void* self, void* signal) {
     return KParts__FileInfoExtension_IsSignalConnected((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__fileinfoextension_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__FileInfoExtension_QBaseIsSignalConnected((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
+bool k_parts__fileinfoextension_super_is_signal_connected(void* self, void* signal) {
+    return KParts__FileInfoExtension_SuperIsSignalConnected((KParts__FileInfoExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__fileinfoextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -85,13 +85,17 @@ const QMetaObject* q_progressdialog_meta_object(void* self);
 ///
 void q_progressdialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_meta_object` instead
+///
+#define q_progressdialog_qbase_meta_object q_progressdialog_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QProgressDialog*
 ///
-const QMetaObject* q_progressdialog_qbase_meta_object(void* self);
+const QMetaObject* q_progressdialog_super_meta_object(void* self);
 
 /// @param self QProgressDialog*
 /// @param param1 const char*
@@ -105,12 +109,16 @@ void* q_progressdialog_metacast(void* self, const char* param1);
 ///
 void q_progressdialog_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_metacast` instead
+///
+#define q_progressdialog_qbase_metacast q_progressdialog_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QProgressDialog*
 /// @param param1 const char*
 ///
-void* q_progressdialog_qbase_metacast(void* self, const char* param1);
+void* q_progressdialog_super_metacast(void* self, const char* param1);
 
 /// @param self QProgressDialog*
 /// @param param1 enum QMetaObject__Call
@@ -126,6 +134,10 @@ int32_t q_progressdialog_metacall(void* self, int32_t param1, int param2, void* 
 ///
 void q_progressdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_metacall` instead
+///
+#define q_progressdialog_qbase_metacall q_progressdialog_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QProgressDialog*
@@ -133,7 +145,7 @@ void q_progressdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_progressdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_progressdialog_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -203,13 +215,17 @@ QSize* q_progressdialog_size_hint(void* self);
 ///
 void q_progressdialog_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_size_hint` instead
+///
+#define q_progressdialog_qbase_size_hint q_progressdialog_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QProgressDialog*
 ///
-QSize* q_progressdialog_qbase_size_hint(void* self);
+QSize* q_progressdialog_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#labelText)
 ///
@@ -342,6 +358,10 @@ void q_progressdialog_resize_event(void* self, void* event);
 ///
 void q_progressdialog_on_resize_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_resize_event` instead
+///
+#define q_progressdialog_qbase_resize_event q_progressdialog_super_resize_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#resizeEvent)
 ///
 /// Base class method implementation
@@ -349,7 +369,7 @@ void q_progressdialog_on_resize_event(void* self, void (*callback)(void*, void*)
 /// @param self QProgressDialog*
 /// @param event QResizeEvent*
 ///
-void q_progressdialog_qbase_resize_event(void* self, void* event);
+void q_progressdialog_super_resize_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#closeEvent)
 ///
@@ -367,6 +387,10 @@ void q_progressdialog_close_event(void* self, void* event);
 ///
 void q_progressdialog_on_close_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_close_event` instead
+///
+#define q_progressdialog_qbase_close_event q_progressdialog_super_close_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#closeEvent)
 ///
 /// Base class method implementation
@@ -374,7 +398,7 @@ void q_progressdialog_on_close_event(void* self, void (*callback)(void*, void*))
 /// @param self QProgressDialog*
 /// @param event QCloseEvent*
 ///
-void q_progressdialog_qbase_close_event(void* self, void* event);
+void q_progressdialog_super_close_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#changeEvent)
 ///
@@ -392,6 +416,10 @@ void q_progressdialog_change_event(void* self, void* event);
 ///
 void q_progressdialog_on_change_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_change_event` instead
+///
+#define q_progressdialog_qbase_change_event q_progressdialog_super_change_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#changeEvent)
 ///
 /// Base class method implementation
@@ -399,7 +427,7 @@ void q_progressdialog_on_change_event(void* self, void (*callback)(void*, void*)
 /// @param self QProgressDialog*
 /// @param event QEvent*
 ///
-void q_progressdialog_qbase_change_event(void* self, void* event);
+void q_progressdialog_super_change_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#showEvent)
 ///
@@ -417,6 +445,10 @@ void q_progressdialog_show_event(void* self, void* event);
 ///
 void q_progressdialog_on_show_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_show_event` instead
+///
+#define q_progressdialog_qbase_show_event q_progressdialog_super_show_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#showEvent)
 ///
 /// Base class method implementation
@@ -424,7 +456,7 @@ void q_progressdialog_on_show_event(void* self, void (*callback)(void*, void*));
 /// @param self QProgressDialog*
 /// @param event QShowEvent*
 ///
-void q_progressdialog_qbase_show_event(void* self, void* event);
+void q_progressdialog_super_show_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#forceShow)
 ///
@@ -441,13 +473,17 @@ void q_progressdialog_force_show(void* self);
 ///
 void q_progressdialog_on_force_show(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_force_show` instead
+///
+#define q_progressdialog_qbase_force_show q_progressdialog_super_force_show
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprogressdialog.html#forceShow)
 ///
 /// Base class method implementation
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_force_show(void* self);
+void q_progressdialog_super_force_show(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3531,6 +3567,10 @@ int32_t q_progressdialog_encode_metric_f(int32_t metric, double value);
 ///
 void q_progressdialog_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_set_visible` instead
+///
+#define q_progressdialog_qbase_set_visible q_progressdialog_super_set_visible
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
@@ -3540,7 +3580,7 @@ void q_progressdialog_set_visible(void* self, bool visible);
 /// @param self QProgressDialog*
 /// @param visible bool
 ///
-void q_progressdialog_qbase_set_visible(void* self, bool visible);
+void q_progressdialog_super_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
@@ -3563,6 +3603,10 @@ void q_progressdialog_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* q_progressdialog_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_minimum_size_hint` instead
+///
+#define q_progressdialog_qbase_minimum_size_hint q_progressdialog_super_minimum_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3571,7 +3615,7 @@ QSize* q_progressdialog_minimum_size_hint(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-QSize* q_progressdialog_qbase_minimum_size_hint(void* self);
+QSize* q_progressdialog_super_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3594,6 +3638,10 @@ void q_progressdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void q_progressdialog_open(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_open` instead
+///
+#define q_progressdialog_qbase_open q_progressdialog_super_open
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3602,7 +3650,7 @@ void q_progressdialog_open(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_open(void* self);
+void q_progressdialog_super_open(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3625,6 +3673,10 @@ void q_progressdialog_on_open(void* self, void (*callback)());
 ///
 int32_t q_progressdialog_exec(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_exec` instead
+///
+#define q_progressdialog_qbase_exec q_progressdialog_super_exec
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
@@ -3633,7 +3685,7 @@ int32_t q_progressdialog_exec(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-int32_t q_progressdialog_qbase_exec(void* self);
+int32_t q_progressdialog_super_exec(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3657,6 +3709,10 @@ void q_progressdialog_on_exec(void* self, int32_t (*callback)());
 ///
 void q_progressdialog_done(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_done` instead
+///
+#define q_progressdialog_qbase_done q_progressdialog_super_done
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
@@ -3666,7 +3722,7 @@ void q_progressdialog_done(void* self, int param1);
 /// @param self QProgressDialog*
 /// @param param1 int
 ///
-void q_progressdialog_qbase_done(void* self, int param1);
+void q_progressdialog_super_done(void* self, int param1);
 
 /// Inherited from QDialog
 ///
@@ -3689,6 +3745,10 @@ void q_progressdialog_on_done(void* self, void (*callback)(void*, int));
 ///
 void q_progressdialog_accept(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_accept` instead
+///
+#define q_progressdialog_qbase_accept q_progressdialog_super_accept
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3697,7 +3757,7 @@ void q_progressdialog_accept(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_accept(void* self);
+void q_progressdialog_super_accept(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3720,6 +3780,10 @@ void q_progressdialog_on_accept(void* self, void (*callback)());
 ///
 void q_progressdialog_reject(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_reject` instead
+///
+#define q_progressdialog_qbase_reject q_progressdialog_super_reject
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#reject)
@@ -3728,7 +3792,7 @@ void q_progressdialog_reject(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_reject(void* self);
+void q_progressdialog_super_reject(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3752,6 +3816,10 @@ void q_progressdialog_on_reject(void* self, void (*callback)());
 ///
 void q_progressdialog_key_press_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_key_press_event` instead
+///
+#define q_progressdialog_qbase_key_press_event q_progressdialog_super_key_press_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
@@ -3761,7 +3829,7 @@ void q_progressdialog_key_press_event(void* self, void* param1);
 /// @param self QProgressDialog*
 /// @param param1 QKeyEvent*
 ///
-void q_progressdialog_qbase_key_press_event(void* self, void* param1);
+void q_progressdialog_super_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3785,6 +3853,10 @@ void q_progressdialog_on_key_press_event(void* self, void (*callback)(void*, voi
 ///
 void q_progressdialog_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_context_menu_event` instead
+///
+#define q_progressdialog_qbase_context_menu_event q_progressdialog_super_context_menu_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
@@ -3794,7 +3866,7 @@ void q_progressdialog_context_menu_event(void* self, void* param1);
 /// @param self QProgressDialog*
 /// @param param1 QContextMenuEvent*
 ///
-void q_progressdialog_qbase_context_menu_event(void* self, void* param1);
+void q_progressdialog_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3819,6 +3891,10 @@ void q_progressdialog_on_context_menu_event(void* self, void (*callback)(void*, 
 ///
 bool q_progressdialog_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_event_filter` instead
+///
+#define q_progressdialog_qbase_event_filter q_progressdialog_super_event_filter
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -3829,7 +3905,7 @@ bool q_progressdialog_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_progressdialog_qbase_event_filter(void* self, void* param1, void* param2);
+bool q_progressdialog_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
@@ -3852,6 +3928,10 @@ void q_progressdialog_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 int32_t q_progressdialog_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_dev_type` instead
+///
+#define q_progressdialog_qbase_dev_type q_progressdialog_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3860,7 +3940,7 @@ int32_t q_progressdialog_dev_type(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-int32_t q_progressdialog_qbase_dev_type(void* self);
+int32_t q_progressdialog_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3884,6 +3964,10 @@ void q_progressdialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 int32_t q_progressdialog_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_height_for_width` instead
+///
+#define q_progressdialog_qbase_height_for_width q_progressdialog_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3893,7 +3977,7 @@ int32_t q_progressdialog_height_for_width(void* self, int param1);
 /// @param self QProgressDialog*
 /// @param param1 int
 ///
-int32_t q_progressdialog_qbase_height_for_width(void* self, int param1);
+int32_t q_progressdialog_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3916,6 +4000,10 @@ void q_progressdialog_on_height_for_width(void* self, int32_t (*callback)(void*,
 ///
 bool q_progressdialog_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_has_height_for_width` instead
+///
+#define q_progressdialog_qbase_has_height_for_width q_progressdialog_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3924,7 +4012,7 @@ bool q_progressdialog_has_height_for_width(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-bool q_progressdialog_qbase_has_height_for_width(void* self);
+bool q_progressdialog_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3947,6 +4035,10 @@ void q_progressdialog_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_progressdialog_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_paint_engine` instead
+///
+#define q_progressdialog_qbase_paint_engine q_progressdialog_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3955,7 +4047,7 @@ QPaintEngine* q_progressdialog_paint_engine(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-QPaintEngine* q_progressdialog_qbase_paint_engine(void* self);
+QPaintEngine* q_progressdialog_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3979,6 +4071,10 @@ void q_progressdialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 bool q_progressdialog_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_event` instead
+///
+#define q_progressdialog_qbase_event q_progressdialog_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -3988,7 +4084,7 @@ bool q_progressdialog_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QEvent*
 ///
-bool q_progressdialog_qbase_event(void* self, void* event);
+bool q_progressdialog_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4012,6 +4108,10 @@ void q_progressdialog_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_progressdialog_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_mouse_press_event` instead
+///
+#define q_progressdialog_qbase_mouse_press_event q_progressdialog_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -4021,7 +4121,7 @@ void q_progressdialog_mouse_press_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QMouseEvent*
 ///
-void q_progressdialog_qbase_mouse_press_event(void* self, void* event);
+void q_progressdialog_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4045,6 +4145,10 @@ void q_progressdialog_on_mouse_press_event(void* self, void (*callback)(void*, v
 ///
 void q_progressdialog_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_mouse_release_event` instead
+///
+#define q_progressdialog_qbase_mouse_release_event q_progressdialog_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -4054,7 +4158,7 @@ void q_progressdialog_mouse_release_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QMouseEvent*
 ///
-void q_progressdialog_qbase_mouse_release_event(void* self, void* event);
+void q_progressdialog_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4078,6 +4182,10 @@ void q_progressdialog_on_mouse_release_event(void* self, void (*callback)(void*,
 ///
 void q_progressdialog_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_mouse_double_click_event` instead
+///
+#define q_progressdialog_qbase_mouse_double_click_event q_progressdialog_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4087,7 +4195,7 @@ void q_progressdialog_mouse_double_click_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QMouseEvent*
 ///
-void q_progressdialog_qbase_mouse_double_click_event(void* self, void* event);
+void q_progressdialog_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4111,6 +4219,10 @@ void q_progressdialog_on_mouse_double_click_event(void* self, void (*callback)(v
 ///
 void q_progressdialog_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_mouse_move_event` instead
+///
+#define q_progressdialog_qbase_mouse_move_event q_progressdialog_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -4120,7 +4232,7 @@ void q_progressdialog_mouse_move_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QMouseEvent*
 ///
-void q_progressdialog_qbase_mouse_move_event(void* self, void* event);
+void q_progressdialog_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4144,6 +4256,10 @@ void q_progressdialog_on_mouse_move_event(void* self, void (*callback)(void*, vo
 ///
 void q_progressdialog_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_wheel_event` instead
+///
+#define q_progressdialog_qbase_wheel_event q_progressdialog_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -4153,7 +4269,7 @@ void q_progressdialog_wheel_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QWheelEvent*
 ///
-void q_progressdialog_qbase_wheel_event(void* self, void* event);
+void q_progressdialog_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4177,6 +4293,10 @@ void q_progressdialog_on_wheel_event(void* self, void (*callback)(void*, void*))
 ///
 void q_progressdialog_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_key_release_event` instead
+///
+#define q_progressdialog_qbase_key_release_event q_progressdialog_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -4186,7 +4306,7 @@ void q_progressdialog_key_release_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QKeyEvent*
 ///
-void q_progressdialog_qbase_key_release_event(void* self, void* event);
+void q_progressdialog_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4210,6 +4330,10 @@ void q_progressdialog_on_key_release_event(void* self, void (*callback)(void*, v
 ///
 void q_progressdialog_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_focus_in_event` instead
+///
+#define q_progressdialog_qbase_focus_in_event q_progressdialog_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4219,7 +4343,7 @@ void q_progressdialog_focus_in_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QFocusEvent*
 ///
-void q_progressdialog_qbase_focus_in_event(void* self, void* event);
+void q_progressdialog_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4243,6 +4367,10 @@ void q_progressdialog_on_focus_in_event(void* self, void (*callback)(void*, void
 ///
 void q_progressdialog_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_focus_out_event` instead
+///
+#define q_progressdialog_qbase_focus_out_event q_progressdialog_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4252,7 +4380,7 @@ void q_progressdialog_focus_out_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QFocusEvent*
 ///
-void q_progressdialog_qbase_focus_out_event(void* self, void* event);
+void q_progressdialog_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4276,6 +4404,10 @@ void q_progressdialog_on_focus_out_event(void* self, void (*callback)(void*, voi
 ///
 void q_progressdialog_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_enter_event` instead
+///
+#define q_progressdialog_qbase_enter_event q_progressdialog_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4285,7 +4417,7 @@ void q_progressdialog_enter_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QEnterEvent*
 ///
-void q_progressdialog_qbase_enter_event(void* self, void* event);
+void q_progressdialog_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4309,6 +4441,10 @@ void q_progressdialog_on_enter_event(void* self, void (*callback)(void*, void*))
 ///
 void q_progressdialog_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_leave_event` instead
+///
+#define q_progressdialog_qbase_leave_event q_progressdialog_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4318,7 +4454,7 @@ void q_progressdialog_leave_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QEvent*
 ///
-void q_progressdialog_qbase_leave_event(void* self, void* event);
+void q_progressdialog_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4342,6 +4478,10 @@ void q_progressdialog_on_leave_event(void* self, void (*callback)(void*, void*))
 ///
 void q_progressdialog_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_paint_event` instead
+///
+#define q_progressdialog_qbase_paint_event q_progressdialog_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4351,7 +4491,7 @@ void q_progressdialog_paint_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QPaintEvent*
 ///
-void q_progressdialog_qbase_paint_event(void* self, void* event);
+void q_progressdialog_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4375,6 +4515,10 @@ void q_progressdialog_on_paint_event(void* self, void (*callback)(void*, void*))
 ///
 void q_progressdialog_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_move_event` instead
+///
+#define q_progressdialog_qbase_move_event q_progressdialog_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4384,7 +4528,7 @@ void q_progressdialog_move_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QMoveEvent*
 ///
-void q_progressdialog_qbase_move_event(void* self, void* event);
+void q_progressdialog_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4408,6 +4552,10 @@ void q_progressdialog_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_progressdialog_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_tablet_event` instead
+///
+#define q_progressdialog_qbase_tablet_event q_progressdialog_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4417,7 +4565,7 @@ void q_progressdialog_tablet_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QTabletEvent*
 ///
-void q_progressdialog_qbase_tablet_event(void* self, void* event);
+void q_progressdialog_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4441,6 +4589,10 @@ void q_progressdialog_on_tablet_event(void* self, void (*callback)(void*, void*)
 ///
 void q_progressdialog_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_action_event` instead
+///
+#define q_progressdialog_qbase_action_event q_progressdialog_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4450,7 +4602,7 @@ void q_progressdialog_action_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QActionEvent*
 ///
-void q_progressdialog_qbase_action_event(void* self, void* event);
+void q_progressdialog_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4474,6 +4626,10 @@ void q_progressdialog_on_action_event(void* self, void (*callback)(void*, void*)
 ///
 void q_progressdialog_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_drag_enter_event` instead
+///
+#define q_progressdialog_qbase_drag_enter_event q_progressdialog_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4483,7 +4639,7 @@ void q_progressdialog_drag_enter_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QDragEnterEvent*
 ///
-void q_progressdialog_qbase_drag_enter_event(void* self, void* event);
+void q_progressdialog_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4507,6 +4663,10 @@ void q_progressdialog_on_drag_enter_event(void* self, void (*callback)(void*, vo
 ///
 void q_progressdialog_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_drag_move_event` instead
+///
+#define q_progressdialog_qbase_drag_move_event q_progressdialog_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4516,7 +4676,7 @@ void q_progressdialog_drag_move_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QDragMoveEvent*
 ///
-void q_progressdialog_qbase_drag_move_event(void* self, void* event);
+void q_progressdialog_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4540,6 +4700,10 @@ void q_progressdialog_on_drag_move_event(void* self, void (*callback)(void*, voi
 ///
 void q_progressdialog_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_drag_leave_event` instead
+///
+#define q_progressdialog_qbase_drag_leave_event q_progressdialog_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4549,7 +4713,7 @@ void q_progressdialog_drag_leave_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QDragLeaveEvent*
 ///
-void q_progressdialog_qbase_drag_leave_event(void* self, void* event);
+void q_progressdialog_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4573,6 +4737,10 @@ void q_progressdialog_on_drag_leave_event(void* self, void (*callback)(void*, vo
 ///
 void q_progressdialog_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_drop_event` instead
+///
+#define q_progressdialog_qbase_drop_event q_progressdialog_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4582,7 +4750,7 @@ void q_progressdialog_drop_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QDropEvent*
 ///
-void q_progressdialog_qbase_drop_event(void* self, void* event);
+void q_progressdialog_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4606,6 +4774,10 @@ void q_progressdialog_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void q_progressdialog_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_hide_event` instead
+///
+#define q_progressdialog_qbase_hide_event q_progressdialog_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4615,7 +4787,7 @@ void q_progressdialog_hide_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QHideEvent*
 ///
-void q_progressdialog_qbase_hide_event(void* self, void* event);
+void q_progressdialog_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4641,6 +4813,10 @@ void q_progressdialog_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_progressdialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_native_event` instead
+///
+#define q_progressdialog_qbase_native_event q_progressdialog_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4652,7 +4828,7 @@ bool q_progressdialog_native_event(void* self, char* eventType, void* message, i
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_progressdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_progressdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4676,6 +4852,10 @@ void q_progressdialog_on_native_event(void* self, bool (*callback)(void*, libqt_
 ///
 int32_t q_progressdialog_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_metric` instead
+///
+#define q_progressdialog_qbase_metric q_progressdialog_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4685,7 +4865,7 @@ int32_t q_progressdialog_metric(void* self, int32_t param1);
 /// @param self QProgressDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_progressdialog_qbase_metric(void* self, int32_t param1);
+int32_t q_progressdialog_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4709,6 +4889,10 @@ void q_progressdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t))
 ///
 void q_progressdialog_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_init_painter` instead
+///
+#define q_progressdialog_qbase_init_painter q_progressdialog_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4718,7 +4902,7 @@ void q_progressdialog_init_painter(void* self, void* painter);
 /// @param self QProgressDialog*
 /// @param painter QPainter*
 ///
-void q_progressdialog_qbase_init_painter(void* self, void* painter);
+void q_progressdialog_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4742,6 +4926,10 @@ void q_progressdialog_on_init_painter(void* self, void (*callback)(void*, void*)
 ///
 QPaintDevice* q_progressdialog_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_redirected` instead
+///
+#define q_progressdialog_qbase_redirected q_progressdialog_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4751,7 +4939,7 @@ QPaintDevice* q_progressdialog_redirected(void* self, void* offset);
 /// @param self QProgressDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_progressdialog_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_progressdialog_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4774,6 +4962,10 @@ void q_progressdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*,
 ///
 QPainter* q_progressdialog_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_shared_painter` instead
+///
+#define q_progressdialog_qbase_shared_painter q_progressdialog_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4782,7 +4974,7 @@ QPainter* q_progressdialog_shared_painter(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-QPainter* q_progressdialog_qbase_shared_painter(void* self);
+QPainter* q_progressdialog_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4806,6 +4998,10 @@ void q_progressdialog_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_progressdialog_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_input_method_event` instead
+///
+#define q_progressdialog_qbase_input_method_event q_progressdialog_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4815,7 +5011,7 @@ void q_progressdialog_input_method_event(void* self, void* param1);
 /// @param self QProgressDialog*
 /// @param param1 QInputMethodEvent*
 ///
-void q_progressdialog_qbase_input_method_event(void* self, void* param1);
+void q_progressdialog_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4839,6 +5035,10 @@ void q_progressdialog_on_input_method_event(void* self, void (*callback)(void*, 
 ///
 QVariant* q_progressdialog_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_input_method_query` instead
+///
+#define q_progressdialog_qbase_input_method_query q_progressdialog_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4848,7 +5048,7 @@ QVariant* q_progressdialog_input_method_query(void* self, int32_t param1);
 /// @param self QProgressDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_progressdialog_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_progressdialog_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4872,6 +5072,10 @@ void q_progressdialog_on_input_method_query(void* self, QVariant* (*callback)(vo
 ///
 bool q_progressdialog_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_focus_next_prev_child` instead
+///
+#define q_progressdialog_qbase_focus_next_prev_child q_progressdialog_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4881,7 +5085,7 @@ bool q_progressdialog_focus_next_prev_child(void* self, bool next);
 /// @param self QProgressDialog*
 /// @param next bool
 ///
-bool q_progressdialog_qbase_focus_next_prev_child(void* self, bool next);
+bool q_progressdialog_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4905,6 +5109,10 @@ void q_progressdialog_on_focus_next_prev_child(void* self, bool (*callback)(void
 ///
 void q_progressdialog_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_timer_event` instead
+///
+#define q_progressdialog_qbase_timer_event q_progressdialog_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4914,7 +5122,7 @@ void q_progressdialog_timer_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QTimerEvent*
 ///
-void q_progressdialog_qbase_timer_event(void* self, void* event);
+void q_progressdialog_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4938,6 +5146,10 @@ void q_progressdialog_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 void q_progressdialog_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_child_event` instead
+///
+#define q_progressdialog_qbase_child_event q_progressdialog_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4947,7 +5159,7 @@ void q_progressdialog_child_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QChildEvent*
 ///
-void q_progressdialog_qbase_child_event(void* self, void* event);
+void q_progressdialog_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4971,6 +5183,10 @@ void q_progressdialog_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_progressdialog_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_custom_event` instead
+///
+#define q_progressdialog_qbase_custom_event q_progressdialog_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4980,7 +5196,7 @@ void q_progressdialog_custom_event(void* self, void* event);
 /// @param self QProgressDialog*
 /// @param event QEvent*
 ///
-void q_progressdialog_qbase_custom_event(void* self, void* event);
+void q_progressdialog_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5004,6 +5220,10 @@ void q_progressdialog_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void q_progressdialog_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_connect_notify` instead
+///
+#define q_progressdialog_qbase_connect_notify q_progressdialog_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5013,7 +5233,7 @@ void q_progressdialog_connect_notify(void* self, void* signal);
 /// @param self QProgressDialog*
 /// @param signal QMetaMethod*
 ///
-void q_progressdialog_qbase_connect_notify(void* self, void* signal);
+void q_progressdialog_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5037,6 +5257,10 @@ void q_progressdialog_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_progressdialog_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_disconnect_notify` instead
+///
+#define q_progressdialog_qbase_disconnect_notify q_progressdialog_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5046,7 +5270,7 @@ void q_progressdialog_disconnect_notify(void* self, void* signal);
 /// @param self QProgressDialog*
 /// @param signal QMetaMethod*
 ///
-void q_progressdialog_qbase_disconnect_notify(void* self, void* signal);
+void q_progressdialog_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5070,6 +5294,10 @@ void q_progressdialog_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 void q_progressdialog_adjust_position(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_adjust_position` instead
+///
+#define q_progressdialog_qbase_adjust_position q_progressdialog_super_adjust_position
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -5079,7 +5307,7 @@ void q_progressdialog_adjust_position(void* self, void* param1);
 /// @param self QProgressDialog*
 /// @param param1 QWidget*
 ///
-void q_progressdialog_qbase_adjust_position(void* self, void* param1);
+void q_progressdialog_super_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -5102,6 +5330,10 @@ void q_progressdialog_on_adjust_position(void* self, void (*callback)(void*, voi
 ///
 void q_progressdialog_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_update_micro_focus` instead
+///
+#define q_progressdialog_qbase_update_micro_focus q_progressdialog_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5110,7 +5342,7 @@ void q_progressdialog_update_micro_focus(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_update_micro_focus(void* self);
+void q_progressdialog_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5133,6 +5365,10 @@ void q_progressdialog_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_progressdialog_create(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_create` instead
+///
+#define q_progressdialog_qbase_create q_progressdialog_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5141,7 +5377,7 @@ void q_progressdialog_create(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_create(void* self);
+void q_progressdialog_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5164,6 +5400,10 @@ void q_progressdialog_on_create(void* self, void (*callback)());
 ///
 void q_progressdialog_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_destroy` instead
+///
+#define q_progressdialog_qbase_destroy q_progressdialog_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5172,7 +5412,7 @@ void q_progressdialog_destroy(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-void q_progressdialog_qbase_destroy(void* self);
+void q_progressdialog_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5195,6 +5435,10 @@ void q_progressdialog_on_destroy(void* self, void (*callback)());
 ///
 bool q_progressdialog_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_focus_next_child` instead
+///
+#define q_progressdialog_qbase_focus_next_child q_progressdialog_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5203,7 +5447,7 @@ bool q_progressdialog_focus_next_child(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-bool q_progressdialog_qbase_focus_next_child(void* self);
+bool q_progressdialog_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5226,6 +5470,10 @@ void q_progressdialog_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_progressdialog_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_focus_previous_child` instead
+///
+#define q_progressdialog_qbase_focus_previous_child q_progressdialog_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5234,7 +5482,7 @@ bool q_progressdialog_focus_previous_child(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-bool q_progressdialog_qbase_focus_previous_child(void* self);
+bool q_progressdialog_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5257,6 +5505,10 @@ void q_progressdialog_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_progressdialog_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_sender` instead
+///
+#define q_progressdialog_qbase_sender q_progressdialog_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5265,7 +5517,7 @@ QObject* q_progressdialog_sender(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-QObject* q_progressdialog_qbase_sender(void* self);
+QObject* q_progressdialog_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5288,6 +5540,10 @@ void q_progressdialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_progressdialog_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_sender_signal_index` instead
+///
+#define q_progressdialog_qbase_sender_signal_index q_progressdialog_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5296,7 +5552,7 @@ int32_t q_progressdialog_sender_signal_index(void* self);
 ///
 /// @param self QProgressDialog*
 ///
-int32_t q_progressdialog_qbase_sender_signal_index(void* self);
+int32_t q_progressdialog_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5320,6 +5576,10 @@ void q_progressdialog_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_progressdialog_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_receivers` instead
+///
+#define q_progressdialog_qbase_receivers q_progressdialog_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5329,7 +5589,7 @@ int32_t q_progressdialog_receivers(void* self, const char* signal);
 /// @param self QProgressDialog*
 /// @param signal const char*
 ///
-int32_t q_progressdialog_qbase_receivers(void* self, const char* signal);
+int32_t q_progressdialog_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5353,6 +5613,10 @@ void q_progressdialog_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool q_progressdialog_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_is_signal_connected` instead
+///
+#define q_progressdialog_qbase_is_signal_connected q_progressdialog_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5362,7 +5626,7 @@ bool q_progressdialog_is_signal_connected(void* self, void* signal);
 /// @param self QProgressDialog*
 /// @param signal QMetaMethod*
 ///
-bool q_progressdialog_qbase_is_signal_connected(void* self, void* signal);
+bool q_progressdialog_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5387,6 +5651,10 @@ void q_progressdialog_on_is_signal_connected(void* self, bool (*callback)(void*,
 ///
 double q_progressdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_progressdialog_super_get_decoded_metric_f` instead
+///
+#define q_progressdialog_qbase_get_decoded_metric_f q_progressdialog_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5397,7 +5665,7 @@ double q_progressdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_progressdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_progressdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

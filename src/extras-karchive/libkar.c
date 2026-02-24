@@ -33,8 +33,8 @@ void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*,
     KAr_OnDoPrepareWriting((KAr*)self, (intptr_t)callback);
 }
 
-bool k_ar_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KAr_QBaseDoPrepareWriting((KAr*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_ar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KAr_SuperDoPrepareWriting((KAr*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_ar_do_finish_writing(void* self, long long size) {
@@ -45,8 +45,8 @@ void k_ar_on_do_finish_writing(void* self, bool (*callback)(void*, long long)) {
     KAr_OnDoFinishWriting((KAr*)self, (intptr_t)callback);
 }
 
-bool k_ar_qbase_do_finish_writing(void* self, long long size) {
-    return KAr_QBaseDoFinishWriting((KAr*)self, size);
+bool k_ar_super_do_finish_writing(void* self, long long size) {
+    return KAr_SuperDoFinishWriting((KAr*)self, size);
 }
 
 bool k_ar_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -57,8 +57,8 @@ void k_ar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const
     KAr_OnDoWriteDir((KAr*)self, (intptr_t)callback);
 }
 
-bool k_ar_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KAr_QBaseDoWriteDir((KAr*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_ar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KAr_SuperDoWriteDir((KAr*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_ar_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -69,8 +69,8 @@ void k_ar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, 
     KAr_OnDoWriteSymLink((KAr*)self, (intptr_t)callback);
 }
 
-bool k_ar_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KAr_QBaseDoWriteSymLink((KAr*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_ar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KAr_SuperDoWriteSymLink((KAr*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_ar_open_archive(void* self, int32_t mode) {
@@ -81,8 +81,8 @@ void k_ar_on_open_archive(void* self, bool (*callback)(void*, int32_t)) {
     KAr_OnOpenArchive((KAr*)self, (intptr_t)callback);
 }
 
-bool k_ar_qbase_open_archive(void* self, int32_t mode) {
-    return KAr_QBaseOpenArchive((KAr*)self, mode);
+bool k_ar_super_open_archive(void* self, int32_t mode) {
+    return KAr_SuperOpenArchive((KAr*)self, mode);
 }
 
 bool k_ar_close_archive(void* self) {
@@ -93,8 +93,8 @@ void k_ar_on_close_archive(void* self, bool (*callback)()) {
     KAr_OnCloseArchive((KAr*)self, (intptr_t)callback);
 }
 
-bool k_ar_qbase_close_archive(void* self) {
-    return KAr_QBaseCloseArchive((KAr*)self);
+bool k_ar_super_close_archive(void* self) {
+    return KAr_SuperCloseArchive((KAr*)self);
 }
 
 void k_ar_virtual_hook(void* self, int id, void* data) {
@@ -105,8 +105,8 @@ void k_ar_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
     KAr_OnVirtualHook((KAr*)self, (intptr_t)callback);
 }
 
-void k_ar_qbase_virtual_hook(void* self, int id, void* data) {
-    KAr_QBaseVirtualHook((KAr*)self, id, data);
+void k_ar_super_virtual_hook(void* self, int id, void* data) {
+    KAr_SuperVirtualHook((KAr*)self, id, data);
 }
 
 const char* k_ar_tr2(const char* sourceText, const char* disambiguation) {
@@ -281,8 +281,8 @@ bool k_ar_open(void* self, int32_t mode) {
     return KAr_Open((KAr*)self, mode);
 }
 
-bool k_ar_qbase_open(void* self, int32_t mode) {
-    return KAr_QBaseOpen((KAr*)self, mode);
+bool k_ar_super_open(void* self, int32_t mode) {
+    return KAr_SuperOpen((KAr*)self, mode);
 }
 
 void k_ar_on_open(void* self, bool (*callback)(void*, int32_t)) {
@@ -293,8 +293,8 @@ bool k_ar_close(void* self) {
     return KAr_Close((KAr*)self);
 }
 
-bool k_ar_qbase_close(void* self) {
-    return KAr_QBaseClose((KAr*)self);
+bool k_ar_super_close(void* self) {
+    return KAr_SuperClose((KAr*)self);
 }
 
 void k_ar_on_close(void* self, bool (*callback)()) {
@@ -305,8 +305,8 @@ KArchiveDirectory* k_ar_root_dir(void* self) {
     return KAr_RootDir((KAr*)self);
 }
 
-KArchiveDirectory* k_ar_qbase_root_dir(void* self) {
-    return KAr_QBaseRootDir((KAr*)self);
+KArchiveDirectory* k_ar_super_root_dir(void* self) {
+    return KAr_SuperRootDir((KAr*)self);
 }
 
 void k_ar_on_root_dir(void* self, KArchiveDirectory* (*callback)()) {
@@ -317,8 +317,8 @@ bool k_ar_do_write_data(void* self, const char* data, long long size) {
     return KAr_DoWriteData((KAr*)self, data, size);
 }
 
-bool k_ar_qbase_do_write_data(void* self, const char* data, long long size) {
-    return KAr_QBaseDoWriteData((KAr*)self, data, size);
+bool k_ar_super_do_write_data(void* self, const char* data, long long size) {
+    return KAr_SuperDoWriteData((KAr*)self, data, size);
 }
 
 void k_ar_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long)) {
@@ -329,8 +329,8 @@ bool k_ar_create_device(void* self, int32_t mode) {
     return KAr_CreateDevice((KAr*)self, mode);
 }
 
-bool k_ar_qbase_create_device(void* self, int32_t mode) {
-    return KAr_QBaseCreateDevice((KAr*)self, mode);
+bool k_ar_super_create_device(void* self, int32_t mode) {
+    return KAr_SuperCreateDevice((KAr*)self, mode);
 }
 
 void k_ar_on_create_device(void* self, bool (*callback)(void*, int32_t)) {
@@ -341,8 +341,8 @@ void k_ar_set_error_string(void* self, const char* errorStr) {
     KAr_SetErrorString((KAr*)self, qstring(errorStr));
 }
 
-void k_ar_qbase_set_error_string(void* self, const char* errorStr) {
-    KAr_QBaseSetErrorString((KAr*)self, qstring(errorStr));
+void k_ar_super_set_error_string(void* self, const char* errorStr) {
+    KAr_SuperSetErrorString((KAr*)self, qstring(errorStr));
 }
 
 void k_ar_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -353,8 +353,8 @@ KArchiveDirectory* k_ar_find_or_create(void* self, const char* path) {
     return KAr_FindOrCreate((KAr*)self, qstring(path));
 }
 
-KArchiveDirectory* k_ar_qbase_find_or_create(void* self, const char* path) {
-    return KAr_QBaseFindOrCreate((KAr*)self, qstring(path));
+KArchiveDirectory* k_ar_super_find_or_create(void* self, const char* path) {
+    return KAr_SuperFindOrCreate((KAr*)self, qstring(path));
 }
 
 void k_ar_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*)) {
@@ -365,8 +365,8 @@ void k_ar_set_device(void* self, void* dev) {
     KAr_SetDevice((KAr*)self, (QIODevice*)dev);
 }
 
-void k_ar_qbase_set_device(void* self, void* dev) {
-    KAr_QBaseSetDevice((KAr*)self, (QIODevice*)dev);
+void k_ar_super_set_device(void* self, void* dev) {
+    KAr_SuperSetDevice((KAr*)self, (QIODevice*)dev);
 }
 
 void k_ar_on_set_device(void* self, void (*callback)(void*, void*)) {
@@ -377,8 +377,8 @@ void k_ar_set_root_dir(void* self, void* rootDir) {
     KAr_SetRootDir((KAr*)self, (KArchiveDirectory*)rootDir);
 }
 
-void k_ar_qbase_set_root_dir(void* self, void* rootDir) {
-    KAr_QBaseSetRootDir((KAr*)self, (KArchiveDirectory*)rootDir);
+void k_ar_super_set_root_dir(void* self, void* rootDir) {
+    KAr_SuperSetRootDir((KAr*)self, (KArchiveDirectory*)rootDir);
 }
 
 void k_ar_on_set_root_dir(void* self, void (*callback)(void*, void*)) {

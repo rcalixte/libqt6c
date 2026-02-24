@@ -71,8 +71,8 @@ void q_dbuspendingcallwatcher_on_meta_object(void* self, const QMetaObject* (*ca
     QDBusPendingCallWatcher_OnMetaObject((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dbuspendingcallwatcher_qbase_meta_object(void* self) {
-    return QDBusPendingCallWatcher_QBaseMetaObject((QDBusPendingCallWatcher*)self);
+const QMetaObject* q_dbuspendingcallwatcher_super_meta_object(void* self) {
+    return QDBusPendingCallWatcher_SuperMetaObject((QDBusPendingCallWatcher*)self);
 }
 
 void* q_dbuspendingcallwatcher_metacast(void* self, const char* param1) {
@@ -83,8 +83,8 @@ void q_dbuspendingcallwatcher_on_metacast(void* self, void* (*callback)(void*, c
     QDBusPendingCallWatcher_OnMetacast((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-void* q_dbuspendingcallwatcher_qbase_metacast(void* self, const char* param1) {
-    return QDBusPendingCallWatcher_QBaseMetacast((QDBusPendingCallWatcher*)self, param1);
+void* q_dbuspendingcallwatcher_super_metacast(void* self, const char* param1) {
+    return QDBusPendingCallWatcher_SuperMetacast((QDBusPendingCallWatcher*)self, param1);
 }
 
 int32_t q_dbuspendingcallwatcher_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -95,8 +95,8 @@ void q_dbuspendingcallwatcher_on_metacall(void* self, int32_t (*callback)(void*,
     QDBusPendingCallWatcher_OnMetacall((QDBusPendingCallWatcher*)self, (intptr_t)callback);
 }
 
-int32_t q_dbuspendingcallwatcher_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDBusPendingCallWatcher_QBaseMetacall((QDBusPendingCallWatcher*)self, param1, param2, param3);
+int32_t q_dbuspendingcallwatcher_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDBusPendingCallWatcher_SuperMetacall((QDBusPendingCallWatcher*)self, param1, param2, param3);
 }
 
 const char* q_dbuspendingcallwatcher_tr(const char* s) {
@@ -391,8 +391,8 @@ bool q_dbuspendingcallwatcher_event(void* self, void* event) {
     return QDBusPendingCallWatcher_Event((QDBusPendingCallWatcher*)self, (QEvent*)event);
 }
 
-bool q_dbuspendingcallwatcher_qbase_event(void* self, void* event) {
-    return QDBusPendingCallWatcher_QBaseEvent((QDBusPendingCallWatcher*)self, (QEvent*)event);
+bool q_dbuspendingcallwatcher_super_event(void* self, void* event) {
+    return QDBusPendingCallWatcher_SuperEvent((QDBusPendingCallWatcher*)self, (QEvent*)event);
 }
 
 void q_dbuspendingcallwatcher_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ bool q_dbuspendingcallwatcher_event_filter(void* self, void* watched, void* even
     return QDBusPendingCallWatcher_EventFilter((QDBusPendingCallWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_dbuspendingcallwatcher_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDBusPendingCallWatcher_QBaseEventFilter((QDBusPendingCallWatcher*)self, (QObject*)watched, (QEvent*)event);
+bool q_dbuspendingcallwatcher_super_event_filter(void* self, void* watched, void* event) {
+    return QDBusPendingCallWatcher_SuperEventFilter((QDBusPendingCallWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_dbuspendingcallwatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -415,8 +415,8 @@ void q_dbuspendingcallwatcher_timer_event(void* self, void* event) {
     QDBusPendingCallWatcher_TimerEvent((QDBusPendingCallWatcher*)self, (QTimerEvent*)event);
 }
 
-void q_dbuspendingcallwatcher_qbase_timer_event(void* self, void* event) {
-    QDBusPendingCallWatcher_QBaseTimerEvent((QDBusPendingCallWatcher*)self, (QTimerEvent*)event);
+void q_dbuspendingcallwatcher_super_timer_event(void* self, void* event) {
+    QDBusPendingCallWatcher_SuperTimerEvent((QDBusPendingCallWatcher*)self, (QTimerEvent*)event);
 }
 
 void q_dbuspendingcallwatcher_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -427,8 +427,8 @@ void q_dbuspendingcallwatcher_child_event(void* self, void* event) {
     QDBusPendingCallWatcher_ChildEvent((QDBusPendingCallWatcher*)self, (QChildEvent*)event);
 }
 
-void q_dbuspendingcallwatcher_qbase_child_event(void* self, void* event) {
-    QDBusPendingCallWatcher_QBaseChildEvent((QDBusPendingCallWatcher*)self, (QChildEvent*)event);
+void q_dbuspendingcallwatcher_super_child_event(void* self, void* event) {
+    QDBusPendingCallWatcher_SuperChildEvent((QDBusPendingCallWatcher*)self, (QChildEvent*)event);
 }
 
 void q_dbuspendingcallwatcher_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -439,8 +439,8 @@ void q_dbuspendingcallwatcher_custom_event(void* self, void* event) {
     QDBusPendingCallWatcher_CustomEvent((QDBusPendingCallWatcher*)self, (QEvent*)event);
 }
 
-void q_dbuspendingcallwatcher_qbase_custom_event(void* self, void* event) {
-    QDBusPendingCallWatcher_QBaseCustomEvent((QDBusPendingCallWatcher*)self, (QEvent*)event);
+void q_dbuspendingcallwatcher_super_custom_event(void* self, void* event) {
+    QDBusPendingCallWatcher_SuperCustomEvent((QDBusPendingCallWatcher*)self, (QEvent*)event);
 }
 
 void q_dbuspendingcallwatcher_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -451,8 +451,8 @@ void q_dbuspendingcallwatcher_connect_notify(void* self, void* signal) {
     QDBusPendingCallWatcher_ConnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbuspendingcallwatcher_qbase_connect_notify(void* self, void* signal) {
-    QDBusPendingCallWatcher_QBaseConnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
+void q_dbuspendingcallwatcher_super_connect_notify(void* self, void* signal) {
+    QDBusPendingCallWatcher_SuperConnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_dbuspendingcallwatcher_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -463,8 +463,8 @@ void q_dbuspendingcallwatcher_disconnect_notify(void* self, void* signal) {
     QDBusPendingCallWatcher_DisconnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbuspendingcallwatcher_qbase_disconnect_notify(void* self, void* signal) {
-    QDBusPendingCallWatcher_QBaseDisconnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
+void q_dbuspendingcallwatcher_super_disconnect_notify(void* self, void* signal) {
+    QDBusPendingCallWatcher_SuperDisconnectNotify((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_dbuspendingcallwatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -475,8 +475,8 @@ QObject* q_dbuspendingcallwatcher_sender(void* self) {
     return QDBusPendingCallWatcher_Sender((QDBusPendingCallWatcher*)self);
 }
 
-QObject* q_dbuspendingcallwatcher_qbase_sender(void* self) {
-    return QDBusPendingCallWatcher_QBaseSender((QDBusPendingCallWatcher*)self);
+QObject* q_dbuspendingcallwatcher_super_sender(void* self) {
+    return QDBusPendingCallWatcher_SuperSender((QDBusPendingCallWatcher*)self);
 }
 
 void q_dbuspendingcallwatcher_on_sender(void* self, QObject* (*callback)()) {
@@ -487,8 +487,8 @@ int32_t q_dbuspendingcallwatcher_sender_signal_index(void* self) {
     return QDBusPendingCallWatcher_SenderSignalIndex((QDBusPendingCallWatcher*)self);
 }
 
-int32_t q_dbuspendingcallwatcher_qbase_sender_signal_index(void* self) {
-    return QDBusPendingCallWatcher_QBaseSenderSignalIndex((QDBusPendingCallWatcher*)self);
+int32_t q_dbuspendingcallwatcher_super_sender_signal_index(void* self) {
+    return QDBusPendingCallWatcher_SuperSenderSignalIndex((QDBusPendingCallWatcher*)self);
 }
 
 void q_dbuspendingcallwatcher_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -499,8 +499,8 @@ int32_t q_dbuspendingcallwatcher_receivers(void* self, const char* signal) {
     return QDBusPendingCallWatcher_Receivers((QDBusPendingCallWatcher*)self, signal);
 }
 
-int32_t q_dbuspendingcallwatcher_qbase_receivers(void* self, const char* signal) {
-    return QDBusPendingCallWatcher_QBaseReceivers((QDBusPendingCallWatcher*)self, signal);
+int32_t q_dbuspendingcallwatcher_super_receivers(void* self, const char* signal) {
+    return QDBusPendingCallWatcher_SuperReceivers((QDBusPendingCallWatcher*)self, signal);
 }
 
 void q_dbuspendingcallwatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -511,8 +511,8 @@ bool q_dbuspendingcallwatcher_is_signal_connected(void* self, void* signal) {
     return QDBusPendingCallWatcher_IsSignalConnected((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
-bool q_dbuspendingcallwatcher_qbase_is_signal_connected(void* self, void* signal) {
-    return QDBusPendingCallWatcher_QBaseIsSignalConnected((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
+bool q_dbuspendingcallwatcher_super_is_signal_connected(void* self, void* signal) {
+    return QDBusPendingCallWatcher_SuperIsSignalConnected((QDBusPendingCallWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_dbuspendingcallwatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

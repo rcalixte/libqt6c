@@ -30,8 +30,8 @@ void q_errormessage_on_meta_object(void* self, const QMetaObject* (*callback)())
     QErrorMessage_OnMetaObject((QErrorMessage*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_errormessage_qbase_meta_object(void* self) {
-    return QErrorMessage_QBaseMetaObject((QErrorMessage*)self);
+const QMetaObject* q_errormessage_super_meta_object(void* self) {
+    return QErrorMessage_SuperMetaObject((QErrorMessage*)self);
 }
 
 void* q_errormessage_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void q_errormessage_on_metacast(void* self, void* (*callback)(void*, const char*
     QErrorMessage_OnMetacast((QErrorMessage*)self, (intptr_t)callback);
 }
 
-void* q_errormessage_qbase_metacast(void* self, const char* param1) {
-    return QErrorMessage_QBaseMetacast((QErrorMessage*)self, param1);
+void* q_errormessage_super_metacast(void* self, const char* param1) {
+    return QErrorMessage_SuperMetacast((QErrorMessage*)self, param1);
 }
 
 int32_t q_errormessage_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void q_errormessage_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QErrorMessage_OnMetacall((QErrorMessage*)self, (intptr_t)callback);
 }
 
-int32_t q_errormessage_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QErrorMessage_QBaseMetacall((QErrorMessage*)self, param1, param2, param3);
+int32_t q_errormessage_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QErrorMessage_SuperMetacall((QErrorMessage*)self, param1, param2, param3);
 }
 
 const char* q_errormessage_tr(const char* s) {
@@ -85,8 +85,8 @@ void q_errormessage_on_done(void* self, void (*callback)(void*, int)) {
     QErrorMessage_OnDone((QErrorMessage*)self, (intptr_t)callback);
 }
 
-void q_errormessage_qbase_done(void* self, int param1) {
-    QErrorMessage_QBaseDone((QErrorMessage*)self, param1);
+void q_errormessage_super_done(void* self, int param1) {
+    QErrorMessage_SuperDone((QErrorMessage*)self, param1);
 }
 
 void q_errormessage_change_event(void* self, void* e) {
@@ -97,8 +97,8 @@ void q_errormessage_on_change_event(void* self, void (*callback)(void*, void*)) 
     QErrorMessage_OnChangeEvent((QErrorMessage*)self, (intptr_t)callback);
 }
 
-void q_errormessage_qbase_change_event(void* self, void* e) {
-    QErrorMessage_QBaseChangeEvent((QErrorMessage*)self, (QEvent*)e);
+void q_errormessage_super_change_event(void* self, void* e) {
+    QErrorMessage_SuperChangeEvent((QErrorMessage*)self, (QEvent*)e);
 }
 
 const char* q_errormessage_tr2(const char* s, const char* c) {
@@ -1544,8 +1544,8 @@ void q_errormessage_set_visible(void* self, bool visible) {
     QErrorMessage_SetVisible((QErrorMessage*)self, visible);
 }
 
-void q_errormessage_qbase_set_visible(void* self, bool visible) {
-    QErrorMessage_QBaseSetVisible((QErrorMessage*)self, visible);
+void q_errormessage_super_set_visible(void* self, bool visible) {
+    QErrorMessage_SuperSetVisible((QErrorMessage*)self, visible);
 }
 
 void q_errormessage_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1556,8 +1556,8 @@ QSize* q_errormessage_size_hint(void* self) {
     return QErrorMessage_SizeHint((QErrorMessage*)self);
 }
 
-QSize* q_errormessage_qbase_size_hint(void* self) {
-    return QErrorMessage_QBaseSizeHint((QErrorMessage*)self);
+QSize* q_errormessage_super_size_hint(void* self) {
+    return QErrorMessage_SuperSizeHint((QErrorMessage*)self);
 }
 
 void q_errormessage_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1568,8 +1568,8 @@ QSize* q_errormessage_minimum_size_hint(void* self) {
     return QErrorMessage_MinimumSizeHint((QErrorMessage*)self);
 }
 
-QSize* q_errormessage_qbase_minimum_size_hint(void* self) {
-    return QErrorMessage_QBaseMinimumSizeHint((QErrorMessage*)self);
+QSize* q_errormessage_super_minimum_size_hint(void* self) {
+    return QErrorMessage_SuperMinimumSizeHint((QErrorMessage*)self);
 }
 
 void q_errormessage_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1580,8 +1580,8 @@ void q_errormessage_open(void* self) {
     QErrorMessage_Open((QErrorMessage*)self);
 }
 
-void q_errormessage_qbase_open(void* self) {
-    QErrorMessage_QBaseOpen((QErrorMessage*)self);
+void q_errormessage_super_open(void* self) {
+    QErrorMessage_SuperOpen((QErrorMessage*)self);
 }
 
 void q_errormessage_on_open(void* self, void (*callback)()) {
@@ -1592,8 +1592,8 @@ int32_t q_errormessage_exec(void* self) {
     return QErrorMessage_Exec((QErrorMessage*)self);
 }
 
-int32_t q_errormessage_qbase_exec(void* self) {
-    return QErrorMessage_QBaseExec((QErrorMessage*)self);
+int32_t q_errormessage_super_exec(void* self) {
+    return QErrorMessage_SuperExec((QErrorMessage*)self);
 }
 
 void q_errormessage_on_exec(void* self, int32_t (*callback)()) {
@@ -1604,8 +1604,8 @@ void q_errormessage_accept(void* self) {
     QErrorMessage_Accept((QErrorMessage*)self);
 }
 
-void q_errormessage_qbase_accept(void* self) {
-    QErrorMessage_QBaseAccept((QErrorMessage*)self);
+void q_errormessage_super_accept(void* self) {
+    QErrorMessage_SuperAccept((QErrorMessage*)self);
 }
 
 void q_errormessage_on_accept(void* self, void (*callback)()) {
@@ -1616,8 +1616,8 @@ void q_errormessage_reject(void* self) {
     QErrorMessage_Reject((QErrorMessage*)self);
 }
 
-void q_errormessage_qbase_reject(void* self) {
-    QErrorMessage_QBaseReject((QErrorMessage*)self);
+void q_errormessage_super_reject(void* self) {
+    QErrorMessage_SuperReject((QErrorMessage*)self);
 }
 
 void q_errormessage_on_reject(void* self, void (*callback)()) {
@@ -1628,8 +1628,8 @@ void q_errormessage_key_press_event(void* self, void* param1) {
     QErrorMessage_KeyPressEvent((QErrorMessage*)self, (QKeyEvent*)param1);
 }
 
-void q_errormessage_qbase_key_press_event(void* self, void* param1) {
-    QErrorMessage_QBaseKeyPressEvent((QErrorMessage*)self, (QKeyEvent*)param1);
+void q_errormessage_super_key_press_event(void* self, void* param1) {
+    QErrorMessage_SuperKeyPressEvent((QErrorMessage*)self, (QKeyEvent*)param1);
 }
 
 void q_errormessage_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1640,8 +1640,8 @@ void q_errormessage_close_event(void* self, void* param1) {
     QErrorMessage_CloseEvent((QErrorMessage*)self, (QCloseEvent*)param1);
 }
 
-void q_errormessage_qbase_close_event(void* self, void* param1) {
-    QErrorMessage_QBaseCloseEvent((QErrorMessage*)self, (QCloseEvent*)param1);
+void q_errormessage_super_close_event(void* self, void* param1) {
+    QErrorMessage_SuperCloseEvent((QErrorMessage*)self, (QCloseEvent*)param1);
 }
 
 void q_errormessage_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1652,8 +1652,8 @@ void q_errormessage_show_event(void* self, void* param1) {
     QErrorMessage_ShowEvent((QErrorMessage*)self, (QShowEvent*)param1);
 }
 
-void q_errormessage_qbase_show_event(void* self, void* param1) {
-    QErrorMessage_QBaseShowEvent((QErrorMessage*)self, (QShowEvent*)param1);
+void q_errormessage_super_show_event(void* self, void* param1) {
+    QErrorMessage_SuperShowEvent((QErrorMessage*)self, (QShowEvent*)param1);
 }
 
 void q_errormessage_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1664,8 +1664,8 @@ void q_errormessage_resize_event(void* self, void* param1) {
     QErrorMessage_ResizeEvent((QErrorMessage*)self, (QResizeEvent*)param1);
 }
 
-void q_errormessage_qbase_resize_event(void* self, void* param1) {
-    QErrorMessage_QBaseResizeEvent((QErrorMessage*)self, (QResizeEvent*)param1);
+void q_errormessage_super_resize_event(void* self, void* param1) {
+    QErrorMessage_SuperResizeEvent((QErrorMessage*)self, (QResizeEvent*)param1);
 }
 
 void q_errormessage_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1676,8 +1676,8 @@ void q_errormessage_context_menu_event(void* self, void* param1) {
     QErrorMessage_ContextMenuEvent((QErrorMessage*)self, (QContextMenuEvent*)param1);
 }
 
-void q_errormessage_qbase_context_menu_event(void* self, void* param1) {
-    QErrorMessage_QBaseContextMenuEvent((QErrorMessage*)self, (QContextMenuEvent*)param1);
+void q_errormessage_super_context_menu_event(void* self, void* param1) {
+    QErrorMessage_SuperContextMenuEvent((QErrorMessage*)self, (QContextMenuEvent*)param1);
 }
 
 void q_errormessage_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1688,8 +1688,8 @@ bool q_errormessage_event_filter(void* self, void* param1, void* param2) {
     return QErrorMessage_EventFilter((QErrorMessage*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_errormessage_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QErrorMessage_QBaseEventFilter((QErrorMessage*)self, (QObject*)param1, (QEvent*)param2);
+bool q_errormessage_super_event_filter(void* self, void* param1, void* param2) {
+    return QErrorMessage_SuperEventFilter((QErrorMessage*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_errormessage_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1700,8 +1700,8 @@ int32_t q_errormessage_dev_type(void* self) {
     return QErrorMessage_DevType((QErrorMessage*)self);
 }
 
-int32_t q_errormessage_qbase_dev_type(void* self) {
-    return QErrorMessage_QBaseDevType((QErrorMessage*)self);
+int32_t q_errormessage_super_dev_type(void* self) {
+    return QErrorMessage_SuperDevType((QErrorMessage*)self);
 }
 
 void q_errormessage_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1712,8 +1712,8 @@ int32_t q_errormessage_height_for_width(void* self, int param1) {
     return QErrorMessage_HeightForWidth((QErrorMessage*)self, param1);
 }
 
-int32_t q_errormessage_qbase_height_for_width(void* self, int param1) {
-    return QErrorMessage_QBaseHeightForWidth((QErrorMessage*)self, param1);
+int32_t q_errormessage_super_height_for_width(void* self, int param1) {
+    return QErrorMessage_SuperHeightForWidth((QErrorMessage*)self, param1);
 }
 
 void q_errormessage_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1724,8 +1724,8 @@ bool q_errormessage_has_height_for_width(void* self) {
     return QErrorMessage_HasHeightForWidth((QErrorMessage*)self);
 }
 
-bool q_errormessage_qbase_has_height_for_width(void* self) {
-    return QErrorMessage_QBaseHasHeightForWidth((QErrorMessage*)self);
+bool q_errormessage_super_has_height_for_width(void* self) {
+    return QErrorMessage_SuperHasHeightForWidth((QErrorMessage*)self);
 }
 
 void q_errormessage_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1736,8 +1736,8 @@ QPaintEngine* q_errormessage_paint_engine(void* self) {
     return QErrorMessage_PaintEngine((QErrorMessage*)self);
 }
 
-QPaintEngine* q_errormessage_qbase_paint_engine(void* self) {
-    return QErrorMessage_QBasePaintEngine((QErrorMessage*)self);
+QPaintEngine* q_errormessage_super_paint_engine(void* self) {
+    return QErrorMessage_SuperPaintEngine((QErrorMessage*)self);
 }
 
 void q_errormessage_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1748,8 +1748,8 @@ bool q_errormessage_event(void* self, void* event) {
     return QErrorMessage_Event((QErrorMessage*)self, (QEvent*)event);
 }
 
-bool q_errormessage_qbase_event(void* self, void* event) {
-    return QErrorMessage_QBaseEvent((QErrorMessage*)self, (QEvent*)event);
+bool q_errormessage_super_event(void* self, void* event) {
+    return QErrorMessage_SuperEvent((QErrorMessage*)self, (QEvent*)event);
 }
 
 void q_errormessage_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1760,8 +1760,8 @@ void q_errormessage_mouse_press_event(void* self, void* event) {
     QErrorMessage_MousePressEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
-void q_errormessage_qbase_mouse_press_event(void* self, void* event) {
-    QErrorMessage_QBaseMousePressEvent((QErrorMessage*)self, (QMouseEvent*)event);
+void q_errormessage_super_mouse_press_event(void* self, void* event) {
+    QErrorMessage_SuperMousePressEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
 void q_errormessage_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1772,8 +1772,8 @@ void q_errormessage_mouse_release_event(void* self, void* event) {
     QErrorMessage_MouseReleaseEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
-void q_errormessage_qbase_mouse_release_event(void* self, void* event) {
-    QErrorMessage_QBaseMouseReleaseEvent((QErrorMessage*)self, (QMouseEvent*)event);
+void q_errormessage_super_mouse_release_event(void* self, void* event) {
+    QErrorMessage_SuperMouseReleaseEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
 void q_errormessage_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1784,8 +1784,8 @@ void q_errormessage_mouse_double_click_event(void* self, void* event) {
     QErrorMessage_MouseDoubleClickEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
-void q_errormessage_qbase_mouse_double_click_event(void* self, void* event) {
-    QErrorMessage_QBaseMouseDoubleClickEvent((QErrorMessage*)self, (QMouseEvent*)event);
+void q_errormessage_super_mouse_double_click_event(void* self, void* event) {
+    QErrorMessage_SuperMouseDoubleClickEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
 void q_errormessage_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1796,8 +1796,8 @@ void q_errormessage_mouse_move_event(void* self, void* event) {
     QErrorMessage_MouseMoveEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
-void q_errormessage_qbase_mouse_move_event(void* self, void* event) {
-    QErrorMessage_QBaseMouseMoveEvent((QErrorMessage*)self, (QMouseEvent*)event);
+void q_errormessage_super_mouse_move_event(void* self, void* event) {
+    QErrorMessage_SuperMouseMoveEvent((QErrorMessage*)self, (QMouseEvent*)event);
 }
 
 void q_errormessage_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1808,8 +1808,8 @@ void q_errormessage_wheel_event(void* self, void* event) {
     QErrorMessage_WheelEvent((QErrorMessage*)self, (QWheelEvent*)event);
 }
 
-void q_errormessage_qbase_wheel_event(void* self, void* event) {
-    QErrorMessage_QBaseWheelEvent((QErrorMessage*)self, (QWheelEvent*)event);
+void q_errormessage_super_wheel_event(void* self, void* event) {
+    QErrorMessage_SuperWheelEvent((QErrorMessage*)self, (QWheelEvent*)event);
 }
 
 void q_errormessage_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1820,8 +1820,8 @@ void q_errormessage_key_release_event(void* self, void* event) {
     QErrorMessage_KeyReleaseEvent((QErrorMessage*)self, (QKeyEvent*)event);
 }
 
-void q_errormessage_qbase_key_release_event(void* self, void* event) {
-    QErrorMessage_QBaseKeyReleaseEvent((QErrorMessage*)self, (QKeyEvent*)event);
+void q_errormessage_super_key_release_event(void* self, void* event) {
+    QErrorMessage_SuperKeyReleaseEvent((QErrorMessage*)self, (QKeyEvent*)event);
 }
 
 void q_errormessage_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1832,8 +1832,8 @@ void q_errormessage_focus_in_event(void* self, void* event) {
     QErrorMessage_FocusInEvent((QErrorMessage*)self, (QFocusEvent*)event);
 }
 
-void q_errormessage_qbase_focus_in_event(void* self, void* event) {
-    QErrorMessage_QBaseFocusInEvent((QErrorMessage*)self, (QFocusEvent*)event);
+void q_errormessage_super_focus_in_event(void* self, void* event) {
+    QErrorMessage_SuperFocusInEvent((QErrorMessage*)self, (QFocusEvent*)event);
 }
 
 void q_errormessage_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1844,8 +1844,8 @@ void q_errormessage_focus_out_event(void* self, void* event) {
     QErrorMessage_FocusOutEvent((QErrorMessage*)self, (QFocusEvent*)event);
 }
 
-void q_errormessage_qbase_focus_out_event(void* self, void* event) {
-    QErrorMessage_QBaseFocusOutEvent((QErrorMessage*)self, (QFocusEvent*)event);
+void q_errormessage_super_focus_out_event(void* self, void* event) {
+    QErrorMessage_SuperFocusOutEvent((QErrorMessage*)self, (QFocusEvent*)event);
 }
 
 void q_errormessage_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1856,8 +1856,8 @@ void q_errormessage_enter_event(void* self, void* event) {
     QErrorMessage_EnterEvent((QErrorMessage*)self, (QEnterEvent*)event);
 }
 
-void q_errormessage_qbase_enter_event(void* self, void* event) {
-    QErrorMessage_QBaseEnterEvent((QErrorMessage*)self, (QEnterEvent*)event);
+void q_errormessage_super_enter_event(void* self, void* event) {
+    QErrorMessage_SuperEnterEvent((QErrorMessage*)self, (QEnterEvent*)event);
 }
 
 void q_errormessage_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1868,8 +1868,8 @@ void q_errormessage_leave_event(void* self, void* event) {
     QErrorMessage_LeaveEvent((QErrorMessage*)self, (QEvent*)event);
 }
 
-void q_errormessage_qbase_leave_event(void* self, void* event) {
-    QErrorMessage_QBaseLeaveEvent((QErrorMessage*)self, (QEvent*)event);
+void q_errormessage_super_leave_event(void* self, void* event) {
+    QErrorMessage_SuperLeaveEvent((QErrorMessage*)self, (QEvent*)event);
 }
 
 void q_errormessage_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1880,8 +1880,8 @@ void q_errormessage_paint_event(void* self, void* event) {
     QErrorMessage_PaintEvent((QErrorMessage*)self, (QPaintEvent*)event);
 }
 
-void q_errormessage_qbase_paint_event(void* self, void* event) {
-    QErrorMessage_QBasePaintEvent((QErrorMessage*)self, (QPaintEvent*)event);
+void q_errormessage_super_paint_event(void* self, void* event) {
+    QErrorMessage_SuperPaintEvent((QErrorMessage*)self, (QPaintEvent*)event);
 }
 
 void q_errormessage_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1892,8 +1892,8 @@ void q_errormessage_move_event(void* self, void* event) {
     QErrorMessage_MoveEvent((QErrorMessage*)self, (QMoveEvent*)event);
 }
 
-void q_errormessage_qbase_move_event(void* self, void* event) {
-    QErrorMessage_QBaseMoveEvent((QErrorMessage*)self, (QMoveEvent*)event);
+void q_errormessage_super_move_event(void* self, void* event) {
+    QErrorMessage_SuperMoveEvent((QErrorMessage*)self, (QMoveEvent*)event);
 }
 
 void q_errormessage_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1904,8 +1904,8 @@ void q_errormessage_tablet_event(void* self, void* event) {
     QErrorMessage_TabletEvent((QErrorMessage*)self, (QTabletEvent*)event);
 }
 
-void q_errormessage_qbase_tablet_event(void* self, void* event) {
-    QErrorMessage_QBaseTabletEvent((QErrorMessage*)self, (QTabletEvent*)event);
+void q_errormessage_super_tablet_event(void* self, void* event) {
+    QErrorMessage_SuperTabletEvent((QErrorMessage*)self, (QTabletEvent*)event);
 }
 
 void q_errormessage_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1916,8 +1916,8 @@ void q_errormessage_action_event(void* self, void* event) {
     QErrorMessage_ActionEvent((QErrorMessage*)self, (QActionEvent*)event);
 }
 
-void q_errormessage_qbase_action_event(void* self, void* event) {
-    QErrorMessage_QBaseActionEvent((QErrorMessage*)self, (QActionEvent*)event);
+void q_errormessage_super_action_event(void* self, void* event) {
+    QErrorMessage_SuperActionEvent((QErrorMessage*)self, (QActionEvent*)event);
 }
 
 void q_errormessage_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1928,8 +1928,8 @@ void q_errormessage_drag_enter_event(void* self, void* event) {
     QErrorMessage_DragEnterEvent((QErrorMessage*)self, (QDragEnterEvent*)event);
 }
 
-void q_errormessage_qbase_drag_enter_event(void* self, void* event) {
-    QErrorMessage_QBaseDragEnterEvent((QErrorMessage*)self, (QDragEnterEvent*)event);
+void q_errormessage_super_drag_enter_event(void* self, void* event) {
+    QErrorMessage_SuperDragEnterEvent((QErrorMessage*)self, (QDragEnterEvent*)event);
 }
 
 void q_errormessage_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1940,8 +1940,8 @@ void q_errormessage_drag_move_event(void* self, void* event) {
     QErrorMessage_DragMoveEvent((QErrorMessage*)self, (QDragMoveEvent*)event);
 }
 
-void q_errormessage_qbase_drag_move_event(void* self, void* event) {
-    QErrorMessage_QBaseDragMoveEvent((QErrorMessage*)self, (QDragMoveEvent*)event);
+void q_errormessage_super_drag_move_event(void* self, void* event) {
+    QErrorMessage_SuperDragMoveEvent((QErrorMessage*)self, (QDragMoveEvent*)event);
 }
 
 void q_errormessage_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1952,8 +1952,8 @@ void q_errormessage_drag_leave_event(void* self, void* event) {
     QErrorMessage_DragLeaveEvent((QErrorMessage*)self, (QDragLeaveEvent*)event);
 }
 
-void q_errormessage_qbase_drag_leave_event(void* self, void* event) {
-    QErrorMessage_QBaseDragLeaveEvent((QErrorMessage*)self, (QDragLeaveEvent*)event);
+void q_errormessage_super_drag_leave_event(void* self, void* event) {
+    QErrorMessage_SuperDragLeaveEvent((QErrorMessage*)self, (QDragLeaveEvent*)event);
 }
 
 void q_errormessage_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1964,8 +1964,8 @@ void q_errormessage_drop_event(void* self, void* event) {
     QErrorMessage_DropEvent((QErrorMessage*)self, (QDropEvent*)event);
 }
 
-void q_errormessage_qbase_drop_event(void* self, void* event) {
-    QErrorMessage_QBaseDropEvent((QErrorMessage*)self, (QDropEvent*)event);
+void q_errormessage_super_drop_event(void* self, void* event) {
+    QErrorMessage_SuperDropEvent((QErrorMessage*)self, (QDropEvent*)event);
 }
 
 void q_errormessage_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1976,8 +1976,8 @@ void q_errormessage_hide_event(void* self, void* event) {
     QErrorMessage_HideEvent((QErrorMessage*)self, (QHideEvent*)event);
 }
 
-void q_errormessage_qbase_hide_event(void* self, void* event) {
-    QErrorMessage_QBaseHideEvent((QErrorMessage*)self, (QHideEvent*)event);
+void q_errormessage_super_hide_event(void* self, void* event) {
+    QErrorMessage_SuperHideEvent((QErrorMessage*)self, (QHideEvent*)event);
 }
 
 void q_errormessage_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1988,8 +1988,8 @@ bool q_errormessage_native_event(void* self, char* eventType, void* message, int
     return QErrorMessage_NativeEvent((QErrorMessage*)self, qstring(eventType), message, result);
 }
 
-bool q_errormessage_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QErrorMessage_QBaseNativeEvent((QErrorMessage*)self, qstring(eventType), message, result);
+bool q_errormessage_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QErrorMessage_SuperNativeEvent((QErrorMessage*)self, qstring(eventType), message, result);
 }
 
 void q_errormessage_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2000,8 +2000,8 @@ int32_t q_errormessage_metric(void* self, int32_t param1) {
     return QErrorMessage_Metric((QErrorMessage*)self, param1);
 }
 
-int32_t q_errormessage_qbase_metric(void* self, int32_t param1) {
-    return QErrorMessage_QBaseMetric((QErrorMessage*)self, param1);
+int32_t q_errormessage_super_metric(void* self, int32_t param1) {
+    return QErrorMessage_SuperMetric((QErrorMessage*)self, param1);
 }
 
 void q_errormessage_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2012,8 +2012,8 @@ void q_errormessage_init_painter(void* self, void* painter) {
     QErrorMessage_InitPainter((QErrorMessage*)self, (QPainter*)painter);
 }
 
-void q_errormessage_qbase_init_painter(void* self, void* painter) {
-    QErrorMessage_QBaseInitPainter((QErrorMessage*)self, (QPainter*)painter);
+void q_errormessage_super_init_painter(void* self, void* painter) {
+    QErrorMessage_SuperInitPainter((QErrorMessage*)self, (QPainter*)painter);
 }
 
 void q_errormessage_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2024,8 +2024,8 @@ QPaintDevice* q_errormessage_redirected(void* self, void* offset) {
     return QErrorMessage_Redirected((QErrorMessage*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_errormessage_qbase_redirected(void* self, void* offset) {
-    return QErrorMessage_QBaseRedirected((QErrorMessage*)self, (QPoint*)offset);
+QPaintDevice* q_errormessage_super_redirected(void* self, void* offset) {
+    return QErrorMessage_SuperRedirected((QErrorMessage*)self, (QPoint*)offset);
 }
 
 void q_errormessage_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2036,8 +2036,8 @@ QPainter* q_errormessage_shared_painter(void* self) {
     return QErrorMessage_SharedPainter((QErrorMessage*)self);
 }
 
-QPainter* q_errormessage_qbase_shared_painter(void* self) {
-    return QErrorMessage_QBaseSharedPainter((QErrorMessage*)self);
+QPainter* q_errormessage_super_shared_painter(void* self) {
+    return QErrorMessage_SuperSharedPainter((QErrorMessage*)self);
 }
 
 void q_errormessage_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2048,8 +2048,8 @@ void q_errormessage_input_method_event(void* self, void* param1) {
     QErrorMessage_InputMethodEvent((QErrorMessage*)self, (QInputMethodEvent*)param1);
 }
 
-void q_errormessage_qbase_input_method_event(void* self, void* param1) {
-    QErrorMessage_QBaseInputMethodEvent((QErrorMessage*)self, (QInputMethodEvent*)param1);
+void q_errormessage_super_input_method_event(void* self, void* param1) {
+    QErrorMessage_SuperInputMethodEvent((QErrorMessage*)self, (QInputMethodEvent*)param1);
 }
 
 void q_errormessage_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2060,8 +2060,8 @@ QVariant* q_errormessage_input_method_query(void* self, int32_t param1) {
     return QErrorMessage_InputMethodQuery((QErrorMessage*)self, param1);
 }
 
-QVariant* q_errormessage_qbase_input_method_query(void* self, int32_t param1) {
-    return QErrorMessage_QBaseInputMethodQuery((QErrorMessage*)self, param1);
+QVariant* q_errormessage_super_input_method_query(void* self, int32_t param1) {
+    return QErrorMessage_SuperInputMethodQuery((QErrorMessage*)self, param1);
 }
 
 void q_errormessage_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2072,8 +2072,8 @@ bool q_errormessage_focus_next_prev_child(void* self, bool next) {
     return QErrorMessage_FocusNextPrevChild((QErrorMessage*)self, next);
 }
 
-bool q_errormessage_qbase_focus_next_prev_child(void* self, bool next) {
-    return QErrorMessage_QBaseFocusNextPrevChild((QErrorMessage*)self, next);
+bool q_errormessage_super_focus_next_prev_child(void* self, bool next) {
+    return QErrorMessage_SuperFocusNextPrevChild((QErrorMessage*)self, next);
 }
 
 void q_errormessage_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2084,8 +2084,8 @@ void q_errormessage_timer_event(void* self, void* event) {
     QErrorMessage_TimerEvent((QErrorMessage*)self, (QTimerEvent*)event);
 }
 
-void q_errormessage_qbase_timer_event(void* self, void* event) {
-    QErrorMessage_QBaseTimerEvent((QErrorMessage*)self, (QTimerEvent*)event);
+void q_errormessage_super_timer_event(void* self, void* event) {
+    QErrorMessage_SuperTimerEvent((QErrorMessage*)self, (QTimerEvent*)event);
 }
 
 void q_errormessage_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2096,8 +2096,8 @@ void q_errormessage_child_event(void* self, void* event) {
     QErrorMessage_ChildEvent((QErrorMessage*)self, (QChildEvent*)event);
 }
 
-void q_errormessage_qbase_child_event(void* self, void* event) {
-    QErrorMessage_QBaseChildEvent((QErrorMessage*)self, (QChildEvent*)event);
+void q_errormessage_super_child_event(void* self, void* event) {
+    QErrorMessage_SuperChildEvent((QErrorMessage*)self, (QChildEvent*)event);
 }
 
 void q_errormessage_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2108,8 +2108,8 @@ void q_errormessage_custom_event(void* self, void* event) {
     QErrorMessage_CustomEvent((QErrorMessage*)self, (QEvent*)event);
 }
 
-void q_errormessage_qbase_custom_event(void* self, void* event) {
-    QErrorMessage_QBaseCustomEvent((QErrorMessage*)self, (QEvent*)event);
+void q_errormessage_super_custom_event(void* self, void* event) {
+    QErrorMessage_SuperCustomEvent((QErrorMessage*)self, (QEvent*)event);
 }
 
 void q_errormessage_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2120,8 +2120,8 @@ void q_errormessage_connect_notify(void* self, void* signal) {
     QErrorMessage_ConnectNotify((QErrorMessage*)self, (QMetaMethod*)signal);
 }
 
-void q_errormessage_qbase_connect_notify(void* self, void* signal) {
-    QErrorMessage_QBaseConnectNotify((QErrorMessage*)self, (QMetaMethod*)signal);
+void q_errormessage_super_connect_notify(void* self, void* signal) {
+    QErrorMessage_SuperConnectNotify((QErrorMessage*)self, (QMetaMethod*)signal);
 }
 
 void q_errormessage_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2132,8 +2132,8 @@ void q_errormessage_disconnect_notify(void* self, void* signal) {
     QErrorMessage_DisconnectNotify((QErrorMessage*)self, (QMetaMethod*)signal);
 }
 
-void q_errormessage_qbase_disconnect_notify(void* self, void* signal) {
-    QErrorMessage_QBaseDisconnectNotify((QErrorMessage*)self, (QMetaMethod*)signal);
+void q_errormessage_super_disconnect_notify(void* self, void* signal) {
+    QErrorMessage_SuperDisconnectNotify((QErrorMessage*)self, (QMetaMethod*)signal);
 }
 
 void q_errormessage_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2144,8 +2144,8 @@ void q_errormessage_adjust_position(void* self, void* param1) {
     QErrorMessage_AdjustPosition((QErrorMessage*)self, (QWidget*)param1);
 }
 
-void q_errormessage_qbase_adjust_position(void* self, void* param1) {
-    QErrorMessage_QBaseAdjustPosition((QErrorMessage*)self, (QWidget*)param1);
+void q_errormessage_super_adjust_position(void* self, void* param1) {
+    QErrorMessage_SuperAdjustPosition((QErrorMessage*)self, (QWidget*)param1);
 }
 
 void q_errormessage_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2156,8 +2156,8 @@ void q_errormessage_update_micro_focus(void* self) {
     QErrorMessage_UpdateMicroFocus((QErrorMessage*)self);
 }
 
-void q_errormessage_qbase_update_micro_focus(void* self) {
-    QErrorMessage_QBaseUpdateMicroFocus((QErrorMessage*)self);
+void q_errormessage_super_update_micro_focus(void* self) {
+    QErrorMessage_SuperUpdateMicroFocus((QErrorMessage*)self);
 }
 
 void q_errormessage_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2168,8 +2168,8 @@ void q_errormessage_create(void* self) {
     QErrorMessage_Create((QErrorMessage*)self);
 }
 
-void q_errormessage_qbase_create(void* self) {
-    QErrorMessage_QBaseCreate((QErrorMessage*)self);
+void q_errormessage_super_create(void* self) {
+    QErrorMessage_SuperCreate((QErrorMessage*)self);
 }
 
 void q_errormessage_on_create(void* self, void (*callback)()) {
@@ -2180,8 +2180,8 @@ void q_errormessage_destroy(void* self) {
     QErrorMessage_Destroy((QErrorMessage*)self);
 }
 
-void q_errormessage_qbase_destroy(void* self) {
-    QErrorMessage_QBaseDestroy((QErrorMessage*)self);
+void q_errormessage_super_destroy(void* self) {
+    QErrorMessage_SuperDestroy((QErrorMessage*)self);
 }
 
 void q_errormessage_on_destroy(void* self, void (*callback)()) {
@@ -2192,8 +2192,8 @@ bool q_errormessage_focus_next_child(void* self) {
     return QErrorMessage_FocusNextChild((QErrorMessage*)self);
 }
 
-bool q_errormessage_qbase_focus_next_child(void* self) {
-    return QErrorMessage_QBaseFocusNextChild((QErrorMessage*)self);
+bool q_errormessage_super_focus_next_child(void* self) {
+    return QErrorMessage_SuperFocusNextChild((QErrorMessage*)self);
 }
 
 void q_errormessage_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2204,8 +2204,8 @@ bool q_errormessage_focus_previous_child(void* self) {
     return QErrorMessage_FocusPreviousChild((QErrorMessage*)self);
 }
 
-bool q_errormessage_qbase_focus_previous_child(void* self) {
-    return QErrorMessage_QBaseFocusPreviousChild((QErrorMessage*)self);
+bool q_errormessage_super_focus_previous_child(void* self) {
+    return QErrorMessage_SuperFocusPreviousChild((QErrorMessage*)self);
 }
 
 void q_errormessage_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2216,8 +2216,8 @@ QObject* q_errormessage_sender(void* self) {
     return QErrorMessage_Sender((QErrorMessage*)self);
 }
 
-QObject* q_errormessage_qbase_sender(void* self) {
-    return QErrorMessage_QBaseSender((QErrorMessage*)self);
+QObject* q_errormessage_super_sender(void* self) {
+    return QErrorMessage_SuperSender((QErrorMessage*)self);
 }
 
 void q_errormessage_on_sender(void* self, QObject* (*callback)()) {
@@ -2228,8 +2228,8 @@ int32_t q_errormessage_sender_signal_index(void* self) {
     return QErrorMessage_SenderSignalIndex((QErrorMessage*)self);
 }
 
-int32_t q_errormessage_qbase_sender_signal_index(void* self) {
-    return QErrorMessage_QBaseSenderSignalIndex((QErrorMessage*)self);
+int32_t q_errormessage_super_sender_signal_index(void* self) {
+    return QErrorMessage_SuperSenderSignalIndex((QErrorMessage*)self);
 }
 
 void q_errormessage_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2240,8 +2240,8 @@ int32_t q_errormessage_receivers(void* self, const char* signal) {
     return QErrorMessage_Receivers((QErrorMessage*)self, signal);
 }
 
-int32_t q_errormessage_qbase_receivers(void* self, const char* signal) {
-    return QErrorMessage_QBaseReceivers((QErrorMessage*)self, signal);
+int32_t q_errormessage_super_receivers(void* self, const char* signal) {
+    return QErrorMessage_SuperReceivers((QErrorMessage*)self, signal);
 }
 
 void q_errormessage_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2252,8 +2252,8 @@ bool q_errormessage_is_signal_connected(void* self, void* signal) {
     return QErrorMessage_IsSignalConnected((QErrorMessage*)self, (QMetaMethod*)signal);
 }
 
-bool q_errormessage_qbase_is_signal_connected(void* self, void* signal) {
-    return QErrorMessage_QBaseIsSignalConnected((QErrorMessage*)self, (QMetaMethod*)signal);
+bool q_errormessage_super_is_signal_connected(void* self, void* signal) {
+    return QErrorMessage_SuperIsSignalConnected((QErrorMessage*)self, (QMetaMethod*)signal);
 }
 
 void q_errormessage_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2264,8 +2264,8 @@ double q_errormessage_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return QErrorMessage_GetDecodedMetricF((QErrorMessage*)self, metricA, metricB);
 }
 
-double q_errormessage_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QErrorMessage_QBaseGetDecodedMetricF((QErrorMessage*)self, metricA, metricB);
+double q_errormessage_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QErrorMessage_SuperGetDecodedMetricF((QErrorMessage*)self, metricA, metricB);
 }
 
 void q_errormessage_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

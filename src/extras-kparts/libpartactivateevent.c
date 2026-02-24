@@ -68,8 +68,8 @@ void k_parts__partactivateevent_set_accepted(void* self, bool accepted) {
     KParts__PartActivateEvent_SetAccepted((KParts__PartActivateEvent*)self, accepted);
 }
 
-void k_parts__partactivateevent_qbase_set_accepted(void* self, bool accepted) {
-    KParts__PartActivateEvent_QBaseSetAccepted((KParts__PartActivateEvent*)self, accepted);
+void k_parts__partactivateevent_super_set_accepted(void* self, bool accepted) {
+    KParts__PartActivateEvent_SuperSetAccepted((KParts__PartActivateEvent*)self, accepted);
 }
 
 void k_parts__partactivateevent_on_set_accepted(void* self, void (*callback)(void*, bool)) {
@@ -80,8 +80,8 @@ QEvent* k_parts__partactivateevent_clone(void* self) {
     return KParts__PartActivateEvent_Clone((KParts__PartActivateEvent*)self);
 }
 
-QEvent* k_parts__partactivateevent_qbase_clone(void* self) {
-    return KParts__PartActivateEvent_QBaseClone((KParts__PartActivateEvent*)self);
+QEvent* k_parts__partactivateevent_super_clone(void* self) {
+    return KParts__PartActivateEvent_SuperClone((KParts__PartActivateEvent*)self);
 }
 
 void k_parts__partactivateevent_on_clone(void* self, QEvent* (*callback)()) {

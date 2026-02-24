@@ -19,8 +19,8 @@ void q_sciapis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QsciAPIs_OnMetaObject((QsciAPIs*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_sciapis_qbase_meta_object(void* self) {
-    return QsciAPIs_QBaseMetaObject((QsciAPIs*)self);
+const QMetaObject* q_sciapis_super_meta_object(void* self) {
+    return QsciAPIs_SuperMetaObject((QsciAPIs*)self);
 }
 
 void* q_sciapis_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void q_sciapis_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QsciAPIs_OnMetacast((QsciAPIs*)self, (intptr_t)callback);
 }
 
-void* q_sciapis_qbase_metacast(void* self, const char* param1) {
-    return QsciAPIs_QBaseMetacast((QsciAPIs*)self, param1);
+void* q_sciapis_super_metacast(void* self, const char* param1) {
+    return QsciAPIs_SuperMetacast((QsciAPIs*)self, param1);
 }
 
 int32_t q_sciapis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void q_sciapis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
     QsciAPIs_OnMetacall((QsciAPIs*)self, (intptr_t)callback);
 }
 
-int32_t q_sciapis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciAPIs_QBaseMetacall((QsciAPIs*)self, param1, param2, param3);
+int32_t q_sciapis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciAPIs_SuperMetacall((QsciAPIs*)self, param1, param2, param3);
 }
 
 const char* q_sciapis_tr(const char* s) {
@@ -128,7 +128,7 @@ void q_sciapis_on_update_auto_completion_list(void* self, void (*callback)(void*
     QsciAPIs_OnUpdateAutoCompletionList((QsciAPIs*)self, (intptr_t)callback);
 }
 
-void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]) {
+void q_sciapis_super_update_auto_completion_list(void* self, const char* context[static 1], const char* list[static 1]) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -149,7 +149,7 @@ void q_sciapis_qbase_update_auto_completion_list(void* self, const char* context
         list_qstr[i] = qstring(list[i]);
     }
     libqt_list list_list = qlist(list_qstr, list_len);
-    QsciAPIs_QBaseUpdateAutoCompletionList((QsciAPIs*)self, context_list, list_list);
+    QsciAPIs_SuperUpdateAutoCompletionList((QsciAPIs*)self, context_list, list_list);
 }
 
 void q_sciapis_auto_completion_selected(void* self, const char* sel) {
@@ -160,8 +160,8 @@ void q_sciapis_on_auto_completion_selected(void* self, void (*callback)(void*, c
     QsciAPIs_OnAutoCompletionSelected((QsciAPIs*)self, (intptr_t)callback);
 }
 
-void q_sciapis_qbase_auto_completion_selected(void* self, const char* sel) {
-    QsciAPIs_QBaseAutoCompletionSelected((QsciAPIs*)self, qstring(sel));
+void q_sciapis_super_auto_completion_selected(void* self, const char* sel) {
+    QsciAPIs_SuperAutoCompletionSelected((QsciAPIs*)self, qstring(sel));
 }
 
 const char** q_sciapis_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts) {
@@ -198,7 +198,7 @@ void q_sciapis_on_call_tips(void* self, const char** (*callback)(void*, const ch
     QsciAPIs_OnCallTips((QsciAPIs*)self, (intptr_t)callback);
 }
 
-const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts) {
+const char** q_sciapis_super_call_tips(void* self, const char* context[static 1], int commas, int32_t style, libqt_list /* of int */ shifts) {
     size_t context_len = libqt_strv_length(context);
     libqt_string* context_qstr = (libqt_string*)malloc(context_len * sizeof(libqt_string));
     if (context_qstr == NULL) {
@@ -209,7 +209,7 @@ const char** q_sciapis_qbase_call_tips(void* self, const char* context[static 1]
         context_qstr[i] = qstring(context[i]);
     }
     libqt_list context_list = qlist(context_qstr, context_len);
-    libqt_list _arr = QsciAPIs_QBaseCallTips((QsciAPIs*)self, context_list, commas, style, shifts);
+    libqt_list _arr = QsciAPIs_SuperCallTips((QsciAPIs*)self, context_list, commas, style, shifts);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -235,8 +235,8 @@ void q_sciapis_on_event(void* self, bool (*callback)(void*, void*)) {
     QsciAPIs_OnEvent((QsciAPIs*)self, (intptr_t)callback);
 }
 
-bool q_sciapis_qbase_event(void* self, void* e) {
-    return QsciAPIs_QBaseEvent((QsciAPIs*)self, (QEvent*)e);
+bool q_sciapis_super_event(void* self, void* e) {
+    return QsciAPIs_SuperEvent((QsciAPIs*)self, (QEvent*)e);
 }
 
 const char** q_sciapis_installed_a_p_i_files(void* self) {
@@ -527,8 +527,8 @@ bool q_sciapis_event_filter(void* self, void* watched, void* event) {
     return QsciAPIs_EventFilter((QsciAPIs*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_sciapis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciAPIs_QBaseEventFilter((QsciAPIs*)self, (QObject*)watched, (QEvent*)event);
+bool q_sciapis_super_event_filter(void* self, void* watched, void* event) {
+    return QsciAPIs_SuperEventFilter((QsciAPIs*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_sciapis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -539,8 +539,8 @@ void q_sciapis_timer_event(void* self, void* event) {
     QsciAPIs_TimerEvent((QsciAPIs*)self, (QTimerEvent*)event);
 }
 
-void q_sciapis_qbase_timer_event(void* self, void* event) {
-    QsciAPIs_QBaseTimerEvent((QsciAPIs*)self, (QTimerEvent*)event);
+void q_sciapis_super_timer_event(void* self, void* event) {
+    QsciAPIs_SuperTimerEvent((QsciAPIs*)self, (QTimerEvent*)event);
 }
 
 void q_sciapis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -551,8 +551,8 @@ void q_sciapis_child_event(void* self, void* event) {
     QsciAPIs_ChildEvent((QsciAPIs*)self, (QChildEvent*)event);
 }
 
-void q_sciapis_qbase_child_event(void* self, void* event) {
-    QsciAPIs_QBaseChildEvent((QsciAPIs*)self, (QChildEvent*)event);
+void q_sciapis_super_child_event(void* self, void* event) {
+    QsciAPIs_SuperChildEvent((QsciAPIs*)self, (QChildEvent*)event);
 }
 
 void q_sciapis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -563,8 +563,8 @@ void q_sciapis_custom_event(void* self, void* event) {
     QsciAPIs_CustomEvent((QsciAPIs*)self, (QEvent*)event);
 }
 
-void q_sciapis_qbase_custom_event(void* self, void* event) {
-    QsciAPIs_QBaseCustomEvent((QsciAPIs*)self, (QEvent*)event);
+void q_sciapis_super_custom_event(void* self, void* event) {
+    QsciAPIs_SuperCustomEvent((QsciAPIs*)self, (QEvent*)event);
 }
 
 void q_sciapis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -575,8 +575,8 @@ void q_sciapis_connect_notify(void* self, void* signal) {
     QsciAPIs_ConnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
-void q_sciapis_qbase_connect_notify(void* self, void* signal) {
-    QsciAPIs_QBaseConnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
+void q_sciapis_super_connect_notify(void* self, void* signal) {
+    QsciAPIs_SuperConnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
 void q_sciapis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -587,8 +587,8 @@ void q_sciapis_disconnect_notify(void* self, void* signal) {
     QsciAPIs_DisconnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
-void q_sciapis_qbase_disconnect_notify(void* self, void* signal) {
-    QsciAPIs_QBaseDisconnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
+void q_sciapis_super_disconnect_notify(void* self, void* signal) {
+    QsciAPIs_SuperDisconnectNotify((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
 void q_sciapis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -599,8 +599,8 @@ QObject* q_sciapis_sender(void* self) {
     return QsciAPIs_Sender((QsciAPIs*)self);
 }
 
-QObject* q_sciapis_qbase_sender(void* self) {
-    return QsciAPIs_QBaseSender((QsciAPIs*)self);
+QObject* q_sciapis_super_sender(void* self) {
+    return QsciAPIs_SuperSender((QsciAPIs*)self);
 }
 
 void q_sciapis_on_sender(void* self, QObject* (*callback)()) {
@@ -611,8 +611,8 @@ int32_t q_sciapis_sender_signal_index(void* self) {
     return QsciAPIs_SenderSignalIndex((QsciAPIs*)self);
 }
 
-int32_t q_sciapis_qbase_sender_signal_index(void* self) {
-    return QsciAPIs_QBaseSenderSignalIndex((QsciAPIs*)self);
+int32_t q_sciapis_super_sender_signal_index(void* self) {
+    return QsciAPIs_SuperSenderSignalIndex((QsciAPIs*)self);
 }
 
 void q_sciapis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -623,8 +623,8 @@ int32_t q_sciapis_receivers(void* self, const char* signal) {
     return QsciAPIs_Receivers((QsciAPIs*)self, signal);
 }
 
-int32_t q_sciapis_qbase_receivers(void* self, const char* signal) {
-    return QsciAPIs_QBaseReceivers((QsciAPIs*)self, signal);
+int32_t q_sciapis_super_receivers(void* self, const char* signal) {
+    return QsciAPIs_SuperReceivers((QsciAPIs*)self, signal);
 }
 
 void q_sciapis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -635,8 +635,8 @@ bool q_sciapis_is_signal_connected(void* self, void* signal) {
     return QsciAPIs_IsSignalConnected((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
-bool q_sciapis_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciAPIs_QBaseIsSignalConnected((QsciAPIs*)self, (QMetaMethod*)signal);
+bool q_sciapis_super_is_signal_connected(void* self, void* signal) {
+    return QsciAPIs_SuperIsSignalConnected((QsciAPIs*)self, (QMetaMethod*)signal);
 }
 
 void q_sciapis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

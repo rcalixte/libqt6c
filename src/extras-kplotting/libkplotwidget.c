@@ -36,8 +36,8 @@ void k_plotwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KPlotWidget_OnMetaObject((KPlotWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_plotwidget_qbase_meta_object(void* self) {
-    return KPlotWidget_QBaseMetaObject((KPlotWidget*)self);
+const QMetaObject* k_plotwidget_super_meta_object(void* self) {
+    return KPlotWidget_SuperMetaObject((KPlotWidget*)self);
 }
 
 void* k_plotwidget_metacast(void* self, const char* param1) {
@@ -48,8 +48,8 @@ void k_plotwidget_on_metacast(void* self, void* (*callback)(void*, const char*))
     KPlotWidget_OnMetacast((KPlotWidget*)self, (intptr_t)callback);
 }
 
-void* k_plotwidget_qbase_metacast(void* self, const char* param1) {
-    return KPlotWidget_QBaseMetacast((KPlotWidget*)self, param1);
+void* k_plotwidget_super_metacast(void* self, const char* param1) {
+    return KPlotWidget_SuperMetacast((KPlotWidget*)self, param1);
 }
 
 int32_t k_plotwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -60,8 +60,8 @@ void k_plotwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KPlotWidget_OnMetacall((KPlotWidget*)self, (intptr_t)callback);
 }
 
-int32_t k_plotwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPlotWidget_QBaseMetacall((KPlotWidget*)self, param1, param2, param3);
+int32_t k_plotwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPlotWidget_SuperMetacall((KPlotWidget*)self, param1, param2, param3);
 }
 
 const char* k_plotwidget_tr(const char* s) {
@@ -79,8 +79,8 @@ void k_plotwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     KPlotWidget_OnMinimumSizeHint((KPlotWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_plotwidget_qbase_minimum_size_hint(void* self) {
-    return KPlotWidget_QBaseMinimumSizeHint((KPlotWidget*)self);
+QSize* k_plotwidget_super_minimum_size_hint(void* self) {
+    return KPlotWidget_SuperMinimumSizeHint((KPlotWidget*)self);
 }
 
 QSize* k_plotwidget_size_hint(void* self) {
@@ -91,8 +91,8 @@ void k_plotwidget_on_size_hint(void* self, QSize* (*callback)()) {
     KPlotWidget_OnSizeHint((KPlotWidget*)self, (intptr_t)callback);
 }
 
-QSize* k_plotwidget_qbase_size_hint(void* self) {
-    return KPlotWidget_QBaseSizeHint((KPlotWidget*)self);
+QSize* k_plotwidget_super_size_hint(void* self) {
+    return KPlotWidget_SuperSizeHint((KPlotWidget*)self);
 }
 
 void k_plotwidget_set_limits(void* self, double x1, double x2, double y1, double y2) {
@@ -268,8 +268,8 @@ void k_plotwidget_on_event(void* self, bool (*callback)(void*, void*)) {
     KPlotWidget_OnEvent((KPlotWidget*)self, (intptr_t)callback);
 }
 
-bool k_plotwidget_qbase_event(void* self, void* param1) {
-    return KPlotWidget_QBaseEvent((KPlotWidget*)self, (QEvent*)param1);
+bool k_plotwidget_super_event(void* self, void* param1) {
+    return KPlotWidget_SuperEvent((KPlotWidget*)self, (QEvent*)param1);
 }
 
 void k_plotwidget_paint_event(void* self, void* param1) {
@@ -280,8 +280,8 @@ void k_plotwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KPlotWidget_OnPaintEvent((KPlotWidget*)self, (intptr_t)callback);
 }
 
-void k_plotwidget_qbase_paint_event(void* self, void* param1) {
-    KPlotWidget_QBasePaintEvent((KPlotWidget*)self, (QPaintEvent*)param1);
+void k_plotwidget_super_paint_event(void* self, void* param1) {
+    KPlotWidget_SuperPaintEvent((KPlotWidget*)self, (QPaintEvent*)param1);
 }
 
 void k_plotwidget_resize_event(void* self, void* param1) {
@@ -292,8 +292,8 @@ void k_plotwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
     KPlotWidget_OnResizeEvent((KPlotWidget*)self, (intptr_t)callback);
 }
 
-void k_plotwidget_qbase_resize_event(void* self, void* param1) {
-    KPlotWidget_QBaseResizeEvent((KPlotWidget*)self, (QResizeEvent*)param1);
+void k_plotwidget_super_resize_event(void* self, void* param1) {
+    KPlotWidget_SuperResizeEvent((KPlotWidget*)self, (QResizeEvent*)param1);
 }
 
 void k_plotwidget_draw_axes(void* self, void* p) {
@@ -304,8 +304,8 @@ void k_plotwidget_on_draw_axes(void* self, void (*callback)(void*, void*)) {
     KPlotWidget_OnDrawAxes((KPlotWidget*)self, (intptr_t)callback);
 }
 
-void k_plotwidget_qbase_draw_axes(void* self, void* p) {
-    KPlotWidget_QBaseDrawAxes((KPlotWidget*)self, (QPainter*)p);
+void k_plotwidget_super_draw_axes(void* self, void* p) {
+    KPlotWidget_SuperDrawAxes((KPlotWidget*)self, (QPainter*)p);
 }
 
 void k_plotwidget_set_pix_rect(void* self) {
@@ -316,8 +316,8 @@ void k_plotwidget_on_set_pix_rect(void* self, void (*callback)()) {
     KPlotWidget_OnSetPixRect((KPlotWidget*)self, (intptr_t)callback);
 }
 
-void k_plotwidget_qbase_set_pix_rect(void* self) {
-    KPlotWidget_QBaseSetPixRect((KPlotWidget*)self);
+void k_plotwidget_super_set_pix_rect(void* self) {
+    KPlotWidget_SuperSetPixRect((KPlotWidget*)self);
 }
 
 libqt_list /* of KPlotPoint* */ k_plotwidget_points_under_point(void* self, void* p) {
@@ -329,8 +329,8 @@ void k_plotwidget_on_points_under_point(void* self, libqt_list /* of KPlotPoint*
     KPlotWidget_OnPointsUnderPoint((KPlotWidget*)self, (intptr_t)callback);
 }
 
-libqt_list /* of KPlotPoint* */ k_plotwidget_qbase_points_under_point(void* self, void* p) {
-    libqt_list _arr = KPlotWidget_QBasePointsUnderPoint((KPlotWidget*)self, (QPoint*)p);
+libqt_list /* of KPlotPoint* */ k_plotwidget_super_points_under_point(void* self, void* p) {
+    libqt_list _arr = KPlotWidget_SuperPointsUnderPoint((KPlotWidget*)self, (QPoint*)p);
     return _arr;
 }
 
@@ -1793,8 +1793,8 @@ void k_plotwidget_change_event(void* self, void* param1) {
     KPlotWidget_ChangeEvent((KPlotWidget*)self, (QEvent*)param1);
 }
 
-void k_plotwidget_qbase_change_event(void* self, void* param1) {
-    KPlotWidget_QBaseChangeEvent((KPlotWidget*)self, (QEvent*)param1);
+void k_plotwidget_super_change_event(void* self, void* param1) {
+    KPlotWidget_SuperChangeEvent((KPlotWidget*)self, (QEvent*)param1);
 }
 
 void k_plotwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1805,8 +1805,8 @@ void k_plotwidget_init_style_option(void* self, void* option) {
     KPlotWidget_InitStyleOption((KPlotWidget*)self, (QStyleOptionFrame*)option);
 }
 
-void k_plotwidget_qbase_init_style_option(void* self, void* option) {
-    KPlotWidget_QBaseInitStyleOption((KPlotWidget*)self, (QStyleOptionFrame*)option);
+void k_plotwidget_super_init_style_option(void* self, void* option) {
+    KPlotWidget_SuperInitStyleOption((KPlotWidget*)self, (QStyleOptionFrame*)option);
 }
 
 void k_plotwidget_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1817,8 +1817,8 @@ int32_t k_plotwidget_dev_type(void* self) {
     return KPlotWidget_DevType((KPlotWidget*)self);
 }
 
-int32_t k_plotwidget_qbase_dev_type(void* self) {
-    return KPlotWidget_QBaseDevType((KPlotWidget*)self);
+int32_t k_plotwidget_super_dev_type(void* self) {
+    return KPlotWidget_SuperDevType((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1829,8 +1829,8 @@ void k_plotwidget_set_visible(void* self, bool visible) {
     KPlotWidget_SetVisible((KPlotWidget*)self, visible);
 }
 
-void k_plotwidget_qbase_set_visible(void* self, bool visible) {
-    KPlotWidget_QBaseSetVisible((KPlotWidget*)self, visible);
+void k_plotwidget_super_set_visible(void* self, bool visible) {
+    KPlotWidget_SuperSetVisible((KPlotWidget*)self, visible);
 }
 
 void k_plotwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1841,8 +1841,8 @@ int32_t k_plotwidget_height_for_width(void* self, int param1) {
     return KPlotWidget_HeightForWidth((KPlotWidget*)self, param1);
 }
 
-int32_t k_plotwidget_qbase_height_for_width(void* self, int param1) {
-    return KPlotWidget_QBaseHeightForWidth((KPlotWidget*)self, param1);
+int32_t k_plotwidget_super_height_for_width(void* self, int param1) {
+    return KPlotWidget_SuperHeightForWidth((KPlotWidget*)self, param1);
 }
 
 void k_plotwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1853,8 +1853,8 @@ bool k_plotwidget_has_height_for_width(void* self) {
     return KPlotWidget_HasHeightForWidth((KPlotWidget*)self);
 }
 
-bool k_plotwidget_qbase_has_height_for_width(void* self) {
-    return KPlotWidget_QBaseHasHeightForWidth((KPlotWidget*)self);
+bool k_plotwidget_super_has_height_for_width(void* self) {
+    return KPlotWidget_SuperHasHeightForWidth((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1865,8 +1865,8 @@ QPaintEngine* k_plotwidget_paint_engine(void* self) {
     return KPlotWidget_PaintEngine((KPlotWidget*)self);
 }
 
-QPaintEngine* k_plotwidget_qbase_paint_engine(void* self) {
-    return KPlotWidget_QBasePaintEngine((KPlotWidget*)self);
+QPaintEngine* k_plotwidget_super_paint_engine(void* self) {
+    return KPlotWidget_SuperPaintEngine((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1877,8 +1877,8 @@ void k_plotwidget_mouse_press_event(void* self, void* event) {
     KPlotWidget_MousePressEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
-void k_plotwidget_qbase_mouse_press_event(void* self, void* event) {
-    KPlotWidget_QBaseMousePressEvent((KPlotWidget*)self, (QMouseEvent*)event);
+void k_plotwidget_super_mouse_press_event(void* self, void* event) {
+    KPlotWidget_SuperMousePressEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
 void k_plotwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void k_plotwidget_mouse_release_event(void* self, void* event) {
     KPlotWidget_MouseReleaseEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
-void k_plotwidget_qbase_mouse_release_event(void* self, void* event) {
-    KPlotWidget_QBaseMouseReleaseEvent((KPlotWidget*)self, (QMouseEvent*)event);
+void k_plotwidget_super_mouse_release_event(void* self, void* event) {
+    KPlotWidget_SuperMouseReleaseEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
 void k_plotwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void k_plotwidget_mouse_double_click_event(void* self, void* event) {
     KPlotWidget_MouseDoubleClickEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
-void k_plotwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    KPlotWidget_QBaseMouseDoubleClickEvent((KPlotWidget*)self, (QMouseEvent*)event);
+void k_plotwidget_super_mouse_double_click_event(void* self, void* event) {
+    KPlotWidget_SuperMouseDoubleClickEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
 void k_plotwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void k_plotwidget_mouse_move_event(void* self, void* event) {
     KPlotWidget_MouseMoveEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
-void k_plotwidget_qbase_mouse_move_event(void* self, void* event) {
-    KPlotWidget_QBaseMouseMoveEvent((KPlotWidget*)self, (QMouseEvent*)event);
+void k_plotwidget_super_mouse_move_event(void* self, void* event) {
+    KPlotWidget_SuperMouseMoveEvent((KPlotWidget*)self, (QMouseEvent*)event);
 }
 
 void k_plotwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void k_plotwidget_wheel_event(void* self, void* event) {
     KPlotWidget_WheelEvent((KPlotWidget*)self, (QWheelEvent*)event);
 }
 
-void k_plotwidget_qbase_wheel_event(void* self, void* event) {
-    KPlotWidget_QBaseWheelEvent((KPlotWidget*)self, (QWheelEvent*)event);
+void k_plotwidget_super_wheel_event(void* self, void* event) {
+    KPlotWidget_SuperWheelEvent((KPlotWidget*)self, (QWheelEvent*)event);
 }
 
 void k_plotwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void k_plotwidget_key_press_event(void* self, void* event) {
     KPlotWidget_KeyPressEvent((KPlotWidget*)self, (QKeyEvent*)event);
 }
 
-void k_plotwidget_qbase_key_press_event(void* self, void* event) {
-    KPlotWidget_QBaseKeyPressEvent((KPlotWidget*)self, (QKeyEvent*)event);
+void k_plotwidget_super_key_press_event(void* self, void* event) {
+    KPlotWidget_SuperKeyPressEvent((KPlotWidget*)self, (QKeyEvent*)event);
 }
 
 void k_plotwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ void k_plotwidget_key_release_event(void* self, void* event) {
     KPlotWidget_KeyReleaseEvent((KPlotWidget*)self, (QKeyEvent*)event);
 }
 
-void k_plotwidget_qbase_key_release_event(void* self, void* event) {
-    KPlotWidget_QBaseKeyReleaseEvent((KPlotWidget*)self, (QKeyEvent*)event);
+void k_plotwidget_super_key_release_event(void* self, void* event) {
+    KPlotWidget_SuperKeyReleaseEvent((KPlotWidget*)self, (QKeyEvent*)event);
 }
 
 void k_plotwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1961,8 +1961,8 @@ void k_plotwidget_focus_in_event(void* self, void* event) {
     KPlotWidget_FocusInEvent((KPlotWidget*)self, (QFocusEvent*)event);
 }
 
-void k_plotwidget_qbase_focus_in_event(void* self, void* event) {
-    KPlotWidget_QBaseFocusInEvent((KPlotWidget*)self, (QFocusEvent*)event);
+void k_plotwidget_super_focus_in_event(void* self, void* event) {
+    KPlotWidget_SuperFocusInEvent((KPlotWidget*)self, (QFocusEvent*)event);
 }
 
 void k_plotwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1973,8 +1973,8 @@ void k_plotwidget_focus_out_event(void* self, void* event) {
     KPlotWidget_FocusOutEvent((KPlotWidget*)self, (QFocusEvent*)event);
 }
 
-void k_plotwidget_qbase_focus_out_event(void* self, void* event) {
-    KPlotWidget_QBaseFocusOutEvent((KPlotWidget*)self, (QFocusEvent*)event);
+void k_plotwidget_super_focus_out_event(void* self, void* event) {
+    KPlotWidget_SuperFocusOutEvent((KPlotWidget*)self, (QFocusEvent*)event);
 }
 
 void k_plotwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ void k_plotwidget_enter_event(void* self, void* event) {
     KPlotWidget_EnterEvent((KPlotWidget*)self, (QEnterEvent*)event);
 }
 
-void k_plotwidget_qbase_enter_event(void* self, void* event) {
-    KPlotWidget_QBaseEnterEvent((KPlotWidget*)self, (QEnterEvent*)event);
+void k_plotwidget_super_enter_event(void* self, void* event) {
+    KPlotWidget_SuperEnterEvent((KPlotWidget*)self, (QEnterEvent*)event);
 }
 
 void k_plotwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ void k_plotwidget_leave_event(void* self, void* event) {
     KPlotWidget_LeaveEvent((KPlotWidget*)self, (QEvent*)event);
 }
 
-void k_plotwidget_qbase_leave_event(void* self, void* event) {
-    KPlotWidget_QBaseLeaveEvent((KPlotWidget*)self, (QEvent*)event);
+void k_plotwidget_super_leave_event(void* self, void* event) {
+    KPlotWidget_SuperLeaveEvent((KPlotWidget*)self, (QEvent*)event);
 }
 
 void k_plotwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2009,8 +2009,8 @@ void k_plotwidget_move_event(void* self, void* event) {
     KPlotWidget_MoveEvent((KPlotWidget*)self, (QMoveEvent*)event);
 }
 
-void k_plotwidget_qbase_move_event(void* self, void* event) {
-    KPlotWidget_QBaseMoveEvent((KPlotWidget*)self, (QMoveEvent*)event);
+void k_plotwidget_super_move_event(void* self, void* event) {
+    KPlotWidget_SuperMoveEvent((KPlotWidget*)self, (QMoveEvent*)event);
 }
 
 void k_plotwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ void k_plotwidget_close_event(void* self, void* event) {
     KPlotWidget_CloseEvent((KPlotWidget*)self, (QCloseEvent*)event);
 }
 
-void k_plotwidget_qbase_close_event(void* self, void* event) {
-    KPlotWidget_QBaseCloseEvent((KPlotWidget*)self, (QCloseEvent*)event);
+void k_plotwidget_super_close_event(void* self, void* event) {
+    KPlotWidget_SuperCloseEvent((KPlotWidget*)self, (QCloseEvent*)event);
 }
 
 void k_plotwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2033,8 +2033,8 @@ void k_plotwidget_context_menu_event(void* self, void* event) {
     KPlotWidget_ContextMenuEvent((KPlotWidget*)self, (QContextMenuEvent*)event);
 }
 
-void k_plotwidget_qbase_context_menu_event(void* self, void* event) {
-    KPlotWidget_QBaseContextMenuEvent((KPlotWidget*)self, (QContextMenuEvent*)event);
+void k_plotwidget_super_context_menu_event(void* self, void* event) {
+    KPlotWidget_SuperContextMenuEvent((KPlotWidget*)self, (QContextMenuEvent*)event);
 }
 
 void k_plotwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2045,8 +2045,8 @@ void k_plotwidget_tablet_event(void* self, void* event) {
     KPlotWidget_TabletEvent((KPlotWidget*)self, (QTabletEvent*)event);
 }
 
-void k_plotwidget_qbase_tablet_event(void* self, void* event) {
-    KPlotWidget_QBaseTabletEvent((KPlotWidget*)self, (QTabletEvent*)event);
+void k_plotwidget_super_tablet_event(void* self, void* event) {
+    KPlotWidget_SuperTabletEvent((KPlotWidget*)self, (QTabletEvent*)event);
 }
 
 void k_plotwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2057,8 +2057,8 @@ void k_plotwidget_action_event(void* self, void* event) {
     KPlotWidget_ActionEvent((KPlotWidget*)self, (QActionEvent*)event);
 }
 
-void k_plotwidget_qbase_action_event(void* self, void* event) {
-    KPlotWidget_QBaseActionEvent((KPlotWidget*)self, (QActionEvent*)event);
+void k_plotwidget_super_action_event(void* self, void* event) {
+    KPlotWidget_SuperActionEvent((KPlotWidget*)self, (QActionEvent*)event);
 }
 
 void k_plotwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2069,8 +2069,8 @@ void k_plotwidget_drag_enter_event(void* self, void* event) {
     KPlotWidget_DragEnterEvent((KPlotWidget*)self, (QDragEnterEvent*)event);
 }
 
-void k_plotwidget_qbase_drag_enter_event(void* self, void* event) {
-    KPlotWidget_QBaseDragEnterEvent((KPlotWidget*)self, (QDragEnterEvent*)event);
+void k_plotwidget_super_drag_enter_event(void* self, void* event) {
+    KPlotWidget_SuperDragEnterEvent((KPlotWidget*)self, (QDragEnterEvent*)event);
 }
 
 void k_plotwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2081,8 +2081,8 @@ void k_plotwidget_drag_move_event(void* self, void* event) {
     KPlotWidget_DragMoveEvent((KPlotWidget*)self, (QDragMoveEvent*)event);
 }
 
-void k_plotwidget_qbase_drag_move_event(void* self, void* event) {
-    KPlotWidget_QBaseDragMoveEvent((KPlotWidget*)self, (QDragMoveEvent*)event);
+void k_plotwidget_super_drag_move_event(void* self, void* event) {
+    KPlotWidget_SuperDragMoveEvent((KPlotWidget*)self, (QDragMoveEvent*)event);
 }
 
 void k_plotwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ void k_plotwidget_drag_leave_event(void* self, void* event) {
     KPlotWidget_DragLeaveEvent((KPlotWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void k_plotwidget_qbase_drag_leave_event(void* self, void* event) {
-    KPlotWidget_QBaseDragLeaveEvent((KPlotWidget*)self, (QDragLeaveEvent*)event);
+void k_plotwidget_super_drag_leave_event(void* self, void* event) {
+    KPlotWidget_SuperDragLeaveEvent((KPlotWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void k_plotwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ void k_plotwidget_drop_event(void* self, void* event) {
     KPlotWidget_DropEvent((KPlotWidget*)self, (QDropEvent*)event);
 }
 
-void k_plotwidget_qbase_drop_event(void* self, void* event) {
-    KPlotWidget_QBaseDropEvent((KPlotWidget*)self, (QDropEvent*)event);
+void k_plotwidget_super_drop_event(void* self, void* event) {
+    KPlotWidget_SuperDropEvent((KPlotWidget*)self, (QDropEvent*)event);
 }
 
 void k_plotwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2117,8 +2117,8 @@ void k_plotwidget_show_event(void* self, void* event) {
     KPlotWidget_ShowEvent((KPlotWidget*)self, (QShowEvent*)event);
 }
 
-void k_plotwidget_qbase_show_event(void* self, void* event) {
-    KPlotWidget_QBaseShowEvent((KPlotWidget*)self, (QShowEvent*)event);
+void k_plotwidget_super_show_event(void* self, void* event) {
+    KPlotWidget_SuperShowEvent((KPlotWidget*)self, (QShowEvent*)event);
 }
 
 void k_plotwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ void k_plotwidget_hide_event(void* self, void* event) {
     KPlotWidget_HideEvent((KPlotWidget*)self, (QHideEvent*)event);
 }
 
-void k_plotwidget_qbase_hide_event(void* self, void* event) {
-    KPlotWidget_QBaseHideEvent((KPlotWidget*)self, (QHideEvent*)event);
+void k_plotwidget_super_hide_event(void* self, void* event) {
+    KPlotWidget_SuperHideEvent((KPlotWidget*)self, (QHideEvent*)event);
 }
 
 void k_plotwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2141,8 +2141,8 @@ bool k_plotwidget_native_event(void* self, char* eventType, void* message, intpt
     return KPlotWidget_NativeEvent((KPlotWidget*)self, qstring(eventType), message, result);
 }
 
-bool k_plotwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KPlotWidget_QBaseNativeEvent((KPlotWidget*)self, qstring(eventType), message, result);
+bool k_plotwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KPlotWidget_SuperNativeEvent((KPlotWidget*)self, qstring(eventType), message, result);
 }
 
 void k_plotwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2153,8 +2153,8 @@ int32_t k_plotwidget_metric(void* self, int32_t param1) {
     return KPlotWidget_Metric((KPlotWidget*)self, param1);
 }
 
-int32_t k_plotwidget_qbase_metric(void* self, int32_t param1) {
-    return KPlotWidget_QBaseMetric((KPlotWidget*)self, param1);
+int32_t k_plotwidget_super_metric(void* self, int32_t param1) {
+    return KPlotWidget_SuperMetric((KPlotWidget*)self, param1);
 }
 
 void k_plotwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2165,8 +2165,8 @@ void k_plotwidget_init_painter(void* self, void* painter) {
     KPlotWidget_InitPainter((KPlotWidget*)self, (QPainter*)painter);
 }
 
-void k_plotwidget_qbase_init_painter(void* self, void* painter) {
-    KPlotWidget_QBaseInitPainter((KPlotWidget*)self, (QPainter*)painter);
+void k_plotwidget_super_init_painter(void* self, void* painter) {
+    KPlotWidget_SuperInitPainter((KPlotWidget*)self, (QPainter*)painter);
 }
 
 void k_plotwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2177,8 +2177,8 @@ QPaintDevice* k_plotwidget_redirected(void* self, void* offset) {
     return KPlotWidget_Redirected((KPlotWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_plotwidget_qbase_redirected(void* self, void* offset) {
-    return KPlotWidget_QBaseRedirected((KPlotWidget*)self, (QPoint*)offset);
+QPaintDevice* k_plotwidget_super_redirected(void* self, void* offset) {
+    return KPlotWidget_SuperRedirected((KPlotWidget*)self, (QPoint*)offset);
 }
 
 void k_plotwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2189,8 +2189,8 @@ QPainter* k_plotwidget_shared_painter(void* self) {
     return KPlotWidget_SharedPainter((KPlotWidget*)self);
 }
 
-QPainter* k_plotwidget_qbase_shared_painter(void* self) {
-    return KPlotWidget_QBaseSharedPainter((KPlotWidget*)self);
+QPainter* k_plotwidget_super_shared_painter(void* self) {
+    return KPlotWidget_SuperSharedPainter((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2201,8 +2201,8 @@ void k_plotwidget_input_method_event(void* self, void* param1) {
     KPlotWidget_InputMethodEvent((KPlotWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void k_plotwidget_qbase_input_method_event(void* self, void* param1) {
-    KPlotWidget_QBaseInputMethodEvent((KPlotWidget*)self, (QInputMethodEvent*)param1);
+void k_plotwidget_super_input_method_event(void* self, void* param1) {
+    KPlotWidget_SuperInputMethodEvent((KPlotWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void k_plotwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2213,8 +2213,8 @@ QVariant* k_plotwidget_input_method_query(void* self, int32_t param1) {
     return KPlotWidget_InputMethodQuery((KPlotWidget*)self, param1);
 }
 
-QVariant* k_plotwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return KPlotWidget_QBaseInputMethodQuery((KPlotWidget*)self, param1);
+QVariant* k_plotwidget_super_input_method_query(void* self, int32_t param1) {
+    return KPlotWidget_SuperInputMethodQuery((KPlotWidget*)self, param1);
 }
 
 void k_plotwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2225,8 +2225,8 @@ bool k_plotwidget_focus_next_prev_child(void* self, bool next) {
     return KPlotWidget_FocusNextPrevChild((KPlotWidget*)self, next);
 }
 
-bool k_plotwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return KPlotWidget_QBaseFocusNextPrevChild((KPlotWidget*)self, next);
+bool k_plotwidget_super_focus_next_prev_child(void* self, bool next) {
+    return KPlotWidget_SuperFocusNextPrevChild((KPlotWidget*)self, next);
 }
 
 void k_plotwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2237,8 +2237,8 @@ bool k_plotwidget_event_filter(void* self, void* watched, void* event) {
     return KPlotWidget_EventFilter((KPlotWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_plotwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return KPlotWidget_QBaseEventFilter((KPlotWidget*)self, (QObject*)watched, (QEvent*)event);
+bool k_plotwidget_super_event_filter(void* self, void* watched, void* event) {
+    return KPlotWidget_SuperEventFilter((KPlotWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_plotwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2249,8 +2249,8 @@ void k_plotwidget_timer_event(void* self, void* event) {
     KPlotWidget_TimerEvent((KPlotWidget*)self, (QTimerEvent*)event);
 }
 
-void k_plotwidget_qbase_timer_event(void* self, void* event) {
-    KPlotWidget_QBaseTimerEvent((KPlotWidget*)self, (QTimerEvent*)event);
+void k_plotwidget_super_timer_event(void* self, void* event) {
+    KPlotWidget_SuperTimerEvent((KPlotWidget*)self, (QTimerEvent*)event);
 }
 
 void k_plotwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2261,8 +2261,8 @@ void k_plotwidget_child_event(void* self, void* event) {
     KPlotWidget_ChildEvent((KPlotWidget*)self, (QChildEvent*)event);
 }
 
-void k_plotwidget_qbase_child_event(void* self, void* event) {
-    KPlotWidget_QBaseChildEvent((KPlotWidget*)self, (QChildEvent*)event);
+void k_plotwidget_super_child_event(void* self, void* event) {
+    KPlotWidget_SuperChildEvent((KPlotWidget*)self, (QChildEvent*)event);
 }
 
 void k_plotwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2273,8 +2273,8 @@ void k_plotwidget_custom_event(void* self, void* event) {
     KPlotWidget_CustomEvent((KPlotWidget*)self, (QEvent*)event);
 }
 
-void k_plotwidget_qbase_custom_event(void* self, void* event) {
-    KPlotWidget_QBaseCustomEvent((KPlotWidget*)self, (QEvent*)event);
+void k_plotwidget_super_custom_event(void* self, void* event) {
+    KPlotWidget_SuperCustomEvent((KPlotWidget*)self, (QEvent*)event);
 }
 
 void k_plotwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2285,8 +2285,8 @@ void k_plotwidget_connect_notify(void* self, void* signal) {
     KPlotWidget_ConnectNotify((KPlotWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_plotwidget_qbase_connect_notify(void* self, void* signal) {
-    KPlotWidget_QBaseConnectNotify((KPlotWidget*)self, (QMetaMethod*)signal);
+void k_plotwidget_super_connect_notify(void* self, void* signal) {
+    KPlotWidget_SuperConnectNotify((KPlotWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_plotwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2297,8 +2297,8 @@ void k_plotwidget_disconnect_notify(void* self, void* signal) {
     KPlotWidget_DisconnectNotify((KPlotWidget*)self, (QMetaMethod*)signal);
 }
 
-void k_plotwidget_qbase_disconnect_notify(void* self, void* signal) {
-    KPlotWidget_QBaseDisconnectNotify((KPlotWidget*)self, (QMetaMethod*)signal);
+void k_plotwidget_super_disconnect_notify(void* self, void* signal) {
+    KPlotWidget_SuperDisconnectNotify((KPlotWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_plotwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2309,8 +2309,8 @@ void k_plotwidget_draw_frame(void* self, void* param1) {
     KPlotWidget_DrawFrame((KPlotWidget*)self, (QPainter*)param1);
 }
 
-void k_plotwidget_qbase_draw_frame(void* self, void* param1) {
-    KPlotWidget_QBaseDrawFrame((KPlotWidget*)self, (QPainter*)param1);
+void k_plotwidget_super_draw_frame(void* self, void* param1) {
+    KPlotWidget_SuperDrawFrame((KPlotWidget*)self, (QPainter*)param1);
 }
 
 void k_plotwidget_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2321,8 +2321,8 @@ void k_plotwidget_update_micro_focus(void* self) {
     KPlotWidget_UpdateMicroFocus((KPlotWidget*)self);
 }
 
-void k_plotwidget_qbase_update_micro_focus(void* self) {
-    KPlotWidget_QBaseUpdateMicroFocus((KPlotWidget*)self);
+void k_plotwidget_super_update_micro_focus(void* self) {
+    KPlotWidget_SuperUpdateMicroFocus((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2333,8 +2333,8 @@ void k_plotwidget_create(void* self) {
     KPlotWidget_Create((KPlotWidget*)self);
 }
 
-void k_plotwidget_qbase_create(void* self) {
-    KPlotWidget_QBaseCreate((KPlotWidget*)self);
+void k_plotwidget_super_create(void* self) {
+    KPlotWidget_SuperCreate((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_create(void* self, void (*callback)()) {
@@ -2345,8 +2345,8 @@ void k_plotwidget_destroy(void* self) {
     KPlotWidget_Destroy((KPlotWidget*)self);
 }
 
-void k_plotwidget_qbase_destroy(void* self) {
-    KPlotWidget_QBaseDestroy((KPlotWidget*)self);
+void k_plotwidget_super_destroy(void* self) {
+    KPlotWidget_SuperDestroy((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_destroy(void* self, void (*callback)()) {
@@ -2357,8 +2357,8 @@ bool k_plotwidget_focus_next_child(void* self) {
     return KPlotWidget_FocusNextChild((KPlotWidget*)self);
 }
 
-bool k_plotwidget_qbase_focus_next_child(void* self) {
-    return KPlotWidget_QBaseFocusNextChild((KPlotWidget*)self);
+bool k_plotwidget_super_focus_next_child(void* self) {
+    return KPlotWidget_SuperFocusNextChild((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2369,8 +2369,8 @@ bool k_plotwidget_focus_previous_child(void* self) {
     return KPlotWidget_FocusPreviousChild((KPlotWidget*)self);
 }
 
-bool k_plotwidget_qbase_focus_previous_child(void* self) {
-    return KPlotWidget_QBaseFocusPreviousChild((KPlotWidget*)self);
+bool k_plotwidget_super_focus_previous_child(void* self) {
+    return KPlotWidget_SuperFocusPreviousChild((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2381,8 +2381,8 @@ QObject* k_plotwidget_sender(void* self) {
     return KPlotWidget_Sender((KPlotWidget*)self);
 }
 
-QObject* k_plotwidget_qbase_sender(void* self) {
-    return KPlotWidget_QBaseSender((KPlotWidget*)self);
+QObject* k_plotwidget_super_sender(void* self) {
+    return KPlotWidget_SuperSender((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -2393,8 +2393,8 @@ int32_t k_plotwidget_sender_signal_index(void* self) {
     return KPlotWidget_SenderSignalIndex((KPlotWidget*)self);
 }
 
-int32_t k_plotwidget_qbase_sender_signal_index(void* self) {
-    return KPlotWidget_QBaseSenderSignalIndex((KPlotWidget*)self);
+int32_t k_plotwidget_super_sender_signal_index(void* self) {
+    return KPlotWidget_SuperSenderSignalIndex((KPlotWidget*)self);
 }
 
 void k_plotwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2405,8 +2405,8 @@ int32_t k_plotwidget_receivers(void* self, const char* signal) {
     return KPlotWidget_Receivers((KPlotWidget*)self, signal);
 }
 
-int32_t k_plotwidget_qbase_receivers(void* self, const char* signal) {
-    return KPlotWidget_QBaseReceivers((KPlotWidget*)self, signal);
+int32_t k_plotwidget_super_receivers(void* self, const char* signal) {
+    return KPlotWidget_SuperReceivers((KPlotWidget*)self, signal);
 }
 
 void k_plotwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2417,8 +2417,8 @@ bool k_plotwidget_is_signal_connected(void* self, void* signal) {
     return KPlotWidget_IsSignalConnected((KPlotWidget*)self, (QMetaMethod*)signal);
 }
 
-bool k_plotwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return KPlotWidget_QBaseIsSignalConnected((KPlotWidget*)self, (QMetaMethod*)signal);
+bool k_plotwidget_super_is_signal_connected(void* self, void* signal) {
+    return KPlotWidget_SuperIsSignalConnected((KPlotWidget*)self, (QMetaMethod*)signal);
 }
 
 void k_plotwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2429,8 +2429,8 @@ double k_plotwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KPlotWidget_GetDecodedMetricF((KPlotWidget*)self, metricA, metricB);
 }
 
-double k_plotwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KPlotWidget_QBaseGetDecodedMetricF((KPlotWidget*)self, metricA, metricB);
+double k_plotwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KPlotWidget_SuperGetDecodedMetricF((KPlotWidget*)self, metricA, metricB);
 }
 
 void k_plotwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -19,8 +19,8 @@ void k_filemetadata__extractorplugin_on_meta_object(void* self, const QMetaObjec
     KFileMetaData__ExtractorPlugin_OnMetaObject((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_filemetadata__extractorplugin_qbase_meta_object(void* self) {
-    return KFileMetaData__ExtractorPlugin_QBaseMetaObject((KFileMetaData__ExtractorPlugin*)self);
+const QMetaObject* k_filemetadata__extractorplugin_super_meta_object(void* self) {
+    return KFileMetaData__ExtractorPlugin_SuperMetaObject((KFileMetaData__ExtractorPlugin*)self);
 }
 
 void* k_filemetadata__extractorplugin_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void k_filemetadata__extractorplugin_on_metacast(void* self, void* (*callback)(v
     KFileMetaData__ExtractorPlugin_OnMetacast((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
-void* k_filemetadata__extractorplugin_qbase_metacast(void* self, const char* param1) {
-    return KFileMetaData__ExtractorPlugin_QBaseMetacast((KFileMetaData__ExtractorPlugin*)self, param1);
+void* k_filemetadata__extractorplugin_super_metacast(void* self, const char* param1) {
+    return KFileMetaData__ExtractorPlugin_SuperMetacast((KFileMetaData__ExtractorPlugin*)self, param1);
 }
 
 int32_t k_filemetadata__extractorplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void k_filemetadata__extractorplugin_on_metacall(void* self, int32_t (*callback)
     KFileMetaData__ExtractorPlugin_OnMetacall((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
-int32_t k_filemetadata__extractorplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileMetaData__ExtractorPlugin_QBaseMetacall((KFileMetaData__ExtractorPlugin*)self, param1, param2, param3);
+int32_t k_filemetadata__extractorplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileMetaData__ExtractorPlugin_SuperMetacall((KFileMetaData__ExtractorPlugin*)self, param1, param2, param3);
 }
 
 const char* k_filemetadata__extractorplugin_tr(const char* s) {
@@ -77,8 +77,8 @@ void k_filemetadata__extractorplugin_on_mimetypes(void* self, const char** (*cal
     KFileMetaData__ExtractorPlugin_OnMimetypes((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
-const char** k_filemetadata__extractorplugin_qbase_mimetypes(void* self) {
-    libqt_list _arr = KFileMetaData__ExtractorPlugin_QBaseMimetypes((KFileMetaData__ExtractorPlugin*)self);
+const char** k_filemetadata__extractorplugin_super_mimetypes(void* self) {
+    libqt_list _arr = KFileMetaData__ExtractorPlugin_SuperMimetypes((KFileMetaData__ExtractorPlugin*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -104,8 +104,8 @@ void k_filemetadata__extractorplugin_on_extract(void* self, void (*callback)(voi
     KFileMetaData__ExtractorPlugin_OnExtract((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__extractorplugin_qbase_extract(void* self, void* result) {
-    KFileMetaData__ExtractorPlugin_QBaseExtract((KFileMetaData__ExtractorPlugin*)self, (KFileMetaData__ExtractionResult*)result);
+void k_filemetadata__extractorplugin_super_extract(void* self, void* result) {
+    KFileMetaData__ExtractorPlugin_SuperExtract((KFileMetaData__ExtractorPlugin*)self, (KFileMetaData__ExtractionResult*)result);
 }
 
 QDateTime* k_filemetadata__extractorplugin_date_time_from_string(const char* dateString) {
@@ -142,8 +142,8 @@ void k_filemetadata__extractorplugin_on_get_supported_mime_type(void* self, cons
     KFileMetaData__ExtractorPlugin_OnGetSupportedMimeType((KFileMetaData__ExtractorPlugin*)self, (intptr_t)callback);
 }
 
-const char* k_filemetadata__extractorplugin_qbase_get_supported_mime_type(void* self, const char* mimetype) {
-    libqt_string _str = KFileMetaData__ExtractorPlugin_QBaseGetSupportedMimeType((KFileMetaData__ExtractorPlugin*)self, qstring(mimetype));
+const char* k_filemetadata__extractorplugin_super_get_supported_mime_type(void* self, const char* mimetype) {
+    libqt_string _str = KFileMetaData__ExtractorPlugin_SuperGetSupportedMimeType((KFileMetaData__ExtractorPlugin*)self, qstring(mimetype));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -378,8 +378,8 @@ bool k_filemetadata__extractorplugin_event(void* self, void* event) {
     return KFileMetaData__ExtractorPlugin_Event((KFileMetaData__ExtractorPlugin*)self, (QEvent*)event);
 }
 
-bool k_filemetadata__extractorplugin_qbase_event(void* self, void* event) {
-    return KFileMetaData__ExtractorPlugin_QBaseEvent((KFileMetaData__ExtractorPlugin*)self, (QEvent*)event);
+bool k_filemetadata__extractorplugin_super_event(void* self, void* event) {
+    return KFileMetaData__ExtractorPlugin_SuperEvent((KFileMetaData__ExtractorPlugin*)self, (QEvent*)event);
 }
 
 void k_filemetadata__extractorplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ bool k_filemetadata__extractorplugin_event_filter(void* self, void* watched, voi
     return KFileMetaData__ExtractorPlugin_EventFilter((KFileMetaData__ExtractorPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_filemetadata__extractorplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFileMetaData__ExtractorPlugin_QBaseEventFilter((KFileMetaData__ExtractorPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool k_filemetadata__extractorplugin_super_event_filter(void* self, void* watched, void* event) {
+    return KFileMetaData__ExtractorPlugin_SuperEventFilter((KFileMetaData__ExtractorPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_filemetadata__extractorplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -402,8 +402,8 @@ void k_filemetadata__extractorplugin_timer_event(void* self, void* event) {
     KFileMetaData__ExtractorPlugin_TimerEvent((KFileMetaData__ExtractorPlugin*)self, (QTimerEvent*)event);
 }
 
-void k_filemetadata__extractorplugin_qbase_timer_event(void* self, void* event) {
-    KFileMetaData__ExtractorPlugin_QBaseTimerEvent((KFileMetaData__ExtractorPlugin*)self, (QTimerEvent*)event);
+void k_filemetadata__extractorplugin_super_timer_event(void* self, void* event) {
+    KFileMetaData__ExtractorPlugin_SuperTimerEvent((KFileMetaData__ExtractorPlugin*)self, (QTimerEvent*)event);
 }
 
 void k_filemetadata__extractorplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -414,8 +414,8 @@ void k_filemetadata__extractorplugin_child_event(void* self, void* event) {
     KFileMetaData__ExtractorPlugin_ChildEvent((KFileMetaData__ExtractorPlugin*)self, (QChildEvent*)event);
 }
 
-void k_filemetadata__extractorplugin_qbase_child_event(void* self, void* event) {
-    KFileMetaData__ExtractorPlugin_QBaseChildEvent((KFileMetaData__ExtractorPlugin*)self, (QChildEvent*)event);
+void k_filemetadata__extractorplugin_super_child_event(void* self, void* event) {
+    KFileMetaData__ExtractorPlugin_SuperChildEvent((KFileMetaData__ExtractorPlugin*)self, (QChildEvent*)event);
 }
 
 void k_filemetadata__extractorplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ void k_filemetadata__extractorplugin_custom_event(void* self, void* event) {
     KFileMetaData__ExtractorPlugin_CustomEvent((KFileMetaData__ExtractorPlugin*)self, (QEvent*)event);
 }
 
-void k_filemetadata__extractorplugin_qbase_custom_event(void* self, void* event) {
-    KFileMetaData__ExtractorPlugin_QBaseCustomEvent((KFileMetaData__ExtractorPlugin*)self, (QEvent*)event);
+void k_filemetadata__extractorplugin_super_custom_event(void* self, void* event) {
+    KFileMetaData__ExtractorPlugin_SuperCustomEvent((KFileMetaData__ExtractorPlugin*)self, (QEvent*)event);
 }
 
 void k_filemetadata__extractorplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -438,8 +438,8 @@ void k_filemetadata__extractorplugin_connect_notify(void* self, void* signal) {
     KFileMetaData__ExtractorPlugin_ConnectNotify((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_filemetadata__extractorplugin_qbase_connect_notify(void* self, void* signal) {
-    KFileMetaData__ExtractorPlugin_QBaseConnectNotify((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
+void k_filemetadata__extractorplugin_super_connect_notify(void* self, void* signal) {
+    KFileMetaData__ExtractorPlugin_SuperConnectNotify((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_filemetadata__extractorplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ void k_filemetadata__extractorplugin_disconnect_notify(void* self, void* signal)
     KFileMetaData__ExtractorPlugin_DisconnectNotify((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_filemetadata__extractorplugin_qbase_disconnect_notify(void* self, void* signal) {
-    KFileMetaData__ExtractorPlugin_QBaseDisconnectNotify((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
+void k_filemetadata__extractorplugin_super_disconnect_notify(void* self, void* signal) {
+    KFileMetaData__ExtractorPlugin_SuperDisconnectNotify((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_filemetadata__extractorplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ QObject* k_filemetadata__extractorplugin_sender(void* self) {
     return KFileMetaData__ExtractorPlugin_Sender((KFileMetaData__ExtractorPlugin*)self);
 }
 
-QObject* k_filemetadata__extractorplugin_qbase_sender(void* self) {
-    return KFileMetaData__ExtractorPlugin_QBaseSender((KFileMetaData__ExtractorPlugin*)self);
+QObject* k_filemetadata__extractorplugin_super_sender(void* self) {
+    return KFileMetaData__ExtractorPlugin_SuperSender((KFileMetaData__ExtractorPlugin*)self);
 }
 
 void k_filemetadata__extractorplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -474,8 +474,8 @@ int32_t k_filemetadata__extractorplugin_sender_signal_index(void* self) {
     return KFileMetaData__ExtractorPlugin_SenderSignalIndex((KFileMetaData__ExtractorPlugin*)self);
 }
 
-int32_t k_filemetadata__extractorplugin_qbase_sender_signal_index(void* self) {
-    return KFileMetaData__ExtractorPlugin_QBaseSenderSignalIndex((KFileMetaData__ExtractorPlugin*)self);
+int32_t k_filemetadata__extractorplugin_super_sender_signal_index(void* self) {
+    return KFileMetaData__ExtractorPlugin_SuperSenderSignalIndex((KFileMetaData__ExtractorPlugin*)self);
 }
 
 void k_filemetadata__extractorplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -486,8 +486,8 @@ int32_t k_filemetadata__extractorplugin_receivers(void* self, const char* signal
     return KFileMetaData__ExtractorPlugin_Receivers((KFileMetaData__ExtractorPlugin*)self, signal);
 }
 
-int32_t k_filemetadata__extractorplugin_qbase_receivers(void* self, const char* signal) {
-    return KFileMetaData__ExtractorPlugin_QBaseReceivers((KFileMetaData__ExtractorPlugin*)self, signal);
+int32_t k_filemetadata__extractorplugin_super_receivers(void* self, const char* signal) {
+    return KFileMetaData__ExtractorPlugin_SuperReceivers((KFileMetaData__ExtractorPlugin*)self, signal);
 }
 
 void k_filemetadata__extractorplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -498,8 +498,8 @@ bool k_filemetadata__extractorplugin_is_signal_connected(void* self, void* signa
     return KFileMetaData__ExtractorPlugin_IsSignalConnected((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool k_filemetadata__extractorplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileMetaData__ExtractorPlugin_QBaseIsSignalConnected((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
+bool k_filemetadata__extractorplugin_super_is_signal_connected(void* self, void* signal) {
+    return KFileMetaData__ExtractorPlugin_SuperIsSignalConnected((KFileMetaData__ExtractorPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_filemetadata__extractorplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

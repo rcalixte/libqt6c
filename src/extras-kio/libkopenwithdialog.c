@@ -63,8 +63,8 @@ void k_openwithdialog_on_meta_object(void* self, const QMetaObject* (*callback)(
     KOpenWithDialog_OnMetaObject((KOpenWithDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_openwithdialog_qbase_meta_object(void* self) {
-    return KOpenWithDialog_QBaseMetaObject((KOpenWithDialog*)self);
+const QMetaObject* k_openwithdialog_super_meta_object(void* self) {
+    return KOpenWithDialog_SuperMetaObject((KOpenWithDialog*)self);
 }
 
 void* k_openwithdialog_metacast(void* self, const char* param1) {
@@ -75,8 +75,8 @@ void k_openwithdialog_on_metacast(void* self, void* (*callback)(void*, const cha
     KOpenWithDialog_OnMetacast((KOpenWithDialog*)self, (intptr_t)callback);
 }
 
-void* k_openwithdialog_qbase_metacast(void* self, const char* param1) {
-    return KOpenWithDialog_QBaseMetacast((KOpenWithDialog*)self, param1);
+void* k_openwithdialog_super_metacast(void* self, const char* param1) {
+    return KOpenWithDialog_SuperMetacast((KOpenWithDialog*)self, param1);
 }
 
 int32_t k_openwithdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -87,8 +87,8 @@ void k_openwithdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KOpenWithDialog_OnMetacall((KOpenWithDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_openwithdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KOpenWithDialog_QBaseMetacall((KOpenWithDialog*)self, param1, param2, param3);
+int32_t k_openwithdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KOpenWithDialog_SuperMetacall((KOpenWithDialog*)self, param1, param2, param3);
 }
 
 const char* k_openwithdialog_tr(const char* s) {
@@ -141,8 +141,8 @@ void k_openwithdialog_on_accept(void* self, void (*callback)()) {
     KOpenWithDialog_OnAccept((KOpenWithDialog*)self, (intptr_t)callback);
 }
 
-void k_openwithdialog_qbase_accept(void* self) {
-    KOpenWithDialog_QBaseAccept((KOpenWithDialog*)self);
+void k_openwithdialog_super_accept(void* self) {
+    KOpenWithDialog_SuperAccept((KOpenWithDialog*)self);
 }
 
 const char* k_openwithdialog_tr2(const char* s, const char* c) {
@@ -1588,8 +1588,8 @@ void k_openwithdialog_set_visible(void* self, bool visible) {
     KOpenWithDialog_SetVisible((KOpenWithDialog*)self, visible);
 }
 
-void k_openwithdialog_qbase_set_visible(void* self, bool visible) {
-    KOpenWithDialog_QBaseSetVisible((KOpenWithDialog*)self, visible);
+void k_openwithdialog_super_set_visible(void* self, bool visible) {
+    KOpenWithDialog_SuperSetVisible((KOpenWithDialog*)self, visible);
 }
 
 void k_openwithdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1600,8 +1600,8 @@ QSize* k_openwithdialog_size_hint(void* self) {
     return KOpenWithDialog_SizeHint((KOpenWithDialog*)self);
 }
 
-QSize* k_openwithdialog_qbase_size_hint(void* self) {
-    return KOpenWithDialog_QBaseSizeHint((KOpenWithDialog*)self);
+QSize* k_openwithdialog_super_size_hint(void* self) {
+    return KOpenWithDialog_SuperSizeHint((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1612,8 +1612,8 @@ QSize* k_openwithdialog_minimum_size_hint(void* self) {
     return KOpenWithDialog_MinimumSizeHint((KOpenWithDialog*)self);
 }
 
-QSize* k_openwithdialog_qbase_minimum_size_hint(void* self) {
-    return KOpenWithDialog_QBaseMinimumSizeHint((KOpenWithDialog*)self);
+QSize* k_openwithdialog_super_minimum_size_hint(void* self) {
+    return KOpenWithDialog_SuperMinimumSizeHint((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1624,8 +1624,8 @@ void k_openwithdialog_open(void* self) {
     KOpenWithDialog_Open((KOpenWithDialog*)self);
 }
 
-void k_openwithdialog_qbase_open(void* self) {
-    KOpenWithDialog_QBaseOpen((KOpenWithDialog*)self);
+void k_openwithdialog_super_open(void* self) {
+    KOpenWithDialog_SuperOpen((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_open(void* self, void (*callback)()) {
@@ -1636,8 +1636,8 @@ int32_t k_openwithdialog_exec(void* self) {
     return KOpenWithDialog_Exec((KOpenWithDialog*)self);
 }
 
-int32_t k_openwithdialog_qbase_exec(void* self) {
-    return KOpenWithDialog_QBaseExec((KOpenWithDialog*)self);
+int32_t k_openwithdialog_super_exec(void* self) {
+    return KOpenWithDialog_SuperExec((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1648,8 +1648,8 @@ void k_openwithdialog_done(void* self, int param1) {
     KOpenWithDialog_Done((KOpenWithDialog*)self, param1);
 }
 
-void k_openwithdialog_qbase_done(void* self, int param1) {
-    KOpenWithDialog_QBaseDone((KOpenWithDialog*)self, param1);
+void k_openwithdialog_super_done(void* self, int param1) {
+    KOpenWithDialog_SuperDone((KOpenWithDialog*)self, param1);
 }
 
 void k_openwithdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1660,8 +1660,8 @@ void k_openwithdialog_reject(void* self) {
     KOpenWithDialog_Reject((KOpenWithDialog*)self);
 }
 
-void k_openwithdialog_qbase_reject(void* self) {
-    KOpenWithDialog_QBaseReject((KOpenWithDialog*)self);
+void k_openwithdialog_super_reject(void* self) {
+    KOpenWithDialog_SuperReject((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_reject(void* self, void (*callback)()) {
@@ -1672,8 +1672,8 @@ void k_openwithdialog_key_press_event(void* self, void* param1) {
     KOpenWithDialog_KeyPressEvent((KOpenWithDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_openwithdialog_qbase_key_press_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseKeyPressEvent((KOpenWithDialog*)self, (QKeyEvent*)param1);
+void k_openwithdialog_super_key_press_event(void* self, void* param1) {
+    KOpenWithDialog_SuperKeyPressEvent((KOpenWithDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_openwithdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1684,8 +1684,8 @@ void k_openwithdialog_close_event(void* self, void* param1) {
     KOpenWithDialog_CloseEvent((KOpenWithDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_openwithdialog_qbase_close_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseCloseEvent((KOpenWithDialog*)self, (QCloseEvent*)param1);
+void k_openwithdialog_super_close_event(void* self, void* param1) {
+    KOpenWithDialog_SuperCloseEvent((KOpenWithDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_openwithdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1696,8 +1696,8 @@ void k_openwithdialog_show_event(void* self, void* param1) {
     KOpenWithDialog_ShowEvent((KOpenWithDialog*)self, (QShowEvent*)param1);
 }
 
-void k_openwithdialog_qbase_show_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseShowEvent((KOpenWithDialog*)self, (QShowEvent*)param1);
+void k_openwithdialog_super_show_event(void* self, void* param1) {
+    KOpenWithDialog_SuperShowEvent((KOpenWithDialog*)self, (QShowEvent*)param1);
 }
 
 void k_openwithdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1708,8 +1708,8 @@ void k_openwithdialog_resize_event(void* self, void* param1) {
     KOpenWithDialog_ResizeEvent((KOpenWithDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_openwithdialog_qbase_resize_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseResizeEvent((KOpenWithDialog*)self, (QResizeEvent*)param1);
+void k_openwithdialog_super_resize_event(void* self, void* param1) {
+    KOpenWithDialog_SuperResizeEvent((KOpenWithDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_openwithdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1720,8 +1720,8 @@ void k_openwithdialog_context_menu_event(void* self, void* param1) {
     KOpenWithDialog_ContextMenuEvent((KOpenWithDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_openwithdialog_qbase_context_menu_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseContextMenuEvent((KOpenWithDialog*)self, (QContextMenuEvent*)param1);
+void k_openwithdialog_super_context_menu_event(void* self, void* param1) {
+    KOpenWithDialog_SuperContextMenuEvent((KOpenWithDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_openwithdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1732,8 +1732,8 @@ int32_t k_openwithdialog_dev_type(void* self) {
     return KOpenWithDialog_DevType((KOpenWithDialog*)self);
 }
 
-int32_t k_openwithdialog_qbase_dev_type(void* self) {
-    return KOpenWithDialog_QBaseDevType((KOpenWithDialog*)self);
+int32_t k_openwithdialog_super_dev_type(void* self) {
+    return KOpenWithDialog_SuperDevType((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1744,8 +1744,8 @@ int32_t k_openwithdialog_height_for_width(void* self, int param1) {
     return KOpenWithDialog_HeightForWidth((KOpenWithDialog*)self, param1);
 }
 
-int32_t k_openwithdialog_qbase_height_for_width(void* self, int param1) {
-    return KOpenWithDialog_QBaseHeightForWidth((KOpenWithDialog*)self, param1);
+int32_t k_openwithdialog_super_height_for_width(void* self, int param1) {
+    return KOpenWithDialog_SuperHeightForWidth((KOpenWithDialog*)self, param1);
 }
 
 void k_openwithdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1756,8 +1756,8 @@ bool k_openwithdialog_has_height_for_width(void* self) {
     return KOpenWithDialog_HasHeightForWidth((KOpenWithDialog*)self);
 }
 
-bool k_openwithdialog_qbase_has_height_for_width(void* self) {
-    return KOpenWithDialog_QBaseHasHeightForWidth((KOpenWithDialog*)self);
+bool k_openwithdialog_super_has_height_for_width(void* self) {
+    return KOpenWithDialog_SuperHasHeightForWidth((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1768,8 +1768,8 @@ QPaintEngine* k_openwithdialog_paint_engine(void* self) {
     return KOpenWithDialog_PaintEngine((KOpenWithDialog*)self);
 }
 
-QPaintEngine* k_openwithdialog_qbase_paint_engine(void* self) {
-    return KOpenWithDialog_QBasePaintEngine((KOpenWithDialog*)self);
+QPaintEngine* k_openwithdialog_super_paint_engine(void* self) {
+    return KOpenWithDialog_SuperPaintEngine((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1780,8 +1780,8 @@ bool k_openwithdialog_event(void* self, void* event) {
     return KOpenWithDialog_Event((KOpenWithDialog*)self, (QEvent*)event);
 }
 
-bool k_openwithdialog_qbase_event(void* self, void* event) {
-    return KOpenWithDialog_QBaseEvent((KOpenWithDialog*)self, (QEvent*)event);
+bool k_openwithdialog_super_event(void* self, void* event) {
+    return KOpenWithDialog_SuperEvent((KOpenWithDialog*)self, (QEvent*)event);
 }
 
 void k_openwithdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1792,8 +1792,8 @@ void k_openwithdialog_mouse_press_event(void* self, void* event) {
     KOpenWithDialog_MousePressEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
-void k_openwithdialog_qbase_mouse_press_event(void* self, void* event) {
-    KOpenWithDialog_QBaseMousePressEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
+void k_openwithdialog_super_mouse_press_event(void* self, void* event) {
+    KOpenWithDialog_SuperMousePressEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
 void k_openwithdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1804,8 +1804,8 @@ void k_openwithdialog_mouse_release_event(void* self, void* event) {
     KOpenWithDialog_MouseReleaseEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
-void k_openwithdialog_qbase_mouse_release_event(void* self, void* event) {
-    KOpenWithDialog_QBaseMouseReleaseEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
+void k_openwithdialog_super_mouse_release_event(void* self, void* event) {
+    KOpenWithDialog_SuperMouseReleaseEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
 void k_openwithdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1816,8 +1816,8 @@ void k_openwithdialog_mouse_double_click_event(void* self, void* event) {
     KOpenWithDialog_MouseDoubleClickEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
-void k_openwithdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KOpenWithDialog_QBaseMouseDoubleClickEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
+void k_openwithdialog_super_mouse_double_click_event(void* self, void* event) {
+    KOpenWithDialog_SuperMouseDoubleClickEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
 void k_openwithdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1828,8 +1828,8 @@ void k_openwithdialog_mouse_move_event(void* self, void* event) {
     KOpenWithDialog_MouseMoveEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
-void k_openwithdialog_qbase_mouse_move_event(void* self, void* event) {
-    KOpenWithDialog_QBaseMouseMoveEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
+void k_openwithdialog_super_mouse_move_event(void* self, void* event) {
+    KOpenWithDialog_SuperMouseMoveEvent((KOpenWithDialog*)self, (QMouseEvent*)event);
 }
 
 void k_openwithdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1840,8 +1840,8 @@ void k_openwithdialog_wheel_event(void* self, void* event) {
     KOpenWithDialog_WheelEvent((KOpenWithDialog*)self, (QWheelEvent*)event);
 }
 
-void k_openwithdialog_qbase_wheel_event(void* self, void* event) {
-    KOpenWithDialog_QBaseWheelEvent((KOpenWithDialog*)self, (QWheelEvent*)event);
+void k_openwithdialog_super_wheel_event(void* self, void* event) {
+    KOpenWithDialog_SuperWheelEvent((KOpenWithDialog*)self, (QWheelEvent*)event);
 }
 
 void k_openwithdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1852,8 +1852,8 @@ void k_openwithdialog_key_release_event(void* self, void* event) {
     KOpenWithDialog_KeyReleaseEvent((KOpenWithDialog*)self, (QKeyEvent*)event);
 }
 
-void k_openwithdialog_qbase_key_release_event(void* self, void* event) {
-    KOpenWithDialog_QBaseKeyReleaseEvent((KOpenWithDialog*)self, (QKeyEvent*)event);
+void k_openwithdialog_super_key_release_event(void* self, void* event) {
+    KOpenWithDialog_SuperKeyReleaseEvent((KOpenWithDialog*)self, (QKeyEvent*)event);
 }
 
 void k_openwithdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1864,8 +1864,8 @@ void k_openwithdialog_focus_in_event(void* self, void* event) {
     KOpenWithDialog_FocusInEvent((KOpenWithDialog*)self, (QFocusEvent*)event);
 }
 
-void k_openwithdialog_qbase_focus_in_event(void* self, void* event) {
-    KOpenWithDialog_QBaseFocusInEvent((KOpenWithDialog*)self, (QFocusEvent*)event);
+void k_openwithdialog_super_focus_in_event(void* self, void* event) {
+    KOpenWithDialog_SuperFocusInEvent((KOpenWithDialog*)self, (QFocusEvent*)event);
 }
 
 void k_openwithdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1876,8 +1876,8 @@ void k_openwithdialog_focus_out_event(void* self, void* event) {
     KOpenWithDialog_FocusOutEvent((KOpenWithDialog*)self, (QFocusEvent*)event);
 }
 
-void k_openwithdialog_qbase_focus_out_event(void* self, void* event) {
-    KOpenWithDialog_QBaseFocusOutEvent((KOpenWithDialog*)self, (QFocusEvent*)event);
+void k_openwithdialog_super_focus_out_event(void* self, void* event) {
+    KOpenWithDialog_SuperFocusOutEvent((KOpenWithDialog*)self, (QFocusEvent*)event);
 }
 
 void k_openwithdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void k_openwithdialog_enter_event(void* self, void* event) {
     KOpenWithDialog_EnterEvent((KOpenWithDialog*)self, (QEnterEvent*)event);
 }
 
-void k_openwithdialog_qbase_enter_event(void* self, void* event) {
-    KOpenWithDialog_QBaseEnterEvent((KOpenWithDialog*)self, (QEnterEvent*)event);
+void k_openwithdialog_super_enter_event(void* self, void* event) {
+    KOpenWithDialog_SuperEnterEvent((KOpenWithDialog*)self, (QEnterEvent*)event);
 }
 
 void k_openwithdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void k_openwithdialog_leave_event(void* self, void* event) {
     KOpenWithDialog_LeaveEvent((KOpenWithDialog*)self, (QEvent*)event);
 }
 
-void k_openwithdialog_qbase_leave_event(void* self, void* event) {
-    KOpenWithDialog_QBaseLeaveEvent((KOpenWithDialog*)self, (QEvent*)event);
+void k_openwithdialog_super_leave_event(void* self, void* event) {
+    KOpenWithDialog_SuperLeaveEvent((KOpenWithDialog*)self, (QEvent*)event);
 }
 
 void k_openwithdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void k_openwithdialog_paint_event(void* self, void* event) {
     KOpenWithDialog_PaintEvent((KOpenWithDialog*)self, (QPaintEvent*)event);
 }
 
-void k_openwithdialog_qbase_paint_event(void* self, void* event) {
-    KOpenWithDialog_QBasePaintEvent((KOpenWithDialog*)self, (QPaintEvent*)event);
+void k_openwithdialog_super_paint_event(void* self, void* event) {
+    KOpenWithDialog_SuperPaintEvent((KOpenWithDialog*)self, (QPaintEvent*)event);
 }
 
 void k_openwithdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void k_openwithdialog_move_event(void* self, void* event) {
     KOpenWithDialog_MoveEvent((KOpenWithDialog*)self, (QMoveEvent*)event);
 }
 
-void k_openwithdialog_qbase_move_event(void* self, void* event) {
-    KOpenWithDialog_QBaseMoveEvent((KOpenWithDialog*)self, (QMoveEvent*)event);
+void k_openwithdialog_super_move_event(void* self, void* event) {
+    KOpenWithDialog_SuperMoveEvent((KOpenWithDialog*)self, (QMoveEvent*)event);
 }
 
 void k_openwithdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void k_openwithdialog_tablet_event(void* self, void* event) {
     KOpenWithDialog_TabletEvent((KOpenWithDialog*)self, (QTabletEvent*)event);
 }
 
-void k_openwithdialog_qbase_tablet_event(void* self, void* event) {
-    KOpenWithDialog_QBaseTabletEvent((KOpenWithDialog*)self, (QTabletEvent*)event);
+void k_openwithdialog_super_tablet_event(void* self, void* event) {
+    KOpenWithDialog_SuperTabletEvent((KOpenWithDialog*)self, (QTabletEvent*)event);
 }
 
 void k_openwithdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void k_openwithdialog_action_event(void* self, void* event) {
     KOpenWithDialog_ActionEvent((KOpenWithDialog*)self, (QActionEvent*)event);
 }
 
-void k_openwithdialog_qbase_action_event(void* self, void* event) {
-    KOpenWithDialog_QBaseActionEvent((KOpenWithDialog*)self, (QActionEvent*)event);
+void k_openwithdialog_super_action_event(void* self, void* event) {
+    KOpenWithDialog_SuperActionEvent((KOpenWithDialog*)self, (QActionEvent*)event);
 }
 
 void k_openwithdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ void k_openwithdialog_drag_enter_event(void* self, void* event) {
     KOpenWithDialog_DragEnterEvent((KOpenWithDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_openwithdialog_qbase_drag_enter_event(void* self, void* event) {
-    KOpenWithDialog_QBaseDragEnterEvent((KOpenWithDialog*)self, (QDragEnterEvent*)event);
+void k_openwithdialog_super_drag_enter_event(void* self, void* event) {
+    KOpenWithDialog_SuperDragEnterEvent((KOpenWithDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_openwithdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ void k_openwithdialog_drag_move_event(void* self, void* event) {
     KOpenWithDialog_DragMoveEvent((KOpenWithDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_openwithdialog_qbase_drag_move_event(void* self, void* event) {
-    KOpenWithDialog_QBaseDragMoveEvent((KOpenWithDialog*)self, (QDragMoveEvent*)event);
+void k_openwithdialog_super_drag_move_event(void* self, void* event) {
+    KOpenWithDialog_SuperDragMoveEvent((KOpenWithDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_openwithdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ void k_openwithdialog_drag_leave_event(void* self, void* event) {
     KOpenWithDialog_DragLeaveEvent((KOpenWithDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_openwithdialog_qbase_drag_leave_event(void* self, void* event) {
-    KOpenWithDialog_QBaseDragLeaveEvent((KOpenWithDialog*)self, (QDragLeaveEvent*)event);
+void k_openwithdialog_super_drag_leave_event(void* self, void* event) {
+    KOpenWithDialog_SuperDragLeaveEvent((KOpenWithDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_openwithdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ void k_openwithdialog_drop_event(void* self, void* event) {
     KOpenWithDialog_DropEvent((KOpenWithDialog*)self, (QDropEvent*)event);
 }
 
-void k_openwithdialog_qbase_drop_event(void* self, void* event) {
-    KOpenWithDialog_QBaseDropEvent((KOpenWithDialog*)self, (QDropEvent*)event);
+void k_openwithdialog_super_drop_event(void* self, void* event) {
+    KOpenWithDialog_SuperDropEvent((KOpenWithDialog*)self, (QDropEvent*)event);
 }
 
 void k_openwithdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ void k_openwithdialog_hide_event(void* self, void* event) {
     KOpenWithDialog_HideEvent((KOpenWithDialog*)self, (QHideEvent*)event);
 }
 
-void k_openwithdialog_qbase_hide_event(void* self, void* event) {
-    KOpenWithDialog_QBaseHideEvent((KOpenWithDialog*)self, (QHideEvent*)event);
+void k_openwithdialog_super_hide_event(void* self, void* event) {
+    KOpenWithDialog_SuperHideEvent((KOpenWithDialog*)self, (QHideEvent*)event);
 }
 
 void k_openwithdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ bool k_openwithdialog_native_event(void* self, char* eventType, void* message, i
     return KOpenWithDialog_NativeEvent((KOpenWithDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_openwithdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KOpenWithDialog_QBaseNativeEvent((KOpenWithDialog*)self, qstring(eventType), message, result);
+bool k_openwithdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KOpenWithDialog_SuperNativeEvent((KOpenWithDialog*)self, qstring(eventType), message, result);
 }
 
 void k_openwithdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2032,8 +2032,8 @@ void k_openwithdialog_change_event(void* self, void* param1) {
     KOpenWithDialog_ChangeEvent((KOpenWithDialog*)self, (QEvent*)param1);
 }
 
-void k_openwithdialog_qbase_change_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseChangeEvent((KOpenWithDialog*)self, (QEvent*)param1);
+void k_openwithdialog_super_change_event(void* self, void* param1) {
+    KOpenWithDialog_SuperChangeEvent((KOpenWithDialog*)self, (QEvent*)param1);
 }
 
 void k_openwithdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ int32_t k_openwithdialog_metric(void* self, int32_t param1) {
     return KOpenWithDialog_Metric((KOpenWithDialog*)self, param1);
 }
 
-int32_t k_openwithdialog_qbase_metric(void* self, int32_t param1) {
-    return KOpenWithDialog_QBaseMetric((KOpenWithDialog*)self, param1);
+int32_t k_openwithdialog_super_metric(void* self, int32_t param1) {
+    return KOpenWithDialog_SuperMetric((KOpenWithDialog*)self, param1);
 }
 
 void k_openwithdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2056,8 +2056,8 @@ void k_openwithdialog_init_painter(void* self, void* painter) {
     KOpenWithDialog_InitPainter((KOpenWithDialog*)self, (QPainter*)painter);
 }
 
-void k_openwithdialog_qbase_init_painter(void* self, void* painter) {
-    KOpenWithDialog_QBaseInitPainter((KOpenWithDialog*)self, (QPainter*)painter);
+void k_openwithdialog_super_init_painter(void* self, void* painter) {
+    KOpenWithDialog_SuperInitPainter((KOpenWithDialog*)self, (QPainter*)painter);
 }
 
 void k_openwithdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2068,8 +2068,8 @@ QPaintDevice* k_openwithdialog_redirected(void* self, void* offset) {
     return KOpenWithDialog_Redirected((KOpenWithDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_openwithdialog_qbase_redirected(void* self, void* offset) {
-    return KOpenWithDialog_QBaseRedirected((KOpenWithDialog*)self, (QPoint*)offset);
+QPaintDevice* k_openwithdialog_super_redirected(void* self, void* offset) {
+    return KOpenWithDialog_SuperRedirected((KOpenWithDialog*)self, (QPoint*)offset);
 }
 
 void k_openwithdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2080,8 +2080,8 @@ QPainter* k_openwithdialog_shared_painter(void* self) {
     return KOpenWithDialog_SharedPainter((KOpenWithDialog*)self);
 }
 
-QPainter* k_openwithdialog_qbase_shared_painter(void* self) {
-    return KOpenWithDialog_QBaseSharedPainter((KOpenWithDialog*)self);
+QPainter* k_openwithdialog_super_shared_painter(void* self) {
+    return KOpenWithDialog_SuperSharedPainter((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2092,8 +2092,8 @@ void k_openwithdialog_input_method_event(void* self, void* param1) {
     KOpenWithDialog_InputMethodEvent((KOpenWithDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_openwithdialog_qbase_input_method_event(void* self, void* param1) {
-    KOpenWithDialog_QBaseInputMethodEvent((KOpenWithDialog*)self, (QInputMethodEvent*)param1);
+void k_openwithdialog_super_input_method_event(void* self, void* param1) {
+    KOpenWithDialog_SuperInputMethodEvent((KOpenWithDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_openwithdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2104,8 +2104,8 @@ QVariant* k_openwithdialog_input_method_query(void* self, int32_t param1) {
     return KOpenWithDialog_InputMethodQuery((KOpenWithDialog*)self, param1);
 }
 
-QVariant* k_openwithdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KOpenWithDialog_QBaseInputMethodQuery((KOpenWithDialog*)self, param1);
+QVariant* k_openwithdialog_super_input_method_query(void* self, int32_t param1) {
+    return KOpenWithDialog_SuperInputMethodQuery((KOpenWithDialog*)self, param1);
 }
 
 void k_openwithdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2116,8 +2116,8 @@ bool k_openwithdialog_focus_next_prev_child(void* self, bool next) {
     return KOpenWithDialog_FocusNextPrevChild((KOpenWithDialog*)self, next);
 }
 
-bool k_openwithdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KOpenWithDialog_QBaseFocusNextPrevChild((KOpenWithDialog*)self, next);
+bool k_openwithdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KOpenWithDialog_SuperFocusNextPrevChild((KOpenWithDialog*)self, next);
 }
 
 void k_openwithdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2128,8 +2128,8 @@ void k_openwithdialog_timer_event(void* self, void* event) {
     KOpenWithDialog_TimerEvent((KOpenWithDialog*)self, (QTimerEvent*)event);
 }
 
-void k_openwithdialog_qbase_timer_event(void* self, void* event) {
-    KOpenWithDialog_QBaseTimerEvent((KOpenWithDialog*)self, (QTimerEvent*)event);
+void k_openwithdialog_super_timer_event(void* self, void* event) {
+    KOpenWithDialog_SuperTimerEvent((KOpenWithDialog*)self, (QTimerEvent*)event);
 }
 
 void k_openwithdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void k_openwithdialog_child_event(void* self, void* event) {
     KOpenWithDialog_ChildEvent((KOpenWithDialog*)self, (QChildEvent*)event);
 }
 
-void k_openwithdialog_qbase_child_event(void* self, void* event) {
-    KOpenWithDialog_QBaseChildEvent((KOpenWithDialog*)self, (QChildEvent*)event);
+void k_openwithdialog_super_child_event(void* self, void* event) {
+    KOpenWithDialog_SuperChildEvent((KOpenWithDialog*)self, (QChildEvent*)event);
 }
 
 void k_openwithdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2152,8 +2152,8 @@ void k_openwithdialog_custom_event(void* self, void* event) {
     KOpenWithDialog_CustomEvent((KOpenWithDialog*)self, (QEvent*)event);
 }
 
-void k_openwithdialog_qbase_custom_event(void* self, void* event) {
-    KOpenWithDialog_QBaseCustomEvent((KOpenWithDialog*)self, (QEvent*)event);
+void k_openwithdialog_super_custom_event(void* self, void* event) {
+    KOpenWithDialog_SuperCustomEvent((KOpenWithDialog*)self, (QEvent*)event);
 }
 
 void k_openwithdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ void k_openwithdialog_connect_notify(void* self, void* signal) {
     KOpenWithDialog_ConnectNotify((KOpenWithDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_openwithdialog_qbase_connect_notify(void* self, void* signal) {
-    KOpenWithDialog_QBaseConnectNotify((KOpenWithDialog*)self, (QMetaMethod*)signal);
+void k_openwithdialog_super_connect_notify(void* self, void* signal) {
+    KOpenWithDialog_SuperConnectNotify((KOpenWithDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_openwithdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ void k_openwithdialog_disconnect_notify(void* self, void* signal) {
     KOpenWithDialog_DisconnectNotify((KOpenWithDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_openwithdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KOpenWithDialog_QBaseDisconnectNotify((KOpenWithDialog*)self, (QMetaMethod*)signal);
+void k_openwithdialog_super_disconnect_notify(void* self, void* signal) {
+    KOpenWithDialog_SuperDisconnectNotify((KOpenWithDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_openwithdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2188,8 +2188,8 @@ void k_openwithdialog_adjust_position(void* self, void* param1) {
     KOpenWithDialog_AdjustPosition((KOpenWithDialog*)self, (QWidget*)param1);
 }
 
-void k_openwithdialog_qbase_adjust_position(void* self, void* param1) {
-    KOpenWithDialog_QBaseAdjustPosition((KOpenWithDialog*)self, (QWidget*)param1);
+void k_openwithdialog_super_adjust_position(void* self, void* param1) {
+    KOpenWithDialog_SuperAdjustPosition((KOpenWithDialog*)self, (QWidget*)param1);
 }
 
 void k_openwithdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ void k_openwithdialog_update_micro_focus(void* self) {
     KOpenWithDialog_UpdateMicroFocus((KOpenWithDialog*)self);
 }
 
-void k_openwithdialog_qbase_update_micro_focus(void* self) {
-    KOpenWithDialog_QBaseUpdateMicroFocus((KOpenWithDialog*)self);
+void k_openwithdialog_super_update_micro_focus(void* self) {
+    KOpenWithDialog_SuperUpdateMicroFocus((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2212,8 +2212,8 @@ void k_openwithdialog_create(void* self) {
     KOpenWithDialog_Create((KOpenWithDialog*)self);
 }
 
-void k_openwithdialog_qbase_create(void* self) {
-    KOpenWithDialog_QBaseCreate((KOpenWithDialog*)self);
+void k_openwithdialog_super_create(void* self) {
+    KOpenWithDialog_SuperCreate((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_create(void* self, void (*callback)()) {
@@ -2224,8 +2224,8 @@ void k_openwithdialog_destroy(void* self) {
     KOpenWithDialog_Destroy((KOpenWithDialog*)self);
 }
 
-void k_openwithdialog_qbase_destroy(void* self) {
-    KOpenWithDialog_QBaseDestroy((KOpenWithDialog*)self);
+void k_openwithdialog_super_destroy(void* self) {
+    KOpenWithDialog_SuperDestroy((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_destroy(void* self, void (*callback)()) {
@@ -2236,8 +2236,8 @@ bool k_openwithdialog_focus_next_child(void* self) {
     return KOpenWithDialog_FocusNextChild((KOpenWithDialog*)self);
 }
 
-bool k_openwithdialog_qbase_focus_next_child(void* self) {
-    return KOpenWithDialog_QBaseFocusNextChild((KOpenWithDialog*)self);
+bool k_openwithdialog_super_focus_next_child(void* self) {
+    return KOpenWithDialog_SuperFocusNextChild((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2248,8 +2248,8 @@ bool k_openwithdialog_focus_previous_child(void* self) {
     return KOpenWithDialog_FocusPreviousChild((KOpenWithDialog*)self);
 }
 
-bool k_openwithdialog_qbase_focus_previous_child(void* self) {
-    return KOpenWithDialog_QBaseFocusPreviousChild((KOpenWithDialog*)self);
+bool k_openwithdialog_super_focus_previous_child(void* self) {
+    return KOpenWithDialog_SuperFocusPreviousChild((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2260,8 +2260,8 @@ QObject* k_openwithdialog_sender(void* self) {
     return KOpenWithDialog_Sender((KOpenWithDialog*)self);
 }
 
-QObject* k_openwithdialog_qbase_sender(void* self) {
-    return KOpenWithDialog_QBaseSender((KOpenWithDialog*)self);
+QObject* k_openwithdialog_super_sender(void* self) {
+    return KOpenWithDialog_SuperSender((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2272,8 +2272,8 @@ int32_t k_openwithdialog_sender_signal_index(void* self) {
     return KOpenWithDialog_SenderSignalIndex((KOpenWithDialog*)self);
 }
 
-int32_t k_openwithdialog_qbase_sender_signal_index(void* self) {
-    return KOpenWithDialog_QBaseSenderSignalIndex((KOpenWithDialog*)self);
+int32_t k_openwithdialog_super_sender_signal_index(void* self) {
+    return KOpenWithDialog_SuperSenderSignalIndex((KOpenWithDialog*)self);
 }
 
 void k_openwithdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2284,8 +2284,8 @@ int32_t k_openwithdialog_receivers(void* self, const char* signal) {
     return KOpenWithDialog_Receivers((KOpenWithDialog*)self, signal);
 }
 
-int32_t k_openwithdialog_qbase_receivers(void* self, const char* signal) {
-    return KOpenWithDialog_QBaseReceivers((KOpenWithDialog*)self, signal);
+int32_t k_openwithdialog_super_receivers(void* self, const char* signal) {
+    return KOpenWithDialog_SuperReceivers((KOpenWithDialog*)self, signal);
 }
 
 void k_openwithdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2296,8 +2296,8 @@ bool k_openwithdialog_is_signal_connected(void* self, void* signal) {
     return KOpenWithDialog_IsSignalConnected((KOpenWithDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_openwithdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KOpenWithDialog_QBaseIsSignalConnected((KOpenWithDialog*)self, (QMetaMethod*)signal);
+bool k_openwithdialog_super_is_signal_connected(void* self, void* signal) {
+    return KOpenWithDialog_SuperIsSignalConnected((KOpenWithDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_openwithdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2308,8 +2308,8 @@ double k_openwithdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KOpenWithDialog_GetDecodedMetricF((KOpenWithDialog*)self, metricA, metricB);
 }
 
-double k_openwithdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KOpenWithDialog_QBaseGetDecodedMetricF((KOpenWithDialog*)self, metricA, metricB);
+double k_openwithdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KOpenWithDialog_SuperGetDecodedMetricF((KOpenWithDialog*)self, metricA, metricB);
 }
 
 void k_openwithdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

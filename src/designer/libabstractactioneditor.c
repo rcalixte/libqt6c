@@ -32,8 +32,8 @@ void q_designeractioneditorinterface_on_meta_object(void* self, const QMetaObjec
     QDesignerActionEditorInterface_OnMetaObject((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designeractioneditorinterface_qbase_meta_object(void* self) {
-    return QDesignerActionEditorInterface_QBaseMetaObject((QDesignerActionEditorInterface*)self);
+const QMetaObject* q_designeractioneditorinterface_super_meta_object(void* self) {
+    return QDesignerActionEditorInterface_SuperMetaObject((QDesignerActionEditorInterface*)self);
 }
 
 void* q_designeractioneditorinterface_metacast(void* self, const char* param1) {
@@ -44,8 +44,8 @@ void q_designeractioneditorinterface_on_metacast(void* self, void* (*callback)(v
     QDesignerActionEditorInterface_OnMetacast((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-void* q_designeractioneditorinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerActionEditorInterface_QBaseMetacast((QDesignerActionEditorInterface*)self, param1);
+void* q_designeractioneditorinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerActionEditorInterface_SuperMetacast((QDesignerActionEditorInterface*)self, param1);
 }
 
 int32_t q_designeractioneditorinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -56,8 +56,8 @@ void q_designeractioneditorinterface_on_metacall(void* self, int32_t (*callback)
     QDesignerActionEditorInterface_OnMetacall((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designeractioneditorinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerActionEditorInterface_QBaseMetacall((QDesignerActionEditorInterface*)self, param1, param2, param3);
+int32_t q_designeractioneditorinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerActionEditorInterface_SuperMetacall((QDesignerActionEditorInterface*)self, param1, param2, param3);
 }
 
 const char* q_designeractioneditorinterface_tr(const char* s) {
@@ -75,8 +75,8 @@ void q_designeractioneditorinterface_on_core(void* self, QDesignerFormEditorInte
     QDesignerActionEditorInterface_OnCore((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designeractioneditorinterface_qbase_core(void* self) {
-    return QDesignerActionEditorInterface_QBaseCore((QDesignerActionEditorInterface*)self);
+QDesignerFormEditorInterface* q_designeractioneditorinterface_super_core(void* self) {
+    return QDesignerActionEditorInterface_SuperCore((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_manage_action(void* self, void* action) {
@@ -87,8 +87,8 @@ void q_designeractioneditorinterface_on_manage_action(void* self, void (*callbac
     QDesignerActionEditorInterface_OnManageAction((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designeractioneditorinterface_qbase_manage_action(void* self, void* action) {
-    QDesignerActionEditorInterface_QBaseManageAction((QDesignerActionEditorInterface*)self, (QAction*)action);
+void q_designeractioneditorinterface_super_manage_action(void* self, void* action) {
+    QDesignerActionEditorInterface_SuperManageAction((QDesignerActionEditorInterface*)self, (QAction*)action);
 }
 
 void q_designeractioneditorinterface_unmanage_action(void* self, void* action) {
@@ -99,8 +99,8 @@ void q_designeractioneditorinterface_on_unmanage_action(void* self, void (*callb
     QDesignerActionEditorInterface_OnUnmanageAction((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designeractioneditorinterface_qbase_unmanage_action(void* self, void* action) {
-    QDesignerActionEditorInterface_QBaseUnmanageAction((QDesignerActionEditorInterface*)self, (QAction*)action);
+void q_designeractioneditorinterface_super_unmanage_action(void* self, void* action) {
+    QDesignerActionEditorInterface_SuperUnmanageAction((QDesignerActionEditorInterface*)self, (QAction*)action);
 }
 
 void q_designeractioneditorinterface_set_form_window(void* self, void* formWindow) {
@@ -111,8 +111,8 @@ void q_designeractioneditorinterface_on_set_form_window(void* self, void (*callb
     QDesignerActionEditorInterface_OnSetFormWindow((QDesignerActionEditorInterface*)self, (intptr_t)callback);
 }
 
-void q_designeractioneditorinterface_qbase_set_form_window(void* self, void* formWindow) {
-    QDesignerActionEditorInterface_QBaseSetFormWindow((QDesignerActionEditorInterface*)self, (QDesignerFormWindowInterface*)formWindow);
+void q_designeractioneditorinterface_super_set_form_window(void* self, void* formWindow) {
+    QDesignerActionEditorInterface_SuperSetFormWindow((QDesignerActionEditorInterface*)self, (QDesignerFormWindowInterface*)formWindow);
 }
 
 const char* q_designeractioneditorinterface_tr2(const char* s, const char* c) {
@@ -1514,8 +1514,8 @@ int32_t q_designeractioneditorinterface_dev_type(void* self) {
     return QDesignerActionEditorInterface_DevType((QDesignerActionEditorInterface*)self);
 }
 
-int32_t q_designeractioneditorinterface_qbase_dev_type(void* self) {
-    return QDesignerActionEditorInterface_QBaseDevType((QDesignerActionEditorInterface*)self);
+int32_t q_designeractioneditorinterface_super_dev_type(void* self) {
+    return QDesignerActionEditorInterface_SuperDevType((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1526,8 +1526,8 @@ void q_designeractioneditorinterface_set_visible(void* self, bool visible) {
     QDesignerActionEditorInterface_SetVisible((QDesignerActionEditorInterface*)self, visible);
 }
 
-void q_designeractioneditorinterface_qbase_set_visible(void* self, bool visible) {
-    QDesignerActionEditorInterface_QBaseSetVisible((QDesignerActionEditorInterface*)self, visible);
+void q_designeractioneditorinterface_super_set_visible(void* self, bool visible) {
+    QDesignerActionEditorInterface_SuperSetVisible((QDesignerActionEditorInterface*)self, visible);
 }
 
 void q_designeractioneditorinterface_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1538,8 +1538,8 @@ QSize* q_designeractioneditorinterface_size_hint(void* self) {
     return QDesignerActionEditorInterface_SizeHint((QDesignerActionEditorInterface*)self);
 }
 
-QSize* q_designeractioneditorinterface_qbase_size_hint(void* self) {
-    return QDesignerActionEditorInterface_QBaseSizeHint((QDesignerActionEditorInterface*)self);
+QSize* q_designeractioneditorinterface_super_size_hint(void* self) {
+    return QDesignerActionEditorInterface_SuperSizeHint((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1550,8 +1550,8 @@ QSize* q_designeractioneditorinterface_minimum_size_hint(void* self) {
     return QDesignerActionEditorInterface_MinimumSizeHint((QDesignerActionEditorInterface*)self);
 }
 
-QSize* q_designeractioneditorinterface_qbase_minimum_size_hint(void* self) {
-    return QDesignerActionEditorInterface_QBaseMinimumSizeHint((QDesignerActionEditorInterface*)self);
+QSize* q_designeractioneditorinterface_super_minimum_size_hint(void* self) {
+    return QDesignerActionEditorInterface_SuperMinimumSizeHint((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1562,8 +1562,8 @@ int32_t q_designeractioneditorinterface_height_for_width(void* self, int param1)
     return QDesignerActionEditorInterface_HeightForWidth((QDesignerActionEditorInterface*)self, param1);
 }
 
-int32_t q_designeractioneditorinterface_qbase_height_for_width(void* self, int param1) {
-    return QDesignerActionEditorInterface_QBaseHeightForWidth((QDesignerActionEditorInterface*)self, param1);
+int32_t q_designeractioneditorinterface_super_height_for_width(void* self, int param1) {
+    return QDesignerActionEditorInterface_SuperHeightForWidth((QDesignerActionEditorInterface*)self, param1);
 }
 
 void q_designeractioneditorinterface_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1574,8 +1574,8 @@ bool q_designeractioneditorinterface_has_height_for_width(void* self) {
     return QDesignerActionEditorInterface_HasHeightForWidth((QDesignerActionEditorInterface*)self);
 }
 
-bool q_designeractioneditorinterface_qbase_has_height_for_width(void* self) {
-    return QDesignerActionEditorInterface_QBaseHasHeightForWidth((QDesignerActionEditorInterface*)self);
+bool q_designeractioneditorinterface_super_has_height_for_width(void* self) {
+    return QDesignerActionEditorInterface_SuperHasHeightForWidth((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1586,8 +1586,8 @@ QPaintEngine* q_designeractioneditorinterface_paint_engine(void* self) {
     return QDesignerActionEditorInterface_PaintEngine((QDesignerActionEditorInterface*)self);
 }
 
-QPaintEngine* q_designeractioneditorinterface_qbase_paint_engine(void* self) {
-    return QDesignerActionEditorInterface_QBasePaintEngine((QDesignerActionEditorInterface*)self);
+QPaintEngine* q_designeractioneditorinterface_super_paint_engine(void* self) {
+    return QDesignerActionEditorInterface_SuperPaintEngine((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1598,8 +1598,8 @@ bool q_designeractioneditorinterface_event(void* self, void* event) {
     return QDesignerActionEditorInterface_Event((QDesignerActionEditorInterface*)self, (QEvent*)event);
 }
 
-bool q_designeractioneditorinterface_qbase_event(void* self, void* event) {
-    return QDesignerActionEditorInterface_QBaseEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
+bool q_designeractioneditorinterface_super_event(void* self, void* event) {
+    return QDesignerActionEditorInterface_SuperEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1610,8 +1610,8 @@ void q_designeractioneditorinterface_mouse_press_event(void* self, void* event) 
     QDesignerActionEditorInterface_MousePressEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_mouse_press_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseMousePressEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
+void q_designeractioneditorinterface_super_mouse_press_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperMousePressEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1622,8 +1622,8 @@ void q_designeractioneditorinterface_mouse_release_event(void* self, void* event
     QDesignerActionEditorInterface_MouseReleaseEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_mouse_release_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseMouseReleaseEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
+void q_designeractioneditorinterface_super_mouse_release_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperMouseReleaseEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1634,8 +1634,8 @@ void q_designeractioneditorinterface_mouse_double_click_event(void* self, void* 
     QDesignerActionEditorInterface_MouseDoubleClickEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_mouse_double_click_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseMouseDoubleClickEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
+void q_designeractioneditorinterface_super_mouse_double_click_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperMouseDoubleClickEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1646,8 +1646,8 @@ void q_designeractioneditorinterface_mouse_move_event(void* self, void* event) {
     QDesignerActionEditorInterface_MouseMoveEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_mouse_move_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseMouseMoveEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
+void q_designeractioneditorinterface_super_mouse_move_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperMouseMoveEvent((QDesignerActionEditorInterface*)self, (QMouseEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1658,8 +1658,8 @@ void q_designeractioneditorinterface_wheel_event(void* self, void* event) {
     QDesignerActionEditorInterface_WheelEvent((QDesignerActionEditorInterface*)self, (QWheelEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_wheel_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseWheelEvent((QDesignerActionEditorInterface*)self, (QWheelEvent*)event);
+void q_designeractioneditorinterface_super_wheel_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperWheelEvent((QDesignerActionEditorInterface*)self, (QWheelEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1670,8 +1670,8 @@ void q_designeractioneditorinterface_key_press_event(void* self, void* event) {
     QDesignerActionEditorInterface_KeyPressEvent((QDesignerActionEditorInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_key_press_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseKeyPressEvent((QDesignerActionEditorInterface*)self, (QKeyEvent*)event);
+void q_designeractioneditorinterface_super_key_press_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperKeyPressEvent((QDesignerActionEditorInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1682,8 +1682,8 @@ void q_designeractioneditorinterface_key_release_event(void* self, void* event) 
     QDesignerActionEditorInterface_KeyReleaseEvent((QDesignerActionEditorInterface*)self, (QKeyEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_key_release_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseKeyReleaseEvent((QDesignerActionEditorInterface*)self, (QKeyEvent*)event);
+void q_designeractioneditorinterface_super_key_release_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperKeyReleaseEvent((QDesignerActionEditorInterface*)self, (QKeyEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1694,8 +1694,8 @@ void q_designeractioneditorinterface_focus_in_event(void* self, void* event) {
     QDesignerActionEditorInterface_FocusInEvent((QDesignerActionEditorInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_focus_in_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseFocusInEvent((QDesignerActionEditorInterface*)self, (QFocusEvent*)event);
+void q_designeractioneditorinterface_super_focus_in_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperFocusInEvent((QDesignerActionEditorInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1706,8 +1706,8 @@ void q_designeractioneditorinterface_focus_out_event(void* self, void* event) {
     QDesignerActionEditorInterface_FocusOutEvent((QDesignerActionEditorInterface*)self, (QFocusEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_focus_out_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseFocusOutEvent((QDesignerActionEditorInterface*)self, (QFocusEvent*)event);
+void q_designeractioneditorinterface_super_focus_out_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperFocusOutEvent((QDesignerActionEditorInterface*)self, (QFocusEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1718,8 +1718,8 @@ void q_designeractioneditorinterface_enter_event(void* self, void* event) {
     QDesignerActionEditorInterface_EnterEvent((QDesignerActionEditorInterface*)self, (QEnterEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_enter_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseEnterEvent((QDesignerActionEditorInterface*)self, (QEnterEvent*)event);
+void q_designeractioneditorinterface_super_enter_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperEnterEvent((QDesignerActionEditorInterface*)self, (QEnterEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void q_designeractioneditorinterface_leave_event(void* self, void* event) {
     QDesignerActionEditorInterface_LeaveEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_leave_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseLeaveEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
+void q_designeractioneditorinterface_super_leave_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperLeaveEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ void q_designeractioneditorinterface_paint_event(void* self, void* event) {
     QDesignerActionEditorInterface_PaintEvent((QDesignerActionEditorInterface*)self, (QPaintEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_paint_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBasePaintEvent((QDesignerActionEditorInterface*)self, (QPaintEvent*)event);
+void q_designeractioneditorinterface_super_paint_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperPaintEvent((QDesignerActionEditorInterface*)self, (QPaintEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void q_designeractioneditorinterface_move_event(void* self, void* event) {
     QDesignerActionEditorInterface_MoveEvent((QDesignerActionEditorInterface*)self, (QMoveEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_move_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseMoveEvent((QDesignerActionEditorInterface*)self, (QMoveEvent*)event);
+void q_designeractioneditorinterface_super_move_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperMoveEvent((QDesignerActionEditorInterface*)self, (QMoveEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void q_designeractioneditorinterface_resize_event(void* self, void* event) {
     QDesignerActionEditorInterface_ResizeEvent((QDesignerActionEditorInterface*)self, (QResizeEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_resize_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseResizeEvent((QDesignerActionEditorInterface*)self, (QResizeEvent*)event);
+void q_designeractioneditorinterface_super_resize_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperResizeEvent((QDesignerActionEditorInterface*)self, (QResizeEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ void q_designeractioneditorinterface_close_event(void* self, void* event) {
     QDesignerActionEditorInterface_CloseEvent((QDesignerActionEditorInterface*)self, (QCloseEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_close_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseCloseEvent((QDesignerActionEditorInterface*)self, (QCloseEvent*)event);
+void q_designeractioneditorinterface_super_close_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperCloseEvent((QDesignerActionEditorInterface*)self, (QCloseEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1790,8 +1790,8 @@ void q_designeractioneditorinterface_context_menu_event(void* self, void* event)
     QDesignerActionEditorInterface_ContextMenuEvent((QDesignerActionEditorInterface*)self, (QContextMenuEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_context_menu_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseContextMenuEvent((QDesignerActionEditorInterface*)self, (QContextMenuEvent*)event);
+void q_designeractioneditorinterface_super_context_menu_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperContextMenuEvent((QDesignerActionEditorInterface*)self, (QContextMenuEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1802,8 +1802,8 @@ void q_designeractioneditorinterface_tablet_event(void* self, void* event) {
     QDesignerActionEditorInterface_TabletEvent((QDesignerActionEditorInterface*)self, (QTabletEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_tablet_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseTabletEvent((QDesignerActionEditorInterface*)self, (QTabletEvent*)event);
+void q_designeractioneditorinterface_super_tablet_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperTabletEvent((QDesignerActionEditorInterface*)self, (QTabletEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void q_designeractioneditorinterface_action_event(void* self, void* event) {
     QDesignerActionEditorInterface_ActionEvent((QDesignerActionEditorInterface*)self, (QActionEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_action_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseActionEvent((QDesignerActionEditorInterface*)self, (QActionEvent*)event);
+void q_designeractioneditorinterface_super_action_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperActionEvent((QDesignerActionEditorInterface*)self, (QActionEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void q_designeractioneditorinterface_drag_enter_event(void* self, void* event) {
     QDesignerActionEditorInterface_DragEnterEvent((QDesignerActionEditorInterface*)self, (QDragEnterEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_drag_enter_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseDragEnterEvent((QDesignerActionEditorInterface*)self, (QDragEnterEvent*)event);
+void q_designeractioneditorinterface_super_drag_enter_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperDragEnterEvent((QDesignerActionEditorInterface*)self, (QDragEnterEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void q_designeractioneditorinterface_drag_move_event(void* self, void* event) {
     QDesignerActionEditorInterface_DragMoveEvent((QDesignerActionEditorInterface*)self, (QDragMoveEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_drag_move_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseDragMoveEvent((QDesignerActionEditorInterface*)self, (QDragMoveEvent*)event);
+void q_designeractioneditorinterface_super_drag_move_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperDragMoveEvent((QDesignerActionEditorInterface*)self, (QDragMoveEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void q_designeractioneditorinterface_drag_leave_event(void* self, void* event) {
     QDesignerActionEditorInterface_DragLeaveEvent((QDesignerActionEditorInterface*)self, (QDragLeaveEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_drag_leave_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseDragLeaveEvent((QDesignerActionEditorInterface*)self, (QDragLeaveEvent*)event);
+void q_designeractioneditorinterface_super_drag_leave_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperDragLeaveEvent((QDesignerActionEditorInterface*)self, (QDragLeaveEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void q_designeractioneditorinterface_drop_event(void* self, void* event) {
     QDesignerActionEditorInterface_DropEvent((QDesignerActionEditorInterface*)self, (QDropEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_drop_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseDropEvent((QDesignerActionEditorInterface*)self, (QDropEvent*)event);
+void q_designeractioneditorinterface_super_drop_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperDropEvent((QDesignerActionEditorInterface*)self, (QDropEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void q_designeractioneditorinterface_show_event(void* self, void* event) {
     QDesignerActionEditorInterface_ShowEvent((QDesignerActionEditorInterface*)self, (QShowEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_show_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseShowEvent((QDesignerActionEditorInterface*)self, (QShowEvent*)event);
+void q_designeractioneditorinterface_super_show_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperShowEvent((QDesignerActionEditorInterface*)self, (QShowEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void q_designeractioneditorinterface_hide_event(void* self, void* event) {
     QDesignerActionEditorInterface_HideEvent((QDesignerActionEditorInterface*)self, (QHideEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_hide_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseHideEvent((QDesignerActionEditorInterface*)self, (QHideEvent*)event);
+void q_designeractioneditorinterface_super_hide_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperHideEvent((QDesignerActionEditorInterface*)self, (QHideEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ bool q_designeractioneditorinterface_native_event(void* self, char* eventType, v
     return QDesignerActionEditorInterface_NativeEvent((QDesignerActionEditorInterface*)self, qstring(eventType), message, result);
 }
 
-bool q_designeractioneditorinterface_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QDesignerActionEditorInterface_QBaseNativeEvent((QDesignerActionEditorInterface*)self, qstring(eventType), message, result);
+bool q_designeractioneditorinterface_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QDesignerActionEditorInterface_SuperNativeEvent((QDesignerActionEditorInterface*)self, qstring(eventType), message, result);
 }
 
 void q_designeractioneditorinterface_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1910,8 +1910,8 @@ void q_designeractioneditorinterface_change_event(void* self, void* param1) {
     QDesignerActionEditorInterface_ChangeEvent((QDesignerActionEditorInterface*)self, (QEvent*)param1);
 }
 
-void q_designeractioneditorinterface_qbase_change_event(void* self, void* param1) {
-    QDesignerActionEditorInterface_QBaseChangeEvent((QDesignerActionEditorInterface*)self, (QEvent*)param1);
+void q_designeractioneditorinterface_super_change_event(void* self, void* param1) {
+    QDesignerActionEditorInterface_SuperChangeEvent((QDesignerActionEditorInterface*)self, (QEvent*)param1);
 }
 
 void q_designeractioneditorinterface_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ int32_t q_designeractioneditorinterface_metric(void* self, int32_t param1) {
     return QDesignerActionEditorInterface_Metric((QDesignerActionEditorInterface*)self, param1);
 }
 
-int32_t q_designeractioneditorinterface_qbase_metric(void* self, int32_t param1) {
-    return QDesignerActionEditorInterface_QBaseMetric((QDesignerActionEditorInterface*)self, param1);
+int32_t q_designeractioneditorinterface_super_metric(void* self, int32_t param1) {
+    return QDesignerActionEditorInterface_SuperMetric((QDesignerActionEditorInterface*)self, param1);
 }
 
 void q_designeractioneditorinterface_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1934,8 +1934,8 @@ void q_designeractioneditorinterface_init_painter(void* self, void* painter) {
     QDesignerActionEditorInterface_InitPainter((QDesignerActionEditorInterface*)self, (QPainter*)painter);
 }
 
-void q_designeractioneditorinterface_qbase_init_painter(void* self, void* painter) {
-    QDesignerActionEditorInterface_QBaseInitPainter((QDesignerActionEditorInterface*)self, (QPainter*)painter);
+void q_designeractioneditorinterface_super_init_painter(void* self, void* painter) {
+    QDesignerActionEditorInterface_SuperInitPainter((QDesignerActionEditorInterface*)self, (QPainter*)painter);
 }
 
 void q_designeractioneditorinterface_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ QPaintDevice* q_designeractioneditorinterface_redirected(void* self, void* offse
     return QDesignerActionEditorInterface_Redirected((QDesignerActionEditorInterface*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_designeractioneditorinterface_qbase_redirected(void* self, void* offset) {
-    return QDesignerActionEditorInterface_QBaseRedirected((QDesignerActionEditorInterface*)self, (QPoint*)offset);
+QPaintDevice* q_designeractioneditorinterface_super_redirected(void* self, void* offset) {
+    return QDesignerActionEditorInterface_SuperRedirected((QDesignerActionEditorInterface*)self, (QPoint*)offset);
 }
 
 void q_designeractioneditorinterface_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ QPainter* q_designeractioneditorinterface_shared_painter(void* self) {
     return QDesignerActionEditorInterface_SharedPainter((QDesignerActionEditorInterface*)self);
 }
 
-QPainter* q_designeractioneditorinterface_qbase_shared_painter(void* self) {
-    return QDesignerActionEditorInterface_QBaseSharedPainter((QDesignerActionEditorInterface*)self);
+QPainter* q_designeractioneditorinterface_super_shared_painter(void* self) {
+    return QDesignerActionEditorInterface_SuperSharedPainter((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1970,8 +1970,8 @@ void q_designeractioneditorinterface_input_method_event(void* self, void* param1
     QDesignerActionEditorInterface_InputMethodEvent((QDesignerActionEditorInterface*)self, (QInputMethodEvent*)param1);
 }
 
-void q_designeractioneditorinterface_qbase_input_method_event(void* self, void* param1) {
-    QDesignerActionEditorInterface_QBaseInputMethodEvent((QDesignerActionEditorInterface*)self, (QInputMethodEvent*)param1);
+void q_designeractioneditorinterface_super_input_method_event(void* self, void* param1) {
+    QDesignerActionEditorInterface_SuperInputMethodEvent((QDesignerActionEditorInterface*)self, (QInputMethodEvent*)param1);
 }
 
 void q_designeractioneditorinterface_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1982,8 +1982,8 @@ QVariant* q_designeractioneditorinterface_input_method_query(void* self, int32_t
     return QDesignerActionEditorInterface_InputMethodQuery((QDesignerActionEditorInterface*)self, param1);
 }
 
-QVariant* q_designeractioneditorinterface_qbase_input_method_query(void* self, int32_t param1) {
-    return QDesignerActionEditorInterface_QBaseInputMethodQuery((QDesignerActionEditorInterface*)self, param1);
+QVariant* q_designeractioneditorinterface_super_input_method_query(void* self, int32_t param1) {
+    return QDesignerActionEditorInterface_SuperInputMethodQuery((QDesignerActionEditorInterface*)self, param1);
 }
 
 void q_designeractioneditorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1994,8 +1994,8 @@ bool q_designeractioneditorinterface_focus_next_prev_child(void* self, bool next
     return QDesignerActionEditorInterface_FocusNextPrevChild((QDesignerActionEditorInterface*)self, next);
 }
 
-bool q_designeractioneditorinterface_qbase_focus_next_prev_child(void* self, bool next) {
-    return QDesignerActionEditorInterface_QBaseFocusNextPrevChild((QDesignerActionEditorInterface*)self, next);
+bool q_designeractioneditorinterface_super_focus_next_prev_child(void* self, bool next) {
+    return QDesignerActionEditorInterface_SuperFocusNextPrevChild((QDesignerActionEditorInterface*)self, next);
 }
 
 void q_designeractioneditorinterface_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2006,8 +2006,8 @@ bool q_designeractioneditorinterface_event_filter(void* self, void* watched, voi
     return QDesignerActionEditorInterface_EventFilter((QDesignerActionEditorInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designeractioneditorinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerActionEditorInterface_QBaseEventFilter((QDesignerActionEditorInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designeractioneditorinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerActionEditorInterface_SuperEventFilter((QDesignerActionEditorInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2018,8 +2018,8 @@ void q_designeractioneditorinterface_timer_event(void* self, void* event) {
     QDesignerActionEditorInterface_TimerEvent((QDesignerActionEditorInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseTimerEvent((QDesignerActionEditorInterface*)self, (QTimerEvent*)event);
+void q_designeractioneditorinterface_super_timer_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperTimerEvent((QDesignerActionEditorInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ void q_designeractioneditorinterface_child_event(void* self, void* event) {
     QDesignerActionEditorInterface_ChildEvent((QDesignerActionEditorInterface*)self, (QChildEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_child_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseChildEvent((QDesignerActionEditorInterface*)self, (QChildEvent*)event);
+void q_designeractioneditorinterface_super_child_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperChildEvent((QDesignerActionEditorInterface*)self, (QChildEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ void q_designeractioneditorinterface_custom_event(void* self, void* event) {
     QDesignerActionEditorInterface_CustomEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
 }
 
-void q_designeractioneditorinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerActionEditorInterface_QBaseCustomEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
+void q_designeractioneditorinterface_super_custom_event(void* self, void* event) {
+    QDesignerActionEditorInterface_SuperCustomEvent((QDesignerActionEditorInterface*)self, (QEvent*)event);
 }
 
 void q_designeractioneditorinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2054,8 +2054,8 @@ void q_designeractioneditorinterface_connect_notify(void* self, void* signal) {
     QDesignerActionEditorInterface_ConnectNotify((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designeractioneditorinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerActionEditorInterface_QBaseConnectNotify((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
+void q_designeractioneditorinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerActionEditorInterface_SuperConnectNotify((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designeractioneditorinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2066,8 +2066,8 @@ void q_designeractioneditorinterface_disconnect_notify(void* self, void* signal)
     QDesignerActionEditorInterface_DisconnectNotify((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designeractioneditorinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerActionEditorInterface_QBaseDisconnectNotify((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
+void q_designeractioneditorinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerActionEditorInterface_SuperDisconnectNotify((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designeractioneditorinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ void q_designeractioneditorinterface_update_micro_focus(void* self) {
     QDesignerActionEditorInterface_UpdateMicroFocus((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_qbase_update_micro_focus(void* self) {
-    QDesignerActionEditorInterface_QBaseUpdateMicroFocus((QDesignerActionEditorInterface*)self);
+void q_designeractioneditorinterface_super_update_micro_focus(void* self) {
+    QDesignerActionEditorInterface_SuperUpdateMicroFocus((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2090,8 +2090,8 @@ void q_designeractioneditorinterface_create(void* self) {
     QDesignerActionEditorInterface_Create((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_qbase_create(void* self) {
-    QDesignerActionEditorInterface_QBaseCreate((QDesignerActionEditorInterface*)self);
+void q_designeractioneditorinterface_super_create(void* self) {
+    QDesignerActionEditorInterface_SuperCreate((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_create(void* self, void (*callback)()) {
@@ -2102,8 +2102,8 @@ void q_designeractioneditorinterface_destroy(void* self) {
     QDesignerActionEditorInterface_Destroy((QDesignerActionEditorInterface*)self);
 }
 
-void q_designeractioneditorinterface_qbase_destroy(void* self) {
-    QDesignerActionEditorInterface_QBaseDestroy((QDesignerActionEditorInterface*)self);
+void q_designeractioneditorinterface_super_destroy(void* self) {
+    QDesignerActionEditorInterface_SuperDestroy((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_destroy(void* self, void (*callback)()) {
@@ -2114,8 +2114,8 @@ bool q_designeractioneditorinterface_focus_next_child(void* self) {
     return QDesignerActionEditorInterface_FocusNextChild((QDesignerActionEditorInterface*)self);
 }
 
-bool q_designeractioneditorinterface_qbase_focus_next_child(void* self) {
-    return QDesignerActionEditorInterface_QBaseFocusNextChild((QDesignerActionEditorInterface*)self);
+bool q_designeractioneditorinterface_super_focus_next_child(void* self) {
+    return QDesignerActionEditorInterface_SuperFocusNextChild((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2126,8 +2126,8 @@ bool q_designeractioneditorinterface_focus_previous_child(void* self) {
     return QDesignerActionEditorInterface_FocusPreviousChild((QDesignerActionEditorInterface*)self);
 }
 
-bool q_designeractioneditorinterface_qbase_focus_previous_child(void* self) {
-    return QDesignerActionEditorInterface_QBaseFocusPreviousChild((QDesignerActionEditorInterface*)self);
+bool q_designeractioneditorinterface_super_focus_previous_child(void* self) {
+    return QDesignerActionEditorInterface_SuperFocusPreviousChild((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2138,8 +2138,8 @@ QObject* q_designeractioneditorinterface_sender(void* self) {
     return QDesignerActionEditorInterface_Sender((QDesignerActionEditorInterface*)self);
 }
 
-QObject* q_designeractioneditorinterface_qbase_sender(void* self) {
-    return QDesignerActionEditorInterface_QBaseSender((QDesignerActionEditorInterface*)self);
+QObject* q_designeractioneditorinterface_super_sender(void* self) {
+    return QDesignerActionEditorInterface_SuperSender((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -2150,8 +2150,8 @@ int32_t q_designeractioneditorinterface_sender_signal_index(void* self) {
     return QDesignerActionEditorInterface_SenderSignalIndex((QDesignerActionEditorInterface*)self);
 }
 
-int32_t q_designeractioneditorinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerActionEditorInterface_QBaseSenderSignalIndex((QDesignerActionEditorInterface*)self);
+int32_t q_designeractioneditorinterface_super_sender_signal_index(void* self) {
+    return QDesignerActionEditorInterface_SuperSenderSignalIndex((QDesignerActionEditorInterface*)self);
 }
 
 void q_designeractioneditorinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2162,8 +2162,8 @@ int32_t q_designeractioneditorinterface_receivers(void* self, const char* signal
     return QDesignerActionEditorInterface_Receivers((QDesignerActionEditorInterface*)self, signal);
 }
 
-int32_t q_designeractioneditorinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerActionEditorInterface_QBaseReceivers((QDesignerActionEditorInterface*)self, signal);
+int32_t q_designeractioneditorinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerActionEditorInterface_SuperReceivers((QDesignerActionEditorInterface*)self, signal);
 }
 
 void q_designeractioneditorinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2174,8 +2174,8 @@ bool q_designeractioneditorinterface_is_signal_connected(void* self, void* signa
     return QDesignerActionEditorInterface_IsSignalConnected((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designeractioneditorinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerActionEditorInterface_QBaseIsSignalConnected((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
+bool q_designeractioneditorinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerActionEditorInterface_SuperIsSignalConnected((QDesignerActionEditorInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designeractioneditorinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ double q_designeractioneditorinterface_get_decoded_metric_f(void* self, int32_t 
     return QDesignerActionEditorInterface_GetDecodedMetricF((QDesignerActionEditorInterface*)self, metricA, metricB);
 }
 
-double q_designeractioneditorinterface_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QDesignerActionEditorInterface_QBaseGetDecodedMetricF((QDesignerActionEditorInterface*)self, metricA, metricB);
+double q_designeractioneditorinterface_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QDesignerActionEditorInterface_SuperGetDecodedMetricF((QDesignerActionEditorInterface*)self, metricA, metricB);
 }
 
 void q_designeractioneditorinterface_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

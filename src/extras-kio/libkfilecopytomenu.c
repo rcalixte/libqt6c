@@ -20,8 +20,8 @@ void k_filecopytomenu_on_meta_object(void* self, const QMetaObject* (*callback)(
     KFileCopyToMenu_OnMetaObject((KFileCopyToMenu*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_filecopytomenu_qbase_meta_object(void* self) {
-    return KFileCopyToMenu_QBaseMetaObject((KFileCopyToMenu*)self);
+const QMetaObject* k_filecopytomenu_super_meta_object(void* self) {
+    return KFileCopyToMenu_SuperMetaObject((KFileCopyToMenu*)self);
 }
 
 void* k_filecopytomenu_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_filecopytomenu_on_metacast(void* self, void* (*callback)(void*, const cha
     KFileCopyToMenu_OnMetacast((KFileCopyToMenu*)self, (intptr_t)callback);
 }
 
-void* k_filecopytomenu_qbase_metacast(void* self, const char* param1) {
-    return KFileCopyToMenu_QBaseMetacast((KFileCopyToMenu*)self, param1);
+void* k_filecopytomenu_super_metacast(void* self, const char* param1) {
+    return KFileCopyToMenu_SuperMetacast((KFileCopyToMenu*)self, param1);
 }
 
 int32_t k_filecopytomenu_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_filecopytomenu_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KFileCopyToMenu_OnMetacall((KFileCopyToMenu*)self, (intptr_t)callback);
 }
 
-int32_t k_filecopytomenu_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileCopyToMenu_QBaseMetacall((KFileCopyToMenu*)self, param1, param2, param3);
+int32_t k_filecopytomenu_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileCopyToMenu_SuperMetacall((KFileCopyToMenu*)self, param1, param2, param3);
 }
 
 const char* k_filecopytomenu_tr(const char* s) {
@@ -308,8 +308,8 @@ bool k_filecopytomenu_event(void* self, void* event) {
     return KFileCopyToMenu_Event((KFileCopyToMenu*)self, (QEvent*)event);
 }
 
-bool k_filecopytomenu_qbase_event(void* self, void* event) {
-    return KFileCopyToMenu_QBaseEvent((KFileCopyToMenu*)self, (QEvent*)event);
+bool k_filecopytomenu_super_event(void* self, void* event) {
+    return KFileCopyToMenu_SuperEvent((KFileCopyToMenu*)self, (QEvent*)event);
 }
 
 void k_filecopytomenu_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -320,8 +320,8 @@ bool k_filecopytomenu_event_filter(void* self, void* watched, void* event) {
     return KFileCopyToMenu_EventFilter((KFileCopyToMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_filecopytomenu_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFileCopyToMenu_QBaseEventFilter((KFileCopyToMenu*)self, (QObject*)watched, (QEvent*)event);
+bool k_filecopytomenu_super_event_filter(void* self, void* watched, void* event) {
+    return KFileCopyToMenu_SuperEventFilter((KFileCopyToMenu*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_filecopytomenu_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -332,8 +332,8 @@ void k_filecopytomenu_timer_event(void* self, void* event) {
     KFileCopyToMenu_TimerEvent((KFileCopyToMenu*)self, (QTimerEvent*)event);
 }
 
-void k_filecopytomenu_qbase_timer_event(void* self, void* event) {
-    KFileCopyToMenu_QBaseTimerEvent((KFileCopyToMenu*)self, (QTimerEvent*)event);
+void k_filecopytomenu_super_timer_event(void* self, void* event) {
+    KFileCopyToMenu_SuperTimerEvent((KFileCopyToMenu*)self, (QTimerEvent*)event);
 }
 
 void k_filecopytomenu_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -344,8 +344,8 @@ void k_filecopytomenu_child_event(void* self, void* event) {
     KFileCopyToMenu_ChildEvent((KFileCopyToMenu*)self, (QChildEvent*)event);
 }
 
-void k_filecopytomenu_qbase_child_event(void* self, void* event) {
-    KFileCopyToMenu_QBaseChildEvent((KFileCopyToMenu*)self, (QChildEvent*)event);
+void k_filecopytomenu_super_child_event(void* self, void* event) {
+    KFileCopyToMenu_SuperChildEvent((KFileCopyToMenu*)self, (QChildEvent*)event);
 }
 
 void k_filecopytomenu_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -356,8 +356,8 @@ void k_filecopytomenu_custom_event(void* self, void* event) {
     KFileCopyToMenu_CustomEvent((KFileCopyToMenu*)self, (QEvent*)event);
 }
 
-void k_filecopytomenu_qbase_custom_event(void* self, void* event) {
-    KFileCopyToMenu_QBaseCustomEvent((KFileCopyToMenu*)self, (QEvent*)event);
+void k_filecopytomenu_super_custom_event(void* self, void* event) {
+    KFileCopyToMenu_SuperCustomEvent((KFileCopyToMenu*)self, (QEvent*)event);
 }
 
 void k_filecopytomenu_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -368,8 +368,8 @@ void k_filecopytomenu_connect_notify(void* self, void* signal) {
     KFileCopyToMenu_ConnectNotify((KFileCopyToMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_filecopytomenu_qbase_connect_notify(void* self, void* signal) {
-    KFileCopyToMenu_QBaseConnectNotify((KFileCopyToMenu*)self, (QMetaMethod*)signal);
+void k_filecopytomenu_super_connect_notify(void* self, void* signal) {
+    KFileCopyToMenu_SuperConnectNotify((KFileCopyToMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_filecopytomenu_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -380,8 +380,8 @@ void k_filecopytomenu_disconnect_notify(void* self, void* signal) {
     KFileCopyToMenu_DisconnectNotify((KFileCopyToMenu*)self, (QMetaMethod*)signal);
 }
 
-void k_filecopytomenu_qbase_disconnect_notify(void* self, void* signal) {
-    KFileCopyToMenu_QBaseDisconnectNotify((KFileCopyToMenu*)self, (QMetaMethod*)signal);
+void k_filecopytomenu_super_disconnect_notify(void* self, void* signal) {
+    KFileCopyToMenu_SuperDisconnectNotify((KFileCopyToMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_filecopytomenu_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -392,8 +392,8 @@ QObject* k_filecopytomenu_sender(void* self) {
     return KFileCopyToMenu_Sender((KFileCopyToMenu*)self);
 }
 
-QObject* k_filecopytomenu_qbase_sender(void* self) {
-    return KFileCopyToMenu_QBaseSender((KFileCopyToMenu*)self);
+QObject* k_filecopytomenu_super_sender(void* self) {
+    return KFileCopyToMenu_SuperSender((KFileCopyToMenu*)self);
 }
 
 void k_filecopytomenu_on_sender(void* self, QObject* (*callback)()) {
@@ -404,8 +404,8 @@ int32_t k_filecopytomenu_sender_signal_index(void* self) {
     return KFileCopyToMenu_SenderSignalIndex((KFileCopyToMenu*)self);
 }
 
-int32_t k_filecopytomenu_qbase_sender_signal_index(void* self) {
-    return KFileCopyToMenu_QBaseSenderSignalIndex((KFileCopyToMenu*)self);
+int32_t k_filecopytomenu_super_sender_signal_index(void* self) {
+    return KFileCopyToMenu_SuperSenderSignalIndex((KFileCopyToMenu*)self);
 }
 
 void k_filecopytomenu_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -416,8 +416,8 @@ int32_t k_filecopytomenu_receivers(void* self, const char* signal) {
     return KFileCopyToMenu_Receivers((KFileCopyToMenu*)self, signal);
 }
 
-int32_t k_filecopytomenu_qbase_receivers(void* self, const char* signal) {
-    return KFileCopyToMenu_QBaseReceivers((KFileCopyToMenu*)self, signal);
+int32_t k_filecopytomenu_super_receivers(void* self, const char* signal) {
+    return KFileCopyToMenu_SuperReceivers((KFileCopyToMenu*)self, signal);
 }
 
 void k_filecopytomenu_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -428,8 +428,8 @@ bool k_filecopytomenu_is_signal_connected(void* self, void* signal) {
     return KFileCopyToMenu_IsSignalConnected((KFileCopyToMenu*)self, (QMetaMethod*)signal);
 }
 
-bool k_filecopytomenu_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileCopyToMenu_QBaseIsSignalConnected((KFileCopyToMenu*)self, (QMetaMethod*)signal);
+bool k_filecopytomenu_super_is_signal_connected(void* self, void* signal) {
+    return KFileCopyToMenu_SuperIsSignalConnected((KFileCopyToMenu*)self, (QMetaMethod*)signal);
 }
 
 void k_filecopytomenu_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

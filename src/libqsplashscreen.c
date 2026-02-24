@@ -48,8 +48,8 @@ void q_splashscreen_on_meta_object(void* self, const QMetaObject* (*callback)())
     QSplashScreen_OnMetaObject((QSplashScreen*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_splashscreen_qbase_meta_object(void* self) {
-    return QSplashScreen_QBaseMetaObject((QSplashScreen*)self);
+const QMetaObject* q_splashscreen_super_meta_object(void* self) {
+    return QSplashScreen_SuperMetaObject((QSplashScreen*)self);
 }
 
 void* q_splashscreen_metacast(void* self, const char* param1) {
@@ -60,8 +60,8 @@ void q_splashscreen_on_metacast(void* self, void* (*callback)(void*, const char*
     QSplashScreen_OnMetacast((QSplashScreen*)self, (intptr_t)callback);
 }
 
-void* q_splashscreen_qbase_metacast(void* self, const char* param1) {
-    return QSplashScreen_QBaseMetacast((QSplashScreen*)self, param1);
+void* q_splashscreen_super_metacast(void* self, const char* param1) {
+    return QSplashScreen_SuperMetacast((QSplashScreen*)self, param1);
 }
 
 int32_t q_splashscreen_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -72,8 +72,8 @@ void q_splashscreen_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QSplashScreen_OnMetacall((QSplashScreen*)self, (intptr_t)callback);
 }
 
-int32_t q_splashscreen_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QSplashScreen_QBaseMetacall((QSplashScreen*)self, param1, param2, param3);
+int32_t q_splashscreen_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QSplashScreen_SuperMetacall((QSplashScreen*)self, param1, param2, param3);
 }
 
 const char* q_splashscreen_tr(const char* s) {
@@ -130,8 +130,8 @@ void q_splashscreen_on_event(void* self, bool (*callback)(void*, void*)) {
     QSplashScreen_OnEvent((QSplashScreen*)self, (intptr_t)callback);
 }
 
-bool q_splashscreen_qbase_event(void* self, void* e) {
-    return QSplashScreen_QBaseEvent((QSplashScreen*)self, (QEvent*)e);
+bool q_splashscreen_super_event(void* self, void* e) {
+    return QSplashScreen_SuperEvent((QSplashScreen*)self, (QEvent*)e);
 }
 
 void q_splashscreen_draw_contents(void* self, void* painter) {
@@ -142,8 +142,8 @@ void q_splashscreen_on_draw_contents(void* self, void (*callback)(void*, void*))
     QSplashScreen_OnDrawContents((QSplashScreen*)self, (intptr_t)callback);
 }
 
-void q_splashscreen_qbase_draw_contents(void* self, void* painter) {
-    QSplashScreen_QBaseDrawContents((QSplashScreen*)self, (QPainter*)painter);
+void q_splashscreen_super_draw_contents(void* self, void* painter) {
+    QSplashScreen_SuperDrawContents((QSplashScreen*)self, (QPainter*)painter);
 }
 
 void q_splashscreen_mouse_press_event(void* self, void* param1) {
@@ -154,8 +154,8 @@ void q_splashscreen_on_mouse_press_event(void* self, void (*callback)(void*, voi
     QSplashScreen_OnMousePressEvent((QSplashScreen*)self, (intptr_t)callback);
 }
 
-void q_splashscreen_qbase_mouse_press_event(void* self, void* param1) {
-    QSplashScreen_QBaseMousePressEvent((QSplashScreen*)self, (QMouseEvent*)param1);
+void q_splashscreen_super_mouse_press_event(void* self, void* param1) {
+    QSplashScreen_SuperMousePressEvent((QSplashScreen*)self, (QMouseEvent*)param1);
 }
 
 const char* q_splashscreen_tr2(const char* s, const char* c) {
@@ -1561,8 +1561,8 @@ int32_t q_splashscreen_dev_type(void* self) {
     return QSplashScreen_DevType((QSplashScreen*)self);
 }
 
-int32_t q_splashscreen_qbase_dev_type(void* self) {
-    return QSplashScreen_QBaseDevType((QSplashScreen*)self);
+int32_t q_splashscreen_super_dev_type(void* self) {
+    return QSplashScreen_SuperDevType((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1573,8 +1573,8 @@ void q_splashscreen_set_visible(void* self, bool visible) {
     QSplashScreen_SetVisible((QSplashScreen*)self, visible);
 }
 
-void q_splashscreen_qbase_set_visible(void* self, bool visible) {
-    QSplashScreen_QBaseSetVisible((QSplashScreen*)self, visible);
+void q_splashscreen_super_set_visible(void* self, bool visible) {
+    QSplashScreen_SuperSetVisible((QSplashScreen*)self, visible);
 }
 
 void q_splashscreen_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1585,8 +1585,8 @@ QSize* q_splashscreen_size_hint(void* self) {
     return QSplashScreen_SizeHint((QSplashScreen*)self);
 }
 
-QSize* q_splashscreen_qbase_size_hint(void* self) {
-    return QSplashScreen_QBaseSizeHint((QSplashScreen*)self);
+QSize* q_splashscreen_super_size_hint(void* self) {
+    return QSplashScreen_SuperSizeHint((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1597,8 +1597,8 @@ QSize* q_splashscreen_minimum_size_hint(void* self) {
     return QSplashScreen_MinimumSizeHint((QSplashScreen*)self);
 }
 
-QSize* q_splashscreen_qbase_minimum_size_hint(void* self) {
-    return QSplashScreen_QBaseMinimumSizeHint((QSplashScreen*)self);
+QSize* q_splashscreen_super_minimum_size_hint(void* self) {
+    return QSplashScreen_SuperMinimumSizeHint((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1609,8 +1609,8 @@ int32_t q_splashscreen_height_for_width(void* self, int param1) {
     return QSplashScreen_HeightForWidth((QSplashScreen*)self, param1);
 }
 
-int32_t q_splashscreen_qbase_height_for_width(void* self, int param1) {
-    return QSplashScreen_QBaseHeightForWidth((QSplashScreen*)self, param1);
+int32_t q_splashscreen_super_height_for_width(void* self, int param1) {
+    return QSplashScreen_SuperHeightForWidth((QSplashScreen*)self, param1);
 }
 
 void q_splashscreen_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1621,8 +1621,8 @@ bool q_splashscreen_has_height_for_width(void* self) {
     return QSplashScreen_HasHeightForWidth((QSplashScreen*)self);
 }
 
-bool q_splashscreen_qbase_has_height_for_width(void* self) {
-    return QSplashScreen_QBaseHasHeightForWidth((QSplashScreen*)self);
+bool q_splashscreen_super_has_height_for_width(void* self) {
+    return QSplashScreen_SuperHasHeightForWidth((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1633,8 +1633,8 @@ QPaintEngine* q_splashscreen_paint_engine(void* self) {
     return QSplashScreen_PaintEngine((QSplashScreen*)self);
 }
 
-QPaintEngine* q_splashscreen_qbase_paint_engine(void* self) {
-    return QSplashScreen_QBasePaintEngine((QSplashScreen*)self);
+QPaintEngine* q_splashscreen_super_paint_engine(void* self) {
+    return QSplashScreen_SuperPaintEngine((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1645,8 +1645,8 @@ void q_splashscreen_mouse_release_event(void* self, void* event) {
     QSplashScreen_MouseReleaseEvent((QSplashScreen*)self, (QMouseEvent*)event);
 }
 
-void q_splashscreen_qbase_mouse_release_event(void* self, void* event) {
-    QSplashScreen_QBaseMouseReleaseEvent((QSplashScreen*)self, (QMouseEvent*)event);
+void q_splashscreen_super_mouse_release_event(void* self, void* event) {
+    QSplashScreen_SuperMouseReleaseEvent((QSplashScreen*)self, (QMouseEvent*)event);
 }
 
 void q_splashscreen_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1657,8 +1657,8 @@ void q_splashscreen_mouse_double_click_event(void* self, void* event) {
     QSplashScreen_MouseDoubleClickEvent((QSplashScreen*)self, (QMouseEvent*)event);
 }
 
-void q_splashscreen_qbase_mouse_double_click_event(void* self, void* event) {
-    QSplashScreen_QBaseMouseDoubleClickEvent((QSplashScreen*)self, (QMouseEvent*)event);
+void q_splashscreen_super_mouse_double_click_event(void* self, void* event) {
+    QSplashScreen_SuperMouseDoubleClickEvent((QSplashScreen*)self, (QMouseEvent*)event);
 }
 
 void q_splashscreen_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1669,8 +1669,8 @@ void q_splashscreen_mouse_move_event(void* self, void* event) {
     QSplashScreen_MouseMoveEvent((QSplashScreen*)self, (QMouseEvent*)event);
 }
 
-void q_splashscreen_qbase_mouse_move_event(void* self, void* event) {
-    QSplashScreen_QBaseMouseMoveEvent((QSplashScreen*)self, (QMouseEvent*)event);
+void q_splashscreen_super_mouse_move_event(void* self, void* event) {
+    QSplashScreen_SuperMouseMoveEvent((QSplashScreen*)self, (QMouseEvent*)event);
 }
 
 void q_splashscreen_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1681,8 +1681,8 @@ void q_splashscreen_wheel_event(void* self, void* event) {
     QSplashScreen_WheelEvent((QSplashScreen*)self, (QWheelEvent*)event);
 }
 
-void q_splashscreen_qbase_wheel_event(void* self, void* event) {
-    QSplashScreen_QBaseWheelEvent((QSplashScreen*)self, (QWheelEvent*)event);
+void q_splashscreen_super_wheel_event(void* self, void* event) {
+    QSplashScreen_SuperWheelEvent((QSplashScreen*)self, (QWheelEvent*)event);
 }
 
 void q_splashscreen_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1693,8 +1693,8 @@ void q_splashscreen_key_press_event(void* self, void* event) {
     QSplashScreen_KeyPressEvent((QSplashScreen*)self, (QKeyEvent*)event);
 }
 
-void q_splashscreen_qbase_key_press_event(void* self, void* event) {
-    QSplashScreen_QBaseKeyPressEvent((QSplashScreen*)self, (QKeyEvent*)event);
+void q_splashscreen_super_key_press_event(void* self, void* event) {
+    QSplashScreen_SuperKeyPressEvent((QSplashScreen*)self, (QKeyEvent*)event);
 }
 
 void q_splashscreen_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1705,8 +1705,8 @@ void q_splashscreen_key_release_event(void* self, void* event) {
     QSplashScreen_KeyReleaseEvent((QSplashScreen*)self, (QKeyEvent*)event);
 }
 
-void q_splashscreen_qbase_key_release_event(void* self, void* event) {
-    QSplashScreen_QBaseKeyReleaseEvent((QSplashScreen*)self, (QKeyEvent*)event);
+void q_splashscreen_super_key_release_event(void* self, void* event) {
+    QSplashScreen_SuperKeyReleaseEvent((QSplashScreen*)self, (QKeyEvent*)event);
 }
 
 void q_splashscreen_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1717,8 +1717,8 @@ void q_splashscreen_focus_in_event(void* self, void* event) {
     QSplashScreen_FocusInEvent((QSplashScreen*)self, (QFocusEvent*)event);
 }
 
-void q_splashscreen_qbase_focus_in_event(void* self, void* event) {
-    QSplashScreen_QBaseFocusInEvent((QSplashScreen*)self, (QFocusEvent*)event);
+void q_splashscreen_super_focus_in_event(void* self, void* event) {
+    QSplashScreen_SuperFocusInEvent((QSplashScreen*)self, (QFocusEvent*)event);
 }
 
 void q_splashscreen_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1729,8 +1729,8 @@ void q_splashscreen_focus_out_event(void* self, void* event) {
     QSplashScreen_FocusOutEvent((QSplashScreen*)self, (QFocusEvent*)event);
 }
 
-void q_splashscreen_qbase_focus_out_event(void* self, void* event) {
-    QSplashScreen_QBaseFocusOutEvent((QSplashScreen*)self, (QFocusEvent*)event);
+void q_splashscreen_super_focus_out_event(void* self, void* event) {
+    QSplashScreen_SuperFocusOutEvent((QSplashScreen*)self, (QFocusEvent*)event);
 }
 
 void q_splashscreen_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1741,8 +1741,8 @@ void q_splashscreen_enter_event(void* self, void* event) {
     QSplashScreen_EnterEvent((QSplashScreen*)self, (QEnterEvent*)event);
 }
 
-void q_splashscreen_qbase_enter_event(void* self, void* event) {
-    QSplashScreen_QBaseEnterEvent((QSplashScreen*)self, (QEnterEvent*)event);
+void q_splashscreen_super_enter_event(void* self, void* event) {
+    QSplashScreen_SuperEnterEvent((QSplashScreen*)self, (QEnterEvent*)event);
 }
 
 void q_splashscreen_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1753,8 +1753,8 @@ void q_splashscreen_leave_event(void* self, void* event) {
     QSplashScreen_LeaveEvent((QSplashScreen*)self, (QEvent*)event);
 }
 
-void q_splashscreen_qbase_leave_event(void* self, void* event) {
-    QSplashScreen_QBaseLeaveEvent((QSplashScreen*)self, (QEvent*)event);
+void q_splashscreen_super_leave_event(void* self, void* event) {
+    QSplashScreen_SuperLeaveEvent((QSplashScreen*)self, (QEvent*)event);
 }
 
 void q_splashscreen_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1765,8 +1765,8 @@ void q_splashscreen_paint_event(void* self, void* event) {
     QSplashScreen_PaintEvent((QSplashScreen*)self, (QPaintEvent*)event);
 }
 
-void q_splashscreen_qbase_paint_event(void* self, void* event) {
-    QSplashScreen_QBasePaintEvent((QSplashScreen*)self, (QPaintEvent*)event);
+void q_splashscreen_super_paint_event(void* self, void* event) {
+    QSplashScreen_SuperPaintEvent((QSplashScreen*)self, (QPaintEvent*)event);
 }
 
 void q_splashscreen_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1777,8 +1777,8 @@ void q_splashscreen_move_event(void* self, void* event) {
     QSplashScreen_MoveEvent((QSplashScreen*)self, (QMoveEvent*)event);
 }
 
-void q_splashscreen_qbase_move_event(void* self, void* event) {
-    QSplashScreen_QBaseMoveEvent((QSplashScreen*)self, (QMoveEvent*)event);
+void q_splashscreen_super_move_event(void* self, void* event) {
+    QSplashScreen_SuperMoveEvent((QSplashScreen*)self, (QMoveEvent*)event);
 }
 
 void q_splashscreen_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1789,8 +1789,8 @@ void q_splashscreen_resize_event(void* self, void* event) {
     QSplashScreen_ResizeEvent((QSplashScreen*)self, (QResizeEvent*)event);
 }
 
-void q_splashscreen_qbase_resize_event(void* self, void* event) {
-    QSplashScreen_QBaseResizeEvent((QSplashScreen*)self, (QResizeEvent*)event);
+void q_splashscreen_super_resize_event(void* self, void* event) {
+    QSplashScreen_SuperResizeEvent((QSplashScreen*)self, (QResizeEvent*)event);
 }
 
 void q_splashscreen_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1801,8 +1801,8 @@ void q_splashscreen_close_event(void* self, void* event) {
     QSplashScreen_CloseEvent((QSplashScreen*)self, (QCloseEvent*)event);
 }
 
-void q_splashscreen_qbase_close_event(void* self, void* event) {
-    QSplashScreen_QBaseCloseEvent((QSplashScreen*)self, (QCloseEvent*)event);
+void q_splashscreen_super_close_event(void* self, void* event) {
+    QSplashScreen_SuperCloseEvent((QSplashScreen*)self, (QCloseEvent*)event);
 }
 
 void q_splashscreen_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1813,8 +1813,8 @@ void q_splashscreen_context_menu_event(void* self, void* event) {
     QSplashScreen_ContextMenuEvent((QSplashScreen*)self, (QContextMenuEvent*)event);
 }
 
-void q_splashscreen_qbase_context_menu_event(void* self, void* event) {
-    QSplashScreen_QBaseContextMenuEvent((QSplashScreen*)self, (QContextMenuEvent*)event);
+void q_splashscreen_super_context_menu_event(void* self, void* event) {
+    QSplashScreen_SuperContextMenuEvent((QSplashScreen*)self, (QContextMenuEvent*)event);
 }
 
 void q_splashscreen_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1825,8 +1825,8 @@ void q_splashscreen_tablet_event(void* self, void* event) {
     QSplashScreen_TabletEvent((QSplashScreen*)self, (QTabletEvent*)event);
 }
 
-void q_splashscreen_qbase_tablet_event(void* self, void* event) {
-    QSplashScreen_QBaseTabletEvent((QSplashScreen*)self, (QTabletEvent*)event);
+void q_splashscreen_super_tablet_event(void* self, void* event) {
+    QSplashScreen_SuperTabletEvent((QSplashScreen*)self, (QTabletEvent*)event);
 }
 
 void q_splashscreen_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1837,8 +1837,8 @@ void q_splashscreen_action_event(void* self, void* event) {
     QSplashScreen_ActionEvent((QSplashScreen*)self, (QActionEvent*)event);
 }
 
-void q_splashscreen_qbase_action_event(void* self, void* event) {
-    QSplashScreen_QBaseActionEvent((QSplashScreen*)self, (QActionEvent*)event);
+void q_splashscreen_super_action_event(void* self, void* event) {
+    QSplashScreen_SuperActionEvent((QSplashScreen*)self, (QActionEvent*)event);
 }
 
 void q_splashscreen_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1849,8 +1849,8 @@ void q_splashscreen_drag_enter_event(void* self, void* event) {
     QSplashScreen_DragEnterEvent((QSplashScreen*)self, (QDragEnterEvent*)event);
 }
 
-void q_splashscreen_qbase_drag_enter_event(void* self, void* event) {
-    QSplashScreen_QBaseDragEnterEvent((QSplashScreen*)self, (QDragEnterEvent*)event);
+void q_splashscreen_super_drag_enter_event(void* self, void* event) {
+    QSplashScreen_SuperDragEnterEvent((QSplashScreen*)self, (QDragEnterEvent*)event);
 }
 
 void q_splashscreen_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1861,8 +1861,8 @@ void q_splashscreen_drag_move_event(void* self, void* event) {
     QSplashScreen_DragMoveEvent((QSplashScreen*)self, (QDragMoveEvent*)event);
 }
 
-void q_splashscreen_qbase_drag_move_event(void* self, void* event) {
-    QSplashScreen_QBaseDragMoveEvent((QSplashScreen*)self, (QDragMoveEvent*)event);
+void q_splashscreen_super_drag_move_event(void* self, void* event) {
+    QSplashScreen_SuperDragMoveEvent((QSplashScreen*)self, (QDragMoveEvent*)event);
 }
 
 void q_splashscreen_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1873,8 +1873,8 @@ void q_splashscreen_drag_leave_event(void* self, void* event) {
     QSplashScreen_DragLeaveEvent((QSplashScreen*)self, (QDragLeaveEvent*)event);
 }
 
-void q_splashscreen_qbase_drag_leave_event(void* self, void* event) {
-    QSplashScreen_QBaseDragLeaveEvent((QSplashScreen*)self, (QDragLeaveEvent*)event);
+void q_splashscreen_super_drag_leave_event(void* self, void* event) {
+    QSplashScreen_SuperDragLeaveEvent((QSplashScreen*)self, (QDragLeaveEvent*)event);
 }
 
 void q_splashscreen_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1885,8 +1885,8 @@ void q_splashscreen_drop_event(void* self, void* event) {
     QSplashScreen_DropEvent((QSplashScreen*)self, (QDropEvent*)event);
 }
 
-void q_splashscreen_qbase_drop_event(void* self, void* event) {
-    QSplashScreen_QBaseDropEvent((QSplashScreen*)self, (QDropEvent*)event);
+void q_splashscreen_super_drop_event(void* self, void* event) {
+    QSplashScreen_SuperDropEvent((QSplashScreen*)self, (QDropEvent*)event);
 }
 
 void q_splashscreen_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1897,8 +1897,8 @@ void q_splashscreen_show_event(void* self, void* event) {
     QSplashScreen_ShowEvent((QSplashScreen*)self, (QShowEvent*)event);
 }
 
-void q_splashscreen_qbase_show_event(void* self, void* event) {
-    QSplashScreen_QBaseShowEvent((QSplashScreen*)self, (QShowEvent*)event);
+void q_splashscreen_super_show_event(void* self, void* event) {
+    QSplashScreen_SuperShowEvent((QSplashScreen*)self, (QShowEvent*)event);
 }
 
 void q_splashscreen_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1909,8 +1909,8 @@ void q_splashscreen_hide_event(void* self, void* event) {
     QSplashScreen_HideEvent((QSplashScreen*)self, (QHideEvent*)event);
 }
 
-void q_splashscreen_qbase_hide_event(void* self, void* event) {
-    QSplashScreen_QBaseHideEvent((QSplashScreen*)self, (QHideEvent*)event);
+void q_splashscreen_super_hide_event(void* self, void* event) {
+    QSplashScreen_SuperHideEvent((QSplashScreen*)self, (QHideEvent*)event);
 }
 
 void q_splashscreen_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1921,8 +1921,8 @@ bool q_splashscreen_native_event(void* self, char* eventType, void* message, int
     return QSplashScreen_NativeEvent((QSplashScreen*)self, qstring(eventType), message, result);
 }
 
-bool q_splashscreen_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QSplashScreen_QBaseNativeEvent((QSplashScreen*)self, qstring(eventType), message, result);
+bool q_splashscreen_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QSplashScreen_SuperNativeEvent((QSplashScreen*)self, qstring(eventType), message, result);
 }
 
 void q_splashscreen_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1933,8 +1933,8 @@ void q_splashscreen_change_event(void* self, void* param1) {
     QSplashScreen_ChangeEvent((QSplashScreen*)self, (QEvent*)param1);
 }
 
-void q_splashscreen_qbase_change_event(void* self, void* param1) {
-    QSplashScreen_QBaseChangeEvent((QSplashScreen*)self, (QEvent*)param1);
+void q_splashscreen_super_change_event(void* self, void* param1) {
+    QSplashScreen_SuperChangeEvent((QSplashScreen*)self, (QEvent*)param1);
 }
 
 void q_splashscreen_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1945,8 +1945,8 @@ int32_t q_splashscreen_metric(void* self, int32_t param1) {
     return QSplashScreen_Metric((QSplashScreen*)self, param1);
 }
 
-int32_t q_splashscreen_qbase_metric(void* self, int32_t param1) {
-    return QSplashScreen_QBaseMetric((QSplashScreen*)self, param1);
+int32_t q_splashscreen_super_metric(void* self, int32_t param1) {
+    return QSplashScreen_SuperMetric((QSplashScreen*)self, param1);
 }
 
 void q_splashscreen_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1957,8 +1957,8 @@ void q_splashscreen_init_painter(void* self, void* painter) {
     QSplashScreen_InitPainter((QSplashScreen*)self, (QPainter*)painter);
 }
 
-void q_splashscreen_qbase_init_painter(void* self, void* painter) {
-    QSplashScreen_QBaseInitPainter((QSplashScreen*)self, (QPainter*)painter);
+void q_splashscreen_super_init_painter(void* self, void* painter) {
+    QSplashScreen_SuperInitPainter((QSplashScreen*)self, (QPainter*)painter);
 }
 
 void q_splashscreen_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1969,8 +1969,8 @@ QPaintDevice* q_splashscreen_redirected(void* self, void* offset) {
     return QSplashScreen_Redirected((QSplashScreen*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_splashscreen_qbase_redirected(void* self, void* offset) {
-    return QSplashScreen_QBaseRedirected((QSplashScreen*)self, (QPoint*)offset);
+QPaintDevice* q_splashscreen_super_redirected(void* self, void* offset) {
+    return QSplashScreen_SuperRedirected((QSplashScreen*)self, (QPoint*)offset);
 }
 
 void q_splashscreen_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1981,8 +1981,8 @@ QPainter* q_splashscreen_shared_painter(void* self) {
     return QSplashScreen_SharedPainter((QSplashScreen*)self);
 }
 
-QPainter* q_splashscreen_qbase_shared_painter(void* self) {
-    return QSplashScreen_QBaseSharedPainter((QSplashScreen*)self);
+QPainter* q_splashscreen_super_shared_painter(void* self) {
+    return QSplashScreen_SuperSharedPainter((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1993,8 +1993,8 @@ void q_splashscreen_input_method_event(void* self, void* param1) {
     QSplashScreen_InputMethodEvent((QSplashScreen*)self, (QInputMethodEvent*)param1);
 }
 
-void q_splashscreen_qbase_input_method_event(void* self, void* param1) {
-    QSplashScreen_QBaseInputMethodEvent((QSplashScreen*)self, (QInputMethodEvent*)param1);
+void q_splashscreen_super_input_method_event(void* self, void* param1) {
+    QSplashScreen_SuperInputMethodEvent((QSplashScreen*)self, (QInputMethodEvent*)param1);
 }
 
 void q_splashscreen_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2005,8 +2005,8 @@ QVariant* q_splashscreen_input_method_query(void* self, int32_t param1) {
     return QSplashScreen_InputMethodQuery((QSplashScreen*)self, param1);
 }
 
-QVariant* q_splashscreen_qbase_input_method_query(void* self, int32_t param1) {
-    return QSplashScreen_QBaseInputMethodQuery((QSplashScreen*)self, param1);
+QVariant* q_splashscreen_super_input_method_query(void* self, int32_t param1) {
+    return QSplashScreen_SuperInputMethodQuery((QSplashScreen*)self, param1);
 }
 
 void q_splashscreen_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2017,8 +2017,8 @@ bool q_splashscreen_focus_next_prev_child(void* self, bool next) {
     return QSplashScreen_FocusNextPrevChild((QSplashScreen*)self, next);
 }
 
-bool q_splashscreen_qbase_focus_next_prev_child(void* self, bool next) {
-    return QSplashScreen_QBaseFocusNextPrevChild((QSplashScreen*)self, next);
+bool q_splashscreen_super_focus_next_prev_child(void* self, bool next) {
+    return QSplashScreen_SuperFocusNextPrevChild((QSplashScreen*)self, next);
 }
 
 void q_splashscreen_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2029,8 +2029,8 @@ bool q_splashscreen_event_filter(void* self, void* watched, void* event) {
     return QSplashScreen_EventFilter((QSplashScreen*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_splashscreen_qbase_event_filter(void* self, void* watched, void* event) {
-    return QSplashScreen_QBaseEventFilter((QSplashScreen*)self, (QObject*)watched, (QEvent*)event);
+bool q_splashscreen_super_event_filter(void* self, void* watched, void* event) {
+    return QSplashScreen_SuperEventFilter((QSplashScreen*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_splashscreen_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2041,8 +2041,8 @@ void q_splashscreen_timer_event(void* self, void* event) {
     QSplashScreen_TimerEvent((QSplashScreen*)self, (QTimerEvent*)event);
 }
 
-void q_splashscreen_qbase_timer_event(void* self, void* event) {
-    QSplashScreen_QBaseTimerEvent((QSplashScreen*)self, (QTimerEvent*)event);
+void q_splashscreen_super_timer_event(void* self, void* event) {
+    QSplashScreen_SuperTimerEvent((QSplashScreen*)self, (QTimerEvent*)event);
 }
 
 void q_splashscreen_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2053,8 +2053,8 @@ void q_splashscreen_child_event(void* self, void* event) {
     QSplashScreen_ChildEvent((QSplashScreen*)self, (QChildEvent*)event);
 }
 
-void q_splashscreen_qbase_child_event(void* self, void* event) {
-    QSplashScreen_QBaseChildEvent((QSplashScreen*)self, (QChildEvent*)event);
+void q_splashscreen_super_child_event(void* self, void* event) {
+    QSplashScreen_SuperChildEvent((QSplashScreen*)self, (QChildEvent*)event);
 }
 
 void q_splashscreen_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2065,8 +2065,8 @@ void q_splashscreen_custom_event(void* self, void* event) {
     QSplashScreen_CustomEvent((QSplashScreen*)self, (QEvent*)event);
 }
 
-void q_splashscreen_qbase_custom_event(void* self, void* event) {
-    QSplashScreen_QBaseCustomEvent((QSplashScreen*)self, (QEvent*)event);
+void q_splashscreen_super_custom_event(void* self, void* event) {
+    QSplashScreen_SuperCustomEvent((QSplashScreen*)self, (QEvent*)event);
 }
 
 void q_splashscreen_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2077,8 +2077,8 @@ void q_splashscreen_connect_notify(void* self, void* signal) {
     QSplashScreen_ConnectNotify((QSplashScreen*)self, (QMetaMethod*)signal);
 }
 
-void q_splashscreen_qbase_connect_notify(void* self, void* signal) {
-    QSplashScreen_QBaseConnectNotify((QSplashScreen*)self, (QMetaMethod*)signal);
+void q_splashscreen_super_connect_notify(void* self, void* signal) {
+    QSplashScreen_SuperConnectNotify((QSplashScreen*)self, (QMetaMethod*)signal);
 }
 
 void q_splashscreen_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2089,8 +2089,8 @@ void q_splashscreen_disconnect_notify(void* self, void* signal) {
     QSplashScreen_DisconnectNotify((QSplashScreen*)self, (QMetaMethod*)signal);
 }
 
-void q_splashscreen_qbase_disconnect_notify(void* self, void* signal) {
-    QSplashScreen_QBaseDisconnectNotify((QSplashScreen*)self, (QMetaMethod*)signal);
+void q_splashscreen_super_disconnect_notify(void* self, void* signal) {
+    QSplashScreen_SuperDisconnectNotify((QSplashScreen*)self, (QMetaMethod*)signal);
 }
 
 void q_splashscreen_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2101,8 +2101,8 @@ void q_splashscreen_update_micro_focus(void* self) {
     QSplashScreen_UpdateMicroFocus((QSplashScreen*)self);
 }
 
-void q_splashscreen_qbase_update_micro_focus(void* self) {
-    QSplashScreen_QBaseUpdateMicroFocus((QSplashScreen*)self);
+void q_splashscreen_super_update_micro_focus(void* self) {
+    QSplashScreen_SuperUpdateMicroFocus((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2113,8 +2113,8 @@ void q_splashscreen_create(void* self) {
     QSplashScreen_Create((QSplashScreen*)self);
 }
 
-void q_splashscreen_qbase_create(void* self) {
-    QSplashScreen_QBaseCreate((QSplashScreen*)self);
+void q_splashscreen_super_create(void* self) {
+    QSplashScreen_SuperCreate((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_create(void* self, void (*callback)()) {
@@ -2125,8 +2125,8 @@ void q_splashscreen_destroy(void* self) {
     QSplashScreen_Destroy((QSplashScreen*)self);
 }
 
-void q_splashscreen_qbase_destroy(void* self) {
-    QSplashScreen_QBaseDestroy((QSplashScreen*)self);
+void q_splashscreen_super_destroy(void* self) {
+    QSplashScreen_SuperDestroy((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_destroy(void* self, void (*callback)()) {
@@ -2137,8 +2137,8 @@ bool q_splashscreen_focus_next_child(void* self) {
     return QSplashScreen_FocusNextChild((QSplashScreen*)self);
 }
 
-bool q_splashscreen_qbase_focus_next_child(void* self) {
-    return QSplashScreen_QBaseFocusNextChild((QSplashScreen*)self);
+bool q_splashscreen_super_focus_next_child(void* self) {
+    return QSplashScreen_SuperFocusNextChild((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2149,8 +2149,8 @@ bool q_splashscreen_focus_previous_child(void* self) {
     return QSplashScreen_FocusPreviousChild((QSplashScreen*)self);
 }
 
-bool q_splashscreen_qbase_focus_previous_child(void* self) {
-    return QSplashScreen_QBaseFocusPreviousChild((QSplashScreen*)self);
+bool q_splashscreen_super_focus_previous_child(void* self) {
+    return QSplashScreen_SuperFocusPreviousChild((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2161,8 +2161,8 @@ QObject* q_splashscreen_sender(void* self) {
     return QSplashScreen_Sender((QSplashScreen*)self);
 }
 
-QObject* q_splashscreen_qbase_sender(void* self) {
-    return QSplashScreen_QBaseSender((QSplashScreen*)self);
+QObject* q_splashscreen_super_sender(void* self) {
+    return QSplashScreen_SuperSender((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_sender(void* self, QObject* (*callback)()) {
@@ -2173,8 +2173,8 @@ int32_t q_splashscreen_sender_signal_index(void* self) {
     return QSplashScreen_SenderSignalIndex((QSplashScreen*)self);
 }
 
-int32_t q_splashscreen_qbase_sender_signal_index(void* self) {
-    return QSplashScreen_QBaseSenderSignalIndex((QSplashScreen*)self);
+int32_t q_splashscreen_super_sender_signal_index(void* self) {
+    return QSplashScreen_SuperSenderSignalIndex((QSplashScreen*)self);
 }
 
 void q_splashscreen_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2185,8 +2185,8 @@ int32_t q_splashscreen_receivers(void* self, const char* signal) {
     return QSplashScreen_Receivers((QSplashScreen*)self, signal);
 }
 
-int32_t q_splashscreen_qbase_receivers(void* self, const char* signal) {
-    return QSplashScreen_QBaseReceivers((QSplashScreen*)self, signal);
+int32_t q_splashscreen_super_receivers(void* self, const char* signal) {
+    return QSplashScreen_SuperReceivers((QSplashScreen*)self, signal);
 }
 
 void q_splashscreen_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2197,8 +2197,8 @@ bool q_splashscreen_is_signal_connected(void* self, void* signal) {
     return QSplashScreen_IsSignalConnected((QSplashScreen*)self, (QMetaMethod*)signal);
 }
 
-bool q_splashscreen_qbase_is_signal_connected(void* self, void* signal) {
-    return QSplashScreen_QBaseIsSignalConnected((QSplashScreen*)self, (QMetaMethod*)signal);
+bool q_splashscreen_super_is_signal_connected(void* self, void* signal) {
+    return QSplashScreen_SuperIsSignalConnected((QSplashScreen*)self, (QMetaMethod*)signal);
 }
 
 void q_splashscreen_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2209,8 +2209,8 @@ double q_splashscreen_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return QSplashScreen_GetDecodedMetricF((QSplashScreen*)self, metricA, metricB);
 }
 
-double q_splashscreen_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QSplashScreen_QBaseGetDecodedMetricF((QSplashScreen*)self, metricA, metricB);
+double q_splashscreen_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QSplashScreen_SuperGetDecodedMetricF((QSplashScreen*)self, metricA, metricB);
 }
 
 void q_splashscreen_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

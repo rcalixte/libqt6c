@@ -55,13 +55,17 @@ const char** k_xmlguibuilder_container_tags(void* self);
 ///
 void k_xmlguibuilder_on_container_tags(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguibuilder_super_container_tags` instead
+///
+#define k_xmlguibuilder_qbase_container_tags k_xmlguibuilder_super_container_tags
+
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#containerTags)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIBuilder*
 ///
-const char** k_xmlguibuilder_qbase_container_tags(void* self);
+const char** k_xmlguibuilder_super_container_tags(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
@@ -82,6 +86,10 @@ QWidget* k_xmlguibuilder_create_container(void* self, void* parent, int index, v
 ///
 void k_xmlguibuilder_on_create_container(void* self, QWidget* (*callback)(void*, void*, int, void*, void**));
 
+/// @warning DEPRECATED: Use `k_xmlguibuilder_super_create_container` instead
+///
+#define k_xmlguibuilder_qbase_create_container k_xmlguibuilder_super_create_container
+
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createContainer)
 ///
 /// Base class method implementation
@@ -92,7 +100,7 @@ void k_xmlguibuilder_on_create_container(void* self, QWidget* (*callback)(void*,
 /// @param element QDomElement*
 /// @param containerAction QAction**
 ///
-QWidget* k_xmlguibuilder_qbase_create_container(void* self, void* parent, int index, void* element, void** containerAction);
+QWidget* k_xmlguibuilder_super_create_container(void* self, void* parent, int index, void* element, void** containerAction);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
@@ -113,6 +121,10 @@ void k_xmlguibuilder_remove_container(void* self, void* container, void* parent,
 ///
 void k_xmlguibuilder_on_remove_container(void* self, void (*callback)(void*, void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguibuilder_super_remove_container` instead
+///
+#define k_xmlguibuilder_qbase_remove_container k_xmlguibuilder_super_remove_container
+
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#removeContainer)
 ///
 /// Base class method implementation
@@ -123,7 +135,7 @@ void k_xmlguibuilder_on_remove_container(void* self, void (*callback)(void*, voi
 /// @param element QDomElement*
 /// @param containerAction QAction*
 ///
-void k_xmlguibuilder_qbase_remove_container(void* self, void* container, void* parent, void* element, void* containerAction);
+void k_xmlguibuilder_super_remove_container(void* self, void* container, void* parent, void* element, void* containerAction);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
@@ -142,13 +154,17 @@ const char** k_xmlguibuilder_custom_tags(void* self);
 ///
 void k_xmlguibuilder_on_custom_tags(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `k_xmlguibuilder_super_custom_tags` instead
+///
+#define k_xmlguibuilder_qbase_custom_tags k_xmlguibuilder_super_custom_tags
+
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#customTags)
 ///
 /// Base class method implementation
 ///
 /// @param self KXMLGUIBuilder*
 ///
-const char** k_xmlguibuilder_qbase_custom_tags(void* self);
+const char** k_xmlguibuilder_super_custom_tags(void* self);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
@@ -168,6 +184,10 @@ QAction* k_xmlguibuilder_create_custom_element(void* self, void* parent, int ind
 ///
 void k_xmlguibuilder_on_create_custom_element(void* self, QAction* (*callback)(void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguibuilder_super_create_custom_element` instead
+///
+#define k_xmlguibuilder_qbase_create_custom_element k_xmlguibuilder_super_create_custom_element
+
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#createCustomElement)
 ///
 /// Base class method implementation
@@ -177,7 +197,7 @@ void k_xmlguibuilder_on_create_custom_element(void* self, QAction* (*callback)(v
 /// @param index int
 /// @param element QDomElement*
 ///
-QAction* k_xmlguibuilder_qbase_create_custom_element(void* self, void* parent, int index, void* element);
+QAction* k_xmlguibuilder_super_create_custom_element(void* self, void* parent, int index, void* element);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
 ///
@@ -195,6 +215,10 @@ void k_xmlguibuilder_finalize_g_u_i(void* self, void* client);
 ///
 void k_xmlguibuilder_on_finalize_g_u_i(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_xmlguibuilder_super_finalize_g_u_i` instead
+///
+#define k_xmlguibuilder_qbase_finalize_g_u_i k_xmlguibuilder_super_finalize_g_u_i
+
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#finalizeGUI)
 ///
 /// Base class method implementation
@@ -202,7 +226,7 @@ void k_xmlguibuilder_on_finalize_g_u_i(void* self, void (*callback)(void*, void*
 /// @param self KXMLGUIBuilder*
 /// @param client KXMLGUIClient*
 ///
-void k_xmlguibuilder_qbase_finalize_g_u_i(void* self, void* client);
+void k_xmlguibuilder_super_finalize_g_u_i(void* self, void* client);
 
 /// [Upstream resources](https://api.kde.org/kxmlguibuilder.html#dtor.KXMLGUIBuilder)
 ///

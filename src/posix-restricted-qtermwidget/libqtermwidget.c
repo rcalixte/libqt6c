@@ -43,8 +43,8 @@ void q_termwidget_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTermWidget_OnMetaObject((QTermWidget*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_termwidget_qbase_meta_object(void* self) {
-    return QTermWidget_QBaseMetaObject((QTermWidget*)self);
+const QMetaObject* q_termwidget_super_meta_object(void* self) {
+    return QTermWidget_SuperMetaObject((QTermWidget*)self);
 }
 
 void* q_termwidget_metacast(void* self, const char* param1) {
@@ -55,8 +55,8 @@ void q_termwidget_on_metacast(void* self, void* (*callback)(void*, const char*))
     QTermWidget_OnMetacast((QTermWidget*)self, (intptr_t)callback);
 }
 
-void* q_termwidget_qbase_metacast(void* self, const char* param1) {
-    return QTermWidget_QBaseMetacast((QTermWidget*)self, param1);
+void* q_termwidget_super_metacast(void* self, const char* param1) {
+    return QTermWidget_SuperMetacast((QTermWidget*)self, param1);
 }
 
 int32_t q_termwidget_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -67,8 +67,8 @@ void q_termwidget_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QTermWidget_OnMetacall((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTermWidget_QBaseMetacall((QTermWidget*)self, param1, param2, param3);
+int32_t q_termwidget_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTermWidget_SuperMetacall((QTermWidget*)self, param1, param2, param3);
 }
 
 const char* q_termwidget_tr(const char* s) {
@@ -86,8 +86,8 @@ void q_termwidget_on_size_hint(void* self, QSize* (*callback)()) {
     QTermWidget_OnSizeHint((QTermWidget*)self, (intptr_t)callback);
 }
 
-QSize* q_termwidget_qbase_size_hint(void* self) {
-    return QTermWidget_QBaseSizeHint((QTermWidget*)self);
+QSize* q_termwidget_super_size_hint(void* self) {
+    return QTermWidget_SuperSizeHint((QTermWidget*)self);
 }
 
 void q_termwidget_set_terminal_size_hint(void* self, bool enabled) {
@@ -98,8 +98,8 @@ void q_termwidget_on_set_terminal_size_hint(void* self, void (*callback)(void*, 
     QTermWidget_OnSetTerminalSizeHint((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_terminal_size_hint(void* self, bool enabled) {
-    QTermWidget_QBaseSetTerminalSizeHint((QTermWidget*)self, enabled);
+void q_termwidget_super_set_terminal_size_hint(void* self, bool enabled) {
+    QTermWidget_SuperSetTerminalSizeHint((QTermWidget*)self, enabled);
 }
 
 bool q_termwidget_terminal_size_hint(void* self) {
@@ -110,8 +110,8 @@ void q_termwidget_on_terminal_size_hint(void* self, bool (*callback)()) {
     QTermWidget_OnTerminalSizeHint((QTermWidget*)self, (intptr_t)callback);
 }
 
-bool q_termwidget_qbase_terminal_size_hint(void* self) {
-    return QTermWidget_QBaseTerminalSizeHint((QTermWidget*)self);
+bool q_termwidget_super_terminal_size_hint(void* self) {
+    return QTermWidget_SuperTerminalSizeHint((QTermWidget*)self);
 }
 
 void q_termwidget_start_shell_program(void* self) {
@@ -122,8 +122,8 @@ void q_termwidget_on_start_shell_program(void* self, void (*callback)()) {
     QTermWidget_OnStartShellProgram((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_start_shell_program(void* self) {
-    QTermWidget_QBaseStartShellProgram((QTermWidget*)self);
+void q_termwidget_super_start_shell_program(void* self) {
+    QTermWidget_SuperStartShellProgram((QTermWidget*)self);
 }
 
 void q_termwidget_start_terminal_teletype(void* self) {
@@ -134,8 +134,8 @@ void q_termwidget_on_start_terminal_teletype(void* self, void (*callback)()) {
     QTermWidget_OnStartTerminalTeletype((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_start_terminal_teletype(void* self) {
-    QTermWidget_QBaseStartTerminalTeletype((QTermWidget*)self);
+void q_termwidget_super_start_terminal_teletype(void* self) {
+    QTermWidget_SuperStartTerminalTeletype((QTermWidget*)self);
 }
 
 int32_t q_termwidget_get_shell_p_i_d(void* self) {
@@ -146,8 +146,8 @@ void q_termwidget_on_get_shell_p_i_d(void* self, int32_t (*callback)()) {
     QTermWidget_OnGetShellPID((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_get_shell_p_i_d(void* self) {
-    return QTermWidget_QBaseGetShellPID((QTermWidget*)self);
+int32_t q_termwidget_super_get_shell_p_i_d(void* self) {
+    return QTermWidget_SuperGetShellPID((QTermWidget*)self);
 }
 
 int32_t q_termwidget_get_foreground_process_id(void* self) {
@@ -158,8 +158,8 @@ void q_termwidget_on_get_foreground_process_id(void* self, int32_t (*callback)()
     QTermWidget_OnGetForegroundProcessId((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_get_foreground_process_id(void* self) {
-    return QTermWidget_QBaseGetForegroundProcessId((QTermWidget*)self);
+int32_t q_termwidget_super_get_foreground_process_id(void* self) {
+    return QTermWidget_SuperGetForegroundProcessId((QTermWidget*)self);
 }
 
 void q_termwidget_change_dir(void* self, const char* dir) {
@@ -170,8 +170,8 @@ void q_termwidget_on_change_dir(void* self, void (*callback)(void*, const char*)
     QTermWidget_OnChangeDir((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_change_dir(void* self, const char* dir) {
-    QTermWidget_QBaseChangeDir((QTermWidget*)self, qstring(dir));
+void q_termwidget_super_change_dir(void* self, const char* dir) {
+    QTermWidget_SuperChangeDir((QTermWidget*)self, qstring(dir));
 }
 
 void q_termwidget_set_terminal_font(void* self, void* font) {
@@ -182,8 +182,8 @@ void q_termwidget_on_set_terminal_font(void* self, void (*callback)(void*, void*
     QTermWidget_OnSetTerminalFont((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_terminal_font(void* self, void* font) {
-    QTermWidget_QBaseSetTerminalFont((QTermWidget*)self, (QFont*)font);
+void q_termwidget_super_set_terminal_font(void* self, void* font) {
+    QTermWidget_SuperSetTerminalFont((QTermWidget*)self, (QFont*)font);
 }
 
 QFont* q_termwidget_get_terminal_font(void* self) {
@@ -194,8 +194,8 @@ void q_termwidget_on_get_terminal_font(void* self, QFont* (*callback)()) {
     QTermWidget_OnGetTerminalFont((QTermWidget*)self, (intptr_t)callback);
 }
 
-QFont* q_termwidget_qbase_get_terminal_font(void* self) {
-    return QTermWidget_QBaseGetTerminalFont((QTermWidget*)self);
+QFont* q_termwidget_super_get_terminal_font(void* self) {
+    return QTermWidget_SuperGetTerminalFont((QTermWidget*)self);
 }
 
 void q_termwidget_set_terminal_opacity(void* self, double level) {
@@ -206,8 +206,8 @@ void q_termwidget_on_set_terminal_opacity(void* self, void (*callback)(void*, do
     QTermWidget_OnSetTerminalOpacity((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_terminal_opacity(void* self, double level) {
-    QTermWidget_QBaseSetTerminalOpacity((QTermWidget*)self, level);
+void q_termwidget_super_set_terminal_opacity(void* self, double level) {
+    QTermWidget_SuperSetTerminalOpacity((QTermWidget*)self, level);
 }
 
 void q_termwidget_set_terminal_background_image(void* self, const char* backgroundImage) {
@@ -218,8 +218,8 @@ void q_termwidget_on_set_terminal_background_image(void* self, void (*callback)(
     QTermWidget_OnSetTerminalBackgroundImage((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_terminal_background_image(void* self, const char* backgroundImage) {
-    QTermWidget_QBaseSetTerminalBackgroundImage((QTermWidget*)self, qstring(backgroundImage));
+void q_termwidget_super_set_terminal_background_image(void* self, const char* backgroundImage) {
+    QTermWidget_SuperSetTerminalBackgroundImage((QTermWidget*)self, qstring(backgroundImage));
 }
 
 void q_termwidget_set_terminal_background_mode(void* self, int mode) {
@@ -230,8 +230,8 @@ void q_termwidget_on_set_terminal_background_mode(void* self, void (*callback)(v
     QTermWidget_OnSetTerminalBackgroundMode((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_terminal_background_mode(void* self, int mode) {
-    QTermWidget_QBaseSetTerminalBackgroundMode((QTermWidget*)self, mode);
+void q_termwidget_super_set_terminal_background_mode(void* self, int mode) {
+    QTermWidget_SuperSetTerminalBackgroundMode((QTermWidget*)self, mode);
 }
 
 void q_termwidget_set_environment(void* self, const char* environment[static 1]) {
@@ -253,7 +253,7 @@ void q_termwidget_on_set_environment(void* self, void (*callback)(void*, const c
     QTermWidget_OnSetEnvironment((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_environment(void* self, const char* environment[static 1]) {
+void q_termwidget_super_set_environment(void* self, const char* environment[static 1]) {
     size_t environment_len = libqt_strv_length(environment);
     libqt_string* environment_qstr = (libqt_string*)malloc(environment_len * sizeof(libqt_string));
     if (environment_qstr == NULL) {
@@ -264,7 +264,7 @@ void q_termwidget_qbase_set_environment(void* self, const char* environment[stat
         environment_qstr[i] = qstring(environment[i]);
     }
     libqt_list environment_list = qlist(environment_qstr, environment_len);
-    QTermWidget_QBaseSetEnvironment((QTermWidget*)self, environment_list);
+    QTermWidget_SuperSetEnvironment((QTermWidget*)self, environment_list);
 }
 
 void q_termwidget_set_shell_program(void* self, const char* program) {
@@ -275,8 +275,8 @@ void q_termwidget_on_set_shell_program(void* self, void (*callback)(void*, const
     QTermWidget_OnSetShellProgram((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_shell_program(void* self, const char* program) {
-    QTermWidget_QBaseSetShellProgram((QTermWidget*)self, qstring(program));
+void q_termwidget_super_set_shell_program(void* self, const char* program) {
+    QTermWidget_SuperSetShellProgram((QTermWidget*)self, qstring(program));
 }
 
 void q_termwidget_set_working_directory(void* self, const char* dir) {
@@ -287,8 +287,8 @@ void q_termwidget_on_set_working_directory(void* self, void (*callback)(void*, c
     QTermWidget_OnSetWorkingDirectory((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_working_directory(void* self, const char* dir) {
-    QTermWidget_QBaseSetWorkingDirectory((QTermWidget*)self, qstring(dir));
+void q_termwidget_super_set_working_directory(void* self, const char* dir) {
+    QTermWidget_SuperSetWorkingDirectory((QTermWidget*)self, qstring(dir));
 }
 
 const char* q_termwidget_working_directory(void* self) {
@@ -302,8 +302,8 @@ void q_termwidget_on_working_directory(void* self, const char* (*callback)()) {
     QTermWidget_OnWorkingDirectory((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char* q_termwidget_qbase_working_directory(void* self) {
-    libqt_string _str = QTermWidget_QBaseWorkingDirectory((QTermWidget*)self);
+const char* q_termwidget_super_working_directory(void* self) {
+    libqt_string _str = QTermWidget_SuperWorkingDirectory((QTermWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -328,7 +328,7 @@ void q_termwidget_on_set_args(void* self, void (*callback)(void*, const char**))
     QTermWidget_OnSetArgs((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_args(void* self, const char* args[static 1]) {
+void q_termwidget_super_set_args(void* self, const char* args[static 1]) {
     size_t args_len = libqt_strv_length(args);
     libqt_string* args_qstr = (libqt_string*)malloc(args_len * sizeof(libqt_string));
     if (args_qstr == NULL) {
@@ -339,7 +339,7 @@ void q_termwidget_qbase_set_args(void* self, const char* args[static 1]) {
         args_qstr[i] = qstring(args[i]);
     }
     libqt_list args_list = qlist(args_qstr, args_len);
-    QTermWidget_QBaseSetArgs((QTermWidget*)self, args_list);
+    QTermWidget_SuperSetArgs((QTermWidget*)self, args_list);
 }
 
 void q_termwidget_set_color_scheme(void* self, const char* name) {
@@ -350,8 +350,8 @@ void q_termwidget_on_set_color_scheme(void* self, void (*callback)(void*, const 
     QTermWidget_OnSetColorScheme((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_color_scheme(void* self, const char* name) {
-    QTermWidget_QBaseSetColorScheme((QTermWidget*)self, qstring(name));
+void q_termwidget_super_set_color_scheme(void* self, const char* name) {
+    QTermWidget_SuperSetColorScheme((QTermWidget*)self, qstring(name));
 }
 
 const char** q_termwidget_get_available_color_schemes(void* self) {
@@ -377,8 +377,8 @@ void q_termwidget_on_get_available_color_schemes(void* self, const char** (*call
     QTermWidget_OnGetAvailableColorSchemes((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char** q_termwidget_qbase_get_available_color_schemes(void* self) {
-    libqt_list _arr = QTermWidget_QBaseGetAvailableColorSchemes((QTermWidget*)self);
+const char** q_termwidget_super_get_available_color_schemes(void* self) {
+    libqt_list _arr = QTermWidget_SuperGetAvailableColorSchemes((QTermWidget*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -427,8 +427,8 @@ void q_termwidget_on_set_history_size(void* self, void (*callback)(void*, int)) 
     QTermWidget_OnSetHistorySize((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_history_size(void* self, int lines) {
-    QTermWidget_QBaseSetHistorySize((QTermWidget*)self, lines);
+void q_termwidget_super_set_history_size(void* self, int lines) {
+    QTermWidget_SuperSetHistorySize((QTermWidget*)self, lines);
 }
 
 int32_t q_termwidget_history_size(void* self) {
@@ -439,8 +439,8 @@ void q_termwidget_on_history_size(void* self, int32_t (*callback)()) {
     QTermWidget_OnHistorySize((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_history_size(void* self) {
-    return QTermWidget_QBaseHistorySize((QTermWidget*)self);
+int32_t q_termwidget_super_history_size(void* self) {
+    return QTermWidget_SuperHistorySize((QTermWidget*)self);
 }
 
 void q_termwidget_set_scroll_bar_position(void* self, int32_t scrollBarPosition) {
@@ -451,8 +451,8 @@ void q_termwidget_on_set_scroll_bar_position(void* self, void (*callback)(void*,
     QTermWidget_OnSetScrollBarPosition((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_scroll_bar_position(void* self, int32_t scrollBarPosition) {
-    QTermWidget_QBaseSetScrollBarPosition((QTermWidget*)self, scrollBarPosition);
+void q_termwidget_super_set_scroll_bar_position(void* self, int32_t scrollBarPosition) {
+    QTermWidget_SuperSetScrollBarPosition((QTermWidget*)self, scrollBarPosition);
 }
 
 void q_termwidget_scroll_to_end(void* self) {
@@ -463,8 +463,8 @@ void q_termwidget_on_scroll_to_end(void* self, void (*callback)()) {
     QTermWidget_OnScrollToEnd((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_scroll_to_end(void* self) {
-    QTermWidget_QBaseScrollToEnd((QTermWidget*)self);
+void q_termwidget_super_scroll_to_end(void* self) {
+    QTermWidget_SuperScrollToEnd((QTermWidget*)self);
 }
 
 void q_termwidget_send_text(void* self, const char* text) {
@@ -475,8 +475,8 @@ void q_termwidget_on_send_text(void* self, void (*callback)(void*, const char*))
     QTermWidget_OnSendText((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_send_text(void* self, const char* text) {
-    QTermWidget_QBaseSendText((QTermWidget*)self, qstring(text));
+void q_termwidget_super_send_text(void* self, const char* text) {
+    QTermWidget_SuperSendText((QTermWidget*)self, qstring(text));
 }
 
 void q_termwidget_send_key_event(void* self, void* e) {
@@ -487,8 +487,8 @@ void q_termwidget_on_send_key_event(void* self, void (*callback)(void*, void*)) 
     QTermWidget_OnSendKeyEvent((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_send_key_event(void* self, void* e) {
-    QTermWidget_QBaseSendKeyEvent((QTermWidget*)self, (QKeyEvent*)e);
+void q_termwidget_super_send_key_event(void* self, void* e) {
+    QTermWidget_SuperSendKeyEvent((QTermWidget*)self, (QKeyEvent*)e);
 }
 
 void q_termwidget_set_flow_control_enabled(void* self, bool enabled) {
@@ -499,8 +499,8 @@ void q_termwidget_on_set_flow_control_enabled(void* self, void (*callback)(void*
     QTermWidget_OnSetFlowControlEnabled((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_flow_control_enabled(void* self, bool enabled) {
-    QTermWidget_QBaseSetFlowControlEnabled((QTermWidget*)self, enabled);
+void q_termwidget_super_set_flow_control_enabled(void* self, bool enabled) {
+    QTermWidget_SuperSetFlowControlEnabled((QTermWidget*)self, enabled);
 }
 
 bool q_termwidget_flow_control_enabled(void* self) {
@@ -511,8 +511,8 @@ void q_termwidget_on_flow_control_enabled(void* self, bool (*callback)()) {
     QTermWidget_OnFlowControlEnabled((QTermWidget*)self, (intptr_t)callback);
 }
 
-bool q_termwidget_qbase_flow_control_enabled(void* self) {
-    return QTermWidget_QBaseFlowControlEnabled((QTermWidget*)self);
+bool q_termwidget_super_flow_control_enabled(void* self) {
+    return QTermWidget_SuperFlowControlEnabled((QTermWidget*)self);
 }
 
 void q_termwidget_set_flow_control_warning_enabled(void* self, bool enabled) {
@@ -523,8 +523,8 @@ void q_termwidget_on_set_flow_control_warning_enabled(void* self, void (*callbac
     QTermWidget_OnSetFlowControlWarningEnabled((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_flow_control_warning_enabled(void* self, bool enabled) {
-    QTermWidget_QBaseSetFlowControlWarningEnabled((QTermWidget*)self, enabled);
+void q_termwidget_super_set_flow_control_warning_enabled(void* self, bool enabled) {
+    QTermWidget_SuperSetFlowControlWarningEnabled((QTermWidget*)self, enabled);
 }
 
 const char** q_termwidget_available_key_bindings() {
@@ -557,8 +557,8 @@ void q_termwidget_on_key_bindings(void* self, const char* (*callback)()) {
     QTermWidget_OnKeyBindings((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char* q_termwidget_qbase_key_bindings(void* self) {
-    libqt_string _str = QTermWidget_QBaseKeyBindings((QTermWidget*)self);
+const char* q_termwidget_super_key_bindings(void* self) {
+    libqt_string _str = QTermWidget_SuperKeyBindings((QTermWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -572,8 +572,8 @@ void q_termwidget_on_set_motion_after_pasting(void* self, void (*callback)(void*
     QTermWidget_OnSetMotionAfterPasting((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_motion_after_pasting(void* self, int motionAfterPasting) {
-    QTermWidget_QBaseSetMotionAfterPasting((QTermWidget*)self, motionAfterPasting);
+void q_termwidget_super_set_motion_after_pasting(void* self, int motionAfterPasting) {
+    QTermWidget_SuperSetMotionAfterPasting((QTermWidget*)self, motionAfterPasting);
 }
 
 int32_t q_termwidget_history_lines_count(void* self) {
@@ -584,8 +584,8 @@ void q_termwidget_on_history_lines_count(void* self, int32_t (*callback)()) {
     QTermWidget_OnHistoryLinesCount((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_history_lines_count(void* self) {
-    return QTermWidget_QBaseHistoryLinesCount((QTermWidget*)self);
+int32_t q_termwidget_super_history_lines_count(void* self) {
+    return QTermWidget_SuperHistoryLinesCount((QTermWidget*)self);
 }
 
 int32_t q_termwidget_screen_columns_count(void* self) {
@@ -596,8 +596,8 @@ void q_termwidget_on_screen_columns_count(void* self, int32_t (*callback)()) {
     QTermWidget_OnScreenColumnsCount((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_screen_columns_count(void* self) {
-    return QTermWidget_QBaseScreenColumnsCount((QTermWidget*)self);
+int32_t q_termwidget_super_screen_columns_count(void* self) {
+    return QTermWidget_SuperScreenColumnsCount((QTermWidget*)self);
 }
 
 int32_t q_termwidget_screen_lines_count(void* self) {
@@ -608,8 +608,8 @@ void q_termwidget_on_screen_lines_count(void* self, int32_t (*callback)()) {
     QTermWidget_OnScreenLinesCount((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_screen_lines_count(void* self) {
-    return QTermWidget_QBaseScreenLinesCount((QTermWidget*)self);
+int32_t q_termwidget_super_screen_lines_count(void* self) {
+    return QTermWidget_SuperScreenLinesCount((QTermWidget*)self);
 }
 
 void q_termwidget_set_selection_start(void* self, int row, int column) {
@@ -620,8 +620,8 @@ void q_termwidget_on_set_selection_start(void* self, void (*callback)(void*, int
     QTermWidget_OnSetSelectionStart((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_selection_start(void* self, int row, int column) {
-    QTermWidget_QBaseSetSelectionStart((QTermWidget*)self, row, column);
+void q_termwidget_super_set_selection_start(void* self, int row, int column) {
+    QTermWidget_SuperSetSelectionStart((QTermWidget*)self, row, column);
 }
 
 void q_termwidget_set_selection_end(void* self, int row, int column) {
@@ -632,8 +632,8 @@ void q_termwidget_on_set_selection_end(void* self, void (*callback)(void*, int, 
     QTermWidget_OnSetSelectionEnd((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_selection_end(void* self, int row, int column) {
-    QTermWidget_QBaseSetSelectionEnd((QTermWidget*)self, row, column);
+void q_termwidget_super_set_selection_end(void* self, int row, int column) {
+    QTermWidget_SuperSetSelectionEnd((QTermWidget*)self, row, column);
 }
 
 void q_termwidget_get_selection_start(void* self, int* row, int* column) {
@@ -644,8 +644,8 @@ void q_termwidget_on_get_selection_start(void* self, void (*callback)(void*, int
     QTermWidget_OnGetSelectionStart((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_get_selection_start(void* self, int* row, int* column) {
-    QTermWidget_QBaseGetSelectionStart((QTermWidget*)self, row, column);
+void q_termwidget_super_get_selection_start(void* self, int* row, int* column) {
+    QTermWidget_SuperGetSelectionStart((QTermWidget*)self, row, column);
 }
 
 void q_termwidget_get_selection_end(void* self, int* row, int* column) {
@@ -656,8 +656,8 @@ void q_termwidget_on_get_selection_end(void* self, void (*callback)(void*, int*,
     QTermWidget_OnGetSelectionEnd((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_get_selection_end(void* self, int* row, int* column) {
-    QTermWidget_QBaseGetSelectionEnd((QTermWidget*)self, row, column);
+void q_termwidget_super_get_selection_end(void* self, int* row, int* column) {
+    QTermWidget_SuperGetSelectionEnd((QTermWidget*)self, row, column);
 }
 
 const char* q_termwidget_selected_text(void* self, bool preserveLineBreaks) {
@@ -671,8 +671,8 @@ void q_termwidget_on_selected_text(void* self, const char* (*callback)(void*, bo
     QTermWidget_OnSelectedText((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char* q_termwidget_qbase_selected_text(void* self, bool preserveLineBreaks) {
-    libqt_string _str = QTermWidget_QBaseSelectedText((QTermWidget*)self, preserveLineBreaks);
+const char* q_termwidget_super_selected_text(void* self, bool preserveLineBreaks) {
+    libqt_string _str = QTermWidget_SuperSelectedText((QTermWidget*)self, preserveLineBreaks);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -686,8 +686,8 @@ void q_termwidget_on_set_monitor_activity(void* self, void (*callback)(void*, bo
     QTermWidget_OnSetMonitorActivity((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_monitor_activity(void* self, bool monitorActivity) {
-    QTermWidget_QBaseSetMonitorActivity((QTermWidget*)self, monitorActivity);
+void q_termwidget_super_set_monitor_activity(void* self, bool monitorActivity) {
+    QTermWidget_SuperSetMonitorActivity((QTermWidget*)self, monitorActivity);
 }
 
 void q_termwidget_set_monitor_silence(void* self, bool monitorSilence) {
@@ -698,8 +698,8 @@ void q_termwidget_on_set_monitor_silence(void* self, void (*callback)(void*, boo
     QTermWidget_OnSetMonitorSilence((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_monitor_silence(void* self, bool monitorSilence) {
-    QTermWidget_QBaseSetMonitorSilence((QTermWidget*)self, monitorSilence);
+void q_termwidget_super_set_monitor_silence(void* self, bool monitorSilence) {
+    QTermWidget_SuperSetMonitorSilence((QTermWidget*)self, monitorSilence);
 }
 
 void q_termwidget_set_silence_timeout(void* self, int seconds) {
@@ -710,8 +710,8 @@ void q_termwidget_on_set_silence_timeout(void* self, void (*callback)(void*, int
     QTermWidget_OnSetSilenceTimeout((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_silence_timeout(void* self, int seconds) {
-    QTermWidget_QBaseSetSilenceTimeout((QTermWidget*)self, seconds);
+void q_termwidget_super_set_silence_timeout(void* self, int seconds) {
+    QTermWidget_SuperSetSilenceTimeout((QTermWidget*)self, seconds);
 }
 
 Konsole__Filter__HotSpot* q_termwidget_get_hot_spot_at(void* self, void* pos) {
@@ -731,8 +731,8 @@ void q_termwidget_on_filter_actions(void* self, libqt_list /* of QAction* */ (*c
     QTermWidget_OnFilterActions((QTermWidget*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QAction* */ q_termwidget_qbase_filter_actions(void* self, void* position) {
-    libqt_list _arr = QTermWidget_QBaseFilterActions((QTermWidget*)self, (QPoint*)position);
+libqt_list /* of QAction* */ q_termwidget_super_filter_actions(void* self, void* position) {
+    libqt_list _arr = QTermWidget_SuperFilterActions((QTermWidget*)self, (QPoint*)position);
     return _arr;
 }
 
@@ -744,8 +744,8 @@ void q_termwidget_on_get_pty_slave_fd(void* self, int32_t (*callback)()) {
     QTermWidget_OnGetPtySlaveFd((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_get_pty_slave_fd(void* self) {
-    return QTermWidget_QBaseGetPtySlaveFd((QTermWidget*)self);
+int32_t q_termwidget_super_get_pty_slave_fd(void* self) {
+    return QTermWidget_SuperGetPtySlaveFd((QTermWidget*)self);
 }
 
 void q_termwidget_set_keyboard_cursor_shape(void* self, int32_t shape) {
@@ -760,8 +760,8 @@ void q_termwidget_on_set_blinking_cursor(void* self, void (*callback)(void*, boo
     QTermWidget_OnSetBlinkingCursor((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_blinking_cursor(void* self, bool blink) {
-    QTermWidget_QBaseSetBlinkingCursor((QTermWidget*)self, blink);
+void q_termwidget_super_set_blinking_cursor(void* self, bool blink) {
+    QTermWidget_SuperSetBlinkingCursor((QTermWidget*)self, blink);
 }
 
 void q_termwidget_set_bidi_enabled(void* self, bool enabled) {
@@ -772,8 +772,8 @@ void q_termwidget_on_set_bidi_enabled(void* self, void (*callback)(void*, bool))
     QTermWidget_OnSetBidiEnabled((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_bidi_enabled(void* self, bool enabled) {
-    QTermWidget_QBaseSetBidiEnabled((QTermWidget*)self, enabled);
+void q_termwidget_super_set_bidi_enabled(void* self, bool enabled) {
+    QTermWidget_SuperSetBidiEnabled((QTermWidget*)self, enabled);
 }
 
 bool q_termwidget_is_bidi_enabled(void* self) {
@@ -784,8 +784,8 @@ void q_termwidget_on_is_bidi_enabled(void* self, bool (*callback)()) {
     QTermWidget_OnIsBidiEnabled((QTermWidget*)self, (intptr_t)callback);
 }
 
-bool q_termwidget_qbase_is_bidi_enabled(void* self) {
-    return QTermWidget_QBaseIsBidiEnabled((QTermWidget*)self);
+bool q_termwidget_super_is_bidi_enabled(void* self) {
+    return QTermWidget_SuperIsBidiEnabled((QTermWidget*)self);
 }
 
 void q_termwidget_set_auto_close(void* self, bool autoClose) {
@@ -796,8 +796,8 @@ void q_termwidget_on_set_auto_close(void* self, void (*callback)(void*, bool)) {
     QTermWidget_OnSetAutoClose((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_auto_close(void* self, bool autoClose) {
-    QTermWidget_QBaseSetAutoClose((QTermWidget*)self, autoClose);
+void q_termwidget_super_set_auto_close(void* self, bool autoClose) {
+    QTermWidget_SuperSetAutoClose((QTermWidget*)self, autoClose);
 }
 
 const char* q_termwidget_title(void* self) {
@@ -811,8 +811,8 @@ void q_termwidget_on_title(void* self, const char* (*callback)()) {
     QTermWidget_OnTitle((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char* q_termwidget_qbase_title(void* self) {
-    libqt_string _str = QTermWidget_QBaseTitle((QTermWidget*)self);
+const char* q_termwidget_super_title(void* self) {
+    libqt_string _str = QTermWidget_SuperTitle((QTermWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -829,8 +829,8 @@ void q_termwidget_on_icon(void* self, const char* (*callback)()) {
     QTermWidget_OnIcon((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char* q_termwidget_qbase_icon(void* self) {
-    libqt_string _str = QTermWidget_QBaseIcon((QTermWidget*)self);
+const char* q_termwidget_super_icon(void* self) {
+    libqt_string _str = QTermWidget_SuperIcon((QTermWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -844,8 +844,8 @@ void q_termwidget_on_is_title_changed(void* self, bool (*callback)()) {
     QTermWidget_OnIsTitleChanged((QTermWidget*)self, (intptr_t)callback);
 }
 
-bool q_termwidget_qbase_is_title_changed(void* self) {
-    return QTermWidget_QBaseIsTitleChanged((QTermWidget*)self);
+bool q_termwidget_super_is_title_changed(void* self) {
+    return QTermWidget_SuperIsTitleChanged((QTermWidget*)self);
 }
 
 void q_termwidget_bracket_text(void* self, const char* text) {
@@ -856,8 +856,8 @@ void q_termwidget_on_bracket_text(void* self, void (*callback)(void*, const char
     QTermWidget_OnBracketText((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_bracket_text(void* self, const char* text) {
-    QTermWidget_QBaseBracketText((QTermWidget*)self, qstring(text));
+void q_termwidget_super_bracket_text(void* self, const char* text) {
+    QTermWidget_SuperBracketText((QTermWidget*)self, qstring(text));
 }
 
 void q_termwidget_disable_bracketed_paste_mode(void* self, bool disable) {
@@ -868,8 +868,8 @@ void q_termwidget_on_disable_bracketed_paste_mode(void* self, void (*callback)(v
     QTermWidget_OnDisableBracketedPasteMode((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_disable_bracketed_paste_mode(void* self, bool disable) {
-    QTermWidget_QBaseDisableBracketedPasteMode((QTermWidget*)self, disable);
+void q_termwidget_super_disable_bracketed_paste_mode(void* self, bool disable) {
+    QTermWidget_SuperDisableBracketedPasteMode((QTermWidget*)self, disable);
 }
 
 bool q_termwidget_bracketed_paste_mode_is_disabled(void* self) {
@@ -880,8 +880,8 @@ void q_termwidget_on_bracketed_paste_mode_is_disabled(void* self, bool (*callbac
     QTermWidget_OnBracketedPasteModeIsDisabled((QTermWidget*)self, (intptr_t)callback);
 }
 
-bool q_termwidget_qbase_bracketed_paste_mode_is_disabled(void* self) {
-    return QTermWidget_QBaseBracketedPasteModeIsDisabled((QTermWidget*)self);
+bool q_termwidget_super_bracketed_paste_mode_is_disabled(void* self) {
+    return QTermWidget_SuperBracketedPasteModeIsDisabled((QTermWidget*)self);
 }
 
 void q_termwidget_set_margin(void* self, int margin) {
@@ -892,8 +892,8 @@ void q_termwidget_on_set_margin(void* self, void (*callback)(void*, int)) {
     QTermWidget_OnSetMargin((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_margin(void* self, int margin) {
-    QTermWidget_QBaseSetMargin((QTermWidget*)self, margin);
+void q_termwidget_super_set_margin(void* self, int margin) {
+    QTermWidget_SuperSetMargin((QTermWidget*)self, margin);
 }
 
 int32_t q_termwidget_get_margin(void* self) {
@@ -904,8 +904,8 @@ void q_termwidget_on_get_margin(void* self, int32_t (*callback)()) {
     QTermWidget_OnGetMargin((QTermWidget*)self, (intptr_t)callback);
 }
 
-int32_t q_termwidget_qbase_get_margin(void* self) {
-    return QTermWidget_QBaseGetMargin((QTermWidget*)self);
+int32_t q_termwidget_super_get_margin(void* self) {
+    return QTermWidget_SuperGetMargin((QTermWidget*)self);
 }
 
 void q_termwidget_set_draw_line_chars(void* self, bool drawLineChars) {
@@ -916,8 +916,8 @@ void q_termwidget_on_set_draw_line_chars(void* self, void (*callback)(void*, boo
     QTermWidget_OnSetDrawLineChars((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_draw_line_chars(void* self, bool drawLineChars) {
-    QTermWidget_QBaseSetDrawLineChars((QTermWidget*)self, drawLineChars);
+void q_termwidget_super_set_draw_line_chars(void* self, bool drawLineChars) {
+    QTermWidget_SuperSetDrawLineChars((QTermWidget*)self, drawLineChars);
 }
 
 void q_termwidget_set_bold_intense(void* self, bool boldIntense) {
@@ -928,8 +928,8 @@ void q_termwidget_on_set_bold_intense(void* self, void (*callback)(void*, bool))
     QTermWidget_OnSetBoldIntense((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_bold_intense(void* self, bool boldIntense) {
-    QTermWidget_QBaseSetBoldIntense((QTermWidget*)self, boldIntense);
+void q_termwidget_super_set_bold_intense(void* self, bool boldIntense) {
+    QTermWidget_SuperSetBoldIntense((QTermWidget*)self, boldIntense);
 }
 
 void q_termwidget_set_confirm_multiline_paste(void* self, bool confirmMultilinePaste) {
@@ -940,8 +940,8 @@ void q_termwidget_on_set_confirm_multiline_paste(void* self, void (*callback)(vo
     QTermWidget_OnSetConfirmMultilinePaste((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_confirm_multiline_paste(void* self, bool confirmMultilinePaste) {
-    QTermWidget_QBaseSetConfirmMultilinePaste((QTermWidget*)self, confirmMultilinePaste);
+void q_termwidget_super_set_confirm_multiline_paste(void* self, bool confirmMultilinePaste) {
+    QTermWidget_SuperSetConfirmMultilinePaste((QTermWidget*)self, confirmMultilinePaste);
 }
 
 void q_termwidget_set_trim_pasted_trailing_newlines(void* self, bool trimPastedTrailingNewlines) {
@@ -952,8 +952,8 @@ void q_termwidget_on_set_trim_pasted_trailing_newlines(void* self, void (*callba
     QTermWidget_OnSetTrimPastedTrailingNewlines((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_trim_pasted_trailing_newlines(void* self, bool trimPastedTrailingNewlines) {
-    QTermWidget_QBaseSetTrimPastedTrailingNewlines((QTermWidget*)self, trimPastedTrailingNewlines);
+void q_termwidget_super_set_trim_pasted_trailing_newlines(void* self, bool trimPastedTrailingNewlines) {
+    QTermWidget_SuperSetTrimPastedTrailingNewlines((QTermWidget*)self, trimPastedTrailingNewlines);
 }
 
 const char* q_termwidget_word_characters(void* self) {
@@ -967,8 +967,8 @@ void q_termwidget_on_word_characters(void* self, const char* (*callback)()) {
     QTermWidget_OnWordCharacters((QTermWidget*)self, (intptr_t)callback);
 }
 
-const char* q_termwidget_qbase_word_characters(void* self) {
-    libqt_string _str = QTermWidget_QBaseWordCharacters((QTermWidget*)self);
+const char* q_termwidget_super_word_characters(void* self) {
+    libqt_string _str = QTermWidget_SuperWordCharacters((QTermWidget*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -982,8 +982,8 @@ void q_termwidget_on_set_word_characters(void* self, void (*callback)(void*, con
     QTermWidget_OnSetWordCharacters((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_set_word_characters(void* self, const char* chars) {
-    QTermWidget_QBaseSetWordCharacters((QTermWidget*)self, qstring(chars));
+void q_termwidget_super_set_word_characters(void* self, const char* chars) {
+    QTermWidget_SuperSetWordCharacters((QTermWidget*)self, qstring(chars));
 }
 
 QTermWidgetInterface* q_termwidget_create_widget(void* self, int startnow) {
@@ -994,8 +994,8 @@ void q_termwidget_on_create_widget(void* self, QTermWidgetInterface* (*callback)
     QTermWidget_OnCreateWidget((QTermWidget*)self, (intptr_t)callback);
 }
 
-QTermWidgetInterface* q_termwidget_qbase_create_widget(void* self, int startnow) {
-    return QTermWidget_QBaseCreateWidget((QTermWidget*)self, startnow);
+QTermWidgetInterface* q_termwidget_super_create_widget(void* self, int startnow) {
+    return QTermWidget_SuperCreateWidget((QTermWidget*)self, startnow);
 }
 
 void q_termwidget_finished(void* self) {
@@ -1150,8 +1150,8 @@ void q_termwidget_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QTermWidget_OnResizeEvent((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_resize_event(void* self, void* param1) {
-    QTermWidget_QBaseResizeEvent((QTermWidget*)self, (QResizeEvent*)param1);
+void q_termwidget_super_resize_event(void* self, void* param1) {
+    QTermWidget_SuperResizeEvent((QTermWidget*)self, (QResizeEvent*)param1);
 }
 
 void q_termwidget_session_finished(void* self) {
@@ -1162,8 +1162,8 @@ void q_termwidget_on_session_finished(void* self, void (*callback)()) {
     QTermWidget_OnSessionFinished((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_session_finished(void* self) {
-    QTermWidget_QBaseSessionFinished((QTermWidget*)self);
+void q_termwidget_super_session_finished(void* self) {
+    QTermWidget_SuperSessionFinished((QTermWidget*)self);
 }
 
 void q_termwidget_selection_changed(void* self, bool textSelected) {
@@ -1174,8 +1174,8 @@ void q_termwidget_on_selection_changed(void* self, void (*callback)(void*, bool)
     QTermWidget_OnSelectionChanged((QTermWidget*)self, (intptr_t)callback);
 }
 
-void q_termwidget_qbase_selection_changed(void* self, bool textSelected) {
-    QTermWidget_QBaseSelectionChanged((QTermWidget*)self, textSelected);
+void q_termwidget_super_selection_changed(void* self, bool textSelected) {
+    QTermWidget_SuperSelectionChanged((QTermWidget*)self, textSelected);
 }
 
 const char* q_termwidget_tr2(const char* s, const char* c) {
@@ -2581,8 +2581,8 @@ int32_t q_termwidget_dev_type(void* self) {
     return QTermWidget_DevType((QTermWidget*)self);
 }
 
-int32_t q_termwidget_qbase_dev_type(void* self) {
-    return QTermWidget_QBaseDevType((QTermWidget*)self);
+int32_t q_termwidget_super_dev_type(void* self) {
+    return QTermWidget_SuperDevType((QTermWidget*)self);
 }
 
 void q_termwidget_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2593,8 +2593,8 @@ void q_termwidget_set_visible(void* self, bool visible) {
     QTermWidget_SetVisible((QTermWidget*)self, visible);
 }
 
-void q_termwidget_qbase_set_visible(void* self, bool visible) {
-    QTermWidget_QBaseSetVisible((QTermWidget*)self, visible);
+void q_termwidget_super_set_visible(void* self, bool visible) {
+    QTermWidget_SuperSetVisible((QTermWidget*)self, visible);
 }
 
 void q_termwidget_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2605,8 +2605,8 @@ QSize* q_termwidget_minimum_size_hint(void* self) {
     return QTermWidget_MinimumSizeHint((QTermWidget*)self);
 }
 
-QSize* q_termwidget_qbase_minimum_size_hint(void* self) {
-    return QTermWidget_QBaseMinimumSizeHint((QTermWidget*)self);
+QSize* q_termwidget_super_minimum_size_hint(void* self) {
+    return QTermWidget_SuperMinimumSizeHint((QTermWidget*)self);
 }
 
 void q_termwidget_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2617,8 +2617,8 @@ int32_t q_termwidget_height_for_width(void* self, int param1) {
     return QTermWidget_HeightForWidth((QTermWidget*)self, param1);
 }
 
-int32_t q_termwidget_qbase_height_for_width(void* self, int param1) {
-    return QTermWidget_QBaseHeightForWidth((QTermWidget*)self, param1);
+int32_t q_termwidget_super_height_for_width(void* self, int param1) {
+    return QTermWidget_SuperHeightForWidth((QTermWidget*)self, param1);
 }
 
 void q_termwidget_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2629,8 +2629,8 @@ bool q_termwidget_has_height_for_width(void* self) {
     return QTermWidget_HasHeightForWidth((QTermWidget*)self);
 }
 
-bool q_termwidget_qbase_has_height_for_width(void* self) {
-    return QTermWidget_QBaseHasHeightForWidth((QTermWidget*)self);
+bool q_termwidget_super_has_height_for_width(void* self) {
+    return QTermWidget_SuperHasHeightForWidth((QTermWidget*)self);
 }
 
 void q_termwidget_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2641,8 +2641,8 @@ QPaintEngine* q_termwidget_paint_engine(void* self) {
     return QTermWidget_PaintEngine((QTermWidget*)self);
 }
 
-QPaintEngine* q_termwidget_qbase_paint_engine(void* self) {
-    return QTermWidget_QBasePaintEngine((QTermWidget*)self);
+QPaintEngine* q_termwidget_super_paint_engine(void* self) {
+    return QTermWidget_SuperPaintEngine((QTermWidget*)self);
 }
 
 void q_termwidget_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2653,8 +2653,8 @@ bool q_termwidget_event(void* self, void* event) {
     return QTermWidget_Event((QTermWidget*)self, (QEvent*)event);
 }
 
-bool q_termwidget_qbase_event(void* self, void* event) {
-    return QTermWidget_QBaseEvent((QTermWidget*)self, (QEvent*)event);
+bool q_termwidget_super_event(void* self, void* event) {
+    return QTermWidget_SuperEvent((QTermWidget*)self, (QEvent*)event);
 }
 
 void q_termwidget_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2665,8 +2665,8 @@ void q_termwidget_mouse_press_event(void* self, void* event) {
     QTermWidget_MousePressEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
-void q_termwidget_qbase_mouse_press_event(void* self, void* event) {
-    QTermWidget_QBaseMousePressEvent((QTermWidget*)self, (QMouseEvent*)event);
+void q_termwidget_super_mouse_press_event(void* self, void* event) {
+    QTermWidget_SuperMousePressEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
 void q_termwidget_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2677,8 +2677,8 @@ void q_termwidget_mouse_release_event(void* self, void* event) {
     QTermWidget_MouseReleaseEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
-void q_termwidget_qbase_mouse_release_event(void* self, void* event) {
-    QTermWidget_QBaseMouseReleaseEvent((QTermWidget*)self, (QMouseEvent*)event);
+void q_termwidget_super_mouse_release_event(void* self, void* event) {
+    QTermWidget_SuperMouseReleaseEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
 void q_termwidget_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2689,8 +2689,8 @@ void q_termwidget_mouse_double_click_event(void* self, void* event) {
     QTermWidget_MouseDoubleClickEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
-void q_termwidget_qbase_mouse_double_click_event(void* self, void* event) {
-    QTermWidget_QBaseMouseDoubleClickEvent((QTermWidget*)self, (QMouseEvent*)event);
+void q_termwidget_super_mouse_double_click_event(void* self, void* event) {
+    QTermWidget_SuperMouseDoubleClickEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
 void q_termwidget_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2701,8 +2701,8 @@ void q_termwidget_mouse_move_event(void* self, void* event) {
     QTermWidget_MouseMoveEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
-void q_termwidget_qbase_mouse_move_event(void* self, void* event) {
-    QTermWidget_QBaseMouseMoveEvent((QTermWidget*)self, (QMouseEvent*)event);
+void q_termwidget_super_mouse_move_event(void* self, void* event) {
+    QTermWidget_SuperMouseMoveEvent((QTermWidget*)self, (QMouseEvent*)event);
 }
 
 void q_termwidget_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2713,8 +2713,8 @@ void q_termwidget_wheel_event(void* self, void* event) {
     QTermWidget_WheelEvent((QTermWidget*)self, (QWheelEvent*)event);
 }
 
-void q_termwidget_qbase_wheel_event(void* self, void* event) {
-    QTermWidget_QBaseWheelEvent((QTermWidget*)self, (QWheelEvent*)event);
+void q_termwidget_super_wheel_event(void* self, void* event) {
+    QTermWidget_SuperWheelEvent((QTermWidget*)self, (QWheelEvent*)event);
 }
 
 void q_termwidget_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2725,8 +2725,8 @@ void q_termwidget_key_press_event(void* self, void* event) {
     QTermWidget_KeyPressEvent((QTermWidget*)self, (QKeyEvent*)event);
 }
 
-void q_termwidget_qbase_key_press_event(void* self, void* event) {
-    QTermWidget_QBaseKeyPressEvent((QTermWidget*)self, (QKeyEvent*)event);
+void q_termwidget_super_key_press_event(void* self, void* event) {
+    QTermWidget_SuperKeyPressEvent((QTermWidget*)self, (QKeyEvent*)event);
 }
 
 void q_termwidget_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2737,8 +2737,8 @@ void q_termwidget_key_release_event(void* self, void* event) {
     QTermWidget_KeyReleaseEvent((QTermWidget*)self, (QKeyEvent*)event);
 }
 
-void q_termwidget_qbase_key_release_event(void* self, void* event) {
-    QTermWidget_QBaseKeyReleaseEvent((QTermWidget*)self, (QKeyEvent*)event);
+void q_termwidget_super_key_release_event(void* self, void* event) {
+    QTermWidget_SuperKeyReleaseEvent((QTermWidget*)self, (QKeyEvent*)event);
 }
 
 void q_termwidget_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2749,8 +2749,8 @@ void q_termwidget_focus_in_event(void* self, void* event) {
     QTermWidget_FocusInEvent((QTermWidget*)self, (QFocusEvent*)event);
 }
 
-void q_termwidget_qbase_focus_in_event(void* self, void* event) {
-    QTermWidget_QBaseFocusInEvent((QTermWidget*)self, (QFocusEvent*)event);
+void q_termwidget_super_focus_in_event(void* self, void* event) {
+    QTermWidget_SuperFocusInEvent((QTermWidget*)self, (QFocusEvent*)event);
 }
 
 void q_termwidget_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2761,8 +2761,8 @@ void q_termwidget_focus_out_event(void* self, void* event) {
     QTermWidget_FocusOutEvent((QTermWidget*)self, (QFocusEvent*)event);
 }
 
-void q_termwidget_qbase_focus_out_event(void* self, void* event) {
-    QTermWidget_QBaseFocusOutEvent((QTermWidget*)self, (QFocusEvent*)event);
+void q_termwidget_super_focus_out_event(void* self, void* event) {
+    QTermWidget_SuperFocusOutEvent((QTermWidget*)self, (QFocusEvent*)event);
 }
 
 void q_termwidget_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2773,8 +2773,8 @@ void q_termwidget_enter_event(void* self, void* event) {
     QTermWidget_EnterEvent((QTermWidget*)self, (QEnterEvent*)event);
 }
 
-void q_termwidget_qbase_enter_event(void* self, void* event) {
-    QTermWidget_QBaseEnterEvent((QTermWidget*)self, (QEnterEvent*)event);
+void q_termwidget_super_enter_event(void* self, void* event) {
+    QTermWidget_SuperEnterEvent((QTermWidget*)self, (QEnterEvent*)event);
 }
 
 void q_termwidget_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2785,8 +2785,8 @@ void q_termwidget_leave_event(void* self, void* event) {
     QTermWidget_LeaveEvent((QTermWidget*)self, (QEvent*)event);
 }
 
-void q_termwidget_qbase_leave_event(void* self, void* event) {
-    QTermWidget_QBaseLeaveEvent((QTermWidget*)self, (QEvent*)event);
+void q_termwidget_super_leave_event(void* self, void* event) {
+    QTermWidget_SuperLeaveEvent((QTermWidget*)self, (QEvent*)event);
 }
 
 void q_termwidget_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2797,8 +2797,8 @@ void q_termwidget_paint_event(void* self, void* event) {
     QTermWidget_PaintEvent((QTermWidget*)self, (QPaintEvent*)event);
 }
 
-void q_termwidget_qbase_paint_event(void* self, void* event) {
-    QTermWidget_QBasePaintEvent((QTermWidget*)self, (QPaintEvent*)event);
+void q_termwidget_super_paint_event(void* self, void* event) {
+    QTermWidget_SuperPaintEvent((QTermWidget*)self, (QPaintEvent*)event);
 }
 
 void q_termwidget_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2809,8 +2809,8 @@ void q_termwidget_move_event(void* self, void* event) {
     QTermWidget_MoveEvent((QTermWidget*)self, (QMoveEvent*)event);
 }
 
-void q_termwidget_qbase_move_event(void* self, void* event) {
-    QTermWidget_QBaseMoveEvent((QTermWidget*)self, (QMoveEvent*)event);
+void q_termwidget_super_move_event(void* self, void* event) {
+    QTermWidget_SuperMoveEvent((QTermWidget*)self, (QMoveEvent*)event);
 }
 
 void q_termwidget_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2821,8 +2821,8 @@ void q_termwidget_close_event(void* self, void* event) {
     QTermWidget_CloseEvent((QTermWidget*)self, (QCloseEvent*)event);
 }
 
-void q_termwidget_qbase_close_event(void* self, void* event) {
-    QTermWidget_QBaseCloseEvent((QTermWidget*)self, (QCloseEvent*)event);
+void q_termwidget_super_close_event(void* self, void* event) {
+    QTermWidget_SuperCloseEvent((QTermWidget*)self, (QCloseEvent*)event);
 }
 
 void q_termwidget_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2833,8 +2833,8 @@ void q_termwidget_context_menu_event(void* self, void* event) {
     QTermWidget_ContextMenuEvent((QTermWidget*)self, (QContextMenuEvent*)event);
 }
 
-void q_termwidget_qbase_context_menu_event(void* self, void* event) {
-    QTermWidget_QBaseContextMenuEvent((QTermWidget*)self, (QContextMenuEvent*)event);
+void q_termwidget_super_context_menu_event(void* self, void* event) {
+    QTermWidget_SuperContextMenuEvent((QTermWidget*)self, (QContextMenuEvent*)event);
 }
 
 void q_termwidget_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2845,8 +2845,8 @@ void q_termwidget_tablet_event(void* self, void* event) {
     QTermWidget_TabletEvent((QTermWidget*)self, (QTabletEvent*)event);
 }
 
-void q_termwidget_qbase_tablet_event(void* self, void* event) {
-    QTermWidget_QBaseTabletEvent((QTermWidget*)self, (QTabletEvent*)event);
+void q_termwidget_super_tablet_event(void* self, void* event) {
+    QTermWidget_SuperTabletEvent((QTermWidget*)self, (QTabletEvent*)event);
 }
 
 void q_termwidget_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2857,8 +2857,8 @@ void q_termwidget_action_event(void* self, void* event) {
     QTermWidget_ActionEvent((QTermWidget*)self, (QActionEvent*)event);
 }
 
-void q_termwidget_qbase_action_event(void* self, void* event) {
-    QTermWidget_QBaseActionEvent((QTermWidget*)self, (QActionEvent*)event);
+void q_termwidget_super_action_event(void* self, void* event) {
+    QTermWidget_SuperActionEvent((QTermWidget*)self, (QActionEvent*)event);
 }
 
 void q_termwidget_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2869,8 +2869,8 @@ void q_termwidget_drag_enter_event(void* self, void* event) {
     QTermWidget_DragEnterEvent((QTermWidget*)self, (QDragEnterEvent*)event);
 }
 
-void q_termwidget_qbase_drag_enter_event(void* self, void* event) {
-    QTermWidget_QBaseDragEnterEvent((QTermWidget*)self, (QDragEnterEvent*)event);
+void q_termwidget_super_drag_enter_event(void* self, void* event) {
+    QTermWidget_SuperDragEnterEvent((QTermWidget*)self, (QDragEnterEvent*)event);
 }
 
 void q_termwidget_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2881,8 +2881,8 @@ void q_termwidget_drag_move_event(void* self, void* event) {
     QTermWidget_DragMoveEvent((QTermWidget*)self, (QDragMoveEvent*)event);
 }
 
-void q_termwidget_qbase_drag_move_event(void* self, void* event) {
-    QTermWidget_QBaseDragMoveEvent((QTermWidget*)self, (QDragMoveEvent*)event);
+void q_termwidget_super_drag_move_event(void* self, void* event) {
+    QTermWidget_SuperDragMoveEvent((QTermWidget*)self, (QDragMoveEvent*)event);
 }
 
 void q_termwidget_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2893,8 +2893,8 @@ void q_termwidget_drag_leave_event(void* self, void* event) {
     QTermWidget_DragLeaveEvent((QTermWidget*)self, (QDragLeaveEvent*)event);
 }
 
-void q_termwidget_qbase_drag_leave_event(void* self, void* event) {
-    QTermWidget_QBaseDragLeaveEvent((QTermWidget*)self, (QDragLeaveEvent*)event);
+void q_termwidget_super_drag_leave_event(void* self, void* event) {
+    QTermWidget_SuperDragLeaveEvent((QTermWidget*)self, (QDragLeaveEvent*)event);
 }
 
 void q_termwidget_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2905,8 +2905,8 @@ void q_termwidget_drop_event(void* self, void* event) {
     QTermWidget_DropEvent((QTermWidget*)self, (QDropEvent*)event);
 }
 
-void q_termwidget_qbase_drop_event(void* self, void* event) {
-    QTermWidget_QBaseDropEvent((QTermWidget*)self, (QDropEvent*)event);
+void q_termwidget_super_drop_event(void* self, void* event) {
+    QTermWidget_SuperDropEvent((QTermWidget*)self, (QDropEvent*)event);
 }
 
 void q_termwidget_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2917,8 +2917,8 @@ void q_termwidget_show_event(void* self, void* event) {
     QTermWidget_ShowEvent((QTermWidget*)self, (QShowEvent*)event);
 }
 
-void q_termwidget_qbase_show_event(void* self, void* event) {
-    QTermWidget_QBaseShowEvent((QTermWidget*)self, (QShowEvent*)event);
+void q_termwidget_super_show_event(void* self, void* event) {
+    QTermWidget_SuperShowEvent((QTermWidget*)self, (QShowEvent*)event);
 }
 
 void q_termwidget_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2929,8 +2929,8 @@ void q_termwidget_hide_event(void* self, void* event) {
     QTermWidget_HideEvent((QTermWidget*)self, (QHideEvent*)event);
 }
 
-void q_termwidget_qbase_hide_event(void* self, void* event) {
-    QTermWidget_QBaseHideEvent((QTermWidget*)self, (QHideEvent*)event);
+void q_termwidget_super_hide_event(void* self, void* event) {
+    QTermWidget_SuperHideEvent((QTermWidget*)self, (QHideEvent*)event);
 }
 
 void q_termwidget_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2941,8 +2941,8 @@ bool q_termwidget_native_event(void* self, char* eventType, void* message, intpt
     return QTermWidget_NativeEvent((QTermWidget*)self, qstring(eventType), message, result);
 }
 
-bool q_termwidget_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QTermWidget_QBaseNativeEvent((QTermWidget*)self, qstring(eventType), message, result);
+bool q_termwidget_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QTermWidget_SuperNativeEvent((QTermWidget*)self, qstring(eventType), message, result);
 }
 
 void q_termwidget_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2953,8 +2953,8 @@ void q_termwidget_change_event(void* self, void* param1) {
     QTermWidget_ChangeEvent((QTermWidget*)self, (QEvent*)param1);
 }
 
-void q_termwidget_qbase_change_event(void* self, void* param1) {
-    QTermWidget_QBaseChangeEvent((QTermWidget*)self, (QEvent*)param1);
+void q_termwidget_super_change_event(void* self, void* param1) {
+    QTermWidget_SuperChangeEvent((QTermWidget*)self, (QEvent*)param1);
 }
 
 void q_termwidget_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2965,8 +2965,8 @@ int32_t q_termwidget_metric(void* self, int32_t param1) {
     return QTermWidget_Metric((QTermWidget*)self, param1);
 }
 
-int32_t q_termwidget_qbase_metric(void* self, int32_t param1) {
-    return QTermWidget_QBaseMetric((QTermWidget*)self, param1);
+int32_t q_termwidget_super_metric(void* self, int32_t param1) {
+    return QTermWidget_SuperMetric((QTermWidget*)self, param1);
 }
 
 void q_termwidget_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2977,8 +2977,8 @@ void q_termwidget_init_painter(void* self, void* painter) {
     QTermWidget_InitPainter((QTermWidget*)self, (QPainter*)painter);
 }
 
-void q_termwidget_qbase_init_painter(void* self, void* painter) {
-    QTermWidget_QBaseInitPainter((QTermWidget*)self, (QPainter*)painter);
+void q_termwidget_super_init_painter(void* self, void* painter) {
+    QTermWidget_SuperInitPainter((QTermWidget*)self, (QPainter*)painter);
 }
 
 void q_termwidget_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2989,8 +2989,8 @@ QPaintDevice* q_termwidget_redirected(void* self, void* offset) {
     return QTermWidget_Redirected((QTermWidget*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_termwidget_qbase_redirected(void* self, void* offset) {
-    return QTermWidget_QBaseRedirected((QTermWidget*)self, (QPoint*)offset);
+QPaintDevice* q_termwidget_super_redirected(void* self, void* offset) {
+    return QTermWidget_SuperRedirected((QTermWidget*)self, (QPoint*)offset);
 }
 
 void q_termwidget_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -3001,8 +3001,8 @@ QPainter* q_termwidget_shared_painter(void* self) {
     return QTermWidget_SharedPainter((QTermWidget*)self);
 }
 
-QPainter* q_termwidget_qbase_shared_painter(void* self) {
-    return QTermWidget_QBaseSharedPainter((QTermWidget*)self);
+QPainter* q_termwidget_super_shared_painter(void* self) {
+    return QTermWidget_SuperSharedPainter((QTermWidget*)self);
 }
 
 void q_termwidget_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -3013,8 +3013,8 @@ void q_termwidget_input_method_event(void* self, void* param1) {
     QTermWidget_InputMethodEvent((QTermWidget*)self, (QInputMethodEvent*)param1);
 }
 
-void q_termwidget_qbase_input_method_event(void* self, void* param1) {
-    QTermWidget_QBaseInputMethodEvent((QTermWidget*)self, (QInputMethodEvent*)param1);
+void q_termwidget_super_input_method_event(void* self, void* param1) {
+    QTermWidget_SuperInputMethodEvent((QTermWidget*)self, (QInputMethodEvent*)param1);
 }
 
 void q_termwidget_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -3025,8 +3025,8 @@ QVariant* q_termwidget_input_method_query(void* self, int32_t param1) {
     return QTermWidget_InputMethodQuery((QTermWidget*)self, param1);
 }
 
-QVariant* q_termwidget_qbase_input_method_query(void* self, int32_t param1) {
-    return QTermWidget_QBaseInputMethodQuery((QTermWidget*)self, param1);
+QVariant* q_termwidget_super_input_method_query(void* self, int32_t param1) {
+    return QTermWidget_SuperInputMethodQuery((QTermWidget*)self, param1);
 }
 
 void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -3037,8 +3037,8 @@ bool q_termwidget_focus_next_prev_child(void* self, bool next) {
     return QTermWidget_FocusNextPrevChild((QTermWidget*)self, next);
 }
 
-bool q_termwidget_qbase_focus_next_prev_child(void* self, bool next) {
-    return QTermWidget_QBaseFocusNextPrevChild((QTermWidget*)self, next);
+bool q_termwidget_super_focus_next_prev_child(void* self, bool next) {
+    return QTermWidget_SuperFocusNextPrevChild((QTermWidget*)self, next);
 }
 
 void q_termwidget_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -3049,8 +3049,8 @@ bool q_termwidget_event_filter(void* self, void* watched, void* event) {
     return QTermWidget_EventFilter((QTermWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_termwidget_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTermWidget_QBaseEventFilter((QTermWidget*)self, (QObject*)watched, (QEvent*)event);
+bool q_termwidget_super_event_filter(void* self, void* watched, void* event) {
+    return QTermWidget_SuperEventFilter((QTermWidget*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_termwidget_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -3061,8 +3061,8 @@ void q_termwidget_timer_event(void* self, void* event) {
     QTermWidget_TimerEvent((QTermWidget*)self, (QTimerEvent*)event);
 }
 
-void q_termwidget_qbase_timer_event(void* self, void* event) {
-    QTermWidget_QBaseTimerEvent((QTermWidget*)self, (QTimerEvent*)event);
+void q_termwidget_super_timer_event(void* self, void* event) {
+    QTermWidget_SuperTimerEvent((QTermWidget*)self, (QTimerEvent*)event);
 }
 
 void q_termwidget_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -3073,8 +3073,8 @@ void q_termwidget_child_event(void* self, void* event) {
     QTermWidget_ChildEvent((QTermWidget*)self, (QChildEvent*)event);
 }
 
-void q_termwidget_qbase_child_event(void* self, void* event) {
-    QTermWidget_QBaseChildEvent((QTermWidget*)self, (QChildEvent*)event);
+void q_termwidget_super_child_event(void* self, void* event) {
+    QTermWidget_SuperChildEvent((QTermWidget*)self, (QChildEvent*)event);
 }
 
 void q_termwidget_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -3085,8 +3085,8 @@ void q_termwidget_custom_event(void* self, void* event) {
     QTermWidget_CustomEvent((QTermWidget*)self, (QEvent*)event);
 }
 
-void q_termwidget_qbase_custom_event(void* self, void* event) {
-    QTermWidget_QBaseCustomEvent((QTermWidget*)self, (QEvent*)event);
+void q_termwidget_super_custom_event(void* self, void* event) {
+    QTermWidget_SuperCustomEvent((QTermWidget*)self, (QEvent*)event);
 }
 
 void q_termwidget_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -3097,8 +3097,8 @@ void q_termwidget_connect_notify(void* self, void* signal) {
     QTermWidget_ConnectNotify((QTermWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_termwidget_qbase_connect_notify(void* self, void* signal) {
-    QTermWidget_QBaseConnectNotify((QTermWidget*)self, (QMetaMethod*)signal);
+void q_termwidget_super_connect_notify(void* self, void* signal) {
+    QTermWidget_SuperConnectNotify((QTermWidget*)self, (QMetaMethod*)signal);
 }
 
 void q_termwidget_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3109,8 +3109,8 @@ void q_termwidget_disconnect_notify(void* self, void* signal) {
     QTermWidget_DisconnectNotify((QTermWidget*)self, (QMetaMethod*)signal);
 }
 
-void q_termwidget_qbase_disconnect_notify(void* self, void* signal) {
-    QTermWidget_QBaseDisconnectNotify((QTermWidget*)self, (QMetaMethod*)signal);
+void q_termwidget_super_disconnect_notify(void* self, void* signal) {
+    QTermWidget_SuperDisconnectNotify((QTermWidget*)self, (QMetaMethod*)signal);
 }
 
 void q_termwidget_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3121,8 +3121,8 @@ void q_termwidget_update_micro_focus(void* self) {
     QTermWidget_UpdateMicroFocus((QTermWidget*)self);
 }
 
-void q_termwidget_qbase_update_micro_focus(void* self) {
-    QTermWidget_QBaseUpdateMicroFocus((QTermWidget*)self);
+void q_termwidget_super_update_micro_focus(void* self) {
+    QTermWidget_SuperUpdateMicroFocus((QTermWidget*)self);
 }
 
 void q_termwidget_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3133,8 +3133,8 @@ void q_termwidget_create(void* self) {
     QTermWidget_Create((QTermWidget*)self);
 }
 
-void q_termwidget_qbase_create(void* self) {
-    QTermWidget_QBaseCreate((QTermWidget*)self);
+void q_termwidget_super_create(void* self) {
+    QTermWidget_SuperCreate((QTermWidget*)self);
 }
 
 void q_termwidget_on_create(void* self, void (*callback)()) {
@@ -3145,8 +3145,8 @@ void q_termwidget_destroy(void* self) {
     QTermWidget_Destroy((QTermWidget*)self);
 }
 
-void q_termwidget_qbase_destroy(void* self) {
-    QTermWidget_QBaseDestroy((QTermWidget*)self);
+void q_termwidget_super_destroy(void* self) {
+    QTermWidget_SuperDestroy((QTermWidget*)self);
 }
 
 void q_termwidget_on_destroy(void* self, void (*callback)()) {
@@ -3157,8 +3157,8 @@ bool q_termwidget_focus_next_child(void* self) {
     return QTermWidget_FocusNextChild((QTermWidget*)self);
 }
 
-bool q_termwidget_qbase_focus_next_child(void* self) {
-    return QTermWidget_QBaseFocusNextChild((QTermWidget*)self);
+bool q_termwidget_super_focus_next_child(void* self) {
+    return QTermWidget_SuperFocusNextChild((QTermWidget*)self);
 }
 
 void q_termwidget_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3169,8 +3169,8 @@ bool q_termwidget_focus_previous_child(void* self) {
     return QTermWidget_FocusPreviousChild((QTermWidget*)self);
 }
 
-bool q_termwidget_qbase_focus_previous_child(void* self) {
-    return QTermWidget_QBaseFocusPreviousChild((QTermWidget*)self);
+bool q_termwidget_super_focus_previous_child(void* self) {
+    return QTermWidget_SuperFocusPreviousChild((QTermWidget*)self);
 }
 
 void q_termwidget_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3181,8 +3181,8 @@ QObject* q_termwidget_sender(void* self) {
     return QTermWidget_Sender((QTermWidget*)self);
 }
 
-QObject* q_termwidget_qbase_sender(void* self) {
-    return QTermWidget_QBaseSender((QTermWidget*)self);
+QObject* q_termwidget_super_sender(void* self) {
+    return QTermWidget_SuperSender((QTermWidget*)self);
 }
 
 void q_termwidget_on_sender(void* self, QObject* (*callback)()) {
@@ -3193,8 +3193,8 @@ int32_t q_termwidget_sender_signal_index(void* self) {
     return QTermWidget_SenderSignalIndex((QTermWidget*)self);
 }
 
-int32_t q_termwidget_qbase_sender_signal_index(void* self) {
-    return QTermWidget_QBaseSenderSignalIndex((QTermWidget*)self);
+int32_t q_termwidget_super_sender_signal_index(void* self) {
+    return QTermWidget_SuperSenderSignalIndex((QTermWidget*)self);
 }
 
 void q_termwidget_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3205,8 +3205,8 @@ int32_t q_termwidget_receivers(void* self, const char* signal) {
     return QTermWidget_Receivers((QTermWidget*)self, signal);
 }
 
-int32_t q_termwidget_qbase_receivers(void* self, const char* signal) {
-    return QTermWidget_QBaseReceivers((QTermWidget*)self, signal);
+int32_t q_termwidget_super_receivers(void* self, const char* signal) {
+    return QTermWidget_SuperReceivers((QTermWidget*)self, signal);
 }
 
 void q_termwidget_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3217,8 +3217,8 @@ bool q_termwidget_is_signal_connected(void* self, void* signal) {
     return QTermWidget_IsSignalConnected((QTermWidget*)self, (QMetaMethod*)signal);
 }
 
-bool q_termwidget_qbase_is_signal_connected(void* self, void* signal) {
-    return QTermWidget_QBaseIsSignalConnected((QTermWidget*)self, (QMetaMethod*)signal);
+bool q_termwidget_super_is_signal_connected(void* self, void* signal) {
+    return QTermWidget_SuperIsSignalConnected((QTermWidget*)self, (QMetaMethod*)signal);
 }
 
 void q_termwidget_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3229,8 +3229,8 @@ double q_termwidget_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QTermWidget_GetDecodedMetricF((QTermWidget*)self, metricA, metricB);
 }
 
-double q_termwidget_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QTermWidget_QBaseGetDecodedMetricF((QTermWidget*)self, metricA, metricB);
+double q_termwidget_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QTermWidget_SuperGetDecodedMetricF((QTermWidget*)self, metricA, metricB);
 }
 
 void q_termwidget_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

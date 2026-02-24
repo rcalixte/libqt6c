@@ -49,8 +49,8 @@ void k_zip_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*,
     KZip_OnDoWriteSymLink((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KZip_QBaseDoWriteSymLink((KZip*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_zip_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KZip_SuperDoWriteSymLink((KZip*)self, qstring(name), qstring(target), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 bool k_zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* creationTime) {
@@ -61,8 +61,8 @@ void k_zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*
     KZip_OnDoPrepareWriting((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* creationTime) {
-    return KZip_QBaseDoPrepareWriting((KZip*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)creationTime);
+bool k_zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* creationTime) {
+    return KZip_SuperDoPrepareWriting((KZip*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)creationTime);
 }
 
 bool k_zip_do_finish_writing(void* self, long long size) {
@@ -73,8 +73,8 @@ void k_zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long)) 
     KZip_OnDoFinishWriting((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_do_finish_writing(void* self, long long size) {
-    return KZip_QBaseDoFinishWriting((KZip*)self, size);
+bool k_zip_super_do_finish_writing(void* self, long long size) {
+    return KZip_SuperDoFinishWriting((KZip*)self, size);
 }
 
 bool k_zip_do_write_data(void* self, const char* data, long long size) {
@@ -85,8 +85,8 @@ void k_zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, lon
     KZip_OnDoWriteData((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_do_write_data(void* self, const char* data, long long size) {
-    return KZip_QBaseDoWriteData((KZip*)self, data, size);
+bool k_zip_super_do_write_data(void* self, const char* data, long long size) {
+    return KZip_SuperDoWriteData((KZip*)self, data, size);
 }
 
 bool k_zip_open_archive(void* self, int32_t mode) {
@@ -97,8 +97,8 @@ void k_zip_on_open_archive(void* self, bool (*callback)(void*, int32_t)) {
     KZip_OnOpenArchive((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_open_archive(void* self, int32_t mode) {
-    return KZip_QBaseOpenArchive((KZip*)self, mode);
+bool k_zip_super_open_archive(void* self, int32_t mode) {
+    return KZip_SuperOpenArchive((KZip*)self, mode);
 }
 
 bool k_zip_close_archive(void* self) {
@@ -109,8 +109,8 @@ void k_zip_on_close_archive(void* self, bool (*callback)()) {
     KZip_OnCloseArchive((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_close_archive(void* self) {
-    return KZip_QBaseCloseArchive((KZip*)self);
+bool k_zip_super_close_archive(void* self) {
+    return KZip_SuperCloseArchive((KZip*)self);
 }
 
 bool k_zip_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
@@ -121,8 +121,8 @@ void k_zip_on_do_write_dir(void* self, bool (*callback)(void*, const char*, cons
     KZip_OnDoWriteDir((KZip*)self, (intptr_t)callback);
 }
 
-bool k_zip_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
-    return KZip_QBaseDoWriteDir((KZip*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
+bool k_zip_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime) {
+    return KZip_SuperDoWriteDir((KZip*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
 void k_zip_virtual_hook(void* self, int id, void* data) {
@@ -133,8 +133,8 @@ void k_zip_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
     KZip_OnVirtualHook((KZip*)self, (intptr_t)callback);
 }
 
-void k_zip_qbase_virtual_hook(void* self, int id, void* data) {
-    KZip_QBaseVirtualHook((KZip*)self, id, data);
+void k_zip_super_virtual_hook(void* self, int id, void* data) {
+    KZip_SuperVirtualHook((KZip*)self, id, data);
 }
 
 const char* k_zip_tr2(const char* sourceText, const char* disambiguation) {
@@ -309,8 +309,8 @@ bool k_zip_open(void* self, int32_t mode) {
     return KZip_Open((KZip*)self, mode);
 }
 
-bool k_zip_qbase_open(void* self, int32_t mode) {
-    return KZip_QBaseOpen((KZip*)self, mode);
+bool k_zip_super_open(void* self, int32_t mode) {
+    return KZip_SuperOpen((KZip*)self, mode);
 }
 
 void k_zip_on_open(void* self, bool (*callback)(void*, int32_t)) {
@@ -321,8 +321,8 @@ bool k_zip_close(void* self) {
     return KZip_Close((KZip*)self);
 }
 
-bool k_zip_qbase_close(void* self) {
-    return KZip_QBaseClose((KZip*)self);
+bool k_zip_super_close(void* self) {
+    return KZip_SuperClose((KZip*)self);
 }
 
 void k_zip_on_close(void* self, bool (*callback)()) {
@@ -333,8 +333,8 @@ KArchiveDirectory* k_zip_root_dir(void* self) {
     return KZip_RootDir((KZip*)self);
 }
 
-KArchiveDirectory* k_zip_qbase_root_dir(void* self) {
-    return KZip_QBaseRootDir((KZip*)self);
+KArchiveDirectory* k_zip_super_root_dir(void* self) {
+    return KZip_SuperRootDir((KZip*)self);
 }
 
 void k_zip_on_root_dir(void* self, KArchiveDirectory* (*callback)()) {
@@ -345,8 +345,8 @@ bool k_zip_create_device(void* self, int32_t mode) {
     return KZip_CreateDevice((KZip*)self, mode);
 }
 
-bool k_zip_qbase_create_device(void* self, int32_t mode) {
-    return KZip_QBaseCreateDevice((KZip*)self, mode);
+bool k_zip_super_create_device(void* self, int32_t mode) {
+    return KZip_SuperCreateDevice((KZip*)self, mode);
 }
 
 void k_zip_on_create_device(void* self, bool (*callback)(void*, int32_t)) {
@@ -357,8 +357,8 @@ void k_zip_set_error_string(void* self, const char* errorStr) {
     KZip_SetErrorString((KZip*)self, qstring(errorStr));
 }
 
-void k_zip_qbase_set_error_string(void* self, const char* errorStr) {
-    KZip_QBaseSetErrorString((KZip*)self, qstring(errorStr));
+void k_zip_super_set_error_string(void* self, const char* errorStr) {
+    KZip_SuperSetErrorString((KZip*)self, qstring(errorStr));
 }
 
 void k_zip_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -369,8 +369,8 @@ KArchiveDirectory* k_zip_find_or_create(void* self, const char* path) {
     return KZip_FindOrCreate((KZip*)self, qstring(path));
 }
 
-KArchiveDirectory* k_zip_qbase_find_or_create(void* self, const char* path) {
-    return KZip_QBaseFindOrCreate((KZip*)self, qstring(path));
+KArchiveDirectory* k_zip_super_find_or_create(void* self, const char* path) {
+    return KZip_SuperFindOrCreate((KZip*)self, qstring(path));
 }
 
 void k_zip_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, const char*)) {
@@ -381,8 +381,8 @@ void k_zip_set_device(void* self, void* dev) {
     KZip_SetDevice((KZip*)self, (QIODevice*)dev);
 }
 
-void k_zip_qbase_set_device(void* self, void* dev) {
-    KZip_QBaseSetDevice((KZip*)self, (QIODevice*)dev);
+void k_zip_super_set_device(void* self, void* dev) {
+    KZip_SuperSetDevice((KZip*)self, (QIODevice*)dev);
 }
 
 void k_zip_on_set_device(void* self, void (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ void k_zip_set_root_dir(void* self, void* rootDir) {
     KZip_SetRootDir((KZip*)self, (KArchiveDirectory*)rootDir);
 }
 
-void k_zip_qbase_set_root_dir(void* self, void* rootDir) {
-    KZip_QBaseSetRootDir((KZip*)self, (KArchiveDirectory*)rootDir);
+void k_zip_super_set_root_dir(void* self, void* rootDir) {
+    KZip_SuperSetRootDir((KZip*)self, (KArchiveDirectory*)rootDir);
 }
 
 void k_zip_on_set_root_dir(void* self, void (*callback)(void*, void*)) {

@@ -33,8 +33,8 @@ void k_colorcombo_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KColorCombo_OnMetaObject((KColorCombo*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_colorcombo_qbase_meta_object(void* self) {
-    return KColorCombo_QBaseMetaObject((KColorCombo*)self);
+const QMetaObject* k_colorcombo_super_meta_object(void* self) {
+    return KColorCombo_SuperMetaObject((KColorCombo*)self);
 }
 
 void* k_colorcombo_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void k_colorcombo_on_metacast(void* self, void* (*callback)(void*, const char*))
     KColorCombo_OnMetacast((KColorCombo*)self, (intptr_t)callback);
 }
 
-void* k_colorcombo_qbase_metacast(void* self, const char* param1) {
-    return KColorCombo_QBaseMetacast((KColorCombo*)self, param1);
+void* k_colorcombo_super_metacast(void* self, const char* param1) {
+    return KColorCombo_SuperMetacast((KColorCombo*)self, param1);
 }
 
 int32_t k_colorcombo_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void k_colorcombo_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KColorCombo_OnMetacall((KColorCombo*)self, (intptr_t)callback);
 }
 
-int32_t k_colorcombo_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KColorCombo_QBaseMetacall((KColorCombo*)self, param1, param2, param3);
+int32_t k_colorcombo_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KColorCombo_SuperMetacall((KColorCombo*)self, param1, param2, param3);
 }
 
 const char* k_colorcombo_tr(const char* s) {
@@ -117,8 +117,8 @@ void k_colorcombo_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KColorCombo_OnPaintEvent((KColorCombo*)self, (intptr_t)callback);
 }
 
-void k_colorcombo_qbase_paint_event(void* self, void* event) {
-    KColorCombo_QBasePaintEvent((KColorCombo*)self, (QPaintEvent*)event);
+void k_colorcombo_super_paint_event(void* self, void* event) {
+    KColorCombo_SuperPaintEvent((KColorCombo*)self, (QPaintEvent*)event);
 }
 
 const char* k_colorcombo_tr2(const char* s, const char* c) {
@@ -1875,8 +1875,8 @@ void k_colorcombo_set_model(void* self, void* model) {
     KColorCombo_SetModel((KColorCombo*)self, (QAbstractItemModel*)model);
 }
 
-void k_colorcombo_qbase_set_model(void* self, void* model) {
-    KColorCombo_QBaseSetModel((KColorCombo*)self, (QAbstractItemModel*)model);
+void k_colorcombo_super_set_model(void* self, void* model) {
+    KColorCombo_SuperSetModel((KColorCombo*)self, (QAbstractItemModel*)model);
 }
 
 void k_colorcombo_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -1887,8 +1887,8 @@ QSize* k_colorcombo_size_hint(void* self) {
     return KColorCombo_SizeHint((KColorCombo*)self);
 }
 
-QSize* k_colorcombo_qbase_size_hint(void* self) {
-    return KColorCombo_QBaseSizeHint((KColorCombo*)self);
+QSize* k_colorcombo_super_size_hint(void* self) {
+    return KColorCombo_SuperSizeHint((KColorCombo*)self);
 }
 
 void k_colorcombo_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1899,8 +1899,8 @@ QSize* k_colorcombo_minimum_size_hint(void* self) {
     return KColorCombo_MinimumSizeHint((KColorCombo*)self);
 }
 
-QSize* k_colorcombo_qbase_minimum_size_hint(void* self) {
-    return KColorCombo_QBaseMinimumSizeHint((KColorCombo*)self);
+QSize* k_colorcombo_super_minimum_size_hint(void* self) {
+    return KColorCombo_SuperMinimumSizeHint((KColorCombo*)self);
 }
 
 void k_colorcombo_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1911,8 +1911,8 @@ void k_colorcombo_show_popup(void* self) {
     KColorCombo_ShowPopup((KColorCombo*)self);
 }
 
-void k_colorcombo_qbase_show_popup(void* self) {
-    KColorCombo_QBaseShowPopup((KColorCombo*)self);
+void k_colorcombo_super_show_popup(void* self) {
+    KColorCombo_SuperShowPopup((KColorCombo*)self);
 }
 
 void k_colorcombo_on_show_popup(void* self, void (*callback)()) {
@@ -1923,8 +1923,8 @@ void k_colorcombo_hide_popup(void* self) {
     KColorCombo_HidePopup((KColorCombo*)self);
 }
 
-void k_colorcombo_qbase_hide_popup(void* self) {
-    KColorCombo_QBaseHidePopup((KColorCombo*)self);
+void k_colorcombo_super_hide_popup(void* self) {
+    KColorCombo_SuperHidePopup((KColorCombo*)self);
 }
 
 void k_colorcombo_on_hide_popup(void* self, void (*callback)()) {
@@ -1935,8 +1935,8 @@ bool k_colorcombo_event(void* self, void* event) {
     return KColorCombo_Event((KColorCombo*)self, (QEvent*)event);
 }
 
-bool k_colorcombo_qbase_event(void* self, void* event) {
-    return KColorCombo_QBaseEvent((KColorCombo*)self, (QEvent*)event);
+bool k_colorcombo_super_event(void* self, void* event) {
+    return KColorCombo_SuperEvent((KColorCombo*)self, (QEvent*)event);
 }
 
 void k_colorcombo_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1947,8 +1947,8 @@ QVariant* k_colorcombo_input_method_query(void* self, int32_t param1) {
     return KColorCombo_InputMethodQuery((KColorCombo*)self, param1);
 }
 
-QVariant* k_colorcombo_qbase_input_method_query(void* self, int32_t param1) {
-    return KColorCombo_QBaseInputMethodQuery((KColorCombo*)self, param1);
+QVariant* k_colorcombo_super_input_method_query(void* self, int32_t param1) {
+    return KColorCombo_SuperInputMethodQuery((KColorCombo*)self, param1);
 }
 
 void k_colorcombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1959,8 +1959,8 @@ void k_colorcombo_focus_in_event(void* self, void* e) {
     KColorCombo_FocusInEvent((KColorCombo*)self, (QFocusEvent*)e);
 }
 
-void k_colorcombo_qbase_focus_in_event(void* self, void* e) {
-    KColorCombo_QBaseFocusInEvent((KColorCombo*)self, (QFocusEvent*)e);
+void k_colorcombo_super_focus_in_event(void* self, void* e) {
+    KColorCombo_SuperFocusInEvent((KColorCombo*)self, (QFocusEvent*)e);
 }
 
 void k_colorcombo_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1971,8 +1971,8 @@ void k_colorcombo_focus_out_event(void* self, void* e) {
     KColorCombo_FocusOutEvent((KColorCombo*)self, (QFocusEvent*)e);
 }
 
-void k_colorcombo_qbase_focus_out_event(void* self, void* e) {
-    KColorCombo_QBaseFocusOutEvent((KColorCombo*)self, (QFocusEvent*)e);
+void k_colorcombo_super_focus_out_event(void* self, void* e) {
+    KColorCombo_SuperFocusOutEvent((KColorCombo*)self, (QFocusEvent*)e);
 }
 
 void k_colorcombo_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1983,8 +1983,8 @@ void k_colorcombo_change_event(void* self, void* e) {
     KColorCombo_ChangeEvent((KColorCombo*)self, (QEvent*)e);
 }
 
-void k_colorcombo_qbase_change_event(void* self, void* e) {
-    KColorCombo_QBaseChangeEvent((KColorCombo*)self, (QEvent*)e);
+void k_colorcombo_super_change_event(void* self, void* e) {
+    KColorCombo_SuperChangeEvent((KColorCombo*)self, (QEvent*)e);
 }
 
 void k_colorcombo_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1995,8 +1995,8 @@ void k_colorcombo_resize_event(void* self, void* e) {
     KColorCombo_ResizeEvent((KColorCombo*)self, (QResizeEvent*)e);
 }
 
-void k_colorcombo_qbase_resize_event(void* self, void* e) {
-    KColorCombo_QBaseResizeEvent((KColorCombo*)self, (QResizeEvent*)e);
+void k_colorcombo_super_resize_event(void* self, void* e) {
+    KColorCombo_SuperResizeEvent((KColorCombo*)self, (QResizeEvent*)e);
 }
 
 void k_colorcombo_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ void k_colorcombo_show_event(void* self, void* e) {
     KColorCombo_ShowEvent((KColorCombo*)self, (QShowEvent*)e);
 }
 
-void k_colorcombo_qbase_show_event(void* self, void* e) {
-    KColorCombo_QBaseShowEvent((KColorCombo*)self, (QShowEvent*)e);
+void k_colorcombo_super_show_event(void* self, void* e) {
+    KColorCombo_SuperShowEvent((KColorCombo*)self, (QShowEvent*)e);
 }
 
 void k_colorcombo_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2019,8 +2019,8 @@ void k_colorcombo_hide_event(void* self, void* e) {
     KColorCombo_HideEvent((KColorCombo*)self, (QHideEvent*)e);
 }
 
-void k_colorcombo_qbase_hide_event(void* self, void* e) {
-    KColorCombo_QBaseHideEvent((KColorCombo*)self, (QHideEvent*)e);
+void k_colorcombo_super_hide_event(void* self, void* e) {
+    KColorCombo_SuperHideEvent((KColorCombo*)self, (QHideEvent*)e);
 }
 
 void k_colorcombo_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2031,8 +2031,8 @@ void k_colorcombo_mouse_press_event(void* self, void* e) {
     KColorCombo_MousePressEvent((KColorCombo*)self, (QMouseEvent*)e);
 }
 
-void k_colorcombo_qbase_mouse_press_event(void* self, void* e) {
-    KColorCombo_QBaseMousePressEvent((KColorCombo*)self, (QMouseEvent*)e);
+void k_colorcombo_super_mouse_press_event(void* self, void* e) {
+    KColorCombo_SuperMousePressEvent((KColorCombo*)self, (QMouseEvent*)e);
 }
 
 void k_colorcombo_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2043,8 +2043,8 @@ void k_colorcombo_mouse_release_event(void* self, void* e) {
     KColorCombo_MouseReleaseEvent((KColorCombo*)self, (QMouseEvent*)e);
 }
 
-void k_colorcombo_qbase_mouse_release_event(void* self, void* e) {
-    KColorCombo_QBaseMouseReleaseEvent((KColorCombo*)self, (QMouseEvent*)e);
+void k_colorcombo_super_mouse_release_event(void* self, void* e) {
+    KColorCombo_SuperMouseReleaseEvent((KColorCombo*)self, (QMouseEvent*)e);
 }
 
 void k_colorcombo_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2055,8 +2055,8 @@ void k_colorcombo_key_press_event(void* self, void* e) {
     KColorCombo_KeyPressEvent((KColorCombo*)self, (QKeyEvent*)e);
 }
 
-void k_colorcombo_qbase_key_press_event(void* self, void* e) {
-    KColorCombo_QBaseKeyPressEvent((KColorCombo*)self, (QKeyEvent*)e);
+void k_colorcombo_super_key_press_event(void* self, void* e) {
+    KColorCombo_SuperKeyPressEvent((KColorCombo*)self, (QKeyEvent*)e);
 }
 
 void k_colorcombo_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2067,8 +2067,8 @@ void k_colorcombo_key_release_event(void* self, void* e) {
     KColorCombo_KeyReleaseEvent((KColorCombo*)self, (QKeyEvent*)e);
 }
 
-void k_colorcombo_qbase_key_release_event(void* self, void* e) {
-    KColorCombo_QBaseKeyReleaseEvent((KColorCombo*)self, (QKeyEvent*)e);
+void k_colorcombo_super_key_release_event(void* self, void* e) {
+    KColorCombo_SuperKeyReleaseEvent((KColorCombo*)self, (QKeyEvent*)e);
 }
 
 void k_colorcombo_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2079,8 +2079,8 @@ void k_colorcombo_wheel_event(void* self, void* e) {
     KColorCombo_WheelEvent((KColorCombo*)self, (QWheelEvent*)e);
 }
 
-void k_colorcombo_qbase_wheel_event(void* self, void* e) {
-    KColorCombo_QBaseWheelEvent((KColorCombo*)self, (QWheelEvent*)e);
+void k_colorcombo_super_wheel_event(void* self, void* e) {
+    KColorCombo_SuperWheelEvent((KColorCombo*)self, (QWheelEvent*)e);
 }
 
 void k_colorcombo_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2091,8 +2091,8 @@ void k_colorcombo_context_menu_event(void* self, void* e) {
     KColorCombo_ContextMenuEvent((KColorCombo*)self, (QContextMenuEvent*)e);
 }
 
-void k_colorcombo_qbase_context_menu_event(void* self, void* e) {
-    KColorCombo_QBaseContextMenuEvent((KColorCombo*)self, (QContextMenuEvent*)e);
+void k_colorcombo_super_context_menu_event(void* self, void* e) {
+    KColorCombo_SuperContextMenuEvent((KColorCombo*)self, (QContextMenuEvent*)e);
 }
 
 void k_colorcombo_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2103,8 +2103,8 @@ void k_colorcombo_input_method_event(void* self, void* param1) {
     KColorCombo_InputMethodEvent((KColorCombo*)self, (QInputMethodEvent*)param1);
 }
 
-void k_colorcombo_qbase_input_method_event(void* self, void* param1) {
-    KColorCombo_QBaseInputMethodEvent((KColorCombo*)self, (QInputMethodEvent*)param1);
+void k_colorcombo_super_input_method_event(void* self, void* param1) {
+    KColorCombo_SuperInputMethodEvent((KColorCombo*)self, (QInputMethodEvent*)param1);
 }
 
 void k_colorcombo_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2115,8 +2115,8 @@ void k_colorcombo_init_style_option(void* self, void* option) {
     KColorCombo_InitStyleOption((KColorCombo*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_colorcombo_qbase_init_style_option(void* self, void* option) {
-    KColorCombo_QBaseInitStyleOption((KColorCombo*)self, (QStyleOptionComboBox*)option);
+void k_colorcombo_super_init_style_option(void* self, void* option) {
+    KColorCombo_SuperInitStyleOption((KColorCombo*)self, (QStyleOptionComboBox*)option);
 }
 
 void k_colorcombo_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ int32_t k_colorcombo_dev_type(void* self) {
     return KColorCombo_DevType((KColorCombo*)self);
 }
 
-int32_t k_colorcombo_qbase_dev_type(void* self) {
-    return KColorCombo_QBaseDevType((KColorCombo*)self);
+int32_t k_colorcombo_super_dev_type(void* self) {
+    return KColorCombo_SuperDevType((KColorCombo*)self);
 }
 
 void k_colorcombo_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2139,8 +2139,8 @@ void k_colorcombo_set_visible(void* self, bool visible) {
     KColorCombo_SetVisible((KColorCombo*)self, visible);
 }
 
-void k_colorcombo_qbase_set_visible(void* self, bool visible) {
-    KColorCombo_QBaseSetVisible((KColorCombo*)self, visible);
+void k_colorcombo_super_set_visible(void* self, bool visible) {
+    KColorCombo_SuperSetVisible((KColorCombo*)self, visible);
 }
 
 void k_colorcombo_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2151,8 +2151,8 @@ int32_t k_colorcombo_height_for_width(void* self, int param1) {
     return KColorCombo_HeightForWidth((KColorCombo*)self, param1);
 }
 
-int32_t k_colorcombo_qbase_height_for_width(void* self, int param1) {
-    return KColorCombo_QBaseHeightForWidth((KColorCombo*)self, param1);
+int32_t k_colorcombo_super_height_for_width(void* self, int param1) {
+    return KColorCombo_SuperHeightForWidth((KColorCombo*)self, param1);
 }
 
 void k_colorcombo_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2163,8 +2163,8 @@ bool k_colorcombo_has_height_for_width(void* self) {
     return KColorCombo_HasHeightForWidth((KColorCombo*)self);
 }
 
-bool k_colorcombo_qbase_has_height_for_width(void* self) {
-    return KColorCombo_QBaseHasHeightForWidth((KColorCombo*)self);
+bool k_colorcombo_super_has_height_for_width(void* self) {
+    return KColorCombo_SuperHasHeightForWidth((KColorCombo*)self);
 }
 
 void k_colorcombo_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2175,8 +2175,8 @@ QPaintEngine* k_colorcombo_paint_engine(void* self) {
     return KColorCombo_PaintEngine((KColorCombo*)self);
 }
 
-QPaintEngine* k_colorcombo_qbase_paint_engine(void* self) {
-    return KColorCombo_QBasePaintEngine((KColorCombo*)self);
+QPaintEngine* k_colorcombo_super_paint_engine(void* self) {
+    return KColorCombo_SuperPaintEngine((KColorCombo*)self);
 }
 
 void k_colorcombo_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2187,8 +2187,8 @@ void k_colorcombo_mouse_double_click_event(void* self, void* event) {
     KColorCombo_MouseDoubleClickEvent((KColorCombo*)self, (QMouseEvent*)event);
 }
 
-void k_colorcombo_qbase_mouse_double_click_event(void* self, void* event) {
-    KColorCombo_QBaseMouseDoubleClickEvent((KColorCombo*)self, (QMouseEvent*)event);
+void k_colorcombo_super_mouse_double_click_event(void* self, void* event) {
+    KColorCombo_SuperMouseDoubleClickEvent((KColorCombo*)self, (QMouseEvent*)event);
 }
 
 void k_colorcombo_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2199,8 +2199,8 @@ void k_colorcombo_mouse_move_event(void* self, void* event) {
     KColorCombo_MouseMoveEvent((KColorCombo*)self, (QMouseEvent*)event);
 }
 
-void k_colorcombo_qbase_mouse_move_event(void* self, void* event) {
-    KColorCombo_QBaseMouseMoveEvent((KColorCombo*)self, (QMouseEvent*)event);
+void k_colorcombo_super_mouse_move_event(void* self, void* event) {
+    KColorCombo_SuperMouseMoveEvent((KColorCombo*)self, (QMouseEvent*)event);
 }
 
 void k_colorcombo_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2211,8 +2211,8 @@ void k_colorcombo_enter_event(void* self, void* event) {
     KColorCombo_EnterEvent((KColorCombo*)self, (QEnterEvent*)event);
 }
 
-void k_colorcombo_qbase_enter_event(void* self, void* event) {
-    KColorCombo_QBaseEnterEvent((KColorCombo*)self, (QEnterEvent*)event);
+void k_colorcombo_super_enter_event(void* self, void* event) {
+    KColorCombo_SuperEnterEvent((KColorCombo*)self, (QEnterEvent*)event);
 }
 
 void k_colorcombo_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2223,8 +2223,8 @@ void k_colorcombo_leave_event(void* self, void* event) {
     KColorCombo_LeaveEvent((KColorCombo*)self, (QEvent*)event);
 }
 
-void k_colorcombo_qbase_leave_event(void* self, void* event) {
-    KColorCombo_QBaseLeaveEvent((KColorCombo*)self, (QEvent*)event);
+void k_colorcombo_super_leave_event(void* self, void* event) {
+    KColorCombo_SuperLeaveEvent((KColorCombo*)self, (QEvent*)event);
 }
 
 void k_colorcombo_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2235,8 +2235,8 @@ void k_colorcombo_move_event(void* self, void* event) {
     KColorCombo_MoveEvent((KColorCombo*)self, (QMoveEvent*)event);
 }
 
-void k_colorcombo_qbase_move_event(void* self, void* event) {
-    KColorCombo_QBaseMoveEvent((KColorCombo*)self, (QMoveEvent*)event);
+void k_colorcombo_super_move_event(void* self, void* event) {
+    KColorCombo_SuperMoveEvent((KColorCombo*)self, (QMoveEvent*)event);
 }
 
 void k_colorcombo_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2247,8 +2247,8 @@ void k_colorcombo_close_event(void* self, void* event) {
     KColorCombo_CloseEvent((KColorCombo*)self, (QCloseEvent*)event);
 }
 
-void k_colorcombo_qbase_close_event(void* self, void* event) {
-    KColorCombo_QBaseCloseEvent((KColorCombo*)self, (QCloseEvent*)event);
+void k_colorcombo_super_close_event(void* self, void* event) {
+    KColorCombo_SuperCloseEvent((KColorCombo*)self, (QCloseEvent*)event);
 }
 
 void k_colorcombo_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2259,8 +2259,8 @@ void k_colorcombo_tablet_event(void* self, void* event) {
     KColorCombo_TabletEvent((KColorCombo*)self, (QTabletEvent*)event);
 }
 
-void k_colorcombo_qbase_tablet_event(void* self, void* event) {
-    KColorCombo_QBaseTabletEvent((KColorCombo*)self, (QTabletEvent*)event);
+void k_colorcombo_super_tablet_event(void* self, void* event) {
+    KColorCombo_SuperTabletEvent((KColorCombo*)self, (QTabletEvent*)event);
 }
 
 void k_colorcombo_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2271,8 +2271,8 @@ void k_colorcombo_action_event(void* self, void* event) {
     KColorCombo_ActionEvent((KColorCombo*)self, (QActionEvent*)event);
 }
 
-void k_colorcombo_qbase_action_event(void* self, void* event) {
-    KColorCombo_QBaseActionEvent((KColorCombo*)self, (QActionEvent*)event);
+void k_colorcombo_super_action_event(void* self, void* event) {
+    KColorCombo_SuperActionEvent((KColorCombo*)self, (QActionEvent*)event);
 }
 
 void k_colorcombo_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2283,8 +2283,8 @@ void k_colorcombo_drag_enter_event(void* self, void* event) {
     KColorCombo_DragEnterEvent((KColorCombo*)self, (QDragEnterEvent*)event);
 }
 
-void k_colorcombo_qbase_drag_enter_event(void* self, void* event) {
-    KColorCombo_QBaseDragEnterEvent((KColorCombo*)self, (QDragEnterEvent*)event);
+void k_colorcombo_super_drag_enter_event(void* self, void* event) {
+    KColorCombo_SuperDragEnterEvent((KColorCombo*)self, (QDragEnterEvent*)event);
 }
 
 void k_colorcombo_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2295,8 +2295,8 @@ void k_colorcombo_drag_move_event(void* self, void* event) {
     KColorCombo_DragMoveEvent((KColorCombo*)self, (QDragMoveEvent*)event);
 }
 
-void k_colorcombo_qbase_drag_move_event(void* self, void* event) {
-    KColorCombo_QBaseDragMoveEvent((KColorCombo*)self, (QDragMoveEvent*)event);
+void k_colorcombo_super_drag_move_event(void* self, void* event) {
+    KColorCombo_SuperDragMoveEvent((KColorCombo*)self, (QDragMoveEvent*)event);
 }
 
 void k_colorcombo_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2307,8 +2307,8 @@ void k_colorcombo_drag_leave_event(void* self, void* event) {
     KColorCombo_DragLeaveEvent((KColorCombo*)self, (QDragLeaveEvent*)event);
 }
 
-void k_colorcombo_qbase_drag_leave_event(void* self, void* event) {
-    KColorCombo_QBaseDragLeaveEvent((KColorCombo*)self, (QDragLeaveEvent*)event);
+void k_colorcombo_super_drag_leave_event(void* self, void* event) {
+    KColorCombo_SuperDragLeaveEvent((KColorCombo*)self, (QDragLeaveEvent*)event);
 }
 
 void k_colorcombo_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2319,8 +2319,8 @@ void k_colorcombo_drop_event(void* self, void* event) {
     KColorCombo_DropEvent((KColorCombo*)self, (QDropEvent*)event);
 }
 
-void k_colorcombo_qbase_drop_event(void* self, void* event) {
-    KColorCombo_QBaseDropEvent((KColorCombo*)self, (QDropEvent*)event);
+void k_colorcombo_super_drop_event(void* self, void* event) {
+    KColorCombo_SuperDropEvent((KColorCombo*)self, (QDropEvent*)event);
 }
 
 void k_colorcombo_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2331,8 +2331,8 @@ bool k_colorcombo_native_event(void* self, char* eventType, void* message, intpt
     return KColorCombo_NativeEvent((KColorCombo*)self, qstring(eventType), message, result);
 }
 
-bool k_colorcombo_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KColorCombo_QBaseNativeEvent((KColorCombo*)self, qstring(eventType), message, result);
+bool k_colorcombo_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KColorCombo_SuperNativeEvent((KColorCombo*)self, qstring(eventType), message, result);
 }
 
 void k_colorcombo_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2343,8 +2343,8 @@ int32_t k_colorcombo_metric(void* self, int32_t param1) {
     return KColorCombo_Metric((KColorCombo*)self, param1);
 }
 
-int32_t k_colorcombo_qbase_metric(void* self, int32_t param1) {
-    return KColorCombo_QBaseMetric((KColorCombo*)self, param1);
+int32_t k_colorcombo_super_metric(void* self, int32_t param1) {
+    return KColorCombo_SuperMetric((KColorCombo*)self, param1);
 }
 
 void k_colorcombo_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2355,8 +2355,8 @@ void k_colorcombo_init_painter(void* self, void* painter) {
     KColorCombo_InitPainter((KColorCombo*)self, (QPainter*)painter);
 }
 
-void k_colorcombo_qbase_init_painter(void* self, void* painter) {
-    KColorCombo_QBaseInitPainter((KColorCombo*)self, (QPainter*)painter);
+void k_colorcombo_super_init_painter(void* self, void* painter) {
+    KColorCombo_SuperInitPainter((KColorCombo*)self, (QPainter*)painter);
 }
 
 void k_colorcombo_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2367,8 +2367,8 @@ QPaintDevice* k_colorcombo_redirected(void* self, void* offset) {
     return KColorCombo_Redirected((KColorCombo*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_colorcombo_qbase_redirected(void* self, void* offset) {
-    return KColorCombo_QBaseRedirected((KColorCombo*)self, (QPoint*)offset);
+QPaintDevice* k_colorcombo_super_redirected(void* self, void* offset) {
+    return KColorCombo_SuperRedirected((KColorCombo*)self, (QPoint*)offset);
 }
 
 void k_colorcombo_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2379,8 +2379,8 @@ QPainter* k_colorcombo_shared_painter(void* self) {
     return KColorCombo_SharedPainter((KColorCombo*)self);
 }
 
-QPainter* k_colorcombo_qbase_shared_painter(void* self) {
-    return KColorCombo_QBaseSharedPainter((KColorCombo*)self);
+QPainter* k_colorcombo_super_shared_painter(void* self) {
+    return KColorCombo_SuperSharedPainter((KColorCombo*)self);
 }
 
 void k_colorcombo_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2391,8 +2391,8 @@ bool k_colorcombo_focus_next_prev_child(void* self, bool next) {
     return KColorCombo_FocusNextPrevChild((KColorCombo*)self, next);
 }
 
-bool k_colorcombo_qbase_focus_next_prev_child(void* self, bool next) {
-    return KColorCombo_QBaseFocusNextPrevChild((KColorCombo*)self, next);
+bool k_colorcombo_super_focus_next_prev_child(void* self, bool next) {
+    return KColorCombo_SuperFocusNextPrevChild((KColorCombo*)self, next);
 }
 
 void k_colorcombo_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2403,8 +2403,8 @@ bool k_colorcombo_event_filter(void* self, void* watched, void* event) {
     return KColorCombo_EventFilter((KColorCombo*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_colorcombo_qbase_event_filter(void* self, void* watched, void* event) {
-    return KColorCombo_QBaseEventFilter((KColorCombo*)self, (QObject*)watched, (QEvent*)event);
+bool k_colorcombo_super_event_filter(void* self, void* watched, void* event) {
+    return KColorCombo_SuperEventFilter((KColorCombo*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_colorcombo_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2415,8 +2415,8 @@ void k_colorcombo_timer_event(void* self, void* event) {
     KColorCombo_TimerEvent((KColorCombo*)self, (QTimerEvent*)event);
 }
 
-void k_colorcombo_qbase_timer_event(void* self, void* event) {
-    KColorCombo_QBaseTimerEvent((KColorCombo*)self, (QTimerEvent*)event);
+void k_colorcombo_super_timer_event(void* self, void* event) {
+    KColorCombo_SuperTimerEvent((KColorCombo*)self, (QTimerEvent*)event);
 }
 
 void k_colorcombo_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2427,8 +2427,8 @@ void k_colorcombo_child_event(void* self, void* event) {
     KColorCombo_ChildEvent((KColorCombo*)self, (QChildEvent*)event);
 }
 
-void k_colorcombo_qbase_child_event(void* self, void* event) {
-    KColorCombo_QBaseChildEvent((KColorCombo*)self, (QChildEvent*)event);
+void k_colorcombo_super_child_event(void* self, void* event) {
+    KColorCombo_SuperChildEvent((KColorCombo*)self, (QChildEvent*)event);
 }
 
 void k_colorcombo_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2439,8 +2439,8 @@ void k_colorcombo_custom_event(void* self, void* event) {
     KColorCombo_CustomEvent((KColorCombo*)self, (QEvent*)event);
 }
 
-void k_colorcombo_qbase_custom_event(void* self, void* event) {
-    KColorCombo_QBaseCustomEvent((KColorCombo*)self, (QEvent*)event);
+void k_colorcombo_super_custom_event(void* self, void* event) {
+    KColorCombo_SuperCustomEvent((KColorCombo*)self, (QEvent*)event);
 }
 
 void k_colorcombo_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2451,8 +2451,8 @@ void k_colorcombo_connect_notify(void* self, void* signal) {
     KColorCombo_ConnectNotify((KColorCombo*)self, (QMetaMethod*)signal);
 }
 
-void k_colorcombo_qbase_connect_notify(void* self, void* signal) {
-    KColorCombo_QBaseConnectNotify((KColorCombo*)self, (QMetaMethod*)signal);
+void k_colorcombo_super_connect_notify(void* self, void* signal) {
+    KColorCombo_SuperConnectNotify((KColorCombo*)self, (QMetaMethod*)signal);
 }
 
 void k_colorcombo_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2463,8 +2463,8 @@ void k_colorcombo_disconnect_notify(void* self, void* signal) {
     KColorCombo_DisconnectNotify((KColorCombo*)self, (QMetaMethod*)signal);
 }
 
-void k_colorcombo_qbase_disconnect_notify(void* self, void* signal) {
-    KColorCombo_QBaseDisconnectNotify((KColorCombo*)self, (QMetaMethod*)signal);
+void k_colorcombo_super_disconnect_notify(void* self, void* signal) {
+    KColorCombo_SuperDisconnectNotify((KColorCombo*)self, (QMetaMethod*)signal);
 }
 
 void k_colorcombo_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2475,8 +2475,8 @@ void k_colorcombo_update_micro_focus(void* self) {
     KColorCombo_UpdateMicroFocus((KColorCombo*)self);
 }
 
-void k_colorcombo_qbase_update_micro_focus(void* self) {
-    KColorCombo_QBaseUpdateMicroFocus((KColorCombo*)self);
+void k_colorcombo_super_update_micro_focus(void* self) {
+    KColorCombo_SuperUpdateMicroFocus((KColorCombo*)self);
 }
 
 void k_colorcombo_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2487,8 +2487,8 @@ void k_colorcombo_create(void* self) {
     KColorCombo_Create((KColorCombo*)self);
 }
 
-void k_colorcombo_qbase_create(void* self) {
-    KColorCombo_QBaseCreate((KColorCombo*)self);
+void k_colorcombo_super_create(void* self) {
+    KColorCombo_SuperCreate((KColorCombo*)self);
 }
 
 void k_colorcombo_on_create(void* self, void (*callback)()) {
@@ -2499,8 +2499,8 @@ void k_colorcombo_destroy(void* self) {
     KColorCombo_Destroy((KColorCombo*)self);
 }
 
-void k_colorcombo_qbase_destroy(void* self) {
-    KColorCombo_QBaseDestroy((KColorCombo*)self);
+void k_colorcombo_super_destroy(void* self) {
+    KColorCombo_SuperDestroy((KColorCombo*)self);
 }
 
 void k_colorcombo_on_destroy(void* self, void (*callback)()) {
@@ -2511,8 +2511,8 @@ bool k_colorcombo_focus_next_child(void* self) {
     return KColorCombo_FocusNextChild((KColorCombo*)self);
 }
 
-bool k_colorcombo_qbase_focus_next_child(void* self) {
-    return KColorCombo_QBaseFocusNextChild((KColorCombo*)self);
+bool k_colorcombo_super_focus_next_child(void* self) {
+    return KColorCombo_SuperFocusNextChild((KColorCombo*)self);
 }
 
 void k_colorcombo_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2523,8 +2523,8 @@ bool k_colorcombo_focus_previous_child(void* self) {
     return KColorCombo_FocusPreviousChild((KColorCombo*)self);
 }
 
-bool k_colorcombo_qbase_focus_previous_child(void* self) {
-    return KColorCombo_QBaseFocusPreviousChild((KColorCombo*)self);
+bool k_colorcombo_super_focus_previous_child(void* self) {
+    return KColorCombo_SuperFocusPreviousChild((KColorCombo*)self);
 }
 
 void k_colorcombo_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2535,8 +2535,8 @@ QObject* k_colorcombo_sender(void* self) {
     return KColorCombo_Sender((KColorCombo*)self);
 }
 
-QObject* k_colorcombo_qbase_sender(void* self) {
-    return KColorCombo_QBaseSender((KColorCombo*)self);
+QObject* k_colorcombo_super_sender(void* self) {
+    return KColorCombo_SuperSender((KColorCombo*)self);
 }
 
 void k_colorcombo_on_sender(void* self, QObject* (*callback)()) {
@@ -2547,8 +2547,8 @@ int32_t k_colorcombo_sender_signal_index(void* self) {
     return KColorCombo_SenderSignalIndex((KColorCombo*)self);
 }
 
-int32_t k_colorcombo_qbase_sender_signal_index(void* self) {
-    return KColorCombo_QBaseSenderSignalIndex((KColorCombo*)self);
+int32_t k_colorcombo_super_sender_signal_index(void* self) {
+    return KColorCombo_SuperSenderSignalIndex((KColorCombo*)self);
 }
 
 void k_colorcombo_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2559,8 +2559,8 @@ int32_t k_colorcombo_receivers(void* self, const char* signal) {
     return KColorCombo_Receivers((KColorCombo*)self, signal);
 }
 
-int32_t k_colorcombo_qbase_receivers(void* self, const char* signal) {
-    return KColorCombo_QBaseReceivers((KColorCombo*)self, signal);
+int32_t k_colorcombo_super_receivers(void* self, const char* signal) {
+    return KColorCombo_SuperReceivers((KColorCombo*)self, signal);
 }
 
 void k_colorcombo_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2571,8 +2571,8 @@ bool k_colorcombo_is_signal_connected(void* self, void* signal) {
     return KColorCombo_IsSignalConnected((KColorCombo*)self, (QMetaMethod*)signal);
 }
 
-bool k_colorcombo_qbase_is_signal_connected(void* self, void* signal) {
-    return KColorCombo_QBaseIsSignalConnected((KColorCombo*)self, (QMetaMethod*)signal);
+bool k_colorcombo_super_is_signal_connected(void* self, void* signal) {
+    return KColorCombo_SuperIsSignalConnected((KColorCombo*)self, (QMetaMethod*)signal);
 }
 
 void k_colorcombo_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2583,8 +2583,8 @@ double k_colorcombo_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KColorCombo_GetDecodedMetricF((KColorCombo*)self, metricA, metricB);
 }
 
-double k_colorcombo_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KColorCombo_QBaseGetDecodedMetricF((KColorCombo*)self, metricA, metricB);
+double k_colorcombo_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KColorCombo_SuperGetDecodedMetricF((KColorCombo*)self, metricA, metricB);
 }
 
 void k_colorcombo_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

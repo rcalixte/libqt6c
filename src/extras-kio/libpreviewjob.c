@@ -42,8 +42,8 @@ void k_io__previewjob_on_meta_object(void* self, const QMetaObject* (*callback)(
     KIO__PreviewJob_OnMetaObject((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__previewjob_qbase_meta_object(void* self) {
-    return KIO__PreviewJob_QBaseMetaObject((KIO__PreviewJob*)self);
+const QMetaObject* k_io__previewjob_super_meta_object(void* self) {
+    return KIO__PreviewJob_SuperMetaObject((KIO__PreviewJob*)self);
 }
 
 void* k_io__previewjob_metacast(void* self, const char* param1) {
@@ -54,8 +54,8 @@ void k_io__previewjob_on_metacast(void* self, void* (*callback)(void*, const cha
     KIO__PreviewJob_OnMetacast((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 
-void* k_io__previewjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__PreviewJob_QBaseMetacast((KIO__PreviewJob*)self, param1);
+void* k_io__previewjob_super_metacast(void* self, const char* param1) {
+    return KIO__PreviewJob_SuperMetacast((KIO__PreviewJob*)self, param1);
 }
 
 int32_t k_io__previewjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -66,8 +66,8 @@ void k_io__previewjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KIO__PreviewJob_OnMetacall((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 
-int32_t k_io__previewjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__PreviewJob_QBaseMetacall((KIO__PreviewJob*)self, param1, param2, param3);
+int32_t k_io__previewjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__PreviewJob_SuperMetacall((KIO__PreviewJob*)self, param1, param2, param3);
 }
 
 const char* k_io__previewjob_tr(const char* s) {
@@ -199,8 +199,8 @@ void k_io__previewjob_on_slot_result(void* self, void (*callback)(void*, void*))
     KIO__PreviewJob_OnSlotResult((KIO__PreviewJob*)self, (intptr_t)callback);
 }
 
-void k_io__previewjob_qbase_slot_result(void* self, void* job) {
-    KIO__PreviewJob_QBaseSlotResult((KIO__PreviewJob*)self, (KJob*)job);
+void k_io__previewjob_super_slot_result(void* self, void* job) {
+    KIO__PreviewJob_SuperSlotResult((KIO__PreviewJob*)self, (KJob*)job);
 }
 
 void k_io__previewjob_set_default_device_pixel_ratio(double devicePixelRatio) {
@@ -727,8 +727,8 @@ void k_io__previewjob_start(void* self) {
     KIO__PreviewJob_Start((KIO__PreviewJob*)self);
 }
 
-void k_io__previewjob_qbase_start(void* self) {
-    KIO__PreviewJob_QBaseStart((KIO__PreviewJob*)self);
+void k_io__previewjob_super_start(void* self) {
+    KIO__PreviewJob_SuperStart((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_start(void* self, void (*callback)()) {
@@ -739,8 +739,8 @@ bool k_io__previewjob_do_kill(void* self) {
     return KIO__PreviewJob_DoKill((KIO__PreviewJob*)self);
 }
 
-bool k_io__previewjob_qbase_do_kill(void* self) {
-    return KIO__PreviewJob_QBaseDoKill((KIO__PreviewJob*)self);
+bool k_io__previewjob_super_do_kill(void* self) {
+    return KIO__PreviewJob_SuperDoKill((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_do_kill(void* self, bool (*callback)()) {
@@ -751,8 +751,8 @@ bool k_io__previewjob_do_suspend(void* self) {
     return KIO__PreviewJob_DoSuspend((KIO__PreviewJob*)self);
 }
 
-bool k_io__previewjob_qbase_do_suspend(void* self) {
-    return KIO__PreviewJob_QBaseDoSuspend((KIO__PreviewJob*)self);
+bool k_io__previewjob_super_do_suspend(void* self) {
+    return KIO__PreviewJob_SuperDoSuspend((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -763,8 +763,8 @@ bool k_io__previewjob_do_resume(void* self) {
     return KIO__PreviewJob_DoResume((KIO__PreviewJob*)self);
 }
 
-bool k_io__previewjob_qbase_do_resume(void* self) {
-    return KIO__PreviewJob_QBaseDoResume((KIO__PreviewJob*)self);
+bool k_io__previewjob_super_do_resume(void* self) {
+    return KIO__PreviewJob_SuperDoResume((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_do_resume(void* self, bool (*callback)()) {
@@ -778,8 +778,8 @@ const char* k_io__previewjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__previewjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__PreviewJob_QBaseErrorString((KIO__PreviewJob*)self);
+const char* k_io__previewjob_super_error_string(void* self) {
+    libqt_string _str = KIO__PreviewJob_SuperErrorString((KIO__PreviewJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -793,8 +793,8 @@ bool k_io__previewjob_add_subjob(void* self, void* job) {
     return KIO__PreviewJob_AddSubjob((KIO__PreviewJob*)self, (KJob*)job);
 }
 
-bool k_io__previewjob_qbase_add_subjob(void* self, void* job) {
-    return KIO__PreviewJob_QBaseAddSubjob((KIO__PreviewJob*)self, (KJob*)job);
+bool k_io__previewjob_super_add_subjob(void* self, void* job) {
+    return KIO__PreviewJob_SuperAddSubjob((KIO__PreviewJob*)self, (KJob*)job);
 }
 
 void k_io__previewjob_on_add_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -805,8 +805,8 @@ bool k_io__previewjob_remove_subjob(void* self, void* job) {
     return KIO__PreviewJob_RemoveSubjob((KIO__PreviewJob*)self, (KJob*)job);
 }
 
-bool k_io__previewjob_qbase_remove_subjob(void* self, void* job) {
-    return KIO__PreviewJob_QBaseRemoveSubjob((KIO__PreviewJob*)self, (KJob*)job);
+bool k_io__previewjob_super_remove_subjob(void* self, void* job) {
+    return KIO__PreviewJob_SuperRemoveSubjob((KIO__PreviewJob*)self, (KJob*)job);
 }
 
 void k_io__previewjob_on_remove_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -817,8 +817,8 @@ void k_io__previewjob_slot_info_message(void* self, void* job, const char* messa
     KIO__PreviewJob_SlotInfoMessage((KIO__PreviewJob*)self, (KJob*)job, qstring(message));
 }
 
-void k_io__previewjob_qbase_slot_info_message(void* self, void* job, const char* message) {
-    KIO__PreviewJob_QBaseSlotInfoMessage((KIO__PreviewJob*)self, (KJob*)job, qstring(message));
+void k_io__previewjob_super_slot_info_message(void* self, void* job, const char* message) {
+    KIO__PreviewJob_SuperSlotInfoMessage((KIO__PreviewJob*)self, (KJob*)job, qstring(message));
 }
 
 void k_io__previewjob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*)) {
@@ -829,8 +829,8 @@ bool k_io__previewjob_event(void* self, void* event) {
     return KIO__PreviewJob_Event((KIO__PreviewJob*)self, (QEvent*)event);
 }
 
-bool k_io__previewjob_qbase_event(void* self, void* event) {
-    return KIO__PreviewJob_QBaseEvent((KIO__PreviewJob*)self, (QEvent*)event);
+bool k_io__previewjob_super_event(void* self, void* event) {
+    return KIO__PreviewJob_SuperEvent((KIO__PreviewJob*)self, (QEvent*)event);
 }
 
 void k_io__previewjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -841,8 +841,8 @@ bool k_io__previewjob_event_filter(void* self, void* watched, void* event) {
     return KIO__PreviewJob_EventFilter((KIO__PreviewJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__previewjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__PreviewJob_QBaseEventFilter((KIO__PreviewJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__previewjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__PreviewJob_SuperEventFilter((KIO__PreviewJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__previewjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -853,8 +853,8 @@ void k_io__previewjob_timer_event(void* self, void* event) {
     KIO__PreviewJob_TimerEvent((KIO__PreviewJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__previewjob_qbase_timer_event(void* self, void* event) {
-    KIO__PreviewJob_QBaseTimerEvent((KIO__PreviewJob*)self, (QTimerEvent*)event);
+void k_io__previewjob_super_timer_event(void* self, void* event) {
+    KIO__PreviewJob_SuperTimerEvent((KIO__PreviewJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__previewjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -865,8 +865,8 @@ void k_io__previewjob_child_event(void* self, void* event) {
     KIO__PreviewJob_ChildEvent((KIO__PreviewJob*)self, (QChildEvent*)event);
 }
 
-void k_io__previewjob_qbase_child_event(void* self, void* event) {
-    KIO__PreviewJob_QBaseChildEvent((KIO__PreviewJob*)self, (QChildEvent*)event);
+void k_io__previewjob_super_child_event(void* self, void* event) {
+    KIO__PreviewJob_SuperChildEvent((KIO__PreviewJob*)self, (QChildEvent*)event);
 }
 
 void k_io__previewjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -877,8 +877,8 @@ void k_io__previewjob_custom_event(void* self, void* event) {
     KIO__PreviewJob_CustomEvent((KIO__PreviewJob*)self, (QEvent*)event);
 }
 
-void k_io__previewjob_qbase_custom_event(void* self, void* event) {
-    KIO__PreviewJob_QBaseCustomEvent((KIO__PreviewJob*)self, (QEvent*)event);
+void k_io__previewjob_super_custom_event(void* self, void* event) {
+    KIO__PreviewJob_SuperCustomEvent((KIO__PreviewJob*)self, (QEvent*)event);
 }
 
 void k_io__previewjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -889,8 +889,8 @@ void k_io__previewjob_connect_notify(void* self, void* signal) {
     KIO__PreviewJob_ConnectNotify((KIO__PreviewJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__previewjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__PreviewJob_QBaseConnectNotify((KIO__PreviewJob*)self, (QMetaMethod*)signal);
+void k_io__previewjob_super_connect_notify(void* self, void* signal) {
+    KIO__PreviewJob_SuperConnectNotify((KIO__PreviewJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__previewjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -901,8 +901,8 @@ void k_io__previewjob_disconnect_notify(void* self, void* signal) {
     KIO__PreviewJob_DisconnectNotify((KIO__PreviewJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__previewjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__PreviewJob_QBaseDisconnectNotify((KIO__PreviewJob*)self, (QMetaMethod*)signal);
+void k_io__previewjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__PreviewJob_SuperDisconnectNotify((KIO__PreviewJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__previewjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -913,8 +913,8 @@ bool k_io__previewjob_has_subjobs(void* self) {
     return KIO__PreviewJob_HasSubjobs((KIO__PreviewJob*)self);
 }
 
-bool k_io__previewjob_qbase_has_subjobs(void* self) {
-    return KIO__PreviewJob_QBaseHasSubjobs((KIO__PreviewJob*)self);
+bool k_io__previewjob_super_has_subjobs(void* self) {
+    return KIO__PreviewJob_SuperHasSubjobs((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_has_subjobs(void* self, bool (*callback)()) {
@@ -926,8 +926,8 @@ libqt_list /* of KJob* */ k_io__previewjob_subjobs(void* self) {
     return _arr;
 }
 
-libqt_list /* of KJob* */ k_io__previewjob_qbase_subjobs(void* self) {
-    libqt_list _arr = KIO__PreviewJob_QBaseSubjobs((KIO__PreviewJob*)self);
+libqt_list /* of KJob* */ k_io__previewjob_super_subjobs(void* self) {
+    libqt_list _arr = KIO__PreviewJob_SuperSubjobs((KIO__PreviewJob*)self);
     return _arr;
 }
 
@@ -939,8 +939,8 @@ void k_io__previewjob_clear_subjobs(void* self) {
     KIO__PreviewJob_ClearSubjobs((KIO__PreviewJob*)self);
 }
 
-void k_io__previewjob_qbase_clear_subjobs(void* self) {
-    KIO__PreviewJob_QBaseClearSubjobs((KIO__PreviewJob*)self);
+void k_io__previewjob_super_clear_subjobs(void* self) {
+    KIO__PreviewJob_SuperClearSubjobs((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_clear_subjobs(void* self, void (*callback)()) {
@@ -951,8 +951,8 @@ void k_io__previewjob_set_capabilities(void* self, int32_t capabilities) {
     KIO__PreviewJob_SetCapabilities((KIO__PreviewJob*)self, capabilities);
 }
 
-void k_io__previewjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__PreviewJob_QBaseSetCapabilities((KIO__PreviewJob*)self, capabilities);
+void k_io__previewjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__PreviewJob_SuperSetCapabilities((KIO__PreviewJob*)self, capabilities);
 }
 
 void k_io__previewjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -963,8 +963,8 @@ bool k_io__previewjob_is_finished(void* self) {
     return KIO__PreviewJob_IsFinished((KIO__PreviewJob*)self);
 }
 
-bool k_io__previewjob_qbase_is_finished(void* self) {
-    return KIO__PreviewJob_QBaseIsFinished((KIO__PreviewJob*)self);
+bool k_io__previewjob_super_is_finished(void* self) {
+    return KIO__PreviewJob_SuperIsFinished((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_is_finished(void* self, bool (*callback)()) {
@@ -975,8 +975,8 @@ void k_io__previewjob_set_error(void* self, int errorCode) {
     KIO__PreviewJob_SetError((KIO__PreviewJob*)self, errorCode);
 }
 
-void k_io__previewjob_qbase_set_error(void* self, int errorCode) {
-    KIO__PreviewJob_QBaseSetError((KIO__PreviewJob*)self, errorCode);
+void k_io__previewjob_super_set_error(void* self, int errorCode) {
+    KIO__PreviewJob_SuperSetError((KIO__PreviewJob*)self, errorCode);
 }
 
 void k_io__previewjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -987,8 +987,8 @@ void k_io__previewjob_set_error_text(void* self, const char* errorText) {
     KIO__PreviewJob_SetErrorText((KIO__PreviewJob*)self, qstring(errorText));
 }
 
-void k_io__previewjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__PreviewJob_QBaseSetErrorText((KIO__PreviewJob*)self, qstring(errorText));
+void k_io__previewjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__PreviewJob_SuperSetErrorText((KIO__PreviewJob*)self, qstring(errorText));
 }
 
 void k_io__previewjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -999,8 +999,8 @@ void k_io__previewjob_set_processed_amount(void* self, int32_t unit, uint64_t am
     KIO__PreviewJob_SetProcessedAmount((KIO__PreviewJob*)self, unit, amount);
 }
 
-void k_io__previewjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__PreviewJob_QBaseSetProcessedAmount((KIO__PreviewJob*)self, unit, amount);
+void k_io__previewjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__PreviewJob_SuperSetProcessedAmount((KIO__PreviewJob*)self, unit, amount);
 }
 
 void k_io__previewjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -1011,8 +1011,8 @@ void k_io__previewjob_set_total_amount(void* self, int32_t unit, uint64_t amount
     KIO__PreviewJob_SetTotalAmount((KIO__PreviewJob*)self, unit, amount);
 }
 
-void k_io__previewjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__PreviewJob_QBaseSetTotalAmount((KIO__PreviewJob*)self, unit, amount);
+void k_io__previewjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__PreviewJob_SuperSetTotalAmount((KIO__PreviewJob*)self, unit, amount);
 }
 
 void k_io__previewjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -1023,8 +1023,8 @@ void k_io__previewjob_set_progress_unit(void* self, int32_t unit) {
     KIO__PreviewJob_SetProgressUnit((KIO__PreviewJob*)self, unit);
 }
 
-void k_io__previewjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__PreviewJob_QBaseSetProgressUnit((KIO__PreviewJob*)self, unit);
+void k_io__previewjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__PreviewJob_SuperSetProgressUnit((KIO__PreviewJob*)self, unit);
 }
 
 void k_io__previewjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -1035,8 +1035,8 @@ void k_io__previewjob_set_percent(void* self, uint64_t percentage) {
     KIO__PreviewJob_SetPercent((KIO__PreviewJob*)self, percentage);
 }
 
-void k_io__previewjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__PreviewJob_QBaseSetPercent((KIO__PreviewJob*)self, percentage);
+void k_io__previewjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__PreviewJob_SuperSetPercent((KIO__PreviewJob*)self, percentage);
 }
 
 void k_io__previewjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -1047,8 +1047,8 @@ void k_io__previewjob_emit_result(void* self) {
     KIO__PreviewJob_EmitResult((KIO__PreviewJob*)self);
 }
 
-void k_io__previewjob_qbase_emit_result(void* self) {
-    KIO__PreviewJob_QBaseEmitResult((KIO__PreviewJob*)self);
+void k_io__previewjob_super_emit_result(void* self) {
+    KIO__PreviewJob_SuperEmitResult((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_emit_result(void* self, void (*callback)()) {
@@ -1059,8 +1059,8 @@ void k_io__previewjob_emit_percent(void* self, uint64_t processedAmount, uint64_
     KIO__PreviewJob_EmitPercent((KIO__PreviewJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__previewjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__PreviewJob_QBaseEmitPercent((KIO__PreviewJob*)self, processedAmount, totalAmount);
+void k_io__previewjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__PreviewJob_SuperEmitPercent((KIO__PreviewJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__previewjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -1071,8 +1071,8 @@ void k_io__previewjob_emit_speed(void* self, uint64_t speed) {
     KIO__PreviewJob_EmitSpeed((KIO__PreviewJob*)self, speed);
 }
 
-void k_io__previewjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__PreviewJob_QBaseEmitSpeed((KIO__PreviewJob*)self, speed);
+void k_io__previewjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__PreviewJob_SuperEmitSpeed((KIO__PreviewJob*)self, speed);
 }
 
 void k_io__previewjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -1083,8 +1083,8 @@ void k_io__previewjob_start_elapsed_timer(void* self) {
     KIO__PreviewJob_StartElapsedTimer((KIO__PreviewJob*)self);
 }
 
-void k_io__previewjob_qbase_start_elapsed_timer(void* self) {
-    KIO__PreviewJob_QBaseStartElapsedTimer((KIO__PreviewJob*)self);
+void k_io__previewjob_super_start_elapsed_timer(void* self) {
+    KIO__PreviewJob_SuperStartElapsedTimer((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -1095,8 +1095,8 @@ QObject* k_io__previewjob_sender(void* self) {
     return KIO__PreviewJob_Sender((KIO__PreviewJob*)self);
 }
 
-QObject* k_io__previewjob_qbase_sender(void* self) {
-    return KIO__PreviewJob_QBaseSender((KIO__PreviewJob*)self);
+QObject* k_io__previewjob_super_sender(void* self) {
+    return KIO__PreviewJob_SuperSender((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_sender(void* self, QObject* (*callback)()) {
@@ -1107,8 +1107,8 @@ int32_t k_io__previewjob_sender_signal_index(void* self) {
     return KIO__PreviewJob_SenderSignalIndex((KIO__PreviewJob*)self);
 }
 
-int32_t k_io__previewjob_qbase_sender_signal_index(void* self) {
-    return KIO__PreviewJob_QBaseSenderSignalIndex((KIO__PreviewJob*)self);
+int32_t k_io__previewjob_super_sender_signal_index(void* self) {
+    return KIO__PreviewJob_SuperSenderSignalIndex((KIO__PreviewJob*)self);
 }
 
 void k_io__previewjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1119,8 +1119,8 @@ int32_t k_io__previewjob_receivers(void* self, const char* signal) {
     return KIO__PreviewJob_Receivers((KIO__PreviewJob*)self, signal);
 }
 
-int32_t k_io__previewjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__PreviewJob_QBaseReceivers((KIO__PreviewJob*)self, signal);
+int32_t k_io__previewjob_super_receivers(void* self, const char* signal) {
+    return KIO__PreviewJob_SuperReceivers((KIO__PreviewJob*)self, signal);
 }
 
 void k_io__previewjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1131,8 +1131,8 @@ bool k_io__previewjob_is_signal_connected(void* self, void* signal) {
     return KIO__PreviewJob_IsSignalConnected((KIO__PreviewJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__previewjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__PreviewJob_QBaseIsSignalConnected((KIO__PreviewJob*)self, (QMetaMethod*)signal);
+bool k_io__previewjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__PreviewJob_SuperIsSignalConnected((KIO__PreviewJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__previewjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

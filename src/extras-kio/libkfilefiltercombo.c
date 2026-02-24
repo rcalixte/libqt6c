@@ -38,8 +38,8 @@ void k_filefiltercombo_on_meta_object(void* self, const QMetaObject* (*callback)
     KFileFilterCombo_OnMetaObject((KFileFilterCombo*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_filefiltercombo_qbase_meta_object(void* self) {
-    return KFileFilterCombo_QBaseMetaObject((KFileFilterCombo*)self);
+const QMetaObject* k_filefiltercombo_super_meta_object(void* self) {
+    return KFileFilterCombo_SuperMetaObject((KFileFilterCombo*)self);
 }
 
 void* k_filefiltercombo_metacast(void* self, const char* param1) {
@@ -50,8 +50,8 @@ void k_filefiltercombo_on_metacast(void* self, void* (*callback)(void*, const ch
     KFileFilterCombo_OnMetacast((KFileFilterCombo*)self, (intptr_t)callback);
 }
 
-void* k_filefiltercombo_qbase_metacast(void* self, const char* param1) {
-    return KFileFilterCombo_QBaseMetacast((KFileFilterCombo*)self, param1);
+void* k_filefiltercombo_super_metacast(void* self, const char* param1) {
+    return KFileFilterCombo_SuperMetacast((KFileFilterCombo*)self, param1);
 }
 
 int32_t k_filefiltercombo_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -62,8 +62,8 @@ void k_filefiltercombo_on_metacall(void* self, int32_t (*callback)(void*, int32_
     KFileFilterCombo_OnMetacall((KFileFilterCombo*)self, (intptr_t)callback);
 }
 
-int32_t k_filefiltercombo_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileFilterCombo_QBaseMetacall((KFileFilterCombo*)self, param1, param2, param3);
+int32_t k_filefiltercombo_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileFilterCombo_SuperMetacall((KFileFilterCombo*)self, param1, param2, param3);
 }
 
 const char* k_filefiltercombo_tr(const char* s) {
@@ -110,8 +110,8 @@ void k_filefiltercombo_on_event_filter(void* self, bool (*callback)(void*, void*
     KFileFilterCombo_OnEventFilter((KFileFilterCombo*)self, (intptr_t)callback);
 }
 
-bool k_filefiltercombo_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KFileFilterCombo_QBaseEventFilter((KFileFilterCombo*)self, (QObject*)param1, (QEvent*)param2);
+bool k_filefiltercombo_super_event_filter(void* self, void* param1, void* param2) {
+    return KFileFilterCombo_SuperEventFilter((KFileFilterCombo*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_filefiltercombo_filter_changed(void* self) {
@@ -2073,8 +2073,8 @@ void k_filefiltercombo_set_auto_completion(void* self, bool autocomplete) {
     KFileFilterCombo_SetAutoCompletion((KFileFilterCombo*)self, autocomplete);
 }
 
-void k_filefiltercombo_qbase_set_auto_completion(void* self, bool autocomplete) {
-    KFileFilterCombo_QBaseSetAutoCompletion((KFileFilterCombo*)self, autocomplete);
+void k_filefiltercombo_super_set_auto_completion(void* self, bool autocomplete) {
+    KFileFilterCombo_SuperSetAutoCompletion((KFileFilterCombo*)self, autocomplete);
 }
 
 void k_filefiltercombo_on_set_auto_completion(void* self, void (*callback)(void*, bool)) {
@@ -2085,8 +2085,8 @@ void k_filefiltercombo_set_line_edit(void* self, void* lineEdit) {
     KFileFilterCombo_SetLineEdit((KFileFilterCombo*)self, (QLineEdit*)lineEdit);
 }
 
-void k_filefiltercombo_qbase_set_line_edit(void* self, void* lineEdit) {
-    KFileFilterCombo_QBaseSetLineEdit((KFileFilterCombo*)self, (QLineEdit*)lineEdit);
+void k_filefiltercombo_super_set_line_edit(void* self, void* lineEdit) {
+    KFileFilterCombo_SuperSetLineEdit((KFileFilterCombo*)self, (QLineEdit*)lineEdit);
 }
 
 void k_filefiltercombo_on_set_line_edit(void* self, void (*callback)(void*, void*)) {
@@ -2097,8 +2097,8 @@ QSize* k_filefiltercombo_minimum_size_hint(void* self) {
     return KFileFilterCombo_MinimumSizeHint((KFileFilterCombo*)self);
 }
 
-QSize* k_filefiltercombo_qbase_minimum_size_hint(void* self) {
-    return KFileFilterCombo_QBaseMinimumSizeHint((KFileFilterCombo*)self);
+QSize* k_filefiltercombo_super_minimum_size_hint(void* self) {
+    return KFileFilterCombo_SuperMinimumSizeHint((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2109,8 +2109,8 @@ void k_filefiltercombo_set_completed_text(void* self, const char* completedText)
     KFileFilterCombo_SetCompletedText((KFileFilterCombo*)self, qstring(completedText));
 }
 
-void k_filefiltercombo_qbase_set_completed_text(void* self, const char* completedText) {
-    KFileFilterCombo_QBaseSetCompletedText((KFileFilterCombo*)self, qstring(completedText));
+void k_filefiltercombo_super_set_completed_text(void* self, const char* completedText) {
+    KFileFilterCombo_SuperSetCompletedText((KFileFilterCombo*)self, qstring(completedText));
 }
 
 void k_filefiltercombo_on_set_completed_text(void* self, void (*callback)(void*, const char*)) {
@@ -2132,7 +2132,7 @@ void k_filefiltercombo_set_completed_items(void* self, const char* items[static 
     free(items_qstr);
 }
 
-void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
+void k_filefiltercombo_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -2143,7 +2143,7 @@ void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[s
         items_qstr[i] = qstring(items[i]);
     }
     libqt_list items_list = qlist(items_qstr, items_len);
-    KFileFilterCombo_QBaseSetCompletedItems((KFileFilterCombo*)self, items_list, autoSuggest);
+    KFileFilterCombo_SuperSetCompletedItems((KFileFilterCombo*)self, items_list, autoSuggest);
     free(items_qstr);
 }
 
@@ -2155,8 +2155,8 @@ void k_filefiltercombo_make_completion(void* self, const char* param1) {
     KFileFilterCombo_MakeCompletion((KFileFilterCombo*)self, qstring(param1));
 }
 
-void k_filefiltercombo_qbase_make_completion(void* self, const char* param1) {
-    KFileFilterCombo_QBaseMakeCompletion((KFileFilterCombo*)self, qstring(param1));
+void k_filefiltercombo_super_make_completion(void* self, const char* param1) {
+    KFileFilterCombo_SuperMakeCompletion((KFileFilterCombo*)self, qstring(param1));
 }
 
 void k_filefiltercombo_on_make_completion(void* self, void (*callback)(void*, const char*)) {
@@ -2167,8 +2167,8 @@ void k_filefiltercombo_set_model(void* self, void* model) {
     KFileFilterCombo_SetModel((KFileFilterCombo*)self, (QAbstractItemModel*)model);
 }
 
-void k_filefiltercombo_qbase_set_model(void* self, void* model) {
-    KFileFilterCombo_QBaseSetModel((KFileFilterCombo*)self, (QAbstractItemModel*)model);
+void k_filefiltercombo_super_set_model(void* self, void* model) {
+    KFileFilterCombo_SuperSetModel((KFileFilterCombo*)self, (QAbstractItemModel*)model);
 }
 
 void k_filefiltercombo_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -2179,8 +2179,8 @@ QSize* k_filefiltercombo_size_hint(void* self) {
     return KFileFilterCombo_SizeHint((KFileFilterCombo*)self);
 }
 
-QSize* k_filefiltercombo_qbase_size_hint(void* self) {
-    return KFileFilterCombo_QBaseSizeHint((KFileFilterCombo*)self);
+QSize* k_filefiltercombo_super_size_hint(void* self) {
+    return KFileFilterCombo_SuperSizeHint((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2191,8 +2191,8 @@ void k_filefiltercombo_show_popup(void* self) {
     KFileFilterCombo_ShowPopup((KFileFilterCombo*)self);
 }
 
-void k_filefiltercombo_qbase_show_popup(void* self) {
-    KFileFilterCombo_QBaseShowPopup((KFileFilterCombo*)self);
+void k_filefiltercombo_super_show_popup(void* self) {
+    KFileFilterCombo_SuperShowPopup((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_show_popup(void* self, void (*callback)()) {
@@ -2203,8 +2203,8 @@ void k_filefiltercombo_hide_popup(void* self) {
     KFileFilterCombo_HidePopup((KFileFilterCombo*)self);
 }
 
-void k_filefiltercombo_qbase_hide_popup(void* self) {
-    KFileFilterCombo_QBaseHidePopup((KFileFilterCombo*)self);
+void k_filefiltercombo_super_hide_popup(void* self) {
+    KFileFilterCombo_SuperHidePopup((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_hide_popup(void* self, void (*callback)()) {
@@ -2215,8 +2215,8 @@ bool k_filefiltercombo_event(void* self, void* event) {
     return KFileFilterCombo_Event((KFileFilterCombo*)self, (QEvent*)event);
 }
 
-bool k_filefiltercombo_qbase_event(void* self, void* event) {
-    return KFileFilterCombo_QBaseEvent((KFileFilterCombo*)self, (QEvent*)event);
+bool k_filefiltercombo_super_event(void* self, void* event) {
+    return KFileFilterCombo_SuperEvent((KFileFilterCombo*)self, (QEvent*)event);
 }
 
 void k_filefiltercombo_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2227,8 +2227,8 @@ QVariant* k_filefiltercombo_input_method_query(void* self, int32_t param1) {
     return KFileFilterCombo_InputMethodQuery((KFileFilterCombo*)self, param1);
 }
 
-QVariant* k_filefiltercombo_qbase_input_method_query(void* self, int32_t param1) {
-    return KFileFilterCombo_QBaseInputMethodQuery((KFileFilterCombo*)self, param1);
+QVariant* k_filefiltercombo_super_input_method_query(void* self, int32_t param1) {
+    return KFileFilterCombo_SuperInputMethodQuery((KFileFilterCombo*)self, param1);
 }
 
 void k_filefiltercombo_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2239,8 +2239,8 @@ void k_filefiltercombo_focus_in_event(void* self, void* e) {
     KFileFilterCombo_FocusInEvent((KFileFilterCombo*)self, (QFocusEvent*)e);
 }
 
-void k_filefiltercombo_qbase_focus_in_event(void* self, void* e) {
-    KFileFilterCombo_QBaseFocusInEvent((KFileFilterCombo*)self, (QFocusEvent*)e);
+void k_filefiltercombo_super_focus_in_event(void* self, void* e) {
+    KFileFilterCombo_SuperFocusInEvent((KFileFilterCombo*)self, (QFocusEvent*)e);
 }
 
 void k_filefiltercombo_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2251,8 +2251,8 @@ void k_filefiltercombo_focus_out_event(void* self, void* e) {
     KFileFilterCombo_FocusOutEvent((KFileFilterCombo*)self, (QFocusEvent*)e);
 }
 
-void k_filefiltercombo_qbase_focus_out_event(void* self, void* e) {
-    KFileFilterCombo_QBaseFocusOutEvent((KFileFilterCombo*)self, (QFocusEvent*)e);
+void k_filefiltercombo_super_focus_out_event(void* self, void* e) {
+    KFileFilterCombo_SuperFocusOutEvent((KFileFilterCombo*)self, (QFocusEvent*)e);
 }
 
 void k_filefiltercombo_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2263,8 +2263,8 @@ void k_filefiltercombo_change_event(void* self, void* e) {
     KFileFilterCombo_ChangeEvent((KFileFilterCombo*)self, (QEvent*)e);
 }
 
-void k_filefiltercombo_qbase_change_event(void* self, void* e) {
-    KFileFilterCombo_QBaseChangeEvent((KFileFilterCombo*)self, (QEvent*)e);
+void k_filefiltercombo_super_change_event(void* self, void* e) {
+    KFileFilterCombo_SuperChangeEvent((KFileFilterCombo*)self, (QEvent*)e);
 }
 
 void k_filefiltercombo_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2275,8 +2275,8 @@ void k_filefiltercombo_resize_event(void* self, void* e) {
     KFileFilterCombo_ResizeEvent((KFileFilterCombo*)self, (QResizeEvent*)e);
 }
 
-void k_filefiltercombo_qbase_resize_event(void* self, void* e) {
-    KFileFilterCombo_QBaseResizeEvent((KFileFilterCombo*)self, (QResizeEvent*)e);
+void k_filefiltercombo_super_resize_event(void* self, void* e) {
+    KFileFilterCombo_SuperResizeEvent((KFileFilterCombo*)self, (QResizeEvent*)e);
 }
 
 void k_filefiltercombo_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2287,8 +2287,8 @@ void k_filefiltercombo_paint_event(void* self, void* e) {
     KFileFilterCombo_PaintEvent((KFileFilterCombo*)self, (QPaintEvent*)e);
 }
 
-void k_filefiltercombo_qbase_paint_event(void* self, void* e) {
-    KFileFilterCombo_QBasePaintEvent((KFileFilterCombo*)self, (QPaintEvent*)e);
+void k_filefiltercombo_super_paint_event(void* self, void* e) {
+    KFileFilterCombo_SuperPaintEvent((KFileFilterCombo*)self, (QPaintEvent*)e);
 }
 
 void k_filefiltercombo_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2299,8 +2299,8 @@ void k_filefiltercombo_show_event(void* self, void* e) {
     KFileFilterCombo_ShowEvent((KFileFilterCombo*)self, (QShowEvent*)e);
 }
 
-void k_filefiltercombo_qbase_show_event(void* self, void* e) {
-    KFileFilterCombo_QBaseShowEvent((KFileFilterCombo*)self, (QShowEvent*)e);
+void k_filefiltercombo_super_show_event(void* self, void* e) {
+    KFileFilterCombo_SuperShowEvent((KFileFilterCombo*)self, (QShowEvent*)e);
 }
 
 void k_filefiltercombo_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2311,8 +2311,8 @@ void k_filefiltercombo_hide_event(void* self, void* e) {
     KFileFilterCombo_HideEvent((KFileFilterCombo*)self, (QHideEvent*)e);
 }
 
-void k_filefiltercombo_qbase_hide_event(void* self, void* e) {
-    KFileFilterCombo_QBaseHideEvent((KFileFilterCombo*)self, (QHideEvent*)e);
+void k_filefiltercombo_super_hide_event(void* self, void* e) {
+    KFileFilterCombo_SuperHideEvent((KFileFilterCombo*)self, (QHideEvent*)e);
 }
 
 void k_filefiltercombo_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2323,8 +2323,8 @@ void k_filefiltercombo_mouse_press_event(void* self, void* e) {
     KFileFilterCombo_MousePressEvent((KFileFilterCombo*)self, (QMouseEvent*)e);
 }
 
-void k_filefiltercombo_qbase_mouse_press_event(void* self, void* e) {
-    KFileFilterCombo_QBaseMousePressEvent((KFileFilterCombo*)self, (QMouseEvent*)e);
+void k_filefiltercombo_super_mouse_press_event(void* self, void* e) {
+    KFileFilterCombo_SuperMousePressEvent((KFileFilterCombo*)self, (QMouseEvent*)e);
 }
 
 void k_filefiltercombo_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2335,8 +2335,8 @@ void k_filefiltercombo_mouse_release_event(void* self, void* e) {
     KFileFilterCombo_MouseReleaseEvent((KFileFilterCombo*)self, (QMouseEvent*)e);
 }
 
-void k_filefiltercombo_qbase_mouse_release_event(void* self, void* e) {
-    KFileFilterCombo_QBaseMouseReleaseEvent((KFileFilterCombo*)self, (QMouseEvent*)e);
+void k_filefiltercombo_super_mouse_release_event(void* self, void* e) {
+    KFileFilterCombo_SuperMouseReleaseEvent((KFileFilterCombo*)self, (QMouseEvent*)e);
 }
 
 void k_filefiltercombo_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2347,8 +2347,8 @@ void k_filefiltercombo_key_press_event(void* self, void* e) {
     KFileFilterCombo_KeyPressEvent((KFileFilterCombo*)self, (QKeyEvent*)e);
 }
 
-void k_filefiltercombo_qbase_key_press_event(void* self, void* e) {
-    KFileFilterCombo_QBaseKeyPressEvent((KFileFilterCombo*)self, (QKeyEvent*)e);
+void k_filefiltercombo_super_key_press_event(void* self, void* e) {
+    KFileFilterCombo_SuperKeyPressEvent((KFileFilterCombo*)self, (QKeyEvent*)e);
 }
 
 void k_filefiltercombo_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2359,8 +2359,8 @@ void k_filefiltercombo_key_release_event(void* self, void* e) {
     KFileFilterCombo_KeyReleaseEvent((KFileFilterCombo*)self, (QKeyEvent*)e);
 }
 
-void k_filefiltercombo_qbase_key_release_event(void* self, void* e) {
-    KFileFilterCombo_QBaseKeyReleaseEvent((KFileFilterCombo*)self, (QKeyEvent*)e);
+void k_filefiltercombo_super_key_release_event(void* self, void* e) {
+    KFileFilterCombo_SuperKeyReleaseEvent((KFileFilterCombo*)self, (QKeyEvent*)e);
 }
 
 void k_filefiltercombo_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2371,8 +2371,8 @@ void k_filefiltercombo_wheel_event(void* self, void* e) {
     KFileFilterCombo_WheelEvent((KFileFilterCombo*)self, (QWheelEvent*)e);
 }
 
-void k_filefiltercombo_qbase_wheel_event(void* self, void* e) {
-    KFileFilterCombo_QBaseWheelEvent((KFileFilterCombo*)self, (QWheelEvent*)e);
+void k_filefiltercombo_super_wheel_event(void* self, void* e) {
+    KFileFilterCombo_SuperWheelEvent((KFileFilterCombo*)self, (QWheelEvent*)e);
 }
 
 void k_filefiltercombo_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2383,8 +2383,8 @@ void k_filefiltercombo_context_menu_event(void* self, void* e) {
     KFileFilterCombo_ContextMenuEvent((KFileFilterCombo*)self, (QContextMenuEvent*)e);
 }
 
-void k_filefiltercombo_qbase_context_menu_event(void* self, void* e) {
-    KFileFilterCombo_QBaseContextMenuEvent((KFileFilterCombo*)self, (QContextMenuEvent*)e);
+void k_filefiltercombo_super_context_menu_event(void* self, void* e) {
+    KFileFilterCombo_SuperContextMenuEvent((KFileFilterCombo*)self, (QContextMenuEvent*)e);
 }
 
 void k_filefiltercombo_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2395,8 +2395,8 @@ void k_filefiltercombo_input_method_event(void* self, void* param1) {
     KFileFilterCombo_InputMethodEvent((KFileFilterCombo*)self, (QInputMethodEvent*)param1);
 }
 
-void k_filefiltercombo_qbase_input_method_event(void* self, void* param1) {
-    KFileFilterCombo_QBaseInputMethodEvent((KFileFilterCombo*)self, (QInputMethodEvent*)param1);
+void k_filefiltercombo_super_input_method_event(void* self, void* param1) {
+    KFileFilterCombo_SuperInputMethodEvent((KFileFilterCombo*)self, (QInputMethodEvent*)param1);
 }
 
 void k_filefiltercombo_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2407,8 +2407,8 @@ void k_filefiltercombo_init_style_option(void* self, void* option) {
     KFileFilterCombo_InitStyleOption((KFileFilterCombo*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_filefiltercombo_qbase_init_style_option(void* self, void* option) {
-    KFileFilterCombo_QBaseInitStyleOption((KFileFilterCombo*)self, (QStyleOptionComboBox*)option);
+void k_filefiltercombo_super_init_style_option(void* self, void* option) {
+    KFileFilterCombo_SuperInitStyleOption((KFileFilterCombo*)self, (QStyleOptionComboBox*)option);
 }
 
 void k_filefiltercombo_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2419,8 +2419,8 @@ int32_t k_filefiltercombo_dev_type(void* self) {
     return KFileFilterCombo_DevType((KFileFilterCombo*)self);
 }
 
-int32_t k_filefiltercombo_qbase_dev_type(void* self) {
-    return KFileFilterCombo_QBaseDevType((KFileFilterCombo*)self);
+int32_t k_filefiltercombo_super_dev_type(void* self) {
+    return KFileFilterCombo_SuperDevType((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2431,8 +2431,8 @@ void k_filefiltercombo_set_visible(void* self, bool visible) {
     KFileFilterCombo_SetVisible((KFileFilterCombo*)self, visible);
 }
 
-void k_filefiltercombo_qbase_set_visible(void* self, bool visible) {
-    KFileFilterCombo_QBaseSetVisible((KFileFilterCombo*)self, visible);
+void k_filefiltercombo_super_set_visible(void* self, bool visible) {
+    KFileFilterCombo_SuperSetVisible((KFileFilterCombo*)self, visible);
 }
 
 void k_filefiltercombo_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2443,8 +2443,8 @@ int32_t k_filefiltercombo_height_for_width(void* self, int param1) {
     return KFileFilterCombo_HeightForWidth((KFileFilterCombo*)self, param1);
 }
 
-int32_t k_filefiltercombo_qbase_height_for_width(void* self, int param1) {
-    return KFileFilterCombo_QBaseHeightForWidth((KFileFilterCombo*)self, param1);
+int32_t k_filefiltercombo_super_height_for_width(void* self, int param1) {
+    return KFileFilterCombo_SuperHeightForWidth((KFileFilterCombo*)self, param1);
 }
 
 void k_filefiltercombo_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2455,8 +2455,8 @@ bool k_filefiltercombo_has_height_for_width(void* self) {
     return KFileFilterCombo_HasHeightForWidth((KFileFilterCombo*)self);
 }
 
-bool k_filefiltercombo_qbase_has_height_for_width(void* self) {
-    return KFileFilterCombo_QBaseHasHeightForWidth((KFileFilterCombo*)self);
+bool k_filefiltercombo_super_has_height_for_width(void* self) {
+    return KFileFilterCombo_SuperHasHeightForWidth((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2467,8 +2467,8 @@ QPaintEngine* k_filefiltercombo_paint_engine(void* self) {
     return KFileFilterCombo_PaintEngine((KFileFilterCombo*)self);
 }
 
-QPaintEngine* k_filefiltercombo_qbase_paint_engine(void* self) {
-    return KFileFilterCombo_QBasePaintEngine((KFileFilterCombo*)self);
+QPaintEngine* k_filefiltercombo_super_paint_engine(void* self) {
+    return KFileFilterCombo_SuperPaintEngine((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2479,8 +2479,8 @@ void k_filefiltercombo_mouse_double_click_event(void* self, void* event) {
     KFileFilterCombo_MouseDoubleClickEvent((KFileFilterCombo*)self, (QMouseEvent*)event);
 }
 
-void k_filefiltercombo_qbase_mouse_double_click_event(void* self, void* event) {
-    KFileFilterCombo_QBaseMouseDoubleClickEvent((KFileFilterCombo*)self, (QMouseEvent*)event);
+void k_filefiltercombo_super_mouse_double_click_event(void* self, void* event) {
+    KFileFilterCombo_SuperMouseDoubleClickEvent((KFileFilterCombo*)self, (QMouseEvent*)event);
 }
 
 void k_filefiltercombo_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2491,8 +2491,8 @@ void k_filefiltercombo_mouse_move_event(void* self, void* event) {
     KFileFilterCombo_MouseMoveEvent((KFileFilterCombo*)self, (QMouseEvent*)event);
 }
 
-void k_filefiltercombo_qbase_mouse_move_event(void* self, void* event) {
-    KFileFilterCombo_QBaseMouseMoveEvent((KFileFilterCombo*)self, (QMouseEvent*)event);
+void k_filefiltercombo_super_mouse_move_event(void* self, void* event) {
+    KFileFilterCombo_SuperMouseMoveEvent((KFileFilterCombo*)self, (QMouseEvent*)event);
 }
 
 void k_filefiltercombo_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2503,8 +2503,8 @@ void k_filefiltercombo_enter_event(void* self, void* event) {
     KFileFilterCombo_EnterEvent((KFileFilterCombo*)self, (QEnterEvent*)event);
 }
 
-void k_filefiltercombo_qbase_enter_event(void* self, void* event) {
-    KFileFilterCombo_QBaseEnterEvent((KFileFilterCombo*)self, (QEnterEvent*)event);
+void k_filefiltercombo_super_enter_event(void* self, void* event) {
+    KFileFilterCombo_SuperEnterEvent((KFileFilterCombo*)self, (QEnterEvent*)event);
 }
 
 void k_filefiltercombo_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2515,8 +2515,8 @@ void k_filefiltercombo_leave_event(void* self, void* event) {
     KFileFilterCombo_LeaveEvent((KFileFilterCombo*)self, (QEvent*)event);
 }
 
-void k_filefiltercombo_qbase_leave_event(void* self, void* event) {
-    KFileFilterCombo_QBaseLeaveEvent((KFileFilterCombo*)self, (QEvent*)event);
+void k_filefiltercombo_super_leave_event(void* self, void* event) {
+    KFileFilterCombo_SuperLeaveEvent((KFileFilterCombo*)self, (QEvent*)event);
 }
 
 void k_filefiltercombo_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2527,8 +2527,8 @@ void k_filefiltercombo_move_event(void* self, void* event) {
     KFileFilterCombo_MoveEvent((KFileFilterCombo*)self, (QMoveEvent*)event);
 }
 
-void k_filefiltercombo_qbase_move_event(void* self, void* event) {
-    KFileFilterCombo_QBaseMoveEvent((KFileFilterCombo*)self, (QMoveEvent*)event);
+void k_filefiltercombo_super_move_event(void* self, void* event) {
+    KFileFilterCombo_SuperMoveEvent((KFileFilterCombo*)self, (QMoveEvent*)event);
 }
 
 void k_filefiltercombo_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2539,8 +2539,8 @@ void k_filefiltercombo_close_event(void* self, void* event) {
     KFileFilterCombo_CloseEvent((KFileFilterCombo*)self, (QCloseEvent*)event);
 }
 
-void k_filefiltercombo_qbase_close_event(void* self, void* event) {
-    KFileFilterCombo_QBaseCloseEvent((KFileFilterCombo*)self, (QCloseEvent*)event);
+void k_filefiltercombo_super_close_event(void* self, void* event) {
+    KFileFilterCombo_SuperCloseEvent((KFileFilterCombo*)self, (QCloseEvent*)event);
 }
 
 void k_filefiltercombo_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2551,8 +2551,8 @@ void k_filefiltercombo_tablet_event(void* self, void* event) {
     KFileFilterCombo_TabletEvent((KFileFilterCombo*)self, (QTabletEvent*)event);
 }
 
-void k_filefiltercombo_qbase_tablet_event(void* self, void* event) {
-    KFileFilterCombo_QBaseTabletEvent((KFileFilterCombo*)self, (QTabletEvent*)event);
+void k_filefiltercombo_super_tablet_event(void* self, void* event) {
+    KFileFilterCombo_SuperTabletEvent((KFileFilterCombo*)self, (QTabletEvent*)event);
 }
 
 void k_filefiltercombo_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2563,8 +2563,8 @@ void k_filefiltercombo_action_event(void* self, void* event) {
     KFileFilterCombo_ActionEvent((KFileFilterCombo*)self, (QActionEvent*)event);
 }
 
-void k_filefiltercombo_qbase_action_event(void* self, void* event) {
-    KFileFilterCombo_QBaseActionEvent((KFileFilterCombo*)self, (QActionEvent*)event);
+void k_filefiltercombo_super_action_event(void* self, void* event) {
+    KFileFilterCombo_SuperActionEvent((KFileFilterCombo*)self, (QActionEvent*)event);
 }
 
 void k_filefiltercombo_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2575,8 +2575,8 @@ void k_filefiltercombo_drag_enter_event(void* self, void* event) {
     KFileFilterCombo_DragEnterEvent((KFileFilterCombo*)self, (QDragEnterEvent*)event);
 }
 
-void k_filefiltercombo_qbase_drag_enter_event(void* self, void* event) {
-    KFileFilterCombo_QBaseDragEnterEvent((KFileFilterCombo*)self, (QDragEnterEvent*)event);
+void k_filefiltercombo_super_drag_enter_event(void* self, void* event) {
+    KFileFilterCombo_SuperDragEnterEvent((KFileFilterCombo*)self, (QDragEnterEvent*)event);
 }
 
 void k_filefiltercombo_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2587,8 +2587,8 @@ void k_filefiltercombo_drag_move_event(void* self, void* event) {
     KFileFilterCombo_DragMoveEvent((KFileFilterCombo*)self, (QDragMoveEvent*)event);
 }
 
-void k_filefiltercombo_qbase_drag_move_event(void* self, void* event) {
-    KFileFilterCombo_QBaseDragMoveEvent((KFileFilterCombo*)self, (QDragMoveEvent*)event);
+void k_filefiltercombo_super_drag_move_event(void* self, void* event) {
+    KFileFilterCombo_SuperDragMoveEvent((KFileFilterCombo*)self, (QDragMoveEvent*)event);
 }
 
 void k_filefiltercombo_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2599,8 +2599,8 @@ void k_filefiltercombo_drag_leave_event(void* self, void* event) {
     KFileFilterCombo_DragLeaveEvent((KFileFilterCombo*)self, (QDragLeaveEvent*)event);
 }
 
-void k_filefiltercombo_qbase_drag_leave_event(void* self, void* event) {
-    KFileFilterCombo_QBaseDragLeaveEvent((KFileFilterCombo*)self, (QDragLeaveEvent*)event);
+void k_filefiltercombo_super_drag_leave_event(void* self, void* event) {
+    KFileFilterCombo_SuperDragLeaveEvent((KFileFilterCombo*)self, (QDragLeaveEvent*)event);
 }
 
 void k_filefiltercombo_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2611,8 +2611,8 @@ void k_filefiltercombo_drop_event(void* self, void* event) {
     KFileFilterCombo_DropEvent((KFileFilterCombo*)self, (QDropEvent*)event);
 }
 
-void k_filefiltercombo_qbase_drop_event(void* self, void* event) {
-    KFileFilterCombo_QBaseDropEvent((KFileFilterCombo*)self, (QDropEvent*)event);
+void k_filefiltercombo_super_drop_event(void* self, void* event) {
+    KFileFilterCombo_SuperDropEvent((KFileFilterCombo*)self, (QDropEvent*)event);
 }
 
 void k_filefiltercombo_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2623,8 +2623,8 @@ bool k_filefiltercombo_native_event(void* self, char* eventType, void* message, 
     return KFileFilterCombo_NativeEvent((KFileFilterCombo*)self, qstring(eventType), message, result);
 }
 
-bool k_filefiltercombo_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KFileFilterCombo_QBaseNativeEvent((KFileFilterCombo*)self, qstring(eventType), message, result);
+bool k_filefiltercombo_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KFileFilterCombo_SuperNativeEvent((KFileFilterCombo*)self, qstring(eventType), message, result);
 }
 
 void k_filefiltercombo_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2635,8 +2635,8 @@ int32_t k_filefiltercombo_metric(void* self, int32_t param1) {
     return KFileFilterCombo_Metric((KFileFilterCombo*)self, param1);
 }
 
-int32_t k_filefiltercombo_qbase_metric(void* self, int32_t param1) {
-    return KFileFilterCombo_QBaseMetric((KFileFilterCombo*)self, param1);
+int32_t k_filefiltercombo_super_metric(void* self, int32_t param1) {
+    return KFileFilterCombo_SuperMetric((KFileFilterCombo*)self, param1);
 }
 
 void k_filefiltercombo_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2647,8 +2647,8 @@ void k_filefiltercombo_init_painter(void* self, void* painter) {
     KFileFilterCombo_InitPainter((KFileFilterCombo*)self, (QPainter*)painter);
 }
 
-void k_filefiltercombo_qbase_init_painter(void* self, void* painter) {
-    KFileFilterCombo_QBaseInitPainter((KFileFilterCombo*)self, (QPainter*)painter);
+void k_filefiltercombo_super_init_painter(void* self, void* painter) {
+    KFileFilterCombo_SuperInitPainter((KFileFilterCombo*)self, (QPainter*)painter);
 }
 
 void k_filefiltercombo_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2659,8 +2659,8 @@ QPaintDevice* k_filefiltercombo_redirected(void* self, void* offset) {
     return KFileFilterCombo_Redirected((KFileFilterCombo*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_filefiltercombo_qbase_redirected(void* self, void* offset) {
-    return KFileFilterCombo_QBaseRedirected((KFileFilterCombo*)self, (QPoint*)offset);
+QPaintDevice* k_filefiltercombo_super_redirected(void* self, void* offset) {
+    return KFileFilterCombo_SuperRedirected((KFileFilterCombo*)self, (QPoint*)offset);
 }
 
 void k_filefiltercombo_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2671,8 +2671,8 @@ QPainter* k_filefiltercombo_shared_painter(void* self) {
     return KFileFilterCombo_SharedPainter((KFileFilterCombo*)self);
 }
 
-QPainter* k_filefiltercombo_qbase_shared_painter(void* self) {
-    return KFileFilterCombo_QBaseSharedPainter((KFileFilterCombo*)self);
+QPainter* k_filefiltercombo_super_shared_painter(void* self) {
+    return KFileFilterCombo_SuperSharedPainter((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2683,8 +2683,8 @@ bool k_filefiltercombo_focus_next_prev_child(void* self, bool next) {
     return KFileFilterCombo_FocusNextPrevChild((KFileFilterCombo*)self, next);
 }
 
-bool k_filefiltercombo_qbase_focus_next_prev_child(void* self, bool next) {
-    return KFileFilterCombo_QBaseFocusNextPrevChild((KFileFilterCombo*)self, next);
+bool k_filefiltercombo_super_focus_next_prev_child(void* self, bool next) {
+    return KFileFilterCombo_SuperFocusNextPrevChild((KFileFilterCombo*)self, next);
 }
 
 void k_filefiltercombo_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2695,8 +2695,8 @@ void k_filefiltercombo_timer_event(void* self, void* event) {
     KFileFilterCombo_TimerEvent((KFileFilterCombo*)self, (QTimerEvent*)event);
 }
 
-void k_filefiltercombo_qbase_timer_event(void* self, void* event) {
-    KFileFilterCombo_QBaseTimerEvent((KFileFilterCombo*)self, (QTimerEvent*)event);
+void k_filefiltercombo_super_timer_event(void* self, void* event) {
+    KFileFilterCombo_SuperTimerEvent((KFileFilterCombo*)self, (QTimerEvent*)event);
 }
 
 void k_filefiltercombo_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2707,8 +2707,8 @@ void k_filefiltercombo_child_event(void* self, void* event) {
     KFileFilterCombo_ChildEvent((KFileFilterCombo*)self, (QChildEvent*)event);
 }
 
-void k_filefiltercombo_qbase_child_event(void* self, void* event) {
-    KFileFilterCombo_QBaseChildEvent((KFileFilterCombo*)self, (QChildEvent*)event);
+void k_filefiltercombo_super_child_event(void* self, void* event) {
+    KFileFilterCombo_SuperChildEvent((KFileFilterCombo*)self, (QChildEvent*)event);
 }
 
 void k_filefiltercombo_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2719,8 +2719,8 @@ void k_filefiltercombo_custom_event(void* self, void* event) {
     KFileFilterCombo_CustomEvent((KFileFilterCombo*)self, (QEvent*)event);
 }
 
-void k_filefiltercombo_qbase_custom_event(void* self, void* event) {
-    KFileFilterCombo_QBaseCustomEvent((KFileFilterCombo*)self, (QEvent*)event);
+void k_filefiltercombo_super_custom_event(void* self, void* event) {
+    KFileFilterCombo_SuperCustomEvent((KFileFilterCombo*)self, (QEvent*)event);
 }
 
 void k_filefiltercombo_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2731,8 +2731,8 @@ void k_filefiltercombo_connect_notify(void* self, void* signal) {
     KFileFilterCombo_ConnectNotify((KFileFilterCombo*)self, (QMetaMethod*)signal);
 }
 
-void k_filefiltercombo_qbase_connect_notify(void* self, void* signal) {
-    KFileFilterCombo_QBaseConnectNotify((KFileFilterCombo*)self, (QMetaMethod*)signal);
+void k_filefiltercombo_super_connect_notify(void* self, void* signal) {
+    KFileFilterCombo_SuperConnectNotify((KFileFilterCombo*)self, (QMetaMethod*)signal);
 }
 
 void k_filefiltercombo_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2743,8 +2743,8 @@ void k_filefiltercombo_disconnect_notify(void* self, void* signal) {
     KFileFilterCombo_DisconnectNotify((KFileFilterCombo*)self, (QMetaMethod*)signal);
 }
 
-void k_filefiltercombo_qbase_disconnect_notify(void* self, void* signal) {
-    KFileFilterCombo_QBaseDisconnectNotify((KFileFilterCombo*)self, (QMetaMethod*)signal);
+void k_filefiltercombo_super_disconnect_notify(void* self, void* signal) {
+    KFileFilterCombo_SuperDisconnectNotify((KFileFilterCombo*)self, (QMetaMethod*)signal);
 }
 
 void k_filefiltercombo_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2755,8 +2755,8 @@ void k_filefiltercombo_set_completion_object(void* self, void* completionObject,
     KFileFilterCombo_SetCompletionObject((KFileFilterCombo*)self, (KCompletion*)completionObject, handleSignals);
 }
 
-void k_filefiltercombo_qbase_set_completion_object(void* self, void* completionObject, bool handleSignals) {
-    KFileFilterCombo_QBaseSetCompletionObject((KFileFilterCombo*)self, (KCompletion*)completionObject, handleSignals);
+void k_filefiltercombo_super_set_completion_object(void* self, void* completionObject, bool handleSignals) {
+    KFileFilterCombo_SuperSetCompletionObject((KFileFilterCombo*)self, (KCompletion*)completionObject, handleSignals);
 }
 
 void k_filefiltercombo_on_set_completion_object(void* self, void (*callback)(void*, void*, bool)) {
@@ -2767,8 +2767,8 @@ void k_filefiltercombo_set_handle_signals(void* self, bool handle) {
     KFileFilterCombo_SetHandleSignals((KFileFilterCombo*)self, handle);
 }
 
-void k_filefiltercombo_qbase_set_handle_signals(void* self, bool handle) {
-    KFileFilterCombo_QBaseSetHandleSignals((KFileFilterCombo*)self, handle);
+void k_filefiltercombo_super_set_handle_signals(void* self, bool handle) {
+    KFileFilterCombo_SuperSetHandleSignals((KFileFilterCombo*)self, handle);
 }
 
 void k_filefiltercombo_on_set_handle_signals(void* self, void (*callback)(void*, bool)) {
@@ -2779,8 +2779,8 @@ void k_filefiltercombo_set_completion_mode(void* self, int32_t mode) {
     KFileFilterCombo_SetCompletionMode((KFileFilterCombo*)self, mode);
 }
 
-void k_filefiltercombo_qbase_set_completion_mode(void* self, int32_t mode) {
-    KFileFilterCombo_QBaseSetCompletionMode((KFileFilterCombo*)self, mode);
+void k_filefiltercombo_super_set_completion_mode(void* self, int32_t mode) {
+    KFileFilterCombo_SuperSetCompletionMode((KFileFilterCombo*)self, mode);
 }
 
 void k_filefiltercombo_on_set_completion_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -2791,8 +2791,8 @@ void k_filefiltercombo_virtual_hook(void* self, int id, void* data) {
     KFileFilterCombo_VirtualHook((KFileFilterCombo*)self, id, data);
 }
 
-void k_filefiltercombo_qbase_virtual_hook(void* self, int id, void* data) {
-    KFileFilterCombo_QBaseVirtualHook((KFileFilterCombo*)self, id, data);
+void k_filefiltercombo_super_virtual_hook(void* self, int id, void* data) {
+    KFileFilterCombo_SuperVirtualHook((KFileFilterCombo*)self, id, data);
 }
 
 void k_filefiltercombo_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
@@ -2803,8 +2803,8 @@ void k_filefiltercombo_update_micro_focus(void* self) {
     KFileFilterCombo_UpdateMicroFocus((KFileFilterCombo*)self);
 }
 
-void k_filefiltercombo_qbase_update_micro_focus(void* self) {
-    KFileFilterCombo_QBaseUpdateMicroFocus((KFileFilterCombo*)self);
+void k_filefiltercombo_super_update_micro_focus(void* self) {
+    KFileFilterCombo_SuperUpdateMicroFocus((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2815,8 +2815,8 @@ void k_filefiltercombo_create(void* self) {
     KFileFilterCombo_Create((KFileFilterCombo*)self);
 }
 
-void k_filefiltercombo_qbase_create(void* self) {
-    KFileFilterCombo_QBaseCreate((KFileFilterCombo*)self);
+void k_filefiltercombo_super_create(void* self) {
+    KFileFilterCombo_SuperCreate((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_create(void* self, void (*callback)()) {
@@ -2827,8 +2827,8 @@ void k_filefiltercombo_destroy(void* self) {
     KFileFilterCombo_Destroy((KFileFilterCombo*)self);
 }
 
-void k_filefiltercombo_qbase_destroy(void* self) {
-    KFileFilterCombo_QBaseDestroy((KFileFilterCombo*)self);
+void k_filefiltercombo_super_destroy(void* self) {
+    KFileFilterCombo_SuperDestroy((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_destroy(void* self, void (*callback)()) {
@@ -2839,8 +2839,8 @@ bool k_filefiltercombo_focus_next_child(void* self) {
     return KFileFilterCombo_FocusNextChild((KFileFilterCombo*)self);
 }
 
-bool k_filefiltercombo_qbase_focus_next_child(void* self) {
-    return KFileFilterCombo_QBaseFocusNextChild((KFileFilterCombo*)self);
+bool k_filefiltercombo_super_focus_next_child(void* self) {
+    return KFileFilterCombo_SuperFocusNextChild((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2851,8 +2851,8 @@ bool k_filefiltercombo_focus_previous_child(void* self) {
     return KFileFilterCombo_FocusPreviousChild((KFileFilterCombo*)self);
 }
 
-bool k_filefiltercombo_qbase_focus_previous_child(void* self) {
-    return KFileFilterCombo_QBaseFocusPreviousChild((KFileFilterCombo*)self);
+bool k_filefiltercombo_super_focus_previous_child(void* self) {
+    return KFileFilterCombo_SuperFocusPreviousChild((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2863,8 +2863,8 @@ QObject* k_filefiltercombo_sender(void* self) {
     return KFileFilterCombo_Sender((KFileFilterCombo*)self);
 }
 
-QObject* k_filefiltercombo_qbase_sender(void* self) {
-    return KFileFilterCombo_QBaseSender((KFileFilterCombo*)self);
+QObject* k_filefiltercombo_super_sender(void* self) {
+    return KFileFilterCombo_SuperSender((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_sender(void* self, QObject* (*callback)()) {
@@ -2875,8 +2875,8 @@ int32_t k_filefiltercombo_sender_signal_index(void* self) {
     return KFileFilterCombo_SenderSignalIndex((KFileFilterCombo*)self);
 }
 
-int32_t k_filefiltercombo_qbase_sender_signal_index(void* self) {
-    return KFileFilterCombo_QBaseSenderSignalIndex((KFileFilterCombo*)self);
+int32_t k_filefiltercombo_super_sender_signal_index(void* self) {
+    return KFileFilterCombo_SuperSenderSignalIndex((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2887,8 +2887,8 @@ int32_t k_filefiltercombo_receivers(void* self, const char* signal) {
     return KFileFilterCombo_Receivers((KFileFilterCombo*)self, signal);
 }
 
-int32_t k_filefiltercombo_qbase_receivers(void* self, const char* signal) {
-    return KFileFilterCombo_QBaseReceivers((KFileFilterCombo*)self, signal);
+int32_t k_filefiltercombo_super_receivers(void* self, const char* signal) {
+    return KFileFilterCombo_SuperReceivers((KFileFilterCombo*)self, signal);
 }
 
 void k_filefiltercombo_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2899,8 +2899,8 @@ bool k_filefiltercombo_is_signal_connected(void* self, void* signal) {
     return KFileFilterCombo_IsSignalConnected((KFileFilterCombo*)self, (QMetaMethod*)signal);
 }
 
-bool k_filefiltercombo_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileFilterCombo_QBaseIsSignalConnected((KFileFilterCombo*)self, (QMetaMethod*)signal);
+bool k_filefiltercombo_super_is_signal_connected(void* self, void* signal) {
+    return KFileFilterCombo_SuperIsSignalConnected((KFileFilterCombo*)self, (QMetaMethod*)signal);
 }
 
 void k_filefiltercombo_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2911,8 +2911,8 @@ double k_filefiltercombo_get_decoded_metric_f(void* self, int32_t metricA, int32
     return KFileFilterCombo_GetDecodedMetricF((KFileFilterCombo*)self, metricA, metricB);
 }
 
-double k_filefiltercombo_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KFileFilterCombo_QBaseGetDecodedMetricF((KFileFilterCombo*)self, metricA, metricB);
+double k_filefiltercombo_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KFileFilterCombo_SuperGetDecodedMetricF((KFileFilterCombo*)self, metricA, metricB);
 }
 
 void k_filefiltercombo_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2958,9 +2958,9 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     return _ret;
 }
 
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_filefiltercombo_qbase_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_filefiltercombo_super_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
-    libqt_map _out = KFileFilterCombo_QBaseKeyBindingMap((KFileFilterCombo*)self);
+    libqt_map _out = KFileFilterCombo_SuperKeyBindingMap((KFileFilterCombo*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -3034,7 +3034,7 @@ void k_filefiltercombo_set_key_binding_map(void* self, libqt_map /* of enum KCom
     free(keyBindingMap_ret.values);
 }
 
-void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
+void k_filefiltercombo_super_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
@@ -3062,7 +3062,7 @@ void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map /* of enu
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
-    KFileFilterCombo_QBaseSetKeyBindingMap((KFileFilterCombo*)self, keyBindingMap_ret);
+    KFileFilterCombo_SuperSetKeyBindingMap((KFileFilterCombo*)self, keyBindingMap_ret);
     free(keyBindingMap_ret.keys);
     free(keyBindingMap_ret.values);
 }
@@ -3075,8 +3075,8 @@ void k_filefiltercombo_set_delegate(void* self, void* delegate) {
     KFileFilterCombo_SetDelegate((KFileFilterCombo*)self, (KCompletionBase*)delegate);
 }
 
-void k_filefiltercombo_qbase_set_delegate(void* self, void* delegate) {
-    KFileFilterCombo_QBaseSetDelegate((KFileFilterCombo*)self, (KCompletionBase*)delegate);
+void k_filefiltercombo_super_set_delegate(void* self, void* delegate) {
+    KFileFilterCombo_SuperSetDelegate((KFileFilterCombo*)self, (KCompletionBase*)delegate);
 }
 
 void k_filefiltercombo_on_set_delegate(void* self, void (*callback)(void*, void*)) {
@@ -3087,8 +3087,8 @@ KCompletionBase* k_filefiltercombo_delegate(void* self) {
     return KFileFilterCombo_Delegate((KFileFilterCombo*)self);
 }
 
-KCompletionBase* k_filefiltercombo_qbase_delegate(void* self) {
-    return KFileFilterCombo_QBaseDelegate((KFileFilterCombo*)self);
+KCompletionBase* k_filefiltercombo_super_delegate(void* self) {
+    return KFileFilterCombo_SuperDelegate((KFileFilterCombo*)self);
 }
 
 void k_filefiltercombo_on_delegate(void* self, KCompletionBase* (*callback)()) {

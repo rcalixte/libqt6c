@@ -27,8 +27,8 @@ void q_uiloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QUiLoader_OnMetaObject((QUiLoader*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_uiloader_qbase_meta_object(void* self) {
-    return QUiLoader_QBaseMetaObject((QUiLoader*)self);
+const QMetaObject* q_uiloader_super_meta_object(void* self) {
+    return QUiLoader_SuperMetaObject((QUiLoader*)self);
 }
 
 void* q_uiloader_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void q_uiloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QUiLoader_OnMetacast((QUiLoader*)self, (intptr_t)callback);
 }
 
-void* q_uiloader_qbase_metacast(void* self, const char* param1) {
-    return QUiLoader_QBaseMetacast((QUiLoader*)self, param1);
+void* q_uiloader_super_metacast(void* self, const char* param1) {
+    return QUiLoader_SuperMetacast((QUiLoader*)self, param1);
 }
 
 int32_t q_uiloader_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void q_uiloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QUiLoader_OnMetacall((QUiLoader*)self, (intptr_t)callback);
 }
 
-int32_t q_uiloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QUiLoader_QBaseMetacall((QUiLoader*)self, param1, param2, param3);
+int32_t q_uiloader_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QUiLoader_SuperMetacall((QUiLoader*)self, param1, param2, param3);
 }
 
 const char* q_uiloader_tr(const char* s) {
@@ -139,8 +139,8 @@ void q_uiloader_on_create_widget(void* self, QWidget* (*callback)(void*, const c
     QUiLoader_OnCreateWidget((QUiLoader*)self, (intptr_t)callback);
 }
 
-QWidget* q_uiloader_qbase_create_widget(void* self, const char* className, void* parent, const char* name) {
-    return QUiLoader_QBaseCreateWidget((QUiLoader*)self, qstring(className), (QWidget*)parent, qstring(name));
+QWidget* q_uiloader_super_create_widget(void* self, const char* className, void* parent, const char* name) {
+    return QUiLoader_SuperCreateWidget((QUiLoader*)self, qstring(className), (QWidget*)parent, qstring(name));
 }
 
 QLayout* q_uiloader_create_layout(void* self, const char* className, void* parent, const char* name) {
@@ -151,8 +151,8 @@ void q_uiloader_on_create_layout(void* self, QLayout* (*callback)(void*, const c
     QUiLoader_OnCreateLayout((QUiLoader*)self, (intptr_t)callback);
 }
 
-QLayout* q_uiloader_qbase_create_layout(void* self, const char* className, void* parent, const char* name) {
-    return QUiLoader_QBaseCreateLayout((QUiLoader*)self, qstring(className), (QObject*)parent, qstring(name));
+QLayout* q_uiloader_super_create_layout(void* self, const char* className, void* parent, const char* name) {
+    return QUiLoader_SuperCreateLayout((QUiLoader*)self, qstring(className), (QObject*)parent, qstring(name));
 }
 
 QActionGroup* q_uiloader_create_action_group(void* self, void* parent, const char* name) {
@@ -163,8 +163,8 @@ void q_uiloader_on_create_action_group(void* self, QActionGroup* (*callback)(voi
     QUiLoader_OnCreateActionGroup((QUiLoader*)self, (intptr_t)callback);
 }
 
-QActionGroup* q_uiloader_qbase_create_action_group(void* self, void* parent, const char* name) {
-    return QUiLoader_QBaseCreateActionGroup((QUiLoader*)self, (QObject*)parent, qstring(name));
+QActionGroup* q_uiloader_super_create_action_group(void* self, void* parent, const char* name) {
+    return QUiLoader_SuperCreateActionGroup((QUiLoader*)self, (QObject*)parent, qstring(name));
 }
 
 QAction* q_uiloader_create_action(void* self, void* parent, const char* name) {
@@ -175,8 +175,8 @@ void q_uiloader_on_create_action(void* self, QAction* (*callback)(void*, void*, 
     QUiLoader_OnCreateAction((QUiLoader*)self, (intptr_t)callback);
 }
 
-QAction* q_uiloader_qbase_create_action(void* self, void* parent, const char* name) {
-    return QUiLoader_QBaseCreateAction((QUiLoader*)self, (QObject*)parent, qstring(name));
+QAction* q_uiloader_super_create_action(void* self, void* parent, const char* name) {
+    return QUiLoader_SuperCreateAction((QUiLoader*)self, (QObject*)parent, qstring(name));
 }
 
 void q_uiloader_set_working_directory(void* self, void* dir) {
@@ -443,8 +443,8 @@ bool q_uiloader_event(void* self, void* event) {
     return QUiLoader_Event((QUiLoader*)self, (QEvent*)event);
 }
 
-bool q_uiloader_qbase_event(void* self, void* event) {
-    return QUiLoader_QBaseEvent((QUiLoader*)self, (QEvent*)event);
+bool q_uiloader_super_event(void* self, void* event) {
+    return QUiLoader_SuperEvent((QUiLoader*)self, (QEvent*)event);
 }
 
 void q_uiloader_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ bool q_uiloader_event_filter(void* self, void* watched, void* event) {
     return QUiLoader_EventFilter((QUiLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_uiloader_qbase_event_filter(void* self, void* watched, void* event) {
-    return QUiLoader_QBaseEventFilter((QUiLoader*)self, (QObject*)watched, (QEvent*)event);
+bool q_uiloader_super_event_filter(void* self, void* watched, void* event) {
+    return QUiLoader_SuperEventFilter((QUiLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_uiloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -467,8 +467,8 @@ void q_uiloader_timer_event(void* self, void* event) {
     QUiLoader_TimerEvent((QUiLoader*)self, (QTimerEvent*)event);
 }
 
-void q_uiloader_qbase_timer_event(void* self, void* event) {
-    QUiLoader_QBaseTimerEvent((QUiLoader*)self, (QTimerEvent*)event);
+void q_uiloader_super_timer_event(void* self, void* event) {
+    QUiLoader_SuperTimerEvent((QUiLoader*)self, (QTimerEvent*)event);
 }
 
 void q_uiloader_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_uiloader_child_event(void* self, void* event) {
     QUiLoader_ChildEvent((QUiLoader*)self, (QChildEvent*)event);
 }
 
-void q_uiloader_qbase_child_event(void* self, void* event) {
-    QUiLoader_QBaseChildEvent((QUiLoader*)self, (QChildEvent*)event);
+void q_uiloader_super_child_event(void* self, void* event) {
+    QUiLoader_SuperChildEvent((QUiLoader*)self, (QChildEvent*)event);
 }
 
 void q_uiloader_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_uiloader_custom_event(void* self, void* event) {
     QUiLoader_CustomEvent((QUiLoader*)self, (QEvent*)event);
 }
 
-void q_uiloader_qbase_custom_event(void* self, void* event) {
-    QUiLoader_QBaseCustomEvent((QUiLoader*)self, (QEvent*)event);
+void q_uiloader_super_custom_event(void* self, void* event) {
+    QUiLoader_SuperCustomEvent((QUiLoader*)self, (QEvent*)event);
 }
 
 void q_uiloader_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_uiloader_connect_notify(void* self, void* signal) {
     QUiLoader_ConnectNotify((QUiLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_uiloader_qbase_connect_notify(void* self, void* signal) {
-    QUiLoader_QBaseConnectNotify((QUiLoader*)self, (QMetaMethod*)signal);
+void q_uiloader_super_connect_notify(void* self, void* signal) {
+    QUiLoader_SuperConnectNotify((QUiLoader*)self, (QMetaMethod*)signal);
 }
 
 void q_uiloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ void q_uiloader_disconnect_notify(void* self, void* signal) {
     QUiLoader_DisconnectNotify((QUiLoader*)self, (QMetaMethod*)signal);
 }
 
-void q_uiloader_qbase_disconnect_notify(void* self, void* signal) {
-    QUiLoader_QBaseDisconnectNotify((QUiLoader*)self, (QMetaMethod*)signal);
+void q_uiloader_super_disconnect_notify(void* self, void* signal) {
+    QUiLoader_SuperDisconnectNotify((QUiLoader*)self, (QMetaMethod*)signal);
 }
 
 void q_uiloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -527,8 +527,8 @@ QObject* q_uiloader_sender(void* self) {
     return QUiLoader_Sender((QUiLoader*)self);
 }
 
-QObject* q_uiloader_qbase_sender(void* self) {
-    return QUiLoader_QBaseSender((QUiLoader*)self);
+QObject* q_uiloader_super_sender(void* self) {
+    return QUiLoader_SuperSender((QUiLoader*)self);
 }
 
 void q_uiloader_on_sender(void* self, QObject* (*callback)()) {
@@ -539,8 +539,8 @@ int32_t q_uiloader_sender_signal_index(void* self) {
     return QUiLoader_SenderSignalIndex((QUiLoader*)self);
 }
 
-int32_t q_uiloader_qbase_sender_signal_index(void* self) {
-    return QUiLoader_QBaseSenderSignalIndex((QUiLoader*)self);
+int32_t q_uiloader_super_sender_signal_index(void* self) {
+    return QUiLoader_SuperSenderSignalIndex((QUiLoader*)self);
 }
 
 void q_uiloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -551,8 +551,8 @@ int32_t q_uiloader_receivers(void* self, const char* signal) {
     return QUiLoader_Receivers((QUiLoader*)self, signal);
 }
 
-int32_t q_uiloader_qbase_receivers(void* self, const char* signal) {
-    return QUiLoader_QBaseReceivers((QUiLoader*)self, signal);
+int32_t q_uiloader_super_receivers(void* self, const char* signal) {
+    return QUiLoader_SuperReceivers((QUiLoader*)self, signal);
 }
 
 void q_uiloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -563,8 +563,8 @@ bool q_uiloader_is_signal_connected(void* self, void* signal) {
     return QUiLoader_IsSignalConnected((QUiLoader*)self, (QMetaMethod*)signal);
 }
 
-bool q_uiloader_qbase_is_signal_connected(void* self, void* signal) {
-    return QUiLoader_QBaseIsSignalConnected((QUiLoader*)self, (QMetaMethod*)signal);
+bool q_uiloader_super_is_signal_connected(void* self, void* signal) {
+    return QUiLoader_SuperIsSignalConnected((QUiLoader*)self, (QMetaMethod*)signal);
 }
 
 void q_uiloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

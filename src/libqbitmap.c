@@ -386,8 +386,8 @@ int32_t q_bitmap_dev_type(void* self) {
     return QBitmap_DevType((QBitmap*)self);
 }
 
-int32_t q_bitmap_qbase_dev_type(void* self) {
-    return QBitmap_QBaseDevType((QBitmap*)self);
+int32_t q_bitmap_super_dev_type(void* self) {
+    return QBitmap_SuperDevType((QBitmap*)self);
 }
 
 void q_bitmap_on_dev_type(void* self, int32_t (*callback)()) {
@@ -398,8 +398,8 @@ QPaintEngine* q_bitmap_paint_engine(void* self) {
     return QBitmap_PaintEngine((QBitmap*)self);
 }
 
-QPaintEngine* q_bitmap_qbase_paint_engine(void* self) {
-    return QBitmap_QBasePaintEngine((QBitmap*)self);
+QPaintEngine* q_bitmap_super_paint_engine(void* self) {
+    return QBitmap_SuperPaintEngine((QBitmap*)self);
 }
 
 void q_bitmap_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -410,8 +410,8 @@ int32_t q_bitmap_metric(void* self, int32_t param1) {
     return QBitmap_Metric((QBitmap*)self, param1);
 }
 
-int32_t q_bitmap_qbase_metric(void* self, int32_t param1) {
-    return QBitmap_QBaseMetric((QBitmap*)self, param1);
+int32_t q_bitmap_super_metric(void* self, int32_t param1) {
+    return QBitmap_SuperMetric((QBitmap*)self, param1);
 }
 
 void q_bitmap_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -422,8 +422,8 @@ void q_bitmap_init_painter(void* self, void* painter) {
     QBitmap_InitPainter((QBitmap*)self, (QPainter*)painter);
 }
 
-void q_bitmap_qbase_init_painter(void* self, void* painter) {
-    QBitmap_QBaseInitPainter((QBitmap*)self, (QPainter*)painter);
+void q_bitmap_super_init_painter(void* self, void* painter) {
+    QBitmap_SuperInitPainter((QBitmap*)self, (QPainter*)painter);
 }
 
 void q_bitmap_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -434,8 +434,8 @@ QPaintDevice* q_bitmap_redirected(void* self, void* offset) {
     return QBitmap_Redirected((QBitmap*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_bitmap_qbase_redirected(void* self, void* offset) {
-    return QBitmap_QBaseRedirected((QBitmap*)self, (QPoint*)offset);
+QPaintDevice* q_bitmap_super_redirected(void* self, void* offset) {
+    return QBitmap_SuperRedirected((QBitmap*)self, (QPoint*)offset);
 }
 
 void q_bitmap_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -446,8 +446,8 @@ QPainter* q_bitmap_shared_painter(void* self) {
     return QBitmap_SharedPainter((QBitmap*)self);
 }
 
-QPainter* q_bitmap_qbase_shared_painter(void* self) {
-    return QBitmap_QBaseSharedPainter((QBitmap*)self);
+QPainter* q_bitmap_super_shared_painter(void* self) {
+    return QBitmap_SuperSharedPainter((QBitmap*)self);
 }
 
 void q_bitmap_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -458,8 +458,8 @@ double q_bitmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metric
     return QBitmap_GetDecodedMetricF((QBitmap*)self, metricA, metricB);
 }
 
-double q_bitmap_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QBitmap_QBaseGetDecodedMetricF((QBitmap*)self, metricA, metricB);
+double q_bitmap_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QBitmap_SuperGetDecodedMetricF((QBitmap*)self, metricA, metricB);
 }
 
 void q_bitmap_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -23,8 +23,8 @@ void k_columnresizer_on_meta_object(void* self, const QMetaObject* (*callback)()
     KColumnResizer_OnMetaObject((KColumnResizer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_columnresizer_qbase_meta_object(void* self) {
-    return KColumnResizer_QBaseMetaObject((KColumnResizer*)self);
+const QMetaObject* k_columnresizer_super_meta_object(void* self) {
+    return KColumnResizer_SuperMetaObject((KColumnResizer*)self);
 }
 
 void* k_columnresizer_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_columnresizer_on_metacast(void* self, void* (*callback)(void*, const char
     KColumnResizer_OnMetacast((KColumnResizer*)self, (intptr_t)callback);
 }
 
-void* k_columnresizer_qbase_metacast(void* self, const char* param1) {
-    return KColumnResizer_QBaseMetacast((KColumnResizer*)self, param1);
+void* k_columnresizer_super_metacast(void* self, const char* param1) {
+    return KColumnResizer_SuperMetacast((KColumnResizer*)self, param1);
 }
 
 int32_t k_columnresizer_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_columnresizer_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KColumnResizer_OnMetacall((KColumnResizer*)self, (intptr_t)callback);
 }
 
-int32_t k_columnresizer_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KColumnResizer_QBaseMetacall((KColumnResizer*)self, param1, param2, param3);
+int32_t k_columnresizer_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KColumnResizer_SuperMetacall((KColumnResizer*)self, param1, param2, param3);
 }
 
 const char* k_columnresizer_tr(const char* s) {
@@ -78,8 +78,8 @@ void k_columnresizer_on_event_filter(void* self, bool (*callback)(void*, void*, 
     KColumnResizer_OnEventFilter((KColumnResizer*)self, (intptr_t)callback);
 }
 
-bool k_columnresizer_qbase_event_filter(void* self, void* param1, void* event) {
-    return KColumnResizer_QBaseEventFilter((KColumnResizer*)self, (QObject*)param1, (QEvent*)event);
+bool k_columnresizer_super_event_filter(void* self, void* param1, void* event) {
+    return KColumnResizer_SuperEventFilter((KColumnResizer*)self, (QObject*)param1, (QEvent*)event);
 }
 
 const char* k_columnresizer_tr2(const char* s, const char* c) {
@@ -315,8 +315,8 @@ bool k_columnresizer_event(void* self, void* event) {
     return KColumnResizer_Event((KColumnResizer*)self, (QEvent*)event);
 }
 
-bool k_columnresizer_qbase_event(void* self, void* event) {
-    return KColumnResizer_QBaseEvent((KColumnResizer*)self, (QEvent*)event);
+bool k_columnresizer_super_event(void* self, void* event) {
+    return KColumnResizer_SuperEvent((KColumnResizer*)self, (QEvent*)event);
 }
 
 void k_columnresizer_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -327,8 +327,8 @@ void k_columnresizer_timer_event(void* self, void* event) {
     KColumnResizer_TimerEvent((KColumnResizer*)self, (QTimerEvent*)event);
 }
 
-void k_columnresizer_qbase_timer_event(void* self, void* event) {
-    KColumnResizer_QBaseTimerEvent((KColumnResizer*)self, (QTimerEvent*)event);
+void k_columnresizer_super_timer_event(void* self, void* event) {
+    KColumnResizer_SuperTimerEvent((KColumnResizer*)self, (QTimerEvent*)event);
 }
 
 void k_columnresizer_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -339,8 +339,8 @@ void k_columnresizer_child_event(void* self, void* event) {
     KColumnResizer_ChildEvent((KColumnResizer*)self, (QChildEvent*)event);
 }
 
-void k_columnresizer_qbase_child_event(void* self, void* event) {
-    KColumnResizer_QBaseChildEvent((KColumnResizer*)self, (QChildEvent*)event);
+void k_columnresizer_super_child_event(void* self, void* event) {
+    KColumnResizer_SuperChildEvent((KColumnResizer*)self, (QChildEvent*)event);
 }
 
 void k_columnresizer_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -351,8 +351,8 @@ void k_columnresizer_custom_event(void* self, void* event) {
     KColumnResizer_CustomEvent((KColumnResizer*)self, (QEvent*)event);
 }
 
-void k_columnresizer_qbase_custom_event(void* self, void* event) {
-    KColumnResizer_QBaseCustomEvent((KColumnResizer*)self, (QEvent*)event);
+void k_columnresizer_super_custom_event(void* self, void* event) {
+    KColumnResizer_SuperCustomEvent((KColumnResizer*)self, (QEvent*)event);
 }
 
 void k_columnresizer_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -363,8 +363,8 @@ void k_columnresizer_connect_notify(void* self, void* signal) {
     KColumnResizer_ConnectNotify((KColumnResizer*)self, (QMetaMethod*)signal);
 }
 
-void k_columnresizer_qbase_connect_notify(void* self, void* signal) {
-    KColumnResizer_QBaseConnectNotify((KColumnResizer*)self, (QMetaMethod*)signal);
+void k_columnresizer_super_connect_notify(void* self, void* signal) {
+    KColumnResizer_SuperConnectNotify((KColumnResizer*)self, (QMetaMethod*)signal);
 }
 
 void k_columnresizer_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -375,8 +375,8 @@ void k_columnresizer_disconnect_notify(void* self, void* signal) {
     KColumnResizer_DisconnectNotify((KColumnResizer*)self, (QMetaMethod*)signal);
 }
 
-void k_columnresizer_qbase_disconnect_notify(void* self, void* signal) {
-    KColumnResizer_QBaseDisconnectNotify((KColumnResizer*)self, (QMetaMethod*)signal);
+void k_columnresizer_super_disconnect_notify(void* self, void* signal) {
+    KColumnResizer_SuperDisconnectNotify((KColumnResizer*)self, (QMetaMethod*)signal);
 }
 
 void k_columnresizer_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ QObject* k_columnresizer_sender(void* self) {
     return KColumnResizer_Sender((KColumnResizer*)self);
 }
 
-QObject* k_columnresizer_qbase_sender(void* self) {
-    return KColumnResizer_QBaseSender((KColumnResizer*)self);
+QObject* k_columnresizer_super_sender(void* self) {
+    return KColumnResizer_SuperSender((KColumnResizer*)self);
 }
 
 void k_columnresizer_on_sender(void* self, QObject* (*callback)()) {
@@ -399,8 +399,8 @@ int32_t k_columnresizer_sender_signal_index(void* self) {
     return KColumnResizer_SenderSignalIndex((KColumnResizer*)self);
 }
 
-int32_t k_columnresizer_qbase_sender_signal_index(void* self) {
-    return KColumnResizer_QBaseSenderSignalIndex((KColumnResizer*)self);
+int32_t k_columnresizer_super_sender_signal_index(void* self) {
+    return KColumnResizer_SuperSenderSignalIndex((KColumnResizer*)self);
 }
 
 void k_columnresizer_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -411,8 +411,8 @@ int32_t k_columnresizer_receivers(void* self, const char* signal) {
     return KColumnResizer_Receivers((KColumnResizer*)self, signal);
 }
 
-int32_t k_columnresizer_qbase_receivers(void* self, const char* signal) {
-    return KColumnResizer_QBaseReceivers((KColumnResizer*)self, signal);
+int32_t k_columnresizer_super_receivers(void* self, const char* signal) {
+    return KColumnResizer_SuperReceivers((KColumnResizer*)self, signal);
 }
 
 void k_columnresizer_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -423,8 +423,8 @@ bool k_columnresizer_is_signal_connected(void* self, void* signal) {
     return KColumnResizer_IsSignalConnected((KColumnResizer*)self, (QMetaMethod*)signal);
 }
 
-bool k_columnresizer_qbase_is_signal_connected(void* self, void* signal) {
-    return KColumnResizer_QBaseIsSignalConnected((KColumnResizer*)self, (QMetaMethod*)signal);
+bool k_columnresizer_super_is_signal_connected(void* self, void* signal) {
+    return KColumnResizer_SuperIsSignalConnected((KColumnResizer*)self, (QMetaMethod*)signal);
 }
 
 void k_columnresizer_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

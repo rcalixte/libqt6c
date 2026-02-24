@@ -19,8 +19,8 @@ void q_geosatelliteinfosource_on_meta_object(void* self, const QMetaObject* (*ca
     QGeoSatelliteInfoSource_OnMetaObject((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_geosatelliteinfosource_qbase_meta_object(void* self) {
-    return QGeoSatelliteInfoSource_QBaseMetaObject((QGeoSatelliteInfoSource*)self);
+const QMetaObject* q_geosatelliteinfosource_super_meta_object(void* self) {
+    return QGeoSatelliteInfoSource_SuperMetaObject((QGeoSatelliteInfoSource*)self);
 }
 
 void* q_geosatelliteinfosource_metacast(void* self, const char* param1) {
@@ -31,8 +31,8 @@ void q_geosatelliteinfosource_on_metacast(void* self, void* (*callback)(void*, c
     QGeoSatelliteInfoSource_OnMetacast((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void* q_geosatelliteinfosource_qbase_metacast(void* self, const char* param1) {
-    return QGeoSatelliteInfoSource_QBaseMetacast((QGeoSatelliteInfoSource*)self, param1);
+void* q_geosatelliteinfosource_super_metacast(void* self, const char* param1) {
+    return QGeoSatelliteInfoSource_SuperMetacast((QGeoSatelliteInfoSource*)self, param1);
 }
 
 int32_t q_geosatelliteinfosource_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -43,8 +43,8 @@ void q_geosatelliteinfosource_on_metacall(void* self, int32_t (*callback)(void*,
     QGeoSatelliteInfoSource_OnMetacall((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_geosatelliteinfosource_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoSatelliteInfoSource_QBaseMetacall((QGeoSatelliteInfoSource*)self, param1, param2, param3);
+int32_t q_geosatelliteinfosource_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoSatelliteInfoSource_SuperMetacall((QGeoSatelliteInfoSource*)self, param1, param2, param3);
 }
 
 const char* q_geosatelliteinfosource_tr(const char* s) {
@@ -154,8 +154,8 @@ void q_geosatelliteinfosource_on_set_update_interval(void* self, void (*callback
     QGeoSatelliteInfoSource_OnSetUpdateInterval((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_geosatelliteinfosource_qbase_set_update_interval(void* self, int msec) {
-    QGeoSatelliteInfoSource_QBaseSetUpdateInterval((QGeoSatelliteInfoSource*)self, msec);
+void q_geosatelliteinfosource_super_set_update_interval(void* self, int msec) {
+    QGeoSatelliteInfoSource_SuperSetUpdateInterval((QGeoSatelliteInfoSource*)self, msec);
 }
 
 int32_t q_geosatelliteinfosource_update_interval(void* self) {
@@ -170,8 +170,8 @@ void q_geosatelliteinfosource_on_minimum_update_interval(void* self, int32_t (*c
     QGeoSatelliteInfoSource_OnMinimumUpdateInterval((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_geosatelliteinfosource_qbase_minimum_update_interval(void* self) {
-    return QGeoSatelliteInfoSource_QBaseMinimumUpdateInterval((QGeoSatelliteInfoSource*)self);
+int32_t q_geosatelliteinfosource_super_minimum_update_interval(void* self) {
+    return QGeoSatelliteInfoSource_SuperMinimumUpdateInterval((QGeoSatelliteInfoSource*)self);
 }
 
 int32_t q_geosatelliteinfosource_error(void* self) {
@@ -182,8 +182,8 @@ void q_geosatelliteinfosource_on_error(void* self, int32_t (*callback)()) {
     QGeoSatelliteInfoSource_OnError((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-int32_t q_geosatelliteinfosource_qbase_error(void* self) {
-    return QGeoSatelliteInfoSource_QBaseError((QGeoSatelliteInfoSource*)self);
+int32_t q_geosatelliteinfosource_super_error(void* self) {
+    return QGeoSatelliteInfoSource_SuperError((QGeoSatelliteInfoSource*)self);
 }
 
 bool q_geosatelliteinfosource_set_backend_property(void* self, const char* name, void* value) {
@@ -194,8 +194,8 @@ void q_geosatelliteinfosource_on_set_backend_property(void* self, bool (*callbac
     QGeoSatelliteInfoSource_OnSetBackendProperty((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-bool q_geosatelliteinfosource_qbase_set_backend_property(void* self, const char* name, void* value) {
-    return QGeoSatelliteInfoSource_QBaseSetBackendProperty((QGeoSatelliteInfoSource*)self, qstring(name), (QVariant*)value);
+bool q_geosatelliteinfosource_super_set_backend_property(void* self, const char* name, void* value) {
+    return QGeoSatelliteInfoSource_SuperSetBackendProperty((QGeoSatelliteInfoSource*)self, qstring(name), (QVariant*)value);
 }
 
 QVariant* q_geosatelliteinfosource_backend_property(void* self, const char* name) {
@@ -206,8 +206,8 @@ void q_geosatelliteinfosource_on_backend_property(void* self, QVariant* (*callba
     QGeoSatelliteInfoSource_OnBackendProperty((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-QVariant* q_geosatelliteinfosource_qbase_backend_property(void* self, const char* name) {
-    return QGeoSatelliteInfoSource_QBaseBackendProperty((QGeoSatelliteInfoSource*)self, qstring(name));
+QVariant* q_geosatelliteinfosource_super_backend_property(void* self, const char* name) {
+    return QGeoSatelliteInfoSource_SuperBackendProperty((QGeoSatelliteInfoSource*)self, qstring(name));
 }
 
 void q_geosatelliteinfosource_start_updates(void* self) {
@@ -218,8 +218,8 @@ void q_geosatelliteinfosource_on_start_updates(void* self, void (*callback)()) {
     QGeoSatelliteInfoSource_OnStartUpdates((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_geosatelliteinfosource_qbase_start_updates(void* self) {
-    QGeoSatelliteInfoSource_QBaseStartUpdates((QGeoSatelliteInfoSource*)self);
+void q_geosatelliteinfosource_super_start_updates(void* self) {
+    QGeoSatelliteInfoSource_SuperStartUpdates((QGeoSatelliteInfoSource*)self);
 }
 
 void q_geosatelliteinfosource_stop_updates(void* self) {
@@ -230,8 +230,8 @@ void q_geosatelliteinfosource_on_stop_updates(void* self, void (*callback)()) {
     QGeoSatelliteInfoSource_OnStopUpdates((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_geosatelliteinfosource_qbase_stop_updates(void* self) {
-    QGeoSatelliteInfoSource_QBaseStopUpdates((QGeoSatelliteInfoSource*)self);
+void q_geosatelliteinfosource_super_stop_updates(void* self) {
+    QGeoSatelliteInfoSource_SuperStopUpdates((QGeoSatelliteInfoSource*)self);
 }
 
 void q_geosatelliteinfosource_request_update(void* self, int timeout) {
@@ -242,8 +242,8 @@ void q_geosatelliteinfosource_on_request_update(void* self, void (*callback)(voi
     QGeoSatelliteInfoSource_OnRequestUpdate((QGeoSatelliteInfoSource*)self, (intptr_t)callback);
 }
 
-void q_geosatelliteinfosource_qbase_request_update(void* self, int timeout) {
-    QGeoSatelliteInfoSource_QBaseRequestUpdate((QGeoSatelliteInfoSource*)self, timeout);
+void q_geosatelliteinfosource_super_request_update(void* self, int timeout) {
+    QGeoSatelliteInfoSource_SuperRequestUpdate((QGeoSatelliteInfoSource*)self, timeout);
 }
 
 void q_geosatelliteinfosource_satellites_in_view_updated(void* self, libqt_list /* of QGeoSatelliteInfo* */ satellites) {
@@ -499,8 +499,8 @@ bool q_geosatelliteinfosource_event(void* self, void* event) {
     return QGeoSatelliteInfoSource_Event((QGeoSatelliteInfoSource*)self, (QEvent*)event);
 }
 
-bool q_geosatelliteinfosource_qbase_event(void* self, void* event) {
-    return QGeoSatelliteInfoSource_QBaseEvent((QGeoSatelliteInfoSource*)self, (QEvent*)event);
+bool q_geosatelliteinfosource_super_event(void* self, void* event) {
+    return QGeoSatelliteInfoSource_SuperEvent((QGeoSatelliteInfoSource*)self, (QEvent*)event);
 }
 
 void q_geosatelliteinfosource_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -511,8 +511,8 @@ bool q_geosatelliteinfosource_event_filter(void* self, void* watched, void* even
     return QGeoSatelliteInfoSource_EventFilter((QGeoSatelliteInfoSource*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_geosatelliteinfosource_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoSatelliteInfoSource_QBaseEventFilter((QGeoSatelliteInfoSource*)self, (QObject*)watched, (QEvent*)event);
+bool q_geosatelliteinfosource_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoSatelliteInfoSource_SuperEventFilter((QGeoSatelliteInfoSource*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_geosatelliteinfosource_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -523,8 +523,8 @@ void q_geosatelliteinfosource_timer_event(void* self, void* event) {
     QGeoSatelliteInfoSource_TimerEvent((QGeoSatelliteInfoSource*)self, (QTimerEvent*)event);
 }
 
-void q_geosatelliteinfosource_qbase_timer_event(void* self, void* event) {
-    QGeoSatelliteInfoSource_QBaseTimerEvent((QGeoSatelliteInfoSource*)self, (QTimerEvent*)event);
+void q_geosatelliteinfosource_super_timer_event(void* self, void* event) {
+    QGeoSatelliteInfoSource_SuperTimerEvent((QGeoSatelliteInfoSource*)self, (QTimerEvent*)event);
 }
 
 void q_geosatelliteinfosource_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -535,8 +535,8 @@ void q_geosatelliteinfosource_child_event(void* self, void* event) {
     QGeoSatelliteInfoSource_ChildEvent((QGeoSatelliteInfoSource*)self, (QChildEvent*)event);
 }
 
-void q_geosatelliteinfosource_qbase_child_event(void* self, void* event) {
-    QGeoSatelliteInfoSource_QBaseChildEvent((QGeoSatelliteInfoSource*)self, (QChildEvent*)event);
+void q_geosatelliteinfosource_super_child_event(void* self, void* event) {
+    QGeoSatelliteInfoSource_SuperChildEvent((QGeoSatelliteInfoSource*)self, (QChildEvent*)event);
 }
 
 void q_geosatelliteinfosource_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -547,8 +547,8 @@ void q_geosatelliteinfosource_custom_event(void* self, void* event) {
     QGeoSatelliteInfoSource_CustomEvent((QGeoSatelliteInfoSource*)self, (QEvent*)event);
 }
 
-void q_geosatelliteinfosource_qbase_custom_event(void* self, void* event) {
-    QGeoSatelliteInfoSource_QBaseCustomEvent((QGeoSatelliteInfoSource*)self, (QEvent*)event);
+void q_geosatelliteinfosource_super_custom_event(void* self, void* event) {
+    QGeoSatelliteInfoSource_SuperCustomEvent((QGeoSatelliteInfoSource*)self, (QEvent*)event);
 }
 
 void q_geosatelliteinfosource_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -559,8 +559,8 @@ void q_geosatelliteinfosource_connect_notify(void* self, void* signal) {
     QGeoSatelliteInfoSource_ConnectNotify((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_geosatelliteinfosource_qbase_connect_notify(void* self, void* signal) {
-    QGeoSatelliteInfoSource_QBaseConnectNotify((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
+void q_geosatelliteinfosource_super_connect_notify(void* self, void* signal) {
+    QGeoSatelliteInfoSource_SuperConnectNotify((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
 void q_geosatelliteinfosource_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -571,8 +571,8 @@ void q_geosatelliteinfosource_disconnect_notify(void* self, void* signal) {
     QGeoSatelliteInfoSource_DisconnectNotify((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
-void q_geosatelliteinfosource_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoSatelliteInfoSource_QBaseDisconnectNotify((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
+void q_geosatelliteinfosource_super_disconnect_notify(void* self, void* signal) {
+    QGeoSatelliteInfoSource_SuperDisconnectNotify((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
 void q_geosatelliteinfosource_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -583,8 +583,8 @@ QObject* q_geosatelliteinfosource_sender(void* self) {
     return QGeoSatelliteInfoSource_Sender((QGeoSatelliteInfoSource*)self);
 }
 
-QObject* q_geosatelliteinfosource_qbase_sender(void* self) {
-    return QGeoSatelliteInfoSource_QBaseSender((QGeoSatelliteInfoSource*)self);
+QObject* q_geosatelliteinfosource_super_sender(void* self) {
+    return QGeoSatelliteInfoSource_SuperSender((QGeoSatelliteInfoSource*)self);
 }
 
 void q_geosatelliteinfosource_on_sender(void* self, QObject* (*callback)()) {
@@ -595,8 +595,8 @@ int32_t q_geosatelliteinfosource_sender_signal_index(void* self) {
     return QGeoSatelliteInfoSource_SenderSignalIndex((QGeoSatelliteInfoSource*)self);
 }
 
-int32_t q_geosatelliteinfosource_qbase_sender_signal_index(void* self) {
-    return QGeoSatelliteInfoSource_QBaseSenderSignalIndex((QGeoSatelliteInfoSource*)self);
+int32_t q_geosatelliteinfosource_super_sender_signal_index(void* self) {
+    return QGeoSatelliteInfoSource_SuperSenderSignalIndex((QGeoSatelliteInfoSource*)self);
 }
 
 void q_geosatelliteinfosource_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -607,8 +607,8 @@ int32_t q_geosatelliteinfosource_receivers(void* self, const char* signal) {
     return QGeoSatelliteInfoSource_Receivers((QGeoSatelliteInfoSource*)self, signal);
 }
 
-int32_t q_geosatelliteinfosource_qbase_receivers(void* self, const char* signal) {
-    return QGeoSatelliteInfoSource_QBaseReceivers((QGeoSatelliteInfoSource*)self, signal);
+int32_t q_geosatelliteinfosource_super_receivers(void* self, const char* signal) {
+    return QGeoSatelliteInfoSource_SuperReceivers((QGeoSatelliteInfoSource*)self, signal);
 }
 
 void q_geosatelliteinfosource_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -619,8 +619,8 @@ bool q_geosatelliteinfosource_is_signal_connected(void* self, void* signal) {
     return QGeoSatelliteInfoSource_IsSignalConnected((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
-bool q_geosatelliteinfosource_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoSatelliteInfoSource_QBaseIsSignalConnected((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
+bool q_geosatelliteinfosource_super_is_signal_connected(void* self, void* signal) {
+    return QGeoSatelliteInfoSource_SuperIsSignalConnected((QGeoSatelliteInfoSource*)self, (QMetaMethod*)signal);
 }
 
 void q_geosatelliteinfosource_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

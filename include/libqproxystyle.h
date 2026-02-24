@@ -48,13 +48,17 @@ const QMetaObject* q_proxystyle_meta_object(void* self);
 ///
 void q_proxystyle_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_meta_object` instead
+///
+#define q_proxystyle_qbase_meta_object q_proxystyle_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QProxyStyle*
 ///
-const QMetaObject* q_proxystyle_qbase_meta_object(void* self);
+const QMetaObject* q_proxystyle_super_meta_object(void* self);
 
 /// @param self QProxyStyle*
 /// @param param1 const char*
@@ -68,12 +72,16 @@ void* q_proxystyle_metacast(void* self, const char* param1);
 ///
 void q_proxystyle_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_metacast` instead
+///
+#define q_proxystyle_qbase_metacast q_proxystyle_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QProxyStyle*
 /// @param param1 const char*
 ///
-void* q_proxystyle_qbase_metacast(void* self, const char* param1);
+void* q_proxystyle_super_metacast(void* self, const char* param1);
 
 /// @param self QProxyStyle*
 /// @param param1 enum QMetaObject__Call
@@ -89,6 +97,10 @@ int32_t q_proxystyle_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_metacall` instead
+///
+#define q_proxystyle_qbase_metacall q_proxystyle_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QProxyStyle*
@@ -96,7 +108,7 @@ void q_proxystyle_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_proxystyle_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_proxystyle_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -138,6 +150,10 @@ void q_proxystyle_draw_primitive(void* self, int32_t element, void* option, void
 ///
 void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_draw_primitive` instead
+///
+#define q_proxystyle_qbase_draw_primitive q_proxystyle_super_draw_primitive
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawPrimitive)
 ///
 /// Base class method implementation
@@ -148,7 +164,7 @@ void q_proxystyle_on_draw_primitive(void* self, void (*callback)(void*, int32_t,
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget);
+void q_proxystyle_super_draw_primitive(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
 ///
@@ -169,6 +185,10 @@ void q_proxystyle_draw_control(void* self, int32_t element, void* option, void* 
 ///
 void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_draw_control` instead
+///
+#define q_proxystyle_qbase_draw_control q_proxystyle_super_draw_control
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawControl)
 ///
 /// Base class method implementation
@@ -179,7 +199,7 @@ void q_proxystyle_on_draw_control(void* self, void (*callback)(void*, int32_t, v
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_draw_control(void* self, int32_t element, void* option, void* painter, void* widget);
+void q_proxystyle_super_draw_control(void* self, int32_t element, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
 ///
@@ -200,6 +220,10 @@ void q_proxystyle_draw_complex_control(void* self, int32_t control, void* option
 ///
 void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_draw_complex_control` instead
+///
+#define q_proxystyle_qbase_draw_complex_control q_proxystyle_super_draw_complex_control
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawComplexControl)
 ///
 /// Base class method implementation
@@ -210,7 +234,7 @@ void q_proxystyle_on_draw_complex_control(void* self, void (*callback)(void*, in
 /// @param painter QPainter*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_draw_complex_control(void* self, int32_t control, void* option, void* painter, void* widget);
+void q_proxystyle_super_draw_complex_control(void* self, int32_t control, void* option, void* painter, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
 ///
@@ -234,6 +258,10 @@ void q_proxystyle_draw_item_text(void* self, void* painter, void* rect, int flag
 ///
 void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, void*, int, void*, bool, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_draw_item_text` instead
+///
+#define q_proxystyle_qbase_draw_item_text q_proxystyle_super_draw_item_text
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemText)
 ///
 /// Base class method implementation
@@ -247,7 +275,7 @@ void q_proxystyle_on_draw_item_text(void* self, void (*callback)(void*, void*, v
 /// @param text const char*
 /// @param textRole enum QPalette__ColorRole
 ///
-void q_proxystyle_qbase_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
+void q_proxystyle_super_draw_item_text(void* self, void* painter, void* rect, int flags, void* pal, bool enabled, const char* text, int32_t textRole);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
 ///
@@ -268,6 +296,10 @@ void q_proxystyle_draw_item_pixmap(void* self, void* painter, void* rect, int al
 ///
 void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_draw_item_pixmap` instead
+///
+#define q_proxystyle_qbase_draw_item_pixmap q_proxystyle_super_draw_item_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#drawItemPixmap)
 ///
 /// Base class method implementation
@@ -278,7 +310,7 @@ void q_proxystyle_on_draw_item_pixmap(void* self, void (*callback)(void*, void*,
 /// @param alignment int
 /// @param pixmap QPixmap*
 ///
-void q_proxystyle_qbase_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
+void q_proxystyle_super_draw_item_pixmap(void* self, void* painter, void* rect, int alignment, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
 ///
@@ -299,6 +331,10 @@ QSize* q_proxystyle_size_from_contents(void* self, int32_t type, void* option, v
 ///
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_size_from_contents` instead
+///
+#define q_proxystyle_qbase_size_from_contents q_proxystyle_super_size_from_contents
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#sizeFromContents)
 ///
 /// Base class method implementation
@@ -309,7 +345,7 @@ void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, in
 /// @param size QSize*
 /// @param widget QWidget*
 ///
-QSize* q_proxystyle_qbase_size_from_contents(void* self, int32_t type, void* option, void* size, void* widget);
+QSize* q_proxystyle_super_size_from_contents(void* self, int32_t type, void* option, void* size, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
 ///
@@ -329,6 +365,10 @@ QRect* q_proxystyle_sub_element_rect(void* self, int32_t element, void* option, 
 ///
 void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_sub_element_rect` instead
+///
+#define q_proxystyle_qbase_sub_element_rect q_proxystyle_super_sub_element_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subElementRect)
 ///
 /// Base class method implementation
@@ -338,7 +378,7 @@ void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int3
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QRect* q_proxystyle_qbase_sub_element_rect(void* self, int32_t element, void* option, void* widget);
+QRect* q_proxystyle_super_sub_element_rect(void* self, int32_t element, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
 ///
@@ -359,6 +399,10 @@ QRect* q_proxystyle_sub_control_rect(void* self, int32_t cc, void* opt, int32_t 
 ///
 void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_sub_control_rect` instead
+///
+#define q_proxystyle_qbase_sub_control_rect q_proxystyle_super_sub_control_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#subControlRect)
 ///
 /// Base class method implementation
@@ -369,7 +413,7 @@ void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int3
 /// @param sc enum QStyle__SubControl
 /// @param widget QWidget*
 ///
-QRect* q_proxystyle_qbase_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
+QRect* q_proxystyle_super_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
 ///
@@ -391,6 +435,10 @@ QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, boo
 ///
 void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_item_text_rect` instead
+///
+#define q_proxystyle_qbase_item_text_rect q_proxystyle_super_item_text_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemTextRect)
 ///
 /// Base class method implementation
@@ -402,7 +450,7 @@ void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*,
 /// @param enabled bool
 /// @param text const char*
 ///
-QRect* q_proxystyle_qbase_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
+QRect* q_proxystyle_super_item_text_rect(void* self, void* fm, void* r, int flags, bool enabled, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
 ///
@@ -422,6 +470,10 @@ QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixma
 ///
 void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_item_pixmap_rect` instead
+///
+#define q_proxystyle_qbase_item_pixmap_rect q_proxystyle_super_item_pixmap_rect
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#itemPixmapRect)
 ///
 /// Base class method implementation
@@ -431,7 +483,7 @@ void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void
 /// @param flags int
 /// @param pixmap QPixmap*
 ///
-QRect* q_proxystyle_qbase_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
+QRect* q_proxystyle_super_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
 ///
@@ -454,6 +506,10 @@ int32_t q_proxystyle_hit_test_complex_control(void* self, int32_t control, void*
 ///
 void q_proxystyle_on_hit_test_complex_control(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_hit_test_complex_control` instead
+///
+#define q_proxystyle_qbase_hit_test_complex_control q_proxystyle_super_hit_test_complex_control
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#hitTestComplexControl)
 ///
 /// Base class method implementation
@@ -466,7 +522,7 @@ void q_proxystyle_on_hit_test_complex_control(void* self, int32_t (*callback)(vo
 ///
 /// @return enum QStyle__SubControl
 ///
-int32_t q_proxystyle_qbase_hit_test_complex_control(void* self, int32_t control, void* option, void* pos, void* widget);
+int32_t q_proxystyle_super_hit_test_complex_control(void* self, int32_t control, void* option, void* pos, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
 ///
@@ -487,6 +543,10 @@ int32_t q_proxystyle_style_hint(void* self, int32_t hint, void* option, void* wi
 ///
 void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int32_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_style_hint` instead
+///
+#define q_proxystyle_qbase_style_hint q_proxystyle_super_style_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#styleHint)
 ///
 /// Base class method implementation
@@ -497,7 +557,7 @@ void q_proxystyle_on_style_hint(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param widget QWidget*
 /// @param returnData QStyleHintReturn*
 ///
-int32_t q_proxystyle_qbase_style_hint(void* self, int32_t hint, void* option, void* widget, void* returnData);
+int32_t q_proxystyle_super_style_hint(void* self, int32_t hint, void* option, void* widget, void* returnData);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
 ///
@@ -517,6 +577,10 @@ int32_t q_proxystyle_pixel_metric(void* self, int32_t metric, void* option, void
 ///
 void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_pixel_metric` instead
+///
+#define q_proxystyle_qbase_pixel_metric q_proxystyle_super_pixel_metric
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#pixelMetric)
 ///
 /// Base class method implementation
@@ -526,7 +590,7 @@ void q_proxystyle_on_pixel_metric(void* self, int32_t (*callback)(void*, int32_t
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_proxystyle_qbase_pixel_metric(void* self, int32_t metric, void* option, void* widget);
+int32_t q_proxystyle_super_pixel_metric(void* self, int32_t metric, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
 ///
@@ -548,6 +612,10 @@ int32_t q_proxystyle_layout_spacing(void* self, int32_t control1, int32_t contro
 ///
 void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32_t, int32_t, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_layout_spacing` instead
+///
+#define q_proxystyle_qbase_layout_spacing q_proxystyle_super_layout_spacing
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#layoutSpacing)
 ///
 /// Base class method implementation
@@ -559,7 +627,7 @@ void q_proxystyle_on_layout_spacing(void* self, int32_t (*callback)(void*, int32
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-int32_t q_proxystyle_qbase_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
+int32_t q_proxystyle_super_layout_spacing(void* self, int32_t control1, int32_t control2, int32_t orientation, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
 ///
@@ -579,6 +647,10 @@ QIcon* q_proxystyle_standard_icon(void* self, int32_t standardIcon, void* option
 ///
 void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_standard_icon` instead
+///
+#define q_proxystyle_qbase_standard_icon q_proxystyle_super_standard_icon
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardIcon)
 ///
 /// Base class method implementation
@@ -588,7 +660,7 @@ void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t
 /// @param option QStyleOption*
 /// @param widget QWidget*
 ///
-QIcon* q_proxystyle_qbase_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
+QIcon* q_proxystyle_super_standard_icon(void* self, int32_t standardIcon, void* option, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
 ///
@@ -608,6 +680,10 @@ QPixmap* q_proxystyle_standard_pixmap(void* self, int32_t standardPixmap, void* 
 ///
 void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_standard_pixmap` instead
+///
+#define q_proxystyle_qbase_standard_pixmap q_proxystyle_super_standard_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPixmap)
 ///
 /// Base class method implementation
@@ -617,7 +693,7 @@ void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int
 /// @param opt QStyleOption*
 /// @param widget QWidget*
 ///
-QPixmap* q_proxystyle_qbase_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
+QPixmap* q_proxystyle_super_standard_pixmap(void* self, int32_t standardPixmap, void* opt, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
 ///
@@ -637,6 +713,10 @@ QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* 
 ///
 void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_generated_icon_pixmap` instead
+///
+#define q_proxystyle_qbase_generated_icon_pixmap q_proxystyle_super_generated_icon_pixmap
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#generatedIconPixmap)
 ///
 /// Base class method implementation
@@ -646,7 +726,7 @@ void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void
 /// @param pixmap QPixmap*
 /// @param opt QStyleOption*
 ///
-QPixmap* q_proxystyle_qbase_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
+QPixmap* q_proxystyle_super_generated_icon_pixmap(void* self, int32_t iconMode, void* pixmap, void* opt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
 ///
@@ -663,13 +743,17 @@ QPalette* q_proxystyle_standard_palette(void* self);
 ///
 void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)());
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_standard_palette` instead
+///
+#define q_proxystyle_qbase_standard_palette q_proxystyle_super_standard_palette
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#standardPalette)
 ///
 /// Base class method implementation
 ///
 /// @param self QProxyStyle*
 ///
-QPalette* q_proxystyle_qbase_standard_palette(void* self);
+QPalette* q_proxystyle_super_standard_palette(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
@@ -687,6 +771,10 @@ void q_proxystyle_polish(void* self, void* widget);
 ///
 void q_proxystyle_on_polish(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_polish` instead
+///
+#define q_proxystyle_qbase_polish q_proxystyle_super_polish
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Base class method implementation
@@ -694,7 +782,7 @@ void q_proxystyle_on_polish(void* self, void (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_polish(void* self, void* widget);
+void q_proxystyle_super_polish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
@@ -712,6 +800,10 @@ void q_proxystyle_polish2(void* self, void* pal);
 ///
 void q_proxystyle_on_polish2(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_polish2` instead
+///
+#define q_proxystyle_qbase_polish2 q_proxystyle_super_polish2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Base class method implementation
@@ -719,7 +811,7 @@ void q_proxystyle_on_polish2(void* self, void (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param pal QPalette*
 ///
-void q_proxystyle_qbase_polish2(void* self, void* pal);
+void q_proxystyle_super_polish2(void* self, void* pal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
@@ -737,6 +829,10 @@ void q_proxystyle_polish3(void* self, void* app);
 ///
 void q_proxystyle_on_polish3(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_polish3` instead
+///
+#define q_proxystyle_qbase_polish3 q_proxystyle_super_polish3
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#polish)
 ///
 /// Base class method implementation
@@ -744,7 +840,7 @@ void q_proxystyle_on_polish3(void* self, void (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param app QApplication*
 ///
-void q_proxystyle_qbase_polish3(void* self, void* app);
+void q_proxystyle_super_polish3(void* self, void* app);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
@@ -762,6 +858,10 @@ void q_proxystyle_unpolish(void* self, void* widget);
 ///
 void q_proxystyle_on_unpolish(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_unpolish` instead
+///
+#define q_proxystyle_qbase_unpolish q_proxystyle_super_unpolish
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// Base class method implementation
@@ -769,7 +869,7 @@ void q_proxystyle_on_unpolish(void* self, void (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param widget QWidget*
 ///
-void q_proxystyle_qbase_unpolish(void* self, void* widget);
+void q_proxystyle_super_unpolish(void* self, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
@@ -787,6 +887,10 @@ void q_proxystyle_unpolish2(void* self, void* app);
 ///
 void q_proxystyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_unpolish2` instead
+///
+#define q_proxystyle_qbase_unpolish2 q_proxystyle_super_unpolish2
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#unpolish)
 ///
 /// Base class method implementation
@@ -794,7 +898,7 @@ void q_proxystyle_on_unpolish2(void* self, void (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param app QApplication*
 ///
-void q_proxystyle_qbase_unpolish2(void* self, void* app);
+void q_proxystyle_super_unpolish2(void* self, void* app);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#event)
 ///
@@ -812,6 +916,10 @@ bool q_proxystyle_event(void* self, void* e);
 ///
 void q_proxystyle_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_event` instead
+///
+#define q_proxystyle_qbase_event q_proxystyle_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qproxystyle.html#event)
 ///
 /// Base class method implementation
@@ -819,7 +927,7 @@ void q_proxystyle_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QProxyStyle*
 /// @param e QEvent*
 ///
-bool q_proxystyle_qbase_event(void* self, void* e);
+bool q_proxystyle_super_event(void* self, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1441,6 +1549,10 @@ void q_proxystyle_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_proxystyle_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_event_filter` instead
+///
+#define q_proxystyle_qbase_event_filter q_proxystyle_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1451,7 +1563,7 @@ bool q_proxystyle_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_proxystyle_qbase_event_filter(void* self, void* watched, void* event);
+bool q_proxystyle_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1475,6 +1587,10 @@ void q_proxystyle_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 ///
 void q_proxystyle_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_timer_event` instead
+///
+#define q_proxystyle_qbase_timer_event q_proxystyle_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1484,7 +1600,7 @@ void q_proxystyle_timer_event(void* self, void* event);
 /// @param self QProxyStyle*
 /// @param event QTimerEvent*
 ///
-void q_proxystyle_qbase_timer_event(void* self, void* event);
+void q_proxystyle_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1508,6 +1624,10 @@ void q_proxystyle_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_proxystyle_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_child_event` instead
+///
+#define q_proxystyle_qbase_child_event q_proxystyle_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1517,7 +1637,7 @@ void q_proxystyle_child_event(void* self, void* event);
 /// @param self QProxyStyle*
 /// @param event QChildEvent*
 ///
-void q_proxystyle_qbase_child_event(void* self, void* event);
+void q_proxystyle_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1541,6 +1661,10 @@ void q_proxystyle_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_proxystyle_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_custom_event` instead
+///
+#define q_proxystyle_qbase_custom_event q_proxystyle_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1550,7 +1674,7 @@ void q_proxystyle_custom_event(void* self, void* event);
 /// @param self QProxyStyle*
 /// @param event QEvent*
 ///
-void q_proxystyle_qbase_custom_event(void* self, void* event);
+void q_proxystyle_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1574,6 +1698,10 @@ void q_proxystyle_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_proxystyle_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_connect_notify` instead
+///
+#define q_proxystyle_qbase_connect_notify q_proxystyle_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1583,7 +1711,7 @@ void q_proxystyle_connect_notify(void* self, void* signal);
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
 ///
-void q_proxystyle_qbase_connect_notify(void* self, void* signal);
+void q_proxystyle_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1607,6 +1735,10 @@ void q_proxystyle_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_proxystyle_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_disconnect_notify` instead
+///
+#define q_proxystyle_qbase_disconnect_notify q_proxystyle_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1616,7 +1748,7 @@ void q_proxystyle_disconnect_notify(void* self, void* signal);
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
 ///
-void q_proxystyle_qbase_disconnect_notify(void* self, void* signal);
+void q_proxystyle_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1639,6 +1771,10 @@ void q_proxystyle_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 QObject* q_proxystyle_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_sender` instead
+///
+#define q_proxystyle_qbase_sender q_proxystyle_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1647,7 +1783,7 @@ QObject* q_proxystyle_sender(void* self);
 ///
 /// @param self QProxyStyle*
 ///
-QObject* q_proxystyle_qbase_sender(void* self);
+QObject* q_proxystyle_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1670,6 +1806,10 @@ void q_proxystyle_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_proxystyle_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_sender_signal_index` instead
+///
+#define q_proxystyle_qbase_sender_signal_index q_proxystyle_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1678,7 +1818,7 @@ int32_t q_proxystyle_sender_signal_index(void* self);
 ///
 /// @param self QProxyStyle*
 ///
-int32_t q_proxystyle_qbase_sender_signal_index(void* self);
+int32_t q_proxystyle_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1702,6 +1842,10 @@ void q_proxystyle_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_proxystyle_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_receivers` instead
+///
+#define q_proxystyle_qbase_receivers q_proxystyle_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1711,7 +1855,7 @@ int32_t q_proxystyle_receivers(void* self, const char* signal);
 /// @param self QProxyStyle*
 /// @param signal const char*
 ///
-int32_t q_proxystyle_qbase_receivers(void* self, const char* signal);
+int32_t q_proxystyle_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1735,6 +1879,10 @@ void q_proxystyle_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool q_proxystyle_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_proxystyle_super_is_signal_connected` instead
+///
+#define q_proxystyle_qbase_is_signal_connected q_proxystyle_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1744,7 +1892,7 @@ bool q_proxystyle_is_signal_connected(void* self, void* signal);
 /// @param self QProxyStyle*
 /// @param signal QMetaMethod*
 ///
-bool q_proxystyle_qbase_is_signal_connected(void* self, void* signal);
+bool q_proxystyle_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

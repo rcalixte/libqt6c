@@ -23,8 +23,8 @@ void q_coloraxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QColorAxis_OnMetaObject((QColorAxis*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_coloraxis_qbase_meta_object(void* self) {
-    return QColorAxis_QBaseMetaObject((QColorAxis*)self);
+const QMetaObject* q_coloraxis_super_meta_object(void* self) {
+    return QColorAxis_SuperMetaObject((QColorAxis*)self);
 }
 
 void* q_coloraxis_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_coloraxis_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QColorAxis_OnMetacast((QColorAxis*)self, (intptr_t)callback);
 }
 
-void* q_coloraxis_qbase_metacast(void* self, const char* param1) {
-    return QColorAxis_QBaseMetacast((QColorAxis*)self, param1);
+void* q_coloraxis_super_metacast(void* self, const char* param1) {
+    return QColorAxis_SuperMetacast((QColorAxis*)self, param1);
 }
 
 int32_t q_coloraxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_coloraxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QColorAxis_OnMetacall((QColorAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_coloraxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QColorAxis_QBaseMetacall((QColorAxis*)self, param1, param2, param3);
+int32_t q_coloraxis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QColorAxis_SuperMetacall((QColorAxis*)self, param1, param2, param3);
 }
 
 const char* q_coloraxis_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_coloraxis_on_type(void* self, int32_t (*callback)()) {
     QColorAxis_OnType((QColorAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_coloraxis_qbase_type(void* self) {
-    return QColorAxis_QBaseType((QColorAxis*)self);
+int32_t q_coloraxis_super_type(void* self) {
+    return QColorAxis_SuperType((QColorAxis*)self);
 }
 
 void q_coloraxis_set_min(void* self, double min) {
@@ -910,8 +910,8 @@ bool q_coloraxis_event(void* self, void* event) {
     return QColorAxis_Event((QColorAxis*)self, (QEvent*)event);
 }
 
-bool q_coloraxis_qbase_event(void* self, void* event) {
-    return QColorAxis_QBaseEvent((QColorAxis*)self, (QEvent*)event);
+bool q_coloraxis_super_event(void* self, void* event) {
+    return QColorAxis_SuperEvent((QColorAxis*)self, (QEvent*)event);
 }
 
 void q_coloraxis_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -922,8 +922,8 @@ bool q_coloraxis_event_filter(void* self, void* watched, void* event) {
     return QColorAxis_EventFilter((QColorAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_coloraxis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QColorAxis_QBaseEventFilter((QColorAxis*)self, (QObject*)watched, (QEvent*)event);
+bool q_coloraxis_super_event_filter(void* self, void* watched, void* event) {
+    return QColorAxis_SuperEventFilter((QColorAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_coloraxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -934,8 +934,8 @@ void q_coloraxis_timer_event(void* self, void* event) {
     QColorAxis_TimerEvent((QColorAxis*)self, (QTimerEvent*)event);
 }
 
-void q_coloraxis_qbase_timer_event(void* self, void* event) {
-    QColorAxis_QBaseTimerEvent((QColorAxis*)self, (QTimerEvent*)event);
+void q_coloraxis_super_timer_event(void* self, void* event) {
+    QColorAxis_SuperTimerEvent((QColorAxis*)self, (QTimerEvent*)event);
 }
 
 void q_coloraxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -946,8 +946,8 @@ void q_coloraxis_child_event(void* self, void* event) {
     QColorAxis_ChildEvent((QColorAxis*)self, (QChildEvent*)event);
 }
 
-void q_coloraxis_qbase_child_event(void* self, void* event) {
-    QColorAxis_QBaseChildEvent((QColorAxis*)self, (QChildEvent*)event);
+void q_coloraxis_super_child_event(void* self, void* event) {
+    QColorAxis_SuperChildEvent((QColorAxis*)self, (QChildEvent*)event);
 }
 
 void q_coloraxis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -958,8 +958,8 @@ void q_coloraxis_custom_event(void* self, void* event) {
     QColorAxis_CustomEvent((QColorAxis*)self, (QEvent*)event);
 }
 
-void q_coloraxis_qbase_custom_event(void* self, void* event) {
-    QColorAxis_QBaseCustomEvent((QColorAxis*)self, (QEvent*)event);
+void q_coloraxis_super_custom_event(void* self, void* event) {
+    QColorAxis_SuperCustomEvent((QColorAxis*)self, (QEvent*)event);
 }
 
 void q_coloraxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -970,8 +970,8 @@ void q_coloraxis_connect_notify(void* self, void* signal) {
     QColorAxis_ConnectNotify((QColorAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_coloraxis_qbase_connect_notify(void* self, void* signal) {
-    QColorAxis_QBaseConnectNotify((QColorAxis*)self, (QMetaMethod*)signal);
+void q_coloraxis_super_connect_notify(void* self, void* signal) {
+    QColorAxis_SuperConnectNotify((QColorAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_coloraxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -982,8 +982,8 @@ void q_coloraxis_disconnect_notify(void* self, void* signal) {
     QColorAxis_DisconnectNotify((QColorAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_coloraxis_qbase_disconnect_notify(void* self, void* signal) {
-    QColorAxis_QBaseDisconnectNotify((QColorAxis*)self, (QMetaMethod*)signal);
+void q_coloraxis_super_disconnect_notify(void* self, void* signal) {
+    QColorAxis_SuperDisconnectNotify((QColorAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_coloraxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -994,8 +994,8 @@ QObject* q_coloraxis_sender(void* self) {
     return QColorAxis_Sender((QColorAxis*)self);
 }
 
-QObject* q_coloraxis_qbase_sender(void* self) {
-    return QColorAxis_QBaseSender((QColorAxis*)self);
+QObject* q_coloraxis_super_sender(void* self) {
+    return QColorAxis_SuperSender((QColorAxis*)self);
 }
 
 void q_coloraxis_on_sender(void* self, QObject* (*callback)()) {
@@ -1006,8 +1006,8 @@ int32_t q_coloraxis_sender_signal_index(void* self) {
     return QColorAxis_SenderSignalIndex((QColorAxis*)self);
 }
 
-int32_t q_coloraxis_qbase_sender_signal_index(void* self) {
-    return QColorAxis_QBaseSenderSignalIndex((QColorAxis*)self);
+int32_t q_coloraxis_super_sender_signal_index(void* self) {
+    return QColorAxis_SuperSenderSignalIndex((QColorAxis*)self);
 }
 
 void q_coloraxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1018,8 +1018,8 @@ int32_t q_coloraxis_receivers(void* self, const char* signal) {
     return QColorAxis_Receivers((QColorAxis*)self, signal);
 }
 
-int32_t q_coloraxis_qbase_receivers(void* self, const char* signal) {
-    return QColorAxis_QBaseReceivers((QColorAxis*)self, signal);
+int32_t q_coloraxis_super_receivers(void* self, const char* signal) {
+    return QColorAxis_SuperReceivers((QColorAxis*)self, signal);
 }
 
 void q_coloraxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1030,8 +1030,8 @@ bool q_coloraxis_is_signal_connected(void* self, void* signal) {
     return QColorAxis_IsSignalConnected((QColorAxis*)self, (QMetaMethod*)signal);
 }
 
-bool q_coloraxis_qbase_is_signal_connected(void* self, void* signal) {
-    return QColorAxis_QBaseIsSignalConnected((QColorAxis*)self, (QMetaMethod*)signal);
+bool q_coloraxis_super_is_signal_connected(void* self, void* signal) {
+    return QColorAxis_SuperIsSignalConnected((QColorAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_coloraxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

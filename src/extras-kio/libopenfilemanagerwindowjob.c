@@ -23,8 +23,8 @@ void k_io__openfilemanagerwindowjob_on_meta_object(void* self, const QMetaObject
     KIO__OpenFileManagerWindowJob_OnMetaObject((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__openfilemanagerwindowjob_qbase_meta_object(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseMetaObject((KIO__OpenFileManagerWindowJob*)self);
+const QMetaObject* k_io__openfilemanagerwindowjob_super_meta_object(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperMetaObject((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void* k_io__openfilemanagerwindowjob_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_io__openfilemanagerwindowjob_on_metacast(void* self, void* (*callback)(vo
     KIO__OpenFileManagerWindowJob_OnMetacast((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
 }
 
-void* k_io__openfilemanagerwindowjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__OpenFileManagerWindowJob_QBaseMetacast((KIO__OpenFileManagerWindowJob*)self, param1);
+void* k_io__openfilemanagerwindowjob_super_metacast(void* self, const char* param1) {
+    return KIO__OpenFileManagerWindowJob_SuperMetacast((KIO__OpenFileManagerWindowJob*)self, param1);
 }
 
 int32_t k_io__openfilemanagerwindowjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_io__openfilemanagerwindowjob_on_metacall(void* self, int32_t (*callback)(
     KIO__OpenFileManagerWindowJob_OnMetacall((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
 }
 
-int32_t k_io__openfilemanagerwindowjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__OpenFileManagerWindowJob_QBaseMetacall((KIO__OpenFileManagerWindowJob*)self, param1, param2, param3);
+int32_t k_io__openfilemanagerwindowjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__OpenFileManagerWindowJob_SuperMetacall((KIO__OpenFileManagerWindowJob*)self, param1, param2, param3);
 }
 
 const char* k_io__openfilemanagerwindowjob_tr(const char* s) {
@@ -86,8 +86,8 @@ void k_io__openfilemanagerwindowjob_on_start(void* self, void (*callback)()) {
     KIO__OpenFileManagerWindowJob_OnStart((KIO__OpenFileManagerWindowJob*)self, (intptr_t)callback);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_start(void* self) {
-    KIO__OpenFileManagerWindowJob_QBaseStart((KIO__OpenFileManagerWindowJob*)self);
+void k_io__openfilemanagerwindowjob_super_start(void* self) {
+    KIO__OpenFileManagerWindowJob_SuperStart((KIO__OpenFileManagerWindowJob*)self);
 }
 
 const char* k_io__openfilemanagerwindowjob_tr2(const char* s, const char* c) {
@@ -446,8 +446,8 @@ bool k_io__openfilemanagerwindowjob_do_kill(void* self) {
     return KIO__OpenFileManagerWindowJob_DoKill((KIO__OpenFileManagerWindowJob*)self);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_do_kill(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseDoKill((KIO__OpenFileManagerWindowJob*)self);
+bool k_io__openfilemanagerwindowjob_super_do_kill(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperDoKill((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_do_kill(void* self, bool (*callback)()) {
@@ -458,8 +458,8 @@ bool k_io__openfilemanagerwindowjob_do_suspend(void* self) {
     return KIO__OpenFileManagerWindowJob_DoSuspend((KIO__OpenFileManagerWindowJob*)self);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_do_suspend(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseDoSuspend((KIO__OpenFileManagerWindowJob*)self);
+bool k_io__openfilemanagerwindowjob_super_do_suspend(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperDoSuspend((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -470,8 +470,8 @@ bool k_io__openfilemanagerwindowjob_do_resume(void* self) {
     return KIO__OpenFileManagerWindowJob_DoResume((KIO__OpenFileManagerWindowJob*)self);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_do_resume(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseDoResume((KIO__OpenFileManagerWindowJob*)self);
+bool k_io__openfilemanagerwindowjob_super_do_resume(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperDoResume((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_do_resume(void* self, bool (*callback)()) {
@@ -485,8 +485,8 @@ const char* k_io__openfilemanagerwindowjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__openfilemanagerwindowjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__OpenFileManagerWindowJob_QBaseErrorString((KIO__OpenFileManagerWindowJob*)self);
+const char* k_io__openfilemanagerwindowjob_super_error_string(void* self) {
+    libqt_string _str = KIO__OpenFileManagerWindowJob_SuperErrorString((KIO__OpenFileManagerWindowJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -500,8 +500,8 @@ bool k_io__openfilemanagerwindowjob_event(void* self, void* event) {
     return KIO__OpenFileManagerWindowJob_Event((KIO__OpenFileManagerWindowJob*)self, (QEvent*)event);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_event(void* self, void* event) {
-    return KIO__OpenFileManagerWindowJob_QBaseEvent((KIO__OpenFileManagerWindowJob*)self, (QEvent*)event);
+bool k_io__openfilemanagerwindowjob_super_event(void* self, void* event) {
+    return KIO__OpenFileManagerWindowJob_SuperEvent((KIO__OpenFileManagerWindowJob*)self, (QEvent*)event);
 }
 
 void k_io__openfilemanagerwindowjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -512,8 +512,8 @@ bool k_io__openfilemanagerwindowjob_event_filter(void* self, void* watched, void
     return KIO__OpenFileManagerWindowJob_EventFilter((KIO__OpenFileManagerWindowJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__OpenFileManagerWindowJob_QBaseEventFilter((KIO__OpenFileManagerWindowJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__openfilemanagerwindowjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__OpenFileManagerWindowJob_SuperEventFilter((KIO__OpenFileManagerWindowJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__openfilemanagerwindowjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -524,8 +524,8 @@ void k_io__openfilemanagerwindowjob_timer_event(void* self, void* event) {
     KIO__OpenFileManagerWindowJob_TimerEvent((KIO__OpenFileManagerWindowJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_timer_event(void* self, void* event) {
-    KIO__OpenFileManagerWindowJob_QBaseTimerEvent((KIO__OpenFileManagerWindowJob*)self, (QTimerEvent*)event);
+void k_io__openfilemanagerwindowjob_super_timer_event(void* self, void* event) {
+    KIO__OpenFileManagerWindowJob_SuperTimerEvent((KIO__OpenFileManagerWindowJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__openfilemanagerwindowjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -536,8 +536,8 @@ void k_io__openfilemanagerwindowjob_child_event(void* self, void* event) {
     KIO__OpenFileManagerWindowJob_ChildEvent((KIO__OpenFileManagerWindowJob*)self, (QChildEvent*)event);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_child_event(void* self, void* event) {
-    KIO__OpenFileManagerWindowJob_QBaseChildEvent((KIO__OpenFileManagerWindowJob*)self, (QChildEvent*)event);
+void k_io__openfilemanagerwindowjob_super_child_event(void* self, void* event) {
+    KIO__OpenFileManagerWindowJob_SuperChildEvent((KIO__OpenFileManagerWindowJob*)self, (QChildEvent*)event);
 }
 
 void k_io__openfilemanagerwindowjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -548,8 +548,8 @@ void k_io__openfilemanagerwindowjob_custom_event(void* self, void* event) {
     KIO__OpenFileManagerWindowJob_CustomEvent((KIO__OpenFileManagerWindowJob*)self, (QEvent*)event);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_custom_event(void* self, void* event) {
-    KIO__OpenFileManagerWindowJob_QBaseCustomEvent((KIO__OpenFileManagerWindowJob*)self, (QEvent*)event);
+void k_io__openfilemanagerwindowjob_super_custom_event(void* self, void* event) {
+    KIO__OpenFileManagerWindowJob_SuperCustomEvent((KIO__OpenFileManagerWindowJob*)self, (QEvent*)event);
 }
 
 void k_io__openfilemanagerwindowjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -560,8 +560,8 @@ void k_io__openfilemanagerwindowjob_connect_notify(void* self, void* signal) {
     KIO__OpenFileManagerWindowJob_ConnectNotify((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__OpenFileManagerWindowJob_QBaseConnectNotify((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
+void k_io__openfilemanagerwindowjob_super_connect_notify(void* self, void* signal) {
+    KIO__OpenFileManagerWindowJob_SuperConnectNotify((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__openfilemanagerwindowjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -572,8 +572,8 @@ void k_io__openfilemanagerwindowjob_disconnect_notify(void* self, void* signal) 
     KIO__OpenFileManagerWindowJob_DisconnectNotify((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__OpenFileManagerWindowJob_QBaseDisconnectNotify((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
+void k_io__openfilemanagerwindowjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__OpenFileManagerWindowJob_SuperDisconnectNotify((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__openfilemanagerwindowjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -584,8 +584,8 @@ void k_io__openfilemanagerwindowjob_set_capabilities(void* self, int32_t capabil
     KIO__OpenFileManagerWindowJob_SetCapabilities((KIO__OpenFileManagerWindowJob*)self, capabilities);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__OpenFileManagerWindowJob_QBaseSetCapabilities((KIO__OpenFileManagerWindowJob*)self, capabilities);
+void k_io__openfilemanagerwindowjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__OpenFileManagerWindowJob_SuperSetCapabilities((KIO__OpenFileManagerWindowJob*)self, capabilities);
 }
 
 void k_io__openfilemanagerwindowjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -596,8 +596,8 @@ bool k_io__openfilemanagerwindowjob_is_finished(void* self) {
     return KIO__OpenFileManagerWindowJob_IsFinished((KIO__OpenFileManagerWindowJob*)self);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_is_finished(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseIsFinished((KIO__OpenFileManagerWindowJob*)self);
+bool k_io__openfilemanagerwindowjob_super_is_finished(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperIsFinished((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_is_finished(void* self, bool (*callback)()) {
@@ -608,8 +608,8 @@ void k_io__openfilemanagerwindowjob_set_error(void* self, int errorCode) {
     KIO__OpenFileManagerWindowJob_SetError((KIO__OpenFileManagerWindowJob*)self, errorCode);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_error(void* self, int errorCode) {
-    KIO__OpenFileManagerWindowJob_QBaseSetError((KIO__OpenFileManagerWindowJob*)self, errorCode);
+void k_io__openfilemanagerwindowjob_super_set_error(void* self, int errorCode) {
+    KIO__OpenFileManagerWindowJob_SuperSetError((KIO__OpenFileManagerWindowJob*)self, errorCode);
 }
 
 void k_io__openfilemanagerwindowjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -620,8 +620,8 @@ void k_io__openfilemanagerwindowjob_set_error_text(void* self, const char* error
     KIO__OpenFileManagerWindowJob_SetErrorText((KIO__OpenFileManagerWindowJob*)self, qstring(errorText));
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__OpenFileManagerWindowJob_QBaseSetErrorText((KIO__OpenFileManagerWindowJob*)self, qstring(errorText));
+void k_io__openfilemanagerwindowjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__OpenFileManagerWindowJob_SuperSetErrorText((KIO__OpenFileManagerWindowJob*)self, qstring(errorText));
 }
 
 void k_io__openfilemanagerwindowjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -632,8 +632,8 @@ void k_io__openfilemanagerwindowjob_set_processed_amount(void* self, int32_t uni
     KIO__OpenFileManagerWindowJob_SetProcessedAmount((KIO__OpenFileManagerWindowJob*)self, unit, amount);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__OpenFileManagerWindowJob_QBaseSetProcessedAmount((KIO__OpenFileManagerWindowJob*)self, unit, amount);
+void k_io__openfilemanagerwindowjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__OpenFileManagerWindowJob_SuperSetProcessedAmount((KIO__OpenFileManagerWindowJob*)self, unit, amount);
 }
 
 void k_io__openfilemanagerwindowjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -644,8 +644,8 @@ void k_io__openfilemanagerwindowjob_set_total_amount(void* self, int32_t unit, u
     KIO__OpenFileManagerWindowJob_SetTotalAmount((KIO__OpenFileManagerWindowJob*)self, unit, amount);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__OpenFileManagerWindowJob_QBaseSetTotalAmount((KIO__OpenFileManagerWindowJob*)self, unit, amount);
+void k_io__openfilemanagerwindowjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__OpenFileManagerWindowJob_SuperSetTotalAmount((KIO__OpenFileManagerWindowJob*)self, unit, amount);
 }
 
 void k_io__openfilemanagerwindowjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -656,8 +656,8 @@ void k_io__openfilemanagerwindowjob_set_progress_unit(void* self, int32_t unit) 
     KIO__OpenFileManagerWindowJob_SetProgressUnit((KIO__OpenFileManagerWindowJob*)self, unit);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__OpenFileManagerWindowJob_QBaseSetProgressUnit((KIO__OpenFileManagerWindowJob*)self, unit);
+void k_io__openfilemanagerwindowjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__OpenFileManagerWindowJob_SuperSetProgressUnit((KIO__OpenFileManagerWindowJob*)self, unit);
 }
 
 void k_io__openfilemanagerwindowjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -668,8 +668,8 @@ void k_io__openfilemanagerwindowjob_set_percent(void* self, uint64_t percentage)
     KIO__OpenFileManagerWindowJob_SetPercent((KIO__OpenFileManagerWindowJob*)self, percentage);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__OpenFileManagerWindowJob_QBaseSetPercent((KIO__OpenFileManagerWindowJob*)self, percentage);
+void k_io__openfilemanagerwindowjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__OpenFileManagerWindowJob_SuperSetPercent((KIO__OpenFileManagerWindowJob*)self, percentage);
 }
 
 void k_io__openfilemanagerwindowjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -680,8 +680,8 @@ void k_io__openfilemanagerwindowjob_emit_result(void* self) {
     KIO__OpenFileManagerWindowJob_EmitResult((KIO__OpenFileManagerWindowJob*)self);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_emit_result(void* self) {
-    KIO__OpenFileManagerWindowJob_QBaseEmitResult((KIO__OpenFileManagerWindowJob*)self);
+void k_io__openfilemanagerwindowjob_super_emit_result(void* self) {
+    KIO__OpenFileManagerWindowJob_SuperEmitResult((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_emit_result(void* self, void (*callback)()) {
@@ -692,8 +692,8 @@ void k_io__openfilemanagerwindowjob_emit_percent(void* self, uint64_t processedA
     KIO__OpenFileManagerWindowJob_EmitPercent((KIO__OpenFileManagerWindowJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__OpenFileManagerWindowJob_QBaseEmitPercent((KIO__OpenFileManagerWindowJob*)self, processedAmount, totalAmount);
+void k_io__openfilemanagerwindowjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__OpenFileManagerWindowJob_SuperEmitPercent((KIO__OpenFileManagerWindowJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__openfilemanagerwindowjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -704,8 +704,8 @@ void k_io__openfilemanagerwindowjob_emit_speed(void* self, uint64_t speed) {
     KIO__OpenFileManagerWindowJob_EmitSpeed((KIO__OpenFileManagerWindowJob*)self, speed);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__OpenFileManagerWindowJob_QBaseEmitSpeed((KIO__OpenFileManagerWindowJob*)self, speed);
+void k_io__openfilemanagerwindowjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__OpenFileManagerWindowJob_SuperEmitSpeed((KIO__OpenFileManagerWindowJob*)self, speed);
 }
 
 void k_io__openfilemanagerwindowjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -716,8 +716,8 @@ void k_io__openfilemanagerwindowjob_start_elapsed_timer(void* self) {
     KIO__OpenFileManagerWindowJob_StartElapsedTimer((KIO__OpenFileManagerWindowJob*)self);
 }
 
-void k_io__openfilemanagerwindowjob_qbase_start_elapsed_timer(void* self) {
-    KIO__OpenFileManagerWindowJob_QBaseStartElapsedTimer((KIO__OpenFileManagerWindowJob*)self);
+void k_io__openfilemanagerwindowjob_super_start_elapsed_timer(void* self) {
+    KIO__OpenFileManagerWindowJob_SuperStartElapsedTimer((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -728,8 +728,8 @@ QObject* k_io__openfilemanagerwindowjob_sender(void* self) {
     return KIO__OpenFileManagerWindowJob_Sender((KIO__OpenFileManagerWindowJob*)self);
 }
 
-QObject* k_io__openfilemanagerwindowjob_qbase_sender(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseSender((KIO__OpenFileManagerWindowJob*)self);
+QObject* k_io__openfilemanagerwindowjob_super_sender(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperSender((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_sender(void* self, QObject* (*callback)()) {
@@ -740,8 +740,8 @@ int32_t k_io__openfilemanagerwindowjob_sender_signal_index(void* self) {
     return KIO__OpenFileManagerWindowJob_SenderSignalIndex((KIO__OpenFileManagerWindowJob*)self);
 }
 
-int32_t k_io__openfilemanagerwindowjob_qbase_sender_signal_index(void* self) {
-    return KIO__OpenFileManagerWindowJob_QBaseSenderSignalIndex((KIO__OpenFileManagerWindowJob*)self);
+int32_t k_io__openfilemanagerwindowjob_super_sender_signal_index(void* self) {
+    return KIO__OpenFileManagerWindowJob_SuperSenderSignalIndex((KIO__OpenFileManagerWindowJob*)self);
 }
 
 void k_io__openfilemanagerwindowjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -752,8 +752,8 @@ int32_t k_io__openfilemanagerwindowjob_receivers(void* self, const char* signal)
     return KIO__OpenFileManagerWindowJob_Receivers((KIO__OpenFileManagerWindowJob*)self, signal);
 }
 
-int32_t k_io__openfilemanagerwindowjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__OpenFileManagerWindowJob_QBaseReceivers((KIO__OpenFileManagerWindowJob*)self, signal);
+int32_t k_io__openfilemanagerwindowjob_super_receivers(void* self, const char* signal) {
+    return KIO__OpenFileManagerWindowJob_SuperReceivers((KIO__OpenFileManagerWindowJob*)self, signal);
 }
 
 void k_io__openfilemanagerwindowjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -764,8 +764,8 @@ bool k_io__openfilemanagerwindowjob_is_signal_connected(void* self, void* signal
     return KIO__OpenFileManagerWindowJob_IsSignalConnected((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__openfilemanagerwindowjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__OpenFileManagerWindowJob_QBaseIsSignalConnected((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
+bool k_io__openfilemanagerwindowjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__OpenFileManagerWindowJob_SuperIsSignalConnected((KIO__OpenFileManagerWindowJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__openfilemanagerwindowjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

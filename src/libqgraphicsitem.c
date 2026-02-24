@@ -435,8 +435,8 @@ void q_graphicsitem_on_advance(void* self, void (*callback)(void*, int)) {
     QGraphicsItem_OnAdvance((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_advance(void* self, int phase) {
-    QGraphicsItem_QBaseAdvance((QGraphicsItem*)self, phase);
+void q_graphicsitem_super_advance(void* self, int phase) {
+    QGraphicsItem_SuperAdvance((QGraphicsItem*)self, phase);
 }
 
 double q_graphicsitem_z_value(void* self) {
@@ -459,8 +459,8 @@ void q_graphicsitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsItem_OnBoundingRect((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicsitem_qbase_bounding_rect(void* self) {
-    return QGraphicsItem_QBaseBoundingRect((QGraphicsItem*)self);
+QRectF* q_graphicsitem_super_bounding_rect(void* self) {
+    return QGraphicsItem_SuperBoundingRect((QGraphicsItem*)self);
 }
 
 QRectF* q_graphicsitem_children_bounding_rect(void* self) {
@@ -479,8 +479,8 @@ void q_graphicsitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsItem_OnShape((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsitem_qbase_shape(void* self) {
-    return QGraphicsItem_QBaseShape((QGraphicsItem*)self);
+QPainterPath* q_graphicsitem_super_shape(void* self) {
+    return QGraphicsItem_SuperShape((QGraphicsItem*)self);
 }
 
 bool q_graphicsitem_is_clipped(void* self) {
@@ -499,8 +499,8 @@ void q_graphicsitem_on_contains(void* self, bool (*callback)(void*, void*)) {
     QGraphicsItem_OnContains((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_contains(void* self, void* point) {
-    return QGraphicsItem_QBaseContains((QGraphicsItem*)self, (QPointF*)point);
+bool q_graphicsitem_super_contains(void* self, void* point) {
+    return QGraphicsItem_SuperContains((QGraphicsItem*)self, (QPointF*)point);
 }
 
 bool q_graphicsitem_collides_with_item(void* self, void* other, int32_t mode) {
@@ -511,8 +511,8 @@ void q_graphicsitem_on_collides_with_item(void* self, bool (*callback)(void*, vo
     QGraphicsItem_OnCollidesWithItem((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsItem_QBaseCollidesWithItem((QGraphicsItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicsitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsItem_SuperCollidesWithItem((QGraphicsItem*)self, (QGraphicsItem*)other, mode);
 }
 
 bool q_graphicsitem_collides_with_path(void* self, void* path, int32_t mode) {
@@ -523,8 +523,8 @@ void q_graphicsitem_on_collides_with_path(void* self, bool (*callback)(void*, vo
     QGraphicsItem_OnCollidesWithPath((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsItem_QBaseCollidesWithPath((QGraphicsItem*)self, (QPainterPath*)path, mode);
+bool q_graphicsitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsItem_SuperCollidesWithPath((QGraphicsItem*)self, (QPainterPath*)path, mode);
 }
 
 libqt_list /* of QGraphicsItem* */ q_graphicsitem_colliding_items(void* self) {
@@ -548,8 +548,8 @@ void q_graphicsitem_on_is_obscured_by(void* self, bool (*callback)(void*, void*)
     QGraphicsItem_OnIsObscuredBy((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsItem_QBaseIsObscuredBy((QGraphicsItem*)self, (QGraphicsItem*)item);
+bool q_graphicsitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsItem_SuperIsObscuredBy((QGraphicsItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicsitem_opaque_area(void* self) {
@@ -560,8 +560,8 @@ void q_graphicsitem_on_opaque_area(void* self, QPainterPath* (*callback)()) {
     QGraphicsItem_OnOpaqueArea((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsitem_qbase_opaque_area(void* self) {
-    return QGraphicsItem_QBaseOpaqueArea((QGraphicsItem*)self);
+QPainterPath* q_graphicsitem_super_opaque_area(void* self) {
+    return QGraphicsItem_SuperOpaqueArea((QGraphicsItem*)self);
 }
 
 QRegion* q_graphicsitem_bounding_region(void* self, void* itemToDeviceTransform) {
@@ -584,8 +584,8 @@ void q_graphicsitem_on_paint(void* self, void (*callback)(void*, void*, void*, v
     QGraphicsItem_OnPaint((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsItem_QBasePaint((QGraphicsItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicsitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsItem_SuperPaint((QGraphicsItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 void q_graphicsitem_update(void* self) {
@@ -756,8 +756,8 @@ void q_graphicsitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsItem_OnType((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsitem_qbase_type(void* self) {
-    return QGraphicsItem_QBaseType((QGraphicsItem*)self);
+int32_t q_graphicsitem_super_type(void* self) {
+    return QGraphicsItem_SuperType((QGraphicsItem*)self);
 }
 
 void q_graphicsitem_install_scene_event_filter(void* self, void* filterItem) {
@@ -776,8 +776,8 @@ void q_graphicsitem_on_update_micro_focus(void* self, void (*callback)()) {
     QGraphicsItem_OnUpdateMicroFocus((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_update_micro_focus(void* self) {
-    QGraphicsItem_QBaseUpdateMicroFocus((QGraphicsItem*)self);
+void q_graphicsitem_super_update_micro_focus(void* self) {
+    QGraphicsItem_SuperUpdateMicroFocus((QGraphicsItem*)self);
 }
 
 bool q_graphicsitem_scene_event_filter(void* self, void* watched, void* event) {
@@ -788,8 +788,8 @@ void q_graphicsitem_on_scene_event_filter(void* self, bool (*callback)(void*, vo
     QGraphicsItem_OnSceneEventFilter((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsItem_QBaseSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicsitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsItem_SuperSceneEventFilter((QGraphicsItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 bool q_graphicsitem_scene_event(void* self, void* event) {
@@ -800,8 +800,8 @@ void q_graphicsitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
     QGraphicsItem_OnSceneEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsItem_QBaseSceneEvent((QGraphicsItem*)self, (QEvent*)event);
+bool q_graphicsitem_super_scene_event(void* self, void* event) {
+    return QGraphicsItem_SuperSceneEvent((QGraphicsItem*)self, (QEvent*)event);
 }
 
 void q_graphicsitem_context_menu_event(void* self, void* event) {
@@ -812,8 +812,8 @@ void q_graphicsitem_on_context_menu_event(void* self, void (*callback)(void*, vo
     QGraphicsItem_OnContextMenuEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsItem_QBaseContextMenuEvent((QGraphicsItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicsitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsItem_SuperContextMenuEvent((QGraphicsItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicsitem_drag_enter_event(void* self, void* event) {
@@ -824,8 +824,8 @@ void q_graphicsitem_on_drag_enter_event(void* self, void (*callback)(void*, void
     QGraphicsItem_OnDragEnterEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsItem_QBaseDragEnterEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsItem_SuperDragEnterEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitem_drag_leave_event(void* self, void* event) {
@@ -836,8 +836,8 @@ void q_graphicsitem_on_drag_leave_event(void* self, void (*callback)(void*, void
     QGraphicsItem_OnDragLeaveEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsItem_QBaseDragLeaveEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsItem_SuperDragLeaveEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitem_drag_move_event(void* self, void* event) {
@@ -848,8 +848,8 @@ void q_graphicsitem_on_drag_move_event(void* self, void (*callback)(void*, void*
     QGraphicsItem_OnDragMoveEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsItem_QBaseDragMoveEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsItem_SuperDragMoveEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitem_drop_event(void* self, void* event) {
@@ -860,8 +860,8 @@ void q_graphicsitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QGraphicsItem_OnDropEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsItem_QBaseDropEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitem_super_drop_event(void* self, void* event) {
+    QGraphicsItem_SuperDropEvent((QGraphicsItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitem_focus_in_event(void* self, void* event) {
@@ -872,8 +872,8 @@ void q_graphicsitem_on_focus_in_event(void* self, void (*callback)(void*, void*)
     QGraphicsItem_OnFocusInEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsItem_QBaseFocusInEvent((QGraphicsItem*)self, (QFocusEvent*)event);
+void q_graphicsitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsItem_SuperFocusInEvent((QGraphicsItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsitem_focus_out_event(void* self, void* event) {
@@ -884,8 +884,8 @@ void q_graphicsitem_on_focus_out_event(void* self, void (*callback)(void*, void*
     QGraphicsItem_OnFocusOutEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsItem_QBaseFocusOutEvent((QGraphicsItem*)self, (QFocusEvent*)event);
+void q_graphicsitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsItem_SuperFocusOutEvent((QGraphicsItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsitem_hover_enter_event(void* self, void* event) {
@@ -896,8 +896,8 @@ void q_graphicsitem_on_hover_enter_event(void* self, void (*callback)(void*, voi
     QGraphicsItem_OnHoverEnterEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsItem_QBaseHoverEnterEvent((QGraphicsItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsItem_SuperHoverEnterEvent((QGraphicsItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsitem_hover_move_event(void* self, void* event) {
@@ -908,8 +908,8 @@ void q_graphicsitem_on_hover_move_event(void* self, void (*callback)(void*, void
     QGraphicsItem_OnHoverMoveEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsItem_QBaseHoverMoveEvent((QGraphicsItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsItem_SuperHoverMoveEvent((QGraphicsItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsitem_hover_leave_event(void* self, void* event) {
@@ -920,8 +920,8 @@ void q_graphicsitem_on_hover_leave_event(void* self, void (*callback)(void*, voi
     QGraphicsItem_OnHoverLeaveEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsItem_QBaseHoverLeaveEvent((QGraphicsItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsItem_SuperHoverLeaveEvent((QGraphicsItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsitem_key_press_event(void* self, void* event) {
@@ -932,8 +932,8 @@ void q_graphicsitem_on_key_press_event(void* self, void (*callback)(void*, void*
     QGraphicsItem_OnKeyPressEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsItem_QBaseKeyPressEvent((QGraphicsItem*)self, (QKeyEvent*)event);
+void q_graphicsitem_super_key_press_event(void* self, void* event) {
+    QGraphicsItem_SuperKeyPressEvent((QGraphicsItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsitem_key_release_event(void* self, void* event) {
@@ -944,8 +944,8 @@ void q_graphicsitem_on_key_release_event(void* self, void (*callback)(void*, voi
     QGraphicsItem_OnKeyReleaseEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsItem_QBaseKeyReleaseEvent((QGraphicsItem*)self, (QKeyEvent*)event);
+void q_graphicsitem_super_key_release_event(void* self, void* event) {
+    QGraphicsItem_SuperKeyReleaseEvent((QGraphicsItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsitem_mouse_press_event(void* self, void* event) {
@@ -956,8 +956,8 @@ void q_graphicsitem_on_mouse_press_event(void* self, void (*callback)(void*, voi
     QGraphicsItem_OnMousePressEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsItem_QBaseMousePressEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsItem_SuperMousePressEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitem_mouse_move_event(void* self, void* event) {
@@ -968,8 +968,8 @@ void q_graphicsitem_on_mouse_move_event(void* self, void (*callback)(void*, void
     QGraphicsItem_OnMouseMoveEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsItem_QBaseMouseMoveEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsItem_SuperMouseMoveEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitem_mouse_release_event(void* self, void* event) {
@@ -980,8 +980,8 @@ void q_graphicsitem_on_mouse_release_event(void* self, void (*callback)(void*, v
     QGraphicsItem_OnMouseReleaseEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsItem_QBaseMouseReleaseEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsItem_SuperMouseReleaseEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitem_mouse_double_click_event(void* self, void* event) {
@@ -992,8 +992,8 @@ void q_graphicsitem_on_mouse_double_click_event(void* self, void (*callback)(voi
     QGraphicsItem_OnMouseDoubleClickEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsItem_QBaseMouseDoubleClickEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsItem_SuperMouseDoubleClickEvent((QGraphicsItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitem_wheel_event(void* self, void* event) {
@@ -1004,8 +1004,8 @@ void q_graphicsitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
     QGraphicsItem_OnWheelEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsItem_QBaseWheelEvent((QGraphicsItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicsitem_super_wheel_event(void* self, void* event) {
+    QGraphicsItem_SuperWheelEvent((QGraphicsItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicsitem_input_method_event(void* self, void* event) {
@@ -1016,8 +1016,8 @@ void q_graphicsitem_on_input_method_event(void* self, void (*callback)(void*, vo
     QGraphicsItem_OnInputMethodEvent((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsItem_QBaseInputMethodEvent((QGraphicsItem*)self, (QInputMethodEvent*)event);
+void q_graphicsitem_super_input_method_event(void* self, void* event) {
+    QGraphicsItem_SuperInputMethodEvent((QGraphicsItem*)self, (QInputMethodEvent*)event);
 }
 
 QVariant* q_graphicsitem_input_method_query(void* self, int32_t query) {
@@ -1028,8 +1028,8 @@ void q_graphicsitem_on_input_method_query(void* self, QVariant* (*callback)(void
     QGraphicsItem_OnInputMethodQuery((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsItem_QBaseInputMethodQuery((QGraphicsItem*)self, query);
+QVariant* q_graphicsitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsItem_SuperInputMethodQuery((QGraphicsItem*)self, query);
 }
 
 QVariant* q_graphicsitem_item_change(void* self, int32_t change, void* value) {
@@ -1040,8 +1040,8 @@ void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int3
     QGraphicsItem_OnItemChange((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsItem_QBaseItemChange((QGraphicsItem*)self, change, (QVariant*)value);
+QVariant* q_graphicsitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsItem_SuperItemChange((QGraphicsItem*)self, change, (QVariant*)value);
 }
 
 bool q_graphicsitem_supports_extension(void* self, int32_t extension) {
@@ -1052,8 +1052,8 @@ void q_graphicsitem_on_supports_extension(void* self, bool (*callback)(void*, in
     QGraphicsItem_OnSupportsExtension((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsItem_QBaseSupportsExtension((QGraphicsItem*)self, extension);
+bool q_graphicsitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsItem_SuperSupportsExtension((QGraphicsItem*)self, extension);
 }
 
 void q_graphicsitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -1064,8 +1064,8 @@ void q_graphicsitem_on_set_extension(void* self, void (*callback)(void*, int32_t
     QGraphicsItem_OnSetExtension((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsItem_QBaseSetExtension((QGraphicsItem*)self, extension, (QVariant*)variant);
+void q_graphicsitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsItem_SuperSetExtension((QGraphicsItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicsitem_extension(void* self, void* variant) {
@@ -1076,8 +1076,8 @@ void q_graphicsitem_on_extension(void* self, QVariant* (*callback)(void*, void*)
     QGraphicsItem_OnExtension((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsItem_QBaseExtension((QGraphicsItem*)self, (QVariant*)variant);
+QVariant* q_graphicsitem_super_extension(void* self, void* variant) {
+    return QGraphicsItem_SuperExtension((QGraphicsItem*)self, (QVariant*)variant);
 }
 
 void q_graphicsitem_add_to_index(void* self) {
@@ -1088,8 +1088,8 @@ void q_graphicsitem_on_add_to_index(void* self, void (*callback)()) {
     QGraphicsItem_OnAddToIndex((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_add_to_index(void* self) {
-    QGraphicsItem_QBaseAddToIndex((QGraphicsItem*)self);
+void q_graphicsitem_super_add_to_index(void* self) {
+    QGraphicsItem_SuperAddToIndex((QGraphicsItem*)self);
 }
 
 void q_graphicsitem_remove_from_index(void* self) {
@@ -1100,8 +1100,8 @@ void q_graphicsitem_on_remove_from_index(void* self, void (*callback)()) {
     QGraphicsItem_OnRemoveFromIndex((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_remove_from_index(void* self) {
-    QGraphicsItem_QBaseRemoveFromIndex((QGraphicsItem*)self);
+void q_graphicsitem_super_remove_from_index(void* self) {
+    QGraphicsItem_SuperRemoveFromIndex((QGraphicsItem*)self);
 }
 
 void q_graphicsitem_prepare_geometry_change(void* self) {
@@ -1112,8 +1112,8 @@ void q_graphicsitem_on_prepare_geometry_change(void* self, void (*callback)()) {
     QGraphicsItem_OnPrepareGeometryChange((QGraphicsItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsItem_QBasePrepareGeometryChange((QGraphicsItem*)self);
+void q_graphicsitem_super_prepare_geometry_change(void* self) {
+    QGraphicsItem_SuperPrepareGeometryChange((QGraphicsItem*)self);
 }
 
 void q_graphicsitem_set_flag2(void* self, int32_t flag, bool enabled) {
@@ -1197,8 +1197,8 @@ void q_graphicsobject_on_meta_object(void* self, const QMetaObject* (*callback)(
     QGraphicsObject_OnMetaObject((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicsobject_qbase_meta_object(void* self) {
-    return QGraphicsObject_QBaseMetaObject((QGraphicsObject*)self);
+const QMetaObject* q_graphicsobject_super_meta_object(void* self) {
+    return QGraphicsObject_SuperMetaObject((QGraphicsObject*)self);
 }
 
 void* q_graphicsobject_metacast(void* self, const char* param1) {
@@ -1209,8 +1209,8 @@ void q_graphicsobject_on_metacast(void* self, void* (*callback)(void*, const cha
     QGraphicsObject_OnMetacast((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void* q_graphicsobject_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsObject_QBaseMetacast((QGraphicsObject*)self, param1);
+void* q_graphicsobject_super_metacast(void* self, const char* param1) {
+    return QGraphicsObject_SuperMetacast((QGraphicsObject*)self, param1);
 }
 
 int32_t q_graphicsobject_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -1221,8 +1221,8 @@ void q_graphicsobject_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QGraphicsObject_OnMetacall((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsObject_QBaseMetacall((QGraphicsObject*)self, param1, param2, param3);
+int32_t q_graphicsobject_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsObject_SuperMetacall((QGraphicsObject*)self, param1, param2, param3);
 }
 
 const char* q_graphicsobject_tr(const char* s) {
@@ -1248,8 +1248,8 @@ void q_graphicsobject_on_update_micro_focus(void* self, void (*callback)()) {
     QGraphicsObject_OnUpdateMicroFocus((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-void q_graphicsobject_qbase_update_micro_focus(void* self) {
-    QGraphicsObject_QBaseUpdateMicroFocus((QGraphicsObject*)self);
+void q_graphicsobject_super_update_micro_focus(void* self) {
+    QGraphicsObject_SuperUpdateMicroFocus((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_parent_changed(void* self) {
@@ -1356,8 +1356,8 @@ void q_graphicsobject_on_event(void* self, bool (*callback)(void*, void*)) {
     QGraphicsObject_OnEvent((QGraphicsObject*)self, (intptr_t)callback);
 }
 
-bool q_graphicsobject_qbase_event(void* self, void* ev) {
-    return QGraphicsObject_QBaseEvent((QGraphicsObject*)self, (QEvent*)ev);
+bool q_graphicsobject_super_event(void* self, void* ev) {
+    return QGraphicsObject_SuperEvent((QGraphicsObject*)self, (QEvent*)ev);
 }
 
 const char* q_graphicsobject_tr2(const char* s, const char* c) {
@@ -2264,8 +2264,8 @@ bool q_graphicsobject_event_filter(void* self, void* watched, void* event) {
     return QGraphicsObject_EventFilter((QGraphicsObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicsobject_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsObject_QBaseEventFilter((QGraphicsObject*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicsobject_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsObject_SuperEventFilter((QGraphicsObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicsobject_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2276,8 +2276,8 @@ void q_graphicsobject_timer_event(void* self, void* event) {
     QGraphicsObject_TimerEvent((QGraphicsObject*)self, (QTimerEvent*)event);
 }
 
-void q_graphicsobject_qbase_timer_event(void* self, void* event) {
-    QGraphicsObject_QBaseTimerEvent((QGraphicsObject*)self, (QTimerEvent*)event);
+void q_graphicsobject_super_timer_event(void* self, void* event) {
+    QGraphicsObject_SuperTimerEvent((QGraphicsObject*)self, (QTimerEvent*)event);
 }
 
 void q_graphicsobject_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2288,8 +2288,8 @@ void q_graphicsobject_child_event(void* self, void* event) {
     QGraphicsObject_ChildEvent((QGraphicsObject*)self, (QChildEvent*)event);
 }
 
-void q_graphicsobject_qbase_child_event(void* self, void* event) {
-    QGraphicsObject_QBaseChildEvent((QGraphicsObject*)self, (QChildEvent*)event);
+void q_graphicsobject_super_child_event(void* self, void* event) {
+    QGraphicsObject_SuperChildEvent((QGraphicsObject*)self, (QChildEvent*)event);
 }
 
 void q_graphicsobject_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2300,8 +2300,8 @@ void q_graphicsobject_custom_event(void* self, void* event) {
     QGraphicsObject_CustomEvent((QGraphicsObject*)self, (QEvent*)event);
 }
 
-void q_graphicsobject_qbase_custom_event(void* self, void* event) {
-    QGraphicsObject_QBaseCustomEvent((QGraphicsObject*)self, (QEvent*)event);
+void q_graphicsobject_super_custom_event(void* self, void* event) {
+    QGraphicsObject_SuperCustomEvent((QGraphicsObject*)self, (QEvent*)event);
 }
 
 void q_graphicsobject_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2312,8 +2312,8 @@ void q_graphicsobject_connect_notify(void* self, void* signal) {
     QGraphicsObject_ConnectNotify((QGraphicsObject*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsobject_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsObject_QBaseConnectNotify((QGraphicsObject*)self, (QMetaMethod*)signal);
+void q_graphicsobject_super_connect_notify(void* self, void* signal) {
+    QGraphicsObject_SuperConnectNotify((QGraphicsObject*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsobject_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2324,8 +2324,8 @@ void q_graphicsobject_disconnect_notify(void* self, void* signal) {
     QGraphicsObject_DisconnectNotify((QGraphicsObject*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicsobject_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsObject_QBaseDisconnectNotify((QGraphicsObject*)self, (QMetaMethod*)signal);
+void q_graphicsobject_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsObject_SuperDisconnectNotify((QGraphicsObject*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsobject_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2336,8 +2336,8 @@ void q_graphicsobject_advance(void* self, int phase) {
     QGraphicsObject_Advance((QGraphicsObject*)self, phase);
 }
 
-void q_graphicsobject_qbase_advance(void* self, int phase) {
-    QGraphicsObject_QBaseAdvance((QGraphicsObject*)self, phase);
+void q_graphicsobject_super_advance(void* self, int phase) {
+    QGraphicsObject_SuperAdvance((QGraphicsObject*)self, phase);
 }
 
 void q_graphicsobject_on_advance(void* self, void (*callback)(void*, int)) {
@@ -2348,8 +2348,8 @@ QRectF* q_graphicsobject_bounding_rect(void* self) {
     return QGraphicsObject_BoundingRect((QGraphicsObject*)self);
 }
 
-QRectF* q_graphicsobject_qbase_bounding_rect(void* self) {
-    return QGraphicsObject_QBaseBoundingRect((QGraphicsObject*)self);
+QRectF* q_graphicsobject_super_bounding_rect(void* self) {
+    return QGraphicsObject_SuperBoundingRect((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -2360,8 +2360,8 @@ QPainterPath* q_graphicsobject_shape(void* self) {
     return QGraphicsObject_Shape((QGraphicsObject*)self);
 }
 
-QPainterPath* q_graphicsobject_qbase_shape(void* self) {
-    return QGraphicsObject_QBaseShape((QGraphicsObject*)self);
+QPainterPath* q_graphicsobject_super_shape(void* self) {
+    return QGraphicsObject_SuperShape((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_shape(void* self, QPainterPath* (*callback)()) {
@@ -2372,8 +2372,8 @@ bool q_graphicsobject_contains(void* self, void* point) {
     return QGraphicsObject_Contains((QGraphicsObject*)self, (QPointF*)point);
 }
 
-bool q_graphicsobject_qbase_contains(void* self, void* point) {
-    return QGraphicsObject_QBaseContains((QGraphicsObject*)self, (QPointF*)point);
+bool q_graphicsobject_super_contains(void* self, void* point) {
+    return QGraphicsObject_SuperContains((QGraphicsObject*)self, (QPointF*)point);
 }
 
 void q_graphicsobject_on_contains(void* self, bool (*callback)(void*, void*)) {
@@ -2384,8 +2384,8 @@ bool q_graphicsobject_collides_with_item(void* self, void* other, int32_t mode) 
     return QGraphicsObject_CollidesWithItem((QGraphicsObject*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicsobject_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsObject_QBaseCollidesWithItem((QGraphicsObject*)self, (QGraphicsItem*)other, mode);
+bool q_graphicsobject_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsObject_SuperCollidesWithItem((QGraphicsObject*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicsobject_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -2396,8 +2396,8 @@ bool q_graphicsobject_collides_with_path(void* self, void* path, int32_t mode) {
     return QGraphicsObject_CollidesWithPath((QGraphicsObject*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicsobject_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsObject_QBaseCollidesWithPath((QGraphicsObject*)self, (QPainterPath*)path, mode);
+bool q_graphicsobject_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsObject_SuperCollidesWithPath((QGraphicsObject*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicsobject_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -2408,8 +2408,8 @@ bool q_graphicsobject_is_obscured_by(void* self, void* item) {
     return QGraphicsObject_IsObscuredBy((QGraphicsObject*)self, (QGraphicsItem*)item);
 }
 
-bool q_graphicsobject_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsObject_QBaseIsObscuredBy((QGraphicsObject*)self, (QGraphicsItem*)item);
+bool q_graphicsobject_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsObject_SuperIsObscuredBy((QGraphicsObject*)self, (QGraphicsItem*)item);
 }
 
 void q_graphicsobject_on_is_obscured_by(void* self, bool (*callback)(void*, void*)) {
@@ -2420,8 +2420,8 @@ QPainterPath* q_graphicsobject_opaque_area(void* self) {
     return QGraphicsObject_OpaqueArea((QGraphicsObject*)self);
 }
 
-QPainterPath* q_graphicsobject_qbase_opaque_area(void* self) {
-    return QGraphicsObject_QBaseOpaqueArea((QGraphicsObject*)self);
+QPainterPath* q_graphicsobject_super_opaque_area(void* self) {
+    return QGraphicsObject_SuperOpaqueArea((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_opaque_area(void* self, QPainterPath* (*callback)()) {
@@ -2432,8 +2432,8 @@ void q_graphicsobject_paint(void* self, void* painter, void* option, void* widge
     QGraphicsObject_Paint((QGraphicsObject*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
-void q_graphicsobject_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsObject_QBasePaint((QGraphicsObject*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicsobject_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsObject_SuperPaint((QGraphicsObject*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 void q_graphicsobject_on_paint(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -2444,8 +2444,8 @@ int32_t q_graphicsobject_type(void* self) {
     return QGraphicsObject_Type((QGraphicsObject*)self);
 }
 
-int32_t q_graphicsobject_qbase_type(void* self) {
-    return QGraphicsObject_QBaseType((QGraphicsObject*)self);
+int32_t q_graphicsobject_super_type(void* self) {
+    return QGraphicsObject_SuperType((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_type(void* self, int32_t (*callback)()) {
@@ -2456,8 +2456,8 @@ bool q_graphicsobject_scene_event_filter(void* self, void* watched, void* event)
     return QGraphicsObject_SceneEventFilter((QGraphicsObject*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicsobject_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsObject_QBaseSceneEventFilter((QGraphicsObject*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicsobject_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsObject_SuperSceneEventFilter((QGraphicsObject*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicsobject_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2468,8 +2468,8 @@ bool q_graphicsobject_scene_event(void* self, void* event) {
     return QGraphicsObject_SceneEvent((QGraphicsObject*)self, (QEvent*)event);
 }
 
-bool q_graphicsobject_qbase_scene_event(void* self, void* event) {
-    return QGraphicsObject_QBaseSceneEvent((QGraphicsObject*)self, (QEvent*)event);
+bool q_graphicsobject_super_scene_event(void* self, void* event) {
+    return QGraphicsObject_SuperSceneEvent((QGraphicsObject*)self, (QEvent*)event);
 }
 
 void q_graphicsobject_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -2480,8 +2480,8 @@ void q_graphicsobject_context_menu_event(void* self, void* event) {
     QGraphicsObject_ContextMenuEvent((QGraphicsObject*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicsobject_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsObject_QBaseContextMenuEvent((QGraphicsObject*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicsobject_super_context_menu_event(void* self, void* event) {
+    QGraphicsObject_SuperContextMenuEvent((QGraphicsObject*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicsobject_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2492,8 +2492,8 @@ void q_graphicsobject_drag_enter_event(void* self, void* event) {
     QGraphicsObject_DragEnterEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsobject_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsObject_QBaseDragEnterEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsobject_super_drag_enter_event(void* self, void* event) {
+    QGraphicsObject_SuperDragEnterEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsobject_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2504,8 +2504,8 @@ void q_graphicsobject_drag_leave_event(void* self, void* event) {
     QGraphicsObject_DragLeaveEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsobject_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsObject_QBaseDragLeaveEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsobject_super_drag_leave_event(void* self, void* event) {
+    QGraphicsObject_SuperDragLeaveEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsobject_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2516,8 +2516,8 @@ void q_graphicsobject_drag_move_event(void* self, void* event) {
     QGraphicsObject_DragMoveEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsobject_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsObject_QBaseDragMoveEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsobject_super_drag_move_event(void* self, void* event) {
+    QGraphicsObject_SuperDragMoveEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsobject_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2528,8 +2528,8 @@ void q_graphicsobject_drop_event(void* self, void* event) {
     QGraphicsObject_DropEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsobject_qbase_drop_event(void* self, void* event) {
-    QGraphicsObject_QBaseDropEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsobject_super_drop_event(void* self, void* event) {
+    QGraphicsObject_SuperDropEvent((QGraphicsObject*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsobject_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2540,8 +2540,8 @@ void q_graphicsobject_focus_in_event(void* self, void* event) {
     QGraphicsObject_FocusInEvent((QGraphicsObject*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsobject_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsObject_QBaseFocusInEvent((QGraphicsObject*)self, (QFocusEvent*)event);
+void q_graphicsobject_super_focus_in_event(void* self, void* event) {
+    QGraphicsObject_SuperFocusInEvent((QGraphicsObject*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsobject_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2552,8 +2552,8 @@ void q_graphicsobject_focus_out_event(void* self, void* event) {
     QGraphicsObject_FocusOutEvent((QGraphicsObject*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsobject_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsObject_QBaseFocusOutEvent((QGraphicsObject*)self, (QFocusEvent*)event);
+void q_graphicsobject_super_focus_out_event(void* self, void* event) {
+    QGraphicsObject_SuperFocusOutEvent((QGraphicsObject*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsobject_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2564,8 +2564,8 @@ void q_graphicsobject_hover_enter_event(void* self, void* event) {
     QGraphicsObject_HoverEnterEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsobject_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsObject_QBaseHoverEnterEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsobject_super_hover_enter_event(void* self, void* event) {
+    QGraphicsObject_SuperHoverEnterEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsobject_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2576,8 +2576,8 @@ void q_graphicsobject_hover_move_event(void* self, void* event) {
     QGraphicsObject_HoverMoveEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsobject_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsObject_QBaseHoverMoveEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsobject_super_hover_move_event(void* self, void* event) {
+    QGraphicsObject_SuperHoverMoveEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsobject_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2588,8 +2588,8 @@ void q_graphicsobject_hover_leave_event(void* self, void* event) {
     QGraphicsObject_HoverLeaveEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsobject_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsObject_QBaseHoverLeaveEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsobject_super_hover_leave_event(void* self, void* event) {
+    QGraphicsObject_SuperHoverLeaveEvent((QGraphicsObject*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsobject_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2600,8 +2600,8 @@ void q_graphicsobject_key_press_event(void* self, void* event) {
     QGraphicsObject_KeyPressEvent((QGraphicsObject*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsobject_qbase_key_press_event(void* self, void* event) {
-    QGraphicsObject_QBaseKeyPressEvent((QGraphicsObject*)self, (QKeyEvent*)event);
+void q_graphicsobject_super_key_press_event(void* self, void* event) {
+    QGraphicsObject_SuperKeyPressEvent((QGraphicsObject*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsobject_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2612,8 +2612,8 @@ void q_graphicsobject_key_release_event(void* self, void* event) {
     QGraphicsObject_KeyReleaseEvent((QGraphicsObject*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsobject_qbase_key_release_event(void* self, void* event) {
-    QGraphicsObject_QBaseKeyReleaseEvent((QGraphicsObject*)self, (QKeyEvent*)event);
+void q_graphicsobject_super_key_release_event(void* self, void* event) {
+    QGraphicsObject_SuperKeyReleaseEvent((QGraphicsObject*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsobject_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2624,8 +2624,8 @@ void q_graphicsobject_mouse_press_event(void* self, void* event) {
     QGraphicsObject_MousePressEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsobject_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsObject_QBaseMousePressEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsobject_super_mouse_press_event(void* self, void* event) {
+    QGraphicsObject_SuperMousePressEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsobject_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2636,8 +2636,8 @@ void q_graphicsobject_mouse_move_event(void* self, void* event) {
     QGraphicsObject_MouseMoveEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsobject_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsObject_QBaseMouseMoveEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsobject_super_mouse_move_event(void* self, void* event) {
+    QGraphicsObject_SuperMouseMoveEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsobject_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2648,8 +2648,8 @@ void q_graphicsobject_mouse_release_event(void* self, void* event) {
     QGraphicsObject_MouseReleaseEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsobject_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsObject_QBaseMouseReleaseEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsobject_super_mouse_release_event(void* self, void* event) {
+    QGraphicsObject_SuperMouseReleaseEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsobject_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2660,8 +2660,8 @@ void q_graphicsobject_mouse_double_click_event(void* self, void* event) {
     QGraphicsObject_MouseDoubleClickEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsobject_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsObject_QBaseMouseDoubleClickEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsobject_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsObject_SuperMouseDoubleClickEvent((QGraphicsObject*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsobject_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2672,8 +2672,8 @@ void q_graphicsobject_wheel_event(void* self, void* event) {
     QGraphicsObject_WheelEvent((QGraphicsObject*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicsobject_qbase_wheel_event(void* self, void* event) {
-    QGraphicsObject_QBaseWheelEvent((QGraphicsObject*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicsobject_super_wheel_event(void* self, void* event) {
+    QGraphicsObject_SuperWheelEvent((QGraphicsObject*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicsobject_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2684,8 +2684,8 @@ void q_graphicsobject_input_method_event(void* self, void* event) {
     QGraphicsObject_InputMethodEvent((QGraphicsObject*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicsobject_qbase_input_method_event(void* self, void* event) {
-    QGraphicsObject_QBaseInputMethodEvent((QGraphicsObject*)self, (QInputMethodEvent*)event);
+void q_graphicsobject_super_input_method_event(void* self, void* event) {
+    QGraphicsObject_SuperInputMethodEvent((QGraphicsObject*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicsobject_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2696,8 +2696,8 @@ QVariant* q_graphicsobject_input_method_query(void* self, int32_t query) {
     return QGraphicsObject_InputMethodQuery((QGraphicsObject*)self, query);
 }
 
-QVariant* q_graphicsobject_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsObject_QBaseInputMethodQuery((QGraphicsObject*)self, query);
+QVariant* q_graphicsobject_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsObject_SuperInputMethodQuery((QGraphicsObject*)self, query);
 }
 
 void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2708,8 +2708,8 @@ QVariant* q_graphicsobject_item_change(void* self, int32_t change, void* value) 
     return QGraphicsObject_ItemChange((QGraphicsObject*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicsobject_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsObject_QBaseItemChange((QGraphicsObject*)self, change, (QVariant*)value);
+QVariant* q_graphicsobject_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsObject_SuperItemChange((QGraphicsObject*)self, change, (QVariant*)value);
 }
 
 void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -2720,8 +2720,8 @@ bool q_graphicsobject_supports_extension(void* self, int32_t extension) {
     return QGraphicsObject_SupportsExtension((QGraphicsObject*)self, extension);
 }
 
-bool q_graphicsobject_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsObject_QBaseSupportsExtension((QGraphicsObject*)self, extension);
+bool q_graphicsobject_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsObject_SuperSupportsExtension((QGraphicsObject*)self, extension);
 }
 
 void q_graphicsobject_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
@@ -2732,8 +2732,8 @@ void q_graphicsobject_set_extension(void* self, int32_t extension, void* variant
     QGraphicsObject_SetExtension((QGraphicsObject*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsobject_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsObject_QBaseSetExtension((QGraphicsObject*)self, extension, (QVariant*)variant);
+void q_graphicsobject_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsObject_SuperSetExtension((QGraphicsObject*)self, extension, (QVariant*)variant);
 }
 
 void q_graphicsobject_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
@@ -2744,8 +2744,8 @@ QVariant* q_graphicsobject_extension(void* self, void* variant) {
     return QGraphicsObject_Extension((QGraphicsObject*)self, (QVariant*)variant);
 }
 
-QVariant* q_graphicsobject_qbase_extension(void* self, void* variant) {
-    return QGraphicsObject_QBaseExtension((QGraphicsObject*)self, (QVariant*)variant);
+QVariant* q_graphicsobject_super_extension(void* self, void* variant) {
+    return QGraphicsObject_SuperExtension((QGraphicsObject*)self, (QVariant*)variant);
 }
 
 void q_graphicsobject_on_extension(void* self, QVariant* (*callback)(void*, void*)) {
@@ -2756,8 +2756,8 @@ QObject* q_graphicsobject_sender(void* self) {
     return QGraphicsObject_Sender((QGraphicsObject*)self);
 }
 
-QObject* q_graphicsobject_qbase_sender(void* self) {
-    return QGraphicsObject_QBaseSender((QGraphicsObject*)self);
+QObject* q_graphicsobject_super_sender(void* self) {
+    return QGraphicsObject_SuperSender((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_sender(void* self, QObject* (*callback)()) {
@@ -2768,8 +2768,8 @@ int32_t q_graphicsobject_sender_signal_index(void* self) {
     return QGraphicsObject_SenderSignalIndex((QGraphicsObject*)self);
 }
 
-int32_t q_graphicsobject_qbase_sender_signal_index(void* self) {
-    return QGraphicsObject_QBaseSenderSignalIndex((QGraphicsObject*)self);
+int32_t q_graphicsobject_super_sender_signal_index(void* self) {
+    return QGraphicsObject_SuperSenderSignalIndex((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2780,8 +2780,8 @@ int32_t q_graphicsobject_receivers(void* self, const char* signal) {
     return QGraphicsObject_Receivers((QGraphicsObject*)self, signal);
 }
 
-int32_t q_graphicsobject_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsObject_QBaseReceivers((QGraphicsObject*)self, signal);
+int32_t q_graphicsobject_super_receivers(void* self, const char* signal) {
+    return QGraphicsObject_SuperReceivers((QGraphicsObject*)self, signal);
 }
 
 void q_graphicsobject_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2792,8 +2792,8 @@ bool q_graphicsobject_is_signal_connected(void* self, void* signal) {
     return QGraphicsObject_IsSignalConnected((QGraphicsObject*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicsobject_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsObject_QBaseIsSignalConnected((QGraphicsObject*)self, (QMetaMethod*)signal);
+bool q_graphicsobject_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsObject_SuperIsSignalConnected((QGraphicsObject*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicsobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2804,8 +2804,8 @@ void q_graphicsobject_add_to_index(void* self) {
     QGraphicsObject_AddToIndex((QGraphicsObject*)self);
 }
 
-void q_graphicsobject_qbase_add_to_index(void* self) {
-    QGraphicsObject_QBaseAddToIndex((QGraphicsObject*)self);
+void q_graphicsobject_super_add_to_index(void* self) {
+    QGraphicsObject_SuperAddToIndex((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_add_to_index(void* self, void (*callback)()) {
@@ -2816,8 +2816,8 @@ void q_graphicsobject_remove_from_index(void* self) {
     QGraphicsObject_RemoveFromIndex((QGraphicsObject*)self);
 }
 
-void q_graphicsobject_qbase_remove_from_index(void* self) {
-    QGraphicsObject_QBaseRemoveFromIndex((QGraphicsObject*)self);
+void q_graphicsobject_super_remove_from_index(void* self) {
+    QGraphicsObject_SuperRemoveFromIndex((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_remove_from_index(void* self, void (*callback)()) {
@@ -2828,8 +2828,8 @@ void q_graphicsobject_prepare_geometry_change(void* self) {
     QGraphicsObject_PrepareGeometryChange((QGraphicsObject*)self);
 }
 
-void q_graphicsobject_qbase_prepare_geometry_change(void* self) {
-    QGraphicsObject_QBasePrepareGeometryChange((QGraphicsObject*)self);
+void q_graphicsobject_super_prepare_geometry_change(void* self) {
+    QGraphicsObject_SuperPrepareGeometryChange((QGraphicsObject*)self);
 }
 
 void q_graphicsobject_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -2876,8 +2876,8 @@ void q_abstractgraphicsshapeitem_on_is_obscured_by(void* self, bool (*callback)(
     QAbstractGraphicsShapeItem_OnIsObscuredBy((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_is_obscured_by(void* self, void* item) {
-    return QAbstractGraphicsShapeItem_QBaseIsObscuredBy((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)item);
+bool q_abstractgraphicsshapeitem_super_is_obscured_by(void* self, void* item) {
+    return QAbstractGraphicsShapeItem_SuperIsObscuredBy((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_abstractgraphicsshapeitem_opaque_area(void* self) {
@@ -2888,8 +2888,8 @@ void q_abstractgraphicsshapeitem_on_opaque_area(void* self, QPainterPath* (*call
     QAbstractGraphicsShapeItem_OnOpaqueArea((QAbstractGraphicsShapeItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_abstractgraphicsshapeitem_qbase_opaque_area(void* self) {
-    return QAbstractGraphicsShapeItem_QBaseOpaqueArea((QAbstractGraphicsShapeItem*)self);
+QPainterPath* q_abstractgraphicsshapeitem_super_opaque_area(void* self) {
+    return QAbstractGraphicsShapeItem_SuperOpaqueArea((QAbstractGraphicsShapeItem*)self);
 }
 
 QGraphicsScene* q_abstractgraphicsshapeitem_scene(void* self) {
@@ -3567,8 +3567,8 @@ void q_abstractgraphicsshapeitem_advance(void* self, int phase) {
     QAbstractGraphicsShapeItem_Advance((QAbstractGraphicsShapeItem*)self, phase);
 }
 
-void q_abstractgraphicsshapeitem_qbase_advance(void* self, int phase) {
-    QAbstractGraphicsShapeItem_QBaseAdvance((QAbstractGraphicsShapeItem*)self, phase);
+void q_abstractgraphicsshapeitem_super_advance(void* self, int phase) {
+    QAbstractGraphicsShapeItem_SuperAdvance((QAbstractGraphicsShapeItem*)self, phase);
 }
 
 void q_abstractgraphicsshapeitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -3579,8 +3579,8 @@ QRectF* q_abstractgraphicsshapeitem_bounding_rect(void* self) {
     return QAbstractGraphicsShapeItem_BoundingRect((QAbstractGraphicsShapeItem*)self);
 }
 
-QRectF* q_abstractgraphicsshapeitem_qbase_bounding_rect(void* self) {
-    return QAbstractGraphicsShapeItem_QBaseBoundingRect((QAbstractGraphicsShapeItem*)self);
+QRectF* q_abstractgraphicsshapeitem_super_bounding_rect(void* self) {
+    return QAbstractGraphicsShapeItem_SuperBoundingRect((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
@@ -3591,8 +3591,8 @@ QPainterPath* q_abstractgraphicsshapeitem_shape(void* self) {
     return QAbstractGraphicsShapeItem_Shape((QAbstractGraphicsShapeItem*)self);
 }
 
-QPainterPath* q_abstractgraphicsshapeitem_qbase_shape(void* self) {
-    return QAbstractGraphicsShapeItem_QBaseShape((QAbstractGraphicsShapeItem*)self);
+QPainterPath* q_abstractgraphicsshapeitem_super_shape(void* self) {
+    return QAbstractGraphicsShapeItem_SuperShape((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_shape(void* self, QPainterPath* (*callback)()) {
@@ -3603,8 +3603,8 @@ bool q_abstractgraphicsshapeitem_contains(void* self, void* point) {
     return QAbstractGraphicsShapeItem_Contains((QAbstractGraphicsShapeItem*)self, (QPointF*)point);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_contains(void* self, void* point) {
-    return QAbstractGraphicsShapeItem_QBaseContains((QAbstractGraphicsShapeItem*)self, (QPointF*)point);
+bool q_abstractgraphicsshapeitem_super_contains(void* self, void* point) {
+    return QAbstractGraphicsShapeItem_SuperContains((QAbstractGraphicsShapeItem*)self, (QPointF*)point);
 }
 
 void q_abstractgraphicsshapeitem_on_contains(void* self, bool (*callback)(void*, void*)) {
@@ -3615,8 +3615,8 @@ bool q_abstractgraphicsshapeitem_collides_with_item(void* self, void* other, int
     return QAbstractGraphicsShapeItem_CollidesWithItem((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QAbstractGraphicsShapeItem_QBaseCollidesWithItem((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)other, mode);
+bool q_abstractgraphicsshapeitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QAbstractGraphicsShapeItem_SuperCollidesWithItem((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_abstractgraphicsshapeitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -3627,8 +3627,8 @@ bool q_abstractgraphicsshapeitem_collides_with_path(void* self, void* path, int3
     return QAbstractGraphicsShapeItem_CollidesWithPath((QAbstractGraphicsShapeItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QAbstractGraphicsShapeItem_QBaseCollidesWithPath((QAbstractGraphicsShapeItem*)self, (QPainterPath*)path, mode);
+bool q_abstractgraphicsshapeitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QAbstractGraphicsShapeItem_SuperCollidesWithPath((QAbstractGraphicsShapeItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_abstractgraphicsshapeitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -3639,8 +3639,8 @@ void q_abstractgraphicsshapeitem_paint(void* self, void* painter, void* option, 
     QAbstractGraphicsShapeItem_Paint((QAbstractGraphicsShapeItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
-void q_abstractgraphicsshapeitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QAbstractGraphicsShapeItem_QBasePaint((QAbstractGraphicsShapeItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_abstractgraphicsshapeitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QAbstractGraphicsShapeItem_SuperPaint((QAbstractGraphicsShapeItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 void q_abstractgraphicsshapeitem_on_paint(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -3651,8 +3651,8 @@ int32_t q_abstractgraphicsshapeitem_type(void* self) {
     return QAbstractGraphicsShapeItem_Type((QAbstractGraphicsShapeItem*)self);
 }
 
-int32_t q_abstractgraphicsshapeitem_qbase_type(void* self) {
-    return QAbstractGraphicsShapeItem_QBaseType((QAbstractGraphicsShapeItem*)self);
+int32_t q_abstractgraphicsshapeitem_super_type(void* self) {
+    return QAbstractGraphicsShapeItem_SuperType((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_type(void* self, int32_t (*callback)()) {
@@ -3663,8 +3663,8 @@ bool q_abstractgraphicsshapeitem_scene_event_filter(void* self, void* watched, v
     return QAbstractGraphicsShapeItem_SceneEventFilter((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QAbstractGraphicsShapeItem_QBaseSceneEventFilter((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_abstractgraphicsshapeitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QAbstractGraphicsShapeItem_SuperSceneEventFilter((QAbstractGraphicsShapeItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -3675,8 +3675,8 @@ bool q_abstractgraphicsshapeitem_scene_event(void* self, void* event) {
     return QAbstractGraphicsShapeItem_SceneEvent((QAbstractGraphicsShapeItem*)self, (QEvent*)event);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_scene_event(void* self, void* event) {
-    return QAbstractGraphicsShapeItem_QBaseSceneEvent((QAbstractGraphicsShapeItem*)self, (QEvent*)event);
+bool q_abstractgraphicsshapeitem_super_scene_event(void* self, void* event) {
+    return QAbstractGraphicsShapeItem_SuperSceneEvent((QAbstractGraphicsShapeItem*)self, (QEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -3687,8 +3687,8 @@ void q_abstractgraphicsshapeitem_context_menu_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_ContextMenuEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_context_menu_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseContextMenuEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_abstractgraphicsshapeitem_super_context_menu_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperContextMenuEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -3699,8 +3699,8 @@ void q_abstractgraphicsshapeitem_drag_enter_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_DragEnterEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_drag_enter_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseDragEnterEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_abstractgraphicsshapeitem_super_drag_enter_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperDragEnterEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -3711,8 +3711,8 @@ void q_abstractgraphicsshapeitem_drag_leave_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_DragLeaveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_drag_leave_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseDragLeaveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_abstractgraphicsshapeitem_super_drag_leave_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperDragLeaveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -3723,8 +3723,8 @@ void q_abstractgraphicsshapeitem_drag_move_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_DragMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_drag_move_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseDragMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_abstractgraphicsshapeitem_super_drag_move_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperDragMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -3735,8 +3735,8 @@ void q_abstractgraphicsshapeitem_drop_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_DropEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_drop_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseDropEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_abstractgraphicsshapeitem_super_drop_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperDropEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -3747,8 +3747,8 @@ void q_abstractgraphicsshapeitem_focus_in_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_FocusInEvent((QAbstractGraphicsShapeItem*)self, (QFocusEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_focus_in_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseFocusInEvent((QAbstractGraphicsShapeItem*)self, (QFocusEvent*)event);
+void q_abstractgraphicsshapeitem_super_focus_in_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperFocusInEvent((QAbstractGraphicsShapeItem*)self, (QFocusEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -3759,8 +3759,8 @@ void q_abstractgraphicsshapeitem_focus_out_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_FocusOutEvent((QAbstractGraphicsShapeItem*)self, (QFocusEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_focus_out_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseFocusOutEvent((QAbstractGraphicsShapeItem*)self, (QFocusEvent*)event);
+void q_abstractgraphicsshapeitem_super_focus_out_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperFocusOutEvent((QAbstractGraphicsShapeItem*)self, (QFocusEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -3771,8 +3771,8 @@ void q_abstractgraphicsshapeitem_hover_enter_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_HoverEnterEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_hover_enter_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseHoverEnterEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_abstractgraphicsshapeitem_super_hover_enter_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperHoverEnterEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -3783,8 +3783,8 @@ void q_abstractgraphicsshapeitem_hover_move_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_HoverMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_hover_move_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseHoverMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_abstractgraphicsshapeitem_super_hover_move_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperHoverMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -3795,8 +3795,8 @@ void q_abstractgraphicsshapeitem_hover_leave_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_HoverLeaveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_hover_leave_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseHoverLeaveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_abstractgraphicsshapeitem_super_hover_leave_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperHoverLeaveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -3807,8 +3807,8 @@ void q_abstractgraphicsshapeitem_key_press_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_KeyPressEvent((QAbstractGraphicsShapeItem*)self, (QKeyEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_key_press_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseKeyPressEvent((QAbstractGraphicsShapeItem*)self, (QKeyEvent*)event);
+void q_abstractgraphicsshapeitem_super_key_press_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperKeyPressEvent((QAbstractGraphicsShapeItem*)self, (QKeyEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -3819,8 +3819,8 @@ void q_abstractgraphicsshapeitem_key_release_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_KeyReleaseEvent((QAbstractGraphicsShapeItem*)self, (QKeyEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_key_release_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseKeyReleaseEvent((QAbstractGraphicsShapeItem*)self, (QKeyEvent*)event);
+void q_abstractgraphicsshapeitem_super_key_release_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperKeyReleaseEvent((QAbstractGraphicsShapeItem*)self, (QKeyEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -3831,8 +3831,8 @@ void q_abstractgraphicsshapeitem_mouse_press_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_MousePressEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_mouse_press_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseMousePressEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_abstractgraphicsshapeitem_super_mouse_press_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperMousePressEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -3843,8 +3843,8 @@ void q_abstractgraphicsshapeitem_mouse_move_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_MouseMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_mouse_move_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseMouseMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_abstractgraphicsshapeitem_super_mouse_move_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperMouseMoveEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -3855,8 +3855,8 @@ void q_abstractgraphicsshapeitem_mouse_release_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_MouseReleaseEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_mouse_release_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseMouseReleaseEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_abstractgraphicsshapeitem_super_mouse_release_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperMouseReleaseEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -3867,8 +3867,8 @@ void q_abstractgraphicsshapeitem_mouse_double_click_event(void* self, void* even
     QAbstractGraphicsShapeItem_MouseDoubleClickEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseMouseDoubleClickEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_abstractgraphicsshapeitem_super_mouse_double_click_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperMouseDoubleClickEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -3879,8 +3879,8 @@ void q_abstractgraphicsshapeitem_wheel_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_WheelEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_wheel_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseWheelEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_abstractgraphicsshapeitem_super_wheel_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperWheelEvent((QAbstractGraphicsShapeItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -3891,8 +3891,8 @@ void q_abstractgraphicsshapeitem_input_method_event(void* self, void* event) {
     QAbstractGraphicsShapeItem_InputMethodEvent((QAbstractGraphicsShapeItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_abstractgraphicsshapeitem_qbase_input_method_event(void* self, void* event) {
-    QAbstractGraphicsShapeItem_QBaseInputMethodEvent((QAbstractGraphicsShapeItem*)self, (QInputMethodEvent*)event);
+void q_abstractgraphicsshapeitem_super_input_method_event(void* self, void* event) {
+    QAbstractGraphicsShapeItem_SuperInputMethodEvent((QAbstractGraphicsShapeItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_abstractgraphicsshapeitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -3903,8 +3903,8 @@ QVariant* q_abstractgraphicsshapeitem_input_method_query(void* self, int32_t que
     return QAbstractGraphicsShapeItem_InputMethodQuery((QAbstractGraphicsShapeItem*)self, query);
 }
 
-QVariant* q_abstractgraphicsshapeitem_qbase_input_method_query(void* self, int32_t query) {
-    return QAbstractGraphicsShapeItem_QBaseInputMethodQuery((QAbstractGraphicsShapeItem*)self, query);
+QVariant* q_abstractgraphicsshapeitem_super_input_method_query(void* self, int32_t query) {
+    return QAbstractGraphicsShapeItem_SuperInputMethodQuery((QAbstractGraphicsShapeItem*)self, query);
 }
 
 void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -3915,8 +3915,8 @@ QVariant* q_abstractgraphicsshapeitem_item_change(void* self, int32_t change, vo
     return QAbstractGraphicsShapeItem_ItemChange((QAbstractGraphicsShapeItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_abstractgraphicsshapeitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QAbstractGraphicsShapeItem_QBaseItemChange((QAbstractGraphicsShapeItem*)self, change, (QVariant*)value);
+QVariant* q_abstractgraphicsshapeitem_super_item_change(void* self, int32_t change, void* value) {
+    return QAbstractGraphicsShapeItem_SuperItemChange((QAbstractGraphicsShapeItem*)self, change, (QVariant*)value);
 }
 
 void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -3927,8 +3927,8 @@ bool q_abstractgraphicsshapeitem_supports_extension(void* self, int32_t extensio
     return QAbstractGraphicsShapeItem_SupportsExtension((QAbstractGraphicsShapeItem*)self, extension);
 }
 
-bool q_abstractgraphicsshapeitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QAbstractGraphicsShapeItem_QBaseSupportsExtension((QAbstractGraphicsShapeItem*)self, extension);
+bool q_abstractgraphicsshapeitem_super_supports_extension(void* self, int32_t extension) {
+    return QAbstractGraphicsShapeItem_SuperSupportsExtension((QAbstractGraphicsShapeItem*)self, extension);
 }
 
 void q_abstractgraphicsshapeitem_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
@@ -3939,8 +3939,8 @@ void q_abstractgraphicsshapeitem_set_extension(void* self, int32_t extension, vo
     QAbstractGraphicsShapeItem_SetExtension((QAbstractGraphicsShapeItem*)self, extension, (QVariant*)variant);
 }
 
-void q_abstractgraphicsshapeitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QAbstractGraphicsShapeItem_QBaseSetExtension((QAbstractGraphicsShapeItem*)self, extension, (QVariant*)variant);
+void q_abstractgraphicsshapeitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QAbstractGraphicsShapeItem_SuperSetExtension((QAbstractGraphicsShapeItem*)self, extension, (QVariant*)variant);
 }
 
 void q_abstractgraphicsshapeitem_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
@@ -3951,8 +3951,8 @@ QVariant* q_abstractgraphicsshapeitem_extension(void* self, void* variant) {
     return QAbstractGraphicsShapeItem_Extension((QAbstractGraphicsShapeItem*)self, (QVariant*)variant);
 }
 
-QVariant* q_abstractgraphicsshapeitem_qbase_extension(void* self, void* variant) {
-    return QAbstractGraphicsShapeItem_QBaseExtension((QAbstractGraphicsShapeItem*)self, (QVariant*)variant);
+QVariant* q_abstractgraphicsshapeitem_super_extension(void* self, void* variant) {
+    return QAbstractGraphicsShapeItem_SuperExtension((QAbstractGraphicsShapeItem*)self, (QVariant*)variant);
 }
 
 void q_abstractgraphicsshapeitem_on_extension(void* self, QVariant* (*callback)(void*, void*)) {
@@ -3963,8 +3963,8 @@ void q_abstractgraphicsshapeitem_update_micro_focus(void* self) {
     QAbstractGraphicsShapeItem_UpdateMicroFocus((QAbstractGraphicsShapeItem*)self);
 }
 
-void q_abstractgraphicsshapeitem_qbase_update_micro_focus(void* self) {
-    QAbstractGraphicsShapeItem_QBaseUpdateMicroFocus((QAbstractGraphicsShapeItem*)self);
+void q_abstractgraphicsshapeitem_super_update_micro_focus(void* self) {
+    QAbstractGraphicsShapeItem_SuperUpdateMicroFocus((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3975,8 +3975,8 @@ void q_abstractgraphicsshapeitem_add_to_index(void* self) {
     QAbstractGraphicsShapeItem_AddToIndex((QAbstractGraphicsShapeItem*)self);
 }
 
-void q_abstractgraphicsshapeitem_qbase_add_to_index(void* self) {
-    QAbstractGraphicsShapeItem_QBaseAddToIndex((QAbstractGraphicsShapeItem*)self);
+void q_abstractgraphicsshapeitem_super_add_to_index(void* self) {
+    QAbstractGraphicsShapeItem_SuperAddToIndex((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_add_to_index(void* self, void (*callback)()) {
@@ -3987,8 +3987,8 @@ void q_abstractgraphicsshapeitem_remove_from_index(void* self) {
     QAbstractGraphicsShapeItem_RemoveFromIndex((QAbstractGraphicsShapeItem*)self);
 }
 
-void q_abstractgraphicsshapeitem_qbase_remove_from_index(void* self) {
-    QAbstractGraphicsShapeItem_QBaseRemoveFromIndex((QAbstractGraphicsShapeItem*)self);
+void q_abstractgraphicsshapeitem_super_remove_from_index(void* self) {
+    QAbstractGraphicsShapeItem_SuperRemoveFromIndex((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -3999,8 +3999,8 @@ void q_abstractgraphicsshapeitem_prepare_geometry_change(void* self) {
     QAbstractGraphicsShapeItem_PrepareGeometryChange((QAbstractGraphicsShapeItem*)self);
 }
 
-void q_abstractgraphicsshapeitem_qbase_prepare_geometry_change(void* self) {
-    QAbstractGraphicsShapeItem_QBasePrepareGeometryChange((QAbstractGraphicsShapeItem*)self);
+void q_abstractgraphicsshapeitem_super_prepare_geometry_change(void* self) {
+    QAbstractGraphicsShapeItem_SuperPrepareGeometryChange((QAbstractGraphicsShapeItem*)self);
 }
 
 void q_abstractgraphicsshapeitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -4043,8 +4043,8 @@ void q_graphicspathitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsPathItem_OnBoundingRect((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicspathitem_qbase_bounding_rect(void* self) {
-    return QGraphicsPathItem_QBaseBoundingRect((QGraphicsPathItem*)self);
+QRectF* q_graphicspathitem_super_bounding_rect(void* self) {
+    return QGraphicsPathItem_SuperBoundingRect((QGraphicsPathItem*)self);
 }
 
 QPainterPath* q_graphicspathitem_shape(void* self) {
@@ -4055,8 +4055,8 @@ void q_graphicspathitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsPathItem_OnShape((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicspathitem_qbase_shape(void* self) {
-    return QGraphicsPathItem_QBaseShape((QGraphicsPathItem*)self);
+QPainterPath* q_graphicspathitem_super_shape(void* self) {
+    return QGraphicsPathItem_SuperShape((QGraphicsPathItem*)self);
 }
 
 bool q_graphicspathitem_contains(void* self, void* point) {
@@ -4067,8 +4067,8 @@ void q_graphicspathitem_on_contains(void* self, bool (*callback)(void*, void*)) 
     QGraphicsPathItem_OnContains((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspathitem_qbase_contains(void* self, void* point) {
-    return QGraphicsPathItem_QBaseContains((QGraphicsPathItem*)self, (QPointF*)point);
+bool q_graphicspathitem_super_contains(void* self, void* point) {
+    return QGraphicsPathItem_SuperContains((QGraphicsPathItem*)self, (QPointF*)point);
 }
 
 void q_graphicspathitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -4079,8 +4079,8 @@ void q_graphicspathitem_on_paint(void* self, void (*callback)(void*, void*, void
     QGraphicsPathItem_OnPaint((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspathitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsPathItem_QBasePaint((QGraphicsPathItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicspathitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsPathItem_SuperPaint((QGraphicsPathItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicspathitem_is_obscured_by(void* self, void* item) {
@@ -4091,8 +4091,8 @@ void q_graphicspathitem_on_is_obscured_by(void* self, bool (*callback)(void*, vo
     QGraphicsPathItem_OnIsObscuredBy((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspathitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsPathItem_QBaseIsObscuredBy((QGraphicsPathItem*)self, (QGraphicsItem*)item);
+bool q_graphicspathitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsPathItem_SuperIsObscuredBy((QGraphicsPathItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicspathitem_opaque_area(void* self) {
@@ -4103,8 +4103,8 @@ void q_graphicspathitem_on_opaque_area(void* self, QPainterPath* (*callback)()) 
     QGraphicsPathItem_OnOpaqueArea((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicspathitem_qbase_opaque_area(void* self) {
-    return QGraphicsPathItem_QBaseOpaqueArea((QGraphicsPathItem*)self);
+QPainterPath* q_graphicspathitem_super_opaque_area(void* self) {
+    return QGraphicsPathItem_SuperOpaqueArea((QGraphicsPathItem*)self);
 }
 
 int32_t q_graphicspathitem_type(void* self) {
@@ -4115,8 +4115,8 @@ void q_graphicspathitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsPathItem_OnType((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicspathitem_qbase_type(void* self) {
-    return QGraphicsPathItem_QBaseType((QGraphicsPathItem*)self);
+int32_t q_graphicspathitem_super_type(void* self) {
+    return QGraphicsPathItem_SuperType((QGraphicsPathItem*)self);
 }
 
 bool q_graphicspathitem_supports_extension(void* self, int32_t extension) {
@@ -4127,8 +4127,8 @@ void q_graphicspathitem_on_supports_extension(void* self, bool (*callback)(void*
     QGraphicsPathItem_OnSupportsExtension((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspathitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsPathItem_QBaseSupportsExtension((QGraphicsPathItem*)self, extension);
+bool q_graphicspathitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsPathItem_SuperSupportsExtension((QGraphicsPathItem*)self, extension);
 }
 
 void q_graphicspathitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -4139,8 +4139,8 @@ void q_graphicspathitem_on_set_extension(void* self, void (*callback)(void*, int
     QGraphicsPathItem_OnSetExtension((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspathitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsPathItem_QBaseSetExtension((QGraphicsPathItem*)self, extension, (QVariant*)variant);
+void q_graphicspathitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsPathItem_SuperSetExtension((QGraphicsPathItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicspathitem_extension(void* self, void* variant) {
@@ -4151,8 +4151,8 @@ void q_graphicspathitem_on_extension(void* self, QVariant* (*callback)(void*, vo
     QGraphicsPathItem_OnExtension((QGraphicsPathItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicspathitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsPathItem_QBaseExtension((QGraphicsPathItem*)self, (QVariant*)variant);
+QVariant* q_graphicspathitem_super_extension(void* self, void* variant) {
+    return QGraphicsPathItem_SuperExtension((QGraphicsPathItem*)self, (QVariant*)variant);
 }
 
 QPen* q_graphicspathitem_pen(void* self) {
@@ -4846,8 +4846,8 @@ void q_graphicspathitem_advance(void* self, int phase) {
     QGraphicsPathItem_Advance((QGraphicsPathItem*)self, phase);
 }
 
-void q_graphicspathitem_qbase_advance(void* self, int phase) {
-    QGraphicsPathItem_QBaseAdvance((QGraphicsPathItem*)self, phase);
+void q_graphicspathitem_super_advance(void* self, int phase) {
+    QGraphicsPathItem_SuperAdvance((QGraphicsPathItem*)self, phase);
 }
 
 void q_graphicspathitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -4858,8 +4858,8 @@ bool q_graphicspathitem_collides_with_item(void* self, void* other, int32_t mode
     return QGraphicsPathItem_CollidesWithItem((QGraphicsPathItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicspathitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsPathItem_QBaseCollidesWithItem((QGraphicsPathItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicspathitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsPathItem_SuperCollidesWithItem((QGraphicsPathItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicspathitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -4870,8 +4870,8 @@ bool q_graphicspathitem_collides_with_path(void* self, void* path, int32_t mode)
     return QGraphicsPathItem_CollidesWithPath((QGraphicsPathItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicspathitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsPathItem_QBaseCollidesWithPath((QGraphicsPathItem*)self, (QPainterPath*)path, mode);
+bool q_graphicspathitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsPathItem_SuperCollidesWithPath((QGraphicsPathItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicspathitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -4882,8 +4882,8 @@ bool q_graphicspathitem_scene_event_filter(void* self, void* watched, void* even
     return QGraphicsPathItem_SceneEventFilter((QGraphicsPathItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicspathitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsPathItem_QBaseSceneEventFilter((QGraphicsPathItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicspathitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsPathItem_SuperSceneEventFilter((QGraphicsPathItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicspathitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -4894,8 +4894,8 @@ bool q_graphicspathitem_scene_event(void* self, void* event) {
     return QGraphicsPathItem_SceneEvent((QGraphicsPathItem*)self, (QEvent*)event);
 }
 
-bool q_graphicspathitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsPathItem_QBaseSceneEvent((QGraphicsPathItem*)self, (QEvent*)event);
+bool q_graphicspathitem_super_scene_event(void* self, void* event) {
+    return QGraphicsPathItem_SuperSceneEvent((QGraphicsPathItem*)self, (QEvent*)event);
 }
 
 void q_graphicspathitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -4906,8 +4906,8 @@ void q_graphicspathitem_context_menu_event(void* self, void* event) {
     QGraphicsPathItem_ContextMenuEvent((QGraphicsPathItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicspathitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseContextMenuEvent((QGraphicsPathItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicspathitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsPathItem_SuperContextMenuEvent((QGraphicsPathItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicspathitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -4918,8 +4918,8 @@ void q_graphicspathitem_drag_enter_event(void* self, void* event) {
     QGraphicsPathItem_DragEnterEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspathitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseDragEnterEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspathitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsPathItem_SuperDragEnterEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspathitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4930,8 +4930,8 @@ void q_graphicspathitem_drag_leave_event(void* self, void* event) {
     QGraphicsPathItem_DragLeaveEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspathitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseDragLeaveEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspathitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsPathItem_SuperDragLeaveEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspathitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4942,8 +4942,8 @@ void q_graphicspathitem_drag_move_event(void* self, void* event) {
     QGraphicsPathItem_DragMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspathitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseDragMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspathitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsPathItem_SuperDragMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspathitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4954,8 +4954,8 @@ void q_graphicspathitem_drop_event(void* self, void* event) {
     QGraphicsPathItem_DropEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspathitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseDropEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspathitem_super_drop_event(void* self, void* event) {
+    QGraphicsPathItem_SuperDropEvent((QGraphicsPathItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspathitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -4966,8 +4966,8 @@ void q_graphicspathitem_focus_in_event(void* self, void* event) {
     QGraphicsPathItem_FocusInEvent((QGraphicsPathItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicspathitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseFocusInEvent((QGraphicsPathItem*)self, (QFocusEvent*)event);
+void q_graphicspathitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsPathItem_SuperFocusInEvent((QGraphicsPathItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicspathitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -4978,8 +4978,8 @@ void q_graphicspathitem_focus_out_event(void* self, void* event) {
     QGraphicsPathItem_FocusOutEvent((QGraphicsPathItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicspathitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseFocusOutEvent((QGraphicsPathItem*)self, (QFocusEvent*)event);
+void q_graphicspathitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsPathItem_SuperFocusOutEvent((QGraphicsPathItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicspathitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -4990,8 +4990,8 @@ void q_graphicspathitem_hover_enter_event(void* self, void* event) {
     QGraphicsPathItem_HoverEnterEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspathitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseHoverEnterEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspathitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsPathItem_SuperHoverEnterEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspathitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -5002,8 +5002,8 @@ void q_graphicspathitem_hover_move_event(void* self, void* event) {
     QGraphicsPathItem_HoverMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspathitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseHoverMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspathitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsPathItem_SuperHoverMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspathitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -5014,8 +5014,8 @@ void q_graphicspathitem_hover_leave_event(void* self, void* event) {
     QGraphicsPathItem_HoverLeaveEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspathitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseHoverLeaveEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspathitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsPathItem_SuperHoverLeaveEvent((QGraphicsPathItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspathitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -5026,8 +5026,8 @@ void q_graphicspathitem_key_press_event(void* self, void* event) {
     QGraphicsPathItem_KeyPressEvent((QGraphicsPathItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicspathitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseKeyPressEvent((QGraphicsPathItem*)self, (QKeyEvent*)event);
+void q_graphicspathitem_super_key_press_event(void* self, void* event) {
+    QGraphicsPathItem_SuperKeyPressEvent((QGraphicsPathItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicspathitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -5038,8 +5038,8 @@ void q_graphicspathitem_key_release_event(void* self, void* event) {
     QGraphicsPathItem_KeyReleaseEvent((QGraphicsPathItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicspathitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseKeyReleaseEvent((QGraphicsPathItem*)self, (QKeyEvent*)event);
+void q_graphicspathitem_super_key_release_event(void* self, void* event) {
+    QGraphicsPathItem_SuperKeyReleaseEvent((QGraphicsPathItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicspathitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -5050,8 +5050,8 @@ void q_graphicspathitem_mouse_press_event(void* self, void* event) {
     QGraphicsPathItem_MousePressEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspathitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseMousePressEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspathitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsPathItem_SuperMousePressEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspathitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -5062,8 +5062,8 @@ void q_graphicspathitem_mouse_move_event(void* self, void* event) {
     QGraphicsPathItem_MouseMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspathitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseMouseMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspathitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsPathItem_SuperMouseMoveEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspathitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -5074,8 +5074,8 @@ void q_graphicspathitem_mouse_release_event(void* self, void* event) {
     QGraphicsPathItem_MouseReleaseEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspathitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseMouseReleaseEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspathitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsPathItem_SuperMouseReleaseEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspathitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -5086,8 +5086,8 @@ void q_graphicspathitem_mouse_double_click_event(void* self, void* event) {
     QGraphicsPathItem_MouseDoubleClickEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspathitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseMouseDoubleClickEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspathitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsPathItem_SuperMouseDoubleClickEvent((QGraphicsPathItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspathitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -5098,8 +5098,8 @@ void q_graphicspathitem_wheel_event(void* self, void* event) {
     QGraphicsPathItem_WheelEvent((QGraphicsPathItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicspathitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseWheelEvent((QGraphicsPathItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicspathitem_super_wheel_event(void* self, void* event) {
+    QGraphicsPathItem_SuperWheelEvent((QGraphicsPathItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicspathitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -5110,8 +5110,8 @@ void q_graphicspathitem_input_method_event(void* self, void* event) {
     QGraphicsPathItem_InputMethodEvent((QGraphicsPathItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicspathitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsPathItem_QBaseInputMethodEvent((QGraphicsPathItem*)self, (QInputMethodEvent*)event);
+void q_graphicspathitem_super_input_method_event(void* self, void* event) {
+    QGraphicsPathItem_SuperInputMethodEvent((QGraphicsPathItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicspathitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -5122,8 +5122,8 @@ QVariant* q_graphicspathitem_input_method_query(void* self, int32_t query) {
     return QGraphicsPathItem_InputMethodQuery((QGraphicsPathItem*)self, query);
 }
 
-QVariant* q_graphicspathitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsPathItem_QBaseInputMethodQuery((QGraphicsPathItem*)self, query);
+QVariant* q_graphicspathitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsPathItem_SuperInputMethodQuery((QGraphicsPathItem*)self, query);
 }
 
 void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -5134,8 +5134,8 @@ QVariant* q_graphicspathitem_item_change(void* self, int32_t change, void* value
     return QGraphicsPathItem_ItemChange((QGraphicsPathItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicspathitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsPathItem_QBaseItemChange((QGraphicsPathItem*)self, change, (QVariant*)value);
+QVariant* q_graphicspathitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsPathItem_SuperItemChange((QGraphicsPathItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -5146,8 +5146,8 @@ void q_graphicspathitem_update_micro_focus(void* self) {
     QGraphicsPathItem_UpdateMicroFocus((QGraphicsPathItem*)self);
 }
 
-void q_graphicspathitem_qbase_update_micro_focus(void* self) {
-    QGraphicsPathItem_QBaseUpdateMicroFocus((QGraphicsPathItem*)self);
+void q_graphicspathitem_super_update_micro_focus(void* self) {
+    QGraphicsPathItem_SuperUpdateMicroFocus((QGraphicsPathItem*)self);
 }
 
 void q_graphicspathitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -5158,8 +5158,8 @@ void q_graphicspathitem_add_to_index(void* self) {
     QGraphicsPathItem_AddToIndex((QGraphicsPathItem*)self);
 }
 
-void q_graphicspathitem_qbase_add_to_index(void* self) {
-    QGraphicsPathItem_QBaseAddToIndex((QGraphicsPathItem*)self);
+void q_graphicspathitem_super_add_to_index(void* self) {
+    QGraphicsPathItem_SuperAddToIndex((QGraphicsPathItem*)self);
 }
 
 void q_graphicspathitem_on_add_to_index(void* self, void (*callback)()) {
@@ -5170,8 +5170,8 @@ void q_graphicspathitem_remove_from_index(void* self) {
     QGraphicsPathItem_RemoveFromIndex((QGraphicsPathItem*)self);
 }
 
-void q_graphicspathitem_qbase_remove_from_index(void* self) {
-    QGraphicsPathItem_QBaseRemoveFromIndex((QGraphicsPathItem*)self);
+void q_graphicspathitem_super_remove_from_index(void* self) {
+    QGraphicsPathItem_SuperRemoveFromIndex((QGraphicsPathItem*)self);
 }
 
 void q_graphicspathitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -5182,8 +5182,8 @@ void q_graphicspathitem_prepare_geometry_change(void* self) {
     QGraphicsPathItem_PrepareGeometryChange((QGraphicsPathItem*)self);
 }
 
-void q_graphicspathitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsPathItem_QBasePrepareGeometryChange((QGraphicsPathItem*)self);
+void q_graphicspathitem_super_prepare_geometry_change(void* self) {
+    QGraphicsPathItem_SuperPrepareGeometryChange((QGraphicsPathItem*)self);
 }
 
 void q_graphicspathitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -5238,8 +5238,8 @@ void q_graphicsrectitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsRectItem_OnBoundingRect((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicsrectitem_qbase_bounding_rect(void* self) {
-    return QGraphicsRectItem_QBaseBoundingRect((QGraphicsRectItem*)self);
+QRectF* q_graphicsrectitem_super_bounding_rect(void* self) {
+    return QGraphicsRectItem_SuperBoundingRect((QGraphicsRectItem*)self);
 }
 
 QPainterPath* q_graphicsrectitem_shape(void* self) {
@@ -5250,8 +5250,8 @@ void q_graphicsrectitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsRectItem_OnShape((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsrectitem_qbase_shape(void* self) {
-    return QGraphicsRectItem_QBaseShape((QGraphicsRectItem*)self);
+QPainterPath* q_graphicsrectitem_super_shape(void* self) {
+    return QGraphicsRectItem_SuperShape((QGraphicsRectItem*)self);
 }
 
 bool q_graphicsrectitem_contains(void* self, void* point) {
@@ -5262,8 +5262,8 @@ void q_graphicsrectitem_on_contains(void* self, bool (*callback)(void*, void*)) 
     QGraphicsRectItem_OnContains((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsrectitem_qbase_contains(void* self, void* point) {
-    return QGraphicsRectItem_QBaseContains((QGraphicsRectItem*)self, (QPointF*)point);
+bool q_graphicsrectitem_super_contains(void* self, void* point) {
+    return QGraphicsRectItem_SuperContains((QGraphicsRectItem*)self, (QPointF*)point);
 }
 
 void q_graphicsrectitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -5274,8 +5274,8 @@ void q_graphicsrectitem_on_paint(void* self, void (*callback)(void*, void*, void
     QGraphicsRectItem_OnPaint((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsrectitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsRectItem_QBasePaint((QGraphicsRectItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicsrectitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsRectItem_SuperPaint((QGraphicsRectItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicsrectitem_is_obscured_by(void* self, void* item) {
@@ -5286,8 +5286,8 @@ void q_graphicsrectitem_on_is_obscured_by(void* self, bool (*callback)(void*, vo
     QGraphicsRectItem_OnIsObscuredBy((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsrectitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsRectItem_QBaseIsObscuredBy((QGraphicsRectItem*)self, (QGraphicsItem*)item);
+bool q_graphicsrectitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsRectItem_SuperIsObscuredBy((QGraphicsRectItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicsrectitem_opaque_area(void* self) {
@@ -5298,8 +5298,8 @@ void q_graphicsrectitem_on_opaque_area(void* self, QPainterPath* (*callback)()) 
     QGraphicsRectItem_OnOpaqueArea((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsrectitem_qbase_opaque_area(void* self) {
-    return QGraphicsRectItem_QBaseOpaqueArea((QGraphicsRectItem*)self);
+QPainterPath* q_graphicsrectitem_super_opaque_area(void* self) {
+    return QGraphicsRectItem_SuperOpaqueArea((QGraphicsRectItem*)self);
 }
 
 int32_t q_graphicsrectitem_type(void* self) {
@@ -5310,8 +5310,8 @@ void q_graphicsrectitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsRectItem_OnType((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsrectitem_qbase_type(void* self) {
-    return QGraphicsRectItem_QBaseType((QGraphicsRectItem*)self);
+int32_t q_graphicsrectitem_super_type(void* self) {
+    return QGraphicsRectItem_SuperType((QGraphicsRectItem*)self);
 }
 
 bool q_graphicsrectitem_supports_extension(void* self, int32_t extension) {
@@ -5322,8 +5322,8 @@ void q_graphicsrectitem_on_supports_extension(void* self, bool (*callback)(void*
     QGraphicsRectItem_OnSupportsExtension((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsrectitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsRectItem_QBaseSupportsExtension((QGraphicsRectItem*)self, extension);
+bool q_graphicsrectitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsRectItem_SuperSupportsExtension((QGraphicsRectItem*)self, extension);
 }
 
 void q_graphicsrectitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -5334,8 +5334,8 @@ void q_graphicsrectitem_on_set_extension(void* self, void (*callback)(void*, int
     QGraphicsRectItem_OnSetExtension((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsrectitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsRectItem_QBaseSetExtension((QGraphicsRectItem*)self, extension, (QVariant*)variant);
+void q_graphicsrectitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsRectItem_SuperSetExtension((QGraphicsRectItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicsrectitem_extension(void* self, void* variant) {
@@ -5346,8 +5346,8 @@ void q_graphicsrectitem_on_extension(void* self, QVariant* (*callback)(void*, vo
     QGraphicsRectItem_OnExtension((QGraphicsRectItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsrectitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsRectItem_QBaseExtension((QGraphicsRectItem*)self, (QVariant*)variant);
+QVariant* q_graphicsrectitem_super_extension(void* self, void* variant) {
+    return QGraphicsRectItem_SuperExtension((QGraphicsRectItem*)self, (QVariant*)variant);
 }
 
 QPen* q_graphicsrectitem_pen(void* self) {
@@ -6041,8 +6041,8 @@ void q_graphicsrectitem_advance(void* self, int phase) {
     QGraphicsRectItem_Advance((QGraphicsRectItem*)self, phase);
 }
 
-void q_graphicsrectitem_qbase_advance(void* self, int phase) {
-    QGraphicsRectItem_QBaseAdvance((QGraphicsRectItem*)self, phase);
+void q_graphicsrectitem_super_advance(void* self, int phase) {
+    QGraphicsRectItem_SuperAdvance((QGraphicsRectItem*)self, phase);
 }
 
 void q_graphicsrectitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -6053,8 +6053,8 @@ bool q_graphicsrectitem_collides_with_item(void* self, void* other, int32_t mode
     return QGraphicsRectItem_CollidesWithItem((QGraphicsRectItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicsrectitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsRectItem_QBaseCollidesWithItem((QGraphicsRectItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicsrectitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsRectItem_SuperCollidesWithItem((QGraphicsRectItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicsrectitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -6065,8 +6065,8 @@ bool q_graphicsrectitem_collides_with_path(void* self, void* path, int32_t mode)
     return QGraphicsRectItem_CollidesWithPath((QGraphicsRectItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicsrectitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsRectItem_QBaseCollidesWithPath((QGraphicsRectItem*)self, (QPainterPath*)path, mode);
+bool q_graphicsrectitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsRectItem_SuperCollidesWithPath((QGraphicsRectItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicsrectitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -6077,8 +6077,8 @@ bool q_graphicsrectitem_scene_event_filter(void* self, void* watched, void* even
     return QGraphicsRectItem_SceneEventFilter((QGraphicsRectItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicsrectitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsRectItem_QBaseSceneEventFilter((QGraphicsRectItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicsrectitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsRectItem_SuperSceneEventFilter((QGraphicsRectItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicsrectitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -6089,8 +6089,8 @@ bool q_graphicsrectitem_scene_event(void* self, void* event) {
     return QGraphicsRectItem_SceneEvent((QGraphicsRectItem*)self, (QEvent*)event);
 }
 
-bool q_graphicsrectitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsRectItem_QBaseSceneEvent((QGraphicsRectItem*)self, (QEvent*)event);
+bool q_graphicsrectitem_super_scene_event(void* self, void* event) {
+    return QGraphicsRectItem_SuperSceneEvent((QGraphicsRectItem*)self, (QEvent*)event);
 }
 
 void q_graphicsrectitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -6101,8 +6101,8 @@ void q_graphicsrectitem_context_menu_event(void* self, void* event) {
     QGraphicsRectItem_ContextMenuEvent((QGraphicsRectItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseContextMenuEvent((QGraphicsRectItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicsrectitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsRectItem_SuperContextMenuEvent((QGraphicsRectItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicsrectitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -6113,8 +6113,8 @@ void q_graphicsrectitem_drag_enter_event(void* self, void* event) {
     QGraphicsRectItem_DragEnterEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseDragEnterEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsrectitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsRectItem_SuperDragEnterEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsrectitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -6125,8 +6125,8 @@ void q_graphicsrectitem_drag_leave_event(void* self, void* event) {
     QGraphicsRectItem_DragLeaveEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseDragLeaveEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsrectitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsRectItem_SuperDragLeaveEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsrectitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -6137,8 +6137,8 @@ void q_graphicsrectitem_drag_move_event(void* self, void* event) {
     QGraphicsRectItem_DragMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseDragMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsrectitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsRectItem_SuperDragMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsrectitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -6149,8 +6149,8 @@ void q_graphicsrectitem_drop_event(void* self, void* event) {
     QGraphicsRectItem_DropEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseDropEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsrectitem_super_drop_event(void* self, void* event) {
+    QGraphicsRectItem_SuperDropEvent((QGraphicsRectItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsrectitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -6161,8 +6161,8 @@ void q_graphicsrectitem_focus_in_event(void* self, void* event) {
     QGraphicsRectItem_FocusInEvent((QGraphicsRectItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseFocusInEvent((QGraphicsRectItem*)self, (QFocusEvent*)event);
+void q_graphicsrectitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsRectItem_SuperFocusInEvent((QGraphicsRectItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsrectitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -6173,8 +6173,8 @@ void q_graphicsrectitem_focus_out_event(void* self, void* event) {
     QGraphicsRectItem_FocusOutEvent((QGraphicsRectItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseFocusOutEvent((QGraphicsRectItem*)self, (QFocusEvent*)event);
+void q_graphicsrectitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsRectItem_SuperFocusOutEvent((QGraphicsRectItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsrectitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -6185,8 +6185,8 @@ void q_graphicsrectitem_hover_enter_event(void* self, void* event) {
     QGraphicsRectItem_HoverEnterEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseHoverEnterEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsrectitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsRectItem_SuperHoverEnterEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsrectitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -6197,8 +6197,8 @@ void q_graphicsrectitem_hover_move_event(void* self, void* event) {
     QGraphicsRectItem_HoverMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseHoverMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsrectitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsRectItem_SuperHoverMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsrectitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -6209,8 +6209,8 @@ void q_graphicsrectitem_hover_leave_event(void* self, void* event) {
     QGraphicsRectItem_HoverLeaveEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseHoverLeaveEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsrectitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsRectItem_SuperHoverLeaveEvent((QGraphicsRectItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsrectitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -6221,8 +6221,8 @@ void q_graphicsrectitem_key_press_event(void* self, void* event) {
     QGraphicsRectItem_KeyPressEvent((QGraphicsRectItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseKeyPressEvent((QGraphicsRectItem*)self, (QKeyEvent*)event);
+void q_graphicsrectitem_super_key_press_event(void* self, void* event) {
+    QGraphicsRectItem_SuperKeyPressEvent((QGraphicsRectItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsrectitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -6233,8 +6233,8 @@ void q_graphicsrectitem_key_release_event(void* self, void* event) {
     QGraphicsRectItem_KeyReleaseEvent((QGraphicsRectItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseKeyReleaseEvent((QGraphicsRectItem*)self, (QKeyEvent*)event);
+void q_graphicsrectitem_super_key_release_event(void* self, void* event) {
+    QGraphicsRectItem_SuperKeyReleaseEvent((QGraphicsRectItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsrectitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -6245,8 +6245,8 @@ void q_graphicsrectitem_mouse_press_event(void* self, void* event) {
     QGraphicsRectItem_MousePressEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseMousePressEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsrectitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsRectItem_SuperMousePressEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsrectitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -6257,8 +6257,8 @@ void q_graphicsrectitem_mouse_move_event(void* self, void* event) {
     QGraphicsRectItem_MouseMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseMouseMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsrectitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsRectItem_SuperMouseMoveEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsrectitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -6269,8 +6269,8 @@ void q_graphicsrectitem_mouse_release_event(void* self, void* event) {
     QGraphicsRectItem_MouseReleaseEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseMouseReleaseEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsrectitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsRectItem_SuperMouseReleaseEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsrectitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -6281,8 +6281,8 @@ void q_graphicsrectitem_mouse_double_click_event(void* self, void* event) {
     QGraphicsRectItem_MouseDoubleClickEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseMouseDoubleClickEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsrectitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsRectItem_SuperMouseDoubleClickEvent((QGraphicsRectItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsrectitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -6293,8 +6293,8 @@ void q_graphicsrectitem_wheel_event(void* self, void* event) {
     QGraphicsRectItem_WheelEvent((QGraphicsRectItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseWheelEvent((QGraphicsRectItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicsrectitem_super_wheel_event(void* self, void* event) {
+    QGraphicsRectItem_SuperWheelEvent((QGraphicsRectItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicsrectitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -6305,8 +6305,8 @@ void q_graphicsrectitem_input_method_event(void* self, void* event) {
     QGraphicsRectItem_InputMethodEvent((QGraphicsRectItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicsrectitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsRectItem_QBaseInputMethodEvent((QGraphicsRectItem*)self, (QInputMethodEvent*)event);
+void q_graphicsrectitem_super_input_method_event(void* self, void* event) {
+    QGraphicsRectItem_SuperInputMethodEvent((QGraphicsRectItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicsrectitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -6317,8 +6317,8 @@ QVariant* q_graphicsrectitem_input_method_query(void* self, int32_t query) {
     return QGraphicsRectItem_InputMethodQuery((QGraphicsRectItem*)self, query);
 }
 
-QVariant* q_graphicsrectitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsRectItem_QBaseInputMethodQuery((QGraphicsRectItem*)self, query);
+QVariant* q_graphicsrectitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsRectItem_SuperInputMethodQuery((QGraphicsRectItem*)self, query);
 }
 
 void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -6329,8 +6329,8 @@ QVariant* q_graphicsrectitem_item_change(void* self, int32_t change, void* value
     return QGraphicsRectItem_ItemChange((QGraphicsRectItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicsrectitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsRectItem_QBaseItemChange((QGraphicsRectItem*)self, change, (QVariant*)value);
+QVariant* q_graphicsrectitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsRectItem_SuperItemChange((QGraphicsRectItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -6341,8 +6341,8 @@ void q_graphicsrectitem_update_micro_focus(void* self) {
     QGraphicsRectItem_UpdateMicroFocus((QGraphicsRectItem*)self);
 }
 
-void q_graphicsrectitem_qbase_update_micro_focus(void* self) {
-    QGraphicsRectItem_QBaseUpdateMicroFocus((QGraphicsRectItem*)self);
+void q_graphicsrectitem_super_update_micro_focus(void* self) {
+    QGraphicsRectItem_SuperUpdateMicroFocus((QGraphicsRectItem*)self);
 }
 
 void q_graphicsrectitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -6353,8 +6353,8 @@ void q_graphicsrectitem_add_to_index(void* self) {
     QGraphicsRectItem_AddToIndex((QGraphicsRectItem*)self);
 }
 
-void q_graphicsrectitem_qbase_add_to_index(void* self) {
-    QGraphicsRectItem_QBaseAddToIndex((QGraphicsRectItem*)self);
+void q_graphicsrectitem_super_add_to_index(void* self) {
+    QGraphicsRectItem_SuperAddToIndex((QGraphicsRectItem*)self);
 }
 
 void q_graphicsrectitem_on_add_to_index(void* self, void (*callback)()) {
@@ -6365,8 +6365,8 @@ void q_graphicsrectitem_remove_from_index(void* self) {
     QGraphicsRectItem_RemoveFromIndex((QGraphicsRectItem*)self);
 }
 
-void q_graphicsrectitem_qbase_remove_from_index(void* self) {
-    QGraphicsRectItem_QBaseRemoveFromIndex((QGraphicsRectItem*)self);
+void q_graphicsrectitem_super_remove_from_index(void* self) {
+    QGraphicsRectItem_SuperRemoveFromIndex((QGraphicsRectItem*)self);
 }
 
 void q_graphicsrectitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -6377,8 +6377,8 @@ void q_graphicsrectitem_prepare_geometry_change(void* self) {
     QGraphicsRectItem_PrepareGeometryChange((QGraphicsRectItem*)self);
 }
 
-void q_graphicsrectitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsRectItem_QBasePrepareGeometryChange((QGraphicsRectItem*)self);
+void q_graphicsrectitem_super_prepare_geometry_change(void* self) {
+    QGraphicsRectItem_SuperPrepareGeometryChange((QGraphicsRectItem*)self);
 }
 
 void q_graphicsrectitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -6449,8 +6449,8 @@ void q_graphicsellipseitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsEllipseItem_OnBoundingRect((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicsellipseitem_qbase_bounding_rect(void* self) {
-    return QGraphicsEllipseItem_QBaseBoundingRect((QGraphicsEllipseItem*)self);
+QRectF* q_graphicsellipseitem_super_bounding_rect(void* self) {
+    return QGraphicsEllipseItem_SuperBoundingRect((QGraphicsEllipseItem*)self);
 }
 
 QPainterPath* q_graphicsellipseitem_shape(void* self) {
@@ -6461,8 +6461,8 @@ void q_graphicsellipseitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsEllipseItem_OnShape((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsellipseitem_qbase_shape(void* self) {
-    return QGraphicsEllipseItem_QBaseShape((QGraphicsEllipseItem*)self);
+QPainterPath* q_graphicsellipseitem_super_shape(void* self) {
+    return QGraphicsEllipseItem_SuperShape((QGraphicsEllipseItem*)self);
 }
 
 bool q_graphicsellipseitem_contains(void* self, void* point) {
@@ -6473,8 +6473,8 @@ void q_graphicsellipseitem_on_contains(void* self, bool (*callback)(void*, void*
     QGraphicsEllipseItem_OnContains((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsellipseitem_qbase_contains(void* self, void* point) {
-    return QGraphicsEllipseItem_QBaseContains((QGraphicsEllipseItem*)self, (QPointF*)point);
+bool q_graphicsellipseitem_super_contains(void* self, void* point) {
+    return QGraphicsEllipseItem_SuperContains((QGraphicsEllipseItem*)self, (QPointF*)point);
 }
 
 void q_graphicsellipseitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -6485,8 +6485,8 @@ void q_graphicsellipseitem_on_paint(void* self, void (*callback)(void*, void*, v
     QGraphicsEllipseItem_OnPaint((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsellipseitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsEllipseItem_QBasePaint((QGraphicsEllipseItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicsellipseitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsEllipseItem_SuperPaint((QGraphicsEllipseItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicsellipseitem_is_obscured_by(void* self, void* item) {
@@ -6497,8 +6497,8 @@ void q_graphicsellipseitem_on_is_obscured_by(void* self, bool (*callback)(void*,
     QGraphicsEllipseItem_OnIsObscuredBy((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsellipseitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsEllipseItem_QBaseIsObscuredBy((QGraphicsEllipseItem*)self, (QGraphicsItem*)item);
+bool q_graphicsellipseitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsEllipseItem_SuperIsObscuredBy((QGraphicsEllipseItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicsellipseitem_opaque_area(void* self) {
@@ -6509,8 +6509,8 @@ void q_graphicsellipseitem_on_opaque_area(void* self, QPainterPath* (*callback)(
     QGraphicsEllipseItem_OnOpaqueArea((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsellipseitem_qbase_opaque_area(void* self) {
-    return QGraphicsEllipseItem_QBaseOpaqueArea((QGraphicsEllipseItem*)self);
+QPainterPath* q_graphicsellipseitem_super_opaque_area(void* self) {
+    return QGraphicsEllipseItem_SuperOpaqueArea((QGraphicsEllipseItem*)self);
 }
 
 int32_t q_graphicsellipseitem_type(void* self) {
@@ -6521,8 +6521,8 @@ void q_graphicsellipseitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsEllipseItem_OnType((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsellipseitem_qbase_type(void* self) {
-    return QGraphicsEllipseItem_QBaseType((QGraphicsEllipseItem*)self);
+int32_t q_graphicsellipseitem_super_type(void* self) {
+    return QGraphicsEllipseItem_SuperType((QGraphicsEllipseItem*)self);
 }
 
 bool q_graphicsellipseitem_supports_extension(void* self, int32_t extension) {
@@ -6533,8 +6533,8 @@ void q_graphicsellipseitem_on_supports_extension(void* self, bool (*callback)(vo
     QGraphicsEllipseItem_OnSupportsExtension((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicsellipseitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsEllipseItem_QBaseSupportsExtension((QGraphicsEllipseItem*)self, extension);
+bool q_graphicsellipseitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsEllipseItem_SuperSupportsExtension((QGraphicsEllipseItem*)self, extension);
 }
 
 void q_graphicsellipseitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -6545,8 +6545,8 @@ void q_graphicsellipseitem_on_set_extension(void* self, void (*callback)(void*, 
     QGraphicsEllipseItem_OnSetExtension((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-void q_graphicsellipseitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsEllipseItem_QBaseSetExtension((QGraphicsEllipseItem*)self, extension, (QVariant*)variant);
+void q_graphicsellipseitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsEllipseItem_SuperSetExtension((QGraphicsEllipseItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicsellipseitem_extension(void* self, void* variant) {
@@ -6557,8 +6557,8 @@ void q_graphicsellipseitem_on_extension(void* self, QVariant* (*callback)(void*,
     QGraphicsEllipseItem_OnExtension((QGraphicsEllipseItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicsellipseitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsEllipseItem_QBaseExtension((QGraphicsEllipseItem*)self, (QVariant*)variant);
+QVariant* q_graphicsellipseitem_super_extension(void* self, void* variant) {
+    return QGraphicsEllipseItem_SuperExtension((QGraphicsEllipseItem*)self, (QVariant*)variant);
 }
 
 QPen* q_graphicsellipseitem_pen(void* self) {
@@ -7252,8 +7252,8 @@ void q_graphicsellipseitem_advance(void* self, int phase) {
     QGraphicsEllipseItem_Advance((QGraphicsEllipseItem*)self, phase);
 }
 
-void q_graphicsellipseitem_qbase_advance(void* self, int phase) {
-    QGraphicsEllipseItem_QBaseAdvance((QGraphicsEllipseItem*)self, phase);
+void q_graphicsellipseitem_super_advance(void* self, int phase) {
+    QGraphicsEllipseItem_SuperAdvance((QGraphicsEllipseItem*)self, phase);
 }
 
 void q_graphicsellipseitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -7264,8 +7264,8 @@ bool q_graphicsellipseitem_collides_with_item(void* self, void* other, int32_t m
     return QGraphicsEllipseItem_CollidesWithItem((QGraphicsEllipseItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicsellipseitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsEllipseItem_QBaseCollidesWithItem((QGraphicsEllipseItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicsellipseitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsEllipseItem_SuperCollidesWithItem((QGraphicsEllipseItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicsellipseitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -7276,8 +7276,8 @@ bool q_graphicsellipseitem_collides_with_path(void* self, void* path, int32_t mo
     return QGraphicsEllipseItem_CollidesWithPath((QGraphicsEllipseItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicsellipseitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsEllipseItem_QBaseCollidesWithPath((QGraphicsEllipseItem*)self, (QPainterPath*)path, mode);
+bool q_graphicsellipseitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsEllipseItem_SuperCollidesWithPath((QGraphicsEllipseItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicsellipseitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -7288,8 +7288,8 @@ bool q_graphicsellipseitem_scene_event_filter(void* self, void* watched, void* e
     return QGraphicsEllipseItem_SceneEventFilter((QGraphicsEllipseItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicsellipseitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsEllipseItem_QBaseSceneEventFilter((QGraphicsEllipseItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicsellipseitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsEllipseItem_SuperSceneEventFilter((QGraphicsEllipseItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicsellipseitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -7300,8 +7300,8 @@ bool q_graphicsellipseitem_scene_event(void* self, void* event) {
     return QGraphicsEllipseItem_SceneEvent((QGraphicsEllipseItem*)self, (QEvent*)event);
 }
 
-bool q_graphicsellipseitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsEllipseItem_QBaseSceneEvent((QGraphicsEllipseItem*)self, (QEvent*)event);
+bool q_graphicsellipseitem_super_scene_event(void* self, void* event) {
+    return QGraphicsEllipseItem_SuperSceneEvent((QGraphicsEllipseItem*)self, (QEvent*)event);
 }
 
 void q_graphicsellipseitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -7312,8 +7312,8 @@ void q_graphicsellipseitem_context_menu_event(void* self, void* event) {
     QGraphicsEllipseItem_ContextMenuEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseContextMenuEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicsellipseitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperContextMenuEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicsellipseitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -7324,8 +7324,8 @@ void q_graphicsellipseitem_drag_enter_event(void* self, void* event) {
     QGraphicsEllipseItem_DragEnterEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseDragEnterEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsellipseitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperDragEnterEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsellipseitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -7336,8 +7336,8 @@ void q_graphicsellipseitem_drag_leave_event(void* self, void* event) {
     QGraphicsEllipseItem_DragLeaveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseDragLeaveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsellipseitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperDragLeaveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsellipseitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -7348,8 +7348,8 @@ void q_graphicsellipseitem_drag_move_event(void* self, void* event) {
     QGraphicsEllipseItem_DragMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseDragMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsellipseitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperDragMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsellipseitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -7360,8 +7360,8 @@ void q_graphicsellipseitem_drop_event(void* self, void* event) {
     QGraphicsEllipseItem_DropEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseDropEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsellipseitem_super_drop_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperDropEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsellipseitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -7372,8 +7372,8 @@ void q_graphicsellipseitem_focus_in_event(void* self, void* event) {
     QGraphicsEllipseItem_FocusInEvent((QGraphicsEllipseItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseFocusInEvent((QGraphicsEllipseItem*)self, (QFocusEvent*)event);
+void q_graphicsellipseitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperFocusInEvent((QGraphicsEllipseItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsellipseitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -7384,8 +7384,8 @@ void q_graphicsellipseitem_focus_out_event(void* self, void* event) {
     QGraphicsEllipseItem_FocusOutEvent((QGraphicsEllipseItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseFocusOutEvent((QGraphicsEllipseItem*)self, (QFocusEvent*)event);
+void q_graphicsellipseitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperFocusOutEvent((QGraphicsEllipseItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsellipseitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -7396,8 +7396,8 @@ void q_graphicsellipseitem_hover_enter_event(void* self, void* event) {
     QGraphicsEllipseItem_HoverEnterEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseHoverEnterEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsellipseitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperHoverEnterEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsellipseitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -7408,8 +7408,8 @@ void q_graphicsellipseitem_hover_move_event(void* self, void* event) {
     QGraphicsEllipseItem_HoverMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseHoverMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsellipseitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperHoverMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsellipseitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -7420,8 +7420,8 @@ void q_graphicsellipseitem_hover_leave_event(void* self, void* event) {
     QGraphicsEllipseItem_HoverLeaveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseHoverLeaveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsellipseitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperHoverLeaveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsellipseitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -7432,8 +7432,8 @@ void q_graphicsellipseitem_key_press_event(void* self, void* event) {
     QGraphicsEllipseItem_KeyPressEvent((QGraphicsEllipseItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseKeyPressEvent((QGraphicsEllipseItem*)self, (QKeyEvent*)event);
+void q_graphicsellipseitem_super_key_press_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperKeyPressEvent((QGraphicsEllipseItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsellipseitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -7444,8 +7444,8 @@ void q_graphicsellipseitem_key_release_event(void* self, void* event) {
     QGraphicsEllipseItem_KeyReleaseEvent((QGraphicsEllipseItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseKeyReleaseEvent((QGraphicsEllipseItem*)self, (QKeyEvent*)event);
+void q_graphicsellipseitem_super_key_release_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperKeyReleaseEvent((QGraphicsEllipseItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsellipseitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -7456,8 +7456,8 @@ void q_graphicsellipseitem_mouse_press_event(void* self, void* event) {
     QGraphicsEllipseItem_MousePressEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseMousePressEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsellipseitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperMousePressEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsellipseitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -7468,8 +7468,8 @@ void q_graphicsellipseitem_mouse_move_event(void* self, void* event) {
     QGraphicsEllipseItem_MouseMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseMouseMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsellipseitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperMouseMoveEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsellipseitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -7480,8 +7480,8 @@ void q_graphicsellipseitem_mouse_release_event(void* self, void* event) {
     QGraphicsEllipseItem_MouseReleaseEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseMouseReleaseEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsellipseitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperMouseReleaseEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsellipseitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -7492,8 +7492,8 @@ void q_graphicsellipseitem_mouse_double_click_event(void* self, void* event) {
     QGraphicsEllipseItem_MouseDoubleClickEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseMouseDoubleClickEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsellipseitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperMouseDoubleClickEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsellipseitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -7504,8 +7504,8 @@ void q_graphicsellipseitem_wheel_event(void* self, void* event) {
     QGraphicsEllipseItem_WheelEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseWheelEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicsellipseitem_super_wheel_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperWheelEvent((QGraphicsEllipseItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicsellipseitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -7516,8 +7516,8 @@ void q_graphicsellipseitem_input_method_event(void* self, void* event) {
     QGraphicsEllipseItem_InputMethodEvent((QGraphicsEllipseItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicsellipseitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsEllipseItem_QBaseInputMethodEvent((QGraphicsEllipseItem*)self, (QInputMethodEvent*)event);
+void q_graphicsellipseitem_super_input_method_event(void* self, void* event) {
+    QGraphicsEllipseItem_SuperInputMethodEvent((QGraphicsEllipseItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicsellipseitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -7528,8 +7528,8 @@ QVariant* q_graphicsellipseitem_input_method_query(void* self, int32_t query) {
     return QGraphicsEllipseItem_InputMethodQuery((QGraphicsEllipseItem*)self, query);
 }
 
-QVariant* q_graphicsellipseitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsEllipseItem_QBaseInputMethodQuery((QGraphicsEllipseItem*)self, query);
+QVariant* q_graphicsellipseitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsEllipseItem_SuperInputMethodQuery((QGraphicsEllipseItem*)self, query);
 }
 
 void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -7540,8 +7540,8 @@ QVariant* q_graphicsellipseitem_item_change(void* self, int32_t change, void* va
     return QGraphicsEllipseItem_ItemChange((QGraphicsEllipseItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicsellipseitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsEllipseItem_QBaseItemChange((QGraphicsEllipseItem*)self, change, (QVariant*)value);
+QVariant* q_graphicsellipseitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsEllipseItem_SuperItemChange((QGraphicsEllipseItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -7552,8 +7552,8 @@ void q_graphicsellipseitem_update_micro_focus(void* self) {
     QGraphicsEllipseItem_UpdateMicroFocus((QGraphicsEllipseItem*)self);
 }
 
-void q_graphicsellipseitem_qbase_update_micro_focus(void* self) {
-    QGraphicsEllipseItem_QBaseUpdateMicroFocus((QGraphicsEllipseItem*)self);
+void q_graphicsellipseitem_super_update_micro_focus(void* self) {
+    QGraphicsEllipseItem_SuperUpdateMicroFocus((QGraphicsEllipseItem*)self);
 }
 
 void q_graphicsellipseitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -7564,8 +7564,8 @@ void q_graphicsellipseitem_add_to_index(void* self) {
     QGraphicsEllipseItem_AddToIndex((QGraphicsEllipseItem*)self);
 }
 
-void q_graphicsellipseitem_qbase_add_to_index(void* self) {
-    QGraphicsEllipseItem_QBaseAddToIndex((QGraphicsEllipseItem*)self);
+void q_graphicsellipseitem_super_add_to_index(void* self) {
+    QGraphicsEllipseItem_SuperAddToIndex((QGraphicsEllipseItem*)self);
 }
 
 void q_graphicsellipseitem_on_add_to_index(void* self, void (*callback)()) {
@@ -7576,8 +7576,8 @@ void q_graphicsellipseitem_remove_from_index(void* self) {
     QGraphicsEllipseItem_RemoveFromIndex((QGraphicsEllipseItem*)self);
 }
 
-void q_graphicsellipseitem_qbase_remove_from_index(void* self) {
-    QGraphicsEllipseItem_QBaseRemoveFromIndex((QGraphicsEllipseItem*)self);
+void q_graphicsellipseitem_super_remove_from_index(void* self) {
+    QGraphicsEllipseItem_SuperRemoveFromIndex((QGraphicsEllipseItem*)self);
 }
 
 void q_graphicsellipseitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -7588,8 +7588,8 @@ void q_graphicsellipseitem_prepare_geometry_change(void* self) {
     QGraphicsEllipseItem_PrepareGeometryChange((QGraphicsEllipseItem*)self);
 }
 
-void q_graphicsellipseitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsEllipseItem_QBasePrepareGeometryChange((QGraphicsEllipseItem*)self);
+void q_graphicsellipseitem_super_prepare_geometry_change(void* self) {
+    QGraphicsEllipseItem_SuperPrepareGeometryChange((QGraphicsEllipseItem*)self);
 }
 
 void q_graphicsellipseitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -7624,8 +7624,8 @@ void q_graphicspolygonitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsPolygonItem_OnBoundingRect((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicspolygonitem_qbase_bounding_rect(void* self) {
-    return QGraphicsPolygonItem_QBaseBoundingRect((QGraphicsPolygonItem*)self);
+QRectF* q_graphicspolygonitem_super_bounding_rect(void* self) {
+    return QGraphicsPolygonItem_SuperBoundingRect((QGraphicsPolygonItem*)self);
 }
 
 QPainterPath* q_graphicspolygonitem_shape(void* self) {
@@ -7636,8 +7636,8 @@ void q_graphicspolygonitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsPolygonItem_OnShape((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicspolygonitem_qbase_shape(void* self) {
-    return QGraphicsPolygonItem_QBaseShape((QGraphicsPolygonItem*)self);
+QPainterPath* q_graphicspolygonitem_super_shape(void* self) {
+    return QGraphicsPolygonItem_SuperShape((QGraphicsPolygonItem*)self);
 }
 
 bool q_graphicspolygonitem_contains(void* self, void* point) {
@@ -7648,8 +7648,8 @@ void q_graphicspolygonitem_on_contains(void* self, bool (*callback)(void*, void*
     QGraphicsPolygonItem_OnContains((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspolygonitem_qbase_contains(void* self, void* point) {
-    return QGraphicsPolygonItem_QBaseContains((QGraphicsPolygonItem*)self, (QPointF*)point);
+bool q_graphicspolygonitem_super_contains(void* self, void* point) {
+    return QGraphicsPolygonItem_SuperContains((QGraphicsPolygonItem*)self, (QPointF*)point);
 }
 
 void q_graphicspolygonitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -7660,8 +7660,8 @@ void q_graphicspolygonitem_on_paint(void* self, void (*callback)(void*, void*, v
     QGraphicsPolygonItem_OnPaint((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspolygonitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsPolygonItem_QBasePaint((QGraphicsPolygonItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicspolygonitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsPolygonItem_SuperPaint((QGraphicsPolygonItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicspolygonitem_is_obscured_by(void* self, void* item) {
@@ -7672,8 +7672,8 @@ void q_graphicspolygonitem_on_is_obscured_by(void* self, bool (*callback)(void*,
     QGraphicsPolygonItem_OnIsObscuredBy((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspolygonitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsPolygonItem_QBaseIsObscuredBy((QGraphicsPolygonItem*)self, (QGraphicsItem*)item);
+bool q_graphicspolygonitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsPolygonItem_SuperIsObscuredBy((QGraphicsPolygonItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicspolygonitem_opaque_area(void* self) {
@@ -7684,8 +7684,8 @@ void q_graphicspolygonitem_on_opaque_area(void* self, QPainterPath* (*callback)(
     QGraphicsPolygonItem_OnOpaqueArea((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicspolygonitem_qbase_opaque_area(void* self) {
-    return QGraphicsPolygonItem_QBaseOpaqueArea((QGraphicsPolygonItem*)self);
+QPainterPath* q_graphicspolygonitem_super_opaque_area(void* self) {
+    return QGraphicsPolygonItem_SuperOpaqueArea((QGraphicsPolygonItem*)self);
 }
 
 int32_t q_graphicspolygonitem_type(void* self) {
@@ -7696,8 +7696,8 @@ void q_graphicspolygonitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsPolygonItem_OnType((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicspolygonitem_qbase_type(void* self) {
-    return QGraphicsPolygonItem_QBaseType((QGraphicsPolygonItem*)self);
+int32_t q_graphicspolygonitem_super_type(void* self) {
+    return QGraphicsPolygonItem_SuperType((QGraphicsPolygonItem*)self);
 }
 
 bool q_graphicspolygonitem_supports_extension(void* self, int32_t extension) {
@@ -7708,8 +7708,8 @@ void q_graphicspolygonitem_on_supports_extension(void* self, bool (*callback)(vo
     QGraphicsPolygonItem_OnSupportsExtension((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspolygonitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsPolygonItem_QBaseSupportsExtension((QGraphicsPolygonItem*)self, extension);
+bool q_graphicspolygonitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsPolygonItem_SuperSupportsExtension((QGraphicsPolygonItem*)self, extension);
 }
 
 void q_graphicspolygonitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -7720,8 +7720,8 @@ void q_graphicspolygonitem_on_set_extension(void* self, void (*callback)(void*, 
     QGraphicsPolygonItem_OnSetExtension((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspolygonitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsPolygonItem_QBaseSetExtension((QGraphicsPolygonItem*)self, extension, (QVariant*)variant);
+void q_graphicspolygonitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsPolygonItem_SuperSetExtension((QGraphicsPolygonItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicspolygonitem_extension(void* self, void* variant) {
@@ -7732,8 +7732,8 @@ void q_graphicspolygonitem_on_extension(void* self, QVariant* (*callback)(void*,
     QGraphicsPolygonItem_OnExtension((QGraphicsPolygonItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicspolygonitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsPolygonItem_QBaseExtension((QGraphicsPolygonItem*)self, (QVariant*)variant);
+QVariant* q_graphicspolygonitem_super_extension(void* self, void* variant) {
+    return QGraphicsPolygonItem_SuperExtension((QGraphicsPolygonItem*)self, (QVariant*)variant);
 }
 
 QPen* q_graphicspolygonitem_pen(void* self) {
@@ -8427,8 +8427,8 @@ void q_graphicspolygonitem_advance(void* self, int phase) {
     QGraphicsPolygonItem_Advance((QGraphicsPolygonItem*)self, phase);
 }
 
-void q_graphicspolygonitem_qbase_advance(void* self, int phase) {
-    QGraphicsPolygonItem_QBaseAdvance((QGraphicsPolygonItem*)self, phase);
+void q_graphicspolygonitem_super_advance(void* self, int phase) {
+    QGraphicsPolygonItem_SuperAdvance((QGraphicsPolygonItem*)self, phase);
 }
 
 void q_graphicspolygonitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -8439,8 +8439,8 @@ bool q_graphicspolygonitem_collides_with_item(void* self, void* other, int32_t m
     return QGraphicsPolygonItem_CollidesWithItem((QGraphicsPolygonItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicspolygonitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsPolygonItem_QBaseCollidesWithItem((QGraphicsPolygonItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicspolygonitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsPolygonItem_SuperCollidesWithItem((QGraphicsPolygonItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicspolygonitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -8451,8 +8451,8 @@ bool q_graphicspolygonitem_collides_with_path(void* self, void* path, int32_t mo
     return QGraphicsPolygonItem_CollidesWithPath((QGraphicsPolygonItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicspolygonitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsPolygonItem_QBaseCollidesWithPath((QGraphicsPolygonItem*)self, (QPainterPath*)path, mode);
+bool q_graphicspolygonitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsPolygonItem_SuperCollidesWithPath((QGraphicsPolygonItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicspolygonitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -8463,8 +8463,8 @@ bool q_graphicspolygonitem_scene_event_filter(void* self, void* watched, void* e
     return QGraphicsPolygonItem_SceneEventFilter((QGraphicsPolygonItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicspolygonitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsPolygonItem_QBaseSceneEventFilter((QGraphicsPolygonItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicspolygonitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsPolygonItem_SuperSceneEventFilter((QGraphicsPolygonItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicspolygonitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -8475,8 +8475,8 @@ bool q_graphicspolygonitem_scene_event(void* self, void* event) {
     return QGraphicsPolygonItem_SceneEvent((QGraphicsPolygonItem*)self, (QEvent*)event);
 }
 
-bool q_graphicspolygonitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsPolygonItem_QBaseSceneEvent((QGraphicsPolygonItem*)self, (QEvent*)event);
+bool q_graphicspolygonitem_super_scene_event(void* self, void* event) {
+    return QGraphicsPolygonItem_SuperSceneEvent((QGraphicsPolygonItem*)self, (QEvent*)event);
 }
 
 void q_graphicspolygonitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -8487,8 +8487,8 @@ void q_graphicspolygonitem_context_menu_event(void* self, void* event) {
     QGraphicsPolygonItem_ContextMenuEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseContextMenuEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicspolygonitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperContextMenuEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicspolygonitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -8499,8 +8499,8 @@ void q_graphicspolygonitem_drag_enter_event(void* self, void* event) {
     QGraphicsPolygonItem_DragEnterEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseDragEnterEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspolygonitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperDragEnterEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspolygonitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -8511,8 +8511,8 @@ void q_graphicspolygonitem_drag_leave_event(void* self, void* event) {
     QGraphicsPolygonItem_DragLeaveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseDragLeaveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspolygonitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperDragLeaveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspolygonitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -8523,8 +8523,8 @@ void q_graphicspolygonitem_drag_move_event(void* self, void* event) {
     QGraphicsPolygonItem_DragMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseDragMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspolygonitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperDragMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspolygonitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -8535,8 +8535,8 @@ void q_graphicspolygonitem_drop_event(void* self, void* event) {
     QGraphicsPolygonItem_DropEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseDropEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspolygonitem_super_drop_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperDropEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspolygonitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -8547,8 +8547,8 @@ void q_graphicspolygonitem_focus_in_event(void* self, void* event) {
     QGraphicsPolygonItem_FocusInEvent((QGraphicsPolygonItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseFocusInEvent((QGraphicsPolygonItem*)self, (QFocusEvent*)event);
+void q_graphicspolygonitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperFocusInEvent((QGraphicsPolygonItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicspolygonitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -8559,8 +8559,8 @@ void q_graphicspolygonitem_focus_out_event(void* self, void* event) {
     QGraphicsPolygonItem_FocusOutEvent((QGraphicsPolygonItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseFocusOutEvent((QGraphicsPolygonItem*)self, (QFocusEvent*)event);
+void q_graphicspolygonitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperFocusOutEvent((QGraphicsPolygonItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicspolygonitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -8571,8 +8571,8 @@ void q_graphicspolygonitem_hover_enter_event(void* self, void* event) {
     QGraphicsPolygonItem_HoverEnterEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseHoverEnterEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspolygonitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperHoverEnterEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspolygonitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -8583,8 +8583,8 @@ void q_graphicspolygonitem_hover_move_event(void* self, void* event) {
     QGraphicsPolygonItem_HoverMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseHoverMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspolygonitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperHoverMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspolygonitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -8595,8 +8595,8 @@ void q_graphicspolygonitem_hover_leave_event(void* self, void* event) {
     QGraphicsPolygonItem_HoverLeaveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseHoverLeaveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspolygonitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperHoverLeaveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspolygonitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -8607,8 +8607,8 @@ void q_graphicspolygonitem_key_press_event(void* self, void* event) {
     QGraphicsPolygonItem_KeyPressEvent((QGraphicsPolygonItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseKeyPressEvent((QGraphicsPolygonItem*)self, (QKeyEvent*)event);
+void q_graphicspolygonitem_super_key_press_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperKeyPressEvent((QGraphicsPolygonItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicspolygonitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -8619,8 +8619,8 @@ void q_graphicspolygonitem_key_release_event(void* self, void* event) {
     QGraphicsPolygonItem_KeyReleaseEvent((QGraphicsPolygonItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseKeyReleaseEvent((QGraphicsPolygonItem*)self, (QKeyEvent*)event);
+void q_graphicspolygonitem_super_key_release_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperKeyReleaseEvent((QGraphicsPolygonItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicspolygonitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -8631,8 +8631,8 @@ void q_graphicspolygonitem_mouse_press_event(void* self, void* event) {
     QGraphicsPolygonItem_MousePressEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseMousePressEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspolygonitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperMousePressEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspolygonitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -8643,8 +8643,8 @@ void q_graphicspolygonitem_mouse_move_event(void* self, void* event) {
     QGraphicsPolygonItem_MouseMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseMouseMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspolygonitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperMouseMoveEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspolygonitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -8655,8 +8655,8 @@ void q_graphicspolygonitem_mouse_release_event(void* self, void* event) {
     QGraphicsPolygonItem_MouseReleaseEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseMouseReleaseEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspolygonitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperMouseReleaseEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspolygonitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -8667,8 +8667,8 @@ void q_graphicspolygonitem_mouse_double_click_event(void* self, void* event) {
     QGraphicsPolygonItem_MouseDoubleClickEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseMouseDoubleClickEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspolygonitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperMouseDoubleClickEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspolygonitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -8679,8 +8679,8 @@ void q_graphicspolygonitem_wheel_event(void* self, void* event) {
     QGraphicsPolygonItem_WheelEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseWheelEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicspolygonitem_super_wheel_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperWheelEvent((QGraphicsPolygonItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicspolygonitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -8691,8 +8691,8 @@ void q_graphicspolygonitem_input_method_event(void* self, void* event) {
     QGraphicsPolygonItem_InputMethodEvent((QGraphicsPolygonItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicspolygonitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsPolygonItem_QBaseInputMethodEvent((QGraphicsPolygonItem*)self, (QInputMethodEvent*)event);
+void q_graphicspolygonitem_super_input_method_event(void* self, void* event) {
+    QGraphicsPolygonItem_SuperInputMethodEvent((QGraphicsPolygonItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicspolygonitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -8703,8 +8703,8 @@ QVariant* q_graphicspolygonitem_input_method_query(void* self, int32_t query) {
     return QGraphicsPolygonItem_InputMethodQuery((QGraphicsPolygonItem*)self, query);
 }
 
-QVariant* q_graphicspolygonitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsPolygonItem_QBaseInputMethodQuery((QGraphicsPolygonItem*)self, query);
+QVariant* q_graphicspolygonitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsPolygonItem_SuperInputMethodQuery((QGraphicsPolygonItem*)self, query);
 }
 
 void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -8715,8 +8715,8 @@ QVariant* q_graphicspolygonitem_item_change(void* self, int32_t change, void* va
     return QGraphicsPolygonItem_ItemChange((QGraphicsPolygonItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicspolygonitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsPolygonItem_QBaseItemChange((QGraphicsPolygonItem*)self, change, (QVariant*)value);
+QVariant* q_graphicspolygonitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsPolygonItem_SuperItemChange((QGraphicsPolygonItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -8727,8 +8727,8 @@ void q_graphicspolygonitem_update_micro_focus(void* self) {
     QGraphicsPolygonItem_UpdateMicroFocus((QGraphicsPolygonItem*)self);
 }
 
-void q_graphicspolygonitem_qbase_update_micro_focus(void* self) {
-    QGraphicsPolygonItem_QBaseUpdateMicroFocus((QGraphicsPolygonItem*)self);
+void q_graphicspolygonitem_super_update_micro_focus(void* self) {
+    QGraphicsPolygonItem_SuperUpdateMicroFocus((QGraphicsPolygonItem*)self);
 }
 
 void q_graphicspolygonitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -8739,8 +8739,8 @@ void q_graphicspolygonitem_add_to_index(void* self) {
     QGraphicsPolygonItem_AddToIndex((QGraphicsPolygonItem*)self);
 }
 
-void q_graphicspolygonitem_qbase_add_to_index(void* self) {
-    QGraphicsPolygonItem_QBaseAddToIndex((QGraphicsPolygonItem*)self);
+void q_graphicspolygonitem_super_add_to_index(void* self) {
+    QGraphicsPolygonItem_SuperAddToIndex((QGraphicsPolygonItem*)self);
 }
 
 void q_graphicspolygonitem_on_add_to_index(void* self, void (*callback)()) {
@@ -8751,8 +8751,8 @@ void q_graphicspolygonitem_remove_from_index(void* self) {
     QGraphicsPolygonItem_RemoveFromIndex((QGraphicsPolygonItem*)self);
 }
 
-void q_graphicspolygonitem_qbase_remove_from_index(void* self) {
-    QGraphicsPolygonItem_QBaseRemoveFromIndex((QGraphicsPolygonItem*)self);
+void q_graphicspolygonitem_super_remove_from_index(void* self) {
+    QGraphicsPolygonItem_SuperRemoveFromIndex((QGraphicsPolygonItem*)self);
 }
 
 void q_graphicspolygonitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -8763,8 +8763,8 @@ void q_graphicspolygonitem_prepare_geometry_change(void* self) {
     QGraphicsPolygonItem_PrepareGeometryChange((QGraphicsPolygonItem*)self);
 }
 
-void q_graphicspolygonitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsPolygonItem_QBasePrepareGeometryChange((QGraphicsPolygonItem*)self);
+void q_graphicspolygonitem_super_prepare_geometry_change(void* self) {
+    QGraphicsPolygonItem_SuperPrepareGeometryChange((QGraphicsPolygonItem*)self);
 }
 
 void q_graphicspolygonitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -8827,8 +8827,8 @@ void q_graphicslineitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsLineItem_OnBoundingRect((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicslineitem_qbase_bounding_rect(void* self) {
-    return QGraphicsLineItem_QBaseBoundingRect((QGraphicsLineItem*)self);
+QRectF* q_graphicslineitem_super_bounding_rect(void* self) {
+    return QGraphicsLineItem_SuperBoundingRect((QGraphicsLineItem*)self);
 }
 
 QPainterPath* q_graphicslineitem_shape(void* self) {
@@ -8839,8 +8839,8 @@ void q_graphicslineitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsLineItem_OnShape((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicslineitem_qbase_shape(void* self) {
-    return QGraphicsLineItem_QBaseShape((QGraphicsLineItem*)self);
+QPainterPath* q_graphicslineitem_super_shape(void* self) {
+    return QGraphicsLineItem_SuperShape((QGraphicsLineItem*)self);
 }
 
 bool q_graphicslineitem_contains(void* self, void* point) {
@@ -8851,8 +8851,8 @@ void q_graphicslineitem_on_contains(void* self, bool (*callback)(void*, void*)) 
     QGraphicsLineItem_OnContains((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicslineitem_qbase_contains(void* self, void* point) {
-    return QGraphicsLineItem_QBaseContains((QGraphicsLineItem*)self, (QPointF*)point);
+bool q_graphicslineitem_super_contains(void* self, void* point) {
+    return QGraphicsLineItem_SuperContains((QGraphicsLineItem*)self, (QPointF*)point);
 }
 
 void q_graphicslineitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -8863,8 +8863,8 @@ void q_graphicslineitem_on_paint(void* self, void (*callback)(void*, void*, void
     QGraphicsLineItem_OnPaint((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-void q_graphicslineitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsLineItem_QBasePaint((QGraphicsLineItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicslineitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsLineItem_SuperPaint((QGraphicsLineItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicslineitem_is_obscured_by(void* self, void* item) {
@@ -8875,8 +8875,8 @@ void q_graphicslineitem_on_is_obscured_by(void* self, bool (*callback)(void*, vo
     QGraphicsLineItem_OnIsObscuredBy((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicslineitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsLineItem_QBaseIsObscuredBy((QGraphicsLineItem*)self, (QGraphicsItem*)item);
+bool q_graphicslineitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsLineItem_SuperIsObscuredBy((QGraphicsLineItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicslineitem_opaque_area(void* self) {
@@ -8887,8 +8887,8 @@ void q_graphicslineitem_on_opaque_area(void* self, QPainterPath* (*callback)()) 
     QGraphicsLineItem_OnOpaqueArea((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicslineitem_qbase_opaque_area(void* self) {
-    return QGraphicsLineItem_QBaseOpaqueArea((QGraphicsLineItem*)self);
+QPainterPath* q_graphicslineitem_super_opaque_area(void* self) {
+    return QGraphicsLineItem_SuperOpaqueArea((QGraphicsLineItem*)self);
 }
 
 int32_t q_graphicslineitem_type(void* self) {
@@ -8899,8 +8899,8 @@ void q_graphicslineitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsLineItem_OnType((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicslineitem_qbase_type(void* self) {
-    return QGraphicsLineItem_QBaseType((QGraphicsLineItem*)self);
+int32_t q_graphicslineitem_super_type(void* self) {
+    return QGraphicsLineItem_SuperType((QGraphicsLineItem*)self);
 }
 
 bool q_graphicslineitem_supports_extension(void* self, int32_t extension) {
@@ -8911,8 +8911,8 @@ void q_graphicslineitem_on_supports_extension(void* self, bool (*callback)(void*
     QGraphicsLineItem_OnSupportsExtension((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicslineitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsLineItem_QBaseSupportsExtension((QGraphicsLineItem*)self, extension);
+bool q_graphicslineitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsLineItem_SuperSupportsExtension((QGraphicsLineItem*)self, extension);
 }
 
 void q_graphicslineitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -8923,8 +8923,8 @@ void q_graphicslineitem_on_set_extension(void* self, void (*callback)(void*, int
     QGraphicsLineItem_OnSetExtension((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-void q_graphicslineitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsLineItem_QBaseSetExtension((QGraphicsLineItem*)self, extension, (QVariant*)variant);
+void q_graphicslineitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsLineItem_SuperSetExtension((QGraphicsLineItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicslineitem_extension(void* self, void* variant) {
@@ -8935,8 +8935,8 @@ void q_graphicslineitem_on_extension(void* self, QVariant* (*callback)(void*, vo
     QGraphicsLineItem_OnExtension((QGraphicsLineItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicslineitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsLineItem_QBaseExtension((QGraphicsLineItem*)self, (QVariant*)variant);
+QVariant* q_graphicslineitem_super_extension(void* self, void* variant) {
+    return QGraphicsLineItem_SuperExtension((QGraphicsLineItem*)self, (QVariant*)variant);
 }
 
 QGraphicsScene* q_graphicslineitem_scene(void* self) {
@@ -9614,8 +9614,8 @@ void q_graphicslineitem_advance(void* self, int phase) {
     QGraphicsLineItem_Advance((QGraphicsLineItem*)self, phase);
 }
 
-void q_graphicslineitem_qbase_advance(void* self, int phase) {
-    QGraphicsLineItem_QBaseAdvance((QGraphicsLineItem*)self, phase);
+void q_graphicslineitem_super_advance(void* self, int phase) {
+    QGraphicsLineItem_SuperAdvance((QGraphicsLineItem*)self, phase);
 }
 
 void q_graphicslineitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -9626,8 +9626,8 @@ bool q_graphicslineitem_collides_with_item(void* self, void* other, int32_t mode
     return QGraphicsLineItem_CollidesWithItem((QGraphicsLineItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicslineitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsLineItem_QBaseCollidesWithItem((QGraphicsLineItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicslineitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsLineItem_SuperCollidesWithItem((QGraphicsLineItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicslineitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -9638,8 +9638,8 @@ bool q_graphicslineitem_collides_with_path(void* self, void* path, int32_t mode)
     return QGraphicsLineItem_CollidesWithPath((QGraphicsLineItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicslineitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsLineItem_QBaseCollidesWithPath((QGraphicsLineItem*)self, (QPainterPath*)path, mode);
+bool q_graphicslineitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsLineItem_SuperCollidesWithPath((QGraphicsLineItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicslineitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -9650,8 +9650,8 @@ bool q_graphicslineitem_scene_event_filter(void* self, void* watched, void* even
     return QGraphicsLineItem_SceneEventFilter((QGraphicsLineItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicslineitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsLineItem_QBaseSceneEventFilter((QGraphicsLineItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicslineitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsLineItem_SuperSceneEventFilter((QGraphicsLineItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicslineitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -9662,8 +9662,8 @@ bool q_graphicslineitem_scene_event(void* self, void* event) {
     return QGraphicsLineItem_SceneEvent((QGraphicsLineItem*)self, (QEvent*)event);
 }
 
-bool q_graphicslineitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsLineItem_QBaseSceneEvent((QGraphicsLineItem*)self, (QEvent*)event);
+bool q_graphicslineitem_super_scene_event(void* self, void* event) {
+    return QGraphicsLineItem_SuperSceneEvent((QGraphicsLineItem*)self, (QEvent*)event);
 }
 
 void q_graphicslineitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -9674,8 +9674,8 @@ void q_graphicslineitem_context_menu_event(void* self, void* event) {
     QGraphicsLineItem_ContextMenuEvent((QGraphicsLineItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicslineitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseContextMenuEvent((QGraphicsLineItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicslineitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsLineItem_SuperContextMenuEvent((QGraphicsLineItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicslineitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -9686,8 +9686,8 @@ void q_graphicslineitem_drag_enter_event(void* self, void* event) {
     QGraphicsLineItem_DragEnterEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicslineitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseDragEnterEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicslineitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsLineItem_SuperDragEnterEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicslineitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -9698,8 +9698,8 @@ void q_graphicslineitem_drag_leave_event(void* self, void* event) {
     QGraphicsLineItem_DragLeaveEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicslineitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseDragLeaveEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicslineitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsLineItem_SuperDragLeaveEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicslineitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -9710,8 +9710,8 @@ void q_graphicslineitem_drag_move_event(void* self, void* event) {
     QGraphicsLineItem_DragMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicslineitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseDragMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicslineitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsLineItem_SuperDragMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicslineitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -9722,8 +9722,8 @@ void q_graphicslineitem_drop_event(void* self, void* event) {
     QGraphicsLineItem_DropEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicslineitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseDropEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicslineitem_super_drop_event(void* self, void* event) {
+    QGraphicsLineItem_SuperDropEvent((QGraphicsLineItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicslineitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -9734,8 +9734,8 @@ void q_graphicslineitem_focus_in_event(void* self, void* event) {
     QGraphicsLineItem_FocusInEvent((QGraphicsLineItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicslineitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseFocusInEvent((QGraphicsLineItem*)self, (QFocusEvent*)event);
+void q_graphicslineitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsLineItem_SuperFocusInEvent((QGraphicsLineItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicslineitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -9746,8 +9746,8 @@ void q_graphicslineitem_focus_out_event(void* self, void* event) {
     QGraphicsLineItem_FocusOutEvent((QGraphicsLineItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicslineitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseFocusOutEvent((QGraphicsLineItem*)self, (QFocusEvent*)event);
+void q_graphicslineitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsLineItem_SuperFocusOutEvent((QGraphicsLineItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicslineitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -9758,8 +9758,8 @@ void q_graphicslineitem_hover_enter_event(void* self, void* event) {
     QGraphicsLineItem_HoverEnterEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicslineitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseHoverEnterEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicslineitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsLineItem_SuperHoverEnterEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicslineitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -9770,8 +9770,8 @@ void q_graphicslineitem_hover_move_event(void* self, void* event) {
     QGraphicsLineItem_HoverMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicslineitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseHoverMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicslineitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsLineItem_SuperHoverMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicslineitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -9782,8 +9782,8 @@ void q_graphicslineitem_hover_leave_event(void* self, void* event) {
     QGraphicsLineItem_HoverLeaveEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicslineitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseHoverLeaveEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicslineitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsLineItem_SuperHoverLeaveEvent((QGraphicsLineItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicslineitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -9794,8 +9794,8 @@ void q_graphicslineitem_key_press_event(void* self, void* event) {
     QGraphicsLineItem_KeyPressEvent((QGraphicsLineItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicslineitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseKeyPressEvent((QGraphicsLineItem*)self, (QKeyEvent*)event);
+void q_graphicslineitem_super_key_press_event(void* self, void* event) {
+    QGraphicsLineItem_SuperKeyPressEvent((QGraphicsLineItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicslineitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -9806,8 +9806,8 @@ void q_graphicslineitem_key_release_event(void* self, void* event) {
     QGraphicsLineItem_KeyReleaseEvent((QGraphicsLineItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicslineitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseKeyReleaseEvent((QGraphicsLineItem*)self, (QKeyEvent*)event);
+void q_graphicslineitem_super_key_release_event(void* self, void* event) {
+    QGraphicsLineItem_SuperKeyReleaseEvent((QGraphicsLineItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicslineitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -9818,8 +9818,8 @@ void q_graphicslineitem_mouse_press_event(void* self, void* event) {
     QGraphicsLineItem_MousePressEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicslineitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseMousePressEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicslineitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsLineItem_SuperMousePressEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicslineitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -9830,8 +9830,8 @@ void q_graphicslineitem_mouse_move_event(void* self, void* event) {
     QGraphicsLineItem_MouseMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicslineitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseMouseMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicslineitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsLineItem_SuperMouseMoveEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicslineitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -9842,8 +9842,8 @@ void q_graphicslineitem_mouse_release_event(void* self, void* event) {
     QGraphicsLineItem_MouseReleaseEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicslineitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseMouseReleaseEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicslineitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsLineItem_SuperMouseReleaseEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicslineitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -9854,8 +9854,8 @@ void q_graphicslineitem_mouse_double_click_event(void* self, void* event) {
     QGraphicsLineItem_MouseDoubleClickEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicslineitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseMouseDoubleClickEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicslineitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsLineItem_SuperMouseDoubleClickEvent((QGraphicsLineItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicslineitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -9866,8 +9866,8 @@ void q_graphicslineitem_wheel_event(void* self, void* event) {
     QGraphicsLineItem_WheelEvent((QGraphicsLineItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicslineitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseWheelEvent((QGraphicsLineItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicslineitem_super_wheel_event(void* self, void* event) {
+    QGraphicsLineItem_SuperWheelEvent((QGraphicsLineItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicslineitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -9878,8 +9878,8 @@ void q_graphicslineitem_input_method_event(void* self, void* event) {
     QGraphicsLineItem_InputMethodEvent((QGraphicsLineItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicslineitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsLineItem_QBaseInputMethodEvent((QGraphicsLineItem*)self, (QInputMethodEvent*)event);
+void q_graphicslineitem_super_input_method_event(void* self, void* event) {
+    QGraphicsLineItem_SuperInputMethodEvent((QGraphicsLineItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicslineitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -9890,8 +9890,8 @@ QVariant* q_graphicslineitem_input_method_query(void* self, int32_t query) {
     return QGraphicsLineItem_InputMethodQuery((QGraphicsLineItem*)self, query);
 }
 
-QVariant* q_graphicslineitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsLineItem_QBaseInputMethodQuery((QGraphicsLineItem*)self, query);
+QVariant* q_graphicslineitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsLineItem_SuperInputMethodQuery((QGraphicsLineItem*)self, query);
 }
 
 void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -9902,8 +9902,8 @@ QVariant* q_graphicslineitem_item_change(void* self, int32_t change, void* value
     return QGraphicsLineItem_ItemChange((QGraphicsLineItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicslineitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsLineItem_QBaseItemChange((QGraphicsLineItem*)self, change, (QVariant*)value);
+QVariant* q_graphicslineitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsLineItem_SuperItemChange((QGraphicsLineItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -9914,8 +9914,8 @@ void q_graphicslineitem_update_micro_focus(void* self) {
     QGraphicsLineItem_UpdateMicroFocus((QGraphicsLineItem*)self);
 }
 
-void q_graphicslineitem_qbase_update_micro_focus(void* self) {
-    QGraphicsLineItem_QBaseUpdateMicroFocus((QGraphicsLineItem*)self);
+void q_graphicslineitem_super_update_micro_focus(void* self) {
+    QGraphicsLineItem_SuperUpdateMicroFocus((QGraphicsLineItem*)self);
 }
 
 void q_graphicslineitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -9926,8 +9926,8 @@ void q_graphicslineitem_add_to_index(void* self) {
     QGraphicsLineItem_AddToIndex((QGraphicsLineItem*)self);
 }
 
-void q_graphicslineitem_qbase_add_to_index(void* self) {
-    QGraphicsLineItem_QBaseAddToIndex((QGraphicsLineItem*)self);
+void q_graphicslineitem_super_add_to_index(void* self) {
+    QGraphicsLineItem_SuperAddToIndex((QGraphicsLineItem*)self);
 }
 
 void q_graphicslineitem_on_add_to_index(void* self, void (*callback)()) {
@@ -9938,8 +9938,8 @@ void q_graphicslineitem_remove_from_index(void* self) {
     QGraphicsLineItem_RemoveFromIndex((QGraphicsLineItem*)self);
 }
 
-void q_graphicslineitem_qbase_remove_from_index(void* self) {
-    QGraphicsLineItem_QBaseRemoveFromIndex((QGraphicsLineItem*)self);
+void q_graphicslineitem_super_remove_from_index(void* self) {
+    QGraphicsLineItem_SuperRemoveFromIndex((QGraphicsLineItem*)self);
 }
 
 void q_graphicslineitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -9950,8 +9950,8 @@ void q_graphicslineitem_prepare_geometry_change(void* self) {
     QGraphicsLineItem_PrepareGeometryChange((QGraphicsLineItem*)self);
 }
 
-void q_graphicslineitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsLineItem_QBasePrepareGeometryChange((QGraphicsLineItem*)self);
+void q_graphicslineitem_super_prepare_geometry_change(void* self) {
+    QGraphicsLineItem_SuperPrepareGeometryChange((QGraphicsLineItem*)self);
 }
 
 void q_graphicslineitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -10014,8 +10014,8 @@ void q_graphicspixmapitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsPixmapItem_OnBoundingRect((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicspixmapitem_qbase_bounding_rect(void* self) {
-    return QGraphicsPixmapItem_QBaseBoundingRect((QGraphicsPixmapItem*)self);
+QRectF* q_graphicspixmapitem_super_bounding_rect(void* self) {
+    return QGraphicsPixmapItem_SuperBoundingRect((QGraphicsPixmapItem*)self);
 }
 
 QPainterPath* q_graphicspixmapitem_shape(void* self) {
@@ -10026,8 +10026,8 @@ void q_graphicspixmapitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsPixmapItem_OnShape((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicspixmapitem_qbase_shape(void* self) {
-    return QGraphicsPixmapItem_QBaseShape((QGraphicsPixmapItem*)self);
+QPainterPath* q_graphicspixmapitem_super_shape(void* self) {
+    return QGraphicsPixmapItem_SuperShape((QGraphicsPixmapItem*)self);
 }
 
 bool q_graphicspixmapitem_contains(void* self, void* point) {
@@ -10038,8 +10038,8 @@ void q_graphicspixmapitem_on_contains(void* self, bool (*callback)(void*, void*)
     QGraphicsPixmapItem_OnContains((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspixmapitem_qbase_contains(void* self, void* point) {
-    return QGraphicsPixmapItem_QBaseContains((QGraphicsPixmapItem*)self, (QPointF*)point);
+bool q_graphicspixmapitem_super_contains(void* self, void* point) {
+    return QGraphicsPixmapItem_SuperContains((QGraphicsPixmapItem*)self, (QPointF*)point);
 }
 
 void q_graphicspixmapitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -10050,8 +10050,8 @@ void q_graphicspixmapitem_on_paint(void* self, void (*callback)(void*, void*, vo
     QGraphicsPixmapItem_OnPaint((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspixmapitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsPixmapItem_QBasePaint((QGraphicsPixmapItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicspixmapitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsPixmapItem_SuperPaint((QGraphicsPixmapItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicspixmapitem_is_obscured_by(void* self, void* item) {
@@ -10062,8 +10062,8 @@ void q_graphicspixmapitem_on_is_obscured_by(void* self, bool (*callback)(void*, 
     QGraphicsPixmapItem_OnIsObscuredBy((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspixmapitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsPixmapItem_QBaseIsObscuredBy((QGraphicsPixmapItem*)self, (QGraphicsItem*)item);
+bool q_graphicspixmapitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsPixmapItem_SuperIsObscuredBy((QGraphicsPixmapItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicspixmapitem_opaque_area(void* self) {
@@ -10074,8 +10074,8 @@ void q_graphicspixmapitem_on_opaque_area(void* self, QPainterPath* (*callback)()
     QGraphicsPixmapItem_OnOpaqueArea((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicspixmapitem_qbase_opaque_area(void* self) {
-    return QGraphicsPixmapItem_QBaseOpaqueArea((QGraphicsPixmapItem*)self);
+QPainterPath* q_graphicspixmapitem_super_opaque_area(void* self) {
+    return QGraphicsPixmapItem_SuperOpaqueArea((QGraphicsPixmapItem*)self);
 }
 
 int32_t q_graphicspixmapitem_type(void* self) {
@@ -10086,8 +10086,8 @@ void q_graphicspixmapitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsPixmapItem_OnType((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicspixmapitem_qbase_type(void* self) {
-    return QGraphicsPixmapItem_QBaseType((QGraphicsPixmapItem*)self);
+int32_t q_graphicspixmapitem_super_type(void* self) {
+    return QGraphicsPixmapItem_SuperType((QGraphicsPixmapItem*)self);
 }
 
 int32_t q_graphicspixmapitem_shape_mode(void* self) {
@@ -10106,8 +10106,8 @@ void q_graphicspixmapitem_on_supports_extension(void* self, bool (*callback)(voi
     QGraphicsPixmapItem_OnSupportsExtension((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicspixmapitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsPixmapItem_QBaseSupportsExtension((QGraphicsPixmapItem*)self, extension);
+bool q_graphicspixmapitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsPixmapItem_SuperSupportsExtension((QGraphicsPixmapItem*)self, extension);
 }
 
 void q_graphicspixmapitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -10118,8 +10118,8 @@ void q_graphicspixmapitem_on_set_extension(void* self, void (*callback)(void*, i
     QGraphicsPixmapItem_OnSetExtension((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-void q_graphicspixmapitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsPixmapItem_QBaseSetExtension((QGraphicsPixmapItem*)self, extension, (QVariant*)variant);
+void q_graphicspixmapitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsPixmapItem_SuperSetExtension((QGraphicsPixmapItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicspixmapitem_extension(void* self, void* variant) {
@@ -10130,8 +10130,8 @@ void q_graphicspixmapitem_on_extension(void* self, QVariant* (*callback)(void*, 
     QGraphicsPixmapItem_OnExtension((QGraphicsPixmapItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicspixmapitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsPixmapItem_QBaseExtension((QGraphicsPixmapItem*)self, (QVariant*)variant);
+QVariant* q_graphicspixmapitem_super_extension(void* self, void* variant) {
+    return QGraphicsPixmapItem_SuperExtension((QGraphicsPixmapItem*)self, (QVariant*)variant);
 }
 
 QGraphicsScene* q_graphicspixmapitem_scene(void* self) {
@@ -10809,8 +10809,8 @@ void q_graphicspixmapitem_advance(void* self, int phase) {
     QGraphicsPixmapItem_Advance((QGraphicsPixmapItem*)self, phase);
 }
 
-void q_graphicspixmapitem_qbase_advance(void* self, int phase) {
-    QGraphicsPixmapItem_QBaseAdvance((QGraphicsPixmapItem*)self, phase);
+void q_graphicspixmapitem_super_advance(void* self, int phase) {
+    QGraphicsPixmapItem_SuperAdvance((QGraphicsPixmapItem*)self, phase);
 }
 
 void q_graphicspixmapitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -10821,8 +10821,8 @@ bool q_graphicspixmapitem_collides_with_item(void* self, void* other, int32_t mo
     return QGraphicsPixmapItem_CollidesWithItem((QGraphicsPixmapItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicspixmapitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsPixmapItem_QBaseCollidesWithItem((QGraphicsPixmapItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicspixmapitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsPixmapItem_SuperCollidesWithItem((QGraphicsPixmapItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicspixmapitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -10833,8 +10833,8 @@ bool q_graphicspixmapitem_collides_with_path(void* self, void* path, int32_t mod
     return QGraphicsPixmapItem_CollidesWithPath((QGraphicsPixmapItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicspixmapitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsPixmapItem_QBaseCollidesWithPath((QGraphicsPixmapItem*)self, (QPainterPath*)path, mode);
+bool q_graphicspixmapitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsPixmapItem_SuperCollidesWithPath((QGraphicsPixmapItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicspixmapitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -10845,8 +10845,8 @@ bool q_graphicspixmapitem_scene_event_filter(void* self, void* watched, void* ev
     return QGraphicsPixmapItem_SceneEventFilter((QGraphicsPixmapItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicspixmapitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsPixmapItem_QBaseSceneEventFilter((QGraphicsPixmapItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicspixmapitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsPixmapItem_SuperSceneEventFilter((QGraphicsPixmapItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicspixmapitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -10857,8 +10857,8 @@ bool q_graphicspixmapitem_scene_event(void* self, void* event) {
     return QGraphicsPixmapItem_SceneEvent((QGraphicsPixmapItem*)self, (QEvent*)event);
 }
 
-bool q_graphicspixmapitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsPixmapItem_QBaseSceneEvent((QGraphicsPixmapItem*)self, (QEvent*)event);
+bool q_graphicspixmapitem_super_scene_event(void* self, void* event) {
+    return QGraphicsPixmapItem_SuperSceneEvent((QGraphicsPixmapItem*)self, (QEvent*)event);
 }
 
 void q_graphicspixmapitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -10869,8 +10869,8 @@ void q_graphicspixmapitem_context_menu_event(void* self, void* event) {
     QGraphicsPixmapItem_ContextMenuEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseContextMenuEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicspixmapitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperContextMenuEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicspixmapitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -10881,8 +10881,8 @@ void q_graphicspixmapitem_drag_enter_event(void* self, void* event) {
     QGraphicsPixmapItem_DragEnterEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseDragEnterEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspixmapitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperDragEnterEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspixmapitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -10893,8 +10893,8 @@ void q_graphicspixmapitem_drag_leave_event(void* self, void* event) {
     QGraphicsPixmapItem_DragLeaveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseDragLeaveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspixmapitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperDragLeaveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspixmapitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -10905,8 +10905,8 @@ void q_graphicspixmapitem_drag_move_event(void* self, void* event) {
     QGraphicsPixmapItem_DragMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseDragMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspixmapitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperDragMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspixmapitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -10917,8 +10917,8 @@ void q_graphicspixmapitem_drop_event(void* self, void* event) {
     QGraphicsPixmapItem_DropEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseDropEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicspixmapitem_super_drop_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperDropEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicspixmapitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -10929,8 +10929,8 @@ void q_graphicspixmapitem_focus_in_event(void* self, void* event) {
     QGraphicsPixmapItem_FocusInEvent((QGraphicsPixmapItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseFocusInEvent((QGraphicsPixmapItem*)self, (QFocusEvent*)event);
+void q_graphicspixmapitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperFocusInEvent((QGraphicsPixmapItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicspixmapitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -10941,8 +10941,8 @@ void q_graphicspixmapitem_focus_out_event(void* self, void* event) {
     QGraphicsPixmapItem_FocusOutEvent((QGraphicsPixmapItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseFocusOutEvent((QGraphicsPixmapItem*)self, (QFocusEvent*)event);
+void q_graphicspixmapitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperFocusOutEvent((QGraphicsPixmapItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicspixmapitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -10953,8 +10953,8 @@ void q_graphicspixmapitem_hover_enter_event(void* self, void* event) {
     QGraphicsPixmapItem_HoverEnterEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseHoverEnterEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspixmapitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperHoverEnterEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspixmapitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -10965,8 +10965,8 @@ void q_graphicspixmapitem_hover_move_event(void* self, void* event) {
     QGraphicsPixmapItem_HoverMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseHoverMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspixmapitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperHoverMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspixmapitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -10977,8 +10977,8 @@ void q_graphicspixmapitem_hover_leave_event(void* self, void* event) {
     QGraphicsPixmapItem_HoverLeaveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseHoverLeaveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicspixmapitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperHoverLeaveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicspixmapitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -10989,8 +10989,8 @@ void q_graphicspixmapitem_key_press_event(void* self, void* event) {
     QGraphicsPixmapItem_KeyPressEvent((QGraphicsPixmapItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseKeyPressEvent((QGraphicsPixmapItem*)self, (QKeyEvent*)event);
+void q_graphicspixmapitem_super_key_press_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperKeyPressEvent((QGraphicsPixmapItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicspixmapitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -11001,8 +11001,8 @@ void q_graphicspixmapitem_key_release_event(void* self, void* event) {
     QGraphicsPixmapItem_KeyReleaseEvent((QGraphicsPixmapItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseKeyReleaseEvent((QGraphicsPixmapItem*)self, (QKeyEvent*)event);
+void q_graphicspixmapitem_super_key_release_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperKeyReleaseEvent((QGraphicsPixmapItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicspixmapitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -11013,8 +11013,8 @@ void q_graphicspixmapitem_mouse_press_event(void* self, void* event) {
     QGraphicsPixmapItem_MousePressEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseMousePressEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspixmapitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperMousePressEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspixmapitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -11025,8 +11025,8 @@ void q_graphicspixmapitem_mouse_move_event(void* self, void* event) {
     QGraphicsPixmapItem_MouseMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseMouseMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspixmapitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperMouseMoveEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspixmapitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -11037,8 +11037,8 @@ void q_graphicspixmapitem_mouse_release_event(void* self, void* event) {
     QGraphicsPixmapItem_MouseReleaseEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseMouseReleaseEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspixmapitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperMouseReleaseEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspixmapitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -11049,8 +11049,8 @@ void q_graphicspixmapitem_mouse_double_click_event(void* self, void* event) {
     QGraphicsPixmapItem_MouseDoubleClickEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseMouseDoubleClickEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicspixmapitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperMouseDoubleClickEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicspixmapitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -11061,8 +11061,8 @@ void q_graphicspixmapitem_wheel_event(void* self, void* event) {
     QGraphicsPixmapItem_WheelEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseWheelEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicspixmapitem_super_wheel_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperWheelEvent((QGraphicsPixmapItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicspixmapitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -11073,8 +11073,8 @@ void q_graphicspixmapitem_input_method_event(void* self, void* event) {
     QGraphicsPixmapItem_InputMethodEvent((QGraphicsPixmapItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicspixmapitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsPixmapItem_QBaseInputMethodEvent((QGraphicsPixmapItem*)self, (QInputMethodEvent*)event);
+void q_graphicspixmapitem_super_input_method_event(void* self, void* event) {
+    QGraphicsPixmapItem_SuperInputMethodEvent((QGraphicsPixmapItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicspixmapitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -11085,8 +11085,8 @@ QVariant* q_graphicspixmapitem_input_method_query(void* self, int32_t query) {
     return QGraphicsPixmapItem_InputMethodQuery((QGraphicsPixmapItem*)self, query);
 }
 
-QVariant* q_graphicspixmapitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsPixmapItem_QBaseInputMethodQuery((QGraphicsPixmapItem*)self, query);
+QVariant* q_graphicspixmapitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsPixmapItem_SuperInputMethodQuery((QGraphicsPixmapItem*)self, query);
 }
 
 void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -11097,8 +11097,8 @@ QVariant* q_graphicspixmapitem_item_change(void* self, int32_t change, void* val
     return QGraphicsPixmapItem_ItemChange((QGraphicsPixmapItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicspixmapitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsPixmapItem_QBaseItemChange((QGraphicsPixmapItem*)self, change, (QVariant*)value);
+QVariant* q_graphicspixmapitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsPixmapItem_SuperItemChange((QGraphicsPixmapItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -11109,8 +11109,8 @@ void q_graphicspixmapitem_update_micro_focus(void* self) {
     QGraphicsPixmapItem_UpdateMicroFocus((QGraphicsPixmapItem*)self);
 }
 
-void q_graphicspixmapitem_qbase_update_micro_focus(void* self) {
-    QGraphicsPixmapItem_QBaseUpdateMicroFocus((QGraphicsPixmapItem*)self);
+void q_graphicspixmapitem_super_update_micro_focus(void* self) {
+    QGraphicsPixmapItem_SuperUpdateMicroFocus((QGraphicsPixmapItem*)self);
 }
 
 void q_graphicspixmapitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -11121,8 +11121,8 @@ void q_graphicspixmapitem_add_to_index(void* self) {
     QGraphicsPixmapItem_AddToIndex((QGraphicsPixmapItem*)self);
 }
 
-void q_graphicspixmapitem_qbase_add_to_index(void* self) {
-    QGraphicsPixmapItem_QBaseAddToIndex((QGraphicsPixmapItem*)self);
+void q_graphicspixmapitem_super_add_to_index(void* self) {
+    QGraphicsPixmapItem_SuperAddToIndex((QGraphicsPixmapItem*)self);
 }
 
 void q_graphicspixmapitem_on_add_to_index(void* self, void (*callback)()) {
@@ -11133,8 +11133,8 @@ void q_graphicspixmapitem_remove_from_index(void* self) {
     QGraphicsPixmapItem_RemoveFromIndex((QGraphicsPixmapItem*)self);
 }
 
-void q_graphicspixmapitem_qbase_remove_from_index(void* self) {
-    QGraphicsPixmapItem_QBaseRemoveFromIndex((QGraphicsPixmapItem*)self);
+void q_graphicspixmapitem_super_remove_from_index(void* self) {
+    QGraphicsPixmapItem_SuperRemoveFromIndex((QGraphicsPixmapItem*)self);
 }
 
 void q_graphicspixmapitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -11145,8 +11145,8 @@ void q_graphicspixmapitem_prepare_geometry_change(void* self) {
     QGraphicsPixmapItem_PrepareGeometryChange((QGraphicsPixmapItem*)self);
 }
 
-void q_graphicspixmapitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsPixmapItem_QBasePrepareGeometryChange((QGraphicsPixmapItem*)self);
+void q_graphicspixmapitem_super_prepare_geometry_change(void* self) {
+    QGraphicsPixmapItem_SuperPrepareGeometryChange((QGraphicsPixmapItem*)self);
 }
 
 void q_graphicspixmapitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -11181,8 +11181,8 @@ void q_graphicstextitem_on_meta_object(void* self, const QMetaObject* (*callback
     QGraphicsTextItem_OnMetaObject((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_graphicstextitem_qbase_meta_object(void* self) {
-    return QGraphicsTextItem_QBaseMetaObject((QGraphicsTextItem*)self);
+const QMetaObject* q_graphicstextitem_super_meta_object(void* self) {
+    return QGraphicsTextItem_SuperMetaObject((QGraphicsTextItem*)self);
 }
 
 void* q_graphicstextitem_metacast(void* self, const char* param1) {
@@ -11193,8 +11193,8 @@ void q_graphicstextitem_on_metacast(void* self, void* (*callback)(void*, const c
     QGraphicsTextItem_OnMetacast((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void* q_graphicstextitem_qbase_metacast(void* self, const char* param1) {
-    return QGraphicsTextItem_QBaseMetacast((QGraphicsTextItem*)self, param1);
+void* q_graphicstextitem_super_metacast(void* self, const char* param1) {
+    return QGraphicsTextItem_SuperMetacast((QGraphicsTextItem*)self, param1);
 }
 
 int32_t q_graphicstextitem_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -11205,8 +11205,8 @@ void q_graphicstextitem_on_metacall(void* self, int32_t (*callback)(void*, int32
     QGraphicsTextItem_OnMetacall((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicstextitem_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGraphicsTextItem_QBaseMetacall((QGraphicsTextItem*)self, param1, param2, param3);
+int32_t q_graphicstextitem_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGraphicsTextItem_SuperMetacall((QGraphicsTextItem*)self, param1, param2, param3);
 }
 
 const char* q_graphicstextitem_tr(const char* s) {
@@ -11262,8 +11262,8 @@ void q_graphicstextitem_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsTextItem_OnBoundingRect((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicstextitem_qbase_bounding_rect(void* self) {
-    return QGraphicsTextItem_QBaseBoundingRect((QGraphicsTextItem*)self);
+QRectF* q_graphicstextitem_super_bounding_rect(void* self) {
+    return QGraphicsTextItem_SuperBoundingRect((QGraphicsTextItem*)self);
 }
 
 QPainterPath* q_graphicstextitem_shape(void* self) {
@@ -11274,8 +11274,8 @@ void q_graphicstextitem_on_shape(void* self, QPainterPath* (*callback)()) {
     QGraphicsTextItem_OnShape((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicstextitem_qbase_shape(void* self) {
-    return QGraphicsTextItem_QBaseShape((QGraphicsTextItem*)self);
+QPainterPath* q_graphicstextitem_super_shape(void* self) {
+    return QGraphicsTextItem_SuperShape((QGraphicsTextItem*)self);
 }
 
 bool q_graphicstextitem_contains(void* self, void* point) {
@@ -11286,8 +11286,8 @@ void q_graphicstextitem_on_contains(void* self, bool (*callback)(void*, void*)) 
     QGraphicsTextItem_OnContains((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicstextitem_qbase_contains(void* self, void* point) {
-    return QGraphicsTextItem_QBaseContains((QGraphicsTextItem*)self, (QPointF*)point);
+bool q_graphicstextitem_super_contains(void* self, void* point) {
+    return QGraphicsTextItem_SuperContains((QGraphicsTextItem*)self, (QPointF*)point);
 }
 
 void q_graphicstextitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -11298,8 +11298,8 @@ void q_graphicstextitem_on_paint(void* self, void (*callback)(void*, void*, void
     QGraphicsTextItem_OnPaint((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsTextItem_QBasePaint((QGraphicsTextItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicstextitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsTextItem_SuperPaint((QGraphicsTextItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicstextitem_is_obscured_by(void* self, void* item) {
@@ -11310,8 +11310,8 @@ void q_graphicstextitem_on_is_obscured_by(void* self, bool (*callback)(void*, vo
     QGraphicsTextItem_OnIsObscuredBy((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicstextitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsTextItem_QBaseIsObscuredBy((QGraphicsTextItem*)self, (QGraphicsItem*)item);
+bool q_graphicstextitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsTextItem_SuperIsObscuredBy((QGraphicsTextItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicstextitem_opaque_area(void* self) {
@@ -11322,8 +11322,8 @@ void q_graphicstextitem_on_opaque_area(void* self, QPainterPath* (*callback)()) 
     QGraphicsTextItem_OnOpaqueArea((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicstextitem_qbase_opaque_area(void* self) {
-    return QGraphicsTextItem_QBaseOpaqueArea((QGraphicsTextItem*)self);
+QPainterPath* q_graphicstextitem_super_opaque_area(void* self) {
+    return QGraphicsTextItem_SuperOpaqueArea((QGraphicsTextItem*)self);
 }
 
 int32_t q_graphicstextitem_type(void* self) {
@@ -11334,8 +11334,8 @@ void q_graphicstextitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsTextItem_OnType((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicstextitem_qbase_type(void* self) {
-    return QGraphicsTextItem_QBaseType((QGraphicsTextItem*)self);
+int32_t q_graphicstextitem_super_type(void* self) {
+    return QGraphicsTextItem_SuperType((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_set_text_width(void* self, double width) {
@@ -11414,8 +11414,8 @@ void q_graphicstextitem_on_scene_event(void* self, bool (*callback)(void*, void*
     QGraphicsTextItem_OnSceneEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicstextitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsTextItem_QBaseSceneEvent((QGraphicsTextItem*)self, (QEvent*)event);
+bool q_graphicstextitem_super_scene_event(void* self, void* event) {
+    return QGraphicsTextItem_SuperSceneEvent((QGraphicsTextItem*)self, (QEvent*)event);
 }
 
 void q_graphicstextitem_mouse_press_event(void* self, void* event) {
@@ -11426,8 +11426,8 @@ void q_graphicstextitem_on_mouse_press_event(void* self, void (*callback)(void*,
     QGraphicsTextItem_OnMousePressEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseMousePressEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicstextitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsTextItem_SuperMousePressEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicstextitem_mouse_move_event(void* self, void* event) {
@@ -11438,8 +11438,8 @@ void q_graphicstextitem_on_mouse_move_event(void* self, void (*callback)(void*, 
     QGraphicsTextItem_OnMouseMoveEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseMouseMoveEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicstextitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsTextItem_SuperMouseMoveEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicstextitem_mouse_release_event(void* self, void* event) {
@@ -11450,8 +11450,8 @@ void q_graphicstextitem_on_mouse_release_event(void* self, void (*callback)(void
     QGraphicsTextItem_OnMouseReleaseEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseMouseReleaseEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicstextitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsTextItem_SuperMouseReleaseEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicstextitem_mouse_double_click_event(void* self, void* event) {
@@ -11462,8 +11462,8 @@ void q_graphicstextitem_on_mouse_double_click_event(void* self, void (*callback)
     QGraphicsTextItem_OnMouseDoubleClickEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseMouseDoubleClickEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicstextitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsTextItem_SuperMouseDoubleClickEvent((QGraphicsTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicstextitem_context_menu_event(void* self, void* event) {
@@ -11474,8 +11474,8 @@ void q_graphicstextitem_on_context_menu_event(void* self, void (*callback)(void*
     QGraphicsTextItem_OnContextMenuEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseContextMenuEvent((QGraphicsTextItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicstextitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsTextItem_SuperContextMenuEvent((QGraphicsTextItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicstextitem_key_press_event(void* self, void* event) {
@@ -11486,8 +11486,8 @@ void q_graphicstextitem_on_key_press_event(void* self, void (*callback)(void*, v
     QGraphicsTextItem_OnKeyPressEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseKeyPressEvent((QGraphicsTextItem*)self, (QKeyEvent*)event);
+void q_graphicstextitem_super_key_press_event(void* self, void* event) {
+    QGraphicsTextItem_SuperKeyPressEvent((QGraphicsTextItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicstextitem_key_release_event(void* self, void* event) {
@@ -11498,8 +11498,8 @@ void q_graphicstextitem_on_key_release_event(void* self, void (*callback)(void*,
     QGraphicsTextItem_OnKeyReleaseEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseKeyReleaseEvent((QGraphicsTextItem*)self, (QKeyEvent*)event);
+void q_graphicstextitem_super_key_release_event(void* self, void* event) {
+    QGraphicsTextItem_SuperKeyReleaseEvent((QGraphicsTextItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicstextitem_focus_in_event(void* self, void* event) {
@@ -11510,8 +11510,8 @@ void q_graphicstextitem_on_focus_in_event(void* self, void (*callback)(void*, vo
     QGraphicsTextItem_OnFocusInEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseFocusInEvent((QGraphicsTextItem*)self, (QFocusEvent*)event);
+void q_graphicstextitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsTextItem_SuperFocusInEvent((QGraphicsTextItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicstextitem_focus_out_event(void* self, void* event) {
@@ -11522,8 +11522,8 @@ void q_graphicstextitem_on_focus_out_event(void* self, void (*callback)(void*, v
     QGraphicsTextItem_OnFocusOutEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseFocusOutEvent((QGraphicsTextItem*)self, (QFocusEvent*)event);
+void q_graphicstextitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsTextItem_SuperFocusOutEvent((QGraphicsTextItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicstextitem_drag_enter_event(void* self, void* event) {
@@ -11534,8 +11534,8 @@ void q_graphicstextitem_on_drag_enter_event(void* self, void (*callback)(void*, 
     QGraphicsTextItem_OnDragEnterEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseDragEnterEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicstextitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsTextItem_SuperDragEnterEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicstextitem_drag_leave_event(void* self, void* event) {
@@ -11546,8 +11546,8 @@ void q_graphicstextitem_on_drag_leave_event(void* self, void (*callback)(void*, 
     QGraphicsTextItem_OnDragLeaveEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseDragLeaveEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicstextitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsTextItem_SuperDragLeaveEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicstextitem_drag_move_event(void* self, void* event) {
@@ -11558,8 +11558,8 @@ void q_graphicstextitem_on_drag_move_event(void* self, void (*callback)(void*, v
     QGraphicsTextItem_OnDragMoveEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseDragMoveEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicstextitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsTextItem_SuperDragMoveEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicstextitem_drop_event(void* self, void* event) {
@@ -11570,8 +11570,8 @@ void q_graphicstextitem_on_drop_event(void* self, void (*callback)(void*, void*)
     QGraphicsTextItem_OnDropEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseDropEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicstextitem_super_drop_event(void* self, void* event) {
+    QGraphicsTextItem_SuperDropEvent((QGraphicsTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicstextitem_input_method_event(void* self, void* event) {
@@ -11582,8 +11582,8 @@ void q_graphicstextitem_on_input_method_event(void* self, void (*callback)(void*
     QGraphicsTextItem_OnInputMethodEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseInputMethodEvent((QGraphicsTextItem*)self, (QInputMethodEvent*)event);
+void q_graphicstextitem_super_input_method_event(void* self, void* event) {
+    QGraphicsTextItem_SuperInputMethodEvent((QGraphicsTextItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicstextitem_hover_enter_event(void* self, void* event) {
@@ -11594,8 +11594,8 @@ void q_graphicstextitem_on_hover_enter_event(void* self, void (*callback)(void*,
     QGraphicsTextItem_OnHoverEnterEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseHoverEnterEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicstextitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsTextItem_SuperHoverEnterEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicstextitem_hover_move_event(void* self, void* event) {
@@ -11606,8 +11606,8 @@ void q_graphicstextitem_on_hover_move_event(void* self, void (*callback)(void*, 
     QGraphicsTextItem_OnHoverMoveEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseHoverMoveEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicstextitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsTextItem_SuperHoverMoveEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicstextitem_hover_leave_event(void* self, void* event) {
@@ -11618,8 +11618,8 @@ void q_graphicstextitem_on_hover_leave_event(void* self, void (*callback)(void*,
     QGraphicsTextItem_OnHoverLeaveEvent((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseHoverLeaveEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicstextitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsTextItem_SuperHoverLeaveEvent((QGraphicsTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 QVariant* q_graphicstextitem_input_method_query(void* self, int32_t query) {
@@ -11630,8 +11630,8 @@ void q_graphicstextitem_on_input_method_query(void* self, QVariant* (*callback)(
     QGraphicsTextItem_OnInputMethodQuery((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicstextitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsTextItem_QBaseInputMethodQuery((QGraphicsTextItem*)self, query);
+QVariant* q_graphicstextitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsTextItem_SuperInputMethodQuery((QGraphicsTextItem*)self, query);
 }
 
 bool q_graphicstextitem_supports_extension(void* self, int32_t extension) {
@@ -11642,8 +11642,8 @@ void q_graphicstextitem_on_supports_extension(void* self, bool (*callback)(void*
     QGraphicsTextItem_OnSupportsExtension((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicstextitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsTextItem_QBaseSupportsExtension((QGraphicsTextItem*)self, extension);
+bool q_graphicstextitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsTextItem_SuperSupportsExtension((QGraphicsTextItem*)self, extension);
 }
 
 void q_graphicstextitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -11654,8 +11654,8 @@ void q_graphicstextitem_on_set_extension(void* self, void (*callback)(void*, int
     QGraphicsTextItem_OnSetExtension((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicstextitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsTextItem_QBaseSetExtension((QGraphicsTextItem*)self, extension, (QVariant*)variant);
+void q_graphicstextitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsTextItem_SuperSetExtension((QGraphicsTextItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicstextitem_extension(void* self, void* variant) {
@@ -11666,8 +11666,8 @@ void q_graphicstextitem_on_extension(void* self, QVariant* (*callback)(void*, vo
     QGraphicsTextItem_OnExtension((QGraphicsTextItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicstextitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsTextItem_QBaseExtension((QGraphicsTextItem*)self, (QVariant*)variant);
+QVariant* q_graphicstextitem_super_extension(void* self, void* variant) {
+    return QGraphicsTextItem_SuperExtension((QGraphicsTextItem*)self, (QVariant*)variant);
 }
 
 const char* q_graphicstextitem_tr2(const char* s, const char* c) {
@@ -12678,8 +12678,8 @@ bool q_graphicstextitem_event(void* self, void* ev) {
     return QGraphicsTextItem_Event((QGraphicsTextItem*)self, (QEvent*)ev);
 }
 
-bool q_graphicstextitem_qbase_event(void* self, void* ev) {
-    return QGraphicsTextItem_QBaseEvent((QGraphicsTextItem*)self, (QEvent*)ev);
+bool q_graphicstextitem_super_event(void* self, void* ev) {
+    return QGraphicsTextItem_SuperEvent((QGraphicsTextItem*)self, (QEvent*)ev);
 }
 
 void q_graphicstextitem_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -12690,8 +12690,8 @@ bool q_graphicstextitem_event_filter(void* self, void* watched, void* event) {
     return QGraphicsTextItem_EventFilter((QGraphicsTextItem*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_graphicstextitem_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsTextItem_QBaseEventFilter((QGraphicsTextItem*)self, (QObject*)watched, (QEvent*)event);
+bool q_graphicstextitem_super_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsTextItem_SuperEventFilter((QGraphicsTextItem*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_graphicstextitem_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -12702,8 +12702,8 @@ void q_graphicstextitem_timer_event(void* self, void* event) {
     QGraphicsTextItem_TimerEvent((QGraphicsTextItem*)self, (QTimerEvent*)event);
 }
 
-void q_graphicstextitem_qbase_timer_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseTimerEvent((QGraphicsTextItem*)self, (QTimerEvent*)event);
+void q_graphicstextitem_super_timer_event(void* self, void* event) {
+    QGraphicsTextItem_SuperTimerEvent((QGraphicsTextItem*)self, (QTimerEvent*)event);
 }
 
 void q_graphicstextitem_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -12714,8 +12714,8 @@ void q_graphicstextitem_child_event(void* self, void* event) {
     QGraphicsTextItem_ChildEvent((QGraphicsTextItem*)self, (QChildEvent*)event);
 }
 
-void q_graphicstextitem_qbase_child_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseChildEvent((QGraphicsTextItem*)self, (QChildEvent*)event);
+void q_graphicstextitem_super_child_event(void* self, void* event) {
+    QGraphicsTextItem_SuperChildEvent((QGraphicsTextItem*)self, (QChildEvent*)event);
 }
 
 void q_graphicstextitem_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -12726,8 +12726,8 @@ void q_graphicstextitem_custom_event(void* self, void* event) {
     QGraphicsTextItem_CustomEvent((QGraphicsTextItem*)self, (QEvent*)event);
 }
 
-void q_graphicstextitem_qbase_custom_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseCustomEvent((QGraphicsTextItem*)self, (QEvent*)event);
+void q_graphicstextitem_super_custom_event(void* self, void* event) {
+    QGraphicsTextItem_SuperCustomEvent((QGraphicsTextItem*)self, (QEvent*)event);
 }
 
 void q_graphicstextitem_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -12738,8 +12738,8 @@ void q_graphicstextitem_connect_notify(void* self, void* signal) {
     QGraphicsTextItem_ConnectNotify((QGraphicsTextItem*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicstextitem_qbase_connect_notify(void* self, void* signal) {
-    QGraphicsTextItem_QBaseConnectNotify((QGraphicsTextItem*)self, (QMetaMethod*)signal);
+void q_graphicstextitem_super_connect_notify(void* self, void* signal) {
+    QGraphicsTextItem_SuperConnectNotify((QGraphicsTextItem*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicstextitem_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -12750,8 +12750,8 @@ void q_graphicstextitem_disconnect_notify(void* self, void* signal) {
     QGraphicsTextItem_DisconnectNotify((QGraphicsTextItem*)self, (QMetaMethod*)signal);
 }
 
-void q_graphicstextitem_qbase_disconnect_notify(void* self, void* signal) {
-    QGraphicsTextItem_QBaseDisconnectNotify((QGraphicsTextItem*)self, (QMetaMethod*)signal);
+void q_graphicstextitem_super_disconnect_notify(void* self, void* signal) {
+    QGraphicsTextItem_SuperDisconnectNotify((QGraphicsTextItem*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicstextitem_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -12762,8 +12762,8 @@ void q_graphicstextitem_advance(void* self, int phase) {
     QGraphicsTextItem_Advance((QGraphicsTextItem*)self, phase);
 }
 
-void q_graphicstextitem_qbase_advance(void* self, int phase) {
-    QGraphicsTextItem_QBaseAdvance((QGraphicsTextItem*)self, phase);
+void q_graphicstextitem_super_advance(void* self, int phase) {
+    QGraphicsTextItem_SuperAdvance((QGraphicsTextItem*)self, phase);
 }
 
 void q_graphicstextitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -12774,8 +12774,8 @@ bool q_graphicstextitem_collides_with_item(void* self, void* other, int32_t mode
     return QGraphicsTextItem_CollidesWithItem((QGraphicsTextItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicstextitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsTextItem_QBaseCollidesWithItem((QGraphicsTextItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicstextitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsTextItem_SuperCollidesWithItem((QGraphicsTextItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicstextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -12786,8 +12786,8 @@ bool q_graphicstextitem_collides_with_path(void* self, void* path, int32_t mode)
     return QGraphicsTextItem_CollidesWithPath((QGraphicsTextItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicstextitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsTextItem_QBaseCollidesWithPath((QGraphicsTextItem*)self, (QPainterPath*)path, mode);
+bool q_graphicstextitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsTextItem_SuperCollidesWithPath((QGraphicsTextItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicstextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -12798,8 +12798,8 @@ bool q_graphicstextitem_scene_event_filter(void* self, void* watched, void* even
     return QGraphicsTextItem_SceneEventFilter((QGraphicsTextItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicstextitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsTextItem_QBaseSceneEventFilter((QGraphicsTextItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicstextitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsTextItem_SuperSceneEventFilter((QGraphicsTextItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicstextitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -12810,8 +12810,8 @@ void q_graphicstextitem_wheel_event(void* self, void* event) {
     QGraphicsTextItem_WheelEvent((QGraphicsTextItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicstextitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsTextItem_QBaseWheelEvent((QGraphicsTextItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicstextitem_super_wheel_event(void* self, void* event) {
+    QGraphicsTextItem_SuperWheelEvent((QGraphicsTextItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicstextitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -12822,8 +12822,8 @@ QVariant* q_graphicstextitem_item_change(void* self, int32_t change, void* value
     return QGraphicsTextItem_ItemChange((QGraphicsTextItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicstextitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsTextItem_QBaseItemChange((QGraphicsTextItem*)self, change, (QVariant*)value);
+QVariant* q_graphicstextitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsTextItem_SuperItemChange((QGraphicsTextItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -12834,8 +12834,8 @@ void q_graphicstextitem_update_micro_focus(void* self) {
     QGraphicsTextItem_UpdateMicroFocus((QGraphicsTextItem*)self);
 }
 
-void q_graphicstextitem_qbase_update_micro_focus(void* self) {
-    QGraphicsTextItem_QBaseUpdateMicroFocus((QGraphicsTextItem*)self);
+void q_graphicstextitem_super_update_micro_focus(void* self) {
+    QGraphicsTextItem_SuperUpdateMicroFocus((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -12846,8 +12846,8 @@ QObject* q_graphicstextitem_sender(void* self) {
     return QGraphicsTextItem_Sender((QGraphicsTextItem*)self);
 }
 
-QObject* q_graphicstextitem_qbase_sender(void* self) {
-    return QGraphicsTextItem_QBaseSender((QGraphicsTextItem*)self);
+QObject* q_graphicstextitem_super_sender(void* self) {
+    return QGraphicsTextItem_SuperSender((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_on_sender(void* self, QObject* (*callback)()) {
@@ -12858,8 +12858,8 @@ int32_t q_graphicstextitem_sender_signal_index(void* self) {
     return QGraphicsTextItem_SenderSignalIndex((QGraphicsTextItem*)self);
 }
 
-int32_t q_graphicstextitem_qbase_sender_signal_index(void* self) {
-    return QGraphicsTextItem_QBaseSenderSignalIndex((QGraphicsTextItem*)self);
+int32_t q_graphicstextitem_super_sender_signal_index(void* self) {
+    return QGraphicsTextItem_SuperSenderSignalIndex((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -12870,8 +12870,8 @@ int32_t q_graphicstextitem_receivers(void* self, const char* signal) {
     return QGraphicsTextItem_Receivers((QGraphicsTextItem*)self, signal);
 }
 
-int32_t q_graphicstextitem_qbase_receivers(void* self, const char* signal) {
-    return QGraphicsTextItem_QBaseReceivers((QGraphicsTextItem*)self, signal);
+int32_t q_graphicstextitem_super_receivers(void* self, const char* signal) {
+    return QGraphicsTextItem_SuperReceivers((QGraphicsTextItem*)self, signal);
 }
 
 void q_graphicstextitem_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -12882,8 +12882,8 @@ bool q_graphicstextitem_is_signal_connected(void* self, void* signal) {
     return QGraphicsTextItem_IsSignalConnected((QGraphicsTextItem*)self, (QMetaMethod*)signal);
 }
 
-bool q_graphicstextitem_qbase_is_signal_connected(void* self, void* signal) {
-    return QGraphicsTextItem_QBaseIsSignalConnected((QGraphicsTextItem*)self, (QMetaMethod*)signal);
+bool q_graphicstextitem_super_is_signal_connected(void* self, void* signal) {
+    return QGraphicsTextItem_SuperIsSignalConnected((QGraphicsTextItem*)self, (QMetaMethod*)signal);
 }
 
 void q_graphicstextitem_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -12894,8 +12894,8 @@ void q_graphicstextitem_add_to_index(void* self) {
     QGraphicsTextItem_AddToIndex((QGraphicsTextItem*)self);
 }
 
-void q_graphicstextitem_qbase_add_to_index(void* self) {
-    QGraphicsTextItem_QBaseAddToIndex((QGraphicsTextItem*)self);
+void q_graphicstextitem_super_add_to_index(void* self) {
+    QGraphicsTextItem_SuperAddToIndex((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_on_add_to_index(void* self, void (*callback)()) {
@@ -12906,8 +12906,8 @@ void q_graphicstextitem_remove_from_index(void* self) {
     QGraphicsTextItem_RemoveFromIndex((QGraphicsTextItem*)self);
 }
 
-void q_graphicstextitem_qbase_remove_from_index(void* self) {
-    QGraphicsTextItem_QBaseRemoveFromIndex((QGraphicsTextItem*)self);
+void q_graphicstextitem_super_remove_from_index(void* self) {
+    QGraphicsTextItem_SuperRemoveFromIndex((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -12918,8 +12918,8 @@ void q_graphicstextitem_prepare_geometry_change(void* self) {
     QGraphicsTextItem_PrepareGeometryChange((QGraphicsTextItem*)self);
 }
 
-void q_graphicstextitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsTextItem_QBasePrepareGeometryChange((QGraphicsTextItem*)self);
+void q_graphicstextitem_super_prepare_geometry_change(void* self) {
+    QGraphicsTextItem_SuperPrepareGeometryChange((QGraphicsTextItem*)self);
 }
 
 void q_graphicstextitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -12977,8 +12977,8 @@ void q_graphicssimpletextitem_on_bounding_rect(void* self, QRectF* (*callback)()
     QGraphicsSimpleTextItem_OnBoundingRect((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicssimpletextitem_qbase_bounding_rect(void* self) {
-    return QGraphicsSimpleTextItem_QBaseBoundingRect((QGraphicsSimpleTextItem*)self);
+QRectF* q_graphicssimpletextitem_super_bounding_rect(void* self) {
+    return QGraphicsSimpleTextItem_SuperBoundingRect((QGraphicsSimpleTextItem*)self);
 }
 
 QPainterPath* q_graphicssimpletextitem_shape(void* self) {
@@ -12989,8 +12989,8 @@ void q_graphicssimpletextitem_on_shape(void* self, QPainterPath* (*callback)()) 
     QGraphicsSimpleTextItem_OnShape((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicssimpletextitem_qbase_shape(void* self) {
-    return QGraphicsSimpleTextItem_QBaseShape((QGraphicsSimpleTextItem*)self);
+QPainterPath* q_graphicssimpletextitem_super_shape(void* self) {
+    return QGraphicsSimpleTextItem_SuperShape((QGraphicsSimpleTextItem*)self);
 }
 
 bool q_graphicssimpletextitem_contains(void* self, void* point) {
@@ -13001,8 +13001,8 @@ void q_graphicssimpletextitem_on_contains(void* self, bool (*callback)(void*, vo
     QGraphicsSimpleTextItem_OnContains((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicssimpletextitem_qbase_contains(void* self, void* point) {
-    return QGraphicsSimpleTextItem_QBaseContains((QGraphicsSimpleTextItem*)self, (QPointF*)point);
+bool q_graphicssimpletextitem_super_contains(void* self, void* point) {
+    return QGraphicsSimpleTextItem_SuperContains((QGraphicsSimpleTextItem*)self, (QPointF*)point);
 }
 
 void q_graphicssimpletextitem_paint(void* self, void* painter, void* option, void* widget) {
@@ -13013,8 +13013,8 @@ void q_graphicssimpletextitem_on_paint(void* self, void (*callback)(void*, void*
     QGraphicsSimpleTextItem_OnPaint((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicssimpletextitem_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsSimpleTextItem_QBasePaint((QGraphicsSimpleTextItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicssimpletextitem_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsSimpleTextItem_SuperPaint((QGraphicsSimpleTextItem*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicssimpletextitem_is_obscured_by(void* self, void* item) {
@@ -13025,8 +13025,8 @@ void q_graphicssimpletextitem_on_is_obscured_by(void* self, bool (*callback)(voi
     QGraphicsSimpleTextItem_OnIsObscuredBy((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicssimpletextitem_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsSimpleTextItem_QBaseIsObscuredBy((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)item);
+bool q_graphicssimpletextitem_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsSimpleTextItem_SuperIsObscuredBy((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicssimpletextitem_opaque_area(void* self) {
@@ -13037,8 +13037,8 @@ void q_graphicssimpletextitem_on_opaque_area(void* self, QPainterPath* (*callbac
     QGraphicsSimpleTextItem_OnOpaqueArea((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicssimpletextitem_qbase_opaque_area(void* self) {
-    return QGraphicsSimpleTextItem_QBaseOpaqueArea((QGraphicsSimpleTextItem*)self);
+QPainterPath* q_graphicssimpletextitem_super_opaque_area(void* self) {
+    return QGraphicsSimpleTextItem_SuperOpaqueArea((QGraphicsSimpleTextItem*)self);
 }
 
 int32_t q_graphicssimpletextitem_type(void* self) {
@@ -13049,8 +13049,8 @@ void q_graphicssimpletextitem_on_type(void* self, int32_t (*callback)()) {
     QGraphicsSimpleTextItem_OnType((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicssimpletextitem_qbase_type(void* self) {
-    return QGraphicsSimpleTextItem_QBaseType((QGraphicsSimpleTextItem*)self);
+int32_t q_graphicssimpletextitem_super_type(void* self) {
+    return QGraphicsSimpleTextItem_SuperType((QGraphicsSimpleTextItem*)self);
 }
 
 bool q_graphicssimpletextitem_supports_extension(void* self, int32_t extension) {
@@ -13061,8 +13061,8 @@ void q_graphicssimpletextitem_on_supports_extension(void* self, bool (*callback)
     QGraphicsSimpleTextItem_OnSupportsExtension((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-bool q_graphicssimpletextitem_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsSimpleTextItem_QBaseSupportsExtension((QGraphicsSimpleTextItem*)self, extension);
+bool q_graphicssimpletextitem_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsSimpleTextItem_SuperSupportsExtension((QGraphicsSimpleTextItem*)self, extension);
 }
 
 void q_graphicssimpletextitem_set_extension(void* self, int32_t extension, void* variant) {
@@ -13073,8 +13073,8 @@ void q_graphicssimpletextitem_on_set_extension(void* self, void (*callback)(void
     QGraphicsSimpleTextItem_OnSetExtension((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-void q_graphicssimpletextitem_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsSimpleTextItem_QBaseSetExtension((QGraphicsSimpleTextItem*)self, extension, (QVariant*)variant);
+void q_graphicssimpletextitem_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsSimpleTextItem_SuperSetExtension((QGraphicsSimpleTextItem*)self, extension, (QVariant*)variant);
 }
 
 QVariant* q_graphicssimpletextitem_extension(void* self, void* variant) {
@@ -13085,8 +13085,8 @@ void q_graphicssimpletextitem_on_extension(void* self, QVariant* (*callback)(voi
     QGraphicsSimpleTextItem_OnExtension((QGraphicsSimpleTextItem*)self, (intptr_t)callback);
 }
 
-QVariant* q_graphicssimpletextitem_qbase_extension(void* self, void* variant) {
-    return QGraphicsSimpleTextItem_QBaseExtension((QGraphicsSimpleTextItem*)self, (QVariant*)variant);
+QVariant* q_graphicssimpletextitem_super_extension(void* self, void* variant) {
+    return QGraphicsSimpleTextItem_SuperExtension((QGraphicsSimpleTextItem*)self, (QVariant*)variant);
 }
 
 QPen* q_graphicssimpletextitem_pen(void* self) {
@@ -13780,8 +13780,8 @@ void q_graphicssimpletextitem_advance(void* self, int phase) {
     QGraphicsSimpleTextItem_Advance((QGraphicsSimpleTextItem*)self, phase);
 }
 
-void q_graphicssimpletextitem_qbase_advance(void* self, int phase) {
-    QGraphicsSimpleTextItem_QBaseAdvance((QGraphicsSimpleTextItem*)self, phase);
+void q_graphicssimpletextitem_super_advance(void* self, int phase) {
+    QGraphicsSimpleTextItem_SuperAdvance((QGraphicsSimpleTextItem*)self, phase);
 }
 
 void q_graphicssimpletextitem_on_advance(void* self, void (*callback)(void*, int)) {
@@ -13792,8 +13792,8 @@ bool q_graphicssimpletextitem_collides_with_item(void* self, void* other, int32_
     return QGraphicsSimpleTextItem_CollidesWithItem((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicssimpletextitem_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsSimpleTextItem_QBaseCollidesWithItem((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)other, mode);
+bool q_graphicssimpletextitem_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsSimpleTextItem_SuperCollidesWithItem((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicssimpletextitem_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -13804,8 +13804,8 @@ bool q_graphicssimpletextitem_collides_with_path(void* self, void* path, int32_t
     return QGraphicsSimpleTextItem_CollidesWithPath((QGraphicsSimpleTextItem*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicssimpletextitem_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsSimpleTextItem_QBaseCollidesWithPath((QGraphicsSimpleTextItem*)self, (QPainterPath*)path, mode);
+bool q_graphicssimpletextitem_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsSimpleTextItem_SuperCollidesWithPath((QGraphicsSimpleTextItem*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicssimpletextitem_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -13816,8 +13816,8 @@ bool q_graphicssimpletextitem_scene_event_filter(void* self, void* watched, void
     return QGraphicsSimpleTextItem_SceneEventFilter((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicssimpletextitem_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsSimpleTextItem_QBaseSceneEventFilter((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicssimpletextitem_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsSimpleTextItem_SuperSceneEventFilter((QGraphicsSimpleTextItem*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -13828,8 +13828,8 @@ bool q_graphicssimpletextitem_scene_event(void* self, void* event) {
     return QGraphicsSimpleTextItem_SceneEvent((QGraphicsSimpleTextItem*)self, (QEvent*)event);
 }
 
-bool q_graphicssimpletextitem_qbase_scene_event(void* self, void* event) {
-    return QGraphicsSimpleTextItem_QBaseSceneEvent((QGraphicsSimpleTextItem*)self, (QEvent*)event);
+bool q_graphicssimpletextitem_super_scene_event(void* self, void* event) {
+    return QGraphicsSimpleTextItem_SuperSceneEvent((QGraphicsSimpleTextItem*)self, (QEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -13840,8 +13840,8 @@ void q_graphicssimpletextitem_context_menu_event(void* self, void* event) {
     QGraphicsSimpleTextItem_ContextMenuEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseContextMenuEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicssimpletextitem_super_context_menu_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperContextMenuEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -13852,8 +13852,8 @@ void q_graphicssimpletextitem_drag_enter_event(void* self, void* event) {
     QGraphicsSimpleTextItem_DragEnterEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseDragEnterEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicssimpletextitem_super_drag_enter_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperDragEnterEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -13864,8 +13864,8 @@ void q_graphicssimpletextitem_drag_leave_event(void* self, void* event) {
     QGraphicsSimpleTextItem_DragLeaveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseDragLeaveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicssimpletextitem_super_drag_leave_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperDragLeaveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -13876,8 +13876,8 @@ void q_graphicssimpletextitem_drag_move_event(void* self, void* event) {
     QGraphicsSimpleTextItem_DragMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseDragMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicssimpletextitem_super_drag_move_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperDragMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -13888,8 +13888,8 @@ void q_graphicssimpletextitem_drop_event(void* self, void* event) {
     QGraphicsSimpleTextItem_DropEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_drop_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseDropEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicssimpletextitem_super_drop_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperDropEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -13900,8 +13900,8 @@ void q_graphicssimpletextitem_focus_in_event(void* self, void* event) {
     QGraphicsSimpleTextItem_FocusInEvent((QGraphicsSimpleTextItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseFocusInEvent((QGraphicsSimpleTextItem*)self, (QFocusEvent*)event);
+void q_graphicssimpletextitem_super_focus_in_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperFocusInEvent((QGraphicsSimpleTextItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -13912,8 +13912,8 @@ void q_graphicssimpletextitem_focus_out_event(void* self, void* event) {
     QGraphicsSimpleTextItem_FocusOutEvent((QGraphicsSimpleTextItem*)self, (QFocusEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseFocusOutEvent((QGraphicsSimpleTextItem*)self, (QFocusEvent*)event);
+void q_graphicssimpletextitem_super_focus_out_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperFocusOutEvent((QGraphicsSimpleTextItem*)self, (QFocusEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -13924,8 +13924,8 @@ void q_graphicssimpletextitem_hover_enter_event(void* self, void* event) {
     QGraphicsSimpleTextItem_HoverEnterEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseHoverEnterEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicssimpletextitem_super_hover_enter_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperHoverEnterEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -13936,8 +13936,8 @@ void q_graphicssimpletextitem_hover_move_event(void* self, void* event) {
     QGraphicsSimpleTextItem_HoverMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseHoverMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicssimpletextitem_super_hover_move_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperHoverMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -13948,8 +13948,8 @@ void q_graphicssimpletextitem_hover_leave_event(void* self, void* event) {
     QGraphicsSimpleTextItem_HoverLeaveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseHoverLeaveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicssimpletextitem_super_hover_leave_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperHoverLeaveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -13960,8 +13960,8 @@ void q_graphicssimpletextitem_key_press_event(void* self, void* event) {
     QGraphicsSimpleTextItem_KeyPressEvent((QGraphicsSimpleTextItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_key_press_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseKeyPressEvent((QGraphicsSimpleTextItem*)self, (QKeyEvent*)event);
+void q_graphicssimpletextitem_super_key_press_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperKeyPressEvent((QGraphicsSimpleTextItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -13972,8 +13972,8 @@ void q_graphicssimpletextitem_key_release_event(void* self, void* event) {
     QGraphicsSimpleTextItem_KeyReleaseEvent((QGraphicsSimpleTextItem*)self, (QKeyEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_key_release_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseKeyReleaseEvent((QGraphicsSimpleTextItem*)self, (QKeyEvent*)event);
+void q_graphicssimpletextitem_super_key_release_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperKeyReleaseEvent((QGraphicsSimpleTextItem*)self, (QKeyEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -13984,8 +13984,8 @@ void q_graphicssimpletextitem_mouse_press_event(void* self, void* event) {
     QGraphicsSimpleTextItem_MousePressEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseMousePressEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicssimpletextitem_super_mouse_press_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperMousePressEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -13996,8 +13996,8 @@ void q_graphicssimpletextitem_mouse_move_event(void* self, void* event) {
     QGraphicsSimpleTextItem_MouseMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseMouseMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicssimpletextitem_super_mouse_move_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperMouseMoveEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -14008,8 +14008,8 @@ void q_graphicssimpletextitem_mouse_release_event(void* self, void* event) {
     QGraphicsSimpleTextItem_MouseReleaseEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseMouseReleaseEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicssimpletextitem_super_mouse_release_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperMouseReleaseEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -14020,8 +14020,8 @@ void q_graphicssimpletextitem_mouse_double_click_event(void* self, void* event) 
     QGraphicsSimpleTextItem_MouseDoubleClickEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseMouseDoubleClickEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicssimpletextitem_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperMouseDoubleClickEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -14032,8 +14032,8 @@ void q_graphicssimpletextitem_wheel_event(void* self, void* event) {
     QGraphicsSimpleTextItem_WheelEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_wheel_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseWheelEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicssimpletextitem_super_wheel_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperWheelEvent((QGraphicsSimpleTextItem*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -14044,8 +14044,8 @@ void q_graphicssimpletextitem_input_method_event(void* self, void* event) {
     QGraphicsSimpleTextItem_InputMethodEvent((QGraphicsSimpleTextItem*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicssimpletextitem_qbase_input_method_event(void* self, void* event) {
-    QGraphicsSimpleTextItem_QBaseInputMethodEvent((QGraphicsSimpleTextItem*)self, (QInputMethodEvent*)event);
+void q_graphicssimpletextitem_super_input_method_event(void* self, void* event) {
+    QGraphicsSimpleTextItem_SuperInputMethodEvent((QGraphicsSimpleTextItem*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicssimpletextitem_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -14056,8 +14056,8 @@ QVariant* q_graphicssimpletextitem_input_method_query(void* self, int32_t query)
     return QGraphicsSimpleTextItem_InputMethodQuery((QGraphicsSimpleTextItem*)self, query);
 }
 
-QVariant* q_graphicssimpletextitem_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsSimpleTextItem_QBaseInputMethodQuery((QGraphicsSimpleTextItem*)self, query);
+QVariant* q_graphicssimpletextitem_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsSimpleTextItem_SuperInputMethodQuery((QGraphicsSimpleTextItem*)self, query);
 }
 
 void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -14068,8 +14068,8 @@ QVariant* q_graphicssimpletextitem_item_change(void* self, int32_t change, void*
     return QGraphicsSimpleTextItem_ItemChange((QGraphicsSimpleTextItem*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicssimpletextitem_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsSimpleTextItem_QBaseItemChange((QGraphicsSimpleTextItem*)self, change, (QVariant*)value);
+QVariant* q_graphicssimpletextitem_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsSimpleTextItem_SuperItemChange((QGraphicsSimpleTextItem*)self, change, (QVariant*)value);
 }
 
 void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -14080,8 +14080,8 @@ void q_graphicssimpletextitem_update_micro_focus(void* self) {
     QGraphicsSimpleTextItem_UpdateMicroFocus((QGraphicsSimpleTextItem*)self);
 }
 
-void q_graphicssimpletextitem_qbase_update_micro_focus(void* self) {
-    QGraphicsSimpleTextItem_QBaseUpdateMicroFocus((QGraphicsSimpleTextItem*)self);
+void q_graphicssimpletextitem_super_update_micro_focus(void* self) {
+    QGraphicsSimpleTextItem_SuperUpdateMicroFocus((QGraphicsSimpleTextItem*)self);
 }
 
 void q_graphicssimpletextitem_on_update_micro_focus(void* self, void (*callback)()) {
@@ -14092,8 +14092,8 @@ void q_graphicssimpletextitem_add_to_index(void* self) {
     QGraphicsSimpleTextItem_AddToIndex((QGraphicsSimpleTextItem*)self);
 }
 
-void q_graphicssimpletextitem_qbase_add_to_index(void* self) {
-    QGraphicsSimpleTextItem_QBaseAddToIndex((QGraphicsSimpleTextItem*)self);
+void q_graphicssimpletextitem_super_add_to_index(void* self) {
+    QGraphicsSimpleTextItem_SuperAddToIndex((QGraphicsSimpleTextItem*)self);
 }
 
 void q_graphicssimpletextitem_on_add_to_index(void* self, void (*callback)()) {
@@ -14104,8 +14104,8 @@ void q_graphicssimpletextitem_remove_from_index(void* self) {
     QGraphicsSimpleTextItem_RemoveFromIndex((QGraphicsSimpleTextItem*)self);
 }
 
-void q_graphicssimpletextitem_qbase_remove_from_index(void* self) {
-    QGraphicsSimpleTextItem_QBaseRemoveFromIndex((QGraphicsSimpleTextItem*)self);
+void q_graphicssimpletextitem_super_remove_from_index(void* self) {
+    QGraphicsSimpleTextItem_SuperRemoveFromIndex((QGraphicsSimpleTextItem*)self);
 }
 
 void q_graphicssimpletextitem_on_remove_from_index(void* self, void (*callback)()) {
@@ -14116,8 +14116,8 @@ void q_graphicssimpletextitem_prepare_geometry_change(void* self) {
     QGraphicsSimpleTextItem_PrepareGeometryChange((QGraphicsSimpleTextItem*)self);
 }
 
-void q_graphicssimpletextitem_qbase_prepare_geometry_change(void* self) {
-    QGraphicsSimpleTextItem_QBasePrepareGeometryChange((QGraphicsSimpleTextItem*)self);
+void q_graphicssimpletextitem_super_prepare_geometry_change(void* self) {
+    QGraphicsSimpleTextItem_SuperPrepareGeometryChange((QGraphicsSimpleTextItem*)self);
 }
 
 void q_graphicssimpletextitem_on_prepare_geometry_change(void* self, void (*callback)()) {
@@ -14152,8 +14152,8 @@ void q_graphicsitemgroup_on_bounding_rect(void* self, QRectF* (*callback)()) {
     QGraphicsItemGroup_OnBoundingRect((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-QRectF* q_graphicsitemgroup_qbase_bounding_rect(void* self) {
-    return QGraphicsItemGroup_QBaseBoundingRect((QGraphicsItemGroup*)self);
+QRectF* q_graphicsitemgroup_super_bounding_rect(void* self) {
+    return QGraphicsItemGroup_SuperBoundingRect((QGraphicsItemGroup*)self);
 }
 
 void q_graphicsitemgroup_paint(void* self, void* painter, void* option, void* widget) {
@@ -14164,8 +14164,8 @@ void q_graphicsitemgroup_on_paint(void* self, void (*callback)(void*, void*, voi
     QGraphicsItemGroup_OnPaint((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-void q_graphicsitemgroup_qbase_paint(void* self, void* painter, void* option, void* widget) {
-    QGraphicsItemGroup_QBasePaint((QGraphicsItemGroup*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
+void q_graphicsitemgroup_super_paint(void* self, void* painter, void* option, void* widget) {
+    QGraphicsItemGroup_SuperPaint((QGraphicsItemGroup*)self, (QPainter*)painter, (QStyleOptionGraphicsItem*)option, (QWidget*)widget);
 }
 
 bool q_graphicsitemgroup_is_obscured_by(void* self, void* item) {
@@ -14176,8 +14176,8 @@ void q_graphicsitemgroup_on_is_obscured_by(void* self, bool (*callback)(void*, v
     QGraphicsItemGroup_OnIsObscuredBy((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-bool q_graphicsitemgroup_qbase_is_obscured_by(void* self, void* item) {
-    return QGraphicsItemGroup_QBaseIsObscuredBy((QGraphicsItemGroup*)self, (QGraphicsItem*)item);
+bool q_graphicsitemgroup_super_is_obscured_by(void* self, void* item) {
+    return QGraphicsItemGroup_SuperIsObscuredBy((QGraphicsItemGroup*)self, (QGraphicsItem*)item);
 }
 
 QPainterPath* q_graphicsitemgroup_opaque_area(void* self) {
@@ -14188,8 +14188,8 @@ void q_graphicsitemgroup_on_opaque_area(void* self, QPainterPath* (*callback)())
     QGraphicsItemGroup_OnOpaqueArea((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-QPainterPath* q_graphicsitemgroup_qbase_opaque_area(void* self) {
-    return QGraphicsItemGroup_QBaseOpaqueArea((QGraphicsItemGroup*)self);
+QPainterPath* q_graphicsitemgroup_super_opaque_area(void* self) {
+    return QGraphicsItemGroup_SuperOpaqueArea((QGraphicsItemGroup*)self);
 }
 
 int32_t q_graphicsitemgroup_type(void* self) {
@@ -14200,8 +14200,8 @@ void q_graphicsitemgroup_on_type(void* self, int32_t (*callback)()) {
     QGraphicsItemGroup_OnType((QGraphicsItemGroup*)self, (intptr_t)callback);
 }
 
-int32_t q_graphicsitemgroup_qbase_type(void* self) {
-    return QGraphicsItemGroup_QBaseType((QGraphicsItemGroup*)self);
+int32_t q_graphicsitemgroup_super_type(void* self) {
+    return QGraphicsItemGroup_SuperType((QGraphicsItemGroup*)self);
 }
 
 QGraphicsScene* q_graphicsitemgroup_scene(void* self) {
@@ -14879,8 +14879,8 @@ void q_graphicsitemgroup_advance(void* self, int phase) {
     QGraphicsItemGroup_Advance((QGraphicsItemGroup*)self, phase);
 }
 
-void q_graphicsitemgroup_qbase_advance(void* self, int phase) {
-    QGraphicsItemGroup_QBaseAdvance((QGraphicsItemGroup*)self, phase);
+void q_graphicsitemgroup_super_advance(void* self, int phase) {
+    QGraphicsItemGroup_SuperAdvance((QGraphicsItemGroup*)self, phase);
 }
 
 void q_graphicsitemgroup_on_advance(void* self, void (*callback)(void*, int)) {
@@ -14891,8 +14891,8 @@ QPainterPath* q_graphicsitemgroup_shape(void* self) {
     return QGraphicsItemGroup_Shape((QGraphicsItemGroup*)self);
 }
 
-QPainterPath* q_graphicsitemgroup_qbase_shape(void* self) {
-    return QGraphicsItemGroup_QBaseShape((QGraphicsItemGroup*)self);
+QPainterPath* q_graphicsitemgroup_super_shape(void* self) {
+    return QGraphicsItemGroup_SuperShape((QGraphicsItemGroup*)self);
 }
 
 void q_graphicsitemgroup_on_shape(void* self, QPainterPath* (*callback)()) {
@@ -14903,8 +14903,8 @@ bool q_graphicsitemgroup_contains(void* self, void* point) {
     return QGraphicsItemGroup_Contains((QGraphicsItemGroup*)self, (QPointF*)point);
 }
 
-bool q_graphicsitemgroup_qbase_contains(void* self, void* point) {
-    return QGraphicsItemGroup_QBaseContains((QGraphicsItemGroup*)self, (QPointF*)point);
+bool q_graphicsitemgroup_super_contains(void* self, void* point) {
+    return QGraphicsItemGroup_SuperContains((QGraphicsItemGroup*)self, (QPointF*)point);
 }
 
 void q_graphicsitemgroup_on_contains(void* self, bool (*callback)(void*, void*)) {
@@ -14915,8 +14915,8 @@ bool q_graphicsitemgroup_collides_with_item(void* self, void* other, int32_t mod
     return QGraphicsItemGroup_CollidesWithItem((QGraphicsItemGroup*)self, (QGraphicsItem*)other, mode);
 }
 
-bool q_graphicsitemgroup_qbase_collides_with_item(void* self, void* other, int32_t mode) {
-    return QGraphicsItemGroup_QBaseCollidesWithItem((QGraphicsItemGroup*)self, (QGraphicsItem*)other, mode);
+bool q_graphicsitemgroup_super_collides_with_item(void* self, void* other, int32_t mode) {
+    return QGraphicsItemGroup_SuperCollidesWithItem((QGraphicsItemGroup*)self, (QGraphicsItem*)other, mode);
 }
 
 void q_graphicsitemgroup_on_collides_with_item(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -14927,8 +14927,8 @@ bool q_graphicsitemgroup_collides_with_path(void* self, void* path, int32_t mode
     return QGraphicsItemGroup_CollidesWithPath((QGraphicsItemGroup*)self, (QPainterPath*)path, mode);
 }
 
-bool q_graphicsitemgroup_qbase_collides_with_path(void* self, void* path, int32_t mode) {
-    return QGraphicsItemGroup_QBaseCollidesWithPath((QGraphicsItemGroup*)self, (QPainterPath*)path, mode);
+bool q_graphicsitemgroup_super_collides_with_path(void* self, void* path, int32_t mode) {
+    return QGraphicsItemGroup_SuperCollidesWithPath((QGraphicsItemGroup*)self, (QPainterPath*)path, mode);
 }
 
 void q_graphicsitemgroup_on_collides_with_path(void* self, bool (*callback)(void*, void*, int32_t)) {
@@ -14939,8 +14939,8 @@ bool q_graphicsitemgroup_scene_event_filter(void* self, void* watched, void* eve
     return QGraphicsItemGroup_SceneEventFilter((QGraphicsItemGroup*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
-bool q_graphicsitemgroup_qbase_scene_event_filter(void* self, void* watched, void* event) {
-    return QGraphicsItemGroup_QBaseSceneEventFilter((QGraphicsItemGroup*)self, (QGraphicsItem*)watched, (QEvent*)event);
+bool q_graphicsitemgroup_super_scene_event_filter(void* self, void* watched, void* event) {
+    return QGraphicsItemGroup_SuperSceneEventFilter((QGraphicsItemGroup*)self, (QGraphicsItem*)watched, (QEvent*)event);
 }
 
 void q_graphicsitemgroup_on_scene_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -14951,8 +14951,8 @@ bool q_graphicsitemgroup_scene_event(void* self, void* event) {
     return QGraphicsItemGroup_SceneEvent((QGraphicsItemGroup*)self, (QEvent*)event);
 }
 
-bool q_graphicsitemgroup_qbase_scene_event(void* self, void* event) {
-    return QGraphicsItemGroup_QBaseSceneEvent((QGraphicsItemGroup*)self, (QEvent*)event);
+bool q_graphicsitemgroup_super_scene_event(void* self, void* event) {
+    return QGraphicsItemGroup_SuperSceneEvent((QGraphicsItemGroup*)self, (QEvent*)event);
 }
 
 void q_graphicsitemgroup_on_scene_event(void* self, bool (*callback)(void*, void*)) {
@@ -14963,8 +14963,8 @@ void q_graphicsitemgroup_context_menu_event(void* self, void* event) {
     QGraphicsItemGroup_ContextMenuEvent((QGraphicsItemGroup*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_context_menu_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseContextMenuEvent((QGraphicsItemGroup*)self, (QGraphicsSceneContextMenuEvent*)event);
+void q_graphicsitemgroup_super_context_menu_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperContextMenuEvent((QGraphicsItemGroup*)self, (QGraphicsSceneContextMenuEvent*)event);
 }
 
 void q_graphicsitemgroup_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -14975,8 +14975,8 @@ void q_graphicsitemgroup_drag_enter_event(void* self, void* event) {
     QGraphicsItemGroup_DragEnterEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_drag_enter_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseDragEnterEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitemgroup_super_drag_enter_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperDragEnterEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitemgroup_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -14987,8 +14987,8 @@ void q_graphicsitemgroup_drag_leave_event(void* self, void* event) {
     QGraphicsItemGroup_DragLeaveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_drag_leave_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseDragLeaveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitemgroup_super_drag_leave_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperDragLeaveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitemgroup_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -14999,8 +14999,8 @@ void q_graphicsitemgroup_drag_move_event(void* self, void* event) {
     QGraphicsItemGroup_DragMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_drag_move_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseDragMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitemgroup_super_drag_move_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperDragMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitemgroup_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -15011,8 +15011,8 @@ void q_graphicsitemgroup_drop_event(void* self, void* event) {
     QGraphicsItemGroup_DropEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_drop_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseDropEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
+void q_graphicsitemgroup_super_drop_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperDropEvent((QGraphicsItemGroup*)self, (QGraphicsSceneDragDropEvent*)event);
 }
 
 void q_graphicsitemgroup_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -15023,8 +15023,8 @@ void q_graphicsitemgroup_focus_in_event(void* self, void* event) {
     QGraphicsItemGroup_FocusInEvent((QGraphicsItemGroup*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_focus_in_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseFocusInEvent((QGraphicsItemGroup*)self, (QFocusEvent*)event);
+void q_graphicsitemgroup_super_focus_in_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperFocusInEvent((QGraphicsItemGroup*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsitemgroup_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -15035,8 +15035,8 @@ void q_graphicsitemgroup_focus_out_event(void* self, void* event) {
     QGraphicsItemGroup_FocusOutEvent((QGraphicsItemGroup*)self, (QFocusEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_focus_out_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseFocusOutEvent((QGraphicsItemGroup*)self, (QFocusEvent*)event);
+void q_graphicsitemgroup_super_focus_out_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperFocusOutEvent((QGraphicsItemGroup*)self, (QFocusEvent*)event);
 }
 
 void q_graphicsitemgroup_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -15047,8 +15047,8 @@ void q_graphicsitemgroup_hover_enter_event(void* self, void* event) {
     QGraphicsItemGroup_HoverEnterEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_hover_enter_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseHoverEnterEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsitemgroup_super_hover_enter_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperHoverEnterEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsitemgroup_on_hover_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -15059,8 +15059,8 @@ void q_graphicsitemgroup_hover_move_event(void* self, void* event) {
     QGraphicsItemGroup_HoverMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_hover_move_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseHoverMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsitemgroup_super_hover_move_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperHoverMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsitemgroup_on_hover_move_event(void* self, void (*callback)(void*, void*)) {
@@ -15071,8 +15071,8 @@ void q_graphicsitemgroup_hover_leave_event(void* self, void* event) {
     QGraphicsItemGroup_HoverLeaveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_hover_leave_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseHoverLeaveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
+void q_graphicsitemgroup_super_hover_leave_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperHoverLeaveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneHoverEvent*)event);
 }
 
 void q_graphicsitemgroup_on_hover_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -15083,8 +15083,8 @@ void q_graphicsitemgroup_key_press_event(void* self, void* event) {
     QGraphicsItemGroup_KeyPressEvent((QGraphicsItemGroup*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_key_press_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseKeyPressEvent((QGraphicsItemGroup*)self, (QKeyEvent*)event);
+void q_graphicsitemgroup_super_key_press_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperKeyPressEvent((QGraphicsItemGroup*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsitemgroup_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -15095,8 +15095,8 @@ void q_graphicsitemgroup_key_release_event(void* self, void* event) {
     QGraphicsItemGroup_KeyReleaseEvent((QGraphicsItemGroup*)self, (QKeyEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_key_release_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseKeyReleaseEvent((QGraphicsItemGroup*)self, (QKeyEvent*)event);
+void q_graphicsitemgroup_super_key_release_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperKeyReleaseEvent((QGraphicsItemGroup*)self, (QKeyEvent*)event);
 }
 
 void q_graphicsitemgroup_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -15107,8 +15107,8 @@ void q_graphicsitemgroup_mouse_press_event(void* self, void* event) {
     QGraphicsItemGroup_MousePressEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_mouse_press_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseMousePressEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitemgroup_super_mouse_press_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperMousePressEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitemgroup_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -15119,8 +15119,8 @@ void q_graphicsitemgroup_mouse_move_event(void* self, void* event) {
     QGraphicsItemGroup_MouseMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_mouse_move_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseMouseMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitemgroup_super_mouse_move_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperMouseMoveEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitemgroup_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -15131,8 +15131,8 @@ void q_graphicsitemgroup_mouse_release_event(void* self, void* event) {
     QGraphicsItemGroup_MouseReleaseEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_mouse_release_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseMouseReleaseEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitemgroup_super_mouse_release_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperMouseReleaseEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitemgroup_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -15143,8 +15143,8 @@ void q_graphicsitemgroup_mouse_double_click_event(void* self, void* event) {
     QGraphicsItemGroup_MouseDoubleClickEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_mouse_double_click_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseMouseDoubleClickEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
+void q_graphicsitemgroup_super_mouse_double_click_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperMouseDoubleClickEvent((QGraphicsItemGroup*)self, (QGraphicsSceneMouseEvent*)event);
 }
 
 void q_graphicsitemgroup_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -15155,8 +15155,8 @@ void q_graphicsitemgroup_wheel_event(void* self, void* event) {
     QGraphicsItemGroup_WheelEvent((QGraphicsItemGroup*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_wheel_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseWheelEvent((QGraphicsItemGroup*)self, (QGraphicsSceneWheelEvent*)event);
+void q_graphicsitemgroup_super_wheel_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperWheelEvent((QGraphicsItemGroup*)self, (QGraphicsSceneWheelEvent*)event);
 }
 
 void q_graphicsitemgroup_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -15167,8 +15167,8 @@ void q_graphicsitemgroup_input_method_event(void* self, void* event) {
     QGraphicsItemGroup_InputMethodEvent((QGraphicsItemGroup*)self, (QInputMethodEvent*)event);
 }
 
-void q_graphicsitemgroup_qbase_input_method_event(void* self, void* event) {
-    QGraphicsItemGroup_QBaseInputMethodEvent((QGraphicsItemGroup*)self, (QInputMethodEvent*)event);
+void q_graphicsitemgroup_super_input_method_event(void* self, void* event) {
+    QGraphicsItemGroup_SuperInputMethodEvent((QGraphicsItemGroup*)self, (QInputMethodEvent*)event);
 }
 
 void q_graphicsitemgroup_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -15179,8 +15179,8 @@ QVariant* q_graphicsitemgroup_input_method_query(void* self, int32_t query) {
     return QGraphicsItemGroup_InputMethodQuery((QGraphicsItemGroup*)self, query);
 }
 
-QVariant* q_graphicsitemgroup_qbase_input_method_query(void* self, int32_t query) {
-    return QGraphicsItemGroup_QBaseInputMethodQuery((QGraphicsItemGroup*)self, query);
+QVariant* q_graphicsitemgroup_super_input_method_query(void* self, int32_t query) {
+    return QGraphicsItemGroup_SuperInputMethodQuery((QGraphicsItemGroup*)self, query);
 }
 
 void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -15191,8 +15191,8 @@ QVariant* q_graphicsitemgroup_item_change(void* self, int32_t change, void* valu
     return QGraphicsItemGroup_ItemChange((QGraphicsItemGroup*)self, change, (QVariant*)value);
 }
 
-QVariant* q_graphicsitemgroup_qbase_item_change(void* self, int32_t change, void* value) {
-    return QGraphicsItemGroup_QBaseItemChange((QGraphicsItemGroup*)self, change, (QVariant*)value);
+QVariant* q_graphicsitemgroup_super_item_change(void* self, int32_t change, void* value) {
+    return QGraphicsItemGroup_SuperItemChange((QGraphicsItemGroup*)self, change, (QVariant*)value);
 }
 
 void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*)) {
@@ -15203,8 +15203,8 @@ bool q_graphicsitemgroup_supports_extension(void* self, int32_t extension) {
     return QGraphicsItemGroup_SupportsExtension((QGraphicsItemGroup*)self, extension);
 }
 
-bool q_graphicsitemgroup_qbase_supports_extension(void* self, int32_t extension) {
-    return QGraphicsItemGroup_QBaseSupportsExtension((QGraphicsItemGroup*)self, extension);
+bool q_graphicsitemgroup_super_supports_extension(void* self, int32_t extension) {
+    return QGraphicsItemGroup_SuperSupportsExtension((QGraphicsItemGroup*)self, extension);
 }
 
 void q_graphicsitemgroup_on_supports_extension(void* self, bool (*callback)(void*, int32_t)) {
@@ -15215,8 +15215,8 @@ void q_graphicsitemgroup_set_extension(void* self, int32_t extension, void* vari
     QGraphicsItemGroup_SetExtension((QGraphicsItemGroup*)self, extension, (QVariant*)variant);
 }
 
-void q_graphicsitemgroup_qbase_set_extension(void* self, int32_t extension, void* variant) {
-    QGraphicsItemGroup_QBaseSetExtension((QGraphicsItemGroup*)self, extension, (QVariant*)variant);
+void q_graphicsitemgroup_super_set_extension(void* self, int32_t extension, void* variant) {
+    QGraphicsItemGroup_SuperSetExtension((QGraphicsItemGroup*)self, extension, (QVariant*)variant);
 }
 
 void q_graphicsitemgroup_on_set_extension(void* self, void (*callback)(void*, int32_t, void*)) {
@@ -15227,8 +15227,8 @@ QVariant* q_graphicsitemgroup_extension(void* self, void* variant) {
     return QGraphicsItemGroup_Extension((QGraphicsItemGroup*)self, (QVariant*)variant);
 }
 
-QVariant* q_graphicsitemgroup_qbase_extension(void* self, void* variant) {
-    return QGraphicsItemGroup_QBaseExtension((QGraphicsItemGroup*)self, (QVariant*)variant);
+QVariant* q_graphicsitemgroup_super_extension(void* self, void* variant) {
+    return QGraphicsItemGroup_SuperExtension((QGraphicsItemGroup*)self, (QVariant*)variant);
 }
 
 void q_graphicsitemgroup_on_extension(void* self, QVariant* (*callback)(void*, void*)) {
@@ -15239,8 +15239,8 @@ void q_graphicsitemgroup_update_micro_focus(void* self) {
     QGraphicsItemGroup_UpdateMicroFocus((QGraphicsItemGroup*)self);
 }
 
-void q_graphicsitemgroup_qbase_update_micro_focus(void* self) {
-    QGraphicsItemGroup_QBaseUpdateMicroFocus((QGraphicsItemGroup*)self);
+void q_graphicsitemgroup_super_update_micro_focus(void* self) {
+    QGraphicsItemGroup_SuperUpdateMicroFocus((QGraphicsItemGroup*)self);
 }
 
 void q_graphicsitemgroup_on_update_micro_focus(void* self, void (*callback)()) {
@@ -15251,8 +15251,8 @@ void q_graphicsitemgroup_add_to_index(void* self) {
     QGraphicsItemGroup_AddToIndex((QGraphicsItemGroup*)self);
 }
 
-void q_graphicsitemgroup_qbase_add_to_index(void* self) {
-    QGraphicsItemGroup_QBaseAddToIndex((QGraphicsItemGroup*)self);
+void q_graphicsitemgroup_super_add_to_index(void* self) {
+    QGraphicsItemGroup_SuperAddToIndex((QGraphicsItemGroup*)self);
 }
 
 void q_graphicsitemgroup_on_add_to_index(void* self, void (*callback)()) {
@@ -15263,8 +15263,8 @@ void q_graphicsitemgroup_remove_from_index(void* self) {
     QGraphicsItemGroup_RemoveFromIndex((QGraphicsItemGroup*)self);
 }
 
-void q_graphicsitemgroup_qbase_remove_from_index(void* self) {
-    QGraphicsItemGroup_QBaseRemoveFromIndex((QGraphicsItemGroup*)self);
+void q_graphicsitemgroup_super_remove_from_index(void* self) {
+    QGraphicsItemGroup_SuperRemoveFromIndex((QGraphicsItemGroup*)self);
 }
 
 void q_graphicsitemgroup_on_remove_from_index(void* self, void (*callback)()) {
@@ -15275,8 +15275,8 @@ void q_graphicsitemgroup_prepare_geometry_change(void* self) {
     QGraphicsItemGroup_PrepareGeometryChange((QGraphicsItemGroup*)self);
 }
 
-void q_graphicsitemgroup_qbase_prepare_geometry_change(void* self) {
-    QGraphicsItemGroup_QBasePrepareGeometryChange((QGraphicsItemGroup*)self);
+void q_graphicsitemgroup_super_prepare_geometry_change(void* self) {
+    QGraphicsItemGroup_SuperPrepareGeometryChange((QGraphicsItemGroup*)self);
 }
 
 void q_graphicsitemgroup_on_prepare_geometry_change(void* self, void (*callback)()) {

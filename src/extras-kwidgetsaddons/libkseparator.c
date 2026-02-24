@@ -47,8 +47,8 @@ void k_separator_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KSeparator_OnMetaObject((KSeparator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_separator_qbase_meta_object(void* self) {
-    return KSeparator_QBaseMetaObject((KSeparator*)self);
+const QMetaObject* k_separator_super_meta_object(void* self) {
+    return KSeparator_SuperMetaObject((KSeparator*)self);
 }
 
 void* k_separator_metacast(void* self, const char* param1) {
@@ -59,8 +59,8 @@ void k_separator_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     KSeparator_OnMetacast((KSeparator*)self, (intptr_t)callback);
 }
 
-void* k_separator_qbase_metacast(void* self, const char* param1) {
-    return KSeparator_QBaseMetacast((KSeparator*)self, param1);
+void* k_separator_super_metacast(void* self, const char* param1) {
+    return KSeparator_SuperMetacast((KSeparator*)self, param1);
 }
 
 int32_t k_separator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -71,8 +71,8 @@ void k_separator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     KSeparator_OnMetacall((KSeparator*)self, (intptr_t)callback);
 }
 
-int32_t k_separator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSeparator_QBaseMetacall((KSeparator*)self, param1, param2, param3);
+int32_t k_separator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSeparator_SuperMetacall((KSeparator*)self, param1, param2, param3);
 }
 
 const char* k_separator_tr(const char* s) {
@@ -1541,8 +1541,8 @@ QSize* k_separator_size_hint(void* self) {
     return KSeparator_SizeHint((KSeparator*)self);
 }
 
-QSize* k_separator_qbase_size_hint(void* self) {
-    return KSeparator_QBaseSizeHint((KSeparator*)self);
+QSize* k_separator_super_size_hint(void* self) {
+    return KSeparator_SuperSizeHint((KSeparator*)self);
 }
 
 void k_separator_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1553,8 +1553,8 @@ bool k_separator_event(void* self, void* e) {
     return KSeparator_Event((KSeparator*)self, (QEvent*)e);
 }
 
-bool k_separator_qbase_event(void* self, void* e) {
-    return KSeparator_QBaseEvent((KSeparator*)self, (QEvent*)e);
+bool k_separator_super_event(void* self, void* e) {
+    return KSeparator_SuperEvent((KSeparator*)self, (QEvent*)e);
 }
 
 void k_separator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1565,8 +1565,8 @@ void k_separator_paint_event(void* self, void* param1) {
     KSeparator_PaintEvent((KSeparator*)self, (QPaintEvent*)param1);
 }
 
-void k_separator_qbase_paint_event(void* self, void* param1) {
-    KSeparator_QBasePaintEvent((KSeparator*)self, (QPaintEvent*)param1);
+void k_separator_super_paint_event(void* self, void* param1) {
+    KSeparator_SuperPaintEvent((KSeparator*)self, (QPaintEvent*)param1);
 }
 
 void k_separator_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1577,8 +1577,8 @@ void k_separator_change_event(void* self, void* param1) {
     KSeparator_ChangeEvent((KSeparator*)self, (QEvent*)param1);
 }
 
-void k_separator_qbase_change_event(void* self, void* param1) {
-    KSeparator_QBaseChangeEvent((KSeparator*)self, (QEvent*)param1);
+void k_separator_super_change_event(void* self, void* param1) {
+    KSeparator_SuperChangeEvent((KSeparator*)self, (QEvent*)param1);
 }
 
 void k_separator_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1589,8 +1589,8 @@ void k_separator_init_style_option(void* self, void* option) {
     KSeparator_InitStyleOption((KSeparator*)self, (QStyleOptionFrame*)option);
 }
 
-void k_separator_qbase_init_style_option(void* self, void* option) {
-    KSeparator_QBaseInitStyleOption((KSeparator*)self, (QStyleOptionFrame*)option);
+void k_separator_super_init_style_option(void* self, void* option) {
+    KSeparator_SuperInitStyleOption((KSeparator*)self, (QStyleOptionFrame*)option);
 }
 
 void k_separator_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1601,8 +1601,8 @@ int32_t k_separator_dev_type(void* self) {
     return KSeparator_DevType((KSeparator*)self);
 }
 
-int32_t k_separator_qbase_dev_type(void* self) {
-    return KSeparator_QBaseDevType((KSeparator*)self);
+int32_t k_separator_super_dev_type(void* self) {
+    return KSeparator_SuperDevType((KSeparator*)self);
 }
 
 void k_separator_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1613,8 +1613,8 @@ void k_separator_set_visible(void* self, bool visible) {
     KSeparator_SetVisible((KSeparator*)self, visible);
 }
 
-void k_separator_qbase_set_visible(void* self, bool visible) {
-    KSeparator_QBaseSetVisible((KSeparator*)self, visible);
+void k_separator_super_set_visible(void* self, bool visible) {
+    KSeparator_SuperSetVisible((KSeparator*)self, visible);
 }
 
 void k_separator_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1625,8 +1625,8 @@ QSize* k_separator_minimum_size_hint(void* self) {
     return KSeparator_MinimumSizeHint((KSeparator*)self);
 }
 
-QSize* k_separator_qbase_minimum_size_hint(void* self) {
-    return KSeparator_QBaseMinimumSizeHint((KSeparator*)self);
+QSize* k_separator_super_minimum_size_hint(void* self) {
+    return KSeparator_SuperMinimumSizeHint((KSeparator*)self);
 }
 
 void k_separator_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1637,8 +1637,8 @@ int32_t k_separator_height_for_width(void* self, int param1) {
     return KSeparator_HeightForWidth((KSeparator*)self, param1);
 }
 
-int32_t k_separator_qbase_height_for_width(void* self, int param1) {
-    return KSeparator_QBaseHeightForWidth((KSeparator*)self, param1);
+int32_t k_separator_super_height_for_width(void* self, int param1) {
+    return KSeparator_SuperHeightForWidth((KSeparator*)self, param1);
 }
 
 void k_separator_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1649,8 +1649,8 @@ bool k_separator_has_height_for_width(void* self) {
     return KSeparator_HasHeightForWidth((KSeparator*)self);
 }
 
-bool k_separator_qbase_has_height_for_width(void* self) {
-    return KSeparator_QBaseHasHeightForWidth((KSeparator*)self);
+bool k_separator_super_has_height_for_width(void* self) {
+    return KSeparator_SuperHasHeightForWidth((KSeparator*)self);
 }
 
 void k_separator_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1661,8 +1661,8 @@ QPaintEngine* k_separator_paint_engine(void* self) {
     return KSeparator_PaintEngine((KSeparator*)self);
 }
 
-QPaintEngine* k_separator_qbase_paint_engine(void* self) {
-    return KSeparator_QBasePaintEngine((KSeparator*)self);
+QPaintEngine* k_separator_super_paint_engine(void* self) {
+    return KSeparator_SuperPaintEngine((KSeparator*)self);
 }
 
 void k_separator_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1673,8 +1673,8 @@ void k_separator_mouse_press_event(void* self, void* event) {
     KSeparator_MousePressEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
-void k_separator_qbase_mouse_press_event(void* self, void* event) {
-    KSeparator_QBaseMousePressEvent((KSeparator*)self, (QMouseEvent*)event);
+void k_separator_super_mouse_press_event(void* self, void* event) {
+    KSeparator_SuperMousePressEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
 void k_separator_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1685,8 +1685,8 @@ void k_separator_mouse_release_event(void* self, void* event) {
     KSeparator_MouseReleaseEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
-void k_separator_qbase_mouse_release_event(void* self, void* event) {
-    KSeparator_QBaseMouseReleaseEvent((KSeparator*)self, (QMouseEvent*)event);
+void k_separator_super_mouse_release_event(void* self, void* event) {
+    KSeparator_SuperMouseReleaseEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
 void k_separator_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1697,8 +1697,8 @@ void k_separator_mouse_double_click_event(void* self, void* event) {
     KSeparator_MouseDoubleClickEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
-void k_separator_qbase_mouse_double_click_event(void* self, void* event) {
-    KSeparator_QBaseMouseDoubleClickEvent((KSeparator*)self, (QMouseEvent*)event);
+void k_separator_super_mouse_double_click_event(void* self, void* event) {
+    KSeparator_SuperMouseDoubleClickEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
 void k_separator_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1709,8 +1709,8 @@ void k_separator_mouse_move_event(void* self, void* event) {
     KSeparator_MouseMoveEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
-void k_separator_qbase_mouse_move_event(void* self, void* event) {
-    KSeparator_QBaseMouseMoveEvent((KSeparator*)self, (QMouseEvent*)event);
+void k_separator_super_mouse_move_event(void* self, void* event) {
+    KSeparator_SuperMouseMoveEvent((KSeparator*)self, (QMouseEvent*)event);
 }
 
 void k_separator_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1721,8 +1721,8 @@ void k_separator_wheel_event(void* self, void* event) {
     KSeparator_WheelEvent((KSeparator*)self, (QWheelEvent*)event);
 }
 
-void k_separator_qbase_wheel_event(void* self, void* event) {
-    KSeparator_QBaseWheelEvent((KSeparator*)self, (QWheelEvent*)event);
+void k_separator_super_wheel_event(void* self, void* event) {
+    KSeparator_SuperWheelEvent((KSeparator*)self, (QWheelEvent*)event);
 }
 
 void k_separator_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1733,8 +1733,8 @@ void k_separator_key_press_event(void* self, void* event) {
     KSeparator_KeyPressEvent((KSeparator*)self, (QKeyEvent*)event);
 }
 
-void k_separator_qbase_key_press_event(void* self, void* event) {
-    KSeparator_QBaseKeyPressEvent((KSeparator*)self, (QKeyEvent*)event);
+void k_separator_super_key_press_event(void* self, void* event) {
+    KSeparator_SuperKeyPressEvent((KSeparator*)self, (QKeyEvent*)event);
 }
 
 void k_separator_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1745,8 +1745,8 @@ void k_separator_key_release_event(void* self, void* event) {
     KSeparator_KeyReleaseEvent((KSeparator*)self, (QKeyEvent*)event);
 }
 
-void k_separator_qbase_key_release_event(void* self, void* event) {
-    KSeparator_QBaseKeyReleaseEvent((KSeparator*)self, (QKeyEvent*)event);
+void k_separator_super_key_release_event(void* self, void* event) {
+    KSeparator_SuperKeyReleaseEvent((KSeparator*)self, (QKeyEvent*)event);
 }
 
 void k_separator_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1757,8 +1757,8 @@ void k_separator_focus_in_event(void* self, void* event) {
     KSeparator_FocusInEvent((KSeparator*)self, (QFocusEvent*)event);
 }
 
-void k_separator_qbase_focus_in_event(void* self, void* event) {
-    KSeparator_QBaseFocusInEvent((KSeparator*)self, (QFocusEvent*)event);
+void k_separator_super_focus_in_event(void* self, void* event) {
+    KSeparator_SuperFocusInEvent((KSeparator*)self, (QFocusEvent*)event);
 }
 
 void k_separator_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1769,8 +1769,8 @@ void k_separator_focus_out_event(void* self, void* event) {
     KSeparator_FocusOutEvent((KSeparator*)self, (QFocusEvent*)event);
 }
 
-void k_separator_qbase_focus_out_event(void* self, void* event) {
-    KSeparator_QBaseFocusOutEvent((KSeparator*)self, (QFocusEvent*)event);
+void k_separator_super_focus_out_event(void* self, void* event) {
+    KSeparator_SuperFocusOutEvent((KSeparator*)self, (QFocusEvent*)event);
 }
 
 void k_separator_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1781,8 +1781,8 @@ void k_separator_enter_event(void* self, void* event) {
     KSeparator_EnterEvent((KSeparator*)self, (QEnterEvent*)event);
 }
 
-void k_separator_qbase_enter_event(void* self, void* event) {
-    KSeparator_QBaseEnterEvent((KSeparator*)self, (QEnterEvent*)event);
+void k_separator_super_enter_event(void* self, void* event) {
+    KSeparator_SuperEnterEvent((KSeparator*)self, (QEnterEvent*)event);
 }
 
 void k_separator_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1793,8 +1793,8 @@ void k_separator_leave_event(void* self, void* event) {
     KSeparator_LeaveEvent((KSeparator*)self, (QEvent*)event);
 }
 
-void k_separator_qbase_leave_event(void* self, void* event) {
-    KSeparator_QBaseLeaveEvent((KSeparator*)self, (QEvent*)event);
+void k_separator_super_leave_event(void* self, void* event) {
+    KSeparator_SuperLeaveEvent((KSeparator*)self, (QEvent*)event);
 }
 
 void k_separator_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1805,8 +1805,8 @@ void k_separator_move_event(void* self, void* event) {
     KSeparator_MoveEvent((KSeparator*)self, (QMoveEvent*)event);
 }
 
-void k_separator_qbase_move_event(void* self, void* event) {
-    KSeparator_QBaseMoveEvent((KSeparator*)self, (QMoveEvent*)event);
+void k_separator_super_move_event(void* self, void* event) {
+    KSeparator_SuperMoveEvent((KSeparator*)self, (QMoveEvent*)event);
 }
 
 void k_separator_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1817,8 +1817,8 @@ void k_separator_resize_event(void* self, void* event) {
     KSeparator_ResizeEvent((KSeparator*)self, (QResizeEvent*)event);
 }
 
-void k_separator_qbase_resize_event(void* self, void* event) {
-    KSeparator_QBaseResizeEvent((KSeparator*)self, (QResizeEvent*)event);
+void k_separator_super_resize_event(void* self, void* event) {
+    KSeparator_SuperResizeEvent((KSeparator*)self, (QResizeEvent*)event);
 }
 
 void k_separator_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1829,8 +1829,8 @@ void k_separator_close_event(void* self, void* event) {
     KSeparator_CloseEvent((KSeparator*)self, (QCloseEvent*)event);
 }
 
-void k_separator_qbase_close_event(void* self, void* event) {
-    KSeparator_QBaseCloseEvent((KSeparator*)self, (QCloseEvent*)event);
+void k_separator_super_close_event(void* self, void* event) {
+    KSeparator_SuperCloseEvent((KSeparator*)self, (QCloseEvent*)event);
 }
 
 void k_separator_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1841,8 +1841,8 @@ void k_separator_context_menu_event(void* self, void* event) {
     KSeparator_ContextMenuEvent((KSeparator*)self, (QContextMenuEvent*)event);
 }
 
-void k_separator_qbase_context_menu_event(void* self, void* event) {
-    KSeparator_QBaseContextMenuEvent((KSeparator*)self, (QContextMenuEvent*)event);
+void k_separator_super_context_menu_event(void* self, void* event) {
+    KSeparator_SuperContextMenuEvent((KSeparator*)self, (QContextMenuEvent*)event);
 }
 
 void k_separator_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1853,8 +1853,8 @@ void k_separator_tablet_event(void* self, void* event) {
     KSeparator_TabletEvent((KSeparator*)self, (QTabletEvent*)event);
 }
 
-void k_separator_qbase_tablet_event(void* self, void* event) {
-    KSeparator_QBaseTabletEvent((KSeparator*)self, (QTabletEvent*)event);
+void k_separator_super_tablet_event(void* self, void* event) {
+    KSeparator_SuperTabletEvent((KSeparator*)self, (QTabletEvent*)event);
 }
 
 void k_separator_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1865,8 +1865,8 @@ void k_separator_action_event(void* self, void* event) {
     KSeparator_ActionEvent((KSeparator*)self, (QActionEvent*)event);
 }
 
-void k_separator_qbase_action_event(void* self, void* event) {
-    KSeparator_QBaseActionEvent((KSeparator*)self, (QActionEvent*)event);
+void k_separator_super_action_event(void* self, void* event) {
+    KSeparator_SuperActionEvent((KSeparator*)self, (QActionEvent*)event);
 }
 
 void k_separator_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1877,8 +1877,8 @@ void k_separator_drag_enter_event(void* self, void* event) {
     KSeparator_DragEnterEvent((KSeparator*)self, (QDragEnterEvent*)event);
 }
 
-void k_separator_qbase_drag_enter_event(void* self, void* event) {
-    KSeparator_QBaseDragEnterEvent((KSeparator*)self, (QDragEnterEvent*)event);
+void k_separator_super_drag_enter_event(void* self, void* event) {
+    KSeparator_SuperDragEnterEvent((KSeparator*)self, (QDragEnterEvent*)event);
 }
 
 void k_separator_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1889,8 +1889,8 @@ void k_separator_drag_move_event(void* self, void* event) {
     KSeparator_DragMoveEvent((KSeparator*)self, (QDragMoveEvent*)event);
 }
 
-void k_separator_qbase_drag_move_event(void* self, void* event) {
-    KSeparator_QBaseDragMoveEvent((KSeparator*)self, (QDragMoveEvent*)event);
+void k_separator_super_drag_move_event(void* self, void* event) {
+    KSeparator_SuperDragMoveEvent((KSeparator*)self, (QDragMoveEvent*)event);
 }
 
 void k_separator_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1901,8 +1901,8 @@ void k_separator_drag_leave_event(void* self, void* event) {
     KSeparator_DragLeaveEvent((KSeparator*)self, (QDragLeaveEvent*)event);
 }
 
-void k_separator_qbase_drag_leave_event(void* self, void* event) {
-    KSeparator_QBaseDragLeaveEvent((KSeparator*)self, (QDragLeaveEvent*)event);
+void k_separator_super_drag_leave_event(void* self, void* event) {
+    KSeparator_SuperDragLeaveEvent((KSeparator*)self, (QDragLeaveEvent*)event);
 }
 
 void k_separator_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1913,8 +1913,8 @@ void k_separator_drop_event(void* self, void* event) {
     KSeparator_DropEvent((KSeparator*)self, (QDropEvent*)event);
 }
 
-void k_separator_qbase_drop_event(void* self, void* event) {
-    KSeparator_QBaseDropEvent((KSeparator*)self, (QDropEvent*)event);
+void k_separator_super_drop_event(void* self, void* event) {
+    KSeparator_SuperDropEvent((KSeparator*)self, (QDropEvent*)event);
 }
 
 void k_separator_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1925,8 +1925,8 @@ void k_separator_show_event(void* self, void* event) {
     KSeparator_ShowEvent((KSeparator*)self, (QShowEvent*)event);
 }
 
-void k_separator_qbase_show_event(void* self, void* event) {
-    KSeparator_QBaseShowEvent((KSeparator*)self, (QShowEvent*)event);
+void k_separator_super_show_event(void* self, void* event) {
+    KSeparator_SuperShowEvent((KSeparator*)self, (QShowEvent*)event);
 }
 
 void k_separator_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1937,8 +1937,8 @@ void k_separator_hide_event(void* self, void* event) {
     KSeparator_HideEvent((KSeparator*)self, (QHideEvent*)event);
 }
 
-void k_separator_qbase_hide_event(void* self, void* event) {
-    KSeparator_QBaseHideEvent((KSeparator*)self, (QHideEvent*)event);
+void k_separator_super_hide_event(void* self, void* event) {
+    KSeparator_SuperHideEvent((KSeparator*)self, (QHideEvent*)event);
 }
 
 void k_separator_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1949,8 +1949,8 @@ bool k_separator_native_event(void* self, char* eventType, void* message, intptr
     return KSeparator_NativeEvent((KSeparator*)self, qstring(eventType), message, result);
 }
 
-bool k_separator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KSeparator_QBaseNativeEvent((KSeparator*)self, qstring(eventType), message, result);
+bool k_separator_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KSeparator_SuperNativeEvent((KSeparator*)self, qstring(eventType), message, result);
 }
 
 void k_separator_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1961,8 +1961,8 @@ int32_t k_separator_metric(void* self, int32_t param1) {
     return KSeparator_Metric((KSeparator*)self, param1);
 }
 
-int32_t k_separator_qbase_metric(void* self, int32_t param1) {
-    return KSeparator_QBaseMetric((KSeparator*)self, param1);
+int32_t k_separator_super_metric(void* self, int32_t param1) {
+    return KSeparator_SuperMetric((KSeparator*)self, param1);
 }
 
 void k_separator_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1973,8 +1973,8 @@ void k_separator_init_painter(void* self, void* painter) {
     KSeparator_InitPainter((KSeparator*)self, (QPainter*)painter);
 }
 
-void k_separator_qbase_init_painter(void* self, void* painter) {
-    KSeparator_QBaseInitPainter((KSeparator*)self, (QPainter*)painter);
+void k_separator_super_init_painter(void* self, void* painter) {
+    KSeparator_SuperInitPainter((KSeparator*)self, (QPainter*)painter);
 }
 
 void k_separator_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1985,8 +1985,8 @@ QPaintDevice* k_separator_redirected(void* self, void* offset) {
     return KSeparator_Redirected((KSeparator*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_separator_qbase_redirected(void* self, void* offset) {
-    return KSeparator_QBaseRedirected((KSeparator*)self, (QPoint*)offset);
+QPaintDevice* k_separator_super_redirected(void* self, void* offset) {
+    return KSeparator_SuperRedirected((KSeparator*)self, (QPoint*)offset);
 }
 
 void k_separator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1997,8 +1997,8 @@ QPainter* k_separator_shared_painter(void* self) {
     return KSeparator_SharedPainter((KSeparator*)self);
 }
 
-QPainter* k_separator_qbase_shared_painter(void* self) {
-    return KSeparator_QBaseSharedPainter((KSeparator*)self);
+QPainter* k_separator_super_shared_painter(void* self) {
+    return KSeparator_SuperSharedPainter((KSeparator*)self);
 }
 
 void k_separator_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2009,8 +2009,8 @@ void k_separator_input_method_event(void* self, void* param1) {
     KSeparator_InputMethodEvent((KSeparator*)self, (QInputMethodEvent*)param1);
 }
 
-void k_separator_qbase_input_method_event(void* self, void* param1) {
-    KSeparator_QBaseInputMethodEvent((KSeparator*)self, (QInputMethodEvent*)param1);
+void k_separator_super_input_method_event(void* self, void* param1) {
+    KSeparator_SuperInputMethodEvent((KSeparator*)self, (QInputMethodEvent*)param1);
 }
 
 void k_separator_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2021,8 +2021,8 @@ QVariant* k_separator_input_method_query(void* self, int32_t param1) {
     return KSeparator_InputMethodQuery((KSeparator*)self, param1);
 }
 
-QVariant* k_separator_qbase_input_method_query(void* self, int32_t param1) {
-    return KSeparator_QBaseInputMethodQuery((KSeparator*)self, param1);
+QVariant* k_separator_super_input_method_query(void* self, int32_t param1) {
+    return KSeparator_SuperInputMethodQuery((KSeparator*)self, param1);
 }
 
 void k_separator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2033,8 +2033,8 @@ bool k_separator_focus_next_prev_child(void* self, bool next) {
     return KSeparator_FocusNextPrevChild((KSeparator*)self, next);
 }
 
-bool k_separator_qbase_focus_next_prev_child(void* self, bool next) {
-    return KSeparator_QBaseFocusNextPrevChild((KSeparator*)self, next);
+bool k_separator_super_focus_next_prev_child(void* self, bool next) {
+    return KSeparator_SuperFocusNextPrevChild((KSeparator*)self, next);
 }
 
 void k_separator_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2045,8 +2045,8 @@ bool k_separator_event_filter(void* self, void* watched, void* event) {
     return KSeparator_EventFilter((KSeparator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_separator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSeparator_QBaseEventFilter((KSeparator*)self, (QObject*)watched, (QEvent*)event);
+bool k_separator_super_event_filter(void* self, void* watched, void* event) {
+    return KSeparator_SuperEventFilter((KSeparator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_separator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2057,8 +2057,8 @@ void k_separator_timer_event(void* self, void* event) {
     KSeparator_TimerEvent((KSeparator*)self, (QTimerEvent*)event);
 }
 
-void k_separator_qbase_timer_event(void* self, void* event) {
-    KSeparator_QBaseTimerEvent((KSeparator*)self, (QTimerEvent*)event);
+void k_separator_super_timer_event(void* self, void* event) {
+    KSeparator_SuperTimerEvent((KSeparator*)self, (QTimerEvent*)event);
 }
 
 void k_separator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2069,8 +2069,8 @@ void k_separator_child_event(void* self, void* event) {
     KSeparator_ChildEvent((KSeparator*)self, (QChildEvent*)event);
 }
 
-void k_separator_qbase_child_event(void* self, void* event) {
-    KSeparator_QBaseChildEvent((KSeparator*)self, (QChildEvent*)event);
+void k_separator_super_child_event(void* self, void* event) {
+    KSeparator_SuperChildEvent((KSeparator*)self, (QChildEvent*)event);
 }
 
 void k_separator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2081,8 +2081,8 @@ void k_separator_custom_event(void* self, void* event) {
     KSeparator_CustomEvent((KSeparator*)self, (QEvent*)event);
 }
 
-void k_separator_qbase_custom_event(void* self, void* event) {
-    KSeparator_QBaseCustomEvent((KSeparator*)self, (QEvent*)event);
+void k_separator_super_custom_event(void* self, void* event) {
+    KSeparator_SuperCustomEvent((KSeparator*)self, (QEvent*)event);
 }
 
 void k_separator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2093,8 +2093,8 @@ void k_separator_connect_notify(void* self, void* signal) {
     KSeparator_ConnectNotify((KSeparator*)self, (QMetaMethod*)signal);
 }
 
-void k_separator_qbase_connect_notify(void* self, void* signal) {
-    KSeparator_QBaseConnectNotify((KSeparator*)self, (QMetaMethod*)signal);
+void k_separator_super_connect_notify(void* self, void* signal) {
+    KSeparator_SuperConnectNotify((KSeparator*)self, (QMetaMethod*)signal);
 }
 
 void k_separator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2105,8 +2105,8 @@ void k_separator_disconnect_notify(void* self, void* signal) {
     KSeparator_DisconnectNotify((KSeparator*)self, (QMetaMethod*)signal);
 }
 
-void k_separator_qbase_disconnect_notify(void* self, void* signal) {
-    KSeparator_QBaseDisconnectNotify((KSeparator*)self, (QMetaMethod*)signal);
+void k_separator_super_disconnect_notify(void* self, void* signal) {
+    KSeparator_SuperDisconnectNotify((KSeparator*)self, (QMetaMethod*)signal);
 }
 
 void k_separator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2117,8 +2117,8 @@ void k_separator_draw_frame(void* self, void* param1) {
     KSeparator_DrawFrame((KSeparator*)self, (QPainter*)param1);
 }
 
-void k_separator_qbase_draw_frame(void* self, void* param1) {
-    KSeparator_QBaseDrawFrame((KSeparator*)self, (QPainter*)param1);
+void k_separator_super_draw_frame(void* self, void* param1) {
+    KSeparator_SuperDrawFrame((KSeparator*)self, (QPainter*)param1);
 }
 
 void k_separator_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2129,8 +2129,8 @@ void k_separator_update_micro_focus(void* self) {
     KSeparator_UpdateMicroFocus((KSeparator*)self);
 }
 
-void k_separator_qbase_update_micro_focus(void* self) {
-    KSeparator_QBaseUpdateMicroFocus((KSeparator*)self);
+void k_separator_super_update_micro_focus(void* self) {
+    KSeparator_SuperUpdateMicroFocus((KSeparator*)self);
 }
 
 void k_separator_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2141,8 +2141,8 @@ void k_separator_create(void* self) {
     KSeparator_Create((KSeparator*)self);
 }
 
-void k_separator_qbase_create(void* self) {
-    KSeparator_QBaseCreate((KSeparator*)self);
+void k_separator_super_create(void* self) {
+    KSeparator_SuperCreate((KSeparator*)self);
 }
 
 void k_separator_on_create(void* self, void (*callback)()) {
@@ -2153,8 +2153,8 @@ void k_separator_destroy(void* self) {
     KSeparator_Destroy((KSeparator*)self);
 }
 
-void k_separator_qbase_destroy(void* self) {
-    KSeparator_QBaseDestroy((KSeparator*)self);
+void k_separator_super_destroy(void* self) {
+    KSeparator_SuperDestroy((KSeparator*)self);
 }
 
 void k_separator_on_destroy(void* self, void (*callback)()) {
@@ -2165,8 +2165,8 @@ bool k_separator_focus_next_child(void* self) {
     return KSeparator_FocusNextChild((KSeparator*)self);
 }
 
-bool k_separator_qbase_focus_next_child(void* self) {
-    return KSeparator_QBaseFocusNextChild((KSeparator*)self);
+bool k_separator_super_focus_next_child(void* self) {
+    return KSeparator_SuperFocusNextChild((KSeparator*)self);
 }
 
 void k_separator_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2177,8 +2177,8 @@ bool k_separator_focus_previous_child(void* self) {
     return KSeparator_FocusPreviousChild((KSeparator*)self);
 }
 
-bool k_separator_qbase_focus_previous_child(void* self) {
-    return KSeparator_QBaseFocusPreviousChild((KSeparator*)self);
+bool k_separator_super_focus_previous_child(void* self) {
+    return KSeparator_SuperFocusPreviousChild((KSeparator*)self);
 }
 
 void k_separator_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2189,8 +2189,8 @@ QObject* k_separator_sender(void* self) {
     return KSeparator_Sender((KSeparator*)self);
 }
 
-QObject* k_separator_qbase_sender(void* self) {
-    return KSeparator_QBaseSender((KSeparator*)self);
+QObject* k_separator_super_sender(void* self) {
+    return KSeparator_SuperSender((KSeparator*)self);
 }
 
 void k_separator_on_sender(void* self, QObject* (*callback)()) {
@@ -2201,8 +2201,8 @@ int32_t k_separator_sender_signal_index(void* self) {
     return KSeparator_SenderSignalIndex((KSeparator*)self);
 }
 
-int32_t k_separator_qbase_sender_signal_index(void* self) {
-    return KSeparator_QBaseSenderSignalIndex((KSeparator*)self);
+int32_t k_separator_super_sender_signal_index(void* self) {
+    return KSeparator_SuperSenderSignalIndex((KSeparator*)self);
 }
 
 void k_separator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2213,8 +2213,8 @@ int32_t k_separator_receivers(void* self, const char* signal) {
     return KSeparator_Receivers((KSeparator*)self, signal);
 }
 
-int32_t k_separator_qbase_receivers(void* self, const char* signal) {
-    return KSeparator_QBaseReceivers((KSeparator*)self, signal);
+int32_t k_separator_super_receivers(void* self, const char* signal) {
+    return KSeparator_SuperReceivers((KSeparator*)self, signal);
 }
 
 void k_separator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2225,8 +2225,8 @@ bool k_separator_is_signal_connected(void* self, void* signal) {
     return KSeparator_IsSignalConnected((KSeparator*)self, (QMetaMethod*)signal);
 }
 
-bool k_separator_qbase_is_signal_connected(void* self, void* signal) {
-    return KSeparator_QBaseIsSignalConnected((KSeparator*)self, (QMetaMethod*)signal);
+bool k_separator_super_is_signal_connected(void* self, void* signal) {
+    return KSeparator_SuperIsSignalConnected((KSeparator*)self, (QMetaMethod*)signal);
 }
 
 void k_separator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2237,8 +2237,8 @@ double k_separator_get_decoded_metric_f(void* self, int32_t metricA, int32_t met
     return KSeparator_GetDecodedMetricF((KSeparator*)self, metricA, metricB);
 }
 
-double k_separator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KSeparator_QBaseGetDecodedMetricF((KSeparator*)self, metricA, metricB);
+double k_separator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KSeparator_SuperGetDecodedMetricF((KSeparator*)self, metricA, metricB);
 }
 
 void k_separator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

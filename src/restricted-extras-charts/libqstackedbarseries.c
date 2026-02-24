@@ -23,8 +23,8 @@ void q_stackedbarseries_on_meta_object(void* self, const QMetaObject* (*callback
     QStackedBarSeries_OnMetaObject((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_stackedbarseries_qbase_meta_object(void* self) {
-    return QStackedBarSeries_QBaseMetaObject((QStackedBarSeries*)self);
+const QMetaObject* q_stackedbarseries_super_meta_object(void* self) {
+    return QStackedBarSeries_SuperMetaObject((QStackedBarSeries*)self);
 }
 
 void* q_stackedbarseries_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_stackedbarseries_on_metacast(void* self, void* (*callback)(void*, const c
     QStackedBarSeries_OnMetacast((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
-void* q_stackedbarseries_qbase_metacast(void* self, const char* param1) {
-    return QStackedBarSeries_QBaseMetacast((QStackedBarSeries*)self, param1);
+void* q_stackedbarseries_super_metacast(void* self, const char* param1) {
+    return QStackedBarSeries_SuperMetacast((QStackedBarSeries*)self, param1);
 }
 
 int32_t q_stackedbarseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_stackedbarseries_on_metacall(void* self, int32_t (*callback)(void*, int32
     QStackedBarSeries_OnMetacall((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedbarseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QStackedBarSeries_QBaseMetacall((QStackedBarSeries*)self, param1, param2, param3);
+int32_t q_stackedbarseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QStackedBarSeries_SuperMetacall((QStackedBarSeries*)self, param1, param2, param3);
 }
 
 const char* q_stackedbarseries_tr(const char* s) {
@@ -66,8 +66,8 @@ void q_stackedbarseries_on_type(void* self, int32_t (*callback)()) {
     QStackedBarSeries_OnType((QStackedBarSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_stackedbarseries_qbase_type(void* self) {
-    return QStackedBarSeries_QBaseType((QStackedBarSeries*)self);
+int32_t q_stackedbarseries_super_type(void* self) {
+    return QStackedBarSeries_SuperType((QStackedBarSeries*)self);
 }
 
 const char* q_stackedbarseries_tr2(const char* s, const char* c) {
@@ -591,8 +591,8 @@ bool q_stackedbarseries_event(void* self, void* event) {
     return QStackedBarSeries_Event((QStackedBarSeries*)self, (QEvent*)event);
 }
 
-bool q_stackedbarseries_qbase_event(void* self, void* event) {
-    return QStackedBarSeries_QBaseEvent((QStackedBarSeries*)self, (QEvent*)event);
+bool q_stackedbarseries_super_event(void* self, void* event) {
+    return QStackedBarSeries_SuperEvent((QStackedBarSeries*)self, (QEvent*)event);
 }
 
 void q_stackedbarseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -603,8 +603,8 @@ bool q_stackedbarseries_event_filter(void* self, void* watched, void* event) {
     return QStackedBarSeries_EventFilter((QStackedBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_stackedbarseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QStackedBarSeries_QBaseEventFilter((QStackedBarSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_stackedbarseries_super_event_filter(void* self, void* watched, void* event) {
+    return QStackedBarSeries_SuperEventFilter((QStackedBarSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_stackedbarseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -615,8 +615,8 @@ void q_stackedbarseries_timer_event(void* self, void* event) {
     QStackedBarSeries_TimerEvent((QStackedBarSeries*)self, (QTimerEvent*)event);
 }
 
-void q_stackedbarseries_qbase_timer_event(void* self, void* event) {
-    QStackedBarSeries_QBaseTimerEvent((QStackedBarSeries*)self, (QTimerEvent*)event);
+void q_stackedbarseries_super_timer_event(void* self, void* event) {
+    QStackedBarSeries_SuperTimerEvent((QStackedBarSeries*)self, (QTimerEvent*)event);
 }
 
 void q_stackedbarseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -627,8 +627,8 @@ void q_stackedbarseries_child_event(void* self, void* event) {
     QStackedBarSeries_ChildEvent((QStackedBarSeries*)self, (QChildEvent*)event);
 }
 
-void q_stackedbarseries_qbase_child_event(void* self, void* event) {
-    QStackedBarSeries_QBaseChildEvent((QStackedBarSeries*)self, (QChildEvent*)event);
+void q_stackedbarseries_super_child_event(void* self, void* event) {
+    QStackedBarSeries_SuperChildEvent((QStackedBarSeries*)self, (QChildEvent*)event);
 }
 
 void q_stackedbarseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -639,8 +639,8 @@ void q_stackedbarseries_custom_event(void* self, void* event) {
     QStackedBarSeries_CustomEvent((QStackedBarSeries*)self, (QEvent*)event);
 }
 
-void q_stackedbarseries_qbase_custom_event(void* self, void* event) {
-    QStackedBarSeries_QBaseCustomEvent((QStackedBarSeries*)self, (QEvent*)event);
+void q_stackedbarseries_super_custom_event(void* self, void* event) {
+    QStackedBarSeries_SuperCustomEvent((QStackedBarSeries*)self, (QEvent*)event);
 }
 
 void q_stackedbarseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -651,8 +651,8 @@ void q_stackedbarseries_connect_notify(void* self, void* signal) {
     QStackedBarSeries_ConnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedbarseries_qbase_connect_notify(void* self, void* signal) {
-    QStackedBarSeries_QBaseConnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
+void q_stackedbarseries_super_connect_notify(void* self, void* signal) {
+    QStackedBarSeries_SuperConnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_stackedbarseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -663,8 +663,8 @@ void q_stackedbarseries_disconnect_notify(void* self, void* signal) {
     QStackedBarSeries_DisconnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_stackedbarseries_qbase_disconnect_notify(void* self, void* signal) {
-    QStackedBarSeries_QBaseDisconnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
+void q_stackedbarseries_super_disconnect_notify(void* self, void* signal) {
+    QStackedBarSeries_SuperDisconnectNotify((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_stackedbarseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -675,8 +675,8 @@ QObject* q_stackedbarseries_sender(void* self) {
     return QStackedBarSeries_Sender((QStackedBarSeries*)self);
 }
 
-QObject* q_stackedbarseries_qbase_sender(void* self) {
-    return QStackedBarSeries_QBaseSender((QStackedBarSeries*)self);
+QObject* q_stackedbarseries_super_sender(void* self) {
+    return QStackedBarSeries_SuperSender((QStackedBarSeries*)self);
 }
 
 void q_stackedbarseries_on_sender(void* self, QObject* (*callback)()) {
@@ -687,8 +687,8 @@ int32_t q_stackedbarseries_sender_signal_index(void* self) {
     return QStackedBarSeries_SenderSignalIndex((QStackedBarSeries*)self);
 }
 
-int32_t q_stackedbarseries_qbase_sender_signal_index(void* self) {
-    return QStackedBarSeries_QBaseSenderSignalIndex((QStackedBarSeries*)self);
+int32_t q_stackedbarseries_super_sender_signal_index(void* self) {
+    return QStackedBarSeries_SuperSenderSignalIndex((QStackedBarSeries*)self);
 }
 
 void q_stackedbarseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -699,8 +699,8 @@ int32_t q_stackedbarseries_receivers(void* self, const char* signal) {
     return QStackedBarSeries_Receivers((QStackedBarSeries*)self, signal);
 }
 
-int32_t q_stackedbarseries_qbase_receivers(void* self, const char* signal) {
-    return QStackedBarSeries_QBaseReceivers((QStackedBarSeries*)self, signal);
+int32_t q_stackedbarseries_super_receivers(void* self, const char* signal) {
+    return QStackedBarSeries_SuperReceivers((QStackedBarSeries*)self, signal);
 }
 
 void q_stackedbarseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -711,8 +711,8 @@ bool q_stackedbarseries_is_signal_connected(void* self, void* signal) {
     return QStackedBarSeries_IsSignalConnected((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_stackedbarseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QStackedBarSeries_QBaseIsSignalConnected((QStackedBarSeries*)self, (QMetaMethod*)signal);
+bool q_stackedbarseries_super_is_signal_connected(void* self, void* signal) {
+    return QStackedBarSeries_SuperIsSignalConnected((QStackedBarSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_stackedbarseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

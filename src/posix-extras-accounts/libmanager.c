@@ -43,8 +43,8 @@ void q_accounts__manager_on_meta_object(void* self, const QMetaObject* (*callbac
     Accounts__Manager_OnMetaObject((Accounts__Manager*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_accounts__manager_qbase_meta_object(void* self) {
-    return Accounts__Manager_QBaseMetaObject((Accounts__Manager*)self);
+const QMetaObject* q_accounts__manager_super_meta_object(void* self) {
+    return Accounts__Manager_SuperMetaObject((Accounts__Manager*)self);
 }
 
 void* q_accounts__manager_metacast(void* self, const char* param1) {
@@ -55,8 +55,8 @@ void q_accounts__manager_on_metacast(void* self, void* (*callback)(void*, const 
     Accounts__Manager_OnMetacast((Accounts__Manager*)self, (intptr_t)callback);
 }
 
-void* q_accounts__manager_qbase_metacast(void* self, const char* param1) {
-    return Accounts__Manager_QBaseMetacast((Accounts__Manager*)self, param1);
+void* q_accounts__manager_super_metacast(void* self, const char* param1) {
+    return Accounts__Manager_SuperMetacast((Accounts__Manager*)self, param1);
 }
 
 int32_t q_accounts__manager_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -67,8 +67,8 @@ void q_accounts__manager_on_metacall(void* self, int32_t (*callback)(void*, int3
     Accounts__Manager_OnMetacall((Accounts__Manager*)self, (intptr_t)callback);
 }
 
-int32_t q_accounts__manager_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return Accounts__Manager_QBaseMetacall((Accounts__Manager*)self, param1, param2, param3);
+int32_t q_accounts__manager_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return Accounts__Manager_SuperMetacall((Accounts__Manager*)self, param1, param2, param3);
 }
 
 const char* q_accounts__manager_tr(const char* s) {
@@ -439,8 +439,8 @@ bool q_accounts__manager_event(void* self, void* event) {
     return Accounts__Manager_Event((Accounts__Manager*)self, (QEvent*)event);
 }
 
-bool q_accounts__manager_qbase_event(void* self, void* event) {
-    return Accounts__Manager_QBaseEvent((Accounts__Manager*)self, (QEvent*)event);
+bool q_accounts__manager_super_event(void* self, void* event) {
+    return Accounts__Manager_SuperEvent((Accounts__Manager*)self, (QEvent*)event);
 }
 
 void q_accounts__manager_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -451,8 +451,8 @@ bool q_accounts__manager_event_filter(void* self, void* watched, void* event) {
     return Accounts__Manager_EventFilter((Accounts__Manager*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_accounts__manager_qbase_event_filter(void* self, void* watched, void* event) {
-    return Accounts__Manager_QBaseEventFilter((Accounts__Manager*)self, (QObject*)watched, (QEvent*)event);
+bool q_accounts__manager_super_event_filter(void* self, void* watched, void* event) {
+    return Accounts__Manager_SuperEventFilter((Accounts__Manager*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_accounts__manager_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -463,8 +463,8 @@ void q_accounts__manager_timer_event(void* self, void* event) {
     Accounts__Manager_TimerEvent((Accounts__Manager*)self, (QTimerEvent*)event);
 }
 
-void q_accounts__manager_qbase_timer_event(void* self, void* event) {
-    Accounts__Manager_QBaseTimerEvent((Accounts__Manager*)self, (QTimerEvent*)event);
+void q_accounts__manager_super_timer_event(void* self, void* event) {
+    Accounts__Manager_SuperTimerEvent((Accounts__Manager*)self, (QTimerEvent*)event);
 }
 
 void q_accounts__manager_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -475,8 +475,8 @@ void q_accounts__manager_child_event(void* self, void* event) {
     Accounts__Manager_ChildEvent((Accounts__Manager*)self, (QChildEvent*)event);
 }
 
-void q_accounts__manager_qbase_child_event(void* self, void* event) {
-    Accounts__Manager_QBaseChildEvent((Accounts__Manager*)self, (QChildEvent*)event);
+void q_accounts__manager_super_child_event(void* self, void* event) {
+    Accounts__Manager_SuperChildEvent((Accounts__Manager*)self, (QChildEvent*)event);
 }
 
 void q_accounts__manager_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -487,8 +487,8 @@ void q_accounts__manager_custom_event(void* self, void* event) {
     Accounts__Manager_CustomEvent((Accounts__Manager*)self, (QEvent*)event);
 }
 
-void q_accounts__manager_qbase_custom_event(void* self, void* event) {
-    Accounts__Manager_QBaseCustomEvent((Accounts__Manager*)self, (QEvent*)event);
+void q_accounts__manager_super_custom_event(void* self, void* event) {
+    Accounts__Manager_SuperCustomEvent((Accounts__Manager*)self, (QEvent*)event);
 }
 
 void q_accounts__manager_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -499,8 +499,8 @@ void q_accounts__manager_connect_notify(void* self, void* signal) {
     Accounts__Manager_ConnectNotify((Accounts__Manager*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__manager_qbase_connect_notify(void* self, void* signal) {
-    Accounts__Manager_QBaseConnectNotify((Accounts__Manager*)self, (QMetaMethod*)signal);
+void q_accounts__manager_super_connect_notify(void* self, void* signal) {
+    Accounts__Manager_SuperConnectNotify((Accounts__Manager*)self, (QMetaMethod*)signal);
 }
 
 void q_accounts__manager_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -511,8 +511,8 @@ void q_accounts__manager_disconnect_notify(void* self, void* signal) {
     Accounts__Manager_DisconnectNotify((Accounts__Manager*)self, (QMetaMethod*)signal);
 }
 
-void q_accounts__manager_qbase_disconnect_notify(void* self, void* signal) {
-    Accounts__Manager_QBaseDisconnectNotify((Accounts__Manager*)self, (QMetaMethod*)signal);
+void q_accounts__manager_super_disconnect_notify(void* self, void* signal) {
+    Accounts__Manager_SuperDisconnectNotify((Accounts__Manager*)self, (QMetaMethod*)signal);
 }
 
 void q_accounts__manager_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -523,8 +523,8 @@ QObject* q_accounts__manager_sender(void* self) {
     return Accounts__Manager_Sender((Accounts__Manager*)self);
 }
 
-QObject* q_accounts__manager_qbase_sender(void* self) {
-    return Accounts__Manager_QBaseSender((Accounts__Manager*)self);
+QObject* q_accounts__manager_super_sender(void* self) {
+    return Accounts__Manager_SuperSender((Accounts__Manager*)self);
 }
 
 void q_accounts__manager_on_sender(void* self, QObject* (*callback)()) {
@@ -535,8 +535,8 @@ int32_t q_accounts__manager_sender_signal_index(void* self) {
     return Accounts__Manager_SenderSignalIndex((Accounts__Manager*)self);
 }
 
-int32_t q_accounts__manager_qbase_sender_signal_index(void* self) {
-    return Accounts__Manager_QBaseSenderSignalIndex((Accounts__Manager*)self);
+int32_t q_accounts__manager_super_sender_signal_index(void* self) {
+    return Accounts__Manager_SuperSenderSignalIndex((Accounts__Manager*)self);
 }
 
 void q_accounts__manager_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -547,8 +547,8 @@ int32_t q_accounts__manager_receivers(void* self, const char* signal) {
     return Accounts__Manager_Receivers((Accounts__Manager*)self, signal);
 }
 
-int32_t q_accounts__manager_qbase_receivers(void* self, const char* signal) {
-    return Accounts__Manager_QBaseReceivers((Accounts__Manager*)self, signal);
+int32_t q_accounts__manager_super_receivers(void* self, const char* signal) {
+    return Accounts__Manager_SuperReceivers((Accounts__Manager*)self, signal);
 }
 
 void q_accounts__manager_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -559,8 +559,8 @@ bool q_accounts__manager_is_signal_connected(void* self, void* signal) {
     return Accounts__Manager_IsSignalConnected((Accounts__Manager*)self, (QMetaMethod*)signal);
 }
 
-bool q_accounts__manager_qbase_is_signal_connected(void* self, void* signal) {
-    return Accounts__Manager_QBaseIsSignalConnected((Accounts__Manager*)self, (QMetaMethod*)signal);
+bool q_accounts__manager_super_is_signal_connected(void* self, void* signal) {
+    return Accounts__Manager_SuperIsSignalConnected((Accounts__Manager*)self, (QMetaMethod*)signal);
 }
 
 void q_accounts__manager_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

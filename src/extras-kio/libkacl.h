@@ -213,6 +213,10 @@ void k_acl_virtual_hook(void* self, int id, void* data);
 ///
 void k_acl_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_acl_super_virtual_hook` instead
+///
+#define k_acl_qbase_virtual_hook k_acl_super_virtual_hook
+
 /// [Upstream resources](https://api.kde.org/kacl.html#virtual_hook)
 ///
 /// Base class method implementation
@@ -221,7 +225,7 @@ void k_acl_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 /// @param id int
 /// @param data void*
 ///
-void k_acl_qbase_virtual_hook(void* self, int id, void* data);
+void k_acl_super_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#dtor.KACL)
 ///

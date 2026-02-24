@@ -41,8 +41,8 @@ void k_parts__readonlypart_on_meta_object(void* self, const QMetaObject* (*callb
     KParts__ReadOnlyPart_OnMetaObject((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__readonlypart_qbase_meta_object(void* self) {
-    return KParts__ReadOnlyPart_QBaseMetaObject((KParts__ReadOnlyPart*)self);
+const QMetaObject* k_parts__readonlypart_super_meta_object(void* self) {
+    return KParts__ReadOnlyPart_SuperMetaObject((KParts__ReadOnlyPart*)self);
 }
 
 void* k_parts__readonlypart_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_parts__readonlypart_on_metacast(void* self, void* (*callback)(void*, cons
     KParts__ReadOnlyPart_OnMetacast((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-void* k_parts__readonlypart_qbase_metacast(void* self, const char* param1) {
-    return KParts__ReadOnlyPart_QBaseMetacast((KParts__ReadOnlyPart*)self, param1);
+void* k_parts__readonlypart_super_metacast(void* self, const char* param1) {
+    return KParts__ReadOnlyPart_SuperMetacast((KParts__ReadOnlyPart*)self, param1);
 }
 
 int32_t k_parts__readonlypart_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_parts__readonlypart_on_metacall(void* self, int32_t (*callback)(void*, in
     KParts__ReadOnlyPart_OnMetacall((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__readonlypart_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__ReadOnlyPart_QBaseMetacall((KParts__ReadOnlyPart*)self, param1, param2, param3);
+int32_t k_parts__readonlypart_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__ReadOnlyPart_SuperMetacall((KParts__ReadOnlyPart*)self, param1, param2, param3);
 }
 
 const char* k_parts__readonlypart_tr(const char* s) {
@@ -92,8 +92,8 @@ void k_parts__readonlypart_on_open_url(void* self, bool (*callback)(void*, void*
     KParts__ReadOnlyPart_OnOpenUrl((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-bool k_parts__readonlypart_qbase_open_url(void* self, void* url) {
-    return KParts__ReadOnlyPart_QBaseOpenUrl((KParts__ReadOnlyPart*)self, (QUrl*)url);
+bool k_parts__readonlypart_super_open_url(void* self, void* url) {
+    return KParts__ReadOnlyPart_SuperOpenUrl((KParts__ReadOnlyPart*)self, (QUrl*)url);
 }
 
 QUrl* k_parts__readonlypart_url(void* self) {
@@ -108,8 +108,8 @@ void k_parts__readonlypart_on_close_url(void* self, bool (*callback)()) {
     KParts__ReadOnlyPart_OnCloseUrl((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-bool k_parts__readonlypart_qbase_close_url(void* self) {
-    return KParts__ReadOnlyPart_QBaseCloseUrl((KParts__ReadOnlyPart*)self);
+bool k_parts__readonlypart_super_close_url(void* self) {
+    return KParts__ReadOnlyPart_SuperCloseUrl((KParts__ReadOnlyPart*)self);
 }
 
 KParts__NavigationExtension* k_parts__readonlypart_navigation_extension(void* self) {
@@ -184,8 +184,8 @@ void k_parts__readonlypart_on_open_file(void* self, bool (*callback)()) {
     KParts__ReadOnlyPart_OnOpenFile((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-bool k_parts__readonlypart_qbase_open_file(void* self) {
-    return KParts__ReadOnlyPart_QBaseOpenFile((KParts__ReadOnlyPart*)self);
+bool k_parts__readonlypart_super_open_file(void* self) {
+    return KParts__ReadOnlyPart_SuperOpenFile((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_abort_load(void* self) {
@@ -196,8 +196,8 @@ void k_parts__readonlypart_on_abort_load(void* self, void (*callback)()) {
     KParts__ReadOnlyPart_OnAbortLoad((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-void k_parts__readonlypart_qbase_abort_load(void* self) {
-    KParts__ReadOnlyPart_QBaseAbortLoad((KParts__ReadOnlyPart*)self);
+void k_parts__readonlypart_super_abort_load(void* self) {
+    KParts__ReadOnlyPart_SuperAbortLoad((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_gui_activate_event(void* self, void* event) {
@@ -208,8 +208,8 @@ void k_parts__readonlypart_on_gui_activate_event(void* self, void (*callback)(vo
     KParts__ReadOnlyPart_OnGuiActivateEvent((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-void k_parts__readonlypart_qbase_gui_activate_event(void* self, void* event) {
-    KParts__ReadOnlyPart_QBaseGuiActivateEvent((KParts__ReadOnlyPart*)self, (KParts__GUIActivateEvent*)event);
+void k_parts__readonlypart_super_gui_activate_event(void* self, void* event) {
+    KParts__ReadOnlyPart_SuperGuiActivateEvent((KParts__ReadOnlyPart*)self, (KParts__GUIActivateEvent*)event);
 }
 
 void k_parts__readonlypart_set_url(void* self, void* url) {
@@ -220,8 +220,8 @@ void k_parts__readonlypart_on_set_url(void* self, void (*callback)(void*, void*)
     KParts__ReadOnlyPart_OnSetUrl((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-void k_parts__readonlypart_qbase_set_url(void* self, void* url) {
-    KParts__ReadOnlyPart_QBaseSetUrl((KParts__ReadOnlyPart*)self, (QUrl*)url);
+void k_parts__readonlypart_super_set_url(void* self, void* url) {
+    KParts__ReadOnlyPart_SuperSetUrl((KParts__ReadOnlyPart*)self, (QUrl*)url);
 }
 
 const char* k_parts__readonlypart_local_file_path(void* self) {
@@ -235,8 +235,8 @@ void k_parts__readonlypart_on_local_file_path(void* self, const char* (*callback
     KParts__ReadOnlyPart_OnLocalFilePath((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-const char* k_parts__readonlypart_qbase_local_file_path(void* self) {
-    libqt_string _str = KParts__ReadOnlyPart_QBaseLocalFilePath((KParts__ReadOnlyPart*)self);
+const char* k_parts__readonlypart_super_local_file_path(void* self) {
+    libqt_string _str = KParts__ReadOnlyPart_SuperLocalFilePath((KParts__ReadOnlyPart*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -250,8 +250,8 @@ void k_parts__readonlypart_on_set_local_file_path(void* self, void (*callback)(v
     KParts__ReadOnlyPart_OnSetLocalFilePath((KParts__ReadOnlyPart*)self, (intptr_t)callback);
 }
 
-void k_parts__readonlypart_qbase_set_local_file_path(void* self, const char* localFilePath) {
-    KParts__ReadOnlyPart_QBaseSetLocalFilePath((KParts__ReadOnlyPart*)self, qstring(localFilePath));
+void k_parts__readonlypart_super_set_local_file_path(void* self, const char* localFilePath) {
+    KParts__ReadOnlyPart_SuperSetLocalFilePath((KParts__ReadOnlyPart*)self, qstring(localFilePath));
 }
 
 const char* k_parts__readonlypart_tr2(const char* s, const char* c) {
@@ -637,8 +637,8 @@ QWidget* k_parts__readonlypart_widget(void* self) {
     return KParts__ReadOnlyPart_Widget((KParts__ReadOnlyPart*)self);
 }
 
-QWidget* k_parts__readonlypart_qbase_widget(void* self) {
-    return KParts__ReadOnlyPart_QBaseWidget((KParts__ReadOnlyPart*)self);
+QWidget* k_parts__readonlypart_super_widget(void* self) {
+    return KParts__ReadOnlyPart_SuperWidget((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_widget(void* self, QWidget* (*callback)()) {
@@ -649,8 +649,8 @@ void k_parts__readonlypart_set_manager(void* self, void* manager) {
     KParts__ReadOnlyPart_SetManager((KParts__ReadOnlyPart*)self, (KParts__PartManager*)manager);
 }
 
-void k_parts__readonlypart_qbase_set_manager(void* self, void* manager) {
-    KParts__ReadOnlyPart_QBaseSetManager((KParts__ReadOnlyPart*)self, (KParts__PartManager*)manager);
+void k_parts__readonlypart_super_set_manager(void* self, void* manager) {
+    KParts__ReadOnlyPart_SuperSetManager((KParts__ReadOnlyPart*)self, (KParts__PartManager*)manager);
 }
 
 void k_parts__readonlypart_on_set_manager(void* self, void (*callback)(void*, void*)) {
@@ -661,8 +661,8 @@ KParts__Part* k_parts__readonlypart_hit_test(void* self, void* widget, void* glo
     return KParts__ReadOnlyPart_HitTest((KParts__ReadOnlyPart*)self, (QWidget*)widget, (QPoint*)globalPos);
 }
 
-KParts__Part* k_parts__readonlypart_qbase_hit_test(void* self, void* widget, void* globalPos) {
-    return KParts__ReadOnlyPart_QBaseHitTest((KParts__ReadOnlyPart*)self, (QWidget*)widget, (QPoint*)globalPos);
+KParts__Part* k_parts__readonlypart_super_hit_test(void* self, void* widget, void* globalPos) {
+    return KParts__ReadOnlyPart_SuperHitTest((KParts__ReadOnlyPart*)self, (QWidget*)widget, (QPoint*)globalPos);
 }
 
 void k_parts__readonlypart_on_hit_test(void* self, KParts__Part* (*callback)(void*, void*, void*)) {
@@ -673,8 +673,8 @@ void k_parts__readonlypart_set_widget(void* self, void* widget) {
     KParts__ReadOnlyPart_SetWidget((KParts__ReadOnlyPart*)self, (QWidget*)widget);
 }
 
-void k_parts__readonlypart_qbase_set_widget(void* self, void* widget) {
-    KParts__ReadOnlyPart_QBaseSetWidget((KParts__ReadOnlyPart*)self, (QWidget*)widget);
+void k_parts__readonlypart_super_set_widget(void* self, void* widget) {
+    KParts__ReadOnlyPart_SuperSetWidget((KParts__ReadOnlyPart*)self, (QWidget*)widget);
 }
 
 void k_parts__readonlypart_on_set_widget(void* self, void (*callback)(void*, void*)) {
@@ -685,8 +685,8 @@ void k_parts__readonlypart_custom_event(void* self, void* event) {
     KParts__ReadOnlyPart_CustomEvent((KParts__ReadOnlyPart*)self, (QEvent*)event);
 }
 
-void k_parts__readonlypart_qbase_custom_event(void* self, void* event) {
-    KParts__ReadOnlyPart_QBaseCustomEvent((KParts__ReadOnlyPart*)self, (QEvent*)event);
+void k_parts__readonlypart_super_custom_event(void* self, void* event) {
+    KParts__ReadOnlyPart_SuperCustomEvent((KParts__ReadOnlyPart*)self, (QEvent*)event);
 }
 
 void k_parts__readonlypart_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -697,8 +697,8 @@ void k_parts__readonlypart_part_activate_event(void* self, void* event) {
     KParts__ReadOnlyPart_PartActivateEvent((KParts__ReadOnlyPart*)self, (KParts__PartActivateEvent*)event);
 }
 
-void k_parts__readonlypart_qbase_part_activate_event(void* self, void* event) {
-    KParts__ReadOnlyPart_QBasePartActivateEvent((KParts__ReadOnlyPart*)self, (KParts__PartActivateEvent*)event);
+void k_parts__readonlypart_super_part_activate_event(void* self, void* event) {
+    KParts__ReadOnlyPart_SuperPartActivateEvent((KParts__ReadOnlyPart*)self, (KParts__PartActivateEvent*)event);
 }
 
 void k_parts__readonlypart_on_part_activate_event(void* self, void (*callback)(void*, void*)) {
@@ -709,8 +709,8 @@ bool k_parts__readonlypart_event(void* self, void* event) {
     return KParts__ReadOnlyPart_Event((KParts__ReadOnlyPart*)self, (QEvent*)event);
 }
 
-bool k_parts__readonlypart_qbase_event(void* self, void* event) {
-    return KParts__ReadOnlyPart_QBaseEvent((KParts__ReadOnlyPart*)self, (QEvent*)event);
+bool k_parts__readonlypart_super_event(void* self, void* event) {
+    return KParts__ReadOnlyPart_SuperEvent((KParts__ReadOnlyPart*)self, (QEvent*)event);
 }
 
 void k_parts__readonlypart_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -721,8 +721,8 @@ bool k_parts__readonlypart_event_filter(void* self, void* watched, void* event) 
     return KParts__ReadOnlyPart_EventFilter((KParts__ReadOnlyPart*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_parts__readonlypart_qbase_event_filter(void* self, void* watched, void* event) {
-    return KParts__ReadOnlyPart_QBaseEventFilter((KParts__ReadOnlyPart*)self, (QObject*)watched, (QEvent*)event);
+bool k_parts__readonlypart_super_event_filter(void* self, void* watched, void* event) {
+    return KParts__ReadOnlyPart_SuperEventFilter((KParts__ReadOnlyPart*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_parts__readonlypart_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -733,8 +733,8 @@ void k_parts__readonlypart_timer_event(void* self, void* event) {
     KParts__ReadOnlyPart_TimerEvent((KParts__ReadOnlyPart*)self, (QTimerEvent*)event);
 }
 
-void k_parts__readonlypart_qbase_timer_event(void* self, void* event) {
-    KParts__ReadOnlyPart_QBaseTimerEvent((KParts__ReadOnlyPart*)self, (QTimerEvent*)event);
+void k_parts__readonlypart_super_timer_event(void* self, void* event) {
+    KParts__ReadOnlyPart_SuperTimerEvent((KParts__ReadOnlyPart*)self, (QTimerEvent*)event);
 }
 
 void k_parts__readonlypart_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -745,8 +745,8 @@ void k_parts__readonlypart_child_event(void* self, void* event) {
     KParts__ReadOnlyPart_ChildEvent((KParts__ReadOnlyPart*)self, (QChildEvent*)event);
 }
 
-void k_parts__readonlypart_qbase_child_event(void* self, void* event) {
-    KParts__ReadOnlyPart_QBaseChildEvent((KParts__ReadOnlyPart*)self, (QChildEvent*)event);
+void k_parts__readonlypart_super_child_event(void* self, void* event) {
+    KParts__ReadOnlyPart_SuperChildEvent((KParts__ReadOnlyPart*)self, (QChildEvent*)event);
 }
 
 void k_parts__readonlypart_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -757,8 +757,8 @@ void k_parts__readonlypart_connect_notify(void* self, void* signal) {
     KParts__ReadOnlyPart_ConnectNotify((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__readonlypart_qbase_connect_notify(void* self, void* signal) {
-    KParts__ReadOnlyPart_QBaseConnectNotify((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
+void k_parts__readonlypart_super_connect_notify(void* self, void* signal) {
+    KParts__ReadOnlyPart_SuperConnectNotify((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__readonlypart_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -769,8 +769,8 @@ void k_parts__readonlypart_disconnect_notify(void* self, void* signal) {
     KParts__ReadOnlyPart_DisconnectNotify((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__readonlypart_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__ReadOnlyPart_QBaseDisconnectNotify((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
+void k_parts__readonlypart_super_disconnect_notify(void* self, void* signal) {
+    KParts__ReadOnlyPart_SuperDisconnectNotify((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__readonlypart_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -781,8 +781,8 @@ QAction* k_parts__readonlypart_action2(void* self, void* element) {
     return KParts__ReadOnlyPart_Action2((KParts__ReadOnlyPart*)self, (QDomElement*)element);
 }
 
-QAction* k_parts__readonlypart_qbase_action2(void* self, void* element) {
-    return KParts__ReadOnlyPart_QBaseAction2((KParts__ReadOnlyPart*)self, (QDomElement*)element);
+QAction* k_parts__readonlypart_super_action2(void* self, void* element) {
+    return KParts__ReadOnlyPart_SuperAction2((KParts__ReadOnlyPart*)self, (QDomElement*)element);
 }
 
 void k_parts__readonlypart_on_action2(void* self, QAction* (*callback)(void*, void*)) {
@@ -793,8 +793,8 @@ KActionCollection* k_parts__readonlypart_action_collection(void* self) {
     return KParts__ReadOnlyPart_ActionCollection((KParts__ReadOnlyPart*)self);
 }
 
-KActionCollection* k_parts__readonlypart_qbase_action_collection(void* self) {
-    return KParts__ReadOnlyPart_QBaseActionCollection((KParts__ReadOnlyPart*)self);
+KActionCollection* k_parts__readonlypart_super_action_collection(void* self) {
+    return KParts__ReadOnlyPart_SuperActionCollection((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_action_collection(void* self, KActionCollection* (*callback)()) {
@@ -808,8 +808,8 @@ const char* k_parts__readonlypart_component_name(void* self) {
     return _ret;
 }
 
-const char* k_parts__readonlypart_qbase_component_name(void* self) {
-    libqt_string _str = KParts__ReadOnlyPart_QBaseComponentName((KParts__ReadOnlyPart*)self);
+const char* k_parts__readonlypart_super_component_name(void* self) {
+    libqt_string _str = KParts__ReadOnlyPart_SuperComponentName((KParts__ReadOnlyPart*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -823,8 +823,8 @@ QDomDocument* k_parts__readonlypart_dom_document(void* self) {
     return KParts__ReadOnlyPart_DomDocument((KParts__ReadOnlyPart*)self);
 }
 
-QDomDocument* k_parts__readonlypart_qbase_dom_document(void* self) {
-    return KParts__ReadOnlyPart_QBaseDomDocument((KParts__ReadOnlyPart*)self);
+QDomDocument* k_parts__readonlypart_super_dom_document(void* self) {
+    return KParts__ReadOnlyPart_SuperDomDocument((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_dom_document(void* self, QDomDocument* (*callback)()) {
@@ -838,8 +838,8 @@ const char* k_parts__readonlypart_xml_file(void* self) {
     return _ret;
 }
 
-const char* k_parts__readonlypart_qbase_xml_file(void* self) {
-    libqt_string _str = KParts__ReadOnlyPart_QBaseXmlFile((KParts__ReadOnlyPart*)self);
+const char* k_parts__readonlypart_super_xml_file(void* self) {
+    libqt_string _str = KParts__ReadOnlyPart_SuperXmlFile((KParts__ReadOnlyPart*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -856,8 +856,8 @@ const char* k_parts__readonlypart_local_x_m_l_file(void* self) {
     return _ret;
 }
 
-const char* k_parts__readonlypart_qbase_local_x_m_l_file(void* self) {
-    libqt_string _str = KParts__ReadOnlyPart_QBaseLocalXMLFile((KParts__ReadOnlyPart*)self);
+const char* k_parts__readonlypart_super_local_x_m_l_file(void* self) {
+    libqt_string _str = KParts__ReadOnlyPart_SuperLocalXMLFile((KParts__ReadOnlyPart*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -871,8 +871,8 @@ void k_parts__readonlypart_set_component_name(void* self, const char* componentN
     KParts__ReadOnlyPart_SetComponentName((KParts__ReadOnlyPart*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
-void k_parts__readonlypart_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
-    KParts__ReadOnlyPart_QBaseSetComponentName((KParts__ReadOnlyPart*)self, qstring(componentName), qstring(componentDisplayName));
+void k_parts__readonlypart_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
+    KParts__ReadOnlyPart_SuperSetComponentName((KParts__ReadOnlyPart*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
 void k_parts__readonlypart_on_set_component_name(void* self, void (*callback)(void*, const char*, const char*)) {
@@ -883,8 +883,8 @@ void k_parts__readonlypart_set_x_m_l_file(void* self, const char* file, bool mer
     KParts__ReadOnlyPart_SetXMLFile((KParts__ReadOnlyPart*)self, qstring(file), merge, setXMLDoc);
 }
 
-void k_parts__readonlypart_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
-    KParts__ReadOnlyPart_QBaseSetXMLFile((KParts__ReadOnlyPart*)self, qstring(file), merge, setXMLDoc);
+void k_parts__readonlypart_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
+    KParts__ReadOnlyPart_SuperSetXMLFile((KParts__ReadOnlyPart*)self, qstring(file), merge, setXMLDoc);
 }
 
 void k_parts__readonlypart_on_set_x_m_l_file(void* self, void (*callback)(void*, const char*, bool, bool)) {
@@ -895,8 +895,8 @@ void k_parts__readonlypart_set_local_x_m_l_file(void* self, const char* file) {
     KParts__ReadOnlyPart_SetLocalXMLFile((KParts__ReadOnlyPart*)self, qstring(file));
 }
 
-void k_parts__readonlypart_qbase_set_local_x_m_l_file(void* self, const char* file) {
-    KParts__ReadOnlyPart_QBaseSetLocalXMLFile((KParts__ReadOnlyPart*)self, qstring(file));
+void k_parts__readonlypart_super_set_local_x_m_l_file(void* self, const char* file) {
+    KParts__ReadOnlyPart_SuperSetLocalXMLFile((KParts__ReadOnlyPart*)self, qstring(file));
 }
 
 void k_parts__readonlypart_on_set_local_x_m_l_file(void* self, void (*callback)(void*, const char*)) {
@@ -907,8 +907,8 @@ void k_parts__readonlypart_set_x_m_l(void* self, const char* document, bool merg
     KParts__ReadOnlyPart_SetXML((KParts__ReadOnlyPart*)self, qstring(document), merge);
 }
 
-void k_parts__readonlypart_qbase_set_x_m_l(void* self, const char* document, bool merge) {
-    KParts__ReadOnlyPart_QBaseSetXML((KParts__ReadOnlyPart*)self, qstring(document), merge);
+void k_parts__readonlypart_super_set_x_m_l(void* self, const char* document, bool merge) {
+    KParts__ReadOnlyPart_SuperSetXML((KParts__ReadOnlyPart*)self, qstring(document), merge);
 }
 
 void k_parts__readonlypart_on_set_x_m_l(void* self, void (*callback)(void*, const char*, bool)) {
@@ -919,8 +919,8 @@ void k_parts__readonlypart_set_d_o_m_document(void* self, void* document, bool m
     KParts__ReadOnlyPart_SetDOMDocument((KParts__ReadOnlyPart*)self, (QDomDocument*)document, merge);
 }
 
-void k_parts__readonlypart_qbase_set_d_o_m_document(void* self, void* document, bool merge) {
-    KParts__ReadOnlyPart_QBaseSetDOMDocument((KParts__ReadOnlyPart*)self, (QDomDocument*)document, merge);
+void k_parts__readonlypart_super_set_d_o_m_document(void* self, void* document, bool merge) {
+    KParts__ReadOnlyPart_SuperSetDOMDocument((KParts__ReadOnlyPart*)self, (QDomDocument*)document, merge);
 }
 
 void k_parts__readonlypart_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool)) {
@@ -931,8 +931,8 @@ void k_parts__readonlypart_state_changed(void* self, const char* newstate, int32
     KParts__ReadOnlyPart_StateChanged((KParts__ReadOnlyPart*)self, qstring(newstate), reverse);
 }
 
-void k_parts__readonlypart_qbase_state_changed(void* self, const char* newstate, int32_t reverse) {
-    KParts__ReadOnlyPart_QBaseStateChanged((KParts__ReadOnlyPart*)self, qstring(newstate), reverse);
+void k_parts__readonlypart_super_state_changed(void* self, const char* newstate, int32_t reverse) {
+    KParts__ReadOnlyPart_SuperStateChanged((KParts__ReadOnlyPart*)self, qstring(newstate), reverse);
 }
 
 void k_parts__readonlypart_on_state_changed(void* self, void (*callback)(void*, const char*, int32_t)) {
@@ -943,8 +943,8 @@ QWidget* k_parts__readonlypart_host_container(void* self, const char* containerN
     return KParts__ReadOnlyPart_HostContainer((KParts__ReadOnlyPart*)self, qstring(containerName));
 }
 
-QWidget* k_parts__readonlypart_qbase_host_container(void* self, const char* containerName) {
-    return KParts__ReadOnlyPart_QBaseHostContainer((KParts__ReadOnlyPart*)self, qstring(containerName));
+QWidget* k_parts__readonlypart_super_host_container(void* self, const char* containerName) {
+    return KParts__ReadOnlyPart_SuperHostContainer((KParts__ReadOnlyPart*)self, qstring(containerName));
 }
 
 void k_parts__readonlypart_on_host_container(void* self, QWidget* (*callback)(void*, const char*)) {
@@ -955,8 +955,8 @@ void k_parts__readonlypart_slot_widget_destroyed(void* self) {
     KParts__ReadOnlyPart_SlotWidgetDestroyed((KParts__ReadOnlyPart*)self);
 }
 
-void k_parts__readonlypart_qbase_slot_widget_destroyed(void* self) {
-    KParts__ReadOnlyPart_QBaseSlotWidgetDestroyed((KParts__ReadOnlyPart*)self);
+void k_parts__readonlypart_super_slot_widget_destroyed(void* self) {
+    KParts__ReadOnlyPart_SuperSlotWidgetDestroyed((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_slot_widget_destroyed(void* self, void (*callback)()) {
@@ -967,8 +967,8 @@ QObject* k_parts__readonlypart_sender(void* self) {
     return KParts__ReadOnlyPart_Sender((KParts__ReadOnlyPart*)self);
 }
 
-QObject* k_parts__readonlypart_qbase_sender(void* self) {
-    return KParts__ReadOnlyPart_QBaseSender((KParts__ReadOnlyPart*)self);
+QObject* k_parts__readonlypart_super_sender(void* self) {
+    return KParts__ReadOnlyPart_SuperSender((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_sender(void* self, QObject* (*callback)()) {
@@ -979,8 +979,8 @@ int32_t k_parts__readonlypart_sender_signal_index(void* self) {
     return KParts__ReadOnlyPart_SenderSignalIndex((KParts__ReadOnlyPart*)self);
 }
 
-int32_t k_parts__readonlypart_qbase_sender_signal_index(void* self) {
-    return KParts__ReadOnlyPart_QBaseSenderSignalIndex((KParts__ReadOnlyPart*)self);
+int32_t k_parts__readonlypart_super_sender_signal_index(void* self) {
+    return KParts__ReadOnlyPart_SuperSenderSignalIndex((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -991,8 +991,8 @@ int32_t k_parts__readonlypart_receivers(void* self, const char* signal) {
     return KParts__ReadOnlyPart_Receivers((KParts__ReadOnlyPart*)self, signal);
 }
 
-int32_t k_parts__readonlypart_qbase_receivers(void* self, const char* signal) {
-    return KParts__ReadOnlyPart_QBaseReceivers((KParts__ReadOnlyPart*)self, signal);
+int32_t k_parts__readonlypart_super_receivers(void* self, const char* signal) {
+    return KParts__ReadOnlyPart_SuperReceivers((KParts__ReadOnlyPart*)self, signal);
 }
 
 void k_parts__readonlypart_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1003,8 +1003,8 @@ bool k_parts__readonlypart_is_signal_connected(void* self, void* signal) {
     return KParts__ReadOnlyPart_IsSignalConnected((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__readonlypart_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__ReadOnlyPart_QBaseIsSignalConnected((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
+bool k_parts__readonlypart_super_is_signal_connected(void* self, void* signal) {
+    return KParts__ReadOnlyPart_SuperIsSignalConnected((KParts__ReadOnlyPart*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__readonlypart_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -1018,8 +1018,8 @@ const char* k_parts__readonlypart_standards_xml_file_location(void* self) {
     return _ret;
 }
 
-const char* k_parts__readonlypart_qbase_standards_xml_file_location(void* self) {
-    libqt_string _str = KParts__ReadOnlyPart_QBaseStandardsXmlFileLocation((KParts__ReadOnlyPart*)self);
+const char* k_parts__readonlypart_super_standards_xml_file_location(void* self) {
+    libqt_string _str = KParts__ReadOnlyPart_SuperStandardsXmlFileLocation((KParts__ReadOnlyPart*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1033,8 +1033,8 @@ void k_parts__readonlypart_load_standards_xml_file(void* self) {
     KParts__ReadOnlyPart_LoadStandardsXmlFile((KParts__ReadOnlyPart*)self);
 }
 
-void k_parts__readonlypart_qbase_load_standards_xml_file(void* self) {
-    KParts__ReadOnlyPart_QBaseLoadStandardsXmlFile((KParts__ReadOnlyPart*)self);
+void k_parts__readonlypart_super_load_standards_xml_file(void* self) {
+    KParts__ReadOnlyPart_SuperLoadStandardsXmlFile((KParts__ReadOnlyPart*)self);
 }
 
 void k_parts__readonlypart_on_load_standards_xml_file(void* self, void (*callback)()) {

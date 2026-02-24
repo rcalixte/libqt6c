@@ -18,8 +18,8 @@ void k_sycoca_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KSycoca_OnMetaObject((KSycoca*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_sycoca_qbase_meta_object(void* self) {
-    return KSycoca_QBaseMetaObject((KSycoca*)self);
+const QMetaObject* k_sycoca_super_meta_object(void* self) {
+    return KSycoca_SuperMetaObject((KSycoca*)self);
 }
 
 void* k_sycoca_metacast(void* self, const char* param1) {
@@ -30,8 +30,8 @@ void k_sycoca_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KSycoca_OnMetacast((KSycoca*)self, (intptr_t)callback);
 }
 
-void* k_sycoca_qbase_metacast(void* self, const char* param1) {
-    return KSycoca_QBaseMetacast((KSycoca*)self, param1);
+void* k_sycoca_super_metacast(void* self, const char* param1) {
+    return KSycoca_SuperMetacast((KSycoca*)self, param1);
 }
 
 int32_t k_sycoca_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -42,8 +42,8 @@ void k_sycoca_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     KSycoca_OnMetacall((KSycoca*)self, (intptr_t)callback);
 }
 
-int32_t k_sycoca_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSycoca_QBaseMetacall((KSycoca*)self, param1, param2, param3);
+int32_t k_sycoca_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSycoca_SuperMetacall((KSycoca*)self, param1, param2, param3);
 }
 
 const char* k_sycoca_tr(const char* s) {
@@ -107,8 +107,8 @@ void k_sycoca_on_is_building(void* self, bool (*callback)()) {
     KSycoca_OnIsBuilding((KSycoca*)self, (intptr_t)callback);
 }
 
-bool k_sycoca_qbase_is_building(void* self) {
-    return KSycoca_QBaseIsBuilding((KSycoca*)self);
+bool k_sycoca_super_is_building(void* self) {
+    return KSycoca_SuperIsBuilding((KSycoca*)self);
 }
 
 void k_sycoca_disable_auto_rebuild() {
@@ -139,8 +139,8 @@ void k_sycoca_on_connect_notify(void* self, void (*callback)(void*, void*)) {
     KSycoca_OnConnectNotify((KSycoca*)self, (intptr_t)callback);
 }
 
-void k_sycoca_qbase_connect_notify(void* self, void* signal) {
-    KSycoca_QBaseConnectNotify((KSycoca*)self, (QMetaMethod*)signal);
+void k_sycoca_super_connect_notify(void* self, void* signal) {
+    KSycoca_SuperConnectNotify((KSycoca*)self, (QMetaMethod*)signal);
 }
 
 const char* k_sycoca_tr2(const char* s, const char* c) {
@@ -372,8 +372,8 @@ bool k_sycoca_event(void* self, void* event) {
     return KSycoca_Event((KSycoca*)self, (QEvent*)event);
 }
 
-bool k_sycoca_qbase_event(void* self, void* event) {
-    return KSycoca_QBaseEvent((KSycoca*)self, (QEvent*)event);
+bool k_sycoca_super_event(void* self, void* event) {
+    return KSycoca_SuperEvent((KSycoca*)self, (QEvent*)event);
 }
 
 void k_sycoca_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -384,8 +384,8 @@ bool k_sycoca_event_filter(void* self, void* watched, void* event) {
     return KSycoca_EventFilter((KSycoca*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_sycoca_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSycoca_QBaseEventFilter((KSycoca*)self, (QObject*)watched, (QEvent*)event);
+bool k_sycoca_super_event_filter(void* self, void* watched, void* event) {
+    return KSycoca_SuperEventFilter((KSycoca*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_sycoca_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -396,8 +396,8 @@ void k_sycoca_timer_event(void* self, void* event) {
     KSycoca_TimerEvent((KSycoca*)self, (QTimerEvent*)event);
 }
 
-void k_sycoca_qbase_timer_event(void* self, void* event) {
-    KSycoca_QBaseTimerEvent((KSycoca*)self, (QTimerEvent*)event);
+void k_sycoca_super_timer_event(void* self, void* event) {
+    KSycoca_SuperTimerEvent((KSycoca*)self, (QTimerEvent*)event);
 }
 
 void k_sycoca_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -408,8 +408,8 @@ void k_sycoca_child_event(void* self, void* event) {
     KSycoca_ChildEvent((KSycoca*)self, (QChildEvent*)event);
 }
 
-void k_sycoca_qbase_child_event(void* self, void* event) {
-    KSycoca_QBaseChildEvent((KSycoca*)self, (QChildEvent*)event);
+void k_sycoca_super_child_event(void* self, void* event) {
+    KSycoca_SuperChildEvent((KSycoca*)self, (QChildEvent*)event);
 }
 
 void k_sycoca_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ void k_sycoca_custom_event(void* self, void* event) {
     KSycoca_CustomEvent((KSycoca*)self, (QEvent*)event);
 }
 
-void k_sycoca_qbase_custom_event(void* self, void* event) {
-    KSycoca_QBaseCustomEvent((KSycoca*)self, (QEvent*)event);
+void k_sycoca_super_custom_event(void* self, void* event) {
+    KSycoca_SuperCustomEvent((KSycoca*)self, (QEvent*)event);
 }
 
 void k_sycoca_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -432,8 +432,8 @@ void k_sycoca_disconnect_notify(void* self, void* signal) {
     KSycoca_DisconnectNotify((KSycoca*)self, (QMetaMethod*)signal);
 }
 
-void k_sycoca_qbase_disconnect_notify(void* self, void* signal) {
-    KSycoca_QBaseDisconnectNotify((KSycoca*)self, (QMetaMethod*)signal);
+void k_sycoca_super_disconnect_notify(void* self, void* signal) {
+    KSycoca_SuperDisconnectNotify((KSycoca*)self, (QMetaMethod*)signal);
 }
 
 void k_sycoca_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -444,8 +444,8 @@ QObject* k_sycoca_sender(void* self) {
     return KSycoca_Sender((KSycoca*)self);
 }
 
-QObject* k_sycoca_qbase_sender(void* self) {
-    return KSycoca_QBaseSender((KSycoca*)self);
+QObject* k_sycoca_super_sender(void* self) {
+    return KSycoca_SuperSender((KSycoca*)self);
 }
 
 void k_sycoca_on_sender(void* self, QObject* (*callback)()) {
@@ -456,8 +456,8 @@ int32_t k_sycoca_sender_signal_index(void* self) {
     return KSycoca_SenderSignalIndex((KSycoca*)self);
 }
 
-int32_t k_sycoca_qbase_sender_signal_index(void* self) {
-    return KSycoca_QBaseSenderSignalIndex((KSycoca*)self);
+int32_t k_sycoca_super_sender_signal_index(void* self) {
+    return KSycoca_SuperSenderSignalIndex((KSycoca*)self);
 }
 
 void k_sycoca_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -468,8 +468,8 @@ int32_t k_sycoca_receivers(void* self, const char* signal) {
     return KSycoca_Receivers((KSycoca*)self, signal);
 }
 
-int32_t k_sycoca_qbase_receivers(void* self, const char* signal) {
-    return KSycoca_QBaseReceivers((KSycoca*)self, signal);
+int32_t k_sycoca_super_receivers(void* self, const char* signal) {
+    return KSycoca_SuperReceivers((KSycoca*)self, signal);
 }
 
 void k_sycoca_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -480,8 +480,8 @@ bool k_sycoca_is_signal_connected(void* self, void* signal) {
     return KSycoca_IsSignalConnected((KSycoca*)self, (QMetaMethod*)signal);
 }
 
-bool k_sycoca_qbase_is_signal_connected(void* self, void* signal) {
-    return KSycoca_QBaseIsSignalConnected((KSycoca*)self, (QMetaMethod*)signal);
+bool k_sycoca_super_is_signal_connected(void* self, void* signal) {
+    return KSycoca_SuperIsSignalConnected((KSycoca*)self, (QMetaMethod*)signal);
 }
 
 void k_sycoca_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

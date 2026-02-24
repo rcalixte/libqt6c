@@ -47,8 +47,8 @@ void k_urlcombobox_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     KUrlComboBox_OnMetaObject((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_urlcombobox_qbase_meta_object(void* self) {
-    return KUrlComboBox_QBaseMetaObject((KUrlComboBox*)self);
+const QMetaObject* k_urlcombobox_super_meta_object(void* self) {
+    return KUrlComboBox_SuperMetaObject((KUrlComboBox*)self);
 }
 
 void* k_urlcombobox_metacast(void* self, const char* param1) {
@@ -59,8 +59,8 @@ void k_urlcombobox_on_metacast(void* self, void* (*callback)(void*, const char*)
     KUrlComboBox_OnMetacast((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-void* k_urlcombobox_qbase_metacast(void* self, const char* param1) {
-    return KUrlComboBox_QBaseMetacast((KUrlComboBox*)self, param1);
+void* k_urlcombobox_super_metacast(void* self, const char* param1) {
+    return KUrlComboBox_SuperMetacast((KUrlComboBox*)self, param1);
 }
 
 int32_t k_urlcombobox_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -71,8 +71,8 @@ void k_urlcombobox_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     KUrlComboBox_OnMetacall((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-int32_t k_urlcombobox_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUrlComboBox_QBaseMetacall((KUrlComboBox*)self, param1, param2, param3);
+int32_t k_urlcombobox_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KUrlComboBox_SuperMetacall((KUrlComboBox*)self, param1, param2, param3);
 }
 
 const char* k_urlcombobox_tr(const char* s) {
@@ -167,8 +167,8 @@ void k_urlcombobox_on_set_completion_object(void* self, void (*callback)(void*, 
     KUrlComboBox_OnSetCompletionObject((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-void k_urlcombobox_qbase_set_completion_object(void* self, void* compObj, bool hsig) {
-    KUrlComboBox_QBaseSetCompletionObject((KUrlComboBox*)self, (KCompletion*)compObj, hsig);
+void k_urlcombobox_super_set_completion_object(void* self, void* compObj, bool hsig) {
+    KUrlComboBox_SuperSetCompletionObject((KUrlComboBox*)self, (KCompletion*)compObj, hsig);
 }
 
 void k_urlcombobox_url_activated(void* self, void* url) {
@@ -187,8 +187,8 @@ void k_urlcombobox_on_mouse_press_event(void* self, void (*callback)(void*, void
     KUrlComboBox_OnMousePressEvent((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-void k_urlcombobox_qbase_mouse_press_event(void* self, void* event) {
-    KUrlComboBox_QBaseMousePressEvent((KUrlComboBox*)self, (QMouseEvent*)event);
+void k_urlcombobox_super_mouse_press_event(void* self, void* event) {
+    KUrlComboBox_SuperMousePressEvent((KUrlComboBox*)self, (QMouseEvent*)event);
 }
 
 void k_urlcombobox_mouse_move_event(void* self, void* event) {
@@ -199,8 +199,8 @@ void k_urlcombobox_on_mouse_move_event(void* self, void (*callback)(void*, void*
     KUrlComboBox_OnMouseMoveEvent((KUrlComboBox*)self, (intptr_t)callback);
 }
 
-void k_urlcombobox_qbase_mouse_move_event(void* self, void* event) {
-    KUrlComboBox_QBaseMouseMoveEvent((KUrlComboBox*)self, (QMouseEvent*)event);
+void k_urlcombobox_super_mouse_move_event(void* self, void* event) {
+    KUrlComboBox_SuperMouseMoveEvent((KUrlComboBox*)self, (QMouseEvent*)event);
 }
 
 const char* k_urlcombobox_tr2(const char* s, const char* c) {
@@ -2162,8 +2162,8 @@ void k_urlcombobox_set_auto_completion(void* self, bool autocomplete) {
     KUrlComboBox_SetAutoCompletion((KUrlComboBox*)self, autocomplete);
 }
 
-void k_urlcombobox_qbase_set_auto_completion(void* self, bool autocomplete) {
-    KUrlComboBox_QBaseSetAutoCompletion((KUrlComboBox*)self, autocomplete);
+void k_urlcombobox_super_set_auto_completion(void* self, bool autocomplete) {
+    KUrlComboBox_SuperSetAutoCompletion((KUrlComboBox*)self, autocomplete);
 }
 
 void k_urlcombobox_on_set_auto_completion(void* self, void (*callback)(void*, bool)) {
@@ -2174,8 +2174,8 @@ void k_urlcombobox_set_line_edit(void* self, void* lineEdit) {
     KUrlComboBox_SetLineEdit((KUrlComboBox*)self, (QLineEdit*)lineEdit);
 }
 
-void k_urlcombobox_qbase_set_line_edit(void* self, void* lineEdit) {
-    KUrlComboBox_QBaseSetLineEdit((KUrlComboBox*)self, (QLineEdit*)lineEdit);
+void k_urlcombobox_super_set_line_edit(void* self, void* lineEdit) {
+    KUrlComboBox_SuperSetLineEdit((KUrlComboBox*)self, (QLineEdit*)lineEdit);
 }
 
 void k_urlcombobox_on_set_line_edit(void* self, void (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ QSize* k_urlcombobox_minimum_size_hint(void* self) {
     return KUrlComboBox_MinimumSizeHint((KUrlComboBox*)self);
 }
 
-QSize* k_urlcombobox_qbase_minimum_size_hint(void* self) {
-    return KUrlComboBox_QBaseMinimumSizeHint((KUrlComboBox*)self);
+QSize* k_urlcombobox_super_minimum_size_hint(void* self) {
+    return KUrlComboBox_SuperMinimumSizeHint((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2198,8 +2198,8 @@ void k_urlcombobox_set_completed_text(void* self, const char* completedText) {
     KUrlComboBox_SetCompletedText((KUrlComboBox*)self, qstring(completedText));
 }
 
-void k_urlcombobox_qbase_set_completed_text(void* self, const char* completedText) {
-    KUrlComboBox_QBaseSetCompletedText((KUrlComboBox*)self, qstring(completedText));
+void k_urlcombobox_super_set_completed_text(void* self, const char* completedText) {
+    KUrlComboBox_SuperSetCompletedText((KUrlComboBox*)self, qstring(completedText));
 }
 
 void k_urlcombobox_on_set_completed_text(void* self, void (*callback)(void*, const char*)) {
@@ -2221,7 +2221,7 @@ void k_urlcombobox_set_completed_items(void* self, const char* items[static 1], 
     free(items_qstr);
 }
 
-void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
+void k_urlcombobox_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest) {
     size_t items_len = libqt_strv_length(items);
     libqt_string* items_qstr = (libqt_string*)malloc(items_len * sizeof(libqt_string));
     if (items_qstr == NULL) {
@@ -2232,7 +2232,7 @@ void k_urlcombobox_qbase_set_completed_items(void* self, const char* items[stati
         items_qstr[i] = qstring(items[i]);
     }
     libqt_list items_list = qlist(items_qstr, items_len);
-    KUrlComboBox_QBaseSetCompletedItems((KUrlComboBox*)self, items_list, autoSuggest);
+    KUrlComboBox_SuperSetCompletedItems((KUrlComboBox*)self, items_list, autoSuggest);
     free(items_qstr);
 }
 
@@ -2244,8 +2244,8 @@ void k_urlcombobox_make_completion(void* self, const char* param1) {
     KUrlComboBox_MakeCompletion((KUrlComboBox*)self, qstring(param1));
 }
 
-void k_urlcombobox_qbase_make_completion(void* self, const char* param1) {
-    KUrlComboBox_QBaseMakeCompletion((KUrlComboBox*)self, qstring(param1));
+void k_urlcombobox_super_make_completion(void* self, const char* param1) {
+    KUrlComboBox_SuperMakeCompletion((KUrlComboBox*)self, qstring(param1));
 }
 
 void k_urlcombobox_on_make_completion(void* self, void (*callback)(void*, const char*)) {
@@ -2256,8 +2256,8 @@ void k_urlcombobox_set_model(void* self, void* model) {
     KUrlComboBox_SetModel((KUrlComboBox*)self, (QAbstractItemModel*)model);
 }
 
-void k_urlcombobox_qbase_set_model(void* self, void* model) {
-    KUrlComboBox_QBaseSetModel((KUrlComboBox*)self, (QAbstractItemModel*)model);
+void k_urlcombobox_super_set_model(void* self, void* model) {
+    KUrlComboBox_SuperSetModel((KUrlComboBox*)self, (QAbstractItemModel*)model);
 }
 
 void k_urlcombobox_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -2268,8 +2268,8 @@ QSize* k_urlcombobox_size_hint(void* self) {
     return KUrlComboBox_SizeHint((KUrlComboBox*)self);
 }
 
-QSize* k_urlcombobox_qbase_size_hint(void* self) {
-    return KUrlComboBox_QBaseSizeHint((KUrlComboBox*)self);
+QSize* k_urlcombobox_super_size_hint(void* self) {
+    return KUrlComboBox_SuperSizeHint((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2280,8 +2280,8 @@ void k_urlcombobox_show_popup(void* self) {
     KUrlComboBox_ShowPopup((KUrlComboBox*)self);
 }
 
-void k_urlcombobox_qbase_show_popup(void* self) {
-    KUrlComboBox_QBaseShowPopup((KUrlComboBox*)self);
+void k_urlcombobox_super_show_popup(void* self) {
+    KUrlComboBox_SuperShowPopup((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_show_popup(void* self, void (*callback)()) {
@@ -2292,8 +2292,8 @@ void k_urlcombobox_hide_popup(void* self) {
     KUrlComboBox_HidePopup((KUrlComboBox*)self);
 }
 
-void k_urlcombobox_qbase_hide_popup(void* self) {
-    KUrlComboBox_QBaseHidePopup((KUrlComboBox*)self);
+void k_urlcombobox_super_hide_popup(void* self) {
+    KUrlComboBox_SuperHidePopup((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_hide_popup(void* self, void (*callback)()) {
@@ -2304,8 +2304,8 @@ bool k_urlcombobox_event(void* self, void* event) {
     return KUrlComboBox_Event((KUrlComboBox*)self, (QEvent*)event);
 }
 
-bool k_urlcombobox_qbase_event(void* self, void* event) {
-    return KUrlComboBox_QBaseEvent((KUrlComboBox*)self, (QEvent*)event);
+bool k_urlcombobox_super_event(void* self, void* event) {
+    return KUrlComboBox_SuperEvent((KUrlComboBox*)self, (QEvent*)event);
 }
 
 void k_urlcombobox_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2316,8 +2316,8 @@ QVariant* k_urlcombobox_input_method_query(void* self, int32_t param1) {
     return KUrlComboBox_InputMethodQuery((KUrlComboBox*)self, param1);
 }
 
-QVariant* k_urlcombobox_qbase_input_method_query(void* self, int32_t param1) {
-    return KUrlComboBox_QBaseInputMethodQuery((KUrlComboBox*)self, param1);
+QVariant* k_urlcombobox_super_input_method_query(void* self, int32_t param1) {
+    return KUrlComboBox_SuperInputMethodQuery((KUrlComboBox*)self, param1);
 }
 
 void k_urlcombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2328,8 +2328,8 @@ void k_urlcombobox_focus_in_event(void* self, void* e) {
     KUrlComboBox_FocusInEvent((KUrlComboBox*)self, (QFocusEvent*)e);
 }
 
-void k_urlcombobox_qbase_focus_in_event(void* self, void* e) {
-    KUrlComboBox_QBaseFocusInEvent((KUrlComboBox*)self, (QFocusEvent*)e);
+void k_urlcombobox_super_focus_in_event(void* self, void* e) {
+    KUrlComboBox_SuperFocusInEvent((KUrlComboBox*)self, (QFocusEvent*)e);
 }
 
 void k_urlcombobox_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2340,8 +2340,8 @@ void k_urlcombobox_focus_out_event(void* self, void* e) {
     KUrlComboBox_FocusOutEvent((KUrlComboBox*)self, (QFocusEvent*)e);
 }
 
-void k_urlcombobox_qbase_focus_out_event(void* self, void* e) {
-    KUrlComboBox_QBaseFocusOutEvent((KUrlComboBox*)self, (QFocusEvent*)e);
+void k_urlcombobox_super_focus_out_event(void* self, void* e) {
+    KUrlComboBox_SuperFocusOutEvent((KUrlComboBox*)self, (QFocusEvent*)e);
 }
 
 void k_urlcombobox_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2352,8 +2352,8 @@ void k_urlcombobox_change_event(void* self, void* e) {
     KUrlComboBox_ChangeEvent((KUrlComboBox*)self, (QEvent*)e);
 }
 
-void k_urlcombobox_qbase_change_event(void* self, void* e) {
-    KUrlComboBox_QBaseChangeEvent((KUrlComboBox*)self, (QEvent*)e);
+void k_urlcombobox_super_change_event(void* self, void* e) {
+    KUrlComboBox_SuperChangeEvent((KUrlComboBox*)self, (QEvent*)e);
 }
 
 void k_urlcombobox_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2364,8 +2364,8 @@ void k_urlcombobox_resize_event(void* self, void* e) {
     KUrlComboBox_ResizeEvent((KUrlComboBox*)self, (QResizeEvent*)e);
 }
 
-void k_urlcombobox_qbase_resize_event(void* self, void* e) {
-    KUrlComboBox_QBaseResizeEvent((KUrlComboBox*)self, (QResizeEvent*)e);
+void k_urlcombobox_super_resize_event(void* self, void* e) {
+    KUrlComboBox_SuperResizeEvent((KUrlComboBox*)self, (QResizeEvent*)e);
 }
 
 void k_urlcombobox_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2376,8 +2376,8 @@ void k_urlcombobox_paint_event(void* self, void* e) {
     KUrlComboBox_PaintEvent((KUrlComboBox*)self, (QPaintEvent*)e);
 }
 
-void k_urlcombobox_qbase_paint_event(void* self, void* e) {
-    KUrlComboBox_QBasePaintEvent((KUrlComboBox*)self, (QPaintEvent*)e);
+void k_urlcombobox_super_paint_event(void* self, void* e) {
+    KUrlComboBox_SuperPaintEvent((KUrlComboBox*)self, (QPaintEvent*)e);
 }
 
 void k_urlcombobox_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2388,8 +2388,8 @@ void k_urlcombobox_show_event(void* self, void* e) {
     KUrlComboBox_ShowEvent((KUrlComboBox*)self, (QShowEvent*)e);
 }
 
-void k_urlcombobox_qbase_show_event(void* self, void* e) {
-    KUrlComboBox_QBaseShowEvent((KUrlComboBox*)self, (QShowEvent*)e);
+void k_urlcombobox_super_show_event(void* self, void* e) {
+    KUrlComboBox_SuperShowEvent((KUrlComboBox*)self, (QShowEvent*)e);
 }
 
 void k_urlcombobox_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2400,8 +2400,8 @@ void k_urlcombobox_hide_event(void* self, void* e) {
     KUrlComboBox_HideEvent((KUrlComboBox*)self, (QHideEvent*)e);
 }
 
-void k_urlcombobox_qbase_hide_event(void* self, void* e) {
-    KUrlComboBox_QBaseHideEvent((KUrlComboBox*)self, (QHideEvent*)e);
+void k_urlcombobox_super_hide_event(void* self, void* e) {
+    KUrlComboBox_SuperHideEvent((KUrlComboBox*)self, (QHideEvent*)e);
 }
 
 void k_urlcombobox_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2412,8 +2412,8 @@ void k_urlcombobox_mouse_release_event(void* self, void* e) {
     KUrlComboBox_MouseReleaseEvent((KUrlComboBox*)self, (QMouseEvent*)e);
 }
 
-void k_urlcombobox_qbase_mouse_release_event(void* self, void* e) {
-    KUrlComboBox_QBaseMouseReleaseEvent((KUrlComboBox*)self, (QMouseEvent*)e);
+void k_urlcombobox_super_mouse_release_event(void* self, void* e) {
+    KUrlComboBox_SuperMouseReleaseEvent((KUrlComboBox*)self, (QMouseEvent*)e);
 }
 
 void k_urlcombobox_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2424,8 +2424,8 @@ void k_urlcombobox_key_press_event(void* self, void* e) {
     KUrlComboBox_KeyPressEvent((KUrlComboBox*)self, (QKeyEvent*)e);
 }
 
-void k_urlcombobox_qbase_key_press_event(void* self, void* e) {
-    KUrlComboBox_QBaseKeyPressEvent((KUrlComboBox*)self, (QKeyEvent*)e);
+void k_urlcombobox_super_key_press_event(void* self, void* e) {
+    KUrlComboBox_SuperKeyPressEvent((KUrlComboBox*)self, (QKeyEvent*)e);
 }
 
 void k_urlcombobox_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2436,8 +2436,8 @@ void k_urlcombobox_key_release_event(void* self, void* e) {
     KUrlComboBox_KeyReleaseEvent((KUrlComboBox*)self, (QKeyEvent*)e);
 }
 
-void k_urlcombobox_qbase_key_release_event(void* self, void* e) {
-    KUrlComboBox_QBaseKeyReleaseEvent((KUrlComboBox*)self, (QKeyEvent*)e);
+void k_urlcombobox_super_key_release_event(void* self, void* e) {
+    KUrlComboBox_SuperKeyReleaseEvent((KUrlComboBox*)self, (QKeyEvent*)e);
 }
 
 void k_urlcombobox_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2448,8 +2448,8 @@ void k_urlcombobox_wheel_event(void* self, void* e) {
     KUrlComboBox_WheelEvent((KUrlComboBox*)self, (QWheelEvent*)e);
 }
 
-void k_urlcombobox_qbase_wheel_event(void* self, void* e) {
-    KUrlComboBox_QBaseWheelEvent((KUrlComboBox*)self, (QWheelEvent*)e);
+void k_urlcombobox_super_wheel_event(void* self, void* e) {
+    KUrlComboBox_SuperWheelEvent((KUrlComboBox*)self, (QWheelEvent*)e);
 }
 
 void k_urlcombobox_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2460,8 +2460,8 @@ void k_urlcombobox_context_menu_event(void* self, void* e) {
     KUrlComboBox_ContextMenuEvent((KUrlComboBox*)self, (QContextMenuEvent*)e);
 }
 
-void k_urlcombobox_qbase_context_menu_event(void* self, void* e) {
-    KUrlComboBox_QBaseContextMenuEvent((KUrlComboBox*)self, (QContextMenuEvent*)e);
+void k_urlcombobox_super_context_menu_event(void* self, void* e) {
+    KUrlComboBox_SuperContextMenuEvent((KUrlComboBox*)self, (QContextMenuEvent*)e);
 }
 
 void k_urlcombobox_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2472,8 +2472,8 @@ void k_urlcombobox_input_method_event(void* self, void* param1) {
     KUrlComboBox_InputMethodEvent((KUrlComboBox*)self, (QInputMethodEvent*)param1);
 }
 
-void k_urlcombobox_qbase_input_method_event(void* self, void* param1) {
-    KUrlComboBox_QBaseInputMethodEvent((KUrlComboBox*)self, (QInputMethodEvent*)param1);
+void k_urlcombobox_super_input_method_event(void* self, void* param1) {
+    KUrlComboBox_SuperInputMethodEvent((KUrlComboBox*)self, (QInputMethodEvent*)param1);
 }
 
 void k_urlcombobox_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2484,8 +2484,8 @@ void k_urlcombobox_init_style_option(void* self, void* option) {
     KUrlComboBox_InitStyleOption((KUrlComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
-void k_urlcombobox_qbase_init_style_option(void* self, void* option) {
-    KUrlComboBox_QBaseInitStyleOption((KUrlComboBox*)self, (QStyleOptionComboBox*)option);
+void k_urlcombobox_super_init_style_option(void* self, void* option) {
+    KUrlComboBox_SuperInitStyleOption((KUrlComboBox*)self, (QStyleOptionComboBox*)option);
 }
 
 void k_urlcombobox_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2496,8 +2496,8 @@ int32_t k_urlcombobox_dev_type(void* self) {
     return KUrlComboBox_DevType((KUrlComboBox*)self);
 }
 
-int32_t k_urlcombobox_qbase_dev_type(void* self) {
-    return KUrlComboBox_QBaseDevType((KUrlComboBox*)self);
+int32_t k_urlcombobox_super_dev_type(void* self) {
+    return KUrlComboBox_SuperDevType((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2508,8 +2508,8 @@ void k_urlcombobox_set_visible(void* self, bool visible) {
     KUrlComboBox_SetVisible((KUrlComboBox*)self, visible);
 }
 
-void k_urlcombobox_qbase_set_visible(void* self, bool visible) {
-    KUrlComboBox_QBaseSetVisible((KUrlComboBox*)self, visible);
+void k_urlcombobox_super_set_visible(void* self, bool visible) {
+    KUrlComboBox_SuperSetVisible((KUrlComboBox*)self, visible);
 }
 
 void k_urlcombobox_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2520,8 +2520,8 @@ int32_t k_urlcombobox_height_for_width(void* self, int param1) {
     return KUrlComboBox_HeightForWidth((KUrlComboBox*)self, param1);
 }
 
-int32_t k_urlcombobox_qbase_height_for_width(void* self, int param1) {
-    return KUrlComboBox_QBaseHeightForWidth((KUrlComboBox*)self, param1);
+int32_t k_urlcombobox_super_height_for_width(void* self, int param1) {
+    return KUrlComboBox_SuperHeightForWidth((KUrlComboBox*)self, param1);
 }
 
 void k_urlcombobox_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2532,8 +2532,8 @@ bool k_urlcombobox_has_height_for_width(void* self) {
     return KUrlComboBox_HasHeightForWidth((KUrlComboBox*)self);
 }
 
-bool k_urlcombobox_qbase_has_height_for_width(void* self) {
-    return KUrlComboBox_QBaseHasHeightForWidth((KUrlComboBox*)self);
+bool k_urlcombobox_super_has_height_for_width(void* self) {
+    return KUrlComboBox_SuperHasHeightForWidth((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2544,8 +2544,8 @@ QPaintEngine* k_urlcombobox_paint_engine(void* self) {
     return KUrlComboBox_PaintEngine((KUrlComboBox*)self);
 }
 
-QPaintEngine* k_urlcombobox_qbase_paint_engine(void* self) {
-    return KUrlComboBox_QBasePaintEngine((KUrlComboBox*)self);
+QPaintEngine* k_urlcombobox_super_paint_engine(void* self) {
+    return KUrlComboBox_SuperPaintEngine((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2556,8 +2556,8 @@ void k_urlcombobox_mouse_double_click_event(void* self, void* event) {
     KUrlComboBox_MouseDoubleClickEvent((KUrlComboBox*)self, (QMouseEvent*)event);
 }
 
-void k_urlcombobox_qbase_mouse_double_click_event(void* self, void* event) {
-    KUrlComboBox_QBaseMouseDoubleClickEvent((KUrlComboBox*)self, (QMouseEvent*)event);
+void k_urlcombobox_super_mouse_double_click_event(void* self, void* event) {
+    KUrlComboBox_SuperMouseDoubleClickEvent((KUrlComboBox*)self, (QMouseEvent*)event);
 }
 
 void k_urlcombobox_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2568,8 +2568,8 @@ void k_urlcombobox_enter_event(void* self, void* event) {
     KUrlComboBox_EnterEvent((KUrlComboBox*)self, (QEnterEvent*)event);
 }
 
-void k_urlcombobox_qbase_enter_event(void* self, void* event) {
-    KUrlComboBox_QBaseEnterEvent((KUrlComboBox*)self, (QEnterEvent*)event);
+void k_urlcombobox_super_enter_event(void* self, void* event) {
+    KUrlComboBox_SuperEnterEvent((KUrlComboBox*)self, (QEnterEvent*)event);
 }
 
 void k_urlcombobox_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2580,8 +2580,8 @@ void k_urlcombobox_leave_event(void* self, void* event) {
     KUrlComboBox_LeaveEvent((KUrlComboBox*)self, (QEvent*)event);
 }
 
-void k_urlcombobox_qbase_leave_event(void* self, void* event) {
-    KUrlComboBox_QBaseLeaveEvent((KUrlComboBox*)self, (QEvent*)event);
+void k_urlcombobox_super_leave_event(void* self, void* event) {
+    KUrlComboBox_SuperLeaveEvent((KUrlComboBox*)self, (QEvent*)event);
 }
 
 void k_urlcombobox_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2592,8 +2592,8 @@ void k_urlcombobox_move_event(void* self, void* event) {
     KUrlComboBox_MoveEvent((KUrlComboBox*)self, (QMoveEvent*)event);
 }
 
-void k_urlcombobox_qbase_move_event(void* self, void* event) {
-    KUrlComboBox_QBaseMoveEvent((KUrlComboBox*)self, (QMoveEvent*)event);
+void k_urlcombobox_super_move_event(void* self, void* event) {
+    KUrlComboBox_SuperMoveEvent((KUrlComboBox*)self, (QMoveEvent*)event);
 }
 
 void k_urlcombobox_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2604,8 +2604,8 @@ void k_urlcombobox_close_event(void* self, void* event) {
     KUrlComboBox_CloseEvent((KUrlComboBox*)self, (QCloseEvent*)event);
 }
 
-void k_urlcombobox_qbase_close_event(void* self, void* event) {
-    KUrlComboBox_QBaseCloseEvent((KUrlComboBox*)self, (QCloseEvent*)event);
+void k_urlcombobox_super_close_event(void* self, void* event) {
+    KUrlComboBox_SuperCloseEvent((KUrlComboBox*)self, (QCloseEvent*)event);
 }
 
 void k_urlcombobox_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2616,8 +2616,8 @@ void k_urlcombobox_tablet_event(void* self, void* event) {
     KUrlComboBox_TabletEvent((KUrlComboBox*)self, (QTabletEvent*)event);
 }
 
-void k_urlcombobox_qbase_tablet_event(void* self, void* event) {
-    KUrlComboBox_QBaseTabletEvent((KUrlComboBox*)self, (QTabletEvent*)event);
+void k_urlcombobox_super_tablet_event(void* self, void* event) {
+    KUrlComboBox_SuperTabletEvent((KUrlComboBox*)self, (QTabletEvent*)event);
 }
 
 void k_urlcombobox_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2628,8 +2628,8 @@ void k_urlcombobox_action_event(void* self, void* event) {
     KUrlComboBox_ActionEvent((KUrlComboBox*)self, (QActionEvent*)event);
 }
 
-void k_urlcombobox_qbase_action_event(void* self, void* event) {
-    KUrlComboBox_QBaseActionEvent((KUrlComboBox*)self, (QActionEvent*)event);
+void k_urlcombobox_super_action_event(void* self, void* event) {
+    KUrlComboBox_SuperActionEvent((KUrlComboBox*)self, (QActionEvent*)event);
 }
 
 void k_urlcombobox_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2640,8 +2640,8 @@ void k_urlcombobox_drag_enter_event(void* self, void* event) {
     KUrlComboBox_DragEnterEvent((KUrlComboBox*)self, (QDragEnterEvent*)event);
 }
 
-void k_urlcombobox_qbase_drag_enter_event(void* self, void* event) {
-    KUrlComboBox_QBaseDragEnterEvent((KUrlComboBox*)self, (QDragEnterEvent*)event);
+void k_urlcombobox_super_drag_enter_event(void* self, void* event) {
+    KUrlComboBox_SuperDragEnterEvent((KUrlComboBox*)self, (QDragEnterEvent*)event);
 }
 
 void k_urlcombobox_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2652,8 +2652,8 @@ void k_urlcombobox_drag_move_event(void* self, void* event) {
     KUrlComboBox_DragMoveEvent((KUrlComboBox*)self, (QDragMoveEvent*)event);
 }
 
-void k_urlcombobox_qbase_drag_move_event(void* self, void* event) {
-    KUrlComboBox_QBaseDragMoveEvent((KUrlComboBox*)self, (QDragMoveEvent*)event);
+void k_urlcombobox_super_drag_move_event(void* self, void* event) {
+    KUrlComboBox_SuperDragMoveEvent((KUrlComboBox*)self, (QDragMoveEvent*)event);
 }
 
 void k_urlcombobox_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2664,8 +2664,8 @@ void k_urlcombobox_drag_leave_event(void* self, void* event) {
     KUrlComboBox_DragLeaveEvent((KUrlComboBox*)self, (QDragLeaveEvent*)event);
 }
 
-void k_urlcombobox_qbase_drag_leave_event(void* self, void* event) {
-    KUrlComboBox_QBaseDragLeaveEvent((KUrlComboBox*)self, (QDragLeaveEvent*)event);
+void k_urlcombobox_super_drag_leave_event(void* self, void* event) {
+    KUrlComboBox_SuperDragLeaveEvent((KUrlComboBox*)self, (QDragLeaveEvent*)event);
 }
 
 void k_urlcombobox_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2676,8 +2676,8 @@ void k_urlcombobox_drop_event(void* self, void* event) {
     KUrlComboBox_DropEvent((KUrlComboBox*)self, (QDropEvent*)event);
 }
 
-void k_urlcombobox_qbase_drop_event(void* self, void* event) {
-    KUrlComboBox_QBaseDropEvent((KUrlComboBox*)self, (QDropEvent*)event);
+void k_urlcombobox_super_drop_event(void* self, void* event) {
+    KUrlComboBox_SuperDropEvent((KUrlComboBox*)self, (QDropEvent*)event);
 }
 
 void k_urlcombobox_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2688,8 +2688,8 @@ bool k_urlcombobox_native_event(void* self, char* eventType, void* message, intp
     return KUrlComboBox_NativeEvent((KUrlComboBox*)self, qstring(eventType), message, result);
 }
 
-bool k_urlcombobox_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KUrlComboBox_QBaseNativeEvent((KUrlComboBox*)self, qstring(eventType), message, result);
+bool k_urlcombobox_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KUrlComboBox_SuperNativeEvent((KUrlComboBox*)self, qstring(eventType), message, result);
 }
 
 void k_urlcombobox_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2700,8 +2700,8 @@ int32_t k_urlcombobox_metric(void* self, int32_t param1) {
     return KUrlComboBox_Metric((KUrlComboBox*)self, param1);
 }
 
-int32_t k_urlcombobox_qbase_metric(void* self, int32_t param1) {
-    return KUrlComboBox_QBaseMetric((KUrlComboBox*)self, param1);
+int32_t k_urlcombobox_super_metric(void* self, int32_t param1) {
+    return KUrlComboBox_SuperMetric((KUrlComboBox*)self, param1);
 }
 
 void k_urlcombobox_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2712,8 +2712,8 @@ void k_urlcombobox_init_painter(void* self, void* painter) {
     KUrlComboBox_InitPainter((KUrlComboBox*)self, (QPainter*)painter);
 }
 
-void k_urlcombobox_qbase_init_painter(void* self, void* painter) {
-    KUrlComboBox_QBaseInitPainter((KUrlComboBox*)self, (QPainter*)painter);
+void k_urlcombobox_super_init_painter(void* self, void* painter) {
+    KUrlComboBox_SuperInitPainter((KUrlComboBox*)self, (QPainter*)painter);
 }
 
 void k_urlcombobox_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2724,8 +2724,8 @@ QPaintDevice* k_urlcombobox_redirected(void* self, void* offset) {
     return KUrlComboBox_Redirected((KUrlComboBox*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_urlcombobox_qbase_redirected(void* self, void* offset) {
-    return KUrlComboBox_QBaseRedirected((KUrlComboBox*)self, (QPoint*)offset);
+QPaintDevice* k_urlcombobox_super_redirected(void* self, void* offset) {
+    return KUrlComboBox_SuperRedirected((KUrlComboBox*)self, (QPoint*)offset);
 }
 
 void k_urlcombobox_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2736,8 +2736,8 @@ QPainter* k_urlcombobox_shared_painter(void* self) {
     return KUrlComboBox_SharedPainter((KUrlComboBox*)self);
 }
 
-QPainter* k_urlcombobox_qbase_shared_painter(void* self) {
-    return KUrlComboBox_QBaseSharedPainter((KUrlComboBox*)self);
+QPainter* k_urlcombobox_super_shared_painter(void* self) {
+    return KUrlComboBox_SuperSharedPainter((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2748,8 +2748,8 @@ bool k_urlcombobox_focus_next_prev_child(void* self, bool next) {
     return KUrlComboBox_FocusNextPrevChild((KUrlComboBox*)self, next);
 }
 
-bool k_urlcombobox_qbase_focus_next_prev_child(void* self, bool next) {
-    return KUrlComboBox_QBaseFocusNextPrevChild((KUrlComboBox*)self, next);
+bool k_urlcombobox_super_focus_next_prev_child(void* self, bool next) {
+    return KUrlComboBox_SuperFocusNextPrevChild((KUrlComboBox*)self, next);
 }
 
 void k_urlcombobox_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2760,8 +2760,8 @@ bool k_urlcombobox_event_filter(void* self, void* watched, void* event) {
     return KUrlComboBox_EventFilter((KUrlComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_urlcombobox_qbase_event_filter(void* self, void* watched, void* event) {
-    return KUrlComboBox_QBaseEventFilter((KUrlComboBox*)self, (QObject*)watched, (QEvent*)event);
+bool k_urlcombobox_super_event_filter(void* self, void* watched, void* event) {
+    return KUrlComboBox_SuperEventFilter((KUrlComboBox*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_urlcombobox_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2772,8 +2772,8 @@ void k_urlcombobox_timer_event(void* self, void* event) {
     KUrlComboBox_TimerEvent((KUrlComboBox*)self, (QTimerEvent*)event);
 }
 
-void k_urlcombobox_qbase_timer_event(void* self, void* event) {
-    KUrlComboBox_QBaseTimerEvent((KUrlComboBox*)self, (QTimerEvent*)event);
+void k_urlcombobox_super_timer_event(void* self, void* event) {
+    KUrlComboBox_SuperTimerEvent((KUrlComboBox*)self, (QTimerEvent*)event);
 }
 
 void k_urlcombobox_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2784,8 +2784,8 @@ void k_urlcombobox_child_event(void* self, void* event) {
     KUrlComboBox_ChildEvent((KUrlComboBox*)self, (QChildEvent*)event);
 }
 
-void k_urlcombobox_qbase_child_event(void* self, void* event) {
-    KUrlComboBox_QBaseChildEvent((KUrlComboBox*)self, (QChildEvent*)event);
+void k_urlcombobox_super_child_event(void* self, void* event) {
+    KUrlComboBox_SuperChildEvent((KUrlComboBox*)self, (QChildEvent*)event);
 }
 
 void k_urlcombobox_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2796,8 +2796,8 @@ void k_urlcombobox_custom_event(void* self, void* event) {
     KUrlComboBox_CustomEvent((KUrlComboBox*)self, (QEvent*)event);
 }
 
-void k_urlcombobox_qbase_custom_event(void* self, void* event) {
-    KUrlComboBox_QBaseCustomEvent((KUrlComboBox*)self, (QEvent*)event);
+void k_urlcombobox_super_custom_event(void* self, void* event) {
+    KUrlComboBox_SuperCustomEvent((KUrlComboBox*)self, (QEvent*)event);
 }
 
 void k_urlcombobox_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2808,8 +2808,8 @@ void k_urlcombobox_connect_notify(void* self, void* signal) {
     KUrlComboBox_ConnectNotify((KUrlComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_urlcombobox_qbase_connect_notify(void* self, void* signal) {
-    KUrlComboBox_QBaseConnectNotify((KUrlComboBox*)self, (QMetaMethod*)signal);
+void k_urlcombobox_super_connect_notify(void* self, void* signal) {
+    KUrlComboBox_SuperConnectNotify((KUrlComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcombobox_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2820,8 +2820,8 @@ void k_urlcombobox_disconnect_notify(void* self, void* signal) {
     KUrlComboBox_DisconnectNotify((KUrlComboBox*)self, (QMetaMethod*)signal);
 }
 
-void k_urlcombobox_qbase_disconnect_notify(void* self, void* signal) {
-    KUrlComboBox_QBaseDisconnectNotify((KUrlComboBox*)self, (QMetaMethod*)signal);
+void k_urlcombobox_super_disconnect_notify(void* self, void* signal) {
+    KUrlComboBox_SuperDisconnectNotify((KUrlComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcombobox_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2832,8 +2832,8 @@ void k_urlcombobox_set_handle_signals(void* self, bool handle) {
     KUrlComboBox_SetHandleSignals((KUrlComboBox*)self, handle);
 }
 
-void k_urlcombobox_qbase_set_handle_signals(void* self, bool handle) {
-    KUrlComboBox_QBaseSetHandleSignals((KUrlComboBox*)self, handle);
+void k_urlcombobox_super_set_handle_signals(void* self, bool handle) {
+    KUrlComboBox_SuperSetHandleSignals((KUrlComboBox*)self, handle);
 }
 
 void k_urlcombobox_on_set_handle_signals(void* self, void (*callback)(void*, bool)) {
@@ -2844,8 +2844,8 @@ void k_urlcombobox_set_completion_mode(void* self, int32_t mode) {
     KUrlComboBox_SetCompletionMode((KUrlComboBox*)self, mode);
 }
 
-void k_urlcombobox_qbase_set_completion_mode(void* self, int32_t mode) {
-    KUrlComboBox_QBaseSetCompletionMode((KUrlComboBox*)self, mode);
+void k_urlcombobox_super_set_completion_mode(void* self, int32_t mode) {
+    KUrlComboBox_SuperSetCompletionMode((KUrlComboBox*)self, mode);
 }
 
 void k_urlcombobox_on_set_completion_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -2856,8 +2856,8 @@ void k_urlcombobox_virtual_hook(void* self, int id, void* data) {
     KUrlComboBox_VirtualHook((KUrlComboBox*)self, id, data);
 }
 
-void k_urlcombobox_qbase_virtual_hook(void* self, int id, void* data) {
-    KUrlComboBox_QBaseVirtualHook((KUrlComboBox*)self, id, data);
+void k_urlcombobox_super_virtual_hook(void* self, int id, void* data) {
+    KUrlComboBox_SuperVirtualHook((KUrlComboBox*)self, id, data);
 }
 
 void k_urlcombobox_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {
@@ -2868,8 +2868,8 @@ void k_urlcombobox_update_micro_focus(void* self) {
     KUrlComboBox_UpdateMicroFocus((KUrlComboBox*)self);
 }
 
-void k_urlcombobox_qbase_update_micro_focus(void* self) {
-    KUrlComboBox_QBaseUpdateMicroFocus((KUrlComboBox*)self);
+void k_urlcombobox_super_update_micro_focus(void* self) {
+    KUrlComboBox_SuperUpdateMicroFocus((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2880,8 +2880,8 @@ void k_urlcombobox_create(void* self) {
     KUrlComboBox_Create((KUrlComboBox*)self);
 }
 
-void k_urlcombobox_qbase_create(void* self) {
-    KUrlComboBox_QBaseCreate((KUrlComboBox*)self);
+void k_urlcombobox_super_create(void* self) {
+    KUrlComboBox_SuperCreate((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_create(void* self, void (*callback)()) {
@@ -2892,8 +2892,8 @@ void k_urlcombobox_destroy(void* self) {
     KUrlComboBox_Destroy((KUrlComboBox*)self);
 }
 
-void k_urlcombobox_qbase_destroy(void* self) {
-    KUrlComboBox_QBaseDestroy((KUrlComboBox*)self);
+void k_urlcombobox_super_destroy(void* self) {
+    KUrlComboBox_SuperDestroy((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_destroy(void* self, void (*callback)()) {
@@ -2904,8 +2904,8 @@ bool k_urlcombobox_focus_next_child(void* self) {
     return KUrlComboBox_FocusNextChild((KUrlComboBox*)self);
 }
 
-bool k_urlcombobox_qbase_focus_next_child(void* self) {
-    return KUrlComboBox_QBaseFocusNextChild((KUrlComboBox*)self);
+bool k_urlcombobox_super_focus_next_child(void* self) {
+    return KUrlComboBox_SuperFocusNextChild((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2916,8 +2916,8 @@ bool k_urlcombobox_focus_previous_child(void* self) {
     return KUrlComboBox_FocusPreviousChild((KUrlComboBox*)self);
 }
 
-bool k_urlcombobox_qbase_focus_previous_child(void* self) {
-    return KUrlComboBox_QBaseFocusPreviousChild((KUrlComboBox*)self);
+bool k_urlcombobox_super_focus_previous_child(void* self) {
+    return KUrlComboBox_SuperFocusPreviousChild((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2928,8 +2928,8 @@ QObject* k_urlcombobox_sender(void* self) {
     return KUrlComboBox_Sender((KUrlComboBox*)self);
 }
 
-QObject* k_urlcombobox_qbase_sender(void* self) {
-    return KUrlComboBox_QBaseSender((KUrlComboBox*)self);
+QObject* k_urlcombobox_super_sender(void* self) {
+    return KUrlComboBox_SuperSender((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_sender(void* self, QObject* (*callback)()) {
@@ -2940,8 +2940,8 @@ int32_t k_urlcombobox_sender_signal_index(void* self) {
     return KUrlComboBox_SenderSignalIndex((KUrlComboBox*)self);
 }
 
-int32_t k_urlcombobox_qbase_sender_signal_index(void* self) {
-    return KUrlComboBox_QBaseSenderSignalIndex((KUrlComboBox*)self);
+int32_t k_urlcombobox_super_sender_signal_index(void* self) {
+    return KUrlComboBox_SuperSenderSignalIndex((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2952,8 +2952,8 @@ int32_t k_urlcombobox_receivers(void* self, const char* signal) {
     return KUrlComboBox_Receivers((KUrlComboBox*)self, signal);
 }
 
-int32_t k_urlcombobox_qbase_receivers(void* self, const char* signal) {
-    return KUrlComboBox_QBaseReceivers((KUrlComboBox*)self, signal);
+int32_t k_urlcombobox_super_receivers(void* self, const char* signal) {
+    return KUrlComboBox_SuperReceivers((KUrlComboBox*)self, signal);
 }
 
 void k_urlcombobox_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2964,8 +2964,8 @@ bool k_urlcombobox_is_signal_connected(void* self, void* signal) {
     return KUrlComboBox_IsSignalConnected((KUrlComboBox*)self, (QMetaMethod*)signal);
 }
 
-bool k_urlcombobox_qbase_is_signal_connected(void* self, void* signal) {
-    return KUrlComboBox_QBaseIsSignalConnected((KUrlComboBox*)self, (QMetaMethod*)signal);
+bool k_urlcombobox_super_is_signal_connected(void* self, void* signal) {
+    return KUrlComboBox_SuperIsSignalConnected((KUrlComboBox*)self, (QMetaMethod*)signal);
 }
 
 void k_urlcombobox_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2976,8 +2976,8 @@ double k_urlcombobox_get_decoded_metric_f(void* self, int32_t metricA, int32_t m
     return KUrlComboBox_GetDecodedMetricF((KUrlComboBox*)self, metricA, metricB);
 }
 
-double k_urlcombobox_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KUrlComboBox_QBaseGetDecodedMetricF((KUrlComboBox*)self, metricA, metricB);
+double k_urlcombobox_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KUrlComboBox_SuperGetDecodedMetricF((KUrlComboBox*)self, metricA, metricB);
 }
 
 void k_urlcombobox_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -3023,9 +3023,9 @@ libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequen
     return _ret;
 }
 
-libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_urlcombobox_qbase_key_binding_map(void* self) {
+libqt_map /* of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence* */ k_urlcombobox_super_key_binding_map(void* self) {
     // Convert QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>> to libqt_map
-    libqt_map _out = KUrlComboBox_QBaseKeyBindingMap((KUrlComboBox*)self);
+    libqt_map _out = KUrlComboBox_SuperKeyBindingMap((KUrlComboBox*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_list* _out_values = (libqt_list*)_out.values;
@@ -3099,7 +3099,7 @@ void k_urlcombobox_set_key_binding_map(void* self, libqt_map /* of enum KComplet
     free(keyBindingMap_ret.values);
 }
 
-void k_urlcombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
+void k_urlcombobox_super_set_key_binding_map(void* self, libqt_map /* of enum KCompletionBase__KeyBindingType to QKeySequence** */ keyBindingMap) {
     // Convert libqt_map to QMap<KCompletionBase::KeyBindingType,QList<QKeySequence>>
     libqt_map keyBindingMap_ret;
     keyBindingMap_ret.len = keyBindingMap.len;
@@ -3127,7 +3127,7 @@ void k_urlcombobox_qbase_set_key_binding_map(void* self, libqt_map /* of enum KC
         keyBindingMap_vdest[i].len = keyBindingMap_value_count;
         keyBindingMap_vdest[i].data.ptr = (void*)keyBindingMap_varr[i];
     }
-    KUrlComboBox_QBaseSetKeyBindingMap((KUrlComboBox*)self, keyBindingMap_ret);
+    KUrlComboBox_SuperSetKeyBindingMap((KUrlComboBox*)self, keyBindingMap_ret);
     free(keyBindingMap_ret.keys);
     free(keyBindingMap_ret.values);
 }
@@ -3140,8 +3140,8 @@ void k_urlcombobox_set_delegate(void* self, void* delegate) {
     KUrlComboBox_SetDelegate((KUrlComboBox*)self, (KCompletionBase*)delegate);
 }
 
-void k_urlcombobox_qbase_set_delegate(void* self, void* delegate) {
-    KUrlComboBox_QBaseSetDelegate((KUrlComboBox*)self, (KCompletionBase*)delegate);
+void k_urlcombobox_super_set_delegate(void* self, void* delegate) {
+    KUrlComboBox_SuperSetDelegate((KUrlComboBox*)self, (KCompletionBase*)delegate);
 }
 
 void k_urlcombobox_on_set_delegate(void* self, void (*callback)(void*, void*)) {
@@ -3152,8 +3152,8 @@ KCompletionBase* k_urlcombobox_delegate(void* self) {
     return KUrlComboBox_Delegate((KUrlComboBox*)self);
 }
 
-KCompletionBase* k_urlcombobox_qbase_delegate(void* self) {
-    return KUrlComboBox_QBaseDelegate((KUrlComboBox*)self);
+KCompletionBase* k_urlcombobox_super_delegate(void* self) {
+    return KUrlComboBox_SuperDelegate((KUrlComboBox*)self);
 }
 
 void k_urlcombobox_on_delegate(void* self, KCompletionBase* (*callback)()) {

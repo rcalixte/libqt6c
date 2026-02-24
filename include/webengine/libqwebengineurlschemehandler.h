@@ -40,13 +40,17 @@ const QMetaObject* q_webengineurlschemehandler_meta_object(void* self);
 ///
 void q_webengineurlschemehandler_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_meta_object` instead
+///
+#define q_webengineurlschemehandler_qbase_meta_object q_webengineurlschemehandler_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QWebEngineUrlSchemeHandler*
 ///
-const QMetaObject* q_webengineurlschemehandler_qbase_meta_object(void* self);
+const QMetaObject* q_webengineurlschemehandler_super_meta_object(void* self);
 
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_webengineurlschemehandler_metacast(void* self, const char* param1);
 ///
 void q_webengineurlschemehandler_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_metacast` instead
+///
+#define q_webengineurlschemehandler_qbase_metacast q_webengineurlschemehandler_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param param1 const char*
 ///
-void* q_webengineurlschemehandler_qbase_metacast(void* self, const char* param1);
+void* q_webengineurlschemehandler_super_metacast(void* self, const char* param1);
 
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_webengineurlschemehandler_metacall(void* self, int32_t param1, int par
 ///
 void q_webengineurlschemehandler_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_metacall` instead
+///
+#define q_webengineurlschemehandler_qbase_metacall q_webengineurlschemehandler_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QWebEngineUrlSchemeHandler*
@@ -88,7 +100,7 @@ void q_webengineurlschemehandler_on_metacall(void* self, int32_t (*callback)(voi
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_webengineurlschemehandler_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_webengineurlschemehandler_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -114,6 +126,10 @@ void q_webengineurlschemehandler_request_started(void* self, void* param1);
 ///
 void q_webengineurlschemehandler_on_request_started(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_request_started` instead
+///
+#define q_webengineurlschemehandler_qbase_request_started q_webengineurlschemehandler_super_request_started
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineurlschemehandler.html#requestStarted)
 ///
 /// Base class method implementation
@@ -121,7 +137,7 @@ void q_webengineurlschemehandler_on_request_started(void* self, void (*callback)
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param param1 QWebEngineUrlRequestJob*
 ///
-void q_webengineurlschemehandler_qbase_request_started(void* self, void* param1);
+void q_webengineurlschemehandler_super_request_started(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -600,6 +616,10 @@ void q_webengineurlschemehandler_on_destroyed1(void* self, void (*callback)(void
 ///
 bool q_webengineurlschemehandler_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_event` instead
+///
+#define q_webengineurlschemehandler_qbase_event q_webengineurlschemehandler_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -609,7 +629,7 @@ bool q_webengineurlschemehandler_event(void* self, void* event);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param event QEvent*
 ///
-bool q_webengineurlschemehandler_qbase_event(void* self, void* event);
+bool q_webengineurlschemehandler_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -634,6 +654,10 @@ void q_webengineurlschemehandler_on_event(void* self, bool (*callback)(void*, vo
 ///
 bool q_webengineurlschemehandler_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_event_filter` instead
+///
+#define q_webengineurlschemehandler_qbase_event_filter q_webengineurlschemehandler_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -644,7 +668,7 @@ bool q_webengineurlschemehandler_event_filter(void* self, void* watched, void* e
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_webengineurlschemehandler_qbase_event_filter(void* self, void* watched, void* event);
+bool q_webengineurlschemehandler_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -668,6 +692,10 @@ void q_webengineurlschemehandler_on_event_filter(void* self, bool (*callback)(vo
 ///
 void q_webengineurlschemehandler_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_timer_event` instead
+///
+#define q_webengineurlschemehandler_qbase_timer_event q_webengineurlschemehandler_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -677,7 +705,7 @@ void q_webengineurlschemehandler_timer_event(void* self, void* event);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param event QTimerEvent*
 ///
-void q_webengineurlschemehandler_qbase_timer_event(void* self, void* event);
+void q_webengineurlschemehandler_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -701,6 +729,10 @@ void q_webengineurlschemehandler_on_timer_event(void* self, void (*callback)(voi
 ///
 void q_webengineurlschemehandler_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_child_event` instead
+///
+#define q_webengineurlschemehandler_qbase_child_event q_webengineurlschemehandler_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -710,7 +742,7 @@ void q_webengineurlschemehandler_child_event(void* self, void* event);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param event QChildEvent*
 ///
-void q_webengineurlschemehandler_qbase_child_event(void* self, void* event);
+void q_webengineurlschemehandler_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -734,6 +766,10 @@ void q_webengineurlschemehandler_on_child_event(void* self, void (*callback)(voi
 ///
 void q_webengineurlschemehandler_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_custom_event` instead
+///
+#define q_webengineurlschemehandler_qbase_custom_event q_webengineurlschemehandler_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -743,7 +779,7 @@ void q_webengineurlschemehandler_custom_event(void* self, void* event);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param event QEvent*
 ///
-void q_webengineurlschemehandler_qbase_custom_event(void* self, void* event);
+void q_webengineurlschemehandler_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -767,6 +803,10 @@ void q_webengineurlschemehandler_on_custom_event(void* self, void (*callback)(vo
 ///
 void q_webengineurlschemehandler_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_connect_notify` instead
+///
+#define q_webengineurlschemehandler_qbase_connect_notify q_webengineurlschemehandler_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -776,7 +816,7 @@ void q_webengineurlschemehandler_connect_notify(void* self, void* signal);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param signal QMetaMethod*
 ///
-void q_webengineurlschemehandler_qbase_connect_notify(void* self, void* signal);
+void q_webengineurlschemehandler_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -800,6 +840,10 @@ void q_webengineurlschemehandler_on_connect_notify(void* self, void (*callback)(
 ///
 void q_webengineurlschemehandler_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_disconnect_notify` instead
+///
+#define q_webengineurlschemehandler_qbase_disconnect_notify q_webengineurlschemehandler_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -809,7 +853,7 @@ void q_webengineurlschemehandler_disconnect_notify(void* self, void* signal);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param signal QMetaMethod*
 ///
-void q_webengineurlschemehandler_qbase_disconnect_notify(void* self, void* signal);
+void q_webengineurlschemehandler_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -832,6 +876,10 @@ void q_webengineurlschemehandler_on_disconnect_notify(void* self, void (*callbac
 ///
 QObject* q_webengineurlschemehandler_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_sender` instead
+///
+#define q_webengineurlschemehandler_qbase_sender q_webengineurlschemehandler_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -840,7 +888,7 @@ QObject* q_webengineurlschemehandler_sender(void* self);
 ///
 /// @param self QWebEngineUrlSchemeHandler*
 ///
-QObject* q_webengineurlschemehandler_qbase_sender(void* self);
+QObject* q_webengineurlschemehandler_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -863,6 +911,10 @@ void q_webengineurlschemehandler_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_webengineurlschemehandler_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_sender_signal_index` instead
+///
+#define q_webengineurlschemehandler_qbase_sender_signal_index q_webengineurlschemehandler_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -871,7 +923,7 @@ int32_t q_webengineurlschemehandler_sender_signal_index(void* self);
 ///
 /// @param self QWebEngineUrlSchemeHandler*
 ///
-int32_t q_webengineurlschemehandler_qbase_sender_signal_index(void* self);
+int32_t q_webengineurlschemehandler_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -895,6 +947,10 @@ void q_webengineurlschemehandler_on_sender_signal_index(void* self, int32_t (*ca
 ///
 int32_t q_webengineurlschemehandler_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_receivers` instead
+///
+#define q_webengineurlschemehandler_qbase_receivers q_webengineurlschemehandler_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -904,7 +960,7 @@ int32_t q_webengineurlschemehandler_receivers(void* self, const char* signal);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param signal const char*
 ///
-int32_t q_webengineurlschemehandler_qbase_receivers(void* self, const char* signal);
+int32_t q_webengineurlschemehandler_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -928,6 +984,10 @@ void q_webengineurlschemehandler_on_receivers(void* self, int32_t (*callback)(vo
 ///
 bool q_webengineurlschemehandler_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_webengineurlschemehandler_super_is_signal_connected` instead
+///
+#define q_webengineurlschemehandler_qbase_is_signal_connected q_webengineurlschemehandler_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -937,7 +997,7 @@ bool q_webengineurlschemehandler_is_signal_connected(void* self, void* signal);
 /// @param self QWebEngineUrlSchemeHandler*
 /// @param signal QMetaMethod*
 ///
-bool q_webengineurlschemehandler_qbase_is_signal_connected(void* self, void* signal);
+bool q_webengineurlschemehandler_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -62,13 +62,17 @@ const QMetaObject* k_breadcrumbselectionmodel_meta_object(void* self);
 ///
 void k_breadcrumbselectionmodel_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_meta_object` instead
+///
+#define k_breadcrumbselectionmodel_qbase_meta_object k_breadcrumbselectionmodel_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-const QMetaObject* k_breadcrumbselectionmodel_qbase_meta_object(void* self);
+const QMetaObject* k_breadcrumbselectionmodel_super_meta_object(void* self);
 
 /// @param self KBreadcrumbSelectionModel*
 /// @param param1 const char*
@@ -82,12 +86,16 @@ void* k_breadcrumbselectionmodel_metacast(void* self, const char* param1);
 ///
 void k_breadcrumbselectionmodel_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_metacast` instead
+///
+#define k_breadcrumbselectionmodel_qbase_metacast k_breadcrumbselectionmodel_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KBreadcrumbSelectionModel*
 /// @param param1 const char*
 ///
-void* k_breadcrumbselectionmodel_qbase_metacast(void* self, const char* param1);
+void* k_breadcrumbselectionmodel_super_metacast(void* self, const char* param1);
 
 /// @param self KBreadcrumbSelectionModel*
 /// @param param1 enum QMetaObject__Call
@@ -103,6 +111,10 @@ int32_t k_breadcrumbselectionmodel_metacall(void* self, int32_t param1, int para
 ///
 void k_breadcrumbselectionmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_metacall` instead
+///
+#define k_breadcrumbselectionmodel_qbase_metacall k_breadcrumbselectionmodel_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KBreadcrumbSelectionModel*
@@ -110,7 +122,7 @@ void k_breadcrumbselectionmodel_on_metacall(void* self, int32_t (*callback)(void
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_breadcrumbselectionmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_breadcrumbselectionmodel_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -163,6 +175,10 @@ void k_breadcrumbselectionmodel_select(void* self, void* index, int32_t command)
 ///
 void k_breadcrumbselectionmodel_on_select(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_select` instead
+///
+#define k_breadcrumbselectionmodel_qbase_select k_breadcrumbselectionmodel_super_select
+
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
 /// Base class method implementation
@@ -171,7 +187,7 @@ void k_breadcrumbselectionmodel_on_select(void* self, void (*callback)(void*, vo
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_qbase_select(void* self, void* index, int32_t command);
+void k_breadcrumbselectionmodel_super_select(void* self, void* index, int32_t command);
 
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
@@ -190,6 +206,10 @@ void k_breadcrumbselectionmodel_select2(void* self, void* selection, int32_t com
 ///
 void k_breadcrumbselectionmodel_on_select2(void* self, void (*callback)(void*, void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_select2` instead
+///
+#define k_breadcrumbselectionmodel_qbase_select2 k_breadcrumbselectionmodel_super_select2
+
 /// [Upstream resources](https://api.kde.org/kbreadcrumbselectionmodel.html#select)
 ///
 /// Base class method implementation
@@ -198,7 +218,7 @@ void k_breadcrumbselectionmodel_on_select2(void* self, void (*callback)(void*, v
 /// @param selection QItemSelection*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_qbase_select2(void* self, void* selection, int32_t command);
+void k_breadcrumbselectionmodel_super_select2(void* self, void* selection, int32_t command);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -966,6 +986,10 @@ void k_breadcrumbselectionmodel_on_destroyed1(void* self, void (*callback)(void*
 ///
 void k_breadcrumbselectionmodel_set_current_index(void* self, void* index, int32_t command);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_set_current_index` instead
+///
+#define k_breadcrumbselectionmodel_qbase_set_current_index k_breadcrumbselectionmodel_super_set_current_index
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#setCurrentIndex)
@@ -976,7 +1000,7 @@ void k_breadcrumbselectionmodel_set_current_index(void* self, void* index, int32
 /// @param index QModelIndex*
 /// @param command flag of enum QItemSelectionModel__SelectionFlag
 ///
-void k_breadcrumbselectionmodel_qbase_set_current_index(void* self, void* index, int32_t command);
+void k_breadcrumbselectionmodel_super_set_current_index(void* self, void* index, int32_t command);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -999,6 +1023,10 @@ void k_breadcrumbselectionmodel_on_set_current_index(void* self, void (*callback
 ///
 void k_breadcrumbselectionmodel_clear(void* self);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_clear` instead
+///
+#define k_breadcrumbselectionmodel_qbase_clear k_breadcrumbselectionmodel_super_clear
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clear)
@@ -1007,7 +1035,7 @@ void k_breadcrumbselectionmodel_clear(void* self);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-void k_breadcrumbselectionmodel_qbase_clear(void* self);
+void k_breadcrumbselectionmodel_super_clear(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1030,6 +1058,10 @@ void k_breadcrumbselectionmodel_on_clear(void* self, void (*callback)());
 ///
 void k_breadcrumbselectionmodel_reset(void* self);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_reset` instead
+///
+#define k_breadcrumbselectionmodel_qbase_reset k_breadcrumbselectionmodel_super_reset
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#reset)
@@ -1038,7 +1070,7 @@ void k_breadcrumbselectionmodel_reset(void* self);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-void k_breadcrumbselectionmodel_qbase_reset(void* self);
+void k_breadcrumbselectionmodel_super_reset(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1061,6 +1093,10 @@ void k_breadcrumbselectionmodel_on_reset(void* self, void (*callback)());
 ///
 void k_breadcrumbselectionmodel_clear_current_index(void* self);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_clear_current_index` instead
+///
+#define k_breadcrumbselectionmodel_qbase_clear_current_index k_breadcrumbselectionmodel_super_clear_current_index
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#clearCurrentIndex)
@@ -1069,7 +1105,7 @@ void k_breadcrumbselectionmodel_clear_current_index(void* self);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-void k_breadcrumbselectionmodel_qbase_clear_current_index(void* self);
+void k_breadcrumbselectionmodel_super_clear_current_index(void* self);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1093,6 +1129,10 @@ void k_breadcrumbselectionmodel_on_clear_current_index(void* self, void (*callba
 ///
 bool k_breadcrumbselectionmodel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_event` instead
+///
+#define k_breadcrumbselectionmodel_qbase_event k_breadcrumbselectionmodel_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1102,7 +1142,7 @@ bool k_breadcrumbselectionmodel_event(void* self, void* event);
 /// @param self KBreadcrumbSelectionModel*
 /// @param event QEvent*
 ///
-bool k_breadcrumbselectionmodel_qbase_event(void* self, void* event);
+bool k_breadcrumbselectionmodel_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1127,6 +1167,10 @@ void k_breadcrumbselectionmodel_on_event(void* self, bool (*callback)(void*, voi
 ///
 bool k_breadcrumbselectionmodel_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_event_filter` instead
+///
+#define k_breadcrumbselectionmodel_qbase_event_filter k_breadcrumbselectionmodel_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1137,7 +1181,7 @@ bool k_breadcrumbselectionmodel_event_filter(void* self, void* watched, void* ev
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_breadcrumbselectionmodel_qbase_event_filter(void* self, void* watched, void* event);
+bool k_breadcrumbselectionmodel_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1161,6 +1205,10 @@ void k_breadcrumbselectionmodel_on_event_filter(void* self, bool (*callback)(voi
 ///
 void k_breadcrumbselectionmodel_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_timer_event` instead
+///
+#define k_breadcrumbselectionmodel_qbase_timer_event k_breadcrumbselectionmodel_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1170,7 +1218,7 @@ void k_breadcrumbselectionmodel_timer_event(void* self, void* event);
 /// @param self KBreadcrumbSelectionModel*
 /// @param event QTimerEvent*
 ///
-void k_breadcrumbselectionmodel_qbase_timer_event(void* self, void* event);
+void k_breadcrumbselectionmodel_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1194,6 +1242,10 @@ void k_breadcrumbselectionmodel_on_timer_event(void* self, void (*callback)(void
 ///
 void k_breadcrumbselectionmodel_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_child_event` instead
+///
+#define k_breadcrumbselectionmodel_qbase_child_event k_breadcrumbselectionmodel_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1203,7 +1255,7 @@ void k_breadcrumbselectionmodel_child_event(void* self, void* event);
 /// @param self KBreadcrumbSelectionModel*
 /// @param event QChildEvent*
 ///
-void k_breadcrumbselectionmodel_qbase_child_event(void* self, void* event);
+void k_breadcrumbselectionmodel_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1227,6 +1279,10 @@ void k_breadcrumbselectionmodel_on_child_event(void* self, void (*callback)(void
 ///
 void k_breadcrumbselectionmodel_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_custom_event` instead
+///
+#define k_breadcrumbselectionmodel_qbase_custom_event k_breadcrumbselectionmodel_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1236,7 +1292,7 @@ void k_breadcrumbselectionmodel_custom_event(void* self, void* event);
 /// @param self KBreadcrumbSelectionModel*
 /// @param event QEvent*
 ///
-void k_breadcrumbselectionmodel_qbase_custom_event(void* self, void* event);
+void k_breadcrumbselectionmodel_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1260,6 +1316,10 @@ void k_breadcrumbselectionmodel_on_custom_event(void* self, void (*callback)(voi
 ///
 void k_breadcrumbselectionmodel_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_connect_notify` instead
+///
+#define k_breadcrumbselectionmodel_qbase_connect_notify k_breadcrumbselectionmodel_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1269,7 +1329,7 @@ void k_breadcrumbselectionmodel_connect_notify(void* self, void* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_breadcrumbselectionmodel_qbase_connect_notify(void* self, void* signal);
+void k_breadcrumbselectionmodel_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1293,6 +1353,10 @@ void k_breadcrumbselectionmodel_on_connect_notify(void* self, void (*callback)(v
 ///
 void k_breadcrumbselectionmodel_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_disconnect_notify` instead
+///
+#define k_breadcrumbselectionmodel_qbase_disconnect_notify k_breadcrumbselectionmodel_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1302,7 +1366,7 @@ void k_breadcrumbselectionmodel_disconnect_notify(void* self, void* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-void k_breadcrumbselectionmodel_qbase_disconnect_notify(void* self, void* signal);
+void k_breadcrumbselectionmodel_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1327,6 +1391,10 @@ void k_breadcrumbselectionmodel_on_disconnect_notify(void* self, void (*callback
 ///
 void k_breadcrumbselectionmodel_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_emit_selection_changed` instead
+///
+#define k_breadcrumbselectionmodel_qbase_emit_selection_changed k_breadcrumbselectionmodel_super_emit_selection_changed
+
 /// Inherited from QItemSelectionModel
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemselectionmodel.html#emitSelectionChanged)
@@ -1337,7 +1405,7 @@ void k_breadcrumbselectionmodel_emit_selection_changed(void* self, void* newSele
 /// @param newSelection QItemSelection*
 /// @param oldSelection QItemSelection*
 ///
-void k_breadcrumbselectionmodel_qbase_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
+void k_breadcrumbselectionmodel_super_emit_selection_changed(void* self, void* newSelection, void* oldSelection);
 
 /// Inherited from QItemSelectionModel
 ///
@@ -1360,6 +1428,10 @@ void k_breadcrumbselectionmodel_on_emit_selection_changed(void* self, void (*cal
 ///
 QObject* k_breadcrumbselectionmodel_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_sender` instead
+///
+#define k_breadcrumbselectionmodel_qbase_sender k_breadcrumbselectionmodel_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1368,7 +1440,7 @@ QObject* k_breadcrumbselectionmodel_sender(void* self);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-QObject* k_breadcrumbselectionmodel_qbase_sender(void* self);
+QObject* k_breadcrumbselectionmodel_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1391,6 +1463,10 @@ void k_breadcrumbselectionmodel_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_breadcrumbselectionmodel_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_sender_signal_index` instead
+///
+#define k_breadcrumbselectionmodel_qbase_sender_signal_index k_breadcrumbselectionmodel_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1399,7 +1475,7 @@ int32_t k_breadcrumbselectionmodel_sender_signal_index(void* self);
 ///
 /// @param self KBreadcrumbSelectionModel*
 ///
-int32_t k_breadcrumbselectionmodel_qbase_sender_signal_index(void* self);
+int32_t k_breadcrumbselectionmodel_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1423,6 +1499,10 @@ void k_breadcrumbselectionmodel_on_sender_signal_index(void* self, int32_t (*cal
 ///
 int32_t k_breadcrumbselectionmodel_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_receivers` instead
+///
+#define k_breadcrumbselectionmodel_qbase_receivers k_breadcrumbselectionmodel_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1432,7 +1512,7 @@ int32_t k_breadcrumbselectionmodel_receivers(void* self, const char* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal const char*
 ///
-int32_t k_breadcrumbselectionmodel_qbase_receivers(void* self, const char* signal);
+int32_t k_breadcrumbselectionmodel_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1456,6 +1536,10 @@ void k_breadcrumbselectionmodel_on_receivers(void* self, int32_t (*callback)(voi
 ///
 bool k_breadcrumbselectionmodel_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_breadcrumbselectionmodel_super_is_signal_connected` instead
+///
+#define k_breadcrumbselectionmodel_qbase_is_signal_connected k_breadcrumbselectionmodel_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1465,7 +1549,7 @@ bool k_breadcrumbselectionmodel_is_signal_connected(void* self, void* signal);
 /// @param self KBreadcrumbSelectionModel*
 /// @param signal QMetaMethod*
 ///
-bool k_breadcrumbselectionmodel_qbase_is_signal_connected(void* self, void* signal);
+bool k_breadcrumbselectionmodel_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

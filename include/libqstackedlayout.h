@@ -48,13 +48,17 @@ const QMetaObject* q_stackedlayout_meta_object(void* self);
 ///
 void q_stackedlayout_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_meta_object` instead
+///
+#define q_stackedlayout_qbase_meta_object q_stackedlayout_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
 ///
-const QMetaObject* q_stackedlayout_qbase_meta_object(void* self);
+const QMetaObject* q_stackedlayout_super_meta_object(void* self);
 
 /// @param self QStackedLayout*
 /// @param param1 const char*
@@ -68,12 +72,16 @@ void* q_stackedlayout_metacast(void* self, const char* param1);
 ///
 void q_stackedlayout_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_metacast` instead
+///
+#define q_stackedlayout_qbase_metacast q_stackedlayout_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
 /// @param param1 const char*
 ///
-void* q_stackedlayout_qbase_metacast(void* self, const char* param1);
+void* q_stackedlayout_super_metacast(void* self, const char* param1);
 
 /// @param self QStackedLayout*
 /// @param param1 enum QMetaObject__Call
@@ -89,6 +97,10 @@ int32_t q_stackedlayout_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void q_stackedlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_metacall` instead
+///
+#define q_stackedlayout_qbase_metacall q_stackedlayout_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
@@ -96,7 +108,7 @@ void q_stackedlayout_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_stackedlayout_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_stackedlayout_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -155,13 +167,17 @@ int32_t q_stackedlayout_count(void* self);
 ///
 void q_stackedlayout_on_count(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_count` instead
+///
+#define q_stackedlayout_qbase_count q_stackedlayout_super_count
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#count)
 ///
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
 ///
-int32_t q_stackedlayout_qbase_count(void* self);
+int32_t q_stackedlayout_super_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#stackingMode)
 ///
@@ -194,6 +210,10 @@ void q_stackedlayout_add_item(void* self, void* item);
 ///
 void q_stackedlayout_on_add_item(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_add_item` instead
+///
+#define q_stackedlayout_qbase_add_item q_stackedlayout_super_add_item
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#addItem)
 ///
 /// Base class method implementation
@@ -201,7 +221,7 @@ void q_stackedlayout_on_add_item(void* self, void (*callback)(void*, void*));
 /// @param self QStackedLayout*
 /// @param item QLayoutItem*
 ///
-void q_stackedlayout_qbase_add_item(void* self, void* item);
+void q_stackedlayout_super_add_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#sizeHint)
 ///
@@ -218,13 +238,17 @@ QSize* q_stackedlayout_size_hint(void* self);
 ///
 void q_stackedlayout_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_size_hint` instead
+///
+#define q_stackedlayout_qbase_size_hint q_stackedlayout_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
 ///
-QSize* q_stackedlayout_qbase_size_hint(void* self);
+QSize* q_stackedlayout_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#minimumSize)
 ///
@@ -241,13 +265,17 @@ QSize* q_stackedlayout_minimum_size(void* self);
 ///
 void q_stackedlayout_on_minimum_size(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_minimum_size` instead
+///
+#define q_stackedlayout_qbase_minimum_size q_stackedlayout_super_minimum_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#minimumSize)
 ///
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
 ///
-QSize* q_stackedlayout_qbase_minimum_size(void* self);
+QSize* q_stackedlayout_super_minimum_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#itemAt)
 ///
@@ -265,6 +293,10 @@ QLayoutItem* q_stackedlayout_item_at(void* self, int param1);
 ///
 void q_stackedlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_item_at` instead
+///
+#define q_stackedlayout_qbase_item_at q_stackedlayout_super_item_at
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#itemAt)
 ///
 /// Base class method implementation
@@ -272,7 +304,7 @@ void q_stackedlayout_on_item_at(void* self, QLayoutItem* (*callback)(void*, int)
 /// @param self QStackedLayout*
 /// @param param1 int
 ///
-QLayoutItem* q_stackedlayout_qbase_item_at(void* self, int param1);
+QLayoutItem* q_stackedlayout_super_item_at(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#takeAt)
 ///
@@ -290,6 +322,10 @@ QLayoutItem* q_stackedlayout_take_at(void* self, int param1);
 ///
 void q_stackedlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_take_at` instead
+///
+#define q_stackedlayout_qbase_take_at q_stackedlayout_super_take_at
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#takeAt)
 ///
 /// Base class method implementation
@@ -297,7 +333,7 @@ void q_stackedlayout_on_take_at(void* self, QLayoutItem* (*callback)(void*, int)
 /// @param self QStackedLayout*
 /// @param param1 int
 ///
-QLayoutItem* q_stackedlayout_qbase_take_at(void* self, int param1);
+QLayoutItem* q_stackedlayout_super_take_at(void* self, int param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#setGeometry)
 ///
@@ -315,6 +351,10 @@ void q_stackedlayout_set_geometry(void* self, void* rect);
 ///
 void q_stackedlayout_on_set_geometry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_set_geometry` instead
+///
+#define q_stackedlayout_qbase_set_geometry q_stackedlayout_super_set_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#setGeometry)
 ///
 /// Base class method implementation
@@ -322,7 +362,7 @@ void q_stackedlayout_on_set_geometry(void* self, void (*callback)(void*, void*))
 /// @param self QStackedLayout*
 /// @param rect QRect*
 ///
-void q_stackedlayout_qbase_set_geometry(void* self, void* rect);
+void q_stackedlayout_super_set_geometry(void* self, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#hasHeightForWidth)
 ///
@@ -339,13 +379,17 @@ bool q_stackedlayout_has_height_for_width(void* self);
 ///
 void q_stackedlayout_on_has_height_for_width(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_has_height_for_width` instead
+///
+#define q_stackedlayout_qbase_has_height_for_width q_stackedlayout_super_has_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#hasHeightForWidth)
 ///
 /// Base class method implementation
 ///
 /// @param self QStackedLayout*
 ///
-bool q_stackedlayout_qbase_has_height_for_width(void* self);
+bool q_stackedlayout_super_has_height_for_width(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#heightForWidth)
 ///
@@ -363,6 +407,10 @@ int32_t q_stackedlayout_height_for_width(void* self, int width);
 ///
 void q_stackedlayout_on_height_for_width(void* self, int32_t (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_height_for_width` instead
+///
+#define q_stackedlayout_qbase_height_for_width q_stackedlayout_super_height_for_width
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#heightForWidth)
 ///
 /// Base class method implementation
@@ -370,7 +418,7 @@ void q_stackedlayout_on_height_for_width(void* self, int32_t (*callback)(void*, 
 /// @param self QStackedLayout*
 /// @param width int
 ///
-int32_t q_stackedlayout_qbase_height_for_width(void* self, int width);
+int32_t q_stackedlayout_super_height_for_width(void* self, int width);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstackedlayout.html#widgetRemoved)
 ///
@@ -608,6 +656,10 @@ int32_t q_stackedlayout_index_of2(void* self, void* param1);
 ///
 void q_stackedlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_index_of2` instead
+///
+#define q_stackedlayout_qbase_index_of2 q_stackedlayout_super_index_of2
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -617,7 +669,7 @@ void q_stackedlayout_on_index_of2(void* self, int32_t (*callback)(void*, void*))
 /// @param self QStackedLayout*
 /// @param param1 QLayoutItem*
 ///
-int32_t q_stackedlayout_qbase_index_of2(void* self, void* param1);
+int32_t q_stackedlayout_super_index_of2(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -1154,6 +1206,10 @@ int32_t q_stackedlayout_alignment(void* self);
 ///
 int32_t q_stackedlayout_spacing(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_spacing` instead
+///
+#define q_stackedlayout_qbase_spacing q_stackedlayout_super_spacing
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#spacing)
@@ -1162,7 +1218,7 @@ int32_t q_stackedlayout_spacing(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-int32_t q_stackedlayout_qbase_spacing(void* self);
+int32_t q_stackedlayout_super_spacing(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1186,6 +1242,10 @@ void q_stackedlayout_on_spacing(void* self, int32_t (*callback)());
 ///
 void q_stackedlayout_set_spacing(void* self, int spacing);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_set_spacing` instead
+///
+#define q_stackedlayout_qbase_set_spacing q_stackedlayout_super_set_spacing
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#setSpacing)
@@ -1195,7 +1255,7 @@ void q_stackedlayout_set_spacing(void* self, int spacing);
 /// @param self QStackedLayout*
 /// @param spacing int
 ///
-void q_stackedlayout_qbase_set_spacing(void* self, int spacing);
+void q_stackedlayout_super_set_spacing(void* self, int spacing);
 
 /// Inherited from QLayout
 ///
@@ -1218,6 +1278,10 @@ void q_stackedlayout_on_set_spacing(void* self, void (*callback)(void*, int));
 ///
 void q_stackedlayout_invalidate(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_invalidate` instead
+///
+#define q_stackedlayout_qbase_invalidate q_stackedlayout_super_invalidate
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#invalidate)
@@ -1226,7 +1290,7 @@ void q_stackedlayout_invalidate(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-void q_stackedlayout_qbase_invalidate(void* self);
+void q_stackedlayout_super_invalidate(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1249,6 +1313,10 @@ void q_stackedlayout_on_invalidate(void* self, void (*callback)());
 ///
 QRect* q_stackedlayout_geometry(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_geometry` instead
+///
+#define q_stackedlayout_qbase_geometry q_stackedlayout_super_geometry
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#geometry)
@@ -1257,7 +1325,7 @@ QRect* q_stackedlayout_geometry(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-QRect* q_stackedlayout_qbase_geometry(void* self);
+QRect* q_stackedlayout_super_geometry(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1282,6 +1350,10 @@ void q_stackedlayout_on_geometry(void* self, QRect* (*callback)());
 ///
 int32_t q_stackedlayout_expanding_directions(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_expanding_directions` instead
+///
+#define q_stackedlayout_qbase_expanding_directions q_stackedlayout_super_expanding_directions
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#expandingDirections)
@@ -1292,7 +1364,7 @@ int32_t q_stackedlayout_expanding_directions(void* self);
 ///
 /// @return flag of enum Qt__Orientation
 ///
-int32_t q_stackedlayout_qbase_expanding_directions(void* self);
+int32_t q_stackedlayout_super_expanding_directions(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1315,6 +1387,10 @@ void q_stackedlayout_on_expanding_directions(void* self, int32_t (*callback)());
 ///
 QSize* q_stackedlayout_maximum_size(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_maximum_size` instead
+///
+#define q_stackedlayout_qbase_maximum_size q_stackedlayout_super_maximum_size
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#maximumSize)
@@ -1323,7 +1399,7 @@ QSize* q_stackedlayout_maximum_size(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-QSize* q_stackedlayout_qbase_maximum_size(void* self);
+QSize* q_stackedlayout_super_maximum_size(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1347,6 +1423,10 @@ void q_stackedlayout_on_maximum_size(void* self, QSize* (*callback)());
 ///
 int32_t q_stackedlayout_index_of(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_index_of` instead
+///
+#define q_stackedlayout_qbase_index_of q_stackedlayout_super_index_of
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#indexOf)
@@ -1356,7 +1436,7 @@ int32_t q_stackedlayout_index_of(void* self, void* param1);
 /// @param self QStackedLayout*
 /// @param param1 QWidget*
 ///
-int32_t q_stackedlayout_qbase_index_of(void* self, void* param1);
+int32_t q_stackedlayout_super_index_of(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -1379,6 +1459,10 @@ void q_stackedlayout_on_index_of(void* self, int32_t (*callback)(void*, void*));
 ///
 bool q_stackedlayout_is_empty(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_is_empty` instead
+///
+#define q_stackedlayout_qbase_is_empty q_stackedlayout_super_is_empty
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#isEmpty)
@@ -1387,7 +1471,7 @@ bool q_stackedlayout_is_empty(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-bool q_stackedlayout_qbase_is_empty(void* self);
+bool q_stackedlayout_super_is_empty(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1412,6 +1496,10 @@ void q_stackedlayout_on_is_empty(void* self, bool (*callback)());
 ///
 int32_t q_stackedlayout_control_types(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_control_types` instead
+///
+#define q_stackedlayout_qbase_control_types q_stackedlayout_super_control_types
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#controlTypes)
@@ -1422,7 +1510,7 @@ int32_t q_stackedlayout_control_types(void* self);
 ///
 /// @return flag of enum QSizePolicy__ControlType
 ///
-int32_t q_stackedlayout_qbase_control_types(void* self);
+int32_t q_stackedlayout_super_control_types(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1448,6 +1536,10 @@ void q_stackedlayout_on_control_types(void* self, int32_t (*callback)());
 ///
 QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, int32_t options);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_replace_widget` instead
+///
+#define q_stackedlayout_qbase_replace_widget q_stackedlayout_super_replace_widget
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#replaceWidget)
@@ -1459,7 +1551,7 @@ QLayoutItem* q_stackedlayout_replace_widget(void* self, void* from, void* to, in
 /// @param to QWidget*
 /// @param options flag of enum Qt__FindChildOption
 ///
-QLayoutItem* q_stackedlayout_qbase_replace_widget(void* self, void* from, void* to, int32_t options);
+QLayoutItem* q_stackedlayout_super_replace_widget(void* self, void* from, void* to, int32_t options);
 
 /// Inherited from QLayout
 ///
@@ -1482,6 +1574,10 @@ void q_stackedlayout_on_replace_widget(void* self, QLayoutItem* (*callback)(void
 ///
 QLayout* q_stackedlayout_layout(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_layout` instead
+///
+#define q_stackedlayout_qbase_layout q_stackedlayout_super_layout
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#layout)
@@ -1490,7 +1586,7 @@ QLayout* q_stackedlayout_layout(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-QLayout* q_stackedlayout_qbase_layout(void* self);
+QLayout* q_stackedlayout_super_layout(void* self);
 
 /// Inherited from QLayout
 ///
@@ -1514,6 +1610,10 @@ void q_stackedlayout_on_layout(void* self, QLayout* (*callback)());
 ///
 void q_stackedlayout_child_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_child_event` instead
+///
+#define q_stackedlayout_qbase_child_event q_stackedlayout_super_child_event
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#childEvent)
@@ -1523,7 +1623,7 @@ void q_stackedlayout_child_event(void* self, void* e);
 /// @param self QStackedLayout*
 /// @param e QChildEvent*
 ///
-void q_stackedlayout_qbase_child_event(void* self, void* e);
+void q_stackedlayout_super_child_event(void* self, void* e);
 
 /// Inherited from QLayout
 ///
@@ -1547,6 +1647,10 @@ void q_stackedlayout_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_stackedlayout_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_event` instead
+///
+#define q_stackedlayout_qbase_event q_stackedlayout_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1556,7 +1660,7 @@ bool q_stackedlayout_event(void* self, void* event);
 /// @param self QStackedLayout*
 /// @param event QEvent*
 ///
-bool q_stackedlayout_qbase_event(void* self, void* event);
+bool q_stackedlayout_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1581,6 +1685,10 @@ void q_stackedlayout_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_stackedlayout_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_event_filter` instead
+///
+#define q_stackedlayout_qbase_event_filter q_stackedlayout_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1591,7 +1699,7 @@ bool q_stackedlayout_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_stackedlayout_qbase_event_filter(void* self, void* watched, void* event);
+bool q_stackedlayout_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1615,6 +1723,10 @@ void q_stackedlayout_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 void q_stackedlayout_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_timer_event` instead
+///
+#define q_stackedlayout_qbase_timer_event q_stackedlayout_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1624,7 +1736,7 @@ void q_stackedlayout_timer_event(void* self, void* event);
 /// @param self QStackedLayout*
 /// @param event QTimerEvent*
 ///
-void q_stackedlayout_qbase_timer_event(void* self, void* event);
+void q_stackedlayout_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1648,6 +1760,10 @@ void q_stackedlayout_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_stackedlayout_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_custom_event` instead
+///
+#define q_stackedlayout_qbase_custom_event q_stackedlayout_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1657,7 +1773,7 @@ void q_stackedlayout_custom_event(void* self, void* event);
 /// @param self QStackedLayout*
 /// @param event QEvent*
 ///
-void q_stackedlayout_qbase_custom_event(void* self, void* event);
+void q_stackedlayout_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1681,6 +1797,10 @@ void q_stackedlayout_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void q_stackedlayout_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_connect_notify` instead
+///
+#define q_stackedlayout_qbase_connect_notify q_stackedlayout_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1690,7 +1810,7 @@ void q_stackedlayout_connect_notify(void* self, void* signal);
 /// @param self QStackedLayout*
 /// @param signal QMetaMethod*
 ///
-void q_stackedlayout_qbase_connect_notify(void* self, void* signal);
+void q_stackedlayout_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1714,6 +1834,10 @@ void q_stackedlayout_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void q_stackedlayout_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_disconnect_notify` instead
+///
+#define q_stackedlayout_qbase_disconnect_notify q_stackedlayout_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1723,7 +1847,7 @@ void q_stackedlayout_disconnect_notify(void* self, void* signal);
 /// @param self QStackedLayout*
 /// @param signal QMetaMethod*
 ///
-void q_stackedlayout_qbase_disconnect_notify(void* self, void* signal);
+void q_stackedlayout_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1747,6 +1871,10 @@ void q_stackedlayout_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 int32_t q_stackedlayout_minimum_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_minimum_height_for_width` instead
+///
+#define q_stackedlayout_qbase_minimum_height_for_width q_stackedlayout_super_minimum_height_for_width
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#minimumHeightForWidth)
@@ -1756,7 +1884,7 @@ int32_t q_stackedlayout_minimum_height_for_width(void* self, int param1);
 /// @param self QStackedLayout*
 /// @param param1 int
 ///
-int32_t q_stackedlayout_qbase_minimum_height_for_width(void* self, int param1);
+int32_t q_stackedlayout_super_minimum_height_for_width(void* self, int param1);
 
 /// Inherited from QLayoutItem
 ///
@@ -1779,6 +1907,10 @@ void q_stackedlayout_on_minimum_height_for_width(void* self, int32_t (*callback)
 ///
 QSpacerItem* q_stackedlayout_spacer_item(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_spacer_item` instead
+///
+#define q_stackedlayout_qbase_spacer_item q_stackedlayout_super_spacer_item
+
 /// Inherited from QLayoutItem
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayoutitem.html#spacerItem)
@@ -1787,7 +1919,7 @@ QSpacerItem* q_stackedlayout_spacer_item(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-QSpacerItem* q_stackedlayout_qbase_spacer_item(void* self);
+QSpacerItem* q_stackedlayout_super_spacer_item(void* self);
 
 /// Inherited from QLayoutItem
 ///
@@ -1811,6 +1943,10 @@ void q_stackedlayout_on_spacer_item(void* self, QSpacerItem* (*callback)());
 ///
 void q_stackedlayout_widget_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_widget_event` instead
+///
+#define q_stackedlayout_qbase_widget_event q_stackedlayout_super_widget_event
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#widgetEvent)
@@ -1820,7 +1956,7 @@ void q_stackedlayout_widget_event(void* self, void* param1);
 /// @param self QStackedLayout*
 /// @param param1 QEvent*
 ///
-void q_stackedlayout_qbase_widget_event(void* self, void* param1);
+void q_stackedlayout_super_widget_event(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -1844,6 +1980,10 @@ void q_stackedlayout_on_widget_event(void* self, void (*callback)(void*, void*))
 ///
 void q_stackedlayout_add_child_layout(void* self, void* l);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_add_child_layout` instead
+///
+#define q_stackedlayout_qbase_add_child_layout q_stackedlayout_super_add_child_layout
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildLayout)
@@ -1853,7 +1993,7 @@ void q_stackedlayout_add_child_layout(void* self, void* l);
 /// @param self QStackedLayout*
 /// @param l QLayout*
 ///
-void q_stackedlayout_qbase_add_child_layout(void* self, void* l);
+void q_stackedlayout_super_add_child_layout(void* self, void* l);
 
 /// Inherited from QLayout
 ///
@@ -1877,6 +2017,10 @@ void q_stackedlayout_on_add_child_layout(void* self, void (*callback)(void*, voi
 ///
 void q_stackedlayout_add_child_widget(void* self, void* w);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_add_child_widget` instead
+///
+#define q_stackedlayout_qbase_add_child_widget q_stackedlayout_super_add_child_widget
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#addChildWidget)
@@ -1886,7 +2030,7 @@ void q_stackedlayout_add_child_widget(void* self, void* w);
 /// @param self QStackedLayout*
 /// @param w QWidget*
 ///
-void q_stackedlayout_qbase_add_child_widget(void* self, void* w);
+void q_stackedlayout_super_add_child_widget(void* self, void* w);
 
 /// Inherited from QLayout
 ///
@@ -1910,6 +2054,10 @@ void q_stackedlayout_on_add_child_widget(void* self, void (*callback)(void*, voi
 ///
 bool q_stackedlayout_adopt_layout(void* self, void* layout);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_adopt_layout` instead
+///
+#define q_stackedlayout_qbase_adopt_layout q_stackedlayout_super_adopt_layout
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#adoptLayout)
@@ -1919,7 +2067,7 @@ bool q_stackedlayout_adopt_layout(void* self, void* layout);
 /// @param self QStackedLayout*
 /// @param layout QLayout*
 ///
-bool q_stackedlayout_qbase_adopt_layout(void* self, void* layout);
+bool q_stackedlayout_super_adopt_layout(void* self, void* layout);
 
 /// Inherited from QLayout
 ///
@@ -1943,6 +2091,10 @@ void q_stackedlayout_on_adopt_layout(void* self, bool (*callback)(void*, void*))
 ///
 QRect* q_stackedlayout_alignment_rect(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_alignment_rect` instead
+///
+#define q_stackedlayout_qbase_alignment_rect q_stackedlayout_super_alignment_rect
+
 /// Inherited from QLayout
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlayout.html#alignmentRect)
@@ -1952,7 +2104,7 @@ QRect* q_stackedlayout_alignment_rect(void* self, void* param1);
 /// @param self QStackedLayout*
 /// @param param1 QRect*
 ///
-QRect* q_stackedlayout_qbase_alignment_rect(void* self, void* param1);
+QRect* q_stackedlayout_super_alignment_rect(void* self, void* param1);
 
 /// Inherited from QLayout
 ///
@@ -1975,6 +2127,10 @@ void q_stackedlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, voi
 ///
 QObject* q_stackedlayout_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_sender` instead
+///
+#define q_stackedlayout_qbase_sender q_stackedlayout_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1983,7 +2139,7 @@ QObject* q_stackedlayout_sender(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-QObject* q_stackedlayout_qbase_sender(void* self);
+QObject* q_stackedlayout_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -2006,6 +2162,10 @@ void q_stackedlayout_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_stackedlayout_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_sender_signal_index` instead
+///
+#define q_stackedlayout_qbase_sender_signal_index q_stackedlayout_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -2014,7 +2174,7 @@ int32_t q_stackedlayout_sender_signal_index(void* self);
 ///
 /// @param self QStackedLayout*
 ///
-int32_t q_stackedlayout_qbase_sender_signal_index(void* self);
+int32_t q_stackedlayout_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -2038,6 +2198,10 @@ void q_stackedlayout_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_stackedlayout_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_receivers` instead
+///
+#define q_stackedlayout_qbase_receivers q_stackedlayout_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -2047,7 +2211,7 @@ int32_t q_stackedlayout_receivers(void* self, const char* signal);
 /// @param self QStackedLayout*
 /// @param signal const char*
 ///
-int32_t q_stackedlayout_qbase_receivers(void* self, const char* signal);
+int32_t q_stackedlayout_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -2071,6 +2235,10 @@ void q_stackedlayout_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool q_stackedlayout_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_stackedlayout_super_is_signal_connected` instead
+///
+#define q_stackedlayout_qbase_is_signal_connected q_stackedlayout_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -2080,7 +2248,7 @@ bool q_stackedlayout_is_signal_connected(void* self, void* signal);
 /// @param self QStackedLayout*
 /// @param signal QMetaMethod*
 ///
-bool q_stackedlayout_qbase_is_signal_connected(void* self, void* signal);
+bool q_stackedlayout_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

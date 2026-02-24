@@ -28,8 +28,8 @@ void k_replace_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KReplace_OnMetaObject((KReplace*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_replace_qbase_meta_object(void* self) {
-    return KReplace_QBaseMetaObject((KReplace*)self);
+const QMetaObject* k_replace_super_meta_object(void* self) {
+    return KReplace_SuperMetaObject((KReplace*)self);
 }
 
 void* k_replace_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void k_replace_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KReplace_OnMetacast((KReplace*)self, (intptr_t)callback);
 }
 
-void* k_replace_qbase_metacast(void* self, const char* param1) {
-    return KReplace_QBaseMetacast((KReplace*)self, param1);
+void* k_replace_super_metacast(void* self, const char* param1) {
+    return KReplace_SuperMetacast((KReplace*)self, param1);
 }
 
 int32_t k_replace_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void k_replace_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
     KReplace_OnMetacall((KReplace*)self, (intptr_t)callback);
 }
 
-int32_t k_replace_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KReplace_QBaseMetacall((KReplace*)self, param1, param2, param3);
+int32_t k_replace_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KReplace_SuperMetacall((KReplace*)self, param1, param2, param3);
 }
 
 const char* k_replace_tr(const char* s) {
@@ -75,8 +75,8 @@ void k_replace_on_reset_counts(void* self, void (*callback)()) {
     KReplace_OnResetCounts((KReplace*)self, (intptr_t)callback);
 }
 
-void k_replace_qbase_reset_counts(void* self) {
-    KReplace_QBaseResetCounts((KReplace*)self);
+void k_replace_super_reset_counts(void* self) {
+    KReplace_SuperResetCounts((KReplace*)self);
 }
 
 int32_t k_replace_replace(void* self) {
@@ -103,8 +103,8 @@ void k_replace_on_should_restart(void* self, bool (*callback)(void*, bool, bool)
     KReplace_OnShouldRestart((KReplace*)self, (intptr_t)callback);
 }
 
-bool k_replace_qbase_should_restart(void* self, bool forceAsking, bool showNumMatches) {
-    return KReplace_QBaseShouldRestart((KReplace*)self, forceAsking, showNumMatches);
+bool k_replace_super_should_restart(void* self, bool forceAsking, bool showNumMatches) {
+    return KReplace_SuperShouldRestart((KReplace*)self, forceAsking, showNumMatches);
 }
 
 void k_replace_display_final_dialog(void* self) {
@@ -115,8 +115,8 @@ void k_replace_on_display_final_dialog(void* self, void (*callback)()) {
     KReplace_OnDisplayFinalDialog((KReplace*)self, (intptr_t)callback);
 }
 
-void k_replace_qbase_display_final_dialog(void* self) {
-    KReplace_QBaseDisplayFinalDialog((KReplace*)self);
+void k_replace_super_display_final_dialog(void* self) {
+    KReplace_SuperDisplayFinalDialog((KReplace*)self);
 }
 
 void k_replace_text_replaced(void* self, const char* text, int replacementIndex, int replacedLength, int matchedLength) {
@@ -463,8 +463,8 @@ void k_replace_set_options(void* self, int64_t options) {
     KReplace_SetOptions((KReplace*)self, options);
 }
 
-void k_replace_qbase_set_options(void* self, int64_t options) {
-    KReplace_QBaseSetOptions((KReplace*)self, options);
+void k_replace_super_set_options(void* self, int64_t options) {
+    KReplace_SuperSetOptions((KReplace*)self, options);
 }
 
 void k_replace_on_set_options(void* self, void (*callback)(void*, int64_t)) {
@@ -475,8 +475,8 @@ bool k_replace_validate_match(void* self, const char* text, int index, int match
     return KReplace_ValidateMatch((KReplace*)self, qstring(text), index, matchedlength);
 }
 
-bool k_replace_qbase_validate_match(void* self, const char* text, int index, int matchedlength) {
-    return KReplace_QBaseValidateMatch((KReplace*)self, qstring(text), index, matchedlength);
+bool k_replace_super_validate_match(void* self, const char* text, int index, int matchedlength) {
+    return KReplace_SuperValidateMatch((KReplace*)self, qstring(text), index, matchedlength);
 }
 
 void k_replace_on_validate_match(void* self, bool (*callback)(void*, const char*, int, int)) {
@@ -487,8 +487,8 @@ bool k_replace_event(void* self, void* event) {
     return KReplace_Event((KReplace*)self, (QEvent*)event);
 }
 
-bool k_replace_qbase_event(void* self, void* event) {
-    return KReplace_QBaseEvent((KReplace*)self, (QEvent*)event);
+bool k_replace_super_event(void* self, void* event) {
+    return KReplace_SuperEvent((KReplace*)self, (QEvent*)event);
 }
 
 void k_replace_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -499,8 +499,8 @@ bool k_replace_event_filter(void* self, void* watched, void* event) {
     return KReplace_EventFilter((KReplace*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_replace_qbase_event_filter(void* self, void* watched, void* event) {
-    return KReplace_QBaseEventFilter((KReplace*)self, (QObject*)watched, (QEvent*)event);
+bool k_replace_super_event_filter(void* self, void* watched, void* event) {
+    return KReplace_SuperEventFilter((KReplace*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_replace_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -511,8 +511,8 @@ void k_replace_timer_event(void* self, void* event) {
     KReplace_TimerEvent((KReplace*)self, (QTimerEvent*)event);
 }
 
-void k_replace_qbase_timer_event(void* self, void* event) {
-    KReplace_QBaseTimerEvent((KReplace*)self, (QTimerEvent*)event);
+void k_replace_super_timer_event(void* self, void* event) {
+    KReplace_SuperTimerEvent((KReplace*)self, (QTimerEvent*)event);
 }
 
 void k_replace_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -523,8 +523,8 @@ void k_replace_child_event(void* self, void* event) {
     KReplace_ChildEvent((KReplace*)self, (QChildEvent*)event);
 }
 
-void k_replace_qbase_child_event(void* self, void* event) {
-    KReplace_QBaseChildEvent((KReplace*)self, (QChildEvent*)event);
+void k_replace_super_child_event(void* self, void* event) {
+    KReplace_SuperChildEvent((KReplace*)self, (QChildEvent*)event);
 }
 
 void k_replace_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -535,8 +535,8 @@ void k_replace_custom_event(void* self, void* event) {
     KReplace_CustomEvent((KReplace*)self, (QEvent*)event);
 }
 
-void k_replace_qbase_custom_event(void* self, void* event) {
-    KReplace_QBaseCustomEvent((KReplace*)self, (QEvent*)event);
+void k_replace_super_custom_event(void* self, void* event) {
+    KReplace_SuperCustomEvent((KReplace*)self, (QEvent*)event);
 }
 
 void k_replace_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -547,8 +547,8 @@ void k_replace_connect_notify(void* self, void* signal) {
     KReplace_ConnectNotify((KReplace*)self, (QMetaMethod*)signal);
 }
 
-void k_replace_qbase_connect_notify(void* self, void* signal) {
-    KReplace_QBaseConnectNotify((KReplace*)self, (QMetaMethod*)signal);
+void k_replace_super_connect_notify(void* self, void* signal) {
+    KReplace_SuperConnectNotify((KReplace*)self, (QMetaMethod*)signal);
 }
 
 void k_replace_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -559,8 +559,8 @@ void k_replace_disconnect_notify(void* self, void* signal) {
     KReplace_DisconnectNotify((KReplace*)self, (QMetaMethod*)signal);
 }
 
-void k_replace_qbase_disconnect_notify(void* self, void* signal) {
-    KReplace_QBaseDisconnectNotify((KReplace*)self, (QMetaMethod*)signal);
+void k_replace_super_disconnect_notify(void* self, void* signal) {
+    KReplace_SuperDisconnectNotify((KReplace*)self, (QMetaMethod*)signal);
 }
 
 void k_replace_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -571,8 +571,8 @@ QWidget* k_replace_parent_widget(void* self) {
     return KReplace_ParentWidget((KReplace*)self);
 }
 
-QWidget* k_replace_qbase_parent_widget(void* self) {
-    return KReplace_QBaseParentWidget((KReplace*)self);
+QWidget* k_replace_super_parent_widget(void* self) {
+    return KReplace_SuperParentWidget((KReplace*)self);
 }
 
 void k_replace_on_parent_widget(void* self, QWidget* (*callback)()) {
@@ -583,8 +583,8 @@ QWidget* k_replace_dialogs_parent(void* self) {
     return KReplace_DialogsParent((KReplace*)self);
 }
 
-QWidget* k_replace_qbase_dialogs_parent(void* self) {
-    return KReplace_QBaseDialogsParent((KReplace*)self);
+QWidget* k_replace_super_dialogs_parent(void* self) {
+    return KReplace_SuperDialogsParent((KReplace*)self);
 }
 
 void k_replace_on_dialogs_parent(void* self, QWidget* (*callback)()) {
@@ -595,8 +595,8 @@ QObject* k_replace_sender(void* self) {
     return KReplace_Sender((KReplace*)self);
 }
 
-QObject* k_replace_qbase_sender(void* self) {
-    return KReplace_QBaseSender((KReplace*)self);
+QObject* k_replace_super_sender(void* self) {
+    return KReplace_SuperSender((KReplace*)self);
 }
 
 void k_replace_on_sender(void* self, QObject* (*callback)()) {
@@ -607,8 +607,8 @@ int32_t k_replace_sender_signal_index(void* self) {
     return KReplace_SenderSignalIndex((KReplace*)self);
 }
 
-int32_t k_replace_qbase_sender_signal_index(void* self) {
-    return KReplace_QBaseSenderSignalIndex((KReplace*)self);
+int32_t k_replace_super_sender_signal_index(void* self) {
+    return KReplace_SuperSenderSignalIndex((KReplace*)self);
 }
 
 void k_replace_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -619,8 +619,8 @@ int32_t k_replace_receivers(void* self, const char* signal) {
     return KReplace_Receivers((KReplace*)self, signal);
 }
 
-int32_t k_replace_qbase_receivers(void* self, const char* signal) {
-    return KReplace_QBaseReceivers((KReplace*)self, signal);
+int32_t k_replace_super_receivers(void* self, const char* signal) {
+    return KReplace_SuperReceivers((KReplace*)self, signal);
 }
 
 void k_replace_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -631,8 +631,8 @@ bool k_replace_is_signal_connected(void* self, void* signal) {
     return KReplace_IsSignalConnected((KReplace*)self, (QMetaMethod*)signal);
 }
 
-bool k_replace_qbase_is_signal_connected(void* self, void* signal) {
-    return KReplace_QBaseIsSignalConnected((KReplace*)self, (QMetaMethod*)signal);
+bool k_replace_super_is_signal_connected(void* self, void* signal) {
+    return KReplace_SuperIsSignalConnected((KReplace*)self, (QMetaMethod*)signal);
 }
 
 void k_replace_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

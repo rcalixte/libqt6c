@@ -33,8 +33,8 @@ void k_nswidgets__button_on_meta_object(void* self, const QMetaObject* (*callbac
     KNSWidgets__Button_OnMetaObject((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_nswidgets__button_qbase_meta_object(void* self) {
-    return KNSWidgets__Button_QBaseMetaObject((KNSWidgets__Button*)self);
+const QMetaObject* k_nswidgets__button_super_meta_object(void* self) {
+    return KNSWidgets__Button_SuperMetaObject((KNSWidgets__Button*)self);
 }
 
 void* k_nswidgets__button_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void k_nswidgets__button_on_metacast(void* self, void* (*callback)(void*, const 
     KNSWidgets__Button_OnMetacast((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
-void* k_nswidgets__button_qbase_metacast(void* self, const char* param1) {
-    return KNSWidgets__Button_QBaseMetacast((KNSWidgets__Button*)self, param1);
+void* k_nswidgets__button_super_metacast(void* self, const char* param1) {
+    return KNSWidgets__Button_SuperMetacast((KNSWidgets__Button*)self, param1);
 }
 
 int32_t k_nswidgets__button_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void k_nswidgets__button_on_metacall(void* self, int32_t (*callback)(void*, int3
     KNSWidgets__Button_OnMetacall((KNSWidgets__Button*)self, (intptr_t)callback);
 }
 
-int32_t k_nswidgets__button_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNSWidgets__Button_QBaseMetacall((KNSWidgets__Button*)self, param1, param2, param3);
+int32_t k_nswidgets__button_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNSWidgets__Button_SuperMetacall((KNSWidgets__Button*)self, param1, param2, param3);
 }
 
 const char* k_nswidgets__button_tr(const char* s) {
@@ -1662,8 +1662,8 @@ QSize* k_nswidgets__button_size_hint(void* self) {
     return KNSWidgets__Button_SizeHint((KNSWidgets__Button*)self);
 }
 
-QSize* k_nswidgets__button_qbase_size_hint(void* self) {
-    return KNSWidgets__Button_QBaseSizeHint((KNSWidgets__Button*)self);
+QSize* k_nswidgets__button_super_size_hint(void* self) {
+    return KNSWidgets__Button_SuperSizeHint((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1674,8 +1674,8 @@ QSize* k_nswidgets__button_minimum_size_hint(void* self) {
     return KNSWidgets__Button_MinimumSizeHint((KNSWidgets__Button*)self);
 }
 
-QSize* k_nswidgets__button_qbase_minimum_size_hint(void* self) {
-    return KNSWidgets__Button_QBaseMinimumSizeHint((KNSWidgets__Button*)self);
+QSize* k_nswidgets__button_super_minimum_size_hint(void* self) {
+    return KNSWidgets__Button_SuperMinimumSizeHint((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1686,8 +1686,8 @@ bool k_nswidgets__button_event(void* self, void* e) {
     return KNSWidgets__Button_Event((KNSWidgets__Button*)self, (QEvent*)e);
 }
 
-bool k_nswidgets__button_qbase_event(void* self, void* e) {
-    return KNSWidgets__Button_QBaseEvent((KNSWidgets__Button*)self, (QEvent*)e);
+bool k_nswidgets__button_super_event(void* self, void* e) {
+    return KNSWidgets__Button_SuperEvent((KNSWidgets__Button*)self, (QEvent*)e);
 }
 
 void k_nswidgets__button_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1698,8 +1698,8 @@ void k_nswidgets__button_paint_event(void* self, void* param1) {
     KNSWidgets__Button_PaintEvent((KNSWidgets__Button*)self, (QPaintEvent*)param1);
 }
 
-void k_nswidgets__button_qbase_paint_event(void* self, void* param1) {
-    KNSWidgets__Button_QBasePaintEvent((KNSWidgets__Button*)self, (QPaintEvent*)param1);
+void k_nswidgets__button_super_paint_event(void* self, void* param1) {
+    KNSWidgets__Button_SuperPaintEvent((KNSWidgets__Button*)self, (QPaintEvent*)param1);
 }
 
 void k_nswidgets__button_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1710,8 +1710,8 @@ void k_nswidgets__button_key_press_event(void* self, void* param1) {
     KNSWidgets__Button_KeyPressEvent((KNSWidgets__Button*)self, (QKeyEvent*)param1);
 }
 
-void k_nswidgets__button_qbase_key_press_event(void* self, void* param1) {
-    KNSWidgets__Button_QBaseKeyPressEvent((KNSWidgets__Button*)self, (QKeyEvent*)param1);
+void k_nswidgets__button_super_key_press_event(void* self, void* param1) {
+    KNSWidgets__Button_SuperKeyPressEvent((KNSWidgets__Button*)self, (QKeyEvent*)param1);
 }
 
 void k_nswidgets__button_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1722,8 +1722,8 @@ void k_nswidgets__button_focus_in_event(void* self, void* param1) {
     KNSWidgets__Button_FocusInEvent((KNSWidgets__Button*)self, (QFocusEvent*)param1);
 }
 
-void k_nswidgets__button_qbase_focus_in_event(void* self, void* param1) {
-    KNSWidgets__Button_QBaseFocusInEvent((KNSWidgets__Button*)self, (QFocusEvent*)param1);
+void k_nswidgets__button_super_focus_in_event(void* self, void* param1) {
+    KNSWidgets__Button_SuperFocusInEvent((KNSWidgets__Button*)self, (QFocusEvent*)param1);
 }
 
 void k_nswidgets__button_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1734,8 +1734,8 @@ void k_nswidgets__button_focus_out_event(void* self, void* param1) {
     KNSWidgets__Button_FocusOutEvent((KNSWidgets__Button*)self, (QFocusEvent*)param1);
 }
 
-void k_nswidgets__button_qbase_focus_out_event(void* self, void* param1) {
-    KNSWidgets__Button_QBaseFocusOutEvent((KNSWidgets__Button*)self, (QFocusEvent*)param1);
+void k_nswidgets__button_super_focus_out_event(void* self, void* param1) {
+    KNSWidgets__Button_SuperFocusOutEvent((KNSWidgets__Button*)self, (QFocusEvent*)param1);
 }
 
 void k_nswidgets__button_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1746,8 +1746,8 @@ void k_nswidgets__button_mouse_move_event(void* self, void* param1) {
     KNSWidgets__Button_MouseMoveEvent((KNSWidgets__Button*)self, (QMouseEvent*)param1);
 }
 
-void k_nswidgets__button_qbase_mouse_move_event(void* self, void* param1) {
-    KNSWidgets__Button_QBaseMouseMoveEvent((KNSWidgets__Button*)self, (QMouseEvent*)param1);
+void k_nswidgets__button_super_mouse_move_event(void* self, void* param1) {
+    KNSWidgets__Button_SuperMouseMoveEvent((KNSWidgets__Button*)self, (QMouseEvent*)param1);
 }
 
 void k_nswidgets__button_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1758,8 +1758,8 @@ void k_nswidgets__button_init_style_option(void* self, void* option) {
     KNSWidgets__Button_InitStyleOption((KNSWidgets__Button*)self, (QStyleOptionButton*)option);
 }
 
-void k_nswidgets__button_qbase_init_style_option(void* self, void* option) {
-    KNSWidgets__Button_QBaseInitStyleOption((KNSWidgets__Button*)self, (QStyleOptionButton*)option);
+void k_nswidgets__button_super_init_style_option(void* self, void* option) {
+    KNSWidgets__Button_SuperInitStyleOption((KNSWidgets__Button*)self, (QStyleOptionButton*)option);
 }
 
 void k_nswidgets__button_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1770,8 +1770,8 @@ bool k_nswidgets__button_hit_button(void* self, void* pos) {
     return KNSWidgets__Button_HitButton((KNSWidgets__Button*)self, (QPoint*)pos);
 }
 
-bool k_nswidgets__button_qbase_hit_button(void* self, void* pos) {
-    return KNSWidgets__Button_QBaseHitButton((KNSWidgets__Button*)self, (QPoint*)pos);
+bool k_nswidgets__button_super_hit_button(void* self, void* pos) {
+    return KNSWidgets__Button_SuperHitButton((KNSWidgets__Button*)self, (QPoint*)pos);
 }
 
 void k_nswidgets__button_on_hit_button(void* self, bool (*callback)(void*, void*)) {
@@ -1782,8 +1782,8 @@ void k_nswidgets__button_check_state_set(void* self) {
     KNSWidgets__Button_CheckStateSet((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_qbase_check_state_set(void* self) {
-    KNSWidgets__Button_QBaseCheckStateSet((KNSWidgets__Button*)self);
+void k_nswidgets__button_super_check_state_set(void* self) {
+    KNSWidgets__Button_SuperCheckStateSet((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_check_state_set(void* self, void (*callback)()) {
@@ -1794,8 +1794,8 @@ void k_nswidgets__button_next_check_state(void* self) {
     KNSWidgets__Button_NextCheckState((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_qbase_next_check_state(void* self) {
-    KNSWidgets__Button_QBaseNextCheckState((KNSWidgets__Button*)self);
+void k_nswidgets__button_super_next_check_state(void* self) {
+    KNSWidgets__Button_SuperNextCheckState((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_next_check_state(void* self, void (*callback)()) {
@@ -1806,8 +1806,8 @@ void k_nswidgets__button_key_release_event(void* self, void* e) {
     KNSWidgets__Button_KeyReleaseEvent((KNSWidgets__Button*)self, (QKeyEvent*)e);
 }
 
-void k_nswidgets__button_qbase_key_release_event(void* self, void* e) {
-    KNSWidgets__Button_QBaseKeyReleaseEvent((KNSWidgets__Button*)self, (QKeyEvent*)e);
+void k_nswidgets__button_super_key_release_event(void* self, void* e) {
+    KNSWidgets__Button_SuperKeyReleaseEvent((KNSWidgets__Button*)self, (QKeyEvent*)e);
 }
 
 void k_nswidgets__button_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ void k_nswidgets__button_mouse_press_event(void* self, void* e) {
     KNSWidgets__Button_MousePressEvent((KNSWidgets__Button*)self, (QMouseEvent*)e);
 }
 
-void k_nswidgets__button_qbase_mouse_press_event(void* self, void* e) {
-    KNSWidgets__Button_QBaseMousePressEvent((KNSWidgets__Button*)self, (QMouseEvent*)e);
+void k_nswidgets__button_super_mouse_press_event(void* self, void* e) {
+    KNSWidgets__Button_SuperMousePressEvent((KNSWidgets__Button*)self, (QMouseEvent*)e);
 }
 
 void k_nswidgets__button_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1830,8 +1830,8 @@ void k_nswidgets__button_mouse_release_event(void* self, void* e) {
     KNSWidgets__Button_MouseReleaseEvent((KNSWidgets__Button*)self, (QMouseEvent*)e);
 }
 
-void k_nswidgets__button_qbase_mouse_release_event(void* self, void* e) {
-    KNSWidgets__Button_QBaseMouseReleaseEvent((KNSWidgets__Button*)self, (QMouseEvent*)e);
+void k_nswidgets__button_super_mouse_release_event(void* self, void* e) {
+    KNSWidgets__Button_SuperMouseReleaseEvent((KNSWidgets__Button*)self, (QMouseEvent*)e);
 }
 
 void k_nswidgets__button_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1842,8 +1842,8 @@ void k_nswidgets__button_change_event(void* self, void* e) {
     KNSWidgets__Button_ChangeEvent((KNSWidgets__Button*)self, (QEvent*)e);
 }
 
-void k_nswidgets__button_qbase_change_event(void* self, void* e) {
-    KNSWidgets__Button_QBaseChangeEvent((KNSWidgets__Button*)self, (QEvent*)e);
+void k_nswidgets__button_super_change_event(void* self, void* e) {
+    KNSWidgets__Button_SuperChangeEvent((KNSWidgets__Button*)self, (QEvent*)e);
 }
 
 void k_nswidgets__button_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1854,8 +1854,8 @@ void k_nswidgets__button_timer_event(void* self, void* e) {
     KNSWidgets__Button_TimerEvent((KNSWidgets__Button*)self, (QTimerEvent*)e);
 }
 
-void k_nswidgets__button_qbase_timer_event(void* self, void* e) {
-    KNSWidgets__Button_QBaseTimerEvent((KNSWidgets__Button*)self, (QTimerEvent*)e);
+void k_nswidgets__button_super_timer_event(void* self, void* e) {
+    KNSWidgets__Button_SuperTimerEvent((KNSWidgets__Button*)self, (QTimerEvent*)e);
 }
 
 void k_nswidgets__button_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1866,8 +1866,8 @@ int32_t k_nswidgets__button_dev_type(void* self) {
     return KNSWidgets__Button_DevType((KNSWidgets__Button*)self);
 }
 
-int32_t k_nswidgets__button_qbase_dev_type(void* self) {
-    return KNSWidgets__Button_QBaseDevType((KNSWidgets__Button*)self);
+int32_t k_nswidgets__button_super_dev_type(void* self) {
+    return KNSWidgets__Button_SuperDevType((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1878,8 +1878,8 @@ void k_nswidgets__button_set_visible(void* self, bool visible) {
     KNSWidgets__Button_SetVisible((KNSWidgets__Button*)self, visible);
 }
 
-void k_nswidgets__button_qbase_set_visible(void* self, bool visible) {
-    KNSWidgets__Button_QBaseSetVisible((KNSWidgets__Button*)self, visible);
+void k_nswidgets__button_super_set_visible(void* self, bool visible) {
+    KNSWidgets__Button_SuperSetVisible((KNSWidgets__Button*)self, visible);
 }
 
 void k_nswidgets__button_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1890,8 +1890,8 @@ int32_t k_nswidgets__button_height_for_width(void* self, int param1) {
     return KNSWidgets__Button_HeightForWidth((KNSWidgets__Button*)self, param1);
 }
 
-int32_t k_nswidgets__button_qbase_height_for_width(void* self, int param1) {
-    return KNSWidgets__Button_QBaseHeightForWidth((KNSWidgets__Button*)self, param1);
+int32_t k_nswidgets__button_super_height_for_width(void* self, int param1) {
+    return KNSWidgets__Button_SuperHeightForWidth((KNSWidgets__Button*)self, param1);
 }
 
 void k_nswidgets__button_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1902,8 +1902,8 @@ bool k_nswidgets__button_has_height_for_width(void* self) {
     return KNSWidgets__Button_HasHeightForWidth((KNSWidgets__Button*)self);
 }
 
-bool k_nswidgets__button_qbase_has_height_for_width(void* self) {
-    return KNSWidgets__Button_QBaseHasHeightForWidth((KNSWidgets__Button*)self);
+bool k_nswidgets__button_super_has_height_for_width(void* self) {
+    return KNSWidgets__Button_SuperHasHeightForWidth((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1914,8 +1914,8 @@ QPaintEngine* k_nswidgets__button_paint_engine(void* self) {
     return KNSWidgets__Button_PaintEngine((KNSWidgets__Button*)self);
 }
 
-QPaintEngine* k_nswidgets__button_qbase_paint_engine(void* self) {
-    return KNSWidgets__Button_QBasePaintEngine((KNSWidgets__Button*)self);
+QPaintEngine* k_nswidgets__button_super_paint_engine(void* self) {
+    return KNSWidgets__Button_SuperPaintEngine((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1926,8 +1926,8 @@ void k_nswidgets__button_mouse_double_click_event(void* self, void* event) {
     KNSWidgets__Button_MouseDoubleClickEvent((KNSWidgets__Button*)self, (QMouseEvent*)event);
 }
 
-void k_nswidgets__button_qbase_mouse_double_click_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseMouseDoubleClickEvent((KNSWidgets__Button*)self, (QMouseEvent*)event);
+void k_nswidgets__button_super_mouse_double_click_event(void* self, void* event) {
+    KNSWidgets__Button_SuperMouseDoubleClickEvent((KNSWidgets__Button*)self, (QMouseEvent*)event);
 }
 
 void k_nswidgets__button_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ void k_nswidgets__button_wheel_event(void* self, void* event) {
     KNSWidgets__Button_WheelEvent((KNSWidgets__Button*)self, (QWheelEvent*)event);
 }
 
-void k_nswidgets__button_qbase_wheel_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseWheelEvent((KNSWidgets__Button*)self, (QWheelEvent*)event);
+void k_nswidgets__button_super_wheel_event(void* self, void* event) {
+    KNSWidgets__Button_SuperWheelEvent((KNSWidgets__Button*)self, (QWheelEvent*)event);
 }
 
 void k_nswidgets__button_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ void k_nswidgets__button_enter_event(void* self, void* event) {
     KNSWidgets__Button_EnterEvent((KNSWidgets__Button*)self, (QEnterEvent*)event);
 }
 
-void k_nswidgets__button_qbase_enter_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseEnterEvent((KNSWidgets__Button*)self, (QEnterEvent*)event);
+void k_nswidgets__button_super_enter_event(void* self, void* event) {
+    KNSWidgets__Button_SuperEnterEvent((KNSWidgets__Button*)self, (QEnterEvent*)event);
 }
 
 void k_nswidgets__button_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1962,8 +1962,8 @@ void k_nswidgets__button_leave_event(void* self, void* event) {
     KNSWidgets__Button_LeaveEvent((KNSWidgets__Button*)self, (QEvent*)event);
 }
 
-void k_nswidgets__button_qbase_leave_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseLeaveEvent((KNSWidgets__Button*)self, (QEvent*)event);
+void k_nswidgets__button_super_leave_event(void* self, void* event) {
+    KNSWidgets__Button_SuperLeaveEvent((KNSWidgets__Button*)self, (QEvent*)event);
 }
 
 void k_nswidgets__button_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ void k_nswidgets__button_move_event(void* self, void* event) {
     KNSWidgets__Button_MoveEvent((KNSWidgets__Button*)self, (QMoveEvent*)event);
 }
 
-void k_nswidgets__button_qbase_move_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseMoveEvent((KNSWidgets__Button*)self, (QMoveEvent*)event);
+void k_nswidgets__button_super_move_event(void* self, void* event) {
+    KNSWidgets__Button_SuperMoveEvent((KNSWidgets__Button*)self, (QMoveEvent*)event);
 }
 
 void k_nswidgets__button_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ void k_nswidgets__button_resize_event(void* self, void* event) {
     KNSWidgets__Button_ResizeEvent((KNSWidgets__Button*)self, (QResizeEvent*)event);
 }
 
-void k_nswidgets__button_qbase_resize_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseResizeEvent((KNSWidgets__Button*)self, (QResizeEvent*)event);
+void k_nswidgets__button_super_resize_event(void* self, void* event) {
+    KNSWidgets__Button_SuperResizeEvent((KNSWidgets__Button*)self, (QResizeEvent*)event);
 }
 
 void k_nswidgets__button_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void k_nswidgets__button_close_event(void* self, void* event) {
     KNSWidgets__Button_CloseEvent((KNSWidgets__Button*)self, (QCloseEvent*)event);
 }
 
-void k_nswidgets__button_qbase_close_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseCloseEvent((KNSWidgets__Button*)self, (QCloseEvent*)event);
+void k_nswidgets__button_super_close_event(void* self, void* event) {
+    KNSWidgets__Button_SuperCloseEvent((KNSWidgets__Button*)self, (QCloseEvent*)event);
 }
 
 void k_nswidgets__button_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void k_nswidgets__button_context_menu_event(void* self, void* event) {
     KNSWidgets__Button_ContextMenuEvent((KNSWidgets__Button*)self, (QContextMenuEvent*)event);
 }
 
-void k_nswidgets__button_qbase_context_menu_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseContextMenuEvent((KNSWidgets__Button*)self, (QContextMenuEvent*)event);
+void k_nswidgets__button_super_context_menu_event(void* self, void* event) {
+    KNSWidgets__Button_SuperContextMenuEvent((KNSWidgets__Button*)self, (QContextMenuEvent*)event);
 }
 
 void k_nswidgets__button_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void k_nswidgets__button_tablet_event(void* self, void* event) {
     KNSWidgets__Button_TabletEvent((KNSWidgets__Button*)self, (QTabletEvent*)event);
 }
 
-void k_nswidgets__button_qbase_tablet_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseTabletEvent((KNSWidgets__Button*)self, (QTabletEvent*)event);
+void k_nswidgets__button_super_tablet_event(void* self, void* event) {
+    KNSWidgets__Button_SuperTabletEvent((KNSWidgets__Button*)self, (QTabletEvent*)event);
 }
 
 void k_nswidgets__button_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void k_nswidgets__button_action_event(void* self, void* event) {
     KNSWidgets__Button_ActionEvent((KNSWidgets__Button*)self, (QActionEvent*)event);
 }
 
-void k_nswidgets__button_qbase_action_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseActionEvent((KNSWidgets__Button*)self, (QActionEvent*)event);
+void k_nswidgets__button_super_action_event(void* self, void* event) {
+    KNSWidgets__Button_SuperActionEvent((KNSWidgets__Button*)self, (QActionEvent*)event);
 }
 
 void k_nswidgets__button_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void k_nswidgets__button_drag_enter_event(void* self, void* event) {
     KNSWidgets__Button_DragEnterEvent((KNSWidgets__Button*)self, (QDragEnterEvent*)event);
 }
 
-void k_nswidgets__button_qbase_drag_enter_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseDragEnterEvent((KNSWidgets__Button*)self, (QDragEnterEvent*)event);
+void k_nswidgets__button_super_drag_enter_event(void* self, void* event) {
+    KNSWidgets__Button_SuperDragEnterEvent((KNSWidgets__Button*)self, (QDragEnterEvent*)event);
 }
 
 void k_nswidgets__button_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void k_nswidgets__button_drag_move_event(void* self, void* event) {
     KNSWidgets__Button_DragMoveEvent((KNSWidgets__Button*)self, (QDragMoveEvent*)event);
 }
 
-void k_nswidgets__button_qbase_drag_move_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseDragMoveEvent((KNSWidgets__Button*)self, (QDragMoveEvent*)event);
+void k_nswidgets__button_super_drag_move_event(void* self, void* event) {
+    KNSWidgets__Button_SuperDragMoveEvent((KNSWidgets__Button*)self, (QDragMoveEvent*)event);
 }
 
 void k_nswidgets__button_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_nswidgets__button_drag_leave_event(void* self, void* event) {
     KNSWidgets__Button_DragLeaveEvent((KNSWidgets__Button*)self, (QDragLeaveEvent*)event);
 }
 
-void k_nswidgets__button_qbase_drag_leave_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseDragLeaveEvent((KNSWidgets__Button*)self, (QDragLeaveEvent*)event);
+void k_nswidgets__button_super_drag_leave_event(void* self, void* event) {
+    KNSWidgets__Button_SuperDragLeaveEvent((KNSWidgets__Button*)self, (QDragLeaveEvent*)event);
 }
 
 void k_nswidgets__button_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void k_nswidgets__button_drop_event(void* self, void* event) {
     KNSWidgets__Button_DropEvent((KNSWidgets__Button*)self, (QDropEvent*)event);
 }
 
-void k_nswidgets__button_qbase_drop_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseDropEvent((KNSWidgets__Button*)self, (QDropEvent*)event);
+void k_nswidgets__button_super_drop_event(void* self, void* event) {
+    KNSWidgets__Button_SuperDropEvent((KNSWidgets__Button*)self, (QDropEvent*)event);
 }
 
 void k_nswidgets__button_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void k_nswidgets__button_show_event(void* self, void* event) {
     KNSWidgets__Button_ShowEvent((KNSWidgets__Button*)self, (QShowEvent*)event);
 }
 
-void k_nswidgets__button_qbase_show_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseShowEvent((KNSWidgets__Button*)self, (QShowEvent*)event);
+void k_nswidgets__button_super_show_event(void* self, void* event) {
+    KNSWidgets__Button_SuperShowEvent((KNSWidgets__Button*)self, (QShowEvent*)event);
 }
 
 void k_nswidgets__button_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void k_nswidgets__button_hide_event(void* self, void* event) {
     KNSWidgets__Button_HideEvent((KNSWidgets__Button*)self, (QHideEvent*)event);
 }
 
-void k_nswidgets__button_qbase_hide_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseHideEvent((KNSWidgets__Button*)self, (QHideEvent*)event);
+void k_nswidgets__button_super_hide_event(void* self, void* event) {
+    KNSWidgets__Button_SuperHideEvent((KNSWidgets__Button*)self, (QHideEvent*)event);
 }
 
 void k_nswidgets__button_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ bool k_nswidgets__button_native_event(void* self, char* eventType, void* message
     return KNSWidgets__Button_NativeEvent((KNSWidgets__Button*)self, qstring(eventType), message, result);
 }
 
-bool k_nswidgets__button_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KNSWidgets__Button_QBaseNativeEvent((KNSWidgets__Button*)self, qstring(eventType), message, result);
+bool k_nswidgets__button_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KNSWidgets__Button_SuperNativeEvent((KNSWidgets__Button*)self, qstring(eventType), message, result);
 }
 
 void k_nswidgets__button_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2130,8 +2130,8 @@ int32_t k_nswidgets__button_metric(void* self, int32_t param1) {
     return KNSWidgets__Button_Metric((KNSWidgets__Button*)self, param1);
 }
 
-int32_t k_nswidgets__button_qbase_metric(void* self, int32_t param1) {
-    return KNSWidgets__Button_QBaseMetric((KNSWidgets__Button*)self, param1);
+int32_t k_nswidgets__button_super_metric(void* self, int32_t param1) {
+    return KNSWidgets__Button_SuperMetric((KNSWidgets__Button*)self, param1);
 }
 
 void k_nswidgets__button_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2142,8 +2142,8 @@ void k_nswidgets__button_init_painter(void* self, void* painter) {
     KNSWidgets__Button_InitPainter((KNSWidgets__Button*)self, (QPainter*)painter);
 }
 
-void k_nswidgets__button_qbase_init_painter(void* self, void* painter) {
-    KNSWidgets__Button_QBaseInitPainter((KNSWidgets__Button*)self, (QPainter*)painter);
+void k_nswidgets__button_super_init_painter(void* self, void* painter) {
+    KNSWidgets__Button_SuperInitPainter((KNSWidgets__Button*)self, (QPainter*)painter);
 }
 
 void k_nswidgets__button_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2154,8 +2154,8 @@ QPaintDevice* k_nswidgets__button_redirected(void* self, void* offset) {
     return KNSWidgets__Button_Redirected((KNSWidgets__Button*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_nswidgets__button_qbase_redirected(void* self, void* offset) {
-    return KNSWidgets__Button_QBaseRedirected((KNSWidgets__Button*)self, (QPoint*)offset);
+QPaintDevice* k_nswidgets__button_super_redirected(void* self, void* offset) {
+    return KNSWidgets__Button_SuperRedirected((KNSWidgets__Button*)self, (QPoint*)offset);
 }
 
 void k_nswidgets__button_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2166,8 +2166,8 @@ QPainter* k_nswidgets__button_shared_painter(void* self) {
     return KNSWidgets__Button_SharedPainter((KNSWidgets__Button*)self);
 }
 
-QPainter* k_nswidgets__button_qbase_shared_painter(void* self) {
-    return KNSWidgets__Button_QBaseSharedPainter((KNSWidgets__Button*)self);
+QPainter* k_nswidgets__button_super_shared_painter(void* self) {
+    return KNSWidgets__Button_SuperSharedPainter((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2178,8 +2178,8 @@ void k_nswidgets__button_input_method_event(void* self, void* param1) {
     KNSWidgets__Button_InputMethodEvent((KNSWidgets__Button*)self, (QInputMethodEvent*)param1);
 }
 
-void k_nswidgets__button_qbase_input_method_event(void* self, void* param1) {
-    KNSWidgets__Button_QBaseInputMethodEvent((KNSWidgets__Button*)self, (QInputMethodEvent*)param1);
+void k_nswidgets__button_super_input_method_event(void* self, void* param1) {
+    KNSWidgets__Button_SuperInputMethodEvent((KNSWidgets__Button*)self, (QInputMethodEvent*)param1);
 }
 
 void k_nswidgets__button_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2190,8 +2190,8 @@ QVariant* k_nswidgets__button_input_method_query(void* self, int32_t param1) {
     return KNSWidgets__Button_InputMethodQuery((KNSWidgets__Button*)self, param1);
 }
 
-QVariant* k_nswidgets__button_qbase_input_method_query(void* self, int32_t param1) {
-    return KNSWidgets__Button_QBaseInputMethodQuery((KNSWidgets__Button*)self, param1);
+QVariant* k_nswidgets__button_super_input_method_query(void* self, int32_t param1) {
+    return KNSWidgets__Button_SuperInputMethodQuery((KNSWidgets__Button*)self, param1);
 }
 
 void k_nswidgets__button_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2202,8 +2202,8 @@ bool k_nswidgets__button_focus_next_prev_child(void* self, bool next) {
     return KNSWidgets__Button_FocusNextPrevChild((KNSWidgets__Button*)self, next);
 }
 
-bool k_nswidgets__button_qbase_focus_next_prev_child(void* self, bool next) {
-    return KNSWidgets__Button_QBaseFocusNextPrevChild((KNSWidgets__Button*)self, next);
+bool k_nswidgets__button_super_focus_next_prev_child(void* self, bool next) {
+    return KNSWidgets__Button_SuperFocusNextPrevChild((KNSWidgets__Button*)self, next);
 }
 
 void k_nswidgets__button_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2214,8 +2214,8 @@ bool k_nswidgets__button_event_filter(void* self, void* watched, void* event) {
     return KNSWidgets__Button_EventFilter((KNSWidgets__Button*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_nswidgets__button_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNSWidgets__Button_QBaseEventFilter((KNSWidgets__Button*)self, (QObject*)watched, (QEvent*)event);
+bool k_nswidgets__button_super_event_filter(void* self, void* watched, void* event) {
+    return KNSWidgets__Button_SuperEventFilter((KNSWidgets__Button*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_nswidgets__button_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2226,8 +2226,8 @@ void k_nswidgets__button_child_event(void* self, void* event) {
     KNSWidgets__Button_ChildEvent((KNSWidgets__Button*)self, (QChildEvent*)event);
 }
 
-void k_nswidgets__button_qbase_child_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseChildEvent((KNSWidgets__Button*)self, (QChildEvent*)event);
+void k_nswidgets__button_super_child_event(void* self, void* event) {
+    KNSWidgets__Button_SuperChildEvent((KNSWidgets__Button*)self, (QChildEvent*)event);
 }
 
 void k_nswidgets__button_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2238,8 +2238,8 @@ void k_nswidgets__button_custom_event(void* self, void* event) {
     KNSWidgets__Button_CustomEvent((KNSWidgets__Button*)self, (QEvent*)event);
 }
 
-void k_nswidgets__button_qbase_custom_event(void* self, void* event) {
-    KNSWidgets__Button_QBaseCustomEvent((KNSWidgets__Button*)self, (QEvent*)event);
+void k_nswidgets__button_super_custom_event(void* self, void* event) {
+    KNSWidgets__Button_SuperCustomEvent((KNSWidgets__Button*)self, (QEvent*)event);
 }
 
 void k_nswidgets__button_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2250,8 +2250,8 @@ void k_nswidgets__button_connect_notify(void* self, void* signal) {
     KNSWidgets__Button_ConnectNotify((KNSWidgets__Button*)self, (QMetaMethod*)signal);
 }
 
-void k_nswidgets__button_qbase_connect_notify(void* self, void* signal) {
-    KNSWidgets__Button_QBaseConnectNotify((KNSWidgets__Button*)self, (QMetaMethod*)signal);
+void k_nswidgets__button_super_connect_notify(void* self, void* signal) {
+    KNSWidgets__Button_SuperConnectNotify((KNSWidgets__Button*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__button_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2262,8 +2262,8 @@ void k_nswidgets__button_disconnect_notify(void* self, void* signal) {
     KNSWidgets__Button_DisconnectNotify((KNSWidgets__Button*)self, (QMetaMethod*)signal);
 }
 
-void k_nswidgets__button_qbase_disconnect_notify(void* self, void* signal) {
-    KNSWidgets__Button_QBaseDisconnectNotify((KNSWidgets__Button*)self, (QMetaMethod*)signal);
+void k_nswidgets__button_super_disconnect_notify(void* self, void* signal) {
+    KNSWidgets__Button_SuperDisconnectNotify((KNSWidgets__Button*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__button_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2274,8 +2274,8 @@ void k_nswidgets__button_update_micro_focus(void* self) {
     KNSWidgets__Button_UpdateMicroFocus((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_qbase_update_micro_focus(void* self) {
-    KNSWidgets__Button_QBaseUpdateMicroFocus((KNSWidgets__Button*)self);
+void k_nswidgets__button_super_update_micro_focus(void* self) {
+    KNSWidgets__Button_SuperUpdateMicroFocus((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2286,8 +2286,8 @@ void k_nswidgets__button_create(void* self) {
     KNSWidgets__Button_Create((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_qbase_create(void* self) {
-    KNSWidgets__Button_QBaseCreate((KNSWidgets__Button*)self);
+void k_nswidgets__button_super_create(void* self) {
+    KNSWidgets__Button_SuperCreate((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_create(void* self, void (*callback)()) {
@@ -2298,8 +2298,8 @@ void k_nswidgets__button_destroy(void* self) {
     KNSWidgets__Button_Destroy((KNSWidgets__Button*)self);
 }
 
-void k_nswidgets__button_qbase_destroy(void* self) {
-    KNSWidgets__Button_QBaseDestroy((KNSWidgets__Button*)self);
+void k_nswidgets__button_super_destroy(void* self) {
+    KNSWidgets__Button_SuperDestroy((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_destroy(void* self, void (*callback)()) {
@@ -2310,8 +2310,8 @@ bool k_nswidgets__button_focus_next_child(void* self) {
     return KNSWidgets__Button_FocusNextChild((KNSWidgets__Button*)self);
 }
 
-bool k_nswidgets__button_qbase_focus_next_child(void* self) {
-    return KNSWidgets__Button_QBaseFocusNextChild((KNSWidgets__Button*)self);
+bool k_nswidgets__button_super_focus_next_child(void* self) {
+    return KNSWidgets__Button_SuperFocusNextChild((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2322,8 +2322,8 @@ bool k_nswidgets__button_focus_previous_child(void* self) {
     return KNSWidgets__Button_FocusPreviousChild((KNSWidgets__Button*)self);
 }
 
-bool k_nswidgets__button_qbase_focus_previous_child(void* self) {
-    return KNSWidgets__Button_QBaseFocusPreviousChild((KNSWidgets__Button*)self);
+bool k_nswidgets__button_super_focus_previous_child(void* self) {
+    return KNSWidgets__Button_SuperFocusPreviousChild((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2334,8 +2334,8 @@ QObject* k_nswidgets__button_sender(void* self) {
     return KNSWidgets__Button_Sender((KNSWidgets__Button*)self);
 }
 
-QObject* k_nswidgets__button_qbase_sender(void* self) {
-    return KNSWidgets__Button_QBaseSender((KNSWidgets__Button*)self);
+QObject* k_nswidgets__button_super_sender(void* self) {
+    return KNSWidgets__Button_SuperSender((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_sender(void* self, QObject* (*callback)()) {
@@ -2346,8 +2346,8 @@ int32_t k_nswidgets__button_sender_signal_index(void* self) {
     return KNSWidgets__Button_SenderSignalIndex((KNSWidgets__Button*)self);
 }
 
-int32_t k_nswidgets__button_qbase_sender_signal_index(void* self) {
-    return KNSWidgets__Button_QBaseSenderSignalIndex((KNSWidgets__Button*)self);
+int32_t k_nswidgets__button_super_sender_signal_index(void* self) {
+    return KNSWidgets__Button_SuperSenderSignalIndex((KNSWidgets__Button*)self);
 }
 
 void k_nswidgets__button_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2358,8 +2358,8 @@ int32_t k_nswidgets__button_receivers(void* self, const char* signal) {
     return KNSWidgets__Button_Receivers((KNSWidgets__Button*)self, signal);
 }
 
-int32_t k_nswidgets__button_qbase_receivers(void* self, const char* signal) {
-    return KNSWidgets__Button_QBaseReceivers((KNSWidgets__Button*)self, signal);
+int32_t k_nswidgets__button_super_receivers(void* self, const char* signal) {
+    return KNSWidgets__Button_SuperReceivers((KNSWidgets__Button*)self, signal);
 }
 
 void k_nswidgets__button_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2370,8 +2370,8 @@ bool k_nswidgets__button_is_signal_connected(void* self, void* signal) {
     return KNSWidgets__Button_IsSignalConnected((KNSWidgets__Button*)self, (QMetaMethod*)signal);
 }
 
-bool k_nswidgets__button_qbase_is_signal_connected(void* self, void* signal) {
-    return KNSWidgets__Button_QBaseIsSignalConnected((KNSWidgets__Button*)self, (QMetaMethod*)signal);
+bool k_nswidgets__button_super_is_signal_connected(void* self, void* signal) {
+    return KNSWidgets__Button_SuperIsSignalConnected((KNSWidgets__Button*)self, (QMetaMethod*)signal);
 }
 
 void k_nswidgets__button_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2382,8 +2382,8 @@ double k_nswidgets__button_get_decoded_metric_f(void* self, int32_t metricA, int
     return KNSWidgets__Button_GetDecodedMetricF((KNSWidgets__Button*)self, metricA, metricB);
 }
 
-double k_nswidgets__button_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KNSWidgets__Button_QBaseGetDecodedMetricF((KNSWidgets__Button*)self, metricA, metricB);
+double k_nswidgets__button_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KNSWidgets__Button_SuperGetDecodedMetricF((KNSWidgets__Button*)self, metricA, metricB);
 }
 
 void k_nswidgets__button_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

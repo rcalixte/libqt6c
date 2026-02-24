@@ -102,13 +102,17 @@ bool k_config_sync(void* self);
 ///
 void k_config_on_sync(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_config_super_sync` instead
+///
+#define k_config_qbase_sync k_config_super_sync
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#sync)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfig*
 ///
-bool k_config_qbase_sync(void* self);
+bool k_config_super_sync(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#isDirty)
 ///
@@ -131,13 +135,17 @@ void k_config_mark_as_clean(void* self);
 ///
 void k_config_on_mark_as_clean(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_config_super_mark_as_clean` instead
+///
+#define k_config_qbase_mark_as_clean k_config_super_mark_as_clean
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#markAsClean)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfig*
 ///
-void k_config_qbase_mark_as_clean(void* self);
+void k_config_super_mark_as_clean(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
@@ -156,6 +164,10 @@ int32_t k_config_access_mode(void* self);
 ///
 void k_config_on_access_mode(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `k_config_super_access_mode` instead
+///
+#define k_config_qbase_access_mode k_config_super_access_mode
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#accessMode)
 ///
 /// Base class method implementation
@@ -164,7 +176,7 @@ void k_config_on_access_mode(void* self, int32_t (*callback)());
 ///
 /// @return enum KConfigBase__AccessMode
 ///
-int32_t k_config_qbase_access_mode(void* self);
+int32_t k_config_super_access_mode(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#isConfigWritable)
 ///
@@ -252,13 +264,17 @@ bool k_config_is_immutable(void* self);
 ///
 void k_config_on_is_immutable(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_config_super_is_immutable` instead
+///
+#define k_config_qbase_is_immutable k_config_super_is_immutable
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#isImmutable)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfig*
 ///
-bool k_config_qbase_is_immutable(void* self);
+bool k_config_super_is_immutable(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
@@ -277,13 +293,17 @@ const char** k_config_group_list(void* self);
 ///
 void k_config_on_group_list(void* self, const char** (*callback)());
 
+/// @warning DEPRECATED: Use `k_config_super_group_list` instead
+///
+#define k_config_qbase_group_list k_config_super_group_list
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupList)
 ///
 /// Base class method implementation
 ///
 /// @param self KConfig*
 ///
-const char** k_config_qbase_group_list(void* self);
+const char** k_config_super_group_list(void* self);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#entryMap)
 ///
@@ -333,6 +353,10 @@ bool k_config_has_group_impl(void* self, const char* groupName);
 ///
 void k_config_on_has_group_impl(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_config_super_has_group_impl` instead
+///
+#define k_config_qbase_has_group_impl k_config_super_has_group_impl
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#hasGroupImpl)
 ///
 /// Base class method implementation
@@ -340,7 +364,7 @@ void k_config_on_has_group_impl(void* self, bool (*callback)(void*, const char*)
 /// @param self KConfig*
 /// @param groupName const char*
 ///
-bool k_config_qbase_has_group_impl(void* self, const char* groupName);
+bool k_config_super_has_group_impl(void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
@@ -358,6 +382,10 @@ KConfigGroup* k_config_group_impl(void* self, const char* groupName);
 ///
 void k_config_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_config_super_group_impl` instead
+///
+#define k_config_qbase_group_impl k_config_super_group_impl
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
 /// Base class method implementation
@@ -365,7 +393,7 @@ void k_config_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const c
 /// @param self KConfig*
 /// @param groupName const char*
 ///
-KConfigGroup* k_config_qbase_group_impl(void* self, const char* groupName);
+KConfigGroup* k_config_super_group_impl(void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
@@ -383,6 +411,10 @@ const KConfigGroup* k_config_group_impl2(void* self, const char* groupName);
 ///
 void k_config_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_config_super_group_impl2` instead
+///
+#define k_config_qbase_group_impl2 k_config_super_group_impl2
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#groupImpl)
 ///
 /// Base class method implementation
@@ -390,7 +422,7 @@ void k_config_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, 
 /// @param self KConfig*
 /// @param groupName const char*
 ///
-const KConfigGroup* k_config_qbase_group_impl2(void* self, const char* groupName);
+const KConfigGroup* k_config_super_group_impl2(void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#deleteGroupImpl)
 ///
@@ -409,6 +441,10 @@ void k_config_delete_group_impl(void* self, const char* groupName, int32_t flags
 ///
 void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const char*, int32_t));
 
+/// @warning DEPRECATED: Use `k_config_super_delete_group_impl` instead
+///
+#define k_config_qbase_delete_group_impl k_config_super_delete_group_impl
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#deleteGroupImpl)
 ///
 /// Base class method implementation
@@ -417,7 +453,7 @@ void k_config_on_delete_group_impl(void* self, void (*callback)(void*, const cha
 /// @param groupName const char*
 /// @param flags flag of enum KConfigBase__WriteConfigFlag
 ///
-void k_config_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags);
+void k_config_super_delete_group_impl(void* self, const char* groupName, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
 ///
@@ -435,6 +471,10 @@ bool k_config_is_group_immutable_impl(void* self, const char* groupName);
 ///
 void k_config_on_is_group_immutable_impl(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_config_super_is_group_immutable_impl` instead
+///
+#define k_config_qbase_is_group_immutable_impl k_config_super_is_group_immutable_impl
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#isGroupImmutableImpl)
 ///
 /// Base class method implementation
@@ -442,7 +482,7 @@ void k_config_on_is_group_immutable_impl(void* self, bool (*callback)(void*, con
 /// @param self KConfig*
 /// @param groupName const char*
 ///
-bool k_config_qbase_is_group_immutable_impl(void* self, const char* groupName);
+bool k_config_super_is_group_immutable_impl(void* self, const char* groupName);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#virtual_hook)
 ///
@@ -461,6 +501,10 @@ void k_config_virtual_hook(void* self, int id, void* data);
 ///
 void k_config_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_config_super_virtual_hook` instead
+///
+#define k_config_qbase_virtual_hook k_config_super_virtual_hook
+
 /// [Upstream resources](https://api.kde.org/kconfig.html#virtual_hook)
 ///
 /// Base class method implementation
@@ -469,7 +513,7 @@ void k_config_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 /// @param id int
 /// @param data void*
 ///
-void k_config_qbase_virtual_hook(void* self, int id, void* data);
+void k_config_super_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://api.kde.org/kconfig.html#copyTo)
 ///

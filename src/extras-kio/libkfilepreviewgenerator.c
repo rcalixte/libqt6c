@@ -24,8 +24,8 @@ void k_filepreviewgenerator_on_meta_object(void* self, const QMetaObject* (*call
     KFilePreviewGenerator_OnMetaObject((KFilePreviewGenerator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_filepreviewgenerator_qbase_meta_object(void* self) {
-    return KFilePreviewGenerator_QBaseMetaObject((KFilePreviewGenerator*)self);
+const QMetaObject* k_filepreviewgenerator_super_meta_object(void* self) {
+    return KFilePreviewGenerator_SuperMetaObject((KFilePreviewGenerator*)self);
 }
 
 void* k_filepreviewgenerator_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_filepreviewgenerator_on_metacast(void* self, void* (*callback)(void*, con
     KFilePreviewGenerator_OnMetacast((KFilePreviewGenerator*)self, (intptr_t)callback);
 }
 
-void* k_filepreviewgenerator_qbase_metacast(void* self, const char* param1) {
-    return KFilePreviewGenerator_QBaseMetacast((KFilePreviewGenerator*)self, param1);
+void* k_filepreviewgenerator_super_metacast(void* self, const char* param1) {
+    return KFilePreviewGenerator_SuperMetacast((KFilePreviewGenerator*)self, param1);
 }
 
 int32_t k_filepreviewgenerator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_filepreviewgenerator_on_metacall(void* self, int32_t (*callback)(void*, i
     KFilePreviewGenerator_OnMetacall((KFilePreviewGenerator*)self, (intptr_t)callback);
 }
 
-int32_t k_filepreviewgenerator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFilePreviewGenerator_QBaseMetacall((KFilePreviewGenerator*)self, param1, param2, param3);
+int32_t k_filepreviewgenerator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFilePreviewGenerator_SuperMetacall((KFilePreviewGenerator*)self, param1, param2, param3);
 }
 
 const char* k_filepreviewgenerator_tr(const char* s) {
@@ -338,8 +338,8 @@ bool k_filepreviewgenerator_event(void* self, void* event) {
     return KFilePreviewGenerator_Event((KFilePreviewGenerator*)self, (QEvent*)event);
 }
 
-bool k_filepreviewgenerator_qbase_event(void* self, void* event) {
-    return KFilePreviewGenerator_QBaseEvent((KFilePreviewGenerator*)self, (QEvent*)event);
+bool k_filepreviewgenerator_super_event(void* self, void* event) {
+    return KFilePreviewGenerator_SuperEvent((KFilePreviewGenerator*)self, (QEvent*)event);
 }
 
 void k_filepreviewgenerator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -350,8 +350,8 @@ bool k_filepreviewgenerator_event_filter(void* self, void* watched, void* event)
     return KFilePreviewGenerator_EventFilter((KFilePreviewGenerator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_filepreviewgenerator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFilePreviewGenerator_QBaseEventFilter((KFilePreviewGenerator*)self, (QObject*)watched, (QEvent*)event);
+bool k_filepreviewgenerator_super_event_filter(void* self, void* watched, void* event) {
+    return KFilePreviewGenerator_SuperEventFilter((KFilePreviewGenerator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_filepreviewgenerator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -362,8 +362,8 @@ void k_filepreviewgenerator_timer_event(void* self, void* event) {
     KFilePreviewGenerator_TimerEvent((KFilePreviewGenerator*)self, (QTimerEvent*)event);
 }
 
-void k_filepreviewgenerator_qbase_timer_event(void* self, void* event) {
-    KFilePreviewGenerator_QBaseTimerEvent((KFilePreviewGenerator*)self, (QTimerEvent*)event);
+void k_filepreviewgenerator_super_timer_event(void* self, void* event) {
+    KFilePreviewGenerator_SuperTimerEvent((KFilePreviewGenerator*)self, (QTimerEvent*)event);
 }
 
 void k_filepreviewgenerator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -374,8 +374,8 @@ void k_filepreviewgenerator_child_event(void* self, void* event) {
     KFilePreviewGenerator_ChildEvent((KFilePreviewGenerator*)self, (QChildEvent*)event);
 }
 
-void k_filepreviewgenerator_qbase_child_event(void* self, void* event) {
-    KFilePreviewGenerator_QBaseChildEvent((KFilePreviewGenerator*)self, (QChildEvent*)event);
+void k_filepreviewgenerator_super_child_event(void* self, void* event) {
+    KFilePreviewGenerator_SuperChildEvent((KFilePreviewGenerator*)self, (QChildEvent*)event);
 }
 
 void k_filepreviewgenerator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ void k_filepreviewgenerator_custom_event(void* self, void* event) {
     KFilePreviewGenerator_CustomEvent((KFilePreviewGenerator*)self, (QEvent*)event);
 }
 
-void k_filepreviewgenerator_qbase_custom_event(void* self, void* event) {
-    KFilePreviewGenerator_QBaseCustomEvent((KFilePreviewGenerator*)self, (QEvent*)event);
+void k_filepreviewgenerator_super_custom_event(void* self, void* event) {
+    KFilePreviewGenerator_SuperCustomEvent((KFilePreviewGenerator*)self, (QEvent*)event);
 }
 
 void k_filepreviewgenerator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -398,8 +398,8 @@ void k_filepreviewgenerator_connect_notify(void* self, void* signal) {
     KFilePreviewGenerator_ConnectNotify((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
 }
 
-void k_filepreviewgenerator_qbase_connect_notify(void* self, void* signal) {
-    KFilePreviewGenerator_QBaseConnectNotify((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
+void k_filepreviewgenerator_super_connect_notify(void* self, void* signal) {
+    KFilePreviewGenerator_SuperConnectNotify((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
 }
 
 void k_filepreviewgenerator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ void k_filepreviewgenerator_disconnect_notify(void* self, void* signal) {
     KFilePreviewGenerator_DisconnectNotify((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
 }
 
-void k_filepreviewgenerator_qbase_disconnect_notify(void* self, void* signal) {
-    KFilePreviewGenerator_QBaseDisconnectNotify((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
+void k_filepreviewgenerator_super_disconnect_notify(void* self, void* signal) {
+    KFilePreviewGenerator_SuperDisconnectNotify((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
 }
 
 void k_filepreviewgenerator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -422,8 +422,8 @@ QObject* k_filepreviewgenerator_sender(void* self) {
     return KFilePreviewGenerator_Sender((KFilePreviewGenerator*)self);
 }
 
-QObject* k_filepreviewgenerator_qbase_sender(void* self) {
-    return KFilePreviewGenerator_QBaseSender((KFilePreviewGenerator*)self);
+QObject* k_filepreviewgenerator_super_sender(void* self) {
+    return KFilePreviewGenerator_SuperSender((KFilePreviewGenerator*)self);
 }
 
 void k_filepreviewgenerator_on_sender(void* self, QObject* (*callback)()) {
@@ -434,8 +434,8 @@ int32_t k_filepreviewgenerator_sender_signal_index(void* self) {
     return KFilePreviewGenerator_SenderSignalIndex((KFilePreviewGenerator*)self);
 }
 
-int32_t k_filepreviewgenerator_qbase_sender_signal_index(void* self) {
-    return KFilePreviewGenerator_QBaseSenderSignalIndex((KFilePreviewGenerator*)self);
+int32_t k_filepreviewgenerator_super_sender_signal_index(void* self) {
+    return KFilePreviewGenerator_SuperSenderSignalIndex((KFilePreviewGenerator*)self);
 }
 
 void k_filepreviewgenerator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -446,8 +446,8 @@ int32_t k_filepreviewgenerator_receivers(void* self, const char* signal) {
     return KFilePreviewGenerator_Receivers((KFilePreviewGenerator*)self, signal);
 }
 
-int32_t k_filepreviewgenerator_qbase_receivers(void* self, const char* signal) {
-    return KFilePreviewGenerator_QBaseReceivers((KFilePreviewGenerator*)self, signal);
+int32_t k_filepreviewgenerator_super_receivers(void* self, const char* signal) {
+    return KFilePreviewGenerator_SuperReceivers((KFilePreviewGenerator*)self, signal);
 }
 
 void k_filepreviewgenerator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -458,8 +458,8 @@ bool k_filepreviewgenerator_is_signal_connected(void* self, void* signal) {
     return KFilePreviewGenerator_IsSignalConnected((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
 }
 
-bool k_filepreviewgenerator_qbase_is_signal_connected(void* self, void* signal) {
-    return KFilePreviewGenerator_QBaseIsSignalConnected((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
+bool k_filepreviewgenerator_super_is_signal_connected(void* self, void* signal) {
+    return KFilePreviewGenerator_SuperIsSignalConnected((KFilePreviewGenerator*)self, (QMetaMethod*)signal);
 }
 
 void k_filepreviewgenerator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

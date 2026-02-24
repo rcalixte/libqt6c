@@ -22,8 +22,8 @@ void q_buttongroup_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QButtonGroup_OnMetaObject((QButtonGroup*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_buttongroup_qbase_meta_object(void* self) {
-    return QButtonGroup_QBaseMetaObject((QButtonGroup*)self);
+const QMetaObject* q_buttongroup_super_meta_object(void* self) {
+    return QButtonGroup_SuperMetaObject((QButtonGroup*)self);
 }
 
 void* q_buttongroup_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_buttongroup_on_metacast(void* self, void* (*callback)(void*, const char*)
     QButtonGroup_OnMetacast((QButtonGroup*)self, (intptr_t)callback);
 }
 
-void* q_buttongroup_qbase_metacast(void* self, const char* param1) {
-    return QButtonGroup_QBaseMetacast((QButtonGroup*)self, param1);
+void* q_buttongroup_super_metacast(void* self, const char* param1) {
+    return QButtonGroup_SuperMetacast((QButtonGroup*)self, param1);
 }
 
 int32_t q_buttongroup_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_buttongroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QButtonGroup_OnMetacall((QButtonGroup*)self, (intptr_t)callback);
 }
 
-int32_t q_buttongroup_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QButtonGroup_QBaseMetacall((QButtonGroup*)self, param1, param2, param3);
+int32_t q_buttongroup_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QButtonGroup_SuperMetacall((QButtonGroup*)self, param1, param2, param3);
 }
 
 const char* q_buttongroup_tr(const char* s) {
@@ -395,8 +395,8 @@ bool q_buttongroup_event(void* self, void* event) {
     return QButtonGroup_Event((QButtonGroup*)self, (QEvent*)event);
 }
 
-bool q_buttongroup_qbase_event(void* self, void* event) {
-    return QButtonGroup_QBaseEvent((QButtonGroup*)self, (QEvent*)event);
+bool q_buttongroup_super_event(void* self, void* event) {
+    return QButtonGroup_SuperEvent((QButtonGroup*)self, (QEvent*)event);
 }
 
 void q_buttongroup_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -407,8 +407,8 @@ bool q_buttongroup_event_filter(void* self, void* watched, void* event) {
     return QButtonGroup_EventFilter((QButtonGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_buttongroup_qbase_event_filter(void* self, void* watched, void* event) {
-    return QButtonGroup_QBaseEventFilter((QButtonGroup*)self, (QObject*)watched, (QEvent*)event);
+bool q_buttongroup_super_event_filter(void* self, void* watched, void* event) {
+    return QButtonGroup_SuperEventFilter((QButtonGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_buttongroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -419,8 +419,8 @@ void q_buttongroup_timer_event(void* self, void* event) {
     QButtonGroup_TimerEvent((QButtonGroup*)self, (QTimerEvent*)event);
 }
 
-void q_buttongroup_qbase_timer_event(void* self, void* event) {
-    QButtonGroup_QBaseTimerEvent((QButtonGroup*)self, (QTimerEvent*)event);
+void q_buttongroup_super_timer_event(void* self, void* event) {
+    QButtonGroup_SuperTimerEvent((QButtonGroup*)self, (QTimerEvent*)event);
 }
 
 void q_buttongroup_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ void q_buttongroup_child_event(void* self, void* event) {
     QButtonGroup_ChildEvent((QButtonGroup*)self, (QChildEvent*)event);
 }
 
-void q_buttongroup_qbase_child_event(void* self, void* event) {
-    QButtonGroup_QBaseChildEvent((QButtonGroup*)self, (QChildEvent*)event);
+void q_buttongroup_super_child_event(void* self, void* event) {
+    QButtonGroup_SuperChildEvent((QButtonGroup*)self, (QChildEvent*)event);
 }
 
 void q_buttongroup_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -443,8 +443,8 @@ void q_buttongroup_custom_event(void* self, void* event) {
     QButtonGroup_CustomEvent((QButtonGroup*)self, (QEvent*)event);
 }
 
-void q_buttongroup_qbase_custom_event(void* self, void* event) {
-    QButtonGroup_QBaseCustomEvent((QButtonGroup*)self, (QEvent*)event);
+void q_buttongroup_super_custom_event(void* self, void* event) {
+    QButtonGroup_SuperCustomEvent((QButtonGroup*)self, (QEvent*)event);
 }
 
 void q_buttongroup_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ void q_buttongroup_connect_notify(void* self, void* signal) {
     QButtonGroup_ConnectNotify((QButtonGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_buttongroup_qbase_connect_notify(void* self, void* signal) {
-    QButtonGroup_QBaseConnectNotify((QButtonGroup*)self, (QMetaMethod*)signal);
+void q_buttongroup_super_connect_notify(void* self, void* signal) {
+    QButtonGroup_SuperConnectNotify((QButtonGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_buttongroup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ void q_buttongroup_disconnect_notify(void* self, void* signal) {
     QButtonGroup_DisconnectNotify((QButtonGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_buttongroup_qbase_disconnect_notify(void* self, void* signal) {
-    QButtonGroup_QBaseDisconnectNotify((QButtonGroup*)self, (QMetaMethod*)signal);
+void q_buttongroup_super_disconnect_notify(void* self, void* signal) {
+    QButtonGroup_SuperDisconnectNotify((QButtonGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_buttongroup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ QObject* q_buttongroup_sender(void* self) {
     return QButtonGroup_Sender((QButtonGroup*)self);
 }
 
-QObject* q_buttongroup_qbase_sender(void* self) {
-    return QButtonGroup_QBaseSender((QButtonGroup*)self);
+QObject* q_buttongroup_super_sender(void* self) {
+    return QButtonGroup_SuperSender((QButtonGroup*)self);
 }
 
 void q_buttongroup_on_sender(void* self, QObject* (*callback)()) {
@@ -491,8 +491,8 @@ int32_t q_buttongroup_sender_signal_index(void* self) {
     return QButtonGroup_SenderSignalIndex((QButtonGroup*)self);
 }
 
-int32_t q_buttongroup_qbase_sender_signal_index(void* self) {
-    return QButtonGroup_QBaseSenderSignalIndex((QButtonGroup*)self);
+int32_t q_buttongroup_super_sender_signal_index(void* self) {
+    return QButtonGroup_SuperSenderSignalIndex((QButtonGroup*)self);
 }
 
 void q_buttongroup_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -503,8 +503,8 @@ int32_t q_buttongroup_receivers(void* self, const char* signal) {
     return QButtonGroup_Receivers((QButtonGroup*)self, signal);
 }
 
-int32_t q_buttongroup_qbase_receivers(void* self, const char* signal) {
-    return QButtonGroup_QBaseReceivers((QButtonGroup*)self, signal);
+int32_t q_buttongroup_super_receivers(void* self, const char* signal) {
+    return QButtonGroup_SuperReceivers((QButtonGroup*)self, signal);
 }
 
 void q_buttongroup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -515,8 +515,8 @@ bool q_buttongroup_is_signal_connected(void* self, void* signal) {
     return QButtonGroup_IsSignalConnected((QButtonGroup*)self, (QMetaMethod*)signal);
 }
 
-bool q_buttongroup_qbase_is_signal_connected(void* self, void* signal) {
-    return QButtonGroup_QBaseIsSignalConnected((QButtonGroup*)self, (QMetaMethod*)signal);
+bool q_buttongroup_super_is_signal_connected(void* self, void* signal) {
+    return QButtonGroup_SuperIsSignalConnected((QButtonGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_buttongroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

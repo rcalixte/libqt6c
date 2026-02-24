@@ -22,8 +22,8 @@ void q_scimacro_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QsciMacro_OnMetaObject((QsciMacro*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scimacro_qbase_meta_object(void* self) {
-    return QsciMacro_QBaseMetaObject((QsciMacro*)self);
+const QMetaObject* q_scimacro_super_meta_object(void* self) {
+    return QsciMacro_SuperMetaObject((QsciMacro*)self);
 }
 
 void* q_scimacro_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_scimacro_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QsciMacro_OnMetacast((QsciMacro*)self, (intptr_t)callback);
 }
 
-void* q_scimacro_qbase_metacast(void* self, const char* param1) {
-    return QsciMacro_QBaseMetacast((QsciMacro*)self, param1);
+void* q_scimacro_super_metacast(void* self, const char* param1) {
+    return QsciMacro_SuperMetacast((QsciMacro*)self, param1);
 }
 
 int32_t q_scimacro_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_scimacro_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QsciMacro_OnMetacall((QsciMacro*)self, (intptr_t)callback);
 }
 
-int32_t q_scimacro_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciMacro_QBaseMetacall((QsciMacro*)self, param1, param2, param3);
+int32_t q_scimacro_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciMacro_SuperMetacall((QsciMacro*)self, param1, param2, param3);
 }
 
 const char* q_scimacro_tr(const char* s) {
@@ -80,8 +80,8 @@ void q_scimacro_on_play(void* self, void (*callback)()) {
     QsciMacro_OnPlay((QsciMacro*)self, (intptr_t)callback);
 }
 
-void q_scimacro_qbase_play(void* self) {
-    QsciMacro_QBasePlay((QsciMacro*)self);
+void q_scimacro_super_play(void* self) {
+    QsciMacro_SuperPlay((QsciMacro*)self);
 }
 
 void q_scimacro_start_recording(void* self) {
@@ -92,8 +92,8 @@ void q_scimacro_on_start_recording(void* self, void (*callback)()) {
     QsciMacro_OnStartRecording((QsciMacro*)self, (intptr_t)callback);
 }
 
-void q_scimacro_qbase_start_recording(void* self) {
-    QsciMacro_QBaseStartRecording((QsciMacro*)self);
+void q_scimacro_super_start_recording(void* self) {
+    QsciMacro_SuperStartRecording((QsciMacro*)self);
 }
 
 void q_scimacro_end_recording(void* self) {
@@ -104,8 +104,8 @@ void q_scimacro_on_end_recording(void* self, void (*callback)()) {
     QsciMacro_OnEndRecording((QsciMacro*)self, (intptr_t)callback);
 }
 
-void q_scimacro_qbase_end_recording(void* self) {
-    QsciMacro_QBaseEndRecording((QsciMacro*)self);
+void q_scimacro_super_end_recording(void* self) {
+    QsciMacro_SuperEndRecording((QsciMacro*)self);
 }
 
 const char* q_scimacro_tr2(const char* s, const char* c) {
@@ -337,8 +337,8 @@ bool q_scimacro_event(void* self, void* event) {
     return QsciMacro_Event((QsciMacro*)self, (QEvent*)event);
 }
 
-bool q_scimacro_qbase_event(void* self, void* event) {
-    return QsciMacro_QBaseEvent((QsciMacro*)self, (QEvent*)event);
+bool q_scimacro_super_event(void* self, void* event) {
+    return QsciMacro_SuperEvent((QsciMacro*)self, (QEvent*)event);
 }
 
 void q_scimacro_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -349,8 +349,8 @@ bool q_scimacro_event_filter(void* self, void* watched, void* event) {
     return QsciMacro_EventFilter((QsciMacro*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scimacro_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciMacro_QBaseEventFilter((QsciMacro*)self, (QObject*)watched, (QEvent*)event);
+bool q_scimacro_super_event_filter(void* self, void* watched, void* event) {
+    return QsciMacro_SuperEventFilter((QsciMacro*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scimacro_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -361,8 +361,8 @@ void q_scimacro_timer_event(void* self, void* event) {
     QsciMacro_TimerEvent((QsciMacro*)self, (QTimerEvent*)event);
 }
 
-void q_scimacro_qbase_timer_event(void* self, void* event) {
-    QsciMacro_QBaseTimerEvent((QsciMacro*)self, (QTimerEvent*)event);
+void q_scimacro_super_timer_event(void* self, void* event) {
+    QsciMacro_SuperTimerEvent((QsciMacro*)self, (QTimerEvent*)event);
 }
 
 void q_scimacro_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -373,8 +373,8 @@ void q_scimacro_child_event(void* self, void* event) {
     QsciMacro_ChildEvent((QsciMacro*)self, (QChildEvent*)event);
 }
 
-void q_scimacro_qbase_child_event(void* self, void* event) {
-    QsciMacro_QBaseChildEvent((QsciMacro*)self, (QChildEvent*)event);
+void q_scimacro_super_child_event(void* self, void* event) {
+    QsciMacro_SuperChildEvent((QsciMacro*)self, (QChildEvent*)event);
 }
 
 void q_scimacro_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -385,8 +385,8 @@ void q_scimacro_custom_event(void* self, void* event) {
     QsciMacro_CustomEvent((QsciMacro*)self, (QEvent*)event);
 }
 
-void q_scimacro_qbase_custom_event(void* self, void* event) {
-    QsciMacro_QBaseCustomEvent((QsciMacro*)self, (QEvent*)event);
+void q_scimacro_super_custom_event(void* self, void* event) {
+    QsciMacro_SuperCustomEvent((QsciMacro*)self, (QEvent*)event);
 }
 
 void q_scimacro_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -397,8 +397,8 @@ void q_scimacro_connect_notify(void* self, void* signal) {
     QsciMacro_ConnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_qbase_connect_notify(void* self, void* signal) {
-    QsciMacro_QBaseConnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
+void q_scimacro_super_connect_notify(void* self, void* signal) {
+    QsciMacro_SuperConnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
 void q_scimacro_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -409,8 +409,8 @@ void q_scimacro_disconnect_notify(void* self, void* signal) {
     QsciMacro_DisconnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-void q_scimacro_qbase_disconnect_notify(void* self, void* signal) {
-    QsciMacro_QBaseDisconnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
+void q_scimacro_super_disconnect_notify(void* self, void* signal) {
+    QsciMacro_SuperDisconnectNotify((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
 void q_scimacro_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -421,8 +421,8 @@ QObject* q_scimacro_sender(void* self) {
     return QsciMacro_Sender((QsciMacro*)self);
 }
 
-QObject* q_scimacro_qbase_sender(void* self) {
-    return QsciMacro_QBaseSender((QsciMacro*)self);
+QObject* q_scimacro_super_sender(void* self) {
+    return QsciMacro_SuperSender((QsciMacro*)self);
 }
 
 void q_scimacro_on_sender(void* self, QObject* (*callback)()) {
@@ -433,8 +433,8 @@ int32_t q_scimacro_sender_signal_index(void* self) {
     return QsciMacro_SenderSignalIndex((QsciMacro*)self);
 }
 
-int32_t q_scimacro_qbase_sender_signal_index(void* self) {
-    return QsciMacro_QBaseSenderSignalIndex((QsciMacro*)self);
+int32_t q_scimacro_super_sender_signal_index(void* self) {
+    return QsciMacro_SuperSenderSignalIndex((QsciMacro*)self);
 }
 
 void q_scimacro_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -445,8 +445,8 @@ int32_t q_scimacro_receivers(void* self, const char* signal) {
     return QsciMacro_Receivers((QsciMacro*)self, signal);
 }
 
-int32_t q_scimacro_qbase_receivers(void* self, const char* signal) {
-    return QsciMacro_QBaseReceivers((QsciMacro*)self, signal);
+int32_t q_scimacro_super_receivers(void* self, const char* signal) {
+    return QsciMacro_SuperReceivers((QsciMacro*)self, signal);
 }
 
 void q_scimacro_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -457,8 +457,8 @@ bool q_scimacro_is_signal_connected(void* self, void* signal) {
     return QsciMacro_IsSignalConnected((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
-bool q_scimacro_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciMacro_QBaseIsSignalConnected((QsciMacro*)self, (QMetaMethod*)signal);
+bool q_scimacro_super_is_signal_connected(void* self, void* signal) {
+    return QsciMacro_SuperIsSignalConnected((QsciMacro*)self, (QMetaMethod*)signal);
 }
 
 void q_scimacro_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

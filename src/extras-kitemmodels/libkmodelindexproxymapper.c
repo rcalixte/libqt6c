@@ -23,8 +23,8 @@ void k_modelindexproxymapper_on_meta_object(void* self, const QMetaObject* (*cal
     KModelIndexProxyMapper_OnMetaObject((KModelIndexProxyMapper*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_modelindexproxymapper_qbase_meta_object(void* self) {
-    return KModelIndexProxyMapper_QBaseMetaObject((KModelIndexProxyMapper*)self);
+const QMetaObject* k_modelindexproxymapper_super_meta_object(void* self) {
+    return KModelIndexProxyMapper_SuperMetaObject((KModelIndexProxyMapper*)self);
 }
 
 void* k_modelindexproxymapper_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_modelindexproxymapper_on_metacast(void* self, void* (*callback)(void*, co
     KModelIndexProxyMapper_OnMetacast((KModelIndexProxyMapper*)self, (intptr_t)callback);
 }
 
-void* k_modelindexproxymapper_qbase_metacast(void* self, const char* param1) {
-    return KModelIndexProxyMapper_QBaseMetacast((KModelIndexProxyMapper*)self, param1);
+void* k_modelindexproxymapper_super_metacast(void* self, const char* param1) {
+    return KModelIndexProxyMapper_SuperMetacast((KModelIndexProxyMapper*)self, param1);
 }
 
 int32_t k_modelindexproxymapper_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_modelindexproxymapper_on_metacall(void* self, int32_t (*callback)(void*, 
     KModelIndexProxyMapper_OnMetacall((KModelIndexProxyMapper*)self, (intptr_t)callback);
 }
 
-int32_t k_modelindexproxymapper_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KModelIndexProxyMapper_QBaseMetacall((KModelIndexProxyMapper*)self, param1, param2, param3);
+int32_t k_modelindexproxymapper_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KModelIndexProxyMapper_SuperMetacall((KModelIndexProxyMapper*)self, param1, param2, param3);
 }
 
 const char* k_modelindexproxymapper_tr(const char* s) {
@@ -315,8 +315,8 @@ bool k_modelindexproxymapper_event(void* self, void* event) {
     return KModelIndexProxyMapper_Event((KModelIndexProxyMapper*)self, (QEvent*)event);
 }
 
-bool k_modelindexproxymapper_qbase_event(void* self, void* event) {
-    return KModelIndexProxyMapper_QBaseEvent((KModelIndexProxyMapper*)self, (QEvent*)event);
+bool k_modelindexproxymapper_super_event(void* self, void* event) {
+    return KModelIndexProxyMapper_SuperEvent((KModelIndexProxyMapper*)self, (QEvent*)event);
 }
 
 void k_modelindexproxymapper_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -327,8 +327,8 @@ bool k_modelindexproxymapper_event_filter(void* self, void* watched, void* event
     return KModelIndexProxyMapper_EventFilter((KModelIndexProxyMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_modelindexproxymapper_qbase_event_filter(void* self, void* watched, void* event) {
-    return KModelIndexProxyMapper_QBaseEventFilter((KModelIndexProxyMapper*)self, (QObject*)watched, (QEvent*)event);
+bool k_modelindexproxymapper_super_event_filter(void* self, void* watched, void* event) {
+    return KModelIndexProxyMapper_SuperEventFilter((KModelIndexProxyMapper*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_modelindexproxymapper_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -339,8 +339,8 @@ void k_modelindexproxymapper_timer_event(void* self, void* event) {
     KModelIndexProxyMapper_TimerEvent((KModelIndexProxyMapper*)self, (QTimerEvent*)event);
 }
 
-void k_modelindexproxymapper_qbase_timer_event(void* self, void* event) {
-    KModelIndexProxyMapper_QBaseTimerEvent((KModelIndexProxyMapper*)self, (QTimerEvent*)event);
+void k_modelindexproxymapper_super_timer_event(void* self, void* event) {
+    KModelIndexProxyMapper_SuperTimerEvent((KModelIndexProxyMapper*)self, (QTimerEvent*)event);
 }
 
 void k_modelindexproxymapper_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -351,8 +351,8 @@ void k_modelindexproxymapper_child_event(void* self, void* event) {
     KModelIndexProxyMapper_ChildEvent((KModelIndexProxyMapper*)self, (QChildEvent*)event);
 }
 
-void k_modelindexproxymapper_qbase_child_event(void* self, void* event) {
-    KModelIndexProxyMapper_QBaseChildEvent((KModelIndexProxyMapper*)self, (QChildEvent*)event);
+void k_modelindexproxymapper_super_child_event(void* self, void* event) {
+    KModelIndexProxyMapper_SuperChildEvent((KModelIndexProxyMapper*)self, (QChildEvent*)event);
 }
 
 void k_modelindexproxymapper_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -363,8 +363,8 @@ void k_modelindexproxymapper_custom_event(void* self, void* event) {
     KModelIndexProxyMapper_CustomEvent((KModelIndexProxyMapper*)self, (QEvent*)event);
 }
 
-void k_modelindexproxymapper_qbase_custom_event(void* self, void* event) {
-    KModelIndexProxyMapper_QBaseCustomEvent((KModelIndexProxyMapper*)self, (QEvent*)event);
+void k_modelindexproxymapper_super_custom_event(void* self, void* event) {
+    KModelIndexProxyMapper_SuperCustomEvent((KModelIndexProxyMapper*)self, (QEvent*)event);
 }
 
 void k_modelindexproxymapper_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -375,8 +375,8 @@ void k_modelindexproxymapper_connect_notify(void* self, void* signal) {
     KModelIndexProxyMapper_ConnectNotify((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
 }
 
-void k_modelindexproxymapper_qbase_connect_notify(void* self, void* signal) {
-    KModelIndexProxyMapper_QBaseConnectNotify((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
+void k_modelindexproxymapper_super_connect_notify(void* self, void* signal) {
+    KModelIndexProxyMapper_SuperConnectNotify((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
 }
 
 void k_modelindexproxymapper_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -387,8 +387,8 @@ void k_modelindexproxymapper_disconnect_notify(void* self, void* signal) {
     KModelIndexProxyMapper_DisconnectNotify((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
 }
 
-void k_modelindexproxymapper_qbase_disconnect_notify(void* self, void* signal) {
-    KModelIndexProxyMapper_QBaseDisconnectNotify((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
+void k_modelindexproxymapper_super_disconnect_notify(void* self, void* signal) {
+    KModelIndexProxyMapper_SuperDisconnectNotify((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
 }
 
 void k_modelindexproxymapper_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ QObject* k_modelindexproxymapper_sender(void* self) {
     return KModelIndexProxyMapper_Sender((KModelIndexProxyMapper*)self);
 }
 
-QObject* k_modelindexproxymapper_qbase_sender(void* self) {
-    return KModelIndexProxyMapper_QBaseSender((KModelIndexProxyMapper*)self);
+QObject* k_modelindexproxymapper_super_sender(void* self) {
+    return KModelIndexProxyMapper_SuperSender((KModelIndexProxyMapper*)self);
 }
 
 void k_modelindexproxymapper_on_sender(void* self, QObject* (*callback)()) {
@@ -411,8 +411,8 @@ int32_t k_modelindexproxymapper_sender_signal_index(void* self) {
     return KModelIndexProxyMapper_SenderSignalIndex((KModelIndexProxyMapper*)self);
 }
 
-int32_t k_modelindexproxymapper_qbase_sender_signal_index(void* self) {
-    return KModelIndexProxyMapper_QBaseSenderSignalIndex((KModelIndexProxyMapper*)self);
+int32_t k_modelindexproxymapper_super_sender_signal_index(void* self) {
+    return KModelIndexProxyMapper_SuperSenderSignalIndex((KModelIndexProxyMapper*)self);
 }
 
 void k_modelindexproxymapper_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -423,8 +423,8 @@ int32_t k_modelindexproxymapper_receivers(void* self, const char* signal) {
     return KModelIndexProxyMapper_Receivers((KModelIndexProxyMapper*)self, signal);
 }
 
-int32_t k_modelindexproxymapper_qbase_receivers(void* self, const char* signal) {
-    return KModelIndexProxyMapper_QBaseReceivers((KModelIndexProxyMapper*)self, signal);
+int32_t k_modelindexproxymapper_super_receivers(void* self, const char* signal) {
+    return KModelIndexProxyMapper_SuperReceivers((KModelIndexProxyMapper*)self, signal);
 }
 
 void k_modelindexproxymapper_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -435,8 +435,8 @@ bool k_modelindexproxymapper_is_signal_connected(void* self, void* signal) {
     return KModelIndexProxyMapper_IsSignalConnected((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
 }
 
-bool k_modelindexproxymapper_qbase_is_signal_connected(void* self, void* signal) {
-    return KModelIndexProxyMapper_QBaseIsSignalConnected((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
+bool k_modelindexproxymapper_super_is_signal_connected(void* self, void* signal) {
+    return KModelIndexProxyMapper_SuperIsSignalConnected((KModelIndexProxyMapper*)self, (QMetaMethod*)signal);
 }
 
 void k_modelindexproxymapper_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

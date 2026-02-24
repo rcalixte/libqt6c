@@ -51,8 +51,8 @@ void q_movie_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QMovie_OnMetaObject((QMovie*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_movie_qbase_meta_object(void* self) {
-    return QMovie_QBaseMetaObject((QMovie*)self);
+const QMetaObject* q_movie_super_meta_object(void* self) {
+    return QMovie_SuperMetaObject((QMovie*)self);
 }
 
 void* q_movie_metacast(void* self, const char* param1) {
@@ -63,8 +63,8 @@ void q_movie_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QMovie_OnMetacast((QMovie*)self, (intptr_t)callback);
 }
 
-void* q_movie_qbase_metacast(void* self, const char* param1) {
-    return QMovie_QBaseMetacast((QMovie*)self, param1);
+void* q_movie_super_metacast(void* self, const char* param1) {
+    return QMovie_SuperMetacast((QMovie*)self, param1);
 }
 
 int32_t q_movie_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -75,8 +75,8 @@ void q_movie_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
     QMovie_OnMetacall((QMovie*)self, (intptr_t)callback);
 }
 
-int32_t q_movie_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMovie_QBaseMetacall((QMovie*)self, param1, param2, param3);
+int32_t q_movie_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMovie_SuperMetacall((QMovie*)self, param1, param2, param3);
 }
 
 const char* q_movie_tr(const char* s) {
@@ -519,8 +519,8 @@ bool q_movie_event(void* self, void* event) {
     return QMovie_Event((QMovie*)self, (QEvent*)event);
 }
 
-bool q_movie_qbase_event(void* self, void* event) {
-    return QMovie_QBaseEvent((QMovie*)self, (QEvent*)event);
+bool q_movie_super_event(void* self, void* event) {
+    return QMovie_SuperEvent((QMovie*)self, (QEvent*)event);
 }
 
 void q_movie_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -531,8 +531,8 @@ bool q_movie_event_filter(void* self, void* watched, void* event) {
     return QMovie_EventFilter((QMovie*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_movie_qbase_event_filter(void* self, void* watched, void* event) {
-    return QMovie_QBaseEventFilter((QMovie*)self, (QObject*)watched, (QEvent*)event);
+bool q_movie_super_event_filter(void* self, void* watched, void* event) {
+    return QMovie_SuperEventFilter((QMovie*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_movie_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -543,8 +543,8 @@ void q_movie_timer_event(void* self, void* event) {
     QMovie_TimerEvent((QMovie*)self, (QTimerEvent*)event);
 }
 
-void q_movie_qbase_timer_event(void* self, void* event) {
-    QMovie_QBaseTimerEvent((QMovie*)self, (QTimerEvent*)event);
+void q_movie_super_timer_event(void* self, void* event) {
+    QMovie_SuperTimerEvent((QMovie*)self, (QTimerEvent*)event);
 }
 
 void q_movie_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -555,8 +555,8 @@ void q_movie_child_event(void* self, void* event) {
     QMovie_ChildEvent((QMovie*)self, (QChildEvent*)event);
 }
 
-void q_movie_qbase_child_event(void* self, void* event) {
-    QMovie_QBaseChildEvent((QMovie*)self, (QChildEvent*)event);
+void q_movie_super_child_event(void* self, void* event) {
+    QMovie_SuperChildEvent((QMovie*)self, (QChildEvent*)event);
 }
 
 void q_movie_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -567,8 +567,8 @@ void q_movie_custom_event(void* self, void* event) {
     QMovie_CustomEvent((QMovie*)self, (QEvent*)event);
 }
 
-void q_movie_qbase_custom_event(void* self, void* event) {
-    QMovie_QBaseCustomEvent((QMovie*)self, (QEvent*)event);
+void q_movie_super_custom_event(void* self, void* event) {
+    QMovie_SuperCustomEvent((QMovie*)self, (QEvent*)event);
 }
 
 void q_movie_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -579,8 +579,8 @@ void q_movie_connect_notify(void* self, void* signal) {
     QMovie_ConnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
-void q_movie_qbase_connect_notify(void* self, void* signal) {
-    QMovie_QBaseConnectNotify((QMovie*)self, (QMetaMethod*)signal);
+void q_movie_super_connect_notify(void* self, void* signal) {
+    QMovie_SuperConnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
 void q_movie_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -591,8 +591,8 @@ void q_movie_disconnect_notify(void* self, void* signal) {
     QMovie_DisconnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
-void q_movie_qbase_disconnect_notify(void* self, void* signal) {
-    QMovie_QBaseDisconnectNotify((QMovie*)self, (QMetaMethod*)signal);
+void q_movie_super_disconnect_notify(void* self, void* signal) {
+    QMovie_SuperDisconnectNotify((QMovie*)self, (QMetaMethod*)signal);
 }
 
 void q_movie_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -603,8 +603,8 @@ QObject* q_movie_sender(void* self) {
     return QMovie_Sender((QMovie*)self);
 }
 
-QObject* q_movie_qbase_sender(void* self) {
-    return QMovie_QBaseSender((QMovie*)self);
+QObject* q_movie_super_sender(void* self) {
+    return QMovie_SuperSender((QMovie*)self);
 }
 
 void q_movie_on_sender(void* self, QObject* (*callback)()) {
@@ -615,8 +615,8 @@ int32_t q_movie_sender_signal_index(void* self) {
     return QMovie_SenderSignalIndex((QMovie*)self);
 }
 
-int32_t q_movie_qbase_sender_signal_index(void* self) {
-    return QMovie_QBaseSenderSignalIndex((QMovie*)self);
+int32_t q_movie_super_sender_signal_index(void* self) {
+    return QMovie_SuperSenderSignalIndex((QMovie*)self);
 }
 
 void q_movie_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -627,8 +627,8 @@ int32_t q_movie_receivers(void* self, const char* signal) {
     return QMovie_Receivers((QMovie*)self, signal);
 }
 
-int32_t q_movie_qbase_receivers(void* self, const char* signal) {
-    return QMovie_QBaseReceivers((QMovie*)self, signal);
+int32_t q_movie_super_receivers(void* self, const char* signal) {
+    return QMovie_SuperReceivers((QMovie*)self, signal);
 }
 
 void q_movie_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -639,8 +639,8 @@ bool q_movie_is_signal_connected(void* self, void* signal) {
     return QMovie_IsSignalConnected((QMovie*)self, (QMetaMethod*)signal);
 }
 
-bool q_movie_qbase_is_signal_connected(void* self, void* signal) {
-    return QMovie_QBaseIsSignalConnected((QMovie*)self, (QMetaMethod*)signal);
+bool q_movie_super_is_signal_connected(void* self, void* signal) {
+    return QMovie_SuperIsSignalConnected((QMovie*)self, (QMetaMethod*)signal);
 }
 
 void q_movie_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

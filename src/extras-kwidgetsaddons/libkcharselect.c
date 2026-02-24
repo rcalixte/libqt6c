@@ -39,8 +39,8 @@ void k_charselect_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KCharSelect_OnMetaObject((KCharSelect*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_charselect_qbase_meta_object(void* self) {
-    return KCharSelect_QBaseMetaObject((KCharSelect*)self);
+const QMetaObject* k_charselect_super_meta_object(void* self) {
+    return KCharSelect_SuperMetaObject((KCharSelect*)self);
 }
 
 void* k_charselect_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void k_charselect_on_metacast(void* self, void* (*callback)(void*, const char*))
     KCharSelect_OnMetacast((KCharSelect*)self, (intptr_t)callback);
 }
 
-void* k_charselect_qbase_metacast(void* self, const char* param1) {
-    return KCharSelect_QBaseMetacast((KCharSelect*)self, param1);
+void* k_charselect_super_metacast(void* self, const char* param1) {
+    return KCharSelect_SuperMetacast((KCharSelect*)self, param1);
 }
 
 int32_t k_charselect_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void k_charselect_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KCharSelect_OnMetacall((KCharSelect*)self, (intptr_t)callback);
 }
 
-int32_t k_charselect_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCharSelect_QBaseMetacall((KCharSelect*)self, param1, param2, param3);
+int32_t k_charselect_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCharSelect_SuperMetacall((KCharSelect*)self, param1, param2, param3);
 }
 
 const char* k_charselect_tr(const char* s) {
@@ -82,8 +82,8 @@ void k_charselect_on_size_hint(void* self, QSize* (*callback)()) {
     KCharSelect_OnSizeHint((KCharSelect*)self, (intptr_t)callback);
 }
 
-QSize* k_charselect_qbase_size_hint(void* self) {
-    return KCharSelect_QBaseSizeHint((KCharSelect*)self);
+QSize* k_charselect_super_size_hint(void* self) {
+    return KCharSelect_SuperSizeHint((KCharSelect*)self);
 }
 
 void k_charselect_set_all_planes_enabled(void* self, bool all) {
@@ -1575,8 +1575,8 @@ int32_t k_charselect_dev_type(void* self) {
     return KCharSelect_DevType((KCharSelect*)self);
 }
 
-int32_t k_charselect_qbase_dev_type(void* self) {
-    return KCharSelect_QBaseDevType((KCharSelect*)self);
+int32_t k_charselect_super_dev_type(void* self) {
+    return KCharSelect_SuperDevType((KCharSelect*)self);
 }
 
 void k_charselect_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1587,8 +1587,8 @@ void k_charselect_set_visible(void* self, bool visible) {
     KCharSelect_SetVisible((KCharSelect*)self, visible);
 }
 
-void k_charselect_qbase_set_visible(void* self, bool visible) {
-    KCharSelect_QBaseSetVisible((KCharSelect*)self, visible);
+void k_charselect_super_set_visible(void* self, bool visible) {
+    KCharSelect_SuperSetVisible((KCharSelect*)self, visible);
 }
 
 void k_charselect_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1599,8 +1599,8 @@ QSize* k_charselect_minimum_size_hint(void* self) {
     return KCharSelect_MinimumSizeHint((KCharSelect*)self);
 }
 
-QSize* k_charselect_qbase_minimum_size_hint(void* self) {
-    return KCharSelect_QBaseMinimumSizeHint((KCharSelect*)self);
+QSize* k_charselect_super_minimum_size_hint(void* self) {
+    return KCharSelect_SuperMinimumSizeHint((KCharSelect*)self);
 }
 
 void k_charselect_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1611,8 +1611,8 @@ int32_t k_charselect_height_for_width(void* self, int param1) {
     return KCharSelect_HeightForWidth((KCharSelect*)self, param1);
 }
 
-int32_t k_charselect_qbase_height_for_width(void* self, int param1) {
-    return KCharSelect_QBaseHeightForWidth((KCharSelect*)self, param1);
+int32_t k_charselect_super_height_for_width(void* self, int param1) {
+    return KCharSelect_SuperHeightForWidth((KCharSelect*)self, param1);
 }
 
 void k_charselect_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1623,8 +1623,8 @@ bool k_charselect_has_height_for_width(void* self) {
     return KCharSelect_HasHeightForWidth((KCharSelect*)self);
 }
 
-bool k_charselect_qbase_has_height_for_width(void* self) {
-    return KCharSelect_QBaseHasHeightForWidth((KCharSelect*)self);
+bool k_charselect_super_has_height_for_width(void* self) {
+    return KCharSelect_SuperHasHeightForWidth((KCharSelect*)self);
 }
 
 void k_charselect_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1635,8 +1635,8 @@ QPaintEngine* k_charselect_paint_engine(void* self) {
     return KCharSelect_PaintEngine((KCharSelect*)self);
 }
 
-QPaintEngine* k_charselect_qbase_paint_engine(void* self) {
-    return KCharSelect_QBasePaintEngine((KCharSelect*)self);
+QPaintEngine* k_charselect_super_paint_engine(void* self) {
+    return KCharSelect_SuperPaintEngine((KCharSelect*)self);
 }
 
 void k_charselect_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1647,8 +1647,8 @@ bool k_charselect_event(void* self, void* event) {
     return KCharSelect_Event((KCharSelect*)self, (QEvent*)event);
 }
 
-bool k_charselect_qbase_event(void* self, void* event) {
-    return KCharSelect_QBaseEvent((KCharSelect*)self, (QEvent*)event);
+bool k_charselect_super_event(void* self, void* event) {
+    return KCharSelect_SuperEvent((KCharSelect*)self, (QEvent*)event);
 }
 
 void k_charselect_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1659,8 +1659,8 @@ void k_charselect_mouse_press_event(void* self, void* event) {
     KCharSelect_MousePressEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
-void k_charselect_qbase_mouse_press_event(void* self, void* event) {
-    KCharSelect_QBaseMousePressEvent((KCharSelect*)self, (QMouseEvent*)event);
+void k_charselect_super_mouse_press_event(void* self, void* event) {
+    KCharSelect_SuperMousePressEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
 void k_charselect_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1671,8 +1671,8 @@ void k_charselect_mouse_release_event(void* self, void* event) {
     KCharSelect_MouseReleaseEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
-void k_charselect_qbase_mouse_release_event(void* self, void* event) {
-    KCharSelect_QBaseMouseReleaseEvent((KCharSelect*)self, (QMouseEvent*)event);
+void k_charselect_super_mouse_release_event(void* self, void* event) {
+    KCharSelect_SuperMouseReleaseEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
 void k_charselect_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1683,8 +1683,8 @@ void k_charselect_mouse_double_click_event(void* self, void* event) {
     KCharSelect_MouseDoubleClickEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
-void k_charselect_qbase_mouse_double_click_event(void* self, void* event) {
-    KCharSelect_QBaseMouseDoubleClickEvent((KCharSelect*)self, (QMouseEvent*)event);
+void k_charselect_super_mouse_double_click_event(void* self, void* event) {
+    KCharSelect_SuperMouseDoubleClickEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
 void k_charselect_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1695,8 +1695,8 @@ void k_charselect_mouse_move_event(void* self, void* event) {
     KCharSelect_MouseMoveEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
-void k_charselect_qbase_mouse_move_event(void* self, void* event) {
-    KCharSelect_QBaseMouseMoveEvent((KCharSelect*)self, (QMouseEvent*)event);
+void k_charselect_super_mouse_move_event(void* self, void* event) {
+    KCharSelect_SuperMouseMoveEvent((KCharSelect*)self, (QMouseEvent*)event);
 }
 
 void k_charselect_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1707,8 +1707,8 @@ void k_charselect_wheel_event(void* self, void* event) {
     KCharSelect_WheelEvent((KCharSelect*)self, (QWheelEvent*)event);
 }
 
-void k_charselect_qbase_wheel_event(void* self, void* event) {
-    KCharSelect_QBaseWheelEvent((KCharSelect*)self, (QWheelEvent*)event);
+void k_charselect_super_wheel_event(void* self, void* event) {
+    KCharSelect_SuperWheelEvent((KCharSelect*)self, (QWheelEvent*)event);
 }
 
 void k_charselect_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1719,8 +1719,8 @@ void k_charselect_key_press_event(void* self, void* event) {
     KCharSelect_KeyPressEvent((KCharSelect*)self, (QKeyEvent*)event);
 }
 
-void k_charselect_qbase_key_press_event(void* self, void* event) {
-    KCharSelect_QBaseKeyPressEvent((KCharSelect*)self, (QKeyEvent*)event);
+void k_charselect_super_key_press_event(void* self, void* event) {
+    KCharSelect_SuperKeyPressEvent((KCharSelect*)self, (QKeyEvent*)event);
 }
 
 void k_charselect_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1731,8 +1731,8 @@ void k_charselect_key_release_event(void* self, void* event) {
     KCharSelect_KeyReleaseEvent((KCharSelect*)self, (QKeyEvent*)event);
 }
 
-void k_charselect_qbase_key_release_event(void* self, void* event) {
-    KCharSelect_QBaseKeyReleaseEvent((KCharSelect*)self, (QKeyEvent*)event);
+void k_charselect_super_key_release_event(void* self, void* event) {
+    KCharSelect_SuperKeyReleaseEvent((KCharSelect*)self, (QKeyEvent*)event);
 }
 
 void k_charselect_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1743,8 +1743,8 @@ void k_charselect_focus_in_event(void* self, void* event) {
     KCharSelect_FocusInEvent((KCharSelect*)self, (QFocusEvent*)event);
 }
 
-void k_charselect_qbase_focus_in_event(void* self, void* event) {
-    KCharSelect_QBaseFocusInEvent((KCharSelect*)self, (QFocusEvent*)event);
+void k_charselect_super_focus_in_event(void* self, void* event) {
+    KCharSelect_SuperFocusInEvent((KCharSelect*)self, (QFocusEvent*)event);
 }
 
 void k_charselect_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1755,8 +1755,8 @@ void k_charselect_focus_out_event(void* self, void* event) {
     KCharSelect_FocusOutEvent((KCharSelect*)self, (QFocusEvent*)event);
 }
 
-void k_charselect_qbase_focus_out_event(void* self, void* event) {
-    KCharSelect_QBaseFocusOutEvent((KCharSelect*)self, (QFocusEvent*)event);
+void k_charselect_super_focus_out_event(void* self, void* event) {
+    KCharSelect_SuperFocusOutEvent((KCharSelect*)self, (QFocusEvent*)event);
 }
 
 void k_charselect_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1767,8 +1767,8 @@ void k_charselect_enter_event(void* self, void* event) {
     KCharSelect_EnterEvent((KCharSelect*)self, (QEnterEvent*)event);
 }
 
-void k_charselect_qbase_enter_event(void* self, void* event) {
-    KCharSelect_QBaseEnterEvent((KCharSelect*)self, (QEnterEvent*)event);
+void k_charselect_super_enter_event(void* self, void* event) {
+    KCharSelect_SuperEnterEvent((KCharSelect*)self, (QEnterEvent*)event);
 }
 
 void k_charselect_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1779,8 +1779,8 @@ void k_charselect_leave_event(void* self, void* event) {
     KCharSelect_LeaveEvent((KCharSelect*)self, (QEvent*)event);
 }
 
-void k_charselect_qbase_leave_event(void* self, void* event) {
-    KCharSelect_QBaseLeaveEvent((KCharSelect*)self, (QEvent*)event);
+void k_charselect_super_leave_event(void* self, void* event) {
+    KCharSelect_SuperLeaveEvent((KCharSelect*)self, (QEvent*)event);
 }
 
 void k_charselect_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1791,8 +1791,8 @@ void k_charselect_paint_event(void* self, void* event) {
     KCharSelect_PaintEvent((KCharSelect*)self, (QPaintEvent*)event);
 }
 
-void k_charselect_qbase_paint_event(void* self, void* event) {
-    KCharSelect_QBasePaintEvent((KCharSelect*)self, (QPaintEvent*)event);
+void k_charselect_super_paint_event(void* self, void* event) {
+    KCharSelect_SuperPaintEvent((KCharSelect*)self, (QPaintEvent*)event);
 }
 
 void k_charselect_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1803,8 +1803,8 @@ void k_charselect_move_event(void* self, void* event) {
     KCharSelect_MoveEvent((KCharSelect*)self, (QMoveEvent*)event);
 }
 
-void k_charselect_qbase_move_event(void* self, void* event) {
-    KCharSelect_QBaseMoveEvent((KCharSelect*)self, (QMoveEvent*)event);
+void k_charselect_super_move_event(void* self, void* event) {
+    KCharSelect_SuperMoveEvent((KCharSelect*)self, (QMoveEvent*)event);
 }
 
 void k_charselect_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1815,8 +1815,8 @@ void k_charselect_resize_event(void* self, void* event) {
     KCharSelect_ResizeEvent((KCharSelect*)self, (QResizeEvent*)event);
 }
 
-void k_charselect_qbase_resize_event(void* self, void* event) {
-    KCharSelect_QBaseResizeEvent((KCharSelect*)self, (QResizeEvent*)event);
+void k_charselect_super_resize_event(void* self, void* event) {
+    KCharSelect_SuperResizeEvent((KCharSelect*)self, (QResizeEvent*)event);
 }
 
 void k_charselect_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1827,8 +1827,8 @@ void k_charselect_close_event(void* self, void* event) {
     KCharSelect_CloseEvent((KCharSelect*)self, (QCloseEvent*)event);
 }
 
-void k_charselect_qbase_close_event(void* self, void* event) {
-    KCharSelect_QBaseCloseEvent((KCharSelect*)self, (QCloseEvent*)event);
+void k_charselect_super_close_event(void* self, void* event) {
+    KCharSelect_SuperCloseEvent((KCharSelect*)self, (QCloseEvent*)event);
 }
 
 void k_charselect_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1839,8 +1839,8 @@ void k_charselect_context_menu_event(void* self, void* event) {
     KCharSelect_ContextMenuEvent((KCharSelect*)self, (QContextMenuEvent*)event);
 }
 
-void k_charselect_qbase_context_menu_event(void* self, void* event) {
-    KCharSelect_QBaseContextMenuEvent((KCharSelect*)self, (QContextMenuEvent*)event);
+void k_charselect_super_context_menu_event(void* self, void* event) {
+    KCharSelect_SuperContextMenuEvent((KCharSelect*)self, (QContextMenuEvent*)event);
 }
 
 void k_charselect_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1851,8 +1851,8 @@ void k_charselect_tablet_event(void* self, void* event) {
     KCharSelect_TabletEvent((KCharSelect*)self, (QTabletEvent*)event);
 }
 
-void k_charselect_qbase_tablet_event(void* self, void* event) {
-    KCharSelect_QBaseTabletEvent((KCharSelect*)self, (QTabletEvent*)event);
+void k_charselect_super_tablet_event(void* self, void* event) {
+    KCharSelect_SuperTabletEvent((KCharSelect*)self, (QTabletEvent*)event);
 }
 
 void k_charselect_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1863,8 +1863,8 @@ void k_charselect_action_event(void* self, void* event) {
     KCharSelect_ActionEvent((KCharSelect*)self, (QActionEvent*)event);
 }
 
-void k_charselect_qbase_action_event(void* self, void* event) {
-    KCharSelect_QBaseActionEvent((KCharSelect*)self, (QActionEvent*)event);
+void k_charselect_super_action_event(void* self, void* event) {
+    KCharSelect_SuperActionEvent((KCharSelect*)self, (QActionEvent*)event);
 }
 
 void k_charselect_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1875,8 +1875,8 @@ void k_charselect_drag_enter_event(void* self, void* event) {
     KCharSelect_DragEnterEvent((KCharSelect*)self, (QDragEnterEvent*)event);
 }
 
-void k_charselect_qbase_drag_enter_event(void* self, void* event) {
-    KCharSelect_QBaseDragEnterEvent((KCharSelect*)self, (QDragEnterEvent*)event);
+void k_charselect_super_drag_enter_event(void* self, void* event) {
+    KCharSelect_SuperDragEnterEvent((KCharSelect*)self, (QDragEnterEvent*)event);
 }
 
 void k_charselect_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1887,8 +1887,8 @@ void k_charselect_drag_move_event(void* self, void* event) {
     KCharSelect_DragMoveEvent((KCharSelect*)self, (QDragMoveEvent*)event);
 }
 
-void k_charselect_qbase_drag_move_event(void* self, void* event) {
-    KCharSelect_QBaseDragMoveEvent((KCharSelect*)self, (QDragMoveEvent*)event);
+void k_charselect_super_drag_move_event(void* self, void* event) {
+    KCharSelect_SuperDragMoveEvent((KCharSelect*)self, (QDragMoveEvent*)event);
 }
 
 void k_charselect_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1899,8 +1899,8 @@ void k_charselect_drag_leave_event(void* self, void* event) {
     KCharSelect_DragLeaveEvent((KCharSelect*)self, (QDragLeaveEvent*)event);
 }
 
-void k_charselect_qbase_drag_leave_event(void* self, void* event) {
-    KCharSelect_QBaseDragLeaveEvent((KCharSelect*)self, (QDragLeaveEvent*)event);
+void k_charselect_super_drag_leave_event(void* self, void* event) {
+    KCharSelect_SuperDragLeaveEvent((KCharSelect*)self, (QDragLeaveEvent*)event);
 }
 
 void k_charselect_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1911,8 +1911,8 @@ void k_charselect_drop_event(void* self, void* event) {
     KCharSelect_DropEvent((KCharSelect*)self, (QDropEvent*)event);
 }
 
-void k_charselect_qbase_drop_event(void* self, void* event) {
-    KCharSelect_QBaseDropEvent((KCharSelect*)self, (QDropEvent*)event);
+void k_charselect_super_drop_event(void* self, void* event) {
+    KCharSelect_SuperDropEvent((KCharSelect*)self, (QDropEvent*)event);
 }
 
 void k_charselect_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1923,8 +1923,8 @@ void k_charselect_show_event(void* self, void* event) {
     KCharSelect_ShowEvent((KCharSelect*)self, (QShowEvent*)event);
 }
 
-void k_charselect_qbase_show_event(void* self, void* event) {
-    KCharSelect_QBaseShowEvent((KCharSelect*)self, (QShowEvent*)event);
+void k_charselect_super_show_event(void* self, void* event) {
+    KCharSelect_SuperShowEvent((KCharSelect*)self, (QShowEvent*)event);
 }
 
 void k_charselect_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1935,8 +1935,8 @@ void k_charselect_hide_event(void* self, void* event) {
     KCharSelect_HideEvent((KCharSelect*)self, (QHideEvent*)event);
 }
 
-void k_charselect_qbase_hide_event(void* self, void* event) {
-    KCharSelect_QBaseHideEvent((KCharSelect*)self, (QHideEvent*)event);
+void k_charselect_super_hide_event(void* self, void* event) {
+    KCharSelect_SuperHideEvent((KCharSelect*)self, (QHideEvent*)event);
 }
 
 void k_charselect_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1947,8 +1947,8 @@ bool k_charselect_native_event(void* self, char* eventType, void* message, intpt
     return KCharSelect_NativeEvent((KCharSelect*)self, qstring(eventType), message, result);
 }
 
-bool k_charselect_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KCharSelect_QBaseNativeEvent((KCharSelect*)self, qstring(eventType), message, result);
+bool k_charselect_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KCharSelect_SuperNativeEvent((KCharSelect*)self, qstring(eventType), message, result);
 }
 
 void k_charselect_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1959,8 +1959,8 @@ void k_charselect_change_event(void* self, void* param1) {
     KCharSelect_ChangeEvent((KCharSelect*)self, (QEvent*)param1);
 }
 
-void k_charselect_qbase_change_event(void* self, void* param1) {
-    KCharSelect_QBaseChangeEvent((KCharSelect*)self, (QEvent*)param1);
+void k_charselect_super_change_event(void* self, void* param1) {
+    KCharSelect_SuperChangeEvent((KCharSelect*)self, (QEvent*)param1);
 }
 
 void k_charselect_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1971,8 +1971,8 @@ int32_t k_charselect_metric(void* self, int32_t param1) {
     return KCharSelect_Metric((KCharSelect*)self, param1);
 }
 
-int32_t k_charselect_qbase_metric(void* self, int32_t param1) {
-    return KCharSelect_QBaseMetric((KCharSelect*)self, param1);
+int32_t k_charselect_super_metric(void* self, int32_t param1) {
+    return KCharSelect_SuperMetric((KCharSelect*)self, param1);
 }
 
 void k_charselect_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1983,8 +1983,8 @@ void k_charselect_init_painter(void* self, void* painter) {
     KCharSelect_InitPainter((KCharSelect*)self, (QPainter*)painter);
 }
 
-void k_charselect_qbase_init_painter(void* self, void* painter) {
-    KCharSelect_QBaseInitPainter((KCharSelect*)self, (QPainter*)painter);
+void k_charselect_super_init_painter(void* self, void* painter) {
+    KCharSelect_SuperInitPainter((KCharSelect*)self, (QPainter*)painter);
 }
 
 void k_charselect_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1995,8 +1995,8 @@ QPaintDevice* k_charselect_redirected(void* self, void* offset) {
     return KCharSelect_Redirected((KCharSelect*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_charselect_qbase_redirected(void* self, void* offset) {
-    return KCharSelect_QBaseRedirected((KCharSelect*)self, (QPoint*)offset);
+QPaintDevice* k_charselect_super_redirected(void* self, void* offset) {
+    return KCharSelect_SuperRedirected((KCharSelect*)self, (QPoint*)offset);
 }
 
 void k_charselect_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2007,8 +2007,8 @@ QPainter* k_charselect_shared_painter(void* self) {
     return KCharSelect_SharedPainter((KCharSelect*)self);
 }
 
-QPainter* k_charselect_qbase_shared_painter(void* self) {
-    return KCharSelect_QBaseSharedPainter((KCharSelect*)self);
+QPainter* k_charselect_super_shared_painter(void* self) {
+    return KCharSelect_SuperSharedPainter((KCharSelect*)self);
 }
 
 void k_charselect_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2019,8 +2019,8 @@ void k_charselect_input_method_event(void* self, void* param1) {
     KCharSelect_InputMethodEvent((KCharSelect*)self, (QInputMethodEvent*)param1);
 }
 
-void k_charselect_qbase_input_method_event(void* self, void* param1) {
-    KCharSelect_QBaseInputMethodEvent((KCharSelect*)self, (QInputMethodEvent*)param1);
+void k_charselect_super_input_method_event(void* self, void* param1) {
+    KCharSelect_SuperInputMethodEvent((KCharSelect*)self, (QInputMethodEvent*)param1);
 }
 
 void k_charselect_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2031,8 +2031,8 @@ QVariant* k_charselect_input_method_query(void* self, int32_t param1) {
     return KCharSelect_InputMethodQuery((KCharSelect*)self, param1);
 }
 
-QVariant* k_charselect_qbase_input_method_query(void* self, int32_t param1) {
-    return KCharSelect_QBaseInputMethodQuery((KCharSelect*)self, param1);
+QVariant* k_charselect_super_input_method_query(void* self, int32_t param1) {
+    return KCharSelect_SuperInputMethodQuery((KCharSelect*)self, param1);
 }
 
 void k_charselect_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2043,8 +2043,8 @@ bool k_charselect_focus_next_prev_child(void* self, bool next) {
     return KCharSelect_FocusNextPrevChild((KCharSelect*)self, next);
 }
 
-bool k_charselect_qbase_focus_next_prev_child(void* self, bool next) {
-    return KCharSelect_QBaseFocusNextPrevChild((KCharSelect*)self, next);
+bool k_charselect_super_focus_next_prev_child(void* self, bool next) {
+    return KCharSelect_SuperFocusNextPrevChild((KCharSelect*)self, next);
 }
 
 void k_charselect_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2055,8 +2055,8 @@ bool k_charselect_event_filter(void* self, void* watched, void* event) {
     return KCharSelect_EventFilter((KCharSelect*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_charselect_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCharSelect_QBaseEventFilter((KCharSelect*)self, (QObject*)watched, (QEvent*)event);
+bool k_charselect_super_event_filter(void* self, void* watched, void* event) {
+    return KCharSelect_SuperEventFilter((KCharSelect*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_charselect_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2067,8 +2067,8 @@ void k_charselect_timer_event(void* self, void* event) {
     KCharSelect_TimerEvent((KCharSelect*)self, (QTimerEvent*)event);
 }
 
-void k_charselect_qbase_timer_event(void* self, void* event) {
-    KCharSelect_QBaseTimerEvent((KCharSelect*)self, (QTimerEvent*)event);
+void k_charselect_super_timer_event(void* self, void* event) {
+    KCharSelect_SuperTimerEvent((KCharSelect*)self, (QTimerEvent*)event);
 }
 
 void k_charselect_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2079,8 +2079,8 @@ void k_charselect_child_event(void* self, void* event) {
     KCharSelect_ChildEvent((KCharSelect*)self, (QChildEvent*)event);
 }
 
-void k_charselect_qbase_child_event(void* self, void* event) {
-    KCharSelect_QBaseChildEvent((KCharSelect*)self, (QChildEvent*)event);
+void k_charselect_super_child_event(void* self, void* event) {
+    KCharSelect_SuperChildEvent((KCharSelect*)self, (QChildEvent*)event);
 }
 
 void k_charselect_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2091,8 +2091,8 @@ void k_charselect_custom_event(void* self, void* event) {
     KCharSelect_CustomEvent((KCharSelect*)self, (QEvent*)event);
 }
 
-void k_charselect_qbase_custom_event(void* self, void* event) {
-    KCharSelect_QBaseCustomEvent((KCharSelect*)self, (QEvent*)event);
+void k_charselect_super_custom_event(void* self, void* event) {
+    KCharSelect_SuperCustomEvent((KCharSelect*)self, (QEvent*)event);
 }
 
 void k_charselect_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2103,8 +2103,8 @@ void k_charselect_connect_notify(void* self, void* signal) {
     KCharSelect_ConnectNotify((KCharSelect*)self, (QMetaMethod*)signal);
 }
 
-void k_charselect_qbase_connect_notify(void* self, void* signal) {
-    KCharSelect_QBaseConnectNotify((KCharSelect*)self, (QMetaMethod*)signal);
+void k_charselect_super_connect_notify(void* self, void* signal) {
+    KCharSelect_SuperConnectNotify((KCharSelect*)self, (QMetaMethod*)signal);
 }
 
 void k_charselect_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2115,8 +2115,8 @@ void k_charselect_disconnect_notify(void* self, void* signal) {
     KCharSelect_DisconnectNotify((KCharSelect*)self, (QMetaMethod*)signal);
 }
 
-void k_charselect_qbase_disconnect_notify(void* self, void* signal) {
-    KCharSelect_QBaseDisconnectNotify((KCharSelect*)self, (QMetaMethod*)signal);
+void k_charselect_super_disconnect_notify(void* self, void* signal) {
+    KCharSelect_SuperDisconnectNotify((KCharSelect*)self, (QMetaMethod*)signal);
 }
 
 void k_charselect_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2127,8 +2127,8 @@ void k_charselect_update_micro_focus(void* self) {
     KCharSelect_UpdateMicroFocus((KCharSelect*)self);
 }
 
-void k_charselect_qbase_update_micro_focus(void* self) {
-    KCharSelect_QBaseUpdateMicroFocus((KCharSelect*)self);
+void k_charselect_super_update_micro_focus(void* self) {
+    KCharSelect_SuperUpdateMicroFocus((KCharSelect*)self);
 }
 
 void k_charselect_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2139,8 +2139,8 @@ void k_charselect_create(void* self) {
     KCharSelect_Create((KCharSelect*)self);
 }
 
-void k_charselect_qbase_create(void* self) {
-    KCharSelect_QBaseCreate((KCharSelect*)self);
+void k_charselect_super_create(void* self) {
+    KCharSelect_SuperCreate((KCharSelect*)self);
 }
 
 void k_charselect_on_create(void* self, void (*callback)()) {
@@ -2151,8 +2151,8 @@ void k_charselect_destroy(void* self) {
     KCharSelect_Destroy((KCharSelect*)self);
 }
 
-void k_charselect_qbase_destroy(void* self) {
-    KCharSelect_QBaseDestroy((KCharSelect*)self);
+void k_charselect_super_destroy(void* self) {
+    KCharSelect_SuperDestroy((KCharSelect*)self);
 }
 
 void k_charselect_on_destroy(void* self, void (*callback)()) {
@@ -2163,8 +2163,8 @@ bool k_charselect_focus_next_child(void* self) {
     return KCharSelect_FocusNextChild((KCharSelect*)self);
 }
 
-bool k_charselect_qbase_focus_next_child(void* self) {
-    return KCharSelect_QBaseFocusNextChild((KCharSelect*)self);
+bool k_charselect_super_focus_next_child(void* self) {
+    return KCharSelect_SuperFocusNextChild((KCharSelect*)self);
 }
 
 void k_charselect_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2175,8 +2175,8 @@ bool k_charselect_focus_previous_child(void* self) {
     return KCharSelect_FocusPreviousChild((KCharSelect*)self);
 }
 
-bool k_charselect_qbase_focus_previous_child(void* self) {
-    return KCharSelect_QBaseFocusPreviousChild((KCharSelect*)self);
+bool k_charselect_super_focus_previous_child(void* self) {
+    return KCharSelect_SuperFocusPreviousChild((KCharSelect*)self);
 }
 
 void k_charselect_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2187,8 +2187,8 @@ QObject* k_charselect_sender(void* self) {
     return KCharSelect_Sender((KCharSelect*)self);
 }
 
-QObject* k_charselect_qbase_sender(void* self) {
-    return KCharSelect_QBaseSender((KCharSelect*)self);
+QObject* k_charselect_super_sender(void* self) {
+    return KCharSelect_SuperSender((KCharSelect*)self);
 }
 
 void k_charselect_on_sender(void* self, QObject* (*callback)()) {
@@ -2199,8 +2199,8 @@ int32_t k_charselect_sender_signal_index(void* self) {
     return KCharSelect_SenderSignalIndex((KCharSelect*)self);
 }
 
-int32_t k_charselect_qbase_sender_signal_index(void* self) {
-    return KCharSelect_QBaseSenderSignalIndex((KCharSelect*)self);
+int32_t k_charselect_super_sender_signal_index(void* self) {
+    return KCharSelect_SuperSenderSignalIndex((KCharSelect*)self);
 }
 
 void k_charselect_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2211,8 +2211,8 @@ int32_t k_charselect_receivers(void* self, const char* signal) {
     return KCharSelect_Receivers((KCharSelect*)self, signal);
 }
 
-int32_t k_charselect_qbase_receivers(void* self, const char* signal) {
-    return KCharSelect_QBaseReceivers((KCharSelect*)self, signal);
+int32_t k_charselect_super_receivers(void* self, const char* signal) {
+    return KCharSelect_SuperReceivers((KCharSelect*)self, signal);
 }
 
 void k_charselect_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2223,8 +2223,8 @@ bool k_charselect_is_signal_connected(void* self, void* signal) {
     return KCharSelect_IsSignalConnected((KCharSelect*)self, (QMetaMethod*)signal);
 }
 
-bool k_charselect_qbase_is_signal_connected(void* self, void* signal) {
-    return KCharSelect_QBaseIsSignalConnected((KCharSelect*)self, (QMetaMethod*)signal);
+bool k_charselect_super_is_signal_connected(void* self, void* signal) {
+    return KCharSelect_SuperIsSignalConnected((KCharSelect*)self, (QMetaMethod*)signal);
 }
 
 void k_charselect_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2235,8 +2235,8 @@ double k_charselect_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KCharSelect_GetDecodedMetricF((KCharSelect*)self, metricA, metricB);
 }
 
-double k_charselect_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KCharSelect_QBaseGetDecodedMetricF((KCharSelect*)self, metricA, metricB);
+double k_charselect_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KCharSelect_SuperGetDecodedMetricF((KCharSelect*)self, metricA, metricB);
 }
 
 void k_charselect_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

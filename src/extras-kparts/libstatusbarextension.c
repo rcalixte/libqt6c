@@ -25,8 +25,8 @@ void k_parts__statusbarextension_on_meta_object(void* self, const QMetaObject* (
     KParts__StatusBarExtension_OnMetaObject((KParts__StatusBarExtension*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__statusbarextension_qbase_meta_object(void* self) {
-    return KParts__StatusBarExtension_QBaseMetaObject((KParts__StatusBarExtension*)self);
+const QMetaObject* k_parts__statusbarextension_super_meta_object(void* self) {
+    return KParts__StatusBarExtension_SuperMetaObject((KParts__StatusBarExtension*)self);
 }
 
 void* k_parts__statusbarextension_metacast(void* self, const char* param1) {
@@ -37,8 +37,8 @@ void k_parts__statusbarextension_on_metacast(void* self, void* (*callback)(void*
     KParts__StatusBarExtension_OnMetacast((KParts__StatusBarExtension*)self, (intptr_t)callback);
 }
 
-void* k_parts__statusbarextension_qbase_metacast(void* self, const char* param1) {
-    return KParts__StatusBarExtension_QBaseMetacast((KParts__StatusBarExtension*)self, param1);
+void* k_parts__statusbarextension_super_metacast(void* self, const char* param1) {
+    return KParts__StatusBarExtension_SuperMetacast((KParts__StatusBarExtension*)self, param1);
 }
 
 int32_t k_parts__statusbarextension_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -49,8 +49,8 @@ void k_parts__statusbarextension_on_metacall(void* self, int32_t (*callback)(voi
     KParts__StatusBarExtension_OnMetacall((KParts__StatusBarExtension*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__statusbarextension_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__StatusBarExtension_QBaseMetacall((KParts__StatusBarExtension*)self, param1, param2, param3);
+int32_t k_parts__statusbarextension_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__StatusBarExtension_SuperMetacall((KParts__StatusBarExtension*)self, param1, param2, param3);
 }
 
 const char* k_parts__statusbarextension_tr(const char* s) {
@@ -88,8 +88,8 @@ void k_parts__statusbarextension_on_event_filter(void* self, bool (*callback)(vo
     KParts__StatusBarExtension_OnEventFilter((KParts__StatusBarExtension*)self, (intptr_t)callback);
 }
 
-bool k_parts__statusbarextension_qbase_event_filter(void* self, void* watched, void* ev) {
-    return KParts__StatusBarExtension_QBaseEventFilter((KParts__StatusBarExtension*)self, (QObject*)watched, (QEvent*)ev);
+bool k_parts__statusbarextension_super_event_filter(void* self, void* watched, void* ev) {
+    return KParts__StatusBarExtension_SuperEventFilter((KParts__StatusBarExtension*)self, (QObject*)watched, (QEvent*)ev);
 }
 
 const char* k_parts__statusbarextension_tr2(const char* s, const char* c) {
@@ -321,8 +321,8 @@ bool k_parts__statusbarextension_event(void* self, void* event) {
     return KParts__StatusBarExtension_Event((KParts__StatusBarExtension*)self, (QEvent*)event);
 }
 
-bool k_parts__statusbarextension_qbase_event(void* self, void* event) {
-    return KParts__StatusBarExtension_QBaseEvent((KParts__StatusBarExtension*)self, (QEvent*)event);
+bool k_parts__statusbarextension_super_event(void* self, void* event) {
+    return KParts__StatusBarExtension_SuperEvent((KParts__StatusBarExtension*)self, (QEvent*)event);
 }
 
 void k_parts__statusbarextension_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -333,8 +333,8 @@ void k_parts__statusbarextension_timer_event(void* self, void* event) {
     KParts__StatusBarExtension_TimerEvent((KParts__StatusBarExtension*)self, (QTimerEvent*)event);
 }
 
-void k_parts__statusbarextension_qbase_timer_event(void* self, void* event) {
-    KParts__StatusBarExtension_QBaseTimerEvent((KParts__StatusBarExtension*)self, (QTimerEvent*)event);
+void k_parts__statusbarextension_super_timer_event(void* self, void* event) {
+    KParts__StatusBarExtension_SuperTimerEvent((KParts__StatusBarExtension*)self, (QTimerEvent*)event);
 }
 
 void k_parts__statusbarextension_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -345,8 +345,8 @@ void k_parts__statusbarextension_child_event(void* self, void* event) {
     KParts__StatusBarExtension_ChildEvent((KParts__StatusBarExtension*)self, (QChildEvent*)event);
 }
 
-void k_parts__statusbarextension_qbase_child_event(void* self, void* event) {
-    KParts__StatusBarExtension_QBaseChildEvent((KParts__StatusBarExtension*)self, (QChildEvent*)event);
+void k_parts__statusbarextension_super_child_event(void* self, void* event) {
+    KParts__StatusBarExtension_SuperChildEvent((KParts__StatusBarExtension*)self, (QChildEvent*)event);
 }
 
 void k_parts__statusbarextension_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ void k_parts__statusbarextension_custom_event(void* self, void* event) {
     KParts__StatusBarExtension_CustomEvent((KParts__StatusBarExtension*)self, (QEvent*)event);
 }
 
-void k_parts__statusbarextension_qbase_custom_event(void* self, void* event) {
-    KParts__StatusBarExtension_QBaseCustomEvent((KParts__StatusBarExtension*)self, (QEvent*)event);
+void k_parts__statusbarextension_super_custom_event(void* self, void* event) {
+    KParts__StatusBarExtension_SuperCustomEvent((KParts__StatusBarExtension*)self, (QEvent*)event);
 }
 
 void k_parts__statusbarextension_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -369,8 +369,8 @@ void k_parts__statusbarextension_connect_notify(void* self, void* signal) {
     KParts__StatusBarExtension_ConnectNotify((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__statusbarextension_qbase_connect_notify(void* self, void* signal) {
-    KParts__StatusBarExtension_QBaseConnectNotify((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
+void k_parts__statusbarextension_super_connect_notify(void* self, void* signal) {
+    KParts__StatusBarExtension_SuperConnectNotify((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__statusbarextension_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -381,8 +381,8 @@ void k_parts__statusbarextension_disconnect_notify(void* self, void* signal) {
     KParts__StatusBarExtension_DisconnectNotify((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__statusbarextension_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__StatusBarExtension_QBaseDisconnectNotify((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
+void k_parts__statusbarextension_super_disconnect_notify(void* self, void* signal) {
+    KParts__StatusBarExtension_SuperDisconnectNotify((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__statusbarextension_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ QObject* k_parts__statusbarextension_sender(void* self) {
     return KParts__StatusBarExtension_Sender((KParts__StatusBarExtension*)self);
 }
 
-QObject* k_parts__statusbarextension_qbase_sender(void* self) {
-    return KParts__StatusBarExtension_QBaseSender((KParts__StatusBarExtension*)self);
+QObject* k_parts__statusbarextension_super_sender(void* self) {
+    return KParts__StatusBarExtension_SuperSender((KParts__StatusBarExtension*)self);
 }
 
 void k_parts__statusbarextension_on_sender(void* self, QObject* (*callback)()) {
@@ -405,8 +405,8 @@ int32_t k_parts__statusbarextension_sender_signal_index(void* self) {
     return KParts__StatusBarExtension_SenderSignalIndex((KParts__StatusBarExtension*)self);
 }
 
-int32_t k_parts__statusbarextension_qbase_sender_signal_index(void* self) {
-    return KParts__StatusBarExtension_QBaseSenderSignalIndex((KParts__StatusBarExtension*)self);
+int32_t k_parts__statusbarextension_super_sender_signal_index(void* self) {
+    return KParts__StatusBarExtension_SuperSenderSignalIndex((KParts__StatusBarExtension*)self);
 }
 
 void k_parts__statusbarextension_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -417,8 +417,8 @@ int32_t k_parts__statusbarextension_receivers(void* self, const char* signal) {
     return KParts__StatusBarExtension_Receivers((KParts__StatusBarExtension*)self, signal);
 }
 
-int32_t k_parts__statusbarextension_qbase_receivers(void* self, const char* signal) {
-    return KParts__StatusBarExtension_QBaseReceivers((KParts__StatusBarExtension*)self, signal);
+int32_t k_parts__statusbarextension_super_receivers(void* self, const char* signal) {
+    return KParts__StatusBarExtension_SuperReceivers((KParts__StatusBarExtension*)self, signal);
 }
 
 void k_parts__statusbarextension_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -429,8 +429,8 @@ bool k_parts__statusbarextension_is_signal_connected(void* self, void* signal) {
     return KParts__StatusBarExtension_IsSignalConnected((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__statusbarextension_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__StatusBarExtension_QBaseIsSignalConnected((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
+bool k_parts__statusbarextension_super_is_signal_connected(void* self, void* signal) {
+    return KParts__StatusBarExtension_SuperIsSignalConnected((KParts__StatusBarExtension*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__statusbarextension_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

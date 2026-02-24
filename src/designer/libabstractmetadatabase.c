@@ -22,8 +22,8 @@ void q_designermetadatabaseiteminterface_on_name(void* self, const char* (*callb
     QDesignerMetaDataBaseItemInterface_OnName((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-const char* q_designermetadatabaseiteminterface_qbase_name(void* self) {
-    libqt_string _str = QDesignerMetaDataBaseItemInterface_QBaseName((QDesignerMetaDataBaseItemInterface*)self);
+const char* q_designermetadatabaseiteminterface_super_name(void* self) {
+    libqt_string _str = QDesignerMetaDataBaseItemInterface_SuperName((QDesignerMetaDataBaseItemInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -37,8 +37,8 @@ void q_designermetadatabaseiteminterface_on_set_name(void* self, void (*callback
     QDesignerMetaDataBaseItemInterface_OnSetName((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designermetadatabaseiteminterface_qbase_set_name(void* self, const char* name) {
-    QDesignerMetaDataBaseItemInterface_QBaseSetName((QDesignerMetaDataBaseItemInterface*)self, qstring(name));
+void q_designermetadatabaseiteminterface_super_set_name(void* self, const char* name) {
+    QDesignerMetaDataBaseItemInterface_SuperSetName((QDesignerMetaDataBaseItemInterface*)self, qstring(name));
 }
 
 libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_tab_order(void* self) {
@@ -50,8 +50,8 @@ void q_designermetadatabaseiteminterface_on_tab_order(void* self, libqt_list /* 
     QDesignerMetaDataBaseItemInterface_OnTabOrder((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_qbase_tab_order(void* self) {
-    libqt_list _arr = QDesignerMetaDataBaseItemInterface_QBaseTabOrder((QDesignerMetaDataBaseItemInterface*)self);
+libqt_list /* of QWidget* */ q_designermetadatabaseiteminterface_super_tab_order(void* self) {
+    libqt_list _arr = QDesignerMetaDataBaseItemInterface_SuperTabOrder((QDesignerMetaDataBaseItemInterface*)self);
     return _arr;
 }
 
@@ -63,8 +63,8 @@ void q_designermetadatabaseiteminterface_on_set_tab_order(void* self, void (*cal
     QDesignerMetaDataBaseItemInterface_OnSetTabOrder((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designermetadatabaseiteminterface_qbase_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder) {
-    QDesignerMetaDataBaseItemInterface_QBaseSetTabOrder((QDesignerMetaDataBaseItemInterface*)self, tabOrder);
+void q_designermetadatabaseiteminterface_super_set_tab_order(void* self, libqt_list /* of QWidget* */ tabOrder) {
+    QDesignerMetaDataBaseItemInterface_SuperSetTabOrder((QDesignerMetaDataBaseItemInterface*)self, tabOrder);
 }
 
 bool q_designermetadatabaseiteminterface_enabled(void* self) {
@@ -75,8 +75,8 @@ void q_designermetadatabaseiteminterface_on_enabled(void* self, bool (*callback)
     QDesignerMetaDataBaseItemInterface_OnEnabled((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-bool q_designermetadatabaseiteminterface_qbase_enabled(void* self) {
-    return QDesignerMetaDataBaseItemInterface_QBaseEnabled((QDesignerMetaDataBaseItemInterface*)self);
+bool q_designermetadatabaseiteminterface_super_enabled(void* self) {
+    return QDesignerMetaDataBaseItemInterface_SuperEnabled((QDesignerMetaDataBaseItemInterface*)self);
 }
 
 void q_designermetadatabaseiteminterface_set_enabled(void* self, bool b) {
@@ -87,8 +87,8 @@ void q_designermetadatabaseiteminterface_on_set_enabled(void* self, void (*callb
     QDesignerMetaDataBaseItemInterface_OnSetEnabled((QDesignerMetaDataBaseItemInterface*)self, (intptr_t)callback);
 }
 
-void q_designermetadatabaseiteminterface_qbase_set_enabled(void* self, bool b) {
-    QDesignerMetaDataBaseItemInterface_QBaseSetEnabled((QDesignerMetaDataBaseItemInterface*)self, b);
+void q_designermetadatabaseiteminterface_super_set_enabled(void* self, bool b) {
+    QDesignerMetaDataBaseItemInterface_SuperSetEnabled((QDesignerMetaDataBaseItemInterface*)self, b);
 }
 
 void q_designermetadatabaseiteminterface_delete(void* self) {
@@ -111,8 +111,8 @@ void q_designermetadatabaseinterface_on_meta_object(void* self, const QMetaObjec
     QDesignerMetaDataBaseInterface_OnMetaObject((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_designermetadatabaseinterface_qbase_meta_object(void* self) {
-    return QDesignerMetaDataBaseInterface_QBaseMetaObject((QDesignerMetaDataBaseInterface*)self);
+const QMetaObject* q_designermetadatabaseinterface_super_meta_object(void* self) {
+    return QDesignerMetaDataBaseInterface_SuperMetaObject((QDesignerMetaDataBaseInterface*)self);
 }
 
 void* q_designermetadatabaseinterface_metacast(void* self, const char* param1) {
@@ -123,8 +123,8 @@ void q_designermetadatabaseinterface_on_metacast(void* self, void* (*callback)(v
     QDesignerMetaDataBaseInterface_OnMetacast((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-void* q_designermetadatabaseinterface_qbase_metacast(void* self, const char* param1) {
-    return QDesignerMetaDataBaseInterface_QBaseMetacast((QDesignerMetaDataBaseInterface*)self, param1);
+void* q_designermetadatabaseinterface_super_metacast(void* self, const char* param1) {
+    return QDesignerMetaDataBaseInterface_SuperMetacast((QDesignerMetaDataBaseInterface*)self, param1);
 }
 
 int32_t q_designermetadatabaseinterface_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -135,8 +135,8 @@ void q_designermetadatabaseinterface_on_metacall(void* self, int32_t (*callback)
     QDesignerMetaDataBaseInterface_OnMetacall((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-int32_t q_designermetadatabaseinterface_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDesignerMetaDataBaseInterface_QBaseMetacall((QDesignerMetaDataBaseInterface*)self, param1, param2, param3);
+int32_t q_designermetadatabaseinterface_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDesignerMetaDataBaseInterface_SuperMetacall((QDesignerMetaDataBaseInterface*)self, param1, param2, param3);
 }
 
 const char* q_designermetadatabaseinterface_tr(const char* s) {
@@ -154,8 +154,8 @@ void q_designermetadatabaseinterface_on_item(void* self, QDesignerMetaDataBaseIt
     QDesignerMetaDataBaseInterface_OnItem((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_qbase_item(void* self, void* object) {
-    return QDesignerMetaDataBaseInterface_QBaseItem((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
+QDesignerMetaDataBaseItemInterface* q_designermetadatabaseinterface_super_item(void* self, void* object) {
+    return QDesignerMetaDataBaseInterface_SuperItem((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
 }
 
 void q_designermetadatabaseinterface_add(void* self, void* object) {
@@ -166,8 +166,8 @@ void q_designermetadatabaseinterface_on_add(void* self, void (*callback)(void*, 
     QDesignerMetaDataBaseInterface_OnAdd((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-void q_designermetadatabaseinterface_qbase_add(void* self, void* object) {
-    QDesignerMetaDataBaseInterface_QBaseAdd((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
+void q_designermetadatabaseinterface_super_add(void* self, void* object) {
+    QDesignerMetaDataBaseInterface_SuperAdd((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
 }
 
 void q_designermetadatabaseinterface_remove(void* self, void* object) {
@@ -178,8 +178,8 @@ void q_designermetadatabaseinterface_on_remove(void* self, void (*callback)(void
     QDesignerMetaDataBaseInterface_OnRemove((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-void q_designermetadatabaseinterface_qbase_remove(void* self, void* object) {
-    QDesignerMetaDataBaseInterface_QBaseRemove((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
+void q_designermetadatabaseinterface_super_remove(void* self, void* object) {
+    QDesignerMetaDataBaseInterface_SuperRemove((QDesignerMetaDataBaseInterface*)self, (QObject*)object);
 }
 
 libqt_list /* of QObject* */ q_designermetadatabaseinterface_objects(void* self) {
@@ -191,8 +191,8 @@ void q_designermetadatabaseinterface_on_objects(void* self, libqt_list /* of QOb
     QDesignerMetaDataBaseInterface_OnObjects((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QObject* */ q_designermetadatabaseinterface_qbase_objects(void* self) {
-    libqt_list _arr = QDesignerMetaDataBaseInterface_QBaseObjects((QDesignerMetaDataBaseInterface*)self);
+libqt_list /* of QObject* */ q_designermetadatabaseinterface_super_objects(void* self) {
+    libqt_list _arr = QDesignerMetaDataBaseInterface_SuperObjects((QDesignerMetaDataBaseInterface*)self);
     return _arr;
 }
 
@@ -204,8 +204,8 @@ void q_designermetadatabaseinterface_on_core(void* self, QDesignerFormEditorInte
     QDesignerMetaDataBaseInterface_OnCore((QDesignerMetaDataBaseInterface*)self, (intptr_t)callback);
 }
 
-QDesignerFormEditorInterface* q_designermetadatabaseinterface_qbase_core(void* self) {
-    return QDesignerMetaDataBaseInterface_QBaseCore((QDesignerMetaDataBaseInterface*)self);
+QDesignerFormEditorInterface* q_designermetadatabaseinterface_super_core(void* self) {
+    return QDesignerMetaDataBaseInterface_SuperCore((QDesignerMetaDataBaseInterface*)self);
 }
 
 void q_designermetadatabaseinterface_changed(void* self) {
@@ -445,8 +445,8 @@ bool q_designermetadatabaseinterface_event(void* self, void* event) {
     return QDesignerMetaDataBaseInterface_Event((QDesignerMetaDataBaseInterface*)self, (QEvent*)event);
 }
 
-bool q_designermetadatabaseinterface_qbase_event(void* self, void* event) {
-    return QDesignerMetaDataBaseInterface_QBaseEvent((QDesignerMetaDataBaseInterface*)self, (QEvent*)event);
+bool q_designermetadatabaseinterface_super_event(void* self, void* event) {
+    return QDesignerMetaDataBaseInterface_SuperEvent((QDesignerMetaDataBaseInterface*)self, (QEvent*)event);
 }
 
 void q_designermetadatabaseinterface_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -457,8 +457,8 @@ bool q_designermetadatabaseinterface_event_filter(void* self, void* watched, voi
     return QDesignerMetaDataBaseInterface_EventFilter((QDesignerMetaDataBaseInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_designermetadatabaseinterface_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDesignerMetaDataBaseInterface_QBaseEventFilter((QDesignerMetaDataBaseInterface*)self, (QObject*)watched, (QEvent*)event);
+bool q_designermetadatabaseinterface_super_event_filter(void* self, void* watched, void* event) {
+    return QDesignerMetaDataBaseInterface_SuperEventFilter((QDesignerMetaDataBaseInterface*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_designermetadatabaseinterface_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -469,8 +469,8 @@ void q_designermetadatabaseinterface_timer_event(void* self, void* event) {
     QDesignerMetaDataBaseInterface_TimerEvent((QDesignerMetaDataBaseInterface*)self, (QTimerEvent*)event);
 }
 
-void q_designermetadatabaseinterface_qbase_timer_event(void* self, void* event) {
-    QDesignerMetaDataBaseInterface_QBaseTimerEvent((QDesignerMetaDataBaseInterface*)self, (QTimerEvent*)event);
+void q_designermetadatabaseinterface_super_timer_event(void* self, void* event) {
+    QDesignerMetaDataBaseInterface_SuperTimerEvent((QDesignerMetaDataBaseInterface*)self, (QTimerEvent*)event);
 }
 
 void q_designermetadatabaseinterface_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -481,8 +481,8 @@ void q_designermetadatabaseinterface_child_event(void* self, void* event) {
     QDesignerMetaDataBaseInterface_ChildEvent((QDesignerMetaDataBaseInterface*)self, (QChildEvent*)event);
 }
 
-void q_designermetadatabaseinterface_qbase_child_event(void* self, void* event) {
-    QDesignerMetaDataBaseInterface_QBaseChildEvent((QDesignerMetaDataBaseInterface*)self, (QChildEvent*)event);
+void q_designermetadatabaseinterface_super_child_event(void* self, void* event) {
+    QDesignerMetaDataBaseInterface_SuperChildEvent((QDesignerMetaDataBaseInterface*)self, (QChildEvent*)event);
 }
 
 void q_designermetadatabaseinterface_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -493,8 +493,8 @@ void q_designermetadatabaseinterface_custom_event(void* self, void* event) {
     QDesignerMetaDataBaseInterface_CustomEvent((QDesignerMetaDataBaseInterface*)self, (QEvent*)event);
 }
 
-void q_designermetadatabaseinterface_qbase_custom_event(void* self, void* event) {
-    QDesignerMetaDataBaseInterface_QBaseCustomEvent((QDesignerMetaDataBaseInterface*)self, (QEvent*)event);
+void q_designermetadatabaseinterface_super_custom_event(void* self, void* event) {
+    QDesignerMetaDataBaseInterface_SuperCustomEvent((QDesignerMetaDataBaseInterface*)self, (QEvent*)event);
 }
 
 void q_designermetadatabaseinterface_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -505,8 +505,8 @@ void q_designermetadatabaseinterface_connect_notify(void* self, void* signal) {
     QDesignerMetaDataBaseInterface_ConnectNotify((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designermetadatabaseinterface_qbase_connect_notify(void* self, void* signal) {
-    QDesignerMetaDataBaseInterface_QBaseConnectNotify((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
+void q_designermetadatabaseinterface_super_connect_notify(void* self, void* signal) {
+    QDesignerMetaDataBaseInterface_SuperConnectNotify((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designermetadatabaseinterface_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -517,8 +517,8 @@ void q_designermetadatabaseinterface_disconnect_notify(void* self, void* signal)
     QDesignerMetaDataBaseInterface_DisconnectNotify((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-void q_designermetadatabaseinterface_qbase_disconnect_notify(void* self, void* signal) {
-    QDesignerMetaDataBaseInterface_QBaseDisconnectNotify((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
+void q_designermetadatabaseinterface_super_disconnect_notify(void* self, void* signal) {
+    QDesignerMetaDataBaseInterface_SuperDisconnectNotify((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designermetadatabaseinterface_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -529,8 +529,8 @@ QObject* q_designermetadatabaseinterface_sender(void* self) {
     return QDesignerMetaDataBaseInterface_Sender((QDesignerMetaDataBaseInterface*)self);
 }
 
-QObject* q_designermetadatabaseinterface_qbase_sender(void* self) {
-    return QDesignerMetaDataBaseInterface_QBaseSender((QDesignerMetaDataBaseInterface*)self);
+QObject* q_designermetadatabaseinterface_super_sender(void* self) {
+    return QDesignerMetaDataBaseInterface_SuperSender((QDesignerMetaDataBaseInterface*)self);
 }
 
 void q_designermetadatabaseinterface_on_sender(void* self, QObject* (*callback)()) {
@@ -541,8 +541,8 @@ int32_t q_designermetadatabaseinterface_sender_signal_index(void* self) {
     return QDesignerMetaDataBaseInterface_SenderSignalIndex((QDesignerMetaDataBaseInterface*)self);
 }
 
-int32_t q_designermetadatabaseinterface_qbase_sender_signal_index(void* self) {
-    return QDesignerMetaDataBaseInterface_QBaseSenderSignalIndex((QDesignerMetaDataBaseInterface*)self);
+int32_t q_designermetadatabaseinterface_super_sender_signal_index(void* self) {
+    return QDesignerMetaDataBaseInterface_SuperSenderSignalIndex((QDesignerMetaDataBaseInterface*)self);
 }
 
 void q_designermetadatabaseinterface_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -553,8 +553,8 @@ int32_t q_designermetadatabaseinterface_receivers(void* self, const char* signal
     return QDesignerMetaDataBaseInterface_Receivers((QDesignerMetaDataBaseInterface*)self, signal);
 }
 
-int32_t q_designermetadatabaseinterface_qbase_receivers(void* self, const char* signal) {
-    return QDesignerMetaDataBaseInterface_QBaseReceivers((QDesignerMetaDataBaseInterface*)self, signal);
+int32_t q_designermetadatabaseinterface_super_receivers(void* self, const char* signal) {
+    return QDesignerMetaDataBaseInterface_SuperReceivers((QDesignerMetaDataBaseInterface*)self, signal);
 }
 
 void q_designermetadatabaseinterface_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -565,8 +565,8 @@ bool q_designermetadatabaseinterface_is_signal_connected(void* self, void* signa
     return QDesignerMetaDataBaseInterface_IsSignalConnected((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
-bool q_designermetadatabaseinterface_qbase_is_signal_connected(void* self, void* signal) {
-    return QDesignerMetaDataBaseInterface_QBaseIsSignalConnected((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
+bool q_designermetadatabaseinterface_super_is_signal_connected(void* self, void* signal) {
+    return QDesignerMetaDataBaseInterface_SuperIsSignalConnected((QDesignerMetaDataBaseInterface*)self, (QMetaMethod*)signal);
 }
 
 void q_designermetadatabaseinterface_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

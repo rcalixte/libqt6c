@@ -47,8 +47,8 @@ void k_configgroup_on_sync(void* self, bool (*callback)()) {
     KConfigGroup_OnSync((KConfigGroup*)self, (intptr_t)callback);
 }
 
-bool k_configgroup_qbase_sync(void* self) {
-    return KConfigGroup_QBaseSync((KConfigGroup*)self);
+bool k_configgroup_super_sync(void* self) {
+    return KConfigGroup_SuperSync((KConfigGroup*)self);
 }
 
 void k_configgroup_mark_as_clean(void* self) {
@@ -59,8 +59,8 @@ void k_configgroup_on_mark_as_clean(void* self, void (*callback)()) {
     KConfigGroup_OnMarkAsClean((KConfigGroup*)self, (intptr_t)callback);
 }
 
-void k_configgroup_qbase_mark_as_clean(void* self) {
-    KConfigGroup_QBaseMarkAsClean((KConfigGroup*)self);
+void k_configgroup_super_mark_as_clean(void* self) {
+    KConfigGroup_SuperMarkAsClean((KConfigGroup*)self);
 }
 
 int32_t k_configgroup_access_mode(void* self) {
@@ -71,8 +71,8 @@ void k_configgroup_on_access_mode(void* self, int32_t (*callback)()) {
     KConfigGroup_OnAccessMode((KConfigGroup*)self, (intptr_t)callback);
 }
 
-int32_t k_configgroup_qbase_access_mode(void* self) {
-    return KConfigGroup_QBaseAccessMode((KConfigGroup*)self);
+int32_t k_configgroup_super_access_mode(void* self) {
+    return KConfigGroup_SuperAccessMode((KConfigGroup*)self);
 }
 
 KConfig* k_configgroup_config(void* self) {
@@ -126,8 +126,8 @@ void k_configgroup_on_group_list(void* self, const char** (*callback)()) {
     KConfigGroup_OnGroupList((KConfigGroup*)self, (intptr_t)callback);
 }
 
-const char** k_configgroup_qbase_group_list(void* self) {
-    libqt_list _arr = KConfigGroup_QBaseGroupList((KConfigGroup*)self);
+const char** k_configgroup_super_group_list(void* self) {
+    libqt_list _arr = KConfigGroup_SuperGroupList((KConfigGroup*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -562,8 +562,8 @@ void k_configgroup_on_is_immutable(void* self, bool (*callback)()) {
     KConfigGroup_OnIsImmutable((KConfigGroup*)self, (intptr_t)callback);
 }
 
-bool k_configgroup_qbase_is_immutable(void* self) {
-    return KConfigGroup_QBaseIsImmutable((KConfigGroup*)self);
+bool k_configgroup_super_is_immutable(void* self) {
+    return KConfigGroup_SuperIsImmutable((KConfigGroup*)self);
 }
 
 bool k_configgroup_is_entry_immutable(void* self, const char* key) {
@@ -653,8 +653,8 @@ void k_configgroup_on_has_group_impl(void* self, bool (*callback)(void*, const c
     KConfigGroup_OnHasGroupImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 
-bool k_configgroup_qbase_has_group_impl(void* self, const char* groupName) {
-    return KConfigGroup_QBaseHasGroupImpl((KConfigGroup*)self, qstring(groupName));
+bool k_configgroup_super_has_group_impl(void* self, const char* groupName) {
+    return KConfigGroup_SuperHasGroupImpl((KConfigGroup*)self, qstring(groupName));
 }
 
 KConfigGroup* k_configgroup_group_impl(void* self, const char* groupName) {
@@ -665,8 +665,8 @@ void k_configgroup_on_group_impl(void* self, KConfigGroup* (*callback)(void*, co
     KConfigGroup_OnGroupImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 
-KConfigGroup* k_configgroup_qbase_group_impl(void* self, const char* groupName) {
-    return KConfigGroup_QBaseGroupImpl((KConfigGroup*)self, qstring(groupName));
+KConfigGroup* k_configgroup_super_group_impl(void* self, const char* groupName) {
+    return KConfigGroup_SuperGroupImpl((KConfigGroup*)self, qstring(groupName));
 }
 
 const KConfigGroup* k_configgroup_group_impl2(void* self, const char* groupName) {
@@ -677,8 +677,8 @@ void k_configgroup_on_group_impl2(void* self, const KConfigGroup* (*callback)(vo
     KConfigGroup_OnGroupImpl2((KConfigGroup*)self, (intptr_t)callback);
 }
 
-const KConfigGroup* k_configgroup_qbase_group_impl2(void* self, const char* groupName) {
-    return KConfigGroup_QBaseGroupImpl2((KConfigGroup*)self, qstring(groupName));
+const KConfigGroup* k_configgroup_super_group_impl2(void* self, const char* groupName) {
+    return KConfigGroup_SuperGroupImpl2((KConfigGroup*)self, qstring(groupName));
 }
 
 void k_configgroup_delete_group_impl(void* self, const char* groupName, int32_t flags) {
@@ -689,8 +689,8 @@ void k_configgroup_on_delete_group_impl(void* self, void (*callback)(void*, cons
     KConfigGroup_OnDeleteGroupImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 
-void k_configgroup_qbase_delete_group_impl(void* self, const char* groupName, int32_t flags) {
-    KConfigGroup_QBaseDeleteGroupImpl((KConfigGroup*)self, qstring(groupName), flags);
+void k_configgroup_super_delete_group_impl(void* self, const char* groupName, int32_t flags) {
+    KConfigGroup_SuperDeleteGroupImpl((KConfigGroup*)self, qstring(groupName), flags);
 }
 
 bool k_configgroup_is_group_immutable_impl(void* self, const char* groupName) {
@@ -701,8 +701,8 @@ void k_configgroup_on_is_group_immutable_impl(void* self, bool (*callback)(void*
     KConfigGroup_OnIsGroupImmutableImpl((KConfigGroup*)self, (intptr_t)callback);
 }
 
-bool k_configgroup_qbase_is_group_immutable_impl(void* self, const char* groupName) {
-    return KConfigGroup_QBaseIsGroupImmutableImpl((KConfigGroup*)self, qstring(groupName));
+bool k_configgroup_super_is_group_immutable_impl(void* self, const char* groupName) {
+    return KConfigGroup_SuperIsGroupImmutableImpl((KConfigGroup*)self, qstring(groupName));
 }
 
 void k_configgroup_copy_to2(void* self, void* other, int32_t pFlags) {
@@ -991,8 +991,8 @@ void k_configgroup_virtual_hook(void* self, int id, void* data) {
     KConfigGroup_VirtualHook((KConfigGroup*)self, id, data);
 }
 
-void k_configgroup_qbase_virtual_hook(void* self, int id, void* data) {
-    KConfigGroup_QBaseVirtualHook((KConfigGroup*)self, id, data);
+void k_configgroup_super_virtual_hook(void* self, int id, void* data) {
+    KConfigGroup_SuperVirtualHook((KConfigGroup*)self, id, data);
 }
 
 void k_configgroup_on_virtual_hook(void* self, void (*callback)(void*, int, void*)) {

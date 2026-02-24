@@ -28,8 +28,8 @@ void q_pdfsearchmodel_on_meta_object(void* self, const QMetaObject* (*callback)(
     QPdfSearchModel_OnMetaObject((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pdfsearchmodel_qbase_meta_object(void* self) {
-    return QPdfSearchModel_QBaseMetaObject((QPdfSearchModel*)self);
+const QMetaObject* q_pdfsearchmodel_super_meta_object(void* self) {
+    return QPdfSearchModel_SuperMetaObject((QPdfSearchModel*)self);
 }
 
 void* q_pdfsearchmodel_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void q_pdfsearchmodel_on_metacast(void* self, void* (*callback)(void*, const cha
     QPdfSearchModel_OnMetacast((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-void* q_pdfsearchmodel_qbase_metacast(void* self, const char* param1) {
-    return QPdfSearchModel_QBaseMetacast((QPdfSearchModel*)self, param1);
+void* q_pdfsearchmodel_super_metacast(void* self, const char* param1) {
+    return QPdfSearchModel_SuperMetacast((QPdfSearchModel*)self, param1);
 }
 
 int32_t q_pdfsearchmodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void q_pdfsearchmodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QPdfSearchModel_OnMetacall((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfsearchmodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPdfSearchModel_QBaseMetacall((QPdfSearchModel*)self, param1, param2, param3);
+int32_t q_pdfsearchmodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPdfSearchModel_SuperMetacall((QPdfSearchModel*)self, param1, param2, param3);
 }
 
 const char* q_pdfsearchmodel_tr(const char* s) {
@@ -120,9 +120,9 @@ void q_pdfsearchmodel_on_role_names(void* self, libqt_map /* of int to char* */ 
     QPdfSearchModel_OnRoleNames((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to char* */ q_pdfsearchmodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ q_pdfsearchmodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = QPdfSearchModel_QBaseRoleNames((QPdfSearchModel*)self);
+    libqt_map _out = QPdfSearchModel_SuperRoleNames((QPdfSearchModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -161,8 +161,8 @@ void q_pdfsearchmodel_on_row_count(void* self, int32_t (*callback)(void*, void*)
     QPdfSearchModel_OnRowCount((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfsearchmodel_qbase_row_count(void* self, void* parent) {
-    return QPdfSearchModel_QBaseRowCount((QPdfSearchModel*)self, (QModelIndex*)parent);
+int32_t q_pdfsearchmodel_super_row_count(void* self, void* parent) {
+    return QPdfSearchModel_SuperRowCount((QPdfSearchModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* q_pdfsearchmodel_data(void* self, void* index, int role) {
@@ -173,8 +173,8 @@ void q_pdfsearchmodel_on_data(void* self, QVariant* (*callback)(void*, void*, in
     QPdfSearchModel_OnData((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_pdfsearchmodel_qbase_data(void* self, void* index, int role) {
-    return QPdfSearchModel_QBaseData((QPdfSearchModel*)self, (QModelIndex*)index, role);
+QVariant* q_pdfsearchmodel_super_data(void* self, void* index, int role) {
+    return QPdfSearchModel_SuperData((QPdfSearchModel*)self, (QModelIndex*)index, role);
 }
 
 int32_t q_pdfsearchmodel_count(void* self) {
@@ -221,8 +221,8 @@ void q_pdfsearchmodel_on_update_page(void* self, void (*callback)(void*, int)) {
     QPdfSearchModel_OnUpdatePage((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_qbase_update_page(void* self, int page) {
-    QPdfSearchModel_QBaseUpdatePage((QPdfSearchModel*)self, page);
+void q_pdfsearchmodel_super_update_page(void* self, int page) {
+    QPdfSearchModel_SuperUpdatePage((QPdfSearchModel*)self, page);
 }
 
 void q_pdfsearchmodel_timer_event(void* self, void* event) {
@@ -233,8 +233,8 @@ void q_pdfsearchmodel_on_timer_event(void* self, void (*callback)(void*, void*))
     QPdfSearchModel_OnTimerEvent((QPdfSearchModel*)self, (intptr_t)callback);
 }
 
-void q_pdfsearchmodel_qbase_timer_event(void* self, void* event) {
-    QPdfSearchModel_QBaseTimerEvent((QPdfSearchModel*)self, (QTimerEvent*)event);
+void q_pdfsearchmodel_super_timer_event(void* self, void* event) {
+    QPdfSearchModel_SuperTimerEvent((QPdfSearchModel*)self, (QTimerEvent*)event);
 }
 
 const char* q_pdfsearchmodel_tr2(const char* s, const char* c) {
@@ -263,8 +263,8 @@ void q_pdfsearchmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void
     QAbstractItemModel_OnParent((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_pdfsearchmodel_qbase_parent(void* self, void* child) {
-    return QAbstractItemModel_QBaseParent((QAbstractItemModel*)self, (QModelIndex*)child);
+QModelIndex* q_pdfsearchmodel_super_parent(void* self, void* child) {
+    return QAbstractItemModel_SuperParent((QAbstractItemModel*)self, (QModelIndex*)child);
 }
 
 int32_t q_pdfsearchmodel_column_count(void* self, void* parent) {
@@ -275,8 +275,8 @@ void q_pdfsearchmodel_on_column_count(void* self, int32_t (*callback)(void*, voi
     QAbstractItemModel_OnColumnCount((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfsearchmodel_qbase_column_count(void* self, void* parent) {
-    return QAbstractItemModel_QBaseColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
+int32_t q_pdfsearchmodel_super_column_count(void* self, void* parent) {
+    return QAbstractItemModel_SuperColumnCount((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool q_pdfsearchmodel_has_children(void* self, void* parent) {
@@ -287,8 +287,8 @@ void q_pdfsearchmodel_on_has_children(void* self, bool (*callback)(void*, void*)
     QAbstractItemModel_OnHasChildren((QAbstractItemModel*)self, (intptr_t)callback);
 }
 
-bool q_pdfsearchmodel_qbase_has_children(void* self, void* parent) {
-    return QAbstractItemModel_QBaseHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_has_children(void* self, void* parent) {
+    return QAbstractItemModel_SuperHasChildren((QAbstractItemModel*)self, (QModelIndex*)parent);
 }
 
 bool q_pdfsearchmodel_insert_row(void* self, int row) {
@@ -626,8 +626,8 @@ QModelIndex* q_pdfsearchmodel_index(void* self, int row, int column, void* paren
     return QPdfSearchModel_Index((QPdfSearchModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* q_pdfsearchmodel_qbase_index(void* self, int row, int column, void* parent) {
-    return QPdfSearchModel_QBaseIndex((QPdfSearchModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* q_pdfsearchmodel_super_index(void* self, int row, int column, void* parent) {
+    return QPdfSearchModel_SuperIndex((QPdfSearchModel*)self, row, column, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -638,8 +638,8 @@ QModelIndex* q_pdfsearchmodel_sibling(void* self, int row, int column, void* idx
     return QPdfSearchModel_Sibling((QPdfSearchModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* q_pdfsearchmodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return QPdfSearchModel_QBaseSibling((QPdfSearchModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* q_pdfsearchmodel_super_sibling(void* self, int row, int column, void* idx) {
+    return QPdfSearchModel_SuperSibling((QPdfSearchModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void q_pdfsearchmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -650,8 +650,8 @@ bool q_pdfsearchmodel_drop_mime_data(void* self, void* data, int32_t action, int
     return QPdfSearchModel_DropMimeData((QPdfSearchModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return QPdfSearchModel_QBaseDropMimeData((QPdfSearchModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return QPdfSearchModel_SuperDropMimeData((QPdfSearchModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -662,8 +662,8 @@ int32_t q_pdfsearchmodel_flags(void* self, void* index) {
     return QPdfSearchModel_Flags((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
-int32_t q_pdfsearchmodel_qbase_flags(void* self, void* index) {
-    return QPdfSearchModel_QBaseFlags((QPdfSearchModel*)self, (QModelIndex*)index);
+int32_t q_pdfsearchmodel_super_flags(void* self, void* index) {
+    return QPdfSearchModel_SuperFlags((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
 void q_pdfsearchmodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
@@ -674,8 +674,8 @@ bool q_pdfsearchmodel_set_data(void* self, void* index, void* value, int role) {
     return QPdfSearchModel_SetData((QPdfSearchModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool q_pdfsearchmodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return QPdfSearchModel_QBaseSetData((QPdfSearchModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool q_pdfsearchmodel_super_set_data(void* self, void* index, void* value, int role) {
+    return QPdfSearchModel_SuperSetData((QPdfSearchModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void q_pdfsearchmodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -686,8 +686,8 @@ QVariant* q_pdfsearchmodel_header_data(void* self, int section, int32_t orientat
     return QPdfSearchModel_HeaderData((QPdfSearchModel*)self, section, orientation, role);
 }
 
-QVariant* q_pdfsearchmodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return QPdfSearchModel_QBaseHeaderData((QPdfSearchModel*)self, section, orientation, role);
+QVariant* q_pdfsearchmodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return QPdfSearchModel_SuperHeaderData((QPdfSearchModel*)self, section, orientation, role);
 }
 
 void q_pdfsearchmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
@@ -698,8 +698,8 @@ bool q_pdfsearchmodel_set_header_data(void* self, int section, int32_t orientati
     return QPdfSearchModel_SetHeaderData((QPdfSearchModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool q_pdfsearchmodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return QPdfSearchModel_QBaseSetHeaderData((QPdfSearchModel*)self, section, orientation, (QVariant*)value, role);
+bool q_pdfsearchmodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return QPdfSearchModel_SuperSetHeaderData((QPdfSearchModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void q_pdfsearchmodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -716,9 +716,9 @@ libqt_map /* of int to QVariant* */ q_pdfsearchmodel_item_data(void* self, void*
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ q_pdfsearchmodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ q_pdfsearchmodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = QPdfSearchModel_QBaseItemData((QPdfSearchModel*)self, (QModelIndex*)index);
+    libqt_map _out = QPdfSearchModel_SuperItemData((QPdfSearchModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -759,7 +759,7 @@ bool q_pdfsearchmodel_set_item_data(void* self, void* index, libqt_map /* of int
     return _out;
 }
 
-bool q_pdfsearchmodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool q_pdfsearchmodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -782,7 +782,7 @@ bool q_pdfsearchmodel_qbase_set_item_data(void* self, void* index, libqt_map /* 
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = QPdfSearchModel_QBaseSetItemData((QPdfSearchModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = QPdfSearchModel_SuperSetItemData((QPdfSearchModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -796,8 +796,8 @@ bool q_pdfsearchmodel_clear_item_data(void* self, void* index) {
     return QPdfSearchModel_ClearItemData((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
-bool q_pdfsearchmodel_qbase_clear_item_data(void* self, void* index) {
-    return QPdfSearchModel_QBaseClearItemData((QPdfSearchModel*)self, (QModelIndex*)index);
+bool q_pdfsearchmodel_super_clear_item_data(void* self, void* index) {
+    return QPdfSearchModel_SuperClearItemData((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
 void q_pdfsearchmodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -823,8 +823,8 @@ const char** q_pdfsearchmodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** q_pdfsearchmodel_qbase_mime_types(void* self) {
-    libqt_list _arr = QPdfSearchModel_QBaseMimeTypes((QPdfSearchModel*)self);
+const char** q_pdfsearchmodel_super_mime_types(void* self) {
+    libqt_list _arr = QPdfSearchModel_SuperMimeTypes((QPdfSearchModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -850,8 +850,8 @@ QMimeData* q_pdfsearchmodel_mime_data(void* self, libqt_list /* of QModelIndex* 
     return QPdfSearchModel_MimeData((QPdfSearchModel*)self, indexes);
 }
 
-QMimeData* q_pdfsearchmodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return QPdfSearchModel_QBaseMimeData((QPdfSearchModel*)self, indexes);
+QMimeData* q_pdfsearchmodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return QPdfSearchModel_SuperMimeData((QPdfSearchModel*)self, indexes);
 }
 
 void q_pdfsearchmodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -862,8 +862,8 @@ bool q_pdfsearchmodel_can_drop_mime_data(void* self, void* data, int32_t action,
     return QPdfSearchModel_CanDropMimeData((QPdfSearchModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return QPdfSearchModel_QBaseCanDropMimeData((QPdfSearchModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return QPdfSearchModel_SuperCanDropMimeData((QPdfSearchModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -874,8 +874,8 @@ int32_t q_pdfsearchmodel_supported_drop_actions(void* self) {
     return QPdfSearchModel_SupportedDropActions((QPdfSearchModel*)self);
 }
 
-int32_t q_pdfsearchmodel_qbase_supported_drop_actions(void* self) {
-    return QPdfSearchModel_QBaseSupportedDropActions((QPdfSearchModel*)self);
+int32_t q_pdfsearchmodel_super_supported_drop_actions(void* self) {
+    return QPdfSearchModel_SuperSupportedDropActions((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -886,8 +886,8 @@ int32_t q_pdfsearchmodel_supported_drag_actions(void* self) {
     return QPdfSearchModel_SupportedDragActions((QPdfSearchModel*)self);
 }
 
-int32_t q_pdfsearchmodel_qbase_supported_drag_actions(void* self) {
-    return QPdfSearchModel_QBaseSupportedDragActions((QPdfSearchModel*)self);
+int32_t q_pdfsearchmodel_super_supported_drag_actions(void* self) {
+    return QPdfSearchModel_SuperSupportedDragActions((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -898,8 +898,8 @@ bool q_pdfsearchmodel_insert_rows(void* self, int row, int count, void* parent) 
     return QPdfSearchModel_InsertRows((QPdfSearchModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return QPdfSearchModel_QBaseInsertRows((QPdfSearchModel*)self, row, count, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return QPdfSearchModel_SuperInsertRows((QPdfSearchModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -910,8 +910,8 @@ bool q_pdfsearchmodel_insert_columns(void* self, int column, int count, void* pa
     return QPdfSearchModel_InsertColumns((QPdfSearchModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return QPdfSearchModel_QBaseInsertColumns((QPdfSearchModel*)self, column, count, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return QPdfSearchModel_SuperInsertColumns((QPdfSearchModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -922,8 +922,8 @@ bool q_pdfsearchmodel_remove_rows(void* self, int row, int count, void* parent) 
     return QPdfSearchModel_RemoveRows((QPdfSearchModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return QPdfSearchModel_QBaseRemoveRows((QPdfSearchModel*)self, row, count, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return QPdfSearchModel_SuperRemoveRows((QPdfSearchModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -934,8 +934,8 @@ bool q_pdfsearchmodel_remove_columns(void* self, int column, int count, void* pa
     return QPdfSearchModel_RemoveColumns((QPdfSearchModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return QPdfSearchModel_QBaseRemoveColumns((QPdfSearchModel*)self, column, count, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return QPdfSearchModel_SuperRemoveColumns((QPdfSearchModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -946,8 +946,8 @@ bool q_pdfsearchmodel_move_rows(void* self, void* sourceParent, int sourceRow, i
     return QPdfSearchModel_MoveRows((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_pdfsearchmodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return QPdfSearchModel_QBaseMoveRows((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool q_pdfsearchmodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return QPdfSearchModel_SuperMoveRows((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void q_pdfsearchmodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -958,8 +958,8 @@ bool q_pdfsearchmodel_move_columns(void* self, void* sourceParent, int sourceCol
     return QPdfSearchModel_MoveColumns((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool q_pdfsearchmodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return QPdfSearchModel_QBaseMoveColumns((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool q_pdfsearchmodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return QPdfSearchModel_SuperMoveColumns((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void q_pdfsearchmodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -970,8 +970,8 @@ void q_pdfsearchmodel_fetch_more(void* self, void* parent) {
     QPdfSearchModel_FetchMore((QPdfSearchModel*)self, (QModelIndex*)parent);
 }
 
-void q_pdfsearchmodel_qbase_fetch_more(void* self, void* parent) {
-    QPdfSearchModel_QBaseFetchMore((QPdfSearchModel*)self, (QModelIndex*)parent);
+void q_pdfsearchmodel_super_fetch_more(void* self, void* parent) {
+    QPdfSearchModel_SuperFetchMore((QPdfSearchModel*)self, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -982,8 +982,8 @@ bool q_pdfsearchmodel_can_fetch_more(void* self, void* parent) {
     return QPdfSearchModel_CanFetchMore((QPdfSearchModel*)self, (QModelIndex*)parent);
 }
 
-bool q_pdfsearchmodel_qbase_can_fetch_more(void* self, void* parent) {
-    return QPdfSearchModel_QBaseCanFetchMore((QPdfSearchModel*)self, (QModelIndex*)parent);
+bool q_pdfsearchmodel_super_can_fetch_more(void* self, void* parent) {
+    return QPdfSearchModel_SuperCanFetchMore((QPdfSearchModel*)self, (QModelIndex*)parent);
 }
 
 void q_pdfsearchmodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -994,8 +994,8 @@ void q_pdfsearchmodel_sort(void* self, int column, int32_t order) {
     QPdfSearchModel_Sort((QPdfSearchModel*)self, column, order);
 }
 
-void q_pdfsearchmodel_qbase_sort(void* self, int column, int32_t order) {
-    QPdfSearchModel_QBaseSort((QPdfSearchModel*)self, column, order);
+void q_pdfsearchmodel_super_sort(void* self, int column, int32_t order) {
+    QPdfSearchModel_SuperSort((QPdfSearchModel*)self, column, order);
 }
 
 void q_pdfsearchmodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -1006,8 +1006,8 @@ QModelIndex* q_pdfsearchmodel_buddy(void* self, void* index) {
     return QPdfSearchModel_Buddy((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* q_pdfsearchmodel_qbase_buddy(void* self, void* index) {
-    return QPdfSearchModel_QBaseBuddy((QPdfSearchModel*)self, (QModelIndex*)index);
+QModelIndex* q_pdfsearchmodel_super_buddy(void* self, void* index) {
+    return QPdfSearchModel_SuperBuddy((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
 void q_pdfsearchmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -1019,8 +1019,8 @@ libqt_list /* of QModelIndex* */ q_pdfsearchmodel_match(void* self, void* start,
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_pdfsearchmodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = QPdfSearchModel_QBaseMatch((QPdfSearchModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ q_pdfsearchmodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = QPdfSearchModel_SuperMatch((QPdfSearchModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -1032,8 +1032,8 @@ QSize* q_pdfsearchmodel_span(void* self, void* index) {
     return QPdfSearchModel_Span((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
-QSize* q_pdfsearchmodel_qbase_span(void* self, void* index) {
-    return QPdfSearchModel_QBaseSpan((QPdfSearchModel*)self, (QModelIndex*)index);
+QSize* q_pdfsearchmodel_super_span(void* self, void* index) {
+    return QPdfSearchModel_SuperSpan((QPdfSearchModel*)self, (QModelIndex*)index);
 }
 
 void q_pdfsearchmodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -1044,8 +1044,8 @@ void q_pdfsearchmodel_multi_data(void* self, void* index, void* roleDataSpan) {
     QPdfSearchModel_MultiData((QPdfSearchModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_pdfsearchmodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    QPdfSearchModel_QBaseMultiData((QPdfSearchModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void q_pdfsearchmodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    QPdfSearchModel_SuperMultiData((QPdfSearchModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void q_pdfsearchmodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1056,8 +1056,8 @@ bool q_pdfsearchmodel_submit(void* self) {
     return QPdfSearchModel_Submit((QPdfSearchModel*)self);
 }
 
-bool q_pdfsearchmodel_qbase_submit(void* self) {
-    return QPdfSearchModel_QBaseSubmit((QPdfSearchModel*)self);
+bool q_pdfsearchmodel_super_submit(void* self) {
+    return QPdfSearchModel_SuperSubmit((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_submit(void* self, bool (*callback)()) {
@@ -1068,8 +1068,8 @@ void q_pdfsearchmodel_revert(void* self) {
     QPdfSearchModel_Revert((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_revert(void* self) {
-    QPdfSearchModel_QBaseRevert((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_revert(void* self) {
+    QPdfSearchModel_SuperRevert((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_revert(void* self, void (*callback)()) {
@@ -1080,8 +1080,8 @@ void q_pdfsearchmodel_reset_internal_data(void* self) {
     QPdfSearchModel_ResetInternalData((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_reset_internal_data(void* self) {
-    QPdfSearchModel_QBaseResetInternalData((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_reset_internal_data(void* self) {
+    QPdfSearchModel_SuperResetInternalData((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1092,8 +1092,8 @@ bool q_pdfsearchmodel_event(void* self, void* event) {
     return QPdfSearchModel_Event((QPdfSearchModel*)self, (QEvent*)event);
 }
 
-bool q_pdfsearchmodel_qbase_event(void* self, void* event) {
-    return QPdfSearchModel_QBaseEvent((QPdfSearchModel*)self, (QEvent*)event);
+bool q_pdfsearchmodel_super_event(void* self, void* event) {
+    return QPdfSearchModel_SuperEvent((QPdfSearchModel*)self, (QEvent*)event);
 }
 
 void q_pdfsearchmodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1104,8 +1104,8 @@ bool q_pdfsearchmodel_event_filter(void* self, void* watched, void* event) {
     return QPdfSearchModel_EventFilter((QPdfSearchModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pdfsearchmodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPdfSearchModel_QBaseEventFilter((QPdfSearchModel*)self, (QObject*)watched, (QEvent*)event);
+bool q_pdfsearchmodel_super_event_filter(void* self, void* watched, void* event) {
+    return QPdfSearchModel_SuperEventFilter((QPdfSearchModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pdfsearchmodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1116,8 +1116,8 @@ void q_pdfsearchmodel_child_event(void* self, void* event) {
     QPdfSearchModel_ChildEvent((QPdfSearchModel*)self, (QChildEvent*)event);
 }
 
-void q_pdfsearchmodel_qbase_child_event(void* self, void* event) {
-    QPdfSearchModel_QBaseChildEvent((QPdfSearchModel*)self, (QChildEvent*)event);
+void q_pdfsearchmodel_super_child_event(void* self, void* event) {
+    QPdfSearchModel_SuperChildEvent((QPdfSearchModel*)self, (QChildEvent*)event);
 }
 
 void q_pdfsearchmodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1128,8 +1128,8 @@ void q_pdfsearchmodel_custom_event(void* self, void* event) {
     QPdfSearchModel_CustomEvent((QPdfSearchModel*)self, (QEvent*)event);
 }
 
-void q_pdfsearchmodel_qbase_custom_event(void* self, void* event) {
-    QPdfSearchModel_QBaseCustomEvent((QPdfSearchModel*)self, (QEvent*)event);
+void q_pdfsearchmodel_super_custom_event(void* self, void* event) {
+    QPdfSearchModel_SuperCustomEvent((QPdfSearchModel*)self, (QEvent*)event);
 }
 
 void q_pdfsearchmodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1140,8 +1140,8 @@ void q_pdfsearchmodel_connect_notify(void* self, void* signal) {
     QPdfSearchModel_ConnectNotify((QPdfSearchModel*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfsearchmodel_qbase_connect_notify(void* self, void* signal) {
-    QPdfSearchModel_QBaseConnectNotify((QPdfSearchModel*)self, (QMetaMethod*)signal);
+void q_pdfsearchmodel_super_connect_notify(void* self, void* signal) {
+    QPdfSearchModel_SuperConnectNotify((QPdfSearchModel*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfsearchmodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1152,8 +1152,8 @@ void q_pdfsearchmodel_disconnect_notify(void* self, void* signal) {
     QPdfSearchModel_DisconnectNotify((QPdfSearchModel*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfsearchmodel_qbase_disconnect_notify(void* self, void* signal) {
-    QPdfSearchModel_QBaseDisconnectNotify((QPdfSearchModel*)self, (QMetaMethod*)signal);
+void q_pdfsearchmodel_super_disconnect_notify(void* self, void* signal) {
+    QPdfSearchModel_SuperDisconnectNotify((QPdfSearchModel*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfsearchmodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1164,8 +1164,8 @@ QModelIndex* q_pdfsearchmodel_create_index(void* self, int row, int column) {
     return QPdfSearchModel_CreateIndex((QPdfSearchModel*)self, row, column);
 }
 
-QModelIndex* q_pdfsearchmodel_qbase_create_index(void* self, int row, int column) {
-    return QPdfSearchModel_QBaseCreateIndex((QPdfSearchModel*)self, row, column);
+QModelIndex* q_pdfsearchmodel_super_create_index(void* self, int row, int column) {
+    return QPdfSearchModel_SuperCreateIndex((QPdfSearchModel*)self, row, column);
 }
 
 void q_pdfsearchmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1176,8 +1176,8 @@ void q_pdfsearchmodel_encode_data(void* self, libqt_list /* of QModelIndex* */ i
     QPdfSearchModel_EncodeData((QPdfSearchModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_pdfsearchmodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    QPdfSearchModel_QBaseEncodeData((QPdfSearchModel*)self, indexes, (QDataStream*)stream);
+void q_pdfsearchmodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    QPdfSearchModel_SuperEncodeData((QPdfSearchModel*)self, indexes, (QDataStream*)stream);
 }
 
 void q_pdfsearchmodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1188,8 +1188,8 @@ bool q_pdfsearchmodel_decode_data(void* self, int row, int column, void* parent,
     return QPdfSearchModel_DecodeData((QPdfSearchModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool q_pdfsearchmodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return QPdfSearchModel_QBaseDecodeData((QPdfSearchModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool q_pdfsearchmodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return QPdfSearchModel_SuperDecodeData((QPdfSearchModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void q_pdfsearchmodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1200,8 +1200,8 @@ void q_pdfsearchmodel_begin_insert_rows(void* self, void* parent, int first, int
     QPdfSearchModel_BeginInsertRows((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfsearchmodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    QPdfSearchModel_QBaseBeginInsertRows((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
+void q_pdfsearchmodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    QPdfSearchModel_SuperBeginInsertRows((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_pdfsearchmodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1212,8 +1212,8 @@ void q_pdfsearchmodel_end_insert_rows(void* self) {
     QPdfSearchModel_EndInsertRows((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_insert_rows(void* self) {
-    QPdfSearchModel_QBaseEndInsertRows((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_insert_rows(void* self) {
+    QPdfSearchModel_SuperEndInsertRows((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1224,8 +1224,8 @@ void q_pdfsearchmodel_begin_remove_rows(void* self, void* parent, int first, int
     QPdfSearchModel_BeginRemoveRows((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfsearchmodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    QPdfSearchModel_QBaseBeginRemoveRows((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
+void q_pdfsearchmodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    QPdfSearchModel_SuperBeginRemoveRows((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_pdfsearchmodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1236,8 +1236,8 @@ void q_pdfsearchmodel_end_remove_rows(void* self) {
     QPdfSearchModel_EndRemoveRows((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_remove_rows(void* self) {
-    QPdfSearchModel_QBaseEndRemoveRows((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_remove_rows(void* self) {
+    QPdfSearchModel_SuperEndRemoveRows((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1248,8 +1248,8 @@ bool q_pdfsearchmodel_begin_move_rows(void* self, void* sourceParent, int source
     return QPdfSearchModel_BeginMoveRows((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool q_pdfsearchmodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return QPdfSearchModel_QBaseBeginMoveRows((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool q_pdfsearchmodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return QPdfSearchModel_SuperBeginMoveRows((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void q_pdfsearchmodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1260,8 +1260,8 @@ void q_pdfsearchmodel_end_move_rows(void* self) {
     QPdfSearchModel_EndMoveRows((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_move_rows(void* self) {
-    QPdfSearchModel_QBaseEndMoveRows((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_move_rows(void* self) {
+    QPdfSearchModel_SuperEndMoveRows((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1272,8 +1272,8 @@ void q_pdfsearchmodel_begin_insert_columns(void* self, void* parent, int first, 
     QPdfSearchModel_BeginInsertColumns((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfsearchmodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    QPdfSearchModel_QBaseBeginInsertColumns((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
+void q_pdfsearchmodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    QPdfSearchModel_SuperBeginInsertColumns((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_pdfsearchmodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1284,8 +1284,8 @@ void q_pdfsearchmodel_end_insert_columns(void* self) {
     QPdfSearchModel_EndInsertColumns((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_insert_columns(void* self) {
-    QPdfSearchModel_QBaseEndInsertColumns((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_insert_columns(void* self) {
+    QPdfSearchModel_SuperEndInsertColumns((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1296,8 +1296,8 @@ void q_pdfsearchmodel_begin_remove_columns(void* self, void* parent, int first, 
     QPdfSearchModel_BeginRemoveColumns((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_pdfsearchmodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    QPdfSearchModel_QBaseBeginRemoveColumns((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
+void q_pdfsearchmodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    QPdfSearchModel_SuperBeginRemoveColumns((QPdfSearchModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_pdfsearchmodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1308,8 +1308,8 @@ void q_pdfsearchmodel_end_remove_columns(void* self) {
     QPdfSearchModel_EndRemoveColumns((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_remove_columns(void* self) {
-    QPdfSearchModel_QBaseEndRemoveColumns((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_remove_columns(void* self) {
+    QPdfSearchModel_SuperEndRemoveColumns((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1320,8 +1320,8 @@ bool q_pdfsearchmodel_begin_move_columns(void* self, void* sourceParent, int sou
     return QPdfSearchModel_BeginMoveColumns((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool q_pdfsearchmodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return QPdfSearchModel_QBaseBeginMoveColumns((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool q_pdfsearchmodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return QPdfSearchModel_SuperBeginMoveColumns((QPdfSearchModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void q_pdfsearchmodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1332,8 +1332,8 @@ void q_pdfsearchmodel_end_move_columns(void* self) {
     QPdfSearchModel_EndMoveColumns((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_move_columns(void* self) {
-    QPdfSearchModel_QBaseEndMoveColumns((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_move_columns(void* self) {
+    QPdfSearchModel_SuperEndMoveColumns((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1344,8 +1344,8 @@ void q_pdfsearchmodel_begin_reset_model(void* self) {
     QPdfSearchModel_BeginResetModel((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_begin_reset_model(void* self) {
-    QPdfSearchModel_QBaseBeginResetModel((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_begin_reset_model(void* self) {
+    QPdfSearchModel_SuperBeginResetModel((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1356,8 +1356,8 @@ void q_pdfsearchmodel_end_reset_model(void* self) {
     QPdfSearchModel_EndResetModel((QPdfSearchModel*)self);
 }
 
-void q_pdfsearchmodel_qbase_end_reset_model(void* self) {
-    QPdfSearchModel_QBaseEndResetModel((QPdfSearchModel*)self);
+void q_pdfsearchmodel_super_end_reset_model(void* self) {
+    QPdfSearchModel_SuperEndResetModel((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1368,8 +1368,8 @@ void q_pdfsearchmodel_change_persistent_index(void* self, void* from, void* to) 
     QPdfSearchModel_ChangePersistentIndex((QPdfSearchModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void q_pdfsearchmodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    QPdfSearchModel_QBaseChangePersistentIndex((QPdfSearchModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void q_pdfsearchmodel_super_change_persistent_index(void* self, void* from, void* to) {
+    QPdfSearchModel_SuperChangePersistentIndex((QPdfSearchModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void q_pdfsearchmodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1380,8 +1380,8 @@ void q_pdfsearchmodel_change_persistent_index_list(void* self, libqt_list /* of 
     QPdfSearchModel_ChangePersistentIndexList((QPdfSearchModel*)self, from, to);
 }
 
-void q_pdfsearchmodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    QPdfSearchModel_QBaseChangePersistentIndexList((QPdfSearchModel*)self, from, to);
+void q_pdfsearchmodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    QPdfSearchModel_SuperChangePersistentIndexList((QPdfSearchModel*)self, from, to);
 }
 
 void q_pdfsearchmodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1393,8 +1393,8 @@ libqt_list /* of QModelIndex* */ q_pdfsearchmodel_persistent_index_list(void* se
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_pdfsearchmodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = QPdfSearchModel_QBasePersistentIndexList((QPdfSearchModel*)self);
+libqt_list /* of QModelIndex* */ q_pdfsearchmodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = QPdfSearchModel_SuperPersistentIndexList((QPdfSearchModel*)self);
     return _arr;
 }
 
@@ -1406,8 +1406,8 @@ QObject* q_pdfsearchmodel_sender(void* self) {
     return QPdfSearchModel_Sender((QPdfSearchModel*)self);
 }
 
-QObject* q_pdfsearchmodel_qbase_sender(void* self) {
-    return QPdfSearchModel_QBaseSender((QPdfSearchModel*)self);
+QObject* q_pdfsearchmodel_super_sender(void* self) {
+    return QPdfSearchModel_SuperSender((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1418,8 +1418,8 @@ int32_t q_pdfsearchmodel_sender_signal_index(void* self) {
     return QPdfSearchModel_SenderSignalIndex((QPdfSearchModel*)self);
 }
 
-int32_t q_pdfsearchmodel_qbase_sender_signal_index(void* self) {
-    return QPdfSearchModel_QBaseSenderSignalIndex((QPdfSearchModel*)self);
+int32_t q_pdfsearchmodel_super_sender_signal_index(void* self) {
+    return QPdfSearchModel_SuperSenderSignalIndex((QPdfSearchModel*)self);
 }
 
 void q_pdfsearchmodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1430,8 +1430,8 @@ int32_t q_pdfsearchmodel_receivers(void* self, const char* signal) {
     return QPdfSearchModel_Receivers((QPdfSearchModel*)self, signal);
 }
 
-int32_t q_pdfsearchmodel_qbase_receivers(void* self, const char* signal) {
-    return QPdfSearchModel_QBaseReceivers((QPdfSearchModel*)self, signal);
+int32_t q_pdfsearchmodel_super_receivers(void* self, const char* signal) {
+    return QPdfSearchModel_SuperReceivers((QPdfSearchModel*)self, signal);
 }
 
 void q_pdfsearchmodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1442,8 +1442,8 @@ bool q_pdfsearchmodel_is_signal_connected(void* self, void* signal) {
     return QPdfSearchModel_IsSignalConnected((QPdfSearchModel*)self, (QMetaMethod*)signal);
 }
 
-bool q_pdfsearchmodel_qbase_is_signal_connected(void* self, void* signal) {
-    return QPdfSearchModel_QBaseIsSignalConnected((QPdfSearchModel*)self, (QMetaMethod*)signal);
+bool q_pdfsearchmodel_super_is_signal_connected(void* self, void* signal) {
+    return QPdfSearchModel_SuperIsSignalConnected((QPdfSearchModel*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfsearchmodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

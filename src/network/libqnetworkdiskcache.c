@@ -24,8 +24,8 @@ void q_networkdiskcache_on_meta_object(void* self, const QMetaObject* (*callback
     QNetworkDiskCache_OnMetaObject((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_networkdiskcache_qbase_meta_object(void* self) {
-    return QNetworkDiskCache_QBaseMetaObject((QNetworkDiskCache*)self);
+const QMetaObject* q_networkdiskcache_super_meta_object(void* self) {
+    return QNetworkDiskCache_SuperMetaObject((QNetworkDiskCache*)self);
 }
 
 void* q_networkdiskcache_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_networkdiskcache_on_metacast(void* self, void* (*callback)(void*, const c
     QNetworkDiskCache_OnMetacast((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-void* q_networkdiskcache_qbase_metacast(void* self, const char* param1) {
-    return QNetworkDiskCache_QBaseMetacast((QNetworkDiskCache*)self, param1);
+void* q_networkdiskcache_super_metacast(void* self, const char* param1) {
+    return QNetworkDiskCache_SuperMetacast((QNetworkDiskCache*)self, param1);
 }
 
 int32_t q_networkdiskcache_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_networkdiskcache_on_metacall(void* self, int32_t (*callback)(void*, int32
     QNetworkDiskCache_OnMetacall((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-int32_t q_networkdiskcache_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QNetworkDiskCache_QBaseMetacall((QNetworkDiskCache*)self, param1, param2, param3);
+int32_t q_networkdiskcache_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QNetworkDiskCache_SuperMetacall((QNetworkDiskCache*)self, param1, param2, param3);
 }
 
 const char* q_networkdiskcache_tr(const char* s) {
@@ -86,8 +86,8 @@ void q_networkdiskcache_on_cache_size(void* self, long long (*callback)()) {
     QNetworkDiskCache_OnCacheSize((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-long long q_networkdiskcache_qbase_cache_size(void* self) {
-    return QNetworkDiskCache_QBaseCacheSize((QNetworkDiskCache*)self);
+long long q_networkdiskcache_super_cache_size(void* self) {
+    return QNetworkDiskCache_SuperCacheSize((QNetworkDiskCache*)self);
 }
 
 QNetworkCacheMetaData* q_networkdiskcache_meta_data(void* self, void* url) {
@@ -98,8 +98,8 @@ void q_networkdiskcache_on_meta_data(void* self, QNetworkCacheMetaData* (*callba
     QNetworkDiskCache_OnMetaData((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-QNetworkCacheMetaData* q_networkdiskcache_qbase_meta_data(void* self, void* url) {
-    return QNetworkDiskCache_QBaseMetaData((QNetworkDiskCache*)self, (QUrl*)url);
+QNetworkCacheMetaData* q_networkdiskcache_super_meta_data(void* self, void* url) {
+    return QNetworkDiskCache_SuperMetaData((QNetworkDiskCache*)self, (QUrl*)url);
 }
 
 void q_networkdiskcache_update_meta_data(void* self, void* metaData) {
@@ -110,8 +110,8 @@ void q_networkdiskcache_on_update_meta_data(void* self, void (*callback)(void*, 
     QNetworkDiskCache_OnUpdateMetaData((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-void q_networkdiskcache_qbase_update_meta_data(void* self, void* metaData) {
-    QNetworkDiskCache_QBaseUpdateMetaData((QNetworkDiskCache*)self, (QNetworkCacheMetaData*)metaData);
+void q_networkdiskcache_super_update_meta_data(void* self, void* metaData) {
+    QNetworkDiskCache_SuperUpdateMetaData((QNetworkDiskCache*)self, (QNetworkCacheMetaData*)metaData);
 }
 
 QIODevice* q_networkdiskcache_data(void* self, void* url) {
@@ -122,8 +122,8 @@ void q_networkdiskcache_on_data(void* self, QIODevice* (*callback)(void*, void*)
     QNetworkDiskCache_OnData((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-QIODevice* q_networkdiskcache_qbase_data(void* self, void* url) {
-    return QNetworkDiskCache_QBaseData((QNetworkDiskCache*)self, (QUrl*)url);
+QIODevice* q_networkdiskcache_super_data(void* self, void* url) {
+    return QNetworkDiskCache_SuperData((QNetworkDiskCache*)self, (QUrl*)url);
 }
 
 bool q_networkdiskcache_remove(void* self, void* url) {
@@ -134,8 +134,8 @@ void q_networkdiskcache_on_remove(void* self, bool (*callback)(void*, void*)) {
     QNetworkDiskCache_OnRemove((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-bool q_networkdiskcache_qbase_remove(void* self, void* url) {
-    return QNetworkDiskCache_QBaseRemove((QNetworkDiskCache*)self, (QUrl*)url);
+bool q_networkdiskcache_super_remove(void* self, void* url) {
+    return QNetworkDiskCache_SuperRemove((QNetworkDiskCache*)self, (QUrl*)url);
 }
 
 QIODevice* q_networkdiskcache_prepare(void* self, void* metaData) {
@@ -146,8 +146,8 @@ void q_networkdiskcache_on_prepare(void* self, QIODevice* (*callback)(void*, voi
     QNetworkDiskCache_OnPrepare((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-QIODevice* q_networkdiskcache_qbase_prepare(void* self, void* metaData) {
-    return QNetworkDiskCache_QBasePrepare((QNetworkDiskCache*)self, (QNetworkCacheMetaData*)metaData);
+QIODevice* q_networkdiskcache_super_prepare(void* self, void* metaData) {
+    return QNetworkDiskCache_SuperPrepare((QNetworkDiskCache*)self, (QNetworkCacheMetaData*)metaData);
 }
 
 void q_networkdiskcache_insert(void* self, void* device) {
@@ -158,8 +158,8 @@ void q_networkdiskcache_on_insert(void* self, void (*callback)(void*, void*)) {
     QNetworkDiskCache_OnInsert((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-void q_networkdiskcache_qbase_insert(void* self, void* device) {
-    QNetworkDiskCache_QBaseInsert((QNetworkDiskCache*)self, (QIODevice*)device);
+void q_networkdiskcache_super_insert(void* self, void* device) {
+    QNetworkDiskCache_SuperInsert((QNetworkDiskCache*)self, (QIODevice*)device);
 }
 
 QNetworkCacheMetaData* q_networkdiskcache_file_meta_data(void* self, const char* fileName) {
@@ -174,8 +174,8 @@ void q_networkdiskcache_on_clear(void* self, void (*callback)()) {
     QNetworkDiskCache_OnClear((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-void q_networkdiskcache_qbase_clear(void* self) {
-    QNetworkDiskCache_QBaseClear((QNetworkDiskCache*)self);
+void q_networkdiskcache_super_clear(void* self) {
+    QNetworkDiskCache_SuperClear((QNetworkDiskCache*)self);
 }
 
 long long q_networkdiskcache_expire(void* self) {
@@ -186,8 +186,8 @@ void q_networkdiskcache_on_expire(void* self, long long (*callback)()) {
     QNetworkDiskCache_OnExpire((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-long long q_networkdiskcache_qbase_expire(void* self) {
-    return QNetworkDiskCache_QBaseExpire((QNetworkDiskCache*)self);
+long long q_networkdiskcache_super_expire(void* self) {
+    return QNetworkDiskCache_SuperExpire((QNetworkDiskCache*)self);
 }
 
 const char* q_networkdiskcache_tr2(const char* s, const char* c) {
@@ -419,8 +419,8 @@ bool q_networkdiskcache_event(void* self, void* event) {
     return QNetworkDiskCache_Event((QNetworkDiskCache*)self, (QEvent*)event);
 }
 
-bool q_networkdiskcache_qbase_event(void* self, void* event) {
-    return QNetworkDiskCache_QBaseEvent((QNetworkDiskCache*)self, (QEvent*)event);
+bool q_networkdiskcache_super_event(void* self, void* event) {
+    return QNetworkDiskCache_SuperEvent((QNetworkDiskCache*)self, (QEvent*)event);
 }
 
 void q_networkdiskcache_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ bool q_networkdiskcache_event_filter(void* self, void* watched, void* event) {
     return QNetworkDiskCache_EventFilter((QNetworkDiskCache*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_networkdiskcache_qbase_event_filter(void* self, void* watched, void* event) {
-    return QNetworkDiskCache_QBaseEventFilter((QNetworkDiskCache*)self, (QObject*)watched, (QEvent*)event);
+bool q_networkdiskcache_super_event_filter(void* self, void* watched, void* event) {
+    return QNetworkDiskCache_SuperEventFilter((QNetworkDiskCache*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_networkdiskcache_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -443,8 +443,8 @@ void q_networkdiskcache_timer_event(void* self, void* event) {
     QNetworkDiskCache_TimerEvent((QNetworkDiskCache*)self, (QTimerEvent*)event);
 }
 
-void q_networkdiskcache_qbase_timer_event(void* self, void* event) {
-    QNetworkDiskCache_QBaseTimerEvent((QNetworkDiskCache*)self, (QTimerEvent*)event);
+void q_networkdiskcache_super_timer_event(void* self, void* event) {
+    QNetworkDiskCache_SuperTimerEvent((QNetworkDiskCache*)self, (QTimerEvent*)event);
 }
 
 void q_networkdiskcache_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ void q_networkdiskcache_child_event(void* self, void* event) {
     QNetworkDiskCache_ChildEvent((QNetworkDiskCache*)self, (QChildEvent*)event);
 }
 
-void q_networkdiskcache_qbase_child_event(void* self, void* event) {
-    QNetworkDiskCache_QBaseChildEvent((QNetworkDiskCache*)self, (QChildEvent*)event);
+void q_networkdiskcache_super_child_event(void* self, void* event) {
+    QNetworkDiskCache_SuperChildEvent((QNetworkDiskCache*)self, (QChildEvent*)event);
 }
 
 void q_networkdiskcache_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ void q_networkdiskcache_custom_event(void* self, void* event) {
     QNetworkDiskCache_CustomEvent((QNetworkDiskCache*)self, (QEvent*)event);
 }
 
-void q_networkdiskcache_qbase_custom_event(void* self, void* event) {
-    QNetworkDiskCache_QBaseCustomEvent((QNetworkDiskCache*)self, (QEvent*)event);
+void q_networkdiskcache_super_custom_event(void* self, void* event) {
+    QNetworkDiskCache_SuperCustomEvent((QNetworkDiskCache*)self, (QEvent*)event);
 }
 
 void q_networkdiskcache_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_networkdiskcache_connect_notify(void* self, void* signal) {
     QNetworkDiskCache_ConnectNotify((QNetworkDiskCache*)self, (QMetaMethod*)signal);
 }
 
-void q_networkdiskcache_qbase_connect_notify(void* self, void* signal) {
-    QNetworkDiskCache_QBaseConnectNotify((QNetworkDiskCache*)self, (QMetaMethod*)signal);
+void q_networkdiskcache_super_connect_notify(void* self, void* signal) {
+    QNetworkDiskCache_SuperConnectNotify((QNetworkDiskCache*)self, (QMetaMethod*)signal);
 }
 
 void q_networkdiskcache_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_networkdiskcache_disconnect_notify(void* self, void* signal) {
     QNetworkDiskCache_DisconnectNotify((QNetworkDiskCache*)self, (QMetaMethod*)signal);
 }
 
-void q_networkdiskcache_qbase_disconnect_notify(void* self, void* signal) {
-    QNetworkDiskCache_QBaseDisconnectNotify((QNetworkDiskCache*)self, (QMetaMethod*)signal);
+void q_networkdiskcache_super_disconnect_notify(void* self, void* signal) {
+    QNetworkDiskCache_SuperDisconnectNotify((QNetworkDiskCache*)self, (QMetaMethod*)signal);
 }
 
 void q_networkdiskcache_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ QObject* q_networkdiskcache_sender(void* self) {
     return QNetworkDiskCache_Sender((QNetworkDiskCache*)self);
 }
 
-QObject* q_networkdiskcache_qbase_sender(void* self) {
-    return QNetworkDiskCache_QBaseSender((QNetworkDiskCache*)self);
+QObject* q_networkdiskcache_super_sender(void* self) {
+    return QNetworkDiskCache_SuperSender((QNetworkDiskCache*)self);
 }
 
 void q_networkdiskcache_on_sender(void* self, QObject* (*callback)()) {
@@ -515,8 +515,8 @@ int32_t q_networkdiskcache_sender_signal_index(void* self) {
     return QNetworkDiskCache_SenderSignalIndex((QNetworkDiskCache*)self);
 }
 
-int32_t q_networkdiskcache_qbase_sender_signal_index(void* self) {
-    return QNetworkDiskCache_QBaseSenderSignalIndex((QNetworkDiskCache*)self);
+int32_t q_networkdiskcache_super_sender_signal_index(void* self) {
+    return QNetworkDiskCache_SuperSenderSignalIndex((QNetworkDiskCache*)self);
 }
 
 void q_networkdiskcache_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -527,8 +527,8 @@ int32_t q_networkdiskcache_receivers(void* self, const char* signal) {
     return QNetworkDiskCache_Receivers((QNetworkDiskCache*)self, signal);
 }
 
-int32_t q_networkdiskcache_qbase_receivers(void* self, const char* signal) {
-    return QNetworkDiskCache_QBaseReceivers((QNetworkDiskCache*)self, signal);
+int32_t q_networkdiskcache_super_receivers(void* self, const char* signal) {
+    return QNetworkDiskCache_SuperReceivers((QNetworkDiskCache*)self, signal);
 }
 
 void q_networkdiskcache_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -539,8 +539,8 @@ bool q_networkdiskcache_is_signal_connected(void* self, void* signal) {
     return QNetworkDiskCache_IsSignalConnected((QNetworkDiskCache*)self, (QMetaMethod*)signal);
 }
 
-bool q_networkdiskcache_qbase_is_signal_connected(void* self, void* signal) {
-    return QNetworkDiskCache_QBaseIsSignalConnected((QNetworkDiskCache*)self, (QMetaMethod*)signal);
+bool q_networkdiskcache_super_is_signal_connected(void* self, void* signal) {
+    return QNetworkDiskCache_SuperIsSignalConnected((QNetworkDiskCache*)self, (QMetaMethod*)signal);
 }
 
 void q_networkdiskcache_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

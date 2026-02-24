@@ -34,13 +34,17 @@ const QMetaObject* k_commandbar_meta_object(void* self);
 ///
 void k_commandbar_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_commandbar_super_meta_object` instead
+///
+#define k_commandbar_qbase_meta_object k_commandbar_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KCommandBar*
 ///
-const QMetaObject* k_commandbar_qbase_meta_object(void* self);
+const QMetaObject* k_commandbar_super_meta_object(void* self);
 
 /// @param self KCommandBar*
 /// @param param1 const char*
@@ -54,12 +58,16 @@ void* k_commandbar_metacast(void* self, const char* param1);
 ///
 void k_commandbar_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_commandbar_super_metacast` instead
+///
+#define k_commandbar_qbase_metacast k_commandbar_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KCommandBar*
 /// @param param1 const char*
 ///
-void* k_commandbar_qbase_metacast(void* self, const char* param1);
+void* k_commandbar_super_metacast(void* self, const char* param1);
 
 /// @param self KCommandBar*
 /// @param param1 enum QMetaObject__Call
@@ -75,6 +83,10 @@ int32_t k_commandbar_metacall(void* self, int32_t param1, int param2, void* para
 ///
 void k_commandbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_commandbar_super_metacall` instead
+///
+#define k_commandbar_qbase_metacall k_commandbar_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KCommandBar*
@@ -82,7 +94,7 @@ void k_commandbar_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_commandbar_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_commandbar_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -122,6 +134,10 @@ bool k_commandbar_event_filter(void* self, void* obj, void* event);
 ///
 void k_commandbar_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_commandbar_super_event_filter` instead
+///
+#define k_commandbar_qbase_event_filter k_commandbar_super_event_filter
+
 /// [Upstream resources](https://api.kde.org/kcommandbar.html#eventFilter)
 ///
 /// Base class method implementation
@@ -130,7 +146,7 @@ void k_commandbar_on_event_filter(void* self, bool (*callback)(void*, void*, voi
 /// @param obj QObject*
 /// @param event QEvent*
 ///
-bool k_commandbar_qbase_event_filter(void* self, void* obj, void* event);
+bool k_commandbar_super_event_filter(void* self, void* obj, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3224,6 +3240,10 @@ int32_t k_commandbar_encode_metric_f(int32_t metric, double value);
 ///
 QSize* k_commandbar_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_size_hint` instead
+///
+#define k_commandbar_qbase_size_hint k_commandbar_super_size_hint
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#sizeHint)
@@ -3232,7 +3252,7 @@ QSize* k_commandbar_size_hint(void* self);
 ///
 /// @param self KCommandBar*
 ///
-QSize* k_commandbar_qbase_size_hint(void* self);
+QSize* k_commandbar_super_size_hint(void* self);
 
 /// Inherited from QFrame
 ///
@@ -3256,6 +3276,10 @@ void k_commandbar_on_size_hint(void* self, QSize* (*callback)());
 ///
 bool k_commandbar_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_event` instead
+///
+#define k_commandbar_qbase_event k_commandbar_super_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#event)
@@ -3265,7 +3289,7 @@ bool k_commandbar_event(void* self, void* e);
 /// @param self KCommandBar*
 /// @param e QEvent*
 ///
-bool k_commandbar_qbase_event(void* self, void* e);
+bool k_commandbar_super_event(void* self, void* e);
 
 /// Inherited from QFrame
 ///
@@ -3289,6 +3313,10 @@ void k_commandbar_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_commandbar_paint_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_paint_event` instead
+///
+#define k_commandbar_qbase_paint_event k_commandbar_super_paint_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#paintEvent)
@@ -3298,7 +3326,7 @@ void k_commandbar_paint_event(void* self, void* param1);
 /// @param self KCommandBar*
 /// @param param1 QPaintEvent*
 ///
-void k_commandbar_qbase_paint_event(void* self, void* param1);
+void k_commandbar_super_paint_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -3322,6 +3350,10 @@ void k_commandbar_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_change_event` instead
+///
+#define k_commandbar_qbase_change_event k_commandbar_super_change_event
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#changeEvent)
@@ -3331,7 +3363,7 @@ void k_commandbar_change_event(void* self, void* param1);
 /// @param self KCommandBar*
 /// @param param1 QEvent*
 ///
-void k_commandbar_qbase_change_event(void* self, void* param1);
+void k_commandbar_super_change_event(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -3355,6 +3387,10 @@ void k_commandbar_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_init_style_option` instead
+///
+#define k_commandbar_qbase_init_style_option k_commandbar_super_init_style_option
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#initStyleOption)
@@ -3364,7 +3400,7 @@ void k_commandbar_init_style_option(void* self, void* option);
 /// @param self KCommandBar*
 /// @param option QStyleOptionFrame*
 ///
-void k_commandbar_qbase_init_style_option(void* self, void* option);
+void k_commandbar_super_init_style_option(void* self, void* option);
 
 /// Inherited from QFrame
 ///
@@ -3387,6 +3423,10 @@ void k_commandbar_on_init_style_option(void* self, void (*callback)(void*, void*
 ///
 int32_t k_commandbar_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_dev_type` instead
+///
+#define k_commandbar_qbase_dev_type k_commandbar_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3395,7 +3435,7 @@ int32_t k_commandbar_dev_type(void* self);
 ///
 /// @param self KCommandBar*
 ///
-int32_t k_commandbar_qbase_dev_type(void* self);
+int32_t k_commandbar_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3419,6 +3459,10 @@ void k_commandbar_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_commandbar_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_set_visible` instead
+///
+#define k_commandbar_qbase_set_visible k_commandbar_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -3428,7 +3472,7 @@ void k_commandbar_set_visible(void* self, bool visible);
 /// @param self KCommandBar*
 /// @param visible bool
 ///
-void k_commandbar_qbase_set_visible(void* self, bool visible);
+void k_commandbar_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -3451,6 +3495,10 @@ void k_commandbar_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_commandbar_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_minimum_size_hint` instead
+///
+#define k_commandbar_qbase_minimum_size_hint k_commandbar_super_minimum_size_hint
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#minimumSizeHint)
@@ -3459,7 +3507,7 @@ QSize* k_commandbar_minimum_size_hint(void* self);
 ///
 /// @param self KCommandBar*
 ///
-QSize* k_commandbar_qbase_minimum_size_hint(void* self);
+QSize* k_commandbar_super_minimum_size_hint(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3483,6 +3531,10 @@ void k_commandbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 int32_t k_commandbar_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_height_for_width` instead
+///
+#define k_commandbar_qbase_height_for_width k_commandbar_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3492,7 +3544,7 @@ int32_t k_commandbar_height_for_width(void* self, int param1);
 /// @param self KCommandBar*
 /// @param param1 int
 ///
-int32_t k_commandbar_qbase_height_for_width(void* self, int param1);
+int32_t k_commandbar_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3515,6 +3567,10 @@ void k_commandbar_on_height_for_width(void* self, int32_t (*callback)(void*, int
 ///
 bool k_commandbar_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_has_height_for_width` instead
+///
+#define k_commandbar_qbase_has_height_for_width k_commandbar_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3523,7 +3579,7 @@ bool k_commandbar_has_height_for_width(void* self);
 ///
 /// @param self KCommandBar*
 ///
-bool k_commandbar_qbase_has_height_for_width(void* self);
+bool k_commandbar_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3546,6 +3602,10 @@ void k_commandbar_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_commandbar_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_paint_engine` instead
+///
+#define k_commandbar_qbase_paint_engine k_commandbar_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3554,7 +3614,7 @@ QPaintEngine* k_commandbar_paint_engine(void* self);
 ///
 /// @param self KCommandBar*
 ///
-QPaintEngine* k_commandbar_qbase_paint_engine(void* self);
+QPaintEngine* k_commandbar_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3578,6 +3638,10 @@ void k_commandbar_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_commandbar_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_mouse_press_event` instead
+///
+#define k_commandbar_qbase_mouse_press_event k_commandbar_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3587,7 +3651,7 @@ void k_commandbar_mouse_press_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QMouseEvent*
 ///
-void k_commandbar_qbase_mouse_press_event(void* self, void* event);
+void k_commandbar_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3611,6 +3675,10 @@ void k_commandbar_on_mouse_press_event(void* self, void (*callback)(void*, void*
 ///
 void k_commandbar_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_mouse_release_event` instead
+///
+#define k_commandbar_qbase_mouse_release_event k_commandbar_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3620,7 +3688,7 @@ void k_commandbar_mouse_release_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QMouseEvent*
 ///
-void k_commandbar_qbase_mouse_release_event(void* self, void* event);
+void k_commandbar_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3644,6 +3712,10 @@ void k_commandbar_on_mouse_release_event(void* self, void (*callback)(void*, voi
 ///
 void k_commandbar_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_mouse_double_click_event` instead
+///
+#define k_commandbar_qbase_mouse_double_click_event k_commandbar_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3653,7 +3725,7 @@ void k_commandbar_mouse_double_click_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QMouseEvent*
 ///
-void k_commandbar_qbase_mouse_double_click_event(void* self, void* event);
+void k_commandbar_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3677,6 +3749,10 @@ void k_commandbar_on_mouse_double_click_event(void* self, void (*callback)(void*
 ///
 void k_commandbar_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_mouse_move_event` instead
+///
+#define k_commandbar_qbase_mouse_move_event k_commandbar_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3686,7 +3762,7 @@ void k_commandbar_mouse_move_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QMouseEvent*
 ///
-void k_commandbar_qbase_mouse_move_event(void* self, void* event);
+void k_commandbar_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3710,6 +3786,10 @@ void k_commandbar_on_mouse_move_event(void* self, void (*callback)(void*, void*)
 ///
 void k_commandbar_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_wheel_event` instead
+///
+#define k_commandbar_qbase_wheel_event k_commandbar_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3719,7 +3799,7 @@ void k_commandbar_wheel_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QWheelEvent*
 ///
-void k_commandbar_qbase_wheel_event(void* self, void* event);
+void k_commandbar_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3743,6 +3823,10 @@ void k_commandbar_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_key_press_event` instead
+///
+#define k_commandbar_qbase_key_press_event k_commandbar_super_key_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyPressEvent)
@@ -3752,7 +3836,7 @@ void k_commandbar_key_press_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QKeyEvent*
 ///
-void k_commandbar_qbase_key_press_event(void* self, void* event);
+void k_commandbar_super_key_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3776,6 +3860,10 @@ void k_commandbar_on_key_press_event(void* self, void (*callback)(void*, void*))
 ///
 void k_commandbar_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_key_release_event` instead
+///
+#define k_commandbar_qbase_key_release_event k_commandbar_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3785,7 +3873,7 @@ void k_commandbar_key_release_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QKeyEvent*
 ///
-void k_commandbar_qbase_key_release_event(void* self, void* event);
+void k_commandbar_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3809,6 +3897,10 @@ void k_commandbar_on_key_release_event(void* self, void (*callback)(void*, void*
 ///
 void k_commandbar_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_focus_in_event` instead
+///
+#define k_commandbar_qbase_focus_in_event k_commandbar_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -3818,7 +3910,7 @@ void k_commandbar_focus_in_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QFocusEvent*
 ///
-void k_commandbar_qbase_focus_in_event(void* self, void* event);
+void k_commandbar_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3842,6 +3934,10 @@ void k_commandbar_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_focus_out_event` instead
+///
+#define k_commandbar_qbase_focus_out_event k_commandbar_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -3851,7 +3947,7 @@ void k_commandbar_focus_out_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QFocusEvent*
 ///
-void k_commandbar_qbase_focus_out_event(void* self, void* event);
+void k_commandbar_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3875,6 +3971,10 @@ void k_commandbar_on_focus_out_event(void* self, void (*callback)(void*, void*))
 ///
 void k_commandbar_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_enter_event` instead
+///
+#define k_commandbar_qbase_enter_event k_commandbar_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -3884,7 +3984,7 @@ void k_commandbar_enter_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QEnterEvent*
 ///
-void k_commandbar_qbase_enter_event(void* self, void* event);
+void k_commandbar_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3908,6 +4008,10 @@ void k_commandbar_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_leave_event` instead
+///
+#define k_commandbar_qbase_leave_event k_commandbar_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -3917,7 +4021,7 @@ void k_commandbar_leave_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QEvent*
 ///
-void k_commandbar_qbase_leave_event(void* self, void* event);
+void k_commandbar_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3941,6 +4045,10 @@ void k_commandbar_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_move_event` instead
+///
+#define k_commandbar_qbase_move_event k_commandbar_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -3950,7 +4058,7 @@ void k_commandbar_move_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QMoveEvent*
 ///
-void k_commandbar_qbase_move_event(void* self, void* event);
+void k_commandbar_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3974,6 +4082,10 @@ void k_commandbar_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_resize_event` instead
+///
+#define k_commandbar_qbase_resize_event k_commandbar_super_resize_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#resizeEvent)
@@ -3983,7 +4095,7 @@ void k_commandbar_resize_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QResizeEvent*
 ///
-void k_commandbar_qbase_resize_event(void* self, void* event);
+void k_commandbar_super_resize_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4007,6 +4119,10 @@ void k_commandbar_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_close_event` instead
+///
+#define k_commandbar_qbase_close_event k_commandbar_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -4016,7 +4132,7 @@ void k_commandbar_close_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QCloseEvent*
 ///
-void k_commandbar_qbase_close_event(void* self, void* event);
+void k_commandbar_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4040,6 +4156,10 @@ void k_commandbar_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_context_menu_event` instead
+///
+#define k_commandbar_qbase_context_menu_event k_commandbar_super_context_menu_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#contextMenuEvent)
@@ -4049,7 +4169,7 @@ void k_commandbar_context_menu_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QContextMenuEvent*
 ///
-void k_commandbar_qbase_context_menu_event(void* self, void* event);
+void k_commandbar_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4073,6 +4193,10 @@ void k_commandbar_on_context_menu_event(void* self, void (*callback)(void*, void
 ///
 void k_commandbar_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_tablet_event` instead
+///
+#define k_commandbar_qbase_tablet_event k_commandbar_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4082,7 +4206,7 @@ void k_commandbar_tablet_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QTabletEvent*
 ///
-void k_commandbar_qbase_tablet_event(void* self, void* event);
+void k_commandbar_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4106,6 +4230,10 @@ void k_commandbar_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_action_event` instead
+///
+#define k_commandbar_qbase_action_event k_commandbar_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4115,7 +4243,7 @@ void k_commandbar_action_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QActionEvent*
 ///
-void k_commandbar_qbase_action_event(void* self, void* event);
+void k_commandbar_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4139,6 +4267,10 @@ void k_commandbar_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_drag_enter_event` instead
+///
+#define k_commandbar_qbase_drag_enter_event k_commandbar_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4148,7 +4280,7 @@ void k_commandbar_drag_enter_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QDragEnterEvent*
 ///
-void k_commandbar_qbase_drag_enter_event(void* self, void* event);
+void k_commandbar_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4172,6 +4304,10 @@ void k_commandbar_on_drag_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_commandbar_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_drag_move_event` instead
+///
+#define k_commandbar_qbase_drag_move_event k_commandbar_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4181,7 +4317,7 @@ void k_commandbar_drag_move_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QDragMoveEvent*
 ///
-void k_commandbar_qbase_drag_move_event(void* self, void* event);
+void k_commandbar_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4205,6 +4341,10 @@ void k_commandbar_on_drag_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_commandbar_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_drag_leave_event` instead
+///
+#define k_commandbar_qbase_drag_leave_event k_commandbar_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4214,7 +4354,7 @@ void k_commandbar_drag_leave_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QDragLeaveEvent*
 ///
-void k_commandbar_qbase_drag_leave_event(void* self, void* event);
+void k_commandbar_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4238,6 +4378,10 @@ void k_commandbar_on_drag_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void k_commandbar_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_drop_event` instead
+///
+#define k_commandbar_qbase_drop_event k_commandbar_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4247,7 +4391,7 @@ void k_commandbar_drop_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QDropEvent*
 ///
-void k_commandbar_qbase_drop_event(void* self, void* event);
+void k_commandbar_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4271,6 +4415,10 @@ void k_commandbar_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_show_event` instead
+///
+#define k_commandbar_qbase_show_event k_commandbar_super_show_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#showEvent)
@@ -4280,7 +4428,7 @@ void k_commandbar_show_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QShowEvent*
 ///
-void k_commandbar_qbase_show_event(void* self, void* event);
+void k_commandbar_super_show_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4304,6 +4452,10 @@ void k_commandbar_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_hide_event` instead
+///
+#define k_commandbar_qbase_hide_event k_commandbar_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4313,7 +4465,7 @@ void k_commandbar_hide_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QHideEvent*
 ///
-void k_commandbar_qbase_hide_event(void* self, void* event);
+void k_commandbar_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4339,6 +4491,10 @@ void k_commandbar_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_commandbar_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_native_event` instead
+///
+#define k_commandbar_qbase_native_event k_commandbar_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4350,7 +4506,7 @@ bool k_commandbar_native_event(void* self, char* eventType, void* message, intpt
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_commandbar_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_commandbar_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4374,6 +4530,10 @@ void k_commandbar_on_native_event(void* self, bool (*callback)(void*, libqt_stri
 ///
 int32_t k_commandbar_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_metric` instead
+///
+#define k_commandbar_qbase_metric k_commandbar_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4383,7 +4543,7 @@ int32_t k_commandbar_metric(void* self, int32_t param1);
 /// @param self KCommandBar*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_commandbar_qbase_metric(void* self, int32_t param1);
+int32_t k_commandbar_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4407,6 +4567,10 @@ void k_commandbar_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_commandbar_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_init_painter` instead
+///
+#define k_commandbar_qbase_init_painter k_commandbar_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4416,7 +4580,7 @@ void k_commandbar_init_painter(void* self, void* painter);
 /// @param self KCommandBar*
 /// @param painter QPainter*
 ///
-void k_commandbar_qbase_init_painter(void* self, void* painter);
+void k_commandbar_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4440,6 +4604,10 @@ void k_commandbar_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* k_commandbar_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_redirected` instead
+///
+#define k_commandbar_qbase_redirected k_commandbar_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4449,7 +4617,7 @@ QPaintDevice* k_commandbar_redirected(void* self, void* offset);
 /// @param self KCommandBar*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_commandbar_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_commandbar_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4472,6 +4640,10 @@ void k_commandbar_on_redirected(void* self, QPaintDevice* (*callback)(void*, voi
 ///
 QPainter* k_commandbar_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_shared_painter` instead
+///
+#define k_commandbar_qbase_shared_painter k_commandbar_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4480,7 +4652,7 @@ QPainter* k_commandbar_shared_painter(void* self);
 ///
 /// @param self KCommandBar*
 ///
-QPainter* k_commandbar_qbase_shared_painter(void* self);
+QPainter* k_commandbar_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4504,6 +4676,10 @@ void k_commandbar_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_commandbar_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_input_method_event` instead
+///
+#define k_commandbar_qbase_input_method_event k_commandbar_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4513,7 +4689,7 @@ void k_commandbar_input_method_event(void* self, void* param1);
 /// @param self KCommandBar*
 /// @param param1 QInputMethodEvent*
 ///
-void k_commandbar_qbase_input_method_event(void* self, void* param1);
+void k_commandbar_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4537,6 +4713,10 @@ void k_commandbar_on_input_method_event(void* self, void (*callback)(void*, void
 ///
 QVariant* k_commandbar_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_input_method_query` instead
+///
+#define k_commandbar_qbase_input_method_query k_commandbar_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4546,7 +4726,7 @@ QVariant* k_commandbar_input_method_query(void* self, int32_t param1);
 /// @param self KCommandBar*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_commandbar_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_commandbar_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4570,6 +4750,10 @@ void k_commandbar_on_input_method_query(void* self, QVariant* (*callback)(void*,
 ///
 bool k_commandbar_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_focus_next_prev_child` instead
+///
+#define k_commandbar_qbase_focus_next_prev_child k_commandbar_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4579,7 +4763,7 @@ bool k_commandbar_focus_next_prev_child(void* self, bool next);
 /// @param self KCommandBar*
 /// @param next bool
 ///
-bool k_commandbar_qbase_focus_next_prev_child(void* self, bool next);
+bool k_commandbar_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4603,6 +4787,10 @@ void k_commandbar_on_focus_next_prev_child(void* self, bool (*callback)(void*, b
 ///
 void k_commandbar_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_timer_event` instead
+///
+#define k_commandbar_qbase_timer_event k_commandbar_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4612,7 +4800,7 @@ void k_commandbar_timer_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QTimerEvent*
 ///
-void k_commandbar_qbase_timer_event(void* self, void* event);
+void k_commandbar_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4636,6 +4824,10 @@ void k_commandbar_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_child_event` instead
+///
+#define k_commandbar_qbase_child_event k_commandbar_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4645,7 +4837,7 @@ void k_commandbar_child_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QChildEvent*
 ///
-void k_commandbar_qbase_child_event(void* self, void* event);
+void k_commandbar_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4669,6 +4861,10 @@ void k_commandbar_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_custom_event` instead
+///
+#define k_commandbar_qbase_custom_event k_commandbar_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4678,7 +4874,7 @@ void k_commandbar_custom_event(void* self, void* event);
 /// @param self KCommandBar*
 /// @param event QEvent*
 ///
-void k_commandbar_qbase_custom_event(void* self, void* event);
+void k_commandbar_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4702,6 +4898,10 @@ void k_commandbar_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_connect_notify` instead
+///
+#define k_commandbar_qbase_connect_notify k_commandbar_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4711,7 +4911,7 @@ void k_commandbar_connect_notify(void* self, void* signal);
 /// @param self KCommandBar*
 /// @param signal QMetaMethod*
 ///
-void k_commandbar_qbase_connect_notify(void* self, void* signal);
+void k_commandbar_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4735,6 +4935,10 @@ void k_commandbar_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_disconnect_notify` instead
+///
+#define k_commandbar_qbase_disconnect_notify k_commandbar_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4744,7 +4948,7 @@ void k_commandbar_disconnect_notify(void* self, void* signal);
 /// @param self KCommandBar*
 /// @param signal QMetaMethod*
 ///
-void k_commandbar_qbase_disconnect_notify(void* self, void* signal);
+void k_commandbar_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4768,6 +4972,10 @@ void k_commandbar_on_disconnect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_commandbar_draw_frame(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_draw_frame` instead
+///
+#define k_commandbar_qbase_draw_frame k_commandbar_super_draw_frame
+
 /// Inherited from QFrame
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qframe.html#drawFrame)
@@ -4777,7 +4985,7 @@ void k_commandbar_draw_frame(void* self, void* param1);
 /// @param self KCommandBar*
 /// @param param1 QPainter*
 ///
-void k_commandbar_qbase_draw_frame(void* self, void* param1);
+void k_commandbar_super_draw_frame(void* self, void* param1);
 
 /// Inherited from QFrame
 ///
@@ -4800,6 +5008,10 @@ void k_commandbar_on_draw_frame(void* self, void (*callback)(void*, void*));
 ///
 void k_commandbar_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_update_micro_focus` instead
+///
+#define k_commandbar_qbase_update_micro_focus k_commandbar_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4808,7 +5020,7 @@ void k_commandbar_update_micro_focus(void* self);
 ///
 /// @param self KCommandBar*
 ///
-void k_commandbar_qbase_update_micro_focus(void* self);
+void k_commandbar_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4831,6 +5043,10 @@ void k_commandbar_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_commandbar_create(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_create` instead
+///
+#define k_commandbar_qbase_create k_commandbar_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4839,7 +5055,7 @@ void k_commandbar_create(void* self);
 ///
 /// @param self KCommandBar*
 ///
-void k_commandbar_qbase_create(void* self);
+void k_commandbar_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4862,6 +5078,10 @@ void k_commandbar_on_create(void* self, void (*callback)());
 ///
 void k_commandbar_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_destroy` instead
+///
+#define k_commandbar_qbase_destroy k_commandbar_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -4870,7 +5090,7 @@ void k_commandbar_destroy(void* self);
 ///
 /// @param self KCommandBar*
 ///
-void k_commandbar_qbase_destroy(void* self);
+void k_commandbar_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4893,6 +5113,10 @@ void k_commandbar_on_destroy(void* self, void (*callback)());
 ///
 bool k_commandbar_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_focus_next_child` instead
+///
+#define k_commandbar_qbase_focus_next_child k_commandbar_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -4901,7 +5125,7 @@ bool k_commandbar_focus_next_child(void* self);
 ///
 /// @param self KCommandBar*
 ///
-bool k_commandbar_qbase_focus_next_child(void* self);
+bool k_commandbar_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4924,6 +5148,10 @@ void k_commandbar_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_commandbar_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_focus_previous_child` instead
+///
+#define k_commandbar_qbase_focus_previous_child k_commandbar_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -4932,7 +5160,7 @@ bool k_commandbar_focus_previous_child(void* self);
 ///
 /// @param self KCommandBar*
 ///
-bool k_commandbar_qbase_focus_previous_child(void* self);
+bool k_commandbar_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4955,6 +5183,10 @@ void k_commandbar_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_commandbar_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_sender` instead
+///
+#define k_commandbar_qbase_sender k_commandbar_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -4963,7 +5195,7 @@ QObject* k_commandbar_sender(void* self);
 ///
 /// @param self KCommandBar*
 ///
-QObject* k_commandbar_qbase_sender(void* self);
+QObject* k_commandbar_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -4986,6 +5218,10 @@ void k_commandbar_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_commandbar_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_sender_signal_index` instead
+///
+#define k_commandbar_qbase_sender_signal_index k_commandbar_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -4994,7 +5230,7 @@ int32_t k_commandbar_sender_signal_index(void* self);
 ///
 /// @param self KCommandBar*
 ///
-int32_t k_commandbar_qbase_sender_signal_index(void* self);
+int32_t k_commandbar_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5018,6 +5254,10 @@ void k_commandbar_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_commandbar_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_receivers` instead
+///
+#define k_commandbar_qbase_receivers k_commandbar_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5027,7 +5267,7 @@ int32_t k_commandbar_receivers(void* self, const char* signal);
 /// @param self KCommandBar*
 /// @param signal const char*
 ///
-int32_t k_commandbar_qbase_receivers(void* self, const char* signal);
+int32_t k_commandbar_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5051,6 +5291,10 @@ void k_commandbar_on_receivers(void* self, int32_t (*callback)(void*, const char
 ///
 bool k_commandbar_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_is_signal_connected` instead
+///
+#define k_commandbar_qbase_is_signal_connected k_commandbar_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5060,7 +5304,7 @@ bool k_commandbar_is_signal_connected(void* self, void* signal);
 /// @param self KCommandBar*
 /// @param signal QMetaMethod*
 ///
-bool k_commandbar_qbase_is_signal_connected(void* self, void* signal);
+bool k_commandbar_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5085,6 +5329,10 @@ void k_commandbar_on_is_signal_connected(void* self, bool (*callback)(void*, voi
 ///
 double k_commandbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_commandbar_super_get_decoded_metric_f` instead
+///
+#define k_commandbar_qbase_get_decoded_metric_f k_commandbar_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5095,7 +5343,7 @@ double k_commandbar_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_commandbar_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_commandbar_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

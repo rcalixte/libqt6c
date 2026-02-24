@@ -64,8 +64,8 @@ void k_archivedirectory_on_is_directory(void* self, bool (*callback)()) {
     KArchiveDirectory_OnIsDirectory((KArchiveDirectory*)self, (intptr_t)callback);
 }
 
-bool k_archivedirectory_qbase_is_directory(void* self) {
-    return KArchiveDirectory_QBaseIsDirectory((KArchiveDirectory*)self);
+bool k_archivedirectory_super_is_directory(void* self) {
+    return KArchiveDirectory_SuperIsDirectory((KArchiveDirectory*)self);
 }
 
 bool k_archivedirectory_copy_to(void* self, const char* dest) {
@@ -80,8 +80,8 @@ void k_archivedirectory_on_virtual_hook(void* self, void (*callback)(void*, int,
     KArchiveDirectory_OnVirtualHook((KArchiveDirectory*)self, (intptr_t)callback);
 }
 
-void k_archivedirectory_qbase_virtual_hook(void* self, int id, void* data) {
-    KArchiveDirectory_QBaseVirtualHook((KArchiveDirectory*)self, id, data);
+void k_archivedirectory_super_virtual_hook(void* self, int id, void* data) {
+    KArchiveDirectory_SuperVirtualHook((KArchiveDirectory*)self, id, data);
 }
 
 bool k_archivedirectory_copy_to2(void* self, const char* dest, bool recursive) {
@@ -128,8 +128,8 @@ bool k_archivedirectory_is_file(void* self) {
     return KArchiveDirectory_IsFile((KArchiveDirectory*)self);
 }
 
-bool k_archivedirectory_qbase_is_file(void* self) {
-    return KArchiveDirectory_QBaseIsFile((KArchiveDirectory*)self);
+bool k_archivedirectory_super_is_file(void* self) {
+    return KArchiveDirectory_SuperIsFile((KArchiveDirectory*)self);
 }
 
 void k_archivedirectory_on_is_file(void* self, bool (*callback)()) {
@@ -140,8 +140,8 @@ KArchive* k_archivedirectory_archive(void* self) {
     return KArchiveDirectory_Archive((KArchiveDirectory*)self);
 }
 
-KArchive* k_archivedirectory_qbase_archive(void* self) {
-    return KArchiveDirectory_QBaseArchive((KArchiveDirectory*)self);
+KArchive* k_archivedirectory_super_archive(void* self) {
+    return KArchiveDirectory_SuperArchive((KArchiveDirectory*)self);
 }
 
 void k_archivedirectory_on_archive(void* self, KArchive* (*callback)()) {

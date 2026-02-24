@@ -23,8 +23,8 @@ void k_windowstatesaver_on_meta_object(void* self, const QMetaObject* (*callback
     KWindowStateSaver_OnMetaObject((KWindowStateSaver*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_windowstatesaver_qbase_meta_object(void* self) {
-    return KWindowStateSaver_QBaseMetaObject((KWindowStateSaver*)self);
+const QMetaObject* k_windowstatesaver_super_meta_object(void* self) {
+    return KWindowStateSaver_SuperMetaObject((KWindowStateSaver*)self);
 }
 
 void* k_windowstatesaver_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void k_windowstatesaver_on_metacast(void* self, void* (*callback)(void*, const c
     KWindowStateSaver_OnMetacast((KWindowStateSaver*)self, (intptr_t)callback);
 }
 
-void* k_windowstatesaver_qbase_metacast(void* self, const char* param1) {
-    return KWindowStateSaver_QBaseMetacast((KWindowStateSaver*)self, param1);
+void* k_windowstatesaver_super_metacast(void* self, const char* param1) {
+    return KWindowStateSaver_SuperMetacast((KWindowStateSaver*)self, param1);
 }
 
 int32_t k_windowstatesaver_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void k_windowstatesaver_on_metacall(void* self, int32_t (*callback)(void*, int32
     KWindowStateSaver_OnMetacall((KWindowStateSaver*)self, (intptr_t)callback);
 }
 
-int32_t k_windowstatesaver_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KWindowStateSaver_QBaseMetacall((KWindowStateSaver*)self, param1, param2, param3);
+int32_t k_windowstatesaver_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KWindowStateSaver_SuperMetacall((KWindowStateSaver*)self, param1, param2, param3);
 }
 
 const char* k_windowstatesaver_tr(const char* s) {
@@ -80,8 +80,8 @@ void k_windowstatesaver_on_event_filter(void* self, bool (*callback)(void*, void
     QObject_OnEventFilter((QObject*)self, (intptr_t)callback);
 }
 
-bool k_windowstatesaver_qbase_event_filter(void* self, void* watched, void* event) {
-    return QObject_QBaseEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
+bool k_windowstatesaver_super_event_filter(void* self, void* watched, void* event) {
+    return QObject_SuperEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_windowstatesaver_object_name(void* self) {
@@ -299,8 +299,8 @@ bool k_windowstatesaver_event(void* self, void* event) {
     return KWindowStateSaver_Event((KWindowStateSaver*)self, (QEvent*)event);
 }
 
-bool k_windowstatesaver_qbase_event(void* self, void* event) {
-    return KWindowStateSaver_QBaseEvent((KWindowStateSaver*)self, (QEvent*)event);
+bool k_windowstatesaver_super_event(void* self, void* event) {
+    return KWindowStateSaver_SuperEvent((KWindowStateSaver*)self, (QEvent*)event);
 }
 
 void k_windowstatesaver_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -311,8 +311,8 @@ void k_windowstatesaver_child_event(void* self, void* event) {
     KWindowStateSaver_ChildEvent((KWindowStateSaver*)self, (QChildEvent*)event);
 }
 
-void k_windowstatesaver_qbase_child_event(void* self, void* event) {
-    KWindowStateSaver_QBaseChildEvent((KWindowStateSaver*)self, (QChildEvent*)event);
+void k_windowstatesaver_super_child_event(void* self, void* event) {
+    KWindowStateSaver_SuperChildEvent((KWindowStateSaver*)self, (QChildEvent*)event);
 }
 
 void k_windowstatesaver_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -323,8 +323,8 @@ void k_windowstatesaver_custom_event(void* self, void* event) {
     KWindowStateSaver_CustomEvent((KWindowStateSaver*)self, (QEvent*)event);
 }
 
-void k_windowstatesaver_qbase_custom_event(void* self, void* event) {
-    KWindowStateSaver_QBaseCustomEvent((KWindowStateSaver*)self, (QEvent*)event);
+void k_windowstatesaver_super_custom_event(void* self, void* event) {
+    KWindowStateSaver_SuperCustomEvent((KWindowStateSaver*)self, (QEvent*)event);
 }
 
 void k_windowstatesaver_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -335,8 +335,8 @@ void k_windowstatesaver_connect_notify(void* self, void* signal) {
     KWindowStateSaver_ConnectNotify((KWindowStateSaver*)self, (QMetaMethod*)signal);
 }
 
-void k_windowstatesaver_qbase_connect_notify(void* self, void* signal) {
-    KWindowStateSaver_QBaseConnectNotify((KWindowStateSaver*)self, (QMetaMethod*)signal);
+void k_windowstatesaver_super_connect_notify(void* self, void* signal) {
+    KWindowStateSaver_SuperConnectNotify((KWindowStateSaver*)self, (QMetaMethod*)signal);
 }
 
 void k_windowstatesaver_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -347,8 +347,8 @@ void k_windowstatesaver_disconnect_notify(void* self, void* signal) {
     KWindowStateSaver_DisconnectNotify((KWindowStateSaver*)self, (QMetaMethod*)signal);
 }
 
-void k_windowstatesaver_qbase_disconnect_notify(void* self, void* signal) {
-    KWindowStateSaver_QBaseDisconnectNotify((KWindowStateSaver*)self, (QMetaMethod*)signal);
+void k_windowstatesaver_super_disconnect_notify(void* self, void* signal) {
+    KWindowStateSaver_SuperDisconnectNotify((KWindowStateSaver*)self, (QMetaMethod*)signal);
 }
 
 void k_windowstatesaver_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -359,8 +359,8 @@ QObject* k_windowstatesaver_sender(void* self) {
     return KWindowStateSaver_Sender((KWindowStateSaver*)self);
 }
 
-QObject* k_windowstatesaver_qbase_sender(void* self) {
-    return KWindowStateSaver_QBaseSender((KWindowStateSaver*)self);
+QObject* k_windowstatesaver_super_sender(void* self) {
+    return KWindowStateSaver_SuperSender((KWindowStateSaver*)self);
 }
 
 void k_windowstatesaver_on_sender(void* self, QObject* (*callback)()) {
@@ -371,8 +371,8 @@ int32_t k_windowstatesaver_sender_signal_index(void* self) {
     return KWindowStateSaver_SenderSignalIndex((KWindowStateSaver*)self);
 }
 
-int32_t k_windowstatesaver_qbase_sender_signal_index(void* self) {
-    return KWindowStateSaver_QBaseSenderSignalIndex((KWindowStateSaver*)self);
+int32_t k_windowstatesaver_super_sender_signal_index(void* self) {
+    return KWindowStateSaver_SuperSenderSignalIndex((KWindowStateSaver*)self);
 }
 
 void k_windowstatesaver_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -383,8 +383,8 @@ int32_t k_windowstatesaver_receivers(void* self, const char* signal) {
     return KWindowStateSaver_Receivers((KWindowStateSaver*)self, signal);
 }
 
-int32_t k_windowstatesaver_qbase_receivers(void* self, const char* signal) {
-    return KWindowStateSaver_QBaseReceivers((KWindowStateSaver*)self, signal);
+int32_t k_windowstatesaver_super_receivers(void* self, const char* signal) {
+    return KWindowStateSaver_SuperReceivers((KWindowStateSaver*)self, signal);
 }
 
 void k_windowstatesaver_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -395,8 +395,8 @@ bool k_windowstatesaver_is_signal_connected(void* self, void* signal) {
     return KWindowStateSaver_IsSignalConnected((KWindowStateSaver*)self, (QMetaMethod*)signal);
 }
 
-bool k_windowstatesaver_qbase_is_signal_connected(void* self, void* signal) {
-    return KWindowStateSaver_QBaseIsSignalConnected((KWindowStateSaver*)self, (QMetaMethod*)signal);
+bool k_windowstatesaver_super_is_signal_connected(void* self, void* signal) {
+    return KWindowStateSaver_SuperIsSignalConnected((KWindowStateSaver*)self, (QMetaMethod*)signal);
 }
 
 void k_windowstatesaver_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -30,8 +30,8 @@ void k_fontsizeaction_on_meta_object(void* self, const QMetaObject* (*callback)(
     KFontSizeAction_OnMetaObject((KFontSizeAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fontsizeaction_qbase_meta_object(void* self) {
-    return KFontSizeAction_QBaseMetaObject((KFontSizeAction*)self);
+const QMetaObject* k_fontsizeaction_super_meta_object(void* self) {
+    return KFontSizeAction_SuperMetaObject((KFontSizeAction*)self);
 }
 
 void* k_fontsizeaction_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_fontsizeaction_on_metacast(void* self, void* (*callback)(void*, const cha
     KFontSizeAction_OnMetacast((KFontSizeAction*)self, (intptr_t)callback);
 }
 
-void* k_fontsizeaction_qbase_metacast(void* self, const char* param1) {
-    return KFontSizeAction_QBaseMetacast((KFontSizeAction*)self, param1);
+void* k_fontsizeaction_super_metacast(void* self, const char* param1) {
+    return KFontSizeAction_SuperMetacast((KFontSizeAction*)self, param1);
 }
 
 int32_t k_fontsizeaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_fontsizeaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KFontSizeAction_OnMetacall((KFontSizeAction*)self, (intptr_t)callback);
 }
 
-int32_t k_fontsizeaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFontSizeAction_QBaseMetacall((KFontSizeAction*)self, param1, param2, param3);
+int32_t k_fontsizeaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFontSizeAction_SuperMetacall((KFontSizeAction*)self, param1, param2, param3);
 }
 
 const char* k_fontsizeaction_tr(const char* s) {
@@ -89,8 +89,8 @@ void k_fontsizeaction_on_slot_action_triggered(void* self, void (*callback)(void
     KFontSizeAction_OnSlotActionTriggered((KFontSizeAction*)self, (intptr_t)callback);
 }
 
-void k_fontsizeaction_qbase_slot_action_triggered(void* self, void* action) {
-    KFontSizeAction_QBaseSlotActionTriggered((KFontSizeAction*)self, (QAction*)action);
+void k_fontsizeaction_super_slot_action_triggered(void* self, void* action) {
+    KFontSizeAction_SuperSlotActionTriggered((KFontSizeAction*)self, (QAction*)action);
 }
 
 const char* k_fontsizeaction_tr2(const char* s, const char* c) {
@@ -813,8 +813,8 @@ QAction* k_fontsizeaction_remove_action(void* self, void* action) {
     return KFontSizeAction_RemoveAction((KFontSizeAction*)self, (QAction*)action);
 }
 
-QAction* k_fontsizeaction_qbase_remove_action(void* self, void* action) {
-    return KFontSizeAction_QBaseRemoveAction((KFontSizeAction*)self, (QAction*)action);
+QAction* k_fontsizeaction_super_remove_action(void* self, void* action) {
+    return KFontSizeAction_SuperRemoveAction((KFontSizeAction*)self, (QAction*)action);
 }
 
 void k_fontsizeaction_on_remove_action(void* self, QAction* (*callback)(void*, void*)) {
@@ -825,8 +825,8 @@ void k_fontsizeaction_insert_action(void* self, void* before, void* action) {
     KFontSizeAction_InsertAction((KFontSizeAction*)self, (QAction*)before, (QAction*)action);
 }
 
-void k_fontsizeaction_qbase_insert_action(void* self, void* before, void* action) {
-    KFontSizeAction_QBaseInsertAction((KFontSizeAction*)self, (QAction*)before, (QAction*)action);
+void k_fontsizeaction_super_insert_action(void* self, void* before, void* action) {
+    KFontSizeAction_SuperInsertAction((KFontSizeAction*)self, (QAction*)before, (QAction*)action);
 }
 
 void k_fontsizeaction_on_insert_action(void* self, void (*callback)(void*, void*, void*)) {
@@ -837,8 +837,8 @@ QWidget* k_fontsizeaction_create_widget(void* self, void* parent) {
     return KFontSizeAction_CreateWidget((KFontSizeAction*)self, (QWidget*)parent);
 }
 
-QWidget* k_fontsizeaction_qbase_create_widget(void* self, void* parent) {
-    return KFontSizeAction_QBaseCreateWidget((KFontSizeAction*)self, (QWidget*)parent);
+QWidget* k_fontsizeaction_super_create_widget(void* self, void* parent) {
+    return KFontSizeAction_SuperCreateWidget((KFontSizeAction*)self, (QWidget*)parent);
 }
 
 void k_fontsizeaction_on_create_widget(void* self, QWidget* (*callback)(void*, void*)) {
@@ -849,8 +849,8 @@ void k_fontsizeaction_delete_widget(void* self, void* widget) {
     KFontSizeAction_DeleteWidget((KFontSizeAction*)self, (QWidget*)widget);
 }
 
-void k_fontsizeaction_qbase_delete_widget(void* self, void* widget) {
-    KFontSizeAction_QBaseDeleteWidget((KFontSizeAction*)self, (QWidget*)widget);
+void k_fontsizeaction_super_delete_widget(void* self, void* widget) {
+    KFontSizeAction_SuperDeleteWidget((KFontSizeAction*)self, (QWidget*)widget);
 }
 
 void k_fontsizeaction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -861,8 +861,8 @@ bool k_fontsizeaction_event(void* self, void* event) {
     return KFontSizeAction_Event((KFontSizeAction*)self, (QEvent*)event);
 }
 
-bool k_fontsizeaction_qbase_event(void* self, void* event) {
-    return KFontSizeAction_QBaseEvent((KFontSizeAction*)self, (QEvent*)event);
+bool k_fontsizeaction_super_event(void* self, void* event) {
+    return KFontSizeAction_SuperEvent((KFontSizeAction*)self, (QEvent*)event);
 }
 
 void k_fontsizeaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -873,8 +873,8 @@ bool k_fontsizeaction_event_filter(void* self, void* watched, void* event) {
     return KFontSizeAction_EventFilter((KFontSizeAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_fontsizeaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFontSizeAction_QBaseEventFilter((KFontSizeAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_fontsizeaction_super_event_filter(void* self, void* watched, void* event) {
+    return KFontSizeAction_SuperEventFilter((KFontSizeAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_fontsizeaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -885,8 +885,8 @@ void k_fontsizeaction_timer_event(void* self, void* event) {
     KFontSizeAction_TimerEvent((KFontSizeAction*)self, (QTimerEvent*)event);
 }
 
-void k_fontsizeaction_qbase_timer_event(void* self, void* event) {
-    KFontSizeAction_QBaseTimerEvent((KFontSizeAction*)self, (QTimerEvent*)event);
+void k_fontsizeaction_super_timer_event(void* self, void* event) {
+    KFontSizeAction_SuperTimerEvent((KFontSizeAction*)self, (QTimerEvent*)event);
 }
 
 void k_fontsizeaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -897,8 +897,8 @@ void k_fontsizeaction_child_event(void* self, void* event) {
     KFontSizeAction_ChildEvent((KFontSizeAction*)self, (QChildEvent*)event);
 }
 
-void k_fontsizeaction_qbase_child_event(void* self, void* event) {
-    KFontSizeAction_QBaseChildEvent((KFontSizeAction*)self, (QChildEvent*)event);
+void k_fontsizeaction_super_child_event(void* self, void* event) {
+    KFontSizeAction_SuperChildEvent((KFontSizeAction*)self, (QChildEvent*)event);
 }
 
 void k_fontsizeaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -909,8 +909,8 @@ void k_fontsizeaction_custom_event(void* self, void* event) {
     KFontSizeAction_CustomEvent((KFontSizeAction*)self, (QEvent*)event);
 }
 
-void k_fontsizeaction_qbase_custom_event(void* self, void* event) {
-    KFontSizeAction_QBaseCustomEvent((KFontSizeAction*)self, (QEvent*)event);
+void k_fontsizeaction_super_custom_event(void* self, void* event) {
+    KFontSizeAction_SuperCustomEvent((KFontSizeAction*)self, (QEvent*)event);
 }
 
 void k_fontsizeaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -921,8 +921,8 @@ void k_fontsizeaction_connect_notify(void* self, void* signal) {
     KFontSizeAction_ConnectNotify((KFontSizeAction*)self, (QMetaMethod*)signal);
 }
 
-void k_fontsizeaction_qbase_connect_notify(void* self, void* signal) {
-    KFontSizeAction_QBaseConnectNotify((KFontSizeAction*)self, (QMetaMethod*)signal);
+void k_fontsizeaction_super_connect_notify(void* self, void* signal) {
+    KFontSizeAction_SuperConnectNotify((KFontSizeAction*)self, (QMetaMethod*)signal);
 }
 
 void k_fontsizeaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -933,8 +933,8 @@ void k_fontsizeaction_disconnect_notify(void* self, void* signal) {
     KFontSizeAction_DisconnectNotify((KFontSizeAction*)self, (QMetaMethod*)signal);
 }
 
-void k_fontsizeaction_qbase_disconnect_notify(void* self, void* signal) {
-    KFontSizeAction_QBaseDisconnectNotify((KFontSizeAction*)self, (QMetaMethod*)signal);
+void k_fontsizeaction_super_disconnect_notify(void* self, void* signal) {
+    KFontSizeAction_SuperDisconnectNotify((KFontSizeAction*)self, (QMetaMethod*)signal);
 }
 
 void k_fontsizeaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -945,8 +945,8 @@ void k_fontsizeaction_slot_toggled(void* self, bool param1) {
     KFontSizeAction_SlotToggled((KFontSizeAction*)self, param1);
 }
 
-void k_fontsizeaction_qbase_slot_toggled(void* self, bool param1) {
-    KFontSizeAction_QBaseSlotToggled((KFontSizeAction*)self, param1);
+void k_fontsizeaction_super_slot_toggled(void* self, bool param1) {
+    KFontSizeAction_SuperSlotToggled((KFontSizeAction*)self, param1);
 }
 
 void k_fontsizeaction_on_slot_toggled(void* self, void (*callback)(void*, bool)) {
@@ -958,8 +958,8 @@ libqt_list /* of QWidget* */ k_fontsizeaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_fontsizeaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KFontSizeAction_QBaseCreatedWidgets((KFontSizeAction*)self);
+libqt_list /* of QWidget* */ k_fontsizeaction_super_created_widgets(void* self) {
+    libqt_list _arr = KFontSizeAction_SuperCreatedWidgets((KFontSizeAction*)self);
     return _arr;
 }
 
@@ -971,8 +971,8 @@ QObject* k_fontsizeaction_sender(void* self) {
     return KFontSizeAction_Sender((KFontSizeAction*)self);
 }
 
-QObject* k_fontsizeaction_qbase_sender(void* self) {
-    return KFontSizeAction_QBaseSender((KFontSizeAction*)self);
+QObject* k_fontsizeaction_super_sender(void* self) {
+    return KFontSizeAction_SuperSender((KFontSizeAction*)self);
 }
 
 void k_fontsizeaction_on_sender(void* self, QObject* (*callback)()) {
@@ -983,8 +983,8 @@ int32_t k_fontsizeaction_sender_signal_index(void* self) {
     return KFontSizeAction_SenderSignalIndex((KFontSizeAction*)self);
 }
 
-int32_t k_fontsizeaction_qbase_sender_signal_index(void* self) {
-    return KFontSizeAction_QBaseSenderSignalIndex((KFontSizeAction*)self);
+int32_t k_fontsizeaction_super_sender_signal_index(void* self) {
+    return KFontSizeAction_SuperSenderSignalIndex((KFontSizeAction*)self);
 }
 
 void k_fontsizeaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -995,8 +995,8 @@ int32_t k_fontsizeaction_receivers(void* self, const char* signal) {
     return KFontSizeAction_Receivers((KFontSizeAction*)self, signal);
 }
 
-int32_t k_fontsizeaction_qbase_receivers(void* self, const char* signal) {
-    return KFontSizeAction_QBaseReceivers((KFontSizeAction*)self, signal);
+int32_t k_fontsizeaction_super_receivers(void* self, const char* signal) {
+    return KFontSizeAction_SuperReceivers((KFontSizeAction*)self, signal);
 }
 
 void k_fontsizeaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1007,8 +1007,8 @@ bool k_fontsizeaction_is_signal_connected(void* self, void* signal) {
     return KFontSizeAction_IsSignalConnected((KFontSizeAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_fontsizeaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KFontSizeAction_QBaseIsSignalConnected((KFontSizeAction*)self, (QMetaMethod*)signal);
+bool k_fontsizeaction_super_is_signal_connected(void* self, void* signal) {
+    return KFontSizeAction_SuperIsSignalConnected((KFontSizeAction*)self, (QMetaMethod*)signal);
 }
 
 void k_fontsizeaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

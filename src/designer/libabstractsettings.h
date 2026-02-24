@@ -33,6 +33,10 @@ void q_designersettingsinterface_begin_group(void* self, const char* prefix);
 ///
 void q_designersettingsinterface_on_begin_group(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_designersettingsinterface_super_begin_group` instead
+///
+#define q_designersettingsinterface_qbase_begin_group q_designersettingsinterface_super_begin_group
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#beginGroup)
 ///
 /// Base class method implementation
@@ -40,7 +44,7 @@ void q_designersettingsinterface_on_begin_group(void* self, void (*callback)(voi
 /// @param self QDesignerSettingsInterface*
 /// @param prefix const char*
 ///
-void q_designersettingsinterface_qbase_begin_group(void* self, const char* prefix);
+void q_designersettingsinterface_super_begin_group(void* self, const char* prefix);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#endGroup)
 ///
@@ -57,13 +61,17 @@ void q_designersettingsinterface_end_group(void* self);
 ///
 void q_designersettingsinterface_on_end_group(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_designersettingsinterface_super_end_group` instead
+///
+#define q_designersettingsinterface_qbase_end_group q_designersettingsinterface_super_end_group
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#endGroup)
 ///
 /// Base class method implementation
 ///
 /// @param self QDesignerSettingsInterface*
 ///
-void q_designersettingsinterface_qbase_end_group(void* self);
+void q_designersettingsinterface_super_end_group(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#contains)
 ///
@@ -81,6 +89,10 @@ bool q_designersettingsinterface_contains(void* self, const char* key);
 ///
 void q_designersettingsinterface_on_contains(void* self, bool (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_designersettingsinterface_super_contains` instead
+///
+#define q_designersettingsinterface_qbase_contains q_designersettingsinterface_super_contains
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#contains)
 ///
 /// Base class method implementation
@@ -88,7 +100,7 @@ void q_designersettingsinterface_on_contains(void* self, bool (*callback)(void*,
 /// @param self QDesignerSettingsInterface*
 /// @param key const char*
 ///
-bool q_designersettingsinterface_qbase_contains(void* self, const char* key);
+bool q_designersettingsinterface_super_contains(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#setValue)
 ///
@@ -107,6 +119,10 @@ void q_designersettingsinterface_set_value(void* self, const char* key, void* va
 ///
 void q_designersettingsinterface_on_set_value(void* self, void (*callback)(void*, const char*, void*));
 
+/// @warning DEPRECATED: Use `q_designersettingsinterface_super_set_value` instead
+///
+#define q_designersettingsinterface_qbase_set_value q_designersettingsinterface_super_set_value
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#setValue)
 ///
 /// Base class method implementation
@@ -115,7 +131,7 @@ void q_designersettingsinterface_on_set_value(void* self, void (*callback)(void*
 /// @param key const char*
 /// @param value QVariant*
 ///
-void q_designersettingsinterface_qbase_set_value(void* self, const char* key, void* value);
+void q_designersettingsinterface_super_set_value(void* self, const char* key, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#value)
 ///
@@ -134,6 +150,10 @@ QVariant* q_designersettingsinterface_value(void* self, const char* key, void* d
 ///
 void q_designersettingsinterface_on_value(void* self, QVariant* (*callback)(void*, const char*, void*));
 
+/// @warning DEPRECATED: Use `q_designersettingsinterface_super_value` instead
+///
+#define q_designersettingsinterface_qbase_value q_designersettingsinterface_super_value
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#value)
 ///
 /// Base class method implementation
@@ -142,7 +162,7 @@ void q_designersettingsinterface_on_value(void* self, QVariant* (*callback)(void
 /// @param key const char*
 /// @param defaultValue QVariant*
 ///
-QVariant* q_designersettingsinterface_qbase_value(void* self, const char* key, void* defaultValue);
+QVariant* q_designersettingsinterface_super_value(void* self, const char* key, void* defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#remove)
 ///
@@ -160,6 +180,10 @@ void q_designersettingsinterface_remove(void* self, const char* key);
 ///
 void q_designersettingsinterface_on_remove(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_designersettingsinterface_super_remove` instead
+///
+#define q_designersettingsinterface_qbase_remove q_designersettingsinterface_super_remove
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#remove)
 ///
 /// Base class method implementation
@@ -167,7 +191,7 @@ void q_designersettingsinterface_on_remove(void* self, void (*callback)(void*, c
 /// @param self QDesignerSettingsInterface*
 /// @param key const char*
 ///
-void q_designersettingsinterface_qbase_remove(void* self, const char* key);
+void q_designersettingsinterface_super_remove(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdesignersettingsinterface.html#dtor.QDesignerSettingsInterface)
 ///

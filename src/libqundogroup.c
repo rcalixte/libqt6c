@@ -23,8 +23,8 @@ void q_undogroup_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QUndoGroup_OnMetaObject((QUndoGroup*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_undogroup_qbase_meta_object(void* self) {
-    return QUndoGroup_QBaseMetaObject((QUndoGroup*)self);
+const QMetaObject* q_undogroup_super_meta_object(void* self) {
+    return QUndoGroup_SuperMetaObject((QUndoGroup*)self);
 }
 
 void* q_undogroup_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_undogroup_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QUndoGroup_OnMetacast((QUndoGroup*)self, (intptr_t)callback);
 }
 
-void* q_undogroup_qbase_metacast(void* self, const char* param1) {
-    return QUndoGroup_QBaseMetacast((QUndoGroup*)self, param1);
+void* q_undogroup_super_metacast(void* self, const char* param1) {
+    return QUndoGroup_SuperMetacast((QUndoGroup*)self, param1);
 }
 
 int32_t q_undogroup_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_undogroup_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QUndoGroup_OnMetacall((QUndoGroup*)self, (intptr_t)callback);
 }
 
-int32_t q_undogroup_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QUndoGroup_QBaseMetacall((QUndoGroup*)self, param1, param2, param3);
+int32_t q_undogroup_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QUndoGroup_SuperMetacall((QUndoGroup*)self, param1, param2, param3);
 }
 
 const char* q_undogroup_tr(const char* s) {
@@ -414,8 +414,8 @@ bool q_undogroup_event(void* self, void* event) {
     return QUndoGroup_Event((QUndoGroup*)self, (QEvent*)event);
 }
 
-bool q_undogroup_qbase_event(void* self, void* event) {
-    return QUndoGroup_QBaseEvent((QUndoGroup*)self, (QEvent*)event);
+bool q_undogroup_super_event(void* self, void* event) {
+    return QUndoGroup_SuperEvent((QUndoGroup*)self, (QEvent*)event);
 }
 
 void q_undogroup_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ bool q_undogroup_event_filter(void* self, void* watched, void* event) {
     return QUndoGroup_EventFilter((QUndoGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_undogroup_qbase_event_filter(void* self, void* watched, void* event) {
-    return QUndoGroup_QBaseEventFilter((QUndoGroup*)self, (QObject*)watched, (QEvent*)event);
+bool q_undogroup_super_event_filter(void* self, void* watched, void* event) {
+    return QUndoGroup_SuperEventFilter((QUndoGroup*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_undogroup_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -438,8 +438,8 @@ void q_undogroup_timer_event(void* self, void* event) {
     QUndoGroup_TimerEvent((QUndoGroup*)self, (QTimerEvent*)event);
 }
 
-void q_undogroup_qbase_timer_event(void* self, void* event) {
-    QUndoGroup_QBaseTimerEvent((QUndoGroup*)self, (QTimerEvent*)event);
+void q_undogroup_super_timer_event(void* self, void* event) {
+    QUndoGroup_SuperTimerEvent((QUndoGroup*)self, (QTimerEvent*)event);
 }
 
 void q_undogroup_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ void q_undogroup_child_event(void* self, void* event) {
     QUndoGroup_ChildEvent((QUndoGroup*)self, (QChildEvent*)event);
 }
 
-void q_undogroup_qbase_child_event(void* self, void* event) {
-    QUndoGroup_QBaseChildEvent((QUndoGroup*)self, (QChildEvent*)event);
+void q_undogroup_super_child_event(void* self, void* event) {
+    QUndoGroup_SuperChildEvent((QUndoGroup*)self, (QChildEvent*)event);
 }
 
 void q_undogroup_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ void q_undogroup_custom_event(void* self, void* event) {
     QUndoGroup_CustomEvent((QUndoGroup*)self, (QEvent*)event);
 }
 
-void q_undogroup_qbase_custom_event(void* self, void* event) {
-    QUndoGroup_QBaseCustomEvent((QUndoGroup*)self, (QEvent*)event);
+void q_undogroup_super_custom_event(void* self, void* event) {
+    QUndoGroup_SuperCustomEvent((QUndoGroup*)self, (QEvent*)event);
 }
 
 void q_undogroup_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ void q_undogroup_connect_notify(void* self, void* signal) {
     QUndoGroup_ConnectNotify((QUndoGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_undogroup_qbase_connect_notify(void* self, void* signal) {
-    QUndoGroup_QBaseConnectNotify((QUndoGroup*)self, (QMetaMethod*)signal);
+void q_undogroup_super_connect_notify(void* self, void* signal) {
+    QUndoGroup_SuperConnectNotify((QUndoGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_undogroup_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -486,8 +486,8 @@ void q_undogroup_disconnect_notify(void* self, void* signal) {
     QUndoGroup_DisconnectNotify((QUndoGroup*)self, (QMetaMethod*)signal);
 }
 
-void q_undogroup_qbase_disconnect_notify(void* self, void* signal) {
-    QUndoGroup_QBaseDisconnectNotify((QUndoGroup*)self, (QMetaMethod*)signal);
+void q_undogroup_super_disconnect_notify(void* self, void* signal) {
+    QUndoGroup_SuperDisconnectNotify((QUndoGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_undogroup_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -498,8 +498,8 @@ QObject* q_undogroup_sender(void* self) {
     return QUndoGroup_Sender((QUndoGroup*)self);
 }
 
-QObject* q_undogroup_qbase_sender(void* self) {
-    return QUndoGroup_QBaseSender((QUndoGroup*)self);
+QObject* q_undogroup_super_sender(void* self) {
+    return QUndoGroup_SuperSender((QUndoGroup*)self);
 }
 
 void q_undogroup_on_sender(void* self, QObject* (*callback)()) {
@@ -510,8 +510,8 @@ int32_t q_undogroup_sender_signal_index(void* self) {
     return QUndoGroup_SenderSignalIndex((QUndoGroup*)self);
 }
 
-int32_t q_undogroup_qbase_sender_signal_index(void* self) {
-    return QUndoGroup_QBaseSenderSignalIndex((QUndoGroup*)self);
+int32_t q_undogroup_super_sender_signal_index(void* self) {
+    return QUndoGroup_SuperSenderSignalIndex((QUndoGroup*)self);
 }
 
 void q_undogroup_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -522,8 +522,8 @@ int32_t q_undogroup_receivers(void* self, const char* signal) {
     return QUndoGroup_Receivers((QUndoGroup*)self, signal);
 }
 
-int32_t q_undogroup_qbase_receivers(void* self, const char* signal) {
-    return QUndoGroup_QBaseReceivers((QUndoGroup*)self, signal);
+int32_t q_undogroup_super_receivers(void* self, const char* signal) {
+    return QUndoGroup_SuperReceivers((QUndoGroup*)self, signal);
 }
 
 void q_undogroup_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -534,8 +534,8 @@ bool q_undogroup_is_signal_connected(void* self, void* signal) {
     return QUndoGroup_IsSignalConnected((QUndoGroup*)self, (QMetaMethod*)signal);
 }
 
-bool q_undogroup_qbase_is_signal_connected(void* self, void* signal) {
-    return QUndoGroup_QBaseIsSignalConnected((QUndoGroup*)self, (QMetaMethod*)signal);
+bool q_undogroup_super_is_signal_connected(void* self, void* signal) {
+    return QUndoGroup_SuperIsSignalConnected((QUndoGroup*)self, (QMetaMethod*)signal);
 }
 
 void q_undogroup_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

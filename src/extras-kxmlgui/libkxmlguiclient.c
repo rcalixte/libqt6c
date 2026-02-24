@@ -27,8 +27,8 @@ void k_xmlguiclient_on_action2(void* self, QAction* (*callback)(void*, void*)) {
     KXMLGUIClient_OnAction2((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-QAction* k_xmlguiclient_qbase_action2(void* self, void* element) {
-    return KXMLGUIClient_QBaseAction2((KXMLGUIClient*)self, (QDomElement*)element);
+QAction* k_xmlguiclient_super_action2(void* self, void* element) {
+    return KXMLGUIClient_SuperAction2((KXMLGUIClient*)self, (QDomElement*)element);
 }
 
 KActionCollection* k_xmlguiclient_action_collection(void* self) {
@@ -39,8 +39,8 @@ void k_xmlguiclient_on_action_collection(void* self, KActionCollection* (*callba
     KXMLGUIClient_OnActionCollection((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-KActionCollection* k_xmlguiclient_qbase_action_collection(void* self) {
-    return KXMLGUIClient_QBaseActionCollection((KXMLGUIClient*)self);
+KActionCollection* k_xmlguiclient_super_action_collection(void* self) {
+    return KXMLGUIClient_SuperActionCollection((KXMLGUIClient*)self);
 }
 
 const char* k_xmlguiclient_component_name(void* self) {
@@ -54,8 +54,8 @@ void k_xmlguiclient_on_component_name(void* self, const char* (*callback)()) {
     KXMLGUIClient_OnComponentName((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_qbase_component_name(void* self) {
-    libqt_string _str = KXMLGUIClient_QBaseComponentName((KXMLGUIClient*)self);
+const char* k_xmlguiclient_super_component_name(void* self) {
+    libqt_string _str = KXMLGUIClient_SuperComponentName((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -69,8 +69,8 @@ void k_xmlguiclient_on_dom_document(void* self, QDomDocument* (*callback)()) {
     KXMLGUIClient_OnDomDocument((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-QDomDocument* k_xmlguiclient_qbase_dom_document(void* self) {
-    return KXMLGUIClient_QBaseDomDocument((KXMLGUIClient*)self);
+QDomDocument* k_xmlguiclient_super_dom_document(void* self) {
+    return KXMLGUIClient_SuperDomDocument((KXMLGUIClient*)self);
 }
 
 const char* k_xmlguiclient_xml_file(void* self) {
@@ -84,8 +84,8 @@ void k_xmlguiclient_on_xml_file(void* self, const char* (*callback)()) {
     KXMLGUIClient_OnXmlFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_qbase_xml_file(void* self) {
-    libqt_string _str = KXMLGUIClient_QBaseXmlFile((KXMLGUIClient*)self);
+const char* k_xmlguiclient_super_xml_file(void* self) {
+    libqt_string _str = KXMLGUIClient_SuperXmlFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -102,8 +102,8 @@ void k_xmlguiclient_on_local_x_m_l_file(void* self, const char* (*callback)()) {
     KXMLGUIClient_OnLocalXMLFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_qbase_local_x_m_l_file(void* self) {
-    libqt_string _str = KXMLGUIClient_QBaseLocalXMLFile((KXMLGUIClient*)self);
+const char* k_xmlguiclient_super_local_x_m_l_file(void* self) {
+    libqt_string _str = KXMLGUIClient_SuperLocalXMLFile((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -223,8 +223,8 @@ void k_xmlguiclient_on_set_component_name(void* self, void (*callback)(void*, co
     KXMLGUIClient_OnSetComponentName((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
-    KXMLGUIClient_QBaseSetComponentName((KXMLGUIClient*)self, qstring(componentName), qstring(componentDisplayName));
+void k_xmlguiclient_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
+    KXMLGUIClient_SuperSetComponentName((KXMLGUIClient*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
 void k_xmlguiclient_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
@@ -235,8 +235,8 @@ void k_xmlguiclient_on_set_x_m_l_file(void* self, void (*callback)(void*, const 
     KXMLGUIClient_OnSetXMLFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
-    KXMLGUIClient_QBaseSetXMLFile((KXMLGUIClient*)self, qstring(file), merge, setXMLDoc);
+void k_xmlguiclient_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
+    KXMLGUIClient_SuperSetXMLFile((KXMLGUIClient*)self, qstring(file), merge, setXMLDoc);
 }
 
 const char* k_xmlguiclient_standards_xml_file_location(void* self) {
@@ -250,8 +250,8 @@ void k_xmlguiclient_on_standards_xml_file_location(void* self, const char* (*cal
     KXMLGUIClient_OnStandardsXmlFileLocation((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-const char* k_xmlguiclient_qbase_standards_xml_file_location(void* self) {
-    libqt_string _str = KXMLGUIClient_QBaseStandardsXmlFileLocation((KXMLGUIClient*)self);
+const char* k_xmlguiclient_super_standards_xml_file_location(void* self) {
+    libqt_string _str = KXMLGUIClient_SuperStandardsXmlFileLocation((KXMLGUIClient*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -265,8 +265,8 @@ void k_xmlguiclient_on_load_standards_xml_file(void* self, void (*callback)()) {
     KXMLGUIClient_OnLoadStandardsXmlFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_load_standards_xml_file(void* self) {
-    KXMLGUIClient_QBaseLoadStandardsXmlFile((KXMLGUIClient*)self);
+void k_xmlguiclient_super_load_standards_xml_file(void* self) {
+    KXMLGUIClient_SuperLoadStandardsXmlFile((KXMLGUIClient*)self);
 }
 
 void k_xmlguiclient_set_local_x_m_l_file(void* self, const char* file) {
@@ -277,8 +277,8 @@ void k_xmlguiclient_on_set_local_x_m_l_file(void* self, void (*callback)(void*, 
     KXMLGUIClient_OnSetLocalXMLFile((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_set_local_x_m_l_file(void* self, const char* file) {
-    KXMLGUIClient_QBaseSetLocalXMLFile((KXMLGUIClient*)self, qstring(file));
+void k_xmlguiclient_super_set_local_x_m_l_file(void* self, const char* file) {
+    KXMLGUIClient_SuperSetLocalXMLFile((KXMLGUIClient*)self, qstring(file));
 }
 
 void k_xmlguiclient_set_x_m_l(void* self, const char* document, bool merge) {
@@ -289,8 +289,8 @@ void k_xmlguiclient_on_set_x_m_l(void* self, void (*callback)(void*, const char*
     KXMLGUIClient_OnSetXML((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_set_x_m_l(void* self, const char* document, bool merge) {
-    KXMLGUIClient_QBaseSetXML((KXMLGUIClient*)self, qstring(document), merge);
+void k_xmlguiclient_super_set_x_m_l(void* self, const char* document, bool merge) {
+    KXMLGUIClient_SuperSetXML((KXMLGUIClient*)self, qstring(document), merge);
 }
 
 void k_xmlguiclient_set_d_o_m_document(void* self, void* document, bool merge) {
@@ -301,8 +301,8 @@ void k_xmlguiclient_on_set_d_o_m_document(void* self, void (*callback)(void*, vo
     KXMLGUIClient_OnSetDOMDocument((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_set_d_o_m_document(void* self, void* document, bool merge) {
-    KXMLGUIClient_QBaseSetDOMDocument((KXMLGUIClient*)self, (QDomDocument*)document, merge);
+void k_xmlguiclient_super_set_d_o_m_document(void* self, void* document, bool merge) {
+    KXMLGUIClient_SuperSetDOMDocument((KXMLGUIClient*)self, (QDomDocument*)document, merge);
 }
 
 void k_xmlguiclient_state_changed(void* self, const char* newstate, int32_t reverse) {
@@ -313,8 +313,8 @@ void k_xmlguiclient_on_state_changed(void* self, void (*callback)(void*, const c
     KXMLGUIClient_OnStateChanged((KXMLGUIClient*)self, (intptr_t)callback);
 }
 
-void k_xmlguiclient_qbase_state_changed(void* self, const char* newstate, int32_t reverse) {
-    KXMLGUIClient_QBaseStateChanged((KXMLGUIClient*)self, qstring(newstate), reverse);
+void k_xmlguiclient_super_state_changed(void* self, const char* newstate, int32_t reverse) {
+    KXMLGUIClient_SuperStateChanged((KXMLGUIClient*)self, qstring(newstate), reverse);
 }
 
 void k_xmlguiclient_replace_x_m_l_file3(void* self, const char* xmlfile, const char* localxmlfile, bool merge) {

@@ -28,8 +28,8 @@ void q_openglshader_on_meta_object(void* self, const QMetaObject* (*callback)())
     QOpenGLShader_OnMetaObject((QOpenGLShader*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_openglshader_qbase_meta_object(void* self) {
-    return QOpenGLShader_QBaseMetaObject((QOpenGLShader*)self);
+const QMetaObject* q_openglshader_super_meta_object(void* self) {
+    return QOpenGLShader_SuperMetaObject((QOpenGLShader*)self);
 }
 
 void* q_openglshader_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void q_openglshader_on_metacast(void* self, void* (*callback)(void*, const char*
     QOpenGLShader_OnMetacast((QOpenGLShader*)self, (intptr_t)callback);
 }
 
-void* q_openglshader_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLShader_QBaseMetacast((QOpenGLShader*)self, param1);
+void* q_openglshader_super_metacast(void* self, const char* param1) {
+    return QOpenGLShader_SuperMetacast((QOpenGLShader*)self, param1);
 }
 
 int32_t q_openglshader_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void q_openglshader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QOpenGLShader_OnMetacall((QOpenGLShader*)self, (intptr_t)callback);
 }
 
-int32_t q_openglshader_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLShader_QBaseMetacall((QOpenGLShader*)self, param1, param2, param3);
+int32_t q_openglshader_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLShader_SuperMetacall((QOpenGLShader*)self, param1, param2, param3);
 }
 
 const char* q_openglshader_tr(const char* s) {
@@ -342,8 +342,8 @@ bool q_openglshader_event(void* self, void* event) {
     return QOpenGLShader_Event((QOpenGLShader*)self, (QEvent*)event);
 }
 
-bool q_openglshader_qbase_event(void* self, void* event) {
-    return QOpenGLShader_QBaseEvent((QOpenGLShader*)self, (QEvent*)event);
+bool q_openglshader_super_event(void* self, void* event) {
+    return QOpenGLShader_SuperEvent((QOpenGLShader*)self, (QEvent*)event);
 }
 
 void q_openglshader_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -354,8 +354,8 @@ bool q_openglshader_event_filter(void* self, void* watched, void* event) {
     return QOpenGLShader_EventFilter((QOpenGLShader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_openglshader_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLShader_QBaseEventFilter((QOpenGLShader*)self, (QObject*)watched, (QEvent*)event);
+bool q_openglshader_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLShader_SuperEventFilter((QOpenGLShader*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_openglshader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -366,8 +366,8 @@ void q_openglshader_timer_event(void* self, void* event) {
     QOpenGLShader_TimerEvent((QOpenGLShader*)self, (QTimerEvent*)event);
 }
 
-void q_openglshader_qbase_timer_event(void* self, void* event) {
-    QOpenGLShader_QBaseTimerEvent((QOpenGLShader*)self, (QTimerEvent*)event);
+void q_openglshader_super_timer_event(void* self, void* event) {
+    QOpenGLShader_SuperTimerEvent((QOpenGLShader*)self, (QTimerEvent*)event);
 }
 
 void q_openglshader_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -378,8 +378,8 @@ void q_openglshader_child_event(void* self, void* event) {
     QOpenGLShader_ChildEvent((QOpenGLShader*)self, (QChildEvent*)event);
 }
 
-void q_openglshader_qbase_child_event(void* self, void* event) {
-    QOpenGLShader_QBaseChildEvent((QOpenGLShader*)self, (QChildEvent*)event);
+void q_openglshader_super_child_event(void* self, void* event) {
+    QOpenGLShader_SuperChildEvent((QOpenGLShader*)self, (QChildEvent*)event);
 }
 
 void q_openglshader_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -390,8 +390,8 @@ void q_openglshader_custom_event(void* self, void* event) {
     QOpenGLShader_CustomEvent((QOpenGLShader*)self, (QEvent*)event);
 }
 
-void q_openglshader_qbase_custom_event(void* self, void* event) {
-    QOpenGLShader_QBaseCustomEvent((QOpenGLShader*)self, (QEvent*)event);
+void q_openglshader_super_custom_event(void* self, void* event) {
+    QOpenGLShader_SuperCustomEvent((QOpenGLShader*)self, (QEvent*)event);
 }
 
 void q_openglshader_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -402,8 +402,8 @@ void q_openglshader_connect_notify(void* self, void* signal) {
     QOpenGLShader_ConnectNotify((QOpenGLShader*)self, (QMetaMethod*)signal);
 }
 
-void q_openglshader_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLShader_QBaseConnectNotify((QOpenGLShader*)self, (QMetaMethod*)signal);
+void q_openglshader_super_connect_notify(void* self, void* signal) {
+    QOpenGLShader_SuperConnectNotify((QOpenGLShader*)self, (QMetaMethod*)signal);
 }
 
 void q_openglshader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -414,8 +414,8 @@ void q_openglshader_disconnect_notify(void* self, void* signal) {
     QOpenGLShader_DisconnectNotify((QOpenGLShader*)self, (QMetaMethod*)signal);
 }
 
-void q_openglshader_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLShader_QBaseDisconnectNotify((QOpenGLShader*)self, (QMetaMethod*)signal);
+void q_openglshader_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLShader_SuperDisconnectNotify((QOpenGLShader*)self, (QMetaMethod*)signal);
 }
 
 void q_openglshader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ QObject* q_openglshader_sender(void* self) {
     return QOpenGLShader_Sender((QOpenGLShader*)self);
 }
 
-QObject* q_openglshader_qbase_sender(void* self) {
-    return QOpenGLShader_QBaseSender((QOpenGLShader*)self);
+QObject* q_openglshader_super_sender(void* self) {
+    return QOpenGLShader_SuperSender((QOpenGLShader*)self);
 }
 
 void q_openglshader_on_sender(void* self, QObject* (*callback)()) {
@@ -438,8 +438,8 @@ int32_t q_openglshader_sender_signal_index(void* self) {
     return QOpenGLShader_SenderSignalIndex((QOpenGLShader*)self);
 }
 
-int32_t q_openglshader_qbase_sender_signal_index(void* self) {
-    return QOpenGLShader_QBaseSenderSignalIndex((QOpenGLShader*)self);
+int32_t q_openglshader_super_sender_signal_index(void* self) {
+    return QOpenGLShader_SuperSenderSignalIndex((QOpenGLShader*)self);
 }
 
 void q_openglshader_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -450,8 +450,8 @@ int32_t q_openglshader_receivers(void* self, const char* signal) {
     return QOpenGLShader_Receivers((QOpenGLShader*)self, signal);
 }
 
-int32_t q_openglshader_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLShader_QBaseReceivers((QOpenGLShader*)self, signal);
+int32_t q_openglshader_super_receivers(void* self, const char* signal) {
+    return QOpenGLShader_SuperReceivers((QOpenGLShader*)self, signal);
 }
 
 void q_openglshader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -462,8 +462,8 @@ bool q_openglshader_is_signal_connected(void* self, void* signal) {
     return QOpenGLShader_IsSignalConnected((QOpenGLShader*)self, (QMetaMethod*)signal);
 }
 
-bool q_openglshader_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLShader_QBaseIsSignalConnected((QOpenGLShader*)self, (QMetaMethod*)signal);
+bool q_openglshader_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLShader_SuperIsSignalConnected((QOpenGLShader*)self, (QMetaMethod*)signal);
 }
 
 void q_openglshader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -494,8 +494,8 @@ void q_openglshaderprogram_on_meta_object(void* self, const QMetaObject* (*callb
     QOpenGLShaderProgram_OnMetaObject((QOpenGLShaderProgram*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_openglshaderprogram_qbase_meta_object(void* self) {
-    return QOpenGLShaderProgram_QBaseMetaObject((QOpenGLShaderProgram*)self);
+const QMetaObject* q_openglshaderprogram_super_meta_object(void* self) {
+    return QOpenGLShaderProgram_SuperMetaObject((QOpenGLShaderProgram*)self);
 }
 
 void* q_openglshaderprogram_metacast(void* self, const char* param1) {
@@ -506,8 +506,8 @@ void q_openglshaderprogram_on_metacast(void* self, void* (*callback)(void*, cons
     QOpenGLShaderProgram_OnMetacast((QOpenGLShaderProgram*)self, (intptr_t)callback);
 }
 
-void* q_openglshaderprogram_qbase_metacast(void* self, const char* param1) {
-    return QOpenGLShaderProgram_QBaseMetacast((QOpenGLShaderProgram*)self, param1);
+void* q_openglshaderprogram_super_metacast(void* self, const char* param1) {
+    return QOpenGLShaderProgram_SuperMetacast((QOpenGLShaderProgram*)self, param1);
 }
 
 int32_t q_openglshaderprogram_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -518,8 +518,8 @@ void q_openglshaderprogram_on_metacall(void* self, int32_t (*callback)(void*, in
     QOpenGLShaderProgram_OnMetacall((QOpenGLShaderProgram*)self, (intptr_t)callback);
 }
 
-int32_t q_openglshaderprogram_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QOpenGLShaderProgram_QBaseMetacall((QOpenGLShaderProgram*)self, param1, param2, param3);
+int32_t q_openglshaderprogram_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QOpenGLShaderProgram_SuperMetacall((QOpenGLShaderProgram*)self, param1, param2, param3);
 }
 
 const char* q_openglshaderprogram_tr(const char* s) {
@@ -586,8 +586,8 @@ void q_openglshaderprogram_on_link(void* self, bool (*callback)()) {
     QOpenGLShaderProgram_OnLink((QOpenGLShaderProgram*)self, (intptr_t)callback);
 }
 
-bool q_openglshaderprogram_qbase_link(void* self) {
-    return QOpenGLShaderProgram_QBaseLink((QOpenGLShaderProgram*)self);
+bool q_openglshaderprogram_super_link(void* self) {
+    return QOpenGLShaderProgram_SuperLink((QOpenGLShaderProgram*)self);
 }
 
 bool q_openglshaderprogram_is_linked(void* self) {
@@ -1288,8 +1288,8 @@ bool q_openglshaderprogram_event(void* self, void* event) {
     return QOpenGLShaderProgram_Event((QOpenGLShaderProgram*)self, (QEvent*)event);
 }
 
-bool q_openglshaderprogram_qbase_event(void* self, void* event) {
-    return QOpenGLShaderProgram_QBaseEvent((QOpenGLShaderProgram*)self, (QEvent*)event);
+bool q_openglshaderprogram_super_event(void* self, void* event) {
+    return QOpenGLShaderProgram_SuperEvent((QOpenGLShaderProgram*)self, (QEvent*)event);
 }
 
 void q_openglshaderprogram_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1300,8 +1300,8 @@ bool q_openglshaderprogram_event_filter(void* self, void* watched, void* event) 
     return QOpenGLShaderProgram_EventFilter((QOpenGLShaderProgram*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_openglshaderprogram_qbase_event_filter(void* self, void* watched, void* event) {
-    return QOpenGLShaderProgram_QBaseEventFilter((QOpenGLShaderProgram*)self, (QObject*)watched, (QEvent*)event);
+bool q_openglshaderprogram_super_event_filter(void* self, void* watched, void* event) {
+    return QOpenGLShaderProgram_SuperEventFilter((QOpenGLShaderProgram*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_openglshaderprogram_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1312,8 +1312,8 @@ void q_openglshaderprogram_timer_event(void* self, void* event) {
     QOpenGLShaderProgram_TimerEvent((QOpenGLShaderProgram*)self, (QTimerEvent*)event);
 }
 
-void q_openglshaderprogram_qbase_timer_event(void* self, void* event) {
-    QOpenGLShaderProgram_QBaseTimerEvent((QOpenGLShaderProgram*)self, (QTimerEvent*)event);
+void q_openglshaderprogram_super_timer_event(void* self, void* event) {
+    QOpenGLShaderProgram_SuperTimerEvent((QOpenGLShaderProgram*)self, (QTimerEvent*)event);
 }
 
 void q_openglshaderprogram_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1324,8 +1324,8 @@ void q_openglshaderprogram_child_event(void* self, void* event) {
     QOpenGLShaderProgram_ChildEvent((QOpenGLShaderProgram*)self, (QChildEvent*)event);
 }
 
-void q_openglshaderprogram_qbase_child_event(void* self, void* event) {
-    QOpenGLShaderProgram_QBaseChildEvent((QOpenGLShaderProgram*)self, (QChildEvent*)event);
+void q_openglshaderprogram_super_child_event(void* self, void* event) {
+    QOpenGLShaderProgram_SuperChildEvent((QOpenGLShaderProgram*)self, (QChildEvent*)event);
 }
 
 void q_openglshaderprogram_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1336,8 +1336,8 @@ void q_openglshaderprogram_custom_event(void* self, void* event) {
     QOpenGLShaderProgram_CustomEvent((QOpenGLShaderProgram*)self, (QEvent*)event);
 }
 
-void q_openglshaderprogram_qbase_custom_event(void* self, void* event) {
-    QOpenGLShaderProgram_QBaseCustomEvent((QOpenGLShaderProgram*)self, (QEvent*)event);
+void q_openglshaderprogram_super_custom_event(void* self, void* event) {
+    QOpenGLShaderProgram_SuperCustomEvent((QOpenGLShaderProgram*)self, (QEvent*)event);
 }
 
 void q_openglshaderprogram_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1348,8 +1348,8 @@ void q_openglshaderprogram_connect_notify(void* self, void* signal) {
     QOpenGLShaderProgram_ConnectNotify((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
 }
 
-void q_openglshaderprogram_qbase_connect_notify(void* self, void* signal) {
-    QOpenGLShaderProgram_QBaseConnectNotify((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
+void q_openglshaderprogram_super_connect_notify(void* self, void* signal) {
+    QOpenGLShaderProgram_SuperConnectNotify((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
 }
 
 void q_openglshaderprogram_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1360,8 +1360,8 @@ void q_openglshaderprogram_disconnect_notify(void* self, void* signal) {
     QOpenGLShaderProgram_DisconnectNotify((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
 }
 
-void q_openglshaderprogram_qbase_disconnect_notify(void* self, void* signal) {
-    QOpenGLShaderProgram_QBaseDisconnectNotify((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
+void q_openglshaderprogram_super_disconnect_notify(void* self, void* signal) {
+    QOpenGLShaderProgram_SuperDisconnectNotify((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
 }
 
 void q_openglshaderprogram_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1372,8 +1372,8 @@ QObject* q_openglshaderprogram_sender(void* self) {
     return QOpenGLShaderProgram_Sender((QOpenGLShaderProgram*)self);
 }
 
-QObject* q_openglshaderprogram_qbase_sender(void* self) {
-    return QOpenGLShaderProgram_QBaseSender((QOpenGLShaderProgram*)self);
+QObject* q_openglshaderprogram_super_sender(void* self) {
+    return QOpenGLShaderProgram_SuperSender((QOpenGLShaderProgram*)self);
 }
 
 void q_openglshaderprogram_on_sender(void* self, QObject* (*callback)()) {
@@ -1384,8 +1384,8 @@ int32_t q_openglshaderprogram_sender_signal_index(void* self) {
     return QOpenGLShaderProgram_SenderSignalIndex((QOpenGLShaderProgram*)self);
 }
 
-int32_t q_openglshaderprogram_qbase_sender_signal_index(void* self) {
-    return QOpenGLShaderProgram_QBaseSenderSignalIndex((QOpenGLShaderProgram*)self);
+int32_t q_openglshaderprogram_super_sender_signal_index(void* self) {
+    return QOpenGLShaderProgram_SuperSenderSignalIndex((QOpenGLShaderProgram*)self);
 }
 
 void q_openglshaderprogram_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1396,8 +1396,8 @@ int32_t q_openglshaderprogram_receivers(void* self, const char* signal) {
     return QOpenGLShaderProgram_Receivers((QOpenGLShaderProgram*)self, signal);
 }
 
-int32_t q_openglshaderprogram_qbase_receivers(void* self, const char* signal) {
-    return QOpenGLShaderProgram_QBaseReceivers((QOpenGLShaderProgram*)self, signal);
+int32_t q_openglshaderprogram_super_receivers(void* self, const char* signal) {
+    return QOpenGLShaderProgram_SuperReceivers((QOpenGLShaderProgram*)self, signal);
 }
 
 void q_openglshaderprogram_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1408,8 +1408,8 @@ bool q_openglshaderprogram_is_signal_connected(void* self, void* signal) {
     return QOpenGLShaderProgram_IsSignalConnected((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
 }
 
-bool q_openglshaderprogram_qbase_is_signal_connected(void* self, void* signal) {
-    return QOpenGLShaderProgram_QBaseIsSignalConnected((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
+bool q_openglshaderprogram_super_is_signal_connected(void* self, void* signal) {
+    return QOpenGLShaderProgram_SuperIsSignalConnected((QOpenGLShaderProgram*)self, (QMetaMethod*)signal);
 }
 
 void q_openglshaderprogram_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

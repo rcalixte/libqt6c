@@ -28,8 +28,8 @@ void q_abstractitemdelegate_on_meta_object(void* self, const QMetaObject* (*call
     QAbstractItemDelegate_OnMetaObject((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_abstractitemdelegate_qbase_meta_object(void* self) {
-    return QAbstractItemDelegate_QBaseMetaObject((QAbstractItemDelegate*)self);
+const QMetaObject* q_abstractitemdelegate_super_meta_object(void* self) {
+    return QAbstractItemDelegate_SuperMetaObject((QAbstractItemDelegate*)self);
 }
 
 void* q_abstractitemdelegate_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void q_abstractitemdelegate_on_metacast(void* self, void* (*callback)(void*, con
     QAbstractItemDelegate_OnMetacast((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void* q_abstractitemdelegate_qbase_metacast(void* self, const char* param1) {
-    return QAbstractItemDelegate_QBaseMetacast((QAbstractItemDelegate*)self, param1);
+void* q_abstractitemdelegate_super_metacast(void* self, const char* param1) {
+    return QAbstractItemDelegate_SuperMetacast((QAbstractItemDelegate*)self, param1);
 }
 
 int32_t q_abstractitemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void q_abstractitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, i
     QAbstractItemDelegate_OnMetacall((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-int32_t q_abstractitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAbstractItemDelegate_QBaseMetacall((QAbstractItemDelegate*)self, param1, param2, param3);
+int32_t q_abstractitemdelegate_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAbstractItemDelegate_SuperMetacall((QAbstractItemDelegate*)self, param1, param2, param3);
 }
 
 const char* q_abstractitemdelegate_tr(const char* s) {
@@ -71,8 +71,8 @@ void q_abstractitemdelegate_on_paint(void* self, void (*callback)(void*, void*, 
     QAbstractItemDelegate_OnPaint((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_abstractitemdelegate_qbase_paint(void* self, void* painter, void* option, void* index) {
-    QAbstractItemDelegate_QBasePaint((QAbstractItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+void q_abstractitemdelegate_super_paint(void* self, void* painter, void* option, void* index) {
+    QAbstractItemDelegate_SuperPaint((QAbstractItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index) {
@@ -83,8 +83,8 @@ void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, v
     QAbstractItemDelegate_OnSizeHint((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-QSize* q_abstractitemdelegate_qbase_size_hint(void* self, void* option, void* index) {
-    return QAbstractItemDelegate_QBaseSizeHint((QAbstractItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+QSize* q_abstractitemdelegate_super_size_hint(void* self, void* option, void* index) {
+    return QAbstractItemDelegate_SuperSizeHint((QAbstractItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 QWidget* q_abstractitemdelegate_create_editor(void* self, void* parent, void* option, void* index) {
@@ -95,8 +95,8 @@ void q_abstractitemdelegate_on_create_editor(void* self, QWidget* (*callback)(vo
     QAbstractItemDelegate_OnCreateEditor((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-QWidget* q_abstractitemdelegate_qbase_create_editor(void* self, void* parent, void* option, void* index) {
-    return QAbstractItemDelegate_QBaseCreateEditor((QAbstractItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+QWidget* q_abstractitemdelegate_super_create_editor(void* self, void* parent, void* option, void* index) {
+    return QAbstractItemDelegate_SuperCreateEditor((QAbstractItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void q_abstractitemdelegate_destroy_editor(void* self, void* editor, void* index) {
@@ -107,8 +107,8 @@ void q_abstractitemdelegate_on_destroy_editor(void* self, void (*callback)(void*
     QAbstractItemDelegate_OnDestroyEditor((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_abstractitemdelegate_qbase_destroy_editor(void* self, void* editor, void* index) {
-    QAbstractItemDelegate_QBaseDestroyEditor((QAbstractItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
+void q_abstractitemdelegate_super_destroy_editor(void* self, void* editor, void* index) {
+    QAbstractItemDelegate_SuperDestroyEditor((QAbstractItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
 void q_abstractitemdelegate_set_editor_data(void* self, void* editor, void* index) {
@@ -119,8 +119,8 @@ void q_abstractitemdelegate_on_set_editor_data(void* self, void (*callback)(void
     QAbstractItemDelegate_OnSetEditorData((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_abstractitemdelegate_qbase_set_editor_data(void* self, void* editor, void* index) {
-    QAbstractItemDelegate_QBaseSetEditorData((QAbstractItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
+void q_abstractitemdelegate_super_set_editor_data(void* self, void* editor, void* index) {
+    QAbstractItemDelegate_SuperSetEditorData((QAbstractItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
 void q_abstractitemdelegate_set_model_data(void* self, void* editor, void* model, void* index) {
@@ -131,8 +131,8 @@ void q_abstractitemdelegate_on_set_model_data(void* self, void (*callback)(void*
     QAbstractItemDelegate_OnSetModelData((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_abstractitemdelegate_qbase_set_model_data(void* self, void* editor, void* model, void* index) {
-    QAbstractItemDelegate_QBaseSetModelData((QAbstractItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
+void q_abstractitemdelegate_super_set_model_data(void* self, void* editor, void* model, void* index) {
+    QAbstractItemDelegate_SuperSetModelData((QAbstractItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
 void q_abstractitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index) {
@@ -143,8 +143,8 @@ void q_abstractitemdelegate_on_update_editor_geometry(void* self, void (*callbac
     QAbstractItemDelegate_OnUpdateEditorGeometry((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-void q_abstractitemdelegate_qbase_update_editor_geometry(void* self, void* editor, void* option, void* index) {
-    QAbstractItemDelegate_QBaseUpdateEditorGeometry((QAbstractItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+void q_abstractitemdelegate_super_update_editor_geometry(void* self, void* editor, void* option, void* index) {
+    QAbstractItemDelegate_SuperUpdateEditorGeometry((QAbstractItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 bool q_abstractitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index) {
@@ -155,8 +155,8 @@ void q_abstractitemdelegate_on_editor_event(void* self, bool (*callback)(void*, 
     QAbstractItemDelegate_OnEditorEvent((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-bool q_abstractitemdelegate_qbase_editor_event(void* self, void* event, void* model, void* option, void* index) {
-    return QAbstractItemDelegate_QBaseEditorEvent((QAbstractItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+bool q_abstractitemdelegate_super_editor_event(void* self, void* event, void* model, void* option, void* index) {
+    return QAbstractItemDelegate_SuperEditorEvent((QAbstractItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 bool q_abstractitemdelegate_help_event(void* self, void* event, void* view, void* option, void* index) {
@@ -167,8 +167,8 @@ void q_abstractitemdelegate_on_help_event(void* self, bool (*callback)(void*, vo
     QAbstractItemDelegate_OnHelpEvent((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-bool q_abstractitemdelegate_qbase_help_event(void* self, void* event, void* view, void* option, void* index) {
-    return QAbstractItemDelegate_QBaseHelpEvent((QAbstractItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+bool q_abstractitemdelegate_super_help_event(void* self, void* event, void* view, void* option, void* index) {
+    return QAbstractItemDelegate_SuperHelpEvent((QAbstractItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 libqt_list /* of int */ q_abstractitemdelegate_painting_roles(void* self) {
@@ -180,8 +180,8 @@ void q_abstractitemdelegate_on_painting_roles(void* self, libqt_list /* of int *
     QAbstractItemDelegate_OnPaintingRoles((QAbstractItemDelegate*)self, (intptr_t)callback);
 }
 
-libqt_list /* of int */ q_abstractitemdelegate_qbase_painting_roles(void* self) {
-    libqt_list _arr = QAbstractItemDelegate_QBasePaintingRoles((QAbstractItemDelegate*)self);
+libqt_list /* of int */ q_abstractitemdelegate_super_painting_roles(void* self) {
+    libqt_list _arr = QAbstractItemDelegate_SuperPaintingRoles((QAbstractItemDelegate*)self);
     return _arr;
 }
 
@@ -446,8 +446,8 @@ bool q_abstractitemdelegate_event(void* self, void* event) {
     return QAbstractItemDelegate_Event((QAbstractItemDelegate*)self, (QEvent*)event);
 }
 
-bool q_abstractitemdelegate_qbase_event(void* self, void* event) {
-    return QAbstractItemDelegate_QBaseEvent((QAbstractItemDelegate*)self, (QEvent*)event);
+bool q_abstractitemdelegate_super_event(void* self, void* event) {
+    return QAbstractItemDelegate_SuperEvent((QAbstractItemDelegate*)self, (QEvent*)event);
 }
 
 void q_abstractitemdelegate_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -458,8 +458,8 @@ bool q_abstractitemdelegate_event_filter(void* self, void* watched, void* event)
     return QAbstractItemDelegate_EventFilter((QAbstractItemDelegate*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_abstractitemdelegate_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAbstractItemDelegate_QBaseEventFilter((QAbstractItemDelegate*)self, (QObject*)watched, (QEvent*)event);
+bool q_abstractitemdelegate_super_event_filter(void* self, void* watched, void* event) {
+    return QAbstractItemDelegate_SuperEventFilter((QAbstractItemDelegate*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_abstractitemdelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -470,8 +470,8 @@ void q_abstractitemdelegate_timer_event(void* self, void* event) {
     QAbstractItemDelegate_TimerEvent((QAbstractItemDelegate*)self, (QTimerEvent*)event);
 }
 
-void q_abstractitemdelegate_qbase_timer_event(void* self, void* event) {
-    QAbstractItemDelegate_QBaseTimerEvent((QAbstractItemDelegate*)self, (QTimerEvent*)event);
+void q_abstractitemdelegate_super_timer_event(void* self, void* event) {
+    QAbstractItemDelegate_SuperTimerEvent((QAbstractItemDelegate*)self, (QTimerEvent*)event);
 }
 
 void q_abstractitemdelegate_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -482,8 +482,8 @@ void q_abstractitemdelegate_child_event(void* self, void* event) {
     QAbstractItemDelegate_ChildEvent((QAbstractItemDelegate*)self, (QChildEvent*)event);
 }
 
-void q_abstractitemdelegate_qbase_child_event(void* self, void* event) {
-    QAbstractItemDelegate_QBaseChildEvent((QAbstractItemDelegate*)self, (QChildEvent*)event);
+void q_abstractitemdelegate_super_child_event(void* self, void* event) {
+    QAbstractItemDelegate_SuperChildEvent((QAbstractItemDelegate*)self, (QChildEvent*)event);
 }
 
 void q_abstractitemdelegate_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -494,8 +494,8 @@ void q_abstractitemdelegate_custom_event(void* self, void* event) {
     QAbstractItemDelegate_CustomEvent((QAbstractItemDelegate*)self, (QEvent*)event);
 }
 
-void q_abstractitemdelegate_qbase_custom_event(void* self, void* event) {
-    QAbstractItemDelegate_QBaseCustomEvent((QAbstractItemDelegate*)self, (QEvent*)event);
+void q_abstractitemdelegate_super_custom_event(void* self, void* event) {
+    QAbstractItemDelegate_SuperCustomEvent((QAbstractItemDelegate*)self, (QEvent*)event);
 }
 
 void q_abstractitemdelegate_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -506,8 +506,8 @@ void q_abstractitemdelegate_connect_notify(void* self, void* signal) {
     QAbstractItemDelegate_ConnectNotify((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-void q_abstractitemdelegate_qbase_connect_notify(void* self, void* signal) {
-    QAbstractItemDelegate_QBaseConnectNotify((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
+void q_abstractitemdelegate_super_connect_notify(void* self, void* signal) {
+    QAbstractItemDelegate_SuperConnectNotify((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractitemdelegate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -518,8 +518,8 @@ void q_abstractitemdelegate_disconnect_notify(void* self, void* signal) {
     QAbstractItemDelegate_DisconnectNotify((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-void q_abstractitemdelegate_qbase_disconnect_notify(void* self, void* signal) {
-    QAbstractItemDelegate_QBaseDisconnectNotify((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
+void q_abstractitemdelegate_super_disconnect_notify(void* self, void* signal) {
+    QAbstractItemDelegate_SuperDisconnectNotify((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -530,8 +530,8 @@ QObject* q_abstractitemdelegate_sender(void* self) {
     return QAbstractItemDelegate_Sender((QAbstractItemDelegate*)self);
 }
 
-QObject* q_abstractitemdelegate_qbase_sender(void* self) {
-    return QAbstractItemDelegate_QBaseSender((QAbstractItemDelegate*)self);
+QObject* q_abstractitemdelegate_super_sender(void* self) {
+    return QAbstractItemDelegate_SuperSender((QAbstractItemDelegate*)self);
 }
 
 void q_abstractitemdelegate_on_sender(void* self, QObject* (*callback)()) {
@@ -542,8 +542,8 @@ int32_t q_abstractitemdelegate_sender_signal_index(void* self) {
     return QAbstractItemDelegate_SenderSignalIndex((QAbstractItemDelegate*)self);
 }
 
-int32_t q_abstractitemdelegate_qbase_sender_signal_index(void* self) {
-    return QAbstractItemDelegate_QBaseSenderSignalIndex((QAbstractItemDelegate*)self);
+int32_t q_abstractitemdelegate_super_sender_signal_index(void* self) {
+    return QAbstractItemDelegate_SuperSenderSignalIndex((QAbstractItemDelegate*)self);
 }
 
 void q_abstractitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -554,8 +554,8 @@ int32_t q_abstractitemdelegate_receivers(void* self, const char* signal) {
     return QAbstractItemDelegate_Receivers((QAbstractItemDelegate*)self, signal);
 }
 
-int32_t q_abstractitemdelegate_qbase_receivers(void* self, const char* signal) {
-    return QAbstractItemDelegate_QBaseReceivers((QAbstractItemDelegate*)self, signal);
+int32_t q_abstractitemdelegate_super_receivers(void* self, const char* signal) {
+    return QAbstractItemDelegate_SuperReceivers((QAbstractItemDelegate*)self, signal);
 }
 
 void q_abstractitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -566,8 +566,8 @@ bool q_abstractitemdelegate_is_signal_connected(void* self, void* signal) {
     return QAbstractItemDelegate_IsSignalConnected((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-bool q_abstractitemdelegate_qbase_is_signal_connected(void* self, void* signal) {
-    return QAbstractItemDelegate_QBaseIsSignalConnected((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
+bool q_abstractitemdelegate_super_is_signal_connected(void* self, void* signal) {
+    return QAbstractItemDelegate_SuperIsSignalConnected((QAbstractItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractitemdelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

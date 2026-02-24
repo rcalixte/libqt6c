@@ -108,13 +108,17 @@ char* k_zipfileentry_data(void* self);
 ///
 void k_zipfileentry_on_data(void* self, libqt_string (*callback)());
 
+/// @warning DEPRECATED: Use `k_zipfileentry_super_data` instead
+///
+#define k_zipfileentry_qbase_data k_zipfileentry_super_data
+
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#data)
 ///
 /// Base class method implementation
 ///
 /// @param self KZipFileEntry*
 ///
-char* k_zipfileentry_qbase_data(void* self);
+char* k_zipfileentry_super_data(void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///
@@ -131,13 +135,17 @@ QIODevice* k_zipfileentry_create_device(void* self);
 ///
 void k_zipfileentry_on_create_device(void* self, QIODevice* (*callback)());
 
+/// @warning DEPRECATED: Use `k_zipfileentry_super_create_device` instead
+///
+#define k_zipfileentry_qbase_create_device k_zipfileentry_super_create_device
+
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#createDevice)
 ///
 /// Base class method implementation
 ///
 /// @param self KZipFileEntry*
 ///
-QIODevice* k_zipfileentry_qbase_create_device(void* self);
+QIODevice* k_zipfileentry_super_create_device(void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -239,6 +247,10 @@ const char* k_zipfileentry_sym_link_target(void* self);
 ///
 bool k_zipfileentry_is_file(void* self);
 
+/// @warning DEPRECATED: Use `k_zipfileentry_super_is_file` instead
+///
+#define k_zipfileentry_qbase_is_file k_zipfileentry_super_is_file
+
 /// Inherited from KArchiveFile
 ///
 /// [Upstream resources](https://api.kde.org/karchivefile.html#isFile)
@@ -247,7 +259,7 @@ bool k_zipfileentry_is_file(void* self);
 ///
 /// @param self KZipFileEntry*
 ///
-bool k_zipfileentry_qbase_is_file(void* self);
+bool k_zipfileentry_super_is_file(void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -272,6 +284,10 @@ void k_zipfileentry_on_is_file(void* self, bool (*callback)());
 ///
 void k_zipfileentry_virtual_hook(void* self, int id, void* data);
 
+/// @warning DEPRECATED: Use `k_zipfileentry_super_virtual_hook` instead
+///
+#define k_zipfileentry_qbase_virtual_hook k_zipfileentry_super_virtual_hook
+
 /// Inherited from KArchiveFile
 ///
 /// [Upstream resources](https://api.kde.org/karchivefile.html#virtual_hook)
@@ -282,7 +298,7 @@ void k_zipfileentry_virtual_hook(void* self, int id, void* data);
 /// @param id int
 /// @param data void*
 ///
-void k_zipfileentry_qbase_virtual_hook(void* self, int id, void* data);
+void k_zipfileentry_super_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KArchiveFile
 ///
@@ -305,6 +321,10 @@ void k_zipfileentry_on_virtual_hook(void* self, void (*callback)(void*, int, voi
 ///
 bool k_zipfileentry_is_directory(void* self);
 
+/// @warning DEPRECATED: Use `k_zipfileentry_super_is_directory` instead
+///
+#define k_zipfileentry_qbase_is_directory k_zipfileentry_super_is_directory
+
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#isDirectory)
@@ -313,7 +333,7 @@ bool k_zipfileentry_is_directory(void* self);
 ///
 /// @param self KZipFileEntry*
 ///
-bool k_zipfileentry_qbase_is_directory(void* self);
+bool k_zipfileentry_super_is_directory(void* self);
 
 /// Inherited from KArchiveEntry
 ///
@@ -336,6 +356,10 @@ void k_zipfileentry_on_is_directory(void* self, bool (*callback)());
 ///
 KArchive* k_zipfileentry_archive(void* self);
 
+/// @warning DEPRECATED: Use `k_zipfileentry_super_archive` instead
+///
+#define k_zipfileentry_qbase_archive k_zipfileentry_super_archive
+
 /// Inherited from KArchiveEntry
 ///
 /// [Upstream resources](https://api.kde.org/karchiveentry.html#archive)
@@ -344,7 +368,7 @@ KArchive* k_zipfileentry_archive(void* self);
 ///
 /// @param self KZipFileEntry*
 ///
-KArchive* k_zipfileentry_qbase_archive(void* self);
+KArchive* k_zipfileentry_super_archive(void* self);
 
 /// Inherited from KArchiveEntry
 ///

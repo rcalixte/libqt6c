@@ -257,8 +257,8 @@ void k_io__workerbase_on_app_connection_made(void* self, void (*callback)()) {
     KIO__WorkerBase_OnAppConnectionMade((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__workerbase_qbase_app_connection_made(void* self) {
-    KIO__WorkerBase_QBaseAppConnectionMade((KIO__WorkerBase*)self);
+void k_io__workerbase_super_app_connection_made(void* self) {
+    KIO__WorkerBase_SuperAppConnectionMade((KIO__WorkerBase*)self);
 }
 
 void k_io__workerbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
@@ -269,8 +269,8 @@ void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char
     KIO__WorkerBase_OnSetHost((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__workerbase_qbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
-    KIO__WorkerBase_QBaseSetHost((KIO__WorkerBase*)self, qstring(host), port, qstring(user), qstring(pass));
+void k_io__workerbase_super_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
+    KIO__WorkerBase_SuperSetHost((KIO__WorkerBase*)self, qstring(host), port, qstring(user), qstring(pass));
 }
 
 KIO__WorkerResult* k_io__workerbase_open_connection(void* self) {
@@ -281,8 +281,8 @@ void k_io__workerbase_on_open_connection(void* self, KIO__WorkerResult* (*callba
     KIO__WorkerBase_OnOpenConnection((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_open_connection(void* self) {
-    return KIO__WorkerBase_QBaseOpenConnection((KIO__WorkerBase*)self);
+KIO__WorkerResult* k_io__workerbase_super_open_connection(void* self) {
+    return KIO__WorkerBase_SuperOpenConnection((KIO__WorkerBase*)self);
 }
 
 void k_io__workerbase_close_connection(void* self) {
@@ -293,8 +293,8 @@ void k_io__workerbase_on_close_connection(void* self, void (*callback)()) {
     KIO__WorkerBase_OnCloseConnection((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__workerbase_qbase_close_connection(void* self) {
-    KIO__WorkerBase_QBaseCloseConnection((KIO__WorkerBase*)self);
+void k_io__workerbase_super_close_connection(void* self) {
+    KIO__WorkerBase_SuperCloseConnection((KIO__WorkerBase*)self);
 }
 
 KIO__WorkerResult* k_io__workerbase_get(void* self, void* url) {
@@ -305,8 +305,8 @@ void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, v
     KIO__WorkerBase_OnGet((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_get(void* self, void* url) {
-    return KIO__WorkerBase_QBaseGet((KIO__WorkerBase*)self, (QUrl*)url);
+KIO__WorkerResult* k_io__workerbase_super_get(void* self, void* url) {
+    return KIO__WorkerBase_SuperGet((KIO__WorkerBase*)self, (QUrl*)url);
 }
 
 KIO__WorkerResult* k_io__workerbase_open(void* self, void* url, int32_t mode) {
@@ -317,8 +317,8 @@ void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, 
     KIO__WorkerBase_OnOpen((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_open(void* self, void* url, int32_t mode) {
-    return KIO__WorkerBase_QBaseOpen((KIO__WorkerBase*)self, (QUrl*)url, mode);
+KIO__WorkerResult* k_io__workerbase_super_open(void* self, void* url, int32_t mode) {
+    return KIO__WorkerBase_SuperOpen((KIO__WorkerBase*)self, (QUrl*)url, mode);
 }
 
 KIO__WorkerResult* k_io__workerbase_read(void* self, uint64_t size) {
@@ -329,8 +329,8 @@ void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, 
     KIO__WorkerBase_OnRead((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_read(void* self, uint64_t size) {
-    return KIO__WorkerBase_QBaseRead((KIO__WorkerBase*)self, size);
+KIO__WorkerResult* k_io__workerbase_super_read(void* self, uint64_t size) {
+    return KIO__WorkerBase_SuperRead((KIO__WorkerBase*)self, size);
 }
 
 KIO__WorkerResult* k_io__workerbase_write(void* self, char* data) {
@@ -341,8 +341,8 @@ void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*,
     KIO__WorkerBase_OnWrite((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_write(void* self, char* data) {
-    return KIO__WorkerBase_QBaseWrite((KIO__WorkerBase*)self, qstring(data));
+KIO__WorkerResult* k_io__workerbase_super_write(void* self, char* data) {
+    return KIO__WorkerBase_SuperWrite((KIO__WorkerBase*)self, qstring(data));
 }
 
 KIO__WorkerResult* k_io__workerbase_seek(void* self, uint64_t offset) {
@@ -353,8 +353,8 @@ void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, 
     KIO__WorkerBase_OnSeek((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_seek(void* self, uint64_t offset) {
-    return KIO__WorkerBase_QBaseSeek((KIO__WorkerBase*)self, offset);
+KIO__WorkerResult* k_io__workerbase_super_seek(void* self, uint64_t offset) {
+    return KIO__WorkerBase_SuperSeek((KIO__WorkerBase*)self, offset);
 }
 
 KIO__WorkerResult* k_io__workerbase_truncate(void* self, uint64_t size) {
@@ -365,8 +365,8 @@ void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(voi
     KIO__WorkerBase_OnTruncate((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_truncate(void* self, uint64_t size) {
-    return KIO__WorkerBase_QBaseTruncate((KIO__WorkerBase*)self, size);
+KIO__WorkerResult* k_io__workerbase_super_truncate(void* self, uint64_t size) {
+    return KIO__WorkerBase_SuperTruncate((KIO__WorkerBase*)self, size);
 }
 
 KIO__WorkerResult* k_io__workerbase_close(void* self) {
@@ -377,8 +377,8 @@ void k_io__workerbase_on_close(void* self, KIO__WorkerResult* (*callback)()) {
     KIO__WorkerBase_OnClose((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_close(void* self) {
-    return KIO__WorkerBase_QBaseClose((KIO__WorkerBase*)self);
+KIO__WorkerResult* k_io__workerbase_super_close(void* self) {
+    return KIO__WorkerBase_SuperClose((KIO__WorkerBase*)self);
 }
 
 KIO__WorkerResult* k_io__workerbase_put(void* self, void* url, int permissions, int32_t flags) {
@@ -389,8 +389,8 @@ void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, v
     KIO__WorkerBase_OnPut((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_put(void* self, void* url, int permissions, int32_t flags) {
-    return KIO__WorkerBase_QBasePut((KIO__WorkerBase*)self, (QUrl*)url, permissions, flags);
+KIO__WorkerResult* k_io__workerbase_super_put(void* self, void* url, int permissions, int32_t flags) {
+    return KIO__WorkerBase_SuperPut((KIO__WorkerBase*)self, (QUrl*)url, permissions, flags);
 }
 
 KIO__WorkerResult* k_io__workerbase_stat(void* self, void* url) {
@@ -401,8 +401,8 @@ void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, 
     KIO__WorkerBase_OnStat((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_stat(void* self, void* url) {
-    return KIO__WorkerBase_QBaseStat((KIO__WorkerBase*)self, (QUrl*)url);
+KIO__WorkerResult* k_io__workerbase_super_stat(void* self, void* url) {
+    return KIO__WorkerBase_SuperStat((KIO__WorkerBase*)self, (QUrl*)url);
 }
 
 KIO__WorkerResult* k_io__workerbase_mimetype(void* self, void* url) {
@@ -413,8 +413,8 @@ void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(voi
     KIO__WorkerBase_OnMimetype((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_mimetype(void* self, void* url) {
-    return KIO__WorkerBase_QBaseMimetype((KIO__WorkerBase*)self, (QUrl*)url);
+KIO__WorkerResult* k_io__workerbase_super_mimetype(void* self, void* url) {
+    return KIO__WorkerBase_SuperMimetype((KIO__WorkerBase*)self, (QUrl*)url);
 }
 
 KIO__WorkerResult* k_io__workerbase_list_dir(void* self, void* url) {
@@ -425,8 +425,8 @@ void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(voi
     KIO__WorkerBase_OnListDir((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_list_dir(void* self, void* url) {
-    return KIO__WorkerBase_QBaseListDir((KIO__WorkerBase*)self, (QUrl*)url);
+KIO__WorkerResult* k_io__workerbase_super_list_dir(void* self, void* url) {
+    return KIO__WorkerBase_SuperListDir((KIO__WorkerBase*)self, (QUrl*)url);
 }
 
 KIO__WorkerResult* k_io__workerbase_mkdir(void* self, void* url, int permissions) {
@@ -437,8 +437,8 @@ void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*,
     KIO__WorkerBase_OnMkdir((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_mkdir(void* self, void* url, int permissions) {
-    return KIO__WorkerBase_QBaseMkdir((KIO__WorkerBase*)self, (QUrl*)url, permissions);
+KIO__WorkerResult* k_io__workerbase_super_mkdir(void* self, void* url, int permissions) {
+    return KIO__WorkerBase_SuperMkdir((KIO__WorkerBase*)self, (QUrl*)url, permissions);
 }
 
 KIO__WorkerResult* k_io__workerbase_rename(void* self, void* src, void* dest, int32_t flags) {
@@ -449,8 +449,8 @@ void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*
     KIO__WorkerBase_OnRename((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_rename(void* self, void* src, void* dest, int32_t flags) {
-    return KIO__WorkerBase_QBaseRename((KIO__WorkerBase*)self, (QUrl*)src, (QUrl*)dest, flags);
+KIO__WorkerResult* k_io__workerbase_super_rename(void* self, void* src, void* dest, int32_t flags) {
+    return KIO__WorkerBase_SuperRename((KIO__WorkerBase*)self, (QUrl*)src, (QUrl*)dest, flags);
 }
 
 KIO__WorkerResult* k_io__workerbase_symlink(void* self, const char* target, void* dest, int32_t flags) {
@@ -461,8 +461,8 @@ void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void
     KIO__WorkerBase_OnSymlink((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_symlink(void* self, const char* target, void* dest, int32_t flags) {
-    return KIO__WorkerBase_QBaseSymlink((KIO__WorkerBase*)self, qstring(target), (QUrl*)dest, flags);
+KIO__WorkerResult* k_io__workerbase_super_symlink(void* self, const char* target, void* dest, int32_t flags) {
+    return KIO__WorkerBase_SuperSymlink((KIO__WorkerBase*)self, qstring(target), (QUrl*)dest, flags);
 }
 
 KIO__WorkerResult* k_io__workerbase_chmod(void* self, void* url, int permissions) {
@@ -473,8 +473,8 @@ void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*,
     KIO__WorkerBase_OnChmod((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_chmod(void* self, void* url, int permissions) {
-    return KIO__WorkerBase_QBaseChmod((KIO__WorkerBase*)self, (QUrl*)url, permissions);
+KIO__WorkerResult* k_io__workerbase_super_chmod(void* self, void* url, int permissions) {
+    return KIO__WorkerBase_SuperChmod((KIO__WorkerBase*)self, (QUrl*)url, permissions);
 }
 
 KIO__WorkerResult* k_io__workerbase_chown(void* self, void* url, const char* owner, const char* group) {
@@ -485,8 +485,8 @@ void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*,
     KIO__WorkerBase_OnChown((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_chown(void* self, void* url, const char* owner, const char* group) {
-    return KIO__WorkerBase_QBaseChown((KIO__WorkerBase*)self, (QUrl*)url, qstring(owner), qstring(group));
+KIO__WorkerResult* k_io__workerbase_super_chown(void* self, void* url, const char* owner, const char* group) {
+    return KIO__WorkerBase_SuperChown((KIO__WorkerBase*)self, (QUrl*)url, qstring(owner), qstring(group));
 }
 
 KIO__WorkerResult* k_io__workerbase_set_modification_time(void* self, void* url, void* mtime) {
@@ -497,8 +497,8 @@ void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*
     KIO__WorkerBase_OnSetModificationTime((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_set_modification_time(void* self, void* url, void* mtime) {
-    return KIO__WorkerBase_QBaseSetModificationTime((KIO__WorkerBase*)self, (QUrl*)url, (QDateTime*)mtime);
+KIO__WorkerResult* k_io__workerbase_super_set_modification_time(void* self, void* url, void* mtime) {
+    return KIO__WorkerBase_SuperSetModificationTime((KIO__WorkerBase*)self, (QUrl*)url, (QDateTime*)mtime);
 }
 
 KIO__WorkerResult* k_io__workerbase_copy(void* self, void* src, void* dest, int permissions, int32_t flags) {
@@ -509,8 +509,8 @@ void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, 
     KIO__WorkerBase_OnCopy((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_copy(void* self, void* src, void* dest, int permissions, int32_t flags) {
-    return KIO__WorkerBase_QBaseCopy((KIO__WorkerBase*)self, (QUrl*)src, (QUrl*)dest, permissions, flags);
+KIO__WorkerResult* k_io__workerbase_super_copy(void* self, void* src, void* dest, int permissions, int32_t flags) {
+    return KIO__WorkerBase_SuperCopy((KIO__WorkerBase*)self, (QUrl*)src, (QUrl*)dest, permissions, flags);
 }
 
 KIO__WorkerResult* k_io__workerbase_del(void* self, void* url, bool isfile) {
@@ -521,8 +521,8 @@ void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, v
     KIO__WorkerBase_OnDel((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_del(void* self, void* url, bool isfile) {
-    return KIO__WorkerBase_QBaseDel((KIO__WorkerBase*)self, (QUrl*)url, isfile);
+KIO__WorkerResult* k_io__workerbase_super_del(void* self, void* url, bool isfile) {
+    return KIO__WorkerBase_SuperDel((KIO__WorkerBase*)self, (QUrl*)url, isfile);
 }
 
 KIO__WorkerResult* k_io__workerbase_special(void* self, char* data) {
@@ -533,8 +533,8 @@ void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void
     KIO__WorkerBase_OnSpecial((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_special(void* self, char* data) {
-    return KIO__WorkerBase_QBaseSpecial((KIO__WorkerBase*)self, qstring(data));
+KIO__WorkerResult* k_io__workerbase_super_special(void* self, char* data) {
+    return KIO__WorkerBase_SuperSpecial((KIO__WorkerBase*)self, qstring(data));
 }
 
 KIO__WorkerResult* k_io__workerbase_file_system_free_space(void* self, void* url) {
@@ -545,8 +545,8 @@ void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (
     KIO__WorkerBase_OnFileSystemFreeSpace((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_qbase_file_system_free_space(void* self, void* url) {
-    return KIO__WorkerBase_QBaseFileSystemFreeSpace((KIO__WorkerBase*)self, (QUrl*)url);
+KIO__WorkerResult* k_io__workerbase_super_file_system_free_space(void* self, void* url) {
+    return KIO__WorkerBase_SuperFileSystemFreeSpace((KIO__WorkerBase*)self, (QUrl*)url);
 }
 
 void k_io__workerbase_worker_status2(void* self) {
@@ -557,8 +557,8 @@ void k_io__workerbase_on_worker_status2(void* self, void (*callback)()) {
     KIO__WorkerBase_OnWorkerStatus2((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__workerbase_qbase_worker_status2(void* self) {
-    KIO__WorkerBase_QBaseWorkerStatus2((KIO__WorkerBase*)self);
+void k_io__workerbase_super_worker_status2(void* self) {
+    KIO__WorkerBase_SuperWorkerStatus2((KIO__WorkerBase*)self);
 }
 
 void k_io__workerbase_reparse_configuration(void* self) {
@@ -569,8 +569,8 @@ void k_io__workerbase_on_reparse_configuration(void* self, void (*callback)()) {
     KIO__WorkerBase_OnReparseConfiguration((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__workerbase_qbase_reparse_configuration(void* self) {
-    KIO__WorkerBase_QBaseReparseConfiguration((KIO__WorkerBase*)self);
+void k_io__workerbase_super_reparse_configuration(void* self) {
+    KIO__WorkerBase_SuperReparseConfiguration((KIO__WorkerBase*)self);
 }
 
 int32_t k_io__workerbase_connect_timeout(void* self) {

@@ -40,13 +40,17 @@ const QMetaObject* q_imagecapture_meta_object(void* self);
 ///
 void q_imagecapture_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_meta_object` instead
+///
+#define q_imagecapture_qbase_meta_object q_imagecapture_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QImageCapture*
 ///
-const QMetaObject* q_imagecapture_qbase_meta_object(void* self);
+const QMetaObject* q_imagecapture_super_meta_object(void* self);
 
 /// @param self QImageCapture*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_imagecapture_metacast(void* self, const char* param1);
 ///
 void q_imagecapture_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_metacast` instead
+///
+#define q_imagecapture_qbase_metacast q_imagecapture_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QImageCapture*
 /// @param param1 const char*
 ///
-void* q_imagecapture_qbase_metacast(void* self, const char* param1);
+void* q_imagecapture_super_metacast(void* self, const char* param1);
 
 /// @param self QImageCapture*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_imagecapture_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_metacall` instead
+///
+#define q_imagecapture_qbase_metacall q_imagecapture_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QImageCapture*
@@ -88,7 +100,7 @@ void q_imagecapture_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_imagecapture_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_imagecapture_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -890,6 +902,10 @@ void q_imagecapture_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_imagecapture_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_event` instead
+///
+#define q_imagecapture_qbase_event q_imagecapture_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -899,7 +915,7 @@ bool q_imagecapture_event(void* self, void* event);
 /// @param self QImageCapture*
 /// @param event QEvent*
 ///
-bool q_imagecapture_qbase_event(void* self, void* event);
+bool q_imagecapture_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -924,6 +940,10 @@ void q_imagecapture_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_imagecapture_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_event_filter` instead
+///
+#define q_imagecapture_qbase_event_filter q_imagecapture_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -934,7 +954,7 @@ bool q_imagecapture_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_imagecapture_qbase_event_filter(void* self, void* watched, void* event);
+bool q_imagecapture_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -958,6 +978,10 @@ void q_imagecapture_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_imagecapture_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_timer_event` instead
+///
+#define q_imagecapture_qbase_timer_event q_imagecapture_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -967,7 +991,7 @@ void q_imagecapture_timer_event(void* self, void* event);
 /// @param self QImageCapture*
 /// @param event QTimerEvent*
 ///
-void q_imagecapture_qbase_timer_event(void* self, void* event);
+void q_imagecapture_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -991,6 +1015,10 @@ void q_imagecapture_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_imagecapture_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_child_event` instead
+///
+#define q_imagecapture_qbase_child_event q_imagecapture_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1000,7 +1028,7 @@ void q_imagecapture_child_event(void* self, void* event);
 /// @param self QImageCapture*
 /// @param event QChildEvent*
 ///
-void q_imagecapture_qbase_child_event(void* self, void* event);
+void q_imagecapture_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1024,6 +1052,10 @@ void q_imagecapture_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_imagecapture_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_custom_event` instead
+///
+#define q_imagecapture_qbase_custom_event q_imagecapture_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1033,7 +1065,7 @@ void q_imagecapture_custom_event(void* self, void* event);
 /// @param self QImageCapture*
 /// @param event QEvent*
 ///
-void q_imagecapture_qbase_custom_event(void* self, void* event);
+void q_imagecapture_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1057,6 +1089,10 @@ void q_imagecapture_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_imagecapture_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_connect_notify` instead
+///
+#define q_imagecapture_qbase_connect_notify q_imagecapture_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1066,7 +1102,7 @@ void q_imagecapture_connect_notify(void* self, void* signal);
 /// @param self QImageCapture*
 /// @param signal QMetaMethod*
 ///
-void q_imagecapture_qbase_connect_notify(void* self, void* signal);
+void q_imagecapture_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1090,6 +1126,10 @@ void q_imagecapture_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_imagecapture_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_disconnect_notify` instead
+///
+#define q_imagecapture_qbase_disconnect_notify q_imagecapture_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1099,7 +1139,7 @@ void q_imagecapture_disconnect_notify(void* self, void* signal);
 /// @param self QImageCapture*
 /// @param signal QMetaMethod*
 ///
-void q_imagecapture_qbase_disconnect_notify(void* self, void* signal);
+void q_imagecapture_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1122,6 +1162,10 @@ void q_imagecapture_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QObject* q_imagecapture_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_sender` instead
+///
+#define q_imagecapture_qbase_sender q_imagecapture_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1130,7 +1174,7 @@ QObject* q_imagecapture_sender(void* self);
 ///
 /// @param self QImageCapture*
 ///
-QObject* q_imagecapture_qbase_sender(void* self);
+QObject* q_imagecapture_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1153,6 +1197,10 @@ void q_imagecapture_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_imagecapture_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_sender_signal_index` instead
+///
+#define q_imagecapture_qbase_sender_signal_index q_imagecapture_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1161,7 +1209,7 @@ int32_t q_imagecapture_sender_signal_index(void* self);
 ///
 /// @param self QImageCapture*
 ///
-int32_t q_imagecapture_qbase_sender_signal_index(void* self);
+int32_t q_imagecapture_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1185,6 +1233,10 @@ void q_imagecapture_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_imagecapture_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_receivers` instead
+///
+#define q_imagecapture_qbase_receivers q_imagecapture_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1194,7 +1246,7 @@ int32_t q_imagecapture_receivers(void* self, const char* signal);
 /// @param self QImageCapture*
 /// @param signal const char*
 ///
-int32_t q_imagecapture_qbase_receivers(void* self, const char* signal);
+int32_t q_imagecapture_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1218,6 +1270,10 @@ void q_imagecapture_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_imagecapture_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_imagecapture_super_is_signal_connected` instead
+///
+#define q_imagecapture_qbase_is_signal_connected q_imagecapture_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1227,7 +1283,7 @@ bool q_imagecapture_is_signal_connected(void* self, void* signal);
 /// @param self QImageCapture*
 /// @param signal QMetaMethod*
 ///
-bool q_imagecapture_qbase_is_signal_connected(void* self, void* signal);
+bool q_imagecapture_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

@@ -101,8 +101,8 @@ void q_texttable_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTextTable_OnMetaObject((QTextTable*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_texttable_qbase_meta_object(void* self) {
-    return QTextTable_QBaseMetaObject((QTextTable*)self);
+const QMetaObject* q_texttable_super_meta_object(void* self) {
+    return QTextTable_SuperMetaObject((QTextTable*)self);
 }
 
 void* q_texttable_metacast(void* self, const char* param1) {
@@ -113,8 +113,8 @@ void q_texttable_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QTextTable_OnMetacast((QTextTable*)self, (intptr_t)callback);
 }
 
-void* q_texttable_qbase_metacast(void* self, const char* param1) {
-    return QTextTable_QBaseMetacast((QTextTable*)self, param1);
+void* q_texttable_super_metacast(void* self, const char* param1) {
+    return QTextTable_SuperMetacast((QTextTable*)self, param1);
 }
 
 int32_t q_texttable_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -125,8 +125,8 @@ void q_texttable_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QTextTable_OnMetacall((QTextTable*)self, (intptr_t)callback);
 }
 
-int32_t q_texttable_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTextTable_QBaseMetacall((QTextTable*)self, param1, param2, param3);
+int32_t q_texttable_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTextTable_SuperMetacall((QTextTable*)self, param1, param2, param3);
 }
 
 const char* q_texttable_tr(const char* s) {
@@ -494,8 +494,8 @@ bool q_texttable_event(void* self, void* event) {
     return QTextTable_Event((QTextTable*)self, (QEvent*)event);
 }
 
-bool q_texttable_qbase_event(void* self, void* event) {
-    return QTextTable_QBaseEvent((QTextTable*)self, (QEvent*)event);
+bool q_texttable_super_event(void* self, void* event) {
+    return QTextTable_SuperEvent((QTextTable*)self, (QEvent*)event);
 }
 
 void q_texttable_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -506,8 +506,8 @@ bool q_texttable_event_filter(void* self, void* watched, void* event) {
     return QTextTable_EventFilter((QTextTable*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_texttable_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTextTable_QBaseEventFilter((QTextTable*)self, (QObject*)watched, (QEvent*)event);
+bool q_texttable_super_event_filter(void* self, void* watched, void* event) {
+    return QTextTable_SuperEventFilter((QTextTable*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_texttable_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -518,8 +518,8 @@ void q_texttable_timer_event(void* self, void* event) {
     QTextTable_TimerEvent((QTextTable*)self, (QTimerEvent*)event);
 }
 
-void q_texttable_qbase_timer_event(void* self, void* event) {
-    QTextTable_QBaseTimerEvent((QTextTable*)self, (QTimerEvent*)event);
+void q_texttable_super_timer_event(void* self, void* event) {
+    QTextTable_SuperTimerEvent((QTextTable*)self, (QTimerEvent*)event);
 }
 
 void q_texttable_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -530,8 +530,8 @@ void q_texttable_child_event(void* self, void* event) {
     QTextTable_ChildEvent((QTextTable*)self, (QChildEvent*)event);
 }
 
-void q_texttable_qbase_child_event(void* self, void* event) {
-    QTextTable_QBaseChildEvent((QTextTable*)self, (QChildEvent*)event);
+void q_texttable_super_child_event(void* self, void* event) {
+    QTextTable_SuperChildEvent((QTextTable*)self, (QChildEvent*)event);
 }
 
 void q_texttable_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -542,8 +542,8 @@ void q_texttable_custom_event(void* self, void* event) {
     QTextTable_CustomEvent((QTextTable*)self, (QEvent*)event);
 }
 
-void q_texttable_qbase_custom_event(void* self, void* event) {
-    QTextTable_QBaseCustomEvent((QTextTable*)self, (QEvent*)event);
+void q_texttable_super_custom_event(void* self, void* event) {
+    QTextTable_SuperCustomEvent((QTextTable*)self, (QEvent*)event);
 }
 
 void q_texttable_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -554,8 +554,8 @@ void q_texttable_connect_notify(void* self, void* signal) {
     QTextTable_ConnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-void q_texttable_qbase_connect_notify(void* self, void* signal) {
-    QTextTable_QBaseConnectNotify((QTextTable*)self, (QMetaMethod*)signal);
+void q_texttable_super_connect_notify(void* self, void* signal) {
+    QTextTable_SuperConnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
 void q_texttable_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -566,8 +566,8 @@ void q_texttable_disconnect_notify(void* self, void* signal) {
     QTextTable_DisconnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-void q_texttable_qbase_disconnect_notify(void* self, void* signal) {
-    QTextTable_QBaseDisconnectNotify((QTextTable*)self, (QMetaMethod*)signal);
+void q_texttable_super_disconnect_notify(void* self, void* signal) {
+    QTextTable_SuperDisconnectNotify((QTextTable*)self, (QMetaMethod*)signal);
 }
 
 void q_texttable_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -578,8 +578,8 @@ QObject* q_texttable_sender(void* self) {
     return QTextTable_Sender((QTextTable*)self);
 }
 
-QObject* q_texttable_qbase_sender(void* self) {
-    return QTextTable_QBaseSender((QTextTable*)self);
+QObject* q_texttable_super_sender(void* self) {
+    return QTextTable_SuperSender((QTextTable*)self);
 }
 
 void q_texttable_on_sender(void* self, QObject* (*callback)()) {
@@ -590,8 +590,8 @@ int32_t q_texttable_sender_signal_index(void* self) {
     return QTextTable_SenderSignalIndex((QTextTable*)self);
 }
 
-int32_t q_texttable_qbase_sender_signal_index(void* self) {
-    return QTextTable_QBaseSenderSignalIndex((QTextTable*)self);
+int32_t q_texttable_super_sender_signal_index(void* self) {
+    return QTextTable_SuperSenderSignalIndex((QTextTable*)self);
 }
 
 void q_texttable_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -602,8 +602,8 @@ int32_t q_texttable_receivers(void* self, const char* signal) {
     return QTextTable_Receivers((QTextTable*)self, signal);
 }
 
-int32_t q_texttable_qbase_receivers(void* self, const char* signal) {
-    return QTextTable_QBaseReceivers((QTextTable*)self, signal);
+int32_t q_texttable_super_receivers(void* self, const char* signal) {
+    return QTextTable_SuperReceivers((QTextTable*)self, signal);
 }
 
 void q_texttable_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -614,8 +614,8 @@ bool q_texttable_is_signal_connected(void* self, void* signal) {
     return QTextTable_IsSignalConnected((QTextTable*)self, (QMetaMethod*)signal);
 }
 
-bool q_texttable_qbase_is_signal_connected(void* self, void* signal) {
-    return QTextTable_QBaseIsSignalConnected((QTextTable*)self, (QMetaMethod*)signal);
+bool q_texttable_super_is_signal_connected(void* self, void* signal) {
+    return QTextTable_SuperIsSignalConnected((QTextTable*)self, (QMetaMethod*)signal);
 }
 
 void q_texttable_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

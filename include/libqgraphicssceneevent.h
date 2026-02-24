@@ -136,6 +136,10 @@ int32_t q_graphicssceneevent_register_event_type1(int hint);
 ///
 void q_graphicssceneevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicssceneevent_super_set_accepted` instead
+///
+#define q_graphicssceneevent_qbase_set_accepted q_graphicssceneevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -145,7 +149,7 @@ void q_graphicssceneevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneEvent*
 /// @param accepted bool
 ///
-void q_graphicssceneevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicssceneevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -168,6 +172,10 @@ void q_graphicssceneevent_on_set_accepted(void* self, void (*callback)(void*, bo
 ///
 QEvent* q_graphicssceneevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicssceneevent_super_clone` instead
+///
+#define q_graphicssceneevent_qbase_clone q_graphicssceneevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -176,7 +184,7 @@ QEvent* q_graphicssceneevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneEvent*
 ///
-QEvent* q_graphicssceneevent_qbase_clone(void* self);
+QEvent* q_graphicssceneevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -534,6 +542,10 @@ int32_t q_graphicsscenemouseevent_register_event_type1(int hint);
 ///
 void q_graphicsscenemouseevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenemouseevent_super_set_accepted` instead
+///
+#define q_graphicsscenemouseevent_qbase_set_accepted q_graphicsscenemouseevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -543,7 +555,7 @@ void q_graphicsscenemouseevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneMouseEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenemouseevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenemouseevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -566,6 +578,10 @@ void q_graphicsscenemouseevent_on_set_accepted(void* self, void (*callback)(void
 ///
 QEvent* q_graphicsscenemouseevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenemouseevent_super_clone` instead
+///
+#define q_graphicsscenemouseevent_qbase_clone q_graphicsscenemouseevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -574,7 +590,7 @@ QEvent* q_graphicsscenemouseevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneMouseEvent*
 ///
-QEvent* q_graphicsscenemouseevent_qbase_clone(void* self);
+QEvent* q_graphicsscenemouseevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -872,6 +888,10 @@ int32_t q_graphicsscenewheelevent_register_event_type1(int hint);
 ///
 void q_graphicsscenewheelevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenewheelevent_super_set_accepted` instead
+///
+#define q_graphicsscenewheelevent_qbase_set_accepted q_graphicsscenewheelevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -881,7 +901,7 @@ void q_graphicsscenewheelevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneWheelEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenewheelevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenewheelevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -904,6 +924,10 @@ void q_graphicsscenewheelevent_on_set_accepted(void* self, void (*callback)(void
 ///
 QEvent* q_graphicsscenewheelevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenewheelevent_super_clone` instead
+///
+#define q_graphicsscenewheelevent_qbase_clone q_graphicsscenewheelevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -912,7 +936,7 @@ QEvent* q_graphicsscenewheelevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneWheelEvent*
 ///
-QEvent* q_graphicsscenewheelevent_qbase_clone(void* self);
+QEvent* q_graphicsscenewheelevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1141,6 +1165,10 @@ int32_t q_graphicsscenecontextmenuevent_register_event_type1(int hint);
 ///
 void q_graphicsscenecontextmenuevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenecontextmenuevent_super_set_accepted` instead
+///
+#define q_graphicsscenecontextmenuevent_qbase_set_accepted q_graphicsscenecontextmenuevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -1150,7 +1178,7 @@ void q_graphicsscenecontextmenuevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneContextMenuEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenecontextmenuevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenecontextmenuevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -1173,6 +1201,10 @@ void q_graphicsscenecontextmenuevent_on_set_accepted(void* self, void (*callback
 ///
 QEvent* q_graphicsscenecontextmenuevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenecontextmenuevent_super_clone` instead
+///
+#define q_graphicsscenecontextmenuevent_qbase_clone q_graphicsscenecontextmenuevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -1181,7 +1213,7 @@ QEvent* q_graphicsscenecontextmenuevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneContextMenuEvent*
 ///
-QEvent* q_graphicsscenecontextmenuevent_qbase_clone(void* self);
+QEvent* q_graphicsscenecontextmenuevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1434,6 +1466,10 @@ int32_t q_graphicsscenehoverevent_register_event_type1(int hint);
 ///
 void q_graphicsscenehoverevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenehoverevent_super_set_accepted` instead
+///
+#define q_graphicsscenehoverevent_qbase_set_accepted q_graphicsscenehoverevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -1443,7 +1479,7 @@ void q_graphicsscenehoverevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneHoverEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenehoverevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenehoverevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -1466,6 +1502,10 @@ void q_graphicsscenehoverevent_on_set_accepted(void* self, void (*callback)(void
 ///
 QEvent* q_graphicsscenehoverevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenehoverevent_super_clone` instead
+///
+#define q_graphicsscenehoverevent_qbase_clone q_graphicsscenehoverevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -1474,7 +1514,7 @@ QEvent* q_graphicsscenehoverevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneHoverEvent*
 ///
-QEvent* q_graphicsscenehoverevent_qbase_clone(void* self);
+QEvent* q_graphicsscenehoverevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -1660,6 +1700,10 @@ int32_t q_graphicsscenehelpevent_register_event_type1(int hint);
 ///
 void q_graphicsscenehelpevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenehelpevent_super_set_accepted` instead
+///
+#define q_graphicsscenehelpevent_qbase_set_accepted q_graphicsscenehelpevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -1669,7 +1713,7 @@ void q_graphicsscenehelpevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneHelpEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenehelpevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenehelpevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -1692,6 +1736,10 @@ void q_graphicsscenehelpevent_on_set_accepted(void* self, void (*callback)(void*
 ///
 QEvent* q_graphicsscenehelpevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenehelpevent_super_clone` instead
+///
+#define q_graphicsscenehelpevent_qbase_clone q_graphicsscenehelpevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -1700,7 +1748,7 @@ QEvent* q_graphicsscenehelpevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneHelpEvent*
 ///
-QEvent* q_graphicsscenehelpevent_qbase_clone(void* self);
+QEvent* q_graphicsscenehelpevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -2006,6 +2054,10 @@ int32_t q_graphicsscenedragdropevent_register_event_type1(int hint);
 ///
 void q_graphicsscenedragdropevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenedragdropevent_super_set_accepted` instead
+///
+#define q_graphicsscenedragdropevent_qbase_set_accepted q_graphicsscenedragdropevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -2015,7 +2067,7 @@ void q_graphicsscenedragdropevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneDragDropEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenedragdropevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenedragdropevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -2038,6 +2090,10 @@ void q_graphicsscenedragdropevent_on_set_accepted(void* self, void (*callback)(v
 ///
 QEvent* q_graphicsscenedragdropevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenedragdropevent_super_clone` instead
+///
+#define q_graphicsscenedragdropevent_qbase_clone q_graphicsscenedragdropevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -2046,7 +2102,7 @@ QEvent* q_graphicsscenedragdropevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneDragDropEvent*
 ///
-QEvent* q_graphicsscenedragdropevent_qbase_clone(void* self);
+QEvent* q_graphicsscenedragdropevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -2224,6 +2280,10 @@ int32_t q_graphicssceneresizeevent_register_event_type1(int hint);
 ///
 void q_graphicssceneresizeevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicssceneresizeevent_super_set_accepted` instead
+///
+#define q_graphicssceneresizeevent_qbase_set_accepted q_graphicssceneresizeevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -2233,7 +2293,7 @@ void q_graphicssceneresizeevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneResizeEvent*
 /// @param accepted bool
 ///
-void q_graphicssceneresizeevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicssceneresizeevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -2256,6 +2316,10 @@ void q_graphicssceneresizeevent_on_set_accepted(void* self, void (*callback)(voi
 ///
 QEvent* q_graphicssceneresizeevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicssceneresizeevent_super_clone` instead
+///
+#define q_graphicssceneresizeevent_qbase_clone q_graphicssceneresizeevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -2264,7 +2328,7 @@ QEvent* q_graphicssceneresizeevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneResizeEvent*
 ///
-QEvent* q_graphicssceneresizeevent_qbase_clone(void* self);
+QEvent* q_graphicssceneresizeevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///
@@ -2442,6 +2506,10 @@ int32_t q_graphicsscenemoveevent_register_event_type1(int hint);
 ///
 void q_graphicsscenemoveevent_set_accepted(void* self, bool accepted);
 
+/// @warning DEPRECATED: Use `q_graphicsscenemoveevent_super_set_accepted` instead
+///
+#define q_graphicsscenemoveevent_qbase_set_accepted q_graphicsscenemoveevent_super_set_accepted
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#setAccepted)
@@ -2451,7 +2519,7 @@ void q_graphicsscenemoveevent_set_accepted(void* self, bool accepted);
 /// @param self QGraphicsSceneMoveEvent*
 /// @param accepted bool
 ///
-void q_graphicsscenemoveevent_qbase_set_accepted(void* self, bool accepted);
+void q_graphicsscenemoveevent_super_set_accepted(void* self, bool accepted);
 
 /// Inherited from QEvent
 ///
@@ -2474,6 +2542,10 @@ void q_graphicsscenemoveevent_on_set_accepted(void* self, void (*callback)(void*
 ///
 QEvent* q_graphicsscenemoveevent_clone(void* self);
 
+/// @warning DEPRECATED: Use `q_graphicsscenemoveevent_super_clone` instead
+///
+#define q_graphicsscenemoveevent_qbase_clone q_graphicsscenemoveevent_super_clone
+
 /// Inherited from QEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qevent.html#clone)
@@ -2482,7 +2554,7 @@ QEvent* q_graphicsscenemoveevent_clone(void* self);
 ///
 /// @param self QGraphicsSceneMoveEvent*
 ///
-QEvent* q_graphicsscenemoveevent_qbase_clone(void* self);
+QEvent* q_graphicsscenemoveevent_super_clone(void* self);
 
 /// Inherited from QEvent
 ///

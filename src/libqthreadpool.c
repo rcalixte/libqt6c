@@ -24,8 +24,8 @@ void q_threadpool_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QThreadPool_OnMetaObject((QThreadPool*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_threadpool_qbase_meta_object(void* self) {
-    return QThreadPool_QBaseMetaObject((QThreadPool*)self);
+const QMetaObject* q_threadpool_super_meta_object(void* self) {
+    return QThreadPool_SuperMetaObject((QThreadPool*)self);
 }
 
 void* q_threadpool_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_threadpool_on_metacast(void* self, void* (*callback)(void*, const char*))
     QThreadPool_OnMetacast((QThreadPool*)self, (intptr_t)callback);
 }
 
-void* q_threadpool_qbase_metacast(void* self, const char* param1) {
-    return QThreadPool_QBaseMetacast((QThreadPool*)self, param1);
+void* q_threadpool_super_metacast(void* self, const char* param1) {
+    return QThreadPool_SuperMetacast((QThreadPool*)self, param1);
 }
 
 int32_t q_threadpool_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_threadpool_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QThreadPool_OnMetacall((QThreadPool*)self, (intptr_t)callback);
 }
 
-int32_t q_threadpool_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QThreadPool_QBaseMetacall((QThreadPool*)self, param1, param2, param3);
+int32_t q_threadpool_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QThreadPool_SuperMetacall((QThreadPool*)self, param1, param2, param3);
 }
 
 const char* q_threadpool_tr(const char* s) {
@@ -376,8 +376,8 @@ bool q_threadpool_event(void* self, void* event) {
     return QThreadPool_Event((QThreadPool*)self, (QEvent*)event);
 }
 
-bool q_threadpool_qbase_event(void* self, void* event) {
-    return QThreadPool_QBaseEvent((QThreadPool*)self, (QEvent*)event);
+bool q_threadpool_super_event(void* self, void* event) {
+    return QThreadPool_SuperEvent((QThreadPool*)self, (QEvent*)event);
 }
 
 void q_threadpool_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -388,8 +388,8 @@ bool q_threadpool_event_filter(void* self, void* watched, void* event) {
     return QThreadPool_EventFilter((QThreadPool*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_threadpool_qbase_event_filter(void* self, void* watched, void* event) {
-    return QThreadPool_QBaseEventFilter((QThreadPool*)self, (QObject*)watched, (QEvent*)event);
+bool q_threadpool_super_event_filter(void* self, void* watched, void* event) {
+    return QThreadPool_SuperEventFilter((QThreadPool*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_threadpool_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -400,8 +400,8 @@ void q_threadpool_timer_event(void* self, void* event) {
     QThreadPool_TimerEvent((QThreadPool*)self, (QTimerEvent*)event);
 }
 
-void q_threadpool_qbase_timer_event(void* self, void* event) {
-    QThreadPool_QBaseTimerEvent((QThreadPool*)self, (QTimerEvent*)event);
+void q_threadpool_super_timer_event(void* self, void* event) {
+    QThreadPool_SuperTimerEvent((QThreadPool*)self, (QTimerEvent*)event);
 }
 
 void q_threadpool_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -412,8 +412,8 @@ void q_threadpool_child_event(void* self, void* event) {
     QThreadPool_ChildEvent((QThreadPool*)self, (QChildEvent*)event);
 }
 
-void q_threadpool_qbase_child_event(void* self, void* event) {
-    QThreadPool_QBaseChildEvent((QThreadPool*)self, (QChildEvent*)event);
+void q_threadpool_super_child_event(void* self, void* event) {
+    QThreadPool_SuperChildEvent((QThreadPool*)self, (QChildEvent*)event);
 }
 
 void q_threadpool_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -424,8 +424,8 @@ void q_threadpool_custom_event(void* self, void* event) {
     QThreadPool_CustomEvent((QThreadPool*)self, (QEvent*)event);
 }
 
-void q_threadpool_qbase_custom_event(void* self, void* event) {
-    QThreadPool_QBaseCustomEvent((QThreadPool*)self, (QEvent*)event);
+void q_threadpool_super_custom_event(void* self, void* event) {
+    QThreadPool_SuperCustomEvent((QThreadPool*)self, (QEvent*)event);
 }
 
 void q_threadpool_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -436,8 +436,8 @@ void q_threadpool_connect_notify(void* self, void* signal) {
     QThreadPool_ConnectNotify((QThreadPool*)self, (QMetaMethod*)signal);
 }
 
-void q_threadpool_qbase_connect_notify(void* self, void* signal) {
-    QThreadPool_QBaseConnectNotify((QThreadPool*)self, (QMetaMethod*)signal);
+void q_threadpool_super_connect_notify(void* self, void* signal) {
+    QThreadPool_SuperConnectNotify((QThreadPool*)self, (QMetaMethod*)signal);
 }
 
 void q_threadpool_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ void q_threadpool_disconnect_notify(void* self, void* signal) {
     QThreadPool_DisconnectNotify((QThreadPool*)self, (QMetaMethod*)signal);
 }
 
-void q_threadpool_qbase_disconnect_notify(void* self, void* signal) {
-    QThreadPool_QBaseDisconnectNotify((QThreadPool*)self, (QMetaMethod*)signal);
+void q_threadpool_super_disconnect_notify(void* self, void* signal) {
+    QThreadPool_SuperDisconnectNotify((QThreadPool*)self, (QMetaMethod*)signal);
 }
 
 void q_threadpool_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -460,8 +460,8 @@ QObject* q_threadpool_sender(void* self) {
     return QThreadPool_Sender((QThreadPool*)self);
 }
 
-QObject* q_threadpool_qbase_sender(void* self) {
-    return QThreadPool_QBaseSender((QThreadPool*)self);
+QObject* q_threadpool_super_sender(void* self) {
+    return QThreadPool_SuperSender((QThreadPool*)self);
 }
 
 void q_threadpool_on_sender(void* self, QObject* (*callback)()) {
@@ -472,8 +472,8 @@ int32_t q_threadpool_sender_signal_index(void* self) {
     return QThreadPool_SenderSignalIndex((QThreadPool*)self);
 }
 
-int32_t q_threadpool_qbase_sender_signal_index(void* self) {
-    return QThreadPool_QBaseSenderSignalIndex((QThreadPool*)self);
+int32_t q_threadpool_super_sender_signal_index(void* self) {
+    return QThreadPool_SuperSenderSignalIndex((QThreadPool*)self);
 }
 
 void q_threadpool_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -484,8 +484,8 @@ int32_t q_threadpool_receivers(void* self, const char* signal) {
     return QThreadPool_Receivers((QThreadPool*)self, signal);
 }
 
-int32_t q_threadpool_qbase_receivers(void* self, const char* signal) {
-    return QThreadPool_QBaseReceivers((QThreadPool*)self, signal);
+int32_t q_threadpool_super_receivers(void* self, const char* signal) {
+    return QThreadPool_SuperReceivers((QThreadPool*)self, signal);
 }
 
 void q_threadpool_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -496,8 +496,8 @@ bool q_threadpool_is_signal_connected(void* self, void* signal) {
     return QThreadPool_IsSignalConnected((QThreadPool*)self, (QMetaMethod*)signal);
 }
 
-bool q_threadpool_qbase_is_signal_connected(void* self, void* signal) {
-    return QThreadPool_QBaseIsSignalConnected((QThreadPool*)self, (QMetaMethod*)signal);
+bool q_threadpool_super_is_signal_connected(void* self, void* signal) {
+    return QThreadPool_SuperIsSignalConnected((QThreadPool*)self, (QMetaMethod*)signal);
 }
 
 void q_threadpool_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

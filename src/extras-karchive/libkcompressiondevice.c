@@ -28,8 +28,8 @@ void k_compressiondevice_on_meta_object(void* self, const QMetaObject* (*callbac
     KCompressionDevice_OnMetaObject((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_compressiondevice_qbase_meta_object(void* self) {
-    return KCompressionDevice_QBaseMetaObject((KCompressionDevice*)self);
+const QMetaObject* k_compressiondevice_super_meta_object(void* self) {
+    return KCompressionDevice_SuperMetaObject((KCompressionDevice*)self);
 }
 
 void* k_compressiondevice_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void k_compressiondevice_on_metacast(void* self, void* (*callback)(void*, const 
     KCompressionDevice_OnMetacast((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-void* k_compressiondevice_qbase_metacast(void* self, const char* param1) {
-    return KCompressionDevice_QBaseMetacast((KCompressionDevice*)self, param1);
+void* k_compressiondevice_super_metacast(void* self, const char* param1) {
+    return KCompressionDevice_SuperMetacast((KCompressionDevice*)self, param1);
 }
 
 int32_t k_compressiondevice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void k_compressiondevice_on_metacall(void* self, int32_t (*callback)(void*, int3
     KCompressionDevice_OnMetacall((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-int32_t k_compressiondevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KCompressionDevice_QBaseMetacall((KCompressionDevice*)self, param1, param2, param3);
+int32_t k_compressiondevice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KCompressionDevice_SuperMetacall((KCompressionDevice*)self, param1, param2, param3);
 }
 
 const char* k_compressiondevice_tr(const char* s) {
@@ -75,8 +75,8 @@ void k_compressiondevice_on_open(void* self, bool (*callback)(void*, int32_t)) {
     KCompressionDevice_OnOpen((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-bool k_compressiondevice_qbase_open(void* self, int32_t mode) {
-    return KCompressionDevice_QBaseOpen((KCompressionDevice*)self, mode);
+bool k_compressiondevice_super_open(void* self, int32_t mode) {
+    return KCompressionDevice_SuperOpen((KCompressionDevice*)self, mode);
 }
 
 void k_compressiondevice_close(void* self) {
@@ -87,8 +87,8 @@ void k_compressiondevice_on_close(void* self, void (*callback)()) {
     KCompressionDevice_OnClose((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-void k_compressiondevice_qbase_close(void* self) {
-    KCompressionDevice_QBaseClose((KCompressionDevice*)self);
+void k_compressiondevice_super_close(void* self) {
+    KCompressionDevice_SuperClose((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_set_orig_file_name(void* self, char* fileName) {
@@ -107,8 +107,8 @@ void k_compressiondevice_on_seek(void* self, bool (*callback)(void*, long long))
     KCompressionDevice_OnSeek((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-bool k_compressiondevice_qbase_seek(void* self, long long param1) {
-    return KCompressionDevice_QBaseSeek((KCompressionDevice*)self, param1);
+bool k_compressiondevice_super_seek(void* self, long long param1) {
+    return KCompressionDevice_SuperSeek((KCompressionDevice*)self, param1);
 }
 
 bool k_compressiondevice_at_end(void* self) {
@@ -119,8 +119,8 @@ void k_compressiondevice_on_at_end(void* self, bool (*callback)()) {
     KCompressionDevice_OnAtEnd((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-bool k_compressiondevice_qbase_at_end(void* self) {
-    return KCompressionDevice_QBaseAtEnd((KCompressionDevice*)self);
+bool k_compressiondevice_super_at_end(void* self) {
+    return KCompressionDevice_SuperAtEnd((KCompressionDevice*)self);
 }
 
 KFilterBase* k_compressiondevice_filter_for_compression_type(int32_t type) {
@@ -143,8 +143,8 @@ void k_compressiondevice_on_read_data(void* self, long long (*callback)(void*, c
     KCompressionDevice_OnReadData((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-long long k_compressiondevice_qbase_read_data(void* self, char* data, long long maxlen) {
-    return KCompressionDevice_QBaseReadData((KCompressionDevice*)self, data, maxlen);
+long long k_compressiondevice_super_read_data(void* self, char* data, long long maxlen) {
+    return KCompressionDevice_SuperReadData((KCompressionDevice*)self, data, maxlen);
 }
 
 long long k_compressiondevice_write_data(void* self, const char* data, long long lenVal) {
@@ -155,8 +155,8 @@ void k_compressiondevice_on_write_data(void* self, long long (*callback)(void*, 
     KCompressionDevice_OnWriteData((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-long long k_compressiondevice_qbase_write_data(void* self, const char* data, long long lenVal) {
-    return KCompressionDevice_QBaseWriteData((KCompressionDevice*)self, data, lenVal);
+long long k_compressiondevice_super_write_data(void* self, const char* data, long long lenVal) {
+    return KCompressionDevice_SuperWriteData((KCompressionDevice*)self, data, lenVal);
 }
 
 KFilterBase* k_compressiondevice_filter_base(void* self) {
@@ -167,8 +167,8 @@ void k_compressiondevice_on_filter_base(void* self, KFilterBase* (*callback)()) 
     KCompressionDevice_OnFilterBase((KCompressionDevice*)self, (intptr_t)callback);
 }
 
-KFilterBase* k_compressiondevice_qbase_filter_base(void* self) {
-    return KCompressionDevice_QBaseFilterBase((KCompressionDevice*)self);
+KFilterBase* k_compressiondevice_super_filter_base(void* self) {
+    return KCompressionDevice_SuperFilterBase((KCompressionDevice*)self);
 }
 
 const char* k_compressiondevice_tr2(const char* s, const char* c) {
@@ -594,8 +594,8 @@ bool k_compressiondevice_is_sequential(void* self) {
     return KCompressionDevice_IsSequential((KCompressionDevice*)self);
 }
 
-bool k_compressiondevice_qbase_is_sequential(void* self) {
-    return KCompressionDevice_QBaseIsSequential((KCompressionDevice*)self);
+bool k_compressiondevice_super_is_sequential(void* self) {
+    return KCompressionDevice_SuperIsSequential((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_is_sequential(void* self, bool (*callback)()) {
@@ -606,8 +606,8 @@ long long k_compressiondevice_pos(void* self) {
     return KCompressionDevice_Pos((KCompressionDevice*)self);
 }
 
-long long k_compressiondevice_qbase_pos(void* self) {
-    return KCompressionDevice_QBasePos((KCompressionDevice*)self);
+long long k_compressiondevice_super_pos(void* self) {
+    return KCompressionDevice_SuperPos((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_pos(void* self, long long (*callback)()) {
@@ -618,8 +618,8 @@ long long k_compressiondevice_size(void* self) {
     return KCompressionDevice_Size((KCompressionDevice*)self);
 }
 
-long long k_compressiondevice_qbase_size(void* self) {
-    return KCompressionDevice_QBaseSize((KCompressionDevice*)self);
+long long k_compressiondevice_super_size(void* self) {
+    return KCompressionDevice_SuperSize((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_size(void* self, long long (*callback)()) {
@@ -630,8 +630,8 @@ bool k_compressiondevice_reset(void* self) {
     return KCompressionDevice_Reset((KCompressionDevice*)self);
 }
 
-bool k_compressiondevice_qbase_reset(void* self) {
-    return KCompressionDevice_QBaseReset((KCompressionDevice*)self);
+bool k_compressiondevice_super_reset(void* self) {
+    return KCompressionDevice_SuperReset((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_reset(void* self, bool (*callback)()) {
@@ -642,8 +642,8 @@ long long k_compressiondevice_bytes_available(void* self) {
     return KCompressionDevice_BytesAvailable((KCompressionDevice*)self);
 }
 
-long long k_compressiondevice_qbase_bytes_available(void* self) {
-    return KCompressionDevice_QBaseBytesAvailable((KCompressionDevice*)self);
+long long k_compressiondevice_super_bytes_available(void* self) {
+    return KCompressionDevice_SuperBytesAvailable((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_bytes_available(void* self, long long (*callback)()) {
@@ -654,8 +654,8 @@ long long k_compressiondevice_bytes_to_write(void* self) {
     return KCompressionDevice_BytesToWrite((KCompressionDevice*)self);
 }
 
-long long k_compressiondevice_qbase_bytes_to_write(void* self) {
-    return KCompressionDevice_QBaseBytesToWrite((KCompressionDevice*)self);
+long long k_compressiondevice_super_bytes_to_write(void* self) {
+    return KCompressionDevice_SuperBytesToWrite((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_bytes_to_write(void* self, long long (*callback)()) {
@@ -666,8 +666,8 @@ bool k_compressiondevice_can_read_line(void* self) {
     return KCompressionDevice_CanReadLine((KCompressionDevice*)self);
 }
 
-bool k_compressiondevice_qbase_can_read_line(void* self) {
-    return KCompressionDevice_QBaseCanReadLine((KCompressionDevice*)self);
+bool k_compressiondevice_super_can_read_line(void* self) {
+    return KCompressionDevice_SuperCanReadLine((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_can_read_line(void* self, bool (*callback)()) {
@@ -678,8 +678,8 @@ bool k_compressiondevice_wait_for_ready_read(void* self, int msecs) {
     return KCompressionDevice_WaitForReadyRead((KCompressionDevice*)self, msecs);
 }
 
-bool k_compressiondevice_qbase_wait_for_ready_read(void* self, int msecs) {
-    return KCompressionDevice_QBaseWaitForReadyRead((KCompressionDevice*)self, msecs);
+bool k_compressiondevice_super_wait_for_ready_read(void* self, int msecs) {
+    return KCompressionDevice_SuperWaitForReadyRead((KCompressionDevice*)self, msecs);
 }
 
 void k_compressiondevice_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
@@ -690,8 +690,8 @@ bool k_compressiondevice_wait_for_bytes_written(void* self, int msecs) {
     return KCompressionDevice_WaitForBytesWritten((KCompressionDevice*)self, msecs);
 }
 
-bool k_compressiondevice_qbase_wait_for_bytes_written(void* self, int msecs) {
-    return KCompressionDevice_QBaseWaitForBytesWritten((KCompressionDevice*)self, msecs);
+bool k_compressiondevice_super_wait_for_bytes_written(void* self, int msecs) {
+    return KCompressionDevice_SuperWaitForBytesWritten((KCompressionDevice*)self, msecs);
 }
 
 void k_compressiondevice_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
@@ -702,8 +702,8 @@ long long k_compressiondevice_read_line_data(void* self, char* data, long long m
     return KCompressionDevice_ReadLineData((KCompressionDevice*)self, data, maxlen);
 }
 
-long long k_compressiondevice_qbase_read_line_data(void* self, char* data, long long maxlen) {
-    return KCompressionDevice_QBaseReadLineData((KCompressionDevice*)self, data, maxlen);
+long long k_compressiondevice_super_read_line_data(void* self, char* data, long long maxlen) {
+    return KCompressionDevice_SuperReadLineData((KCompressionDevice*)self, data, maxlen);
 }
 
 void k_compressiondevice_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
@@ -714,8 +714,8 @@ long long k_compressiondevice_skip_data(void* self, long long maxSize) {
     return KCompressionDevice_SkipData((KCompressionDevice*)self, maxSize);
 }
 
-long long k_compressiondevice_qbase_skip_data(void* self, long long maxSize) {
-    return KCompressionDevice_QBaseSkipData((KCompressionDevice*)self, maxSize);
+long long k_compressiondevice_super_skip_data(void* self, long long maxSize) {
+    return KCompressionDevice_SuperSkipData((KCompressionDevice*)self, maxSize);
 }
 
 void k_compressiondevice_on_skip_data(void* self, long long (*callback)(void*, long long)) {
@@ -726,8 +726,8 @@ bool k_compressiondevice_event(void* self, void* event) {
     return KCompressionDevice_Event((KCompressionDevice*)self, (QEvent*)event);
 }
 
-bool k_compressiondevice_qbase_event(void* self, void* event) {
-    return KCompressionDevice_QBaseEvent((KCompressionDevice*)self, (QEvent*)event);
+bool k_compressiondevice_super_event(void* self, void* event) {
+    return KCompressionDevice_SuperEvent((KCompressionDevice*)self, (QEvent*)event);
 }
 
 void k_compressiondevice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -738,8 +738,8 @@ bool k_compressiondevice_event_filter(void* self, void* watched, void* event) {
     return KCompressionDevice_EventFilter((KCompressionDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_compressiondevice_qbase_event_filter(void* self, void* watched, void* event) {
-    return KCompressionDevice_QBaseEventFilter((KCompressionDevice*)self, (QObject*)watched, (QEvent*)event);
+bool k_compressiondevice_super_event_filter(void* self, void* watched, void* event) {
+    return KCompressionDevice_SuperEventFilter((KCompressionDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_compressiondevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -750,8 +750,8 @@ void k_compressiondevice_timer_event(void* self, void* event) {
     KCompressionDevice_TimerEvent((KCompressionDevice*)self, (QTimerEvent*)event);
 }
 
-void k_compressiondevice_qbase_timer_event(void* self, void* event) {
-    KCompressionDevice_QBaseTimerEvent((KCompressionDevice*)self, (QTimerEvent*)event);
+void k_compressiondevice_super_timer_event(void* self, void* event) {
+    KCompressionDevice_SuperTimerEvent((KCompressionDevice*)self, (QTimerEvent*)event);
 }
 
 void k_compressiondevice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -762,8 +762,8 @@ void k_compressiondevice_child_event(void* self, void* event) {
     KCompressionDevice_ChildEvent((KCompressionDevice*)self, (QChildEvent*)event);
 }
 
-void k_compressiondevice_qbase_child_event(void* self, void* event) {
-    KCompressionDevice_QBaseChildEvent((KCompressionDevice*)self, (QChildEvent*)event);
+void k_compressiondevice_super_child_event(void* self, void* event) {
+    KCompressionDevice_SuperChildEvent((KCompressionDevice*)self, (QChildEvent*)event);
 }
 
 void k_compressiondevice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -774,8 +774,8 @@ void k_compressiondevice_custom_event(void* self, void* event) {
     KCompressionDevice_CustomEvent((KCompressionDevice*)self, (QEvent*)event);
 }
 
-void k_compressiondevice_qbase_custom_event(void* self, void* event) {
-    KCompressionDevice_QBaseCustomEvent((KCompressionDevice*)self, (QEvent*)event);
+void k_compressiondevice_super_custom_event(void* self, void* event) {
+    KCompressionDevice_SuperCustomEvent((KCompressionDevice*)self, (QEvent*)event);
 }
 
 void k_compressiondevice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -786,8 +786,8 @@ void k_compressiondevice_connect_notify(void* self, void* signal) {
     KCompressionDevice_ConnectNotify((KCompressionDevice*)self, (QMetaMethod*)signal);
 }
 
-void k_compressiondevice_qbase_connect_notify(void* self, void* signal) {
-    KCompressionDevice_QBaseConnectNotify((KCompressionDevice*)self, (QMetaMethod*)signal);
+void k_compressiondevice_super_connect_notify(void* self, void* signal) {
+    KCompressionDevice_SuperConnectNotify((KCompressionDevice*)self, (QMetaMethod*)signal);
 }
 
 void k_compressiondevice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -798,8 +798,8 @@ void k_compressiondevice_disconnect_notify(void* self, void* signal) {
     KCompressionDevice_DisconnectNotify((KCompressionDevice*)self, (QMetaMethod*)signal);
 }
 
-void k_compressiondevice_qbase_disconnect_notify(void* self, void* signal) {
-    KCompressionDevice_QBaseDisconnectNotify((KCompressionDevice*)self, (QMetaMethod*)signal);
+void k_compressiondevice_super_disconnect_notify(void* self, void* signal) {
+    KCompressionDevice_SuperDisconnectNotify((KCompressionDevice*)self, (QMetaMethod*)signal);
 }
 
 void k_compressiondevice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -810,8 +810,8 @@ void k_compressiondevice_set_open_mode(void* self, int32_t openMode) {
     KCompressionDevice_SetOpenMode((KCompressionDevice*)self, openMode);
 }
 
-void k_compressiondevice_qbase_set_open_mode(void* self, int32_t openMode) {
-    KCompressionDevice_QBaseSetOpenMode((KCompressionDevice*)self, openMode);
+void k_compressiondevice_super_set_open_mode(void* self, int32_t openMode) {
+    KCompressionDevice_SuperSetOpenMode((KCompressionDevice*)self, openMode);
 }
 
 void k_compressiondevice_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -822,8 +822,8 @@ void k_compressiondevice_set_error_string(void* self, const char* errorString) {
     KCompressionDevice_SetErrorString((KCompressionDevice*)self, qstring(errorString));
 }
 
-void k_compressiondevice_qbase_set_error_string(void* self, const char* errorString) {
-    KCompressionDevice_QBaseSetErrorString((KCompressionDevice*)self, qstring(errorString));
+void k_compressiondevice_super_set_error_string(void* self, const char* errorString) {
+    KCompressionDevice_SuperSetErrorString((KCompressionDevice*)self, qstring(errorString));
 }
 
 void k_compressiondevice_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -834,8 +834,8 @@ QObject* k_compressiondevice_sender(void* self) {
     return KCompressionDevice_Sender((KCompressionDevice*)self);
 }
 
-QObject* k_compressiondevice_qbase_sender(void* self) {
-    return KCompressionDevice_QBaseSender((KCompressionDevice*)self);
+QObject* k_compressiondevice_super_sender(void* self) {
+    return KCompressionDevice_SuperSender((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_sender(void* self, QObject* (*callback)()) {
@@ -846,8 +846,8 @@ int32_t k_compressiondevice_sender_signal_index(void* self) {
     return KCompressionDevice_SenderSignalIndex((KCompressionDevice*)self);
 }
 
-int32_t k_compressiondevice_qbase_sender_signal_index(void* self) {
-    return KCompressionDevice_QBaseSenderSignalIndex((KCompressionDevice*)self);
+int32_t k_compressiondevice_super_sender_signal_index(void* self) {
+    return KCompressionDevice_SuperSenderSignalIndex((KCompressionDevice*)self);
 }
 
 void k_compressiondevice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -858,8 +858,8 @@ int32_t k_compressiondevice_receivers(void* self, const char* signal) {
     return KCompressionDevice_Receivers((KCompressionDevice*)self, signal);
 }
 
-int32_t k_compressiondevice_qbase_receivers(void* self, const char* signal) {
-    return KCompressionDevice_QBaseReceivers((KCompressionDevice*)self, signal);
+int32_t k_compressiondevice_super_receivers(void* self, const char* signal) {
+    return KCompressionDevice_SuperReceivers((KCompressionDevice*)self, signal);
 }
 
 void k_compressiondevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -870,8 +870,8 @@ bool k_compressiondevice_is_signal_connected(void* self, void* signal) {
     return KCompressionDevice_IsSignalConnected((KCompressionDevice*)self, (QMetaMethod*)signal);
 }
 
-bool k_compressiondevice_qbase_is_signal_connected(void* self, void* signal) {
-    return KCompressionDevice_QBaseIsSignalConnected((KCompressionDevice*)self, (QMetaMethod*)signal);
+bool k_compressiondevice_super_is_signal_connected(void* self, void* signal) {
+    return KCompressionDevice_SuperIsSignalConnected((KCompressionDevice*)self, (QMetaMethod*)signal);
 }
 
 void k_compressiondevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

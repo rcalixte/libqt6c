@@ -74,13 +74,17 @@ const QMetaObject* q_completer_meta_object(void* self);
 ///
 void q_completer_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_completer_super_meta_object` instead
+///
+#define q_completer_qbase_meta_object q_completer_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QCompleter*
 ///
-const QMetaObject* q_completer_qbase_meta_object(void* self);
+const QMetaObject* q_completer_super_meta_object(void* self);
 
 /// @param self QCompleter*
 /// @param param1 const char*
@@ -94,12 +98,16 @@ void* q_completer_metacast(void* self, const char* param1);
 ///
 void q_completer_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_completer_super_metacast` instead
+///
+#define q_completer_qbase_metacast q_completer_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QCompleter*
 /// @param param1 const char*
 ///
-void* q_completer_qbase_metacast(void* self, const char* param1);
+void* q_completer_super_metacast(void* self, const char* param1);
 
 /// @param self QCompleter*
 /// @param param1 enum QMetaObject__Call
@@ -115,6 +123,10 @@ int32_t q_completer_metacall(void* self, int32_t param1, int param2, void* param
 ///
 void q_completer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_completer_super_metacall` instead
+///
+#define q_completer_qbase_metacall q_completer_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QCompleter*
@@ -122,7 +134,7 @@ void q_completer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_completer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_completer_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -361,6 +373,10 @@ const char* q_completer_path_from_index(void* self, void* index);
 ///
 void q_completer_on_path_from_index(void* self, const char* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_completer_super_path_from_index` instead
+///
+#define q_completer_qbase_path_from_index q_completer_super_path_from_index
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#pathFromIndex)
 ///
 /// Base class method implementation
@@ -368,7 +384,7 @@ void q_completer_on_path_from_index(void* self, const char* (*callback)(void*, v
 /// @param self QCompleter*
 /// @param index QModelIndex*
 ///
-const char* q_completer_qbase_path_from_index(void* self, void* index);
+const char* q_completer_super_path_from_index(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
@@ -388,6 +404,10 @@ const char** q_completer_split_path(void* self, const char* path);
 ///
 void q_completer_on_split_path(void* self, const char** (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_completer_super_split_path` instead
+///
+#define q_completer_qbase_split_path q_completer_super_split_path
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#splitPath)
 ///
 /// Base class method implementation
@@ -395,7 +415,7 @@ void q_completer_on_split_path(void* self, const char** (*callback)(void*, const
 /// @param self QCompleter*
 /// @param path const char*
 ///
-const char** q_completer_qbase_split_path(void* self, const char* path);
+const char** q_completer_super_split_path(void* self, const char* path);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#eventFilter)
 ///
@@ -414,6 +434,10 @@ bool q_completer_event_filter(void* self, void* o, void* e);
 ///
 void q_completer_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_completer_super_event_filter` instead
+///
+#define q_completer_qbase_event_filter q_completer_super_event_filter
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#eventFilter)
 ///
 /// Base class method implementation
@@ -422,7 +446,7 @@ void q_completer_on_event_filter(void* self, bool (*callback)(void*, void*, void
 /// @param o QObject*
 /// @param e QEvent*
 ///
-bool q_completer_qbase_event_filter(void* self, void* o, void* e);
+bool q_completer_super_event_filter(void* self, void* o, void* e);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#event)
 ///
@@ -440,6 +464,10 @@ bool q_completer_event(void* self, void* param1);
 ///
 void q_completer_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_completer_super_event` instead
+///
+#define q_completer_qbase_event q_completer_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#event)
 ///
 /// Base class method implementation
@@ -447,7 +475,7 @@ void q_completer_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QCompleter*
 /// @param param1 QEvent*
 ///
-bool q_completer_qbase_event(void* self, void* param1);
+bool q_completer_super_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcompleter.html#activated)
 ///
@@ -961,6 +989,10 @@ void q_completer_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 void q_completer_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_completer_super_timer_event` instead
+///
+#define q_completer_qbase_timer_event q_completer_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -970,7 +1002,7 @@ void q_completer_timer_event(void* self, void* event);
 /// @param self QCompleter*
 /// @param event QTimerEvent*
 ///
-void q_completer_qbase_timer_event(void* self, void* event);
+void q_completer_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -994,6 +1026,10 @@ void q_completer_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_completer_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_completer_super_child_event` instead
+///
+#define q_completer_qbase_child_event q_completer_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1003,7 +1039,7 @@ void q_completer_child_event(void* self, void* event);
 /// @param self QCompleter*
 /// @param event QChildEvent*
 ///
-void q_completer_qbase_child_event(void* self, void* event);
+void q_completer_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1027,6 +1063,10 @@ void q_completer_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_completer_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_completer_super_custom_event` instead
+///
+#define q_completer_qbase_custom_event q_completer_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1036,7 +1076,7 @@ void q_completer_custom_event(void* self, void* event);
 /// @param self QCompleter*
 /// @param event QEvent*
 ///
-void q_completer_qbase_custom_event(void* self, void* event);
+void q_completer_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1060,6 +1100,10 @@ void q_completer_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_completer_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_completer_super_connect_notify` instead
+///
+#define q_completer_qbase_connect_notify q_completer_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1069,7 +1113,7 @@ void q_completer_connect_notify(void* self, void* signal);
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-void q_completer_qbase_connect_notify(void* self, void* signal);
+void q_completer_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1093,6 +1137,10 @@ void q_completer_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_completer_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_completer_super_disconnect_notify` instead
+///
+#define q_completer_qbase_disconnect_notify q_completer_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1102,7 +1150,7 @@ void q_completer_disconnect_notify(void* self, void* signal);
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-void q_completer_qbase_disconnect_notify(void* self, void* signal);
+void q_completer_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1125,6 +1173,10 @@ void q_completer_on_disconnect_notify(void* self, void (*callback)(void*, void*)
 ///
 QObject* q_completer_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_completer_super_sender` instead
+///
+#define q_completer_qbase_sender q_completer_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1133,7 +1185,7 @@ QObject* q_completer_sender(void* self);
 ///
 /// @param self QCompleter*
 ///
-QObject* q_completer_qbase_sender(void* self);
+QObject* q_completer_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1156,6 +1208,10 @@ void q_completer_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_completer_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_completer_super_sender_signal_index` instead
+///
+#define q_completer_qbase_sender_signal_index q_completer_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1164,7 +1220,7 @@ int32_t q_completer_sender_signal_index(void* self);
 ///
 /// @param self QCompleter*
 ///
-int32_t q_completer_qbase_sender_signal_index(void* self);
+int32_t q_completer_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1188,6 +1244,10 @@ void q_completer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_completer_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_completer_super_receivers` instead
+///
+#define q_completer_qbase_receivers q_completer_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1197,7 +1257,7 @@ int32_t q_completer_receivers(void* self, const char* signal);
 /// @param self QCompleter*
 /// @param signal const char*
 ///
-int32_t q_completer_qbase_receivers(void* self, const char* signal);
+int32_t q_completer_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1221,6 +1281,10 @@ void q_completer_on_receivers(void* self, int32_t (*callback)(void*, const char*
 ///
 bool q_completer_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_completer_super_is_signal_connected` instead
+///
+#define q_completer_qbase_is_signal_connected q_completer_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1230,7 +1294,7 @@ bool q_completer_is_signal_connected(void* self, void* signal);
 /// @param self QCompleter*
 /// @param signal QMetaMethod*
 ///
-bool q_completer_qbase_is_signal_connected(void* self, void* signal);
+bool q_completer_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

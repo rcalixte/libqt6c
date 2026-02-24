@@ -40,13 +40,17 @@ const QMetaObject* k_io__widgetsaskuseractionhandler_meta_object(void* self);
 ///
 void k_io__widgetsaskuseractionhandler_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_meta_object` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_meta_object k_io__widgetsaskuseractionhandler_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
 ///
-const QMetaObject* k_io__widgetsaskuseractionhandler_qbase_meta_object(void* self);
+const QMetaObject* k_io__widgetsaskuseractionhandler_super_meta_object(void* self);
 
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_io__widgetsaskuseractionhandler_metacast(void* self, const char* param1)
 ///
 void k_io__widgetsaskuseractionhandler_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_metacast` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_metacast k_io__widgetsaskuseractionhandler_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param param1 const char*
 ///
-void* k_io__widgetsaskuseractionhandler_qbase_metacast(void* self, const char* param1);
+void* k_io__widgetsaskuseractionhandler_super_metacast(void* self, const char* param1);
 
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_io__widgetsaskuseractionhandler_metacall(void* self, int32_t param1, i
 ///
 void k_io__widgetsaskuseractionhandler_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_metacall` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_metacall k_io__widgetsaskuseractionhandler_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
@@ -88,7 +100,7 @@ void k_io__widgetsaskuseractionhandler_on_metacall(void* self, int32_t (*callbac
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_io__widgetsaskuseractionhandler_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_io__widgetsaskuseractionhandler_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -124,6 +136,10 @@ void k_io__widgetsaskuseractionhandler_ask_user_rename(void* self, void* job, co
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_user_rename(void* self, void (*callback)(void*, void*, const char*, void*, void*, int32_t, uint64_t, uint64_t, void*, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_user_rename` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_ask_user_rename k_io__widgetsaskuseractionhandler_super_ask_user_rename
+
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserRename)
 ///
 /// Base class method implementation
@@ -141,7 +157,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_rename(void* self, void (*cal
 /// @param mtimeSrc QDateTime*
 /// @param mtimeDest QDateTime*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
+void k_io__widgetsaskuseractionhandler_super_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserSkip)
 ///
@@ -161,6 +177,10 @@ void k_io__widgetsaskuseractionhandler_ask_user_skip(void* self, void* job, int3
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_user_skip(void* self, void (*callback)(void*, void*, int32_t, const char*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_user_skip` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_ask_user_skip k_io__widgetsaskuseractionhandler_super_ask_user_skip
+
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserSkip)
 ///
 /// Base class method implementation
@@ -170,7 +190,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_skip(void* self, void (*callb
 /// @param options flag of enum KIO__SkipDialog_Option
 /// @param error_text const char*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_skip(void* self, void* job, int32_t options, const char* error_text);
+void k_io__widgetsaskuseractionhandler_super_ask_user_skip(void* self, void* job, int32_t options, const char* error_text);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserDelete)
 ///
@@ -191,6 +211,10 @@ void k_io__widgetsaskuseractionhandler_ask_user_delete(void* self, libqt_list ur
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*callback)(void*, libqt_list, int32_t, int32_t, void*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_user_delete` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_ask_user_delete k_io__widgetsaskuseractionhandler_super_ask_user_delete
+
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askUserDelete)
 ///
 /// Base class method implementation
@@ -201,7 +225,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_user_delete(void* self, void (*cal
 /// @param confirmationType enum KIO__AskUserActionInterface__ConfirmationType
 /// @param parent QWidget*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
+void k_io__widgetsaskuseractionhandler_super_ask_user_delete(void* self, libqt_list urls, int32_t deletionType, int32_t confirmationType, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
 ///
@@ -228,6 +252,10 @@ void k_io__widgetsaskuseractionhandler_request_user_message_box(void* self, int3
 ///
 void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, void (*callback)(void*, int32_t, const char*, const char*, const char*, const char*, const char*, const char*, const char*, const char*, void*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_request_user_message_box` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_request_user_message_box k_io__widgetsaskuseractionhandler_super_request_user_message_box
+
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#requestUserMessageBox)
 ///
 /// Base class method implementation
@@ -244,7 +272,7 @@ void k_io__widgetsaskuseractionhandler_on_request_user_message_box(void* self, v
 /// @param details const char*
 /// @param parent QWidget*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent);
+void k_io__widgetsaskuseractionhandler_super_request_user_message_box(void* self, int32_t type, const char* text, const char* title, const char* primaryActionText, const char* secondaryActionText, const char* primaryActionIconName, const char* secondaryActionIconName, const char* dontAskAgainName, const char* details, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askIgnoreSslErrors)
 ///
@@ -263,6 +291,10 @@ void k_io__widgetsaskuseractionhandler_ask_ignore_ssl_errors(void* self, libqt_m
 ///
 void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void (*callback)(void*, libqt_map, void*));
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_ask_ignore_ssl_errors` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_ask_ignore_ssl_errors k_io__widgetsaskuseractionhandler_super_ask_ignore_ssl_errors
+
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#askIgnoreSslErrors)
 ///
 /// Base class method implementation
@@ -271,7 +303,7 @@ void k_io__widgetsaskuseractionhandler_on_ask_ignore_ssl_errors(void* self, void
 /// @param sslErrorData libqt_map of const char* to QVariant*
 /// @param parent QWidget*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_ask_ignore_ssl_errors(void* self, libqt_map sslErrorData, void* parent);
+void k_io__widgetsaskuseractionhandler_super_ask_ignore_ssl_errors(void* self, libqt_map sslErrorData, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kio-widgetsaskuseractionhandler.html#setWindow)
 ///
@@ -853,6 +885,10 @@ void k_io__widgetsaskuseractionhandler_on_destroyed1(void* self, void (*callback
 ///
 bool k_io__widgetsaskuseractionhandler_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_event` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_event k_io__widgetsaskuseractionhandler_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -862,7 +898,7 @@ bool k_io__widgetsaskuseractionhandler_event(void* self, void* event);
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param event QEvent*
 ///
-bool k_io__widgetsaskuseractionhandler_qbase_event(void* self, void* event);
+bool k_io__widgetsaskuseractionhandler_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -887,6 +923,10 @@ void k_io__widgetsaskuseractionhandler_on_event(void* self, bool (*callback)(voi
 ///
 bool k_io__widgetsaskuseractionhandler_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_event_filter` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_event_filter k_io__widgetsaskuseractionhandler_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -897,7 +937,7 @@ bool k_io__widgetsaskuseractionhandler_event_filter(void* self, void* watched, v
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_io__widgetsaskuseractionhandler_qbase_event_filter(void* self, void* watched, void* event);
+bool k_io__widgetsaskuseractionhandler_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -921,6 +961,10 @@ void k_io__widgetsaskuseractionhandler_on_event_filter(void* self, bool (*callba
 ///
 void k_io__widgetsaskuseractionhandler_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_timer_event` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_timer_event k_io__widgetsaskuseractionhandler_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -930,7 +974,7 @@ void k_io__widgetsaskuseractionhandler_timer_event(void* self, void* event);
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param event QTimerEvent*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_timer_event(void* self, void* event);
+void k_io__widgetsaskuseractionhandler_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -954,6 +998,10 @@ void k_io__widgetsaskuseractionhandler_on_timer_event(void* self, void (*callbac
 ///
 void k_io__widgetsaskuseractionhandler_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_child_event` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_child_event k_io__widgetsaskuseractionhandler_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -963,7 +1011,7 @@ void k_io__widgetsaskuseractionhandler_child_event(void* self, void* event);
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param event QChildEvent*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_child_event(void* self, void* event);
+void k_io__widgetsaskuseractionhandler_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -987,6 +1035,10 @@ void k_io__widgetsaskuseractionhandler_on_child_event(void* self, void (*callbac
 ///
 void k_io__widgetsaskuseractionhandler_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_custom_event` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_custom_event k_io__widgetsaskuseractionhandler_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -996,7 +1048,7 @@ void k_io__widgetsaskuseractionhandler_custom_event(void* self, void* event);
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param event QEvent*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_custom_event(void* self, void* event);
+void k_io__widgetsaskuseractionhandler_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1020,6 +1072,10 @@ void k_io__widgetsaskuseractionhandler_on_custom_event(void* self, void (*callba
 ///
 void k_io__widgetsaskuseractionhandler_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_connect_notify` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_connect_notify k_io__widgetsaskuseractionhandler_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1029,7 +1085,7 @@ void k_io__widgetsaskuseractionhandler_connect_notify(void* self, void* signal);
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param signal QMetaMethod*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_connect_notify(void* self, void* signal);
+void k_io__widgetsaskuseractionhandler_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1053,6 +1109,10 @@ void k_io__widgetsaskuseractionhandler_on_connect_notify(void* self, void (*call
 ///
 void k_io__widgetsaskuseractionhandler_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_disconnect_notify` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_disconnect_notify k_io__widgetsaskuseractionhandler_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1062,7 +1122,7 @@ void k_io__widgetsaskuseractionhandler_disconnect_notify(void* self, void* signa
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param signal QMetaMethod*
 ///
-void k_io__widgetsaskuseractionhandler_qbase_disconnect_notify(void* self, void* signal);
+void k_io__widgetsaskuseractionhandler_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1085,6 +1145,10 @@ void k_io__widgetsaskuseractionhandler_on_disconnect_notify(void* self, void (*c
 ///
 QObject* k_io__widgetsaskuseractionhandler_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_sender` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_sender k_io__widgetsaskuseractionhandler_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1093,7 +1157,7 @@ QObject* k_io__widgetsaskuseractionhandler_sender(void* self);
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
 ///
-QObject* k_io__widgetsaskuseractionhandler_qbase_sender(void* self);
+QObject* k_io__widgetsaskuseractionhandler_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1116,6 +1180,10 @@ void k_io__widgetsaskuseractionhandler_on_sender(void* self, QObject* (*callback
 ///
 int32_t k_io__widgetsaskuseractionhandler_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_sender_signal_index` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_sender_signal_index k_io__widgetsaskuseractionhandler_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1124,7 +1192,7 @@ int32_t k_io__widgetsaskuseractionhandler_sender_signal_index(void* self);
 ///
 /// @param self KIO__WidgetsAskUserActionHandler*
 ///
-int32_t k_io__widgetsaskuseractionhandler_qbase_sender_signal_index(void* self);
+int32_t k_io__widgetsaskuseractionhandler_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1148,6 +1216,10 @@ void k_io__widgetsaskuseractionhandler_on_sender_signal_index(void* self, int32_
 ///
 int32_t k_io__widgetsaskuseractionhandler_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_receivers` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_receivers k_io__widgetsaskuseractionhandler_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1157,7 +1229,7 @@ int32_t k_io__widgetsaskuseractionhandler_receivers(void* self, const char* sign
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param signal const char*
 ///
-int32_t k_io__widgetsaskuseractionhandler_qbase_receivers(void* self, const char* signal);
+int32_t k_io__widgetsaskuseractionhandler_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1181,6 +1253,10 @@ void k_io__widgetsaskuseractionhandler_on_receivers(void* self, int32_t (*callba
 ///
 bool k_io__widgetsaskuseractionhandler_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_io__widgetsaskuseractionhandler_super_is_signal_connected` instead
+///
+#define k_io__widgetsaskuseractionhandler_qbase_is_signal_connected k_io__widgetsaskuseractionhandler_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1190,7 +1266,7 @@ bool k_io__widgetsaskuseractionhandler_is_signal_connected(void* self, void* sig
 /// @param self KIO__WidgetsAskUserActionHandler*
 /// @param signal QMetaMethod*
 ///
-bool k_io__widgetsaskuseractionhandler_qbase_is_signal_connected(void* self, void* signal);
+bool k_io__widgetsaskuseractionhandler_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

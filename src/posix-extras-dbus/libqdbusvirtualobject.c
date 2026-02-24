@@ -23,8 +23,8 @@ void q_dbusvirtualobject_on_meta_object(void* self, const QMetaObject* (*callbac
     QDBusVirtualObject_OnMetaObject((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dbusvirtualobject_qbase_meta_object(void* self) {
-    return QDBusVirtualObject_QBaseMetaObject((QDBusVirtualObject*)self);
+const QMetaObject* q_dbusvirtualobject_super_meta_object(void* self) {
+    return QDBusVirtualObject_SuperMetaObject((QDBusVirtualObject*)self);
 }
 
 void* q_dbusvirtualobject_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_dbusvirtualobject_on_metacast(void* self, void* (*callback)(void*, const 
     QDBusVirtualObject_OnMetacast((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 
-void* q_dbusvirtualobject_qbase_metacast(void* self, const char* param1) {
-    return QDBusVirtualObject_QBaseMetacast((QDBusVirtualObject*)self, param1);
+void* q_dbusvirtualobject_super_metacast(void* self, const char* param1) {
+    return QDBusVirtualObject_SuperMetacast((QDBusVirtualObject*)self, param1);
 }
 
 int32_t q_dbusvirtualobject_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_dbusvirtualobject_on_metacall(void* self, int32_t (*callback)(void*, int3
     QDBusVirtualObject_OnMetacall((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 
-int32_t q_dbusvirtualobject_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDBusVirtualObject_QBaseMetacall((QDBusVirtualObject*)self, param1, param2, param3);
+int32_t q_dbusvirtualobject_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDBusVirtualObject_SuperMetacall((QDBusVirtualObject*)self, param1, param2, param3);
 }
 
 const char* q_dbusvirtualobject_tr(const char* s) {
@@ -69,8 +69,8 @@ void q_dbusvirtualobject_on_introspect(void* self, const char* (*callback)(void*
     QDBusVirtualObject_OnIntrospect((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 
-const char* q_dbusvirtualobject_qbase_introspect(void* self, const char* path) {
-    libqt_string _str = QDBusVirtualObject_QBaseIntrospect((QDBusVirtualObject*)self, qstring(path));
+const char* q_dbusvirtualobject_super_introspect(void* self, const char* path) {
+    libqt_string _str = QDBusVirtualObject_SuperIntrospect((QDBusVirtualObject*)self, qstring(path));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -84,8 +84,8 @@ void q_dbusvirtualobject_on_handle_message(void* self, bool (*callback)(void*, v
     QDBusVirtualObject_OnHandleMessage((QDBusVirtualObject*)self, (intptr_t)callback);
 }
 
-bool q_dbusvirtualobject_qbase_handle_message(void* self, void* message, void* connection) {
-    return QDBusVirtualObject_QBaseHandleMessage((QDBusVirtualObject*)self, (QDBusMessage*)message, (QDBusConnection*)connection);
+bool q_dbusvirtualobject_super_handle_message(void* self, void* message, void* connection) {
+    return QDBusVirtualObject_SuperHandleMessage((QDBusVirtualObject*)self, (QDBusMessage*)message, (QDBusConnection*)connection);
 }
 
 const char* q_dbusvirtualobject_tr2(const char* s, const char* c) {
@@ -317,8 +317,8 @@ bool q_dbusvirtualobject_event(void* self, void* event) {
     return QDBusVirtualObject_Event((QDBusVirtualObject*)self, (QEvent*)event);
 }
 
-bool q_dbusvirtualobject_qbase_event(void* self, void* event) {
-    return QDBusVirtualObject_QBaseEvent((QDBusVirtualObject*)self, (QEvent*)event);
+bool q_dbusvirtualobject_super_event(void* self, void* event) {
+    return QDBusVirtualObject_SuperEvent((QDBusVirtualObject*)self, (QEvent*)event);
 }
 
 void q_dbusvirtualobject_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -329,8 +329,8 @@ bool q_dbusvirtualobject_event_filter(void* self, void* watched, void* event) {
     return QDBusVirtualObject_EventFilter((QDBusVirtualObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_dbusvirtualobject_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDBusVirtualObject_QBaseEventFilter((QDBusVirtualObject*)self, (QObject*)watched, (QEvent*)event);
+bool q_dbusvirtualobject_super_event_filter(void* self, void* watched, void* event) {
+    return QDBusVirtualObject_SuperEventFilter((QDBusVirtualObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_dbusvirtualobject_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -341,8 +341,8 @@ void q_dbusvirtualobject_timer_event(void* self, void* event) {
     QDBusVirtualObject_TimerEvent((QDBusVirtualObject*)self, (QTimerEvent*)event);
 }
 
-void q_dbusvirtualobject_qbase_timer_event(void* self, void* event) {
-    QDBusVirtualObject_QBaseTimerEvent((QDBusVirtualObject*)self, (QTimerEvent*)event);
+void q_dbusvirtualobject_super_timer_event(void* self, void* event) {
+    QDBusVirtualObject_SuperTimerEvent((QDBusVirtualObject*)self, (QTimerEvent*)event);
 }
 
 void q_dbusvirtualobject_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -353,8 +353,8 @@ void q_dbusvirtualobject_child_event(void* self, void* event) {
     QDBusVirtualObject_ChildEvent((QDBusVirtualObject*)self, (QChildEvent*)event);
 }
 
-void q_dbusvirtualobject_qbase_child_event(void* self, void* event) {
-    QDBusVirtualObject_QBaseChildEvent((QDBusVirtualObject*)self, (QChildEvent*)event);
+void q_dbusvirtualobject_super_child_event(void* self, void* event) {
+    QDBusVirtualObject_SuperChildEvent((QDBusVirtualObject*)self, (QChildEvent*)event);
 }
 
 void q_dbusvirtualobject_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -365,8 +365,8 @@ void q_dbusvirtualobject_custom_event(void* self, void* event) {
     QDBusVirtualObject_CustomEvent((QDBusVirtualObject*)self, (QEvent*)event);
 }
 
-void q_dbusvirtualobject_qbase_custom_event(void* self, void* event) {
-    QDBusVirtualObject_QBaseCustomEvent((QDBusVirtualObject*)self, (QEvent*)event);
+void q_dbusvirtualobject_super_custom_event(void* self, void* event) {
+    QDBusVirtualObject_SuperCustomEvent((QDBusVirtualObject*)self, (QEvent*)event);
 }
 
 void q_dbusvirtualobject_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -377,8 +377,8 @@ void q_dbusvirtualobject_connect_notify(void* self, void* signal) {
     QDBusVirtualObject_ConnectNotify((QDBusVirtualObject*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusvirtualobject_qbase_connect_notify(void* self, void* signal) {
-    QDBusVirtualObject_QBaseConnectNotify((QDBusVirtualObject*)self, (QMetaMethod*)signal);
+void q_dbusvirtualobject_super_connect_notify(void* self, void* signal) {
+    QDBusVirtualObject_SuperConnectNotify((QDBusVirtualObject*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusvirtualobject_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -389,8 +389,8 @@ void q_dbusvirtualobject_disconnect_notify(void* self, void* signal) {
     QDBusVirtualObject_DisconnectNotify((QDBusVirtualObject*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusvirtualobject_qbase_disconnect_notify(void* self, void* signal) {
-    QDBusVirtualObject_QBaseDisconnectNotify((QDBusVirtualObject*)self, (QMetaMethod*)signal);
+void q_dbusvirtualobject_super_disconnect_notify(void* self, void* signal) {
+    QDBusVirtualObject_SuperDisconnectNotify((QDBusVirtualObject*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusvirtualobject_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -401,8 +401,8 @@ QObject* q_dbusvirtualobject_sender(void* self) {
     return QDBusVirtualObject_Sender((QDBusVirtualObject*)self);
 }
 
-QObject* q_dbusvirtualobject_qbase_sender(void* self) {
-    return QDBusVirtualObject_QBaseSender((QDBusVirtualObject*)self);
+QObject* q_dbusvirtualobject_super_sender(void* self) {
+    return QDBusVirtualObject_SuperSender((QDBusVirtualObject*)self);
 }
 
 void q_dbusvirtualobject_on_sender(void* self, QObject* (*callback)()) {
@@ -413,8 +413,8 @@ int32_t q_dbusvirtualobject_sender_signal_index(void* self) {
     return QDBusVirtualObject_SenderSignalIndex((QDBusVirtualObject*)self);
 }
 
-int32_t q_dbusvirtualobject_qbase_sender_signal_index(void* self) {
-    return QDBusVirtualObject_QBaseSenderSignalIndex((QDBusVirtualObject*)self);
+int32_t q_dbusvirtualobject_super_sender_signal_index(void* self) {
+    return QDBusVirtualObject_SuperSenderSignalIndex((QDBusVirtualObject*)self);
 }
 
 void q_dbusvirtualobject_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -425,8 +425,8 @@ int32_t q_dbusvirtualobject_receivers(void* self, const char* signal) {
     return QDBusVirtualObject_Receivers((QDBusVirtualObject*)self, signal);
 }
 
-int32_t q_dbusvirtualobject_qbase_receivers(void* self, const char* signal) {
-    return QDBusVirtualObject_QBaseReceivers((QDBusVirtualObject*)self, signal);
+int32_t q_dbusvirtualobject_super_receivers(void* self, const char* signal) {
+    return QDBusVirtualObject_SuperReceivers((QDBusVirtualObject*)self, signal);
 }
 
 void q_dbusvirtualobject_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -437,8 +437,8 @@ bool q_dbusvirtualobject_is_signal_connected(void* self, void* signal) {
     return QDBusVirtualObject_IsSignalConnected((QDBusVirtualObject*)self, (QMetaMethod*)signal);
 }
 
-bool q_dbusvirtualobject_qbase_is_signal_connected(void* self, void* signal) {
-    return QDBusVirtualObject_QBaseIsSignalConnected((QDBusVirtualObject*)self, (QMetaMethod*)signal);
+bool q_dbusvirtualobject_super_is_signal_connected(void* self, void* signal) {
+    return QDBusVirtualObject_SuperIsSignalConnected((QDBusVirtualObject*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusvirtualobject_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -20,8 +20,8 @@ void q_textlist_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTextList_OnMetaObject((QTextList*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_textlist_qbase_meta_object(void* self) {
-    return QTextList_QBaseMetaObject((QTextList*)self);
+const QMetaObject* q_textlist_super_meta_object(void* self) {
+    return QTextList_SuperMetaObject((QTextList*)self);
 }
 
 void* q_textlist_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void q_textlist_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QTextList_OnMetacast((QTextList*)self, (intptr_t)callback);
 }
 
-void* q_textlist_qbase_metacast(void* self, const char* param1) {
-    return QTextList_QBaseMetacast((QTextList*)self, param1);
+void* q_textlist_super_metacast(void* self, const char* param1) {
+    return QTextList_SuperMetacast((QTextList*)self, param1);
 }
 
 int32_t q_textlist_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void q_textlist_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QTextList_OnMetacall((QTextList*)self, (intptr_t)callback);
 }
 
-int32_t q_textlist_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTextList_QBaseMetacall((QTextList*)self, param1, param2, param3);
+int32_t q_textlist_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTextList_SuperMetacall((QTextList*)self, param1, param2, param3);
 }
 
 const char* q_textlist_tr(const char* s) {
@@ -335,8 +335,8 @@ void q_textlist_block_inserted(void* self, void* block) {
     QTextList_BlockInserted((QTextList*)self, (QTextBlock*)block);
 }
 
-void q_textlist_qbase_block_inserted(void* self, void* block) {
-    QTextList_QBaseBlockInserted((QTextList*)self, (QTextBlock*)block);
+void q_textlist_super_block_inserted(void* self, void* block) {
+    QTextList_SuperBlockInserted((QTextList*)self, (QTextBlock*)block);
 }
 
 void q_textlist_on_block_inserted(void* self, void (*callback)(void*, void*)) {
@@ -347,8 +347,8 @@ void q_textlist_block_removed(void* self, void* block) {
     QTextList_BlockRemoved((QTextList*)self, (QTextBlock*)block);
 }
 
-void q_textlist_qbase_block_removed(void* self, void* block) {
-    QTextList_QBaseBlockRemoved((QTextList*)self, (QTextBlock*)block);
+void q_textlist_super_block_removed(void* self, void* block) {
+    QTextList_SuperBlockRemoved((QTextList*)self, (QTextBlock*)block);
 }
 
 void q_textlist_on_block_removed(void* self, void (*callback)(void*, void*)) {
@@ -359,8 +359,8 @@ void q_textlist_block_format_changed(void* self, void* block) {
     QTextList_BlockFormatChanged((QTextList*)self, (QTextBlock*)block);
 }
 
-void q_textlist_qbase_block_format_changed(void* self, void* block) {
-    QTextList_QBaseBlockFormatChanged((QTextList*)self, (QTextBlock*)block);
+void q_textlist_super_block_format_changed(void* self, void* block) {
+    QTextList_SuperBlockFormatChanged((QTextList*)self, (QTextBlock*)block);
 }
 
 void q_textlist_on_block_format_changed(void* self, void (*callback)(void*, void*)) {
@@ -371,8 +371,8 @@ bool q_textlist_event(void* self, void* event) {
     return QTextList_Event((QTextList*)self, (QEvent*)event);
 }
 
-bool q_textlist_qbase_event(void* self, void* event) {
-    return QTextList_QBaseEvent((QTextList*)self, (QEvent*)event);
+bool q_textlist_super_event(void* self, void* event) {
+    return QTextList_SuperEvent((QTextList*)self, (QEvent*)event);
 }
 
 void q_textlist_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -383,8 +383,8 @@ bool q_textlist_event_filter(void* self, void* watched, void* event) {
     return QTextList_EventFilter((QTextList*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_textlist_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTextList_QBaseEventFilter((QTextList*)self, (QObject*)watched, (QEvent*)event);
+bool q_textlist_super_event_filter(void* self, void* watched, void* event) {
+    return QTextList_SuperEventFilter((QTextList*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_textlist_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -395,8 +395,8 @@ void q_textlist_timer_event(void* self, void* event) {
     QTextList_TimerEvent((QTextList*)self, (QTimerEvent*)event);
 }
 
-void q_textlist_qbase_timer_event(void* self, void* event) {
-    QTextList_QBaseTimerEvent((QTextList*)self, (QTimerEvent*)event);
+void q_textlist_super_timer_event(void* self, void* event) {
+    QTextList_SuperTimerEvent((QTextList*)self, (QTimerEvent*)event);
 }
 
 void q_textlist_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -407,8 +407,8 @@ void q_textlist_child_event(void* self, void* event) {
     QTextList_ChildEvent((QTextList*)self, (QChildEvent*)event);
 }
 
-void q_textlist_qbase_child_event(void* self, void* event) {
-    QTextList_QBaseChildEvent((QTextList*)self, (QChildEvent*)event);
+void q_textlist_super_child_event(void* self, void* event) {
+    QTextList_SuperChildEvent((QTextList*)self, (QChildEvent*)event);
 }
 
 void q_textlist_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -419,8 +419,8 @@ void q_textlist_custom_event(void* self, void* event) {
     QTextList_CustomEvent((QTextList*)self, (QEvent*)event);
 }
 
-void q_textlist_qbase_custom_event(void* self, void* event) {
-    QTextList_QBaseCustomEvent((QTextList*)self, (QEvent*)event);
+void q_textlist_super_custom_event(void* self, void* event) {
+    QTextList_SuperCustomEvent((QTextList*)self, (QEvent*)event);
 }
 
 void q_textlist_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ void q_textlist_connect_notify(void* self, void* signal) {
     QTextList_ConnectNotify((QTextList*)self, (QMetaMethod*)signal);
 }
 
-void q_textlist_qbase_connect_notify(void* self, void* signal) {
-    QTextList_QBaseConnectNotify((QTextList*)self, (QMetaMethod*)signal);
+void q_textlist_super_connect_notify(void* self, void* signal) {
+    QTextList_SuperConnectNotify((QTextList*)self, (QMetaMethod*)signal);
 }
 
 void q_textlist_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -443,8 +443,8 @@ void q_textlist_disconnect_notify(void* self, void* signal) {
     QTextList_DisconnectNotify((QTextList*)self, (QMetaMethod*)signal);
 }
 
-void q_textlist_qbase_disconnect_notify(void* self, void* signal) {
-    QTextList_QBaseDisconnectNotify((QTextList*)self, (QMetaMethod*)signal);
+void q_textlist_super_disconnect_notify(void* self, void* signal) {
+    QTextList_SuperDisconnectNotify((QTextList*)self, (QMetaMethod*)signal);
 }
 
 void q_textlist_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -456,8 +456,8 @@ libqt_list /* of QTextBlock* */ q_textlist_block_list(void* self) {
     return _arr;
 }
 
-libqt_list /* of QTextBlock* */ q_textlist_qbase_block_list(void* self) {
-    libqt_list _arr = QTextList_QBaseBlockList((QTextList*)self);
+libqt_list /* of QTextBlock* */ q_textlist_super_block_list(void* self) {
+    libqt_list _arr = QTextList_SuperBlockList((QTextList*)self);
     return _arr;
 }
 
@@ -469,8 +469,8 @@ QObject* q_textlist_sender(void* self) {
     return QTextList_Sender((QTextList*)self);
 }
 
-QObject* q_textlist_qbase_sender(void* self) {
-    return QTextList_QBaseSender((QTextList*)self);
+QObject* q_textlist_super_sender(void* self) {
+    return QTextList_SuperSender((QTextList*)self);
 }
 
 void q_textlist_on_sender(void* self, QObject* (*callback)()) {
@@ -481,8 +481,8 @@ int32_t q_textlist_sender_signal_index(void* self) {
     return QTextList_SenderSignalIndex((QTextList*)self);
 }
 
-int32_t q_textlist_qbase_sender_signal_index(void* self) {
-    return QTextList_QBaseSenderSignalIndex((QTextList*)self);
+int32_t q_textlist_super_sender_signal_index(void* self) {
+    return QTextList_SuperSenderSignalIndex((QTextList*)self);
 }
 
 void q_textlist_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -493,8 +493,8 @@ int32_t q_textlist_receivers(void* self, const char* signal) {
     return QTextList_Receivers((QTextList*)self, signal);
 }
 
-int32_t q_textlist_qbase_receivers(void* self, const char* signal) {
-    return QTextList_QBaseReceivers((QTextList*)self, signal);
+int32_t q_textlist_super_receivers(void* self, const char* signal) {
+    return QTextList_SuperReceivers((QTextList*)self, signal);
 }
 
 void q_textlist_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -505,8 +505,8 @@ bool q_textlist_is_signal_connected(void* self, void* signal) {
     return QTextList_IsSignalConnected((QTextList*)self, (QMetaMethod*)signal);
 }
 
-bool q_textlist_qbase_is_signal_connected(void* self, void* signal) {
-    return QTextList_QBaseIsSignalConnected((QTextList*)self, (QMetaMethod*)signal);
+bool q_textlist_super_is_signal_connected(void* self, void* signal) {
+    return QTextList_SuperIsSignalConnected((QTextList*)self, (QMetaMethod*)signal);
 }
 
 void q_textlist_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

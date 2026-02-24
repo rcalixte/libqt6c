@@ -20,8 +20,8 @@ void k_toggletoolbaraction_on_meta_object(void* self, const QMetaObject* (*callb
     KToggleToolBarAction_OnMetaObject((KToggleToolBarAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_toggletoolbaraction_qbase_meta_object(void* self) {
-    return KToggleToolBarAction_QBaseMetaObject((KToggleToolBarAction*)self);
+const QMetaObject* k_toggletoolbaraction_super_meta_object(void* self) {
+    return KToggleToolBarAction_SuperMetaObject((KToggleToolBarAction*)self);
 }
 
 void* k_toggletoolbaraction_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_toggletoolbaraction_on_metacast(void* self, void* (*callback)(void*, cons
     KToggleToolBarAction_OnMetacast((KToggleToolBarAction*)self, (intptr_t)callback);
 }
 
-void* k_toggletoolbaraction_qbase_metacast(void* self, const char* param1) {
-    return KToggleToolBarAction_QBaseMetacast((KToggleToolBarAction*)self, param1);
+void* k_toggletoolbaraction_super_metacast(void* self, const char* param1) {
+    return KToggleToolBarAction_SuperMetacast((KToggleToolBarAction*)self, param1);
 }
 
 int32_t k_toggletoolbaraction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_toggletoolbaraction_on_metacall(void* self, int32_t (*callback)(void*, in
     KToggleToolBarAction_OnMetacall((KToggleToolBarAction*)self, (intptr_t)callback);
 }
 
-int32_t k_toggletoolbaraction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KToggleToolBarAction_QBaseMetacall((KToggleToolBarAction*)self, param1, param2, param3);
+int32_t k_toggletoolbaraction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KToggleToolBarAction_SuperMetacall((KToggleToolBarAction*)self, param1, param2, param3);
 }
 
 const char* k_toggletoolbaraction_tr(const char* s) {
@@ -67,8 +67,8 @@ void k_toggletoolbaraction_on_event_filter(void* self, bool (*callback)(void*, v
     KToggleToolBarAction_OnEventFilter((KToggleToolBarAction*)self, (intptr_t)callback);
 }
 
-bool k_toggletoolbaraction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KToggleToolBarAction_QBaseEventFilter((KToggleToolBarAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_toggletoolbaraction_super_event_filter(void* self, void* watched, void* event) {
+    return KToggleToolBarAction_SuperEventFilter((KToggleToolBarAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_toggletoolbaraction_tr2(const char* s, const char* c) {
@@ -601,8 +601,8 @@ bool k_toggletoolbaraction_event(void* self, void* param1) {
     return KToggleToolBarAction_Event((KToggleToolBarAction*)self, (QEvent*)param1);
 }
 
-bool k_toggletoolbaraction_qbase_event(void* self, void* param1) {
-    return KToggleToolBarAction_QBaseEvent((KToggleToolBarAction*)self, (QEvent*)param1);
+bool k_toggletoolbaraction_super_event(void* self, void* param1) {
+    return KToggleToolBarAction_SuperEvent((KToggleToolBarAction*)self, (QEvent*)param1);
 }
 
 void k_toggletoolbaraction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -613,8 +613,8 @@ void k_toggletoolbaraction_timer_event(void* self, void* event) {
     KToggleToolBarAction_TimerEvent((KToggleToolBarAction*)self, (QTimerEvent*)event);
 }
 
-void k_toggletoolbaraction_qbase_timer_event(void* self, void* event) {
-    KToggleToolBarAction_QBaseTimerEvent((KToggleToolBarAction*)self, (QTimerEvent*)event);
+void k_toggletoolbaraction_super_timer_event(void* self, void* event) {
+    KToggleToolBarAction_SuperTimerEvent((KToggleToolBarAction*)self, (QTimerEvent*)event);
 }
 
 void k_toggletoolbaraction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -625,8 +625,8 @@ void k_toggletoolbaraction_child_event(void* self, void* event) {
     KToggleToolBarAction_ChildEvent((KToggleToolBarAction*)self, (QChildEvent*)event);
 }
 
-void k_toggletoolbaraction_qbase_child_event(void* self, void* event) {
-    KToggleToolBarAction_QBaseChildEvent((KToggleToolBarAction*)self, (QChildEvent*)event);
+void k_toggletoolbaraction_super_child_event(void* self, void* event) {
+    KToggleToolBarAction_SuperChildEvent((KToggleToolBarAction*)self, (QChildEvent*)event);
 }
 
 void k_toggletoolbaraction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -637,8 +637,8 @@ void k_toggletoolbaraction_custom_event(void* self, void* event) {
     KToggleToolBarAction_CustomEvent((KToggleToolBarAction*)self, (QEvent*)event);
 }
 
-void k_toggletoolbaraction_qbase_custom_event(void* self, void* event) {
-    KToggleToolBarAction_QBaseCustomEvent((KToggleToolBarAction*)self, (QEvent*)event);
+void k_toggletoolbaraction_super_custom_event(void* self, void* event) {
+    KToggleToolBarAction_SuperCustomEvent((KToggleToolBarAction*)self, (QEvent*)event);
 }
 
 void k_toggletoolbaraction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -649,8 +649,8 @@ void k_toggletoolbaraction_connect_notify(void* self, void* signal) {
     KToggleToolBarAction_ConnectNotify((KToggleToolBarAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toggletoolbaraction_qbase_connect_notify(void* self, void* signal) {
-    KToggleToolBarAction_QBaseConnectNotify((KToggleToolBarAction*)self, (QMetaMethod*)signal);
+void k_toggletoolbaraction_super_connect_notify(void* self, void* signal) {
+    KToggleToolBarAction_SuperConnectNotify((KToggleToolBarAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toggletoolbaraction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -661,8 +661,8 @@ void k_toggletoolbaraction_disconnect_notify(void* self, void* signal) {
     KToggleToolBarAction_DisconnectNotify((KToggleToolBarAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toggletoolbaraction_qbase_disconnect_notify(void* self, void* signal) {
-    KToggleToolBarAction_QBaseDisconnectNotify((KToggleToolBarAction*)self, (QMetaMethod*)signal);
+void k_toggletoolbaraction_super_disconnect_notify(void* self, void* signal) {
+    KToggleToolBarAction_SuperDisconnectNotify((KToggleToolBarAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toggletoolbaraction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -673,8 +673,8 @@ QObject* k_toggletoolbaraction_sender(void* self) {
     return KToggleToolBarAction_Sender((KToggleToolBarAction*)self);
 }
 
-QObject* k_toggletoolbaraction_qbase_sender(void* self) {
-    return KToggleToolBarAction_QBaseSender((KToggleToolBarAction*)self);
+QObject* k_toggletoolbaraction_super_sender(void* self) {
+    return KToggleToolBarAction_SuperSender((KToggleToolBarAction*)self);
 }
 
 void k_toggletoolbaraction_on_sender(void* self, QObject* (*callback)()) {
@@ -685,8 +685,8 @@ int32_t k_toggletoolbaraction_sender_signal_index(void* self) {
     return KToggleToolBarAction_SenderSignalIndex((KToggleToolBarAction*)self);
 }
 
-int32_t k_toggletoolbaraction_qbase_sender_signal_index(void* self) {
-    return KToggleToolBarAction_QBaseSenderSignalIndex((KToggleToolBarAction*)self);
+int32_t k_toggletoolbaraction_super_sender_signal_index(void* self) {
+    return KToggleToolBarAction_SuperSenderSignalIndex((KToggleToolBarAction*)self);
 }
 
 void k_toggletoolbaraction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -697,8 +697,8 @@ int32_t k_toggletoolbaraction_receivers(void* self, const char* signal) {
     return KToggleToolBarAction_Receivers((KToggleToolBarAction*)self, signal);
 }
 
-int32_t k_toggletoolbaraction_qbase_receivers(void* self, const char* signal) {
-    return KToggleToolBarAction_QBaseReceivers((KToggleToolBarAction*)self, signal);
+int32_t k_toggletoolbaraction_super_receivers(void* self, const char* signal) {
+    return KToggleToolBarAction_SuperReceivers((KToggleToolBarAction*)self, signal);
 }
 
 void k_toggletoolbaraction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -709,8 +709,8 @@ bool k_toggletoolbaraction_is_signal_connected(void* self, void* signal) {
     return KToggleToolBarAction_IsSignalConnected((KToggleToolBarAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_toggletoolbaraction_qbase_is_signal_connected(void* self, void* signal) {
-    return KToggleToolBarAction_QBaseIsSignalConnected((KToggleToolBarAction*)self, (QMetaMethod*)signal);
+bool k_toggletoolbaraction_super_is_signal_connected(void* self, void* signal) {
+    return KToggleToolBarAction_SuperIsSignalConnected((KToggleToolBarAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toggletoolbaraction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

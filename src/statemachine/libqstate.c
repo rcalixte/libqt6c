@@ -33,8 +33,8 @@ void q_state_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QState_OnMetaObject((QState*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_state_qbase_meta_object(void* self) {
-    return QState_QBaseMetaObject((QState*)self);
+const QMetaObject* q_state_super_meta_object(void* self) {
+    return QState_SuperMetaObject((QState*)self);
 }
 
 void* q_state_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_state_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QState_OnMetacast((QState*)self, (intptr_t)callback);
 }
 
-void* q_state_qbase_metacast(void* self, const char* param1) {
-    return QState_QBaseMetacast((QState*)self, param1);
+void* q_state_super_metacast(void* self, const char* param1) {
+    return QState_SuperMetacast((QState*)self, param1);
 }
 
 int32_t q_state_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_state_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
     QState_OnMetacall((QState*)self, (intptr_t)callback);
 }
 
-int32_t q_state_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QState_QBaseMetacall((QState*)self, param1, param2, param3);
+int32_t q_state_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QState_SuperMetacall((QState*)self, param1, param2, param3);
 }
 
 const char* q_state_tr(const char* s) {
@@ -125,8 +125,8 @@ void q_state_on_on_entry(void* self, void (*callback)(void*, void*)) {
     QState_OnOnEntry((QState*)self, (intptr_t)callback);
 }
 
-void q_state_qbase_on_entry(void* self, void* event) {
-    QState_QBaseOnEntry((QState*)self, (QEvent*)event);
+void q_state_super_on_entry(void* self, void* event) {
+    QState_SuperOnEntry((QState*)self, (QEvent*)event);
 }
 
 void q_state_on_exit(void* self, void* event) {
@@ -137,8 +137,8 @@ void q_state_on_on_exit(void* self, void (*callback)(void*, void*)) {
     QState_OnOnExit((QState*)self, (intptr_t)callback);
 }
 
-void q_state_qbase_on_exit(void* self, void* event) {
-    QState_QBaseOnExit((QState*)self, (QEvent*)event);
+void q_state_super_on_exit(void* self, void* event) {
+    QState_SuperOnExit((QState*)self, (QEvent*)event);
 }
 
 bool q_state_event(void* self, void* e) {
@@ -149,8 +149,8 @@ void q_state_on_event(void* self, bool (*callback)(void*, void*)) {
     QState_OnEvent((QState*)self, (intptr_t)callback);
 }
 
-bool q_state_qbase_event(void* self, void* e) {
-    return QState_QBaseEvent((QState*)self, (QEvent*)e);
+bool q_state_super_event(void* self, void* e) {
+    return QState_SuperEvent((QState*)self, (QEvent*)e);
 }
 
 const char* q_state_tr2(const char* s, const char* c) {
@@ -402,8 +402,8 @@ bool q_state_event_filter(void* self, void* watched, void* event) {
     return QState_EventFilter((QState*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_state_qbase_event_filter(void* self, void* watched, void* event) {
-    return QState_QBaseEventFilter((QState*)self, (QObject*)watched, (QEvent*)event);
+bool q_state_super_event_filter(void* self, void* watched, void* event) {
+    return QState_SuperEventFilter((QState*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_state_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -414,8 +414,8 @@ void q_state_timer_event(void* self, void* event) {
     QState_TimerEvent((QState*)self, (QTimerEvent*)event);
 }
 
-void q_state_qbase_timer_event(void* self, void* event) {
-    QState_QBaseTimerEvent((QState*)self, (QTimerEvent*)event);
+void q_state_super_timer_event(void* self, void* event) {
+    QState_SuperTimerEvent((QState*)self, (QTimerEvent*)event);
 }
 
 void q_state_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -426,8 +426,8 @@ void q_state_child_event(void* self, void* event) {
     QState_ChildEvent((QState*)self, (QChildEvent*)event);
 }
 
-void q_state_qbase_child_event(void* self, void* event) {
-    QState_QBaseChildEvent((QState*)self, (QChildEvent*)event);
+void q_state_super_child_event(void* self, void* event) {
+    QState_SuperChildEvent((QState*)self, (QChildEvent*)event);
 }
 
 void q_state_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -438,8 +438,8 @@ void q_state_custom_event(void* self, void* event) {
     QState_CustomEvent((QState*)self, (QEvent*)event);
 }
 
-void q_state_qbase_custom_event(void* self, void* event) {
-    QState_QBaseCustomEvent((QState*)self, (QEvent*)event);
+void q_state_super_custom_event(void* self, void* event) {
+    QState_SuperCustomEvent((QState*)self, (QEvent*)event);
 }
 
 void q_state_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -450,8 +450,8 @@ void q_state_connect_notify(void* self, void* signal) {
     QState_ConnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
-void q_state_qbase_connect_notify(void* self, void* signal) {
-    QState_QBaseConnectNotify((QState*)self, (QMetaMethod*)signal);
+void q_state_super_connect_notify(void* self, void* signal) {
+    QState_SuperConnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
 void q_state_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ void q_state_disconnect_notify(void* self, void* signal) {
     QState_DisconnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
-void q_state_qbase_disconnect_notify(void* self, void* signal) {
-    QState_QBaseDisconnectNotify((QState*)self, (QMetaMethod*)signal);
+void q_state_super_disconnect_notify(void* self, void* signal) {
+    QState_SuperDisconnectNotify((QState*)self, (QMetaMethod*)signal);
 }
 
 void q_state_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ QObject* q_state_sender(void* self) {
     return QState_Sender((QState*)self);
 }
 
-QObject* q_state_qbase_sender(void* self) {
-    return QState_QBaseSender((QState*)self);
+QObject* q_state_super_sender(void* self) {
+    return QState_SuperSender((QState*)self);
 }
 
 void q_state_on_sender(void* self, QObject* (*callback)()) {
@@ -486,8 +486,8 @@ int32_t q_state_sender_signal_index(void* self) {
     return QState_SenderSignalIndex((QState*)self);
 }
 
-int32_t q_state_qbase_sender_signal_index(void* self) {
-    return QState_QBaseSenderSignalIndex((QState*)self);
+int32_t q_state_super_sender_signal_index(void* self) {
+    return QState_SuperSenderSignalIndex((QState*)self);
 }
 
 void q_state_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -498,8 +498,8 @@ int32_t q_state_receivers(void* self, const char* signal) {
     return QState_Receivers((QState*)self, signal);
 }
 
-int32_t q_state_qbase_receivers(void* self, const char* signal) {
-    return QState_QBaseReceivers((QState*)self, signal);
+int32_t q_state_super_receivers(void* self, const char* signal) {
+    return QState_SuperReceivers((QState*)self, signal);
 }
 
 void q_state_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -510,8 +510,8 @@ bool q_state_is_signal_connected(void* self, void* signal) {
     return QState_IsSignalConnected((QState*)self, (QMetaMethod*)signal);
 }
 
-bool q_state_qbase_is_signal_connected(void* self, void* signal) {
-    return QState_QBaseIsSignalConnected((QState*)self, (QMetaMethod*)signal);
+bool q_state_super_is_signal_connected(void* self, void* signal) {
+    return QState_SuperIsSignalConnected((QState*)self, (QMetaMethod*)signal);
 }
 
 void q_state_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

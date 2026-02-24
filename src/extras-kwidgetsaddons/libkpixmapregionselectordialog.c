@@ -34,8 +34,8 @@ void k_pixmapregionselectordialog_on_meta_object(void* self, const QMetaObject* 
     KPixmapRegionSelectorDialog_OnMetaObject((KPixmapRegionSelectorDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_pixmapregionselectordialog_qbase_meta_object(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseMetaObject((KPixmapRegionSelectorDialog*)self);
+const QMetaObject* k_pixmapregionselectordialog_super_meta_object(void* self) {
+    return KPixmapRegionSelectorDialog_SuperMetaObject((KPixmapRegionSelectorDialog*)self);
 }
 
 void* k_pixmapregionselectordialog_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void k_pixmapregionselectordialog_on_metacast(void* self, void* (*callback)(void
     KPixmapRegionSelectorDialog_OnMetacast((KPixmapRegionSelectorDialog*)self, (intptr_t)callback);
 }
 
-void* k_pixmapregionselectordialog_qbase_metacast(void* self, const char* param1) {
-    return KPixmapRegionSelectorDialog_QBaseMetacast((KPixmapRegionSelectorDialog*)self, param1);
+void* k_pixmapregionselectordialog_super_metacast(void* self, const char* param1) {
+    return KPixmapRegionSelectorDialog_SuperMetacast((KPixmapRegionSelectorDialog*)self, param1);
 }
 
 int32_t k_pixmapregionselectordialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void k_pixmapregionselectordialog_on_metacall(void* self, int32_t (*callback)(vo
     KPixmapRegionSelectorDialog_OnMetacall((KPixmapRegionSelectorDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPixmapRegionSelectorDialog_QBaseMetacall((KPixmapRegionSelectorDialog*)self, param1, param2, param3);
+int32_t k_pixmapregionselectordialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPixmapRegionSelectorDialog_SuperMetacall((KPixmapRegionSelectorDialog*)self, param1, param2, param3);
 }
 
 const char* k_pixmapregionselectordialog_tr(const char* s) {
@@ -1552,8 +1552,8 @@ void k_pixmapregionselectordialog_set_visible(void* self, bool visible) {
     KPixmapRegionSelectorDialog_SetVisible((KPixmapRegionSelectorDialog*)self, visible);
 }
 
-void k_pixmapregionselectordialog_qbase_set_visible(void* self, bool visible) {
-    KPixmapRegionSelectorDialog_QBaseSetVisible((KPixmapRegionSelectorDialog*)self, visible);
+void k_pixmapregionselectordialog_super_set_visible(void* self, bool visible) {
+    KPixmapRegionSelectorDialog_SuperSetVisible((KPixmapRegionSelectorDialog*)self, visible);
 }
 
 void k_pixmapregionselectordialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1564,8 +1564,8 @@ QSize* k_pixmapregionselectordialog_size_hint(void* self) {
     return KPixmapRegionSelectorDialog_SizeHint((KPixmapRegionSelectorDialog*)self);
 }
 
-QSize* k_pixmapregionselectordialog_qbase_size_hint(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseSizeHint((KPixmapRegionSelectorDialog*)self);
+QSize* k_pixmapregionselectordialog_super_size_hint(void* self) {
+    return KPixmapRegionSelectorDialog_SuperSizeHint((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1576,8 +1576,8 @@ QSize* k_pixmapregionselectordialog_minimum_size_hint(void* self) {
     return KPixmapRegionSelectorDialog_MinimumSizeHint((KPixmapRegionSelectorDialog*)self);
 }
 
-QSize* k_pixmapregionselectordialog_qbase_minimum_size_hint(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseMinimumSizeHint((KPixmapRegionSelectorDialog*)self);
+QSize* k_pixmapregionselectordialog_super_minimum_size_hint(void* self) {
+    return KPixmapRegionSelectorDialog_SuperMinimumSizeHint((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1588,8 +1588,8 @@ void k_pixmapregionselectordialog_open(void* self) {
     KPixmapRegionSelectorDialog_Open((KPixmapRegionSelectorDialog*)self);
 }
 
-void k_pixmapregionselectordialog_qbase_open(void* self) {
-    KPixmapRegionSelectorDialog_QBaseOpen((KPixmapRegionSelectorDialog*)self);
+void k_pixmapregionselectordialog_super_open(void* self) {
+    KPixmapRegionSelectorDialog_SuperOpen((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_open(void* self, void (*callback)()) {
@@ -1600,8 +1600,8 @@ int32_t k_pixmapregionselectordialog_exec(void* self) {
     return KPixmapRegionSelectorDialog_Exec((KPixmapRegionSelectorDialog*)self);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_exec(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseExec((KPixmapRegionSelectorDialog*)self);
+int32_t k_pixmapregionselectordialog_super_exec(void* self) {
+    return KPixmapRegionSelectorDialog_SuperExec((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1612,8 +1612,8 @@ void k_pixmapregionselectordialog_done(void* self, int param1) {
     KPixmapRegionSelectorDialog_Done((KPixmapRegionSelectorDialog*)self, param1);
 }
 
-void k_pixmapregionselectordialog_qbase_done(void* self, int param1) {
-    KPixmapRegionSelectorDialog_QBaseDone((KPixmapRegionSelectorDialog*)self, param1);
+void k_pixmapregionselectordialog_super_done(void* self, int param1) {
+    KPixmapRegionSelectorDialog_SuperDone((KPixmapRegionSelectorDialog*)self, param1);
 }
 
 void k_pixmapregionselectordialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1624,8 +1624,8 @@ void k_pixmapregionselectordialog_accept(void* self) {
     KPixmapRegionSelectorDialog_Accept((KPixmapRegionSelectorDialog*)self);
 }
 
-void k_pixmapregionselectordialog_qbase_accept(void* self) {
-    KPixmapRegionSelectorDialog_QBaseAccept((KPixmapRegionSelectorDialog*)self);
+void k_pixmapregionselectordialog_super_accept(void* self) {
+    KPixmapRegionSelectorDialog_SuperAccept((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_accept(void* self, void (*callback)()) {
@@ -1636,8 +1636,8 @@ void k_pixmapregionselectordialog_reject(void* self) {
     KPixmapRegionSelectorDialog_Reject((KPixmapRegionSelectorDialog*)self);
 }
 
-void k_pixmapregionselectordialog_qbase_reject(void* self) {
-    KPixmapRegionSelectorDialog_QBaseReject((KPixmapRegionSelectorDialog*)self);
+void k_pixmapregionselectordialog_super_reject(void* self) {
+    KPixmapRegionSelectorDialog_SuperReject((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_reject(void* self, void (*callback)()) {
@@ -1648,8 +1648,8 @@ void k_pixmapregionselectordialog_key_press_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_KeyPressEvent((KPixmapRegionSelectorDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_key_press_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseKeyPressEvent((KPixmapRegionSelectorDialog*)self, (QKeyEvent*)param1);
+void k_pixmapregionselectordialog_super_key_press_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperKeyPressEvent((KPixmapRegionSelectorDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1660,8 +1660,8 @@ void k_pixmapregionselectordialog_close_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_CloseEvent((KPixmapRegionSelectorDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_close_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseCloseEvent((KPixmapRegionSelectorDialog*)self, (QCloseEvent*)param1);
+void k_pixmapregionselectordialog_super_close_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperCloseEvent((KPixmapRegionSelectorDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1672,8 +1672,8 @@ void k_pixmapregionselectordialog_show_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_ShowEvent((KPixmapRegionSelectorDialog*)self, (QShowEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_show_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseShowEvent((KPixmapRegionSelectorDialog*)self, (QShowEvent*)param1);
+void k_pixmapregionselectordialog_super_show_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperShowEvent((KPixmapRegionSelectorDialog*)self, (QShowEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1684,8 +1684,8 @@ void k_pixmapregionselectordialog_resize_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_ResizeEvent((KPixmapRegionSelectorDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_resize_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseResizeEvent((KPixmapRegionSelectorDialog*)self, (QResizeEvent*)param1);
+void k_pixmapregionselectordialog_super_resize_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperResizeEvent((KPixmapRegionSelectorDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1696,8 +1696,8 @@ void k_pixmapregionselectordialog_context_menu_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_ContextMenuEvent((KPixmapRegionSelectorDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_context_menu_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseContextMenuEvent((KPixmapRegionSelectorDialog*)self, (QContextMenuEvent*)param1);
+void k_pixmapregionselectordialog_super_context_menu_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperContextMenuEvent((KPixmapRegionSelectorDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1708,8 +1708,8 @@ bool k_pixmapregionselectordialog_event_filter(void* self, void* param1, void* p
     return KPixmapRegionSelectorDialog_EventFilter((KPixmapRegionSelectorDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_pixmapregionselectordialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KPixmapRegionSelectorDialog_QBaseEventFilter((KPixmapRegionSelectorDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_pixmapregionselectordialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KPixmapRegionSelectorDialog_SuperEventFilter((KPixmapRegionSelectorDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_pixmapregionselectordialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1720,8 +1720,8 @@ int32_t k_pixmapregionselectordialog_dev_type(void* self) {
     return KPixmapRegionSelectorDialog_DevType((KPixmapRegionSelectorDialog*)self);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_dev_type(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseDevType((KPixmapRegionSelectorDialog*)self);
+int32_t k_pixmapregionselectordialog_super_dev_type(void* self) {
+    return KPixmapRegionSelectorDialog_SuperDevType((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1732,8 +1732,8 @@ int32_t k_pixmapregionselectordialog_height_for_width(void* self, int param1) {
     return KPixmapRegionSelectorDialog_HeightForWidth((KPixmapRegionSelectorDialog*)self, param1);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_height_for_width(void* self, int param1) {
-    return KPixmapRegionSelectorDialog_QBaseHeightForWidth((KPixmapRegionSelectorDialog*)self, param1);
+int32_t k_pixmapregionselectordialog_super_height_for_width(void* self, int param1) {
+    return KPixmapRegionSelectorDialog_SuperHeightForWidth((KPixmapRegionSelectorDialog*)self, param1);
 }
 
 void k_pixmapregionselectordialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1744,8 +1744,8 @@ bool k_pixmapregionselectordialog_has_height_for_width(void* self) {
     return KPixmapRegionSelectorDialog_HasHeightForWidth((KPixmapRegionSelectorDialog*)self);
 }
 
-bool k_pixmapregionselectordialog_qbase_has_height_for_width(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseHasHeightForWidth((KPixmapRegionSelectorDialog*)self);
+bool k_pixmapregionselectordialog_super_has_height_for_width(void* self) {
+    return KPixmapRegionSelectorDialog_SuperHasHeightForWidth((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1756,8 +1756,8 @@ QPaintEngine* k_pixmapregionselectordialog_paint_engine(void* self) {
     return KPixmapRegionSelectorDialog_PaintEngine((KPixmapRegionSelectorDialog*)self);
 }
 
-QPaintEngine* k_pixmapregionselectordialog_qbase_paint_engine(void* self) {
-    return KPixmapRegionSelectorDialog_QBasePaintEngine((KPixmapRegionSelectorDialog*)self);
+QPaintEngine* k_pixmapregionselectordialog_super_paint_engine(void* self) {
+    return KPixmapRegionSelectorDialog_SuperPaintEngine((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1768,8 +1768,8 @@ bool k_pixmapregionselectordialog_event(void* self, void* event) {
     return KPixmapRegionSelectorDialog_Event((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
 }
 
-bool k_pixmapregionselectordialog_qbase_event(void* self, void* event) {
-    return KPixmapRegionSelectorDialog_QBaseEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
+bool k_pixmapregionselectordialog_super_event(void* self, void* event) {
+    return KPixmapRegionSelectorDialog_SuperEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1780,8 +1780,8 @@ void k_pixmapregionselectordialog_mouse_press_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_MousePressEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_mouse_press_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseMousePressEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
+void k_pixmapregionselectordialog_super_mouse_press_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperMousePressEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1792,8 +1792,8 @@ void k_pixmapregionselectordialog_mouse_release_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_MouseReleaseEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_mouse_release_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseMouseReleaseEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
+void k_pixmapregionselectordialog_super_mouse_release_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperMouseReleaseEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1804,8 +1804,8 @@ void k_pixmapregionselectordialog_mouse_double_click_event(void* self, void* eve
     KPixmapRegionSelectorDialog_MouseDoubleClickEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseMouseDoubleClickEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
+void k_pixmapregionselectordialog_super_mouse_double_click_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperMouseDoubleClickEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1816,8 +1816,8 @@ void k_pixmapregionselectordialog_mouse_move_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_MouseMoveEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_mouse_move_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseMouseMoveEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
+void k_pixmapregionselectordialog_super_mouse_move_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperMouseMoveEvent((KPixmapRegionSelectorDialog*)self, (QMouseEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1828,8 +1828,8 @@ void k_pixmapregionselectordialog_wheel_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_WheelEvent((KPixmapRegionSelectorDialog*)self, (QWheelEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_wheel_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseWheelEvent((KPixmapRegionSelectorDialog*)self, (QWheelEvent*)event);
+void k_pixmapregionselectordialog_super_wheel_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperWheelEvent((KPixmapRegionSelectorDialog*)self, (QWheelEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1840,8 +1840,8 @@ void k_pixmapregionselectordialog_key_release_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_KeyReleaseEvent((KPixmapRegionSelectorDialog*)self, (QKeyEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_key_release_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseKeyReleaseEvent((KPixmapRegionSelectorDialog*)self, (QKeyEvent*)event);
+void k_pixmapregionselectordialog_super_key_release_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperKeyReleaseEvent((KPixmapRegionSelectorDialog*)self, (QKeyEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1852,8 +1852,8 @@ void k_pixmapregionselectordialog_focus_in_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_FocusInEvent((KPixmapRegionSelectorDialog*)self, (QFocusEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_focus_in_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseFocusInEvent((KPixmapRegionSelectorDialog*)self, (QFocusEvent*)event);
+void k_pixmapregionselectordialog_super_focus_in_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperFocusInEvent((KPixmapRegionSelectorDialog*)self, (QFocusEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1864,8 +1864,8 @@ void k_pixmapregionselectordialog_focus_out_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_FocusOutEvent((KPixmapRegionSelectorDialog*)self, (QFocusEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_focus_out_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseFocusOutEvent((KPixmapRegionSelectorDialog*)self, (QFocusEvent*)event);
+void k_pixmapregionselectordialog_super_focus_out_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperFocusOutEvent((KPixmapRegionSelectorDialog*)self, (QFocusEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1876,8 +1876,8 @@ void k_pixmapregionselectordialog_enter_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_EnterEvent((KPixmapRegionSelectorDialog*)self, (QEnterEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_enter_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseEnterEvent((KPixmapRegionSelectorDialog*)self, (QEnterEvent*)event);
+void k_pixmapregionselectordialog_super_enter_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperEnterEvent((KPixmapRegionSelectorDialog*)self, (QEnterEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void k_pixmapregionselectordialog_leave_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_LeaveEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_leave_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseLeaveEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
+void k_pixmapregionselectordialog_super_leave_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperLeaveEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void k_pixmapregionselectordialog_paint_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_PaintEvent((KPixmapRegionSelectorDialog*)self, (QPaintEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_paint_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBasePaintEvent((KPixmapRegionSelectorDialog*)self, (QPaintEvent*)event);
+void k_pixmapregionselectordialog_super_paint_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperPaintEvent((KPixmapRegionSelectorDialog*)self, (QPaintEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void k_pixmapregionselectordialog_move_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_MoveEvent((KPixmapRegionSelectorDialog*)self, (QMoveEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_move_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseMoveEvent((KPixmapRegionSelectorDialog*)self, (QMoveEvent*)event);
+void k_pixmapregionselectordialog_super_move_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperMoveEvent((KPixmapRegionSelectorDialog*)self, (QMoveEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void k_pixmapregionselectordialog_tablet_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_TabletEvent((KPixmapRegionSelectorDialog*)self, (QTabletEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_tablet_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseTabletEvent((KPixmapRegionSelectorDialog*)self, (QTabletEvent*)event);
+void k_pixmapregionselectordialog_super_tablet_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperTabletEvent((KPixmapRegionSelectorDialog*)self, (QTabletEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void k_pixmapregionselectordialog_action_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_ActionEvent((KPixmapRegionSelectorDialog*)self, (QActionEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_action_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseActionEvent((KPixmapRegionSelectorDialog*)self, (QActionEvent*)event);
+void k_pixmapregionselectordialog_super_action_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperActionEvent((KPixmapRegionSelectorDialog*)self, (QActionEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void k_pixmapregionselectordialog_drag_enter_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_DragEnterEvent((KPixmapRegionSelectorDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_drag_enter_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseDragEnterEvent((KPixmapRegionSelectorDialog*)self, (QDragEnterEvent*)event);
+void k_pixmapregionselectordialog_super_drag_enter_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperDragEnterEvent((KPixmapRegionSelectorDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ void k_pixmapregionselectordialog_drag_move_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_DragMoveEvent((KPixmapRegionSelectorDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_drag_move_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseDragMoveEvent((KPixmapRegionSelectorDialog*)self, (QDragMoveEvent*)event);
+void k_pixmapregionselectordialog_super_drag_move_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperDragMoveEvent((KPixmapRegionSelectorDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ void k_pixmapregionselectordialog_drag_leave_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_DragLeaveEvent((KPixmapRegionSelectorDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_drag_leave_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseDragLeaveEvent((KPixmapRegionSelectorDialog*)self, (QDragLeaveEvent*)event);
+void k_pixmapregionselectordialog_super_drag_leave_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperDragLeaveEvent((KPixmapRegionSelectorDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ void k_pixmapregionselectordialog_drop_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_DropEvent((KPixmapRegionSelectorDialog*)self, (QDropEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_drop_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseDropEvent((KPixmapRegionSelectorDialog*)self, (QDropEvent*)event);
+void k_pixmapregionselectordialog_super_drop_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperDropEvent((KPixmapRegionSelectorDialog*)self, (QDropEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ void k_pixmapregionselectordialog_hide_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_HideEvent((KPixmapRegionSelectorDialog*)self, (QHideEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_hide_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseHideEvent((KPixmapRegionSelectorDialog*)self, (QHideEvent*)event);
+void k_pixmapregionselectordialog_super_hide_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperHideEvent((KPixmapRegionSelectorDialog*)self, (QHideEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ bool k_pixmapregionselectordialog_native_event(void* self, char* eventType, void
     return KPixmapRegionSelectorDialog_NativeEvent((KPixmapRegionSelectorDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_pixmapregionselectordialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KPixmapRegionSelectorDialog_QBaseNativeEvent((KPixmapRegionSelectorDialog*)self, qstring(eventType), message, result);
+bool k_pixmapregionselectordialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KPixmapRegionSelectorDialog_SuperNativeEvent((KPixmapRegionSelectorDialog*)self, qstring(eventType), message, result);
 }
 
 void k_pixmapregionselectordialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2020,8 +2020,8 @@ void k_pixmapregionselectordialog_change_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_ChangeEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_change_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseChangeEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)param1);
+void k_pixmapregionselectordialog_super_change_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperChangeEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2032,8 +2032,8 @@ int32_t k_pixmapregionselectordialog_metric(void* self, int32_t param1) {
     return KPixmapRegionSelectorDialog_Metric((KPixmapRegionSelectorDialog*)self, param1);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_metric(void* self, int32_t param1) {
-    return KPixmapRegionSelectorDialog_QBaseMetric((KPixmapRegionSelectorDialog*)self, param1);
+int32_t k_pixmapregionselectordialog_super_metric(void* self, int32_t param1) {
+    return KPixmapRegionSelectorDialog_SuperMetric((KPixmapRegionSelectorDialog*)self, param1);
 }
 
 void k_pixmapregionselectordialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2044,8 +2044,8 @@ void k_pixmapregionselectordialog_init_painter(void* self, void* painter) {
     KPixmapRegionSelectorDialog_InitPainter((KPixmapRegionSelectorDialog*)self, (QPainter*)painter);
 }
 
-void k_pixmapregionselectordialog_qbase_init_painter(void* self, void* painter) {
-    KPixmapRegionSelectorDialog_QBaseInitPainter((KPixmapRegionSelectorDialog*)self, (QPainter*)painter);
+void k_pixmapregionselectordialog_super_init_painter(void* self, void* painter) {
+    KPixmapRegionSelectorDialog_SuperInitPainter((KPixmapRegionSelectorDialog*)self, (QPainter*)painter);
 }
 
 void k_pixmapregionselectordialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2056,8 +2056,8 @@ QPaintDevice* k_pixmapregionselectordialog_redirected(void* self, void* offset) 
     return KPixmapRegionSelectorDialog_Redirected((KPixmapRegionSelectorDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_pixmapregionselectordialog_qbase_redirected(void* self, void* offset) {
-    return KPixmapRegionSelectorDialog_QBaseRedirected((KPixmapRegionSelectorDialog*)self, (QPoint*)offset);
+QPaintDevice* k_pixmapregionselectordialog_super_redirected(void* self, void* offset) {
+    return KPixmapRegionSelectorDialog_SuperRedirected((KPixmapRegionSelectorDialog*)self, (QPoint*)offset);
 }
 
 void k_pixmapregionselectordialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2068,8 +2068,8 @@ QPainter* k_pixmapregionselectordialog_shared_painter(void* self) {
     return KPixmapRegionSelectorDialog_SharedPainter((KPixmapRegionSelectorDialog*)self);
 }
 
-QPainter* k_pixmapregionselectordialog_qbase_shared_painter(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseSharedPainter((KPixmapRegionSelectorDialog*)self);
+QPainter* k_pixmapregionselectordialog_super_shared_painter(void* self) {
+    return KPixmapRegionSelectorDialog_SuperSharedPainter((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2080,8 +2080,8 @@ void k_pixmapregionselectordialog_input_method_event(void* self, void* param1) {
     KPixmapRegionSelectorDialog_InputMethodEvent((KPixmapRegionSelectorDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_input_method_event(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseInputMethodEvent((KPixmapRegionSelectorDialog*)self, (QInputMethodEvent*)param1);
+void k_pixmapregionselectordialog_super_input_method_event(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperInputMethodEvent((KPixmapRegionSelectorDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_pixmapregionselectordialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2092,8 +2092,8 @@ QVariant* k_pixmapregionselectordialog_input_method_query(void* self, int32_t pa
     return KPixmapRegionSelectorDialog_InputMethodQuery((KPixmapRegionSelectorDialog*)self, param1);
 }
 
-QVariant* k_pixmapregionselectordialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KPixmapRegionSelectorDialog_QBaseInputMethodQuery((KPixmapRegionSelectorDialog*)self, param1);
+QVariant* k_pixmapregionselectordialog_super_input_method_query(void* self, int32_t param1) {
+    return KPixmapRegionSelectorDialog_SuperInputMethodQuery((KPixmapRegionSelectorDialog*)self, param1);
 }
 
 void k_pixmapregionselectordialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2104,8 +2104,8 @@ bool k_pixmapregionselectordialog_focus_next_prev_child(void* self, bool next) {
     return KPixmapRegionSelectorDialog_FocusNextPrevChild((KPixmapRegionSelectorDialog*)self, next);
 }
 
-bool k_pixmapregionselectordialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KPixmapRegionSelectorDialog_QBaseFocusNextPrevChild((KPixmapRegionSelectorDialog*)self, next);
+bool k_pixmapregionselectordialog_super_focus_next_prev_child(void* self, bool next) {
+    return KPixmapRegionSelectorDialog_SuperFocusNextPrevChild((KPixmapRegionSelectorDialog*)self, next);
 }
 
 void k_pixmapregionselectordialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2116,8 +2116,8 @@ void k_pixmapregionselectordialog_timer_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_TimerEvent((KPixmapRegionSelectorDialog*)self, (QTimerEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_timer_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseTimerEvent((KPixmapRegionSelectorDialog*)self, (QTimerEvent*)event);
+void k_pixmapregionselectordialog_super_timer_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperTimerEvent((KPixmapRegionSelectorDialog*)self, (QTimerEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2128,8 +2128,8 @@ void k_pixmapregionselectordialog_child_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_ChildEvent((KPixmapRegionSelectorDialog*)self, (QChildEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_child_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseChildEvent((KPixmapRegionSelectorDialog*)self, (QChildEvent*)event);
+void k_pixmapregionselectordialog_super_child_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperChildEvent((KPixmapRegionSelectorDialog*)self, (QChildEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void k_pixmapregionselectordialog_custom_event(void* self, void* event) {
     KPixmapRegionSelectorDialog_CustomEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
 }
 
-void k_pixmapregionselectordialog_qbase_custom_event(void* self, void* event) {
-    KPixmapRegionSelectorDialog_QBaseCustomEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
+void k_pixmapregionselectordialog_super_custom_event(void* self, void* event) {
+    KPixmapRegionSelectorDialog_SuperCustomEvent((KPixmapRegionSelectorDialog*)self, (QEvent*)event);
 }
 
 void k_pixmapregionselectordialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2152,8 +2152,8 @@ void k_pixmapregionselectordialog_connect_notify(void* self, void* signal) {
     KPixmapRegionSelectorDialog_ConnectNotify((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_pixmapregionselectordialog_qbase_connect_notify(void* self, void* signal) {
-    KPixmapRegionSelectorDialog_QBaseConnectNotify((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
+void k_pixmapregionselectordialog_super_connect_notify(void* self, void* signal) {
+    KPixmapRegionSelectorDialog_SuperConnectNotify((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapregionselectordialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ void k_pixmapregionselectordialog_disconnect_notify(void* self, void* signal) {
     KPixmapRegionSelectorDialog_DisconnectNotify((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_pixmapregionselectordialog_qbase_disconnect_notify(void* self, void* signal) {
-    KPixmapRegionSelectorDialog_QBaseDisconnectNotify((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
+void k_pixmapregionselectordialog_super_disconnect_notify(void* self, void* signal) {
+    KPixmapRegionSelectorDialog_SuperDisconnectNotify((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapregionselectordialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ void k_pixmapregionselectordialog_adjust_position(void* self, void* param1) {
     KPixmapRegionSelectorDialog_AdjustPosition((KPixmapRegionSelectorDialog*)self, (QWidget*)param1);
 }
 
-void k_pixmapregionselectordialog_qbase_adjust_position(void* self, void* param1) {
-    KPixmapRegionSelectorDialog_QBaseAdjustPosition((KPixmapRegionSelectorDialog*)self, (QWidget*)param1);
+void k_pixmapregionselectordialog_super_adjust_position(void* self, void* param1) {
+    KPixmapRegionSelectorDialog_SuperAdjustPosition((KPixmapRegionSelectorDialog*)self, (QWidget*)param1);
 }
 
 void k_pixmapregionselectordialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2188,8 +2188,8 @@ void k_pixmapregionselectordialog_update_micro_focus(void* self) {
     KPixmapRegionSelectorDialog_UpdateMicroFocus((KPixmapRegionSelectorDialog*)self);
 }
 
-void k_pixmapregionselectordialog_qbase_update_micro_focus(void* self) {
-    KPixmapRegionSelectorDialog_QBaseUpdateMicroFocus((KPixmapRegionSelectorDialog*)self);
+void k_pixmapregionselectordialog_super_update_micro_focus(void* self) {
+    KPixmapRegionSelectorDialog_SuperUpdateMicroFocus((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2200,8 +2200,8 @@ void k_pixmapregionselectordialog_create(void* self) {
     KPixmapRegionSelectorDialog_Create((KPixmapRegionSelectorDialog*)self);
 }
 
-void k_pixmapregionselectordialog_qbase_create(void* self) {
-    KPixmapRegionSelectorDialog_QBaseCreate((KPixmapRegionSelectorDialog*)self);
+void k_pixmapregionselectordialog_super_create(void* self) {
+    KPixmapRegionSelectorDialog_SuperCreate((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_create(void* self, void (*callback)()) {
@@ -2212,8 +2212,8 @@ void k_pixmapregionselectordialog_destroy(void* self) {
     KPixmapRegionSelectorDialog_Destroy((KPixmapRegionSelectorDialog*)self);
 }
 
-void k_pixmapregionselectordialog_qbase_destroy(void* self) {
-    KPixmapRegionSelectorDialog_QBaseDestroy((KPixmapRegionSelectorDialog*)self);
+void k_pixmapregionselectordialog_super_destroy(void* self) {
+    KPixmapRegionSelectorDialog_SuperDestroy((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_destroy(void* self, void (*callback)()) {
@@ -2224,8 +2224,8 @@ bool k_pixmapregionselectordialog_focus_next_child(void* self) {
     return KPixmapRegionSelectorDialog_FocusNextChild((KPixmapRegionSelectorDialog*)self);
 }
 
-bool k_pixmapregionselectordialog_qbase_focus_next_child(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseFocusNextChild((KPixmapRegionSelectorDialog*)self);
+bool k_pixmapregionselectordialog_super_focus_next_child(void* self) {
+    return KPixmapRegionSelectorDialog_SuperFocusNextChild((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2236,8 +2236,8 @@ bool k_pixmapregionselectordialog_focus_previous_child(void* self) {
     return KPixmapRegionSelectorDialog_FocusPreviousChild((KPixmapRegionSelectorDialog*)self);
 }
 
-bool k_pixmapregionselectordialog_qbase_focus_previous_child(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseFocusPreviousChild((KPixmapRegionSelectorDialog*)self);
+bool k_pixmapregionselectordialog_super_focus_previous_child(void* self) {
+    return KPixmapRegionSelectorDialog_SuperFocusPreviousChild((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2248,8 +2248,8 @@ QObject* k_pixmapregionselectordialog_sender(void* self) {
     return KPixmapRegionSelectorDialog_Sender((KPixmapRegionSelectorDialog*)self);
 }
 
-QObject* k_pixmapregionselectordialog_qbase_sender(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseSender((KPixmapRegionSelectorDialog*)self);
+QObject* k_pixmapregionselectordialog_super_sender(void* self) {
+    return KPixmapRegionSelectorDialog_SuperSender((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2260,8 +2260,8 @@ int32_t k_pixmapregionselectordialog_sender_signal_index(void* self) {
     return KPixmapRegionSelectorDialog_SenderSignalIndex((KPixmapRegionSelectorDialog*)self);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_sender_signal_index(void* self) {
-    return KPixmapRegionSelectorDialog_QBaseSenderSignalIndex((KPixmapRegionSelectorDialog*)self);
+int32_t k_pixmapregionselectordialog_super_sender_signal_index(void* self) {
+    return KPixmapRegionSelectorDialog_SuperSenderSignalIndex((KPixmapRegionSelectorDialog*)self);
 }
 
 void k_pixmapregionselectordialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2272,8 +2272,8 @@ int32_t k_pixmapregionselectordialog_receivers(void* self, const char* signal) {
     return KPixmapRegionSelectorDialog_Receivers((KPixmapRegionSelectorDialog*)self, signal);
 }
 
-int32_t k_pixmapregionselectordialog_qbase_receivers(void* self, const char* signal) {
-    return KPixmapRegionSelectorDialog_QBaseReceivers((KPixmapRegionSelectorDialog*)self, signal);
+int32_t k_pixmapregionselectordialog_super_receivers(void* self, const char* signal) {
+    return KPixmapRegionSelectorDialog_SuperReceivers((KPixmapRegionSelectorDialog*)self, signal);
 }
 
 void k_pixmapregionselectordialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2284,8 +2284,8 @@ bool k_pixmapregionselectordialog_is_signal_connected(void* self, void* signal) 
     return KPixmapRegionSelectorDialog_IsSignalConnected((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_pixmapregionselectordialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KPixmapRegionSelectorDialog_QBaseIsSignalConnected((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
+bool k_pixmapregionselectordialog_super_is_signal_connected(void* self, void* signal) {
+    return KPixmapRegionSelectorDialog_SuperIsSignalConnected((KPixmapRegionSelectorDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_pixmapregionselectordialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2296,8 +2296,8 @@ double k_pixmapregionselectordialog_get_decoded_metric_f(void* self, int32_t met
     return KPixmapRegionSelectorDialog_GetDecodedMetricF((KPixmapRegionSelectorDialog*)self, metricA, metricB);
 }
 
-double k_pixmapregionselectordialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KPixmapRegionSelectorDialog_QBaseGetDecodedMetricF((KPixmapRegionSelectorDialog*)self, metricA, metricB);
+double k_pixmapregionselectordialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KPixmapRegionSelectorDialog_SuperGetDecodedMetricF((KPixmapRegionSelectorDialog*)self, metricA, metricB);
 }
 
 void k_pixmapregionselectordialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

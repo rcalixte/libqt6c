@@ -33,8 +33,8 @@ void q_abstractscrollarea_on_meta_object(void* self, const QMetaObject* (*callba
     QAbstractScrollArea_OnMetaObject((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_abstractscrollarea_qbase_meta_object(void* self) {
-    return QAbstractScrollArea_QBaseMetaObject((QAbstractScrollArea*)self);
+const QMetaObject* q_abstractscrollarea_super_meta_object(void* self) {
+    return QAbstractScrollArea_SuperMetaObject((QAbstractScrollArea*)self);
 }
 
 void* q_abstractscrollarea_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_abstractscrollarea_on_metacast(void* self, void* (*callback)(void*, const
     QAbstractScrollArea_OnMetacast((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void* q_abstractscrollarea_qbase_metacast(void* self, const char* param1) {
-    return QAbstractScrollArea_QBaseMetacast((QAbstractScrollArea*)self, param1);
+void* q_abstractscrollarea_super_metacast(void* self, const char* param1) {
+    return QAbstractScrollArea_SuperMetacast((QAbstractScrollArea*)self, param1);
 }
 
 int32_t q_abstractscrollarea_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_abstractscrollarea_on_metacall(void* self, int32_t (*callback)(void*, int
     QAbstractScrollArea_OnMetacall((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-int32_t q_abstractscrollarea_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAbstractScrollArea_QBaseMetacall((QAbstractScrollArea*)self, param1, param2, param3);
+int32_t q_abstractscrollarea_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAbstractScrollArea_SuperMetacall((QAbstractScrollArea*)self, param1, param2, param3);
 }
 
 const char* q_abstractscrollarea_tr(const char* s) {
@@ -137,8 +137,8 @@ void q_abstractscrollarea_on_minimum_size_hint(void* self, QSize* (*callback)())
     QAbstractScrollArea_OnMinimumSizeHint((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-QSize* q_abstractscrollarea_qbase_minimum_size_hint(void* self) {
-    return QAbstractScrollArea_QBaseMinimumSizeHint((QAbstractScrollArea*)self);
+QSize* q_abstractscrollarea_super_minimum_size_hint(void* self) {
+    return QAbstractScrollArea_SuperMinimumSizeHint((QAbstractScrollArea*)self);
 }
 
 QSize* q_abstractscrollarea_size_hint(void* self) {
@@ -149,8 +149,8 @@ void q_abstractscrollarea_on_size_hint(void* self, QSize* (*callback)()) {
     QAbstractScrollArea_OnSizeHint((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-QSize* q_abstractscrollarea_qbase_size_hint(void* self) {
-    return QAbstractScrollArea_QBaseSizeHint((QAbstractScrollArea*)self);
+QSize* q_abstractscrollarea_super_size_hint(void* self) {
+    return QAbstractScrollArea_SuperSizeHint((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_setup_viewport(void* self, void* viewport) {
@@ -161,8 +161,8 @@ void q_abstractscrollarea_on_setup_viewport(void* self, void (*callback)(void*, 
     QAbstractScrollArea_OnSetupViewport((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_setup_viewport(void* self, void* viewport) {
-    QAbstractScrollArea_QBaseSetupViewport((QAbstractScrollArea*)self, (QWidget*)viewport);
+void q_abstractscrollarea_super_setup_viewport(void* self, void* viewport) {
+    QAbstractScrollArea_SuperSetupViewport((QAbstractScrollArea*)self, (QWidget*)viewport);
 }
 
 int32_t q_abstractscrollarea_size_adjust_policy(void* self) {
@@ -181,8 +181,8 @@ void q_abstractscrollarea_on_set_viewport_margins(void* self, void (*callback)(v
     QAbstractScrollArea_OnSetViewportMargins((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QAbstractScrollArea_QBaseSetViewportMargins((QAbstractScrollArea*)self, left, top, right, bottom);
+void q_abstractscrollarea_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QAbstractScrollArea_SuperSetViewportMargins((QAbstractScrollArea*)self, left, top, right, bottom);
 }
 
 void q_abstractscrollarea_set_viewport_margins2(void* self, void* margins) {
@@ -193,8 +193,8 @@ void q_abstractscrollarea_on_set_viewport_margins2(void* self, void (*callback)(
     QAbstractScrollArea_OnSetViewportMargins2((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_set_viewport_margins2(void* self, void* margins) {
-    QAbstractScrollArea_QBaseSetViewportMargins2((QAbstractScrollArea*)self, (QMargins*)margins);
+void q_abstractscrollarea_super_set_viewport_margins2(void* self, void* margins) {
+    QAbstractScrollArea_SuperSetViewportMargins2((QAbstractScrollArea*)self, (QMargins*)margins);
 }
 
 QMargins* q_abstractscrollarea_viewport_margins(void* self) {
@@ -205,8 +205,8 @@ void q_abstractscrollarea_on_viewport_margins(void* self, QMargins* (*callback)(
     QAbstractScrollArea_OnViewportMargins((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-QMargins* q_abstractscrollarea_qbase_viewport_margins(void* self) {
-    return QAbstractScrollArea_QBaseViewportMargins((QAbstractScrollArea*)self);
+QMargins* q_abstractscrollarea_super_viewport_margins(void* self) {
+    return QAbstractScrollArea_SuperViewportMargins((QAbstractScrollArea*)self);
 }
 
 bool q_abstractscrollarea_event_filter(void* self, void* param1, void* param2) {
@@ -217,8 +217,8 @@ void q_abstractscrollarea_on_event_filter(void* self, bool (*callback)(void*, vo
     QAbstractScrollArea_OnEventFilter((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-bool q_abstractscrollarea_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QAbstractScrollArea_QBaseEventFilter((QAbstractScrollArea*)self, (QObject*)param1, (QEvent*)param2);
+bool q_abstractscrollarea_super_event_filter(void* self, void* param1, void* param2) {
+    return QAbstractScrollArea_SuperEventFilter((QAbstractScrollArea*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 bool q_abstractscrollarea_event(void* self, void* param1) {
@@ -229,8 +229,8 @@ void q_abstractscrollarea_on_event(void* self, bool (*callback)(void*, void*)) {
     QAbstractScrollArea_OnEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-bool q_abstractscrollarea_qbase_event(void* self, void* param1) {
-    return QAbstractScrollArea_QBaseEvent((QAbstractScrollArea*)self, (QEvent*)param1);
+bool q_abstractscrollarea_super_event(void* self, void* param1) {
+    return QAbstractScrollArea_SuperEvent((QAbstractScrollArea*)self, (QEvent*)param1);
 }
 
 bool q_abstractscrollarea_viewport_event(void* self, void* param1) {
@@ -241,8 +241,8 @@ void q_abstractscrollarea_on_viewport_event(void* self, bool (*callback)(void*, 
     QAbstractScrollArea_OnViewportEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-bool q_abstractscrollarea_qbase_viewport_event(void* self, void* param1) {
-    return QAbstractScrollArea_QBaseViewportEvent((QAbstractScrollArea*)self, (QEvent*)param1);
+bool q_abstractscrollarea_super_viewport_event(void* self, void* param1) {
+    return QAbstractScrollArea_SuperViewportEvent((QAbstractScrollArea*)self, (QEvent*)param1);
 }
 
 void q_abstractscrollarea_resize_event(void* self, void* param1) {
@@ -253,8 +253,8 @@ void q_abstractscrollarea_on_resize_event(void* self, void (*callback)(void*, vo
     QAbstractScrollArea_OnResizeEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_resize_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseResizeEvent((QAbstractScrollArea*)self, (QResizeEvent*)param1);
+void q_abstractscrollarea_super_resize_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperResizeEvent((QAbstractScrollArea*)self, (QResizeEvent*)param1);
 }
 
 void q_abstractscrollarea_paint_event(void* self, void* param1) {
@@ -265,8 +265,8 @@ void q_abstractscrollarea_on_paint_event(void* self, void (*callback)(void*, voi
     QAbstractScrollArea_OnPaintEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_paint_event(void* self, void* param1) {
-    QAbstractScrollArea_QBasePaintEvent((QAbstractScrollArea*)self, (QPaintEvent*)param1);
+void q_abstractscrollarea_super_paint_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperPaintEvent((QAbstractScrollArea*)self, (QPaintEvent*)param1);
 }
 
 void q_abstractscrollarea_mouse_press_event(void* self, void* param1) {
@@ -277,8 +277,8 @@ void q_abstractscrollarea_on_mouse_press_event(void* self, void (*callback)(void
     QAbstractScrollArea_OnMousePressEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_mouse_press_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseMousePressEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
+void q_abstractscrollarea_super_mouse_press_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperMousePressEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
 }
 
 void q_abstractscrollarea_mouse_release_event(void* self, void* param1) {
@@ -289,8 +289,8 @@ void q_abstractscrollarea_on_mouse_release_event(void* self, void (*callback)(vo
     QAbstractScrollArea_OnMouseReleaseEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_mouse_release_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseMouseReleaseEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
+void q_abstractscrollarea_super_mouse_release_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperMouseReleaseEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
 }
 
 void q_abstractscrollarea_mouse_double_click_event(void* self, void* param1) {
@@ -301,8 +301,8 @@ void q_abstractscrollarea_on_mouse_double_click_event(void* self, void (*callbac
     QAbstractScrollArea_OnMouseDoubleClickEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_mouse_double_click_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseMouseDoubleClickEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
+void q_abstractscrollarea_super_mouse_double_click_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperMouseDoubleClickEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
 }
 
 void q_abstractscrollarea_mouse_move_event(void* self, void* param1) {
@@ -313,8 +313,8 @@ void q_abstractscrollarea_on_mouse_move_event(void* self, void (*callback)(void*
     QAbstractScrollArea_OnMouseMoveEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_mouse_move_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseMouseMoveEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
+void q_abstractscrollarea_super_mouse_move_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperMouseMoveEvent((QAbstractScrollArea*)self, (QMouseEvent*)param1);
 }
 
 void q_abstractscrollarea_wheel_event(void* self, void* param1) {
@@ -325,8 +325,8 @@ void q_abstractscrollarea_on_wheel_event(void* self, void (*callback)(void*, voi
     QAbstractScrollArea_OnWheelEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_wheel_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseWheelEvent((QAbstractScrollArea*)self, (QWheelEvent*)param1);
+void q_abstractscrollarea_super_wheel_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperWheelEvent((QAbstractScrollArea*)self, (QWheelEvent*)param1);
 }
 
 void q_abstractscrollarea_context_menu_event(void* self, void* param1) {
@@ -337,8 +337,8 @@ void q_abstractscrollarea_on_context_menu_event(void* self, void (*callback)(voi
     QAbstractScrollArea_OnContextMenuEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_context_menu_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseContextMenuEvent((QAbstractScrollArea*)self, (QContextMenuEvent*)param1);
+void q_abstractscrollarea_super_context_menu_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperContextMenuEvent((QAbstractScrollArea*)self, (QContextMenuEvent*)param1);
 }
 
 void q_abstractscrollarea_drag_enter_event(void* self, void* param1) {
@@ -349,8 +349,8 @@ void q_abstractscrollarea_on_drag_enter_event(void* self, void (*callback)(void*
     QAbstractScrollArea_OnDragEnterEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_drag_enter_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseDragEnterEvent((QAbstractScrollArea*)self, (QDragEnterEvent*)param1);
+void q_abstractscrollarea_super_drag_enter_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperDragEnterEvent((QAbstractScrollArea*)self, (QDragEnterEvent*)param1);
 }
 
 void q_abstractscrollarea_drag_move_event(void* self, void* param1) {
@@ -361,8 +361,8 @@ void q_abstractscrollarea_on_drag_move_event(void* self, void (*callback)(void*,
     QAbstractScrollArea_OnDragMoveEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_drag_move_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseDragMoveEvent((QAbstractScrollArea*)self, (QDragMoveEvent*)param1);
+void q_abstractscrollarea_super_drag_move_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperDragMoveEvent((QAbstractScrollArea*)self, (QDragMoveEvent*)param1);
 }
 
 void q_abstractscrollarea_drag_leave_event(void* self, void* param1) {
@@ -373,8 +373,8 @@ void q_abstractscrollarea_on_drag_leave_event(void* self, void (*callback)(void*
     QAbstractScrollArea_OnDragLeaveEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_drag_leave_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseDragLeaveEvent((QAbstractScrollArea*)self, (QDragLeaveEvent*)param1);
+void q_abstractscrollarea_super_drag_leave_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperDragLeaveEvent((QAbstractScrollArea*)self, (QDragLeaveEvent*)param1);
 }
 
 void q_abstractscrollarea_drop_event(void* self, void* param1) {
@@ -385,8 +385,8 @@ void q_abstractscrollarea_on_drop_event(void* self, void (*callback)(void*, void
     QAbstractScrollArea_OnDropEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_drop_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseDropEvent((QAbstractScrollArea*)self, (QDropEvent*)param1);
+void q_abstractscrollarea_super_drop_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperDropEvent((QAbstractScrollArea*)self, (QDropEvent*)param1);
 }
 
 void q_abstractscrollarea_key_press_event(void* self, void* param1) {
@@ -397,8 +397,8 @@ void q_abstractscrollarea_on_key_press_event(void* self, void (*callback)(void*,
     QAbstractScrollArea_OnKeyPressEvent((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_key_press_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseKeyPressEvent((QAbstractScrollArea*)self, (QKeyEvent*)param1);
+void q_abstractscrollarea_super_key_press_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperKeyPressEvent((QAbstractScrollArea*)self, (QKeyEvent*)param1);
 }
 
 void q_abstractscrollarea_scroll_contents_by(void* self, int dx, int dy) {
@@ -409,8 +409,8 @@ void q_abstractscrollarea_on_scroll_contents_by(void* self, void (*callback)(voi
     QAbstractScrollArea_OnScrollContentsBy((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-void q_abstractscrollarea_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QAbstractScrollArea_QBaseScrollContentsBy((QAbstractScrollArea*)self, dx, dy);
+void q_abstractscrollarea_super_scroll_contents_by(void* self, int dx, int dy) {
+    QAbstractScrollArea_SuperScrollContentsBy((QAbstractScrollArea*)self, dx, dy);
 }
 
 QSize* q_abstractscrollarea_viewport_size_hint(void* self) {
@@ -421,8 +421,8 @@ void q_abstractscrollarea_on_viewport_size_hint(void* self, QSize* (*callback)()
     QAbstractScrollArea_OnViewportSizeHint((QAbstractScrollArea*)self, (intptr_t)callback);
 }
 
-QSize* q_abstractscrollarea_qbase_viewport_size_hint(void* self) {
-    return QAbstractScrollArea_QBaseViewportSizeHint((QAbstractScrollArea*)self);
+QSize* q_abstractscrollarea_super_viewport_size_hint(void* self) {
+    return QAbstractScrollArea_SuperViewportSizeHint((QAbstractScrollArea*)self);
 }
 
 const char* q_abstractscrollarea_tr2(const char* s, const char* c) {
@@ -1876,8 +1876,8 @@ void q_abstractscrollarea_change_event(void* self, void* param1) {
     QAbstractScrollArea_ChangeEvent((QAbstractScrollArea*)self, (QEvent*)param1);
 }
 
-void q_abstractscrollarea_qbase_change_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseChangeEvent((QAbstractScrollArea*)self, (QEvent*)param1);
+void q_abstractscrollarea_super_change_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperChangeEvent((QAbstractScrollArea*)self, (QEvent*)param1);
 }
 
 void q_abstractscrollarea_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void q_abstractscrollarea_init_style_option(void* self, void* option) {
     QAbstractScrollArea_InitStyleOption((QAbstractScrollArea*)self, (QStyleOptionFrame*)option);
 }
 
-void q_abstractscrollarea_qbase_init_style_option(void* self, void* option) {
-    QAbstractScrollArea_QBaseInitStyleOption((QAbstractScrollArea*)self, (QStyleOptionFrame*)option);
+void q_abstractscrollarea_super_init_style_option(void* self, void* option) {
+    QAbstractScrollArea_SuperInitStyleOption((QAbstractScrollArea*)self, (QStyleOptionFrame*)option);
 }
 
 void q_abstractscrollarea_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ int32_t q_abstractscrollarea_dev_type(void* self) {
     return QAbstractScrollArea_DevType((QAbstractScrollArea*)self);
 }
 
-int32_t q_abstractscrollarea_qbase_dev_type(void* self) {
-    return QAbstractScrollArea_QBaseDevType((QAbstractScrollArea*)self);
+int32_t q_abstractscrollarea_super_dev_type(void* self) {
+    return QAbstractScrollArea_SuperDevType((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1912,8 +1912,8 @@ void q_abstractscrollarea_set_visible(void* self, bool visible) {
     QAbstractScrollArea_SetVisible((QAbstractScrollArea*)self, visible);
 }
 
-void q_abstractscrollarea_qbase_set_visible(void* self, bool visible) {
-    QAbstractScrollArea_QBaseSetVisible((QAbstractScrollArea*)self, visible);
+void q_abstractscrollarea_super_set_visible(void* self, bool visible) {
+    QAbstractScrollArea_SuperSetVisible((QAbstractScrollArea*)self, visible);
 }
 
 void q_abstractscrollarea_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1924,8 +1924,8 @@ int32_t q_abstractscrollarea_height_for_width(void* self, int param1) {
     return QAbstractScrollArea_HeightForWidth((QAbstractScrollArea*)self, param1);
 }
 
-int32_t q_abstractscrollarea_qbase_height_for_width(void* self, int param1) {
-    return QAbstractScrollArea_QBaseHeightForWidth((QAbstractScrollArea*)self, param1);
+int32_t q_abstractscrollarea_super_height_for_width(void* self, int param1) {
+    return QAbstractScrollArea_SuperHeightForWidth((QAbstractScrollArea*)self, param1);
 }
 
 void q_abstractscrollarea_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1936,8 +1936,8 @@ bool q_abstractscrollarea_has_height_for_width(void* self) {
     return QAbstractScrollArea_HasHeightForWidth((QAbstractScrollArea*)self);
 }
 
-bool q_abstractscrollarea_qbase_has_height_for_width(void* self) {
-    return QAbstractScrollArea_QBaseHasHeightForWidth((QAbstractScrollArea*)self);
+bool q_abstractscrollarea_super_has_height_for_width(void* self) {
+    return QAbstractScrollArea_SuperHasHeightForWidth((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1948,8 +1948,8 @@ QPaintEngine* q_abstractscrollarea_paint_engine(void* self) {
     return QAbstractScrollArea_PaintEngine((QAbstractScrollArea*)self);
 }
 
-QPaintEngine* q_abstractscrollarea_qbase_paint_engine(void* self) {
-    return QAbstractScrollArea_QBasePaintEngine((QAbstractScrollArea*)self);
+QPaintEngine* q_abstractscrollarea_super_paint_engine(void* self) {
+    return QAbstractScrollArea_SuperPaintEngine((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1960,8 +1960,8 @@ void q_abstractscrollarea_key_release_event(void* self, void* event) {
     QAbstractScrollArea_KeyReleaseEvent((QAbstractScrollArea*)self, (QKeyEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_key_release_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseKeyReleaseEvent((QAbstractScrollArea*)self, (QKeyEvent*)event);
+void q_abstractscrollarea_super_key_release_event(void* self, void* event) {
+    QAbstractScrollArea_SuperKeyReleaseEvent((QAbstractScrollArea*)self, (QKeyEvent*)event);
 }
 
 void q_abstractscrollarea_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1972,8 +1972,8 @@ void q_abstractscrollarea_focus_in_event(void* self, void* event) {
     QAbstractScrollArea_FocusInEvent((QAbstractScrollArea*)self, (QFocusEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_focus_in_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseFocusInEvent((QAbstractScrollArea*)self, (QFocusEvent*)event);
+void q_abstractscrollarea_super_focus_in_event(void* self, void* event) {
+    QAbstractScrollArea_SuperFocusInEvent((QAbstractScrollArea*)self, (QFocusEvent*)event);
 }
 
 void q_abstractscrollarea_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ void q_abstractscrollarea_focus_out_event(void* self, void* event) {
     QAbstractScrollArea_FocusOutEvent((QAbstractScrollArea*)self, (QFocusEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_focus_out_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseFocusOutEvent((QAbstractScrollArea*)self, (QFocusEvent*)event);
+void q_abstractscrollarea_super_focus_out_event(void* self, void* event) {
+    QAbstractScrollArea_SuperFocusOutEvent((QAbstractScrollArea*)self, (QFocusEvent*)event);
 }
 
 void q_abstractscrollarea_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1996,8 +1996,8 @@ void q_abstractscrollarea_enter_event(void* self, void* event) {
     QAbstractScrollArea_EnterEvent((QAbstractScrollArea*)self, (QEnterEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_enter_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseEnterEvent((QAbstractScrollArea*)self, (QEnterEvent*)event);
+void q_abstractscrollarea_super_enter_event(void* self, void* event) {
+    QAbstractScrollArea_SuperEnterEvent((QAbstractScrollArea*)self, (QEnterEvent*)event);
 }
 
 void q_abstractscrollarea_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ void q_abstractscrollarea_leave_event(void* self, void* event) {
     QAbstractScrollArea_LeaveEvent((QAbstractScrollArea*)self, (QEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_leave_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseLeaveEvent((QAbstractScrollArea*)self, (QEvent*)event);
+void q_abstractscrollarea_super_leave_event(void* self, void* event) {
+    QAbstractScrollArea_SuperLeaveEvent((QAbstractScrollArea*)self, (QEvent*)event);
 }
 
 void q_abstractscrollarea_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ void q_abstractscrollarea_move_event(void* self, void* event) {
     QAbstractScrollArea_MoveEvent((QAbstractScrollArea*)self, (QMoveEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_move_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseMoveEvent((QAbstractScrollArea*)self, (QMoveEvent*)event);
+void q_abstractscrollarea_super_move_event(void* self, void* event) {
+    QAbstractScrollArea_SuperMoveEvent((QAbstractScrollArea*)self, (QMoveEvent*)event);
 }
 
 void q_abstractscrollarea_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2032,8 +2032,8 @@ void q_abstractscrollarea_close_event(void* self, void* event) {
     QAbstractScrollArea_CloseEvent((QAbstractScrollArea*)self, (QCloseEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_close_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseCloseEvent((QAbstractScrollArea*)self, (QCloseEvent*)event);
+void q_abstractscrollarea_super_close_event(void* self, void* event) {
+    QAbstractScrollArea_SuperCloseEvent((QAbstractScrollArea*)self, (QCloseEvent*)event);
 }
 
 void q_abstractscrollarea_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ void q_abstractscrollarea_tablet_event(void* self, void* event) {
     QAbstractScrollArea_TabletEvent((QAbstractScrollArea*)self, (QTabletEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_tablet_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseTabletEvent((QAbstractScrollArea*)self, (QTabletEvent*)event);
+void q_abstractscrollarea_super_tablet_event(void* self, void* event) {
+    QAbstractScrollArea_SuperTabletEvent((QAbstractScrollArea*)self, (QTabletEvent*)event);
 }
 
 void q_abstractscrollarea_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2056,8 +2056,8 @@ void q_abstractscrollarea_action_event(void* self, void* event) {
     QAbstractScrollArea_ActionEvent((QAbstractScrollArea*)self, (QActionEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_action_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseActionEvent((QAbstractScrollArea*)self, (QActionEvent*)event);
+void q_abstractscrollarea_super_action_event(void* self, void* event) {
+    QAbstractScrollArea_SuperActionEvent((QAbstractScrollArea*)self, (QActionEvent*)event);
 }
 
 void q_abstractscrollarea_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2068,8 +2068,8 @@ void q_abstractscrollarea_show_event(void* self, void* event) {
     QAbstractScrollArea_ShowEvent((QAbstractScrollArea*)self, (QShowEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_show_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseShowEvent((QAbstractScrollArea*)self, (QShowEvent*)event);
+void q_abstractscrollarea_super_show_event(void* self, void* event) {
+    QAbstractScrollArea_SuperShowEvent((QAbstractScrollArea*)self, (QShowEvent*)event);
 }
 
 void q_abstractscrollarea_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2080,8 +2080,8 @@ void q_abstractscrollarea_hide_event(void* self, void* event) {
     QAbstractScrollArea_HideEvent((QAbstractScrollArea*)self, (QHideEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_hide_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseHideEvent((QAbstractScrollArea*)self, (QHideEvent*)event);
+void q_abstractscrollarea_super_hide_event(void* self, void* event) {
+    QAbstractScrollArea_SuperHideEvent((QAbstractScrollArea*)self, (QHideEvent*)event);
 }
 
 void q_abstractscrollarea_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2092,8 +2092,8 @@ bool q_abstractscrollarea_native_event(void* self, char* eventType, void* messag
     return QAbstractScrollArea_NativeEvent((QAbstractScrollArea*)self, qstring(eventType), message, result);
 }
 
-bool q_abstractscrollarea_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QAbstractScrollArea_QBaseNativeEvent((QAbstractScrollArea*)self, qstring(eventType), message, result);
+bool q_abstractscrollarea_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QAbstractScrollArea_SuperNativeEvent((QAbstractScrollArea*)self, qstring(eventType), message, result);
 }
 
 void q_abstractscrollarea_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2104,8 +2104,8 @@ int32_t q_abstractscrollarea_metric(void* self, int32_t param1) {
     return QAbstractScrollArea_Metric((QAbstractScrollArea*)self, param1);
 }
 
-int32_t q_abstractscrollarea_qbase_metric(void* self, int32_t param1) {
-    return QAbstractScrollArea_QBaseMetric((QAbstractScrollArea*)self, param1);
+int32_t q_abstractscrollarea_super_metric(void* self, int32_t param1) {
+    return QAbstractScrollArea_SuperMetric((QAbstractScrollArea*)self, param1);
 }
 
 void q_abstractscrollarea_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2116,8 +2116,8 @@ void q_abstractscrollarea_init_painter(void* self, void* painter) {
     QAbstractScrollArea_InitPainter((QAbstractScrollArea*)self, (QPainter*)painter);
 }
 
-void q_abstractscrollarea_qbase_init_painter(void* self, void* painter) {
-    QAbstractScrollArea_QBaseInitPainter((QAbstractScrollArea*)self, (QPainter*)painter);
+void q_abstractscrollarea_super_init_painter(void* self, void* painter) {
+    QAbstractScrollArea_SuperInitPainter((QAbstractScrollArea*)self, (QPainter*)painter);
 }
 
 void q_abstractscrollarea_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2128,8 +2128,8 @@ QPaintDevice* q_abstractscrollarea_redirected(void* self, void* offset) {
     return QAbstractScrollArea_Redirected((QAbstractScrollArea*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_abstractscrollarea_qbase_redirected(void* self, void* offset) {
-    return QAbstractScrollArea_QBaseRedirected((QAbstractScrollArea*)self, (QPoint*)offset);
+QPaintDevice* q_abstractscrollarea_super_redirected(void* self, void* offset) {
+    return QAbstractScrollArea_SuperRedirected((QAbstractScrollArea*)self, (QPoint*)offset);
 }
 
 void q_abstractscrollarea_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ QPainter* q_abstractscrollarea_shared_painter(void* self) {
     return QAbstractScrollArea_SharedPainter((QAbstractScrollArea*)self);
 }
 
-QPainter* q_abstractscrollarea_qbase_shared_painter(void* self) {
-    return QAbstractScrollArea_QBaseSharedPainter((QAbstractScrollArea*)self);
+QPainter* q_abstractscrollarea_super_shared_painter(void* self) {
+    return QAbstractScrollArea_SuperSharedPainter((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2152,8 +2152,8 @@ void q_abstractscrollarea_input_method_event(void* self, void* param1) {
     QAbstractScrollArea_InputMethodEvent((QAbstractScrollArea*)self, (QInputMethodEvent*)param1);
 }
 
-void q_abstractscrollarea_qbase_input_method_event(void* self, void* param1) {
-    QAbstractScrollArea_QBaseInputMethodEvent((QAbstractScrollArea*)self, (QInputMethodEvent*)param1);
+void q_abstractscrollarea_super_input_method_event(void* self, void* param1) {
+    QAbstractScrollArea_SuperInputMethodEvent((QAbstractScrollArea*)self, (QInputMethodEvent*)param1);
 }
 
 void q_abstractscrollarea_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2164,8 +2164,8 @@ QVariant* q_abstractscrollarea_input_method_query(void* self, int32_t param1) {
     return QAbstractScrollArea_InputMethodQuery((QAbstractScrollArea*)self, param1);
 }
 
-QVariant* q_abstractscrollarea_qbase_input_method_query(void* self, int32_t param1) {
-    return QAbstractScrollArea_QBaseInputMethodQuery((QAbstractScrollArea*)self, param1);
+QVariant* q_abstractscrollarea_super_input_method_query(void* self, int32_t param1) {
+    return QAbstractScrollArea_SuperInputMethodQuery((QAbstractScrollArea*)self, param1);
 }
 
 void q_abstractscrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2176,8 +2176,8 @@ bool q_abstractscrollarea_focus_next_prev_child(void* self, bool next) {
     return QAbstractScrollArea_FocusNextPrevChild((QAbstractScrollArea*)self, next);
 }
 
-bool q_abstractscrollarea_qbase_focus_next_prev_child(void* self, bool next) {
-    return QAbstractScrollArea_QBaseFocusNextPrevChild((QAbstractScrollArea*)self, next);
+bool q_abstractscrollarea_super_focus_next_prev_child(void* self, bool next) {
+    return QAbstractScrollArea_SuperFocusNextPrevChild((QAbstractScrollArea*)self, next);
 }
 
 void q_abstractscrollarea_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2188,8 +2188,8 @@ void q_abstractscrollarea_timer_event(void* self, void* event) {
     QAbstractScrollArea_TimerEvent((QAbstractScrollArea*)self, (QTimerEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_timer_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseTimerEvent((QAbstractScrollArea*)self, (QTimerEvent*)event);
+void q_abstractscrollarea_super_timer_event(void* self, void* event) {
+    QAbstractScrollArea_SuperTimerEvent((QAbstractScrollArea*)self, (QTimerEvent*)event);
 }
 
 void q_abstractscrollarea_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ void q_abstractscrollarea_child_event(void* self, void* event) {
     QAbstractScrollArea_ChildEvent((QAbstractScrollArea*)self, (QChildEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_child_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseChildEvent((QAbstractScrollArea*)self, (QChildEvent*)event);
+void q_abstractscrollarea_super_child_event(void* self, void* event) {
+    QAbstractScrollArea_SuperChildEvent((QAbstractScrollArea*)self, (QChildEvent*)event);
 }
 
 void q_abstractscrollarea_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2212,8 +2212,8 @@ void q_abstractscrollarea_custom_event(void* self, void* event) {
     QAbstractScrollArea_CustomEvent((QAbstractScrollArea*)self, (QEvent*)event);
 }
 
-void q_abstractscrollarea_qbase_custom_event(void* self, void* event) {
-    QAbstractScrollArea_QBaseCustomEvent((QAbstractScrollArea*)self, (QEvent*)event);
+void q_abstractscrollarea_super_custom_event(void* self, void* event) {
+    QAbstractScrollArea_SuperCustomEvent((QAbstractScrollArea*)self, (QEvent*)event);
 }
 
 void q_abstractscrollarea_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2224,8 +2224,8 @@ void q_abstractscrollarea_connect_notify(void* self, void* signal) {
     QAbstractScrollArea_ConnectNotify((QAbstractScrollArea*)self, (QMetaMethod*)signal);
 }
 
-void q_abstractscrollarea_qbase_connect_notify(void* self, void* signal) {
-    QAbstractScrollArea_QBaseConnectNotify((QAbstractScrollArea*)self, (QMetaMethod*)signal);
+void q_abstractscrollarea_super_connect_notify(void* self, void* signal) {
+    QAbstractScrollArea_SuperConnectNotify((QAbstractScrollArea*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractscrollarea_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2236,8 +2236,8 @@ void q_abstractscrollarea_disconnect_notify(void* self, void* signal) {
     QAbstractScrollArea_DisconnectNotify((QAbstractScrollArea*)self, (QMetaMethod*)signal);
 }
 
-void q_abstractscrollarea_qbase_disconnect_notify(void* self, void* signal) {
-    QAbstractScrollArea_QBaseDisconnectNotify((QAbstractScrollArea*)self, (QMetaMethod*)signal);
+void q_abstractscrollarea_super_disconnect_notify(void* self, void* signal) {
+    QAbstractScrollArea_SuperDisconnectNotify((QAbstractScrollArea*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractscrollarea_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2248,8 +2248,8 @@ void q_abstractscrollarea_draw_frame(void* self, void* param1) {
     QAbstractScrollArea_DrawFrame((QAbstractScrollArea*)self, (QPainter*)param1);
 }
 
-void q_abstractscrollarea_qbase_draw_frame(void* self, void* param1) {
-    QAbstractScrollArea_QBaseDrawFrame((QAbstractScrollArea*)self, (QPainter*)param1);
+void q_abstractscrollarea_super_draw_frame(void* self, void* param1) {
+    QAbstractScrollArea_SuperDrawFrame((QAbstractScrollArea*)self, (QPainter*)param1);
 }
 
 void q_abstractscrollarea_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2260,8 +2260,8 @@ void q_abstractscrollarea_update_micro_focus(void* self) {
     QAbstractScrollArea_UpdateMicroFocus((QAbstractScrollArea*)self);
 }
 
-void q_abstractscrollarea_qbase_update_micro_focus(void* self) {
-    QAbstractScrollArea_QBaseUpdateMicroFocus((QAbstractScrollArea*)self);
+void q_abstractscrollarea_super_update_micro_focus(void* self) {
+    QAbstractScrollArea_SuperUpdateMicroFocus((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2272,8 +2272,8 @@ void q_abstractscrollarea_create(void* self) {
     QAbstractScrollArea_Create((QAbstractScrollArea*)self);
 }
 
-void q_abstractscrollarea_qbase_create(void* self) {
-    QAbstractScrollArea_QBaseCreate((QAbstractScrollArea*)self);
+void q_abstractscrollarea_super_create(void* self) {
+    QAbstractScrollArea_SuperCreate((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_create(void* self, void (*callback)()) {
@@ -2284,8 +2284,8 @@ void q_abstractscrollarea_destroy(void* self) {
     QAbstractScrollArea_Destroy((QAbstractScrollArea*)self);
 }
 
-void q_abstractscrollarea_qbase_destroy(void* self) {
-    QAbstractScrollArea_QBaseDestroy((QAbstractScrollArea*)self);
+void q_abstractscrollarea_super_destroy(void* self) {
+    QAbstractScrollArea_SuperDestroy((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_destroy(void* self, void (*callback)()) {
@@ -2296,8 +2296,8 @@ bool q_abstractscrollarea_focus_next_child(void* self) {
     return QAbstractScrollArea_FocusNextChild((QAbstractScrollArea*)self);
 }
 
-bool q_abstractscrollarea_qbase_focus_next_child(void* self) {
-    return QAbstractScrollArea_QBaseFocusNextChild((QAbstractScrollArea*)self);
+bool q_abstractscrollarea_super_focus_next_child(void* self) {
+    return QAbstractScrollArea_SuperFocusNextChild((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2308,8 +2308,8 @@ bool q_abstractscrollarea_focus_previous_child(void* self) {
     return QAbstractScrollArea_FocusPreviousChild((QAbstractScrollArea*)self);
 }
 
-bool q_abstractscrollarea_qbase_focus_previous_child(void* self) {
-    return QAbstractScrollArea_QBaseFocusPreviousChild((QAbstractScrollArea*)self);
+bool q_abstractscrollarea_super_focus_previous_child(void* self) {
+    return QAbstractScrollArea_SuperFocusPreviousChild((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2320,8 +2320,8 @@ QObject* q_abstractscrollarea_sender(void* self) {
     return QAbstractScrollArea_Sender((QAbstractScrollArea*)self);
 }
 
-QObject* q_abstractscrollarea_qbase_sender(void* self) {
-    return QAbstractScrollArea_QBaseSender((QAbstractScrollArea*)self);
+QObject* q_abstractscrollarea_super_sender(void* self) {
+    return QAbstractScrollArea_SuperSender((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_sender(void* self, QObject* (*callback)()) {
@@ -2332,8 +2332,8 @@ int32_t q_abstractscrollarea_sender_signal_index(void* self) {
     return QAbstractScrollArea_SenderSignalIndex((QAbstractScrollArea*)self);
 }
 
-int32_t q_abstractscrollarea_qbase_sender_signal_index(void* self) {
-    return QAbstractScrollArea_QBaseSenderSignalIndex((QAbstractScrollArea*)self);
+int32_t q_abstractscrollarea_super_sender_signal_index(void* self) {
+    return QAbstractScrollArea_SuperSenderSignalIndex((QAbstractScrollArea*)self);
 }
 
 void q_abstractscrollarea_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2344,8 +2344,8 @@ int32_t q_abstractscrollarea_receivers(void* self, const char* signal) {
     return QAbstractScrollArea_Receivers((QAbstractScrollArea*)self, signal);
 }
 
-int32_t q_abstractscrollarea_qbase_receivers(void* self, const char* signal) {
-    return QAbstractScrollArea_QBaseReceivers((QAbstractScrollArea*)self, signal);
+int32_t q_abstractscrollarea_super_receivers(void* self, const char* signal) {
+    return QAbstractScrollArea_SuperReceivers((QAbstractScrollArea*)self, signal);
 }
 
 void q_abstractscrollarea_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2356,8 +2356,8 @@ bool q_abstractscrollarea_is_signal_connected(void* self, void* signal) {
     return QAbstractScrollArea_IsSignalConnected((QAbstractScrollArea*)self, (QMetaMethod*)signal);
 }
 
-bool q_abstractscrollarea_qbase_is_signal_connected(void* self, void* signal) {
-    return QAbstractScrollArea_QBaseIsSignalConnected((QAbstractScrollArea*)self, (QMetaMethod*)signal);
+bool q_abstractscrollarea_super_is_signal_connected(void* self, void* signal) {
+    return QAbstractScrollArea_SuperIsSignalConnected((QAbstractScrollArea*)self, (QMetaMethod*)signal);
 }
 
 void q_abstractscrollarea_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2368,8 +2368,8 @@ double q_abstractscrollarea_get_decoded_metric_f(void* self, int32_t metricA, in
     return QAbstractScrollArea_GetDecodedMetricF((QAbstractScrollArea*)self, metricA, metricB);
 }
 
-double q_abstractscrollarea_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QAbstractScrollArea_QBaseGetDecodedMetricF((QAbstractScrollArea*)self, metricA, metricB);
+double q_abstractscrollarea_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QAbstractScrollArea_SuperGetDecodedMetricF((QAbstractScrollArea*)self, metricA, metricB);
 }
 
 void q_abstractscrollarea_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

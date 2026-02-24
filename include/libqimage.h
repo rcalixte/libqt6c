@@ -150,13 +150,17 @@ int32_t q_image_dev_type(void* self);
 ///
 void q_image_on_dev_type(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_image_super_dev_type` instead
+///
+#define q_image_qbase_dev_type q_image_super_dev_type
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#devType)
 ///
 /// Base class method implementation
 ///
 /// @param self QImage*
 ///
-int32_t q_image_qbase_dev_type(void* self);
+int32_t q_image_super_dev_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-eq-eq)
 ///
@@ -796,13 +800,17 @@ QPaintEngine* q_image_paint_engine(void* self);
 ///
 void q_image_on_paint_engine(void* self, QPaintEngine* (*callback)());
 
+/// @warning DEPRECATED: Use `q_image_super_paint_engine` instead
+///
+#define q_image_qbase_paint_engine q_image_super_paint_engine
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#paintEngine)
 ///
 /// Base class method implementation
 ///
 /// @param self QImage*
 ///
-QPaintEngine* q_image_qbase_paint_engine(void* self);
+QPaintEngine* q_image_super_paint_engine(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#dotsPerMeterX)
 ///
@@ -903,6 +911,10 @@ int32_t q_image_metric(void* self, int32_t metric);
 ///
 void q_image_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_image_super_metric` instead
+///
+#define q_image_qbase_metric q_image_super_metric
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#metric)
 ///
 /// Base class method implementation
@@ -910,7 +922,7 @@ void q_image_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 /// @param self QImage*
 /// @param metric enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_image_qbase_metric(void* self, int32_t metric);
+int32_t q_image_super_metric(void* self, int32_t metric);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
 ///
@@ -929,6 +941,10 @@ QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical);
 ///
 void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, bool));
 
+/// @warning DEPRECATED: Use `q_image_super_mirrored_helper` instead
+///
+#define q_image_qbase_mirrored_helper q_image_super_mirrored_helper
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_helper)
 ///
 /// Base class method implementation
@@ -937,7 +953,7 @@ void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, boo
 /// @param horizontal bool
 /// @param vertical bool
 ///
-QImage* q_image_qbase_mirrored_helper(void* self, bool horizontal, bool vertical);
+QImage* q_image_super_mirrored_helper(void* self, bool horizontal, bool vertical);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
 ///
@@ -954,13 +970,17 @@ QImage* q_image_rgb_swapped_helper(void* self);
 ///
 void q_image_on_rgb_swapped_helper(void* self, QImage* (*callback)());
 
+/// @warning DEPRECATED: Use `q_image_super_rgb_swapped_helper` instead
+///
+#define q_image_qbase_rgb_swapped_helper q_image_super_rgb_swapped_helper
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_helper)
 ///
 /// Base class method implementation
 ///
 /// @param self QImage*
 ///
-QImage* q_image_qbase_rgb_swapped_helper(void* self);
+QImage* q_image_super_rgb_swapped_helper(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
 ///
@@ -979,6 +999,10 @@ void q_image_mirrored_inplace(void* self, bool horizontal, bool vertical);
 ///
 void q_image_on_mirrored_inplace(void* self, void (*callback)(void*, bool, bool));
 
+/// @warning DEPRECATED: Use `q_image_super_mirrored_inplace` instead
+///
+#define q_image_qbase_mirrored_inplace q_image_super_mirrored_inplace
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#mirrored_inplace)
 ///
 /// Base class method implementation
@@ -987,7 +1011,7 @@ void q_image_on_mirrored_inplace(void* self, void (*callback)(void*, bool, bool)
 /// @param horizontal bool
 /// @param vertical bool
 ///
-void q_image_qbase_mirrored_inplace(void* self, bool horizontal, bool vertical);
+void q_image_super_mirrored_inplace(void* self, bool horizontal, bool vertical);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
 ///
@@ -1004,13 +1028,17 @@ void q_image_rgb_swapped_inplace(void* self);
 ///
 void q_image_on_rgb_swapped_inplace(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_image_super_rgb_swapped_inplace` instead
+///
+#define q_image_qbase_rgb_swapped_inplace q_image_super_rgb_swapped_inplace
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#rgbSwapped_inplace)
 ///
 /// Base class method implementation
 ///
 /// @param self QImage*
 ///
-void q_image_qbase_rgb_swapped_inplace(void* self);
+void q_image_super_rgb_swapped_inplace(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
 ///
@@ -1029,6 +1057,10 @@ QImage* q_image_convert_to_format_helper(void* self, int32_t format, int32_t fla
 ///
 void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int32_t));
 
+/// @warning DEPRECATED: Use `q_image_super_convert_to_format_helper` instead
+///
+#define q_image_qbase_convert_to_format_helper q_image_super_convert_to_format_helper
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_helper)
 ///
 /// Base class method implementation
@@ -1037,7 +1069,7 @@ void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, 
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-QImage* q_image_qbase_convert_to_format_helper(void* self, int32_t format, int32_t flags);
+QImage* q_image_super_convert_to_format_helper(void* self, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
 ///
@@ -1056,6 +1088,10 @@ bool q_image_convert_to_format_inplace(void* self, int32_t format, int32_t flags
 ///
 void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, int32_t, int32_t));
 
+/// @warning DEPRECATED: Use `q_image_super_convert_to_format_inplace` instead
+///
+#define q_image_qbase_convert_to_format_inplace q_image_super_convert_to_format_inplace
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#convertToFormat_inplace)
 ///
 /// Base class method implementation
@@ -1064,7 +1100,7 @@ void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, in
 /// @param format enum QImage__Format
 /// @param flags flag of enum Qt__ImageConversionFlag
 ///
-bool q_image_qbase_convert_to_format_inplace(void* self, int32_t format, int32_t flags);
+bool q_image_super_convert_to_format_inplace(void* self, int32_t format, int32_t flags);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
 ///
@@ -1083,6 +1119,10 @@ QImage* q_image_smooth_scaled(void* self, int w, int h);
 ///
 void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int));
 
+/// @warning DEPRECATED: Use `q_image_super_smooth_scaled` instead
+///
+#define q_image_qbase_smooth_scaled q_image_super_smooth_scaled
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#smoothScaled)
 ///
 /// Base class method implementation
@@ -1091,7 +1131,7 @@ void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int));
 /// @param w int
 /// @param h int
 ///
-QImage* q_image_qbase_smooth_scaled(void* self, int w, int h);
+QImage* q_image_super_smooth_scaled(void* self, int w, int h);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
 ///
@@ -1108,13 +1148,17 @@ void q_image_detach_metadata(void* self);
 ///
 void q_image_on_detach_metadata(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_image_super_detach_metadata` instead
+///
+#define q_image_qbase_detach_metadata q_image_super_detach_metadata
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
 ///
 /// Base class method implementation
 ///
 /// @param self QImage*
 ///
-void q_image_qbase_detach_metadata(void* self);
+void q_image_super_detach_metadata(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#copy)
 ///
@@ -1425,6 +1469,10 @@ void q_image_detach_metadata1(void* self, bool invalidateCache);
 ///
 void q_image_on_detach_metadata1(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_image_super_detach_metadata1` instead
+///
+#define q_image_qbase_detach_metadata1 q_image_super_detach_metadata1
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#detachMetadata)
 ///
 /// Base class method implementation
@@ -1432,7 +1480,7 @@ void q_image_on_detach_metadata1(void* self, void (*callback)(void*, bool));
 /// @param self QImage*
 /// @param invalidateCache bool
 ///
-void q_image_qbase_detach_metadata1(void* self, bool invalidateCache);
+void q_image_super_detach_metadata1(void* self, bool invalidateCache);
 
 /// Inherited from QPaintDevice
 ///
@@ -1524,6 +1572,10 @@ int32_t q_image_encode_metric_f(int32_t metric, double value);
 ///
 void q_image_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_image_super_init_painter` instead
+///
+#define q_image_qbase_init_painter q_image_super_init_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#initPainter)
@@ -1533,7 +1585,7 @@ void q_image_init_painter(void* self, void* painter);
 /// @param self QImage*
 /// @param painter QPainter*
 ///
-void q_image_qbase_init_painter(void* self, void* painter);
+void q_image_super_init_painter(void* self, void* painter);
 
 /// Inherited from QPaintDevice
 ///
@@ -1557,6 +1609,10 @@ void q_image_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_image_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_image_super_redirected` instead
+///
+#define q_image_qbase_redirected q_image_super_redirected
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#redirected)
@@ -1566,7 +1622,7 @@ QPaintDevice* q_image_redirected(void* self, void* offset);
 /// @param self QImage*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_image_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_image_super_redirected(void* self, void* offset);
 
 /// Inherited from QPaintDevice
 ///
@@ -1589,6 +1645,10 @@ void q_image_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*));
 ///
 QPainter* q_image_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_image_super_shared_painter` instead
+///
+#define q_image_qbase_shared_painter q_image_super_shared_painter
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#sharedPainter)
@@ -1597,7 +1657,7 @@ QPainter* q_image_shared_painter(void* self);
 ///
 /// @param self QImage*
 ///
-QPainter* q_image_qbase_shared_painter(void* self);
+QPainter* q_image_super_shared_painter(void* self);
 
 /// Inherited from QPaintDevice
 ///
@@ -1622,6 +1682,10 @@ void q_image_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 double q_image_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_image_super_get_decoded_metric_f` instead
+///
+#define q_image_qbase_get_decoded_metric_f q_image_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -1632,7 +1696,7 @@ double q_image_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_image_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_image_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

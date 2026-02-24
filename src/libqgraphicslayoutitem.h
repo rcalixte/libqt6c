@@ -212,6 +212,10 @@ void q_graphicslayoutitem_set_geometry(void* self, void* rect);
 ///
 void q_graphicslayoutitem_on_set_geometry(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_set_geometry` instead
+///
+#define q_graphicslayoutitem_qbase_set_geometry q_graphicslayoutitem_super_set_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGeometry)
 ///
 /// Base class method implementation
@@ -219,7 +223,7 @@ void q_graphicslayoutitem_on_set_geometry(void* self, void (*callback)(void*, vo
 /// @param self QGraphicsLayoutItem*
 /// @param rect QRectF*
 ///
-void q_graphicslayoutitem_qbase_set_geometry(void* self, void* rect);
+void q_graphicslayoutitem_super_set_geometry(void* self, void* rect);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#geometry)
 ///
@@ -246,6 +250,10 @@ void q_graphicslayoutitem_get_contents_margins(void* self, double* left, double*
 ///
 void q_graphicslayoutitem_on_get_contents_margins(void* self, void (*callback)(void*, double*, double*, double*, double*));
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_get_contents_margins` instead
+///
+#define q_graphicslayoutitem_qbase_get_contents_margins q_graphicslayoutitem_super_get_contents_margins
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#getContentsMargins)
 ///
 /// Base class method implementation
@@ -256,7 +264,7 @@ void q_graphicslayoutitem_on_get_contents_margins(void* self, void (*callback)(v
 /// @param right double*
 /// @param bottom double*
 ///
-void q_graphicslayoutitem_qbase_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
+void q_graphicslayoutitem_super_get_contents_margins(void* self, double* left, double* top, double* right, double* bottom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#contentsRect)
 ///
@@ -286,13 +294,17 @@ void q_graphicslayoutitem_update_geometry(void* self);
 ///
 void q_graphicslayoutitem_on_update_geometry(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_update_geometry` instead
+///
+#define q_graphicslayoutitem_qbase_update_geometry q_graphicslayoutitem_super_update_geometry
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#updateGeometry)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsLayoutItem*
 ///
-void q_graphicslayoutitem_qbase_update_geometry(void* self);
+void q_graphicslayoutitem_super_update_geometry(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
@@ -309,13 +321,17 @@ bool q_graphicslayoutitem_is_empty(void* self);
 ///
 void q_graphicslayoutitem_on_is_empty(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_is_empty` instead
+///
+#define q_graphicslayoutitem_qbase_is_empty q_graphicslayoutitem_super_is_empty
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#isEmpty)
 ///
 /// Base class method implementation
 ///
 /// @param self QGraphicsLayoutItem*
 ///
-bool q_graphicslayoutitem_qbase_is_empty(void* self);
+bool q_graphicslayoutitem_super_is_empty(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#parentLayoutItem)
 ///
@@ -364,6 +380,10 @@ void q_graphicslayoutitem_set_graphics_item(void* self, void* item);
 ///
 void q_graphicslayoutitem_on_set_graphics_item(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_set_graphics_item` instead
+///
+#define q_graphicslayoutitem_qbase_set_graphics_item q_graphicslayoutitem_super_set_graphics_item
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setGraphicsItem)
 ///
 /// Base class method implementation
@@ -371,7 +391,7 @@ void q_graphicslayoutitem_on_set_graphics_item(void* self, void (*callback)(void
 /// @param self QGraphicsLayoutItem*
 /// @param item QGraphicsItem*
 ///
-void q_graphicslayoutitem_qbase_set_graphics_item(void* self, void* item);
+void q_graphicslayoutitem_super_set_graphics_item(void* self, void* item);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
 ///
@@ -389,6 +409,10 @@ void q_graphicslayoutitem_set_owned_by_layout(void* self, bool ownedByLayout);
 ///
 void q_graphicslayoutitem_on_set_owned_by_layout(void* self, void (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_set_owned_by_layout` instead
+///
+#define q_graphicslayoutitem_qbase_set_owned_by_layout q_graphicslayoutitem_super_set_owned_by_layout
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setOwnedByLayout)
 ///
 /// Base class method implementation
@@ -396,7 +420,7 @@ void q_graphicslayoutitem_on_set_owned_by_layout(void* self, void (*callback)(vo
 /// @param self QGraphicsLayoutItem*
 /// @param ownedByLayout bool
 ///
-void q_graphicslayoutitem_qbase_set_owned_by_layout(void* self, bool ownedByLayout);
+void q_graphicslayoutitem_super_set_owned_by_layout(void* self, bool ownedByLayout);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizeHint)
 ///
@@ -415,6 +439,10 @@ QSizeF* q_graphicslayoutitem_size_hint(void* self, int32_t which, void* constrai
 ///
 void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
+/// @warning DEPRECATED: Use `q_graphicslayoutitem_super_size_hint` instead
+///
+#define q_graphicslayoutitem_qbase_size_hint q_graphicslayoutitem_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#sizeHint)
 ///
 /// Base class method implementation
@@ -423,7 +451,7 @@ void q_graphicslayoutitem_on_size_hint(void* self, QSizeF* (*callback)(void*, in
 /// @param which enum Qt__SizeHint
 /// @param constraint QSizeF*
 ///
-QSizeF* q_graphicslayoutitem_qbase_size_hint(void* self, int32_t which, void* constraint);
+QSizeF* q_graphicslayoutitem_super_size_hint(void* self, int32_t which, void* constraint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgraphicslayoutitem.html#setSizePolicy)
 ///

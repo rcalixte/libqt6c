@@ -82,6 +82,10 @@ bool k_tar_do_write_sym_link(void* self, const char* name, const char* target, c
 ///
 void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*, const char*, const char*, const char*, mode_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_tar_super_do_write_sym_link` instead
+///
+#define k_tar_qbase_do_write_sym_link k_tar_super_do_write_sym_link
+
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteSymLink)
 ///
 /// Base class method implementation
@@ -96,7 +100,7 @@ void k_tar_on_do_write_sym_link(void* self, bool (*callback)(void*, const char*,
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_qbase_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_super_do_write_sym_link(void* self, const char* name, const char* target, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteDir)
 ///
@@ -120,6 +124,10 @@ bool k_tar_do_write_dir(void* self, const char* name, const char* user, const ch
 ///
 void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, const char*, const char*, mode_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_tar_super_do_write_dir` instead
+///
+#define k_tar_qbase_do_write_dir k_tar_super_do_write_dir
+
 /// [Upstream resources](https://api.kde.org/ktar.html#doWriteDir)
 ///
 /// Base class method implementation
@@ -133,7 +141,7 @@ void k_tar_on_do_write_dir(void* self, bool (*callback)(void*, const char*, cons
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_qbase_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_super_do_write_dir(void* self, const char* name, const char* user, const char* group, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doPrepareWriting)
 ///
@@ -158,6 +166,10 @@ bool k_tar_do_prepare_writing(void* self, const char* name, const char* user, co
 ///
 void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, long long, mode_t, void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_tar_super_do_prepare_writing` instead
+///
+#define k_tar_qbase_do_prepare_writing k_tar_super_do_prepare_writing
+
 /// [Upstream resources](https://api.kde.org/ktar.html#doPrepareWriting)
 ///
 /// Base class method implementation
@@ -172,7 +184,7 @@ void k_tar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_tar_qbase_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_tar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#doFinishWriting)
 ///
@@ -190,6 +202,10 @@ bool k_tar_do_finish_writing(void* self, long long size);
 ///
 void k_tar_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
 
+/// @warning DEPRECATED: Use `k_tar_super_do_finish_writing` instead
+///
+#define k_tar_qbase_do_finish_writing k_tar_super_do_finish_writing
+
 /// [Upstream resources](https://api.kde.org/ktar.html#doFinishWriting)
 ///
 /// Base class method implementation
@@ -197,7 +213,7 @@ void k_tar_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
 /// @param self KTar*
 /// @param size long long
 ///
-bool k_tar_qbase_do_finish_writing(void* self, long long size);
+bool k_tar_super_do_finish_writing(void* self, long long size);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#openArchive)
 ///
@@ -215,6 +231,10 @@ bool k_tar_open_archive(void* self, int32_t mode);
 ///
 void k_tar_on_open_archive(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_tar_super_open_archive` instead
+///
+#define k_tar_qbase_open_archive k_tar_super_open_archive
+
 /// [Upstream resources](https://api.kde.org/ktar.html#openArchive)
 ///
 /// Base class method implementation
@@ -222,7 +242,7 @@ void k_tar_on_open_archive(void* self, bool (*callback)(void*, int32_t));
 /// @param self KTar*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool k_tar_qbase_open_archive(void* self, int32_t mode);
+bool k_tar_super_open_archive(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#closeArchive)
 ///
@@ -239,13 +259,17 @@ bool k_tar_close_archive(void* self);
 ///
 void k_tar_on_close_archive(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_tar_super_close_archive` instead
+///
+#define k_tar_qbase_close_archive k_tar_super_close_archive
+
 /// [Upstream resources](https://api.kde.org/ktar.html#closeArchive)
 ///
 /// Base class method implementation
 ///
 /// @param self KTar*
 ///
-bool k_tar_qbase_close_archive(void* self);
+bool k_tar_super_close_archive(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#createDevice)
 ///
@@ -263,6 +287,10 @@ bool k_tar_create_device(void* self, int32_t mode);
 ///
 void k_tar_on_create_device(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_tar_super_create_device` instead
+///
+#define k_tar_qbase_create_device k_tar_super_create_device
+
 /// [Upstream resources](https://api.kde.org/ktar.html#createDevice)
 ///
 /// Base class method implementation
@@ -270,7 +298,7 @@ void k_tar_on_create_device(void* self, bool (*callback)(void*, int32_t));
 /// @param self KTar*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool k_tar_qbase_create_device(void* self, int32_t mode);
+bool k_tar_super_create_device(void* self, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/ktar.html#virtual_hook)
 ///
@@ -289,6 +317,10 @@ void k_tar_virtual_hook(void* self, int id, void* data);
 ///
 void k_tar_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 
+/// @warning DEPRECATED: Use `k_tar_super_virtual_hook` instead
+///
+#define k_tar_qbase_virtual_hook k_tar_super_virtual_hook
+
 /// [Upstream resources](https://api.kde.org/ktar.html#virtual_hook)
 ///
 /// Base class method implementation
@@ -297,7 +329,7 @@ void k_tar_on_virtual_hook(void* self, void (*callback)(void*, int, void*));
 /// @param id int
 /// @param data void*
 ///
-void k_tar_qbase_virtual_hook(void* self, int id, void* data);
+void k_tar_super_virtual_hook(void* self, int id, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -767,6 +799,10 @@ bool k_tar_prepare_writing8(void* self, const char* name, const char* user, cons
 ///
 bool k_tar_open(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_tar_super_open` instead
+///
+#define k_tar_qbase_open k_tar_super_open
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#open)
@@ -776,7 +812,7 @@ bool k_tar_open(void* self, int32_t mode);
 /// @param self KTar*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool k_tar_qbase_open(void* self, int32_t mode);
+bool k_tar_super_open(void* self, int32_t mode);
 
 /// Inherited from KArchive
 ///
@@ -799,6 +835,10 @@ void k_tar_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 bool k_tar_close(void* self);
 
+/// @warning DEPRECATED: Use `k_tar_super_close` instead
+///
+#define k_tar_qbase_close k_tar_super_close
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#close)
@@ -807,7 +847,7 @@ bool k_tar_close(void* self);
 ///
 /// @param self KTar*
 ///
-bool k_tar_qbase_close(void* self);
+bool k_tar_super_close(void* self);
 
 /// Inherited from KArchive
 ///
@@ -830,6 +870,10 @@ void k_tar_on_close(void* self, bool (*callback)());
 ///
 KArchiveDirectory* k_tar_root_dir(void* self);
 
+/// @warning DEPRECATED: Use `k_tar_super_root_dir` instead
+///
+#define k_tar_qbase_root_dir k_tar_super_root_dir
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#rootDir)
@@ -838,7 +882,7 @@ KArchiveDirectory* k_tar_root_dir(void* self);
 ///
 /// @param self KTar*
 ///
-KArchiveDirectory* k_tar_qbase_root_dir(void* self);
+KArchiveDirectory* k_tar_super_root_dir(void* self);
 
 /// Inherited from KArchive
 ///
@@ -863,6 +907,10 @@ void k_tar_on_root_dir(void* self, KArchiveDirectory* (*callback)());
 ///
 bool k_tar_do_write_data(void* self, const char* data, long long size);
 
+/// @warning DEPRECATED: Use `k_tar_super_do_write_data` instead
+///
+#define k_tar_qbase_do_write_data k_tar_super_do_write_data
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#doWriteData)
@@ -873,7 +921,7 @@ bool k_tar_do_write_data(void* self, const char* data, long long size);
 /// @param data const char*
 /// @param size long long
 ///
-bool k_tar_qbase_do_write_data(void* self, const char* data, long long size);
+bool k_tar_super_do_write_data(void* self, const char* data, long long size);
 
 /// Inherited from KArchive
 ///
@@ -897,6 +945,10 @@ void k_tar_on_do_write_data(void* self, bool (*callback)(void*, const char*, lon
 ///
 void k_tar_set_error_string(void* self, const char* errorStr);
 
+/// @warning DEPRECATED: Use `k_tar_super_set_error_string` instead
+///
+#define k_tar_qbase_set_error_string k_tar_super_set_error_string
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setErrorString)
@@ -906,7 +958,7 @@ void k_tar_set_error_string(void* self, const char* errorStr);
 /// @param self KTar*
 /// @param errorStr const char*
 ///
-void k_tar_qbase_set_error_string(void* self, const char* errorStr);
+void k_tar_super_set_error_string(void* self, const char* errorStr);
 
 /// Inherited from KArchive
 ///
@@ -930,6 +982,10 @@ void k_tar_on_set_error_string(void* self, void (*callback)(void*, const char*))
 ///
 KArchiveDirectory* k_tar_find_or_create(void* self, const char* path);
 
+/// @warning DEPRECATED: Use `k_tar_super_find_or_create` instead
+///
+#define k_tar_qbase_find_or_create k_tar_super_find_or_create
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#findOrCreate)
@@ -939,7 +995,7 @@ KArchiveDirectory* k_tar_find_or_create(void* self, const char* path);
 /// @param self KTar*
 /// @param path const char*
 ///
-KArchiveDirectory* k_tar_qbase_find_or_create(void* self, const char* path);
+KArchiveDirectory* k_tar_super_find_or_create(void* self, const char* path);
 
 /// Inherited from KArchive
 ///
@@ -963,6 +1019,10 @@ void k_tar_on_find_or_create(void* self, KArchiveDirectory* (*callback)(void*, c
 ///
 void k_tar_set_device(void* self, void* dev);
 
+/// @warning DEPRECATED: Use `k_tar_super_set_device` instead
+///
+#define k_tar_qbase_set_device k_tar_super_set_device
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setDevice)
@@ -972,7 +1032,7 @@ void k_tar_set_device(void* self, void* dev);
 /// @param self KTar*
 /// @param dev QIODevice*
 ///
-void k_tar_qbase_set_device(void* self, void* dev);
+void k_tar_super_set_device(void* self, void* dev);
 
 /// Inherited from KArchive
 ///
@@ -996,6 +1056,10 @@ void k_tar_on_set_device(void* self, void (*callback)(void*, void*));
 ///
 void k_tar_set_root_dir(void* self, void* rootDir);
 
+/// @warning DEPRECATED: Use `k_tar_super_set_root_dir` instead
+///
+#define k_tar_qbase_set_root_dir k_tar_super_set_root_dir
+
 /// Inherited from KArchive
 ///
 /// [Upstream resources](https://api.kde.org/karchive.html#setRootDir)
@@ -1005,7 +1069,7 @@ void k_tar_set_root_dir(void* self, void* rootDir);
 /// @param self KTar*
 /// @param rootDir KArchiveDirectory*
 ///
-void k_tar_qbase_set_root_dir(void* self, void* rootDir);
+void k_tar_super_set_root_dir(void* self, void* rootDir);
 
 /// Inherited from KArchive
 ///

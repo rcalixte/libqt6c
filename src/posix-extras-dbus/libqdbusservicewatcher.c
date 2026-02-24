@@ -34,8 +34,8 @@ void q_dbusservicewatcher_on_meta_object(void* self, const QMetaObject* (*callba
     QDBusServiceWatcher_OnMetaObject((QDBusServiceWatcher*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_dbusservicewatcher_qbase_meta_object(void* self) {
-    return QDBusServiceWatcher_QBaseMetaObject((QDBusServiceWatcher*)self);
+const QMetaObject* q_dbusservicewatcher_super_meta_object(void* self) {
+    return QDBusServiceWatcher_SuperMetaObject((QDBusServiceWatcher*)self);
 }
 
 void* q_dbusservicewatcher_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void q_dbusservicewatcher_on_metacast(void* self, void* (*callback)(void*, const
     QDBusServiceWatcher_OnMetacast((QDBusServiceWatcher*)self, (intptr_t)callback);
 }
 
-void* q_dbusservicewatcher_qbase_metacast(void* self, const char* param1) {
-    return QDBusServiceWatcher_QBaseMetacast((QDBusServiceWatcher*)self, param1);
+void* q_dbusservicewatcher_super_metacast(void* self, const char* param1) {
+    return QDBusServiceWatcher_SuperMetacast((QDBusServiceWatcher*)self, param1);
 }
 
 int32_t q_dbusservicewatcher_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void q_dbusservicewatcher_on_metacall(void* self, int32_t (*callback)(void*, int
     QDBusServiceWatcher_OnMetacall((QDBusServiceWatcher*)self, (intptr_t)callback);
 }
 
-int32_t q_dbusservicewatcher_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QDBusServiceWatcher_QBaseMetacall((QDBusServiceWatcher*)self, param1, param2, param3);
+int32_t q_dbusservicewatcher_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QDBusServiceWatcher_SuperMetacall((QDBusServiceWatcher*)self, param1, param2, param3);
 }
 
 const char* q_dbusservicewatcher_tr(const char* s) {
@@ -380,8 +380,8 @@ bool q_dbusservicewatcher_event(void* self, void* event) {
     return QDBusServiceWatcher_Event((QDBusServiceWatcher*)self, (QEvent*)event);
 }
 
-bool q_dbusservicewatcher_qbase_event(void* self, void* event) {
-    return QDBusServiceWatcher_QBaseEvent((QDBusServiceWatcher*)self, (QEvent*)event);
+bool q_dbusservicewatcher_super_event(void* self, void* event) {
+    return QDBusServiceWatcher_SuperEvent((QDBusServiceWatcher*)self, (QEvent*)event);
 }
 
 void q_dbusservicewatcher_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -392,8 +392,8 @@ bool q_dbusservicewatcher_event_filter(void* self, void* watched, void* event) {
     return QDBusServiceWatcher_EventFilter((QDBusServiceWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_dbusservicewatcher_qbase_event_filter(void* self, void* watched, void* event) {
-    return QDBusServiceWatcher_QBaseEventFilter((QDBusServiceWatcher*)self, (QObject*)watched, (QEvent*)event);
+bool q_dbusservicewatcher_super_event_filter(void* self, void* watched, void* event) {
+    return QDBusServiceWatcher_SuperEventFilter((QDBusServiceWatcher*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_dbusservicewatcher_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -404,8 +404,8 @@ void q_dbusservicewatcher_timer_event(void* self, void* event) {
     QDBusServiceWatcher_TimerEvent((QDBusServiceWatcher*)self, (QTimerEvent*)event);
 }
 
-void q_dbusservicewatcher_qbase_timer_event(void* self, void* event) {
-    QDBusServiceWatcher_QBaseTimerEvent((QDBusServiceWatcher*)self, (QTimerEvent*)event);
+void q_dbusservicewatcher_super_timer_event(void* self, void* event) {
+    QDBusServiceWatcher_SuperTimerEvent((QDBusServiceWatcher*)self, (QTimerEvent*)event);
 }
 
 void q_dbusservicewatcher_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -416,8 +416,8 @@ void q_dbusservicewatcher_child_event(void* self, void* event) {
     QDBusServiceWatcher_ChildEvent((QDBusServiceWatcher*)self, (QChildEvent*)event);
 }
 
-void q_dbusservicewatcher_qbase_child_event(void* self, void* event) {
-    QDBusServiceWatcher_QBaseChildEvent((QDBusServiceWatcher*)self, (QChildEvent*)event);
+void q_dbusservicewatcher_super_child_event(void* self, void* event) {
+    QDBusServiceWatcher_SuperChildEvent((QDBusServiceWatcher*)self, (QChildEvent*)event);
 }
 
 void q_dbusservicewatcher_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -428,8 +428,8 @@ void q_dbusservicewatcher_custom_event(void* self, void* event) {
     QDBusServiceWatcher_CustomEvent((QDBusServiceWatcher*)self, (QEvent*)event);
 }
 
-void q_dbusservicewatcher_qbase_custom_event(void* self, void* event) {
-    QDBusServiceWatcher_QBaseCustomEvent((QDBusServiceWatcher*)self, (QEvent*)event);
+void q_dbusservicewatcher_super_custom_event(void* self, void* event) {
+    QDBusServiceWatcher_SuperCustomEvent((QDBusServiceWatcher*)self, (QEvent*)event);
 }
 
 void q_dbusservicewatcher_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -440,8 +440,8 @@ void q_dbusservicewatcher_connect_notify(void* self, void* signal) {
     QDBusServiceWatcher_ConnectNotify((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusservicewatcher_qbase_connect_notify(void* self, void* signal) {
-    QDBusServiceWatcher_QBaseConnectNotify((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
+void q_dbusservicewatcher_super_connect_notify(void* self, void* signal) {
+    QDBusServiceWatcher_SuperConnectNotify((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusservicewatcher_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -452,8 +452,8 @@ void q_dbusservicewatcher_disconnect_notify(void* self, void* signal) {
     QDBusServiceWatcher_DisconnectNotify((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
 }
 
-void q_dbusservicewatcher_qbase_disconnect_notify(void* self, void* signal) {
-    QDBusServiceWatcher_QBaseDisconnectNotify((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
+void q_dbusservicewatcher_super_disconnect_notify(void* self, void* signal) {
+    QDBusServiceWatcher_SuperDisconnectNotify((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusservicewatcher_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -464,8 +464,8 @@ QObject* q_dbusservicewatcher_sender(void* self) {
     return QDBusServiceWatcher_Sender((QDBusServiceWatcher*)self);
 }
 
-QObject* q_dbusservicewatcher_qbase_sender(void* self) {
-    return QDBusServiceWatcher_QBaseSender((QDBusServiceWatcher*)self);
+QObject* q_dbusservicewatcher_super_sender(void* self) {
+    return QDBusServiceWatcher_SuperSender((QDBusServiceWatcher*)self);
 }
 
 void q_dbusservicewatcher_on_sender(void* self, QObject* (*callback)()) {
@@ -476,8 +476,8 @@ int32_t q_dbusservicewatcher_sender_signal_index(void* self) {
     return QDBusServiceWatcher_SenderSignalIndex((QDBusServiceWatcher*)self);
 }
 
-int32_t q_dbusservicewatcher_qbase_sender_signal_index(void* self) {
-    return QDBusServiceWatcher_QBaseSenderSignalIndex((QDBusServiceWatcher*)self);
+int32_t q_dbusservicewatcher_super_sender_signal_index(void* self) {
+    return QDBusServiceWatcher_SuperSenderSignalIndex((QDBusServiceWatcher*)self);
 }
 
 void q_dbusservicewatcher_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -488,8 +488,8 @@ int32_t q_dbusservicewatcher_receivers(void* self, const char* signal) {
     return QDBusServiceWatcher_Receivers((QDBusServiceWatcher*)self, signal);
 }
 
-int32_t q_dbusservicewatcher_qbase_receivers(void* self, const char* signal) {
-    return QDBusServiceWatcher_QBaseReceivers((QDBusServiceWatcher*)self, signal);
+int32_t q_dbusservicewatcher_super_receivers(void* self, const char* signal) {
+    return QDBusServiceWatcher_SuperReceivers((QDBusServiceWatcher*)self, signal);
 }
 
 void q_dbusservicewatcher_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -500,8 +500,8 @@ bool q_dbusservicewatcher_is_signal_connected(void* self, void* signal) {
     return QDBusServiceWatcher_IsSignalConnected((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
 }
 
-bool q_dbusservicewatcher_qbase_is_signal_connected(void* self, void* signal) {
-    return QDBusServiceWatcher_QBaseIsSignalConnected((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
+bool q_dbusservicewatcher_super_is_signal_connected(void* self, void* signal) {
+    return QDBusServiceWatcher_SuperIsSignalConnected((QDBusServiceWatcher*)self, (QMetaMethod*)signal);
 }
 
 void q_dbusservicewatcher_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

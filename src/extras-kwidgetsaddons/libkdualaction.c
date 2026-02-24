@@ -24,8 +24,8 @@ void k_dualaction_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KDualAction_OnMetaObject((KDualAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_dualaction_qbase_meta_object(void* self) {
-    return KDualAction_QBaseMetaObject((KDualAction*)self);
+const QMetaObject* k_dualaction_super_meta_object(void* self) {
+    return KDualAction_SuperMetaObject((KDualAction*)self);
 }
 
 void* k_dualaction_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void k_dualaction_on_metacast(void* self, void* (*callback)(void*, const char*))
     KDualAction_OnMetacast((KDualAction*)self, (intptr_t)callback);
 }
 
-void* k_dualaction_qbase_metacast(void* self, const char* param1) {
-    return KDualAction_QBaseMetacast((KDualAction*)self, param1);
+void* k_dualaction_super_metacast(void* self, const char* param1) {
+    return KDualAction_SuperMetacast((KDualAction*)self, param1);
 }
 
 int32_t k_dualaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void k_dualaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KDualAction_OnMetacall((KDualAction*)self, (intptr_t)callback);
 }
 
-int32_t k_dualaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDualAction_QBaseMetacall((KDualAction*)self, param1, param2, param3);
+int32_t k_dualaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDualAction_SuperMetacall((KDualAction*)self, param1, param2, param3);
 }
 
 const char* k_dualaction_tr(const char* s) {
@@ -697,8 +697,8 @@ bool k_dualaction_event(void* self, void* param1) {
     return KDualAction_Event((KDualAction*)self, (QEvent*)param1);
 }
 
-bool k_dualaction_qbase_event(void* self, void* param1) {
-    return KDualAction_QBaseEvent((KDualAction*)self, (QEvent*)param1);
+bool k_dualaction_super_event(void* self, void* param1) {
+    return KDualAction_SuperEvent((KDualAction*)self, (QEvent*)param1);
 }
 
 void k_dualaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -709,8 +709,8 @@ bool k_dualaction_event_filter(void* self, void* watched, void* event) {
     return KDualAction_EventFilter((KDualAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_dualaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KDualAction_QBaseEventFilter((KDualAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_dualaction_super_event_filter(void* self, void* watched, void* event) {
+    return KDualAction_SuperEventFilter((KDualAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_dualaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -721,8 +721,8 @@ void k_dualaction_timer_event(void* self, void* event) {
     KDualAction_TimerEvent((KDualAction*)self, (QTimerEvent*)event);
 }
 
-void k_dualaction_qbase_timer_event(void* self, void* event) {
-    KDualAction_QBaseTimerEvent((KDualAction*)self, (QTimerEvent*)event);
+void k_dualaction_super_timer_event(void* self, void* event) {
+    KDualAction_SuperTimerEvent((KDualAction*)self, (QTimerEvent*)event);
 }
 
 void k_dualaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -733,8 +733,8 @@ void k_dualaction_child_event(void* self, void* event) {
     KDualAction_ChildEvent((KDualAction*)self, (QChildEvent*)event);
 }
 
-void k_dualaction_qbase_child_event(void* self, void* event) {
-    KDualAction_QBaseChildEvent((KDualAction*)self, (QChildEvent*)event);
+void k_dualaction_super_child_event(void* self, void* event) {
+    KDualAction_SuperChildEvent((KDualAction*)self, (QChildEvent*)event);
 }
 
 void k_dualaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -745,8 +745,8 @@ void k_dualaction_custom_event(void* self, void* event) {
     KDualAction_CustomEvent((KDualAction*)self, (QEvent*)event);
 }
 
-void k_dualaction_qbase_custom_event(void* self, void* event) {
-    KDualAction_QBaseCustomEvent((KDualAction*)self, (QEvent*)event);
+void k_dualaction_super_custom_event(void* self, void* event) {
+    KDualAction_SuperCustomEvent((KDualAction*)self, (QEvent*)event);
 }
 
 void k_dualaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -757,8 +757,8 @@ void k_dualaction_connect_notify(void* self, void* signal) {
     KDualAction_ConnectNotify((KDualAction*)self, (QMetaMethod*)signal);
 }
 
-void k_dualaction_qbase_connect_notify(void* self, void* signal) {
-    KDualAction_QBaseConnectNotify((KDualAction*)self, (QMetaMethod*)signal);
+void k_dualaction_super_connect_notify(void* self, void* signal) {
+    KDualAction_SuperConnectNotify((KDualAction*)self, (QMetaMethod*)signal);
 }
 
 void k_dualaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -769,8 +769,8 @@ void k_dualaction_disconnect_notify(void* self, void* signal) {
     KDualAction_DisconnectNotify((KDualAction*)self, (QMetaMethod*)signal);
 }
 
-void k_dualaction_qbase_disconnect_notify(void* self, void* signal) {
-    KDualAction_QBaseDisconnectNotify((KDualAction*)self, (QMetaMethod*)signal);
+void k_dualaction_super_disconnect_notify(void* self, void* signal) {
+    KDualAction_SuperDisconnectNotify((KDualAction*)self, (QMetaMethod*)signal);
 }
 
 void k_dualaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -781,8 +781,8 @@ QObject* k_dualaction_sender(void* self) {
     return KDualAction_Sender((KDualAction*)self);
 }
 
-QObject* k_dualaction_qbase_sender(void* self) {
-    return KDualAction_QBaseSender((KDualAction*)self);
+QObject* k_dualaction_super_sender(void* self) {
+    return KDualAction_SuperSender((KDualAction*)self);
 }
 
 void k_dualaction_on_sender(void* self, QObject* (*callback)()) {
@@ -793,8 +793,8 @@ int32_t k_dualaction_sender_signal_index(void* self) {
     return KDualAction_SenderSignalIndex((KDualAction*)self);
 }
 
-int32_t k_dualaction_qbase_sender_signal_index(void* self) {
-    return KDualAction_QBaseSenderSignalIndex((KDualAction*)self);
+int32_t k_dualaction_super_sender_signal_index(void* self) {
+    return KDualAction_SuperSenderSignalIndex((KDualAction*)self);
 }
 
 void k_dualaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -805,8 +805,8 @@ int32_t k_dualaction_receivers(void* self, const char* signal) {
     return KDualAction_Receivers((KDualAction*)self, signal);
 }
 
-int32_t k_dualaction_qbase_receivers(void* self, const char* signal) {
-    return KDualAction_QBaseReceivers((KDualAction*)self, signal);
+int32_t k_dualaction_super_receivers(void* self, const char* signal) {
+    return KDualAction_SuperReceivers((KDualAction*)self, signal);
 }
 
 void k_dualaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -817,8 +817,8 @@ bool k_dualaction_is_signal_connected(void* self, void* signal) {
     return KDualAction_IsSignalConnected((KDualAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_dualaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KDualAction_QBaseIsSignalConnected((KDualAction*)self, (QMetaMethod*)signal);
+bool k_dualaction_super_is_signal_connected(void* self, void* signal) {
+    return KDualAction_SuperIsSignalConnected((KDualAction*)self, (QMetaMethod*)signal);
 }
 
 void k_dualaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

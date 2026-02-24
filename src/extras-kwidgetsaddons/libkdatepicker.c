@@ -40,8 +40,8 @@ void k_datepicker_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KDatePicker_OnMetaObject((KDatePicker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_datepicker_qbase_meta_object(void* self) {
-    return KDatePicker_QBaseMetaObject((KDatePicker*)self);
+const QMetaObject* k_datepicker_super_meta_object(void* self) {
+    return KDatePicker_SuperMetaObject((KDatePicker*)self);
 }
 
 void* k_datepicker_metacast(void* self, const char* param1) {
@@ -52,8 +52,8 @@ void k_datepicker_on_metacast(void* self, void* (*callback)(void*, const char*))
     KDatePicker_OnMetacast((KDatePicker*)self, (intptr_t)callback);
 }
 
-void* k_datepicker_qbase_metacast(void* self, const char* param1) {
-    return KDatePicker_QBaseMetacast((KDatePicker*)self, param1);
+void* k_datepicker_super_metacast(void* self, const char* param1) {
+    return KDatePicker_SuperMetacast((KDatePicker*)self, param1);
 }
 
 int32_t k_datepicker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -64,8 +64,8 @@ void k_datepicker_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     KDatePicker_OnMetacall((KDatePicker*)self, (intptr_t)callback);
 }
 
-int32_t k_datepicker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KDatePicker_QBaseMetacall((KDatePicker*)self, param1, param2, param3);
+int32_t k_datepicker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KDatePicker_SuperMetacall((KDatePicker*)self, param1, param2, param3);
 }
 
 const char* k_datepicker_tr(const char* s) {
@@ -83,8 +83,8 @@ void k_datepicker_on_size_hint(void* self, QSize* (*callback)()) {
     KDatePicker_OnSizeHint((KDatePicker*)self, (intptr_t)callback);
 }
 
-QSize* k_datepicker_qbase_size_hint(void* self) {
-    return KDatePicker_QBaseSizeHint((KDatePicker*)self);
+QSize* k_datepicker_super_size_hint(void* self) {
+    return KDatePicker_SuperSizeHint((KDatePicker*)self);
 }
 
 bool k_datepicker_set_date(void* self, void* date) {
@@ -123,8 +123,8 @@ void k_datepicker_on_event_filter(void* self, bool (*callback)(void*, void*, voi
     KDatePicker_OnEventFilter((KDatePicker*)self, (intptr_t)callback);
 }
 
-bool k_datepicker_qbase_event_filter(void* self, void* o, void* e) {
-    return KDatePicker_QBaseEventFilter((KDatePicker*)self, (QObject*)o, (QEvent*)e);
+bool k_datepicker_super_event_filter(void* self, void* o, void* e) {
+    return KDatePicker_SuperEventFilter((KDatePicker*)self, (QObject*)o, (QEvent*)e);
 }
 
 void k_datepicker_resize_event(void* self, void* param1) {
@@ -135,8 +135,8 @@ void k_datepicker_on_resize_event(void* self, void (*callback)(void*, void*)) {
     KDatePicker_OnResizeEvent((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_resize_event(void* self, void* param1) {
-    KDatePicker_QBaseResizeEvent((KDatePicker*)self, (QResizeEvent*)param1);
+void k_datepicker_super_resize_event(void* self, void* param1) {
+    KDatePicker_SuperResizeEvent((KDatePicker*)self, (QResizeEvent*)param1);
 }
 
 void k_datepicker_change_event(void* self, void* event) {
@@ -147,8 +147,8 @@ void k_datepicker_on_change_event(void* self, void (*callback)(void*, void*)) {
     KDatePicker_OnChangeEvent((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_change_event(void* self, void* event) {
-    KDatePicker_QBaseChangeEvent((KDatePicker*)self, (QEvent*)event);
+void k_datepicker_super_change_event(void* self, void* event) {
+    KDatePicker_SuperChangeEvent((KDatePicker*)self, (QEvent*)event);
 }
 
 void k_datepicker_date_changed_slot(void* self, void* date) {
@@ -159,8 +159,8 @@ void k_datepicker_on_date_changed_slot(void* self, void (*callback)(void*, void*
     KDatePicker_OnDateChangedSlot((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_date_changed_slot(void* self, void* date) {
-    KDatePicker_QBaseDateChangedSlot((KDatePicker*)self, (QDate*)date);
+void k_datepicker_super_date_changed_slot(void* self, void* date) {
+    KDatePicker_SuperDateChangedSlot((KDatePicker*)self, (QDate*)date);
 }
 
 void k_datepicker_table_clicked_slot(void* self) {
@@ -171,8 +171,8 @@ void k_datepicker_on_table_clicked_slot(void* self, void (*callback)()) {
     KDatePicker_OnTableClickedSlot((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_table_clicked_slot(void* self) {
-    KDatePicker_QBaseTableClickedSlot((KDatePicker*)self);
+void k_datepicker_super_table_clicked_slot(void* self) {
+    KDatePicker_SuperTableClickedSlot((KDatePicker*)self);
 }
 
 void k_datepicker_month_forward_clicked(void* self) {
@@ -183,8 +183,8 @@ void k_datepicker_on_month_forward_clicked(void* self, void (*callback)()) {
     KDatePicker_OnMonthForwardClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_month_forward_clicked(void* self) {
-    KDatePicker_QBaseMonthForwardClicked((KDatePicker*)self);
+void k_datepicker_super_month_forward_clicked(void* self) {
+    KDatePicker_SuperMonthForwardClicked((KDatePicker*)self);
 }
 
 void k_datepicker_month_backward_clicked(void* self) {
@@ -195,8 +195,8 @@ void k_datepicker_on_month_backward_clicked(void* self, void (*callback)()) {
     KDatePicker_OnMonthBackwardClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_month_backward_clicked(void* self) {
-    KDatePicker_QBaseMonthBackwardClicked((KDatePicker*)self);
+void k_datepicker_super_month_backward_clicked(void* self) {
+    KDatePicker_SuperMonthBackwardClicked((KDatePicker*)self);
 }
 
 void k_datepicker_year_forward_clicked(void* self) {
@@ -207,8 +207,8 @@ void k_datepicker_on_year_forward_clicked(void* self, void (*callback)()) {
     KDatePicker_OnYearForwardClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_year_forward_clicked(void* self) {
-    KDatePicker_QBaseYearForwardClicked((KDatePicker*)self);
+void k_datepicker_super_year_forward_clicked(void* self) {
+    KDatePicker_SuperYearForwardClicked((KDatePicker*)self);
 }
 
 void k_datepicker_year_backward_clicked(void* self) {
@@ -219,8 +219,8 @@ void k_datepicker_on_year_backward_clicked(void* self, void (*callback)()) {
     KDatePicker_OnYearBackwardClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_year_backward_clicked(void* self) {
-    KDatePicker_QBaseYearBackwardClicked((KDatePicker*)self);
+void k_datepicker_super_year_backward_clicked(void* self) {
+    KDatePicker_SuperYearBackwardClicked((KDatePicker*)self);
 }
 
 void k_datepicker_select_month_clicked(void* self) {
@@ -231,8 +231,8 @@ void k_datepicker_on_select_month_clicked(void* self, void (*callback)()) {
     KDatePicker_OnSelectMonthClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_select_month_clicked(void* self) {
-    KDatePicker_QBaseSelectMonthClicked((KDatePicker*)self);
+void k_datepicker_super_select_month_clicked(void* self) {
+    KDatePicker_SuperSelectMonthClicked((KDatePicker*)self);
 }
 
 void k_datepicker_select_year_clicked(void* self) {
@@ -243,8 +243,8 @@ void k_datepicker_on_select_year_clicked(void* self, void (*callback)()) {
     KDatePicker_OnSelectYearClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_select_year_clicked(void* self) {
-    KDatePicker_QBaseSelectYearClicked((KDatePicker*)self);
+void k_datepicker_super_select_year_clicked(void* self) {
+    KDatePicker_SuperSelectYearClicked((KDatePicker*)self);
 }
 
 void k_datepicker_uncheck_year_selector(void* self) {
@@ -255,8 +255,8 @@ void k_datepicker_on_uncheck_year_selector(void* self, void (*callback)()) {
     KDatePicker_OnUncheckYearSelector((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_uncheck_year_selector(void* self) {
-    KDatePicker_QBaseUncheckYearSelector((KDatePicker*)self);
+void k_datepicker_super_uncheck_year_selector(void* self) {
+    KDatePicker_SuperUncheckYearSelector((KDatePicker*)self);
 }
 
 void k_datepicker_line_enter_pressed(void* self) {
@@ -267,8 +267,8 @@ void k_datepicker_on_line_enter_pressed(void* self, void (*callback)()) {
     KDatePicker_OnLineEnterPressed((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_line_enter_pressed(void* self) {
-    KDatePicker_QBaseLineEnterPressed((KDatePicker*)self);
+void k_datepicker_super_line_enter_pressed(void* self) {
+    KDatePicker_SuperLineEnterPressed((KDatePicker*)self);
 }
 
 void k_datepicker_today_button_clicked(void* self) {
@@ -279,8 +279,8 @@ void k_datepicker_on_today_button_clicked(void* self, void (*callback)()) {
     KDatePicker_OnTodayButtonClicked((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_today_button_clicked(void* self) {
-    KDatePicker_QBaseTodayButtonClicked((KDatePicker*)self);
+void k_datepicker_super_today_button_clicked(void* self) {
+    KDatePicker_SuperTodayButtonClicked((KDatePicker*)self);
 }
 
 void k_datepicker_week_selected(void* self, int param1) {
@@ -291,8 +291,8 @@ void k_datepicker_on_week_selected(void* self, void (*callback)(void*, int)) {
     KDatePicker_OnWeekSelected((KDatePicker*)self, (intptr_t)callback);
 }
 
-void k_datepicker_qbase_week_selected(void* self, int param1) {
-    KDatePicker_QBaseWeekSelected((KDatePicker*)self, param1);
+void k_datepicker_super_week_selected(void* self, int param1) {
+    KDatePicker_SuperWeekSelected((KDatePicker*)self, param1);
 }
 
 void k_datepicker_date_changed(void* self, void* date) {
@@ -1782,8 +1782,8 @@ bool k_datepicker_event(void* self, void* e) {
     return KDatePicker_Event((KDatePicker*)self, (QEvent*)e);
 }
 
-bool k_datepicker_qbase_event(void* self, void* e) {
-    return KDatePicker_QBaseEvent((KDatePicker*)self, (QEvent*)e);
+bool k_datepicker_super_event(void* self, void* e) {
+    return KDatePicker_SuperEvent((KDatePicker*)self, (QEvent*)e);
 }
 
 void k_datepicker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1794,8 +1794,8 @@ void k_datepicker_paint_event(void* self, void* param1) {
     KDatePicker_PaintEvent((KDatePicker*)self, (QPaintEvent*)param1);
 }
 
-void k_datepicker_qbase_paint_event(void* self, void* param1) {
-    KDatePicker_QBasePaintEvent((KDatePicker*)self, (QPaintEvent*)param1);
+void k_datepicker_super_paint_event(void* self, void* param1) {
+    KDatePicker_SuperPaintEvent((KDatePicker*)self, (QPaintEvent*)param1);
 }
 
 void k_datepicker_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1806,8 +1806,8 @@ void k_datepicker_init_style_option(void* self, void* option) {
     KDatePicker_InitStyleOption((KDatePicker*)self, (QStyleOptionFrame*)option);
 }
 
-void k_datepicker_qbase_init_style_option(void* self, void* option) {
-    KDatePicker_QBaseInitStyleOption((KDatePicker*)self, (QStyleOptionFrame*)option);
+void k_datepicker_super_init_style_option(void* self, void* option) {
+    KDatePicker_SuperInitStyleOption((KDatePicker*)self, (QStyleOptionFrame*)option);
 }
 
 void k_datepicker_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1818,8 +1818,8 @@ int32_t k_datepicker_dev_type(void* self) {
     return KDatePicker_DevType((KDatePicker*)self);
 }
 
-int32_t k_datepicker_qbase_dev_type(void* self) {
-    return KDatePicker_QBaseDevType((KDatePicker*)self);
+int32_t k_datepicker_super_dev_type(void* self) {
+    return KDatePicker_SuperDevType((KDatePicker*)self);
 }
 
 void k_datepicker_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1830,8 +1830,8 @@ void k_datepicker_set_visible(void* self, bool visible) {
     KDatePicker_SetVisible((KDatePicker*)self, visible);
 }
 
-void k_datepicker_qbase_set_visible(void* self, bool visible) {
-    KDatePicker_QBaseSetVisible((KDatePicker*)self, visible);
+void k_datepicker_super_set_visible(void* self, bool visible) {
+    KDatePicker_SuperSetVisible((KDatePicker*)self, visible);
 }
 
 void k_datepicker_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1842,8 +1842,8 @@ QSize* k_datepicker_minimum_size_hint(void* self) {
     return KDatePicker_MinimumSizeHint((KDatePicker*)self);
 }
 
-QSize* k_datepicker_qbase_minimum_size_hint(void* self) {
-    return KDatePicker_QBaseMinimumSizeHint((KDatePicker*)self);
+QSize* k_datepicker_super_minimum_size_hint(void* self) {
+    return KDatePicker_SuperMinimumSizeHint((KDatePicker*)self);
 }
 
 void k_datepicker_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1854,8 +1854,8 @@ int32_t k_datepicker_height_for_width(void* self, int param1) {
     return KDatePicker_HeightForWidth((KDatePicker*)self, param1);
 }
 
-int32_t k_datepicker_qbase_height_for_width(void* self, int param1) {
-    return KDatePicker_QBaseHeightForWidth((KDatePicker*)self, param1);
+int32_t k_datepicker_super_height_for_width(void* self, int param1) {
+    return KDatePicker_SuperHeightForWidth((KDatePicker*)self, param1);
 }
 
 void k_datepicker_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1866,8 +1866,8 @@ bool k_datepicker_has_height_for_width(void* self) {
     return KDatePicker_HasHeightForWidth((KDatePicker*)self);
 }
 
-bool k_datepicker_qbase_has_height_for_width(void* self) {
-    return KDatePicker_QBaseHasHeightForWidth((KDatePicker*)self);
+bool k_datepicker_super_has_height_for_width(void* self) {
+    return KDatePicker_SuperHasHeightForWidth((KDatePicker*)self);
 }
 
 void k_datepicker_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1878,8 +1878,8 @@ QPaintEngine* k_datepicker_paint_engine(void* self) {
     return KDatePicker_PaintEngine((KDatePicker*)self);
 }
 
-QPaintEngine* k_datepicker_qbase_paint_engine(void* self) {
-    return KDatePicker_QBasePaintEngine((KDatePicker*)self);
+QPaintEngine* k_datepicker_super_paint_engine(void* self) {
+    return KDatePicker_SuperPaintEngine((KDatePicker*)self);
 }
 
 void k_datepicker_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1890,8 +1890,8 @@ void k_datepicker_mouse_press_event(void* self, void* event) {
     KDatePicker_MousePressEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
-void k_datepicker_qbase_mouse_press_event(void* self, void* event) {
-    KDatePicker_QBaseMousePressEvent((KDatePicker*)self, (QMouseEvent*)event);
+void k_datepicker_super_mouse_press_event(void* self, void* event) {
+    KDatePicker_SuperMousePressEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
 void k_datepicker_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1902,8 +1902,8 @@ void k_datepicker_mouse_release_event(void* self, void* event) {
     KDatePicker_MouseReleaseEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
-void k_datepicker_qbase_mouse_release_event(void* self, void* event) {
-    KDatePicker_QBaseMouseReleaseEvent((KDatePicker*)self, (QMouseEvent*)event);
+void k_datepicker_super_mouse_release_event(void* self, void* event) {
+    KDatePicker_SuperMouseReleaseEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
 void k_datepicker_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1914,8 +1914,8 @@ void k_datepicker_mouse_double_click_event(void* self, void* event) {
     KDatePicker_MouseDoubleClickEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
-void k_datepicker_qbase_mouse_double_click_event(void* self, void* event) {
-    KDatePicker_QBaseMouseDoubleClickEvent((KDatePicker*)self, (QMouseEvent*)event);
+void k_datepicker_super_mouse_double_click_event(void* self, void* event) {
+    KDatePicker_SuperMouseDoubleClickEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
 void k_datepicker_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1926,8 +1926,8 @@ void k_datepicker_mouse_move_event(void* self, void* event) {
     KDatePicker_MouseMoveEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
-void k_datepicker_qbase_mouse_move_event(void* self, void* event) {
-    KDatePicker_QBaseMouseMoveEvent((KDatePicker*)self, (QMouseEvent*)event);
+void k_datepicker_super_mouse_move_event(void* self, void* event) {
+    KDatePicker_SuperMouseMoveEvent((KDatePicker*)self, (QMouseEvent*)event);
 }
 
 void k_datepicker_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ void k_datepicker_wheel_event(void* self, void* event) {
     KDatePicker_WheelEvent((KDatePicker*)self, (QWheelEvent*)event);
 }
 
-void k_datepicker_qbase_wheel_event(void* self, void* event) {
-    KDatePicker_QBaseWheelEvent((KDatePicker*)self, (QWheelEvent*)event);
+void k_datepicker_super_wheel_event(void* self, void* event) {
+    KDatePicker_SuperWheelEvent((KDatePicker*)self, (QWheelEvent*)event);
 }
 
 void k_datepicker_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ void k_datepicker_key_press_event(void* self, void* event) {
     KDatePicker_KeyPressEvent((KDatePicker*)self, (QKeyEvent*)event);
 }
 
-void k_datepicker_qbase_key_press_event(void* self, void* event) {
-    KDatePicker_QBaseKeyPressEvent((KDatePicker*)self, (QKeyEvent*)event);
+void k_datepicker_super_key_press_event(void* self, void* event) {
+    KDatePicker_SuperKeyPressEvent((KDatePicker*)self, (QKeyEvent*)event);
 }
 
 void k_datepicker_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1962,8 +1962,8 @@ void k_datepicker_key_release_event(void* self, void* event) {
     KDatePicker_KeyReleaseEvent((KDatePicker*)self, (QKeyEvent*)event);
 }
 
-void k_datepicker_qbase_key_release_event(void* self, void* event) {
-    KDatePicker_QBaseKeyReleaseEvent((KDatePicker*)self, (QKeyEvent*)event);
+void k_datepicker_super_key_release_event(void* self, void* event) {
+    KDatePicker_SuperKeyReleaseEvent((KDatePicker*)self, (QKeyEvent*)event);
 }
 
 void k_datepicker_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ void k_datepicker_focus_in_event(void* self, void* event) {
     KDatePicker_FocusInEvent((KDatePicker*)self, (QFocusEvent*)event);
 }
 
-void k_datepicker_qbase_focus_in_event(void* self, void* event) {
-    KDatePicker_QBaseFocusInEvent((KDatePicker*)self, (QFocusEvent*)event);
+void k_datepicker_super_focus_in_event(void* self, void* event) {
+    KDatePicker_SuperFocusInEvent((KDatePicker*)self, (QFocusEvent*)event);
 }
 
 void k_datepicker_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ void k_datepicker_focus_out_event(void* self, void* event) {
     KDatePicker_FocusOutEvent((KDatePicker*)self, (QFocusEvent*)event);
 }
 
-void k_datepicker_qbase_focus_out_event(void* self, void* event) {
-    KDatePicker_QBaseFocusOutEvent((KDatePicker*)self, (QFocusEvent*)event);
+void k_datepicker_super_focus_out_event(void* self, void* event) {
+    KDatePicker_SuperFocusOutEvent((KDatePicker*)self, (QFocusEvent*)event);
 }
 
 void k_datepicker_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void k_datepicker_enter_event(void* self, void* event) {
     KDatePicker_EnterEvent((KDatePicker*)self, (QEnterEvent*)event);
 }
 
-void k_datepicker_qbase_enter_event(void* self, void* event) {
-    KDatePicker_QBaseEnterEvent((KDatePicker*)self, (QEnterEvent*)event);
+void k_datepicker_super_enter_event(void* self, void* event) {
+    KDatePicker_SuperEnterEvent((KDatePicker*)self, (QEnterEvent*)event);
 }
 
 void k_datepicker_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void k_datepicker_leave_event(void* self, void* event) {
     KDatePicker_LeaveEvent((KDatePicker*)self, (QEvent*)event);
 }
 
-void k_datepicker_qbase_leave_event(void* self, void* event) {
-    KDatePicker_QBaseLeaveEvent((KDatePicker*)self, (QEvent*)event);
+void k_datepicker_super_leave_event(void* self, void* event) {
+    KDatePicker_SuperLeaveEvent((KDatePicker*)self, (QEvent*)event);
 }
 
 void k_datepicker_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void k_datepicker_move_event(void* self, void* event) {
     KDatePicker_MoveEvent((KDatePicker*)self, (QMoveEvent*)event);
 }
 
-void k_datepicker_qbase_move_event(void* self, void* event) {
-    KDatePicker_QBaseMoveEvent((KDatePicker*)self, (QMoveEvent*)event);
+void k_datepicker_super_move_event(void* self, void* event) {
+    KDatePicker_SuperMoveEvent((KDatePicker*)self, (QMoveEvent*)event);
 }
 
 void k_datepicker_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void k_datepicker_close_event(void* self, void* event) {
     KDatePicker_CloseEvent((KDatePicker*)self, (QCloseEvent*)event);
 }
 
-void k_datepicker_qbase_close_event(void* self, void* event) {
-    KDatePicker_QBaseCloseEvent((KDatePicker*)self, (QCloseEvent*)event);
+void k_datepicker_super_close_event(void* self, void* event) {
+    KDatePicker_SuperCloseEvent((KDatePicker*)self, (QCloseEvent*)event);
 }
 
 void k_datepicker_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void k_datepicker_context_menu_event(void* self, void* event) {
     KDatePicker_ContextMenuEvent((KDatePicker*)self, (QContextMenuEvent*)event);
 }
 
-void k_datepicker_qbase_context_menu_event(void* self, void* event) {
-    KDatePicker_QBaseContextMenuEvent((KDatePicker*)self, (QContextMenuEvent*)event);
+void k_datepicker_super_context_menu_event(void* self, void* event) {
+    KDatePicker_SuperContextMenuEvent((KDatePicker*)self, (QContextMenuEvent*)event);
 }
 
 void k_datepicker_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void k_datepicker_tablet_event(void* self, void* event) {
     KDatePicker_TabletEvent((KDatePicker*)self, (QTabletEvent*)event);
 }
 
-void k_datepicker_qbase_tablet_event(void* self, void* event) {
-    KDatePicker_QBaseTabletEvent((KDatePicker*)self, (QTabletEvent*)event);
+void k_datepicker_super_tablet_event(void* self, void* event) {
+    KDatePicker_SuperTabletEvent((KDatePicker*)self, (QTabletEvent*)event);
 }
 
 void k_datepicker_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void k_datepicker_action_event(void* self, void* event) {
     KDatePicker_ActionEvent((KDatePicker*)self, (QActionEvent*)event);
 }
 
-void k_datepicker_qbase_action_event(void* self, void* event) {
-    KDatePicker_QBaseActionEvent((KDatePicker*)self, (QActionEvent*)event);
+void k_datepicker_super_action_event(void* self, void* event) {
+    KDatePicker_SuperActionEvent((KDatePicker*)self, (QActionEvent*)event);
 }
 
 void k_datepicker_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void k_datepicker_drag_enter_event(void* self, void* event) {
     KDatePicker_DragEnterEvent((KDatePicker*)self, (QDragEnterEvent*)event);
 }
 
-void k_datepicker_qbase_drag_enter_event(void* self, void* event) {
-    KDatePicker_QBaseDragEnterEvent((KDatePicker*)self, (QDragEnterEvent*)event);
+void k_datepicker_super_drag_enter_event(void* self, void* event) {
+    KDatePicker_SuperDragEnterEvent((KDatePicker*)self, (QDragEnterEvent*)event);
 }
 
 void k_datepicker_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void k_datepicker_drag_move_event(void* self, void* event) {
     KDatePicker_DragMoveEvent((KDatePicker*)self, (QDragMoveEvent*)event);
 }
 
-void k_datepicker_qbase_drag_move_event(void* self, void* event) {
-    KDatePicker_QBaseDragMoveEvent((KDatePicker*)self, (QDragMoveEvent*)event);
+void k_datepicker_super_drag_move_event(void* self, void* event) {
+    KDatePicker_SuperDragMoveEvent((KDatePicker*)self, (QDragMoveEvent*)event);
 }
 
 void k_datepicker_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void k_datepicker_drag_leave_event(void* self, void* event) {
     KDatePicker_DragLeaveEvent((KDatePicker*)self, (QDragLeaveEvent*)event);
 }
 
-void k_datepicker_qbase_drag_leave_event(void* self, void* event) {
-    KDatePicker_QBaseDragLeaveEvent((KDatePicker*)self, (QDragLeaveEvent*)event);
+void k_datepicker_super_drag_leave_event(void* self, void* event) {
+    KDatePicker_SuperDragLeaveEvent((KDatePicker*)self, (QDragLeaveEvent*)event);
 }
 
 void k_datepicker_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ void k_datepicker_drop_event(void* self, void* event) {
     KDatePicker_DropEvent((KDatePicker*)self, (QDropEvent*)event);
 }
 
-void k_datepicker_qbase_drop_event(void* self, void* event) {
-    KDatePicker_QBaseDropEvent((KDatePicker*)self, (QDropEvent*)event);
+void k_datepicker_super_drop_event(void* self, void* event) {
+    KDatePicker_SuperDropEvent((KDatePicker*)self, (QDropEvent*)event);
 }
 
 void k_datepicker_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2130,8 +2130,8 @@ void k_datepicker_show_event(void* self, void* event) {
     KDatePicker_ShowEvent((KDatePicker*)self, (QShowEvent*)event);
 }
 
-void k_datepicker_qbase_show_event(void* self, void* event) {
-    KDatePicker_QBaseShowEvent((KDatePicker*)self, (QShowEvent*)event);
+void k_datepicker_super_show_event(void* self, void* event) {
+    KDatePicker_SuperShowEvent((KDatePicker*)self, (QShowEvent*)event);
 }
 
 void k_datepicker_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2142,8 +2142,8 @@ void k_datepicker_hide_event(void* self, void* event) {
     KDatePicker_HideEvent((KDatePicker*)self, (QHideEvent*)event);
 }
 
-void k_datepicker_qbase_hide_event(void* self, void* event) {
-    KDatePicker_QBaseHideEvent((KDatePicker*)self, (QHideEvent*)event);
+void k_datepicker_super_hide_event(void* self, void* event) {
+    KDatePicker_SuperHideEvent((KDatePicker*)self, (QHideEvent*)event);
 }
 
 void k_datepicker_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2154,8 +2154,8 @@ bool k_datepicker_native_event(void* self, char* eventType, void* message, intpt
     return KDatePicker_NativeEvent((KDatePicker*)self, qstring(eventType), message, result);
 }
 
-bool k_datepicker_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KDatePicker_QBaseNativeEvent((KDatePicker*)self, qstring(eventType), message, result);
+bool k_datepicker_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KDatePicker_SuperNativeEvent((KDatePicker*)self, qstring(eventType), message, result);
 }
 
 void k_datepicker_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2166,8 +2166,8 @@ int32_t k_datepicker_metric(void* self, int32_t param1) {
     return KDatePicker_Metric((KDatePicker*)self, param1);
 }
 
-int32_t k_datepicker_qbase_metric(void* self, int32_t param1) {
-    return KDatePicker_QBaseMetric((KDatePicker*)self, param1);
+int32_t k_datepicker_super_metric(void* self, int32_t param1) {
+    return KDatePicker_SuperMetric((KDatePicker*)self, param1);
 }
 
 void k_datepicker_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2178,8 +2178,8 @@ void k_datepicker_init_painter(void* self, void* painter) {
     KDatePicker_InitPainter((KDatePicker*)self, (QPainter*)painter);
 }
 
-void k_datepicker_qbase_init_painter(void* self, void* painter) {
-    KDatePicker_QBaseInitPainter((KDatePicker*)self, (QPainter*)painter);
+void k_datepicker_super_init_painter(void* self, void* painter) {
+    KDatePicker_SuperInitPainter((KDatePicker*)self, (QPainter*)painter);
 }
 
 void k_datepicker_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2190,8 +2190,8 @@ QPaintDevice* k_datepicker_redirected(void* self, void* offset) {
     return KDatePicker_Redirected((KDatePicker*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_datepicker_qbase_redirected(void* self, void* offset) {
-    return KDatePicker_QBaseRedirected((KDatePicker*)self, (QPoint*)offset);
+QPaintDevice* k_datepicker_super_redirected(void* self, void* offset) {
+    return KDatePicker_SuperRedirected((KDatePicker*)self, (QPoint*)offset);
 }
 
 void k_datepicker_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2202,8 +2202,8 @@ QPainter* k_datepicker_shared_painter(void* self) {
     return KDatePicker_SharedPainter((KDatePicker*)self);
 }
 
-QPainter* k_datepicker_qbase_shared_painter(void* self) {
-    return KDatePicker_QBaseSharedPainter((KDatePicker*)self);
+QPainter* k_datepicker_super_shared_painter(void* self) {
+    return KDatePicker_SuperSharedPainter((KDatePicker*)self);
 }
 
 void k_datepicker_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2214,8 +2214,8 @@ void k_datepicker_input_method_event(void* self, void* param1) {
     KDatePicker_InputMethodEvent((KDatePicker*)self, (QInputMethodEvent*)param1);
 }
 
-void k_datepicker_qbase_input_method_event(void* self, void* param1) {
-    KDatePicker_QBaseInputMethodEvent((KDatePicker*)self, (QInputMethodEvent*)param1);
+void k_datepicker_super_input_method_event(void* self, void* param1) {
+    KDatePicker_SuperInputMethodEvent((KDatePicker*)self, (QInputMethodEvent*)param1);
 }
 
 void k_datepicker_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2226,8 +2226,8 @@ QVariant* k_datepicker_input_method_query(void* self, int32_t param1) {
     return KDatePicker_InputMethodQuery((KDatePicker*)self, param1);
 }
 
-QVariant* k_datepicker_qbase_input_method_query(void* self, int32_t param1) {
-    return KDatePicker_QBaseInputMethodQuery((KDatePicker*)self, param1);
+QVariant* k_datepicker_super_input_method_query(void* self, int32_t param1) {
+    return KDatePicker_SuperInputMethodQuery((KDatePicker*)self, param1);
 }
 
 void k_datepicker_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2238,8 +2238,8 @@ bool k_datepicker_focus_next_prev_child(void* self, bool next) {
     return KDatePicker_FocusNextPrevChild((KDatePicker*)self, next);
 }
 
-bool k_datepicker_qbase_focus_next_prev_child(void* self, bool next) {
-    return KDatePicker_QBaseFocusNextPrevChild((KDatePicker*)self, next);
+bool k_datepicker_super_focus_next_prev_child(void* self, bool next) {
+    return KDatePicker_SuperFocusNextPrevChild((KDatePicker*)self, next);
 }
 
 void k_datepicker_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2250,8 +2250,8 @@ void k_datepicker_timer_event(void* self, void* event) {
     KDatePicker_TimerEvent((KDatePicker*)self, (QTimerEvent*)event);
 }
 
-void k_datepicker_qbase_timer_event(void* self, void* event) {
-    KDatePicker_QBaseTimerEvent((KDatePicker*)self, (QTimerEvent*)event);
+void k_datepicker_super_timer_event(void* self, void* event) {
+    KDatePicker_SuperTimerEvent((KDatePicker*)self, (QTimerEvent*)event);
 }
 
 void k_datepicker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2262,8 +2262,8 @@ void k_datepicker_child_event(void* self, void* event) {
     KDatePicker_ChildEvent((KDatePicker*)self, (QChildEvent*)event);
 }
 
-void k_datepicker_qbase_child_event(void* self, void* event) {
-    KDatePicker_QBaseChildEvent((KDatePicker*)self, (QChildEvent*)event);
+void k_datepicker_super_child_event(void* self, void* event) {
+    KDatePicker_SuperChildEvent((KDatePicker*)self, (QChildEvent*)event);
 }
 
 void k_datepicker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2274,8 +2274,8 @@ void k_datepicker_custom_event(void* self, void* event) {
     KDatePicker_CustomEvent((KDatePicker*)self, (QEvent*)event);
 }
 
-void k_datepicker_qbase_custom_event(void* self, void* event) {
-    KDatePicker_QBaseCustomEvent((KDatePicker*)self, (QEvent*)event);
+void k_datepicker_super_custom_event(void* self, void* event) {
+    KDatePicker_SuperCustomEvent((KDatePicker*)self, (QEvent*)event);
 }
 
 void k_datepicker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2286,8 +2286,8 @@ void k_datepicker_connect_notify(void* self, void* signal) {
     KDatePicker_ConnectNotify((KDatePicker*)self, (QMetaMethod*)signal);
 }
 
-void k_datepicker_qbase_connect_notify(void* self, void* signal) {
-    KDatePicker_QBaseConnectNotify((KDatePicker*)self, (QMetaMethod*)signal);
+void k_datepicker_super_connect_notify(void* self, void* signal) {
+    KDatePicker_SuperConnectNotify((KDatePicker*)self, (QMetaMethod*)signal);
 }
 
 void k_datepicker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2298,8 +2298,8 @@ void k_datepicker_disconnect_notify(void* self, void* signal) {
     KDatePicker_DisconnectNotify((KDatePicker*)self, (QMetaMethod*)signal);
 }
 
-void k_datepicker_qbase_disconnect_notify(void* self, void* signal) {
-    KDatePicker_QBaseDisconnectNotify((KDatePicker*)self, (QMetaMethod*)signal);
+void k_datepicker_super_disconnect_notify(void* self, void* signal) {
+    KDatePicker_SuperDisconnectNotify((KDatePicker*)self, (QMetaMethod*)signal);
 }
 
 void k_datepicker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2310,8 +2310,8 @@ void k_datepicker_draw_frame(void* self, void* param1) {
     KDatePicker_DrawFrame((KDatePicker*)self, (QPainter*)param1);
 }
 
-void k_datepicker_qbase_draw_frame(void* self, void* param1) {
-    KDatePicker_QBaseDrawFrame((KDatePicker*)self, (QPainter*)param1);
+void k_datepicker_super_draw_frame(void* self, void* param1) {
+    KDatePicker_SuperDrawFrame((KDatePicker*)self, (QPainter*)param1);
 }
 
 void k_datepicker_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2322,8 +2322,8 @@ void k_datepicker_update_micro_focus(void* self) {
     KDatePicker_UpdateMicroFocus((KDatePicker*)self);
 }
 
-void k_datepicker_qbase_update_micro_focus(void* self) {
-    KDatePicker_QBaseUpdateMicroFocus((KDatePicker*)self);
+void k_datepicker_super_update_micro_focus(void* self) {
+    KDatePicker_SuperUpdateMicroFocus((KDatePicker*)self);
 }
 
 void k_datepicker_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2334,8 +2334,8 @@ void k_datepicker_create(void* self) {
     KDatePicker_Create((KDatePicker*)self);
 }
 
-void k_datepicker_qbase_create(void* self) {
-    KDatePicker_QBaseCreate((KDatePicker*)self);
+void k_datepicker_super_create(void* self) {
+    KDatePicker_SuperCreate((KDatePicker*)self);
 }
 
 void k_datepicker_on_create(void* self, void (*callback)()) {
@@ -2346,8 +2346,8 @@ void k_datepicker_destroy(void* self) {
     KDatePicker_Destroy((KDatePicker*)self);
 }
 
-void k_datepicker_qbase_destroy(void* self) {
-    KDatePicker_QBaseDestroy((KDatePicker*)self);
+void k_datepicker_super_destroy(void* self) {
+    KDatePicker_SuperDestroy((KDatePicker*)self);
 }
 
 void k_datepicker_on_destroy(void* self, void (*callback)()) {
@@ -2358,8 +2358,8 @@ bool k_datepicker_focus_next_child(void* self) {
     return KDatePicker_FocusNextChild((KDatePicker*)self);
 }
 
-bool k_datepicker_qbase_focus_next_child(void* self) {
-    return KDatePicker_QBaseFocusNextChild((KDatePicker*)self);
+bool k_datepicker_super_focus_next_child(void* self) {
+    return KDatePicker_SuperFocusNextChild((KDatePicker*)self);
 }
 
 void k_datepicker_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2370,8 +2370,8 @@ bool k_datepicker_focus_previous_child(void* self) {
     return KDatePicker_FocusPreviousChild((KDatePicker*)self);
 }
 
-bool k_datepicker_qbase_focus_previous_child(void* self) {
-    return KDatePicker_QBaseFocusPreviousChild((KDatePicker*)self);
+bool k_datepicker_super_focus_previous_child(void* self) {
+    return KDatePicker_SuperFocusPreviousChild((KDatePicker*)self);
 }
 
 void k_datepicker_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2382,8 +2382,8 @@ QObject* k_datepicker_sender(void* self) {
     return KDatePicker_Sender((KDatePicker*)self);
 }
 
-QObject* k_datepicker_qbase_sender(void* self) {
-    return KDatePicker_QBaseSender((KDatePicker*)self);
+QObject* k_datepicker_super_sender(void* self) {
+    return KDatePicker_SuperSender((KDatePicker*)self);
 }
 
 void k_datepicker_on_sender(void* self, QObject* (*callback)()) {
@@ -2394,8 +2394,8 @@ int32_t k_datepicker_sender_signal_index(void* self) {
     return KDatePicker_SenderSignalIndex((KDatePicker*)self);
 }
 
-int32_t k_datepicker_qbase_sender_signal_index(void* self) {
-    return KDatePicker_QBaseSenderSignalIndex((KDatePicker*)self);
+int32_t k_datepicker_super_sender_signal_index(void* self) {
+    return KDatePicker_SuperSenderSignalIndex((KDatePicker*)self);
 }
 
 void k_datepicker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2406,8 +2406,8 @@ int32_t k_datepicker_receivers(void* self, const char* signal) {
     return KDatePicker_Receivers((KDatePicker*)self, signal);
 }
 
-int32_t k_datepicker_qbase_receivers(void* self, const char* signal) {
-    return KDatePicker_QBaseReceivers((KDatePicker*)self, signal);
+int32_t k_datepicker_super_receivers(void* self, const char* signal) {
+    return KDatePicker_SuperReceivers((KDatePicker*)self, signal);
 }
 
 void k_datepicker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2418,8 +2418,8 @@ bool k_datepicker_is_signal_connected(void* self, void* signal) {
     return KDatePicker_IsSignalConnected((KDatePicker*)self, (QMetaMethod*)signal);
 }
 
-bool k_datepicker_qbase_is_signal_connected(void* self, void* signal) {
-    return KDatePicker_QBaseIsSignalConnected((KDatePicker*)self, (QMetaMethod*)signal);
+bool k_datepicker_super_is_signal_connected(void* self, void* signal) {
+    return KDatePicker_SuperIsSignalConnected((KDatePicker*)self, (QMetaMethod*)signal);
 }
 
 void k_datepicker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2430,8 +2430,8 @@ double k_datepicker_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return KDatePicker_GetDecodedMetricF((KDatePicker*)self, metricA, metricB);
 }
 
-double k_datepicker_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KDatePicker_QBaseGetDecodedMetricF((KDatePicker*)self, metricA, metricB);
+double k_datepicker_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KDatePicker_SuperGetDecodedMetricF((KDatePicker*)self, metricA, metricB);
 }
 
 void k_datepicker_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

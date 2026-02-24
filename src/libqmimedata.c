@@ -20,8 +20,8 @@ void q_mimedata_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QMimeData_OnMetaObject((QMimeData*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_mimedata_qbase_meta_object(void* self) {
-    return QMimeData_QBaseMetaObject((QMimeData*)self);
+const QMetaObject* q_mimedata_super_meta_object(void* self) {
+    return QMimeData_SuperMetaObject((QMimeData*)self);
 }
 
 void* q_mimedata_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void q_mimedata_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QMimeData_OnMetacast((QMimeData*)self, (intptr_t)callback);
 }
 
-void* q_mimedata_qbase_metacast(void* self, const char* param1) {
-    return QMimeData_QBaseMetacast((QMimeData*)self, param1);
+void* q_mimedata_super_metacast(void* self, const char* param1) {
+    return QMimeData_SuperMetacast((QMimeData*)self, param1);
 }
 
 int32_t q_mimedata_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void q_mimedata_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QMimeData_OnMetacall((QMimeData*)self, (intptr_t)callback);
 }
 
-int32_t q_mimedata_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QMimeData_QBaseMetacall((QMimeData*)self, param1, param2, param3);
+int32_t q_mimedata_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QMimeData_SuperMetacall((QMimeData*)self, param1, param2, param3);
 }
 
 const char* q_mimedata_tr(const char* s) {
@@ -145,8 +145,8 @@ void q_mimedata_on_has_format(void* self, bool (*callback)(void*, const char*)) 
     QMimeData_OnHasFormat((QMimeData*)self, (intptr_t)callback);
 }
 
-bool q_mimedata_qbase_has_format(void* self, const char* mimetype) {
-    return QMimeData_QBaseHasFormat((QMimeData*)self, qstring(mimetype));
+bool q_mimedata_super_has_format(void* self, const char* mimetype) {
+    return QMimeData_SuperHasFormat((QMimeData*)self, qstring(mimetype));
 }
 
 const char** q_mimedata_formats(void* self) {
@@ -172,8 +172,8 @@ void q_mimedata_on_formats(void* self, const char** (*callback)()) {
     QMimeData_OnFormats((QMimeData*)self, (intptr_t)callback);
 }
 
-const char** q_mimedata_qbase_formats(void* self) {
-    libqt_list _arr = QMimeData_QBaseFormats((QMimeData*)self);
+const char** q_mimedata_super_formats(void* self) {
+    libqt_list _arr = QMimeData_SuperFormats((QMimeData*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -203,8 +203,8 @@ void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(void*, const 
     QMimeData_OnRetrieveData((QMimeData*)self, (intptr_t)callback);
 }
 
-QVariant* q_mimedata_qbase_retrieve_data(void* self, const char* mimetype, void* preferredType) {
-    return QMimeData_QBaseRetrieveData((QMimeData*)self, qstring(mimetype), (QMetaType*)preferredType);
+QVariant* q_mimedata_super_retrieve_data(void* self, const char* mimetype, void* preferredType) {
+    return QMimeData_SuperRetrieveData((QMimeData*)self, qstring(mimetype), (QMetaType*)preferredType);
 }
 
 const char* q_mimedata_tr2(const char* s, const char* c) {
@@ -436,8 +436,8 @@ bool q_mimedata_event(void* self, void* event) {
     return QMimeData_Event((QMimeData*)self, (QEvent*)event);
 }
 
-bool q_mimedata_qbase_event(void* self, void* event) {
-    return QMimeData_QBaseEvent((QMimeData*)self, (QEvent*)event);
+bool q_mimedata_super_event(void* self, void* event) {
+    return QMimeData_SuperEvent((QMimeData*)self, (QEvent*)event);
 }
 
 void q_mimedata_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -448,8 +448,8 @@ bool q_mimedata_event_filter(void* self, void* watched, void* event) {
     return QMimeData_EventFilter((QMimeData*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_mimedata_qbase_event_filter(void* self, void* watched, void* event) {
-    return QMimeData_QBaseEventFilter((QMimeData*)self, (QObject*)watched, (QEvent*)event);
+bool q_mimedata_super_event_filter(void* self, void* watched, void* event) {
+    return QMimeData_SuperEventFilter((QMimeData*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_mimedata_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -460,8 +460,8 @@ void q_mimedata_timer_event(void* self, void* event) {
     QMimeData_TimerEvent((QMimeData*)self, (QTimerEvent*)event);
 }
 
-void q_mimedata_qbase_timer_event(void* self, void* event) {
-    QMimeData_QBaseTimerEvent((QMimeData*)self, (QTimerEvent*)event);
+void q_mimedata_super_timer_event(void* self, void* event) {
+    QMimeData_SuperTimerEvent((QMimeData*)self, (QTimerEvent*)event);
 }
 
 void q_mimedata_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -472,8 +472,8 @@ void q_mimedata_child_event(void* self, void* event) {
     QMimeData_ChildEvent((QMimeData*)self, (QChildEvent*)event);
 }
 
-void q_mimedata_qbase_child_event(void* self, void* event) {
-    QMimeData_QBaseChildEvent((QMimeData*)self, (QChildEvent*)event);
+void q_mimedata_super_child_event(void* self, void* event) {
+    QMimeData_SuperChildEvent((QMimeData*)self, (QChildEvent*)event);
 }
 
 void q_mimedata_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -484,8 +484,8 @@ void q_mimedata_custom_event(void* self, void* event) {
     QMimeData_CustomEvent((QMimeData*)self, (QEvent*)event);
 }
 
-void q_mimedata_qbase_custom_event(void* self, void* event) {
-    QMimeData_QBaseCustomEvent((QMimeData*)self, (QEvent*)event);
+void q_mimedata_super_custom_event(void* self, void* event) {
+    QMimeData_SuperCustomEvent((QMimeData*)self, (QEvent*)event);
 }
 
 void q_mimedata_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -496,8 +496,8 @@ void q_mimedata_connect_notify(void* self, void* signal) {
     QMimeData_ConnectNotify((QMimeData*)self, (QMetaMethod*)signal);
 }
 
-void q_mimedata_qbase_connect_notify(void* self, void* signal) {
-    QMimeData_QBaseConnectNotify((QMimeData*)self, (QMetaMethod*)signal);
+void q_mimedata_super_connect_notify(void* self, void* signal) {
+    QMimeData_SuperConnectNotify((QMimeData*)self, (QMetaMethod*)signal);
 }
 
 void q_mimedata_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -508,8 +508,8 @@ void q_mimedata_disconnect_notify(void* self, void* signal) {
     QMimeData_DisconnectNotify((QMimeData*)self, (QMetaMethod*)signal);
 }
 
-void q_mimedata_qbase_disconnect_notify(void* self, void* signal) {
-    QMimeData_QBaseDisconnectNotify((QMimeData*)self, (QMetaMethod*)signal);
+void q_mimedata_super_disconnect_notify(void* self, void* signal) {
+    QMimeData_SuperDisconnectNotify((QMimeData*)self, (QMetaMethod*)signal);
 }
 
 void q_mimedata_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -520,8 +520,8 @@ QObject* q_mimedata_sender(void* self) {
     return QMimeData_Sender((QMimeData*)self);
 }
 
-QObject* q_mimedata_qbase_sender(void* self) {
-    return QMimeData_QBaseSender((QMimeData*)self);
+QObject* q_mimedata_super_sender(void* self) {
+    return QMimeData_SuperSender((QMimeData*)self);
 }
 
 void q_mimedata_on_sender(void* self, QObject* (*callback)()) {
@@ -532,8 +532,8 @@ int32_t q_mimedata_sender_signal_index(void* self) {
     return QMimeData_SenderSignalIndex((QMimeData*)self);
 }
 
-int32_t q_mimedata_qbase_sender_signal_index(void* self) {
-    return QMimeData_QBaseSenderSignalIndex((QMimeData*)self);
+int32_t q_mimedata_super_sender_signal_index(void* self) {
+    return QMimeData_SuperSenderSignalIndex((QMimeData*)self);
 }
 
 void q_mimedata_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -544,8 +544,8 @@ int32_t q_mimedata_receivers(void* self, const char* signal) {
     return QMimeData_Receivers((QMimeData*)self, signal);
 }
 
-int32_t q_mimedata_qbase_receivers(void* self, const char* signal) {
-    return QMimeData_QBaseReceivers((QMimeData*)self, signal);
+int32_t q_mimedata_super_receivers(void* self, const char* signal) {
+    return QMimeData_SuperReceivers((QMimeData*)self, signal);
 }
 
 void q_mimedata_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -556,8 +556,8 @@ bool q_mimedata_is_signal_connected(void* self, void* signal) {
     return QMimeData_IsSignalConnected((QMimeData*)self, (QMetaMethod*)signal);
 }
 
-bool q_mimedata_qbase_is_signal_connected(void* self, void* signal) {
-    return QMimeData_QBaseIsSignalConnected((QMimeData*)self, (QMetaMethod*)signal);
+bool q_mimedata_super_is_signal_connected(void* self, void* signal) {
+    return QMimeData_SuperIsSignalConnected((QMimeData*)self, (QMetaMethod*)signal);
 }
 
 void q_mimedata_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

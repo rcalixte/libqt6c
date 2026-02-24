@@ -30,8 +30,8 @@ void q_focusframe_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QFocusFrame_OnMetaObject((QFocusFrame*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_focusframe_qbase_meta_object(void* self) {
-    return QFocusFrame_QBaseMetaObject((QFocusFrame*)self);
+const QMetaObject* q_focusframe_super_meta_object(void* self) {
+    return QFocusFrame_SuperMetaObject((QFocusFrame*)self);
 }
 
 void* q_focusframe_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void q_focusframe_on_metacast(void* self, void* (*callback)(void*, const char*))
     QFocusFrame_OnMetacast((QFocusFrame*)self, (intptr_t)callback);
 }
 
-void* q_focusframe_qbase_metacast(void* self, const char* param1) {
-    return QFocusFrame_QBaseMetacast((QFocusFrame*)self, param1);
+void* q_focusframe_super_metacast(void* self, const char* param1) {
+    return QFocusFrame_SuperMetacast((QFocusFrame*)self, param1);
 }
 
 int32_t q_focusframe_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void q_focusframe_on_metacall(void* self, int32_t (*callback)(void*, int32_t, in
     QFocusFrame_OnMetacall((QFocusFrame*)self, (intptr_t)callback);
 }
 
-int32_t q_focusframe_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QFocusFrame_QBaseMetacall((QFocusFrame*)self, param1, param2, param3);
+int32_t q_focusframe_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QFocusFrame_SuperMetacall((QFocusFrame*)self, param1, param2, param3);
 }
 
 const char* q_focusframe_tr(const char* s) {
@@ -81,8 +81,8 @@ void q_focusframe_on_event(void* self, bool (*callback)(void*, void*)) {
     QFocusFrame_OnEvent((QFocusFrame*)self, (intptr_t)callback);
 }
 
-bool q_focusframe_qbase_event(void* self, void* e) {
-    return QFocusFrame_QBaseEvent((QFocusFrame*)self, (QEvent*)e);
+bool q_focusframe_super_event(void* self, void* e) {
+    return QFocusFrame_SuperEvent((QFocusFrame*)self, (QEvent*)e);
 }
 
 bool q_focusframe_event_filter(void* self, void* param1, void* param2) {
@@ -93,8 +93,8 @@ void q_focusframe_on_event_filter(void* self, bool (*callback)(void*, void*, voi
     QFocusFrame_OnEventFilter((QFocusFrame*)self, (intptr_t)callback);
 }
 
-bool q_focusframe_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QFocusFrame_QBaseEventFilter((QFocusFrame*)self, (QObject*)param1, (QEvent*)param2);
+bool q_focusframe_super_event_filter(void* self, void* param1, void* param2) {
+    return QFocusFrame_SuperEventFilter((QFocusFrame*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_focusframe_paint_event(void* self, void* param1) {
@@ -105,8 +105,8 @@ void q_focusframe_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QFocusFrame_OnPaintEvent((QFocusFrame*)self, (intptr_t)callback);
 }
 
-void q_focusframe_qbase_paint_event(void* self, void* param1) {
-    QFocusFrame_QBasePaintEvent((QFocusFrame*)self, (QPaintEvent*)param1);
+void q_focusframe_super_paint_event(void* self, void* param1) {
+    QFocusFrame_SuperPaintEvent((QFocusFrame*)self, (QPaintEvent*)param1);
 }
 
 void q_focusframe_init_style_option(void* self, void* option) {
@@ -117,8 +117,8 @@ void q_focusframe_on_init_style_option(void* self, void (*callback)(void*, void*
     QFocusFrame_OnInitStyleOption((QFocusFrame*)self, (intptr_t)callback);
 }
 
-void q_focusframe_qbase_init_style_option(void* self, void* option) {
-    QFocusFrame_QBaseInitStyleOption((QFocusFrame*)self, (QStyleOption*)option);
+void q_focusframe_super_init_style_option(void* self, void* option) {
+    QFocusFrame_SuperInitStyleOption((QFocusFrame*)self, (QStyleOption*)option);
 }
 
 const char* q_focusframe_tr2(const char* s, const char* c) {
@@ -1520,8 +1520,8 @@ int32_t q_focusframe_dev_type(void* self) {
     return QFocusFrame_DevType((QFocusFrame*)self);
 }
 
-int32_t q_focusframe_qbase_dev_type(void* self) {
-    return QFocusFrame_QBaseDevType((QFocusFrame*)self);
+int32_t q_focusframe_super_dev_type(void* self) {
+    return QFocusFrame_SuperDevType((QFocusFrame*)self);
 }
 
 void q_focusframe_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1532,8 +1532,8 @@ void q_focusframe_set_visible(void* self, bool visible) {
     QFocusFrame_SetVisible((QFocusFrame*)self, visible);
 }
 
-void q_focusframe_qbase_set_visible(void* self, bool visible) {
-    QFocusFrame_QBaseSetVisible((QFocusFrame*)self, visible);
+void q_focusframe_super_set_visible(void* self, bool visible) {
+    QFocusFrame_SuperSetVisible((QFocusFrame*)self, visible);
 }
 
 void q_focusframe_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1544,8 +1544,8 @@ QSize* q_focusframe_size_hint(void* self) {
     return QFocusFrame_SizeHint((QFocusFrame*)self);
 }
 
-QSize* q_focusframe_qbase_size_hint(void* self) {
-    return QFocusFrame_QBaseSizeHint((QFocusFrame*)self);
+QSize* q_focusframe_super_size_hint(void* self) {
+    return QFocusFrame_SuperSizeHint((QFocusFrame*)self);
 }
 
 void q_focusframe_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1556,8 +1556,8 @@ QSize* q_focusframe_minimum_size_hint(void* self) {
     return QFocusFrame_MinimumSizeHint((QFocusFrame*)self);
 }
 
-QSize* q_focusframe_qbase_minimum_size_hint(void* self) {
-    return QFocusFrame_QBaseMinimumSizeHint((QFocusFrame*)self);
+QSize* q_focusframe_super_minimum_size_hint(void* self) {
+    return QFocusFrame_SuperMinimumSizeHint((QFocusFrame*)self);
 }
 
 void q_focusframe_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1568,8 +1568,8 @@ int32_t q_focusframe_height_for_width(void* self, int param1) {
     return QFocusFrame_HeightForWidth((QFocusFrame*)self, param1);
 }
 
-int32_t q_focusframe_qbase_height_for_width(void* self, int param1) {
-    return QFocusFrame_QBaseHeightForWidth((QFocusFrame*)self, param1);
+int32_t q_focusframe_super_height_for_width(void* self, int param1) {
+    return QFocusFrame_SuperHeightForWidth((QFocusFrame*)self, param1);
 }
 
 void q_focusframe_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1580,8 +1580,8 @@ bool q_focusframe_has_height_for_width(void* self) {
     return QFocusFrame_HasHeightForWidth((QFocusFrame*)self);
 }
 
-bool q_focusframe_qbase_has_height_for_width(void* self) {
-    return QFocusFrame_QBaseHasHeightForWidth((QFocusFrame*)self);
+bool q_focusframe_super_has_height_for_width(void* self) {
+    return QFocusFrame_SuperHasHeightForWidth((QFocusFrame*)self);
 }
 
 void q_focusframe_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1592,8 +1592,8 @@ QPaintEngine* q_focusframe_paint_engine(void* self) {
     return QFocusFrame_PaintEngine((QFocusFrame*)self);
 }
 
-QPaintEngine* q_focusframe_qbase_paint_engine(void* self) {
-    return QFocusFrame_QBasePaintEngine((QFocusFrame*)self);
+QPaintEngine* q_focusframe_super_paint_engine(void* self) {
+    return QFocusFrame_SuperPaintEngine((QFocusFrame*)self);
 }
 
 void q_focusframe_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1604,8 +1604,8 @@ void q_focusframe_mouse_press_event(void* self, void* event) {
     QFocusFrame_MousePressEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
-void q_focusframe_qbase_mouse_press_event(void* self, void* event) {
-    QFocusFrame_QBaseMousePressEvent((QFocusFrame*)self, (QMouseEvent*)event);
+void q_focusframe_super_mouse_press_event(void* self, void* event) {
+    QFocusFrame_SuperMousePressEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
 void q_focusframe_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1616,8 +1616,8 @@ void q_focusframe_mouse_release_event(void* self, void* event) {
     QFocusFrame_MouseReleaseEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
-void q_focusframe_qbase_mouse_release_event(void* self, void* event) {
-    QFocusFrame_QBaseMouseReleaseEvent((QFocusFrame*)self, (QMouseEvent*)event);
+void q_focusframe_super_mouse_release_event(void* self, void* event) {
+    QFocusFrame_SuperMouseReleaseEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
 void q_focusframe_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1628,8 +1628,8 @@ void q_focusframe_mouse_double_click_event(void* self, void* event) {
     QFocusFrame_MouseDoubleClickEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
-void q_focusframe_qbase_mouse_double_click_event(void* self, void* event) {
-    QFocusFrame_QBaseMouseDoubleClickEvent((QFocusFrame*)self, (QMouseEvent*)event);
+void q_focusframe_super_mouse_double_click_event(void* self, void* event) {
+    QFocusFrame_SuperMouseDoubleClickEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
 void q_focusframe_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1640,8 +1640,8 @@ void q_focusframe_mouse_move_event(void* self, void* event) {
     QFocusFrame_MouseMoveEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
-void q_focusframe_qbase_mouse_move_event(void* self, void* event) {
-    QFocusFrame_QBaseMouseMoveEvent((QFocusFrame*)self, (QMouseEvent*)event);
+void q_focusframe_super_mouse_move_event(void* self, void* event) {
+    QFocusFrame_SuperMouseMoveEvent((QFocusFrame*)self, (QMouseEvent*)event);
 }
 
 void q_focusframe_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1652,8 +1652,8 @@ void q_focusframe_wheel_event(void* self, void* event) {
     QFocusFrame_WheelEvent((QFocusFrame*)self, (QWheelEvent*)event);
 }
 
-void q_focusframe_qbase_wheel_event(void* self, void* event) {
-    QFocusFrame_QBaseWheelEvent((QFocusFrame*)self, (QWheelEvent*)event);
+void q_focusframe_super_wheel_event(void* self, void* event) {
+    QFocusFrame_SuperWheelEvent((QFocusFrame*)self, (QWheelEvent*)event);
 }
 
 void q_focusframe_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1664,8 +1664,8 @@ void q_focusframe_key_press_event(void* self, void* event) {
     QFocusFrame_KeyPressEvent((QFocusFrame*)self, (QKeyEvent*)event);
 }
 
-void q_focusframe_qbase_key_press_event(void* self, void* event) {
-    QFocusFrame_QBaseKeyPressEvent((QFocusFrame*)self, (QKeyEvent*)event);
+void q_focusframe_super_key_press_event(void* self, void* event) {
+    QFocusFrame_SuperKeyPressEvent((QFocusFrame*)self, (QKeyEvent*)event);
 }
 
 void q_focusframe_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1676,8 +1676,8 @@ void q_focusframe_key_release_event(void* self, void* event) {
     QFocusFrame_KeyReleaseEvent((QFocusFrame*)self, (QKeyEvent*)event);
 }
 
-void q_focusframe_qbase_key_release_event(void* self, void* event) {
-    QFocusFrame_QBaseKeyReleaseEvent((QFocusFrame*)self, (QKeyEvent*)event);
+void q_focusframe_super_key_release_event(void* self, void* event) {
+    QFocusFrame_SuperKeyReleaseEvent((QFocusFrame*)self, (QKeyEvent*)event);
 }
 
 void q_focusframe_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1688,8 +1688,8 @@ void q_focusframe_focus_in_event(void* self, void* event) {
     QFocusFrame_FocusInEvent((QFocusFrame*)self, (QFocusEvent*)event);
 }
 
-void q_focusframe_qbase_focus_in_event(void* self, void* event) {
-    QFocusFrame_QBaseFocusInEvent((QFocusFrame*)self, (QFocusEvent*)event);
+void q_focusframe_super_focus_in_event(void* self, void* event) {
+    QFocusFrame_SuperFocusInEvent((QFocusFrame*)self, (QFocusEvent*)event);
 }
 
 void q_focusframe_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1700,8 +1700,8 @@ void q_focusframe_focus_out_event(void* self, void* event) {
     QFocusFrame_FocusOutEvent((QFocusFrame*)self, (QFocusEvent*)event);
 }
 
-void q_focusframe_qbase_focus_out_event(void* self, void* event) {
-    QFocusFrame_QBaseFocusOutEvent((QFocusFrame*)self, (QFocusEvent*)event);
+void q_focusframe_super_focus_out_event(void* self, void* event) {
+    QFocusFrame_SuperFocusOutEvent((QFocusFrame*)self, (QFocusEvent*)event);
 }
 
 void q_focusframe_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1712,8 +1712,8 @@ void q_focusframe_enter_event(void* self, void* event) {
     QFocusFrame_EnterEvent((QFocusFrame*)self, (QEnterEvent*)event);
 }
 
-void q_focusframe_qbase_enter_event(void* self, void* event) {
-    QFocusFrame_QBaseEnterEvent((QFocusFrame*)self, (QEnterEvent*)event);
+void q_focusframe_super_enter_event(void* self, void* event) {
+    QFocusFrame_SuperEnterEvent((QFocusFrame*)self, (QEnterEvent*)event);
 }
 
 void q_focusframe_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1724,8 +1724,8 @@ void q_focusframe_leave_event(void* self, void* event) {
     QFocusFrame_LeaveEvent((QFocusFrame*)self, (QEvent*)event);
 }
 
-void q_focusframe_qbase_leave_event(void* self, void* event) {
-    QFocusFrame_QBaseLeaveEvent((QFocusFrame*)self, (QEvent*)event);
+void q_focusframe_super_leave_event(void* self, void* event) {
+    QFocusFrame_SuperLeaveEvent((QFocusFrame*)self, (QEvent*)event);
 }
 
 void q_focusframe_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1736,8 +1736,8 @@ void q_focusframe_move_event(void* self, void* event) {
     QFocusFrame_MoveEvent((QFocusFrame*)self, (QMoveEvent*)event);
 }
 
-void q_focusframe_qbase_move_event(void* self, void* event) {
-    QFocusFrame_QBaseMoveEvent((QFocusFrame*)self, (QMoveEvent*)event);
+void q_focusframe_super_move_event(void* self, void* event) {
+    QFocusFrame_SuperMoveEvent((QFocusFrame*)self, (QMoveEvent*)event);
 }
 
 void q_focusframe_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1748,8 +1748,8 @@ void q_focusframe_resize_event(void* self, void* event) {
     QFocusFrame_ResizeEvent((QFocusFrame*)self, (QResizeEvent*)event);
 }
 
-void q_focusframe_qbase_resize_event(void* self, void* event) {
-    QFocusFrame_QBaseResizeEvent((QFocusFrame*)self, (QResizeEvent*)event);
+void q_focusframe_super_resize_event(void* self, void* event) {
+    QFocusFrame_SuperResizeEvent((QFocusFrame*)self, (QResizeEvent*)event);
 }
 
 void q_focusframe_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1760,8 +1760,8 @@ void q_focusframe_close_event(void* self, void* event) {
     QFocusFrame_CloseEvent((QFocusFrame*)self, (QCloseEvent*)event);
 }
 
-void q_focusframe_qbase_close_event(void* self, void* event) {
-    QFocusFrame_QBaseCloseEvent((QFocusFrame*)self, (QCloseEvent*)event);
+void q_focusframe_super_close_event(void* self, void* event) {
+    QFocusFrame_SuperCloseEvent((QFocusFrame*)self, (QCloseEvent*)event);
 }
 
 void q_focusframe_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1772,8 +1772,8 @@ void q_focusframe_context_menu_event(void* self, void* event) {
     QFocusFrame_ContextMenuEvent((QFocusFrame*)self, (QContextMenuEvent*)event);
 }
 
-void q_focusframe_qbase_context_menu_event(void* self, void* event) {
-    QFocusFrame_QBaseContextMenuEvent((QFocusFrame*)self, (QContextMenuEvent*)event);
+void q_focusframe_super_context_menu_event(void* self, void* event) {
+    QFocusFrame_SuperContextMenuEvent((QFocusFrame*)self, (QContextMenuEvent*)event);
 }
 
 void q_focusframe_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1784,8 +1784,8 @@ void q_focusframe_tablet_event(void* self, void* event) {
     QFocusFrame_TabletEvent((QFocusFrame*)self, (QTabletEvent*)event);
 }
 
-void q_focusframe_qbase_tablet_event(void* self, void* event) {
-    QFocusFrame_QBaseTabletEvent((QFocusFrame*)self, (QTabletEvent*)event);
+void q_focusframe_super_tablet_event(void* self, void* event) {
+    QFocusFrame_SuperTabletEvent((QFocusFrame*)self, (QTabletEvent*)event);
 }
 
 void q_focusframe_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1796,8 +1796,8 @@ void q_focusframe_action_event(void* self, void* event) {
     QFocusFrame_ActionEvent((QFocusFrame*)self, (QActionEvent*)event);
 }
 
-void q_focusframe_qbase_action_event(void* self, void* event) {
-    QFocusFrame_QBaseActionEvent((QFocusFrame*)self, (QActionEvent*)event);
+void q_focusframe_super_action_event(void* self, void* event) {
+    QFocusFrame_SuperActionEvent((QFocusFrame*)self, (QActionEvent*)event);
 }
 
 void q_focusframe_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1808,8 +1808,8 @@ void q_focusframe_drag_enter_event(void* self, void* event) {
     QFocusFrame_DragEnterEvent((QFocusFrame*)self, (QDragEnterEvent*)event);
 }
 
-void q_focusframe_qbase_drag_enter_event(void* self, void* event) {
-    QFocusFrame_QBaseDragEnterEvent((QFocusFrame*)self, (QDragEnterEvent*)event);
+void q_focusframe_super_drag_enter_event(void* self, void* event) {
+    QFocusFrame_SuperDragEnterEvent((QFocusFrame*)self, (QDragEnterEvent*)event);
 }
 
 void q_focusframe_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1820,8 +1820,8 @@ void q_focusframe_drag_move_event(void* self, void* event) {
     QFocusFrame_DragMoveEvent((QFocusFrame*)self, (QDragMoveEvent*)event);
 }
 
-void q_focusframe_qbase_drag_move_event(void* self, void* event) {
-    QFocusFrame_QBaseDragMoveEvent((QFocusFrame*)self, (QDragMoveEvent*)event);
+void q_focusframe_super_drag_move_event(void* self, void* event) {
+    QFocusFrame_SuperDragMoveEvent((QFocusFrame*)self, (QDragMoveEvent*)event);
 }
 
 void q_focusframe_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1832,8 +1832,8 @@ void q_focusframe_drag_leave_event(void* self, void* event) {
     QFocusFrame_DragLeaveEvent((QFocusFrame*)self, (QDragLeaveEvent*)event);
 }
 
-void q_focusframe_qbase_drag_leave_event(void* self, void* event) {
-    QFocusFrame_QBaseDragLeaveEvent((QFocusFrame*)self, (QDragLeaveEvent*)event);
+void q_focusframe_super_drag_leave_event(void* self, void* event) {
+    QFocusFrame_SuperDragLeaveEvent((QFocusFrame*)self, (QDragLeaveEvent*)event);
 }
 
 void q_focusframe_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1844,8 +1844,8 @@ void q_focusframe_drop_event(void* self, void* event) {
     QFocusFrame_DropEvent((QFocusFrame*)self, (QDropEvent*)event);
 }
 
-void q_focusframe_qbase_drop_event(void* self, void* event) {
-    QFocusFrame_QBaseDropEvent((QFocusFrame*)self, (QDropEvent*)event);
+void q_focusframe_super_drop_event(void* self, void* event) {
+    QFocusFrame_SuperDropEvent((QFocusFrame*)self, (QDropEvent*)event);
 }
 
 void q_focusframe_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1856,8 +1856,8 @@ void q_focusframe_show_event(void* self, void* event) {
     QFocusFrame_ShowEvent((QFocusFrame*)self, (QShowEvent*)event);
 }
 
-void q_focusframe_qbase_show_event(void* self, void* event) {
-    QFocusFrame_QBaseShowEvent((QFocusFrame*)self, (QShowEvent*)event);
+void q_focusframe_super_show_event(void* self, void* event) {
+    QFocusFrame_SuperShowEvent((QFocusFrame*)self, (QShowEvent*)event);
 }
 
 void q_focusframe_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1868,8 +1868,8 @@ void q_focusframe_hide_event(void* self, void* event) {
     QFocusFrame_HideEvent((QFocusFrame*)self, (QHideEvent*)event);
 }
 
-void q_focusframe_qbase_hide_event(void* self, void* event) {
-    QFocusFrame_QBaseHideEvent((QFocusFrame*)self, (QHideEvent*)event);
+void q_focusframe_super_hide_event(void* self, void* event) {
+    QFocusFrame_SuperHideEvent((QFocusFrame*)self, (QHideEvent*)event);
 }
 
 void q_focusframe_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1880,8 +1880,8 @@ bool q_focusframe_native_event(void* self, char* eventType, void* message, intpt
     return QFocusFrame_NativeEvent((QFocusFrame*)self, qstring(eventType), message, result);
 }
 
-bool q_focusframe_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QFocusFrame_QBaseNativeEvent((QFocusFrame*)self, qstring(eventType), message, result);
+bool q_focusframe_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QFocusFrame_SuperNativeEvent((QFocusFrame*)self, qstring(eventType), message, result);
 }
 
 void q_focusframe_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1892,8 +1892,8 @@ void q_focusframe_change_event(void* self, void* param1) {
     QFocusFrame_ChangeEvent((QFocusFrame*)self, (QEvent*)param1);
 }
 
-void q_focusframe_qbase_change_event(void* self, void* param1) {
-    QFocusFrame_QBaseChangeEvent((QFocusFrame*)self, (QEvent*)param1);
+void q_focusframe_super_change_event(void* self, void* param1) {
+    QFocusFrame_SuperChangeEvent((QFocusFrame*)self, (QEvent*)param1);
 }
 
 void q_focusframe_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1904,8 +1904,8 @@ int32_t q_focusframe_metric(void* self, int32_t param1) {
     return QFocusFrame_Metric((QFocusFrame*)self, param1);
 }
 
-int32_t q_focusframe_qbase_metric(void* self, int32_t param1) {
-    return QFocusFrame_QBaseMetric((QFocusFrame*)self, param1);
+int32_t q_focusframe_super_metric(void* self, int32_t param1) {
+    return QFocusFrame_SuperMetric((QFocusFrame*)self, param1);
 }
 
 void q_focusframe_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1916,8 +1916,8 @@ void q_focusframe_init_painter(void* self, void* painter) {
     QFocusFrame_InitPainter((QFocusFrame*)self, (QPainter*)painter);
 }
 
-void q_focusframe_qbase_init_painter(void* self, void* painter) {
-    QFocusFrame_QBaseInitPainter((QFocusFrame*)self, (QPainter*)painter);
+void q_focusframe_super_init_painter(void* self, void* painter) {
+    QFocusFrame_SuperInitPainter((QFocusFrame*)self, (QPainter*)painter);
 }
 
 void q_focusframe_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -1928,8 +1928,8 @@ QPaintDevice* q_focusframe_redirected(void* self, void* offset) {
     return QFocusFrame_Redirected((QFocusFrame*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_focusframe_qbase_redirected(void* self, void* offset) {
-    return QFocusFrame_QBaseRedirected((QFocusFrame*)self, (QPoint*)offset);
+QPaintDevice* q_focusframe_super_redirected(void* self, void* offset) {
+    return QFocusFrame_SuperRedirected((QFocusFrame*)self, (QPoint*)offset);
 }
 
 void q_focusframe_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -1940,8 +1940,8 @@ QPainter* q_focusframe_shared_painter(void* self) {
     return QFocusFrame_SharedPainter((QFocusFrame*)self);
 }
 
-QPainter* q_focusframe_qbase_shared_painter(void* self) {
-    return QFocusFrame_QBaseSharedPainter((QFocusFrame*)self);
+QPainter* q_focusframe_super_shared_painter(void* self) {
+    return QFocusFrame_SuperSharedPainter((QFocusFrame*)self);
 }
 
 void q_focusframe_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -1952,8 +1952,8 @@ void q_focusframe_input_method_event(void* self, void* param1) {
     QFocusFrame_InputMethodEvent((QFocusFrame*)self, (QInputMethodEvent*)param1);
 }
 
-void q_focusframe_qbase_input_method_event(void* self, void* param1) {
-    QFocusFrame_QBaseInputMethodEvent((QFocusFrame*)self, (QInputMethodEvent*)param1);
+void q_focusframe_super_input_method_event(void* self, void* param1) {
+    QFocusFrame_SuperInputMethodEvent((QFocusFrame*)self, (QInputMethodEvent*)param1);
 }
 
 void q_focusframe_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -1964,8 +1964,8 @@ QVariant* q_focusframe_input_method_query(void* self, int32_t param1) {
     return QFocusFrame_InputMethodQuery((QFocusFrame*)self, param1);
 }
 
-QVariant* q_focusframe_qbase_input_method_query(void* self, int32_t param1) {
-    return QFocusFrame_QBaseInputMethodQuery((QFocusFrame*)self, param1);
+QVariant* q_focusframe_super_input_method_query(void* self, int32_t param1) {
+    return QFocusFrame_SuperInputMethodQuery((QFocusFrame*)self, param1);
 }
 
 void q_focusframe_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -1976,8 +1976,8 @@ bool q_focusframe_focus_next_prev_child(void* self, bool next) {
     return QFocusFrame_FocusNextPrevChild((QFocusFrame*)self, next);
 }
 
-bool q_focusframe_qbase_focus_next_prev_child(void* self, bool next) {
-    return QFocusFrame_QBaseFocusNextPrevChild((QFocusFrame*)self, next);
+bool q_focusframe_super_focus_next_prev_child(void* self, bool next) {
+    return QFocusFrame_SuperFocusNextPrevChild((QFocusFrame*)self, next);
 }
 
 void q_focusframe_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1988,8 +1988,8 @@ void q_focusframe_timer_event(void* self, void* event) {
     QFocusFrame_TimerEvent((QFocusFrame*)self, (QTimerEvent*)event);
 }
 
-void q_focusframe_qbase_timer_event(void* self, void* event) {
-    QFocusFrame_QBaseTimerEvent((QFocusFrame*)self, (QTimerEvent*)event);
+void q_focusframe_super_timer_event(void* self, void* event) {
+    QFocusFrame_SuperTimerEvent((QFocusFrame*)self, (QTimerEvent*)event);
 }
 
 void q_focusframe_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2000,8 +2000,8 @@ void q_focusframe_child_event(void* self, void* event) {
     QFocusFrame_ChildEvent((QFocusFrame*)self, (QChildEvent*)event);
 }
 
-void q_focusframe_qbase_child_event(void* self, void* event) {
-    QFocusFrame_QBaseChildEvent((QFocusFrame*)self, (QChildEvent*)event);
+void q_focusframe_super_child_event(void* self, void* event) {
+    QFocusFrame_SuperChildEvent((QFocusFrame*)self, (QChildEvent*)event);
 }
 
 void q_focusframe_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2012,8 +2012,8 @@ void q_focusframe_custom_event(void* self, void* event) {
     QFocusFrame_CustomEvent((QFocusFrame*)self, (QEvent*)event);
 }
 
-void q_focusframe_qbase_custom_event(void* self, void* event) {
-    QFocusFrame_QBaseCustomEvent((QFocusFrame*)self, (QEvent*)event);
+void q_focusframe_super_custom_event(void* self, void* event) {
+    QFocusFrame_SuperCustomEvent((QFocusFrame*)self, (QEvent*)event);
 }
 
 void q_focusframe_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2024,8 +2024,8 @@ void q_focusframe_connect_notify(void* self, void* signal) {
     QFocusFrame_ConnectNotify((QFocusFrame*)self, (QMetaMethod*)signal);
 }
 
-void q_focusframe_qbase_connect_notify(void* self, void* signal) {
-    QFocusFrame_QBaseConnectNotify((QFocusFrame*)self, (QMetaMethod*)signal);
+void q_focusframe_super_connect_notify(void* self, void* signal) {
+    QFocusFrame_SuperConnectNotify((QFocusFrame*)self, (QMetaMethod*)signal);
 }
 
 void q_focusframe_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2036,8 +2036,8 @@ void q_focusframe_disconnect_notify(void* self, void* signal) {
     QFocusFrame_DisconnectNotify((QFocusFrame*)self, (QMetaMethod*)signal);
 }
 
-void q_focusframe_qbase_disconnect_notify(void* self, void* signal) {
-    QFocusFrame_QBaseDisconnectNotify((QFocusFrame*)self, (QMetaMethod*)signal);
+void q_focusframe_super_disconnect_notify(void* self, void* signal) {
+    QFocusFrame_SuperDisconnectNotify((QFocusFrame*)self, (QMetaMethod*)signal);
 }
 
 void q_focusframe_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2048,8 +2048,8 @@ void q_focusframe_update_micro_focus(void* self) {
     QFocusFrame_UpdateMicroFocus((QFocusFrame*)self);
 }
 
-void q_focusframe_qbase_update_micro_focus(void* self) {
-    QFocusFrame_QBaseUpdateMicroFocus((QFocusFrame*)self);
+void q_focusframe_super_update_micro_focus(void* self) {
+    QFocusFrame_SuperUpdateMicroFocus((QFocusFrame*)self);
 }
 
 void q_focusframe_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2060,8 +2060,8 @@ void q_focusframe_create(void* self) {
     QFocusFrame_Create((QFocusFrame*)self);
 }
 
-void q_focusframe_qbase_create(void* self) {
-    QFocusFrame_QBaseCreate((QFocusFrame*)self);
+void q_focusframe_super_create(void* self) {
+    QFocusFrame_SuperCreate((QFocusFrame*)self);
 }
 
 void q_focusframe_on_create(void* self, void (*callback)()) {
@@ -2072,8 +2072,8 @@ void q_focusframe_destroy(void* self) {
     QFocusFrame_Destroy((QFocusFrame*)self);
 }
 
-void q_focusframe_qbase_destroy(void* self) {
-    QFocusFrame_QBaseDestroy((QFocusFrame*)self);
+void q_focusframe_super_destroy(void* self) {
+    QFocusFrame_SuperDestroy((QFocusFrame*)self);
 }
 
 void q_focusframe_on_destroy(void* self, void (*callback)()) {
@@ -2084,8 +2084,8 @@ bool q_focusframe_focus_next_child(void* self) {
     return QFocusFrame_FocusNextChild((QFocusFrame*)self);
 }
 
-bool q_focusframe_qbase_focus_next_child(void* self) {
-    return QFocusFrame_QBaseFocusNextChild((QFocusFrame*)self);
+bool q_focusframe_super_focus_next_child(void* self) {
+    return QFocusFrame_SuperFocusNextChild((QFocusFrame*)self);
 }
 
 void q_focusframe_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2096,8 +2096,8 @@ bool q_focusframe_focus_previous_child(void* self) {
     return QFocusFrame_FocusPreviousChild((QFocusFrame*)self);
 }
 
-bool q_focusframe_qbase_focus_previous_child(void* self) {
-    return QFocusFrame_QBaseFocusPreviousChild((QFocusFrame*)self);
+bool q_focusframe_super_focus_previous_child(void* self) {
+    return QFocusFrame_SuperFocusPreviousChild((QFocusFrame*)self);
 }
 
 void q_focusframe_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2108,8 +2108,8 @@ QObject* q_focusframe_sender(void* self) {
     return QFocusFrame_Sender((QFocusFrame*)self);
 }
 
-QObject* q_focusframe_qbase_sender(void* self) {
-    return QFocusFrame_QBaseSender((QFocusFrame*)self);
+QObject* q_focusframe_super_sender(void* self) {
+    return QFocusFrame_SuperSender((QFocusFrame*)self);
 }
 
 void q_focusframe_on_sender(void* self, QObject* (*callback)()) {
@@ -2120,8 +2120,8 @@ int32_t q_focusframe_sender_signal_index(void* self) {
     return QFocusFrame_SenderSignalIndex((QFocusFrame*)self);
 }
 
-int32_t q_focusframe_qbase_sender_signal_index(void* self) {
-    return QFocusFrame_QBaseSenderSignalIndex((QFocusFrame*)self);
+int32_t q_focusframe_super_sender_signal_index(void* self) {
+    return QFocusFrame_SuperSenderSignalIndex((QFocusFrame*)self);
 }
 
 void q_focusframe_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2132,8 +2132,8 @@ int32_t q_focusframe_receivers(void* self, const char* signal) {
     return QFocusFrame_Receivers((QFocusFrame*)self, signal);
 }
 
-int32_t q_focusframe_qbase_receivers(void* self, const char* signal) {
-    return QFocusFrame_QBaseReceivers((QFocusFrame*)self, signal);
+int32_t q_focusframe_super_receivers(void* self, const char* signal) {
+    return QFocusFrame_SuperReceivers((QFocusFrame*)self, signal);
 }
 
 void q_focusframe_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2144,8 +2144,8 @@ bool q_focusframe_is_signal_connected(void* self, void* signal) {
     return QFocusFrame_IsSignalConnected((QFocusFrame*)self, (QMetaMethod*)signal);
 }
 
-bool q_focusframe_qbase_is_signal_connected(void* self, void* signal) {
-    return QFocusFrame_QBaseIsSignalConnected((QFocusFrame*)self, (QMetaMethod*)signal);
+bool q_focusframe_super_is_signal_connected(void* self, void* signal) {
+    return QFocusFrame_SuperIsSignalConnected((QFocusFrame*)self, (QMetaMethod*)signal);
 }
 
 void q_focusframe_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2156,8 +2156,8 @@ double q_focusframe_get_decoded_metric_f(void* self, int32_t metricA, int32_t me
     return QFocusFrame_GetDecodedMetricF((QFocusFrame*)self, metricA, metricB);
 }
 
-double q_focusframe_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QFocusFrame_QBaseGetDecodedMetricF((QFocusFrame*)self, metricA, metricB);
+double q_focusframe_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QFocusFrame_SuperGetDecodedMetricF((QFocusFrame*)self, metricA, metricB);
 }
 
 void q_focusframe_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

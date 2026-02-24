@@ -40,13 +40,17 @@ const QMetaObject* k_viewstatemaintainerbase_meta_object(void* self);
 ///
 void k_viewstatemaintainerbase_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_meta_object` instead
+///
+#define k_viewstatemaintainerbase_qbase_meta_object k_viewstatemaintainerbase_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KViewStateMaintainerBase*
 ///
-const QMetaObject* k_viewstatemaintainerbase_qbase_meta_object(void* self);
+const QMetaObject* k_viewstatemaintainerbase_super_meta_object(void* self);
 
 /// @param self KViewStateMaintainerBase*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_viewstatemaintainerbase_metacast(void* self, const char* param1);
 ///
 void k_viewstatemaintainerbase_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_metacast` instead
+///
+#define k_viewstatemaintainerbase_qbase_metacast k_viewstatemaintainerbase_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KViewStateMaintainerBase*
 /// @param param1 const char*
 ///
-void* k_viewstatemaintainerbase_qbase_metacast(void* self, const char* param1);
+void* k_viewstatemaintainerbase_super_metacast(void* self, const char* param1);
 
 /// @param self KViewStateMaintainerBase*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_viewstatemaintainerbase_metacall(void* self, int32_t param1, int param
 ///
 void k_viewstatemaintainerbase_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_metacall` instead
+///
+#define k_viewstatemaintainerbase_qbase_metacall k_viewstatemaintainerbase_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KViewStateMaintainerBase*
@@ -88,7 +100,7 @@ void k_viewstatemaintainerbase_on_metacall(void* self, int32_t (*callback)(void*
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_viewstatemaintainerbase_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_viewstatemaintainerbase_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -139,13 +151,17 @@ void k_viewstatemaintainerbase_save_state(void* self);
 ///
 void k_viewstatemaintainerbase_on_save_state(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_save_state` instead
+///
+#define k_viewstatemaintainerbase_qbase_save_state k_viewstatemaintainerbase_super_save_state
+
 /// [Upstream resources](https://api.kde.org/kviewstatemaintainerbase.html#saveState)
 ///
 /// Base class method implementation
 ///
 /// @param self KViewStateMaintainerBase*
 ///
-void k_viewstatemaintainerbase_qbase_save_state(void* self);
+void k_viewstatemaintainerbase_super_save_state(void* self);
 
 /// [Upstream resources](https://api.kde.org/kviewstatemaintainerbase.html#restoreState)
 ///
@@ -162,13 +178,17 @@ void k_viewstatemaintainerbase_restore_state(void* self);
 ///
 void k_viewstatemaintainerbase_on_restore_state(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_restore_state` instead
+///
+#define k_viewstatemaintainerbase_qbase_restore_state k_viewstatemaintainerbase_super_restore_state
+
 /// [Upstream resources](https://api.kde.org/kviewstatemaintainerbase.html#restoreState)
 ///
 /// Base class method implementation
 ///
 /// @param self KViewStateMaintainerBase*
 ///
-void k_viewstatemaintainerbase_qbase_restore_state(void* self);
+void k_viewstatemaintainerbase_super_restore_state(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -647,6 +667,10 @@ void k_viewstatemaintainerbase_on_destroyed1(void* self, void (*callback)(void*,
 ///
 bool k_viewstatemaintainerbase_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_event` instead
+///
+#define k_viewstatemaintainerbase_qbase_event k_viewstatemaintainerbase_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -656,7 +680,7 @@ bool k_viewstatemaintainerbase_event(void* self, void* event);
 /// @param self KViewStateMaintainerBase*
 /// @param event QEvent*
 ///
-bool k_viewstatemaintainerbase_qbase_event(void* self, void* event);
+bool k_viewstatemaintainerbase_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -681,6 +705,10 @@ void k_viewstatemaintainerbase_on_event(void* self, bool (*callback)(void*, void
 ///
 bool k_viewstatemaintainerbase_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_event_filter` instead
+///
+#define k_viewstatemaintainerbase_qbase_event_filter k_viewstatemaintainerbase_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -691,7 +719,7 @@ bool k_viewstatemaintainerbase_event_filter(void* self, void* watched, void* eve
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_viewstatemaintainerbase_qbase_event_filter(void* self, void* watched, void* event);
+bool k_viewstatemaintainerbase_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -715,6 +743,10 @@ void k_viewstatemaintainerbase_on_event_filter(void* self, bool (*callback)(void
 ///
 void k_viewstatemaintainerbase_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_timer_event` instead
+///
+#define k_viewstatemaintainerbase_qbase_timer_event k_viewstatemaintainerbase_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -724,7 +756,7 @@ void k_viewstatemaintainerbase_timer_event(void* self, void* event);
 /// @param self KViewStateMaintainerBase*
 /// @param event QTimerEvent*
 ///
-void k_viewstatemaintainerbase_qbase_timer_event(void* self, void* event);
+void k_viewstatemaintainerbase_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -748,6 +780,10 @@ void k_viewstatemaintainerbase_on_timer_event(void* self, void (*callback)(void*
 ///
 void k_viewstatemaintainerbase_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_child_event` instead
+///
+#define k_viewstatemaintainerbase_qbase_child_event k_viewstatemaintainerbase_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -757,7 +793,7 @@ void k_viewstatemaintainerbase_child_event(void* self, void* event);
 /// @param self KViewStateMaintainerBase*
 /// @param event QChildEvent*
 ///
-void k_viewstatemaintainerbase_qbase_child_event(void* self, void* event);
+void k_viewstatemaintainerbase_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -781,6 +817,10 @@ void k_viewstatemaintainerbase_on_child_event(void* self, void (*callback)(void*
 ///
 void k_viewstatemaintainerbase_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_custom_event` instead
+///
+#define k_viewstatemaintainerbase_qbase_custom_event k_viewstatemaintainerbase_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -790,7 +830,7 @@ void k_viewstatemaintainerbase_custom_event(void* self, void* event);
 /// @param self KViewStateMaintainerBase*
 /// @param event QEvent*
 ///
-void k_viewstatemaintainerbase_qbase_custom_event(void* self, void* event);
+void k_viewstatemaintainerbase_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -814,6 +854,10 @@ void k_viewstatemaintainerbase_on_custom_event(void* self, void (*callback)(void
 ///
 void k_viewstatemaintainerbase_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_connect_notify` instead
+///
+#define k_viewstatemaintainerbase_qbase_connect_notify k_viewstatemaintainerbase_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -823,7 +867,7 @@ void k_viewstatemaintainerbase_connect_notify(void* self, void* signal);
 /// @param self KViewStateMaintainerBase*
 /// @param signal QMetaMethod*
 ///
-void k_viewstatemaintainerbase_qbase_connect_notify(void* self, void* signal);
+void k_viewstatemaintainerbase_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -847,6 +891,10 @@ void k_viewstatemaintainerbase_on_connect_notify(void* self, void (*callback)(vo
 ///
 void k_viewstatemaintainerbase_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_disconnect_notify` instead
+///
+#define k_viewstatemaintainerbase_qbase_disconnect_notify k_viewstatemaintainerbase_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -856,7 +904,7 @@ void k_viewstatemaintainerbase_disconnect_notify(void* self, void* signal);
 /// @param self KViewStateMaintainerBase*
 /// @param signal QMetaMethod*
 ///
-void k_viewstatemaintainerbase_qbase_disconnect_notify(void* self, void* signal);
+void k_viewstatemaintainerbase_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -879,6 +927,10 @@ void k_viewstatemaintainerbase_on_disconnect_notify(void* self, void (*callback)
 ///
 QObject* k_viewstatemaintainerbase_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_sender` instead
+///
+#define k_viewstatemaintainerbase_qbase_sender k_viewstatemaintainerbase_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -887,7 +939,7 @@ QObject* k_viewstatemaintainerbase_sender(void* self);
 ///
 /// @param self KViewStateMaintainerBase*
 ///
-QObject* k_viewstatemaintainerbase_qbase_sender(void* self);
+QObject* k_viewstatemaintainerbase_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -910,6 +962,10 @@ void k_viewstatemaintainerbase_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_viewstatemaintainerbase_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_sender_signal_index` instead
+///
+#define k_viewstatemaintainerbase_qbase_sender_signal_index k_viewstatemaintainerbase_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -918,7 +974,7 @@ int32_t k_viewstatemaintainerbase_sender_signal_index(void* self);
 ///
 /// @param self KViewStateMaintainerBase*
 ///
-int32_t k_viewstatemaintainerbase_qbase_sender_signal_index(void* self);
+int32_t k_viewstatemaintainerbase_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -942,6 +998,10 @@ void k_viewstatemaintainerbase_on_sender_signal_index(void* self, int32_t (*call
 ///
 int32_t k_viewstatemaintainerbase_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_receivers` instead
+///
+#define k_viewstatemaintainerbase_qbase_receivers k_viewstatemaintainerbase_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -951,7 +1011,7 @@ int32_t k_viewstatemaintainerbase_receivers(void* self, const char* signal);
 /// @param self KViewStateMaintainerBase*
 /// @param signal const char*
 ///
-int32_t k_viewstatemaintainerbase_qbase_receivers(void* self, const char* signal);
+int32_t k_viewstatemaintainerbase_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -975,6 +1035,10 @@ void k_viewstatemaintainerbase_on_receivers(void* self, int32_t (*callback)(void
 ///
 bool k_viewstatemaintainerbase_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_viewstatemaintainerbase_super_is_signal_connected` instead
+///
+#define k_viewstatemaintainerbase_qbase_is_signal_connected k_viewstatemaintainerbase_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -984,7 +1048,7 @@ bool k_viewstatemaintainerbase_is_signal_connected(void* self, void* signal);
 /// @param self KViewStateMaintainerBase*
 /// @param signal QMetaMethod*
 ///
-bool k_viewstatemaintainerbase_qbase_is_signal_connected(void* self, void* signal);
+bool k_viewstatemaintainerbase_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

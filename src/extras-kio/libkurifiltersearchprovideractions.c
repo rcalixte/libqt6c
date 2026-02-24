@@ -22,8 +22,8 @@ void k_io__kurifiltersearchprovideractions_on_meta_object(void* self, const QMet
     KIO__KUriFilterSearchProviderActions_OnMetaObject((KIO__KUriFilterSearchProviderActions*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__kurifiltersearchprovideractions_qbase_meta_object(void* self) {
-    return KIO__KUriFilterSearchProviderActions_QBaseMetaObject((KIO__KUriFilterSearchProviderActions*)self);
+const QMetaObject* k_io__kurifiltersearchprovideractions_super_meta_object(void* self) {
+    return KIO__KUriFilterSearchProviderActions_SuperMetaObject((KIO__KUriFilterSearchProviderActions*)self);
 }
 
 void* k_io__kurifiltersearchprovideractions_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_io__kurifiltersearchprovideractions_on_metacast(void* self, void* (*callb
     KIO__KUriFilterSearchProviderActions_OnMetacast((KIO__KUriFilterSearchProviderActions*)self, (intptr_t)callback);
 }
 
-void* k_io__kurifiltersearchprovideractions_qbase_metacast(void* self, const char* param1) {
-    return KIO__KUriFilterSearchProviderActions_QBaseMetacast((KIO__KUriFilterSearchProviderActions*)self, param1);
+void* k_io__kurifiltersearchprovideractions_super_metacast(void* self, const char* param1) {
+    return KIO__KUriFilterSearchProviderActions_SuperMetacast((KIO__KUriFilterSearchProviderActions*)self, param1);
 }
 
 int32_t k_io__kurifiltersearchprovideractions_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_io__kurifiltersearchprovideractions_on_metacall(void* self, int32_t (*cal
     KIO__KUriFilterSearchProviderActions_OnMetacall((KIO__KUriFilterSearchProviderActions*)self, (intptr_t)callback);
 }
 
-int32_t k_io__kurifiltersearchprovideractions_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__KUriFilterSearchProviderActions_QBaseMetacall((KIO__KUriFilterSearchProviderActions*)self, param1, param2, param3);
+int32_t k_io__kurifiltersearchprovideractions_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__KUriFilterSearchProviderActions_SuperMetacall((KIO__KUriFilterSearchProviderActions*)self, param1, param2, param3);
 }
 
 const char* k_io__kurifiltersearchprovideractions_tr(const char* s) {
@@ -301,8 +301,8 @@ bool k_io__kurifiltersearchprovideractions_event(void* self, void* event) {
     return KIO__KUriFilterSearchProviderActions_Event((KIO__KUriFilterSearchProviderActions*)self, (QEvent*)event);
 }
 
-bool k_io__kurifiltersearchprovideractions_qbase_event(void* self, void* event) {
-    return KIO__KUriFilterSearchProviderActions_QBaseEvent((KIO__KUriFilterSearchProviderActions*)self, (QEvent*)event);
+bool k_io__kurifiltersearchprovideractions_super_event(void* self, void* event) {
+    return KIO__KUriFilterSearchProviderActions_SuperEvent((KIO__KUriFilterSearchProviderActions*)self, (QEvent*)event);
 }
 
 void k_io__kurifiltersearchprovideractions_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -313,8 +313,8 @@ bool k_io__kurifiltersearchprovideractions_event_filter(void* self, void* watche
     return KIO__KUriFilterSearchProviderActions_EventFilter((KIO__KUriFilterSearchProviderActions*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__kurifiltersearchprovideractions_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__KUriFilterSearchProviderActions_QBaseEventFilter((KIO__KUriFilterSearchProviderActions*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__kurifiltersearchprovideractions_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__KUriFilterSearchProviderActions_SuperEventFilter((KIO__KUriFilterSearchProviderActions*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__kurifiltersearchprovideractions_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -325,8 +325,8 @@ void k_io__kurifiltersearchprovideractions_timer_event(void* self, void* event) 
     KIO__KUriFilterSearchProviderActions_TimerEvent((KIO__KUriFilterSearchProviderActions*)self, (QTimerEvent*)event);
 }
 
-void k_io__kurifiltersearchprovideractions_qbase_timer_event(void* self, void* event) {
-    KIO__KUriFilterSearchProviderActions_QBaseTimerEvent((KIO__KUriFilterSearchProviderActions*)self, (QTimerEvent*)event);
+void k_io__kurifiltersearchprovideractions_super_timer_event(void* self, void* event) {
+    KIO__KUriFilterSearchProviderActions_SuperTimerEvent((KIO__KUriFilterSearchProviderActions*)self, (QTimerEvent*)event);
 }
 
 void k_io__kurifiltersearchprovideractions_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -337,8 +337,8 @@ void k_io__kurifiltersearchprovideractions_child_event(void* self, void* event) 
     KIO__KUriFilterSearchProviderActions_ChildEvent((KIO__KUriFilterSearchProviderActions*)self, (QChildEvent*)event);
 }
 
-void k_io__kurifiltersearchprovideractions_qbase_child_event(void* self, void* event) {
-    KIO__KUriFilterSearchProviderActions_QBaseChildEvent((KIO__KUriFilterSearchProviderActions*)self, (QChildEvent*)event);
+void k_io__kurifiltersearchprovideractions_super_child_event(void* self, void* event) {
+    KIO__KUriFilterSearchProviderActions_SuperChildEvent((KIO__KUriFilterSearchProviderActions*)self, (QChildEvent*)event);
 }
 
 void k_io__kurifiltersearchprovideractions_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -349,8 +349,8 @@ void k_io__kurifiltersearchprovideractions_custom_event(void* self, void* event)
     KIO__KUriFilterSearchProviderActions_CustomEvent((KIO__KUriFilterSearchProviderActions*)self, (QEvent*)event);
 }
 
-void k_io__kurifiltersearchprovideractions_qbase_custom_event(void* self, void* event) {
-    KIO__KUriFilterSearchProviderActions_QBaseCustomEvent((KIO__KUriFilterSearchProviderActions*)self, (QEvent*)event);
+void k_io__kurifiltersearchprovideractions_super_custom_event(void* self, void* event) {
+    KIO__KUriFilterSearchProviderActions_SuperCustomEvent((KIO__KUriFilterSearchProviderActions*)self, (QEvent*)event);
 }
 
 void k_io__kurifiltersearchprovideractions_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -361,8 +361,8 @@ void k_io__kurifiltersearchprovideractions_connect_notify(void* self, void* sign
     KIO__KUriFilterSearchProviderActions_ConnectNotify((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
 }
 
-void k_io__kurifiltersearchprovideractions_qbase_connect_notify(void* self, void* signal) {
-    KIO__KUriFilterSearchProviderActions_QBaseConnectNotify((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
+void k_io__kurifiltersearchprovideractions_super_connect_notify(void* self, void* signal) {
+    KIO__KUriFilterSearchProviderActions_SuperConnectNotify((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
 }
 
 void k_io__kurifiltersearchprovideractions_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -373,8 +373,8 @@ void k_io__kurifiltersearchprovideractions_disconnect_notify(void* self, void* s
     KIO__KUriFilterSearchProviderActions_DisconnectNotify((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
 }
 
-void k_io__kurifiltersearchprovideractions_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__KUriFilterSearchProviderActions_QBaseDisconnectNotify((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
+void k_io__kurifiltersearchprovideractions_super_disconnect_notify(void* self, void* signal) {
+    KIO__KUriFilterSearchProviderActions_SuperDisconnectNotify((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
 }
 
 void k_io__kurifiltersearchprovideractions_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -385,8 +385,8 @@ QObject* k_io__kurifiltersearchprovideractions_sender(void* self) {
     return KIO__KUriFilterSearchProviderActions_Sender((KIO__KUriFilterSearchProviderActions*)self);
 }
 
-QObject* k_io__kurifiltersearchprovideractions_qbase_sender(void* self) {
-    return KIO__KUriFilterSearchProviderActions_QBaseSender((KIO__KUriFilterSearchProviderActions*)self);
+QObject* k_io__kurifiltersearchprovideractions_super_sender(void* self) {
+    return KIO__KUriFilterSearchProviderActions_SuperSender((KIO__KUriFilterSearchProviderActions*)self);
 }
 
 void k_io__kurifiltersearchprovideractions_on_sender(void* self, QObject* (*callback)()) {
@@ -397,8 +397,8 @@ int32_t k_io__kurifiltersearchprovideractions_sender_signal_index(void* self) {
     return KIO__KUriFilterSearchProviderActions_SenderSignalIndex((KIO__KUriFilterSearchProviderActions*)self);
 }
 
-int32_t k_io__kurifiltersearchprovideractions_qbase_sender_signal_index(void* self) {
-    return KIO__KUriFilterSearchProviderActions_QBaseSenderSignalIndex((KIO__KUriFilterSearchProviderActions*)self);
+int32_t k_io__kurifiltersearchprovideractions_super_sender_signal_index(void* self) {
+    return KIO__KUriFilterSearchProviderActions_SuperSenderSignalIndex((KIO__KUriFilterSearchProviderActions*)self);
 }
 
 void k_io__kurifiltersearchprovideractions_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -409,8 +409,8 @@ int32_t k_io__kurifiltersearchprovideractions_receivers(void* self, const char* 
     return KIO__KUriFilterSearchProviderActions_Receivers((KIO__KUriFilterSearchProviderActions*)self, signal);
 }
 
-int32_t k_io__kurifiltersearchprovideractions_qbase_receivers(void* self, const char* signal) {
-    return KIO__KUriFilterSearchProviderActions_QBaseReceivers((KIO__KUriFilterSearchProviderActions*)self, signal);
+int32_t k_io__kurifiltersearchprovideractions_super_receivers(void* self, const char* signal) {
+    return KIO__KUriFilterSearchProviderActions_SuperReceivers((KIO__KUriFilterSearchProviderActions*)self, signal);
 }
 
 void k_io__kurifiltersearchprovideractions_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -421,8 +421,8 @@ bool k_io__kurifiltersearchprovideractions_is_signal_connected(void* self, void*
     return KIO__KUriFilterSearchProviderActions_IsSignalConnected((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__kurifiltersearchprovideractions_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__KUriFilterSearchProviderActions_QBaseIsSignalConnected((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
+bool k_io__kurifiltersearchprovideractions_super_is_signal_connected(void* self, void* signal) {
+    return KIO__KUriFilterSearchProviderActions_SuperIsSignalConnected((KIO__KUriFilterSearchProviderActions*)self, (QMetaMethod*)signal);
 }
 
 void k_io__kurifiltersearchprovideractions_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

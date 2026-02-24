@@ -18,8 +18,8 @@ void k_filemetadata__writerplugin_on_meta_object(void* self, const QMetaObject* 
     KFileMetaData__WriterPlugin_OnMetaObject((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_filemetadata__writerplugin_qbase_meta_object(void* self) {
-    return KFileMetaData__WriterPlugin_QBaseMetaObject((KFileMetaData__WriterPlugin*)self);
+const QMetaObject* k_filemetadata__writerplugin_super_meta_object(void* self) {
+    return KFileMetaData__WriterPlugin_SuperMetaObject((KFileMetaData__WriterPlugin*)self);
 }
 
 void* k_filemetadata__writerplugin_metacast(void* self, const char* param1) {
@@ -30,8 +30,8 @@ void k_filemetadata__writerplugin_on_metacast(void* self, void* (*callback)(void
     KFileMetaData__WriterPlugin_OnMetacast((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 
-void* k_filemetadata__writerplugin_qbase_metacast(void* self, const char* param1) {
-    return KFileMetaData__WriterPlugin_QBaseMetacast((KFileMetaData__WriterPlugin*)self, param1);
+void* k_filemetadata__writerplugin_super_metacast(void* self, const char* param1) {
+    return KFileMetaData__WriterPlugin_SuperMetacast((KFileMetaData__WriterPlugin*)self, param1);
 }
 
 int32_t k_filemetadata__writerplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -42,8 +42,8 @@ void k_filemetadata__writerplugin_on_metacall(void* self, int32_t (*callback)(vo
     KFileMetaData__WriterPlugin_OnMetacall((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 
-int32_t k_filemetadata__writerplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileMetaData__WriterPlugin_QBaseMetacall((KFileMetaData__WriterPlugin*)self, param1, param2, param3);
+int32_t k_filemetadata__writerplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileMetaData__WriterPlugin_SuperMetacall((KFileMetaData__WriterPlugin*)self, param1, param2, param3);
 }
 
 const char* k_filemetadata__writerplugin_tr(const char* s) {
@@ -76,8 +76,8 @@ void k_filemetadata__writerplugin_on_write_mimetypes(void* self, const char** (*
     KFileMetaData__WriterPlugin_OnWriteMimetypes((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 
-const char** k_filemetadata__writerplugin_qbase_write_mimetypes(void* self) {
-    libqt_list _arr = KFileMetaData__WriterPlugin_QBaseWriteMimetypes((KFileMetaData__WriterPlugin*)self);
+const char** k_filemetadata__writerplugin_super_write_mimetypes(void* self) {
+    libqt_list _arr = KFileMetaData__WriterPlugin_SuperWriteMimetypes((KFileMetaData__WriterPlugin*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -103,8 +103,8 @@ void k_filemetadata__writerplugin_on_write(void* self, void (*callback)(void*, v
     KFileMetaData__WriterPlugin_OnWrite((KFileMetaData__WriterPlugin*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__writerplugin_qbase_write(void* self, void* data) {
-    KFileMetaData__WriterPlugin_QBaseWrite((KFileMetaData__WriterPlugin*)self, (KFileMetaData__WriteData*)data);
+void k_filemetadata__writerplugin_super_write(void* self, void* data) {
+    KFileMetaData__WriterPlugin_SuperWrite((KFileMetaData__WriterPlugin*)self, (KFileMetaData__WriteData*)data);
 }
 
 const char* k_filemetadata__writerplugin_tr2(const char* s, const char* c) {
@@ -336,8 +336,8 @@ bool k_filemetadata__writerplugin_event(void* self, void* event) {
     return KFileMetaData__WriterPlugin_Event((KFileMetaData__WriterPlugin*)self, (QEvent*)event);
 }
 
-bool k_filemetadata__writerplugin_qbase_event(void* self, void* event) {
-    return KFileMetaData__WriterPlugin_QBaseEvent((KFileMetaData__WriterPlugin*)self, (QEvent*)event);
+bool k_filemetadata__writerplugin_super_event(void* self, void* event) {
+    return KFileMetaData__WriterPlugin_SuperEvent((KFileMetaData__WriterPlugin*)self, (QEvent*)event);
 }
 
 void k_filemetadata__writerplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -348,8 +348,8 @@ bool k_filemetadata__writerplugin_event_filter(void* self, void* watched, void* 
     return KFileMetaData__WriterPlugin_EventFilter((KFileMetaData__WriterPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_filemetadata__writerplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return KFileMetaData__WriterPlugin_QBaseEventFilter((KFileMetaData__WriterPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool k_filemetadata__writerplugin_super_event_filter(void* self, void* watched, void* event) {
+    return KFileMetaData__WriterPlugin_SuperEventFilter((KFileMetaData__WriterPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_filemetadata__writerplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -360,8 +360,8 @@ void k_filemetadata__writerplugin_timer_event(void* self, void* event) {
     KFileMetaData__WriterPlugin_TimerEvent((KFileMetaData__WriterPlugin*)self, (QTimerEvent*)event);
 }
 
-void k_filemetadata__writerplugin_qbase_timer_event(void* self, void* event) {
-    KFileMetaData__WriterPlugin_QBaseTimerEvent((KFileMetaData__WriterPlugin*)self, (QTimerEvent*)event);
+void k_filemetadata__writerplugin_super_timer_event(void* self, void* event) {
+    KFileMetaData__WriterPlugin_SuperTimerEvent((KFileMetaData__WriterPlugin*)self, (QTimerEvent*)event);
 }
 
 void k_filemetadata__writerplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -372,8 +372,8 @@ void k_filemetadata__writerplugin_child_event(void* self, void* event) {
     KFileMetaData__WriterPlugin_ChildEvent((KFileMetaData__WriterPlugin*)self, (QChildEvent*)event);
 }
 
-void k_filemetadata__writerplugin_qbase_child_event(void* self, void* event) {
-    KFileMetaData__WriterPlugin_QBaseChildEvent((KFileMetaData__WriterPlugin*)self, (QChildEvent*)event);
+void k_filemetadata__writerplugin_super_child_event(void* self, void* event) {
+    KFileMetaData__WriterPlugin_SuperChildEvent((KFileMetaData__WriterPlugin*)self, (QChildEvent*)event);
 }
 
 void k_filemetadata__writerplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -384,8 +384,8 @@ void k_filemetadata__writerplugin_custom_event(void* self, void* event) {
     KFileMetaData__WriterPlugin_CustomEvent((KFileMetaData__WriterPlugin*)self, (QEvent*)event);
 }
 
-void k_filemetadata__writerplugin_qbase_custom_event(void* self, void* event) {
-    KFileMetaData__WriterPlugin_QBaseCustomEvent((KFileMetaData__WriterPlugin*)self, (QEvent*)event);
+void k_filemetadata__writerplugin_super_custom_event(void* self, void* event) {
+    KFileMetaData__WriterPlugin_SuperCustomEvent((KFileMetaData__WriterPlugin*)self, (QEvent*)event);
 }
 
 void k_filemetadata__writerplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -396,8 +396,8 @@ void k_filemetadata__writerplugin_connect_notify(void* self, void* signal) {
     KFileMetaData__WriterPlugin_ConnectNotify((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_filemetadata__writerplugin_qbase_connect_notify(void* self, void* signal) {
-    KFileMetaData__WriterPlugin_QBaseConnectNotify((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
+void k_filemetadata__writerplugin_super_connect_notify(void* self, void* signal) {
+    KFileMetaData__WriterPlugin_SuperConnectNotify((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_filemetadata__writerplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -408,8 +408,8 @@ void k_filemetadata__writerplugin_disconnect_notify(void* self, void* signal) {
     KFileMetaData__WriterPlugin_DisconnectNotify((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
 }
 
-void k_filemetadata__writerplugin_qbase_disconnect_notify(void* self, void* signal) {
-    KFileMetaData__WriterPlugin_QBaseDisconnectNotify((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
+void k_filemetadata__writerplugin_super_disconnect_notify(void* self, void* signal) {
+    KFileMetaData__WriterPlugin_SuperDisconnectNotify((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_filemetadata__writerplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -420,8 +420,8 @@ QObject* k_filemetadata__writerplugin_sender(void* self) {
     return KFileMetaData__WriterPlugin_Sender((KFileMetaData__WriterPlugin*)self);
 }
 
-QObject* k_filemetadata__writerplugin_qbase_sender(void* self) {
-    return KFileMetaData__WriterPlugin_QBaseSender((KFileMetaData__WriterPlugin*)self);
+QObject* k_filemetadata__writerplugin_super_sender(void* self) {
+    return KFileMetaData__WriterPlugin_SuperSender((KFileMetaData__WriterPlugin*)self);
 }
 
 void k_filemetadata__writerplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -432,8 +432,8 @@ int32_t k_filemetadata__writerplugin_sender_signal_index(void* self) {
     return KFileMetaData__WriterPlugin_SenderSignalIndex((KFileMetaData__WriterPlugin*)self);
 }
 
-int32_t k_filemetadata__writerplugin_qbase_sender_signal_index(void* self) {
-    return KFileMetaData__WriterPlugin_QBaseSenderSignalIndex((KFileMetaData__WriterPlugin*)self);
+int32_t k_filemetadata__writerplugin_super_sender_signal_index(void* self) {
+    return KFileMetaData__WriterPlugin_SuperSenderSignalIndex((KFileMetaData__WriterPlugin*)self);
 }
 
 void k_filemetadata__writerplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -444,8 +444,8 @@ int32_t k_filemetadata__writerplugin_receivers(void* self, const char* signal) {
     return KFileMetaData__WriterPlugin_Receivers((KFileMetaData__WriterPlugin*)self, signal);
 }
 
-int32_t k_filemetadata__writerplugin_qbase_receivers(void* self, const char* signal) {
-    return KFileMetaData__WriterPlugin_QBaseReceivers((KFileMetaData__WriterPlugin*)self, signal);
+int32_t k_filemetadata__writerplugin_super_receivers(void* self, const char* signal) {
+    return KFileMetaData__WriterPlugin_SuperReceivers((KFileMetaData__WriterPlugin*)self, signal);
 }
 
 void k_filemetadata__writerplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -456,8 +456,8 @@ bool k_filemetadata__writerplugin_is_signal_connected(void* self, void* signal) 
     return KFileMetaData__WriterPlugin_IsSignalConnected((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool k_filemetadata__writerplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileMetaData__WriterPlugin_QBaseIsSignalConnected((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
+bool k_filemetadata__writerplugin_super_is_signal_connected(void* self, void* signal) {
+    return KFileMetaData__WriterPlugin_SuperIsSignalConnected((KFileMetaData__WriterPlugin*)self, (QMetaMethod*)signal);
 }
 
 void k_filemetadata__writerplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

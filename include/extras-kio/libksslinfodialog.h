@@ -40,13 +40,17 @@ const QMetaObject* k_sslinfodialog_meta_object(void* self);
 ///
 void k_sslinfodialog_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_meta_object` instead
+///
+#define k_sslinfodialog_qbase_meta_object k_sslinfodialog_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KSslInfoDialog*
 ///
-const QMetaObject* k_sslinfodialog_qbase_meta_object(void* self);
+const QMetaObject* k_sslinfodialog_super_meta_object(void* self);
 
 /// @param self KSslInfoDialog*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_sslinfodialog_metacast(void* self, const char* param1);
 ///
 void k_sslinfodialog_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_metacast` instead
+///
+#define k_sslinfodialog_qbase_metacast k_sslinfodialog_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KSslInfoDialog*
 /// @param param1 const char*
 ///
-void* k_sslinfodialog_qbase_metacast(void* self, const char* param1);
+void* k_sslinfodialog_super_metacast(void* self, const char* param1);
 
 /// @param self KSslInfoDialog*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_sslinfodialog_metacall(void* self, int32_t param1, int param2, void* p
 ///
 void k_sslinfodialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_metacall` instead
+///
+#define k_sslinfodialog_qbase_metacall k_sslinfodialog_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KSslInfoDialog*
@@ -88,7 +100,7 @@ void k_sslinfodialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_sslinfodialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_sslinfodialog_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -3194,6 +3206,10 @@ int32_t k_sslinfodialog_encode_metric_f(int32_t metric, double value);
 ///
 void k_sslinfodialog_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_set_visible` instead
+///
+#define k_sslinfodialog_qbase_set_visible k_sslinfodialog_super_set_visible
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#setVisible)
@@ -3203,7 +3219,7 @@ void k_sslinfodialog_set_visible(void* self, bool visible);
 /// @param self KSslInfoDialog*
 /// @param visible bool
 ///
-void k_sslinfodialog_qbase_set_visible(void* self, bool visible);
+void k_sslinfodialog_super_set_visible(void* self, bool visible);
 
 /// Inherited from QDialog
 ///
@@ -3226,6 +3242,10 @@ void k_sslinfodialog_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 QSize* k_sslinfodialog_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_size_hint` instead
+///
+#define k_sslinfodialog_qbase_size_hint k_sslinfodialog_super_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#sizeHint)
@@ -3234,7 +3254,7 @@ QSize* k_sslinfodialog_size_hint(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-QSize* k_sslinfodialog_qbase_size_hint(void* self);
+QSize* k_sslinfodialog_super_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3257,6 +3277,10 @@ void k_sslinfodialog_on_size_hint(void* self, QSize* (*callback)());
 ///
 QSize* k_sslinfodialog_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_minimum_size_hint` instead
+///
+#define k_sslinfodialog_qbase_minimum_size_hint k_sslinfodialog_super_minimum_size_hint
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#minimumSizeHint)
@@ -3265,7 +3289,7 @@ QSize* k_sslinfodialog_minimum_size_hint(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-QSize* k_sslinfodialog_qbase_minimum_size_hint(void* self);
+QSize* k_sslinfodialog_super_minimum_size_hint(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3288,6 +3312,10 @@ void k_sslinfodialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void k_sslinfodialog_open(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_open` instead
+///
+#define k_sslinfodialog_qbase_open k_sslinfodialog_super_open
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#open)
@@ -3296,7 +3324,7 @@ void k_sslinfodialog_open(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-void k_sslinfodialog_qbase_open(void* self);
+void k_sslinfodialog_super_open(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3319,6 +3347,10 @@ void k_sslinfodialog_on_open(void* self, void (*callback)());
 ///
 int32_t k_sslinfodialog_exec(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_exec` instead
+///
+#define k_sslinfodialog_qbase_exec k_sslinfodialog_super_exec
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#exec)
@@ -3327,7 +3359,7 @@ int32_t k_sslinfodialog_exec(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-int32_t k_sslinfodialog_qbase_exec(void* self);
+int32_t k_sslinfodialog_super_exec(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3351,6 +3383,10 @@ void k_sslinfodialog_on_exec(void* self, int32_t (*callback)());
 ///
 void k_sslinfodialog_done(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_done` instead
+///
+#define k_sslinfodialog_qbase_done k_sslinfodialog_super_done
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#done)
@@ -3360,7 +3396,7 @@ void k_sslinfodialog_done(void* self, int param1);
 /// @param self KSslInfoDialog*
 /// @param param1 int
 ///
-void k_sslinfodialog_qbase_done(void* self, int param1);
+void k_sslinfodialog_super_done(void* self, int param1);
 
 /// Inherited from QDialog
 ///
@@ -3383,6 +3419,10 @@ void k_sslinfodialog_on_done(void* self, void (*callback)(void*, int));
 ///
 void k_sslinfodialog_accept(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_accept` instead
+///
+#define k_sslinfodialog_qbase_accept k_sslinfodialog_super_accept
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#accept)
@@ -3391,7 +3431,7 @@ void k_sslinfodialog_accept(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-void k_sslinfodialog_qbase_accept(void* self);
+void k_sslinfodialog_super_accept(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3414,6 +3454,10 @@ void k_sslinfodialog_on_accept(void* self, void (*callback)());
 ///
 void k_sslinfodialog_reject(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_reject` instead
+///
+#define k_sslinfodialog_qbase_reject k_sslinfodialog_super_reject
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#reject)
@@ -3422,7 +3466,7 @@ void k_sslinfodialog_reject(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-void k_sslinfodialog_qbase_reject(void* self);
+void k_sslinfodialog_super_reject(void* self);
 
 /// Inherited from QDialog
 ///
@@ -3446,6 +3490,10 @@ void k_sslinfodialog_on_reject(void* self, void (*callback)());
 ///
 void k_sslinfodialog_key_press_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_key_press_event` instead
+///
+#define k_sslinfodialog_qbase_key_press_event k_sslinfodialog_super_key_press_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#keyPressEvent)
@@ -3455,7 +3503,7 @@ void k_sslinfodialog_key_press_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QKeyEvent*
 ///
-void k_sslinfodialog_qbase_key_press_event(void* self, void* param1);
+void k_sslinfodialog_super_key_press_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3479,6 +3527,10 @@ void k_sslinfodialog_on_key_press_event(void* self, void (*callback)(void*, void
 ///
 void k_sslinfodialog_close_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_close_event` instead
+///
+#define k_sslinfodialog_qbase_close_event k_sslinfodialog_super_close_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#closeEvent)
@@ -3488,7 +3540,7 @@ void k_sslinfodialog_close_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QCloseEvent*
 ///
-void k_sslinfodialog_qbase_close_event(void* self, void* param1);
+void k_sslinfodialog_super_close_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3512,6 +3564,10 @@ void k_sslinfodialog_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_show_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_show_event` instead
+///
+#define k_sslinfodialog_qbase_show_event k_sslinfodialog_super_show_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#showEvent)
@@ -3521,7 +3577,7 @@ void k_sslinfodialog_show_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QShowEvent*
 ///
-void k_sslinfodialog_qbase_show_event(void* self, void* param1);
+void k_sslinfodialog_super_show_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3545,6 +3601,10 @@ void k_sslinfodialog_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_resize_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_resize_event` instead
+///
+#define k_sslinfodialog_qbase_resize_event k_sslinfodialog_super_resize_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#resizeEvent)
@@ -3554,7 +3614,7 @@ void k_sslinfodialog_resize_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QResizeEvent*
 ///
-void k_sslinfodialog_qbase_resize_event(void* self, void* param1);
+void k_sslinfodialog_super_resize_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3578,6 +3638,10 @@ void k_sslinfodialog_on_resize_event(void* self, void (*callback)(void*, void*))
 ///
 void k_sslinfodialog_context_menu_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_context_menu_event` instead
+///
+#define k_sslinfodialog_qbase_context_menu_event k_sslinfodialog_super_context_menu_event
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#contextMenuEvent)
@@ -3587,7 +3651,7 @@ void k_sslinfodialog_context_menu_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QContextMenuEvent*
 ///
-void k_sslinfodialog_qbase_context_menu_event(void* self, void* param1);
+void k_sslinfodialog_super_context_menu_event(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -3612,6 +3676,10 @@ void k_sslinfodialog_on_context_menu_event(void* self, void (*callback)(void*, v
 ///
 bool k_sslinfodialog_event_filter(void* self, void* param1, void* param2);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_event_filter` instead
+///
+#define k_sslinfodialog_qbase_event_filter k_sslinfodialog_super_event_filter
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#eventFilter)
@@ -3622,7 +3690,7 @@ bool k_sslinfodialog_event_filter(void* self, void* param1, void* param2);
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool k_sslinfodialog_qbase_event_filter(void* self, void* param1, void* param2);
+bool k_sslinfodialog_super_event_filter(void* self, void* param1, void* param2);
 
 /// Inherited from QDialog
 ///
@@ -3645,6 +3713,10 @@ void k_sslinfodialog_on_event_filter(void* self, bool (*callback)(void*, void*, 
 ///
 int32_t k_sslinfodialog_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_dev_type` instead
+///
+#define k_sslinfodialog_qbase_dev_type k_sslinfodialog_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -3653,7 +3725,7 @@ int32_t k_sslinfodialog_dev_type(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-int32_t k_sslinfodialog_qbase_dev_type(void* self);
+int32_t k_sslinfodialog_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3677,6 +3749,10 @@ void k_sslinfodialog_on_dev_type(void* self, int32_t (*callback)());
 ///
 int32_t k_sslinfodialog_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_height_for_width` instead
+///
+#define k_sslinfodialog_qbase_height_for_width k_sslinfodialog_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -3686,7 +3762,7 @@ int32_t k_sslinfodialog_height_for_width(void* self, int param1);
 /// @param self KSslInfoDialog*
 /// @param param1 int
 ///
-int32_t k_sslinfodialog_qbase_height_for_width(void* self, int param1);
+int32_t k_sslinfodialog_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -3709,6 +3785,10 @@ void k_sslinfodialog_on_height_for_width(void* self, int32_t (*callback)(void*, 
 ///
 bool k_sslinfodialog_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_has_height_for_width` instead
+///
+#define k_sslinfodialog_qbase_has_height_for_width k_sslinfodialog_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -3717,7 +3797,7 @@ bool k_sslinfodialog_has_height_for_width(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-bool k_sslinfodialog_qbase_has_height_for_width(void* self);
+bool k_sslinfodialog_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3740,6 +3820,10 @@ void k_sslinfodialog_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_sslinfodialog_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_paint_engine` instead
+///
+#define k_sslinfodialog_qbase_paint_engine k_sslinfodialog_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -3748,7 +3832,7 @@ QPaintEngine* k_sslinfodialog_paint_engine(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-QPaintEngine* k_sslinfodialog_qbase_paint_engine(void* self);
+QPaintEngine* k_sslinfodialog_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -3772,6 +3856,10 @@ void k_sslinfodialog_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 bool k_sslinfodialog_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_event` instead
+///
+#define k_sslinfodialog_qbase_event k_sslinfodialog_super_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#event)
@@ -3781,7 +3869,7 @@ bool k_sslinfodialog_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QEvent*
 ///
-bool k_sslinfodialog_qbase_event(void* self, void* event);
+bool k_sslinfodialog_super_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3805,6 +3893,10 @@ void k_sslinfodialog_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void k_sslinfodialog_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_mouse_press_event` instead
+///
+#define k_sslinfodialog_qbase_mouse_press_event k_sslinfodialog_super_mouse_press_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mousePressEvent)
@@ -3814,7 +3906,7 @@ void k_sslinfodialog_mouse_press_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QMouseEvent*
 ///
-void k_sslinfodialog_qbase_mouse_press_event(void* self, void* event);
+void k_sslinfodialog_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3838,6 +3930,10 @@ void k_sslinfodialog_on_mouse_press_event(void* self, void (*callback)(void*, vo
 ///
 void k_sslinfodialog_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_mouse_release_event` instead
+///
+#define k_sslinfodialog_qbase_mouse_release_event k_sslinfodialog_super_mouse_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseReleaseEvent)
@@ -3847,7 +3943,7 @@ void k_sslinfodialog_mouse_release_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QMouseEvent*
 ///
-void k_sslinfodialog_qbase_mouse_release_event(void* self, void* event);
+void k_sslinfodialog_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3871,6 +3967,10 @@ void k_sslinfodialog_on_mouse_release_event(void* self, void (*callback)(void*, 
 ///
 void k_sslinfodialog_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_mouse_double_click_event` instead
+///
+#define k_sslinfodialog_qbase_mouse_double_click_event k_sslinfodialog_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -3880,7 +3980,7 @@ void k_sslinfodialog_mouse_double_click_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QMouseEvent*
 ///
-void k_sslinfodialog_qbase_mouse_double_click_event(void* self, void* event);
+void k_sslinfodialog_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3904,6 +4004,10 @@ void k_sslinfodialog_on_mouse_double_click_event(void* self, void (*callback)(vo
 ///
 void k_sslinfodialog_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_mouse_move_event` instead
+///
+#define k_sslinfodialog_qbase_mouse_move_event k_sslinfodialog_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -3913,7 +4017,7 @@ void k_sslinfodialog_mouse_move_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QMouseEvent*
 ///
-void k_sslinfodialog_qbase_mouse_move_event(void* self, void* event);
+void k_sslinfodialog_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3937,6 +4041,10 @@ void k_sslinfodialog_on_mouse_move_event(void* self, void (*callback)(void*, voi
 ///
 void k_sslinfodialog_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_wheel_event` instead
+///
+#define k_sslinfodialog_qbase_wheel_event k_sslinfodialog_super_wheel_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#wheelEvent)
@@ -3946,7 +4054,7 @@ void k_sslinfodialog_wheel_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QWheelEvent*
 ///
-void k_sslinfodialog_qbase_wheel_event(void* self, void* event);
+void k_sslinfodialog_super_wheel_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -3970,6 +4078,10 @@ void k_sslinfodialog_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_key_release_event` instead
+///
+#define k_sslinfodialog_qbase_key_release_event k_sslinfodialog_super_key_release_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#keyReleaseEvent)
@@ -3979,7 +4091,7 @@ void k_sslinfodialog_key_release_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QKeyEvent*
 ///
-void k_sslinfodialog_qbase_key_release_event(void* self, void* event);
+void k_sslinfodialog_super_key_release_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4003,6 +4115,10 @@ void k_sslinfodialog_on_key_release_event(void* self, void (*callback)(void*, vo
 ///
 void k_sslinfodialog_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_focus_in_event` instead
+///
+#define k_sslinfodialog_qbase_focus_in_event k_sslinfodialog_super_focus_in_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusInEvent)
@@ -4012,7 +4128,7 @@ void k_sslinfodialog_focus_in_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QFocusEvent*
 ///
-void k_sslinfodialog_qbase_focus_in_event(void* self, void* event);
+void k_sslinfodialog_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4036,6 +4152,10 @@ void k_sslinfodialog_on_focus_in_event(void* self, void (*callback)(void*, void*
 ///
 void k_sslinfodialog_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_focus_out_event` instead
+///
+#define k_sslinfodialog_qbase_focus_out_event k_sslinfodialog_super_focus_out_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusOutEvent)
@@ -4045,7 +4165,7 @@ void k_sslinfodialog_focus_out_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QFocusEvent*
 ///
-void k_sslinfodialog_qbase_focus_out_event(void* self, void* event);
+void k_sslinfodialog_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4069,6 +4189,10 @@ void k_sslinfodialog_on_focus_out_event(void* self, void (*callback)(void*, void
 ///
 void k_sslinfodialog_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_enter_event` instead
+///
+#define k_sslinfodialog_qbase_enter_event k_sslinfodialog_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4078,7 +4202,7 @@ void k_sslinfodialog_enter_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QEnterEvent*
 ///
-void k_sslinfodialog_qbase_enter_event(void* self, void* event);
+void k_sslinfodialog_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4102,6 +4226,10 @@ void k_sslinfodialog_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_leave_event` instead
+///
+#define k_sslinfodialog_qbase_leave_event k_sslinfodialog_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4111,7 +4239,7 @@ void k_sslinfodialog_leave_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QEvent*
 ///
-void k_sslinfodialog_qbase_leave_event(void* self, void* event);
+void k_sslinfodialog_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4135,6 +4263,10 @@ void k_sslinfodialog_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_paint_event` instead
+///
+#define k_sslinfodialog_qbase_paint_event k_sslinfodialog_super_paint_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEvent)
@@ -4144,7 +4276,7 @@ void k_sslinfodialog_paint_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QPaintEvent*
 ///
-void k_sslinfodialog_qbase_paint_event(void* self, void* event);
+void k_sslinfodialog_super_paint_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4168,6 +4300,10 @@ void k_sslinfodialog_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_move_event` instead
+///
+#define k_sslinfodialog_qbase_move_event k_sslinfodialog_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4177,7 +4313,7 @@ void k_sslinfodialog_move_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QMoveEvent*
 ///
-void k_sslinfodialog_qbase_move_event(void* self, void* event);
+void k_sslinfodialog_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4201,6 +4337,10 @@ void k_sslinfodialog_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_tablet_event` instead
+///
+#define k_sslinfodialog_qbase_tablet_event k_sslinfodialog_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4210,7 +4350,7 @@ void k_sslinfodialog_tablet_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QTabletEvent*
 ///
-void k_sslinfodialog_qbase_tablet_event(void* self, void* event);
+void k_sslinfodialog_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4234,6 +4374,10 @@ void k_sslinfodialog_on_tablet_event(void* self, void (*callback)(void*, void*))
 ///
 void k_sslinfodialog_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_action_event` instead
+///
+#define k_sslinfodialog_qbase_action_event k_sslinfodialog_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4243,7 +4387,7 @@ void k_sslinfodialog_action_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QActionEvent*
 ///
-void k_sslinfodialog_qbase_action_event(void* self, void* event);
+void k_sslinfodialog_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4267,6 +4411,10 @@ void k_sslinfodialog_on_action_event(void* self, void (*callback)(void*, void*))
 ///
 void k_sslinfodialog_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_drag_enter_event` instead
+///
+#define k_sslinfodialog_qbase_drag_enter_event k_sslinfodialog_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4276,7 +4424,7 @@ void k_sslinfodialog_drag_enter_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QDragEnterEvent*
 ///
-void k_sslinfodialog_qbase_drag_enter_event(void* self, void* event);
+void k_sslinfodialog_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4300,6 +4448,10 @@ void k_sslinfodialog_on_drag_enter_event(void* self, void (*callback)(void*, voi
 ///
 void k_sslinfodialog_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_drag_move_event` instead
+///
+#define k_sslinfodialog_qbase_drag_move_event k_sslinfodialog_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4309,7 +4461,7 @@ void k_sslinfodialog_drag_move_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QDragMoveEvent*
 ///
-void k_sslinfodialog_qbase_drag_move_event(void* self, void* event);
+void k_sslinfodialog_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4333,6 +4485,10 @@ void k_sslinfodialog_on_drag_move_event(void* self, void (*callback)(void*, void
 ///
 void k_sslinfodialog_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_drag_leave_event` instead
+///
+#define k_sslinfodialog_qbase_drag_leave_event k_sslinfodialog_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -4342,7 +4498,7 @@ void k_sslinfodialog_drag_leave_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QDragLeaveEvent*
 ///
-void k_sslinfodialog_qbase_drag_leave_event(void* self, void* event);
+void k_sslinfodialog_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4366,6 +4522,10 @@ void k_sslinfodialog_on_drag_leave_event(void* self, void (*callback)(void*, voi
 ///
 void k_sslinfodialog_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_drop_event` instead
+///
+#define k_sslinfodialog_qbase_drop_event k_sslinfodialog_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -4375,7 +4535,7 @@ void k_sslinfodialog_drop_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QDropEvent*
 ///
-void k_sslinfodialog_qbase_drop_event(void* self, void* event);
+void k_sslinfodialog_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4399,6 +4559,10 @@ void k_sslinfodialog_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_hide_event` instead
+///
+#define k_sslinfodialog_qbase_hide_event k_sslinfodialog_super_hide_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hideEvent)
@@ -4408,7 +4572,7 @@ void k_sslinfodialog_hide_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QHideEvent*
 ///
-void k_sslinfodialog_qbase_hide_event(void* self, void* event);
+void k_sslinfodialog_super_hide_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4434,6 +4598,10 @@ void k_sslinfodialog_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 bool k_sslinfodialog_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_native_event` instead
+///
+#define k_sslinfodialog_qbase_native_event k_sslinfodialog_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -4445,7 +4613,7 @@ bool k_sslinfodialog_native_event(void* self, char* eventType, void* message, in
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_sslinfodialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_sslinfodialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -4469,6 +4637,10 @@ void k_sslinfodialog_on_native_event(void* self, bool (*callback)(void*, libqt_s
 ///
 void k_sslinfodialog_change_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_change_event` instead
+///
+#define k_sslinfodialog_qbase_change_event k_sslinfodialog_super_change_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#changeEvent)
@@ -4478,7 +4650,7 @@ void k_sslinfodialog_change_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QEvent*
 ///
-void k_sslinfodialog_qbase_change_event(void* self, void* param1);
+void k_sslinfodialog_super_change_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4502,6 +4674,10 @@ void k_sslinfodialog_on_change_event(void* self, void (*callback)(void*, void*))
 ///
 int32_t k_sslinfodialog_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_metric` instead
+///
+#define k_sslinfodialog_qbase_metric k_sslinfodialog_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -4511,7 +4687,7 @@ int32_t k_sslinfodialog_metric(void* self, int32_t param1);
 /// @param self KSslInfoDialog*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_sslinfodialog_qbase_metric(void* self, int32_t param1);
+int32_t k_sslinfodialog_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4535,6 +4711,10 @@ void k_sslinfodialog_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void k_sslinfodialog_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_init_painter` instead
+///
+#define k_sslinfodialog_qbase_init_painter k_sslinfodialog_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -4544,7 +4724,7 @@ void k_sslinfodialog_init_painter(void* self, void* painter);
 /// @param self KSslInfoDialog*
 /// @param painter QPainter*
 ///
-void k_sslinfodialog_qbase_init_painter(void* self, void* painter);
+void k_sslinfodialog_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -4568,6 +4748,10 @@ void k_sslinfodialog_on_init_painter(void* self, void (*callback)(void*, void*))
 ///
 QPaintDevice* k_sslinfodialog_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_redirected` instead
+///
+#define k_sslinfodialog_qbase_redirected k_sslinfodialog_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -4577,7 +4761,7 @@ QPaintDevice* k_sslinfodialog_redirected(void* self, void* offset);
 /// @param self KSslInfoDialog*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_sslinfodialog_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_sslinfodialog_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -4600,6 +4784,10 @@ void k_sslinfodialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, 
 ///
 QPainter* k_sslinfodialog_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_shared_painter` instead
+///
+#define k_sslinfodialog_qbase_shared_painter k_sslinfodialog_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -4608,7 +4796,7 @@ QPainter* k_sslinfodialog_shared_painter(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-QPainter* k_sslinfodialog_qbase_shared_painter(void* self);
+QPainter* k_sslinfodialog_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4632,6 +4820,10 @@ void k_sslinfodialog_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void k_sslinfodialog_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_input_method_event` instead
+///
+#define k_sslinfodialog_qbase_input_method_event k_sslinfodialog_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -4641,7 +4833,7 @@ void k_sslinfodialog_input_method_event(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QInputMethodEvent*
 ///
-void k_sslinfodialog_qbase_input_method_event(void* self, void* param1);
+void k_sslinfodialog_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -4665,6 +4857,10 @@ void k_sslinfodialog_on_input_method_event(void* self, void (*callback)(void*, v
 ///
 QVariant* k_sslinfodialog_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_input_method_query` instead
+///
+#define k_sslinfodialog_qbase_input_method_query k_sslinfodialog_super_input_method_query
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodQuery)
@@ -4674,7 +4870,7 @@ QVariant* k_sslinfodialog_input_method_query(void* self, int32_t param1);
 /// @param self KSslInfoDialog*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_sslinfodialog_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_sslinfodialog_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -4698,6 +4894,10 @@ void k_sslinfodialog_on_input_method_query(void* self, QVariant* (*callback)(voi
 ///
 bool k_sslinfodialog_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_focus_next_prev_child` instead
+///
+#define k_sslinfodialog_qbase_focus_next_prev_child k_sslinfodialog_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -4707,7 +4907,7 @@ bool k_sslinfodialog_focus_next_prev_child(void* self, bool next);
 /// @param self KSslInfoDialog*
 /// @param next bool
 ///
-bool k_sslinfodialog_qbase_focus_next_prev_child(void* self, bool next);
+bool k_sslinfodialog_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -4731,6 +4931,10 @@ void k_sslinfodialog_on_focus_next_prev_child(void* self, bool (*callback)(void*
 ///
 void k_sslinfodialog_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_timer_event` instead
+///
+#define k_sslinfodialog_qbase_timer_event k_sslinfodialog_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -4740,7 +4944,7 @@ void k_sslinfodialog_timer_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QTimerEvent*
 ///
-void k_sslinfodialog_qbase_timer_event(void* self, void* event);
+void k_sslinfodialog_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4764,6 +4968,10 @@ void k_sslinfodialog_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_child_event` instead
+///
+#define k_sslinfodialog_qbase_child_event k_sslinfodialog_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -4773,7 +4981,7 @@ void k_sslinfodialog_child_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QChildEvent*
 ///
-void k_sslinfodialog_qbase_child_event(void* self, void* event);
+void k_sslinfodialog_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4797,6 +5005,10 @@ void k_sslinfodialog_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void k_sslinfodialog_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_custom_event` instead
+///
+#define k_sslinfodialog_qbase_custom_event k_sslinfodialog_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -4806,7 +5018,7 @@ void k_sslinfodialog_custom_event(void* self, void* event);
 /// @param self KSslInfoDialog*
 /// @param event QEvent*
 ///
-void k_sslinfodialog_qbase_custom_event(void* self, void* event);
+void k_sslinfodialog_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -4830,6 +5042,10 @@ void k_sslinfodialog_on_custom_event(void* self, void (*callback)(void*, void*))
 ///
 void k_sslinfodialog_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_connect_notify` instead
+///
+#define k_sslinfodialog_qbase_connect_notify k_sslinfodialog_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -4839,7 +5055,7 @@ void k_sslinfodialog_connect_notify(void* self, void* signal);
 /// @param self KSslInfoDialog*
 /// @param signal QMetaMethod*
 ///
-void k_sslinfodialog_qbase_connect_notify(void* self, void* signal);
+void k_sslinfodialog_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4863,6 +5079,10 @@ void k_sslinfodialog_on_connect_notify(void* self, void (*callback)(void*, void*
 ///
 void k_sslinfodialog_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_disconnect_notify` instead
+///
+#define k_sslinfodialog_qbase_disconnect_notify k_sslinfodialog_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -4872,7 +5092,7 @@ void k_sslinfodialog_disconnect_notify(void* self, void* signal);
 /// @param self KSslInfoDialog*
 /// @param signal QMetaMethod*
 ///
-void k_sslinfodialog_qbase_disconnect_notify(void* self, void* signal);
+void k_sslinfodialog_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -4896,6 +5116,10 @@ void k_sslinfodialog_on_disconnect_notify(void* self, void (*callback)(void*, vo
 ///
 void k_sslinfodialog_adjust_position(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_adjust_position` instead
+///
+#define k_sslinfodialog_qbase_adjust_position k_sslinfodialog_super_adjust_position
+
 /// Inherited from QDialog
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdialog.html#adjustPosition)
@@ -4905,7 +5129,7 @@ void k_sslinfodialog_adjust_position(void* self, void* param1);
 /// @param self KSslInfoDialog*
 /// @param param1 QWidget*
 ///
-void k_sslinfodialog_qbase_adjust_position(void* self, void* param1);
+void k_sslinfodialog_super_adjust_position(void* self, void* param1);
 
 /// Inherited from QDialog
 ///
@@ -4928,6 +5152,10 @@ void k_sslinfodialog_on_adjust_position(void* self, void (*callback)(void*, void
 ///
 void k_sslinfodialog_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_update_micro_focus` instead
+///
+#define k_sslinfodialog_qbase_update_micro_focus k_sslinfodialog_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -4936,7 +5164,7 @@ void k_sslinfodialog_update_micro_focus(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-void k_sslinfodialog_qbase_update_micro_focus(void* self);
+void k_sslinfodialog_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4959,6 +5187,10 @@ void k_sslinfodialog_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_sslinfodialog_create(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_create` instead
+///
+#define k_sslinfodialog_qbase_create k_sslinfodialog_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -4967,7 +5199,7 @@ void k_sslinfodialog_create(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-void k_sslinfodialog_qbase_create(void* self);
+void k_sslinfodialog_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4990,6 +5222,10 @@ void k_sslinfodialog_on_create(void* self, void (*callback)());
 ///
 void k_sslinfodialog_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_destroy` instead
+///
+#define k_sslinfodialog_qbase_destroy k_sslinfodialog_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -4998,7 +5234,7 @@ void k_sslinfodialog_destroy(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-void k_sslinfodialog_qbase_destroy(void* self);
+void k_sslinfodialog_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5021,6 +5257,10 @@ void k_sslinfodialog_on_destroy(void* self, void (*callback)());
 ///
 bool k_sslinfodialog_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_focus_next_child` instead
+///
+#define k_sslinfodialog_qbase_focus_next_child k_sslinfodialog_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5029,7 +5269,7 @@ bool k_sslinfodialog_focus_next_child(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-bool k_sslinfodialog_qbase_focus_next_child(void* self);
+bool k_sslinfodialog_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5052,6 +5292,10 @@ void k_sslinfodialog_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_sslinfodialog_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_focus_previous_child` instead
+///
+#define k_sslinfodialog_qbase_focus_previous_child k_sslinfodialog_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5060,7 +5304,7 @@ bool k_sslinfodialog_focus_previous_child(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-bool k_sslinfodialog_qbase_focus_previous_child(void* self);
+bool k_sslinfodialog_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5083,6 +5327,10 @@ void k_sslinfodialog_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_sslinfodialog_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_sender` instead
+///
+#define k_sslinfodialog_qbase_sender k_sslinfodialog_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5091,7 +5339,7 @@ QObject* k_sslinfodialog_sender(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-QObject* k_sslinfodialog_qbase_sender(void* self);
+QObject* k_sslinfodialog_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5114,6 +5362,10 @@ void k_sslinfodialog_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_sslinfodialog_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_sender_signal_index` instead
+///
+#define k_sslinfodialog_qbase_sender_signal_index k_sslinfodialog_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5122,7 +5374,7 @@ int32_t k_sslinfodialog_sender_signal_index(void* self);
 ///
 /// @param self KSslInfoDialog*
 ///
-int32_t k_sslinfodialog_qbase_sender_signal_index(void* self);
+int32_t k_sslinfodialog_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5146,6 +5398,10 @@ void k_sslinfodialog_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t k_sslinfodialog_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_receivers` instead
+///
+#define k_sslinfodialog_qbase_receivers k_sslinfodialog_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5155,7 +5411,7 @@ int32_t k_sslinfodialog_receivers(void* self, const char* signal);
 /// @param self KSslInfoDialog*
 /// @param signal const char*
 ///
-int32_t k_sslinfodialog_qbase_receivers(void* self, const char* signal);
+int32_t k_sslinfodialog_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5179,6 +5435,10 @@ void k_sslinfodialog_on_receivers(void* self, int32_t (*callback)(void*, const c
 ///
 bool k_sslinfodialog_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_is_signal_connected` instead
+///
+#define k_sslinfodialog_qbase_is_signal_connected k_sslinfodialog_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5188,7 +5448,7 @@ bool k_sslinfodialog_is_signal_connected(void* self, void* signal);
 /// @param self KSslInfoDialog*
 /// @param signal QMetaMethod*
 ///
-bool k_sslinfodialog_qbase_is_signal_connected(void* self, void* signal);
+bool k_sslinfodialog_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5213,6 +5473,10 @@ void k_sslinfodialog_on_is_signal_connected(void* self, bool (*callback)(void*, 
 ///
 double k_sslinfodialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_sslinfodialog_super_get_decoded_metric_f` instead
+///
+#define k_sslinfodialog_qbase_get_decoded_metric_f k_sslinfodialog_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5223,7 +5487,7 @@ double k_sslinfodialog_get_decoded_metric_f(void* self, int32_t metricA, int32_t
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_sslinfodialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_sslinfodialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

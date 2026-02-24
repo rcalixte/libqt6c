@@ -59,8 +59,8 @@ void q_undoview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QUndoView_OnMetaObject((QUndoView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_undoview_qbase_meta_object(void* self) {
-    return QUndoView_QBaseMetaObject((QUndoView*)self);
+const QMetaObject* q_undoview_super_meta_object(void* self) {
+    return QUndoView_SuperMetaObject((QUndoView*)self);
 }
 
 void* q_undoview_metacast(void* self, const char* param1) {
@@ -71,8 +71,8 @@ void q_undoview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QUndoView_OnMetacast((QUndoView*)self, (intptr_t)callback);
 }
 
-void* q_undoview_qbase_metacast(void* self, const char* param1) {
-    return QUndoView_QBaseMetacast((QUndoView*)self, param1);
+void* q_undoview_super_metacast(void* self, const char* param1) {
+    return QUndoView_SuperMetacast((QUndoView*)self, param1);
 }
 
 int32_t q_undoview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -83,8 +83,8 @@ void q_undoview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QUndoView_OnMetacall((QUndoView*)self, (intptr_t)callback);
 }
 
-int32_t q_undoview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QUndoView_QBaseMetacall((QUndoView*)self, param1, param2, param3);
+int32_t q_undoview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QUndoView_SuperMetacall((QUndoView*)self, param1, param2, param3);
 }
 
 const char* q_undoview_tr(const char* s) {
@@ -2061,8 +2061,8 @@ QRect* q_undoview_visual_rect(void* self, void* index) {
     return QUndoView_VisualRect((QUndoView*)self, (QModelIndex*)index);
 }
 
-QRect* q_undoview_qbase_visual_rect(void* self, void* index) {
-    return QUndoView_QBaseVisualRect((QUndoView*)self, (QModelIndex*)index);
+QRect* q_undoview_super_visual_rect(void* self, void* index) {
+    return QUndoView_SuperVisualRect((QUndoView*)self, (QModelIndex*)index);
 }
 
 void q_undoview_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
@@ -2073,8 +2073,8 @@ void q_undoview_scroll_to(void* self, void* index, int32_t hint) {
     QUndoView_ScrollTo((QUndoView*)self, (QModelIndex*)index, hint);
 }
 
-void q_undoview_qbase_scroll_to(void* self, void* index, int32_t hint) {
-    QUndoView_QBaseScrollTo((QUndoView*)self, (QModelIndex*)index, hint);
+void q_undoview_super_scroll_to(void* self, void* index, int32_t hint) {
+    QUndoView_SuperScrollTo((QUndoView*)self, (QModelIndex*)index, hint);
 }
 
 void q_undoview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2085,8 +2085,8 @@ QModelIndex* q_undoview_index_at(void* self, void* p) {
     return QUndoView_IndexAt((QUndoView*)self, (QPoint*)p);
 }
 
-QModelIndex* q_undoview_qbase_index_at(void* self, void* p) {
-    return QUndoView_QBaseIndexAt((QUndoView*)self, (QPoint*)p);
+QModelIndex* q_undoview_super_index_at(void* self, void* p) {
+    return QUndoView_SuperIndexAt((QUndoView*)self, (QPoint*)p);
 }
 
 void q_undoview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -2097,8 +2097,8 @@ void q_undoview_do_items_layout(void* self) {
     QUndoView_DoItemsLayout((QUndoView*)self);
 }
 
-void q_undoview_qbase_do_items_layout(void* self) {
-    QUndoView_QBaseDoItemsLayout((QUndoView*)self);
+void q_undoview_super_do_items_layout(void* self) {
+    QUndoView_SuperDoItemsLayout((QUndoView*)self);
 }
 
 void q_undoview_on_do_items_layout(void* self, void (*callback)()) {
@@ -2109,8 +2109,8 @@ void q_undoview_reset(void* self) {
     QUndoView_Reset((QUndoView*)self);
 }
 
-void q_undoview_qbase_reset(void* self) {
-    QUndoView_QBaseReset((QUndoView*)self);
+void q_undoview_super_reset(void* self) {
+    QUndoView_SuperReset((QUndoView*)self);
 }
 
 void q_undoview_on_reset(void* self, void (*callback)()) {
@@ -2121,8 +2121,8 @@ void q_undoview_set_root_index(void* self, void* index) {
     QUndoView_SetRootIndex((QUndoView*)self, (QModelIndex*)index);
 }
 
-void q_undoview_qbase_set_root_index(void* self, void* index) {
-    QUndoView_QBaseSetRootIndex((QUndoView*)self, (QModelIndex*)index);
+void q_undoview_super_set_root_index(void* self, void* index) {
+    QUndoView_SuperSetRootIndex((QUndoView*)self, (QModelIndex*)index);
 }
 
 void q_undoview_on_set_root_index(void* self, void (*callback)(void*, void*)) {
@@ -2133,8 +2133,8 @@ bool q_undoview_event(void* self, void* e) {
     return QUndoView_Event((QUndoView*)self, (QEvent*)e);
 }
 
-bool q_undoview_qbase_event(void* self, void* e) {
-    return QUndoView_QBaseEvent((QUndoView*)self, (QEvent*)e);
+bool q_undoview_super_event(void* self, void* e) {
+    return QUndoView_SuperEvent((QUndoView*)self, (QEvent*)e);
 }
 
 void q_undoview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2145,8 +2145,8 @@ void q_undoview_scroll_contents_by(void* self, int dx, int dy) {
     QUndoView_ScrollContentsBy((QUndoView*)self, dx, dy);
 }
 
-void q_undoview_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QUndoView_QBaseScrollContentsBy((QUndoView*)self, dx, dy);
+void q_undoview_super_scroll_contents_by(void* self, int dx, int dy) {
+    QUndoView_SuperScrollContentsBy((QUndoView*)self, dx, dy);
 }
 
 void q_undoview_on_scroll_contents_by(void* self, void (*callback)(void*, int, int)) {
@@ -2157,8 +2157,8 @@ void q_undoview_data_changed(void* self, void* topLeft, void* bottomRight, libqt
     QUndoView_DataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
-void q_undoview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
-    QUndoView_QBaseDataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
+void q_undoview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+    QUndoView_SuperDataChanged((QUndoView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
 void q_undoview_on_data_changed(void* self, void (*callback)(void*, void*, void*, libqt_list /* of int */)) {
@@ -2169,8 +2169,8 @@ void q_undoview_rows_inserted(void* self, void* parent, int start, int end) {
     QUndoView_RowsInserted((QUndoView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_undoview_qbase_rows_inserted(void* self, void* parent, int start, int end) {
-    QUndoView_QBaseRowsInserted((QUndoView*)self, (QModelIndex*)parent, start, end);
+void q_undoview_super_rows_inserted(void* self, void* parent, int start, int end) {
+    QUndoView_SuperRowsInserted((QUndoView*)self, (QModelIndex*)parent, start, end);
 }
 
 void q_undoview_on_rows_inserted(void* self, void (*callback)(void*, void*, int, int)) {
@@ -2181,8 +2181,8 @@ void q_undoview_rows_about_to_be_removed(void* self, void* parent, int start, in
     QUndoView_RowsAboutToBeRemoved((QUndoView*)self, (QModelIndex*)parent, start, end);
 }
 
-void q_undoview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
-    QUndoView_QBaseRowsAboutToBeRemoved((QUndoView*)self, (QModelIndex*)parent, start, end);
+void q_undoview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
+    QUndoView_SuperRowsAboutToBeRemoved((QUndoView*)self, (QModelIndex*)parent, start, end);
 }
 
 void q_undoview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, void*, int, int)) {
@@ -2193,8 +2193,8 @@ void q_undoview_mouse_move_event(void* self, void* e) {
     QUndoView_MouseMoveEvent((QUndoView*)self, (QMouseEvent*)e);
 }
 
-void q_undoview_qbase_mouse_move_event(void* self, void* e) {
-    QUndoView_QBaseMouseMoveEvent((QUndoView*)self, (QMouseEvent*)e);
+void q_undoview_super_mouse_move_event(void* self, void* e) {
+    QUndoView_SuperMouseMoveEvent((QUndoView*)self, (QMouseEvent*)e);
 }
 
 void q_undoview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2205,8 +2205,8 @@ void q_undoview_mouse_release_event(void* self, void* e) {
     QUndoView_MouseReleaseEvent((QUndoView*)self, (QMouseEvent*)e);
 }
 
-void q_undoview_qbase_mouse_release_event(void* self, void* e) {
-    QUndoView_QBaseMouseReleaseEvent((QUndoView*)self, (QMouseEvent*)e);
+void q_undoview_super_mouse_release_event(void* self, void* e) {
+    QUndoView_SuperMouseReleaseEvent((QUndoView*)self, (QMouseEvent*)e);
 }
 
 void q_undoview_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2217,8 +2217,8 @@ void q_undoview_wheel_event(void* self, void* e) {
     QUndoView_WheelEvent((QUndoView*)self, (QWheelEvent*)e);
 }
 
-void q_undoview_qbase_wheel_event(void* self, void* e) {
-    QUndoView_QBaseWheelEvent((QUndoView*)self, (QWheelEvent*)e);
+void q_undoview_super_wheel_event(void* self, void* e) {
+    QUndoView_SuperWheelEvent((QUndoView*)self, (QWheelEvent*)e);
 }
 
 void q_undoview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2229,8 +2229,8 @@ void q_undoview_timer_event(void* self, void* e) {
     QUndoView_TimerEvent((QUndoView*)self, (QTimerEvent*)e);
 }
 
-void q_undoview_qbase_timer_event(void* self, void* e) {
-    QUndoView_QBaseTimerEvent((QUndoView*)self, (QTimerEvent*)e);
+void q_undoview_super_timer_event(void* self, void* e) {
+    QUndoView_SuperTimerEvent((QUndoView*)self, (QTimerEvent*)e);
 }
 
 void q_undoview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2241,8 +2241,8 @@ void q_undoview_resize_event(void* self, void* e) {
     QUndoView_ResizeEvent((QUndoView*)self, (QResizeEvent*)e);
 }
 
-void q_undoview_qbase_resize_event(void* self, void* e) {
-    QUndoView_QBaseResizeEvent((QUndoView*)self, (QResizeEvent*)e);
+void q_undoview_super_resize_event(void* self, void* e) {
+    QUndoView_SuperResizeEvent((QUndoView*)self, (QResizeEvent*)e);
 }
 
 void q_undoview_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2253,8 +2253,8 @@ void q_undoview_drag_move_event(void* self, void* e) {
     QUndoView_DragMoveEvent((QUndoView*)self, (QDragMoveEvent*)e);
 }
 
-void q_undoview_qbase_drag_move_event(void* self, void* e) {
-    QUndoView_QBaseDragMoveEvent((QUndoView*)self, (QDragMoveEvent*)e);
+void q_undoview_super_drag_move_event(void* self, void* e) {
+    QUndoView_SuperDragMoveEvent((QUndoView*)self, (QDragMoveEvent*)e);
 }
 
 void q_undoview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2265,8 +2265,8 @@ void q_undoview_drag_leave_event(void* self, void* e) {
     QUndoView_DragLeaveEvent((QUndoView*)self, (QDragLeaveEvent*)e);
 }
 
-void q_undoview_qbase_drag_leave_event(void* self, void* e) {
-    QUndoView_QBaseDragLeaveEvent((QUndoView*)self, (QDragLeaveEvent*)e);
+void q_undoview_super_drag_leave_event(void* self, void* e) {
+    QUndoView_SuperDragLeaveEvent((QUndoView*)self, (QDragLeaveEvent*)e);
 }
 
 void q_undoview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2277,8 +2277,8 @@ void q_undoview_drop_event(void* self, void* e) {
     QUndoView_DropEvent((QUndoView*)self, (QDropEvent*)e);
 }
 
-void q_undoview_qbase_drop_event(void* self, void* e) {
-    QUndoView_QBaseDropEvent((QUndoView*)self, (QDropEvent*)e);
+void q_undoview_super_drop_event(void* self, void* e) {
+    QUndoView_SuperDropEvent((QUndoView*)self, (QDropEvent*)e);
 }
 
 void q_undoview_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2289,8 +2289,8 @@ void q_undoview_start_drag(void* self, int32_t supportedActions) {
     QUndoView_StartDrag((QUndoView*)self, supportedActions);
 }
 
-void q_undoview_qbase_start_drag(void* self, int32_t supportedActions) {
-    QUndoView_QBaseStartDrag((QUndoView*)self, supportedActions);
+void q_undoview_super_start_drag(void* self, int32_t supportedActions) {
+    QUndoView_SuperStartDrag((QUndoView*)self, supportedActions);
 }
 
 void q_undoview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
@@ -2301,8 +2301,8 @@ void q_undoview_init_view_item_option(void* self, void* option) {
     QUndoView_InitViewItemOption((QUndoView*)self, (QStyleOptionViewItem*)option);
 }
 
-void q_undoview_qbase_init_view_item_option(void* self, void* option) {
-    QUndoView_QBaseInitViewItemOption((QUndoView*)self, (QStyleOptionViewItem*)option);
+void q_undoview_super_init_view_item_option(void* self, void* option) {
+    QUndoView_SuperInitViewItemOption((QUndoView*)self, (QStyleOptionViewItem*)option);
 }
 
 void q_undoview_on_init_view_item_option(void* self, void (*callback)(void*, void*)) {
@@ -2313,8 +2313,8 @@ void q_undoview_paint_event(void* self, void* e) {
     QUndoView_PaintEvent((QUndoView*)self, (QPaintEvent*)e);
 }
 
-void q_undoview_qbase_paint_event(void* self, void* e) {
-    QUndoView_QBasePaintEvent((QUndoView*)self, (QPaintEvent*)e);
+void q_undoview_super_paint_event(void* self, void* e) {
+    QUndoView_SuperPaintEvent((QUndoView*)self, (QPaintEvent*)e);
 }
 
 void q_undoview_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2325,8 +2325,8 @@ int32_t q_undoview_horizontal_offset(void* self) {
     return QUndoView_HorizontalOffset((QUndoView*)self);
 }
 
-int32_t q_undoview_qbase_horizontal_offset(void* self) {
-    return QUndoView_QBaseHorizontalOffset((QUndoView*)self);
+int32_t q_undoview_super_horizontal_offset(void* self) {
+    return QUndoView_SuperHorizontalOffset((QUndoView*)self);
 }
 
 void q_undoview_on_horizontal_offset(void* self, int32_t (*callback)()) {
@@ -2337,8 +2337,8 @@ int32_t q_undoview_vertical_offset(void* self) {
     return QUndoView_VerticalOffset((QUndoView*)self);
 }
 
-int32_t q_undoview_qbase_vertical_offset(void* self) {
-    return QUndoView_QBaseVerticalOffset((QUndoView*)self);
+int32_t q_undoview_super_vertical_offset(void* self) {
+    return QUndoView_SuperVerticalOffset((QUndoView*)self);
 }
 
 void q_undoview_on_vertical_offset(void* self, int32_t (*callback)()) {
@@ -2349,8 +2349,8 @@ QModelIndex* q_undoview_move_cursor(void* self, int32_t cursorAction, int32_t mo
     return QUndoView_MoveCursor((QUndoView*)self, cursorAction, modifiers);
 }
 
-QModelIndex* q_undoview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
-    return QUndoView_QBaseMoveCursor((QUndoView*)self, cursorAction, modifiers);
+QModelIndex* q_undoview_super_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
+    return QUndoView_SuperMoveCursor((QUndoView*)self, cursorAction, modifiers);
 }
 
 void q_undoview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t)) {
@@ -2361,8 +2361,8 @@ void q_undoview_set_selection(void* self, void* rect, int32_t command) {
     QUndoView_SetSelection((QUndoView*)self, (QRect*)rect, command);
 }
 
-void q_undoview_qbase_set_selection(void* self, void* rect, int32_t command) {
-    QUndoView_QBaseSetSelection((QUndoView*)self, (QRect*)rect, command);
+void q_undoview_super_set_selection(void* self, void* rect, int32_t command) {
+    QUndoView_SuperSetSelection((QUndoView*)self, (QRect*)rect, command);
 }
 
 void q_undoview_on_set_selection(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2373,8 +2373,8 @@ QRegion* q_undoview_visual_region_for_selection(void* self, void* selection) {
     return QUndoView_VisualRegionForSelection((QUndoView*)self, (QItemSelection*)selection);
 }
 
-QRegion* q_undoview_qbase_visual_region_for_selection(void* self, void* selection) {
-    return QUndoView_QBaseVisualRegionForSelection((QUndoView*)self, (QItemSelection*)selection);
+QRegion* q_undoview_super_visual_region_for_selection(void* self, void* selection) {
+    return QUndoView_SuperVisualRegionForSelection((QUndoView*)self, (QItemSelection*)selection);
 }
 
 void q_undoview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*)) {
@@ -2386,8 +2386,8 @@ libqt_list /* of QModelIndex* */ q_undoview_selected_indexes(void* self) {
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_undoview_qbase_selected_indexes(void* self) {
-    libqt_list _arr = QUndoView_QBaseSelectedIndexes((QUndoView*)self);
+libqt_list /* of QModelIndex* */ q_undoview_super_selected_indexes(void* self) {
+    libqt_list _arr = QUndoView_SuperSelectedIndexes((QUndoView*)self);
     return _arr;
 }
 
@@ -2399,8 +2399,8 @@ void q_undoview_update_geometries(void* self) {
     QUndoView_UpdateGeometries((QUndoView*)self);
 }
 
-void q_undoview_qbase_update_geometries(void* self) {
-    QUndoView_QBaseUpdateGeometries((QUndoView*)self);
+void q_undoview_super_update_geometries(void* self) {
+    QUndoView_SuperUpdateGeometries((QUndoView*)self);
 }
 
 void q_undoview_on_update_geometries(void* self, void (*callback)()) {
@@ -2411,8 +2411,8 @@ bool q_undoview_is_index_hidden(void* self, void* index) {
     return QUndoView_IsIndexHidden((QUndoView*)self, (QModelIndex*)index);
 }
 
-bool q_undoview_qbase_is_index_hidden(void* self, void* index) {
-    return QUndoView_QBaseIsIndexHidden((QUndoView*)self, (QModelIndex*)index);
+bool q_undoview_super_is_index_hidden(void* self, void* index) {
+    return QUndoView_SuperIsIndexHidden((QUndoView*)self, (QModelIndex*)index);
 }
 
 void q_undoview_on_is_index_hidden(void* self, bool (*callback)(void*, void*)) {
@@ -2423,8 +2423,8 @@ void q_undoview_selection_changed(void* self, void* selected, void* deselected) 
     QUndoView_SelectionChanged((QUndoView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
-void q_undoview_qbase_selection_changed(void* self, void* selected, void* deselected) {
-    QUndoView_QBaseSelectionChanged((QUndoView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
+void q_undoview_super_selection_changed(void* self, void* selected, void* deselected) {
+    QUndoView_SuperSelectionChanged((QUndoView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
 void q_undoview_on_selection_changed(void* self, void (*callback)(void*, void*, void*)) {
@@ -2435,8 +2435,8 @@ void q_undoview_current_changed(void* self, void* current, void* previous) {
     QUndoView_CurrentChanged((QUndoView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
-void q_undoview_qbase_current_changed(void* self, void* current, void* previous) {
-    QUndoView_QBaseCurrentChanged((QUndoView*)self, (QModelIndex*)current, (QModelIndex*)previous);
+void q_undoview_super_current_changed(void* self, void* current, void* previous) {
+    QUndoView_SuperCurrentChanged((QUndoView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
 void q_undoview_on_current_changed(void* self, void (*callback)(void*, void*, void*)) {
@@ -2447,8 +2447,8 @@ QSize* q_undoview_viewport_size_hint(void* self) {
     return QUndoView_ViewportSizeHint((QUndoView*)self);
 }
 
-QSize* q_undoview_qbase_viewport_size_hint(void* self) {
-    return QUndoView_QBaseViewportSizeHint((QUndoView*)self);
+QSize* q_undoview_super_viewport_size_hint(void* self) {
+    return QUndoView_SuperViewportSizeHint((QUndoView*)self);
 }
 
 void q_undoview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -2459,8 +2459,8 @@ void q_undoview_set_model(void* self, void* model) {
     QUndoView_SetModel((QUndoView*)self, (QAbstractItemModel*)model);
 }
 
-void q_undoview_qbase_set_model(void* self, void* model) {
-    QUndoView_QBaseSetModel((QUndoView*)self, (QAbstractItemModel*)model);
+void q_undoview_super_set_model(void* self, void* model) {
+    QUndoView_SuperSetModel((QUndoView*)self, (QAbstractItemModel*)model);
 }
 
 void q_undoview_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -2471,8 +2471,8 @@ void q_undoview_set_selection_model(void* self, void* selectionModel) {
     QUndoView_SetSelectionModel((QUndoView*)self, (QItemSelectionModel*)selectionModel);
 }
 
-void q_undoview_qbase_set_selection_model(void* self, void* selectionModel) {
-    QUndoView_QBaseSetSelectionModel((QUndoView*)self, (QItemSelectionModel*)selectionModel);
+void q_undoview_super_set_selection_model(void* self, void* selectionModel) {
+    QUndoView_SuperSetSelectionModel((QUndoView*)self, (QItemSelectionModel*)selectionModel);
 }
 
 void q_undoview_on_set_selection_model(void* self, void (*callback)(void*, void*)) {
@@ -2483,8 +2483,8 @@ void q_undoview_keyboard_search(void* self, const char* search) {
     QUndoView_KeyboardSearch((QUndoView*)self, qstring(search));
 }
 
-void q_undoview_qbase_keyboard_search(void* self, const char* search) {
-    QUndoView_QBaseKeyboardSearch((QUndoView*)self, qstring(search));
+void q_undoview_super_keyboard_search(void* self, const char* search) {
+    QUndoView_SuperKeyboardSearch((QUndoView*)self, qstring(search));
 }
 
 void q_undoview_on_keyboard_search(void* self, void (*callback)(void*, const char*)) {
@@ -2495,8 +2495,8 @@ int32_t q_undoview_size_hint_for_row(void* self, int row) {
     return QUndoView_SizeHintForRow((QUndoView*)self, row);
 }
 
-int32_t q_undoview_qbase_size_hint_for_row(void* self, int row) {
-    return QUndoView_QBaseSizeHintForRow((QUndoView*)self, row);
+int32_t q_undoview_super_size_hint_for_row(void* self, int row) {
+    return QUndoView_SuperSizeHintForRow((QUndoView*)self, row);
 }
 
 void q_undoview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
@@ -2507,8 +2507,8 @@ int32_t q_undoview_size_hint_for_column(void* self, int column) {
     return QUndoView_SizeHintForColumn((QUndoView*)self, column);
 }
 
-int32_t q_undoview_qbase_size_hint_for_column(void* self, int column) {
-    return QUndoView_QBaseSizeHintForColumn((QUndoView*)self, column);
+int32_t q_undoview_super_size_hint_for_column(void* self, int column) {
+    return QUndoView_SuperSizeHintForColumn((QUndoView*)self, column);
 }
 
 void q_undoview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
@@ -2519,8 +2519,8 @@ QAbstractItemDelegate* q_undoview_item_delegate_for_index(void* self, void* inde
     return QUndoView_ItemDelegateForIndex((QUndoView*)self, (QModelIndex*)index);
 }
 
-QAbstractItemDelegate* q_undoview_qbase_item_delegate_for_index(void* self, void* index) {
-    return QUndoView_QBaseItemDelegateForIndex((QUndoView*)self, (QModelIndex*)index);
+QAbstractItemDelegate* q_undoview_super_item_delegate_for_index(void* self, void* index) {
+    return QUndoView_SuperItemDelegateForIndex((QUndoView*)self, (QModelIndex*)index);
 }
 
 void q_undoview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
@@ -2531,8 +2531,8 @@ QVariant* q_undoview_input_method_query(void* self, int32_t query) {
     return QUndoView_InputMethodQuery((QUndoView*)self, query);
 }
 
-QVariant* q_undoview_qbase_input_method_query(void* self, int32_t query) {
-    return QUndoView_QBaseInputMethodQuery((QUndoView*)self, query);
+QVariant* q_undoview_super_input_method_query(void* self, int32_t query) {
+    return QUndoView_SuperInputMethodQuery((QUndoView*)self, query);
 }
 
 void q_undoview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2543,8 +2543,8 @@ void q_undoview_select_all(void* self) {
     QUndoView_SelectAll((QUndoView*)self);
 }
 
-void q_undoview_qbase_select_all(void* self) {
-    QUndoView_QBaseSelectAll((QUndoView*)self);
+void q_undoview_super_select_all(void* self) {
+    QUndoView_SuperSelectAll((QUndoView*)self);
 }
 
 void q_undoview_on_select_all(void* self, void (*callback)()) {
@@ -2555,8 +2555,8 @@ void q_undoview_update_editor_data(void* self) {
     QUndoView_UpdateEditorData((QUndoView*)self);
 }
 
-void q_undoview_qbase_update_editor_data(void* self) {
-    QUndoView_QBaseUpdateEditorData((QUndoView*)self);
+void q_undoview_super_update_editor_data(void* self) {
+    QUndoView_SuperUpdateEditorData((QUndoView*)self);
 }
 
 void q_undoview_on_update_editor_data(void* self, void (*callback)()) {
@@ -2567,8 +2567,8 @@ void q_undoview_update_editor_geometries(void* self) {
     QUndoView_UpdateEditorGeometries((QUndoView*)self);
 }
 
-void q_undoview_qbase_update_editor_geometries(void* self) {
-    QUndoView_QBaseUpdateEditorGeometries((QUndoView*)self);
+void q_undoview_super_update_editor_geometries(void* self) {
+    QUndoView_SuperUpdateEditorGeometries((QUndoView*)self);
 }
 
 void q_undoview_on_update_editor_geometries(void* self, void (*callback)()) {
@@ -2579,8 +2579,8 @@ void q_undoview_vertical_scrollbar_action(void* self, int action) {
     QUndoView_VerticalScrollbarAction((QUndoView*)self, action);
 }
 
-void q_undoview_qbase_vertical_scrollbar_action(void* self, int action) {
-    QUndoView_QBaseVerticalScrollbarAction((QUndoView*)self, action);
+void q_undoview_super_vertical_scrollbar_action(void* self, int action) {
+    QUndoView_SuperVerticalScrollbarAction((QUndoView*)self, action);
 }
 
 void q_undoview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2591,8 +2591,8 @@ void q_undoview_horizontal_scrollbar_action(void* self, int action) {
     QUndoView_HorizontalScrollbarAction((QUndoView*)self, action);
 }
 
-void q_undoview_qbase_horizontal_scrollbar_action(void* self, int action) {
-    QUndoView_QBaseHorizontalScrollbarAction((QUndoView*)self, action);
+void q_undoview_super_horizontal_scrollbar_action(void* self, int action) {
+    QUndoView_SuperHorizontalScrollbarAction((QUndoView*)self, action);
 }
 
 void q_undoview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2603,8 +2603,8 @@ void q_undoview_vertical_scrollbar_value_changed(void* self, int value) {
     QUndoView_VerticalScrollbarValueChanged((QUndoView*)self, value);
 }
 
-void q_undoview_qbase_vertical_scrollbar_value_changed(void* self, int value) {
-    QUndoView_QBaseVerticalScrollbarValueChanged((QUndoView*)self, value);
+void q_undoview_super_vertical_scrollbar_value_changed(void* self, int value) {
+    QUndoView_SuperVerticalScrollbarValueChanged((QUndoView*)self, value);
 }
 
 void q_undoview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2615,8 +2615,8 @@ void q_undoview_horizontal_scrollbar_value_changed(void* self, int value) {
     QUndoView_HorizontalScrollbarValueChanged((QUndoView*)self, value);
 }
 
-void q_undoview_qbase_horizontal_scrollbar_value_changed(void* self, int value) {
-    QUndoView_QBaseHorizontalScrollbarValueChanged((QUndoView*)self, value);
+void q_undoview_super_horizontal_scrollbar_value_changed(void* self, int value) {
+    QUndoView_SuperHorizontalScrollbarValueChanged((QUndoView*)self, value);
 }
 
 void q_undoview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2627,8 +2627,8 @@ void q_undoview_close_editor(void* self, void* editor, int32_t hint) {
     QUndoView_CloseEditor((QUndoView*)self, (QWidget*)editor, hint);
 }
 
-void q_undoview_qbase_close_editor(void* self, void* editor, int32_t hint) {
-    QUndoView_QBaseCloseEditor((QUndoView*)self, (QWidget*)editor, hint);
+void q_undoview_super_close_editor(void* self, void* editor, int32_t hint) {
+    QUndoView_SuperCloseEditor((QUndoView*)self, (QWidget*)editor, hint);
 }
 
 void q_undoview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2639,8 +2639,8 @@ void q_undoview_commit_data(void* self, void* editor) {
     QUndoView_CommitData((QUndoView*)self, (QWidget*)editor);
 }
 
-void q_undoview_qbase_commit_data(void* self, void* editor) {
-    QUndoView_QBaseCommitData((QUndoView*)self, (QWidget*)editor);
+void q_undoview_super_commit_data(void* self, void* editor) {
+    QUndoView_SuperCommitData((QUndoView*)self, (QWidget*)editor);
 }
 
 void q_undoview_on_commit_data(void* self, void (*callback)(void*, void*)) {
@@ -2651,8 +2651,8 @@ void q_undoview_editor_destroyed(void* self, void* editor) {
     QUndoView_EditorDestroyed((QUndoView*)self, (QObject*)editor);
 }
 
-void q_undoview_qbase_editor_destroyed(void* self, void* editor) {
-    QUndoView_QBaseEditorDestroyed((QUndoView*)self, (QObject*)editor);
+void q_undoview_super_editor_destroyed(void* self, void* editor) {
+    QUndoView_SuperEditorDestroyed((QUndoView*)self, (QObject*)editor);
 }
 
 void q_undoview_on_editor_destroyed(void* self, void (*callback)(void*, void*)) {
@@ -2663,8 +2663,8 @@ bool q_undoview_edit2(void* self, void* index, int32_t trigger, void* event) {
     return QUndoView_Edit2((QUndoView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-bool q_undoview_qbase_edit2(void* self, void* index, int32_t trigger, void* event) {
-    return QUndoView_QBaseEdit2((QUndoView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
+bool q_undoview_super_edit2(void* self, void* index, int32_t trigger, void* event) {
+    return QUndoView_SuperEdit2((QUndoView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
 void q_undoview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*)) {
@@ -2675,8 +2675,8 @@ int32_t q_undoview_selection_command(void* self, void* index, void* event) {
     return QUndoView_SelectionCommand((QUndoView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int32_t q_undoview_qbase_selection_command(void* self, void* index, void* event) {
-    return QUndoView_QBaseSelectionCommand((QUndoView*)self, (QModelIndex*)index, (QEvent*)event);
+int32_t q_undoview_super_selection_command(void* self, void* index, void* event) {
+    return QUndoView_SuperSelectionCommand((QUndoView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
 void q_undoview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
@@ -2687,8 +2687,8 @@ bool q_undoview_focus_next_prev_child(void* self, bool next) {
     return QUndoView_FocusNextPrevChild((QUndoView*)self, next);
 }
 
-bool q_undoview_qbase_focus_next_prev_child(void* self, bool next) {
-    return QUndoView_QBaseFocusNextPrevChild((QUndoView*)self, next);
+bool q_undoview_super_focus_next_prev_child(void* self, bool next) {
+    return QUndoView_SuperFocusNextPrevChild((QUndoView*)self, next);
 }
 
 void q_undoview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2699,8 +2699,8 @@ bool q_undoview_viewport_event(void* self, void* event) {
     return QUndoView_ViewportEvent((QUndoView*)self, (QEvent*)event);
 }
 
-bool q_undoview_qbase_viewport_event(void* self, void* event) {
-    return QUndoView_QBaseViewportEvent((QUndoView*)self, (QEvent*)event);
+bool q_undoview_super_viewport_event(void* self, void* event) {
+    return QUndoView_SuperViewportEvent((QUndoView*)self, (QEvent*)event);
 }
 
 void q_undoview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2711,8 +2711,8 @@ void q_undoview_mouse_press_event(void* self, void* event) {
     QUndoView_MousePressEvent((QUndoView*)self, (QMouseEvent*)event);
 }
 
-void q_undoview_qbase_mouse_press_event(void* self, void* event) {
-    QUndoView_QBaseMousePressEvent((QUndoView*)self, (QMouseEvent*)event);
+void q_undoview_super_mouse_press_event(void* self, void* event) {
+    QUndoView_SuperMousePressEvent((QUndoView*)self, (QMouseEvent*)event);
 }
 
 void q_undoview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2723,8 +2723,8 @@ void q_undoview_mouse_double_click_event(void* self, void* event) {
     QUndoView_MouseDoubleClickEvent((QUndoView*)self, (QMouseEvent*)event);
 }
 
-void q_undoview_qbase_mouse_double_click_event(void* self, void* event) {
-    QUndoView_QBaseMouseDoubleClickEvent((QUndoView*)self, (QMouseEvent*)event);
+void q_undoview_super_mouse_double_click_event(void* self, void* event) {
+    QUndoView_SuperMouseDoubleClickEvent((QUndoView*)self, (QMouseEvent*)event);
 }
 
 void q_undoview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2735,8 +2735,8 @@ void q_undoview_drag_enter_event(void* self, void* event) {
     QUndoView_DragEnterEvent((QUndoView*)self, (QDragEnterEvent*)event);
 }
 
-void q_undoview_qbase_drag_enter_event(void* self, void* event) {
-    QUndoView_QBaseDragEnterEvent((QUndoView*)self, (QDragEnterEvent*)event);
+void q_undoview_super_drag_enter_event(void* self, void* event) {
+    QUndoView_SuperDragEnterEvent((QUndoView*)self, (QDragEnterEvent*)event);
 }
 
 void q_undoview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2747,8 +2747,8 @@ void q_undoview_focus_in_event(void* self, void* event) {
     QUndoView_FocusInEvent((QUndoView*)self, (QFocusEvent*)event);
 }
 
-void q_undoview_qbase_focus_in_event(void* self, void* event) {
-    QUndoView_QBaseFocusInEvent((QUndoView*)self, (QFocusEvent*)event);
+void q_undoview_super_focus_in_event(void* self, void* event) {
+    QUndoView_SuperFocusInEvent((QUndoView*)self, (QFocusEvent*)event);
 }
 
 void q_undoview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2759,8 +2759,8 @@ void q_undoview_focus_out_event(void* self, void* event) {
     QUndoView_FocusOutEvent((QUndoView*)self, (QFocusEvent*)event);
 }
 
-void q_undoview_qbase_focus_out_event(void* self, void* event) {
-    QUndoView_QBaseFocusOutEvent((QUndoView*)self, (QFocusEvent*)event);
+void q_undoview_super_focus_out_event(void* self, void* event) {
+    QUndoView_SuperFocusOutEvent((QUndoView*)self, (QFocusEvent*)event);
 }
 
 void q_undoview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2771,8 +2771,8 @@ void q_undoview_key_press_event(void* self, void* event) {
     QUndoView_KeyPressEvent((QUndoView*)self, (QKeyEvent*)event);
 }
 
-void q_undoview_qbase_key_press_event(void* self, void* event) {
-    QUndoView_QBaseKeyPressEvent((QUndoView*)self, (QKeyEvent*)event);
+void q_undoview_super_key_press_event(void* self, void* event) {
+    QUndoView_SuperKeyPressEvent((QUndoView*)self, (QKeyEvent*)event);
 }
 
 void q_undoview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2783,8 +2783,8 @@ void q_undoview_input_method_event(void* self, void* event) {
     QUndoView_InputMethodEvent((QUndoView*)self, (QInputMethodEvent*)event);
 }
 
-void q_undoview_qbase_input_method_event(void* self, void* event) {
-    QUndoView_QBaseInputMethodEvent((QUndoView*)self, (QInputMethodEvent*)event);
+void q_undoview_super_input_method_event(void* self, void* event) {
+    QUndoView_SuperInputMethodEvent((QUndoView*)self, (QInputMethodEvent*)event);
 }
 
 void q_undoview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2795,8 +2795,8 @@ bool q_undoview_event_filter(void* self, void* object, void* event) {
     return QUndoView_EventFilter((QUndoView*)self, (QObject*)object, (QEvent*)event);
 }
 
-bool q_undoview_qbase_event_filter(void* self, void* object, void* event) {
-    return QUndoView_QBaseEventFilter((QUndoView*)self, (QObject*)object, (QEvent*)event);
+bool q_undoview_super_event_filter(void* self, void* object, void* event) {
+    return QUndoView_SuperEventFilter((QUndoView*)self, (QObject*)object, (QEvent*)event);
 }
 
 void q_undoview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2807,8 +2807,8 @@ QSize* q_undoview_minimum_size_hint(void* self) {
     return QUndoView_MinimumSizeHint((QUndoView*)self);
 }
 
-QSize* q_undoview_qbase_minimum_size_hint(void* self) {
-    return QUndoView_QBaseMinimumSizeHint((QUndoView*)self);
+QSize* q_undoview_super_minimum_size_hint(void* self) {
+    return QUndoView_SuperMinimumSizeHint((QUndoView*)self);
 }
 
 void q_undoview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2819,8 +2819,8 @@ QSize* q_undoview_size_hint(void* self) {
     return QUndoView_SizeHint((QUndoView*)self);
 }
 
-QSize* q_undoview_qbase_size_hint(void* self) {
-    return QUndoView_QBaseSizeHint((QUndoView*)self);
+QSize* q_undoview_super_size_hint(void* self) {
+    return QUndoView_SuperSizeHint((QUndoView*)self);
 }
 
 void q_undoview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2831,8 +2831,8 @@ void q_undoview_setup_viewport(void* self, void* viewport) {
     QUndoView_SetupViewport((QUndoView*)self, (QWidget*)viewport);
 }
 
-void q_undoview_qbase_setup_viewport(void* self, void* viewport) {
-    QUndoView_QBaseSetupViewport((QUndoView*)self, (QWidget*)viewport);
+void q_undoview_super_setup_viewport(void* self, void* viewport) {
+    QUndoView_SuperSetupViewport((QUndoView*)self, (QWidget*)viewport);
 }
 
 void q_undoview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2843,8 +2843,8 @@ void q_undoview_context_menu_event(void* self, void* param1) {
     QUndoView_ContextMenuEvent((QUndoView*)self, (QContextMenuEvent*)param1);
 }
 
-void q_undoview_qbase_context_menu_event(void* self, void* param1) {
-    QUndoView_QBaseContextMenuEvent((QUndoView*)self, (QContextMenuEvent*)param1);
+void q_undoview_super_context_menu_event(void* self, void* param1) {
+    QUndoView_SuperContextMenuEvent((QUndoView*)self, (QContextMenuEvent*)param1);
 }
 
 void q_undoview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2855,8 +2855,8 @@ void q_undoview_change_event(void* self, void* param1) {
     QUndoView_ChangeEvent((QUndoView*)self, (QEvent*)param1);
 }
 
-void q_undoview_qbase_change_event(void* self, void* param1) {
-    QUndoView_QBaseChangeEvent((QUndoView*)self, (QEvent*)param1);
+void q_undoview_super_change_event(void* self, void* param1) {
+    QUndoView_SuperChangeEvent((QUndoView*)self, (QEvent*)param1);
 }
 
 void q_undoview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2867,8 +2867,8 @@ void q_undoview_init_style_option(void* self, void* option) {
     QUndoView_InitStyleOption((QUndoView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_undoview_qbase_init_style_option(void* self, void* option) {
-    QUndoView_QBaseInitStyleOption((QUndoView*)self, (QStyleOptionFrame*)option);
+void q_undoview_super_init_style_option(void* self, void* option) {
+    QUndoView_SuperInitStyleOption((QUndoView*)self, (QStyleOptionFrame*)option);
 }
 
 void q_undoview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2879,8 +2879,8 @@ int32_t q_undoview_dev_type(void* self) {
     return QUndoView_DevType((QUndoView*)self);
 }
 
-int32_t q_undoview_qbase_dev_type(void* self) {
-    return QUndoView_QBaseDevType((QUndoView*)self);
+int32_t q_undoview_super_dev_type(void* self) {
+    return QUndoView_SuperDevType((QUndoView*)self);
 }
 
 void q_undoview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2891,8 +2891,8 @@ void q_undoview_set_visible(void* self, bool visible) {
     QUndoView_SetVisible((QUndoView*)self, visible);
 }
 
-void q_undoview_qbase_set_visible(void* self, bool visible) {
-    QUndoView_QBaseSetVisible((QUndoView*)self, visible);
+void q_undoview_super_set_visible(void* self, bool visible) {
+    QUndoView_SuperSetVisible((QUndoView*)self, visible);
 }
 
 void q_undoview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2903,8 +2903,8 @@ int32_t q_undoview_height_for_width(void* self, int param1) {
     return QUndoView_HeightForWidth((QUndoView*)self, param1);
 }
 
-int32_t q_undoview_qbase_height_for_width(void* self, int param1) {
-    return QUndoView_QBaseHeightForWidth((QUndoView*)self, param1);
+int32_t q_undoview_super_height_for_width(void* self, int param1) {
+    return QUndoView_SuperHeightForWidth((QUndoView*)self, param1);
 }
 
 void q_undoview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2915,8 +2915,8 @@ bool q_undoview_has_height_for_width(void* self) {
     return QUndoView_HasHeightForWidth((QUndoView*)self);
 }
 
-bool q_undoview_qbase_has_height_for_width(void* self) {
-    return QUndoView_QBaseHasHeightForWidth((QUndoView*)self);
+bool q_undoview_super_has_height_for_width(void* self) {
+    return QUndoView_SuperHasHeightForWidth((QUndoView*)self);
 }
 
 void q_undoview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2927,8 +2927,8 @@ QPaintEngine* q_undoview_paint_engine(void* self) {
     return QUndoView_PaintEngine((QUndoView*)self);
 }
 
-QPaintEngine* q_undoview_qbase_paint_engine(void* self) {
-    return QUndoView_QBasePaintEngine((QUndoView*)self);
+QPaintEngine* q_undoview_super_paint_engine(void* self) {
+    return QUndoView_SuperPaintEngine((QUndoView*)self);
 }
 
 void q_undoview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2939,8 +2939,8 @@ void q_undoview_key_release_event(void* self, void* event) {
     QUndoView_KeyReleaseEvent((QUndoView*)self, (QKeyEvent*)event);
 }
 
-void q_undoview_qbase_key_release_event(void* self, void* event) {
-    QUndoView_QBaseKeyReleaseEvent((QUndoView*)self, (QKeyEvent*)event);
+void q_undoview_super_key_release_event(void* self, void* event) {
+    QUndoView_SuperKeyReleaseEvent((QUndoView*)self, (QKeyEvent*)event);
 }
 
 void q_undoview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2951,8 +2951,8 @@ void q_undoview_enter_event(void* self, void* event) {
     QUndoView_EnterEvent((QUndoView*)self, (QEnterEvent*)event);
 }
 
-void q_undoview_qbase_enter_event(void* self, void* event) {
-    QUndoView_QBaseEnterEvent((QUndoView*)self, (QEnterEvent*)event);
+void q_undoview_super_enter_event(void* self, void* event) {
+    QUndoView_SuperEnterEvent((QUndoView*)self, (QEnterEvent*)event);
 }
 
 void q_undoview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2963,8 +2963,8 @@ void q_undoview_leave_event(void* self, void* event) {
     QUndoView_LeaveEvent((QUndoView*)self, (QEvent*)event);
 }
 
-void q_undoview_qbase_leave_event(void* self, void* event) {
-    QUndoView_QBaseLeaveEvent((QUndoView*)self, (QEvent*)event);
+void q_undoview_super_leave_event(void* self, void* event) {
+    QUndoView_SuperLeaveEvent((QUndoView*)self, (QEvent*)event);
 }
 
 void q_undoview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2975,8 +2975,8 @@ void q_undoview_move_event(void* self, void* event) {
     QUndoView_MoveEvent((QUndoView*)self, (QMoveEvent*)event);
 }
 
-void q_undoview_qbase_move_event(void* self, void* event) {
-    QUndoView_QBaseMoveEvent((QUndoView*)self, (QMoveEvent*)event);
+void q_undoview_super_move_event(void* self, void* event) {
+    QUndoView_SuperMoveEvent((QUndoView*)self, (QMoveEvent*)event);
 }
 
 void q_undoview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2987,8 +2987,8 @@ void q_undoview_close_event(void* self, void* event) {
     QUndoView_CloseEvent((QUndoView*)self, (QCloseEvent*)event);
 }
 
-void q_undoview_qbase_close_event(void* self, void* event) {
-    QUndoView_QBaseCloseEvent((QUndoView*)self, (QCloseEvent*)event);
+void q_undoview_super_close_event(void* self, void* event) {
+    QUndoView_SuperCloseEvent((QUndoView*)self, (QCloseEvent*)event);
 }
 
 void q_undoview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2999,8 +2999,8 @@ void q_undoview_tablet_event(void* self, void* event) {
     QUndoView_TabletEvent((QUndoView*)self, (QTabletEvent*)event);
 }
 
-void q_undoview_qbase_tablet_event(void* self, void* event) {
-    QUndoView_QBaseTabletEvent((QUndoView*)self, (QTabletEvent*)event);
+void q_undoview_super_tablet_event(void* self, void* event) {
+    QUndoView_SuperTabletEvent((QUndoView*)self, (QTabletEvent*)event);
 }
 
 void q_undoview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -3011,8 +3011,8 @@ void q_undoview_action_event(void* self, void* event) {
     QUndoView_ActionEvent((QUndoView*)self, (QActionEvent*)event);
 }
 
-void q_undoview_qbase_action_event(void* self, void* event) {
-    QUndoView_QBaseActionEvent((QUndoView*)self, (QActionEvent*)event);
+void q_undoview_super_action_event(void* self, void* event) {
+    QUndoView_SuperActionEvent((QUndoView*)self, (QActionEvent*)event);
 }
 
 void q_undoview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -3023,8 +3023,8 @@ void q_undoview_show_event(void* self, void* event) {
     QUndoView_ShowEvent((QUndoView*)self, (QShowEvent*)event);
 }
 
-void q_undoview_qbase_show_event(void* self, void* event) {
-    QUndoView_QBaseShowEvent((QUndoView*)self, (QShowEvent*)event);
+void q_undoview_super_show_event(void* self, void* event) {
+    QUndoView_SuperShowEvent((QUndoView*)self, (QShowEvent*)event);
 }
 
 void q_undoview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -3035,8 +3035,8 @@ void q_undoview_hide_event(void* self, void* event) {
     QUndoView_HideEvent((QUndoView*)self, (QHideEvent*)event);
 }
 
-void q_undoview_qbase_hide_event(void* self, void* event) {
-    QUndoView_QBaseHideEvent((QUndoView*)self, (QHideEvent*)event);
+void q_undoview_super_hide_event(void* self, void* event) {
+    QUndoView_SuperHideEvent((QUndoView*)self, (QHideEvent*)event);
 }
 
 void q_undoview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -3047,8 +3047,8 @@ bool q_undoview_native_event(void* self, char* eventType, void* message, intptr_
     return QUndoView_NativeEvent((QUndoView*)self, qstring(eventType), message, result);
 }
 
-bool q_undoview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QUndoView_QBaseNativeEvent((QUndoView*)self, qstring(eventType), message, result);
+bool q_undoview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QUndoView_SuperNativeEvent((QUndoView*)self, qstring(eventType), message, result);
 }
 
 void q_undoview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -3059,8 +3059,8 @@ int32_t q_undoview_metric(void* self, int32_t param1) {
     return QUndoView_Metric((QUndoView*)self, param1);
 }
 
-int32_t q_undoview_qbase_metric(void* self, int32_t param1) {
-    return QUndoView_QBaseMetric((QUndoView*)self, param1);
+int32_t q_undoview_super_metric(void* self, int32_t param1) {
+    return QUndoView_SuperMetric((QUndoView*)self, param1);
 }
 
 void q_undoview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -3071,8 +3071,8 @@ void q_undoview_init_painter(void* self, void* painter) {
     QUndoView_InitPainter((QUndoView*)self, (QPainter*)painter);
 }
 
-void q_undoview_qbase_init_painter(void* self, void* painter) {
-    QUndoView_QBaseInitPainter((QUndoView*)self, (QPainter*)painter);
+void q_undoview_super_init_painter(void* self, void* painter) {
+    QUndoView_SuperInitPainter((QUndoView*)self, (QPainter*)painter);
 }
 
 void q_undoview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -3083,8 +3083,8 @@ QPaintDevice* q_undoview_redirected(void* self, void* offset) {
     return QUndoView_Redirected((QUndoView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_undoview_qbase_redirected(void* self, void* offset) {
-    return QUndoView_QBaseRedirected((QUndoView*)self, (QPoint*)offset);
+QPaintDevice* q_undoview_super_redirected(void* self, void* offset) {
+    return QUndoView_SuperRedirected((QUndoView*)self, (QPoint*)offset);
 }
 
 void q_undoview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -3095,8 +3095,8 @@ QPainter* q_undoview_shared_painter(void* self) {
     return QUndoView_SharedPainter((QUndoView*)self);
 }
 
-QPainter* q_undoview_qbase_shared_painter(void* self) {
-    return QUndoView_QBaseSharedPainter((QUndoView*)self);
+QPainter* q_undoview_super_shared_painter(void* self) {
+    return QUndoView_SuperSharedPainter((QUndoView*)self);
 }
 
 void q_undoview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -3107,8 +3107,8 @@ void q_undoview_child_event(void* self, void* event) {
     QUndoView_ChildEvent((QUndoView*)self, (QChildEvent*)event);
 }
 
-void q_undoview_qbase_child_event(void* self, void* event) {
-    QUndoView_QBaseChildEvent((QUndoView*)self, (QChildEvent*)event);
+void q_undoview_super_child_event(void* self, void* event) {
+    QUndoView_SuperChildEvent((QUndoView*)self, (QChildEvent*)event);
 }
 
 void q_undoview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -3119,8 +3119,8 @@ void q_undoview_custom_event(void* self, void* event) {
     QUndoView_CustomEvent((QUndoView*)self, (QEvent*)event);
 }
 
-void q_undoview_qbase_custom_event(void* self, void* event) {
-    QUndoView_QBaseCustomEvent((QUndoView*)self, (QEvent*)event);
+void q_undoview_super_custom_event(void* self, void* event) {
+    QUndoView_SuperCustomEvent((QUndoView*)self, (QEvent*)event);
 }
 
 void q_undoview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -3131,8 +3131,8 @@ void q_undoview_connect_notify(void* self, void* signal) {
     QUndoView_ConnectNotify((QUndoView*)self, (QMetaMethod*)signal);
 }
 
-void q_undoview_qbase_connect_notify(void* self, void* signal) {
-    QUndoView_QBaseConnectNotify((QUndoView*)self, (QMetaMethod*)signal);
+void q_undoview_super_connect_notify(void* self, void* signal) {
+    QUndoView_SuperConnectNotify((QUndoView*)self, (QMetaMethod*)signal);
 }
 
 void q_undoview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3143,8 +3143,8 @@ void q_undoview_disconnect_notify(void* self, void* signal) {
     QUndoView_DisconnectNotify((QUndoView*)self, (QMetaMethod*)signal);
 }
 
-void q_undoview_qbase_disconnect_notify(void* self, void* signal) {
-    QUndoView_QBaseDisconnectNotify((QUndoView*)self, (QMetaMethod*)signal);
+void q_undoview_super_disconnect_notify(void* self, void* signal) {
+    QUndoView_SuperDisconnectNotify((QUndoView*)self, (QMetaMethod*)signal);
 }
 
 void q_undoview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3155,8 +3155,8 @@ void q_undoview_resize_contents(void* self, int width, int height) {
     QUndoView_ResizeContents((QUndoView*)self, width, height);
 }
 
-void q_undoview_qbase_resize_contents(void* self, int width, int height) {
-    QUndoView_QBaseResizeContents((QUndoView*)self, width, height);
+void q_undoview_super_resize_contents(void* self, int width, int height) {
+    QUndoView_SuperResizeContents((QUndoView*)self, width, height);
 }
 
 void q_undoview_on_resize_contents(void* self, void (*callback)(void*, int, int)) {
@@ -3167,8 +3167,8 @@ QSize* q_undoview_contents_size(void* self) {
     return QUndoView_ContentsSize((QUndoView*)self);
 }
 
-QSize* q_undoview_qbase_contents_size(void* self) {
-    return QUndoView_QBaseContentsSize((QUndoView*)self);
+QSize* q_undoview_super_contents_size(void* self) {
+    return QUndoView_SuperContentsSize((QUndoView*)self);
 }
 
 void q_undoview_on_contents_size(void* self, QSize* (*callback)()) {
@@ -3179,8 +3179,8 @@ QRect* q_undoview_rect_for_index(void* self, void* index) {
     return QUndoView_RectForIndex((QUndoView*)self, (QModelIndex*)index);
 }
 
-QRect* q_undoview_qbase_rect_for_index(void* self, void* index) {
-    return QUndoView_QBaseRectForIndex((QUndoView*)self, (QModelIndex*)index);
+QRect* q_undoview_super_rect_for_index(void* self, void* index) {
+    return QUndoView_SuperRectForIndex((QUndoView*)self, (QModelIndex*)index);
 }
 
 void q_undoview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*)) {
@@ -3191,8 +3191,8 @@ void q_undoview_set_position_for_index(void* self, void* position, void* index) 
     QUndoView_SetPositionForIndex((QUndoView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
-void q_undoview_qbase_set_position_for_index(void* self, void* position, void* index) {
-    QUndoView_QBaseSetPositionForIndex((QUndoView*)self, (QPoint*)position, (QModelIndex*)index);
+void q_undoview_super_set_position_for_index(void* self, void* position, void* index) {
+    QUndoView_SuperSetPositionForIndex((QUndoView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
 void q_undoview_on_set_position_for_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -3203,8 +3203,8 @@ int32_t q_undoview_state(void* self) {
     return QUndoView_State((QUndoView*)self);
 }
 
-int32_t q_undoview_qbase_state(void* self) {
-    return QUndoView_QBaseState((QUndoView*)self);
+int32_t q_undoview_super_state(void* self) {
+    return QUndoView_SuperState((QUndoView*)self);
 }
 
 void q_undoview_on_state(void* self, int32_t (*callback)()) {
@@ -3215,8 +3215,8 @@ void q_undoview_set_state(void* self, int32_t state) {
     QUndoView_SetState((QUndoView*)self, state);
 }
 
-void q_undoview_qbase_set_state(void* self, int32_t state) {
-    QUndoView_QBaseSetState((QUndoView*)self, state);
+void q_undoview_super_set_state(void* self, int32_t state) {
+    QUndoView_SuperSetState((QUndoView*)self, state);
 }
 
 void q_undoview_on_set_state(void* self, void (*callback)(void*, int32_t)) {
@@ -3227,8 +3227,8 @@ void q_undoview_schedule_delayed_items_layout(void* self) {
     QUndoView_ScheduleDelayedItemsLayout((QUndoView*)self);
 }
 
-void q_undoview_qbase_schedule_delayed_items_layout(void* self) {
-    QUndoView_QBaseScheduleDelayedItemsLayout((QUndoView*)self);
+void q_undoview_super_schedule_delayed_items_layout(void* self) {
+    QUndoView_SuperScheduleDelayedItemsLayout((QUndoView*)self);
 }
 
 void q_undoview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
@@ -3239,8 +3239,8 @@ void q_undoview_execute_delayed_items_layout(void* self) {
     QUndoView_ExecuteDelayedItemsLayout((QUndoView*)self);
 }
 
-void q_undoview_qbase_execute_delayed_items_layout(void* self) {
-    QUndoView_QBaseExecuteDelayedItemsLayout((QUndoView*)self);
+void q_undoview_super_execute_delayed_items_layout(void* self) {
+    QUndoView_SuperExecuteDelayedItemsLayout((QUndoView*)self);
 }
 
 void q_undoview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
@@ -3251,8 +3251,8 @@ void q_undoview_set_dirty_region(void* self, void* region) {
     QUndoView_SetDirtyRegion((QUndoView*)self, (QRegion*)region);
 }
 
-void q_undoview_qbase_set_dirty_region(void* self, void* region) {
-    QUndoView_QBaseSetDirtyRegion((QUndoView*)self, (QRegion*)region);
+void q_undoview_super_set_dirty_region(void* self, void* region) {
+    QUndoView_SuperSetDirtyRegion((QUndoView*)self, (QRegion*)region);
 }
 
 void q_undoview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
@@ -3263,8 +3263,8 @@ void q_undoview_scroll_dirty_region(void* self, int dx, int dy) {
     QUndoView_ScrollDirtyRegion((QUndoView*)self, dx, dy);
 }
 
-void q_undoview_qbase_scroll_dirty_region(void* self, int dx, int dy) {
-    QUndoView_QBaseScrollDirtyRegion((QUndoView*)self, dx, dy);
+void q_undoview_super_scroll_dirty_region(void* self, int dx, int dy) {
+    QUndoView_SuperScrollDirtyRegion((QUndoView*)self, dx, dy);
 }
 
 void q_undoview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
@@ -3275,8 +3275,8 @@ QPoint* q_undoview_dirty_region_offset(void* self) {
     return QUndoView_DirtyRegionOffset((QUndoView*)self);
 }
 
-QPoint* q_undoview_qbase_dirty_region_offset(void* self) {
-    return QUndoView_QBaseDirtyRegionOffset((QUndoView*)self);
+QPoint* q_undoview_super_dirty_region_offset(void* self) {
+    return QUndoView_SuperDirtyRegionOffset((QUndoView*)self);
 }
 
 void q_undoview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
@@ -3287,8 +3287,8 @@ void q_undoview_start_auto_scroll(void* self) {
     QUndoView_StartAutoScroll((QUndoView*)self);
 }
 
-void q_undoview_qbase_start_auto_scroll(void* self) {
-    QUndoView_QBaseStartAutoScroll((QUndoView*)self);
+void q_undoview_super_start_auto_scroll(void* self) {
+    QUndoView_SuperStartAutoScroll((QUndoView*)self);
 }
 
 void q_undoview_on_start_auto_scroll(void* self, void (*callback)()) {
@@ -3299,8 +3299,8 @@ void q_undoview_stop_auto_scroll(void* self) {
     QUndoView_StopAutoScroll((QUndoView*)self);
 }
 
-void q_undoview_qbase_stop_auto_scroll(void* self) {
-    QUndoView_QBaseStopAutoScroll((QUndoView*)self);
+void q_undoview_super_stop_auto_scroll(void* self) {
+    QUndoView_SuperStopAutoScroll((QUndoView*)self);
 }
 
 void q_undoview_on_stop_auto_scroll(void* self, void (*callback)()) {
@@ -3311,8 +3311,8 @@ void q_undoview_do_auto_scroll(void* self) {
     QUndoView_DoAutoScroll((QUndoView*)self);
 }
 
-void q_undoview_qbase_do_auto_scroll(void* self) {
-    QUndoView_QBaseDoAutoScroll((QUndoView*)self);
+void q_undoview_super_do_auto_scroll(void* self) {
+    QUndoView_SuperDoAutoScroll((QUndoView*)self);
 }
 
 void q_undoview_on_do_auto_scroll(void* self, void (*callback)()) {
@@ -3323,8 +3323,8 @@ int32_t q_undoview_drop_indicator_position(void* self) {
     return QUndoView_DropIndicatorPosition((QUndoView*)self);
 }
 
-int32_t q_undoview_qbase_drop_indicator_position(void* self) {
-    return QUndoView_QBaseDropIndicatorPosition((QUndoView*)self);
+int32_t q_undoview_super_drop_indicator_position(void* self) {
+    return QUndoView_SuperDropIndicatorPosition((QUndoView*)self);
 }
 
 void q_undoview_on_drop_indicator_position(void* self, int32_t (*callback)()) {
@@ -3335,8 +3335,8 @@ void q_undoview_set_viewport_margins(void* self, int left, int top, int right, i
     QUndoView_SetViewportMargins((QUndoView*)self, left, top, right, bottom);
 }
 
-void q_undoview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QUndoView_QBaseSetViewportMargins((QUndoView*)self, left, top, right, bottom);
+void q_undoview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QUndoView_SuperSetViewportMargins((QUndoView*)self, left, top, right, bottom);
 }
 
 void q_undoview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -3347,8 +3347,8 @@ QMargins* q_undoview_viewport_margins(void* self) {
     return QUndoView_ViewportMargins((QUndoView*)self);
 }
 
-QMargins* q_undoview_qbase_viewport_margins(void* self) {
-    return QUndoView_QBaseViewportMargins((QUndoView*)self);
+QMargins* q_undoview_super_viewport_margins(void* self) {
+    return QUndoView_SuperViewportMargins((QUndoView*)self);
 }
 
 void q_undoview_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -3359,8 +3359,8 @@ void q_undoview_draw_frame(void* self, void* param1) {
     QUndoView_DrawFrame((QUndoView*)self, (QPainter*)param1);
 }
 
-void q_undoview_qbase_draw_frame(void* self, void* param1) {
-    QUndoView_QBaseDrawFrame((QUndoView*)self, (QPainter*)param1);
+void q_undoview_super_draw_frame(void* self, void* param1) {
+    QUndoView_SuperDrawFrame((QUndoView*)self, (QPainter*)param1);
 }
 
 void q_undoview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -3371,8 +3371,8 @@ void q_undoview_update_micro_focus(void* self) {
     QUndoView_UpdateMicroFocus((QUndoView*)self);
 }
 
-void q_undoview_qbase_update_micro_focus(void* self) {
-    QUndoView_QBaseUpdateMicroFocus((QUndoView*)self);
+void q_undoview_super_update_micro_focus(void* self) {
+    QUndoView_SuperUpdateMicroFocus((QUndoView*)self);
 }
 
 void q_undoview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3383,8 +3383,8 @@ void q_undoview_create(void* self) {
     QUndoView_Create((QUndoView*)self);
 }
 
-void q_undoview_qbase_create(void* self) {
-    QUndoView_QBaseCreate((QUndoView*)self);
+void q_undoview_super_create(void* self) {
+    QUndoView_SuperCreate((QUndoView*)self);
 }
 
 void q_undoview_on_create(void* self, void (*callback)()) {
@@ -3395,8 +3395,8 @@ void q_undoview_destroy(void* self) {
     QUndoView_Destroy((QUndoView*)self);
 }
 
-void q_undoview_qbase_destroy(void* self) {
-    QUndoView_QBaseDestroy((QUndoView*)self);
+void q_undoview_super_destroy(void* self) {
+    QUndoView_SuperDestroy((QUndoView*)self);
 }
 
 void q_undoview_on_destroy(void* self, void (*callback)()) {
@@ -3407,8 +3407,8 @@ bool q_undoview_focus_next_child(void* self) {
     return QUndoView_FocusNextChild((QUndoView*)self);
 }
 
-bool q_undoview_qbase_focus_next_child(void* self) {
-    return QUndoView_QBaseFocusNextChild((QUndoView*)self);
+bool q_undoview_super_focus_next_child(void* self) {
+    return QUndoView_SuperFocusNextChild((QUndoView*)self);
 }
 
 void q_undoview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3419,8 +3419,8 @@ bool q_undoview_focus_previous_child(void* self) {
     return QUndoView_FocusPreviousChild((QUndoView*)self);
 }
 
-bool q_undoview_qbase_focus_previous_child(void* self) {
-    return QUndoView_QBaseFocusPreviousChild((QUndoView*)self);
+bool q_undoview_super_focus_previous_child(void* self) {
+    return QUndoView_SuperFocusPreviousChild((QUndoView*)self);
 }
 
 void q_undoview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3431,8 +3431,8 @@ QObject* q_undoview_sender(void* self) {
     return QUndoView_Sender((QUndoView*)self);
 }
 
-QObject* q_undoview_qbase_sender(void* self) {
-    return QUndoView_QBaseSender((QUndoView*)self);
+QObject* q_undoview_super_sender(void* self) {
+    return QUndoView_SuperSender((QUndoView*)self);
 }
 
 void q_undoview_on_sender(void* self, QObject* (*callback)()) {
@@ -3443,8 +3443,8 @@ int32_t q_undoview_sender_signal_index(void* self) {
     return QUndoView_SenderSignalIndex((QUndoView*)self);
 }
 
-int32_t q_undoview_qbase_sender_signal_index(void* self) {
-    return QUndoView_QBaseSenderSignalIndex((QUndoView*)self);
+int32_t q_undoview_super_sender_signal_index(void* self) {
+    return QUndoView_SuperSenderSignalIndex((QUndoView*)self);
 }
 
 void q_undoview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3455,8 +3455,8 @@ int32_t q_undoview_receivers(void* self, const char* signal) {
     return QUndoView_Receivers((QUndoView*)self, signal);
 }
 
-int32_t q_undoview_qbase_receivers(void* self, const char* signal) {
-    return QUndoView_QBaseReceivers((QUndoView*)self, signal);
+int32_t q_undoview_super_receivers(void* self, const char* signal) {
+    return QUndoView_SuperReceivers((QUndoView*)self, signal);
 }
 
 void q_undoview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3467,8 +3467,8 @@ bool q_undoview_is_signal_connected(void* self, void* signal) {
     return QUndoView_IsSignalConnected((QUndoView*)self, (QMetaMethod*)signal);
 }
 
-bool q_undoview_qbase_is_signal_connected(void* self, void* signal) {
-    return QUndoView_QBaseIsSignalConnected((QUndoView*)self, (QMetaMethod*)signal);
+bool q_undoview_super_is_signal_connected(void* self, void* signal) {
+    return QUndoView_SuperIsSignalConnected((QUndoView*)self, (QMetaMethod*)signal);
 }
 
 void q_undoview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3479,8 +3479,8 @@ double q_undoview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return QUndoView_GetDecodedMetricF((QUndoView*)self, metricA, metricB);
 }
 
-double q_undoview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QUndoView_QBaseGetDecodedMetricF((QUndoView*)self, metricA, metricB);
+double q_undoview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QUndoView_SuperGetDecodedMetricF((QUndoView*)self, metricA, metricB);
 }
 
 void q_undoview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

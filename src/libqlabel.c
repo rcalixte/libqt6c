@@ -50,8 +50,8 @@ void q_label_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QLabel_OnMetaObject((QLabel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_label_qbase_meta_object(void* self) {
-    return QLabel_QBaseMetaObject((QLabel*)self);
+const QMetaObject* q_label_super_meta_object(void* self) {
+    return QLabel_SuperMetaObject((QLabel*)self);
 }
 
 void* q_label_metacast(void* self, const char* param1) {
@@ -62,8 +62,8 @@ void q_label_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QLabel_OnMetacast((QLabel*)self, (intptr_t)callback);
 }
 
-void* q_label_qbase_metacast(void* self, const char* param1) {
-    return QLabel_QBaseMetacast((QLabel*)self, param1);
+void* q_label_super_metacast(void* self, const char* param1) {
+    return QLabel_SuperMetacast((QLabel*)self, param1);
 }
 
 int32_t q_label_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -74,8 +74,8 @@ void q_label_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, vo
     QLabel_OnMetacall((QLabel*)self, (intptr_t)callback);
 }
 
-int32_t q_label_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QLabel_QBaseMetacall((QLabel*)self, param1, param2, param3);
+int32_t q_label_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QLabel_SuperMetacall((QLabel*)self, param1, param2, param3);
 }
 
 const char* q_label_tr(const char* s) {
@@ -168,8 +168,8 @@ void q_label_on_size_hint(void* self, QSize* (*callback)()) {
     QLabel_OnSizeHint((QLabel*)self, (intptr_t)callback);
 }
 
-QSize* q_label_qbase_size_hint(void* self) {
-    return QLabel_QBaseSizeHint((QLabel*)self);
+QSize* q_label_super_size_hint(void* self) {
+    return QLabel_SuperSizeHint((QLabel*)self);
 }
 
 QSize* q_label_minimum_size_hint(void* self) {
@@ -180,8 +180,8 @@ void q_label_on_minimum_size_hint(void* self, QSize* (*callback)()) {
     QLabel_OnMinimumSizeHint((QLabel*)self, (intptr_t)callback);
 }
 
-QSize* q_label_qbase_minimum_size_hint(void* self) {
-    return QLabel_QBaseMinimumSizeHint((QLabel*)self);
+QSize* q_label_super_minimum_size_hint(void* self) {
+    return QLabel_SuperMinimumSizeHint((QLabel*)self);
 }
 
 void q_label_set_buddy(void* self, void* buddy) {
@@ -200,8 +200,8 @@ void q_label_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
     QLabel_OnHeightForWidth((QLabel*)self, (intptr_t)callback);
 }
 
-int32_t q_label_qbase_height_for_width(void* self, int param1) {
-    return QLabel_QBaseHeightForWidth((QLabel*)self, param1);
+int32_t q_label_super_height_for_width(void* self, int param1) {
+    return QLabel_SuperHeightForWidth((QLabel*)self, param1);
 }
 
 bool q_label_open_external_links(void* self) {
@@ -291,8 +291,8 @@ void q_label_on_event(void* self, bool (*callback)(void*, void*)) {
     QLabel_OnEvent((QLabel*)self, (intptr_t)callback);
 }
 
-bool q_label_qbase_event(void* self, void* e) {
-    return QLabel_QBaseEvent((QLabel*)self, (QEvent*)e);
+bool q_label_super_event(void* self, void* e) {
+    return QLabel_SuperEvent((QLabel*)self, (QEvent*)e);
 }
 
 void q_label_key_press_event(void* self, void* ev) {
@@ -303,8 +303,8 @@ void q_label_on_key_press_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnKeyPressEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_key_press_event(void* self, void* ev) {
-    QLabel_QBaseKeyPressEvent((QLabel*)self, (QKeyEvent*)ev);
+void q_label_super_key_press_event(void* self, void* ev) {
+    QLabel_SuperKeyPressEvent((QLabel*)self, (QKeyEvent*)ev);
 }
 
 void q_label_paint_event(void* self, void* param1) {
@@ -315,8 +315,8 @@ void q_label_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnPaintEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_paint_event(void* self, void* param1) {
-    QLabel_QBasePaintEvent((QLabel*)self, (QPaintEvent*)param1);
+void q_label_super_paint_event(void* self, void* param1) {
+    QLabel_SuperPaintEvent((QLabel*)self, (QPaintEvent*)param1);
 }
 
 void q_label_change_event(void* self, void* param1) {
@@ -327,8 +327,8 @@ void q_label_on_change_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnChangeEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_change_event(void* self, void* param1) {
-    QLabel_QBaseChangeEvent((QLabel*)self, (QEvent*)param1);
+void q_label_super_change_event(void* self, void* param1) {
+    QLabel_SuperChangeEvent((QLabel*)self, (QEvent*)param1);
 }
 
 void q_label_mouse_press_event(void* self, void* ev) {
@@ -339,8 +339,8 @@ void q_label_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnMousePressEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_mouse_press_event(void* self, void* ev) {
-    QLabel_QBaseMousePressEvent((QLabel*)self, (QMouseEvent*)ev);
+void q_label_super_mouse_press_event(void* self, void* ev) {
+    QLabel_SuperMousePressEvent((QLabel*)self, (QMouseEvent*)ev);
 }
 
 void q_label_mouse_move_event(void* self, void* ev) {
@@ -351,8 +351,8 @@ void q_label_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnMouseMoveEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_mouse_move_event(void* self, void* ev) {
-    QLabel_QBaseMouseMoveEvent((QLabel*)self, (QMouseEvent*)ev);
+void q_label_super_mouse_move_event(void* self, void* ev) {
+    QLabel_SuperMouseMoveEvent((QLabel*)self, (QMouseEvent*)ev);
 }
 
 void q_label_mouse_release_event(void* self, void* ev) {
@@ -363,8 +363,8 @@ void q_label_on_mouse_release_event(void* self, void (*callback)(void*, void*)) 
     QLabel_OnMouseReleaseEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_mouse_release_event(void* self, void* ev) {
-    QLabel_QBaseMouseReleaseEvent((QLabel*)self, (QMouseEvent*)ev);
+void q_label_super_mouse_release_event(void* self, void* ev) {
+    QLabel_SuperMouseReleaseEvent((QLabel*)self, (QMouseEvent*)ev);
 }
 
 void q_label_context_menu_event(void* self, void* ev) {
@@ -375,8 +375,8 @@ void q_label_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnContextMenuEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_context_menu_event(void* self, void* ev) {
-    QLabel_QBaseContextMenuEvent((QLabel*)self, (QContextMenuEvent*)ev);
+void q_label_super_context_menu_event(void* self, void* ev) {
+    QLabel_SuperContextMenuEvent((QLabel*)self, (QContextMenuEvent*)ev);
 }
 
 void q_label_focus_in_event(void* self, void* ev) {
@@ -387,8 +387,8 @@ void q_label_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnFocusInEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_focus_in_event(void* self, void* ev) {
-    QLabel_QBaseFocusInEvent((QLabel*)self, (QFocusEvent*)ev);
+void q_label_super_focus_in_event(void* self, void* ev) {
+    QLabel_SuperFocusInEvent((QLabel*)self, (QFocusEvent*)ev);
 }
 
 void q_label_focus_out_event(void* self, void* ev) {
@@ -399,8 +399,8 @@ void q_label_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
     QLabel_OnFocusOutEvent((QLabel*)self, (intptr_t)callback);
 }
 
-void q_label_qbase_focus_out_event(void* self, void* ev) {
-    QLabel_QBaseFocusOutEvent((QLabel*)self, (QFocusEvent*)ev);
+void q_label_super_focus_out_event(void* self, void* ev) {
+    QLabel_SuperFocusOutEvent((QLabel*)self, (QFocusEvent*)ev);
 }
 
 bool q_label_focus_next_prev_child(void* self, bool next) {
@@ -411,8 +411,8 @@ void q_label_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool))
     QLabel_OnFocusNextPrevChild((QLabel*)self, (intptr_t)callback);
 }
 
-bool q_label_qbase_focus_next_prev_child(void* self, bool next) {
-    return QLabel_QBaseFocusNextPrevChild((QLabel*)self, next);
+bool q_label_super_focus_next_prev_child(void* self, bool next) {
+    return QLabel_SuperFocusNextPrevChild((QLabel*)self, next);
 }
 
 const char* q_label_tr2(const char* s, const char* c) {
@@ -1866,8 +1866,8 @@ void q_label_init_style_option(void* self, void* option) {
     QLabel_InitStyleOption((QLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void q_label_qbase_init_style_option(void* self, void* option) {
-    QLabel_QBaseInitStyleOption((QLabel*)self, (QStyleOptionFrame*)option);
+void q_label_super_init_style_option(void* self, void* option) {
+    QLabel_SuperInitStyleOption((QLabel*)self, (QStyleOptionFrame*)option);
 }
 
 void q_label_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1878,8 +1878,8 @@ int32_t q_label_dev_type(void* self) {
     return QLabel_DevType((QLabel*)self);
 }
 
-int32_t q_label_qbase_dev_type(void* self) {
-    return QLabel_QBaseDevType((QLabel*)self);
+int32_t q_label_super_dev_type(void* self) {
+    return QLabel_SuperDevType((QLabel*)self);
 }
 
 void q_label_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1890,8 +1890,8 @@ void q_label_set_visible(void* self, bool visible) {
     QLabel_SetVisible((QLabel*)self, visible);
 }
 
-void q_label_qbase_set_visible(void* self, bool visible) {
-    QLabel_QBaseSetVisible((QLabel*)self, visible);
+void q_label_super_set_visible(void* self, bool visible) {
+    QLabel_SuperSetVisible((QLabel*)self, visible);
 }
 
 void q_label_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1902,8 +1902,8 @@ bool q_label_has_height_for_width(void* self) {
     return QLabel_HasHeightForWidth((QLabel*)self);
 }
 
-bool q_label_qbase_has_height_for_width(void* self) {
-    return QLabel_QBaseHasHeightForWidth((QLabel*)self);
+bool q_label_super_has_height_for_width(void* self) {
+    return QLabel_SuperHasHeightForWidth((QLabel*)self);
 }
 
 void q_label_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1914,8 +1914,8 @@ QPaintEngine* q_label_paint_engine(void* self) {
     return QLabel_PaintEngine((QLabel*)self);
 }
 
-QPaintEngine* q_label_qbase_paint_engine(void* self) {
-    return QLabel_QBasePaintEngine((QLabel*)self);
+QPaintEngine* q_label_super_paint_engine(void* self) {
+    return QLabel_SuperPaintEngine((QLabel*)self);
 }
 
 void q_label_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1926,8 +1926,8 @@ void q_label_mouse_double_click_event(void* self, void* event) {
     QLabel_MouseDoubleClickEvent((QLabel*)self, (QMouseEvent*)event);
 }
 
-void q_label_qbase_mouse_double_click_event(void* self, void* event) {
-    QLabel_QBaseMouseDoubleClickEvent((QLabel*)self, (QMouseEvent*)event);
+void q_label_super_mouse_double_click_event(void* self, void* event) {
+    QLabel_SuperMouseDoubleClickEvent((QLabel*)self, (QMouseEvent*)event);
 }
 
 void q_label_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1938,8 +1938,8 @@ void q_label_wheel_event(void* self, void* event) {
     QLabel_WheelEvent((QLabel*)self, (QWheelEvent*)event);
 }
 
-void q_label_qbase_wheel_event(void* self, void* event) {
-    QLabel_QBaseWheelEvent((QLabel*)self, (QWheelEvent*)event);
+void q_label_super_wheel_event(void* self, void* event) {
+    QLabel_SuperWheelEvent((QLabel*)self, (QWheelEvent*)event);
 }
 
 void q_label_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1950,8 +1950,8 @@ void q_label_key_release_event(void* self, void* event) {
     QLabel_KeyReleaseEvent((QLabel*)self, (QKeyEvent*)event);
 }
 
-void q_label_qbase_key_release_event(void* self, void* event) {
-    QLabel_QBaseKeyReleaseEvent((QLabel*)self, (QKeyEvent*)event);
+void q_label_super_key_release_event(void* self, void* event) {
+    QLabel_SuperKeyReleaseEvent((QLabel*)self, (QKeyEvent*)event);
 }
 
 void q_label_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1962,8 +1962,8 @@ void q_label_enter_event(void* self, void* event) {
     QLabel_EnterEvent((QLabel*)self, (QEnterEvent*)event);
 }
 
-void q_label_qbase_enter_event(void* self, void* event) {
-    QLabel_QBaseEnterEvent((QLabel*)self, (QEnterEvent*)event);
+void q_label_super_enter_event(void* self, void* event) {
+    QLabel_SuperEnterEvent((QLabel*)self, (QEnterEvent*)event);
 }
 
 void q_label_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1974,8 +1974,8 @@ void q_label_leave_event(void* self, void* event) {
     QLabel_LeaveEvent((QLabel*)self, (QEvent*)event);
 }
 
-void q_label_qbase_leave_event(void* self, void* event) {
-    QLabel_QBaseLeaveEvent((QLabel*)self, (QEvent*)event);
+void q_label_super_leave_event(void* self, void* event) {
+    QLabel_SuperLeaveEvent((QLabel*)self, (QEvent*)event);
 }
 
 void q_label_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1986,8 +1986,8 @@ void q_label_move_event(void* self, void* event) {
     QLabel_MoveEvent((QLabel*)self, (QMoveEvent*)event);
 }
 
-void q_label_qbase_move_event(void* self, void* event) {
-    QLabel_QBaseMoveEvent((QLabel*)self, (QMoveEvent*)event);
+void q_label_super_move_event(void* self, void* event) {
+    QLabel_SuperMoveEvent((QLabel*)self, (QMoveEvent*)event);
 }
 
 void q_label_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1998,8 +1998,8 @@ void q_label_resize_event(void* self, void* event) {
     QLabel_ResizeEvent((QLabel*)self, (QResizeEvent*)event);
 }
 
-void q_label_qbase_resize_event(void* self, void* event) {
-    QLabel_QBaseResizeEvent((QLabel*)self, (QResizeEvent*)event);
+void q_label_super_resize_event(void* self, void* event) {
+    QLabel_SuperResizeEvent((QLabel*)self, (QResizeEvent*)event);
 }
 
 void q_label_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2010,8 +2010,8 @@ void q_label_close_event(void* self, void* event) {
     QLabel_CloseEvent((QLabel*)self, (QCloseEvent*)event);
 }
 
-void q_label_qbase_close_event(void* self, void* event) {
-    QLabel_QBaseCloseEvent((QLabel*)self, (QCloseEvent*)event);
+void q_label_super_close_event(void* self, void* event) {
+    QLabel_SuperCloseEvent((QLabel*)self, (QCloseEvent*)event);
 }
 
 void q_label_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2022,8 +2022,8 @@ void q_label_tablet_event(void* self, void* event) {
     QLabel_TabletEvent((QLabel*)self, (QTabletEvent*)event);
 }
 
-void q_label_qbase_tablet_event(void* self, void* event) {
-    QLabel_QBaseTabletEvent((QLabel*)self, (QTabletEvent*)event);
+void q_label_super_tablet_event(void* self, void* event) {
+    QLabel_SuperTabletEvent((QLabel*)self, (QTabletEvent*)event);
 }
 
 void q_label_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2034,8 +2034,8 @@ void q_label_action_event(void* self, void* event) {
     QLabel_ActionEvent((QLabel*)self, (QActionEvent*)event);
 }
 
-void q_label_qbase_action_event(void* self, void* event) {
-    QLabel_QBaseActionEvent((QLabel*)self, (QActionEvent*)event);
+void q_label_super_action_event(void* self, void* event) {
+    QLabel_SuperActionEvent((QLabel*)self, (QActionEvent*)event);
 }
 
 void q_label_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2046,8 +2046,8 @@ void q_label_drag_enter_event(void* self, void* event) {
     QLabel_DragEnterEvent((QLabel*)self, (QDragEnterEvent*)event);
 }
 
-void q_label_qbase_drag_enter_event(void* self, void* event) {
-    QLabel_QBaseDragEnterEvent((QLabel*)self, (QDragEnterEvent*)event);
+void q_label_super_drag_enter_event(void* self, void* event) {
+    QLabel_SuperDragEnterEvent((QLabel*)self, (QDragEnterEvent*)event);
 }
 
 void q_label_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2058,8 +2058,8 @@ void q_label_drag_move_event(void* self, void* event) {
     QLabel_DragMoveEvent((QLabel*)self, (QDragMoveEvent*)event);
 }
 
-void q_label_qbase_drag_move_event(void* self, void* event) {
-    QLabel_QBaseDragMoveEvent((QLabel*)self, (QDragMoveEvent*)event);
+void q_label_super_drag_move_event(void* self, void* event) {
+    QLabel_SuperDragMoveEvent((QLabel*)self, (QDragMoveEvent*)event);
 }
 
 void q_label_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2070,8 +2070,8 @@ void q_label_drag_leave_event(void* self, void* event) {
     QLabel_DragLeaveEvent((QLabel*)self, (QDragLeaveEvent*)event);
 }
 
-void q_label_qbase_drag_leave_event(void* self, void* event) {
-    QLabel_QBaseDragLeaveEvent((QLabel*)self, (QDragLeaveEvent*)event);
+void q_label_super_drag_leave_event(void* self, void* event) {
+    QLabel_SuperDragLeaveEvent((QLabel*)self, (QDragLeaveEvent*)event);
 }
 
 void q_label_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2082,8 +2082,8 @@ void q_label_drop_event(void* self, void* event) {
     QLabel_DropEvent((QLabel*)self, (QDropEvent*)event);
 }
 
-void q_label_qbase_drop_event(void* self, void* event) {
-    QLabel_QBaseDropEvent((QLabel*)self, (QDropEvent*)event);
+void q_label_super_drop_event(void* self, void* event) {
+    QLabel_SuperDropEvent((QLabel*)self, (QDropEvent*)event);
 }
 
 void q_label_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2094,8 +2094,8 @@ void q_label_show_event(void* self, void* event) {
     QLabel_ShowEvent((QLabel*)self, (QShowEvent*)event);
 }
 
-void q_label_qbase_show_event(void* self, void* event) {
-    QLabel_QBaseShowEvent((QLabel*)self, (QShowEvent*)event);
+void q_label_super_show_event(void* self, void* event) {
+    QLabel_SuperShowEvent((QLabel*)self, (QShowEvent*)event);
 }
 
 void q_label_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2106,8 +2106,8 @@ void q_label_hide_event(void* self, void* event) {
     QLabel_HideEvent((QLabel*)self, (QHideEvent*)event);
 }
 
-void q_label_qbase_hide_event(void* self, void* event) {
-    QLabel_QBaseHideEvent((QLabel*)self, (QHideEvent*)event);
+void q_label_super_hide_event(void* self, void* event) {
+    QLabel_SuperHideEvent((QLabel*)self, (QHideEvent*)event);
 }
 
 void q_label_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2118,8 +2118,8 @@ bool q_label_native_event(void* self, char* eventType, void* message, intptr_t* 
     return QLabel_NativeEvent((QLabel*)self, qstring(eventType), message, result);
 }
 
-bool q_label_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QLabel_QBaseNativeEvent((QLabel*)self, qstring(eventType), message, result);
+bool q_label_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QLabel_SuperNativeEvent((QLabel*)self, qstring(eventType), message, result);
 }
 
 void q_label_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2130,8 +2130,8 @@ int32_t q_label_metric(void* self, int32_t param1) {
     return QLabel_Metric((QLabel*)self, param1);
 }
 
-int32_t q_label_qbase_metric(void* self, int32_t param1) {
-    return QLabel_QBaseMetric((QLabel*)self, param1);
+int32_t q_label_super_metric(void* self, int32_t param1) {
+    return QLabel_SuperMetric((QLabel*)self, param1);
 }
 
 void q_label_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2142,8 +2142,8 @@ void q_label_init_painter(void* self, void* painter) {
     QLabel_InitPainter((QLabel*)self, (QPainter*)painter);
 }
 
-void q_label_qbase_init_painter(void* self, void* painter) {
-    QLabel_QBaseInitPainter((QLabel*)self, (QPainter*)painter);
+void q_label_super_init_painter(void* self, void* painter) {
+    QLabel_SuperInitPainter((QLabel*)self, (QPainter*)painter);
 }
 
 void q_label_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2154,8 +2154,8 @@ QPaintDevice* q_label_redirected(void* self, void* offset) {
     return QLabel_Redirected((QLabel*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_label_qbase_redirected(void* self, void* offset) {
-    return QLabel_QBaseRedirected((QLabel*)self, (QPoint*)offset);
+QPaintDevice* q_label_super_redirected(void* self, void* offset) {
+    return QLabel_SuperRedirected((QLabel*)self, (QPoint*)offset);
 }
 
 void q_label_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2166,8 +2166,8 @@ QPainter* q_label_shared_painter(void* self) {
     return QLabel_SharedPainter((QLabel*)self);
 }
 
-QPainter* q_label_qbase_shared_painter(void* self) {
-    return QLabel_QBaseSharedPainter((QLabel*)self);
+QPainter* q_label_super_shared_painter(void* self) {
+    return QLabel_SuperSharedPainter((QLabel*)self);
 }
 
 void q_label_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2178,8 +2178,8 @@ void q_label_input_method_event(void* self, void* param1) {
     QLabel_InputMethodEvent((QLabel*)self, (QInputMethodEvent*)param1);
 }
 
-void q_label_qbase_input_method_event(void* self, void* param1) {
-    QLabel_QBaseInputMethodEvent((QLabel*)self, (QInputMethodEvent*)param1);
+void q_label_super_input_method_event(void* self, void* param1) {
+    QLabel_SuperInputMethodEvent((QLabel*)self, (QInputMethodEvent*)param1);
 }
 
 void q_label_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2190,8 +2190,8 @@ QVariant* q_label_input_method_query(void* self, int32_t param1) {
     return QLabel_InputMethodQuery((QLabel*)self, param1);
 }
 
-QVariant* q_label_qbase_input_method_query(void* self, int32_t param1) {
-    return QLabel_QBaseInputMethodQuery((QLabel*)self, param1);
+QVariant* q_label_super_input_method_query(void* self, int32_t param1) {
+    return QLabel_SuperInputMethodQuery((QLabel*)self, param1);
 }
 
 void q_label_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2202,8 +2202,8 @@ bool q_label_event_filter(void* self, void* watched, void* event) {
     return QLabel_EventFilter((QLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_label_qbase_event_filter(void* self, void* watched, void* event) {
-    return QLabel_QBaseEventFilter((QLabel*)self, (QObject*)watched, (QEvent*)event);
+bool q_label_super_event_filter(void* self, void* watched, void* event) {
+    return QLabel_SuperEventFilter((QLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_label_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2214,8 +2214,8 @@ void q_label_timer_event(void* self, void* event) {
     QLabel_TimerEvent((QLabel*)self, (QTimerEvent*)event);
 }
 
-void q_label_qbase_timer_event(void* self, void* event) {
-    QLabel_QBaseTimerEvent((QLabel*)self, (QTimerEvent*)event);
+void q_label_super_timer_event(void* self, void* event) {
+    QLabel_SuperTimerEvent((QLabel*)self, (QTimerEvent*)event);
 }
 
 void q_label_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2226,8 +2226,8 @@ void q_label_child_event(void* self, void* event) {
     QLabel_ChildEvent((QLabel*)self, (QChildEvent*)event);
 }
 
-void q_label_qbase_child_event(void* self, void* event) {
-    QLabel_QBaseChildEvent((QLabel*)self, (QChildEvent*)event);
+void q_label_super_child_event(void* self, void* event) {
+    QLabel_SuperChildEvent((QLabel*)self, (QChildEvent*)event);
 }
 
 void q_label_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2238,8 +2238,8 @@ void q_label_custom_event(void* self, void* event) {
     QLabel_CustomEvent((QLabel*)self, (QEvent*)event);
 }
 
-void q_label_qbase_custom_event(void* self, void* event) {
-    QLabel_QBaseCustomEvent((QLabel*)self, (QEvent*)event);
+void q_label_super_custom_event(void* self, void* event) {
+    QLabel_SuperCustomEvent((QLabel*)self, (QEvent*)event);
 }
 
 void q_label_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2250,8 +2250,8 @@ void q_label_connect_notify(void* self, void* signal) {
     QLabel_ConnectNotify((QLabel*)self, (QMetaMethod*)signal);
 }
 
-void q_label_qbase_connect_notify(void* self, void* signal) {
-    QLabel_QBaseConnectNotify((QLabel*)self, (QMetaMethod*)signal);
+void q_label_super_connect_notify(void* self, void* signal) {
+    QLabel_SuperConnectNotify((QLabel*)self, (QMetaMethod*)signal);
 }
 
 void q_label_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2262,8 +2262,8 @@ void q_label_disconnect_notify(void* self, void* signal) {
     QLabel_DisconnectNotify((QLabel*)self, (QMetaMethod*)signal);
 }
 
-void q_label_qbase_disconnect_notify(void* self, void* signal) {
-    QLabel_QBaseDisconnectNotify((QLabel*)self, (QMetaMethod*)signal);
+void q_label_super_disconnect_notify(void* self, void* signal) {
+    QLabel_SuperDisconnectNotify((QLabel*)self, (QMetaMethod*)signal);
 }
 
 void q_label_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2274,8 +2274,8 @@ void q_label_draw_frame(void* self, void* param1) {
     QLabel_DrawFrame((QLabel*)self, (QPainter*)param1);
 }
 
-void q_label_qbase_draw_frame(void* self, void* param1) {
-    QLabel_QBaseDrawFrame((QLabel*)self, (QPainter*)param1);
+void q_label_super_draw_frame(void* self, void* param1) {
+    QLabel_SuperDrawFrame((QLabel*)self, (QPainter*)param1);
 }
 
 void q_label_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2286,8 +2286,8 @@ void q_label_update_micro_focus(void* self) {
     QLabel_UpdateMicroFocus((QLabel*)self);
 }
 
-void q_label_qbase_update_micro_focus(void* self) {
-    QLabel_QBaseUpdateMicroFocus((QLabel*)self);
+void q_label_super_update_micro_focus(void* self) {
+    QLabel_SuperUpdateMicroFocus((QLabel*)self);
 }
 
 void q_label_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2298,8 +2298,8 @@ void q_label_create(void* self) {
     QLabel_Create((QLabel*)self);
 }
 
-void q_label_qbase_create(void* self) {
-    QLabel_QBaseCreate((QLabel*)self);
+void q_label_super_create(void* self) {
+    QLabel_SuperCreate((QLabel*)self);
 }
 
 void q_label_on_create(void* self, void (*callback)()) {
@@ -2310,8 +2310,8 @@ void q_label_destroy(void* self) {
     QLabel_Destroy((QLabel*)self);
 }
 
-void q_label_qbase_destroy(void* self) {
-    QLabel_QBaseDestroy((QLabel*)self);
+void q_label_super_destroy(void* self) {
+    QLabel_SuperDestroy((QLabel*)self);
 }
 
 void q_label_on_destroy(void* self, void (*callback)()) {
@@ -2322,8 +2322,8 @@ bool q_label_focus_next_child(void* self) {
     return QLabel_FocusNextChild((QLabel*)self);
 }
 
-bool q_label_qbase_focus_next_child(void* self) {
-    return QLabel_QBaseFocusNextChild((QLabel*)self);
+bool q_label_super_focus_next_child(void* self) {
+    return QLabel_SuperFocusNextChild((QLabel*)self);
 }
 
 void q_label_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2334,8 +2334,8 @@ bool q_label_focus_previous_child(void* self) {
     return QLabel_FocusPreviousChild((QLabel*)self);
 }
 
-bool q_label_qbase_focus_previous_child(void* self) {
-    return QLabel_QBaseFocusPreviousChild((QLabel*)self);
+bool q_label_super_focus_previous_child(void* self) {
+    return QLabel_SuperFocusPreviousChild((QLabel*)self);
 }
 
 void q_label_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2346,8 +2346,8 @@ QObject* q_label_sender(void* self) {
     return QLabel_Sender((QLabel*)self);
 }
 
-QObject* q_label_qbase_sender(void* self) {
-    return QLabel_QBaseSender((QLabel*)self);
+QObject* q_label_super_sender(void* self) {
+    return QLabel_SuperSender((QLabel*)self);
 }
 
 void q_label_on_sender(void* self, QObject* (*callback)()) {
@@ -2358,8 +2358,8 @@ int32_t q_label_sender_signal_index(void* self) {
     return QLabel_SenderSignalIndex((QLabel*)self);
 }
 
-int32_t q_label_qbase_sender_signal_index(void* self) {
-    return QLabel_QBaseSenderSignalIndex((QLabel*)self);
+int32_t q_label_super_sender_signal_index(void* self) {
+    return QLabel_SuperSenderSignalIndex((QLabel*)self);
 }
 
 void q_label_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2370,8 +2370,8 @@ int32_t q_label_receivers(void* self, const char* signal) {
     return QLabel_Receivers((QLabel*)self, signal);
 }
 
-int32_t q_label_qbase_receivers(void* self, const char* signal) {
-    return QLabel_QBaseReceivers((QLabel*)self, signal);
+int32_t q_label_super_receivers(void* self, const char* signal) {
+    return QLabel_SuperReceivers((QLabel*)self, signal);
 }
 
 void q_label_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2382,8 +2382,8 @@ bool q_label_is_signal_connected(void* self, void* signal) {
     return QLabel_IsSignalConnected((QLabel*)self, (QMetaMethod*)signal);
 }
 
-bool q_label_qbase_is_signal_connected(void* self, void* signal) {
-    return QLabel_QBaseIsSignalConnected((QLabel*)self, (QMetaMethod*)signal);
+bool q_label_super_is_signal_connected(void* self, void* signal) {
+    return QLabel_SuperIsSignalConnected((QLabel*)self, (QMetaMethod*)signal);
 }
 
 void q_label_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2394,8 +2394,8 @@ double q_label_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB
     return QLabel_GetDecodedMetricF((QLabel*)self, metricA, metricB);
 }
 
-double q_label_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QLabel_QBaseGetDecodedMetricF((QLabel*)self, metricA, metricB);
+double q_label_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QLabel_SuperGetDecodedMetricF((QLabel*)self, metricA, metricB);
 }
 
 void q_label_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

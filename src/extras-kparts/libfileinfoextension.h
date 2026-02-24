@@ -34,13 +34,17 @@ const QMetaObject* k_parts__fileinfoextension_meta_object(void* self);
 ///
 void k_parts__fileinfoextension_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_meta_object` instead
+///
+#define k_parts__fileinfoextension_qbase_meta_object k_parts__fileinfoextension_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__FileInfoExtension*
 ///
-const QMetaObject* k_parts__fileinfoextension_qbase_meta_object(void* self);
+const QMetaObject* k_parts__fileinfoextension_super_meta_object(void* self);
 
 /// @param self KParts__FileInfoExtension*
 /// @param param1 const char*
@@ -54,12 +58,16 @@ void* k_parts__fileinfoextension_metacast(void* self, const char* param1);
 ///
 void k_parts__fileinfoextension_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_metacast` instead
+///
+#define k_parts__fileinfoextension_qbase_metacast k_parts__fileinfoextension_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KParts__FileInfoExtension*
 /// @param param1 const char*
 ///
-void* k_parts__fileinfoextension_qbase_metacast(void* self, const char* param1);
+void* k_parts__fileinfoextension_super_metacast(void* self, const char* param1);
 
 /// @param self KParts__FileInfoExtension*
 /// @param param1 enum QMetaObject__Call
@@ -75,6 +83,10 @@ int32_t k_parts__fileinfoextension_metacall(void* self, int32_t param1, int para
 ///
 void k_parts__fileinfoextension_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_metacall` instead
+///
+#define k_parts__fileinfoextension_qbase_metacall k_parts__fileinfoextension_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KParts__FileInfoExtension*
@@ -82,7 +94,7 @@ void k_parts__fileinfoextension_on_metacall(void* self, int32_t (*callback)(void
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_parts__fileinfoextension_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_parts__fileinfoextension_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -113,13 +125,17 @@ bool k_parts__fileinfoextension_has_selection(void* self);
 ///
 void k_parts__fileinfoextension_on_has_selection(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_has_selection` instead
+///
+#define k_parts__fileinfoextension_qbase_has_selection k_parts__fileinfoextension_super_has_selection
+
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#hasSelection)
 ///
 /// Base class method implementation
 ///
 /// @param self KParts__FileInfoExtension*
 ///
-bool k_parts__fileinfoextension_qbase_has_selection(void* self);
+bool k_parts__fileinfoextension_super_has_selection(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#supportedQueryModes)
 ///
@@ -138,6 +154,10 @@ int32_t k_parts__fileinfoextension_supported_query_modes(void* self);
 ///
 void k_parts__fileinfoextension_on_supported_query_modes(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_supported_query_modes` instead
+///
+#define k_parts__fileinfoextension_qbase_supported_query_modes k_parts__fileinfoextension_super_supported_query_modes
+
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#supportedQueryModes)
 ///
 /// Base class method implementation
@@ -146,7 +166,7 @@ void k_parts__fileinfoextension_on_supported_query_modes(void* self, int32_t (*c
 ///
 /// @return flag of enum KParts__FileInfoExtension__QueryMode
 ///
-int32_t k_parts__fileinfoextension_qbase_supported_query_modes(void* self);
+int32_t k_parts__fileinfoextension_super_supported_query_modes(void* self);
 
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#queryFor)
 ///
@@ -164,6 +184,10 @@ KFileItemList* k_parts__fileinfoextension_query_for(void* self, int32_t mode);
 ///
 void k_parts__fileinfoextension_on_query_for(void* self, KFileItemList* (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_query_for` instead
+///
+#define k_parts__fileinfoextension_qbase_query_for k_parts__fileinfoextension_super_query_for
+
 /// [Upstream resources](https://api.kde.org/kparts-fileinfoextension.html#queryFor)
 ///
 /// Base class method implementation
@@ -171,7 +195,7 @@ void k_parts__fileinfoextension_on_query_for(void* self, KFileItemList* (*callba
 /// @param self KParts__FileInfoExtension*
 /// @param mode enum KParts__FileInfoExtension__QueryMode
 ///
-KFileItemList* k_parts__fileinfoextension_qbase_query_for(void* self, int32_t mode);
+KFileItemList* k_parts__fileinfoextension_super_query_for(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -650,6 +674,10 @@ void k_parts__fileinfoextension_on_destroyed1(void* self, void (*callback)(void*
 ///
 bool k_parts__fileinfoextension_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_event` instead
+///
+#define k_parts__fileinfoextension_qbase_event k_parts__fileinfoextension_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -659,7 +687,7 @@ bool k_parts__fileinfoextension_event(void* self, void* event);
 /// @param self KParts__FileInfoExtension*
 /// @param event QEvent*
 ///
-bool k_parts__fileinfoextension_qbase_event(void* self, void* event);
+bool k_parts__fileinfoextension_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -684,6 +712,10 @@ void k_parts__fileinfoextension_on_event(void* self, bool (*callback)(void*, voi
 ///
 bool k_parts__fileinfoextension_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_event_filter` instead
+///
+#define k_parts__fileinfoextension_qbase_event_filter k_parts__fileinfoextension_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -694,7 +726,7 @@ bool k_parts__fileinfoextension_event_filter(void* self, void* watched, void* ev
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool k_parts__fileinfoextension_qbase_event_filter(void* self, void* watched, void* event);
+bool k_parts__fileinfoextension_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -718,6 +750,10 @@ void k_parts__fileinfoextension_on_event_filter(void* self, bool (*callback)(voi
 ///
 void k_parts__fileinfoextension_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_timer_event` instead
+///
+#define k_parts__fileinfoextension_qbase_timer_event k_parts__fileinfoextension_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -727,7 +763,7 @@ void k_parts__fileinfoextension_timer_event(void* self, void* event);
 /// @param self KParts__FileInfoExtension*
 /// @param event QTimerEvent*
 ///
-void k_parts__fileinfoextension_qbase_timer_event(void* self, void* event);
+void k_parts__fileinfoextension_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -751,6 +787,10 @@ void k_parts__fileinfoextension_on_timer_event(void* self, void (*callback)(void
 ///
 void k_parts__fileinfoextension_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_child_event` instead
+///
+#define k_parts__fileinfoextension_qbase_child_event k_parts__fileinfoextension_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -760,7 +800,7 @@ void k_parts__fileinfoextension_child_event(void* self, void* event);
 /// @param self KParts__FileInfoExtension*
 /// @param event QChildEvent*
 ///
-void k_parts__fileinfoextension_qbase_child_event(void* self, void* event);
+void k_parts__fileinfoextension_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -784,6 +824,10 @@ void k_parts__fileinfoextension_on_child_event(void* self, void (*callback)(void
 ///
 void k_parts__fileinfoextension_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_custom_event` instead
+///
+#define k_parts__fileinfoextension_qbase_custom_event k_parts__fileinfoextension_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -793,7 +837,7 @@ void k_parts__fileinfoextension_custom_event(void* self, void* event);
 /// @param self KParts__FileInfoExtension*
 /// @param event QEvent*
 ///
-void k_parts__fileinfoextension_qbase_custom_event(void* self, void* event);
+void k_parts__fileinfoextension_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -817,6 +861,10 @@ void k_parts__fileinfoextension_on_custom_event(void* self, void (*callback)(voi
 ///
 void k_parts__fileinfoextension_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_connect_notify` instead
+///
+#define k_parts__fileinfoextension_qbase_connect_notify k_parts__fileinfoextension_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -826,7 +874,7 @@ void k_parts__fileinfoextension_connect_notify(void* self, void* signal);
 /// @param self KParts__FileInfoExtension*
 /// @param signal QMetaMethod*
 ///
-void k_parts__fileinfoextension_qbase_connect_notify(void* self, void* signal);
+void k_parts__fileinfoextension_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -850,6 +898,10 @@ void k_parts__fileinfoextension_on_connect_notify(void* self, void (*callback)(v
 ///
 void k_parts__fileinfoextension_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_disconnect_notify` instead
+///
+#define k_parts__fileinfoextension_qbase_disconnect_notify k_parts__fileinfoextension_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -859,7 +911,7 @@ void k_parts__fileinfoextension_disconnect_notify(void* self, void* signal);
 /// @param self KParts__FileInfoExtension*
 /// @param signal QMetaMethod*
 ///
-void k_parts__fileinfoextension_qbase_disconnect_notify(void* self, void* signal);
+void k_parts__fileinfoextension_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -882,6 +934,10 @@ void k_parts__fileinfoextension_on_disconnect_notify(void* self, void (*callback
 ///
 QObject* k_parts__fileinfoextension_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_sender` instead
+///
+#define k_parts__fileinfoextension_qbase_sender k_parts__fileinfoextension_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -890,7 +946,7 @@ QObject* k_parts__fileinfoextension_sender(void* self);
 ///
 /// @param self KParts__FileInfoExtension*
 ///
-QObject* k_parts__fileinfoextension_qbase_sender(void* self);
+QObject* k_parts__fileinfoextension_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -913,6 +969,10 @@ void k_parts__fileinfoextension_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_parts__fileinfoextension_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_sender_signal_index` instead
+///
+#define k_parts__fileinfoextension_qbase_sender_signal_index k_parts__fileinfoextension_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -921,7 +981,7 @@ int32_t k_parts__fileinfoextension_sender_signal_index(void* self);
 ///
 /// @param self KParts__FileInfoExtension*
 ///
-int32_t k_parts__fileinfoextension_qbase_sender_signal_index(void* self);
+int32_t k_parts__fileinfoextension_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -945,6 +1005,10 @@ void k_parts__fileinfoextension_on_sender_signal_index(void* self, int32_t (*cal
 ///
 int32_t k_parts__fileinfoextension_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_receivers` instead
+///
+#define k_parts__fileinfoextension_qbase_receivers k_parts__fileinfoextension_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -954,7 +1018,7 @@ int32_t k_parts__fileinfoextension_receivers(void* self, const char* signal);
 /// @param self KParts__FileInfoExtension*
 /// @param signal const char*
 ///
-int32_t k_parts__fileinfoextension_qbase_receivers(void* self, const char* signal);
+int32_t k_parts__fileinfoextension_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -978,6 +1042,10 @@ void k_parts__fileinfoextension_on_receivers(void* self, int32_t (*callback)(voi
 ///
 bool k_parts__fileinfoextension_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_is_signal_connected` instead
+///
+#define k_parts__fileinfoextension_qbase_is_signal_connected k_parts__fileinfoextension_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -987,7 +1055,7 @@ bool k_parts__fileinfoextension_is_signal_connected(void* self, void* signal);
 /// @param self KParts__FileInfoExtension*
 /// @param signal QMetaMethod*
 ///
-bool k_parts__fileinfoextension_qbase_is_signal_connected(void* self, void* signal);
+bool k_parts__fileinfoextension_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

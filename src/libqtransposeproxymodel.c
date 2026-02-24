@@ -28,8 +28,8 @@ void q_transposeproxymodel_on_meta_object(void* self, const QMetaObject* (*callb
     QTransposeProxyModel_OnMetaObject((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_transposeproxymodel_qbase_meta_object(void* self) {
-    return QTransposeProxyModel_QBaseMetaObject((QTransposeProxyModel*)self);
+const QMetaObject* q_transposeproxymodel_super_meta_object(void* self) {
+    return QTransposeProxyModel_SuperMetaObject((QTransposeProxyModel*)self);
 }
 
 void* q_transposeproxymodel_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void q_transposeproxymodel_on_metacast(void* self, void* (*callback)(void*, cons
     QTransposeProxyModel_OnMetacast((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-void* q_transposeproxymodel_qbase_metacast(void* self, const char* param1) {
-    return QTransposeProxyModel_QBaseMetacast((QTransposeProxyModel*)self, param1);
+void* q_transposeproxymodel_super_metacast(void* self, const char* param1) {
+    return QTransposeProxyModel_SuperMetacast((QTransposeProxyModel*)self, param1);
 }
 
 int32_t q_transposeproxymodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void q_transposeproxymodel_on_metacall(void* self, int32_t (*callback)(void*, in
     QTransposeProxyModel_OnMetacall((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_transposeproxymodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTransposeProxyModel_QBaseMetacall((QTransposeProxyModel*)self, param1, param2, param3);
+int32_t q_transposeproxymodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTransposeProxyModel_SuperMetacall((QTransposeProxyModel*)self, param1, param2, param3);
 }
 
 const char* q_transposeproxymodel_tr(const char* s) {
@@ -71,8 +71,8 @@ void q_transposeproxymodel_on_set_source_model(void* self, void (*callback)(void
     QTransposeProxyModel_OnSetSourceModel((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-void q_transposeproxymodel_qbase_set_source_model(void* self, void* newSourceModel) {
-    QTransposeProxyModel_QBaseSetSourceModel((QTransposeProxyModel*)self, (QAbstractItemModel*)newSourceModel);
+void q_transposeproxymodel_super_set_source_model(void* self, void* newSourceModel) {
+    QTransposeProxyModel_SuperSetSourceModel((QTransposeProxyModel*)self, (QAbstractItemModel*)newSourceModel);
 }
 
 int32_t q_transposeproxymodel_row_count(void* self, void* parent) {
@@ -83,8 +83,8 @@ void q_transposeproxymodel_on_row_count(void* self, int32_t (*callback)(void*, v
     QTransposeProxyModel_OnRowCount((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_transposeproxymodel_qbase_row_count(void* self, void* parent) {
-    return QTransposeProxyModel_QBaseRowCount((QTransposeProxyModel*)self, (QModelIndex*)parent);
+int32_t q_transposeproxymodel_super_row_count(void* self, void* parent) {
+    return QTransposeProxyModel_SuperRowCount((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
 int32_t q_transposeproxymodel_column_count(void* self, void* parent) {
@@ -95,8 +95,8 @@ void q_transposeproxymodel_on_column_count(void* self, int32_t (*callback)(void*
     QTransposeProxyModel_OnColumnCount((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-int32_t q_transposeproxymodel_qbase_column_count(void* self, void* parent) {
-    return QTransposeProxyModel_QBaseColumnCount((QTransposeProxyModel*)self, (QModelIndex*)parent);
+int32_t q_transposeproxymodel_super_column_count(void* self, void* parent) {
+    return QTransposeProxyModel_SuperColumnCount((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
 QVariant* q_transposeproxymodel_header_data(void* self, int section, int32_t orientation, int role) {
@@ -107,8 +107,8 @@ void q_transposeproxymodel_on_header_data(void* self, QVariant* (*callback)(void
     QTransposeProxyModel_OnHeaderData((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-QVariant* q_transposeproxymodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return QTransposeProxyModel_QBaseHeaderData((QTransposeProxyModel*)self, section, orientation, role);
+QVariant* q_transposeproxymodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return QTransposeProxyModel_SuperHeaderData((QTransposeProxyModel*)self, section, orientation, role);
 }
 
 bool q_transposeproxymodel_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
@@ -119,8 +119,8 @@ void q_transposeproxymodel_on_set_header_data(void* self, bool (*callback)(void*
     QTransposeProxyModel_OnSetHeaderData((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return QTransposeProxyModel_QBaseSetHeaderData((QTransposeProxyModel*)self, section, orientation, (QVariant*)value, role);
+bool q_transposeproxymodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return QTransposeProxyModel_SuperSetHeaderData((QTransposeProxyModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 bool q_transposeproxymodel_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
@@ -156,7 +156,7 @@ void q_transposeproxymodel_on_set_item_data(void* self, bool (*callback)(void*, 
     QTransposeProxyModel_OnSetItemData((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool q_transposeproxymodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -179,7 +179,7 @@ bool q_transposeproxymodel_qbase_set_item_data(void* self, void* index, libqt_ma
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    return QTransposeProxyModel_QBaseSetItemData((QTransposeProxyModel*)self, (QModelIndex*)index, roles_ret);
+    return QTransposeProxyModel_SuperSetItemData((QTransposeProxyModel*)self, (QModelIndex*)index, roles_ret);
 }
 
 QSize* q_transposeproxymodel_span(void* self, void* index) {
@@ -190,8 +190,8 @@ void q_transposeproxymodel_on_span(void* self, QSize* (*callback)(void*, void*))
     QTransposeProxyModel_OnSpan((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-QSize* q_transposeproxymodel_qbase_span(void* self, void* index) {
-    return QTransposeProxyModel_QBaseSpan((QTransposeProxyModel*)self, (QModelIndex*)index);
+QSize* q_transposeproxymodel_super_span(void* self, void* index) {
+    return QTransposeProxyModel_SuperSpan((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
 libqt_map /* of int to QVariant* */ q_transposeproxymodel_item_data(void* self, void* index) {
@@ -208,9 +208,9 @@ void q_transposeproxymodel_on_item_data(void* self, libqt_map /* of int to QVari
     QTransposeProxyModel_OnItemData((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-libqt_map /* of int to QVariant* */ q_transposeproxymodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ q_transposeproxymodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = QTransposeProxyModel_QBaseItemData((QTransposeProxyModel*)self, (QModelIndex*)index);
+    libqt_map _out = QTransposeProxyModel_SuperItemData((QTransposeProxyModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -226,8 +226,8 @@ void q_transposeproxymodel_on_map_from_source(void* self, QModelIndex* (*callbac
     QTransposeProxyModel_OnMapFromSource((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_map_from_source(void* self, void* sourceIndex) {
-    return QTransposeProxyModel_QBaseMapFromSource((QTransposeProxyModel*)self, (QModelIndex*)sourceIndex);
+QModelIndex* q_transposeproxymodel_super_map_from_source(void* self, void* sourceIndex) {
+    return QTransposeProxyModel_SuperMapFromSource((QTransposeProxyModel*)self, (QModelIndex*)sourceIndex);
 }
 
 QModelIndex* q_transposeproxymodel_map_to_source(void* self, void* proxyIndex) {
@@ -238,8 +238,8 @@ void q_transposeproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)
     QTransposeProxyModel_OnMapToSource((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_map_to_source(void* self, void* proxyIndex) {
-    return QTransposeProxyModel_QBaseMapToSource((QTransposeProxyModel*)self, (QModelIndex*)proxyIndex);
+QModelIndex* q_transposeproxymodel_super_map_to_source(void* self, void* proxyIndex) {
+    return QTransposeProxyModel_SuperMapToSource((QTransposeProxyModel*)self, (QModelIndex*)proxyIndex);
 }
 
 QModelIndex* q_transposeproxymodel_parent(void* self, void* index) {
@@ -250,8 +250,8 @@ void q_transposeproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*,
     QTransposeProxyModel_OnParent((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_parent(void* self, void* index) {
-    return QTransposeProxyModel_QBaseParent((QTransposeProxyModel*)self, (QModelIndex*)index);
+QModelIndex* q_transposeproxymodel_super_parent(void* self, void* index) {
+    return QTransposeProxyModel_SuperParent((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
 QModelIndex* q_transposeproxymodel_index(void* self, int row, int column, void* parent) {
@@ -262,8 +262,8 @@ void q_transposeproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, 
     QTransposeProxyModel_OnIndex((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_index(void* self, int row, int column, void* parent) {
-    return QTransposeProxyModel_QBaseIndex((QTransposeProxyModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* q_transposeproxymodel_super_index(void* self, int row, int column, void* parent) {
+    return QTransposeProxyModel_SuperIndex((QTransposeProxyModel*)self, row, column, (QModelIndex*)parent);
 }
 
 bool q_transposeproxymodel_insert_rows(void* self, int row, int count, void* parent) {
@@ -274,8 +274,8 @@ void q_transposeproxymodel_on_insert_rows(void* self, bool (*callback)(void*, in
     QTransposeProxyModel_OnInsertRows((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return QTransposeProxyModel_QBaseInsertRows((QTransposeProxyModel*)self, row, count, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return QTransposeProxyModel_SuperInsertRows((QTransposeProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 bool q_transposeproxymodel_remove_rows(void* self, int row, int count, void* parent) {
@@ -286,8 +286,8 @@ void q_transposeproxymodel_on_remove_rows(void* self, bool (*callback)(void*, in
     QTransposeProxyModel_OnRemoveRows((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return QTransposeProxyModel_QBaseRemoveRows((QTransposeProxyModel*)self, row, count, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return QTransposeProxyModel_SuperRemoveRows((QTransposeProxyModel*)self, row, count, (QModelIndex*)parent);
 }
 
 bool q_transposeproxymodel_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
@@ -298,8 +298,8 @@ void q_transposeproxymodel_on_move_rows(void* self, bool (*callback)(void*, void
     QTransposeProxyModel_OnMoveRows((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return QTransposeProxyModel_QBaseMoveRows((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool q_transposeproxymodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return QTransposeProxyModel_SuperMoveRows((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 bool q_transposeproxymodel_insert_columns(void* self, int column, int count, void* parent) {
@@ -310,8 +310,8 @@ void q_transposeproxymodel_on_insert_columns(void* self, bool (*callback)(void*,
     QTransposeProxyModel_OnInsertColumns((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return QTransposeProxyModel_QBaseInsertColumns((QTransposeProxyModel*)self, column, count, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return QTransposeProxyModel_SuperInsertColumns((QTransposeProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 bool q_transposeproxymodel_remove_columns(void* self, int column, int count, void* parent) {
@@ -322,8 +322,8 @@ void q_transposeproxymodel_on_remove_columns(void* self, bool (*callback)(void*,
     QTransposeProxyModel_OnRemoveColumns((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return QTransposeProxyModel_QBaseRemoveColumns((QTransposeProxyModel*)self, column, count, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return QTransposeProxyModel_SuperRemoveColumns((QTransposeProxyModel*)self, column, count, (QModelIndex*)parent);
 }
 
 bool q_transposeproxymodel_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
@@ -334,8 +334,8 @@ void q_transposeproxymodel_on_move_columns(void* self, bool (*callback)(void*, v
     QTransposeProxyModel_OnMoveColumns((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-bool q_transposeproxymodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return QTransposeProxyModel_QBaseMoveColumns((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool q_transposeproxymodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return QTransposeProxyModel_SuperMoveColumns((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void q_transposeproxymodel_sort(void* self, int column, int32_t order) {
@@ -346,8 +346,8 @@ void q_transposeproxymodel_on_sort(void* self, void (*callback)(void*, int, int3
     QTransposeProxyModel_OnSort((QTransposeProxyModel*)self, (intptr_t)callback);
 }
 
-void q_transposeproxymodel_qbase_sort(void* self, int column, int32_t order) {
-    QTransposeProxyModel_QBaseSort((QTransposeProxyModel*)self, column, order);
+void q_transposeproxymodel_super_sort(void* self, int column, int32_t order) {
+    QTransposeProxyModel_SuperSort((QTransposeProxyModel*)self, column, order);
 }
 
 const char* q_transposeproxymodel_tr2(const char* s, const char* c) {
@@ -707,8 +707,8 @@ QItemSelection* q_transposeproxymodel_map_selection_to_source(void* self, void* 
     return QTransposeProxyModel_MapSelectionToSource((QTransposeProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* q_transposeproxymodel_qbase_map_selection_to_source(void* self, void* selection) {
-    return QTransposeProxyModel_QBaseMapSelectionToSource((QTransposeProxyModel*)self, (QItemSelection*)selection);
+QItemSelection* q_transposeproxymodel_super_map_selection_to_source(void* self, void* selection) {
+    return QTransposeProxyModel_SuperMapSelectionToSource((QTransposeProxyModel*)self, (QItemSelection*)selection);
 }
 
 void q_transposeproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*)) {
@@ -719,8 +719,8 @@ QItemSelection* q_transposeproxymodel_map_selection_from_source(void* self, void
     return QTransposeProxyModel_MapSelectionFromSource((QTransposeProxyModel*)self, (QItemSelection*)selection);
 }
 
-QItemSelection* q_transposeproxymodel_qbase_map_selection_from_source(void* self, void* selection) {
-    return QTransposeProxyModel_QBaseMapSelectionFromSource((QTransposeProxyModel*)self, (QItemSelection*)selection);
+QItemSelection* q_transposeproxymodel_super_map_selection_from_source(void* self, void* selection) {
+    return QTransposeProxyModel_SuperMapSelectionFromSource((QTransposeProxyModel*)self, (QItemSelection*)selection);
 }
 
 void q_transposeproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*)) {
@@ -731,8 +731,8 @@ bool q_transposeproxymodel_submit(void* self) {
     return QTransposeProxyModel_Submit((QTransposeProxyModel*)self);
 }
 
-bool q_transposeproxymodel_qbase_submit(void* self) {
-    return QTransposeProxyModel_QBaseSubmit((QTransposeProxyModel*)self);
+bool q_transposeproxymodel_super_submit(void* self) {
+    return QTransposeProxyModel_SuperSubmit((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_submit(void* self, bool (*callback)()) {
@@ -743,8 +743,8 @@ void q_transposeproxymodel_revert(void* self) {
     QTransposeProxyModel_Revert((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_revert(void* self) {
-    QTransposeProxyModel_QBaseRevert((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_revert(void* self) {
+    QTransposeProxyModel_SuperRevert((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_revert(void* self, void (*callback)()) {
@@ -755,8 +755,8 @@ QVariant* q_transposeproxymodel_data(void* self, void* proxyIndex, int role) {
     return QTransposeProxyModel_Data((QTransposeProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
-QVariant* q_transposeproxymodel_qbase_data(void* self, void* proxyIndex, int role) {
-    return QTransposeProxyModel_QBaseData((QTransposeProxyModel*)self, (QModelIndex*)proxyIndex, role);
+QVariant* q_transposeproxymodel_super_data(void* self, void* proxyIndex, int role) {
+    return QTransposeProxyModel_SuperData((QTransposeProxyModel*)self, (QModelIndex*)proxyIndex, role);
 }
 
 void q_transposeproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
@@ -767,8 +767,8 @@ int32_t q_transposeproxymodel_flags(void* self, void* index) {
     return QTransposeProxyModel_Flags((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
-int32_t q_transposeproxymodel_qbase_flags(void* self, void* index) {
-    return QTransposeProxyModel_QBaseFlags((QTransposeProxyModel*)self, (QModelIndex*)index);
+int32_t q_transposeproxymodel_super_flags(void* self, void* index) {
+    return QTransposeProxyModel_SuperFlags((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
 void q_transposeproxymodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
@@ -779,8 +779,8 @@ bool q_transposeproxymodel_set_data(void* self, void* index, void* value, int ro
     return QTransposeProxyModel_SetData((QTransposeProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool q_transposeproxymodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return QTransposeProxyModel_QBaseSetData((QTransposeProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool q_transposeproxymodel_super_set_data(void* self, void* index, void* value, int role) {
+    return QTransposeProxyModel_SuperSetData((QTransposeProxyModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void q_transposeproxymodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -791,8 +791,8 @@ bool q_transposeproxymodel_clear_item_data(void* self, void* index) {
     return QTransposeProxyModel_ClearItemData((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
-bool q_transposeproxymodel_qbase_clear_item_data(void* self, void* index) {
-    return QTransposeProxyModel_QBaseClearItemData((QTransposeProxyModel*)self, (QModelIndex*)index);
+bool q_transposeproxymodel_super_clear_item_data(void* self, void* index) {
+    return QTransposeProxyModel_SuperClearItemData((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
 void q_transposeproxymodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -803,8 +803,8 @@ QModelIndex* q_transposeproxymodel_buddy(void* self, void* index) {
     return QTransposeProxyModel_Buddy((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_buddy(void* self, void* index) {
-    return QTransposeProxyModel_QBaseBuddy((QTransposeProxyModel*)self, (QModelIndex*)index);
+QModelIndex* q_transposeproxymodel_super_buddy(void* self, void* index) {
+    return QTransposeProxyModel_SuperBuddy((QTransposeProxyModel*)self, (QModelIndex*)index);
 }
 
 void q_transposeproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -815,8 +815,8 @@ bool q_transposeproxymodel_can_fetch_more(void* self, void* parent) {
     return QTransposeProxyModel_CanFetchMore((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool q_transposeproxymodel_qbase_can_fetch_more(void* self, void* parent) {
-    return QTransposeProxyModel_QBaseCanFetchMore((QTransposeProxyModel*)self, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_can_fetch_more(void* self, void* parent) {
+    return QTransposeProxyModel_SuperCanFetchMore((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
 void q_transposeproxymodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -827,8 +827,8 @@ void q_transposeproxymodel_fetch_more(void* self, void* parent) {
     QTransposeProxyModel_FetchMore((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
-void q_transposeproxymodel_qbase_fetch_more(void* self, void* parent) {
-    QTransposeProxyModel_QBaseFetchMore((QTransposeProxyModel*)self, (QModelIndex*)parent);
+void q_transposeproxymodel_super_fetch_more(void* self, void* parent) {
+    QTransposeProxyModel_SuperFetchMore((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
 void q_transposeproxymodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -839,8 +839,8 @@ bool q_transposeproxymodel_has_children(void* self, void* parent) {
     return QTransposeProxyModel_HasChildren((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
-bool q_transposeproxymodel_qbase_has_children(void* self, void* parent) {
-    return QTransposeProxyModel_QBaseHasChildren((QTransposeProxyModel*)self, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_has_children(void* self, void* parent) {
+    return QTransposeProxyModel_SuperHasChildren((QTransposeProxyModel*)self, (QModelIndex*)parent);
 }
 
 void q_transposeproxymodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
@@ -851,8 +851,8 @@ QModelIndex* q_transposeproxymodel_sibling(void* self, int row, int column, void
     return QTransposeProxyModel_Sibling((QTransposeProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return QTransposeProxyModel_QBaseSibling((QTransposeProxyModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* q_transposeproxymodel_super_sibling(void* self, int row, int column, void* idx) {
+    return QTransposeProxyModel_SuperSibling((QTransposeProxyModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void q_transposeproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -863,8 +863,8 @@ QMimeData* q_transposeproxymodel_mime_data(void* self, libqt_list /* of QModelIn
     return QTransposeProxyModel_MimeData((QTransposeProxyModel*)self, indexes);
 }
 
-QMimeData* q_transposeproxymodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return QTransposeProxyModel_QBaseMimeData((QTransposeProxyModel*)self, indexes);
+QMimeData* q_transposeproxymodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return QTransposeProxyModel_SuperMimeData((QTransposeProxyModel*)self, indexes);
 }
 
 void q_transposeproxymodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -875,8 +875,8 @@ bool q_transposeproxymodel_can_drop_mime_data(void* self, void* data, int32_t ac
     return QTransposeProxyModel_CanDropMimeData((QTransposeProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_transposeproxymodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return QTransposeProxyModel_QBaseCanDropMimeData((QTransposeProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return QTransposeProxyModel_SuperCanDropMimeData((QTransposeProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void q_transposeproxymodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -887,8 +887,8 @@ bool q_transposeproxymodel_drop_mime_data(void* self, void* data, int32_t action
     return QTransposeProxyModel_DropMimeData((QTransposeProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool q_transposeproxymodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return QTransposeProxyModel_QBaseDropMimeData((QTransposeProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool q_transposeproxymodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return QTransposeProxyModel_SuperDropMimeData((QTransposeProxyModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void q_transposeproxymodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -914,8 +914,8 @@ const char** q_transposeproxymodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** q_transposeproxymodel_qbase_mime_types(void* self) {
-    libqt_list _arr = QTransposeProxyModel_QBaseMimeTypes((QTransposeProxyModel*)self);
+const char** q_transposeproxymodel_super_mime_types(void* self) {
+    libqt_list _arr = QTransposeProxyModel_SuperMimeTypes((QTransposeProxyModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -941,8 +941,8 @@ int32_t q_transposeproxymodel_supported_drag_actions(void* self) {
     return QTransposeProxyModel_SupportedDragActions((QTransposeProxyModel*)self);
 }
 
-int32_t q_transposeproxymodel_qbase_supported_drag_actions(void* self) {
-    return QTransposeProxyModel_QBaseSupportedDragActions((QTransposeProxyModel*)self);
+int32_t q_transposeproxymodel_super_supported_drag_actions(void* self) {
+    return QTransposeProxyModel_SuperSupportedDragActions((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -953,8 +953,8 @@ int32_t q_transposeproxymodel_supported_drop_actions(void* self) {
     return QTransposeProxyModel_SupportedDropActions((QTransposeProxyModel*)self);
 }
 
-int32_t q_transposeproxymodel_qbase_supported_drop_actions(void* self) {
-    return QTransposeProxyModel_QBaseSupportedDropActions((QTransposeProxyModel*)self);
+int32_t q_transposeproxymodel_super_supported_drop_actions(void* self) {
+    return QTransposeProxyModel_SuperSupportedDropActions((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -994,9 +994,9 @@ libqt_map /* of int to char* */ q_transposeproxymodel_role_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ q_transposeproxymodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ q_transposeproxymodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = QTransposeProxyModel_QBaseRoleNames((QTransposeProxyModel*)self);
+    libqt_map _out = QTransposeProxyModel_SuperRoleNames((QTransposeProxyModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -1036,8 +1036,8 @@ libqt_list /* of QModelIndex* */ q_transposeproxymodel_match(void* self, void* s
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = QTransposeProxyModel_QBaseMatch((QTransposeProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ q_transposeproxymodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = QTransposeProxyModel_SuperMatch((QTransposeProxyModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -1049,8 +1049,8 @@ void q_transposeproxymodel_multi_data(void* self, void* index, void* roleDataSpa
     QTransposeProxyModel_MultiData((QTransposeProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void q_transposeproxymodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    QTransposeProxyModel_QBaseMultiData((QTransposeProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void q_transposeproxymodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    QTransposeProxyModel_SuperMultiData((QTransposeProxyModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void q_transposeproxymodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -1061,8 +1061,8 @@ void q_transposeproxymodel_reset_internal_data(void* self) {
     QTransposeProxyModel_ResetInternalData((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_reset_internal_data(void* self) {
-    QTransposeProxyModel_QBaseResetInternalData((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_reset_internal_data(void* self) {
+    QTransposeProxyModel_SuperResetInternalData((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1073,8 +1073,8 @@ bool q_transposeproxymodel_event(void* self, void* event) {
     return QTransposeProxyModel_Event((QTransposeProxyModel*)self, (QEvent*)event);
 }
 
-bool q_transposeproxymodel_qbase_event(void* self, void* event) {
-    return QTransposeProxyModel_QBaseEvent((QTransposeProxyModel*)self, (QEvent*)event);
+bool q_transposeproxymodel_super_event(void* self, void* event) {
+    return QTransposeProxyModel_SuperEvent((QTransposeProxyModel*)self, (QEvent*)event);
 }
 
 void q_transposeproxymodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1085,8 +1085,8 @@ bool q_transposeproxymodel_event_filter(void* self, void* watched, void* event) 
     return QTransposeProxyModel_EventFilter((QTransposeProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_transposeproxymodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTransposeProxyModel_QBaseEventFilter((QTransposeProxyModel*)self, (QObject*)watched, (QEvent*)event);
+bool q_transposeproxymodel_super_event_filter(void* self, void* watched, void* event) {
+    return QTransposeProxyModel_SuperEventFilter((QTransposeProxyModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_transposeproxymodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1097,8 +1097,8 @@ void q_transposeproxymodel_timer_event(void* self, void* event) {
     QTransposeProxyModel_TimerEvent((QTransposeProxyModel*)self, (QTimerEvent*)event);
 }
 
-void q_transposeproxymodel_qbase_timer_event(void* self, void* event) {
-    QTransposeProxyModel_QBaseTimerEvent((QTransposeProxyModel*)self, (QTimerEvent*)event);
+void q_transposeproxymodel_super_timer_event(void* self, void* event) {
+    QTransposeProxyModel_SuperTimerEvent((QTransposeProxyModel*)self, (QTimerEvent*)event);
 }
 
 void q_transposeproxymodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1109,8 +1109,8 @@ void q_transposeproxymodel_child_event(void* self, void* event) {
     QTransposeProxyModel_ChildEvent((QTransposeProxyModel*)self, (QChildEvent*)event);
 }
 
-void q_transposeproxymodel_qbase_child_event(void* self, void* event) {
-    QTransposeProxyModel_QBaseChildEvent((QTransposeProxyModel*)self, (QChildEvent*)event);
+void q_transposeproxymodel_super_child_event(void* self, void* event) {
+    QTransposeProxyModel_SuperChildEvent((QTransposeProxyModel*)self, (QChildEvent*)event);
 }
 
 void q_transposeproxymodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1121,8 +1121,8 @@ void q_transposeproxymodel_custom_event(void* self, void* event) {
     QTransposeProxyModel_CustomEvent((QTransposeProxyModel*)self, (QEvent*)event);
 }
 
-void q_transposeproxymodel_qbase_custom_event(void* self, void* event) {
-    QTransposeProxyModel_QBaseCustomEvent((QTransposeProxyModel*)self, (QEvent*)event);
+void q_transposeproxymodel_super_custom_event(void* self, void* event) {
+    QTransposeProxyModel_SuperCustomEvent((QTransposeProxyModel*)self, (QEvent*)event);
 }
 
 void q_transposeproxymodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1133,8 +1133,8 @@ void q_transposeproxymodel_connect_notify(void* self, void* signal) {
     QTransposeProxyModel_ConnectNotify((QTransposeProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void q_transposeproxymodel_qbase_connect_notify(void* self, void* signal) {
-    QTransposeProxyModel_QBaseConnectNotify((QTransposeProxyModel*)self, (QMetaMethod*)signal);
+void q_transposeproxymodel_super_connect_notify(void* self, void* signal) {
+    QTransposeProxyModel_SuperConnectNotify((QTransposeProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void q_transposeproxymodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1145,8 +1145,8 @@ void q_transposeproxymodel_disconnect_notify(void* self, void* signal) {
     QTransposeProxyModel_DisconnectNotify((QTransposeProxyModel*)self, (QMetaMethod*)signal);
 }
 
-void q_transposeproxymodel_qbase_disconnect_notify(void* self, void* signal) {
-    QTransposeProxyModel_QBaseDisconnectNotify((QTransposeProxyModel*)self, (QMetaMethod*)signal);
+void q_transposeproxymodel_super_disconnect_notify(void* self, void* signal) {
+    QTransposeProxyModel_SuperDisconnectNotify((QTransposeProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void q_transposeproxymodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1157,8 +1157,8 @@ QModelIndex* q_transposeproxymodel_create_source_index(void* self, int row, int 
     return QTransposeProxyModel_CreateSourceIndex((QTransposeProxyModel*)self, row, col, internalPtr);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_create_source_index(void* self, int row, int col, void* internalPtr) {
-    return QTransposeProxyModel_QBaseCreateSourceIndex((QTransposeProxyModel*)self, row, col, internalPtr);
+QModelIndex* q_transposeproxymodel_super_create_source_index(void* self, int row, int col, void* internalPtr) {
+    return QTransposeProxyModel_SuperCreateSourceIndex((QTransposeProxyModel*)self, row, col, internalPtr);
 }
 
 void q_transposeproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -1169,8 +1169,8 @@ QModelIndex* q_transposeproxymodel_create_index(void* self, int row, int column)
     return QTransposeProxyModel_CreateIndex((QTransposeProxyModel*)self, row, column);
 }
 
-QModelIndex* q_transposeproxymodel_qbase_create_index(void* self, int row, int column) {
-    return QTransposeProxyModel_QBaseCreateIndex((QTransposeProxyModel*)self, row, column);
+QModelIndex* q_transposeproxymodel_super_create_index(void* self, int row, int column) {
+    return QTransposeProxyModel_SuperCreateIndex((QTransposeProxyModel*)self, row, column);
 }
 
 void q_transposeproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1181,8 +1181,8 @@ void q_transposeproxymodel_encode_data(void* self, libqt_list /* of QModelIndex*
     QTransposeProxyModel_EncodeData((QTransposeProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
-void q_transposeproxymodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    QTransposeProxyModel_QBaseEncodeData((QTransposeProxyModel*)self, indexes, (QDataStream*)stream);
+void q_transposeproxymodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    QTransposeProxyModel_SuperEncodeData((QTransposeProxyModel*)self, indexes, (QDataStream*)stream);
 }
 
 void q_transposeproxymodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1193,8 +1193,8 @@ bool q_transposeproxymodel_decode_data(void* self, int row, int column, void* pa
     return QTransposeProxyModel_DecodeData((QTransposeProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool q_transposeproxymodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return QTransposeProxyModel_QBaseDecodeData((QTransposeProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool q_transposeproxymodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return QTransposeProxyModel_SuperDecodeData((QTransposeProxyModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void q_transposeproxymodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1205,8 +1205,8 @@ void q_transposeproxymodel_begin_insert_rows(void* self, void* parent, int first
     QTransposeProxyModel_BeginInsertRows((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_transposeproxymodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    QTransposeProxyModel_QBaseBeginInsertRows((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_transposeproxymodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    QTransposeProxyModel_SuperBeginInsertRows((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_transposeproxymodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1217,8 +1217,8 @@ void q_transposeproxymodel_end_insert_rows(void* self) {
     QTransposeProxyModel_EndInsertRows((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_insert_rows(void* self) {
-    QTransposeProxyModel_QBaseEndInsertRows((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_insert_rows(void* self) {
+    QTransposeProxyModel_SuperEndInsertRows((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1229,8 +1229,8 @@ void q_transposeproxymodel_begin_remove_rows(void* self, void* parent, int first
     QTransposeProxyModel_BeginRemoveRows((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_transposeproxymodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    QTransposeProxyModel_QBaseBeginRemoveRows((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_transposeproxymodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    QTransposeProxyModel_SuperBeginRemoveRows((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_transposeproxymodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1241,8 +1241,8 @@ void q_transposeproxymodel_end_remove_rows(void* self) {
     QTransposeProxyModel_EndRemoveRows((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_remove_rows(void* self) {
-    QTransposeProxyModel_QBaseEndRemoveRows((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_remove_rows(void* self) {
+    QTransposeProxyModel_SuperEndRemoveRows((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1253,8 +1253,8 @@ bool q_transposeproxymodel_begin_move_rows(void* self, void* sourceParent, int s
     return QTransposeProxyModel_BeginMoveRows((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool q_transposeproxymodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return QTransposeProxyModel_QBaseBeginMoveRows((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool q_transposeproxymodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return QTransposeProxyModel_SuperBeginMoveRows((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void q_transposeproxymodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1265,8 +1265,8 @@ void q_transposeproxymodel_end_move_rows(void* self) {
     QTransposeProxyModel_EndMoveRows((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_move_rows(void* self) {
-    QTransposeProxyModel_QBaseEndMoveRows((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_move_rows(void* self) {
+    QTransposeProxyModel_SuperEndMoveRows((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1277,8 +1277,8 @@ void q_transposeproxymodel_begin_insert_columns(void* self, void* parent, int fi
     QTransposeProxyModel_BeginInsertColumns((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_transposeproxymodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    QTransposeProxyModel_QBaseBeginInsertColumns((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_transposeproxymodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    QTransposeProxyModel_SuperBeginInsertColumns((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_transposeproxymodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1289,8 +1289,8 @@ void q_transposeproxymodel_end_insert_columns(void* self) {
     QTransposeProxyModel_EndInsertColumns((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_insert_columns(void* self) {
-    QTransposeProxyModel_QBaseEndInsertColumns((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_insert_columns(void* self) {
+    QTransposeProxyModel_SuperEndInsertColumns((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1301,8 +1301,8 @@ void q_transposeproxymodel_begin_remove_columns(void* self, void* parent, int fi
     QTransposeProxyModel_BeginRemoveColumns((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void q_transposeproxymodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    QTransposeProxyModel_QBaseBeginRemoveColumns((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
+void q_transposeproxymodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    QTransposeProxyModel_SuperBeginRemoveColumns((QTransposeProxyModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void q_transposeproxymodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1313,8 +1313,8 @@ void q_transposeproxymodel_end_remove_columns(void* self) {
     QTransposeProxyModel_EndRemoveColumns((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_remove_columns(void* self) {
-    QTransposeProxyModel_QBaseEndRemoveColumns((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_remove_columns(void* self) {
+    QTransposeProxyModel_SuperEndRemoveColumns((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1325,8 +1325,8 @@ bool q_transposeproxymodel_begin_move_columns(void* self, void* sourceParent, in
     return QTransposeProxyModel_BeginMoveColumns((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool q_transposeproxymodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return QTransposeProxyModel_QBaseBeginMoveColumns((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool q_transposeproxymodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return QTransposeProxyModel_SuperBeginMoveColumns((QTransposeProxyModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void q_transposeproxymodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1337,8 +1337,8 @@ void q_transposeproxymodel_end_move_columns(void* self) {
     QTransposeProxyModel_EndMoveColumns((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_move_columns(void* self) {
-    QTransposeProxyModel_QBaseEndMoveColumns((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_move_columns(void* self) {
+    QTransposeProxyModel_SuperEndMoveColumns((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1349,8 +1349,8 @@ void q_transposeproxymodel_begin_reset_model(void* self) {
     QTransposeProxyModel_BeginResetModel((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_begin_reset_model(void* self) {
-    QTransposeProxyModel_QBaseBeginResetModel((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_begin_reset_model(void* self) {
+    QTransposeProxyModel_SuperBeginResetModel((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1361,8 +1361,8 @@ void q_transposeproxymodel_end_reset_model(void* self) {
     QTransposeProxyModel_EndResetModel((QTransposeProxyModel*)self);
 }
 
-void q_transposeproxymodel_qbase_end_reset_model(void* self) {
-    QTransposeProxyModel_QBaseEndResetModel((QTransposeProxyModel*)self);
+void q_transposeproxymodel_super_end_reset_model(void* self) {
+    QTransposeProxyModel_SuperEndResetModel((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1373,8 +1373,8 @@ void q_transposeproxymodel_change_persistent_index(void* self, void* from, void*
     QTransposeProxyModel_ChangePersistentIndex((QTransposeProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void q_transposeproxymodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    QTransposeProxyModel_QBaseChangePersistentIndex((QTransposeProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void q_transposeproxymodel_super_change_persistent_index(void* self, void* from, void* to) {
+    QTransposeProxyModel_SuperChangePersistentIndex((QTransposeProxyModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void q_transposeproxymodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1385,8 +1385,8 @@ void q_transposeproxymodel_change_persistent_index_list(void* self, libqt_list /
     QTransposeProxyModel_ChangePersistentIndexList((QTransposeProxyModel*)self, from, to);
 }
 
-void q_transposeproxymodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    QTransposeProxyModel_QBaseChangePersistentIndexList((QTransposeProxyModel*)self, from, to);
+void q_transposeproxymodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    QTransposeProxyModel_SuperChangePersistentIndexList((QTransposeProxyModel*)self, from, to);
 }
 
 void q_transposeproxymodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1398,8 +1398,8 @@ libqt_list /* of QModelIndex* */ q_transposeproxymodel_persistent_index_list(voi
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ q_transposeproxymodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = QTransposeProxyModel_QBasePersistentIndexList((QTransposeProxyModel*)self);
+libqt_list /* of QModelIndex* */ q_transposeproxymodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = QTransposeProxyModel_SuperPersistentIndexList((QTransposeProxyModel*)self);
     return _arr;
 }
 
@@ -1411,8 +1411,8 @@ QObject* q_transposeproxymodel_sender(void* self) {
     return QTransposeProxyModel_Sender((QTransposeProxyModel*)self);
 }
 
-QObject* q_transposeproxymodel_qbase_sender(void* self) {
-    return QTransposeProxyModel_QBaseSender((QTransposeProxyModel*)self);
+QObject* q_transposeproxymodel_super_sender(void* self) {
+    return QTransposeProxyModel_SuperSender((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1423,8 +1423,8 @@ int32_t q_transposeproxymodel_sender_signal_index(void* self) {
     return QTransposeProxyModel_SenderSignalIndex((QTransposeProxyModel*)self);
 }
 
-int32_t q_transposeproxymodel_qbase_sender_signal_index(void* self) {
-    return QTransposeProxyModel_QBaseSenderSignalIndex((QTransposeProxyModel*)self);
+int32_t q_transposeproxymodel_super_sender_signal_index(void* self) {
+    return QTransposeProxyModel_SuperSenderSignalIndex((QTransposeProxyModel*)self);
 }
 
 void q_transposeproxymodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1435,8 +1435,8 @@ int32_t q_transposeproxymodel_receivers(void* self, const char* signal) {
     return QTransposeProxyModel_Receivers((QTransposeProxyModel*)self, signal);
 }
 
-int32_t q_transposeproxymodel_qbase_receivers(void* self, const char* signal) {
-    return QTransposeProxyModel_QBaseReceivers((QTransposeProxyModel*)self, signal);
+int32_t q_transposeproxymodel_super_receivers(void* self, const char* signal) {
+    return QTransposeProxyModel_SuperReceivers((QTransposeProxyModel*)self, signal);
 }
 
 void q_transposeproxymodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1447,8 +1447,8 @@ bool q_transposeproxymodel_is_signal_connected(void* self, void* signal) {
     return QTransposeProxyModel_IsSignalConnected((QTransposeProxyModel*)self, (QMetaMethod*)signal);
 }
 
-bool q_transposeproxymodel_qbase_is_signal_connected(void* self, void* signal) {
-    return QTransposeProxyModel_QBaseIsSignalConnected((QTransposeProxyModel*)self, (QMetaMethod*)signal);
+bool q_transposeproxymodel_super_is_signal_connected(void* self, void* signal) {
+    return QTransposeProxyModel_SuperIsSignalConnected((QTransposeProxyModel*)self, (QMetaMethod*)signal);
 }
 
 void q_transposeproxymodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -30,8 +30,8 @@ void k_notificationaction_on_meta_object(void* self, const QMetaObject* (*callba
     KNotificationAction_OnMetaObject((KNotificationAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_notificationaction_qbase_meta_object(void* self) {
-    return KNotificationAction_QBaseMetaObject((KNotificationAction*)self);
+const QMetaObject* k_notificationaction_super_meta_object(void* self) {
+    return KNotificationAction_SuperMetaObject((KNotificationAction*)self);
 }
 
 void* k_notificationaction_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_notificationaction_on_metacast(void* self, void* (*callback)(void*, const
     KNotificationAction_OnMetacast((KNotificationAction*)self, (intptr_t)callback);
 }
 
-void* k_notificationaction_qbase_metacast(void* self, const char* param1) {
-    return KNotificationAction_QBaseMetacast((KNotificationAction*)self, param1);
+void* k_notificationaction_super_metacast(void* self, const char* param1) {
+    return KNotificationAction_SuperMetacast((KNotificationAction*)self, param1);
 }
 
 int32_t k_notificationaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_notificationaction_on_metacall(void* self, int32_t (*callback)(void*, int
     KNotificationAction_OnMetacall((KNotificationAction*)self, (intptr_t)callback);
 }
 
-int32_t k_notificationaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNotificationAction_QBaseMetacall((KNotificationAction*)self, param1, param2, param3);
+int32_t k_notificationaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNotificationAction_SuperMetacall((KNotificationAction*)self, param1, param2, param3);
 }
 
 const char* k_notificationaction_tr(const char* s) {
@@ -321,8 +321,8 @@ bool k_notificationaction_event(void* self, void* event) {
     return KNotificationAction_Event((KNotificationAction*)self, (QEvent*)event);
 }
 
-bool k_notificationaction_qbase_event(void* self, void* event) {
-    return KNotificationAction_QBaseEvent((KNotificationAction*)self, (QEvent*)event);
+bool k_notificationaction_super_event(void* self, void* event) {
+    return KNotificationAction_SuperEvent((KNotificationAction*)self, (QEvent*)event);
 }
 
 void k_notificationaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -333,8 +333,8 @@ bool k_notificationaction_event_filter(void* self, void* watched, void* event) {
     return KNotificationAction_EventFilter((KNotificationAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_notificationaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNotificationAction_QBaseEventFilter((KNotificationAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_notificationaction_super_event_filter(void* self, void* watched, void* event) {
+    return KNotificationAction_SuperEventFilter((KNotificationAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_notificationaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -345,8 +345,8 @@ void k_notificationaction_timer_event(void* self, void* event) {
     KNotificationAction_TimerEvent((KNotificationAction*)self, (QTimerEvent*)event);
 }
 
-void k_notificationaction_qbase_timer_event(void* self, void* event) {
-    KNotificationAction_QBaseTimerEvent((KNotificationAction*)self, (QTimerEvent*)event);
+void k_notificationaction_super_timer_event(void* self, void* event) {
+    KNotificationAction_SuperTimerEvent((KNotificationAction*)self, (QTimerEvent*)event);
 }
 
 void k_notificationaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ void k_notificationaction_child_event(void* self, void* event) {
     KNotificationAction_ChildEvent((KNotificationAction*)self, (QChildEvent*)event);
 }
 
-void k_notificationaction_qbase_child_event(void* self, void* event) {
-    KNotificationAction_QBaseChildEvent((KNotificationAction*)self, (QChildEvent*)event);
+void k_notificationaction_super_child_event(void* self, void* event) {
+    KNotificationAction_SuperChildEvent((KNotificationAction*)self, (QChildEvent*)event);
 }
 
 void k_notificationaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -369,8 +369,8 @@ void k_notificationaction_custom_event(void* self, void* event) {
     KNotificationAction_CustomEvent((KNotificationAction*)self, (QEvent*)event);
 }
 
-void k_notificationaction_qbase_custom_event(void* self, void* event) {
-    KNotificationAction_QBaseCustomEvent((KNotificationAction*)self, (QEvent*)event);
+void k_notificationaction_super_custom_event(void* self, void* event) {
+    KNotificationAction_SuperCustomEvent((KNotificationAction*)self, (QEvent*)event);
 }
 
 void k_notificationaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -381,8 +381,8 @@ void k_notificationaction_connect_notify(void* self, void* signal) {
     KNotificationAction_ConnectNotify((KNotificationAction*)self, (QMetaMethod*)signal);
 }
 
-void k_notificationaction_qbase_connect_notify(void* self, void* signal) {
-    KNotificationAction_QBaseConnectNotify((KNotificationAction*)self, (QMetaMethod*)signal);
+void k_notificationaction_super_connect_notify(void* self, void* signal) {
+    KNotificationAction_SuperConnectNotify((KNotificationAction*)self, (QMetaMethod*)signal);
 }
 
 void k_notificationaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -393,8 +393,8 @@ void k_notificationaction_disconnect_notify(void* self, void* signal) {
     KNotificationAction_DisconnectNotify((KNotificationAction*)self, (QMetaMethod*)signal);
 }
 
-void k_notificationaction_qbase_disconnect_notify(void* self, void* signal) {
-    KNotificationAction_QBaseDisconnectNotify((KNotificationAction*)self, (QMetaMethod*)signal);
+void k_notificationaction_super_disconnect_notify(void* self, void* signal) {
+    KNotificationAction_SuperDisconnectNotify((KNotificationAction*)self, (QMetaMethod*)signal);
 }
 
 void k_notificationaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -405,8 +405,8 @@ QObject* k_notificationaction_sender(void* self) {
     return KNotificationAction_Sender((KNotificationAction*)self);
 }
 
-QObject* k_notificationaction_qbase_sender(void* self) {
-    return KNotificationAction_QBaseSender((KNotificationAction*)self);
+QObject* k_notificationaction_super_sender(void* self) {
+    return KNotificationAction_SuperSender((KNotificationAction*)self);
 }
 
 void k_notificationaction_on_sender(void* self, QObject* (*callback)()) {
@@ -417,8 +417,8 @@ int32_t k_notificationaction_sender_signal_index(void* self) {
     return KNotificationAction_SenderSignalIndex((KNotificationAction*)self);
 }
 
-int32_t k_notificationaction_qbase_sender_signal_index(void* self) {
-    return KNotificationAction_QBaseSenderSignalIndex((KNotificationAction*)self);
+int32_t k_notificationaction_super_sender_signal_index(void* self) {
+    return KNotificationAction_SuperSenderSignalIndex((KNotificationAction*)self);
 }
 
 void k_notificationaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -429,8 +429,8 @@ int32_t k_notificationaction_receivers(void* self, const char* signal) {
     return KNotificationAction_Receivers((KNotificationAction*)self, signal);
 }
 
-int32_t k_notificationaction_qbase_receivers(void* self, const char* signal) {
-    return KNotificationAction_QBaseReceivers((KNotificationAction*)self, signal);
+int32_t k_notificationaction_super_receivers(void* self, const char* signal) {
+    return KNotificationAction_SuperReceivers((KNotificationAction*)self, signal);
 }
 
 void k_notificationaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -441,8 +441,8 @@ bool k_notificationaction_is_signal_connected(void* self, void* signal) {
     return KNotificationAction_IsSignalConnected((KNotificationAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_notificationaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KNotificationAction_QBaseIsSignalConnected((KNotificationAction*)self, (QMetaMethod*)signal);
+bool k_notificationaction_super_is_signal_connected(void* self, void* signal) {
+    return KNotificationAction_SuperIsSignalConnected((KNotificationAction*)self, (QMetaMethod*)signal);
 }
 
 void k_notificationaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -477,8 +477,8 @@ void k_notification_on_meta_object(void* self, const QMetaObject* (*callback)())
     KNotification_OnMetaObject((KNotification*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_notification_qbase_meta_object(void* self) {
-    return KNotification_QBaseMetaObject((KNotification*)self);
+const QMetaObject* k_notification_super_meta_object(void* self) {
+    return KNotification_SuperMetaObject((KNotification*)self);
 }
 
 void* k_notification_metacast(void* self, const char* param1) {
@@ -489,8 +489,8 @@ void k_notification_on_metacast(void* self, void* (*callback)(void*, const char*
     KNotification_OnMetacast((KNotification*)self, (intptr_t)callback);
 }
 
-void* k_notification_qbase_metacast(void* self, const char* param1) {
-    return KNotification_QBaseMetacast((KNotification*)self, param1);
+void* k_notification_super_metacast(void* self, const char* param1) {
+    return KNotification_SuperMetacast((KNotification*)self, param1);
 }
 
 int32_t k_notification_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -501,8 +501,8 @@ void k_notification_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KNotification_OnMetacall((KNotification*)self, (intptr_t)callback);
 }
 
-int32_t k_notification_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KNotification_QBaseMetacall((KNotification*)self, param1, param2, param3);
+int32_t k_notification_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KNotification_SuperMetacall((KNotification*)self, param1, param2, param3);
 }
 
 const char* k_notification_tr(const char* s) {
@@ -1172,8 +1172,8 @@ bool k_notification_event_filter(void* self, void* watched, void* event) {
     return KNotification_EventFilter((KNotification*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_notification_qbase_event_filter(void* self, void* watched, void* event) {
-    return KNotification_QBaseEventFilter((KNotification*)self, (QObject*)watched, (QEvent*)event);
+bool k_notification_super_event_filter(void* self, void* watched, void* event) {
+    return KNotification_SuperEventFilter((KNotification*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_notification_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1184,8 +1184,8 @@ void k_notification_timer_event(void* self, void* event) {
     KNotification_TimerEvent((KNotification*)self, (QTimerEvent*)event);
 }
 
-void k_notification_qbase_timer_event(void* self, void* event) {
-    KNotification_QBaseTimerEvent((KNotification*)self, (QTimerEvent*)event);
+void k_notification_super_timer_event(void* self, void* event) {
+    KNotification_SuperTimerEvent((KNotification*)self, (QTimerEvent*)event);
 }
 
 void k_notification_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1196,8 +1196,8 @@ void k_notification_child_event(void* self, void* event) {
     KNotification_ChildEvent((KNotification*)self, (QChildEvent*)event);
 }
 
-void k_notification_qbase_child_event(void* self, void* event) {
-    KNotification_QBaseChildEvent((KNotification*)self, (QChildEvent*)event);
+void k_notification_super_child_event(void* self, void* event) {
+    KNotification_SuperChildEvent((KNotification*)self, (QChildEvent*)event);
 }
 
 void k_notification_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1208,8 +1208,8 @@ void k_notification_custom_event(void* self, void* event) {
     KNotification_CustomEvent((KNotification*)self, (QEvent*)event);
 }
 
-void k_notification_qbase_custom_event(void* self, void* event) {
-    KNotification_QBaseCustomEvent((KNotification*)self, (QEvent*)event);
+void k_notification_super_custom_event(void* self, void* event) {
+    KNotification_SuperCustomEvent((KNotification*)self, (QEvent*)event);
 }
 
 void k_notification_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1220,8 +1220,8 @@ void k_notification_connect_notify(void* self, void* signal) {
     KNotification_ConnectNotify((KNotification*)self, (QMetaMethod*)signal);
 }
 
-void k_notification_qbase_connect_notify(void* self, void* signal) {
-    KNotification_QBaseConnectNotify((KNotification*)self, (QMetaMethod*)signal);
+void k_notification_super_connect_notify(void* self, void* signal) {
+    KNotification_SuperConnectNotify((KNotification*)self, (QMetaMethod*)signal);
 }
 
 void k_notification_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1232,8 +1232,8 @@ void k_notification_disconnect_notify(void* self, void* signal) {
     KNotification_DisconnectNotify((KNotification*)self, (QMetaMethod*)signal);
 }
 
-void k_notification_qbase_disconnect_notify(void* self, void* signal) {
-    KNotification_QBaseDisconnectNotify((KNotification*)self, (QMetaMethod*)signal);
+void k_notification_super_disconnect_notify(void* self, void* signal) {
+    KNotification_SuperDisconnectNotify((KNotification*)self, (QMetaMethod*)signal);
 }
 
 void k_notification_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1244,8 +1244,8 @@ QObject* k_notification_sender(void* self) {
     return KNotification_Sender((KNotification*)self);
 }
 
-QObject* k_notification_qbase_sender(void* self) {
-    return KNotification_QBaseSender((KNotification*)self);
+QObject* k_notification_super_sender(void* self) {
+    return KNotification_SuperSender((KNotification*)self);
 }
 
 void k_notification_on_sender(void* self, QObject* (*callback)()) {
@@ -1256,8 +1256,8 @@ int32_t k_notification_sender_signal_index(void* self) {
     return KNotification_SenderSignalIndex((KNotification*)self);
 }
 
-int32_t k_notification_qbase_sender_signal_index(void* self) {
-    return KNotification_QBaseSenderSignalIndex((KNotification*)self);
+int32_t k_notification_super_sender_signal_index(void* self) {
+    return KNotification_SuperSenderSignalIndex((KNotification*)self);
 }
 
 void k_notification_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1268,8 +1268,8 @@ int32_t k_notification_receivers(void* self, const char* signal) {
     return KNotification_Receivers((KNotification*)self, signal);
 }
 
-int32_t k_notification_qbase_receivers(void* self, const char* signal) {
-    return KNotification_QBaseReceivers((KNotification*)self, signal);
+int32_t k_notification_super_receivers(void* self, const char* signal) {
+    return KNotification_SuperReceivers((KNotification*)self, signal);
 }
 
 void k_notification_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1280,8 +1280,8 @@ bool k_notification_is_signal_connected(void* self, void* signal) {
     return KNotification_IsSignalConnected((KNotification*)self, (QMetaMethod*)signal);
 }
 
-bool k_notification_qbase_is_signal_connected(void* self, void* signal) {
-    return KNotification_QBaseIsSignalConnected((KNotification*)self, (QMetaMethod*)signal);
+bool k_notification_super_is_signal_connected(void* self, void* signal) {
+    return KNotification_SuperIsSignalConnected((KNotification*)self, (QMetaMethod*)signal);
 }
 
 void k_notification_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

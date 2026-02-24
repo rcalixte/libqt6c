@@ -18,8 +18,8 @@ void k_bookmarkowner_on_current_title(void* self, const char* (*callback)()) {
     KBookmarkOwner_OnCurrentTitle((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-const char* k_bookmarkowner_qbase_current_title(void* self) {
-    libqt_string _str = KBookmarkOwner_QBaseCurrentTitle((KBookmarkOwner*)self);
+const char* k_bookmarkowner_super_current_title(void* self) {
+    libqt_string _str = KBookmarkOwner_SuperCurrentTitle((KBookmarkOwner*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -33,8 +33,8 @@ void k_bookmarkowner_on_current_url(void* self, QUrl* (*callback)()) {
     KBookmarkOwner_OnCurrentUrl((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-QUrl* k_bookmarkowner_qbase_current_url(void* self) {
-    return KBookmarkOwner_QBaseCurrentUrl((KBookmarkOwner*)self);
+QUrl* k_bookmarkowner_super_current_url(void* self) {
+    return KBookmarkOwner_SuperCurrentUrl((KBookmarkOwner*)self);
 }
 
 const char* k_bookmarkowner_current_icon(void* self) {
@@ -48,8 +48,8 @@ void k_bookmarkowner_on_current_icon(void* self, const char* (*callback)()) {
     KBookmarkOwner_OnCurrentIcon((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-const char* k_bookmarkowner_qbase_current_icon(void* self) {
-    libqt_string _str = KBookmarkOwner_QBaseCurrentIcon((KBookmarkOwner*)self);
+const char* k_bookmarkowner_super_current_icon(void* self) {
+    libqt_string _str = KBookmarkOwner_SuperCurrentIcon((KBookmarkOwner*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -63,8 +63,8 @@ void k_bookmarkowner_on_supports_tabs(void* self, bool (*callback)()) {
     KBookmarkOwner_OnSupportsTabs((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-bool k_bookmarkowner_qbase_supports_tabs(void* self) {
-    return KBookmarkOwner_QBaseSupportsTabs((KBookmarkOwner*)self);
+bool k_bookmarkowner_super_supports_tabs(void* self) {
+    return KBookmarkOwner_SuperSupportsTabs((KBookmarkOwner*)self);
 }
 
 libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_current_bookmark_list(void* self) {
@@ -76,8 +76,8 @@ void k_bookmarkowner_on_current_bookmark_list(void* self, libqt_list /* of KBook
     KBookmarkOwner_OnCurrentBookmarkList((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_qbase_current_bookmark_list(void* self) {
-    libqt_list _arr = KBookmarkOwner_QBaseCurrentBookmarkList((KBookmarkOwner*)self);
+libqt_list /* of KBookmarkOwner__FutureBookmark* */ k_bookmarkowner_super_current_bookmark_list(void* self) {
+    libqt_list _arr = KBookmarkOwner_SuperCurrentBookmarkList((KBookmarkOwner*)self);
     return _arr;
 }
 
@@ -89,8 +89,8 @@ void k_bookmarkowner_on_enable_option(void* self, bool (*callback)(void*, int32_
     KBookmarkOwner_OnEnableOption((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-bool k_bookmarkowner_qbase_enable_option(void* self, int32_t option) {
-    return KBookmarkOwner_QBaseEnableOption((KBookmarkOwner*)self, option);
+bool k_bookmarkowner_super_enable_option(void* self, int32_t option) {
+    return KBookmarkOwner_SuperEnableOption((KBookmarkOwner*)self, option);
 }
 
 void k_bookmarkowner_open_bookmark(void* self, void* bm, int32_t mb, int32_t km) {
@@ -101,8 +101,8 @@ void k_bookmarkowner_on_open_bookmark(void* self, void (*callback)(void*, void*,
     KBookmarkOwner_OnOpenBookmark((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-void k_bookmarkowner_qbase_open_bookmark(void* self, void* bm, int32_t mb, int32_t km) {
-    KBookmarkOwner_QBaseOpenBookmark((KBookmarkOwner*)self, (KBookmark*)bm, mb, km);
+void k_bookmarkowner_super_open_bookmark(void* self, void* bm, int32_t mb, int32_t km) {
+    KBookmarkOwner_SuperOpenBookmark((KBookmarkOwner*)self, (KBookmark*)bm, mb, km);
 }
 
 void k_bookmarkowner_open_folderin_tabs(void* self, void* bm) {
@@ -113,8 +113,8 @@ void k_bookmarkowner_on_open_folderin_tabs(void* self, void (*callback)(void*, v
     KBookmarkOwner_OnOpenFolderinTabs((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-void k_bookmarkowner_qbase_open_folderin_tabs(void* self, void* bm) {
-    KBookmarkOwner_QBaseOpenFolderinTabs((KBookmarkOwner*)self, (KBookmarkGroup*)bm);
+void k_bookmarkowner_super_open_folderin_tabs(void* self, void* bm) {
+    KBookmarkOwner_SuperOpenFolderinTabs((KBookmarkOwner*)self, (KBookmarkGroup*)bm);
 }
 
 void k_bookmarkowner_open_in_new_tab(void* self, void* bm) {
@@ -125,8 +125,8 @@ void k_bookmarkowner_on_open_in_new_tab(void* self, void (*callback)(void*, void
     KBookmarkOwner_OnOpenInNewTab((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-void k_bookmarkowner_qbase_open_in_new_tab(void* self, void* bm) {
-    KBookmarkOwner_QBaseOpenInNewTab((KBookmarkOwner*)self, (KBookmark*)bm);
+void k_bookmarkowner_super_open_in_new_tab(void* self, void* bm) {
+    KBookmarkOwner_SuperOpenInNewTab((KBookmarkOwner*)self, (KBookmark*)bm);
 }
 
 void k_bookmarkowner_open_in_new_window(void* self, void* bm) {
@@ -137,8 +137,8 @@ void k_bookmarkowner_on_open_in_new_window(void* self, void (*callback)(void*, v
     KBookmarkOwner_OnOpenInNewWindow((KBookmarkOwner*)self, (intptr_t)callback);
 }
 
-void k_bookmarkowner_qbase_open_in_new_window(void* self, void* bm) {
-    KBookmarkOwner_QBaseOpenInNewWindow((KBookmarkOwner*)self, (KBookmark*)bm);
+void k_bookmarkowner_super_open_in_new_window(void* self, void* bm) {
+    KBookmarkOwner_SuperOpenInNewWindow((KBookmarkOwner*)self, (KBookmark*)bm);
 }
 
 void k_bookmarkowner_delete(void* self) {

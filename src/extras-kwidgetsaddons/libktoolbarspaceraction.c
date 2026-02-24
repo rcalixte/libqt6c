@@ -20,8 +20,8 @@ void k_toolbarspaceraction_on_meta_object(void* self, const QMetaObject* (*callb
     KToolBarSpacerAction_OnMetaObject((KToolBarSpacerAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_toolbarspaceraction_qbase_meta_object(void* self) {
-    return KToolBarSpacerAction_QBaseMetaObject((KToolBarSpacerAction*)self);
+const QMetaObject* k_toolbarspaceraction_super_meta_object(void* self) {
+    return KToolBarSpacerAction_SuperMetaObject((KToolBarSpacerAction*)self);
 }
 
 void* k_toolbarspaceraction_metacast(void* self, const char* param1) {
@@ -32,8 +32,8 @@ void k_toolbarspaceraction_on_metacast(void* self, void* (*callback)(void*, cons
     KToolBarSpacerAction_OnMetacast((KToolBarSpacerAction*)self, (intptr_t)callback);
 }
 
-void* k_toolbarspaceraction_qbase_metacast(void* self, const char* param1) {
-    return KToolBarSpacerAction_QBaseMetacast((KToolBarSpacerAction*)self, param1);
+void* k_toolbarspaceraction_super_metacast(void* self, const char* param1) {
+    return KToolBarSpacerAction_SuperMetacast((KToolBarSpacerAction*)self, param1);
 }
 
 int32_t k_toolbarspaceraction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -44,8 +44,8 @@ void k_toolbarspaceraction_on_metacall(void* self, int32_t (*callback)(void*, in
     KToolBarSpacerAction_OnMetacall((KToolBarSpacerAction*)self, (intptr_t)callback);
 }
 
-int32_t k_toolbarspaceraction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KToolBarSpacerAction_QBaseMetacall((KToolBarSpacerAction*)self, param1, param2, param3);
+int32_t k_toolbarspaceraction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KToolBarSpacerAction_SuperMetacall((KToolBarSpacerAction*)self, param1, param2, param3);
 }
 
 const char* k_toolbarspaceraction_tr(const char* s) {
@@ -63,8 +63,8 @@ void k_toolbarspaceraction_on_create_widget(void* self, QWidget* (*callback)(voi
     KToolBarSpacerAction_OnCreateWidget((KToolBarSpacerAction*)self, (intptr_t)callback);
 }
 
-QWidget* k_toolbarspaceraction_qbase_create_widget(void* self, void* parent) {
-    return KToolBarSpacerAction_QBaseCreateWidget((KToolBarSpacerAction*)self, (QWidget*)parent);
+QWidget* k_toolbarspaceraction_super_create_widget(void* self, void* parent) {
+    return KToolBarSpacerAction_SuperCreateWidget((KToolBarSpacerAction*)self, (QWidget*)parent);
 }
 
 const char* k_toolbarspaceraction_tr2(const char* s, const char* c) {
@@ -609,8 +609,8 @@ bool k_toolbarspaceraction_event(void* self, void* param1) {
     return KToolBarSpacerAction_Event((KToolBarSpacerAction*)self, (QEvent*)param1);
 }
 
-bool k_toolbarspaceraction_qbase_event(void* self, void* param1) {
-    return KToolBarSpacerAction_QBaseEvent((KToolBarSpacerAction*)self, (QEvent*)param1);
+bool k_toolbarspaceraction_super_event(void* self, void* param1) {
+    return KToolBarSpacerAction_SuperEvent((KToolBarSpacerAction*)self, (QEvent*)param1);
 }
 
 void k_toolbarspaceraction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -621,8 +621,8 @@ bool k_toolbarspaceraction_event_filter(void* self, void* param1, void* param2) 
     return KToolBarSpacerAction_EventFilter((KToolBarSpacerAction*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_toolbarspaceraction_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KToolBarSpacerAction_QBaseEventFilter((KToolBarSpacerAction*)self, (QObject*)param1, (QEvent*)param2);
+bool k_toolbarspaceraction_super_event_filter(void* self, void* param1, void* param2) {
+    return KToolBarSpacerAction_SuperEventFilter((KToolBarSpacerAction*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_toolbarspaceraction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -633,8 +633,8 @@ void k_toolbarspaceraction_delete_widget(void* self, void* widget) {
     KToolBarSpacerAction_DeleteWidget((KToolBarSpacerAction*)self, (QWidget*)widget);
 }
 
-void k_toolbarspaceraction_qbase_delete_widget(void* self, void* widget) {
-    KToolBarSpacerAction_QBaseDeleteWidget((KToolBarSpacerAction*)self, (QWidget*)widget);
+void k_toolbarspaceraction_super_delete_widget(void* self, void* widget) {
+    KToolBarSpacerAction_SuperDeleteWidget((KToolBarSpacerAction*)self, (QWidget*)widget);
 }
 
 void k_toolbarspaceraction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -645,8 +645,8 @@ void k_toolbarspaceraction_timer_event(void* self, void* event) {
     KToolBarSpacerAction_TimerEvent((KToolBarSpacerAction*)self, (QTimerEvent*)event);
 }
 
-void k_toolbarspaceraction_qbase_timer_event(void* self, void* event) {
-    KToolBarSpacerAction_QBaseTimerEvent((KToolBarSpacerAction*)self, (QTimerEvent*)event);
+void k_toolbarspaceraction_super_timer_event(void* self, void* event) {
+    KToolBarSpacerAction_SuperTimerEvent((KToolBarSpacerAction*)self, (QTimerEvent*)event);
 }
 
 void k_toolbarspaceraction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -657,8 +657,8 @@ void k_toolbarspaceraction_child_event(void* self, void* event) {
     KToolBarSpacerAction_ChildEvent((KToolBarSpacerAction*)self, (QChildEvent*)event);
 }
 
-void k_toolbarspaceraction_qbase_child_event(void* self, void* event) {
-    KToolBarSpacerAction_QBaseChildEvent((KToolBarSpacerAction*)self, (QChildEvent*)event);
+void k_toolbarspaceraction_super_child_event(void* self, void* event) {
+    KToolBarSpacerAction_SuperChildEvent((KToolBarSpacerAction*)self, (QChildEvent*)event);
 }
 
 void k_toolbarspaceraction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -669,8 +669,8 @@ void k_toolbarspaceraction_custom_event(void* self, void* event) {
     KToolBarSpacerAction_CustomEvent((KToolBarSpacerAction*)self, (QEvent*)event);
 }
 
-void k_toolbarspaceraction_qbase_custom_event(void* self, void* event) {
-    KToolBarSpacerAction_QBaseCustomEvent((KToolBarSpacerAction*)self, (QEvent*)event);
+void k_toolbarspaceraction_super_custom_event(void* self, void* event) {
+    KToolBarSpacerAction_SuperCustomEvent((KToolBarSpacerAction*)self, (QEvent*)event);
 }
 
 void k_toolbarspaceraction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -681,8 +681,8 @@ void k_toolbarspaceraction_connect_notify(void* self, void* signal) {
     KToolBarSpacerAction_ConnectNotify((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toolbarspaceraction_qbase_connect_notify(void* self, void* signal) {
-    KToolBarSpacerAction_QBaseConnectNotify((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
+void k_toolbarspaceraction_super_connect_notify(void* self, void* signal) {
+    KToolBarSpacerAction_SuperConnectNotify((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarspaceraction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -693,8 +693,8 @@ void k_toolbarspaceraction_disconnect_notify(void* self, void* signal) {
     KToolBarSpacerAction_DisconnectNotify((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toolbarspaceraction_qbase_disconnect_notify(void* self, void* signal) {
-    KToolBarSpacerAction_QBaseDisconnectNotify((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
+void k_toolbarspaceraction_super_disconnect_notify(void* self, void* signal) {
+    KToolBarSpacerAction_SuperDisconnectNotify((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarspaceraction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -706,8 +706,8 @@ libqt_list /* of QWidget* */ k_toolbarspaceraction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_toolbarspaceraction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KToolBarSpacerAction_QBaseCreatedWidgets((KToolBarSpacerAction*)self);
+libqt_list /* of QWidget* */ k_toolbarspaceraction_super_created_widgets(void* self) {
+    libqt_list _arr = KToolBarSpacerAction_SuperCreatedWidgets((KToolBarSpacerAction*)self);
     return _arr;
 }
 
@@ -719,8 +719,8 @@ QObject* k_toolbarspaceraction_sender(void* self) {
     return KToolBarSpacerAction_Sender((KToolBarSpacerAction*)self);
 }
 
-QObject* k_toolbarspaceraction_qbase_sender(void* self) {
-    return KToolBarSpacerAction_QBaseSender((KToolBarSpacerAction*)self);
+QObject* k_toolbarspaceraction_super_sender(void* self) {
+    return KToolBarSpacerAction_SuperSender((KToolBarSpacerAction*)self);
 }
 
 void k_toolbarspaceraction_on_sender(void* self, QObject* (*callback)()) {
@@ -731,8 +731,8 @@ int32_t k_toolbarspaceraction_sender_signal_index(void* self) {
     return KToolBarSpacerAction_SenderSignalIndex((KToolBarSpacerAction*)self);
 }
 
-int32_t k_toolbarspaceraction_qbase_sender_signal_index(void* self) {
-    return KToolBarSpacerAction_QBaseSenderSignalIndex((KToolBarSpacerAction*)self);
+int32_t k_toolbarspaceraction_super_sender_signal_index(void* self) {
+    return KToolBarSpacerAction_SuperSenderSignalIndex((KToolBarSpacerAction*)self);
 }
 
 void k_toolbarspaceraction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -743,8 +743,8 @@ int32_t k_toolbarspaceraction_receivers(void* self, const char* signal) {
     return KToolBarSpacerAction_Receivers((KToolBarSpacerAction*)self, signal);
 }
 
-int32_t k_toolbarspaceraction_qbase_receivers(void* self, const char* signal) {
-    return KToolBarSpacerAction_QBaseReceivers((KToolBarSpacerAction*)self, signal);
+int32_t k_toolbarspaceraction_super_receivers(void* self, const char* signal) {
+    return KToolBarSpacerAction_SuperReceivers((KToolBarSpacerAction*)self, signal);
 }
 
 void k_toolbarspaceraction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -755,8 +755,8 @@ bool k_toolbarspaceraction_is_signal_connected(void* self, void* signal) {
     return KToolBarSpacerAction_IsSignalConnected((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_toolbarspaceraction_qbase_is_signal_connected(void* self, void* signal) {
-    return KToolBarSpacerAction_QBaseIsSignalConnected((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
+bool k_toolbarspaceraction_super_is_signal_connected(void* self, void* signal) {
+    return KToolBarSpacerAction_SuperIsSignalConnected((KToolBarSpacerAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarspaceraction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

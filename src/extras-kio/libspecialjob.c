@@ -28,8 +28,8 @@ void k_io__specialjob_on_meta_object(void* self, const QMetaObject* (*callback)(
     KIO__SpecialJob_OnMetaObject((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__specialjob_qbase_meta_object(void* self) {
-    return KIO__SpecialJob_QBaseMetaObject((KIO__SpecialJob*)self);
+const QMetaObject* k_io__specialjob_super_meta_object(void* self) {
+    return KIO__SpecialJob_SuperMetaObject((KIO__SpecialJob*)self);
 }
 
 void* k_io__specialjob_metacast(void* self, const char* param1) {
@@ -40,8 +40,8 @@ void k_io__specialjob_on_metacast(void* self, void* (*callback)(void*, const cha
     KIO__SpecialJob_OnMetacast((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void* k_io__specialjob_qbase_metacast(void* self, const char* param1) {
-    return KIO__SpecialJob_QBaseMetacast((KIO__SpecialJob*)self, param1);
+void* k_io__specialjob_super_metacast(void* self, const char* param1) {
+    return KIO__SpecialJob_SuperMetacast((KIO__SpecialJob*)self, param1);
 }
 
 int32_t k_io__specialjob_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -52,8 +52,8 @@ void k_io__specialjob_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KIO__SpecialJob_OnMetacall((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-int32_t k_io__specialjob_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__SpecialJob_QBaseMetacall((KIO__SpecialJob*)self, param1, param2, param3);
+int32_t k_io__specialjob_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__SpecialJob_SuperMetacall((KIO__SpecialJob*)self, param1, param2, param3);
 }
 
 const char* k_io__specialjob_tr(const char* s) {
@@ -689,8 +689,8 @@ bool k_io__specialjob_do_resume(void* self) {
     return KIO__SpecialJob_DoResume((KIO__SpecialJob*)self);
 }
 
-bool k_io__specialjob_qbase_do_resume(void* self) {
-    return KIO__SpecialJob_QBaseDoResume((KIO__SpecialJob*)self);
+bool k_io__specialjob_super_do_resume(void* self) {
+    return KIO__SpecialJob_SuperDoResume((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_do_resume(void* self, bool (*callback)()) {
@@ -701,8 +701,8 @@ void k_io__specialjob_slot_redirection(void* self, void* url) {
     KIO__SpecialJob_SlotRedirection((KIO__SpecialJob*)self, (QUrl*)url);
 }
 
-void k_io__specialjob_qbase_slot_redirection(void* self, void* url) {
-    KIO__SpecialJob_QBaseSlotRedirection((KIO__SpecialJob*)self, (QUrl*)url);
+void k_io__specialjob_super_slot_redirection(void* self, void* url) {
+    KIO__SpecialJob_SuperSlotRedirection((KIO__SpecialJob*)self, (QUrl*)url);
 }
 
 void k_io__specialjob_on_slot_redirection(void* self, void (*callback)(void*, void*)) {
@@ -713,8 +713,8 @@ void k_io__specialjob_slot_finished(void* self) {
     KIO__SpecialJob_SlotFinished((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_slot_finished(void* self) {
-    KIO__SpecialJob_QBaseSlotFinished((KIO__SpecialJob*)self);
+void k_io__specialjob_super_slot_finished(void* self) {
+    KIO__SpecialJob_SuperSlotFinished((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_slot_finished(void* self, void (*callback)()) {
@@ -725,8 +725,8 @@ void k_io__specialjob_slot_data(void* self, char* data) {
     KIO__SpecialJob_SlotData((KIO__SpecialJob*)self, qstring(data));
 }
 
-void k_io__specialjob_qbase_slot_data(void* self, char* data) {
-    KIO__SpecialJob_QBaseSlotData((KIO__SpecialJob*)self, qstring(data));
+void k_io__specialjob_super_slot_data(void* self, char* data) {
+    KIO__SpecialJob_SuperSlotData((KIO__SpecialJob*)self, qstring(data));
 }
 
 void k_io__specialjob_on_slot_data(void* self, void (*callback)(void*, libqt_string)) {
@@ -737,8 +737,8 @@ void k_io__specialjob_slot_data_req(void* self) {
     KIO__SpecialJob_SlotDataReq((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_slot_data_req(void* self) {
-    KIO__SpecialJob_QBaseSlotDataReq((KIO__SpecialJob*)self);
+void k_io__specialjob_super_slot_data_req(void* self) {
+    KIO__SpecialJob_SuperSlotDataReq((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_slot_data_req(void* self, void (*callback)()) {
@@ -749,8 +749,8 @@ void k_io__specialjob_slot_mimetype(void* self, const char* mimetype) {
     KIO__SpecialJob_SlotMimetype((KIO__SpecialJob*)self, qstring(mimetype));
 }
 
-void k_io__specialjob_qbase_slot_mimetype(void* self, const char* mimetype) {
-    KIO__SpecialJob_QBaseSlotMimetype((KIO__SpecialJob*)self, qstring(mimetype));
+void k_io__specialjob_super_slot_mimetype(void* self, const char* mimetype) {
+    KIO__SpecialJob_SuperSlotMimetype((KIO__SpecialJob*)self, qstring(mimetype));
 }
 
 void k_io__specialjob_on_slot_mimetype(void* self, void (*callback)(void*, const char*)) {
@@ -761,8 +761,8 @@ bool k_io__specialjob_do_suspend(void* self) {
     return KIO__SpecialJob_DoSuspend((KIO__SpecialJob*)self);
 }
 
-bool k_io__specialjob_qbase_do_suspend(void* self) {
-    return KIO__SpecialJob_QBaseDoSuspend((KIO__SpecialJob*)self);
+bool k_io__specialjob_super_do_suspend(void* self) {
+    return KIO__SpecialJob_SuperDoSuspend((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_do_suspend(void* self, bool (*callback)()) {
@@ -773,8 +773,8 @@ bool k_io__specialjob_do_kill(void* self) {
     return KIO__SpecialJob_DoKill((KIO__SpecialJob*)self);
 }
 
-bool k_io__specialjob_qbase_do_kill(void* self) {
-    return KIO__SpecialJob_QBaseDoKill((KIO__SpecialJob*)self);
+bool k_io__specialjob_super_do_kill(void* self) {
+    return KIO__SpecialJob_SuperDoKill((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_do_kill(void* self, bool (*callback)()) {
@@ -785,8 +785,8 @@ void k_io__specialjob_put_on_hold(void* self) {
     KIO__SpecialJob_PutOnHold((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_put_on_hold(void* self) {
-    KIO__SpecialJob_QBasePutOnHold((KIO__SpecialJob*)self);
+void k_io__specialjob_super_put_on_hold(void* self) {
+    KIO__SpecialJob_SuperPutOnHold((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_put_on_hold(void* self, void (*callback)()) {
@@ -797,8 +797,8 @@ void k_io__specialjob_slot_warning(void* self, const char* param1) {
     KIO__SpecialJob_SlotWarning((KIO__SpecialJob*)self, qstring(param1));
 }
 
-void k_io__specialjob_qbase_slot_warning(void* self, const char* param1) {
-    KIO__SpecialJob_QBaseSlotWarning((KIO__SpecialJob*)self, qstring(param1));
+void k_io__specialjob_super_slot_warning(void* self, const char* param1) {
+    KIO__SpecialJob_SuperSlotWarning((KIO__SpecialJob*)self, qstring(param1));
 }
 
 void k_io__specialjob_on_slot_warning(void* self, void (*callback)(void*, const char*)) {
@@ -809,8 +809,8 @@ void k_io__specialjob_slot_meta_data(void* self, void* _metaData) {
     KIO__SpecialJob_SlotMetaData((KIO__SpecialJob*)self, (KIO__MetaData*)_metaData);
 }
 
-void k_io__specialjob_qbase_slot_meta_data(void* self, void* _metaData) {
-    KIO__SpecialJob_QBaseSlotMetaData((KIO__SpecialJob*)self, (KIO__MetaData*)_metaData);
+void k_io__specialjob_super_slot_meta_data(void* self, void* _metaData) {
+    KIO__SpecialJob_SuperSlotMetaData((KIO__SpecialJob*)self, (KIO__MetaData*)_metaData);
 }
 
 void k_io__specialjob_on_slot_meta_data(void* self, void (*callback)(void*, void*)) {
@@ -821,8 +821,8 @@ void k_io__specialjob_start(void* self) {
     KIO__SpecialJob_Start((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_start(void* self) {
-    KIO__SpecialJob_QBaseStart((KIO__SpecialJob*)self);
+void k_io__specialjob_super_start(void* self) {
+    KIO__SpecialJob_SuperStart((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_start(void* self, void (*callback)()) {
@@ -836,8 +836,8 @@ const char* k_io__specialjob_error_string(void* self) {
     return _ret;
 }
 
-const char* k_io__specialjob_qbase_error_string(void* self) {
-    libqt_string _str = KIO__SpecialJob_QBaseErrorString((KIO__SpecialJob*)self);
+const char* k_io__specialjob_super_error_string(void* self) {
+    libqt_string _str = KIO__SpecialJob_SuperErrorString((KIO__SpecialJob*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -851,8 +851,8 @@ bool k_io__specialjob_add_subjob(void* self, void* job) {
     return KIO__SpecialJob_AddSubjob((KIO__SpecialJob*)self, (KJob*)job);
 }
 
-bool k_io__specialjob_qbase_add_subjob(void* self, void* job) {
-    return KIO__SpecialJob_QBaseAddSubjob((KIO__SpecialJob*)self, (KJob*)job);
+bool k_io__specialjob_super_add_subjob(void* self, void* job) {
+    return KIO__SpecialJob_SuperAddSubjob((KIO__SpecialJob*)self, (KJob*)job);
 }
 
 void k_io__specialjob_on_add_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -863,8 +863,8 @@ bool k_io__specialjob_remove_subjob(void* self, void* job) {
     return KIO__SpecialJob_RemoveSubjob((KIO__SpecialJob*)self, (KJob*)job);
 }
 
-bool k_io__specialjob_qbase_remove_subjob(void* self, void* job) {
-    return KIO__SpecialJob_QBaseRemoveSubjob((KIO__SpecialJob*)self, (KJob*)job);
+bool k_io__specialjob_super_remove_subjob(void* self, void* job) {
+    return KIO__SpecialJob_SuperRemoveSubjob((KIO__SpecialJob*)self, (KJob*)job);
 }
 
 void k_io__specialjob_on_remove_subjob(void* self, bool (*callback)(void*, void*)) {
@@ -875,8 +875,8 @@ void k_io__specialjob_slot_result(void* self, void* job) {
     KIO__SpecialJob_SlotResult((KIO__SpecialJob*)self, (KJob*)job);
 }
 
-void k_io__specialjob_qbase_slot_result(void* self, void* job) {
-    KIO__SpecialJob_QBaseSlotResult((KIO__SpecialJob*)self, (KJob*)job);
+void k_io__specialjob_super_slot_result(void* self, void* job) {
+    KIO__SpecialJob_SuperSlotResult((KIO__SpecialJob*)self, (KJob*)job);
 }
 
 void k_io__specialjob_on_slot_result(void* self, void (*callback)(void*, void*)) {
@@ -887,8 +887,8 @@ void k_io__specialjob_slot_info_message(void* self, void* job, const char* messa
     KIO__SpecialJob_SlotInfoMessage((KIO__SpecialJob*)self, (KJob*)job, qstring(message));
 }
 
-void k_io__specialjob_qbase_slot_info_message(void* self, void* job, const char* message) {
-    KIO__SpecialJob_QBaseSlotInfoMessage((KIO__SpecialJob*)self, (KJob*)job, qstring(message));
+void k_io__specialjob_super_slot_info_message(void* self, void* job, const char* message) {
+    KIO__SpecialJob_SuperSlotInfoMessage((KIO__SpecialJob*)self, (KJob*)job, qstring(message));
 }
 
 void k_io__specialjob_on_slot_info_message(void* self, void (*callback)(void*, void*, const char*)) {
@@ -899,8 +899,8 @@ bool k_io__specialjob_event(void* self, void* event) {
     return KIO__SpecialJob_Event((KIO__SpecialJob*)self, (QEvent*)event);
 }
 
-bool k_io__specialjob_qbase_event(void* self, void* event) {
-    return KIO__SpecialJob_QBaseEvent((KIO__SpecialJob*)self, (QEvent*)event);
+bool k_io__specialjob_super_event(void* self, void* event) {
+    return KIO__SpecialJob_SuperEvent((KIO__SpecialJob*)self, (QEvent*)event);
 }
 
 void k_io__specialjob_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -911,8 +911,8 @@ bool k_io__specialjob_event_filter(void* self, void* watched, void* event) {
     return KIO__SpecialJob_EventFilter((KIO__SpecialJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_io__specialjob_qbase_event_filter(void* self, void* watched, void* event) {
-    return KIO__SpecialJob_QBaseEventFilter((KIO__SpecialJob*)self, (QObject*)watched, (QEvent*)event);
+bool k_io__specialjob_super_event_filter(void* self, void* watched, void* event) {
+    return KIO__SpecialJob_SuperEventFilter((KIO__SpecialJob*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_io__specialjob_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -923,8 +923,8 @@ void k_io__specialjob_timer_event(void* self, void* event) {
     KIO__SpecialJob_TimerEvent((KIO__SpecialJob*)self, (QTimerEvent*)event);
 }
 
-void k_io__specialjob_qbase_timer_event(void* self, void* event) {
-    KIO__SpecialJob_QBaseTimerEvent((KIO__SpecialJob*)self, (QTimerEvent*)event);
+void k_io__specialjob_super_timer_event(void* self, void* event) {
+    KIO__SpecialJob_SuperTimerEvent((KIO__SpecialJob*)self, (QTimerEvent*)event);
 }
 
 void k_io__specialjob_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -935,8 +935,8 @@ void k_io__specialjob_child_event(void* self, void* event) {
     KIO__SpecialJob_ChildEvent((KIO__SpecialJob*)self, (QChildEvent*)event);
 }
 
-void k_io__specialjob_qbase_child_event(void* self, void* event) {
-    KIO__SpecialJob_QBaseChildEvent((KIO__SpecialJob*)self, (QChildEvent*)event);
+void k_io__specialjob_super_child_event(void* self, void* event) {
+    KIO__SpecialJob_SuperChildEvent((KIO__SpecialJob*)self, (QChildEvent*)event);
 }
 
 void k_io__specialjob_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -947,8 +947,8 @@ void k_io__specialjob_custom_event(void* self, void* event) {
     KIO__SpecialJob_CustomEvent((KIO__SpecialJob*)self, (QEvent*)event);
 }
 
-void k_io__specialjob_qbase_custom_event(void* self, void* event) {
-    KIO__SpecialJob_QBaseCustomEvent((KIO__SpecialJob*)self, (QEvent*)event);
+void k_io__specialjob_super_custom_event(void* self, void* event) {
+    KIO__SpecialJob_SuperCustomEvent((KIO__SpecialJob*)self, (QEvent*)event);
 }
 
 void k_io__specialjob_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -959,8 +959,8 @@ void k_io__specialjob_connect_notify(void* self, void* signal) {
     KIO__SpecialJob_ConnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__specialjob_qbase_connect_notify(void* self, void* signal) {
-    KIO__SpecialJob_QBaseConnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
+void k_io__specialjob_super_connect_notify(void* self, void* signal) {
+    KIO__SpecialJob_SuperConnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__specialjob_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -971,8 +971,8 @@ void k_io__specialjob_disconnect_notify(void* self, void* signal) {
     KIO__SpecialJob_DisconnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-void k_io__specialjob_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__SpecialJob_QBaseDisconnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
+void k_io__specialjob_super_disconnect_notify(void* self, void* signal) {
+    KIO__SpecialJob_SuperDisconnectNotify((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__specialjob_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -983,8 +983,8 @@ bool k_io__specialjob_has_subjobs(void* self) {
     return KIO__SpecialJob_HasSubjobs((KIO__SpecialJob*)self);
 }
 
-bool k_io__specialjob_qbase_has_subjobs(void* self) {
-    return KIO__SpecialJob_QBaseHasSubjobs((KIO__SpecialJob*)self);
+bool k_io__specialjob_super_has_subjobs(void* self) {
+    return KIO__SpecialJob_SuperHasSubjobs((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_has_subjobs(void* self, bool (*callback)()) {
@@ -996,8 +996,8 @@ libqt_list /* of KJob* */ k_io__specialjob_subjobs(void* self) {
     return _arr;
 }
 
-libqt_list /* of KJob* */ k_io__specialjob_qbase_subjobs(void* self) {
-    libqt_list _arr = KIO__SpecialJob_QBaseSubjobs((KIO__SpecialJob*)self);
+libqt_list /* of KJob* */ k_io__specialjob_super_subjobs(void* self) {
+    libqt_list _arr = KIO__SpecialJob_SuperSubjobs((KIO__SpecialJob*)self);
     return _arr;
 }
 
@@ -1009,8 +1009,8 @@ void k_io__specialjob_clear_subjobs(void* self) {
     KIO__SpecialJob_ClearSubjobs((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_clear_subjobs(void* self) {
-    KIO__SpecialJob_QBaseClearSubjobs((KIO__SpecialJob*)self);
+void k_io__specialjob_super_clear_subjobs(void* self) {
+    KIO__SpecialJob_SuperClearSubjobs((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_clear_subjobs(void* self, void (*callback)()) {
@@ -1021,8 +1021,8 @@ void k_io__specialjob_set_capabilities(void* self, int32_t capabilities) {
     KIO__SpecialJob_SetCapabilities((KIO__SpecialJob*)self, capabilities);
 }
 
-void k_io__specialjob_qbase_set_capabilities(void* self, int32_t capabilities) {
-    KIO__SpecialJob_QBaseSetCapabilities((KIO__SpecialJob*)self, capabilities);
+void k_io__specialjob_super_set_capabilities(void* self, int32_t capabilities) {
+    KIO__SpecialJob_SuperSetCapabilities((KIO__SpecialJob*)self, capabilities);
 }
 
 void k_io__specialjob_on_set_capabilities(void* self, void (*callback)(void*, int32_t)) {
@@ -1033,8 +1033,8 @@ bool k_io__specialjob_is_finished(void* self) {
     return KIO__SpecialJob_IsFinished((KIO__SpecialJob*)self);
 }
 
-bool k_io__specialjob_qbase_is_finished(void* self) {
-    return KIO__SpecialJob_QBaseIsFinished((KIO__SpecialJob*)self);
+bool k_io__specialjob_super_is_finished(void* self) {
+    return KIO__SpecialJob_SuperIsFinished((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_is_finished(void* self, bool (*callback)()) {
@@ -1045,8 +1045,8 @@ void k_io__specialjob_set_error(void* self, int errorCode) {
     KIO__SpecialJob_SetError((KIO__SpecialJob*)self, errorCode);
 }
 
-void k_io__specialjob_qbase_set_error(void* self, int errorCode) {
-    KIO__SpecialJob_QBaseSetError((KIO__SpecialJob*)self, errorCode);
+void k_io__specialjob_super_set_error(void* self, int errorCode) {
+    KIO__SpecialJob_SuperSetError((KIO__SpecialJob*)self, errorCode);
 }
 
 void k_io__specialjob_on_set_error(void* self, void (*callback)(void*, int)) {
@@ -1057,8 +1057,8 @@ void k_io__specialjob_set_error_text(void* self, const char* errorText) {
     KIO__SpecialJob_SetErrorText((KIO__SpecialJob*)self, qstring(errorText));
 }
 
-void k_io__specialjob_qbase_set_error_text(void* self, const char* errorText) {
-    KIO__SpecialJob_QBaseSetErrorText((KIO__SpecialJob*)self, qstring(errorText));
+void k_io__specialjob_super_set_error_text(void* self, const char* errorText) {
+    KIO__SpecialJob_SuperSetErrorText((KIO__SpecialJob*)self, qstring(errorText));
 }
 
 void k_io__specialjob_on_set_error_text(void* self, void (*callback)(void*, const char*)) {
@@ -1069,8 +1069,8 @@ void k_io__specialjob_set_processed_amount(void* self, int32_t unit, uint64_t am
     KIO__SpecialJob_SetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_qbase_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__SpecialJob_QBaseSetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
+void k_io__specialjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__SpecialJob_SuperSetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
 void k_io__specialjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -1081,8 +1081,8 @@ void k_io__specialjob_set_total_amount(void* self, int32_t unit, uint64_t amount
     KIO__SpecialJob_SetTotalAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_qbase_set_total_amount(void* self, int32_t unit, uint64_t amount) {
-    KIO__SpecialJob_QBaseSetTotalAmount((KIO__SpecialJob*)self, unit, amount);
+void k_io__specialjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+    KIO__SpecialJob_SuperSetTotalAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
 void k_io__specialjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
@@ -1093,8 +1093,8 @@ void k_io__specialjob_set_progress_unit(void* self, int32_t unit) {
     KIO__SpecialJob_SetProgressUnit((KIO__SpecialJob*)self, unit);
 }
 
-void k_io__specialjob_qbase_set_progress_unit(void* self, int32_t unit) {
-    KIO__SpecialJob_QBaseSetProgressUnit((KIO__SpecialJob*)self, unit);
+void k_io__specialjob_super_set_progress_unit(void* self, int32_t unit) {
+    KIO__SpecialJob_SuperSetProgressUnit((KIO__SpecialJob*)self, unit);
 }
 
 void k_io__specialjob_on_set_progress_unit(void* self, void (*callback)(void*, int32_t)) {
@@ -1105,8 +1105,8 @@ void k_io__specialjob_set_percent(void* self, uint64_t percentage) {
     KIO__SpecialJob_SetPercent((KIO__SpecialJob*)self, percentage);
 }
 
-void k_io__specialjob_qbase_set_percent(void* self, uint64_t percentage) {
-    KIO__SpecialJob_QBaseSetPercent((KIO__SpecialJob*)self, percentage);
+void k_io__specialjob_super_set_percent(void* self, uint64_t percentage) {
+    KIO__SpecialJob_SuperSetPercent((KIO__SpecialJob*)self, percentage);
 }
 
 void k_io__specialjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
@@ -1117,8 +1117,8 @@ void k_io__specialjob_emit_result(void* self) {
     KIO__SpecialJob_EmitResult((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_emit_result(void* self) {
-    KIO__SpecialJob_QBaseEmitResult((KIO__SpecialJob*)self);
+void k_io__specialjob_super_emit_result(void* self) {
+    KIO__SpecialJob_SuperEmitResult((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_emit_result(void* self, void (*callback)()) {
@@ -1129,8 +1129,8 @@ void k_io__specialjob_emit_percent(void* self, uint64_t processedAmount, uint64_
     KIO__SpecialJob_EmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__specialjob_qbase_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
-    KIO__SpecialJob_QBaseEmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
+void k_io__specialjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+    KIO__SpecialJob_SuperEmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
 }
 
 void k_io__specialjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
@@ -1141,8 +1141,8 @@ void k_io__specialjob_emit_speed(void* self, uint64_t speed) {
     KIO__SpecialJob_EmitSpeed((KIO__SpecialJob*)self, speed);
 }
 
-void k_io__specialjob_qbase_emit_speed(void* self, uint64_t speed) {
-    KIO__SpecialJob_QBaseEmitSpeed((KIO__SpecialJob*)self, speed);
+void k_io__specialjob_super_emit_speed(void* self, uint64_t speed) {
+    KIO__SpecialJob_SuperEmitSpeed((KIO__SpecialJob*)self, speed);
 }
 
 void k_io__specialjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
@@ -1153,8 +1153,8 @@ void k_io__specialjob_start_elapsed_timer(void* self) {
     KIO__SpecialJob_StartElapsedTimer((KIO__SpecialJob*)self);
 }
 
-void k_io__specialjob_qbase_start_elapsed_timer(void* self) {
-    KIO__SpecialJob_QBaseStartElapsedTimer((KIO__SpecialJob*)self);
+void k_io__specialjob_super_start_elapsed_timer(void* self) {
+    KIO__SpecialJob_SuperStartElapsedTimer((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_start_elapsed_timer(void* self, void (*callback)()) {
@@ -1165,8 +1165,8 @@ QObject* k_io__specialjob_sender(void* self) {
     return KIO__SpecialJob_Sender((KIO__SpecialJob*)self);
 }
 
-QObject* k_io__specialjob_qbase_sender(void* self) {
-    return KIO__SpecialJob_QBaseSender((KIO__SpecialJob*)self);
+QObject* k_io__specialjob_super_sender(void* self) {
+    return KIO__SpecialJob_SuperSender((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_sender(void* self, QObject* (*callback)()) {
@@ -1177,8 +1177,8 @@ int32_t k_io__specialjob_sender_signal_index(void* self) {
     return KIO__SpecialJob_SenderSignalIndex((KIO__SpecialJob*)self);
 }
 
-int32_t k_io__specialjob_qbase_sender_signal_index(void* self) {
-    return KIO__SpecialJob_QBaseSenderSignalIndex((KIO__SpecialJob*)self);
+int32_t k_io__specialjob_super_sender_signal_index(void* self) {
+    return KIO__SpecialJob_SuperSenderSignalIndex((KIO__SpecialJob*)self);
 }
 
 void k_io__specialjob_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1189,8 +1189,8 @@ int32_t k_io__specialjob_receivers(void* self, const char* signal) {
     return KIO__SpecialJob_Receivers((KIO__SpecialJob*)self, signal);
 }
 
-int32_t k_io__specialjob_qbase_receivers(void* self, const char* signal) {
-    return KIO__SpecialJob_QBaseReceivers((KIO__SpecialJob*)self, signal);
+int32_t k_io__specialjob_super_receivers(void* self, const char* signal) {
+    return KIO__SpecialJob_SuperReceivers((KIO__SpecialJob*)self, signal);
 }
 
 void k_io__specialjob_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1201,8 +1201,8 @@ bool k_io__specialjob_is_signal_connected(void* self, void* signal) {
     return KIO__SpecialJob_IsSignalConnected((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__specialjob_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__SpecialJob_QBaseIsSignalConnected((KIO__SpecialJob*)self, (QMetaMethod*)signal);
+bool k_io__specialjob_super_is_signal_connected(void* self, void* signal) {
+    return KIO__SpecialJob_SuperIsSignalConnected((KIO__SpecialJob*)self, (QMetaMethod*)signal);
 }
 
 void k_io__specialjob_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

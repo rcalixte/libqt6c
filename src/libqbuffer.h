@@ -40,13 +40,17 @@ const QMetaObject* q_buffer_meta_object(void* self);
 ///
 void q_buffer_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_buffer_super_meta_object` instead
+///
+#define q_buffer_qbase_meta_object q_buffer_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 ///
-const QMetaObject* q_buffer_qbase_meta_object(void* self);
+const QMetaObject* q_buffer_super_meta_object(void* self);
 
 /// @param self QBuffer*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_buffer_metacast(void* self, const char* param1);
 ///
 void q_buffer_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_buffer_super_metacast` instead
+///
+#define q_buffer_qbase_metacast q_buffer_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 /// @param param1 const char*
 ///
-void* q_buffer_qbase_metacast(void* self, const char* param1);
+void* q_buffer_super_metacast(void* self, const char* param1);
 
 /// @param self QBuffer*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_buffer_metacall(void* self, int32_t param1, int param2, void* param3);
 ///
 void q_buffer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_buffer_super_metacall` instead
+///
+#define q_buffer_qbase_metacall q_buffer_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QBuffer*
@@ -88,7 +100,7 @@ void q_buffer_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_buffer_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_buffer_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -153,6 +165,10 @@ bool q_buffer_open(void* self, int32_t openMode);
 ///
 void q_buffer_on_open(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_buffer_super_open` instead
+///
+#define q_buffer_qbase_open q_buffer_super_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#open)
 ///
 /// Base class method implementation
@@ -160,7 +176,7 @@ void q_buffer_on_open(void* self, bool (*callback)(void*, int32_t));
 /// @param self QBuffer*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool q_buffer_qbase_open(void* self, int32_t openMode);
+bool q_buffer_super_open(void* self, int32_t openMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#close)
 ///
@@ -177,13 +193,17 @@ void q_buffer_close(void* self);
 ///
 void q_buffer_on_close(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_buffer_super_close` instead
+///
+#define q_buffer_qbase_close q_buffer_super_close
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#close)
 ///
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 ///
-void q_buffer_qbase_close(void* self);
+void q_buffer_super_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#size)
 ///
@@ -200,13 +220,17 @@ long long q_buffer_size(void* self);
 ///
 void q_buffer_on_size(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_buffer_super_size` instead
+///
+#define q_buffer_qbase_size q_buffer_super_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#size)
 ///
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 ///
-long long q_buffer_qbase_size(void* self);
+long long q_buffer_super_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#pos)
 ///
@@ -223,13 +247,17 @@ long long q_buffer_pos(void* self);
 ///
 void q_buffer_on_pos(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_buffer_super_pos` instead
+///
+#define q_buffer_qbase_pos q_buffer_super_pos
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#pos)
 ///
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 ///
-long long q_buffer_qbase_pos(void* self);
+long long q_buffer_super_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#seek)
 ///
@@ -247,6 +275,10 @@ bool q_buffer_seek(void* self, long long off);
 ///
 void q_buffer_on_seek(void* self, bool (*callback)(void*, long long));
 
+/// @warning DEPRECATED: Use `q_buffer_super_seek` instead
+///
+#define q_buffer_qbase_seek q_buffer_super_seek
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#seek)
 ///
 /// Base class method implementation
@@ -254,7 +286,7 @@ void q_buffer_on_seek(void* self, bool (*callback)(void*, long long));
 /// @param self QBuffer*
 /// @param off long long
 ///
-bool q_buffer_qbase_seek(void* self, long long off);
+bool q_buffer_super_seek(void* self, long long off);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#atEnd)
 ///
@@ -271,13 +303,17 @@ bool q_buffer_at_end(void* self);
 ///
 void q_buffer_on_at_end(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_buffer_super_at_end` instead
+///
+#define q_buffer_qbase_at_end q_buffer_super_at_end
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#atEnd)
 ///
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 ///
-bool q_buffer_qbase_at_end(void* self);
+bool q_buffer_super_at_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#canReadLine)
 ///
@@ -294,13 +330,17 @@ bool q_buffer_can_read_line(void* self);
 ///
 void q_buffer_on_can_read_line(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_buffer_super_can_read_line` instead
+///
+#define q_buffer_qbase_can_read_line q_buffer_super_can_read_line
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#canReadLine)
 ///
 /// Base class method implementation
 ///
 /// @param self QBuffer*
 ///
-bool q_buffer_qbase_can_read_line(void* self);
+bool q_buffer_super_can_read_line(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#connectNotify)
 ///
@@ -318,6 +358,10 @@ void q_buffer_connect_notify(void* self, void* param1);
 ///
 void q_buffer_on_connect_notify(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_buffer_super_connect_notify` instead
+///
+#define q_buffer_qbase_connect_notify q_buffer_super_connect_notify
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#connectNotify)
 ///
 /// Base class method implementation
@@ -325,7 +369,7 @@ void q_buffer_on_connect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QBuffer*
 /// @param param1 QMetaMethod*
 ///
-void q_buffer_qbase_connect_notify(void* self, void* param1);
+void q_buffer_super_connect_notify(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#disconnectNotify)
 ///
@@ -343,6 +387,10 @@ void q_buffer_disconnect_notify(void* self, void* param1);
 ///
 void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_buffer_super_disconnect_notify` instead
+///
+#define q_buffer_qbase_disconnect_notify q_buffer_super_disconnect_notify
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#disconnectNotify)
 ///
 /// Base class method implementation
@@ -350,7 +398,7 @@ void q_buffer_on_disconnect_notify(void* self, void (*callback)(void*, void*));
 /// @param self QBuffer*
 /// @param param1 QMetaMethod*
 ///
-void q_buffer_qbase_disconnect_notify(void* self, void* param1);
+void q_buffer_super_disconnect_notify(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#readData)
 ///
@@ -369,6 +417,10 @@ long long q_buffer_read_data(void* self, char* data, long long maxlen);
 ///
 void q_buffer_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
+/// @warning DEPRECATED: Use `q_buffer_super_read_data` instead
+///
+#define q_buffer_qbase_read_data q_buffer_super_read_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#readData)
 ///
 /// Base class method implementation
@@ -377,7 +429,7 @@ void q_buffer_on_read_data(void* self, long long (*callback)(void*, char*, long 
 /// @param data char*
 /// @param maxlen long long
 ///
-long long q_buffer_qbase_read_data(void* self, char* data, long long maxlen);
+long long q_buffer_super_read_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#writeData)
 ///
@@ -396,6 +448,10 @@ long long q_buffer_write_data(void* self, const char* data, long long lenVal);
 ///
 void q_buffer_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
+/// @warning DEPRECATED: Use `q_buffer_super_write_data` instead
+///
+#define q_buffer_qbase_write_data q_buffer_super_write_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qbuffer.html#writeData)
 ///
 /// Base class method implementation
@@ -404,7 +460,7 @@ void q_buffer_on_write_data(void* self, long long (*callback)(void*, const char*
 /// @param data const char*
 /// @param lenVal long long
 ///
-long long q_buffer_qbase_write_data(void* self, const char* data, long long lenVal);
+long long q_buffer_super_write_data(void* self, const char* data, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1278,6 +1334,10 @@ void q_buffer_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_buffer_is_sequential(void* self);
 
+/// @warning DEPRECATED: Use `q_buffer_super_is_sequential` instead
+///
+#define q_buffer_qbase_is_sequential q_buffer_super_is_sequential
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isSequential)
@@ -1286,7 +1346,7 @@ bool q_buffer_is_sequential(void* self);
 ///
 /// @param self QBuffer*
 ///
-bool q_buffer_qbase_is_sequential(void* self);
+bool q_buffer_super_is_sequential(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1309,6 +1369,10 @@ void q_buffer_on_is_sequential(void* self, bool (*callback)());
 ///
 bool q_buffer_reset(void* self);
 
+/// @warning DEPRECATED: Use `q_buffer_super_reset` instead
+///
+#define q_buffer_qbase_reset q_buffer_super_reset
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
@@ -1317,7 +1381,7 @@ bool q_buffer_reset(void* self);
 ///
 /// @param self QBuffer*
 ///
-bool q_buffer_qbase_reset(void* self);
+bool q_buffer_super_reset(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1340,6 +1404,10 @@ void q_buffer_on_reset(void* self, bool (*callback)());
 ///
 long long q_buffer_bytes_available(void* self);
 
+/// @warning DEPRECATED: Use `q_buffer_super_bytes_available` instead
+///
+#define q_buffer_qbase_bytes_available q_buffer_super_bytes_available
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
@@ -1348,7 +1416,7 @@ long long q_buffer_bytes_available(void* self);
 ///
 /// @param self QBuffer*
 ///
-long long q_buffer_qbase_bytes_available(void* self);
+long long q_buffer_super_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1371,6 +1439,10 @@ void q_buffer_on_bytes_available(void* self, long long (*callback)());
 ///
 long long q_buffer_bytes_to_write(void* self);
 
+/// @warning DEPRECATED: Use `q_buffer_super_bytes_to_write` instead
+///
+#define q_buffer_qbase_bytes_to_write q_buffer_super_bytes_to_write
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
@@ -1379,7 +1451,7 @@ long long q_buffer_bytes_to_write(void* self);
 ///
 /// @param self QBuffer*
 ///
-long long q_buffer_qbase_bytes_to_write(void* self);
+long long q_buffer_super_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1403,6 +1475,10 @@ void q_buffer_on_bytes_to_write(void* self, long long (*callback)());
 ///
 bool q_buffer_wait_for_ready_read(void* self, int msecs);
 
+/// @warning DEPRECATED: Use `q_buffer_super_wait_for_ready_read` instead
+///
+#define q_buffer_qbase_wait_for_ready_read q_buffer_super_wait_for_ready_read
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
@@ -1412,7 +1488,7 @@ bool q_buffer_wait_for_ready_read(void* self, int msecs);
 /// @param self QBuffer*
 /// @param msecs int
 ///
-bool q_buffer_qbase_wait_for_ready_read(void* self, int msecs);
+bool q_buffer_super_wait_for_ready_read(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
@@ -1436,6 +1512,10 @@ void q_buffer_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 ///
 bool q_buffer_wait_for_bytes_written(void* self, int msecs);
 
+/// @warning DEPRECATED: Use `q_buffer_super_wait_for_bytes_written` instead
+///
+#define q_buffer_qbase_wait_for_bytes_written q_buffer_super_wait_for_bytes_written
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
@@ -1445,7 +1525,7 @@ bool q_buffer_wait_for_bytes_written(void* self, int msecs);
 /// @param self QBuffer*
 /// @param msecs int
 ///
-bool q_buffer_qbase_wait_for_bytes_written(void* self, int msecs);
+bool q_buffer_super_wait_for_bytes_written(void* self, int msecs);
 
 /// Inherited from QIODevice
 ///
@@ -1470,6 +1550,10 @@ void q_buffer_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)
 ///
 long long q_buffer_read_line_data(void* self, char* data, long long maxlen);
 
+/// @warning DEPRECATED: Use `q_buffer_super_read_line_data` instead
+///
+#define q_buffer_qbase_read_line_data q_buffer_super_read_line_data
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
@@ -1480,7 +1564,7 @@ long long q_buffer_read_line_data(void* self, char* data, long long maxlen);
 /// @param data char*
 /// @param maxlen long long
 ///
-long long q_buffer_qbase_read_line_data(void* self, char* data, long long maxlen);
+long long q_buffer_super_read_line_data(void* self, char* data, long long maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1504,6 +1588,10 @@ void q_buffer_on_read_line_data(void* self, long long (*callback)(void*, char*, 
 ///
 long long q_buffer_skip_data(void* self, long long maxSize);
 
+/// @warning DEPRECATED: Use `q_buffer_super_skip_data` instead
+///
+#define q_buffer_qbase_skip_data q_buffer_super_skip_data
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
@@ -1513,7 +1601,7 @@ long long q_buffer_skip_data(void* self, long long maxSize);
 /// @param self QBuffer*
 /// @param maxSize long long
 ///
-long long q_buffer_qbase_skip_data(void* self, long long maxSize);
+long long q_buffer_super_skip_data(void* self, long long maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1537,6 +1625,10 @@ void q_buffer_on_skip_data(void* self, long long (*callback)(void*, long long));
 ///
 bool q_buffer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_buffer_super_event` instead
+///
+#define q_buffer_qbase_event q_buffer_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1546,7 +1638,7 @@ bool q_buffer_event(void* self, void* event);
 /// @param self QBuffer*
 /// @param event QEvent*
 ///
-bool q_buffer_qbase_event(void* self, void* event);
+bool q_buffer_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1571,6 +1663,10 @@ void q_buffer_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_buffer_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_buffer_super_event_filter` instead
+///
+#define q_buffer_qbase_event_filter q_buffer_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1581,7 +1677,7 @@ bool q_buffer_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_buffer_qbase_event_filter(void* self, void* watched, void* event);
+bool q_buffer_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1605,6 +1701,10 @@ void q_buffer_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
 ///
 void q_buffer_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_buffer_super_timer_event` instead
+///
+#define q_buffer_qbase_timer_event q_buffer_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1614,7 +1714,7 @@ void q_buffer_timer_event(void* self, void* event);
 /// @param self QBuffer*
 /// @param event QTimerEvent*
 ///
-void q_buffer_qbase_timer_event(void* self, void* event);
+void q_buffer_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1638,6 +1738,10 @@ void q_buffer_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_buffer_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_buffer_super_child_event` instead
+///
+#define q_buffer_qbase_child_event q_buffer_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1647,7 +1751,7 @@ void q_buffer_child_event(void* self, void* event);
 /// @param self QBuffer*
 /// @param event QChildEvent*
 ///
-void q_buffer_qbase_child_event(void* self, void* event);
+void q_buffer_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1671,6 +1775,10 @@ void q_buffer_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_buffer_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_buffer_super_custom_event` instead
+///
+#define q_buffer_qbase_custom_event q_buffer_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1680,7 +1788,7 @@ void q_buffer_custom_event(void* self, void* event);
 /// @param self QBuffer*
 /// @param event QEvent*
 ///
-void q_buffer_qbase_custom_event(void* self, void* event);
+void q_buffer_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1704,6 +1812,10 @@ void q_buffer_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_buffer_set_open_mode(void* self, int32_t openMode);
 
+/// @warning DEPRECATED: Use `q_buffer_super_set_open_mode` instead
+///
+#define q_buffer_qbase_set_open_mode q_buffer_super_set_open_mode
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
@@ -1713,7 +1825,7 @@ void q_buffer_set_open_mode(void* self, int32_t openMode);
 /// @param self QBuffer*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_buffer_qbase_set_open_mode(void* self, int32_t openMode);
+void q_buffer_super_set_open_mode(void* self, int32_t openMode);
 
 /// Inherited from QIODevice
 ///
@@ -1737,6 +1849,10 @@ void q_buffer_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 ///
 void q_buffer_set_error_string(void* self, const char* errorString);
 
+/// @warning DEPRECATED: Use `q_buffer_super_set_error_string` instead
+///
+#define q_buffer_qbase_set_error_string q_buffer_super_set_error_string
+
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
@@ -1746,7 +1862,7 @@ void q_buffer_set_error_string(void* self, const char* errorString);
 /// @param self QBuffer*
 /// @param errorString const char*
 ///
-void q_buffer_qbase_set_error_string(void* self, const char* errorString);
+void q_buffer_super_set_error_string(void* self, const char* errorString);
 
 /// Inherited from QIODevice
 ///
@@ -1769,6 +1885,10 @@ void q_buffer_on_set_error_string(void* self, void (*callback)(void*, const char
 ///
 QObject* q_buffer_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_buffer_super_sender` instead
+///
+#define q_buffer_qbase_sender q_buffer_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1777,7 +1897,7 @@ QObject* q_buffer_sender(void* self);
 ///
 /// @param self QBuffer*
 ///
-QObject* q_buffer_qbase_sender(void* self);
+QObject* q_buffer_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1800,6 +1920,10 @@ void q_buffer_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_buffer_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_buffer_super_sender_signal_index` instead
+///
+#define q_buffer_qbase_sender_signal_index q_buffer_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1808,7 +1932,7 @@ int32_t q_buffer_sender_signal_index(void* self);
 ///
 /// @param self QBuffer*
 ///
-int32_t q_buffer_qbase_sender_signal_index(void* self);
+int32_t q_buffer_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1832,6 +1956,10 @@ void q_buffer_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_buffer_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_buffer_super_receivers` instead
+///
+#define q_buffer_qbase_receivers q_buffer_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1841,7 +1969,7 @@ int32_t q_buffer_receivers(void* self, const char* signal);
 /// @param self QBuffer*
 /// @param signal const char*
 ///
-int32_t q_buffer_qbase_receivers(void* self, const char* signal);
+int32_t q_buffer_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1865,6 +1993,10 @@ void q_buffer_on_receivers(void* self, int32_t (*callback)(void*, const char*));
 ///
 bool q_buffer_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_buffer_super_is_signal_connected` instead
+///
+#define q_buffer_qbase_is_signal_connected q_buffer_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1874,7 +2006,7 @@ bool q_buffer_is_signal_connected(void* self, void* signal);
 /// @param self QBuffer*
 /// @param signal QMetaMethod*
 ///
-bool q_buffer_qbase_is_signal_connected(void* self, void* signal);
+bool q_buffer_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

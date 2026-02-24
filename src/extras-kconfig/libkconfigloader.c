@@ -70,8 +70,8 @@ void k_configloader_on_usr_save(void* self, bool (*callback)()) {
     KConfigLoader_OnUsrSave((KConfigLoader*)self, (intptr_t)callback);
 }
 
-bool k_configloader_qbase_usr_save(void* self) {
-    return KConfigLoader_QBaseUsrSave((KConfigLoader*)self);
+bool k_configloader_super_usr_save(void* self) {
+    return KConfigLoader_SuperUsrSave((KConfigLoader*)self);
 }
 
 const char* k_configloader_tr(const char* s) {
@@ -688,8 +688,8 @@ const QMetaObject* k_configloader_meta_object(void* self) {
     return KConfigLoader_MetaObject((KConfigLoader*)self);
 }
 
-const QMetaObject* k_configloader_qbase_meta_object(void* self) {
-    return KConfigLoader_QBaseMetaObject((KConfigLoader*)self);
+const QMetaObject* k_configloader_super_meta_object(void* self) {
+    return KConfigLoader_SuperMetaObject((KConfigLoader*)self);
 }
 
 void k_configloader_on_meta_object(void* self, const QMetaObject* (*callback)()) {
@@ -700,8 +700,8 @@ void* k_configloader_metacast(void* self, const char* param1) {
     return KConfigLoader_Metacast((KConfigLoader*)self, param1);
 }
 
-void* k_configloader_qbase_metacast(void* self, const char* param1) {
-    return KConfigLoader_QBaseMetacast((KConfigLoader*)self, param1);
+void* k_configloader_super_metacast(void* self, const char* param1) {
+    return KConfigLoader_SuperMetacast((KConfigLoader*)self, param1);
 }
 
 void k_configloader_on_metacast(void* self, void* (*callback)(void*, const char*)) {
@@ -712,8 +712,8 @@ int32_t k_configloader_metacall(void* self, int32_t param1, int param2, void* pa
     return KConfigLoader_Metacall((KConfigLoader*)self, param1, param2, param3);
 }
 
-int32_t k_configloader_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KConfigLoader_QBaseMetacall((KConfigLoader*)self, param1, param2, param3);
+int32_t k_configloader_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KConfigLoader_SuperMetacall((KConfigLoader*)self, param1, param2, param3);
 }
 
 void k_configloader_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*)) {
@@ -724,8 +724,8 @@ void k_configloader_set_defaults(void* self) {
     KConfigLoader_SetDefaults((KConfigLoader*)self);
 }
 
-void k_configloader_qbase_set_defaults(void* self) {
-    KConfigLoader_QBaseSetDefaults((KConfigLoader*)self);
+void k_configloader_super_set_defaults(void* self) {
+    KConfigLoader_SuperSetDefaults((KConfigLoader*)self);
 }
 
 void k_configloader_on_set_defaults(void* self, void (*callback)()) {
@@ -736,8 +736,8 @@ bool k_configloader_use_defaults(void* self, bool b) {
     return KConfigLoader_UseDefaults((KConfigLoader*)self, b);
 }
 
-bool k_configloader_qbase_use_defaults(void* self, bool b) {
-    return KConfigLoader_QBaseUseDefaults((KConfigLoader*)self, b);
+bool k_configloader_super_use_defaults(void* self, bool b) {
+    return KConfigLoader_SuperUseDefaults((KConfigLoader*)self, b);
 }
 
 void k_configloader_on_use_defaults(void* self, bool (*callback)(void*, bool)) {
@@ -748,8 +748,8 @@ bool k_configloader_usr_use_defaults(void* self, bool b) {
     return KConfigLoader_UsrUseDefaults((KConfigLoader*)self, b);
 }
 
-bool k_configloader_qbase_usr_use_defaults(void* self, bool b) {
-    return KConfigLoader_QBaseUsrUseDefaults((KConfigLoader*)self, b);
+bool k_configloader_super_usr_use_defaults(void* self, bool b) {
+    return KConfigLoader_SuperUsrUseDefaults((KConfigLoader*)self, b);
 }
 
 void k_configloader_on_usr_use_defaults(void* self, bool (*callback)(void*, bool)) {
@@ -760,8 +760,8 @@ void k_configloader_usr_set_defaults(void* self) {
     KConfigLoader_UsrSetDefaults((KConfigLoader*)self);
 }
 
-void k_configloader_qbase_usr_set_defaults(void* self) {
-    KConfigLoader_QBaseUsrSetDefaults((KConfigLoader*)self);
+void k_configloader_super_usr_set_defaults(void* self) {
+    KConfigLoader_SuperUsrSetDefaults((KConfigLoader*)self);
 }
 
 void k_configloader_on_usr_set_defaults(void* self, void (*callback)()) {
@@ -772,8 +772,8 @@ void k_configloader_usr_read(void* self) {
     KConfigLoader_UsrRead((KConfigLoader*)self);
 }
 
-void k_configloader_qbase_usr_read(void* self) {
-    KConfigLoader_QBaseUsrRead((KConfigLoader*)self);
+void k_configloader_super_usr_read(void* self) {
+    KConfigLoader_SuperUsrRead((KConfigLoader*)self);
 }
 
 void k_configloader_on_usr_read(void* self, void (*callback)()) {
@@ -784,8 +784,8 @@ bool k_configloader_event(void* self, void* event) {
     return KConfigLoader_Event((KConfigLoader*)self, (QEvent*)event);
 }
 
-bool k_configloader_qbase_event(void* self, void* event) {
-    return KConfigLoader_QBaseEvent((KConfigLoader*)self, (QEvent*)event);
+bool k_configloader_super_event(void* self, void* event) {
+    return KConfigLoader_SuperEvent((KConfigLoader*)self, (QEvent*)event);
 }
 
 void k_configloader_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -796,8 +796,8 @@ bool k_configloader_event_filter(void* self, void* watched, void* event) {
     return KConfigLoader_EventFilter((KConfigLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_configloader_qbase_event_filter(void* self, void* watched, void* event) {
-    return KConfigLoader_QBaseEventFilter((KConfigLoader*)self, (QObject*)watched, (QEvent*)event);
+bool k_configloader_super_event_filter(void* self, void* watched, void* event) {
+    return KConfigLoader_SuperEventFilter((KConfigLoader*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_configloader_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -808,8 +808,8 @@ void k_configloader_timer_event(void* self, void* event) {
     KConfigLoader_TimerEvent((KConfigLoader*)self, (QTimerEvent*)event);
 }
 
-void k_configloader_qbase_timer_event(void* self, void* event) {
-    KConfigLoader_QBaseTimerEvent((KConfigLoader*)self, (QTimerEvent*)event);
+void k_configloader_super_timer_event(void* self, void* event) {
+    KConfigLoader_SuperTimerEvent((KConfigLoader*)self, (QTimerEvent*)event);
 }
 
 void k_configloader_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -820,8 +820,8 @@ void k_configloader_child_event(void* self, void* event) {
     KConfigLoader_ChildEvent((KConfigLoader*)self, (QChildEvent*)event);
 }
 
-void k_configloader_qbase_child_event(void* self, void* event) {
-    KConfigLoader_QBaseChildEvent((KConfigLoader*)self, (QChildEvent*)event);
+void k_configloader_super_child_event(void* self, void* event) {
+    KConfigLoader_SuperChildEvent((KConfigLoader*)self, (QChildEvent*)event);
 }
 
 void k_configloader_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -832,8 +832,8 @@ void k_configloader_custom_event(void* self, void* event) {
     KConfigLoader_CustomEvent((KConfigLoader*)self, (QEvent*)event);
 }
 
-void k_configloader_qbase_custom_event(void* self, void* event) {
-    KConfigLoader_QBaseCustomEvent((KConfigLoader*)self, (QEvent*)event);
+void k_configloader_super_custom_event(void* self, void* event) {
+    KConfigLoader_SuperCustomEvent((KConfigLoader*)self, (QEvent*)event);
 }
 
 void k_configloader_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -844,8 +844,8 @@ void k_configloader_connect_notify(void* self, void* signal) {
     KConfigLoader_ConnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_configloader_qbase_connect_notify(void* self, void* signal) {
-    KConfigLoader_QBaseConnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
+void k_configloader_super_connect_notify(void* self, void* signal) {
+    KConfigLoader_SuperConnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
 void k_configloader_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -856,8 +856,8 @@ void k_configloader_disconnect_notify(void* self, void* signal) {
     KConfigLoader_DisconnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-void k_configloader_qbase_disconnect_notify(void* self, void* signal) {
-    KConfigLoader_QBaseDisconnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
+void k_configloader_super_disconnect_notify(void* self, void* signal) {
+    KConfigLoader_SuperDisconnectNotify((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
 void k_configloader_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -868,8 +868,8 @@ QObject* k_configloader_sender(void* self) {
     return KConfigLoader_Sender((KConfigLoader*)self);
 }
 
-QObject* k_configloader_qbase_sender(void* self) {
-    return KConfigLoader_QBaseSender((KConfigLoader*)self);
+QObject* k_configloader_super_sender(void* self) {
+    return KConfigLoader_SuperSender((KConfigLoader*)self);
 }
 
 void k_configloader_on_sender(void* self, QObject* (*callback)()) {
@@ -880,8 +880,8 @@ int32_t k_configloader_sender_signal_index(void* self) {
     return KConfigLoader_SenderSignalIndex((KConfigLoader*)self);
 }
 
-int32_t k_configloader_qbase_sender_signal_index(void* self) {
-    return KConfigLoader_QBaseSenderSignalIndex((KConfigLoader*)self);
+int32_t k_configloader_super_sender_signal_index(void* self) {
+    return KConfigLoader_SuperSenderSignalIndex((KConfigLoader*)self);
 }
 
 void k_configloader_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -892,8 +892,8 @@ int32_t k_configloader_receivers(void* self, const char* signal) {
     return KConfigLoader_Receivers((KConfigLoader*)self, signal);
 }
 
-int32_t k_configloader_qbase_receivers(void* self, const char* signal) {
-    return KConfigLoader_QBaseReceivers((KConfigLoader*)self, signal);
+int32_t k_configloader_super_receivers(void* self, const char* signal) {
+    return KConfigLoader_SuperReceivers((KConfigLoader*)self, signal);
 }
 
 void k_configloader_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -904,8 +904,8 @@ bool k_configloader_is_signal_connected(void* self, void* signal) {
     return KConfigLoader_IsSignalConnected((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
-bool k_configloader_qbase_is_signal_connected(void* self, void* signal) {
-    return KConfigLoader_QBaseIsSignalConnected((KConfigLoader*)self, (QMetaMethod*)signal);
+bool k_configloader_super_is_signal_connected(void* self, void* signal) {
+    return KConfigLoader_SuperIsSignalConnected((KConfigLoader*)self, (QMetaMethod*)signal);
 }
 
 void k_configloader_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

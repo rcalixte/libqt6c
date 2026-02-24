@@ -39,8 +39,8 @@ void q_listview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QListView_OnMetaObject((QListView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_listview_qbase_meta_object(void* self) {
-    return QListView_QBaseMetaObject((QListView*)self);
+const QMetaObject* q_listview_super_meta_object(void* self) {
+    return QListView_SuperMetaObject((QListView*)self);
 }
 
 void* q_listview_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_listview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QListView_OnMetacast((QListView*)self, (intptr_t)callback);
 }
 
-void* q_listview_qbase_metacast(void* self, const char* param1) {
-    return QListView_QBaseMetacast((QListView*)self, param1);
+void* q_listview_super_metacast(void* self, const char* param1) {
+    return QListView_SuperMetacast((QListView*)self, param1);
 }
 
 int32_t q_listview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_listview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     QListView_OnMetacall((QListView*)self, (intptr_t)callback);
 }
 
-int32_t q_listview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QListView_QBaseMetacall((QListView*)self, param1, param2, param3);
+int32_t q_listview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QListView_SuperMetacall((QListView*)self, param1, param2, param3);
 }
 
 const char* q_listview_tr(const char* s) {
@@ -206,8 +206,8 @@ void q_listview_on_visual_rect(void* self, QRect* (*callback)(void*, void*)) {
     QListView_OnVisualRect((QListView*)self, (intptr_t)callback);
 }
 
-QRect* q_listview_qbase_visual_rect(void* self, void* index) {
-    return QListView_QBaseVisualRect((QListView*)self, (QModelIndex*)index);
+QRect* q_listview_super_visual_rect(void* self, void* index) {
+    return QListView_SuperVisualRect((QListView*)self, (QModelIndex*)index);
 }
 
 void q_listview_scroll_to(void* self, void* index, int32_t hint) {
@@ -218,8 +218,8 @@ void q_listview_on_scroll_to(void* self, void (*callback)(void*, void*, int32_t)
     QListView_OnScrollTo((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_scroll_to(void* self, void* index, int32_t hint) {
-    QListView_QBaseScrollTo((QListView*)self, (QModelIndex*)index, hint);
+void q_listview_super_scroll_to(void* self, void* index, int32_t hint) {
+    QListView_SuperScrollTo((QListView*)self, (QModelIndex*)index, hint);
 }
 
 QModelIndex* q_listview_index_at(void* self, void* p) {
@@ -230,8 +230,8 @@ void q_listview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*)) 
     QListView_OnIndexAt((QListView*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_listview_qbase_index_at(void* self, void* p) {
-    return QListView_QBaseIndexAt((QListView*)self, (QPoint*)p);
+QModelIndex* q_listview_super_index_at(void* self, void* p) {
+    return QListView_SuperIndexAt((QListView*)self, (QPoint*)p);
 }
 
 void q_listview_do_items_layout(void* self) {
@@ -242,8 +242,8 @@ void q_listview_on_do_items_layout(void* self, void (*callback)()) {
     QListView_OnDoItemsLayout((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_do_items_layout(void* self) {
-    QListView_QBaseDoItemsLayout((QListView*)self);
+void q_listview_super_do_items_layout(void* self) {
+    QListView_SuperDoItemsLayout((QListView*)self);
 }
 
 void q_listview_reset(void* self) {
@@ -254,8 +254,8 @@ void q_listview_on_reset(void* self, void (*callback)()) {
     QListView_OnReset((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_reset(void* self) {
-    QListView_QBaseReset((QListView*)self);
+void q_listview_super_reset(void* self) {
+    QListView_SuperReset((QListView*)self);
 }
 
 void q_listview_set_root_index(void* self, void* index) {
@@ -266,8 +266,8 @@ void q_listview_on_set_root_index(void* self, void (*callback)(void*, void*)) {
     QListView_OnSetRootIndex((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_set_root_index(void* self, void* index) {
-    QListView_QBaseSetRootIndex((QListView*)self, (QModelIndex*)index);
+void q_listview_super_set_root_index(void* self, void* index) {
+    QListView_SuperSetRootIndex((QListView*)self, (QModelIndex*)index);
 }
 
 void q_listview_indexes_moved(void* self, libqt_list /* of QModelIndex* */ indexes) {
@@ -286,8 +286,8 @@ void q_listview_on_event(void* self, bool (*callback)(void*, void*)) {
     QListView_OnEvent((QListView*)self, (intptr_t)callback);
 }
 
-bool q_listview_qbase_event(void* self, void* e) {
-    return QListView_QBaseEvent((QListView*)self, (QEvent*)e);
+bool q_listview_super_event(void* self, void* e) {
+    return QListView_SuperEvent((QListView*)self, (QEvent*)e);
 }
 
 void q_listview_scroll_contents_by(void* self, int dx, int dy) {
@@ -298,8 +298,8 @@ void q_listview_on_scroll_contents_by(void* self, void (*callback)(void*, int, i
     QListView_OnScrollContentsBy((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QListView_QBaseScrollContentsBy((QListView*)self, dx, dy);
+void q_listview_super_scroll_contents_by(void* self, int dx, int dy) {
+    QListView_SuperScrollContentsBy((QListView*)self, dx, dy);
 }
 
 void q_listview_resize_contents(void* self, int width, int height) {
@@ -310,8 +310,8 @@ void q_listview_on_resize_contents(void* self, void (*callback)(void*, int, int)
     QListView_OnResizeContents((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_resize_contents(void* self, int width, int height) {
-    QListView_QBaseResizeContents((QListView*)self, width, height);
+void q_listview_super_resize_contents(void* self, int width, int height) {
+    QListView_SuperResizeContents((QListView*)self, width, height);
 }
 
 QSize* q_listview_contents_size(void* self) {
@@ -322,8 +322,8 @@ void q_listview_on_contents_size(void* self, QSize* (*callback)()) {
     QListView_OnContentsSize((QListView*)self, (intptr_t)callback);
 }
 
-QSize* q_listview_qbase_contents_size(void* self) {
-    return QListView_QBaseContentsSize((QListView*)self);
+QSize* q_listview_super_contents_size(void* self) {
+    return QListView_SuperContentsSize((QListView*)self);
 }
 
 void q_listview_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
@@ -334,8 +334,8 @@ void q_listview_on_data_changed(void* self, void (*callback)(void*, void*, void*
     QListView_OnDataChanged((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
-    QListView_QBaseDataChanged((QListView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
+void q_listview_super_data_changed(void* self, void* topLeft, void* bottomRight, libqt_list /* of int */ roles) {
+    QListView_SuperDataChanged((QListView*)self, (QModelIndex*)topLeft, (QModelIndex*)bottomRight, roles);
 }
 
 void q_listview_rows_inserted(void* self, void* parent, int start, int end) {
@@ -346,8 +346,8 @@ void q_listview_on_rows_inserted(void* self, void (*callback)(void*, void*, int,
     QListView_OnRowsInserted((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_rows_inserted(void* self, void* parent, int start, int end) {
-    QListView_QBaseRowsInserted((QListView*)self, (QModelIndex*)parent, start, end);
+void q_listview_super_rows_inserted(void* self, void* parent, int start, int end) {
+    QListView_SuperRowsInserted((QListView*)self, (QModelIndex*)parent, start, end);
 }
 
 void q_listview_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
@@ -358,8 +358,8 @@ void q_listview_on_rows_about_to_be_removed(void* self, void (*callback)(void*, 
     QListView_OnRowsAboutToBeRemoved((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
-    QListView_QBaseRowsAboutToBeRemoved((QListView*)self, (QModelIndex*)parent, start, end);
+void q_listview_super_rows_about_to_be_removed(void* self, void* parent, int start, int end) {
+    QListView_SuperRowsAboutToBeRemoved((QListView*)self, (QModelIndex*)parent, start, end);
 }
 
 void q_listview_mouse_move_event(void* self, void* e) {
@@ -370,8 +370,8 @@ void q_listview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) 
     QListView_OnMouseMoveEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_mouse_move_event(void* self, void* e) {
-    QListView_QBaseMouseMoveEvent((QListView*)self, (QMouseEvent*)e);
+void q_listview_super_mouse_move_event(void* self, void* e) {
+    QListView_SuperMouseMoveEvent((QListView*)self, (QMouseEvent*)e);
 }
 
 void q_listview_mouse_release_event(void* self, void* e) {
@@ -382,8 +382,8 @@ void q_listview_on_mouse_release_event(void* self, void (*callback)(void*, void*
     QListView_OnMouseReleaseEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_mouse_release_event(void* self, void* e) {
-    QListView_QBaseMouseReleaseEvent((QListView*)self, (QMouseEvent*)e);
+void q_listview_super_mouse_release_event(void* self, void* e) {
+    QListView_SuperMouseReleaseEvent((QListView*)self, (QMouseEvent*)e);
 }
 
 void q_listview_wheel_event(void* self, void* e) {
@@ -394,8 +394,8 @@ void q_listview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
     QListView_OnWheelEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_wheel_event(void* self, void* e) {
-    QListView_QBaseWheelEvent((QListView*)self, (QWheelEvent*)e);
+void q_listview_super_wheel_event(void* self, void* e) {
+    QListView_SuperWheelEvent((QListView*)self, (QWheelEvent*)e);
 }
 
 void q_listview_timer_event(void* self, void* e) {
@@ -406,8 +406,8 @@ void q_listview_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QListView_OnTimerEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_timer_event(void* self, void* e) {
-    QListView_QBaseTimerEvent((QListView*)self, (QTimerEvent*)e);
+void q_listview_super_timer_event(void* self, void* e) {
+    QListView_SuperTimerEvent((QListView*)self, (QTimerEvent*)e);
 }
 
 void q_listview_resize_event(void* self, void* e) {
@@ -418,8 +418,8 @@ void q_listview_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QListView_OnResizeEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_resize_event(void* self, void* e) {
-    QListView_QBaseResizeEvent((QListView*)self, (QResizeEvent*)e);
+void q_listview_super_resize_event(void* self, void* e) {
+    QListView_SuperResizeEvent((QListView*)self, (QResizeEvent*)e);
 }
 
 void q_listview_drag_move_event(void* self, void* e) {
@@ -430,8 +430,8 @@ void q_listview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
     QListView_OnDragMoveEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_drag_move_event(void* self, void* e) {
-    QListView_QBaseDragMoveEvent((QListView*)self, (QDragMoveEvent*)e);
+void q_listview_super_drag_move_event(void* self, void* e) {
+    QListView_SuperDragMoveEvent((QListView*)self, (QDragMoveEvent*)e);
 }
 
 void q_listview_drag_leave_event(void* self, void* e) {
@@ -442,8 +442,8 @@ void q_listview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) 
     QListView_OnDragLeaveEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_drag_leave_event(void* self, void* e) {
-    QListView_QBaseDragLeaveEvent((QListView*)self, (QDragLeaveEvent*)e);
+void q_listview_super_drag_leave_event(void* self, void* e) {
+    QListView_SuperDragLeaveEvent((QListView*)self, (QDragLeaveEvent*)e);
 }
 
 void q_listview_drop_event(void* self, void* e) {
@@ -454,8 +454,8 @@ void q_listview_on_drop_event(void* self, void (*callback)(void*, void*)) {
     QListView_OnDropEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_drop_event(void* self, void* e) {
-    QListView_QBaseDropEvent((QListView*)self, (QDropEvent*)e);
+void q_listview_super_drop_event(void* self, void* e) {
+    QListView_SuperDropEvent((QListView*)self, (QDropEvent*)e);
 }
 
 void q_listview_start_drag(void* self, int32_t supportedActions) {
@@ -466,8 +466,8 @@ void q_listview_on_start_drag(void* self, void (*callback)(void*, int32_t)) {
     QListView_OnStartDrag((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_start_drag(void* self, int32_t supportedActions) {
-    QListView_QBaseStartDrag((QListView*)self, supportedActions);
+void q_listview_super_start_drag(void* self, int32_t supportedActions) {
+    QListView_SuperStartDrag((QListView*)self, supportedActions);
 }
 
 void q_listview_init_view_item_option(void* self, void* option) {
@@ -478,8 +478,8 @@ void q_listview_on_init_view_item_option(void* self, void (*callback)(void*, voi
     QListView_OnInitViewItemOption((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_init_view_item_option(void* self, void* option) {
-    QListView_QBaseInitViewItemOption((QListView*)self, (QStyleOptionViewItem*)option);
+void q_listview_super_init_view_item_option(void* self, void* option) {
+    QListView_SuperInitViewItemOption((QListView*)self, (QStyleOptionViewItem*)option);
 }
 
 void q_listview_paint_event(void* self, void* e) {
@@ -490,8 +490,8 @@ void q_listview_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QListView_OnPaintEvent((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_paint_event(void* self, void* e) {
-    QListView_QBasePaintEvent((QListView*)self, (QPaintEvent*)e);
+void q_listview_super_paint_event(void* self, void* e) {
+    QListView_SuperPaintEvent((QListView*)self, (QPaintEvent*)e);
 }
 
 int32_t q_listview_horizontal_offset(void* self) {
@@ -502,8 +502,8 @@ void q_listview_on_horizontal_offset(void* self, int32_t (*callback)()) {
     QListView_OnHorizontalOffset((QListView*)self, (intptr_t)callback);
 }
 
-int32_t q_listview_qbase_horizontal_offset(void* self) {
-    return QListView_QBaseHorizontalOffset((QListView*)self);
+int32_t q_listview_super_horizontal_offset(void* self) {
+    return QListView_SuperHorizontalOffset((QListView*)self);
 }
 
 int32_t q_listview_vertical_offset(void* self) {
@@ -514,8 +514,8 @@ void q_listview_on_vertical_offset(void* self, int32_t (*callback)()) {
     QListView_OnVerticalOffset((QListView*)self, (intptr_t)callback);
 }
 
-int32_t q_listview_qbase_vertical_offset(void* self) {
-    return QListView_QBaseVerticalOffset((QListView*)self);
+int32_t q_listview_super_vertical_offset(void* self) {
+    return QListView_SuperVerticalOffset((QListView*)self);
 }
 
 QModelIndex* q_listview_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
@@ -526,8 +526,8 @@ void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32
     QListView_OnMoveCursor((QListView*)self, (intptr_t)callback);
 }
 
-QModelIndex* q_listview_qbase_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
-    return QListView_QBaseMoveCursor((QListView*)self, cursorAction, modifiers);
+QModelIndex* q_listview_super_move_cursor(void* self, int32_t cursorAction, int32_t modifiers) {
+    return QListView_SuperMoveCursor((QListView*)self, cursorAction, modifiers);
 }
 
 QRect* q_listview_rect_for_index(void* self, void* index) {
@@ -538,8 +538,8 @@ void q_listview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*)) 
     QListView_OnRectForIndex((QListView*)self, (intptr_t)callback);
 }
 
-QRect* q_listview_qbase_rect_for_index(void* self, void* index) {
-    return QListView_QBaseRectForIndex((QListView*)self, (QModelIndex*)index);
+QRect* q_listview_super_rect_for_index(void* self, void* index) {
+    return QListView_SuperRectForIndex((QListView*)self, (QModelIndex*)index);
 }
 
 void q_listview_set_position_for_index(void* self, void* position, void* index) {
@@ -550,8 +550,8 @@ void q_listview_on_set_position_for_index(void* self, void (*callback)(void*, vo
     QListView_OnSetPositionForIndex((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_set_position_for_index(void* self, void* position, void* index) {
-    QListView_QBaseSetPositionForIndex((QListView*)self, (QPoint*)position, (QModelIndex*)index);
+void q_listview_super_set_position_for_index(void* self, void* position, void* index) {
+    QListView_SuperSetPositionForIndex((QListView*)self, (QPoint*)position, (QModelIndex*)index);
 }
 
 void q_listview_set_selection(void* self, void* rect, int32_t command) {
@@ -562,8 +562,8 @@ void q_listview_on_set_selection(void* self, void (*callback)(void*, void*, int3
     QListView_OnSetSelection((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_set_selection(void* self, void* rect, int32_t command) {
-    QListView_QBaseSetSelection((QListView*)self, (QRect*)rect, command);
+void q_listview_super_set_selection(void* self, void* rect, int32_t command) {
+    QListView_SuperSetSelection((QListView*)self, (QRect*)rect, command);
 }
 
 QRegion* q_listview_visual_region_for_selection(void* self, void* selection) {
@@ -574,8 +574,8 @@ void q_listview_on_visual_region_for_selection(void* self, QRegion* (*callback)(
     QListView_OnVisualRegionForSelection((QListView*)self, (intptr_t)callback);
 }
 
-QRegion* q_listview_qbase_visual_region_for_selection(void* self, void* selection) {
-    return QListView_QBaseVisualRegionForSelection((QListView*)self, (QItemSelection*)selection);
+QRegion* q_listview_super_visual_region_for_selection(void* self, void* selection) {
+    return QListView_SuperVisualRegionForSelection((QListView*)self, (QItemSelection*)selection);
 }
 
 libqt_list /* of QModelIndex* */ q_listview_selected_indexes(void* self) {
@@ -587,8 +587,8 @@ void q_listview_on_selected_indexes(void* self, libqt_list /* of QModelIndex* */
     QListView_OnSelectedIndexes((QListView*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QModelIndex* */ q_listview_qbase_selected_indexes(void* self) {
-    libqt_list _arr = QListView_QBaseSelectedIndexes((QListView*)self);
+libqt_list /* of QModelIndex* */ q_listview_super_selected_indexes(void* self) {
+    libqt_list _arr = QListView_SuperSelectedIndexes((QListView*)self);
     return _arr;
 }
 
@@ -600,8 +600,8 @@ void q_listview_on_update_geometries(void* self, void (*callback)()) {
     QListView_OnUpdateGeometries((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_update_geometries(void* self) {
-    QListView_QBaseUpdateGeometries((QListView*)self);
+void q_listview_super_update_geometries(void* self) {
+    QListView_SuperUpdateGeometries((QListView*)self);
 }
 
 bool q_listview_is_index_hidden(void* self, void* index) {
@@ -612,8 +612,8 @@ void q_listview_on_is_index_hidden(void* self, bool (*callback)(void*, void*)) {
     QListView_OnIsIndexHidden((QListView*)self, (intptr_t)callback);
 }
 
-bool q_listview_qbase_is_index_hidden(void* self, void* index) {
-    return QListView_QBaseIsIndexHidden((QListView*)self, (QModelIndex*)index);
+bool q_listview_super_is_index_hidden(void* self, void* index) {
+    return QListView_SuperIsIndexHidden((QListView*)self, (QModelIndex*)index);
 }
 
 void q_listview_selection_changed(void* self, void* selected, void* deselected) {
@@ -624,8 +624,8 @@ void q_listview_on_selection_changed(void* self, void (*callback)(void*, void*, 
     QListView_OnSelectionChanged((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_selection_changed(void* self, void* selected, void* deselected) {
-    QListView_QBaseSelectionChanged((QListView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
+void q_listview_super_selection_changed(void* self, void* selected, void* deselected) {
+    QListView_SuperSelectionChanged((QListView*)self, (QItemSelection*)selected, (QItemSelection*)deselected);
 }
 
 void q_listview_current_changed(void* self, void* current, void* previous) {
@@ -636,8 +636,8 @@ void q_listview_on_current_changed(void* self, void (*callback)(void*, void*, vo
     QListView_OnCurrentChanged((QListView*)self, (intptr_t)callback);
 }
 
-void q_listview_qbase_current_changed(void* self, void* current, void* previous) {
-    QListView_QBaseCurrentChanged((QListView*)self, (QModelIndex*)current, (QModelIndex*)previous);
+void q_listview_super_current_changed(void* self, void* current, void* previous) {
+    QListView_SuperCurrentChanged((QListView*)self, (QModelIndex*)current, (QModelIndex*)previous);
 }
 
 QSize* q_listview_viewport_size_hint(void* self) {
@@ -648,8 +648,8 @@ void q_listview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
     QListView_OnViewportSizeHint((QListView*)self, (intptr_t)callback);
 }
 
-QSize* q_listview_qbase_viewport_size_hint(void* self) {
-    return QListView_QBaseViewportSizeHint((QListView*)self);
+QSize* q_listview_super_viewport_size_hint(void* self) {
+    return QListView_SuperViewportSizeHint((QListView*)self);
 }
 
 const char* q_listview_tr2(const char* s, const char* c) {
@@ -2452,8 +2452,8 @@ void q_listview_set_model(void* self, void* model) {
     QListView_SetModel((QListView*)self, (QAbstractItemModel*)model);
 }
 
-void q_listview_qbase_set_model(void* self, void* model) {
-    QListView_QBaseSetModel((QListView*)self, (QAbstractItemModel*)model);
+void q_listview_super_set_model(void* self, void* model) {
+    QListView_SuperSetModel((QListView*)self, (QAbstractItemModel*)model);
 }
 
 void q_listview_on_set_model(void* self, void (*callback)(void*, void*)) {
@@ -2464,8 +2464,8 @@ void q_listview_set_selection_model(void* self, void* selectionModel) {
     QListView_SetSelectionModel((QListView*)self, (QItemSelectionModel*)selectionModel);
 }
 
-void q_listview_qbase_set_selection_model(void* self, void* selectionModel) {
-    QListView_QBaseSetSelectionModel((QListView*)self, (QItemSelectionModel*)selectionModel);
+void q_listview_super_set_selection_model(void* self, void* selectionModel) {
+    QListView_SuperSetSelectionModel((QListView*)self, (QItemSelectionModel*)selectionModel);
 }
 
 void q_listview_on_set_selection_model(void* self, void (*callback)(void*, void*)) {
@@ -2476,8 +2476,8 @@ void q_listview_keyboard_search(void* self, const char* search) {
     QListView_KeyboardSearch((QListView*)self, qstring(search));
 }
 
-void q_listview_qbase_keyboard_search(void* self, const char* search) {
-    QListView_QBaseKeyboardSearch((QListView*)self, qstring(search));
+void q_listview_super_keyboard_search(void* self, const char* search) {
+    QListView_SuperKeyboardSearch((QListView*)self, qstring(search));
 }
 
 void q_listview_on_keyboard_search(void* self, void (*callback)(void*, const char*)) {
@@ -2488,8 +2488,8 @@ int32_t q_listview_size_hint_for_row(void* self, int row) {
     return QListView_SizeHintForRow((QListView*)self, row);
 }
 
-int32_t q_listview_qbase_size_hint_for_row(void* self, int row) {
-    return QListView_QBaseSizeHintForRow((QListView*)self, row);
+int32_t q_listview_super_size_hint_for_row(void* self, int row) {
+    return QListView_SuperSizeHintForRow((QListView*)self, row);
 }
 
 void q_listview_on_size_hint_for_row(void* self, int32_t (*callback)(void*, int)) {
@@ -2500,8 +2500,8 @@ int32_t q_listview_size_hint_for_column(void* self, int column) {
     return QListView_SizeHintForColumn((QListView*)self, column);
 }
 
-int32_t q_listview_qbase_size_hint_for_column(void* self, int column) {
-    return QListView_QBaseSizeHintForColumn((QListView*)self, column);
+int32_t q_listview_super_size_hint_for_column(void* self, int column) {
+    return QListView_SuperSizeHintForColumn((QListView*)self, column);
 }
 
 void q_listview_on_size_hint_for_column(void* self, int32_t (*callback)(void*, int)) {
@@ -2512,8 +2512,8 @@ QAbstractItemDelegate* q_listview_item_delegate_for_index(void* self, void* inde
     return QListView_ItemDelegateForIndex((QListView*)self, (QModelIndex*)index);
 }
 
-QAbstractItemDelegate* q_listview_qbase_item_delegate_for_index(void* self, void* index) {
-    return QListView_QBaseItemDelegateForIndex((QListView*)self, (QModelIndex*)index);
+QAbstractItemDelegate* q_listview_super_item_delegate_for_index(void* self, void* index) {
+    return QListView_SuperItemDelegateForIndex((QListView*)self, (QModelIndex*)index);
 }
 
 void q_listview_on_item_delegate_for_index(void* self, QAbstractItemDelegate* (*callback)(void*, void*)) {
@@ -2524,8 +2524,8 @@ QVariant* q_listview_input_method_query(void* self, int32_t query) {
     return QListView_InputMethodQuery((QListView*)self, query);
 }
 
-QVariant* q_listview_qbase_input_method_query(void* self, int32_t query) {
-    return QListView_QBaseInputMethodQuery((QListView*)self, query);
+QVariant* q_listview_super_input_method_query(void* self, int32_t query) {
+    return QListView_SuperInputMethodQuery((QListView*)self, query);
 }
 
 void q_listview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2536,8 +2536,8 @@ void q_listview_select_all(void* self) {
     QListView_SelectAll((QListView*)self);
 }
 
-void q_listview_qbase_select_all(void* self) {
-    QListView_QBaseSelectAll((QListView*)self);
+void q_listview_super_select_all(void* self) {
+    QListView_SuperSelectAll((QListView*)self);
 }
 
 void q_listview_on_select_all(void* self, void (*callback)()) {
@@ -2548,8 +2548,8 @@ void q_listview_update_editor_data(void* self) {
     QListView_UpdateEditorData((QListView*)self);
 }
 
-void q_listview_qbase_update_editor_data(void* self) {
-    QListView_QBaseUpdateEditorData((QListView*)self);
+void q_listview_super_update_editor_data(void* self) {
+    QListView_SuperUpdateEditorData((QListView*)self);
 }
 
 void q_listview_on_update_editor_data(void* self, void (*callback)()) {
@@ -2560,8 +2560,8 @@ void q_listview_update_editor_geometries(void* self) {
     QListView_UpdateEditorGeometries((QListView*)self);
 }
 
-void q_listview_qbase_update_editor_geometries(void* self) {
-    QListView_QBaseUpdateEditorGeometries((QListView*)self);
+void q_listview_super_update_editor_geometries(void* self) {
+    QListView_SuperUpdateEditorGeometries((QListView*)self);
 }
 
 void q_listview_on_update_editor_geometries(void* self, void (*callback)()) {
@@ -2572,8 +2572,8 @@ void q_listview_vertical_scrollbar_action(void* self, int action) {
     QListView_VerticalScrollbarAction((QListView*)self, action);
 }
 
-void q_listview_qbase_vertical_scrollbar_action(void* self, int action) {
-    QListView_QBaseVerticalScrollbarAction((QListView*)self, action);
+void q_listview_super_vertical_scrollbar_action(void* self, int action) {
+    QListView_SuperVerticalScrollbarAction((QListView*)self, action);
 }
 
 void q_listview_on_vertical_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2584,8 +2584,8 @@ void q_listview_horizontal_scrollbar_action(void* self, int action) {
     QListView_HorizontalScrollbarAction((QListView*)self, action);
 }
 
-void q_listview_qbase_horizontal_scrollbar_action(void* self, int action) {
-    QListView_QBaseHorizontalScrollbarAction((QListView*)self, action);
+void q_listview_super_horizontal_scrollbar_action(void* self, int action) {
+    QListView_SuperHorizontalScrollbarAction((QListView*)self, action);
 }
 
 void q_listview_on_horizontal_scrollbar_action(void* self, void (*callback)(void*, int)) {
@@ -2596,8 +2596,8 @@ void q_listview_vertical_scrollbar_value_changed(void* self, int value) {
     QListView_VerticalScrollbarValueChanged((QListView*)self, value);
 }
 
-void q_listview_qbase_vertical_scrollbar_value_changed(void* self, int value) {
-    QListView_QBaseVerticalScrollbarValueChanged((QListView*)self, value);
+void q_listview_super_vertical_scrollbar_value_changed(void* self, int value) {
+    QListView_SuperVerticalScrollbarValueChanged((QListView*)self, value);
 }
 
 void q_listview_on_vertical_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2608,8 +2608,8 @@ void q_listview_horizontal_scrollbar_value_changed(void* self, int value) {
     QListView_HorizontalScrollbarValueChanged((QListView*)self, value);
 }
 
-void q_listview_qbase_horizontal_scrollbar_value_changed(void* self, int value) {
-    QListView_QBaseHorizontalScrollbarValueChanged((QListView*)self, value);
+void q_listview_super_horizontal_scrollbar_value_changed(void* self, int value) {
+    QListView_SuperHorizontalScrollbarValueChanged((QListView*)self, value);
 }
 
 void q_listview_on_horizontal_scrollbar_value_changed(void* self, void (*callback)(void*, int)) {
@@ -2620,8 +2620,8 @@ void q_listview_close_editor(void* self, void* editor, int32_t hint) {
     QListView_CloseEditor((QListView*)self, (QWidget*)editor, hint);
 }
 
-void q_listview_qbase_close_editor(void* self, void* editor, int32_t hint) {
-    QListView_QBaseCloseEditor((QListView*)self, (QWidget*)editor, hint);
+void q_listview_super_close_editor(void* self, void* editor, int32_t hint) {
+    QListView_SuperCloseEditor((QListView*)self, (QWidget*)editor, hint);
 }
 
 void q_listview_on_close_editor(void* self, void (*callback)(void*, void*, int32_t)) {
@@ -2632,8 +2632,8 @@ void q_listview_commit_data(void* self, void* editor) {
     QListView_CommitData((QListView*)self, (QWidget*)editor);
 }
 
-void q_listview_qbase_commit_data(void* self, void* editor) {
-    QListView_QBaseCommitData((QListView*)self, (QWidget*)editor);
+void q_listview_super_commit_data(void* self, void* editor) {
+    QListView_SuperCommitData((QListView*)self, (QWidget*)editor);
 }
 
 void q_listview_on_commit_data(void* self, void (*callback)(void*, void*)) {
@@ -2644,8 +2644,8 @@ void q_listview_editor_destroyed(void* self, void* editor) {
     QListView_EditorDestroyed((QListView*)self, (QObject*)editor);
 }
 
-void q_listview_qbase_editor_destroyed(void* self, void* editor) {
-    QListView_QBaseEditorDestroyed((QListView*)self, (QObject*)editor);
+void q_listview_super_editor_destroyed(void* self, void* editor) {
+    QListView_SuperEditorDestroyed((QListView*)self, (QObject*)editor);
 }
 
 void q_listview_on_editor_destroyed(void* self, void (*callback)(void*, void*)) {
@@ -2656,8 +2656,8 @@ bool q_listview_edit2(void* self, void* index, int32_t trigger, void* event) {
     return QListView_Edit2((QListView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
-bool q_listview_qbase_edit2(void* self, void* index, int32_t trigger, void* event) {
-    return QListView_QBaseEdit2((QListView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
+bool q_listview_super_edit2(void* self, void* index, int32_t trigger, void* event) {
+    return QListView_SuperEdit2((QListView*)self, (QModelIndex*)index, trigger, (QEvent*)event);
 }
 
 void q_listview_on_edit2(void* self, bool (*callback)(void*, void*, int32_t, void*)) {
@@ -2668,8 +2668,8 @@ int32_t q_listview_selection_command(void* self, void* index, void* event) {
     return QListView_SelectionCommand((QListView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
-int32_t q_listview_qbase_selection_command(void* self, void* index, void* event) {
-    return QListView_QBaseSelectionCommand((QListView*)self, (QModelIndex*)index, (QEvent*)event);
+int32_t q_listview_super_selection_command(void* self, void* index, void* event) {
+    return QListView_SuperSelectionCommand((QListView*)self, (QModelIndex*)index, (QEvent*)event);
 }
 
 void q_listview_on_selection_command(void* self, int32_t (*callback)(void*, void*, void*)) {
@@ -2680,8 +2680,8 @@ bool q_listview_focus_next_prev_child(void* self, bool next) {
     return QListView_FocusNextPrevChild((QListView*)self, next);
 }
 
-bool q_listview_qbase_focus_next_prev_child(void* self, bool next) {
-    return QListView_QBaseFocusNextPrevChild((QListView*)self, next);
+bool q_listview_super_focus_next_prev_child(void* self, bool next) {
+    return QListView_SuperFocusNextPrevChild((QListView*)self, next);
 }
 
 void q_listview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2692,8 +2692,8 @@ bool q_listview_viewport_event(void* self, void* event) {
     return QListView_ViewportEvent((QListView*)self, (QEvent*)event);
 }
 
-bool q_listview_qbase_viewport_event(void* self, void* event) {
-    return QListView_QBaseViewportEvent((QListView*)self, (QEvent*)event);
+bool q_listview_super_viewport_event(void* self, void* event) {
+    return QListView_SuperViewportEvent((QListView*)self, (QEvent*)event);
 }
 
 void q_listview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -2704,8 +2704,8 @@ void q_listview_mouse_press_event(void* self, void* event) {
     QListView_MousePressEvent((QListView*)self, (QMouseEvent*)event);
 }
 
-void q_listview_qbase_mouse_press_event(void* self, void* event) {
-    QListView_QBaseMousePressEvent((QListView*)self, (QMouseEvent*)event);
+void q_listview_super_mouse_press_event(void* self, void* event) {
+    QListView_SuperMousePressEvent((QListView*)self, (QMouseEvent*)event);
 }
 
 void q_listview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2716,8 +2716,8 @@ void q_listview_mouse_double_click_event(void* self, void* event) {
     QListView_MouseDoubleClickEvent((QListView*)self, (QMouseEvent*)event);
 }
 
-void q_listview_qbase_mouse_double_click_event(void* self, void* event) {
-    QListView_QBaseMouseDoubleClickEvent((QListView*)self, (QMouseEvent*)event);
+void q_listview_super_mouse_double_click_event(void* self, void* event) {
+    QListView_SuperMouseDoubleClickEvent((QListView*)self, (QMouseEvent*)event);
 }
 
 void q_listview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2728,8 +2728,8 @@ void q_listview_drag_enter_event(void* self, void* event) {
     QListView_DragEnterEvent((QListView*)self, (QDragEnterEvent*)event);
 }
 
-void q_listview_qbase_drag_enter_event(void* self, void* event) {
-    QListView_QBaseDragEnterEvent((QListView*)self, (QDragEnterEvent*)event);
+void q_listview_super_drag_enter_event(void* self, void* event) {
+    QListView_SuperDragEnterEvent((QListView*)self, (QDragEnterEvent*)event);
 }
 
 void q_listview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2740,8 +2740,8 @@ void q_listview_focus_in_event(void* self, void* event) {
     QListView_FocusInEvent((QListView*)self, (QFocusEvent*)event);
 }
 
-void q_listview_qbase_focus_in_event(void* self, void* event) {
-    QListView_QBaseFocusInEvent((QListView*)self, (QFocusEvent*)event);
+void q_listview_super_focus_in_event(void* self, void* event) {
+    QListView_SuperFocusInEvent((QListView*)self, (QFocusEvent*)event);
 }
 
 void q_listview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2752,8 +2752,8 @@ void q_listview_focus_out_event(void* self, void* event) {
     QListView_FocusOutEvent((QListView*)self, (QFocusEvent*)event);
 }
 
-void q_listview_qbase_focus_out_event(void* self, void* event) {
-    QListView_QBaseFocusOutEvent((QListView*)self, (QFocusEvent*)event);
+void q_listview_super_focus_out_event(void* self, void* event) {
+    QListView_SuperFocusOutEvent((QListView*)self, (QFocusEvent*)event);
 }
 
 void q_listview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2764,8 +2764,8 @@ void q_listview_key_press_event(void* self, void* event) {
     QListView_KeyPressEvent((QListView*)self, (QKeyEvent*)event);
 }
 
-void q_listview_qbase_key_press_event(void* self, void* event) {
-    QListView_QBaseKeyPressEvent((QListView*)self, (QKeyEvent*)event);
+void q_listview_super_key_press_event(void* self, void* event) {
+    QListView_SuperKeyPressEvent((QListView*)self, (QKeyEvent*)event);
 }
 
 void q_listview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2776,8 +2776,8 @@ void q_listview_input_method_event(void* self, void* event) {
     QListView_InputMethodEvent((QListView*)self, (QInputMethodEvent*)event);
 }
 
-void q_listview_qbase_input_method_event(void* self, void* event) {
-    QListView_QBaseInputMethodEvent((QListView*)self, (QInputMethodEvent*)event);
+void q_listview_super_input_method_event(void* self, void* event) {
+    QListView_SuperInputMethodEvent((QListView*)self, (QInputMethodEvent*)event);
 }
 
 void q_listview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2788,8 +2788,8 @@ bool q_listview_event_filter(void* self, void* object, void* event) {
     return QListView_EventFilter((QListView*)self, (QObject*)object, (QEvent*)event);
 }
 
-bool q_listview_qbase_event_filter(void* self, void* object, void* event) {
-    return QListView_QBaseEventFilter((QListView*)self, (QObject*)object, (QEvent*)event);
+bool q_listview_super_event_filter(void* self, void* object, void* event) {
+    return QListView_SuperEventFilter((QListView*)self, (QObject*)object, (QEvent*)event);
 }
 
 void q_listview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2800,8 +2800,8 @@ QSize* q_listview_minimum_size_hint(void* self) {
     return QListView_MinimumSizeHint((QListView*)self);
 }
 
-QSize* q_listview_qbase_minimum_size_hint(void* self) {
-    return QListView_QBaseMinimumSizeHint((QListView*)self);
+QSize* q_listview_super_minimum_size_hint(void* self) {
+    return QListView_SuperMinimumSizeHint((QListView*)self);
 }
 
 void q_listview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2812,8 +2812,8 @@ QSize* q_listview_size_hint(void* self) {
     return QListView_SizeHint((QListView*)self);
 }
 
-QSize* q_listview_qbase_size_hint(void* self) {
-    return QListView_QBaseSizeHint((QListView*)self);
+QSize* q_listview_super_size_hint(void* self) {
+    return QListView_SuperSizeHint((QListView*)self);
 }
 
 void q_listview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2824,8 +2824,8 @@ void q_listview_setup_viewport(void* self, void* viewport) {
     QListView_SetupViewport((QListView*)self, (QWidget*)viewport);
 }
 
-void q_listview_qbase_setup_viewport(void* self, void* viewport) {
-    QListView_QBaseSetupViewport((QListView*)self, (QWidget*)viewport);
+void q_listview_super_setup_viewport(void* self, void* viewport) {
+    QListView_SuperSetupViewport((QListView*)self, (QWidget*)viewport);
 }
 
 void q_listview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -2836,8 +2836,8 @@ void q_listview_context_menu_event(void* self, void* param1) {
     QListView_ContextMenuEvent((QListView*)self, (QContextMenuEvent*)param1);
 }
 
-void q_listview_qbase_context_menu_event(void* self, void* param1) {
-    QListView_QBaseContextMenuEvent((QListView*)self, (QContextMenuEvent*)param1);
+void q_listview_super_context_menu_event(void* self, void* param1) {
+    QListView_SuperContextMenuEvent((QListView*)self, (QContextMenuEvent*)param1);
 }
 
 void q_listview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2848,8 +2848,8 @@ void q_listview_change_event(void* self, void* param1) {
     QListView_ChangeEvent((QListView*)self, (QEvent*)param1);
 }
 
-void q_listview_qbase_change_event(void* self, void* param1) {
-    QListView_QBaseChangeEvent((QListView*)self, (QEvent*)param1);
+void q_listview_super_change_event(void* self, void* param1) {
+    QListView_SuperChangeEvent((QListView*)self, (QEvent*)param1);
 }
 
 void q_listview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2860,8 +2860,8 @@ void q_listview_init_style_option(void* self, void* option) {
     QListView_InitStyleOption((QListView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_listview_qbase_init_style_option(void* self, void* option) {
-    QListView_QBaseInitStyleOption((QListView*)self, (QStyleOptionFrame*)option);
+void q_listview_super_init_style_option(void* self, void* option) {
+    QListView_SuperInitStyleOption((QListView*)self, (QStyleOptionFrame*)option);
 }
 
 void q_listview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -2872,8 +2872,8 @@ int32_t q_listview_dev_type(void* self) {
     return QListView_DevType((QListView*)self);
 }
 
-int32_t q_listview_qbase_dev_type(void* self) {
-    return QListView_QBaseDevType((QListView*)self);
+int32_t q_listview_super_dev_type(void* self) {
+    return QListView_SuperDevType((QListView*)self);
 }
 
 void q_listview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2884,8 +2884,8 @@ void q_listview_set_visible(void* self, bool visible) {
     QListView_SetVisible((QListView*)self, visible);
 }
 
-void q_listview_qbase_set_visible(void* self, bool visible) {
-    QListView_QBaseSetVisible((QListView*)self, visible);
+void q_listview_super_set_visible(void* self, bool visible) {
+    QListView_SuperSetVisible((QListView*)self, visible);
 }
 
 void q_listview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2896,8 +2896,8 @@ int32_t q_listview_height_for_width(void* self, int param1) {
     return QListView_HeightForWidth((QListView*)self, param1);
 }
 
-int32_t q_listview_qbase_height_for_width(void* self, int param1) {
-    return QListView_QBaseHeightForWidth((QListView*)self, param1);
+int32_t q_listview_super_height_for_width(void* self, int param1) {
+    return QListView_SuperHeightForWidth((QListView*)self, param1);
 }
 
 void q_listview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2908,8 +2908,8 @@ bool q_listview_has_height_for_width(void* self) {
     return QListView_HasHeightForWidth((QListView*)self);
 }
 
-bool q_listview_qbase_has_height_for_width(void* self) {
-    return QListView_QBaseHasHeightForWidth((QListView*)self);
+bool q_listview_super_has_height_for_width(void* self) {
+    return QListView_SuperHasHeightForWidth((QListView*)self);
 }
 
 void q_listview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2920,8 +2920,8 @@ QPaintEngine* q_listview_paint_engine(void* self) {
     return QListView_PaintEngine((QListView*)self);
 }
 
-QPaintEngine* q_listview_qbase_paint_engine(void* self) {
-    return QListView_QBasePaintEngine((QListView*)self);
+QPaintEngine* q_listview_super_paint_engine(void* self) {
+    return QListView_SuperPaintEngine((QListView*)self);
 }
 
 void q_listview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2932,8 +2932,8 @@ void q_listview_key_release_event(void* self, void* event) {
     QListView_KeyReleaseEvent((QListView*)self, (QKeyEvent*)event);
 }
 
-void q_listview_qbase_key_release_event(void* self, void* event) {
-    QListView_QBaseKeyReleaseEvent((QListView*)self, (QKeyEvent*)event);
+void q_listview_super_key_release_event(void* self, void* event) {
+    QListView_SuperKeyReleaseEvent((QListView*)self, (QKeyEvent*)event);
 }
 
 void q_listview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2944,8 +2944,8 @@ void q_listview_enter_event(void* self, void* event) {
     QListView_EnterEvent((QListView*)self, (QEnterEvent*)event);
 }
 
-void q_listview_qbase_enter_event(void* self, void* event) {
-    QListView_QBaseEnterEvent((QListView*)self, (QEnterEvent*)event);
+void q_listview_super_enter_event(void* self, void* event) {
+    QListView_SuperEnterEvent((QListView*)self, (QEnterEvent*)event);
 }
 
 void q_listview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2956,8 +2956,8 @@ void q_listview_leave_event(void* self, void* event) {
     QListView_LeaveEvent((QListView*)self, (QEvent*)event);
 }
 
-void q_listview_qbase_leave_event(void* self, void* event) {
-    QListView_QBaseLeaveEvent((QListView*)self, (QEvent*)event);
+void q_listview_super_leave_event(void* self, void* event) {
+    QListView_SuperLeaveEvent((QListView*)self, (QEvent*)event);
 }
 
 void q_listview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2968,8 +2968,8 @@ void q_listview_move_event(void* self, void* event) {
     QListView_MoveEvent((QListView*)self, (QMoveEvent*)event);
 }
 
-void q_listview_qbase_move_event(void* self, void* event) {
-    QListView_QBaseMoveEvent((QListView*)self, (QMoveEvent*)event);
+void q_listview_super_move_event(void* self, void* event) {
+    QListView_SuperMoveEvent((QListView*)self, (QMoveEvent*)event);
 }
 
 void q_listview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2980,8 +2980,8 @@ void q_listview_close_event(void* self, void* event) {
     QListView_CloseEvent((QListView*)self, (QCloseEvent*)event);
 }
 
-void q_listview_qbase_close_event(void* self, void* event) {
-    QListView_QBaseCloseEvent((QListView*)self, (QCloseEvent*)event);
+void q_listview_super_close_event(void* self, void* event) {
+    QListView_SuperCloseEvent((QListView*)self, (QCloseEvent*)event);
 }
 
 void q_listview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2992,8 +2992,8 @@ void q_listview_tablet_event(void* self, void* event) {
     QListView_TabletEvent((QListView*)self, (QTabletEvent*)event);
 }
 
-void q_listview_qbase_tablet_event(void* self, void* event) {
-    QListView_QBaseTabletEvent((QListView*)self, (QTabletEvent*)event);
+void q_listview_super_tablet_event(void* self, void* event) {
+    QListView_SuperTabletEvent((QListView*)self, (QTabletEvent*)event);
 }
 
 void q_listview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -3004,8 +3004,8 @@ void q_listview_action_event(void* self, void* event) {
     QListView_ActionEvent((QListView*)self, (QActionEvent*)event);
 }
 
-void q_listview_qbase_action_event(void* self, void* event) {
-    QListView_QBaseActionEvent((QListView*)self, (QActionEvent*)event);
+void q_listview_super_action_event(void* self, void* event) {
+    QListView_SuperActionEvent((QListView*)self, (QActionEvent*)event);
 }
 
 void q_listview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -3016,8 +3016,8 @@ void q_listview_show_event(void* self, void* event) {
     QListView_ShowEvent((QListView*)self, (QShowEvent*)event);
 }
 
-void q_listview_qbase_show_event(void* self, void* event) {
-    QListView_QBaseShowEvent((QListView*)self, (QShowEvent*)event);
+void q_listview_super_show_event(void* self, void* event) {
+    QListView_SuperShowEvent((QListView*)self, (QShowEvent*)event);
 }
 
 void q_listview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -3028,8 +3028,8 @@ void q_listview_hide_event(void* self, void* event) {
     QListView_HideEvent((QListView*)self, (QHideEvent*)event);
 }
 
-void q_listview_qbase_hide_event(void* self, void* event) {
-    QListView_QBaseHideEvent((QListView*)self, (QHideEvent*)event);
+void q_listview_super_hide_event(void* self, void* event) {
+    QListView_SuperHideEvent((QListView*)self, (QHideEvent*)event);
 }
 
 void q_listview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -3040,8 +3040,8 @@ bool q_listview_native_event(void* self, char* eventType, void* message, intptr_
     return QListView_NativeEvent((QListView*)self, qstring(eventType), message, result);
 }
 
-bool q_listview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QListView_QBaseNativeEvent((QListView*)self, qstring(eventType), message, result);
+bool q_listview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QListView_SuperNativeEvent((QListView*)self, qstring(eventType), message, result);
 }
 
 void q_listview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -3052,8 +3052,8 @@ int32_t q_listview_metric(void* self, int32_t param1) {
     return QListView_Metric((QListView*)self, param1);
 }
 
-int32_t q_listview_qbase_metric(void* self, int32_t param1) {
-    return QListView_QBaseMetric((QListView*)self, param1);
+int32_t q_listview_super_metric(void* self, int32_t param1) {
+    return QListView_SuperMetric((QListView*)self, param1);
 }
 
 void q_listview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -3064,8 +3064,8 @@ void q_listview_init_painter(void* self, void* painter) {
     QListView_InitPainter((QListView*)self, (QPainter*)painter);
 }
 
-void q_listview_qbase_init_painter(void* self, void* painter) {
-    QListView_QBaseInitPainter((QListView*)self, (QPainter*)painter);
+void q_listview_super_init_painter(void* self, void* painter) {
+    QListView_SuperInitPainter((QListView*)self, (QPainter*)painter);
 }
 
 void q_listview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -3076,8 +3076,8 @@ QPaintDevice* q_listview_redirected(void* self, void* offset) {
     return QListView_Redirected((QListView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_listview_qbase_redirected(void* self, void* offset) {
-    return QListView_QBaseRedirected((QListView*)self, (QPoint*)offset);
+QPaintDevice* q_listview_super_redirected(void* self, void* offset) {
+    return QListView_SuperRedirected((QListView*)self, (QPoint*)offset);
 }
 
 void q_listview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -3088,8 +3088,8 @@ QPainter* q_listview_shared_painter(void* self) {
     return QListView_SharedPainter((QListView*)self);
 }
 
-QPainter* q_listview_qbase_shared_painter(void* self) {
-    return QListView_QBaseSharedPainter((QListView*)self);
+QPainter* q_listview_super_shared_painter(void* self) {
+    return QListView_SuperSharedPainter((QListView*)self);
 }
 
 void q_listview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -3100,8 +3100,8 @@ void q_listview_child_event(void* self, void* event) {
     QListView_ChildEvent((QListView*)self, (QChildEvent*)event);
 }
 
-void q_listview_qbase_child_event(void* self, void* event) {
-    QListView_QBaseChildEvent((QListView*)self, (QChildEvent*)event);
+void q_listview_super_child_event(void* self, void* event) {
+    QListView_SuperChildEvent((QListView*)self, (QChildEvent*)event);
 }
 
 void q_listview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -3112,8 +3112,8 @@ void q_listview_custom_event(void* self, void* event) {
     QListView_CustomEvent((QListView*)self, (QEvent*)event);
 }
 
-void q_listview_qbase_custom_event(void* self, void* event) {
-    QListView_QBaseCustomEvent((QListView*)self, (QEvent*)event);
+void q_listview_super_custom_event(void* self, void* event) {
+    QListView_SuperCustomEvent((QListView*)self, (QEvent*)event);
 }
 
 void q_listview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -3124,8 +3124,8 @@ void q_listview_connect_notify(void* self, void* signal) {
     QListView_ConnectNotify((QListView*)self, (QMetaMethod*)signal);
 }
 
-void q_listview_qbase_connect_notify(void* self, void* signal) {
-    QListView_QBaseConnectNotify((QListView*)self, (QMetaMethod*)signal);
+void q_listview_super_connect_notify(void* self, void* signal) {
+    QListView_SuperConnectNotify((QListView*)self, (QMetaMethod*)signal);
 }
 
 void q_listview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3136,8 +3136,8 @@ void q_listview_disconnect_notify(void* self, void* signal) {
     QListView_DisconnectNotify((QListView*)self, (QMetaMethod*)signal);
 }
 
-void q_listview_qbase_disconnect_notify(void* self, void* signal) {
-    QListView_QBaseDisconnectNotify((QListView*)self, (QMetaMethod*)signal);
+void q_listview_super_disconnect_notify(void* self, void* signal) {
+    QListView_SuperDisconnectNotify((QListView*)self, (QMetaMethod*)signal);
 }
 
 void q_listview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -3148,8 +3148,8 @@ int32_t q_listview_state(void* self) {
     return QListView_State((QListView*)self);
 }
 
-int32_t q_listview_qbase_state(void* self) {
-    return QListView_QBaseState((QListView*)self);
+int32_t q_listview_super_state(void* self) {
+    return QListView_SuperState((QListView*)self);
 }
 
 void q_listview_on_state(void* self, int32_t (*callback)()) {
@@ -3160,8 +3160,8 @@ void q_listview_set_state(void* self, int32_t state) {
     QListView_SetState((QListView*)self, state);
 }
 
-void q_listview_qbase_set_state(void* self, int32_t state) {
-    QListView_QBaseSetState((QListView*)self, state);
+void q_listview_super_set_state(void* self, int32_t state) {
+    QListView_SuperSetState((QListView*)self, state);
 }
 
 void q_listview_on_set_state(void* self, void (*callback)(void*, int32_t)) {
@@ -3172,8 +3172,8 @@ void q_listview_schedule_delayed_items_layout(void* self) {
     QListView_ScheduleDelayedItemsLayout((QListView*)self);
 }
 
-void q_listview_qbase_schedule_delayed_items_layout(void* self) {
-    QListView_QBaseScheduleDelayedItemsLayout((QListView*)self);
+void q_listview_super_schedule_delayed_items_layout(void* self) {
+    QListView_SuperScheduleDelayedItemsLayout((QListView*)self);
 }
 
 void q_listview_on_schedule_delayed_items_layout(void* self, void (*callback)()) {
@@ -3184,8 +3184,8 @@ void q_listview_execute_delayed_items_layout(void* self) {
     QListView_ExecuteDelayedItemsLayout((QListView*)self);
 }
 
-void q_listview_qbase_execute_delayed_items_layout(void* self) {
-    QListView_QBaseExecuteDelayedItemsLayout((QListView*)self);
+void q_listview_super_execute_delayed_items_layout(void* self) {
+    QListView_SuperExecuteDelayedItemsLayout((QListView*)self);
 }
 
 void q_listview_on_execute_delayed_items_layout(void* self, void (*callback)()) {
@@ -3196,8 +3196,8 @@ void q_listview_set_dirty_region(void* self, void* region) {
     QListView_SetDirtyRegion((QListView*)self, (QRegion*)region);
 }
 
-void q_listview_qbase_set_dirty_region(void* self, void* region) {
-    QListView_QBaseSetDirtyRegion((QListView*)self, (QRegion*)region);
+void q_listview_super_set_dirty_region(void* self, void* region) {
+    QListView_SuperSetDirtyRegion((QListView*)self, (QRegion*)region);
 }
 
 void q_listview_on_set_dirty_region(void* self, void (*callback)(void*, void*)) {
@@ -3208,8 +3208,8 @@ void q_listview_scroll_dirty_region(void* self, int dx, int dy) {
     QListView_ScrollDirtyRegion((QListView*)self, dx, dy);
 }
 
-void q_listview_qbase_scroll_dirty_region(void* self, int dx, int dy) {
-    QListView_QBaseScrollDirtyRegion((QListView*)self, dx, dy);
+void q_listview_super_scroll_dirty_region(void* self, int dx, int dy) {
+    QListView_SuperScrollDirtyRegion((QListView*)self, dx, dy);
 }
 
 void q_listview_on_scroll_dirty_region(void* self, void (*callback)(void*, int, int)) {
@@ -3220,8 +3220,8 @@ QPoint* q_listview_dirty_region_offset(void* self) {
     return QListView_DirtyRegionOffset((QListView*)self);
 }
 
-QPoint* q_listview_qbase_dirty_region_offset(void* self) {
-    return QListView_QBaseDirtyRegionOffset((QListView*)self);
+QPoint* q_listview_super_dirty_region_offset(void* self) {
+    return QListView_SuperDirtyRegionOffset((QListView*)self);
 }
 
 void q_listview_on_dirty_region_offset(void* self, QPoint* (*callback)()) {
@@ -3232,8 +3232,8 @@ void q_listview_start_auto_scroll(void* self) {
     QListView_StartAutoScroll((QListView*)self);
 }
 
-void q_listview_qbase_start_auto_scroll(void* self) {
-    QListView_QBaseStartAutoScroll((QListView*)self);
+void q_listview_super_start_auto_scroll(void* self) {
+    QListView_SuperStartAutoScroll((QListView*)self);
 }
 
 void q_listview_on_start_auto_scroll(void* self, void (*callback)()) {
@@ -3244,8 +3244,8 @@ void q_listview_stop_auto_scroll(void* self) {
     QListView_StopAutoScroll((QListView*)self);
 }
 
-void q_listview_qbase_stop_auto_scroll(void* self) {
-    QListView_QBaseStopAutoScroll((QListView*)self);
+void q_listview_super_stop_auto_scroll(void* self) {
+    QListView_SuperStopAutoScroll((QListView*)self);
 }
 
 void q_listview_on_stop_auto_scroll(void* self, void (*callback)()) {
@@ -3256,8 +3256,8 @@ void q_listview_do_auto_scroll(void* self) {
     QListView_DoAutoScroll((QListView*)self);
 }
 
-void q_listview_qbase_do_auto_scroll(void* self) {
-    QListView_QBaseDoAutoScroll((QListView*)self);
+void q_listview_super_do_auto_scroll(void* self) {
+    QListView_SuperDoAutoScroll((QListView*)self);
 }
 
 void q_listview_on_do_auto_scroll(void* self, void (*callback)()) {
@@ -3268,8 +3268,8 @@ int32_t q_listview_drop_indicator_position(void* self) {
     return QListView_DropIndicatorPosition((QListView*)self);
 }
 
-int32_t q_listview_qbase_drop_indicator_position(void* self) {
-    return QListView_QBaseDropIndicatorPosition((QListView*)self);
+int32_t q_listview_super_drop_indicator_position(void* self) {
+    return QListView_SuperDropIndicatorPosition((QListView*)self);
 }
 
 void q_listview_on_drop_indicator_position(void* self, int32_t (*callback)()) {
@@ -3280,8 +3280,8 @@ void q_listview_set_viewport_margins(void* self, int left, int top, int right, i
     QListView_SetViewportMargins((QListView*)self, left, top, right, bottom);
 }
 
-void q_listview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QListView_QBaseSetViewportMargins((QListView*)self, left, top, right, bottom);
+void q_listview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QListView_SuperSetViewportMargins((QListView*)self, left, top, right, bottom);
 }
 
 void q_listview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -3292,8 +3292,8 @@ QMargins* q_listview_viewport_margins(void* self) {
     return QListView_ViewportMargins((QListView*)self);
 }
 
-QMargins* q_listview_qbase_viewport_margins(void* self) {
-    return QListView_QBaseViewportMargins((QListView*)self);
+QMargins* q_listview_super_viewport_margins(void* self) {
+    return QListView_SuperViewportMargins((QListView*)self);
 }
 
 void q_listview_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -3304,8 +3304,8 @@ void q_listview_draw_frame(void* self, void* param1) {
     QListView_DrawFrame((QListView*)self, (QPainter*)param1);
 }
 
-void q_listview_qbase_draw_frame(void* self, void* param1) {
-    QListView_QBaseDrawFrame((QListView*)self, (QPainter*)param1);
+void q_listview_super_draw_frame(void* self, void* param1) {
+    QListView_SuperDrawFrame((QListView*)self, (QPainter*)param1);
 }
 
 void q_listview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -3316,8 +3316,8 @@ void q_listview_update_micro_focus(void* self) {
     QListView_UpdateMicroFocus((QListView*)self);
 }
 
-void q_listview_qbase_update_micro_focus(void* self) {
-    QListView_QBaseUpdateMicroFocus((QListView*)self);
+void q_listview_super_update_micro_focus(void* self) {
+    QListView_SuperUpdateMicroFocus((QListView*)self);
 }
 
 void q_listview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3328,8 +3328,8 @@ void q_listview_create(void* self) {
     QListView_Create((QListView*)self);
 }
 
-void q_listview_qbase_create(void* self) {
-    QListView_QBaseCreate((QListView*)self);
+void q_listview_super_create(void* self) {
+    QListView_SuperCreate((QListView*)self);
 }
 
 void q_listview_on_create(void* self, void (*callback)()) {
@@ -3340,8 +3340,8 @@ void q_listview_destroy(void* self) {
     QListView_Destroy((QListView*)self);
 }
 
-void q_listview_qbase_destroy(void* self) {
-    QListView_QBaseDestroy((QListView*)self);
+void q_listview_super_destroy(void* self) {
+    QListView_SuperDestroy((QListView*)self);
 }
 
 void q_listview_on_destroy(void* self, void (*callback)()) {
@@ -3352,8 +3352,8 @@ bool q_listview_focus_next_child(void* self) {
     return QListView_FocusNextChild((QListView*)self);
 }
 
-bool q_listview_qbase_focus_next_child(void* self) {
-    return QListView_QBaseFocusNextChild((QListView*)self);
+bool q_listview_super_focus_next_child(void* self) {
+    return QListView_SuperFocusNextChild((QListView*)self);
 }
 
 void q_listview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3364,8 +3364,8 @@ bool q_listview_focus_previous_child(void* self) {
     return QListView_FocusPreviousChild((QListView*)self);
 }
 
-bool q_listview_qbase_focus_previous_child(void* self) {
-    return QListView_QBaseFocusPreviousChild((QListView*)self);
+bool q_listview_super_focus_previous_child(void* self) {
+    return QListView_SuperFocusPreviousChild((QListView*)self);
 }
 
 void q_listview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3376,8 +3376,8 @@ QObject* q_listview_sender(void* self) {
     return QListView_Sender((QListView*)self);
 }
 
-QObject* q_listview_qbase_sender(void* self) {
-    return QListView_QBaseSender((QListView*)self);
+QObject* q_listview_super_sender(void* self) {
+    return QListView_SuperSender((QListView*)self);
 }
 
 void q_listview_on_sender(void* self, QObject* (*callback)()) {
@@ -3388,8 +3388,8 @@ int32_t q_listview_sender_signal_index(void* self) {
     return QListView_SenderSignalIndex((QListView*)self);
 }
 
-int32_t q_listview_qbase_sender_signal_index(void* self) {
-    return QListView_QBaseSenderSignalIndex((QListView*)self);
+int32_t q_listview_super_sender_signal_index(void* self) {
+    return QListView_SuperSenderSignalIndex((QListView*)self);
 }
 
 void q_listview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3400,8 +3400,8 @@ int32_t q_listview_receivers(void* self, const char* signal) {
     return QListView_Receivers((QListView*)self, signal);
 }
 
-int32_t q_listview_qbase_receivers(void* self, const char* signal) {
-    return QListView_QBaseReceivers((QListView*)self, signal);
+int32_t q_listview_super_receivers(void* self, const char* signal) {
+    return QListView_SuperReceivers((QListView*)self, signal);
 }
 
 void q_listview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3412,8 +3412,8 @@ bool q_listview_is_signal_connected(void* self, void* signal) {
     return QListView_IsSignalConnected((QListView*)self, (QMetaMethod*)signal);
 }
 
-bool q_listview_qbase_is_signal_connected(void* self, void* signal) {
-    return QListView_QBaseIsSignalConnected((QListView*)self, (QMetaMethod*)signal);
+bool q_listview_super_is_signal_connected(void* self, void* signal) {
+    return QListView_SuperIsSignalConnected((QListView*)self, (QMetaMethod*)signal);
 }
 
 void q_listview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3424,8 +3424,8 @@ double q_listview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return QListView_GetDecodedMetricF((QListView*)self, metricA, metricB);
 }
 
-double q_listview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QListView_QBaseGetDecodedMetricF((QListView*)self, metricA, metricB);
+double q_listview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QListView_SuperGetDecodedMetricF((QListView*)self, metricA, metricB);
 }
 
 void q_listview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -30,8 +30,8 @@ void k_selectaction_on_meta_object(void* self, const QMetaObject* (*callback)())
     KSelectAction_OnMetaObject((KSelectAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_selectaction_qbase_meta_object(void* self) {
-    return KSelectAction_QBaseMetaObject((KSelectAction*)self);
+const QMetaObject* k_selectaction_super_meta_object(void* self) {
+    return KSelectAction_SuperMetaObject((KSelectAction*)self);
 }
 
 void* k_selectaction_metacast(void* self, const char* param1) {
@@ -42,8 +42,8 @@ void k_selectaction_on_metacast(void* self, void* (*callback)(void*, const char*
     KSelectAction_OnMetacast((KSelectAction*)self, (intptr_t)callback);
 }
 
-void* k_selectaction_qbase_metacast(void* self, const char* param1) {
-    return KSelectAction_QBaseMetacast((KSelectAction*)self, param1);
+void* k_selectaction_super_metacast(void* self, const char* param1) {
+    return KSelectAction_SuperMetacast((KSelectAction*)self, param1);
 }
 
 int32_t k_selectaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -54,8 +54,8 @@ void k_selectaction_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KSelectAction_OnMetacall((KSelectAction*)self, (intptr_t)callback);
 }
 
-int32_t k_selectaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSelectAction_QBaseMetacall((KSelectAction*)self, param1, param2, param3);
+int32_t k_selectaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSelectAction_SuperMetacall((KSelectAction*)self, param1, param2, param3);
 }
 
 const char* k_selectaction_tr(const char* s) {
@@ -145,8 +145,8 @@ void k_selectaction_on_remove_action(void* self, QAction* (*callback)(void*, voi
     KSelectAction_OnRemoveAction((KSelectAction*)self, (intptr_t)callback);
 }
 
-QAction* k_selectaction_qbase_remove_action(void* self, void* action) {
-    return KSelectAction_QBaseRemoveAction((KSelectAction*)self, (QAction*)action);
+QAction* k_selectaction_super_remove_action(void* self, void* action) {
+    return KSelectAction_SuperRemoveAction((KSelectAction*)self, (QAction*)action);
 }
 
 void k_selectaction_insert_action(void* self, void* before, void* action) {
@@ -157,8 +157,8 @@ void k_selectaction_on_insert_action(void* self, void (*callback)(void*, void*, 
     KSelectAction_OnInsertAction((KSelectAction*)self, (intptr_t)callback);
 }
 
-void k_selectaction_qbase_insert_action(void* self, void* before, void* action) {
-    KSelectAction_QBaseInsertAction((KSelectAction*)self, (QAction*)before, (QAction*)action);
+void k_selectaction_super_insert_action(void* self, void* before, void* action) {
+    KSelectAction_SuperInsertAction((KSelectAction*)self, (QAction*)before, (QAction*)action);
 }
 
 void k_selectaction_set_items(void* self, const char* lst[static 1]) {
@@ -267,8 +267,8 @@ void k_selectaction_on_slot_action_triggered(void* self, void (*callback)(void*,
     KSelectAction_OnSlotActionTriggered((KSelectAction*)self, (intptr_t)callback);
 }
 
-void k_selectaction_qbase_slot_action_triggered(void* self, void* action) {
-    KSelectAction_QBaseSlotActionTriggered((KSelectAction*)self, (QAction*)action);
+void k_selectaction_super_slot_action_triggered(void* self, void* action) {
+    KSelectAction_SuperSlotActionTriggered((KSelectAction*)self, (QAction*)action);
 }
 
 void k_selectaction_slot_toggled(void* self, bool param1) {
@@ -279,8 +279,8 @@ void k_selectaction_on_slot_toggled(void* self, void (*callback)(void*, bool)) {
     KSelectAction_OnSlotToggled((KSelectAction*)self, (intptr_t)callback);
 }
 
-void k_selectaction_qbase_slot_toggled(void* self, bool param1) {
-    KSelectAction_QBaseSlotToggled((KSelectAction*)self, param1);
+void k_selectaction_super_slot_toggled(void* self, bool param1) {
+    KSelectAction_SuperSlotToggled((KSelectAction*)self, param1);
 }
 
 QWidget* k_selectaction_create_widget(void* self, void* parent) {
@@ -291,8 +291,8 @@ void k_selectaction_on_create_widget(void* self, QWidget* (*callback)(void*, voi
     KSelectAction_OnCreateWidget((KSelectAction*)self, (intptr_t)callback);
 }
 
-QWidget* k_selectaction_qbase_create_widget(void* self, void* parent) {
-    return KSelectAction_QBaseCreateWidget((KSelectAction*)self, (QWidget*)parent);
+QWidget* k_selectaction_super_create_widget(void* self, void* parent) {
+    return KSelectAction_SuperCreateWidget((KSelectAction*)self, (QWidget*)parent);
 }
 
 void k_selectaction_delete_widget(void* self, void* widget) {
@@ -303,8 +303,8 @@ void k_selectaction_on_delete_widget(void* self, void (*callback)(void*, void*))
     KSelectAction_OnDeleteWidget((KSelectAction*)self, (intptr_t)callback);
 }
 
-void k_selectaction_qbase_delete_widget(void* self, void* widget) {
-    KSelectAction_QBaseDeleteWidget((KSelectAction*)self, (QWidget*)widget);
+void k_selectaction_super_delete_widget(void* self, void* widget) {
+    KSelectAction_SuperDeleteWidget((KSelectAction*)self, (QWidget*)widget);
 }
 
 bool k_selectaction_event(void* self, void* event) {
@@ -315,8 +315,8 @@ void k_selectaction_on_event(void* self, bool (*callback)(void*, void*)) {
     KSelectAction_OnEvent((KSelectAction*)self, (intptr_t)callback);
 }
 
-bool k_selectaction_qbase_event(void* self, void* event) {
-    return KSelectAction_QBaseEvent((KSelectAction*)self, (QEvent*)event);
+bool k_selectaction_super_event(void* self, void* event) {
+    return KSelectAction_SuperEvent((KSelectAction*)self, (QEvent*)event);
 }
 
 bool k_selectaction_event_filter(void* self, void* watched, void* event) {
@@ -327,8 +327,8 @@ void k_selectaction_on_event_filter(void* self, bool (*callback)(void*, void*, v
     KSelectAction_OnEventFilter((KSelectAction*)self, (intptr_t)callback);
 }
 
-bool k_selectaction_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSelectAction_QBaseEventFilter((KSelectAction*)self, (QObject*)watched, (QEvent*)event);
+bool k_selectaction_super_event_filter(void* self, void* watched, void* event) {
+    return KSelectAction_SuperEventFilter((KSelectAction*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_selectaction_tr2(const char* s, const char* c) {
@@ -881,8 +881,8 @@ void k_selectaction_timer_event(void* self, void* event) {
     KSelectAction_TimerEvent((KSelectAction*)self, (QTimerEvent*)event);
 }
 
-void k_selectaction_qbase_timer_event(void* self, void* event) {
-    KSelectAction_QBaseTimerEvent((KSelectAction*)self, (QTimerEvent*)event);
+void k_selectaction_super_timer_event(void* self, void* event) {
+    KSelectAction_SuperTimerEvent((KSelectAction*)self, (QTimerEvent*)event);
 }
 
 void k_selectaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -893,8 +893,8 @@ void k_selectaction_child_event(void* self, void* event) {
     KSelectAction_ChildEvent((KSelectAction*)self, (QChildEvent*)event);
 }
 
-void k_selectaction_qbase_child_event(void* self, void* event) {
-    KSelectAction_QBaseChildEvent((KSelectAction*)self, (QChildEvent*)event);
+void k_selectaction_super_child_event(void* self, void* event) {
+    KSelectAction_SuperChildEvent((KSelectAction*)self, (QChildEvent*)event);
 }
 
 void k_selectaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -905,8 +905,8 @@ void k_selectaction_custom_event(void* self, void* event) {
     KSelectAction_CustomEvent((KSelectAction*)self, (QEvent*)event);
 }
 
-void k_selectaction_qbase_custom_event(void* self, void* event) {
-    KSelectAction_QBaseCustomEvent((KSelectAction*)self, (QEvent*)event);
+void k_selectaction_super_custom_event(void* self, void* event) {
+    KSelectAction_SuperCustomEvent((KSelectAction*)self, (QEvent*)event);
 }
 
 void k_selectaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -917,8 +917,8 @@ void k_selectaction_connect_notify(void* self, void* signal) {
     KSelectAction_ConnectNotify((KSelectAction*)self, (QMetaMethod*)signal);
 }
 
-void k_selectaction_qbase_connect_notify(void* self, void* signal) {
-    KSelectAction_QBaseConnectNotify((KSelectAction*)self, (QMetaMethod*)signal);
+void k_selectaction_super_connect_notify(void* self, void* signal) {
+    KSelectAction_SuperConnectNotify((KSelectAction*)self, (QMetaMethod*)signal);
 }
 
 void k_selectaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -929,8 +929,8 @@ void k_selectaction_disconnect_notify(void* self, void* signal) {
     KSelectAction_DisconnectNotify((KSelectAction*)self, (QMetaMethod*)signal);
 }
 
-void k_selectaction_qbase_disconnect_notify(void* self, void* signal) {
-    KSelectAction_QBaseDisconnectNotify((KSelectAction*)self, (QMetaMethod*)signal);
+void k_selectaction_super_disconnect_notify(void* self, void* signal) {
+    KSelectAction_SuperDisconnectNotify((KSelectAction*)self, (QMetaMethod*)signal);
 }
 
 void k_selectaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -942,8 +942,8 @@ libqt_list /* of QWidget* */ k_selectaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_selectaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KSelectAction_QBaseCreatedWidgets((KSelectAction*)self);
+libqt_list /* of QWidget* */ k_selectaction_super_created_widgets(void* self) {
+    libqt_list _arr = KSelectAction_SuperCreatedWidgets((KSelectAction*)self);
     return _arr;
 }
 
@@ -955,8 +955,8 @@ QObject* k_selectaction_sender(void* self) {
     return KSelectAction_Sender((KSelectAction*)self);
 }
 
-QObject* k_selectaction_qbase_sender(void* self) {
-    return KSelectAction_QBaseSender((KSelectAction*)self);
+QObject* k_selectaction_super_sender(void* self) {
+    return KSelectAction_SuperSender((KSelectAction*)self);
 }
 
 void k_selectaction_on_sender(void* self, QObject* (*callback)()) {
@@ -967,8 +967,8 @@ int32_t k_selectaction_sender_signal_index(void* self) {
     return KSelectAction_SenderSignalIndex((KSelectAction*)self);
 }
 
-int32_t k_selectaction_qbase_sender_signal_index(void* self) {
-    return KSelectAction_QBaseSenderSignalIndex((KSelectAction*)self);
+int32_t k_selectaction_super_sender_signal_index(void* self) {
+    return KSelectAction_SuperSenderSignalIndex((KSelectAction*)self);
 }
 
 void k_selectaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -979,8 +979,8 @@ int32_t k_selectaction_receivers(void* self, const char* signal) {
     return KSelectAction_Receivers((KSelectAction*)self, signal);
 }
 
-int32_t k_selectaction_qbase_receivers(void* self, const char* signal) {
-    return KSelectAction_QBaseReceivers((KSelectAction*)self, signal);
+int32_t k_selectaction_super_receivers(void* self, const char* signal) {
+    return KSelectAction_SuperReceivers((KSelectAction*)self, signal);
 }
 
 void k_selectaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -991,8 +991,8 @@ bool k_selectaction_is_signal_connected(void* self, void* signal) {
     return KSelectAction_IsSignalConnected((KSelectAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_selectaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KSelectAction_QBaseIsSignalConnected((KSelectAction*)self, (QMetaMethod*)signal);
+bool k_selectaction_super_is_signal_connected(void* self, void* signal) {
+    return KSelectAction_SuperIsSignalConnected((KSelectAction*)self, (QMetaMethod*)signal);
 }
 
 void k_selectaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

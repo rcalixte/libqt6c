@@ -36,8 +36,8 @@ void q_pdfview_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QPdfView_OnMetaObject((QPdfView*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pdfview_qbase_meta_object(void* self) {
-    return QPdfView_QBaseMetaObject((QPdfView*)self);
+const QMetaObject* q_pdfview_super_meta_object(void* self) {
+    return QPdfView_SuperMetaObject((QPdfView*)self);
 }
 
 void* q_pdfview_metacast(void* self, const char* param1) {
@@ -48,8 +48,8 @@ void q_pdfview_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QPdfView_OnMetacast((QPdfView*)self, (intptr_t)callback);
 }
 
-void* q_pdfview_qbase_metacast(void* self, const char* param1) {
-    return QPdfView_QBaseMetacast((QPdfView*)self, param1);
+void* q_pdfview_super_metacast(void* self, const char* param1) {
+    return QPdfView_SuperMetacast((QPdfView*)self, param1);
 }
 
 int32_t q_pdfview_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -60,8 +60,8 @@ void q_pdfview_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, 
     QPdfView_OnMetacall((QPdfView*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfview_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPdfView_QBaseMetacall((QPdfView*)self, param1, param2, param3);
+int32_t q_pdfview_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPdfView_SuperMetacall((QPdfView*)self, param1, param2, param3);
 }
 
 const char* q_pdfview_tr(const char* s) {
@@ -211,8 +211,8 @@ void q_pdfview_on_paint_event(void* self, void (*callback)(void*, void*)) {
     QPdfView_OnPaintEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_qbase_paint_event(void* self, void* event) {
-    QPdfView_QBasePaintEvent((QPdfView*)self, (QPaintEvent*)event);
+void q_pdfview_super_paint_event(void* self, void* event) {
+    QPdfView_SuperPaintEvent((QPdfView*)self, (QPaintEvent*)event);
 }
 
 void q_pdfview_resize_event(void* self, void* event) {
@@ -223,8 +223,8 @@ void q_pdfview_on_resize_event(void* self, void (*callback)(void*, void*)) {
     QPdfView_OnResizeEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_qbase_resize_event(void* self, void* event) {
-    QPdfView_QBaseResizeEvent((QPdfView*)self, (QResizeEvent*)event);
+void q_pdfview_super_resize_event(void* self, void* event) {
+    QPdfView_SuperResizeEvent((QPdfView*)self, (QResizeEvent*)event);
 }
 
 void q_pdfview_scroll_contents_by(void* self, int dx, int dy) {
@@ -235,8 +235,8 @@ void q_pdfview_on_scroll_contents_by(void* self, void (*callback)(void*, int, in
     QPdfView_OnScrollContentsBy((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_qbase_scroll_contents_by(void* self, int dx, int dy) {
-    QPdfView_QBaseScrollContentsBy((QPdfView*)self, dx, dy);
+void q_pdfview_super_scroll_contents_by(void* self, int dx, int dy) {
+    QPdfView_SuperScrollContentsBy((QPdfView*)self, dx, dy);
 }
 
 void q_pdfview_mouse_press_event(void* self, void* event) {
@@ -247,8 +247,8 @@ void q_pdfview_on_mouse_press_event(void* self, void (*callback)(void*, void*)) 
     QPdfView_OnMousePressEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_qbase_mouse_press_event(void* self, void* event) {
-    QPdfView_QBaseMousePressEvent((QPdfView*)self, (QMouseEvent*)event);
+void q_pdfview_super_mouse_press_event(void* self, void* event) {
+    QPdfView_SuperMousePressEvent((QPdfView*)self, (QMouseEvent*)event);
 }
 
 void q_pdfview_mouse_move_event(void* self, void* event) {
@@ -259,8 +259,8 @@ void q_pdfview_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
     QPdfView_OnMouseMoveEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_qbase_mouse_move_event(void* self, void* event) {
-    QPdfView_QBaseMouseMoveEvent((QPdfView*)self, (QMouseEvent*)event);
+void q_pdfview_super_mouse_move_event(void* self, void* event) {
+    QPdfView_SuperMouseMoveEvent((QPdfView*)self, (QMouseEvent*)event);
 }
 
 void q_pdfview_mouse_release_event(void* self, void* event) {
@@ -271,8 +271,8 @@ void q_pdfview_on_mouse_release_event(void* self, void (*callback)(void*, void*)
     QPdfView_OnMouseReleaseEvent((QPdfView*)self, (intptr_t)callback);
 }
 
-void q_pdfview_qbase_mouse_release_event(void* self, void* event) {
-    QPdfView_QBaseMouseReleaseEvent((QPdfView*)self, (QMouseEvent*)event);
+void q_pdfview_super_mouse_release_event(void* self, void* event) {
+    QPdfView_SuperMouseReleaseEvent((QPdfView*)self, (QMouseEvent*)event);
 }
 
 const char* q_pdfview_tr2(const char* s, const char* c) {
@@ -1795,8 +1795,8 @@ QSize* q_pdfview_minimum_size_hint(void* self) {
     return QPdfView_MinimumSizeHint((QPdfView*)self);
 }
 
-QSize* q_pdfview_qbase_minimum_size_hint(void* self) {
-    return QPdfView_QBaseMinimumSizeHint((QPdfView*)self);
+QSize* q_pdfview_super_minimum_size_hint(void* self) {
+    return QPdfView_SuperMinimumSizeHint((QPdfView*)self);
 }
 
 void q_pdfview_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1807,8 +1807,8 @@ QSize* q_pdfview_size_hint(void* self) {
     return QPdfView_SizeHint((QPdfView*)self);
 }
 
-QSize* q_pdfview_qbase_size_hint(void* self) {
-    return QPdfView_QBaseSizeHint((QPdfView*)self);
+QSize* q_pdfview_super_size_hint(void* self) {
+    return QPdfView_SuperSizeHint((QPdfView*)self);
 }
 
 void q_pdfview_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1819,8 +1819,8 @@ void q_pdfview_setup_viewport(void* self, void* viewport) {
     QPdfView_SetupViewport((QPdfView*)self, (QWidget*)viewport);
 }
 
-void q_pdfview_qbase_setup_viewport(void* self, void* viewport) {
-    QPdfView_QBaseSetupViewport((QPdfView*)self, (QWidget*)viewport);
+void q_pdfview_super_setup_viewport(void* self, void* viewport) {
+    QPdfView_SuperSetupViewport((QPdfView*)self, (QWidget*)viewport);
 }
 
 void q_pdfview_on_setup_viewport(void* self, void (*callback)(void*, void*)) {
@@ -1831,8 +1831,8 @@ bool q_pdfview_event_filter(void* self, void* param1, void* param2) {
     return QPdfView_EventFilter((QPdfView*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_pdfview_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QPdfView_QBaseEventFilter((QPdfView*)self, (QObject*)param1, (QEvent*)param2);
+bool q_pdfview_super_event_filter(void* self, void* param1, void* param2) {
+    return QPdfView_SuperEventFilter((QPdfView*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_pdfview_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1843,8 +1843,8 @@ bool q_pdfview_event(void* self, void* param1) {
     return QPdfView_Event((QPdfView*)self, (QEvent*)param1);
 }
 
-bool q_pdfview_qbase_event(void* self, void* param1) {
-    return QPdfView_QBaseEvent((QPdfView*)self, (QEvent*)param1);
+bool q_pdfview_super_event(void* self, void* param1) {
+    return QPdfView_SuperEvent((QPdfView*)self, (QEvent*)param1);
 }
 
 void q_pdfview_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1855,8 +1855,8 @@ bool q_pdfview_viewport_event(void* self, void* param1) {
     return QPdfView_ViewportEvent((QPdfView*)self, (QEvent*)param1);
 }
 
-bool q_pdfview_qbase_viewport_event(void* self, void* param1) {
-    return QPdfView_QBaseViewportEvent((QPdfView*)self, (QEvent*)param1);
+bool q_pdfview_super_viewport_event(void* self, void* param1) {
+    return QPdfView_SuperViewportEvent((QPdfView*)self, (QEvent*)param1);
 }
 
 void q_pdfview_on_viewport_event(void* self, bool (*callback)(void*, void*)) {
@@ -1867,8 +1867,8 @@ void q_pdfview_mouse_double_click_event(void* self, void* param1) {
     QPdfView_MouseDoubleClickEvent((QPdfView*)self, (QMouseEvent*)param1);
 }
 
-void q_pdfview_qbase_mouse_double_click_event(void* self, void* param1) {
-    QPdfView_QBaseMouseDoubleClickEvent((QPdfView*)self, (QMouseEvent*)param1);
+void q_pdfview_super_mouse_double_click_event(void* self, void* param1) {
+    QPdfView_SuperMouseDoubleClickEvent((QPdfView*)self, (QMouseEvent*)param1);
 }
 
 void q_pdfview_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1879,8 +1879,8 @@ void q_pdfview_wheel_event(void* self, void* param1) {
     QPdfView_WheelEvent((QPdfView*)self, (QWheelEvent*)param1);
 }
 
-void q_pdfview_qbase_wheel_event(void* self, void* param1) {
-    QPdfView_QBaseWheelEvent((QPdfView*)self, (QWheelEvent*)param1);
+void q_pdfview_super_wheel_event(void* self, void* param1) {
+    QPdfView_SuperWheelEvent((QPdfView*)self, (QWheelEvent*)param1);
 }
 
 void q_pdfview_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1891,8 +1891,8 @@ void q_pdfview_context_menu_event(void* self, void* param1) {
     QPdfView_ContextMenuEvent((QPdfView*)self, (QContextMenuEvent*)param1);
 }
 
-void q_pdfview_qbase_context_menu_event(void* self, void* param1) {
-    QPdfView_QBaseContextMenuEvent((QPdfView*)self, (QContextMenuEvent*)param1);
+void q_pdfview_super_context_menu_event(void* self, void* param1) {
+    QPdfView_SuperContextMenuEvent((QPdfView*)self, (QContextMenuEvent*)param1);
 }
 
 void q_pdfview_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1903,8 +1903,8 @@ void q_pdfview_drag_enter_event(void* self, void* param1) {
     QPdfView_DragEnterEvent((QPdfView*)self, (QDragEnterEvent*)param1);
 }
 
-void q_pdfview_qbase_drag_enter_event(void* self, void* param1) {
-    QPdfView_QBaseDragEnterEvent((QPdfView*)self, (QDragEnterEvent*)param1);
+void q_pdfview_super_drag_enter_event(void* self, void* param1) {
+    QPdfView_SuperDragEnterEvent((QPdfView*)self, (QDragEnterEvent*)param1);
 }
 
 void q_pdfview_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1915,8 +1915,8 @@ void q_pdfview_drag_move_event(void* self, void* param1) {
     QPdfView_DragMoveEvent((QPdfView*)self, (QDragMoveEvent*)param1);
 }
 
-void q_pdfview_qbase_drag_move_event(void* self, void* param1) {
-    QPdfView_QBaseDragMoveEvent((QPdfView*)self, (QDragMoveEvent*)param1);
+void q_pdfview_super_drag_move_event(void* self, void* param1) {
+    QPdfView_SuperDragMoveEvent((QPdfView*)self, (QDragMoveEvent*)param1);
 }
 
 void q_pdfview_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1927,8 +1927,8 @@ void q_pdfview_drag_leave_event(void* self, void* param1) {
     QPdfView_DragLeaveEvent((QPdfView*)self, (QDragLeaveEvent*)param1);
 }
 
-void q_pdfview_qbase_drag_leave_event(void* self, void* param1) {
-    QPdfView_QBaseDragLeaveEvent((QPdfView*)self, (QDragLeaveEvent*)param1);
+void q_pdfview_super_drag_leave_event(void* self, void* param1) {
+    QPdfView_SuperDragLeaveEvent((QPdfView*)self, (QDragLeaveEvent*)param1);
 }
 
 void q_pdfview_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1939,8 +1939,8 @@ void q_pdfview_drop_event(void* self, void* param1) {
     QPdfView_DropEvent((QPdfView*)self, (QDropEvent*)param1);
 }
 
-void q_pdfview_qbase_drop_event(void* self, void* param1) {
-    QPdfView_QBaseDropEvent((QPdfView*)self, (QDropEvent*)param1);
+void q_pdfview_super_drop_event(void* self, void* param1) {
+    QPdfView_SuperDropEvent((QPdfView*)self, (QDropEvent*)param1);
 }
 
 void q_pdfview_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1951,8 +1951,8 @@ void q_pdfview_key_press_event(void* self, void* param1) {
     QPdfView_KeyPressEvent((QPdfView*)self, (QKeyEvent*)param1);
 }
 
-void q_pdfview_qbase_key_press_event(void* self, void* param1) {
-    QPdfView_QBaseKeyPressEvent((QPdfView*)self, (QKeyEvent*)param1);
+void q_pdfview_super_key_press_event(void* self, void* param1) {
+    QPdfView_SuperKeyPressEvent((QPdfView*)self, (QKeyEvent*)param1);
 }
 
 void q_pdfview_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1963,8 +1963,8 @@ QSize* q_pdfview_viewport_size_hint(void* self) {
     return QPdfView_ViewportSizeHint((QPdfView*)self);
 }
 
-QSize* q_pdfview_qbase_viewport_size_hint(void* self) {
-    return QPdfView_QBaseViewportSizeHint((QPdfView*)self);
+QSize* q_pdfview_super_viewport_size_hint(void* self) {
+    return QPdfView_SuperViewportSizeHint((QPdfView*)self);
 }
 
 void q_pdfview_on_viewport_size_hint(void* self, QSize* (*callback)()) {
@@ -1975,8 +1975,8 @@ void q_pdfview_change_event(void* self, void* param1) {
     QPdfView_ChangeEvent((QPdfView*)self, (QEvent*)param1);
 }
 
-void q_pdfview_qbase_change_event(void* self, void* param1) {
-    QPdfView_QBaseChangeEvent((QPdfView*)self, (QEvent*)param1);
+void q_pdfview_super_change_event(void* self, void* param1) {
+    QPdfView_SuperChangeEvent((QPdfView*)self, (QEvent*)param1);
 }
 
 void q_pdfview_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1987,8 +1987,8 @@ void q_pdfview_init_style_option(void* self, void* option) {
     QPdfView_InitStyleOption((QPdfView*)self, (QStyleOptionFrame*)option);
 }
 
-void q_pdfview_qbase_init_style_option(void* self, void* option) {
-    QPdfView_QBaseInitStyleOption((QPdfView*)self, (QStyleOptionFrame*)option);
+void q_pdfview_super_init_style_option(void* self, void* option) {
+    QPdfView_SuperInitStyleOption((QPdfView*)self, (QStyleOptionFrame*)option);
 }
 
 void q_pdfview_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1999,8 +1999,8 @@ int32_t q_pdfview_dev_type(void* self) {
     return QPdfView_DevType((QPdfView*)self);
 }
 
-int32_t q_pdfview_qbase_dev_type(void* self) {
-    return QPdfView_QBaseDevType((QPdfView*)self);
+int32_t q_pdfview_super_dev_type(void* self) {
+    return QPdfView_SuperDevType((QPdfView*)self);
 }
 
 void q_pdfview_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2011,8 +2011,8 @@ void q_pdfview_set_visible(void* self, bool visible) {
     QPdfView_SetVisible((QPdfView*)self, visible);
 }
 
-void q_pdfview_qbase_set_visible(void* self, bool visible) {
-    QPdfView_QBaseSetVisible((QPdfView*)self, visible);
+void q_pdfview_super_set_visible(void* self, bool visible) {
+    QPdfView_SuperSetVisible((QPdfView*)self, visible);
 }
 
 void q_pdfview_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2023,8 +2023,8 @@ int32_t q_pdfview_height_for_width(void* self, int param1) {
     return QPdfView_HeightForWidth((QPdfView*)self, param1);
 }
 
-int32_t q_pdfview_qbase_height_for_width(void* self, int param1) {
-    return QPdfView_QBaseHeightForWidth((QPdfView*)self, param1);
+int32_t q_pdfview_super_height_for_width(void* self, int param1) {
+    return QPdfView_SuperHeightForWidth((QPdfView*)self, param1);
 }
 
 void q_pdfview_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2035,8 +2035,8 @@ bool q_pdfview_has_height_for_width(void* self) {
     return QPdfView_HasHeightForWidth((QPdfView*)self);
 }
 
-bool q_pdfview_qbase_has_height_for_width(void* self) {
-    return QPdfView_QBaseHasHeightForWidth((QPdfView*)self);
+bool q_pdfview_super_has_height_for_width(void* self) {
+    return QPdfView_SuperHasHeightForWidth((QPdfView*)self);
 }
 
 void q_pdfview_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2047,8 +2047,8 @@ QPaintEngine* q_pdfview_paint_engine(void* self) {
     return QPdfView_PaintEngine((QPdfView*)self);
 }
 
-QPaintEngine* q_pdfview_qbase_paint_engine(void* self) {
-    return QPdfView_QBasePaintEngine((QPdfView*)self);
+QPaintEngine* q_pdfview_super_paint_engine(void* self) {
+    return QPdfView_SuperPaintEngine((QPdfView*)self);
 }
 
 void q_pdfview_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2059,8 +2059,8 @@ void q_pdfview_key_release_event(void* self, void* event) {
     QPdfView_KeyReleaseEvent((QPdfView*)self, (QKeyEvent*)event);
 }
 
-void q_pdfview_qbase_key_release_event(void* self, void* event) {
-    QPdfView_QBaseKeyReleaseEvent((QPdfView*)self, (QKeyEvent*)event);
+void q_pdfview_super_key_release_event(void* self, void* event) {
+    QPdfView_SuperKeyReleaseEvent((QPdfView*)self, (QKeyEvent*)event);
 }
 
 void q_pdfview_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2071,8 +2071,8 @@ void q_pdfview_focus_in_event(void* self, void* event) {
     QPdfView_FocusInEvent((QPdfView*)self, (QFocusEvent*)event);
 }
 
-void q_pdfview_qbase_focus_in_event(void* self, void* event) {
-    QPdfView_QBaseFocusInEvent((QPdfView*)self, (QFocusEvent*)event);
+void q_pdfview_super_focus_in_event(void* self, void* event) {
+    QPdfView_SuperFocusInEvent((QPdfView*)self, (QFocusEvent*)event);
 }
 
 void q_pdfview_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2083,8 +2083,8 @@ void q_pdfview_focus_out_event(void* self, void* event) {
     QPdfView_FocusOutEvent((QPdfView*)self, (QFocusEvent*)event);
 }
 
-void q_pdfview_qbase_focus_out_event(void* self, void* event) {
-    QPdfView_QBaseFocusOutEvent((QPdfView*)self, (QFocusEvent*)event);
+void q_pdfview_super_focus_out_event(void* self, void* event) {
+    QPdfView_SuperFocusOutEvent((QPdfView*)self, (QFocusEvent*)event);
 }
 
 void q_pdfview_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2095,8 +2095,8 @@ void q_pdfview_enter_event(void* self, void* event) {
     QPdfView_EnterEvent((QPdfView*)self, (QEnterEvent*)event);
 }
 
-void q_pdfview_qbase_enter_event(void* self, void* event) {
-    QPdfView_QBaseEnterEvent((QPdfView*)self, (QEnterEvent*)event);
+void q_pdfview_super_enter_event(void* self, void* event) {
+    QPdfView_SuperEnterEvent((QPdfView*)self, (QEnterEvent*)event);
 }
 
 void q_pdfview_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2107,8 +2107,8 @@ void q_pdfview_leave_event(void* self, void* event) {
     QPdfView_LeaveEvent((QPdfView*)self, (QEvent*)event);
 }
 
-void q_pdfview_qbase_leave_event(void* self, void* event) {
-    QPdfView_QBaseLeaveEvent((QPdfView*)self, (QEvent*)event);
+void q_pdfview_super_leave_event(void* self, void* event) {
+    QPdfView_SuperLeaveEvent((QPdfView*)self, (QEvent*)event);
 }
 
 void q_pdfview_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2119,8 +2119,8 @@ void q_pdfview_move_event(void* self, void* event) {
     QPdfView_MoveEvent((QPdfView*)self, (QMoveEvent*)event);
 }
 
-void q_pdfview_qbase_move_event(void* self, void* event) {
-    QPdfView_QBaseMoveEvent((QPdfView*)self, (QMoveEvent*)event);
+void q_pdfview_super_move_event(void* self, void* event) {
+    QPdfView_SuperMoveEvent((QPdfView*)self, (QMoveEvent*)event);
 }
 
 void q_pdfview_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2131,8 +2131,8 @@ void q_pdfview_close_event(void* self, void* event) {
     QPdfView_CloseEvent((QPdfView*)self, (QCloseEvent*)event);
 }
 
-void q_pdfview_qbase_close_event(void* self, void* event) {
-    QPdfView_QBaseCloseEvent((QPdfView*)self, (QCloseEvent*)event);
+void q_pdfview_super_close_event(void* self, void* event) {
+    QPdfView_SuperCloseEvent((QPdfView*)self, (QCloseEvent*)event);
 }
 
 void q_pdfview_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2143,8 +2143,8 @@ void q_pdfview_tablet_event(void* self, void* event) {
     QPdfView_TabletEvent((QPdfView*)self, (QTabletEvent*)event);
 }
 
-void q_pdfview_qbase_tablet_event(void* self, void* event) {
-    QPdfView_QBaseTabletEvent((QPdfView*)self, (QTabletEvent*)event);
+void q_pdfview_super_tablet_event(void* self, void* event) {
+    QPdfView_SuperTabletEvent((QPdfView*)self, (QTabletEvent*)event);
 }
 
 void q_pdfview_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2155,8 +2155,8 @@ void q_pdfview_action_event(void* self, void* event) {
     QPdfView_ActionEvent((QPdfView*)self, (QActionEvent*)event);
 }
 
-void q_pdfview_qbase_action_event(void* self, void* event) {
-    QPdfView_QBaseActionEvent((QPdfView*)self, (QActionEvent*)event);
+void q_pdfview_super_action_event(void* self, void* event) {
+    QPdfView_SuperActionEvent((QPdfView*)self, (QActionEvent*)event);
 }
 
 void q_pdfview_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2167,8 +2167,8 @@ void q_pdfview_show_event(void* self, void* event) {
     QPdfView_ShowEvent((QPdfView*)self, (QShowEvent*)event);
 }
 
-void q_pdfview_qbase_show_event(void* self, void* event) {
-    QPdfView_QBaseShowEvent((QPdfView*)self, (QShowEvent*)event);
+void q_pdfview_super_show_event(void* self, void* event) {
+    QPdfView_SuperShowEvent((QPdfView*)self, (QShowEvent*)event);
 }
 
 void q_pdfview_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2179,8 +2179,8 @@ void q_pdfview_hide_event(void* self, void* event) {
     QPdfView_HideEvent((QPdfView*)self, (QHideEvent*)event);
 }
 
-void q_pdfview_qbase_hide_event(void* self, void* event) {
-    QPdfView_QBaseHideEvent((QPdfView*)self, (QHideEvent*)event);
+void q_pdfview_super_hide_event(void* self, void* event) {
+    QPdfView_SuperHideEvent((QPdfView*)self, (QHideEvent*)event);
 }
 
 void q_pdfview_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2191,8 +2191,8 @@ bool q_pdfview_native_event(void* self, char* eventType, void* message, intptr_t
     return QPdfView_NativeEvent((QPdfView*)self, qstring(eventType), message, result);
 }
 
-bool q_pdfview_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QPdfView_QBaseNativeEvent((QPdfView*)self, qstring(eventType), message, result);
+bool q_pdfview_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QPdfView_SuperNativeEvent((QPdfView*)self, qstring(eventType), message, result);
 }
 
 void q_pdfview_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2203,8 +2203,8 @@ int32_t q_pdfview_metric(void* self, int32_t param1) {
     return QPdfView_Metric((QPdfView*)self, param1);
 }
 
-int32_t q_pdfview_qbase_metric(void* self, int32_t param1) {
-    return QPdfView_QBaseMetric((QPdfView*)self, param1);
+int32_t q_pdfview_super_metric(void* self, int32_t param1) {
+    return QPdfView_SuperMetric((QPdfView*)self, param1);
 }
 
 void q_pdfview_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2215,8 +2215,8 @@ void q_pdfview_init_painter(void* self, void* painter) {
     QPdfView_InitPainter((QPdfView*)self, (QPainter*)painter);
 }
 
-void q_pdfview_qbase_init_painter(void* self, void* painter) {
-    QPdfView_QBaseInitPainter((QPdfView*)self, (QPainter*)painter);
+void q_pdfview_super_init_painter(void* self, void* painter) {
+    QPdfView_SuperInitPainter((QPdfView*)self, (QPainter*)painter);
 }
 
 void q_pdfview_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2227,8 +2227,8 @@ QPaintDevice* q_pdfview_redirected(void* self, void* offset) {
     return QPdfView_Redirected((QPdfView*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_pdfview_qbase_redirected(void* self, void* offset) {
-    return QPdfView_QBaseRedirected((QPdfView*)self, (QPoint*)offset);
+QPaintDevice* q_pdfview_super_redirected(void* self, void* offset) {
+    return QPdfView_SuperRedirected((QPdfView*)self, (QPoint*)offset);
 }
 
 void q_pdfview_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2239,8 +2239,8 @@ QPainter* q_pdfview_shared_painter(void* self) {
     return QPdfView_SharedPainter((QPdfView*)self);
 }
 
-QPainter* q_pdfview_qbase_shared_painter(void* self) {
-    return QPdfView_QBaseSharedPainter((QPdfView*)self);
+QPainter* q_pdfview_super_shared_painter(void* self) {
+    return QPdfView_SuperSharedPainter((QPdfView*)self);
 }
 
 void q_pdfview_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2251,8 +2251,8 @@ void q_pdfview_input_method_event(void* self, void* param1) {
     QPdfView_InputMethodEvent((QPdfView*)self, (QInputMethodEvent*)param1);
 }
 
-void q_pdfview_qbase_input_method_event(void* self, void* param1) {
-    QPdfView_QBaseInputMethodEvent((QPdfView*)self, (QInputMethodEvent*)param1);
+void q_pdfview_super_input_method_event(void* self, void* param1) {
+    QPdfView_SuperInputMethodEvent((QPdfView*)self, (QInputMethodEvent*)param1);
 }
 
 void q_pdfview_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2263,8 +2263,8 @@ QVariant* q_pdfview_input_method_query(void* self, int32_t param1) {
     return QPdfView_InputMethodQuery((QPdfView*)self, param1);
 }
 
-QVariant* q_pdfview_qbase_input_method_query(void* self, int32_t param1) {
-    return QPdfView_QBaseInputMethodQuery((QPdfView*)self, param1);
+QVariant* q_pdfview_super_input_method_query(void* self, int32_t param1) {
+    return QPdfView_SuperInputMethodQuery((QPdfView*)self, param1);
 }
 
 void q_pdfview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2275,8 +2275,8 @@ bool q_pdfview_focus_next_prev_child(void* self, bool next) {
     return QPdfView_FocusNextPrevChild((QPdfView*)self, next);
 }
 
-bool q_pdfview_qbase_focus_next_prev_child(void* self, bool next) {
-    return QPdfView_QBaseFocusNextPrevChild((QPdfView*)self, next);
+bool q_pdfview_super_focus_next_prev_child(void* self, bool next) {
+    return QPdfView_SuperFocusNextPrevChild((QPdfView*)self, next);
 }
 
 void q_pdfview_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2287,8 +2287,8 @@ void q_pdfview_timer_event(void* self, void* event) {
     QPdfView_TimerEvent((QPdfView*)self, (QTimerEvent*)event);
 }
 
-void q_pdfview_qbase_timer_event(void* self, void* event) {
-    QPdfView_QBaseTimerEvent((QPdfView*)self, (QTimerEvent*)event);
+void q_pdfview_super_timer_event(void* self, void* event) {
+    QPdfView_SuperTimerEvent((QPdfView*)self, (QTimerEvent*)event);
 }
 
 void q_pdfview_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2299,8 +2299,8 @@ void q_pdfview_child_event(void* self, void* event) {
     QPdfView_ChildEvent((QPdfView*)self, (QChildEvent*)event);
 }
 
-void q_pdfview_qbase_child_event(void* self, void* event) {
-    QPdfView_QBaseChildEvent((QPdfView*)self, (QChildEvent*)event);
+void q_pdfview_super_child_event(void* self, void* event) {
+    QPdfView_SuperChildEvent((QPdfView*)self, (QChildEvent*)event);
 }
 
 void q_pdfview_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2311,8 +2311,8 @@ void q_pdfview_custom_event(void* self, void* event) {
     QPdfView_CustomEvent((QPdfView*)self, (QEvent*)event);
 }
 
-void q_pdfview_qbase_custom_event(void* self, void* event) {
-    QPdfView_QBaseCustomEvent((QPdfView*)self, (QEvent*)event);
+void q_pdfview_super_custom_event(void* self, void* event) {
+    QPdfView_SuperCustomEvent((QPdfView*)self, (QEvent*)event);
 }
 
 void q_pdfview_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2323,8 +2323,8 @@ void q_pdfview_connect_notify(void* self, void* signal) {
     QPdfView_ConnectNotify((QPdfView*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfview_qbase_connect_notify(void* self, void* signal) {
-    QPdfView_QBaseConnectNotify((QPdfView*)self, (QMetaMethod*)signal);
+void q_pdfview_super_connect_notify(void* self, void* signal) {
+    QPdfView_SuperConnectNotify((QPdfView*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfview_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2335,8 +2335,8 @@ void q_pdfview_disconnect_notify(void* self, void* signal) {
     QPdfView_DisconnectNotify((QPdfView*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfview_qbase_disconnect_notify(void* self, void* signal) {
-    QPdfView_QBaseDisconnectNotify((QPdfView*)self, (QMetaMethod*)signal);
+void q_pdfview_super_disconnect_notify(void* self, void* signal) {
+    QPdfView_SuperDisconnectNotify((QPdfView*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfview_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2347,8 +2347,8 @@ void q_pdfview_set_viewport_margins(void* self, int left, int top, int right, in
     QPdfView_SetViewportMargins((QPdfView*)self, left, top, right, bottom);
 }
 
-void q_pdfview_qbase_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
-    QPdfView_QBaseSetViewportMargins((QPdfView*)self, left, top, right, bottom);
+void q_pdfview_super_set_viewport_margins(void* self, int left, int top, int right, int bottom) {
+    QPdfView_SuperSetViewportMargins((QPdfView*)self, left, top, right, bottom);
 }
 
 void q_pdfview_on_set_viewport_margins(void* self, void (*callback)(void*, int, int, int, int)) {
@@ -2359,8 +2359,8 @@ QMargins* q_pdfview_viewport_margins(void* self) {
     return QPdfView_ViewportMargins((QPdfView*)self);
 }
 
-QMargins* q_pdfview_qbase_viewport_margins(void* self) {
-    return QPdfView_QBaseViewportMargins((QPdfView*)self);
+QMargins* q_pdfview_super_viewport_margins(void* self) {
+    return QPdfView_SuperViewportMargins((QPdfView*)self);
 }
 
 void q_pdfview_on_viewport_margins(void* self, QMargins* (*callback)()) {
@@ -2371,8 +2371,8 @@ void q_pdfview_draw_frame(void* self, void* param1) {
     QPdfView_DrawFrame((QPdfView*)self, (QPainter*)param1);
 }
 
-void q_pdfview_qbase_draw_frame(void* self, void* param1) {
-    QPdfView_QBaseDrawFrame((QPdfView*)self, (QPainter*)param1);
+void q_pdfview_super_draw_frame(void* self, void* param1) {
+    QPdfView_SuperDrawFrame((QPdfView*)self, (QPainter*)param1);
 }
 
 void q_pdfview_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2383,8 +2383,8 @@ void q_pdfview_update_micro_focus(void* self) {
     QPdfView_UpdateMicroFocus((QPdfView*)self);
 }
 
-void q_pdfview_qbase_update_micro_focus(void* self) {
-    QPdfView_QBaseUpdateMicroFocus((QPdfView*)self);
+void q_pdfview_super_update_micro_focus(void* self) {
+    QPdfView_SuperUpdateMicroFocus((QPdfView*)self);
 }
 
 void q_pdfview_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2395,8 +2395,8 @@ void q_pdfview_create(void* self) {
     QPdfView_Create((QPdfView*)self);
 }
 
-void q_pdfview_qbase_create(void* self) {
-    QPdfView_QBaseCreate((QPdfView*)self);
+void q_pdfview_super_create(void* self) {
+    QPdfView_SuperCreate((QPdfView*)self);
 }
 
 void q_pdfview_on_create(void* self, void (*callback)()) {
@@ -2407,8 +2407,8 @@ void q_pdfview_destroy(void* self) {
     QPdfView_Destroy((QPdfView*)self);
 }
 
-void q_pdfview_qbase_destroy(void* self) {
-    QPdfView_QBaseDestroy((QPdfView*)self);
+void q_pdfview_super_destroy(void* self) {
+    QPdfView_SuperDestroy((QPdfView*)self);
 }
 
 void q_pdfview_on_destroy(void* self, void (*callback)()) {
@@ -2419,8 +2419,8 @@ bool q_pdfview_focus_next_child(void* self) {
     return QPdfView_FocusNextChild((QPdfView*)self);
 }
 
-bool q_pdfview_qbase_focus_next_child(void* self) {
-    return QPdfView_QBaseFocusNextChild((QPdfView*)self);
+bool q_pdfview_super_focus_next_child(void* self) {
+    return QPdfView_SuperFocusNextChild((QPdfView*)self);
 }
 
 void q_pdfview_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2431,8 +2431,8 @@ bool q_pdfview_focus_previous_child(void* self) {
     return QPdfView_FocusPreviousChild((QPdfView*)self);
 }
 
-bool q_pdfview_qbase_focus_previous_child(void* self) {
-    return QPdfView_QBaseFocusPreviousChild((QPdfView*)self);
+bool q_pdfview_super_focus_previous_child(void* self) {
+    return QPdfView_SuperFocusPreviousChild((QPdfView*)self);
 }
 
 void q_pdfview_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2443,8 +2443,8 @@ QObject* q_pdfview_sender(void* self) {
     return QPdfView_Sender((QPdfView*)self);
 }
 
-QObject* q_pdfview_qbase_sender(void* self) {
-    return QPdfView_QBaseSender((QPdfView*)self);
+QObject* q_pdfview_super_sender(void* self) {
+    return QPdfView_SuperSender((QPdfView*)self);
 }
 
 void q_pdfview_on_sender(void* self, QObject* (*callback)()) {
@@ -2455,8 +2455,8 @@ int32_t q_pdfview_sender_signal_index(void* self) {
     return QPdfView_SenderSignalIndex((QPdfView*)self);
 }
 
-int32_t q_pdfview_qbase_sender_signal_index(void* self) {
-    return QPdfView_QBaseSenderSignalIndex((QPdfView*)self);
+int32_t q_pdfview_super_sender_signal_index(void* self) {
+    return QPdfView_SuperSenderSignalIndex((QPdfView*)self);
 }
 
 void q_pdfview_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2467,8 +2467,8 @@ int32_t q_pdfview_receivers(void* self, const char* signal) {
     return QPdfView_Receivers((QPdfView*)self, signal);
 }
 
-int32_t q_pdfview_qbase_receivers(void* self, const char* signal) {
-    return QPdfView_QBaseReceivers((QPdfView*)self, signal);
+int32_t q_pdfview_super_receivers(void* self, const char* signal) {
+    return QPdfView_SuperReceivers((QPdfView*)self, signal);
 }
 
 void q_pdfview_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2479,8 +2479,8 @@ bool q_pdfview_is_signal_connected(void* self, void* signal) {
     return QPdfView_IsSignalConnected((QPdfView*)self, (QMetaMethod*)signal);
 }
 
-bool q_pdfview_qbase_is_signal_connected(void* self, void* signal) {
-    return QPdfView_QBaseIsSignalConnected((QPdfView*)self, (QMetaMethod*)signal);
+bool q_pdfview_super_is_signal_connected(void* self, void* signal) {
+    return QPdfView_SuperIsSignalConnected((QPdfView*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfview_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2491,8 +2491,8 @@ double q_pdfview_get_decoded_metric_f(void* self, int32_t metricA, int32_t metri
     return QPdfView_GetDecodedMetricF((QPdfView*)self, metricA, metricB);
 }
 
-double q_pdfview_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QPdfView_QBaseGetDecodedMetricF((QPdfView*)self, metricA, metricB);
+double q_pdfview_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QPdfView_SuperGetDecodedMetricF((QPdfView*)self, metricA, metricB);
 }
 
 void q_pdfview_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -34,8 +34,8 @@ void k_fileitemdelegate_on_meta_object(void* self, const QMetaObject* (*callback
     KFileItemDelegate_OnMetaObject((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_fileitemdelegate_qbase_meta_object(void* self) {
-    return KFileItemDelegate_QBaseMetaObject((KFileItemDelegate*)self);
+const QMetaObject* k_fileitemdelegate_super_meta_object(void* self) {
+    return KFileItemDelegate_SuperMetaObject((KFileItemDelegate*)self);
 }
 
 void* k_fileitemdelegate_metacast(void* self, const char* param1) {
@@ -46,8 +46,8 @@ void k_fileitemdelegate_on_metacast(void* self, void* (*callback)(void*, const c
     KFileItemDelegate_OnMetacast((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-void* k_fileitemdelegate_qbase_metacast(void* self, const char* param1) {
-    return KFileItemDelegate_QBaseMetacast((KFileItemDelegate*)self, param1);
+void* k_fileitemdelegate_super_metacast(void* self, const char* param1) {
+    return KFileItemDelegate_SuperMetacast((KFileItemDelegate*)self, param1);
 }
 
 int32_t k_fileitemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -58,8 +58,8 @@ void k_fileitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int32
     KFileItemDelegate_OnMetacall((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-int32_t k_fileitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KFileItemDelegate_QBaseMetacall((KFileItemDelegate*)self, param1, param2, param3);
+int32_t k_fileitemdelegate_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KFileItemDelegate_SuperMetacall((KFileItemDelegate*)self, param1, param2, param3);
 }
 
 const char* k_fileitemdelegate_tr(const char* s) {
@@ -77,8 +77,8 @@ void k_fileitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*
     KFileItemDelegate_OnSizeHint((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-QSize* k_fileitemdelegate_qbase_size_hint(void* self, void* option, void* index) {
-    return KFileItemDelegate_QBaseSizeHint((KFileItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+QSize* k_fileitemdelegate_super_size_hint(void* self, void* option, void* index) {
+    return KFileItemDelegate_SuperSizeHint((KFileItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_fileitemdelegate_paint(void* self, void* painter, void* option, void* index) {
@@ -89,8 +89,8 @@ void k_fileitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void
     KFileItemDelegate_OnPaint((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_fileitemdelegate_qbase_paint(void* self, void* painter, void* option, void* index) {
-    KFileItemDelegate_QBasePaint((KFileItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+void k_fileitemdelegate_super_paint(void* self, void* painter, void* option, void* index) {
+    KFileItemDelegate_SuperPaint((KFileItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 QWidget* k_fileitemdelegate_create_editor(void* self, void* parent, void* option, void* index) {
@@ -101,8 +101,8 @@ void k_fileitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*,
     KFileItemDelegate_OnCreateEditor((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-QWidget* k_fileitemdelegate_qbase_create_editor(void* self, void* parent, void* option, void* index) {
-    return KFileItemDelegate_QBaseCreateEditor((KFileItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+QWidget* k_fileitemdelegate_super_create_editor(void* self, void* parent, void* option, void* index) {
+    return KFileItemDelegate_SuperCreateEditor((KFileItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 bool k_fileitemdelegate_editor_event(void* self, void* event, void* model, void* option, void* index) {
@@ -113,8 +113,8 @@ void k_fileitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void
     KFileItemDelegate_OnEditorEvent((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-bool k_fileitemdelegate_qbase_editor_event(void* self, void* event, void* model, void* option, void* index) {
-    return KFileItemDelegate_QBaseEditorEvent((KFileItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+bool k_fileitemdelegate_super_editor_event(void* self, void* event, void* model, void* option, void* index) {
+    return KFileItemDelegate_SuperEditorEvent((KFileItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_fileitemdelegate_set_editor_data(void* self, void* editor, void* index) {
@@ -125,8 +125,8 @@ void k_fileitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, v
     KFileItemDelegate_OnSetEditorData((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_fileitemdelegate_qbase_set_editor_data(void* self, void* editor, void* index) {
-    KFileItemDelegate_QBaseSetEditorData((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
+void k_fileitemdelegate_super_set_editor_data(void* self, void* editor, void* index) {
+    KFileItemDelegate_SuperSetEditorData((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
 void k_fileitemdelegate_set_model_data(void* self, void* editor, void* model, void* index) {
@@ -137,8 +137,8 @@ void k_fileitemdelegate_on_set_model_data(void* self, void (*callback)(void*, vo
     KFileItemDelegate_OnSetModelData((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_fileitemdelegate_qbase_set_model_data(void* self, void* editor, void* model, void* index) {
-    KFileItemDelegate_QBaseSetModelData((KFileItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
+void k_fileitemdelegate_super_set_model_data(void* self, void* editor, void* model, void* index) {
+    KFileItemDelegate_SuperSetModelData((KFileItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
 void k_fileitemdelegate_update_editor_geometry(void* self, void* editor, void* option, void* index) {
@@ -149,8 +149,8 @@ void k_fileitemdelegate_on_update_editor_geometry(void* self, void (*callback)(v
     KFileItemDelegate_OnUpdateEditorGeometry((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_fileitemdelegate_qbase_update_editor_geometry(void* self, void* editor, void* option, void* index) {
-    KFileItemDelegate_QBaseUpdateEditorGeometry((KFileItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+void k_fileitemdelegate_super_update_editor_geometry(void* self, void* editor, void* option, void* index) {
+    KFileItemDelegate_SuperUpdateEditorGeometry((KFileItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_fileitemdelegate_set_show_information(void* self, libqt_list /* of enum KFileItemDelegate__Information */ list) {
@@ -234,8 +234,8 @@ void k_fileitemdelegate_on_event_filter(void* self, bool (*callback)(void*, void
     KFileItemDelegate_OnEventFilter((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-bool k_fileitemdelegate_qbase_event_filter(void* self, void* object, void* event) {
-    return KFileItemDelegate_QBaseEventFilter((KFileItemDelegate*)self, (QObject*)object, (QEvent*)event);
+bool k_fileitemdelegate_super_event_filter(void* self, void* object, void* event) {
+    return KFileItemDelegate_SuperEventFilter((KFileItemDelegate*)self, (QObject*)object, (QEvent*)event);
 }
 
 QRect* k_fileitemdelegate_selection_emblem_rect(void* self) {
@@ -258,8 +258,8 @@ void k_fileitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*,
     KFileItemDelegate_OnHelpEvent((KFileItemDelegate*)self, (intptr_t)callback);
 }
 
-bool k_fileitemdelegate_qbase_help_event(void* self, void* event, void* view, void* option, void* index) {
-    return KFileItemDelegate_QBaseHelpEvent((KFileItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+bool k_fileitemdelegate_super_help_event(void* self, void* event, void* view, void* option, void* index) {
+    return KFileItemDelegate_SuperHelpEvent((KFileItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 QRegion* k_fileitemdelegate_shape(void* self, void* option, void* index) {
@@ -527,8 +527,8 @@ void k_fileitemdelegate_destroy_editor(void* self, void* editor, void* index) {
     KFileItemDelegate_DestroyEditor((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_fileitemdelegate_qbase_destroy_editor(void* self, void* editor, void* index) {
-    KFileItemDelegate_QBaseDestroyEditor((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
+void k_fileitemdelegate_super_destroy_editor(void* self, void* editor, void* index) {
+    KFileItemDelegate_SuperDestroyEditor((KFileItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
 void k_fileitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, void*, void*)) {
@@ -540,8 +540,8 @@ libqt_list /* of int */ k_fileitemdelegate_painting_roles(void* self) {
     return _arr;
 }
 
-libqt_list /* of int */ k_fileitemdelegate_qbase_painting_roles(void* self) {
-    libqt_list _arr = KFileItemDelegate_QBasePaintingRoles((KFileItemDelegate*)self);
+libqt_list /* of int */ k_fileitemdelegate_super_painting_roles(void* self) {
+    libqt_list _arr = KFileItemDelegate_SuperPaintingRoles((KFileItemDelegate*)self);
     return _arr;
 }
 
@@ -553,8 +553,8 @@ bool k_fileitemdelegate_event(void* self, void* event) {
     return KFileItemDelegate_Event((KFileItemDelegate*)self, (QEvent*)event);
 }
 
-bool k_fileitemdelegate_qbase_event(void* self, void* event) {
-    return KFileItemDelegate_QBaseEvent((KFileItemDelegate*)self, (QEvent*)event);
+bool k_fileitemdelegate_super_event(void* self, void* event) {
+    return KFileItemDelegate_SuperEvent((KFileItemDelegate*)self, (QEvent*)event);
 }
 
 void k_fileitemdelegate_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -565,8 +565,8 @@ void k_fileitemdelegate_timer_event(void* self, void* event) {
     KFileItemDelegate_TimerEvent((KFileItemDelegate*)self, (QTimerEvent*)event);
 }
 
-void k_fileitemdelegate_qbase_timer_event(void* self, void* event) {
-    KFileItemDelegate_QBaseTimerEvent((KFileItemDelegate*)self, (QTimerEvent*)event);
+void k_fileitemdelegate_super_timer_event(void* self, void* event) {
+    KFileItemDelegate_SuperTimerEvent((KFileItemDelegate*)self, (QTimerEvent*)event);
 }
 
 void k_fileitemdelegate_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -577,8 +577,8 @@ void k_fileitemdelegate_child_event(void* self, void* event) {
     KFileItemDelegate_ChildEvent((KFileItemDelegate*)self, (QChildEvent*)event);
 }
 
-void k_fileitemdelegate_qbase_child_event(void* self, void* event) {
-    KFileItemDelegate_QBaseChildEvent((KFileItemDelegate*)self, (QChildEvent*)event);
+void k_fileitemdelegate_super_child_event(void* self, void* event) {
+    KFileItemDelegate_SuperChildEvent((KFileItemDelegate*)self, (QChildEvent*)event);
 }
 
 void k_fileitemdelegate_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -589,8 +589,8 @@ void k_fileitemdelegate_custom_event(void* self, void* event) {
     KFileItemDelegate_CustomEvent((KFileItemDelegate*)self, (QEvent*)event);
 }
 
-void k_fileitemdelegate_qbase_custom_event(void* self, void* event) {
-    KFileItemDelegate_QBaseCustomEvent((KFileItemDelegate*)self, (QEvent*)event);
+void k_fileitemdelegate_super_custom_event(void* self, void* event) {
+    KFileItemDelegate_SuperCustomEvent((KFileItemDelegate*)self, (QEvent*)event);
 }
 
 void k_fileitemdelegate_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -601,8 +601,8 @@ void k_fileitemdelegate_connect_notify(void* self, void* signal) {
     KFileItemDelegate_ConnectNotify((KFileItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-void k_fileitemdelegate_qbase_connect_notify(void* self, void* signal) {
-    KFileItemDelegate_QBaseConnectNotify((KFileItemDelegate*)self, (QMetaMethod*)signal);
+void k_fileitemdelegate_super_connect_notify(void* self, void* signal) {
+    KFileItemDelegate_SuperConnectNotify((KFileItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_fileitemdelegate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -613,8 +613,8 @@ void k_fileitemdelegate_disconnect_notify(void* self, void* signal) {
     KFileItemDelegate_DisconnectNotify((KFileItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-void k_fileitemdelegate_qbase_disconnect_notify(void* self, void* signal) {
-    KFileItemDelegate_QBaseDisconnectNotify((KFileItemDelegate*)self, (QMetaMethod*)signal);
+void k_fileitemdelegate_super_disconnect_notify(void* self, void* signal) {
+    KFileItemDelegate_SuperDisconnectNotify((KFileItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_fileitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -625,8 +625,8 @@ QObject* k_fileitemdelegate_sender(void* self) {
     return KFileItemDelegate_Sender((KFileItemDelegate*)self);
 }
 
-QObject* k_fileitemdelegate_qbase_sender(void* self) {
-    return KFileItemDelegate_QBaseSender((KFileItemDelegate*)self);
+QObject* k_fileitemdelegate_super_sender(void* self) {
+    return KFileItemDelegate_SuperSender((KFileItemDelegate*)self);
 }
 
 void k_fileitemdelegate_on_sender(void* self, QObject* (*callback)()) {
@@ -637,8 +637,8 @@ int32_t k_fileitemdelegate_sender_signal_index(void* self) {
     return KFileItemDelegate_SenderSignalIndex((KFileItemDelegate*)self);
 }
 
-int32_t k_fileitemdelegate_qbase_sender_signal_index(void* self) {
-    return KFileItemDelegate_QBaseSenderSignalIndex((KFileItemDelegate*)self);
+int32_t k_fileitemdelegate_super_sender_signal_index(void* self) {
+    return KFileItemDelegate_SuperSenderSignalIndex((KFileItemDelegate*)self);
 }
 
 void k_fileitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -649,8 +649,8 @@ int32_t k_fileitemdelegate_receivers(void* self, const char* signal) {
     return KFileItemDelegate_Receivers((KFileItemDelegate*)self, signal);
 }
 
-int32_t k_fileitemdelegate_qbase_receivers(void* self, const char* signal) {
-    return KFileItemDelegate_QBaseReceivers((KFileItemDelegate*)self, signal);
+int32_t k_fileitemdelegate_super_receivers(void* self, const char* signal) {
+    return KFileItemDelegate_SuperReceivers((KFileItemDelegate*)self, signal);
 }
 
 void k_fileitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -661,8 +661,8 @@ bool k_fileitemdelegate_is_signal_connected(void* self, void* signal) {
     return KFileItemDelegate_IsSignalConnected((KFileItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-bool k_fileitemdelegate_qbase_is_signal_connected(void* self, void* signal) {
-    return KFileItemDelegate_QBaseIsSignalConnected((KFileItemDelegate*)self, (QMetaMethod*)signal);
+bool k_fileitemdelegate_super_is_signal_connected(void* self, void* signal) {
+    return KFileItemDelegate_SuperIsSignalConnected((KFileItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_fileitemdelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -39,8 +39,8 @@ void q_candlestickset_on_meta_object(void* self, const QMetaObject* (*callback)(
     QCandlestickSet_OnMetaObject((QCandlestickSet*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_candlestickset_qbase_meta_object(void* self) {
-    return QCandlestickSet_QBaseMetaObject((QCandlestickSet*)self);
+const QMetaObject* q_candlestickset_super_meta_object(void* self) {
+    return QCandlestickSet_SuperMetaObject((QCandlestickSet*)self);
 }
 
 void* q_candlestickset_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_candlestickset_on_metacast(void* self, void* (*callback)(void*, const cha
     QCandlestickSet_OnMetacast((QCandlestickSet*)self, (intptr_t)callback);
 }
 
-void* q_candlestickset_qbase_metacast(void* self, const char* param1) {
-    return QCandlestickSet_QBaseMetacast((QCandlestickSet*)self, param1);
+void* q_candlestickset_super_metacast(void* self, const char* param1) {
+    return QCandlestickSet_SuperMetacast((QCandlestickSet*)self, param1);
 }
 
 int32_t q_candlestickset_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_candlestickset_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QCandlestickSet_OnMetacall((QCandlestickSet*)self, (intptr_t)callback);
 }
 
-int32_t q_candlestickset_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCandlestickSet_QBaseMetacall((QCandlestickSet*)self, param1, param2, param3);
+int32_t q_candlestickset_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCandlestickSet_SuperMetacall((QCandlestickSet*)self, param1, param2, param3);
 }
 
 const char* q_candlestickset_tr(const char* s) {
@@ -455,8 +455,8 @@ bool q_candlestickset_event(void* self, void* event) {
     return QCandlestickSet_Event((QCandlestickSet*)self, (QEvent*)event);
 }
 
-bool q_candlestickset_qbase_event(void* self, void* event) {
-    return QCandlestickSet_QBaseEvent((QCandlestickSet*)self, (QEvent*)event);
+bool q_candlestickset_super_event(void* self, void* event) {
+    return QCandlestickSet_SuperEvent((QCandlestickSet*)self, (QEvent*)event);
 }
 
 void q_candlestickset_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ bool q_candlestickset_event_filter(void* self, void* watched, void* event) {
     return QCandlestickSet_EventFilter((QCandlestickSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_candlestickset_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCandlestickSet_QBaseEventFilter((QCandlestickSet*)self, (QObject*)watched, (QEvent*)event);
+bool q_candlestickset_super_event_filter(void* self, void* watched, void* event) {
+    return QCandlestickSet_SuperEventFilter((QCandlestickSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_candlestickset_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -479,8 +479,8 @@ void q_candlestickset_timer_event(void* self, void* event) {
     QCandlestickSet_TimerEvent((QCandlestickSet*)self, (QTimerEvent*)event);
 }
 
-void q_candlestickset_qbase_timer_event(void* self, void* event) {
-    QCandlestickSet_QBaseTimerEvent((QCandlestickSet*)self, (QTimerEvent*)event);
+void q_candlestickset_super_timer_event(void* self, void* event) {
+    QCandlestickSet_SuperTimerEvent((QCandlestickSet*)self, (QTimerEvent*)event);
 }
 
 void q_candlestickset_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_candlestickset_child_event(void* self, void* event) {
     QCandlestickSet_ChildEvent((QCandlestickSet*)self, (QChildEvent*)event);
 }
 
-void q_candlestickset_qbase_child_event(void* self, void* event) {
-    QCandlestickSet_QBaseChildEvent((QCandlestickSet*)self, (QChildEvent*)event);
+void q_candlestickset_super_child_event(void* self, void* event) {
+    QCandlestickSet_SuperChildEvent((QCandlestickSet*)self, (QChildEvent*)event);
 }
 
 void q_candlestickset_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_candlestickset_custom_event(void* self, void* event) {
     QCandlestickSet_CustomEvent((QCandlestickSet*)self, (QEvent*)event);
 }
 
-void q_candlestickset_qbase_custom_event(void* self, void* event) {
-    QCandlestickSet_QBaseCustomEvent((QCandlestickSet*)self, (QEvent*)event);
+void q_candlestickset_super_custom_event(void* self, void* event) {
+    QCandlestickSet_SuperCustomEvent((QCandlestickSet*)self, (QEvent*)event);
 }
 
 void q_candlestickset_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ void q_candlestickset_connect_notify(void* self, void* signal) {
     QCandlestickSet_ConnectNotify((QCandlestickSet*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickset_qbase_connect_notify(void* self, void* signal) {
-    QCandlestickSet_QBaseConnectNotify((QCandlestickSet*)self, (QMetaMethod*)signal);
+void q_candlestickset_super_connect_notify(void* self, void* signal) {
+    QCandlestickSet_SuperConnectNotify((QCandlestickSet*)self, (QMetaMethod*)signal);
 }
 
 void q_candlestickset_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -527,8 +527,8 @@ void q_candlestickset_disconnect_notify(void* self, void* signal) {
     QCandlestickSet_DisconnectNotify((QCandlestickSet*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickset_qbase_disconnect_notify(void* self, void* signal) {
-    QCandlestickSet_QBaseDisconnectNotify((QCandlestickSet*)self, (QMetaMethod*)signal);
+void q_candlestickset_super_disconnect_notify(void* self, void* signal) {
+    QCandlestickSet_SuperDisconnectNotify((QCandlestickSet*)self, (QMetaMethod*)signal);
 }
 
 void q_candlestickset_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -539,8 +539,8 @@ QObject* q_candlestickset_sender(void* self) {
     return QCandlestickSet_Sender((QCandlestickSet*)self);
 }
 
-QObject* q_candlestickset_qbase_sender(void* self) {
-    return QCandlestickSet_QBaseSender((QCandlestickSet*)self);
+QObject* q_candlestickset_super_sender(void* self) {
+    return QCandlestickSet_SuperSender((QCandlestickSet*)self);
 }
 
 void q_candlestickset_on_sender(void* self, QObject* (*callback)()) {
@@ -551,8 +551,8 @@ int32_t q_candlestickset_sender_signal_index(void* self) {
     return QCandlestickSet_SenderSignalIndex((QCandlestickSet*)self);
 }
 
-int32_t q_candlestickset_qbase_sender_signal_index(void* self) {
-    return QCandlestickSet_QBaseSenderSignalIndex((QCandlestickSet*)self);
+int32_t q_candlestickset_super_sender_signal_index(void* self) {
+    return QCandlestickSet_SuperSenderSignalIndex((QCandlestickSet*)self);
 }
 
 void q_candlestickset_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -563,8 +563,8 @@ int32_t q_candlestickset_receivers(void* self, const char* signal) {
     return QCandlestickSet_Receivers((QCandlestickSet*)self, signal);
 }
 
-int32_t q_candlestickset_qbase_receivers(void* self, const char* signal) {
-    return QCandlestickSet_QBaseReceivers((QCandlestickSet*)self, signal);
+int32_t q_candlestickset_super_receivers(void* self, const char* signal) {
+    return QCandlestickSet_SuperReceivers((QCandlestickSet*)self, signal);
 }
 
 void q_candlestickset_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -575,8 +575,8 @@ bool q_candlestickset_is_signal_connected(void* self, void* signal) {
     return QCandlestickSet_IsSignalConnected((QCandlestickSet*)self, (QMetaMethod*)signal);
 }
 
-bool q_candlestickset_qbase_is_signal_connected(void* self, void* signal) {
-    return QCandlestickSet_QBaseIsSignalConnected((QCandlestickSet*)self, (QMetaMethod*)signal);
+bool q_candlestickset_super_is_signal_connected(void* self, void* signal) {
+    return QCandlestickSet_SuperIsSignalConnected((QCandlestickSet*)self, (QMetaMethod*)signal);
 }
 
 void q_candlestickset_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

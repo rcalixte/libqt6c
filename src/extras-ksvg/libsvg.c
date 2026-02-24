@@ -29,8 +29,8 @@ void k_svg__svg_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KSvg__Svg_OnMetaObject((KSvg__Svg*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_svg__svg_qbase_meta_object(void* self) {
-    return KSvg__Svg_QBaseMetaObject((KSvg__Svg*)self);
+const QMetaObject* k_svg__svg_super_meta_object(void* self) {
+    return KSvg__Svg_SuperMetaObject((KSvg__Svg*)self);
 }
 
 void* k_svg__svg_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_svg__svg_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KSvg__Svg_OnMetacast((KSvg__Svg*)self, (intptr_t)callback);
 }
 
-void* k_svg__svg_qbase_metacast(void* self, const char* param1) {
-    return KSvg__Svg_QBaseMetacast((KSvg__Svg*)self, param1);
+void* k_svg__svg_super_metacast(void* self, const char* param1) {
+    return KSvg__Svg_SuperMetacast((KSvg__Svg*)self, param1);
 }
 
 int32_t k_svg__svg_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_svg__svg_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KSvg__Svg_OnMetacall((KSvg__Svg*)self, (intptr_t)callback);
 }
 
-int32_t k_svg__svg_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSvg__Svg_QBaseMetacall((KSvg__Svg*)self, param1, param2, param3);
+int32_t k_svg__svg_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSvg__Svg_SuperMetacall((KSvg__Svg*)self, param1, param2, param3);
 }
 
 const char* k_svg__svg_tr(const char* s) {
@@ -144,8 +144,8 @@ void k_svg__svg_on_set_image_path(void* self, void (*callback)(void*, const char
     KSvg__Svg_OnSetImagePath((KSvg__Svg*)self, (intptr_t)callback);
 }
 
-void k_svg__svg_qbase_set_image_path(void* self, const char* svgFilePath) {
-    KSvg__Svg_QBaseSetImagePath((KSvg__Svg*)self, qstring(svgFilePath));
+void k_svg__svg_super_set_image_path(void* self, const char* svgFilePath) {
+    KSvg__Svg_SuperSetImagePath((KSvg__Svg*)self, qstring(svgFilePath));
 }
 
 const char* k_svg__svg_image_path(void* self) {
@@ -313,8 +313,8 @@ void k_svg__svg_on_event_filter(void* self, bool (*callback)(void*, void*, void*
     QObject_OnEventFilter((QObject*)self, (intptr_t)callback);
 }
 
-bool k_svg__svg_qbase_event_filter(void* self, void* watched, void* event) {
-    return QObject_QBaseEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
+bool k_svg__svg_super_event_filter(void* self, void* watched, void* event) {
+    return QObject_SuperEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* k_svg__svg_object_name(void* self) {
@@ -532,8 +532,8 @@ bool k_svg__svg_event(void* self, void* event) {
     return KSvg__Svg_Event((KSvg__Svg*)self, (QEvent*)event);
 }
 
-bool k_svg__svg_qbase_event(void* self, void* event) {
-    return KSvg__Svg_QBaseEvent((KSvg__Svg*)self, (QEvent*)event);
+bool k_svg__svg_super_event(void* self, void* event) {
+    return KSvg__Svg_SuperEvent((KSvg__Svg*)self, (QEvent*)event);
 }
 
 void k_svg__svg_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -544,8 +544,8 @@ void k_svg__svg_timer_event(void* self, void* event) {
     KSvg__Svg_TimerEvent((KSvg__Svg*)self, (QTimerEvent*)event);
 }
 
-void k_svg__svg_qbase_timer_event(void* self, void* event) {
-    KSvg__Svg_QBaseTimerEvent((KSvg__Svg*)self, (QTimerEvent*)event);
+void k_svg__svg_super_timer_event(void* self, void* event) {
+    KSvg__Svg_SuperTimerEvent((KSvg__Svg*)self, (QTimerEvent*)event);
 }
 
 void k_svg__svg_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -556,8 +556,8 @@ void k_svg__svg_child_event(void* self, void* event) {
     KSvg__Svg_ChildEvent((KSvg__Svg*)self, (QChildEvent*)event);
 }
 
-void k_svg__svg_qbase_child_event(void* self, void* event) {
-    KSvg__Svg_QBaseChildEvent((KSvg__Svg*)self, (QChildEvent*)event);
+void k_svg__svg_super_child_event(void* self, void* event) {
+    KSvg__Svg_SuperChildEvent((KSvg__Svg*)self, (QChildEvent*)event);
 }
 
 void k_svg__svg_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -568,8 +568,8 @@ void k_svg__svg_custom_event(void* self, void* event) {
     KSvg__Svg_CustomEvent((KSvg__Svg*)self, (QEvent*)event);
 }
 
-void k_svg__svg_qbase_custom_event(void* self, void* event) {
-    KSvg__Svg_QBaseCustomEvent((KSvg__Svg*)self, (QEvent*)event);
+void k_svg__svg_super_custom_event(void* self, void* event) {
+    KSvg__Svg_SuperCustomEvent((KSvg__Svg*)self, (QEvent*)event);
 }
 
 void k_svg__svg_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -580,8 +580,8 @@ void k_svg__svg_connect_notify(void* self, void* signal) {
     KSvg__Svg_ConnectNotify((KSvg__Svg*)self, (QMetaMethod*)signal);
 }
 
-void k_svg__svg_qbase_connect_notify(void* self, void* signal) {
-    KSvg__Svg_QBaseConnectNotify((KSvg__Svg*)self, (QMetaMethod*)signal);
+void k_svg__svg_super_connect_notify(void* self, void* signal) {
+    KSvg__Svg_SuperConnectNotify((KSvg__Svg*)self, (QMetaMethod*)signal);
 }
 
 void k_svg__svg_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -592,8 +592,8 @@ void k_svg__svg_disconnect_notify(void* self, void* signal) {
     KSvg__Svg_DisconnectNotify((KSvg__Svg*)self, (QMetaMethod*)signal);
 }
 
-void k_svg__svg_qbase_disconnect_notify(void* self, void* signal) {
-    KSvg__Svg_QBaseDisconnectNotify((KSvg__Svg*)self, (QMetaMethod*)signal);
+void k_svg__svg_super_disconnect_notify(void* self, void* signal) {
+    KSvg__Svg_SuperDisconnectNotify((KSvg__Svg*)self, (QMetaMethod*)signal);
 }
 
 void k_svg__svg_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -604,8 +604,8 @@ QObject* k_svg__svg_sender(void* self) {
     return KSvg__Svg_Sender((KSvg__Svg*)self);
 }
 
-QObject* k_svg__svg_qbase_sender(void* self) {
-    return KSvg__Svg_QBaseSender((KSvg__Svg*)self);
+QObject* k_svg__svg_super_sender(void* self) {
+    return KSvg__Svg_SuperSender((KSvg__Svg*)self);
 }
 
 void k_svg__svg_on_sender(void* self, QObject* (*callback)()) {
@@ -616,8 +616,8 @@ int32_t k_svg__svg_sender_signal_index(void* self) {
     return KSvg__Svg_SenderSignalIndex((KSvg__Svg*)self);
 }
 
-int32_t k_svg__svg_qbase_sender_signal_index(void* self) {
-    return KSvg__Svg_QBaseSenderSignalIndex((KSvg__Svg*)self);
+int32_t k_svg__svg_super_sender_signal_index(void* self) {
+    return KSvg__Svg_SuperSenderSignalIndex((KSvg__Svg*)self);
 }
 
 void k_svg__svg_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -628,8 +628,8 @@ int32_t k_svg__svg_receivers(void* self, const char* signal) {
     return KSvg__Svg_Receivers((KSvg__Svg*)self, signal);
 }
 
-int32_t k_svg__svg_qbase_receivers(void* self, const char* signal) {
-    return KSvg__Svg_QBaseReceivers((KSvg__Svg*)self, signal);
+int32_t k_svg__svg_super_receivers(void* self, const char* signal) {
+    return KSvg__Svg_SuperReceivers((KSvg__Svg*)self, signal);
 }
 
 void k_svg__svg_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -640,8 +640,8 @@ bool k_svg__svg_is_signal_connected(void* self, void* signal) {
     return KSvg__Svg_IsSignalConnected((KSvg__Svg*)self, (QMetaMethod*)signal);
 }
 
-bool k_svg__svg_qbase_is_signal_connected(void* self, void* signal) {
-    return KSvg__Svg_QBaseIsSignalConnected((KSvg__Svg*)self, (QMetaMethod*)signal);
+bool k_svg__svg_super_is_signal_connected(void* self, void* signal) {
+    return KSvg__Svg_SuperIsSignalConnected((KSvg__Svg*)self, (QMetaMethod*)signal);
 }
 
 void k_svg__svg_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -39,8 +39,8 @@ void q_pagesetupdialog_on_meta_object(void* self, const QMetaObject* (*callback)
     QPageSetupDialog_OnMetaObject((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pagesetupdialog_qbase_meta_object(void* self) {
-    return QPageSetupDialog_QBaseMetaObject((QPageSetupDialog*)self);
+const QMetaObject* q_pagesetupdialog_super_meta_object(void* self) {
+    return QPageSetupDialog_SuperMetaObject((QPageSetupDialog*)self);
 }
 
 void* q_pagesetupdialog_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_pagesetupdialog_on_metacast(void* self, void* (*callback)(void*, const ch
     QPageSetupDialog_OnMetacast((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
-void* q_pagesetupdialog_qbase_metacast(void* self, const char* param1) {
-    return QPageSetupDialog_QBaseMetacast((QPageSetupDialog*)self, param1);
+void* q_pagesetupdialog_super_metacast(void* self, const char* param1) {
+    return QPageSetupDialog_SuperMetacast((QPageSetupDialog*)self, param1);
 }
 
 int32_t q_pagesetupdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_pagesetupdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_
     QPageSetupDialog_OnMetacall((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_pagesetupdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPageSetupDialog_QBaseMetacall((QPageSetupDialog*)self, param1, param2, param3);
+int32_t q_pagesetupdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPageSetupDialog_SuperMetacall((QPageSetupDialog*)self, param1, param2, param3);
 }
 
 const char* q_pagesetupdialog_tr(const char* s) {
@@ -82,8 +82,8 @@ void q_pagesetupdialog_on_exec(void* self, int32_t (*callback)()) {
     QPageSetupDialog_OnExec((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
-int32_t q_pagesetupdialog_qbase_exec(void* self) {
-    return QPageSetupDialog_QBaseExec((QPageSetupDialog*)self);
+int32_t q_pagesetupdialog_super_exec(void* self) {
+    return QPageSetupDialog_SuperExec((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_done(void* self, int result) {
@@ -94,8 +94,8 @@ void q_pagesetupdialog_on_done(void* self, void (*callback)(void*, int)) {
     QPageSetupDialog_OnDone((QPageSetupDialog*)self, (intptr_t)callback);
 }
 
-void q_pagesetupdialog_qbase_done(void* self, int result) {
-    QPageSetupDialog_QBaseDone((QPageSetupDialog*)self, result);
+void q_pagesetupdialog_super_done(void* self, int result) {
+    QPageSetupDialog_SuperDone((QPageSetupDialog*)self, result);
 }
 
 QPrinter* q_pagesetupdialog_printer(void* self) {
@@ -1545,8 +1545,8 @@ void q_pagesetupdialog_set_visible(void* self, bool visible) {
     QPageSetupDialog_SetVisible((QPageSetupDialog*)self, visible);
 }
 
-void q_pagesetupdialog_qbase_set_visible(void* self, bool visible) {
-    QPageSetupDialog_QBaseSetVisible((QPageSetupDialog*)self, visible);
+void q_pagesetupdialog_super_set_visible(void* self, bool visible) {
+    QPageSetupDialog_SuperSetVisible((QPageSetupDialog*)self, visible);
 }
 
 void q_pagesetupdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1557,8 +1557,8 @@ QSize* q_pagesetupdialog_size_hint(void* self) {
     return QPageSetupDialog_SizeHint((QPageSetupDialog*)self);
 }
 
-QSize* q_pagesetupdialog_qbase_size_hint(void* self) {
-    return QPageSetupDialog_QBaseSizeHint((QPageSetupDialog*)self);
+QSize* q_pagesetupdialog_super_size_hint(void* self) {
+    return QPageSetupDialog_SuperSizeHint((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1569,8 +1569,8 @@ QSize* q_pagesetupdialog_minimum_size_hint(void* self) {
     return QPageSetupDialog_MinimumSizeHint((QPageSetupDialog*)self);
 }
 
-QSize* q_pagesetupdialog_qbase_minimum_size_hint(void* self) {
-    return QPageSetupDialog_QBaseMinimumSizeHint((QPageSetupDialog*)self);
+QSize* q_pagesetupdialog_super_minimum_size_hint(void* self) {
+    return QPageSetupDialog_SuperMinimumSizeHint((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1581,8 +1581,8 @@ void q_pagesetupdialog_open(void* self) {
     QPageSetupDialog_Open((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_qbase_open(void* self) {
-    QPageSetupDialog_QBaseOpen((QPageSetupDialog*)self);
+void q_pagesetupdialog_super_open(void* self) {
+    QPageSetupDialog_SuperOpen((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_open(void* self, void (*callback)()) {
@@ -1593,8 +1593,8 @@ void q_pagesetupdialog_accept(void* self) {
     QPageSetupDialog_Accept((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_qbase_accept(void* self) {
-    QPageSetupDialog_QBaseAccept((QPageSetupDialog*)self);
+void q_pagesetupdialog_super_accept(void* self) {
+    QPageSetupDialog_SuperAccept((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_accept(void* self, void (*callback)()) {
@@ -1605,8 +1605,8 @@ void q_pagesetupdialog_reject(void* self) {
     QPageSetupDialog_Reject((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_qbase_reject(void* self) {
-    QPageSetupDialog_QBaseReject((QPageSetupDialog*)self);
+void q_pagesetupdialog_super_reject(void* self) {
+    QPageSetupDialog_SuperReject((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_reject(void* self, void (*callback)()) {
@@ -1617,8 +1617,8 @@ void q_pagesetupdialog_key_press_event(void* self, void* param1) {
     QPageSetupDialog_KeyPressEvent((QPageSetupDialog*)self, (QKeyEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_key_press_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseKeyPressEvent((QPageSetupDialog*)self, (QKeyEvent*)param1);
+void q_pagesetupdialog_super_key_press_event(void* self, void* param1) {
+    QPageSetupDialog_SuperKeyPressEvent((QPageSetupDialog*)self, (QKeyEvent*)param1);
 }
 
 void q_pagesetupdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1629,8 +1629,8 @@ void q_pagesetupdialog_close_event(void* self, void* param1) {
     QPageSetupDialog_CloseEvent((QPageSetupDialog*)self, (QCloseEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_close_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseCloseEvent((QPageSetupDialog*)self, (QCloseEvent*)param1);
+void q_pagesetupdialog_super_close_event(void* self, void* param1) {
+    QPageSetupDialog_SuperCloseEvent((QPageSetupDialog*)self, (QCloseEvent*)param1);
 }
 
 void q_pagesetupdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1641,8 +1641,8 @@ void q_pagesetupdialog_show_event(void* self, void* param1) {
     QPageSetupDialog_ShowEvent((QPageSetupDialog*)self, (QShowEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_show_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseShowEvent((QPageSetupDialog*)self, (QShowEvent*)param1);
+void q_pagesetupdialog_super_show_event(void* self, void* param1) {
+    QPageSetupDialog_SuperShowEvent((QPageSetupDialog*)self, (QShowEvent*)param1);
 }
 
 void q_pagesetupdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1653,8 +1653,8 @@ void q_pagesetupdialog_resize_event(void* self, void* param1) {
     QPageSetupDialog_ResizeEvent((QPageSetupDialog*)self, (QResizeEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_resize_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseResizeEvent((QPageSetupDialog*)self, (QResizeEvent*)param1);
+void q_pagesetupdialog_super_resize_event(void* self, void* param1) {
+    QPageSetupDialog_SuperResizeEvent((QPageSetupDialog*)self, (QResizeEvent*)param1);
 }
 
 void q_pagesetupdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1665,8 +1665,8 @@ void q_pagesetupdialog_context_menu_event(void* self, void* param1) {
     QPageSetupDialog_ContextMenuEvent((QPageSetupDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_context_menu_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseContextMenuEvent((QPageSetupDialog*)self, (QContextMenuEvent*)param1);
+void q_pagesetupdialog_super_context_menu_event(void* self, void* param1) {
+    QPageSetupDialog_SuperContextMenuEvent((QPageSetupDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void q_pagesetupdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1677,8 +1677,8 @@ bool q_pagesetupdialog_event_filter(void* self, void* param1, void* param2) {
     return QPageSetupDialog_EventFilter((QPageSetupDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool q_pagesetupdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return QPageSetupDialog_QBaseEventFilter((QPageSetupDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool q_pagesetupdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return QPageSetupDialog_SuperEventFilter((QPageSetupDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void q_pagesetupdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1689,8 +1689,8 @@ int32_t q_pagesetupdialog_dev_type(void* self) {
     return QPageSetupDialog_DevType((QPageSetupDialog*)self);
 }
 
-int32_t q_pagesetupdialog_qbase_dev_type(void* self) {
-    return QPageSetupDialog_QBaseDevType((QPageSetupDialog*)self);
+int32_t q_pagesetupdialog_super_dev_type(void* self) {
+    return QPageSetupDialog_SuperDevType((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1701,8 +1701,8 @@ int32_t q_pagesetupdialog_height_for_width(void* self, int param1) {
     return QPageSetupDialog_HeightForWidth((QPageSetupDialog*)self, param1);
 }
 
-int32_t q_pagesetupdialog_qbase_height_for_width(void* self, int param1) {
-    return QPageSetupDialog_QBaseHeightForWidth((QPageSetupDialog*)self, param1);
+int32_t q_pagesetupdialog_super_height_for_width(void* self, int param1) {
+    return QPageSetupDialog_SuperHeightForWidth((QPageSetupDialog*)self, param1);
 }
 
 void q_pagesetupdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1713,8 +1713,8 @@ bool q_pagesetupdialog_has_height_for_width(void* self) {
     return QPageSetupDialog_HasHeightForWidth((QPageSetupDialog*)self);
 }
 
-bool q_pagesetupdialog_qbase_has_height_for_width(void* self) {
-    return QPageSetupDialog_QBaseHasHeightForWidth((QPageSetupDialog*)self);
+bool q_pagesetupdialog_super_has_height_for_width(void* self) {
+    return QPageSetupDialog_SuperHasHeightForWidth((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1725,8 +1725,8 @@ QPaintEngine* q_pagesetupdialog_paint_engine(void* self) {
     return QPageSetupDialog_PaintEngine((QPageSetupDialog*)self);
 }
 
-QPaintEngine* q_pagesetupdialog_qbase_paint_engine(void* self) {
-    return QPageSetupDialog_QBasePaintEngine((QPageSetupDialog*)self);
+QPaintEngine* q_pagesetupdialog_super_paint_engine(void* self) {
+    return QPageSetupDialog_SuperPaintEngine((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1737,8 +1737,8 @@ bool q_pagesetupdialog_event(void* self, void* event) {
     return QPageSetupDialog_Event((QPageSetupDialog*)self, (QEvent*)event);
 }
 
-bool q_pagesetupdialog_qbase_event(void* self, void* event) {
-    return QPageSetupDialog_QBaseEvent((QPageSetupDialog*)self, (QEvent*)event);
+bool q_pagesetupdialog_super_event(void* self, void* event) {
+    return QPageSetupDialog_SuperEvent((QPageSetupDialog*)self, (QEvent*)event);
 }
 
 void q_pagesetupdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1749,8 +1749,8 @@ void q_pagesetupdialog_mouse_press_event(void* self, void* event) {
     QPageSetupDialog_MousePressEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_mouse_press_event(void* self, void* event) {
-    QPageSetupDialog_QBaseMousePressEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
+void q_pagesetupdialog_super_mouse_press_event(void* self, void* event) {
+    QPageSetupDialog_SuperMousePressEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
 void q_pagesetupdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1761,8 +1761,8 @@ void q_pagesetupdialog_mouse_release_event(void* self, void* event) {
     QPageSetupDialog_MouseReleaseEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_mouse_release_event(void* self, void* event) {
-    QPageSetupDialog_QBaseMouseReleaseEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
+void q_pagesetupdialog_super_mouse_release_event(void* self, void* event) {
+    QPageSetupDialog_SuperMouseReleaseEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
 void q_pagesetupdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1773,8 +1773,8 @@ void q_pagesetupdialog_mouse_double_click_event(void* self, void* event) {
     QPageSetupDialog_MouseDoubleClickEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    QPageSetupDialog_QBaseMouseDoubleClickEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
+void q_pagesetupdialog_super_mouse_double_click_event(void* self, void* event) {
+    QPageSetupDialog_SuperMouseDoubleClickEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
 void q_pagesetupdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1785,8 +1785,8 @@ void q_pagesetupdialog_mouse_move_event(void* self, void* event) {
     QPageSetupDialog_MouseMoveEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_mouse_move_event(void* self, void* event) {
-    QPageSetupDialog_QBaseMouseMoveEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
+void q_pagesetupdialog_super_mouse_move_event(void* self, void* event) {
+    QPageSetupDialog_SuperMouseMoveEvent((QPageSetupDialog*)self, (QMouseEvent*)event);
 }
 
 void q_pagesetupdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1797,8 +1797,8 @@ void q_pagesetupdialog_wheel_event(void* self, void* event) {
     QPageSetupDialog_WheelEvent((QPageSetupDialog*)self, (QWheelEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_wheel_event(void* self, void* event) {
-    QPageSetupDialog_QBaseWheelEvent((QPageSetupDialog*)self, (QWheelEvent*)event);
+void q_pagesetupdialog_super_wheel_event(void* self, void* event) {
+    QPageSetupDialog_SuperWheelEvent((QPageSetupDialog*)self, (QWheelEvent*)event);
 }
 
 void q_pagesetupdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1809,8 +1809,8 @@ void q_pagesetupdialog_key_release_event(void* self, void* event) {
     QPageSetupDialog_KeyReleaseEvent((QPageSetupDialog*)self, (QKeyEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_key_release_event(void* self, void* event) {
-    QPageSetupDialog_QBaseKeyReleaseEvent((QPageSetupDialog*)self, (QKeyEvent*)event);
+void q_pagesetupdialog_super_key_release_event(void* self, void* event) {
+    QPageSetupDialog_SuperKeyReleaseEvent((QPageSetupDialog*)self, (QKeyEvent*)event);
 }
 
 void q_pagesetupdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1821,8 +1821,8 @@ void q_pagesetupdialog_focus_in_event(void* self, void* event) {
     QPageSetupDialog_FocusInEvent((QPageSetupDialog*)self, (QFocusEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_focus_in_event(void* self, void* event) {
-    QPageSetupDialog_QBaseFocusInEvent((QPageSetupDialog*)self, (QFocusEvent*)event);
+void q_pagesetupdialog_super_focus_in_event(void* self, void* event) {
+    QPageSetupDialog_SuperFocusInEvent((QPageSetupDialog*)self, (QFocusEvent*)event);
 }
 
 void q_pagesetupdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1833,8 +1833,8 @@ void q_pagesetupdialog_focus_out_event(void* self, void* event) {
     QPageSetupDialog_FocusOutEvent((QPageSetupDialog*)self, (QFocusEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_focus_out_event(void* self, void* event) {
-    QPageSetupDialog_QBaseFocusOutEvent((QPageSetupDialog*)self, (QFocusEvent*)event);
+void q_pagesetupdialog_super_focus_out_event(void* self, void* event) {
+    QPageSetupDialog_SuperFocusOutEvent((QPageSetupDialog*)self, (QFocusEvent*)event);
 }
 
 void q_pagesetupdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1845,8 +1845,8 @@ void q_pagesetupdialog_enter_event(void* self, void* event) {
     QPageSetupDialog_EnterEvent((QPageSetupDialog*)self, (QEnterEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_enter_event(void* self, void* event) {
-    QPageSetupDialog_QBaseEnterEvent((QPageSetupDialog*)self, (QEnterEvent*)event);
+void q_pagesetupdialog_super_enter_event(void* self, void* event) {
+    QPageSetupDialog_SuperEnterEvent((QPageSetupDialog*)self, (QEnterEvent*)event);
 }
 
 void q_pagesetupdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1857,8 +1857,8 @@ void q_pagesetupdialog_leave_event(void* self, void* event) {
     QPageSetupDialog_LeaveEvent((QPageSetupDialog*)self, (QEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_leave_event(void* self, void* event) {
-    QPageSetupDialog_QBaseLeaveEvent((QPageSetupDialog*)self, (QEvent*)event);
+void q_pagesetupdialog_super_leave_event(void* self, void* event) {
+    QPageSetupDialog_SuperLeaveEvent((QPageSetupDialog*)self, (QEvent*)event);
 }
 
 void q_pagesetupdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1869,8 +1869,8 @@ void q_pagesetupdialog_paint_event(void* self, void* event) {
     QPageSetupDialog_PaintEvent((QPageSetupDialog*)self, (QPaintEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_paint_event(void* self, void* event) {
-    QPageSetupDialog_QBasePaintEvent((QPageSetupDialog*)self, (QPaintEvent*)event);
+void q_pagesetupdialog_super_paint_event(void* self, void* event) {
+    QPageSetupDialog_SuperPaintEvent((QPageSetupDialog*)self, (QPaintEvent*)event);
 }
 
 void q_pagesetupdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1881,8 +1881,8 @@ void q_pagesetupdialog_move_event(void* self, void* event) {
     QPageSetupDialog_MoveEvent((QPageSetupDialog*)self, (QMoveEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_move_event(void* self, void* event) {
-    QPageSetupDialog_QBaseMoveEvent((QPageSetupDialog*)self, (QMoveEvent*)event);
+void q_pagesetupdialog_super_move_event(void* self, void* event) {
+    QPageSetupDialog_SuperMoveEvent((QPageSetupDialog*)self, (QMoveEvent*)event);
 }
 
 void q_pagesetupdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1893,8 +1893,8 @@ void q_pagesetupdialog_tablet_event(void* self, void* event) {
     QPageSetupDialog_TabletEvent((QPageSetupDialog*)self, (QTabletEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_tablet_event(void* self, void* event) {
-    QPageSetupDialog_QBaseTabletEvent((QPageSetupDialog*)self, (QTabletEvent*)event);
+void q_pagesetupdialog_super_tablet_event(void* self, void* event) {
+    QPageSetupDialog_SuperTabletEvent((QPageSetupDialog*)self, (QTabletEvent*)event);
 }
 
 void q_pagesetupdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1905,8 +1905,8 @@ void q_pagesetupdialog_action_event(void* self, void* event) {
     QPageSetupDialog_ActionEvent((QPageSetupDialog*)self, (QActionEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_action_event(void* self, void* event) {
-    QPageSetupDialog_QBaseActionEvent((QPageSetupDialog*)self, (QActionEvent*)event);
+void q_pagesetupdialog_super_action_event(void* self, void* event) {
+    QPageSetupDialog_SuperActionEvent((QPageSetupDialog*)self, (QActionEvent*)event);
 }
 
 void q_pagesetupdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1917,8 +1917,8 @@ void q_pagesetupdialog_drag_enter_event(void* self, void* event) {
     QPageSetupDialog_DragEnterEvent((QPageSetupDialog*)self, (QDragEnterEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_drag_enter_event(void* self, void* event) {
-    QPageSetupDialog_QBaseDragEnterEvent((QPageSetupDialog*)self, (QDragEnterEvent*)event);
+void q_pagesetupdialog_super_drag_enter_event(void* self, void* event) {
+    QPageSetupDialog_SuperDragEnterEvent((QPageSetupDialog*)self, (QDragEnterEvent*)event);
 }
 
 void q_pagesetupdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1929,8 +1929,8 @@ void q_pagesetupdialog_drag_move_event(void* self, void* event) {
     QPageSetupDialog_DragMoveEvent((QPageSetupDialog*)self, (QDragMoveEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_drag_move_event(void* self, void* event) {
-    QPageSetupDialog_QBaseDragMoveEvent((QPageSetupDialog*)self, (QDragMoveEvent*)event);
+void q_pagesetupdialog_super_drag_move_event(void* self, void* event) {
+    QPageSetupDialog_SuperDragMoveEvent((QPageSetupDialog*)self, (QDragMoveEvent*)event);
 }
 
 void q_pagesetupdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1941,8 +1941,8 @@ void q_pagesetupdialog_drag_leave_event(void* self, void* event) {
     QPageSetupDialog_DragLeaveEvent((QPageSetupDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_drag_leave_event(void* self, void* event) {
-    QPageSetupDialog_QBaseDragLeaveEvent((QPageSetupDialog*)self, (QDragLeaveEvent*)event);
+void q_pagesetupdialog_super_drag_leave_event(void* self, void* event) {
+    QPageSetupDialog_SuperDragLeaveEvent((QPageSetupDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void q_pagesetupdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1953,8 +1953,8 @@ void q_pagesetupdialog_drop_event(void* self, void* event) {
     QPageSetupDialog_DropEvent((QPageSetupDialog*)self, (QDropEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_drop_event(void* self, void* event) {
-    QPageSetupDialog_QBaseDropEvent((QPageSetupDialog*)self, (QDropEvent*)event);
+void q_pagesetupdialog_super_drop_event(void* self, void* event) {
+    QPageSetupDialog_SuperDropEvent((QPageSetupDialog*)self, (QDropEvent*)event);
 }
 
 void q_pagesetupdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1965,8 +1965,8 @@ void q_pagesetupdialog_hide_event(void* self, void* event) {
     QPageSetupDialog_HideEvent((QPageSetupDialog*)self, (QHideEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_hide_event(void* self, void* event) {
-    QPageSetupDialog_QBaseHideEvent((QPageSetupDialog*)self, (QHideEvent*)event);
+void q_pagesetupdialog_super_hide_event(void* self, void* event) {
+    QPageSetupDialog_SuperHideEvent((QPageSetupDialog*)self, (QHideEvent*)event);
 }
 
 void q_pagesetupdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1977,8 +1977,8 @@ bool q_pagesetupdialog_native_event(void* self, char* eventType, void* message, 
     return QPageSetupDialog_NativeEvent((QPageSetupDialog*)self, qstring(eventType), message, result);
 }
 
-bool q_pagesetupdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return QPageSetupDialog_QBaseNativeEvent((QPageSetupDialog*)self, qstring(eventType), message, result);
+bool q_pagesetupdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return QPageSetupDialog_SuperNativeEvent((QPageSetupDialog*)self, qstring(eventType), message, result);
 }
 
 void q_pagesetupdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1989,8 +1989,8 @@ void q_pagesetupdialog_change_event(void* self, void* param1) {
     QPageSetupDialog_ChangeEvent((QPageSetupDialog*)self, (QEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_change_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseChangeEvent((QPageSetupDialog*)self, (QEvent*)param1);
+void q_pagesetupdialog_super_change_event(void* self, void* param1) {
+    QPageSetupDialog_SuperChangeEvent((QPageSetupDialog*)self, (QEvent*)param1);
 }
 
 void q_pagesetupdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2001,8 +2001,8 @@ int32_t q_pagesetupdialog_metric(void* self, int32_t param1) {
     return QPageSetupDialog_Metric((QPageSetupDialog*)self, param1);
 }
 
-int32_t q_pagesetupdialog_qbase_metric(void* self, int32_t param1) {
-    return QPageSetupDialog_QBaseMetric((QPageSetupDialog*)self, param1);
+int32_t q_pagesetupdialog_super_metric(void* self, int32_t param1) {
+    return QPageSetupDialog_SuperMetric((QPageSetupDialog*)self, param1);
 }
 
 void q_pagesetupdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2013,8 +2013,8 @@ void q_pagesetupdialog_init_painter(void* self, void* painter) {
     QPageSetupDialog_InitPainter((QPageSetupDialog*)self, (QPainter*)painter);
 }
 
-void q_pagesetupdialog_qbase_init_painter(void* self, void* painter) {
-    QPageSetupDialog_QBaseInitPainter((QPageSetupDialog*)self, (QPainter*)painter);
+void q_pagesetupdialog_super_init_painter(void* self, void* painter) {
+    QPageSetupDialog_SuperInitPainter((QPageSetupDialog*)self, (QPainter*)painter);
 }
 
 void q_pagesetupdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2025,8 +2025,8 @@ QPaintDevice* q_pagesetupdialog_redirected(void* self, void* offset) {
     return QPageSetupDialog_Redirected((QPageSetupDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_pagesetupdialog_qbase_redirected(void* self, void* offset) {
-    return QPageSetupDialog_QBaseRedirected((QPageSetupDialog*)self, (QPoint*)offset);
+QPaintDevice* q_pagesetupdialog_super_redirected(void* self, void* offset) {
+    return QPageSetupDialog_SuperRedirected((QPageSetupDialog*)self, (QPoint*)offset);
 }
 
 void q_pagesetupdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2037,8 +2037,8 @@ QPainter* q_pagesetupdialog_shared_painter(void* self) {
     return QPageSetupDialog_SharedPainter((QPageSetupDialog*)self);
 }
 
-QPainter* q_pagesetupdialog_qbase_shared_painter(void* self) {
-    return QPageSetupDialog_QBaseSharedPainter((QPageSetupDialog*)self);
+QPainter* q_pagesetupdialog_super_shared_painter(void* self) {
+    return QPageSetupDialog_SuperSharedPainter((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2049,8 +2049,8 @@ void q_pagesetupdialog_input_method_event(void* self, void* param1) {
     QPageSetupDialog_InputMethodEvent((QPageSetupDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void q_pagesetupdialog_qbase_input_method_event(void* self, void* param1) {
-    QPageSetupDialog_QBaseInputMethodEvent((QPageSetupDialog*)self, (QInputMethodEvent*)param1);
+void q_pagesetupdialog_super_input_method_event(void* self, void* param1) {
+    QPageSetupDialog_SuperInputMethodEvent((QPageSetupDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void q_pagesetupdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2061,8 +2061,8 @@ QVariant* q_pagesetupdialog_input_method_query(void* self, int32_t param1) {
     return QPageSetupDialog_InputMethodQuery((QPageSetupDialog*)self, param1);
 }
 
-QVariant* q_pagesetupdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return QPageSetupDialog_QBaseInputMethodQuery((QPageSetupDialog*)self, param1);
+QVariant* q_pagesetupdialog_super_input_method_query(void* self, int32_t param1) {
+    return QPageSetupDialog_SuperInputMethodQuery((QPageSetupDialog*)self, param1);
 }
 
 void q_pagesetupdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2073,8 +2073,8 @@ bool q_pagesetupdialog_focus_next_prev_child(void* self, bool next) {
     return QPageSetupDialog_FocusNextPrevChild((QPageSetupDialog*)self, next);
 }
 
-bool q_pagesetupdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return QPageSetupDialog_QBaseFocusNextPrevChild((QPageSetupDialog*)self, next);
+bool q_pagesetupdialog_super_focus_next_prev_child(void* self, bool next) {
+    return QPageSetupDialog_SuperFocusNextPrevChild((QPageSetupDialog*)self, next);
 }
 
 void q_pagesetupdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2085,8 +2085,8 @@ void q_pagesetupdialog_timer_event(void* self, void* event) {
     QPageSetupDialog_TimerEvent((QPageSetupDialog*)self, (QTimerEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_timer_event(void* self, void* event) {
-    QPageSetupDialog_QBaseTimerEvent((QPageSetupDialog*)self, (QTimerEvent*)event);
+void q_pagesetupdialog_super_timer_event(void* self, void* event) {
+    QPageSetupDialog_SuperTimerEvent((QPageSetupDialog*)self, (QTimerEvent*)event);
 }
 
 void q_pagesetupdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2097,8 +2097,8 @@ void q_pagesetupdialog_child_event(void* self, void* event) {
     QPageSetupDialog_ChildEvent((QPageSetupDialog*)self, (QChildEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_child_event(void* self, void* event) {
-    QPageSetupDialog_QBaseChildEvent((QPageSetupDialog*)self, (QChildEvent*)event);
+void q_pagesetupdialog_super_child_event(void* self, void* event) {
+    QPageSetupDialog_SuperChildEvent((QPageSetupDialog*)self, (QChildEvent*)event);
 }
 
 void q_pagesetupdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2109,8 +2109,8 @@ void q_pagesetupdialog_custom_event(void* self, void* event) {
     QPageSetupDialog_CustomEvent((QPageSetupDialog*)self, (QEvent*)event);
 }
 
-void q_pagesetupdialog_qbase_custom_event(void* self, void* event) {
-    QPageSetupDialog_QBaseCustomEvent((QPageSetupDialog*)self, (QEvent*)event);
+void q_pagesetupdialog_super_custom_event(void* self, void* event) {
+    QPageSetupDialog_SuperCustomEvent((QPageSetupDialog*)self, (QEvent*)event);
 }
 
 void q_pagesetupdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2121,8 +2121,8 @@ void q_pagesetupdialog_connect_notify(void* self, void* signal) {
     QPageSetupDialog_ConnectNotify((QPageSetupDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_pagesetupdialog_qbase_connect_notify(void* self, void* signal) {
-    QPageSetupDialog_QBaseConnectNotify((QPageSetupDialog*)self, (QMetaMethod*)signal);
+void q_pagesetupdialog_super_connect_notify(void* self, void* signal) {
+    QPageSetupDialog_SuperConnectNotify((QPageSetupDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_pagesetupdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2133,8 +2133,8 @@ void q_pagesetupdialog_disconnect_notify(void* self, void* signal) {
     QPageSetupDialog_DisconnectNotify((QPageSetupDialog*)self, (QMetaMethod*)signal);
 }
 
-void q_pagesetupdialog_qbase_disconnect_notify(void* self, void* signal) {
-    QPageSetupDialog_QBaseDisconnectNotify((QPageSetupDialog*)self, (QMetaMethod*)signal);
+void q_pagesetupdialog_super_disconnect_notify(void* self, void* signal) {
+    QPageSetupDialog_SuperDisconnectNotify((QPageSetupDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_pagesetupdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2145,8 +2145,8 @@ void q_pagesetupdialog_adjust_position(void* self, void* param1) {
     QPageSetupDialog_AdjustPosition((QPageSetupDialog*)self, (QWidget*)param1);
 }
 
-void q_pagesetupdialog_qbase_adjust_position(void* self, void* param1) {
-    QPageSetupDialog_QBaseAdjustPosition((QPageSetupDialog*)self, (QWidget*)param1);
+void q_pagesetupdialog_super_adjust_position(void* self, void* param1) {
+    QPageSetupDialog_SuperAdjustPosition((QPageSetupDialog*)self, (QWidget*)param1);
 }
 
 void q_pagesetupdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2157,8 +2157,8 @@ void q_pagesetupdialog_update_micro_focus(void* self) {
     QPageSetupDialog_UpdateMicroFocus((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_qbase_update_micro_focus(void* self) {
-    QPageSetupDialog_QBaseUpdateMicroFocus((QPageSetupDialog*)self);
+void q_pagesetupdialog_super_update_micro_focus(void* self) {
+    QPageSetupDialog_SuperUpdateMicroFocus((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2169,8 +2169,8 @@ void q_pagesetupdialog_create(void* self) {
     QPageSetupDialog_Create((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_qbase_create(void* self) {
-    QPageSetupDialog_QBaseCreate((QPageSetupDialog*)self);
+void q_pagesetupdialog_super_create(void* self) {
+    QPageSetupDialog_SuperCreate((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_create(void* self, void (*callback)()) {
@@ -2181,8 +2181,8 @@ void q_pagesetupdialog_destroy(void* self) {
     QPageSetupDialog_Destroy((QPageSetupDialog*)self);
 }
 
-void q_pagesetupdialog_qbase_destroy(void* self) {
-    QPageSetupDialog_QBaseDestroy((QPageSetupDialog*)self);
+void q_pagesetupdialog_super_destroy(void* self) {
+    QPageSetupDialog_SuperDestroy((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_destroy(void* self, void (*callback)()) {
@@ -2193,8 +2193,8 @@ bool q_pagesetupdialog_focus_next_child(void* self) {
     return QPageSetupDialog_FocusNextChild((QPageSetupDialog*)self);
 }
 
-bool q_pagesetupdialog_qbase_focus_next_child(void* self) {
-    return QPageSetupDialog_QBaseFocusNextChild((QPageSetupDialog*)self);
+bool q_pagesetupdialog_super_focus_next_child(void* self) {
+    return QPageSetupDialog_SuperFocusNextChild((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2205,8 +2205,8 @@ bool q_pagesetupdialog_focus_previous_child(void* self) {
     return QPageSetupDialog_FocusPreviousChild((QPageSetupDialog*)self);
 }
 
-bool q_pagesetupdialog_qbase_focus_previous_child(void* self) {
-    return QPageSetupDialog_QBaseFocusPreviousChild((QPageSetupDialog*)self);
+bool q_pagesetupdialog_super_focus_previous_child(void* self) {
+    return QPageSetupDialog_SuperFocusPreviousChild((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2217,8 +2217,8 @@ QObject* q_pagesetupdialog_sender(void* self) {
     return QPageSetupDialog_Sender((QPageSetupDialog*)self);
 }
 
-QObject* q_pagesetupdialog_qbase_sender(void* self) {
-    return QPageSetupDialog_QBaseSender((QPageSetupDialog*)self);
+QObject* q_pagesetupdialog_super_sender(void* self) {
+    return QPageSetupDialog_SuperSender((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2229,8 +2229,8 @@ int32_t q_pagesetupdialog_sender_signal_index(void* self) {
     return QPageSetupDialog_SenderSignalIndex((QPageSetupDialog*)self);
 }
 
-int32_t q_pagesetupdialog_qbase_sender_signal_index(void* self) {
-    return QPageSetupDialog_QBaseSenderSignalIndex((QPageSetupDialog*)self);
+int32_t q_pagesetupdialog_super_sender_signal_index(void* self) {
+    return QPageSetupDialog_SuperSenderSignalIndex((QPageSetupDialog*)self);
 }
 
 void q_pagesetupdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2241,8 +2241,8 @@ int32_t q_pagesetupdialog_receivers(void* self, const char* signal) {
     return QPageSetupDialog_Receivers((QPageSetupDialog*)self, signal);
 }
 
-int32_t q_pagesetupdialog_qbase_receivers(void* self, const char* signal) {
-    return QPageSetupDialog_QBaseReceivers((QPageSetupDialog*)self, signal);
+int32_t q_pagesetupdialog_super_receivers(void* self, const char* signal) {
+    return QPageSetupDialog_SuperReceivers((QPageSetupDialog*)self, signal);
 }
 
 void q_pagesetupdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2253,8 +2253,8 @@ bool q_pagesetupdialog_is_signal_connected(void* self, void* signal) {
     return QPageSetupDialog_IsSignalConnected((QPageSetupDialog*)self, (QMetaMethod*)signal);
 }
 
-bool q_pagesetupdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return QPageSetupDialog_QBaseIsSignalConnected((QPageSetupDialog*)self, (QMetaMethod*)signal);
+bool q_pagesetupdialog_super_is_signal_connected(void* self, void* signal) {
+    return QPageSetupDialog_SuperIsSignalConnected((QPageSetupDialog*)self, (QMetaMethod*)signal);
 }
 
 void q_pagesetupdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2265,8 +2265,8 @@ double q_pagesetupdialog_get_decoded_metric_f(void* self, int32_t metricA, int32
     return QPageSetupDialog_GetDecodedMetricF((QPageSetupDialog*)self, metricA, metricB);
 }
 
-double q_pagesetupdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QPageSetupDialog_QBaseGetDecodedMetricF((QPageSetupDialog*)self, metricA, metricB);
+double q_pagesetupdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QPageSetupDialog_SuperGetDecodedMetricF((QPageSetupDialog*)self, metricA, metricB);
 }
 
 void q_pagesetupdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -47,6 +47,10 @@ QWidget* q_abstractformbuilder_load(void* self, void* dev, void* parentWidget);
 ///
 void q_abstractformbuilder_on_load(void* self, QWidget* (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_load` instead
+///
+#define q_abstractformbuilder_qbase_load q_abstractformbuilder_super_load
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#load)
 ///
 /// Base class method implementation
@@ -55,7 +59,7 @@ void q_abstractformbuilder_on_load(void* self, QWidget* (*callback)(void*, void*
 /// @param dev QIODevice*
 /// @param parentWidget QWidget*
 ///
-QWidget* q_abstractformbuilder_qbase_load(void* self, void* dev, void* parentWidget);
+QWidget* q_abstractformbuilder_super_load(void* self, void* dev, void* parentWidget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#save)
 ///
@@ -74,6 +78,10 @@ void q_abstractformbuilder_save(void* self, void* dev, void* widget);
 ///
 void q_abstractformbuilder_on_save(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_save` instead
+///
+#define q_abstractformbuilder_qbase_save q_abstractformbuilder_super_save
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#save)
 ///
 /// Base class method implementation
@@ -82,7 +90,7 @@ void q_abstractformbuilder_on_save(void* self, void (*callback)(void*, void*, vo
 /// @param dev QIODevice*
 /// @param widget QWidget*
 ///
-void q_abstractformbuilder_qbase_save(void* self, void* dev, void* widget);
+void q_abstractformbuilder_super_save(void* self, void* dev, void* widget);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#errorString)
 ///
@@ -108,6 +116,10 @@ void q_abstractformbuilder_add_menu_action(void* self, void* action);
 ///
 void q_abstractformbuilder_on_add_menu_action(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_add_menu_action` instead
+///
+#define q_abstractformbuilder_qbase_add_menu_action q_abstractformbuilder_super_add_menu_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#addMenuAction)
 ///
 /// Base class method implementation
@@ -115,7 +127,7 @@ void q_abstractformbuilder_on_add_menu_action(void* self, void (*callback)(void*
 /// @param self QAbstractFormBuilder*
 /// @param action QAction*
 ///
-void q_abstractformbuilder_qbase_add_menu_action(void* self, void* action);
+void q_abstractformbuilder_super_add_menu_action(void* self, void* action);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#applyPropertyInternally)
 ///
@@ -135,6 +147,10 @@ bool q_abstractformbuilder_apply_property_internally(void* self, void* o, const 
 ///
 void q_abstractformbuilder_on_apply_property_internally(void* self, bool (*callback)(void*, void*, const char*, void*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_apply_property_internally` instead
+///
+#define q_abstractformbuilder_qbase_apply_property_internally q_abstractformbuilder_super_apply_property_internally
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#applyPropertyInternally)
 ///
 /// Base class method implementation
@@ -144,7 +160,7 @@ void q_abstractformbuilder_on_apply_property_internally(void* self, bool (*callb
 /// @param propertyName const char*
 /// @param value QVariant*
 ///
-bool q_abstractformbuilder_qbase_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
+bool q_abstractformbuilder_super_apply_property_internally(void* self, void* o, const char* propertyName, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createWidget)
 ///
@@ -164,6 +180,10 @@ QWidget* q_abstractformbuilder_create_widget(void* self, const char* widgetName,
 ///
 void q_abstractformbuilder_on_create_widget(void* self, QWidget* (*callback)(void*, const char*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_create_widget` instead
+///
+#define q_abstractformbuilder_qbase_create_widget q_abstractformbuilder_super_create_widget
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createWidget)
 ///
 /// Base class method implementation
@@ -173,7 +193,7 @@ void q_abstractformbuilder_on_create_widget(void* self, QWidget* (*callback)(voi
 /// @param parentWidget QWidget*
 /// @param name const char*
 ///
-QWidget* q_abstractformbuilder_qbase_create_widget(void* self, const char* widgetName, void* parentWidget, const char* name);
+QWidget* q_abstractformbuilder_super_create_widget(void* self, const char* widgetName, void* parentWidget, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createLayout)
 ///
@@ -193,6 +213,10 @@ QLayout* q_abstractformbuilder_create_layout(void* self, const char* layoutName,
 ///
 void q_abstractformbuilder_on_create_layout(void* self, QLayout* (*callback)(void*, const char*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_create_layout` instead
+///
+#define q_abstractformbuilder_qbase_create_layout q_abstractformbuilder_super_create_layout
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createLayout)
 ///
 /// Base class method implementation
@@ -202,7 +226,7 @@ void q_abstractformbuilder_on_create_layout(void* self, QLayout* (*callback)(voi
 /// @param parent QObject*
 /// @param name const char*
 ///
-QLayout* q_abstractformbuilder_qbase_create_layout(void* self, const char* layoutName, void* parent, const char* name);
+QLayout* q_abstractformbuilder_super_create_layout(void* self, const char* layoutName, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createAction)
 ///
@@ -221,6 +245,10 @@ QAction* q_abstractformbuilder_create_action(void* self, void* parent, const cha
 ///
 void q_abstractformbuilder_on_create_action(void* self, QAction* (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_create_action` instead
+///
+#define q_abstractformbuilder_qbase_create_action q_abstractformbuilder_super_create_action
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createAction)
 ///
 /// Base class method implementation
@@ -229,7 +257,7 @@ void q_abstractformbuilder_on_create_action(void* self, QAction* (*callback)(voi
 /// @param parent QObject*
 /// @param name const char*
 ///
-QAction* q_abstractformbuilder_qbase_create_action(void* self, void* parent, const char* name);
+QAction* q_abstractformbuilder_super_create_action(void* self, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createActionGroup)
 ///
@@ -248,6 +276,10 @@ QActionGroup* q_abstractformbuilder_create_action_group(void* self, void* parent
 ///
 void q_abstractformbuilder_on_create_action_group(void* self, QActionGroup* (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_create_action_group` instead
+///
+#define q_abstractformbuilder_qbase_create_action_group q_abstractformbuilder_super_create_action_group
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#createActionGroup)
 ///
 /// Base class method implementation
@@ -256,7 +288,7 @@ void q_abstractformbuilder_on_create_action_group(void* self, QActionGroup* (*ca
 /// @param parent QObject*
 /// @param name const char*
 ///
-QActionGroup* q_abstractformbuilder_qbase_create_action_group(void* self, void* parent, const char* name);
+QActionGroup* q_abstractformbuilder_super_create_action_group(void* self, void* parent, const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#checkProperty)
 ///
@@ -275,6 +307,10 @@ bool q_abstractformbuilder_check_property(void* self, void* obj, const char* pro
 ///
 void q_abstractformbuilder_on_check_property(void* self, bool (*callback)(void*, void*, const char*));
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_check_property` instead
+///
+#define q_abstractformbuilder_qbase_check_property q_abstractformbuilder_super_check_property
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#checkProperty)
 ///
 /// Base class method implementation
@@ -283,7 +319,7 @@ void q_abstractformbuilder_on_check_property(void* self, bool (*callback)(void*,
 /// @param obj QObject*
 /// @param prop const char*
 ///
-bool q_abstractformbuilder_qbase_check_property(void* self, void* obj, const char* prop);
+bool q_abstractformbuilder_super_check_property(void* self, void* obj, const char* prop);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#reset)
 ///
@@ -300,13 +336,17 @@ void q_abstractformbuilder_reset(void* self);
 ///
 void q_abstractformbuilder_on_reset(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_reset` instead
+///
+#define q_abstractformbuilder_qbase_reset q_abstractformbuilder_super_reset
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#reset)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractFormBuilder*
 ///
-void q_abstractformbuilder_qbase_reset(void* self);
+void q_abstractformbuilder_super_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#toolBarAreaMetaEnum)
 ///
@@ -323,13 +363,17 @@ QMetaEnum* q_abstractformbuilder_tool_bar_area_meta_enum(void* self);
 ///
 void q_abstractformbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)());
 
+/// @warning DEPRECATED: Use `q_abstractformbuilder_super_tool_bar_area_meta_enum` instead
+///
+#define q_abstractformbuilder_qbase_tool_bar_area_meta_enum q_abstractformbuilder_super_tool_bar_area_meta_enum
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#toolBarAreaMetaEnum)
 ///
 /// Base class method implementation
 ///
 /// @param self QAbstractFormBuilder*
 ///
-QMetaEnum* q_abstractformbuilder_qbase_tool_bar_area_meta_enum(void* self);
+QMetaEnum* q_abstractformbuilder_super_tool_bar_area_meta_enum(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractformbuilder.html#dtor.QAbstractFormBuilder)
 ///

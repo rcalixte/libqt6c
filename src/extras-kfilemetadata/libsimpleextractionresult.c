@@ -35,8 +35,8 @@ void k_filemetadata__simpleextractionresult_on_add(void* self, void (*callback)(
     KFileMetaData__SimpleExtractionResult_OnAdd((KFileMetaData__SimpleExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__simpleextractionresult_qbase_add(void* self, int32_t property, void* value) {
-    KFileMetaData__SimpleExtractionResult_QBaseAdd((KFileMetaData__SimpleExtractionResult*)self, property, (QVariant*)value);
+void k_filemetadata__simpleextractionresult_super_add(void* self, int32_t property, void* value) {
+    KFileMetaData__SimpleExtractionResult_SuperAdd((KFileMetaData__SimpleExtractionResult*)self, property, (QVariant*)value);
 }
 
 void k_filemetadata__simpleextractionresult_add_type(void* self, int32_t type) {
@@ -47,8 +47,8 @@ void k_filemetadata__simpleextractionresult_on_add_type(void* self, void (*callb
     KFileMetaData__SimpleExtractionResult_OnAddType((KFileMetaData__SimpleExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__simpleextractionresult_qbase_add_type(void* self, int32_t type) {
-    KFileMetaData__SimpleExtractionResult_QBaseAddType((KFileMetaData__SimpleExtractionResult*)self, type);
+void k_filemetadata__simpleextractionresult_super_add_type(void* self, int32_t type) {
+    KFileMetaData__SimpleExtractionResult_SuperAddType((KFileMetaData__SimpleExtractionResult*)self, type);
 }
 
 void k_filemetadata__simpleextractionresult_append(void* self, const char* text) {
@@ -59,8 +59,8 @@ void k_filemetadata__simpleextractionresult_on_append(void* self, void (*callbac
     KFileMetaData__SimpleExtractionResult_OnAppend((KFileMetaData__SimpleExtractionResult*)self, (intptr_t)callback);
 }
 
-void k_filemetadata__simpleextractionresult_qbase_append(void* self, const char* text) {
-    KFileMetaData__SimpleExtractionResult_QBaseAppend((KFileMetaData__SimpleExtractionResult*)self, qstring(text));
+void k_filemetadata__simpleextractionresult_super_append(void* self, const char* text) {
+    KFileMetaData__SimpleExtractionResult_SuperAppend((KFileMetaData__SimpleExtractionResult*)self, qstring(text));
 }
 
 libqt_map /* of enum KFileMetaData__Property__Property to QVariant** */ k_filemetadata__simpleextractionresult_properties(void* self) {

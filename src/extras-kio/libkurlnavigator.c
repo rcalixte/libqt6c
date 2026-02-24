@@ -36,8 +36,8 @@ void k_urlnavigator_on_meta_object(void* self, const QMetaObject* (*callback)())
     KUrlNavigator_OnMetaObject((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_urlnavigator_qbase_meta_object(void* self) {
-    return KUrlNavigator_QBaseMetaObject((KUrlNavigator*)self);
+const QMetaObject* k_urlnavigator_super_meta_object(void* self) {
+    return KUrlNavigator_SuperMetaObject((KUrlNavigator*)self);
 }
 
 void* k_urlnavigator_metacast(void* self, const char* param1) {
@@ -48,8 +48,8 @@ void k_urlnavigator_on_metacast(void* self, void* (*callback)(void*, const char*
     KUrlNavigator_OnMetacast((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void* k_urlnavigator_qbase_metacast(void* self, const char* param1) {
-    return KUrlNavigator_QBaseMetacast((KUrlNavigator*)self, param1);
+void* k_urlnavigator_super_metacast(void* self, const char* param1) {
+    return KUrlNavigator_SuperMetacast((KUrlNavigator*)self, param1);
 }
 
 int32_t k_urlnavigator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -60,8 +60,8 @@ void k_urlnavigator_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     KUrlNavigator_OnMetacall((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-int32_t k_urlnavigator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KUrlNavigator_QBaseMetacall((KUrlNavigator*)self, param1, param2, param3);
+int32_t k_urlnavigator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KUrlNavigator_SuperMetacall((KUrlNavigator*)self, param1, param2, param3);
 }
 
 const char* k_urlnavigator_tr(const char* s) {
@@ -344,8 +344,8 @@ void k_urlnavigator_on_key_press_event(void* self, void (*callback)(void*, void*
     KUrlNavigator_OnKeyPressEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_key_press_event(void* self, void* event) {
-    KUrlNavigator_QBaseKeyPressEvent((KUrlNavigator*)self, (QKeyEvent*)event);
+void k_urlnavigator_super_key_press_event(void* self, void* event) {
+    KUrlNavigator_SuperKeyPressEvent((KUrlNavigator*)self, (QKeyEvent*)event);
 }
 
 void k_urlnavigator_key_release_event(void* self, void* event) {
@@ -356,8 +356,8 @@ void k_urlnavigator_on_key_release_event(void* self, void (*callback)(void*, voi
     KUrlNavigator_OnKeyReleaseEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_key_release_event(void* self, void* event) {
-    KUrlNavigator_QBaseKeyReleaseEvent((KUrlNavigator*)self, (QKeyEvent*)event);
+void k_urlnavigator_super_key_release_event(void* self, void* event) {
+    KUrlNavigator_SuperKeyReleaseEvent((KUrlNavigator*)self, (QKeyEvent*)event);
 }
 
 void k_urlnavigator_mouse_release_event(void* self, void* event) {
@@ -368,8 +368,8 @@ void k_urlnavigator_on_mouse_release_event(void* self, void (*callback)(void*, v
     KUrlNavigator_OnMouseReleaseEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_mouse_release_event(void* self, void* event) {
-    KUrlNavigator_QBaseMouseReleaseEvent((KUrlNavigator*)self, (QMouseEvent*)event);
+void k_urlnavigator_super_mouse_release_event(void* self, void* event) {
+    KUrlNavigator_SuperMouseReleaseEvent((KUrlNavigator*)self, (QMouseEvent*)event);
 }
 
 void k_urlnavigator_mouse_press_event(void* self, void* event) {
@@ -380,8 +380,8 @@ void k_urlnavigator_on_mouse_press_event(void* self, void (*callback)(void*, voi
     KUrlNavigator_OnMousePressEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_mouse_press_event(void* self, void* event) {
-    KUrlNavigator_QBaseMousePressEvent((KUrlNavigator*)self, (QMouseEvent*)event);
+void k_urlnavigator_super_mouse_press_event(void* self, void* event) {
+    KUrlNavigator_SuperMousePressEvent((KUrlNavigator*)self, (QMouseEvent*)event);
 }
 
 void k_urlnavigator_resize_event(void* self, void* event) {
@@ -392,8 +392,8 @@ void k_urlnavigator_on_resize_event(void* self, void (*callback)(void*, void*)) 
     KUrlNavigator_OnResizeEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_resize_event(void* self, void* event) {
-    KUrlNavigator_QBaseResizeEvent((KUrlNavigator*)self, (QResizeEvent*)event);
+void k_urlnavigator_super_resize_event(void* self, void* event) {
+    KUrlNavigator_SuperResizeEvent((KUrlNavigator*)self, (QResizeEvent*)event);
 }
 
 void k_urlnavigator_wheel_event(void* self, void* event) {
@@ -404,8 +404,8 @@ void k_urlnavigator_on_wheel_event(void* self, void (*callback)(void*, void*)) {
     KUrlNavigator_OnWheelEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_wheel_event(void* self, void* event) {
-    KUrlNavigator_QBaseWheelEvent((KUrlNavigator*)self, (QWheelEvent*)event);
+void k_urlnavigator_super_wheel_event(void* self, void* event) {
+    KUrlNavigator_SuperWheelEvent((KUrlNavigator*)self, (QWheelEvent*)event);
 }
 
 void k_urlnavigator_show_event(void* self, void* event) {
@@ -416,8 +416,8 @@ void k_urlnavigator_on_show_event(void* self, void (*callback)(void*, void*)) {
     KUrlNavigator_OnShowEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_show_event(void* self, void* event) {
-    KUrlNavigator_QBaseShowEvent((KUrlNavigator*)self, (QShowEvent*)event);
+void k_urlnavigator_super_show_event(void* self, void* event) {
+    KUrlNavigator_SuperShowEvent((KUrlNavigator*)self, (QShowEvent*)event);
 }
 
 bool k_urlnavigator_event_filter(void* self, void* watched, void* event) {
@@ -428,8 +428,8 @@ void k_urlnavigator_on_event_filter(void* self, bool (*callback)(void*, void*, v
     KUrlNavigator_OnEventFilter((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-bool k_urlnavigator_qbase_event_filter(void* self, void* watched, void* event) {
-    return KUrlNavigator_QBaseEventFilter((KUrlNavigator*)self, (QObject*)watched, (QEvent*)event);
+bool k_urlnavigator_super_event_filter(void* self, void* watched, void* event) {
+    return KUrlNavigator_SuperEventFilter((KUrlNavigator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_urlnavigator_paint_event(void* self, void* event) {
@@ -440,8 +440,8 @@ void k_urlnavigator_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KUrlNavigator_OnPaintEvent((KUrlNavigator*)self, (intptr_t)callback);
 }
 
-void k_urlnavigator_qbase_paint_event(void* self, void* event) {
-    KUrlNavigator_QBasePaintEvent((KUrlNavigator*)self, (QPaintEvent*)event);
+void k_urlnavigator_super_paint_event(void* self, void* event) {
+    KUrlNavigator_SuperPaintEvent((KUrlNavigator*)self, (QPaintEvent*)event);
 }
 
 const char* k_urlnavigator_tr2(const char* s, const char* c) {
@@ -1850,8 +1850,8 @@ int32_t k_urlnavigator_dev_type(void* self) {
     return KUrlNavigator_DevType((KUrlNavigator*)self);
 }
 
-int32_t k_urlnavigator_qbase_dev_type(void* self) {
-    return KUrlNavigator_QBaseDevType((KUrlNavigator*)self);
+int32_t k_urlnavigator_super_dev_type(void* self) {
+    return KUrlNavigator_SuperDevType((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1862,8 +1862,8 @@ void k_urlnavigator_set_visible(void* self, bool visible) {
     KUrlNavigator_SetVisible((KUrlNavigator*)self, visible);
 }
 
-void k_urlnavigator_qbase_set_visible(void* self, bool visible) {
-    KUrlNavigator_QBaseSetVisible((KUrlNavigator*)self, visible);
+void k_urlnavigator_super_set_visible(void* self, bool visible) {
+    KUrlNavigator_SuperSetVisible((KUrlNavigator*)self, visible);
 }
 
 void k_urlnavigator_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1874,8 +1874,8 @@ QSize* k_urlnavigator_size_hint(void* self) {
     return KUrlNavigator_SizeHint((KUrlNavigator*)self);
 }
 
-QSize* k_urlnavigator_qbase_size_hint(void* self) {
-    return KUrlNavigator_QBaseSizeHint((KUrlNavigator*)self);
+QSize* k_urlnavigator_super_size_hint(void* self) {
+    return KUrlNavigator_SuperSizeHint((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1886,8 +1886,8 @@ QSize* k_urlnavigator_minimum_size_hint(void* self) {
     return KUrlNavigator_MinimumSizeHint((KUrlNavigator*)self);
 }
 
-QSize* k_urlnavigator_qbase_minimum_size_hint(void* self) {
-    return KUrlNavigator_QBaseMinimumSizeHint((KUrlNavigator*)self);
+QSize* k_urlnavigator_super_minimum_size_hint(void* self) {
+    return KUrlNavigator_SuperMinimumSizeHint((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1898,8 +1898,8 @@ int32_t k_urlnavigator_height_for_width(void* self, int param1) {
     return KUrlNavigator_HeightForWidth((KUrlNavigator*)self, param1);
 }
 
-int32_t k_urlnavigator_qbase_height_for_width(void* self, int param1) {
-    return KUrlNavigator_QBaseHeightForWidth((KUrlNavigator*)self, param1);
+int32_t k_urlnavigator_super_height_for_width(void* self, int param1) {
+    return KUrlNavigator_SuperHeightForWidth((KUrlNavigator*)self, param1);
 }
 
 void k_urlnavigator_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1910,8 +1910,8 @@ bool k_urlnavigator_has_height_for_width(void* self) {
     return KUrlNavigator_HasHeightForWidth((KUrlNavigator*)self);
 }
 
-bool k_urlnavigator_qbase_has_height_for_width(void* self) {
-    return KUrlNavigator_QBaseHasHeightForWidth((KUrlNavigator*)self);
+bool k_urlnavigator_super_has_height_for_width(void* self) {
+    return KUrlNavigator_SuperHasHeightForWidth((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1922,8 +1922,8 @@ QPaintEngine* k_urlnavigator_paint_engine(void* self) {
     return KUrlNavigator_PaintEngine((KUrlNavigator*)self);
 }
 
-QPaintEngine* k_urlnavigator_qbase_paint_engine(void* self) {
-    return KUrlNavigator_QBasePaintEngine((KUrlNavigator*)self);
+QPaintEngine* k_urlnavigator_super_paint_engine(void* self) {
+    return KUrlNavigator_SuperPaintEngine((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1934,8 +1934,8 @@ bool k_urlnavigator_event(void* self, void* event) {
     return KUrlNavigator_Event((KUrlNavigator*)self, (QEvent*)event);
 }
 
-bool k_urlnavigator_qbase_event(void* self, void* event) {
-    return KUrlNavigator_QBaseEvent((KUrlNavigator*)self, (QEvent*)event);
+bool k_urlnavigator_super_event(void* self, void* event) {
+    return KUrlNavigator_SuperEvent((KUrlNavigator*)self, (QEvent*)event);
 }
 
 void k_urlnavigator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ void k_urlnavigator_mouse_double_click_event(void* self, void* event) {
     KUrlNavigator_MouseDoubleClickEvent((KUrlNavigator*)self, (QMouseEvent*)event);
 }
 
-void k_urlnavigator_qbase_mouse_double_click_event(void* self, void* event) {
-    KUrlNavigator_QBaseMouseDoubleClickEvent((KUrlNavigator*)self, (QMouseEvent*)event);
+void k_urlnavigator_super_mouse_double_click_event(void* self, void* event) {
+    KUrlNavigator_SuperMouseDoubleClickEvent((KUrlNavigator*)self, (QMouseEvent*)event);
 }
 
 void k_urlnavigator_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ void k_urlnavigator_mouse_move_event(void* self, void* event) {
     KUrlNavigator_MouseMoveEvent((KUrlNavigator*)self, (QMouseEvent*)event);
 }
 
-void k_urlnavigator_qbase_mouse_move_event(void* self, void* event) {
-    KUrlNavigator_QBaseMouseMoveEvent((KUrlNavigator*)self, (QMouseEvent*)event);
+void k_urlnavigator_super_mouse_move_event(void* self, void* event) {
+    KUrlNavigator_SuperMouseMoveEvent((KUrlNavigator*)self, (QMouseEvent*)event);
 }
 
 void k_urlnavigator_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ void k_urlnavigator_focus_in_event(void* self, void* event) {
     KUrlNavigator_FocusInEvent((KUrlNavigator*)self, (QFocusEvent*)event);
 }
 
-void k_urlnavigator_qbase_focus_in_event(void* self, void* event) {
-    KUrlNavigator_QBaseFocusInEvent((KUrlNavigator*)self, (QFocusEvent*)event);
+void k_urlnavigator_super_focus_in_event(void* self, void* event) {
+    KUrlNavigator_SuperFocusInEvent((KUrlNavigator*)self, (QFocusEvent*)event);
 }
 
 void k_urlnavigator_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1982,8 +1982,8 @@ void k_urlnavigator_focus_out_event(void* self, void* event) {
     KUrlNavigator_FocusOutEvent((KUrlNavigator*)self, (QFocusEvent*)event);
 }
 
-void k_urlnavigator_qbase_focus_out_event(void* self, void* event) {
-    KUrlNavigator_QBaseFocusOutEvent((KUrlNavigator*)self, (QFocusEvent*)event);
+void k_urlnavigator_super_focus_out_event(void* self, void* event) {
+    KUrlNavigator_SuperFocusOutEvent((KUrlNavigator*)self, (QFocusEvent*)event);
 }
 
 void k_urlnavigator_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ void k_urlnavigator_enter_event(void* self, void* event) {
     KUrlNavigator_EnterEvent((KUrlNavigator*)self, (QEnterEvent*)event);
 }
 
-void k_urlnavigator_qbase_enter_event(void* self, void* event) {
-    KUrlNavigator_QBaseEnterEvent((KUrlNavigator*)self, (QEnterEvent*)event);
+void k_urlnavigator_super_enter_event(void* self, void* event) {
+    KUrlNavigator_SuperEnterEvent((KUrlNavigator*)self, (QEnterEvent*)event);
 }
 
 void k_urlnavigator_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ void k_urlnavigator_leave_event(void* self, void* event) {
     KUrlNavigator_LeaveEvent((KUrlNavigator*)self, (QEvent*)event);
 }
 
-void k_urlnavigator_qbase_leave_event(void* self, void* event) {
-    KUrlNavigator_QBaseLeaveEvent((KUrlNavigator*)self, (QEvent*)event);
+void k_urlnavigator_super_leave_event(void* self, void* event) {
+    KUrlNavigator_SuperLeaveEvent((KUrlNavigator*)self, (QEvent*)event);
 }
 
 void k_urlnavigator_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2018,8 +2018,8 @@ void k_urlnavigator_move_event(void* self, void* event) {
     KUrlNavigator_MoveEvent((KUrlNavigator*)self, (QMoveEvent*)event);
 }
 
-void k_urlnavigator_qbase_move_event(void* self, void* event) {
-    KUrlNavigator_QBaseMoveEvent((KUrlNavigator*)self, (QMoveEvent*)event);
+void k_urlnavigator_super_move_event(void* self, void* event) {
+    KUrlNavigator_SuperMoveEvent((KUrlNavigator*)self, (QMoveEvent*)event);
 }
 
 void k_urlnavigator_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ void k_urlnavigator_close_event(void* self, void* event) {
     KUrlNavigator_CloseEvent((KUrlNavigator*)self, (QCloseEvent*)event);
 }
 
-void k_urlnavigator_qbase_close_event(void* self, void* event) {
-    KUrlNavigator_QBaseCloseEvent((KUrlNavigator*)self, (QCloseEvent*)event);
+void k_urlnavigator_super_close_event(void* self, void* event) {
+    KUrlNavigator_SuperCloseEvent((KUrlNavigator*)self, (QCloseEvent*)event);
 }
 
 void k_urlnavigator_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ void k_urlnavigator_context_menu_event(void* self, void* event) {
     KUrlNavigator_ContextMenuEvent((KUrlNavigator*)self, (QContextMenuEvent*)event);
 }
 
-void k_urlnavigator_qbase_context_menu_event(void* self, void* event) {
-    KUrlNavigator_QBaseContextMenuEvent((KUrlNavigator*)self, (QContextMenuEvent*)event);
+void k_urlnavigator_super_context_menu_event(void* self, void* event) {
+    KUrlNavigator_SuperContextMenuEvent((KUrlNavigator*)self, (QContextMenuEvent*)event);
 }
 
 void k_urlnavigator_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2054,8 +2054,8 @@ void k_urlnavigator_tablet_event(void* self, void* event) {
     KUrlNavigator_TabletEvent((KUrlNavigator*)self, (QTabletEvent*)event);
 }
 
-void k_urlnavigator_qbase_tablet_event(void* self, void* event) {
-    KUrlNavigator_QBaseTabletEvent((KUrlNavigator*)self, (QTabletEvent*)event);
+void k_urlnavigator_super_tablet_event(void* self, void* event) {
+    KUrlNavigator_SuperTabletEvent((KUrlNavigator*)self, (QTabletEvent*)event);
 }
 
 void k_urlnavigator_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2066,8 +2066,8 @@ void k_urlnavigator_action_event(void* self, void* event) {
     KUrlNavigator_ActionEvent((KUrlNavigator*)self, (QActionEvent*)event);
 }
 
-void k_urlnavigator_qbase_action_event(void* self, void* event) {
-    KUrlNavigator_QBaseActionEvent((KUrlNavigator*)self, (QActionEvent*)event);
+void k_urlnavigator_super_action_event(void* self, void* event) {
+    KUrlNavigator_SuperActionEvent((KUrlNavigator*)self, (QActionEvent*)event);
 }
 
 void k_urlnavigator_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ void k_urlnavigator_drag_enter_event(void* self, void* event) {
     KUrlNavigator_DragEnterEvent((KUrlNavigator*)self, (QDragEnterEvent*)event);
 }
 
-void k_urlnavigator_qbase_drag_enter_event(void* self, void* event) {
-    KUrlNavigator_QBaseDragEnterEvent((KUrlNavigator*)self, (QDragEnterEvent*)event);
+void k_urlnavigator_super_drag_enter_event(void* self, void* event) {
+    KUrlNavigator_SuperDragEnterEvent((KUrlNavigator*)self, (QDragEnterEvent*)event);
 }
 
 void k_urlnavigator_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ void k_urlnavigator_drag_move_event(void* self, void* event) {
     KUrlNavigator_DragMoveEvent((KUrlNavigator*)self, (QDragMoveEvent*)event);
 }
 
-void k_urlnavigator_qbase_drag_move_event(void* self, void* event) {
-    KUrlNavigator_QBaseDragMoveEvent((KUrlNavigator*)self, (QDragMoveEvent*)event);
+void k_urlnavigator_super_drag_move_event(void* self, void* event) {
+    KUrlNavigator_SuperDragMoveEvent((KUrlNavigator*)self, (QDragMoveEvent*)event);
 }
 
 void k_urlnavigator_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ void k_urlnavigator_drag_leave_event(void* self, void* event) {
     KUrlNavigator_DragLeaveEvent((KUrlNavigator*)self, (QDragLeaveEvent*)event);
 }
 
-void k_urlnavigator_qbase_drag_leave_event(void* self, void* event) {
-    KUrlNavigator_QBaseDragLeaveEvent((KUrlNavigator*)self, (QDragLeaveEvent*)event);
+void k_urlnavigator_super_drag_leave_event(void* self, void* event) {
+    KUrlNavigator_SuperDragLeaveEvent((KUrlNavigator*)self, (QDragLeaveEvent*)event);
 }
 
 void k_urlnavigator_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ void k_urlnavigator_drop_event(void* self, void* event) {
     KUrlNavigator_DropEvent((KUrlNavigator*)self, (QDropEvent*)event);
 }
 
-void k_urlnavigator_qbase_drop_event(void* self, void* event) {
-    KUrlNavigator_QBaseDropEvent((KUrlNavigator*)self, (QDropEvent*)event);
+void k_urlnavigator_super_drop_event(void* self, void* event) {
+    KUrlNavigator_SuperDropEvent((KUrlNavigator*)self, (QDropEvent*)event);
 }
 
 void k_urlnavigator_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2126,8 +2126,8 @@ void k_urlnavigator_hide_event(void* self, void* event) {
     KUrlNavigator_HideEvent((KUrlNavigator*)self, (QHideEvent*)event);
 }
 
-void k_urlnavigator_qbase_hide_event(void* self, void* event) {
-    KUrlNavigator_QBaseHideEvent((KUrlNavigator*)self, (QHideEvent*)event);
+void k_urlnavigator_super_hide_event(void* self, void* event) {
+    KUrlNavigator_SuperHideEvent((KUrlNavigator*)self, (QHideEvent*)event);
 }
 
 void k_urlnavigator_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2138,8 +2138,8 @@ bool k_urlnavigator_native_event(void* self, char* eventType, void* message, int
     return KUrlNavigator_NativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
 }
 
-bool k_urlnavigator_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KUrlNavigator_QBaseNativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
+bool k_urlnavigator_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KUrlNavigator_SuperNativeEvent((KUrlNavigator*)self, qstring(eventType), message, result);
 }
 
 void k_urlnavigator_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2150,8 +2150,8 @@ void k_urlnavigator_change_event(void* self, void* param1) {
     KUrlNavigator_ChangeEvent((KUrlNavigator*)self, (QEvent*)param1);
 }
 
-void k_urlnavigator_qbase_change_event(void* self, void* param1) {
-    KUrlNavigator_QBaseChangeEvent((KUrlNavigator*)self, (QEvent*)param1);
+void k_urlnavigator_super_change_event(void* self, void* param1) {
+    KUrlNavigator_SuperChangeEvent((KUrlNavigator*)self, (QEvent*)param1);
 }
 
 void k_urlnavigator_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2162,8 +2162,8 @@ int32_t k_urlnavigator_metric(void* self, int32_t param1) {
     return KUrlNavigator_Metric((KUrlNavigator*)self, param1);
 }
 
-int32_t k_urlnavigator_qbase_metric(void* self, int32_t param1) {
-    return KUrlNavigator_QBaseMetric((KUrlNavigator*)self, param1);
+int32_t k_urlnavigator_super_metric(void* self, int32_t param1) {
+    return KUrlNavigator_SuperMetric((KUrlNavigator*)self, param1);
 }
 
 void k_urlnavigator_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2174,8 +2174,8 @@ void k_urlnavigator_init_painter(void* self, void* painter) {
     KUrlNavigator_InitPainter((KUrlNavigator*)self, (QPainter*)painter);
 }
 
-void k_urlnavigator_qbase_init_painter(void* self, void* painter) {
-    KUrlNavigator_QBaseInitPainter((KUrlNavigator*)self, (QPainter*)painter);
+void k_urlnavigator_super_init_painter(void* self, void* painter) {
+    KUrlNavigator_SuperInitPainter((KUrlNavigator*)self, (QPainter*)painter);
 }
 
 void k_urlnavigator_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ QPaintDevice* k_urlnavigator_redirected(void* self, void* offset) {
     return KUrlNavigator_Redirected((KUrlNavigator*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_urlnavigator_qbase_redirected(void* self, void* offset) {
-    return KUrlNavigator_QBaseRedirected((KUrlNavigator*)self, (QPoint*)offset);
+QPaintDevice* k_urlnavigator_super_redirected(void* self, void* offset) {
+    return KUrlNavigator_SuperRedirected((KUrlNavigator*)self, (QPoint*)offset);
 }
 
 void k_urlnavigator_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2198,8 +2198,8 @@ QPainter* k_urlnavigator_shared_painter(void* self) {
     return KUrlNavigator_SharedPainter((KUrlNavigator*)self);
 }
 
-QPainter* k_urlnavigator_qbase_shared_painter(void* self) {
-    return KUrlNavigator_QBaseSharedPainter((KUrlNavigator*)self);
+QPainter* k_urlnavigator_super_shared_painter(void* self) {
+    return KUrlNavigator_SuperSharedPainter((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2210,8 +2210,8 @@ void k_urlnavigator_input_method_event(void* self, void* param1) {
     KUrlNavigator_InputMethodEvent((KUrlNavigator*)self, (QInputMethodEvent*)param1);
 }
 
-void k_urlnavigator_qbase_input_method_event(void* self, void* param1) {
-    KUrlNavigator_QBaseInputMethodEvent((KUrlNavigator*)self, (QInputMethodEvent*)param1);
+void k_urlnavigator_super_input_method_event(void* self, void* param1) {
+    KUrlNavigator_SuperInputMethodEvent((KUrlNavigator*)self, (QInputMethodEvent*)param1);
 }
 
 void k_urlnavigator_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2222,8 +2222,8 @@ QVariant* k_urlnavigator_input_method_query(void* self, int32_t param1) {
     return KUrlNavigator_InputMethodQuery((KUrlNavigator*)self, param1);
 }
 
-QVariant* k_urlnavigator_qbase_input_method_query(void* self, int32_t param1) {
-    return KUrlNavigator_QBaseInputMethodQuery((KUrlNavigator*)self, param1);
+QVariant* k_urlnavigator_super_input_method_query(void* self, int32_t param1) {
+    return KUrlNavigator_SuperInputMethodQuery((KUrlNavigator*)self, param1);
 }
 
 void k_urlnavigator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2234,8 +2234,8 @@ bool k_urlnavigator_focus_next_prev_child(void* self, bool next) {
     return KUrlNavigator_FocusNextPrevChild((KUrlNavigator*)self, next);
 }
 
-bool k_urlnavigator_qbase_focus_next_prev_child(void* self, bool next) {
-    return KUrlNavigator_QBaseFocusNextPrevChild((KUrlNavigator*)self, next);
+bool k_urlnavigator_super_focus_next_prev_child(void* self, bool next) {
+    return KUrlNavigator_SuperFocusNextPrevChild((KUrlNavigator*)self, next);
 }
 
 void k_urlnavigator_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2246,8 +2246,8 @@ void k_urlnavigator_timer_event(void* self, void* event) {
     KUrlNavigator_TimerEvent((KUrlNavigator*)self, (QTimerEvent*)event);
 }
 
-void k_urlnavigator_qbase_timer_event(void* self, void* event) {
-    KUrlNavigator_QBaseTimerEvent((KUrlNavigator*)self, (QTimerEvent*)event);
+void k_urlnavigator_super_timer_event(void* self, void* event) {
+    KUrlNavigator_SuperTimerEvent((KUrlNavigator*)self, (QTimerEvent*)event);
 }
 
 void k_urlnavigator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2258,8 +2258,8 @@ void k_urlnavigator_child_event(void* self, void* event) {
     KUrlNavigator_ChildEvent((KUrlNavigator*)self, (QChildEvent*)event);
 }
 
-void k_urlnavigator_qbase_child_event(void* self, void* event) {
-    KUrlNavigator_QBaseChildEvent((KUrlNavigator*)self, (QChildEvent*)event);
+void k_urlnavigator_super_child_event(void* self, void* event) {
+    KUrlNavigator_SuperChildEvent((KUrlNavigator*)self, (QChildEvent*)event);
 }
 
 void k_urlnavigator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2270,8 +2270,8 @@ void k_urlnavigator_custom_event(void* self, void* event) {
     KUrlNavigator_CustomEvent((KUrlNavigator*)self, (QEvent*)event);
 }
 
-void k_urlnavigator_qbase_custom_event(void* self, void* event) {
-    KUrlNavigator_QBaseCustomEvent((KUrlNavigator*)self, (QEvent*)event);
+void k_urlnavigator_super_custom_event(void* self, void* event) {
+    KUrlNavigator_SuperCustomEvent((KUrlNavigator*)self, (QEvent*)event);
 }
 
 void k_urlnavigator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2282,8 +2282,8 @@ void k_urlnavigator_connect_notify(void* self, void* signal) {
     KUrlNavigator_ConnectNotify((KUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
-void k_urlnavigator_qbase_connect_notify(void* self, void* signal) {
-    KUrlNavigator_QBaseConnectNotify((KUrlNavigator*)self, (QMetaMethod*)signal);
+void k_urlnavigator_super_connect_notify(void* self, void* signal) {
+    KUrlNavigator_SuperConnectNotify((KUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
 void k_urlnavigator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2294,8 +2294,8 @@ void k_urlnavigator_disconnect_notify(void* self, void* signal) {
     KUrlNavigator_DisconnectNotify((KUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
-void k_urlnavigator_qbase_disconnect_notify(void* self, void* signal) {
-    KUrlNavigator_QBaseDisconnectNotify((KUrlNavigator*)self, (QMetaMethod*)signal);
+void k_urlnavigator_super_disconnect_notify(void* self, void* signal) {
+    KUrlNavigator_SuperDisconnectNotify((KUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
 void k_urlnavigator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2306,8 +2306,8 @@ void k_urlnavigator_update_micro_focus(void* self) {
     KUrlNavigator_UpdateMicroFocus((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_qbase_update_micro_focus(void* self) {
-    KUrlNavigator_QBaseUpdateMicroFocus((KUrlNavigator*)self);
+void k_urlnavigator_super_update_micro_focus(void* self) {
+    KUrlNavigator_SuperUpdateMicroFocus((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2318,8 +2318,8 @@ void k_urlnavigator_create(void* self) {
     KUrlNavigator_Create((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_qbase_create(void* self) {
-    KUrlNavigator_QBaseCreate((KUrlNavigator*)self);
+void k_urlnavigator_super_create(void* self) {
+    KUrlNavigator_SuperCreate((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_create(void* self, void (*callback)()) {
@@ -2330,8 +2330,8 @@ void k_urlnavigator_destroy(void* self) {
     KUrlNavigator_Destroy((KUrlNavigator*)self);
 }
 
-void k_urlnavigator_qbase_destroy(void* self) {
-    KUrlNavigator_QBaseDestroy((KUrlNavigator*)self);
+void k_urlnavigator_super_destroy(void* self) {
+    KUrlNavigator_SuperDestroy((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_destroy(void* self, void (*callback)()) {
@@ -2342,8 +2342,8 @@ bool k_urlnavigator_focus_next_child(void* self) {
     return KUrlNavigator_FocusNextChild((KUrlNavigator*)self);
 }
 
-bool k_urlnavigator_qbase_focus_next_child(void* self) {
-    return KUrlNavigator_QBaseFocusNextChild((KUrlNavigator*)self);
+bool k_urlnavigator_super_focus_next_child(void* self) {
+    return KUrlNavigator_SuperFocusNextChild((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2354,8 +2354,8 @@ bool k_urlnavigator_focus_previous_child(void* self) {
     return KUrlNavigator_FocusPreviousChild((KUrlNavigator*)self);
 }
 
-bool k_urlnavigator_qbase_focus_previous_child(void* self) {
-    return KUrlNavigator_QBaseFocusPreviousChild((KUrlNavigator*)self);
+bool k_urlnavigator_super_focus_previous_child(void* self) {
+    return KUrlNavigator_SuperFocusPreviousChild((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2366,8 +2366,8 @@ QObject* k_urlnavigator_sender(void* self) {
     return KUrlNavigator_Sender((KUrlNavigator*)self);
 }
 
-QObject* k_urlnavigator_qbase_sender(void* self) {
-    return KUrlNavigator_QBaseSender((KUrlNavigator*)self);
+QObject* k_urlnavigator_super_sender(void* self) {
+    return KUrlNavigator_SuperSender((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_sender(void* self, QObject* (*callback)()) {
@@ -2378,8 +2378,8 @@ int32_t k_urlnavigator_sender_signal_index(void* self) {
     return KUrlNavigator_SenderSignalIndex((KUrlNavigator*)self);
 }
 
-int32_t k_urlnavigator_qbase_sender_signal_index(void* self) {
-    return KUrlNavigator_QBaseSenderSignalIndex((KUrlNavigator*)self);
+int32_t k_urlnavigator_super_sender_signal_index(void* self) {
+    return KUrlNavigator_SuperSenderSignalIndex((KUrlNavigator*)self);
 }
 
 void k_urlnavigator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2390,8 +2390,8 @@ int32_t k_urlnavigator_receivers(void* self, const char* signal) {
     return KUrlNavigator_Receivers((KUrlNavigator*)self, signal);
 }
 
-int32_t k_urlnavigator_qbase_receivers(void* self, const char* signal) {
-    return KUrlNavigator_QBaseReceivers((KUrlNavigator*)self, signal);
+int32_t k_urlnavigator_super_receivers(void* self, const char* signal) {
+    return KUrlNavigator_SuperReceivers((KUrlNavigator*)self, signal);
 }
 
 void k_urlnavigator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2402,8 +2402,8 @@ bool k_urlnavigator_is_signal_connected(void* self, void* signal) {
     return KUrlNavigator_IsSignalConnected((KUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
-bool k_urlnavigator_qbase_is_signal_connected(void* self, void* signal) {
-    return KUrlNavigator_QBaseIsSignalConnected((KUrlNavigator*)self, (QMetaMethod*)signal);
+bool k_urlnavigator_super_is_signal_connected(void* self, void* signal) {
+    return KUrlNavigator_SuperIsSignalConnected((KUrlNavigator*)self, (QMetaMethod*)signal);
 }
 
 void k_urlnavigator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2414,8 +2414,8 @@ double k_urlnavigator_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
     return KUrlNavigator_GetDecodedMetricF((KUrlNavigator*)self, metricA, metricB);
 }
 
-double k_urlnavigator_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KUrlNavigator_QBaseGetDecodedMetricF((KUrlNavigator*)self, metricA, metricB);
+double k_urlnavigator_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KUrlNavigator_SuperGetDecodedMetricF((KUrlNavigator*)self, metricA, metricB);
 }
 
 void k_urlnavigator_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

@@ -29,8 +29,8 @@ void k_widgetitemdelegate_on_meta_object(void* self, const QMetaObject* (*callba
     KWidgetItemDelegate_OnMetaObject((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_widgetitemdelegate_qbase_meta_object(void* self) {
-    return KWidgetItemDelegate_QBaseMetaObject((KWidgetItemDelegate*)self);
+const QMetaObject* k_widgetitemdelegate_super_meta_object(void* self) {
+    return KWidgetItemDelegate_SuperMetaObject((KWidgetItemDelegate*)self);
 }
 
 void* k_widgetitemdelegate_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void k_widgetitemdelegate_on_metacast(void* self, void* (*callback)(void*, const
     KWidgetItemDelegate_OnMetacast((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-void* k_widgetitemdelegate_qbase_metacast(void* self, const char* param1) {
-    return KWidgetItemDelegate_QBaseMetacast((KWidgetItemDelegate*)self, param1);
+void* k_widgetitemdelegate_super_metacast(void* self, const char* param1) {
+    return KWidgetItemDelegate_SuperMetacast((KWidgetItemDelegate*)self, param1);
 }
 
 int32_t k_widgetitemdelegate_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void k_widgetitemdelegate_on_metacall(void* self, int32_t (*callback)(void*, int
     KWidgetItemDelegate_OnMetacall((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-int32_t k_widgetitemdelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KWidgetItemDelegate_QBaseMetacall((KWidgetItemDelegate*)self, param1, param2, param3);
+int32_t k_widgetitemdelegate_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KWidgetItemDelegate_SuperMetacall((KWidgetItemDelegate*)self, param1, param2, param3);
 }
 
 const char* k_widgetitemdelegate_tr(const char* s) {
@@ -85,8 +85,8 @@ void k_widgetitemdelegate_on_create_item_widgets(void* self, libqt_list /* of QW
     KWidgetItemDelegate_OnCreateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-libqt_list /* of QWidget* */ k_widgetitemdelegate_qbase_create_item_widgets(void* self, void* index) {
-    libqt_list _arr = KWidgetItemDelegate_QBaseCreateItemWidgets((KWidgetItemDelegate*)self, (QModelIndex*)index);
+libqt_list /* of QWidget* */ k_widgetitemdelegate_super_create_item_widgets(void* self, void* index) {
+    libqt_list _arr = KWidgetItemDelegate_SuperCreateItemWidgets((KWidgetItemDelegate*)self, (QModelIndex*)index);
     return _arr;
 }
 
@@ -98,8 +98,8 @@ void k_widgetitemdelegate_on_update_item_widgets(void* self, void (*callback)(vo
     KWidgetItemDelegate_OnUpdateItemWidgets((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_widgetitemdelegate_qbase_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index) {
-    KWidgetItemDelegate_QBaseUpdateItemWidgets((KWidgetItemDelegate*)self, widgets, (QStyleOptionViewItem*)option, (QPersistentModelIndex*)index);
+void k_widgetitemdelegate_super_update_item_widgets(void* self, libqt_list /* of QWidget* */ widgets, void* option, void* index) {
+    KWidgetItemDelegate_SuperUpdateItemWidgets((KWidgetItemDelegate*)self, widgets, (QStyleOptionViewItem*)option, (QPersistentModelIndex*)index);
 }
 
 void k_widgetitemdelegate_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types) {
@@ -110,8 +110,8 @@ void k_widgetitemdelegate_on_set_blocked_event_types(void* self, void (*callback
     KWidgetItemDelegate_OnSetBlockedEventTypes((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-void k_widgetitemdelegate_qbase_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types) {
-    KWidgetItemDelegate_QBaseSetBlockedEventTypes((KWidgetItemDelegate*)self, (QWidget*)widget, types);
+void k_widgetitemdelegate_super_set_blocked_event_types(void* self, void* widget, libqt_list /* of enum QEvent__Type */ types) {
+    KWidgetItemDelegate_SuperSetBlockedEventTypes((KWidgetItemDelegate*)self, (QWidget*)widget, types);
 }
 
 libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_blocked_event_types(void* self, void* widget) {
@@ -123,8 +123,8 @@ void k_widgetitemdelegate_on_blocked_event_types(void* self, libqt_list /* of en
     KWidgetItemDelegate_OnBlockedEventTypes((KWidgetItemDelegate*)self, (intptr_t)callback);
 }
 
-libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_qbase_blocked_event_types(void* self, void* widget) {
-    libqt_list _arr = KWidgetItemDelegate_QBaseBlockedEventTypes((KWidgetItemDelegate*)self, (QWidget*)widget);
+libqt_list /* of enum QEvent__Type */ k_widgetitemdelegate_super_blocked_event_types(void* self, void* widget) {
+    libqt_list _arr = KWidgetItemDelegate_SuperBlockedEventTypes((KWidgetItemDelegate*)self, (QWidget*)widget);
     return _arr;
 }
 
@@ -389,8 +389,8 @@ void k_widgetitemdelegate_paint(void* self, void* painter, void* option, void* i
     KWidgetItemDelegate_Paint((KWidgetItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_qbase_paint(void* self, void* painter, void* option, void* index) {
-    KWidgetItemDelegate_QBasePaint((KWidgetItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+void k_widgetitemdelegate_super_paint(void* self, void* painter, void* option, void* index) {
+    KWidgetItemDelegate_SuperPaint((KWidgetItemDelegate*)self, (QPainter*)painter, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_paint(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -401,8 +401,8 @@ QSize* k_widgetitemdelegate_size_hint(void* self, void* option, void* index) {
     return KWidgetItemDelegate_SizeHint((KWidgetItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-QSize* k_widgetitemdelegate_qbase_size_hint(void* self, void* option, void* index) {
-    return KWidgetItemDelegate_QBaseSizeHint((KWidgetItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+QSize* k_widgetitemdelegate_super_size_hint(void* self, void* option, void* index) {
+    return KWidgetItemDelegate_SuperSizeHint((KWidgetItemDelegate*)self, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*)) {
@@ -413,8 +413,8 @@ QWidget* k_widgetitemdelegate_create_editor(void* self, void* parent, void* opti
     return KWidgetItemDelegate_CreateEditor((KWidgetItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-QWidget* k_widgetitemdelegate_qbase_create_editor(void* self, void* parent, void* option, void* index) {
-    return KWidgetItemDelegate_QBaseCreateEditor((KWidgetItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+QWidget* k_widgetitemdelegate_super_create_editor(void* self, void* parent, void* option, void* index) {
+    return KWidgetItemDelegate_SuperCreateEditor((KWidgetItemDelegate*)self, (QWidget*)parent, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_create_editor(void* self, QWidget* (*callback)(void*, void*, void*, void*)) {
@@ -425,8 +425,8 @@ void k_widgetitemdelegate_destroy_editor(void* self, void* editor, void* index) 
     KWidgetItemDelegate_DestroyEditor((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_qbase_destroy_editor(void* self, void* editor, void* index) {
-    KWidgetItemDelegate_QBaseDestroyEditor((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
+void k_widgetitemdelegate_super_destroy_editor(void* self, void* editor, void* index) {
+    KWidgetItemDelegate_SuperDestroyEditor((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_destroy_editor(void* self, void (*callback)(void*, void*, void*)) {
@@ -437,8 +437,8 @@ void k_widgetitemdelegate_set_editor_data(void* self, void* editor, void* index)
     KWidgetItemDelegate_SetEditorData((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_qbase_set_editor_data(void* self, void* editor, void* index) {
-    KWidgetItemDelegate_QBaseSetEditorData((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
+void k_widgetitemdelegate_super_set_editor_data(void* self, void* editor, void* index) {
+    KWidgetItemDelegate_SuperSetEditorData((KWidgetItemDelegate*)self, (QWidget*)editor, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_set_editor_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -449,8 +449,8 @@ void k_widgetitemdelegate_set_model_data(void* self, void* editor, void* model, 
     KWidgetItemDelegate_SetModelData((KWidgetItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_qbase_set_model_data(void* self, void* editor, void* model, void* index) {
-    KWidgetItemDelegate_QBaseSetModelData((KWidgetItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
+void k_widgetitemdelegate_super_set_model_data(void* self, void* editor, void* model, void* index) {
+    KWidgetItemDelegate_SuperSetModelData((KWidgetItemDelegate*)self, (QWidget*)editor, (QAbstractItemModel*)model, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_set_model_data(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -461,8 +461,8 @@ void k_widgetitemdelegate_update_editor_geometry(void* self, void* editor, void*
     KWidgetItemDelegate_UpdateEditorGeometry((KWidgetItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-void k_widgetitemdelegate_qbase_update_editor_geometry(void* self, void* editor, void* option, void* index) {
-    KWidgetItemDelegate_QBaseUpdateEditorGeometry((KWidgetItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+void k_widgetitemdelegate_super_update_editor_geometry(void* self, void* editor, void* option, void* index) {
+    KWidgetItemDelegate_SuperUpdateEditorGeometry((KWidgetItemDelegate*)self, (QWidget*)editor, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_update_editor_geometry(void* self, void (*callback)(void*, void*, void*, void*)) {
@@ -473,8 +473,8 @@ bool k_widgetitemdelegate_editor_event(void* self, void* event, void* model, voi
     return KWidgetItemDelegate_EditorEvent((KWidgetItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-bool k_widgetitemdelegate_qbase_editor_event(void* self, void* event, void* model, void* option, void* index) {
-    return KWidgetItemDelegate_QBaseEditorEvent((KWidgetItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+bool k_widgetitemdelegate_super_editor_event(void* self, void* event, void* model, void* option, void* index) {
+    return KWidgetItemDelegate_SuperEditorEvent((KWidgetItemDelegate*)self, (QEvent*)event, (QAbstractItemModel*)model, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_editor_event(void* self, bool (*callback)(void*, void*, void*, void*, void*)) {
@@ -485,8 +485,8 @@ bool k_widgetitemdelegate_help_event(void* self, void* event, void* view, void* 
     return KWidgetItemDelegate_HelpEvent((KWidgetItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
-bool k_widgetitemdelegate_qbase_help_event(void* self, void* event, void* view, void* option, void* index) {
-    return KWidgetItemDelegate_QBaseHelpEvent((KWidgetItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
+bool k_widgetitemdelegate_super_help_event(void* self, void* event, void* view, void* option, void* index) {
+    return KWidgetItemDelegate_SuperHelpEvent((KWidgetItemDelegate*)self, (QHelpEvent*)event, (QAbstractItemView*)view, (QStyleOptionViewItem*)option, (QModelIndex*)index);
 }
 
 void k_widgetitemdelegate_on_help_event(void* self, bool (*callback)(void*, void*, void*, void*, void*)) {
@@ -498,8 +498,8 @@ libqt_list /* of int */ k_widgetitemdelegate_painting_roles(void* self) {
     return _arr;
 }
 
-libqt_list /* of int */ k_widgetitemdelegate_qbase_painting_roles(void* self) {
-    libqt_list _arr = KWidgetItemDelegate_QBasePaintingRoles((KWidgetItemDelegate*)self);
+libqt_list /* of int */ k_widgetitemdelegate_super_painting_roles(void* self) {
+    libqt_list _arr = KWidgetItemDelegate_SuperPaintingRoles((KWidgetItemDelegate*)self);
     return _arr;
 }
 
@@ -511,8 +511,8 @@ bool k_widgetitemdelegate_event(void* self, void* event) {
     return KWidgetItemDelegate_Event((KWidgetItemDelegate*)self, (QEvent*)event);
 }
 
-bool k_widgetitemdelegate_qbase_event(void* self, void* event) {
-    return KWidgetItemDelegate_QBaseEvent((KWidgetItemDelegate*)self, (QEvent*)event);
+bool k_widgetitemdelegate_super_event(void* self, void* event) {
+    return KWidgetItemDelegate_SuperEvent((KWidgetItemDelegate*)self, (QEvent*)event);
 }
 
 void k_widgetitemdelegate_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -523,8 +523,8 @@ bool k_widgetitemdelegate_event_filter(void* self, void* watched, void* event) {
     return KWidgetItemDelegate_EventFilter((KWidgetItemDelegate*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_widgetitemdelegate_qbase_event_filter(void* self, void* watched, void* event) {
-    return KWidgetItemDelegate_QBaseEventFilter((KWidgetItemDelegate*)self, (QObject*)watched, (QEvent*)event);
+bool k_widgetitemdelegate_super_event_filter(void* self, void* watched, void* event) {
+    return KWidgetItemDelegate_SuperEventFilter((KWidgetItemDelegate*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_widgetitemdelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -535,8 +535,8 @@ void k_widgetitemdelegate_timer_event(void* self, void* event) {
     KWidgetItemDelegate_TimerEvent((KWidgetItemDelegate*)self, (QTimerEvent*)event);
 }
 
-void k_widgetitemdelegate_qbase_timer_event(void* self, void* event) {
-    KWidgetItemDelegate_QBaseTimerEvent((KWidgetItemDelegate*)self, (QTimerEvent*)event);
+void k_widgetitemdelegate_super_timer_event(void* self, void* event) {
+    KWidgetItemDelegate_SuperTimerEvent((KWidgetItemDelegate*)self, (QTimerEvent*)event);
 }
 
 void k_widgetitemdelegate_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -547,8 +547,8 @@ void k_widgetitemdelegate_child_event(void* self, void* event) {
     KWidgetItemDelegate_ChildEvent((KWidgetItemDelegate*)self, (QChildEvent*)event);
 }
 
-void k_widgetitemdelegate_qbase_child_event(void* self, void* event) {
-    KWidgetItemDelegate_QBaseChildEvent((KWidgetItemDelegate*)self, (QChildEvent*)event);
+void k_widgetitemdelegate_super_child_event(void* self, void* event) {
+    KWidgetItemDelegate_SuperChildEvent((KWidgetItemDelegate*)self, (QChildEvent*)event);
 }
 
 void k_widgetitemdelegate_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -559,8 +559,8 @@ void k_widgetitemdelegate_custom_event(void* self, void* event) {
     KWidgetItemDelegate_CustomEvent((KWidgetItemDelegate*)self, (QEvent*)event);
 }
 
-void k_widgetitemdelegate_qbase_custom_event(void* self, void* event) {
-    KWidgetItemDelegate_QBaseCustomEvent((KWidgetItemDelegate*)self, (QEvent*)event);
+void k_widgetitemdelegate_super_custom_event(void* self, void* event) {
+    KWidgetItemDelegate_SuperCustomEvent((KWidgetItemDelegate*)self, (QEvent*)event);
 }
 
 void k_widgetitemdelegate_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -571,8 +571,8 @@ void k_widgetitemdelegate_connect_notify(void* self, void* signal) {
     KWidgetItemDelegate_ConnectNotify((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-void k_widgetitemdelegate_qbase_connect_notify(void* self, void* signal) {
-    KWidgetItemDelegate_QBaseConnectNotify((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
+void k_widgetitemdelegate_super_connect_notify(void* self, void* signal) {
+    KWidgetItemDelegate_SuperConnectNotify((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_widgetitemdelegate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -583,8 +583,8 @@ void k_widgetitemdelegate_disconnect_notify(void* self, void* signal) {
     KWidgetItemDelegate_DisconnectNotify((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-void k_widgetitemdelegate_qbase_disconnect_notify(void* self, void* signal) {
-    KWidgetItemDelegate_QBaseDisconnectNotify((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
+void k_widgetitemdelegate_super_disconnect_notify(void* self, void* signal) {
+    KWidgetItemDelegate_SuperDisconnectNotify((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_widgetitemdelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -595,8 +595,8 @@ QObject* k_widgetitemdelegate_sender(void* self) {
     return KWidgetItemDelegate_Sender((KWidgetItemDelegate*)self);
 }
 
-QObject* k_widgetitemdelegate_qbase_sender(void* self) {
-    return KWidgetItemDelegate_QBaseSender((KWidgetItemDelegate*)self);
+QObject* k_widgetitemdelegate_super_sender(void* self) {
+    return KWidgetItemDelegate_SuperSender((KWidgetItemDelegate*)self);
 }
 
 void k_widgetitemdelegate_on_sender(void* self, QObject* (*callback)()) {
@@ -607,8 +607,8 @@ int32_t k_widgetitemdelegate_sender_signal_index(void* self) {
     return KWidgetItemDelegate_SenderSignalIndex((KWidgetItemDelegate*)self);
 }
 
-int32_t k_widgetitemdelegate_qbase_sender_signal_index(void* self) {
-    return KWidgetItemDelegate_QBaseSenderSignalIndex((KWidgetItemDelegate*)self);
+int32_t k_widgetitemdelegate_super_sender_signal_index(void* self) {
+    return KWidgetItemDelegate_SuperSenderSignalIndex((KWidgetItemDelegate*)self);
 }
 
 void k_widgetitemdelegate_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -619,8 +619,8 @@ int32_t k_widgetitemdelegate_receivers(void* self, const char* signal) {
     return KWidgetItemDelegate_Receivers((KWidgetItemDelegate*)self, signal);
 }
 
-int32_t k_widgetitemdelegate_qbase_receivers(void* self, const char* signal) {
-    return KWidgetItemDelegate_QBaseReceivers((KWidgetItemDelegate*)self, signal);
+int32_t k_widgetitemdelegate_super_receivers(void* self, const char* signal) {
+    return KWidgetItemDelegate_SuperReceivers((KWidgetItemDelegate*)self, signal);
 }
 
 void k_widgetitemdelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -631,8 +631,8 @@ bool k_widgetitemdelegate_is_signal_connected(void* self, void* signal) {
     return KWidgetItemDelegate_IsSignalConnected((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
 }
 
-bool k_widgetitemdelegate_qbase_is_signal_connected(void* self, void* signal) {
-    return KWidgetItemDelegate_QBaseIsSignalConnected((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
+bool k_widgetitemdelegate_super_is_signal_connected(void* self, void* signal) {
+    return KWidgetItemDelegate_SuperIsSignalConnected((KWidgetItemDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_widgetitemdelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

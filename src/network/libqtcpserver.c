@@ -24,8 +24,8 @@ void q_tcpserver_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QTcpServer_OnMetaObject((QTcpServer*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_tcpserver_qbase_meta_object(void* self) {
-    return QTcpServer_QBaseMetaObject((QTcpServer*)self);
+const QMetaObject* q_tcpserver_super_meta_object(void* self) {
+    return QTcpServer_SuperMetaObject((QTcpServer*)self);
 }
 
 void* q_tcpserver_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_tcpserver_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QTcpServer_OnMetacast((QTcpServer*)self, (intptr_t)callback);
 }
 
-void* q_tcpserver_qbase_metacast(void* self, const char* param1) {
-    return QTcpServer_QBaseMetacast((QTcpServer*)self, param1);
+void* q_tcpserver_super_metacast(void* self, const char* param1) {
+    return QTcpServer_SuperMetacast((QTcpServer*)self, param1);
 }
 
 int32_t q_tcpserver_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_tcpserver_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QTcpServer_OnMetacall((QTcpServer*)self, (intptr_t)callback);
 }
 
-int32_t q_tcpserver_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTcpServer_QBaseMetacall((QTcpServer*)self, param1, param2, param3);
+int32_t q_tcpserver_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTcpServer_SuperMetacall((QTcpServer*)self, param1, param2, param3);
 }
 
 const char* q_tcpserver_tr(const char* s) {
@@ -115,8 +115,8 @@ void q_tcpserver_on_has_pending_connections(void* self, bool (*callback)()) {
     QTcpServer_OnHasPendingConnections((QTcpServer*)self, (intptr_t)callback);
 }
 
-bool q_tcpserver_qbase_has_pending_connections(void* self) {
-    return QTcpServer_QBaseHasPendingConnections((QTcpServer*)self);
+bool q_tcpserver_super_has_pending_connections(void* self) {
+    return QTcpServer_SuperHasPendingConnections((QTcpServer*)self);
 }
 
 QTcpSocket* q_tcpserver_next_pending_connection(void* self) {
@@ -127,8 +127,8 @@ void q_tcpserver_on_next_pending_connection(void* self, QTcpSocket* (*callback)(
     QTcpServer_OnNextPendingConnection((QTcpServer*)self, (intptr_t)callback);
 }
 
-QTcpSocket* q_tcpserver_qbase_next_pending_connection(void* self) {
-    return QTcpServer_QBaseNextPendingConnection((QTcpServer*)self);
+QTcpSocket* q_tcpserver_super_next_pending_connection(void* self) {
+    return QTcpServer_SuperNextPendingConnection((QTcpServer*)self);
 }
 
 int32_t q_tcpserver_server_error(void* self) {
@@ -166,8 +166,8 @@ void q_tcpserver_on_incoming_connection(void* self, void (*callback)(void*, intp
     QTcpServer_OnIncomingConnection((QTcpServer*)self, (intptr_t)callback);
 }
 
-void q_tcpserver_qbase_incoming_connection(void* self, intptr_t handle) {
-    QTcpServer_QBaseIncomingConnection((QTcpServer*)self, handle);
+void q_tcpserver_super_incoming_connection(void* self, intptr_t handle) {
+    QTcpServer_SuperIncomingConnection((QTcpServer*)self, handle);
 }
 
 void q_tcpserver_add_pending_connection(void* self, void* socket) {
@@ -178,8 +178,8 @@ void q_tcpserver_on_add_pending_connection(void* self, void (*callback)(void*, v
     QTcpServer_OnAddPendingConnection((QTcpServer*)self, (intptr_t)callback);
 }
 
-void q_tcpserver_qbase_add_pending_connection(void* self, void* socket) {
-    QTcpServer_QBaseAddPendingConnection((QTcpServer*)self, (QTcpSocket*)socket);
+void q_tcpserver_super_add_pending_connection(void* self, void* socket) {
+    QTcpServer_SuperAddPendingConnection((QTcpServer*)self, (QTcpSocket*)socket);
 }
 
 void q_tcpserver_new_connection(void* self) {
@@ -443,8 +443,8 @@ bool q_tcpserver_event(void* self, void* event) {
     return QTcpServer_Event((QTcpServer*)self, (QEvent*)event);
 }
 
-bool q_tcpserver_qbase_event(void* self, void* event) {
-    return QTcpServer_QBaseEvent((QTcpServer*)self, (QEvent*)event);
+bool q_tcpserver_super_event(void* self, void* event) {
+    return QTcpServer_SuperEvent((QTcpServer*)self, (QEvent*)event);
 }
 
 void q_tcpserver_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ bool q_tcpserver_event_filter(void* self, void* watched, void* event) {
     return QTcpServer_EventFilter((QTcpServer*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_tcpserver_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTcpServer_QBaseEventFilter((QTcpServer*)self, (QObject*)watched, (QEvent*)event);
+bool q_tcpserver_super_event_filter(void* self, void* watched, void* event) {
+    return QTcpServer_SuperEventFilter((QTcpServer*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_tcpserver_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -467,8 +467,8 @@ void q_tcpserver_timer_event(void* self, void* event) {
     QTcpServer_TimerEvent((QTcpServer*)self, (QTimerEvent*)event);
 }
 
-void q_tcpserver_qbase_timer_event(void* self, void* event) {
-    QTcpServer_QBaseTimerEvent((QTcpServer*)self, (QTimerEvent*)event);
+void q_tcpserver_super_timer_event(void* self, void* event) {
+    QTcpServer_SuperTimerEvent((QTcpServer*)self, (QTimerEvent*)event);
 }
 
 void q_tcpserver_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_tcpserver_child_event(void* self, void* event) {
     QTcpServer_ChildEvent((QTcpServer*)self, (QChildEvent*)event);
 }
 
-void q_tcpserver_qbase_child_event(void* self, void* event) {
-    QTcpServer_QBaseChildEvent((QTcpServer*)self, (QChildEvent*)event);
+void q_tcpserver_super_child_event(void* self, void* event) {
+    QTcpServer_SuperChildEvent((QTcpServer*)self, (QChildEvent*)event);
 }
 
 void q_tcpserver_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_tcpserver_custom_event(void* self, void* event) {
     QTcpServer_CustomEvent((QTcpServer*)self, (QEvent*)event);
 }
 
-void q_tcpserver_qbase_custom_event(void* self, void* event) {
-    QTcpServer_QBaseCustomEvent((QTcpServer*)self, (QEvent*)event);
+void q_tcpserver_super_custom_event(void* self, void* event) {
+    QTcpServer_SuperCustomEvent((QTcpServer*)self, (QEvent*)event);
 }
 
 void q_tcpserver_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_tcpserver_connect_notify(void* self, void* signal) {
     QTcpServer_ConnectNotify((QTcpServer*)self, (QMetaMethod*)signal);
 }
 
-void q_tcpserver_qbase_connect_notify(void* self, void* signal) {
-    QTcpServer_QBaseConnectNotify((QTcpServer*)self, (QMetaMethod*)signal);
+void q_tcpserver_super_connect_notify(void* self, void* signal) {
+    QTcpServer_SuperConnectNotify((QTcpServer*)self, (QMetaMethod*)signal);
 }
 
 void q_tcpserver_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ void q_tcpserver_disconnect_notify(void* self, void* signal) {
     QTcpServer_DisconnectNotify((QTcpServer*)self, (QMetaMethod*)signal);
 }
 
-void q_tcpserver_qbase_disconnect_notify(void* self, void* signal) {
-    QTcpServer_QBaseDisconnectNotify((QTcpServer*)self, (QMetaMethod*)signal);
+void q_tcpserver_super_disconnect_notify(void* self, void* signal) {
+    QTcpServer_SuperDisconnectNotify((QTcpServer*)self, (QMetaMethod*)signal);
 }
 
 void q_tcpserver_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -527,8 +527,8 @@ QObject* q_tcpserver_sender(void* self) {
     return QTcpServer_Sender((QTcpServer*)self);
 }
 
-QObject* q_tcpserver_qbase_sender(void* self) {
-    return QTcpServer_QBaseSender((QTcpServer*)self);
+QObject* q_tcpserver_super_sender(void* self) {
+    return QTcpServer_SuperSender((QTcpServer*)self);
 }
 
 void q_tcpserver_on_sender(void* self, QObject* (*callback)()) {
@@ -539,8 +539,8 @@ int32_t q_tcpserver_sender_signal_index(void* self) {
     return QTcpServer_SenderSignalIndex((QTcpServer*)self);
 }
 
-int32_t q_tcpserver_qbase_sender_signal_index(void* self) {
-    return QTcpServer_QBaseSenderSignalIndex((QTcpServer*)self);
+int32_t q_tcpserver_super_sender_signal_index(void* self) {
+    return QTcpServer_SuperSenderSignalIndex((QTcpServer*)self);
 }
 
 void q_tcpserver_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -551,8 +551,8 @@ int32_t q_tcpserver_receivers(void* self, const char* signal) {
     return QTcpServer_Receivers((QTcpServer*)self, signal);
 }
 
-int32_t q_tcpserver_qbase_receivers(void* self, const char* signal) {
-    return QTcpServer_QBaseReceivers((QTcpServer*)self, signal);
+int32_t q_tcpserver_super_receivers(void* self, const char* signal) {
+    return QTcpServer_SuperReceivers((QTcpServer*)self, signal);
 }
 
 void q_tcpserver_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -563,8 +563,8 @@ bool q_tcpserver_is_signal_connected(void* self, void* signal) {
     return QTcpServer_IsSignalConnected((QTcpServer*)self, (QMetaMethod*)signal);
 }
 
-bool q_tcpserver_qbase_is_signal_connected(void* self, void* signal) {
-    return QTcpServer_QBaseIsSignalConnected((QTcpServer*)self, (QMetaMethod*)signal);
+bool q_tcpserver_super_is_signal_connected(void* self, void* signal) {
+    return QTcpServer_SuperIsSignalConnected((QTcpServer*)self, (QMetaMethod*)signal);
 }
 
 void q_tcpserver_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

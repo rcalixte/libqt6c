@@ -50,7 +50,7 @@ void k_macroexpanderbase_on_expand_plain_macro(void* self, int32_t (*callback)(v
     KMacroExpanderBase_OnExpandPlainMacro((KMacroExpanderBase*)self, (intptr_t)callback);
 }
 
-int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
+int32_t k_macroexpanderbase_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -61,7 +61,7 @@ int32_t k_macroexpanderbase_qbase_expand_plain_macro(void* self, const char* str
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KMacroExpanderBase_QBaseExpandPlainMacro((KMacroExpanderBase*)self, qstring(str), pos, retVal_list);
+    return KMacroExpanderBase_SuperExpandPlainMacro((KMacroExpanderBase*)self, qstring(str), pos, retVal_list);
 }
 
 int32_t k_macroexpanderbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
@@ -84,7 +84,7 @@ void k_macroexpanderbase_on_expand_escaped_macro(void* self, int32_t (*callback)
     KMacroExpanderBase_OnExpandEscapedMacro((KMacroExpanderBase*)self, (intptr_t)callback);
 }
 
-int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
+int32_t k_macroexpanderbase_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -95,7 +95,7 @@ int32_t k_macroexpanderbase_qbase_expand_escaped_macro(void* self, const char* s
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KMacroExpanderBase_QBaseExpandEscapedMacro((KMacroExpanderBase*)self, qstring(str), pos, retVal_list);
+    return KMacroExpanderBase_SuperExpandEscapedMacro((KMacroExpanderBase*)self, qstring(str), pos, retVal_list);
 }
 
 void k_macroexpanderbase_delete(void* self) {
@@ -130,7 +130,7 @@ void k_wordmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
     KWordMacroExpander_OnExpandPlainMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
-int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
+int32_t k_wordmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -141,7 +141,7 @@ int32_t k_wordmacroexpander_qbase_expand_plain_macro(void* self, const char* str
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KWordMacroExpander_QBaseExpandPlainMacro((KWordMacroExpander*)self, qstring(str), pos, retVal_list);
+    return KWordMacroExpander_SuperExpandPlainMacro((KWordMacroExpander*)self, qstring(str), pos, retVal_list);
 }
 
 int32_t k_wordmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
@@ -164,7 +164,7 @@ void k_wordmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
     KWordMacroExpander_OnExpandEscapedMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
-int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
+int32_t k_wordmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -175,7 +175,7 @@ int32_t k_wordmacroexpander_qbase_expand_escaped_macro(void* self, const char* s
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KWordMacroExpander_QBaseExpandEscapedMacro((KWordMacroExpander*)self, qstring(str), pos, retVal_list);
+    return KWordMacroExpander_SuperExpandEscapedMacro((KWordMacroExpander*)self, qstring(str), pos, retVal_list);
 }
 
 bool k_wordmacroexpander_expand_macro(void* self, const char* str, const char* retVal[static 1]) {
@@ -198,7 +198,7 @@ void k_wordmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, con
     KWordMacroExpander_OnExpandMacro((KWordMacroExpander*)self, (intptr_t)callback);
 }
 
-bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const char* retVal[static 1]) {
+bool k_wordmacroexpander_super_expand_macro(void* self, const char* str, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -209,7 +209,7 @@ bool k_wordmacroexpander_qbase_expand_macro(void* self, const char* str, const c
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KWordMacroExpander_QBaseExpandMacro((KWordMacroExpander*)self, qstring(str), retVal_list);
+    return KWordMacroExpander_SuperExpandMacro((KWordMacroExpander*)self, qstring(str), retVal_list);
 }
 
 void k_wordmacroexpander_expand_macros(void* self, const char* str) {
@@ -264,7 +264,7 @@ void k_charmacroexpander_on_expand_plain_macro(void* self, int32_t (*callback)(v
     KCharMacroExpander_OnExpandPlainMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 
-int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
+int32_t k_charmacroexpander_super_expand_plain_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -275,7 +275,7 @@ int32_t k_charmacroexpander_qbase_expand_plain_macro(void* self, const char* str
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KCharMacroExpander_QBaseExpandPlainMacro((KCharMacroExpander*)self, qstring(str), pos, retVal_list);
+    return KCharMacroExpander_SuperExpandPlainMacro((KCharMacroExpander*)self, qstring(str), pos, retVal_list);
 }
 
 int32_t k_charmacroexpander_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
@@ -298,7 +298,7 @@ void k_charmacroexpander_on_expand_escaped_macro(void* self, int32_t (*callback)
     KCharMacroExpander_OnExpandEscapedMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 
-int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
+int32_t k_charmacroexpander_super_expand_escaped_macro(void* self, const char* str, int pos, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -309,7 +309,7 @@ int32_t k_charmacroexpander_qbase_expand_escaped_macro(void* self, const char* s
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KCharMacroExpander_QBaseExpandEscapedMacro((KCharMacroExpander*)self, qstring(str), pos, retVal_list);
+    return KCharMacroExpander_SuperExpandEscapedMacro((KCharMacroExpander*)self, qstring(str), pos, retVal_list);
 }
 
 bool k_charmacroexpander_expand_macro(void* self, void* chr, const char* retVal[static 1]) {
@@ -332,7 +332,7 @@ void k_charmacroexpander_on_expand_macro(void* self, bool (*callback)(void*, voi
     KCharMacroExpander_OnExpandMacro((KCharMacroExpander*)self, (intptr_t)callback);
 }
 
-bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* retVal[static 1]) {
+bool k_charmacroexpander_super_expand_macro(void* self, void* chr, const char* retVal[static 1]) {
     size_t retVal_len = libqt_strv_length(retVal);
     libqt_string* retVal_qstr = (libqt_string*)malloc(retVal_len * sizeof(libqt_string));
     if (retVal_qstr == NULL) {
@@ -343,7 +343,7 @@ bool k_charmacroexpander_qbase_expand_macro(void* self, void* chr, const char* r
         retVal_qstr[i] = qstring(retVal[i]);
     }
     libqt_list retVal_list = qlist(retVal_qstr, retVal_len);
-    return KCharMacroExpander_QBaseExpandMacro((KCharMacroExpander*)self, (QChar*)chr, retVal_list);
+    return KCharMacroExpander_SuperExpandMacro((KCharMacroExpander*)self, (QChar*)chr, retVal_list);
 }
 
 void k_charmacroexpander_expand_macros(void* self, const char* str) {

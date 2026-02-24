@@ -40,8 +40,8 @@ void k_selector_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KSelector_OnMetaObject((KSelector*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_selector_qbase_meta_object(void* self) {
-    return KSelector_QBaseMetaObject((KSelector*)self);
+const QMetaObject* k_selector_super_meta_object(void* self) {
+    return KSelector_SuperMetaObject((KSelector*)self);
 }
 
 void* k_selector_metacast(void* self, const char* param1) {
@@ -52,8 +52,8 @@ void k_selector_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     KSelector_OnMetacast((KSelector*)self, (intptr_t)callback);
 }
 
-void* k_selector_qbase_metacast(void* self, const char* param1) {
-    return KSelector_QBaseMetacast((KSelector*)self, param1);
+void* k_selector_super_metacast(void* self, const char* param1) {
+    return KSelector_SuperMetacast((KSelector*)self, param1);
 }
 
 int32_t k_selector_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -64,8 +64,8 @@ void k_selector_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
     KSelector_OnMetacall((KSelector*)self, (intptr_t)callback);
 }
 
-int32_t k_selector_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSelector_QBaseMetacall((KSelector*)self, param1, param2, param3);
+int32_t k_selector_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSelector_SuperMetacall((KSelector*)self, param1, param2, param3);
 }
 
 const char* k_selector_tr(const char* s) {
@@ -103,8 +103,8 @@ void k_selector_on_draw_contents(void* self, void (*callback)(void*, void*)) {
     KSelector_OnDrawContents((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_draw_contents(void* self, void* param1) {
-    KSelector_QBaseDrawContents((KSelector*)self, (QPainter*)param1);
+void k_selector_super_draw_contents(void* self, void* param1) {
+    KSelector_SuperDrawContents((KSelector*)self, (QPainter*)param1);
 }
 
 void k_selector_draw_arrow(void* self, void* painter, void* pos) {
@@ -115,8 +115,8 @@ void k_selector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*))
     KSelector_OnDrawArrow((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_draw_arrow(void* self, void* painter, void* pos) {
-    KSelector_QBaseDrawArrow((KSelector*)self, (QPainter*)painter, (QPoint*)pos);
+void k_selector_super_draw_arrow(void* self, void* painter, void* pos) {
+    KSelector_SuperDrawArrow((KSelector*)self, (QPainter*)painter, (QPoint*)pos);
 }
 
 void k_selector_paint_event(void* self, void* param1) {
@@ -127,8 +127,8 @@ void k_selector_on_paint_event(void* self, void (*callback)(void*, void*)) {
     KSelector_OnPaintEvent((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_paint_event(void* self, void* param1) {
-    KSelector_QBasePaintEvent((KSelector*)self, (QPaintEvent*)param1);
+void k_selector_super_paint_event(void* self, void* param1) {
+    KSelector_SuperPaintEvent((KSelector*)self, (QPaintEvent*)param1);
 }
 
 void k_selector_mouse_press_event(void* self, void* e) {
@@ -139,8 +139,8 @@ void k_selector_on_mouse_press_event(void* self, void (*callback)(void*, void*))
     KSelector_OnMousePressEvent((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_mouse_press_event(void* self, void* e) {
-    KSelector_QBaseMousePressEvent((KSelector*)self, (QMouseEvent*)e);
+void k_selector_super_mouse_press_event(void* self, void* e) {
+    KSelector_SuperMousePressEvent((KSelector*)self, (QMouseEvent*)e);
 }
 
 void k_selector_mouse_move_event(void* self, void* e) {
@@ -151,8 +151,8 @@ void k_selector_on_mouse_move_event(void* self, void (*callback)(void*, void*)) 
     KSelector_OnMouseMoveEvent((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_mouse_move_event(void* self, void* e) {
-    KSelector_QBaseMouseMoveEvent((KSelector*)self, (QMouseEvent*)e);
+void k_selector_super_mouse_move_event(void* self, void* e) {
+    KSelector_SuperMouseMoveEvent((KSelector*)self, (QMouseEvent*)e);
 }
 
 void k_selector_mouse_release_event(void* self, void* e) {
@@ -163,8 +163,8 @@ void k_selector_on_mouse_release_event(void* self, void (*callback)(void*, void*
     KSelector_OnMouseReleaseEvent((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_mouse_release_event(void* self, void* e) {
-    KSelector_QBaseMouseReleaseEvent((KSelector*)self, (QMouseEvent*)e);
+void k_selector_super_mouse_release_event(void* self, void* e) {
+    KSelector_SuperMouseReleaseEvent((KSelector*)self, (QMouseEvent*)e);
 }
 
 void k_selector_wheel_event(void* self, void* param1) {
@@ -175,8 +175,8 @@ void k_selector_on_wheel_event(void* self, void (*callback)(void*, void*)) {
     KSelector_OnWheelEvent((KSelector*)self, (intptr_t)callback);
 }
 
-void k_selector_qbase_wheel_event(void* self, void* param1) {
-    KSelector_QBaseWheelEvent((KSelector*)self, (QWheelEvent*)param1);
+void k_selector_super_wheel_event(void* self, void* param1) {
+    KSelector_SuperWheelEvent((KSelector*)self, (QWheelEvent*)param1);
 }
 
 const char* k_selector_tr2(const char* s, const char* c) {
@@ -1718,8 +1718,8 @@ bool k_selector_event(void* self, void* e) {
     return KSelector_Event((KSelector*)self, (QEvent*)e);
 }
 
-bool k_selector_qbase_event(void* self, void* e) {
-    return KSelector_QBaseEvent((KSelector*)self, (QEvent*)e);
+bool k_selector_super_event(void* self, void* e) {
+    return KSelector_SuperEvent((KSelector*)self, (QEvent*)e);
 }
 
 void k_selector_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void k_selector_slider_change(void* self, int32_t change) {
     KSelector_SliderChange((KSelector*)self, change);
 }
 
-void k_selector_qbase_slider_change(void* self, int32_t change) {
-    KSelector_QBaseSliderChange((KSelector*)self, change);
+void k_selector_super_slider_change(void* self, int32_t change) {
+    KSelector_SuperSliderChange((KSelector*)self, change);
 }
 
 void k_selector_on_slider_change(void* self, void (*callback)(void*, int32_t)) {
@@ -1742,8 +1742,8 @@ void k_selector_key_press_event(void* self, void* ev) {
     KSelector_KeyPressEvent((KSelector*)self, (QKeyEvent*)ev);
 }
 
-void k_selector_qbase_key_press_event(void* self, void* ev) {
-    KSelector_QBaseKeyPressEvent((KSelector*)self, (QKeyEvent*)ev);
+void k_selector_super_key_press_event(void* self, void* ev) {
+    KSelector_SuperKeyPressEvent((KSelector*)self, (QKeyEvent*)ev);
 }
 
 void k_selector_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1754,8 +1754,8 @@ void k_selector_timer_event(void* self, void* param1) {
     KSelector_TimerEvent((KSelector*)self, (QTimerEvent*)param1);
 }
 
-void k_selector_qbase_timer_event(void* self, void* param1) {
-    KSelector_QBaseTimerEvent((KSelector*)self, (QTimerEvent*)param1);
+void k_selector_super_timer_event(void* self, void* param1) {
+    KSelector_SuperTimerEvent((KSelector*)self, (QTimerEvent*)param1);
 }
 
 void k_selector_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1766,8 +1766,8 @@ void k_selector_change_event(void* self, void* e) {
     KSelector_ChangeEvent((KSelector*)self, (QEvent*)e);
 }
 
-void k_selector_qbase_change_event(void* self, void* e) {
-    KSelector_QBaseChangeEvent((KSelector*)self, (QEvent*)e);
+void k_selector_super_change_event(void* self, void* e) {
+    KSelector_SuperChangeEvent((KSelector*)self, (QEvent*)e);
 }
 
 void k_selector_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1778,8 +1778,8 @@ int32_t k_selector_dev_type(void* self) {
     return KSelector_DevType((KSelector*)self);
 }
 
-int32_t k_selector_qbase_dev_type(void* self) {
-    return KSelector_QBaseDevType((KSelector*)self);
+int32_t k_selector_super_dev_type(void* self) {
+    return KSelector_SuperDevType((KSelector*)self);
 }
 
 void k_selector_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1790,8 +1790,8 @@ void k_selector_set_visible(void* self, bool visible) {
     KSelector_SetVisible((KSelector*)self, visible);
 }
 
-void k_selector_qbase_set_visible(void* self, bool visible) {
-    KSelector_QBaseSetVisible((KSelector*)self, visible);
+void k_selector_super_set_visible(void* self, bool visible) {
+    KSelector_SuperSetVisible((KSelector*)self, visible);
 }
 
 void k_selector_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1802,8 +1802,8 @@ QSize* k_selector_size_hint(void* self) {
     return KSelector_SizeHint((KSelector*)self);
 }
 
-QSize* k_selector_qbase_size_hint(void* self) {
-    return KSelector_QBaseSizeHint((KSelector*)self);
+QSize* k_selector_super_size_hint(void* self) {
+    return KSelector_SuperSizeHint((KSelector*)self);
 }
 
 void k_selector_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1814,8 +1814,8 @@ QSize* k_selector_minimum_size_hint(void* self) {
     return KSelector_MinimumSizeHint((KSelector*)self);
 }
 
-QSize* k_selector_qbase_minimum_size_hint(void* self) {
-    return KSelector_QBaseMinimumSizeHint((KSelector*)self);
+QSize* k_selector_super_minimum_size_hint(void* self) {
+    return KSelector_SuperMinimumSizeHint((KSelector*)self);
 }
 
 void k_selector_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1826,8 +1826,8 @@ int32_t k_selector_height_for_width(void* self, int param1) {
     return KSelector_HeightForWidth((KSelector*)self, param1);
 }
 
-int32_t k_selector_qbase_height_for_width(void* self, int param1) {
-    return KSelector_QBaseHeightForWidth((KSelector*)self, param1);
+int32_t k_selector_super_height_for_width(void* self, int param1) {
+    return KSelector_SuperHeightForWidth((KSelector*)self, param1);
 }
 
 void k_selector_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1838,8 +1838,8 @@ bool k_selector_has_height_for_width(void* self) {
     return KSelector_HasHeightForWidth((KSelector*)self);
 }
 
-bool k_selector_qbase_has_height_for_width(void* self) {
-    return KSelector_QBaseHasHeightForWidth((KSelector*)self);
+bool k_selector_super_has_height_for_width(void* self) {
+    return KSelector_SuperHasHeightForWidth((KSelector*)self);
 }
 
 void k_selector_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1850,8 +1850,8 @@ QPaintEngine* k_selector_paint_engine(void* self) {
     return KSelector_PaintEngine((KSelector*)self);
 }
 
-QPaintEngine* k_selector_qbase_paint_engine(void* self) {
-    return KSelector_QBasePaintEngine((KSelector*)self);
+QPaintEngine* k_selector_super_paint_engine(void* self) {
+    return KSelector_SuperPaintEngine((KSelector*)self);
 }
 
 void k_selector_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1862,8 +1862,8 @@ void k_selector_mouse_double_click_event(void* self, void* event) {
     KSelector_MouseDoubleClickEvent((KSelector*)self, (QMouseEvent*)event);
 }
 
-void k_selector_qbase_mouse_double_click_event(void* self, void* event) {
-    KSelector_QBaseMouseDoubleClickEvent((KSelector*)self, (QMouseEvent*)event);
+void k_selector_super_mouse_double_click_event(void* self, void* event) {
+    KSelector_SuperMouseDoubleClickEvent((KSelector*)self, (QMouseEvent*)event);
 }
 
 void k_selector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void k_selector_key_release_event(void* self, void* event) {
     KSelector_KeyReleaseEvent((KSelector*)self, (QKeyEvent*)event);
 }
 
-void k_selector_qbase_key_release_event(void* self, void* event) {
-    KSelector_QBaseKeyReleaseEvent((KSelector*)self, (QKeyEvent*)event);
+void k_selector_super_key_release_event(void* self, void* event) {
+    KSelector_SuperKeyReleaseEvent((KSelector*)self, (QKeyEvent*)event);
 }
 
 void k_selector_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void k_selector_focus_in_event(void* self, void* event) {
     KSelector_FocusInEvent((KSelector*)self, (QFocusEvent*)event);
 }
 
-void k_selector_qbase_focus_in_event(void* self, void* event) {
-    KSelector_QBaseFocusInEvent((KSelector*)self, (QFocusEvent*)event);
+void k_selector_super_focus_in_event(void* self, void* event) {
+    KSelector_SuperFocusInEvent((KSelector*)self, (QFocusEvent*)event);
 }
 
 void k_selector_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void k_selector_focus_out_event(void* self, void* event) {
     KSelector_FocusOutEvent((KSelector*)self, (QFocusEvent*)event);
 }
 
-void k_selector_qbase_focus_out_event(void* self, void* event) {
-    KSelector_QBaseFocusOutEvent((KSelector*)self, (QFocusEvent*)event);
+void k_selector_super_focus_out_event(void* self, void* event) {
+    KSelector_SuperFocusOutEvent((KSelector*)self, (QFocusEvent*)event);
 }
 
 void k_selector_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void k_selector_enter_event(void* self, void* event) {
     KSelector_EnterEvent((KSelector*)self, (QEnterEvent*)event);
 }
 
-void k_selector_qbase_enter_event(void* self, void* event) {
-    KSelector_QBaseEnterEvent((KSelector*)self, (QEnterEvent*)event);
+void k_selector_super_enter_event(void* self, void* event) {
+    KSelector_SuperEnterEvent((KSelector*)self, (QEnterEvent*)event);
 }
 
 void k_selector_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void k_selector_leave_event(void* self, void* event) {
     KSelector_LeaveEvent((KSelector*)self, (QEvent*)event);
 }
 
-void k_selector_qbase_leave_event(void* self, void* event) {
-    KSelector_QBaseLeaveEvent((KSelector*)self, (QEvent*)event);
+void k_selector_super_leave_event(void* self, void* event) {
+    KSelector_SuperLeaveEvent((KSelector*)self, (QEvent*)event);
 }
 
 void k_selector_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void k_selector_move_event(void* self, void* event) {
     KSelector_MoveEvent((KSelector*)self, (QMoveEvent*)event);
 }
 
-void k_selector_qbase_move_event(void* self, void* event) {
-    KSelector_QBaseMoveEvent((KSelector*)self, (QMoveEvent*)event);
+void k_selector_super_move_event(void* self, void* event) {
+    KSelector_SuperMoveEvent((KSelector*)self, (QMoveEvent*)event);
 }
 
 void k_selector_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ void k_selector_resize_event(void* self, void* event) {
     KSelector_ResizeEvent((KSelector*)self, (QResizeEvent*)event);
 }
 
-void k_selector_qbase_resize_event(void* self, void* event) {
-    KSelector_QBaseResizeEvent((KSelector*)self, (QResizeEvent*)event);
+void k_selector_super_resize_event(void* self, void* event) {
+    KSelector_SuperResizeEvent((KSelector*)self, (QResizeEvent*)event);
 }
 
 void k_selector_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ void k_selector_close_event(void* self, void* event) {
     KSelector_CloseEvent((KSelector*)self, (QCloseEvent*)event);
 }
 
-void k_selector_qbase_close_event(void* self, void* event) {
-    KSelector_QBaseCloseEvent((KSelector*)self, (QCloseEvent*)event);
+void k_selector_super_close_event(void* self, void* event) {
+    KSelector_SuperCloseEvent((KSelector*)self, (QCloseEvent*)event);
 }
 
 void k_selector_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ void k_selector_context_menu_event(void* self, void* event) {
     KSelector_ContextMenuEvent((KSelector*)self, (QContextMenuEvent*)event);
 }
 
-void k_selector_qbase_context_menu_event(void* self, void* event) {
-    KSelector_QBaseContextMenuEvent((KSelector*)self, (QContextMenuEvent*)event);
+void k_selector_super_context_menu_event(void* self, void* event) {
+    KSelector_SuperContextMenuEvent((KSelector*)self, (QContextMenuEvent*)event);
 }
 
 void k_selector_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1982,8 +1982,8 @@ void k_selector_tablet_event(void* self, void* event) {
     KSelector_TabletEvent((KSelector*)self, (QTabletEvent*)event);
 }
 
-void k_selector_qbase_tablet_event(void* self, void* event) {
-    KSelector_QBaseTabletEvent((KSelector*)self, (QTabletEvent*)event);
+void k_selector_super_tablet_event(void* self, void* event) {
+    KSelector_SuperTabletEvent((KSelector*)self, (QTabletEvent*)event);
 }
 
 void k_selector_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ void k_selector_action_event(void* self, void* event) {
     KSelector_ActionEvent((KSelector*)self, (QActionEvent*)event);
 }
 
-void k_selector_qbase_action_event(void* self, void* event) {
-    KSelector_QBaseActionEvent((KSelector*)self, (QActionEvent*)event);
+void k_selector_super_action_event(void* self, void* event) {
+    KSelector_SuperActionEvent((KSelector*)self, (QActionEvent*)event);
 }
 
 void k_selector_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ void k_selector_drag_enter_event(void* self, void* event) {
     KSelector_DragEnterEvent((KSelector*)self, (QDragEnterEvent*)event);
 }
 
-void k_selector_qbase_drag_enter_event(void* self, void* event) {
-    KSelector_QBaseDragEnterEvent((KSelector*)self, (QDragEnterEvent*)event);
+void k_selector_super_drag_enter_event(void* self, void* event) {
+    KSelector_SuperDragEnterEvent((KSelector*)self, (QDragEnterEvent*)event);
 }
 
 void k_selector_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2018,8 +2018,8 @@ void k_selector_drag_move_event(void* self, void* event) {
     KSelector_DragMoveEvent((KSelector*)self, (QDragMoveEvent*)event);
 }
 
-void k_selector_qbase_drag_move_event(void* self, void* event) {
-    KSelector_QBaseDragMoveEvent((KSelector*)self, (QDragMoveEvent*)event);
+void k_selector_super_drag_move_event(void* self, void* event) {
+    KSelector_SuperDragMoveEvent((KSelector*)self, (QDragMoveEvent*)event);
 }
 
 void k_selector_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ void k_selector_drag_leave_event(void* self, void* event) {
     KSelector_DragLeaveEvent((KSelector*)self, (QDragLeaveEvent*)event);
 }
 
-void k_selector_qbase_drag_leave_event(void* self, void* event) {
-    KSelector_QBaseDragLeaveEvent((KSelector*)self, (QDragLeaveEvent*)event);
+void k_selector_super_drag_leave_event(void* self, void* event) {
+    KSelector_SuperDragLeaveEvent((KSelector*)self, (QDragLeaveEvent*)event);
 }
 
 void k_selector_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ void k_selector_drop_event(void* self, void* event) {
     KSelector_DropEvent((KSelector*)self, (QDropEvent*)event);
 }
 
-void k_selector_qbase_drop_event(void* self, void* event) {
-    KSelector_QBaseDropEvent((KSelector*)self, (QDropEvent*)event);
+void k_selector_super_drop_event(void* self, void* event) {
+    KSelector_SuperDropEvent((KSelector*)self, (QDropEvent*)event);
 }
 
 void k_selector_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2054,8 +2054,8 @@ void k_selector_show_event(void* self, void* event) {
     KSelector_ShowEvent((KSelector*)self, (QShowEvent*)event);
 }
 
-void k_selector_qbase_show_event(void* self, void* event) {
-    KSelector_QBaseShowEvent((KSelector*)self, (QShowEvent*)event);
+void k_selector_super_show_event(void* self, void* event) {
+    KSelector_SuperShowEvent((KSelector*)self, (QShowEvent*)event);
 }
 
 void k_selector_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2066,8 +2066,8 @@ void k_selector_hide_event(void* self, void* event) {
     KSelector_HideEvent((KSelector*)self, (QHideEvent*)event);
 }
 
-void k_selector_qbase_hide_event(void* self, void* event) {
-    KSelector_QBaseHideEvent((KSelector*)self, (QHideEvent*)event);
+void k_selector_super_hide_event(void* self, void* event) {
+    KSelector_SuperHideEvent((KSelector*)self, (QHideEvent*)event);
 }
 
 void k_selector_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2078,8 +2078,8 @@ bool k_selector_native_event(void* self, char* eventType, void* message, intptr_
     return KSelector_NativeEvent((KSelector*)self, qstring(eventType), message, result);
 }
 
-bool k_selector_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KSelector_QBaseNativeEvent((KSelector*)self, qstring(eventType), message, result);
+bool k_selector_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KSelector_SuperNativeEvent((KSelector*)self, qstring(eventType), message, result);
 }
 
 void k_selector_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2090,8 +2090,8 @@ int32_t k_selector_metric(void* self, int32_t param1) {
     return KSelector_Metric((KSelector*)self, param1);
 }
 
-int32_t k_selector_qbase_metric(void* self, int32_t param1) {
-    return KSelector_QBaseMetric((KSelector*)self, param1);
+int32_t k_selector_super_metric(void* self, int32_t param1) {
+    return KSelector_SuperMetric((KSelector*)self, param1);
 }
 
 void k_selector_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2102,8 +2102,8 @@ void k_selector_init_painter(void* self, void* painter) {
     KSelector_InitPainter((KSelector*)self, (QPainter*)painter);
 }
 
-void k_selector_qbase_init_painter(void* self, void* painter) {
-    KSelector_QBaseInitPainter((KSelector*)self, (QPainter*)painter);
+void k_selector_super_init_painter(void* self, void* painter) {
+    KSelector_SuperInitPainter((KSelector*)self, (QPainter*)painter);
 }
 
 void k_selector_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2114,8 +2114,8 @@ QPaintDevice* k_selector_redirected(void* self, void* offset) {
     return KSelector_Redirected((KSelector*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_selector_qbase_redirected(void* self, void* offset) {
-    return KSelector_QBaseRedirected((KSelector*)self, (QPoint*)offset);
+QPaintDevice* k_selector_super_redirected(void* self, void* offset) {
+    return KSelector_SuperRedirected((KSelector*)self, (QPoint*)offset);
 }
 
 void k_selector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2126,8 +2126,8 @@ QPainter* k_selector_shared_painter(void* self) {
     return KSelector_SharedPainter((KSelector*)self);
 }
 
-QPainter* k_selector_qbase_shared_painter(void* self) {
-    return KSelector_QBaseSharedPainter((KSelector*)self);
+QPainter* k_selector_super_shared_painter(void* self) {
+    return KSelector_SuperSharedPainter((KSelector*)self);
 }
 
 void k_selector_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2138,8 +2138,8 @@ void k_selector_input_method_event(void* self, void* param1) {
     KSelector_InputMethodEvent((KSelector*)self, (QInputMethodEvent*)param1);
 }
 
-void k_selector_qbase_input_method_event(void* self, void* param1) {
-    KSelector_QBaseInputMethodEvent((KSelector*)self, (QInputMethodEvent*)param1);
+void k_selector_super_input_method_event(void* self, void* param1) {
+    KSelector_SuperInputMethodEvent((KSelector*)self, (QInputMethodEvent*)param1);
 }
 
 void k_selector_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2150,8 +2150,8 @@ QVariant* k_selector_input_method_query(void* self, int32_t param1) {
     return KSelector_InputMethodQuery((KSelector*)self, param1);
 }
 
-QVariant* k_selector_qbase_input_method_query(void* self, int32_t param1) {
-    return KSelector_QBaseInputMethodQuery((KSelector*)self, param1);
+QVariant* k_selector_super_input_method_query(void* self, int32_t param1) {
+    return KSelector_SuperInputMethodQuery((KSelector*)self, param1);
 }
 
 void k_selector_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2162,8 +2162,8 @@ bool k_selector_focus_next_prev_child(void* self, bool next) {
     return KSelector_FocusNextPrevChild((KSelector*)self, next);
 }
 
-bool k_selector_qbase_focus_next_prev_child(void* self, bool next) {
-    return KSelector_QBaseFocusNextPrevChild((KSelector*)self, next);
+bool k_selector_super_focus_next_prev_child(void* self, bool next) {
+    return KSelector_SuperFocusNextPrevChild((KSelector*)self, next);
 }
 
 void k_selector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2174,8 +2174,8 @@ bool k_selector_event_filter(void* self, void* watched, void* event) {
     return KSelector_EventFilter((KSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_selector_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSelector_QBaseEventFilter((KSelector*)self, (QObject*)watched, (QEvent*)event);
+bool k_selector_super_event_filter(void* self, void* watched, void* event) {
+    return KSelector_SuperEventFilter((KSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_selector_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2186,8 +2186,8 @@ void k_selector_child_event(void* self, void* event) {
     KSelector_ChildEvent((KSelector*)self, (QChildEvent*)event);
 }
 
-void k_selector_qbase_child_event(void* self, void* event) {
-    KSelector_QBaseChildEvent((KSelector*)self, (QChildEvent*)event);
+void k_selector_super_child_event(void* self, void* event) {
+    KSelector_SuperChildEvent((KSelector*)self, (QChildEvent*)event);
 }
 
 void k_selector_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2198,8 +2198,8 @@ void k_selector_custom_event(void* self, void* event) {
     KSelector_CustomEvent((KSelector*)self, (QEvent*)event);
 }
 
-void k_selector_qbase_custom_event(void* self, void* event) {
-    KSelector_QBaseCustomEvent((KSelector*)self, (QEvent*)event);
+void k_selector_super_custom_event(void* self, void* event) {
+    KSelector_SuperCustomEvent((KSelector*)self, (QEvent*)event);
 }
 
 void k_selector_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2210,8 +2210,8 @@ void k_selector_connect_notify(void* self, void* signal) {
     KSelector_ConnectNotify((KSelector*)self, (QMetaMethod*)signal);
 }
 
-void k_selector_qbase_connect_notify(void* self, void* signal) {
-    KSelector_QBaseConnectNotify((KSelector*)self, (QMetaMethod*)signal);
+void k_selector_super_connect_notify(void* self, void* signal) {
+    KSelector_SuperConnectNotify((KSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_selector_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2222,8 +2222,8 @@ void k_selector_disconnect_notify(void* self, void* signal) {
     KSelector_DisconnectNotify((KSelector*)self, (QMetaMethod*)signal);
 }
 
-void k_selector_qbase_disconnect_notify(void* self, void* signal) {
-    KSelector_QBaseDisconnectNotify((KSelector*)self, (QMetaMethod*)signal);
+void k_selector_super_disconnect_notify(void* self, void* signal) {
+    KSelector_SuperDisconnectNotify((KSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_selector_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2234,8 +2234,8 @@ void k_selector_set_repeat_action(void* self, int32_t action) {
     KSelector_SetRepeatAction((KSelector*)self, action);
 }
 
-void k_selector_qbase_set_repeat_action(void* self, int32_t action) {
-    KSelector_QBaseSetRepeatAction((KSelector*)self, action);
+void k_selector_super_set_repeat_action(void* self, int32_t action) {
+    KSelector_SuperSetRepeatAction((KSelector*)self, action);
 }
 
 void k_selector_on_set_repeat_action(void* self, void (*callback)(void*, int32_t)) {
@@ -2246,8 +2246,8 @@ int32_t k_selector_repeat_action(void* self) {
     return KSelector_RepeatAction((KSelector*)self);
 }
 
-int32_t k_selector_qbase_repeat_action(void* self) {
-    return KSelector_QBaseRepeatAction((KSelector*)self);
+int32_t k_selector_super_repeat_action(void* self) {
+    return KSelector_SuperRepeatAction((KSelector*)self);
 }
 
 void k_selector_on_repeat_action(void* self, int32_t (*callback)()) {
@@ -2258,8 +2258,8 @@ void k_selector_update_micro_focus(void* self) {
     KSelector_UpdateMicroFocus((KSelector*)self);
 }
 
-void k_selector_qbase_update_micro_focus(void* self) {
-    KSelector_QBaseUpdateMicroFocus((KSelector*)self);
+void k_selector_super_update_micro_focus(void* self) {
+    KSelector_SuperUpdateMicroFocus((KSelector*)self);
 }
 
 void k_selector_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2270,8 +2270,8 @@ void k_selector_create(void* self) {
     KSelector_Create((KSelector*)self);
 }
 
-void k_selector_qbase_create(void* self) {
-    KSelector_QBaseCreate((KSelector*)self);
+void k_selector_super_create(void* self) {
+    KSelector_SuperCreate((KSelector*)self);
 }
 
 void k_selector_on_create(void* self, void (*callback)()) {
@@ -2282,8 +2282,8 @@ void k_selector_destroy(void* self) {
     KSelector_Destroy((KSelector*)self);
 }
 
-void k_selector_qbase_destroy(void* self) {
-    KSelector_QBaseDestroy((KSelector*)self);
+void k_selector_super_destroy(void* self) {
+    KSelector_SuperDestroy((KSelector*)self);
 }
 
 void k_selector_on_destroy(void* self, void (*callback)()) {
@@ -2294,8 +2294,8 @@ bool k_selector_focus_next_child(void* self) {
     return KSelector_FocusNextChild((KSelector*)self);
 }
 
-bool k_selector_qbase_focus_next_child(void* self) {
-    return KSelector_QBaseFocusNextChild((KSelector*)self);
+bool k_selector_super_focus_next_child(void* self) {
+    return KSelector_SuperFocusNextChild((KSelector*)self);
 }
 
 void k_selector_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2306,8 +2306,8 @@ bool k_selector_focus_previous_child(void* self) {
     return KSelector_FocusPreviousChild((KSelector*)self);
 }
 
-bool k_selector_qbase_focus_previous_child(void* self) {
-    return KSelector_QBaseFocusPreviousChild((KSelector*)self);
+bool k_selector_super_focus_previous_child(void* self) {
+    return KSelector_SuperFocusPreviousChild((KSelector*)self);
 }
 
 void k_selector_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2318,8 +2318,8 @@ QObject* k_selector_sender(void* self) {
     return KSelector_Sender((KSelector*)self);
 }
 
-QObject* k_selector_qbase_sender(void* self) {
-    return KSelector_QBaseSender((KSelector*)self);
+QObject* k_selector_super_sender(void* self) {
+    return KSelector_SuperSender((KSelector*)self);
 }
 
 void k_selector_on_sender(void* self, QObject* (*callback)()) {
@@ -2330,8 +2330,8 @@ int32_t k_selector_sender_signal_index(void* self) {
     return KSelector_SenderSignalIndex((KSelector*)self);
 }
 
-int32_t k_selector_qbase_sender_signal_index(void* self) {
-    return KSelector_QBaseSenderSignalIndex((KSelector*)self);
+int32_t k_selector_super_sender_signal_index(void* self) {
+    return KSelector_SuperSenderSignalIndex((KSelector*)self);
 }
 
 void k_selector_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2342,8 +2342,8 @@ int32_t k_selector_receivers(void* self, const char* signal) {
     return KSelector_Receivers((KSelector*)self, signal);
 }
 
-int32_t k_selector_qbase_receivers(void* self, const char* signal) {
-    return KSelector_QBaseReceivers((KSelector*)self, signal);
+int32_t k_selector_super_receivers(void* self, const char* signal) {
+    return KSelector_SuperReceivers((KSelector*)self, signal);
 }
 
 void k_selector_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2354,8 +2354,8 @@ bool k_selector_is_signal_connected(void* self, void* signal) {
     return KSelector_IsSignalConnected((KSelector*)self, (QMetaMethod*)signal);
 }
 
-bool k_selector_qbase_is_signal_connected(void* self, void* signal) {
-    return KSelector_QBaseIsSignalConnected((KSelector*)self, (QMetaMethod*)signal);
+bool k_selector_super_is_signal_connected(void* self, void* signal) {
+    return KSelector_SuperIsSignalConnected((KSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_selector_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2366,8 +2366,8 @@ double k_selector_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
     return KSelector_GetDecodedMetricF((KSelector*)self, metricA, metricB);
 }
 
-double k_selector_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KSelector_QBaseGetDecodedMetricF((KSelector*)self, metricA, metricB);
+double k_selector_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KSelector_SuperGetDecodedMetricF((KSelector*)self, metricA, metricB);
 }
 
 void k_selector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -2406,8 +2406,8 @@ void k_gradientselector_on_meta_object(void* self, const QMetaObject* (*callback
     KGradientSelector_OnMetaObject((KGradientSelector*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_gradientselector_qbase_meta_object(void* self) {
-    return KGradientSelector_QBaseMetaObject((KGradientSelector*)self);
+const QMetaObject* k_gradientselector_super_meta_object(void* self) {
+    return KGradientSelector_SuperMetaObject((KGradientSelector*)self);
 }
 
 void* k_gradientselector_metacast(void* self, const char* param1) {
@@ -2418,8 +2418,8 @@ void k_gradientselector_on_metacast(void* self, void* (*callback)(void*, const c
     KGradientSelector_OnMetacast((KGradientSelector*)self, (intptr_t)callback);
 }
 
-void* k_gradientselector_qbase_metacast(void* self, const char* param1) {
-    return KGradientSelector_QBaseMetacast((KGradientSelector*)self, param1);
+void* k_gradientselector_super_metacast(void* self, const char* param1) {
+    return KGradientSelector_SuperMetacast((KGradientSelector*)self, param1);
 }
 
 int32_t k_gradientselector_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -2430,8 +2430,8 @@ void k_gradientselector_on_metacall(void* self, int32_t (*callback)(void*, int32
     KGradientSelector_OnMetacall((KGradientSelector*)self, (intptr_t)callback);
 }
 
-int32_t k_gradientselector_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KGradientSelector_QBaseMetacall((KGradientSelector*)self, param1, param2, param3);
+int32_t k_gradientselector_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KGradientSelector_SuperMetacall((KGradientSelector*)self, param1, param2, param3);
 }
 
 const char* k_gradientselector_tr(const char* s) {
@@ -2503,8 +2503,8 @@ void k_gradientselector_on_draw_contents(void* self, void (*callback)(void*, voi
     KGradientSelector_OnDrawContents((KGradientSelector*)self, (intptr_t)callback);
 }
 
-void k_gradientselector_qbase_draw_contents(void* self, void* param1) {
-    KGradientSelector_QBaseDrawContents((KGradientSelector*)self, (QPainter*)param1);
+void k_gradientselector_super_draw_contents(void* self, void* param1) {
+    KGradientSelector_SuperDrawContents((KGradientSelector*)self, (QPainter*)param1);
 }
 
 QSize* k_gradientselector_minimum_size(void* self) {
@@ -2515,8 +2515,8 @@ void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)()) {
     KGradientSelector_OnMinimumSize((KGradientSelector*)self, (intptr_t)callback);
 }
 
-QSize* k_gradientselector_qbase_minimum_size(void* self) {
-    return KGradientSelector_QBaseMinimumSize((KGradientSelector*)self);
+QSize* k_gradientselector_super_minimum_size(void* self) {
+    return KGradientSelector_SuperMinimumSize((KGradientSelector*)self);
 }
 
 const char* k_gradientselector_tr2(const char* s, const char* c) {
@@ -4074,8 +4074,8 @@ void k_gradientselector_draw_arrow(void* self, void* painter, void* pos) {
     KGradientSelector_DrawArrow((KGradientSelector*)self, (QPainter*)painter, (QPoint*)pos);
 }
 
-void k_gradientselector_qbase_draw_arrow(void* self, void* painter, void* pos) {
-    KGradientSelector_QBaseDrawArrow((KGradientSelector*)self, (QPainter*)painter, (QPoint*)pos);
+void k_gradientselector_super_draw_arrow(void* self, void* painter, void* pos) {
+    KGradientSelector_SuperDrawArrow((KGradientSelector*)self, (QPainter*)painter, (QPoint*)pos);
 }
 
 void k_gradientselector_on_draw_arrow(void* self, void (*callback)(void*, void*, void*)) {
@@ -4086,8 +4086,8 @@ void k_gradientselector_paint_event(void* self, void* param1) {
     KGradientSelector_PaintEvent((KGradientSelector*)self, (QPaintEvent*)param1);
 }
 
-void k_gradientselector_qbase_paint_event(void* self, void* param1) {
-    KGradientSelector_QBasePaintEvent((KGradientSelector*)self, (QPaintEvent*)param1);
+void k_gradientselector_super_paint_event(void* self, void* param1) {
+    KGradientSelector_SuperPaintEvent((KGradientSelector*)self, (QPaintEvent*)param1);
 }
 
 void k_gradientselector_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -4098,8 +4098,8 @@ void k_gradientselector_mouse_press_event(void* self, void* e) {
     KGradientSelector_MousePressEvent((KGradientSelector*)self, (QMouseEvent*)e);
 }
 
-void k_gradientselector_qbase_mouse_press_event(void* self, void* e) {
-    KGradientSelector_QBaseMousePressEvent((KGradientSelector*)self, (QMouseEvent*)e);
+void k_gradientselector_super_mouse_press_event(void* self, void* e) {
+    KGradientSelector_SuperMousePressEvent((KGradientSelector*)self, (QMouseEvent*)e);
 }
 
 void k_gradientselector_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4110,8 +4110,8 @@ void k_gradientselector_mouse_move_event(void* self, void* e) {
     KGradientSelector_MouseMoveEvent((KGradientSelector*)self, (QMouseEvent*)e);
 }
 
-void k_gradientselector_qbase_mouse_move_event(void* self, void* e) {
-    KGradientSelector_QBaseMouseMoveEvent((KGradientSelector*)self, (QMouseEvent*)e);
+void k_gradientselector_super_mouse_move_event(void* self, void* e) {
+    KGradientSelector_SuperMouseMoveEvent((KGradientSelector*)self, (QMouseEvent*)e);
 }
 
 void k_gradientselector_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4122,8 +4122,8 @@ void k_gradientselector_mouse_release_event(void* self, void* e) {
     KGradientSelector_MouseReleaseEvent((KGradientSelector*)self, (QMouseEvent*)e);
 }
 
-void k_gradientselector_qbase_mouse_release_event(void* self, void* e) {
-    KGradientSelector_QBaseMouseReleaseEvent((KGradientSelector*)self, (QMouseEvent*)e);
+void k_gradientselector_super_mouse_release_event(void* self, void* e) {
+    KGradientSelector_SuperMouseReleaseEvent((KGradientSelector*)self, (QMouseEvent*)e);
 }
 
 void k_gradientselector_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4134,8 +4134,8 @@ void k_gradientselector_wheel_event(void* self, void* param1) {
     KGradientSelector_WheelEvent((KGradientSelector*)self, (QWheelEvent*)param1);
 }
 
-void k_gradientselector_qbase_wheel_event(void* self, void* param1) {
-    KGradientSelector_QBaseWheelEvent((KGradientSelector*)self, (QWheelEvent*)param1);
+void k_gradientselector_super_wheel_event(void* self, void* param1) {
+    KGradientSelector_SuperWheelEvent((KGradientSelector*)self, (QWheelEvent*)param1);
 }
 
 void k_gradientselector_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -4146,8 +4146,8 @@ bool k_gradientselector_event(void* self, void* e) {
     return KGradientSelector_Event((KGradientSelector*)self, (QEvent*)e);
 }
 
-bool k_gradientselector_qbase_event(void* self, void* e) {
-    return KGradientSelector_QBaseEvent((KGradientSelector*)self, (QEvent*)e);
+bool k_gradientselector_super_event(void* self, void* e) {
+    return KGradientSelector_SuperEvent((KGradientSelector*)self, (QEvent*)e);
 }
 
 void k_gradientselector_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -4158,8 +4158,8 @@ void k_gradientselector_slider_change(void* self, int32_t change) {
     KGradientSelector_SliderChange((KGradientSelector*)self, change);
 }
 
-void k_gradientselector_qbase_slider_change(void* self, int32_t change) {
-    KGradientSelector_QBaseSliderChange((KGradientSelector*)self, change);
+void k_gradientselector_super_slider_change(void* self, int32_t change) {
+    KGradientSelector_SuperSliderChange((KGradientSelector*)self, change);
 }
 
 void k_gradientselector_on_slider_change(void* self, void (*callback)(void*, int32_t)) {
@@ -4170,8 +4170,8 @@ void k_gradientselector_key_press_event(void* self, void* ev) {
     KGradientSelector_KeyPressEvent((KGradientSelector*)self, (QKeyEvent*)ev);
 }
 
-void k_gradientselector_qbase_key_press_event(void* self, void* ev) {
-    KGradientSelector_QBaseKeyPressEvent((KGradientSelector*)self, (QKeyEvent*)ev);
+void k_gradientselector_super_key_press_event(void* self, void* ev) {
+    KGradientSelector_SuperKeyPressEvent((KGradientSelector*)self, (QKeyEvent*)ev);
 }
 
 void k_gradientselector_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -4182,8 +4182,8 @@ void k_gradientselector_timer_event(void* self, void* param1) {
     KGradientSelector_TimerEvent((KGradientSelector*)self, (QTimerEvent*)param1);
 }
 
-void k_gradientselector_qbase_timer_event(void* self, void* param1) {
-    KGradientSelector_QBaseTimerEvent((KGradientSelector*)self, (QTimerEvent*)param1);
+void k_gradientselector_super_timer_event(void* self, void* param1) {
+    KGradientSelector_SuperTimerEvent((KGradientSelector*)self, (QTimerEvent*)param1);
 }
 
 void k_gradientselector_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -4194,8 +4194,8 @@ void k_gradientselector_change_event(void* self, void* e) {
     KGradientSelector_ChangeEvent((KGradientSelector*)self, (QEvent*)e);
 }
 
-void k_gradientselector_qbase_change_event(void* self, void* e) {
-    KGradientSelector_QBaseChangeEvent((KGradientSelector*)self, (QEvent*)e);
+void k_gradientselector_super_change_event(void* self, void* e) {
+    KGradientSelector_SuperChangeEvent((KGradientSelector*)self, (QEvent*)e);
 }
 
 void k_gradientselector_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -4206,8 +4206,8 @@ int32_t k_gradientselector_dev_type(void* self) {
     return KGradientSelector_DevType((KGradientSelector*)self);
 }
 
-int32_t k_gradientselector_qbase_dev_type(void* self) {
-    return KGradientSelector_QBaseDevType((KGradientSelector*)self);
+int32_t k_gradientselector_super_dev_type(void* self) {
+    return KGradientSelector_SuperDevType((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_dev_type(void* self, int32_t (*callback)()) {
@@ -4218,8 +4218,8 @@ void k_gradientselector_set_visible(void* self, bool visible) {
     KGradientSelector_SetVisible((KGradientSelector*)self, visible);
 }
 
-void k_gradientselector_qbase_set_visible(void* self, bool visible) {
-    KGradientSelector_QBaseSetVisible((KGradientSelector*)self, visible);
+void k_gradientselector_super_set_visible(void* self, bool visible) {
+    KGradientSelector_SuperSetVisible((KGradientSelector*)self, visible);
 }
 
 void k_gradientselector_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -4230,8 +4230,8 @@ QSize* k_gradientselector_size_hint(void* self) {
     return KGradientSelector_SizeHint((KGradientSelector*)self);
 }
 
-QSize* k_gradientselector_qbase_size_hint(void* self) {
-    return KGradientSelector_QBaseSizeHint((KGradientSelector*)self);
+QSize* k_gradientselector_super_size_hint(void* self) {
+    return KGradientSelector_SuperSizeHint((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_size_hint(void* self, QSize* (*callback)()) {
@@ -4242,8 +4242,8 @@ QSize* k_gradientselector_minimum_size_hint(void* self) {
     return KGradientSelector_MinimumSizeHint((KGradientSelector*)self);
 }
 
-QSize* k_gradientselector_qbase_minimum_size_hint(void* self) {
-    return KGradientSelector_QBaseMinimumSizeHint((KGradientSelector*)self);
+QSize* k_gradientselector_super_minimum_size_hint(void* self) {
+    return KGradientSelector_SuperMinimumSizeHint((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -4254,8 +4254,8 @@ int32_t k_gradientselector_height_for_width(void* self, int param1) {
     return KGradientSelector_HeightForWidth((KGradientSelector*)self, param1);
 }
 
-int32_t k_gradientselector_qbase_height_for_width(void* self, int param1) {
-    return KGradientSelector_QBaseHeightForWidth((KGradientSelector*)self, param1);
+int32_t k_gradientselector_super_height_for_width(void* self, int param1) {
+    return KGradientSelector_SuperHeightForWidth((KGradientSelector*)self, param1);
 }
 
 void k_gradientselector_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -4266,8 +4266,8 @@ bool k_gradientselector_has_height_for_width(void* self) {
     return KGradientSelector_HasHeightForWidth((KGradientSelector*)self);
 }
 
-bool k_gradientselector_qbase_has_height_for_width(void* self) {
-    return KGradientSelector_QBaseHasHeightForWidth((KGradientSelector*)self);
+bool k_gradientselector_super_has_height_for_width(void* self) {
+    return KGradientSelector_SuperHasHeightForWidth((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -4278,8 +4278,8 @@ QPaintEngine* k_gradientselector_paint_engine(void* self) {
     return KGradientSelector_PaintEngine((KGradientSelector*)self);
 }
 
-QPaintEngine* k_gradientselector_qbase_paint_engine(void* self) {
-    return KGradientSelector_QBasePaintEngine((KGradientSelector*)self);
+QPaintEngine* k_gradientselector_super_paint_engine(void* self) {
+    return KGradientSelector_SuperPaintEngine((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -4290,8 +4290,8 @@ void k_gradientselector_mouse_double_click_event(void* self, void* event) {
     KGradientSelector_MouseDoubleClickEvent((KGradientSelector*)self, (QMouseEvent*)event);
 }
 
-void k_gradientselector_qbase_mouse_double_click_event(void* self, void* event) {
-    KGradientSelector_QBaseMouseDoubleClickEvent((KGradientSelector*)self, (QMouseEvent*)event);
+void k_gradientselector_super_mouse_double_click_event(void* self, void* event) {
+    KGradientSelector_SuperMouseDoubleClickEvent((KGradientSelector*)self, (QMouseEvent*)event);
 }
 
 void k_gradientselector_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -4302,8 +4302,8 @@ void k_gradientselector_key_release_event(void* self, void* event) {
     KGradientSelector_KeyReleaseEvent((KGradientSelector*)self, (QKeyEvent*)event);
 }
 
-void k_gradientselector_qbase_key_release_event(void* self, void* event) {
-    KGradientSelector_QBaseKeyReleaseEvent((KGradientSelector*)self, (QKeyEvent*)event);
+void k_gradientselector_super_key_release_event(void* self, void* event) {
+    KGradientSelector_SuperKeyReleaseEvent((KGradientSelector*)self, (QKeyEvent*)event);
 }
 
 void k_gradientselector_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -4314,8 +4314,8 @@ void k_gradientselector_focus_in_event(void* self, void* event) {
     KGradientSelector_FocusInEvent((KGradientSelector*)self, (QFocusEvent*)event);
 }
 
-void k_gradientselector_qbase_focus_in_event(void* self, void* event) {
-    KGradientSelector_QBaseFocusInEvent((KGradientSelector*)self, (QFocusEvent*)event);
+void k_gradientselector_super_focus_in_event(void* self, void* event) {
+    KGradientSelector_SuperFocusInEvent((KGradientSelector*)self, (QFocusEvent*)event);
 }
 
 void k_gradientselector_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -4326,8 +4326,8 @@ void k_gradientselector_focus_out_event(void* self, void* event) {
     KGradientSelector_FocusOutEvent((KGradientSelector*)self, (QFocusEvent*)event);
 }
 
-void k_gradientselector_qbase_focus_out_event(void* self, void* event) {
-    KGradientSelector_QBaseFocusOutEvent((KGradientSelector*)self, (QFocusEvent*)event);
+void k_gradientselector_super_focus_out_event(void* self, void* event) {
+    KGradientSelector_SuperFocusOutEvent((KGradientSelector*)self, (QFocusEvent*)event);
 }
 
 void k_gradientselector_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -4338,8 +4338,8 @@ void k_gradientselector_enter_event(void* self, void* event) {
     KGradientSelector_EnterEvent((KGradientSelector*)self, (QEnterEvent*)event);
 }
 
-void k_gradientselector_qbase_enter_event(void* self, void* event) {
-    KGradientSelector_QBaseEnterEvent((KGradientSelector*)self, (QEnterEvent*)event);
+void k_gradientselector_super_enter_event(void* self, void* event) {
+    KGradientSelector_SuperEnterEvent((KGradientSelector*)self, (QEnterEvent*)event);
 }
 
 void k_gradientselector_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4350,8 +4350,8 @@ void k_gradientselector_leave_event(void* self, void* event) {
     KGradientSelector_LeaveEvent((KGradientSelector*)self, (QEvent*)event);
 }
 
-void k_gradientselector_qbase_leave_event(void* self, void* event) {
-    KGradientSelector_QBaseLeaveEvent((KGradientSelector*)self, (QEvent*)event);
+void k_gradientselector_super_leave_event(void* self, void* event) {
+    KGradientSelector_SuperLeaveEvent((KGradientSelector*)self, (QEvent*)event);
 }
 
 void k_gradientselector_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4362,8 +4362,8 @@ void k_gradientselector_move_event(void* self, void* event) {
     KGradientSelector_MoveEvent((KGradientSelector*)self, (QMoveEvent*)event);
 }
 
-void k_gradientselector_qbase_move_event(void* self, void* event) {
-    KGradientSelector_QBaseMoveEvent((KGradientSelector*)self, (QMoveEvent*)event);
+void k_gradientselector_super_move_event(void* self, void* event) {
+    KGradientSelector_SuperMoveEvent((KGradientSelector*)self, (QMoveEvent*)event);
 }
 
 void k_gradientselector_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4374,8 +4374,8 @@ void k_gradientselector_resize_event(void* self, void* event) {
     KGradientSelector_ResizeEvent((KGradientSelector*)self, (QResizeEvent*)event);
 }
 
-void k_gradientselector_qbase_resize_event(void* self, void* event) {
-    KGradientSelector_QBaseResizeEvent((KGradientSelector*)self, (QResizeEvent*)event);
+void k_gradientselector_super_resize_event(void* self, void* event) {
+    KGradientSelector_SuperResizeEvent((KGradientSelector*)self, (QResizeEvent*)event);
 }
 
 void k_gradientselector_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -4386,8 +4386,8 @@ void k_gradientselector_close_event(void* self, void* event) {
     KGradientSelector_CloseEvent((KGradientSelector*)self, (QCloseEvent*)event);
 }
 
-void k_gradientselector_qbase_close_event(void* self, void* event) {
-    KGradientSelector_QBaseCloseEvent((KGradientSelector*)self, (QCloseEvent*)event);
+void k_gradientselector_super_close_event(void* self, void* event) {
+    KGradientSelector_SuperCloseEvent((KGradientSelector*)self, (QCloseEvent*)event);
 }
 
 void k_gradientselector_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -4398,8 +4398,8 @@ void k_gradientselector_context_menu_event(void* self, void* event) {
     KGradientSelector_ContextMenuEvent((KGradientSelector*)self, (QContextMenuEvent*)event);
 }
 
-void k_gradientselector_qbase_context_menu_event(void* self, void* event) {
-    KGradientSelector_QBaseContextMenuEvent((KGradientSelector*)self, (QContextMenuEvent*)event);
+void k_gradientselector_super_context_menu_event(void* self, void* event) {
+    KGradientSelector_SuperContextMenuEvent((KGradientSelector*)self, (QContextMenuEvent*)event);
 }
 
 void k_gradientselector_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -4410,8 +4410,8 @@ void k_gradientselector_tablet_event(void* self, void* event) {
     KGradientSelector_TabletEvent((KGradientSelector*)self, (QTabletEvent*)event);
 }
 
-void k_gradientselector_qbase_tablet_event(void* self, void* event) {
-    KGradientSelector_QBaseTabletEvent((KGradientSelector*)self, (QTabletEvent*)event);
+void k_gradientselector_super_tablet_event(void* self, void* event) {
+    KGradientSelector_SuperTabletEvent((KGradientSelector*)self, (QTabletEvent*)event);
 }
 
 void k_gradientselector_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -4422,8 +4422,8 @@ void k_gradientselector_action_event(void* self, void* event) {
     KGradientSelector_ActionEvent((KGradientSelector*)self, (QActionEvent*)event);
 }
 
-void k_gradientselector_qbase_action_event(void* self, void* event) {
-    KGradientSelector_QBaseActionEvent((KGradientSelector*)self, (QActionEvent*)event);
+void k_gradientselector_super_action_event(void* self, void* event) {
+    KGradientSelector_SuperActionEvent((KGradientSelector*)self, (QActionEvent*)event);
 }
 
 void k_gradientselector_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -4434,8 +4434,8 @@ void k_gradientselector_drag_enter_event(void* self, void* event) {
     KGradientSelector_DragEnterEvent((KGradientSelector*)self, (QDragEnterEvent*)event);
 }
 
-void k_gradientselector_qbase_drag_enter_event(void* self, void* event) {
-    KGradientSelector_QBaseDragEnterEvent((KGradientSelector*)self, (QDragEnterEvent*)event);
+void k_gradientselector_super_drag_enter_event(void* self, void* event) {
+    KGradientSelector_SuperDragEnterEvent((KGradientSelector*)self, (QDragEnterEvent*)event);
 }
 
 void k_gradientselector_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -4446,8 +4446,8 @@ void k_gradientselector_drag_move_event(void* self, void* event) {
     KGradientSelector_DragMoveEvent((KGradientSelector*)self, (QDragMoveEvent*)event);
 }
 
-void k_gradientselector_qbase_drag_move_event(void* self, void* event) {
-    KGradientSelector_QBaseDragMoveEvent((KGradientSelector*)self, (QDragMoveEvent*)event);
+void k_gradientselector_super_drag_move_event(void* self, void* event) {
+    KGradientSelector_SuperDragMoveEvent((KGradientSelector*)self, (QDragMoveEvent*)event);
 }
 
 void k_gradientselector_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -4458,8 +4458,8 @@ void k_gradientselector_drag_leave_event(void* self, void* event) {
     KGradientSelector_DragLeaveEvent((KGradientSelector*)self, (QDragLeaveEvent*)event);
 }
 
-void k_gradientselector_qbase_drag_leave_event(void* self, void* event) {
-    KGradientSelector_QBaseDragLeaveEvent((KGradientSelector*)self, (QDragLeaveEvent*)event);
+void k_gradientselector_super_drag_leave_event(void* self, void* event) {
+    KGradientSelector_SuperDragLeaveEvent((KGradientSelector*)self, (QDragLeaveEvent*)event);
 }
 
 void k_gradientselector_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -4470,8 +4470,8 @@ void k_gradientselector_drop_event(void* self, void* event) {
     KGradientSelector_DropEvent((KGradientSelector*)self, (QDropEvent*)event);
 }
 
-void k_gradientselector_qbase_drop_event(void* self, void* event) {
-    KGradientSelector_QBaseDropEvent((KGradientSelector*)self, (QDropEvent*)event);
+void k_gradientselector_super_drop_event(void* self, void* event) {
+    KGradientSelector_SuperDropEvent((KGradientSelector*)self, (QDropEvent*)event);
 }
 
 void k_gradientselector_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -4482,8 +4482,8 @@ void k_gradientselector_show_event(void* self, void* event) {
     KGradientSelector_ShowEvent((KGradientSelector*)self, (QShowEvent*)event);
 }
 
-void k_gradientselector_qbase_show_event(void* self, void* event) {
-    KGradientSelector_QBaseShowEvent((KGradientSelector*)self, (QShowEvent*)event);
+void k_gradientselector_super_show_event(void* self, void* event) {
+    KGradientSelector_SuperShowEvent((KGradientSelector*)self, (QShowEvent*)event);
 }
 
 void k_gradientselector_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -4494,8 +4494,8 @@ void k_gradientselector_hide_event(void* self, void* event) {
     KGradientSelector_HideEvent((KGradientSelector*)self, (QHideEvent*)event);
 }
 
-void k_gradientselector_qbase_hide_event(void* self, void* event) {
-    KGradientSelector_QBaseHideEvent((KGradientSelector*)self, (QHideEvent*)event);
+void k_gradientselector_super_hide_event(void* self, void* event) {
+    KGradientSelector_SuperHideEvent((KGradientSelector*)self, (QHideEvent*)event);
 }
 
 void k_gradientselector_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -4506,8 +4506,8 @@ bool k_gradientselector_native_event(void* self, char* eventType, void* message,
     return KGradientSelector_NativeEvent((KGradientSelector*)self, qstring(eventType), message, result);
 }
 
-bool k_gradientselector_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KGradientSelector_QBaseNativeEvent((KGradientSelector*)self, qstring(eventType), message, result);
+bool k_gradientselector_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KGradientSelector_SuperNativeEvent((KGradientSelector*)self, qstring(eventType), message, result);
 }
 
 void k_gradientselector_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -4518,8 +4518,8 @@ int32_t k_gradientselector_metric(void* self, int32_t param1) {
     return KGradientSelector_Metric((KGradientSelector*)self, param1);
 }
 
-int32_t k_gradientselector_qbase_metric(void* self, int32_t param1) {
-    return KGradientSelector_QBaseMetric((KGradientSelector*)self, param1);
+int32_t k_gradientselector_super_metric(void* self, int32_t param1) {
+    return KGradientSelector_SuperMetric((KGradientSelector*)self, param1);
 }
 
 void k_gradientselector_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -4530,8 +4530,8 @@ void k_gradientselector_init_painter(void* self, void* painter) {
     KGradientSelector_InitPainter((KGradientSelector*)self, (QPainter*)painter);
 }
 
-void k_gradientselector_qbase_init_painter(void* self, void* painter) {
-    KGradientSelector_QBaseInitPainter((KGradientSelector*)self, (QPainter*)painter);
+void k_gradientselector_super_init_painter(void* self, void* painter) {
+    KGradientSelector_SuperInitPainter((KGradientSelector*)self, (QPainter*)painter);
 }
 
 void k_gradientselector_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -4542,8 +4542,8 @@ QPaintDevice* k_gradientselector_redirected(void* self, void* offset) {
     return KGradientSelector_Redirected((KGradientSelector*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_gradientselector_qbase_redirected(void* self, void* offset) {
-    return KGradientSelector_QBaseRedirected((KGradientSelector*)self, (QPoint*)offset);
+QPaintDevice* k_gradientselector_super_redirected(void* self, void* offset) {
+    return KGradientSelector_SuperRedirected((KGradientSelector*)self, (QPoint*)offset);
 }
 
 void k_gradientselector_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -4554,8 +4554,8 @@ QPainter* k_gradientselector_shared_painter(void* self) {
     return KGradientSelector_SharedPainter((KGradientSelector*)self);
 }
 
-QPainter* k_gradientselector_qbase_shared_painter(void* self) {
-    return KGradientSelector_QBaseSharedPainter((KGradientSelector*)self);
+QPainter* k_gradientselector_super_shared_painter(void* self) {
+    return KGradientSelector_SuperSharedPainter((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -4566,8 +4566,8 @@ void k_gradientselector_input_method_event(void* self, void* param1) {
     KGradientSelector_InputMethodEvent((KGradientSelector*)self, (QInputMethodEvent*)param1);
 }
 
-void k_gradientselector_qbase_input_method_event(void* self, void* param1) {
-    KGradientSelector_QBaseInputMethodEvent((KGradientSelector*)self, (QInputMethodEvent*)param1);
+void k_gradientselector_super_input_method_event(void* self, void* param1) {
+    KGradientSelector_SuperInputMethodEvent((KGradientSelector*)self, (QInputMethodEvent*)param1);
 }
 
 void k_gradientselector_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -4578,8 +4578,8 @@ QVariant* k_gradientselector_input_method_query(void* self, int32_t param1) {
     return KGradientSelector_InputMethodQuery((KGradientSelector*)self, param1);
 }
 
-QVariant* k_gradientselector_qbase_input_method_query(void* self, int32_t param1) {
-    return KGradientSelector_QBaseInputMethodQuery((KGradientSelector*)self, param1);
+QVariant* k_gradientselector_super_input_method_query(void* self, int32_t param1) {
+    return KGradientSelector_SuperInputMethodQuery((KGradientSelector*)self, param1);
 }
 
 void k_gradientselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -4590,8 +4590,8 @@ bool k_gradientselector_focus_next_prev_child(void* self, bool next) {
     return KGradientSelector_FocusNextPrevChild((KGradientSelector*)self, next);
 }
 
-bool k_gradientselector_qbase_focus_next_prev_child(void* self, bool next) {
-    return KGradientSelector_QBaseFocusNextPrevChild((KGradientSelector*)self, next);
+bool k_gradientselector_super_focus_next_prev_child(void* self, bool next) {
+    return KGradientSelector_SuperFocusNextPrevChild((KGradientSelector*)self, next);
 }
 
 void k_gradientselector_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -4602,8 +4602,8 @@ bool k_gradientselector_event_filter(void* self, void* watched, void* event) {
     return KGradientSelector_EventFilter((KGradientSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_gradientselector_qbase_event_filter(void* self, void* watched, void* event) {
-    return KGradientSelector_QBaseEventFilter((KGradientSelector*)self, (QObject*)watched, (QEvent*)event);
+bool k_gradientselector_super_event_filter(void* self, void* watched, void* event) {
+    return KGradientSelector_SuperEventFilter((KGradientSelector*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_gradientselector_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -4614,8 +4614,8 @@ void k_gradientselector_child_event(void* self, void* event) {
     KGradientSelector_ChildEvent((KGradientSelector*)self, (QChildEvent*)event);
 }
 
-void k_gradientselector_qbase_child_event(void* self, void* event) {
-    KGradientSelector_QBaseChildEvent((KGradientSelector*)self, (QChildEvent*)event);
+void k_gradientselector_super_child_event(void* self, void* event) {
+    KGradientSelector_SuperChildEvent((KGradientSelector*)self, (QChildEvent*)event);
 }
 
 void k_gradientselector_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -4626,8 +4626,8 @@ void k_gradientselector_custom_event(void* self, void* event) {
     KGradientSelector_CustomEvent((KGradientSelector*)self, (QEvent*)event);
 }
 
-void k_gradientselector_qbase_custom_event(void* self, void* event) {
-    KGradientSelector_QBaseCustomEvent((KGradientSelector*)self, (QEvent*)event);
+void k_gradientselector_super_custom_event(void* self, void* event) {
+    KGradientSelector_SuperCustomEvent((KGradientSelector*)self, (QEvent*)event);
 }
 
 void k_gradientselector_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -4638,8 +4638,8 @@ void k_gradientselector_connect_notify(void* self, void* signal) {
     KGradientSelector_ConnectNotify((KGradientSelector*)self, (QMetaMethod*)signal);
 }
 
-void k_gradientselector_qbase_connect_notify(void* self, void* signal) {
-    KGradientSelector_QBaseConnectNotify((KGradientSelector*)self, (QMetaMethod*)signal);
+void k_gradientselector_super_connect_notify(void* self, void* signal) {
+    KGradientSelector_SuperConnectNotify((KGradientSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_gradientselector_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4650,8 +4650,8 @@ void k_gradientselector_disconnect_notify(void* self, void* signal) {
     KGradientSelector_DisconnectNotify((KGradientSelector*)self, (QMetaMethod*)signal);
 }
 
-void k_gradientselector_qbase_disconnect_notify(void* self, void* signal) {
-    KGradientSelector_QBaseDisconnectNotify((KGradientSelector*)self, (QMetaMethod*)signal);
+void k_gradientselector_super_disconnect_notify(void* self, void* signal) {
+    KGradientSelector_SuperDisconnectNotify((KGradientSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_gradientselector_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -4662,8 +4662,8 @@ void k_gradientselector_set_repeat_action(void* self, int32_t action) {
     KGradientSelector_SetRepeatAction((KGradientSelector*)self, action);
 }
 
-void k_gradientselector_qbase_set_repeat_action(void* self, int32_t action) {
-    KGradientSelector_QBaseSetRepeatAction((KGradientSelector*)self, action);
+void k_gradientselector_super_set_repeat_action(void* self, int32_t action) {
+    KGradientSelector_SuperSetRepeatAction((KGradientSelector*)self, action);
 }
 
 void k_gradientselector_on_set_repeat_action(void* self, void (*callback)(void*, int32_t)) {
@@ -4674,8 +4674,8 @@ int32_t k_gradientselector_repeat_action(void* self) {
     return KGradientSelector_RepeatAction((KGradientSelector*)self);
 }
 
-int32_t k_gradientselector_qbase_repeat_action(void* self) {
-    return KGradientSelector_QBaseRepeatAction((KGradientSelector*)self);
+int32_t k_gradientselector_super_repeat_action(void* self) {
+    return KGradientSelector_SuperRepeatAction((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_repeat_action(void* self, int32_t (*callback)()) {
@@ -4686,8 +4686,8 @@ void k_gradientselector_update_micro_focus(void* self) {
     KGradientSelector_UpdateMicroFocus((KGradientSelector*)self);
 }
 
-void k_gradientselector_qbase_update_micro_focus(void* self) {
-    KGradientSelector_QBaseUpdateMicroFocus((KGradientSelector*)self);
+void k_gradientselector_super_update_micro_focus(void* self) {
+    KGradientSelector_SuperUpdateMicroFocus((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_update_micro_focus(void* self, void (*callback)()) {
@@ -4698,8 +4698,8 @@ void k_gradientselector_create(void* self) {
     KGradientSelector_Create((KGradientSelector*)self);
 }
 
-void k_gradientselector_qbase_create(void* self) {
-    KGradientSelector_QBaseCreate((KGradientSelector*)self);
+void k_gradientselector_super_create(void* self) {
+    KGradientSelector_SuperCreate((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_create(void* self, void (*callback)()) {
@@ -4710,8 +4710,8 @@ void k_gradientselector_destroy(void* self) {
     KGradientSelector_Destroy((KGradientSelector*)self);
 }
 
-void k_gradientselector_qbase_destroy(void* self) {
-    KGradientSelector_QBaseDestroy((KGradientSelector*)self);
+void k_gradientselector_super_destroy(void* self) {
+    KGradientSelector_SuperDestroy((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_destroy(void* self, void (*callback)()) {
@@ -4722,8 +4722,8 @@ bool k_gradientselector_focus_next_child(void* self) {
     return KGradientSelector_FocusNextChild((KGradientSelector*)self);
 }
 
-bool k_gradientselector_qbase_focus_next_child(void* self) {
-    return KGradientSelector_QBaseFocusNextChild((KGradientSelector*)self);
+bool k_gradientselector_super_focus_next_child(void* self) {
+    return KGradientSelector_SuperFocusNextChild((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_focus_next_child(void* self, bool (*callback)()) {
@@ -4734,8 +4734,8 @@ bool k_gradientselector_focus_previous_child(void* self) {
     return KGradientSelector_FocusPreviousChild((KGradientSelector*)self);
 }
 
-bool k_gradientselector_qbase_focus_previous_child(void* self) {
-    return KGradientSelector_QBaseFocusPreviousChild((KGradientSelector*)self);
+bool k_gradientselector_super_focus_previous_child(void* self) {
+    return KGradientSelector_SuperFocusPreviousChild((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -4746,8 +4746,8 @@ QObject* k_gradientselector_sender(void* self) {
     return KGradientSelector_Sender((KGradientSelector*)self);
 }
 
-QObject* k_gradientselector_qbase_sender(void* self) {
-    return KGradientSelector_QBaseSender((KGradientSelector*)self);
+QObject* k_gradientselector_super_sender(void* self) {
+    return KGradientSelector_SuperSender((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_sender(void* self, QObject* (*callback)()) {
@@ -4758,8 +4758,8 @@ int32_t k_gradientselector_sender_signal_index(void* self) {
     return KGradientSelector_SenderSignalIndex((KGradientSelector*)self);
 }
 
-int32_t k_gradientselector_qbase_sender_signal_index(void* self) {
-    return KGradientSelector_QBaseSenderSignalIndex((KGradientSelector*)self);
+int32_t k_gradientselector_super_sender_signal_index(void* self) {
+    return KGradientSelector_SuperSenderSignalIndex((KGradientSelector*)self);
 }
 
 void k_gradientselector_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -4770,8 +4770,8 @@ int32_t k_gradientselector_receivers(void* self, const char* signal) {
     return KGradientSelector_Receivers((KGradientSelector*)self, signal);
 }
 
-int32_t k_gradientselector_qbase_receivers(void* self, const char* signal) {
-    return KGradientSelector_QBaseReceivers((KGradientSelector*)self, signal);
+int32_t k_gradientselector_super_receivers(void* self, const char* signal) {
+    return KGradientSelector_SuperReceivers((KGradientSelector*)self, signal);
 }
 
 void k_gradientselector_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -4782,8 +4782,8 @@ bool k_gradientselector_is_signal_connected(void* self, void* signal) {
     return KGradientSelector_IsSignalConnected((KGradientSelector*)self, (QMetaMethod*)signal);
 }
 
-bool k_gradientselector_qbase_is_signal_connected(void* self, void* signal) {
-    return KGradientSelector_QBaseIsSignalConnected((KGradientSelector*)self, (QMetaMethod*)signal);
+bool k_gradientselector_super_is_signal_connected(void* self, void* signal) {
+    return KGradientSelector_SuperIsSignalConnected((KGradientSelector*)self, (QMetaMethod*)signal);
 }
 
 void k_gradientselector_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -4794,8 +4794,8 @@ double k_gradientselector_get_decoded_metric_f(void* self, int32_t metricA, int3
     return KGradientSelector_GetDecodedMetricF((KGradientSelector*)self, metricA, metricB);
 }
 
-double k_gradientselector_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KGradientSelector_QBaseGetDecodedMetricF((KGradientSelector*)self, metricA, metricB);
+double k_gradientselector_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KGradientSelector_SuperGetDecodedMetricF((KGradientSelector*)self, metricA, metricB);
 }
 
 void k_gradientselector_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

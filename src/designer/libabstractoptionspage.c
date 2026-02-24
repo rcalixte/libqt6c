@@ -17,8 +17,8 @@ void q_designeroptionspageinterface_on_name(void* self, const char* (*callback)(
     QDesignerOptionsPageInterface_OnName((QDesignerOptionsPageInterface*)self, (intptr_t)callback);
 }
 
-const char* q_designeroptionspageinterface_qbase_name(void* self) {
-    libqt_string _str = QDesignerOptionsPageInterface_QBaseName((QDesignerOptionsPageInterface*)self);
+const char* q_designeroptionspageinterface_super_name(void* self) {
+    libqt_string _str = QDesignerOptionsPageInterface_SuperName((QDesignerOptionsPageInterface*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -32,8 +32,8 @@ void q_designeroptionspageinterface_on_create_page(void* self, QWidget* (*callba
     QDesignerOptionsPageInterface_OnCreatePage((QDesignerOptionsPageInterface*)self, (intptr_t)callback);
 }
 
-QWidget* q_designeroptionspageinterface_qbase_create_page(void* self, void* parent) {
-    return QDesignerOptionsPageInterface_QBaseCreatePage((QDesignerOptionsPageInterface*)self, (QWidget*)parent);
+QWidget* q_designeroptionspageinterface_super_create_page(void* self, void* parent) {
+    return QDesignerOptionsPageInterface_SuperCreatePage((QDesignerOptionsPageInterface*)self, (QWidget*)parent);
 }
 
 void q_designeroptionspageinterface_apply(void* self) {
@@ -44,8 +44,8 @@ void q_designeroptionspageinterface_on_apply(void* self, void (*callback)()) {
     QDesignerOptionsPageInterface_OnApply((QDesignerOptionsPageInterface*)self, (intptr_t)callback);
 }
 
-void q_designeroptionspageinterface_qbase_apply(void* self) {
-    QDesignerOptionsPageInterface_QBaseApply((QDesignerOptionsPageInterface*)self);
+void q_designeroptionspageinterface_super_apply(void* self) {
+    QDesignerOptionsPageInterface_SuperApply((QDesignerOptionsPageInterface*)self);
 }
 
 void q_designeroptionspageinterface_finish(void* self) {
@@ -56,8 +56,8 @@ void q_designeroptionspageinterface_on_finish(void* self, void (*callback)()) {
     QDesignerOptionsPageInterface_OnFinish((QDesignerOptionsPageInterface*)self, (intptr_t)callback);
 }
 
-void q_designeroptionspageinterface_qbase_finish(void* self) {
-    QDesignerOptionsPageInterface_QBaseFinish((QDesignerOptionsPageInterface*)self);
+void q_designeroptionspageinterface_super_finish(void* self) {
+    QDesignerOptionsPageInterface_SuperFinish((QDesignerOptionsPageInterface*)self);
 }
 
 void q_designeroptionspageinterface_delete(void* self) {

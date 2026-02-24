@@ -39,8 +39,8 @@ void q_boxset_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QBoxSet_OnMetaObject((QBoxSet*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_boxset_qbase_meta_object(void* self) {
-    return QBoxSet_QBaseMetaObject((QBoxSet*)self);
+const QMetaObject* q_boxset_super_meta_object(void* self) {
+    return QBoxSet_SuperMetaObject((QBoxSet*)self);
 }
 
 void* q_boxset_metacast(void* self, const char* param1) {
@@ -51,8 +51,8 @@ void q_boxset_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QBoxSet_OnMetacast((QBoxSet*)self, (intptr_t)callback);
 }
 
-void* q_boxset_qbase_metacast(void* self, const char* param1) {
-    return QBoxSet_QBaseMetacast((QBoxSet*)self, param1);
+void* q_boxset_super_metacast(void* self, const char* param1) {
+    return QBoxSet_SuperMetacast((QBoxSet*)self, param1);
 }
 
 int32_t q_boxset_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -63,8 +63,8 @@ void q_boxset_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     QBoxSet_OnMetacall((QBoxSet*)self, (intptr_t)callback);
 }
 
-int32_t q_boxset_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QBoxSet_QBaseMetacall((QBoxSet*)self, param1, param2, param3);
+int32_t q_boxset_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QBoxSet_SuperMetacall((QBoxSet*)self, param1, param2, param3);
 }
 
 const char* q_boxset_tr(const char* s) {
@@ -442,8 +442,8 @@ bool q_boxset_event(void* self, void* event) {
     return QBoxSet_Event((QBoxSet*)self, (QEvent*)event);
 }
 
-bool q_boxset_qbase_event(void* self, void* event) {
-    return QBoxSet_QBaseEvent((QBoxSet*)self, (QEvent*)event);
+bool q_boxset_super_event(void* self, void* event) {
+    return QBoxSet_SuperEvent((QBoxSet*)self, (QEvent*)event);
 }
 
 void q_boxset_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -454,8 +454,8 @@ bool q_boxset_event_filter(void* self, void* watched, void* event) {
     return QBoxSet_EventFilter((QBoxSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_boxset_qbase_event_filter(void* self, void* watched, void* event) {
-    return QBoxSet_QBaseEventFilter((QBoxSet*)self, (QObject*)watched, (QEvent*)event);
+bool q_boxset_super_event_filter(void* self, void* watched, void* event) {
+    return QBoxSet_SuperEventFilter((QBoxSet*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_boxset_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -466,8 +466,8 @@ void q_boxset_timer_event(void* self, void* event) {
     QBoxSet_TimerEvent((QBoxSet*)self, (QTimerEvent*)event);
 }
 
-void q_boxset_qbase_timer_event(void* self, void* event) {
-    QBoxSet_QBaseTimerEvent((QBoxSet*)self, (QTimerEvent*)event);
+void q_boxset_super_timer_event(void* self, void* event) {
+    QBoxSet_SuperTimerEvent((QBoxSet*)self, (QTimerEvent*)event);
 }
 
 void q_boxset_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -478,8 +478,8 @@ void q_boxset_child_event(void* self, void* event) {
     QBoxSet_ChildEvent((QBoxSet*)self, (QChildEvent*)event);
 }
 
-void q_boxset_qbase_child_event(void* self, void* event) {
-    QBoxSet_QBaseChildEvent((QBoxSet*)self, (QChildEvent*)event);
+void q_boxset_super_child_event(void* self, void* event) {
+    QBoxSet_SuperChildEvent((QBoxSet*)self, (QChildEvent*)event);
 }
 
 void q_boxset_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -490,8 +490,8 @@ void q_boxset_custom_event(void* self, void* event) {
     QBoxSet_CustomEvent((QBoxSet*)self, (QEvent*)event);
 }
 
-void q_boxset_qbase_custom_event(void* self, void* event) {
-    QBoxSet_QBaseCustomEvent((QBoxSet*)self, (QEvent*)event);
+void q_boxset_super_custom_event(void* self, void* event) {
+    QBoxSet_SuperCustomEvent((QBoxSet*)self, (QEvent*)event);
 }
 
 void q_boxset_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -502,8 +502,8 @@ void q_boxset_connect_notify(void* self, void* signal) {
     QBoxSet_ConnectNotify((QBoxSet*)self, (QMetaMethod*)signal);
 }
 
-void q_boxset_qbase_connect_notify(void* self, void* signal) {
-    QBoxSet_QBaseConnectNotify((QBoxSet*)self, (QMetaMethod*)signal);
+void q_boxset_super_connect_notify(void* self, void* signal) {
+    QBoxSet_SuperConnectNotify((QBoxSet*)self, (QMetaMethod*)signal);
 }
 
 void q_boxset_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -514,8 +514,8 @@ void q_boxset_disconnect_notify(void* self, void* signal) {
     QBoxSet_DisconnectNotify((QBoxSet*)self, (QMetaMethod*)signal);
 }
 
-void q_boxset_qbase_disconnect_notify(void* self, void* signal) {
-    QBoxSet_QBaseDisconnectNotify((QBoxSet*)self, (QMetaMethod*)signal);
+void q_boxset_super_disconnect_notify(void* self, void* signal) {
+    QBoxSet_SuperDisconnectNotify((QBoxSet*)self, (QMetaMethod*)signal);
 }
 
 void q_boxset_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -526,8 +526,8 @@ QObject* q_boxset_sender(void* self) {
     return QBoxSet_Sender((QBoxSet*)self);
 }
 
-QObject* q_boxset_qbase_sender(void* self) {
-    return QBoxSet_QBaseSender((QBoxSet*)self);
+QObject* q_boxset_super_sender(void* self) {
+    return QBoxSet_SuperSender((QBoxSet*)self);
 }
 
 void q_boxset_on_sender(void* self, QObject* (*callback)()) {
@@ -538,8 +538,8 @@ int32_t q_boxset_sender_signal_index(void* self) {
     return QBoxSet_SenderSignalIndex((QBoxSet*)self);
 }
 
-int32_t q_boxset_qbase_sender_signal_index(void* self) {
-    return QBoxSet_QBaseSenderSignalIndex((QBoxSet*)self);
+int32_t q_boxset_super_sender_signal_index(void* self) {
+    return QBoxSet_SuperSenderSignalIndex((QBoxSet*)self);
 }
 
 void q_boxset_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -550,8 +550,8 @@ int32_t q_boxset_receivers(void* self, const char* signal) {
     return QBoxSet_Receivers((QBoxSet*)self, signal);
 }
 
-int32_t q_boxset_qbase_receivers(void* self, const char* signal) {
-    return QBoxSet_QBaseReceivers((QBoxSet*)self, signal);
+int32_t q_boxset_super_receivers(void* self, const char* signal) {
+    return QBoxSet_SuperReceivers((QBoxSet*)self, signal);
 }
 
 void q_boxset_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -562,8 +562,8 @@ bool q_boxset_is_signal_connected(void* self, void* signal) {
     return QBoxSet_IsSignalConnected((QBoxSet*)self, (QMetaMethod*)signal);
 }
 
-bool q_boxset_qbase_is_signal_connected(void* self, void* signal) {
-    return QBoxSet_QBaseIsSignalConnected((QBoxSet*)self, (QMetaMethod*)signal);
+bool q_boxset_super_is_signal_connected(void* self, void* signal) {
+    return QBoxSet_SuperIsSignalConnected((QBoxSet*)self, (QMetaMethod*)signal);
 }
 
 void q_boxset_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

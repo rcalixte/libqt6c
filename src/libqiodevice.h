@@ -40,13 +40,17 @@ const QMetaObject* q_iodevice_meta_object(void* self);
 ///
 void q_iodevice_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_meta_object` instead
+///
+#define q_iodevice_qbase_meta_object q_iodevice_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-const QMetaObject* q_iodevice_qbase_meta_object(void* self);
+const QMetaObject* q_iodevice_super_meta_object(void* self);
 
 /// @param self QIODevice*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* q_iodevice_metacast(void* self, const char* param1);
 ///
 void q_iodevice_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_metacast` instead
+///
+#define q_iodevice_qbase_metacast q_iodevice_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 /// @param param1 const char*
 ///
-void* q_iodevice_qbase_metacast(void* self, const char* param1);
+void* q_iodevice_super_metacast(void* self, const char* param1);
 
 /// @param self QIODevice*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t q_iodevice_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_iodevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_metacall` instead
+///
+#define q_iodevice_qbase_metacall q_iodevice_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QIODevice*
@@ -88,7 +100,7 @@ void q_iodevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_iodevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_iodevice_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -152,13 +164,17 @@ bool q_iodevice_is_sequential(void* self);
 ///
 void q_iodevice_on_is_sequential(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_is_sequential` instead
+///
+#define q_iodevice_qbase_is_sequential q_iodevice_super_is_sequential
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#isSequential)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-bool q_iodevice_qbase_is_sequential(void* self);
+bool q_iodevice_super_is_sequential(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readChannelCount)
 ///
@@ -214,6 +230,10 @@ bool q_iodevice_open(void* self, int32_t mode);
 ///
 void q_iodevice_on_open(void* self, bool (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_open` instead
+///
+#define q_iodevice_qbase_open q_iodevice_super_open
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#open)
 ///
 /// Base class method implementation
@@ -221,7 +241,7 @@ void q_iodevice_on_open(void* self, bool (*callback)(void*, int32_t));
 /// @param self QIODevice*
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-bool q_iodevice_qbase_open(void* self, int32_t mode);
+bool q_iodevice_super_open(void* self, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#close)
 ///
@@ -238,13 +258,17 @@ void q_iodevice_close(void* self);
 ///
 void q_iodevice_on_close(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_close` instead
+///
+#define q_iodevice_qbase_close q_iodevice_super_close
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#close)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-void q_iodevice_qbase_close(void* self);
+void q_iodevice_super_close(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
 ///
@@ -261,13 +285,17 @@ long long q_iodevice_pos(void* self);
 ///
 void q_iodevice_on_pos(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_pos` instead
+///
+#define q_iodevice_qbase_pos q_iodevice_super_pos
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_qbase_pos(void* self);
+long long q_iodevice_super_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#size)
 ///
@@ -284,13 +312,17 @@ long long q_iodevice_size(void* self);
 ///
 void q_iodevice_on_size(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_size` instead
+///
+#define q_iodevice_qbase_size q_iodevice_super_size
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#size)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_qbase_size(void* self);
+long long q_iodevice_super_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
@@ -308,6 +340,10 @@ bool q_iodevice_seek(void* self, long long pos);
 ///
 void q_iodevice_on_seek(void* self, bool (*callback)(void*, long long));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_seek` instead
+///
+#define q_iodevice_qbase_seek q_iodevice_super_seek
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
 /// Base class method implementation
@@ -315,7 +351,7 @@ void q_iodevice_on_seek(void* self, bool (*callback)(void*, long long));
 /// @param self QIODevice*
 /// @param pos long long
 ///
-bool q_iodevice_qbase_seek(void* self, long long pos);
+bool q_iodevice_super_seek(void* self, long long pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
 ///
@@ -332,13 +368,17 @@ bool q_iodevice_at_end(void* self);
 ///
 void q_iodevice_on_at_end(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_at_end` instead
+///
+#define q_iodevice_qbase_at_end q_iodevice_super_at_end
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-bool q_iodevice_qbase_at_end(void* self);
+bool q_iodevice_super_at_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
@@ -355,13 +395,17 @@ bool q_iodevice_reset(void* self);
 ///
 void q_iodevice_on_reset(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_reset` instead
+///
+#define q_iodevice_qbase_reset q_iodevice_super_reset
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#reset)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-bool q_iodevice_qbase_reset(void* self);
+bool q_iodevice_super_reset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
@@ -378,13 +422,17 @@ long long q_iodevice_bytes_available(void* self);
 ///
 void q_iodevice_on_bytes_available(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_bytes_available` instead
+///
+#define q_iodevice_qbase_bytes_available q_iodevice_super_bytes_available
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_qbase_bytes_available(void* self);
+long long q_iodevice_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
@@ -401,13 +449,17 @@ long long q_iodevice_bytes_to_write(void* self);
 ///
 void q_iodevice_on_bytes_to_write(void* self, long long (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_bytes_to_write` instead
+///
+#define q_iodevice_qbase_bytes_to_write q_iodevice_super_bytes_to_write
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_qbase_bytes_to_write(void* self);
+long long q_iodevice_super_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
@@ -465,13 +517,17 @@ bool q_iodevice_can_read_line(void* self);
 ///
 void q_iodevice_on_can_read_line(void* self, bool (*callback)());
 
+/// @warning DEPRECATED: Use `q_iodevice_super_can_read_line` instead
+///
+#define q_iodevice_qbase_can_read_line q_iodevice_super_can_read_line
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#canReadLine)
 ///
 /// Base class method implementation
 ///
 /// @param self QIODevice*
 ///
-bool q_iodevice_qbase_can_read_line(void* self);
+bool q_iodevice_super_can_read_line(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#startTransaction)
 ///
@@ -559,6 +615,10 @@ bool q_iodevice_wait_for_ready_read(void* self, int msecs);
 ///
 void q_iodevice_on_wait_for_ready_read(void* self, bool (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_wait_for_ready_read` instead
+///
+#define q_iodevice_qbase_wait_for_ready_read q_iodevice_super_wait_for_ready_read
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
 ///
 /// Base class method implementation
@@ -566,7 +626,7 @@ void q_iodevice_on_wait_for_ready_read(void* self, bool (*callback)(void*, int))
 /// @param self QIODevice*
 /// @param msecs int
 ///
-bool q_iodevice_qbase_wait_for_ready_read(void* self, int msecs);
+bool q_iodevice_super_wait_for_ready_read(void* self, int msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
 ///
@@ -584,6 +644,10 @@ bool q_iodevice_wait_for_bytes_written(void* self, int msecs);
 ///
 void q_iodevice_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_wait_for_bytes_written` instead
+///
+#define q_iodevice_qbase_wait_for_bytes_written q_iodevice_super_wait_for_bytes_written
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForBytesWritten)
 ///
 /// Base class method implementation
@@ -591,7 +655,7 @@ void q_iodevice_on_wait_for_bytes_written(void* self, bool (*callback)(void*, in
 /// @param self QIODevice*
 /// @param msecs int
 ///
-bool q_iodevice_qbase_wait_for_bytes_written(void* self, int msecs);
+bool q_iodevice_super_wait_for_bytes_written(void* self, int msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#ungetChar)
 ///
@@ -721,6 +785,10 @@ long long q_iodevice_read_data(void* self, char* data, long long maxlen);
 ///
 void q_iodevice_on_read_data(void* self, long long (*callback)(void*, char*, long long));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_read_data` instead
+///
+#define q_iodevice_qbase_read_data q_iodevice_super_read_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readData)
 ///
 /// Base class method implementation
@@ -729,7 +797,7 @@ void q_iodevice_on_read_data(void* self, long long (*callback)(void*, char*, lon
 /// @param data char*
 /// @param maxlen long long
 ///
-long long q_iodevice_qbase_read_data(void* self, char* data, long long maxlen);
+long long q_iodevice_super_read_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
 ///
@@ -748,6 +816,10 @@ long long q_iodevice_read_line_data(void* self, char* data, long long maxlen);
 ///
 void q_iodevice_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_read_line_data` instead
+///
+#define q_iodevice_qbase_read_line_data q_iodevice_super_read_line_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
 ///
 /// Base class method implementation
@@ -756,7 +828,7 @@ void q_iodevice_on_read_line_data(void* self, long long (*callback)(void*, char*
 /// @param data char*
 /// @param maxlen long long
 ///
-long long q_iodevice_qbase_read_line_data(void* self, char* data, long long maxlen);
+long long q_iodevice_super_read_line_data(void* self, char* data, long long maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
@@ -774,6 +846,10 @@ long long q_iodevice_skip_data(void* self, long long maxSize);
 ///
 void q_iodevice_on_skip_data(void* self, long long (*callback)(void*, long long));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_skip_data` instead
+///
+#define q_iodevice_qbase_skip_data q_iodevice_super_skip_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
 /// Base class method implementation
@@ -781,7 +857,7 @@ void q_iodevice_on_skip_data(void* self, long long (*callback)(void*, long long)
 /// @param self QIODevice*
 /// @param maxSize long long
 ///
-long long q_iodevice_qbase_skip_data(void* self, long long maxSize);
+long long q_iodevice_super_skip_data(void* self, long long maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeData)
 ///
@@ -800,6 +876,10 @@ long long q_iodevice_write_data(void* self, const char* data, long long lenVal);
 ///
 void q_iodevice_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_write_data` instead
+///
+#define q_iodevice_qbase_write_data q_iodevice_super_write_data
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeData)
 ///
 /// Base class method implementation
@@ -808,7 +888,7 @@ void q_iodevice_on_write_data(void* self, long long (*callback)(void*, const cha
 /// @param data const char*
 /// @param lenVal long long
 ///
-long long q_iodevice_qbase_write_data(void* self, const char* data, long long lenVal);
+long long q_iodevice_super_write_data(void* self, const char* data, long long lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
@@ -826,6 +906,10 @@ void q_iodevice_set_open_mode(void* self, int32_t openMode);
 ///
 void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_set_open_mode` instead
+///
+#define q_iodevice_qbase_set_open_mode q_iodevice_super_set_open_mode
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
 /// Base class method implementation
@@ -833,7 +917,7 @@ void q_iodevice_on_set_open_mode(void* self, void (*callback)(void*, int32_t));
 /// @param self QIODevice*
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_iodevice_qbase_set_open_mode(void* self, int32_t openMode);
+void q_iodevice_super_set_open_mode(void* self, int32_t openMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///
@@ -851,6 +935,10 @@ void q_iodevice_set_error_string(void* self, const char* errorString);
 ///
 void q_iodevice_on_set_error_string(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_iodevice_super_set_error_string` instead
+///
+#define q_iodevice_qbase_set_error_string q_iodevice_super_set_error_string
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setErrorString)
 ///
 /// Base class method implementation
@@ -858,7 +946,7 @@ void q_iodevice_on_set_error_string(void* self, void (*callback)(void*, const ch
 /// @param self QIODevice*
 /// @param errorString const char*
 ///
-void q_iodevice_qbase_set_error_string(void* self, const char* errorString);
+void q_iodevice_super_set_error_string(void* self, const char* errorString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1346,6 +1434,10 @@ void q_iodevice_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_iodevice_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_event` instead
+///
+#define q_iodevice_qbase_event q_iodevice_super_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#event)
@@ -1355,7 +1447,7 @@ bool q_iodevice_event(void* self, void* event);
 /// @param self QIODevice*
 /// @param event QEvent*
 ///
-bool q_iodevice_qbase_event(void* self, void* event);
+bool q_iodevice_super_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1380,6 +1472,10 @@ void q_iodevice_on_event(void* self, bool (*callback)(void*, void*));
 ///
 bool q_iodevice_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_event_filter` instead
+///
+#define q_iodevice_qbase_event_filter q_iodevice_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1390,7 +1486,7 @@ bool q_iodevice_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_iodevice_qbase_event_filter(void* self, void* watched, void* event);
+bool q_iodevice_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1414,6 +1510,10 @@ void q_iodevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_iodevice_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_timer_event` instead
+///
+#define q_iodevice_qbase_timer_event q_iodevice_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1423,7 +1523,7 @@ void q_iodevice_timer_event(void* self, void* event);
 /// @param self QIODevice*
 /// @param event QTimerEvent*
 ///
-void q_iodevice_qbase_timer_event(void* self, void* event);
+void q_iodevice_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1447,6 +1547,10 @@ void q_iodevice_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_iodevice_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_child_event` instead
+///
+#define q_iodevice_qbase_child_event q_iodevice_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1456,7 +1560,7 @@ void q_iodevice_child_event(void* self, void* event);
 /// @param self QIODevice*
 /// @param event QChildEvent*
 ///
-void q_iodevice_qbase_child_event(void* self, void* event);
+void q_iodevice_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1480,6 +1584,10 @@ void q_iodevice_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_iodevice_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_custom_event` instead
+///
+#define q_iodevice_qbase_custom_event q_iodevice_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1489,7 +1597,7 @@ void q_iodevice_custom_event(void* self, void* event);
 /// @param self QIODevice*
 /// @param event QEvent*
 ///
-void q_iodevice_qbase_custom_event(void* self, void* event);
+void q_iodevice_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1513,6 +1621,10 @@ void q_iodevice_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_iodevice_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_connect_notify` instead
+///
+#define q_iodevice_qbase_connect_notify q_iodevice_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1522,7 +1634,7 @@ void q_iodevice_connect_notify(void* self, void* signal);
 /// @param self QIODevice*
 /// @param signal QMetaMethod*
 ///
-void q_iodevice_qbase_connect_notify(void* self, void* signal);
+void q_iodevice_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1546,6 +1658,10 @@ void q_iodevice_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_iodevice_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_disconnect_notify` instead
+///
+#define q_iodevice_qbase_disconnect_notify q_iodevice_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1555,7 +1671,7 @@ void q_iodevice_disconnect_notify(void* self, void* signal);
 /// @param self QIODevice*
 /// @param signal QMetaMethod*
 ///
-void q_iodevice_qbase_disconnect_notify(void* self, void* signal);
+void q_iodevice_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1578,6 +1694,10 @@ void q_iodevice_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QObject* q_iodevice_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_sender` instead
+///
+#define q_iodevice_qbase_sender q_iodevice_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1586,7 +1706,7 @@ QObject* q_iodevice_sender(void* self);
 ///
 /// @param self QIODevice*
 ///
-QObject* q_iodevice_qbase_sender(void* self);
+QObject* q_iodevice_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1609,6 +1729,10 @@ void q_iodevice_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_iodevice_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_sender_signal_index` instead
+///
+#define q_iodevice_qbase_sender_signal_index q_iodevice_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1617,7 +1741,7 @@ int32_t q_iodevice_sender_signal_index(void* self);
 ///
 /// @param self QIODevice*
 ///
-int32_t q_iodevice_qbase_sender_signal_index(void* self);
+int32_t q_iodevice_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1641,6 +1765,10 @@ void q_iodevice_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_iodevice_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_receivers` instead
+///
+#define q_iodevice_qbase_receivers q_iodevice_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1650,7 +1778,7 @@ int32_t q_iodevice_receivers(void* self, const char* signal);
 /// @param self QIODevice*
 /// @param signal const char*
 ///
-int32_t q_iodevice_qbase_receivers(void* self, const char* signal);
+int32_t q_iodevice_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1674,6 +1802,10 @@ void q_iodevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_iodevice_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_iodevice_super_is_signal_connected` instead
+///
+#define q_iodevice_qbase_is_signal_connected q_iodevice_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1683,7 +1815,7 @@ bool q_iodevice_is_signal_connected(void* self, void* signal);
 /// @param self QIODevice*
 /// @param signal QMetaMethod*
 ///
-bool q_iodevice_qbase_is_signal_connected(void* self, void* signal);
+bool q_iodevice_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

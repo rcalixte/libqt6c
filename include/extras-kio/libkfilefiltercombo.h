@@ -40,13 +40,17 @@ const QMetaObject* k_filefiltercombo_meta_object(void* self);
 ///
 void k_filefiltercombo_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_meta_object` instead
+///
+#define k_filefiltercombo_qbase_meta_object k_filefiltercombo_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self KFileFilterCombo*
 ///
-const QMetaObject* k_filefiltercombo_qbase_meta_object(void* self);
+const QMetaObject* k_filefiltercombo_super_meta_object(void* self);
 
 /// @param self KFileFilterCombo*
 /// @param param1 const char*
@@ -60,12 +64,16 @@ void* k_filefiltercombo_metacast(void* self, const char* param1);
 ///
 void k_filefiltercombo_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_metacast` instead
+///
+#define k_filefiltercombo_qbase_metacast k_filefiltercombo_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self KFileFilterCombo*
 /// @param param1 const char*
 ///
-void* k_filefiltercombo_qbase_metacast(void* self, const char* param1);
+void* k_filefiltercombo_super_metacast(void* self, const char* param1);
 
 /// @param self KFileFilterCombo*
 /// @param param1 enum QMetaObject__Call
@@ -81,6 +89,10 @@ int32_t k_filefiltercombo_metacall(void* self, int32_t param1, int param2, void*
 ///
 void k_filefiltercombo_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_metacall` instead
+///
+#define k_filefiltercombo_qbase_metacall k_filefiltercombo_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self KFileFilterCombo*
@@ -88,7 +100,7 @@ void k_filefiltercombo_on_metacall(void* self, int32_t (*callback)(void*, int32_
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t k_filefiltercombo_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t k_filefiltercombo_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -162,6 +174,10 @@ bool k_filefiltercombo_event_filter(void* self, void* param1, void* param2);
 ///
 void k_filefiltercombo_on_event_filter(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_event_filter` instead
+///
+#define k_filefiltercombo_qbase_event_filter k_filefiltercombo_super_event_filter
+
 /// [Upstream resources](https://api.kde.org/kfilefiltercombo.html#eventFilter)
 ///
 /// Base class method implementation
@@ -170,7 +186,7 @@ void k_filefiltercombo_on_event_filter(void* self, bool (*callback)(void*, void*
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool k_filefiltercombo_qbase_event_filter(void* self, void* param1, void* param2);
+bool k_filefiltercombo_super_event_filter(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://api.kde.org/kfilefiltercombo.html#filterChanged)
 ///
@@ -4353,6 +4369,10 @@ KCompletion* k_filefiltercombo_completion_object1(void* self, bool handleSignals
 ///
 void k_filefiltercombo_set_auto_completion(void* self, bool autocomplete);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_auto_completion` instead
+///
+#define k_filefiltercombo_qbase_set_auto_completion k_filefiltercombo_super_set_auto_completion
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setAutoCompletion)
@@ -4362,7 +4382,7 @@ void k_filefiltercombo_set_auto_completion(void* self, bool autocomplete);
 /// @param self KFileFilterCombo*
 /// @param autocomplete bool
 ///
-void k_filefiltercombo_qbase_set_auto_completion(void* self, bool autocomplete);
+void k_filefiltercombo_super_set_auto_completion(void* self, bool autocomplete);
 
 /// Inherited from KComboBox
 ///
@@ -4386,6 +4406,10 @@ void k_filefiltercombo_on_set_auto_completion(void* self, void (*callback)(void*
 ///
 void k_filefiltercombo_set_line_edit(void* self, void* lineEdit);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_line_edit` instead
+///
+#define k_filefiltercombo_qbase_set_line_edit k_filefiltercombo_super_set_line_edit
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setLineEdit)
@@ -4395,7 +4419,7 @@ void k_filefiltercombo_set_line_edit(void* self, void* lineEdit);
 /// @param self KFileFilterCombo*
 /// @param lineEdit QLineEdit*
 ///
-void k_filefiltercombo_qbase_set_line_edit(void* self, void* lineEdit);
+void k_filefiltercombo_super_set_line_edit(void* self, void* lineEdit);
 
 /// Inherited from KComboBox
 ///
@@ -4418,6 +4442,10 @@ void k_filefiltercombo_on_set_line_edit(void* self, void (*callback)(void*, void
 ///
 QSize* k_filefiltercombo_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_minimum_size_hint` instead
+///
+#define k_filefiltercombo_qbase_minimum_size_hint k_filefiltercombo_super_minimum_size_hint
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#minimumSizeHint)
@@ -4426,7 +4454,7 @@ QSize* k_filefiltercombo_minimum_size_hint(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-QSize* k_filefiltercombo_qbase_minimum_size_hint(void* self);
+QSize* k_filefiltercombo_super_minimum_size_hint(void* self);
 
 /// Inherited from KComboBox
 ///
@@ -4450,6 +4478,10 @@ void k_filefiltercombo_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 void k_filefiltercombo_set_completed_text(void* self, const char* completedText);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_completed_text` instead
+///
+#define k_filefiltercombo_qbase_set_completed_text k_filefiltercombo_super_set_completed_text
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setCompletedText)
@@ -4459,7 +4491,7 @@ void k_filefiltercombo_set_completed_text(void* self, const char* completedText)
 /// @param self KFileFilterCombo*
 /// @param completedText const char*
 ///
-void k_filefiltercombo_qbase_set_completed_text(void* self, const char* completedText);
+void k_filefiltercombo_super_set_completed_text(void* self, const char* completedText);
 
 /// Inherited from KComboBox
 ///
@@ -4484,6 +4516,10 @@ void k_filefiltercombo_on_set_completed_text(void* self, void (*callback)(void*,
 ///
 void k_filefiltercombo_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_completed_items` instead
+///
+#define k_filefiltercombo_qbase_set_completed_items k_filefiltercombo_super_set_completed_items
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#setCompletedItems)
@@ -4494,7 +4530,7 @@ void k_filefiltercombo_set_completed_items(void* self, const char* items[static 
 /// @param items const char**
 /// @param autoSuggest bool
 ///
-void k_filefiltercombo_qbase_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
+void k_filefiltercombo_super_set_completed_items(void* self, const char* items[static 1], bool autoSuggest);
 
 /// Inherited from KComboBox
 ///
@@ -4518,6 +4554,10 @@ void k_filefiltercombo_on_set_completed_items(void* self, void (*callback)(void*
 ///
 void k_filefiltercombo_make_completion(void* self, const char* param1);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_make_completion` instead
+///
+#define k_filefiltercombo_qbase_make_completion k_filefiltercombo_super_make_completion
+
 /// Inherited from KComboBox
 ///
 /// [Upstream resources](https://api.kde.org/kcombobox.html#makeCompletion)
@@ -4527,7 +4567,7 @@ void k_filefiltercombo_make_completion(void* self, const char* param1);
 /// @param self KFileFilterCombo*
 /// @param param1 const char*
 ///
-void k_filefiltercombo_qbase_make_completion(void* self, const char* param1);
+void k_filefiltercombo_super_make_completion(void* self, const char* param1);
 
 /// Inherited from KComboBox
 ///
@@ -4551,6 +4591,10 @@ void k_filefiltercombo_on_make_completion(void* self, void (*callback)(void*, co
 ///
 void k_filefiltercombo_set_model(void* self, void* model);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_model` instead
+///
+#define k_filefiltercombo_qbase_set_model k_filefiltercombo_super_set_model
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#setModel)
@@ -4560,7 +4604,7 @@ void k_filefiltercombo_set_model(void* self, void* model);
 /// @param self KFileFilterCombo*
 /// @param model QAbstractItemModel*
 ///
-void k_filefiltercombo_qbase_set_model(void* self, void* model);
+void k_filefiltercombo_super_set_model(void* self, void* model);
 
 /// Inherited from QComboBox
 ///
@@ -4583,6 +4627,10 @@ void k_filefiltercombo_on_set_model(void* self, void (*callback)(void*, void*));
 ///
 QSize* k_filefiltercombo_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_size_hint` instead
+///
+#define k_filefiltercombo_qbase_size_hint k_filefiltercombo_super_size_hint
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#sizeHint)
@@ -4591,7 +4639,7 @@ QSize* k_filefiltercombo_size_hint(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-QSize* k_filefiltercombo_qbase_size_hint(void* self);
+QSize* k_filefiltercombo_super_size_hint(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4614,6 +4662,10 @@ void k_filefiltercombo_on_size_hint(void* self, QSize* (*callback)());
 ///
 void k_filefiltercombo_show_popup(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_show_popup` instead
+///
+#define k_filefiltercombo_qbase_show_popup k_filefiltercombo_super_show_popup
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showPopup)
@@ -4622,7 +4674,7 @@ void k_filefiltercombo_show_popup(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-void k_filefiltercombo_qbase_show_popup(void* self);
+void k_filefiltercombo_super_show_popup(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4645,6 +4697,10 @@ void k_filefiltercombo_on_show_popup(void* self, void (*callback)());
 ///
 void k_filefiltercombo_hide_popup(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_hide_popup` instead
+///
+#define k_filefiltercombo_qbase_hide_popup k_filefiltercombo_super_hide_popup
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hidePopup)
@@ -4653,7 +4709,7 @@ void k_filefiltercombo_hide_popup(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-void k_filefiltercombo_qbase_hide_popup(void* self);
+void k_filefiltercombo_super_hide_popup(void* self);
 
 /// Inherited from QComboBox
 ///
@@ -4677,6 +4733,10 @@ void k_filefiltercombo_on_hide_popup(void* self, void (*callback)());
 ///
 bool k_filefiltercombo_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_event` instead
+///
+#define k_filefiltercombo_qbase_event k_filefiltercombo_super_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#event)
@@ -4686,7 +4746,7 @@ bool k_filefiltercombo_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QEvent*
 ///
-bool k_filefiltercombo_qbase_event(void* self, void* event);
+bool k_filefiltercombo_super_event(void* self, void* event);
 
 /// Inherited from QComboBox
 ///
@@ -4710,6 +4770,10 @@ void k_filefiltercombo_on_event(void* self, bool (*callback)(void*, void*));
 ///
 QVariant* k_filefiltercombo_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_input_method_query` instead
+///
+#define k_filefiltercombo_qbase_input_method_query k_filefiltercombo_super_input_method_query
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodQuery)
@@ -4719,7 +4783,7 @@ QVariant* k_filefiltercombo_input_method_query(void* self, int32_t param1);
 /// @param self KFileFilterCombo*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* k_filefiltercombo_qbase_input_method_query(void* self, int32_t param1);
+QVariant* k_filefiltercombo_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QComboBox
 ///
@@ -4743,6 +4807,10 @@ void k_filefiltercombo_on_input_method_query(void* self, QVariant* (*callback)(v
 ///
 void k_filefiltercombo_focus_in_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_focus_in_event` instead
+///
+#define k_filefiltercombo_qbase_focus_in_event k_filefiltercombo_super_focus_in_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusInEvent)
@@ -4752,7 +4820,7 @@ void k_filefiltercombo_focus_in_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QFocusEvent*
 ///
-void k_filefiltercombo_qbase_focus_in_event(void* self, void* e);
+void k_filefiltercombo_super_focus_in_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4776,6 +4844,10 @@ void k_filefiltercombo_on_focus_in_event(void* self, void (*callback)(void*, voi
 ///
 void k_filefiltercombo_focus_out_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_focus_out_event` instead
+///
+#define k_filefiltercombo_qbase_focus_out_event k_filefiltercombo_super_focus_out_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#focusOutEvent)
@@ -4785,7 +4857,7 @@ void k_filefiltercombo_focus_out_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QFocusEvent*
 ///
-void k_filefiltercombo_qbase_focus_out_event(void* self, void* e);
+void k_filefiltercombo_super_focus_out_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4809,6 +4881,10 @@ void k_filefiltercombo_on_focus_out_event(void* self, void (*callback)(void*, vo
 ///
 void k_filefiltercombo_change_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_change_event` instead
+///
+#define k_filefiltercombo_qbase_change_event k_filefiltercombo_super_change_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#changeEvent)
@@ -4818,7 +4894,7 @@ void k_filefiltercombo_change_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QEvent*
 ///
-void k_filefiltercombo_qbase_change_event(void* self, void* e);
+void k_filefiltercombo_super_change_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4842,6 +4918,10 @@ void k_filefiltercombo_on_change_event(void* self, void (*callback)(void*, void*
 ///
 void k_filefiltercombo_resize_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_resize_event` instead
+///
+#define k_filefiltercombo_qbase_resize_event k_filefiltercombo_super_resize_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#resizeEvent)
@@ -4851,7 +4931,7 @@ void k_filefiltercombo_resize_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QResizeEvent*
 ///
-void k_filefiltercombo_qbase_resize_event(void* self, void* e);
+void k_filefiltercombo_super_resize_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4875,6 +4955,10 @@ void k_filefiltercombo_on_resize_event(void* self, void (*callback)(void*, void*
 ///
 void k_filefiltercombo_paint_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_paint_event` instead
+///
+#define k_filefiltercombo_qbase_paint_event k_filefiltercombo_super_paint_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#paintEvent)
@@ -4884,7 +4968,7 @@ void k_filefiltercombo_paint_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QPaintEvent*
 ///
-void k_filefiltercombo_qbase_paint_event(void* self, void* e);
+void k_filefiltercombo_super_paint_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4908,6 +4992,10 @@ void k_filefiltercombo_on_paint_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_show_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_show_event` instead
+///
+#define k_filefiltercombo_qbase_show_event k_filefiltercombo_super_show_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#showEvent)
@@ -4917,7 +5005,7 @@ void k_filefiltercombo_show_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QShowEvent*
 ///
-void k_filefiltercombo_qbase_show_event(void* self, void* e);
+void k_filefiltercombo_super_show_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4941,6 +5029,10 @@ void k_filefiltercombo_on_show_event(void* self, void (*callback)(void*, void*))
 ///
 void k_filefiltercombo_hide_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_hide_event` instead
+///
+#define k_filefiltercombo_qbase_hide_event k_filefiltercombo_super_hide_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#hideEvent)
@@ -4950,7 +5042,7 @@ void k_filefiltercombo_hide_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QHideEvent*
 ///
-void k_filefiltercombo_qbase_hide_event(void* self, void* e);
+void k_filefiltercombo_super_hide_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -4974,6 +5066,10 @@ void k_filefiltercombo_on_hide_event(void* self, void (*callback)(void*, void*))
 ///
 void k_filefiltercombo_mouse_press_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_mouse_press_event` instead
+///
+#define k_filefiltercombo_qbase_mouse_press_event k_filefiltercombo_super_mouse_press_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mousePressEvent)
@@ -4983,7 +5079,7 @@ void k_filefiltercombo_mouse_press_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QMouseEvent*
 ///
-void k_filefiltercombo_qbase_mouse_press_event(void* self, void* e);
+void k_filefiltercombo_super_mouse_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5007,6 +5103,10 @@ void k_filefiltercombo_on_mouse_press_event(void* self, void (*callback)(void*, 
 ///
 void k_filefiltercombo_mouse_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_mouse_release_event` instead
+///
+#define k_filefiltercombo_qbase_mouse_release_event k_filefiltercombo_super_mouse_release_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#mouseReleaseEvent)
@@ -5016,7 +5116,7 @@ void k_filefiltercombo_mouse_release_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QMouseEvent*
 ///
-void k_filefiltercombo_qbase_mouse_release_event(void* self, void* e);
+void k_filefiltercombo_super_mouse_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5040,6 +5140,10 @@ void k_filefiltercombo_on_mouse_release_event(void* self, void (*callback)(void*
 ///
 void k_filefiltercombo_key_press_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_key_press_event` instead
+///
+#define k_filefiltercombo_qbase_key_press_event k_filefiltercombo_super_key_press_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyPressEvent)
@@ -5049,7 +5153,7 @@ void k_filefiltercombo_key_press_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QKeyEvent*
 ///
-void k_filefiltercombo_qbase_key_press_event(void* self, void* e);
+void k_filefiltercombo_super_key_press_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5073,6 +5177,10 @@ void k_filefiltercombo_on_key_press_event(void* self, void (*callback)(void*, vo
 ///
 void k_filefiltercombo_key_release_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_key_release_event` instead
+///
+#define k_filefiltercombo_qbase_key_release_event k_filefiltercombo_super_key_release_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#keyReleaseEvent)
@@ -5082,7 +5190,7 @@ void k_filefiltercombo_key_release_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QKeyEvent*
 ///
-void k_filefiltercombo_qbase_key_release_event(void* self, void* e);
+void k_filefiltercombo_super_key_release_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5106,6 +5214,10 @@ void k_filefiltercombo_on_key_release_event(void* self, void (*callback)(void*, 
 ///
 void k_filefiltercombo_wheel_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_wheel_event` instead
+///
+#define k_filefiltercombo_qbase_wheel_event k_filefiltercombo_super_wheel_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#wheelEvent)
@@ -5115,7 +5227,7 @@ void k_filefiltercombo_wheel_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QWheelEvent*
 ///
-void k_filefiltercombo_qbase_wheel_event(void* self, void* e);
+void k_filefiltercombo_super_wheel_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5139,6 +5251,10 @@ void k_filefiltercombo_on_wheel_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_context_menu_event(void* self, void* e);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_context_menu_event` instead
+///
+#define k_filefiltercombo_qbase_context_menu_event k_filefiltercombo_super_context_menu_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#contextMenuEvent)
@@ -5148,7 +5264,7 @@ void k_filefiltercombo_context_menu_event(void* self, void* e);
 /// @param self KFileFilterCombo*
 /// @param e QContextMenuEvent*
 ///
-void k_filefiltercombo_qbase_context_menu_event(void* self, void* e);
+void k_filefiltercombo_super_context_menu_event(void* self, void* e);
 
 /// Inherited from QComboBox
 ///
@@ -5172,6 +5288,10 @@ void k_filefiltercombo_on_context_menu_event(void* self, void (*callback)(void*,
 ///
 void k_filefiltercombo_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_input_method_event` instead
+///
+#define k_filefiltercombo_qbase_input_method_event k_filefiltercombo_super_input_method_event
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#inputMethodEvent)
@@ -5181,7 +5301,7 @@ void k_filefiltercombo_input_method_event(void* self, void* param1);
 /// @param self KFileFilterCombo*
 /// @param param1 QInputMethodEvent*
 ///
-void k_filefiltercombo_qbase_input_method_event(void* self, void* param1);
+void k_filefiltercombo_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QComboBox
 ///
@@ -5205,6 +5325,10 @@ void k_filefiltercombo_on_input_method_event(void* self, void (*callback)(void*,
 ///
 void k_filefiltercombo_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_init_style_option` instead
+///
+#define k_filefiltercombo_qbase_init_style_option k_filefiltercombo_super_init_style_option
+
 /// Inherited from QComboBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcombobox.html#initStyleOption)
@@ -5214,7 +5338,7 @@ void k_filefiltercombo_init_style_option(void* self, void* option);
 /// @param self KFileFilterCombo*
 /// @param option QStyleOptionComboBox*
 ///
-void k_filefiltercombo_qbase_init_style_option(void* self, void* option);
+void k_filefiltercombo_super_init_style_option(void* self, void* option);
 
 /// Inherited from QComboBox
 ///
@@ -5237,6 +5361,10 @@ void k_filefiltercombo_on_init_style_option(void* self, void (*callback)(void*, 
 ///
 int32_t k_filefiltercombo_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_dev_type` instead
+///
+#define k_filefiltercombo_qbase_dev_type k_filefiltercombo_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -5245,7 +5373,7 @@ int32_t k_filefiltercombo_dev_type(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-int32_t k_filefiltercombo_qbase_dev_type(void* self);
+int32_t k_filefiltercombo_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5269,6 +5397,10 @@ void k_filefiltercombo_on_dev_type(void* self, int32_t (*callback)());
 ///
 void k_filefiltercombo_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_visible` instead
+///
+#define k_filefiltercombo_qbase_set_visible k_filefiltercombo_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -5278,7 +5410,7 @@ void k_filefiltercombo_set_visible(void* self, bool visible);
 /// @param self KFileFilterCombo*
 /// @param visible bool
 ///
-void k_filefiltercombo_qbase_set_visible(void* self, bool visible);
+void k_filefiltercombo_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -5302,6 +5434,10 @@ void k_filefiltercombo_on_set_visible(void* self, void (*callback)(void*, bool))
 ///
 int32_t k_filefiltercombo_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_height_for_width` instead
+///
+#define k_filefiltercombo_qbase_height_for_width k_filefiltercombo_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -5311,7 +5447,7 @@ int32_t k_filefiltercombo_height_for_width(void* self, int param1);
 /// @param self KFileFilterCombo*
 /// @param param1 int
 ///
-int32_t k_filefiltercombo_qbase_height_for_width(void* self, int param1);
+int32_t k_filefiltercombo_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -5334,6 +5470,10 @@ void k_filefiltercombo_on_height_for_width(void* self, int32_t (*callback)(void*
 ///
 bool k_filefiltercombo_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_has_height_for_width` instead
+///
+#define k_filefiltercombo_qbase_has_height_for_width k_filefiltercombo_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -5342,7 +5482,7 @@ bool k_filefiltercombo_has_height_for_width(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-bool k_filefiltercombo_qbase_has_height_for_width(void* self);
+bool k_filefiltercombo_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5365,6 +5505,10 @@ void k_filefiltercombo_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* k_filefiltercombo_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_paint_engine` instead
+///
+#define k_filefiltercombo_qbase_paint_engine k_filefiltercombo_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -5373,7 +5517,7 @@ QPaintEngine* k_filefiltercombo_paint_engine(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-QPaintEngine* k_filefiltercombo_qbase_paint_engine(void* self);
+QPaintEngine* k_filefiltercombo_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5397,6 +5541,10 @@ void k_filefiltercombo_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void k_filefiltercombo_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_mouse_double_click_event` instead
+///
+#define k_filefiltercombo_qbase_mouse_double_click_event k_filefiltercombo_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -5406,7 +5554,7 @@ void k_filefiltercombo_mouse_double_click_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QMouseEvent*
 ///
-void k_filefiltercombo_qbase_mouse_double_click_event(void* self, void* event);
+void k_filefiltercombo_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5430,6 +5578,10 @@ void k_filefiltercombo_on_mouse_double_click_event(void* self, void (*callback)(
 ///
 void k_filefiltercombo_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_mouse_move_event` instead
+///
+#define k_filefiltercombo_qbase_mouse_move_event k_filefiltercombo_super_mouse_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseMoveEvent)
@@ -5439,7 +5591,7 @@ void k_filefiltercombo_mouse_move_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QMouseEvent*
 ///
-void k_filefiltercombo_qbase_mouse_move_event(void* self, void* event);
+void k_filefiltercombo_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5463,6 +5615,10 @@ void k_filefiltercombo_on_mouse_move_event(void* self, void (*callback)(void*, v
 ///
 void k_filefiltercombo_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_enter_event` instead
+///
+#define k_filefiltercombo_qbase_enter_event k_filefiltercombo_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -5472,7 +5628,7 @@ void k_filefiltercombo_enter_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QEnterEvent*
 ///
-void k_filefiltercombo_qbase_enter_event(void* self, void* event);
+void k_filefiltercombo_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5496,6 +5652,10 @@ void k_filefiltercombo_on_enter_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_leave_event` instead
+///
+#define k_filefiltercombo_qbase_leave_event k_filefiltercombo_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -5505,7 +5665,7 @@ void k_filefiltercombo_leave_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QEvent*
 ///
-void k_filefiltercombo_qbase_leave_event(void* self, void* event);
+void k_filefiltercombo_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5529,6 +5689,10 @@ void k_filefiltercombo_on_leave_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_move_event` instead
+///
+#define k_filefiltercombo_qbase_move_event k_filefiltercombo_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -5538,7 +5702,7 @@ void k_filefiltercombo_move_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QMoveEvent*
 ///
-void k_filefiltercombo_qbase_move_event(void* self, void* event);
+void k_filefiltercombo_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5562,6 +5726,10 @@ void k_filefiltercombo_on_move_event(void* self, void (*callback)(void*, void*))
 ///
 void k_filefiltercombo_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_close_event` instead
+///
+#define k_filefiltercombo_qbase_close_event k_filefiltercombo_super_close_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#closeEvent)
@@ -5571,7 +5739,7 @@ void k_filefiltercombo_close_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QCloseEvent*
 ///
-void k_filefiltercombo_qbase_close_event(void* self, void* event);
+void k_filefiltercombo_super_close_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5595,6 +5763,10 @@ void k_filefiltercombo_on_close_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_tablet_event` instead
+///
+#define k_filefiltercombo_qbase_tablet_event k_filefiltercombo_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -5604,7 +5776,7 @@ void k_filefiltercombo_tablet_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QTabletEvent*
 ///
-void k_filefiltercombo_qbase_tablet_event(void* self, void* event);
+void k_filefiltercombo_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5628,6 +5800,10 @@ void k_filefiltercombo_on_tablet_event(void* self, void (*callback)(void*, void*
 ///
 void k_filefiltercombo_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_action_event` instead
+///
+#define k_filefiltercombo_qbase_action_event k_filefiltercombo_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -5637,7 +5813,7 @@ void k_filefiltercombo_action_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QActionEvent*
 ///
-void k_filefiltercombo_qbase_action_event(void* self, void* event);
+void k_filefiltercombo_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5661,6 +5837,10 @@ void k_filefiltercombo_on_action_event(void* self, void (*callback)(void*, void*
 ///
 void k_filefiltercombo_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_drag_enter_event` instead
+///
+#define k_filefiltercombo_qbase_drag_enter_event k_filefiltercombo_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -5670,7 +5850,7 @@ void k_filefiltercombo_drag_enter_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QDragEnterEvent*
 ///
-void k_filefiltercombo_qbase_drag_enter_event(void* self, void* event);
+void k_filefiltercombo_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5694,6 +5874,10 @@ void k_filefiltercombo_on_drag_enter_event(void* self, void (*callback)(void*, v
 ///
 void k_filefiltercombo_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_drag_move_event` instead
+///
+#define k_filefiltercombo_qbase_drag_move_event k_filefiltercombo_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -5703,7 +5887,7 @@ void k_filefiltercombo_drag_move_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QDragMoveEvent*
 ///
-void k_filefiltercombo_qbase_drag_move_event(void* self, void* event);
+void k_filefiltercombo_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5727,6 +5911,10 @@ void k_filefiltercombo_on_drag_move_event(void* self, void (*callback)(void*, vo
 ///
 void k_filefiltercombo_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_drag_leave_event` instead
+///
+#define k_filefiltercombo_qbase_drag_leave_event k_filefiltercombo_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5736,7 +5924,7 @@ void k_filefiltercombo_drag_leave_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QDragLeaveEvent*
 ///
-void k_filefiltercombo_qbase_drag_leave_event(void* self, void* event);
+void k_filefiltercombo_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5760,6 +5948,10 @@ void k_filefiltercombo_on_drag_leave_event(void* self, void (*callback)(void*, v
 ///
 void k_filefiltercombo_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_drop_event` instead
+///
+#define k_filefiltercombo_qbase_drop_event k_filefiltercombo_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -5769,7 +5961,7 @@ void k_filefiltercombo_drop_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QDropEvent*
 ///
-void k_filefiltercombo_qbase_drop_event(void* self, void* event);
+void k_filefiltercombo_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5795,6 +5987,10 @@ void k_filefiltercombo_on_drop_event(void* self, void (*callback)(void*, void*))
 ///
 bool k_filefiltercombo_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_native_event` instead
+///
+#define k_filefiltercombo_qbase_native_event k_filefiltercombo_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5806,7 +6002,7 @@ bool k_filefiltercombo_native_event(void* self, char* eventType, void* message, 
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool k_filefiltercombo_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool k_filefiltercombo_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5830,6 +6026,10 @@ void k_filefiltercombo_on_native_event(void* self, bool (*callback)(void*, libqt
 ///
 int32_t k_filefiltercombo_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_metric` instead
+///
+#define k_filefiltercombo_qbase_metric k_filefiltercombo_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5839,7 +6039,7 @@ int32_t k_filefiltercombo_metric(void* self, int32_t param1);
 /// @param self KFileFilterCombo*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t k_filefiltercombo_qbase_metric(void* self, int32_t param1);
+int32_t k_filefiltercombo_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5863,6 +6063,10 @@ void k_filefiltercombo_on_metric(void* self, int32_t (*callback)(void*, int32_t)
 ///
 void k_filefiltercombo_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_init_painter` instead
+///
+#define k_filefiltercombo_qbase_init_painter k_filefiltercombo_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5872,7 +6076,7 @@ void k_filefiltercombo_init_painter(void* self, void* painter);
 /// @param self KFileFilterCombo*
 /// @param painter QPainter*
 ///
-void k_filefiltercombo_qbase_init_painter(void* self, void* painter);
+void k_filefiltercombo_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5896,6 +6100,10 @@ void k_filefiltercombo_on_init_painter(void* self, void (*callback)(void*, void*
 ///
 QPaintDevice* k_filefiltercombo_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_redirected` instead
+///
+#define k_filefiltercombo_qbase_redirected k_filefiltercombo_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5905,7 +6113,7 @@ QPaintDevice* k_filefiltercombo_redirected(void* self, void* offset);
 /// @param self KFileFilterCombo*
 /// @param offset QPoint*
 ///
-QPaintDevice* k_filefiltercombo_qbase_redirected(void* self, void* offset);
+QPaintDevice* k_filefiltercombo_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5928,6 +6136,10 @@ void k_filefiltercombo_on_redirected(void* self, QPaintDevice* (*callback)(void*
 ///
 QPainter* k_filefiltercombo_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_shared_painter` instead
+///
+#define k_filefiltercombo_qbase_shared_painter k_filefiltercombo_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5936,7 +6148,7 @@ QPainter* k_filefiltercombo_shared_painter(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-QPainter* k_filefiltercombo_qbase_shared_painter(void* self);
+QPainter* k_filefiltercombo_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5960,6 +6172,10 @@ void k_filefiltercombo_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 bool k_filefiltercombo_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_focus_next_prev_child` instead
+///
+#define k_filefiltercombo_qbase_focus_next_prev_child k_filefiltercombo_super_focus_next_prev_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextPrevChild)
@@ -5969,7 +6185,7 @@ bool k_filefiltercombo_focus_next_prev_child(void* self, bool next);
 /// @param self KFileFilterCombo*
 /// @param next bool
 ///
-bool k_filefiltercombo_qbase_focus_next_prev_child(void* self, bool next);
+bool k_filefiltercombo_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QWidget
 ///
@@ -5993,6 +6209,10 @@ void k_filefiltercombo_on_focus_next_prev_child(void* self, bool (*callback)(voi
 ///
 void k_filefiltercombo_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_timer_event` instead
+///
+#define k_filefiltercombo_qbase_timer_event k_filefiltercombo_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -6002,7 +6222,7 @@ void k_filefiltercombo_timer_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QTimerEvent*
 ///
-void k_filefiltercombo_qbase_timer_event(void* self, void* event);
+void k_filefiltercombo_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6026,6 +6246,10 @@ void k_filefiltercombo_on_timer_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_child_event` instead
+///
+#define k_filefiltercombo_qbase_child_event k_filefiltercombo_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -6035,7 +6259,7 @@ void k_filefiltercombo_child_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QChildEvent*
 ///
-void k_filefiltercombo_qbase_child_event(void* self, void* event);
+void k_filefiltercombo_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6059,6 +6283,10 @@ void k_filefiltercombo_on_child_event(void* self, void (*callback)(void*, void*)
 ///
 void k_filefiltercombo_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_custom_event` instead
+///
+#define k_filefiltercombo_qbase_custom_event k_filefiltercombo_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -6068,7 +6296,7 @@ void k_filefiltercombo_custom_event(void* self, void* event);
 /// @param self KFileFilterCombo*
 /// @param event QEvent*
 ///
-void k_filefiltercombo_qbase_custom_event(void* self, void* event);
+void k_filefiltercombo_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -6092,6 +6320,10 @@ void k_filefiltercombo_on_custom_event(void* self, void (*callback)(void*, void*
 ///
 void k_filefiltercombo_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_connect_notify` instead
+///
+#define k_filefiltercombo_qbase_connect_notify k_filefiltercombo_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -6101,7 +6333,7 @@ void k_filefiltercombo_connect_notify(void* self, void* signal);
 /// @param self KFileFilterCombo*
 /// @param signal QMetaMethod*
 ///
-void k_filefiltercombo_qbase_connect_notify(void* self, void* signal);
+void k_filefiltercombo_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6125,6 +6357,10 @@ void k_filefiltercombo_on_connect_notify(void* self, void (*callback)(void*, voi
 ///
 void k_filefiltercombo_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_disconnect_notify` instead
+///
+#define k_filefiltercombo_qbase_disconnect_notify k_filefiltercombo_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -6134,7 +6370,7 @@ void k_filefiltercombo_disconnect_notify(void* self, void* signal);
 /// @param self KFileFilterCombo*
 /// @param signal QMetaMethod*
 ///
-void k_filefiltercombo_qbase_disconnect_notify(void* self, void* signal);
+void k_filefiltercombo_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6159,6 +6395,10 @@ void k_filefiltercombo_on_disconnect_notify(void* self, void (*callback)(void*, 
 ///
 void k_filefiltercombo_set_completion_object(void* self, void* completionObject, bool handleSignals);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_completion_object` instead
+///
+#define k_filefiltercombo_qbase_set_completion_object k_filefiltercombo_super_set_completion_object
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletionObject)
@@ -6169,7 +6409,7 @@ void k_filefiltercombo_set_completion_object(void* self, void* completionObject,
 /// @param completionObject KCompletion*
 /// @param handleSignals bool
 ///
-void k_filefiltercombo_qbase_set_completion_object(void* self, void* completionObject, bool handleSignals);
+void k_filefiltercombo_super_set_completion_object(void* self, void* completionObject, bool handleSignals);
 
 /// Inherited from KCompletionBase
 ///
@@ -6193,6 +6433,10 @@ void k_filefiltercombo_on_set_completion_object(void* self, void (*callback)(voi
 ///
 void k_filefiltercombo_set_handle_signals(void* self, bool handle);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_handle_signals` instead
+///
+#define k_filefiltercombo_qbase_set_handle_signals k_filefiltercombo_super_set_handle_signals
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setHandleSignals)
@@ -6202,7 +6446,7 @@ void k_filefiltercombo_set_handle_signals(void* self, bool handle);
 /// @param self KFileFilterCombo*
 /// @param handle bool
 ///
-void k_filefiltercombo_qbase_set_handle_signals(void* self, bool handle);
+void k_filefiltercombo_super_set_handle_signals(void* self, bool handle);
 
 /// Inherited from KCompletionBase
 ///
@@ -6226,6 +6470,10 @@ void k_filefiltercombo_on_set_handle_signals(void* self, void (*callback)(void*,
 ///
 void k_filefiltercombo_set_completion_mode(void* self, int32_t mode);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_completion_mode` instead
+///
+#define k_filefiltercombo_qbase_set_completion_mode k_filefiltercombo_super_set_completion_mode
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setCompletionMode)
@@ -6235,7 +6483,7 @@ void k_filefiltercombo_set_completion_mode(void* self, int32_t mode);
 /// @param self KFileFilterCombo*
 /// @param mode enum KCompletion__CompletionMode
 ///
-void k_filefiltercombo_qbase_set_completion_mode(void* self, int32_t mode);
+void k_filefiltercombo_super_set_completion_mode(void* self, int32_t mode);
 
 /// Inherited from KCompletionBase
 ///
@@ -6260,6 +6508,10 @@ void k_filefiltercombo_on_set_completion_mode(void* self, void (*callback)(void*
 ///
 void k_filefiltercombo_virtual_hook(void* self, int id, void* data);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_virtual_hook` instead
+///
+#define k_filefiltercombo_qbase_virtual_hook k_filefiltercombo_super_virtual_hook
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#virtual_hook)
@@ -6270,7 +6522,7 @@ void k_filefiltercombo_virtual_hook(void* self, int id, void* data);
 /// @param id int
 /// @param data void*
 ///
-void k_filefiltercombo_qbase_virtual_hook(void* self, int id, void* data);
+void k_filefiltercombo_super_virtual_hook(void* self, int id, void* data);
 
 /// Inherited from KCompletionBase
 ///
@@ -6293,6 +6545,10 @@ void k_filefiltercombo_on_virtual_hook(void* self, void (*callback)(void*, int, 
 ///
 void k_filefiltercombo_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_update_micro_focus` instead
+///
+#define k_filefiltercombo_qbase_update_micro_focus k_filefiltercombo_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -6301,7 +6557,7 @@ void k_filefiltercombo_update_micro_focus(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-void k_filefiltercombo_qbase_update_micro_focus(void* self);
+void k_filefiltercombo_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6324,6 +6580,10 @@ void k_filefiltercombo_on_update_micro_focus(void* self, void (*callback)());
 ///
 void k_filefiltercombo_create(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_create` instead
+///
+#define k_filefiltercombo_qbase_create k_filefiltercombo_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -6332,7 +6592,7 @@ void k_filefiltercombo_create(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-void k_filefiltercombo_qbase_create(void* self);
+void k_filefiltercombo_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6355,6 +6615,10 @@ void k_filefiltercombo_on_create(void* self, void (*callback)());
 ///
 void k_filefiltercombo_destroy(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_destroy` instead
+///
+#define k_filefiltercombo_qbase_destroy k_filefiltercombo_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -6363,7 +6627,7 @@ void k_filefiltercombo_destroy(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-void k_filefiltercombo_qbase_destroy(void* self);
+void k_filefiltercombo_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6386,6 +6650,10 @@ void k_filefiltercombo_on_destroy(void* self, void (*callback)());
 ///
 bool k_filefiltercombo_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_focus_next_child` instead
+///
+#define k_filefiltercombo_qbase_focus_next_child k_filefiltercombo_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -6394,7 +6662,7 @@ bool k_filefiltercombo_focus_next_child(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-bool k_filefiltercombo_qbase_focus_next_child(void* self);
+bool k_filefiltercombo_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6417,6 +6685,10 @@ void k_filefiltercombo_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool k_filefiltercombo_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_focus_previous_child` instead
+///
+#define k_filefiltercombo_qbase_focus_previous_child k_filefiltercombo_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -6425,7 +6697,7 @@ bool k_filefiltercombo_focus_previous_child(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-bool k_filefiltercombo_qbase_focus_previous_child(void* self);
+bool k_filefiltercombo_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -6448,6 +6720,10 @@ void k_filefiltercombo_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* k_filefiltercombo_sender(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_sender` instead
+///
+#define k_filefiltercombo_qbase_sender k_filefiltercombo_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -6456,7 +6732,7 @@ QObject* k_filefiltercombo_sender(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-QObject* k_filefiltercombo_qbase_sender(void* self);
+QObject* k_filefiltercombo_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -6479,6 +6755,10 @@ void k_filefiltercombo_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t k_filefiltercombo_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_sender_signal_index` instead
+///
+#define k_filefiltercombo_qbase_sender_signal_index k_filefiltercombo_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -6487,7 +6767,7 @@ int32_t k_filefiltercombo_sender_signal_index(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-int32_t k_filefiltercombo_qbase_sender_signal_index(void* self);
+int32_t k_filefiltercombo_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -6511,6 +6791,10 @@ void k_filefiltercombo_on_sender_signal_index(void* self, int32_t (*callback)())
 ///
 int32_t k_filefiltercombo_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_receivers` instead
+///
+#define k_filefiltercombo_qbase_receivers k_filefiltercombo_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -6520,7 +6804,7 @@ int32_t k_filefiltercombo_receivers(void* self, const char* signal);
 /// @param self KFileFilterCombo*
 /// @param signal const char*
 ///
-int32_t k_filefiltercombo_qbase_receivers(void* self, const char* signal);
+int32_t k_filefiltercombo_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -6544,6 +6828,10 @@ void k_filefiltercombo_on_receivers(void* self, int32_t (*callback)(void*, const
 ///
 bool k_filefiltercombo_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_is_signal_connected` instead
+///
+#define k_filefiltercombo_qbase_is_signal_connected k_filefiltercombo_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -6553,7 +6841,7 @@ bool k_filefiltercombo_is_signal_connected(void* self, void* signal);
 /// @param self KFileFilterCombo*
 /// @param signal QMetaMethod*
 ///
-bool k_filefiltercombo_qbase_is_signal_connected(void* self, void* signal);
+bool k_filefiltercombo_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -6578,6 +6866,10 @@ void k_filefiltercombo_on_is_signal_connected(void* self, bool (*callback)(void*
 ///
 double k_filefiltercombo_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_get_decoded_metric_f` instead
+///
+#define k_filefiltercombo_qbase_get_decoded_metric_f k_filefiltercombo_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -6588,7 +6880,7 @@ double k_filefiltercombo_get_decoded_metric_f(void* self, int32_t metricA, int32
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double k_filefiltercombo_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double k_filefiltercombo_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -6627,6 +6919,10 @@ void k_filefiltercombo_on_get_decoded_metric_f(void* self, double (*callback)(vo
 ///
 libqt_map k_filefiltercombo_key_binding_map(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_key_binding_map` instead
+///
+#define k_filefiltercombo_qbase_key_binding_map k_filefiltercombo_super_key_binding_map
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#keyBindingMap)
@@ -6651,7 +6947,7 @@ libqt_map k_filefiltercombo_key_binding_map(void* self);
 ///
 /// @return libqt_map of enum KCompletionBase__KeyBindingType to libqt_list of QKeySequence*
 ///
-libqt_map k_filefiltercombo_qbase_key_binding_map(void* self);
+libqt_map k_filefiltercombo_super_key_binding_map(void* self);
 
 /// Inherited from KCompletionBase
 ///
@@ -6675,6 +6971,10 @@ void k_filefiltercombo_on_key_binding_map(void* self, libqt_map (*callback)());
 ///
 void k_filefiltercombo_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_key_binding_map` instead
+///
+#define k_filefiltercombo_qbase_set_key_binding_map k_filefiltercombo_super_set_key_binding_map
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setKeyBindingMap)
@@ -6684,7 +6984,7 @@ void k_filefiltercombo_set_key_binding_map(void* self, libqt_map keyBindingMap);
 /// @param self KFileFilterCombo*
 /// @param keyBindingMap libqt_map of enum KCompletionBase__KeyBindingType to QKeySequence**
 ///
-void k_filefiltercombo_qbase_set_key_binding_map(void* self, libqt_map keyBindingMap);
+void k_filefiltercombo_super_set_key_binding_map(void* self, libqt_map keyBindingMap);
 
 /// Inherited from KCompletionBase
 ///
@@ -6708,6 +7008,10 @@ void k_filefiltercombo_on_set_key_binding_map(void* self, void (*callback)(void*
 ///
 void k_filefiltercombo_set_delegate(void* self, void* delegate);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_set_delegate` instead
+///
+#define k_filefiltercombo_qbase_set_delegate k_filefiltercombo_super_set_delegate
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#setDelegate)
@@ -6717,7 +7021,7 @@ void k_filefiltercombo_set_delegate(void* self, void* delegate);
 /// @param self KFileFilterCombo*
 /// @param delegate KCompletionBase*
 ///
-void k_filefiltercombo_qbase_set_delegate(void* self, void* delegate);
+void k_filefiltercombo_super_set_delegate(void* self, void* delegate);
 
 /// Inherited from KCompletionBase
 ///
@@ -6740,6 +7044,10 @@ void k_filefiltercombo_on_set_delegate(void* self, void (*callback)(void*, void*
 ///
 KCompletionBase* k_filefiltercombo_delegate(void* self);
 
+/// @warning DEPRECATED: Use `k_filefiltercombo_super_delegate` instead
+///
+#define k_filefiltercombo_qbase_delegate k_filefiltercombo_super_delegate
+
 /// Inherited from KCompletionBase
 ///
 /// [Upstream resources](https://api.kde.org/kcompletionbase.html#delegate)
@@ -6748,7 +7056,7 @@ KCompletionBase* k_filefiltercombo_delegate(void* self);
 ///
 /// @param self KFileFilterCombo*
 ///
-KCompletionBase* k_filefiltercombo_qbase_delegate(void* self);
+KCompletionBase* k_filefiltercombo_super_delegate(void* self);
 
 /// Inherited from KCompletionBase
 ///

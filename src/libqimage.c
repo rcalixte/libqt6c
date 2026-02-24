@@ -79,8 +79,8 @@ void q_image_on_dev_type(void* self, int32_t (*callback)()) {
     QImage_OnDevType((QImage*)self, (intptr_t)callback);
 }
 
-int32_t q_image_qbase_dev_type(void* self) {
-    return QImage_QBaseDevType((QImage*)self);
+int32_t q_image_super_dev_type(void* self) {
+    return QImage_SuperDevType((QImage*)self);
 }
 
 bool q_image_operator_equal(void* self, void* param1) {
@@ -452,8 +452,8 @@ void q_image_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
     QImage_OnPaintEngine((QImage*)self, (intptr_t)callback);
 }
 
-QPaintEngine* q_image_qbase_paint_engine(void* self) {
-    return QImage_QBasePaintEngine((QImage*)self);
+QPaintEngine* q_image_super_paint_engine(void* self) {
+    return QImage_SuperPaintEngine((QImage*)self);
 }
 
 int32_t q_image_dots_per_meter_x(void* self) {
@@ -530,8 +530,8 @@ void q_image_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
     QImage_OnMetric((QImage*)self, (intptr_t)callback);
 }
 
-int32_t q_image_qbase_metric(void* self, int32_t metric) {
-    return QImage_QBaseMetric((QImage*)self, metric);
+int32_t q_image_super_metric(void* self, int32_t metric) {
+    return QImage_SuperMetric((QImage*)self, metric);
 }
 
 QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical) {
@@ -542,8 +542,8 @@ void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, boo
     QImage_OnMirroredHelper((QImage*)self, (intptr_t)callback);
 }
 
-QImage* q_image_qbase_mirrored_helper(void* self, bool horizontal, bool vertical) {
-    return QImage_QBaseMirroredHelper((QImage*)self, horizontal, vertical);
+QImage* q_image_super_mirrored_helper(void* self, bool horizontal, bool vertical) {
+    return QImage_SuperMirroredHelper((QImage*)self, horizontal, vertical);
 }
 
 QImage* q_image_rgb_swapped_helper(void* self) {
@@ -554,8 +554,8 @@ void q_image_on_rgb_swapped_helper(void* self, QImage* (*callback)()) {
     QImage_OnRgbSwappedHelper((QImage*)self, (intptr_t)callback);
 }
 
-QImage* q_image_qbase_rgb_swapped_helper(void* self) {
-    return QImage_QBaseRgbSwappedHelper((QImage*)self);
+QImage* q_image_super_rgb_swapped_helper(void* self) {
+    return QImage_SuperRgbSwappedHelper((QImage*)self);
 }
 
 void q_image_mirrored_inplace(void* self, bool horizontal, bool vertical) {
@@ -566,8 +566,8 @@ void q_image_on_mirrored_inplace(void* self, void (*callback)(void*, bool, bool)
     QImage_OnMirroredInplace((QImage*)self, (intptr_t)callback);
 }
 
-void q_image_qbase_mirrored_inplace(void* self, bool horizontal, bool vertical) {
-    QImage_QBaseMirroredInplace((QImage*)self, horizontal, vertical);
+void q_image_super_mirrored_inplace(void* self, bool horizontal, bool vertical) {
+    QImage_SuperMirroredInplace((QImage*)self, horizontal, vertical);
 }
 
 void q_image_rgb_swapped_inplace(void* self) {
@@ -578,8 +578,8 @@ void q_image_on_rgb_swapped_inplace(void* self, void (*callback)()) {
     QImage_OnRgbSwappedInplace((QImage*)self, (intptr_t)callback);
 }
 
-void q_image_qbase_rgb_swapped_inplace(void* self) {
-    QImage_QBaseRgbSwappedInplace((QImage*)self);
+void q_image_super_rgb_swapped_inplace(void* self) {
+    QImage_SuperRgbSwappedInplace((QImage*)self);
 }
 
 QImage* q_image_convert_to_format_helper(void* self, int32_t format, int32_t flags) {
@@ -590,8 +590,8 @@ void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, 
     QImage_OnConvertToFormatHelper((QImage*)self, (intptr_t)callback);
 }
 
-QImage* q_image_qbase_convert_to_format_helper(void* self, int32_t format, int32_t flags) {
-    return QImage_QBaseConvertToFormatHelper((QImage*)self, format, flags);
+QImage* q_image_super_convert_to_format_helper(void* self, int32_t format, int32_t flags) {
+    return QImage_SuperConvertToFormatHelper((QImage*)self, format, flags);
 }
 
 bool q_image_convert_to_format_inplace(void* self, int32_t format, int32_t flags) {
@@ -602,8 +602,8 @@ void q_image_on_convert_to_format_inplace(void* self, bool (*callback)(void*, in
     QImage_OnConvertToFormatInplace((QImage*)self, (intptr_t)callback);
 }
 
-bool q_image_qbase_convert_to_format_inplace(void* self, int32_t format, int32_t flags) {
-    return QImage_QBaseConvertToFormatInplace((QImage*)self, format, flags);
+bool q_image_super_convert_to_format_inplace(void* self, int32_t format, int32_t flags) {
+    return QImage_SuperConvertToFormatInplace((QImage*)self, format, flags);
 }
 
 QImage* q_image_smooth_scaled(void* self, int w, int h) {
@@ -614,8 +614,8 @@ void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int)) 
     QImage_OnSmoothScaled((QImage*)self, (intptr_t)callback);
 }
 
-QImage* q_image_qbase_smooth_scaled(void* self, int w, int h) {
-    return QImage_QBaseSmoothScaled((QImage*)self, w, h);
+QImage* q_image_super_smooth_scaled(void* self, int w, int h) {
+    return QImage_SuperSmoothScaled((QImage*)self, w, h);
 }
 
 void q_image_detach_metadata(void* self) {
@@ -626,8 +626,8 @@ void q_image_on_detach_metadata(void* self, void (*callback)()) {
     QImage_OnDetachMetadata((QImage*)self, (intptr_t)callback);
 }
 
-void q_image_qbase_detach_metadata(void* self) {
-    QImage_QBaseDetachMetadata((QImage*)self);
+void q_image_super_detach_metadata(void* self) {
+    QImage_SuperDetachMetadata((QImage*)self);
 }
 
 QImage* q_image_copy1(void* self, void* rect) {
@@ -785,8 +785,8 @@ void q_image_on_detach_metadata1(void* self, void (*callback)(void*, bool)) {
     QImage_OnDetachMetadata1((QImage*)self, (intptr_t)callback);
 }
 
-void q_image_qbase_detach_metadata1(void* self, bool invalidateCache) {
-    QImage_QBaseDetachMetadata1((QImage*)self, invalidateCache);
+void q_image_super_detach_metadata1(void* self, bool invalidateCache) {
+    QImage_SuperDetachMetadata1((QImage*)self, invalidateCache);
 }
 
 bool q_image_painting_active(void* self) {
@@ -833,8 +833,8 @@ void q_image_init_painter(void* self, void* painter) {
     QImage_InitPainter((QImage*)self, (QPainter*)painter);
 }
 
-void q_image_qbase_init_painter(void* self, void* painter) {
-    QImage_QBaseInitPainter((QImage*)self, (QPainter*)painter);
+void q_image_super_init_painter(void* self, void* painter) {
+    QImage_SuperInitPainter((QImage*)self, (QPainter*)painter);
 }
 
 void q_image_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -845,8 +845,8 @@ QPaintDevice* q_image_redirected(void* self, void* offset) {
     return QImage_Redirected((QImage*)self, (QPoint*)offset);
 }
 
-QPaintDevice* q_image_qbase_redirected(void* self, void* offset) {
-    return QImage_QBaseRedirected((QImage*)self, (QPoint*)offset);
+QPaintDevice* q_image_super_redirected(void* self, void* offset) {
+    return QImage_SuperRedirected((QImage*)self, (QPoint*)offset);
 }
 
 void q_image_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -857,8 +857,8 @@ QPainter* q_image_shared_painter(void* self) {
     return QImage_SharedPainter((QImage*)self);
 }
 
-QPainter* q_image_qbase_shared_painter(void* self) {
-    return QImage_QBaseSharedPainter((QImage*)self);
+QPainter* q_image_super_shared_painter(void* self) {
+    return QImage_SuperSharedPainter((QImage*)self);
 }
 
 void q_image_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -869,8 +869,8 @@ double q_image_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB
     return QImage_GetDecodedMetricF((QImage*)self, metricA, metricB);
 }
 
-double q_image_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return QImage_QBaseGetDecodedMetricF((QImage*)self, metricA, metricB);
+double q_image_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return QImage_SuperGetDecodedMetricF((QImage*)self, metricA, metricB);
 }
 
 void q_image_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

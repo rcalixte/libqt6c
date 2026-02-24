@@ -40,8 +40,8 @@ void q_camera_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QCamera_OnMetaObject((QCamera*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_camera_qbase_meta_object(void* self) {
-    return QCamera_QBaseMetaObject((QCamera*)self);
+const QMetaObject* q_camera_super_meta_object(void* self) {
+    return QCamera_SuperMetaObject((QCamera*)self);
 }
 
 void* q_camera_metacast(void* self, const char* param1) {
@@ -52,8 +52,8 @@ void q_camera_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QCamera_OnMetacast((QCamera*)self, (intptr_t)callback);
 }
 
-void* q_camera_qbase_metacast(void* self, const char* param1) {
-    return QCamera_QBaseMetacast((QCamera*)self, param1);
+void* q_camera_super_metacast(void* self, const char* param1) {
+    return QCamera_SuperMetacast((QCamera*)self, param1);
 }
 
 int32_t q_camera_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -64,8 +64,8 @@ void q_camera_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     QCamera_OnMetacall((QCamera*)self, (intptr_t)callback);
 }
 
-int32_t q_camera_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCamera_QBaseMetacall((QCamera*)self, param1, param2, param3);
+int32_t q_camera_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCamera_SuperMetacall((QCamera*)self, param1, param2, param3);
 }
 
 const char* q_camera_tr(const char* s) {
@@ -751,8 +751,8 @@ bool q_camera_event(void* self, void* event) {
     return QCamera_Event((QCamera*)self, (QEvent*)event);
 }
 
-bool q_camera_qbase_event(void* self, void* event) {
-    return QCamera_QBaseEvent((QCamera*)self, (QEvent*)event);
+bool q_camera_super_event(void* self, void* event) {
+    return QCamera_SuperEvent((QCamera*)self, (QEvent*)event);
 }
 
 void q_camera_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -763,8 +763,8 @@ bool q_camera_event_filter(void* self, void* watched, void* event) {
     return QCamera_EventFilter((QCamera*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_camera_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCamera_QBaseEventFilter((QCamera*)self, (QObject*)watched, (QEvent*)event);
+bool q_camera_super_event_filter(void* self, void* watched, void* event) {
+    return QCamera_SuperEventFilter((QCamera*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_camera_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -775,8 +775,8 @@ void q_camera_timer_event(void* self, void* event) {
     QCamera_TimerEvent((QCamera*)self, (QTimerEvent*)event);
 }
 
-void q_camera_qbase_timer_event(void* self, void* event) {
-    QCamera_QBaseTimerEvent((QCamera*)self, (QTimerEvent*)event);
+void q_camera_super_timer_event(void* self, void* event) {
+    QCamera_SuperTimerEvent((QCamera*)self, (QTimerEvent*)event);
 }
 
 void q_camera_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -787,8 +787,8 @@ void q_camera_child_event(void* self, void* event) {
     QCamera_ChildEvent((QCamera*)self, (QChildEvent*)event);
 }
 
-void q_camera_qbase_child_event(void* self, void* event) {
-    QCamera_QBaseChildEvent((QCamera*)self, (QChildEvent*)event);
+void q_camera_super_child_event(void* self, void* event) {
+    QCamera_SuperChildEvent((QCamera*)self, (QChildEvent*)event);
 }
 
 void q_camera_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -799,8 +799,8 @@ void q_camera_custom_event(void* self, void* event) {
     QCamera_CustomEvent((QCamera*)self, (QEvent*)event);
 }
 
-void q_camera_qbase_custom_event(void* self, void* event) {
-    QCamera_QBaseCustomEvent((QCamera*)self, (QEvent*)event);
+void q_camera_super_custom_event(void* self, void* event) {
+    QCamera_SuperCustomEvent((QCamera*)self, (QEvent*)event);
 }
 
 void q_camera_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -811,8 +811,8 @@ void q_camera_connect_notify(void* self, void* signal) {
     QCamera_ConnectNotify((QCamera*)self, (QMetaMethod*)signal);
 }
 
-void q_camera_qbase_connect_notify(void* self, void* signal) {
-    QCamera_QBaseConnectNotify((QCamera*)self, (QMetaMethod*)signal);
+void q_camera_super_connect_notify(void* self, void* signal) {
+    QCamera_SuperConnectNotify((QCamera*)self, (QMetaMethod*)signal);
 }
 
 void q_camera_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -823,8 +823,8 @@ void q_camera_disconnect_notify(void* self, void* signal) {
     QCamera_DisconnectNotify((QCamera*)self, (QMetaMethod*)signal);
 }
 
-void q_camera_qbase_disconnect_notify(void* self, void* signal) {
-    QCamera_QBaseDisconnectNotify((QCamera*)self, (QMetaMethod*)signal);
+void q_camera_super_disconnect_notify(void* self, void* signal) {
+    QCamera_SuperDisconnectNotify((QCamera*)self, (QMetaMethod*)signal);
 }
 
 void q_camera_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -835,8 +835,8 @@ QObject* q_camera_sender(void* self) {
     return QCamera_Sender((QCamera*)self);
 }
 
-QObject* q_camera_qbase_sender(void* self) {
-    return QCamera_QBaseSender((QCamera*)self);
+QObject* q_camera_super_sender(void* self) {
+    return QCamera_SuperSender((QCamera*)self);
 }
 
 void q_camera_on_sender(void* self, QObject* (*callback)()) {
@@ -847,8 +847,8 @@ int32_t q_camera_sender_signal_index(void* self) {
     return QCamera_SenderSignalIndex((QCamera*)self);
 }
 
-int32_t q_camera_qbase_sender_signal_index(void* self) {
-    return QCamera_QBaseSenderSignalIndex((QCamera*)self);
+int32_t q_camera_super_sender_signal_index(void* self) {
+    return QCamera_SuperSenderSignalIndex((QCamera*)self);
 }
 
 void q_camera_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -859,8 +859,8 @@ int32_t q_camera_receivers(void* self, const char* signal) {
     return QCamera_Receivers((QCamera*)self, signal);
 }
 
-int32_t q_camera_qbase_receivers(void* self, const char* signal) {
-    return QCamera_QBaseReceivers((QCamera*)self, signal);
+int32_t q_camera_super_receivers(void* self, const char* signal) {
+    return QCamera_SuperReceivers((QCamera*)self, signal);
 }
 
 void q_camera_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -871,8 +871,8 @@ bool q_camera_is_signal_connected(void* self, void* signal) {
     return QCamera_IsSignalConnected((QCamera*)self, (QMetaMethod*)signal);
 }
 
-bool q_camera_qbase_is_signal_connected(void* self, void* signal) {
-    return QCamera_QBaseIsSignalConnected((QCamera*)self, (QMetaMethod*)signal);
+bool q_camera_super_is_signal_connected(void* self, void* signal) {
+    return QCamera_SuperIsSignalConnected((QCamera*)self, (QMetaMethod*)signal);
 }
 
 void q_camera_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

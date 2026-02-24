@@ -13,8 +13,8 @@ void q_runnable_on_run(void* self, void (*callback)()) {
     QRunnable_OnRun((QRunnable*)self, (intptr_t)callback);
 }
 
-void q_runnable_qbase_run(void* self) {
-    QRunnable_QBaseRun((QRunnable*)self);
+void q_runnable_super_run(void* self) {
+    QRunnable_SuperRun((QRunnable*)self);
 }
 
 bool q_runnable_auto_delete(void* self) {

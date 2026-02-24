@@ -80,8 +80,8 @@ void q_pointingdevice_on_meta_object(void* self, const QMetaObject* (*callback)(
     QPointingDevice_OnMetaObject((QPointingDevice*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pointingdevice_qbase_meta_object(void* self) {
-    return QPointingDevice_QBaseMetaObject((QPointingDevice*)self);
+const QMetaObject* q_pointingdevice_super_meta_object(void* self) {
+    return QPointingDevice_SuperMetaObject((QPointingDevice*)self);
 }
 
 void* q_pointingdevice_metacast(void* self, const char* param1) {
@@ -92,8 +92,8 @@ void q_pointingdevice_on_metacast(void* self, void* (*callback)(void*, const cha
     QPointingDevice_OnMetacast((QPointingDevice*)self, (intptr_t)callback);
 }
 
-void* q_pointingdevice_qbase_metacast(void* self, const char* param1) {
-    return QPointingDevice_QBaseMetacast((QPointingDevice*)self, param1);
+void* q_pointingdevice_super_metacast(void* self, const char* param1) {
+    return QPointingDevice_SuperMetacast((QPointingDevice*)self, param1);
 }
 
 int32_t q_pointingdevice_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -104,8 +104,8 @@ void q_pointingdevice_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     QPointingDevice_OnMetacall((QPointingDevice*)self, (intptr_t)callback);
 }
 
-int32_t q_pointingdevice_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPointingDevice_QBaseMetacall((QPointingDevice*)self, param1, param2, param3);
+int32_t q_pointingdevice_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPointingDevice_SuperMetacall((QPointingDevice*)self, param1, param2, param3);
 }
 
 const char* q_pointingdevice_tr(const char* s) {
@@ -466,8 +466,8 @@ bool q_pointingdevice_event(void* self, void* event) {
     return QPointingDevice_Event((QPointingDevice*)self, (QEvent*)event);
 }
 
-bool q_pointingdevice_qbase_event(void* self, void* event) {
-    return QPointingDevice_QBaseEvent((QPointingDevice*)self, (QEvent*)event);
+bool q_pointingdevice_super_event(void* self, void* event) {
+    return QPointingDevice_SuperEvent((QPointingDevice*)self, (QEvent*)event);
 }
 
 void q_pointingdevice_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -478,8 +478,8 @@ bool q_pointingdevice_event_filter(void* self, void* watched, void* event) {
     return QPointingDevice_EventFilter((QPointingDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pointingdevice_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPointingDevice_QBaseEventFilter((QPointingDevice*)self, (QObject*)watched, (QEvent*)event);
+bool q_pointingdevice_super_event_filter(void* self, void* watched, void* event) {
+    return QPointingDevice_SuperEventFilter((QPointingDevice*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pointingdevice_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -490,8 +490,8 @@ void q_pointingdevice_timer_event(void* self, void* event) {
     QPointingDevice_TimerEvent((QPointingDevice*)self, (QTimerEvent*)event);
 }
 
-void q_pointingdevice_qbase_timer_event(void* self, void* event) {
-    QPointingDevice_QBaseTimerEvent((QPointingDevice*)self, (QTimerEvent*)event);
+void q_pointingdevice_super_timer_event(void* self, void* event) {
+    QPointingDevice_SuperTimerEvent((QPointingDevice*)self, (QTimerEvent*)event);
 }
 
 void q_pointingdevice_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -502,8 +502,8 @@ void q_pointingdevice_child_event(void* self, void* event) {
     QPointingDevice_ChildEvent((QPointingDevice*)self, (QChildEvent*)event);
 }
 
-void q_pointingdevice_qbase_child_event(void* self, void* event) {
-    QPointingDevice_QBaseChildEvent((QPointingDevice*)self, (QChildEvent*)event);
+void q_pointingdevice_super_child_event(void* self, void* event) {
+    QPointingDevice_SuperChildEvent((QPointingDevice*)self, (QChildEvent*)event);
 }
 
 void q_pointingdevice_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -514,8 +514,8 @@ void q_pointingdevice_custom_event(void* self, void* event) {
     QPointingDevice_CustomEvent((QPointingDevice*)self, (QEvent*)event);
 }
 
-void q_pointingdevice_qbase_custom_event(void* self, void* event) {
-    QPointingDevice_QBaseCustomEvent((QPointingDevice*)self, (QEvent*)event);
+void q_pointingdevice_super_custom_event(void* self, void* event) {
+    QPointingDevice_SuperCustomEvent((QPointingDevice*)self, (QEvent*)event);
 }
 
 void q_pointingdevice_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -526,8 +526,8 @@ void q_pointingdevice_connect_notify(void* self, void* signal) {
     QPointingDevice_ConnectNotify((QPointingDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_pointingdevice_qbase_connect_notify(void* self, void* signal) {
-    QPointingDevice_QBaseConnectNotify((QPointingDevice*)self, (QMetaMethod*)signal);
+void q_pointingdevice_super_connect_notify(void* self, void* signal) {
+    QPointingDevice_SuperConnectNotify((QPointingDevice*)self, (QMetaMethod*)signal);
 }
 
 void q_pointingdevice_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -538,8 +538,8 @@ void q_pointingdevice_disconnect_notify(void* self, void* signal) {
     QPointingDevice_DisconnectNotify((QPointingDevice*)self, (QMetaMethod*)signal);
 }
 
-void q_pointingdevice_qbase_disconnect_notify(void* self, void* signal) {
-    QPointingDevice_QBaseDisconnectNotify((QPointingDevice*)self, (QMetaMethod*)signal);
+void q_pointingdevice_super_disconnect_notify(void* self, void* signal) {
+    QPointingDevice_SuperDisconnectNotify((QPointingDevice*)self, (QMetaMethod*)signal);
 }
 
 void q_pointingdevice_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -550,8 +550,8 @@ QObject* q_pointingdevice_sender(void* self) {
     return QPointingDevice_Sender((QPointingDevice*)self);
 }
 
-QObject* q_pointingdevice_qbase_sender(void* self) {
-    return QPointingDevice_QBaseSender((QPointingDevice*)self);
+QObject* q_pointingdevice_super_sender(void* self) {
+    return QPointingDevice_SuperSender((QPointingDevice*)self);
 }
 
 void q_pointingdevice_on_sender(void* self, QObject* (*callback)()) {
@@ -562,8 +562,8 @@ int32_t q_pointingdevice_sender_signal_index(void* self) {
     return QPointingDevice_SenderSignalIndex((QPointingDevice*)self);
 }
 
-int32_t q_pointingdevice_qbase_sender_signal_index(void* self) {
-    return QPointingDevice_QBaseSenderSignalIndex((QPointingDevice*)self);
+int32_t q_pointingdevice_super_sender_signal_index(void* self) {
+    return QPointingDevice_SuperSenderSignalIndex((QPointingDevice*)self);
 }
 
 void q_pointingdevice_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -574,8 +574,8 @@ int32_t q_pointingdevice_receivers(void* self, const char* signal) {
     return QPointingDevice_Receivers((QPointingDevice*)self, signal);
 }
 
-int32_t q_pointingdevice_qbase_receivers(void* self, const char* signal) {
-    return QPointingDevice_QBaseReceivers((QPointingDevice*)self, signal);
+int32_t q_pointingdevice_super_receivers(void* self, const char* signal) {
+    return QPointingDevice_SuperReceivers((QPointingDevice*)self, signal);
 }
 
 void q_pointingdevice_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -586,8 +586,8 @@ bool q_pointingdevice_is_signal_connected(void* self, void* signal) {
     return QPointingDevice_IsSignalConnected((QPointingDevice*)self, (QMetaMethod*)signal);
 }
 
-bool q_pointingdevice_qbase_is_signal_connected(void* self, void* signal) {
-    return QPointingDevice_QBaseIsSignalConnected((QPointingDevice*)self, (QMetaMethod*)signal);
+bool q_pointingdevice_super_is_signal_connected(void* self, void* signal) {
+    return QPointingDevice_SuperIsSignalConnected((QPointingDevice*)self, (QMetaMethod*)signal);
 }
 
 void q_pointingdevice_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

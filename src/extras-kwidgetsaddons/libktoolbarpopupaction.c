@@ -22,8 +22,8 @@ void k_toolbarpopupaction_on_meta_object(void* self, const QMetaObject* (*callba
     KToolBarPopupAction_OnMetaObject((KToolBarPopupAction*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_toolbarpopupaction_qbase_meta_object(void* self) {
-    return KToolBarPopupAction_QBaseMetaObject((KToolBarPopupAction*)self);
+const QMetaObject* k_toolbarpopupaction_super_meta_object(void* self) {
+    return KToolBarPopupAction_SuperMetaObject((KToolBarPopupAction*)self);
 }
 
 void* k_toolbarpopupaction_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_toolbarpopupaction_on_metacast(void* self, void* (*callback)(void*, const
     KToolBarPopupAction_OnMetacast((KToolBarPopupAction*)self, (intptr_t)callback);
 }
 
-void* k_toolbarpopupaction_qbase_metacast(void* self, const char* param1) {
-    return KToolBarPopupAction_QBaseMetacast((KToolBarPopupAction*)self, param1);
+void* k_toolbarpopupaction_super_metacast(void* self, const char* param1) {
+    return KToolBarPopupAction_SuperMetacast((KToolBarPopupAction*)self, param1);
 }
 
 int32_t k_toolbarpopupaction_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_toolbarpopupaction_on_metacall(void* self, int32_t (*callback)(void*, int
     KToolBarPopupAction_OnMetacall((KToolBarPopupAction*)self, (intptr_t)callback);
 }
 
-int32_t k_toolbarpopupaction_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KToolBarPopupAction_QBaseMetacall((KToolBarPopupAction*)self, param1, param2, param3);
+int32_t k_toolbarpopupaction_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KToolBarPopupAction_SuperMetacall((KToolBarPopupAction*)self, param1, param2, param3);
 }
 
 const char* k_toolbarpopupaction_tr(const char* s) {
@@ -77,8 +77,8 @@ void k_toolbarpopupaction_on_create_widget(void* self, QWidget* (*callback)(void
     KToolBarPopupAction_OnCreateWidget((KToolBarPopupAction*)self, (intptr_t)callback);
 }
 
-QWidget* k_toolbarpopupaction_qbase_create_widget(void* self, void* parent) {
-    return KToolBarPopupAction_QBaseCreateWidget((KToolBarPopupAction*)self, (QWidget*)parent);
+QWidget* k_toolbarpopupaction_super_create_widget(void* self, void* parent) {
+    return KToolBarPopupAction_SuperCreateWidget((KToolBarPopupAction*)self, (QWidget*)parent);
 }
 
 const char* k_toolbarpopupaction_tr2(const char* s, const char* c) {
@@ -623,8 +623,8 @@ bool k_toolbarpopupaction_event(void* self, void* param1) {
     return KToolBarPopupAction_Event((KToolBarPopupAction*)self, (QEvent*)param1);
 }
 
-bool k_toolbarpopupaction_qbase_event(void* self, void* param1) {
-    return KToolBarPopupAction_QBaseEvent((KToolBarPopupAction*)self, (QEvent*)param1);
+bool k_toolbarpopupaction_super_event(void* self, void* param1) {
+    return KToolBarPopupAction_SuperEvent((KToolBarPopupAction*)self, (QEvent*)param1);
 }
 
 void k_toolbarpopupaction_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -635,8 +635,8 @@ bool k_toolbarpopupaction_event_filter(void* self, void* param1, void* param2) {
     return KToolBarPopupAction_EventFilter((KToolBarPopupAction*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_toolbarpopupaction_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KToolBarPopupAction_QBaseEventFilter((KToolBarPopupAction*)self, (QObject*)param1, (QEvent*)param2);
+bool k_toolbarpopupaction_super_event_filter(void* self, void* param1, void* param2) {
+    return KToolBarPopupAction_SuperEventFilter((KToolBarPopupAction*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_toolbarpopupaction_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -647,8 +647,8 @@ void k_toolbarpopupaction_delete_widget(void* self, void* widget) {
     KToolBarPopupAction_DeleteWidget((KToolBarPopupAction*)self, (QWidget*)widget);
 }
 
-void k_toolbarpopupaction_qbase_delete_widget(void* self, void* widget) {
-    KToolBarPopupAction_QBaseDeleteWidget((KToolBarPopupAction*)self, (QWidget*)widget);
+void k_toolbarpopupaction_super_delete_widget(void* self, void* widget) {
+    KToolBarPopupAction_SuperDeleteWidget((KToolBarPopupAction*)self, (QWidget*)widget);
 }
 
 void k_toolbarpopupaction_on_delete_widget(void* self, void (*callback)(void*, void*)) {
@@ -659,8 +659,8 @@ void k_toolbarpopupaction_timer_event(void* self, void* event) {
     KToolBarPopupAction_TimerEvent((KToolBarPopupAction*)self, (QTimerEvent*)event);
 }
 
-void k_toolbarpopupaction_qbase_timer_event(void* self, void* event) {
-    KToolBarPopupAction_QBaseTimerEvent((KToolBarPopupAction*)self, (QTimerEvent*)event);
+void k_toolbarpopupaction_super_timer_event(void* self, void* event) {
+    KToolBarPopupAction_SuperTimerEvent((KToolBarPopupAction*)self, (QTimerEvent*)event);
 }
 
 void k_toolbarpopupaction_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -671,8 +671,8 @@ void k_toolbarpopupaction_child_event(void* self, void* event) {
     KToolBarPopupAction_ChildEvent((KToolBarPopupAction*)self, (QChildEvent*)event);
 }
 
-void k_toolbarpopupaction_qbase_child_event(void* self, void* event) {
-    KToolBarPopupAction_QBaseChildEvent((KToolBarPopupAction*)self, (QChildEvent*)event);
+void k_toolbarpopupaction_super_child_event(void* self, void* event) {
+    KToolBarPopupAction_SuperChildEvent((KToolBarPopupAction*)self, (QChildEvent*)event);
 }
 
 void k_toolbarpopupaction_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -683,8 +683,8 @@ void k_toolbarpopupaction_custom_event(void* self, void* event) {
     KToolBarPopupAction_CustomEvent((KToolBarPopupAction*)self, (QEvent*)event);
 }
 
-void k_toolbarpopupaction_qbase_custom_event(void* self, void* event) {
-    KToolBarPopupAction_QBaseCustomEvent((KToolBarPopupAction*)self, (QEvent*)event);
+void k_toolbarpopupaction_super_custom_event(void* self, void* event) {
+    KToolBarPopupAction_SuperCustomEvent((KToolBarPopupAction*)self, (QEvent*)event);
 }
 
 void k_toolbarpopupaction_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -695,8 +695,8 @@ void k_toolbarpopupaction_connect_notify(void* self, void* signal) {
     KToolBarPopupAction_ConnectNotify((KToolBarPopupAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toolbarpopupaction_qbase_connect_notify(void* self, void* signal) {
-    KToolBarPopupAction_QBaseConnectNotify((KToolBarPopupAction*)self, (QMetaMethod*)signal);
+void k_toolbarpopupaction_super_connect_notify(void* self, void* signal) {
+    KToolBarPopupAction_SuperConnectNotify((KToolBarPopupAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarpopupaction_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -707,8 +707,8 @@ void k_toolbarpopupaction_disconnect_notify(void* self, void* signal) {
     KToolBarPopupAction_DisconnectNotify((KToolBarPopupAction*)self, (QMetaMethod*)signal);
 }
 
-void k_toolbarpopupaction_qbase_disconnect_notify(void* self, void* signal) {
-    KToolBarPopupAction_QBaseDisconnectNotify((KToolBarPopupAction*)self, (QMetaMethod*)signal);
+void k_toolbarpopupaction_super_disconnect_notify(void* self, void* signal) {
+    KToolBarPopupAction_SuperDisconnectNotify((KToolBarPopupAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarpopupaction_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -720,8 +720,8 @@ libqt_list /* of QWidget* */ k_toolbarpopupaction_created_widgets(void* self) {
     return _arr;
 }
 
-libqt_list /* of QWidget* */ k_toolbarpopupaction_qbase_created_widgets(void* self) {
-    libqt_list _arr = KToolBarPopupAction_QBaseCreatedWidgets((KToolBarPopupAction*)self);
+libqt_list /* of QWidget* */ k_toolbarpopupaction_super_created_widgets(void* self) {
+    libqt_list _arr = KToolBarPopupAction_SuperCreatedWidgets((KToolBarPopupAction*)self);
     return _arr;
 }
 
@@ -733,8 +733,8 @@ QObject* k_toolbarpopupaction_sender(void* self) {
     return KToolBarPopupAction_Sender((KToolBarPopupAction*)self);
 }
 
-QObject* k_toolbarpopupaction_qbase_sender(void* self) {
-    return KToolBarPopupAction_QBaseSender((KToolBarPopupAction*)self);
+QObject* k_toolbarpopupaction_super_sender(void* self) {
+    return KToolBarPopupAction_SuperSender((KToolBarPopupAction*)self);
 }
 
 void k_toolbarpopupaction_on_sender(void* self, QObject* (*callback)()) {
@@ -745,8 +745,8 @@ int32_t k_toolbarpopupaction_sender_signal_index(void* self) {
     return KToolBarPopupAction_SenderSignalIndex((KToolBarPopupAction*)self);
 }
 
-int32_t k_toolbarpopupaction_qbase_sender_signal_index(void* self) {
-    return KToolBarPopupAction_QBaseSenderSignalIndex((KToolBarPopupAction*)self);
+int32_t k_toolbarpopupaction_super_sender_signal_index(void* self) {
+    return KToolBarPopupAction_SuperSenderSignalIndex((KToolBarPopupAction*)self);
 }
 
 void k_toolbarpopupaction_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -757,8 +757,8 @@ int32_t k_toolbarpopupaction_receivers(void* self, const char* signal) {
     return KToolBarPopupAction_Receivers((KToolBarPopupAction*)self, signal);
 }
 
-int32_t k_toolbarpopupaction_qbase_receivers(void* self, const char* signal) {
-    return KToolBarPopupAction_QBaseReceivers((KToolBarPopupAction*)self, signal);
+int32_t k_toolbarpopupaction_super_receivers(void* self, const char* signal) {
+    return KToolBarPopupAction_SuperReceivers((KToolBarPopupAction*)self, signal);
 }
 
 void k_toolbarpopupaction_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -769,8 +769,8 @@ bool k_toolbarpopupaction_is_signal_connected(void* self, void* signal) {
     return KToolBarPopupAction_IsSignalConnected((KToolBarPopupAction*)self, (QMetaMethod*)signal);
 }
 
-bool k_toolbarpopupaction_qbase_is_signal_connected(void* self, void* signal) {
-    return KToolBarPopupAction_QBaseIsSignalConnected((KToolBarPopupAction*)self, (QMetaMethod*)signal);
+bool k_toolbarpopupaction_super_is_signal_connected(void* self, void* signal) {
+    return KToolBarPopupAction_SuperIsSignalConnected((KToolBarPopupAction*)self, (QMetaMethod*)signal);
 }
 
 void k_toolbarpopupaction_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

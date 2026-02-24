@@ -21,8 +21,8 @@ void k_texteditor__inlinenoteprovider_on_meta_object(void* self, const QMetaObje
     KTextEditor__InlineNoteProvider_OnMetaObject((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_texteditor__inlinenoteprovider_qbase_meta_object(void* self) {
-    return KTextEditor__InlineNoteProvider_QBaseMetaObject((KTextEditor__InlineNoteProvider*)self);
+const QMetaObject* k_texteditor__inlinenoteprovider_super_meta_object(void* self) {
+    return KTextEditor__InlineNoteProvider_SuperMetaObject((KTextEditor__InlineNoteProvider*)self);
 }
 
 void* k_texteditor__inlinenoteprovider_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void k_texteditor__inlinenoteprovider_on_metacast(void* self, void* (*callback)(
     KTextEditor__InlineNoteProvider_OnMetacast((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void* k_texteditor__inlinenoteprovider_qbase_metacast(void* self, const char* param1) {
-    return KTextEditor__InlineNoteProvider_QBaseMetacast((KTextEditor__InlineNoteProvider*)self, param1);
+void* k_texteditor__inlinenoteprovider_super_metacast(void* self, const char* param1) {
+    return KTextEditor__InlineNoteProvider_SuperMetacast((KTextEditor__InlineNoteProvider*)self, param1);
 }
 
 int32_t k_texteditor__inlinenoteprovider_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void k_texteditor__inlinenoteprovider_on_metacall(void* self, int32_t (*callback
     KTextEditor__InlineNoteProvider_OnMetacall((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-int32_t k_texteditor__inlinenoteprovider_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KTextEditor__InlineNoteProvider_QBaseMetacall((KTextEditor__InlineNoteProvider*)self, param1, param2, param3);
+int32_t k_texteditor__inlinenoteprovider_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KTextEditor__InlineNoteProvider_SuperMetacall((KTextEditor__InlineNoteProvider*)self, param1, param2, param3);
 }
 
 const char* k_texteditor__inlinenoteprovider_tr(const char* s) {
@@ -65,8 +65,8 @@ void k_texteditor__inlinenoteprovider_on_inline_notes(void* self, libqt_list /* 
     KTextEditor__InlineNoteProvider_OnInlineNotes((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-libqt_list /* of int */ k_texteditor__inlinenoteprovider_qbase_inline_notes(void* self, int line) {
-    libqt_list _arr = KTextEditor__InlineNoteProvider_QBaseInlineNotes((KTextEditor__InlineNoteProvider*)self, line);
+libqt_list /* of int */ k_texteditor__inlinenoteprovider_super_inline_notes(void* self, int line) {
+    libqt_list _arr = KTextEditor__InlineNoteProvider_SuperInlineNotes((KTextEditor__InlineNoteProvider*)self, line);
     return _arr;
 }
 
@@ -78,8 +78,8 @@ void k_texteditor__inlinenoteprovider_on_inline_note_size(void* self, QSize* (*c
     KTextEditor__InlineNoteProvider_OnInlineNoteSize((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-QSize* k_texteditor__inlinenoteprovider_qbase_inline_note_size(void* self, void* note) {
-    return KTextEditor__InlineNoteProvider_QBaseInlineNoteSize((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note);
+QSize* k_texteditor__inlinenoteprovider_super_inline_note_size(void* self, void* note) {
+    return KTextEditor__InlineNoteProvider_SuperInlineNoteSize((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note);
 }
 
 void k_texteditor__inlinenoteprovider_paint_inline_note(void* self, void* note, void* painter, int32_t direction) {
@@ -90,8 +90,8 @@ void k_texteditor__inlinenoteprovider_on_paint_inline_note(void* self, void (*ca
     KTextEditor__InlineNoteProvider_OnPaintInlineNote((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_paint_inline_note(void* self, void* note, void* painter, int32_t direction) {
-    KTextEditor__InlineNoteProvider_QBasePaintInlineNote((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPainter*)painter, direction);
+void k_texteditor__inlinenoteprovider_super_paint_inline_note(void* self, void* note, void* painter, int32_t direction) {
+    KTextEditor__InlineNoteProvider_SuperPaintInlineNote((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPainter*)painter, direction);
 }
 
 void k_texteditor__inlinenoteprovider_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos) {
@@ -102,8 +102,8 @@ void k_texteditor__inlinenoteprovider_on_inline_note_activated(void* self, void 
     KTextEditor__InlineNoteProvider_OnInlineNoteActivated((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos) {
-    KTextEditor__InlineNoteProvider_QBaseInlineNoteActivated((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, buttons, (QPoint*)globalPos);
+void k_texteditor__inlinenoteprovider_super_inline_note_activated(void* self, void* note, int32_t buttons, void* globalPos) {
+    KTextEditor__InlineNoteProvider_SuperInlineNoteActivated((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, buttons, (QPoint*)globalPos);
 }
 
 void k_texteditor__inlinenoteprovider_inline_note_focus_in_event(void* self, void* note, void* globalPos) {
@@ -114,8 +114,8 @@ void k_texteditor__inlinenoteprovider_on_inline_note_focus_in_event(void* self, 
     KTextEditor__InlineNoteProvider_OnInlineNoteFocusInEvent((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_inline_note_focus_in_event(void* self, void* note, void* globalPos) {
-    KTextEditor__InlineNoteProvider_QBaseInlineNoteFocusInEvent((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPoint*)globalPos);
+void k_texteditor__inlinenoteprovider_super_inline_note_focus_in_event(void* self, void* note, void* globalPos) {
+    KTextEditor__InlineNoteProvider_SuperInlineNoteFocusInEvent((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPoint*)globalPos);
 }
 
 void k_texteditor__inlinenoteprovider_inline_note_focus_out_event(void* self, void* note) {
@@ -126,8 +126,8 @@ void k_texteditor__inlinenoteprovider_on_inline_note_focus_out_event(void* self,
     KTextEditor__InlineNoteProvider_OnInlineNoteFocusOutEvent((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_inline_note_focus_out_event(void* self, void* note) {
-    KTextEditor__InlineNoteProvider_QBaseInlineNoteFocusOutEvent((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note);
+void k_texteditor__inlinenoteprovider_super_inline_note_focus_out_event(void* self, void* note) {
+    KTextEditor__InlineNoteProvider_SuperInlineNoteFocusOutEvent((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note);
 }
 
 void k_texteditor__inlinenoteprovider_inline_note_mouse_move_event(void* self, void* note, void* globalPos) {
@@ -138,8 +138,8 @@ void k_texteditor__inlinenoteprovider_on_inline_note_mouse_move_event(void* self
     KTextEditor__InlineNoteProvider_OnInlineNoteMouseMoveEvent((KTextEditor__InlineNoteProvider*)self, (intptr_t)callback);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_inline_note_mouse_move_event(void* self, void* note, void* globalPos) {
-    KTextEditor__InlineNoteProvider_QBaseInlineNoteMouseMoveEvent((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPoint*)globalPos);
+void k_texteditor__inlinenoteprovider_super_inline_note_mouse_move_event(void* self, void* note, void* globalPos) {
+    KTextEditor__InlineNoteProvider_SuperInlineNoteMouseMoveEvent((KTextEditor__InlineNoteProvider*)self, (KTextEditor__InlineNote*)note, (QPoint*)globalPos);
 }
 
 void k_texteditor__inlinenoteprovider_inline_notes_reset(void* self) {
@@ -387,8 +387,8 @@ bool k_texteditor__inlinenoteprovider_event(void* self, void* event) {
     return KTextEditor__InlineNoteProvider_Event((KTextEditor__InlineNoteProvider*)self, (QEvent*)event);
 }
 
-bool k_texteditor__inlinenoteprovider_qbase_event(void* self, void* event) {
-    return KTextEditor__InlineNoteProvider_QBaseEvent((KTextEditor__InlineNoteProvider*)self, (QEvent*)event);
+bool k_texteditor__inlinenoteprovider_super_event(void* self, void* event) {
+    return KTextEditor__InlineNoteProvider_SuperEvent((KTextEditor__InlineNoteProvider*)self, (QEvent*)event);
 }
 
 void k_texteditor__inlinenoteprovider_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -399,8 +399,8 @@ bool k_texteditor__inlinenoteprovider_event_filter(void* self, void* watched, vo
     return KTextEditor__InlineNoteProvider_EventFilter((KTextEditor__InlineNoteProvider*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_texteditor__inlinenoteprovider_qbase_event_filter(void* self, void* watched, void* event) {
-    return KTextEditor__InlineNoteProvider_QBaseEventFilter((KTextEditor__InlineNoteProvider*)self, (QObject*)watched, (QEvent*)event);
+bool k_texteditor__inlinenoteprovider_super_event_filter(void* self, void* watched, void* event) {
+    return KTextEditor__InlineNoteProvider_SuperEventFilter((KTextEditor__InlineNoteProvider*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_texteditor__inlinenoteprovider_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -411,8 +411,8 @@ void k_texteditor__inlinenoteprovider_timer_event(void* self, void* event) {
     KTextEditor__InlineNoteProvider_TimerEvent((KTextEditor__InlineNoteProvider*)self, (QTimerEvent*)event);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_timer_event(void* self, void* event) {
-    KTextEditor__InlineNoteProvider_QBaseTimerEvent((KTextEditor__InlineNoteProvider*)self, (QTimerEvent*)event);
+void k_texteditor__inlinenoteprovider_super_timer_event(void* self, void* event) {
+    KTextEditor__InlineNoteProvider_SuperTimerEvent((KTextEditor__InlineNoteProvider*)self, (QTimerEvent*)event);
 }
 
 void k_texteditor__inlinenoteprovider_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ void k_texteditor__inlinenoteprovider_child_event(void* self, void* event) {
     KTextEditor__InlineNoteProvider_ChildEvent((KTextEditor__InlineNoteProvider*)self, (QChildEvent*)event);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_child_event(void* self, void* event) {
-    KTextEditor__InlineNoteProvider_QBaseChildEvent((KTextEditor__InlineNoteProvider*)self, (QChildEvent*)event);
+void k_texteditor__inlinenoteprovider_super_child_event(void* self, void* event) {
+    KTextEditor__InlineNoteProvider_SuperChildEvent((KTextEditor__InlineNoteProvider*)self, (QChildEvent*)event);
 }
 
 void k_texteditor__inlinenoteprovider_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -435,8 +435,8 @@ void k_texteditor__inlinenoteprovider_custom_event(void* self, void* event) {
     KTextEditor__InlineNoteProvider_CustomEvent((KTextEditor__InlineNoteProvider*)self, (QEvent*)event);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_custom_event(void* self, void* event) {
-    KTextEditor__InlineNoteProvider_QBaseCustomEvent((KTextEditor__InlineNoteProvider*)self, (QEvent*)event);
+void k_texteditor__inlinenoteprovider_super_custom_event(void* self, void* event) {
+    KTextEditor__InlineNoteProvider_SuperCustomEvent((KTextEditor__InlineNoteProvider*)self, (QEvent*)event);
 }
 
 void k_texteditor__inlinenoteprovider_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ void k_texteditor__inlinenoteprovider_connect_notify(void* self, void* signal) {
     KTextEditor__InlineNoteProvider_ConnectNotify((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_connect_notify(void* self, void* signal) {
-    KTextEditor__InlineNoteProvider_QBaseConnectNotify((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
+void k_texteditor__inlinenoteprovider_super_connect_notify(void* self, void* signal) {
+    KTextEditor__InlineNoteProvider_SuperConnectNotify((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__inlinenoteprovider_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ void k_texteditor__inlinenoteprovider_disconnect_notify(void* self, void* signal
     KTextEditor__InlineNoteProvider_DisconnectNotify((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
 }
 
-void k_texteditor__inlinenoteprovider_qbase_disconnect_notify(void* self, void* signal) {
-    KTextEditor__InlineNoteProvider_QBaseDisconnectNotify((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
+void k_texteditor__inlinenoteprovider_super_disconnect_notify(void* self, void* signal) {
+    KTextEditor__InlineNoteProvider_SuperDisconnectNotify((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__inlinenoteprovider_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ QObject* k_texteditor__inlinenoteprovider_sender(void* self) {
     return KTextEditor__InlineNoteProvider_Sender((KTextEditor__InlineNoteProvider*)self);
 }
 
-QObject* k_texteditor__inlinenoteprovider_qbase_sender(void* self) {
-    return KTextEditor__InlineNoteProvider_QBaseSender((KTextEditor__InlineNoteProvider*)self);
+QObject* k_texteditor__inlinenoteprovider_super_sender(void* self) {
+    return KTextEditor__InlineNoteProvider_SuperSender((KTextEditor__InlineNoteProvider*)self);
 }
 
 void k_texteditor__inlinenoteprovider_on_sender(void* self, QObject* (*callback)()) {
@@ -483,8 +483,8 @@ int32_t k_texteditor__inlinenoteprovider_sender_signal_index(void* self) {
     return KTextEditor__InlineNoteProvider_SenderSignalIndex((KTextEditor__InlineNoteProvider*)self);
 }
 
-int32_t k_texteditor__inlinenoteprovider_qbase_sender_signal_index(void* self) {
-    return KTextEditor__InlineNoteProvider_QBaseSenderSignalIndex((KTextEditor__InlineNoteProvider*)self);
+int32_t k_texteditor__inlinenoteprovider_super_sender_signal_index(void* self) {
+    return KTextEditor__InlineNoteProvider_SuperSenderSignalIndex((KTextEditor__InlineNoteProvider*)self);
 }
 
 void k_texteditor__inlinenoteprovider_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -495,8 +495,8 @@ int32_t k_texteditor__inlinenoteprovider_receivers(void* self, const char* signa
     return KTextEditor__InlineNoteProvider_Receivers((KTextEditor__InlineNoteProvider*)self, signal);
 }
 
-int32_t k_texteditor__inlinenoteprovider_qbase_receivers(void* self, const char* signal) {
-    return KTextEditor__InlineNoteProvider_QBaseReceivers((KTextEditor__InlineNoteProvider*)self, signal);
+int32_t k_texteditor__inlinenoteprovider_super_receivers(void* self, const char* signal) {
+    return KTextEditor__InlineNoteProvider_SuperReceivers((KTextEditor__InlineNoteProvider*)self, signal);
 }
 
 void k_texteditor__inlinenoteprovider_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -507,8 +507,8 @@ bool k_texteditor__inlinenoteprovider_is_signal_connected(void* self, void* sign
     return KTextEditor__InlineNoteProvider_IsSignalConnected((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
 }
 
-bool k_texteditor__inlinenoteprovider_qbase_is_signal_connected(void* self, void* signal) {
-    return KTextEditor__InlineNoteProvider_QBaseIsSignalConnected((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
+bool k_texteditor__inlinenoteprovider_super_is_signal_connected(void* self, void* signal) {
+    return KTextEditor__InlineNoteProvider_SuperIsSignalConnected((KTextEditor__InlineNoteProvider*)self, (QMetaMethod*)signal);
 }
 
 void k_texteditor__inlinenoteprovider_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

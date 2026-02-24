@@ -91,13 +91,17 @@ const QMetaObject* q_datetimeedit_meta_object(void* self);
 ///
 void q_datetimeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_meta_object` instead
+///
+#define q_datetimeedit_qbase_meta_object q_datetimeedit_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QDateTimeEdit*
 ///
-const QMetaObject* q_datetimeedit_qbase_meta_object(void* self);
+const QMetaObject* q_datetimeedit_super_meta_object(void* self);
 
 /// @param self QDateTimeEdit*
 /// @param param1 const char*
@@ -111,12 +115,16 @@ void* q_datetimeedit_metacast(void* self, const char* param1);
 ///
 void q_datetimeedit_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_metacast` instead
+///
+#define q_datetimeedit_qbase_metacast q_datetimeedit_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QDateTimeEdit*
 /// @param param1 const char*
 ///
-void* q_datetimeedit_qbase_metacast(void* self, const char* param1);
+void* q_datetimeedit_super_metacast(void* self, const char* param1);
 
 /// @param self QDateTimeEdit*
 /// @param param1 enum QMetaObject__Call
@@ -132,6 +140,10 @@ int32_t q_datetimeedit_metacall(void* self, int32_t param1, int param2, void* pa
 ///
 void q_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_metacall` instead
+///
+#define q_datetimeedit_qbase_metacall q_datetimeedit_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QDateTimeEdit*
@@ -139,7 +151,7 @@ void q_datetimeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_datetimeedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_datetimeedit_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -469,13 +481,17 @@ QSize* q_datetimeedit_size_hint(void* self);
 ///
 void q_datetimeedit_on_size_hint(void* self, QSize* (*callback)());
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_size_hint` instead
+///
+#define q_datetimeedit_qbase_size_hint q_datetimeedit_super_size_hint
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
 ///
 /// Base class method implementation
 ///
 /// @param self QDateTimeEdit*
 ///
-QSize* q_datetimeedit_qbase_size_hint(void* self);
+QSize* q_datetimeedit_super_size_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
 ///
@@ -492,13 +508,17 @@ void q_datetimeedit_clear(void* self);
 ///
 void q_datetimeedit_on_clear(void* self, void (*callback)());
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_clear` instead
+///
+#define q_datetimeedit_qbase_clear q_datetimeedit_super_clear
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
 ///
 /// Base class method implementation
 ///
 /// @param self QDateTimeEdit*
 ///
-void q_datetimeedit_qbase_clear(void* self);
+void q_datetimeedit_super_clear(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
 ///
@@ -516,6 +536,10 @@ void q_datetimeedit_step_by(void* self, int steps);
 ///
 void q_datetimeedit_on_step_by(void* self, void (*callback)(void*, int));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_step_by` instead
+///
+#define q_datetimeedit_qbase_step_by q_datetimeedit_super_step_by
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
 ///
 /// Base class method implementation
@@ -523,7 +547,7 @@ void q_datetimeedit_on_step_by(void* self, void (*callback)(void*, int));
 /// @param self QDateTimeEdit*
 /// @param steps int
 ///
-void q_datetimeedit_qbase_step_by(void* self, int steps);
+void q_datetimeedit_super_step_by(void* self, int steps);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
 ///
@@ -541,6 +565,10 @@ bool q_datetimeedit_event(void* self, void* event);
 ///
 void q_datetimeedit_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_event` instead
+///
+#define q_datetimeedit_qbase_event q_datetimeedit_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
 ///
 /// Base class method implementation
@@ -548,7 +576,7 @@ void q_datetimeedit_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QDateTimeEdit*
 /// @param event QEvent*
 ///
-bool q_datetimeedit_qbase_event(void* self, void* event);
+bool q_datetimeedit_super_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeChanged)
 ///
@@ -629,6 +657,10 @@ void q_datetimeedit_key_press_event(void* self, void* event);
 ///
 void q_datetimeedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_key_press_event` instead
+///
+#define q_datetimeedit_qbase_key_press_event q_datetimeedit_super_key_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
 ///
 /// Base class method implementation
@@ -636,7 +668,7 @@ void q_datetimeedit_on_key_press_event(void* self, void (*callback)(void*, void*
 /// @param self QDateTimeEdit*
 /// @param event QKeyEvent*
 ///
-void q_datetimeedit_qbase_key_press_event(void* self, void* event);
+void q_datetimeedit_super_key_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
 ///
@@ -654,6 +686,10 @@ void q_datetimeedit_wheel_event(void* self, void* event);
 ///
 void q_datetimeedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_wheel_event` instead
+///
+#define q_datetimeedit_qbase_wheel_event q_datetimeedit_super_wheel_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
 ///
 /// Base class method implementation
@@ -661,7 +697,7 @@ void q_datetimeedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 /// @param self QDateTimeEdit*
 /// @param event QWheelEvent*
 ///
-void q_datetimeedit_qbase_wheel_event(void* self, void* event);
+void q_datetimeedit_super_wheel_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
 ///
@@ -679,6 +715,10 @@ void q_datetimeedit_focus_in_event(void* self, void* event);
 ///
 void q_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_focus_in_event` instead
+///
+#define q_datetimeedit_qbase_focus_in_event q_datetimeedit_super_focus_in_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
 ///
 /// Base class method implementation
@@ -686,7 +726,7 @@ void q_datetimeedit_on_focus_in_event(void* self, void (*callback)(void*, void*)
 /// @param self QDateTimeEdit*
 /// @param event QFocusEvent*
 ///
-void q_datetimeedit_qbase_focus_in_event(void* self, void* event);
+void q_datetimeedit_super_focus_in_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
 ///
@@ -704,6 +744,10 @@ bool q_datetimeedit_focus_next_prev_child(void* self, bool next);
 ///
 void q_datetimeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_focus_next_prev_child` instead
+///
+#define q_datetimeedit_qbase_focus_next_prev_child q_datetimeedit_super_focus_next_prev_child
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
 ///
 /// Base class method implementation
@@ -711,7 +755,7 @@ void q_datetimeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*,
 /// @param self QDateTimeEdit*
 /// @param next bool
 ///
-bool q_datetimeedit_qbase_focus_next_prev_child(void* self, bool next);
+bool q_datetimeedit_super_focus_next_prev_child(void* self, bool next);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
@@ -732,6 +776,10 @@ int32_t q_datetimeedit_validate(void* self, const char* input, int* pos);
 ///
 void q_datetimeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, int*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_validate` instead
+///
+#define q_datetimeedit_qbase_validate q_datetimeedit_super_validate
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
 ///
 /// Base class method implementation
@@ -742,7 +790,7 @@ void q_datetimeedit_on_validate(void* self, int32_t (*callback)(void*, const cha
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_datetimeedit_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_datetimeedit_super_validate(void* self, const char* input, int* pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
@@ -760,6 +808,10 @@ void q_datetimeedit_fixup(void* self, const char* input);
 ///
 void q_datetimeedit_on_fixup(void* self, void (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_fixup` instead
+///
+#define q_datetimeedit_qbase_fixup q_datetimeedit_super_fixup
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
 ///
 /// Base class method implementation
@@ -767,7 +819,7 @@ void q_datetimeedit_on_fixup(void* self, void (*callback)(void*, const char*));
 /// @param self QDateTimeEdit*
 /// @param input const char*
 ///
-void q_datetimeedit_qbase_fixup(void* self, const char* input);
+void q_datetimeedit_super_fixup(void* self, const char* input);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
@@ -785,6 +837,10 @@ QDateTime* q_datetimeedit_date_time_from_text(void* self, const char* text);
 ///
 void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_date_time_from_text` instead
+///
+#define q_datetimeedit_qbase_date_time_from_text q_datetimeedit_super_date_time_from_text
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
 ///
 /// Base class method implementation
@@ -792,7 +848,7 @@ void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(vo
 /// @param self QDateTimeEdit*
 /// @param text const char*
 ///
-QDateTime* q_datetimeedit_qbase_date_time_from_text(void* self, const char* text);
+QDateTime* q_datetimeedit_super_date_time_from_text(void* self, const char* text);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
@@ -812,6 +868,10 @@ const char* q_datetimeedit_text_from_date_time(void* self, void* dt);
 ///
 void q_datetimeedit_on_text_from_date_time(void* self, const char* (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_text_from_date_time` instead
+///
+#define q_datetimeedit_qbase_text_from_date_time q_datetimeedit_super_text_from_date_time
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
 ///
 /// Base class method implementation
@@ -819,7 +879,7 @@ void q_datetimeedit_on_text_from_date_time(void* self, const char* (*callback)(v
 /// @param self QDateTimeEdit*
 /// @param dt QDateTime*
 ///
-const char* q_datetimeedit_qbase_text_from_date_time(void* self, void* dt);
+const char* q_datetimeedit_super_text_from_date_time(void* self, void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
@@ -838,6 +898,10 @@ int32_t q_datetimeedit_step_enabled(void* self);
 ///
 void q_datetimeedit_on_step_enabled(void* self, int32_t (*callback)());
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_step_enabled` instead
+///
+#define q_datetimeedit_qbase_step_enabled q_datetimeedit_super_step_enabled
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
 ///
 /// Base class method implementation
@@ -846,7 +910,7 @@ void q_datetimeedit_on_step_enabled(void* self, int32_t (*callback)());
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_datetimeedit_qbase_step_enabled(void* self);
+int32_t q_datetimeedit_super_step_enabled(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
 ///
@@ -864,6 +928,10 @@ void q_datetimeedit_mouse_press_event(void* self, void* event);
 ///
 void q_datetimeedit_on_mouse_press_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_mouse_press_event` instead
+///
+#define q_datetimeedit_qbase_mouse_press_event q_datetimeedit_super_mouse_press_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
 ///
 /// Base class method implementation
@@ -871,7 +939,7 @@ void q_datetimeedit_on_mouse_press_event(void* self, void (*callback)(void*, voi
 /// @param self QDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_datetimeedit_qbase_mouse_press_event(void* self, void* event);
+void q_datetimeedit_super_mouse_press_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
 ///
@@ -889,6 +957,10 @@ void q_datetimeedit_paint_event(void* self, void* event);
 ///
 void q_datetimeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_paint_event` instead
+///
+#define q_datetimeedit_qbase_paint_event q_datetimeedit_super_paint_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
 ///
 /// Base class method implementation
@@ -896,7 +968,7 @@ void q_datetimeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 /// @param self QDateTimeEdit*
 /// @param event QPaintEvent*
 ///
-void q_datetimeedit_qbase_paint_event(void* self, void* event);
+void q_datetimeedit_super_paint_event(void* self, void* event);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
@@ -914,6 +986,10 @@ void q_datetimeedit_init_style_option(void* self, void* option);
 ///
 void q_datetimeedit_on_init_style_option(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_init_style_option` instead
+///
+#define q_datetimeedit_qbase_init_style_option q_datetimeedit_super_init_style_option
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
 ///
 /// Base class method implementation
@@ -921,7 +997,7 @@ void q_datetimeedit_on_init_style_option(void* self, void (*callback)(void*, voi
 /// @param self QDateTimeEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_datetimeedit_qbase_init_style_option(void* self, void* option);
+void q_datetimeedit_super_init_style_option(void* self, void* option);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -4154,6 +4230,10 @@ int32_t q_datetimeedit_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_datetimeedit_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_minimum_size_hint` instead
+///
+#define q_datetimeedit_qbase_minimum_size_hint q_datetimeedit_super_minimum_size_hint
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
@@ -4162,7 +4242,7 @@ QSize* q_datetimeedit_minimum_size_hint(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-QSize* q_datetimeedit_qbase_minimum_size_hint(void* self);
+QSize* q_datetimeedit_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4186,6 +4266,10 @@ void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QVariant* q_datetimeedit_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_input_method_query` instead
+///
+#define q_datetimeedit_qbase_input_method_query q_datetimeedit_super_input_method_query
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
@@ -4195,7 +4279,7 @@ QVariant* q_datetimeedit_input_method_query(void* self, int32_t param1);
 /// @param self QDateTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_datetimeedit_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_datetimeedit_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4219,6 +4303,10 @@ void q_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void
 ///
 void q_datetimeedit_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_resize_event` instead
+///
+#define q_datetimeedit_qbase_resize_event q_datetimeedit_super_resize_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
@@ -4228,7 +4316,7 @@ void q_datetimeedit_resize_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QResizeEvent*
 ///
-void q_datetimeedit_qbase_resize_event(void* self, void* event);
+void q_datetimeedit_super_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4252,6 +4340,10 @@ void q_datetimeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_key_release_event` instead
+///
+#define q_datetimeedit_qbase_key_release_event q_datetimeedit_super_key_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
@@ -4261,7 +4353,7 @@ void q_datetimeedit_key_release_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QKeyEvent*
 ///
-void q_datetimeedit_qbase_key_release_event(void* self, void* event);
+void q_datetimeedit_super_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4285,6 +4377,10 @@ void q_datetimeedit_on_key_release_event(void* self, void (*callback)(void*, voi
 ///
 void q_datetimeedit_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_focus_out_event` instead
+///
+#define q_datetimeedit_qbase_focus_out_event q_datetimeedit_super_focus_out_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
@@ -4294,7 +4390,7 @@ void q_datetimeedit_focus_out_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QFocusEvent*
 ///
-void q_datetimeedit_qbase_focus_out_event(void* self, void* event);
+void q_datetimeedit_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4318,6 +4414,10 @@ void q_datetimeedit_on_focus_out_event(void* self, void (*callback)(void*, void*
 ///
 void q_datetimeedit_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_context_menu_event` instead
+///
+#define q_datetimeedit_qbase_context_menu_event q_datetimeedit_super_context_menu_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
@@ -4327,7 +4427,7 @@ void q_datetimeedit_context_menu_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QContextMenuEvent*
 ///
-void q_datetimeedit_qbase_context_menu_event(void* self, void* event);
+void q_datetimeedit_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4351,6 +4451,10 @@ void q_datetimeedit_on_context_menu_event(void* self, void (*callback)(void*, vo
 ///
 void q_datetimeedit_change_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_change_event` instead
+///
+#define q_datetimeedit_qbase_change_event q_datetimeedit_super_change_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
@@ -4360,7 +4464,7 @@ void q_datetimeedit_change_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QEvent*
 ///
-void q_datetimeedit_qbase_change_event(void* self, void* event);
+void q_datetimeedit_super_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4384,6 +4488,10 @@ void q_datetimeedit_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_close_event` instead
+///
+#define q_datetimeedit_qbase_close_event q_datetimeedit_super_close_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
@@ -4393,7 +4501,7 @@ void q_datetimeedit_close_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QCloseEvent*
 ///
-void q_datetimeedit_qbase_close_event(void* self, void* event);
+void q_datetimeedit_super_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4417,6 +4525,10 @@ void q_datetimeedit_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_hide_event` instead
+///
+#define q_datetimeedit_qbase_hide_event q_datetimeedit_super_hide_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
@@ -4426,7 +4538,7 @@ void q_datetimeedit_hide_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QHideEvent*
 ///
-void q_datetimeedit_qbase_hide_event(void* self, void* event);
+void q_datetimeedit_super_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4450,6 +4562,10 @@ void q_datetimeedit_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_mouse_release_event` instead
+///
+#define q_datetimeedit_qbase_mouse_release_event q_datetimeedit_super_mouse_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
@@ -4459,7 +4575,7 @@ void q_datetimeedit_mouse_release_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_datetimeedit_qbase_mouse_release_event(void* self, void* event);
+void q_datetimeedit_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4483,6 +4599,10 @@ void q_datetimeedit_on_mouse_release_event(void* self, void (*callback)(void*, v
 ///
 void q_datetimeedit_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_mouse_move_event` instead
+///
+#define q_datetimeedit_qbase_mouse_move_event q_datetimeedit_super_mouse_move_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
@@ -4492,7 +4612,7 @@ void q_datetimeedit_mouse_move_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_datetimeedit_qbase_mouse_move_event(void* self, void* event);
+void q_datetimeedit_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4516,6 +4636,10 @@ void q_datetimeedit_on_mouse_move_event(void* self, void (*callback)(void*, void
 ///
 void q_datetimeedit_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_timer_event` instead
+///
+#define q_datetimeedit_qbase_timer_event q_datetimeedit_super_timer_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
@@ -4525,7 +4649,7 @@ void q_datetimeedit_timer_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QTimerEvent*
 ///
-void q_datetimeedit_qbase_timer_event(void* self, void* event);
+void q_datetimeedit_super_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4549,6 +4673,10 @@ void q_datetimeedit_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_show_event` instead
+///
+#define q_datetimeedit_qbase_show_event q_datetimeedit_super_show_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
@@ -4558,7 +4686,7 @@ void q_datetimeedit_show_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QShowEvent*
 ///
-void q_datetimeedit_qbase_show_event(void* self, void* event);
+void q_datetimeedit_super_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -4581,6 +4709,10 @@ void q_datetimeedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_datetimeedit_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_dev_type` instead
+///
+#define q_datetimeedit_qbase_dev_type q_datetimeedit_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -4589,7 +4721,7 @@ int32_t q_datetimeedit_dev_type(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-int32_t q_datetimeedit_qbase_dev_type(void* self);
+int32_t q_datetimeedit_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4613,6 +4745,10 @@ void q_datetimeedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_datetimeedit_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_set_visible` instead
+///
+#define q_datetimeedit_qbase_set_visible q_datetimeedit_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -4622,7 +4758,7 @@ void q_datetimeedit_set_visible(void* self, bool visible);
 /// @param self QDateTimeEdit*
 /// @param visible bool
 ///
-void q_datetimeedit_qbase_set_visible(void* self, bool visible);
+void q_datetimeedit_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -4646,6 +4782,10 @@ void q_datetimeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_datetimeedit_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_height_for_width` instead
+///
+#define q_datetimeedit_qbase_height_for_width q_datetimeedit_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -4655,7 +4795,7 @@ int32_t q_datetimeedit_height_for_width(void* self, int param1);
 /// @param self QDateTimeEdit*
 /// @param param1 int
 ///
-int32_t q_datetimeedit_qbase_height_for_width(void* self, int param1);
+int32_t q_datetimeedit_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -4678,6 +4818,10 @@ void q_datetimeedit_on_height_for_width(void* self, int32_t (*callback)(void*, i
 ///
 bool q_datetimeedit_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_has_height_for_width` instead
+///
+#define q_datetimeedit_qbase_has_height_for_width q_datetimeedit_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -4686,7 +4830,7 @@ bool q_datetimeedit_has_height_for_width(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-bool q_datetimeedit_qbase_has_height_for_width(void* self);
+bool q_datetimeedit_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4709,6 +4853,10 @@ void q_datetimeedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_datetimeedit_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_paint_engine` instead
+///
+#define q_datetimeedit_qbase_paint_engine q_datetimeedit_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -4717,7 +4865,7 @@ QPaintEngine* q_datetimeedit_paint_engine(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-QPaintEngine* q_datetimeedit_qbase_paint_engine(void* self);
+QPaintEngine* q_datetimeedit_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -4741,6 +4889,10 @@ void q_datetimeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_datetimeedit_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_mouse_double_click_event` instead
+///
+#define q_datetimeedit_qbase_mouse_double_click_event q_datetimeedit_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -4750,7 +4902,7 @@ void q_datetimeedit_mouse_double_click_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_datetimeedit_qbase_mouse_double_click_event(void* self, void* event);
+void q_datetimeedit_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4774,6 +4926,10 @@ void q_datetimeedit_on_mouse_double_click_event(void* self, void (*callback)(voi
 ///
 void q_datetimeedit_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_enter_event` instead
+///
+#define q_datetimeedit_qbase_enter_event q_datetimeedit_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -4783,7 +4939,7 @@ void q_datetimeedit_enter_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QEnterEvent*
 ///
-void q_datetimeedit_qbase_enter_event(void* self, void* event);
+void q_datetimeedit_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4807,6 +4963,10 @@ void q_datetimeedit_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_leave_event` instead
+///
+#define q_datetimeedit_qbase_leave_event q_datetimeedit_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -4816,7 +4976,7 @@ void q_datetimeedit_leave_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QEvent*
 ///
-void q_datetimeedit_qbase_leave_event(void* self, void* event);
+void q_datetimeedit_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4840,6 +5000,10 @@ void q_datetimeedit_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_move_event` instead
+///
+#define q_datetimeedit_qbase_move_event q_datetimeedit_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -4849,7 +5013,7 @@ void q_datetimeedit_move_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QMoveEvent*
 ///
-void q_datetimeedit_qbase_move_event(void* self, void* event);
+void q_datetimeedit_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4873,6 +5037,10 @@ void q_datetimeedit_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_tablet_event` instead
+///
+#define q_datetimeedit_qbase_tablet_event q_datetimeedit_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -4882,7 +5050,7 @@ void q_datetimeedit_tablet_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QTabletEvent*
 ///
-void q_datetimeedit_qbase_tablet_event(void* self, void* event);
+void q_datetimeedit_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4906,6 +5074,10 @@ void q_datetimeedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_action_event` instead
+///
+#define q_datetimeedit_qbase_action_event q_datetimeedit_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -4915,7 +5087,7 @@ void q_datetimeedit_action_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QActionEvent*
 ///
-void q_datetimeedit_qbase_action_event(void* self, void* event);
+void q_datetimeedit_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4939,6 +5111,10 @@ void q_datetimeedit_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_drag_enter_event` instead
+///
+#define q_datetimeedit_qbase_drag_enter_event q_datetimeedit_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -4948,7 +5124,7 @@ void q_datetimeedit_drag_enter_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QDragEnterEvent*
 ///
-void q_datetimeedit_qbase_drag_enter_event(void* self, void* event);
+void q_datetimeedit_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -4972,6 +5148,10 @@ void q_datetimeedit_on_drag_enter_event(void* self, void (*callback)(void*, void
 ///
 void q_datetimeedit_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_drag_move_event` instead
+///
+#define q_datetimeedit_qbase_drag_move_event q_datetimeedit_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -4981,7 +5161,7 @@ void q_datetimeedit_drag_move_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QDragMoveEvent*
 ///
-void q_datetimeedit_qbase_drag_move_event(void* self, void* event);
+void q_datetimeedit_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5005,6 +5185,10 @@ void q_datetimeedit_on_drag_move_event(void* self, void (*callback)(void*, void*
 ///
 void q_datetimeedit_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_drag_leave_event` instead
+///
+#define q_datetimeedit_qbase_drag_leave_event q_datetimeedit_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -5014,7 +5198,7 @@ void q_datetimeedit_drag_leave_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QDragLeaveEvent*
 ///
-void q_datetimeedit_qbase_drag_leave_event(void* self, void* event);
+void q_datetimeedit_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5038,6 +5222,10 @@ void q_datetimeedit_on_drag_leave_event(void* self, void (*callback)(void*, void
 ///
 void q_datetimeedit_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_drop_event` instead
+///
+#define q_datetimeedit_qbase_drop_event q_datetimeedit_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -5047,7 +5235,7 @@ void q_datetimeedit_drop_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QDropEvent*
 ///
-void q_datetimeedit_qbase_drop_event(void* self, void* event);
+void q_datetimeedit_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -5073,6 +5261,10 @@ void q_datetimeedit_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_datetimeedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_native_event` instead
+///
+#define q_datetimeedit_qbase_native_event q_datetimeedit_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -5084,7 +5276,7 @@ bool q_datetimeedit_native_event(void* self, char* eventType, void* message, int
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_datetimeedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_datetimeedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -5108,6 +5300,10 @@ void q_datetimeedit_on_native_event(void* self, bool (*callback)(void*, libqt_st
 ///
 int32_t q_datetimeedit_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_metric` instead
+///
+#define q_datetimeedit_qbase_metric q_datetimeedit_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -5117,7 +5313,7 @@ int32_t q_datetimeedit_metric(void* self, int32_t param1);
 /// @param self QDateTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_datetimeedit_qbase_metric(void* self, int32_t param1);
+int32_t q_datetimeedit_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -5141,6 +5337,10 @@ void q_datetimeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_datetimeedit_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_init_painter` instead
+///
+#define q_datetimeedit_qbase_init_painter q_datetimeedit_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -5150,7 +5350,7 @@ void q_datetimeedit_init_painter(void* self, void* painter);
 /// @param self QDateTimeEdit*
 /// @param painter QPainter*
 ///
-void q_datetimeedit_qbase_init_painter(void* self, void* painter);
+void q_datetimeedit_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -5174,6 +5374,10 @@ void q_datetimeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_datetimeedit_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_redirected` instead
+///
+#define q_datetimeedit_qbase_redirected q_datetimeedit_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -5183,7 +5387,7 @@ QPaintDevice* q_datetimeedit_redirected(void* self, void* offset);
 /// @param self QDateTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_datetimeedit_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_datetimeedit_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -5206,6 +5410,10 @@ void q_datetimeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, v
 ///
 QPainter* q_datetimeedit_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_shared_painter` instead
+///
+#define q_datetimeedit_qbase_shared_painter q_datetimeedit_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -5214,7 +5422,7 @@ QPainter* q_datetimeedit_shared_painter(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-QPainter* q_datetimeedit_qbase_shared_painter(void* self);
+QPainter* q_datetimeedit_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5238,6 +5446,10 @@ void q_datetimeedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_datetimeedit_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_input_method_event` instead
+///
+#define q_datetimeedit_qbase_input_method_event q_datetimeedit_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -5247,7 +5459,7 @@ void q_datetimeedit_input_method_event(void* self, void* param1);
 /// @param self QDateTimeEdit*
 /// @param param1 QInputMethodEvent*
 ///
-void q_datetimeedit_qbase_input_method_event(void* self, void* param1);
+void q_datetimeedit_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -5272,6 +5484,10 @@ void q_datetimeedit_on_input_method_event(void* self, void (*callback)(void*, vo
 ///
 bool q_datetimeedit_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_event_filter` instead
+///
+#define q_datetimeedit_qbase_event_filter q_datetimeedit_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -5282,7 +5498,7 @@ bool q_datetimeedit_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_datetimeedit_qbase_event_filter(void* self, void* watched, void* event);
+bool q_datetimeedit_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -5306,6 +5522,10 @@ void q_datetimeedit_on_event_filter(void* self, bool (*callback)(void*, void*, v
 ///
 void q_datetimeedit_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_child_event` instead
+///
+#define q_datetimeedit_qbase_child_event q_datetimeedit_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -5315,7 +5535,7 @@ void q_datetimeedit_child_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QChildEvent*
 ///
-void q_datetimeedit_qbase_child_event(void* self, void* event);
+void q_datetimeedit_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5339,6 +5559,10 @@ void q_datetimeedit_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_custom_event` instead
+///
+#define q_datetimeedit_qbase_custom_event q_datetimeedit_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -5348,7 +5572,7 @@ void q_datetimeedit_custom_event(void* self, void* event);
 /// @param self QDateTimeEdit*
 /// @param event QEvent*
 ///
-void q_datetimeedit_qbase_custom_event(void* self, void* event);
+void q_datetimeedit_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -5372,6 +5596,10 @@ void q_datetimeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_datetimeedit_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_connect_notify` instead
+///
+#define q_datetimeedit_qbase_connect_notify q_datetimeedit_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -5381,7 +5609,7 @@ void q_datetimeedit_connect_notify(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_datetimeedit_qbase_connect_notify(void* self, void* signal);
+void q_datetimeedit_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5405,6 +5633,10 @@ void q_datetimeedit_on_connect_notify(void* self, void (*callback)(void*, void*)
 ///
 void q_datetimeedit_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_disconnect_notify` instead
+///
+#define q_datetimeedit_qbase_disconnect_notify q_datetimeedit_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -5414,7 +5646,7 @@ void q_datetimeedit_disconnect_notify(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_datetimeedit_qbase_disconnect_notify(void* self, void* signal);
+void q_datetimeedit_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5437,6 +5669,10 @@ void q_datetimeedit_on_disconnect_notify(void* self, void (*callback)(void*, voi
 ///
 QLineEdit* q_datetimeedit_line_edit(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_line_edit` instead
+///
+#define q_datetimeedit_qbase_line_edit q_datetimeedit_super_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
@@ -5445,7 +5681,7 @@ QLineEdit* q_datetimeedit_line_edit(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-QLineEdit* q_datetimeedit_qbase_line_edit(void* self);
+QLineEdit* q_datetimeedit_super_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5469,6 +5705,10 @@ void q_datetimeedit_on_line_edit(void* self, QLineEdit* (*callback)());
 ///
 void q_datetimeedit_set_line_edit(void* self, void* edit);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_set_line_edit` instead
+///
+#define q_datetimeedit_qbase_set_line_edit q_datetimeedit_super_set_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
@@ -5478,7 +5718,7 @@ void q_datetimeedit_set_line_edit(void* self, void* edit);
 /// @param self QDateTimeEdit*
 /// @param edit QLineEdit*
 ///
-void q_datetimeedit_qbase_set_line_edit(void* self, void* edit);
+void q_datetimeedit_super_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -5501,6 +5741,10 @@ void q_datetimeedit_on_set_line_edit(void* self, void (*callback)(void*, void*))
 ///
 void q_datetimeedit_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_update_micro_focus` instead
+///
+#define q_datetimeedit_qbase_update_micro_focus q_datetimeedit_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -5509,7 +5753,7 @@ void q_datetimeedit_update_micro_focus(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-void q_datetimeedit_qbase_update_micro_focus(void* self);
+void q_datetimeedit_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5532,6 +5776,10 @@ void q_datetimeedit_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_datetimeedit_create(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_create` instead
+///
+#define q_datetimeedit_qbase_create q_datetimeedit_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -5540,7 +5788,7 @@ void q_datetimeedit_create(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-void q_datetimeedit_qbase_create(void* self);
+void q_datetimeedit_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5563,6 +5811,10 @@ void q_datetimeedit_on_create(void* self, void (*callback)());
 ///
 void q_datetimeedit_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_destroy` instead
+///
+#define q_datetimeedit_qbase_destroy q_datetimeedit_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -5571,7 +5823,7 @@ void q_datetimeedit_destroy(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-void q_datetimeedit_qbase_destroy(void* self);
+void q_datetimeedit_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5594,6 +5846,10 @@ void q_datetimeedit_on_destroy(void* self, void (*callback)());
 ///
 bool q_datetimeedit_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_focus_next_child` instead
+///
+#define q_datetimeedit_qbase_focus_next_child q_datetimeedit_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -5602,7 +5858,7 @@ bool q_datetimeedit_focus_next_child(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-bool q_datetimeedit_qbase_focus_next_child(void* self);
+bool q_datetimeedit_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5625,6 +5881,10 @@ void q_datetimeedit_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_datetimeedit_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_focus_previous_child` instead
+///
+#define q_datetimeedit_qbase_focus_previous_child q_datetimeedit_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -5633,7 +5893,7 @@ bool q_datetimeedit_focus_previous_child(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-bool q_datetimeedit_qbase_focus_previous_child(void* self);
+bool q_datetimeedit_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -5656,6 +5916,10 @@ void q_datetimeedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_datetimeedit_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_sender` instead
+///
+#define q_datetimeedit_qbase_sender q_datetimeedit_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -5664,7 +5928,7 @@ QObject* q_datetimeedit_sender(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-QObject* q_datetimeedit_qbase_sender(void* self);
+QObject* q_datetimeedit_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -5687,6 +5951,10 @@ void q_datetimeedit_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_datetimeedit_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_sender_signal_index` instead
+///
+#define q_datetimeedit_qbase_sender_signal_index q_datetimeedit_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -5695,7 +5963,7 @@ int32_t q_datetimeedit_sender_signal_index(void* self);
 ///
 /// @param self QDateTimeEdit*
 ///
-int32_t q_datetimeedit_qbase_sender_signal_index(void* self);
+int32_t q_datetimeedit_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -5719,6 +5987,10 @@ void q_datetimeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_datetimeedit_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_receivers` instead
+///
+#define q_datetimeedit_qbase_receivers q_datetimeedit_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -5728,7 +6000,7 @@ int32_t q_datetimeedit_receivers(void* self, const char* signal);
 /// @param self QDateTimeEdit*
 /// @param signal const char*
 ///
-int32_t q_datetimeedit_qbase_receivers(void* self, const char* signal);
+int32_t q_datetimeedit_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -5752,6 +6024,10 @@ void q_datetimeedit_on_receivers(void* self, int32_t (*callback)(void*, const ch
 ///
 bool q_datetimeedit_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_is_signal_connected` instead
+///
+#define q_datetimeedit_qbase_is_signal_connected q_datetimeedit_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -5761,7 +6037,7 @@ bool q_datetimeedit_is_signal_connected(void* self, void* signal);
 /// @param self QDateTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_datetimeedit_qbase_is_signal_connected(void* self, void* signal);
+bool q_datetimeedit_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -5786,6 +6062,10 @@ void q_datetimeedit_on_is_signal_connected(void* self, bool (*callback)(void*, v
 ///
 double q_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_datetimeedit_super_get_decoded_metric_f` instead
+///
+#define q_datetimeedit_qbase_get_decoded_metric_f q_datetimeedit_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -5796,7 +6076,7 @@ double q_datetimeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t 
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_datetimeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_datetimeedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -5874,13 +6154,17 @@ const QMetaObject* q_timeedit_meta_object(void* self);
 ///
 void q_timeedit_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_timeedit_super_meta_object` instead
+///
+#define q_timeedit_qbase_meta_object q_timeedit_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QTimeEdit*
 ///
-const QMetaObject* q_timeedit_qbase_meta_object(void* self);
+const QMetaObject* q_timeedit_super_meta_object(void* self);
 
 /// @param self QTimeEdit*
 /// @param param1 const char*
@@ -5894,12 +6178,16 @@ void* q_timeedit_metacast(void* self, const char* param1);
 ///
 void q_timeedit_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_timeedit_super_metacast` instead
+///
+#define q_timeedit_qbase_metacast q_timeedit_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QTimeEdit*
 /// @param param1 const char*
 ///
-void* q_timeedit_qbase_metacast(void* self, const char* param1);
+void* q_timeedit_super_metacast(void* self, const char* param1);
 
 /// @param self QTimeEdit*
 /// @param param1 enum QMetaObject__Call
@@ -5915,6 +6203,10 @@ int32_t q_timeedit_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_timeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_timeedit_super_metacall` instead
+///
+#define q_timeedit_qbase_metacall q_timeedit_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QTimeEdit*
@@ -5922,7 +6214,7 @@ void q_timeedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_timeedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_timeedit_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -9653,6 +9945,10 @@ int32_t q_timeedit_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_timeedit_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_size_hint` instead
+///
+#define q_timeedit_qbase_size_hint q_timeedit_super_size_hint
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
@@ -9661,7 +9957,7 @@ QSize* q_timeedit_size_hint(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-QSize* q_timeedit_qbase_size_hint(void* self);
+QSize* q_timeedit_super_size_hint(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9684,6 +9980,10 @@ void q_timeedit_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_timeedit_clear(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_clear` instead
+///
+#define q_timeedit_qbase_clear q_timeedit_super_clear
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
@@ -9692,7 +9992,7 @@ void q_timeedit_clear(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-void q_timeedit_qbase_clear(void* self);
+void q_timeedit_super_clear(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9716,6 +10016,10 @@ void q_timeedit_on_clear(void* self, void (*callback)());
 ///
 void q_timeedit_step_by(void* self, int steps);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_step_by` instead
+///
+#define q_timeedit_qbase_step_by q_timeedit_super_step_by
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
@@ -9725,7 +10029,7 @@ void q_timeedit_step_by(void* self, int steps);
 /// @param self QTimeEdit*
 /// @param steps int
 ///
-void q_timeedit_qbase_step_by(void* self, int steps);
+void q_timeedit_super_step_by(void* self, int steps);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9749,6 +10053,10 @@ void q_timeedit_on_step_by(void* self, void (*callback)(void*, int));
 ///
 bool q_timeedit_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_event` instead
+///
+#define q_timeedit_qbase_event q_timeedit_super_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
@@ -9758,7 +10066,7 @@ bool q_timeedit_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QEvent*
 ///
-bool q_timeedit_qbase_event(void* self, void* event);
+bool q_timeedit_super_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9782,6 +10090,10 @@ void q_timeedit_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_timeedit_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_key_press_event` instead
+///
+#define q_timeedit_qbase_key_press_event q_timeedit_super_key_press_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
@@ -9791,7 +10103,7 @@ void q_timeedit_key_press_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QKeyEvent*
 ///
-void q_timeedit_qbase_key_press_event(void* self, void* event);
+void q_timeedit_super_key_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9815,6 +10127,10 @@ void q_timeedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_wheel_event` instead
+///
+#define q_timeedit_qbase_wheel_event q_timeedit_super_wheel_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
@@ -9824,7 +10140,7 @@ void q_timeedit_wheel_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QWheelEvent*
 ///
-void q_timeedit_qbase_wheel_event(void* self, void* event);
+void q_timeedit_super_wheel_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9848,6 +10164,10 @@ void q_timeedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_focus_in_event` instead
+///
+#define q_timeedit_qbase_focus_in_event q_timeedit_super_focus_in_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
@@ -9857,7 +10177,7 @@ void q_timeedit_focus_in_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QFocusEvent*
 ///
-void q_timeedit_qbase_focus_in_event(void* self, void* event);
+void q_timeedit_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9881,6 +10201,10 @@ void q_timeedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_timeedit_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_focus_next_prev_child` instead
+///
+#define q_timeedit_qbase_focus_next_prev_child q_timeedit_super_focus_next_prev_child
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
@@ -9890,7 +10214,7 @@ bool q_timeedit_focus_next_prev_child(void* self, bool next);
 /// @param self QTimeEdit*
 /// @param next bool
 ///
-bool q_timeedit_qbase_focus_next_prev_child(void* self, bool next);
+bool q_timeedit_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9917,6 +10241,10 @@ void q_timeedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 ///
 int32_t q_timeedit_validate(void* self, const char* input, int* pos);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_validate` instead
+///
+#define q_timeedit_qbase_validate q_timeedit_super_validate
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
@@ -9929,7 +10257,7 @@ int32_t q_timeedit_validate(void* self, const char* input, int* pos);
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_timeedit_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_timeedit_super_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9953,6 +10281,10 @@ void q_timeedit_on_validate(void* self, int32_t (*callback)(void*, const char*, 
 ///
 void q_timeedit_fixup(void* self, const char* input);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_fixup` instead
+///
+#define q_timeedit_qbase_fixup q_timeedit_super_fixup
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
@@ -9962,7 +10294,7 @@ void q_timeedit_fixup(void* self, const char* input);
 /// @param self QTimeEdit*
 /// @param input const char*
 ///
-void q_timeedit_qbase_fixup(void* self, const char* input);
+void q_timeedit_super_fixup(void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -9986,6 +10318,10 @@ void q_timeedit_on_fixup(void* self, void (*callback)(void*, const char*));
 ///
 QDateTime* q_timeedit_date_time_from_text(void* self, const char* text);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_date_time_from_text` instead
+///
+#define q_timeedit_qbase_date_time_from_text q_timeedit_super_date_time_from_text
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
@@ -9995,7 +10331,7 @@ QDateTime* q_timeedit_date_time_from_text(void* self, const char* text);
 /// @param self QTimeEdit*
 /// @param text const char*
 ///
-QDateTime* q_timeedit_qbase_date_time_from_text(void* self, const char* text);
+QDateTime* q_timeedit_super_date_time_from_text(void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10021,6 +10357,10 @@ void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*,
 ///
 const char* q_timeedit_text_from_date_time(void* self, void* dt);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_text_from_date_time` instead
+///
+#define q_timeedit_qbase_text_from_date_time q_timeedit_super_text_from_date_time
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
@@ -10032,7 +10372,7 @@ const char* q_timeedit_text_from_date_time(void* self, void* dt);
 /// @param self QTimeEdit*
 /// @param dt QDateTime*
 ///
-const char* q_timeedit_qbase_text_from_date_time(void* self, void* dt);
+const char* q_timeedit_super_text_from_date_time(void* self, void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10057,6 +10397,10 @@ void q_timeedit_on_text_from_date_time(void* self, const char* (*callback)(void*
 ///
 int32_t q_timeedit_step_enabled(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_step_enabled` instead
+///
+#define q_timeedit_qbase_step_enabled q_timeedit_super_step_enabled
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
@@ -10067,7 +10411,7 @@ int32_t q_timeedit_step_enabled(void* self);
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_timeedit_qbase_step_enabled(void* self);
+int32_t q_timeedit_super_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10091,6 +10435,10 @@ void q_timeedit_on_step_enabled(void* self, int32_t (*callback)());
 ///
 void q_timeedit_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_mouse_press_event` instead
+///
+#define q_timeedit_qbase_mouse_press_event q_timeedit_super_mouse_press_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
@@ -10100,7 +10448,7 @@ void q_timeedit_mouse_press_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_timeedit_qbase_mouse_press_event(void* self, void* event);
+void q_timeedit_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10124,6 +10472,10 @@ void q_timeedit_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 ///
 void q_timeedit_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_paint_event` instead
+///
+#define q_timeedit_qbase_paint_event q_timeedit_super_paint_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
@@ -10133,7 +10485,7 @@ void q_timeedit_paint_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QPaintEvent*
 ///
-void q_timeedit_qbase_paint_event(void* self, void* event);
+void q_timeedit_super_paint_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10157,6 +10509,10 @@ void q_timeedit_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_init_style_option` instead
+///
+#define q_timeedit_qbase_init_style_option q_timeedit_super_init_style_option
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
@@ -10166,7 +10522,7 @@ void q_timeedit_init_style_option(void* self, void* option);
 /// @param self QTimeEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_timeedit_qbase_init_style_option(void* self, void* option);
+void q_timeedit_super_init_style_option(void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -10189,6 +10545,10 @@ void q_timeedit_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 QSize* q_timeedit_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_minimum_size_hint` instead
+///
+#define q_timeedit_qbase_minimum_size_hint q_timeedit_super_minimum_size_hint
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
@@ -10197,7 +10557,7 @@ QSize* q_timeedit_minimum_size_hint(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-QSize* q_timeedit_qbase_minimum_size_hint(void* self);
+QSize* q_timeedit_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10221,6 +10581,10 @@ void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QVariant* q_timeedit_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_input_method_query` instead
+///
+#define q_timeedit_qbase_input_method_query q_timeedit_super_input_method_query
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
@@ -10230,7 +10594,7 @@ QVariant* q_timeedit_input_method_query(void* self, int32_t param1);
 /// @param self QTimeEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_timeedit_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_timeedit_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10254,6 +10618,10 @@ void q_timeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 void q_timeedit_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_resize_event` instead
+///
+#define q_timeedit_qbase_resize_event q_timeedit_super_resize_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
@@ -10263,7 +10631,7 @@ void q_timeedit_resize_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QResizeEvent*
 ///
-void q_timeedit_qbase_resize_event(void* self, void* event);
+void q_timeedit_super_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10287,6 +10655,10 @@ void q_timeedit_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_key_release_event` instead
+///
+#define q_timeedit_qbase_key_release_event q_timeedit_super_key_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
@@ -10296,7 +10668,7 @@ void q_timeedit_key_release_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QKeyEvent*
 ///
-void q_timeedit_qbase_key_release_event(void* self, void* event);
+void q_timeedit_super_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10320,6 +10692,10 @@ void q_timeedit_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 void q_timeedit_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_focus_out_event` instead
+///
+#define q_timeedit_qbase_focus_out_event q_timeedit_super_focus_out_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
@@ -10329,7 +10705,7 @@ void q_timeedit_focus_out_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QFocusEvent*
 ///
-void q_timeedit_qbase_focus_out_event(void* self, void* event);
+void q_timeedit_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10353,6 +10729,10 @@ void q_timeedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_context_menu_event` instead
+///
+#define q_timeedit_qbase_context_menu_event q_timeedit_super_context_menu_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
@@ -10362,7 +10742,7 @@ void q_timeedit_context_menu_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QContextMenuEvent*
 ///
-void q_timeedit_qbase_context_menu_event(void* self, void* event);
+void q_timeedit_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10386,6 +10766,10 @@ void q_timeedit_on_context_menu_event(void* self, void (*callback)(void*, void*)
 ///
 void q_timeedit_change_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_change_event` instead
+///
+#define q_timeedit_qbase_change_event q_timeedit_super_change_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
@@ -10395,7 +10779,7 @@ void q_timeedit_change_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QEvent*
 ///
-void q_timeedit_qbase_change_event(void* self, void* event);
+void q_timeedit_super_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10419,6 +10803,10 @@ void q_timeedit_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_close_event` instead
+///
+#define q_timeedit_qbase_close_event q_timeedit_super_close_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
@@ -10428,7 +10816,7 @@ void q_timeedit_close_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QCloseEvent*
 ///
-void q_timeedit_qbase_close_event(void* self, void* event);
+void q_timeedit_super_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10452,6 +10840,10 @@ void q_timeedit_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_hide_event` instead
+///
+#define q_timeedit_qbase_hide_event q_timeedit_super_hide_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
@@ -10461,7 +10853,7 @@ void q_timeedit_hide_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QHideEvent*
 ///
-void q_timeedit_qbase_hide_event(void* self, void* event);
+void q_timeedit_super_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10485,6 +10877,10 @@ void q_timeedit_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_mouse_release_event` instead
+///
+#define q_timeedit_qbase_mouse_release_event q_timeedit_super_mouse_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
@@ -10494,7 +10890,7 @@ void q_timeedit_mouse_release_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_timeedit_qbase_mouse_release_event(void* self, void* event);
+void q_timeedit_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10518,6 +10914,10 @@ void q_timeedit_on_mouse_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_timeedit_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_mouse_move_event` instead
+///
+#define q_timeedit_qbase_mouse_move_event q_timeedit_super_mouse_move_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
@@ -10527,7 +10927,7 @@ void q_timeedit_mouse_move_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_timeedit_qbase_mouse_move_event(void* self, void* event);
+void q_timeedit_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10551,6 +10951,10 @@ void q_timeedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_timer_event` instead
+///
+#define q_timeedit_qbase_timer_event q_timeedit_super_timer_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
@@ -10560,7 +10964,7 @@ void q_timeedit_timer_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QTimerEvent*
 ///
-void q_timeedit_qbase_timer_event(void* self, void* event);
+void q_timeedit_super_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10584,6 +10988,10 @@ void q_timeedit_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_show_event` instead
+///
+#define q_timeedit_qbase_show_event q_timeedit_super_show_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
@@ -10593,7 +11001,7 @@ void q_timeedit_show_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QShowEvent*
 ///
-void q_timeedit_qbase_show_event(void* self, void* event);
+void q_timeedit_super_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -10616,6 +11024,10 @@ void q_timeedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_timeedit_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_dev_type` instead
+///
+#define q_timeedit_qbase_dev_type q_timeedit_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -10624,7 +11036,7 @@ int32_t q_timeedit_dev_type(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-int32_t q_timeedit_qbase_dev_type(void* self);
+int32_t q_timeedit_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10648,6 +11060,10 @@ void q_timeedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_timeedit_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_set_visible` instead
+///
+#define q_timeedit_qbase_set_visible q_timeedit_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -10657,7 +11073,7 @@ void q_timeedit_set_visible(void* self, bool visible);
 /// @param self QTimeEdit*
 /// @param visible bool
 ///
-void q_timeedit_qbase_set_visible(void* self, bool visible);
+void q_timeedit_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -10681,6 +11097,10 @@ void q_timeedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_timeedit_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_height_for_width` instead
+///
+#define q_timeedit_qbase_height_for_width q_timeedit_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -10690,7 +11110,7 @@ int32_t q_timeedit_height_for_width(void* self, int param1);
 /// @param self QTimeEdit*
 /// @param param1 int
 ///
-int32_t q_timeedit_qbase_height_for_width(void* self, int param1);
+int32_t q_timeedit_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -10713,6 +11133,10 @@ void q_timeedit_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 bool q_timeedit_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_has_height_for_width` instead
+///
+#define q_timeedit_qbase_has_height_for_width q_timeedit_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -10721,7 +11145,7 @@ bool q_timeedit_has_height_for_width(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-bool q_timeedit_qbase_has_height_for_width(void* self);
+bool q_timeedit_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10744,6 +11168,10 @@ void q_timeedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_timeedit_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_paint_engine` instead
+///
+#define q_timeedit_qbase_paint_engine q_timeedit_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -10752,7 +11180,7 @@ QPaintEngine* q_timeedit_paint_engine(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-QPaintEngine* q_timeedit_qbase_paint_engine(void* self);
+QPaintEngine* q_timeedit_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -10776,6 +11204,10 @@ void q_timeedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_timeedit_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_mouse_double_click_event` instead
+///
+#define q_timeedit_qbase_mouse_double_click_event q_timeedit_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -10785,7 +11217,7 @@ void q_timeedit_mouse_double_click_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QMouseEvent*
 ///
-void q_timeedit_qbase_mouse_double_click_event(void* self, void* event);
+void q_timeedit_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -10809,6 +11241,10 @@ void q_timeedit_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void q_timeedit_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_enter_event` instead
+///
+#define q_timeedit_qbase_enter_event q_timeedit_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -10818,7 +11254,7 @@ void q_timeedit_enter_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QEnterEvent*
 ///
-void q_timeedit_qbase_enter_event(void* self, void* event);
+void q_timeedit_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -10842,6 +11278,10 @@ void q_timeedit_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_leave_event` instead
+///
+#define q_timeedit_qbase_leave_event q_timeedit_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -10851,7 +11291,7 @@ void q_timeedit_leave_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QEvent*
 ///
-void q_timeedit_qbase_leave_event(void* self, void* event);
+void q_timeedit_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -10875,6 +11315,10 @@ void q_timeedit_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_move_event` instead
+///
+#define q_timeedit_qbase_move_event q_timeedit_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -10884,7 +11328,7 @@ void q_timeedit_move_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QMoveEvent*
 ///
-void q_timeedit_qbase_move_event(void* self, void* event);
+void q_timeedit_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -10908,6 +11352,10 @@ void q_timeedit_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_tablet_event` instead
+///
+#define q_timeedit_qbase_tablet_event q_timeedit_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -10917,7 +11365,7 @@ void q_timeedit_tablet_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QTabletEvent*
 ///
-void q_timeedit_qbase_tablet_event(void* self, void* event);
+void q_timeedit_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -10941,6 +11389,10 @@ void q_timeedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_action_event` instead
+///
+#define q_timeedit_qbase_action_event q_timeedit_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -10950,7 +11402,7 @@ void q_timeedit_action_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QActionEvent*
 ///
-void q_timeedit_qbase_action_event(void* self, void* event);
+void q_timeedit_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -10974,6 +11426,10 @@ void q_timeedit_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_drag_enter_event` instead
+///
+#define q_timeedit_qbase_drag_enter_event q_timeedit_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -10983,7 +11439,7 @@ void q_timeedit_drag_enter_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QDragEnterEvent*
 ///
-void q_timeedit_qbase_drag_enter_event(void* self, void* event);
+void q_timeedit_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -11007,6 +11463,10 @@ void q_timeedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_drag_move_event` instead
+///
+#define q_timeedit_qbase_drag_move_event q_timeedit_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -11016,7 +11476,7 @@ void q_timeedit_drag_move_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QDragMoveEvent*
 ///
-void q_timeedit_qbase_drag_move_event(void* self, void* event);
+void q_timeedit_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -11040,6 +11500,10 @@ void q_timeedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_drag_leave_event` instead
+///
+#define q_timeedit_qbase_drag_leave_event q_timeedit_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -11049,7 +11513,7 @@ void q_timeedit_drag_leave_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QDragLeaveEvent*
 ///
-void q_timeedit_qbase_drag_leave_event(void* self, void* event);
+void q_timeedit_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -11073,6 +11537,10 @@ void q_timeedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_drop_event` instead
+///
+#define q_timeedit_qbase_drop_event q_timeedit_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -11082,7 +11550,7 @@ void q_timeedit_drop_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QDropEvent*
 ///
-void q_timeedit_qbase_drop_event(void* self, void* event);
+void q_timeedit_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -11108,6 +11576,10 @@ void q_timeedit_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_timeedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_native_event` instead
+///
+#define q_timeedit_qbase_native_event q_timeedit_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -11119,7 +11591,7 @@ bool q_timeedit_native_event(void* self, char* eventType, void* message, intptr_
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_timeedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_timeedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -11143,6 +11615,10 @@ void q_timeedit_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 int32_t q_timeedit_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_metric` instead
+///
+#define q_timeedit_qbase_metric q_timeedit_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -11152,7 +11628,7 @@ int32_t q_timeedit_metric(void* self, int32_t param1);
 /// @param self QTimeEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_timeedit_qbase_metric(void* self, int32_t param1);
+int32_t q_timeedit_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -11176,6 +11652,10 @@ void q_timeedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_timeedit_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_init_painter` instead
+///
+#define q_timeedit_qbase_init_painter q_timeedit_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -11185,7 +11665,7 @@ void q_timeedit_init_painter(void* self, void* painter);
 /// @param self QTimeEdit*
 /// @param painter QPainter*
 ///
-void q_timeedit_qbase_init_painter(void* self, void* painter);
+void q_timeedit_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -11209,6 +11689,10 @@ void q_timeedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_timeedit_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_redirected` instead
+///
+#define q_timeedit_qbase_redirected q_timeedit_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -11218,7 +11702,7 @@ QPaintDevice* q_timeedit_redirected(void* self, void* offset);
 /// @param self QTimeEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_timeedit_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_timeedit_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -11241,6 +11725,10 @@ void q_timeedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 ///
 QPainter* q_timeedit_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_shared_painter` instead
+///
+#define q_timeedit_qbase_shared_painter q_timeedit_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -11249,7 +11737,7 @@ QPainter* q_timeedit_shared_painter(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-QPainter* q_timeedit_qbase_shared_painter(void* self);
+QPainter* q_timeedit_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11273,6 +11761,10 @@ void q_timeedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_timeedit_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_input_method_event` instead
+///
+#define q_timeedit_qbase_input_method_event q_timeedit_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -11282,7 +11774,7 @@ void q_timeedit_input_method_event(void* self, void* param1);
 /// @param self QTimeEdit*
 /// @param param1 QInputMethodEvent*
 ///
-void q_timeedit_qbase_input_method_event(void* self, void* param1);
+void q_timeedit_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -11307,6 +11799,10 @@ void q_timeedit_on_input_method_event(void* self, void (*callback)(void*, void*)
 ///
 bool q_timeedit_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_event_filter` instead
+///
+#define q_timeedit_qbase_event_filter q_timeedit_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -11317,7 +11813,7 @@ bool q_timeedit_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_timeedit_qbase_event_filter(void* self, void* watched, void* event);
+bool q_timeedit_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -11341,6 +11837,10 @@ void q_timeedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_timeedit_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_child_event` instead
+///
+#define q_timeedit_qbase_child_event q_timeedit_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -11350,7 +11850,7 @@ void q_timeedit_child_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QChildEvent*
 ///
-void q_timeedit_qbase_child_event(void* self, void* event);
+void q_timeedit_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -11374,6 +11874,10 @@ void q_timeedit_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_custom_event` instead
+///
+#define q_timeedit_qbase_custom_event q_timeedit_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -11383,7 +11887,7 @@ void q_timeedit_custom_event(void* self, void* event);
 /// @param self QTimeEdit*
 /// @param event QEvent*
 ///
-void q_timeedit_qbase_custom_event(void* self, void* event);
+void q_timeedit_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -11407,6 +11911,10 @@ void q_timeedit_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_connect_notify` instead
+///
+#define q_timeedit_qbase_connect_notify q_timeedit_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -11416,7 +11924,7 @@ void q_timeedit_connect_notify(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_timeedit_qbase_connect_notify(void* self, void* signal);
+void q_timeedit_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -11440,6 +11948,10 @@ void q_timeedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_disconnect_notify` instead
+///
+#define q_timeedit_qbase_disconnect_notify q_timeedit_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -11449,7 +11961,7 @@ void q_timeedit_disconnect_notify(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-void q_timeedit_qbase_disconnect_notify(void* self, void* signal);
+void q_timeedit_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -11472,6 +11984,10 @@ void q_timeedit_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QLineEdit* q_timeedit_line_edit(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_line_edit` instead
+///
+#define q_timeedit_qbase_line_edit q_timeedit_super_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
@@ -11480,7 +11996,7 @@ QLineEdit* q_timeedit_line_edit(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-QLineEdit* q_timeedit_qbase_line_edit(void* self);
+QLineEdit* q_timeedit_super_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11504,6 +12020,10 @@ void q_timeedit_on_line_edit(void* self, QLineEdit* (*callback)());
 ///
 void q_timeedit_set_line_edit(void* self, void* edit);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_set_line_edit` instead
+///
+#define q_timeedit_qbase_set_line_edit q_timeedit_super_set_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
@@ -11513,7 +12033,7 @@ void q_timeedit_set_line_edit(void* self, void* edit);
 /// @param self QTimeEdit*
 /// @param edit QLineEdit*
 ///
-void q_timeedit_qbase_set_line_edit(void* self, void* edit);
+void q_timeedit_super_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -11536,6 +12056,10 @@ void q_timeedit_on_set_line_edit(void* self, void (*callback)(void*, void*));
 ///
 void q_timeedit_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_update_micro_focus` instead
+///
+#define q_timeedit_qbase_update_micro_focus q_timeedit_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -11544,7 +12068,7 @@ void q_timeedit_update_micro_focus(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-void q_timeedit_qbase_update_micro_focus(void* self);
+void q_timeedit_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11567,6 +12091,10 @@ void q_timeedit_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_timeedit_create(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_create` instead
+///
+#define q_timeedit_qbase_create q_timeedit_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -11575,7 +12103,7 @@ void q_timeedit_create(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-void q_timeedit_qbase_create(void* self);
+void q_timeedit_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11598,6 +12126,10 @@ void q_timeedit_on_create(void* self, void (*callback)());
 ///
 void q_timeedit_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_destroy` instead
+///
+#define q_timeedit_qbase_destroy q_timeedit_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -11606,7 +12138,7 @@ void q_timeedit_destroy(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-void q_timeedit_qbase_destroy(void* self);
+void q_timeedit_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11629,6 +12161,10 @@ void q_timeedit_on_destroy(void* self, void (*callback)());
 ///
 bool q_timeedit_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_focus_next_child` instead
+///
+#define q_timeedit_qbase_focus_next_child q_timeedit_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -11637,7 +12173,7 @@ bool q_timeedit_focus_next_child(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-bool q_timeedit_qbase_focus_next_child(void* self);
+bool q_timeedit_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11660,6 +12196,10 @@ void q_timeedit_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_timeedit_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_focus_previous_child` instead
+///
+#define q_timeedit_qbase_focus_previous_child q_timeedit_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -11668,7 +12208,7 @@ bool q_timeedit_focus_previous_child(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-bool q_timeedit_qbase_focus_previous_child(void* self);
+bool q_timeedit_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -11691,6 +12231,10 @@ void q_timeedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_timeedit_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_sender` instead
+///
+#define q_timeedit_qbase_sender q_timeedit_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -11699,7 +12243,7 @@ QObject* q_timeedit_sender(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-QObject* q_timeedit_qbase_sender(void* self);
+QObject* q_timeedit_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -11722,6 +12266,10 @@ void q_timeedit_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_timeedit_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_sender_signal_index` instead
+///
+#define q_timeedit_qbase_sender_signal_index q_timeedit_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -11730,7 +12278,7 @@ int32_t q_timeedit_sender_signal_index(void* self);
 ///
 /// @param self QTimeEdit*
 ///
-int32_t q_timeedit_qbase_sender_signal_index(void* self);
+int32_t q_timeedit_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -11754,6 +12302,10 @@ void q_timeedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_timeedit_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_receivers` instead
+///
+#define q_timeedit_qbase_receivers q_timeedit_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -11763,7 +12315,7 @@ int32_t q_timeedit_receivers(void* self, const char* signal);
 /// @param self QTimeEdit*
 /// @param signal const char*
 ///
-int32_t q_timeedit_qbase_receivers(void* self, const char* signal);
+int32_t q_timeedit_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -11787,6 +12339,10 @@ void q_timeedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_timeedit_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_is_signal_connected` instead
+///
+#define q_timeedit_qbase_is_signal_connected q_timeedit_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -11796,7 +12352,7 @@ bool q_timeedit_is_signal_connected(void* self, void* signal);
 /// @param self QTimeEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_timeedit_qbase_is_signal_connected(void* self, void* signal);
+bool q_timeedit_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -11821,6 +12377,10 @@ void q_timeedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 ///
 double q_timeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_timeedit_super_get_decoded_metric_f` instead
+///
+#define q_timeedit_qbase_get_decoded_metric_f q_timeedit_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -11831,7 +12391,7 @@ double q_timeedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_timeedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_timeedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///
@@ -11909,13 +12469,17 @@ const QMetaObject* q_dateedit_meta_object(void* self);
 ///
 void q_dateedit_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_dateedit_super_meta_object` instead
+///
+#define q_dateedit_qbase_meta_object q_dateedit_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QDateEdit*
 ///
-const QMetaObject* q_dateedit_qbase_meta_object(void* self);
+const QMetaObject* q_dateedit_super_meta_object(void* self);
 
 /// @param self QDateEdit*
 /// @param param1 const char*
@@ -11929,12 +12493,16 @@ void* q_dateedit_metacast(void* self, const char* param1);
 ///
 void q_dateedit_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_dateedit_super_metacast` instead
+///
+#define q_dateedit_qbase_metacast q_dateedit_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QDateEdit*
 /// @param param1 const char*
 ///
-void* q_dateedit_qbase_metacast(void* self, const char* param1);
+void* q_dateedit_super_metacast(void* self, const char* param1);
 
 /// @param self QDateEdit*
 /// @param param1 enum QMetaObject__Call
@@ -11950,6 +12518,10 @@ int32_t q_dateedit_metacall(void* self, int32_t param1, int param2, void* param3
 ///
 void q_dateedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_dateedit_super_metacall` instead
+///
+#define q_dateedit_qbase_metacall q_dateedit_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QDateEdit*
@@ -11957,7 +12529,7 @@ void q_dateedit_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int,
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_dateedit_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_dateedit_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -15688,6 +16260,10 @@ int32_t q_dateedit_encode_metric_f(int32_t metric, double value);
 ///
 QSize* q_dateedit_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_size_hint` instead
+///
+#define q_dateedit_qbase_size_hint q_dateedit_super_size_hint
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#sizeHint)
@@ -15696,7 +16272,7 @@ QSize* q_dateedit_size_hint(void* self);
 ///
 /// @param self QDateEdit*
 ///
-QSize* q_dateedit_qbase_size_hint(void* self);
+QSize* q_dateedit_super_size_hint(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15719,6 +16295,10 @@ void q_dateedit_on_size_hint(void* self, QSize* (*callback)());
 ///
 void q_dateedit_clear(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_clear` instead
+///
+#define q_dateedit_qbase_clear q_dateedit_super_clear
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#clear)
@@ -15727,7 +16307,7 @@ void q_dateedit_clear(void* self);
 ///
 /// @param self QDateEdit*
 ///
-void q_dateedit_qbase_clear(void* self);
+void q_dateedit_super_clear(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15751,6 +16331,10 @@ void q_dateedit_on_clear(void* self, void (*callback)());
 ///
 void q_dateedit_step_by(void* self, int steps);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_step_by` instead
+///
+#define q_dateedit_qbase_step_by q_dateedit_super_step_by
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepBy)
@@ -15760,7 +16344,7 @@ void q_dateedit_step_by(void* self, int steps);
 /// @param self QDateEdit*
 /// @param steps int
 ///
-void q_dateedit_qbase_step_by(void* self, int steps);
+void q_dateedit_super_step_by(void* self, int steps);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15784,6 +16368,10 @@ void q_dateedit_on_step_by(void* self, void (*callback)(void*, int));
 ///
 bool q_dateedit_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_event` instead
+///
+#define q_dateedit_qbase_event q_dateedit_super_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#event)
@@ -15793,7 +16381,7 @@ bool q_dateedit_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QEvent*
 ///
-bool q_dateedit_qbase_event(void* self, void* event);
+bool q_dateedit_super_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15817,6 +16405,10 @@ void q_dateedit_on_event(void* self, bool (*callback)(void*, void*));
 ///
 void q_dateedit_key_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_key_press_event` instead
+///
+#define q_dateedit_qbase_key_press_event q_dateedit_super_key_press_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#keyPressEvent)
@@ -15826,7 +16418,7 @@ void q_dateedit_key_press_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QKeyEvent*
 ///
-void q_dateedit_qbase_key_press_event(void* self, void* event);
+void q_dateedit_super_key_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15850,6 +16442,10 @@ void q_dateedit_on_key_press_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_wheel_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_wheel_event` instead
+///
+#define q_dateedit_qbase_wheel_event q_dateedit_super_wheel_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#wheelEvent)
@@ -15859,7 +16455,7 @@ void q_dateedit_wheel_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QWheelEvent*
 ///
-void q_dateedit_qbase_wheel_event(void* self, void* event);
+void q_dateedit_super_wheel_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15883,6 +16479,10 @@ void q_dateedit_on_wheel_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_focus_in_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_focus_in_event` instead
+///
+#define q_dateedit_qbase_focus_in_event q_dateedit_super_focus_in_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusInEvent)
@@ -15892,7 +16492,7 @@ void q_dateedit_focus_in_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QFocusEvent*
 ///
-void q_dateedit_qbase_focus_in_event(void* self, void* event);
+void q_dateedit_super_focus_in_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15916,6 +16516,10 @@ void q_dateedit_on_focus_in_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_dateedit_focus_next_prev_child(void* self, bool next);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_focus_next_prev_child` instead
+///
+#define q_dateedit_qbase_focus_next_prev_child q_dateedit_super_focus_next_prev_child
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#focusNextPrevChild)
@@ -15925,7 +16529,7 @@ bool q_dateedit_focus_next_prev_child(void* self, bool next);
 /// @param self QDateEdit*
 /// @param next bool
 ///
-bool q_dateedit_qbase_focus_next_prev_child(void* self, bool next);
+bool q_dateedit_super_focus_next_prev_child(void* self, bool next);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15952,6 +16556,10 @@ void q_dateedit_on_focus_next_prev_child(void* self, bool (*callback)(void*, boo
 ///
 int32_t q_dateedit_validate(void* self, const char* input, int* pos);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_validate` instead
+///
+#define q_dateedit_qbase_validate q_dateedit_super_validate
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#validate)
@@ -15964,7 +16572,7 @@ int32_t q_dateedit_validate(void* self, const char* input, int* pos);
 ///
 /// @return enum QValidator__State
 ///
-int32_t q_dateedit_qbase_validate(void* self, const char* input, int* pos);
+int32_t q_dateedit_super_validate(void* self, const char* input, int* pos);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -15988,6 +16596,10 @@ void q_dateedit_on_validate(void* self, int32_t (*callback)(void*, const char*, 
 ///
 void q_dateedit_fixup(void* self, const char* input);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_fixup` instead
+///
+#define q_dateedit_qbase_fixup q_dateedit_super_fixup
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#fixup)
@@ -15997,7 +16609,7 @@ void q_dateedit_fixup(void* self, const char* input);
 /// @param self QDateEdit*
 /// @param input const char*
 ///
-void q_dateedit_qbase_fixup(void* self, const char* input);
+void q_dateedit_super_fixup(void* self, const char* input);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16021,6 +16633,10 @@ void q_dateedit_on_fixup(void* self, void (*callback)(void*, const char*));
 ///
 QDateTime* q_dateedit_date_time_from_text(void* self, const char* text);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_date_time_from_text` instead
+///
+#define q_dateedit_qbase_date_time_from_text q_dateedit_super_date_time_from_text
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#dateTimeFromText)
@@ -16030,7 +16646,7 @@ QDateTime* q_dateedit_date_time_from_text(void* self, const char* text);
 /// @param self QDateEdit*
 /// @param text const char*
 ///
-QDateTime* q_dateedit_qbase_date_time_from_text(void* self, const char* text);
+QDateTime* q_dateedit_super_date_time_from_text(void* self, const char* text);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16056,6 +16672,10 @@ void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*,
 ///
 const char* q_dateedit_text_from_date_time(void* self, void* dt);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_text_from_date_time` instead
+///
+#define q_dateedit_qbase_text_from_date_time q_dateedit_super_text_from_date_time
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#textFromDateTime)
@@ -16067,7 +16687,7 @@ const char* q_dateedit_text_from_date_time(void* self, void* dt);
 /// @param self QDateEdit*
 /// @param dt QDateTime*
 ///
-const char* q_dateedit_qbase_text_from_date_time(void* self, void* dt);
+const char* q_dateedit_super_text_from_date_time(void* self, void* dt);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16092,6 +16712,10 @@ void q_dateedit_on_text_from_date_time(void* self, const char* (*callback)(void*
 ///
 int32_t q_dateedit_step_enabled(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_step_enabled` instead
+///
+#define q_dateedit_qbase_step_enabled q_dateedit_super_step_enabled
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#stepEnabled)
@@ -16102,7 +16726,7 @@ int32_t q_dateedit_step_enabled(void* self);
 ///
 /// @return flag of enum QAbstractSpinBox__StepEnabledFlag
 ///
-int32_t q_dateedit_qbase_step_enabled(void* self);
+int32_t q_dateedit_super_step_enabled(void* self);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16126,6 +16750,10 @@ void q_dateedit_on_step_enabled(void* self, int32_t (*callback)());
 ///
 void q_dateedit_mouse_press_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_mouse_press_event` instead
+///
+#define q_dateedit_qbase_mouse_press_event q_dateedit_super_mouse_press_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#mousePressEvent)
@@ -16135,7 +16763,7 @@ void q_dateedit_mouse_press_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QMouseEvent*
 ///
-void q_dateedit_qbase_mouse_press_event(void* self, void* event);
+void q_dateedit_super_mouse_press_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16159,6 +16787,10 @@ void q_dateedit_on_mouse_press_event(void* self, void (*callback)(void*, void*))
 ///
 void q_dateedit_paint_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_paint_event` instead
+///
+#define q_dateedit_qbase_paint_event q_dateedit_super_paint_event
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#paintEvent)
@@ -16168,7 +16800,7 @@ void q_dateedit_paint_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QPaintEvent*
 ///
-void q_dateedit_qbase_paint_event(void* self, void* event);
+void q_dateedit_super_paint_event(void* self, void* event);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16192,6 +16824,10 @@ void q_dateedit_on_paint_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_init_style_option(void* self, void* option);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_init_style_option` instead
+///
+#define q_dateedit_qbase_init_style_option q_dateedit_super_init_style_option
+
 /// Inherited from QDateTimeEdit
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetimeedit.html#initStyleOption)
@@ -16201,7 +16837,7 @@ void q_dateedit_init_style_option(void* self, void* option);
 /// @param self QDateEdit*
 /// @param option QStyleOptionSpinBox*
 ///
-void q_dateedit_qbase_init_style_option(void* self, void* option);
+void q_dateedit_super_init_style_option(void* self, void* option);
 
 /// Inherited from QDateTimeEdit
 ///
@@ -16224,6 +16860,10 @@ void q_dateedit_on_init_style_option(void* self, void (*callback)(void*, void*))
 ///
 QSize* q_dateedit_minimum_size_hint(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_minimum_size_hint` instead
+///
+#define q_dateedit_qbase_minimum_size_hint q_dateedit_super_minimum_size_hint
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#minimumSizeHint)
@@ -16232,7 +16872,7 @@ QSize* q_dateedit_minimum_size_hint(void* self);
 ///
 /// @param self QDateEdit*
 ///
-QSize* q_dateedit_qbase_minimum_size_hint(void* self);
+QSize* q_dateedit_super_minimum_size_hint(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16256,6 +16896,10 @@ void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 ///
 QVariant* q_dateedit_input_method_query(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_input_method_query` instead
+///
+#define q_dateedit_qbase_input_method_query q_dateedit_super_input_method_query
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#inputMethodQuery)
@@ -16265,7 +16909,7 @@ QVariant* q_dateedit_input_method_query(void* self, int32_t param1);
 /// @param self QDateEdit*
 /// @param param1 enum Qt__InputMethodQuery
 ///
-QVariant* q_dateedit_qbase_input_method_query(void* self, int32_t param1);
+QVariant* q_dateedit_super_input_method_query(void* self, int32_t param1);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16289,6 +16933,10 @@ void q_dateedit_on_input_method_query(void* self, QVariant* (*callback)(void*, i
 ///
 void q_dateedit_resize_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_resize_event` instead
+///
+#define q_dateedit_qbase_resize_event q_dateedit_super_resize_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#resizeEvent)
@@ -16298,7 +16946,7 @@ void q_dateedit_resize_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QResizeEvent*
 ///
-void q_dateedit_qbase_resize_event(void* self, void* event);
+void q_dateedit_super_resize_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16322,6 +16970,10 @@ void q_dateedit_on_resize_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_key_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_key_release_event` instead
+///
+#define q_dateedit_qbase_key_release_event q_dateedit_super_key_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#keyReleaseEvent)
@@ -16331,7 +16983,7 @@ void q_dateedit_key_release_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QKeyEvent*
 ///
-void q_dateedit_qbase_key_release_event(void* self, void* event);
+void q_dateedit_super_key_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16355,6 +17007,10 @@ void q_dateedit_on_key_release_event(void* self, void (*callback)(void*, void*))
 ///
 void q_dateedit_focus_out_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_focus_out_event` instead
+///
+#define q_dateedit_qbase_focus_out_event q_dateedit_super_focus_out_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#focusOutEvent)
@@ -16364,7 +17020,7 @@ void q_dateedit_focus_out_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QFocusEvent*
 ///
-void q_dateedit_qbase_focus_out_event(void* self, void* event);
+void q_dateedit_super_focus_out_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16388,6 +17044,10 @@ void q_dateedit_on_focus_out_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_context_menu_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_context_menu_event` instead
+///
+#define q_dateedit_qbase_context_menu_event q_dateedit_super_context_menu_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#contextMenuEvent)
@@ -16397,7 +17057,7 @@ void q_dateedit_context_menu_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QContextMenuEvent*
 ///
-void q_dateedit_qbase_context_menu_event(void* self, void* event);
+void q_dateedit_super_context_menu_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16421,6 +17081,10 @@ void q_dateedit_on_context_menu_event(void* self, void (*callback)(void*, void*)
 ///
 void q_dateedit_change_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_change_event` instead
+///
+#define q_dateedit_qbase_change_event q_dateedit_super_change_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#changeEvent)
@@ -16430,7 +17094,7 @@ void q_dateedit_change_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QEvent*
 ///
-void q_dateedit_qbase_change_event(void* self, void* event);
+void q_dateedit_super_change_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16454,6 +17118,10 @@ void q_dateedit_on_change_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_close_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_close_event` instead
+///
+#define q_dateedit_qbase_close_event q_dateedit_super_close_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#closeEvent)
@@ -16463,7 +17131,7 @@ void q_dateedit_close_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QCloseEvent*
 ///
-void q_dateedit_qbase_close_event(void* self, void* event);
+void q_dateedit_super_close_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16487,6 +17155,10 @@ void q_dateedit_on_close_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_hide_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_hide_event` instead
+///
+#define q_dateedit_qbase_hide_event q_dateedit_super_hide_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#hideEvent)
@@ -16496,7 +17168,7 @@ void q_dateedit_hide_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QHideEvent*
 ///
-void q_dateedit_qbase_hide_event(void* self, void* event);
+void q_dateedit_super_hide_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16520,6 +17192,10 @@ void q_dateedit_on_hide_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_mouse_release_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_mouse_release_event` instead
+///
+#define q_dateedit_qbase_mouse_release_event q_dateedit_super_mouse_release_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseReleaseEvent)
@@ -16529,7 +17205,7 @@ void q_dateedit_mouse_release_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QMouseEvent*
 ///
-void q_dateedit_qbase_mouse_release_event(void* self, void* event);
+void q_dateedit_super_mouse_release_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16553,6 +17229,10 @@ void q_dateedit_on_mouse_release_event(void* self, void (*callback)(void*, void*
 ///
 void q_dateedit_mouse_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_mouse_move_event` instead
+///
+#define q_dateedit_qbase_mouse_move_event q_dateedit_super_mouse_move_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#mouseMoveEvent)
@@ -16562,7 +17242,7 @@ void q_dateedit_mouse_move_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QMouseEvent*
 ///
-void q_dateedit_qbase_mouse_move_event(void* self, void* event);
+void q_dateedit_super_mouse_move_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16586,6 +17266,10 @@ void q_dateedit_on_mouse_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_timer_event` instead
+///
+#define q_dateedit_qbase_timer_event q_dateedit_super_timer_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#timerEvent)
@@ -16595,7 +17279,7 @@ void q_dateedit_timer_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QTimerEvent*
 ///
-void q_dateedit_qbase_timer_event(void* self, void* event);
+void q_dateedit_super_timer_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16619,6 +17303,10 @@ void q_dateedit_on_timer_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_show_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_show_event` instead
+///
+#define q_dateedit_qbase_show_event q_dateedit_super_show_event
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#showEvent)
@@ -16628,7 +17316,7 @@ void q_dateedit_show_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QShowEvent*
 ///
-void q_dateedit_qbase_show_event(void* self, void* event);
+void q_dateedit_super_show_event(void* self, void* event);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -16651,6 +17339,10 @@ void q_dateedit_on_show_event(void* self, void (*callback)(void*, void*));
 ///
 int32_t q_dateedit_dev_type(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_dev_type` instead
+///
+#define q_dateedit_qbase_dev_type q_dateedit_super_dev_type
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#devType)
@@ -16659,7 +17351,7 @@ int32_t q_dateedit_dev_type(void* self);
 ///
 /// @param self QDateEdit*
 ///
-int32_t q_dateedit_qbase_dev_type(void* self);
+int32_t q_dateedit_super_dev_type(void* self);
 
 /// Inherited from QWidget
 ///
@@ -16683,6 +17375,10 @@ void q_dateedit_on_dev_type(void* self, int32_t (*callback)());
 ///
 void q_dateedit_set_visible(void* self, bool visible);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_set_visible` instead
+///
+#define q_dateedit_qbase_set_visible q_dateedit_super_set_visible
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#setVisible)
@@ -16692,7 +17388,7 @@ void q_dateedit_set_visible(void* self, bool visible);
 /// @param self QDateEdit*
 /// @param visible bool
 ///
-void q_dateedit_qbase_set_visible(void* self, bool visible);
+void q_dateedit_super_set_visible(void* self, bool visible);
 
 /// Inherited from QWidget
 ///
@@ -16716,6 +17412,10 @@ void q_dateedit_on_set_visible(void* self, void (*callback)(void*, bool));
 ///
 int32_t q_dateedit_height_for_width(void* self, int param1);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_height_for_width` instead
+///
+#define q_dateedit_qbase_height_for_width q_dateedit_super_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#heightForWidth)
@@ -16725,7 +17425,7 @@ int32_t q_dateedit_height_for_width(void* self, int param1);
 /// @param self QDateEdit*
 /// @param param1 int
 ///
-int32_t q_dateedit_qbase_height_for_width(void* self, int param1);
+int32_t q_dateedit_super_height_for_width(void* self, int param1);
 
 /// Inherited from QWidget
 ///
@@ -16748,6 +17448,10 @@ void q_dateedit_on_height_for_width(void* self, int32_t (*callback)(void*, int))
 ///
 bool q_dateedit_has_height_for_width(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_has_height_for_width` instead
+///
+#define q_dateedit_qbase_has_height_for_width q_dateedit_super_has_height_for_width
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#hasHeightForWidth)
@@ -16756,7 +17460,7 @@ bool q_dateedit_has_height_for_width(void* self);
 ///
 /// @param self QDateEdit*
 ///
-bool q_dateedit_qbase_has_height_for_width(void* self);
+bool q_dateedit_super_has_height_for_width(void* self);
 
 /// Inherited from QWidget
 ///
@@ -16779,6 +17483,10 @@ void q_dateedit_on_has_height_for_width(void* self, bool (*callback)());
 ///
 QPaintEngine* q_dateedit_paint_engine(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_paint_engine` instead
+///
+#define q_dateedit_qbase_paint_engine q_dateedit_super_paint_engine
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#paintEngine)
@@ -16787,7 +17495,7 @@ QPaintEngine* q_dateedit_paint_engine(void* self);
 ///
 /// @param self QDateEdit*
 ///
-QPaintEngine* q_dateedit_qbase_paint_engine(void* self);
+QPaintEngine* q_dateedit_super_paint_engine(void* self);
 
 /// Inherited from QWidget
 ///
@@ -16811,6 +17519,10 @@ void q_dateedit_on_paint_engine(void* self, QPaintEngine* (*callback)());
 ///
 void q_dateedit_mouse_double_click_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_mouse_double_click_event` instead
+///
+#define q_dateedit_qbase_mouse_double_click_event q_dateedit_super_mouse_double_click_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#mouseDoubleClickEvent)
@@ -16820,7 +17532,7 @@ void q_dateedit_mouse_double_click_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QMouseEvent*
 ///
-void q_dateedit_qbase_mouse_double_click_event(void* self, void* event);
+void q_dateedit_super_mouse_double_click_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -16844,6 +17556,10 @@ void q_dateedit_on_mouse_double_click_event(void* self, void (*callback)(void*, 
 ///
 void q_dateedit_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_enter_event` instead
+///
+#define q_dateedit_qbase_enter_event q_dateedit_super_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#enterEvent)
@@ -16853,7 +17569,7 @@ void q_dateedit_enter_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QEnterEvent*
 ///
-void q_dateedit_qbase_enter_event(void* self, void* event);
+void q_dateedit_super_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -16877,6 +17593,10 @@ void q_dateedit_on_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_leave_event` instead
+///
+#define q_dateedit_qbase_leave_event q_dateedit_super_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#leaveEvent)
@@ -16886,7 +17606,7 @@ void q_dateedit_leave_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QEvent*
 ///
-void q_dateedit_qbase_leave_event(void* self, void* event);
+void q_dateedit_super_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -16910,6 +17630,10 @@ void q_dateedit_on_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_move_event` instead
+///
+#define q_dateedit_qbase_move_event q_dateedit_super_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#moveEvent)
@@ -16919,7 +17643,7 @@ void q_dateedit_move_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QMoveEvent*
 ///
-void q_dateedit_qbase_move_event(void* self, void* event);
+void q_dateedit_super_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -16943,6 +17667,10 @@ void q_dateedit_on_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_tablet_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_tablet_event` instead
+///
+#define q_dateedit_qbase_tablet_event q_dateedit_super_tablet_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#tabletEvent)
@@ -16952,7 +17680,7 @@ void q_dateedit_tablet_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QTabletEvent*
 ///
-void q_dateedit_qbase_tablet_event(void* self, void* event);
+void q_dateedit_super_tablet_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -16976,6 +17704,10 @@ void q_dateedit_on_tablet_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_action_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_action_event` instead
+///
+#define q_dateedit_qbase_action_event q_dateedit_super_action_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#actionEvent)
@@ -16985,7 +17717,7 @@ void q_dateedit_action_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QActionEvent*
 ///
-void q_dateedit_qbase_action_event(void* self, void* event);
+void q_dateedit_super_action_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -17009,6 +17741,10 @@ void q_dateedit_on_action_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_drag_enter_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_drag_enter_event` instead
+///
+#define q_dateedit_qbase_drag_enter_event q_dateedit_super_drag_enter_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragEnterEvent)
@@ -17018,7 +17754,7 @@ void q_dateedit_drag_enter_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QDragEnterEvent*
 ///
-void q_dateedit_qbase_drag_enter_event(void* self, void* event);
+void q_dateedit_super_drag_enter_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -17042,6 +17778,10 @@ void q_dateedit_on_drag_enter_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_drag_move_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_drag_move_event` instead
+///
+#define q_dateedit_qbase_drag_move_event q_dateedit_super_drag_move_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragMoveEvent)
@@ -17051,7 +17791,7 @@ void q_dateedit_drag_move_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QDragMoveEvent*
 ///
-void q_dateedit_qbase_drag_move_event(void* self, void* event);
+void q_dateedit_super_drag_move_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -17075,6 +17815,10 @@ void q_dateedit_on_drag_move_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_drag_leave_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_drag_leave_event` instead
+///
+#define q_dateedit_qbase_drag_leave_event q_dateedit_super_drag_leave_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dragLeaveEvent)
@@ -17084,7 +17828,7 @@ void q_dateedit_drag_leave_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QDragLeaveEvent*
 ///
-void q_dateedit_qbase_drag_leave_event(void* self, void* event);
+void q_dateedit_super_drag_leave_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -17108,6 +17852,10 @@ void q_dateedit_on_drag_leave_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_drop_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_drop_event` instead
+///
+#define q_dateedit_qbase_drop_event q_dateedit_super_drop_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#dropEvent)
@@ -17117,7 +17865,7 @@ void q_dateedit_drop_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QDropEvent*
 ///
-void q_dateedit_qbase_drop_event(void* self, void* event);
+void q_dateedit_super_drop_event(void* self, void* event);
 
 /// Inherited from QWidget
 ///
@@ -17143,6 +17891,10 @@ void q_dateedit_on_drop_event(void* self, void (*callback)(void*, void*));
 ///
 bool q_dateedit_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_native_event` instead
+///
+#define q_dateedit_qbase_native_event q_dateedit_super_native_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#nativeEvent)
@@ -17154,7 +17906,7 @@ bool q_dateedit_native_event(void* self, char* eventType, void* message, intptr_
 /// @param message void*
 /// @param result intptr_t*
 ///
-bool q_dateedit_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result);
+bool q_dateedit_super_native_event(void* self, char* eventType, void* message, intptr_t* result);
 
 /// Inherited from QWidget
 ///
@@ -17178,6 +17930,10 @@ void q_dateedit_on_native_event(void* self, bool (*callback)(void*, libqt_string
 ///
 int32_t q_dateedit_metric(void* self, int32_t param1);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_metric` instead
+///
+#define q_dateedit_qbase_metric q_dateedit_super_metric
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#metric)
@@ -17187,7 +17943,7 @@ int32_t q_dateedit_metric(void* self, int32_t param1);
 /// @param self QDateEdit*
 /// @param param1 enum QPaintDevice__PaintDeviceMetric
 ///
-int32_t q_dateedit_qbase_metric(void* self, int32_t param1);
+int32_t q_dateedit_super_metric(void* self, int32_t param1);
 
 /// Inherited from QWidget
 ///
@@ -17211,6 +17967,10 @@ void q_dateedit_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 void q_dateedit_init_painter(void* self, void* painter);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_init_painter` instead
+///
+#define q_dateedit_qbase_init_painter q_dateedit_super_init_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#initPainter)
@@ -17220,7 +17980,7 @@ void q_dateedit_init_painter(void* self, void* painter);
 /// @param self QDateEdit*
 /// @param painter QPainter*
 ///
-void q_dateedit_qbase_init_painter(void* self, void* painter);
+void q_dateedit_super_init_painter(void* self, void* painter);
 
 /// Inherited from QWidget
 ///
@@ -17244,6 +18004,10 @@ void q_dateedit_on_init_painter(void* self, void (*callback)(void*, void*));
 ///
 QPaintDevice* q_dateedit_redirected(void* self, void* offset);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_redirected` instead
+///
+#define q_dateedit_qbase_redirected q_dateedit_super_redirected
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#redirected)
@@ -17253,7 +18017,7 @@ QPaintDevice* q_dateedit_redirected(void* self, void* offset);
 /// @param self QDateEdit*
 /// @param offset QPoint*
 ///
-QPaintDevice* q_dateedit_qbase_redirected(void* self, void* offset);
+QPaintDevice* q_dateedit_super_redirected(void* self, void* offset);
 
 /// Inherited from QWidget
 ///
@@ -17276,6 +18040,10 @@ void q_dateedit_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*
 ///
 QPainter* q_dateedit_shared_painter(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_shared_painter` instead
+///
+#define q_dateedit_qbase_shared_painter q_dateedit_super_shared_painter
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#sharedPainter)
@@ -17284,7 +18052,7 @@ QPainter* q_dateedit_shared_painter(void* self);
 ///
 /// @param self QDateEdit*
 ///
-QPainter* q_dateedit_qbase_shared_painter(void* self);
+QPainter* q_dateedit_super_shared_painter(void* self);
 
 /// Inherited from QWidget
 ///
@@ -17308,6 +18076,10 @@ void q_dateedit_on_shared_painter(void* self, QPainter* (*callback)());
 ///
 void q_dateedit_input_method_event(void* self, void* param1);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_input_method_event` instead
+///
+#define q_dateedit_qbase_input_method_event q_dateedit_super_input_method_event
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#inputMethodEvent)
@@ -17317,7 +18089,7 @@ void q_dateedit_input_method_event(void* self, void* param1);
 /// @param self QDateEdit*
 /// @param param1 QInputMethodEvent*
 ///
-void q_dateedit_qbase_input_method_event(void* self, void* param1);
+void q_dateedit_super_input_method_event(void* self, void* param1);
 
 /// Inherited from QWidget
 ///
@@ -17342,6 +18114,10 @@ void q_dateedit_on_input_method_event(void* self, void (*callback)(void*, void*)
 ///
 bool q_dateedit_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_event_filter` instead
+///
+#define q_dateedit_qbase_event_filter q_dateedit_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -17352,7 +18128,7 @@ bool q_dateedit_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_dateedit_qbase_event_filter(void* self, void* watched, void* event);
+bool q_dateedit_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -17376,6 +18152,10 @@ void q_dateedit_on_event_filter(void* self, bool (*callback)(void*, void*, void*
 ///
 void q_dateedit_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_child_event` instead
+///
+#define q_dateedit_qbase_child_event q_dateedit_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -17385,7 +18165,7 @@ void q_dateedit_child_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QChildEvent*
 ///
-void q_dateedit_qbase_child_event(void* self, void* event);
+void q_dateedit_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -17409,6 +18189,10 @@ void q_dateedit_on_child_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_custom_event` instead
+///
+#define q_dateedit_qbase_custom_event q_dateedit_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -17418,7 +18202,7 @@ void q_dateedit_custom_event(void* self, void* event);
 /// @param self QDateEdit*
 /// @param event QEvent*
 ///
-void q_dateedit_qbase_custom_event(void* self, void* event);
+void q_dateedit_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -17442,6 +18226,10 @@ void q_dateedit_on_custom_event(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_connect_notify` instead
+///
+#define q_dateedit_qbase_connect_notify q_dateedit_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -17451,7 +18239,7 @@ void q_dateedit_connect_notify(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-void q_dateedit_qbase_connect_notify(void* self, void* signal);
+void q_dateedit_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -17475,6 +18263,10 @@ void q_dateedit_on_connect_notify(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_disconnect_notify` instead
+///
+#define q_dateedit_qbase_disconnect_notify q_dateedit_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -17484,7 +18276,7 @@ void q_dateedit_disconnect_notify(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-void q_dateedit_qbase_disconnect_notify(void* self, void* signal);
+void q_dateedit_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -17507,6 +18299,10 @@ void q_dateedit_on_disconnect_notify(void* self, void (*callback)(void*, void*))
 ///
 QLineEdit* q_dateedit_line_edit(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_line_edit` instead
+///
+#define q_dateedit_qbase_line_edit q_dateedit_super_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#lineEdit)
@@ -17515,7 +18311,7 @@ QLineEdit* q_dateedit_line_edit(void* self);
 ///
 /// @param self QDateEdit*
 ///
-QLineEdit* q_dateedit_qbase_line_edit(void* self);
+QLineEdit* q_dateedit_super_line_edit(void* self);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17539,6 +18335,10 @@ void q_dateedit_on_line_edit(void* self, QLineEdit* (*callback)());
 ///
 void q_dateedit_set_line_edit(void* self, void* edit);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_set_line_edit` instead
+///
+#define q_dateedit_qbase_set_line_edit q_dateedit_super_set_line_edit
+
 /// Inherited from QAbstractSpinBox
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractspinbox.html#setLineEdit)
@@ -17548,7 +18348,7 @@ void q_dateedit_set_line_edit(void* self, void* edit);
 /// @param self QDateEdit*
 /// @param edit QLineEdit*
 ///
-void q_dateedit_qbase_set_line_edit(void* self, void* edit);
+void q_dateedit_super_set_line_edit(void* self, void* edit);
 
 /// Inherited from QAbstractSpinBox
 ///
@@ -17571,6 +18371,10 @@ void q_dateedit_on_set_line_edit(void* self, void (*callback)(void*, void*));
 ///
 void q_dateedit_update_micro_focus(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_update_micro_focus` instead
+///
+#define q_dateedit_qbase_update_micro_focus q_dateedit_super_update_micro_focus
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#updateMicroFocus)
@@ -17579,7 +18383,7 @@ void q_dateedit_update_micro_focus(void* self);
 ///
 /// @param self QDateEdit*
 ///
-void q_dateedit_qbase_update_micro_focus(void* self);
+void q_dateedit_super_update_micro_focus(void* self);
 
 /// Inherited from QWidget
 ///
@@ -17602,6 +18406,10 @@ void q_dateedit_on_update_micro_focus(void* self, void (*callback)());
 ///
 void q_dateedit_create(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_create` instead
+///
+#define q_dateedit_qbase_create q_dateedit_super_create
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
@@ -17610,7 +18418,7 @@ void q_dateedit_create(void* self);
 ///
 /// @param self QDateEdit*
 ///
-void q_dateedit_qbase_create(void* self);
+void q_dateedit_super_create(void* self);
 
 /// Inherited from QWidget
 ///
@@ -17633,6 +18441,10 @@ void q_dateedit_on_create(void* self, void (*callback)());
 ///
 void q_dateedit_destroy(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_destroy` instead
+///
+#define q_dateedit_qbase_destroy q_dateedit_super_destroy
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
@@ -17641,7 +18453,7 @@ void q_dateedit_destroy(void* self);
 ///
 /// @param self QDateEdit*
 ///
-void q_dateedit_qbase_destroy(void* self);
+void q_dateedit_super_destroy(void* self);
 
 /// Inherited from QWidget
 ///
@@ -17664,6 +18476,10 @@ void q_dateedit_on_destroy(void* self, void (*callback)());
 ///
 bool q_dateedit_focus_next_child(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_focus_next_child` instead
+///
+#define q_dateedit_qbase_focus_next_child q_dateedit_super_focus_next_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusNextChild)
@@ -17672,7 +18488,7 @@ bool q_dateedit_focus_next_child(void* self);
 ///
 /// @param self QDateEdit*
 ///
-bool q_dateedit_qbase_focus_next_child(void* self);
+bool q_dateedit_super_focus_next_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -17695,6 +18511,10 @@ void q_dateedit_on_focus_next_child(void* self, bool (*callback)());
 ///
 bool q_dateedit_focus_previous_child(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_focus_previous_child` instead
+///
+#define q_dateedit_qbase_focus_previous_child q_dateedit_super_focus_previous_child
+
 /// Inherited from QWidget
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#focusPreviousChild)
@@ -17703,7 +18523,7 @@ bool q_dateedit_focus_previous_child(void* self);
 ///
 /// @param self QDateEdit*
 ///
-bool q_dateedit_qbase_focus_previous_child(void* self);
+bool q_dateedit_super_focus_previous_child(void* self);
 
 /// Inherited from QWidget
 ///
@@ -17726,6 +18546,10 @@ void q_dateedit_on_focus_previous_child(void* self, bool (*callback)());
 ///
 QObject* q_dateedit_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_sender` instead
+///
+#define q_dateedit_qbase_sender q_dateedit_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -17734,7 +18558,7 @@ QObject* q_dateedit_sender(void* self);
 ///
 /// @param self QDateEdit*
 ///
-QObject* q_dateedit_qbase_sender(void* self);
+QObject* q_dateedit_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -17757,6 +18581,10 @@ void q_dateedit_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_dateedit_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_sender_signal_index` instead
+///
+#define q_dateedit_qbase_sender_signal_index q_dateedit_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -17765,7 +18593,7 @@ int32_t q_dateedit_sender_signal_index(void* self);
 ///
 /// @param self QDateEdit*
 ///
-int32_t q_dateedit_qbase_sender_signal_index(void* self);
+int32_t q_dateedit_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -17789,6 +18617,10 @@ void q_dateedit_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_dateedit_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_receivers` instead
+///
+#define q_dateedit_qbase_receivers q_dateedit_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -17798,7 +18630,7 @@ int32_t q_dateedit_receivers(void* self, const char* signal);
 /// @param self QDateEdit*
 /// @param signal const char*
 ///
-int32_t q_dateedit_qbase_receivers(void* self, const char* signal);
+int32_t q_dateedit_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -17822,6 +18654,10 @@ void q_dateedit_on_receivers(void* self, int32_t (*callback)(void*, const char*)
 ///
 bool q_dateedit_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_is_signal_connected` instead
+///
+#define q_dateedit_qbase_is_signal_connected q_dateedit_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -17831,7 +18667,7 @@ bool q_dateedit_is_signal_connected(void* self, void* signal);
 /// @param self QDateEdit*
 /// @param signal QMetaMethod*
 ///
-bool q_dateedit_qbase_is_signal_connected(void* self, void* signal);
+bool q_dateedit_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -17856,6 +18692,10 @@ void q_dateedit_on_is_signal_connected(void* self, bool (*callback)(void*, void*
 ///
 double q_dateedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
+/// @warning DEPRECATED: Use `q_dateedit_super_get_decoded_metric_f` instead
+///
+#define q_dateedit_qbase_get_decoded_metric_f q_dateedit_super_get_decoded_metric_f
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)
@@ -17866,7 +18706,7 @@ double q_dateedit_get_decoded_metric_f(void* self, int32_t metricA, int32_t metr
 /// @param metricA enum QPaintDevice__PaintDeviceMetric
 /// @param metricB enum QPaintDevice__PaintDeviceMetric
 ///
-double q_dateedit_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
+double q_dateedit_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB);
 
 /// Inherited from QPaintDevice
 ///

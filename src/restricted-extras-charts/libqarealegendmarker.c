@@ -24,8 +24,8 @@ void q_arealegendmarker_on_meta_object(void* self, const QMetaObject* (*callback
     QAreaLegendMarker_OnMetaObject((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_arealegendmarker_qbase_meta_object(void* self) {
-    return QAreaLegendMarker_QBaseMetaObject((QAreaLegendMarker*)self);
+const QMetaObject* q_arealegendmarker_super_meta_object(void* self) {
+    return QAreaLegendMarker_SuperMetaObject((QAreaLegendMarker*)self);
 }
 
 void* q_arealegendmarker_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_arealegendmarker_on_metacast(void* self, void* (*callback)(void*, const c
     QAreaLegendMarker_OnMetacast((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
-void* q_arealegendmarker_qbase_metacast(void* self, const char* param1) {
-    return QAreaLegendMarker_QBaseMetacast((QAreaLegendMarker*)self, param1);
+void* q_arealegendmarker_super_metacast(void* self, const char* param1) {
+    return QAreaLegendMarker_SuperMetacast((QAreaLegendMarker*)self, param1);
 }
 
 int32_t q_arealegendmarker_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_arealegendmarker_on_metacall(void* self, int32_t (*callback)(void*, int32
     QAreaLegendMarker_OnMetacall((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_arealegendmarker_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QAreaLegendMarker_QBaseMetacall((QAreaLegendMarker*)self, param1, param2, param3);
+int32_t q_arealegendmarker_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QAreaLegendMarker_SuperMetacall((QAreaLegendMarker*)self, param1, param2, param3);
 }
 
 const char* q_arealegendmarker_tr(const char* s) {
@@ -67,8 +67,8 @@ void q_arealegendmarker_on_type(void* self, int32_t (*callback)()) {
     QAreaLegendMarker_OnType((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
-int32_t q_arealegendmarker_qbase_type(void* self) {
-    return QAreaLegendMarker_QBaseType((QAreaLegendMarker*)self);
+int32_t q_arealegendmarker_super_type(void* self) {
+    return QAreaLegendMarker_SuperType((QAreaLegendMarker*)self);
 }
 
 QAreaSeries* q_arealegendmarker_series(void* self) {
@@ -79,8 +79,8 @@ void q_arealegendmarker_on_series(void* self, QAreaSeries* (*callback)()) {
     QAreaLegendMarker_OnSeries((QAreaLegendMarker*)self, (intptr_t)callback);
 }
 
-QAreaSeries* q_arealegendmarker_qbase_series(void* self) {
-    return QAreaLegendMarker_QBaseSeries((QAreaLegendMarker*)self);
+QAreaSeries* q_arealegendmarker_super_series(void* self) {
+    return QAreaLegendMarker_SuperSeries((QAreaLegendMarker*)self);
 }
 
 const char* q_arealegendmarker_tr2(const char* s, const char* c) {
@@ -443,8 +443,8 @@ bool q_arealegendmarker_event(void* self, void* event) {
     return QAreaLegendMarker_Event((QAreaLegendMarker*)self, (QEvent*)event);
 }
 
-bool q_arealegendmarker_qbase_event(void* self, void* event) {
-    return QAreaLegendMarker_QBaseEvent((QAreaLegendMarker*)self, (QEvent*)event);
+bool q_arealegendmarker_super_event(void* self, void* event) {
+    return QAreaLegendMarker_SuperEvent((QAreaLegendMarker*)self, (QEvent*)event);
 }
 
 void q_arealegendmarker_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ bool q_arealegendmarker_event_filter(void* self, void* watched, void* event) {
     return QAreaLegendMarker_EventFilter((QAreaLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_arealegendmarker_qbase_event_filter(void* self, void* watched, void* event) {
-    return QAreaLegendMarker_QBaseEventFilter((QAreaLegendMarker*)self, (QObject*)watched, (QEvent*)event);
+bool q_arealegendmarker_super_event_filter(void* self, void* watched, void* event) {
+    return QAreaLegendMarker_SuperEventFilter((QAreaLegendMarker*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_arealegendmarker_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -467,8 +467,8 @@ void q_arealegendmarker_timer_event(void* self, void* event) {
     QAreaLegendMarker_TimerEvent((QAreaLegendMarker*)self, (QTimerEvent*)event);
 }
 
-void q_arealegendmarker_qbase_timer_event(void* self, void* event) {
-    QAreaLegendMarker_QBaseTimerEvent((QAreaLegendMarker*)self, (QTimerEvent*)event);
+void q_arealegendmarker_super_timer_event(void* self, void* event) {
+    QAreaLegendMarker_SuperTimerEvent((QAreaLegendMarker*)self, (QTimerEvent*)event);
 }
 
 void q_arealegendmarker_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ void q_arealegendmarker_child_event(void* self, void* event) {
     QAreaLegendMarker_ChildEvent((QAreaLegendMarker*)self, (QChildEvent*)event);
 }
 
-void q_arealegendmarker_qbase_child_event(void* self, void* event) {
-    QAreaLegendMarker_QBaseChildEvent((QAreaLegendMarker*)self, (QChildEvent*)event);
+void q_arealegendmarker_super_child_event(void* self, void* event) {
+    QAreaLegendMarker_SuperChildEvent((QAreaLegendMarker*)self, (QChildEvent*)event);
 }
 
 void q_arealegendmarker_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -491,8 +491,8 @@ void q_arealegendmarker_custom_event(void* self, void* event) {
     QAreaLegendMarker_CustomEvent((QAreaLegendMarker*)self, (QEvent*)event);
 }
 
-void q_arealegendmarker_qbase_custom_event(void* self, void* event) {
-    QAreaLegendMarker_QBaseCustomEvent((QAreaLegendMarker*)self, (QEvent*)event);
+void q_arealegendmarker_super_custom_event(void* self, void* event) {
+    QAreaLegendMarker_SuperCustomEvent((QAreaLegendMarker*)self, (QEvent*)event);
 }
 
 void q_arealegendmarker_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -503,8 +503,8 @@ void q_arealegendmarker_connect_notify(void* self, void* signal) {
     QAreaLegendMarker_ConnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_arealegendmarker_qbase_connect_notify(void* self, void* signal) {
-    QAreaLegendMarker_QBaseConnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
+void q_arealegendmarker_super_connect_notify(void* self, void* signal) {
+    QAreaLegendMarker_SuperConnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_arealegendmarker_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -515,8 +515,8 @@ void q_arealegendmarker_disconnect_notify(void* self, void* signal) {
     QAreaLegendMarker_DisconnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-void q_arealegendmarker_qbase_disconnect_notify(void* self, void* signal) {
-    QAreaLegendMarker_QBaseDisconnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
+void q_arealegendmarker_super_disconnect_notify(void* self, void* signal) {
+    QAreaLegendMarker_SuperDisconnectNotify((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_arealegendmarker_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -527,8 +527,8 @@ QObject* q_arealegendmarker_sender(void* self) {
     return QAreaLegendMarker_Sender((QAreaLegendMarker*)self);
 }
 
-QObject* q_arealegendmarker_qbase_sender(void* self) {
-    return QAreaLegendMarker_QBaseSender((QAreaLegendMarker*)self);
+QObject* q_arealegendmarker_super_sender(void* self) {
+    return QAreaLegendMarker_SuperSender((QAreaLegendMarker*)self);
 }
 
 void q_arealegendmarker_on_sender(void* self, QObject* (*callback)()) {
@@ -539,8 +539,8 @@ int32_t q_arealegendmarker_sender_signal_index(void* self) {
     return QAreaLegendMarker_SenderSignalIndex((QAreaLegendMarker*)self);
 }
 
-int32_t q_arealegendmarker_qbase_sender_signal_index(void* self) {
-    return QAreaLegendMarker_QBaseSenderSignalIndex((QAreaLegendMarker*)self);
+int32_t q_arealegendmarker_super_sender_signal_index(void* self) {
+    return QAreaLegendMarker_SuperSenderSignalIndex((QAreaLegendMarker*)self);
 }
 
 void q_arealegendmarker_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -551,8 +551,8 @@ int32_t q_arealegendmarker_receivers(void* self, const char* signal) {
     return QAreaLegendMarker_Receivers((QAreaLegendMarker*)self, signal);
 }
 
-int32_t q_arealegendmarker_qbase_receivers(void* self, const char* signal) {
-    return QAreaLegendMarker_QBaseReceivers((QAreaLegendMarker*)self, signal);
+int32_t q_arealegendmarker_super_receivers(void* self, const char* signal) {
+    return QAreaLegendMarker_SuperReceivers((QAreaLegendMarker*)self, signal);
 }
 
 void q_arealegendmarker_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -563,8 +563,8 @@ bool q_arealegendmarker_is_signal_connected(void* self, void* signal) {
     return QAreaLegendMarker_IsSignalConnected((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
-bool q_arealegendmarker_qbase_is_signal_connected(void* self, void* signal) {
-    return QAreaLegendMarker_QBaseIsSignalConnected((QAreaLegendMarker*)self, (QMetaMethod*)signal);
+bool q_arealegendmarker_super_is_signal_connected(void* self, void* signal) {
+    return QAreaLegendMarker_SuperIsSignalConnected((QAreaLegendMarker*)self, (QMetaMethod*)signal);
 }
 
 void q_arealegendmarker_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

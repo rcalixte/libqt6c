@@ -26,8 +26,8 @@ void k_pagemodel_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     KPageModel_OnMetaObject((KPageModel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_pagemodel_qbase_meta_object(void* self) {
-    return KPageModel_QBaseMetaObject((KPageModel*)self);
+const QMetaObject* k_pagemodel_super_meta_object(void* self) {
+    return KPageModel_SuperMetaObject((KPageModel*)self);
 }
 
 void* k_pagemodel_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_pagemodel_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     KPageModel_OnMetacast((KPageModel*)self, (intptr_t)callback);
 }
 
-void* k_pagemodel_qbase_metacast(void* self, const char* param1) {
-    return KPageModel_QBaseMetacast((KPageModel*)self, param1);
+void* k_pagemodel_super_metacast(void* self, const char* param1) {
+    return KPageModel_SuperMetacast((KPageModel*)self, param1);
 }
 
 int32_t k_pagemodel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_pagemodel_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     KPageModel_OnMetacall((KPageModel*)self, (intptr_t)callback);
 }
 
-int32_t k_pagemodel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KPageModel_QBaseMetacall((KPageModel*)self, param1, param2, param3);
+int32_t k_pagemodel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KPageModel_SuperMetacall((KPageModel*)self, param1, param2, param3);
 }
 
 const char* k_pagemodel_tr(const char* s) {
@@ -414,8 +414,8 @@ QModelIndex* k_pagemodel_index(void* self, int row, int column, void* parent) {
     return KPageModel_Index((KPageModel*)self, row, column, (QModelIndex*)parent);
 }
 
-QModelIndex* k_pagemodel_qbase_index(void* self, int row, int column, void* parent) {
-    return KPageModel_QBaseIndex((KPageModel*)self, row, column, (QModelIndex*)parent);
+QModelIndex* k_pagemodel_super_index(void* self, int row, int column, void* parent) {
+    return KPageModel_SuperIndex((KPageModel*)self, row, column, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -426,8 +426,8 @@ QModelIndex* k_pagemodel_parent(void* self, void* child) {
     return KPageModel_Parent((KPageModel*)self, (QModelIndex*)child);
 }
 
-QModelIndex* k_pagemodel_qbase_parent(void* self, void* child) {
-    return KPageModel_QBaseParent((KPageModel*)self, (QModelIndex*)child);
+QModelIndex* k_pagemodel_super_parent(void* self, void* child) {
+    return KPageModel_SuperParent((KPageModel*)self, (QModelIndex*)child);
 }
 
 void k_pagemodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -438,8 +438,8 @@ QModelIndex* k_pagemodel_sibling(void* self, int row, int column, void* idx) {
     return KPageModel_Sibling((KPageModel*)self, row, column, (QModelIndex*)idx);
 }
 
-QModelIndex* k_pagemodel_qbase_sibling(void* self, int row, int column, void* idx) {
-    return KPageModel_QBaseSibling((KPageModel*)self, row, column, (QModelIndex*)idx);
+QModelIndex* k_pagemodel_super_sibling(void* self, int row, int column, void* idx) {
+    return KPageModel_SuperSibling((KPageModel*)self, row, column, (QModelIndex*)idx);
 }
 
 void k_pagemodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*)) {
@@ -450,8 +450,8 @@ int32_t k_pagemodel_row_count(void* self, void* parent) {
     return KPageModel_RowCount((KPageModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_pagemodel_qbase_row_count(void* self, void* parent) {
-    return KPageModel_QBaseRowCount((KPageModel*)self, (QModelIndex*)parent);
+int32_t k_pagemodel_super_row_count(void* self, void* parent) {
+    return KPageModel_SuperRowCount((KPageModel*)self, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_row_count(void* self, int32_t (*callback)(void*, void*)) {
@@ -462,8 +462,8 @@ int32_t k_pagemodel_column_count(void* self, void* parent) {
     return KPageModel_ColumnCount((KPageModel*)self, (QModelIndex*)parent);
 }
 
-int32_t k_pagemodel_qbase_column_count(void* self, void* parent) {
-    return KPageModel_QBaseColumnCount((KPageModel*)self, (QModelIndex*)parent);
+int32_t k_pagemodel_super_column_count(void* self, void* parent) {
+    return KPageModel_SuperColumnCount((KPageModel*)self, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_column_count(void* self, int32_t (*callback)(void*, void*)) {
@@ -474,8 +474,8 @@ bool k_pagemodel_has_children(void* self, void* parent) {
     return KPageModel_HasChildren((KPageModel*)self, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_has_children(void* self, void* parent) {
-    return KPageModel_QBaseHasChildren((KPageModel*)self, (QModelIndex*)parent);
+bool k_pagemodel_super_has_children(void* self, void* parent) {
+    return KPageModel_SuperHasChildren((KPageModel*)self, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_has_children(void* self, bool (*callback)(void*, void*)) {
@@ -486,8 +486,8 @@ QVariant* k_pagemodel_data(void* self, void* index, int role) {
     return KPageModel_Data((KPageModel*)self, (QModelIndex*)index, role);
 }
 
-QVariant* k_pagemodel_qbase_data(void* self, void* index, int role) {
-    return KPageModel_QBaseData((KPageModel*)self, (QModelIndex*)index, role);
+QVariant* k_pagemodel_super_data(void* self, void* index, int role) {
+    return KPageModel_SuperData((KPageModel*)self, (QModelIndex*)index, role);
 }
 
 void k_pagemodel_on_data(void* self, QVariant* (*callback)(void*, void*, int)) {
@@ -498,8 +498,8 @@ bool k_pagemodel_set_data(void* self, void* index, void* value, int role) {
     return KPageModel_SetData((KPageModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
-bool k_pagemodel_qbase_set_data(void* self, void* index, void* value, int role) {
-    return KPageModel_QBaseSetData((KPageModel*)self, (QModelIndex*)index, (QVariant*)value, role);
+bool k_pagemodel_super_set_data(void* self, void* index, void* value, int role) {
+    return KPageModel_SuperSetData((KPageModel*)self, (QModelIndex*)index, (QVariant*)value, role);
 }
 
 void k_pagemodel_on_set_data(void* self, bool (*callback)(void*, void*, void*, int)) {
@@ -510,8 +510,8 @@ QVariant* k_pagemodel_header_data(void* self, int section, int32_t orientation, 
     return KPageModel_HeaderData((KPageModel*)self, section, orientation, role);
 }
 
-QVariant* k_pagemodel_qbase_header_data(void* self, int section, int32_t orientation, int role) {
-    return KPageModel_QBaseHeaderData((KPageModel*)self, section, orientation, role);
+QVariant* k_pagemodel_super_header_data(void* self, int section, int32_t orientation, int role) {
+    return KPageModel_SuperHeaderData((KPageModel*)self, section, orientation, role);
 }
 
 void k_pagemodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int)) {
@@ -522,8 +522,8 @@ bool k_pagemodel_set_header_data(void* self, int section, int32_t orientation, v
     return KPageModel_SetHeaderData((KPageModel*)self, section, orientation, (QVariant*)value, role);
 }
 
-bool k_pagemodel_qbase_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
-    return KPageModel_QBaseSetHeaderData((KPageModel*)self, section, orientation, (QVariant*)value, role);
+bool k_pagemodel_super_set_header_data(void* self, int section, int32_t orientation, void* value, int role) {
+    return KPageModel_SuperSetHeaderData((KPageModel*)self, section, orientation, (QVariant*)value, role);
 }
 
 void k_pagemodel_on_set_header_data(void* self, bool (*callback)(void*, int, int32_t, void*, int)) {
@@ -540,9 +540,9 @@ libqt_map /* of int to QVariant* */ k_pagemodel_item_data(void* self, void* inde
     return _ret;
 }
 
-libqt_map /* of int to QVariant* */ k_pagemodel_qbase_item_data(void* self, void* index) {
+libqt_map /* of int to QVariant* */ k_pagemodel_super_item_data(void* self, void* index) {
     // Convert QMap<int,QVariant> to libqt_map
-    libqt_map _out = KPageModel_QBaseItemData((KPageModel*)self, (QModelIndex*)index);
+    libqt_map _out = KPageModel_SuperItemData((KPageModel*)self, (QModelIndex*)index);
     libqt_map _ret;
     _ret.len = _out.len;
     _ret.keys = _out.keys;
@@ -583,7 +583,7 @@ bool k_pagemodel_set_item_data(void* self, void* index, libqt_map /* of int to Q
     return _out;
 }
 
-bool k_pagemodel_qbase_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
+bool k_pagemodel_super_set_item_data(void* self, void* index, libqt_map /* of int to QVariant* */ roles) {
     // Convert libqt_map to QMap<int,QVariant>
     libqt_map roles_ret;
     roles_ret.len = roles.len;
@@ -606,7 +606,7 @@ bool k_pagemodel_qbase_set_item_data(void* self, void* index, libqt_map /* of in
         roles_kdest[i] = roles_karr[i];
         roles_vdest[i] = roles_varr[i];
     }
-    bool _out = KPageModel_QBaseSetItemData((KPageModel*)self, (QModelIndex*)index, roles_ret);
+    bool _out = KPageModel_SuperSetItemData((KPageModel*)self, (QModelIndex*)index, roles_ret);
     free(roles_ret.keys);
     free(roles_ret.values);
     return _out;
@@ -620,8 +620,8 @@ bool k_pagemodel_clear_item_data(void* self, void* index) {
     return KPageModel_ClearItemData((KPageModel*)self, (QModelIndex*)index);
 }
 
-bool k_pagemodel_qbase_clear_item_data(void* self, void* index) {
-    return KPageModel_QBaseClearItemData((KPageModel*)self, (QModelIndex*)index);
+bool k_pagemodel_super_clear_item_data(void* self, void* index) {
+    return KPageModel_SuperClearItemData((KPageModel*)self, (QModelIndex*)index);
 }
 
 void k_pagemodel_on_clear_item_data(void* self, bool (*callback)(void*, void*)) {
@@ -647,8 +647,8 @@ const char** k_pagemodel_mime_types(void* self) {
     return _ret;
 }
 
-const char** k_pagemodel_qbase_mime_types(void* self) {
-    libqt_list _arr = KPageModel_QBaseMimeTypes((KPageModel*)self);
+const char** k_pagemodel_super_mime_types(void* self) {
+    libqt_list _arr = KPageModel_SuperMimeTypes((KPageModel*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -674,8 +674,8 @@ QMimeData* k_pagemodel_mime_data(void* self, libqt_list /* of QModelIndex* */ in
     return KPageModel_MimeData((KPageModel*)self, indexes);
 }
 
-QMimeData* k_pagemodel_qbase_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
-    return KPageModel_QBaseMimeData((KPageModel*)self, indexes);
+QMimeData* k_pagemodel_super_mime_data(void* self, libqt_list /* of QModelIndex* */ indexes) {
+    return KPageModel_SuperMimeData((KPageModel*)self, indexes);
 }
 
 void k_pagemodel_on_mime_data(void* self, QMimeData* (*callback)(void*, libqt_list /* of QModelIndex* */)) {
@@ -686,8 +686,8 @@ bool k_pagemodel_can_drop_mime_data(void* self, void* data, int32_t action, int 
     return KPageModel_CanDropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KPageModel_QBaseCanDropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_pagemodel_super_can_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KPageModel_SuperCanDropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_can_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -698,8 +698,8 @@ bool k_pagemodel_drop_mime_data(void* self, void* data, int32_t action, int row,
     return KPageModel_DropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
-    return KPageModel_QBaseDropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
+bool k_pagemodel_super_drop_mime_data(void* self, void* data, int32_t action, int row, int column, void* parent) {
+    return KPageModel_SuperDropMimeData((KPageModel*)self, (QMimeData*)data, action, row, column, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_drop_mime_data(void* self, bool (*callback)(void*, void*, int32_t, int, int, void*)) {
@@ -710,8 +710,8 @@ int32_t k_pagemodel_supported_drop_actions(void* self) {
     return KPageModel_SupportedDropActions((KPageModel*)self);
 }
 
-int32_t k_pagemodel_qbase_supported_drop_actions(void* self) {
-    return KPageModel_QBaseSupportedDropActions((KPageModel*)self);
+int32_t k_pagemodel_super_supported_drop_actions(void* self) {
+    return KPageModel_SuperSupportedDropActions((KPageModel*)self);
 }
 
 void k_pagemodel_on_supported_drop_actions(void* self, int32_t (*callback)()) {
@@ -722,8 +722,8 @@ int32_t k_pagemodel_supported_drag_actions(void* self) {
     return KPageModel_SupportedDragActions((KPageModel*)self);
 }
 
-int32_t k_pagemodel_qbase_supported_drag_actions(void* self) {
-    return KPageModel_QBaseSupportedDragActions((KPageModel*)self);
+int32_t k_pagemodel_super_supported_drag_actions(void* self) {
+    return KPageModel_SuperSupportedDragActions((KPageModel*)self);
 }
 
 void k_pagemodel_on_supported_drag_actions(void* self, int32_t (*callback)()) {
@@ -734,8 +734,8 @@ bool k_pagemodel_insert_rows(void* self, int row, int count, void* parent) {
     return KPageModel_InsertRows((KPageModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_insert_rows(void* self, int row, int count, void* parent) {
-    return KPageModel_QBaseInsertRows((KPageModel*)self, row, count, (QModelIndex*)parent);
+bool k_pagemodel_super_insert_rows(void* self, int row, int count, void* parent) {
+    return KPageModel_SuperInsertRows((KPageModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_insert_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -746,8 +746,8 @@ bool k_pagemodel_insert_columns(void* self, int column, int count, void* parent)
     return KPageModel_InsertColumns((KPageModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_insert_columns(void* self, int column, int count, void* parent) {
-    return KPageModel_QBaseInsertColumns((KPageModel*)self, column, count, (QModelIndex*)parent);
+bool k_pagemodel_super_insert_columns(void* self, int column, int count, void* parent) {
+    return KPageModel_SuperInsertColumns((KPageModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_insert_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -758,8 +758,8 @@ bool k_pagemodel_remove_rows(void* self, int row, int count, void* parent) {
     return KPageModel_RemoveRows((KPageModel*)self, row, count, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_remove_rows(void* self, int row, int count, void* parent) {
-    return KPageModel_QBaseRemoveRows((KPageModel*)self, row, count, (QModelIndex*)parent);
+bool k_pagemodel_super_remove_rows(void* self, int row, int count, void* parent) {
+    return KPageModel_SuperRemoveRows((KPageModel*)self, row, count, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_remove_rows(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -770,8 +770,8 @@ bool k_pagemodel_remove_columns(void* self, int column, int count, void* parent)
     return KPageModel_RemoveColumns((KPageModel*)self, column, count, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_remove_columns(void* self, int column, int count, void* parent) {
-    return KPageModel_QBaseRemoveColumns((KPageModel*)self, column, count, (QModelIndex*)parent);
+bool k_pagemodel_super_remove_columns(void* self, int column, int count, void* parent) {
+    return KPageModel_SuperRemoveColumns((KPageModel*)self, column, count, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_remove_columns(void* self, bool (*callback)(void*, int, int, void*)) {
@@ -782,8 +782,8 @@ bool k_pagemodel_move_rows(void* self, void* sourceParent, int sourceRow, int co
     return KPageModel_MoveRows((KPageModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_pagemodel_qbase_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
-    return KPageModel_QBaseMoveRows((KPageModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_pagemodel_super_move_rows(void* self, void* sourceParent, int sourceRow, int count, void* destinationParent, int destinationChild) {
+    return KPageModel_SuperMoveRows((KPageModel*)self, (QModelIndex*)sourceParent, sourceRow, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_pagemodel_on_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -794,8 +794,8 @@ bool k_pagemodel_move_columns(void* self, void* sourceParent, int sourceColumn, 
     return KPageModel_MoveColumns((KPageModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
-bool k_pagemodel_qbase_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
-    return KPageModel_QBaseMoveColumns((KPageModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
+bool k_pagemodel_super_move_columns(void* self, void* sourceParent, int sourceColumn, int count, void* destinationParent, int destinationChild) {
+    return KPageModel_SuperMoveColumns((KPageModel*)self, (QModelIndex*)sourceParent, sourceColumn, count, (QModelIndex*)destinationParent, destinationChild);
 }
 
 void k_pagemodel_on_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -806,8 +806,8 @@ void k_pagemodel_fetch_more(void* self, void* parent) {
     KPageModel_FetchMore((KPageModel*)self, (QModelIndex*)parent);
 }
 
-void k_pagemodel_qbase_fetch_more(void* self, void* parent) {
-    KPageModel_QBaseFetchMore((KPageModel*)self, (QModelIndex*)parent);
+void k_pagemodel_super_fetch_more(void* self, void* parent) {
+    KPageModel_SuperFetchMore((KPageModel*)self, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_fetch_more(void* self, void (*callback)(void*, void*)) {
@@ -818,8 +818,8 @@ bool k_pagemodel_can_fetch_more(void* self, void* parent) {
     return KPageModel_CanFetchMore((KPageModel*)self, (QModelIndex*)parent);
 }
 
-bool k_pagemodel_qbase_can_fetch_more(void* self, void* parent) {
-    return KPageModel_QBaseCanFetchMore((KPageModel*)self, (QModelIndex*)parent);
+bool k_pagemodel_super_can_fetch_more(void* self, void* parent) {
+    return KPageModel_SuperCanFetchMore((KPageModel*)self, (QModelIndex*)parent);
 }
 
 void k_pagemodel_on_can_fetch_more(void* self, bool (*callback)(void*, void*)) {
@@ -830,8 +830,8 @@ int32_t k_pagemodel_flags(void* self, void* index) {
     return KPageModel_Flags((KPageModel*)self, (QModelIndex*)index);
 }
 
-int32_t k_pagemodel_qbase_flags(void* self, void* index) {
-    return KPageModel_QBaseFlags((KPageModel*)self, (QModelIndex*)index);
+int32_t k_pagemodel_super_flags(void* self, void* index) {
+    return KPageModel_SuperFlags((KPageModel*)self, (QModelIndex*)index);
 }
 
 void k_pagemodel_on_flags(void* self, int32_t (*callback)(void*, void*)) {
@@ -842,8 +842,8 @@ void k_pagemodel_sort(void* self, int column, int32_t order) {
     KPageModel_Sort((KPageModel*)self, column, order);
 }
 
-void k_pagemodel_qbase_sort(void* self, int column, int32_t order) {
-    KPageModel_QBaseSort((KPageModel*)self, column, order);
+void k_pagemodel_super_sort(void* self, int column, int32_t order) {
+    KPageModel_SuperSort((KPageModel*)self, column, order);
 }
 
 void k_pagemodel_on_sort(void* self, void (*callback)(void*, int, int32_t)) {
@@ -854,8 +854,8 @@ QModelIndex* k_pagemodel_buddy(void* self, void* index) {
     return KPageModel_Buddy((KPageModel*)self, (QModelIndex*)index);
 }
 
-QModelIndex* k_pagemodel_qbase_buddy(void* self, void* index) {
-    return KPageModel_QBaseBuddy((KPageModel*)self, (QModelIndex*)index);
+QModelIndex* k_pagemodel_super_buddy(void* self, void* index) {
+    return KPageModel_SuperBuddy((KPageModel*)self, (QModelIndex*)index);
 }
 
 void k_pagemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*)) {
@@ -867,8 +867,8 @@ libqt_list /* of QModelIndex* */ k_pagemodel_match(void* self, void* start, int 
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_pagemodel_qbase_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
-    libqt_list _arr = KPageModel_QBaseMatch((KPageModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
+libqt_list /* of QModelIndex* */ k_pagemodel_super_match(void* self, void* start, int role, void* value, int hits, int32_t flags) {
+    libqt_list _arr = KPageModel_SuperMatch((KPageModel*)self, (QModelIndex*)start, role, (QVariant*)value, hits, flags);
     return _arr;
 }
 
@@ -880,8 +880,8 @@ QSize* k_pagemodel_span(void* self, void* index) {
     return KPageModel_Span((KPageModel*)self, (QModelIndex*)index);
 }
 
-QSize* k_pagemodel_qbase_span(void* self, void* index) {
-    return KPageModel_QBaseSpan((KPageModel*)self, (QModelIndex*)index);
+QSize* k_pagemodel_super_span(void* self, void* index) {
+    return KPageModel_SuperSpan((KPageModel*)self, (QModelIndex*)index);
 }
 
 void k_pagemodel_on_span(void* self, QSize* (*callback)(void*, void*)) {
@@ -921,9 +921,9 @@ libqt_map /* of int to char* */ k_pagemodel_role_names(void* self) {
     return _ret;
 }
 
-libqt_map /* of int to char* */ k_pagemodel_qbase_role_names(void* self) {
+libqt_map /* of int to char* */ k_pagemodel_super_role_names(void* self) {
     // Convert QHash<int,QByteArray> to libqt_map
-    libqt_map _out = KPageModel_QBaseRoleNames((KPageModel*)self);
+    libqt_map _out = KPageModel_SuperRoleNames((KPageModel*)self);
     libqt_map _ret;
     _ret.len = _out.len;
     libqt_string* _out_values = (libqt_string*)_out.values;
@@ -962,8 +962,8 @@ void k_pagemodel_multi_data(void* self, void* index, void* roleDataSpan) {
     KPageModel_MultiData((KPageModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
-void k_pagemodel_qbase_multi_data(void* self, void* index, void* roleDataSpan) {
-    KPageModel_QBaseMultiData((KPageModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
+void k_pagemodel_super_multi_data(void* self, void* index, void* roleDataSpan) {
+    KPageModel_SuperMultiData((KPageModel*)self, (QModelIndex*)index, (QModelRoleDataSpan*)roleDataSpan);
 }
 
 void k_pagemodel_on_multi_data(void* self, void (*callback)(void*, void*, void*)) {
@@ -974,8 +974,8 @@ bool k_pagemodel_submit(void* self) {
     return KPageModel_Submit((KPageModel*)self);
 }
 
-bool k_pagemodel_qbase_submit(void* self) {
-    return KPageModel_QBaseSubmit((KPageModel*)self);
+bool k_pagemodel_super_submit(void* self) {
+    return KPageModel_SuperSubmit((KPageModel*)self);
 }
 
 void k_pagemodel_on_submit(void* self, bool (*callback)()) {
@@ -986,8 +986,8 @@ void k_pagemodel_revert(void* self) {
     KPageModel_Revert((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_revert(void* self) {
-    KPageModel_QBaseRevert((KPageModel*)self);
+void k_pagemodel_super_revert(void* self) {
+    KPageModel_SuperRevert((KPageModel*)self);
 }
 
 void k_pagemodel_on_revert(void* self, void (*callback)()) {
@@ -998,8 +998,8 @@ void k_pagemodel_reset_internal_data(void* self) {
     KPageModel_ResetInternalData((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_reset_internal_data(void* self) {
-    KPageModel_QBaseResetInternalData((KPageModel*)self);
+void k_pagemodel_super_reset_internal_data(void* self) {
+    KPageModel_SuperResetInternalData((KPageModel*)self);
 }
 
 void k_pagemodel_on_reset_internal_data(void* self, void (*callback)()) {
@@ -1010,8 +1010,8 @@ bool k_pagemodel_event(void* self, void* event) {
     return KPageModel_Event((KPageModel*)self, (QEvent*)event);
 }
 
-bool k_pagemodel_qbase_event(void* self, void* event) {
-    return KPageModel_QBaseEvent((KPageModel*)self, (QEvent*)event);
+bool k_pagemodel_super_event(void* self, void* event) {
+    return KPageModel_SuperEvent((KPageModel*)self, (QEvent*)event);
 }
 
 void k_pagemodel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1022,8 +1022,8 @@ bool k_pagemodel_event_filter(void* self, void* watched, void* event) {
     return KPageModel_EventFilter((KPageModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_pagemodel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KPageModel_QBaseEventFilter((KPageModel*)self, (QObject*)watched, (QEvent*)event);
+bool k_pagemodel_super_event_filter(void* self, void* watched, void* event) {
+    return KPageModel_SuperEventFilter((KPageModel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_pagemodel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1034,8 +1034,8 @@ void k_pagemodel_timer_event(void* self, void* event) {
     KPageModel_TimerEvent((KPageModel*)self, (QTimerEvent*)event);
 }
 
-void k_pagemodel_qbase_timer_event(void* self, void* event) {
-    KPageModel_QBaseTimerEvent((KPageModel*)self, (QTimerEvent*)event);
+void k_pagemodel_super_timer_event(void* self, void* event) {
+    KPageModel_SuperTimerEvent((KPageModel*)self, (QTimerEvent*)event);
 }
 
 void k_pagemodel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1046,8 +1046,8 @@ void k_pagemodel_child_event(void* self, void* event) {
     KPageModel_ChildEvent((KPageModel*)self, (QChildEvent*)event);
 }
 
-void k_pagemodel_qbase_child_event(void* self, void* event) {
-    KPageModel_QBaseChildEvent((KPageModel*)self, (QChildEvent*)event);
+void k_pagemodel_super_child_event(void* self, void* event) {
+    KPageModel_SuperChildEvent((KPageModel*)self, (QChildEvent*)event);
 }
 
 void k_pagemodel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1058,8 +1058,8 @@ void k_pagemodel_custom_event(void* self, void* event) {
     KPageModel_CustomEvent((KPageModel*)self, (QEvent*)event);
 }
 
-void k_pagemodel_qbase_custom_event(void* self, void* event) {
-    KPageModel_QBaseCustomEvent((KPageModel*)self, (QEvent*)event);
+void k_pagemodel_super_custom_event(void* self, void* event) {
+    KPageModel_SuperCustomEvent((KPageModel*)self, (QEvent*)event);
 }
 
 void k_pagemodel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1070,8 +1070,8 @@ void k_pagemodel_connect_notify(void* self, void* signal) {
     KPageModel_ConnectNotify((KPageModel*)self, (QMetaMethod*)signal);
 }
 
-void k_pagemodel_qbase_connect_notify(void* self, void* signal) {
-    KPageModel_QBaseConnectNotify((KPageModel*)self, (QMetaMethod*)signal);
+void k_pagemodel_super_connect_notify(void* self, void* signal) {
+    KPageModel_SuperConnectNotify((KPageModel*)self, (QMetaMethod*)signal);
 }
 
 void k_pagemodel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1082,8 +1082,8 @@ void k_pagemodel_disconnect_notify(void* self, void* signal) {
     KPageModel_DisconnectNotify((KPageModel*)self, (QMetaMethod*)signal);
 }
 
-void k_pagemodel_qbase_disconnect_notify(void* self, void* signal) {
-    KPageModel_QBaseDisconnectNotify((KPageModel*)self, (QMetaMethod*)signal);
+void k_pagemodel_super_disconnect_notify(void* self, void* signal) {
+    KPageModel_SuperDisconnectNotify((KPageModel*)self, (QMetaMethod*)signal);
 }
 
 void k_pagemodel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1094,8 +1094,8 @@ QModelIndex* k_pagemodel_create_index(void* self, int row, int column) {
     return KPageModel_CreateIndex((KPageModel*)self, row, column);
 }
 
-QModelIndex* k_pagemodel_qbase_create_index(void* self, int row, int column) {
-    return KPageModel_QBaseCreateIndex((KPageModel*)self, row, column);
+QModelIndex* k_pagemodel_super_create_index(void* self, int row, int column) {
+    return KPageModel_SuperCreateIndex((KPageModel*)self, row, column);
 }
 
 void k_pagemodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int)) {
@@ -1106,8 +1106,8 @@ void k_pagemodel_encode_data(void* self, libqt_list /* of QModelIndex* */ indexe
     KPageModel_EncodeData((KPageModel*)self, indexes, (QDataStream*)stream);
 }
 
-void k_pagemodel_qbase_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
-    KPageModel_QBaseEncodeData((KPageModel*)self, indexes, (QDataStream*)stream);
+void k_pagemodel_super_encode_data(void* self, libqt_list /* of QModelIndex* */ indexes, void* stream) {
+    KPageModel_SuperEncodeData((KPageModel*)self, indexes, (QDataStream*)stream);
 }
 
 void k_pagemodel_on_encode_data(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, void*)) {
@@ -1118,8 +1118,8 @@ bool k_pagemodel_decode_data(void* self, int row, int column, void* parent, void
     return KPageModel_DecodeData((KPageModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
-bool k_pagemodel_qbase_decode_data(void* self, int row, int column, void* parent, void* stream) {
-    return KPageModel_QBaseDecodeData((KPageModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
+bool k_pagemodel_super_decode_data(void* self, int row, int column, void* parent, void* stream) {
+    return KPageModel_SuperDecodeData((KPageModel*)self, row, column, (QModelIndex*)parent, (QDataStream*)stream);
 }
 
 void k_pagemodel_on_decode_data(void* self, bool (*callback)(void*, int, int, void*, void*)) {
@@ -1130,8 +1130,8 @@ void k_pagemodel_begin_insert_rows(void* self, void* parent, int first, int last
     KPageModel_BeginInsertRows((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_pagemodel_qbase_begin_insert_rows(void* self, void* parent, int first, int last) {
-    KPageModel_QBaseBeginInsertRows((KPageModel*)self, (QModelIndex*)parent, first, last);
+void k_pagemodel_super_begin_insert_rows(void* self, void* parent, int first, int last) {
+    KPageModel_SuperBeginInsertRows((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_pagemodel_on_begin_insert_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1142,8 +1142,8 @@ void k_pagemodel_end_insert_rows(void* self) {
     KPageModel_EndInsertRows((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_insert_rows(void* self) {
-    KPageModel_QBaseEndInsertRows((KPageModel*)self);
+void k_pagemodel_super_end_insert_rows(void* self) {
+    KPageModel_SuperEndInsertRows((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_insert_rows(void* self, void (*callback)()) {
@@ -1154,8 +1154,8 @@ void k_pagemodel_begin_remove_rows(void* self, void* parent, int first, int last
     KPageModel_BeginRemoveRows((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_pagemodel_qbase_begin_remove_rows(void* self, void* parent, int first, int last) {
-    KPageModel_QBaseBeginRemoveRows((KPageModel*)self, (QModelIndex*)parent, first, last);
+void k_pagemodel_super_begin_remove_rows(void* self, void* parent, int first, int last) {
+    KPageModel_SuperBeginRemoveRows((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_pagemodel_on_begin_remove_rows(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1166,8 +1166,8 @@ void k_pagemodel_end_remove_rows(void* self) {
     KPageModel_EndRemoveRows((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_remove_rows(void* self) {
-    KPageModel_QBaseEndRemoveRows((KPageModel*)self);
+void k_pagemodel_super_end_remove_rows(void* self) {
+    KPageModel_SuperEndRemoveRows((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_remove_rows(void* self, void (*callback)()) {
@@ -1178,8 +1178,8 @@ bool k_pagemodel_begin_move_rows(void* self, void* sourceParent, int sourceFirst
     return KPageModel_BeginMoveRows((KPageModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
-bool k_pagemodel_qbase_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
-    return KPageModel_QBaseBeginMoveRows((KPageModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
+bool k_pagemodel_super_begin_move_rows(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationRow) {
+    return KPageModel_SuperBeginMoveRows((KPageModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationRow);
 }
 
 void k_pagemodel_on_begin_move_rows(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1190,8 +1190,8 @@ void k_pagemodel_end_move_rows(void* self) {
     KPageModel_EndMoveRows((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_move_rows(void* self) {
-    KPageModel_QBaseEndMoveRows((KPageModel*)self);
+void k_pagemodel_super_end_move_rows(void* self) {
+    KPageModel_SuperEndMoveRows((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_move_rows(void* self, void (*callback)()) {
@@ -1202,8 +1202,8 @@ void k_pagemodel_begin_insert_columns(void* self, void* parent, int first, int l
     KPageModel_BeginInsertColumns((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_pagemodel_qbase_begin_insert_columns(void* self, void* parent, int first, int last) {
-    KPageModel_QBaseBeginInsertColumns((KPageModel*)self, (QModelIndex*)parent, first, last);
+void k_pagemodel_super_begin_insert_columns(void* self, void* parent, int first, int last) {
+    KPageModel_SuperBeginInsertColumns((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_pagemodel_on_begin_insert_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1214,8 +1214,8 @@ void k_pagemodel_end_insert_columns(void* self) {
     KPageModel_EndInsertColumns((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_insert_columns(void* self) {
-    KPageModel_QBaseEndInsertColumns((KPageModel*)self);
+void k_pagemodel_super_end_insert_columns(void* self) {
+    KPageModel_SuperEndInsertColumns((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_insert_columns(void* self, void (*callback)()) {
@@ -1226,8 +1226,8 @@ void k_pagemodel_begin_remove_columns(void* self, void* parent, int first, int l
     KPageModel_BeginRemoveColumns((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
-void k_pagemodel_qbase_begin_remove_columns(void* self, void* parent, int first, int last) {
-    KPageModel_QBaseBeginRemoveColumns((KPageModel*)self, (QModelIndex*)parent, first, last);
+void k_pagemodel_super_begin_remove_columns(void* self, void* parent, int first, int last) {
+    KPageModel_SuperBeginRemoveColumns((KPageModel*)self, (QModelIndex*)parent, first, last);
 }
 
 void k_pagemodel_on_begin_remove_columns(void* self, void (*callback)(void*, void*, int, int)) {
@@ -1238,8 +1238,8 @@ void k_pagemodel_end_remove_columns(void* self) {
     KPageModel_EndRemoveColumns((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_remove_columns(void* self) {
-    KPageModel_QBaseEndRemoveColumns((KPageModel*)self);
+void k_pagemodel_super_end_remove_columns(void* self) {
+    KPageModel_SuperEndRemoveColumns((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_remove_columns(void* self, void (*callback)()) {
@@ -1250,8 +1250,8 @@ bool k_pagemodel_begin_move_columns(void* self, void* sourceParent, int sourceFi
     return KPageModel_BeginMoveColumns((KPageModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
-bool k_pagemodel_qbase_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
-    return KPageModel_QBaseBeginMoveColumns((KPageModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
+bool k_pagemodel_super_begin_move_columns(void* self, void* sourceParent, int sourceFirst, int sourceLast, void* destinationParent, int destinationColumn) {
+    return KPageModel_SuperBeginMoveColumns((KPageModel*)self, (QModelIndex*)sourceParent, sourceFirst, sourceLast, (QModelIndex*)destinationParent, destinationColumn);
 }
 
 void k_pagemodel_on_begin_move_columns(void* self, bool (*callback)(void*, void*, int, int, void*, int)) {
@@ -1262,8 +1262,8 @@ void k_pagemodel_end_move_columns(void* self) {
     KPageModel_EndMoveColumns((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_move_columns(void* self) {
-    KPageModel_QBaseEndMoveColumns((KPageModel*)self);
+void k_pagemodel_super_end_move_columns(void* self) {
+    KPageModel_SuperEndMoveColumns((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_move_columns(void* self, void (*callback)()) {
@@ -1274,8 +1274,8 @@ void k_pagemodel_begin_reset_model(void* self) {
     KPageModel_BeginResetModel((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_begin_reset_model(void* self) {
-    KPageModel_QBaseBeginResetModel((KPageModel*)self);
+void k_pagemodel_super_begin_reset_model(void* self) {
+    KPageModel_SuperBeginResetModel((KPageModel*)self);
 }
 
 void k_pagemodel_on_begin_reset_model(void* self, void (*callback)()) {
@@ -1286,8 +1286,8 @@ void k_pagemodel_end_reset_model(void* self) {
     KPageModel_EndResetModel((KPageModel*)self);
 }
 
-void k_pagemodel_qbase_end_reset_model(void* self) {
-    KPageModel_QBaseEndResetModel((KPageModel*)self);
+void k_pagemodel_super_end_reset_model(void* self) {
+    KPageModel_SuperEndResetModel((KPageModel*)self);
 }
 
 void k_pagemodel_on_end_reset_model(void* self, void (*callback)()) {
@@ -1298,8 +1298,8 @@ void k_pagemodel_change_persistent_index(void* self, void* from, void* to) {
     KPageModel_ChangePersistentIndex((KPageModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
-void k_pagemodel_qbase_change_persistent_index(void* self, void* from, void* to) {
-    KPageModel_QBaseChangePersistentIndex((KPageModel*)self, (QModelIndex*)from, (QModelIndex*)to);
+void k_pagemodel_super_change_persistent_index(void* self, void* from, void* to) {
+    KPageModel_SuperChangePersistentIndex((KPageModel*)self, (QModelIndex*)from, (QModelIndex*)to);
 }
 
 void k_pagemodel_on_change_persistent_index(void* self, void (*callback)(void*, void*, void*)) {
@@ -1310,8 +1310,8 @@ void k_pagemodel_change_persistent_index_list(void* self, libqt_list /* of QMode
     KPageModel_ChangePersistentIndexList((KPageModel*)self, from, to);
 }
 
-void k_pagemodel_qbase_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
-    KPageModel_QBaseChangePersistentIndexList((KPageModel*)self, from, to);
+void k_pagemodel_super_change_persistent_index_list(void* self, libqt_list /* of QModelIndex* */ from, libqt_list /* of QModelIndex* */ to) {
+    KPageModel_SuperChangePersistentIndexList((KPageModel*)self, from, to);
 }
 
 void k_pagemodel_on_change_persistent_index_list(void* self, void (*callback)(void*, libqt_list /* of QModelIndex* */, libqt_list /* of QModelIndex* */)) {
@@ -1323,8 +1323,8 @@ libqt_list /* of QModelIndex* */ k_pagemodel_persistent_index_list(void* self) {
     return _arr;
 }
 
-libqt_list /* of QModelIndex* */ k_pagemodel_qbase_persistent_index_list(void* self) {
-    libqt_list _arr = KPageModel_QBasePersistentIndexList((KPageModel*)self);
+libqt_list /* of QModelIndex* */ k_pagemodel_super_persistent_index_list(void* self) {
+    libqt_list _arr = KPageModel_SuperPersistentIndexList((KPageModel*)self);
     return _arr;
 }
 
@@ -1336,8 +1336,8 @@ QObject* k_pagemodel_sender(void* self) {
     return KPageModel_Sender((KPageModel*)self);
 }
 
-QObject* k_pagemodel_qbase_sender(void* self) {
-    return KPageModel_QBaseSender((KPageModel*)self);
+QObject* k_pagemodel_super_sender(void* self) {
+    return KPageModel_SuperSender((KPageModel*)self);
 }
 
 void k_pagemodel_on_sender(void* self, QObject* (*callback)()) {
@@ -1348,8 +1348,8 @@ int32_t k_pagemodel_sender_signal_index(void* self) {
     return KPageModel_SenderSignalIndex((KPageModel*)self);
 }
 
-int32_t k_pagemodel_qbase_sender_signal_index(void* self) {
-    return KPageModel_QBaseSenderSignalIndex((KPageModel*)self);
+int32_t k_pagemodel_super_sender_signal_index(void* self) {
+    return KPageModel_SuperSenderSignalIndex((KPageModel*)self);
 }
 
 void k_pagemodel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1360,8 +1360,8 @@ int32_t k_pagemodel_receivers(void* self, const char* signal) {
     return KPageModel_Receivers((KPageModel*)self, signal);
 }
 
-int32_t k_pagemodel_qbase_receivers(void* self, const char* signal) {
-    return KPageModel_QBaseReceivers((KPageModel*)self, signal);
+int32_t k_pagemodel_super_receivers(void* self, const char* signal) {
+    return KPageModel_SuperReceivers((KPageModel*)self, signal);
 }
 
 void k_pagemodel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1372,8 +1372,8 @@ bool k_pagemodel_is_signal_connected(void* self, void* signal) {
     return KPageModel_IsSignalConnected((KPageModel*)self, (QMetaMethod*)signal);
 }
 
-bool k_pagemodel_qbase_is_signal_connected(void* self, void* signal) {
-    return KPageModel_QBaseIsSignalConnected((KPageModel*)self, (QMetaMethod*)signal);
+bool k_pagemodel_super_is_signal_connected(void* self, void* signal) {
+    return KPageModel_SuperIsSignalConnected((KPageModel*)self, (QMetaMethod*)signal);
 }
 
 void k_pagemodel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

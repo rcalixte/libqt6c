@@ -33,8 +33,8 @@ void q_temporaryfile_on_meta_object(void* self, const QMetaObject* (*callback)()
     QTemporaryFile_OnMetaObject((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_temporaryfile_qbase_meta_object(void* self) {
-    return QTemporaryFile_QBaseMetaObject((QTemporaryFile*)self);
+const QMetaObject* q_temporaryfile_super_meta_object(void* self) {
+    return QTemporaryFile_SuperMetaObject((QTemporaryFile*)self);
 }
 
 void* q_temporaryfile_metacast(void* self, const char* param1) {
@@ -45,8 +45,8 @@ void q_temporaryfile_on_metacast(void* self, void* (*callback)(void*, const char
     QTemporaryFile_OnMetacast((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-void* q_temporaryfile_qbase_metacast(void* self, const char* param1) {
-    return QTemporaryFile_QBaseMetacast((QTemporaryFile*)self, param1);
+void* q_temporaryfile_super_metacast(void* self, const char* param1) {
+    return QTemporaryFile_SuperMetacast((QTemporaryFile*)self, param1);
 }
 
 int32_t q_temporaryfile_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -57,8 +57,8 @@ void q_temporaryfile_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QTemporaryFile_OnMetacall((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-int32_t q_temporaryfile_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QTemporaryFile_QBaseMetacall((QTemporaryFile*)self, param1, param2, param3);
+int32_t q_temporaryfile_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QTemporaryFile_SuperMetacall((QTemporaryFile*)self, param1, param2, param3);
 }
 
 const char* q_temporaryfile_tr(const char* s) {
@@ -91,8 +91,8 @@ void q_temporaryfile_on_file_name(void* self, const char* (*callback)()) {
     QTemporaryFile_OnFileName((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-const char* q_temporaryfile_qbase_file_name(void* self) {
-    libqt_string _str = QTemporaryFile_QBaseFileName((QTemporaryFile*)self);
+const char* q_temporaryfile_super_file_name(void* self) {
+    libqt_string _str = QTemporaryFile_SuperFileName((QTemporaryFile*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -129,8 +129,8 @@ void q_temporaryfile_on_open2(void* self, bool (*callback)(void*, int32_t)) {
     QTemporaryFile_OnOpen2((QTemporaryFile*)self, (intptr_t)callback);
 }
 
-bool q_temporaryfile_qbase_open2(void* self, int32_t flags) {
-    return QTemporaryFile_QBaseOpen2((QTemporaryFile*)self, flags);
+bool q_temporaryfile_super_open2(void* self, int32_t flags) {
+    return QTemporaryFile_SuperOpen2((QTemporaryFile*)self, flags);
 }
 
 const char* q_temporaryfile_tr2(const char* s, const char* c) {
@@ -695,8 +695,8 @@ long long q_temporaryfile_size(void* self) {
     return QTemporaryFile_Size((QTemporaryFile*)self);
 }
 
-long long q_temporaryfile_qbase_size(void* self) {
-    return QTemporaryFile_QBaseSize((QTemporaryFile*)self);
+long long q_temporaryfile_super_size(void* self) {
+    return QTemporaryFile_SuperSize((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_size(void* self, long long (*callback)()) {
@@ -707,8 +707,8 @@ bool q_temporaryfile_resize(void* self, long long sz) {
     return QTemporaryFile_Resize((QTemporaryFile*)self, sz);
 }
 
-bool q_temporaryfile_qbase_resize(void* self, long long sz) {
-    return QTemporaryFile_QBaseResize((QTemporaryFile*)self, sz);
+bool q_temporaryfile_super_resize(void* self, long long sz) {
+    return QTemporaryFile_SuperResize((QTemporaryFile*)self, sz);
 }
 
 void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, long long)) {
@@ -719,8 +719,8 @@ int32_t q_temporaryfile_permissions(void* self) {
     return QTemporaryFile_Permissions((QTemporaryFile*)self);
 }
 
-int32_t q_temporaryfile_qbase_permissions(void* self) {
-    return QTemporaryFile_QBasePermissions((QTemporaryFile*)self);
+int32_t q_temporaryfile_super_permissions(void* self) {
+    return QTemporaryFile_SuperPermissions((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_permissions(void* self, int32_t (*callback)()) {
@@ -731,8 +731,8 @@ bool q_temporaryfile_set_permissions(void* self, int32_t permissionSpec) {
     return QTemporaryFile_SetPermissions((QTemporaryFile*)self, permissionSpec);
 }
 
-bool q_temporaryfile_qbase_set_permissions(void* self, int32_t permissionSpec) {
-    return QTemporaryFile_QBaseSetPermissions((QTemporaryFile*)self, permissionSpec);
+bool q_temporaryfile_super_set_permissions(void* self, int32_t permissionSpec) {
+    return QTemporaryFile_SuperSetPermissions((QTemporaryFile*)self, permissionSpec);
 }
 
 void q_temporaryfile_on_set_permissions(void* self, bool (*callback)(void*, int32_t)) {
@@ -743,8 +743,8 @@ void q_temporaryfile_close(void* self) {
     QTemporaryFile_Close((QTemporaryFile*)self);
 }
 
-void q_temporaryfile_qbase_close(void* self) {
-    QTemporaryFile_QBaseClose((QTemporaryFile*)self);
+void q_temporaryfile_super_close(void* self) {
+    QTemporaryFile_SuperClose((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_close(void* self, void (*callback)()) {
@@ -755,8 +755,8 @@ bool q_temporaryfile_is_sequential(void* self) {
     return QTemporaryFile_IsSequential((QTemporaryFile*)self);
 }
 
-bool q_temporaryfile_qbase_is_sequential(void* self) {
-    return QTemporaryFile_QBaseIsSequential((QTemporaryFile*)self);
+bool q_temporaryfile_super_is_sequential(void* self) {
+    return QTemporaryFile_SuperIsSequential((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_is_sequential(void* self, bool (*callback)()) {
@@ -767,8 +767,8 @@ long long q_temporaryfile_pos(void* self) {
     return QTemporaryFile_Pos((QTemporaryFile*)self);
 }
 
-long long q_temporaryfile_qbase_pos(void* self) {
-    return QTemporaryFile_QBasePos((QTemporaryFile*)self);
+long long q_temporaryfile_super_pos(void* self) {
+    return QTemporaryFile_SuperPos((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_pos(void* self, long long (*callback)()) {
@@ -779,8 +779,8 @@ bool q_temporaryfile_seek(void* self, long long offset) {
     return QTemporaryFile_Seek((QTemporaryFile*)self, offset);
 }
 
-bool q_temporaryfile_qbase_seek(void* self, long long offset) {
-    return QTemporaryFile_QBaseSeek((QTemporaryFile*)self, offset);
+bool q_temporaryfile_super_seek(void* self, long long offset) {
+    return QTemporaryFile_SuperSeek((QTemporaryFile*)self, offset);
 }
 
 void q_temporaryfile_on_seek(void* self, bool (*callback)(void*, long long)) {
@@ -791,8 +791,8 @@ bool q_temporaryfile_at_end(void* self) {
     return QTemporaryFile_AtEnd((QTemporaryFile*)self);
 }
 
-bool q_temporaryfile_qbase_at_end(void* self) {
-    return QTemporaryFile_QBaseAtEnd((QTemporaryFile*)self);
+bool q_temporaryfile_super_at_end(void* self) {
+    return QTemporaryFile_SuperAtEnd((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_at_end(void* self, bool (*callback)()) {
@@ -803,8 +803,8 @@ long long q_temporaryfile_read_data(void* self, char* data, long long maxlen) {
     return QTemporaryFile_ReadData((QTemporaryFile*)self, data, maxlen);
 }
 
-long long q_temporaryfile_qbase_read_data(void* self, char* data, long long maxlen) {
-    return QTemporaryFile_QBaseReadData((QTemporaryFile*)self, data, maxlen);
+long long q_temporaryfile_super_read_data(void* self, char* data, long long maxlen) {
+    return QTemporaryFile_SuperReadData((QTemporaryFile*)self, data, maxlen);
 }
 
 void q_temporaryfile_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
@@ -815,8 +815,8 @@ long long q_temporaryfile_write_data(void* self, const char* data, long long len
     return QTemporaryFile_WriteData((QTemporaryFile*)self, data, lenVal);
 }
 
-long long q_temporaryfile_qbase_write_data(void* self, const char* data, long long lenVal) {
-    return QTemporaryFile_QBaseWriteData((QTemporaryFile*)self, data, lenVal);
+long long q_temporaryfile_super_write_data(void* self, const char* data, long long lenVal) {
+    return QTemporaryFile_SuperWriteData((QTemporaryFile*)self, data, lenVal);
 }
 
 void q_temporaryfile_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
@@ -827,8 +827,8 @@ long long q_temporaryfile_read_line_data(void* self, char* data, long long maxle
     return QTemporaryFile_ReadLineData((QTemporaryFile*)self, data, maxlen);
 }
 
-long long q_temporaryfile_qbase_read_line_data(void* self, char* data, long long maxlen) {
-    return QTemporaryFile_QBaseReadLineData((QTemporaryFile*)self, data, maxlen);
+long long q_temporaryfile_super_read_line_data(void* self, char* data, long long maxlen) {
+    return QTemporaryFile_SuperReadLineData((QTemporaryFile*)self, data, maxlen);
 }
 
 void q_temporaryfile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
@@ -839,8 +839,8 @@ bool q_temporaryfile_reset(void* self) {
     return QTemporaryFile_Reset((QTemporaryFile*)self);
 }
 
-bool q_temporaryfile_qbase_reset(void* self) {
-    return QTemporaryFile_QBaseReset((QTemporaryFile*)self);
+bool q_temporaryfile_super_reset(void* self) {
+    return QTemporaryFile_SuperReset((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_reset(void* self, bool (*callback)()) {
@@ -851,8 +851,8 @@ long long q_temporaryfile_bytes_available(void* self) {
     return QTemporaryFile_BytesAvailable((QTemporaryFile*)self);
 }
 
-long long q_temporaryfile_qbase_bytes_available(void* self) {
-    return QTemporaryFile_QBaseBytesAvailable((QTemporaryFile*)self);
+long long q_temporaryfile_super_bytes_available(void* self) {
+    return QTemporaryFile_SuperBytesAvailable((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_bytes_available(void* self, long long (*callback)()) {
@@ -863,8 +863,8 @@ long long q_temporaryfile_bytes_to_write(void* self) {
     return QTemporaryFile_BytesToWrite((QTemporaryFile*)self);
 }
 
-long long q_temporaryfile_qbase_bytes_to_write(void* self) {
-    return QTemporaryFile_QBaseBytesToWrite((QTemporaryFile*)self);
+long long q_temporaryfile_super_bytes_to_write(void* self) {
+    return QTemporaryFile_SuperBytesToWrite((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_bytes_to_write(void* self, long long (*callback)()) {
@@ -875,8 +875,8 @@ bool q_temporaryfile_can_read_line(void* self) {
     return QTemporaryFile_CanReadLine((QTemporaryFile*)self);
 }
 
-bool q_temporaryfile_qbase_can_read_line(void* self) {
-    return QTemporaryFile_QBaseCanReadLine((QTemporaryFile*)self);
+bool q_temporaryfile_super_can_read_line(void* self) {
+    return QTemporaryFile_SuperCanReadLine((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_can_read_line(void* self, bool (*callback)()) {
@@ -887,8 +887,8 @@ bool q_temporaryfile_wait_for_ready_read(void* self, int msecs) {
     return QTemporaryFile_WaitForReadyRead((QTemporaryFile*)self, msecs);
 }
 
-bool q_temporaryfile_qbase_wait_for_ready_read(void* self, int msecs) {
-    return QTemporaryFile_QBaseWaitForReadyRead((QTemporaryFile*)self, msecs);
+bool q_temporaryfile_super_wait_for_ready_read(void* self, int msecs) {
+    return QTemporaryFile_SuperWaitForReadyRead((QTemporaryFile*)self, msecs);
 }
 
 void q_temporaryfile_on_wait_for_ready_read(void* self, bool (*callback)(void*, int)) {
@@ -899,8 +899,8 @@ bool q_temporaryfile_wait_for_bytes_written(void* self, int msecs) {
     return QTemporaryFile_WaitForBytesWritten((QTemporaryFile*)self, msecs);
 }
 
-bool q_temporaryfile_qbase_wait_for_bytes_written(void* self, int msecs) {
-    return QTemporaryFile_QBaseWaitForBytesWritten((QTemporaryFile*)self, msecs);
+bool q_temporaryfile_super_wait_for_bytes_written(void* self, int msecs) {
+    return QTemporaryFile_SuperWaitForBytesWritten((QTemporaryFile*)self, msecs);
 }
 
 void q_temporaryfile_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)) {
@@ -911,8 +911,8 @@ long long q_temporaryfile_skip_data(void* self, long long maxSize) {
     return QTemporaryFile_SkipData((QTemporaryFile*)self, maxSize);
 }
 
-long long q_temporaryfile_qbase_skip_data(void* self, long long maxSize) {
-    return QTemporaryFile_QBaseSkipData((QTemporaryFile*)self, maxSize);
+long long q_temporaryfile_super_skip_data(void* self, long long maxSize) {
+    return QTemporaryFile_SuperSkipData((QTemporaryFile*)self, maxSize);
 }
 
 void q_temporaryfile_on_skip_data(void* self, long long (*callback)(void*, long long)) {
@@ -923,8 +923,8 @@ bool q_temporaryfile_event(void* self, void* event) {
     return QTemporaryFile_Event((QTemporaryFile*)self, (QEvent*)event);
 }
 
-bool q_temporaryfile_qbase_event(void* self, void* event) {
-    return QTemporaryFile_QBaseEvent((QTemporaryFile*)self, (QEvent*)event);
+bool q_temporaryfile_super_event(void* self, void* event) {
+    return QTemporaryFile_SuperEvent((QTemporaryFile*)self, (QEvent*)event);
 }
 
 void q_temporaryfile_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -935,8 +935,8 @@ bool q_temporaryfile_event_filter(void* self, void* watched, void* event) {
     return QTemporaryFile_EventFilter((QTemporaryFile*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_temporaryfile_qbase_event_filter(void* self, void* watched, void* event) {
-    return QTemporaryFile_QBaseEventFilter((QTemporaryFile*)self, (QObject*)watched, (QEvent*)event);
+bool q_temporaryfile_super_event_filter(void* self, void* watched, void* event) {
+    return QTemporaryFile_SuperEventFilter((QTemporaryFile*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_temporaryfile_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -947,8 +947,8 @@ void q_temporaryfile_timer_event(void* self, void* event) {
     QTemporaryFile_TimerEvent((QTemporaryFile*)self, (QTimerEvent*)event);
 }
 
-void q_temporaryfile_qbase_timer_event(void* self, void* event) {
-    QTemporaryFile_QBaseTimerEvent((QTemporaryFile*)self, (QTimerEvent*)event);
+void q_temporaryfile_super_timer_event(void* self, void* event) {
+    QTemporaryFile_SuperTimerEvent((QTemporaryFile*)self, (QTimerEvent*)event);
 }
 
 void q_temporaryfile_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -959,8 +959,8 @@ void q_temporaryfile_child_event(void* self, void* event) {
     QTemporaryFile_ChildEvent((QTemporaryFile*)self, (QChildEvent*)event);
 }
 
-void q_temporaryfile_qbase_child_event(void* self, void* event) {
-    QTemporaryFile_QBaseChildEvent((QTemporaryFile*)self, (QChildEvent*)event);
+void q_temporaryfile_super_child_event(void* self, void* event) {
+    QTemporaryFile_SuperChildEvent((QTemporaryFile*)self, (QChildEvent*)event);
 }
 
 void q_temporaryfile_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -971,8 +971,8 @@ void q_temporaryfile_custom_event(void* self, void* event) {
     QTemporaryFile_CustomEvent((QTemporaryFile*)self, (QEvent*)event);
 }
 
-void q_temporaryfile_qbase_custom_event(void* self, void* event) {
-    QTemporaryFile_QBaseCustomEvent((QTemporaryFile*)self, (QEvent*)event);
+void q_temporaryfile_super_custom_event(void* self, void* event) {
+    QTemporaryFile_SuperCustomEvent((QTemporaryFile*)self, (QEvent*)event);
 }
 
 void q_temporaryfile_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -983,8 +983,8 @@ void q_temporaryfile_connect_notify(void* self, void* signal) {
     QTemporaryFile_ConnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
-void q_temporaryfile_qbase_connect_notify(void* self, void* signal) {
-    QTemporaryFile_QBaseConnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
+void q_temporaryfile_super_connect_notify(void* self, void* signal) {
+    QTemporaryFile_SuperConnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
 void q_temporaryfile_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -995,8 +995,8 @@ void q_temporaryfile_disconnect_notify(void* self, void* signal) {
     QTemporaryFile_DisconnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
-void q_temporaryfile_qbase_disconnect_notify(void* self, void* signal) {
-    QTemporaryFile_QBaseDisconnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
+void q_temporaryfile_super_disconnect_notify(void* self, void* signal) {
+    QTemporaryFile_SuperDisconnectNotify((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
 void q_temporaryfile_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1007,8 +1007,8 @@ void q_temporaryfile_set_open_mode(void* self, int32_t openMode) {
     QTemporaryFile_SetOpenMode((QTemporaryFile*)self, openMode);
 }
 
-void q_temporaryfile_qbase_set_open_mode(void* self, int32_t openMode) {
-    QTemporaryFile_QBaseSetOpenMode((QTemporaryFile*)self, openMode);
+void q_temporaryfile_super_set_open_mode(void* self, int32_t openMode) {
+    QTemporaryFile_SuperSetOpenMode((QTemporaryFile*)self, openMode);
 }
 
 void q_temporaryfile_on_set_open_mode(void* self, void (*callback)(void*, int32_t)) {
@@ -1019,8 +1019,8 @@ void q_temporaryfile_set_error_string(void* self, const char* errorString) {
     QTemporaryFile_SetErrorString((QTemporaryFile*)self, qstring(errorString));
 }
 
-void q_temporaryfile_qbase_set_error_string(void* self, const char* errorString) {
-    QTemporaryFile_QBaseSetErrorString((QTemporaryFile*)self, qstring(errorString));
+void q_temporaryfile_super_set_error_string(void* self, const char* errorString) {
+    QTemporaryFile_SuperSetErrorString((QTemporaryFile*)self, qstring(errorString));
 }
 
 void q_temporaryfile_on_set_error_string(void* self, void (*callback)(void*, const char*)) {
@@ -1031,8 +1031,8 @@ QObject* q_temporaryfile_sender(void* self) {
     return QTemporaryFile_Sender((QTemporaryFile*)self);
 }
 
-QObject* q_temporaryfile_qbase_sender(void* self) {
-    return QTemporaryFile_QBaseSender((QTemporaryFile*)self);
+QObject* q_temporaryfile_super_sender(void* self) {
+    return QTemporaryFile_SuperSender((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_sender(void* self, QObject* (*callback)()) {
@@ -1043,8 +1043,8 @@ int32_t q_temporaryfile_sender_signal_index(void* self) {
     return QTemporaryFile_SenderSignalIndex((QTemporaryFile*)self);
 }
 
-int32_t q_temporaryfile_qbase_sender_signal_index(void* self) {
-    return QTemporaryFile_QBaseSenderSignalIndex((QTemporaryFile*)self);
+int32_t q_temporaryfile_super_sender_signal_index(void* self) {
+    return QTemporaryFile_SuperSenderSignalIndex((QTemporaryFile*)self);
 }
 
 void q_temporaryfile_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1055,8 +1055,8 @@ int32_t q_temporaryfile_receivers(void* self, const char* signal) {
     return QTemporaryFile_Receivers((QTemporaryFile*)self, signal);
 }
 
-int32_t q_temporaryfile_qbase_receivers(void* self, const char* signal) {
-    return QTemporaryFile_QBaseReceivers((QTemporaryFile*)self, signal);
+int32_t q_temporaryfile_super_receivers(void* self, const char* signal) {
+    return QTemporaryFile_SuperReceivers((QTemporaryFile*)self, signal);
 }
 
 void q_temporaryfile_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1067,8 +1067,8 @@ bool q_temporaryfile_is_signal_connected(void* self, void* signal) {
     return QTemporaryFile_IsSignalConnected((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
-bool q_temporaryfile_qbase_is_signal_connected(void* self, void* signal) {
-    return QTemporaryFile_QBaseIsSignalConnected((QTemporaryFile*)self, (QMetaMethod*)signal);
+bool q_temporaryfile_super_is_signal_connected(void* self, void* signal) {
+    return QTemporaryFile_SuperIsSignalConnected((QTemporaryFile*)self, (QMetaMethod*)signal);
 }
 
 void q_temporaryfile_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

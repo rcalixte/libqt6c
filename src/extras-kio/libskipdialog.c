@@ -26,8 +26,8 @@ void k_io__skipdialog_on_meta_object(void* self, const QMetaObject* (*callback)(
     KIO__SkipDialog_OnMetaObject((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__skipdialog_qbase_meta_object(void* self) {
-    return KIO__SkipDialog_QBaseMetaObject((KIO__SkipDialog*)self);
+const QMetaObject* k_io__skipdialog_super_meta_object(void* self) {
+    return KIO__SkipDialog_SuperMetaObject((KIO__SkipDialog*)self);
 }
 
 void* k_io__skipdialog_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void k_io__skipdialog_on_metacast(void* self, void* (*callback)(void*, const cha
     KIO__SkipDialog_OnMetacast((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
-void* k_io__skipdialog_qbase_metacast(void* self, const char* param1) {
-    return KIO__SkipDialog_QBaseMetacast((KIO__SkipDialog*)self, param1);
+void* k_io__skipdialog_super_metacast(void* self, const char* param1) {
+    return KIO__SkipDialog_SuperMetacast((KIO__SkipDialog*)self, param1);
 }
 
 int32_t k_io__skipdialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void k_io__skipdialog_on_metacall(void* self, int32_t (*callback)(void*, int32_t
     KIO__SkipDialog_OnMetacall((KIO__SkipDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_io__skipdialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__SkipDialog_QBaseMetacall((KIO__SkipDialog*)self, param1, param2, param3);
+int32_t k_io__skipdialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__SkipDialog_SuperMetacall((KIO__SkipDialog*)self, param1, param2, param3);
 }
 
 const char* k_io__skipdialog_tr(const char* s) {
@@ -1504,8 +1504,8 @@ void k_io__skipdialog_set_visible(void* self, bool visible) {
     KIO__SkipDialog_SetVisible((KIO__SkipDialog*)self, visible);
 }
 
-void k_io__skipdialog_qbase_set_visible(void* self, bool visible) {
-    KIO__SkipDialog_QBaseSetVisible((KIO__SkipDialog*)self, visible);
+void k_io__skipdialog_super_set_visible(void* self, bool visible) {
+    KIO__SkipDialog_SuperSetVisible((KIO__SkipDialog*)self, visible);
 }
 
 void k_io__skipdialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1516,8 +1516,8 @@ QSize* k_io__skipdialog_size_hint(void* self) {
     return KIO__SkipDialog_SizeHint((KIO__SkipDialog*)self);
 }
 
-QSize* k_io__skipdialog_qbase_size_hint(void* self) {
-    return KIO__SkipDialog_QBaseSizeHint((KIO__SkipDialog*)self);
+QSize* k_io__skipdialog_super_size_hint(void* self) {
+    return KIO__SkipDialog_SuperSizeHint((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1528,8 +1528,8 @@ QSize* k_io__skipdialog_minimum_size_hint(void* self) {
     return KIO__SkipDialog_MinimumSizeHint((KIO__SkipDialog*)self);
 }
 
-QSize* k_io__skipdialog_qbase_minimum_size_hint(void* self) {
-    return KIO__SkipDialog_QBaseMinimumSizeHint((KIO__SkipDialog*)self);
+QSize* k_io__skipdialog_super_minimum_size_hint(void* self) {
+    return KIO__SkipDialog_SuperMinimumSizeHint((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1540,8 +1540,8 @@ void k_io__skipdialog_open(void* self) {
     KIO__SkipDialog_Open((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_qbase_open(void* self) {
-    KIO__SkipDialog_QBaseOpen((KIO__SkipDialog*)self);
+void k_io__skipdialog_super_open(void* self) {
+    KIO__SkipDialog_SuperOpen((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_open(void* self, void (*callback)()) {
@@ -1552,8 +1552,8 @@ int32_t k_io__skipdialog_exec(void* self) {
     return KIO__SkipDialog_Exec((KIO__SkipDialog*)self);
 }
 
-int32_t k_io__skipdialog_qbase_exec(void* self) {
-    return KIO__SkipDialog_QBaseExec((KIO__SkipDialog*)self);
+int32_t k_io__skipdialog_super_exec(void* self) {
+    return KIO__SkipDialog_SuperExec((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1564,8 +1564,8 @@ void k_io__skipdialog_done(void* self, int param1) {
     KIO__SkipDialog_Done((KIO__SkipDialog*)self, param1);
 }
 
-void k_io__skipdialog_qbase_done(void* self, int param1) {
-    KIO__SkipDialog_QBaseDone((KIO__SkipDialog*)self, param1);
+void k_io__skipdialog_super_done(void* self, int param1) {
+    KIO__SkipDialog_SuperDone((KIO__SkipDialog*)self, param1);
 }
 
 void k_io__skipdialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1576,8 +1576,8 @@ void k_io__skipdialog_accept(void* self) {
     KIO__SkipDialog_Accept((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_qbase_accept(void* self) {
-    KIO__SkipDialog_QBaseAccept((KIO__SkipDialog*)self);
+void k_io__skipdialog_super_accept(void* self) {
+    KIO__SkipDialog_SuperAccept((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_accept(void* self, void (*callback)()) {
@@ -1588,8 +1588,8 @@ void k_io__skipdialog_reject(void* self) {
     KIO__SkipDialog_Reject((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_qbase_reject(void* self) {
-    KIO__SkipDialog_QBaseReject((KIO__SkipDialog*)self);
+void k_io__skipdialog_super_reject(void* self) {
+    KIO__SkipDialog_SuperReject((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_reject(void* self, void (*callback)()) {
@@ -1600,8 +1600,8 @@ void k_io__skipdialog_key_press_event(void* self, void* param1) {
     KIO__SkipDialog_KeyPressEvent((KIO__SkipDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_key_press_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseKeyPressEvent((KIO__SkipDialog*)self, (QKeyEvent*)param1);
+void k_io__skipdialog_super_key_press_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperKeyPressEvent((KIO__SkipDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_io__skipdialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1612,8 +1612,8 @@ void k_io__skipdialog_close_event(void* self, void* param1) {
     KIO__SkipDialog_CloseEvent((KIO__SkipDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_close_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseCloseEvent((KIO__SkipDialog*)self, (QCloseEvent*)param1);
+void k_io__skipdialog_super_close_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperCloseEvent((KIO__SkipDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_io__skipdialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1624,8 +1624,8 @@ void k_io__skipdialog_show_event(void* self, void* param1) {
     KIO__SkipDialog_ShowEvent((KIO__SkipDialog*)self, (QShowEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_show_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseShowEvent((KIO__SkipDialog*)self, (QShowEvent*)param1);
+void k_io__skipdialog_super_show_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperShowEvent((KIO__SkipDialog*)self, (QShowEvent*)param1);
 }
 
 void k_io__skipdialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1636,8 +1636,8 @@ void k_io__skipdialog_resize_event(void* self, void* param1) {
     KIO__SkipDialog_ResizeEvent((KIO__SkipDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_resize_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseResizeEvent((KIO__SkipDialog*)self, (QResizeEvent*)param1);
+void k_io__skipdialog_super_resize_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperResizeEvent((KIO__SkipDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_io__skipdialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1648,8 +1648,8 @@ void k_io__skipdialog_context_menu_event(void* self, void* param1) {
     KIO__SkipDialog_ContextMenuEvent((KIO__SkipDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_context_menu_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseContextMenuEvent((KIO__SkipDialog*)self, (QContextMenuEvent*)param1);
+void k_io__skipdialog_super_context_menu_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperContextMenuEvent((KIO__SkipDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_io__skipdialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1660,8 +1660,8 @@ bool k_io__skipdialog_event_filter(void* self, void* param1, void* param2) {
     return KIO__SkipDialog_EventFilter((KIO__SkipDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_io__skipdialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KIO__SkipDialog_QBaseEventFilter((KIO__SkipDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_io__skipdialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KIO__SkipDialog_SuperEventFilter((KIO__SkipDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_io__skipdialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1672,8 +1672,8 @@ int32_t k_io__skipdialog_dev_type(void* self) {
     return KIO__SkipDialog_DevType((KIO__SkipDialog*)self);
 }
 
-int32_t k_io__skipdialog_qbase_dev_type(void* self) {
-    return KIO__SkipDialog_QBaseDevType((KIO__SkipDialog*)self);
+int32_t k_io__skipdialog_super_dev_type(void* self) {
+    return KIO__SkipDialog_SuperDevType((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1684,8 +1684,8 @@ int32_t k_io__skipdialog_height_for_width(void* self, int param1) {
     return KIO__SkipDialog_HeightForWidth((KIO__SkipDialog*)self, param1);
 }
 
-int32_t k_io__skipdialog_qbase_height_for_width(void* self, int param1) {
-    return KIO__SkipDialog_QBaseHeightForWidth((KIO__SkipDialog*)self, param1);
+int32_t k_io__skipdialog_super_height_for_width(void* self, int param1) {
+    return KIO__SkipDialog_SuperHeightForWidth((KIO__SkipDialog*)self, param1);
 }
 
 void k_io__skipdialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1696,8 +1696,8 @@ bool k_io__skipdialog_has_height_for_width(void* self) {
     return KIO__SkipDialog_HasHeightForWidth((KIO__SkipDialog*)self);
 }
 
-bool k_io__skipdialog_qbase_has_height_for_width(void* self) {
-    return KIO__SkipDialog_QBaseHasHeightForWidth((KIO__SkipDialog*)self);
+bool k_io__skipdialog_super_has_height_for_width(void* self) {
+    return KIO__SkipDialog_SuperHasHeightForWidth((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1708,8 +1708,8 @@ QPaintEngine* k_io__skipdialog_paint_engine(void* self) {
     return KIO__SkipDialog_PaintEngine((KIO__SkipDialog*)self);
 }
 
-QPaintEngine* k_io__skipdialog_qbase_paint_engine(void* self) {
-    return KIO__SkipDialog_QBasePaintEngine((KIO__SkipDialog*)self);
+QPaintEngine* k_io__skipdialog_super_paint_engine(void* self) {
+    return KIO__SkipDialog_SuperPaintEngine((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1720,8 +1720,8 @@ bool k_io__skipdialog_event(void* self, void* event) {
     return KIO__SkipDialog_Event((KIO__SkipDialog*)self, (QEvent*)event);
 }
 
-bool k_io__skipdialog_qbase_event(void* self, void* event) {
-    return KIO__SkipDialog_QBaseEvent((KIO__SkipDialog*)self, (QEvent*)event);
+bool k_io__skipdialog_super_event(void* self, void* event) {
+    return KIO__SkipDialog_SuperEvent((KIO__SkipDialog*)self, (QEvent*)event);
 }
 
 void k_io__skipdialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1732,8 +1732,8 @@ void k_io__skipdialog_mouse_press_event(void* self, void* event) {
     KIO__SkipDialog_MousePressEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__skipdialog_qbase_mouse_press_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseMousePressEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
+void k_io__skipdialog_super_mouse_press_event(void* self, void* event) {
+    KIO__SkipDialog_SuperMousePressEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__skipdialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1744,8 +1744,8 @@ void k_io__skipdialog_mouse_release_event(void* self, void* event) {
     KIO__SkipDialog_MouseReleaseEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__skipdialog_qbase_mouse_release_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseMouseReleaseEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
+void k_io__skipdialog_super_mouse_release_event(void* self, void* event) {
+    KIO__SkipDialog_SuperMouseReleaseEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__skipdialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1756,8 +1756,8 @@ void k_io__skipdialog_mouse_double_click_event(void* self, void* event) {
     KIO__SkipDialog_MouseDoubleClickEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__skipdialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseMouseDoubleClickEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
+void k_io__skipdialog_super_mouse_double_click_event(void* self, void* event) {
+    KIO__SkipDialog_SuperMouseDoubleClickEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__skipdialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1768,8 +1768,8 @@ void k_io__skipdialog_mouse_move_event(void* self, void* event) {
     KIO__SkipDialog_MouseMoveEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__skipdialog_qbase_mouse_move_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseMouseMoveEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
+void k_io__skipdialog_super_mouse_move_event(void* self, void* event) {
+    KIO__SkipDialog_SuperMouseMoveEvent((KIO__SkipDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__skipdialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1780,8 +1780,8 @@ void k_io__skipdialog_wheel_event(void* self, void* event) {
     KIO__SkipDialog_WheelEvent((KIO__SkipDialog*)self, (QWheelEvent*)event);
 }
 
-void k_io__skipdialog_qbase_wheel_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseWheelEvent((KIO__SkipDialog*)self, (QWheelEvent*)event);
+void k_io__skipdialog_super_wheel_event(void* self, void* event) {
+    KIO__SkipDialog_SuperWheelEvent((KIO__SkipDialog*)self, (QWheelEvent*)event);
 }
 
 void k_io__skipdialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1792,8 +1792,8 @@ void k_io__skipdialog_key_release_event(void* self, void* event) {
     KIO__SkipDialog_KeyReleaseEvent((KIO__SkipDialog*)self, (QKeyEvent*)event);
 }
 
-void k_io__skipdialog_qbase_key_release_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseKeyReleaseEvent((KIO__SkipDialog*)self, (QKeyEvent*)event);
+void k_io__skipdialog_super_key_release_event(void* self, void* event) {
+    KIO__SkipDialog_SuperKeyReleaseEvent((KIO__SkipDialog*)self, (QKeyEvent*)event);
 }
 
 void k_io__skipdialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1804,8 +1804,8 @@ void k_io__skipdialog_focus_in_event(void* self, void* event) {
     KIO__SkipDialog_FocusInEvent((KIO__SkipDialog*)self, (QFocusEvent*)event);
 }
 
-void k_io__skipdialog_qbase_focus_in_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseFocusInEvent((KIO__SkipDialog*)self, (QFocusEvent*)event);
+void k_io__skipdialog_super_focus_in_event(void* self, void* event) {
+    KIO__SkipDialog_SuperFocusInEvent((KIO__SkipDialog*)self, (QFocusEvent*)event);
 }
 
 void k_io__skipdialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1816,8 +1816,8 @@ void k_io__skipdialog_focus_out_event(void* self, void* event) {
     KIO__SkipDialog_FocusOutEvent((KIO__SkipDialog*)self, (QFocusEvent*)event);
 }
 
-void k_io__skipdialog_qbase_focus_out_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseFocusOutEvent((KIO__SkipDialog*)self, (QFocusEvent*)event);
+void k_io__skipdialog_super_focus_out_event(void* self, void* event) {
+    KIO__SkipDialog_SuperFocusOutEvent((KIO__SkipDialog*)self, (QFocusEvent*)event);
 }
 
 void k_io__skipdialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1828,8 +1828,8 @@ void k_io__skipdialog_enter_event(void* self, void* event) {
     KIO__SkipDialog_EnterEvent((KIO__SkipDialog*)self, (QEnterEvent*)event);
 }
 
-void k_io__skipdialog_qbase_enter_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseEnterEvent((KIO__SkipDialog*)self, (QEnterEvent*)event);
+void k_io__skipdialog_super_enter_event(void* self, void* event) {
+    KIO__SkipDialog_SuperEnterEvent((KIO__SkipDialog*)self, (QEnterEvent*)event);
 }
 
 void k_io__skipdialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1840,8 +1840,8 @@ void k_io__skipdialog_leave_event(void* self, void* event) {
     KIO__SkipDialog_LeaveEvent((KIO__SkipDialog*)self, (QEvent*)event);
 }
 
-void k_io__skipdialog_qbase_leave_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseLeaveEvent((KIO__SkipDialog*)self, (QEvent*)event);
+void k_io__skipdialog_super_leave_event(void* self, void* event) {
+    KIO__SkipDialog_SuperLeaveEvent((KIO__SkipDialog*)self, (QEvent*)event);
 }
 
 void k_io__skipdialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1852,8 +1852,8 @@ void k_io__skipdialog_paint_event(void* self, void* event) {
     KIO__SkipDialog_PaintEvent((KIO__SkipDialog*)self, (QPaintEvent*)event);
 }
 
-void k_io__skipdialog_qbase_paint_event(void* self, void* event) {
-    KIO__SkipDialog_QBasePaintEvent((KIO__SkipDialog*)self, (QPaintEvent*)event);
+void k_io__skipdialog_super_paint_event(void* self, void* event) {
+    KIO__SkipDialog_SuperPaintEvent((KIO__SkipDialog*)self, (QPaintEvent*)event);
 }
 
 void k_io__skipdialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1864,8 +1864,8 @@ void k_io__skipdialog_move_event(void* self, void* event) {
     KIO__SkipDialog_MoveEvent((KIO__SkipDialog*)self, (QMoveEvent*)event);
 }
 
-void k_io__skipdialog_qbase_move_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseMoveEvent((KIO__SkipDialog*)self, (QMoveEvent*)event);
+void k_io__skipdialog_super_move_event(void* self, void* event) {
+    KIO__SkipDialog_SuperMoveEvent((KIO__SkipDialog*)self, (QMoveEvent*)event);
 }
 
 void k_io__skipdialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1876,8 +1876,8 @@ void k_io__skipdialog_tablet_event(void* self, void* event) {
     KIO__SkipDialog_TabletEvent((KIO__SkipDialog*)self, (QTabletEvent*)event);
 }
 
-void k_io__skipdialog_qbase_tablet_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseTabletEvent((KIO__SkipDialog*)self, (QTabletEvent*)event);
+void k_io__skipdialog_super_tablet_event(void* self, void* event) {
+    KIO__SkipDialog_SuperTabletEvent((KIO__SkipDialog*)self, (QTabletEvent*)event);
 }
 
 void k_io__skipdialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1888,8 +1888,8 @@ void k_io__skipdialog_action_event(void* self, void* event) {
     KIO__SkipDialog_ActionEvent((KIO__SkipDialog*)self, (QActionEvent*)event);
 }
 
-void k_io__skipdialog_qbase_action_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseActionEvent((KIO__SkipDialog*)self, (QActionEvent*)event);
+void k_io__skipdialog_super_action_event(void* self, void* event) {
+    KIO__SkipDialog_SuperActionEvent((KIO__SkipDialog*)self, (QActionEvent*)event);
 }
 
 void k_io__skipdialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1900,8 +1900,8 @@ void k_io__skipdialog_drag_enter_event(void* self, void* event) {
     KIO__SkipDialog_DragEnterEvent((KIO__SkipDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_io__skipdialog_qbase_drag_enter_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseDragEnterEvent((KIO__SkipDialog*)self, (QDragEnterEvent*)event);
+void k_io__skipdialog_super_drag_enter_event(void* self, void* event) {
+    KIO__SkipDialog_SuperDragEnterEvent((KIO__SkipDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_io__skipdialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1912,8 +1912,8 @@ void k_io__skipdialog_drag_move_event(void* self, void* event) {
     KIO__SkipDialog_DragMoveEvent((KIO__SkipDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_io__skipdialog_qbase_drag_move_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseDragMoveEvent((KIO__SkipDialog*)self, (QDragMoveEvent*)event);
+void k_io__skipdialog_super_drag_move_event(void* self, void* event) {
+    KIO__SkipDialog_SuperDragMoveEvent((KIO__SkipDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_io__skipdialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1924,8 +1924,8 @@ void k_io__skipdialog_drag_leave_event(void* self, void* event) {
     KIO__SkipDialog_DragLeaveEvent((KIO__SkipDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_io__skipdialog_qbase_drag_leave_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseDragLeaveEvent((KIO__SkipDialog*)self, (QDragLeaveEvent*)event);
+void k_io__skipdialog_super_drag_leave_event(void* self, void* event) {
+    KIO__SkipDialog_SuperDragLeaveEvent((KIO__SkipDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_io__skipdialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1936,8 +1936,8 @@ void k_io__skipdialog_drop_event(void* self, void* event) {
     KIO__SkipDialog_DropEvent((KIO__SkipDialog*)self, (QDropEvent*)event);
 }
 
-void k_io__skipdialog_qbase_drop_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseDropEvent((KIO__SkipDialog*)self, (QDropEvent*)event);
+void k_io__skipdialog_super_drop_event(void* self, void* event) {
+    KIO__SkipDialog_SuperDropEvent((KIO__SkipDialog*)self, (QDropEvent*)event);
 }
 
 void k_io__skipdialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -1948,8 +1948,8 @@ void k_io__skipdialog_hide_event(void* self, void* event) {
     KIO__SkipDialog_HideEvent((KIO__SkipDialog*)self, (QHideEvent*)event);
 }
 
-void k_io__skipdialog_qbase_hide_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseHideEvent((KIO__SkipDialog*)self, (QHideEvent*)event);
+void k_io__skipdialog_super_hide_event(void* self, void* event) {
+    KIO__SkipDialog_SuperHideEvent((KIO__SkipDialog*)self, (QHideEvent*)event);
 }
 
 void k_io__skipdialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -1960,8 +1960,8 @@ bool k_io__skipdialog_native_event(void* self, char* eventType, void* message, i
     return KIO__SkipDialog_NativeEvent((KIO__SkipDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_io__skipdialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KIO__SkipDialog_QBaseNativeEvent((KIO__SkipDialog*)self, qstring(eventType), message, result);
+bool k_io__skipdialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KIO__SkipDialog_SuperNativeEvent((KIO__SkipDialog*)self, qstring(eventType), message, result);
 }
 
 void k_io__skipdialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -1972,8 +1972,8 @@ void k_io__skipdialog_change_event(void* self, void* param1) {
     KIO__SkipDialog_ChangeEvent((KIO__SkipDialog*)self, (QEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_change_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseChangeEvent((KIO__SkipDialog*)self, (QEvent*)param1);
+void k_io__skipdialog_super_change_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperChangeEvent((KIO__SkipDialog*)self, (QEvent*)param1);
 }
 
 void k_io__skipdialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1984,8 +1984,8 @@ int32_t k_io__skipdialog_metric(void* self, int32_t param1) {
     return KIO__SkipDialog_Metric((KIO__SkipDialog*)self, param1);
 }
 
-int32_t k_io__skipdialog_qbase_metric(void* self, int32_t param1) {
-    return KIO__SkipDialog_QBaseMetric((KIO__SkipDialog*)self, param1);
+int32_t k_io__skipdialog_super_metric(void* self, int32_t param1) {
+    return KIO__SkipDialog_SuperMetric((KIO__SkipDialog*)self, param1);
 }
 
 void k_io__skipdialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -1996,8 +1996,8 @@ void k_io__skipdialog_init_painter(void* self, void* painter) {
     KIO__SkipDialog_InitPainter((KIO__SkipDialog*)self, (QPainter*)painter);
 }
 
-void k_io__skipdialog_qbase_init_painter(void* self, void* painter) {
-    KIO__SkipDialog_QBaseInitPainter((KIO__SkipDialog*)self, (QPainter*)painter);
+void k_io__skipdialog_super_init_painter(void* self, void* painter) {
+    KIO__SkipDialog_SuperInitPainter((KIO__SkipDialog*)self, (QPainter*)painter);
 }
 
 void k_io__skipdialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2008,8 +2008,8 @@ QPaintDevice* k_io__skipdialog_redirected(void* self, void* offset) {
     return KIO__SkipDialog_Redirected((KIO__SkipDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_io__skipdialog_qbase_redirected(void* self, void* offset) {
-    return KIO__SkipDialog_QBaseRedirected((KIO__SkipDialog*)self, (QPoint*)offset);
+QPaintDevice* k_io__skipdialog_super_redirected(void* self, void* offset) {
+    return KIO__SkipDialog_SuperRedirected((KIO__SkipDialog*)self, (QPoint*)offset);
 }
 
 void k_io__skipdialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2020,8 +2020,8 @@ QPainter* k_io__skipdialog_shared_painter(void* self) {
     return KIO__SkipDialog_SharedPainter((KIO__SkipDialog*)self);
 }
 
-QPainter* k_io__skipdialog_qbase_shared_painter(void* self) {
-    return KIO__SkipDialog_QBaseSharedPainter((KIO__SkipDialog*)self);
+QPainter* k_io__skipdialog_super_shared_painter(void* self) {
+    return KIO__SkipDialog_SuperSharedPainter((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2032,8 +2032,8 @@ void k_io__skipdialog_input_method_event(void* self, void* param1) {
     KIO__SkipDialog_InputMethodEvent((KIO__SkipDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_io__skipdialog_qbase_input_method_event(void* self, void* param1) {
-    KIO__SkipDialog_QBaseInputMethodEvent((KIO__SkipDialog*)self, (QInputMethodEvent*)param1);
+void k_io__skipdialog_super_input_method_event(void* self, void* param1) {
+    KIO__SkipDialog_SuperInputMethodEvent((KIO__SkipDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_io__skipdialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2044,8 +2044,8 @@ QVariant* k_io__skipdialog_input_method_query(void* self, int32_t param1) {
     return KIO__SkipDialog_InputMethodQuery((KIO__SkipDialog*)self, param1);
 }
 
-QVariant* k_io__skipdialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KIO__SkipDialog_QBaseInputMethodQuery((KIO__SkipDialog*)self, param1);
+QVariant* k_io__skipdialog_super_input_method_query(void* self, int32_t param1) {
+    return KIO__SkipDialog_SuperInputMethodQuery((KIO__SkipDialog*)self, param1);
 }
 
 void k_io__skipdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2056,8 +2056,8 @@ bool k_io__skipdialog_focus_next_prev_child(void* self, bool next) {
     return KIO__SkipDialog_FocusNextPrevChild((KIO__SkipDialog*)self, next);
 }
 
-bool k_io__skipdialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KIO__SkipDialog_QBaseFocusNextPrevChild((KIO__SkipDialog*)self, next);
+bool k_io__skipdialog_super_focus_next_prev_child(void* self, bool next) {
+    return KIO__SkipDialog_SuperFocusNextPrevChild((KIO__SkipDialog*)self, next);
 }
 
 void k_io__skipdialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2068,8 +2068,8 @@ void k_io__skipdialog_timer_event(void* self, void* event) {
     KIO__SkipDialog_TimerEvent((KIO__SkipDialog*)self, (QTimerEvent*)event);
 }
 
-void k_io__skipdialog_qbase_timer_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseTimerEvent((KIO__SkipDialog*)self, (QTimerEvent*)event);
+void k_io__skipdialog_super_timer_event(void* self, void* event) {
+    KIO__SkipDialog_SuperTimerEvent((KIO__SkipDialog*)self, (QTimerEvent*)event);
 }
 
 void k_io__skipdialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2080,8 +2080,8 @@ void k_io__skipdialog_child_event(void* self, void* event) {
     KIO__SkipDialog_ChildEvent((KIO__SkipDialog*)self, (QChildEvent*)event);
 }
 
-void k_io__skipdialog_qbase_child_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseChildEvent((KIO__SkipDialog*)self, (QChildEvent*)event);
+void k_io__skipdialog_super_child_event(void* self, void* event) {
+    KIO__SkipDialog_SuperChildEvent((KIO__SkipDialog*)self, (QChildEvent*)event);
 }
 
 void k_io__skipdialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2092,8 +2092,8 @@ void k_io__skipdialog_custom_event(void* self, void* event) {
     KIO__SkipDialog_CustomEvent((KIO__SkipDialog*)self, (QEvent*)event);
 }
 
-void k_io__skipdialog_qbase_custom_event(void* self, void* event) {
-    KIO__SkipDialog_QBaseCustomEvent((KIO__SkipDialog*)self, (QEvent*)event);
+void k_io__skipdialog_super_custom_event(void* self, void* event) {
+    KIO__SkipDialog_SuperCustomEvent((KIO__SkipDialog*)self, (QEvent*)event);
 }
 
 void k_io__skipdialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2104,8 +2104,8 @@ void k_io__skipdialog_connect_notify(void* self, void* signal) {
     KIO__SkipDialog_ConnectNotify((KIO__SkipDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_io__skipdialog_qbase_connect_notify(void* self, void* signal) {
-    KIO__SkipDialog_QBaseConnectNotify((KIO__SkipDialog*)self, (QMetaMethod*)signal);
+void k_io__skipdialog_super_connect_notify(void* self, void* signal) {
+    KIO__SkipDialog_SuperConnectNotify((KIO__SkipDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__skipdialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2116,8 +2116,8 @@ void k_io__skipdialog_disconnect_notify(void* self, void* signal) {
     KIO__SkipDialog_DisconnectNotify((KIO__SkipDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_io__skipdialog_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__SkipDialog_QBaseDisconnectNotify((KIO__SkipDialog*)self, (QMetaMethod*)signal);
+void k_io__skipdialog_super_disconnect_notify(void* self, void* signal) {
+    KIO__SkipDialog_SuperDisconnectNotify((KIO__SkipDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__skipdialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2128,8 +2128,8 @@ void k_io__skipdialog_adjust_position(void* self, void* param1) {
     KIO__SkipDialog_AdjustPosition((KIO__SkipDialog*)self, (QWidget*)param1);
 }
 
-void k_io__skipdialog_qbase_adjust_position(void* self, void* param1) {
-    KIO__SkipDialog_QBaseAdjustPosition((KIO__SkipDialog*)self, (QWidget*)param1);
+void k_io__skipdialog_super_adjust_position(void* self, void* param1) {
+    KIO__SkipDialog_SuperAdjustPosition((KIO__SkipDialog*)self, (QWidget*)param1);
 }
 
 void k_io__skipdialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2140,8 +2140,8 @@ void k_io__skipdialog_update_micro_focus(void* self) {
     KIO__SkipDialog_UpdateMicroFocus((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_qbase_update_micro_focus(void* self) {
-    KIO__SkipDialog_QBaseUpdateMicroFocus((KIO__SkipDialog*)self);
+void k_io__skipdialog_super_update_micro_focus(void* self) {
+    KIO__SkipDialog_SuperUpdateMicroFocus((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2152,8 +2152,8 @@ void k_io__skipdialog_create(void* self) {
     KIO__SkipDialog_Create((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_qbase_create(void* self) {
-    KIO__SkipDialog_QBaseCreate((KIO__SkipDialog*)self);
+void k_io__skipdialog_super_create(void* self) {
+    KIO__SkipDialog_SuperCreate((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_create(void* self, void (*callback)()) {
@@ -2164,8 +2164,8 @@ void k_io__skipdialog_destroy(void* self) {
     KIO__SkipDialog_Destroy((KIO__SkipDialog*)self);
 }
 
-void k_io__skipdialog_qbase_destroy(void* self) {
-    KIO__SkipDialog_QBaseDestroy((KIO__SkipDialog*)self);
+void k_io__skipdialog_super_destroy(void* self) {
+    KIO__SkipDialog_SuperDestroy((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_destroy(void* self, void (*callback)()) {
@@ -2176,8 +2176,8 @@ bool k_io__skipdialog_focus_next_child(void* self) {
     return KIO__SkipDialog_FocusNextChild((KIO__SkipDialog*)self);
 }
 
-bool k_io__skipdialog_qbase_focus_next_child(void* self) {
-    return KIO__SkipDialog_QBaseFocusNextChild((KIO__SkipDialog*)self);
+bool k_io__skipdialog_super_focus_next_child(void* self) {
+    return KIO__SkipDialog_SuperFocusNextChild((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2188,8 +2188,8 @@ bool k_io__skipdialog_focus_previous_child(void* self) {
     return KIO__SkipDialog_FocusPreviousChild((KIO__SkipDialog*)self);
 }
 
-bool k_io__skipdialog_qbase_focus_previous_child(void* self) {
-    return KIO__SkipDialog_QBaseFocusPreviousChild((KIO__SkipDialog*)self);
+bool k_io__skipdialog_super_focus_previous_child(void* self) {
+    return KIO__SkipDialog_SuperFocusPreviousChild((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2200,8 +2200,8 @@ QObject* k_io__skipdialog_sender(void* self) {
     return KIO__SkipDialog_Sender((KIO__SkipDialog*)self);
 }
 
-QObject* k_io__skipdialog_qbase_sender(void* self) {
-    return KIO__SkipDialog_QBaseSender((KIO__SkipDialog*)self);
+QObject* k_io__skipdialog_super_sender(void* self) {
+    return KIO__SkipDialog_SuperSender((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2212,8 +2212,8 @@ int32_t k_io__skipdialog_sender_signal_index(void* self) {
     return KIO__SkipDialog_SenderSignalIndex((KIO__SkipDialog*)self);
 }
 
-int32_t k_io__skipdialog_qbase_sender_signal_index(void* self) {
-    return KIO__SkipDialog_QBaseSenderSignalIndex((KIO__SkipDialog*)self);
+int32_t k_io__skipdialog_super_sender_signal_index(void* self) {
+    return KIO__SkipDialog_SuperSenderSignalIndex((KIO__SkipDialog*)self);
 }
 
 void k_io__skipdialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2224,8 +2224,8 @@ int32_t k_io__skipdialog_receivers(void* self, const char* signal) {
     return KIO__SkipDialog_Receivers((KIO__SkipDialog*)self, signal);
 }
 
-int32_t k_io__skipdialog_qbase_receivers(void* self, const char* signal) {
-    return KIO__SkipDialog_QBaseReceivers((KIO__SkipDialog*)self, signal);
+int32_t k_io__skipdialog_super_receivers(void* self, const char* signal) {
+    return KIO__SkipDialog_SuperReceivers((KIO__SkipDialog*)self, signal);
 }
 
 void k_io__skipdialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2236,8 +2236,8 @@ bool k_io__skipdialog_is_signal_connected(void* self, void* signal) {
     return KIO__SkipDialog_IsSignalConnected((KIO__SkipDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__skipdialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__SkipDialog_QBaseIsSignalConnected((KIO__SkipDialog*)self, (QMetaMethod*)signal);
+bool k_io__skipdialog_super_is_signal_connected(void* self, void* signal) {
+    return KIO__SkipDialog_SuperIsSignalConnected((KIO__SkipDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__skipdialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2248,8 +2248,8 @@ double k_io__skipdialog_get_decoded_metric_f(void* self, int32_t metricA, int32_
     return KIO__SkipDialog_GetDecodedMetricF((KIO__SkipDialog*)self, metricA, metricB);
 }
 
-double k_io__skipdialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KIO__SkipDialog_QBaseGetDecodedMetricF((KIO__SkipDialog*)self, metricA, metricB);
+double k_io__skipdialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KIO__SkipDialog_SuperGetDecodedMetricF((KIO__SkipDialog*)self, metricA, metricB);
 }
 
 void k_io__skipdialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

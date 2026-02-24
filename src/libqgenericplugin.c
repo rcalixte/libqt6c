@@ -21,8 +21,8 @@ void q_genericplugin_on_meta_object(void* self, const QMetaObject* (*callback)()
     QGenericPlugin_OnMetaObject((QGenericPlugin*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_genericplugin_qbase_meta_object(void* self) {
-    return QGenericPlugin_QBaseMetaObject((QGenericPlugin*)self);
+const QMetaObject* q_genericplugin_super_meta_object(void* self) {
+    return QGenericPlugin_SuperMetaObject((QGenericPlugin*)self);
 }
 
 void* q_genericplugin_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_genericplugin_on_metacast(void* self, void* (*callback)(void*, const char
     QGenericPlugin_OnMetacast((QGenericPlugin*)self, (intptr_t)callback);
 }
 
-void* q_genericplugin_qbase_metacast(void* self, const char* param1) {
-    return QGenericPlugin_QBaseMetacast((QGenericPlugin*)self, param1);
+void* q_genericplugin_super_metacast(void* self, const char* param1) {
+    return QGenericPlugin_SuperMetacast((QGenericPlugin*)self, param1);
 }
 
 int32_t q_genericplugin_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_genericplugin_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QGenericPlugin_OnMetacall((QGenericPlugin*)self, (intptr_t)callback);
 }
 
-int32_t q_genericplugin_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGenericPlugin_QBaseMetacall((QGenericPlugin*)self, param1, param2, param3);
+int32_t q_genericplugin_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGenericPlugin_SuperMetacall((QGenericPlugin*)self, param1, param2, param3);
 }
 
 const char* q_genericplugin_tr(const char* s) {
@@ -64,8 +64,8 @@ void q_genericplugin_on_create(void* self, QObject* (*callback)(void*, const cha
     QGenericPlugin_OnCreate((QGenericPlugin*)self, (intptr_t)callback);
 }
 
-QObject* q_genericplugin_qbase_create(void* self, const char* name, const char* spec) {
-    return QGenericPlugin_QBaseCreate((QGenericPlugin*)self, qstring(name), qstring(spec));
+QObject* q_genericplugin_super_create(void* self, const char* name, const char* spec) {
+    return QGenericPlugin_SuperCreate((QGenericPlugin*)self, qstring(name), qstring(spec));
 }
 
 const char* q_genericplugin_tr2(const char* s, const char* c) {
@@ -297,8 +297,8 @@ bool q_genericplugin_event(void* self, void* event) {
     return QGenericPlugin_Event((QGenericPlugin*)self, (QEvent*)event);
 }
 
-bool q_genericplugin_qbase_event(void* self, void* event) {
-    return QGenericPlugin_QBaseEvent((QGenericPlugin*)self, (QEvent*)event);
+bool q_genericplugin_super_event(void* self, void* event) {
+    return QGenericPlugin_SuperEvent((QGenericPlugin*)self, (QEvent*)event);
 }
 
 void q_genericplugin_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -309,8 +309,8 @@ bool q_genericplugin_event_filter(void* self, void* watched, void* event) {
     return QGenericPlugin_EventFilter((QGenericPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_genericplugin_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGenericPlugin_QBaseEventFilter((QGenericPlugin*)self, (QObject*)watched, (QEvent*)event);
+bool q_genericplugin_super_event_filter(void* self, void* watched, void* event) {
+    return QGenericPlugin_SuperEventFilter((QGenericPlugin*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_genericplugin_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -321,8 +321,8 @@ void q_genericplugin_timer_event(void* self, void* event) {
     QGenericPlugin_TimerEvent((QGenericPlugin*)self, (QTimerEvent*)event);
 }
 
-void q_genericplugin_qbase_timer_event(void* self, void* event) {
-    QGenericPlugin_QBaseTimerEvent((QGenericPlugin*)self, (QTimerEvent*)event);
+void q_genericplugin_super_timer_event(void* self, void* event) {
+    QGenericPlugin_SuperTimerEvent((QGenericPlugin*)self, (QTimerEvent*)event);
 }
 
 void q_genericplugin_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -333,8 +333,8 @@ void q_genericplugin_child_event(void* self, void* event) {
     QGenericPlugin_ChildEvent((QGenericPlugin*)self, (QChildEvent*)event);
 }
 
-void q_genericplugin_qbase_child_event(void* self, void* event) {
-    QGenericPlugin_QBaseChildEvent((QGenericPlugin*)self, (QChildEvent*)event);
+void q_genericplugin_super_child_event(void* self, void* event) {
+    QGenericPlugin_SuperChildEvent((QGenericPlugin*)self, (QChildEvent*)event);
 }
 
 void q_genericplugin_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -345,8 +345,8 @@ void q_genericplugin_custom_event(void* self, void* event) {
     QGenericPlugin_CustomEvent((QGenericPlugin*)self, (QEvent*)event);
 }
 
-void q_genericplugin_qbase_custom_event(void* self, void* event) {
-    QGenericPlugin_QBaseCustomEvent((QGenericPlugin*)self, (QEvent*)event);
+void q_genericplugin_super_custom_event(void* self, void* event) {
+    QGenericPlugin_SuperCustomEvent((QGenericPlugin*)self, (QEvent*)event);
 }
 
 void q_genericplugin_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -357,8 +357,8 @@ void q_genericplugin_connect_notify(void* self, void* signal) {
     QGenericPlugin_ConnectNotify((QGenericPlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_genericplugin_qbase_connect_notify(void* self, void* signal) {
-    QGenericPlugin_QBaseConnectNotify((QGenericPlugin*)self, (QMetaMethod*)signal);
+void q_genericplugin_super_connect_notify(void* self, void* signal) {
+    QGenericPlugin_SuperConnectNotify((QGenericPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_genericplugin_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -369,8 +369,8 @@ void q_genericplugin_disconnect_notify(void* self, void* signal) {
     QGenericPlugin_DisconnectNotify((QGenericPlugin*)self, (QMetaMethod*)signal);
 }
 
-void q_genericplugin_qbase_disconnect_notify(void* self, void* signal) {
-    QGenericPlugin_QBaseDisconnectNotify((QGenericPlugin*)self, (QMetaMethod*)signal);
+void q_genericplugin_super_disconnect_notify(void* self, void* signal) {
+    QGenericPlugin_SuperDisconnectNotify((QGenericPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_genericplugin_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -381,8 +381,8 @@ QObject* q_genericplugin_sender(void* self) {
     return QGenericPlugin_Sender((QGenericPlugin*)self);
 }
 
-QObject* q_genericplugin_qbase_sender(void* self) {
-    return QGenericPlugin_QBaseSender((QGenericPlugin*)self);
+QObject* q_genericplugin_super_sender(void* self) {
+    return QGenericPlugin_SuperSender((QGenericPlugin*)self);
 }
 
 void q_genericplugin_on_sender(void* self, QObject* (*callback)()) {
@@ -393,8 +393,8 @@ int32_t q_genericplugin_sender_signal_index(void* self) {
     return QGenericPlugin_SenderSignalIndex((QGenericPlugin*)self);
 }
 
-int32_t q_genericplugin_qbase_sender_signal_index(void* self) {
-    return QGenericPlugin_QBaseSenderSignalIndex((QGenericPlugin*)self);
+int32_t q_genericplugin_super_sender_signal_index(void* self) {
+    return QGenericPlugin_SuperSenderSignalIndex((QGenericPlugin*)self);
 }
 
 void q_genericplugin_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -405,8 +405,8 @@ int32_t q_genericplugin_receivers(void* self, const char* signal) {
     return QGenericPlugin_Receivers((QGenericPlugin*)self, signal);
 }
 
-int32_t q_genericplugin_qbase_receivers(void* self, const char* signal) {
-    return QGenericPlugin_QBaseReceivers((QGenericPlugin*)self, signal);
+int32_t q_genericplugin_super_receivers(void* self, const char* signal) {
+    return QGenericPlugin_SuperReceivers((QGenericPlugin*)self, signal);
 }
 
 void q_genericplugin_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -417,8 +417,8 @@ bool q_genericplugin_is_signal_connected(void* self, void* signal) {
     return QGenericPlugin_IsSignalConnected((QGenericPlugin*)self, (QMetaMethod*)signal);
 }
 
-bool q_genericplugin_qbase_is_signal_connected(void* self, void* signal) {
-    return QGenericPlugin_QBaseIsSignalConnected((QGenericPlugin*)self, (QMetaMethod*)signal);
+bool q_genericplugin_super_is_signal_connected(void* self, void* signal) {
+    return QGenericPlugin_SuperIsSignalConnected((QGenericPlugin*)self, (QMetaMethod*)signal);
 }
 
 void q_genericplugin_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

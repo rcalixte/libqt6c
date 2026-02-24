@@ -23,8 +23,8 @@ void q_pdfpagenavigator_on_meta_object(void* self, const QMetaObject* (*callback
     QPdfPageNavigator_OnMetaObject((QPdfPageNavigator*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pdfpagenavigator_qbase_meta_object(void* self) {
-    return QPdfPageNavigator_QBaseMetaObject((QPdfPageNavigator*)self);
+const QMetaObject* q_pdfpagenavigator_super_meta_object(void* self) {
+    return QPdfPageNavigator_SuperMetaObject((QPdfPageNavigator*)self);
 }
 
 void* q_pdfpagenavigator_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_pdfpagenavigator_on_metacast(void* self, void* (*callback)(void*, const c
     QPdfPageNavigator_OnMetacast((QPdfPageNavigator*)self, (intptr_t)callback);
 }
 
-void* q_pdfpagenavigator_qbase_metacast(void* self, const char* param1) {
-    return QPdfPageNavigator_QBaseMetacast((QPdfPageNavigator*)self, param1);
+void* q_pdfpagenavigator_super_metacast(void* self, const char* param1) {
+    return QPdfPageNavigator_SuperMetacast((QPdfPageNavigator*)self, param1);
 }
 
 int32_t q_pdfpagenavigator_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_pdfpagenavigator_on_metacall(void* self, int32_t (*callback)(void*, int32
     QPdfPageNavigator_OnMetacall((QPdfPageNavigator*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfpagenavigator_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPdfPageNavigator_QBaseMetacall((QPdfPageNavigator*)self, param1, param2, param3);
+int32_t q_pdfpagenavigator_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPdfPageNavigator_SuperMetacall((QPdfPageNavigator*)self, param1, param2, param3);
 }
 
 const char* q_pdfpagenavigator_tr(const char* s) {
@@ -158,8 +158,8 @@ void q_pdfpagenavigator_on_current_link(void* self, QPdfLink* (*callback)()) {
     QPdfPageNavigator_OnCurrentLink((QPdfPageNavigator*)self, (intptr_t)callback);
 }
 
-QPdfLink* q_pdfpagenavigator_qbase_current_link(void* self) {
-    return QPdfPageNavigator_QBaseCurrentLink((QPdfPageNavigator*)self);
+QPdfLink* q_pdfpagenavigator_super_current_link(void* self) {
+    return QPdfPageNavigator_SuperCurrentLink((QPdfPageNavigator*)self);
 }
 
 const char* q_pdfpagenavigator_tr2(const char* s, const char* c) {
@@ -395,8 +395,8 @@ bool q_pdfpagenavigator_event(void* self, void* event) {
     return QPdfPageNavigator_Event((QPdfPageNavigator*)self, (QEvent*)event);
 }
 
-bool q_pdfpagenavigator_qbase_event(void* self, void* event) {
-    return QPdfPageNavigator_QBaseEvent((QPdfPageNavigator*)self, (QEvent*)event);
+bool q_pdfpagenavigator_super_event(void* self, void* event) {
+    return QPdfPageNavigator_SuperEvent((QPdfPageNavigator*)self, (QEvent*)event);
 }
 
 void q_pdfpagenavigator_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -407,8 +407,8 @@ bool q_pdfpagenavigator_event_filter(void* self, void* watched, void* event) {
     return QPdfPageNavigator_EventFilter((QPdfPageNavigator*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pdfpagenavigator_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPdfPageNavigator_QBaseEventFilter((QPdfPageNavigator*)self, (QObject*)watched, (QEvent*)event);
+bool q_pdfpagenavigator_super_event_filter(void* self, void* watched, void* event) {
+    return QPdfPageNavigator_SuperEventFilter((QPdfPageNavigator*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pdfpagenavigator_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -419,8 +419,8 @@ void q_pdfpagenavigator_timer_event(void* self, void* event) {
     QPdfPageNavigator_TimerEvent((QPdfPageNavigator*)self, (QTimerEvent*)event);
 }
 
-void q_pdfpagenavigator_qbase_timer_event(void* self, void* event) {
-    QPdfPageNavigator_QBaseTimerEvent((QPdfPageNavigator*)self, (QTimerEvent*)event);
+void q_pdfpagenavigator_super_timer_event(void* self, void* event) {
+    QPdfPageNavigator_SuperTimerEvent((QPdfPageNavigator*)self, (QTimerEvent*)event);
 }
 
 void q_pdfpagenavigator_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -431,8 +431,8 @@ void q_pdfpagenavigator_child_event(void* self, void* event) {
     QPdfPageNavigator_ChildEvent((QPdfPageNavigator*)self, (QChildEvent*)event);
 }
 
-void q_pdfpagenavigator_qbase_child_event(void* self, void* event) {
-    QPdfPageNavigator_QBaseChildEvent((QPdfPageNavigator*)self, (QChildEvent*)event);
+void q_pdfpagenavigator_super_child_event(void* self, void* event) {
+    QPdfPageNavigator_SuperChildEvent((QPdfPageNavigator*)self, (QChildEvent*)event);
 }
 
 void q_pdfpagenavigator_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -443,8 +443,8 @@ void q_pdfpagenavigator_custom_event(void* self, void* event) {
     QPdfPageNavigator_CustomEvent((QPdfPageNavigator*)self, (QEvent*)event);
 }
 
-void q_pdfpagenavigator_qbase_custom_event(void* self, void* event) {
-    QPdfPageNavigator_QBaseCustomEvent((QPdfPageNavigator*)self, (QEvent*)event);
+void q_pdfpagenavigator_super_custom_event(void* self, void* event) {
+    QPdfPageNavigator_SuperCustomEvent((QPdfPageNavigator*)self, (QEvent*)event);
 }
 
 void q_pdfpagenavigator_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -455,8 +455,8 @@ void q_pdfpagenavigator_connect_notify(void* self, void* signal) {
     QPdfPageNavigator_ConnectNotify((QPdfPageNavigator*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfpagenavigator_qbase_connect_notify(void* self, void* signal) {
-    QPdfPageNavigator_QBaseConnectNotify((QPdfPageNavigator*)self, (QMetaMethod*)signal);
+void q_pdfpagenavigator_super_connect_notify(void* self, void* signal) {
+    QPdfPageNavigator_SuperConnectNotify((QPdfPageNavigator*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfpagenavigator_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -467,8 +467,8 @@ void q_pdfpagenavigator_disconnect_notify(void* self, void* signal) {
     QPdfPageNavigator_DisconnectNotify((QPdfPageNavigator*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfpagenavigator_qbase_disconnect_notify(void* self, void* signal) {
-    QPdfPageNavigator_QBaseDisconnectNotify((QPdfPageNavigator*)self, (QMetaMethod*)signal);
+void q_pdfpagenavigator_super_disconnect_notify(void* self, void* signal) {
+    QPdfPageNavigator_SuperDisconnectNotify((QPdfPageNavigator*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfpagenavigator_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -479,8 +479,8 @@ QObject* q_pdfpagenavigator_sender(void* self) {
     return QPdfPageNavigator_Sender((QPdfPageNavigator*)self);
 }
 
-QObject* q_pdfpagenavigator_qbase_sender(void* self) {
-    return QPdfPageNavigator_QBaseSender((QPdfPageNavigator*)self);
+QObject* q_pdfpagenavigator_super_sender(void* self) {
+    return QPdfPageNavigator_SuperSender((QPdfPageNavigator*)self);
 }
 
 void q_pdfpagenavigator_on_sender(void* self, QObject* (*callback)()) {
@@ -491,8 +491,8 @@ int32_t q_pdfpagenavigator_sender_signal_index(void* self) {
     return QPdfPageNavigator_SenderSignalIndex((QPdfPageNavigator*)self);
 }
 
-int32_t q_pdfpagenavigator_qbase_sender_signal_index(void* self) {
-    return QPdfPageNavigator_QBaseSenderSignalIndex((QPdfPageNavigator*)self);
+int32_t q_pdfpagenavigator_super_sender_signal_index(void* self) {
+    return QPdfPageNavigator_SuperSenderSignalIndex((QPdfPageNavigator*)self);
 }
 
 void q_pdfpagenavigator_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -503,8 +503,8 @@ int32_t q_pdfpagenavigator_receivers(void* self, const char* signal) {
     return QPdfPageNavigator_Receivers((QPdfPageNavigator*)self, signal);
 }
 
-int32_t q_pdfpagenavigator_qbase_receivers(void* self, const char* signal) {
-    return QPdfPageNavigator_QBaseReceivers((QPdfPageNavigator*)self, signal);
+int32_t q_pdfpagenavigator_super_receivers(void* self, const char* signal) {
+    return QPdfPageNavigator_SuperReceivers((QPdfPageNavigator*)self, signal);
 }
 
 void q_pdfpagenavigator_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -515,8 +515,8 @@ bool q_pdfpagenavigator_is_signal_connected(void* self, void* signal) {
     return QPdfPageNavigator_IsSignalConnected((QPdfPageNavigator*)self, (QMetaMethod*)signal);
 }
 
-bool q_pdfpagenavigator_qbase_is_signal_connected(void* self, void* signal) {
-    return QPdfPageNavigator_QBaseIsSignalConnected((QPdfPageNavigator*)self, (QMetaMethod*)signal);
+bool q_pdfpagenavigator_super_is_signal_connected(void* self, void* signal) {
+    return QPdfPageNavigator_SuperIsSignalConnected((QPdfPageNavigator*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfpagenavigator_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -52,8 +52,8 @@ void k_io__renamedialog_on_meta_object(void* self, const QMetaObject* (*callback
     KIO__RenameDialog_OnMetaObject((KIO__RenameDialog*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_io__renamedialog_qbase_meta_object(void* self) {
-    return KIO__RenameDialog_QBaseMetaObject((KIO__RenameDialog*)self);
+const QMetaObject* k_io__renamedialog_super_meta_object(void* self) {
+    return KIO__RenameDialog_SuperMetaObject((KIO__RenameDialog*)self);
 }
 
 void* k_io__renamedialog_metacast(void* self, const char* param1) {
@@ -64,8 +64,8 @@ void k_io__renamedialog_on_metacast(void* self, void* (*callback)(void*, const c
     KIO__RenameDialog_OnMetacast((KIO__RenameDialog*)self, (intptr_t)callback);
 }
 
-void* k_io__renamedialog_qbase_metacast(void* self, const char* param1) {
-    return KIO__RenameDialog_QBaseMetacast((KIO__RenameDialog*)self, param1);
+void* k_io__renamedialog_super_metacast(void* self, const char* param1) {
+    return KIO__RenameDialog_SuperMetacast((KIO__RenameDialog*)self, param1);
 }
 
 int32_t k_io__renamedialog_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -76,8 +76,8 @@ void k_io__renamedialog_on_metacall(void* self, int32_t (*callback)(void*, int32
     KIO__RenameDialog_OnMetacall((KIO__RenameDialog*)self, (intptr_t)callback);
 }
 
-int32_t k_io__renamedialog_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KIO__RenameDialog_QBaseMetacall((KIO__RenameDialog*)self, param1, param2, param3);
+int32_t k_io__renamedialog_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KIO__RenameDialog_SuperMetacall((KIO__RenameDialog*)self, param1, param2, param3);
 }
 
 const char* k_io__renamedialog_tr(const char* s) {
@@ -139,8 +139,8 @@ void k_io__renamedialog_on_enable_rename_button(void* self, void (*callback)(voi
     KIO__RenameDialog_OnEnableRenameButton((KIO__RenameDialog*)self, (intptr_t)callback);
 }
 
-void k_io__renamedialog_qbase_enable_rename_button(void* self, const char* param1) {
-    KIO__RenameDialog_QBaseEnableRenameButton((KIO__RenameDialog*)self, qstring(param1));
+void k_io__renamedialog_super_enable_rename_button(void* self, const char* param1) {
+    KIO__RenameDialog_SuperEnableRenameButton((KIO__RenameDialog*)self, qstring(param1));
 }
 
 const char* k_io__renamedialog_tr2(const char* s, const char* c) {
@@ -1586,8 +1586,8 @@ void k_io__renamedialog_set_visible(void* self, bool visible) {
     KIO__RenameDialog_SetVisible((KIO__RenameDialog*)self, visible);
 }
 
-void k_io__renamedialog_qbase_set_visible(void* self, bool visible) {
-    KIO__RenameDialog_QBaseSetVisible((KIO__RenameDialog*)self, visible);
+void k_io__renamedialog_super_set_visible(void* self, bool visible) {
+    KIO__RenameDialog_SuperSetVisible((KIO__RenameDialog*)self, visible);
 }
 
 void k_io__renamedialog_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1598,8 +1598,8 @@ QSize* k_io__renamedialog_size_hint(void* self) {
     return KIO__RenameDialog_SizeHint((KIO__RenameDialog*)self);
 }
 
-QSize* k_io__renamedialog_qbase_size_hint(void* self) {
-    return KIO__RenameDialog_QBaseSizeHint((KIO__RenameDialog*)self);
+QSize* k_io__renamedialog_super_size_hint(void* self) {
+    return KIO__RenameDialog_SuperSizeHint((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_size_hint(void* self, QSize* (*callback)()) {
@@ -1610,8 +1610,8 @@ QSize* k_io__renamedialog_minimum_size_hint(void* self) {
     return KIO__RenameDialog_MinimumSizeHint((KIO__RenameDialog*)self);
 }
 
-QSize* k_io__renamedialog_qbase_minimum_size_hint(void* self) {
-    return KIO__RenameDialog_QBaseMinimumSizeHint((KIO__RenameDialog*)self);
+QSize* k_io__renamedialog_super_minimum_size_hint(void* self) {
+    return KIO__RenameDialog_SuperMinimumSizeHint((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -1622,8 +1622,8 @@ void k_io__renamedialog_open(void* self) {
     KIO__RenameDialog_Open((KIO__RenameDialog*)self);
 }
 
-void k_io__renamedialog_qbase_open(void* self) {
-    KIO__RenameDialog_QBaseOpen((KIO__RenameDialog*)self);
+void k_io__renamedialog_super_open(void* self) {
+    KIO__RenameDialog_SuperOpen((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_open(void* self, void (*callback)()) {
@@ -1634,8 +1634,8 @@ int32_t k_io__renamedialog_exec(void* self) {
     return KIO__RenameDialog_Exec((KIO__RenameDialog*)self);
 }
 
-int32_t k_io__renamedialog_qbase_exec(void* self) {
-    return KIO__RenameDialog_QBaseExec((KIO__RenameDialog*)self);
+int32_t k_io__renamedialog_super_exec(void* self) {
+    return KIO__RenameDialog_SuperExec((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_exec(void* self, int32_t (*callback)()) {
@@ -1646,8 +1646,8 @@ void k_io__renamedialog_done(void* self, int param1) {
     KIO__RenameDialog_Done((KIO__RenameDialog*)self, param1);
 }
 
-void k_io__renamedialog_qbase_done(void* self, int param1) {
-    KIO__RenameDialog_QBaseDone((KIO__RenameDialog*)self, param1);
+void k_io__renamedialog_super_done(void* self, int param1) {
+    KIO__RenameDialog_SuperDone((KIO__RenameDialog*)self, param1);
 }
 
 void k_io__renamedialog_on_done(void* self, void (*callback)(void*, int)) {
@@ -1658,8 +1658,8 @@ void k_io__renamedialog_accept(void* self) {
     KIO__RenameDialog_Accept((KIO__RenameDialog*)self);
 }
 
-void k_io__renamedialog_qbase_accept(void* self) {
-    KIO__RenameDialog_QBaseAccept((KIO__RenameDialog*)self);
+void k_io__renamedialog_super_accept(void* self) {
+    KIO__RenameDialog_SuperAccept((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_accept(void* self, void (*callback)()) {
@@ -1670,8 +1670,8 @@ void k_io__renamedialog_reject(void* self) {
     KIO__RenameDialog_Reject((KIO__RenameDialog*)self);
 }
 
-void k_io__renamedialog_qbase_reject(void* self) {
-    KIO__RenameDialog_QBaseReject((KIO__RenameDialog*)self);
+void k_io__renamedialog_super_reject(void* self) {
+    KIO__RenameDialog_SuperReject((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_reject(void* self, void (*callback)()) {
@@ -1682,8 +1682,8 @@ void k_io__renamedialog_key_press_event(void* self, void* param1) {
     KIO__RenameDialog_KeyPressEvent((KIO__RenameDialog*)self, (QKeyEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_key_press_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseKeyPressEvent((KIO__RenameDialog*)self, (QKeyEvent*)param1);
+void k_io__renamedialog_super_key_press_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperKeyPressEvent((KIO__RenameDialog*)self, (QKeyEvent*)param1);
 }
 
 void k_io__renamedialog_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1694,8 +1694,8 @@ void k_io__renamedialog_close_event(void* self, void* param1) {
     KIO__RenameDialog_CloseEvent((KIO__RenameDialog*)self, (QCloseEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_close_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseCloseEvent((KIO__RenameDialog*)self, (QCloseEvent*)param1);
+void k_io__renamedialog_super_close_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperCloseEvent((KIO__RenameDialog*)self, (QCloseEvent*)param1);
 }
 
 void k_io__renamedialog_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -1706,8 +1706,8 @@ void k_io__renamedialog_show_event(void* self, void* param1) {
     KIO__RenameDialog_ShowEvent((KIO__RenameDialog*)self, (QShowEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_show_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseShowEvent((KIO__RenameDialog*)self, (QShowEvent*)param1);
+void k_io__renamedialog_super_show_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperShowEvent((KIO__RenameDialog*)self, (QShowEvent*)param1);
 }
 
 void k_io__renamedialog_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -1718,8 +1718,8 @@ void k_io__renamedialog_resize_event(void* self, void* param1) {
     KIO__RenameDialog_ResizeEvent((KIO__RenameDialog*)self, (QResizeEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_resize_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseResizeEvent((KIO__RenameDialog*)self, (QResizeEvent*)param1);
+void k_io__renamedialog_super_resize_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperResizeEvent((KIO__RenameDialog*)self, (QResizeEvent*)param1);
 }
 
 void k_io__renamedialog_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -1730,8 +1730,8 @@ void k_io__renamedialog_context_menu_event(void* self, void* param1) {
     KIO__RenameDialog_ContextMenuEvent((KIO__RenameDialog*)self, (QContextMenuEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_context_menu_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseContextMenuEvent((KIO__RenameDialog*)self, (QContextMenuEvent*)param1);
+void k_io__renamedialog_super_context_menu_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperContextMenuEvent((KIO__RenameDialog*)self, (QContextMenuEvent*)param1);
 }
 
 void k_io__renamedialog_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -1742,8 +1742,8 @@ bool k_io__renamedialog_event_filter(void* self, void* param1, void* param2) {
     return KIO__RenameDialog_EventFilter((KIO__RenameDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
-bool k_io__renamedialog_qbase_event_filter(void* self, void* param1, void* param2) {
-    return KIO__RenameDialog_QBaseEventFilter((KIO__RenameDialog*)self, (QObject*)param1, (QEvent*)param2);
+bool k_io__renamedialog_super_event_filter(void* self, void* param1, void* param2) {
+    return KIO__RenameDialog_SuperEventFilter((KIO__RenameDialog*)self, (QObject*)param1, (QEvent*)param2);
 }
 
 void k_io__renamedialog_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1754,8 +1754,8 @@ int32_t k_io__renamedialog_dev_type(void* self) {
     return KIO__RenameDialog_DevType((KIO__RenameDialog*)self);
 }
 
-int32_t k_io__renamedialog_qbase_dev_type(void* self) {
-    return KIO__RenameDialog_QBaseDevType((KIO__RenameDialog*)self);
+int32_t k_io__renamedialog_super_dev_type(void* self) {
+    return KIO__RenameDialog_SuperDevType((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1766,8 +1766,8 @@ int32_t k_io__renamedialog_height_for_width(void* self, int param1) {
     return KIO__RenameDialog_HeightForWidth((KIO__RenameDialog*)self, param1);
 }
 
-int32_t k_io__renamedialog_qbase_height_for_width(void* self, int param1) {
-    return KIO__RenameDialog_QBaseHeightForWidth((KIO__RenameDialog*)self, param1);
+int32_t k_io__renamedialog_super_height_for_width(void* self, int param1) {
+    return KIO__RenameDialog_SuperHeightForWidth((KIO__RenameDialog*)self, param1);
 }
 
 void k_io__renamedialog_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1778,8 +1778,8 @@ bool k_io__renamedialog_has_height_for_width(void* self) {
     return KIO__RenameDialog_HasHeightForWidth((KIO__RenameDialog*)self);
 }
 
-bool k_io__renamedialog_qbase_has_height_for_width(void* self) {
-    return KIO__RenameDialog_QBaseHasHeightForWidth((KIO__RenameDialog*)self);
+bool k_io__renamedialog_super_has_height_for_width(void* self) {
+    return KIO__RenameDialog_SuperHasHeightForWidth((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1790,8 +1790,8 @@ QPaintEngine* k_io__renamedialog_paint_engine(void* self) {
     return KIO__RenameDialog_PaintEngine((KIO__RenameDialog*)self);
 }
 
-QPaintEngine* k_io__renamedialog_qbase_paint_engine(void* self) {
-    return KIO__RenameDialog_QBasePaintEngine((KIO__RenameDialog*)self);
+QPaintEngine* k_io__renamedialog_super_paint_engine(void* self) {
+    return KIO__RenameDialog_SuperPaintEngine((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1802,8 +1802,8 @@ bool k_io__renamedialog_event(void* self, void* event) {
     return KIO__RenameDialog_Event((KIO__RenameDialog*)self, (QEvent*)event);
 }
 
-bool k_io__renamedialog_qbase_event(void* self, void* event) {
-    return KIO__RenameDialog_QBaseEvent((KIO__RenameDialog*)self, (QEvent*)event);
+bool k_io__renamedialog_super_event(void* self, void* event) {
+    return KIO__RenameDialog_SuperEvent((KIO__RenameDialog*)self, (QEvent*)event);
 }
 
 void k_io__renamedialog_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1814,8 +1814,8 @@ void k_io__renamedialog_mouse_press_event(void* self, void* event) {
     KIO__RenameDialog_MousePressEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamedialog_qbase_mouse_press_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseMousePressEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
+void k_io__renamedialog_super_mouse_press_event(void* self, void* event) {
+    KIO__RenameDialog_SuperMousePressEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamedialog_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1826,8 +1826,8 @@ void k_io__renamedialog_mouse_release_event(void* self, void* event) {
     KIO__RenameDialog_MouseReleaseEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamedialog_qbase_mouse_release_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseMouseReleaseEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
+void k_io__renamedialog_super_mouse_release_event(void* self, void* event) {
+    KIO__RenameDialog_SuperMouseReleaseEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamedialog_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1838,8 +1838,8 @@ void k_io__renamedialog_mouse_double_click_event(void* self, void* event) {
     KIO__RenameDialog_MouseDoubleClickEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamedialog_qbase_mouse_double_click_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseMouseDoubleClickEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
+void k_io__renamedialog_super_mouse_double_click_event(void* self, void* event) {
+    KIO__RenameDialog_SuperMouseDoubleClickEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamedialog_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1850,8 +1850,8 @@ void k_io__renamedialog_mouse_move_event(void* self, void* event) {
     KIO__RenameDialog_MouseMoveEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
-void k_io__renamedialog_qbase_mouse_move_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseMouseMoveEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
+void k_io__renamedialog_super_mouse_move_event(void* self, void* event) {
+    KIO__RenameDialog_SuperMouseMoveEvent((KIO__RenameDialog*)self, (QMouseEvent*)event);
 }
 
 void k_io__renamedialog_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1862,8 +1862,8 @@ void k_io__renamedialog_wheel_event(void* self, void* event) {
     KIO__RenameDialog_WheelEvent((KIO__RenameDialog*)self, (QWheelEvent*)event);
 }
 
-void k_io__renamedialog_qbase_wheel_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseWheelEvent((KIO__RenameDialog*)self, (QWheelEvent*)event);
+void k_io__renamedialog_super_wheel_event(void* self, void* event) {
+    KIO__RenameDialog_SuperWheelEvent((KIO__RenameDialog*)self, (QWheelEvent*)event);
 }
 
 void k_io__renamedialog_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1874,8 +1874,8 @@ void k_io__renamedialog_key_release_event(void* self, void* event) {
     KIO__RenameDialog_KeyReleaseEvent((KIO__RenameDialog*)self, (QKeyEvent*)event);
 }
 
-void k_io__renamedialog_qbase_key_release_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseKeyReleaseEvent((KIO__RenameDialog*)self, (QKeyEvent*)event);
+void k_io__renamedialog_super_key_release_event(void* self, void* event) {
+    KIO__RenameDialog_SuperKeyReleaseEvent((KIO__RenameDialog*)self, (QKeyEvent*)event);
 }
 
 void k_io__renamedialog_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -1886,8 +1886,8 @@ void k_io__renamedialog_focus_in_event(void* self, void* event) {
     KIO__RenameDialog_FocusInEvent((KIO__RenameDialog*)self, (QFocusEvent*)event);
 }
 
-void k_io__renamedialog_qbase_focus_in_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseFocusInEvent((KIO__RenameDialog*)self, (QFocusEvent*)event);
+void k_io__renamedialog_super_focus_in_event(void* self, void* event) {
+    KIO__RenameDialog_SuperFocusInEvent((KIO__RenameDialog*)self, (QFocusEvent*)event);
 }
 
 void k_io__renamedialog_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1898,8 +1898,8 @@ void k_io__renamedialog_focus_out_event(void* self, void* event) {
     KIO__RenameDialog_FocusOutEvent((KIO__RenameDialog*)self, (QFocusEvent*)event);
 }
 
-void k_io__renamedialog_qbase_focus_out_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseFocusOutEvent((KIO__RenameDialog*)self, (QFocusEvent*)event);
+void k_io__renamedialog_super_focus_out_event(void* self, void* event) {
+    KIO__RenameDialog_SuperFocusOutEvent((KIO__RenameDialog*)self, (QFocusEvent*)event);
 }
 
 void k_io__renamedialog_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1910,8 +1910,8 @@ void k_io__renamedialog_enter_event(void* self, void* event) {
     KIO__RenameDialog_EnterEvent((KIO__RenameDialog*)self, (QEnterEvent*)event);
 }
 
-void k_io__renamedialog_qbase_enter_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseEnterEvent((KIO__RenameDialog*)self, (QEnterEvent*)event);
+void k_io__renamedialog_super_enter_event(void* self, void* event) {
+    KIO__RenameDialog_SuperEnterEvent((KIO__RenameDialog*)self, (QEnterEvent*)event);
 }
 
 void k_io__renamedialog_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1922,8 +1922,8 @@ void k_io__renamedialog_leave_event(void* self, void* event) {
     KIO__RenameDialog_LeaveEvent((KIO__RenameDialog*)self, (QEvent*)event);
 }
 
-void k_io__renamedialog_qbase_leave_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseLeaveEvent((KIO__RenameDialog*)self, (QEvent*)event);
+void k_io__renamedialog_super_leave_event(void* self, void* event) {
+    KIO__RenameDialog_SuperLeaveEvent((KIO__RenameDialog*)self, (QEvent*)event);
 }
 
 void k_io__renamedialog_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -1934,8 +1934,8 @@ void k_io__renamedialog_paint_event(void* self, void* event) {
     KIO__RenameDialog_PaintEvent((KIO__RenameDialog*)self, (QPaintEvent*)event);
 }
 
-void k_io__renamedialog_qbase_paint_event(void* self, void* event) {
-    KIO__RenameDialog_QBasePaintEvent((KIO__RenameDialog*)self, (QPaintEvent*)event);
+void k_io__renamedialog_super_paint_event(void* self, void* event) {
+    KIO__RenameDialog_SuperPaintEvent((KIO__RenameDialog*)self, (QPaintEvent*)event);
 }
 
 void k_io__renamedialog_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1946,8 +1946,8 @@ void k_io__renamedialog_move_event(void* self, void* event) {
     KIO__RenameDialog_MoveEvent((KIO__RenameDialog*)self, (QMoveEvent*)event);
 }
 
-void k_io__renamedialog_qbase_move_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseMoveEvent((KIO__RenameDialog*)self, (QMoveEvent*)event);
+void k_io__renamedialog_super_move_event(void* self, void* event) {
+    KIO__RenameDialog_SuperMoveEvent((KIO__RenameDialog*)self, (QMoveEvent*)event);
 }
 
 void k_io__renamedialog_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1958,8 +1958,8 @@ void k_io__renamedialog_tablet_event(void* self, void* event) {
     KIO__RenameDialog_TabletEvent((KIO__RenameDialog*)self, (QTabletEvent*)event);
 }
 
-void k_io__renamedialog_qbase_tablet_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseTabletEvent((KIO__RenameDialog*)self, (QTabletEvent*)event);
+void k_io__renamedialog_super_tablet_event(void* self, void* event) {
+    KIO__RenameDialog_SuperTabletEvent((KIO__RenameDialog*)self, (QTabletEvent*)event);
 }
 
 void k_io__renamedialog_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -1970,8 +1970,8 @@ void k_io__renamedialog_action_event(void* self, void* event) {
     KIO__RenameDialog_ActionEvent((KIO__RenameDialog*)self, (QActionEvent*)event);
 }
 
-void k_io__renamedialog_qbase_action_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseActionEvent((KIO__RenameDialog*)self, (QActionEvent*)event);
+void k_io__renamedialog_super_action_event(void* self, void* event) {
+    KIO__RenameDialog_SuperActionEvent((KIO__RenameDialog*)self, (QActionEvent*)event);
 }
 
 void k_io__renamedialog_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -1982,8 +1982,8 @@ void k_io__renamedialog_drag_enter_event(void* self, void* event) {
     KIO__RenameDialog_DragEnterEvent((KIO__RenameDialog*)self, (QDragEnterEvent*)event);
 }
 
-void k_io__renamedialog_qbase_drag_enter_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseDragEnterEvent((KIO__RenameDialog*)self, (QDragEnterEvent*)event);
+void k_io__renamedialog_super_drag_enter_event(void* self, void* event) {
+    KIO__RenameDialog_SuperDragEnterEvent((KIO__RenameDialog*)self, (QDragEnterEvent*)event);
 }
 
 void k_io__renamedialog_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -1994,8 +1994,8 @@ void k_io__renamedialog_drag_move_event(void* self, void* event) {
     KIO__RenameDialog_DragMoveEvent((KIO__RenameDialog*)self, (QDragMoveEvent*)event);
 }
 
-void k_io__renamedialog_qbase_drag_move_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseDragMoveEvent((KIO__RenameDialog*)self, (QDragMoveEvent*)event);
+void k_io__renamedialog_super_drag_move_event(void* self, void* event) {
+    KIO__RenameDialog_SuperDragMoveEvent((KIO__RenameDialog*)self, (QDragMoveEvent*)event);
 }
 
 void k_io__renamedialog_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2006,8 +2006,8 @@ void k_io__renamedialog_drag_leave_event(void* self, void* event) {
     KIO__RenameDialog_DragLeaveEvent((KIO__RenameDialog*)self, (QDragLeaveEvent*)event);
 }
 
-void k_io__renamedialog_qbase_drag_leave_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseDragLeaveEvent((KIO__RenameDialog*)self, (QDragLeaveEvent*)event);
+void k_io__renamedialog_super_drag_leave_event(void* self, void* event) {
+    KIO__RenameDialog_SuperDragLeaveEvent((KIO__RenameDialog*)self, (QDragLeaveEvent*)event);
 }
 
 void k_io__renamedialog_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2018,8 +2018,8 @@ void k_io__renamedialog_drop_event(void* self, void* event) {
     KIO__RenameDialog_DropEvent((KIO__RenameDialog*)self, (QDropEvent*)event);
 }
 
-void k_io__renamedialog_qbase_drop_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseDropEvent((KIO__RenameDialog*)self, (QDropEvent*)event);
+void k_io__renamedialog_super_drop_event(void* self, void* event) {
+    KIO__RenameDialog_SuperDropEvent((KIO__RenameDialog*)self, (QDropEvent*)event);
 }
 
 void k_io__renamedialog_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2030,8 +2030,8 @@ void k_io__renamedialog_hide_event(void* self, void* event) {
     KIO__RenameDialog_HideEvent((KIO__RenameDialog*)self, (QHideEvent*)event);
 }
 
-void k_io__renamedialog_qbase_hide_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseHideEvent((KIO__RenameDialog*)self, (QHideEvent*)event);
+void k_io__renamedialog_super_hide_event(void* self, void* event) {
+    KIO__RenameDialog_SuperHideEvent((KIO__RenameDialog*)self, (QHideEvent*)event);
 }
 
 void k_io__renamedialog_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2042,8 +2042,8 @@ bool k_io__renamedialog_native_event(void* self, char* eventType, void* message,
     return KIO__RenameDialog_NativeEvent((KIO__RenameDialog*)self, qstring(eventType), message, result);
 }
 
-bool k_io__renamedialog_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KIO__RenameDialog_QBaseNativeEvent((KIO__RenameDialog*)self, qstring(eventType), message, result);
+bool k_io__renamedialog_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KIO__RenameDialog_SuperNativeEvent((KIO__RenameDialog*)self, qstring(eventType), message, result);
 }
 
 void k_io__renamedialog_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2054,8 +2054,8 @@ void k_io__renamedialog_change_event(void* self, void* param1) {
     KIO__RenameDialog_ChangeEvent((KIO__RenameDialog*)self, (QEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_change_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseChangeEvent((KIO__RenameDialog*)self, (QEvent*)param1);
+void k_io__renamedialog_super_change_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperChangeEvent((KIO__RenameDialog*)self, (QEvent*)param1);
 }
 
 void k_io__renamedialog_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2066,8 +2066,8 @@ int32_t k_io__renamedialog_metric(void* self, int32_t param1) {
     return KIO__RenameDialog_Metric((KIO__RenameDialog*)self, param1);
 }
 
-int32_t k_io__renamedialog_qbase_metric(void* self, int32_t param1) {
-    return KIO__RenameDialog_QBaseMetric((KIO__RenameDialog*)self, param1);
+int32_t k_io__renamedialog_super_metric(void* self, int32_t param1) {
+    return KIO__RenameDialog_SuperMetric((KIO__RenameDialog*)self, param1);
 }
 
 void k_io__renamedialog_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2078,8 +2078,8 @@ void k_io__renamedialog_init_painter(void* self, void* painter) {
     KIO__RenameDialog_InitPainter((KIO__RenameDialog*)self, (QPainter*)painter);
 }
 
-void k_io__renamedialog_qbase_init_painter(void* self, void* painter) {
-    KIO__RenameDialog_QBaseInitPainter((KIO__RenameDialog*)self, (QPainter*)painter);
+void k_io__renamedialog_super_init_painter(void* self, void* painter) {
+    KIO__RenameDialog_SuperInitPainter((KIO__RenameDialog*)self, (QPainter*)painter);
 }
 
 void k_io__renamedialog_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2090,8 +2090,8 @@ QPaintDevice* k_io__renamedialog_redirected(void* self, void* offset) {
     return KIO__RenameDialog_Redirected((KIO__RenameDialog*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_io__renamedialog_qbase_redirected(void* self, void* offset) {
-    return KIO__RenameDialog_QBaseRedirected((KIO__RenameDialog*)self, (QPoint*)offset);
+QPaintDevice* k_io__renamedialog_super_redirected(void* self, void* offset) {
+    return KIO__RenameDialog_SuperRedirected((KIO__RenameDialog*)self, (QPoint*)offset);
 }
 
 void k_io__renamedialog_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2102,8 +2102,8 @@ QPainter* k_io__renamedialog_shared_painter(void* self) {
     return KIO__RenameDialog_SharedPainter((KIO__RenameDialog*)self);
 }
 
-QPainter* k_io__renamedialog_qbase_shared_painter(void* self) {
-    return KIO__RenameDialog_QBaseSharedPainter((KIO__RenameDialog*)self);
+QPainter* k_io__renamedialog_super_shared_painter(void* self) {
+    return KIO__RenameDialog_SuperSharedPainter((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2114,8 +2114,8 @@ void k_io__renamedialog_input_method_event(void* self, void* param1) {
     KIO__RenameDialog_InputMethodEvent((KIO__RenameDialog*)self, (QInputMethodEvent*)param1);
 }
 
-void k_io__renamedialog_qbase_input_method_event(void* self, void* param1) {
-    KIO__RenameDialog_QBaseInputMethodEvent((KIO__RenameDialog*)self, (QInputMethodEvent*)param1);
+void k_io__renamedialog_super_input_method_event(void* self, void* param1) {
+    KIO__RenameDialog_SuperInputMethodEvent((KIO__RenameDialog*)self, (QInputMethodEvent*)param1);
 }
 
 void k_io__renamedialog_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2126,8 +2126,8 @@ QVariant* k_io__renamedialog_input_method_query(void* self, int32_t param1) {
     return KIO__RenameDialog_InputMethodQuery((KIO__RenameDialog*)self, param1);
 }
 
-QVariant* k_io__renamedialog_qbase_input_method_query(void* self, int32_t param1) {
-    return KIO__RenameDialog_QBaseInputMethodQuery((KIO__RenameDialog*)self, param1);
+QVariant* k_io__renamedialog_super_input_method_query(void* self, int32_t param1) {
+    return KIO__RenameDialog_SuperInputMethodQuery((KIO__RenameDialog*)self, param1);
 }
 
 void k_io__renamedialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2138,8 +2138,8 @@ bool k_io__renamedialog_focus_next_prev_child(void* self, bool next) {
     return KIO__RenameDialog_FocusNextPrevChild((KIO__RenameDialog*)self, next);
 }
 
-bool k_io__renamedialog_qbase_focus_next_prev_child(void* self, bool next) {
-    return KIO__RenameDialog_QBaseFocusNextPrevChild((KIO__RenameDialog*)self, next);
+bool k_io__renamedialog_super_focus_next_prev_child(void* self, bool next) {
+    return KIO__RenameDialog_SuperFocusNextPrevChild((KIO__RenameDialog*)self, next);
 }
 
 void k_io__renamedialog_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2150,8 +2150,8 @@ void k_io__renamedialog_timer_event(void* self, void* event) {
     KIO__RenameDialog_TimerEvent((KIO__RenameDialog*)self, (QTimerEvent*)event);
 }
 
-void k_io__renamedialog_qbase_timer_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseTimerEvent((KIO__RenameDialog*)self, (QTimerEvent*)event);
+void k_io__renamedialog_super_timer_event(void* self, void* event) {
+    KIO__RenameDialog_SuperTimerEvent((KIO__RenameDialog*)self, (QTimerEvent*)event);
 }
 
 void k_io__renamedialog_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2162,8 +2162,8 @@ void k_io__renamedialog_child_event(void* self, void* event) {
     KIO__RenameDialog_ChildEvent((KIO__RenameDialog*)self, (QChildEvent*)event);
 }
 
-void k_io__renamedialog_qbase_child_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseChildEvent((KIO__RenameDialog*)self, (QChildEvent*)event);
+void k_io__renamedialog_super_child_event(void* self, void* event) {
+    KIO__RenameDialog_SuperChildEvent((KIO__RenameDialog*)self, (QChildEvent*)event);
 }
 
 void k_io__renamedialog_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2174,8 +2174,8 @@ void k_io__renamedialog_custom_event(void* self, void* event) {
     KIO__RenameDialog_CustomEvent((KIO__RenameDialog*)self, (QEvent*)event);
 }
 
-void k_io__renamedialog_qbase_custom_event(void* self, void* event) {
-    KIO__RenameDialog_QBaseCustomEvent((KIO__RenameDialog*)self, (QEvent*)event);
+void k_io__renamedialog_super_custom_event(void* self, void* event) {
+    KIO__RenameDialog_SuperCustomEvent((KIO__RenameDialog*)self, (QEvent*)event);
 }
 
 void k_io__renamedialog_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2186,8 +2186,8 @@ void k_io__renamedialog_connect_notify(void* self, void* signal) {
     KIO__RenameDialog_ConnectNotify((KIO__RenameDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_io__renamedialog_qbase_connect_notify(void* self, void* signal) {
-    KIO__RenameDialog_QBaseConnectNotify((KIO__RenameDialog*)self, (QMetaMethod*)signal);
+void k_io__renamedialog_super_connect_notify(void* self, void* signal) {
+    KIO__RenameDialog_SuperConnectNotify((KIO__RenameDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__renamedialog_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2198,8 +2198,8 @@ void k_io__renamedialog_disconnect_notify(void* self, void* signal) {
     KIO__RenameDialog_DisconnectNotify((KIO__RenameDialog*)self, (QMetaMethod*)signal);
 }
 
-void k_io__renamedialog_qbase_disconnect_notify(void* self, void* signal) {
-    KIO__RenameDialog_QBaseDisconnectNotify((KIO__RenameDialog*)self, (QMetaMethod*)signal);
+void k_io__renamedialog_super_disconnect_notify(void* self, void* signal) {
+    KIO__RenameDialog_SuperDisconnectNotify((KIO__RenameDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__renamedialog_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2210,8 +2210,8 @@ void k_io__renamedialog_adjust_position(void* self, void* param1) {
     KIO__RenameDialog_AdjustPosition((KIO__RenameDialog*)self, (QWidget*)param1);
 }
 
-void k_io__renamedialog_qbase_adjust_position(void* self, void* param1) {
-    KIO__RenameDialog_QBaseAdjustPosition((KIO__RenameDialog*)self, (QWidget*)param1);
+void k_io__renamedialog_super_adjust_position(void* self, void* param1) {
+    KIO__RenameDialog_SuperAdjustPosition((KIO__RenameDialog*)self, (QWidget*)param1);
 }
 
 void k_io__renamedialog_on_adjust_position(void* self, void (*callback)(void*, void*)) {
@@ -2222,8 +2222,8 @@ void k_io__renamedialog_update_micro_focus(void* self) {
     KIO__RenameDialog_UpdateMicroFocus((KIO__RenameDialog*)self);
 }
 
-void k_io__renamedialog_qbase_update_micro_focus(void* self) {
-    KIO__RenameDialog_QBaseUpdateMicroFocus((KIO__RenameDialog*)self);
+void k_io__renamedialog_super_update_micro_focus(void* self) {
+    KIO__RenameDialog_SuperUpdateMicroFocus((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2234,8 +2234,8 @@ void k_io__renamedialog_create(void* self) {
     KIO__RenameDialog_Create((KIO__RenameDialog*)self);
 }
 
-void k_io__renamedialog_qbase_create(void* self) {
-    KIO__RenameDialog_QBaseCreate((KIO__RenameDialog*)self);
+void k_io__renamedialog_super_create(void* self) {
+    KIO__RenameDialog_SuperCreate((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_create(void* self, void (*callback)()) {
@@ -2246,8 +2246,8 @@ void k_io__renamedialog_destroy(void* self) {
     KIO__RenameDialog_Destroy((KIO__RenameDialog*)self);
 }
 
-void k_io__renamedialog_qbase_destroy(void* self) {
-    KIO__RenameDialog_QBaseDestroy((KIO__RenameDialog*)self);
+void k_io__renamedialog_super_destroy(void* self) {
+    KIO__RenameDialog_SuperDestroy((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_destroy(void* self, void (*callback)()) {
@@ -2258,8 +2258,8 @@ bool k_io__renamedialog_focus_next_child(void* self) {
     return KIO__RenameDialog_FocusNextChild((KIO__RenameDialog*)self);
 }
 
-bool k_io__renamedialog_qbase_focus_next_child(void* self) {
-    return KIO__RenameDialog_QBaseFocusNextChild((KIO__RenameDialog*)self);
+bool k_io__renamedialog_super_focus_next_child(void* self) {
+    return KIO__RenameDialog_SuperFocusNextChild((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2270,8 +2270,8 @@ bool k_io__renamedialog_focus_previous_child(void* self) {
     return KIO__RenameDialog_FocusPreviousChild((KIO__RenameDialog*)self);
 }
 
-bool k_io__renamedialog_qbase_focus_previous_child(void* self) {
-    return KIO__RenameDialog_QBaseFocusPreviousChild((KIO__RenameDialog*)self);
+bool k_io__renamedialog_super_focus_previous_child(void* self) {
+    return KIO__RenameDialog_SuperFocusPreviousChild((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2282,8 +2282,8 @@ QObject* k_io__renamedialog_sender(void* self) {
     return KIO__RenameDialog_Sender((KIO__RenameDialog*)self);
 }
 
-QObject* k_io__renamedialog_qbase_sender(void* self) {
-    return KIO__RenameDialog_QBaseSender((KIO__RenameDialog*)self);
+QObject* k_io__renamedialog_super_sender(void* self) {
+    return KIO__RenameDialog_SuperSender((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_sender(void* self, QObject* (*callback)()) {
@@ -2294,8 +2294,8 @@ int32_t k_io__renamedialog_sender_signal_index(void* self) {
     return KIO__RenameDialog_SenderSignalIndex((KIO__RenameDialog*)self);
 }
 
-int32_t k_io__renamedialog_qbase_sender_signal_index(void* self) {
-    return KIO__RenameDialog_QBaseSenderSignalIndex((KIO__RenameDialog*)self);
+int32_t k_io__renamedialog_super_sender_signal_index(void* self) {
+    return KIO__RenameDialog_SuperSenderSignalIndex((KIO__RenameDialog*)self);
 }
 
 void k_io__renamedialog_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2306,8 +2306,8 @@ int32_t k_io__renamedialog_receivers(void* self, const char* signal) {
     return KIO__RenameDialog_Receivers((KIO__RenameDialog*)self, signal);
 }
 
-int32_t k_io__renamedialog_qbase_receivers(void* self, const char* signal) {
-    return KIO__RenameDialog_QBaseReceivers((KIO__RenameDialog*)self, signal);
+int32_t k_io__renamedialog_super_receivers(void* self, const char* signal) {
+    return KIO__RenameDialog_SuperReceivers((KIO__RenameDialog*)self, signal);
 }
 
 void k_io__renamedialog_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2318,8 +2318,8 @@ bool k_io__renamedialog_is_signal_connected(void* self, void* signal) {
     return KIO__RenameDialog_IsSignalConnected((KIO__RenameDialog*)self, (QMetaMethod*)signal);
 }
 
-bool k_io__renamedialog_qbase_is_signal_connected(void* self, void* signal) {
-    return KIO__RenameDialog_QBaseIsSignalConnected((KIO__RenameDialog*)self, (QMetaMethod*)signal);
+bool k_io__renamedialog_super_is_signal_connected(void* self, void* signal) {
+    return KIO__RenameDialog_SuperIsSignalConnected((KIO__RenameDialog*)self, (QMetaMethod*)signal);
 }
 
 void k_io__renamedialog_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2330,8 +2330,8 @@ double k_io__renamedialog_get_decoded_metric_f(void* self, int32_t metricA, int3
     return KIO__RenameDialog_GetDecodedMetricF((KIO__RenameDialog*)self, metricA, metricB);
 }
 
-double k_io__renamedialog_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KIO__RenameDialog_QBaseGetDecodedMetricF((KIO__RenameDialog*)self, metricA, metricB);
+double k_io__renamedialog_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KIO__RenameDialog_SuperGetDecodedMetricF((KIO__RenameDialog*)self, metricA, metricB);
 }
 
 void k_io__renamedialog_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

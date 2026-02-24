@@ -61,8 +61,8 @@ void k_remoteencoding_on_virtual_hook(void* self, void (*callback)(void*, int, v
     KRemoteEncoding_OnVirtualHook((KRemoteEncoding*)self, (intptr_t)callback);
 }
 
-void k_remoteencoding_qbase_virtual_hook(void* self, int id, void* data) {
-    KRemoteEncoding_QBaseVirtualHook((KRemoteEncoding*)self, id, data);
+void k_remoteencoding_super_virtual_hook(void* self, int id, void* data) {
+    KRemoteEncoding_SuperVirtualHook((KRemoteEncoding*)self, id, data);
 }
 
 char* k_remoteencoding_directory2(void* self, void* url, bool ignore_trailing_slash) {

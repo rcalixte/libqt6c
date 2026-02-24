@@ -22,8 +22,8 @@ void q_valueaxis_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QValueAxis_OnMetaObject((QValueAxis*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_valueaxis_qbase_meta_object(void* self) {
-    return QValueAxis_QBaseMetaObject((QValueAxis*)self);
+const QMetaObject* q_valueaxis_super_meta_object(void* self) {
+    return QValueAxis_SuperMetaObject((QValueAxis*)self);
 }
 
 void* q_valueaxis_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void q_valueaxis_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QValueAxis_OnMetacast((QValueAxis*)self, (intptr_t)callback);
 }
 
-void* q_valueaxis_qbase_metacast(void* self, const char* param1) {
-    return QValueAxis_QBaseMetacast((QValueAxis*)self, param1);
+void* q_valueaxis_super_metacast(void* self, const char* param1) {
+    return QValueAxis_SuperMetacast((QValueAxis*)self, param1);
 }
 
 int32_t q_valueaxis_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void q_valueaxis_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QValueAxis_OnMetacall((QValueAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_valueaxis_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QValueAxis_QBaseMetacall((QValueAxis*)self, param1, param2, param3);
+int32_t q_valueaxis_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QValueAxis_SuperMetacall((QValueAxis*)self, param1, param2, param3);
 }
 
 const char* q_valueaxis_tr(const char* s) {
@@ -65,8 +65,8 @@ void q_valueaxis_on_type(void* self, int32_t (*callback)()) {
     QValueAxis_OnType((QValueAxis*)self, (intptr_t)callback);
 }
 
-int32_t q_valueaxis_qbase_type(void* self) {
-    return QValueAxis_QBaseType((QValueAxis*)self);
+int32_t q_valueaxis_super_type(void* self) {
+    return QValueAxis_SuperType((QValueAxis*)self);
 }
 
 void q_valueaxis_set_min(void* self, double min) {
@@ -948,8 +948,8 @@ bool q_valueaxis_event(void* self, void* event) {
     return QValueAxis_Event((QValueAxis*)self, (QEvent*)event);
 }
 
-bool q_valueaxis_qbase_event(void* self, void* event) {
-    return QValueAxis_QBaseEvent((QValueAxis*)self, (QEvent*)event);
+bool q_valueaxis_super_event(void* self, void* event) {
+    return QValueAxis_SuperEvent((QValueAxis*)self, (QEvent*)event);
 }
 
 void q_valueaxis_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -960,8 +960,8 @@ bool q_valueaxis_event_filter(void* self, void* watched, void* event) {
     return QValueAxis_EventFilter((QValueAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_valueaxis_qbase_event_filter(void* self, void* watched, void* event) {
-    return QValueAxis_QBaseEventFilter((QValueAxis*)self, (QObject*)watched, (QEvent*)event);
+bool q_valueaxis_super_event_filter(void* self, void* watched, void* event) {
+    return QValueAxis_SuperEventFilter((QValueAxis*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_valueaxis_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -972,8 +972,8 @@ void q_valueaxis_timer_event(void* self, void* event) {
     QValueAxis_TimerEvent((QValueAxis*)self, (QTimerEvent*)event);
 }
 
-void q_valueaxis_qbase_timer_event(void* self, void* event) {
-    QValueAxis_QBaseTimerEvent((QValueAxis*)self, (QTimerEvent*)event);
+void q_valueaxis_super_timer_event(void* self, void* event) {
+    QValueAxis_SuperTimerEvent((QValueAxis*)self, (QTimerEvent*)event);
 }
 
 void q_valueaxis_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -984,8 +984,8 @@ void q_valueaxis_child_event(void* self, void* event) {
     QValueAxis_ChildEvent((QValueAxis*)self, (QChildEvent*)event);
 }
 
-void q_valueaxis_qbase_child_event(void* self, void* event) {
-    QValueAxis_QBaseChildEvent((QValueAxis*)self, (QChildEvent*)event);
+void q_valueaxis_super_child_event(void* self, void* event) {
+    QValueAxis_SuperChildEvent((QValueAxis*)self, (QChildEvent*)event);
 }
 
 void q_valueaxis_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -996,8 +996,8 @@ void q_valueaxis_custom_event(void* self, void* event) {
     QValueAxis_CustomEvent((QValueAxis*)self, (QEvent*)event);
 }
 
-void q_valueaxis_qbase_custom_event(void* self, void* event) {
-    QValueAxis_QBaseCustomEvent((QValueAxis*)self, (QEvent*)event);
+void q_valueaxis_super_custom_event(void* self, void* event) {
+    QValueAxis_SuperCustomEvent((QValueAxis*)self, (QEvent*)event);
 }
 
 void q_valueaxis_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1008,8 +1008,8 @@ void q_valueaxis_connect_notify(void* self, void* signal) {
     QValueAxis_ConnectNotify((QValueAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_valueaxis_qbase_connect_notify(void* self, void* signal) {
-    QValueAxis_QBaseConnectNotify((QValueAxis*)self, (QMetaMethod*)signal);
+void q_valueaxis_super_connect_notify(void* self, void* signal) {
+    QValueAxis_SuperConnectNotify((QValueAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_valueaxis_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1020,8 +1020,8 @@ void q_valueaxis_disconnect_notify(void* self, void* signal) {
     QValueAxis_DisconnectNotify((QValueAxis*)self, (QMetaMethod*)signal);
 }
 
-void q_valueaxis_qbase_disconnect_notify(void* self, void* signal) {
-    QValueAxis_QBaseDisconnectNotify((QValueAxis*)self, (QMetaMethod*)signal);
+void q_valueaxis_super_disconnect_notify(void* self, void* signal) {
+    QValueAxis_SuperDisconnectNotify((QValueAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_valueaxis_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1032,8 +1032,8 @@ QObject* q_valueaxis_sender(void* self) {
     return QValueAxis_Sender((QValueAxis*)self);
 }
 
-QObject* q_valueaxis_qbase_sender(void* self) {
-    return QValueAxis_QBaseSender((QValueAxis*)self);
+QObject* q_valueaxis_super_sender(void* self) {
+    return QValueAxis_SuperSender((QValueAxis*)self);
 }
 
 void q_valueaxis_on_sender(void* self, QObject* (*callback)()) {
@@ -1044,8 +1044,8 @@ int32_t q_valueaxis_sender_signal_index(void* self) {
     return QValueAxis_SenderSignalIndex((QValueAxis*)self);
 }
 
-int32_t q_valueaxis_qbase_sender_signal_index(void* self) {
-    return QValueAxis_QBaseSenderSignalIndex((QValueAxis*)self);
+int32_t q_valueaxis_super_sender_signal_index(void* self) {
+    return QValueAxis_SuperSenderSignalIndex((QValueAxis*)self);
 }
 
 void q_valueaxis_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1056,8 +1056,8 @@ int32_t q_valueaxis_receivers(void* self, const char* signal) {
     return QValueAxis_Receivers((QValueAxis*)self, signal);
 }
 
-int32_t q_valueaxis_qbase_receivers(void* self, const char* signal) {
-    return QValueAxis_QBaseReceivers((QValueAxis*)self, signal);
+int32_t q_valueaxis_super_receivers(void* self, const char* signal) {
+    return QValueAxis_SuperReceivers((QValueAxis*)self, signal);
 }
 
 void q_valueaxis_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1068,8 +1068,8 @@ bool q_valueaxis_is_signal_connected(void* self, void* signal) {
     return QValueAxis_IsSignalConnected((QValueAxis*)self, (QMetaMethod*)signal);
 }
 
-bool q_valueaxis_qbase_is_signal_connected(void* self, void* signal) {
-    return QValueAxis_QBaseIsSignalConnected((QValueAxis*)self, (QMetaMethod*)signal);
+bool q_valueaxis_super_is_signal_connected(void* self, void* signal) {
+    return QValueAxis_SuperIsSignalConnected((QValueAxis*)self, (QMetaMethod*)signal);
 }
 
 void q_valueaxis_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

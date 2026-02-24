@@ -33,6 +33,10 @@ void k_texteditor__movingrangefeedback_range_empty(void* self, void* range);
 ///
 void k_texteditor__movingrangefeedback_on_range_empty(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_range_empty` instead
+///
+#define k_texteditor__movingrangefeedback_qbase_range_empty k_texteditor__movingrangefeedback_super_range_empty
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeEmpty)
 ///
 /// Base class method implementation
@@ -40,7 +44,7 @@ void k_texteditor__movingrangefeedback_on_range_empty(void* self, void (*callbac
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 ///
-void k_texteditor__movingrangefeedback_qbase_range_empty(void* self, void* range);
+void k_texteditor__movingrangefeedback_super_range_empty(void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
 ///
@@ -58,6 +62,10 @@ void k_texteditor__movingrangefeedback_range_invalid(void* self, void* range);
 ///
 void k_texteditor__movingrangefeedback_on_range_invalid(void* self, void (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_range_invalid` instead
+///
+#define k_texteditor__movingrangefeedback_qbase_range_invalid k_texteditor__movingrangefeedback_super_range_invalid
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#rangeInvalid)
 ///
 /// Base class method implementation
@@ -65,7 +73,7 @@ void k_texteditor__movingrangefeedback_on_range_invalid(void* self, void (*callb
 /// @param self KTextEditor__MovingRangeFeedback*
 /// @param range KTextEditor__MovingRange*
 ///
-void k_texteditor__movingrangefeedback_qbase_range_invalid(void* self, void* range);
+void k_texteditor__movingrangefeedback_super_range_invalid(void* self, void* range);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
 ///
@@ -84,6 +92,10 @@ void k_texteditor__movingrangefeedback_mouse_entered_range(void* self, void* ran
 ///
 void k_texteditor__movingrangefeedback_on_mouse_entered_range(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_mouse_entered_range` instead
+///
+#define k_texteditor__movingrangefeedback_qbase_mouse_entered_range k_texteditor__movingrangefeedback_super_mouse_entered_range
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseEnteredRange)
 ///
 /// Base class method implementation
@@ -92,7 +104,7 @@ void k_texteditor__movingrangefeedback_on_mouse_entered_range(void* self, void (
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 ///
-void k_texteditor__movingrangefeedback_qbase_mouse_entered_range(void* self, void* range, void* view);
+void k_texteditor__movingrangefeedback_super_mouse_entered_range(void* self, void* range, void* view);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
 ///
@@ -111,6 +123,10 @@ void k_texteditor__movingrangefeedback_mouse_exited_range(void* self, void* rang
 ///
 void k_texteditor__movingrangefeedback_on_mouse_exited_range(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_mouse_exited_range` instead
+///
+#define k_texteditor__movingrangefeedback_qbase_mouse_exited_range k_texteditor__movingrangefeedback_super_mouse_exited_range
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#mouseExitedRange)
 ///
 /// Base class method implementation
@@ -119,7 +135,7 @@ void k_texteditor__movingrangefeedback_on_mouse_exited_range(void* self, void (*
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 ///
-void k_texteditor__movingrangefeedback_qbase_mouse_exited_range(void* self, void* range, void* view);
+void k_texteditor__movingrangefeedback_super_mouse_exited_range(void* self, void* range, void* view);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
 ///
@@ -138,6 +154,10 @@ void k_texteditor__movingrangefeedback_caret_entered_range(void* self, void* ran
 ///
 void k_texteditor__movingrangefeedback_on_caret_entered_range(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_caret_entered_range` instead
+///
+#define k_texteditor__movingrangefeedback_qbase_caret_entered_range k_texteditor__movingrangefeedback_super_caret_entered_range
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretEnteredRange)
 ///
 /// Base class method implementation
@@ -146,7 +166,7 @@ void k_texteditor__movingrangefeedback_on_caret_entered_range(void* self, void (
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 ///
-void k_texteditor__movingrangefeedback_qbase_caret_entered_range(void* self, void* range, void* view);
+void k_texteditor__movingrangefeedback_super_caret_entered_range(void* self, void* range, void* view);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
 ///
@@ -165,6 +185,10 @@ void k_texteditor__movingrangefeedback_caret_exited_range(void* self, void* rang
 ///
 void k_texteditor__movingrangefeedback_on_caret_exited_range(void* self, void (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `k_texteditor__movingrangefeedback_super_caret_exited_range` instead
+///
+#define k_texteditor__movingrangefeedback_qbase_caret_exited_range k_texteditor__movingrangefeedback_super_caret_exited_range
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-movingrangefeedback.html#caretExitedRange)
 ///
 /// Base class method implementation
@@ -173,7 +197,7 @@ void k_texteditor__movingrangefeedback_on_caret_exited_range(void* self, void (*
 /// @param range KTextEditor__MovingRange*
 /// @param view KTextEditor__View*
 ///
-void k_texteditor__movingrangefeedback_qbase_caret_exited_range(void* self, void* range, void* view);
+void k_texteditor__movingrangefeedback_super_caret_exited_range(void* self, void* range, void* view);
 
 /// Delete this object from C++ memory.
 ///

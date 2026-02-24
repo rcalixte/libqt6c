@@ -27,8 +27,8 @@ void q_scilexerjavascript_on_meta_object(void* self, const QMetaObject* (*callba
     QsciLexerJavaScript_OnMetaObject((QsciLexerJavaScript*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scilexerjavascript_qbase_meta_object(void* self) {
-    return QsciLexerJavaScript_QBaseMetaObject((QsciLexerJavaScript*)self);
+const QMetaObject* q_scilexerjavascript_super_meta_object(void* self) {
+    return QsciLexerJavaScript_SuperMetaObject((QsciLexerJavaScript*)self);
 }
 
 void* q_scilexerjavascript_metacast(void* self, const char* param1) {
@@ -39,8 +39,8 @@ void q_scilexerjavascript_on_metacast(void* self, void* (*callback)(void*, const
     QsciLexerJavaScript_OnMetacast((QsciLexerJavaScript*)self, (intptr_t)callback);
 }
 
-void* q_scilexerjavascript_qbase_metacast(void* self, const char* param1) {
-    return QsciLexerJavaScript_QBaseMetacast((QsciLexerJavaScript*)self, param1);
+void* q_scilexerjavascript_super_metacast(void* self, const char* param1) {
+    return QsciLexerJavaScript_SuperMetacast((QsciLexerJavaScript*)self, param1);
 }
 
 int32_t q_scilexerjavascript_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -51,8 +51,8 @@ void q_scilexerjavascript_on_metacall(void* self, int32_t (*callback)(void*, int
     QsciLexerJavaScript_OnMetacall((QsciLexerJavaScript*)self, (intptr_t)callback);
 }
 
-int32_t q_scilexerjavascript_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QsciLexerJavaScript_QBaseMetacall((QsciLexerJavaScript*)self, param1, param2, param3);
+int32_t q_scilexerjavascript_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QsciLexerJavaScript_SuperMetacall((QsciLexerJavaScript*)self, param1, param2, param3);
 }
 
 const char* q_scilexerjavascript_tr(const char* s) {
@@ -486,8 +486,8 @@ void q_scilexerjavascript_set_fold_at_else(void* self, bool fold) {
     QsciLexerJavaScript_SetFoldAtElse((QsciLexerJavaScript*)self, fold);
 }
 
-void q_scilexerjavascript_qbase_set_fold_at_else(void* self, bool fold) {
-    QsciLexerJavaScript_QBaseSetFoldAtElse((QsciLexerJavaScript*)self, fold);
+void q_scilexerjavascript_super_set_fold_at_else(void* self, bool fold) {
+    QsciLexerJavaScript_SuperSetFoldAtElse((QsciLexerJavaScript*)self, fold);
 }
 
 void q_scilexerjavascript_on_set_fold_at_else(void* self, void (*callback)(void*, bool)) {
@@ -498,8 +498,8 @@ void q_scilexerjavascript_set_fold_comments(void* self, bool fold) {
     QsciLexerJavaScript_SetFoldComments((QsciLexerJavaScript*)self, fold);
 }
 
-void q_scilexerjavascript_qbase_set_fold_comments(void* self, bool fold) {
-    QsciLexerJavaScript_QBaseSetFoldComments((QsciLexerJavaScript*)self, fold);
+void q_scilexerjavascript_super_set_fold_comments(void* self, bool fold) {
+    QsciLexerJavaScript_SuperSetFoldComments((QsciLexerJavaScript*)self, fold);
 }
 
 void q_scilexerjavascript_on_set_fold_comments(void* self, void (*callback)(void*, bool)) {
@@ -510,8 +510,8 @@ void q_scilexerjavascript_set_fold_compact(void* self, bool fold) {
     QsciLexerJavaScript_SetFoldCompact((QsciLexerJavaScript*)self, fold);
 }
 
-void q_scilexerjavascript_qbase_set_fold_compact(void* self, bool fold) {
-    QsciLexerJavaScript_QBaseSetFoldCompact((QsciLexerJavaScript*)self, fold);
+void q_scilexerjavascript_super_set_fold_compact(void* self, bool fold) {
+    QsciLexerJavaScript_SuperSetFoldCompact((QsciLexerJavaScript*)self, fold);
 }
 
 void q_scilexerjavascript_on_set_fold_compact(void* self, void (*callback)(void*, bool)) {
@@ -522,8 +522,8 @@ void q_scilexerjavascript_set_fold_preprocessor(void* self, bool fold) {
     QsciLexerJavaScript_SetFoldPreprocessor((QsciLexerJavaScript*)self, fold);
 }
 
-void q_scilexerjavascript_qbase_set_fold_preprocessor(void* self, bool fold) {
-    QsciLexerJavaScript_QBaseSetFoldPreprocessor((QsciLexerJavaScript*)self, fold);
+void q_scilexerjavascript_super_set_fold_preprocessor(void* self, bool fold) {
+    QsciLexerJavaScript_SuperSetFoldPreprocessor((QsciLexerJavaScript*)self, fold);
 }
 
 void q_scilexerjavascript_on_set_fold_preprocessor(void* self, void (*callback)(void*, bool)) {
@@ -534,8 +534,8 @@ void q_scilexerjavascript_set_style_preprocessor(void* self, bool style) {
     QsciLexerJavaScript_SetStylePreprocessor((QsciLexerJavaScript*)self, style);
 }
 
-void q_scilexerjavascript_qbase_set_style_preprocessor(void* self, bool style) {
-    QsciLexerJavaScript_QBaseSetStylePreprocessor((QsciLexerJavaScript*)self, style);
+void q_scilexerjavascript_super_set_style_preprocessor(void* self, bool style) {
+    QsciLexerJavaScript_SuperSetStylePreprocessor((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_set_style_preprocessor(void* self, void (*callback)(void*, bool)) {
@@ -546,8 +546,8 @@ const char* q_scilexerjavascript_lexer(void* self) {
     return QsciLexerJavaScript_Lexer((QsciLexerJavaScript*)self);
 }
 
-const char* q_scilexerjavascript_qbase_lexer(void* self) {
-    return QsciLexerJavaScript_QBaseLexer((QsciLexerJavaScript*)self);
+const char* q_scilexerjavascript_super_lexer(void* self) {
+    return QsciLexerJavaScript_SuperLexer((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_lexer(void* self, const char* (*callback)()) {
@@ -558,8 +558,8 @@ int32_t q_scilexerjavascript_lexer_id(void* self) {
     return QsciLexerJavaScript_LexerId((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_lexer_id(void* self) {
-    return QsciLexerJavaScript_QBaseLexerId((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_lexer_id(void* self) {
+    return QsciLexerJavaScript_SuperLexerId((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_lexer_id(void* self, int32_t (*callback)()) {
@@ -570,8 +570,8 @@ const char* q_scilexerjavascript_auto_completion_fillups(void* self) {
     return QsciLexerJavaScript_AutoCompletionFillups((QsciLexerJavaScript*)self);
 }
 
-const char* q_scilexerjavascript_qbase_auto_completion_fillups(void* self) {
-    return QsciLexerJavaScript_QBaseAutoCompletionFillups((QsciLexerJavaScript*)self);
+const char* q_scilexerjavascript_super_auto_completion_fillups(void* self) {
+    return QsciLexerJavaScript_SuperAutoCompletionFillups((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_auto_completion_fillups(void* self, const char* (*callback)()) {
@@ -597,8 +597,8 @@ const char** q_scilexerjavascript_auto_completion_word_separators(void* self) {
     return _ret;
 }
 
-const char** q_scilexerjavascript_qbase_auto_completion_word_separators(void* self) {
-    libqt_list _arr = QsciLexerJavaScript_QBaseAutoCompletionWordSeparators((QsciLexerJavaScript*)self);
+const char** q_scilexerjavascript_super_auto_completion_word_separators(void* self) {
+    libqt_list _arr = QsciLexerJavaScript_SuperAutoCompletionWordSeparators((QsciLexerJavaScript*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -624,8 +624,8 @@ const char* q_scilexerjavascript_block_end(void* self, int* style) {
     return QsciLexerJavaScript_BlockEnd((QsciLexerJavaScript*)self, style);
 }
 
-const char* q_scilexerjavascript_qbase_block_end(void* self, int* style) {
-    return QsciLexerJavaScript_QBaseBlockEnd((QsciLexerJavaScript*)self, style);
+const char* q_scilexerjavascript_super_block_end(void* self, int* style) {
+    return QsciLexerJavaScript_SuperBlockEnd((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_block_end(void* self, const char* (*callback)(void*, int*)) {
@@ -636,8 +636,8 @@ int32_t q_scilexerjavascript_block_lookback(void* self) {
     return QsciLexerJavaScript_BlockLookback((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_block_lookback(void* self) {
-    return QsciLexerJavaScript_QBaseBlockLookback((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_block_lookback(void* self) {
+    return QsciLexerJavaScript_SuperBlockLookback((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_block_lookback(void* self, int32_t (*callback)()) {
@@ -648,8 +648,8 @@ const char* q_scilexerjavascript_block_start(void* self, int* style) {
     return QsciLexerJavaScript_BlockStart((QsciLexerJavaScript*)self, style);
 }
 
-const char* q_scilexerjavascript_qbase_block_start(void* self, int* style) {
-    return QsciLexerJavaScript_QBaseBlockStart((QsciLexerJavaScript*)self, style);
+const char* q_scilexerjavascript_super_block_start(void* self, int* style) {
+    return QsciLexerJavaScript_SuperBlockStart((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_block_start(void* self, const char* (*callback)(void*, int*)) {
@@ -660,8 +660,8 @@ const char* q_scilexerjavascript_block_start_keyword(void* self, int* style) {
     return QsciLexerJavaScript_BlockStartKeyword((QsciLexerJavaScript*)self, style);
 }
 
-const char* q_scilexerjavascript_qbase_block_start_keyword(void* self, int* style) {
-    return QsciLexerJavaScript_QBaseBlockStartKeyword((QsciLexerJavaScript*)self, style);
+const char* q_scilexerjavascript_super_block_start_keyword(void* self, int* style) {
+    return QsciLexerJavaScript_SuperBlockStartKeyword((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_block_start_keyword(void* self, const char* (*callback)(void*, int*)) {
@@ -672,8 +672,8 @@ int32_t q_scilexerjavascript_brace_style(void* self) {
     return QsciLexerJavaScript_BraceStyle((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_brace_style(void* self) {
-    return QsciLexerJavaScript_QBaseBraceStyle((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_brace_style(void* self) {
+    return QsciLexerJavaScript_SuperBraceStyle((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_brace_style(void* self, int32_t (*callback)()) {
@@ -684,8 +684,8 @@ bool q_scilexerjavascript_case_sensitive(void* self) {
     return QsciLexerJavaScript_CaseSensitive((QsciLexerJavaScript*)self);
 }
 
-bool q_scilexerjavascript_qbase_case_sensitive(void* self) {
-    return QsciLexerJavaScript_QBaseCaseSensitive((QsciLexerJavaScript*)self);
+bool q_scilexerjavascript_super_case_sensitive(void* self) {
+    return QsciLexerJavaScript_SuperCaseSensitive((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_case_sensitive(void* self, bool (*callback)()) {
@@ -696,8 +696,8 @@ QColor* q_scilexerjavascript_color(void* self, int style) {
     return QsciLexerJavaScript_Color((QsciLexerJavaScript*)self, style);
 }
 
-QColor* q_scilexerjavascript_qbase_color(void* self, int style) {
-    return QsciLexerJavaScript_QBaseColor((QsciLexerJavaScript*)self, style);
+QColor* q_scilexerjavascript_super_color(void* self, int style) {
+    return QsciLexerJavaScript_SuperColor((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_color(void* self, QColor* (*callback)(void*, int)) {
@@ -708,8 +708,8 @@ bool q_scilexerjavascript_eol_fill(void* self, int style) {
     return QsciLexerJavaScript_EolFill((QsciLexerJavaScript*)self, style);
 }
 
-bool q_scilexerjavascript_qbase_eol_fill(void* self, int style) {
-    return QsciLexerJavaScript_QBaseEolFill((QsciLexerJavaScript*)self, style);
+bool q_scilexerjavascript_super_eol_fill(void* self, int style) {
+    return QsciLexerJavaScript_SuperEolFill((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_eol_fill(void* self, bool (*callback)(void*, int)) {
@@ -720,8 +720,8 @@ QFont* q_scilexerjavascript_font(void* self, int style) {
     return QsciLexerJavaScript_Font((QsciLexerJavaScript*)self, style);
 }
 
-QFont* q_scilexerjavascript_qbase_font(void* self, int style) {
-    return QsciLexerJavaScript_QBaseFont((QsciLexerJavaScript*)self, style);
+QFont* q_scilexerjavascript_super_font(void* self, int style) {
+    return QsciLexerJavaScript_SuperFont((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_font(void* self, QFont* (*callback)(void*, int)) {
@@ -732,8 +732,8 @@ int32_t q_scilexerjavascript_indentation_guide_view(void* self) {
     return QsciLexerJavaScript_IndentationGuideView((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_indentation_guide_view(void* self) {
-    return QsciLexerJavaScript_QBaseIndentationGuideView((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_indentation_guide_view(void* self) {
+    return QsciLexerJavaScript_SuperIndentationGuideView((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_indentation_guide_view(void* self, int32_t (*callback)()) {
@@ -744,8 +744,8 @@ int32_t q_scilexerjavascript_default_style(void* self) {
     return QsciLexerJavaScript_DefaultStyle((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_default_style(void* self) {
-    return QsciLexerJavaScript_QBaseDefaultStyle((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_default_style(void* self) {
+    return QsciLexerJavaScript_SuperDefaultStyle((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_default_style(void* self, int32_t (*callback)()) {
@@ -756,8 +756,8 @@ QColor* q_scilexerjavascript_paper(void* self, int style) {
     return QsciLexerJavaScript_Paper((QsciLexerJavaScript*)self, style);
 }
 
-QColor* q_scilexerjavascript_qbase_paper(void* self, int style) {
-    return QsciLexerJavaScript_QBasePaper((QsciLexerJavaScript*)self, style);
+QColor* q_scilexerjavascript_super_paper(void* self, int style) {
+    return QsciLexerJavaScript_SuperPaper((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_paper(void* self, QColor* (*callback)(void*, int)) {
@@ -768,8 +768,8 @@ QColor* q_scilexerjavascript_default_color2(void* self, int style) {
     return QsciLexerJavaScript_DefaultColor2((QsciLexerJavaScript*)self, style);
 }
 
-QColor* q_scilexerjavascript_qbase_default_color2(void* self, int style) {
-    return QsciLexerJavaScript_QBaseDefaultColor2((QsciLexerJavaScript*)self, style);
+QColor* q_scilexerjavascript_super_default_color2(void* self, int style) {
+    return QsciLexerJavaScript_SuperDefaultColor2((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_default_color2(void* self, QColor* (*callback)(void*, int)) {
@@ -780,8 +780,8 @@ QFont* q_scilexerjavascript_default_font2(void* self, int style) {
     return QsciLexerJavaScript_DefaultFont2((QsciLexerJavaScript*)self, style);
 }
 
-QFont* q_scilexerjavascript_qbase_default_font2(void* self, int style) {
-    return QsciLexerJavaScript_QBaseDefaultFont2((QsciLexerJavaScript*)self, style);
+QFont* q_scilexerjavascript_super_default_font2(void* self, int style) {
+    return QsciLexerJavaScript_SuperDefaultFont2((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_default_font2(void* self, QFont* (*callback)(void*, int)) {
@@ -792,8 +792,8 @@ QColor* q_scilexerjavascript_default_paper2(void* self, int style) {
     return QsciLexerJavaScript_DefaultPaper2((QsciLexerJavaScript*)self, style);
 }
 
-QColor* q_scilexerjavascript_qbase_default_paper2(void* self, int style) {
-    return QsciLexerJavaScript_QBaseDefaultPaper2((QsciLexerJavaScript*)self, style);
+QColor* q_scilexerjavascript_super_default_paper2(void* self, int style) {
+    return QsciLexerJavaScript_SuperDefaultPaper2((QsciLexerJavaScript*)self, style);
 }
 
 void q_scilexerjavascript_on_default_paper2(void* self, QColor* (*callback)(void*, int)) {
@@ -804,8 +804,8 @@ void q_scilexerjavascript_set_editor(void* self, void* editor) {
     QsciLexerJavaScript_SetEditor((QsciLexerJavaScript*)self, (QsciScintilla*)editor);
 }
 
-void q_scilexerjavascript_qbase_set_editor(void* self, void* editor) {
-    QsciLexerJavaScript_QBaseSetEditor((QsciLexerJavaScript*)self, (QsciScintilla*)editor);
+void q_scilexerjavascript_super_set_editor(void* self, void* editor) {
+    QsciLexerJavaScript_SuperSetEditor((QsciLexerJavaScript*)self, (QsciScintilla*)editor);
 }
 
 void q_scilexerjavascript_on_set_editor(void* self, void (*callback)(void*, void*)) {
@@ -816,8 +816,8 @@ void q_scilexerjavascript_refresh_properties(void* self) {
     QsciLexerJavaScript_RefreshProperties((QsciLexerJavaScript*)self);
 }
 
-void q_scilexerjavascript_qbase_refresh_properties(void* self) {
-    QsciLexerJavaScript_QBaseRefreshProperties((QsciLexerJavaScript*)self);
+void q_scilexerjavascript_super_refresh_properties(void* self) {
+    QsciLexerJavaScript_SuperRefreshProperties((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_refresh_properties(void* self, void (*callback)()) {
@@ -828,8 +828,8 @@ int32_t q_scilexerjavascript_style_bits_needed(void* self) {
     return QsciLexerJavaScript_StyleBitsNeeded((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_style_bits_needed(void* self) {
-    return QsciLexerJavaScript_QBaseStyleBitsNeeded((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_style_bits_needed(void* self) {
+    return QsciLexerJavaScript_SuperStyleBitsNeeded((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_style_bits_needed(void* self, int32_t (*callback)()) {
@@ -840,8 +840,8 @@ const char* q_scilexerjavascript_word_characters(void* self) {
     return QsciLexerJavaScript_WordCharacters((QsciLexerJavaScript*)self);
 }
 
-const char* q_scilexerjavascript_qbase_word_characters(void* self) {
-    return QsciLexerJavaScript_QBaseWordCharacters((QsciLexerJavaScript*)self);
+const char* q_scilexerjavascript_super_word_characters(void* self) {
+    return QsciLexerJavaScript_SuperWordCharacters((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_word_characters(void* self, const char* (*callback)()) {
@@ -852,8 +852,8 @@ void q_scilexerjavascript_set_auto_indent_style(void* self, int autoindentstyle)
     QsciLexerJavaScript_SetAutoIndentStyle((QsciLexerJavaScript*)self, autoindentstyle);
 }
 
-void q_scilexerjavascript_qbase_set_auto_indent_style(void* self, int autoindentstyle) {
-    QsciLexerJavaScript_QBaseSetAutoIndentStyle((QsciLexerJavaScript*)self, autoindentstyle);
+void q_scilexerjavascript_super_set_auto_indent_style(void* self, int autoindentstyle) {
+    QsciLexerJavaScript_SuperSetAutoIndentStyle((QsciLexerJavaScript*)self, autoindentstyle);
 }
 
 void q_scilexerjavascript_on_set_auto_indent_style(void* self, void (*callback)(void*, int)) {
@@ -864,8 +864,8 @@ void q_scilexerjavascript_set_color(void* self, void* c, int style) {
     QsciLexerJavaScript_SetColor((QsciLexerJavaScript*)self, (QColor*)c, style);
 }
 
-void q_scilexerjavascript_qbase_set_color(void* self, void* c, int style) {
-    QsciLexerJavaScript_QBaseSetColor((QsciLexerJavaScript*)self, (QColor*)c, style);
+void q_scilexerjavascript_super_set_color(void* self, void* c, int style) {
+    QsciLexerJavaScript_SuperSetColor((QsciLexerJavaScript*)self, (QColor*)c, style);
 }
 
 void q_scilexerjavascript_on_set_color(void* self, void (*callback)(void*, void*, int)) {
@@ -876,8 +876,8 @@ void q_scilexerjavascript_set_eol_fill(void* self, bool eoffill, int style) {
     QsciLexerJavaScript_SetEolFill((QsciLexerJavaScript*)self, eoffill, style);
 }
 
-void q_scilexerjavascript_qbase_set_eol_fill(void* self, bool eoffill, int style) {
-    QsciLexerJavaScript_QBaseSetEolFill((QsciLexerJavaScript*)self, eoffill, style);
+void q_scilexerjavascript_super_set_eol_fill(void* self, bool eoffill, int style) {
+    QsciLexerJavaScript_SuperSetEolFill((QsciLexerJavaScript*)self, eoffill, style);
 }
 
 void q_scilexerjavascript_on_set_eol_fill(void* self, void (*callback)(void*, bool, int)) {
@@ -888,8 +888,8 @@ void q_scilexerjavascript_set_font(void* self, void* f, int style) {
     QsciLexerJavaScript_SetFont((QsciLexerJavaScript*)self, (QFont*)f, style);
 }
 
-void q_scilexerjavascript_qbase_set_font(void* self, void* f, int style) {
-    QsciLexerJavaScript_QBaseSetFont((QsciLexerJavaScript*)self, (QFont*)f, style);
+void q_scilexerjavascript_super_set_font(void* self, void* f, int style) {
+    QsciLexerJavaScript_SuperSetFont((QsciLexerJavaScript*)self, (QFont*)f, style);
 }
 
 void q_scilexerjavascript_on_set_font(void* self, void (*callback)(void*, void*, int)) {
@@ -900,8 +900,8 @@ void q_scilexerjavascript_set_paper(void* self, void* c, int style) {
     QsciLexerJavaScript_SetPaper((QsciLexerJavaScript*)self, (QColor*)c, style);
 }
 
-void q_scilexerjavascript_qbase_set_paper(void* self, void* c, int style) {
-    QsciLexerJavaScript_QBaseSetPaper((QsciLexerJavaScript*)self, (QColor*)c, style);
+void q_scilexerjavascript_super_set_paper(void* self, void* c, int style) {
+    QsciLexerJavaScript_SuperSetPaper((QsciLexerJavaScript*)self, (QColor*)c, style);
 }
 
 void q_scilexerjavascript_on_set_paper(void* self, void (*callback)(void*, void*, int)) {
@@ -912,8 +912,8 @@ bool q_scilexerjavascript_read_properties(void* self, void* qs, const char* pref
     return QsciLexerJavaScript_ReadProperties((QsciLexerJavaScript*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexerjavascript_qbase_read_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerJavaScript_QBaseReadProperties((QsciLexerJavaScript*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexerjavascript_super_read_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerJavaScript_SuperReadProperties((QsciLexerJavaScript*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexerjavascript_on_read_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -924,8 +924,8 @@ bool q_scilexerjavascript_write_properties(void* self, void* qs, const char* pre
     return QsciLexerJavaScript_WriteProperties((QsciLexerJavaScript*)self, (QSettings*)qs, qstring(prefix));
 }
 
-bool q_scilexerjavascript_qbase_write_properties(void* self, void* qs, const char* prefix) {
-    return QsciLexerJavaScript_QBaseWriteProperties((QsciLexerJavaScript*)self, (QSettings*)qs, qstring(prefix));
+bool q_scilexerjavascript_super_write_properties(void* self, void* qs, const char* prefix) {
+    return QsciLexerJavaScript_SuperWriteProperties((QsciLexerJavaScript*)self, (QSettings*)qs, qstring(prefix));
 }
 
 void q_scilexerjavascript_on_write_properties(void* self, bool (*callback)(void*, void*, const char*)) {
@@ -936,8 +936,8 @@ bool q_scilexerjavascript_event(void* self, void* event) {
     return QsciLexerJavaScript_Event((QsciLexerJavaScript*)self, (QEvent*)event);
 }
 
-bool q_scilexerjavascript_qbase_event(void* self, void* event) {
-    return QsciLexerJavaScript_QBaseEvent((QsciLexerJavaScript*)self, (QEvent*)event);
+bool q_scilexerjavascript_super_event(void* self, void* event) {
+    return QsciLexerJavaScript_SuperEvent((QsciLexerJavaScript*)self, (QEvent*)event);
 }
 
 void q_scilexerjavascript_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -948,8 +948,8 @@ bool q_scilexerjavascript_event_filter(void* self, void* watched, void* event) {
     return QsciLexerJavaScript_EventFilter((QsciLexerJavaScript*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scilexerjavascript_qbase_event_filter(void* self, void* watched, void* event) {
-    return QsciLexerJavaScript_QBaseEventFilter((QsciLexerJavaScript*)self, (QObject*)watched, (QEvent*)event);
+bool q_scilexerjavascript_super_event_filter(void* self, void* watched, void* event) {
+    return QsciLexerJavaScript_SuperEventFilter((QsciLexerJavaScript*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scilexerjavascript_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -960,8 +960,8 @@ void q_scilexerjavascript_timer_event(void* self, void* event) {
     QsciLexerJavaScript_TimerEvent((QsciLexerJavaScript*)self, (QTimerEvent*)event);
 }
 
-void q_scilexerjavascript_qbase_timer_event(void* self, void* event) {
-    QsciLexerJavaScript_QBaseTimerEvent((QsciLexerJavaScript*)self, (QTimerEvent*)event);
+void q_scilexerjavascript_super_timer_event(void* self, void* event) {
+    QsciLexerJavaScript_SuperTimerEvent((QsciLexerJavaScript*)self, (QTimerEvent*)event);
 }
 
 void q_scilexerjavascript_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -972,8 +972,8 @@ void q_scilexerjavascript_child_event(void* self, void* event) {
     QsciLexerJavaScript_ChildEvent((QsciLexerJavaScript*)self, (QChildEvent*)event);
 }
 
-void q_scilexerjavascript_qbase_child_event(void* self, void* event) {
-    QsciLexerJavaScript_QBaseChildEvent((QsciLexerJavaScript*)self, (QChildEvent*)event);
+void q_scilexerjavascript_super_child_event(void* self, void* event) {
+    QsciLexerJavaScript_SuperChildEvent((QsciLexerJavaScript*)self, (QChildEvent*)event);
 }
 
 void q_scilexerjavascript_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -984,8 +984,8 @@ void q_scilexerjavascript_custom_event(void* self, void* event) {
     QsciLexerJavaScript_CustomEvent((QsciLexerJavaScript*)self, (QEvent*)event);
 }
 
-void q_scilexerjavascript_qbase_custom_event(void* self, void* event) {
-    QsciLexerJavaScript_QBaseCustomEvent((QsciLexerJavaScript*)self, (QEvent*)event);
+void q_scilexerjavascript_super_custom_event(void* self, void* event) {
+    QsciLexerJavaScript_SuperCustomEvent((QsciLexerJavaScript*)self, (QEvent*)event);
 }
 
 void q_scilexerjavascript_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -996,8 +996,8 @@ void q_scilexerjavascript_connect_notify(void* self, void* signal) {
     QsciLexerJavaScript_ConnectNotify((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerjavascript_qbase_connect_notify(void* self, void* signal) {
-    QsciLexerJavaScript_QBaseConnectNotify((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
+void q_scilexerjavascript_super_connect_notify(void* self, void* signal) {
+    QsciLexerJavaScript_SuperConnectNotify((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerjavascript_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1008,8 +1008,8 @@ void q_scilexerjavascript_disconnect_notify(void* self, void* signal) {
     QsciLexerJavaScript_DisconnectNotify((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
 }
 
-void q_scilexerjavascript_qbase_disconnect_notify(void* self, void* signal) {
-    QsciLexerJavaScript_QBaseDisconnectNotify((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
+void q_scilexerjavascript_super_disconnect_notify(void* self, void* signal) {
+    QsciLexerJavaScript_SuperDisconnectNotify((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerjavascript_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1023,8 +1023,8 @@ char* q_scilexerjavascript_text_as_bytes(void* self, const char* text) {
     return _ret;
 }
 
-char* q_scilexerjavascript_qbase_text_as_bytes(void* self, const char* text) {
-    libqt_string _str = QsciLexerJavaScript_QBaseTextAsBytes((QsciLexerJavaScript*)self, qstring(text));
+char* q_scilexerjavascript_super_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciLexerJavaScript_SuperTextAsBytes((QsciLexerJavaScript*)self, qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1041,8 +1041,8 @@ const char* q_scilexerjavascript_bytes_as_text(void* self, const char* bytes, in
     return _ret;
 }
 
-const char* q_scilexerjavascript_qbase_bytes_as_text(void* self, const char* bytes, int size) {
-    libqt_string _str = QsciLexerJavaScript_QBaseBytesAsText((QsciLexerJavaScript*)self, bytes, size);
+const char* q_scilexerjavascript_super_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciLexerJavaScript_SuperBytesAsText((QsciLexerJavaScript*)self, bytes, size);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -1056,8 +1056,8 @@ QObject* q_scilexerjavascript_sender(void* self) {
     return QsciLexerJavaScript_Sender((QsciLexerJavaScript*)self);
 }
 
-QObject* q_scilexerjavascript_qbase_sender(void* self) {
-    return QsciLexerJavaScript_QBaseSender((QsciLexerJavaScript*)self);
+QObject* q_scilexerjavascript_super_sender(void* self) {
+    return QsciLexerJavaScript_SuperSender((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_sender(void* self, QObject* (*callback)()) {
@@ -1068,8 +1068,8 @@ int32_t q_scilexerjavascript_sender_signal_index(void* self) {
     return QsciLexerJavaScript_SenderSignalIndex((QsciLexerJavaScript*)self);
 }
 
-int32_t q_scilexerjavascript_qbase_sender_signal_index(void* self) {
-    return QsciLexerJavaScript_QBaseSenderSignalIndex((QsciLexerJavaScript*)self);
+int32_t q_scilexerjavascript_super_sender_signal_index(void* self) {
+    return QsciLexerJavaScript_SuperSenderSignalIndex((QsciLexerJavaScript*)self);
 }
 
 void q_scilexerjavascript_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1080,8 +1080,8 @@ int32_t q_scilexerjavascript_receivers(void* self, const char* signal) {
     return QsciLexerJavaScript_Receivers((QsciLexerJavaScript*)self, signal);
 }
 
-int32_t q_scilexerjavascript_qbase_receivers(void* self, const char* signal) {
-    return QsciLexerJavaScript_QBaseReceivers((QsciLexerJavaScript*)self, signal);
+int32_t q_scilexerjavascript_super_receivers(void* self, const char* signal) {
+    return QsciLexerJavaScript_SuperReceivers((QsciLexerJavaScript*)self, signal);
 }
 
 void q_scilexerjavascript_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1092,8 +1092,8 @@ bool q_scilexerjavascript_is_signal_connected(void* self, void* signal) {
     return QsciLexerJavaScript_IsSignalConnected((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
 }
 
-bool q_scilexerjavascript_qbase_is_signal_connected(void* self, void* signal) {
-    return QsciLexerJavaScript_QBaseIsSignalConnected((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
+bool q_scilexerjavascript_super_is_signal_connected(void* self, void* signal) {
+    return QsciLexerJavaScript_SuperIsSignalConnected((QsciLexerJavaScript*)self, (QMetaMethod*)signal);
 }
 
 void q_scilexerjavascript_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

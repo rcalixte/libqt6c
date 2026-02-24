@@ -26,8 +26,8 @@ void q_candlestickseries_on_meta_object(void* self, const QMetaObject* (*callbac
     QCandlestickSeries_OnMetaObject((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_candlestickseries_qbase_meta_object(void* self) {
-    return QCandlestickSeries_QBaseMetaObject((QCandlestickSeries*)self);
+const QMetaObject* q_candlestickseries_super_meta_object(void* self) {
+    return QCandlestickSeries_SuperMetaObject((QCandlestickSeries*)self);
 }
 
 void* q_candlestickseries_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_candlestickseries_on_metacast(void* self, void* (*callback)(void*, const 
     QCandlestickSeries_OnMetacast((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-void* q_candlestickseries_qbase_metacast(void* self, const char* param1) {
-    return QCandlestickSeries_QBaseMetacast((QCandlestickSeries*)self, param1);
+void* q_candlestickseries_super_metacast(void* self, const char* param1) {
+    return QCandlestickSeries_SuperMetacast((QCandlestickSeries*)self, param1);
 }
 
 int32_t q_candlestickseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_candlestickseries_on_metacall(void* self, int32_t (*callback)(void*, int3
     QCandlestickSeries_OnMetacall((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_candlestickseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QCandlestickSeries_QBaseMetacall((QCandlestickSeries*)self, param1, param2, param3);
+int32_t q_candlestickseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QCandlestickSeries_SuperMetacall((QCandlestickSeries*)self, param1, param2, param3);
 }
 
 const char* q_candlestickseries_tr(const char* s) {
@@ -106,8 +106,8 @@ void q_candlestickseries_on_type(void* self, int32_t (*callback)()) {
     QCandlestickSeries_OnType((QCandlestickSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_candlestickseries_qbase_type(void* self) {
-    return QCandlestickSeries_QBaseType((QCandlestickSeries*)self);
+int32_t q_candlestickseries_super_type(void* self) {
+    return QCandlestickSeries_SuperType((QCandlestickSeries*)self);
 }
 
 void q_candlestickseries_set_maximum_column_width(void* self, double maximumColumnWidth) {
@@ -663,8 +663,8 @@ bool q_candlestickseries_event(void* self, void* event) {
     return QCandlestickSeries_Event((QCandlestickSeries*)self, (QEvent*)event);
 }
 
-bool q_candlestickseries_qbase_event(void* self, void* event) {
-    return QCandlestickSeries_QBaseEvent((QCandlestickSeries*)self, (QEvent*)event);
+bool q_candlestickseries_super_event(void* self, void* event) {
+    return QCandlestickSeries_SuperEvent((QCandlestickSeries*)self, (QEvent*)event);
 }
 
 void q_candlestickseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -675,8 +675,8 @@ bool q_candlestickseries_event_filter(void* self, void* watched, void* event) {
     return QCandlestickSeries_EventFilter((QCandlestickSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_candlestickseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QCandlestickSeries_QBaseEventFilter((QCandlestickSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_candlestickseries_super_event_filter(void* self, void* watched, void* event) {
+    return QCandlestickSeries_SuperEventFilter((QCandlestickSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_candlestickseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -687,8 +687,8 @@ void q_candlestickseries_timer_event(void* self, void* event) {
     QCandlestickSeries_TimerEvent((QCandlestickSeries*)self, (QTimerEvent*)event);
 }
 
-void q_candlestickseries_qbase_timer_event(void* self, void* event) {
-    QCandlestickSeries_QBaseTimerEvent((QCandlestickSeries*)self, (QTimerEvent*)event);
+void q_candlestickseries_super_timer_event(void* self, void* event) {
+    QCandlestickSeries_SuperTimerEvent((QCandlestickSeries*)self, (QTimerEvent*)event);
 }
 
 void q_candlestickseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -699,8 +699,8 @@ void q_candlestickseries_child_event(void* self, void* event) {
     QCandlestickSeries_ChildEvent((QCandlestickSeries*)self, (QChildEvent*)event);
 }
 
-void q_candlestickseries_qbase_child_event(void* self, void* event) {
-    QCandlestickSeries_QBaseChildEvent((QCandlestickSeries*)self, (QChildEvent*)event);
+void q_candlestickseries_super_child_event(void* self, void* event) {
+    QCandlestickSeries_SuperChildEvent((QCandlestickSeries*)self, (QChildEvent*)event);
 }
 
 void q_candlestickseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -711,8 +711,8 @@ void q_candlestickseries_custom_event(void* self, void* event) {
     QCandlestickSeries_CustomEvent((QCandlestickSeries*)self, (QEvent*)event);
 }
 
-void q_candlestickseries_qbase_custom_event(void* self, void* event) {
-    QCandlestickSeries_QBaseCustomEvent((QCandlestickSeries*)self, (QEvent*)event);
+void q_candlestickseries_super_custom_event(void* self, void* event) {
+    QCandlestickSeries_SuperCustomEvent((QCandlestickSeries*)self, (QEvent*)event);
 }
 
 void q_candlestickseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -723,8 +723,8 @@ void q_candlestickseries_connect_notify(void* self, void* signal) {
     QCandlestickSeries_ConnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickseries_qbase_connect_notify(void* self, void* signal) {
-    QCandlestickSeries_QBaseConnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
+void q_candlestickseries_super_connect_notify(void* self, void* signal) {
+    QCandlestickSeries_SuperConnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_candlestickseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -735,8 +735,8 @@ void q_candlestickseries_disconnect_notify(void* self, void* signal) {
     QCandlestickSeries_DisconnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_candlestickseries_qbase_disconnect_notify(void* self, void* signal) {
-    QCandlestickSeries_QBaseDisconnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
+void q_candlestickseries_super_disconnect_notify(void* self, void* signal) {
+    QCandlestickSeries_SuperDisconnectNotify((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_candlestickseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -747,8 +747,8 @@ QObject* q_candlestickseries_sender(void* self) {
     return QCandlestickSeries_Sender((QCandlestickSeries*)self);
 }
 
-QObject* q_candlestickseries_qbase_sender(void* self) {
-    return QCandlestickSeries_QBaseSender((QCandlestickSeries*)self);
+QObject* q_candlestickseries_super_sender(void* self) {
+    return QCandlestickSeries_SuperSender((QCandlestickSeries*)self);
 }
 
 void q_candlestickseries_on_sender(void* self, QObject* (*callback)()) {
@@ -759,8 +759,8 @@ int32_t q_candlestickseries_sender_signal_index(void* self) {
     return QCandlestickSeries_SenderSignalIndex((QCandlestickSeries*)self);
 }
 
-int32_t q_candlestickseries_qbase_sender_signal_index(void* self) {
-    return QCandlestickSeries_QBaseSenderSignalIndex((QCandlestickSeries*)self);
+int32_t q_candlestickseries_super_sender_signal_index(void* self) {
+    return QCandlestickSeries_SuperSenderSignalIndex((QCandlestickSeries*)self);
 }
 
 void q_candlestickseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -771,8 +771,8 @@ int32_t q_candlestickseries_receivers(void* self, const char* signal) {
     return QCandlestickSeries_Receivers((QCandlestickSeries*)self, signal);
 }
 
-int32_t q_candlestickseries_qbase_receivers(void* self, const char* signal) {
-    return QCandlestickSeries_QBaseReceivers((QCandlestickSeries*)self, signal);
+int32_t q_candlestickseries_super_receivers(void* self, const char* signal) {
+    return QCandlestickSeries_SuperReceivers((QCandlestickSeries*)self, signal);
 }
 
 void q_candlestickseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -783,8 +783,8 @@ bool q_candlestickseries_is_signal_connected(void* self, void* signal) {
     return QCandlestickSeries_IsSignalConnected((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_candlestickseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QCandlestickSeries_QBaseIsSignalConnected((QCandlestickSeries*)self, (QMetaMethod*)signal);
+bool q_candlestickseries_super_is_signal_connected(void* self, void* signal) {
+    return QCandlestickSeries_SuperIsSignalConnected((QCandlestickSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_candlestickseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

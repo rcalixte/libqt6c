@@ -41,8 +41,8 @@ void k_squeezedtextlabel_on_meta_object(void* self, const QMetaObject* (*callbac
     KSqueezedTextLabel_OnMetaObject((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_squeezedtextlabel_qbase_meta_object(void* self) {
-    return KSqueezedTextLabel_QBaseMetaObject((KSqueezedTextLabel*)self);
+const QMetaObject* k_squeezedtextlabel_super_meta_object(void* self) {
+    return KSqueezedTextLabel_SuperMetaObject((KSqueezedTextLabel*)self);
 }
 
 void* k_squeezedtextlabel_metacast(void* self, const char* param1) {
@@ -53,8 +53,8 @@ void k_squeezedtextlabel_on_metacast(void* self, void* (*callback)(void*, const 
     KSqueezedTextLabel_OnMetacast((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void* k_squeezedtextlabel_qbase_metacast(void* self, const char* param1) {
-    return KSqueezedTextLabel_QBaseMetacast((KSqueezedTextLabel*)self, param1);
+void* k_squeezedtextlabel_super_metacast(void* self, const char* param1) {
+    return KSqueezedTextLabel_SuperMetacast((KSqueezedTextLabel*)self, param1);
 }
 
 int32_t k_squeezedtextlabel_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -65,8 +65,8 @@ void k_squeezedtextlabel_on_metacall(void* self, int32_t (*callback)(void*, int3
     KSqueezedTextLabel_OnMetacall((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-int32_t k_squeezedtextlabel_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KSqueezedTextLabel_QBaseMetacall((KSqueezedTextLabel*)self, param1, param2, param3);
+int32_t k_squeezedtextlabel_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KSqueezedTextLabel_SuperMetacall((KSqueezedTextLabel*)self, param1, param2, param3);
 }
 
 const char* k_squeezedtextlabel_tr(const char* s) {
@@ -84,8 +84,8 @@ void k_squeezedtextlabel_on_minimum_size_hint(void* self, QSize* (*callback)()) 
     KSqueezedTextLabel_OnMinimumSizeHint((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-QSize* k_squeezedtextlabel_qbase_minimum_size_hint(void* self) {
-    return KSqueezedTextLabel_QBaseMinimumSizeHint((KSqueezedTextLabel*)self);
+QSize* k_squeezedtextlabel_super_minimum_size_hint(void* self) {
+    return KSqueezedTextLabel_SuperMinimumSizeHint((KSqueezedTextLabel*)self);
 }
 
 QSize* k_squeezedtextlabel_size_hint(void* self) {
@@ -96,8 +96,8 @@ void k_squeezedtextlabel_on_size_hint(void* self, QSize* (*callback)()) {
     KSqueezedTextLabel_OnSizeHint((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-QSize* k_squeezedtextlabel_qbase_size_hint(void* self) {
-    return KSqueezedTextLabel_QBaseSizeHint((KSqueezedTextLabel*)self);
+QSize* k_squeezedtextlabel_super_size_hint(void* self) {
+    return KSqueezedTextLabel_SuperSizeHint((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_set_indent(void* self, int indent) {
@@ -116,8 +116,8 @@ void k_squeezedtextlabel_on_set_alignment(void* self, void (*callback)(void*, in
     KSqueezedTextLabel_OnSetAlignment((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void k_squeezedtextlabel_qbase_set_alignment(void* self, int32_t alignment) {
-    KSqueezedTextLabel_QBaseSetAlignment((KSqueezedTextLabel*)self, alignment);
+void k_squeezedtextlabel_super_set_alignment(void* self, int32_t alignment) {
+    KSqueezedTextLabel_SuperSetAlignment((KSqueezedTextLabel*)self, alignment);
 }
 
 int32_t k_squeezedtextlabel_text_elide_mode(void* self) {
@@ -159,8 +159,8 @@ void k_squeezedtextlabel_on_mouse_release_event(void* self, void (*callback)(voi
     KSqueezedTextLabel_OnMouseReleaseEvent((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void k_squeezedtextlabel_qbase_mouse_release_event(void* self, void* param1) {
-    KSqueezedTextLabel_QBaseMouseReleaseEvent((KSqueezedTextLabel*)self, (QMouseEvent*)param1);
+void k_squeezedtextlabel_super_mouse_release_event(void* self, void* param1) {
+    KSqueezedTextLabel_SuperMouseReleaseEvent((KSqueezedTextLabel*)self, (QMouseEvent*)param1);
 }
 
 void k_squeezedtextlabel_resize_event(void* self, void* param1) {
@@ -171,8 +171,8 @@ void k_squeezedtextlabel_on_resize_event(void* self, void (*callback)(void*, voi
     KSqueezedTextLabel_OnResizeEvent((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void k_squeezedtextlabel_qbase_resize_event(void* self, void* param1) {
-    KSqueezedTextLabel_QBaseResizeEvent((KSqueezedTextLabel*)self, (QResizeEvent*)param1);
+void k_squeezedtextlabel_super_resize_event(void* self, void* param1) {
+    KSqueezedTextLabel_SuperResizeEvent((KSqueezedTextLabel*)self, (QResizeEvent*)param1);
 }
 
 void k_squeezedtextlabel_context_menu_event(void* self, void* param1) {
@@ -183,8 +183,8 @@ void k_squeezedtextlabel_on_context_menu_event(void* self, void (*callback)(void
     KSqueezedTextLabel_OnContextMenuEvent((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void k_squeezedtextlabel_qbase_context_menu_event(void* self, void* param1) {
-    KSqueezedTextLabel_QBaseContextMenuEvent((KSqueezedTextLabel*)self, (QContextMenuEvent*)param1);
+void k_squeezedtextlabel_super_context_menu_event(void* self, void* param1) {
+    KSqueezedTextLabel_SuperContextMenuEvent((KSqueezedTextLabel*)self, (QContextMenuEvent*)param1);
 }
 
 void k_squeezedtextlabel_squeeze_text_to_label(void* self) {
@@ -195,8 +195,8 @@ void k_squeezedtextlabel_on_squeeze_text_to_label(void* self, void (*callback)()
     KSqueezedTextLabel_OnSqueezeTextToLabel((KSqueezedTextLabel*)self, (intptr_t)callback);
 }
 
-void k_squeezedtextlabel_qbase_squeeze_text_to_label(void* self) {
-    KSqueezedTextLabel_QBaseSqueezeTextToLabel((KSqueezedTextLabel*)self);
+void k_squeezedtextlabel_super_squeeze_text_to_label(void* self) {
+    KSqueezedTextLabel_SuperSqueezeTextToLabel((KSqueezedTextLabel*)self);
 }
 
 const char* k_squeezedtextlabel_tr2(const char* s, const char* c) {
@@ -1788,8 +1788,8 @@ int32_t k_squeezedtextlabel_height_for_width(void* self, int param1) {
     return KSqueezedTextLabel_HeightForWidth((KSqueezedTextLabel*)self, param1);
 }
 
-int32_t k_squeezedtextlabel_qbase_height_for_width(void* self, int param1) {
-    return KSqueezedTextLabel_QBaseHeightForWidth((KSqueezedTextLabel*)self, param1);
+int32_t k_squeezedtextlabel_super_height_for_width(void* self, int param1) {
+    return KSqueezedTextLabel_SuperHeightForWidth((KSqueezedTextLabel*)self, param1);
 }
 
 void k_squeezedtextlabel_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -1800,8 +1800,8 @@ bool k_squeezedtextlabel_event(void* self, void* e) {
     return KSqueezedTextLabel_Event((KSqueezedTextLabel*)self, (QEvent*)e);
 }
 
-bool k_squeezedtextlabel_qbase_event(void* self, void* e) {
-    return KSqueezedTextLabel_QBaseEvent((KSqueezedTextLabel*)self, (QEvent*)e);
+bool k_squeezedtextlabel_super_event(void* self, void* e) {
+    return KSqueezedTextLabel_SuperEvent((KSqueezedTextLabel*)self, (QEvent*)e);
 }
 
 void k_squeezedtextlabel_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1812,8 +1812,8 @@ void k_squeezedtextlabel_key_press_event(void* self, void* ev) {
     KSqueezedTextLabel_KeyPressEvent((KSqueezedTextLabel*)self, (QKeyEvent*)ev);
 }
 
-void k_squeezedtextlabel_qbase_key_press_event(void* self, void* ev) {
-    KSqueezedTextLabel_QBaseKeyPressEvent((KSqueezedTextLabel*)self, (QKeyEvent*)ev);
+void k_squeezedtextlabel_super_key_press_event(void* self, void* ev) {
+    KSqueezedTextLabel_SuperKeyPressEvent((KSqueezedTextLabel*)self, (QKeyEvent*)ev);
 }
 
 void k_squeezedtextlabel_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1824,8 +1824,8 @@ void k_squeezedtextlabel_paint_event(void* self, void* param1) {
     KSqueezedTextLabel_PaintEvent((KSqueezedTextLabel*)self, (QPaintEvent*)param1);
 }
 
-void k_squeezedtextlabel_qbase_paint_event(void* self, void* param1) {
-    KSqueezedTextLabel_QBasePaintEvent((KSqueezedTextLabel*)self, (QPaintEvent*)param1);
+void k_squeezedtextlabel_super_paint_event(void* self, void* param1) {
+    KSqueezedTextLabel_SuperPaintEvent((KSqueezedTextLabel*)self, (QPaintEvent*)param1);
 }
 
 void k_squeezedtextlabel_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -1836,8 +1836,8 @@ void k_squeezedtextlabel_change_event(void* self, void* param1) {
     KSqueezedTextLabel_ChangeEvent((KSqueezedTextLabel*)self, (QEvent*)param1);
 }
 
-void k_squeezedtextlabel_qbase_change_event(void* self, void* param1) {
-    KSqueezedTextLabel_QBaseChangeEvent((KSqueezedTextLabel*)self, (QEvent*)param1);
+void k_squeezedtextlabel_super_change_event(void* self, void* param1) {
+    KSqueezedTextLabel_SuperChangeEvent((KSqueezedTextLabel*)self, (QEvent*)param1);
 }
 
 void k_squeezedtextlabel_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -1848,8 +1848,8 @@ void k_squeezedtextlabel_mouse_press_event(void* self, void* ev) {
     KSqueezedTextLabel_MousePressEvent((KSqueezedTextLabel*)self, (QMouseEvent*)ev);
 }
 
-void k_squeezedtextlabel_qbase_mouse_press_event(void* self, void* ev) {
-    KSqueezedTextLabel_QBaseMousePressEvent((KSqueezedTextLabel*)self, (QMouseEvent*)ev);
+void k_squeezedtextlabel_super_mouse_press_event(void* self, void* ev) {
+    KSqueezedTextLabel_SuperMousePressEvent((KSqueezedTextLabel*)self, (QMouseEvent*)ev);
 }
 
 void k_squeezedtextlabel_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -1860,8 +1860,8 @@ void k_squeezedtextlabel_mouse_move_event(void* self, void* ev) {
     KSqueezedTextLabel_MouseMoveEvent((KSqueezedTextLabel*)self, (QMouseEvent*)ev);
 }
 
-void k_squeezedtextlabel_qbase_mouse_move_event(void* self, void* ev) {
-    KSqueezedTextLabel_QBaseMouseMoveEvent((KSqueezedTextLabel*)self, (QMouseEvent*)ev);
+void k_squeezedtextlabel_super_mouse_move_event(void* self, void* ev) {
+    KSqueezedTextLabel_SuperMouseMoveEvent((KSqueezedTextLabel*)self, (QMouseEvent*)ev);
 }
 
 void k_squeezedtextlabel_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -1872,8 +1872,8 @@ void k_squeezedtextlabel_focus_in_event(void* self, void* ev) {
     KSqueezedTextLabel_FocusInEvent((KSqueezedTextLabel*)self, (QFocusEvent*)ev);
 }
 
-void k_squeezedtextlabel_qbase_focus_in_event(void* self, void* ev) {
-    KSqueezedTextLabel_QBaseFocusInEvent((KSqueezedTextLabel*)self, (QFocusEvent*)ev);
+void k_squeezedtextlabel_super_focus_in_event(void* self, void* ev) {
+    KSqueezedTextLabel_SuperFocusInEvent((KSqueezedTextLabel*)self, (QFocusEvent*)ev);
 }
 
 void k_squeezedtextlabel_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -1884,8 +1884,8 @@ void k_squeezedtextlabel_focus_out_event(void* self, void* ev) {
     KSqueezedTextLabel_FocusOutEvent((KSqueezedTextLabel*)self, (QFocusEvent*)ev);
 }
 
-void k_squeezedtextlabel_qbase_focus_out_event(void* self, void* ev) {
-    KSqueezedTextLabel_QBaseFocusOutEvent((KSqueezedTextLabel*)self, (QFocusEvent*)ev);
+void k_squeezedtextlabel_super_focus_out_event(void* self, void* ev) {
+    KSqueezedTextLabel_SuperFocusOutEvent((KSqueezedTextLabel*)self, (QFocusEvent*)ev);
 }
 
 void k_squeezedtextlabel_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -1896,8 +1896,8 @@ bool k_squeezedtextlabel_focus_next_prev_child(void* self, bool next) {
     return KSqueezedTextLabel_FocusNextPrevChild((KSqueezedTextLabel*)self, next);
 }
 
-bool k_squeezedtextlabel_qbase_focus_next_prev_child(void* self, bool next) {
-    return KSqueezedTextLabel_QBaseFocusNextPrevChild((KSqueezedTextLabel*)self, next);
+bool k_squeezedtextlabel_super_focus_next_prev_child(void* self, bool next) {
+    return KSqueezedTextLabel_SuperFocusNextPrevChild((KSqueezedTextLabel*)self, next);
 }
 
 void k_squeezedtextlabel_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -1908,8 +1908,8 @@ void k_squeezedtextlabel_init_style_option(void* self, void* option) {
     KSqueezedTextLabel_InitStyleOption((KSqueezedTextLabel*)self, (QStyleOptionFrame*)option);
 }
 
-void k_squeezedtextlabel_qbase_init_style_option(void* self, void* option) {
-    KSqueezedTextLabel_QBaseInitStyleOption((KSqueezedTextLabel*)self, (QStyleOptionFrame*)option);
+void k_squeezedtextlabel_super_init_style_option(void* self, void* option) {
+    KSqueezedTextLabel_SuperInitStyleOption((KSqueezedTextLabel*)self, (QStyleOptionFrame*)option);
 }
 
 void k_squeezedtextlabel_on_init_style_option(void* self, void (*callback)(void*, void*)) {
@@ -1920,8 +1920,8 @@ int32_t k_squeezedtextlabel_dev_type(void* self) {
     return KSqueezedTextLabel_DevType((KSqueezedTextLabel*)self);
 }
 
-int32_t k_squeezedtextlabel_qbase_dev_type(void* self) {
-    return KSqueezedTextLabel_QBaseDevType((KSqueezedTextLabel*)self);
+int32_t k_squeezedtextlabel_super_dev_type(void* self) {
+    return KSqueezedTextLabel_SuperDevType((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_dev_type(void* self, int32_t (*callback)()) {
@@ -1932,8 +1932,8 @@ void k_squeezedtextlabel_set_visible(void* self, bool visible) {
     KSqueezedTextLabel_SetVisible((KSqueezedTextLabel*)self, visible);
 }
 
-void k_squeezedtextlabel_qbase_set_visible(void* self, bool visible) {
-    KSqueezedTextLabel_QBaseSetVisible((KSqueezedTextLabel*)self, visible);
+void k_squeezedtextlabel_super_set_visible(void* self, bool visible) {
+    KSqueezedTextLabel_SuperSetVisible((KSqueezedTextLabel*)self, visible);
 }
 
 void k_squeezedtextlabel_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -1944,8 +1944,8 @@ bool k_squeezedtextlabel_has_height_for_width(void* self) {
     return KSqueezedTextLabel_HasHeightForWidth((KSqueezedTextLabel*)self);
 }
 
-bool k_squeezedtextlabel_qbase_has_height_for_width(void* self) {
-    return KSqueezedTextLabel_QBaseHasHeightForWidth((KSqueezedTextLabel*)self);
+bool k_squeezedtextlabel_super_has_height_for_width(void* self) {
+    return KSqueezedTextLabel_SuperHasHeightForWidth((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -1956,8 +1956,8 @@ QPaintEngine* k_squeezedtextlabel_paint_engine(void* self) {
     return KSqueezedTextLabel_PaintEngine((KSqueezedTextLabel*)self);
 }
 
-QPaintEngine* k_squeezedtextlabel_qbase_paint_engine(void* self) {
-    return KSqueezedTextLabel_QBasePaintEngine((KSqueezedTextLabel*)self);
+QPaintEngine* k_squeezedtextlabel_super_paint_engine(void* self) {
+    return KSqueezedTextLabel_SuperPaintEngine((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -1968,8 +1968,8 @@ void k_squeezedtextlabel_mouse_double_click_event(void* self, void* event) {
     KSqueezedTextLabel_MouseDoubleClickEvent((KSqueezedTextLabel*)self, (QMouseEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_mouse_double_click_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseMouseDoubleClickEvent((KSqueezedTextLabel*)self, (QMouseEvent*)event);
+void k_squeezedtextlabel_super_mouse_double_click_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperMouseDoubleClickEvent((KSqueezedTextLabel*)self, (QMouseEvent*)event);
 }
 
 void k_squeezedtextlabel_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -1980,8 +1980,8 @@ void k_squeezedtextlabel_wheel_event(void* self, void* event) {
     KSqueezedTextLabel_WheelEvent((KSqueezedTextLabel*)self, (QWheelEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_wheel_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseWheelEvent((KSqueezedTextLabel*)self, (QWheelEvent*)event);
+void k_squeezedtextlabel_super_wheel_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperWheelEvent((KSqueezedTextLabel*)self, (QWheelEvent*)event);
 }
 
 void k_squeezedtextlabel_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -1992,8 +1992,8 @@ void k_squeezedtextlabel_key_release_event(void* self, void* event) {
     KSqueezedTextLabel_KeyReleaseEvent((KSqueezedTextLabel*)self, (QKeyEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_key_release_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseKeyReleaseEvent((KSqueezedTextLabel*)self, (QKeyEvent*)event);
+void k_squeezedtextlabel_super_key_release_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperKeyReleaseEvent((KSqueezedTextLabel*)self, (QKeyEvent*)event);
 }
 
 void k_squeezedtextlabel_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2004,8 +2004,8 @@ void k_squeezedtextlabel_enter_event(void* self, void* event) {
     KSqueezedTextLabel_EnterEvent((KSqueezedTextLabel*)self, (QEnterEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_enter_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseEnterEvent((KSqueezedTextLabel*)self, (QEnterEvent*)event);
+void k_squeezedtextlabel_super_enter_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperEnterEvent((KSqueezedTextLabel*)self, (QEnterEvent*)event);
 }
 
 void k_squeezedtextlabel_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2016,8 +2016,8 @@ void k_squeezedtextlabel_leave_event(void* self, void* event) {
     KSqueezedTextLabel_LeaveEvent((KSqueezedTextLabel*)self, (QEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_leave_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseLeaveEvent((KSqueezedTextLabel*)self, (QEvent*)event);
+void k_squeezedtextlabel_super_leave_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperLeaveEvent((KSqueezedTextLabel*)self, (QEvent*)event);
 }
 
 void k_squeezedtextlabel_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2028,8 +2028,8 @@ void k_squeezedtextlabel_move_event(void* self, void* event) {
     KSqueezedTextLabel_MoveEvent((KSqueezedTextLabel*)self, (QMoveEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_move_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseMoveEvent((KSqueezedTextLabel*)self, (QMoveEvent*)event);
+void k_squeezedtextlabel_super_move_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperMoveEvent((KSqueezedTextLabel*)self, (QMoveEvent*)event);
 }
 
 void k_squeezedtextlabel_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2040,8 +2040,8 @@ void k_squeezedtextlabel_close_event(void* self, void* event) {
     KSqueezedTextLabel_CloseEvent((KSqueezedTextLabel*)self, (QCloseEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_close_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseCloseEvent((KSqueezedTextLabel*)self, (QCloseEvent*)event);
+void k_squeezedtextlabel_super_close_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperCloseEvent((KSqueezedTextLabel*)self, (QCloseEvent*)event);
 }
 
 void k_squeezedtextlabel_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2052,8 +2052,8 @@ void k_squeezedtextlabel_tablet_event(void* self, void* event) {
     KSqueezedTextLabel_TabletEvent((KSqueezedTextLabel*)self, (QTabletEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_tablet_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseTabletEvent((KSqueezedTextLabel*)self, (QTabletEvent*)event);
+void k_squeezedtextlabel_super_tablet_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperTabletEvent((KSqueezedTextLabel*)self, (QTabletEvent*)event);
 }
 
 void k_squeezedtextlabel_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2064,8 +2064,8 @@ void k_squeezedtextlabel_action_event(void* self, void* event) {
     KSqueezedTextLabel_ActionEvent((KSqueezedTextLabel*)self, (QActionEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_action_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseActionEvent((KSqueezedTextLabel*)self, (QActionEvent*)event);
+void k_squeezedtextlabel_super_action_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperActionEvent((KSqueezedTextLabel*)self, (QActionEvent*)event);
 }
 
 void k_squeezedtextlabel_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2076,8 +2076,8 @@ void k_squeezedtextlabel_drag_enter_event(void* self, void* event) {
     KSqueezedTextLabel_DragEnterEvent((KSqueezedTextLabel*)self, (QDragEnterEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_drag_enter_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseDragEnterEvent((KSqueezedTextLabel*)self, (QDragEnterEvent*)event);
+void k_squeezedtextlabel_super_drag_enter_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperDragEnterEvent((KSqueezedTextLabel*)self, (QDragEnterEvent*)event);
 }
 
 void k_squeezedtextlabel_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2088,8 +2088,8 @@ void k_squeezedtextlabel_drag_move_event(void* self, void* event) {
     KSqueezedTextLabel_DragMoveEvent((KSqueezedTextLabel*)self, (QDragMoveEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_drag_move_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseDragMoveEvent((KSqueezedTextLabel*)self, (QDragMoveEvent*)event);
+void k_squeezedtextlabel_super_drag_move_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperDragMoveEvent((KSqueezedTextLabel*)self, (QDragMoveEvent*)event);
 }
 
 void k_squeezedtextlabel_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2100,8 +2100,8 @@ void k_squeezedtextlabel_drag_leave_event(void* self, void* event) {
     KSqueezedTextLabel_DragLeaveEvent((KSqueezedTextLabel*)self, (QDragLeaveEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_drag_leave_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseDragLeaveEvent((KSqueezedTextLabel*)self, (QDragLeaveEvent*)event);
+void k_squeezedtextlabel_super_drag_leave_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperDragLeaveEvent((KSqueezedTextLabel*)self, (QDragLeaveEvent*)event);
 }
 
 void k_squeezedtextlabel_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2112,8 +2112,8 @@ void k_squeezedtextlabel_drop_event(void* self, void* event) {
     KSqueezedTextLabel_DropEvent((KSqueezedTextLabel*)self, (QDropEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_drop_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseDropEvent((KSqueezedTextLabel*)self, (QDropEvent*)event);
+void k_squeezedtextlabel_super_drop_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperDropEvent((KSqueezedTextLabel*)self, (QDropEvent*)event);
 }
 
 void k_squeezedtextlabel_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2124,8 +2124,8 @@ void k_squeezedtextlabel_show_event(void* self, void* event) {
     KSqueezedTextLabel_ShowEvent((KSqueezedTextLabel*)self, (QShowEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_show_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseShowEvent((KSqueezedTextLabel*)self, (QShowEvent*)event);
+void k_squeezedtextlabel_super_show_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperShowEvent((KSqueezedTextLabel*)self, (QShowEvent*)event);
 }
 
 void k_squeezedtextlabel_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2136,8 +2136,8 @@ void k_squeezedtextlabel_hide_event(void* self, void* event) {
     KSqueezedTextLabel_HideEvent((KSqueezedTextLabel*)self, (QHideEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_hide_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseHideEvent((KSqueezedTextLabel*)self, (QHideEvent*)event);
+void k_squeezedtextlabel_super_hide_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperHideEvent((KSqueezedTextLabel*)self, (QHideEvent*)event);
 }
 
 void k_squeezedtextlabel_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2148,8 +2148,8 @@ bool k_squeezedtextlabel_native_event(void* self, char* eventType, void* message
     return KSqueezedTextLabel_NativeEvent((KSqueezedTextLabel*)self, qstring(eventType), message, result);
 }
 
-bool k_squeezedtextlabel_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KSqueezedTextLabel_QBaseNativeEvent((KSqueezedTextLabel*)self, qstring(eventType), message, result);
+bool k_squeezedtextlabel_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KSqueezedTextLabel_SuperNativeEvent((KSqueezedTextLabel*)self, qstring(eventType), message, result);
 }
 
 void k_squeezedtextlabel_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2160,8 +2160,8 @@ int32_t k_squeezedtextlabel_metric(void* self, int32_t param1) {
     return KSqueezedTextLabel_Metric((KSqueezedTextLabel*)self, param1);
 }
 
-int32_t k_squeezedtextlabel_qbase_metric(void* self, int32_t param1) {
-    return KSqueezedTextLabel_QBaseMetric((KSqueezedTextLabel*)self, param1);
+int32_t k_squeezedtextlabel_super_metric(void* self, int32_t param1) {
+    return KSqueezedTextLabel_SuperMetric((KSqueezedTextLabel*)self, param1);
 }
 
 void k_squeezedtextlabel_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2172,8 +2172,8 @@ void k_squeezedtextlabel_init_painter(void* self, void* painter) {
     KSqueezedTextLabel_InitPainter((KSqueezedTextLabel*)self, (QPainter*)painter);
 }
 
-void k_squeezedtextlabel_qbase_init_painter(void* self, void* painter) {
-    KSqueezedTextLabel_QBaseInitPainter((KSqueezedTextLabel*)self, (QPainter*)painter);
+void k_squeezedtextlabel_super_init_painter(void* self, void* painter) {
+    KSqueezedTextLabel_SuperInitPainter((KSqueezedTextLabel*)self, (QPainter*)painter);
 }
 
 void k_squeezedtextlabel_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2184,8 +2184,8 @@ QPaintDevice* k_squeezedtextlabel_redirected(void* self, void* offset) {
     return KSqueezedTextLabel_Redirected((KSqueezedTextLabel*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_squeezedtextlabel_qbase_redirected(void* self, void* offset) {
-    return KSqueezedTextLabel_QBaseRedirected((KSqueezedTextLabel*)self, (QPoint*)offset);
+QPaintDevice* k_squeezedtextlabel_super_redirected(void* self, void* offset) {
+    return KSqueezedTextLabel_SuperRedirected((KSqueezedTextLabel*)self, (QPoint*)offset);
 }
 
 void k_squeezedtextlabel_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2196,8 +2196,8 @@ QPainter* k_squeezedtextlabel_shared_painter(void* self) {
     return KSqueezedTextLabel_SharedPainter((KSqueezedTextLabel*)self);
 }
 
-QPainter* k_squeezedtextlabel_qbase_shared_painter(void* self) {
-    return KSqueezedTextLabel_QBaseSharedPainter((KSqueezedTextLabel*)self);
+QPainter* k_squeezedtextlabel_super_shared_painter(void* self) {
+    return KSqueezedTextLabel_SuperSharedPainter((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2208,8 +2208,8 @@ void k_squeezedtextlabel_input_method_event(void* self, void* param1) {
     KSqueezedTextLabel_InputMethodEvent((KSqueezedTextLabel*)self, (QInputMethodEvent*)param1);
 }
 
-void k_squeezedtextlabel_qbase_input_method_event(void* self, void* param1) {
-    KSqueezedTextLabel_QBaseInputMethodEvent((KSqueezedTextLabel*)self, (QInputMethodEvent*)param1);
+void k_squeezedtextlabel_super_input_method_event(void* self, void* param1) {
+    KSqueezedTextLabel_SuperInputMethodEvent((KSqueezedTextLabel*)self, (QInputMethodEvent*)param1);
 }
 
 void k_squeezedtextlabel_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2220,8 +2220,8 @@ QVariant* k_squeezedtextlabel_input_method_query(void* self, int32_t param1) {
     return KSqueezedTextLabel_InputMethodQuery((KSqueezedTextLabel*)self, param1);
 }
 
-QVariant* k_squeezedtextlabel_qbase_input_method_query(void* self, int32_t param1) {
-    return KSqueezedTextLabel_QBaseInputMethodQuery((KSqueezedTextLabel*)self, param1);
+QVariant* k_squeezedtextlabel_super_input_method_query(void* self, int32_t param1) {
+    return KSqueezedTextLabel_SuperInputMethodQuery((KSqueezedTextLabel*)self, param1);
 }
 
 void k_squeezedtextlabel_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2232,8 +2232,8 @@ bool k_squeezedtextlabel_event_filter(void* self, void* watched, void* event) {
     return KSqueezedTextLabel_EventFilter((KSqueezedTextLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_squeezedtextlabel_qbase_event_filter(void* self, void* watched, void* event) {
-    return KSqueezedTextLabel_QBaseEventFilter((KSqueezedTextLabel*)self, (QObject*)watched, (QEvent*)event);
+bool k_squeezedtextlabel_super_event_filter(void* self, void* watched, void* event) {
+    return KSqueezedTextLabel_SuperEventFilter((KSqueezedTextLabel*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_squeezedtextlabel_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2244,8 +2244,8 @@ void k_squeezedtextlabel_timer_event(void* self, void* event) {
     KSqueezedTextLabel_TimerEvent((KSqueezedTextLabel*)self, (QTimerEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_timer_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseTimerEvent((KSqueezedTextLabel*)self, (QTimerEvent*)event);
+void k_squeezedtextlabel_super_timer_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperTimerEvent((KSqueezedTextLabel*)self, (QTimerEvent*)event);
 }
 
 void k_squeezedtextlabel_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2256,8 +2256,8 @@ void k_squeezedtextlabel_child_event(void* self, void* event) {
     KSqueezedTextLabel_ChildEvent((KSqueezedTextLabel*)self, (QChildEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_child_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseChildEvent((KSqueezedTextLabel*)self, (QChildEvent*)event);
+void k_squeezedtextlabel_super_child_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperChildEvent((KSqueezedTextLabel*)self, (QChildEvent*)event);
 }
 
 void k_squeezedtextlabel_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2268,8 +2268,8 @@ void k_squeezedtextlabel_custom_event(void* self, void* event) {
     KSqueezedTextLabel_CustomEvent((KSqueezedTextLabel*)self, (QEvent*)event);
 }
 
-void k_squeezedtextlabel_qbase_custom_event(void* self, void* event) {
-    KSqueezedTextLabel_QBaseCustomEvent((KSqueezedTextLabel*)self, (QEvent*)event);
+void k_squeezedtextlabel_super_custom_event(void* self, void* event) {
+    KSqueezedTextLabel_SuperCustomEvent((KSqueezedTextLabel*)self, (QEvent*)event);
 }
 
 void k_squeezedtextlabel_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2280,8 +2280,8 @@ void k_squeezedtextlabel_connect_notify(void* self, void* signal) {
     KSqueezedTextLabel_ConnectNotify((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
 }
 
-void k_squeezedtextlabel_qbase_connect_notify(void* self, void* signal) {
-    KSqueezedTextLabel_QBaseConnectNotify((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
+void k_squeezedtextlabel_super_connect_notify(void* self, void* signal) {
+    KSqueezedTextLabel_SuperConnectNotify((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
 }
 
 void k_squeezedtextlabel_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2292,8 +2292,8 @@ void k_squeezedtextlabel_disconnect_notify(void* self, void* signal) {
     KSqueezedTextLabel_DisconnectNotify((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
 }
 
-void k_squeezedtextlabel_qbase_disconnect_notify(void* self, void* signal) {
-    KSqueezedTextLabel_QBaseDisconnectNotify((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
+void k_squeezedtextlabel_super_disconnect_notify(void* self, void* signal) {
+    KSqueezedTextLabel_SuperDisconnectNotify((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
 }
 
 void k_squeezedtextlabel_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2304,8 +2304,8 @@ void k_squeezedtextlabel_draw_frame(void* self, void* param1) {
     KSqueezedTextLabel_DrawFrame((KSqueezedTextLabel*)self, (QPainter*)param1);
 }
 
-void k_squeezedtextlabel_qbase_draw_frame(void* self, void* param1) {
-    KSqueezedTextLabel_QBaseDrawFrame((KSqueezedTextLabel*)self, (QPainter*)param1);
+void k_squeezedtextlabel_super_draw_frame(void* self, void* param1) {
+    KSqueezedTextLabel_SuperDrawFrame((KSqueezedTextLabel*)self, (QPainter*)param1);
 }
 
 void k_squeezedtextlabel_on_draw_frame(void* self, void (*callback)(void*, void*)) {
@@ -2316,8 +2316,8 @@ void k_squeezedtextlabel_update_micro_focus(void* self) {
     KSqueezedTextLabel_UpdateMicroFocus((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_qbase_update_micro_focus(void* self) {
-    KSqueezedTextLabel_QBaseUpdateMicroFocus((KSqueezedTextLabel*)self);
+void k_squeezedtextlabel_super_update_micro_focus(void* self) {
+    KSqueezedTextLabel_SuperUpdateMicroFocus((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_update_micro_focus(void* self, void (*callback)()) {
@@ -2328,8 +2328,8 @@ void k_squeezedtextlabel_create(void* self) {
     KSqueezedTextLabel_Create((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_qbase_create(void* self) {
-    KSqueezedTextLabel_QBaseCreate((KSqueezedTextLabel*)self);
+void k_squeezedtextlabel_super_create(void* self) {
+    KSqueezedTextLabel_SuperCreate((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_create(void* self, void (*callback)()) {
@@ -2340,8 +2340,8 @@ void k_squeezedtextlabel_destroy(void* self) {
     KSqueezedTextLabel_Destroy((KSqueezedTextLabel*)self);
 }
 
-void k_squeezedtextlabel_qbase_destroy(void* self) {
-    KSqueezedTextLabel_QBaseDestroy((KSqueezedTextLabel*)self);
+void k_squeezedtextlabel_super_destroy(void* self) {
+    KSqueezedTextLabel_SuperDestroy((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_destroy(void* self, void (*callback)()) {
@@ -2352,8 +2352,8 @@ bool k_squeezedtextlabel_focus_next_child(void* self) {
     return KSqueezedTextLabel_FocusNextChild((KSqueezedTextLabel*)self);
 }
 
-bool k_squeezedtextlabel_qbase_focus_next_child(void* self) {
-    return KSqueezedTextLabel_QBaseFocusNextChild((KSqueezedTextLabel*)self);
+bool k_squeezedtextlabel_super_focus_next_child(void* self) {
+    return KSqueezedTextLabel_SuperFocusNextChild((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_focus_next_child(void* self, bool (*callback)()) {
@@ -2364,8 +2364,8 @@ bool k_squeezedtextlabel_focus_previous_child(void* self) {
     return KSqueezedTextLabel_FocusPreviousChild((KSqueezedTextLabel*)self);
 }
 
-bool k_squeezedtextlabel_qbase_focus_previous_child(void* self) {
-    return KSqueezedTextLabel_QBaseFocusPreviousChild((KSqueezedTextLabel*)self);
+bool k_squeezedtextlabel_super_focus_previous_child(void* self) {
+    return KSqueezedTextLabel_SuperFocusPreviousChild((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -2376,8 +2376,8 @@ QObject* k_squeezedtextlabel_sender(void* self) {
     return KSqueezedTextLabel_Sender((KSqueezedTextLabel*)self);
 }
 
-QObject* k_squeezedtextlabel_qbase_sender(void* self) {
-    return KSqueezedTextLabel_QBaseSender((KSqueezedTextLabel*)self);
+QObject* k_squeezedtextlabel_super_sender(void* self) {
+    return KSqueezedTextLabel_SuperSender((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_sender(void* self, QObject* (*callback)()) {
@@ -2388,8 +2388,8 @@ int32_t k_squeezedtextlabel_sender_signal_index(void* self) {
     return KSqueezedTextLabel_SenderSignalIndex((KSqueezedTextLabel*)self);
 }
 
-int32_t k_squeezedtextlabel_qbase_sender_signal_index(void* self) {
-    return KSqueezedTextLabel_QBaseSenderSignalIndex((KSqueezedTextLabel*)self);
+int32_t k_squeezedtextlabel_super_sender_signal_index(void* self) {
+    return KSqueezedTextLabel_SuperSenderSignalIndex((KSqueezedTextLabel*)self);
 }
 
 void k_squeezedtextlabel_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -2400,8 +2400,8 @@ int32_t k_squeezedtextlabel_receivers(void* self, const char* signal) {
     return KSqueezedTextLabel_Receivers((KSqueezedTextLabel*)self, signal);
 }
 
-int32_t k_squeezedtextlabel_qbase_receivers(void* self, const char* signal) {
-    return KSqueezedTextLabel_QBaseReceivers((KSqueezedTextLabel*)self, signal);
+int32_t k_squeezedtextlabel_super_receivers(void* self, const char* signal) {
+    return KSqueezedTextLabel_SuperReceivers((KSqueezedTextLabel*)self, signal);
 }
 
 void k_squeezedtextlabel_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -2412,8 +2412,8 @@ bool k_squeezedtextlabel_is_signal_connected(void* self, void* signal) {
     return KSqueezedTextLabel_IsSignalConnected((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
 }
 
-bool k_squeezedtextlabel_qbase_is_signal_connected(void* self, void* signal) {
-    return KSqueezedTextLabel_QBaseIsSignalConnected((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
+bool k_squeezedtextlabel_super_is_signal_connected(void* self, void* signal) {
+    return KSqueezedTextLabel_SuperIsSignalConnected((KSqueezedTextLabel*)self, (QMetaMethod*)signal);
 }
 
 void k_squeezedtextlabel_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -2424,8 +2424,8 @@ double k_squeezedtextlabel_get_decoded_metric_f(void* self, int32_t metricA, int
     return KSqueezedTextLabel_GetDecodedMetricF((KSqueezedTextLabel*)self, metricA, metricB);
 }
 
-double k_squeezedtextlabel_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KSqueezedTextLabel_QBaseGetDecodedMetricF((KSqueezedTextLabel*)self, metricA, metricB);
+double k_squeezedtextlabel_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KSqueezedTextLabel_SuperGetDecodedMetricF((KSqueezedTextLabel*)self, metricA, metricB);
 }
 
 void k_squeezedtextlabel_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {

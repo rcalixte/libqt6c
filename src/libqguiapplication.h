@@ -45,13 +45,17 @@ const QMetaObject* q_guiapplication_meta_object(void* self);
 ///
 void q_guiapplication_on_meta_object(void* self, const QMetaObject* (*callback)());
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_meta_object` instead
+///
+#define q_guiapplication_qbase_meta_object q_guiapplication_super_meta_object
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
 /// Base class method implementation
 ///
 /// @param self QGuiApplication*
 ///
-const QMetaObject* q_guiapplication_qbase_meta_object(void* self);
+const QMetaObject* q_guiapplication_super_meta_object(void* self);
 
 /// @param self QGuiApplication*
 /// @param param1 const char*
@@ -65,12 +69,16 @@ void* q_guiapplication_metacast(void* self, const char* param1);
 ///
 void q_guiapplication_on_metacast(void* self, void* (*callback)(void*, const char*));
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_metacast` instead
+///
+#define q_guiapplication_qbase_metacast q_guiapplication_super_metacast
+
 /// Base class method implementation
 ///
 /// @param self QGuiApplication*
 /// @param param1 const char*
 ///
-void* q_guiapplication_qbase_metacast(void* self, const char* param1);
+void* q_guiapplication_super_metacast(void* self, const char* param1);
 
 /// @param self QGuiApplication*
 /// @param param1 enum QMetaObject__Call
@@ -86,6 +94,10 @@ int32_t q_guiapplication_metacall(void* self, int32_t param1, int param2, void* 
 ///
 void q_guiapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, void*));
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_metacall` instead
+///
+#define q_guiapplication_qbase_metacall q_guiapplication_super_metacall
+
 /// Base class method implementation
 ///
 /// @param self QGuiApplication*
@@ -93,7 +105,7 @@ void q_guiapplication_on_metacall(void* self, int32_t (*callback)(void*, int32_t
 /// @param param2 int
 /// @param param3 void*
 ///
-int32_t q_guiapplication_qbase_metacall(void* self, int32_t param1, int param2, void* param3);
+int32_t q_guiapplication_super_metacall(void* self, int32_t param1, int param2, void* param3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -351,6 +363,10 @@ bool q_guiapplication_notify(void* self, void* param1, void* param2);
 ///
 void q_guiapplication_on_notify(void* self, bool (*callback)(void*, void*, void*));
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_notify` instead
+///
+#define q_guiapplication_qbase_notify q_guiapplication_super_notify
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#notify)
 ///
 /// Base class method implementation
@@ -359,7 +375,7 @@ void q_guiapplication_on_notify(void* self, bool (*callback)(void*, void*, void*
 /// @param param1 QObject*
 /// @param param2 QEvent*
 ///
-bool q_guiapplication_qbase_notify(void* self, void* param1, void* param2);
+bool q_guiapplication_super_notify(void* self, void* param1, void* param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#isSessionRestored)
 ///
@@ -406,6 +422,10 @@ void* q_guiapplication_resolve_interface(void* self, const char* name, int revis
 ///
 void q_guiapplication_on_resolve_interface(void* self, void* (*callback)(void*, const char*, int));
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_resolve_interface` instead
+///
+#define q_guiapplication_qbase_resolve_interface q_guiapplication_super_resolve_interface
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#resolveInterface)
 ///
 /// Base class method implementation
@@ -414,7 +434,7 @@ void q_guiapplication_on_resolve_interface(void* self, void* (*callback)(void*, 
 /// @param name const char*
 /// @param revision int
 ///
-void* q_guiapplication_qbase_resolve_interface(void* self, const char* name, int revision);
+void* q_guiapplication_super_resolve_interface(void* self, const char* name, int revision);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#sync)
 ///
@@ -629,6 +649,10 @@ bool q_guiapplication_event(void* self, void* param1);
 ///
 void q_guiapplication_on_event(void* self, bool (*callback)(void*, void*));
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_event` instead
+///
+#define q_guiapplication_qbase_event q_guiapplication_super_event
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#event)
 ///
 /// Base class method implementation
@@ -636,7 +660,7 @@ void q_guiapplication_on_event(void* self, bool (*callback)(void*, void*));
 /// @param self QGuiApplication*
 /// @param param1 QEvent*
 ///
-bool q_guiapplication_qbase_event(void* self, void* param1);
+bool q_guiapplication_super_event(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -1614,6 +1638,10 @@ void q_guiapplication_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 bool q_guiapplication_event_filter(void* self, void* watched, void* event);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_event_filter` instead
+///
+#define q_guiapplication_qbase_event_filter q_guiapplication_super_event_filter
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
@@ -1624,7 +1652,7 @@ bool q_guiapplication_event_filter(void* self, void* watched, void* event);
 /// @param watched QObject*
 /// @param event QEvent*
 ///
-bool q_guiapplication_qbase_event_filter(void* self, void* watched, void* event);
+bool q_guiapplication_super_event_filter(void* self, void* watched, void* event);
 
 /// Inherited from QObject
 ///
@@ -1648,6 +1676,10 @@ void q_guiapplication_on_event_filter(void* self, bool (*callback)(void*, void*,
 ///
 void q_guiapplication_timer_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_timer_event` instead
+///
+#define q_guiapplication_qbase_timer_event q_guiapplication_super_timer_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#timerEvent)
@@ -1657,7 +1689,7 @@ void q_guiapplication_timer_event(void* self, void* event);
 /// @param self QGuiApplication*
 /// @param event QTimerEvent*
 ///
-void q_guiapplication_qbase_timer_event(void* self, void* event);
+void q_guiapplication_super_timer_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1681,6 +1713,10 @@ void q_guiapplication_on_timer_event(void* self, void (*callback)(void*, void*))
 ///
 void q_guiapplication_child_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_child_event` instead
+///
+#define q_guiapplication_qbase_child_event q_guiapplication_super_child_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#childEvent)
@@ -1690,7 +1726,7 @@ void q_guiapplication_child_event(void* self, void* event);
 /// @param self QGuiApplication*
 /// @param event QChildEvent*
 ///
-void q_guiapplication_qbase_child_event(void* self, void* event);
+void q_guiapplication_super_child_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1714,6 +1750,10 @@ void q_guiapplication_on_child_event(void* self, void (*callback)(void*, void*))
 ///
 void q_guiapplication_custom_event(void* self, void* event);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_custom_event` instead
+///
+#define q_guiapplication_qbase_custom_event q_guiapplication_super_custom_event
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#customEvent)
@@ -1723,7 +1763,7 @@ void q_guiapplication_custom_event(void* self, void* event);
 /// @param self QGuiApplication*
 /// @param event QEvent*
 ///
-void q_guiapplication_qbase_custom_event(void* self, void* event);
+void q_guiapplication_super_custom_event(void* self, void* event);
 
 /// Inherited from QObject
 ///
@@ -1747,6 +1787,10 @@ void q_guiapplication_on_custom_event(void* self, void (*callback)(void*, void*)
 ///
 void q_guiapplication_connect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_connect_notify` instead
+///
+#define q_guiapplication_qbase_connect_notify q_guiapplication_super_connect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#connectNotify)
@@ -1756,7 +1800,7 @@ void q_guiapplication_connect_notify(void* self, void* signal);
 /// @param self QGuiApplication*
 /// @param signal QMetaMethod*
 ///
-void q_guiapplication_qbase_connect_notify(void* self, void* signal);
+void q_guiapplication_super_connect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1780,6 +1824,10 @@ void q_guiapplication_on_connect_notify(void* self, void (*callback)(void*, void
 ///
 void q_guiapplication_disconnect_notify(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_disconnect_notify` instead
+///
+#define q_guiapplication_qbase_disconnect_notify q_guiapplication_super_disconnect_notify
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#disconnectNotify)
@@ -1789,7 +1837,7 @@ void q_guiapplication_disconnect_notify(void* self, void* signal);
 /// @param self QGuiApplication*
 /// @param signal QMetaMethod*
 ///
-void q_guiapplication_qbase_disconnect_notify(void* self, void* signal);
+void q_guiapplication_super_disconnect_notify(void* self, void* signal);
 
 /// Inherited from QObject
 ///
@@ -1812,6 +1860,10 @@ void q_guiapplication_on_disconnect_notify(void* self, void (*callback)(void*, v
 ///
 QObject* q_guiapplication_sender(void* self);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_sender` instead
+///
+#define q_guiapplication_qbase_sender q_guiapplication_super_sender
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#sender)
@@ -1820,7 +1872,7 @@ QObject* q_guiapplication_sender(void* self);
 ///
 /// @param self QGuiApplication*
 ///
-QObject* q_guiapplication_qbase_sender(void* self);
+QObject* q_guiapplication_super_sender(void* self);
 
 /// Inherited from QObject
 ///
@@ -1843,6 +1895,10 @@ void q_guiapplication_on_sender(void* self, QObject* (*callback)());
 ///
 int32_t q_guiapplication_sender_signal_index(void* self);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_sender_signal_index` instead
+///
+#define q_guiapplication_qbase_sender_signal_index q_guiapplication_super_sender_signal_index
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#senderSignalIndex)
@@ -1851,7 +1907,7 @@ int32_t q_guiapplication_sender_signal_index(void* self);
 ///
 /// @param self QGuiApplication*
 ///
-int32_t q_guiapplication_qbase_sender_signal_index(void* self);
+int32_t q_guiapplication_super_sender_signal_index(void* self);
 
 /// Inherited from QObject
 ///
@@ -1875,6 +1931,10 @@ void q_guiapplication_on_sender_signal_index(void* self, int32_t (*callback)());
 ///
 int32_t q_guiapplication_receivers(void* self, const char* signal);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_receivers` instead
+///
+#define q_guiapplication_qbase_receivers q_guiapplication_super_receivers
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#receivers)
@@ -1884,7 +1944,7 @@ int32_t q_guiapplication_receivers(void* self, const char* signal);
 /// @param self QGuiApplication*
 /// @param signal const char*
 ///
-int32_t q_guiapplication_qbase_receivers(void* self, const char* signal);
+int32_t q_guiapplication_super_receivers(void* self, const char* signal);
 
 /// Inherited from QObject
 ///
@@ -1908,6 +1968,10 @@ void q_guiapplication_on_receivers(void* self, int32_t (*callback)(void*, const 
 ///
 bool q_guiapplication_is_signal_connected(void* self, void* signal);
 
+/// @warning DEPRECATED: Use `q_guiapplication_super_is_signal_connected` instead
+///
+#define q_guiapplication_qbase_is_signal_connected q_guiapplication_super_is_signal_connected
+
 /// Inherited from QObject
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#isSignalConnected)
@@ -1917,7 +1981,7 @@ bool q_guiapplication_is_signal_connected(void* self, void* signal);
 /// @param self QGuiApplication*
 /// @param signal QMetaMethod*
 ///
-bool q_guiapplication_qbase_is_signal_connected(void* self, void* signal);
+bool q_guiapplication_super_is_signal_connected(void* self, void* signal);
 
 /// Inherited from QObject
 ///

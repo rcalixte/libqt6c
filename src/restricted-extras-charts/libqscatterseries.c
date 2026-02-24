@@ -26,8 +26,8 @@ void q_scatterseries_on_meta_object(void* self, const QMetaObject* (*callback)()
     QScatterSeries_OnMetaObject((QScatterSeries*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_scatterseries_qbase_meta_object(void* self) {
-    return QScatterSeries_QBaseMetaObject((QScatterSeries*)self);
+const QMetaObject* q_scatterseries_super_meta_object(void* self) {
+    return QScatterSeries_SuperMetaObject((QScatterSeries*)self);
 }
 
 void* q_scatterseries_metacast(void* self, const char* param1) {
@@ -38,8 +38,8 @@ void q_scatterseries_on_metacast(void* self, void* (*callback)(void*, const char
     QScatterSeries_OnMetacast((QScatterSeries*)self, (intptr_t)callback);
 }
 
-void* q_scatterseries_qbase_metacast(void* self, const char* param1) {
-    return QScatterSeries_QBaseMetacast((QScatterSeries*)self, param1);
+void* q_scatterseries_super_metacast(void* self, const char* param1) {
+    return QScatterSeries_SuperMetacast((QScatterSeries*)self, param1);
 }
 
 int32_t q_scatterseries_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -50,8 +50,8 @@ void q_scatterseries_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     QScatterSeries_OnMetacall((QScatterSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_scatterseries_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QScatterSeries_QBaseMetacall((QScatterSeries*)self, param1, param2, param3);
+int32_t q_scatterseries_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QScatterSeries_SuperMetacall((QScatterSeries*)self, param1, param2, param3);
 }
 
 const char* q_scatterseries_tr(const char* s) {
@@ -69,8 +69,8 @@ void q_scatterseries_on_type(void* self, int32_t (*callback)()) {
     QScatterSeries_OnType((QScatterSeries*)self, (intptr_t)callback);
 }
 
-int32_t q_scatterseries_qbase_type(void* self) {
-    return QScatterSeries_QBaseType((QScatterSeries*)self);
+int32_t q_scatterseries_super_type(void* self) {
+    return QScatterSeries_SuperType((QScatterSeries*)self);
 }
 
 void q_scatterseries_set_pen(void* self, void* pen) {
@@ -81,8 +81,8 @@ void q_scatterseries_on_set_pen(void* self, void (*callback)(void*, void*)) {
     QScatterSeries_OnSetPen((QScatterSeries*)self, (intptr_t)callback);
 }
 
-void q_scatterseries_qbase_set_pen(void* self, void* pen) {
-    QScatterSeries_QBaseSetPen((QScatterSeries*)self, (QPen*)pen);
+void q_scatterseries_super_set_pen(void* self, void* pen) {
+    QScatterSeries_SuperSetPen((QScatterSeries*)self, (QPen*)pen);
 }
 
 void q_scatterseries_set_brush(void* self, void* brush) {
@@ -93,8 +93,8 @@ void q_scatterseries_on_set_brush(void* self, void (*callback)(void*, void*)) {
     QScatterSeries_OnSetBrush((QScatterSeries*)self, (intptr_t)callback);
 }
 
-void q_scatterseries_qbase_set_brush(void* self, void* brush) {
-    QScatterSeries_QBaseSetBrush((QScatterSeries*)self, (QBrush*)brush);
+void q_scatterseries_super_set_brush(void* self, void* brush) {
+    QScatterSeries_SuperSetBrush((QScatterSeries*)self, (QBrush*)brush);
 }
 
 QBrush* q_scatterseries_brush(void* self) {
@@ -109,8 +109,8 @@ void q_scatterseries_on_set_color(void* self, void (*callback)(void*, void*)) {
     QScatterSeries_OnSetColor((QScatterSeries*)self, (intptr_t)callback);
 }
 
-void q_scatterseries_qbase_set_color(void* self, void* color) {
-    QScatterSeries_QBaseSetColor((QScatterSeries*)self, (QColor*)color);
+void q_scatterseries_super_set_color(void* self, void* color) {
+    QScatterSeries_SuperSetColor((QScatterSeries*)self, (QColor*)color);
 }
 
 QColor* q_scatterseries_color(void* self) {
@@ -121,8 +121,8 @@ void q_scatterseries_on_color(void* self, QColor* (*callback)()) {
     QScatterSeries_OnColor((QScatterSeries*)self, (intptr_t)callback);
 }
 
-QColor* q_scatterseries_qbase_color(void* self) {
-    return QScatterSeries_QBaseColor((QScatterSeries*)self);
+QColor* q_scatterseries_super_color(void* self) {
+    return QScatterSeries_SuperColor((QScatterSeries*)self);
 }
 
 void q_scatterseries_set_border_color(void* self, void* color) {
@@ -1080,8 +1080,8 @@ bool q_scatterseries_event(void* self, void* event) {
     return QScatterSeries_Event((QScatterSeries*)self, (QEvent*)event);
 }
 
-bool q_scatterseries_qbase_event(void* self, void* event) {
-    return QScatterSeries_QBaseEvent((QScatterSeries*)self, (QEvent*)event);
+bool q_scatterseries_super_event(void* self, void* event) {
+    return QScatterSeries_SuperEvent((QScatterSeries*)self, (QEvent*)event);
 }
 
 void q_scatterseries_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -1092,8 +1092,8 @@ bool q_scatterseries_event_filter(void* self, void* watched, void* event) {
     return QScatterSeries_EventFilter((QScatterSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_scatterseries_qbase_event_filter(void* self, void* watched, void* event) {
-    return QScatterSeries_QBaseEventFilter((QScatterSeries*)self, (QObject*)watched, (QEvent*)event);
+bool q_scatterseries_super_event_filter(void* self, void* watched, void* event) {
+    return QScatterSeries_SuperEventFilter((QScatterSeries*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_scatterseries_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -1104,8 +1104,8 @@ void q_scatterseries_timer_event(void* self, void* event) {
     QScatterSeries_TimerEvent((QScatterSeries*)self, (QTimerEvent*)event);
 }
 
-void q_scatterseries_qbase_timer_event(void* self, void* event) {
-    QScatterSeries_QBaseTimerEvent((QScatterSeries*)self, (QTimerEvent*)event);
+void q_scatterseries_super_timer_event(void* self, void* event) {
+    QScatterSeries_SuperTimerEvent((QScatterSeries*)self, (QTimerEvent*)event);
 }
 
 void q_scatterseries_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -1116,8 +1116,8 @@ void q_scatterseries_child_event(void* self, void* event) {
     QScatterSeries_ChildEvent((QScatterSeries*)self, (QChildEvent*)event);
 }
 
-void q_scatterseries_qbase_child_event(void* self, void* event) {
-    QScatterSeries_QBaseChildEvent((QScatterSeries*)self, (QChildEvent*)event);
+void q_scatterseries_super_child_event(void* self, void* event) {
+    QScatterSeries_SuperChildEvent((QScatterSeries*)self, (QChildEvent*)event);
 }
 
 void q_scatterseries_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -1128,8 +1128,8 @@ void q_scatterseries_custom_event(void* self, void* event) {
     QScatterSeries_CustomEvent((QScatterSeries*)self, (QEvent*)event);
 }
 
-void q_scatterseries_qbase_custom_event(void* self, void* event) {
-    QScatterSeries_QBaseCustomEvent((QScatterSeries*)self, (QEvent*)event);
+void q_scatterseries_super_custom_event(void* self, void* event) {
+    QScatterSeries_SuperCustomEvent((QScatterSeries*)self, (QEvent*)event);
 }
 
 void q_scatterseries_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -1140,8 +1140,8 @@ void q_scatterseries_connect_notify(void* self, void* signal) {
     QScatterSeries_ConnectNotify((QScatterSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_scatterseries_qbase_connect_notify(void* self, void* signal) {
-    QScatterSeries_QBaseConnectNotify((QScatterSeries*)self, (QMetaMethod*)signal);
+void q_scatterseries_super_connect_notify(void* self, void* signal) {
+    QScatterSeries_SuperConnectNotify((QScatterSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_scatterseries_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1152,8 +1152,8 @@ void q_scatterseries_disconnect_notify(void* self, void* signal) {
     QScatterSeries_DisconnectNotify((QScatterSeries*)self, (QMetaMethod*)signal);
 }
 
-void q_scatterseries_qbase_disconnect_notify(void* self, void* signal) {
-    QScatterSeries_QBaseDisconnectNotify((QScatterSeries*)self, (QMetaMethod*)signal);
+void q_scatterseries_super_disconnect_notify(void* self, void* signal) {
+    QScatterSeries_SuperDisconnectNotify((QScatterSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_scatterseries_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -1164,8 +1164,8 @@ QObject* q_scatterseries_sender(void* self) {
     return QScatterSeries_Sender((QScatterSeries*)self);
 }
 
-QObject* q_scatterseries_qbase_sender(void* self) {
-    return QScatterSeries_QBaseSender((QScatterSeries*)self);
+QObject* q_scatterseries_super_sender(void* self) {
+    return QScatterSeries_SuperSender((QScatterSeries*)self);
 }
 
 void q_scatterseries_on_sender(void* self, QObject* (*callback)()) {
@@ -1176,8 +1176,8 @@ int32_t q_scatterseries_sender_signal_index(void* self) {
     return QScatterSeries_SenderSignalIndex((QScatterSeries*)self);
 }
 
-int32_t q_scatterseries_qbase_sender_signal_index(void* self) {
-    return QScatterSeries_QBaseSenderSignalIndex((QScatterSeries*)self);
+int32_t q_scatterseries_super_sender_signal_index(void* self) {
+    return QScatterSeries_SuperSenderSignalIndex((QScatterSeries*)self);
 }
 
 void q_scatterseries_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -1188,8 +1188,8 @@ int32_t q_scatterseries_receivers(void* self, const char* signal) {
     return QScatterSeries_Receivers((QScatterSeries*)self, signal);
 }
 
-int32_t q_scatterseries_qbase_receivers(void* self, const char* signal) {
-    return QScatterSeries_QBaseReceivers((QScatterSeries*)self, signal);
+int32_t q_scatterseries_super_receivers(void* self, const char* signal) {
+    return QScatterSeries_SuperReceivers((QScatterSeries*)self, signal);
 }
 
 void q_scatterseries_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -1200,8 +1200,8 @@ bool q_scatterseries_is_signal_connected(void* self, void* signal) {
     return QScatterSeries_IsSignalConnected((QScatterSeries*)self, (QMetaMethod*)signal);
 }
 
-bool q_scatterseries_qbase_is_signal_connected(void* self, void* signal) {
-    return QScatterSeries_QBaseIsSignalConnected((QScatterSeries*)self, (QMetaMethod*)signal);
+bool q_scatterseries_super_is_signal_connected(void* self, void* signal) {
+    return QScatterSeries_SuperIsSignalConnected((QScatterSeries*)self, (QMetaMethod*)signal);
 }
 
 void q_scatterseries_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

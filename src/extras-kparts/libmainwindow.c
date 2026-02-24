@@ -47,8 +47,8 @@ void k_parts__mainwindow_on_meta_object(void* self, const QMetaObject* (*callbac
     KParts__MainWindow_OnMetaObject((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_parts__mainwindow_qbase_meta_object(void* self) {
-    return KParts__MainWindow_QBaseMetaObject((KParts__MainWindow*)self);
+const QMetaObject* k_parts__mainwindow_super_meta_object(void* self) {
+    return KParts__MainWindow_SuperMetaObject((KParts__MainWindow*)self);
 }
 
 void* k_parts__mainwindow_metacast(void* self, const char* param1) {
@@ -59,8 +59,8 @@ void k_parts__mainwindow_on_metacast(void* self, void* (*callback)(void*, const 
     KParts__MainWindow_OnMetacast((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void* k_parts__mainwindow_qbase_metacast(void* self, const char* param1) {
-    return KParts__MainWindow_QBaseMetacast((KParts__MainWindow*)self, param1);
+void* k_parts__mainwindow_super_metacast(void* self, const char* param1) {
+    return KParts__MainWindow_SuperMetacast((KParts__MainWindow*)self, param1);
 }
 
 int32_t k_parts__mainwindow_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -71,8 +71,8 @@ void k_parts__mainwindow_on_metacall(void* self, int32_t (*callback)(void*, int3
     KParts__MainWindow_OnMetacall((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-int32_t k_parts__mainwindow_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KParts__MainWindow_QBaseMetacall((KParts__MainWindow*)self, param1, param2, param3);
+int32_t k_parts__mainwindow_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KParts__MainWindow_SuperMetacall((KParts__MainWindow*)self, param1, param2, param3);
 }
 
 const char* k_parts__mainwindow_tr(const char* s) {
@@ -90,8 +90,8 @@ void k_parts__mainwindow_on_configure_toolbars(void* self, void (*callback)()) {
     KParts__MainWindow_OnConfigureToolbars((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_configure_toolbars(void* self) {
-    KParts__MainWindow_QBaseConfigureToolbars((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_configure_toolbars(void* self) {
+    KParts__MainWindow_SuperConfigureToolbars((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_create_g_u_i(void* self, void* part) {
@@ -102,8 +102,8 @@ void k_parts__mainwindow_on_create_g_u_i(void* self, void (*callback)(void*, voi
     KParts__MainWindow_OnCreateGUI((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_create_g_u_i(void* self, void* part) {
-    KParts__MainWindow_QBaseCreateGUI((KParts__MainWindow*)self, (KParts__Part*)part);
+void k_parts__mainwindow_super_create_g_u_i(void* self, void* part) {
+    KParts__MainWindow_SuperCreateGUI((KParts__MainWindow*)self, (KParts__Part*)part);
 }
 
 void k_parts__mainwindow_set_window_title_handling(void* self, bool enabled) {
@@ -114,8 +114,8 @@ void k_parts__mainwindow_on_set_window_title_handling(void* self, void (*callbac
     KParts__MainWindow_OnSetWindowTitleHandling((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_set_window_title_handling(void* self, bool enabled) {
-    KParts__MainWindow_QBaseSetWindowTitleHandling((KParts__MainWindow*)self, enabled);
+void k_parts__mainwindow_super_set_window_title_handling(void* self, bool enabled) {
+    KParts__MainWindow_SuperSetWindowTitleHandling((KParts__MainWindow*)self, enabled);
 }
 
 void k_parts__mainwindow_slot_set_status_bar_text(void* self, const char* param1) {
@@ -126,8 +126,8 @@ void k_parts__mainwindow_on_slot_set_status_bar_text(void* self, void (*callback
     KParts__MainWindow_OnSlotSetStatusBarText((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_slot_set_status_bar_text(void* self, const char* param1) {
-    KParts__MainWindow_QBaseSlotSetStatusBarText((KParts__MainWindow*)self, qstring(param1));
+void k_parts__mainwindow_super_slot_set_status_bar_text(void* self, const char* param1) {
+    KParts__MainWindow_SuperSlotSetStatusBarText((KParts__MainWindow*)self, qstring(param1));
 }
 
 void k_parts__mainwindow_save_new_toolbar_config(void* self) {
@@ -138,8 +138,8 @@ void k_parts__mainwindow_on_save_new_toolbar_config(void* self, void (*callback)
     KParts__MainWindow_OnSaveNewToolbarConfig((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_save_new_toolbar_config(void* self) {
-    KParts__MainWindow_QBaseSaveNewToolbarConfig((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_save_new_toolbar_config(void* self) {
+    KParts__MainWindow_SuperSaveNewToolbarConfig((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_create_shell_g_u_i(void* self, bool create) {
@@ -150,8 +150,8 @@ void k_parts__mainwindow_on_create_shell_g_u_i(void* self, void (*callback)(void
     KParts__MainWindow_OnCreateShellGUI((KParts__MainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_create_shell_g_u_i(void* self, bool create) {
-    KParts__MainWindow_QBaseCreateShellGUI((KParts__MainWindow*)self, create);
+void k_parts__mainwindow_super_create_shell_g_u_i(void* self, bool create) {
+    KParts__MainWindow_SuperCreateShellGUI((KParts__MainWindow*)self, create);
 }
 
 const char* k_parts__mainwindow_tr2(const char* s, const char* c) {
@@ -354,8 +354,8 @@ void k_parts__mainwindow_on_set_caption2(void* self, void (*callback)(void*, con
     KMainWindow_OnSetCaption2((KMainWindow*)self, (intptr_t)callback);
 }
 
-void k_parts__mainwindow_qbase_set_caption2(void* self, const char* caption, bool modified) {
-    KMainWindow_QBaseSetCaption2((KMainWindow*)self, qstring(caption), modified);
+void k_parts__mainwindow_super_set_caption2(void* self, const char* caption, bool modified) {
+    KMainWindow_SuperSetCaption2((KMainWindow*)self, qstring(caption), modified);
 }
 
 void k_parts__mainwindow_app_help_activated(void* self) {
@@ -2152,8 +2152,8 @@ KXMLGUIFactory* k_parts__mainwindow_gui_factory(void* self) {
     return KParts__MainWindow_GuiFactory((KParts__MainWindow*)self);
 }
 
-KXMLGUIFactory* k_parts__mainwindow_qbase_gui_factory(void* self) {
-    return KParts__MainWindow_QBaseGuiFactory((KParts__MainWindow*)self);
+KXMLGUIFactory* k_parts__mainwindow_super_gui_factory(void* self) {
+    return KParts__MainWindow_SuperGuiFactory((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_gui_factory(void* self, KXMLGUIFactory* (*callback)()) {
@@ -2164,8 +2164,8 @@ void k_parts__mainwindow_apply_main_window_settings(void* self, void* config) {
     KParts__MainWindow_ApplyMainWindowSettings((KParts__MainWindow*)self, (KConfigGroup*)config);
 }
 
-void k_parts__mainwindow_qbase_apply_main_window_settings(void* self, void* config) {
-    KParts__MainWindow_QBaseApplyMainWindowSettings((KParts__MainWindow*)self, (KConfigGroup*)config);
+void k_parts__mainwindow_super_apply_main_window_settings(void* self, void* config) {
+    KParts__MainWindow_SuperApplyMainWindowSettings((KParts__MainWindow*)self, (KConfigGroup*)config);
 }
 
 void k_parts__mainwindow_on_apply_main_window_settings(void* self, void (*callback)(void*, void*)) {
@@ -2176,8 +2176,8 @@ void k_parts__mainwindow_slot_state_changed(void* self, const char* newstate) {
     KParts__MainWindow_SlotStateChanged((KParts__MainWindow*)self, qstring(newstate));
 }
 
-void k_parts__mainwindow_qbase_slot_state_changed(void* self, const char* newstate) {
-    KParts__MainWindow_QBaseSlotStateChanged((KParts__MainWindow*)self, qstring(newstate));
+void k_parts__mainwindow_super_slot_state_changed(void* self, const char* newstate) {
+    KParts__MainWindow_SuperSlotStateChanged((KParts__MainWindow*)self, qstring(newstate));
 }
 
 void k_parts__mainwindow_on_slot_state_changed(void* self, void (*callback)(void*, const char*)) {
@@ -2188,8 +2188,8 @@ bool k_parts__mainwindow_event(void* self, void* event) {
     return KParts__MainWindow_Event((KParts__MainWindow*)self, (QEvent*)event);
 }
 
-bool k_parts__mainwindow_qbase_event(void* self, void* event) {
-    return KParts__MainWindow_QBaseEvent((KParts__MainWindow*)self, (QEvent*)event);
+bool k_parts__mainwindow_super_event(void* self, void* event) {
+    return KParts__MainWindow_SuperEvent((KParts__MainWindow*)self, (QEvent*)event);
 }
 
 void k_parts__mainwindow_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -2200,8 +2200,8 @@ void k_parts__mainwindow_set_caption(void* self, const char* caption) {
     KParts__MainWindow_SetCaption((KParts__MainWindow*)self, qstring(caption));
 }
 
-void k_parts__mainwindow_qbase_set_caption(void* self, const char* caption) {
-    KParts__MainWindow_QBaseSetCaption((KParts__MainWindow*)self, qstring(caption));
+void k_parts__mainwindow_super_set_caption(void* self, const char* caption) {
+    KParts__MainWindow_SuperSetCaption((KParts__MainWindow*)self, qstring(caption));
 }
 
 void k_parts__mainwindow_on_set_caption(void* self, void (*callback)(void*, const char*)) {
@@ -2212,8 +2212,8 @@ void k_parts__mainwindow_set_plain_caption(void* self, const char* caption) {
     KParts__MainWindow_SetPlainCaption((KParts__MainWindow*)self, qstring(caption));
 }
 
-void k_parts__mainwindow_qbase_set_plain_caption(void* self, const char* caption) {
-    KParts__MainWindow_QBaseSetPlainCaption((KParts__MainWindow*)self, qstring(caption));
+void k_parts__mainwindow_super_set_plain_caption(void* self, const char* caption) {
+    KParts__MainWindow_SuperSetPlainCaption((KParts__MainWindow*)self, qstring(caption));
 }
 
 void k_parts__mainwindow_on_set_plain_caption(void* self, void (*callback)(void*, const char*)) {
@@ -2224,8 +2224,8 @@ void k_parts__mainwindow_key_press_event(void* self, void* keyEvent) {
     KParts__MainWindow_KeyPressEvent((KParts__MainWindow*)self, (QKeyEvent*)keyEvent);
 }
 
-void k_parts__mainwindow_qbase_key_press_event(void* self, void* keyEvent) {
-    KParts__MainWindow_QBaseKeyPressEvent((KParts__MainWindow*)self, (QKeyEvent*)keyEvent);
+void k_parts__mainwindow_super_key_press_event(void* self, void* keyEvent) {
+    KParts__MainWindow_SuperKeyPressEvent((KParts__MainWindow*)self, (QKeyEvent*)keyEvent);
 }
 
 void k_parts__mainwindow_on_key_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2236,8 +2236,8 @@ void k_parts__mainwindow_close_event(void* self, void* param1) {
     KParts__MainWindow_CloseEvent((KParts__MainWindow*)self, (QCloseEvent*)param1);
 }
 
-void k_parts__mainwindow_qbase_close_event(void* self, void* param1) {
-    KParts__MainWindow_QBaseCloseEvent((KParts__MainWindow*)self, (QCloseEvent*)param1);
+void k_parts__mainwindow_super_close_event(void* self, void* param1) {
+    KParts__MainWindow_SuperCloseEvent((KParts__MainWindow*)self, (QCloseEvent*)param1);
 }
 
 void k_parts__mainwindow_on_close_event(void* self, void (*callback)(void*, void*)) {
@@ -2248,8 +2248,8 @@ bool k_parts__mainwindow_query_close(void* self) {
     return KParts__MainWindow_QueryClose((KParts__MainWindow*)self);
 }
 
-bool k_parts__mainwindow_qbase_query_close(void* self) {
-    return KParts__MainWindow_QBaseQueryClose((KParts__MainWindow*)self);
+bool k_parts__mainwindow_super_query_close(void* self) {
+    return KParts__MainWindow_SuperQueryClose((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_query_close(void* self, bool (*callback)()) {
@@ -2260,8 +2260,8 @@ void k_parts__mainwindow_save_properties(void* self, void* param1) {
     KParts__MainWindow_SaveProperties((KParts__MainWindow*)self, (KConfigGroup*)param1);
 }
 
-void k_parts__mainwindow_qbase_save_properties(void* self, void* param1) {
-    KParts__MainWindow_QBaseSaveProperties((KParts__MainWindow*)self, (KConfigGroup*)param1);
+void k_parts__mainwindow_super_save_properties(void* self, void* param1) {
+    KParts__MainWindow_SuperSaveProperties((KParts__MainWindow*)self, (KConfigGroup*)param1);
 }
 
 void k_parts__mainwindow_on_save_properties(void* self, void (*callback)(void*, void*)) {
@@ -2272,8 +2272,8 @@ void k_parts__mainwindow_read_properties(void* self, void* param1) {
     KParts__MainWindow_ReadProperties((KParts__MainWindow*)self, (KConfigGroup*)param1);
 }
 
-void k_parts__mainwindow_qbase_read_properties(void* self, void* param1) {
-    KParts__MainWindow_QBaseReadProperties((KParts__MainWindow*)self, (KConfigGroup*)param1);
+void k_parts__mainwindow_super_read_properties(void* self, void* param1) {
+    KParts__MainWindow_SuperReadProperties((KParts__MainWindow*)self, (KConfigGroup*)param1);
 }
 
 void k_parts__mainwindow_on_read_properties(void* self, void (*callback)(void*, void*)) {
@@ -2284,8 +2284,8 @@ void k_parts__mainwindow_save_global_properties(void* self, void* sessionConfig)
     KParts__MainWindow_SaveGlobalProperties((KParts__MainWindow*)self, (KConfig*)sessionConfig);
 }
 
-void k_parts__mainwindow_qbase_save_global_properties(void* self, void* sessionConfig) {
-    KParts__MainWindow_QBaseSaveGlobalProperties((KParts__MainWindow*)self, (KConfig*)sessionConfig);
+void k_parts__mainwindow_super_save_global_properties(void* self, void* sessionConfig) {
+    KParts__MainWindow_SuperSaveGlobalProperties((KParts__MainWindow*)self, (KConfig*)sessionConfig);
 }
 
 void k_parts__mainwindow_on_save_global_properties(void* self, void (*callback)(void*, void*)) {
@@ -2296,8 +2296,8 @@ void k_parts__mainwindow_read_global_properties(void* self, void* sessionConfig)
     KParts__MainWindow_ReadGlobalProperties((KParts__MainWindow*)self, (KConfig*)sessionConfig);
 }
 
-void k_parts__mainwindow_qbase_read_global_properties(void* self, void* sessionConfig) {
-    KParts__MainWindow_QBaseReadGlobalProperties((KParts__MainWindow*)self, (KConfig*)sessionConfig);
+void k_parts__mainwindow_super_read_global_properties(void* self, void* sessionConfig) {
+    KParts__MainWindow_SuperReadGlobalProperties((KParts__MainWindow*)self, (KConfig*)sessionConfig);
 }
 
 void k_parts__mainwindow_on_read_global_properties(void* self, void (*callback)(void*, void*)) {
@@ -2308,8 +2308,8 @@ QMenu* k_parts__mainwindow_create_popup_menu(void* self) {
     return KParts__MainWindow_CreatePopupMenu((KParts__MainWindow*)self);
 }
 
-QMenu* k_parts__mainwindow_qbase_create_popup_menu(void* self) {
-    return KParts__MainWindow_QBaseCreatePopupMenu((KParts__MainWindow*)self);
+QMenu* k_parts__mainwindow_super_create_popup_menu(void* self) {
+    return KParts__MainWindow_SuperCreatePopupMenu((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_create_popup_menu(void* self, QMenu* (*callback)()) {
@@ -2320,8 +2320,8 @@ void k_parts__mainwindow_context_menu_event(void* self, void* event) {
     KParts__MainWindow_ContextMenuEvent((KParts__MainWindow*)self, (QContextMenuEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_context_menu_event(void* self, void* event) {
-    KParts__MainWindow_QBaseContextMenuEvent((KParts__MainWindow*)self, (QContextMenuEvent*)event);
+void k_parts__mainwindow_super_context_menu_event(void* self, void* event) {
+    KParts__MainWindow_SuperContextMenuEvent((KParts__MainWindow*)self, (QContextMenuEvent*)event);
 }
 
 void k_parts__mainwindow_on_context_menu_event(void* self, void (*callback)(void*, void*)) {
@@ -2332,8 +2332,8 @@ int32_t k_parts__mainwindow_dev_type(void* self) {
     return KParts__MainWindow_DevType((KParts__MainWindow*)self);
 }
 
-int32_t k_parts__mainwindow_qbase_dev_type(void* self) {
-    return KParts__MainWindow_QBaseDevType((KParts__MainWindow*)self);
+int32_t k_parts__mainwindow_super_dev_type(void* self) {
+    return KParts__MainWindow_SuperDevType((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_dev_type(void* self, int32_t (*callback)()) {
@@ -2344,8 +2344,8 @@ void k_parts__mainwindow_set_visible(void* self, bool visible) {
     KParts__MainWindow_SetVisible((KParts__MainWindow*)self, visible);
 }
 
-void k_parts__mainwindow_qbase_set_visible(void* self, bool visible) {
-    KParts__MainWindow_QBaseSetVisible((KParts__MainWindow*)self, visible);
+void k_parts__mainwindow_super_set_visible(void* self, bool visible) {
+    KParts__MainWindow_SuperSetVisible((KParts__MainWindow*)self, visible);
 }
 
 void k_parts__mainwindow_on_set_visible(void* self, void (*callback)(void*, bool)) {
@@ -2356,8 +2356,8 @@ QSize* k_parts__mainwindow_size_hint(void* self) {
     return KParts__MainWindow_SizeHint((KParts__MainWindow*)self);
 }
 
-QSize* k_parts__mainwindow_qbase_size_hint(void* self) {
-    return KParts__MainWindow_QBaseSizeHint((KParts__MainWindow*)self);
+QSize* k_parts__mainwindow_super_size_hint(void* self) {
+    return KParts__MainWindow_SuperSizeHint((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_size_hint(void* self, QSize* (*callback)()) {
@@ -2368,8 +2368,8 @@ QSize* k_parts__mainwindow_minimum_size_hint(void* self) {
     return KParts__MainWindow_MinimumSizeHint((KParts__MainWindow*)self);
 }
 
-QSize* k_parts__mainwindow_qbase_minimum_size_hint(void* self) {
-    return KParts__MainWindow_QBaseMinimumSizeHint((KParts__MainWindow*)self);
+QSize* k_parts__mainwindow_super_minimum_size_hint(void* self) {
+    return KParts__MainWindow_SuperMinimumSizeHint((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_minimum_size_hint(void* self, QSize* (*callback)()) {
@@ -2380,8 +2380,8 @@ int32_t k_parts__mainwindow_height_for_width(void* self, int param1) {
     return KParts__MainWindow_HeightForWidth((KParts__MainWindow*)self, param1);
 }
 
-int32_t k_parts__mainwindow_qbase_height_for_width(void* self, int param1) {
-    return KParts__MainWindow_QBaseHeightForWidth((KParts__MainWindow*)self, param1);
+int32_t k_parts__mainwindow_super_height_for_width(void* self, int param1) {
+    return KParts__MainWindow_SuperHeightForWidth((KParts__MainWindow*)self, param1);
 }
 
 void k_parts__mainwindow_on_height_for_width(void* self, int32_t (*callback)(void*, int)) {
@@ -2392,8 +2392,8 @@ bool k_parts__mainwindow_has_height_for_width(void* self) {
     return KParts__MainWindow_HasHeightForWidth((KParts__MainWindow*)self);
 }
 
-bool k_parts__mainwindow_qbase_has_height_for_width(void* self) {
-    return KParts__MainWindow_QBaseHasHeightForWidth((KParts__MainWindow*)self);
+bool k_parts__mainwindow_super_has_height_for_width(void* self) {
+    return KParts__MainWindow_SuperHasHeightForWidth((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_has_height_for_width(void* self, bool (*callback)()) {
@@ -2404,8 +2404,8 @@ QPaintEngine* k_parts__mainwindow_paint_engine(void* self) {
     return KParts__MainWindow_PaintEngine((KParts__MainWindow*)self);
 }
 
-QPaintEngine* k_parts__mainwindow_qbase_paint_engine(void* self) {
-    return KParts__MainWindow_QBasePaintEngine((KParts__MainWindow*)self);
+QPaintEngine* k_parts__mainwindow_super_paint_engine(void* self) {
+    return KParts__MainWindow_SuperPaintEngine((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_paint_engine(void* self, QPaintEngine* (*callback)()) {
@@ -2416,8 +2416,8 @@ void k_parts__mainwindow_mouse_press_event(void* self, void* event) {
     KParts__MainWindow_MousePressEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_mouse_press_event(void* self, void* event) {
-    KParts__MainWindow_QBaseMousePressEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
+void k_parts__mainwindow_super_mouse_press_event(void* self, void* event) {
+    KParts__MainWindow_SuperMousePressEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_parts__mainwindow_on_mouse_press_event(void* self, void (*callback)(void*, void*)) {
@@ -2428,8 +2428,8 @@ void k_parts__mainwindow_mouse_release_event(void* self, void* event) {
     KParts__MainWindow_MouseReleaseEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_mouse_release_event(void* self, void* event) {
-    KParts__MainWindow_QBaseMouseReleaseEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
+void k_parts__mainwindow_super_mouse_release_event(void* self, void* event) {
+    KParts__MainWindow_SuperMouseReleaseEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_parts__mainwindow_on_mouse_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2440,8 +2440,8 @@ void k_parts__mainwindow_mouse_double_click_event(void* self, void* event) {
     KParts__MainWindow_MouseDoubleClickEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_mouse_double_click_event(void* self, void* event) {
-    KParts__MainWindow_QBaseMouseDoubleClickEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
+void k_parts__mainwindow_super_mouse_double_click_event(void* self, void* event) {
+    KParts__MainWindow_SuperMouseDoubleClickEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_parts__mainwindow_on_mouse_double_click_event(void* self, void (*callback)(void*, void*)) {
@@ -2452,8 +2452,8 @@ void k_parts__mainwindow_mouse_move_event(void* self, void* event) {
     KParts__MainWindow_MouseMoveEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_mouse_move_event(void* self, void* event) {
-    KParts__MainWindow_QBaseMouseMoveEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
+void k_parts__mainwindow_super_mouse_move_event(void* self, void* event) {
+    KParts__MainWindow_SuperMouseMoveEvent((KParts__MainWindow*)self, (QMouseEvent*)event);
 }
 
 void k_parts__mainwindow_on_mouse_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2464,8 +2464,8 @@ void k_parts__mainwindow_wheel_event(void* self, void* event) {
     KParts__MainWindow_WheelEvent((KParts__MainWindow*)self, (QWheelEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_wheel_event(void* self, void* event) {
-    KParts__MainWindow_QBaseWheelEvent((KParts__MainWindow*)self, (QWheelEvent*)event);
+void k_parts__mainwindow_super_wheel_event(void* self, void* event) {
+    KParts__MainWindow_SuperWheelEvent((KParts__MainWindow*)self, (QWheelEvent*)event);
 }
 
 void k_parts__mainwindow_on_wheel_event(void* self, void (*callback)(void*, void*)) {
@@ -2476,8 +2476,8 @@ void k_parts__mainwindow_key_release_event(void* self, void* event) {
     KParts__MainWindow_KeyReleaseEvent((KParts__MainWindow*)self, (QKeyEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_key_release_event(void* self, void* event) {
-    KParts__MainWindow_QBaseKeyReleaseEvent((KParts__MainWindow*)self, (QKeyEvent*)event);
+void k_parts__mainwindow_super_key_release_event(void* self, void* event) {
+    KParts__MainWindow_SuperKeyReleaseEvent((KParts__MainWindow*)self, (QKeyEvent*)event);
 }
 
 void k_parts__mainwindow_on_key_release_event(void* self, void (*callback)(void*, void*)) {
@@ -2488,8 +2488,8 @@ void k_parts__mainwindow_focus_in_event(void* self, void* event) {
     KParts__MainWindow_FocusInEvent((KParts__MainWindow*)self, (QFocusEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_focus_in_event(void* self, void* event) {
-    KParts__MainWindow_QBaseFocusInEvent((KParts__MainWindow*)self, (QFocusEvent*)event);
+void k_parts__mainwindow_super_focus_in_event(void* self, void* event) {
+    KParts__MainWindow_SuperFocusInEvent((KParts__MainWindow*)self, (QFocusEvent*)event);
 }
 
 void k_parts__mainwindow_on_focus_in_event(void* self, void (*callback)(void*, void*)) {
@@ -2500,8 +2500,8 @@ void k_parts__mainwindow_focus_out_event(void* self, void* event) {
     KParts__MainWindow_FocusOutEvent((KParts__MainWindow*)self, (QFocusEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_focus_out_event(void* self, void* event) {
-    KParts__MainWindow_QBaseFocusOutEvent((KParts__MainWindow*)self, (QFocusEvent*)event);
+void k_parts__mainwindow_super_focus_out_event(void* self, void* event) {
+    KParts__MainWindow_SuperFocusOutEvent((KParts__MainWindow*)self, (QFocusEvent*)event);
 }
 
 void k_parts__mainwindow_on_focus_out_event(void* self, void (*callback)(void*, void*)) {
@@ -2512,8 +2512,8 @@ void k_parts__mainwindow_enter_event(void* self, void* event) {
     KParts__MainWindow_EnterEvent((KParts__MainWindow*)self, (QEnterEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_enter_event(void* self, void* event) {
-    KParts__MainWindow_QBaseEnterEvent((KParts__MainWindow*)self, (QEnterEvent*)event);
+void k_parts__mainwindow_super_enter_event(void* self, void* event) {
+    KParts__MainWindow_SuperEnterEvent((KParts__MainWindow*)self, (QEnterEvent*)event);
 }
 
 void k_parts__mainwindow_on_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2524,8 +2524,8 @@ void k_parts__mainwindow_leave_event(void* self, void* event) {
     KParts__MainWindow_LeaveEvent((KParts__MainWindow*)self, (QEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_leave_event(void* self, void* event) {
-    KParts__MainWindow_QBaseLeaveEvent((KParts__MainWindow*)self, (QEvent*)event);
+void k_parts__mainwindow_super_leave_event(void* self, void* event) {
+    KParts__MainWindow_SuperLeaveEvent((KParts__MainWindow*)self, (QEvent*)event);
 }
 
 void k_parts__mainwindow_on_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2536,8 +2536,8 @@ void k_parts__mainwindow_paint_event(void* self, void* event) {
     KParts__MainWindow_PaintEvent((KParts__MainWindow*)self, (QPaintEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_paint_event(void* self, void* event) {
-    KParts__MainWindow_QBasePaintEvent((KParts__MainWindow*)self, (QPaintEvent*)event);
+void k_parts__mainwindow_super_paint_event(void* self, void* event) {
+    KParts__MainWindow_SuperPaintEvent((KParts__MainWindow*)self, (QPaintEvent*)event);
 }
 
 void k_parts__mainwindow_on_paint_event(void* self, void (*callback)(void*, void*)) {
@@ -2548,8 +2548,8 @@ void k_parts__mainwindow_move_event(void* self, void* event) {
     KParts__MainWindow_MoveEvent((KParts__MainWindow*)self, (QMoveEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_move_event(void* self, void* event) {
-    KParts__MainWindow_QBaseMoveEvent((KParts__MainWindow*)self, (QMoveEvent*)event);
+void k_parts__mainwindow_super_move_event(void* self, void* event) {
+    KParts__MainWindow_SuperMoveEvent((KParts__MainWindow*)self, (QMoveEvent*)event);
 }
 
 void k_parts__mainwindow_on_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2560,8 +2560,8 @@ void k_parts__mainwindow_resize_event(void* self, void* event) {
     KParts__MainWindow_ResizeEvent((KParts__MainWindow*)self, (QResizeEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_resize_event(void* self, void* event) {
-    KParts__MainWindow_QBaseResizeEvent((KParts__MainWindow*)self, (QResizeEvent*)event);
+void k_parts__mainwindow_super_resize_event(void* self, void* event) {
+    KParts__MainWindow_SuperResizeEvent((KParts__MainWindow*)self, (QResizeEvent*)event);
 }
 
 void k_parts__mainwindow_on_resize_event(void* self, void (*callback)(void*, void*)) {
@@ -2572,8 +2572,8 @@ void k_parts__mainwindow_tablet_event(void* self, void* event) {
     KParts__MainWindow_TabletEvent((KParts__MainWindow*)self, (QTabletEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_tablet_event(void* self, void* event) {
-    KParts__MainWindow_QBaseTabletEvent((KParts__MainWindow*)self, (QTabletEvent*)event);
+void k_parts__mainwindow_super_tablet_event(void* self, void* event) {
+    KParts__MainWindow_SuperTabletEvent((KParts__MainWindow*)self, (QTabletEvent*)event);
 }
 
 void k_parts__mainwindow_on_tablet_event(void* self, void (*callback)(void*, void*)) {
@@ -2584,8 +2584,8 @@ void k_parts__mainwindow_action_event(void* self, void* event) {
     KParts__MainWindow_ActionEvent((KParts__MainWindow*)self, (QActionEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_action_event(void* self, void* event) {
-    KParts__MainWindow_QBaseActionEvent((KParts__MainWindow*)self, (QActionEvent*)event);
+void k_parts__mainwindow_super_action_event(void* self, void* event) {
+    KParts__MainWindow_SuperActionEvent((KParts__MainWindow*)self, (QActionEvent*)event);
 }
 
 void k_parts__mainwindow_on_action_event(void* self, void (*callback)(void*, void*)) {
@@ -2596,8 +2596,8 @@ void k_parts__mainwindow_drag_enter_event(void* self, void* event) {
     KParts__MainWindow_DragEnterEvent((KParts__MainWindow*)self, (QDragEnterEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_drag_enter_event(void* self, void* event) {
-    KParts__MainWindow_QBaseDragEnterEvent((KParts__MainWindow*)self, (QDragEnterEvent*)event);
+void k_parts__mainwindow_super_drag_enter_event(void* self, void* event) {
+    KParts__MainWindow_SuperDragEnterEvent((KParts__MainWindow*)self, (QDragEnterEvent*)event);
 }
 
 void k_parts__mainwindow_on_drag_enter_event(void* self, void (*callback)(void*, void*)) {
@@ -2608,8 +2608,8 @@ void k_parts__mainwindow_drag_move_event(void* self, void* event) {
     KParts__MainWindow_DragMoveEvent((KParts__MainWindow*)self, (QDragMoveEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_drag_move_event(void* self, void* event) {
-    KParts__MainWindow_QBaseDragMoveEvent((KParts__MainWindow*)self, (QDragMoveEvent*)event);
+void k_parts__mainwindow_super_drag_move_event(void* self, void* event) {
+    KParts__MainWindow_SuperDragMoveEvent((KParts__MainWindow*)self, (QDragMoveEvent*)event);
 }
 
 void k_parts__mainwindow_on_drag_move_event(void* self, void (*callback)(void*, void*)) {
@@ -2620,8 +2620,8 @@ void k_parts__mainwindow_drag_leave_event(void* self, void* event) {
     KParts__MainWindow_DragLeaveEvent((KParts__MainWindow*)self, (QDragLeaveEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_drag_leave_event(void* self, void* event) {
-    KParts__MainWindow_QBaseDragLeaveEvent((KParts__MainWindow*)self, (QDragLeaveEvent*)event);
+void k_parts__mainwindow_super_drag_leave_event(void* self, void* event) {
+    KParts__MainWindow_SuperDragLeaveEvent((KParts__MainWindow*)self, (QDragLeaveEvent*)event);
 }
 
 void k_parts__mainwindow_on_drag_leave_event(void* self, void (*callback)(void*, void*)) {
@@ -2632,8 +2632,8 @@ void k_parts__mainwindow_drop_event(void* self, void* event) {
     KParts__MainWindow_DropEvent((KParts__MainWindow*)self, (QDropEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_drop_event(void* self, void* event) {
-    KParts__MainWindow_QBaseDropEvent((KParts__MainWindow*)self, (QDropEvent*)event);
+void k_parts__mainwindow_super_drop_event(void* self, void* event) {
+    KParts__MainWindow_SuperDropEvent((KParts__MainWindow*)self, (QDropEvent*)event);
 }
 
 void k_parts__mainwindow_on_drop_event(void* self, void (*callback)(void*, void*)) {
@@ -2644,8 +2644,8 @@ void k_parts__mainwindow_show_event(void* self, void* event) {
     KParts__MainWindow_ShowEvent((KParts__MainWindow*)self, (QShowEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_show_event(void* self, void* event) {
-    KParts__MainWindow_QBaseShowEvent((KParts__MainWindow*)self, (QShowEvent*)event);
+void k_parts__mainwindow_super_show_event(void* self, void* event) {
+    KParts__MainWindow_SuperShowEvent((KParts__MainWindow*)self, (QShowEvent*)event);
 }
 
 void k_parts__mainwindow_on_show_event(void* self, void (*callback)(void*, void*)) {
@@ -2656,8 +2656,8 @@ void k_parts__mainwindow_hide_event(void* self, void* event) {
     KParts__MainWindow_HideEvent((KParts__MainWindow*)self, (QHideEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_hide_event(void* self, void* event) {
-    KParts__MainWindow_QBaseHideEvent((KParts__MainWindow*)self, (QHideEvent*)event);
+void k_parts__mainwindow_super_hide_event(void* self, void* event) {
+    KParts__MainWindow_SuperHideEvent((KParts__MainWindow*)self, (QHideEvent*)event);
 }
 
 void k_parts__mainwindow_on_hide_event(void* self, void (*callback)(void*, void*)) {
@@ -2668,8 +2668,8 @@ bool k_parts__mainwindow_native_event(void* self, char* eventType, void* message
     return KParts__MainWindow_NativeEvent((KParts__MainWindow*)self, qstring(eventType), message, result);
 }
 
-bool k_parts__mainwindow_qbase_native_event(void* self, char* eventType, void* message, intptr_t* result) {
-    return KParts__MainWindow_QBaseNativeEvent((KParts__MainWindow*)self, qstring(eventType), message, result);
+bool k_parts__mainwindow_super_native_event(void* self, char* eventType, void* message, intptr_t* result) {
+    return KParts__MainWindow_SuperNativeEvent((KParts__MainWindow*)self, qstring(eventType), message, result);
 }
 
 void k_parts__mainwindow_on_native_event(void* self, bool (*callback)(void*, libqt_string, void*, intptr_t*)) {
@@ -2680,8 +2680,8 @@ void k_parts__mainwindow_change_event(void* self, void* param1) {
     KParts__MainWindow_ChangeEvent((KParts__MainWindow*)self, (QEvent*)param1);
 }
 
-void k_parts__mainwindow_qbase_change_event(void* self, void* param1) {
-    KParts__MainWindow_QBaseChangeEvent((KParts__MainWindow*)self, (QEvent*)param1);
+void k_parts__mainwindow_super_change_event(void* self, void* param1) {
+    KParts__MainWindow_SuperChangeEvent((KParts__MainWindow*)self, (QEvent*)param1);
 }
 
 void k_parts__mainwindow_on_change_event(void* self, void (*callback)(void*, void*)) {
@@ -2692,8 +2692,8 @@ int32_t k_parts__mainwindow_metric(void* self, int32_t param1) {
     return KParts__MainWindow_Metric((KParts__MainWindow*)self, param1);
 }
 
-int32_t k_parts__mainwindow_qbase_metric(void* self, int32_t param1) {
-    return KParts__MainWindow_QBaseMetric((KParts__MainWindow*)self, param1);
+int32_t k_parts__mainwindow_super_metric(void* self, int32_t param1) {
+    return KParts__MainWindow_SuperMetric((KParts__MainWindow*)self, param1);
 }
 
 void k_parts__mainwindow_on_metric(void* self, int32_t (*callback)(void*, int32_t)) {
@@ -2704,8 +2704,8 @@ void k_parts__mainwindow_init_painter(void* self, void* painter) {
     KParts__MainWindow_InitPainter((KParts__MainWindow*)self, (QPainter*)painter);
 }
 
-void k_parts__mainwindow_qbase_init_painter(void* self, void* painter) {
-    KParts__MainWindow_QBaseInitPainter((KParts__MainWindow*)self, (QPainter*)painter);
+void k_parts__mainwindow_super_init_painter(void* self, void* painter) {
+    KParts__MainWindow_SuperInitPainter((KParts__MainWindow*)self, (QPainter*)painter);
 }
 
 void k_parts__mainwindow_on_init_painter(void* self, void (*callback)(void*, void*)) {
@@ -2716,8 +2716,8 @@ QPaintDevice* k_parts__mainwindow_redirected(void* self, void* offset) {
     return KParts__MainWindow_Redirected((KParts__MainWindow*)self, (QPoint*)offset);
 }
 
-QPaintDevice* k_parts__mainwindow_qbase_redirected(void* self, void* offset) {
-    return KParts__MainWindow_QBaseRedirected((KParts__MainWindow*)self, (QPoint*)offset);
+QPaintDevice* k_parts__mainwindow_super_redirected(void* self, void* offset) {
+    return KParts__MainWindow_SuperRedirected((KParts__MainWindow*)self, (QPoint*)offset);
 }
 
 void k_parts__mainwindow_on_redirected(void* self, QPaintDevice* (*callback)(void*, void*)) {
@@ -2728,8 +2728,8 @@ QPainter* k_parts__mainwindow_shared_painter(void* self) {
     return KParts__MainWindow_SharedPainter((KParts__MainWindow*)self);
 }
 
-QPainter* k_parts__mainwindow_qbase_shared_painter(void* self) {
-    return KParts__MainWindow_QBaseSharedPainter((KParts__MainWindow*)self);
+QPainter* k_parts__mainwindow_super_shared_painter(void* self) {
+    return KParts__MainWindow_SuperSharedPainter((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_shared_painter(void* self, QPainter* (*callback)()) {
@@ -2740,8 +2740,8 @@ void k_parts__mainwindow_input_method_event(void* self, void* param1) {
     KParts__MainWindow_InputMethodEvent((KParts__MainWindow*)self, (QInputMethodEvent*)param1);
 }
 
-void k_parts__mainwindow_qbase_input_method_event(void* self, void* param1) {
-    KParts__MainWindow_QBaseInputMethodEvent((KParts__MainWindow*)self, (QInputMethodEvent*)param1);
+void k_parts__mainwindow_super_input_method_event(void* self, void* param1) {
+    KParts__MainWindow_SuperInputMethodEvent((KParts__MainWindow*)self, (QInputMethodEvent*)param1);
 }
 
 void k_parts__mainwindow_on_input_method_event(void* self, void (*callback)(void*, void*)) {
@@ -2752,8 +2752,8 @@ QVariant* k_parts__mainwindow_input_method_query(void* self, int32_t param1) {
     return KParts__MainWindow_InputMethodQuery((KParts__MainWindow*)self, param1);
 }
 
-QVariant* k_parts__mainwindow_qbase_input_method_query(void* self, int32_t param1) {
-    return KParts__MainWindow_QBaseInputMethodQuery((KParts__MainWindow*)self, param1);
+QVariant* k_parts__mainwindow_super_input_method_query(void* self, int32_t param1) {
+    return KParts__MainWindow_SuperInputMethodQuery((KParts__MainWindow*)self, param1);
 }
 
 void k_parts__mainwindow_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t)) {
@@ -2764,8 +2764,8 @@ bool k_parts__mainwindow_focus_next_prev_child(void* self, bool next) {
     return KParts__MainWindow_FocusNextPrevChild((KParts__MainWindow*)self, next);
 }
 
-bool k_parts__mainwindow_qbase_focus_next_prev_child(void* self, bool next) {
-    return KParts__MainWindow_QBaseFocusNextPrevChild((KParts__MainWindow*)self, next);
+bool k_parts__mainwindow_super_focus_next_prev_child(void* self, bool next) {
+    return KParts__MainWindow_SuperFocusNextPrevChild((KParts__MainWindow*)self, next);
 }
 
 void k_parts__mainwindow_on_focus_next_prev_child(void* self, bool (*callback)(void*, bool)) {
@@ -2776,8 +2776,8 @@ bool k_parts__mainwindow_event_filter(void* self, void* watched, void* event) {
     return KParts__MainWindow_EventFilter((KParts__MainWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_parts__mainwindow_qbase_event_filter(void* self, void* watched, void* event) {
-    return KParts__MainWindow_QBaseEventFilter((KParts__MainWindow*)self, (QObject*)watched, (QEvent*)event);
+bool k_parts__mainwindow_super_event_filter(void* self, void* watched, void* event) {
+    return KParts__MainWindow_SuperEventFilter((KParts__MainWindow*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_parts__mainwindow_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -2788,8 +2788,8 @@ void k_parts__mainwindow_timer_event(void* self, void* event) {
     KParts__MainWindow_TimerEvent((KParts__MainWindow*)self, (QTimerEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_timer_event(void* self, void* event) {
-    KParts__MainWindow_QBaseTimerEvent((KParts__MainWindow*)self, (QTimerEvent*)event);
+void k_parts__mainwindow_super_timer_event(void* self, void* event) {
+    KParts__MainWindow_SuperTimerEvent((KParts__MainWindow*)self, (QTimerEvent*)event);
 }
 
 void k_parts__mainwindow_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -2800,8 +2800,8 @@ void k_parts__mainwindow_child_event(void* self, void* event) {
     KParts__MainWindow_ChildEvent((KParts__MainWindow*)self, (QChildEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_child_event(void* self, void* event) {
-    KParts__MainWindow_QBaseChildEvent((KParts__MainWindow*)self, (QChildEvent*)event);
+void k_parts__mainwindow_super_child_event(void* self, void* event) {
+    KParts__MainWindow_SuperChildEvent((KParts__MainWindow*)self, (QChildEvent*)event);
 }
 
 void k_parts__mainwindow_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -2812,8 +2812,8 @@ void k_parts__mainwindow_custom_event(void* self, void* event) {
     KParts__MainWindow_CustomEvent((KParts__MainWindow*)self, (QEvent*)event);
 }
 
-void k_parts__mainwindow_qbase_custom_event(void* self, void* event) {
-    KParts__MainWindow_QBaseCustomEvent((KParts__MainWindow*)self, (QEvent*)event);
+void k_parts__mainwindow_super_custom_event(void* self, void* event) {
+    KParts__MainWindow_SuperCustomEvent((KParts__MainWindow*)self, (QEvent*)event);
 }
 
 void k_parts__mainwindow_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -2824,8 +2824,8 @@ void k_parts__mainwindow_connect_notify(void* self, void* signal) {
     KParts__MainWindow_ConnectNotify((KParts__MainWindow*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__mainwindow_qbase_connect_notify(void* self, void* signal) {
-    KParts__MainWindow_QBaseConnectNotify((KParts__MainWindow*)self, (QMetaMethod*)signal);
+void k_parts__mainwindow_super_connect_notify(void* self, void* signal) {
+    KParts__MainWindow_SuperConnectNotify((KParts__MainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__mainwindow_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2836,8 +2836,8 @@ void k_parts__mainwindow_disconnect_notify(void* self, void* signal) {
     KParts__MainWindow_DisconnectNotify((KParts__MainWindow*)self, (QMetaMethod*)signal);
 }
 
-void k_parts__mainwindow_qbase_disconnect_notify(void* self, void* signal) {
-    KParts__MainWindow_QBaseDisconnectNotify((KParts__MainWindow*)self, (QMetaMethod*)signal);
+void k_parts__mainwindow_super_disconnect_notify(void* self, void* signal) {
+    KParts__MainWindow_SuperDisconnectNotify((KParts__MainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__mainwindow_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -2863,8 +2863,8 @@ const char** k_parts__mainwindow_container_tags(void* self) {
     return _ret;
 }
 
-const char** k_parts__mainwindow_qbase_container_tags(void* self) {
-    libqt_list _arr = KParts__MainWindow_QBaseContainerTags((KParts__MainWindow*)self);
+const char** k_parts__mainwindow_super_container_tags(void* self) {
+    libqt_list _arr = KParts__MainWindow_SuperContainerTags((KParts__MainWindow*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -2890,8 +2890,8 @@ QWidget* k_parts__mainwindow_create_container(void* self, void* parent, int inde
     return KParts__MainWindow_CreateContainer((KParts__MainWindow*)self, (QWidget*)parent, index, (QDomElement*)element, (QAction**)containerAction);
 }
 
-QWidget* k_parts__mainwindow_qbase_create_container(void* self, void* parent, int index, void* element, void** containerAction) {
-    return KParts__MainWindow_QBaseCreateContainer((KParts__MainWindow*)self, (QWidget*)parent, index, (QDomElement*)element, (QAction**)containerAction);
+QWidget* k_parts__mainwindow_super_create_container(void* self, void* parent, int index, void* element, void** containerAction) {
+    return KParts__MainWindow_SuperCreateContainer((KParts__MainWindow*)self, (QWidget*)parent, index, (QDomElement*)element, (QAction**)containerAction);
 }
 
 void k_parts__mainwindow_on_create_container(void* self, QWidget* (*callback)(void*, void*, int, void*, void**)) {
@@ -2902,8 +2902,8 @@ void k_parts__mainwindow_remove_container(void* self, void* container, void* par
     KParts__MainWindow_RemoveContainer((KParts__MainWindow*)self, (QWidget*)container, (QWidget*)parent, (QDomElement*)element, (QAction*)containerAction);
 }
 
-void k_parts__mainwindow_qbase_remove_container(void* self, void* container, void* parent, void* element, void* containerAction) {
-    KParts__MainWindow_QBaseRemoveContainer((KParts__MainWindow*)self, (QWidget*)container, (QWidget*)parent, (QDomElement*)element, (QAction*)containerAction);
+void k_parts__mainwindow_super_remove_container(void* self, void* container, void* parent, void* element, void* containerAction) {
+    KParts__MainWindow_SuperRemoveContainer((KParts__MainWindow*)self, (QWidget*)container, (QWidget*)parent, (QDomElement*)element, (QAction*)containerAction);
 }
 
 void k_parts__mainwindow_on_remove_container(void* self, void (*callback)(void*, void*, void*, void*, void*)) {
@@ -2929,8 +2929,8 @@ const char** k_parts__mainwindow_custom_tags(void* self) {
     return _ret;
 }
 
-const char** k_parts__mainwindow_qbase_custom_tags(void* self) {
-    libqt_list _arr = KParts__MainWindow_QBaseCustomTags((KParts__MainWindow*)self);
+const char** k_parts__mainwindow_super_custom_tags(void* self) {
+    libqt_list _arr = KParts__MainWindow_SuperCustomTags((KParts__MainWindow*)self);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -2956,8 +2956,8 @@ QAction* k_parts__mainwindow_create_custom_element(void* self, void* parent, int
     return KParts__MainWindow_CreateCustomElement((KParts__MainWindow*)self, (QWidget*)parent, index, (QDomElement*)element);
 }
 
-QAction* k_parts__mainwindow_qbase_create_custom_element(void* self, void* parent, int index, void* element) {
-    return KParts__MainWindow_QBaseCreateCustomElement((KParts__MainWindow*)self, (QWidget*)parent, index, (QDomElement*)element);
+QAction* k_parts__mainwindow_super_create_custom_element(void* self, void* parent, int index, void* element) {
+    return KParts__MainWindow_SuperCreateCustomElement((KParts__MainWindow*)self, (QWidget*)parent, index, (QDomElement*)element);
 }
 
 void k_parts__mainwindow_on_create_custom_element(void* self, QAction* (*callback)(void*, void*, int, void*)) {
@@ -2968,8 +2968,8 @@ void k_parts__mainwindow_finalize_g_u_i(void* self, void* client) {
     KParts__MainWindow_FinalizeGUI((KParts__MainWindow*)self, (KXMLGUIClient*)client);
 }
 
-void k_parts__mainwindow_qbase_finalize_g_u_i(void* self, void* client) {
-    KParts__MainWindow_QBaseFinalizeGUI((KParts__MainWindow*)self, (KXMLGUIClient*)client);
+void k_parts__mainwindow_super_finalize_g_u_i(void* self, void* client) {
+    KParts__MainWindow_SuperFinalizeGUI((KParts__MainWindow*)self, (KXMLGUIClient*)client);
 }
 
 void k_parts__mainwindow_on_finalize_g_u_i(void* self, void (*callback)(void*, void*)) {
@@ -2980,8 +2980,8 @@ QAction* k_parts__mainwindow_action2(void* self, void* element) {
     return KParts__MainWindow_Action2((KParts__MainWindow*)self, (QDomElement*)element);
 }
 
-QAction* k_parts__mainwindow_qbase_action2(void* self, void* element) {
-    return KParts__MainWindow_QBaseAction2((KParts__MainWindow*)self, (QDomElement*)element);
+QAction* k_parts__mainwindow_super_action2(void* self, void* element) {
+    return KParts__MainWindow_SuperAction2((KParts__MainWindow*)self, (QDomElement*)element);
 }
 
 void k_parts__mainwindow_on_action2(void* self, QAction* (*callback)(void*, void*)) {
@@ -2992,8 +2992,8 @@ KActionCollection* k_parts__mainwindow_action_collection(void* self) {
     return KParts__MainWindow_ActionCollection((KParts__MainWindow*)self);
 }
 
-KActionCollection* k_parts__mainwindow_qbase_action_collection(void* self) {
-    return KParts__MainWindow_QBaseActionCollection((KParts__MainWindow*)self);
+KActionCollection* k_parts__mainwindow_super_action_collection(void* self) {
+    return KParts__MainWindow_SuperActionCollection((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_action_collection(void* self, KActionCollection* (*callback)()) {
@@ -3007,8 +3007,8 @@ const char* k_parts__mainwindow_component_name(void* self) {
     return _ret;
 }
 
-const char* k_parts__mainwindow_qbase_component_name(void* self) {
-    libqt_string _str = KParts__MainWindow_QBaseComponentName((KParts__MainWindow*)self);
+const char* k_parts__mainwindow_super_component_name(void* self) {
+    libqt_string _str = KParts__MainWindow_SuperComponentName((KParts__MainWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3022,8 +3022,8 @@ QDomDocument* k_parts__mainwindow_dom_document(void* self) {
     return KParts__MainWindow_DomDocument((KParts__MainWindow*)self);
 }
 
-QDomDocument* k_parts__mainwindow_qbase_dom_document(void* self) {
-    return KParts__MainWindow_QBaseDomDocument((KParts__MainWindow*)self);
+QDomDocument* k_parts__mainwindow_super_dom_document(void* self) {
+    return KParts__MainWindow_SuperDomDocument((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_dom_document(void* self, QDomDocument* (*callback)()) {
@@ -3037,8 +3037,8 @@ const char* k_parts__mainwindow_xml_file(void* self) {
     return _ret;
 }
 
-const char* k_parts__mainwindow_qbase_xml_file(void* self) {
-    libqt_string _str = KParts__MainWindow_QBaseXmlFile((KParts__MainWindow*)self);
+const char* k_parts__mainwindow_super_xml_file(void* self) {
+    libqt_string _str = KParts__MainWindow_SuperXmlFile((KParts__MainWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3055,8 +3055,8 @@ const char* k_parts__mainwindow_local_x_m_l_file(void* self) {
     return _ret;
 }
 
-const char* k_parts__mainwindow_qbase_local_x_m_l_file(void* self) {
-    libqt_string _str = KParts__MainWindow_QBaseLocalXMLFile((KParts__MainWindow*)self);
+const char* k_parts__mainwindow_super_local_x_m_l_file(void* self) {
+    libqt_string _str = KParts__MainWindow_SuperLocalXMLFile((KParts__MainWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3070,8 +3070,8 @@ void k_parts__mainwindow_set_component_name(void* self, const char* componentNam
     KParts__MainWindow_SetComponentName((KParts__MainWindow*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
-void k_parts__mainwindow_qbase_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
-    KParts__MainWindow_QBaseSetComponentName((KParts__MainWindow*)self, qstring(componentName), qstring(componentDisplayName));
+void k_parts__mainwindow_super_set_component_name(void* self, const char* componentName, const char* componentDisplayName) {
+    KParts__MainWindow_SuperSetComponentName((KParts__MainWindow*)self, qstring(componentName), qstring(componentDisplayName));
 }
 
 void k_parts__mainwindow_on_set_component_name(void* self, void (*callback)(void*, const char*, const char*)) {
@@ -3082,8 +3082,8 @@ void k_parts__mainwindow_set_x_m_l_file(void* self, const char* file, bool merge
     KParts__MainWindow_SetXMLFile((KParts__MainWindow*)self, qstring(file), merge, setXMLDoc);
 }
 
-void k_parts__mainwindow_qbase_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
-    KParts__MainWindow_QBaseSetXMLFile((KParts__MainWindow*)self, qstring(file), merge, setXMLDoc);
+void k_parts__mainwindow_super_set_x_m_l_file(void* self, const char* file, bool merge, bool setXMLDoc) {
+    KParts__MainWindow_SuperSetXMLFile((KParts__MainWindow*)self, qstring(file), merge, setXMLDoc);
 }
 
 void k_parts__mainwindow_on_set_x_m_l_file(void* self, void (*callback)(void*, const char*, bool, bool)) {
@@ -3094,8 +3094,8 @@ void k_parts__mainwindow_set_local_x_m_l_file(void* self, const char* file) {
     KParts__MainWindow_SetLocalXMLFile((KParts__MainWindow*)self, qstring(file));
 }
 
-void k_parts__mainwindow_qbase_set_local_x_m_l_file(void* self, const char* file) {
-    KParts__MainWindow_QBaseSetLocalXMLFile((KParts__MainWindow*)self, qstring(file));
+void k_parts__mainwindow_super_set_local_x_m_l_file(void* self, const char* file) {
+    KParts__MainWindow_SuperSetLocalXMLFile((KParts__MainWindow*)self, qstring(file));
 }
 
 void k_parts__mainwindow_on_set_local_x_m_l_file(void* self, void (*callback)(void*, const char*)) {
@@ -3106,8 +3106,8 @@ void k_parts__mainwindow_set_x_m_l(void* self, const char* document, bool merge)
     KParts__MainWindow_SetXML((KParts__MainWindow*)self, qstring(document), merge);
 }
 
-void k_parts__mainwindow_qbase_set_x_m_l(void* self, const char* document, bool merge) {
-    KParts__MainWindow_QBaseSetXML((KParts__MainWindow*)self, qstring(document), merge);
+void k_parts__mainwindow_super_set_x_m_l(void* self, const char* document, bool merge) {
+    KParts__MainWindow_SuperSetXML((KParts__MainWindow*)self, qstring(document), merge);
 }
 
 void k_parts__mainwindow_on_set_x_m_l(void* self, void (*callback)(void*, const char*, bool)) {
@@ -3118,8 +3118,8 @@ void k_parts__mainwindow_set_d_o_m_document(void* self, void* document, bool mer
     KParts__MainWindow_SetDOMDocument((KParts__MainWindow*)self, (QDomDocument*)document, merge);
 }
 
-void k_parts__mainwindow_qbase_set_d_o_m_document(void* self, void* document, bool merge) {
-    KParts__MainWindow_QBaseSetDOMDocument((KParts__MainWindow*)self, (QDomDocument*)document, merge);
+void k_parts__mainwindow_super_set_d_o_m_document(void* self, void* document, bool merge) {
+    KParts__MainWindow_SuperSetDOMDocument((KParts__MainWindow*)self, (QDomDocument*)document, merge);
 }
 
 void k_parts__mainwindow_on_set_d_o_m_document(void* self, void (*callback)(void*, void*, bool)) {
@@ -3130,8 +3130,8 @@ void k_parts__mainwindow_state_changed(void* self, const char* newstate, int32_t
     KParts__MainWindow_StateChanged((KParts__MainWindow*)self, qstring(newstate), reverse);
 }
 
-void k_parts__mainwindow_qbase_state_changed(void* self, const char* newstate, int32_t reverse) {
-    KParts__MainWindow_QBaseStateChanged((KParts__MainWindow*)self, qstring(newstate), reverse);
+void k_parts__mainwindow_super_state_changed(void* self, const char* newstate, int32_t reverse) {
+    KParts__MainWindow_SuperStateChanged((KParts__MainWindow*)self, qstring(newstate), reverse);
 }
 
 void k_parts__mainwindow_on_state_changed(void* self, void (*callback)(void*, const char*, int32_t)) {
@@ -3142,8 +3142,8 @@ void k_parts__mainwindow_check_ambiguous_shortcuts(void* self) {
     KParts__MainWindow_CheckAmbiguousShortcuts((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_qbase_check_ambiguous_shortcuts(void* self) {
-    KParts__MainWindow_QBaseCheckAmbiguousShortcuts((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_check_ambiguous_shortcuts(void* self) {
+    KParts__MainWindow_SuperCheckAmbiguousShortcuts((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_check_ambiguous_shortcuts(void* self, void (*callback)()) {
@@ -3154,8 +3154,8 @@ void k_parts__mainwindow_save_properties_internal(void* self, void* param1, int 
     KParts__MainWindow_SavePropertiesInternal((KParts__MainWindow*)self, (KConfig*)param1, param2);
 }
 
-void k_parts__mainwindow_qbase_save_properties_internal(void* self, void* param1, int param2) {
-    KParts__MainWindow_QBaseSavePropertiesInternal((KParts__MainWindow*)self, (KConfig*)param1, param2);
+void k_parts__mainwindow_super_save_properties_internal(void* self, void* param1, int param2) {
+    KParts__MainWindow_SuperSavePropertiesInternal((KParts__MainWindow*)self, (KConfig*)param1, param2);
 }
 
 void k_parts__mainwindow_on_save_properties_internal(void* self, void (*callback)(void*, void*, int)) {
@@ -3166,8 +3166,8 @@ bool k_parts__mainwindow_read_properties_internal(void* self, void* param1, int 
     return KParts__MainWindow_ReadPropertiesInternal((KParts__MainWindow*)self, (KConfig*)param1, param2);
 }
 
-bool k_parts__mainwindow_qbase_read_properties_internal(void* self, void* param1, int param2) {
-    return KParts__MainWindow_QBaseReadPropertiesInternal((KParts__MainWindow*)self, (KConfig*)param1, param2);
+bool k_parts__mainwindow_super_read_properties_internal(void* self, void* param1, int param2) {
+    return KParts__MainWindow_SuperReadPropertiesInternal((KParts__MainWindow*)self, (KConfig*)param1, param2);
 }
 
 void k_parts__mainwindow_on_read_properties_internal(void* self, bool (*callback)(void*, void*, int)) {
@@ -3178,8 +3178,8 @@ bool k_parts__mainwindow_settings_dirty(void* self) {
     return KParts__MainWindow_SettingsDirty((KParts__MainWindow*)self);
 }
 
-bool k_parts__mainwindow_qbase_settings_dirty(void* self) {
-    return KParts__MainWindow_QBaseSettingsDirty((KParts__MainWindow*)self);
+bool k_parts__mainwindow_super_settings_dirty(void* self) {
+    return KParts__MainWindow_SuperSettingsDirty((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_settings_dirty(void* self, bool (*callback)()) {
@@ -3190,8 +3190,8 @@ void k_parts__mainwindow_save_auto_save_settings(void* self) {
     KParts__MainWindow_SaveAutoSaveSettings((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_qbase_save_auto_save_settings(void* self) {
-    KParts__MainWindow_QBaseSaveAutoSaveSettings((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_save_auto_save_settings(void* self) {
+    KParts__MainWindow_SuperSaveAutoSaveSettings((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_save_auto_save_settings(void* self, void (*callback)()) {
@@ -3202,8 +3202,8 @@ void k_parts__mainwindow_update_micro_focus(void* self) {
     KParts__MainWindow_UpdateMicroFocus((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_qbase_update_micro_focus(void* self) {
-    KParts__MainWindow_QBaseUpdateMicroFocus((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_update_micro_focus(void* self) {
+    KParts__MainWindow_SuperUpdateMicroFocus((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_update_micro_focus(void* self, void (*callback)()) {
@@ -3214,8 +3214,8 @@ void k_parts__mainwindow_create(void* self) {
     KParts__MainWindow_Create((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_qbase_create(void* self) {
-    KParts__MainWindow_QBaseCreate((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_create(void* self) {
+    KParts__MainWindow_SuperCreate((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_create(void* self, void (*callback)()) {
@@ -3226,8 +3226,8 @@ void k_parts__mainwindow_destroy(void* self) {
     KParts__MainWindow_Destroy((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_qbase_destroy(void* self) {
-    KParts__MainWindow_QBaseDestroy((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_destroy(void* self) {
+    KParts__MainWindow_SuperDestroy((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_destroy(void* self, void (*callback)()) {
@@ -3238,8 +3238,8 @@ bool k_parts__mainwindow_focus_next_child(void* self) {
     return KParts__MainWindow_FocusNextChild((KParts__MainWindow*)self);
 }
 
-bool k_parts__mainwindow_qbase_focus_next_child(void* self) {
-    return KParts__MainWindow_QBaseFocusNextChild((KParts__MainWindow*)self);
+bool k_parts__mainwindow_super_focus_next_child(void* self) {
+    return KParts__MainWindow_SuperFocusNextChild((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_focus_next_child(void* self, bool (*callback)()) {
@@ -3250,8 +3250,8 @@ bool k_parts__mainwindow_focus_previous_child(void* self) {
     return KParts__MainWindow_FocusPreviousChild((KParts__MainWindow*)self);
 }
 
-bool k_parts__mainwindow_qbase_focus_previous_child(void* self) {
-    return KParts__MainWindow_QBaseFocusPreviousChild((KParts__MainWindow*)self);
+bool k_parts__mainwindow_super_focus_previous_child(void* self) {
+    return KParts__MainWindow_SuperFocusPreviousChild((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_focus_previous_child(void* self, bool (*callback)()) {
@@ -3262,8 +3262,8 @@ QObject* k_parts__mainwindow_sender(void* self) {
     return KParts__MainWindow_Sender((KParts__MainWindow*)self);
 }
 
-QObject* k_parts__mainwindow_qbase_sender(void* self) {
-    return KParts__MainWindow_QBaseSender((KParts__MainWindow*)self);
+QObject* k_parts__mainwindow_super_sender(void* self) {
+    return KParts__MainWindow_SuperSender((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_sender(void* self, QObject* (*callback)()) {
@@ -3274,8 +3274,8 @@ int32_t k_parts__mainwindow_sender_signal_index(void* self) {
     return KParts__MainWindow_SenderSignalIndex((KParts__MainWindow*)self);
 }
 
-int32_t k_parts__mainwindow_qbase_sender_signal_index(void* self) {
-    return KParts__MainWindow_QBaseSenderSignalIndex((KParts__MainWindow*)self);
+int32_t k_parts__mainwindow_super_sender_signal_index(void* self) {
+    return KParts__MainWindow_SuperSenderSignalIndex((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -3286,8 +3286,8 @@ int32_t k_parts__mainwindow_receivers(void* self, const char* signal) {
     return KParts__MainWindow_Receivers((KParts__MainWindow*)self, signal);
 }
 
-int32_t k_parts__mainwindow_qbase_receivers(void* self, const char* signal) {
-    return KParts__MainWindow_QBaseReceivers((KParts__MainWindow*)self, signal);
+int32_t k_parts__mainwindow_super_receivers(void* self, const char* signal) {
+    return KParts__MainWindow_SuperReceivers((KParts__MainWindow*)self, signal);
 }
 
 void k_parts__mainwindow_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -3298,8 +3298,8 @@ bool k_parts__mainwindow_is_signal_connected(void* self, void* signal) {
     return KParts__MainWindow_IsSignalConnected((KParts__MainWindow*)self, (QMetaMethod*)signal);
 }
 
-bool k_parts__mainwindow_qbase_is_signal_connected(void* self, void* signal) {
-    return KParts__MainWindow_QBaseIsSignalConnected((KParts__MainWindow*)self, (QMetaMethod*)signal);
+bool k_parts__mainwindow_super_is_signal_connected(void* self, void* signal) {
+    return KParts__MainWindow_SuperIsSignalConnected((KParts__MainWindow*)self, (QMetaMethod*)signal);
 }
 
 void k_parts__mainwindow_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
@@ -3310,8 +3310,8 @@ double k_parts__mainwindow_get_decoded_metric_f(void* self, int32_t metricA, int
     return KParts__MainWindow_GetDecodedMetricF((KParts__MainWindow*)self, metricA, metricB);
 }
 
-double k_parts__mainwindow_qbase_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
-    return KParts__MainWindow_QBaseGetDecodedMetricF((KParts__MainWindow*)self, metricA, metricB);
+double k_parts__mainwindow_super_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
+    return KParts__MainWindow_SuperGetDecodedMetricF((KParts__MainWindow*)self, metricA, metricB);
 }
 
 void k_parts__mainwindow_on_get_decoded_metric_f(void* self, double (*callback)(void*, int32_t, int32_t)) {
@@ -3325,8 +3325,8 @@ const char* k_parts__mainwindow_standards_xml_file_location(void* self) {
     return _ret;
 }
 
-const char* k_parts__mainwindow_qbase_standards_xml_file_location(void* self) {
-    libqt_string _str = KParts__MainWindow_QBaseStandardsXmlFileLocation((KParts__MainWindow*)self);
+const char* k_parts__mainwindow_super_standards_xml_file_location(void* self) {
+    libqt_string _str = KParts__MainWindow_SuperStandardsXmlFileLocation((KParts__MainWindow*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -3340,8 +3340,8 @@ void k_parts__mainwindow_load_standards_xml_file(void* self) {
     KParts__MainWindow_LoadStandardsXmlFile((KParts__MainWindow*)self);
 }
 
-void k_parts__mainwindow_qbase_load_standards_xml_file(void* self) {
-    KParts__MainWindow_QBaseLoadStandardsXmlFile((KParts__MainWindow*)self);
+void k_parts__mainwindow_super_load_standards_xml_file(void* self) {
+    KParts__MainWindow_SuperLoadStandardsXmlFile((KParts__MainWindow*)self);
 }
 
 void k_parts__mainwindow_on_load_standards_xml_file(void* self, void (*callback)()) {

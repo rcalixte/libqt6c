@@ -21,8 +21,8 @@ void q_geocodereply_on_meta_object(void* self, const QMetaObject* (*callback)())
     QGeoCodeReply_OnMetaObject((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_geocodereply_qbase_meta_object(void* self) {
-    return QGeoCodeReply_QBaseMetaObject((QGeoCodeReply*)self);
+const QMetaObject* q_geocodereply_super_meta_object(void* self) {
+    return QGeoCodeReply_SuperMetaObject((QGeoCodeReply*)self);
 }
 
 void* q_geocodereply_metacast(void* self, const char* param1) {
@@ -33,8 +33,8 @@ void q_geocodereply_on_metacast(void* self, void* (*callback)(void*, const char*
     QGeoCodeReply_OnMetacast((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void* q_geocodereply_qbase_metacast(void* self, const char* param1) {
-    return QGeoCodeReply_QBaseMetacast((QGeoCodeReply*)self, param1);
+void* q_geocodereply_super_metacast(void* self, const char* param1) {
+    return QGeoCodeReply_SuperMetacast((QGeoCodeReply*)self, param1);
 }
 
 int32_t q_geocodereply_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -45,8 +45,8 @@ void q_geocodereply_on_metacall(void* self, int32_t (*callback)(void*, int32_t, 
     QGeoCodeReply_OnMetacall((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-int32_t q_geocodereply_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoCodeReply_QBaseMetacall((QGeoCodeReply*)self, param1, param2, param3);
+int32_t q_geocodereply_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoCodeReply_SuperMetacall((QGeoCodeReply*)self, param1, param2, param3);
 }
 
 const char* q_geocodereply_tr(const char* s) {
@@ -96,8 +96,8 @@ void q_geocodereply_on_abort(void* self, void (*callback)()) {
     QGeoCodeReply_OnAbort((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_abort(void* self) {
-    QGeoCodeReply_QBaseAbort((QGeoCodeReply*)self);
+void q_geocodereply_super_abort(void* self) {
+    QGeoCodeReply_SuperAbort((QGeoCodeReply*)self);
 }
 
 void q_geocodereply_finished(void* self) {
@@ -132,8 +132,8 @@ void q_geocodereply_on_set_error(void* self, void (*callback)(void*, int32_t, co
     QGeoCodeReply_OnSetError((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_error(void* self, int32_t error, const char* errorString) {
-    QGeoCodeReply_QBaseSetError((QGeoCodeReply*)self, error, qstring(errorString));
+void q_geocodereply_super_set_error(void* self, int32_t error, const char* errorString) {
+    QGeoCodeReply_SuperSetError((QGeoCodeReply*)self, error, qstring(errorString));
 }
 
 void q_geocodereply_set_finished(void* self, bool finished) {
@@ -144,8 +144,8 @@ void q_geocodereply_on_set_finished(void* self, void (*callback)(void*, bool)) {
     QGeoCodeReply_OnSetFinished((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_finished(void* self, bool finished) {
-    QGeoCodeReply_QBaseSetFinished((QGeoCodeReply*)self, finished);
+void q_geocodereply_super_set_finished(void* self, bool finished) {
+    QGeoCodeReply_SuperSetFinished((QGeoCodeReply*)self, finished);
 }
 
 void q_geocodereply_set_viewport(void* self, void* viewport) {
@@ -156,8 +156,8 @@ void q_geocodereply_on_set_viewport(void* self, void (*callback)(void*, void*)) 
     QGeoCodeReply_OnSetViewport((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_viewport(void* self, void* viewport) {
-    QGeoCodeReply_QBaseSetViewport((QGeoCodeReply*)self, (QGeoShape*)viewport);
+void q_geocodereply_super_set_viewport(void* self, void* viewport) {
+    QGeoCodeReply_SuperSetViewport((QGeoCodeReply*)self, (QGeoShape*)viewport);
 }
 
 void q_geocodereply_add_location(void* self, void* location) {
@@ -168,8 +168,8 @@ void q_geocodereply_on_add_location(void* self, void (*callback)(void*, void*)) 
     QGeoCodeReply_OnAddLocation((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_add_location(void* self, void* location) {
-    QGeoCodeReply_QBaseAddLocation((QGeoCodeReply*)self, (QGeoLocation*)location);
+void q_geocodereply_super_add_location(void* self, void* location) {
+    QGeoCodeReply_SuperAddLocation((QGeoCodeReply*)self, (QGeoLocation*)location);
 }
 
 void q_geocodereply_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations) {
@@ -180,8 +180,8 @@ void q_geocodereply_on_set_locations(void* self, void (*callback)(void*, libqt_l
     QGeoCodeReply_OnSetLocations((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations) {
-    QGeoCodeReply_QBaseSetLocations((QGeoCodeReply*)self, locations);
+void q_geocodereply_super_set_locations(void* self, libqt_list /* of QGeoLocation* */ locations) {
+    QGeoCodeReply_SuperSetLocations((QGeoCodeReply*)self, locations);
 }
 
 void q_geocodereply_set_limit(void* self, int64_t limit) {
@@ -192,8 +192,8 @@ void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, int64_t)) {
     QGeoCodeReply_OnSetLimit((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_limit(void* self, int64_t limit) {
-    QGeoCodeReply_QBaseSetLimit((QGeoCodeReply*)self, limit);
+void q_geocodereply_super_set_limit(void* self, int64_t limit) {
+    QGeoCodeReply_SuperSetLimit((QGeoCodeReply*)self, limit);
 }
 
 void q_geocodereply_set_offset(void* self, int64_t offset) {
@@ -204,8 +204,8 @@ void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, int64_t)) 
     QGeoCodeReply_OnSetOffset((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_qbase_set_offset(void* self, int64_t offset) {
-    QGeoCodeReply_QBaseSetOffset((QGeoCodeReply*)self, offset);
+void q_geocodereply_super_set_offset(void* self, int64_t offset) {
+    QGeoCodeReply_SuperSetOffset((QGeoCodeReply*)self, offset);
 }
 
 const char* q_geocodereply_tr2(const char* s, const char* c) {
@@ -445,8 +445,8 @@ bool q_geocodereply_event(void* self, void* event) {
     return QGeoCodeReply_Event((QGeoCodeReply*)self, (QEvent*)event);
 }
 
-bool q_geocodereply_qbase_event(void* self, void* event) {
-    return QGeoCodeReply_QBaseEvent((QGeoCodeReply*)self, (QEvent*)event);
+bool q_geocodereply_super_event(void* self, void* event) {
+    return QGeoCodeReply_SuperEvent((QGeoCodeReply*)self, (QEvent*)event);
 }
 
 void q_geocodereply_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -457,8 +457,8 @@ bool q_geocodereply_event_filter(void* self, void* watched, void* event) {
     return QGeoCodeReply_EventFilter((QGeoCodeReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_geocodereply_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoCodeReply_QBaseEventFilter((QGeoCodeReply*)self, (QObject*)watched, (QEvent*)event);
+bool q_geocodereply_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoCodeReply_SuperEventFilter((QGeoCodeReply*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_geocodereply_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -469,8 +469,8 @@ void q_geocodereply_timer_event(void* self, void* event) {
     QGeoCodeReply_TimerEvent((QGeoCodeReply*)self, (QTimerEvent*)event);
 }
 
-void q_geocodereply_qbase_timer_event(void* self, void* event) {
-    QGeoCodeReply_QBaseTimerEvent((QGeoCodeReply*)self, (QTimerEvent*)event);
+void q_geocodereply_super_timer_event(void* self, void* event) {
+    QGeoCodeReply_SuperTimerEvent((QGeoCodeReply*)self, (QTimerEvent*)event);
 }
 
 void q_geocodereply_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -481,8 +481,8 @@ void q_geocodereply_child_event(void* self, void* event) {
     QGeoCodeReply_ChildEvent((QGeoCodeReply*)self, (QChildEvent*)event);
 }
 
-void q_geocodereply_qbase_child_event(void* self, void* event) {
-    QGeoCodeReply_QBaseChildEvent((QGeoCodeReply*)self, (QChildEvent*)event);
+void q_geocodereply_super_child_event(void* self, void* event) {
+    QGeoCodeReply_SuperChildEvent((QGeoCodeReply*)self, (QChildEvent*)event);
 }
 
 void q_geocodereply_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -493,8 +493,8 @@ void q_geocodereply_custom_event(void* self, void* event) {
     QGeoCodeReply_CustomEvent((QGeoCodeReply*)self, (QEvent*)event);
 }
 
-void q_geocodereply_qbase_custom_event(void* self, void* event) {
-    QGeoCodeReply_QBaseCustomEvent((QGeoCodeReply*)self, (QEvent*)event);
+void q_geocodereply_super_custom_event(void* self, void* event) {
+    QGeoCodeReply_SuperCustomEvent((QGeoCodeReply*)self, (QEvent*)event);
 }
 
 void q_geocodereply_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -505,8 +505,8 @@ void q_geocodereply_connect_notify(void* self, void* signal) {
     QGeoCodeReply_ConnectNotify((QGeoCodeReply*)self, (QMetaMethod*)signal);
 }
 
-void q_geocodereply_qbase_connect_notify(void* self, void* signal) {
-    QGeoCodeReply_QBaseConnectNotify((QGeoCodeReply*)self, (QMetaMethod*)signal);
+void q_geocodereply_super_connect_notify(void* self, void* signal) {
+    QGeoCodeReply_SuperConnectNotify((QGeoCodeReply*)self, (QMetaMethod*)signal);
 }
 
 void q_geocodereply_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -517,8 +517,8 @@ void q_geocodereply_disconnect_notify(void* self, void* signal) {
     QGeoCodeReply_DisconnectNotify((QGeoCodeReply*)self, (QMetaMethod*)signal);
 }
 
-void q_geocodereply_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoCodeReply_QBaseDisconnectNotify((QGeoCodeReply*)self, (QMetaMethod*)signal);
+void q_geocodereply_super_disconnect_notify(void* self, void* signal) {
+    QGeoCodeReply_SuperDisconnectNotify((QGeoCodeReply*)self, (QMetaMethod*)signal);
 }
 
 void q_geocodereply_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -529,8 +529,8 @@ QObject* q_geocodereply_sender(void* self) {
     return QGeoCodeReply_Sender((QGeoCodeReply*)self);
 }
 
-QObject* q_geocodereply_qbase_sender(void* self) {
-    return QGeoCodeReply_QBaseSender((QGeoCodeReply*)self);
+QObject* q_geocodereply_super_sender(void* self) {
+    return QGeoCodeReply_SuperSender((QGeoCodeReply*)self);
 }
 
 void q_geocodereply_on_sender(void* self, QObject* (*callback)()) {
@@ -541,8 +541,8 @@ int32_t q_geocodereply_sender_signal_index(void* self) {
     return QGeoCodeReply_SenderSignalIndex((QGeoCodeReply*)self);
 }
 
-int32_t q_geocodereply_qbase_sender_signal_index(void* self) {
-    return QGeoCodeReply_QBaseSenderSignalIndex((QGeoCodeReply*)self);
+int32_t q_geocodereply_super_sender_signal_index(void* self) {
+    return QGeoCodeReply_SuperSenderSignalIndex((QGeoCodeReply*)self);
 }
 
 void q_geocodereply_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -553,8 +553,8 @@ int32_t q_geocodereply_receivers(void* self, const char* signal) {
     return QGeoCodeReply_Receivers((QGeoCodeReply*)self, signal);
 }
 
-int32_t q_geocodereply_qbase_receivers(void* self, const char* signal) {
-    return QGeoCodeReply_QBaseReceivers((QGeoCodeReply*)self, signal);
+int32_t q_geocodereply_super_receivers(void* self, const char* signal) {
+    return QGeoCodeReply_SuperReceivers((QGeoCodeReply*)self, signal);
 }
 
 void q_geocodereply_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -565,8 +565,8 @@ bool q_geocodereply_is_signal_connected(void* self, void* signal) {
     return QGeoCodeReply_IsSignalConnected((QGeoCodeReply*)self, (QMetaMethod*)signal);
 }
 
-bool q_geocodereply_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoCodeReply_QBaseIsSignalConnected((QGeoCodeReply*)self, (QMetaMethod*)signal);
+bool q_geocodereply_super_is_signal_connected(void* self, void* signal) {
+    return QGeoCodeReply_SuperIsSignalConnected((QGeoCodeReply*)self, (QMetaMethod*)signal);
 }
 
 void q_geocodereply_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

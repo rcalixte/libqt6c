@@ -22,8 +22,8 @@ void k_jobuidelegate_on_meta_object(void* self, const QMetaObject* (*callback)()
     KJobUiDelegate_OnMetaObject((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-const QMetaObject* k_jobuidelegate_qbase_meta_object(void* self) {
-    return KJobUiDelegate_QBaseMetaObject((KJobUiDelegate*)self);
+const QMetaObject* k_jobuidelegate_super_meta_object(void* self) {
+    return KJobUiDelegate_SuperMetaObject((KJobUiDelegate*)self);
 }
 
 void* k_jobuidelegate_metacast(void* self, const char* param1) {
@@ -34,8 +34,8 @@ void k_jobuidelegate_on_metacast(void* self, void* (*callback)(void*, const char
     KJobUiDelegate_OnMetacast((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-void* k_jobuidelegate_qbase_metacast(void* self, const char* param1) {
-    return KJobUiDelegate_QBaseMetacast((KJobUiDelegate*)self, param1);
+void* k_jobuidelegate_super_metacast(void* self, const char* param1) {
+    return KJobUiDelegate_SuperMetacast((KJobUiDelegate*)self, param1);
 }
 
 int32_t k_jobuidelegate_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -46,8 +46,8 @@ void k_jobuidelegate_on_metacall(void* self, int32_t (*callback)(void*, int32_t,
     KJobUiDelegate_OnMetacall((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-int32_t k_jobuidelegate_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return KJobUiDelegate_QBaseMetacall((KJobUiDelegate*)self, param1, param2, param3);
+int32_t k_jobuidelegate_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return KJobUiDelegate_SuperMetacall((KJobUiDelegate*)self, param1, param2, param3);
 }
 
 const char* k_jobuidelegate_tr(const char* s) {
@@ -65,8 +65,8 @@ void k_jobuidelegate_on_set_job(void* self, bool (*callback)(void*, void*)) {
     KJobUiDelegate_OnSetJob((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-bool k_jobuidelegate_qbase_set_job(void* self, void* job) {
-    return KJobUiDelegate_QBaseSetJob((KJobUiDelegate*)self, (KJob*)job);
+bool k_jobuidelegate_super_set_job(void* self, void* job) {
+    return KJobUiDelegate_SuperSetJob((KJobUiDelegate*)self, (KJob*)job);
 }
 
 KJob* k_jobuidelegate_job(void* self) {
@@ -77,8 +77,8 @@ void k_jobuidelegate_on_job(void* self, KJob* (*callback)()) {
     KJobUiDelegate_OnJob((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-KJob* k_jobuidelegate_qbase_job(void* self) {
-    return KJobUiDelegate_QBaseJob((KJobUiDelegate*)self);
+KJob* k_jobuidelegate_super_job(void* self) {
+    return KJobUiDelegate_SuperJob((KJobUiDelegate*)self);
 }
 
 void k_jobuidelegate_show_error_message(void* self) {
@@ -89,8 +89,8 @@ void k_jobuidelegate_on_show_error_message(void* self, void (*callback)()) {
     KJobUiDelegate_OnShowErrorMessage((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-void k_jobuidelegate_qbase_show_error_message(void* self) {
-    KJobUiDelegate_QBaseShowErrorMessage((KJobUiDelegate*)self);
+void k_jobuidelegate_super_show_error_message(void* self) {
+    KJobUiDelegate_SuperShowErrorMessage((KJobUiDelegate*)self);
 }
 
 void k_jobuidelegate_set_auto_error_handling_enabled(void* self, bool enable) {
@@ -117,8 +117,8 @@ void k_jobuidelegate_on_slot_warning(void* self, void (*callback)(void*, void*, 
     KJobUiDelegate_OnSlotWarning((KJobUiDelegate*)self, (intptr_t)callback);
 }
 
-void k_jobuidelegate_qbase_slot_warning(void* self, void* job, const char* message) {
-    KJobUiDelegate_QBaseSlotWarning((KJobUiDelegate*)self, (KJob*)job, qstring(message));
+void k_jobuidelegate_super_slot_warning(void* self, void* job, const char* message) {
+    KJobUiDelegate_SuperSlotWarning((KJobUiDelegate*)self, (KJob*)job, qstring(message));
 }
 
 const char* k_jobuidelegate_tr2(const char* s, const char* c) {
@@ -350,8 +350,8 @@ bool k_jobuidelegate_event(void* self, void* event) {
     return KJobUiDelegate_Event((KJobUiDelegate*)self, (QEvent*)event);
 }
 
-bool k_jobuidelegate_qbase_event(void* self, void* event) {
-    return KJobUiDelegate_QBaseEvent((KJobUiDelegate*)self, (QEvent*)event);
+bool k_jobuidelegate_super_event(void* self, void* event) {
+    return KJobUiDelegate_SuperEvent((KJobUiDelegate*)self, (QEvent*)event);
 }
 
 void k_jobuidelegate_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -362,8 +362,8 @@ bool k_jobuidelegate_event_filter(void* self, void* watched, void* event) {
     return KJobUiDelegate_EventFilter((KJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool k_jobuidelegate_qbase_event_filter(void* self, void* watched, void* event) {
-    return KJobUiDelegate_QBaseEventFilter((KJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
+bool k_jobuidelegate_super_event_filter(void* self, void* watched, void* event) {
+    return KJobUiDelegate_SuperEventFilter((KJobUiDelegate*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void k_jobuidelegate_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -374,8 +374,8 @@ void k_jobuidelegate_timer_event(void* self, void* event) {
     KJobUiDelegate_TimerEvent((KJobUiDelegate*)self, (QTimerEvent*)event);
 }
 
-void k_jobuidelegate_qbase_timer_event(void* self, void* event) {
-    KJobUiDelegate_QBaseTimerEvent((KJobUiDelegate*)self, (QTimerEvent*)event);
+void k_jobuidelegate_super_timer_event(void* self, void* event) {
+    KJobUiDelegate_SuperTimerEvent((KJobUiDelegate*)self, (QTimerEvent*)event);
 }
 
 void k_jobuidelegate_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -386,8 +386,8 @@ void k_jobuidelegate_child_event(void* self, void* event) {
     KJobUiDelegate_ChildEvent((KJobUiDelegate*)self, (QChildEvent*)event);
 }
 
-void k_jobuidelegate_qbase_child_event(void* self, void* event) {
-    KJobUiDelegate_QBaseChildEvent((KJobUiDelegate*)self, (QChildEvent*)event);
+void k_jobuidelegate_super_child_event(void* self, void* event) {
+    KJobUiDelegate_SuperChildEvent((KJobUiDelegate*)self, (QChildEvent*)event);
 }
 
 void k_jobuidelegate_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -398,8 +398,8 @@ void k_jobuidelegate_custom_event(void* self, void* event) {
     KJobUiDelegate_CustomEvent((KJobUiDelegate*)self, (QEvent*)event);
 }
 
-void k_jobuidelegate_qbase_custom_event(void* self, void* event) {
-    KJobUiDelegate_QBaseCustomEvent((KJobUiDelegate*)self, (QEvent*)event);
+void k_jobuidelegate_super_custom_event(void* self, void* event) {
+    KJobUiDelegate_SuperCustomEvent((KJobUiDelegate*)self, (QEvent*)event);
 }
 
 void k_jobuidelegate_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -410,8 +410,8 @@ void k_jobuidelegate_connect_notify(void* self, void* signal) {
     KJobUiDelegate_ConnectNotify((KJobUiDelegate*)self, (QMetaMethod*)signal);
 }
 
-void k_jobuidelegate_qbase_connect_notify(void* self, void* signal) {
-    KJobUiDelegate_QBaseConnectNotify((KJobUiDelegate*)self, (QMetaMethod*)signal);
+void k_jobuidelegate_super_connect_notify(void* self, void* signal) {
+    KJobUiDelegate_SuperConnectNotify((KJobUiDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_jobuidelegate_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -422,8 +422,8 @@ void k_jobuidelegate_disconnect_notify(void* self, void* signal) {
     KJobUiDelegate_DisconnectNotify((KJobUiDelegate*)self, (QMetaMethod*)signal);
 }
 
-void k_jobuidelegate_qbase_disconnect_notify(void* self, void* signal) {
-    KJobUiDelegate_QBaseDisconnectNotify((KJobUiDelegate*)self, (QMetaMethod*)signal);
+void k_jobuidelegate_super_disconnect_notify(void* self, void* signal) {
+    KJobUiDelegate_SuperDisconnectNotify((KJobUiDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_jobuidelegate_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -434,8 +434,8 @@ QObject* k_jobuidelegate_sender(void* self) {
     return KJobUiDelegate_Sender((KJobUiDelegate*)self);
 }
 
-QObject* k_jobuidelegate_qbase_sender(void* self) {
-    return KJobUiDelegate_QBaseSender((KJobUiDelegate*)self);
+QObject* k_jobuidelegate_super_sender(void* self) {
+    return KJobUiDelegate_SuperSender((KJobUiDelegate*)self);
 }
 
 void k_jobuidelegate_on_sender(void* self, QObject* (*callback)()) {
@@ -446,8 +446,8 @@ int32_t k_jobuidelegate_sender_signal_index(void* self) {
     return KJobUiDelegate_SenderSignalIndex((KJobUiDelegate*)self);
 }
 
-int32_t k_jobuidelegate_qbase_sender_signal_index(void* self) {
-    return KJobUiDelegate_QBaseSenderSignalIndex((KJobUiDelegate*)self);
+int32_t k_jobuidelegate_super_sender_signal_index(void* self) {
+    return KJobUiDelegate_SuperSenderSignalIndex((KJobUiDelegate*)self);
 }
 
 void k_jobuidelegate_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -458,8 +458,8 @@ int32_t k_jobuidelegate_receivers(void* self, const char* signal) {
     return KJobUiDelegate_Receivers((KJobUiDelegate*)self, signal);
 }
 
-int32_t k_jobuidelegate_qbase_receivers(void* self, const char* signal) {
-    return KJobUiDelegate_QBaseReceivers((KJobUiDelegate*)self, signal);
+int32_t k_jobuidelegate_super_receivers(void* self, const char* signal) {
+    return KJobUiDelegate_SuperReceivers((KJobUiDelegate*)self, signal);
 }
 
 void k_jobuidelegate_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -470,8 +470,8 @@ bool k_jobuidelegate_is_signal_connected(void* self, void* signal) {
     return KJobUiDelegate_IsSignalConnected((KJobUiDelegate*)self, (QMetaMethod*)signal);
 }
 
-bool k_jobuidelegate_qbase_is_signal_connected(void* self, void* signal) {
-    return KJobUiDelegate_QBaseIsSignalConnected((KJobUiDelegate*)self, (QMetaMethod*)signal);
+bool k_jobuidelegate_super_is_signal_connected(void* self, void* signal) {
+    return KJobUiDelegate_SuperIsSignalConnected((KJobUiDelegate*)self, (QMetaMethod*)signal);
 }
 
 void k_jobuidelegate_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

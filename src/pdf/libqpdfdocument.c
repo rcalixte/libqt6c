@@ -29,8 +29,8 @@ void q_pdfdocument_on_meta_object(void* self, const QMetaObject* (*callback)()) 
     QPdfDocument_OnMetaObject((QPdfDocument*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_pdfdocument_qbase_meta_object(void* self) {
-    return QPdfDocument_QBaseMetaObject((QPdfDocument*)self);
+const QMetaObject* q_pdfdocument_super_meta_object(void* self) {
+    return QPdfDocument_SuperMetaObject((QPdfDocument*)self);
 }
 
 void* q_pdfdocument_metacast(void* self, const char* param1) {
@@ -41,8 +41,8 @@ void q_pdfdocument_on_metacast(void* self, void* (*callback)(void*, const char*)
     QPdfDocument_OnMetacast((QPdfDocument*)self, (intptr_t)callback);
 }
 
-void* q_pdfdocument_qbase_metacast(void* self, const char* param1) {
-    return QPdfDocument_QBaseMetacast((QPdfDocument*)self, param1);
+void* q_pdfdocument_super_metacast(void* self, const char* param1) {
+    return QPdfDocument_SuperMetacast((QPdfDocument*)self, param1);
 }
 
 int32_t q_pdfdocument_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -53,8 +53,8 @@ void q_pdfdocument_on_metacall(void* self, int32_t (*callback)(void*, int32_t, i
     QPdfDocument_OnMetacall((QPdfDocument*)self, (intptr_t)callback);
 }
 
-int32_t q_pdfdocument_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QPdfDocument_QBaseMetacall((QPdfDocument*)self, param1, param2, param3);
+int32_t q_pdfdocument_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QPdfDocument_SuperMetacall((QPdfDocument*)self, param1, param2, param3);
 }
 
 const char* q_pdfdocument_tr(const char* s) {
@@ -411,8 +411,8 @@ bool q_pdfdocument_event(void* self, void* event) {
     return QPdfDocument_Event((QPdfDocument*)self, (QEvent*)event);
 }
 
-bool q_pdfdocument_qbase_event(void* self, void* event) {
-    return QPdfDocument_QBaseEvent((QPdfDocument*)self, (QEvent*)event);
+bool q_pdfdocument_super_event(void* self, void* event) {
+    return QPdfDocument_SuperEvent((QPdfDocument*)self, (QEvent*)event);
 }
 
 void q_pdfdocument_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -423,8 +423,8 @@ bool q_pdfdocument_event_filter(void* self, void* watched, void* event) {
     return QPdfDocument_EventFilter((QPdfDocument*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_pdfdocument_qbase_event_filter(void* self, void* watched, void* event) {
-    return QPdfDocument_QBaseEventFilter((QPdfDocument*)self, (QObject*)watched, (QEvent*)event);
+bool q_pdfdocument_super_event_filter(void* self, void* watched, void* event) {
+    return QPdfDocument_SuperEventFilter((QPdfDocument*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_pdfdocument_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -435,8 +435,8 @@ void q_pdfdocument_timer_event(void* self, void* event) {
     QPdfDocument_TimerEvent((QPdfDocument*)self, (QTimerEvent*)event);
 }
 
-void q_pdfdocument_qbase_timer_event(void* self, void* event) {
-    QPdfDocument_QBaseTimerEvent((QPdfDocument*)self, (QTimerEvent*)event);
+void q_pdfdocument_super_timer_event(void* self, void* event) {
+    QPdfDocument_SuperTimerEvent((QPdfDocument*)self, (QTimerEvent*)event);
 }
 
 void q_pdfdocument_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -447,8 +447,8 @@ void q_pdfdocument_child_event(void* self, void* event) {
     QPdfDocument_ChildEvent((QPdfDocument*)self, (QChildEvent*)event);
 }
 
-void q_pdfdocument_qbase_child_event(void* self, void* event) {
-    QPdfDocument_QBaseChildEvent((QPdfDocument*)self, (QChildEvent*)event);
+void q_pdfdocument_super_child_event(void* self, void* event) {
+    QPdfDocument_SuperChildEvent((QPdfDocument*)self, (QChildEvent*)event);
 }
 
 void q_pdfdocument_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -459,8 +459,8 @@ void q_pdfdocument_custom_event(void* self, void* event) {
     QPdfDocument_CustomEvent((QPdfDocument*)self, (QEvent*)event);
 }
 
-void q_pdfdocument_qbase_custom_event(void* self, void* event) {
-    QPdfDocument_QBaseCustomEvent((QPdfDocument*)self, (QEvent*)event);
+void q_pdfdocument_super_custom_event(void* self, void* event) {
+    QPdfDocument_SuperCustomEvent((QPdfDocument*)self, (QEvent*)event);
 }
 
 void q_pdfdocument_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -471,8 +471,8 @@ void q_pdfdocument_connect_notify(void* self, void* signal) {
     QPdfDocument_ConnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfdocument_qbase_connect_notify(void* self, void* signal) {
-    QPdfDocument_QBaseConnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
+void q_pdfdocument_super_connect_notify(void* self, void* signal) {
+    QPdfDocument_SuperConnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfdocument_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -483,8 +483,8 @@ void q_pdfdocument_disconnect_notify(void* self, void* signal) {
     QPdfDocument_DisconnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-void q_pdfdocument_qbase_disconnect_notify(void* self, void* signal) {
-    QPdfDocument_QBaseDisconnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
+void q_pdfdocument_super_disconnect_notify(void* self, void* signal) {
+    QPdfDocument_SuperDisconnectNotify((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfdocument_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -495,8 +495,8 @@ QObject* q_pdfdocument_sender(void* self) {
     return QPdfDocument_Sender((QPdfDocument*)self);
 }
 
-QObject* q_pdfdocument_qbase_sender(void* self) {
-    return QPdfDocument_QBaseSender((QPdfDocument*)self);
+QObject* q_pdfdocument_super_sender(void* self) {
+    return QPdfDocument_SuperSender((QPdfDocument*)self);
 }
 
 void q_pdfdocument_on_sender(void* self, QObject* (*callback)()) {
@@ -507,8 +507,8 @@ int32_t q_pdfdocument_sender_signal_index(void* self) {
     return QPdfDocument_SenderSignalIndex((QPdfDocument*)self);
 }
 
-int32_t q_pdfdocument_qbase_sender_signal_index(void* self) {
-    return QPdfDocument_QBaseSenderSignalIndex((QPdfDocument*)self);
+int32_t q_pdfdocument_super_sender_signal_index(void* self) {
+    return QPdfDocument_SuperSenderSignalIndex((QPdfDocument*)self);
 }
 
 void q_pdfdocument_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -519,8 +519,8 @@ int32_t q_pdfdocument_receivers(void* self, const char* signal) {
     return QPdfDocument_Receivers((QPdfDocument*)self, signal);
 }
 
-int32_t q_pdfdocument_qbase_receivers(void* self, const char* signal) {
-    return QPdfDocument_QBaseReceivers((QPdfDocument*)self, signal);
+int32_t q_pdfdocument_super_receivers(void* self, const char* signal) {
+    return QPdfDocument_SuperReceivers((QPdfDocument*)self, signal);
 }
 
 void q_pdfdocument_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -531,8 +531,8 @@ bool q_pdfdocument_is_signal_connected(void* self, void* signal) {
     return QPdfDocument_IsSignalConnected((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
-bool q_pdfdocument_qbase_is_signal_connected(void* self, void* signal) {
-    return QPdfDocument_QBaseIsSignalConnected((QPdfDocument*)self, (QMetaMethod*)signal);
+bool q_pdfdocument_super_is_signal_connected(void* self, void* signal) {
+    return QPdfDocument_SuperIsSignalConnected((QPdfDocument*)self, (QMetaMethod*)signal);
 }
 
 void q_pdfdocument_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

@@ -23,8 +23,8 @@ void q_eventloop_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QEventLoop_OnMetaObject((QEventLoop*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_eventloop_qbase_meta_object(void* self) {
-    return QEventLoop_QBaseMetaObject((QEventLoop*)self);
+const QMetaObject* q_eventloop_super_meta_object(void* self) {
+    return QEventLoop_SuperMetaObject((QEventLoop*)self);
 }
 
 void* q_eventloop_metacast(void* self, const char* param1) {
@@ -35,8 +35,8 @@ void q_eventloop_on_metacast(void* self, void* (*callback)(void*, const char*)) 
     QEventLoop_OnMetacast((QEventLoop*)self, (intptr_t)callback);
 }
 
-void* q_eventloop_qbase_metacast(void* self, const char* param1) {
-    return QEventLoop_QBaseMetacast((QEventLoop*)self, param1);
+void* q_eventloop_super_metacast(void* self, const char* param1) {
+    return QEventLoop_SuperMetacast((QEventLoop*)self, param1);
 }
 
 int32_t q_eventloop_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -47,8 +47,8 @@ void q_eventloop_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int
     QEventLoop_OnMetacall((QEventLoop*)self, (intptr_t)callback);
 }
 
-int32_t q_eventloop_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QEventLoop_QBaseMetacall((QEventLoop*)self, param1, param2, param3);
+int32_t q_eventloop_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QEventLoop_SuperMetacall((QEventLoop*)self, param1, param2, param3);
 }
 
 const char* q_eventloop_tr(const char* s) {
@@ -90,8 +90,8 @@ void q_eventloop_on_event(void* self, bool (*callback)(void*, void*)) {
     QEventLoop_OnEvent((QEventLoop*)self, (intptr_t)callback);
 }
 
-bool q_eventloop_qbase_event(void* self, void* event) {
-    return QEventLoop_QBaseEvent((QEventLoop*)self, (QEvent*)event);
+bool q_eventloop_super_event(void* self, void* event) {
+    return QEventLoop_SuperEvent((QEventLoop*)self, (QEvent*)event);
 }
 
 void q_eventloop_exit(void* self) {
@@ -343,8 +343,8 @@ bool q_eventloop_event_filter(void* self, void* watched, void* event) {
     return QEventLoop_EventFilter((QEventLoop*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_eventloop_qbase_event_filter(void* self, void* watched, void* event) {
-    return QEventLoop_QBaseEventFilter((QEventLoop*)self, (QObject*)watched, (QEvent*)event);
+bool q_eventloop_super_event_filter(void* self, void* watched, void* event) {
+    return QEventLoop_SuperEventFilter((QEventLoop*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_eventloop_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -355,8 +355,8 @@ void q_eventloop_timer_event(void* self, void* event) {
     QEventLoop_TimerEvent((QEventLoop*)self, (QTimerEvent*)event);
 }
 
-void q_eventloop_qbase_timer_event(void* self, void* event) {
-    QEventLoop_QBaseTimerEvent((QEventLoop*)self, (QTimerEvent*)event);
+void q_eventloop_super_timer_event(void* self, void* event) {
+    QEventLoop_SuperTimerEvent((QEventLoop*)self, (QTimerEvent*)event);
 }
 
 void q_eventloop_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -367,8 +367,8 @@ void q_eventloop_child_event(void* self, void* event) {
     QEventLoop_ChildEvent((QEventLoop*)self, (QChildEvent*)event);
 }
 
-void q_eventloop_qbase_child_event(void* self, void* event) {
-    QEventLoop_QBaseChildEvent((QEventLoop*)self, (QChildEvent*)event);
+void q_eventloop_super_child_event(void* self, void* event) {
+    QEventLoop_SuperChildEvent((QEventLoop*)self, (QChildEvent*)event);
 }
 
 void q_eventloop_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -379,8 +379,8 @@ void q_eventloop_custom_event(void* self, void* event) {
     QEventLoop_CustomEvent((QEventLoop*)self, (QEvent*)event);
 }
 
-void q_eventloop_qbase_custom_event(void* self, void* event) {
-    QEventLoop_QBaseCustomEvent((QEventLoop*)self, (QEvent*)event);
+void q_eventloop_super_custom_event(void* self, void* event) {
+    QEventLoop_SuperCustomEvent((QEventLoop*)self, (QEvent*)event);
 }
 
 void q_eventloop_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -391,8 +391,8 @@ void q_eventloop_connect_notify(void* self, void* signal) {
     QEventLoop_ConnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
-void q_eventloop_qbase_connect_notify(void* self, void* signal) {
-    QEventLoop_QBaseConnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
+void q_eventloop_super_connect_notify(void* self, void* signal) {
+    QEventLoop_SuperConnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
 void q_eventloop_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -403,8 +403,8 @@ void q_eventloop_disconnect_notify(void* self, void* signal) {
     QEventLoop_DisconnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
-void q_eventloop_qbase_disconnect_notify(void* self, void* signal) {
-    QEventLoop_QBaseDisconnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
+void q_eventloop_super_disconnect_notify(void* self, void* signal) {
+    QEventLoop_SuperDisconnectNotify((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
 void q_eventloop_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -415,8 +415,8 @@ QObject* q_eventloop_sender(void* self) {
     return QEventLoop_Sender((QEventLoop*)self);
 }
 
-QObject* q_eventloop_qbase_sender(void* self) {
-    return QEventLoop_QBaseSender((QEventLoop*)self);
+QObject* q_eventloop_super_sender(void* self) {
+    return QEventLoop_SuperSender((QEventLoop*)self);
 }
 
 void q_eventloop_on_sender(void* self, QObject* (*callback)()) {
@@ -427,8 +427,8 @@ int32_t q_eventloop_sender_signal_index(void* self) {
     return QEventLoop_SenderSignalIndex((QEventLoop*)self);
 }
 
-int32_t q_eventloop_qbase_sender_signal_index(void* self) {
-    return QEventLoop_QBaseSenderSignalIndex((QEventLoop*)self);
+int32_t q_eventloop_super_sender_signal_index(void* self) {
+    return QEventLoop_SuperSenderSignalIndex((QEventLoop*)self);
 }
 
 void q_eventloop_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -439,8 +439,8 @@ int32_t q_eventloop_receivers(void* self, const char* signal) {
     return QEventLoop_Receivers((QEventLoop*)self, signal);
 }
 
-int32_t q_eventloop_qbase_receivers(void* self, const char* signal) {
-    return QEventLoop_QBaseReceivers((QEventLoop*)self, signal);
+int32_t q_eventloop_super_receivers(void* self, const char* signal) {
+    return QEventLoop_SuperReceivers((QEventLoop*)self, signal);
 }
 
 void q_eventloop_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -451,8 +451,8 @@ bool q_eventloop_is_signal_connected(void* self, void* signal) {
     return QEventLoop_IsSignalConnected((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
-bool q_eventloop_qbase_is_signal_connected(void* self, void* signal) {
-    return QEventLoop_QBaseIsSignalConnected((QEventLoop*)self, (QMetaMethod*)signal);
+bool q_eventloop_super_is_signal_connected(void* self, void* signal) {
+    return QEventLoop_SuperIsSignalConnected((QEventLoop*)self, (QMetaMethod*)signal);
 }
 
 void q_eventloop_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {

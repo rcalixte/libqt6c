@@ -24,8 +24,8 @@ void q_object_on_meta_object(void* self, const QMetaObject* (*callback)()) {
     QObject_OnMetaObject((QObject*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_object_qbase_meta_object(void* self) {
-    return QObject_QBaseMetaObject((QObject*)self);
+const QMetaObject* q_object_super_meta_object(void* self) {
+    return QObject_SuperMetaObject((QObject*)self);
 }
 
 void* q_object_metacast(void* self, const char* param1) {
@@ -36,8 +36,8 @@ void q_object_on_metacast(void* self, void* (*callback)(void*, const char*)) {
     QObject_OnMetacast((QObject*)self, (intptr_t)callback);
 }
 
-void* q_object_qbase_metacast(void* self, const char* param1) {
-    return QObject_QBaseMetacast((QObject*)self, param1);
+void* q_object_super_metacast(void* self, const char* param1) {
+    return QObject_SuperMetacast((QObject*)self, param1);
 }
 
 int32_t q_object_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -48,8 +48,8 @@ void q_object_on_metacall(void* self, int32_t (*callback)(void*, int32_t, int, v
     QObject_OnMetacall((QObject*)self, (intptr_t)callback);
 }
 
-int32_t q_object_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QObject_QBaseMetacall((QObject*)self, param1, param2, param3);
+int32_t q_object_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QObject_SuperMetacall((QObject*)self, param1, param2, param3);
 }
 
 const char* q_object_tr(const char* s) {
@@ -67,8 +67,8 @@ void q_object_on_event(void* self, bool (*callback)(void*, void*)) {
     QObject_OnEvent((QObject*)self, (intptr_t)callback);
 }
 
-bool q_object_qbase_event(void* self, void* event) {
-    return QObject_QBaseEvent((QObject*)self, (QEvent*)event);
+bool q_object_super_event(void* self, void* event) {
+    return QObject_SuperEvent((QObject*)self, (QEvent*)event);
 }
 
 bool q_object_event_filter(void* self, void* watched, void* event) {
@@ -79,8 +79,8 @@ void q_object_on_event_filter(void* self, bool (*callback)(void*, void*, void*))
     QObject_OnEventFilter((QObject*)self, (intptr_t)callback);
 }
 
-bool q_object_qbase_event_filter(void* self, void* watched, void* event) {
-    return QObject_QBaseEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
+bool q_object_super_event_filter(void* self, void* watched, void* event) {
+    return QObject_SuperEventFilter((QObject*)self, (QObject*)watched, (QEvent*)event);
 }
 
 const char* q_object_object_name(void* self) {
@@ -258,8 +258,8 @@ void q_object_on_sender(void* self, QObject* (*callback)()) {
     QObject_OnSender((QObject*)self, (intptr_t)callback);
 }
 
-QObject* q_object_qbase_sender(void* self) {
-    return QObject_QBaseSender((QObject*)self);
+QObject* q_object_super_sender(void* self) {
+    return QObject_SuperSender((QObject*)self);
 }
 
 int32_t q_object_sender_signal_index(void* self) {
@@ -270,8 +270,8 @@ void q_object_on_sender_signal_index(void* self, int32_t (*callback)()) {
     QObject_OnSenderSignalIndex((QObject*)self, (intptr_t)callback);
 }
 
-int32_t q_object_qbase_sender_signal_index(void* self) {
-    return QObject_QBaseSenderSignalIndex((QObject*)self);
+int32_t q_object_super_sender_signal_index(void* self) {
+    return QObject_SuperSenderSignalIndex((QObject*)self);
 }
 
 int32_t q_object_receivers(void* self, const char* signal) {
@@ -282,8 +282,8 @@ void q_object_on_receivers(void* self, int32_t (*callback)(void*, const char*)) 
     QObject_OnReceivers((QObject*)self, (intptr_t)callback);
 }
 
-int32_t q_object_qbase_receivers(void* self, const char* signal) {
-    return QObject_QBaseReceivers((QObject*)self, signal);
+int32_t q_object_super_receivers(void* self, const char* signal) {
+    return QObject_SuperReceivers((QObject*)self, signal);
 }
 
 bool q_object_is_signal_connected(void* self, void* signal) {
@@ -294,8 +294,8 @@ void q_object_on_is_signal_connected(void* self, bool (*callback)(void*, void*))
     QObject_OnIsSignalConnected((QObject*)self, (intptr_t)callback);
 }
 
-bool q_object_qbase_is_signal_connected(void* self, void* signal) {
-    return QObject_QBaseIsSignalConnected((QObject*)self, (QMetaMethod*)signal);
+bool q_object_super_is_signal_connected(void* self, void* signal) {
+    return QObject_SuperIsSignalConnected((QObject*)self, (QMetaMethod*)signal);
 }
 
 void q_object_timer_event(void* self, void* event) {
@@ -306,8 +306,8 @@ void q_object_on_timer_event(void* self, void (*callback)(void*, void*)) {
     QObject_OnTimerEvent((QObject*)self, (intptr_t)callback);
 }
 
-void q_object_qbase_timer_event(void* self, void* event) {
-    QObject_QBaseTimerEvent((QObject*)self, (QTimerEvent*)event);
+void q_object_super_timer_event(void* self, void* event) {
+    QObject_SuperTimerEvent((QObject*)self, (QTimerEvent*)event);
 }
 
 void q_object_child_event(void* self, void* event) {
@@ -318,8 +318,8 @@ void q_object_on_child_event(void* self, void (*callback)(void*, void*)) {
     QObject_OnChildEvent((QObject*)self, (intptr_t)callback);
 }
 
-void q_object_qbase_child_event(void* self, void* event) {
-    QObject_QBaseChildEvent((QObject*)self, (QChildEvent*)event);
+void q_object_super_child_event(void* self, void* event) {
+    QObject_SuperChildEvent((QObject*)self, (QChildEvent*)event);
 }
 
 void q_object_custom_event(void* self, void* event) {
@@ -330,8 +330,8 @@ void q_object_on_custom_event(void* self, void (*callback)(void*, void*)) {
     QObject_OnCustomEvent((QObject*)self, (intptr_t)callback);
 }
 
-void q_object_qbase_custom_event(void* self, void* event) {
-    QObject_QBaseCustomEvent((QObject*)self, (QEvent*)event);
+void q_object_super_custom_event(void* self, void* event) {
+    QObject_SuperCustomEvent((QObject*)self, (QEvent*)event);
 }
 
 void q_object_connect_notify(void* self, void* signal) {
@@ -342,8 +342,8 @@ void q_object_on_connect_notify(void* self, void (*callback)(void*, void*)) {
     QObject_OnConnectNotify((QObject*)self, (intptr_t)callback);
 }
 
-void q_object_qbase_connect_notify(void* self, void* signal) {
-    QObject_QBaseConnectNotify((QObject*)self, (QMetaMethod*)signal);
+void q_object_super_connect_notify(void* self, void* signal) {
+    QObject_SuperConnectNotify((QObject*)self, (QMetaMethod*)signal);
 }
 
 void q_object_disconnect_notify(void* self, void* signal) {
@@ -354,8 +354,8 @@ void q_object_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
     QObject_OnDisconnectNotify((QObject*)self, (intptr_t)callback);
 }
 
-void q_object_qbase_disconnect_notify(void* self, void* signal) {
-    QObject_QBaseDisconnectNotify((QObject*)self, (QMetaMethod*)signal);
+void q_object_super_disconnect_notify(void* self, void* signal) {
+    QObject_SuperDisconnectNotify((QObject*)self, (QMetaMethod*)signal);
 }
 
 const char* q_object_tr2(const char* s, const char* c) {

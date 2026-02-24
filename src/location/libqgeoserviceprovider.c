@@ -82,8 +82,8 @@ void q_geoserviceprovider_on_meta_object(void* self, const QMetaObject* (*callba
     QGeoServiceProvider_OnMetaObject((QGeoServiceProvider*)self, (intptr_t)callback);
 }
 
-const QMetaObject* q_geoserviceprovider_qbase_meta_object(void* self) {
-    return QGeoServiceProvider_QBaseMetaObject((QGeoServiceProvider*)self);
+const QMetaObject* q_geoserviceprovider_super_meta_object(void* self) {
+    return QGeoServiceProvider_SuperMetaObject((QGeoServiceProvider*)self);
 }
 
 void* q_geoserviceprovider_metacast(void* self, const char* param1) {
@@ -94,8 +94,8 @@ void q_geoserviceprovider_on_metacast(void* self, void* (*callback)(void*, const
     QGeoServiceProvider_OnMetacast((QGeoServiceProvider*)self, (intptr_t)callback);
 }
 
-void* q_geoserviceprovider_qbase_metacast(void* self, const char* param1) {
-    return QGeoServiceProvider_QBaseMetacast((QGeoServiceProvider*)self, param1);
+void* q_geoserviceprovider_super_metacast(void* self, const char* param1) {
+    return QGeoServiceProvider_SuperMetacast((QGeoServiceProvider*)self, param1);
 }
 
 int32_t q_geoserviceprovider_metacall(void* self, int32_t param1, int param2, void* param3) {
@@ -106,8 +106,8 @@ void q_geoserviceprovider_on_metacall(void* self, int32_t (*callback)(void*, int
     QGeoServiceProvider_OnMetacall((QGeoServiceProvider*)self, (intptr_t)callback);
 }
 
-int32_t q_geoserviceprovider_qbase_metacall(void* self, int32_t param1, int param2, void* param3) {
-    return QGeoServiceProvider_QBaseMetacall((QGeoServiceProvider*)self, param1, param2, param3);
+int32_t q_geoserviceprovider_super_metacall(void* self, int32_t param1, int param2, void* param3) {
+    return QGeoServiceProvider_SuperMetacall((QGeoServiceProvider*)self, param1, param2, param3);
 }
 
 const char* q_geoserviceprovider_tr(const char* s) {
@@ -499,8 +499,8 @@ bool q_geoserviceprovider_event(void* self, void* event) {
     return QGeoServiceProvider_Event((QGeoServiceProvider*)self, (QEvent*)event);
 }
 
-bool q_geoserviceprovider_qbase_event(void* self, void* event) {
-    return QGeoServiceProvider_QBaseEvent((QGeoServiceProvider*)self, (QEvent*)event);
+bool q_geoserviceprovider_super_event(void* self, void* event) {
+    return QGeoServiceProvider_SuperEvent((QGeoServiceProvider*)self, (QEvent*)event);
 }
 
 void q_geoserviceprovider_on_event(void* self, bool (*callback)(void*, void*)) {
@@ -511,8 +511,8 @@ bool q_geoserviceprovider_event_filter(void* self, void* watched, void* event) {
     return QGeoServiceProvider_EventFilter((QGeoServiceProvider*)self, (QObject*)watched, (QEvent*)event);
 }
 
-bool q_geoserviceprovider_qbase_event_filter(void* self, void* watched, void* event) {
-    return QGeoServiceProvider_QBaseEventFilter((QGeoServiceProvider*)self, (QObject*)watched, (QEvent*)event);
+bool q_geoserviceprovider_super_event_filter(void* self, void* watched, void* event) {
+    return QGeoServiceProvider_SuperEventFilter((QGeoServiceProvider*)self, (QObject*)watched, (QEvent*)event);
 }
 
 void q_geoserviceprovider_on_event_filter(void* self, bool (*callback)(void*, void*, void*)) {
@@ -523,8 +523,8 @@ void q_geoserviceprovider_timer_event(void* self, void* event) {
     QGeoServiceProvider_TimerEvent((QGeoServiceProvider*)self, (QTimerEvent*)event);
 }
 
-void q_geoserviceprovider_qbase_timer_event(void* self, void* event) {
-    QGeoServiceProvider_QBaseTimerEvent((QGeoServiceProvider*)self, (QTimerEvent*)event);
+void q_geoserviceprovider_super_timer_event(void* self, void* event) {
+    QGeoServiceProvider_SuperTimerEvent((QGeoServiceProvider*)self, (QTimerEvent*)event);
 }
 
 void q_geoserviceprovider_on_timer_event(void* self, void (*callback)(void*, void*)) {
@@ -535,8 +535,8 @@ void q_geoserviceprovider_child_event(void* self, void* event) {
     QGeoServiceProvider_ChildEvent((QGeoServiceProvider*)self, (QChildEvent*)event);
 }
 
-void q_geoserviceprovider_qbase_child_event(void* self, void* event) {
-    QGeoServiceProvider_QBaseChildEvent((QGeoServiceProvider*)self, (QChildEvent*)event);
+void q_geoserviceprovider_super_child_event(void* self, void* event) {
+    QGeoServiceProvider_SuperChildEvent((QGeoServiceProvider*)self, (QChildEvent*)event);
 }
 
 void q_geoserviceprovider_on_child_event(void* self, void (*callback)(void*, void*)) {
@@ -547,8 +547,8 @@ void q_geoserviceprovider_custom_event(void* self, void* event) {
     QGeoServiceProvider_CustomEvent((QGeoServiceProvider*)self, (QEvent*)event);
 }
 
-void q_geoserviceprovider_qbase_custom_event(void* self, void* event) {
-    QGeoServiceProvider_QBaseCustomEvent((QGeoServiceProvider*)self, (QEvent*)event);
+void q_geoserviceprovider_super_custom_event(void* self, void* event) {
+    QGeoServiceProvider_SuperCustomEvent((QGeoServiceProvider*)self, (QEvent*)event);
 }
 
 void q_geoserviceprovider_on_custom_event(void* self, void (*callback)(void*, void*)) {
@@ -559,8 +559,8 @@ void q_geoserviceprovider_connect_notify(void* self, void* signal) {
     QGeoServiceProvider_ConnectNotify((QGeoServiceProvider*)self, (QMetaMethod*)signal);
 }
 
-void q_geoserviceprovider_qbase_connect_notify(void* self, void* signal) {
-    QGeoServiceProvider_QBaseConnectNotify((QGeoServiceProvider*)self, (QMetaMethod*)signal);
+void q_geoserviceprovider_super_connect_notify(void* self, void* signal) {
+    QGeoServiceProvider_SuperConnectNotify((QGeoServiceProvider*)self, (QMetaMethod*)signal);
 }
 
 void q_geoserviceprovider_on_connect_notify(void* self, void (*callback)(void*, void*)) {
@@ -571,8 +571,8 @@ void q_geoserviceprovider_disconnect_notify(void* self, void* signal) {
     QGeoServiceProvider_DisconnectNotify((QGeoServiceProvider*)self, (QMetaMethod*)signal);
 }
 
-void q_geoserviceprovider_qbase_disconnect_notify(void* self, void* signal) {
-    QGeoServiceProvider_QBaseDisconnectNotify((QGeoServiceProvider*)self, (QMetaMethod*)signal);
+void q_geoserviceprovider_super_disconnect_notify(void* self, void* signal) {
+    QGeoServiceProvider_SuperDisconnectNotify((QGeoServiceProvider*)self, (QMetaMethod*)signal);
 }
 
 void q_geoserviceprovider_on_disconnect_notify(void* self, void (*callback)(void*, void*)) {
@@ -583,8 +583,8 @@ QObject* q_geoserviceprovider_sender(void* self) {
     return QGeoServiceProvider_Sender((QGeoServiceProvider*)self);
 }
 
-QObject* q_geoserviceprovider_qbase_sender(void* self) {
-    return QGeoServiceProvider_QBaseSender((QGeoServiceProvider*)self);
+QObject* q_geoserviceprovider_super_sender(void* self) {
+    return QGeoServiceProvider_SuperSender((QGeoServiceProvider*)self);
 }
 
 void q_geoserviceprovider_on_sender(void* self, QObject* (*callback)()) {
@@ -595,8 +595,8 @@ int32_t q_geoserviceprovider_sender_signal_index(void* self) {
     return QGeoServiceProvider_SenderSignalIndex((QGeoServiceProvider*)self);
 }
 
-int32_t q_geoserviceprovider_qbase_sender_signal_index(void* self) {
-    return QGeoServiceProvider_QBaseSenderSignalIndex((QGeoServiceProvider*)self);
+int32_t q_geoserviceprovider_super_sender_signal_index(void* self) {
+    return QGeoServiceProvider_SuperSenderSignalIndex((QGeoServiceProvider*)self);
 }
 
 void q_geoserviceprovider_on_sender_signal_index(void* self, int32_t (*callback)()) {
@@ -607,8 +607,8 @@ int32_t q_geoserviceprovider_receivers(void* self, const char* signal) {
     return QGeoServiceProvider_Receivers((QGeoServiceProvider*)self, signal);
 }
 
-int32_t q_geoserviceprovider_qbase_receivers(void* self, const char* signal) {
-    return QGeoServiceProvider_QBaseReceivers((QGeoServiceProvider*)self, signal);
+int32_t q_geoserviceprovider_super_receivers(void* self, const char* signal) {
+    return QGeoServiceProvider_SuperReceivers((QGeoServiceProvider*)self, signal);
 }
 
 void q_geoserviceprovider_on_receivers(void* self, int32_t (*callback)(void*, const char*)) {
@@ -619,8 +619,8 @@ bool q_geoserviceprovider_is_signal_connected(void* self, void* signal) {
     return QGeoServiceProvider_IsSignalConnected((QGeoServiceProvider*)self, (QMetaMethod*)signal);
 }
 
-bool q_geoserviceprovider_qbase_is_signal_connected(void* self, void* signal) {
-    return QGeoServiceProvider_QBaseIsSignalConnected((QGeoServiceProvider*)self, (QMetaMethod*)signal);
+bool q_geoserviceprovider_super_is_signal_connected(void* self, void* signal) {
+    return QGeoServiceProvider_SuperIsSignalConnected((QGeoServiceProvider*)self, (QMetaMethod*)signal);
 }
 
 void q_geoserviceprovider_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
