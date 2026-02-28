@@ -438,6 +438,10 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		}
 	}
 
+	if isReturnType && p.IsFunctionPointer {
+		return p.renderFunctionType()
+	}
+
 	if p.IsChronoSeconds() {
 		ret = "int64_t"
 	}
@@ -601,7 +605,7 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 		ret = strings.ReplaceAll(ret, "::", "__")
 	}
 
-	maybeConst := ifv(p.Const && !strings.HasPrefix(ret, "const ") && !strings.HasPrefix(ret, "libqt"), "const ", "")
+	maybeConst := ifv(p.Const && !p.IsFunctionPointer && !strings.HasPrefix(ret, "const ") && !strings.HasPrefix(ret, "libqt"), "const ", "")
 
 	if strings.HasPrefix(ret, "const int") {
 		ret = strings.TrimPrefix(ret, "const ")
@@ -624,6 +628,26 @@ func (p CppParameter) renderReturnTypeC(cfs *cFileState, isSlot, includeContaine
 		}
 	}
 	return maybeConst + ret
+}
+
+func (p CppParameter) renderFunctionType() string {
+	var typeName string
+
+	if p.QtCppOriginalType != nil {
+		typeName = strings.ReplaceAll(p.QtCppOriginalType.ParameterType, "::", "__")
+	} else {
+		typeName = p.FunctionPointer.ReturnType.ParameterType + "_"
+		if len(p.FunctionPointer.Parameters) > 0 {
+			for _, param := range p.FunctionPointer.Parameters {
+				typeName += "_" + param.ParameterType
+			}
+		} else {
+			typeName += "_void"
+		}
+		typeName += "__Function"
+	}
+
+	return typeName
 }
 
 func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool) string {
@@ -689,6 +713,17 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 
 		if p.UniquePtr {
 			pType += uniquePtrWarning
+		}
+
+		if p.IsFunctionPointer {
+			fParams := make([]string, 0, len(p.FunctionPointer.Parameters))
+			uncomment := strings.NewReplacer("/*", "", "*/", "")
+
+			for i, p := range p.FunctionPointer.Parameters {
+				fParam := strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(p.RenderTypeC(cfs, false, true, true)), "  ", " "))
+				fParams = append(fParams, fParam+" param"+strconv.Itoa(i+1))
+			}
+			pType = p.FunctionPointer.ReturnType.renderReturnTypeC(cfs, isSlot, false) + " func(" + strings.Join(fParams, ", ") + ")"
 		}
 
 		if isSlot {
@@ -760,6 +795,10 @@ func (cfs *cFileState) emitParametersC(params []CppParameter, isSlot bool) strin
 			!strings.Contains(pType, "char*") {
 			pType = "void*" + ifv((p.ByRef && p.Pointer) || p.PointerCount > 1, "*", "")
 		}
+		if p.IsFunctionPointer {
+			pType = p.FunctionPointer.ReturnType.renderReturnTypeC(cfs, isSlot, false) + " (*" + pName + ")(" + cfs.emitParametersC(p.FunctionPointer.Parameters, false) + ")"
+			pName = ""
+		}
 		if isSlot {
 			if strings.HasSuffix(pName, "[static 1]") {
 				pType += "*"
@@ -813,6 +852,8 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
 	} else if _, ok := rt.QSetOf(); ok {
 		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
+	} else if rt.IsFunctionPointer {
+		returnComment = "/// @return " + rt.FunctionPointer.ReturnType.renderReturnTypeC(cfs, false, false) + " (*" + rt.renderFunctionType() + ")(" + strings.TrimSpace(cfs.emitParametersC(rt.FunctionPointer.Parameters, false)) + ")"
 	}
 
 	return ifv(returnComment == "", "", returnComment+"\n///\n")
@@ -1113,6 +1154,9 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		} else {
 			rvalue = p.ParameterName
 		}
+
+	} else if p.IsFunctionPointer {
+		rvalue = "(intptr_t)" + p.ParameterName
 
 	} else {
 		// Default
@@ -1559,6 +1603,9 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			panic("UNSUPPORTED QPAIR TYPE: " + f.ParameterType + "," + s.ParameterType)
 		}
 
+	} else if rt.IsFunctionPointer {
+		return shouldReturn + "(" + rt.renderFunctionType() + ")" + rvalue + ";\n" + afterword
+
 	} else if rt.QtClassType() {
 		// Construct our C type based on this inner C ABI type
 		shouldReturn = "return"
@@ -1729,9 +1776,9 @@ var (
 	}
 )
 
-func emitH(src *CppParsedHeader, headerName, packageName string) (string, error) {
+func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[string]string, error) {
 	if len(src.Classes) == 0 && len(src.Enums) == 0 {
-		return "", nil
+		return "", nil, nil
 	}
 
 	ret.Reset()
@@ -1741,6 +1788,8 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 	bindingInclude := "qtlibc.h"
 	var maybeDots string
 	qtextradefs := make(map[string]struct{})
+	qtfuncdefs := make(map[string]FunctionTypedef)
+	retqtfuncdefs := make(map[string]string)
 
 	dirRoot := ifv(packageName == "src", "", strings.TrimPrefix(packageName, "src/"))
 
@@ -1768,7 +1817,17 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 #include "` + bindingInclude + `"` + "\n\n")
 
-	getReferencedTypes(src, qtextradefs)
+	getReferencedTypes(src, qtextradefs, qtfuncdefs)
+
+	sortedFunctions := make([]string, 0, len(qtfuncdefs))
+	for k := range qtfuncdefs {
+		sortedFunctions = append(sortedFunctions, k)
+	}
+	sort.Strings(sortedFunctions)
+	for _, k := range sortedFunctions {
+		fTypedef := qtfuncdefs[k]
+		retqtfuncdefs[k] = fTypedef.ReturnType.renderReturnTypeC(&cfs, false, false) + " (*" + fTypedef.FunctionName + ")(" + cfs.emitParametersC(fTypedef.Parameters, false) + ");\n"
+	}
 
 	sortedExtras := make([]string, 0, len(qtextradefs))
 	for k := range qtextradefs {
@@ -2391,7 +2450,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, error)
 
 	ret.WriteString(`#endif
 `)
-	return ret.String(), nil
+	return ret.String(), retqtfuncdefs, nil
 }
 
 func emitC(src *CppParsedHeader, headerName, packageName string) (string, error) {
@@ -2419,7 +2478,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenRefs[strings.TrimSuffix(cfs.currentHeaderName, "_1")] = struct{}{}
 	}
 
-	for _, ref := range getReferencedTypes(src, nil) {
+	for _, ref := range getReferencedTypes(src, nil, nil) {
 		if cabiPreventStructDeclaration(ref) {
 			continue
 		}
