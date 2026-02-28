@@ -51,6 +51,12 @@ func renderCleanupType(paramName string, cleanupType CleanupType) string {
 	}
 }
 
+type FunctionTypedef struct {
+	FunctionName string
+	Parameters   []CppParameter
+	ReturnType   CppParameter
+}
+
 func getUnionType(t CppParameter) (unionType, castType, lParen, rParen string) {
 	if t.IntType() {
 		var fieldName string
@@ -127,6 +133,9 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 		}
 
 		return returnType + cppComment("tuple of "+strings.TrimSpace(inner1.RenderTypeCabi(false))+" and "+strings.TrimSpace(inner2.RenderTypeCabi(false)))
+
+	} else if p.IsFunctionPointer {
+		return "intptr_t"
 
 	} else if (p.Pointer || p.ByRef) && p.QtClassType() {
 		maybeSecondPointer := ifv(p.ByRef && p.Pointer, "*", "")
@@ -291,7 +300,7 @@ func emitParametersCabi(m CppMethod, selfType string) string {
 
 	for _, p := range m.Parameters {
 		pType := p.RenderTypeCabi(false)
-		maybeConst := ifv(p.Const && !strings.HasPrefix(pType, "const "), "const ", "")
+		maybeConst := ifv(!p.IsFunctionPointer && p.Const && !strings.HasPrefix(pType, "const "), "const ", "")
 		tmp = append(tmp, maybeConst+pType+" "+p.ParameterName)
 	}
 
@@ -606,6 +615,15 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 
 	} else if p.UniquePtr {
 		return preamble, "std::unique_ptr<" + p.ParameterType + ">(" + p.ParameterName + ")"
+
+	} else if p.IsFunctionPointer {
+		pType := ifv(p.QtCppOriginalType != nil, p.QtCppOriginalType.ParameterType, p.ParameterType)
+		if strings.Contains(pType, "(*)") {
+			pType = ifv(p.Const, "const ", "") + strings.Replace(pType, "(*)", "*(*)", max(p.PointerCount-1, 0))
+		}
+
+		preamble += "auto " + p.ParameterName + "_func = reinterpret_cast<" + pType + ">(" + p.ParameterName + ");\n"
+		return preamble, p.ParameterName + "_func"
 
 	} else if p.ByRef {
 		if p.Pointer {
@@ -1032,6 +1050,9 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		shouldReturn += rvalue + ".release();\n"
 		return indent + shouldReturn, cleanupType
 
+	} else if p.IsFunctionPointer {
+		return indent + shouldReturn + "reinterpret_cast<intptr_t>(" + rvalue + ");\n" + afterCall, cleanupType
+
 	} else if p.QtClassType() && p.ByRef {
 
 		// It's a pointer in disguise, just needs one cast
@@ -1099,7 +1120,7 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 }
 
 // getReferencedTypes finds all referenced Qt types in this file.
-func getReferencedTypes(src *CppParsedHeader, qtextradefs map[string]struct{}) []string {
+func getReferencedTypes(src *CppParsedHeader, qtextradefs map[string]struct{}, qtfuncdefs map[string]FunctionTypedef) []string {
 	foundTypes := map[string]struct{}{}
 
 	var maybeAddType func(p CppParameter)
@@ -1154,6 +1175,18 @@ func getReferencedTypes(src *CppParsedHeader, qtextradefs map[string]struct{}) [
 				maybeAddType(p)
 			}
 			maybeAddType(m.ReturnType)
+			if qtfuncdefs != nil && m.ReturnType.IsFunctionPointer {
+				var vFunc FunctionTypedef
+
+				vFunc.FunctionName = m.ReturnType.renderFunctionType()
+				vFunc.Parameters = m.ReturnType.FunctionPointer.Parameters
+				vFunc.ReturnType = m.ReturnType.FunctionPointer.ReturnType
+
+				if vFn, ok := qtfuncdefs[m.ReturnType.ParameterType]; ok && vFn.FunctionName != vFunc.FunctionName {
+					panic("NON-MATCHING FUNCTION DEFINITION: " + vFn.FunctionName + " vs " + vFunc.FunctionName)
+				}
+				qtfuncdefs[m.ReturnType.ParameterType] = vFunc
+			}
 		}
 		for _, vm := range c.VirtualMethods() {
 			for _, p := range vm.Parameters {
@@ -1642,7 +1675,7 @@ extern "C" {
 
 `)
 
-	foundTypesList := getReferencedTypes(src, qtextradefs)
+	foundTypesList := getReferencedTypes(src, qtextradefs, nil)
 
 	ret.WriteString("#ifdef __cplusplus\n")
 
@@ -1938,7 +1971,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 		ret.WriteString("#include <PackageKit/Transaction>\n")
 	}
 
-	referencedTypes := getReferencedTypes(src, nil)
+	referencedTypes := getReferencedTypes(src, nil, nil)
 	seenRefs := make([]string, 0, len(referencedTypes))
 
 	for _, ref := range referencedTypes {
