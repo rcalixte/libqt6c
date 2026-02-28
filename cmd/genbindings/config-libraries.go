@@ -32,6 +32,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	headerList := []string{}
 	qtstructdefs := make(map[string]struct{})
 	qttypedefs := make(map[string]struct{})
+	allqtfuncdefs := make(map[string]string)
 
 	arch := archMap[runtime.GOARCH]
 
@@ -850,6 +851,7 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			outDir,
 			&headerList,
 			qtstructdefs,
+			allqtfuncdefs,
 		)
 		allBatches = append(allBatches, batch)
 	}
@@ -880,6 +882,17 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	}
 	for _, k := range typedefs {
 		typedefHeader += k + "\n"
+	}
+
+	typedefHeader += "\n"
+	sortedFunctions := make([]string, 0, len(allqtfuncdefs))
+	for k := range allqtfuncdefs {
+		sortedFunctions = append(sortedFunctions, k)
+	}
+	sort.Strings(sortedFunctions)
+	for _, k := range sortedFunctions {
+		fTypedef := allqtfuncdefs[k]
+		typedefHeader += "typedef " + fTypedef
 	}
 
 	err := os.WriteFile(outputName, []byte(typedefHeader), 0644)
