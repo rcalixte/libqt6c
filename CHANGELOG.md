@@ -1,4 +1,8 @@
 
+### 6.8.2 rev64 (28 February 2026)
+
+* **BREAKING CHANGE:** Add initial support for function pointer parameter types (#118)
+
 ### 6.8.2 rev63 (24 February 2026)
 
 * **BREAKING CHANGE:** Add initial support for `std::vector` and deprecate qbase methods (#117)
