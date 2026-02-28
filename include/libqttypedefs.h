@@ -1997,3 +1997,18 @@ typedef struct qfloat16 qfloat16;
 typedef struct qxp__nonesuch qxp__nonesuch;
 typedef struct strong_ordering strong_ordering;
 typedef struct weak_ordering weak_ordering;
+
+typedef uint8_t (*GLboolean__GLenum__Function)(uint32_t funcparam1);
+typedef uint8_t (*GLboolean__GLenum_GLuint__Function)(uint32_t funcparam1, uint32_t funcparam2);
+typedef uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1);
+typedef int32_t (*GLint__GLenum__Function)(uint32_t funcparam1);
+typedef uint32_t (*GLuint__void__Function)();
+typedef uint32_t (*GLuint__GLenum__Function)(uint32_t funcparam1);
+typedef uint32_t (*GLuint__GLsizei__Function)(int32_t funcparam1);
+typedef QObject* (*QObject__void__Function)();
+typedef double (*QEasingCurve__EasingFunction)(double funcparam1);
+typedef void (*QFunctionPointer)();
+typedef void (*QAccessible__UpdateHandler)(void* funcparam1);
+typedef void (*QLoggingCategory__CategoryFilter)(void* funcparam1);
+typedef void (*QAccessible__RootObjectHandler)(void* funcparam1);
+typedef void (*KCrash__HandlerType)(int funcparam1);

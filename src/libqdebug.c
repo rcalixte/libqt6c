@@ -149,6 +149,10 @@ QDebug* q_debug_operator_shift_left25(void* self, void* t) {
     return QDebug_OperatorShiftLeft25((QDebug*)self, t);
 }
 
+QDebug* q_debug_operator_shift_left28(void* self, QTextStream* (*f)(void* funcparam1)) {
+    return QDebug_OperatorShiftLeft28((QDebug*)self, (intptr_t)f);
+}
+
 QDebug* q_debug_maybe_quote1(void* self, char c) {
     return QDebug_MaybeQuote1((QDebug*)self, c);
 }
@@ -179,6 +183,10 @@ void q_nodebug_copy_assign(void* self, void* other) {
 
 void q_nodebug_move_assign(void* self, void* other) {
     QNoDebug_MoveAssign((QNoDebug*)self, (QNoDebug*)other);
+}
+
+QNoDebug* q_nodebug_operator_shift_left(void* self, QTextStream* (*param1)(void* funcparam1)) {
+    return QNoDebug_OperatorShiftLeft((QNoDebug*)self, (intptr_t)param1);
 }
 
 QNoDebug* q_nodebug_space(void* self) {

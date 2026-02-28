@@ -41,6 +41,14 @@ void q_dbusmetatype_copy_assign(void* self, void* other);
 ///
 void q_dbusmetatype_move_assign(void* self, void* other);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#registerMarshallOperators)
+///
+/// @param typeId QMetaType*
+/// @param param2 void func(QDBusArgument* param1, void* param2)
+/// @param param3 void func(QDBusArgument* param1, void* param2)
+///
+void q_dbusmetatype_register_marshall_operators(void* typeId, void (*param2)(void* funcparam1, void* funcparam2), void (*param3)(void* funcparam1, void* funcparam2));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusmetatype.html#marshall)
 ///
 /// @param param1 QDBusArgument*

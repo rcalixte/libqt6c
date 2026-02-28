@@ -75,12 +75,20 @@ QDebug* q_messagelogger_debug2(void* self, void* cat) {
     return QMessageLogger_Debug2((QMessageLogger*)self, (QLoggingCategory*)cat);
 }
 
+QDebug* q_messagelogger_debug3(void* self, QLoggingCategory* (*catFunc)()) {
+    return QMessageLogger_Debug3((QMessageLogger*)self, (intptr_t)catFunc);
+}
+
 QDebug* q_messagelogger_info(void* self) {
     return QMessageLogger_Info((QMessageLogger*)self);
 }
 
 QDebug* q_messagelogger_info2(void* self, void* cat) {
     return QMessageLogger_Info2((QMessageLogger*)self, (QLoggingCategory*)cat);
+}
+
+QDebug* q_messagelogger_info3(void* self, QLoggingCategory* (*catFunc)()) {
+    return QMessageLogger_Info3((QMessageLogger*)self, (intptr_t)catFunc);
 }
 
 QDebug* q_messagelogger_warning(void* self) {
@@ -91,6 +99,10 @@ QDebug* q_messagelogger_warning2(void* self, void* cat) {
     return QMessageLogger_Warning2((QMessageLogger*)self, (QLoggingCategory*)cat);
 }
 
+QDebug* q_messagelogger_warning3(void* self, QLoggingCategory* (*catFunc)()) {
+    return QMessageLogger_Warning3((QMessageLogger*)self, (intptr_t)catFunc);
+}
+
 QDebug* q_messagelogger_critical(void* self) {
     return QMessageLogger_Critical((QMessageLogger*)self);
 }
@@ -99,12 +111,20 @@ QDebug* q_messagelogger_critical2(void* self, void* cat) {
     return QMessageLogger_Critical2((QMessageLogger*)self, (QLoggingCategory*)cat);
 }
 
+QDebug* q_messagelogger_critical3(void* self, QLoggingCategory* (*catFunc)()) {
+    return QMessageLogger_Critical3((QMessageLogger*)self, (intptr_t)catFunc);
+}
+
 QDebug* q_messagelogger_fatal(void* self) {
     return QMessageLogger_Fatal((QMessageLogger*)self);
 }
 
 QDebug* q_messagelogger_fatal2(void* self, void* cat) {
     return QMessageLogger_Fatal2((QMessageLogger*)self, (QLoggingCategory*)cat);
+}
+
+QDebug* q_messagelogger_fatal3(void* self, QLoggingCategory* (*catFunc)()) {
+    return QMessageLogger_Fatal3((QMessageLogger*)self, (intptr_t)catFunc);
 }
 
 QNoDebug* q_messagelogger_no_debug(void* self) {

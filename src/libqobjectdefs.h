@@ -1324,9 +1324,17 @@ QMetaObject__SuperData* q_metaobject__superdata_new2(void* mo);
 
 /// q_metaobject__superdata_new3 constructs a new QMetaObject::SuperData object.
 ///
+/// @param g QMetaObject* func()
+///
+QMetaObject__SuperData* q_metaobject__superdata_new3(QMetaObject* (*g)());
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html)
+
+/// q_metaobject__superdata_new4 constructs a new QMetaObject::SuperData object.
+///
 /// @param param1 QMetaObject__SuperData*
 ///
-QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1);
+QMetaObject__SuperData* q_metaobject__superdata_new4(void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaobject-superdata.html#direct-var)
 ///

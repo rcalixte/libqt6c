@@ -751,6 +751,16 @@ QInputMethod* q_application_input_method();
 
 /// Inherited from QGuiApplication
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformFunction)
+///
+/// @param function char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_application_platform_function(char* function);
+
+/// Inherited from QGuiApplication
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setQuitOnLastWindowClosed)
 ///
 /// @param quit bool

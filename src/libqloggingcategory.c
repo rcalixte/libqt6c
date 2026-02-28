@@ -37,6 +37,10 @@ QLoggingCategory* q_loggingcategory_default_category() {
     return QLoggingCategory_DefaultCategory();
 }
 
+QLoggingCategory__CategoryFilter q_loggingcategory_install_filter(void (*param1)(void* funcparam1)) {
+    return (QLoggingCategory__CategoryFilter)QLoggingCategory_InstallFilter((intptr_t)param1);
+}
+
 void q_loggingcategory_set_filter_rules(const char* rules) {
     QLoggingCategory_SetFilterRules(qstring(rules));
 }

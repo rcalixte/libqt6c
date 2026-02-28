@@ -67,6 +67,14 @@ const QLoggingCategory* q_loggingcategory_operator_call2(void* self);
 ///
 QLoggingCategory* q_loggingcategory_default_category();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#installFilter)
+///
+/// @param param1 void func(QLoggingCategory* param1)
+///
+/// @return void (*QLoggingCategory__CategoryFilter)(void* funcparam1)
+///
+QLoggingCategory__CategoryFilter q_loggingcategory_install_filter(void (*param1)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qloggingcategory.html#setFilterRules)
 ///
 /// @param rules const char*

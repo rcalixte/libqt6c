@@ -110,10 +110,114 @@ QImage* q_image_new10(void* param1);
 
 /// q_image_new11 constructs a new QImage object.
 ///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+///
+QImage* q_image_new11(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new12 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+/// @param cleanupInfo void*
+///
+QImage* q_image_new12(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new13 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+///
+QImage* q_image_new13(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new14 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+/// @param cleanupInfo void*
+///
+QImage* q_image_new14(unsigned char* data, int width, int height, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new15 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param bytesPerLine int64_t
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+///
+QImage* q_image_new15(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new16 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param bytesPerLine int64_t
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+/// @param cleanupInfo void*
+///
+QImage* q_image_new16(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new17 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param bytesPerLine int64_t
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+///
+QImage* q_image_new17(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new18 constructs a new QImage object.
+///
+/// @param data unsigned char*
+/// @param width int
+/// @param height int
+/// @param bytesPerLine int64_t
+/// @param format enum QImage__Format
+/// @param cleanupFunction void func(void* param1)
+/// @param cleanupInfo void*
+///
+QImage* q_image_new18(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
+
+/// q_image_new19 constructs a new QImage object.
+///
 /// @param fileName const char*
 /// @param format const char*
 ///
-QImage* q_image_new11(const char* fileName, const char* format);
+QImage* q_image_new19(const char* fileName, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#operator-eq)
 ///

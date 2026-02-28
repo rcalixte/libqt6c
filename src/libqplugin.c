@@ -22,6 +22,14 @@ void q_staticplugin_move_assign(void* self, void* other) {
     QStaticPlugin_MoveAssign((QStaticPlugin*)self, (QStaticPlugin*)other);
 }
 
+QObject__void__Function q_staticplugin_instance(void* self) {
+    return (QObject__void__Function)QStaticPlugin_Instance((QStaticPlugin*)self);
+}
+
+void q_staticplugin_set_instance(void* self, QObject* (*instance)()) {
+    QStaticPlugin_SetInstance((QStaticPlugin*)self, (intptr_t)instance);
+}
+
 QJsonObject* q_staticplugin_meta_data(void* self) {
     return QStaticPlugin_MetaData((QStaticPlugin*)self);
 }

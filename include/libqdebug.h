@@ -255,6 +255,13 @@ QDebug* q_debug_operator_shift_left24(void* self, char* t);
 ///
 QDebug* q_debug_operator_shift_left25(void* self, void* t);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
+///
+/// @param self QDebug*
+/// @param f QTextStream* func(QTextStream* param1)
+///
+QDebug* q_debug_operator_shift_left28(void* self, QTextStream* (*f)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#maybeQuote)
 ///
 /// @param self QDebug*
@@ -315,6 +322,13 @@ void q_nodebug_copy_assign(void* self, void* other);
 /// @param other QNoDebug*
 ///
 void q_nodebug_move_assign(void* self, void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qnodebug.html#operator-lt-lt)
+///
+/// @param self QNoDebug*
+/// @param param1 QTextStream* func(QTextStream* param1)
+///
+QNoDebug* q_nodebug_operator_shift_left(void* self, QTextStream* (*param1)(void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnodebug.html#space)
 ///

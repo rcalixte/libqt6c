@@ -67,6 +67,14 @@ void q_easingcurve_set_type(void* self, int32_t type) {
     QEasingCurve_SetType((QEasingCurve*)self, type);
 }
 
+void q_easingcurve_set_custom_type(void* self, double (*func)(double funcparam1)) {
+    QEasingCurve_SetCustomType((QEasingCurve*)self, (intptr_t)func);
+}
+
+QEasingCurve__EasingFunction q_easingcurve_custom_type(void* self) {
+    return (QEasingCurve__EasingFunction)QEasingCurve_CustomType((QEasingCurve*)self);
+}
+
 double q_easingcurve_value_for_progress(void* self, double progress) {
     return QEasingCurve_ValueForProgress((QEasingCurve*)self, progress);
 }

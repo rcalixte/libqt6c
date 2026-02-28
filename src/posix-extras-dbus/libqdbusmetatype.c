@@ -19,6 +19,10 @@ void q_dbusmetatype_move_assign(void* self, void* other) {
     QDBusMetaType_MoveAssign((QDBusMetaType*)self, (QDBusMetaType*)other);
 }
 
+void q_dbusmetatype_register_marshall_operators(void* typeId, void (*param2)(void* funcparam1, void* funcparam2), void (*param3)(void* funcparam1, void* funcparam2)) {
+    QDBusMetaType_RegisterMarshallOperators((QMetaType*)typeId, (intptr_t)param2, (intptr_t)param3);
+}
+
 bool q_dbusmetatype_marshall(void* param1, void* id, void* data) {
     return QDBusMetaType_Marshall((QDBusArgument*)param1, (QMetaType*)id, data);
 }

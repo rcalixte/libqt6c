@@ -7,6 +7,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"maps"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -232,7 +233,7 @@ func gatherTypes(name string, dirs []string, allowHeader func(string) bool, clan
 			panic("Expected cache to be created for " + inputHeader + ", but got error " + err.Error())
 		}
 
-		var astInner []interface{} = nil
+		var astInner []any = nil
 		err = json.Unmarshal(astJson, &astInner)
 		if err != nil {
 			panic(err)
@@ -292,7 +293,7 @@ func gatherTypes(name string, dirs []string, allowHeader func(string) bool, clan
 
 var allHeaders = make(map[string]int)
 
-func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs map[string]struct{}) *FormatBatch {
+func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool, outDir string, headerList *[]string, qtstructdefs map[string]struct{}, allqtfuncdefs map[string]string) *FormatBatch {
 
 	packageName := filepath.Join("src", srcName)
 	includePath := filepath.Join("include", srcName)
@@ -333,7 +334,7 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 		}
 
 		// Json decode
-		var astInner []interface{} = nil
+		var astInner []any = nil
 		err = json.Unmarshal(astJson, &astInner)
 		if err != nil {
 			panic(err)
@@ -491,10 +492,12 @@ func generate(srcName string, srcDirs []string, allowHeaderFn func(string) bool,
 			panic(err)
 		}
 
-		includeH, err := emitH(parsed, headerName, packageName)
+		includeH, qtfuncdefs, err := emitH(parsed, headerName, packageName)
 		if err != nil {
 			panic(err)
 		}
+
+		maps.Copy(allqtfuncdefs, qtfuncdefs)
 
 		err = os.WriteFile(outputName+".h", []byte(includeH), 0644)
 		if err != nil {
@@ -524,7 +527,7 @@ func generateClangCaches(includeFiles []string, clangBin string, cflags []string
 		panic(err)
 	}
 
-	for i := 0; i < ClangSubprocessCount; i++ {
+	for range ClangSubprocessCount {
 		clangWg.Add(1)
 		go func() {
 			defer clangWg.Done()
