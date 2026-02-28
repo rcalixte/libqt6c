@@ -128,6 +128,21 @@ int32_t q_easingcurve_type(void* self);
 ///
 void q_easingcurve_set_type(void* self, int32_t type);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#setCustomType)
+///
+/// @param self QEasingCurve*
+/// @param func double func(double param1)
+///
+void q_easingcurve_set_custom_type(void* self, double (*func)(double funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#customType)
+///
+/// @param self QEasingCurve*
+///
+/// @return double (*QEasingCurve__EasingFunction)(double funcparam1)
+///
+QEasingCurve__EasingFunction q_easingcurve_custom_type(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qeasingcurve.html#valueForProgress)
 ///
 /// @param self QEasingCurve*

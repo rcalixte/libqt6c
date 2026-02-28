@@ -314,6 +314,14 @@ bool q_guiapplication_desktop_settings_aware();
 ///
 QInputMethod* q_guiapplication_input_method();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#platformFunction)
+///
+/// @param function char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_guiapplication_platform_function(char* function);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setQuitOnLastWindowClosed)
 ///
 /// @param quit bool

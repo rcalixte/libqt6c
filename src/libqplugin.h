@@ -49,6 +49,21 @@ void q_staticplugin_copy_assign(void* self, void* other);
 ///
 void q_staticplugin_move_assign(void* self, void* other);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#instance-var)
+///
+/// @param self QStaticPlugin*
+///
+/// @return QObject* (*QObject__void__Function)()
+///
+QObject__void__Function q_staticplugin_instance(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#instance-var)
+///
+/// @param self QStaticPlugin*
+/// @param instance QObject* func()
+///
+void q_staticplugin_set_instance(void* self, QObject* (*instance)());
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstaticplugin.html#metaData)
 ///
 /// @param self QStaticPlugin*

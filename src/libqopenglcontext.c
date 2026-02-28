@@ -382,6 +382,14 @@ void q_openglcontext_swap_buffers(void* self, void* surface) {
     QOpenGLContext_SwapBuffers((QOpenGLContext*)self, (QSurface*)surface);
 }
 
+QFunctionPointer q_openglcontext_get_proc_address(void* self, char* procName) {
+    return (QFunctionPointer)QOpenGLContext_GetProcAddress((QOpenGLContext*)self, qstring(procName));
+}
+
+QFunctionPointer q_openglcontext_get_proc_address2(void* self, const char* procName) {
+    return (QFunctionPointer)QOpenGLContext_GetProcAddress2((QOpenGLContext*)self, procName);
+}
+
 QSurface* q_openglcontext_surface(void* self) {
     return QOpenGLContext_Surface((QOpenGLContext*)self);
 }

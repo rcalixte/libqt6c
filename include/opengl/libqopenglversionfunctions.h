@@ -683,6 +683,386 @@ QOpenGLContext* q_openglfunctions_4_5_deprecatedbackend_context(void* self);
 ///
 void q_openglfunctions_4_5_deprecatedbackend_set_context(void* self, void* context);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-corebackend-functions.html#IsEnabled-var)
+///
+/// @param self QOpenGLFunctions_1_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLenum__Function)(uint32_t funcparam1)
+///
+GLboolean__GLenum__Function q_openglfunctions_1_0_corebackend__functions_is_enabled(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-corebackend-functions.html#IsEnabled-var)
+///
+/// @param self QOpenGLFunctions_1_0_CoreBackend__Functions*
+/// @param isEnabled uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_1_0_corebackend__functions_set_is_enabled(void* self, uint8_t (*isEnabled)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_1_0_CoreBackend__Functions*
+///
+void q_openglfunctions_1_0_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-1-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-1-corebackend-functions.html#IsTexture-var)
+///
+/// @param self QOpenGLFunctions_1_1_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_1_1_corebackend__functions_is_texture(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-1-corebackend-functions.html#IsTexture-var)
+///
+/// @param self QOpenGLFunctions_1_1_CoreBackend__Functions*
+/// @param isTexture uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_1_1_corebackend__functions_set_is_texture(void* self, uint8_t (*isTexture)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_1_1_CoreBackend__Functions*
+///
+void q_openglfunctions_1_1_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html#UnmapBuffer-var)
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLenum__Function)(uint32_t funcparam1)
+///
+GLboolean__GLenum__Function q_openglfunctions_1_5_corebackend__functions_unmap_buffer(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html#UnmapBuffer-var)
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+/// @param unmapBuffer uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_1_5_corebackend__functions_set_unmap_buffer(void* self, uint8_t (*unmapBuffer)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html#IsBuffer-var)
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_buffer(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html#IsBuffer-var)
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+/// @param isBuffer uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_1_5_corebackend__functions_set_is_buffer(void* self, uint8_t (*isBuffer)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html#IsQuery-var)
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_1_5_corebackend__functions_is_query(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-5-corebackend-functions.html#IsQuery-var)
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+/// @param isQuery uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_1_5_corebackend__functions_set_is_query(void* self, uint8_t (*isQuery)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_1_5_CoreBackend__Functions*
+///
+void q_openglfunctions_1_5_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#IsShader-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_shader(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#IsShader-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+/// @param isShader uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_2_0_corebackend__functions_set_is_shader(void* self, uint8_t (*isShader)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#IsProgram-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_2_0_corebackend__functions_is_program(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#IsProgram-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+/// @param isProgram uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_2_0_corebackend__functions_set_is_program(void* self, uint8_t (*isProgram)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#CreateShader-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+///
+/// @return uint32_t (*GLuint__GLenum__Function)(uint32_t funcparam1)
+///
+GLuint__GLenum__Function q_openglfunctions_2_0_corebackend__functions_create_shader(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#CreateShader-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+/// @param createShader uint32_t func(uint32_t param1)
+///
+void q_openglfunctions_2_0_corebackend__functions_set_create_shader(void* self, uint32_t (*createShader)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#CreateProgram-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+///
+/// @return uint32_t (*GLuint__void__Function)()
+///
+GLuint__void__Function q_openglfunctions_2_0_corebackend__functions_create_program(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-2-0-corebackend-functions.html#CreateProgram-var)
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+/// @param createProgram uint32_t func()
+///
+void q_openglfunctions_2_0_corebackend__functions_set_create_program(void* self, uint32_t (*createProgram)());
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_2_0_CoreBackend__Functions*
+///
+void q_openglfunctions_2_0_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsVertexArray-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_vertex_array(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsVertexArray-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+/// @param isVertexArray uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_3_0_corebackend__functions_set_is_vertex_array(void* self, uint8_t (*isVertexArray)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsFramebuffer-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_framebuffer(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsFramebuffer-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+/// @param isFramebuffer uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_3_0_corebackend__functions_set_is_framebuffer(void* self, uint8_t (*isFramebuffer)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsRenderbuffer-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_renderbuffer(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsRenderbuffer-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+/// @param isRenderbuffer uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_3_0_corebackend__functions_set_is_renderbuffer(void* self, uint8_t (*isRenderbuffer)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsEnabledi-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLenum_GLuint__Function)(uint32_t funcparam1, uint32_t funcparam2)
+///
+GLboolean__GLenum_GLuint__Function q_openglfunctions_3_0_corebackend__functions_is_enabledi(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-0-corebackend-functions.html#IsEnabledi-var)
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+/// @param isEnabledi uint8_t func(uint32_t param1, uint32_t param2)
+///
+void q_openglfunctions_3_0_corebackend__functions_set_is_enabledi(void* self, uint8_t (*isEnabledi)(uint32_t funcparam1, uint32_t funcparam2));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_3_0_CoreBackend__Functions*
+///
+void q_openglfunctions_3_0_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-3-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-3-corebackend-functions.html#IsSampler-var)
+///
+/// @param self QOpenGLFunctions_3_3_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_3_3_corebackend__functions_is_sampler(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-3-3-corebackend-functions.html#IsSampler-var)
+///
+/// @param self QOpenGLFunctions_3_3_CoreBackend__Functions*
+/// @param isSampler uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_3_3_corebackend__functions_set_is_sampler(void* self, uint8_t (*isSampler)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_3_3_CoreBackend__Functions*
+///
+void q_openglfunctions_3_3_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-corebackend-functions.html#IsTransformFeedback-var)
+///
+/// @param self QOpenGLFunctions_4_0_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_4_0_corebackend__functions_is_transform_feedback(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-0-corebackend-functions.html#IsTransformFeedback-var)
+///
+/// @param self QOpenGLFunctions_4_0_CoreBackend__Functions*
+/// @param isTransformFeedback uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_4_0_corebackend__functions_set_is_transform_feedback(void* self, uint8_t (*isTransformFeedback)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_4_0_CoreBackend__Functions*
+///
+void q_openglfunctions_4_0_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-1-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-1-corebackend-functions.html#IsProgramPipeline-var)
+///
+/// @param self QOpenGLFunctions_4_1_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_4_1_corebackend__functions_is_program_pipeline(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-1-corebackend-functions.html#IsProgramPipeline-var)
+///
+/// @param self QOpenGLFunctions_4_1_CoreBackend__Functions*
+/// @param isProgramPipeline uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_4_1_corebackend__functions_set_is_program_pipeline(void* self, uint8_t (*isProgramPipeline)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_4_1_CoreBackend__Functions*
+///
+void q_openglfunctions_4_1_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-corebackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-corebackend-functions.html#UnmapNamedBuffer-var)
+///
+/// @param self QOpenGLFunctions_4_5_CoreBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_4_5_corebackend__functions_unmap_named_buffer(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-5-corebackend-functions.html#UnmapNamedBuffer-var)
+///
+/// @param self QOpenGLFunctions_4_5_CoreBackend__Functions*
+/// @param unmapNamedBuffer uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_4_5_corebackend__functions_set_unmap_named_buffer(void* self, uint8_t (*unmapNamedBuffer)(uint32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_4_5_CoreBackend__Functions*
+///
+void q_openglfunctions_4_5_corebackend__functions_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html)
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html#IsList-var)
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+///
+/// @return uint8_t (*GLboolean__GLuint__Function)(uint32_t funcparam1)
+///
+GLboolean__GLuint__Function q_openglfunctions_1_0_deprecatedbackend__functions_is_list(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html#IsList-var)
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+/// @param isList uint8_t func(uint32_t param1)
+///
+void q_openglfunctions_1_0_deprecatedbackend__functions_set_is_list(void* self, uint8_t (*isList)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html#RenderMode-var)
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+///
+/// @return int32_t (*GLint__GLenum__Function)(uint32_t funcparam1)
+///
+GLint__GLenum__Function q_openglfunctions_1_0_deprecatedbackend__functions_render_mode(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html#RenderMode-var)
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+/// @param renderMode int32_t func(uint32_t param1)
+///
+void q_openglfunctions_1_0_deprecatedbackend__functions_set_render_mode(void* self, int32_t (*renderMode)(uint32_t funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html#GenLists-var)
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+///
+/// @return uint32_t (*GLuint__GLsizei__Function)(int32_t funcparam1)
+///
+GLuint__GLsizei__Function q_openglfunctions_1_0_deprecatedbackend__functions_gen_lists(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-0-deprecatedbackend-functions.html#GenLists-var)
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+/// @param genLists uint32_t func(int32_t param1)
+///
+void q_openglfunctions_1_0_deprecatedbackend__functions_set_gen_lists(void* self, uint32_t (*genLists)(int32_t funcparam1));
+
+/// Delete this object from C++ memory.
+///
+/// @param self QOpenGLFunctions_1_0_DeprecatedBackend__Functions*
+///
+void q_openglfunctions_1_0_deprecatedbackend__functions_delete(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglversionfunctions.html#public-types)
 
 typedef enum {

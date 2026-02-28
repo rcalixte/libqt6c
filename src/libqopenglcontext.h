@@ -737,6 +737,24 @@ void q_openglcontext_done_current(void* self);
 ///
 void q_openglcontext_swap_buffers(void* self, void* surface);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#getProcAddress)
+///
+/// @param self QOpenGLContext*
+/// @param procName char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_openglcontext_get_proc_address(void* self, char* procName);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#getProcAddress)
+///
+/// @param self QOpenGLContext*
+/// @param procName const char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_openglcontext_get_proc_address2(void* self, const char* procName);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglcontext.html#surface)
 ///
 /// @param self QOpenGLContext*

@@ -53,6 +53,22 @@ void q_accessible_copy_assign(void* self, void* other);
 ///
 void q_accessible_move_assign(void* self, void* other);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#installUpdateHandler)
+///
+/// @param param1 void func(QAccessibleEvent* param1)
+///
+/// @return void (*QAccessible__UpdateHandler)(void* funcparam1)
+///
+QAccessible__UpdateHandler q_accessible_install_update_handler(void (*param1)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#installRootObjectHandler)
+///
+/// @param param1 void func(QObject* param1)
+///
+/// @return void (*QAccessible__RootObjectHandler)(void* funcparam1)
+///
+QAccessible__RootObjectHandler q_accessible_install_root_object_handler(void (*param1)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qaccessible.html#installActivationObserver)
 ///
 /// @param param1 QAccessible__ActivationObserver*

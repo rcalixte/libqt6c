@@ -564,8 +564,12 @@ QMetaObject__SuperData* q_metaobject__superdata_new2(void* mo) {
     return QMetaObject__SuperData_new2((QMetaObject*)mo);
 }
 
-QMetaObject__SuperData* q_metaobject__superdata_new3(void* param1) {
-    return QMetaObject__SuperData_new3((QMetaObject__SuperData*)param1);
+QMetaObject__SuperData* q_metaobject__superdata_new3(QMetaObject* (*g)()) {
+    return QMetaObject__SuperData_new3((intptr_t)g);
+}
+
+QMetaObject__SuperData* q_metaobject__superdata_new4(void* param1) {
+    return QMetaObject__SuperData_new4((QMetaObject__SuperData*)param1);
 }
 
 const QMetaObject* q_metaobject__superdata_direct(void* self) {

@@ -80,6 +80,22 @@ const char* q_library_tr(const char* s) {
     return _ret;
 }
 
+QFunctionPointer q_library_resolve(void* self, const char* symbol) {
+    return (QFunctionPointer)QLibrary_Resolve((QLibrary*)self, symbol);
+}
+
+QFunctionPointer q_library_resolve2(const char* fileName, const char* symbol) {
+    return (QFunctionPointer)QLibrary_Resolve2(qstring(fileName), symbol);
+}
+
+QFunctionPointer q_library_resolve3(const char* fileName, int verNum, const char* symbol) {
+    return (QFunctionPointer)QLibrary_Resolve3(qstring(fileName), verNum, symbol);
+}
+
+QFunctionPointer q_library_resolve4(const char* fileName, const char* version, const char* symbol) {
+    return (QFunctionPointer)QLibrary_Resolve4(qstring(fileName), qstring(version), symbol);
+}
+
 bool q_library_load(void* self) {
     return QLibrary_Load((QLibrary*)self);
 }

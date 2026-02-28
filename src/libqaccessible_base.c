@@ -20,6 +20,14 @@ void q_accessible_move_assign(void* self, void* other) {
     QAccessible_MoveAssign((QAccessible*)self, (QAccessible*)other);
 }
 
+QAccessible__UpdateHandler q_accessible_install_update_handler(void (*param1)(void* funcparam1)) {
+    return (QAccessible__UpdateHandler)QAccessible_InstallUpdateHandler((intptr_t)param1);
+}
+
+QAccessible__RootObjectHandler q_accessible_install_root_object_handler(void (*param1)(void* funcparam1)) {
+    return (QAccessible__RootObjectHandler)QAccessible_InstallRootObjectHandler((intptr_t)param1);
+}
+
 void q_accessible_install_activation_observer(void* param1) {
     QAccessible_InstallActivationObserver((QAccessible__ActivationObserver*)param1);
 }

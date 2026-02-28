@@ -23,6 +23,30 @@ void k_crash_initialize();
 ///
 void k_crash_default_crash_handler(int param1);
 
+/// [Upstream resources](https://api.kde.org/kcrash.html#setCrashHandler)
+///
+/// @param param1 void func(int param1)
+///
+void k_crash_set_crash_handler(void (*param1)(int funcparam1));
+
+/// [Upstream resources](https://api.kde.org/kcrash.html#crashHandler)
+///
+/// @return void (*KCrash__HandlerType)(int funcparam1)
+///
+KCrash__HandlerType k_crash_crash_handler();
+
+/// [Upstream resources](https://api.kde.org/kcrash.html#setEmergencySaveFunction)
+///
+/// @param param1 void func(int param1)
+///
+void k_crash_set_emergency_save_function(void (*param1)(int funcparam1));
+
+/// [Upstream resources](https://api.kde.org/kcrash.html#emergencySaveFunction)
+///
+/// @return void (*KCrash__HandlerType)(int funcparam1)
+///
+KCrash__HandlerType k_crash_emergency_save_function();
+
 /// [Upstream resources](https://api.kde.org/kcrash.html#setFlags)
 ///
 /// @param param1 flag of enum KCrash__CrashFlag

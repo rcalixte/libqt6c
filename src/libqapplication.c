@@ -467,6 +467,10 @@ QInputMethod* q_application_input_method() {
     return QGuiApplication_InputMethod();
 }
 
+QFunctionPointer q_application_platform_function(char* function) {
+    return (QFunctionPointer)QGuiApplication_PlatformFunction(qstring(function));
+}
+
 void q_application_set_quit_on_last_window_closed(bool quit) {
     QGuiApplication_SetQuitOnLastWindowClosed(quit);
 }

@@ -10,6 +10,22 @@ void k_crash_default_crash_handler(int param1) {
     KCrash_DefaultCrashHandler(param1);
 }
 
+void k_crash_set_crash_handler(void (*param1)(int funcparam1)) {
+    KCrash_SetCrashHandler((intptr_t)param1);
+}
+
+KCrash__HandlerType k_crash_crash_handler() {
+    return (KCrash__HandlerType)KCrash_CrashHandler();
+}
+
+void k_crash_set_emergency_save_function(void (*param1)(int funcparam1)) {
+    KCrash_SetEmergencySaveFunction((intptr_t)param1);
+}
+
+KCrash__HandlerType k_crash_emergency_save_function() {
+    return (KCrash__HandlerType)KCrash_EmergencySaveFunction();
+}
+
 void k_crash_set_flags(int32_t param1) {
     KCrash_SetFlags(param1);
 }

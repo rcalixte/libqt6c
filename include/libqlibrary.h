@@ -165,6 +165,44 @@ int32_t q_library_super_metacall(void* self, int32_t param1, int param2, void* p
 ///
 const char* q_library_tr(const char* s);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibrary.html#resolve)
+///
+/// @param self QLibrary*
+/// @param symbol const char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_library_resolve(void* self, const char* symbol);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibrary.html#resolve)
+///
+/// @param fileName const char*
+/// @param symbol const char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_library_resolve2(const char* fileName, const char* symbol);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibrary.html#resolve)
+///
+/// @param fileName const char*
+/// @param verNum int
+/// @param symbol const char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_library_resolve3(const char* fileName, int verNum, const char* symbol);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlibrary.html#resolve)
+///
+/// @param fileName const char*
+/// @param version const char*
+/// @param symbol const char*
+///
+/// @return void (*QFunctionPointer)()
+///
+QFunctionPointer q_library_resolve4(const char* fileName, const char* version, const char* symbol);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlibrary.html#load)
 ///
 /// @param self QLibrary*
