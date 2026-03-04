@@ -111,6 +111,22 @@ func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className
 		return preUrl + "https://github.com/PackageKit/PackageKit-Qt" + postUrl
 	}
 
+	if strings.HasPrefix(pageName, "poppler") || (pageType == EnumPage && cfs.currentPackageName == "restricted-extras-poppler") {
+		url := strings.Split(cfs.currentClassName, "__")
+		typeName := "class"
+		classUrl := url[0]
+		if len(url) == 2 {
+			classUrl = url[1]
+		} else if len(url) > 2 {
+			classUrl = url[1] + "_1_1" + url[2]
+			if url[2] == "PdfVersion" || url[2] == "Quad" {
+				typeName = "struct"
+			}
+		}
+		prefix := ifv(classUrl == "Poppler", "namespace", typeName+"Poppler_1_1")
+		return preUrl + "https://poppler.freedesktop.org/api/qt6/" + prefix + classUrl + ".html" + postUrl
+	}
+
 	if strings.HasPrefix(pageName, "qkeychain") || (pageType == EnumPage && cfs.currentPackageName == "extras-qtkeychain") {
 		return preUrl + "https://github.com/frankosterfeld/qtkeychain" + postUrl
 	}
