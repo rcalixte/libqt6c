@@ -447,6 +447,8 @@ const qt_modules = &.{
     "KTextEditor",
     "KTextEditor/KTextEditor",
     "KTextEditor/ktexteditor",
+    // Qt 6 Poppler
+    "poppler/qt6",
     // Qt 6 QCustomPlot
     "QCustomPlotQt6",
     // Qt 6 QScintilla
