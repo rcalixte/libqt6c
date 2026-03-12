@@ -72,7 +72,7 @@ func parse(filePaths []string, options FlagOptions) (string, error) {
 						continue
 					}
 
-					if strings.HasSuffix(lit, "qbase_translate") || strings.HasSuffix(lit, "_translate4") {
+					if strings.HasSuffix(lit, "qbase_translate") || strings.HasSuffix(lit, "super_translate") || strings.HasSuffix(lit, "_translate4") {
 						expectedParams = 4
 						expectingNumerus = true
 
