@@ -1482,25 +1482,29 @@ func generate(goGenerateArgs string, flagExtraOps UiFlagOptions, u UiFile) ([]by
 
 #include <libqt6c.h>` + maybeInclude + `
 
-struct ` + uClass + `Ui;
-typedef struct ` + uClass + "Ui " + uClass + `Ui;
-
-struct ` + uClass + `Ui {
+/// The type definition for ` + uClass + `Ui containing all the Qt objects
+typedef struct {
 ` + strings.Join(collectClassNames_Widget(&u.Widget), "\n") + `
-};
+} ` + uClass + `Ui;
+
+/// Cleanup the memory allocated for ` + uClass + `Ui and the child Qt objects
+static void cleanup_` + strings.TrimPrefix(cMethod, "_") + "_ui(" + uClass + `Ui* ui) {
+    ` + cClassMethodPrefix(u.Widget.Class) + `_delete(ui->` + u.Widget.Name + `);
+    free(ui);
+}
 `)
 
 	if len(translateFunc) > 0 {
 		ret.WriteString(`
-// Retranslate reapplies all text translations
-static void retranslate_` + strings.TrimPrefix(cMethod, "_") + "(" + uClass + `Ui* ui) {
+/// Retranslate reapplies all text translations
+static void retranslate_` + strings.TrimPrefix(cMethod, "_") + "_ui(" + uClass + `Ui* ui) {
     ` + strings.Join(translateFunc, "\n") + `
 }
 `)
 	}
 
 	ret.WriteString(`
-// new` + cMethod + "_ui creates all the Qt objects for " + uClass + `Ui
+/// new` + cMethod + "_ui creates all the Qt objects for " + uClass + `Ui
 static ` + uClass + "Ui* new" + cMethod + `_ui() {
     ` + uClass + "Ui* ui = (" + uClass + "Ui*)malloc(sizeof(" + uClass + `Ui));
 if (ui == NULL) return NULL;
@@ -1553,7 +1557,7 @@ if (ui == NULL) return NULL;
 	}
 
 	if len(translateFunc) > 0 {
-		ret.WriteString("\nretranslate_" + strings.TrimPrefix(cMethod, "_") + "(ui);\n\n")
+		ret.WriteString("\nretranslate_" + strings.TrimPrefix(cMethod, "_") + "_ui(ui);\n\n")
 	}
 
 	for _, scr := range setCurrentRow {
@@ -1577,9 +1581,9 @@ if (ui == NULL) return NULL;
 
 	if len(connections.Connections) != 0 {
 		if flagExtraOps.HeaderName == "" {
-			ret.WriteString("\n// Uncomment the connections below when ready or regnerate with -c\n")
+			ret.WriteString("\n// Uncomment the connections below when ready or regenerate with -c\n")
 		}
-		ret.WriteString("// Double-check that the connection override variants are correct!\n")
+		ret.WriteString("// Double-check that the connection overload variants are correct!\n")
 	}
 
 	for _, c := range connections.Connections {
