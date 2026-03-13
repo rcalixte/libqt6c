@@ -267,6 +267,16 @@ KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, cons
     return KPluginMetaData_FindPluginById3(qstring(directory), qstring(pluginId), options);
 }
 
+libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins2(const char* directory, bool (*filter)(void* funcparam1)) {
+    libqt_list _arr = KPluginMetaData_FindPlugins2(qstring(directory), (intptr_t)filter);
+    return _arr;
+}
+
+libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins3(const char* directory, bool (*filter)(void* funcparam1), int32_t options) {
+    libqt_list _arr = KPluginMetaData_FindPlugins3(qstring(directory), (intptr_t)filter, options);
+    return _arr;
+}
+
 const char* k_pluginmetadata_value23(void* self, const char* key, const char* defaultValue) {
     libqt_string _str = KPluginMetaData_Value23((KPluginMetaData*)self, qstring(key), qstring(defaultValue));
     char* _ret = qstring_to_char(_str);

@@ -248,6 +248,10 @@ void k_squeezedtextlabel_set_text_format(void* self, int32_t textFormat) {
     QLabel_SetTextFormat((QLabel*)self, textFormat);
 }
 
+void k_squeezedtextlabel_set_resource_provider(void* self, QVariant* (*provider)(void* funcparam1)) {
+    QLabel_SetResourceProvider((QLabel*)self, (intptr_t)provider);
+}
+
 int32_t k_squeezedtextlabel_alignment(void* self) {
     return QLabel_Alignment((QLabel*)self);
 }

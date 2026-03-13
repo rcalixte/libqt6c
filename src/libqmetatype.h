@@ -432,12 +432,28 @@ bool q_metatype_has_registered_converter_function(void* fromType, void* toType);
 ///
 bool q_metatype_has_registered_mutable_view_function(void* fromType, void* toType);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#registerConverterFunction)
+///
+/// @param f bool func(void* param1, void* param2)
+/// @param from QMetaType*
+/// @param to QMetaType*
+///
+bool q_metatype_register_converter_function(bool (*f)(void* funcparam1, void* funcparam2), void* from, void* to);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#unregisterConverterFunction)
 ///
 /// @param from QMetaType*
 /// @param to QMetaType*
 ///
 void q_metatype_unregister_converter_function(void* from, void* to);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#registerMutableViewFunction)
+///
+/// @param f bool func(void* param1, void* param2)
+/// @param from QMetaType*
+/// @param to QMetaType*
+///
+bool q_metatype_register_mutable_view_function(bool (*f)(void* funcparam1, void* funcparam2), void* from, void* to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#unregisterMutableViewFunction)
 ///

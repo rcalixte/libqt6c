@@ -531,6 +531,19 @@ QVariant* q_textdocument_resource(void* self, int type, void* name);
 ///
 void q_textdocument_add_resource(void* self, int type, void* name, void* resource);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setResourceProvider)
+///
+/// @param self QTextDocument*
+/// @param provider QVariant* func(QUrl* param1)
+///
+void q_textdocument_set_resource_provider(void* self, QVariant* (*provider)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#setDefaultResourceProvider)
+///
+/// @param provider QVariant* func(QUrl* param1)
+///
+void q_textdocument_set_default_resource_provider(QVariant* (*provider)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextdocument.html#allFormats)
 ///
 /// @param self QTextDocument*

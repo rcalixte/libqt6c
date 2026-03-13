@@ -696,6 +696,13 @@ const char** q_filedialog_get_open_file_names();
 ///
 libqt_list q_filedialog_get_open_file_urls();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileContent)
+///
+/// @param nameFilter const char*
+/// @param fileContentsReady void func(const char* param1, char* param2)
+///
+void q_filedialog_get_open_file_content(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, char* funcparam2));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///
 /// @param fileContent char*
@@ -1104,6 +1111,14 @@ libqt_list q_filedialog_get_open_file_urls3(void* parent, const char* caption, v
 /// @return libqt_list of QUrl*
 ///
 libqt_list q_filedialog_get_open_file_urls4(void* parent, const char* caption, void* dir, const char* filter);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#getOpenFileContent)
+///
+/// @param nameFilter const char*
+/// @param fileContentsReady void func(const char* param1, char* param2)
+/// @param parent QWidget*
+///
+void q_filedialog_get_open_file_content3(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, char* funcparam2), void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledialog.html#saveFileContent)
 ///

@@ -42,12 +42,24 @@ bool q_webengineframe_is_main_frame(void* self) {
     return QWebEngineFrame_IsMainFrame((QWebEngineFrame*)self);
 }
 
+void q_webengineframe_run_java_script(void* self, const char* script, void (*callback)(void* funcparam1)) {
+    QWebEngineFrame_RunJavaScript((QWebEngineFrame*)self, qstring(script), (intptr_t)callback);
+}
+
+void q_webengineframe_run_java_script2(void* self, const char* script, uint32_t worldId, void (*callback)(void* funcparam1)) {
+    QWebEngineFrame_RunJavaScript2((QWebEngineFrame*)self, qstring(script), worldId, (intptr_t)callback);
+}
+
 void q_webengineframe_run_java_script3(void* self, const char* script) {
     QWebEngineFrame_RunJavaScript3((QWebEngineFrame*)self, qstring(script));
 }
 
 void q_webengineframe_print_to_pdf(void* self, const char* filePath) {
     QWebEngineFrame_PrintToPdf((QWebEngineFrame*)self, qstring(filePath));
+}
+
+void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam1)) {
+    QWebEngineFrame_PrintToPdf2((QWebEngineFrame*)self, (intptr_t)callback);
 }
 
 void q_webengineframe_run_java_script22(void* self, const char* script, uint32_t worldId) {

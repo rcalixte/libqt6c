@@ -105,6 +105,10 @@ bool k_fileplacesview_is_auto_resize_items_enabled(void* self) {
     return KFilePlacesView_IsAutoResizeItemsEnabled((KFilePlacesView*)self);
 }
 
+void k_fileplacesview_set_teardown_function(void* self, void (*teardownFunc)(void* funcparam1)) {
+    KFilePlacesView_SetTeardownFunction((KFilePlacesView*)self, (intptr_t)teardownFunc);
+}
+
 QSize* k_fileplacesview_size_hint(void* self) {
     return KFilePlacesView_SizeHint((KFilePlacesView*)self);
 }

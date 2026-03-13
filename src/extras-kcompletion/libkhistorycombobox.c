@@ -133,6 +133,10 @@ bool k_historycombobox_remove_from_history(void* self, const char* item) {
     return KHistoryComboBox_RemoveFromHistory((KHistoryComboBox*)self, qstring(item));
 }
 
+void k_historycombobox_set_icon_provider(void* self, QIcon* (*providerFunction)(const char* funcparam1)) {
+    KHistoryComboBox_SetIconProvider((KHistoryComboBox*)self, (intptr_t)providerFunction);
+}
+
 void k_historycombobox_add_to_history(void* self, const char* item) {
     KHistoryComboBox_AddToHistory((KHistoryComboBox*)self, qstring(item));
 }

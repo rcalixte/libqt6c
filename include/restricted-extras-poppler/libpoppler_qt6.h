@@ -1317,6 +1317,13 @@ bool q_poppler__document_xref_was_reconstructed(void* self);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
 ///
+/// @param self Poppler__Document*
+/// @param callback void func()
+///
+void q_poppler__document_set_x_ref_reconstructed_callback(void* self, void (*callback)());
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1Document.html)
+///
 /// @param filePath const char*
 /// @param ownerPassword char*
 ///

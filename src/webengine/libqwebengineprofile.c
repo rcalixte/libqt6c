@@ -278,8 +278,20 @@ void q_webengineprofile_set_push_service_enabled(void* self, bool enabled) {
     QWebEngineProfile_SetPushServiceEnabled((QWebEngineProfile*)self, enabled);
 }
 
+void q_webengineprofile_set_notification_presenter(void* self, void (*notificationPresenter)(void* funcparam1)) {
+    QWebEngineProfile_SetNotificationPresenter((QWebEngineProfile*)self, (intptr_t)notificationPresenter);
+}
+
 QWebEngineClientCertificateStore* q_webengineprofile_client_certificate_store(void* self) {
     return QWebEngineProfile_ClientCertificateStore((QWebEngineProfile*)self);
+}
+
+void q_webengineprofile_request_icon_for_page_u_r_l(void* self, void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(void* funcparam1, void* funcparam2, void* funcparam3)) {
+    QWebEngineProfile_RequestIconForPageURL((QWebEngineProfile*)self, (QUrl*)url, desiredSizeInPixel, (intptr_t)iconAvailableCallback);
+}
+
+void q_webengineprofile_request_icon_for_icon_u_r_l(void* self, void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(void* funcparam1, void* funcparam2)) {
+    QWebEngineProfile_RequestIconForIconURL((QWebEngineProfile*)self, (QUrl*)url, desiredSizeInPixel, (intptr_t)iconAvailableCallback);
 }
 
 QWebEnginePermission* q_webengineprofile_query_permission(void* self, void* securityOrigin, uint8_t permissionType) {

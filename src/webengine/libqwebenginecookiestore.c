@@ -25,6 +25,10 @@ const char* q_webenginecookiestore_tr(const char* s) {
     return _ret;
 }
 
+void q_webenginecookiestore_set_cookie_filter(void* self, bool (*filterCallback)(void* funcparam1)) {
+    QWebEngineCookieStore_SetCookieFilter((QWebEngineCookieStore*)self, (intptr_t)filterCallback);
+}
+
 void q_webenginecookiestore_set_cookie(void* self, void* cookie) {
     QWebEngineCookieStore_SetCookie((QWebEngineCookieStore*)self, (QNetworkCookie*)cookie);
 }

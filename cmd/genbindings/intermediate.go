@@ -19,6 +19,7 @@ type CppParameter struct {
 	UniquePtr     bool
 
 	IsFunctionPointer bool
+	IsStdFunction     bool
 	FunctionPointer   *CppMethod
 
 	QtCppOriginalType     *CppParameter // If we rewrote QStringList->QList<String>, this field contains the original QStringList. Otherwise, it's blank
@@ -367,9 +368,10 @@ type CppMethod struct {
 	VariableFieldName  string
 
 	// Special quirks
-	FossOnly                 bool
-	LinuxOnly                bool
-	BecomesNonConstInVersion *string // "6,7"
+	FossOnly                   bool
+	LinuxOnly                  bool
+	BecomesNonConstInVersion   *string // "6,7"
+	HasStdFunctionPointerParam bool
 }
 
 func (m CppMethod) CppCallTarget() string {

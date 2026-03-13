@@ -275,6 +275,20 @@ void q_webenginepage_set_html(void* self, const char* html);
 ///
 void q_webenginepage_set_content(void* self, char* data);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#toHtml)
+///
+/// @param self QWebEnginePage*
+/// @param resultCallback void func(const char* param1)
+///
+void q_webenginepage_to_html(void* self, void (*resultCallback)(const char* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#toPlainText)
+///
+/// @param self QWebEnginePage*
+/// @param resultCallback void func(const char* param1)
+///
+void q_webenginepage_to_plain_text(void* self, void (*resultCallback)(const char* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#title)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -338,6 +352,14 @@ QPointF* q_webenginepage_scroll_position(void* self);
 /// @param self QWebEnginePage*
 ///
 QSizeF* q_webenginepage_contents_size(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#runJavaScript)
+///
+/// @param self QWebEnginePage*
+/// @param scriptSource const char*
+/// @param resultCallback void func(QVariant* param1)
+///
+void q_webenginepage_run_java_script(void* self, const char* scriptSource, void (*resultCallback)(void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#runJavaScript)
 ///
@@ -422,6 +444,13 @@ long long q_webenginepage_render_process_pid(void* self);
 /// @param filePath const char*
 ///
 void q_webenginepage_print_to_pdf(void* self, const char* filePath);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#printToPdf)
+///
+/// @param self QWebEnginePage*
+/// @param resultCallback void func(char* param1)
+///
+void q_webenginepage_print_to_pdf2(void* self, void (*resultCallback)(char* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#setInspectedPage)
 ///
@@ -1324,6 +1353,15 @@ const char* q_webenginepage_tr3(const char* s, const char* c, int n);
 ///
 void q_webenginepage_find_text2(void* self, const char* subString, int32_t options);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#findText)
+///
+/// @param self QWebEnginePage*
+/// @param subString const char*
+/// @param options flag of enum QWebEnginePage__FindFlag
+/// @param resultCallback void func(QWebEngineFindTextResult* param1)
+///
+void q_webenginepage_find_text3(void* self, const char* subString, int32_t options, void (*resultCallback)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#download)
 ///
 /// @param self QWebEnginePage*
@@ -1365,6 +1403,15 @@ void q_webenginepage_set_content3(void* self, char* data, const char* mimeType, 
 ///
 void q_webenginepage_run_java_script22(void* self, const char* scriptSource, uint32_t worldId);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#runJavaScript)
+///
+/// @param self QWebEnginePage*
+/// @param scriptSource const char*
+/// @param worldId uint32_t
+/// @param resultCallback void func(QVariant* param1)
+///
+void q_webenginepage_run_java_script3(void* self, const char* scriptSource, uint32_t worldId, void (*resultCallback)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#setWebChannel)
 ///
 /// @param self QWebEnginePage*
@@ -1397,6 +1444,23 @@ void q_webenginepage_print_to_pdf22(void* self, const char* filePath, void* layo
 /// @param ranges QPageRanges*
 ///
 void q_webenginepage_print_to_pdf3(void* self, const char* filePath, void* layout, void* ranges);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#printToPdf)
+///
+/// @param self QWebEnginePage*
+/// @param resultCallback void func(char* param1)
+/// @param layout QPageLayout*
+///
+void q_webenginepage_print_to_pdf23(void* self, void (*resultCallback)(char* funcparam1), void* layout);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#printToPdf)
+///
+/// @param self QWebEnginePage*
+/// @param resultCallback void func(char* param1)
+/// @param layout QPageLayout*
+/// @param ranges QPageRanges*
+///
+void q_webenginepage_print_to_pdf32(void* self, void (*resultCallback)(char* funcparam1), void* layout, void* ranges);
 
 /// Inherited from QObject
 ///

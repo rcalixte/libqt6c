@@ -325,6 +325,14 @@ void q_textdocument_add_resource(void* self, int type, void* name, void* resourc
     QTextDocument_AddResource((QTextDocument*)self, type, (QUrl*)name, (QVariant*)resource);
 }
 
+void q_textdocument_set_resource_provider(void* self, QVariant* (*provider)(void* funcparam1)) {
+    QTextDocument_SetResourceProvider((QTextDocument*)self, (intptr_t)provider);
+}
+
+void q_textdocument_set_default_resource_provider(QVariant* (*provider)(void* funcparam1)) {
+    QTextDocument_SetDefaultResourceProvider((intptr_t)provider);
+}
+
 libqt_list /* of QTextFormat* */ q_textdocument_all_formats(void* self) {
     libqt_list _arr = QTextDocument_AllFormats((QTextDocument*)self);
     return _arr;

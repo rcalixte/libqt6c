@@ -246,8 +246,16 @@ bool q_metatype_has_registered_mutable_view_function(void* fromType, void* toTyp
     return QMetaType_HasRegisteredMutableViewFunction((QMetaType*)fromType, (QMetaType*)toType);
 }
 
+bool q_metatype_register_converter_function(bool (*f)(void* funcparam1, void* funcparam2), void* from, void* to) {
+    return QMetaType_RegisterConverterFunction((intptr_t)f, (QMetaType*)from, (QMetaType*)to);
+}
+
 void q_metatype_unregister_converter_function(void* from, void* to) {
     QMetaType_UnregisterConverterFunction((QMetaType*)from, (QMetaType*)to);
+}
+
+bool q_metatype_register_mutable_view_function(bool (*f)(void* funcparam1, void* funcparam2), void* from, void* to) {
+    return QMetaType_RegisterMutableViewFunction((intptr_t)f, (QMetaType*)from, (QMetaType*)to);
 }
 
 void q_metatype_unregister_mutable_view_function(void* from, void* to) {

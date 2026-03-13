@@ -478,6 +478,15 @@ void k_squeezedtextlabel_set_text_format(void* self, int32_t textFormat);
 
 /// Inherited from QLabel
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#setResourceProvider)
+///
+/// @param self KSqueezedTextLabel*
+/// @param provider QVariant* func(QUrl* param1)
+///
+void k_squeezedtextlabel_set_resource_provider(void* self, QVariant* (*provider)(void* funcparam1));
+
+/// Inherited from QLabel
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qlabel.html#alignment)
 ///
 /// @param self KSqueezedTextLabel*

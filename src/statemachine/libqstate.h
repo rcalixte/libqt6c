@@ -810,9 +810,9 @@ void q_state_destroyed1(void* self, void* param1);
 ///
 void q_state_on_destroyed1(void* self, void (*callback)(void*, void*));
 
-/// Inherited from QAbstractState
+/// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling virtual or protected method
 ///
@@ -826,9 +826,9 @@ bool q_state_event_filter(void* self, void* watched, void* event);
 ///
 #define q_state_qbase_event_filter q_state_super_event_filter
 
-/// Inherited from QAbstractState
+/// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow calling base class virtual or protected method
 ///
@@ -838,9 +838,9 @@ bool q_state_event_filter(void* self, void* watched, void* event);
 ///
 bool q_state_super_event_filter(void* self, void* watched, void* event);
 
-/// Inherited from QAbstractState
+/// Inherited from QObject
 ///
-/// [Upstream resources](https://doc.qt.io/qt-6/qabstractstate.html#eventFilter)
+/// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#eventFilter)
 ///
 /// Wrapper to allow overriding base class virtual or protected method
 ///

@@ -157,6 +157,13 @@ const char** k_historycombobox_history_items(void* self);
 ///
 bool k_historycombobox_remove_from_history(void* self, const char* item);
 
+/// [Upstream resources](https://api.kde.org/khistorycombobox.html#setIconProvider)
+///
+/// @param self KHistoryComboBox*
+/// @param providerFunction QIcon* func(const char* param1)
+///
+void k_historycombobox_set_icon_provider(void* self, QIcon* (*providerFunction)(const char* funcparam1));
+
 /// [Upstream resources](https://api.kde.org/khistorycombobox.html#addToHistory)
 ///
 /// @param self KHistoryComboBox*

@@ -2227,7 +2227,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 		seenVirtuals := map[string]bool{}
 
 		for _, m := range virtualMethods {
-			if !virtualEligible {
+			if !virtualEligible || m.HasStdFunctionPointerParam {
 				continue
 			}
 
@@ -2933,7 +2933,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		seenVirtuals := map[string]bool{}
 
 		for _, m := range virtualMethods {
-			if !virtualEligible {
+			if !virtualEligible || m.HasStdFunctionPointerParam {
 				continue
 			}
 

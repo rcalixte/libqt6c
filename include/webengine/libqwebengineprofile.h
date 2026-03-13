@@ -407,11 +407,36 @@ bool q_webengineprofile_is_push_service_enabled(void* self);
 ///
 void q_webengineprofile_set_push_service_enabled(void* self, bool enabled);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#setNotificationPresenter)
+///
+/// @param self QWebEngineProfile*
+/// @param notificationPresenter void func(QWebEngineNotification* param1)
+///
+void q_webengineprofile_set_notification_presenter(void* self, void (*notificationPresenter)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#clientCertificateStore)
 ///
 /// @param self QWebEngineProfile*
 ///
 QWebEngineClientCertificateStore* q_webengineprofile_client_certificate_store(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#requestIconForPageURL)
+///
+/// @param self QWebEngineProfile*
+/// @param url QUrl*
+/// @param desiredSizeInPixel int
+/// @param iconAvailableCallback void func(QIcon* param1, QUrl* param2, QUrl* param3)
+///
+void q_webengineprofile_request_icon_for_page_u_r_l(void* self, void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(void* funcparam1, void* funcparam2, void* funcparam3));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#requestIconForIconURL)
+///
+/// @param self QWebEngineProfile*
+/// @param url QUrl*
+/// @param desiredSizeInPixel int
+/// @param iconAvailableCallback void func(QIcon* param1, QUrl* param2)
+///
+void q_webengineprofile_request_icon_for_icon_u_r_l(void* self, void* url, int desiredSizeInPixel, void (*iconAvailableCallback)(void* funcparam1, void* funcparam2));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineprofile.html#queryPermission)
 ///
