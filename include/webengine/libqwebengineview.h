@@ -330,6 +330,13 @@ QWebEngineContextMenuRequest* q_webengineview_last_context_menu_request(void* se
 ///
 void q_webengineview_print_to_pdf(void* self, const char* filePath);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
+///
+/// @param self QWebEngineView*
+/// @param resultCallback void func(char* param1)
+///
+void q_webengineview_print_to_pdf2(void* self, void (*resultCallback)(char* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#print)
 ///
 /// @param self QWebEngineView*
@@ -892,6 +899,15 @@ void q_webengineview_trigger_page_action2(void* self, int32_t action, bool check
 ///
 void q_webengineview_find_text2(void* self, const char* subString, int32_t options);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#findText)
+///
+/// @param self QWebEngineView*
+/// @param subString const char*
+/// @param options flag of enum QWebEnginePage__FindFlag
+/// @param resultCallback void func(QWebEngineFindTextResult* param1)
+///
+void q_webengineview_find_text3(void* self, const char* subString, int32_t options, void (*resultCallback)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
 ///
 /// @param self QWebEngineView*
@@ -908,6 +924,23 @@ void q_webengineview_print_to_pdf22(void* self, const char* filePath, void* layo
 /// @param ranges QPageRanges*
 ///
 void q_webengineview_print_to_pdf3(void* self, const char* filePath, void* layout, void* ranges);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
+///
+/// @param self QWebEngineView*
+/// @param resultCallback void func(char* param1)
+/// @param layout QPageLayout*
+///
+void q_webengineview_print_to_pdf23(void* self, void (*resultCallback)(char* funcparam1), void* layout);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineview.html#printToPdf)
+///
+/// @param self QWebEngineView*
+/// @param resultCallback void func(char* param1)
+/// @param layout QPageLayout*
+/// @param ranges QPageRanges*
+///
+void q_webengineview_print_to_pdf32(void* self, void (*resultCallback)(char* funcparam1), void* layout, void* ranges);
 
 /// Inherited from QWidget
 ///

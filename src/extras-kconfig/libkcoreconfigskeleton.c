@@ -359,6 +359,10 @@ void k_propertyskeletonitem_super_swap_default(void* self) {
     KPropertySkeletonItem_SuperSwapDefault((KPropertySkeletonItem*)self);
 }
 
+void k_propertyskeletonitem_set_notify_function(void* self, void (*impl)()) {
+    KPropertySkeletonItem_SetNotifyFunction((KPropertySkeletonItem*)self, (intptr_t)impl);
+}
+
 void k_propertyskeletonitem_set_group(void* self, const char* _group) {
     KConfigSkeletonItem_SetGroup((KConfigSkeletonItem*)self, qstring(_group));
 }

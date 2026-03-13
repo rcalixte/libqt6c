@@ -155,6 +155,13 @@ void k_fileplacesview_set_auto_resize_items_enabled(void* self, bool enabled);
 ///
 bool k_fileplacesview_is_auto_resize_items_enabled(void* self);
 
+/// [Upstream resources](https://api.kde.org/kfileplacesview.html#setTeardownFunction)
+///
+/// @param self KFilePlacesView*
+/// @param teardownFunc void func(QModelIndex* param1)
+///
+void k_fileplacesview_set_teardown_function(void* self, void (*teardownFunc)(void* funcparam1));
+
 /// [Upstream resources](https://api.kde.org/kfileplacesview.html#sizeHint)
 ///
 /// @param self KFilePlacesView*

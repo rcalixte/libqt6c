@@ -566,6 +566,10 @@ libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls() {
     return _arr;
 }
 
+void q_filedialog_get_open_file_content(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, char* funcparam2)) {
+    QFileDialog_GetOpenFileContent(qstring(nameFilter), (intptr_t)fileContentsReady);
+}
+
 void q_filedialog_save_file_content(char* fileContent, const char* fileNameHint) {
     QFileDialog_SaveFileContent(qstring(fileContent), qstring(fileNameHint));
 }
@@ -866,6 +870,10 @@ libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls3(void* parent, const c
 libqt_list /* of QUrl* */ q_filedialog_get_open_file_urls4(void* parent, const char* caption, void* dir, const char* filter) {
     libqt_list _arr = QFileDialog_GetOpenFileUrls4((QWidget*)parent, qstring(caption), (QUrl*)dir, qstring(filter));
     return _arr;
+}
+
+void q_filedialog_get_open_file_content3(const char* nameFilter, void (*fileContentsReady)(const char* funcparam1, char* funcparam2), void* parent) {
+    QFileDialog_GetOpenFileContent3(qstring(nameFilter), (intptr_t)fileContentsReady, (QWidget*)parent);
 }
 
 void q_filedialog_save_file_content3(char* fileContent, const char* fileNameHint, void* parent) {

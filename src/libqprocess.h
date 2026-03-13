@@ -411,6 +411,13 @@ void q_process_set_standard_error_file(void* self, const char* fileName);
 ///
 void q_process_set_standard_output_process(void* self, void* destination);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setChildProcessModifier)
+///
+/// @param self QProcess*
+/// @param modifier void func()
+///
+void q_process_set_child_process_modifier(void* self, void (*modifier)());
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
 ///
 /// @param self QProcess*

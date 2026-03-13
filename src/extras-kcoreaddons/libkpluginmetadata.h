@@ -326,6 +326,25 @@ bool k_pluginmetadata_is_static_plugin(void* self);
 ///
 KPluginMetaData* k_pluginmetadata_find_plugin_by_id3(const char* directory, const char* pluginId, int32_t options);
 
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#findPlugins)
+///
+/// @param directory const char*
+/// @param filter bool func(KPluginMetaData* param1)
+///
+/// @return libqt_list of KPluginMetaData*
+///
+libqt_list k_pluginmetadata_find_plugins2(const char* directory, bool (*filter)(void* funcparam1));
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#findPlugins)
+///
+/// @param directory const char*
+/// @param filter bool func(KPluginMetaData* param1)
+/// @param options flag of enum KPluginMetaData__KPluginMetaDataOption
+///
+/// @return libqt_list of KPluginMetaData*
+///
+libqt_list k_pluginmetadata_find_plugins3(const char* directory, bool (*filter)(void* funcparam1), int32_t options);
+
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`

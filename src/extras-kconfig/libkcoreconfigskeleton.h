@@ -732,6 +732,13 @@ void k_propertyskeletonitem_on_swap_default(void* self, void (*callback)());
 ///
 void k_propertyskeletonitem_super_swap_default(void* self);
 
+/// [Upstream resources](https://api.kde.org/kpropertyskeletonitem.html#setNotifyFunction)
+///
+/// @param self KPropertySkeletonItem*
+/// @param impl void func()
+///
+void k_propertyskeletonitem_set_notify_function(void* self, void (*impl)());
+
 /// Inherited from KConfigSkeletonItem
 ///
 /// [Upstream resources](https://api.kde.org/kconfigskeletonitem.html#setGroup)

@@ -2319,6 +2319,12 @@ void q_poppler_set_n_s_s_dir(const char* param1);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
+/// @param param1 char* func(const char* param1)
+///
+void q_poppler_set_n_s_s_password_callback(char* (*param1)(const char* funcparam1));
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
+///
 /// @param param1 bool
 ///
 void q_poppler_set_pgp_signatures_allowed(bool param1);

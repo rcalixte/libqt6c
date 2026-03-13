@@ -1219,6 +1219,10 @@ void q_poppler_set_n_s_s_dir(const char* param1) {
     Poppler_SetNSSDir(qstring(param1));
 }
 
+void q_poppler_set_n_s_s_password_callback(char* (*param1)(const char* funcparam1)) {
+    Poppler_SetNSSPasswordCallback((intptr_t)param1);
+}
+
 void q_poppler_set_pgp_signatures_allowed(bool param1) {
     Poppler_SetPgpSignaturesAllowed(param1);
 }

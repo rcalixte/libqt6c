@@ -71,6 +71,23 @@ bool q_webengineframe_is_main_frame(void* self);
 ///
 /// @param self QWebEngineFrame*
 /// @param script const char*
+/// @param callback void func(QVariant* param1)
+///
+void q_webengineframe_run_java_script(void* self, const char* script, void (*callback)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
+///
+/// @param self QWebEngineFrame*
+/// @param script const char*
+/// @param worldId uint32_t
+/// @param callback void func(QVariant* param1)
+///
+void q_webengineframe_run_java_script2(void* self, const char* script, uint32_t worldId, void (*callback)(void* funcparam1));
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
+///
+/// @param self QWebEngineFrame*
+/// @param script const char*
 ///
 void q_webengineframe_run_java_script3(void* self, const char* script);
 
@@ -80,6 +97,13 @@ void q_webengineframe_run_java_script3(void* self, const char* script);
 /// @param filePath const char*
 ///
 void q_webengineframe_print_to_pdf(void* self, const char* filePath);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#printToPdf)
+///
+/// @param self QWebEngineFrame*
+/// @param callback void func(char* param1)
+///
+void q_webengineframe_print_to_pdf2(void* self, void (*callback)(char* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineframe.html#runJavaScript)
 ///

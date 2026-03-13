@@ -809,6 +809,10 @@ bool q_poppler__document_xref_was_reconstructed(void* self) {
     return Poppler__Document_XrefWasReconstructed((Poppler__Document*)self);
 }
 
+void q_poppler__document_set_x_ref_reconstructed_callback(void* self, void (*callback)()) {
+    Poppler__Document_SetXRefReconstructedCallback((Poppler__Document*)self, (intptr_t)callback);
+}
+
 Poppler__Document* q_poppler__document_load22(const char* filePath, char* ownerPassword) {
     return Poppler__Document_Load22(qstring(filePath), qstring(ownerPassword));
 }

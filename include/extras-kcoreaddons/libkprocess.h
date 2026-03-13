@@ -464,6 +464,15 @@ void k_process_set_standard_output_process(void* self, void* destination);
 
 /// Inherited from QProcess
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setChildProcessModifier)
+///
+/// @param self KProcess*
+/// @param modifier void func()
+///
+void k_process_set_child_process_modifier(void* self, void (*modifier)());
+
+/// Inherited from QProcess
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
 ///
 /// @param self KProcess*

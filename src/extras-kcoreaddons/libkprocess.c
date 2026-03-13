@@ -392,6 +392,10 @@ void k_process_set_standard_output_process(void* self, void* destination) {
     QProcess_SetStandardOutputProcess((QProcess*)self, (QProcess*)destination);
 }
 
+void k_process_set_child_process_modifier(void* self, void (*modifier)()) {
+    QProcess_SetChildProcessModifier((QProcess*)self, (intptr_t)modifier);
+}
+
 void k_process_fail_child_process_modifier(void* self, const char* description) {
     QProcess_FailChildProcessModifier((QProcess*)self, description);
 }

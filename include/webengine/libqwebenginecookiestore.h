@@ -39,6 +39,13 @@ int32_t q_webenginecookiestore_metacall(void* self, int32_t param1, int param2, 
 ///
 const char* q_webenginecookiestore_tr(const char* s);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#setCookieFilter)
+///
+/// @param self QWebEngineCookieStore*
+/// @param filterCallback bool func(QWebEngineCookieStore__FilterRequest* param1)
+///
+void q_webenginecookiestore_set_cookie_filter(void* self, bool (*filterCallback)(void* funcparam1));
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore.html#setCookie)
 ///
 /// @param self QWebEngineCookieStore*
