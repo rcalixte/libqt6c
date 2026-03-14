@@ -1,4 +1,9 @@
 
+### 6.8.2 rev67 (14 March 2026)
+
+* Add [Qt Bluetooth](https://doc.qt.io/qt-6/qtbluetooth-index.html) and expand platform support (#124)
+* Extend support for function-based parameter types (#123)
+
 ### 6.8.2 rev66 (8 March 2026)
 
 * **BREAKING CHANGE:** Remove classes marked for pending deprecation or deletion (#121)
