@@ -390,6 +390,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		ret += "intptr_t"
 	case "quintptr", "QIntegerForSizeof<void *>::Unsigned":
 		ret += "uintptr_t"
+	case "quint128":
+		ret = "__uint128_t"
 
 	default:
 		if ft, ok := p.QFlagsOf(); ok {
@@ -492,6 +494,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		ret = "uint8_t"
 	case "uint", "unsigned int", "quint32":
 		ret = "uint32_t"
+	case "quint128":
+		ret = "__uint128_t"
 	}
 
 	if !strings.HasSuffix(ret, "*") {
@@ -1878,6 +1882,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 	}
 
 	for _, c := range src.Classes {
+		if !AllowDefinitionForClass(c.ClassName) {
+			continue
+		}
+
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
 		cfs.currentClassName = strings.ReplaceAll(c.ClassName, "::", "__")
@@ -2610,6 +2618,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 	}
 
 	for _, c := range src.Classes {
+		if !AllowDefinitionForClass(c.ClassName) {
+			continue
+		}
+
 		virtualMethods := c.VirtualMethods()
 		cStructName := cabiClassName(c.ClassName)
 		cfs.currentClassName = strings.ReplaceAll(c.ClassName, "::", "__")
