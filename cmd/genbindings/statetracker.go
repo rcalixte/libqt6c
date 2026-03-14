@@ -58,7 +58,7 @@ func (e CppEnum) getEnumTypeC() string {
 		return "uint8_t"
 	case "ushort", "quint16":
 		return "uint16_t"
-	case "uint32_t", "quint32", "unsigned int":
+	case "uint32_t", "quint32", "unsigned int", "uint":
 		return "uint32_t"
 	case "quint64":
 		return "uint64_t"
