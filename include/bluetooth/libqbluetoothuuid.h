@@ -1,0 +1,682 @@
+#pragma once
+#ifndef SRC_BLUETOOTH_QT6C_LIBQBLUETOOTHUUID_H
+#define SRC_BLUETOOTH_QT6C_LIBQBLUETOOTHUUID_H
+
+#include <stdbool.h>
+#include <stddef.h>
+
+#include "../libqttypedefs.h"
+
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+
+#include "../qtlibc.h"
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new constructs a new QBluetoothUuid object.
+///
+/// @param other QBluetoothUuid*
+///
+QBluetoothUuid* q_bluetoothuuid_new(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new2 constructs a new QBluetoothUuid object.
+///
+QBluetoothUuid* q_bluetoothuuid_new2();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new3 constructs a new QBluetoothUuid object.
+///
+/// @param uuid enum QBluetoothUuid__ProtocolUuid
+///
+QBluetoothUuid* q_bluetoothuuid_new3(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new4 constructs a new QBluetoothUuid object.
+///
+/// @param uuid enum QBluetoothUuid__ServiceClassUuid
+///
+QBluetoothUuid* q_bluetoothuuid_new4(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new5 constructs a new QBluetoothUuid object.
+///
+/// @param uuid enum QBluetoothUuid__CharacteristicType
+///
+QBluetoothUuid* q_bluetoothuuid_new5(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new6 constructs a new QBluetoothUuid object.
+///
+/// @param uuid enum QBluetoothUuid__DescriptorType
+///
+QBluetoothUuid* q_bluetoothuuid_new6(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new7 constructs a new QBluetoothUuid object.
+///
+/// @param uuid unsigned short
+///
+QBluetoothUuid* q_bluetoothuuid_new7(unsigned short uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new8 constructs a new QBluetoothUuid object.
+///
+/// @param uuid uint32_t
+///
+QBluetoothUuid* q_bluetoothuuid_new8(uint32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new9 constructs a new QBluetoothUuid object.
+///
+/// @param uuid QBluetoothUuid*
+///
+QBluetoothUuid* q_bluetoothuuid_new9(void* uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
+
+/// q_bluetoothuuid_new10 constructs a new QBluetoothUuid object.
+///
+/// @param uuid QUuid*
+///
+QBluetoothUuid* q_bluetoothuuid_new10(void* uuid);
+
+/// q_bluetoothuuid_copy_assign shallow copies `other` into `self`.
+///
+/// @param self QBluetoothUuid*
+/// @param other QBluetoothUuid*
+///
+void q_bluetoothuuid_copy_assign(void* self, void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#operator-eq)
+///
+/// @param self QBluetoothUuid*
+/// @param other QBluetoothUuid*
+///
+void q_bluetoothuuid_operator_assign(void* self, void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#minimumSize)
+///
+/// @param self QBluetoothUuid*
+///
+int32_t q_bluetoothuuid_minimum_size(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt16)
+///
+/// @param self QBluetoothUuid*
+///
+unsigned short q_bluetoothuuid_to_u_int16(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt32)
+///
+/// @param self QBluetoothUuid*
+///
+uint32_t q_bluetoothuuid_to_u_int32(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt128)
+///
+/// @param self QBluetoothUuid*
+///
+__uint128_t q_bluetoothuuid_to_u_int128(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#serviceClassToString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param uuid enum QBluetoothUuid__ServiceClassUuid
+///
+const char* q_bluetoothuuid_service_class_to_string(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#protocolToString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param uuid enum QBluetoothUuid__ProtocolUuid
+///
+const char* q_bluetoothuuid_protocol_to_string(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#characteristicToString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param uuid enum QBluetoothUuid__CharacteristicType
+///
+const char* q_bluetoothuuid_characteristic_to_string(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#descriptorToString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param uuid enum QBluetoothUuid__DescriptorType
+///
+const char* q_bluetoothuuid_descriptor_to_string(int32_t uuid);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt16)
+///
+/// @param self QBluetoothUuid*
+/// @param ok bool*
+///
+unsigned short q_bluetoothuuid_to_u_int161(void* self, bool* ok);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt32)
+///
+/// @param self QBluetoothUuid*
+/// @param ok bool*
+///
+uint32_t q_bluetoothuuid_to_u_int321(void* self, bool* ok);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt128)
+///
+/// @param self QBluetoothUuid*
+/// @param order enum QSysInfo__Endian
+///
+__uint128_t q_bluetoothuuid_to_u_int1281(void* self, int32_t order);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromString)
+///
+/// @param stringVal const char*
+///
+QUuid* q_bluetoothuuid_from_string(const char* stringVal);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QBluetoothUuid*
+///
+const char* q_bluetoothuuid_to_string(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toByteArray)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self QBluetoothUuid*
+///
+char* q_bluetoothuuid_to_byte_array(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toBytes)
+///
+/// @param self QBluetoothUuid*
+///
+QUuid__Id128Bytes* q_bluetoothuuid_to_bytes(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toRfc4122)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self QBluetoothUuid*
+///
+char* q_bluetoothuuid_to_rfc4122(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromBytes)
+///
+/// @param bytes void*
+///
+QUuid* q_bluetoothuuid_from_bytes(void* bytes);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromRfc4122)
+///
+/// @param param1 char*
+///
+QUuid* q_bluetoothuuid_from_rfc4122(char* param1);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#isNull)
+///
+/// @param self QBluetoothUuid*
+///
+bool q_bluetoothuuid_is_null(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuid)
+///
+QUuid* q_bluetoothuuid_create_uuid();
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuidV5)
+///
+/// @param ns QUuid*
+/// @param baseData char*
+///
+QUuid* q_bluetoothuuid_create_uuid_v5(void* ns, char* baseData);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#createUuidV3)
+///
+/// @param ns QUuid*
+/// @param baseData char*
+///
+QUuid* q_bluetoothuuid_create_uuid_v3(void* ns, char* baseData);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#variant)
+///
+/// @param self QBluetoothUuid*
+///
+/// @return enum QUuid__Variant
+///
+int32_t q_bluetoothuuid_variant(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#version)
+///
+/// @param self QBluetoothUuid*
+///
+/// @return enum QUuid__Version
+///
+int32_t q_bluetoothuuid_version(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data1-var)
+///
+/// @param self QBluetoothUuid*
+///
+uint32_t q_bluetoothuuid_data1(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data1-var)
+///
+/// @param self QBluetoothUuid*
+/// @param data1 uint32_t
+///
+void q_bluetoothuuid_set_data1(void* self, uint32_t data1);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
+///
+/// @param self QBluetoothUuid*
+///
+unsigned short q_bluetoothuuid_data2(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
+///
+/// @param self QBluetoothUuid*
+/// @param data2 unsigned short
+///
+void q_bluetoothuuid_set_data2(void* self, unsigned short data2);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
+///
+/// @param self QBluetoothUuid*
+///
+unsigned short q_bluetoothuuid_data3(void* self);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
+///
+/// @param self QBluetoothUuid*
+/// @param data3 unsigned short
+///
+void q_bluetoothuuid_set_data3(void* self, unsigned short data3);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QBluetoothUuid*
+/// @param mode enum QUuid__StringFormat
+///
+const char* q_bluetoothuuid_to_string1(void* self, int32_t mode);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toByteArray)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self QBluetoothUuid*
+/// @param mode enum QUuid__StringFormat
+///
+char* q_bluetoothuuid_to_byte_array1(void* self, int32_t mode);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toBytes)
+///
+/// @param self QBluetoothUuid*
+/// @param order enum QSysInfo__Endian
+///
+QUuid__Id128Bytes* q_bluetoothuuid_to_bytes1(void* self, int32_t order);
+
+/// Inherited from QUuid
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromBytes)
+///
+/// @param bytes void*
+/// @param order enum QSysInfo__Endian
+///
+QUuid* q_bluetoothuuid_from_bytes2(void* bytes, int32_t order);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#dtor.QBluetoothUuid)
+///
+/// Delete this object from C++ memory.
+///
+/// @param self QBluetoothUuid*
+///
+void q_bluetoothuuid_delete(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#public-types)
+
+typedef enum {
+    QBLUETOOTHUUID_PROTOCOLUUID_SDP = 1,
+    QBLUETOOTHUUID_PROTOCOLUUID_UDP = 2,
+    QBLUETOOTHUUID_PROTOCOLUUID_RFCOMM = 3,
+    QBLUETOOTHUUID_PROTOCOLUUID_TCP = 4,
+    QBLUETOOTHUUID_PROTOCOLUUID_TCSBIN = 5,
+    QBLUETOOTHUUID_PROTOCOLUUID_TCSAT = 6,
+    QBLUETOOTHUUID_PROTOCOLUUID_ATT = 7,
+    QBLUETOOTHUUID_PROTOCOLUUID_OBEX = 8,
+    QBLUETOOTHUUID_PROTOCOLUUID_IP = 9,
+    QBLUETOOTHUUID_PROTOCOLUUID_FTP = 10,
+    QBLUETOOTHUUID_PROTOCOLUUID_HTTP = 12,
+    QBLUETOOTHUUID_PROTOCOLUUID_WSP = 14,
+    QBLUETOOTHUUID_PROTOCOLUUID_BNEP = 15,
+    QBLUETOOTHUUID_PROTOCOLUUID_UPNP = 16,
+    QBLUETOOTHUUID_PROTOCOLUUID_HIDP = 17,
+    QBLUETOOTHUUID_PROTOCOLUUID_HARDCOPYCONTROLCHANNEL = 18,
+    QBLUETOOTHUUID_PROTOCOLUUID_HARDCOPYDATACHANNEL = 20,
+    QBLUETOOTHUUID_PROTOCOLUUID_HARDCOPYNOTIFICATION = 22,
+    QBLUETOOTHUUID_PROTOCOLUUID_AVCTP = 23,
+    QBLUETOOTHUUID_PROTOCOLUUID_AVDTP = 25,
+    QBLUETOOTHUUID_PROTOCOLUUID_CMTP = 27,
+    QBLUETOOTHUUID_PROTOCOLUUID_UDICPLAIN = 29,
+    QBLUETOOTHUUID_PROTOCOLUUID_MCAPCONTROLCHANNEL = 30,
+    QBLUETOOTHUUID_PROTOCOLUUID_MCAPDATACHANNEL = 31,
+    QBLUETOOTHUUID_PROTOCOLUUID_L2CAP = 256
+} QBluetoothUuid__ProtocolUuid;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#public-types)
+
+typedef enum {
+    QBLUETOOTHUUID_SERVICECLASSUUID_SERVICEDISCOVERYSERVER = 4096,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BROWSEGROUPDESCRIPTOR = 4097,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PUBLICBROWSEGROUP = 4098,
+    QBLUETOOTHUUID_SERVICECLASSUUID_SERIALPORT = 4353,
+    QBLUETOOTHUUID_SERVICECLASSUUID_LANACCESSUSINGPPP = 4354,
+    QBLUETOOTHUUID_SERVICECLASSUUID_DIALUPNETWORKING = 4355,
+    QBLUETOOTHUUID_SERVICECLASSUUID_IRMCSYNC = 4356,
+    QBLUETOOTHUUID_SERVICECLASSUUID_OBEXOBJECTPUSH = 4357,
+    QBLUETOOTHUUID_SERVICECLASSUUID_OBEXFILETRANSFER = 4358,
+    QBLUETOOTHUUID_SERVICECLASSUUID_IRMCSYNCCOMMAND = 4359,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HEADSET = 4360,
+    QBLUETOOTHUUID_SERVICECLASSUUID_AUDIOSOURCE = 4362,
+    QBLUETOOTHUUID_SERVICECLASSUUID_AUDIOSINK = 4363,
+    QBLUETOOTHUUID_SERVICECLASSUUID_AV_REMOTECONTROLTARGET = 4364,
+    QBLUETOOTHUUID_SERVICECLASSUUID_ADVANCEDAUDIODISTRIBUTION = 4365,
+    QBLUETOOTHUUID_SERVICECLASSUUID_AV_REMOTECONTROL = 4366,
+    QBLUETOOTHUUID_SERVICECLASSUUID_AV_REMOTECONTROLCONTROLLER = 4367,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HEADSETAG = 4370,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PANU = 4373,
+    QBLUETOOTHUUID_SERVICECLASSUUID_NAP = 4374,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GN = 4375,
+    QBLUETOOTHUUID_SERVICECLASSUUID_DIRECTPRINTING = 4376,
+    QBLUETOOTHUUID_SERVICECLASSUUID_REFERENCEPRINTING = 4377,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BASICIMAGE = 4378,
+    QBLUETOOTHUUID_SERVICECLASSUUID_IMAGINGRESPONDER = 4379,
+    QBLUETOOTHUUID_SERVICECLASSUUID_IMAGINGAUTOMATICARCHIVE = 4380,
+    QBLUETOOTHUUID_SERVICECLASSUUID_IMAGINGREFERENCEOBJECTS = 4381,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HANDSFREE = 4382,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HANDSFREEAUDIOGATEWAY = 4383,
+    QBLUETOOTHUUID_SERVICECLASSUUID_DIRECTPRINTINGREFERENCEOBJECTSSERVICE = 4384,
+    QBLUETOOTHUUID_SERVICECLASSUUID_REFLECTEDUI = 4385,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BASICPRINTING = 4386,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PRINTINGSTATUS = 4387,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HUMANINTERFACEDEVICESERVICE = 4388,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HARDCOPYCABLEREPLACEMENT = 4389,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HCRPRINT = 4390,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HCRSCAN = 4391,
+    QBLUETOOTHUUID_SERVICECLASSUUID_SIMACCESS = 4397,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PHONEBOOKACCESSPCE = 4398,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PHONEBOOKACCESSPSE = 4399,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PHONEBOOKACCESS = 4400,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HEADSETHS = 4401,
+    QBLUETOOTHUUID_SERVICECLASSUUID_MESSAGEACCESSSERVER = 4402,
+    QBLUETOOTHUUID_SERVICECLASSUUID_MESSAGENOTIFICATIONSERVER = 4403,
+    QBLUETOOTHUUID_SERVICECLASSUUID_MESSAGEACCESSPROFILE = 4404,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GNSS = 4405,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GNSSSERVER = 4406,
+    QBLUETOOTHUUID_SERVICECLASSUUID_DISPLAY3D = 4407,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GLASSES3D = 4408,
+    QBLUETOOTHUUID_SERVICECLASSUUID_SYNCHRONIZATION3D = 4409,
+    QBLUETOOTHUUID_SERVICECLASSUUID_MPSPROFILE = 4410,
+    QBLUETOOTHUUID_SERVICECLASSUUID_MPSSERVICE = 4411,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PNPINFORMATION = 4608,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GENERICNETWORKING = 4609,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GENERICFILETRANSFER = 4610,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GENERICAUDIO = 4611,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GENERICTELEPHONY = 4612,
+    QBLUETOOTHUUID_SERVICECLASSUUID_VIDEOSOURCE = 4867,
+    QBLUETOOTHUUID_SERVICECLASSUUID_VIDEOSINK = 4868,
+    QBLUETOOTHUUID_SERVICECLASSUUID_VIDEODISTRIBUTION = 4869,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HDP = 5120,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HDPSOURCE = 5121,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HDPSINK = 5122,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GENERICACCESS = 6144,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GENERICATTRIBUTE = 6145,
+    QBLUETOOTHUUID_SERVICECLASSUUID_IMMEDIATEALERT = 6146,
+    QBLUETOOTHUUID_SERVICECLASSUUID_LINKLOSS = 6147,
+    QBLUETOOTHUUID_SERVICECLASSUUID_TXPOWER = 6148,
+    QBLUETOOTHUUID_SERVICECLASSUUID_CURRENTTIMESERVICE = 6149,
+    QBLUETOOTHUUID_SERVICECLASSUUID_REFERENCETIMEUPDATESERVICE = 6150,
+    QBLUETOOTHUUID_SERVICECLASSUUID_NEXTDSTCHANGESERVICE = 6151,
+    QBLUETOOTHUUID_SERVICECLASSUUID_GLUCOSE = 6152,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HEALTHTHERMOMETER = 6153,
+    QBLUETOOTHUUID_SERVICECLASSUUID_DEVICEINFORMATION = 6154,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HEARTRATE = 6157,
+    QBLUETOOTHUUID_SERVICECLASSUUID_PHONEALERTSTATUSSERVICE = 6158,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BATTERYSERVICE = 6159,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BLOODPRESSURE = 6160,
+    QBLUETOOTHUUID_SERVICECLASSUUID_ALERTNOTIFICATIONSERVICE = 6161,
+    QBLUETOOTHUUID_SERVICECLASSUUID_HUMANINTERFACEDEVICE = 6162,
+    QBLUETOOTHUUID_SERVICECLASSUUID_SCANPARAMETERS = 6163,
+    QBLUETOOTHUUID_SERVICECLASSUUID_RUNNINGSPEEDANDCADENCE = 6164,
+    QBLUETOOTHUUID_SERVICECLASSUUID_CYCLINGSPEEDANDCADENCE = 6166,
+    QBLUETOOTHUUID_SERVICECLASSUUID_CYCLINGPOWER = 6168,
+    QBLUETOOTHUUID_SERVICECLASSUUID_LOCATIONANDNAVIGATION = 6169,
+    QBLUETOOTHUUID_SERVICECLASSUUID_ENVIRONMENTALSENSING = 6170,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BODYCOMPOSITION = 6171,
+    QBLUETOOTHUUID_SERVICECLASSUUID_USERDATA = 6172,
+    QBLUETOOTHUUID_SERVICECLASSUUID_WEIGHTSCALE = 6173,
+    QBLUETOOTHUUID_SERVICECLASSUUID_BONDMANAGEMENT = 6174,
+    QBLUETOOTHUUID_SERVICECLASSUUID_CONTINUOUSGLUCOSEMONITORING = 6175
+} QBluetoothUuid__ServiceClassUuid;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#public-types)
+
+typedef enum {
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DEVICENAME = 10752,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_APPEARANCE = 10753,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_PERIPHERALPRIVACYFLAG = 10754,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RECONNECTIONADDRESS = 10755,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_PERIPHERALPREFERREDCONNECTIONPARAMETERS = 10756,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SERVICECHANGED = 10757,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ALERTLEVEL = 10758,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TXPOWERLEVEL = 10759,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DATETIME = 10760,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DAYOFWEEK = 10761,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DAYDATETIME = 10762,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_EXACTTIME256 = 10764,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DSTOFFSET = 10765,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TIMEZONE = 10766,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_LOCALTIMEINFORMATION = 10767,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TIMEWITHDST = 10769,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TIMEACCURACY = 10770,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TIMESOURCE = 10771,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_REFERENCETIMEINFORMATION = 10772,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TIMEUPDATECONTROLPOINT = 10774,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TIMEUPDATESTATE = 10775,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_GLUCOSEMEASUREMENT = 10776,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BATTERYLEVEL = 10777,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TEMPERATUREMEASUREMENT = 10780,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TEMPERATURETYPE = 10781,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_INTERMEDIATETEMPERATURE = 10782,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MEASUREMENTINTERVAL = 10785,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BOOTKEYBOARDINPUTREPORT = 10786,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SYSTEMID = 10787,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MODELNUMBERSTRING = 10788,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SERIALNUMBERSTRING = 10789,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_FIRMWAREREVISIONSTRING = 10790,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HARDWAREREVISIONSTRING = 10791,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SOFTWAREREVISIONSTRING = 10792,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MANUFACTURERNAMESTRING = 10793,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_IEEE1107320601REGULATORYCERTIFICATIONDATALIST = 10794,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CURRENTTIME = 10795,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MAGNETICDECLINATION = 10796,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SCANREFRESH = 10801,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BOOTKEYBOARDOUTPUTREPORT = 10802,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BOOTMOUSEINPUTREPORT = 10803,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_GLUCOSEMEASUREMENTCONTEXT = 10804,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BLOODPRESSUREMEASUREMENT = 10805,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_INTERMEDIATECUFFPRESSURE = 10806,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HEARTRATEMEASUREMENT = 10807,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BODYSENSORLOCATION = 10808,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HEARTRATECONTROLPOINT = 10809,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ALERTSTATUS = 10815,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RINGERCONTROLPOINT = 10816,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RINGERSETTING = 10817,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ALERTCATEGORYIDBITMASK = 10818,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ALERTCATEGORYID = 10819,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ALERTNOTIFICATIONCONTROLPOINT = 10820,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_UNREADALERTSTATUS = 10821,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_NEWALERT = 10822,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SUPPORTEDNEWALERTCATEGORY = 10823,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SUPPORTEDUNREADALERTCATEGORY = 10824,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BLOODPRESSUREFEATURE = 10825,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HIDINFORMATION = 10826,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_REPORTMAP = 10827,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HIDCONTROLPOINT = 10828,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_REPORT = 10829,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_PROTOCOLMODE = 10830,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SCANINTERVALWINDOW = 10831,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_PNPID = 10832,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_GLUCOSEFEATURE = 10833,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RECORDACCESSCONTROLPOINT = 10834,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RSCMEASUREMENT = 10835,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RSCFEATURE = 10836,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SCCONTROLPOINT = 10837,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CSCMEASUREMENT = 10843,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CSCFEATURE = 10844,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SENSORLOCATION = 10845,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CYCLINGPOWERMEASUREMENT = 10851,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CYCLINGPOWERVECTOR = 10852,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CYCLINGPOWERFEATURE = 10853,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_CYCLINGPOWERCONTROLPOINT = 10854,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_LOCATIONANDSPEED = 10855,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_NAVIGATION = 10856,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_POSITIONQUALITY = 10857,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_LNFEATURE = 10858,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_LNCONTROLPOINT = 10859,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ELEVATION = 10860,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_PRESSURE = 10861,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TEMPERATURE = 10862,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HUMIDITY = 10863,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TRUEWINDSPEED = 10864,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TRUEWINDDIRECTION = 10865,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_APPARENTWINDSPEED = 10866,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_APPARENTWINDDIRECTION = 10867,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_GUSTFACTOR = 10868,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_POLLENCONCENTRATION = 10869,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_UVINDEX = 10870,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_IRRADIANCE = 10871,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RAINFALL = 10872,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_WINDCHILL = 10873,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HEATINDEX = 10874,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DEWPOINT = 10875,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DESCRIPTORVALUECHANGED = 10877,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_AEROBICHEARTRATELOWERLIMIT = 10878,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_AEROBICTHRESHOLD = 10879,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_AGE = 10880,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ANAEROBICHEARTRATELOWERLIMIT = 10881,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ANAEROBICHEARTRATEUPPERLIMIT = 10882,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_ANAEROBICTHRESHOLD = 10883,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_AEROBICHEARTRATEUPPERLIMIT = 10884,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DATEOFBIRTH = 10885,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DATEOFTHRESHOLDASSESSMENT = 10886,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_EMAILADDRESS = 10887,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_FATBURNHEARTRATELOWERLIMIT = 10888,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_FATBURNHEARTRATEUPPERLIMIT = 10889,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_FIRSTNAME = 10890,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_FIVEZONEHEARTRATELIMITS = 10891,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_GENDER = 10892,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HEARTRATEMAX = 10893,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HEIGHT = 10894,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_HIPCIRCUMFERENCE = 10895,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_LASTNAME = 10896,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MAXIMUMRECOMMENDEDHEARTRATE = 10897,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_RESTINGHEARTRATE = 10898,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_SPORTTYPEFORAEROBICANAEROBICTHRESHOLDS = 10899,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_THREEZONEHEARTRATELIMITS = 10900,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_TWOZONEHEARTRATELIMITS = 10901,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_VO2MAX = 10902,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_WAISTCIRCUMFERENCE = 10903,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_WEIGHT = 10904,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_DATABASECHANGEINCREMENT = 10905,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_USERINDEX = 10906,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BODYCOMPOSITIONFEATURE = 10907,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BODYCOMPOSITIONMEASUREMENT = 10908,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_WEIGHTMEASUREMENT = 10909,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_WEIGHTSCALEFEATURE = 10910,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_USERCONTROLPOINT = 10911,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MAGNETICFLUXDENSITY2D = 10912,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_MAGNETICFLUXDENSITY3D = 10913,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_LANGUAGE = 10914,
+    QBLUETOOTHUUID_CHARACTERISTICTYPE_BAROMETRICPRESSURETREND = 10915
+} QBluetoothUuid__CharacteristicType;
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#public-types)
+
+typedef enum {
+    QBLUETOOTHUUID_DESCRIPTORTYPE_UNKNOWNDESCRIPTORTYPE = 0,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_CHARACTERISTICEXTENDEDPROPERTIES = 10496,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_CHARACTERISTICUSERDESCRIPTION = 10497,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_CLIENTCHARACTERISTICCONFIGURATION = 10498,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_SERVERCHARACTERISTICCONFIGURATION = 10499,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_CHARACTERISTICPRESENTATIONFORMAT = 10500,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_CHARACTERISTICAGGREGATEFORMAT = 10501,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_VALIDRANGE = 10502,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_EXTERNALREPORTREFERENCE = 10503,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_REPORTREFERENCE = 10504,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_ENVIRONMENTALSENSINGCONFIGURATION = 10507,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_ENVIRONMENTALSENSINGMEASUREMENT = 10508,
+    QBLUETOOTHUUID_DESCRIPTORTYPE_ENVIRONMENTALSENSINGTRIGGERSETTING = 10509
+} QBluetoothUuid__DescriptorType;
+
+#endif

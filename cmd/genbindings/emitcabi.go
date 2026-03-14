@@ -192,6 +192,8 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 		ret = "uintptr_t"
 	case "qsizetype", "qptrdiff", "QIntegerForSizeof<std::size_t>::Signed":
 		ret = "ptrdiff_t"
+	case "quint128":
+		ret = "__uint128_t"
 	}
 
 	if p.IsChronoSeconds() {
@@ -1417,6 +1419,10 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 #include "` + maybeDots + `qtlibc.h"` + "\n\n\n")
 
 	for _, c := range src.Classes {
+		if !AllowDefinitionForClass(c.ClassName) {
+			continue
+		}
+
 		cppClassName := c.ClassName
 		methodPrefixName := cabiClassName(cppClassName)
 		virtualMethods := c.VirtualMethods()
@@ -1794,6 +1800,10 @@ extern "C" {
 	}
 
 	for _, c := range src.Classes {
+		if !AllowDefinitionForClass(c.ClassName) {
+			continue
+		}
+
 		methodPrefixName := cabiClassName(c.ClassName)
 		virtualMethods := c.VirtualMethods()
 		protectedMethods := c.ProtectedMethods()
@@ -2043,6 +2053,10 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 	ret.WriteString(`#include "` + filename + `xx"` + "\n\n")
 
 	for _, c := range src.Classes {
+		if !AllowDefinitionForClass(c.ClassName) {
+			continue
+		}
+
 		methodPrefixName := cabiClassName(c.ClassName)
 		virtualMethods := c.VirtualMethods()
 		protectedMethods := c.ProtectedMethods()
