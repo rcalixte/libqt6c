@@ -131,6 +131,11 @@ func (p CppParameter) QtClassType() bool {
 		return true
 	}
 
+	// as of Qt 6.8, quint128 is detected as a class
+	if p.ParameterType == "quint128" {
+		return false
+	}
+
 	// Maybe if it's an inner class
 	if _, ok := KnownClassnames[p.ParameterType]; ok {
 		return true
@@ -149,6 +154,11 @@ func (p CppParameter) IsKnownEnum() bool {
 }
 
 func IsKnownClass(className string) bool {
+	// as of Qt 6.8, quint128 is detected as a class
+	if className == "quint128" {
+		return false
+	}
+
 	_, ok := KnownClassnames[className]
 	return ok
 }
@@ -286,7 +296,7 @@ func (p CppParameter) IntType() bool {
 		"QIntegerForSizeof<void *>::Signed",
 		"QIntegerForSizeof<std::size_t>::Signed",
 		"qptrdiff", "ptrdiff_t",
-		"double", "float", "qreal":
+		"double", "float", "qreal", "quint128":
 		return true
 
 	case "char":
