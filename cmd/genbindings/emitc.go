@@ -174,6 +174,8 @@ func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className
 				pageName = "ksvg-" + pageName
 			case "extras-ksyntaxhighlighting":
 				pageName = "ksyntaxhighlighting-" + pageName
+			case "extras-kunitconversion":
+				pageName = "kunitconversion"
 			case "extras-solid":
 				pageName = "solid-" + pageName
 			case "extras-sonnet":

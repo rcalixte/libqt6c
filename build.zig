@@ -44,23 +44,20 @@ pub fn build(b: *std.Build) !void {
                 std.fs.cwd().access(isystem_path, .{}) catch {
                     continue;
                 };
-                try linux_isystem.append(
-                    b.allocator,
-                    isystem_path,
-                );
+                try linux_isystem.append(b.allocator, isystem_path);
             }
         }
 
         for (linux_isystem.items) |isystem_path| {
-            if (distro == .none) {
+            if (distro == .none)
                 if (std.mem.containsAtLeast(u8, isystem_path, 1, "suse-linux")) {
                     distro = .suse;
                 } else if (std.mem.containsAtLeastScalar(u8, isystem_path, 2, '.') and !std.mem.containsAtLeast(u8, isystem_path, 1, "..")) {
                     distro = .arch;
                 } else if (std.mem.containsAtLeast(u8, isystem_path, 1, "redhat-linux")) {
                     distro = .fedora;
-                }
-            }
+                };
+
             try cpp_flags.append(b.allocator, b.fmt("-isystem{s}", .{isystem_path}));
         }
 
@@ -70,7 +67,7 @@ pub fn build(b: *std.Build) !void {
                 .argv = &.{ "lsb_release", "-rs" },
             });
             const version_str = std.mem.trim(u8, version.stdout, &std.ascii.whitespace);
-            try cpp_flags.append(b.allocator, b.fmt("-isystem{s}", .{b.fmt("/usr/" ++ @tagName(host_arch) ++ "-redhat-linux/sys-root/fc{s}/usr/include", .{version_str})}));
+            try cpp_flags.append(b.allocator, b.fmt("-isystem/usr/" ++ @tagName(host_arch) ++ "-redhat-linux/sys-root/fc{s}/usr/include", .{version_str}));
         }
     }
 
@@ -407,6 +404,10 @@ const qt_modules = &.{
     "KSyntaxHighlighting/KSyntaxHighlighting",
     // Qt 6 KTextWidgets
     "KTextWidgets",
+    // Qt 6 KUnitConversion
+    "KUnitConversion",
+    "KUnitConversion/KUnitConversion",
+    "KUnitConversion/kunitconversion",
     // Qt 6 KWidgetsAddons
     "KWidgetsAddons",
     // Qt 6 KColorScheme
