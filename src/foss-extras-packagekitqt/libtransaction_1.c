@@ -89,7 +89,7 @@ uint32_t q_packagekit__transaction_speed(void* self) {
     return PackageKit__Transaction_Speed((PackageKit__Transaction*)self);
 }
 
-uint64_t q_packagekit__transaction_download_size_remaining(void* self) {
+uintptr_t q_packagekit__transaction_download_size_remaining(void* self) {
     return PackageKit__Transaction_DownloadSizeRemaining((PackageKit__Transaction*)self);
 }
 

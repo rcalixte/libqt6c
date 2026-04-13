@@ -243,7 +243,7 @@ void q_dir_set_sorting(void* self, int32_t sort);
 ///
 /// @param self QDir*
 ///
-int64_t q_dir_count(void* self);
+intptr_t q_dir_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#isEmpty)
 ///
@@ -256,9 +256,9 @@ bool q_dir_is_empty(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDir*
-/// @param param1 long long
+/// @param param1 intptr_t
 ///
-const char* q_dir_operator_subscript(void* self, long long param1);
+const char* q_dir_operator_subscript(void* self, intptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdir.html#nameFiltersFromString)
 ///

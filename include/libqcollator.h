@@ -150,11 +150,11 @@ int32_t q_collator_compare(void* self, const char* s1, const char* s2);
 ///
 /// @param self QCollator*
 /// @param s1 QChar*
-/// @param len1 int64_t
+/// @param len1 intptr_t
 /// @param s2 QChar*
-/// @param len2 int64_t
+/// @param len2 intptr_t
 ///
-int32_t q_collator_compare2(void* self, void* s1, int64_t len1, void* s2, int64_t len2);
+int32_t q_collator_compare2(void* self, void* s1, intptr_t len1, void* s2, intptr_t len2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#operator-28-29)
 ///

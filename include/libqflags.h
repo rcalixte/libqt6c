@@ -55,9 +55,9 @@ QFlag* q_flag_new5(short value);
 
 /// q_flag_new6 constructs a new QFlag object.
 ///
-/// @param value unsigned short
+/// @param value uint16_t
 ///
-QFlag* q_flag_new6(unsigned short value);
+QFlag* q_flag_new6(uint16_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qflag.html)
 

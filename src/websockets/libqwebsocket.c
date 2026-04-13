@@ -101,7 +101,7 @@ QHostAddress* q_websocket_local_address(void* self) {
     return QWebSocket_LocalAddress((QWebSocket*)self);
 }
 
-unsigned short q_websocket_local_port(void* self) {
+uint16_t q_websocket_local_port(void* self) {
     return QWebSocket_LocalPort((QWebSocket*)self);
 }
 
@@ -120,7 +120,7 @@ const char* q_websocket_peer_name(void* self) {
     return _ret;
 }
 
-unsigned short q_websocket_peer_port(void* self) {
+uint16_t q_websocket_peer_port(void* self) {
     return QWebSocket_PeerPort((QWebSocket*)self);
 }
 
@@ -140,11 +140,11 @@ const QMaskGenerator* q_websocket_mask_generator(void* self) {
     return QWebSocket_MaskGenerator((QWebSocket*)self);
 }
 
-long long q_websocket_read_buffer_size(void* self) {
+int64_t q_websocket_read_buffer_size(void* self) {
     return QWebSocket_ReadBufferSize((QWebSocket*)self);
 }
 
-void q_websocket_set_read_buffer_size(void* self, long long size) {
+void q_websocket_set_read_buffer_size(void* self, int64_t size) {
     QWebSocket_SetReadBufferSize((QWebSocket*)self, size);
 }
 
@@ -208,11 +208,11 @@ const char* q_websocket_close_reason(void* self) {
     return _ret;
 }
 
-long long q_websocket_send_text_message(void* self, const char* message) {
+int64_t q_websocket_send_text_message(void* self, const char* message) {
     return QWebSocket_SendTextMessage((QWebSocket*)self, qstring(message));
 }
 
-long long q_websocket_send_binary_message(void* self, char* data) {
+int64_t q_websocket_send_binary_message(void* self, char* data) {
     return QWebSocket_SendBinaryMessage((QWebSocket*)self, qstring(data));
 }
 
@@ -232,7 +232,7 @@ QSslConfiguration* q_websocket_ssl_configuration(void* self) {
     return QWebSocket_SslConfiguration((QWebSocket*)self);
 }
 
-long long q_websocket_bytes_to_write(void* self) {
+int64_t q_websocket_bytes_to_write(void* self) {
     return QWebSocket_BytesToWrite((QWebSocket*)self);
 }
 
@@ -408,11 +408,11 @@ void q_websocket_on_pong(void* self, void (*callback)(void*, uint64_t, libqt_str
     QWebSocket_Connect_Pong((QWebSocket*)self, (intptr_t)callback);
 }
 
-void q_websocket_bytes_written(void* self, long long bytes) {
+void q_websocket_bytes_written(void* self, int64_t bytes) {
     QWebSocket_BytesWritten((QWebSocket*)self, bytes);
 }
 
-void q_websocket_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void q_websocket_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QWebSocket_Connect_BytesWritten((QWebSocket*)self, (intptr_t)callback);
 }
 

@@ -432,9 +432,9 @@ bool k_autosavefile_open4(void* self, int fd, int32_t ioFlags);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#resize)
 ///
 /// @param filename const char*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool k_autosavefile_resize2(const char* filename, long long sz);
+bool k_autosavefile_resize2(const char* filename, int64_t sz);
 
 /// Inherited from QFile
 ///
@@ -505,10 +505,10 @@ bool k_autosavefile_flush(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self KAutoSaveFile*
-/// @param offset long long
-/// @param size long long
+/// @param offset int64_t
+/// @param size int64_t
 ///
-unsigned char* k_autosavefile_map(void* self, long long offset, long long size);
+unsigned char* k_autosavefile_map(void* self, int64_t offset, int64_t size);
 
 /// Inherited from QFileDevice
 ///
@@ -543,11 +543,11 @@ bool k_autosavefile_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self KAutoSaveFile*
-/// @param offset long long
-/// @param size long long
+/// @param offset int64_t
+/// @param size int64_t
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
 ///
-unsigned char* k_autosavefile_map3(void* self, long long offset, long long size, int32_t flags);
+unsigned char* k_autosavefile_map3(void* self, int64_t offset, int64_t size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -656,9 +656,9 @@ void k_autosavefile_set_current_write_channel(void* self, int channel);
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_read(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -667,9 +667,9 @@ long long k_autosavefile_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_autosavefile_read2(void* self, long long maxlen);
+char* k_autosavefile_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -687,9 +687,9 @@ char* k_autosavefile_read_all(void* self);
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_read_line(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -739,9 +739,9 @@ bool k_autosavefile_is_transaction_started(void* self);
 ///
 /// @param self KAutoSaveFile*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_autosavefile_write(void* self, const char* data, long long lenVal);
+int64_t k_autosavefile_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -750,7 +750,7 @@ long long k_autosavefile_write(void* self, const char* data, long long lenVal);
 /// @param self KAutoSaveFile*
 /// @param data const char*
 ///
-long long k_autosavefile_write2(void* self, const char* data);
+int64_t k_autosavefile_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -759,7 +759,7 @@ long long k_autosavefile_write2(void* self, const char* data);
 /// @param self KAutoSaveFile*
 /// @param data char*
 ///
-long long k_autosavefile_write3(void* self, char* data);
+int64_t k_autosavefile_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -767,9 +767,9 @@ long long k_autosavefile_write3(void* self, char* data);
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_peek(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -778,18 +778,18 @@ long long k_autosavefile_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_autosavefile_peek2(void* self, long long maxlen);
+char* k_autosavefile_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self KAutoSaveFile*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_autosavefile_skip(void* self, long long maxSize);
+int64_t k_autosavefile_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -868,18 +868,18 @@ void k_autosavefile_on_channel_ready_read(void* self, void (*callback)(void*, in
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KAutoSaveFile*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void k_autosavefile_bytes_written(void* self, long long bytes);
+void k_autosavefile_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KAutoSaveFile*
-/// @param callback void func(KAutoSaveFile* self, long long bytes)
+/// @param callback void func(KAutoSaveFile* self, int64_t bytes)
 ///
-void k_autosavefile_on_bytes_written(void* self, void (*callback)(void*, long long));
+void k_autosavefile_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -887,18 +887,18 @@ void k_autosavefile_on_bytes_written(void* self, void (*callback)(void*, long lo
 ///
 /// @param self KAutoSaveFile*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void k_autosavefile_channel_bytes_written(void* self, int channel, long long bytes);
+void k_autosavefile_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self KAutoSaveFile*
-/// @param callback void func(KAutoSaveFile* self, int channel, long long bytes)
+/// @param callback void func(KAutoSaveFile* self, int channel, int64_t bytes)
 ///
-void k_autosavefile_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void k_autosavefile_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -941,9 +941,9 @@ void k_autosavefile_on_read_channel_finished(void* self, void (*callback)(void*)
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KAutoSaveFile*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_autosavefile_read_line1(void* self, long long maxlen);
+char* k_autosavefile_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1439,7 +1439,7 @@ void k_autosavefile_on_file_name(void* self, const char* (*callback)());
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_size(void* self);
+int64_t k_autosavefile_size(void* self);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_size` instead
 ///
@@ -1453,7 +1453,7 @@ long long k_autosavefile_size(void* self);
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_super_size(void* self);
+int64_t k_autosavefile_super_size(void* self);
 
 /// Inherited from QFile
 ///
@@ -1462,9 +1462,9 @@ long long k_autosavefile_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_autosavefile_on_size(void* self, long long (*callback)());
+void k_autosavefile_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QFile
 ///
@@ -1473,9 +1473,9 @@ void k_autosavefile_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool k_autosavefile_resize(void* self, long long sz);
+bool k_autosavefile_resize(void* self, int64_t sz);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_resize` instead
 ///
@@ -1488,9 +1488,9 @@ bool k_autosavefile_resize(void* self, long long sz);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool k_autosavefile_super_resize(void* self, long long sz);
+bool k_autosavefile_super_resize(void* self, int64_t sz);
 
 /// Inherited from QFile
 ///
@@ -1499,9 +1499,9 @@ bool k_autosavefile_super_resize(void* self, long long sz);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback bool func(KAutoSaveFile* self, long long sz)
+/// @param callback bool func(KAutoSaveFile* self, int64_t sz)
 ///
-void k_autosavefile_on_resize(void* self, bool (*callback)(void*, long long));
+void k_autosavefile_on_resize(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QFile
 ///
@@ -1657,7 +1657,7 @@ void k_autosavefile_on_is_sequential(void* self, bool (*callback)());
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_pos(void* self);
+int64_t k_autosavefile_pos(void* self);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_pos` instead
 ///
@@ -1671,7 +1671,7 @@ long long k_autosavefile_pos(void* self);
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_super_pos(void* self);
+int64_t k_autosavefile_super_pos(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1680,9 +1680,9 @@ long long k_autosavefile_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_autosavefile_on_pos(void* self, long long (*callback)());
+void k_autosavefile_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QFileDevice
 ///
@@ -1691,9 +1691,9 @@ void k_autosavefile_on_pos(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param offset long long
+/// @param offset int64_t
 ///
-bool k_autosavefile_seek(void* self, long long offset);
+bool k_autosavefile_seek(void* self, int64_t offset);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_seek` instead
 ///
@@ -1706,9 +1706,9 @@ bool k_autosavefile_seek(void* self, long long offset);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param offset long long
+/// @param offset int64_t
 ///
-bool k_autosavefile_super_seek(void* self, long long offset);
+bool k_autosavefile_super_seek(void* self, int64_t offset);
 
 /// Inherited from QFileDevice
 ///
@@ -1717,9 +1717,9 @@ bool k_autosavefile_super_seek(void* self, long long offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback bool func(KAutoSaveFile* self, long long offset)
+/// @param callback bool func(KAutoSaveFile* self, int64_t offset)
 ///
-void k_autosavefile_on_seek(void* self, bool (*callback)(void*, long long));
+void k_autosavefile_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1764,9 +1764,9 @@ void k_autosavefile_on_at_end(void* self, bool (*callback)());
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_read_data(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_read_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_read_data` instead
 ///
@@ -1780,9 +1780,9 @@ long long k_autosavefile_read_data(void* self, char* data, long long maxlen);
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_super_read_data(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QFileDevice
 ///
@@ -1791,9 +1791,9 @@ long long k_autosavefile_super_read_data(void* self, char* data, long long maxle
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func(KAutoSaveFile* self, char* data, long long maxlen)
+/// @param callback int64_t func(KAutoSaveFile* self, char* data, int64_t maxlen)
 ///
-void k_autosavefile_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void k_autosavefile_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1803,9 +1803,9 @@ void k_autosavefile_on_read_data(void* self, long long (*callback)(void*, char*,
 ///
 /// @param self KAutoSaveFile*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_autosavefile_write_data(void* self, const char* data, long long lenVal);
+int64_t k_autosavefile_write_data(void* self, const char* data, int64_t lenVal);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_write_data` instead
 ///
@@ -1819,9 +1819,9 @@ long long k_autosavefile_write_data(void* self, const char* data, long long lenV
 ///
 /// @param self KAutoSaveFile*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_autosavefile_super_write_data(void* self, const char* data, long long lenVal);
+int64_t k_autosavefile_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QFileDevice
 ///
@@ -1830,9 +1830,9 @@ long long k_autosavefile_super_write_data(void* self, const char* data, long lon
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func(KAutoSaveFile* self, const char* data, long long lenVal)
+/// @param callback int64_t func(KAutoSaveFile* self, const char* data, int64_t lenVal)
 ///
-void k_autosavefile_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void k_autosavefile_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1842,9 +1842,9 @@ void k_autosavefile_on_write_data(void* self, long long (*callback)(void*, const
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_read_line_data(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_read_line_data` instead
 ///
@@ -1858,9 +1858,9 @@ long long k_autosavefile_read_line_data(void* self, char* data, long long maxlen
 ///
 /// @param self KAutoSaveFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_autosavefile_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t k_autosavefile_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QFileDevice
 ///
@@ -1869,9 +1869,9 @@ long long k_autosavefile_super_read_line_data(void* self, char* data, long long 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func(KAutoSaveFile* self, char* data, long long maxlen)
+/// @param callback int64_t func(KAutoSaveFile* self, char* data, int64_t maxlen)
 ///
-void k_autosavefile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void k_autosavefile_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1916,7 +1916,7 @@ void k_autosavefile_on_reset(void* self, bool (*callback)());
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_bytes_available(void* self);
+int64_t k_autosavefile_bytes_available(void* self);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_bytes_available` instead
 ///
@@ -1930,7 +1930,7 @@ long long k_autosavefile_bytes_available(void* self);
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_super_bytes_available(void* self);
+int64_t k_autosavefile_super_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1939,9 +1939,9 @@ long long k_autosavefile_super_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_autosavefile_on_bytes_available(void* self, long long (*callback)());
+void k_autosavefile_on_bytes_available(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1951,7 +1951,7 @@ void k_autosavefile_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_bytes_to_write(void* self);
+int64_t k_autosavefile_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_bytes_to_write` instead
 ///
@@ -1965,7 +1965,7 @@ long long k_autosavefile_bytes_to_write(void* self);
 ///
 /// @param self KAutoSaveFile*
 ///
-long long k_autosavefile_super_bytes_to_write(void* self);
+int64_t k_autosavefile_super_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1974,9 +1974,9 @@ long long k_autosavefile_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_autosavefile_on_bytes_to_write(void* self, long long (*callback)());
+void k_autosavefile_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2094,9 +2094,9 @@ void k_autosavefile_on_wait_for_bytes_written(void* self, bool (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_autosavefile_skip_data(void* self, long long maxSize);
+int64_t k_autosavefile_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `k_autosavefile_super_skip_data` instead
 ///
@@ -2109,9 +2109,9 @@ long long k_autosavefile_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_autosavefile_super_skip_data(void* self, long long maxSize);
+int64_t k_autosavefile_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -2120,9 +2120,9 @@ long long k_autosavefile_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAutoSaveFile*
-/// @param callback long long func(KAutoSaveFile* self, long long maxSize)
+/// @param callback int64_t func(KAutoSaveFile* self, int64_t maxSize)
 ///
-void k_autosavefile_on_skip_data(void* self, long long (*callback)(void*, long long));
+void k_autosavefile_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///

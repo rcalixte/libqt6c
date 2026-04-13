@@ -2266,9 +2266,9 @@ int32_t k_io__skipdialog_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_io__skipdialog_find(uint64_t param1);
+QWidget* k_io__skipdialog_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

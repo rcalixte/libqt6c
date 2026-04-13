@@ -182,15 +182,15 @@ const char* k_io__mimetypefinderjob_error_text(void* self) {
     return _ret;
 }
 
-uint64_t k_io__mimetypefinderjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__mimetypefinderjob_processed_amount(void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__mimetypefinderjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__mimetypefinderjob_total_amount(void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__mimetypefinderjob_percent(void* self) {
+uintptr_t k_io__mimetypefinderjob_percent(void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -214,7 +214,7 @@ bool k_io__mimetypefinderjob_is_started_with_exec(void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-long long k_io__mimetypefinderjob_elapsed_time(void* self) {
+int64_t k_io__mimetypefinderjob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -234,27 +234,27 @@ void k_io__mimetypefinderjob_on_warning(void* self, void (*callback)(void*, void
     KJob_Connect_Warning((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_total_size(void* self, void* job, uint64_t size) {
+void k_io__mimetypefinderjob_total_size(void* self, void* job, uintptr_t size) {
     KJob_TotalSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__mimetypefinderjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__mimetypefinderjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_TotalSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_processed_size(void* self, void* job, uint64_t size) {
+void k_io__mimetypefinderjob_processed_size(void* self, void* job, uintptr_t size) {
     KJob_ProcessedSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__mimetypefinderjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__mimetypefinderjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_ProcessedSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_speed(void* self, void* job, uint64_t speed) {
+void k_io__mimetypefinderjob_speed(void* self, void* job, uintptr_t speed) {
     KJob_Speed((KJob*)self, (KJob*)job, speed);
 }
 
-void k_io__mimetypefinderjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__mimetypefinderjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_Speed((KJob*)self, (intptr_t)callback);
 }
 
@@ -725,27 +725,27 @@ void k_io__mimetypefinderjob_on_set_error_text(void* self, void (*callback)(void
     KIO__MimeTypeFinderJob_OnSetErrorText((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__mimetypefinderjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__MimeTypeFinderJob_SetProcessedAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
 }
 
-void k_io__mimetypefinderjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__mimetypefinderjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__MimeTypeFinderJob_SuperSetProcessedAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
 }
 
-void k_io__mimetypefinderjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_io__mimetypefinderjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KIO__MimeTypeFinderJob_OnSetProcessedAmount((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__mimetypefinderjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__MimeTypeFinderJob_SetTotalAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
 }
 
-void k_io__mimetypefinderjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__mimetypefinderjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__MimeTypeFinderJob_SuperSetTotalAmount((KIO__MimeTypeFinderJob*)self, unit, amount);
 }
 
-void k_io__mimetypefinderjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_io__mimetypefinderjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KIO__MimeTypeFinderJob_OnSetTotalAmount((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -761,15 +761,15 @@ void k_io__mimetypefinderjob_on_set_progress_unit(void* self, void (*callback)(v
     KIO__MimeTypeFinderJob_OnSetProgressUnit((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_set_percent(void* self, uint64_t percentage) {
+void k_io__mimetypefinderjob_set_percent(void* self, uintptr_t percentage) {
     KIO__MimeTypeFinderJob_SetPercent((KIO__MimeTypeFinderJob*)self, percentage);
 }
 
-void k_io__mimetypefinderjob_super_set_percent(void* self, uint64_t percentage) {
+void k_io__mimetypefinderjob_super_set_percent(void* self, uintptr_t percentage) {
     KIO__MimeTypeFinderJob_SuperSetPercent((KIO__MimeTypeFinderJob*)self, percentage);
 }
 
-void k_io__mimetypefinderjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
+void k_io__mimetypefinderjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
     KIO__MimeTypeFinderJob_OnSetPercent((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -785,27 +785,27 @@ void k_io__mimetypefinderjob_on_emit_result(void* self, void (*callback)()) {
     KIO__MimeTypeFinderJob_OnEmitResult((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_io__mimetypefinderjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__MimeTypeFinderJob_EmitPercent((KIO__MimeTypeFinderJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__mimetypefinderjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_io__mimetypefinderjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__MimeTypeFinderJob_SuperEmitPercent((KIO__MimeTypeFinderJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__mimetypefinderjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
+void k_io__mimetypefinderjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
     KIO__MimeTypeFinderJob_OnEmitPercent((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_emit_speed(void* self, uint64_t speed) {
+void k_io__mimetypefinderjob_emit_speed(void* self, uintptr_t speed) {
     KIO__MimeTypeFinderJob_EmitSpeed((KIO__MimeTypeFinderJob*)self, speed);
 }
 
-void k_io__mimetypefinderjob_super_emit_speed(void* self, uint64_t speed) {
+void k_io__mimetypefinderjob_super_emit_speed(void* self, uintptr_t speed) {
     KIO__MimeTypeFinderJob_SuperEmitSpeed((KIO__MimeTypeFinderJob*)self, speed);
 }
 
-void k_io__mimetypefinderjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
+void k_io__mimetypefinderjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
     KIO__MimeTypeFinderJob_OnEmitSpeed((KIO__MimeTypeFinderJob*)self, (intptr_t)callback);
 }
 
@@ -885,15 +885,15 @@ void k_io__mimetypefinderjob_on_result(void* self, void (*callback)(void*, void*
     KJob_Connect_Result((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__mimetypefinderjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_TotalAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__mimetypefinderjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_ProcessedAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__mimetypefinderjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__mimetypefinderjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_PercentChanged((KJob*)self, (intptr_t)callback);
 }
 

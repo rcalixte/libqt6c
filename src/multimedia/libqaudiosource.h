@@ -198,21 +198,21 @@ void q_audiosource_resume(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#setBufferSize)
 ///
 /// @param self QAudioSource*
-/// @param bytes int64_t
+/// @param bytes intptr_t
 ///
-void q_audiosource_set_buffer_size(void* self, int64_t bytes);
+void q_audiosource_set_buffer_size(void* self, intptr_t bytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#bufferSize)
 ///
 /// @param self QAudioSource*
 ///
-int64_t q_audiosource_buffer_size(void* self);
+intptr_t q_audiosource_buffer_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#bytesAvailable)
 ///
 /// @param self QAudioSource*
 ///
-int64_t q_audiosource_bytes_available(void* self);
+intptr_t q_audiosource_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#setVolume)
 ///
@@ -231,13 +231,13 @@ double q_audiosource_volume(void* self);
 ///
 /// @param self QAudioSource*
 ///
-long long q_audiosource_processed_u_secs(void* self);
+int64_t q_audiosource_processed_u_secs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#elapsedUSecs)
 ///
 /// @param self QAudioSource*
 ///
-long long q_audiosource_elapsed_u_secs(void* self);
+int64_t q_audiosource_elapsed_u_secs(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiosource.html#error)
 ///

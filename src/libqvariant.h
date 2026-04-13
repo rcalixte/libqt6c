@@ -61,9 +61,9 @@ QVariant* q_variant_new6(long long ll);
 
 /// q_variant_new7 constructs a new QVariant object.
 ///
-/// @param ull uint64_t
+/// @param ull uintptr_t
 ///
-QVariant* q_variant_new7(uint64_t ull);
+QVariant* q_variant_new7(uintptr_t ull);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -481,7 +481,7 @@ long long q_variant_to_long_long(void* self);
 ///
 /// @param self QVariant*
 ///
-uint64_t q_variant_to_u_long_long(void* self);
+uintptr_t q_variant_to_u_long_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toBool)
 ///
@@ -825,7 +825,7 @@ long long q_variant_to_long_long1(void* self, bool* ok);
 /// @param self QVariant*
 /// @param ok bool*
 ///
-uint64_t q_variant_to_u_long_long1(void* self, bool* ok);
+uintptr_t q_variant_to_u_long_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#toDouble)
 ///

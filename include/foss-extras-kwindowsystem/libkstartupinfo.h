@@ -1258,7 +1258,7 @@ const char* k_startupinfoid_id(void* self);
 ///
 /// @param self KStartupInfoId*
 ///
-uint64_t k_startupinfoid_timestamp(void* self);
+uintptr_t k_startupinfoid_timestamp(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstartupinfoid.html#setupStartupEnv)
 ///

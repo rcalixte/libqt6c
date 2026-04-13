@@ -107,15 +107,15 @@ libqt_list q_versionnumber_segments(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentAt)
 ///
 /// @param self QVersionNumber*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-int32_t q_versionnumber_segment_at(void* self, int64_t index);
+int32_t q_versionnumber_segment_at(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#segmentCount)
 ///
 /// @param self QVersionNumber*
 ///
-int64_t q_versionnumber_segment_count(void* self);
+intptr_t q_versionnumber_segment_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#isPrefixOf)
 ///
@@ -156,9 +156,9 @@ QVersionNumber* q_versionnumber_from_string(const char* stringVal);
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
 /// @param stringVal const char*
-/// @param suffixIndex int64_t*
+/// @param suffixIndex intptr_t*
 ///
-QVersionNumber* q_versionnumber_from_string2(const char* stringVal, int64_t* suffixIndex);
+QVersionNumber* q_versionnumber_from_string2(const char* stringVal, intptr_t* suffixIndex);
 #endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#dtor.QVersionNumber)

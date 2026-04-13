@@ -346,7 +346,7 @@ int32_t q_webenginewebauthpinrequest_min_pin_length(void* self) {
     return QWebEngineWebAuthPinRequest_MinPinLength((QWebEngineWebAuthPinRequest*)self);
 }
 
-void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int minPinLength) {
+void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int32_t minPinLength) {
     QWebEngineWebAuthPinRequest_SetMinPinLength((QWebEngineWebAuthPinRequest*)self, minPinLength);
 }
 

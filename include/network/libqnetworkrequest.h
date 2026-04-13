@@ -248,14 +248,14 @@ void q_networkrequest_set_http2_configuration(void* self, void* configuration);
 ///
 /// @param self QNetworkRequest*
 ///
-long long q_networkrequest_decompressed_safety_check_threshold(void* self);
+int64_t q_networkrequest_decompressed_safety_check_threshold(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#setDecompressedSafetyCheckThreshold)
 ///
 /// @param self QNetworkRequest*
-/// @param threshold long long
+/// @param threshold int64_t
 ///
-void q_networkrequest_set_decompressed_safety_check_threshold(void* self, long long threshold);
+void q_networkrequest_set_decompressed_safety_check_threshold(void* self, int64_t threshold);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkrequest.html#transferTimeout)
 ///

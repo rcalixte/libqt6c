@@ -37,9 +37,9 @@ QHashSeed* q_hashseed_new3();
 
 /// q_hashseed_new4 constructs a new QHashSeed object.
 ///
-/// @param d uint64_t
+/// @param d uintptr_t
 ///
-QHashSeed* q_hashseed_new4(uint64_t d);
+QHashSeed* q_hashseed_new4(uintptr_t d);
 
 /// q_hashseed_copy_assign shallow copies `other` into `self`.
 ///
@@ -59,7 +59,7 @@ void q_hashseed_move_assign(void* self, void* other);
 ///
 /// @param self QHashSeed*
 ///
-uint64_t q_hashseed_to_unsigned_long(void* self);
+uintptr_t q_hashseed_to_unsigned_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhashseed.html#globalSeed)
 ///

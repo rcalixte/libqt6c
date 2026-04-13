@@ -96,12 +96,12 @@ QColor* q_color_new10(int32_t spec);
 /// q_color_new11 constructs a new QColor object.
 ///
 /// @param spec enum QColor__Spec
-/// @param a1 unsigned short
-/// @param a2 unsigned short
-/// @param a3 unsigned short
-/// @param a4 unsigned short
+/// @param a1 uint16_t
+/// @param a2 uint16_t
+/// @param a3 uint16_t
+/// @param a4 uint16_t
 ///
-QColor* q_color_new11(int32_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4);
+QColor* q_color_new11(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
@@ -127,13 +127,13 @@ QColor* q_color_new13(int r, int g, int b, int a);
 /// q_color_new14 constructs a new QColor object.
 ///
 /// @param spec enum QColor__Spec
-/// @param a1 unsigned short
-/// @param a2 unsigned short
-/// @param a3 unsigned short
-/// @param a4 unsigned short
-/// @param a5 unsigned short
+/// @param a1 uint16_t
+/// @param a2 uint16_t
+/// @param a3 uint16_t
+/// @param a4 uint16_t
+/// @param a5 uint16_t
 ///
-QColor* q_color_new14(int32_t spec, unsigned short a1, unsigned short a2, unsigned short a3, unsigned short a4, unsigned short a5);
+QColor* q_color_new14(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5);
 
 /// q_color_copy_assign shallow copies `other` into `self`.
 ///
@@ -699,11 +699,11 @@ QColor* q_color_from_rgb_f(float r, float g, float b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#fromRgba64)
 ///
-/// @param r unsigned short
-/// @param g unsigned short
-/// @param b unsigned short
+/// @param r uint16_t
+/// @param g uint16_t
+/// @param b uint16_t
 ///
-QColor* q_color_from_rgba64(unsigned short r, unsigned short g, unsigned short b);
+QColor* q_color_from_rgba64(uint16_t r, uint16_t g, uint16_t b);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#fromRgba64)
 ///
@@ -998,12 +998,12 @@ QColor* q_color_from_rgb_f4(float r, float g, float b, float a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#fromRgba64)
 ///
-/// @param r unsigned short
-/// @param g unsigned short
-/// @param b unsigned short
-/// @param a unsigned short
+/// @param r uint16_t
+/// @param g uint16_t
+/// @param b uint16_t
+/// @param a uint16_t
 ///
-QColor* q_color_from_rgba644(unsigned short r, unsigned short g, unsigned short b, unsigned short a);
+QColor* q_color_from_rgba644(uint16_t r, uint16_t g, uint16_t b, uint16_t a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#fromHsv)
 ///

@@ -87,7 +87,7 @@ const char* k_solid__storagevolume_uuid(void* self);
 ///
 /// @param self Solid__StorageVolume*
 ///
-uint64_t k_solid__storagevolume_size(void* self);
+uintptr_t k_solid__storagevolume_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

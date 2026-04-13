@@ -1047,11 +1047,11 @@ void q_openglextrafunctions_gl_blend_func_separate(void* self, uint32_t srcRGB, 
     QOpenGLFunctions_GlBlendFuncSeparate((QOpenGLFunctions*)self, srcRGB, dstRGB, srcAlpha, dstAlpha);
 }
 
-void q_openglextrafunctions_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage) {
+void q_openglextrafunctions_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage) {
     QOpenGLFunctions_GlBufferData((QOpenGLFunctions*)self, target, size, data, usage);
 }
 
-void q_openglextrafunctions_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data) {
+void q_openglextrafunctions_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data) {
     QOpenGLFunctions_GlBufferSubData((QOpenGLFunctions*)self, target, offset, size, data);
 }
 

@@ -97,9 +97,9 @@ QChar* q_char_new3();
 
 /// q_char_new4 constructs a new QChar object.
 ///
-/// @param rc unsigned short
+/// @param rc uint16_t
 ///
-QChar* q_char_new4(unsigned short rc);
+QChar* q_char_new4(uint16_t rc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qchar.html)
 

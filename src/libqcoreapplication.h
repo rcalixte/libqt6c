@@ -304,7 +304,7 @@ const char* q_coreapplication_application_file_path();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationPid)
 ///
-long long q_coreapplication_application_pid();
+int64_t q_coreapplication_application_pid();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#checkPermission)
 ///

@@ -70,7 +70,7 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier_cookie_generator_
     return QDtlsClientVerifier_CookieGeneratorParameters((QDtlsClientVerifier*)self);
 }
 
-bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, void* address, unsigned short port) {
+bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, void* address, uint16_t port) {
     return QDtlsClientVerifier_VerifyClient((QDtlsClientVerifier*)self, (QUdpSocket*)socket, qstring(dgram), (QHostAddress*)address, port);
 }
 
@@ -508,7 +508,7 @@ const char* q_dtls_tr(const char* s) {
     return _ret;
 }
 
-bool q_dtls_set_peer(void* self, void* address, unsigned short port) {
+bool q_dtls_set_peer(void* self, void* address, uint16_t port) {
     return QDtls_SetPeer((QDtls*)self, (QHostAddress*)address, port);
 }
 
@@ -520,7 +520,7 @@ QHostAddress* q_dtls_peer_address(void* self) {
     return QDtls_PeerAddress((QDtls*)self);
 }
 
-unsigned short q_dtls_peer_port(void* self) {
+uint16_t q_dtls_peer_port(void* self) {
     return QDtls_PeerPort((QDtls*)self);
 }
 
@@ -535,11 +535,11 @@ int32_t q_dtls_ssl_mode(void* self) {
     return QDtls_SslMode((QDtls*)self);
 }
 
-void q_dtls_set_mtu_hint(void* self, unsigned short mtuHint) {
+void q_dtls_set_mtu_hint(void* self, uint16_t mtuHint) {
     QDtls_SetMtuHint((QDtls*)self, mtuHint);
 }
 
-unsigned short q_dtls_mtu_hint(void* self) {
+uint16_t q_dtls_mtu_hint(void* self) {
     return QDtls_MtuHint((QDtls*)self);
 }
 
@@ -595,7 +595,7 @@ int32_t q_dtls_session_protocol(void* self) {
     return QDtls_SessionProtocol((QDtls*)self);
 }
 
-long long q_dtls_write_datagram_encrypted(void* self, void* socket, char* dgram) {
+int64_t q_dtls_write_datagram_encrypted(void* self, void* socket, char* dgram) {
     return QDtls_WriteDatagramEncrypted((QDtls*)self, (QUdpSocket*)socket, qstring(dgram));
 }
 
@@ -656,7 +656,7 @@ const char* q_dtls_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_dtls_set_peer3(void* self, void* address, unsigned short port, const char* verificationName) {
+bool q_dtls_set_peer3(void* self, void* address, uint16_t port, const char* verificationName) {
     return QDtls_SetPeer3((QDtls*)self, (QHostAddress*)address, port, qstring(verificationName));
 }
 

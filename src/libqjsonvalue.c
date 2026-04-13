@@ -20,7 +20,7 @@ QJsonValue* q_jsonvalue_new4(int n) {
     return QJsonValue_new4(n);
 }
 
-QJsonValue* q_jsonvalue_new5(long long v) {
+QJsonValue* q_jsonvalue_new5(int64_t v) {
     return QJsonValue_new5(v);
 }
 
@@ -104,7 +104,7 @@ int32_t q_jsonvalue_to_int(void* self) {
     return QJsonValue_ToInt((QJsonValue*)self);
 }
 
-long long q_jsonvalue_to_integer(void* self) {
+int64_t q_jsonvalue_to_integer(void* self) {
     return QJsonValue_ToInteger((QJsonValue*)self);
 }
 
@@ -146,7 +146,7 @@ const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key) {
     return QJsonValue_OperatorSubscript((QJsonValue*)self, qstring(key));
 }
 
-const QJsonValue* q_jsonvalue_operator_subscript4(void* self, int64_t i) {
+const QJsonValue* q_jsonvalue_operator_subscript4(void* self, intptr_t i) {
     return QJsonValue_OperatorSubscript4((QJsonValue*)self, i);
 }
 
@@ -158,7 +158,7 @@ int32_t q_jsonvalue_to_int1(void* self, int defaultValue) {
     return QJsonValue_ToInt1((QJsonValue*)self, defaultValue);
 }
 
-long long q_jsonvalue_to_integer1(void* self, long long defaultValue) {
+int64_t q_jsonvalue_to_integer1(void* self, int64_t defaultValue) {
     return QJsonValue_ToInteger1((QJsonValue*)self, defaultValue);
 }
 
@@ -226,7 +226,7 @@ int32_t q_jsonvalueconstref_to_int(void* self) {
     return QJsonValueConstRef_ToInt((QJsonValueConstRef*)self);
 }
 
-long long q_jsonvalueconstref_to_integer(void* self) {
+int64_t q_jsonvalueconstref_to_integer(void* self) {
     return QJsonValueConstRef_ToInteger((QJsonValueConstRef*)self);
 }
 
@@ -249,7 +249,7 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self) {
     return QJsonValueConstRef_ToObject((QJsonValueConstRef*)self);
 }
 
-const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, int64_t i) {
+const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, intptr_t i) {
     return QJsonValueConstRef_OperatorSubscript3((QJsonValueConstRef*)self, i);
 }
 
@@ -261,7 +261,7 @@ int32_t q_jsonvalueconstref_to_int1(void* self, int defaultValue) {
     return QJsonValueConstRef_ToInt1((QJsonValueConstRef*)self, defaultValue);
 }
 
-long long q_jsonvalueconstref_to_integer1(void* self, long long defaultValue) {
+int64_t q_jsonvalueconstref_to_integer1(void* self, int64_t defaultValue) {
     return QJsonValueConstRef_ToInteger1((QJsonValueConstRef*)self, defaultValue);
 }
 
@@ -288,11 +288,11 @@ QJsonValueRef* q_jsonvalueref_new2(void* param1) {
     return QJsonValueRef_new2((QJsonValueRef*)param1);
 }
 
-QJsonValueRef* q_jsonvalueref_new3(void* array, int64_t idx) {
+QJsonValueRef* q_jsonvalueref_new3(void* array, intptr_t idx) {
     return QJsonValueRef_new3((QJsonArray*)array, idx);
 }
 
-QJsonValueRef* q_jsonvalueref_new4(void* object, int64_t idx) {
+QJsonValueRef* q_jsonvalueref_new4(void* object, intptr_t idx) {
     return QJsonValueRef_new4((QJsonObject*)object, idx);
 }
 
@@ -352,7 +352,7 @@ int32_t q_jsonvalueref_to_int(void* self) {
     return QJsonValueRef_ToInt((QJsonValueRef*)self);
 }
 
-long long q_jsonvalueref_to_integer(void* self) {
+int64_t q_jsonvalueref_to_integer(void* self) {
     return QJsonValueRef_ToInteger((QJsonValueRef*)self);
 }
 
@@ -375,7 +375,7 @@ QJsonObject* q_jsonvalueref_to_object(void* self) {
     return QJsonValueRef_ToObject((QJsonValueRef*)self);
 }
 
-const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, int64_t i) {
+const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, intptr_t i) {
     return QJsonValueRef_OperatorSubscript3((QJsonValueRef*)self, i);
 }
 
@@ -387,7 +387,7 @@ int32_t q_jsonvalueref_to_int1(void* self, int defaultValue) {
     return QJsonValueRef_ToInt1((QJsonValueRef*)self, defaultValue);
 }
 
-long long q_jsonvalueref_to_integer1(void* self, long long defaultValue) {
+int64_t q_jsonvalueref_to_integer1(void* self, int64_t defaultValue) {
     return QJsonValueRef_ToInteger1((QJsonValueRef*)self, defaultValue);
 }
 

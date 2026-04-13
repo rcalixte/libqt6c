@@ -34,7 +34,7 @@ QUrl* q_webenginequotarequest_origin(void* self) {
     return QWebEngineQuotaRequest_Origin((QWebEngineQuotaRequest*)self);
 }
 
-long long q_webenginequotarequest_requested_size(void* self) {
+int64_t q_webenginequotarequest_requested_size(void* self) {
     return QWebEngineQuotaRequest_RequestedSize((QWebEngineQuotaRequest*)self);
 }
 

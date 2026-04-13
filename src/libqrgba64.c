@@ -13,11 +13,11 @@ QRgba64* q_rgba64_from_rgba64(uint64_t c) {
     return QRgba64_FromRgba64(c);
 }
 
-QRgba64* q_rgba64_from_rgba642(unsigned short red, unsigned short green, unsigned short blue, unsigned short alpha) {
+QRgba64* q_rgba64_from_rgba642(uint16_t red, uint16_t green, uint16_t blue, uint16_t alpha) {
     return QRgba64_FromRgba642(red, green, blue, alpha);
 }
 
-QRgba64* q_rgba64_from_rgba(unsigned char red, unsigned char green, unsigned char blue, unsigned char alpha) {
+QRgba64* q_rgba64_from_rgba(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha) {
     return QRgba64_FromRgba(red, green, blue, alpha);
 }
 
@@ -33,51 +33,51 @@ bool q_rgba64_is_transparent(void* self) {
     return QRgba64_IsTransparent((QRgba64*)self);
 }
 
-unsigned short q_rgba64_red(void* self) {
+uint16_t q_rgba64_red(void* self) {
     return QRgba64_Red((QRgba64*)self);
 }
 
-unsigned short q_rgba64_green(void* self) {
+uint16_t q_rgba64_green(void* self) {
     return QRgba64_Green((QRgba64*)self);
 }
 
-unsigned short q_rgba64_blue(void* self) {
+uint16_t q_rgba64_blue(void* self) {
     return QRgba64_Blue((QRgba64*)self);
 }
 
-unsigned short q_rgba64_alpha(void* self) {
+uint16_t q_rgba64_alpha(void* self) {
     return QRgba64_Alpha((QRgba64*)self);
 }
 
-void q_rgba64_set_red(void* self, unsigned short _red) {
+void q_rgba64_set_red(void* self, uint16_t _red) {
     QRgba64_SetRed((QRgba64*)self, _red);
 }
 
-void q_rgba64_set_green(void* self, unsigned short _green) {
+void q_rgba64_set_green(void* self, uint16_t _green) {
     QRgba64_SetGreen((QRgba64*)self, _green);
 }
 
-void q_rgba64_set_blue(void* self, unsigned short _blue) {
+void q_rgba64_set_blue(void* self, uint16_t _blue) {
     QRgba64_SetBlue((QRgba64*)self, _blue);
 }
 
-void q_rgba64_set_alpha(void* self, unsigned short _alpha) {
+void q_rgba64_set_alpha(void* self, uint16_t _alpha) {
     QRgba64_SetAlpha((QRgba64*)self, _alpha);
 }
 
-unsigned char q_rgba64_red8(void* self) {
+uint8_t q_rgba64_red8(void* self) {
     return QRgba64_Red8((QRgba64*)self);
 }
 
-unsigned char q_rgba64_green8(void* self) {
+uint8_t q_rgba64_green8(void* self) {
     return QRgba64_Green8((QRgba64*)self);
 }
 
-unsigned char q_rgba64_blue8(void* self) {
+uint8_t q_rgba64_blue8(void* self) {
     return QRgba64_Blue8((QRgba64*)self);
 }
 
-unsigned char q_rgba64_alpha8(void* self) {
+uint8_t q_rgba64_alpha8(void* self) {
     return QRgba64_Alpha8((QRgba64*)self);
 }
 
@@ -85,7 +85,7 @@ uint32_t q_rgba64_to_argb32(void* self) {
     return QRgba64_ToArgb32((QRgba64*)self);
 }
 
-unsigned short q_rgba64_to_rgb16(void* self) {
+uint16_t q_rgba64_to_rgb16(void* self) {
     return QRgba64_ToRgb16((QRgba64*)self);
 }
 

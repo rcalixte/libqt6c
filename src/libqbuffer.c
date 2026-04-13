@@ -76,7 +76,7 @@ void q_buffer_set_data(void* self, char* data) {
     QBuffer_SetData((QBuffer*)self, qstring(data));
 }
 
-void q_buffer_set_data2(void* self, const char* data, int64_t lenVal) {
+void q_buffer_set_data2(void* self, const char* data, intptr_t lenVal) {
     QBuffer_SetData2((QBuffer*)self, data, lenVal);
 }
 
@@ -111,39 +111,39 @@ void q_buffer_super_close(void* self) {
     QBuffer_SuperClose((QBuffer*)self);
 }
 
-long long q_buffer_size(void* self) {
+int64_t q_buffer_size(void* self) {
     return QBuffer_Size((QBuffer*)self);
 }
 
-void q_buffer_on_size(void* self, long long (*callback)()) {
+void q_buffer_on_size(void* self, int64_t (*callback)()) {
     QBuffer_OnSize((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_super_size(void* self) {
+int64_t q_buffer_super_size(void* self) {
     return QBuffer_SuperSize((QBuffer*)self);
 }
 
-long long q_buffer_pos(void* self) {
+int64_t q_buffer_pos(void* self) {
     return QBuffer_Pos((QBuffer*)self);
 }
 
-void q_buffer_on_pos(void* self, long long (*callback)()) {
+void q_buffer_on_pos(void* self, int64_t (*callback)()) {
     QBuffer_OnPos((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_super_pos(void* self) {
+int64_t q_buffer_super_pos(void* self) {
     return QBuffer_SuperPos((QBuffer*)self);
 }
 
-bool q_buffer_seek(void* self, long long off) {
+bool q_buffer_seek(void* self, int64_t off) {
     return QBuffer_Seek((QBuffer*)self, off);
 }
 
-void q_buffer_on_seek(void* self, bool (*callback)(void*, long long)) {
+void q_buffer_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     QBuffer_OnSeek((QBuffer*)self, (intptr_t)callback);
 }
 
-bool q_buffer_super_seek(void* self, long long off) {
+bool q_buffer_super_seek(void* self, int64_t off) {
     return QBuffer_SuperSeek((QBuffer*)self, off);
 }
 
@@ -195,27 +195,27 @@ void q_buffer_super_disconnect_notify(void* self, void* param1) {
     QBuffer_SuperDisconnectNotify((QBuffer*)self, (QMetaMethod*)param1);
 }
 
-long long q_buffer_read_data(void* self, char* data, long long maxlen) {
+int64_t q_buffer_read_data(void* self, char* data, int64_t maxlen) {
     return QBuffer_ReadData((QBuffer*)self, data, maxlen);
 }
 
-void q_buffer_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+void q_buffer_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     QBuffer_OnReadData((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_super_read_data(void* self, char* data, long long maxlen) {
+int64_t q_buffer_super_read_data(void* self, char* data, int64_t maxlen) {
     return QBuffer_SuperReadData((QBuffer*)self, data, maxlen);
 }
 
-long long q_buffer_write_data(void* self, const char* data, long long lenVal) {
+int64_t q_buffer_write_data(void* self, const char* data, int64_t lenVal) {
     return QBuffer_WriteData((QBuffer*)self, data, lenVal);
 }
 
-void q_buffer_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+void q_buffer_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QBuffer_OnWriteData((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_super_write_data(void* self, const char* data, long long lenVal) {
+int64_t q_buffer_super_write_data(void* self, const char* data, int64_t lenVal) {
     return QBuffer_SuperWriteData((QBuffer*)self, data, lenVal);
 }
 
@@ -281,11 +281,11 @@ void q_buffer_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-long long q_buffer_read(void* self, char* data, long long maxlen) {
+int64_t q_buffer_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_buffer_read2(void* self, long long maxlen) {
+char* q_buffer_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -299,7 +299,7 @@ char* q_buffer_read_all(void* self) {
     return _ret;
 }
 
-long long q_buffer_read_line(void* self, char* data, long long maxlen) {
+int64_t q_buffer_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
@@ -326,30 +326,30 @@ bool q_buffer_is_transaction_started(void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-long long q_buffer_write(void* self, const char* data, long long lenVal) {
+int64_t q_buffer_write(void* self, const char* data, int64_t lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_buffer_write2(void* self, const char* data) {
+int64_t q_buffer_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_buffer_write3(void* self, char* data) {
+int64_t q_buffer_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
-long long q_buffer_peek(void* self, char* data, long long maxlen) {
+int64_t q_buffer_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_buffer_peek2(void* self, long long maxlen) {
+char* q_buffer_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-long long q_buffer_skip(void* self, long long maxSize) {
+int64_t q_buffer_skip(void* self, int64_t maxSize) {
     return QIODevice_Skip((QIODevice*)self, maxSize);
 }
 
@@ -388,19 +388,19 @@ void q_buffer_on_channel_ready_read(void* self, void (*callback)(void*, int)) {
     QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_buffer_bytes_written(void* self, long long bytes) {
+void q_buffer_bytes_written(void* self, int64_t bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_buffer_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void q_buffer_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_buffer_channel_bytes_written(void* self, int channel, long long bytes) {
+void q_buffer_channel_bytes_written(void* self, int channel, int64_t bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_buffer_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+void q_buffer_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t)) {
     QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
@@ -420,7 +420,7 @@ void q_buffer_on_read_channel_finished(void* self, void (*callback)(void*)) {
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_buffer_read_line1(void* self, long long maxlen) {
+char* q_buffer_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -662,27 +662,27 @@ void q_buffer_on_reset(void* self, bool (*callback)()) {
     QBuffer_OnReset((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_bytes_available(void* self) {
+int64_t q_buffer_bytes_available(void* self) {
     return QBuffer_BytesAvailable((QBuffer*)self);
 }
 
-long long q_buffer_super_bytes_available(void* self) {
+int64_t q_buffer_super_bytes_available(void* self) {
     return QBuffer_SuperBytesAvailable((QBuffer*)self);
 }
 
-void q_buffer_on_bytes_available(void* self, long long (*callback)()) {
+void q_buffer_on_bytes_available(void* self, int64_t (*callback)()) {
     QBuffer_OnBytesAvailable((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_bytes_to_write(void* self) {
+int64_t q_buffer_bytes_to_write(void* self) {
     return QBuffer_BytesToWrite((QBuffer*)self);
 }
 
-long long q_buffer_super_bytes_to_write(void* self) {
+int64_t q_buffer_super_bytes_to_write(void* self) {
     return QBuffer_SuperBytesToWrite((QBuffer*)self);
 }
 
-void q_buffer_on_bytes_to_write(void* self, long long (*callback)()) {
+void q_buffer_on_bytes_to_write(void* self, int64_t (*callback)()) {
     QBuffer_OnBytesToWrite((QBuffer*)self, (intptr_t)callback);
 }
 
@@ -710,27 +710,27 @@ void q_buffer_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int)
     QBuffer_OnWaitForBytesWritten((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_read_line_data(void* self, char* data, long long maxlen) {
+int64_t q_buffer_read_line_data(void* self, char* data, int64_t maxlen) {
     return QBuffer_ReadLineData((QBuffer*)self, data, maxlen);
 }
 
-long long q_buffer_super_read_line_data(void* self, char* data, long long maxlen) {
+int64_t q_buffer_super_read_line_data(void* self, char* data, int64_t maxlen) {
     return QBuffer_SuperReadLineData((QBuffer*)self, data, maxlen);
 }
 
-void q_buffer_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+void q_buffer_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     QBuffer_OnReadLineData((QBuffer*)self, (intptr_t)callback);
 }
 
-long long q_buffer_skip_data(void* self, long long maxSize) {
+int64_t q_buffer_skip_data(void* self, int64_t maxSize) {
     return QBuffer_SkipData((QBuffer*)self, maxSize);
 }
 
-long long q_buffer_super_skip_data(void* self, long long maxSize) {
+int64_t q_buffer_super_skip_data(void* self, int64_t maxSize) {
     return QBuffer_SuperSkipData((QBuffer*)self, maxSize);
 }
 
-void q_buffer_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+void q_buffer_on_skip_data(void* self, int64_t (*callback)(void*, int64_t)) {
     QBuffer_OnSkipData((QBuffer*)self, (intptr_t)callback);
 }
 

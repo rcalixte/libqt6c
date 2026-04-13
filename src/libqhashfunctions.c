@@ -13,7 +13,7 @@ QHashSeed* q_hashseed_new3() {
     return QHashSeed_new3();
 }
 
-QHashSeed* q_hashseed_new4(uint64_t d) {
+QHashSeed* q_hashseed_new4(uintptr_t d) {
     return QHashSeed_new4(d);
 }
 
@@ -25,7 +25,7 @@ void q_hashseed_move_assign(void* self, void* other) {
     QHashSeed_MoveAssign((QHashSeed*)self, (QHashSeed*)other);
 }
 
-uint64_t q_hashseed_to_unsigned_long(void* self) {
+uintptr_t q_hashseed_to_unsigned_long(void* self) {
     return QHashSeed_ToUnsignedLong((QHashSeed*)self);
 }
 

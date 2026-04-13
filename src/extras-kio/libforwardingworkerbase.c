@@ -501,7 +501,7 @@ void k_io__forwardingworkerbase_list_entries(void* self, libqt_list /* of KIO__U
     KIO__WorkerBase_ListEntries((KIO__WorkerBase*)self, _entry);
 }
 
-bool k_io__forwardingworkerbase_can_resume(void* self, uint64_t offset) {
+bool k_io__forwardingworkerbase_can_resume(void* self, uintptr_t offset) {
     return KIO__WorkerBase_CanResume((KIO__WorkerBase*)self, offset);
 }
 
@@ -509,27 +509,27 @@ void k_io__forwardingworkerbase_can_resume2(void* self) {
     KIO__WorkerBase_CanResume2((KIO__WorkerBase*)self);
 }
 
-void k_io__forwardingworkerbase_total_size(void* self, uint64_t _bytes) {
+void k_io__forwardingworkerbase_total_size(void* self, uintptr_t _bytes) {
     KIO__WorkerBase_TotalSize((KIO__WorkerBase*)self, _bytes);
 }
 
-void k_io__forwardingworkerbase_processed_size(void* self, uint64_t _bytes) {
+void k_io__forwardingworkerbase_processed_size(void* self, uintptr_t _bytes) {
     KIO__WorkerBase_ProcessedSize((KIO__WorkerBase*)self, _bytes);
 }
 
-void k_io__forwardingworkerbase_position(void* self, uint64_t _pos) {
+void k_io__forwardingworkerbase_position(void* self, uintptr_t _pos) {
     KIO__WorkerBase_Position((KIO__WorkerBase*)self, _pos);
 }
 
-void k_io__forwardingworkerbase_written(void* self, uint64_t _bytes) {
+void k_io__forwardingworkerbase_written(void* self, uintptr_t _bytes) {
     KIO__WorkerBase_Written((KIO__WorkerBase*)self, _bytes);
 }
 
-void k_io__forwardingworkerbase_truncated(void* self, uint64_t _length) {
+void k_io__forwardingworkerbase_truncated(void* self, uintptr_t _length) {
     KIO__WorkerBase_Truncated((KIO__WorkerBase*)self, _length);
 }
 
-void k_io__forwardingworkerbase_speed(void* self, uint64_t _bytes_per_second) {
+void k_io__forwardingworkerbase_speed(void* self, uintptr_t _bytes_per_second) {
     KIO__WorkerBase_Speed((KIO__WorkerBase*)self, _bytes_per_second);
 }
 
@@ -892,15 +892,15 @@ void k_io__forwardingworkerbase_on_app_connection_made(void* self, void (*callba
     KIO__ForwardingWorkerBase_OnAppConnectionMade((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__forwardingworkerbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
+void k_io__forwardingworkerbase_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass) {
     KIO__ForwardingWorkerBase_SetHost((KIO__ForwardingWorkerBase*)self, qstring(host), port, qstring(user), qstring(pass));
 }
 
-void k_io__forwardingworkerbase_super_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
+void k_io__forwardingworkerbase_super_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass) {
     KIO__ForwardingWorkerBase_SuperSetHost((KIO__ForwardingWorkerBase*)self, qstring(host), port, qstring(user), qstring(pass));
 }
 
-void k_io__forwardingworkerbase_on_set_host(void* self, void (*callback)(void*, const char*, unsigned short, const char*, const char*)) {
+void k_io__forwardingworkerbase_on_set_host(void* self, void (*callback)(void*, const char*, uint16_t, const char*, const char*)) {
     KIO__ForwardingWorkerBase_OnSetHost((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
@@ -940,15 +940,15 @@ void k_io__forwardingworkerbase_on_open(void* self, KIO__WorkerResult* (*callbac
     KIO__ForwardingWorkerBase_OnOpen((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uintptr_t size) {
     return KIO__ForwardingWorkerBase_Read((KIO__ForwardingWorkerBase*)self, size);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_super_read(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__forwardingworkerbase_super_read(void* self, uintptr_t size) {
     return KIO__ForwardingWorkerBase_SuperRead((KIO__ForwardingWorkerBase*)self, size);
 }
 
-void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t)) {
+void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t)) {
     KIO__ForwardingWorkerBase_OnRead((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
@@ -964,27 +964,27 @@ void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callba
     KIO__ForwardingWorkerBase_OnWrite((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uint64_t offset) {
+KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uintptr_t offset) {
     return KIO__ForwardingWorkerBase_Seek((KIO__ForwardingWorkerBase*)self, offset);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_super_seek(void* self, uint64_t offset) {
+KIO__WorkerResult* k_io__forwardingworkerbase_super_seek(void* self, uintptr_t offset) {
     return KIO__ForwardingWorkerBase_SuperSeek((KIO__ForwardingWorkerBase*)self, offset);
 }
 
-void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t)) {
+void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t)) {
     KIO__ForwardingWorkerBase_OnSeek((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uintptr_t size) {
     return KIO__ForwardingWorkerBase_Truncate((KIO__ForwardingWorkerBase*)self, size);
 }
 
-KIO__WorkerResult* k_io__forwardingworkerbase_super_truncate(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__forwardingworkerbase_super_truncate(void* self, uintptr_t size) {
     return KIO__ForwardingWorkerBase_SuperTruncate((KIO__ForwardingWorkerBase*)self, size);
 }
 
-void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t)) {
+void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t)) {
     KIO__ForwardingWorkerBase_OnTruncate((KIO__ForwardingWorkerBase*)self, (intptr_t)callback);
 }
 

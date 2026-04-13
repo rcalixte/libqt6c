@@ -70,23 +70,23 @@ void q_networkdiskcache_set_cache_directory(void* self, const char* cacheDir) {
     QNetworkDiskCache_SetCacheDirectory((QNetworkDiskCache*)self, qstring(cacheDir));
 }
 
-long long q_networkdiskcache_maximum_cache_size(void* self) {
+int64_t q_networkdiskcache_maximum_cache_size(void* self) {
     return QNetworkDiskCache_MaximumCacheSize((QNetworkDiskCache*)self);
 }
 
-void q_networkdiskcache_set_maximum_cache_size(void* self, long long size) {
+void q_networkdiskcache_set_maximum_cache_size(void* self, int64_t size) {
     QNetworkDiskCache_SetMaximumCacheSize((QNetworkDiskCache*)self, size);
 }
 
-long long q_networkdiskcache_cache_size(void* self) {
+int64_t q_networkdiskcache_cache_size(void* self) {
     return QNetworkDiskCache_CacheSize((QNetworkDiskCache*)self);
 }
 
-void q_networkdiskcache_on_cache_size(void* self, long long (*callback)()) {
+void q_networkdiskcache_on_cache_size(void* self, int64_t (*callback)()) {
     QNetworkDiskCache_OnCacheSize((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-long long q_networkdiskcache_super_cache_size(void* self) {
+int64_t q_networkdiskcache_super_cache_size(void* self) {
     return QNetworkDiskCache_SuperCacheSize((QNetworkDiskCache*)self);
 }
 
@@ -178,15 +178,15 @@ void q_networkdiskcache_super_clear(void* self) {
     QNetworkDiskCache_SuperClear((QNetworkDiskCache*)self);
 }
 
-long long q_networkdiskcache_expire(void* self) {
+int64_t q_networkdiskcache_expire(void* self) {
     return QNetworkDiskCache_Expire((QNetworkDiskCache*)self);
 }
 
-void q_networkdiskcache_on_expire(void* self, long long (*callback)()) {
+void q_networkdiskcache_on_expire(void* self, int64_t (*callback)()) {
     QNetworkDiskCache_OnExpire((QNetworkDiskCache*)self, (intptr_t)callback);
 }
 
-long long q_networkdiskcache_super_expire(void* self) {
+int64_t q_networkdiskcache_super_expire(void* self) {
     return QNetworkDiskCache_SuperExpire((QNetworkDiskCache*)self);
 }
 

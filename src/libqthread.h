@@ -269,27 +269,27 @@ bool q_thread_wait(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#wait)
 ///
 /// @param self QThread*
-/// @param time uint64_t
+/// @param time uintptr_t
 ///
-bool q_thread_wait2(void* self, uint64_t time);
+bool q_thread_wait2(void* self, uintptr_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#sleep)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-void q_thread_sleep(uint64_t param1);
+void q_thread_sleep(uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#msleep)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-void q_thread_msleep(uint64_t param1);
+void q_thread_msleep(uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#usleep)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-void q_thread_usleep(uint64_t param1);
+void q_thread_usleep(uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#sleep)
 ///

@@ -38,8 +38,8 @@ QUuid* q_uuid_new3();
 /// q_uuid_new4 constructs a new QUuid object.
 ///
 /// @param l uint32_t
-/// @param w1 unsigned short
-/// @param w2 unsigned short
+/// @param w1 uint16_t
+/// @param w2 uint16_t
 /// @param b1 unsigned char
 /// @param b2 unsigned char
 /// @param b3 unsigned char
@@ -49,7 +49,7 @@ QUuid* q_uuid_new3();
 /// @param b7 unsigned char
 /// @param b8 unsigned char
 ///
-QUuid* q_uuid_new4(uint32_t l, unsigned short w1, unsigned short w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8);
+QUuid* q_uuid_new4(uint32_t l, uint16_t w1, uint16_t w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html)
 
@@ -203,27 +203,27 @@ void q_uuid_set_data1(void* self, uint32_t data1);
 ///
 /// @param self QUuid*
 ///
-unsigned short q_uuid_data2(void* self);
+uint16_t q_uuid_data2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
 ///
 /// @param self QUuid*
-/// @param data2 unsigned short
+/// @param data2 uint16_t
 ///
-void q_uuid_set_data2(void* self, unsigned short data2);
+void q_uuid_set_data2(void* self, uint16_t data2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
 ///
 /// @param self QUuid*
 ///
-unsigned short q_uuid_data3(void* self);
+uint16_t q_uuid_data3(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
 ///
 /// @param self QUuid*
-/// @param data3 unsigned short
+/// @param data3 uint16_t
 ///
-void q_uuid_set_data3(void* self, unsigned short data3);
+void q_uuid_set_data3(void* self, uint16_t data3);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///

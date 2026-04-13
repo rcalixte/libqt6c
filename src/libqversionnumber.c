@@ -55,11 +55,11 @@ libqt_list /* of int */ q_versionnumber_segments(void* self) {
     return _arr;
 }
 
-int32_t q_versionnumber_segment_at(void* self, int64_t index) {
+int32_t q_versionnumber_segment_at(void* self, intptr_t index) {
     return QVersionNumber_SegmentAt((QVersionNumber*)self, index);
 }
 
-int64_t q_versionnumber_segment_count(void* self) {
+intptr_t q_versionnumber_segment_count(void* self) {
     return QVersionNumber_SegmentCount((QVersionNumber*)self);
 }
 
@@ -87,7 +87,7 @@ QVersionNumber* q_versionnumber_from_string(const char* stringVal) {
 }
 
 #if defined(__linux__) || defined(__FreeBSD__)
-QVersionNumber* q_versionnumber_from_string2(const char* stringVal, int64_t* suffixIndex) {
+QVersionNumber* q_versionnumber_from_string2(const char* stringVal, intptr_t* suffixIndex) {
     return QVersionNumber_FromString2(stringVal, suffixIndex);
 }
 #endif

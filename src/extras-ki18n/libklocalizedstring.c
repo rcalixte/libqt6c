@@ -89,11 +89,11 @@ KLocalizedString* k_localizedstring_subs2(void* self, uint32_t a) {
     return KLocalizedString_Subs2((KLocalizedString*)self, a);
 }
 
-KLocalizedString* k_localizedstring_subs3(void* self, int64_t a) {
+KLocalizedString* k_localizedstring_subs3(void* self, long a) {
     return KLocalizedString_Subs3((KLocalizedString*)self, a);
 }
 
-KLocalizedString* k_localizedstring_subs4(void* self, uint64_t a) {
+KLocalizedString* k_localizedstring_subs4(void* self, uintptr_t a) {
     return KLocalizedString_Subs4((KLocalizedString*)self, a);
 }
 
@@ -101,7 +101,7 @@ KLocalizedString* k_localizedstring_subs5(void* self, long long a) {
     return KLocalizedString_Subs5((KLocalizedString*)self, a);
 }
 
-KLocalizedString* k_localizedstring_subs6(void* self, uint64_t a) {
+KLocalizedString* k_localizedstring_subs6(void* self, uintptr_t a) {
     return KLocalizedString_Subs6((KLocalizedString*)self, a);
 }
 
@@ -243,27 +243,27 @@ KLocalizedString* k_localizedstring_subs43(void* self, uint32_t a, int fieldWidt
     return KLocalizedString_Subs43((KLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
-KLocalizedString* k_localizedstring_subs24(void* self, int64_t a, int fieldWidth) {
+KLocalizedString* k_localizedstring_subs24(void* self, long a, int fieldWidth) {
     return KLocalizedString_Subs24((KLocalizedString*)self, a, fieldWidth);
 }
 
-KLocalizedString* k_localizedstring_subs34(void* self, int64_t a, int fieldWidth, int base) {
+KLocalizedString* k_localizedstring_subs34(void* self, long a, int fieldWidth, int base) {
     return KLocalizedString_Subs34((KLocalizedString*)self, a, fieldWidth, base);
 }
 
-KLocalizedString* k_localizedstring_subs44(void* self, int64_t a, int fieldWidth, int base, void* fillChar) {
+KLocalizedString* k_localizedstring_subs44(void* self, long a, int fieldWidth, int base, void* fillChar) {
     return KLocalizedString_Subs44((KLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
-KLocalizedString* k_localizedstring_subs25(void* self, uint64_t a, int fieldWidth) {
+KLocalizedString* k_localizedstring_subs25(void* self, uintptr_t a, int fieldWidth) {
     return KLocalizedString_Subs25((KLocalizedString*)self, a, fieldWidth);
 }
 
-KLocalizedString* k_localizedstring_subs35(void* self, uint64_t a, int fieldWidth, int base) {
+KLocalizedString* k_localizedstring_subs35(void* self, uintptr_t a, int fieldWidth, int base) {
     return KLocalizedString_Subs35((KLocalizedString*)self, a, fieldWidth, base);
 }
 
-KLocalizedString* k_localizedstring_subs45(void* self, uint64_t a, int fieldWidth, int base, void* fillChar) {
+KLocalizedString* k_localizedstring_subs45(void* self, uintptr_t a, int fieldWidth, int base, void* fillChar) {
     return KLocalizedString_Subs45((KLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
@@ -279,15 +279,15 @@ KLocalizedString* k_localizedstring_subs46(void* self, long long a, int fieldWid
     return KLocalizedString_Subs46((KLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
-KLocalizedString* k_localizedstring_subs27(void* self, uint64_t a, int fieldWidth) {
+KLocalizedString* k_localizedstring_subs27(void* self, uintptr_t a, int fieldWidth) {
     return KLocalizedString_Subs27((KLocalizedString*)self, a, fieldWidth);
 }
 
-KLocalizedString* k_localizedstring_subs37(void* self, uint64_t a, int fieldWidth, int base) {
+KLocalizedString* k_localizedstring_subs37(void* self, uintptr_t a, int fieldWidth, int base) {
     return KLocalizedString_Subs37((KLocalizedString*)self, a, fieldWidth, base);
 }
 
-KLocalizedString* k_localizedstring_subs47(void* self, uint64_t a, int fieldWidth, int base, void* fillChar) {
+KLocalizedString* k_localizedstring_subs47(void* self, uintptr_t a, int fieldWidth, int base, void* fillChar) {
     return KLocalizedString_Subs47((KLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 

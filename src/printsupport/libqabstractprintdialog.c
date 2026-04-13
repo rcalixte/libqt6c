@@ -1126,7 +1126,7 @@ int32_t q_abstractprintdialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_abstractprintdialog_find(uint64_t param1) {
+QWidget* q_abstractprintdialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

@@ -67,21 +67,21 @@ void q_abstracteventdispatcher_unregister_socket_notifier(void* self, void* noti
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
 ///
 /// @param self QAbstractEventDispatcher*
-/// @param interval long long
+/// @param interval int64_t
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
 ///
-int32_t q_abstracteventdispatcher_register_timer2(void* self, long long interval, int32_t timerType, void* object);
+int32_t q_abstracteventdispatcher_register_timer2(void* self, int64_t interval, int32_t timerType, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
 ///
 /// @param self QAbstractEventDispatcher*
 /// @param timerId int
-/// @param interval long long
+/// @param interval int64_t
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
 ///
-void q_abstracteventdispatcher_register_timer3(void* self, int timerId, long long interval, int32_t timerType, void* object);
+void q_abstracteventdispatcher_register_timer3(void* self, int timerId, int64_t interval, int32_t timerType, void* object);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#unregisterTimer)
 ///
@@ -821,11 +821,11 @@ void q_abstracteventdispatcherv2_unregister_socket_notifier(void* self, void* no
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstracteventdispatcher.html#registerTimer)
 ///
 /// @param self QAbstractEventDispatcherV2*
-/// @param interval long long
+/// @param interval int64_t
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
 ///
-int32_t q_abstracteventdispatcherv2_register_timer2(void* self, long long interval, int32_t timerType, void* object);
+int32_t q_abstracteventdispatcherv2_register_timer2(void* self, int64_t interval, int32_t timerType, void* object);
 
 /// Inherited from QAbstractEventDispatcher
 ///
@@ -833,11 +833,11 @@ int32_t q_abstracteventdispatcherv2_register_timer2(void* self, long long interv
 ///
 /// @param self QAbstractEventDispatcherV2*
 /// @param timerId int
-/// @param interval long long
+/// @param interval int64_t
 /// @param timerType enum Qt__TimerType
 /// @param object QObject*
 ///
-void q_abstracteventdispatcherv2_register_timer3(void* self, int timerId, long long interval, int32_t timerType, void* object);
+void q_abstracteventdispatcherv2_register_timer3(void* self, int timerId, int64_t interval, int32_t timerType, void* object);
 
 /// Inherited from QAbstractEventDispatcher
 ///

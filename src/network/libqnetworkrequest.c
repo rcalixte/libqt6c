@@ -162,11 +162,11 @@ void q_networkrequest_set_http2_configuration(void* self, void* configuration) {
     QNetworkRequest_SetHttp2Configuration((QNetworkRequest*)self, (QHttp2Configuration*)configuration);
 }
 
-long long q_networkrequest_decompressed_safety_check_threshold(void* self) {
+int64_t q_networkrequest_decompressed_safety_check_threshold(void* self) {
     return QNetworkRequest_DecompressedSafetyCheckThreshold((QNetworkRequest*)self);
 }
 
-void q_networkrequest_set_decompressed_safety_check_threshold(void* self, long long threshold) {
+void q_networkrequest_set_decompressed_safety_check_threshold(void* self, int64_t threshold) {
     QNetworkRequest_SetDecompressedSafetyCheckThreshold((QNetworkRequest*)self, threshold);
 }
 

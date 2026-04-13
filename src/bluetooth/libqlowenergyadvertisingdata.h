@@ -49,21 +49,21 @@ const char* q_lowenergyadvertisingdata_local_name(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#invalidManufacturerId)
 ///
-unsigned short q_lowenergyadvertisingdata_invalid_manufacturer_id();
+uint16_t q_lowenergyadvertisingdata_invalid_manufacturer_id();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#setManufacturerData)
 ///
 /// @param self QLowEnergyAdvertisingData*
-/// @param id unsigned short
+/// @param id uint16_t
 /// @param data char*
 ///
-void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, unsigned short id, char* data);
+void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, uint16_t id, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#manufacturerId)
 ///
 /// @param self QLowEnergyAdvertisingData*
 ///
-unsigned short q_lowenergyadvertisingdata_manufacturer_id(void* self);
+uint16_t q_lowenergyadvertisingdata_manufacturer_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingdata.html#manufacturerData)
 ///

@@ -1453,7 +1453,7 @@ int32_t q_mdiarea_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_mdiarea_find(uint64_t param1) {
+QWidget* q_mdiarea_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

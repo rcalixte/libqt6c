@@ -27,19 +27,19 @@ bool q_httpheaders_append2(void* self, int32_t name, const char* value) {
     return QHttpHeaders_Append2((QHttpHeaders*)self, name, value);
 }
 
-bool q_httpheaders_insert(void* self, int64_t i, const char* name, const char* value) {
+bool q_httpheaders_insert(void* self, intptr_t i, const char* name, const char* value) {
     return QHttpHeaders_Insert((QHttpHeaders*)self, i, name, value);
 }
 
-bool q_httpheaders_insert2(void* self, int64_t i, int32_t name, const char* value) {
+bool q_httpheaders_insert2(void* self, intptr_t i, int32_t name, const char* value) {
     return QHttpHeaders_Insert2((QHttpHeaders*)self, i, name, value);
 }
 
-bool q_httpheaders_replace(void* self, int64_t i, const char* name, const char* newValue) {
+bool q_httpheaders_replace(void* self, intptr_t i, const char* name, const char* newValue) {
     return QHttpHeaders_Replace((QHttpHeaders*)self, i, name, newValue);
 }
 
-bool q_httpheaders_replace2(void* self, int64_t i, int32_t name, const char* newValue) {
+bool q_httpheaders_replace2(void* self, intptr_t i, int32_t name, const char* newValue) {
     return QHttpHeaders_Replace2((QHttpHeaders*)self, i, name, newValue);
 }
 
@@ -71,7 +71,7 @@ void q_httpheaders_remove_all2(void* self, int32_t name) {
     QHttpHeaders_RemoveAll2((QHttpHeaders*)self, name);
 }
 
-void q_httpheaders_remove_at(void* self, int64_t i) {
+void q_httpheaders_remove_at(void* self, intptr_t i) {
     QHttpHeaders_RemoveAt((QHttpHeaders*)self, i);
 }
 
@@ -127,7 +127,7 @@ const char** q_httpheaders_values2(void* self, int32_t name) {
     return _ret;
 }
 
-char* q_httpheaders_value_at(void* self, int64_t i) {
+char* q_httpheaders_value_at(void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_ValueAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -148,11 +148,11 @@ char* q_httpheaders_combined_value2(void* self, int32_t name) {
     return _ret;
 }
 
-int64_t q_httpheaders_size(void* self) {
+intptr_t q_httpheaders_size(void* self) {
     return QHttpHeaders_Size((QHttpHeaders*)self);
 }
 
-void q_httpheaders_reserve(void* self, int64_t size) {
+void q_httpheaders_reserve(void* self, intptr_t size) {
     QHttpHeaders_Reserve((QHttpHeaders*)self, size);
 }
 

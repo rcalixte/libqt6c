@@ -96,7 +96,7 @@ QBluetoothAddress* q_bluetoothserver_server_address(void* self) {
     return QBluetoothServer_ServerAddress((QBluetoothServer*)self);
 }
 
-unsigned short q_bluetoothserver_server_port(void* self) {
+uint16_t q_bluetoothserver_server_port(void* self) {
     return QBluetoothServer_ServerPort((QBluetoothServer*)self);
 }
 
@@ -150,7 +150,7 @@ bool q_bluetoothserver_listen1(void* self, void* address) {
     return QBluetoothServer_Listen1((QBluetoothServer*)self, (QBluetoothAddress*)address);
 }
 
-bool q_bluetoothserver_listen22(void* self, void* address, unsigned short port) {
+bool q_bluetoothserver_listen22(void* self, void* address, uint16_t port) {
     return QBluetoothServer_Listen22((QBluetoothServer*)self, (QBluetoothAddress*)address, port);
 }
 

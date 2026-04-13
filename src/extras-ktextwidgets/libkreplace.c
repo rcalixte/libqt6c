@@ -8,15 +8,15 @@
 #include "libkreplace.hpp"
 #include "libkreplace.h"
 
-KReplace* k_replace_new(const char* pattern, const char* replacement, int64_t options) {
+KReplace* k_replace_new(const char* pattern, const char* replacement, long options) {
     return KReplace_new(qstring(pattern), qstring(replacement), options);
 }
 
-KReplace* k_replace_new2(const char* pattern, const char* replacement, int64_t options, void* parent, void* replaceDialog) {
+KReplace* k_replace_new2(const char* pattern, const char* replacement, long options, void* parent, void* replaceDialog) {
     return KReplace_new2(qstring(pattern), qstring(replacement), options, (QWidget*)parent, (QWidget*)replaceDialog);
 }
 
-KReplace* k_replace_new3(const char* pattern, const char* replacement, int64_t options, void* parent) {
+KReplace* k_replace_new3(const char* pattern, const char* replacement, long options, void* parent) {
     return KReplace_new3(qstring(pattern), qstring(replacement), options, (QWidget*)parent);
 }
 
@@ -91,7 +91,7 @@ void k_replace_close_replace_next_dialog(void* self) {
     KReplace_CloseReplaceNextDialog((KReplace*)self);
 }
 
-int32_t k_replace_replace2(const char* text, const char* pattern, const char* replacement, int index, int64_t options, int* replacedLength) {
+int32_t k_replace_replace2(const char* text, const char* pattern, const char* replacement, int index, long options, int* replacedLength) {
     return KReplace_Replace2(qstring(text), qstring(pattern), qstring(replacement), index, options, replacedLength);
 }
 
@@ -161,7 +161,7 @@ int32_t k_replace_find(void* self) {
     return KFind_Find((KFind*)self);
 }
 
-int64_t k_replace_options(void* self) {
+long k_replace_options(void* self) {
     return KFind_Options((KFind*)self);
 }
 
@@ -180,7 +180,7 @@ int32_t k_replace_num_matches(void* self) {
     return KFind_NumMatches((KFind*)self);
 }
 
-int32_t k_replace_find2(const char* text, const char* pattern, int index, int64_t options, int* matchedLength, void* rmatch) {
+int32_t k_replace_find2(const char* text, const char* pattern, int index, long options, int* matchedLength, void* rmatch) {
     return KFind_Find2(qstring(text), qstring(pattern), index, options, matchedLength, (QRegularExpressionMatch*)rmatch);
 }
 
@@ -459,15 +459,15 @@ void k_replace_on_destroyed1(void* self, void (*callback)(void*, void*)) {
     QObject_Connect_Destroyed1((QObject*)self, (intptr_t)callback);
 }
 
-void k_replace_set_options(void* self, int64_t options) {
+void k_replace_set_options(void* self, long options) {
     KReplace_SetOptions((KReplace*)self, options);
 }
 
-void k_replace_super_set_options(void* self, int64_t options) {
+void k_replace_super_set_options(void* self, long options) {
     KReplace_SuperSetOptions((KReplace*)self, options);
 }
 
-void k_replace_on_set_options(void* self, void (*callback)(void*, int64_t)) {
+void k_replace_on_set_options(void* self, void (*callback)(void*, long)) {
     KReplace_OnSetOptions((KReplace*)self, (intptr_t)callback);
 }
 

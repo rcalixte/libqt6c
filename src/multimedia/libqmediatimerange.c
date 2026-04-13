@@ -5,7 +5,7 @@ QMediaTimeRange* q_mediatimerange_new() {
     return QMediaTimeRange_new();
 }
 
-QMediaTimeRange* q_mediatimerange_new2(long long start, long long end) {
+QMediaTimeRange* q_mediatimerange_new2(int64_t start, int64_t end) {
     return QMediaTimeRange_new2(start, end);
 }
 
@@ -33,11 +33,11 @@ void q_mediatimerange_operator_assign2(void* self, void* param1) {
     QMediaTimeRange_OperatorAssign2((QMediaTimeRange*)self, (QMediaTimeRange__Interval*)param1);
 }
 
-long long q_mediatimerange_earliest_time(void* self) {
+int64_t q_mediatimerange_earliest_time(void* self) {
     return QMediaTimeRange_EarliestTime((QMediaTimeRange*)self);
 }
 
-long long q_mediatimerange_latest_time(void* self) {
+int64_t q_mediatimerange_latest_time(void* self) {
     return QMediaTimeRange_LatestTime((QMediaTimeRange*)self);
 }
 
@@ -54,11 +54,11 @@ bool q_mediatimerange_is_continuous(void* self) {
     return QMediaTimeRange_IsContinuous((QMediaTimeRange*)self);
 }
 
-bool q_mediatimerange_contains(void* self, long long time) {
+bool q_mediatimerange_contains(void* self, int64_t time) {
     return QMediaTimeRange_Contains((QMediaTimeRange*)self, time);
 }
 
-void q_mediatimerange_add_interval(void* self, long long start, long long end) {
+void q_mediatimerange_add_interval(void* self, int64_t start, int64_t end) {
     QMediaTimeRange_AddInterval((QMediaTimeRange*)self, start, end);
 }
 
@@ -70,7 +70,7 @@ void q_mediatimerange_add_time_range(void* self, void* param1) {
     QMediaTimeRange_AddTimeRange((QMediaTimeRange*)self, (QMediaTimeRange*)param1);
 }
 
-void q_mediatimerange_remove_interval(void* self, long long start, long long end) {
+void q_mediatimerange_remove_interval(void* self, int64_t start, int64_t end) {
     QMediaTimeRange_RemoveInterval((QMediaTimeRange*)self, start, end);
 }
 
@@ -118,7 +118,7 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_new3() {
     return QMediaTimeRange__Interval_new3();
 }
 
-QMediaTimeRange__Interval* q_mediatimerange__interval_new4(long long start, long long end) {
+QMediaTimeRange__Interval* q_mediatimerange__interval_new4(int64_t start, int64_t end) {
     return QMediaTimeRange__Interval_new4(start, end);
 }
 
@@ -134,15 +134,15 @@ void q_mediatimerange__interval_move_assign(void* self, void* other) {
     QMediaTimeRange__Interval_MoveAssign((QMediaTimeRange__Interval*)self, (QMediaTimeRange__Interval*)other);
 }
 
-long long q_mediatimerange__interval_start(void* self) {
+int64_t q_mediatimerange__interval_start(void* self) {
     return QMediaTimeRange__Interval_Start((QMediaTimeRange__Interval*)self);
 }
 
-long long q_mediatimerange__interval_end(void* self) {
+int64_t q_mediatimerange__interval_end(void* self) {
     return QMediaTimeRange__Interval_End((QMediaTimeRange__Interval*)self);
 }
 
-bool q_mediatimerange__interval_contains(void* self, long long time) {
+bool q_mediatimerange__interval_contains(void* self, int64_t time) {
     return QMediaTimeRange__Interval_Contains((QMediaTimeRange__Interval*)self, time);
 }
 
@@ -154,7 +154,7 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_normalized(void* self) {
     return QMediaTimeRange__Interval_Normalized((QMediaTimeRange__Interval*)self);
 }
 
-QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, long long offset) {
+QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, int64_t offset) {
     return QMediaTimeRange__Interval_Translated((QMediaTimeRange__Interval*)self, offset);
 }
 

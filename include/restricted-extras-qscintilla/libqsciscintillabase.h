@@ -133,16 +133,16 @@ void q_sciscintillabase_replace_vertical_scroll_bar(void* self, void* scrollBar)
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
 ///
-int64_t q_sciscintillabase_send_scintilla(void* self, uint32_t msg);
+long q_sciscintillabase_send_scintilla(void* self, uint32_t msg);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param lParam void*
 ///
-int64_t q_sciscintillabase_send_scintilla2(void* self, uint32_t msg, uint64_t wParam, void* lParam);
+long q_sciscintillabase_send_scintilla2(void* self, uint32_t msg, uintptr_t wParam, void* lParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -151,7 +151,7 @@ int64_t q_sciscintillabase_send_scintilla2(void* self, uint32_t msg, uint64_t wP
 /// @param wParam uintptr_t
 /// @param lParam const char*
 ///
-int64_t q_sciscintillabase_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam);
+long q_sciscintillabase_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -159,7 +159,7 @@ int64_t q_sciscintillabase_send_scintilla3(void* self, uint32_t msg, uintptr_t w
 /// @param msg uint32_t
 /// @param lParam const char*
 ///
-int64_t q_sciscintillabase_send_scintilla4(void* self, uint32_t msg, const char* lParam);
+long q_sciscintillabase_send_scintilla4(void* self, uint32_t msg, const char* lParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -168,15 +168,15 @@ int64_t q_sciscintillabase_send_scintilla4(void* self, uint32_t msg, const char*
 /// @param wParam const char*
 /// @param lParam const char*
 ///
-int64_t q_sciscintillabase_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam);
+long q_sciscintillabase_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam int64_t
+/// @param wParam long
 ///
-int64_t q_sciscintillabase_send_scintilla6(void* self, uint32_t msg, int64_t wParam);
+long q_sciscintillabase_send_scintilla6(void* self, uint32_t msg, long wParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -184,26 +184,26 @@ int64_t q_sciscintillabase_send_scintilla6(void* self, uint32_t msg, int64_t wPa
 /// @param msg uint32_t
 /// @param wParam int
 ///
-int64_t q_sciscintillabase_send_scintilla7(void* self, uint32_t msg, int wParam);
+long q_sciscintillabase_send_scintilla7(void* self, uint32_t msg, int wParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param cpMin int64_t
-/// @param cpMax int64_t
+/// @param cpMin long
+/// @param cpMax long
 /// @param lpstrText char*
 ///
-int64_t q_sciscintillabase_send_scintilla8(void* self, uint32_t msg, int64_t cpMin, int64_t cpMax, char* lpstrText);
+long q_sciscintillabase_send_scintilla8(void* self, uint32_t msg, long cpMin, long cpMax, char* lpstrText);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param col QColor*
 ///
-int64_t q_sciscintillabase_send_scintilla9(void* self, uint32_t msg, uint64_t wParam, void* col);
+long q_sciscintillabase_send_scintilla9(void* self, uint32_t msg, uintptr_t wParam, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -211,37 +211,37 @@ int64_t q_sciscintillabase_send_scintilla9(void* self, uint32_t msg, uint64_t wP
 /// @param msg uint32_t
 /// @param col QColor*
 ///
-int64_t q_sciscintillabase_send_scintilla10(void* self, uint32_t msg, void* col);
+long q_sciscintillabase_send_scintilla10(void* self, uint32_t msg, void* col);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param hdc QPainter*
 /// @param rc QRect*
-/// @param cpMin int64_t
-/// @param cpMax int64_t
+/// @param cpMin long
+/// @param cpMax long
 ///
-int64_t q_sciscintillabase_send_scintilla11(void* self, uint32_t msg, uint64_t wParam, void* hdc, void* rc, int64_t cpMin, int64_t cpMax);
+long q_sciscintillabase_send_scintilla11(void* self, uint32_t msg, uintptr_t wParam, void* hdc, void* rc, long cpMin, long cpMax);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param lParam QPixmap*
 ///
-int64_t q_sciscintillabase_send_scintilla12(void* self, uint32_t msg, uint64_t wParam, void* lParam);
+long q_sciscintillabase_send_scintilla12(void* self, uint32_t msg, uintptr_t wParam, void* lParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param lParam QImage*
 ///
-int64_t q_sciscintillabase_send_scintilla13(void* self, uint32_t msg, uint64_t wParam, void* lParam);
+long q_sciscintillabase_send_scintilla13(void* self, uint32_t msg, uintptr_t wParam, void* lParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -416,10 +416,10 @@ void q_sciscintillabase_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, int p
 ///
 /// @param self QsciScintillaBase*
 /// @param param1 uint32_t
-/// @param param2 uint64_t
+/// @param param2 uintptr_t
 /// @param param3 void*
 ///
-void q_sciscintillabase_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uint64_t param2, void* param3);
+void q_sciscintillabase_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uintptr_t param2, void* param3);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
@@ -1270,18 +1270,18 @@ const char* q_sciscintillabase_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 ///
-int64_t q_sciscintillabase_send_scintilla22(void* self, uint32_t msg, uint64_t wParam);
+long q_sciscintillabase_send_scintilla22(void* self, uint32_t msg, uintptr_t wParam);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
 /// @param self QsciScintillaBase*
 /// @param msg uint32_t
-/// @param wParam uint64_t
-/// @param lParam int64_t
+/// @param wParam uintptr_t
+/// @param lParam long
 ///
-int64_t q_sciscintillabase_send_scintilla32(void* self, uint32_t msg, uint64_t wParam, int64_t lParam);
+long q_sciscintillabase_send_scintilla32(void* self, uint32_t msg, uintptr_t wParam, long lParam);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -3597,9 +3597,9 @@ int32_t q_sciscintillabase_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* q_sciscintillabase_find(uint64_t param1);
+QWidget* q_sciscintillabase_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

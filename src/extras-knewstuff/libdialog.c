@@ -1108,7 +1108,7 @@ int32_t k_nswidgets__dialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_nswidgets__dialog_find(uint64_t param1) {
+QWidget* k_nswidgets__dialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

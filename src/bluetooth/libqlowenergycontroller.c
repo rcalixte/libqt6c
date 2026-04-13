@@ -178,11 +178,11 @@ void q_lowenergycontroller_on_mtu_changed(void* self, void (*callback)(void*, in
     QLowEnergyController_Connect_MtuChanged((QLowEnergyController*)self, (intptr_t)callback);
 }
 
-void q_lowenergycontroller_rssi_read(void* self, short rssi) {
+void q_lowenergycontroller_rssi_read(void* self, int16_t rssi) {
     QLowEnergyController_RssiRead((QLowEnergyController*)self, rssi);
 }
 
-void q_lowenergycontroller_on_rssi_read(void* self, void (*callback)(void*, short)) {
+void q_lowenergycontroller_on_rssi_read(void* self, void (*callback)(void*, int16_t)) {
     QLowEnergyController_Connect_RssiRead((QLowEnergyController*)self, (intptr_t)callback);
 }
 

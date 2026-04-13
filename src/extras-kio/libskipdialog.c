@@ -1081,7 +1081,7 @@ int32_t k_io__skipdialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_io__skipdialog_find(uint64_t param1) {
+QWidget* k_io__skipdialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

@@ -45,7 +45,7 @@ bool k_solid__storagedrive_is_hotpluggable(void* self) {
     return Solid__StorageDrive_IsHotpluggable((Solid__StorageDrive*)self);
 }
 
-uint64_t k_solid__storagedrive_size(void* self) {
+uintptr_t k_solid__storagedrive_size(void* self) {
     return Solid__StorageDrive_Size((Solid__StorageDrive*)self);
 }
 

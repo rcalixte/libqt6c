@@ -1132,7 +1132,7 @@ int32_t k_newpasswordwidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_newpasswordwidget_find(uint64_t param1) {
+QWidget* k_newpasswordwidget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

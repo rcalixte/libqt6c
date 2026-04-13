@@ -45,7 +45,7 @@ QChar* q_char_new3() {
     return QChar_new3();
 }
 
-QChar* q_char_new4(unsigned short rc) {
+QChar* q_char_new4(uint16_t rc) {
     return QChar_new4(rc);
 }
 

@@ -25,15 +25,15 @@ const char* q_lowenergyadvertisingdata_local_name(void* self) {
     return _ret;
 }
 
-unsigned short q_lowenergyadvertisingdata_invalid_manufacturer_id() {
+uint16_t q_lowenergyadvertisingdata_invalid_manufacturer_id() {
     return QLowEnergyAdvertisingData_InvalidManufacturerId();
 }
 
-void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, unsigned short id, char* data) {
+void q_lowenergyadvertisingdata_set_manufacturer_data(void* self, uint16_t id, char* data) {
     QLowEnergyAdvertisingData_SetManufacturerData((QLowEnergyAdvertisingData*)self, id, qstring(data));
 }
 
-unsigned short q_lowenergyadvertisingdata_manufacturer_id(void* self) {
+uint16_t q_lowenergyadvertisingdata_manufacturer_id(void* self) {
     return QLowEnergyAdvertisingData_ManufacturerId((QLowEnergyAdvertisingData*)self);
 }
 

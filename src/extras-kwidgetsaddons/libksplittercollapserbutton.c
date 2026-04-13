@@ -1335,7 +1335,7 @@ int32_t k_splittercollapserbutton_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_splittercollapserbutton_find(uint64_t param1) {
+QWidget* k_splittercollapserbutton_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

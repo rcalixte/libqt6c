@@ -110,7 +110,7 @@ const char* q_dnsmailexchangerecord_name(void* self) {
     return _ret;
 }
 
-unsigned short q_dnsmailexchangerecord_preference(void* self) {
+uint16_t q_dnsmailexchangerecord_preference(void* self) {
     return QDnsMailExchangeRecord_Preference((QDnsMailExchangeRecord*)self);
 }
 
@@ -145,11 +145,11 @@ const char* q_dnsservicerecord_name(void* self) {
     return _ret;
 }
 
-unsigned short q_dnsservicerecord_port(void* self) {
+uint16_t q_dnsservicerecord_port(void* self) {
     return QDnsServiceRecord_Port((QDnsServiceRecord*)self);
 }
 
-unsigned short q_dnsservicerecord_priority(void* self) {
+uint16_t q_dnsservicerecord_priority(void* self) {
     return QDnsServiceRecord_Priority((QDnsServiceRecord*)self);
 }
 
@@ -164,7 +164,7 @@ uint32_t q_dnsservicerecord_time_to_live(void* self) {
     return QDnsServiceRecord_TimeToLive((QDnsServiceRecord*)self);
 }
 
-unsigned short q_dnsservicerecord_weight(void* self) {
+uint16_t q_dnsservicerecord_weight(void* self) {
     return QDnsServiceRecord_Weight((QDnsServiceRecord*)self);
 }
 
@@ -284,7 +284,7 @@ QDnsLookup* q_dnslookup_new3(int32_t type, const char* name, void* nameserver) {
     return QDnsLookup_new3(type, qstring(name), (QHostAddress*)nameserver);
 }
 
-QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, unsigned short port) {
+QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, uint16_t port) {
     return QDnsLookup_new4(type, qstring(name), (QHostAddress*)nameserver, port);
 }
 
@@ -304,15 +304,15 @@ QDnsLookup* q_dnslookup_new8(int32_t type, const char* name, void* nameserver, v
     return QDnsLookup_new8(type, qstring(name), (QHostAddress*)nameserver, (QObject*)parent);
 }
 
-QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, unsigned short port, void* parent) {
+QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, uint16_t port, void* parent) {
     return QDnsLookup_new9(type, qstring(name), (QHostAddress*)nameserver, port, (QObject*)parent);
 }
 
-QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, void* nameserver, unsigned short port) {
+QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, void* nameserver, uint16_t port) {
     return QDnsLookup_new10(type, qstring(name), protocol, (QHostAddress*)nameserver, port);
 }
 
-QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, void* nameserver, unsigned short port, void* parent) {
+QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, void* nameserver, uint16_t port, void* parent) {
     return QDnsLookup_new11(type, qstring(name), protocol, (QHostAddress*)nameserver, port, (QObject*)parent);
 }
 
@@ -405,11 +405,11 @@ void q_dnslookup_set_nameserver(void* self, void* nameserver) {
     QDnsLookup_SetNameserver((QDnsLookup*)self, (QHostAddress*)nameserver);
 }
 
-unsigned short q_dnslookup_nameserver_port(void* self) {
+uint16_t q_dnslookup_nameserver_port(void* self) {
     return QDnsLookup_NameserverPort((QDnsLookup*)self);
 }
 
-void q_dnslookup_set_nameserver_port(void* self, unsigned short port) {
+void q_dnslookup_set_nameserver_port(void* self, uint16_t port) {
     QDnsLookup_SetNameserverPort((QDnsLookup*)self, port);
 }
 
@@ -425,7 +425,7 @@ void q_dnslookup_set_nameserver2(void* self, uint8_t protocol, void* nameserver)
     QDnsLookup_SetNameserver2((QDnsLookup*)self, protocol, (QHostAddress*)nameserver);
 }
 
-void q_dnslookup_set_nameserver3(void* self, void* nameserver, unsigned short port) {
+void q_dnslookup_set_nameserver3(void* self, void* nameserver, uint16_t port) {
     QDnsLookup_SetNameserver3((QDnsLookup*)self, (QHostAddress*)nameserver, port);
 }
 
@@ -481,7 +481,7 @@ bool q_dnslookup_is_protocol_supported(uint8_t protocol) {
     return QDnsLookup_IsProtocolSupported(protocol);
 }
 
-unsigned short q_dnslookup_default_port_for_protocol(uint8_t protocol) {
+uint16_t q_dnslookup_default_port_for_protocol(uint8_t protocol) {
     return QDnsLookup_DefaultPortForProtocol(protocol);
 }
 
@@ -525,11 +525,11 @@ void q_dnslookup_on_nameserver_changed(void* self, void (*callback)(void*, void*
     QDnsLookup_Connect_NameserverChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
-void q_dnslookup_nameserver_port_changed(void* self, unsigned short port) {
+void q_dnslookup_nameserver_port_changed(void* self, uint16_t port) {
     QDnsLookup_NameserverPortChanged((QDnsLookup*)self, port);
 }
 
-void q_dnslookup_on_nameserver_port_changed(void* self, void (*callback)(void*, unsigned short)) {
+void q_dnslookup_on_nameserver_port_changed(void* self, void (*callback)(void*, uint16_t)) {
     QDnsLookup_Connect_NameserverPortChanged((QDnsLookup*)self, (intptr_t)callback);
 }
 
@@ -555,7 +555,7 @@ const char* q_dnslookup_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver, unsigned short port) {
+void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver, uint16_t port) {
     QDnsLookup_SetNameserver32((QDnsLookup*)self, protocol, (QHostAddress*)nameserver, port);
 }
 

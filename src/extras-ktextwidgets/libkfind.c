@@ -8,11 +8,11 @@
 #include "libkfind.hpp"
 #include "libkfind.h"
 
-KFind* k_find_new(const char* pattern, int64_t options, void* parent) {
+KFind* k_find_new(const char* pattern, long options, void* parent) {
     return KFind_new(qstring(pattern), options, (QWidget*)parent);
 }
 
-KFind* k_find_new2(const char* pattern, int64_t options, void* parent, void* findDialog) {
+KFind* k_find_new2(const char* pattern, long options, void* parent, void* findDialog) {
     return KFind_new2(qstring(pattern), options, (QWidget*)parent, (QWidget*)findDialog);
 }
 
@@ -75,19 +75,19 @@ int32_t k_find_find(void* self) {
     return KFind_Find((KFind*)self);
 }
 
-int64_t k_find_options(void* self) {
+long k_find_options(void* self) {
     return KFind_Options((KFind*)self);
 }
 
-void k_find_set_options(void* self, int64_t options) {
+void k_find_set_options(void* self, long options) {
     KFind_SetOptions((KFind*)self, options);
 }
 
-void k_find_on_set_options(void* self, void (*callback)(void*, int64_t)) {
+void k_find_on_set_options(void* self, void (*callback)(void*, long)) {
     KFind_OnSetOptions((KFind*)self, (intptr_t)callback);
 }
 
-void k_find_super_set_options(void* self, int64_t options) {
+void k_find_super_set_options(void* self, long options) {
     KFind_SuperSetOptions((KFind*)self, options);
 }
 
@@ -142,7 +142,7 @@ bool k_find_super_should_restart(void* self, bool forceAsking, bool showNumMatch
     return KFind_SuperShouldRestart((KFind*)self, forceAsking, showNumMatches);
 }
 
-int32_t k_find_find2(const char* text, const char* pattern, int index, int64_t options, int* matchedLength, void* rmatch) {
+int32_t k_find_find2(const char* text, const char* pattern, int index, long options, int* matchedLength, void* rmatch) {
     return KFind_Find2(qstring(text), qstring(pattern), index, options, matchedLength, (QRegularExpressionMatch*)rmatch);
 }
 

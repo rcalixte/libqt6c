@@ -160,7 +160,7 @@ void q_date_get_date(void* self, int* year, int* month, int* day) {
     QDate_GetDate((QDate*)self, year, month, day);
 }
 
-QDate* q_date_add_days(void* self, long long days) {
+QDate* q_date_add_days(void* self, int64_t days) {
     return QDate_AddDays((QDate*)self, days);
 }
 
@@ -180,7 +180,7 @@ QDate* q_date_add_years2(void* self, int years, void* cal) {
     return QDate_AddYears2((QDate*)self, years, (QCalendar*)cal);
 }
 
-long long q_date_days_to(void* self, void* d) {
+int64_t q_date_days_to(void* self, void* d) {
     return QDate_DaysTo((QDate*)self, (QDate*)d);
 }
 
@@ -212,11 +212,11 @@ bool q_date_is_leap_year(int year) {
     return QDate_IsLeapYear(year);
 }
 
-QDate* q_date_from_julian_day(long long jd_) {
+QDate* q_date_from_julian_day(int64_t jd_) {
     return QDate_FromJulianDay(jd_);
 }
 
-long long q_date_to_julian_day(void* self) {
+int64_t q_date_to_julian_day(void* self) {
     return QDate_ToJulianDay((QDate*)self);
 }
 
@@ -475,11 +475,11 @@ bool q_datetime_is_daylight_time(void* self) {
     return QDateTime_IsDaylightTime((QDateTime*)self);
 }
 
-long long q_datetime_to_m_secs_since_epoch(void* self) {
+int64_t q_datetime_to_m_secs_since_epoch(void* self) {
     return QDateTime_ToMSecsSinceEpoch((QDateTime*)self);
 }
 
-long long q_datetime_to_secs_since_epoch(void* self) {
+int64_t q_datetime_to_secs_since_epoch(void* self) {
     return QDateTime_ToSecsSinceEpoch((QDateTime*)self);
 }
 
@@ -503,11 +503,11 @@ void q_datetime_set_time_zone(void* self, void* toZone) {
     QDateTime_SetTimeZone((QDateTime*)self, (QTimeZone*)toZone);
 }
 
-void q_datetime_set_m_secs_since_epoch(void* self, long long msecs) {
+void q_datetime_set_m_secs_since_epoch(void* self, int64_t msecs) {
     QDateTime_SetMSecsSinceEpoch((QDateTime*)self, msecs);
 }
 
-void q_datetime_set_secs_since_epoch(void* self, long long secs) {
+void q_datetime_set_secs_since_epoch(void* self, int64_t secs) {
     QDateTime_SetSecsSinceEpoch((QDateTime*)self, secs);
 }
 
@@ -532,7 +532,7 @@ const char* q_datetime_to_string3(void* self, const char* format, void* cal) {
     return _ret;
 }
 
-QDateTime* q_datetime_add_days(void* self, long long days) {
+QDateTime* q_datetime_add_days(void* self, int64_t days) {
     return QDateTime_AddDays((QDateTime*)self, days);
 }
 
@@ -544,11 +544,11 @@ QDateTime* q_datetime_add_years(void* self, int years) {
     return QDateTime_AddYears((QDateTime*)self, years);
 }
 
-QDateTime* q_datetime_add_secs(void* self, long long secs) {
+QDateTime* q_datetime_add_secs(void* self, int64_t secs) {
     return QDateTime_AddSecs((QDateTime*)self, secs);
 }
 
-QDateTime* q_datetime_add_m_secs(void* self, long long msecs) {
+QDateTime* q_datetime_add_m_secs(void* self, int64_t msecs) {
     return QDateTime_AddMSecs((QDateTime*)self, msecs);
 }
 
@@ -576,15 +576,15 @@ QDateTime* q_datetime_to_time_zone(void* self, void* toZone) {
     return QDateTime_ToTimeZone((QDateTime*)self, (QTimeZone*)toZone);
 }
 
-long long q_datetime_days_to(void* self, void* param1) {
+int64_t q_datetime_days_to(void* self, void* param1) {
     return QDateTime_DaysTo((QDateTime*)self, (QDateTime*)param1);
 }
 
-long long q_datetime_secs_to(void* self, void* param1) {
+int64_t q_datetime_secs_to(void* self, void* param1) {
     return QDateTime_SecsTo((QDateTime*)self, (QDateTime*)param1);
 }
 
-long long q_datetime_msecs_to(void* self, void* param1) {
+int64_t q_datetime_msecs_to(void* self, void* param1) {
     return QDateTime_MsecsTo((QDateTime*)self, (QDateTime*)param1);
 }
 
@@ -616,35 +616,35 @@ QDateTime* q_datetime_from_string11(const char* stringVal, const char* format, i
     return QDateTime_FromString11(qstring(stringVal), qstring(format), baseYear, (QCalendar*)cal);
 }
 
-QDateTime* q_datetime_from_m_secs_since_epoch(long long msecs, int32_t spec) {
+QDateTime* q_datetime_from_m_secs_since_epoch(int64_t msecs, int32_t spec) {
     return QDateTime_FromMSecsSinceEpoch(msecs, spec);
 }
 
-QDateTime* q_datetime_from_secs_since_epoch(long long secs, int32_t spec) {
+QDateTime* q_datetime_from_secs_since_epoch(int64_t secs, int32_t spec) {
     return QDateTime_FromSecsSinceEpoch(secs, spec);
 }
 
-QDateTime* q_datetime_from_m_secs_since_epoch2(long long msecs, void* timeZone) {
+QDateTime* q_datetime_from_m_secs_since_epoch2(int64_t msecs, void* timeZone) {
     return QDateTime_FromMSecsSinceEpoch2(msecs, (QTimeZone*)timeZone);
 }
 
-QDateTime* q_datetime_from_secs_since_epoch2(long long secs, void* timeZone) {
+QDateTime* q_datetime_from_secs_since_epoch2(int64_t secs, void* timeZone) {
     return QDateTime_FromSecsSinceEpoch2(secs, (QTimeZone*)timeZone);
 }
 
-QDateTime* q_datetime_from_m_secs_since_epoch3(long long msecs) {
+QDateTime* q_datetime_from_m_secs_since_epoch3(int64_t msecs) {
     return QDateTime_FromMSecsSinceEpoch3(msecs);
 }
 
-QDateTime* q_datetime_from_secs_since_epoch3(long long secs) {
+QDateTime* q_datetime_from_secs_since_epoch3(int64_t secs) {
     return QDateTime_FromSecsSinceEpoch3(secs);
 }
 
-long long q_datetime_current_m_secs_since_epoch() {
+int64_t q_datetime_current_m_secs_since_epoch() {
     return QDateTime_CurrentMSecsSinceEpoch();
 }
 
-long long q_datetime_current_secs_since_epoch() {
+int64_t q_datetime_current_secs_since_epoch() {
     return QDateTime_CurrentSecsSinceEpoch();
 }
 
@@ -683,11 +683,11 @@ QDateTime* q_datetime_from_string34(const char* stringVal, const char* format, i
     return QDateTime_FromString34(qstring(stringVal), qstring(format), baseYear);
 }
 
-QDateTime* q_datetime_from_m_secs_since_epoch32(long long msecs, int32_t spec, int offsetFromUtc) {
+QDateTime* q_datetime_from_m_secs_since_epoch32(int64_t msecs, int32_t spec, int offsetFromUtc) {
     return QDateTime_FromMSecsSinceEpoch32(msecs, spec, offsetFromUtc);
 }
 
-QDateTime* q_datetime_from_secs_since_epoch32(long long secs, int32_t spec, int offsetFromUtc) {
+QDateTime* q_datetime_from_secs_since_epoch32(int64_t secs, int32_t spec, int offsetFromUtc) {
     return QDateTime_FromSecsSinceEpoch32(secs, spec, offsetFromUtc);
 }
 

@@ -235,7 +235,7 @@ void q_networkaccessmanager_connect_to_host_encrypted(void* self, const char* ho
     QNetworkAccessManager_ConnectToHostEncrypted((QNetworkAccessManager*)self, qstring(hostName));
 }
 
-void q_networkaccessmanager_connect_to_host_encrypted2(void* self, const char* hostName, unsigned short port, void* sslConfiguration, const char* peerName) {
+void q_networkaccessmanager_connect_to_host_encrypted2(void* self, const char* hostName, uint16_t port, void* sslConfiguration, const char* peerName) {
     QNetworkAccessManager_ConnectToHostEncrypted2((QNetworkAccessManager*)self, qstring(hostName), port, (QSslConfiguration*)sslConfiguration, qstring(peerName));
 }
 
@@ -399,15 +399,15 @@ QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, void* re
     return QNetworkAccessManager_SendCustomRequest32((QNetworkAccessManager*)self, (QNetworkRequest*)request, qstring(verb), (QIODevice*)data);
 }
 
-void q_networkaccessmanager_connect_to_host_encrypted22(void* self, const char* hostName, unsigned short port) {
+void q_networkaccessmanager_connect_to_host_encrypted22(void* self, const char* hostName, uint16_t port) {
     QNetworkAccessManager_ConnectToHostEncrypted22((QNetworkAccessManager*)self, qstring(hostName), port);
 }
 
-void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* hostName, unsigned short port, void* sslConfiguration) {
+void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* hostName, uint16_t port, void* sslConfiguration) {
     QNetworkAccessManager_ConnectToHostEncrypted3((QNetworkAccessManager*)self, qstring(hostName), port, (QSslConfiguration*)sslConfiguration);
 }
 
-void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, unsigned short port) {
+void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, uint16_t port) {
     QNetworkAccessManager_ConnectToHost2((QNetworkAccessManager*)self, qstring(hostName), port);
 }
 

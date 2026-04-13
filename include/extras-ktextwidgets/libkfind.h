@@ -16,21 +16,21 @@
 /// k_find_new constructs a new KFind object.
 ///
 /// @param pattern const char*
-/// @param options int64_t
+/// @param options long
 /// @param parent QWidget*
 ///
-KFind* k_find_new(const char* pattern, int64_t options, void* parent);
+KFind* k_find_new(const char* pattern, long options, void* parent);
 
 /// [Upstream resources](https://api.kde.org/kfind.html)
 
 /// k_find_new2 constructs a new KFind object.
 ///
 /// @param pattern const char*
-/// @param options int64_t
+/// @param options long
 /// @param parent QWidget*
 /// @param findDialog QWidget*
 ///
-KFind* k_find_new2(const char* pattern, int64_t options, void* parent, void* findDialog);
+KFind* k_find_new2(const char* pattern, long options, void* parent, void* findDialog);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -150,23 +150,23 @@ int32_t k_find_find(void* self);
 ///
 /// @param self KFind*
 ///
-int64_t k_find_options(void* self);
+long k_find_options(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#setOptions)
 ///
 /// @param self KFind*
-/// @param options int64_t
+/// @param options long
 ///
-void k_find_set_options(void* self, int64_t options);
+void k_find_set_options(void* self, long options);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#setOptions)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KFind*
-/// @param callback void func(KFind* self, int64_t options)
+/// @param callback void func(KFind* self, long options)
 ///
-void k_find_on_set_options(void* self, void (*callback)(void*, int64_t));
+void k_find_on_set_options(void* self, void (*callback)(void*, long));
 
 /// @warning DEPRECATED: Use `k_find_super_set_options` instead
 ///
@@ -177,9 +177,9 @@ void k_find_on_set_options(void* self, void (*callback)(void*, int64_t));
 /// Base class method implementation
 ///
 /// @param self KFind*
-/// @param options int64_t
+/// @param options long
 ///
-void k_find_super_set_options(void* self, int64_t options);
+void k_find_super_set_options(void* self, long options);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#pattern)
 ///
@@ -298,11 +298,11 @@ bool k_find_super_should_restart(void* self, bool forceAsking, bool showNumMatch
 /// @param text const char*
 /// @param pattern const char*
 /// @param index int
-/// @param options int64_t
+/// @param options long
 /// @param matchedLength int*
 /// @param rmatch QRegularExpressionMatch*
 ///
-int32_t k_find_find2(const char* text, const char* pattern, int index, int64_t options, int* matchedLength, void* rmatch);
+int32_t k_find_find2(const char* text, const char* pattern, int index, long options, int* matchedLength, void* rmatch);
 
 /// [Upstream resources](https://api.kde.org/kfind.html#displayFinalDialog)
 ///

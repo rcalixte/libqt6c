@@ -48,9 +48,9 @@ QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress);
 ///
 /// @param data char*
 /// @param destinationAddress QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, unsigned short port);
+QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#operator-eq)
 ///
@@ -132,9 +132,9 @@ void q_networkdatagram_set_sender(void* self, void* address);
 ///
 /// @param self QNetworkDatagram*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_networkdatagram_set_destination(void* self, void* address, unsigned short port);
+void q_networkdatagram_set_destination(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#hopLimit)
 ///
@@ -175,9 +175,9 @@ QNetworkDatagram* q_networkdatagram_make_reply(void* self, char* payload);
 ///
 /// @param self QNetworkDatagram*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_networkdatagram_set_sender2(void* self, void* address, unsigned short port);
+void q_networkdatagram_set_sender2(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdatagram.html#dtor.QNetworkDatagram)
 ///

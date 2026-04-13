@@ -250,7 +250,7 @@ const char* k_listopenfilesjob_error_text(void* self);
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_listopenfilesjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_listopenfilesjob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -259,7 +259,7 @@ uint64_t k_listopenfilesjob_processed_amount(void* self, int32_t unit);
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_listopenfilesjob_total_amount(void* self, int32_t unit);
+uintptr_t k_listopenfilesjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -267,7 +267,7 @@ uint64_t k_listopenfilesjob_total_amount(void* self, int32_t unit);
 ///
 /// @param self KListOpenFilesJob*
 ///
-uint64_t k_listopenfilesjob_percent(void* self);
+uintptr_t k_listopenfilesjob_percent(void* self);
 
 /// Inherited from KJob
 ///
@@ -316,7 +316,7 @@ bool k_listopenfilesjob_is_started_with_exec(void* self);
 ///
 /// @param self KListOpenFilesJob*
 ///
-long long k_listopenfilesjob_elapsed_time(void* self);
+int64_t k_listopenfilesjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
@@ -362,18 +362,18 @@ void k_listopenfilesjob_on_warning(void* self, void (*callback)(void*, void*, co
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_listopenfilesjob_total_size(void* self, void* job, uint64_t size);
+void k_listopenfilesjob_total_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uintptr_t size)
 ///
-void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -381,18 +381,18 @@ void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*,
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_listopenfilesjob_processed_size(void* self, void* job, uint64_t size);
+void k_listopenfilesjob_processed_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uintptr_t size)
 ///
-void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -400,18 +400,18 @@ void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, vo
 ///
 /// @param self KListOpenFilesJob*
 /// @param job KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_listopenfilesjob_speed(void* self, void* job, uint64_t speed);
+void k_listopenfilesjob_speed(void* self, void* job, uintptr_t speed);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t speed)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uintptr_t speed)
 ///
-void k_listopenfilesjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_listopenfilesjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1437,9 +1437,9 @@ void k_listopenfilesjob_on_set_error_text(void* self, void (*callback)(void*, co
 ///
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// @warning DEPRECATED: Use `k_listopenfilesjob_super_set_processed_amount` instead
 ///
@@ -1453,9 +1453,9 @@ void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uint64_t 
 ///
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_listopenfilesjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_listopenfilesjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// Inherited from KJob
 ///
@@ -1464,9 +1464,9 @@ void k_listopenfilesjob_super_set_processed_amount(void* self, int32_t unit, uin
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
+void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1476,9 +1476,9 @@ void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(voi
 ///
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// @warning DEPRECATED: Use `k_listopenfilesjob_super_set_total_amount` instead
 ///
@@ -1492,9 +1492,9 @@ void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uint64_t amou
 ///
 /// @param self KListOpenFilesJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_listopenfilesjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_listopenfilesjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// Inherited from KJob
 ///
@@ -1503,9 +1503,9 @@ void k_listopenfilesjob_super_set_total_amount(void* self, int32_t unit, uint64_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KListOpenFilesJob* self, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
+void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1551,9 +1551,9 @@ void k_listopenfilesjob_on_set_progress_unit(void* self, void (*callback)(void*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param percentage uint64_t
+/// @param percentage uintptr_t
 ///
-void k_listopenfilesjob_set_percent(void* self, uint64_t percentage);
+void k_listopenfilesjob_set_percent(void* self, uintptr_t percentage);
 
 /// @warning DEPRECATED: Use `k_listopenfilesjob_super_set_percent` instead
 ///
@@ -1566,9 +1566,9 @@ void k_listopenfilesjob_set_percent(void* self, uint64_t percentage);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param percentage uint64_t
+/// @param percentage uintptr_t
 ///
-void k_listopenfilesjob_super_set_percent(void* self, uint64_t percentage);
+void k_listopenfilesjob_super_set_percent(void* self, uintptr_t percentage);
 
 /// Inherited from KJob
 ///
@@ -1577,9 +1577,9 @@ void k_listopenfilesjob_super_set_percent(void* self, uint64_t percentage);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, uint64_t percentage)
+/// @param callback void func(KListOpenFilesJob* self, uintptr_t percentage)
 ///
-void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uint64_t));
+void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1623,10 +1623,10 @@ void k_listopenfilesjob_on_emit_result(void* self, void (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param processedAmount uint64_t
-/// @param totalAmount uint64_t
+/// @param processedAmount uintptr_t
+/// @param totalAmount uintptr_t
 ///
-void k_listopenfilesjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_listopenfilesjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
 
 /// @warning DEPRECATED: Use `k_listopenfilesjob_super_emit_percent` instead
 ///
@@ -1639,10 +1639,10 @@ void k_listopenfilesjob_emit_percent(void* self, uint64_t processedAmount, uint6
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param processedAmount uint64_t
-/// @param totalAmount uint64_t
+/// @param processedAmount uintptr_t
+/// @param totalAmount uintptr_t
 ///
-void k_listopenfilesjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_listopenfilesjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
 
 /// Inherited from KJob
 ///
@@ -1651,9 +1651,9 @@ void k_listopenfilesjob_super_emit_percent(void* self, uint64_t processedAmount,
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, uint64_t processedAmount, uint64_t totalAmount)
+/// @param callback void func(KListOpenFilesJob* self, uintptr_t processedAmount, uintptr_t totalAmount)
 ///
-void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t));
+void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1662,9 +1662,9 @@ void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uint
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_listopenfilesjob_emit_speed(void* self, uint64_t speed);
+void k_listopenfilesjob_emit_speed(void* self, uintptr_t speed);
 
 /// @warning DEPRECATED: Use `k_listopenfilesjob_super_emit_speed` instead
 ///
@@ -1677,9 +1677,9 @@ void k_listopenfilesjob_emit_speed(void* self, uint64_t speed);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_listopenfilesjob_super_emit_speed(void* self, uint64_t speed);
+void k_listopenfilesjob_super_emit_speed(void* self, uintptr_t speed);
 
 /// Inherited from KJob
 ///
@@ -1688,9 +1688,9 @@ void k_listopenfilesjob_super_emit_speed(void* self, uint64_t speed);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, uint64_t speed)
+/// @param callback void func(KListOpenFilesJob* self, uintptr_t speed)
 ///
-void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t));
+void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1922,9 +1922,9 @@ void k_listopenfilesjob_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1933,9 +1933,9 @@ void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(voi
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1944,9 +1944,9 @@ void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)
 /// Wrapper to allow calling private signal
 ///
 /// @param self KListOpenFilesJob*
-/// @param callback void func(KListOpenFilesJob* self, KJob* job, uint64_t percent)
+/// @param callback void func(KListOpenFilesJob* self, KJob* job, uintptr_t percent)
 ///
-void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from QObject
 ///

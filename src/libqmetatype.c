@@ -98,11 +98,11 @@ int32_t q_metatype_id(void* self) {
     return QMetaType_Id((QMetaType*)self);
 }
 
-int64_t q_metatype_size_of2(void* self) {
+intptr_t q_metatype_size_of2(void* self) {
     return QMetaType_SizeOf2((QMetaType*)self);
 }
 
-int64_t q_metatype_align_of(void* self) {
+intptr_t q_metatype_align_of(void* self) {
     return QMetaType_AlignOf((QMetaType*)self);
 }
 

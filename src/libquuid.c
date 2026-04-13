@@ -15,7 +15,7 @@ QUuid* q_uuid_new3() {
     return QUuid_new3();
 }
 
-QUuid* q_uuid_new4(uint32_t l, unsigned short w1, unsigned short w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8) {
+QUuid* q_uuid_new4(uint32_t l, uint16_t w1, uint16_t w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8) {
     return QUuid_new4(l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8);
 }
 
@@ -112,19 +112,19 @@ void q_uuid_set_data1(void* self, uint32_t data1) {
     QUuid_SetData1((QUuid*)self, data1);
 }
 
-unsigned short q_uuid_data2(void* self) {
+uint16_t q_uuid_data2(void* self) {
     return QUuid_Data2((QUuid*)self);
 }
 
-void q_uuid_set_data2(void* self, unsigned short data2) {
+void q_uuid_set_data2(void* self, uint16_t data2) {
     QUuid_SetData2((QUuid*)self, data2);
 }
 
-unsigned short q_uuid_data3(void* self) {
+uint16_t q_uuid_data3(void* self) {
     return QUuid_Data3((QUuid*)self);
 }
 
-void q_uuid_set_data3(void* self, unsigned short data3) {
+void q_uuid_set_data3(void* self, uint16_t data3) {
     QUuid_SetData3((QUuid*)self, data3);
 }
 

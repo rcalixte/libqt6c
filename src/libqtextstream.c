@@ -92,11 +92,11 @@ void q_textstream_flush(void* self) {
     QTextStream_Flush((QTextStream*)self);
 }
 
-bool q_textstream_seek(void* self, long long pos) {
+bool q_textstream_seek(void* self, int64_t pos) {
     return QTextStream_Seek((QTextStream*)self, pos);
 }
 
-long long q_textstream_pos(void* self) {
+int64_t q_textstream_pos(void* self) {
     return QTextStream_Pos((QTextStream*)self);
 }
 
@@ -118,7 +118,7 @@ const char* q_textstream_read_all(void* self) {
     return _ret;
 }
 
-const char* q_textstream_read(void* self, long long maxlen) {
+const char* q_textstream_read(void* self, int64_t maxlen) {
     libqt_string _str = QTextStream_Read((QTextStream*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -206,13 +206,13 @@ QTextStream* q_textstream_operator_shift_right7(void* self, uint32_t* i) {
 }
 
 #if defined(__linux__) || defined(__FreeBSD__)
-QTextStream* q_textstream_operator_shift_right8(void* self, int64_t* i) {
+QTextStream* q_textstream_operator_shift_right8(void* self, long* i) {
     return QTextStream_OperatorShiftRight8((QTextStream*)self, i);
 }
 #endif
 
 #if defined(__linux__) || defined(__FreeBSD__)
-QTextStream* q_textstream_operator_shift_right9(void* self, uint64_t* i) {
+QTextStream* q_textstream_operator_shift_right9(void* self, uintptr_t* i) {
     return QTextStream_OperatorShiftRight9((QTextStream*)self, i);
 }
 #endif
@@ -221,7 +221,7 @@ QTextStream* q_textstream_operator_shift_right10(void* self, long long* i) {
     return QTextStream_OperatorShiftRight10((QTextStream*)self, i);
 }
 
-QTextStream* q_textstream_operator_shift_right11(void* self, uint64_t* i) {
+QTextStream* q_textstream_operator_shift_right11(void* self, uintptr_t* i) {
     return QTextStream_OperatorShiftRight11((QTextStream*)self, (unsigned long long*)i);
 }
 
@@ -269,11 +269,11 @@ QTextStream* q_textstream_operator_shift_left7(void* self, uint32_t i) {
     return QTextStream_OperatorShiftLeft7((QTextStream*)self, i);
 }
 
-QTextStream* q_textstream_operator_shift_left8(void* self, int64_t i) {
+QTextStream* q_textstream_operator_shift_left8(void* self, long i) {
     return QTextStream_OperatorShiftLeft8((QTextStream*)self, i);
 }
 
-QTextStream* q_textstream_operator_shift_left9(void* self, uint64_t i) {
+QTextStream* q_textstream_operator_shift_left9(void* self, uintptr_t i) {
     return QTextStream_OperatorShiftLeft9((QTextStream*)self, i);
 }
 
@@ -281,7 +281,7 @@ QTextStream* q_textstream_operator_shift_left10(void* self, long long i) {
     return QTextStream_OperatorShiftLeft10((QTextStream*)self, i);
 }
 
-QTextStream* q_textstream_operator_shift_left11(void* self, uint64_t i) {
+QTextStream* q_textstream_operator_shift_left11(void* self, uintptr_t i) {
     return QTextStream_OperatorShiftLeft11((QTextStream*)self, i);
 }
 
@@ -309,7 +309,7 @@ QTextStream* q_textstream_operator_shift_left19(void* self, void* ptr) {
     return QTextStream_OperatorShiftLeft19((QTextStream*)self, ptr);
 }
 
-const char* q_textstream_read_line1(void* self, long long maxlen) {
+const char* q_textstream_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QTextStream_ReadLine1((QTextStream*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

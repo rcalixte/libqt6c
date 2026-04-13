@@ -45,9 +45,9 @@ QJsonValue* q_jsonvalue_new4(int n);
 
 /// q_jsonvalue_new5 constructs a new QJsonValue object.
 ///
-/// @param v long long
+/// @param v int64_t
 ///
-QJsonValue* q_jsonvalue_new5(long long v);
+QJsonValue* q_jsonvalue_new5(int64_t v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
 
@@ -189,7 +189,7 @@ int32_t q_jsonvalue_to_int(void* self);
 ///
 /// @param self QJsonValue*
 ///
-long long q_jsonvalue_to_integer(void* self);
+int64_t q_jsonvalue_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#toDouble)
 ///
@@ -250,9 +250,9 @@ const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
 ///
 /// @param self QJsonValue*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-const QJsonValue* q_jsonvalue_operator_subscript4(void* self, int64_t i);
+const QJsonValue* q_jsonvalue_operator_subscript4(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#toBool)
 ///
@@ -271,9 +271,9 @@ int32_t q_jsonvalue_to_int1(void* self, int defaultValue);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#toInteger)
 ///
 /// @param self QJsonValue*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-long long q_jsonvalue_to_integer1(void* self, long long defaultValue);
+int64_t q_jsonvalue_to_integer1(void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#toDouble)
 ///
@@ -384,7 +384,7 @@ int32_t q_jsonvalueconstref_to_int(void* self);
 ///
 /// @param self QJsonValueConstRef*
 ///
-long long q_jsonvalueconstref_to_integer(void* self);
+int64_t q_jsonvalueconstref_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toDouble)
 ///
@@ -415,9 +415,9 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-5b-5d)
 ///
 /// @param self QJsonValueConstRef*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, int64_t i);
+const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toBool)
 ///
@@ -436,9 +436,9 @@ int32_t q_jsonvalueconstref_to_int1(void* self, int defaultValue);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toInteger)
 ///
 /// @param self QJsonValueConstRef*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-long long q_jsonvalueconstref_to_integer1(void* self, long long defaultValue);
+int64_t q_jsonvalueconstref_to_integer1(void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#toDouble)
 ///
@@ -485,18 +485,18 @@ QJsonValueRef* q_jsonvalueref_new2(void* param1);
 /// q_jsonvalueref_new3 constructs a new QJsonValueRef object.
 ///
 /// @param array QJsonArray*
-/// @param idx int64_t
+/// @param idx intptr_t
 ///
-QJsonValueRef* q_jsonvalueref_new3(void* array, int64_t idx);
+QJsonValueRef* q_jsonvalueref_new3(void* array, intptr_t idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html)
 
 /// q_jsonvalueref_new4 constructs a new QJsonValueRef object.
 ///
 /// @param object QJsonObject*
-/// @param idx int64_t
+/// @param idx intptr_t
 ///
-QJsonValueRef* q_jsonvalueref_new4(void* object, int64_t idx);
+QJsonValueRef* q_jsonvalueref_new4(void* object, intptr_t idx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-eq)
 ///
@@ -590,7 +590,7 @@ int32_t q_jsonvalueref_to_int(void* self);
 ///
 /// @param self QJsonValueRef*
 ///
-long long q_jsonvalueref_to_integer(void* self);
+int64_t q_jsonvalueref_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#toDouble)
 ///
@@ -621,9 +621,9 @@ QJsonObject* q_jsonvalueref_to_object(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-5b-5d)
 ///
 /// @param self QJsonValueRef*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, int64_t i);
+const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#toBool)
 ///
@@ -642,9 +642,9 @@ int32_t q_jsonvalueref_to_int1(void* self, int defaultValue);
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#toInteger)
 ///
 /// @param self QJsonValueRef*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-long long q_jsonvalueref_to_integer1(void* self, long long defaultValue);
+int64_t q_jsonvalueref_to_integer1(void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#toDouble)
 ///

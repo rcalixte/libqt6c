@@ -52,9 +52,9 @@ void q_messageauthenticationcode_set_key(void* self, char* key);
 ///
 /// @param self QMessageAuthenticationCode*
 /// @param data const char*
-/// @param length int64_t
+/// @param length intptr_t
 ///
-void q_messageauthenticationcode_add_data(void* self, const char* data, int64_t length);
+void q_messageauthenticationcode_add_data(void* self, const char* data, intptr_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmessageauthenticationcode.html#addData)
 ///

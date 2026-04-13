@@ -68,11 +68,11 @@ KCodecs__Codec* k_codecs__codec_codec_for_name(char* name) {
     return KCodecs__Codec_CodecForName(qstring(name));
 }
 
-int64_t k_codecs__codec_max_encoded_size_for(void* self, int64_t insize, int32_t newline) {
+intptr_t k_codecs__codec_max_encoded_size_for(void* self, intptr_t insize, int32_t newline) {
     return KCodecs__Codec_MaxEncodedSizeFor((KCodecs__Codec*)self, insize, newline);
 }
 
-int64_t k_codecs__codec_max_decoded_size_for(void* self, int64_t insize, int32_t newline) {
+intptr_t k_codecs__codec_max_decoded_size_for(void* self, intptr_t insize, int32_t newline) {
     return KCodecs__Codec_MaxDecodedSizeFor((KCodecs__Codec*)self, insize, newline);
 }
 

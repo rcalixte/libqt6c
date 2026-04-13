@@ -46,7 +46,7 @@ bool q_metacontainer_has_size(void* self) {
     return QMetaContainer_HasSize((QMetaContainer*)self);
 }
 
-int64_t q_metacontainer_size(void* self, void* container) {
+intptr_t q_metacontainer_size(void* self, void* container) {
     return QMetaContainer_Size((QMetaContainer*)self, container);
 }
 
@@ -82,11 +82,11 @@ void q_metacontainer_copy_iterator(void* self, void* target, void* source) {
     QMetaContainer_CopyIterator((QMetaContainer*)self, target, source);
 }
 
-void q_metacontainer_advance_iterator(void* self, void* iterator, int64_t step) {
+void q_metacontainer_advance_iterator(void* self, void* iterator, intptr_t step) {
     QMetaContainer_AdvanceIterator((QMetaContainer*)self, iterator, step);
 }
 
-int64_t q_metacontainer_diff_iterator(void* self, void* i, void* j) {
+intptr_t q_metacontainer_diff_iterator(void* self, void* i, void* j) {
     return QMetaContainer_DiffIterator((QMetaContainer*)self, i, j);
 }
 
@@ -114,11 +114,11 @@ void q_metacontainer_copy_const_iterator(void* self, void* target, void* source)
     QMetaContainer_CopyConstIterator((QMetaContainer*)self, target, source);
 }
 
-void q_metacontainer_advance_const_iterator(void* self, void* iterator, int64_t step) {
+void q_metacontainer_advance_const_iterator(void* self, void* iterator, intptr_t step) {
     QMetaContainer_AdvanceConstIterator((QMetaContainer*)self, iterator, step);
 }
 
-int64_t q_metacontainer_diff_const_iterator(void* self, void* i, void* j) {
+intptr_t q_metacontainer_diff_const_iterator(void* self, void* i, void* j) {
     return QMetaContainer_DiffConstIterator((QMetaContainer*)self, i, j);
 }
 
@@ -190,7 +190,7 @@ bool q_metasequence_can_get_value_at_index(void* self) {
     return QMetaSequence_CanGetValueAtIndex((QMetaSequence*)self);
 }
 
-void q_metasequence_value_at_index(void* self, void* container, int64_t index, void* result) {
+void q_metasequence_value_at_index(void* self, void* container, intptr_t index, void* result) {
     QMetaSequence_ValueAtIndex((QMetaSequence*)self, container, index, result);
 }
 
@@ -198,7 +198,7 @@ bool q_metasequence_can_set_value_at_index(void* self) {
     return QMetaSequence_CanSetValueAtIndex((QMetaSequence*)self);
 }
 
-void q_metasequence_set_value_at_index(void* self, void* container, int64_t index, void* value) {
+void q_metasequence_set_value_at_index(void* self, void* container, intptr_t index, void* value) {
     QMetaSequence_SetValueAtIndex((QMetaSequence*)self, container, index, value);
 }
 
@@ -286,7 +286,7 @@ bool q_metasequence_has_size(void* self) {
     return QMetaContainer_HasSize((QMetaContainer*)self);
 }
 
-int64_t q_metasequence_size(void* self, void* container) {
+intptr_t q_metasequence_size(void* self, void* container) {
     return QMetaContainer_Size((QMetaContainer*)self, container);
 }
 
@@ -322,11 +322,11 @@ void q_metasequence_copy_iterator(void* self, void* target, void* source) {
     QMetaContainer_CopyIterator((QMetaContainer*)self, target, source);
 }
 
-void q_metasequence_advance_iterator(void* self, void* iterator, int64_t step) {
+void q_metasequence_advance_iterator(void* self, void* iterator, intptr_t step) {
     QMetaContainer_AdvanceIterator((QMetaContainer*)self, iterator, step);
 }
 
-int64_t q_metasequence_diff_iterator(void* self, void* i, void* j) {
+intptr_t q_metasequence_diff_iterator(void* self, void* i, void* j) {
     return QMetaContainer_DiffIterator((QMetaContainer*)self, i, j);
 }
 
@@ -354,11 +354,11 @@ void q_metasequence_copy_const_iterator(void* self, void* target, void* source) 
     QMetaContainer_CopyConstIterator((QMetaContainer*)self, target, source);
 }
 
-void q_metasequence_advance_const_iterator(void* self, void* iterator, int64_t step) {
+void q_metasequence_advance_const_iterator(void* self, void* iterator, intptr_t step) {
     QMetaContainer_AdvanceConstIterator((QMetaContainer*)self, iterator, step);
 }
 
-int64_t q_metasequence_diff_const_iterator(void* self, void* i, void* j) {
+intptr_t q_metasequence_diff_const_iterator(void* self, void* i, void* j) {
     return QMetaContainer_DiffConstIterator((QMetaContainer*)self, i, j);
 }
 
@@ -510,7 +510,7 @@ bool q_metaassociation_has_size(void* self) {
     return QMetaContainer_HasSize((QMetaContainer*)self);
 }
 
-int64_t q_metaassociation_size(void* self, void* container) {
+intptr_t q_metaassociation_size(void* self, void* container) {
     return QMetaContainer_Size((QMetaContainer*)self, container);
 }
 
@@ -546,11 +546,11 @@ void q_metaassociation_copy_iterator(void* self, void* target, void* source) {
     QMetaContainer_CopyIterator((QMetaContainer*)self, target, source);
 }
 
-void q_metaassociation_advance_iterator(void* self, void* iterator, int64_t step) {
+void q_metaassociation_advance_iterator(void* self, void* iterator, intptr_t step) {
     QMetaContainer_AdvanceIterator((QMetaContainer*)self, iterator, step);
 }
 
-int64_t q_metaassociation_diff_iterator(void* self, void* i, void* j) {
+intptr_t q_metaassociation_diff_iterator(void* self, void* i, void* j) {
     return QMetaContainer_DiffIterator((QMetaContainer*)self, i, j);
 }
 
@@ -578,11 +578,11 @@ void q_metaassociation_copy_const_iterator(void* self, void* target, void* sourc
     QMetaContainer_CopyConstIterator((QMetaContainer*)self, target, source);
 }
 
-void q_metaassociation_advance_const_iterator(void* self, void* iterator, int64_t step) {
+void q_metaassociation_advance_const_iterator(void* self, void* iterator, intptr_t step) {
     QMetaContainer_AdvanceConstIterator((QMetaContainer*)self, iterator, step);
 }
 
-int64_t q_metaassociation_diff_const_iterator(void* self, void* i, void* j) {
+intptr_t q_metaassociation_diff_const_iterator(void* self, void* i, void* j) {
     return QMetaContainer_DiffConstIterator((QMetaContainer*)self, i, j);
 }
 

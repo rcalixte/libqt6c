@@ -1,11 +1,11 @@
 #include "libqvarlengtharray.hpp"
 #include "libqvarlengtharray.h"
 
-int64_t q_vlabasebase_capacity(void* self) {
+intptr_t q_vlabasebase_capacity(void* self) {
     return QVLABaseBase_Capacity((QVLABaseBase*)self);
 }
 
-int64_t q_vlabasebase_size(void* self) {
+intptr_t q_vlabasebase_size(void* self) {
     return QVLABaseBase_Size((QVLABaseBase*)self);
 }
 

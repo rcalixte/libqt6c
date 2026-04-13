@@ -30,7 +30,7 @@ KNSCore__Transaction* k_nscore__transaction_install(void* engine, void* entry) {
     return KNSCore__Transaction_Install((KNSCore__EngineBase*)engine, (KNSCore__Entry*)entry);
 }
 
-KNSCore__Transaction* k_nscore__transaction_install_link_id(void* engine, void* entry, unsigned char linkId) {
+KNSCore__Transaction* k_nscore__transaction_install_link_id(void* engine, void* entry, uint8_t linkId) {
     return KNSCore__Transaction_InstallLinkId((KNSCore__EngineBase*)engine, (KNSCore__Entry*)entry, linkId);
 }
 

@@ -78,7 +78,7 @@ QKeySequence* q_keysequenceedit_key_sequence(void* self) {
     return QKeySequenceEdit_KeySequence((QKeySequenceEdit*)self);
 }
 
-int64_t q_keysequenceedit_maximum_sequence_length(void* self) {
+intptr_t q_keysequenceedit_maximum_sequence_length(void* self) {
     return QKeySequenceEdit_MaximumSequenceLength((QKeySequenceEdit*)self);
 }
 
@@ -107,7 +107,7 @@ void q_keysequenceedit_clear(void* self) {
     QKeySequenceEdit_Clear((QKeySequenceEdit*)self);
 }
 
-void q_keysequenceedit_set_maximum_sequence_length(void* self, int64_t count) {
+void q_keysequenceedit_set_maximum_sequence_length(void* self, intptr_t count) {
     QKeySequenceEdit_SetMaximumSequenceLength((QKeySequenceEdit*)self, count);
 }
 
@@ -1163,7 +1163,7 @@ int32_t q_keysequenceedit_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_keysequenceedit_find(uint64_t param1) {
+QWidget* q_keysequenceedit_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

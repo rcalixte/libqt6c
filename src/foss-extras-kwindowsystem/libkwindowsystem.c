@@ -90,7 +90,7 @@ const char* k_windowsystem_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-void k_windowsystem_activate_window2(void* window, int64_t time) {
+void k_windowsystem_activate_window2(void* window, long time) {
     KWindowSystem_ActivateWindow2((QWindow*)window, time);
 }
 

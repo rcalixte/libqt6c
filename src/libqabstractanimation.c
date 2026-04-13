@@ -645,15 +645,15 @@ bool q_animationdriver_is_running(void* self) {
     return QAnimationDriver_IsRunning((QAnimationDriver*)self);
 }
 
-long long q_animationdriver_elapsed(void* self) {
+int64_t q_animationdriver_elapsed(void* self) {
     return QAnimationDriver_Elapsed((QAnimationDriver*)self);
 }
 
-void q_animationdriver_on_elapsed(void* self, long long (*callback)()) {
+void q_animationdriver_on_elapsed(void* self, int64_t (*callback)()) {
     QAnimationDriver_OnElapsed((QAnimationDriver*)self, (intptr_t)callback);
 }
 
-long long q_animationdriver_super_elapsed(void* self) {
+int64_t q_animationdriver_super_elapsed(void* self) {
     return QAnimationDriver_SuperElapsed((QAnimationDriver*)self);
 }
 

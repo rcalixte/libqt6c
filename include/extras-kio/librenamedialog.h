@@ -32,9 +32,9 @@ KIO__RenameDialog* k_io__renamedialog_new(void* parent, const char* title, void*
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
+/// @param sizeSrc uintptr_t
 ///
-KIO__RenameDialog* k_io__renamedialog_new2(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc);
+KIO__RenameDialog* k_io__renamedialog_new2(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc);
 
 /// [Upstream resources](https://api.kde.org/kio-renamedialog.html)
 
@@ -45,10 +45,10 @@ KIO__RenameDialog* k_io__renamedialog_new2(void* parent, const char* title, void
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
-/// @param sizeDest uint64_t
+/// @param sizeSrc uintptr_t
+/// @param sizeDest uintptr_t
 ///
-KIO__RenameDialog* k_io__renamedialog_new3(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest);
+KIO__RenameDialog* k_io__renamedialog_new3(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest);
 
 /// [Upstream resources](https://api.kde.org/kio-renamedialog.html)
 
@@ -59,11 +59,11 @@ KIO__RenameDialog* k_io__renamedialog_new3(void* parent, const char* title, void
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
-/// @param sizeDest uint64_t
+/// @param sizeSrc uintptr_t
+/// @param sizeDest uintptr_t
 /// @param ctimeSrc QDateTime*
 ///
-KIO__RenameDialog* k_io__renamedialog_new4(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc);
+KIO__RenameDialog* k_io__renamedialog_new4(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc);
 
 /// [Upstream resources](https://api.kde.org/kio-renamedialog.html)
 
@@ -74,12 +74,12 @@ KIO__RenameDialog* k_io__renamedialog_new4(void* parent, const char* title, void
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
-/// @param sizeDest uint64_t
+/// @param sizeSrc uintptr_t
+/// @param sizeDest uintptr_t
 /// @param ctimeSrc QDateTime*
 /// @param ctimeDest QDateTime*
 ///
-KIO__RenameDialog* k_io__renamedialog_new5(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest);
+KIO__RenameDialog* k_io__renamedialog_new5(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest);
 
 /// [Upstream resources](https://api.kde.org/kio-renamedialog.html)
 
@@ -90,13 +90,13 @@ KIO__RenameDialog* k_io__renamedialog_new5(void* parent, const char* title, void
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
-/// @param sizeDest uint64_t
+/// @param sizeSrc uintptr_t
+/// @param sizeDest uintptr_t
 /// @param ctimeSrc QDateTime*
 /// @param ctimeDest QDateTime*
 /// @param mtimeSrc QDateTime*
 ///
-KIO__RenameDialog* k_io__renamedialog_new6(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc);
+KIO__RenameDialog* k_io__renamedialog_new6(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc);
 
 /// [Upstream resources](https://api.kde.org/kio-renamedialog.html)
 
@@ -107,14 +107,14 @@ KIO__RenameDialog* k_io__renamedialog_new6(void* parent, const char* title, void
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
-/// @param sizeDest uint64_t
+/// @param sizeSrc uintptr_t
+/// @param sizeDest uintptr_t
 /// @param ctimeSrc QDateTime*
 /// @param ctimeDest QDateTime*
 /// @param mtimeSrc QDateTime*
 /// @param mtimeDest QDateTime*
 ///
-KIO__RenameDialog* k_io__renamedialog_new7(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
+KIO__RenameDialog* k_io__renamedialog_new7(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -2456,9 +2456,9 @@ int32_t k_io__renamedialog_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_io__renamedialog_find(uint64_t param1);
+QWidget* k_io__renamedialog_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

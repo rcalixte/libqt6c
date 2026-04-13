@@ -99,7 +99,7 @@ int32_t k_recentfilesmenu_maximum_items(void* self) {
     return KRecentFilesMenu_MaximumItems((KRecentFilesMenu*)self);
 }
 
-void k_recentfilesmenu_set_maximum_items(void* self, uint64_t maximumItems) {
+void k_recentfilesmenu_set_maximum_items(void* self, uintptr_t maximumItems) {
     KRecentFilesMenu_SetMaximumItems((KRecentFilesMenu*)self, maximumItems);
 }
 
@@ -1315,7 +1315,7 @@ int32_t k_recentfilesmenu_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_recentfilesmenu_find(uint64_t param1) {
+QWidget* k_recentfilesmenu_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

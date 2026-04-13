@@ -115,7 +115,7 @@ QUrl* k_io__specialjob_redirect_url(void* self) {
     return KIO__TransferJob_RedirectUrl((KIO__TransferJob*)self);
 }
 
-void k_io__specialjob_set_total_size(void* self, uint64_t bytes) {
+void k_io__specialjob_set_total_size(void* self, uintptr_t bytes) {
     KIO__TransferJob_SetTotalSize((KIO__TransferJob*)self, bytes);
 }
 
@@ -159,11 +159,11 @@ void k_io__specialjob_on_mime_type_found(void* self, void (*callback)(void*, voi
     KIO__TransferJob_Connect_MimeTypeFound((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_can_resume(void* self, void* job, uint64_t offset) {
+void k_io__specialjob_can_resume(void* self, void* job, uintptr_t offset) {
     KIO__TransferJob_CanResume((KIO__TransferJob*)self, (KIO__Job*)job, offset);
 }
 
-void k_io__specialjob_on_can_resume(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__specialjob_on_can_resume(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KIO__TransferJob_Connect_CanResume((KIO__TransferJob*)self, (intptr_t)callback);
 }
 
@@ -390,15 +390,15 @@ const char* k_io__specialjob_error_text(void* self) {
     return _ret;
 }
 
-uint64_t k_io__specialjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__specialjob_processed_amount(void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__specialjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__specialjob_total_amount(void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__specialjob_percent(void* self) {
+uintptr_t k_io__specialjob_percent(void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -422,7 +422,7 @@ bool k_io__specialjob_is_started_with_exec(void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-long long k_io__specialjob_elapsed_time(void* self) {
+int64_t k_io__specialjob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -442,27 +442,27 @@ void k_io__specialjob_on_warning(void* self, void (*callback)(void*, void*, cons
     KJob_Connect_Warning((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_total_size(void* self, void* job, uint64_t size) {
+void k_io__specialjob_total_size(void* self, void* job, uintptr_t size) {
     KJob_TotalSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__specialjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__specialjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_TotalSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_processed_size(void* self, void* job, uint64_t size) {
+void k_io__specialjob_processed_size(void* self, void* job, uintptr_t size) {
     KJob_ProcessedSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__specialjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__specialjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_ProcessedSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_speed(void* self, void* job, uint64_t speed) {
+void k_io__specialjob_speed(void* self, void* job, uintptr_t speed) {
     KJob_Speed((KJob*)self, (KJob*)job, speed);
 }
 
-void k_io__specialjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__specialjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_Speed((KJob*)self, (intptr_t)callback);
 }
 
@@ -1065,27 +1065,27 @@ void k_io__specialjob_on_set_error_text(void* self, void (*callback)(void*, cons
     KIO__SpecialJob_OnSetErrorText((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__specialjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__SpecialJob_SetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__specialjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__SpecialJob_SuperSetProcessedAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_io__specialjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KIO__SpecialJob_OnSetProcessedAmount((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__specialjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__SpecialJob_SetTotalAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__specialjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__SpecialJob_SuperSetTotalAmount((KIO__SpecialJob*)self, unit, amount);
 }
 
-void k_io__specialjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_io__specialjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KIO__SpecialJob_OnSetTotalAmount((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -1101,15 +1101,15 @@ void k_io__specialjob_on_set_progress_unit(void* self, void (*callback)(void*, i
     KIO__SpecialJob_OnSetProgressUnit((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_set_percent(void* self, uint64_t percentage) {
+void k_io__specialjob_set_percent(void* self, uintptr_t percentage) {
     KIO__SpecialJob_SetPercent((KIO__SpecialJob*)self, percentage);
 }
 
-void k_io__specialjob_super_set_percent(void* self, uint64_t percentage) {
+void k_io__specialjob_super_set_percent(void* self, uintptr_t percentage) {
     KIO__SpecialJob_SuperSetPercent((KIO__SpecialJob*)self, percentage);
 }
 
-void k_io__specialjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
+void k_io__specialjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
     KIO__SpecialJob_OnSetPercent((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -1125,27 +1125,27 @@ void k_io__specialjob_on_emit_result(void* self, void (*callback)()) {
     KIO__SpecialJob_OnEmitResult((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_io__specialjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__SpecialJob_EmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__specialjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_io__specialjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__SpecialJob_SuperEmitPercent((KIO__SpecialJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__specialjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
+void k_io__specialjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
     KIO__SpecialJob_OnEmitPercent((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_emit_speed(void* self, uint64_t speed) {
+void k_io__specialjob_emit_speed(void* self, uintptr_t speed) {
     KIO__SpecialJob_EmitSpeed((KIO__SpecialJob*)self, speed);
 }
 
-void k_io__specialjob_super_emit_speed(void* self, uint64_t speed) {
+void k_io__specialjob_super_emit_speed(void* self, uintptr_t speed) {
     KIO__SpecialJob_SuperEmitSpeed((KIO__SpecialJob*)self, speed);
 }
 
-void k_io__specialjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
+void k_io__specialjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
     KIO__SpecialJob_OnEmitSpeed((KIO__SpecialJob*)self, (intptr_t)callback);
 }
 
@@ -1225,15 +1225,15 @@ void k_io__specialjob_on_result(void* self, void (*callback)(void*, void*)) {
     KJob_Connect_Result((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__specialjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_TotalAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__specialjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_ProcessedAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__specialjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__specialjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_PercentChanged((KJob*)self, (intptr_t)callback);
 }
 

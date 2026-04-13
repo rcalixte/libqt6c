@@ -1209,7 +1209,7 @@ int32_t k_newpassworddialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_newpassworddialog_find(uint64_t param1) {
+QWidget* k_newpassworddialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

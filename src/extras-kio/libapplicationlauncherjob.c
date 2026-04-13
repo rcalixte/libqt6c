@@ -61,7 +61,7 @@ void k_io__applicationlauncherjob_super_start(void* self) {
     KIO__ApplicationLauncherJob_SuperStart((KIO__ApplicationLauncherJob*)self);
 }
 
-long long k_io__applicationlauncherjob_pid(void* self) {
+int64_t k_io__applicationlauncherjob_pid(void* self) {
     return KIO__ApplicationLauncherJob_Pid((KIO__ApplicationLauncherJob*)self);
 }
 
@@ -120,15 +120,15 @@ const char* k_io__applicationlauncherjob_error_text(void* self) {
     return _ret;
 }
 
-uint64_t k_io__applicationlauncherjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__applicationlauncherjob_processed_amount(void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__applicationlauncherjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__applicationlauncherjob_total_amount(void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__applicationlauncherjob_percent(void* self) {
+uintptr_t k_io__applicationlauncherjob_percent(void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -152,7 +152,7 @@ bool k_io__applicationlauncherjob_is_started_with_exec(void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-long long k_io__applicationlauncherjob_elapsed_time(void* self) {
+int64_t k_io__applicationlauncherjob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -172,27 +172,27 @@ void k_io__applicationlauncherjob_on_warning(void* self, void (*callback)(void*,
     KJob_Connect_Warning((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_total_size(void* self, void* job, uint64_t size) {
+void k_io__applicationlauncherjob_total_size(void* self, void* job, uintptr_t size) {
     KJob_TotalSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__applicationlauncherjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__applicationlauncherjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_TotalSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_processed_size(void* self, void* job, uint64_t size) {
+void k_io__applicationlauncherjob_processed_size(void* self, void* job, uintptr_t size) {
     KJob_ProcessedSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__applicationlauncherjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__applicationlauncherjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_ProcessedSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_speed(void* self, void* job, uint64_t speed) {
+void k_io__applicationlauncherjob_speed(void* self, void* job, uintptr_t speed) {
     KJob_Speed((KJob*)self, (KJob*)job, speed);
 }
 
-void k_io__applicationlauncherjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__applicationlauncherjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_Speed((KJob*)self, (intptr_t)callback);
 }
 
@@ -651,27 +651,27 @@ void k_io__applicationlauncherjob_on_set_error_text(void* self, void (*callback)
     KIO__ApplicationLauncherJob_OnSetErrorText((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__applicationlauncherjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__ApplicationLauncherJob_SetProcessedAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
-void k_io__applicationlauncherjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__applicationlauncherjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__ApplicationLauncherJob_SuperSetProcessedAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
-void k_io__applicationlauncherjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_io__applicationlauncherjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KIO__ApplicationLauncherJob_OnSetProcessedAmount((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__applicationlauncherjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__ApplicationLauncherJob_SetTotalAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
-void k_io__applicationlauncherjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_io__applicationlauncherjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KIO__ApplicationLauncherJob_SuperSetTotalAmount((KIO__ApplicationLauncherJob*)self, unit, amount);
 }
 
-void k_io__applicationlauncherjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_io__applicationlauncherjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KIO__ApplicationLauncherJob_OnSetTotalAmount((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
@@ -687,15 +687,15 @@ void k_io__applicationlauncherjob_on_set_progress_unit(void* self, void (*callba
     KIO__ApplicationLauncherJob_OnSetProgressUnit((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_set_percent(void* self, uint64_t percentage) {
+void k_io__applicationlauncherjob_set_percent(void* self, uintptr_t percentage) {
     KIO__ApplicationLauncherJob_SetPercent((KIO__ApplicationLauncherJob*)self, percentage);
 }
 
-void k_io__applicationlauncherjob_super_set_percent(void* self, uint64_t percentage) {
+void k_io__applicationlauncherjob_super_set_percent(void* self, uintptr_t percentage) {
     KIO__ApplicationLauncherJob_SuperSetPercent((KIO__ApplicationLauncherJob*)self, percentage);
 }
 
-void k_io__applicationlauncherjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
+void k_io__applicationlauncherjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
     KIO__ApplicationLauncherJob_OnSetPercent((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
@@ -711,27 +711,27 @@ void k_io__applicationlauncherjob_on_emit_result(void* self, void (*callback)())
     KIO__ApplicationLauncherJob_OnEmitResult((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_io__applicationlauncherjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__ApplicationLauncherJob_EmitPercent((KIO__ApplicationLauncherJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__applicationlauncherjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_io__applicationlauncherjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KIO__ApplicationLauncherJob_SuperEmitPercent((KIO__ApplicationLauncherJob*)self, processedAmount, totalAmount);
 }
 
-void k_io__applicationlauncherjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
+void k_io__applicationlauncherjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
     KIO__ApplicationLauncherJob_OnEmitPercent((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_emit_speed(void* self, uint64_t speed) {
+void k_io__applicationlauncherjob_emit_speed(void* self, uintptr_t speed) {
     KIO__ApplicationLauncherJob_EmitSpeed((KIO__ApplicationLauncherJob*)self, speed);
 }
 
-void k_io__applicationlauncherjob_super_emit_speed(void* self, uint64_t speed) {
+void k_io__applicationlauncherjob_super_emit_speed(void* self, uintptr_t speed) {
     KIO__ApplicationLauncherJob_SuperEmitSpeed((KIO__ApplicationLauncherJob*)self, speed);
 }
 
-void k_io__applicationlauncherjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
+void k_io__applicationlauncherjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
     KIO__ApplicationLauncherJob_OnEmitSpeed((KIO__ApplicationLauncherJob*)self, (intptr_t)callback);
 }
 
@@ -811,15 +811,15 @@ void k_io__applicationlauncherjob_on_result(void* self, void (*callback)(void*, 
     KJob_Connect_Result((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__applicationlauncherjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_TotalAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__applicationlauncherjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_ProcessedAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__applicationlauncherjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__applicationlauncherjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_PercentChanged((KJob*)self, (intptr_t)callback);
 }
 

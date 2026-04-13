@@ -74,10 +74,10 @@ int32_t q_lowenergyadvertisingparameters_filter_policy(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#setInterval)
 ///
 /// @param self QLowEnergyAdvertisingParameters*
-/// @param minimum unsigned short
-/// @param maximum unsigned short
+/// @param minimum uint16_t
+/// @param maximum uint16_t
 ///
-void q_lowenergyadvertisingparameters_set_interval(void* self, unsigned short minimum, unsigned short maximum);
+void q_lowenergyadvertisingparameters_set_interval(void* self, uint16_t minimum, uint16_t maximum);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergyadvertisingparameters.html#minimumInterval)
 ///

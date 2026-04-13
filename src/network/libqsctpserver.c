@@ -125,7 +125,7 @@ int32_t q_sctpserver_listen_backlog_size(void* self) {
     return QTcpServer_ListenBacklogSize((QTcpServer*)self);
 }
 
-unsigned short q_sctpserver_server_port(void* self) {
+uint16_t q_sctpserver_server_port(void* self) {
     return QTcpServer_ServerPort((QTcpServer*)self);
 }
 
@@ -192,7 +192,7 @@ bool q_sctpserver_listen1(void* self, void* address) {
     return QTcpServer_Listen1((QTcpServer*)self, (QHostAddress*)address);
 }
 
-bool q_sctpserver_listen2(void* self, void* address, unsigned short port) {
+bool q_sctpserver_listen2(void* self, void* address, uint16_t port) {
     return QTcpServer_Listen2((QTcpServer*)self, (QHostAddress*)address, port);
 }
 

@@ -24,9 +24,9 @@ const char* k_nscore_replace_b_b_code(const char* param1);
 /// [Upstream resources](https://api.kde.org/knscore.html#qHash)
 ///
 /// @param param1 KNSCore__Entry*
-/// @param param2 uint64_t
+/// @param param2 uintptr_t
 ///
-uint64_t k_nscore_q_hash(void* param1, uint64_t param2);
+uintptr_t k_nscore_q_hash(void* param1, uintptr_t param2);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html)
 

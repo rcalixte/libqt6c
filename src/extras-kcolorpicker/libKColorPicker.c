@@ -1279,7 +1279,7 @@ int32_t k_colorpicker__kcolorpicker_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_colorpicker__kcolorpicker_find(uint64_t param1) {
+QWidget* k_colorpicker__kcolorpicker_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

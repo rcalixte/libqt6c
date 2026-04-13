@@ -3105,9 +3105,9 @@ int32_t q_fontcombobox_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* q_fontcombobox_find(uint64_t param1);
+QWidget* q_fontcombobox_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

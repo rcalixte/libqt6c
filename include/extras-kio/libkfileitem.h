@@ -284,13 +284,13 @@ const char* k_fileitem_local_path(void* self);
 ///
 /// @param self KFileItem*
 ///
-uint64_t k_fileitem_size(void* self);
+uintptr_t k_fileitem_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#recursiveSize)
 ///
 /// @param self KFileItem*
 ///
-uint64_t k_fileitem_recursive_size(void* self);
+uintptr_t k_fileitem_recursive_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfileitem.html#time)
 ///

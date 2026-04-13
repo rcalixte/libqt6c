@@ -21,10 +21,10 @@ QMediaTimeRange* q_mediatimerange_new();
 
 /// q_mediatimerange_new2 constructs a new QMediaTimeRange object.
 ///
-/// @param start long long
-/// @param end long long
+/// @param start int64_t
+/// @param end int64_t
 ///
-QMediaTimeRange* q_mediatimerange_new2(long long start, long long end);
+QMediaTimeRange* q_mediatimerange_new2(int64_t start, int64_t end);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html)
 
@@ -73,13 +73,13 @@ void q_mediatimerange_operator_assign2(void* self, void* param1);
 ///
 /// @param self QMediaTimeRange*
 ///
-long long q_mediatimerange_earliest_time(void* self);
+int64_t q_mediatimerange_earliest_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#latestTime)
 ///
 /// @param self QMediaTimeRange*
 ///
-long long q_mediatimerange_latest_time(void* self);
+int64_t q_mediatimerange_latest_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#intervals)
 ///
@@ -104,17 +104,17 @@ bool q_mediatimerange_is_continuous(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#contains)
 ///
 /// @param self QMediaTimeRange*
-/// @param time long long
+/// @param time int64_t
 ///
-bool q_mediatimerange_contains(void* self, long long time);
+bool q_mediatimerange_contains(void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#addInterval)
 ///
 /// @param self QMediaTimeRange*
-/// @param start long long
-/// @param end long long
+/// @param start int64_t
+/// @param end int64_t
 ///
-void q_mediatimerange_add_interval(void* self, long long start, long long end);
+void q_mediatimerange_add_interval(void* self, int64_t start, int64_t end);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#addInterval)
 ///
@@ -133,10 +133,10 @@ void q_mediatimerange_add_time_range(void* self, void* param1);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#removeInterval)
 ///
 /// @param self QMediaTimeRange*
-/// @param start long long
-/// @param end long long
+/// @param start int64_t
+/// @param end int64_t
 ///
-void q_mediatimerange_remove_interval(void* self, long long start, long long end);
+void q_mediatimerange_remove_interval(void* self, int64_t start, int64_t end);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange.html#removeInterval)
 ///
@@ -220,10 +220,10 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_new3();
 
 /// q_mediatimerange__interval_new4 constructs a new QMediaTimeRange::Interval object.
 ///
-/// @param start long long
-/// @param end long long
+/// @param start int64_t
+/// @param end int64_t
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_new4(long long start, long long end);
+QMediaTimeRange__Interval* q_mediatimerange__interval_new4(int64_t start, int64_t end);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html)
 
@@ -251,20 +251,20 @@ void q_mediatimerange__interval_move_assign(void* self, void* other);
 ///
 /// @param self QMediaTimeRange__Interval*
 ///
-long long q_mediatimerange__interval_start(void* self);
+int64_t q_mediatimerange__interval_start(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#end)
 ///
 /// @param self QMediaTimeRange__Interval*
 ///
-long long q_mediatimerange__interval_end(void* self);
+int64_t q_mediatimerange__interval_end(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#contains)
 ///
 /// @param self QMediaTimeRange__Interval*
-/// @param time long long
+/// @param time int64_t
 ///
-bool q_mediatimerange__interval_contains(void* self, long long time);
+bool q_mediatimerange__interval_contains(void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#isNormal)
 ///
@@ -281,9 +281,9 @@ QMediaTimeRange__Interval* q_mediatimerange__interval_normalized(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediatimerange-interval.html#translated)
 ///
 /// @param self QMediaTimeRange__Interval*
-/// @param offset long long
+/// @param offset int64_t
 ///
-QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, long long offset);
+QMediaTimeRange__Interval* q_mediatimerange__interval_translated(void* self, int64_t offset);
 
 /// Delete this object from C++ memory.
 ///

@@ -49,7 +49,7 @@ bool k_solid__opticaldisc_is_rewritable(void* self) {
     return Solid__OpticalDisc_IsRewritable((Solid__OpticalDisc*)self);
 }
 
-uint64_t k_solid__opticaldisc_capacity(void* self) {
+uintptr_t k_solid__opticaldisc_capacity(void* self) {
     return Solid__OpticalDisc_Capacity((Solid__OpticalDisc*)self);
 }
 
@@ -96,7 +96,7 @@ const char* k_solid__opticaldisc_uuid(void* self) {
     return _ret;
 }
 
-uint64_t k_solid__opticaldisc_size(void* self) {
+uintptr_t k_solid__opticaldisc_size(void* self) {
     return Solid__StorageVolume_Size((Solid__StorageVolume*)self);
 }
 

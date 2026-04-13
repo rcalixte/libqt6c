@@ -17,13 +17,13 @@
 ///
 /// @param self QVLABaseBase*
 ///
-int64_t q_vlabasebase_capacity(void* self);
+intptr_t q_vlabasebase_capacity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvlabasebase.html#size)
 ///
 /// @param self QVLABaseBase*
 ///
-int64_t q_vlabasebase_size(void* self);
+intptr_t q_vlabasebase_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvlabasebase.html#empty)
 ///

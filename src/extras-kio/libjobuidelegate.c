@@ -67,11 +67,11 @@ QWidget* k_io__jobuidelegate_window(void* self) {
     return KDialogJobUiDelegate_Window((KDialogJobUiDelegate*)self);
 }
 
-void k_io__jobuidelegate_update_user_timestamp(void* self, uint64_t time) {
+void k_io__jobuidelegate_update_user_timestamp(void* self, uintptr_t time) {
     KDialogJobUiDelegate_UpdateUserTimestamp((KDialogJobUiDelegate*)self, time);
 }
 
-uint64_t k_io__jobuidelegate_user_timestamp(void* self) {
+uintptr_t k_io__jobuidelegate_user_timestamp(void* self) {
     return KDialogJobUiDelegate_UserTimestamp((KDialogJobUiDelegate*)self);
 }
 

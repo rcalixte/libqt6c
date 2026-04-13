@@ -21,22 +21,22 @@ KProcessList__KProcessInfo* k_processlist__kprocessinfo_new();
 
 /// k_processlist__kprocessinfo_new2 constructs a new KProcessList::KProcessInfo object.
 ///
-/// @param pid long long
+/// @param pid int64_t
 /// @param command const char*
 /// @param user const char*
 ///
-KProcessList__KProcessInfo* k_processlist__kprocessinfo_new2(long long pid, const char* command, const char* user);
+KProcessList__KProcessInfo* k_processlist__kprocessinfo_new2(int64_t pid, const char* command, const char* user);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html)
 
 /// k_processlist__kprocessinfo_new3 constructs a new KProcessList::KProcessInfo object.
 ///
-/// @param pid long long
+/// @param pid int64_t
 /// @param command const char*
 /// @param name const char*
 /// @param user const char*
 ///
-KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(long long pid, const char* command, const char* name, const char* user);
+KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(int64_t pid, const char* command, const char* name, const char* user);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html)
 
@@ -63,7 +63,7 @@ bool k_processlist__kprocessinfo_is_valid(void* self);
 ///
 /// @param self KProcessList__KProcessInfo*
 ///
-long long k_processlist__kprocessinfo_pid(void* self);
+int64_t k_processlist__kprocessinfo_pid(void* self);
 
 /// [Upstream resources](https://api.kde.org/kprocesslist-kprocessinfo.html#name)
 ///
@@ -105,7 +105,7 @@ libqt_list k_processlist_process_info_list();
 
 /// [Upstream resources](https://api.kde.org/kprocesslist.html#processInfo)
 ///
-/// @param param1 long long
+/// @param param1 int64_t
 ///
-KProcessList__KProcessInfo* k_processlist_process_info(long long param1);
+KProcessList__KProcessInfo* k_processlist_process_info(int64_t param1);
 #endif

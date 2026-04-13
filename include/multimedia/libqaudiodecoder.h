@@ -193,13 +193,13 @@ bool q_audiodecoder_buffer_available(void* self);
 ///
 /// @param self QAudioDecoder*
 ///
-long long q_audiodecoder_position(void* self);
+int64_t q_audiodecoder_position(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#duration)
 ///
 /// @param self QAudioDecoder*
 ///
-long long q_audiodecoder_duration(void* self);
+int64_t q_audiodecoder_duration(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#start)
 ///
@@ -262,16 +262,16 @@ void q_audiodecoder_source_changed(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#positionChanged)
 ///
 /// @param self QAudioDecoder*
-/// @param position long long
+/// @param position int64_t
 ///
-void q_audiodecoder_position_changed(void* self, long long position);
+void q_audiodecoder_position_changed(void* self, int64_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudiodecoder.html#durationChanged)
 ///
 /// @param self QAudioDecoder*
-/// @param duration long long
+/// @param duration int64_t
 ///
-void q_audiodecoder_duration_changed(void* self, long long duration);
+void q_audiodecoder_duration_changed(void* self, int64_t duration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

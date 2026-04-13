@@ -49,22 +49,22 @@ const char* k_ar_tr(const char* sourceText);
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doPrepareWriting)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KAr*
-/// @param callback bool func(KAr* self, const char* name, const char* user, const char* group, long long size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
+/// @param callback bool func(KAr* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* ctime)
 ///
-void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, long long, mode_t, void*, void*, void*));
+void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*));
 
 /// @warning DEPRECATED: Use `k_ar_super_do_prepare_writing` instead
 ///
@@ -78,29 +78,29 @@ void k_ar_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*,
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doFinishWriting)
 ///
 /// @param self KAr*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_do_finish_writing(void* self, long long size);
+bool k_ar_do_finish_writing(void* self, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doFinishWriting)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KAr*
-/// @param callback bool func(KAr* self, long long size)
+/// @param callback bool func(KAr* self, int64_t size)
 ///
-void k_ar_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
+void k_ar_on_do_finish_writing(void* self, bool (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `k_ar_super_do_finish_writing` instead
 ///
@@ -111,9 +111,9 @@ void k_ar_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
 /// Base class method implementation
 ///
 /// @param self KAr*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_super_do_finish_writing(void* self, long long size);
+bool k_ar_super_do_finish_writing(void* self, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/kar.html#doWriteDir)
 ///
@@ -416,9 +416,9 @@ bool k_ar_write_file(void* self, const char* name, char* data);
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size);
+bool k_ar_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -426,9 +426,9 @@ bool k_ar_prepare_writing(void* self, const char* name, const char* user, const 
 ///
 /// @param self KAr*
 /// @param data const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_write_data(void* self, const char* data, long long size);
+bool k_ar_write_data(void* self, const char* data, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -444,9 +444,9 @@ bool k_ar_write_data2(void* self, char* data);
 /// [Upstream resources](https://api.kde.org/karchive.html#finishWriting)
 ///
 /// @param self KAr*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_finish_writing(void* self, long long size);
+bool k_ar_finish_writing(void* self, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -693,10 +693,10 @@ bool k_ar_write_file8(void* self, const char* name, char* data, mode_t perm, con
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 ///
-bool k_ar_prepare_writing5(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm);
+bool k_ar_prepare_writing5(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm);
 
 /// Inherited from KArchive
 ///
@@ -706,11 +706,11 @@ bool k_ar_prepare_writing5(void* self, const char* name, const char* user, const
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime);
+bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime);
 
 /// Inherited from KArchive
 ///
@@ -720,12 +720,12 @@ bool k_ar_prepare_writing6(void* self, const char* name, const char* user, const
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime);
+bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -735,13 +735,13 @@ bool k_ar_prepare_writing7(void* self, const char* name, const char* user, const
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_ar_prepare_writing8(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_ar_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// Inherited from KArchive
 ///
@@ -858,9 +858,9 @@ void k_ar_on_root_dir(void* self, KArchiveDirectory* (*callback)());
 ///
 /// @param self KAr*
 /// @param data const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_do_write_data(void* self, const char* data, long long size);
+bool k_ar_do_write_data(void* self, const char* data, int64_t size);
 
 /// @warning DEPRECATED: Use `k_ar_super_do_write_data` instead
 ///
@@ -874,9 +874,9 @@ bool k_ar_do_write_data(void* self, const char* data, long long size);
 ///
 /// @param self KAr*
 /// @param data const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_ar_super_do_write_data(void* self, const char* data, long long size);
+bool k_ar_super_do_write_data(void* self, const char* data, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -885,9 +885,9 @@ bool k_ar_super_do_write_data(void* self, const char* data, long long size);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KAr*
-/// @param callback bool func(KAr* self, const char* data, long long size)
+/// @param callback bool func(KAr* self, const char* data, int64_t size)
 ///
-void k_ar_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long));
+void k_ar_on_do_write_data(void* self, bool (*callback)(void*, const char*, int64_t));
 
 /// Inherited from KArchive
 ///

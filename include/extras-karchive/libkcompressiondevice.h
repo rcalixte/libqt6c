@@ -203,18 +203,18 @@ void k_compressiondevice_set_skip_headers(void* self);
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#seek)
 ///
 /// @param self KCompressionDevice*
-/// @param param1 long long
+/// @param param1 int64_t
 ///
-bool k_compressiondevice_seek(void* self, long long param1);
+bool k_compressiondevice_seek(void* self, int64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#seek)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCompressionDevice*
-/// @param callback bool func(KCompressionDevice* self, long long param1)
+/// @param callback bool func(KCompressionDevice* self, int64_t param1)
 ///
-void k_compressiondevice_on_seek(void* self, bool (*callback)(void*, long long));
+void k_compressiondevice_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_seek` instead
 ///
@@ -225,9 +225,9 @@ void k_compressiondevice_on_seek(void* self, bool (*callback)(void*, long long))
 /// Base class method implementation
 ///
 /// @param self KCompressionDevice*
-/// @param param1 long long
+/// @param param1 int64_t
 ///
-bool k_compressiondevice_super_seek(void* self, long long param1);
+bool k_compressiondevice_super_seek(void* self, int64_t param1);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#atEnd)
 ///
@@ -282,18 +282,18 @@ int32_t k_compressiondevice_error(void* self);
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_read_data(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_read_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#readData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func(KCompressionDevice* self, char* data, long long maxlen)
+/// @param callback int64_t func(KCompressionDevice* self, char* data, int64_t maxlen)
 ///
-void k_compressiondevice_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void k_compressiondevice_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_read_data` instead
 ///
@@ -305,26 +305,26 @@ void k_compressiondevice_on_read_data(void* self, long long (*callback)(void*, c
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_super_read_data(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#writeData)
 ///
 /// @param self KCompressionDevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_compressiondevice_write_data(void* self, const char* data, long long lenVal);
+int64_t k_compressiondevice_write_data(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func(KCompressionDevice* self, const char* data, long long lenVal)
+/// @param callback int64_t func(KCompressionDevice* self, const char* data, int64_t lenVal)
 ///
-void k_compressiondevice_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void k_compressiondevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_write_data` instead
 ///
@@ -336,9 +336,9 @@ void k_compressiondevice_on_write_data(void* self, long long (*callback)(void*, 
 ///
 /// @param self KCompressionDevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_compressiondevice_super_write_data(void* self, const char* data, long long lenVal);
+int64_t k_compressiondevice_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://api.kde.org/kcompressiondevice.html#filterBase)
 ///
@@ -493,9 +493,9 @@ void k_compressiondevice_set_current_write_channel(void* self, int channel);
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_read(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -504,9 +504,9 @@ long long k_compressiondevice_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompressionDevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_compressiondevice_read2(void* self, long long maxlen);
+char* k_compressiondevice_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -524,9 +524,9 @@ char* k_compressiondevice_read_all(void* self);
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_read_line(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -576,9 +576,9 @@ bool k_compressiondevice_is_transaction_started(void* self);
 ///
 /// @param self KCompressionDevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_compressiondevice_write(void* self, const char* data, long long lenVal);
+int64_t k_compressiondevice_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -587,7 +587,7 @@ long long k_compressiondevice_write(void* self, const char* data, long long lenV
 /// @param self KCompressionDevice*
 /// @param data const char*
 ///
-long long k_compressiondevice_write2(void* self, const char* data);
+int64_t k_compressiondevice_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -596,7 +596,7 @@ long long k_compressiondevice_write2(void* self, const char* data);
 /// @param self KCompressionDevice*
 /// @param data char*
 ///
-long long k_compressiondevice_write3(void* self, char* data);
+int64_t k_compressiondevice_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -604,9 +604,9 @@ long long k_compressiondevice_write3(void* self, char* data);
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_peek(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -615,18 +615,18 @@ long long k_compressiondevice_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompressionDevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_compressiondevice_peek2(void* self, long long maxlen);
+char* k_compressiondevice_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self KCompressionDevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_compressiondevice_skip(void* self, long long maxSize);
+int64_t k_compressiondevice_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -705,18 +705,18 @@ void k_compressiondevice_on_channel_ready_read(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KCompressionDevice*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void k_compressiondevice_bytes_written(void* self, long long bytes);
+void k_compressiondevice_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KCompressionDevice*
-/// @param callback void func(KCompressionDevice* self, long long bytes)
+/// @param callback void func(KCompressionDevice* self, int64_t bytes)
 ///
-void k_compressiondevice_on_bytes_written(void* self, void (*callback)(void*, long long));
+void k_compressiondevice_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -724,18 +724,18 @@ void k_compressiondevice_on_bytes_written(void* self, void (*callback)(void*, lo
 ///
 /// @param self KCompressionDevice*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void k_compressiondevice_channel_bytes_written(void* self, int channel, long long bytes);
+void k_compressiondevice_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self KCompressionDevice*
-/// @param callback void func(KCompressionDevice* self, int channel, long long bytes)
+/// @param callback void func(KCompressionDevice* self, int channel, int64_t bytes)
 ///
-void k_compressiondevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void k_compressiondevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -778,9 +778,9 @@ void k_compressiondevice_on_read_channel_finished(void* self, void (*callback)(v
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompressionDevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_compressiondevice_read_line1(void* self, long long maxlen);
+char* k_compressiondevice_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1272,7 +1272,7 @@ void k_compressiondevice_on_is_sequential(void* self, bool (*callback)());
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_pos(void* self);
+int64_t k_compressiondevice_pos(void* self);
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_pos` instead
 ///
@@ -1286,7 +1286,7 @@ long long k_compressiondevice_pos(void* self);
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_super_pos(void* self);
+int64_t k_compressiondevice_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1295,9 +1295,9 @@ long long k_compressiondevice_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_compressiondevice_on_pos(void* self, long long (*callback)());
+void k_compressiondevice_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1307,7 +1307,7 @@ void k_compressiondevice_on_pos(void* self, long long (*callback)());
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_size(void* self);
+int64_t k_compressiondevice_size(void* self);
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_size` instead
 ///
@@ -1321,7 +1321,7 @@ long long k_compressiondevice_size(void* self);
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_super_size(void* self);
+int64_t k_compressiondevice_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1330,9 +1330,9 @@ long long k_compressiondevice_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_compressiondevice_on_size(void* self, long long (*callback)());
+void k_compressiondevice_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1377,7 +1377,7 @@ void k_compressiondevice_on_reset(void* self, bool (*callback)());
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_bytes_available(void* self);
+int64_t k_compressiondevice_bytes_available(void* self);
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_bytes_available` instead
 ///
@@ -1391,7 +1391,7 @@ long long k_compressiondevice_bytes_available(void* self);
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_super_bytes_available(void* self);
+int64_t k_compressiondevice_super_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1400,9 +1400,9 @@ long long k_compressiondevice_super_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_compressiondevice_on_bytes_available(void* self, long long (*callback)());
+void k_compressiondevice_on_bytes_available(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1412,7 +1412,7 @@ void k_compressiondevice_on_bytes_available(void* self, long long (*callback)())
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_bytes_to_write(void* self);
+int64_t k_compressiondevice_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_bytes_to_write` instead
 ///
@@ -1426,7 +1426,7 @@ long long k_compressiondevice_bytes_to_write(void* self);
 ///
 /// @param self KCompressionDevice*
 ///
-long long k_compressiondevice_super_bytes_to_write(void* self);
+int64_t k_compressiondevice_super_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1435,9 +1435,9 @@ long long k_compressiondevice_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_compressiondevice_on_bytes_to_write(void* self, long long (*callback)());
+void k_compressiondevice_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1556,9 +1556,9 @@ void k_compressiondevice_on_wait_for_bytes_written(void* self, bool (*callback)(
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_read_line_data(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_read_line_data` instead
 ///
@@ -1572,9 +1572,9 @@ long long k_compressiondevice_read_line_data(void* self, char* data, long long m
 ///
 /// @param self KCompressionDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_compressiondevice_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t k_compressiondevice_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1583,9 +1583,9 @@ long long k_compressiondevice_super_read_line_data(void* self, char* data, long 
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func(KCompressionDevice* self, char* data, long long maxlen)
+/// @param callback int64_t func(KCompressionDevice* self, char* data, int64_t maxlen)
 ///
-void k_compressiondevice_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void k_compressiondevice_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1594,9 +1594,9 @@ void k_compressiondevice_on_read_line_data(void* self, long long (*callback)(voi
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_compressiondevice_skip_data(void* self, long long maxSize);
+int64_t k_compressiondevice_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `k_compressiondevice_super_skip_data` instead
 ///
@@ -1609,9 +1609,9 @@ long long k_compressiondevice_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_compressiondevice_super_skip_data(void* self, long long maxSize);
+int64_t k_compressiondevice_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1620,9 +1620,9 @@ long long k_compressiondevice_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KCompressionDevice*
-/// @param callback long long func(KCompressionDevice* self, long long maxSize)
+/// @param callback int64_t func(KCompressionDevice* self, int64_t maxSize)
 ///
-void k_compressiondevice_on_skip_data(void* self, long long (*callback)(void*, long long));
+void k_compressiondevice_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///

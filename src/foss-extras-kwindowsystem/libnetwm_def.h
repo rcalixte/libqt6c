@@ -779,17 +779,17 @@ void k_net_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/net.html#timestampCompare)
 ///
-/// @param time1 uint64_t
-/// @param time2 uint64_t
+/// @param time1 uintptr_t
+/// @param time2 uintptr_t
 ///
-int32_t k_net_timestamp_compare(uint64_t time1, uint64_t time2);
+int32_t k_net_timestamp_compare(uintptr_t time1, uintptr_t time2);
 
 /// [Upstream resources](https://api.kde.org/net.html#timestampDiff)
 ///
-/// @param time1 uint64_t
-/// @param time2 uint64_t
+/// @param time1 uintptr_t
+/// @param time2 uintptr_t
 ///
-int32_t k_net_timestamp_diff(uint64_t time1, uint64_t time2);
+int32_t k_net_timestamp_diff(uintptr_t time1, uintptr_t time2);
 
 /// [Upstream resources](https://api.kde.org/net.html#dtor.NET)
 ///

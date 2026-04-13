@@ -130,9 +130,9 @@ const char* q_guiapplication_application_display_name();
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setBadgeNumber)
 ///
 /// @param self QGuiApplication*
-/// @param number long long
+/// @param number int64_t
 ///
-void q_guiapplication_set_badge_number(void* self, long long number);
+void q_guiapplication_set_badge_number(void* self, int64_t number);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qguiapplication.html#setDesktopFileName)
 ///
@@ -899,7 +899,7 @@ const char* q_guiapplication_application_file_path();
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qcoreapplication.html#applicationPid)
 ///
-long long q_guiapplication_application_pid();
+int64_t q_guiapplication_application_pid();
 
 /// Inherited from QCoreApplication
 ///

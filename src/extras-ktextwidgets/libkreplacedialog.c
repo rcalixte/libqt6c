@@ -23,11 +23,11 @@ KReplaceDialog* k_replacedialog_new2() {
     return KReplaceDialog_new2();
 }
 
-KReplaceDialog* k_replacedialog_new3(void* parent, int64_t options) {
+KReplaceDialog* k_replacedialog_new3(void* parent, long options) {
     return KReplaceDialog_new3((QWidget*)parent, options);
 }
 
-KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* findStrings[static 1]) {
+KReplaceDialog* k_replacedialog_new4(void* parent, long options, const char* findStrings[static 1]) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -44,7 +44,7 @@ KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* 
     return _out;
 }
 
-KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1]) {
+KReplaceDialog* k_replacedialog_new5(void* parent, long options, const char* findStrings[static 1], const char* replaceStrings[static 1]) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -72,7 +72,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* 
     return _out;
 }
 
-KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1], bool hasSelection) {
+KReplaceDialog* k_replacedialog_new6(void* parent, long options, const char* findStrings[static 1], const char* replaceStrings[static 1], bool hasSelection) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -177,11 +177,11 @@ const char** k_replacedialog_replacement_history(void* self) {
     return _ret;
 }
 
-void k_replacedialog_set_options(void* self, int64_t options) {
+void k_replacedialog_set_options(void* self, long options) {
     KReplaceDialog_SetOptions((KReplaceDialog*)self, options);
 }
 
-int64_t k_replacedialog_options(void* self) {
+long k_replacedialog_options(void* self) {
     return KReplaceDialog_Options((KReplaceDialog*)self);
 }
 
@@ -1325,7 +1325,7 @@ int32_t k_replacedialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_replacedialog_find(uint64_t param1) {
+QWidget* k_replacedialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

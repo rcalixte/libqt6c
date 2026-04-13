@@ -45,14 +45,14 @@ void q_cborparsererror_move_assign(void* self, void* other);
 ///
 /// @param self QCborParserError*
 ///
-long long q_cborparsererror_offset(void* self);
+int64_t q_cborparsererror_offset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#offset-var)
 ///
 /// @param self QCborParserError*
-/// @param offset long long
+/// @param offset int64_t
 ///
-void q_cborparsererror_set_offset(void* self, long long offset);
+void q_cborparsererror_set_offset(void* self, int64_t offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborparsererror.html#error-var)
 ///
@@ -125,9 +125,9 @@ QCborValue* q_cborvalue_new5(uint32_t u);
 
 /// q_cborvalue_new6 constructs a new QCborValue object.
 ///
-/// @param i long long
+/// @param i int64_t
 ///
-QCborValue* q_cborvalue_new6(long long i);
+QCborValue* q_cborvalue_new6(int64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
@@ -414,7 +414,7 @@ uint8_t q_cborvalue_to_simple_type(void* self);
 ///
 /// @param self QCborValue*
 ///
-long long q_cborvalue_to_integer(void* self);
+int64_t q_cborvalue_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toBool)
 ///
@@ -518,16 +518,16 @@ const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
 /// @param self QCborValue*
-/// @param key long long
+/// @param key int64_t
 ///
-const QCborValue* q_cborvalue_operator_subscript3(void* self, long long key);
+const QCborValue* q_cborvalue_operator_subscript3(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
 /// @param self QCborValue*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborValueRef* q_cborvalue_operator_subscript4(void* self, long long key);
+QCborValueRef* q_cborvalue_operator_subscript4(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
@@ -582,16 +582,16 @@ QCborValue* q_cborvalue_from_cbor2(char* ba);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QCborValue* q_cborvalue_from_cbor3(const char* data, int64_t lenVal);
+QCborValue* q_cborvalue_from_cbor3(const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data unsigned char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QCborValue* q_cborvalue_from_cbor4(unsigned char* data, int64_t lenVal);
+QCborValue* q_cborvalue_from_cbor4(unsigned char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
@@ -628,9 +628,9 @@ uint8_t q_cborvalue_to_simple_type1(void* self, uint8_t defaultValue);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toInteger)
 ///
 /// @param self QCborValue*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-long long q_cborvalue_to_integer1(void* self, long long defaultValue);
+int64_t q_cborvalue_to_integer1(void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toBool)
 ///
@@ -718,18 +718,18 @@ QCborValue* q_cborvalue_from_cbor22(char* ba, void* error);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 /// @param error QCborParserError*
 ///
-QCborValue* q_cborvalue_from_cbor32(const char* data, int64_t lenVal, void* error);
+QCborValue* q_cborvalue_from_cbor32(const char* data, intptr_t lenVal, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#fromCbor)
 ///
 /// @param data unsigned char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 /// @param error QCborParserError*
 ///
-QCborValue* q_cborvalue_from_cbor33(unsigned char* data, int64_t lenVal, void* error);
+QCborValue* q_cborvalue_from_cbor33(unsigned char* data, intptr_t lenVal, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#toCbor)
 ///
@@ -942,7 +942,7 @@ QCborValue* q_cborvalueconstref_tagged_value(void* self);
 ///
 /// @param self QCborValueConstRef*
 ///
-long long q_cborvalueconstref_to_integer(void* self);
+int64_t q_cborvalueconstref_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toBool)
 ///
@@ -1032,9 +1032,9 @@ const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char*
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
 /// @param self QCborValueConstRef*
-/// @param key long long
+/// @param key int64_t
 ///
-const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, long long key);
+const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#compare)
 ///
@@ -1106,9 +1106,9 @@ QCborValue* q_cborvalueconstref_tagged_value1(void* self, void* defaultValue);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toInteger)
 ///
 /// @param self QCborValueConstRef*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-long long q_cborvalueconstref_to_integer1(void* self, long long defaultValue);
+int64_t q_cborvalueconstref_to_integer1(void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#toBool)
 ///
@@ -1245,9 +1245,9 @@ void q_cborvalueref_operator_assign2(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
 /// @param self QCborValueRef*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborValueRef* q_cborvalueref_operator_subscript(void* self, long long key);
+QCborValueRef* q_cborvalueref_operator_subscript(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
@@ -1417,7 +1417,7 @@ QCborValue* q_cborvalueref_tagged_value(void* self);
 ///
 /// @param self QCborValueRef*
 ///
-long long q_cborvalueref_to_integer(void* self);
+int64_t q_cborvalueref_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toBool)
 ///
@@ -1507,9 +1507,9 @@ const QCborValue* q_cborvalueref_operator_subscript4(void* self, const char* key
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
 /// @param self QCborValueRef*
-/// @param key long long
+/// @param key int64_t
 ///
-const QCborValue* q_cborvalueref_operator_subscript6(void* self, long long key);
+const QCborValue* q_cborvalueref_operator_subscript6(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#compare)
 ///
@@ -1581,9 +1581,9 @@ QCborValue* q_cborvalueref_tagged_value1(void* self, void* defaultValue);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toInteger)
 ///
 /// @param self QCborValueRef*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-long long q_cborvalueref_to_integer1(void* self, long long defaultValue);
+int64_t q_cborvalueref_to_integer1(void* self, int64_t defaultValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#toBool)
 ///

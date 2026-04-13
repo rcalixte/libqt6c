@@ -35,11 +35,11 @@ QImage* q_image_new5(unsigned char* data, int width, int height, int32_t format)
     return QImage_new5(data, width, height, format);
 }
 
-QImage* q_image_new6(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format) {
+QImage* q_image_new6(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format) {
     return QImage_new6(data, width, height, bytesPerLine, format);
 }
 
-QImage* q_image_new7(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format) {
+QImage* q_image_new7(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format) {
     return QImage_new7(data, width, height, bytesPerLine, format);
 }
 
@@ -71,19 +71,19 @@ QImage* q_image_new14(unsigned char* data, int width, int height, int32_t format
     return QImage_new14(data, width, height, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
-QImage* q_image_new15(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
+QImage* q_image_new15(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
     return QImage_new15(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction);
 }
 
-QImage* q_image_new16(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
+QImage* q_image_new16(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
     return QImage_new16(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
-QImage* q_image_new17(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
+QImage* q_image_new17(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1)) {
     return QImage_new17(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction);
 }
 
-QImage* q_image_new18(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
+QImage* q_image_new18(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo) {
     return QImage_new18(data, width, height, bytesPerLine, format, (intptr_t)cleanupFunction, cleanupInfo);
 }
 
@@ -227,7 +227,7 @@ const unsigned char* q_image_const_bits(void* self) {
     return (unsigned char*)QImage_ConstBits((QImage*)self);
 }
 
-int64_t q_image_size_in_bytes(void* self) {
+intptr_t q_image_size_in_bytes(void* self) {
     return QImage_SizeInBytes((QImage*)self);
 }
 
@@ -243,7 +243,7 @@ const unsigned char* q_image_const_scan_line(void* self, int param1) {
     return (unsigned char*)QImage_ConstScanLine((QImage*)self, param1);
 }
 
-int64_t q_image_bytes_per_line(void* self) {
+intptr_t q_image_bytes_per_line(void* self) {
     return QImage_BytesPerLine((QImage*)self);
 }
 
@@ -472,7 +472,7 @@ QImage* q_image_from_data3(char* data) {
     return QImage_FromData3(qstring(data));
 }
 
-long long q_image_cache_key(void* self) {
+int64_t q_image_cache_key(void* self) {
     return QImage_CacheKey((QImage*)self);
 }
 

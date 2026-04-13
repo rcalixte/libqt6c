@@ -200,15 +200,15 @@ const char* k_compositejob_error_text(void* self) {
     return _ret;
 }
 
-uint64_t k_compositejob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_compositejob_processed_amount(void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uint64_t k_compositejob_total_amount(void* self, int32_t unit) {
+uintptr_t k_compositejob_total_amount(void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uint64_t k_compositejob_percent(void* self) {
+uintptr_t k_compositejob_percent(void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -232,7 +232,7 @@ bool k_compositejob_is_started_with_exec(void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-long long k_compositejob_elapsed_time(void* self) {
+int64_t k_compositejob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -252,27 +252,27 @@ void k_compositejob_on_warning(void* self, void (*callback)(void*, void*, const 
     KJob_Connect_Warning((KJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_total_size(void* self, void* job, uint64_t size) {
+void k_compositejob_total_size(void* self, void* job, uintptr_t size) {
     KJob_TotalSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_compositejob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_compositejob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_TotalSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_processed_size(void* self, void* job, uint64_t size) {
+void k_compositejob_processed_size(void* self, void* job, uintptr_t size) {
     KJob_ProcessedSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_compositejob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_compositejob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_ProcessedSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_speed(void* self, void* job, uint64_t speed) {
+void k_compositejob_speed(void* self, void* job, uintptr_t speed) {
     KJob_Speed((KJob*)self, (KJob*)job, speed);
 }
 
-void k_compositejob_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_compositejob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_Speed((KJob*)self, (intptr_t)callback);
 }
 
@@ -693,27 +693,27 @@ void k_compositejob_on_set_error_text(void* self, void (*callback)(void*, const 
     KCompositeJob_OnSetErrorText((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_compositejob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KCompositeJob_SetProcessedAmount((KCompositeJob*)self, unit, amount);
 }
 
-void k_compositejob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_compositejob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KCompositeJob_SuperSetProcessedAmount((KCompositeJob*)self, unit, amount);
 }
 
-void k_compositejob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_compositejob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KCompositeJob_OnSetProcessedAmount((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_compositejob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KCompositeJob_SetTotalAmount((KCompositeJob*)self, unit, amount);
 }
 
-void k_compositejob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_compositejob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KCompositeJob_SuperSetTotalAmount((KCompositeJob*)self, unit, amount);
 }
 
-void k_compositejob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_compositejob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KCompositeJob_OnSetTotalAmount((KCompositeJob*)self, (intptr_t)callback);
 }
 
@@ -729,15 +729,15 @@ void k_compositejob_on_set_progress_unit(void* self, void (*callback)(void*, int
     KCompositeJob_OnSetProgressUnit((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_set_percent(void* self, uint64_t percentage) {
+void k_compositejob_set_percent(void* self, uintptr_t percentage) {
     KCompositeJob_SetPercent((KCompositeJob*)self, percentage);
 }
 
-void k_compositejob_super_set_percent(void* self, uint64_t percentage) {
+void k_compositejob_super_set_percent(void* self, uintptr_t percentage) {
     KCompositeJob_SuperSetPercent((KCompositeJob*)self, percentage);
 }
 
-void k_compositejob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
+void k_compositejob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
     KCompositeJob_OnSetPercent((KCompositeJob*)self, (intptr_t)callback);
 }
 
@@ -753,27 +753,27 @@ void k_compositejob_on_emit_result(void* self, void (*callback)()) {
     KCompositeJob_OnEmitResult((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_compositejob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KCompositeJob_EmitPercent((KCompositeJob*)self, processedAmount, totalAmount);
 }
 
-void k_compositejob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_compositejob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KCompositeJob_SuperEmitPercent((KCompositeJob*)self, processedAmount, totalAmount);
 }
 
-void k_compositejob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
+void k_compositejob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
     KCompositeJob_OnEmitPercent((KCompositeJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_emit_speed(void* self, uint64_t speed) {
+void k_compositejob_emit_speed(void* self, uintptr_t speed) {
     KCompositeJob_EmitSpeed((KCompositeJob*)self, speed);
 }
 
-void k_compositejob_super_emit_speed(void* self, uint64_t speed) {
+void k_compositejob_super_emit_speed(void* self, uintptr_t speed) {
     KCompositeJob_SuperEmitSpeed((KCompositeJob*)self, speed);
 }
 
-void k_compositejob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
+void k_compositejob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
     KCompositeJob_OnEmitSpeed((KCompositeJob*)self, (intptr_t)callback);
 }
 
@@ -853,15 +853,15 @@ void k_compositejob_on_result(void* self, void (*callback)(void*, void*)) {
     KJob_Connect_Result((KJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_compositejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_TotalAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_compositejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_ProcessedAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_compositejob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_compositejob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_PercentChanged((KJob*)self, (intptr_t)callback);
 }
 

@@ -565,11 +565,11 @@ bool q_sciscintilla_super_find_next(void* self);
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param brace int64_t*
-/// @param other int64_t*
+/// @param brace long*
+/// @param other long*
 /// @param mode enum QsciScintilla__BraceMatch
 ///
-bool q_sciscintilla_find_matching_brace(void* self, int64_t* brace, int64_t* other, int32_t mode);
+bool q_sciscintilla_find_matching_brace(void* self, long* brace, long* other, int32_t mode);
 #endif
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
@@ -4276,7 +4276,7 @@ void q_sciscintilla_replace_vertical_scroll_bar(void* self, void* scrollBar);
 /// @param self QsciScintilla*
 /// @param msg uint32_t
 ///
-int64_t q_sciscintilla_send_scintilla(void* self, uint32_t msg);
+long q_sciscintilla_send_scintilla(void* self, uint32_t msg);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4284,10 +4284,10 @@ int64_t q_sciscintilla_send_scintilla(void* self, uint32_t msg);
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param lParam void*
 ///
-int64_t q_sciscintilla_send_scintilla2(void* self, uint32_t msg, uint64_t wParam, void* lParam);
+long q_sciscintilla_send_scintilla2(void* self, uint32_t msg, uintptr_t wParam, void* lParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4298,7 +4298,7 @@ int64_t q_sciscintilla_send_scintilla2(void* self, uint32_t msg, uint64_t wParam
 /// @param wParam uintptr_t
 /// @param lParam const char*
 ///
-int64_t q_sciscintilla_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam);
+long q_sciscintilla_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4308,7 +4308,7 @@ int64_t q_sciscintilla_send_scintilla3(void* self, uint32_t msg, uintptr_t wPara
 /// @param msg uint32_t
 /// @param lParam const char*
 ///
-int64_t q_sciscintilla_send_scintilla4(void* self, uint32_t msg, const char* lParam);
+long q_sciscintilla_send_scintilla4(void* self, uint32_t msg, const char* lParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4319,7 +4319,7 @@ int64_t q_sciscintilla_send_scintilla4(void* self, uint32_t msg, const char* lPa
 /// @param wParam const char*
 /// @param lParam const char*
 ///
-int64_t q_sciscintilla_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam);
+long q_sciscintilla_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4327,9 +4327,9 @@ int64_t q_sciscintilla_send_scintilla5(void* self, uint32_t msg, const char* wPa
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam int64_t
+/// @param wParam long
 ///
-int64_t q_sciscintilla_send_scintilla6(void* self, uint32_t msg, int64_t wParam);
+long q_sciscintilla_send_scintilla6(void* self, uint32_t msg, long wParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4339,7 +4339,7 @@ int64_t q_sciscintilla_send_scintilla6(void* self, uint32_t msg, int64_t wParam)
 /// @param msg uint32_t
 /// @param wParam int
 ///
-int64_t q_sciscintilla_send_scintilla7(void* self, uint32_t msg, int wParam);
+long q_sciscintilla_send_scintilla7(void* self, uint32_t msg, int wParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4347,11 +4347,11 @@ int64_t q_sciscintilla_send_scintilla7(void* self, uint32_t msg, int wParam);
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param cpMin int64_t
-/// @param cpMax int64_t
+/// @param cpMin long
+/// @param cpMax long
 /// @param lpstrText char*
 ///
-int64_t q_sciscintilla_send_scintilla8(void* self, uint32_t msg, int64_t cpMin, int64_t cpMax, char* lpstrText);
+long q_sciscintilla_send_scintilla8(void* self, uint32_t msg, long cpMin, long cpMax, char* lpstrText);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4359,10 +4359,10 @@ int64_t q_sciscintilla_send_scintilla8(void* self, uint32_t msg, int64_t cpMin, 
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param col QColor*
 ///
-int64_t q_sciscintilla_send_scintilla9(void* self, uint32_t msg, uint64_t wParam, void* col);
+long q_sciscintilla_send_scintilla9(void* self, uint32_t msg, uintptr_t wParam, void* col);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4372,7 +4372,7 @@ int64_t q_sciscintilla_send_scintilla9(void* self, uint32_t msg, uint64_t wParam
 /// @param msg uint32_t
 /// @param col QColor*
 ///
-int64_t q_sciscintilla_send_scintilla10(void* self, uint32_t msg, void* col);
+long q_sciscintilla_send_scintilla10(void* self, uint32_t msg, void* col);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4380,13 +4380,13 @@ int64_t q_sciscintilla_send_scintilla10(void* self, uint32_t msg, void* col);
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param hdc QPainter*
 /// @param rc QRect*
-/// @param cpMin int64_t
-/// @param cpMax int64_t
+/// @param cpMin long
+/// @param cpMax long
 ///
-int64_t q_sciscintilla_send_scintilla11(void* self, uint32_t msg, uint64_t wParam, void* hdc, void* rc, int64_t cpMin, int64_t cpMax);
+long q_sciscintilla_send_scintilla11(void* self, uint32_t msg, uintptr_t wParam, void* hdc, void* rc, long cpMin, long cpMax);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4394,10 +4394,10 @@ int64_t q_sciscintilla_send_scintilla11(void* self, uint32_t msg, uint64_t wPara
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param lParam QPixmap*
 ///
-int64_t q_sciscintilla_send_scintilla12(void* self, uint32_t msg, uint64_t wParam, void* lParam);
+long q_sciscintilla_send_scintilla12(void* self, uint32_t msg, uintptr_t wParam, void* lParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4405,10 +4405,10 @@ int64_t q_sciscintilla_send_scintilla12(void* self, uint32_t msg, uint64_t wPara
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 /// @param lParam QImage*
 ///
-int64_t q_sciscintilla_send_scintilla13(void* self, uint32_t msg, uint64_t wParam, void* lParam);
+long q_sciscintilla_send_scintilla13(void* self, uint32_t msg, uintptr_t wParam, void* lParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4629,10 +4629,10 @@ void q_sciscintilla_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, int posit
 ///
 /// @param self QsciScintilla*
 /// @param param1 uint32_t
-/// @param param2 uint64_t
+/// @param param2 uintptr_t
 /// @param param3 void*
 ///
-void q_sciscintilla_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uint64_t param2, void* param3);
+void q_sciscintilla_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uintptr_t param2, void* param3);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4792,9 +4792,9 @@ void q_sciscintilla_s_c_n__z_o_o_m(void* self);
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
+/// @param wParam uintptr_t
 ///
-int64_t q_sciscintilla_send_scintilla22(void* self, uint32_t msg, uint64_t wParam);
+long q_sciscintilla_send_scintilla22(void* self, uint32_t msg, uintptr_t wParam);
 
 /// Inherited from QsciScintillaBase
 ///
@@ -4802,10 +4802,10 @@ int64_t q_sciscintilla_send_scintilla22(void* self, uint32_t msg, uint64_t wPara
 ///
 /// @param self QsciScintilla*
 /// @param msg uint32_t
-/// @param wParam uint64_t
-/// @param lParam int64_t
+/// @param wParam uintptr_t
+/// @param lParam long
 ///
-int64_t q_sciscintilla_send_scintilla32(void* self, uint32_t msg, uint64_t wParam, int64_t lParam);
+long q_sciscintilla_send_scintilla32(void* self, uint32_t msg, uintptr_t wParam, long lParam);
 
 /// Inherited from QAbstractScrollArea
 ///
@@ -7112,9 +7112,9 @@ int32_t q_sciscintilla_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* q_sciscintilla_find(uint64_t param1);
+QWidget* q_sciscintilla_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

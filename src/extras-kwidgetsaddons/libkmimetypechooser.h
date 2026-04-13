@@ -2246,9 +2246,9 @@ int32_t k_mimetypechooser_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_mimetypechooser_find(uint64_t param1);
+QWidget* k_mimetypechooser_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7651,9 +7651,9 @@ int32_t k_mimetypechooserdialog_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_mimetypechooserdialog_find(uint64_t param1);
+QWidget* k_mimetypechooserdialog_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

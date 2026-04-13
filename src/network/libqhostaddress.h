@@ -49,7 +49,7 @@ unsigned char* q_ipv6address_operator_subscript(void* self, int index);
 /// @param self QIPv6Address*
 /// @param index int
 ///
-unsigned char q_ipv6address_operator_subscript2(void* self, int index);
+uint8_t q_ipv6address_operator_subscript2(void* self, int index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qipv6address.html#dtor.QIPv6Address)
 ///

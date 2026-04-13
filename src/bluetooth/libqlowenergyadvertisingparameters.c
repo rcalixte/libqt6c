@@ -35,7 +35,7 @@ int32_t q_lowenergyadvertisingparameters_filter_policy(void* self) {
     return QLowEnergyAdvertisingParameters_FilterPolicy((QLowEnergyAdvertisingParameters*)self);
 }
 
-void q_lowenergyadvertisingparameters_set_interval(void* self, unsigned short minimum, unsigned short maximum) {
+void q_lowenergyadvertisingparameters_set_interval(void* self, uint16_t minimum, uint16_t maximum) {
     QLowEnergyAdvertisingParameters_SetInterval((QLowEnergyAdvertisingParameters*)self, minimum, maximum);
 }
 

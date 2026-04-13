@@ -2913,9 +2913,9 @@ int32_t k_datetimeedit_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_datetimeedit_find(uint64_t param1);
+QWidget* k_datetimeedit_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

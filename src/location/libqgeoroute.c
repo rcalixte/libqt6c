@@ -55,7 +55,7 @@ QGeoRouteSegment* q_georoute_first_route_segment(void* self) {
     return QGeoRoute_FirstRouteSegment((QGeoRoute*)self);
 }
 
-int64_t q_georoute_segments_count(void* self) {
+intptr_t q_georoute_segments_count(void* self) {
     return QGeoRoute_SegmentsCount((QGeoRoute*)self);
 }
 

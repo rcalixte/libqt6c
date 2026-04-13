@@ -20,27 +20,27 @@ KIO__RenameDialog* k_io__renamedialog_new(void* parent, const char* title, void*
     return KIO__RenameDialog_new((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options);
 }
 
-KIO__RenameDialog* k_io__renamedialog_new2(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc) {
+KIO__RenameDialog* k_io__renamedialog_new2(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc) {
     return KIO__RenameDialog_new2((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc);
 }
 
-KIO__RenameDialog* k_io__renamedialog_new3(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest) {
+KIO__RenameDialog* k_io__renamedialog_new3(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest) {
     return KIO__RenameDialog_new3((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest);
 }
 
-KIO__RenameDialog* k_io__renamedialog_new4(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc) {
+KIO__RenameDialog* k_io__renamedialog_new4(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc) {
     return KIO__RenameDialog_new4((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc);
 }
 
-KIO__RenameDialog* k_io__renamedialog_new5(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest) {
+KIO__RenameDialog* k_io__renamedialog_new5(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest) {
     return KIO__RenameDialog_new5((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc, (QDateTime*)ctimeDest);
 }
 
-KIO__RenameDialog* k_io__renamedialog_new6(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc) {
+KIO__RenameDialog* k_io__renamedialog_new6(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc) {
     return KIO__RenameDialog_new6((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc, (QDateTime*)ctimeDest, (QDateTime*)mtimeSrc);
 }
 
-KIO__RenameDialog* k_io__renamedialog_new7(void* parent, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest) {
+KIO__RenameDialog* k_io__renamedialog_new7(void* parent, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest) {
     return KIO__RenameDialog_new7((QWidget*)parent, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc, (QDateTime*)ctimeDest, (QDateTime*)mtimeSrc, (QDateTime*)mtimeDest);
 }
 
@@ -1163,7 +1163,7 @@ int32_t k_io__renamedialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_io__renamedialog_find(uint64_t param1) {
+QWidget* k_io__renamedialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

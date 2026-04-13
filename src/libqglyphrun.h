@@ -202,14 +202,14 @@ QRectF* q_glyphrun_bounding_rect(void* self);
 ///
 /// @param self QGlyphRun*
 ///
-/// @return libqt_list of int64_t
+/// @return libqt_list of intptr_t
 ///
 libqt_list q_glyphrun_string_indexes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qglyphrun.html#setStringIndexes)
 ///
 /// @param self QGlyphRun*
-/// @param stringIndexes libqt_list of int64_t
+/// @param stringIndexes libqt_list of intptr_t
 ///
 void q_glyphrun_set_string_indexes(void* self, libqt_list stringIndexes);
 

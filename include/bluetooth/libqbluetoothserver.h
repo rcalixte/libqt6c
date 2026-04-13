@@ -173,7 +173,7 @@ QBluetoothAddress* q_bluetoothserver_server_address(void* self);
 ///
 /// @param self QBluetoothServer*
 ///
-unsigned short q_bluetoothserver_server_port(void* self);
+uint16_t q_bluetoothserver_server_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserver.html#setSecurityFlags)
 ///
@@ -263,9 +263,9 @@ bool q_bluetoothserver_listen1(void* self, void* address);
 ///
 /// @param self QBluetoothServer*
 /// @param address QBluetoothAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_bluetoothserver_listen22(void* self, void* address, unsigned short port);
+bool q_bluetoothserver_listen22(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserver.html#listen)
 ///

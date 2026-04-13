@@ -1151,7 +1151,7 @@ int32_t k_keysequencewidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_keysequencewidget_find(uint64_t param1) {
+QWidget* k_keysequencewidget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

@@ -106,11 +106,11 @@ KLocalizedString* k_lazylocalizedstring_subs2(void* self, uint32_t a) {
     return KLazyLocalizedString_Subs2((KLazyLocalizedString*)self, a);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs3(void* self, int64_t a) {
+KLocalizedString* k_lazylocalizedstring_subs3(void* self, long a) {
     return KLazyLocalizedString_Subs3((KLazyLocalizedString*)self, a);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs4(void* self, uint64_t a) {
+KLocalizedString* k_lazylocalizedstring_subs4(void* self, uintptr_t a) {
     return KLazyLocalizedString_Subs4((KLazyLocalizedString*)self, a);
 }
 
@@ -118,7 +118,7 @@ KLocalizedString* k_lazylocalizedstring_subs5(void* self, long long a) {
     return KLazyLocalizedString_Subs5((KLazyLocalizedString*)self, a);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs6(void* self, uint64_t a) {
+KLocalizedString* k_lazylocalizedstring_subs6(void* self, uintptr_t a) {
     return KLazyLocalizedString_Subs6((KLazyLocalizedString*)self, a);
 }
 
@@ -174,27 +174,27 @@ KLocalizedString* k_lazylocalizedstring_subs43(void* self, uint32_t a, int field
     return KLazyLocalizedString_Subs43((KLazyLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs24(void* self, int64_t a, int fieldWidth) {
+KLocalizedString* k_lazylocalizedstring_subs24(void* self, long a, int fieldWidth) {
     return KLazyLocalizedString_Subs24((KLazyLocalizedString*)self, a, fieldWidth);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs34(void* self, int64_t a, int fieldWidth, int base) {
+KLocalizedString* k_lazylocalizedstring_subs34(void* self, long a, int fieldWidth, int base) {
     return KLazyLocalizedString_Subs34((KLazyLocalizedString*)self, a, fieldWidth, base);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs44(void* self, int64_t a, int fieldWidth, int base, void* fillChar) {
+KLocalizedString* k_lazylocalizedstring_subs44(void* self, long a, int fieldWidth, int base, void* fillChar) {
     return KLazyLocalizedString_Subs44((KLazyLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs25(void* self, uint64_t a, int fieldWidth) {
+KLocalizedString* k_lazylocalizedstring_subs25(void* self, uintptr_t a, int fieldWidth) {
     return KLazyLocalizedString_Subs25((KLazyLocalizedString*)self, a, fieldWidth);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs35(void* self, uint64_t a, int fieldWidth, int base) {
+KLocalizedString* k_lazylocalizedstring_subs35(void* self, uintptr_t a, int fieldWidth, int base) {
     return KLazyLocalizedString_Subs35((KLazyLocalizedString*)self, a, fieldWidth, base);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs45(void* self, uint64_t a, int fieldWidth, int base, void* fillChar) {
+KLocalizedString* k_lazylocalizedstring_subs45(void* self, uintptr_t a, int fieldWidth, int base, void* fillChar) {
     return KLazyLocalizedString_Subs45((KLazyLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
@@ -210,15 +210,15 @@ KLocalizedString* k_lazylocalizedstring_subs46(void* self, long long a, int fiel
     return KLazyLocalizedString_Subs46((KLazyLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs27(void* self, uint64_t a, int fieldWidth) {
+KLocalizedString* k_lazylocalizedstring_subs27(void* self, uintptr_t a, int fieldWidth) {
     return KLazyLocalizedString_Subs27((KLazyLocalizedString*)self, a, fieldWidth);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs37(void* self, uint64_t a, int fieldWidth, int base) {
+KLocalizedString* k_lazylocalizedstring_subs37(void* self, uintptr_t a, int fieldWidth, int base) {
     return KLazyLocalizedString_Subs37((KLazyLocalizedString*)self, a, fieldWidth, base);
 }
 
-KLocalizedString* k_lazylocalizedstring_subs47(void* self, uint64_t a, int fieldWidth, int base, void* fillChar) {
+KLocalizedString* k_lazylocalizedstring_subs47(void* self, uintptr_t a, int fieldWidth, int base, void* fillChar) {
     return KLazyLocalizedString_Subs47((KLazyLocalizedString*)self, a, fieldWidth, base, (QChar*)fillChar);
 }
 

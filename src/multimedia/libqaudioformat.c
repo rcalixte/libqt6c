@@ -65,27 +65,27 @@ uint16_t q_audioformat_sample_format(void* self) {
     return QAudioFormat_SampleFormat((QAudioFormat*)self);
 }
 
-int32_t q_audioformat_bytes_for_duration(void* self, long long microseconds) {
+int32_t q_audioformat_bytes_for_duration(void* self, int64_t microseconds) {
     return QAudioFormat_BytesForDuration((QAudioFormat*)self, microseconds);
 }
 
-long long q_audioformat_duration_for_bytes(void* self, int byteCount) {
+int64_t q_audioformat_duration_for_bytes(void* self, int32_t byteCount) {
     return QAudioFormat_DurationForBytes((QAudioFormat*)self, byteCount);
 }
 
-int32_t q_audioformat_bytes_for_frames(void* self, int frameCount) {
+int32_t q_audioformat_bytes_for_frames(void* self, int32_t frameCount) {
     return QAudioFormat_BytesForFrames((QAudioFormat*)self, frameCount);
 }
 
-int32_t q_audioformat_frames_for_bytes(void* self, int byteCount) {
+int32_t q_audioformat_frames_for_bytes(void* self, int32_t byteCount) {
     return QAudioFormat_FramesForBytes((QAudioFormat*)self, byteCount);
 }
 
-int32_t q_audioformat_frames_for_duration(void* self, long long microseconds) {
+int32_t q_audioformat_frames_for_duration(void* self, int64_t microseconds) {
     return QAudioFormat_FramesForDuration((QAudioFormat*)self, microseconds);
 }
 
-long long q_audioformat_duration_for_frames(void* self, int frameCount) {
+int64_t q_audioformat_duration_for_frames(void* self, int32_t frameCount) {
     return QAudioFormat_DurationForFrames((QAudioFormat*)self, frameCount);
 }
 

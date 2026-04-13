@@ -1865,9 +1865,9 @@ int32_t q_widget_window_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* q_widget_find(uint64_t param1);
+QWidget* q_widget_find(uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#childAt)
 ///
@@ -3358,18 +3358,18 @@ void q_widget_super_update_micro_focus1(void* self, int32_t query);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// @param self QWidget*
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-void q_widget_create1(void* self, uint64_t param1);
+void q_widget_create1(void* self, uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void func(QWidget* self, uint64_t param1)
+/// @param callback void func(QWidget* self, uintptr_t param1)
 ///
-void q_widget_on_create1(void* self, void (*callback)(void*, uint64_t));
+void q_widget_on_create1(void* self, void (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `q_widget_super_create1` instead
 ///
@@ -3380,26 +3380,26 @@ void q_widget_on_create1(void* self, void (*callback)(void*, uint64_t));
 /// Base class method implementation
 ///
 /// @param self QWidget*
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-void q_widget_super_create1(void* self, uint64_t param1);
+void q_widget_super_create1(void* self, uintptr_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// @param self QWidget*
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 /// @param initializeWindow bool
 ///
-void q_widget_create2(void* self, uint64_t param1, bool initializeWindow);
+void q_widget_create2(void* self, uintptr_t param1, bool initializeWindow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void func(QWidget* self, uint64_t param1, bool initializeWindow)
+/// @param callback void func(QWidget* self, uintptr_t param1, bool initializeWindow)
 ///
-void q_widget_on_create2(void* self, void (*callback)(void*, uint64_t, bool));
+void q_widget_on_create2(void* self, void (*callback)(void*, uintptr_t, bool));
 
 /// @warning DEPRECATED: Use `q_widget_super_create2` instead
 ///
@@ -3410,28 +3410,28 @@ void q_widget_on_create2(void* self, void (*callback)(void*, uint64_t, bool));
 /// Base class method implementation
 ///
 /// @param self QWidget*
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 /// @param initializeWindow bool
 ///
-void q_widget_super_create2(void* self, uint64_t param1, bool initializeWindow);
+void q_widget_super_create2(void* self, uintptr_t param1, bool initializeWindow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// @param self QWidget*
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 /// @param initializeWindow bool
 /// @param destroyOldWindow bool
 ///
-void q_widget_create3(void* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow);
+void q_widget_create3(void* self, uintptr_t param1, bool initializeWindow, bool destroyOldWindow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#create)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWidget*
-/// @param callback void func(QWidget* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow)
+/// @param callback void func(QWidget* self, uintptr_t param1, bool initializeWindow, bool destroyOldWindow)
 ///
-void q_widget_on_create3(void* self, void (*callback)(void*, uint64_t, bool, bool));
+void q_widget_on_create3(void* self, void (*callback)(void*, uintptr_t, bool, bool));
 
 /// @warning DEPRECATED: Use `q_widget_super_create3` instead
 ///
@@ -3442,11 +3442,11 @@ void q_widget_on_create3(void* self, void (*callback)(void*, uint64_t, bool, boo
 /// Base class method implementation
 ///
 /// @param self QWidget*
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 /// @param initializeWindow bool
 /// @param destroyOldWindow bool
 ///
-void q_widget_super_create3(void* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow);
+void q_widget_super_create3(void* self, uintptr_t param1, bool initializeWindow, bool destroyOldWindow);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#destroy)
 ///

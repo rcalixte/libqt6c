@@ -95,7 +95,7 @@ void q_icon_detach(void* self) {
     QIcon_Detach((QIcon*)self);
 }
 
-long long q_icon_cache_key(void* self) {
+int64_t q_icon_cache_key(void* self) {
     return QIcon_CacheKey((QIcon*)self);
 }
 

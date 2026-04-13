@@ -273,7 +273,7 @@ bool q_webenginepage_recently_audible(void* self) {
     return QWebEnginePage_RecentlyAudible((QWebEnginePage*)self);
 }
 
-long long q_webenginepage_render_process_pid(void* self) {
+int64_t q_webenginepage_render_process_pid(void* self) {
     return QWebEnginePage_RenderProcessPid((QWebEnginePage*)self);
 }
 
@@ -596,11 +596,11 @@ void q_webenginepage_on_recently_audible_changed(void* self, void (*callback)(vo
     QWebEnginePage_Connect_RecentlyAudibleChanged((QWebEnginePage*)self, (intptr_t)callback);
 }
 
-void q_webenginepage_render_process_pid_changed(void* self, long long pid) {
+void q_webenginepage_render_process_pid_changed(void* self, int64_t pid) {
     QWebEnginePage_RenderProcessPidChanged((QWebEnginePage*)self, pid);
 }
 
-void q_webenginepage_on_render_process_pid_changed(void* self, void (*callback)(void*, long long)) {
+void q_webenginepage_on_render_process_pid_changed(void* self, void (*callback)(void*, int64_t)) {
     QWebEnginePage_Connect_RenderProcessPidChanged((QWebEnginePage*)self, (intptr_t)callback);
 }
 

@@ -1371,7 +1371,7 @@ int32_t k_colorbutton_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_colorbutton_find(uint64_t param1) {
+QWidget* k_colorbutton_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

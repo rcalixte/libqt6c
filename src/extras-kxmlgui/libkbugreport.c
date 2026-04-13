@@ -1110,7 +1110,7 @@ int32_t k_bugreport_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_bugreport_find(uint64_t param1) {
+QWidget* k_bugreport_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

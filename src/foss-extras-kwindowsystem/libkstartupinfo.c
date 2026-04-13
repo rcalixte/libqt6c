@@ -578,7 +578,7 @@ const char* k_startupinfoid_id(void* self) {
     return _ret;
 }
 
-uint64_t k_startupinfoid_timestamp(void* self) {
+uintptr_t k_startupinfoid_timestamp(void* self) {
     return KStartupInfoId_Timestamp((KStartupInfoId*)self);
 }
 

@@ -158,7 +158,7 @@ uint32_t q_packagekit__transaction_speed(void* self);
 ///
 /// @param self PackageKit__Transaction*
 ///
-uint64_t q_packagekit__transaction_download_size_remaining(void* self);
+uintptr_t q_packagekit__transaction_download_size_remaining(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

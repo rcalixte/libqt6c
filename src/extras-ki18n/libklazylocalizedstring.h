@@ -140,16 +140,16 @@ KLocalizedString* k_lazylocalizedstring_subs2(void* self, uint32_t a);
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a int64_t
+/// @param a long
 ///
-KLocalizedString* k_lazylocalizedstring_subs3(void* self, int64_t a);
+KLocalizedString* k_lazylocalizedstring_subs3(void* self, long a);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a uintptr_t
 ///
-KLocalizedString* k_lazylocalizedstring_subs4(void* self, uint64_t a);
+KLocalizedString* k_lazylocalizedstring_subs4(void* self, uintptr_t a);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
@@ -161,9 +161,9 @@ KLocalizedString* k_lazylocalizedstring_subs5(void* self, long long a);
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a uintptr_t
 ///
-KLocalizedString* k_lazylocalizedstring_subs6(void* self, uint64_t a);
+KLocalizedString* k_lazylocalizedstring_subs6(void* self, uintptr_t a);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
@@ -270,56 +270,56 @@ KLocalizedString* k_lazylocalizedstring_subs43(void* self, uint32_t a, int field
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a int64_t
+/// @param a long
 /// @param fieldWidth int
 ///
-KLocalizedString* k_lazylocalizedstring_subs24(void* self, int64_t a, int fieldWidth);
+KLocalizedString* k_lazylocalizedstring_subs24(void* self, long a, int fieldWidth);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a int64_t
-/// @param fieldWidth int
-/// @param base int
-///
-KLocalizedString* k_lazylocalizedstring_subs34(void* self, int64_t a, int fieldWidth, int base);
-
-/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
-///
-/// @param self KLazyLocalizedString*
-/// @param a int64_t
-/// @param fieldWidth int
-/// @param base int
-/// @param fillChar QChar*
-///
-KLocalizedString* k_lazylocalizedstring_subs44(void* self, int64_t a, int fieldWidth, int base, void* fillChar);
-
-/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
-///
-/// @param self KLazyLocalizedString*
-/// @param a uint64_t
-/// @param fieldWidth int
-///
-KLocalizedString* k_lazylocalizedstring_subs25(void* self, uint64_t a, int fieldWidth);
-
-/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
-///
-/// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a long
 /// @param fieldWidth int
 /// @param base int
 ///
-KLocalizedString* k_lazylocalizedstring_subs35(void* self, uint64_t a, int fieldWidth, int base);
+KLocalizedString* k_lazylocalizedstring_subs34(void* self, long a, int fieldWidth, int base);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a long
 /// @param fieldWidth int
 /// @param base int
 /// @param fillChar QChar*
 ///
-KLocalizedString* k_lazylocalizedstring_subs45(void* self, uint64_t a, int fieldWidth, int base, void* fillChar);
+KLocalizedString* k_lazylocalizedstring_subs44(void* self, long a, int fieldWidth, int base, void* fillChar);
+
+/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
+///
+/// @param self KLazyLocalizedString*
+/// @param a uintptr_t
+/// @param fieldWidth int
+///
+KLocalizedString* k_lazylocalizedstring_subs25(void* self, uintptr_t a, int fieldWidth);
+
+/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
+///
+/// @param self KLazyLocalizedString*
+/// @param a uintptr_t
+/// @param fieldWidth int
+/// @param base int
+///
+KLocalizedString* k_lazylocalizedstring_subs35(void* self, uintptr_t a, int fieldWidth, int base);
+
+/// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
+///
+/// @param self KLazyLocalizedString*
+/// @param a uintptr_t
+/// @param fieldWidth int
+/// @param base int
+/// @param fillChar QChar*
+///
+KLocalizedString* k_lazylocalizedstring_subs45(void* self, uintptr_t a, int fieldWidth, int base, void* fillChar);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
@@ -351,29 +351,29 @@ KLocalizedString* k_lazylocalizedstring_subs46(void* self, long long a, int fiel
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a uintptr_t
 /// @param fieldWidth int
 ///
-KLocalizedString* k_lazylocalizedstring_subs27(void* self, uint64_t a, int fieldWidth);
+KLocalizedString* k_lazylocalizedstring_subs27(void* self, uintptr_t a, int fieldWidth);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a uintptr_t
 /// @param fieldWidth int
 /// @param base int
 ///
-KLocalizedString* k_lazylocalizedstring_subs37(void* self, uint64_t a, int fieldWidth, int base);
+KLocalizedString* k_lazylocalizedstring_subs37(void* self, uintptr_t a, int fieldWidth, int base);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///
 /// @param self KLazyLocalizedString*
-/// @param a uint64_t
+/// @param a uintptr_t
 /// @param fieldWidth int
 /// @param base int
 /// @param fillChar QChar*
 ///
-KLocalizedString* k_lazylocalizedstring_subs47(void* self, uint64_t a, int fieldWidth, int base, void* fillChar);
+KLocalizedString* k_lazylocalizedstring_subs47(void* self, uintptr_t a, int fieldWidth, int base, void* fillChar);
 
 /// [Upstream resources](https://api.kde.org/klazylocalizedstring.html#subs)
 ///

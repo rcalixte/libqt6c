@@ -88,7 +88,7 @@ int32_t q_resource_compression_algorithm(void* self);
 ///
 /// @param self QResource*
 ///
-long long q_resource_size(void* self);
+int64_t q_resource_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#data)
 ///
@@ -100,7 +100,7 @@ const unsigned char* q_resource_data(void* self);
 ///
 /// @param self QResource*
 ///
-long long q_resource_uncompressed_size(void* self);
+int64_t q_resource_uncompressed_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qresource.html#uncompressedData)
 ///

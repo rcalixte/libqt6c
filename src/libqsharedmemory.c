@@ -103,11 +103,11 @@ QNativeIpcKey* q_sharedmemory_native_ipc_key(void* self) {
     return QSharedMemory_NativeIpcKey((QSharedMemory*)self);
 }
 
-bool q_sharedmemory_create(void* self, int64_t size) {
+bool q_sharedmemory_create(void* self, intptr_t size) {
     return QSharedMemory_Create((QSharedMemory*)self, size);
 }
 
-int64_t q_sharedmemory_size(void* self) {
+intptr_t q_sharedmemory_size(void* self) {
     return QSharedMemory_Size((QSharedMemory*)self);
 }
 
@@ -184,7 +184,7 @@ void q_sharedmemory_set_native_key22(void* self, const char* key, uint16_t type)
     QSharedMemory_SetNativeKey22((QSharedMemory*)self, qstring(key), type);
 }
 
-bool q_sharedmemory_create2(void* self, int64_t size, int32_t mode) {
+bool q_sharedmemory_create2(void* self, intptr_t size, int32_t mode) {
     return QSharedMemory_Create2((QSharedMemory*)self, size, mode);
 }
 

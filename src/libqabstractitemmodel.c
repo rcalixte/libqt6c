@@ -57,7 +57,7 @@ QModelRoleDataSpan* q_modelroledataspan_new4(void* modelRoleData) {
     return QModelRoleDataSpan_new4((QModelRoleData*)modelRoleData);
 }
 
-QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, int64_t lenVal) {
+QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, intptr_t lenVal) {
     return QModelRoleDataSpan_new5((QModelRoleData*)modelRoleData, lenVal);
 }
 
@@ -73,11 +73,11 @@ void q_modelroledataspan_move_assign(void* self, void* other) {
     QModelRoleDataSpan_MoveAssign((QModelRoleDataSpan*)self, (QModelRoleDataSpan*)other);
 }
 
-int64_t q_modelroledataspan_size(void* self) {
+intptr_t q_modelroledataspan_size(void* self) {
     return QModelRoleDataSpan_Size((QModelRoleDataSpan*)self);
 }
 
-int64_t q_modelroledataspan_length(void* self) {
+intptr_t q_modelroledataspan_length(void* self) {
     return QModelRoleDataSpan_Length((QModelRoleDataSpan*)self);
 }
 
@@ -93,7 +93,7 @@ QModelRoleData* q_modelroledataspan_end(void* self) {
     return QModelRoleDataSpan_End((QModelRoleDataSpan*)self);
 }
 
-QModelRoleData* q_modelroledataspan_operator_subscript(void* self, int64_t index) {
+QModelRoleData* q_modelroledataspan_operator_subscript(void* self, intptr_t index) {
     return QModelRoleDataSpan_OperatorSubscript((QModelRoleDataSpan*)self, index);
 }
 

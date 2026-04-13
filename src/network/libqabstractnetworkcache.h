@@ -233,7 +233,7 @@ bool q_abstractnetworkcache_remove(void* self, void* url);
 ///
 /// @param self QAbstractNetworkCache*
 ///
-long long q_abstractnetworkcache_cache_size(void* self);
+int64_t q_abstractnetworkcache_cache_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractnetworkcache.html#prepare)
 ///

@@ -2548,7 +2548,7 @@ int32_t q_treewidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_treewidget_find(uint64_t param1) {
+QWidget* q_treewidget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

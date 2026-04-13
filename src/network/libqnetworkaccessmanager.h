@@ -366,11 +366,11 @@ void q_networkaccessmanager_connect_to_host_encrypted(void* self, const char* ho
 ///
 /// @param self QNetworkAccessManager*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param sslConfiguration QSslConfiguration*
 /// @param peerName const char*
 ///
-void q_networkaccessmanager_connect_to_host_encrypted2(void* self, const char* hostName, unsigned short port, void* sslConfiguration, const char* peerName);
+void q_networkaccessmanager_connect_to_host_encrypted2(void* self, const char* hostName, uint16_t port, void* sslConfiguration, const char* peerName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHost)
 ///
@@ -624,26 +624,26 @@ QNetworkReply* q_networkaccessmanager_send_custom_request32(void* self, void* re
 ///
 /// @param self QNetworkAccessManager*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_networkaccessmanager_connect_to_host_encrypted22(void* self, const char* hostName, unsigned short port);
+void q_networkaccessmanager_connect_to_host_encrypted22(void* self, const char* hostName, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHostEncrypted)
 ///
 /// @param self QNetworkAccessManager*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param sslConfiguration QSslConfiguration*
 ///
-void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* hostName, unsigned short port, void* sslConfiguration);
+void q_networkaccessmanager_connect_to_host_encrypted3(void* self, const char* hostName, uint16_t port, void* sslConfiguration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#connectToHost)
 ///
 /// @param self QNetworkAccessManager*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, unsigned short port);
+void q_networkaccessmanager_connect_to_host2(void* self, const char* hostName, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkaccessmanager.html#setTransferTimeout)
 ///

@@ -61,9 +61,9 @@ QBluetoothUuid* q_bluetoothuuid_new6(int32_t uuid);
 
 /// q_bluetoothuuid_new7 constructs a new QBluetoothUuid object.
 ///
-/// @param uuid unsigned short
+/// @param uuid uint16_t
 ///
-QBluetoothUuid* q_bluetoothuuid_new7(unsigned short uuid);
+QBluetoothUuid* q_bluetoothuuid_new7(uint16_t uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html)
 
@@ -113,7 +113,7 @@ int32_t q_bluetoothuuid_minimum_size(void* self);
 ///
 /// @param self QBluetoothUuid*
 ///
-unsigned short q_bluetoothuuid_to_u_int16(void* self);
+uint16_t q_bluetoothuuid_to_u_int16(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt32)
 ///
@@ -164,7 +164,7 @@ const char* q_bluetoothuuid_descriptor_to_string(int32_t uuid);
 /// @param self QBluetoothUuid*
 /// @param ok bool*
 ///
-unsigned short q_bluetoothuuid_to_u_int161(void* self, bool* ok);
+uint16_t q_bluetoothuuid_to_u_int161(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothuuid.html#toUInt32)
 ///
@@ -317,16 +317,16 @@ void q_bluetoothuuid_set_data1(void* self, uint32_t data1);
 ///
 /// @param self QBluetoothUuid*
 ///
-unsigned short q_bluetoothuuid_data2(void* self);
+uint16_t q_bluetoothuuid_data2(void* self);
 
 /// Inherited from QUuid
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data2-var)
 ///
 /// @param self QBluetoothUuid*
-/// @param data2 unsigned short
+/// @param data2 uint16_t
 ///
-void q_bluetoothuuid_set_data2(void* self, unsigned short data2);
+void q_bluetoothuuid_set_data2(void* self, uint16_t data2);
 
 /// Inherited from QUuid
 ///
@@ -334,16 +334,16 @@ void q_bluetoothuuid_set_data2(void* self, unsigned short data2);
 ///
 /// @param self QBluetoothUuid*
 ///
-unsigned short q_bluetoothuuid_data3(void* self);
+uint16_t q_bluetoothuuid_data3(void* self);
 
 /// Inherited from QUuid
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#data3-var)
 ///
 /// @param self QBluetoothUuid*
-/// @param data3 unsigned short
+/// @param data3 uint16_t
 ///
-void q_bluetoothuuid_set_data3(void* self, unsigned short data3);
+void q_bluetoothuuid_set_data3(void* self, uint16_t data3);
 
 /// Inherited from QUuid
 ///

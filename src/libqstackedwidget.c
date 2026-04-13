@@ -1162,7 +1162,7 @@ int32_t q_stackedwidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_stackedwidget_find(uint64_t param1) {
+QWidget* q_stackedwidget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

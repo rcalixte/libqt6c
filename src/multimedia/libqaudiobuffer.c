@@ -18,11 +18,11 @@ QAudioBuffer* q_audiobuffer_new4(int numFrames, void* format) {
     return QAudioBuffer_new4(numFrames, (QAudioFormat*)format);
 }
 
-QAudioBuffer* q_audiobuffer_new5(char* data, void* format, long long startTime) {
+QAudioBuffer* q_audiobuffer_new5(char* data, void* format, int64_t startTime) {
     return QAudioBuffer_new5(qstring(data), (QAudioFormat*)format, startTime);
 }
 
-QAudioBuffer* q_audiobuffer_new6(int numFrames, void* format, long long startTime) {
+QAudioBuffer* q_audiobuffer_new6(int numFrames, void* format, int64_t startTime) {
     return QAudioBuffer_new6(numFrames, (QAudioFormat*)format, startTime);
 }
 
@@ -46,23 +46,23 @@ QAudioFormat* q_audiobuffer_format(void* self) {
     return QAudioBuffer_Format((QAudioBuffer*)self);
 }
 
-int64_t q_audiobuffer_frame_count(void* self) {
+intptr_t q_audiobuffer_frame_count(void* self) {
     return QAudioBuffer_FrameCount((QAudioBuffer*)self);
 }
 
-int64_t q_audiobuffer_sample_count(void* self) {
+intptr_t q_audiobuffer_sample_count(void* self) {
     return QAudioBuffer_SampleCount((QAudioBuffer*)self);
 }
 
-int64_t q_audiobuffer_byte_count(void* self) {
+intptr_t q_audiobuffer_byte_count(void* self) {
     return QAudioBuffer_ByteCount((QAudioBuffer*)self);
 }
 
-long long q_audiobuffer_duration(void* self) {
+int64_t q_audiobuffer_duration(void* self) {
     return QAudioBuffer_Duration((QAudioBuffer*)self);
 }
 
-long long q_audiobuffer_start_time(void* self) {
+int64_t q_audiobuffer_start_time(void* self) {
     return QAudioBuffer_StartTime((QAudioBuffer*)self);
 }
 

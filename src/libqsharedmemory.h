@@ -190,15 +190,15 @@ QNativeIpcKey* q_sharedmemory_native_ipc_key(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qsharedmemory.html#create)
 ///
 /// @param self QSharedMemory*
-/// @param size int64_t
+/// @param size intptr_t
 ///
-bool q_sharedmemory_create(void* self, int64_t size);
+bool q_sharedmemory_create(void* self, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsharedmemory.html#size)
 ///
 /// @param self QSharedMemory*
 ///
-int64_t q_sharedmemory_size(void* self);
+intptr_t q_sharedmemory_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsharedmemory.html#attach)
 ///
@@ -312,10 +312,10 @@ void q_sharedmemory_set_native_key22(void* self, const char* key, uint16_t type)
 /// [Upstream resources](https://doc.qt.io/qt-6/qsharedmemory.html#create)
 ///
 /// @param self QSharedMemory*
-/// @param size int64_t
+/// @param size intptr_t
 /// @param mode enum QSharedMemory__AccessMode
 ///
-bool q_sharedmemory_create2(void* self, int64_t size, int32_t mode);
+bool q_sharedmemory_create2(void* self, intptr_t size, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qsharedmemory.html#attach)
 ///

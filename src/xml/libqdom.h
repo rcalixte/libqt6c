@@ -3131,10 +3131,10 @@ void q_domcharacterdata_operator_assign(void* self, void* other);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCharacterData*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-const char* q_domcharacterdata_substring_data(void* self, uint64_t offset, uint64_t count);
+const char* q_domcharacterdata_substring_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#appendData)
 ///
@@ -3146,27 +3146,27 @@ void q_domcharacterdata_append_data(void* self, const char* arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#insertData)
 ///
 /// @param self QDomCharacterData*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 /// @param arg const char*
 ///
-void q_domcharacterdata_insert_data(void* self, uint64_t offset, const char* arg);
+void q_domcharacterdata_insert_data(void* self, uintptr_t offset, const char* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#deleteData)
 ///
 /// @param self QDomCharacterData*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-void q_domcharacterdata_delete_data(void* self, uint64_t offset, uint64_t count);
+void q_domcharacterdata_delete_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#replaceData)
 ///
 /// @param self QDomCharacterData*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 /// @param arg const char*
 ///
-void q_domcharacterdata_replace_data(void* self, uint64_t offset, uint64_t count, const char* arg);
+void q_domcharacterdata_replace_data(void* self, uintptr_t offset, uintptr_t count, const char* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#length)
 ///
@@ -4581,9 +4581,9 @@ void q_domelement_set_attribute2(void* self, const char* name, long long value);
 ///
 /// @param self QDomElement*
 /// @param name const char*
-/// @param value uint64_t
+/// @param value uintptr_t
 ///
-void q_domelement_set_attribute3(void* self, const char* name, uint64_t value);
+void q_domelement_set_attribute3(void* self, const char* name, uintptr_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#setAttribute)
 ///
@@ -4710,9 +4710,9 @@ void q_domelement_set_attribute_n_s4(void* self, const char* nsURI, const char* 
 /// @param self QDomElement*
 /// @param nsURI const char*
 /// @param qName const char*
-/// @param value uint64_t
+/// @param value uintptr_t
 ///
-void q_domelement_set_attribute_n_s5(void* self, const char* nsURI, const char* qName, uint64_t value);
+void q_domelement_set_attribute_n_s5(void* self, const char* nsURI, const char* qName, uintptr_t value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomelement.html#setAttributeNS)
 ///
@@ -5490,10 +5490,10 @@ int32_t q_domtext_node_type(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomText*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-const char* q_domtext_substring_data(void* self, uint64_t offset, uint64_t count);
+const char* q_domtext_substring_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// Inherited from QDomCharacterData
 ///
@@ -5509,31 +5509,31 @@ void q_domtext_append_data(void* self, const char* arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#insertData)
 ///
 /// @param self QDomText*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 /// @param arg const char*
 ///
-void q_domtext_insert_data(void* self, uint64_t offset, const char* arg);
+void q_domtext_insert_data(void* self, uintptr_t offset, const char* arg);
 
 /// Inherited from QDomCharacterData
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#deleteData)
 ///
 /// @param self QDomText*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-void q_domtext_delete_data(void* self, uint64_t offset, uint64_t count);
+void q_domtext_delete_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// Inherited from QDomCharacterData
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#replaceData)
 ///
 /// @param self QDomText*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 /// @param arg const char*
 ///
-void q_domtext_replace_data(void* self, uint64_t offset, uint64_t count, const char* arg);
+void q_domtext_replace_data(void* self, uintptr_t offset, uintptr_t count, const char* arg);
 
 /// Inherited from QDomCharacterData
 ///
@@ -6233,10 +6233,10 @@ int32_t q_domcomment_node_type(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomComment*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-const char* q_domcomment_substring_data(void* self, uint64_t offset, uint64_t count);
+const char* q_domcomment_substring_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// Inherited from QDomCharacterData
 ///
@@ -6252,31 +6252,31 @@ void q_domcomment_append_data(void* self, const char* arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#insertData)
 ///
 /// @param self QDomComment*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 /// @param arg const char*
 ///
-void q_domcomment_insert_data(void* self, uint64_t offset, const char* arg);
+void q_domcomment_insert_data(void* self, uintptr_t offset, const char* arg);
 
 /// Inherited from QDomCharacterData
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#deleteData)
 ///
 /// @param self QDomComment*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-void q_domcomment_delete_data(void* self, uint64_t offset, uint64_t count);
+void q_domcomment_delete_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// Inherited from QDomCharacterData
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#replaceData)
 ///
 /// @param self QDomComment*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 /// @param arg const char*
 ///
-void q_domcomment_replace_data(void* self, uint64_t offset, uint64_t count, const char* arg);
+void q_domcomment_replace_data(void* self, uintptr_t offset, uintptr_t count, const char* arg);
 
 /// Inherited from QDomCharacterData
 ///
@@ -6985,10 +6985,10 @@ QDomText* q_domcdatasection_split_text(void* self, int offset);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QDomCDATASection*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-const char* q_domcdatasection_substring_data(void* self, uint64_t offset, uint64_t count);
+const char* q_domcdatasection_substring_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// Inherited from QDomCharacterData
 ///
@@ -7004,31 +7004,31 @@ void q_domcdatasection_append_data(void* self, const char* arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#insertData)
 ///
 /// @param self QDomCDATASection*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 /// @param arg const char*
 ///
-void q_domcdatasection_insert_data(void* self, uint64_t offset, const char* arg);
+void q_domcdatasection_insert_data(void* self, uintptr_t offset, const char* arg);
 
 /// Inherited from QDomCharacterData
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#deleteData)
 ///
 /// @param self QDomCDATASection*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 ///
-void q_domcdatasection_delete_data(void* self, uint64_t offset, uint64_t count);
+void q_domcdatasection_delete_data(void* self, uintptr_t offset, uintptr_t count);
 
 /// Inherited from QDomCharacterData
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomcharacterdata.html#replaceData)
 ///
 /// @param self QDomCDATASection*
-/// @param offset uint64_t
-/// @param count uint64_t
+/// @param offset uintptr_t
+/// @param count uintptr_t
 /// @param arg const char*
 ///
-void q_domcdatasection_replace_data(void* self, uint64_t offset, uint64_t count, const char* arg);
+void q_domcdatasection_replace_data(void* self, uintptr_t offset, uintptr_t count, const char* arg);
 
 /// Inherited from QDomCharacterData
 ///
@@ -10438,27 +10438,27 @@ void q_domdocument__parseresult_set_error_message(void* self, const char* errorM
 ///
 /// @param self QDomDocument__ParseResult*
 ///
-int64_t q_domdocument__parseresult_error_line(void* self);
+intptr_t q_domdocument__parseresult_error_line(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorLine-var)
 ///
 /// @param self QDomDocument__ParseResult*
-/// @param errorLine int64_t
+/// @param errorLine intptr_t
 ///
-void q_domdocument__parseresult_set_error_line(void* self, int64_t errorLine);
+void q_domdocument__parseresult_set_error_line(void* self, intptr_t errorLine);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorColumn-var)
 ///
 /// @param self QDomDocument__ParseResult*
 ///
-int64_t q_domdocument__parseresult_error_column(void* self);
+intptr_t q_domdocument__parseresult_error_column(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#errorColumn-var)
 ///
 /// @param self QDomDocument__ParseResult*
-/// @param errorColumn int64_t
+/// @param errorColumn intptr_t
 ///
-void q_domdocument__parseresult_set_error_column(void* self, int64_t errorColumn);
+void q_domdocument__parseresult_set_error_column(void* self, intptr_t errorColumn);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdomdocument-parseresult.html#operator)
 ///

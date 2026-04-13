@@ -79,11 +79,11 @@ const char* q_tcpsocket_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_tcpsocket_bind2(void* self, int32_t addr, unsigned short port) {
+bool q_tcpsocket_bind2(void* self, int32_t addr, uint16_t port) {
     return QTcpSocket_Bind2((QTcpSocket*)self, addr, port);
 }
 
-bool q_tcpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode) {
+bool q_tcpsocket_bind3(void* self, int32_t addr, uint16_t port, int32_t mode) {
     return QTcpSocket_Bind3((QTcpSocket*)self, addr, port, mode);
 }
 
@@ -95,7 +95,7 @@ void q_tcpsocket_set_pause_mode(void* self, int32_t pauseMode) {
     QAbstractSocket_SetPauseMode((QAbstractSocket*)self, pauseMode);
 }
 
-void q_tcpsocket_connect_to_host2(void* self, void* address, unsigned short port) {
+void q_tcpsocket_connect_to_host2(void* self, void* address, uint16_t port) {
     QAbstractSocket_ConnectToHost2((QAbstractSocket*)self, (QHostAddress*)address, port);
 }
 
@@ -103,7 +103,7 @@ bool q_tcpsocket_is_valid(void* self) {
     return QAbstractSocket_IsValid((QAbstractSocket*)self);
 }
 
-unsigned short q_tcpsocket_local_port(void* self) {
+uint16_t q_tcpsocket_local_port(void* self) {
     return QAbstractSocket_LocalPort((QAbstractSocket*)self);
 }
 
@@ -111,7 +111,7 @@ QHostAddress* q_tcpsocket_local_address(void* self) {
     return QAbstractSocket_LocalAddress((QAbstractSocket*)self);
 }
 
-unsigned short q_tcpsocket_peer_port(void* self) {
+uint16_t q_tcpsocket_peer_port(void* self) {
     return QAbstractSocket_PeerPort((QAbstractSocket*)self);
 }
 
@@ -126,7 +126,7 @@ const char* q_tcpsocket_peer_name(void* self) {
     return _ret;
 }
 
-long long q_tcpsocket_read_buffer_size(void* self) {
+int64_t q_tcpsocket_read_buffer_size(void* self) {
     return QAbstractSocket_ReadBufferSize((QAbstractSocket*)self);
 }
 
@@ -217,15 +217,15 @@ void q_tcpsocket_on_proxy_authentication_required(void* self, void (*callback)(v
     QAbstractSocket_Connect_ProxyAuthenticationRequired((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-bool q_tcpsocket_bind1(void* self, unsigned short port) {
+bool q_tcpsocket_bind1(void* self, uint16_t port) {
     return QAbstractSocket_Bind1((QAbstractSocket*)self, port);
 }
 
-bool q_tcpsocket_bind22(void* self, unsigned short port, int32_t mode) {
+bool q_tcpsocket_bind22(void* self, uint16_t port, int32_t mode) {
     return QAbstractSocket_Bind22((QAbstractSocket*)self, port, mode);
 }
 
-void q_tcpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode) {
+void q_tcpsocket_connect_to_host3(void* self, void* address, uint16_t port, int32_t mode) {
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
@@ -277,11 +277,11 @@ void q_tcpsocket_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-long long q_tcpsocket_read(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_tcpsocket_read2(void* self, long long maxlen) {
+char* q_tcpsocket_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -295,7 +295,7 @@ char* q_tcpsocket_read_all(void* self) {
     return _ret;
 }
 
-long long q_tcpsocket_read_line(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
@@ -322,30 +322,30 @@ bool q_tcpsocket_is_transaction_started(void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-long long q_tcpsocket_write(void* self, const char* data, long long lenVal) {
+int64_t q_tcpsocket_write(void* self, const char* data, int64_t lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_tcpsocket_write2(void* self, const char* data) {
+int64_t q_tcpsocket_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_tcpsocket_write3(void* self, char* data) {
+int64_t q_tcpsocket_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
-long long q_tcpsocket_peek(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_tcpsocket_peek2(void* self, long long maxlen) {
+char* q_tcpsocket_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-long long q_tcpsocket_skip(void* self, long long maxSize) {
+int64_t q_tcpsocket_skip(void* self, int64_t maxSize) {
     return QIODevice_Skip((QIODevice*)self, maxSize);
 }
 
@@ -384,19 +384,19 @@ void q_tcpsocket_on_channel_ready_read(void* self, void (*callback)(void*, int))
     QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_tcpsocket_bytes_written(void* self, long long bytes) {
+void q_tcpsocket_bytes_written(void* self, int64_t bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_tcpsocket_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void q_tcpsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_tcpsocket_channel_bytes_written(void* self, int channel, long long bytes) {
+void q_tcpsocket_channel_bytes_written(void* self, int channel, int64_t bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_tcpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+void q_tcpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t)) {
     QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
@@ -416,7 +416,7 @@ void q_tcpsocket_on_read_channel_finished(void* self, void (*callback)(void*)) {
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_tcpsocket_read_line1(void* self, long long maxlen) {
+char* q_tcpsocket_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -646,15 +646,15 @@ void q_tcpsocket_on_resume(void* self, void (*callback)()) {
     QTcpSocket_OnResume((QTcpSocket*)self, (intptr_t)callback);
 }
 
-void q_tcpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
+void q_tcpsocket_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol) {
     QTcpSocket_ConnectToHost((QTcpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_tcpsocket_super_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
+void q_tcpsocket_super_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol) {
     QTcpSocket_SuperConnectToHost((QTcpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_tcpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t)) {
+void q_tcpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, uint16_t, int32_t, int32_t)) {
     QTcpSocket_OnConnectToHost((QTcpSocket*)self, (intptr_t)callback);
 }
 
@@ -670,39 +670,39 @@ void q_tcpsocket_on_disconnect_from_host(void* self, void (*callback)()) {
     QTcpSocket_OnDisconnectFromHost((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_bytes_available(void* self) {
+int64_t q_tcpsocket_bytes_available(void* self) {
     return QTcpSocket_BytesAvailable((QTcpSocket*)self);
 }
 
-long long q_tcpsocket_super_bytes_available(void* self) {
+int64_t q_tcpsocket_super_bytes_available(void* self) {
     return QTcpSocket_SuperBytesAvailable((QTcpSocket*)self);
 }
 
-void q_tcpsocket_on_bytes_available(void* self, long long (*callback)()) {
+void q_tcpsocket_on_bytes_available(void* self, int64_t (*callback)()) {
     QTcpSocket_OnBytesAvailable((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_bytes_to_write(void* self) {
+int64_t q_tcpsocket_bytes_to_write(void* self) {
     return QTcpSocket_BytesToWrite((QTcpSocket*)self);
 }
 
-long long q_tcpsocket_super_bytes_to_write(void* self) {
+int64_t q_tcpsocket_super_bytes_to_write(void* self) {
     return QTcpSocket_SuperBytesToWrite((QTcpSocket*)self);
 }
 
-void q_tcpsocket_on_bytes_to_write(void* self, long long (*callback)()) {
+void q_tcpsocket_on_bytes_to_write(void* self, int64_t (*callback)()) {
     QTcpSocket_OnBytesToWrite((QTcpSocket*)self, (intptr_t)callback);
 }
 
-void q_tcpsocket_set_read_buffer_size(void* self, long long size) {
+void q_tcpsocket_set_read_buffer_size(void* self, int64_t size) {
     QTcpSocket_SetReadBufferSize((QTcpSocket*)self, size);
 }
 
-void q_tcpsocket_super_set_read_buffer_size(void* self, long long size) {
+void q_tcpsocket_super_set_read_buffer_size(void* self, int64_t size) {
     QTcpSocket_SuperSetReadBufferSize((QTcpSocket*)self, size);
 }
 
-void q_tcpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long)) {
+void q_tcpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int64_t)) {
     QTcpSocket_OnSetReadBufferSize((QTcpSocket*)self, (intptr_t)callback);
 }
 
@@ -826,51 +826,51 @@ void q_tcpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, in
     QTcpSocket_OnWaitForDisconnected((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_read_data(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_read_data(void* self, char* data, int64_t maxlen) {
     return QTcpSocket_ReadData((QTcpSocket*)self, data, maxlen);
 }
 
-long long q_tcpsocket_super_read_data(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_super_read_data(void* self, char* data, int64_t maxlen) {
     return QTcpSocket_SuperReadData((QTcpSocket*)self, data, maxlen);
 }
 
-void q_tcpsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+void q_tcpsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     QTcpSocket_OnReadData((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_read_line_data(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_read_line_data(void* self, char* data, int64_t maxlen) {
     return QTcpSocket_ReadLineData((QTcpSocket*)self, data, maxlen);
 }
 
-long long q_tcpsocket_super_read_line_data(void* self, char* data, long long maxlen) {
+int64_t q_tcpsocket_super_read_line_data(void* self, char* data, int64_t maxlen) {
     return QTcpSocket_SuperReadLineData((QTcpSocket*)self, data, maxlen);
 }
 
-void q_tcpsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+void q_tcpsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     QTcpSocket_OnReadLineData((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_skip_data(void* self, long long maxSize) {
+int64_t q_tcpsocket_skip_data(void* self, int64_t maxSize) {
     return QTcpSocket_SkipData((QTcpSocket*)self, maxSize);
 }
 
-long long q_tcpsocket_super_skip_data(void* self, long long maxSize) {
+int64_t q_tcpsocket_super_skip_data(void* self, int64_t maxSize) {
     return QTcpSocket_SuperSkipData((QTcpSocket*)self, maxSize);
 }
 
-void q_tcpsocket_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+void q_tcpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t)) {
     QTcpSocket_OnSkipData((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_write_data(void* self, const char* data, long long lenVal) {
+int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t lenVal) {
     return QTcpSocket_WriteData((QTcpSocket*)self, data, lenVal);
 }
 
-long long q_tcpsocket_super_write_data(void* self, const char* data, long long lenVal) {
+int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t lenVal) {
     return QTcpSocket_SuperWriteData((QTcpSocket*)self, data, lenVal);
 }
 
-void q_tcpsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+void q_tcpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QTcpSocket_OnWriteData((QTcpSocket*)self, (intptr_t)callback);
 }
 
@@ -886,39 +886,39 @@ void q_tcpsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QTcpSocket_OnOpen((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_pos(void* self) {
+int64_t q_tcpsocket_pos(void* self) {
     return QTcpSocket_Pos((QTcpSocket*)self);
 }
 
-long long q_tcpsocket_super_pos(void* self) {
+int64_t q_tcpsocket_super_pos(void* self) {
     return QTcpSocket_SuperPos((QTcpSocket*)self);
 }
 
-void q_tcpsocket_on_pos(void* self, long long (*callback)()) {
+void q_tcpsocket_on_pos(void* self, int64_t (*callback)()) {
     QTcpSocket_OnPos((QTcpSocket*)self, (intptr_t)callback);
 }
 
-long long q_tcpsocket_size(void* self) {
+int64_t q_tcpsocket_size(void* self) {
     return QTcpSocket_Size((QTcpSocket*)self);
 }
 
-long long q_tcpsocket_super_size(void* self) {
+int64_t q_tcpsocket_super_size(void* self) {
     return QTcpSocket_SuperSize((QTcpSocket*)self);
 }
 
-void q_tcpsocket_on_size(void* self, long long (*callback)()) {
+void q_tcpsocket_on_size(void* self, int64_t (*callback)()) {
     QTcpSocket_OnSize((QTcpSocket*)self, (intptr_t)callback);
 }
 
-bool q_tcpsocket_seek(void* self, long long pos) {
+bool q_tcpsocket_seek(void* self, int64_t pos) {
     return QTcpSocket_Seek((QTcpSocket*)self, pos);
 }
 
-bool q_tcpsocket_super_seek(void* self, long long pos) {
+bool q_tcpsocket_super_seek(void* self, int64_t pos) {
     return QTcpSocket_SuperSeek((QTcpSocket*)self, pos);
 }
 
-void q_tcpsocket_on_seek(void* self, bool (*callback)(void*, long long)) {
+void q_tcpsocket_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     QTcpSocket_OnSeek((QTcpSocket*)self, (intptr_t)callback);
 }
 
@@ -1066,15 +1066,15 @@ void q_tcpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t
     QTcpSocket_OnSetSocketError((QTcpSocket*)self, (intptr_t)callback);
 }
 
-void q_tcpsocket_set_local_port(void* self, unsigned short port) {
+void q_tcpsocket_set_local_port(void* self, uint16_t port) {
     QTcpSocket_SetLocalPort((QTcpSocket*)self, port);
 }
 
-void q_tcpsocket_super_set_local_port(void* self, unsigned short port) {
+void q_tcpsocket_super_set_local_port(void* self, uint16_t port) {
     QTcpSocket_SuperSetLocalPort((QTcpSocket*)self, port);
 }
 
-void q_tcpsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short)) {
+void q_tcpsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t)) {
     QTcpSocket_OnSetLocalPort((QTcpSocket*)self, (intptr_t)callback);
 }
 
@@ -1090,15 +1090,15 @@ void q_tcpsocket_on_set_local_address(void* self, void (*callback)(void*, void*)
     QTcpSocket_OnSetLocalAddress((QTcpSocket*)self, (intptr_t)callback);
 }
 
-void q_tcpsocket_set_peer_port(void* self, unsigned short port) {
+void q_tcpsocket_set_peer_port(void* self, uint16_t port) {
     QTcpSocket_SetPeerPort((QTcpSocket*)self, port);
 }
 
-void q_tcpsocket_super_set_peer_port(void* self, unsigned short port) {
+void q_tcpsocket_super_set_peer_port(void* self, uint16_t port) {
     QTcpSocket_SuperSetPeerPort((QTcpSocket*)self, port);
 }
 
-void q_tcpsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short)) {
+void q_tcpsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t)) {
     QTcpSocket_OnSetPeerPort((QTcpSocket*)self, (intptr_t)callback);
 }
 

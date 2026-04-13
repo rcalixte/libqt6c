@@ -275,9 +275,9 @@ int32_t q_scroller_grab_gesture2(void* target, int32_t gestureType);
 /// @param self QScroller*
 /// @param input enum QScroller__Input
 /// @param position QPointF*
-/// @param timestamp long long
+/// @param timestamp int64_t
 ///
-bool q_scroller_handle_input3(void* self, int32_t input, void* position, long long timestamp);
+bool q_scroller_handle_input3(void* self, int32_t input, void* position, int64_t timestamp);
 
 /// Inherited from QObject
 ///

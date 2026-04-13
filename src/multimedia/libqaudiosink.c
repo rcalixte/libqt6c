@@ -107,23 +107,23 @@ void q_audiosink_resume(void* self) {
     QAudioSink_Resume((QAudioSink*)self);
 }
 
-void q_audiosink_set_buffer_size(void* self, int64_t bytes) {
+void q_audiosink_set_buffer_size(void* self, intptr_t bytes) {
     QAudioSink_SetBufferSize((QAudioSink*)self, bytes);
 }
 
-int64_t q_audiosink_buffer_size(void* self) {
+intptr_t q_audiosink_buffer_size(void* self) {
     return QAudioSink_BufferSize((QAudioSink*)self);
 }
 
-int64_t q_audiosink_bytes_free(void* self) {
+intptr_t q_audiosink_bytes_free(void* self) {
     return QAudioSink_BytesFree((QAudioSink*)self);
 }
 
-long long q_audiosink_processed_u_secs(void* self) {
+int64_t q_audiosink_processed_u_secs(void* self) {
     return QAudioSink_ProcessedUSecs((QAudioSink*)self);
 }
 
-long long q_audiosink_elapsed_u_secs(void* self) {
+int64_t q_audiosink_elapsed_u_secs(void* self) {
     return QAudioSink_ElapsedUSecs((QAudioSink*)self);
 }
 

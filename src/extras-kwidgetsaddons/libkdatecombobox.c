@@ -1700,7 +1700,7 @@ int32_t k_datecombobox_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_datecombobox_find(uint64_t param1) {
+QWidget* k_datecombobox_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

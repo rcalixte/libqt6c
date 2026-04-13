@@ -5,7 +5,7 @@ QRandomGenerator* q_randomgenerator_new() {
     return QRandomGenerator_new();
 }
 
-QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, int64_t lenVal) {
+QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t lenVal) {
     return QRandomGenerator_new2(seedBuffer, lenVal);
 }
 
@@ -65,19 +65,19 @@ uint64_t q_randomgenerator_bounded7(void* self, uint64_t lowest, uint64_t highes
     return QRandomGenerator_Bounded7((QRandomGenerator*)self, lowest, highest);
 }
 
-long long q_randomgenerator_bounded8(void* self, long long highest) {
+int64_t q_randomgenerator_bounded8(void* self, int64_t highest) {
     return QRandomGenerator_Bounded8((QRandomGenerator*)self, highest);
 }
 
-long long q_randomgenerator_bounded9(void* self, long long lowest, long long highest) {
+int64_t q_randomgenerator_bounded9(void* self, int64_t lowest, int64_t highest) {
     return QRandomGenerator_Bounded9((QRandomGenerator*)self, lowest, highest);
 }
 
-long long q_randomgenerator_bounded10(void* self, int lowest, long long highest) {
+int64_t q_randomgenerator_bounded10(void* self, int lowest, int64_t highest) {
     return QRandomGenerator_Bounded10((QRandomGenerator*)self, lowest, highest);
 }
 
-long long q_randomgenerator_bounded11(void* self, long long lowest, int highest) {
+int64_t q_randomgenerator_bounded11(void* self, int64_t lowest, int highest) {
     return QRandomGenerator_Bounded11((QRandomGenerator*)self, lowest, highest);
 }
 
@@ -101,7 +101,7 @@ void q_randomgenerator_seed(void* self) {
     QRandomGenerator_Seed((QRandomGenerator*)self);
 }
 
-void q_randomgenerator_discard(void* self, uint64_t z) {
+void q_randomgenerator_discard(void* self, uintptr_t z) {
     QRandomGenerator_Discard((QRandomGenerator*)self, z);
 }
 
@@ -137,7 +137,7 @@ QRandomGenerator64* q_randomgenerator64_new() {
     return QRandomGenerator64_new();
 }
 
-QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, int64_t lenVal) {
+QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t lenVal) {
     return QRandomGenerator64_new2(seedBuffer, lenVal);
 }
 
@@ -161,19 +161,19 @@ uint64_t q_randomgenerator64_generate(void* self) {
     return QRandomGenerator64_Generate((QRandomGenerator64*)self);
 }
 
-uint64_t q_randomgenerator64_operator_call(void* self) {
+uintptr_t q_randomgenerator64_operator_call(void* self) {
     return QRandomGenerator64_OperatorCall((QRandomGenerator64*)self);
 }
 
-void q_randomgenerator64_discard(void* self, uint64_t z) {
+void q_randomgenerator64_discard(void* self, uintptr_t z) {
     QRandomGenerator64_Discard((QRandomGenerator64*)self, z);
 }
 
-uint64_t q_randomgenerator64_min() {
+uintptr_t q_randomgenerator64_min() {
     return QRandomGenerator64_Min();
 }
 
-uint64_t q_randomgenerator64_max() {
+uintptr_t q_randomgenerator64_max() {
     return QRandomGenerator64_Max();
 }
 
@@ -229,19 +229,19 @@ uint64_t q_randomgenerator64_bounded7(void* self, uint64_t lowest, uint64_t high
     return QRandomGenerator_Bounded7((QRandomGenerator*)self, lowest, highest);
 }
 
-long long q_randomgenerator64_bounded8(void* self, long long highest) {
+int64_t q_randomgenerator64_bounded8(void* self, int64_t highest) {
     return QRandomGenerator_Bounded8((QRandomGenerator*)self, highest);
 }
 
-long long q_randomgenerator64_bounded9(void* self, long long lowest, long long highest) {
+int64_t q_randomgenerator64_bounded9(void* self, int64_t lowest, int64_t highest) {
     return QRandomGenerator_Bounded9((QRandomGenerator*)self, lowest, highest);
 }
 
-long long q_randomgenerator64_bounded10(void* self, int lowest, long long highest) {
+int64_t q_randomgenerator64_bounded10(void* self, int lowest, int64_t highest) {
     return QRandomGenerator_Bounded10((QRandomGenerator*)self, lowest, highest);
 }
 
-long long q_randomgenerator64_bounded11(void* self, long long lowest, int highest) {
+int64_t q_randomgenerator64_bounded11(void* self, int64_t lowest, int highest) {
     return QRandomGenerator_Bounded11((QRandomGenerator*)self, lowest, highest);
 }
 

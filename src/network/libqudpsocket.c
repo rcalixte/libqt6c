@@ -95,7 +95,7 @@ bool q_udpsocket_has_pending_datagrams(void* self) {
     return QUdpSocket_HasPendingDatagrams((QUdpSocket*)self);
 }
 
-long long q_udpsocket_pending_datagram_size(void* self) {
+int64_t q_udpsocket_pending_datagram_size(void* self) {
     return QUdpSocket_PendingDatagramSize((QUdpSocket*)self);
 }
 
@@ -103,19 +103,19 @@ QNetworkDatagram* q_udpsocket_receive_datagram(void* self) {
     return QUdpSocket_ReceiveDatagram((QUdpSocket*)self);
 }
 
-long long q_udpsocket_read_datagram(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_read_datagram(void* self, char* data, int64_t maxlen) {
     return QUdpSocket_ReadDatagram((QUdpSocket*)self, data, maxlen);
 }
 
-long long q_udpsocket_write_datagram(void* self, void* datagram) {
+int64_t q_udpsocket_write_datagram(void* self, void* datagram) {
     return QUdpSocket_WriteDatagram((QUdpSocket*)self, (QNetworkDatagram*)datagram);
 }
 
-long long q_udpsocket_write_datagram2(void* self, const char* data, long long lenVal, void* host, unsigned short port) {
+int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal, void* host, uint16_t port) {
     return QUdpSocket_WriteDatagram2((QUdpSocket*)self, data, lenVal, (QHostAddress*)host, port);
 }
 
-long long q_udpsocket_write_datagram3(void* self, char* datagram, void* host, unsigned short port) {
+int64_t q_udpsocket_write_datagram3(void* self, char* datagram, void* host, uint16_t port) {
     return QUdpSocket_WriteDatagram3((QUdpSocket*)self, qstring(datagram), (QHostAddress*)host, port);
 }
 
@@ -133,23 +133,23 @@ const char* q_udpsocket_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-bool q_udpsocket_bind2(void* self, int32_t addr, unsigned short port) {
+bool q_udpsocket_bind2(void* self, int32_t addr, uint16_t port) {
     return QUdpSocket_Bind2((QUdpSocket*)self, addr, port);
 }
 
-bool q_udpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode) {
+bool q_udpsocket_bind3(void* self, int32_t addr, uint16_t port, int32_t mode) {
     return QUdpSocket_Bind3((QUdpSocket*)self, addr, port, mode);
 }
 
-QNetworkDatagram* q_udpsocket_receive_datagram1(void* self, long long maxSize) {
+QNetworkDatagram* q_udpsocket_receive_datagram1(void* self, int64_t maxSize) {
     return QUdpSocket_ReceiveDatagram1((QUdpSocket*)self, maxSize);
 }
 
-long long q_udpsocket_read_datagram3(void* self, char* data, long long maxlen, void* host) {
+int64_t q_udpsocket_read_datagram3(void* self, char* data, int64_t maxlen, void* host) {
     return QUdpSocket_ReadDatagram3((QUdpSocket*)self, data, maxlen, (QHostAddress*)host);
 }
 
-long long q_udpsocket_read_datagram4(void* self, char* data, long long maxlen, void* host, unsigned short* port) {
+int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void* host, unsigned short* port) {
     return QUdpSocket_ReadDatagram4((QUdpSocket*)self, data, maxlen, (QHostAddress*)host, port);
 }
 
@@ -161,7 +161,7 @@ void q_udpsocket_set_pause_mode(void* self, int32_t pauseMode) {
     QAbstractSocket_SetPauseMode((QAbstractSocket*)self, pauseMode);
 }
 
-void q_udpsocket_connect_to_host2(void* self, void* address, unsigned short port) {
+void q_udpsocket_connect_to_host2(void* self, void* address, uint16_t port) {
     QAbstractSocket_ConnectToHost2((QAbstractSocket*)self, (QHostAddress*)address, port);
 }
 
@@ -169,7 +169,7 @@ bool q_udpsocket_is_valid(void* self) {
     return QAbstractSocket_IsValid((QAbstractSocket*)self);
 }
 
-unsigned short q_udpsocket_local_port(void* self) {
+uint16_t q_udpsocket_local_port(void* self) {
     return QAbstractSocket_LocalPort((QAbstractSocket*)self);
 }
 
@@ -177,7 +177,7 @@ QHostAddress* q_udpsocket_local_address(void* self) {
     return QAbstractSocket_LocalAddress((QAbstractSocket*)self);
 }
 
-unsigned short q_udpsocket_peer_port(void* self) {
+uint16_t q_udpsocket_peer_port(void* self) {
     return QAbstractSocket_PeerPort((QAbstractSocket*)self);
 }
 
@@ -192,7 +192,7 @@ const char* q_udpsocket_peer_name(void* self) {
     return _ret;
 }
 
-long long q_udpsocket_read_buffer_size(void* self) {
+int64_t q_udpsocket_read_buffer_size(void* self) {
     return QAbstractSocket_ReadBufferSize((QAbstractSocket*)self);
 }
 
@@ -283,15 +283,15 @@ void q_udpsocket_on_proxy_authentication_required(void* self, void (*callback)(v
     QAbstractSocket_Connect_ProxyAuthenticationRequired((QAbstractSocket*)self, (intptr_t)callback);
 }
 
-bool q_udpsocket_bind1(void* self, unsigned short port) {
+bool q_udpsocket_bind1(void* self, uint16_t port) {
     return QAbstractSocket_Bind1((QAbstractSocket*)self, port);
 }
 
-bool q_udpsocket_bind22(void* self, unsigned short port, int32_t mode) {
+bool q_udpsocket_bind22(void* self, uint16_t port, int32_t mode) {
     return QAbstractSocket_Bind22((QAbstractSocket*)self, port, mode);
 }
 
-void q_udpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode) {
+void q_udpsocket_connect_to_host3(void* self, void* address, uint16_t port, int32_t mode) {
     QAbstractSocket_ConnectToHost3((QAbstractSocket*)self, (QHostAddress*)address, port, mode);
 }
 
@@ -343,11 +343,11 @@ void q_udpsocket_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-long long q_udpsocket_read(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_udpsocket_read2(void* self, long long maxlen) {
+char* q_udpsocket_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -361,7 +361,7 @@ char* q_udpsocket_read_all(void* self) {
     return _ret;
 }
 
-long long q_udpsocket_read_line(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
@@ -388,30 +388,30 @@ bool q_udpsocket_is_transaction_started(void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-long long q_udpsocket_write(void* self, const char* data, long long lenVal) {
+int64_t q_udpsocket_write(void* self, const char* data, int64_t lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_udpsocket_write2(void* self, const char* data) {
+int64_t q_udpsocket_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_udpsocket_write3(void* self, char* data) {
+int64_t q_udpsocket_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
-long long q_udpsocket_peek(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_udpsocket_peek2(void* self, long long maxlen) {
+char* q_udpsocket_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-long long q_udpsocket_skip(void* self, long long maxSize) {
+int64_t q_udpsocket_skip(void* self, int64_t maxSize) {
     return QIODevice_Skip((QIODevice*)self, maxSize);
 }
 
@@ -450,19 +450,19 @@ void q_udpsocket_on_channel_ready_read(void* self, void (*callback)(void*, int))
     QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_bytes_written(void* self, long long bytes) {
+void q_udpsocket_bytes_written(void* self, int64_t bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_udpsocket_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void q_udpsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_channel_bytes_written(void* self, int channel, long long bytes) {
+void q_udpsocket_channel_bytes_written(void* self, int channel, int64_t bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_udpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+void q_udpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t)) {
     QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
@@ -482,7 +482,7 @@ void q_udpsocket_on_read_channel_finished(void* self, void (*callback)(void*)) {
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_udpsocket_read_line1(void* self, long long maxlen) {
+char* q_udpsocket_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -712,15 +712,15 @@ void q_udpsocket_on_resume(void* self, void (*callback)()) {
     QUdpSocket_OnResume((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
+void q_udpsocket_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol) {
     QUdpSocket_ConnectToHost((QUdpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_udpsocket_super_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol) {
+void q_udpsocket_super_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol) {
     QUdpSocket_SuperConnectToHost((QUdpSocket*)self, qstring(hostName), port, mode, protocol);
 }
 
-void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t)) {
+void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, uint16_t, int32_t, int32_t)) {
     QUdpSocket_OnConnectToHost((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -736,39 +736,39 @@ void q_udpsocket_on_disconnect_from_host(void* self, void (*callback)()) {
     QUdpSocket_OnDisconnectFromHost((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_bytes_available(void* self) {
+int64_t q_udpsocket_bytes_available(void* self) {
     return QUdpSocket_BytesAvailable((QUdpSocket*)self);
 }
 
-long long q_udpsocket_super_bytes_available(void* self) {
+int64_t q_udpsocket_super_bytes_available(void* self) {
     return QUdpSocket_SuperBytesAvailable((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_bytes_available(void* self, long long (*callback)()) {
+void q_udpsocket_on_bytes_available(void* self, int64_t (*callback)()) {
     QUdpSocket_OnBytesAvailable((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_bytes_to_write(void* self) {
+int64_t q_udpsocket_bytes_to_write(void* self) {
     return QUdpSocket_BytesToWrite((QUdpSocket*)self);
 }
 
-long long q_udpsocket_super_bytes_to_write(void* self) {
+int64_t q_udpsocket_super_bytes_to_write(void* self) {
     return QUdpSocket_SuperBytesToWrite((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_bytes_to_write(void* self, long long (*callback)()) {
+void q_udpsocket_on_bytes_to_write(void* self, int64_t (*callback)()) {
     QUdpSocket_OnBytesToWrite((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_set_read_buffer_size(void* self, long long size) {
+void q_udpsocket_set_read_buffer_size(void* self, int64_t size) {
     QUdpSocket_SetReadBufferSize((QUdpSocket*)self, size);
 }
 
-void q_udpsocket_super_set_read_buffer_size(void* self, long long size) {
+void q_udpsocket_super_set_read_buffer_size(void* self, int64_t size) {
     QUdpSocket_SuperSetReadBufferSize((QUdpSocket*)self, size);
 }
 
-void q_udpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long)) {
+void q_udpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int64_t)) {
     QUdpSocket_OnSetReadBufferSize((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -892,51 +892,51 @@ void q_udpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, in
     QUdpSocket_OnWaitForDisconnected((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_read_data(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_read_data(void* self, char* data, int64_t maxlen) {
     return QUdpSocket_ReadData((QUdpSocket*)self, data, maxlen);
 }
 
-long long q_udpsocket_super_read_data(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_super_read_data(void* self, char* data, int64_t maxlen) {
     return QUdpSocket_SuperReadData((QUdpSocket*)self, data, maxlen);
 }
 
-void q_udpsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+void q_udpsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     QUdpSocket_OnReadData((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_read_line_data(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_read_line_data(void* self, char* data, int64_t maxlen) {
     return QUdpSocket_ReadLineData((QUdpSocket*)self, data, maxlen);
 }
 
-long long q_udpsocket_super_read_line_data(void* self, char* data, long long maxlen) {
+int64_t q_udpsocket_super_read_line_data(void* self, char* data, int64_t maxlen) {
     return QUdpSocket_SuperReadLineData((QUdpSocket*)self, data, maxlen);
 }
 
-void q_udpsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+void q_udpsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     QUdpSocket_OnReadLineData((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_skip_data(void* self, long long maxSize) {
+int64_t q_udpsocket_skip_data(void* self, int64_t maxSize) {
     return QUdpSocket_SkipData((QUdpSocket*)self, maxSize);
 }
 
-long long q_udpsocket_super_skip_data(void* self, long long maxSize) {
+int64_t q_udpsocket_super_skip_data(void* self, int64_t maxSize) {
     return QUdpSocket_SuperSkipData((QUdpSocket*)self, maxSize);
 }
 
-void q_udpsocket_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+void q_udpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t)) {
     QUdpSocket_OnSkipData((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_write_data(void* self, const char* data, long long lenVal) {
+int64_t q_udpsocket_write_data(void* self, const char* data, int64_t lenVal) {
     return QUdpSocket_WriteData((QUdpSocket*)self, data, lenVal);
 }
 
-long long q_udpsocket_super_write_data(void* self, const char* data, long long lenVal) {
+int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t lenVal) {
     return QUdpSocket_SuperWriteData((QUdpSocket*)self, data, lenVal);
 }
 
-void q_udpsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+void q_udpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     QUdpSocket_OnWriteData((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -952,39 +952,39 @@ void q_udpsocket_on_open(void* self, bool (*callback)(void*, int32_t)) {
     QUdpSocket_OnOpen((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_pos(void* self) {
+int64_t q_udpsocket_pos(void* self) {
     return QUdpSocket_Pos((QUdpSocket*)self);
 }
 
-long long q_udpsocket_super_pos(void* self) {
+int64_t q_udpsocket_super_pos(void* self) {
     return QUdpSocket_SuperPos((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_pos(void* self, long long (*callback)()) {
+void q_udpsocket_on_pos(void* self, int64_t (*callback)()) {
     QUdpSocket_OnPos((QUdpSocket*)self, (intptr_t)callback);
 }
 
-long long q_udpsocket_size(void* self) {
+int64_t q_udpsocket_size(void* self) {
     return QUdpSocket_Size((QUdpSocket*)self);
 }
 
-long long q_udpsocket_super_size(void* self) {
+int64_t q_udpsocket_super_size(void* self) {
     return QUdpSocket_SuperSize((QUdpSocket*)self);
 }
 
-void q_udpsocket_on_size(void* self, long long (*callback)()) {
+void q_udpsocket_on_size(void* self, int64_t (*callback)()) {
     QUdpSocket_OnSize((QUdpSocket*)self, (intptr_t)callback);
 }
 
-bool q_udpsocket_seek(void* self, long long pos) {
+bool q_udpsocket_seek(void* self, int64_t pos) {
     return QUdpSocket_Seek((QUdpSocket*)self, pos);
 }
 
-bool q_udpsocket_super_seek(void* self, long long pos) {
+bool q_udpsocket_super_seek(void* self, int64_t pos) {
     return QUdpSocket_SuperSeek((QUdpSocket*)self, pos);
 }
 
-void q_udpsocket_on_seek(void* self, bool (*callback)(void*, long long)) {
+void q_udpsocket_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     QUdpSocket_OnSeek((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -1132,15 +1132,15 @@ void q_udpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t
     QUdpSocket_OnSetSocketError((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_set_local_port(void* self, unsigned short port) {
+void q_udpsocket_set_local_port(void* self, uint16_t port) {
     QUdpSocket_SetLocalPort((QUdpSocket*)self, port);
 }
 
-void q_udpsocket_super_set_local_port(void* self, unsigned short port) {
+void q_udpsocket_super_set_local_port(void* self, uint16_t port) {
     QUdpSocket_SuperSetLocalPort((QUdpSocket*)self, port);
 }
 
-void q_udpsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short)) {
+void q_udpsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t)) {
     QUdpSocket_OnSetLocalPort((QUdpSocket*)self, (intptr_t)callback);
 }
 
@@ -1156,15 +1156,15 @@ void q_udpsocket_on_set_local_address(void* self, void (*callback)(void*, void*)
     QUdpSocket_OnSetLocalAddress((QUdpSocket*)self, (intptr_t)callback);
 }
 
-void q_udpsocket_set_peer_port(void* self, unsigned short port) {
+void q_udpsocket_set_peer_port(void* self, uint16_t port) {
     QUdpSocket_SetPeerPort((QUdpSocket*)self, port);
 }
 
-void q_udpsocket_super_set_peer_port(void* self, unsigned short port) {
+void q_udpsocket_super_set_peer_port(void* self, uint16_t port) {
     QUdpSocket_SuperSetPeerPort((QUdpSocket*)self, port);
 }
 
-void q_udpsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short)) {
+void q_udpsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t)) {
     QUdpSocket_OnSetPeerPort((QUdpSocket*)self, (intptr_t)callback);
 }
 

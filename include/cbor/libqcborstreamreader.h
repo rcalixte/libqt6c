@@ -22,18 +22,18 @@ QCborStreamReader* q_cborstreamreader_new();
 /// q_cborstreamreader_new2 constructs a new QCborStreamReader object.
 ///
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QCborStreamReader* q_cborstreamreader_new2(const char* data, int64_t lenVal);
+QCborStreamReader* q_cborstreamreader_new2(const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html)
 
 /// q_cborstreamreader_new3 constructs a new QCborStreamReader object.
 ///
 /// @param data unsigned char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, int64_t lenVal);
+QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html)
 
@@ -75,17 +75,17 @@ void q_cborstreamreader_add_data(void* self, char* data);
 ///
 /// @param self QCborStreamReader*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-void q_cborstreamreader_add_data2(void* self, const char* data, int64_t lenVal);
+void q_cborstreamreader_add_data2(void* self, const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#addData)
 ///
 /// @param self QCborStreamReader*
 /// @param data unsigned char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-void q_cborstreamreader_add_data3(void* self, unsigned char* data, int64_t lenVal);
+void q_cborstreamreader_add_data3(void* self, unsigned char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#reparse)
 ///
@@ -115,7 +115,7 @@ QCborError* q_cborstreamreader_last_error(void* self);
 ///
 /// @param self QCborStreamReader*
 ///
-long long q_cborstreamreader_current_offset(void* self);
+int64_t q_cborstreamreader_current_offset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#isValid)
 ///
@@ -327,7 +327,7 @@ bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst);
 ///
 /// @param self QCborStreamReader*
 ///
-int64_t q_cborstreamreader_current_string_chunk_size(void* self);
+intptr_t q_cborstreamreader_current_string_chunk_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#toBool)
 ///
@@ -381,7 +381,7 @@ double q_cborstreamreader_to_double(void* self);
 ///
 /// @param self QCborStreamReader*
 ///
-long long q_cborstreamreader_to_integer(void* self);
+int64_t q_cborstreamreader_to_integer(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamreader.html#readAllString)
 ///

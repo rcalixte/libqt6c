@@ -5,7 +5,7 @@ QBitArray* q_bitarray_new() {
     return QBitArray_new();
 }
 
-QBitArray* q_bitarray_new2(int64_t size) {
+QBitArray* q_bitarray_new2(intptr_t size) {
     return QBitArray_new2(size);
 }
 
@@ -13,7 +13,7 @@ QBitArray* q_bitarray_new3(void* other) {
     return QBitArray_new3((QBitArray*)other);
 }
 
-QBitArray* q_bitarray_new4(int64_t size, bool val) {
+QBitArray* q_bitarray_new4(intptr_t size, bool val) {
     return QBitArray_new4(size, val);
 }
 
@@ -25,15 +25,15 @@ void q_bitarray_swap(void* self, void* other) {
     QBitArray_Swap((QBitArray*)self, (QBitArray*)other);
 }
 
-int64_t q_bitarray_size(void* self) {
+intptr_t q_bitarray_size(void* self) {
     return QBitArray_Size((QBitArray*)self);
 }
 
-int64_t q_bitarray_count(void* self) {
+intptr_t q_bitarray_count(void* self) {
     return QBitArray_Count((QBitArray*)self);
 }
 
-int64_t q_bitarray_count2(void* self, bool on) {
+intptr_t q_bitarray_count2(void* self, bool on) {
     return QBitArray_Count2((QBitArray*)self, on);
 }
 
@@ -45,7 +45,7 @@ bool q_bitarray_is_null(void* self) {
     return QBitArray_IsNull((QBitArray*)self);
 }
 
-void q_bitarray_resize(void* self, int64_t size) {
+void q_bitarray_resize(void* self, intptr_t size) {
     QBitArray_Resize((QBitArray*)self, size);
 }
 
@@ -61,35 +61,35 @@ void q_bitarray_clear(void* self) {
     QBitArray_Clear((QBitArray*)self);
 }
 
-bool q_bitarray_test_bit(void* self, int64_t i) {
+bool q_bitarray_test_bit(void* self, intptr_t i) {
     return QBitArray_TestBit((QBitArray*)self, i);
 }
 
-void q_bitarray_set_bit(void* self, int64_t i) {
+void q_bitarray_set_bit(void* self, intptr_t i) {
     QBitArray_SetBit((QBitArray*)self, i);
 }
 
-void q_bitarray_set_bit2(void* self, int64_t i, bool val) {
+void q_bitarray_set_bit2(void* self, intptr_t i, bool val) {
     QBitArray_SetBit2((QBitArray*)self, i, val);
 }
 
-void q_bitarray_clear_bit(void* self, int64_t i) {
+void q_bitarray_clear_bit(void* self, intptr_t i) {
     QBitArray_ClearBit((QBitArray*)self, i);
 }
 
-bool q_bitarray_toggle_bit(void* self, int64_t i) {
+bool q_bitarray_toggle_bit(void* self, intptr_t i) {
     return QBitArray_ToggleBit((QBitArray*)self, i);
 }
 
-bool q_bitarray_at(void* self, int64_t i) {
+bool q_bitarray_at(void* self, intptr_t i) {
     return QBitArray_At((QBitArray*)self, i);
 }
 
-QBitRef* q_bitarray_operator_subscript(void* self, int64_t i) {
+QBitRef* q_bitarray_operator_subscript(void* self, intptr_t i) {
     return QBitArray_OperatorSubscript((QBitArray*)self, i);
 }
 
-bool q_bitarray_operator_subscript2(void* self, int64_t i) {
+bool q_bitarray_operator_subscript2(void* self, intptr_t i) {
     return QBitArray_OperatorSubscript2((QBitArray*)self, i);
 }
 
@@ -109,11 +109,11 @@ bool q_bitarray_fill(void* self, bool aval) {
     return QBitArray_Fill((QBitArray*)self, aval);
 }
 
-void q_bitarray_fill2(void* self, bool val, int64_t first, int64_t last) {
+void q_bitarray_fill2(void* self, bool val, intptr_t first, intptr_t last) {
     QBitArray_Fill2((QBitArray*)self, val, first, last);
 }
 
-void q_bitarray_truncate(void* self, int64_t pos) {
+void q_bitarray_truncate(void* self, intptr_t pos) {
     QBitArray_Truncate((QBitArray*)self, pos);
 }
 
@@ -121,7 +121,7 @@ const char* q_bitarray_bits(void* self) {
     return QBitArray_Bits((QBitArray*)self);
 }
 
-QBitArray* q_bitarray_from_bits(const char* data, int64_t lenVal) {
+QBitArray* q_bitarray_from_bits(const char* data, intptr_t lenVal) {
     return QBitArray_FromBits(data, lenVal);
 }
 
@@ -129,7 +129,7 @@ uint32_t q_bitarray_to_u_int32(void* self, int32_t endianness) {
     return QBitArray_ToUInt32((QBitArray*)self, endianness);
 }
 
-bool q_bitarray_fill22(void* self, bool aval, int64_t asize) {
+bool q_bitarray_fill22(void* self, bool aval, intptr_t asize) {
     return QBitArray_Fill22((QBitArray*)self, aval, asize);
 }
 

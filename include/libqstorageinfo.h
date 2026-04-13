@@ -114,19 +114,19 @@ const char* q_storageinfo_display_name(void* self);
 ///
 /// @param self QStorageInfo*
 ///
-long long q_storageinfo_bytes_total(void* self);
+int64_t q_storageinfo_bytes_total(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#bytesFree)
 ///
 /// @param self QStorageInfo*
 ///
-long long q_storageinfo_bytes_free(void* self);
+int64_t q_storageinfo_bytes_free(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#bytesAvailable)
 ///
 /// @param self QStorageInfo*
 ///
-long long q_storageinfo_bytes_available(void* self);
+int64_t q_storageinfo_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstorageinfo.html#blockSize)
 ///

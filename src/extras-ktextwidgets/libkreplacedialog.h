@@ -30,42 +30,42 @@ KReplaceDialog* k_replacedialog_new2();
 /// k_replacedialog_new3 constructs a new KReplaceDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 ///
-KReplaceDialog* k_replacedialog_new3(void* parent, int64_t options);
+KReplaceDialog* k_replacedialog_new3(void* parent, long options);
 
 /// [Upstream resources](https://api.kde.org/kreplacedialog.html)
 
 /// k_replacedialog_new4 constructs a new KReplaceDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 /// @param findStrings const char**
 ///
-KReplaceDialog* k_replacedialog_new4(void* parent, int64_t options, const char* findStrings[static 1]);
+KReplaceDialog* k_replacedialog_new4(void* parent, long options, const char* findStrings[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kreplacedialog.html)
 
 /// k_replacedialog_new5 constructs a new KReplaceDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 /// @param findStrings const char**
 /// @param replaceStrings const char**
 ///
-KReplaceDialog* k_replacedialog_new5(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1]);
+KReplaceDialog* k_replacedialog_new5(void* parent, long options, const char* findStrings[static 1], const char* replaceStrings[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kreplacedialog.html)
 
 /// k_replacedialog_new6 constructs a new KReplaceDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 /// @param findStrings const char**
 /// @param replaceStrings const char**
 /// @param hasSelection bool
 ///
-KReplaceDialog* k_replacedialog_new6(void* parent, int64_t options, const char* findStrings[static 1], const char* replaceStrings[static 1], bool hasSelection);
+KReplaceDialog* k_replacedialog_new6(void* parent, long options, const char* findStrings[static 1], const char* replaceStrings[static 1], bool hasSelection);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -170,15 +170,15 @@ const char** k_replacedialog_replacement_history(void* self);
 /// [Upstream resources](https://api.kde.org/kreplacedialog.html#setOptions)
 ///
 /// @param self KReplaceDialog*
-/// @param options int64_t
+/// @param options long
 ///
-void k_replacedialog_set_options(void* self, int64_t options);
+void k_replacedialog_set_options(void* self, long options);
 
 /// [Upstream resources](https://api.kde.org/kreplacedialog.html#options)
 ///
 /// @param self KReplaceDialog*
 ///
-int64_t k_replacedialog_options(void* self);
+long k_replacedialog_options(void* self);
 
 /// [Upstream resources](https://api.kde.org/kreplacedialog.html#replacement)
 ///
@@ -2534,9 +2534,9 @@ int32_t k_replacedialog_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_replacedialog_find(uint64_t param1);
+QWidget* k_replacedialog_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

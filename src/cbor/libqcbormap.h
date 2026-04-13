@@ -61,7 +61,7 @@ QCborValue* q_cbormap_to_cbor_value(void* self);
 ///
 /// @param self QCborMap*
 ///
-int64_t q_cbormap_size(void* self);
+intptr_t q_cbormap_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#isEmpty)
 ///
@@ -86,9 +86,9 @@ libqt_list q_cbormap_keys(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#value)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborValue* q_cbormap_value(void* self, long long key);
+QCborValue* q_cbormap_value(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#value)
 ///
@@ -107,9 +107,9 @@ QCborValue* q_cbormap_value4(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-const QCborValue* q_cbormap_operator_subscript(void* self, long long key);
+const QCborValue* q_cbormap_operator_subscript(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
@@ -128,9 +128,9 @@ const QCborValue* q_cbormap_operator_subscript4(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborValueRef* q_cbormap_operator_subscript5(void* self, long long key);
+QCborValueRef* q_cbormap_operator_subscript5(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#operator-5b-5d)
 ///
@@ -149,9 +149,9 @@ QCborValueRef* q_cbormap_operator_subscript8(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#take)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborValue* q_cbormap_take(void* self, long long key);
+QCborValue* q_cbormap_take(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#take)
 ///
@@ -170,9 +170,9 @@ QCborValue* q_cbormap_take4(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#remove)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-void q_cbormap_remove(void* self, long long key);
+void q_cbormap_remove(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#remove)
 ///
@@ -191,9 +191,9 @@ void q_cbormap_remove4(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#contains)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-bool q_cbormap_contains(void* self, long long key);
+bool q_cbormap_contains(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#contains)
 ///
@@ -301,9 +301,9 @@ bool q_cbormap_empty(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#find)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborMap__Iterator* q_cbormap_find(void* self, long long key);
+QCborMap__Iterator* q_cbormap_find(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#find)
 ///
@@ -322,9 +322,9 @@ QCborMap__Iterator* q_cbormap_find4(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#constFind)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborMap__ConstIterator* q_cbormap_const_find(void* self, long long key);
+QCborMap__ConstIterator* q_cbormap_const_find(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#constFind)
 ///
@@ -343,9 +343,9 @@ QCborMap__ConstIterator* q_cbormap_const_find4(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#find)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 ///
-QCborMap__ConstIterator* q_cbormap_find5(void* self, long long key);
+QCborMap__ConstIterator* q_cbormap_find5(void* self, int64_t key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#find)
 ///
@@ -364,10 +364,10 @@ QCborMap__ConstIterator* q_cbormap_find8(void* self, void* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#insert)
 ///
 /// @param self QCborMap*
-/// @param key long long
+/// @param key int64_t
 /// @param value_ QCborValue*
 ///
-QCborMap__Iterator* q_cbormap_insert(void* self, long long key, void* value_);
+QCborMap__Iterator* q_cbormap_insert(void* self, int64_t key, void* value_);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#insert)
 ///
@@ -504,11 +504,11 @@ pair_qcborvalue_qcborvalue q_cbormap__iterator_operator_multiply(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-5b-5d)
 ///
 /// @param self QCborMap__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
 /// @return pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-pair_qcborvalue_qcborvalue q_cbormap__iterator_operator_subscript(void* self, int64_t j);
+pair_qcborvalue_qcborvalue q_cbormap__iterator_operator_subscript(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator--gt)
 ///
@@ -563,37 +563,37 @@ QCborMap__Iterator* q_cbormap__iterator_operator_minus_minus2(void* self, int pa
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-2b-eq)
 ///
 /// @param self QCborMap__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__Iterator* q_cbormap__iterator_operator_plus_assign(void* self, int64_t j);
+QCborMap__Iterator* q_cbormap__iterator_operator_plus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator--eq)
 ///
 /// @param self QCborMap__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__Iterator* q_cbormap__iterator_operator_minus_assign(void* self, int64_t j);
+QCborMap__Iterator* q_cbormap__iterator_operator_minus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-2b)
 ///
 /// @param self QCborMap__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__Iterator* q_cbormap__iterator_operator_plus(void* self, int64_t j);
+QCborMap__Iterator* q_cbormap__iterator_operator_plus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-)
 ///
 /// @param self QCborMap__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__Iterator* q_cbormap__iterator_operator_minus(void* self, int64_t j);
+QCborMap__Iterator* q_cbormap__iterator_operator_minus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-iterator.html#operator-)
 ///
 /// @param self QCborMap__Iterator*
 /// @param j QCborMap__Iterator*
 ///
-int64_t q_cbormap__iterator_operator_minus2(void* self, void* j);
+intptr_t q_cbormap__iterator_operator_minus2(void* self, void* j);
 
 /// Delete this object from C++ memory.
 ///
@@ -641,11 +641,11 @@ pair_qcborvalue_qcborvalue q_cbormap__constiterator_operator_multiply(void* self
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-5b-5d)
 ///
 /// @param self QCborMap__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
 /// @return pair_qcborvalue_qcborvalue tuple of QCborValue* and QCborValue*
 ///
-pair_qcborvalue_qcborvalue q_cbormap__constiterator_operator_subscript(void* self, int64_t j);
+pair_qcborvalue_qcborvalue q_cbormap__constiterator_operator_subscript(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator--gt)
 ///
@@ -694,37 +694,37 @@ QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus_minus2(void* se
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-2b-eq)
 ///
 /// @param self QCborMap__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus_assign(void* self, int64_t j);
+QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator--eq)
 ///
 /// @param self QCborMap__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus_assign(void* self, int64_t j);
+QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-2b)
 ///
 /// @param self QCborMap__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus(void* self, int64_t j);
+QCborMap__ConstIterator* q_cbormap__constiterator_operator_plus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-)
 ///
 /// @param self QCborMap__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus(void* self, int64_t j);
+QCborMap__ConstIterator* q_cbormap__constiterator_operator_minus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap-constiterator.html#operator-)
 ///
 /// @param self QCborMap__ConstIterator*
 /// @param j QCborMap__ConstIterator*
 ///
-int64_t q_cbormap__constiterator_operator_minus2(void* self, void* j);
+intptr_t q_cbormap__constiterator_operator_minus2(void* self, void* j);
 
 /// Delete this object from C++ memory.
 ///

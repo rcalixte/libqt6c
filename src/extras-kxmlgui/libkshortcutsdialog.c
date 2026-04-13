@@ -1180,7 +1180,7 @@ int32_t k_shortcutsdialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_shortcutsdialog_find(uint64_t param1) {
+QWidget* k_shortcutsdialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

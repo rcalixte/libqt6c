@@ -2750,9 +2750,9 @@ int32_t k_selector_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_selector_find(uint64_t param1);
+QWidget* k_selector_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///
@@ -8366,9 +8366,9 @@ int32_t k_gradientselector_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_gradientselector_find(uint64_t param1);
+QWidget* k_gradientselector_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

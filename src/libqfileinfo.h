@@ -385,7 +385,7 @@ int32_t q_fileinfo_permissions(void* self);
 ///
 /// @param self QFileInfo*
 ///
-long long q_fileinfo_size(void* self);
+int64_t q_fileinfo_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfileinfo.html#birthTime)
 ///

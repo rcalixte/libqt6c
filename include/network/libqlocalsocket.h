@@ -189,16 +189,16 @@ bool q_localsocket_super_is_sequential(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_bytes_available(void* self);
+int64_t q_localsocket_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesAvailable)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_localsocket_on_bytes_available(void* self, long long (*callback)());
+void q_localsocket_on_bytes_available(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_localsocket_super_bytes_available` instead
 ///
@@ -210,22 +210,22 @@ void q_localsocket_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_super_bytes_available(void* self);
+int64_t q_localsocket_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesToWrite)
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_bytes_to_write(void* self);
+int64_t q_localsocket_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#bytesToWrite)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_localsocket_on_bytes_to_write(void* self, long long (*callback)());
+void q_localsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_localsocket_super_bytes_to_write` instead
 ///
@@ -237,7 +237,7 @@ void q_localsocket_on_bytes_to_write(void* self, long long (*callback)());
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_super_bytes_to_write(void* self);
+int64_t q_localsocket_super_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#canReadLine)
 ///
@@ -346,14 +346,14 @@ bool q_localsocket_is_valid(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_read_buffer_size(void* self);
+int64_t q_localsocket_read_buffer_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#setReadBufferSize)
 ///
 /// @param self QLocalSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_localsocket_set_read_buffer_size(void* self, long long size);
+void q_localsocket_set_read_buffer_size(void* self, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#setSocketDescriptor)
 ///
@@ -519,18 +519,18 @@ void q_localsocket_on_state_changed(void* self, void (*callback)(void*, int32_t)
 ///
 /// @param self QLocalSocket*
 /// @param param1 char*
-/// @param param2 long long
+/// @param param2 int64_t
 ///
-long long q_localsocket_read_data(void* self, char* param1, long long param2);
+int64_t q_localsocket_read_data(void* self, char* param1, int64_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#readData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func(QLocalSocket* self, char* param1, long long param2)
+/// @param callback int64_t func(QLocalSocket* self, char* param1, int64_t param2)
 ///
-void q_localsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_localsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_localsocket_super_read_data` instead
 ///
@@ -542,26 +542,26 @@ void q_localsocket_on_read_data(void* self, long long (*callback)(void*, char*, 
 ///
 /// @param self QLocalSocket*
 /// @param param1 char*
-/// @param param2 long long
+/// @param param2 int64_t
 ///
-long long q_localsocket_super_read_data(void* self, char* param1, long long param2);
+int64_t q_localsocket_super_read_data(void* self, char* param1, int64_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#readLineData)
 ///
 /// @param self QLocalSocket*
 /// @param data char*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_localsocket_read_line_data(void* self, char* data, long long maxSize);
+int64_t q_localsocket_read_line_data(void* self, char* data, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#readLineData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func(QLocalSocket* self, char* data, long long maxSize)
+/// @param callback int64_t func(QLocalSocket* self, char* data, int64_t maxSize)
 ///
-void q_localsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_localsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_localsocket_super_read_line_data` instead
 ///
@@ -573,25 +573,25 @@ void q_localsocket_on_read_line_data(void* self, long long (*callback)(void*, ch
 ///
 /// @param self QLocalSocket*
 /// @param data char*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_localsocket_super_read_line_data(void* self, char* data, long long maxSize);
+int64_t q_localsocket_super_read_line_data(void* self, char* data, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#skipData)
 ///
 /// @param self QLocalSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_localsocket_skip_data(void* self, long long maxSize);
+int64_t q_localsocket_skip_data(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#skipData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func(QLocalSocket* self, long long maxSize)
+/// @param callback int64_t func(QLocalSocket* self, int64_t maxSize)
 ///
-void q_localsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_localsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `q_localsocket_super_skip_data` instead
 ///
@@ -602,26 +602,26 @@ void q_localsocket_on_skip_data(void* self, long long (*callback)(void*, long lo
 /// Base class method implementation
 ///
 /// @param self QLocalSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_localsocket_super_skip_data(void* self, long long maxSize);
+int64_t q_localsocket_super_skip_data(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#writeData)
 ///
 /// @param self QLocalSocket*
 /// @param param1 const char*
-/// @param param2 long long
+/// @param param2 int64_t
 ///
-long long q_localsocket_write_data(void* self, const char* param1, long long param2);
+int64_t q_localsocket_write_data(void* self, const char* param1, int64_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocalsocket.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func(QLocalSocket* self, const char* param1, long long param2)
+/// @param callback int64_t func(QLocalSocket* self, const char* param1, int64_t param2)
 ///
-void q_localsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_localsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_localsocket_super_write_data` instead
 ///
@@ -633,9 +633,9 @@ void q_localsocket_on_write_data(void* self, long long (*callback)(void*, const 
 ///
 /// @param self QLocalSocket*
 /// @param param1 const char*
-/// @param param2 long long
+/// @param param2 int64_t
 ///
-long long q_localsocket_super_write_data(void* self, const char* param1, long long param2);
+int64_t q_localsocket_super_write_data(void* self, const char* param1, int64_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -809,9 +809,9 @@ void q_localsocket_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QLocalSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_localsocket_read(void* self, char* data, long long maxlen);
+int64_t q_localsocket_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -820,9 +820,9 @@ long long q_localsocket_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QLocalSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_localsocket_read2(void* self, long long maxlen);
+char* q_localsocket_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -840,9 +840,9 @@ char* q_localsocket_read_all(void* self);
 ///
 /// @param self QLocalSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_localsocket_read_line(void* self, char* data, long long maxlen);
+int64_t q_localsocket_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -892,9 +892,9 @@ bool q_localsocket_is_transaction_started(void* self);
 ///
 /// @param self QLocalSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_localsocket_write(void* self, const char* data, long long lenVal);
+int64_t q_localsocket_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -903,7 +903,7 @@ long long q_localsocket_write(void* self, const char* data, long long lenVal);
 /// @param self QLocalSocket*
 /// @param data const char*
 ///
-long long q_localsocket_write2(void* self, const char* data);
+int64_t q_localsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -912,7 +912,7 @@ long long q_localsocket_write2(void* self, const char* data);
 /// @param self QLocalSocket*
 /// @param data char*
 ///
-long long q_localsocket_write3(void* self, char* data);
+int64_t q_localsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -920,9 +920,9 @@ long long q_localsocket_write3(void* self, char* data);
 ///
 /// @param self QLocalSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_localsocket_peek(void* self, char* data, long long maxlen);
+int64_t q_localsocket_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -931,18 +931,18 @@ long long q_localsocket_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QLocalSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_localsocket_peek2(void* self, long long maxlen);
+char* q_localsocket_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QLocalSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_localsocket_skip(void* self, long long maxSize);
+int64_t q_localsocket_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1021,18 +1021,18 @@ void q_localsocket_on_channel_ready_read(void* self, void (*callback)(void*, int
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QLocalSocket*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_localsocket_bytes_written(void* self, long long bytes);
+void q_localsocket_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QLocalSocket*
-/// @param callback void func(QLocalSocket* self, long long bytes)
+/// @param callback void func(QLocalSocket* self, int64_t bytes)
 ///
-void q_localsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_localsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1040,18 +1040,18 @@ void q_localsocket_on_bytes_written(void* self, void (*callback)(void*, long lon
 ///
 /// @param self QLocalSocket*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_localsocket_channel_bytes_written(void* self, int channel, long long bytes);
+void q_localsocket_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QLocalSocket*
-/// @param callback void func(QLocalSocket* self, int channel, long long bytes)
+/// @param callback void func(QLocalSocket* self, int channel, int64_t bytes)
 ///
-void q_localsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_localsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1094,9 +1094,9 @@ void q_localsocket_on_read_channel_finished(void* self, void (*callback)(void*))
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QLocalSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_localsocket_read_line1(void* self, long long maxlen);
+char* q_localsocket_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1553,7 +1553,7 @@ void q_localsocket_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_pos(void* self);
+int64_t q_localsocket_pos(void* self);
 
 /// @warning DEPRECATED: Use `q_localsocket_super_pos` instead
 ///
@@ -1567,7 +1567,7 @@ long long q_localsocket_pos(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_super_pos(void* self);
+int64_t q_localsocket_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1576,9 +1576,9 @@ long long q_localsocket_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_localsocket_on_pos(void* self, long long (*callback)());
+void q_localsocket_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1588,7 +1588,7 @@ void q_localsocket_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_size(void* self);
+int64_t q_localsocket_size(void* self);
 
 /// @warning DEPRECATED: Use `q_localsocket_super_size` instead
 ///
@@ -1602,7 +1602,7 @@ long long q_localsocket_size(void* self);
 ///
 /// @param self QLocalSocket*
 ///
-long long q_localsocket_super_size(void* self);
+int64_t q_localsocket_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1611,9 +1611,9 @@ long long q_localsocket_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_localsocket_on_size(void* self, long long (*callback)());
+void q_localsocket_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1622,9 +1622,9 @@ void q_localsocket_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_localsocket_seek(void* self, long long pos);
+bool q_localsocket_seek(void* self, int64_t pos);
 
 /// @warning DEPRECATED: Use `q_localsocket_super_seek` instead
 ///
@@ -1637,9 +1637,9 @@ bool q_localsocket_seek(void* self, long long pos);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_localsocket_super_seek(void* self, long long pos);
+bool q_localsocket_super_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -1648,9 +1648,9 @@ bool q_localsocket_super_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QLocalSocket*
-/// @param callback bool func(QLocalSocket* self, long long pos)
+/// @param callback bool func(QLocalSocket* self, int64_t pos)
 ///
-void q_localsocket_on_seek(void* self, bool (*callback)(void*, long long));
+void q_localsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///

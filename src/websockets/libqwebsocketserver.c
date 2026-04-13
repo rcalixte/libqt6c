@@ -101,7 +101,7 @@ int32_t q_websocketserver_handshake_timeout_m_s(void* self) {
     return QWebSocketServer_HandshakeTimeoutMS((QWebSocketServer*)self);
 }
 
-unsigned short q_websocketserver_server_port(void* self) {
+uint16_t q_websocketserver_server_port(void* self) {
     return QWebSocketServer_ServerPort((QWebSocketServer*)self);
 }
 
@@ -344,7 +344,7 @@ bool q_websocketserver_listen1(void* self, void* address) {
     return QWebSocketServer_Listen1((QWebSocketServer*)self, (QHostAddress*)address);
 }
 
-bool q_websocketserver_listen2(void* self, void* address, unsigned short port) {
+bool q_websocketserver_listen2(void* self, void* address, uint16_t port) {
     return QWebSocketServer_Listen2((QWebSocketServer*)self, (QHostAddress*)address, port);
 }
 

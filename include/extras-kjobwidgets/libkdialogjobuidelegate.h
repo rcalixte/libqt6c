@@ -75,15 +75,15 @@ QWidget* k_dialogjobuidelegate_window(void* self);
 /// [Upstream resources](https://api.kde.org/kdialogjobuidelegate.html#updateUserTimestamp)
 ///
 /// @param self KDialogJobUiDelegate*
-/// @param time uint64_t
+/// @param time uintptr_t
 ///
-void k_dialogjobuidelegate_update_user_timestamp(void* self, uint64_t time);
+void k_dialogjobuidelegate_update_user_timestamp(void* self, uintptr_t time);
 
 /// [Upstream resources](https://api.kde.org/kdialogjobuidelegate.html#userTimestamp)
 ///
 /// @param self KDialogJobUiDelegate*
 ///
-uint64_t k_dialogjobuidelegate_user_timestamp(void* self);
+uintptr_t k_dialogjobuidelegate_user_timestamp(void* self);
 
 /// [Upstream resources](https://api.kde.org/kdialogjobuidelegate.html#showErrorMessage)
 ///

@@ -63,9 +63,9 @@ QDBusArgument* q_dbusargument_operator_shift_left3(void* self, short arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
 /// @param self QDBusArgument*
-/// @param arg unsigned short
+/// @param arg uint16_t
 ///
-QDBusArgument* q_dbusargument_operator_shift_left4(void* self, unsigned short arg);
+QDBusArgument* q_dbusargument_operator_shift_left4(void* self, uint16_t arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
@@ -91,9 +91,9 @@ QDBusArgument* q_dbusargument_operator_shift_left7(void* self, long long arg);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
 /// @param self QDBusArgument*
-/// @param arg uint64_t
+/// @param arg uintptr_t
 ///
-QDBusArgument* q_dbusargument_operator_shift_left8(void* self, uint64_t arg);
+QDBusArgument* q_dbusargument_operator_shift_left8(void* self, uintptr_t arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-lt-lt)
 ///
@@ -292,9 +292,9 @@ const QDBusArgument* q_dbusargument_operator_shift_right7(void* self, long long*
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
 /// @param self QDBusArgument*
-/// @param arg uint64_t*
+/// @param arg uintptr_t*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right8(void* self, uint64_t* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right8(void* self, uintptr_t* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///

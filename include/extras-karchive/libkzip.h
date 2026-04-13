@@ -122,22 +122,22 @@ bool k_zip_super_do_write_sym_link(void* self, const char* name, const char* tar
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 /// @param creationTime QDateTime*
 ///
-bool k_zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* creationTime);
+bool k_zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* creationTime);
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doPrepareWriting)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KZip*
-/// @param callback bool func(KZip* self, const char* name, const char* user, const char* group, long long size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* creationTime)
+/// @param callback bool func(KZip* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, QDateTime* atime, QDateTime* mtime, QDateTime* creationTime)
 ///
-void k_zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, long long, mode_t, void*, void*, void*));
+void k_zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*));
 
 /// @warning DEPRECATED: Use `k_zip_super_do_prepare_writing` instead
 ///
@@ -151,29 +151,29 @@ void k_zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 /// @param creationTime QDateTime*
 ///
-bool k_zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* creationTime);
+bool k_zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* creationTime);
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doFinishWriting)
 ///
 /// @param self KZip*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_do_finish_writing(void* self, long long size);
+bool k_zip_do_finish_writing(void* self, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doFinishWriting)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KZip*
-/// @param callback bool func(KZip* self, long long size)
+/// @param callback bool func(KZip* self, int64_t size)
 ///
-void k_zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
+void k_zip_on_do_finish_writing(void* self, bool (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `k_zip_super_do_finish_writing` instead
 ///
@@ -184,26 +184,26 @@ void k_zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long));
 /// Base class method implementation
 ///
 /// @param self KZip*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_super_do_finish_writing(void* self, long long size);
+bool k_zip_super_do_finish_writing(void* self, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doWriteData)
 ///
 /// @param self KZip*
 /// @param data const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_do_write_data(void* self, const char* data, long long size);
+bool k_zip_do_write_data(void* self, const char* data, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/kzip.html#doWriteData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KZip*
-/// @param callback bool func(KZip* self, const char* data, long long size)
+/// @param callback bool func(KZip* self, const char* data, int64_t size)
 ///
-void k_zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long));
+void k_zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, int64_t));
 
 /// @warning DEPRECATED: Use `k_zip_super_do_write_data` instead
 ///
@@ -215,9 +215,9 @@ void k_zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, lon
 ///
 /// @param self KZip*
 /// @param data const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_super_do_write_data(void* self, const char* data, long long size);
+bool k_zip_super_do_write_data(void* self, const char* data, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/kzip.html#openArchive)
 ///
@@ -477,9 +477,9 @@ bool k_zip_write_file(void* self, const char* name, char* data);
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size);
+bool k_zip_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -487,9 +487,9 @@ bool k_zip_prepare_writing(void* self, const char* name, const char* user, const
 ///
 /// @param self KZip*
 /// @param data const char*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_write_data(void* self, const char* data, long long size);
+bool k_zip_write_data(void* self, const char* data, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -505,9 +505,9 @@ bool k_zip_write_data2(void* self, char* data);
 /// [Upstream resources](https://api.kde.org/karchive.html#finishWriting)
 ///
 /// @param self KZip*
-/// @param size long long
+/// @param size int64_t
 ///
-bool k_zip_finish_writing(void* self, long long size);
+bool k_zip_finish_writing(void* self, int64_t size);
 
 /// Inherited from KArchive
 ///
@@ -754,10 +754,10 @@ bool k_zip_write_file8(void* self, const char* name, char* data, mode_t perm, co
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 ///
-bool k_zip_prepare_writing5(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm);
+bool k_zip_prepare_writing5(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm);
 
 /// Inherited from KArchive
 ///
@@ -767,11 +767,11 @@ bool k_zip_prepare_writing5(void* self, const char* name, const char* user, cons
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 ///
-bool k_zip_prepare_writing6(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime);
+bool k_zip_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime);
 
 /// Inherited from KArchive
 ///
@@ -781,12 +781,12 @@ bool k_zip_prepare_writing6(void* self, const char* name, const char* user, cons
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 ///
-bool k_zip_prepare_writing7(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime);
+bool k_zip_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime);
 
 /// Inherited from KArchive
 ///
@@ -796,13 +796,13 @@ bool k_zip_prepare_writing7(void* self, const char* name, const char* user, cons
 /// @param name const char*
 /// @param user const char*
 /// @param group const char*
-/// @param size long long
+/// @param size int64_t
 /// @param perm mode_t
 /// @param atime QDateTime*
 /// @param mtime QDateTime*
 /// @param ctime QDateTime*
 ///
-bool k_zip_prepare_writing8(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime);
+bool k_zip_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime);
 
 /// Inherited from KArchive
 ///

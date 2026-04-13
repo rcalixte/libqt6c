@@ -7,7 +7,7 @@
 #include "libkzipfileentry.hpp"
 #include "libkzipfileentry.h"
 
-KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, const char* path, long long start, long long uncompressedSize, int encoding, long long compressedSize) {
+KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, const char* path, int64_t start, int64_t uncompressedSize, int encoding, int64_t compressedSize) {
     return KZipFileEntry_new((KZip*)zip, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink), qstring(path), start, uncompressedSize, encoding, compressedSize);
 }
 
@@ -19,27 +19,27 @@ int32_t k_zipfileentry_encoding(void* self) {
     return KZipFileEntry_Encoding((KZipFileEntry*)self);
 }
 
-long long k_zipfileentry_compressed_size(void* self) {
+int64_t k_zipfileentry_compressed_size(void* self) {
     return KZipFileEntry_CompressedSize((KZipFileEntry*)self);
 }
 
-void k_zipfileentry_set_compressed_size(void* self, long long compressedSize) {
+void k_zipfileentry_set_compressed_size(void* self, int64_t compressedSize) {
     KZipFileEntry_SetCompressedSize((KZipFileEntry*)self, compressedSize);
 }
 
-void k_zipfileentry_set_header_start(void* self, long long headerstart) {
+void k_zipfileentry_set_header_start(void* self, int64_t headerstart) {
     KZipFileEntry_SetHeaderStart((KZipFileEntry*)self, headerstart);
 }
 
-long long k_zipfileentry_header_start(void* self) {
+int64_t k_zipfileentry_header_start(void* self) {
     return KZipFileEntry_HeaderStart((KZipFileEntry*)self);
 }
 
-uint64_t k_zipfileentry_crc32(void* self) {
+uintptr_t k_zipfileentry_crc32(void* self) {
     return KZipFileEntry_Crc32((KZipFileEntry*)self);
 }
 
-void k_zipfileentry_set_c_r_c32(void* self, uint64_t crc32) {
+void k_zipfileentry_set_c_r_c32(void* self, uintptr_t crc32) {
     KZipFileEntry_SetCRC32((KZipFileEntry*)self, crc32);
 }
 
@@ -80,15 +80,15 @@ QIODevice* k_zipfileentry_super_create_device(void* self) {
     return KZipFileEntry_SuperCreateDevice((KZipFileEntry*)self);
 }
 
-long long k_zipfileentry_position(void* self) {
+int64_t k_zipfileentry_position(void* self) {
     return KArchiveFile_Position((KArchiveFile*)self);
 }
 
-long long k_zipfileentry_size(void* self) {
+int64_t k_zipfileentry_size(void* self) {
     return KArchiveFile_Size((KArchiveFile*)self);
 }
 
-void k_zipfileentry_set_size(void* self, long long s) {
+void k_zipfileentry_set_size(void* self, int64_t s) {
     KArchiveFile_SetSize((KArchiveFile*)self, s);
 }
 

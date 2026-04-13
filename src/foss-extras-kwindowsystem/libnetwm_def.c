@@ -448,11 +448,11 @@ void k_net_move_assign(void* self, void* other) {
     NET_MoveAssign((NET*)self, (NET*)other);
 }
 
-int32_t k_net_timestamp_compare(uint64_t time1, uint64_t time2) {
+int32_t k_net_timestamp_compare(uintptr_t time1, uintptr_t time2) {
     return NET_TimestampCompare(time1, time2);
 }
 
-int32_t k_net_timestamp_diff(uint64_t time1, uint64_t time2) {
+int32_t k_net_timestamp_diff(uintptr_t time1, uintptr_t time2) {
     return NET_TimestampDiff(time1, time2);
 }
 

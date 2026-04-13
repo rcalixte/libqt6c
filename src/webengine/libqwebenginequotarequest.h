@@ -69,7 +69,7 @@ QUrl* q_webenginequotarequest_origin(void* self);
 ///
 /// @param self QWebEngineQuotaRequest*
 ///
-long long q_webenginequotarequest_requested_size(void* self);
+int64_t q_webenginequotarequest_requested_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginequotarequest.html#operator-eq-eq)
 ///

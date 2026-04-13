@@ -110,9 +110,9 @@ QWidget* k_io__jobuidelegate_window(void* self);
 /// [Upstream resources](https://api.kde.org/kdialogjobuidelegate.html#updateUserTimestamp)
 ///
 /// @param self KIO__JobUiDelegate*
-/// @param time uint64_t
+/// @param time uintptr_t
 ///
-void k_io__jobuidelegate_update_user_timestamp(void* self, uint64_t time);
+void k_io__jobuidelegate_update_user_timestamp(void* self, uintptr_t time);
 
 /// Inherited from KDialogJobUiDelegate
 ///
@@ -120,7 +120,7 @@ void k_io__jobuidelegate_update_user_timestamp(void* self, uint64_t time);
 ///
 /// @param self KIO__JobUiDelegate*
 ///
-uint64_t k_io__jobuidelegate_user_timestamp(void* self);
+uintptr_t k_io__jobuidelegate_user_timestamp(void* self);
 
 /// Inherited from KDialogJobUiDelegate
 ///

@@ -172,11 +172,11 @@ void q_pointerevent_super_set_timestamp(void* self, uint64_t timestamp) {
     QPointerEvent_SuperSetTimestamp((QPointerEvent*)self, timestamp);
 }
 
-int64_t q_pointerevent_point_count(void* self) {
+intptr_t q_pointerevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_pointerevent_point(void* self, int64_t i) {
+QEventPoint* q_pointerevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -385,11 +385,11 @@ void q_singlepointevent_set_timestamp(void* self, uint64_t timestamp) {
     QPointerEvent_SetTimestamp((QPointerEvent*)self, timestamp);
 }
 
-int64_t q_singlepointevent_point_count(void* self) {
+intptr_t q_singlepointevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_singlepointevent_point(void* self, int64_t i) {
+QEventPoint* q_singlepointevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -590,11 +590,11 @@ int32_t q_enterevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_enterevent_point_count(void* self) {
+intptr_t q_enterevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_enterevent_point(void* self, int64_t i) {
+QEventPoint* q_enterevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -883,11 +883,11 @@ int32_t q_mouseevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_mouseevent_point_count(void* self) {
+intptr_t q_mouseevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_mouseevent_point(void* self, int64_t i) {
+QEventPoint* q_mouseevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -1152,11 +1152,11 @@ int32_t q_hoverevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_hoverevent_point_count(void* self) {
+intptr_t q_hoverevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_hoverevent_point(void* self, int64_t i) {
+QEventPoint* q_hoverevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -1433,11 +1433,11 @@ int32_t q_wheelevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_wheelevent_point_count(void* self) {
+intptr_t q_wheelevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_wheelevent_point(void* self, int64_t i) {
+QEventPoint* q_wheelevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -1622,7 +1622,7 @@ double q_tabletevent_hi_res_global_y(void* self) {
     return QTabletEvent_HiResGlobalY((QTabletEvent*)self);
 }
 
-long long q_tabletevent_unique_id(void* self) {
+int64_t q_tabletevent_unique_id(void* self) {
     return QTabletEvent_UniqueId((QTabletEvent*)self);
 }
 
@@ -1686,11 +1686,11 @@ int32_t q_tabletevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_tabletevent_point_count(void* self) {
+intptr_t q_tabletevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_tabletevent_point(void* self, int64_t i) {
+QEventPoint* q_tabletevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -1951,11 +1951,11 @@ int32_t q_nativegestureevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_nativegestureevent_point_count(void* self) {
+intptr_t q_nativegestureevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_nativegestureevent_point(void* self, int64_t i) {
+QEventPoint* q_nativegestureevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 
@@ -2136,7 +2136,7 @@ QKeyEvent* q_keyevent_new4(int32_t type, int key, int32_t modifiers, const char*
     return QKeyEvent_new4(type, key, modifiers, qstring(text), autorep);
 }
 
-QKeyEvent* q_keyevent_new5(int32_t type, int key, int32_t modifiers, const char* text, bool autorep, unsigned short count) {
+QKeyEvent* q_keyevent_new5(int32_t type, int key, int32_t modifiers, const char* text, bool autorep, uint16_t count) {
     return QKeyEvent_new5(type, key, modifiers, qstring(text), autorep, count);
 }
 
@@ -2148,11 +2148,11 @@ QKeyEvent* q_keyevent_new7(int32_t type, int key, int32_t modifiers, uint32_t na
     return QKeyEvent_new7(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text), autorep);
 }
 
-QKeyEvent* q_keyevent_new8(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count) {
+QKeyEvent* q_keyevent_new8(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, uint16_t count) {
     return QKeyEvent_new8(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text), autorep, count);
 }
 
-QKeyEvent* q_keyevent_new9(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device) {
+QKeyEvent* q_keyevent_new9(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, uint16_t count, void* device) {
     return QKeyEvent_new9(type, key, modifiers, nativeScanCode, nativeVirtualKey, nativeModifiers, qstring(text), autorep, count, (QInputDevice*)device);
 }
 
@@ -4676,11 +4676,11 @@ int32_t q_touchevent_pointer_type(void* self) {
     return QPointerEvent_PointerType((QPointerEvent*)self);
 }
 
-int64_t q_touchevent_point_count(void* self) {
+intptr_t q_touchevent_point_count(void* self) {
     return QPointerEvent_PointCount((QPointerEvent*)self);
 }
 
-QEventPoint* q_touchevent_point(void* self, int64_t i) {
+QEventPoint* q_touchevent_point(void* self, intptr_t i) {
     return QPointerEvent_Point((QPointerEvent*)self, i);
 }
 

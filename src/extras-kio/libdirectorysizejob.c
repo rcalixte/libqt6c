@@ -27,15 +27,15 @@ const char* k_io__directorysizejob_tr(const char* s) {
     return _ret;
 }
 
-uint64_t k_io__directorysizejob_total_size(void* self) {
+uintptr_t k_io__directorysizejob_total_size(void* self) {
     return KIO__DirectorySizeJob_TotalSize((KIO__DirectorySizeJob*)self);
 }
 
-uint64_t k_io__directorysizejob_total_files(void* self) {
+uintptr_t k_io__directorysizejob_total_files(void* self) {
     return KIO__DirectorySizeJob_TotalFiles((KIO__DirectorySizeJob*)self);
 }
 
-uint64_t k_io__directorysizejob_total_subdirs(void* self) {
+uintptr_t k_io__directorysizejob_total_subdirs(void* self) {
     return KIO__DirectorySizeJob_TotalSubdirs((KIO__DirectorySizeJob*)self);
 }
 
@@ -267,15 +267,15 @@ const char* k_io__directorysizejob_error_text(void* self) {
     return _ret;
 }
 
-uint64_t k_io__directorysizejob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_io__directorysizejob_processed_amount(void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__directorysizejob_total_amount(void* self, int32_t unit) {
+uintptr_t k_io__directorysizejob_total_amount(void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uint64_t k_io__directorysizejob_percent(void* self) {
+uintptr_t k_io__directorysizejob_percent(void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -299,7 +299,7 @@ bool k_io__directorysizejob_is_started_with_exec(void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-long long k_io__directorysizejob_elapsed_time(void* self) {
+int64_t k_io__directorysizejob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -319,19 +319,19 @@ void k_io__directorysizejob_on_warning(void* self, void (*callback)(void*, void*
     KJob_Connect_Warning((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__directorysizejob_processed_size(void* self, void* job, uint64_t size) {
+void k_io__directorysizejob_processed_size(void* self, void* job, uintptr_t size) {
     KJob_ProcessedSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_io__directorysizejob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__directorysizejob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_ProcessedSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__directorysizejob_speed(void* self, void* job, uint64_t speed) {
+void k_io__directorysizejob_speed(void* self, void* job, uintptr_t speed) {
     KJob_Speed((KJob*)self, (KJob*)job, speed);
 }
 
-void k_io__directorysizejob_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__directorysizejob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_Speed((KJob*)self, (intptr_t)callback);
 }
 
@@ -578,15 +578,15 @@ void k_io__directorysizejob_on_result(void* self, void (*callback)(void*, void*)
     KJob_Connect_Result((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__directorysizejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__directorysizejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_TotalAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__directorysizejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_io__directorysizejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_ProcessedAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_io__directorysizejob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_io__directorysizejob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_PercentChanged((KJob*)self, (intptr_t)callback);
 }
 

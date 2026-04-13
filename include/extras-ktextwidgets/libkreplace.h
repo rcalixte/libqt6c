@@ -17,9 +17,9 @@
 ///
 /// @param pattern const char*
 /// @param replacement const char*
-/// @param options int64_t
+/// @param options long
 ///
-KReplace* k_replace_new(const char* pattern, const char* replacement, int64_t options);
+KReplace* k_replace_new(const char* pattern, const char* replacement, long options);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html)
 
@@ -27,11 +27,11 @@ KReplace* k_replace_new(const char* pattern, const char* replacement, int64_t op
 ///
 /// @param pattern const char*
 /// @param replacement const char*
-/// @param options int64_t
+/// @param options long
 /// @param parent QWidget*
 /// @param replaceDialog QWidget*
 ///
-KReplace* k_replace_new2(const char* pattern, const char* replacement, int64_t options, void* parent, void* replaceDialog);
+KReplace* k_replace_new2(const char* pattern, const char* replacement, long options, void* parent, void* replaceDialog);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html)
 
@@ -39,10 +39,10 @@ KReplace* k_replace_new2(const char* pattern, const char* replacement, int64_t o
 ///
 /// @param pattern const char*
 /// @param replacement const char*
-/// @param options int64_t
+/// @param options long
 /// @param parent QWidget*
 ///
-KReplace* k_replace_new3(const char* pattern, const char* replacement, int64_t options, void* parent);
+KReplace* k_replace_new3(const char* pattern, const char* replacement, long options, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -188,10 +188,10 @@ void k_replace_close_replace_next_dialog(void* self);
 /// @param pattern const char*
 /// @param replacement const char*
 /// @param index int
-/// @param options int64_t
+/// @param options long
 /// @param replacedLength int*
 ///
-int32_t k_replace_replace2(const char* text, const char* pattern, const char* replacement, int index, int64_t options, int* replacedLength);
+int32_t k_replace_replace2(const char* text, const char* pattern, const char* replacement, int index, long options, int* replacedLength);
 
 /// [Upstream resources](https://api.kde.org/kreplace.html#shouldRestart)
 ///
@@ -337,7 +337,7 @@ int32_t k_replace_find(void* self);
 ///
 /// @param self KReplace*
 ///
-int64_t k_replace_options(void* self);
+long k_replace_options(void* self);
 
 /// Inherited from KFind
 ///
@@ -373,11 +373,11 @@ int32_t k_replace_num_matches(void* self);
 /// @param text const char*
 /// @param pattern const char*
 /// @param index int
-/// @param options int64_t
+/// @param options long
 /// @param matchedLength int*
 /// @param rmatch QRegularExpressionMatch*
 ///
-int32_t k_replace_find2(const char* text, const char* pattern, int index, int64_t options, int* matchedLength, void* rmatch);
+int32_t k_replace_find2(const char* text, const char* pattern, int index, long options, int* matchedLength, void* rmatch);
 
 /// Inherited from KFind
 ///
@@ -978,9 +978,9 @@ void k_replace_on_destroyed1(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KReplace*
-/// @param options int64_t
+/// @param options long
 ///
-void k_replace_set_options(void* self, int64_t options);
+void k_replace_set_options(void* self, long options);
 
 /// @warning DEPRECATED: Use `k_replace_super_set_options` instead
 ///
@@ -993,9 +993,9 @@ void k_replace_set_options(void* self, int64_t options);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KReplace*
-/// @param options int64_t
+/// @param options long
 ///
-void k_replace_super_set_options(void* self, int64_t options);
+void k_replace_super_set_options(void* self, long options);
 
 /// Inherited from KFind
 ///
@@ -1004,9 +1004,9 @@ void k_replace_super_set_options(void* self, int64_t options);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KReplace*
-/// @param callback void func(KReplace* self, int64_t options)
+/// @param callback void func(KReplace* self, long options)
 ///
-void k_replace_on_set_options(void* self, void (*callback)(void*, int64_t));
+void k_replace_on_set_options(void* self, void (*callback)(void*, long));
 
 /// Inherited from KFind
 ///

@@ -80,33 +80,33 @@ void q_geopolygon_add_hole2(void* self, libqt_list holePath);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#hole)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 ///
 /// @return libqt_list of QVariant*
 ///
-libqt_list q_geopolygon_hole(void* self, int64_t index);
+libqt_list q_geopolygon_hole(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#holePath)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 ///
 /// @return libqt_list of QGeoCoordinate*
 ///
-libqt_list q_geopolygon_hole_path(void* self, int64_t index);
+libqt_list q_geopolygon_hole_path(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#removeHole)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-void q_geopolygon_remove_hole(void* self, int64_t index);
+void q_geopolygon_remove_hole(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#holesCount)
 ///
 /// @param self QGeoPolygon*
 ///
-int64_t q_geopolygon_holes_count(void* self);
+intptr_t q_geopolygon_holes_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#translate)
 ///
@@ -134,7 +134,7 @@ double q_geopolygon_length(void* self);
 ///
 /// @param self QGeoPolygon*
 ///
-int64_t q_geopolygon_size(void* self);
+intptr_t q_geopolygon_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#addCoordinate)
 ///
@@ -146,25 +146,25 @@ void q_geopolygon_add_coordinate(void* self, void* coordinate);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#insertCoordinate)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopolygon_insert_coordinate(void* self, int64_t index, void* coordinate);
+void q_geopolygon_insert_coordinate(void* self, intptr_t index, void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#replaceCoordinate)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopolygon_replace_coordinate(void* self, int64_t index, void* coordinate);
+void q_geopolygon_replace_coordinate(void* self, intptr_t index, void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#coordinateAt)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-QGeoCoordinate* q_geopolygon_coordinate_at(void* self, int64_t index);
+QGeoCoordinate* q_geopolygon_coordinate_at(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#containsCoordinate)
 ///
@@ -183,9 +183,9 @@ void q_geopolygon_remove_coordinate(void* self, void* coordinate);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#removeCoordinate)
 ///
 /// @param self QGeoPolygon*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-void q_geopolygon_remove_coordinate2(void* self, int64_t index);
+void q_geopolygon_remove_coordinate2(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#toString)
 ///
@@ -198,17 +198,17 @@ const char* q_geopolygon_to_string(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#length)
 ///
 /// @param self QGeoPolygon*
-/// @param indexFrom int64_t
+/// @param indexFrom intptr_t
 ///
-double q_geopolygon_length1(void* self, int64_t indexFrom);
+double q_geopolygon_length1(void* self, intptr_t indexFrom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopolygon.html#length)
 ///
 /// @param self QGeoPolygon*
-/// @param indexFrom int64_t
-/// @param indexTo int64_t
+/// @param indexFrom intptr_t
+/// @param indexTo intptr_t
 ///
-double q_geopolygon_length2(void* self, int64_t indexFrom, int64_t indexTo);
+double q_geopolygon_length2(void* self, intptr_t indexFrom, intptr_t indexTo);
 
 /// Inherited from QGeoShape
 ///

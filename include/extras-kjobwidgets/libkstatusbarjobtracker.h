@@ -103,25 +103,25 @@ void k_statusbarjobtracker_description(void* self, void* job, const char* title,
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_statusbarjobtracker_total_amount(void* self, void* job, int32_t unit, uint64_t amount);
+void k_statusbarjobtracker_total_amount(void* self, void* job, int32_t unit, uintptr_t amount);
 
 /// [Upstream resources](https://api.kde.org/kstatusbarjobtracker.html#percent)
 ///
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
-/// @param percent uint64_t
+/// @param percent uintptr_t
 ///
-void k_statusbarjobtracker_percent(void* self, void* job, uint64_t percent);
+void k_statusbarjobtracker_percent(void* self, void* job, uintptr_t percent);
 
 /// [Upstream resources](https://api.kde.org/kstatusbarjobtracker.html#speed)
 ///
 /// @param self KStatusBarJobTracker*
 /// @param job KJob*
-/// @param value uint64_t
+/// @param value uintptr_t
 ///
-void k_statusbarjobtracker_speed(void* self, void* job, uint64_t value);
+void k_statusbarjobtracker_speed(void* self, void* job, uintptr_t value);
 
 /// [Upstream resources](https://api.kde.org/kstatusbarjobtracker.html#slotClean)
 ///

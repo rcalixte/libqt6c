@@ -252,15 +252,15 @@ bool q_xmlstreamreader_has_standalone_declaration(void* self) {
     return QXmlStreamReader_HasStandaloneDeclaration((QXmlStreamReader*)self);
 }
 
-long long q_xmlstreamreader_line_number(void* self) {
+int64_t q_xmlstreamreader_line_number(void* self) {
     return QXmlStreamReader_LineNumber((QXmlStreamReader*)self);
 }
 
-long long q_xmlstreamreader_column_number(void* self) {
+int64_t q_xmlstreamreader_column_number(void* self) {
     return QXmlStreamReader_ColumnNumber((QXmlStreamReader*)self);
 }
 
-long long q_xmlstreamreader_character_offset(void* self) {
+int64_t q_xmlstreamreader_character_offset(void* self) {
     return QXmlStreamReader_CharacterOffset((QXmlStreamReader*)self);
 }
 

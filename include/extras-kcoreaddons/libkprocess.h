@@ -587,7 +587,7 @@ int32_t k_process_state(void* self);
 ///
 /// @param self KProcess*
 ///
-long long k_process_process_id(void* self);
+int64_t k_process_process_id(void* self);
 
 /// Inherited from QProcess
 ///
@@ -945,9 +945,9 @@ void k_process_set_current_write_channel(void* self, int channel);
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_read(void* self, char* data, long long maxlen);
+int64_t k_process_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -956,9 +956,9 @@ long long k_process_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_process_read2(void* self, long long maxlen);
+char* k_process_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -976,9 +976,9 @@ char* k_process_read_all(void* self);
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_read_line(void* self, char* data, long long maxlen);
+int64_t k_process_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1028,9 +1028,9 @@ bool k_process_is_transaction_started(void* self);
 ///
 /// @param self KProcess*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_process_write(void* self, const char* data, long long lenVal);
+int64_t k_process_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -1039,7 +1039,7 @@ long long k_process_write(void* self, const char* data, long long lenVal);
 /// @param self KProcess*
 /// @param data const char*
 ///
-long long k_process_write2(void* self, const char* data);
+int64_t k_process_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1048,7 +1048,7 @@ long long k_process_write2(void* self, const char* data);
 /// @param self KProcess*
 /// @param data char*
 ///
-long long k_process_write3(void* self, char* data);
+int64_t k_process_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1056,9 +1056,9 @@ long long k_process_write3(void* self, char* data);
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_peek(void* self, char* data, long long maxlen);
+int64_t k_process_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1067,18 +1067,18 @@ long long k_process_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_process_peek2(void* self, long long maxlen);
+char* k_process_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self KProcess*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_process_skip(void* self, long long maxSize);
+int64_t k_process_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1157,18 +1157,18 @@ void k_process_on_channel_ready_read(void* self, void (*callback)(void*, int));
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KProcess*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void k_process_bytes_written(void* self, long long bytes);
+void k_process_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self KProcess*
-/// @param callback void func(KProcess* self, long long bytes)
+/// @param callback void func(KProcess* self, int64_t bytes)
 ///
-void k_process_on_bytes_written(void* self, void (*callback)(void*, long long));
+void k_process_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1176,18 +1176,18 @@ void k_process_on_bytes_written(void* self, void (*callback)(void*, long long));
 ///
 /// @param self KProcess*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void k_process_channel_bytes_written(void* self, int channel, long long bytes);
+void k_process_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self KProcess*
-/// @param callback void func(KProcess* self, int channel, long long bytes)
+/// @param callback void func(KProcess* self, int channel, int64_t bytes)
 ///
-void k_process_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void k_process_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1230,9 +1230,9 @@ void k_process_on_read_channel_finished(void* self, void (*callback)(void*));
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KProcess*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* k_process_read_line1(void* self, long long maxlen);
+char* k_process_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1800,7 +1800,7 @@ void k_process_on_wait_for_bytes_written(void* self, bool (*callback)(void*, int
 ///
 /// @param self KProcess*
 ///
-long long k_process_bytes_to_write(void* self);
+int64_t k_process_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `k_process_super_bytes_to_write` instead
 ///
@@ -1814,7 +1814,7 @@ long long k_process_bytes_to_write(void* self);
 ///
 /// @param self KProcess*
 ///
-long long k_process_super_bytes_to_write(void* self);
+int64_t k_process_super_bytes_to_write(void* self);
 
 /// Inherited from QProcess
 ///
@@ -1823,9 +1823,9 @@ long long k_process_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_process_on_bytes_to_write(void* self, long long (*callback)());
+void k_process_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QProcess
 ///
@@ -1905,9 +1905,9 @@ void k_process_on_close(void* self, void (*callback)());
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_read_data(void* self, char* data, long long maxlen);
+int64_t k_process_read_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `k_process_super_read_data` instead
 ///
@@ -1921,9 +1921,9 @@ long long k_process_read_data(void* self, char* data, long long maxlen);
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_super_read_data(void* self, char* data, long long maxlen);
+int64_t k_process_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QProcess
 ///
@@ -1932,9 +1932,9 @@ long long k_process_super_read_data(void* self, char* data, long long maxlen);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func(KProcess* self, char* data, long long maxlen)
+/// @param callback int64_t func(KProcess* self, char* data, int64_t maxlen)
 ///
-void k_process_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void k_process_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QProcess
 ///
@@ -1944,9 +1944,9 @@ void k_process_on_read_data(void* self, long long (*callback)(void*, char*, long
 ///
 /// @param self KProcess*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_process_write_data(void* self, const char* data, long long lenVal);
+int64_t k_process_write_data(void* self, const char* data, int64_t lenVal);
 
 /// @warning DEPRECATED: Use `k_process_super_write_data` instead
 ///
@@ -1960,9 +1960,9 @@ long long k_process_write_data(void* self, const char* data, long long lenVal);
 ///
 /// @param self KProcess*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long k_process_super_write_data(void* self, const char* data, long long lenVal);
+int64_t k_process_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QProcess
 ///
@@ -1971,9 +1971,9 @@ long long k_process_super_write_data(void* self, const char* data, long long len
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func(KProcess* self, const char* data, long long lenVal)
+/// @param callback int64_t func(KProcess* self, const char* data, int64_t lenVal)
 ///
-void k_process_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void k_process_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1983,7 +1983,7 @@ void k_process_on_write_data(void* self, long long (*callback)(void*, const char
 ///
 /// @param self KProcess*
 ///
-long long k_process_pos(void* self);
+int64_t k_process_pos(void* self);
 
 /// @warning DEPRECATED: Use `k_process_super_pos` instead
 ///
@@ -1997,7 +1997,7 @@ long long k_process_pos(void* self);
 ///
 /// @param self KProcess*
 ///
-long long k_process_super_pos(void* self);
+int64_t k_process_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2006,9 +2006,9 @@ long long k_process_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_process_on_pos(void* self, long long (*callback)());
+void k_process_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2018,7 +2018,7 @@ void k_process_on_pos(void* self, long long (*callback)());
 ///
 /// @param self KProcess*
 ///
-long long k_process_size(void* self);
+int64_t k_process_size(void* self);
 
 /// @warning DEPRECATED: Use `k_process_super_size` instead
 ///
@@ -2032,7 +2032,7 @@ long long k_process_size(void* self);
 ///
 /// @param self KProcess*
 ///
-long long k_process_super_size(void* self);
+int64_t k_process_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2041,9 +2041,9 @@ long long k_process_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_process_on_size(void* self, long long (*callback)());
+void k_process_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2052,9 +2052,9 @@ void k_process_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KProcess*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool k_process_seek(void* self, long long pos);
+bool k_process_seek(void* self, int64_t pos);
 
 /// @warning DEPRECATED: Use `k_process_super_seek` instead
 ///
@@ -2067,9 +2067,9 @@ bool k_process_seek(void* self, long long pos);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool k_process_super_seek(void* self, long long pos);
+bool k_process_super_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -2078,9 +2078,9 @@ bool k_process_super_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback bool func(KProcess* self, long long pos)
+/// @param callback bool func(KProcess* self, int64_t pos)
 ///
-void k_process_on_seek(void* self, bool (*callback)(void*, long long));
+void k_process_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -2160,7 +2160,7 @@ void k_process_on_reset(void* self, bool (*callback)());
 ///
 /// @param self KProcess*
 ///
-long long k_process_bytes_available(void* self);
+int64_t k_process_bytes_available(void* self);
 
 /// @warning DEPRECATED: Use `k_process_super_bytes_available` instead
 ///
@@ -2174,7 +2174,7 @@ long long k_process_bytes_available(void* self);
 ///
 /// @param self KProcess*
 ///
-long long k_process_super_bytes_available(void* self);
+int64_t k_process_super_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2183,9 +2183,9 @@ long long k_process_super_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void k_process_on_bytes_available(void* self, long long (*callback)());
+void k_process_on_bytes_available(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2230,9 +2230,9 @@ void k_process_on_can_read_line(void* self, bool (*callback)());
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_read_line_data(void* self, char* data, long long maxlen);
+int64_t k_process_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `k_process_super_read_line_data` instead
 ///
@@ -2246,9 +2246,9 @@ long long k_process_read_line_data(void* self, char* data, long long maxlen);
 ///
 /// @param self KProcess*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long k_process_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t k_process_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -2257,9 +2257,9 @@ long long k_process_super_read_line_data(void* self, char* data, long long maxle
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func(KProcess* self, char* data, long long maxlen)
+/// @param callback int64_t func(KProcess* self, char* data, int64_t maxlen)
 ///
-void k_process_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void k_process_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -2268,9 +2268,9 @@ void k_process_on_read_line_data(void* self, long long (*callback)(void*, char*,
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KProcess*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_process_skip_data(void* self, long long maxSize);
+int64_t k_process_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `k_process_super_skip_data` instead
 ///
@@ -2283,9 +2283,9 @@ long long k_process_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long k_process_super_skip_data(void* self, long long maxSize);
+int64_t k_process_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -2294,9 +2294,9 @@ long long k_process_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KProcess*
-/// @param callback long long func(KProcess* self, long long maxSize)
+/// @param callback int64_t func(KProcess* self, int64_t maxSize)
 ///
-void k_process_on_skip_data(void* self, long long (*callback)(void*, long long));
+void k_process_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///

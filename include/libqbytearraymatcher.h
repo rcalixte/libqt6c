@@ -54,9 +54,9 @@ QByteArrayMatcher* q_bytearraymatcher_new5(void* other);
 /// q_bytearraymatcher_new6 constructs a new QByteArrayMatcher object.
 ///
 /// @param pattern const char*
-/// @param length int64_t
+/// @param length intptr_t
 ///
-QByteArrayMatcher* q_bytearraymatcher_new6(const char* pattern, int64_t length);
+QByteArrayMatcher* q_bytearraymatcher_new6(const char* pattern, intptr_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#operator-eq)
 ///
@@ -76,16 +76,16 @@ void q_bytearraymatcher_set_pattern(void* self, char* pattern);
 ///
 /// @param self QByteArrayMatcher*
 /// @param str const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-int64_t q_bytearraymatcher_index_in(void* self, const char* str, int64_t lenVal);
+intptr_t q_bytearraymatcher_index_in(void* self, const char* str, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
 /// @param self QByteArrayMatcher*
 /// @param data char*
 ///
-int64_t q_bytearraymatcher_index_in2(void* self, char* data);
+intptr_t q_bytearraymatcher_index_in2(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#pattern)
 ///
@@ -99,18 +99,18 @@ char* q_bytearraymatcher_pattern(void* self);
 ///
 /// @param self QByteArrayMatcher*
 /// @param str const char*
-/// @param lenVal int64_t
-/// @param from int64_t
+/// @param lenVal intptr_t
+/// @param from intptr_t
 ///
-int64_t q_bytearraymatcher_index_in3(void* self, const char* str, int64_t lenVal, int64_t from);
+intptr_t q_bytearraymatcher_index_in3(void* self, const char* str, intptr_t lenVal, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#indexIn)
 ///
 /// @param self QByteArrayMatcher*
 /// @param data char*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_bytearraymatcher_index_in22(void* self, char* data, int64_t from);
+intptr_t q_bytearraymatcher_index_in22(void* self, char* data, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearraymatcher.html#dtor.QByteArrayMatcher)
 ///

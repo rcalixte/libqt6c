@@ -172,13 +172,13 @@ int32_t q_metatype_id(void* self);
 ///
 /// @param self QMetaType*
 ///
-int64_t q_metatype_size_of2(void* self);
+intptr_t q_metatype_size_of2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#alignOf)
 ///
 /// @param self QMetaType*
 ///
-int64_t q_metatype_align_of(void* self);
+intptr_t q_metatype_align_of(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetatype.html#flags)
 ///

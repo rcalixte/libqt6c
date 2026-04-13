@@ -13,7 +13,7 @@ unsigned char* q_ipv6address_operator_subscript(void* self, int index) {
     return (unsigned char*)QIPv6Address_OperatorSubscript((QIPv6Address*)self, index);
 }
 
-unsigned char q_ipv6address_operator_subscript2(void* self, int index) {
+uint8_t q_ipv6address_operator_subscript2(void* self, int index) {
     return QIPv6Address_OperatorSubscript2((QIPv6Address*)self, index);
 }
 

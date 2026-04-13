@@ -80,11 +80,11 @@ libqt_list /* of QGeoLocation* */ q_geocodereply_locations(void* self) {
     return _arr;
 }
 
-int64_t q_geocodereply_limit(void* self) {
+intptr_t q_geocodereply_limit(void* self) {
     return QGeoCodeReply_Limit((QGeoCodeReply*)self);
 }
 
-int64_t q_geocodereply_offset(void* self) {
+intptr_t q_geocodereply_offset(void* self) {
     return QGeoCodeReply_Offset((QGeoCodeReply*)self);
 }
 
@@ -184,27 +184,27 @@ void q_geocodereply_super_set_locations(void* self, libqt_list /* of QGeoLocatio
     QGeoCodeReply_SuperSetLocations((QGeoCodeReply*)self, locations);
 }
 
-void q_geocodereply_set_limit(void* self, int64_t limit) {
+void q_geocodereply_set_limit(void* self, intptr_t limit) {
     QGeoCodeReply_SetLimit((QGeoCodeReply*)self, limit);
 }
 
-void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, int64_t)) {
+void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, intptr_t)) {
     QGeoCodeReply_OnSetLimit((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_super_set_limit(void* self, int64_t limit) {
+void q_geocodereply_super_set_limit(void* self, intptr_t limit) {
     QGeoCodeReply_SuperSetLimit((QGeoCodeReply*)self, limit);
 }
 
-void q_geocodereply_set_offset(void* self, int64_t offset) {
+void q_geocodereply_set_offset(void* self, intptr_t offset) {
     QGeoCodeReply_SetOffset((QGeoCodeReply*)self, offset);
 }
 
-void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, int64_t)) {
+void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, intptr_t)) {
     QGeoCodeReply_OnSetOffset((QGeoCodeReply*)self, (intptr_t)callback);
 }
 
-void q_geocodereply_super_set_offset(void* self, int64_t offset) {
+void q_geocodereply_super_set_offset(void* self, intptr_t offset) {
     QGeoCodeReply_SuperSetOffset((QGeoCodeReply*)self, offset);
 }
 

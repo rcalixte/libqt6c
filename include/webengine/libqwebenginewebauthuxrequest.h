@@ -662,9 +662,9 @@ int32_t q_webenginewebauthpinrequest_min_pin_length(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#minPinLength-var)
 ///
 /// @param self QWebEngineWebAuthPinRequest*
-/// @param minPinLength int
+/// @param minPinLength int32_t
 ///
-void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int minPinLength);
+void q_webenginewebauthpinrequest_set_min_pin_length(void* self, int32_t minPinLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginewebauthpinrequest.html#remainingAttempts-var)
 ///

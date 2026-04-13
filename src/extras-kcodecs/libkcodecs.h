@@ -110,18 +110,18 @@ KCodecs__Codec* k_codecs__codec_codec_for_name(char* name);
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#maxEncodedSizeFor)
 ///
 /// @param self KCodecs__Codec*
-/// @param insize int64_t
+/// @param insize intptr_t
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-int64_t k_codecs__codec_max_encoded_size_for(void* self, int64_t insize, int32_t newline);
+intptr_t k_codecs__codec_max_encoded_size_for(void* self, intptr_t insize, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#maxDecodedSizeFor)
 ///
 /// @param self KCodecs__Codec*
-/// @param insize int64_t
+/// @param insize intptr_t
 /// @param newline enum KCodecs__Codec__NewlineType
 ///
-int64_t k_codecs__codec_max_decoded_size_for(void* self, int64_t insize, int32_t newline);
+intptr_t k_codecs__codec_max_decoded_size_for(void* self, intptr_t insize, int32_t newline);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html#makeEncoder)
 ///

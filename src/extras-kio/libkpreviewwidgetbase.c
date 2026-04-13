@@ -1113,7 +1113,7 @@ int32_t k_previewwidgetbase_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_previewwidgetbase_find(uint64_t param1) {
+QWidget* k_previewwidgetbase_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

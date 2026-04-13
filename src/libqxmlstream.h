@@ -442,19 +442,19 @@ bool q_xmlstreamreader_has_standalone_declaration(void* self);
 ///
 /// @param self QXmlStreamReader*
 ///
-long long q_xmlstreamreader_line_number(void* self);
+int64_t q_xmlstreamreader_line_number(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#columnNumber)
 ///
 /// @param self QXmlStreamReader*
 ///
-long long q_xmlstreamreader_column_number(void* self);
+int64_t q_xmlstreamreader_column_number(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#characterOffset)
 ///
 /// @param self QXmlStreamReader*
 ///
-long long q_xmlstreamreader_character_offset(void* self);
+int64_t q_xmlstreamreader_character_offset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#attributes)
 ///

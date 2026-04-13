@@ -218,7 +218,7 @@ const char* q_coreapplication_application_file_path() {
     return _ret;
 }
 
-long long q_coreapplication_application_pid() {
+int64_t q_coreapplication_application_pid() {
     return QCoreApplication_ApplicationPid();
 }
 

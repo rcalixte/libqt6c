@@ -29,23 +29,23 @@ QBluetoothDeviceInfo* q_bluetoothserviceinfo_device(void* self) {
     return QBluetoothServiceInfo_Device((QBluetoothServiceInfo*)self);
 }
 
-void q_bluetoothserviceinfo_set_attribute(void* self, unsigned short attributeId, void* value) {
+void q_bluetoothserviceinfo_set_attribute(void* self, uint16_t attributeId, void* value) {
     QBluetoothServiceInfo_SetAttribute((QBluetoothServiceInfo*)self, attributeId, (QVariant*)value);
 }
 
-void q_bluetoothserviceinfo_set_attribute2(void* self, unsigned short attributeId, void* value) {
+void q_bluetoothserviceinfo_set_attribute2(void* self, uint16_t attributeId, void* value) {
     QBluetoothServiceInfo_SetAttribute2((QBluetoothServiceInfo*)self, attributeId, (QBluetoothUuid*)value);
 }
 
-void q_bluetoothserviceinfo_set_attribute3(void* self, unsigned short attributeId, void* value) {
+void q_bluetoothserviceinfo_set_attribute3(void* self, uint16_t attributeId, void* value) {
     QBluetoothServiceInfo_SetAttribute3((QBluetoothServiceInfo*)self, attributeId, (QBluetoothServiceInfo__Sequence*)value);
 }
 
-void q_bluetoothserviceinfo_set_attribute4(void* self, unsigned short attributeId, void* value) {
+void q_bluetoothserviceinfo_set_attribute4(void* self, uint16_t attributeId, void* value) {
     QBluetoothServiceInfo_SetAttribute4((QBluetoothServiceInfo*)self, attributeId, (QBluetoothServiceInfo__Alternative*)value);
 }
 
-QVariant* q_bluetoothserviceinfo_attribute(void* self, unsigned short attributeId) {
+QVariant* q_bluetoothserviceinfo_attribute(void* self, uint16_t attributeId) {
     return QBluetoothServiceInfo_Attribute((QBluetoothServiceInfo*)self, attributeId);
 }
 
@@ -54,11 +54,11 @@ libqt_list /* of unsigned short */ q_bluetoothserviceinfo_attributes(void* self)
     return _arr;
 }
 
-bool q_bluetoothserviceinfo_contains(void* self, unsigned short attributeId) {
+bool q_bluetoothserviceinfo_contains(void* self, uint16_t attributeId) {
     return QBluetoothServiceInfo_Contains((QBluetoothServiceInfo*)self, attributeId);
 }
 
-void q_bluetoothserviceinfo_remove_attribute(void* self, unsigned short attributeId) {
+void q_bluetoothserviceinfo_remove_attribute(void* self, uint16_t attributeId) {
     QBluetoothServiceInfo_RemoveAttribute((QBluetoothServiceInfo*)self, attributeId);
 }
 
@@ -111,11 +111,11 @@ QBluetoothServiceInfo__Sequence* q_bluetoothserviceinfo_protocol_descriptor(void
     return QBluetoothServiceInfo_ProtocolDescriptor((QBluetoothServiceInfo*)self, protocol);
 }
 
-void q_bluetoothserviceinfo_set_service_availability(void* self, unsigned char availability) {
+void q_bluetoothserviceinfo_set_service_availability(void* self, uint8_t availability) {
     QBluetoothServiceInfo_SetServiceAvailability((QBluetoothServiceInfo*)self, availability);
 }
 
-unsigned char q_bluetoothserviceinfo_service_availability(void* self) {
+uint8_t q_bluetoothserviceinfo_service_availability(void* self) {
     return QBluetoothServiceInfo_ServiceAvailability((QBluetoothServiceInfo*)self);
 }
 

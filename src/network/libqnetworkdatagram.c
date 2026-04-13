@@ -18,7 +18,7 @@ QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress) {
     return QNetworkDatagram_new4(qstring(data), (QHostAddress*)destinationAddress);
 }
 
-QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, unsigned short port) {
+QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, uint16_t port) {
     return QNetworkDatagram_new5(qstring(data), (QHostAddress*)destinationAddress, port);
 }
 
@@ -70,7 +70,7 @@ void q_networkdatagram_set_sender(void* self, void* address) {
     QNetworkDatagram_SetSender((QNetworkDatagram*)self, (QHostAddress*)address);
 }
 
-void q_networkdatagram_set_destination(void* self, void* address, unsigned short port) {
+void q_networkdatagram_set_destination(void* self, void* address, uint16_t port) {
     QNetworkDatagram_SetDestination((QNetworkDatagram*)self, (QHostAddress*)address, port);
 }
 
@@ -97,7 +97,7 @@ QNetworkDatagram* q_networkdatagram_make_reply(void* self, char* payload) {
     return QNetworkDatagram_MakeReply((QNetworkDatagram*)self, qstring(payload));
 }
 
-void q_networkdatagram_set_sender2(void* self, void* address, unsigned short port) {
+void q_networkdatagram_set_sender2(void* self, void* address, uint16_t port) {
     QNetworkDatagram_SetSender2((QNetworkDatagram*)self, (QHostAddress*)address, port);
 }
 

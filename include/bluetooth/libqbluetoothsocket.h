@@ -191,16 +191,16 @@ bool q_bluetoothsocket_super_is_sequential(void* self);
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_bytes_available(void* self);
+int64_t q_bluetoothsocket_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#bytesAvailable)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_bluetoothsocket_on_bytes_available(void* self, long long (*callback)());
+void q_bluetoothsocket_on_bytes_available(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_bytes_available` instead
 ///
@@ -212,22 +212,22 @@ void q_bluetoothsocket_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_super_bytes_available(void* self);
+int64_t q_bluetoothsocket_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#bytesToWrite)
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_bytes_to_write(void* self);
+int64_t q_bluetoothsocket_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#bytesToWrite)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_bluetoothsocket_on_bytes_to_write(void* self, long long (*callback)());
+void q_bluetoothsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_bytes_to_write` instead
 ///
@@ -239,7 +239,7 @@ void q_bluetoothsocket_on_bytes_to_write(void* self, long long (*callback)());
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_super_bytes_to_write(void* self);
+int64_t q_bluetoothsocket_super_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#canReadLine)
 ///
@@ -287,9 +287,9 @@ void q_bluetoothsocket_connect_to_service2(void* self, void* address, void* uuid
 ///
 /// @param self QBluetoothSocket*
 /// @param address QBluetoothAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_bluetoothsocket_connect_to_service3(void* self, void* address, unsigned short port);
+void q_bluetoothsocket_connect_to_service3(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#connectToService)
 ///
@@ -323,7 +323,7 @@ QBluetoothAddress* q_bluetoothsocket_local_address(void* self);
 ///
 /// @param self QBluetoothSocket*
 ///
-unsigned short q_bluetoothsocket_local_port(void* self);
+uint16_t q_bluetoothsocket_local_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#peerName)
 ///
@@ -343,7 +343,7 @@ QBluetoothAddress* q_bluetoothsocket_peer_address(void* self);
 ///
 /// @param self QBluetoothSocket*
 ///
-unsigned short q_bluetoothsocket_peer_port(void* self);
+uint16_t q_bluetoothsocket_peer_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#setSocketDescriptor)
 ///
@@ -464,18 +464,18 @@ void q_bluetoothsocket_on_state_changed(void* self, void (*callback)(void*, int3
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_read_data(void* self, char* data, long long maxSize);
+int64_t q_bluetoothsocket_read_data(void* self, char* data, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#readData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func(QBluetoothSocket* self, char* data, long long maxSize)
+/// @param callback int64_t func(QBluetoothSocket* self, char* data, int64_t maxSize)
 ///
-void q_bluetoothsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_bluetoothsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_read_data` instead
 ///
@@ -487,26 +487,26 @@ void q_bluetoothsocket_on_read_data(void* self, long long (*callback)(void*, cha
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_super_read_data(void* self, char* data, long long maxSize);
+int64_t q_bluetoothsocket_super_read_data(void* self, char* data, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#writeData)
 ///
 /// @param self QBluetoothSocket*
 /// @param data const char*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_write_data(void* self, const char* data, long long maxSize);
+int64_t q_bluetoothsocket_write_data(void* self, const char* data, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func(QBluetoothSocket* self, const char* data, long long maxSize)
+/// @param callback int64_t func(QBluetoothSocket* self, const char* data, int64_t maxSize)
 ///
-void q_bluetoothsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_bluetoothsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_write_data` instead
 ///
@@ -518,9 +518,9 @@ void q_bluetoothsocket_on_write_data(void* self, long long (*callback)(void*, co
 ///
 /// @param self QBluetoothSocket*
 /// @param data const char*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_super_write_data(void* self, const char* data, long long maxSize);
+int64_t q_bluetoothsocket_super_write_data(void* self, const char* data, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#setSocketState)
 ///
@@ -651,10 +651,10 @@ void q_bluetoothsocket_connect_to_service32(void* self, void* address, void* uui
 ///
 /// @param self QBluetoothSocket*
 /// @param address QBluetoothAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param openMode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_bluetoothsocket_connect_to_service33(void* self, void* address, unsigned short port, int32_t openMode);
+void q_bluetoothsocket_connect_to_service33(void* self, void* address, uint16_t port, int32_t openMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothsocket.html#connectToService)
 ///
@@ -791,9 +791,9 @@ void q_bluetoothsocket_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_bluetoothsocket_read(void* self, char* data, long long maxlen);
+int64_t q_bluetoothsocket_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -802,9 +802,9 @@ long long q_bluetoothsocket_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QBluetoothSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_bluetoothsocket_read2(void* self, long long maxlen);
+char* q_bluetoothsocket_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -822,9 +822,9 @@ char* q_bluetoothsocket_read_all(void* self);
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_bluetoothsocket_read_line(void* self, char* data, long long maxlen);
+int64_t q_bluetoothsocket_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -874,9 +874,9 @@ bool q_bluetoothsocket_is_transaction_started(void* self);
 ///
 /// @param self QBluetoothSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_bluetoothsocket_write(void* self, const char* data, long long lenVal);
+int64_t q_bluetoothsocket_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -885,7 +885,7 @@ long long q_bluetoothsocket_write(void* self, const char* data, long long lenVal
 /// @param self QBluetoothSocket*
 /// @param data const char*
 ///
-long long q_bluetoothsocket_write2(void* self, const char* data);
+int64_t q_bluetoothsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -894,7 +894,7 @@ long long q_bluetoothsocket_write2(void* self, const char* data);
 /// @param self QBluetoothSocket*
 /// @param data char*
 ///
-long long q_bluetoothsocket_write3(void* self, char* data);
+int64_t q_bluetoothsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -902,9 +902,9 @@ long long q_bluetoothsocket_write3(void* self, char* data);
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_bluetoothsocket_peek(void* self, char* data, long long maxlen);
+int64_t q_bluetoothsocket_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -913,18 +913,18 @@ long long q_bluetoothsocket_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QBluetoothSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_bluetoothsocket_peek2(void* self, long long maxlen);
+char* q_bluetoothsocket_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QBluetoothSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_skip(void* self, long long maxSize);
+int64_t q_bluetoothsocket_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -993,18 +993,18 @@ void q_bluetoothsocket_on_channel_ready_read(void* self, void (*callback)(void*,
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QBluetoothSocket*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_bluetoothsocket_bytes_written(void* self, long long bytes);
+void q_bluetoothsocket_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QBluetoothSocket*
-/// @param callback void func(QBluetoothSocket* self, long long bytes)
+/// @param callback void func(QBluetoothSocket* self, int64_t bytes)
 ///
-void q_bluetoothsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_bluetoothsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1012,18 +1012,18 @@ void q_bluetoothsocket_on_bytes_written(void* self, void (*callback)(void*, long
 ///
 /// @param self QBluetoothSocket*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_bluetoothsocket_channel_bytes_written(void* self, int channel, long long bytes);
+void q_bluetoothsocket_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QBluetoothSocket*
-/// @param callback void func(QBluetoothSocket* self, int channel, long long bytes)
+/// @param callback void func(QBluetoothSocket* self, int channel, int64_t bytes)
 ///
-void q_bluetoothsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_bluetoothsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1066,9 +1066,9 @@ void q_bluetoothsocket_on_read_channel_finished(void* self, void (*callback)(voi
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QBluetoothSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_bluetoothsocket_read_line1(void* self, long long maxlen);
+char* q_bluetoothsocket_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1562,7 +1562,7 @@ void q_bluetoothsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_pos(void* self);
+int64_t q_bluetoothsocket_pos(void* self);
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_pos` instead
 ///
@@ -1576,7 +1576,7 @@ long long q_bluetoothsocket_pos(void* self);
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_super_pos(void* self);
+int64_t q_bluetoothsocket_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1585,9 +1585,9 @@ long long q_bluetoothsocket_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_bluetoothsocket_on_pos(void* self, long long (*callback)());
+void q_bluetoothsocket_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1597,7 +1597,7 @@ void q_bluetoothsocket_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_size(void* self);
+int64_t q_bluetoothsocket_size(void* self);
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_size` instead
 ///
@@ -1611,7 +1611,7 @@ long long q_bluetoothsocket_size(void* self);
 ///
 /// @param self QBluetoothSocket*
 ///
-long long q_bluetoothsocket_super_size(void* self);
+int64_t q_bluetoothsocket_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1620,9 +1620,9 @@ long long q_bluetoothsocket_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_bluetoothsocket_on_size(void* self, long long (*callback)());
+void q_bluetoothsocket_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1631,9 +1631,9 @@ void q_bluetoothsocket_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_bluetoothsocket_seek(void* self, long long pos);
+bool q_bluetoothsocket_seek(void* self, int64_t pos);
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_seek` instead
 ///
@@ -1646,9 +1646,9 @@ bool q_bluetoothsocket_seek(void* self, long long pos);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_bluetoothsocket_super_seek(void* self, long long pos);
+bool q_bluetoothsocket_super_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -1657,9 +1657,9 @@ bool q_bluetoothsocket_super_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback bool func(QBluetoothSocket* self, long long pos)
+/// @param callback bool func(QBluetoothSocket* self, int64_t pos)
 ///
-void q_bluetoothsocket_on_seek(void* self, bool (*callback)(void*, long long));
+void q_bluetoothsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1813,9 +1813,9 @@ void q_bluetoothsocket_on_wait_for_bytes_written(void* self, bool (*callback)(vo
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_bluetoothsocket_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_bluetoothsocket_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_read_line_data` instead
 ///
@@ -1829,9 +1829,9 @@ long long q_bluetoothsocket_read_line_data(void* self, char* data, long long max
 ///
 /// @param self QBluetoothSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_bluetoothsocket_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_bluetoothsocket_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1840,9 +1840,9 @@ long long q_bluetoothsocket_super_read_line_data(void* self, char* data, long lo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func(QBluetoothSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QBluetoothSocket* self, char* data, int64_t maxlen)
 ///
-void q_bluetoothsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_bluetoothsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1851,9 +1851,9 @@ void q_bluetoothsocket_on_read_line_data(void* self, long long (*callback)(void*
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_skip_data(void* self, long long maxSize);
+int64_t q_bluetoothsocket_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `q_bluetoothsocket_super_skip_data` instead
 ///
@@ -1866,9 +1866,9 @@ long long q_bluetoothsocket_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_bluetoothsocket_super_skip_data(void* self, long long maxSize);
+int64_t q_bluetoothsocket_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1877,9 +1877,9 @@ long long q_bluetoothsocket_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QBluetoothSocket*
-/// @param callback long long func(QBluetoothSocket* self, long long maxSize)
+/// @param callback int64_t func(QBluetoothSocket* self, int64_t maxSize)
 ///
-void q_bluetoothsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_bluetoothsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///

@@ -21,9 +21,9 @@ PackageKit__Bitfield* q_packagekit__bitfield_new();
 
 /// q_packagekit__bitfield_new2 constructs a new PackageKit::Bitfield object.
 ///
-/// @param val uint64_t
+/// @param val uintptr_t
 ///
-PackageKit__Bitfield* q_packagekit__bitfield_new2(uint64_t val);
+PackageKit__Bitfield* q_packagekit__bitfield_new2(uintptr_t val);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 
@@ -36,30 +36,30 @@ PackageKit__Bitfield* q_packagekit__bitfield_new3(void* param1);
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Bitfield*
-/// @param mask uint64_t
+/// @param mask uintptr_t
 ///
-uint64_t q_packagekit__bitfield_operator_bitwise_and(void* self, uint64_t mask);
+uintptr_t q_packagekit__bitfield_operator_bitwise_and(void* self, uintptr_t mask);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Bitfield*
-/// @param mask uint64_t
+/// @param mask uintptr_t
 ///
-void q_packagekit__bitfield_operator_bitwise_and_assign(void* self, uint64_t mask);
+void q_packagekit__bitfield_operator_bitwise_and_assign(void* self, uintptr_t mask);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Bitfield*
-/// @param mask uint64_t
+/// @param mask uintptr_t
 ///
-uint64_t q_packagekit__bitfield_operator_bitwise_or(void* self, uint64_t mask);
+uintptr_t q_packagekit__bitfield_operator_bitwise_or(void* self, uintptr_t mask);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///
 /// @param self PackageKit__Bitfield*
-/// @param mask uint64_t
+/// @param mask uintptr_t
 ///
-void q_packagekit__bitfield_operator_bitwise_or_assign(void* self, uint64_t mask);
+void q_packagekit__bitfield_operator_bitwise_or_assign(void* self, uintptr_t mask);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

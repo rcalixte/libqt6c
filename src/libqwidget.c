@@ -1123,7 +1123,7 @@ int32_t q_widget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_widget_find(uint64_t param1) {
+QWidget* q_widget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -1789,39 +1789,39 @@ void q_widget_super_update_micro_focus1(void* self, int32_t query) {
     QWidget_SuperUpdateMicroFocus1((QWidget*)self, query);
 }
 
-void q_widget_create1(void* self, uint64_t param1) {
+void q_widget_create1(void* self, uintptr_t param1) {
     QWidget_Create1((QWidget*)self, param1);
 }
 
-void q_widget_on_create1(void* self, void (*callback)(void*, uint64_t)) {
+void q_widget_on_create1(void* self, void (*callback)(void*, uintptr_t)) {
     QWidget_OnCreate1((QWidget*)self, (intptr_t)callback);
 }
 
-void q_widget_super_create1(void* self, uint64_t param1) {
+void q_widget_super_create1(void* self, uintptr_t param1) {
     QWidget_SuperCreate1((QWidget*)self, param1);
 }
 
-void q_widget_create2(void* self, uint64_t param1, bool initializeWindow) {
+void q_widget_create2(void* self, uintptr_t param1, bool initializeWindow) {
     QWidget_Create2((QWidget*)self, param1, initializeWindow);
 }
 
-void q_widget_on_create2(void* self, void (*callback)(void*, uint64_t, bool)) {
+void q_widget_on_create2(void* self, void (*callback)(void*, uintptr_t, bool)) {
     QWidget_OnCreate2((QWidget*)self, (intptr_t)callback);
 }
 
-void q_widget_super_create2(void* self, uint64_t param1, bool initializeWindow) {
+void q_widget_super_create2(void* self, uintptr_t param1, bool initializeWindow) {
     QWidget_SuperCreate2((QWidget*)self, param1, initializeWindow);
 }
 
-void q_widget_create3(void* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow) {
+void q_widget_create3(void* self, uintptr_t param1, bool initializeWindow, bool destroyOldWindow) {
     QWidget_Create3((QWidget*)self, param1, initializeWindow, destroyOldWindow);
 }
 
-void q_widget_on_create3(void* self, void (*callback)(void*, uint64_t, bool, bool)) {
+void q_widget_on_create3(void* self, void (*callback)(void*, uintptr_t, bool, bool)) {
     QWidget_OnCreate3((QWidget*)self, (intptr_t)callback);
 }
 
-void q_widget_super_create3(void* self, uint64_t param1, bool initializeWindow, bool destroyOldWindow) {
+void q_widget_super_create3(void* self, uintptr_t param1, bool initializeWindow, bool destroyOldWindow) {
     QWidget_SuperCreate3((QWidget*)self, param1, initializeWindow, destroyOldWindow);
 }
 
