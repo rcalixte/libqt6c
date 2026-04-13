@@ -1183,7 +1183,7 @@ int32_t q_dialogbuttonbox_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_dialogbuttonbox_find(uint64_t param1) {
+QWidget* q_dialogbuttonbox_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

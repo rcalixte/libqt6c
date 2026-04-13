@@ -58,38 +58,38 @@ bool q_httpheaders_append2(void* self, int32_t name, const char* value);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#insert)
 ///
 /// @param self QHttpHeaders*
-/// @param i int64_t
+/// @param i intptr_t
 /// @param name const char*
 /// @param value const char*
 ///
-bool q_httpheaders_insert(void* self, int64_t i, const char* name, const char* value);
+bool q_httpheaders_insert(void* self, intptr_t i, const char* name, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#insert)
 ///
 /// @param self QHttpHeaders*
-/// @param i int64_t
+/// @param i intptr_t
 /// @param name enum QHttpHeaders__WellKnownHeader
 /// @param value const char*
 ///
-bool q_httpheaders_insert2(void* self, int64_t i, int32_t name, const char* value);
+bool q_httpheaders_insert2(void* self, intptr_t i, int32_t name, const char* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#replace)
 ///
 /// @param self QHttpHeaders*
-/// @param i int64_t
+/// @param i intptr_t
 /// @param name const char*
 /// @param newValue const char*
 ///
-bool q_httpheaders_replace(void* self, int64_t i, const char* name, const char* newValue);
+bool q_httpheaders_replace(void* self, intptr_t i, const char* name, const char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#replace)
 ///
 /// @param self QHttpHeaders*
-/// @param i int64_t
+/// @param i intptr_t
 /// @param name enum QHttpHeaders__WellKnownHeader
 /// @param newValue const char*
 ///
-bool q_httpheaders_replace2(void* self, int64_t i, int32_t name, const char* newValue);
+bool q_httpheaders_replace2(void* self, intptr_t i, int32_t name, const char* newValue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#replaceOrAppend)
 ///
@@ -144,9 +144,9 @@ void q_httpheaders_remove_all2(void* self, int32_t name);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#removeAt)
 ///
 /// @param self QHttpHeaders*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-void q_httpheaders_remove_at(void* self, int64_t i);
+void q_httpheaders_remove_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#value)
 ///
@@ -189,9 +189,9 @@ const char** q_httpheaders_values2(void* self, int32_t name);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QHttpHeaders*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-char* q_httpheaders_value_at(void* self, int64_t i);
+char* q_httpheaders_value_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#combinedValue)
 ///
@@ -215,14 +215,14 @@ char* q_httpheaders_combined_value2(void* self, int32_t name);
 ///
 /// @param self QHttpHeaders*
 ///
-int64_t q_httpheaders_size(void* self);
+intptr_t q_httpheaders_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#reserve)
 ///
 /// @param self QHttpHeaders*
-/// @param size int64_t
+/// @param size intptr_t
 ///
-void q_httpheaders_reserve(void* self, int64_t size);
+void q_httpheaders_reserve(void* self, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#isEmpty)
 ///

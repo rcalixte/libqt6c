@@ -22,10 +22,10 @@ QInputDevice* q_inputdevice_new();
 /// q_inputdevice_new2 constructs a new QInputDevice object.
 ///
 /// @param name const char*
-/// @param systemId long long
+/// @param systemId int64_t
 /// @param type enum QInputDevice__DeviceType
 ///
-QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int32_t type);
+QInputDevice* q_inputdevice_new2(const char* name, int64_t systemId, int32_t type);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html)
 
@@ -40,23 +40,23 @@ QInputDevice* q_inputdevice_new3(void* parent);
 /// q_inputdevice_new4 constructs a new QInputDevice object.
 ///
 /// @param name const char*
-/// @param systemId long long
+/// @param systemId int64_t
 /// @param type enum QInputDevice__DeviceType
 /// @param seatName const char*
 ///
-QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int32_t type, const char* seatName);
+QInputDevice* q_inputdevice_new4(const char* name, int64_t systemId, int32_t type, const char* seatName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html)
 
 /// q_inputdevice_new5 constructs a new QInputDevice object.
 ///
 /// @param name const char*
-/// @param systemId long long
+/// @param systemId int64_t
 /// @param type enum QInputDevice__DeviceType
 /// @param seatName const char*
 /// @param parent QObject*
 ///
-QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t type, const char* seatName, void* parent);
+QInputDevice* q_inputdevice_new5(const char* name, int64_t systemId, int32_t type, const char* seatName, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -178,7 +178,7 @@ bool q_inputdevice_has_capability(void* self, int32_t cap);
 ///
 /// @param self QInputDevice*
 ///
-long long q_inputdevice_system_id(void* self);
+int64_t q_inputdevice_system_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qinputdevice.html#seatName)
 ///

@@ -378,19 +378,19 @@ void k_dirlister_on_percent(void* self, void (*callback)(void*, int)) {
     KCoreDirLister_Connect_Percent((KCoreDirLister*)self, (intptr_t)callback);
 }
 
-void k_dirlister_total_size(void* self, uint64_t size) {
+void k_dirlister_total_size(void* self, uintptr_t size) {
     KCoreDirLister_TotalSize((KCoreDirLister*)self, size);
 }
 
-void k_dirlister_on_total_size(void* self, void (*callback)(void*, uint64_t)) {
+void k_dirlister_on_total_size(void* self, void (*callback)(void*, uintptr_t)) {
     KCoreDirLister_Connect_TotalSize((KCoreDirLister*)self, (intptr_t)callback);
 }
 
-void k_dirlister_processed_size(void* self, uint64_t size) {
+void k_dirlister_processed_size(void* self, uintptr_t size) {
     KCoreDirLister_ProcessedSize((KCoreDirLister*)self, size);
 }
 
-void k_dirlister_on_processed_size(void* self, void (*callback)(void*, uint64_t)) {
+void k_dirlister_on_processed_size(void* self, void (*callback)(void*, uintptr_t)) {
     KCoreDirLister_Connect_ProcessedSize((KCoreDirLister*)self, (intptr_t)callback);
 }
 

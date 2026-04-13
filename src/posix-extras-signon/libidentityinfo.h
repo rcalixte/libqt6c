@@ -223,9 +223,9 @@ const char** q_signon__identityinfo_mechanisms(void* self, const char* method);
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///
 /// @param self SignOn__IdentityInfo*
-/// @param refCount int
+/// @param refCount int32_t
 ///
-void q_signon__identityinfo_set_ref_count(void* self, int refCount);
+void q_signon__identityinfo_set_ref_count(void* self, int32_t refCount);
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1IdentityInfo.html)
 ///

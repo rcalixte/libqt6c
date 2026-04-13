@@ -22,10 +22,10 @@
 /// @param user const char*
 /// @param group const char*
 /// @param symlink const char*
-/// @param pos long long
-/// @param size long long
+/// @param pos int64_t
+/// @param size int64_t
 ///
-KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, long long pos, long long size);
+KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, int64_t pos, int64_t size);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html)
 
@@ -39,20 +39,20 @@ KArchiveFile* k_archivefile_new2(void* param1);
 ///
 /// @param self KArchiveFile*
 ///
-long long k_archivefile_position(void* self);
+int64_t k_archivefile_position(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#size)
 ///
 /// @param self KArchiveFile*
 ///
-long long k_archivefile_size(void* self);
+int64_t k_archivefile_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#setSize)
 ///
 /// @param self KArchiveFile*
-/// @param s long long
+/// @param s int64_t
 ///
-void k_archivefile_set_size(void* self, long long s);
+void k_archivefile_set_size(void* self, int64_t s);
 
 /// [Upstream resources](https://api.kde.org/karchivefile.html#data)
 ///

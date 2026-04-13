@@ -19,7 +19,7 @@ int32_t q_cryptographichash_algorithm(void* self) {
     return QCryptographicHash_Algorithm((QCryptographicHash*)self);
 }
 
-void q_cryptographichash_add_data(void* self, const char* data, int64_t length) {
+void q_cryptographichash_add_data(void* self, const char* data, intptr_t length) {
     QCryptographicHash_AddData((QCryptographicHash*)self, data, length);
 }
 

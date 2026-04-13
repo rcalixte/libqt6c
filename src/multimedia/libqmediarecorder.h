@@ -176,7 +176,7 @@ const char* q_mediarecorder_error_string(void* self);
 ///
 /// @param self QMediaRecorder*
 ///
-long long q_mediarecorder_duration(void* self);
+int64_t q_mediarecorder_duration(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#mediaFormat)
 ///
@@ -381,16 +381,16 @@ void q_mediarecorder_on_recorder_state_changed(void* self, void (*callback)(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#durationChanged)
 ///
 /// @param self QMediaRecorder*
-/// @param duration long long
+/// @param duration int64_t
 ///
-void q_mediarecorder_duration_changed(void* self, long long duration);
+void q_mediarecorder_duration_changed(void* self, int64_t duration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#durationChanged)
 ///
 /// @param self QMediaRecorder*
-/// @param callback void func(QMediaRecorder* self, long long duration)
+/// @param callback void func(QMediaRecorder* self, int64_t duration)
 ///
-void q_mediarecorder_on_duration_changed(void* self, void (*callback)(void*, long long));
+void q_mediarecorder_on_duration_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediarecorder.html#actualLocationChanged)
 ///

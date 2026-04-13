@@ -44,9 +44,9 @@ int32_t q_cryptographichash_algorithm(void* self);
 ///
 /// @param self QCryptographicHash*
 /// @param data const char*
-/// @param length int64_t
+/// @param length intptr_t
 ///
-void q_cryptographichash_add_data(void* self, const char* data, int64_t length);
+void q_cryptographichash_add_data(void* self, const char* data, intptr_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcryptographichash.html#addData)
 ///

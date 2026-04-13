@@ -71,15 +71,15 @@ void k_statusbarjobtracker_description(void* self, void* job, const char* title,
     KStatusBarJobTracker_Description((KStatusBarJobTracker*)self, (KJob*)job, qstring(title), field1_pair, field2_pair);
 }
 
-void k_statusbarjobtracker_total_amount(void* self, void* job, int32_t unit, uint64_t amount) {
+void k_statusbarjobtracker_total_amount(void* self, void* job, int32_t unit, uintptr_t amount) {
     KStatusBarJobTracker_TotalAmount((KStatusBarJobTracker*)self, (KJob*)job, unit, amount);
 }
 
-void k_statusbarjobtracker_percent(void* self, void* job, uint64_t percent) {
+void k_statusbarjobtracker_percent(void* self, void* job, uintptr_t percent) {
     KStatusBarJobTracker_Percent((KStatusBarJobTracker*)self, (KJob*)job, percent);
 }
 
-void k_statusbarjobtracker_speed(void* self, void* job, uint64_t value) {
+void k_statusbarjobtracker_speed(void* self, void* job, uintptr_t value) {
     KStatusBarJobTracker_Speed((KStatusBarJobTracker*)self, (KJob*)job, value);
 }
 

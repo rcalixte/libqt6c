@@ -13,7 +13,7 @@ const char* k_nscore_replace_b_b_code(const char* param1) {
     return _ret;
 }
 
-uint64_t k_nscore_q_hash(void* param1, uint64_t param2) {
+uintptr_t k_nscore_q_hash(void* param1, uintptr_t param2) {
     return KNSCore_QHash((KNSCore__Entry*)param1, param2);
 }
 

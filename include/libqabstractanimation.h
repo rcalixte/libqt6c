@@ -1423,16 +1423,16 @@ bool q_animationdriver_is_running(void* self);
 ///
 /// @param self QAnimationDriver*
 ///
-long long q_animationdriver_elapsed(void* self);
+int64_t q_animationdriver_elapsed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanimationdriver.html#elapsed)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAnimationDriver*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_animationdriver_on_elapsed(void* self, long long (*callback)());
+void q_animationdriver_on_elapsed(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_animationdriver_super_elapsed` instead
 ///
@@ -1444,7 +1444,7 @@ void q_animationdriver_on_elapsed(void* self, long long (*callback)());
 ///
 /// @param self QAnimationDriver*
 ///
-long long q_animationdriver_super_elapsed(void* self);
+int64_t q_animationdriver_super_elapsed(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qanimationdriver.html#started)
 ///

@@ -1077,7 +1077,7 @@ int32_t k_pixmapsequencewidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_pixmapsequencewidget_find(uint64_t param1) {
+QWidget* k_pixmapsequencewidget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

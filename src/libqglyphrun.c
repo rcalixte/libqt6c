@@ -114,12 +114,12 @@ QRectF* q_glyphrun_bounding_rect(void* self) {
     return QGlyphRun_BoundingRect((QGlyphRun*)self);
 }
 
-libqt_list /* of int64_t */ q_glyphrun_string_indexes(void* self) {
+libqt_list /* of intptr_t */ q_glyphrun_string_indexes(void* self) {
     libqt_list _arr = QGlyphRun_StringIndexes((QGlyphRun*)self);
     return _arr;
 }
 
-void q_glyphrun_set_string_indexes(void* self, libqt_list /* of int64_t */ stringIndexes) {
+void q_glyphrun_set_string_indexes(void* self, libqt_list /* of intptr_t */ stringIndexes) {
     QGlyphRun_SetStringIndexes((QGlyphRun*)self, stringIndexes);
 }
 

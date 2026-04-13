@@ -151,19 +151,19 @@ void q_abstractsocket_set_pause_mode(void* self, int32_t pauseMode);
 ///
 /// @param self QAbstractSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_abstractsocket_bind(void* self, void* address, unsigned short port, int32_t mode);
+bool q_abstractsocket_bind(void* self, void* address, uint16_t port, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool func(QAbstractSocket* self, QHostAddress* address, unsigned short port, flag of enum QAbstractSocket__BindFlag mode)
+/// @param callback bool func(QAbstractSocket* self, QHostAddress* address, uint16_t port, flag of enum QAbstractSocket__BindFlag mode)
 ///
-void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigned short, int32_t));
+void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, uint16_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_bind` instead
 ///
@@ -175,10 +175,10 @@ void q_abstractsocket_on_bind(void* self, bool (*callback)(void*, void*, unsigne
 ///
 /// @param self QAbstractSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_abstractsocket_super_bind(void* self, void* address, unsigned short port, int32_t mode);
+bool q_abstractsocket_super_bind(void* self, void* address, uint16_t port, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
@@ -190,20 +190,20 @@ bool q_abstractsocket_bind2(void* self);
 ///
 /// @param self QAbstractSocket*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
-void q_abstractsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
+void q_abstractsocket_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void func(QAbstractSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
+/// @param callback void func(QAbstractSocket* self, const char* hostName, uint16_t port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
 ///
-void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
+void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, uint16_t, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_connect_to_host` instead
 ///
@@ -215,19 +215,19 @@ void q_abstractsocket_on_connect_to_host(void* self, void (*callback)(void*, con
 ///
 /// @param self QAbstractSocket*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
-void q_abstractsocket_super_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
+void q_abstractsocket_super_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
 /// @param self QAbstractSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_abstractsocket_connect_to_host2(void* self, void* address, unsigned short port);
+void q_abstractsocket_connect_to_host2(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#disconnectFromHost)
 ///
@@ -266,16 +266,16 @@ bool q_abstractsocket_is_valid(void* self);
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_bytes_available(void* self);
+int64_t q_abstractsocket_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bytesAvailable)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_abstractsocket_on_bytes_available(void* self, long long (*callback)());
+void q_abstractsocket_on_bytes_available(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_bytes_available` instead
 ///
@@ -287,22 +287,22 @@ void q_abstractsocket_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_super_bytes_available(void* self);
+int64_t q_abstractsocket_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bytesToWrite)
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_bytes_to_write(void* self);
+int64_t q_abstractsocket_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bytesToWrite)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_abstractsocket_on_bytes_to_write(void* self, long long (*callback)());
+void q_abstractsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_bytes_to_write` instead
 ///
@@ -314,13 +314,13 @@ void q_abstractsocket_on_bytes_to_write(void* self, long long (*callback)());
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_super_bytes_to_write(void* self);
+int64_t q_abstractsocket_super_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#localPort)
 ///
 /// @param self QAbstractSocket*
 ///
-unsigned short q_abstractsocket_local_port(void* self);
+uint16_t q_abstractsocket_local_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#localAddress)
 ///
@@ -332,7 +332,7 @@ QHostAddress* q_abstractsocket_local_address(void* self);
 ///
 /// @param self QAbstractSocket*
 ///
-unsigned short q_abstractsocket_peer_port(void* self);
+uint16_t q_abstractsocket_peer_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#peerAddress)
 ///
@@ -352,23 +352,23 @@ const char* q_abstractsocket_peer_name(void* self);
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_read_buffer_size(void* self);
+int64_t q_abstractsocket_read_buffer_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setReadBufferSize)
 ///
 /// @param self QAbstractSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_abstractsocket_set_read_buffer_size(void* self, long long size);
+void q_abstractsocket_set_read_buffer_size(void* self, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setReadBufferSize)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void func(QAbstractSocket* self, long long size)
+/// @param callback void func(QAbstractSocket* self, int64_t size)
 ///
-void q_abstractsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long));
+void q_abstractsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_set_read_buffer_size` instead
 ///
@@ -379,9 +379,9 @@ void q_abstractsocket_on_set_read_buffer_size(void* self, void (*callback)(void*
 /// Base class method implementation
 ///
 /// @param self QAbstractSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_abstractsocket_super_set_read_buffer_size(void* self, long long size);
+void q_abstractsocket_super_set_read_buffer_size(void* self, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#abort)
 ///
@@ -823,18 +823,18 @@ void q_abstractsocket_on_proxy_authentication_required(void* self, void (*callba
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_read_data(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_read_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#readData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func(QAbstractSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QAbstractSocket* self, char* data, int64_t maxlen)
 ///
-void q_abstractsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_abstractsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_read_data` instead
 ///
@@ -846,26 +846,26 @@ void q_abstractsocket_on_read_data(void* self, long long (*callback)(void*, char
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_super_read_data(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#readLineData)
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#readLineData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func(QAbstractSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QAbstractSocket* self, char* data, int64_t maxlen)
 ///
-void q_abstractsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_abstractsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_read_line_data` instead
 ///
@@ -877,25 +877,25 @@ void q_abstractsocket_on_read_line_data(void* self, long long (*callback)(void*,
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#skipData)
 ///
 /// @param self QAbstractSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_abstractsocket_skip_data(void* self, long long maxSize);
+int64_t q_abstractsocket_skip_data(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#skipData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func(QAbstractSocket* self, long long maxSize)
+/// @param callback int64_t func(QAbstractSocket* self, int64_t maxSize)
 ///
-void q_abstractsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_abstractsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_skip_data` instead
 ///
@@ -906,26 +906,26 @@ void q_abstractsocket_on_skip_data(void* self, long long (*callback)(void*, long
 /// Base class method implementation
 ///
 /// @param self QAbstractSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_abstractsocket_super_skip_data(void* self, long long maxSize);
+int64_t q_abstractsocket_super_skip_data(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
 ///
 /// @param self QAbstractSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_abstractsocket_write_data(void* self, const char* data, long long lenVal);
+int64_t q_abstractsocket_write_data(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func(QAbstractSocket* self, const char* data, long long lenVal)
+/// @param callback int64_t func(QAbstractSocket* self, const char* data, int64_t lenVal)
 ///
-void q_abstractsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_abstractsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_write_data` instead
 ///
@@ -937,9 +937,9 @@ void q_abstractsocket_on_write_data(void* self, long long (*callback)(void*, con
 ///
 /// @param self QAbstractSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_abstractsocket_super_write_data(void* self, const char* data, long long lenVal);
+int64_t q_abstractsocket_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setSocketState)
 ///
@@ -1002,18 +1002,18 @@ void q_abstractsocket_super_set_socket_error(void* self, int32_t socketError);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalPort)
 ///
 /// @param self QAbstractSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_abstractsocket_set_local_port(void* self, unsigned short port);
+void q_abstractsocket_set_local_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalPort)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void func(QAbstractSocket* self, unsigned short port)
+/// @param callback void func(QAbstractSocket* self, uint16_t port)
 ///
-void q_abstractsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short));
+void q_abstractsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_set_local_port` instead
 ///
@@ -1024,9 +1024,9 @@ void q_abstractsocket_on_set_local_port(void* self, void (*callback)(void*, unsi
 /// Base class method implementation
 ///
 /// @param self QAbstractSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_abstractsocket_super_set_local_port(void* self, unsigned short port);
+void q_abstractsocket_super_set_local_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setLocalAddress)
 ///
@@ -1060,18 +1060,18 @@ void q_abstractsocket_super_set_local_address(void* self, void* address);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerPort)
 ///
 /// @param self QAbstractSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_abstractsocket_set_peer_port(void* self, unsigned short port);
+void q_abstractsocket_set_peer_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerPort)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QAbstractSocket*
-/// @param callback void func(QAbstractSocket* self, unsigned short port)
+/// @param callback void func(QAbstractSocket* self, uint16_t port)
 ///
-void q_abstractsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short));
+void q_abstractsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_set_peer_port` instead
 ///
@@ -1082,9 +1082,9 @@ void q_abstractsocket_on_set_peer_port(void* self, void (*callback)(void*, unsig
 /// Base class method implementation
 ///
 /// @param self QAbstractSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_abstractsocket_super_set_peer_port(void* self, unsigned short port);
+void q_abstractsocket_super_set_peer_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#setPeerAddress)
 ///
@@ -1166,26 +1166,26 @@ const char* q_abstractsocket_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// @param self QAbstractSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_abstractsocket_bind1(void* self, unsigned short port);
+bool q_abstractsocket_bind1(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// @param self QAbstractSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_abstractsocket_bind22(void* self, unsigned short port, int32_t mode);
+bool q_abstractsocket_bind22(void* self, uint16_t port, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#connectToHost)
 ///
 /// @param self QAbstractSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_abstractsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
+void q_abstractsocket_connect_to_host3(void* self, void* address, uint16_t port, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -1294,9 +1294,9 @@ void q_abstractsocket_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_read(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1305,9 +1305,9 @@ long long q_abstractsocket_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QAbstractSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_abstractsocket_read2(void* self, long long maxlen);
+char* q_abstractsocket_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1325,9 +1325,9 @@ char* q_abstractsocket_read_all(void* self);
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_read_line(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1377,9 +1377,9 @@ bool q_abstractsocket_is_transaction_started(void* self);
 ///
 /// @param self QAbstractSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_abstractsocket_write(void* self, const char* data, long long lenVal);
+int64_t q_abstractsocket_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -1388,7 +1388,7 @@ long long q_abstractsocket_write(void* self, const char* data, long long lenVal)
 /// @param self QAbstractSocket*
 /// @param data const char*
 ///
-long long q_abstractsocket_write2(void* self, const char* data);
+int64_t q_abstractsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1397,7 +1397,7 @@ long long q_abstractsocket_write2(void* self, const char* data);
 /// @param self QAbstractSocket*
 /// @param data char*
 ///
-long long q_abstractsocket_write3(void* self, char* data);
+int64_t q_abstractsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -1405,9 +1405,9 @@ long long q_abstractsocket_write3(void* self, char* data);
 ///
 /// @param self QAbstractSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_abstractsocket_peek(void* self, char* data, long long maxlen);
+int64_t q_abstractsocket_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1416,18 +1416,18 @@ long long q_abstractsocket_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QAbstractSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_abstractsocket_peek2(void* self, long long maxlen);
+char* q_abstractsocket_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QAbstractSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_abstractsocket_skip(void* self, long long maxSize);
+int64_t q_abstractsocket_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1506,18 +1506,18 @@ void q_abstractsocket_on_channel_ready_read(void* self, void (*callback)(void*, 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QAbstractSocket*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_abstractsocket_bytes_written(void* self, long long bytes);
+void q_abstractsocket_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void func(QAbstractSocket* self, long long bytes)
+/// @param callback void func(QAbstractSocket* self, int64_t bytes)
 ///
-void q_abstractsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_abstractsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1525,18 +1525,18 @@ void q_abstractsocket_on_bytes_written(void* self, void (*callback)(void*, long 
 ///
 /// @param self QAbstractSocket*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_abstractsocket_channel_bytes_written(void* self, int channel, long long bytes);
+void q_abstractsocket_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QAbstractSocket*
-/// @param callback void func(QAbstractSocket* self, int channel, long long bytes)
+/// @param callback void func(QAbstractSocket* self, int channel, int64_t bytes)
 ///
-void q_abstractsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_abstractsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1579,9 +1579,9 @@ void q_abstractsocket_on_read_channel_finished(void* self, void (*callback)(void
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QAbstractSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_abstractsocket_read_line1(void* self, long long maxlen);
+char* q_abstractsocket_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -2075,7 +2075,7 @@ void q_abstractsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_pos(void* self);
+int64_t q_abstractsocket_pos(void* self);
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_pos` instead
 ///
@@ -2089,7 +2089,7 @@ long long q_abstractsocket_pos(void* self);
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_super_pos(void* self);
+int64_t q_abstractsocket_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2098,9 +2098,9 @@ long long q_abstractsocket_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_abstractsocket_on_pos(void* self, long long (*callback)());
+void q_abstractsocket_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2110,7 +2110,7 @@ void q_abstractsocket_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_size(void* self);
+int64_t q_abstractsocket_size(void* self);
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_size` instead
 ///
@@ -2124,7 +2124,7 @@ long long q_abstractsocket_size(void* self);
 ///
 /// @param self QAbstractSocket*
 ///
-long long q_abstractsocket_super_size(void* self);
+int64_t q_abstractsocket_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2133,9 +2133,9 @@ long long q_abstractsocket_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_abstractsocket_on_size(void* self, long long (*callback)());
+void q_abstractsocket_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2144,9 +2144,9 @@ void q_abstractsocket_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_abstractsocket_seek(void* self, long long pos);
+bool q_abstractsocket_seek(void* self, int64_t pos);
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_seek` instead
 ///
@@ -2159,9 +2159,9 @@ bool q_abstractsocket_seek(void* self, long long pos);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_abstractsocket_super_seek(void* self, long long pos);
+bool q_abstractsocket_super_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -2170,9 +2170,9 @@ bool q_abstractsocket_super_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QAbstractSocket*
-/// @param callback bool func(QAbstractSocket* self, long long pos)
+/// @param callback bool func(QAbstractSocket* self, int64_t pos)
 ///
-void q_abstractsocket_on_seek(void* self, bool (*callback)(void*, long long));
+void q_abstractsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///

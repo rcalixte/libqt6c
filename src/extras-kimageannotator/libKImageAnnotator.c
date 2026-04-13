@@ -1228,7 +1228,7 @@ int32_t k_imageannotator__kimageannotator_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_imageannotator__kimageannotator_find(uint64_t param1) {
+QWidget* k_imageannotator__kimageannotator_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

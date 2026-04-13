@@ -83,14 +83,14 @@ const char* q_filedevice_file_name(void* self);
 ///
 /// @param self QFileDevice*
 ///
-long long q_filedevice_pos(void* self);
+int64_t q_filedevice_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#seek)
 ///
 /// @param self QFileDevice*
-/// @param offset long long
+/// @param offset int64_t
 ///
-bool q_filedevice_seek(void* self, long long offset);
+bool q_filedevice_seek(void* self, int64_t offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#atEnd)
 ///
@@ -108,14 +108,14 @@ bool q_filedevice_flush(void* self);
 ///
 /// @param self QFileDevice*
 ///
-long long q_filedevice_size(void* self);
+int64_t q_filedevice_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#resize)
 ///
 /// @param self QFileDevice*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool q_filedevice_resize(void* self, long long sz);
+bool q_filedevice_resize(void* self, int64_t sz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#permissions)
 ///
@@ -135,10 +135,10 @@ bool q_filedevice_set_permissions(void* self, int32_t permissionSpec);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self QFileDevice*
-/// @param offset long long
-/// @param size long long
+/// @param offset int64_t
+/// @param size int64_t
 ///
-unsigned char* q_filedevice_map(void* self, long long offset, long long size);
+unsigned char* q_filedevice_map(void* self, int64_t offset, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#unmap)
 ///
@@ -184,11 +184,11 @@ const char* q_filedevice_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self QFileDevice*
-/// @param offset long long
-/// @param size long long
+/// @param offset int64_t
+/// @param size int64_t
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
 ///
-unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int32_t flags);
+unsigned char* q_filedevice_map3(void* self, int64_t offset, int64_t size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -314,7 +314,7 @@ bool q_filedevice_reset(void* self);
 ///
 /// @param self QFileDevice*
 ///
-long long q_filedevice_bytes_available(void* self);
+int64_t q_filedevice_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -322,7 +322,7 @@ long long q_filedevice_bytes_available(void* self);
 ///
 /// @param self QFileDevice*
 ///
-long long q_filedevice_bytes_to_write(void* self);
+int64_t q_filedevice_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -330,9 +330,9 @@ long long q_filedevice_bytes_to_write(void* self);
 ///
 /// @param self QFileDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_filedevice_read(void* self, char* data, long long maxlen);
+int64_t q_filedevice_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -341,9 +341,9 @@ long long q_filedevice_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_filedevice_read2(void* self, long long maxlen);
+char* q_filedevice_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -361,9 +361,9 @@ char* q_filedevice_read_all(void* self);
 ///
 /// @param self QFileDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_filedevice_read_line(void* self, char* data, long long maxlen);
+int64_t q_filedevice_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -421,9 +421,9 @@ bool q_filedevice_is_transaction_started(void* self);
 ///
 /// @param self QFileDevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_filedevice_write(void* self, const char* data, long long lenVal);
+int64_t q_filedevice_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -432,7 +432,7 @@ long long q_filedevice_write(void* self, const char* data, long long lenVal);
 /// @param self QFileDevice*
 /// @param data const char*
 ///
-long long q_filedevice_write2(void* self, const char* data);
+int64_t q_filedevice_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -441,7 +441,7 @@ long long q_filedevice_write2(void* self, const char* data);
 /// @param self QFileDevice*
 /// @param data char*
 ///
-long long q_filedevice_write3(void* self, char* data);
+int64_t q_filedevice_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -449,9 +449,9 @@ long long q_filedevice_write3(void* self, char* data);
 ///
 /// @param self QFileDevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_filedevice_peek(void* self, char* data, long long maxlen);
+int64_t q_filedevice_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -460,18 +460,18 @@ long long q_filedevice_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_filedevice_peek2(void* self, long long maxlen);
+char* q_filedevice_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QFileDevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_filedevice_skip(void* self, long long maxSize);
+int64_t q_filedevice_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -568,18 +568,18 @@ void q_filedevice_on_channel_ready_read(void* self, void (*callback)(void*, int)
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QFileDevice*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_filedevice_bytes_written(void* self, long long bytes);
+void q_filedevice_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QFileDevice*
-/// @param callback void func(QFileDevice* self, long long bytes)
+/// @param callback void func(QFileDevice* self, int64_t bytes)
 ///
-void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -587,18 +587,18 @@ void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, long long
 ///
 /// @param self QFileDevice*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes);
+void q_filedevice_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QFileDevice*
-/// @param callback void func(QFileDevice* self, int channel, long long bytes)
+/// @param callback void func(QFileDevice* self, int channel, int64_t bytes)
 ///
-void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -641,9 +641,9 @@ void q_filedevice_on_read_channel_finished(void* self, void (*callback)(void*));
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QFileDevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_filedevice_read_line1(void* self, long long maxlen);
+char* q_filedevice_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///

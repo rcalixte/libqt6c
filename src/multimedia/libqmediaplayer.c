@@ -150,11 +150,11 @@ int32_t q_mediaplayer_media_status(void* self) {
     return QMediaPlayer_MediaStatus((QMediaPlayer*)self);
 }
 
-long long q_mediaplayer_duration(void* self) {
+int64_t q_mediaplayer_duration(void* self) {
     return QMediaPlayer_Duration((QMediaPlayer*)self);
 }
 
-long long q_mediaplayer_position(void* self) {
+int64_t q_mediaplayer_position(void* self) {
     return QMediaPlayer_Position((QMediaPlayer*)self);
 }
 
@@ -225,7 +225,7 @@ void q_mediaplayer_stop(void* self) {
     QMediaPlayer_Stop((QMediaPlayer*)self);
 }
 
-void q_mediaplayer_set_position(void* self, long long position) {
+void q_mediaplayer_set_position(void* self, int64_t position) {
     QMediaPlayer_SetPosition((QMediaPlayer*)self, position);
 }
 
@@ -265,19 +265,19 @@ void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, i
     QMediaPlayer_Connect_MediaStatusChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-void q_mediaplayer_duration_changed(void* self, long long duration) {
+void q_mediaplayer_duration_changed(void* self, int64_t duration) {
     QMediaPlayer_DurationChanged((QMediaPlayer*)self, duration);
 }
 
-void q_mediaplayer_on_duration_changed(void* self, void (*callback)(void*, long long)) {
+void q_mediaplayer_on_duration_changed(void* self, void (*callback)(void*, int64_t)) {
     QMediaPlayer_Connect_DurationChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 
-void q_mediaplayer_position_changed(void* self, long long position) {
+void q_mediaplayer_position_changed(void* self, int64_t position) {
     QMediaPlayer_PositionChanged((QMediaPlayer*)self, position);
 }
 
-void q_mediaplayer_on_position_changed(void* self, void (*callback)(void*, long long)) {
+void q_mediaplayer_on_position_changed(void* self, void (*callback)(void*, int64_t)) {
     QMediaPlayer_Connect_PositionChanged((QMediaPlayer*)self, (intptr_t)callback);
 }
 

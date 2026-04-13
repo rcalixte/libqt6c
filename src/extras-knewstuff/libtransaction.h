@@ -50,9 +50,9 @@ KNSCore__Transaction* k_nscore__transaction_install(void* engine, void* entry);
 ///
 /// @param engine KNSCore__EngineBase*
 /// @param entry KNSCore__Entry*
-/// @param linkId unsigned char
+/// @param linkId uint8_t
 ///
-KNSCore__Transaction* k_nscore__transaction_install_link_id(void* engine, void* entry, unsigned char linkId);
+KNSCore__Transaction* k_nscore__transaction_install_link_id(void* engine, void* entry, uint8_t linkId);
 
 /// [Upstream resources](https://api.kde.org/knscore-transaction.html#installLatest)
 ///

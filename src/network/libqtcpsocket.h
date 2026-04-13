@@ -140,18 +140,18 @@ const char* q_tcpsocket_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QTcpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_tcpsocket_bind2(void* self, int32_t addr, unsigned short port);
+bool q_tcpsocket_bind2(void* self, int32_t addr, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpsocket.html#bind)
 ///
 /// @param self QTcpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_tcpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode);
+bool q_tcpsocket_bind3(void* self, int32_t addr, uint16_t port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -178,9 +178,9 @@ void q_tcpsocket_set_pause_mode(void* self, int32_t pauseMode);
 ///
 /// @param self QTcpSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_tcpsocket_connect_to_host2(void* self, void* address, unsigned short port);
+void q_tcpsocket_connect_to_host2(void* self, void* address, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -196,7 +196,7 @@ bool q_tcpsocket_is_valid(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-unsigned short q_tcpsocket_local_port(void* self);
+uint16_t q_tcpsocket_local_port(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -212,7 +212,7 @@ QHostAddress* q_tcpsocket_local_address(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-unsigned short q_tcpsocket_peer_port(void* self);
+uint16_t q_tcpsocket_peer_port(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -238,7 +238,7 @@ const char* q_tcpsocket_peer_name(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_read_buffer_size(void* self);
+int64_t q_tcpsocket_read_buffer_size(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -433,19 +433,19 @@ void q_tcpsocket_on_proxy_authentication_required(void* self, void (*callback)(v
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// @param self QTcpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_tcpsocket_bind1(void* self, unsigned short port);
+bool q_tcpsocket_bind1(void* self, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// @param self QTcpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_tcpsocket_bind22(void* self, unsigned short port, int32_t mode);
+bool q_tcpsocket_bind22(void* self, uint16_t port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -453,10 +453,10 @@ bool q_tcpsocket_bind22(void* self, unsigned short port, int32_t mode);
 ///
 /// @param self QTcpSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_tcpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
+void q_tcpsocket_connect_to_host3(void* self, void* address, uint16_t port, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -565,9 +565,9 @@ void q_tcpsocket_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_read(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -576,9 +576,9 @@ long long q_tcpsocket_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTcpSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_tcpsocket_read2(void* self, long long maxlen);
+char* q_tcpsocket_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -596,9 +596,9 @@ char* q_tcpsocket_read_all(void* self);
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_read_line(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -648,9 +648,9 @@ bool q_tcpsocket_is_transaction_started(void* self);
 ///
 /// @param self QTcpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_tcpsocket_write(void* self, const char* data, long long lenVal);
+int64_t q_tcpsocket_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -659,7 +659,7 @@ long long q_tcpsocket_write(void* self, const char* data, long long lenVal);
 /// @param self QTcpSocket*
 /// @param data const char*
 ///
-long long q_tcpsocket_write2(void* self, const char* data);
+int64_t q_tcpsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -668,7 +668,7 @@ long long q_tcpsocket_write2(void* self, const char* data);
 /// @param self QTcpSocket*
 /// @param data char*
 ///
-long long q_tcpsocket_write3(void* self, char* data);
+int64_t q_tcpsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -676,9 +676,9 @@ long long q_tcpsocket_write3(void* self, char* data);
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_peek(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -687,18 +687,18 @@ long long q_tcpsocket_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTcpSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_tcpsocket_peek2(void* self, long long maxlen);
+char* q_tcpsocket_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QTcpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_tcpsocket_skip(void* self, long long maxSize);
+int64_t q_tcpsocket_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -777,18 +777,18 @@ void q_tcpsocket_on_channel_ready_read(void* self, void (*callback)(void*, int))
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QTcpSocket*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_tcpsocket_bytes_written(void* self, long long bytes);
+void q_tcpsocket_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QTcpSocket*
-/// @param callback void func(QTcpSocket* self, long long bytes)
+/// @param callback void func(QTcpSocket* self, int64_t bytes)
 ///
-void q_tcpsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_tcpsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -796,18 +796,18 @@ void q_tcpsocket_on_bytes_written(void* self, void (*callback)(void*, long long)
 ///
 /// @param self QTcpSocket*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_tcpsocket_channel_bytes_written(void* self, int channel, long long bytes);
+void q_tcpsocket_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QTcpSocket*
-/// @param callback void func(QTcpSocket* self, int channel, long long bytes)
+/// @param callback void func(QTcpSocket* self, int channel, int64_t bytes)
 ///
-void q_tcpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_tcpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -850,9 +850,9 @@ void q_tcpsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTcpSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_tcpsocket_read_line1(void* self, long long maxlen);
+char* q_tcpsocket_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1344,11 +1344,11 @@ void q_tcpsocket_on_resume(void* self, void (*callback)());
 ///
 /// @param self QTcpSocket*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
-void q_tcpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
+void q_tcpsocket_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_connect_to_host` instead
 ///
@@ -1362,11 +1362,11 @@ void q_tcpsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 ///
 /// @param self QTcpSocket*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
-void q_tcpsocket_super_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
+void q_tcpsocket_super_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1375,9 +1375,9 @@ void q_tcpsocket_super_connect_to_host(void* self, const char* hostName, unsigne
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback void func(QTcpSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
+/// @param callback void func(QTcpSocket* self, const char* hostName, uint16_t port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
 ///
-void q_tcpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
+void q_tcpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, uint16_t, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1422,7 +1422,7 @@ void q_tcpsocket_on_disconnect_from_host(void* self, void (*callback)());
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_bytes_available(void* self);
+int64_t q_tcpsocket_bytes_available(void* self);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_bytes_available` instead
 ///
@@ -1436,7 +1436,7 @@ long long q_tcpsocket_bytes_available(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_super_bytes_available(void* self);
+int64_t q_tcpsocket_super_bytes_available(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1445,9 +1445,9 @@ long long q_tcpsocket_super_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_tcpsocket_on_bytes_available(void* self, long long (*callback)());
+void q_tcpsocket_on_bytes_available(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractSocket
 ///
@@ -1457,7 +1457,7 @@ void q_tcpsocket_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_bytes_to_write(void* self);
+int64_t q_tcpsocket_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_bytes_to_write` instead
 ///
@@ -1471,7 +1471,7 @@ long long q_tcpsocket_bytes_to_write(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_super_bytes_to_write(void* self);
+int64_t q_tcpsocket_super_bytes_to_write(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1480,9 +1480,9 @@ long long q_tcpsocket_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_tcpsocket_on_bytes_to_write(void* self, long long (*callback)());
+void q_tcpsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractSocket
 ///
@@ -1491,9 +1491,9 @@ void q_tcpsocket_on_bytes_to_write(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_tcpsocket_set_read_buffer_size(void* self, long long size);
+void q_tcpsocket_set_read_buffer_size(void* self, int64_t size);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_set_read_buffer_size` instead
 ///
@@ -1506,9 +1506,9 @@ void q_tcpsocket_set_read_buffer_size(void* self, long long size);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_tcpsocket_super_set_read_buffer_size(void* self, long long size);
+void q_tcpsocket_super_set_read_buffer_size(void* self, int64_t size);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1517,9 +1517,9 @@ void q_tcpsocket_super_set_read_buffer_size(void* self, long long size);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback void func(QTcpSocket* self, long long size)
+/// @param callback void func(QTcpSocket* self, int64_t size)
 ///
-void q_tcpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long));
+void q_tcpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1899,9 +1899,9 @@ void q_tcpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, in
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_read_data(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_read_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_read_data` instead
 ///
@@ -1915,9 +1915,9 @@ long long q_tcpsocket_read_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_super_read_data(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1926,9 +1926,9 @@ long long q_tcpsocket_super_read_data(void* self, char* data, long long maxlen);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func(QTcpSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QTcpSocket* self, char* data, int64_t maxlen)
 ///
-void q_tcpsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_tcpsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1938,9 +1938,9 @@ void q_tcpsocket_on_read_data(void* self, long long (*callback)(void*, char*, lo
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_read_line_data` instead
 ///
@@ -1954,9 +1954,9 @@ long long q_tcpsocket_read_line_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QTcpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_tcpsocket_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_tcpsocket_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1965,9 +1965,9 @@ long long q_tcpsocket_super_read_line_data(void* self, char* data, long long max
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func(QTcpSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QTcpSocket* self, char* data, int64_t maxlen)
 ///
-void q_tcpsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_tcpsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1976,9 +1976,9 @@ void q_tcpsocket_on_read_line_data(void* self, long long (*callback)(void*, char
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_tcpsocket_skip_data(void* self, long long maxSize);
+int64_t q_tcpsocket_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_skip_data` instead
 ///
@@ -1991,9 +1991,9 @@ long long q_tcpsocket_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_tcpsocket_super_skip_data(void* self, long long maxSize);
+int64_t q_tcpsocket_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2002,9 +2002,9 @@ long long q_tcpsocket_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func(QTcpSocket* self, long long maxSize)
+/// @param callback int64_t func(QTcpSocket* self, int64_t maxSize)
 ///
-void q_tcpsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_tcpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2014,9 +2014,9 @@ void q_tcpsocket_on_skip_data(void* self, long long (*callback)(void*, long long
 ///
 /// @param self QTcpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_tcpsocket_write_data(void* self, const char* data, long long lenVal);
+int64_t q_tcpsocket_write_data(void* self, const char* data, int64_t lenVal);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_write_data` instead
 ///
@@ -2030,9 +2030,9 @@ long long q_tcpsocket_write_data(void* self, const char* data, long long lenVal)
 ///
 /// @param self QTcpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_tcpsocket_super_write_data(void* self, const char* data, long long lenVal);
+int64_t q_tcpsocket_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2041,9 +2041,9 @@ long long q_tcpsocket_super_write_data(void* self, const char* data, long long l
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func(QTcpSocket* self, const char* data, long long lenVal)
+/// @param callback int64_t func(QTcpSocket* self, const char* data, int64_t lenVal)
 ///
-void q_tcpsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_tcpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -2090,7 +2090,7 @@ void q_tcpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_pos(void* self);
+int64_t q_tcpsocket_pos(void* self);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_pos` instead
 ///
@@ -2104,7 +2104,7 @@ long long q_tcpsocket_pos(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_super_pos(void* self);
+int64_t q_tcpsocket_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2113,9 +2113,9 @@ long long q_tcpsocket_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_tcpsocket_on_pos(void* self, long long (*callback)());
+void q_tcpsocket_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2125,7 +2125,7 @@ void q_tcpsocket_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_size(void* self);
+int64_t q_tcpsocket_size(void* self);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_size` instead
 ///
@@ -2139,7 +2139,7 @@ long long q_tcpsocket_size(void* self);
 ///
 /// @param self QTcpSocket*
 ///
-long long q_tcpsocket_super_size(void* self);
+int64_t q_tcpsocket_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2148,9 +2148,9 @@ long long q_tcpsocket_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_tcpsocket_on_size(void* self, long long (*callback)());
+void q_tcpsocket_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2159,9 +2159,9 @@ void q_tcpsocket_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_tcpsocket_seek(void* self, long long pos);
+bool q_tcpsocket_seek(void* self, int64_t pos);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_seek` instead
 ///
@@ -2174,9 +2174,9 @@ bool q_tcpsocket_seek(void* self, long long pos);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_tcpsocket_super_seek(void* self, long long pos);
+bool q_tcpsocket_super_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -2185,9 +2185,9 @@ bool q_tcpsocket_super_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback bool func(QTcpSocket* self, long long pos)
+/// @param callback bool func(QTcpSocket* self, int64_t pos)
 ///
-void q_tcpsocket_on_seek(void* self, bool (*callback)(void*, long long));
+void q_tcpsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -2636,9 +2636,9 @@ void q_tcpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_tcpsocket_set_local_port(void* self, unsigned short port);
+void q_tcpsocket_set_local_port(void* self, uint16_t port);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_set_local_port` instead
 ///
@@ -2651,9 +2651,9 @@ void q_tcpsocket_set_local_port(void* self, unsigned short port);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_tcpsocket_super_set_local_port(void* self, unsigned short port);
+void q_tcpsocket_super_set_local_port(void* self, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2662,9 +2662,9 @@ void q_tcpsocket_super_set_local_port(void* self, unsigned short port);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback void func(QTcpSocket* self, unsigned short port)
+/// @param callback void func(QTcpSocket* self, uint16_t port)
 ///
-void q_tcpsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short));
+void q_tcpsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2710,9 +2710,9 @@ void q_tcpsocket_on_set_local_address(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_tcpsocket_set_peer_port(void* self, unsigned short port);
+void q_tcpsocket_set_peer_port(void* self, uint16_t port);
 
 /// @warning DEPRECATED: Use `q_tcpsocket_super_set_peer_port` instead
 ///
@@ -2725,9 +2725,9 @@ void q_tcpsocket_set_peer_port(void* self, unsigned short port);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_tcpsocket_super_set_peer_port(void* self, unsigned short port);
+void q_tcpsocket_super_set_peer_port(void* self, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2736,9 +2736,9 @@ void q_tcpsocket_super_set_peer_port(void* self, unsigned short port);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTcpSocket*
-/// @param callback void func(QTcpSocket* self, unsigned short port)
+/// @param callback void func(QTcpSocket* self, uint16_t port)
 ///
-void q_tcpsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short));
+void q_tcpsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t));
 
 /// Inherited from QAbstractSocket
 ///

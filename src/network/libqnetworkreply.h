@@ -55,14 +55,14 @@ bool q_networkreply_is_sequential(void* self);
 ///
 /// @param self QNetworkReply*
 ///
-long long q_networkreply_read_buffer_size(void* self);
+int64_t q_networkreply_read_buffer_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#setReadBufferSize)
 ///
 /// @param self QNetworkReply*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_networkreply_set_read_buffer_size(void* self, long long size);
+void q_networkreply_set_read_buffer_size(void* self, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#manager)
 ///
@@ -331,32 +331,32 @@ void q_networkreply_on_redirect_allowed(void* self, void (*callback)(void*));
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#uploadProgress)
 ///
 /// @param self QNetworkReply*
-/// @param bytesSent long long
-/// @param bytesTotal long long
+/// @param bytesSent int64_t
+/// @param bytesTotal int64_t
 ///
-void q_networkreply_upload_progress(void* self, long long bytesSent, long long bytesTotal);
+void q_networkreply_upload_progress(void* self, int64_t bytesSent, int64_t bytesTotal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#uploadProgress)
 ///
 /// @param self QNetworkReply*
-/// @param callback void func(QNetworkReply* self, long long bytesSent, long long bytesTotal)
+/// @param callback void func(QNetworkReply* self, int64_t bytesSent, int64_t bytesTotal)
 ///
-void q_networkreply_on_upload_progress(void* self, void (*callback)(void*, long long, long long));
+void q_networkreply_on_upload_progress(void* self, void (*callback)(void*, int64_t, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#downloadProgress)
 ///
 /// @param self QNetworkReply*
-/// @param bytesReceived long long
-/// @param bytesTotal long long
+/// @param bytesReceived int64_t
+/// @param bytesTotal int64_t
 ///
-void q_networkreply_download_progress(void* self, long long bytesReceived, long long bytesTotal);
+void q_networkreply_download_progress(void* self, int64_t bytesReceived, int64_t bytesTotal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkreply.html#downloadProgress)
 ///
 /// @param self QNetworkReply*
-/// @param callback void func(QNetworkReply* self, long long bytesReceived, long long bytesTotal)
+/// @param callback void func(QNetworkReply* self, int64_t bytesReceived, int64_t bytesTotal)
 ///
-void q_networkreply_on_download_progress(void* self, void (*callback)(void*, long long, long long));
+void q_networkreply_on_download_progress(void* self, void (*callback)(void*, int64_t, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -493,7 +493,7 @@ bool q_networkreply_open(void* self, int32_t mode);
 ///
 /// @param self QNetworkReply*
 ///
-long long q_networkreply_pos(void* self);
+int64_t q_networkreply_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -501,16 +501,16 @@ long long q_networkreply_pos(void* self);
 ///
 /// @param self QNetworkReply*
 ///
-long long q_networkreply_size(void* self);
+int64_t q_networkreply_size(void* self);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
 /// @param self QNetworkReply*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_networkreply_seek(void* self, long long pos);
+bool q_networkreply_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -534,7 +534,7 @@ bool q_networkreply_reset(void* self);
 ///
 /// @param self QNetworkReply*
 ///
-long long q_networkreply_bytes_available(void* self);
+int64_t q_networkreply_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -542,7 +542,7 @@ long long q_networkreply_bytes_available(void* self);
 ///
 /// @param self QNetworkReply*
 ///
-long long q_networkreply_bytes_to_write(void* self);
+int64_t q_networkreply_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -550,9 +550,9 @@ long long q_networkreply_bytes_to_write(void* self);
 ///
 /// @param self QNetworkReply*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_networkreply_read(void* self, char* data, long long maxlen);
+int64_t q_networkreply_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -561,9 +561,9 @@ long long q_networkreply_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkReply*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_networkreply_read2(void* self, long long maxlen);
+char* q_networkreply_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -581,9 +581,9 @@ char* q_networkreply_read_all(void* self);
 ///
 /// @param self QNetworkReply*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_networkreply_read_line(void* self, char* data, long long maxlen);
+int64_t q_networkreply_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -641,9 +641,9 @@ bool q_networkreply_is_transaction_started(void* self);
 ///
 /// @param self QNetworkReply*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_networkreply_write(void* self, const char* data, long long lenVal);
+int64_t q_networkreply_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -652,7 +652,7 @@ long long q_networkreply_write(void* self, const char* data, long long lenVal);
 /// @param self QNetworkReply*
 /// @param data const char*
 ///
-long long q_networkreply_write2(void* self, const char* data);
+int64_t q_networkreply_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -661,7 +661,7 @@ long long q_networkreply_write2(void* self, const char* data);
 /// @param self QNetworkReply*
 /// @param data char*
 ///
-long long q_networkreply_write3(void* self, char* data);
+int64_t q_networkreply_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -669,9 +669,9 @@ long long q_networkreply_write3(void* self, char* data);
 ///
 /// @param self QNetworkReply*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_networkreply_peek(void* self, char* data, long long maxlen);
+int64_t q_networkreply_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -680,18 +680,18 @@ long long q_networkreply_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkReply*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_networkreply_peek2(void* self, long long maxlen);
+char* q_networkreply_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QNetworkReply*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_networkreply_skip(void* self, long long maxSize);
+int64_t q_networkreply_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -788,18 +788,18 @@ void q_networkreply_on_channel_ready_read(void* self, void (*callback)(void*, in
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QNetworkReply*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_networkreply_bytes_written(void* self, long long bytes);
+void q_networkreply_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QNetworkReply*
-/// @param callback void func(QNetworkReply* self, long long bytes)
+/// @param callback void func(QNetworkReply* self, int64_t bytes)
 ///
-void q_networkreply_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_networkreply_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -807,18 +807,18 @@ void q_networkreply_on_bytes_written(void* self, void (*callback)(void*, long lo
 ///
 /// @param self QNetworkReply*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_networkreply_channel_bytes_written(void* self, int channel, long long bytes);
+void q_networkreply_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QNetworkReply*
-/// @param callback void func(QNetworkReply* self, int channel, long long bytes)
+/// @param callback void func(QNetworkReply* self, int channel, int64_t bytes)
 ///
-void q_networkreply_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_networkreply_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -861,9 +861,9 @@ void q_networkreply_on_read_channel_finished(void* self, void (*callback)(void*)
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QNetworkReply*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_networkreply_read_line1(void* self, long long maxlen);
+char* q_networkreply_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///

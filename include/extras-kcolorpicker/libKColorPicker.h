@@ -2662,9 +2662,9 @@ int32_t k_colorpicker__kcolorpicker_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_colorpicker__kcolorpicker_find(uint64_t param1);
+QWidget* k_colorpicker__kcolorpicker_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

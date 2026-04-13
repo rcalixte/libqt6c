@@ -1408,7 +1408,7 @@ int32_t q_wizard_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_wizard_find(uint64_t param1) {
+QWidget* q_wizard_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -3743,7 +3743,7 @@ int32_t q_wizardpage_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_wizardpage_find(uint64_t param1) {
+QWidget* q_wizardpage_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

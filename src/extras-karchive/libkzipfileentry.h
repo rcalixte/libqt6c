@@ -23,12 +23,12 @@
 /// @param group const char*
 /// @param symlink const char*
 /// @param path const char*
-/// @param start long long
-/// @param uncompressedSize long long
+/// @param start int64_t
+/// @param uncompressedSize int64_t
 /// @param encoding int
-/// @param compressedSize long long
+/// @param compressedSize int64_t
 ///
-KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, const char* path, long long start, long long uncompressedSize, int encoding, long long compressedSize);
+KZipFileEntry* k_zipfileentry_new(void* zip, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, const char* path, int64_t start, int64_t uncompressedSize, int encoding, int64_t compressedSize);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html)
 
@@ -48,40 +48,40 @@ int32_t k_zipfileentry_encoding(void* self);
 ///
 /// @param self KZipFileEntry*
 ///
-long long k_zipfileentry_compressed_size(void* self);
+int64_t k_zipfileentry_compressed_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#setCompressedSize)
 ///
 /// @param self KZipFileEntry*
-/// @param compressedSize long long
+/// @param compressedSize int64_t
 ///
-void k_zipfileentry_set_compressed_size(void* self, long long compressedSize);
+void k_zipfileentry_set_compressed_size(void* self, int64_t compressedSize);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#setHeaderStart)
 ///
 /// @param self KZipFileEntry*
-/// @param headerstart long long
+/// @param headerstart int64_t
 ///
-void k_zipfileentry_set_header_start(void* self, long long headerstart);
+void k_zipfileentry_set_header_start(void* self, int64_t headerstart);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#headerStart)
 ///
 /// @param self KZipFileEntry*
 ///
-long long k_zipfileentry_header_start(void* self);
+int64_t k_zipfileentry_header_start(void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#crc32)
 ///
 /// @param self KZipFileEntry*
 ///
-uint64_t k_zipfileentry_crc32(void* self);
+uintptr_t k_zipfileentry_crc32(void* self);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#setCRC32)
 ///
 /// @param self KZipFileEntry*
-/// @param crc32 uint64_t
+/// @param crc32 uintptr_t
 ///
-void k_zipfileentry_set_c_r_c32(void* self, uint64_t crc32);
+void k_zipfileentry_set_c_r_c32(void* self, uintptr_t crc32);
 
 /// [Upstream resources](https://api.kde.org/kzipfileentry.html#path)
 ///
@@ -153,7 +153,7 @@ QIODevice* k_zipfileentry_super_create_device(void* self);
 ///
 /// @param self KZipFileEntry*
 ///
-long long k_zipfileentry_position(void* self);
+int64_t k_zipfileentry_position(void* self);
 
 /// Inherited from KArchiveFile
 ///
@@ -161,16 +161,16 @@ long long k_zipfileentry_position(void* self);
 ///
 /// @param self KZipFileEntry*
 ///
-long long k_zipfileentry_size(void* self);
+int64_t k_zipfileentry_size(void* self);
 
 /// Inherited from KArchiveFile
 ///
 /// [Upstream resources](https://api.kde.org/karchivefile.html#setSize)
 ///
 /// @param self KZipFileEntry*
-/// @param s long long
+/// @param s int64_t
 ///
-void k_zipfileentry_set_size(void* self, long long s);
+void k_zipfileentry_set_size(void* self, int64_t s);
 
 /// Inherited from KArchiveFile
 ///

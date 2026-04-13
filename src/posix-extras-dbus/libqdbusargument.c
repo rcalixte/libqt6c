@@ -33,7 +33,7 @@ QDBusArgument* q_dbusargument_operator_shift_left3(void* self, short arg) {
     return QDBusArgument_OperatorShiftLeft3((QDBusArgument*)self, arg);
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left4(void* self, unsigned short arg) {
+QDBusArgument* q_dbusargument_operator_shift_left4(void* self, uint16_t arg) {
     return QDBusArgument_OperatorShiftLeft4((QDBusArgument*)self, arg);
 }
 
@@ -49,7 +49,7 @@ QDBusArgument* q_dbusargument_operator_shift_left7(void* self, long long arg) {
     return QDBusArgument_OperatorShiftLeft7((QDBusArgument*)self, arg);
 }
 
-QDBusArgument* q_dbusargument_operator_shift_left8(void* self, uint64_t arg) {
+QDBusArgument* q_dbusargument_operator_shift_left8(void* self, uintptr_t arg) {
     return QDBusArgument_OperatorShiftLeft8((QDBusArgument*)self, arg);
 }
 
@@ -180,7 +180,7 @@ const QDBusArgument* q_dbusargument_operator_shift_right7(void* self, long long*
     return QDBusArgument_OperatorShiftRight7((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right8(void* self, uint64_t* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right8(void* self, uintptr_t* arg) {
     return QDBusArgument_OperatorShiftRight8((QDBusArgument*)self, (unsigned long long*)arg);
 }
 

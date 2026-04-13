@@ -77,7 +77,7 @@ bool k_solid__storagedrive_is_hotpluggable(void* self);
 ///
 /// @param self Solid__StorageDrive*
 ///
-uint64_t k_solid__storagedrive_size(void* self);
+uintptr_t k_solid__storagedrive_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/solid-storagedrive.html#isInUse)
 ///

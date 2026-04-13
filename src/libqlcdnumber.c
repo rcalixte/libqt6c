@@ -1222,7 +1222,7 @@ int32_t q_lcdnumber_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_lcdnumber_find(uint64_t param1) {
+QWidget* q_lcdnumber_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

@@ -181,23 +181,23 @@ QDebug* q_debug_operator_shift_left9(void* self, uint32_t t);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QDebug*
+/// @param t long
+///
+QDebug* q_debug_operator_shift_left10(void* self, long t);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
+///
+/// @param self QDebug*
+/// @param t uintptr_t
+///
+QDebug* q_debug_operator_shift_left11(void* self, uintptr_t t);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
+///
+/// @param self QDebug*
 /// @param t int64_t
 ///
-QDebug* q_debug_operator_shift_left10(void* self, int64_t t);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
-///
-/// @param self QDebug*
-/// @param t uint64_t
-///
-QDebug* q_debug_operator_shift_left11(void* self, uint64_t t);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
-///
-/// @param self QDebug*
-/// @param t long long
-///
-QDebug* q_debug_operator_shift_left12(void* self, long long t);
+QDebug* q_debug_operator_shift_left12(void* self, int64_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///

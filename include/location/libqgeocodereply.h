@@ -155,13 +155,13 @@ libqt_list q_geocodereply_locations(void* self);
 ///
 /// @param self QGeoCodeReply*
 ///
-int64_t q_geocodereply_limit(void* self);
+intptr_t q_geocodereply_limit(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#offset)
 ///
 /// @param self QGeoCodeReply*
 ///
-int64_t q_geocodereply_offset(void* self);
+intptr_t q_geocodereply_offset(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#abort)
 ///
@@ -380,18 +380,18 @@ void q_geocodereply_super_set_locations(void* self, libqt_list locations);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
 ///
 /// @param self QGeoCodeReply*
-/// @param limit int64_t
+/// @param limit intptr_t
 ///
-void q_geocodereply_set_limit(void* self, int64_t limit);
+void q_geocodereply_set_limit(void* self, intptr_t limit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setLimit)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, int64_t limit)
+/// @param callback void func(QGeoCodeReply* self, intptr_t limit)
 ///
-void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, int64_t));
+void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, intptr_t));
 
 /// @warning DEPRECATED: Use `q_geocodereply_super_set_limit` instead
 ///
@@ -402,25 +402,25 @@ void q_geocodereply_on_set_limit(void* self, void (*callback)(void*, int64_t));
 /// Base class method implementation
 ///
 /// @param self QGeoCodeReply*
-/// @param limit int64_t
+/// @param limit intptr_t
 ///
-void q_geocodereply_super_set_limit(void* self, int64_t limit);
+void q_geocodereply_super_set_limit(void* self, intptr_t limit);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setOffset)
 ///
 /// @param self QGeoCodeReply*
-/// @param offset int64_t
+/// @param offset intptr_t
 ///
-void q_geocodereply_set_offset(void* self, int64_t offset);
+void q_geocodereply_set_offset(void* self, intptr_t offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeocodereply.html#setOffset)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QGeoCodeReply*
-/// @param callback void func(QGeoCodeReply* self, int64_t offset)
+/// @param callback void func(QGeoCodeReply* self, intptr_t offset)
 ///
-void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, int64_t));
+void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, intptr_t));
 
 /// @warning DEPRECATED: Use `q_geocodereply_super_set_offset` instead
 ///
@@ -431,9 +431,9 @@ void q_geocodereply_on_set_offset(void* self, void (*callback)(void*, int64_t));
 /// Base class method implementation
 ///
 /// @param self QGeoCodeReply*
-/// @param offset int64_t
+/// @param offset intptr_t
 ///
-void q_geocodereply_super_set_offset(void* self, int64_t offset);
+void q_geocodereply_super_set_offset(void* self, intptr_t offset);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

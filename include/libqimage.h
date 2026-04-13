@@ -65,10 +65,10 @@ QImage* q_image_new5(unsigned char* data, int width, int height, int32_t format)
 /// @param data unsigned char*
 /// @param width int
 /// @param height int
-/// @param bytesPerLine int64_t
+/// @param bytesPerLine intptr_t
 /// @param format enum QImage__Format
 ///
-QImage* q_image_new6(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format);
+QImage* q_image_new6(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -77,10 +77,10 @@ QImage* q_image_new6(unsigned char* data, int width, int height, int64_t bytesPe
 /// @param data unsigned char*
 /// @param width int
 /// @param height int
-/// @param bytesPerLine int64_t
+/// @param bytesPerLine intptr_t
 /// @param format enum QImage__Format
 ///
-QImage* q_image_new7(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format);
+QImage* q_image_new7(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -163,11 +163,11 @@ QImage* q_image_new14(unsigned char* data, int width, int height, int32_t format
 /// @param data unsigned char*
 /// @param width int
 /// @param height int
-/// @param bytesPerLine int64_t
+/// @param bytesPerLine intptr_t
 /// @param format enum QImage__Format
 /// @param cleanupFunction void func(void* param1)
 ///
-QImage* q_image_new15(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1));
+QImage* q_image_new15(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -176,12 +176,12 @@ QImage* q_image_new15(unsigned char* data, int width, int height, int64_t bytesP
 /// @param data unsigned char*
 /// @param width int
 /// @param height int
-/// @param bytesPerLine int64_t
+/// @param bytesPerLine intptr_t
 /// @param format enum QImage__Format
 /// @param cleanupFunction void func(void* param1)
 /// @param cleanupInfo void*
 ///
-QImage* q_image_new16(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
+QImage* q_image_new16(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -190,11 +190,11 @@ QImage* q_image_new16(unsigned char* data, int width, int height, int64_t bytesP
 /// @param data unsigned char*
 /// @param width int
 /// @param height int
-/// @param bytesPerLine int64_t
+/// @param bytesPerLine intptr_t
 /// @param format enum QImage__Format
 /// @param cleanupFunction void func(void* param1)
 ///
-QImage* q_image_new17(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1));
+QImage* q_image_new17(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -203,12 +203,12 @@ QImage* q_image_new17(unsigned char* data, int width, int height, int64_t bytesP
 /// @param data unsigned char*
 /// @param width int
 /// @param height int
-/// @param bytesPerLine int64_t
+/// @param bytesPerLine intptr_t
 /// @param format enum QImage__Format
 /// @param cleanupFunction void func(void* param1)
 /// @param cleanupInfo void*
 ///
-QImage* q_image_new18(unsigned char* data, int width, int height, int64_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
+QImage* q_image_new18(unsigned char* data, int width, int height, intptr_t bytesPerLine, int32_t format, void (*cleanupFunction)(void* funcparam1), void* cleanupInfo);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html)
 
@@ -456,7 +456,7 @@ const unsigned char* q_image_const_bits(void* self);
 ///
 /// @param self QImage*
 ///
-int64_t q_image_size_in_bytes(void* self);
+intptr_t q_image_size_in_bytes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#scanLine)
 ///
@@ -483,7 +483,7 @@ const unsigned char* q_image_const_scan_line(void* self, int param1);
 ///
 /// @param self QImage*
 ///
-int64_t q_image_bytes_per_line(void* self);
+intptr_t q_image_bytes_per_line(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#valid)
 ///
@@ -887,7 +887,7 @@ QImage* q_image_from_data3(char* data);
 ///
 /// @param self QImage*
 ///
-long long q_image_cache_key(void* self);
+int64_t q_image_cache_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qimage.html#paintEngine)
 ///

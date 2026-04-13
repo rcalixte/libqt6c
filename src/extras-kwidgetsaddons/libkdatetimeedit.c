@@ -1475,7 +1475,7 @@ int32_t k_datetimeedit_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_datetimeedit_find(uint64_t param1) {
+QWidget* k_datetimeedit_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

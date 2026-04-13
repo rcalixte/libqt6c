@@ -42,9 +42,9 @@ const char* k_io__filejob_tr(const char* s);
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#read)
 ///
 /// @param self KIO__FileJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__filejob_read(void* self, uint64_t size);
+void k_io__filejob_read(void* self, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#write)
 ///
@@ -62,22 +62,22 @@ void k_io__filejob_close(void* self);
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#seek)
 ///
 /// @param self KIO__FileJob*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-void k_io__filejob_seek(void* self, uint64_t offset);
+void k_io__filejob_seek(void* self, uintptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#truncate)
 ///
 /// @param self KIO__FileJob*
-/// @param length uint64_t
+/// @param length uintptr_t
 ///
-void k_io__filejob_truncate(void* self, uint64_t length);
+void k_io__filejob_truncate(void* self, uintptr_t length);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#size)
 ///
 /// @param self KIO__FileJob*
 ///
-uint64_t k_io__filejob_size(void* self);
+uintptr_t k_io__filejob_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#data)
 ///
@@ -142,16 +142,16 @@ void k_io__filejob_on_open(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KIO__FileJob*
 /// @param job KIO__Job*
-/// @param written uint64_t
+/// @param written uintptr_t
 ///
-void k_io__filejob_written(void* self, void* job, uint64_t written);
+void k_io__filejob_written(void* self, void* job, uintptr_t written);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#written)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KIO__Job* job, uint64_t written)
+/// @param callback void func(KIO__FileJob* self, KIO__Job* job, uintptr_t written)
 ///
-void k_io__filejob_on_written(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_written(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#fileClosed)
 ///
@@ -171,31 +171,31 @@ void k_io__filejob_on_file_closed(void* self, void (*callback)(void*, void*));
 ///
 /// @param self KIO__FileJob*
 /// @param job KIO__Job*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-void k_io__filejob_position(void* self, void* job, uint64_t offset);
+void k_io__filejob_position(void* self, void* job, uintptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#position)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KIO__Job* job, uint64_t offset)
+/// @param callback void func(KIO__FileJob* self, KIO__Job* job, uintptr_t offset)
 ///
-void k_io__filejob_on_position(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_position(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#truncated)
 ///
 /// @param self KIO__FileJob*
 /// @param job KIO__Job*
-/// @param length uint64_t
+/// @param length uintptr_t
 ///
-void k_io__filejob_truncated(void* self, void* job, uint64_t length);
+void k_io__filejob_truncated(void* self, void* job, uintptr_t length);
 
 /// [Upstream resources](https://api.kde.org/kio-filejob.html#truncated)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KIO__Job* job, uint64_t length)
+/// @param callback void func(KIO__FileJob* self, KIO__Job* job, uintptr_t length)
 ///
-void k_io__filejob_on_truncated(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_truncated(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -524,7 +524,7 @@ const char* k_io__filejob_error_text(void* self);
 /// @param self KIO__FileJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__filejob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__filejob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -533,7 +533,7 @@ uint64_t k_io__filejob_processed_amount(void* self, int32_t unit);
 /// @param self KIO__FileJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__filejob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__filejob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -541,7 +541,7 @@ uint64_t k_io__filejob_total_amount(void* self, int32_t unit);
 ///
 /// @param self KIO__FileJob*
 ///
-uint64_t k_io__filejob_percent(void* self);
+uintptr_t k_io__filejob_percent(void* self);
 
 /// Inherited from KJob
 ///
@@ -590,7 +590,7 @@ bool k_io__filejob_is_started_with_exec(void* self);
 ///
 /// @param self KIO__FileJob*
 ///
-long long k_io__filejob_elapsed_time(void* self);
+int64_t k_io__filejob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
@@ -636,18 +636,18 @@ void k_io__filejob_on_warning(void* self, void (*callback)(void*, void*, const c
 ///
 /// @param self KIO__FileJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__filejob_total_size(void* self, void* job, uint64_t size);
+void k_io__filejob_total_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__FileJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__filejob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -655,18 +655,18 @@ void k_io__filejob_on_total_size(void* self, void (*callback)(void*, void*, uint
 ///
 /// @param self KIO__FileJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__filejob_processed_size(void* self, void* job, uint64_t size);
+void k_io__filejob_processed_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__FileJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__filejob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -674,18 +674,18 @@ void k_io__filejob_on_processed_size(void* self, void (*callback)(void*, void*, 
 ///
 /// @param self KIO__FileJob*
 /// @param job KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_io__filejob_speed(void* self, void* job, uint64_t speed);
+void k_io__filejob_speed(void* self, void* job, uintptr_t speed);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KJob* job, uint64_t speed)
+/// @param callback void func(KIO__FileJob* self, KJob* job, uintptr_t speed)
 ///
-void k_io__filejob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1222,9 +1222,9 @@ void k_io__filejob_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__FileJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__filejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__filejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1233,9 +1233,9 @@ void k_io__filejob_on_total_amount_changed(void* self, void (*callback)(void*, v
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__FileJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__filejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__filejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1244,9 +1244,9 @@ void k_io__filejob_on_processed_amount_changed(void* self, void (*callback)(void
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__FileJob*
-/// @param callback void func(KIO__FileJob* self, KJob* job, uint64_t percent)
+/// @param callback void func(KIO__FileJob* self, KJob* job, uintptr_t percent)
 ///
-void k_io__filejob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filejob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from QObject
 ///

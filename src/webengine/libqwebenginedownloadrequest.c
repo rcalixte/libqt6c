@@ -33,11 +33,11 @@ int32_t q_webenginedownloadrequest_state(void* self) {
     return QWebEngineDownloadRequest_State((QWebEngineDownloadRequest*)self);
 }
 
-long long q_webenginedownloadrequest_total_bytes(void* self) {
+int64_t q_webenginedownloadrequest_total_bytes(void* self) {
     return QWebEngineDownloadRequest_TotalBytes((QWebEngineDownloadRequest*)self);
 }
 
-long long q_webenginedownloadrequest_received_bytes(void* self) {
+int64_t q_webenginedownloadrequest_received_bytes(void* self) {
     return QWebEngineDownloadRequest_ReceivedBytes((QWebEngineDownloadRequest*)self);
 }
 

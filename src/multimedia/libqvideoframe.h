@@ -209,27 +209,27 @@ int32_t q_videoframe_plane_count(void* self);
 ///
 /// @param self QVideoFrame*
 ///
-long long q_videoframe_start_time(void* self);
+int64_t q_videoframe_start_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setStartTime)
 ///
 /// @param self QVideoFrame*
-/// @param time long long
+/// @param time int64_t
 ///
-void q_videoframe_set_start_time(void* self, long long time);
+void q_videoframe_set_start_time(void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#endTime)
 ///
 /// @param self QVideoFrame*
 ///
-long long q_videoframe_end_time(void* self);
+int64_t q_videoframe_end_time(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setEndTime)
 ///
 /// @param self QVideoFrame*
-/// @param time long long
+/// @param time int64_t
 ///
-void q_videoframe_set_end_time(void* self, long long time);
+void q_videoframe_set_end_time(void* self, int64_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvideoframe.html#setRotationAngle)
 ///

@@ -447,7 +447,7 @@ void q_bitmap_scroll2(void* self, int dx, int dy, void* rect);
 ///
 /// @param self QBitmap*
 ///
-long long q_bitmap_cache_key(void* self);
+int64_t q_bitmap_cache_key(void* self);
 
 /// Inherited from QPixmap
 ///

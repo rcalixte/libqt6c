@@ -72,15 +72,15 @@ const char* q_storageinfo_display_name(void* self) {
     return _ret;
 }
 
-long long q_storageinfo_bytes_total(void* self) {
+int64_t q_storageinfo_bytes_total(void* self) {
     return QStorageInfo_BytesTotal((QStorageInfo*)self);
 }
 
-long long q_storageinfo_bytes_free(void* self) {
+int64_t q_storageinfo_bytes_free(void* self) {
     return QStorageInfo_BytesFree((QStorageInfo*)self);
 }
 
-long long q_storageinfo_bytes_available(void* self) {
+int64_t q_storageinfo_bytes_available(void* self) {
     return QStorageInfo_BytesAvailable((QStorageInfo*)self);
 }
 

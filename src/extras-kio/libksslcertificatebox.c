@@ -1049,7 +1049,7 @@ int32_t k_sslcertificatebox_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_sslcertificatebox_find(uint64_t param1) {
+QWidget* k_sslcertificatebox_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

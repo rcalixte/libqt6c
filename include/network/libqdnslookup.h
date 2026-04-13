@@ -173,7 +173,7 @@ const char* q_dnsmailexchangerecord_name(void* self);
 ///
 /// @param self QDnsMailExchangeRecord*
 ///
-unsigned short q_dnsmailexchangerecord_preference(void* self);
+uint16_t q_dnsmailexchangerecord_preference(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsmailexchangerecord.html#timeToLive)
 ///
@@ -229,13 +229,13 @@ const char* q_dnsservicerecord_name(void* self);
 ///
 /// @param self QDnsServiceRecord*
 ///
-unsigned short q_dnsservicerecord_port(void* self);
+uint16_t q_dnsservicerecord_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#priority)
 ///
 /// @param self QDnsServiceRecord*
 ///
-unsigned short q_dnsservicerecord_priority(void* self);
+uint16_t q_dnsservicerecord_priority(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#target)
 ///
@@ -255,7 +255,7 @@ uint32_t q_dnsservicerecord_time_to_live(void* self);
 ///
 /// @param self QDnsServiceRecord*
 ///
-unsigned short q_dnsservicerecord_weight(void* self);
+uint16_t q_dnsservicerecord_weight(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnsservicerecord.html#dtor.QDnsServiceRecord)
 ///
@@ -437,9 +437,9 @@ QDnsLookup* q_dnslookup_new3(int32_t type, const char* name, void* nameserver);
 /// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param nameserver QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, unsigned short port);
+QDnsLookup* q_dnslookup_new4(int32_t type, const char* name, void* nameserver, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -488,10 +488,10 @@ QDnsLookup* q_dnslookup_new8(int32_t type, const char* name, void* nameserver, v
 /// @param type enum QDnsLookup__Type
 /// @param name const char*
 /// @param nameserver QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param parent QObject*
 ///
-QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, unsigned short port, void* parent);
+QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, uint16_t port, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -501,9 +501,9 @@ QDnsLookup* q_dnslookup_new9(int32_t type, const char* name, void* nameserver, u
 /// @param name const char*
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, void* nameserver, unsigned short port);
+QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, void* nameserver, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html)
 
@@ -513,10 +513,10 @@ QDnsLookup* q_dnslookup_new10(int32_t type, const char* name, uint8_t protocol, 
 /// @param name const char*
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param parent QObject*
 ///
-QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, void* nameserver, unsigned short port, void* parent);
+QDnsLookup* q_dnslookup_new11(int32_t type, const char* name, uint8_t protocol, void* nameserver, uint16_t port, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -678,14 +678,14 @@ void q_dnslookup_set_nameserver(void* self, void* nameserver);
 ///
 /// @param self QDnsLookup*
 ///
-unsigned short q_dnslookup_nameserver_port(void* self);
+uint16_t q_dnslookup_nameserver_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#setNameserverPort)
 ///
 /// @param self QDnsLookup*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_dnslookup_set_nameserver_port(void* self, unsigned short port);
+void q_dnslookup_set_nameserver_port(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverProtocol)
 ///
@@ -714,9 +714,9 @@ void q_dnslookup_set_nameserver2(void* self, uint8_t protocol, void* nameserver)
 ///
 /// @param self QDnsLookup*
 /// @param nameserver QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_dnslookup_set_nameserver3(void* self, void* nameserver, unsigned short port);
+void q_dnslookup_set_nameserver3(void* self, void* nameserver, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#canonicalNameRecords)
 ///
@@ -805,7 +805,7 @@ bool q_dnslookup_is_protocol_supported(uint8_t protocol);
 ///
 /// @param protocol enum QDnsLookup__Protocol
 ///
-unsigned short q_dnslookup_default_port_for_protocol(uint8_t protocol);
+uint16_t q_dnslookup_default_port_for_protocol(uint8_t protocol);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#abort)
 ///
@@ -877,16 +877,16 @@ void q_dnslookup_on_nameserver_changed(void* self, void (*callback)(void*, void*
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPortChanged)
 ///
 /// @param self QDnsLookup*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_dnslookup_nameserver_port_changed(void* self, unsigned short port);
+void q_dnslookup_nameserver_port_changed(void* self, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverPortChanged)
 ///
 /// @param self QDnsLookup*
-/// @param callback void func(QDnsLookup* self, unsigned short port)
+/// @param callback void func(QDnsLookup* self, uint16_t port)
 ///
-void q_dnslookup_on_nameserver_port_changed(void* self, void (*callback)(void*, unsigned short));
+void q_dnslookup_on_nameserver_port_changed(void* self, void (*callback)(void*, uint16_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdnslookup.html#nameserverProtocolChanged)
 ///
@@ -926,9 +926,9 @@ const char* q_dnslookup_tr3(const char* s, const char* c, int n);
 /// @param self QDnsLookup*
 /// @param protocol enum QDnsLookup__Protocol
 /// @param nameserver QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver, unsigned short port);
+void q_dnslookup_set_nameserver32(void* self, uint8_t protocol, void* nameserver, uint16_t port);
 
 /// Inherited from QObject
 ///

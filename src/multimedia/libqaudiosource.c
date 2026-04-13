@@ -107,15 +107,15 @@ void q_audiosource_resume(void* self) {
     QAudioSource_Resume((QAudioSource*)self);
 }
 
-void q_audiosource_set_buffer_size(void* self, int64_t bytes) {
+void q_audiosource_set_buffer_size(void* self, intptr_t bytes) {
     QAudioSource_SetBufferSize((QAudioSource*)self, bytes);
 }
 
-int64_t q_audiosource_buffer_size(void* self) {
+intptr_t q_audiosource_buffer_size(void* self) {
     return QAudioSource_BufferSize((QAudioSource*)self);
 }
 
-int64_t q_audiosource_bytes_available(void* self) {
+intptr_t q_audiosource_bytes_available(void* self) {
     return QAudioSource_BytesAvailable((QAudioSource*)self);
 }
 
@@ -127,11 +127,11 @@ double q_audiosource_volume(void* self) {
     return QAudioSource_Volume((QAudioSource*)self);
 }
 
-long long q_audiosource_processed_u_secs(void* self) {
+int64_t q_audiosource_processed_u_secs(void* self) {
     return QAudioSource_ProcessedUSecs((QAudioSource*)self);
 }
 
-long long q_audiosource_elapsed_u_secs(void* self) {
+int64_t q_audiosource_elapsed_u_secs(void* self) {
     return QAudioSource_ElapsedUSecs((QAudioSource*)self);
 }
 

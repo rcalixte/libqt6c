@@ -518,21 +518,21 @@ void q_openglfunctions_gl_blend_func_separate(void* self, uint32_t srcRGB, uint3
 ///
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
-/// @param size int64_t
+/// @param size intptr_t
 /// @param data void*
 /// @param usage uint32_t
 ///
-void q_openglfunctions_gl_buffer_data(void* self, uint32_t target, int64_t size, void* data, uint32_t usage);
+void q_openglfunctions_gl_buffer_data(void* self, uint32_t target, intptr_t size, void* data, uint32_t usage);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glBufferSubData)
 ///
 /// @param self QOpenGLFunctions*
 /// @param target uint32_t
-/// @param offset int64_t
-/// @param size int64_t
+/// @param offset intptr_t
+/// @param size intptr_t
 /// @param data void*
 ///
-void q_openglfunctions_gl_buffer_sub_data(void* self, uint32_t target, int64_t offset, int64_t size, void* data);
+void q_openglfunctions_gl_buffer_sub_data(void* self, uint32_t target, intptr_t offset, intptr_t size, void* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glClearDepthf)
 ///

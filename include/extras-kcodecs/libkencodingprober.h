@@ -52,11 +52,11 @@ int32_t k_encodingprober_feed(void* self, char* data);
 ///
 /// @param self KEncodingProber*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
 /// @return enum KEncodingProber__ProberState
 ///
-int32_t k_encodingprober_feed2(void* self, const char* data, int64_t lenVal);
+int32_t k_encodingprober_feed2(void* self, const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://api.kde.org/kencodingprober.html#state)
 ///

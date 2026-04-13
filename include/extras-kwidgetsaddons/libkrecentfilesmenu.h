@@ -165,9 +165,9 @@ int32_t k_recentfilesmenu_maximum_items(void* self);
 /// [Upstream resources](https://api.kde.org/krecentfilesmenu.html#setMaximumItems)
 ///
 /// @param self KRecentFilesMenu*
-/// @param maximumItems uint64_t
+/// @param maximumItems uintptr_t
 ///
-void k_recentfilesmenu_set_maximum_items(void* self, uint64_t maximumItems);
+void k_recentfilesmenu_set_maximum_items(void* self, uintptr_t maximumItems);
 
 /// [Upstream resources](https://api.kde.org/krecentfilesmenu.html#recentFiles)
 ///
@@ -2737,9 +2737,9 @@ int32_t k_recentfilesmenu_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_recentfilesmenu_find(uint64_t param1);
+QWidget* k_recentfilesmenu_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

@@ -12,7 +12,7 @@ bool q_waitcondition_wait(void* self, void* lockedMutex) {
     return QWaitCondition_Wait((QWaitCondition*)self, (QMutex*)lockedMutex);
 }
 
-bool q_waitcondition_wait2(void* self, void* lockedMutex, uint64_t time) {
+bool q_waitcondition_wait2(void* self, void* lockedMutex, uintptr_t time) {
     return QWaitCondition_Wait2((QWaitCondition*)self, (QMutex*)lockedMutex, time);
 }
 
@@ -20,7 +20,7 @@ bool q_waitcondition_wait3(void* self, void* lockedReadWriteLock) {
     return QWaitCondition_Wait3((QWaitCondition*)self, (QReadWriteLock*)lockedReadWriteLock);
 }
 
-bool q_waitcondition_wait4(void* self, void* lockedReadWriteLock, uint64_t time) {
+bool q_waitcondition_wait4(void* self, void* lockedReadWriteLock, uintptr_t time) {
     return QWaitCondition_Wait4((QWaitCondition*)self, (QReadWriteLock*)lockedReadWriteLock, time);
 }
 

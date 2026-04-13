@@ -2532,9 +2532,9 @@ int32_t k_urlrequester_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_urlrequester_find(uint64_t param1);
+QWidget* k_urlrequester_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7955,9 +7955,9 @@ int32_t k_urlcomborequester_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_urlcomborequester_find(uint64_t param1);
+QWidget* k_urlcomborequester_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

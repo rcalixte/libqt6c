@@ -43,11 +43,11 @@ bool q_networkreply_is_sequential(void* self) {
     return QNetworkReply_IsSequential((QNetworkReply*)self);
 }
 
-long long q_networkreply_read_buffer_size(void* self) {
+int64_t q_networkreply_read_buffer_size(void* self) {
     return QNetworkReply_ReadBufferSize((QNetworkReply*)self);
 }
 
-void q_networkreply_set_read_buffer_size(void* self, long long size) {
+void q_networkreply_set_read_buffer_size(void* self, int64_t size) {
     QNetworkReply_SetReadBufferSize((QNetworkReply*)self, size);
 }
 
@@ -237,19 +237,19 @@ void q_networkreply_on_redirect_allowed(void* self, void (*callback)(void*)) {
     QNetworkReply_Connect_RedirectAllowed((QNetworkReply*)self, (intptr_t)callback);
 }
 
-void q_networkreply_upload_progress(void* self, long long bytesSent, long long bytesTotal) {
+void q_networkreply_upload_progress(void* self, int64_t bytesSent, int64_t bytesTotal) {
     QNetworkReply_UploadProgress((QNetworkReply*)self, bytesSent, bytesTotal);
 }
 
-void q_networkreply_on_upload_progress(void* self, void (*callback)(void*, long long, long long)) {
+void q_networkreply_on_upload_progress(void* self, void (*callback)(void*, int64_t, int64_t)) {
     QNetworkReply_Connect_UploadProgress((QNetworkReply*)self, (intptr_t)callback);
 }
 
-void q_networkreply_download_progress(void* self, long long bytesReceived, long long bytesTotal) {
+void q_networkreply_download_progress(void* self, int64_t bytesReceived, int64_t bytesTotal) {
     QNetworkReply_DownloadProgress((QNetworkReply*)self, bytesReceived, bytesTotal);
 }
 
-void q_networkreply_on_download_progress(void* self, void (*callback)(void*, long long, long long)) {
+void q_networkreply_on_download_progress(void* self, void (*callback)(void*, int64_t, int64_t)) {
     QNetworkReply_Connect_DownloadProgress((QNetworkReply*)self, (intptr_t)callback);
 }
 
@@ -319,15 +319,15 @@ bool q_networkreply_open(void* self, int32_t mode) {
     return QIODevice_Open((QIODevice*)self, mode);
 }
 
-long long q_networkreply_pos(void* self) {
+int64_t q_networkreply_pos(void* self) {
     return QIODevice_Pos((QIODevice*)self);
 }
 
-long long q_networkreply_size(void* self) {
+int64_t q_networkreply_size(void* self) {
     return QIODevice_Size((QIODevice*)self);
 }
 
-bool q_networkreply_seek(void* self, long long pos) {
+bool q_networkreply_seek(void* self, int64_t pos) {
     return QIODevice_Seek((QIODevice*)self, pos);
 }
 
@@ -339,19 +339,19 @@ bool q_networkreply_reset(void* self) {
     return QIODevice_Reset((QIODevice*)self);
 }
 
-long long q_networkreply_bytes_available(void* self) {
+int64_t q_networkreply_bytes_available(void* self) {
     return QIODevice_BytesAvailable((QIODevice*)self);
 }
 
-long long q_networkreply_bytes_to_write(void* self) {
+int64_t q_networkreply_bytes_to_write(void* self) {
     return QIODevice_BytesToWrite((QIODevice*)self);
 }
 
-long long q_networkreply_read(void* self, char* data, long long maxlen) {
+int64_t q_networkreply_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_networkreply_read2(void* self, long long maxlen) {
+char* q_networkreply_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -365,7 +365,7 @@ char* q_networkreply_read_all(void* self) {
     return _ret;
 }
 
-long long q_networkreply_read_line(void* self, char* data, long long maxlen) {
+int64_t q_networkreply_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
@@ -396,30 +396,30 @@ bool q_networkreply_is_transaction_started(void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-long long q_networkreply_write(void* self, const char* data, long long lenVal) {
+int64_t q_networkreply_write(void* self, const char* data, int64_t lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_networkreply_write2(void* self, const char* data) {
+int64_t q_networkreply_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_networkreply_write3(void* self, char* data) {
+int64_t q_networkreply_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
-long long q_networkreply_peek(void* self, char* data, long long maxlen) {
+int64_t q_networkreply_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_networkreply_peek2(void* self, long long maxlen) {
+char* q_networkreply_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-long long q_networkreply_skip(void* self, long long maxSize) {
+int64_t q_networkreply_skip(void* self, int64_t maxSize) {
     return QIODevice_Skip((QIODevice*)self, maxSize);
 }
 
@@ -466,19 +466,19 @@ void q_networkreply_on_channel_ready_read(void* self, void (*callback)(void*, in
     QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_networkreply_bytes_written(void* self, long long bytes) {
+void q_networkreply_bytes_written(void* self, int64_t bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_networkreply_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void q_networkreply_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_networkreply_channel_bytes_written(void* self, int channel, long long bytes) {
+void q_networkreply_channel_bytes_written(void* self, int channel, int64_t bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_networkreply_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+void q_networkreply_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t)) {
     QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
@@ -498,7 +498,7 @@ void q_networkreply_on_read_channel_finished(void* self, void (*callback)(void*)
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_networkreply_read_line1(void* self, long long maxlen) {
+char* q_networkreply_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

@@ -33,7 +33,7 @@ bool q_typerevision_has_major_version(void* self) {
     return QTypeRevision_HasMajorVersion((QTypeRevision*)self);
 }
 
-unsigned char q_typerevision_major_version(void* self) {
+uint8_t q_typerevision_major_version(void* self) {
     return QTypeRevision_MajorVersion((QTypeRevision*)self);
 }
 
@@ -41,7 +41,7 @@ bool q_typerevision_has_minor_version(void* self) {
     return QTypeRevision_HasMinorVersion((QTypeRevision*)self);
 }
 
-unsigned char q_typerevision_minor_version(void* self) {
+uint8_t q_typerevision_minor_version(void* self) {
     return QTypeRevision_MinorVersion((QTypeRevision*)self);
 }
 

@@ -1334,7 +1334,7 @@ int32_t q_splitter_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_splitter_find(uint64_t param1) {
+QWidget* q_splitter_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -3544,7 +3544,7 @@ int32_t q_splitterhandle_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_splitterhandle_find(uint64_t param1) {
+QWidget* q_splitterhandle_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

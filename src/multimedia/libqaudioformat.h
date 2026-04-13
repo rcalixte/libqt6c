@@ -127,44 +127,44 @@ uint16_t q_audioformat_sample_format(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesForDuration)
 ///
 /// @param self QAudioFormat*
-/// @param microseconds long long
+/// @param microseconds int64_t
 ///
-int32_t q_audioformat_bytes_for_duration(void* self, long long microseconds);
+int32_t q_audioformat_bytes_for_duration(void* self, int64_t microseconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#durationForBytes)
 ///
 /// @param self QAudioFormat*
-/// @param byteCount int
+/// @param byteCount int32_t
 ///
-long long q_audioformat_duration_for_bytes(void* self, int byteCount);
+int64_t q_audioformat_duration_for_bytes(void* self, int32_t byteCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesForFrames)
 ///
 /// @param self QAudioFormat*
-/// @param frameCount int
+/// @param frameCount int32_t
 ///
-int32_t q_audioformat_bytes_for_frames(void* self, int frameCount);
+int32_t q_audioformat_bytes_for_frames(void* self, int32_t frameCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#framesForBytes)
 ///
 /// @param self QAudioFormat*
-/// @param byteCount int
+/// @param byteCount int32_t
 ///
-int32_t q_audioformat_frames_for_bytes(void* self, int byteCount);
+int32_t q_audioformat_frames_for_bytes(void* self, int32_t byteCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#framesForDuration)
 ///
 /// @param self QAudioFormat*
-/// @param microseconds long long
+/// @param microseconds int64_t
 ///
-int32_t q_audioformat_frames_for_duration(void* self, long long microseconds);
+int32_t q_audioformat_frames_for_duration(void* self, int64_t microseconds);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#durationForFrames)
 ///
 /// @param self QAudioFormat*
-/// @param frameCount int
+/// @param frameCount int32_t
 ///
-long long q_audioformat_duration_for_frames(void* self, int frameCount);
+int64_t q_audioformat_duration_for_frames(void* self, int32_t frameCount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudioformat.html#bytesPerFrame)
 ///

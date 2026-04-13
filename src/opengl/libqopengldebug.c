@@ -151,7 +151,7 @@ int32_t q_opengldebuglogger_logging_mode(void* self) {
     return QOpenGLDebugLogger_LoggingMode((QOpenGLDebugLogger*)self);
 }
 
-long long q_opengldebuglogger_maximum_message_length(void* self) {
+int64_t q_opengldebuglogger_maximum_message_length(void* self) {
     return QOpenGLDebugLogger_MaximumMessageLength((QOpenGLDebugLogger*)self);
 }
 

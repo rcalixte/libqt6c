@@ -137,7 +137,7 @@ QKeySequence* q_keysequenceedit_key_sequence(void* self);
 ///
 /// @param self QKeySequenceEdit*
 ///
-int64_t q_keysequenceedit_maximum_sequence_length(void* self);
+intptr_t q_keysequenceedit_maximum_sequence_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#setClearButtonEnabled)
 ///
@@ -183,9 +183,9 @@ void q_keysequenceedit_clear(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#setMaximumSequenceLength)
 ///
 /// @param self QKeySequenceEdit*
-/// @param count int64_t
+/// @param count intptr_t
 ///
-void q_keysequenceedit_set_maximum_sequence_length(void* self, int64_t count);
+void q_keysequenceedit_set_maximum_sequence_length(void* self, intptr_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeysequenceedit.html#editingFinished)
 ///
@@ -2424,9 +2424,9 @@ int32_t q_keysequenceedit_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* q_keysequenceedit_find(uint64_t param1);
+QWidget* q_keysequenceedit_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

@@ -690,14 +690,14 @@ void q_webenginecookiestore__filterrequest_set_reserved_flag(void* self, bool _r
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*
 ///
-unsigned short q_webenginecookiestore__filterrequest_reserved_type(void* self);
+uint16_t q_webenginecookiestore__filterrequest_reserved_type(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#_reservedType-var)
 ///
 /// @param self QWebEngineCookieStore__FilterRequest*
-/// @param _reservedType unsigned short
+/// @param _reservedType uint16_t
 ///
-void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, unsigned short _reservedType);
+void q_webenginecookiestore__filterrequest_set_reserved_type(void* self, uint16_t _reservedType);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginecookiestore-filterrequest.html#operator-eq)
 ///

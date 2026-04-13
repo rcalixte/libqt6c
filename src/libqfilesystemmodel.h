@@ -889,7 +889,7 @@ bool q_filesystemmodel_is_dir(void* self, void* index);
 /// @param self QFileSystemModel*
 /// @param index QModelIndex*
 ///
-long long q_filesystemmodel_size(void* self, void* index);
+int64_t q_filesystemmodel_size(void* self, void* index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qfilesystemmodel.html#type)
 ///

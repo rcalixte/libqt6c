@@ -1239,7 +1239,7 @@ int32_t k_nswidgets__button_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_nswidgets__button_find(uint64_t param1) {
+QWidget* k_nswidgets__button_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

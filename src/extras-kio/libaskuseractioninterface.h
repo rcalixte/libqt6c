@@ -47,14 +47,14 @@ const char* k_io__askuseractioninterface_tr(const char* s);
 /// @param src QUrl*
 /// @param dest QUrl*
 /// @param options flag of enum KIO__RenameDialog_Option
-/// @param sizeSrc uint64_t
-/// @param sizeDest uint64_t
+/// @param sizeSrc uintptr_t
+/// @param sizeDest uintptr_t
 /// @param ctimeSrc QDateTime*
 /// @param ctimeDest QDateTime*
 /// @param mtimeSrc QDateTime*
 /// @param mtimeDest QDateTime*
 ///
-void k_io__askuseractioninterface_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
+void k_io__askuseractioninterface_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest);
 
 /// [Upstream resources](https://api.kde.org/kio-askuseractioninterface.html#askUserSkip)
 ///

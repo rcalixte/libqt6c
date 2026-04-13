@@ -85,7 +85,7 @@ void k_io__workerbase_list_entries(void* self, libqt_list /* of KIO__UDSEntry* *
     KIO__WorkerBase_ListEntries((KIO__WorkerBase*)self, _entry);
 }
 
-bool k_io__workerbase_can_resume(void* self, uint64_t offset) {
+bool k_io__workerbase_can_resume(void* self, uintptr_t offset) {
     return KIO__WorkerBase_CanResume((KIO__WorkerBase*)self, offset);
 }
 
@@ -93,27 +93,27 @@ void k_io__workerbase_can_resume2(void* self) {
     KIO__WorkerBase_CanResume2((KIO__WorkerBase*)self);
 }
 
-void k_io__workerbase_total_size(void* self, uint64_t _bytes) {
+void k_io__workerbase_total_size(void* self, uintptr_t _bytes) {
     KIO__WorkerBase_TotalSize((KIO__WorkerBase*)self, _bytes);
 }
 
-void k_io__workerbase_processed_size(void* self, uint64_t _bytes) {
+void k_io__workerbase_processed_size(void* self, uintptr_t _bytes) {
     KIO__WorkerBase_ProcessedSize((KIO__WorkerBase*)self, _bytes);
 }
 
-void k_io__workerbase_position(void* self, uint64_t _pos) {
+void k_io__workerbase_position(void* self, uintptr_t _pos) {
     KIO__WorkerBase_Position((KIO__WorkerBase*)self, _pos);
 }
 
-void k_io__workerbase_written(void* self, uint64_t _bytes) {
+void k_io__workerbase_written(void* self, uintptr_t _bytes) {
     KIO__WorkerBase_Written((KIO__WorkerBase*)self, _bytes);
 }
 
-void k_io__workerbase_truncated(void* self, uint64_t _length) {
+void k_io__workerbase_truncated(void* self, uintptr_t _length) {
     KIO__WorkerBase_Truncated((KIO__WorkerBase*)self, _length);
 }
 
-void k_io__workerbase_speed(void* self, uint64_t _bytes_per_second) {
+void k_io__workerbase_speed(void* self, uintptr_t _bytes_per_second) {
     KIO__WorkerBase_Speed((KIO__WorkerBase*)self, _bytes_per_second);
 }
 
@@ -261,15 +261,15 @@ void k_io__workerbase_super_app_connection_made(void* self) {
     KIO__WorkerBase_SuperAppConnectionMade((KIO__WorkerBase*)self);
 }
 
-void k_io__workerbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
+void k_io__workerbase_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass) {
     KIO__WorkerBase_SetHost((KIO__WorkerBase*)self, qstring(host), port, qstring(user), qstring(pass));
 }
 
-void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char*, unsigned short, const char*, const char*)) {
+void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char*, uint16_t, const char*, const char*)) {
     KIO__WorkerBase_OnSetHost((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-void k_io__workerbase_super_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass) {
+void k_io__workerbase_super_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass) {
     KIO__WorkerBase_SuperSetHost((KIO__WorkerBase*)self, qstring(host), port, qstring(user), qstring(pass));
 }
 
@@ -321,15 +321,15 @@ KIO__WorkerResult* k_io__workerbase_super_open(void* self, void* url, int32_t mo
     return KIO__WorkerBase_SuperOpen((KIO__WorkerBase*)self, (QUrl*)url, mode);
 }
 
-KIO__WorkerResult* k_io__workerbase_read(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__workerbase_read(void* self, uintptr_t size) {
     return KIO__WorkerBase_Read((KIO__WorkerBase*)self, size);
 }
 
-void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t)) {
+void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t)) {
     KIO__WorkerBase_OnRead((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_super_read(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__workerbase_super_read(void* self, uintptr_t size) {
     return KIO__WorkerBase_SuperRead((KIO__WorkerBase*)self, size);
 }
 
@@ -345,27 +345,27 @@ KIO__WorkerResult* k_io__workerbase_super_write(void* self, char* data) {
     return KIO__WorkerBase_SuperWrite((KIO__WorkerBase*)self, qstring(data));
 }
 
-KIO__WorkerResult* k_io__workerbase_seek(void* self, uint64_t offset) {
+KIO__WorkerResult* k_io__workerbase_seek(void* self, uintptr_t offset) {
     return KIO__WorkerBase_Seek((KIO__WorkerBase*)self, offset);
 }
 
-void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t)) {
+void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t)) {
     KIO__WorkerBase_OnSeek((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_super_seek(void* self, uint64_t offset) {
+KIO__WorkerResult* k_io__workerbase_super_seek(void* self, uintptr_t offset) {
     return KIO__WorkerBase_SuperSeek((KIO__WorkerBase*)self, offset);
 }
 
-KIO__WorkerResult* k_io__workerbase_truncate(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__workerbase_truncate(void* self, uintptr_t size) {
     return KIO__WorkerBase_Truncate((KIO__WorkerBase*)self, size);
 }
 
-void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t)) {
+void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t)) {
     KIO__WorkerBase_OnTruncate((KIO__WorkerBase*)self, (intptr_t)callback);
 }
 
-KIO__WorkerResult* k_io__workerbase_super_truncate(void* self, uint64_t size) {
+KIO__WorkerResult* k_io__workerbase_super_truncate(void* self, uintptr_t size) {
     return KIO__WorkerBase_SuperTruncate((KIO__WorkerBase*)self, size);
 }
 

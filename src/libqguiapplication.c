@@ -79,7 +79,7 @@ const char* q_guiapplication_application_display_name() {
     return _ret;
 }
 
-void q_guiapplication_set_badge_number(void* self, long long number) {
+void q_guiapplication_set_badge_number(void* self, int64_t number) {
     QGuiApplication_SetBadgeNumber((QGuiApplication*)self, number);
 }
 
@@ -589,7 +589,7 @@ const char* q_guiapplication_application_file_path() {
     return _ret;
 }
 
-long long q_guiapplication_application_pid() {
+int64_t q_guiapplication_application_pid() {
     return QCoreApplication_ApplicationPid();
 }
 

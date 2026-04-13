@@ -101,7 +101,7 @@ const char* q_mediarecorder_error_string(void* self) {
     return _ret;
 }
 
-long long q_mediarecorder_duration(void* self) {
+int64_t q_mediarecorder_duration(void* self) {
     return QMediaRecorder_Duration((QMediaRecorder*)self);
 }
 
@@ -225,11 +225,11 @@ void q_mediarecorder_on_recorder_state_changed(void* self, void (*callback)(void
     QMediaRecorder_Connect_RecorderStateChanged((QMediaRecorder*)self, (intptr_t)callback);
 }
 
-void q_mediarecorder_duration_changed(void* self, long long duration) {
+void q_mediarecorder_duration_changed(void* self, int64_t duration) {
     QMediaRecorder_DurationChanged((QMediaRecorder*)self, duration);
 }
 
-void q_mediarecorder_on_duration_changed(void* self, void (*callback)(void*, long long)) {
+void q_mediarecorder_on_duration_changed(void* self, void (*callback)(void*, int64_t)) {
     QMediaRecorder_Connect_DurationChanged((QMediaRecorder*)self, (intptr_t)callback);
 }
 

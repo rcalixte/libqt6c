@@ -170,7 +170,7 @@ bool q_udpsocket_has_pending_datagrams(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_pending_datagram_size(void* self);
+int64_t q_udpsocket_pending_datagram_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#receiveDatagram)
 ///
@@ -182,35 +182,35 @@ QNetworkDatagram* q_udpsocket_receive_datagram(void* self);
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_read_datagram(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_read_datagram(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#writeDatagram)
 ///
 /// @param self QUdpSocket*
 /// @param datagram QNetworkDatagram*
 ///
-long long q_udpsocket_write_datagram(void* self, void* datagram);
+int64_t q_udpsocket_write_datagram(void* self, void* datagram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#writeDatagram)
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 /// @param host QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-long long q_udpsocket_write_datagram2(void* self, const char* data, long long lenVal, void* host, unsigned short port);
+int64_t q_udpsocket_write_datagram2(void* self, const char* data, int64_t lenVal, void* host, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#writeDatagram)
 ///
 /// @param self QUdpSocket*
 /// @param datagram char*
 /// @param host QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-long long q_udpsocket_write_datagram3(void* self, char* datagram, void* host, unsigned short port);
+int64_t q_udpsocket_write_datagram3(void* self, char* datagram, void* host, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -235,44 +235,44 @@ const char* q_udpsocket_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QUdpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_udpsocket_bind2(void* self, int32_t addr, unsigned short port);
+bool q_udpsocket_bind2(void* self, int32_t addr, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#bind)
 ///
 /// @param self QUdpSocket*
 /// @param addr enum QHostAddress__SpecialAddress
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_udpsocket_bind3(void* self, int32_t addr, unsigned short port, int32_t mode);
+bool q_udpsocket_bind3(void* self, int32_t addr, uint16_t port, int32_t mode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#receiveDatagram)
 ///
 /// @param self QUdpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-QNetworkDatagram* q_udpsocket_receive_datagram1(void* self, long long maxSize);
+QNetworkDatagram* q_udpsocket_receive_datagram1(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#readDatagram)
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 /// @param host QHostAddress*
 ///
-long long q_udpsocket_read_datagram3(void* self, char* data, long long maxlen, void* host);
+int64_t q_udpsocket_read_datagram3(void* self, char* data, int64_t maxlen, void* host);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html#readDatagram)
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 /// @param host QHostAddress*
 /// @param port unsigned short*
 ///
-long long q_udpsocket_read_datagram4(void* self, char* data, long long maxlen, void* host, unsigned short* port);
+int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void* host, unsigned short* port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -299,9 +299,9 @@ void q_udpsocket_set_pause_mode(void* self, int32_t pauseMode);
 ///
 /// @param self QUdpSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_udpsocket_connect_to_host2(void* self, void* address, unsigned short port);
+void q_udpsocket_connect_to_host2(void* self, void* address, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -317,7 +317,7 @@ bool q_udpsocket_is_valid(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-unsigned short q_udpsocket_local_port(void* self);
+uint16_t q_udpsocket_local_port(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -333,7 +333,7 @@ QHostAddress* q_udpsocket_local_address(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-unsigned short q_udpsocket_peer_port(void* self);
+uint16_t q_udpsocket_peer_port(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -359,7 +359,7 @@ const char* q_udpsocket_peer_name(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_read_buffer_size(void* self);
+int64_t q_udpsocket_read_buffer_size(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -554,19 +554,19 @@ void q_udpsocket_on_proxy_authentication_required(void* self, void (*callback)(v
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// @param self QUdpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_udpsocket_bind1(void* self, unsigned short port);
+bool q_udpsocket_bind1(void* self, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractsocket.html#bind)
 ///
 /// @param self QUdpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QAbstractSocket__BindFlag
 ///
-bool q_udpsocket_bind22(void* self, unsigned short port, int32_t mode);
+bool q_udpsocket_bind22(void* self, uint16_t port, int32_t mode);
 
 /// Inherited from QAbstractSocket
 ///
@@ -574,10 +574,10 @@ bool q_udpsocket_bind22(void* self, unsigned short port, int32_t mode);
 ///
 /// @param self QUdpSocket*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void q_udpsocket_connect_to_host3(void* self, void* address, unsigned short port, int32_t mode);
+void q_udpsocket_connect_to_host3(void* self, void* address, uint16_t port, int32_t mode);
 
 /// Inherited from QIODevice
 ///
@@ -686,9 +686,9 @@ void q_udpsocket_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_read(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -697,9 +697,9 @@ long long q_udpsocket_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUdpSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_udpsocket_read2(void* self, long long maxlen);
+char* q_udpsocket_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -717,9 +717,9 @@ char* q_udpsocket_read_all(void* self);
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_read_line(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -769,9 +769,9 @@ bool q_udpsocket_is_transaction_started(void* self);
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_udpsocket_write(void* self, const char* data, long long lenVal);
+int64_t q_udpsocket_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -780,7 +780,7 @@ long long q_udpsocket_write(void* self, const char* data, long long lenVal);
 /// @param self QUdpSocket*
 /// @param data const char*
 ///
-long long q_udpsocket_write2(void* self, const char* data);
+int64_t q_udpsocket_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -789,7 +789,7 @@ long long q_udpsocket_write2(void* self, const char* data);
 /// @param self QUdpSocket*
 /// @param data char*
 ///
-long long q_udpsocket_write3(void* self, char* data);
+int64_t q_udpsocket_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -797,9 +797,9 @@ long long q_udpsocket_write3(void* self, char* data);
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_peek(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -808,18 +808,18 @@ long long q_udpsocket_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUdpSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_udpsocket_peek2(void* self, long long maxlen);
+char* q_udpsocket_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QUdpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_udpsocket_skip(void* self, long long maxSize);
+int64_t q_udpsocket_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -898,18 +898,18 @@ void q_udpsocket_on_channel_ready_read(void* self, void (*callback)(void*, int))
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QUdpSocket*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_udpsocket_bytes_written(void* self, long long bytes);
+void q_udpsocket_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QUdpSocket*
-/// @param callback void func(QUdpSocket* self, long long bytes)
+/// @param callback void func(QUdpSocket* self, int64_t bytes)
 ///
-void q_udpsocket_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_udpsocket_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -917,18 +917,18 @@ void q_udpsocket_on_bytes_written(void* self, void (*callback)(void*, long long)
 ///
 /// @param self QUdpSocket*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_udpsocket_channel_bytes_written(void* self, int channel, long long bytes);
+void q_udpsocket_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QUdpSocket*
-/// @param callback void func(QUdpSocket* self, int channel, long long bytes)
+/// @param callback void func(QUdpSocket* self, int channel, int64_t bytes)
 ///
-void q_udpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_udpsocket_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -971,9 +971,9 @@ void q_udpsocket_on_read_channel_finished(void* self, void (*callback)(void*));
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QUdpSocket*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_udpsocket_read_line1(void* self, long long maxlen);
+char* q_udpsocket_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1465,11 +1465,11 @@ void q_udpsocket_on_resume(void* self, void (*callback)());
 ///
 /// @param self QUdpSocket*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
-void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
+void q_udpsocket_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_connect_to_host` instead
 ///
@@ -1483,11 +1483,11 @@ void q_udpsocket_connect_to_host(void* self, const char* hostName, unsigned shor
 ///
 /// @param self QUdpSocket*
 /// @param hostName const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param mode flag of enum QIODeviceBase__OpenModeFlag
 /// @param protocol enum QAbstractSocket__NetworkLayerProtocol
 ///
-void q_udpsocket_super_connect_to_host(void* self, const char* hostName, unsigned short port, int32_t mode, int32_t protocol);
+void q_udpsocket_super_connect_to_host(void* self, const char* hostName, uint16_t port, int32_t mode, int32_t protocol);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1496,9 +1496,9 @@ void q_udpsocket_super_connect_to_host(void* self, const char* hostName, unsigne
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback void func(QUdpSocket* self, const char* hostName, unsigned short port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
+/// @param callback void func(QUdpSocket* self, const char* hostName, uint16_t port, flag of enum QIODeviceBase__OpenModeFlag mode, enum QAbstractSocket__NetworkLayerProtocol protocol)
 ///
-void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, unsigned short, int32_t, int32_t));
+void q_udpsocket_on_connect_to_host(void* self, void (*callback)(void*, const char*, uint16_t, int32_t, int32_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -1543,7 +1543,7 @@ void q_udpsocket_on_disconnect_from_host(void* self, void (*callback)());
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_bytes_available(void* self);
+int64_t q_udpsocket_bytes_available(void* self);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_bytes_available` instead
 ///
@@ -1557,7 +1557,7 @@ long long q_udpsocket_bytes_available(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_super_bytes_available(void* self);
+int64_t q_udpsocket_super_bytes_available(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1566,9 +1566,9 @@ long long q_udpsocket_super_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_udpsocket_on_bytes_available(void* self, long long (*callback)());
+void q_udpsocket_on_bytes_available(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractSocket
 ///
@@ -1578,7 +1578,7 @@ void q_udpsocket_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_bytes_to_write(void* self);
+int64_t q_udpsocket_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_bytes_to_write` instead
 ///
@@ -1592,7 +1592,7 @@ long long q_udpsocket_bytes_to_write(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_super_bytes_to_write(void* self);
+int64_t q_udpsocket_super_bytes_to_write(void* self);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1601,9 +1601,9 @@ long long q_udpsocket_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_udpsocket_on_bytes_to_write(void* self, long long (*callback)());
+void q_udpsocket_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QAbstractSocket
 ///
@@ -1612,9 +1612,9 @@ void q_udpsocket_on_bytes_to_write(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_udpsocket_set_read_buffer_size(void* self, long long size);
+void q_udpsocket_set_read_buffer_size(void* self, int64_t size);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_set_read_buffer_size` instead
 ///
@@ -1627,9 +1627,9 @@ void q_udpsocket_set_read_buffer_size(void* self, long long size);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_udpsocket_super_set_read_buffer_size(void* self, long long size);
+void q_udpsocket_super_set_read_buffer_size(void* self, int64_t size);
 
 /// Inherited from QAbstractSocket
 ///
@@ -1638,9 +1638,9 @@ void q_udpsocket_super_set_read_buffer_size(void* self, long long size);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback void func(QUdpSocket* self, long long size)
+/// @param callback void func(QUdpSocket* self, int64_t size)
 ///
-void q_udpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, long long));
+void q_udpsocket_on_set_read_buffer_size(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2020,9 +2020,9 @@ void q_udpsocket_on_wait_for_disconnected(void* self, bool (*callback)(void*, in
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_read_data(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_read_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_read_data` instead
 ///
@@ -2036,9 +2036,9 @@ long long q_udpsocket_read_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_super_read_data(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2047,9 +2047,9 @@ long long q_udpsocket_super_read_data(void* self, char* data, long long maxlen);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func(QUdpSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QUdpSocket* self, char* data, int64_t maxlen)
 ///
-void q_udpsocket_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_udpsocket_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2059,9 +2059,9 @@ void q_udpsocket_on_read_data(void* self, long long (*callback)(void*, char*, lo
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_read_line_data` instead
 ///
@@ -2075,9 +2075,9 @@ long long q_udpsocket_read_line_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QUdpSocket*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_udpsocket_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_udpsocket_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2086,9 +2086,9 @@ long long q_udpsocket_super_read_line_data(void* self, char* data, long long max
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func(QUdpSocket* self, char* data, long long maxlen)
+/// @param callback int64_t func(QUdpSocket* self, char* data, int64_t maxlen)
 ///
-void q_udpsocket_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_udpsocket_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2097,9 +2097,9 @@ void q_udpsocket_on_read_line_data(void* self, long long (*callback)(void*, char
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_udpsocket_skip_data(void* self, long long maxSize);
+int64_t q_udpsocket_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_skip_data` instead
 ///
@@ -2112,9 +2112,9 @@ long long q_udpsocket_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_udpsocket_super_skip_data(void* self, long long maxSize);
+int64_t q_udpsocket_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2123,9 +2123,9 @@ long long q_udpsocket_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func(QUdpSocket* self, long long maxSize)
+/// @param callback int64_t func(QUdpSocket* self, int64_t maxSize)
 ///
-void q_udpsocket_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_udpsocket_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2135,9 +2135,9 @@ void q_udpsocket_on_skip_data(void* self, long long (*callback)(void*, long long
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_udpsocket_write_data(void* self, const char* data, long long lenVal);
+int64_t q_udpsocket_write_data(void* self, const char* data, int64_t lenVal);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_write_data` instead
 ///
@@ -2151,9 +2151,9 @@ long long q_udpsocket_write_data(void* self, const char* data, long long lenVal)
 ///
 /// @param self QUdpSocket*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_udpsocket_super_write_data(void* self, const char* data, long long lenVal);
+int64_t q_udpsocket_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2162,9 +2162,9 @@ long long q_udpsocket_super_write_data(void* self, const char* data, long long l
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func(QUdpSocket* self, const char* data, long long lenVal)
+/// @param callback int64_t func(QUdpSocket* self, const char* data, int64_t lenVal)
 ///
-void q_udpsocket_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_udpsocket_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -2211,7 +2211,7 @@ void q_udpsocket_on_open(void* self, bool (*callback)(void*, int32_t));
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_pos(void* self);
+int64_t q_udpsocket_pos(void* self);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_pos` instead
 ///
@@ -2225,7 +2225,7 @@ long long q_udpsocket_pos(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_super_pos(void* self);
+int64_t q_udpsocket_super_pos(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2234,9 +2234,9 @@ long long q_udpsocket_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_udpsocket_on_pos(void* self, long long (*callback)());
+void q_udpsocket_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2246,7 +2246,7 @@ void q_udpsocket_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_size(void* self);
+int64_t q_udpsocket_size(void* self);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_size` instead
 ///
@@ -2260,7 +2260,7 @@ long long q_udpsocket_size(void* self);
 ///
 /// @param self QUdpSocket*
 ///
-long long q_udpsocket_super_size(void* self);
+int64_t q_udpsocket_super_size(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -2269,9 +2269,9 @@ long long q_udpsocket_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_udpsocket_on_size(void* self, long long (*callback)());
+void q_udpsocket_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2280,9 +2280,9 @@ void q_udpsocket_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_udpsocket_seek(void* self, long long pos);
+bool q_udpsocket_seek(void* self, int64_t pos);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_seek` instead
 ///
@@ -2295,9 +2295,9 @@ bool q_udpsocket_seek(void* self, long long pos);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_udpsocket_super_seek(void* self, long long pos);
+bool q_udpsocket_super_seek(void* self, int64_t pos);
 
 /// Inherited from QIODevice
 ///
@@ -2306,9 +2306,9 @@ bool q_udpsocket_super_seek(void* self, long long pos);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback bool func(QUdpSocket* self, long long pos)
+/// @param callback bool func(QUdpSocket* self, int64_t pos)
 ///
-void q_udpsocket_on_seek(void* self, bool (*callback)(void*, long long));
+void q_udpsocket_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -2757,9 +2757,9 @@ void q_udpsocket_on_set_socket_error(void* self, void (*callback)(void*, int32_t
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_udpsocket_set_local_port(void* self, unsigned short port);
+void q_udpsocket_set_local_port(void* self, uint16_t port);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_set_local_port` instead
 ///
@@ -2772,9 +2772,9 @@ void q_udpsocket_set_local_port(void* self, unsigned short port);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_udpsocket_super_set_local_port(void* self, unsigned short port);
+void q_udpsocket_super_set_local_port(void* self, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2783,9 +2783,9 @@ void q_udpsocket_super_set_local_port(void* self, unsigned short port);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback void func(QUdpSocket* self, unsigned short port)
+/// @param callback void func(QUdpSocket* self, uint16_t port)
 ///
-void q_udpsocket_on_set_local_port(void* self, void (*callback)(void*, unsigned short));
+void q_udpsocket_on_set_local_port(void* self, void (*callback)(void*, uint16_t));
 
 /// Inherited from QAbstractSocket
 ///
@@ -2831,9 +2831,9 @@ void q_udpsocket_on_set_local_address(void* self, void (*callback)(void*, void*)
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_udpsocket_set_peer_port(void* self, unsigned short port);
+void q_udpsocket_set_peer_port(void* self, uint16_t port);
 
 /// @warning DEPRECATED: Use `q_udpsocket_super_set_peer_port` instead
 ///
@@ -2846,9 +2846,9 @@ void q_udpsocket_set_peer_port(void* self, unsigned short port);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-void q_udpsocket_super_set_peer_port(void* self, unsigned short port);
+void q_udpsocket_super_set_peer_port(void* self, uint16_t port);
 
 /// Inherited from QAbstractSocket
 ///
@@ -2857,9 +2857,9 @@ void q_udpsocket_super_set_peer_port(void* self, unsigned short port);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QUdpSocket*
-/// @param callback void func(QUdpSocket* self, unsigned short port)
+/// @param callback void func(QUdpSocket* self, uint16_t port)
 ///
-void q_udpsocket_on_set_peer_port(void* self, void (*callback)(void*, unsigned short));
+void q_udpsocket_on_set_peer_port(void* self, void (*callback)(void*, uint16_t));
 
 /// Inherited from QAbstractSocket
 ///

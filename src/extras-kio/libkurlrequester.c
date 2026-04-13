@@ -1293,7 +1293,7 @@ int32_t k_urlrequester_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_urlrequester_find(uint64_t param1) {
+QWidget* k_urlrequester_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -3605,7 +3605,7 @@ int32_t k_urlcomborequester_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_urlcomborequester_find(uint64_t param1) {
+QWidget* k_urlcomborequester_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

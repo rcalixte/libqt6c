@@ -33,21 +33,21 @@ QRgba64* q_rgba64_from_rgba64(uint64_t c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#fromRgba64)
 ///
-/// @param red unsigned short
-/// @param green unsigned short
-/// @param blue unsigned short
-/// @param alpha unsigned short
+/// @param red uint16_t
+/// @param green uint16_t
+/// @param blue uint16_t
+/// @param alpha uint16_t
 ///
-QRgba64* q_rgba64_from_rgba642(unsigned short red, unsigned short green, unsigned short blue, unsigned short alpha);
+QRgba64* q_rgba64_from_rgba642(uint16_t red, uint16_t green, uint16_t blue, uint16_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#fromRgba)
 ///
-/// @param red unsigned char
-/// @param green unsigned char
-/// @param blue unsigned char
-/// @param alpha unsigned char
+/// @param red uint8_t
+/// @param green uint8_t
+/// @param blue uint8_t
+/// @param alpha uint8_t
 ///
-QRgba64* q_rgba64_from_rgba(unsigned char red, unsigned char green, unsigned char blue, unsigned char alpha);
+QRgba64* q_rgba64_from_rgba(uint8_t red, uint8_t green, uint8_t blue, uint8_t alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#fromArgb32)
 ///
@@ -71,77 +71,77 @@ bool q_rgba64_is_transparent(void* self);
 ///
 /// @param self QRgba64*
 ///
-unsigned short q_rgba64_red(void* self);
+uint16_t q_rgba64_red(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#green)
 ///
 /// @param self QRgba64*
 ///
-unsigned short q_rgba64_green(void* self);
+uint16_t q_rgba64_green(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#blue)
 ///
 /// @param self QRgba64*
 ///
-unsigned short q_rgba64_blue(void* self);
+uint16_t q_rgba64_blue(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#alpha)
 ///
 /// @param self QRgba64*
 ///
-unsigned short q_rgba64_alpha(void* self);
+uint16_t q_rgba64_alpha(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#setRed)
 ///
 /// @param self QRgba64*
-/// @param _red unsigned short
+/// @param _red uint16_t
 ///
-void q_rgba64_set_red(void* self, unsigned short _red);
+void q_rgba64_set_red(void* self, uint16_t _red);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#setGreen)
 ///
 /// @param self QRgba64*
-/// @param _green unsigned short
+/// @param _green uint16_t
 ///
-void q_rgba64_set_green(void* self, unsigned short _green);
+void q_rgba64_set_green(void* self, uint16_t _green);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#setBlue)
 ///
 /// @param self QRgba64*
-/// @param _blue unsigned short
+/// @param _blue uint16_t
 ///
-void q_rgba64_set_blue(void* self, unsigned short _blue);
+void q_rgba64_set_blue(void* self, uint16_t _blue);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#setAlpha)
 ///
 /// @param self QRgba64*
-/// @param _alpha unsigned short
+/// @param _alpha uint16_t
 ///
-void q_rgba64_set_alpha(void* self, unsigned short _alpha);
+void q_rgba64_set_alpha(void* self, uint16_t _alpha);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#red8)
 ///
 /// @param self QRgba64*
 ///
-unsigned char q_rgba64_red8(void* self);
+uint8_t q_rgba64_red8(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#green8)
 ///
 /// @param self QRgba64*
 ///
-unsigned char q_rgba64_green8(void* self);
+uint8_t q_rgba64_green8(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#blue8)
 ///
 /// @param self QRgba64*
 ///
-unsigned char q_rgba64_blue8(void* self);
+uint8_t q_rgba64_blue8(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#alpha8)
 ///
 /// @param self QRgba64*
 ///
-unsigned char q_rgba64_alpha8(void* self);
+uint8_t q_rgba64_alpha8(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#toArgb32)
 ///
@@ -153,7 +153,7 @@ uint32_t q_rgba64_to_argb32(void* self);
 ///
 /// @param self QRgba64*
 ///
-unsigned short q_rgba64_to_rgb16(void* self);
+uint16_t q_rgba64_to_rgb16(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrgba64.html#premultiplied)
 ///

@@ -28,9 +28,9 @@ bool q_waitcondition_wait(void* self, void* lockedMutex);
 ///
 /// @param self QWaitCondition*
 /// @param lockedMutex QMutex*
-/// @param time uint64_t
+/// @param time uintptr_t
 ///
-bool q_waitcondition_wait2(void* self, void* lockedMutex, uint64_t time);
+bool q_waitcondition_wait2(void* self, void* lockedMutex, uintptr_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwaitcondition.html#wait)
 ///
@@ -43,9 +43,9 @@ bool q_waitcondition_wait3(void* self, void* lockedReadWriteLock);
 ///
 /// @param self QWaitCondition*
 /// @param lockedReadWriteLock QReadWriteLock*
-/// @param time uint64_t
+/// @param time uintptr_t
 ///
-bool q_waitcondition_wait4(void* self, void* lockedReadWriteLock, uint64_t time);
+bool q_waitcondition_wait4(void* self, void* lockedReadWriteLock, uintptr_t time);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwaitcondition.html#wakeOne)
 ///

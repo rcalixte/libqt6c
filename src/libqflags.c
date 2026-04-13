@@ -21,7 +21,7 @@ QFlag* q_flag_new5(short value) {
     return QFlag_new5(value);
 }
 
-QFlag* q_flag_new6(unsigned short value) {
+QFlag* q_flag_new6(uint16_t value) {
     return QFlag_new6(value);
 }
 

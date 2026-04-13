@@ -1536,9 +1536,9 @@ KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long(void*
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 ///
-KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long(void* self, const char* name, uint64_t* reference);
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long(void* self, const char* name, uintptr_t* reference);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
 ///
@@ -1952,19 +1952,19 @@ KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton_add_item_bool4(void* self, c
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
 /// @param reference int*
-/// @param defaultValue int
+/// @param defaultValue int32_t
 ///
-KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int3(void* self, const char* name, int* reference, int defaultValue);
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int3(void* self, const char* name, int* reference, int32_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemInt)
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
 /// @param reference int*
-/// @param defaultValue int
+/// @param defaultValue int32_t
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int4(void* self, const char* name, int* reference, int defaultValue, const char* key);
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton_add_item_int4(void* self, const char* name, int* reference, int32_t defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemUInt)
 ///
@@ -1990,38 +1990,38 @@ KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton_add_item_u_int4(void* self, 
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
 /// @param reference long long*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long3(void* self, const char* name, long long* reference, long long defaultValue);
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long3(void* self, const char* name, long long* reference, int64_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemLongLong)
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
 /// @param reference long long*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long4(void* self, const char* name, long long* reference, long long defaultValue, const char* key);
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton_add_item_long_long4(void* self, const char* name, long long* reference, int64_t defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 /// @param defaultValue uint64_t
 ///
-KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long3(void* self, const char* name, uint64_t* reference, uint64_t defaultValue);
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long3(void* self, const char* name, uintptr_t* reference, uint64_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemULongLong)
 ///
 /// @param self KCoreConfigSkeleton*
 /// @param name const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 /// @param defaultValue uint64_t
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long4(void* self, const char* name, uint64_t* reference, uint64_t defaultValue, const char* key);
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton_add_item_u_long_long4(void* self, const char* name, uintptr_t* reference, uint64_t defaultValue, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton.html#addItemDouble)
 ///
@@ -4155,9 +4155,9 @@ KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new(const char* _gro
 /// @param _group const char*
 /// @param _key const char*
 /// @param reference int*
-/// @param defaultValue int
+/// @param defaultValue int32_t
 ///
-KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new2(const char* _group, const char* _key, int* reference, int defaultValue);
+KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new2(const char* _group, const char* _key, int* reference, int32_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemint.html#readConfig)
 ///
@@ -4350,9 +4350,9 @@ KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new(const 
 /// @param _group const char*
 /// @param _key const char*
 /// @param reference long long*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new2(const char* _group, const char* _key, long long* reference, long long defaultValue);
+KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new2(const char* _group, const char* _key, long long* reference, int64_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#readConfig)
 ///
@@ -4525,16 +4525,16 @@ QVariant* k_coreconfigskeleton__itemlonglong_super_max_value(void* self);
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setMinValue)
 ///
 /// @param self KCoreConfigSkeleton__ItemLongLong*
-/// @param minValue long long
+/// @param minValue int64_t
 ///
-void k_coreconfigskeleton__itemlonglong_set_min_value(void* self, long long minValue);
+void k_coreconfigskeleton__itemlonglong_set_min_value(void* self, int64_t minValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemlonglong.html#setMaxValue)
 ///
 /// @param self KCoreConfigSkeleton__ItemLongLong*
-/// @param maxValue long long
+/// @param maxValue int64_t
 ///
-void k_coreconfigskeleton__itemlonglong_set_max_value(void* self, long long maxValue);
+void k_coreconfigskeleton__itemlonglong_set_max_value(void* self, int64_t maxValue);
 
 /// Delete this object from C++ memory.
 ///
@@ -4663,9 +4663,9 @@ KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new(const char* _g
 /// @param _key const char*
 /// @param reference int*
 /// @param choices libqt_list of KCoreConfigSkeleton__ItemEnum__Choice*
-/// @param defaultValue int
+/// @param defaultValue int32_t
 ///
-KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new2(const char* _group, const char* _key, int* reference, libqt_list choices, int defaultValue);
+KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new2(const char* _group, const char* _key, int* reference, libqt_list choices, int32_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemenum.html#choices)
 ///
@@ -5150,9 +5150,9 @@ void k_coreconfigskeleton__itemuint_delete(void* self);
 ///
 /// @param _group const char*
 /// @param _key const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 ///
-KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new(const char* _group, const char* _key, uint64_t* reference);
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new(const char* _group, const char* _key, uintptr_t* reference);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html)
 
@@ -5160,10 +5160,10 @@ KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new(cons
 ///
 /// @param _group const char*
 /// @param _key const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 /// @param defaultValue uint64_t
 ///
-KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new2(const char* _group, const char* _key, uint64_t* reference, uint64_t defaultValue);
+KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new2(const char* _group, const char* _key, uintptr_t* reference, uint64_t defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kcoreconfigskeleton-itemulonglong.html#readConfig)
 ///

@@ -39,9 +39,9 @@ QLatin1String* q_latin1string_new3(const char* f, const char* l);
 /// q_latin1string_new4 constructs a new QLatin1String object.
 ///
 /// @param s const char*
-/// @param sz int64_t
+/// @param sz intptr_t
 ///
-QLatin1String* q_latin1string_new4(const char* s, int64_t sz);
+QLatin1String* q_latin1string_new4(const char* s, intptr_t sz);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html)
 
@@ -93,7 +93,7 @@ const char* q_latin1string_latin1(void* self);
 ///
 /// @param self QLatin1String*
 ///
-int64_t q_latin1string_size(void* self);
+intptr_t q_latin1string_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#data)
 ///
@@ -143,7 +143,7 @@ QLatin1Char* q_latin1string_last(void* self);
 ///
 /// @param self QLatin1String*
 ///
-int64_t q_latin1string_length(void* self);
+intptr_t q_latin1string_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#isNull)
 ///
@@ -166,16 +166,16 @@ bool q_latin1string_empty(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#at)
 ///
 /// @param self QLatin1String*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QLatin1Char* q_latin1string_at(void* self, int64_t i);
+QLatin1Char* q_latin1string_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#operator-5b-5d)
 ///
 /// @param self QLatin1String*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QLatin1Char* q_latin1string_operator_subscript(void* self, int64_t i);
+QLatin1Char* q_latin1string_operator_subscript(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#front)
 ///
@@ -239,7 +239,7 @@ bool q_latin1string_ends_with4(void* self, void* c, int32_t cs);
 /// @param self QLatin1String*
 /// @param c QChar*
 ///
-int64_t q_latin1string_index_of3(void* self, void* c);
+intptr_t q_latin1string_index_of3(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#contains)
 ///
@@ -253,22 +253,22 @@ bool q_latin1string_contains3(void* self, void* c);
 /// @param self QLatin1String*
 /// @param c QChar*
 ///
-int64_t q_latin1string_last_index_of5(void* self, void* c);
+intptr_t q_latin1string_last_index_of5(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
 ///
 /// @param self QLatin1String*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_latin1string_last_index_of6(void* self, void* c, int64_t from);
+intptr_t q_latin1string_last_index_of6(void* self, void* c, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#count)
 ///
 /// @param self QLatin1String*
 /// @param ch QChar*
 ///
-int64_t q_latin1string_count3(void* self, void* ch);
+intptr_t q_latin1string_count3(void* self, void* ch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toShort)
 ///
@@ -280,7 +280,7 @@ short q_latin1string_to_short(void* self);
 ///
 /// @param self QLatin1String*
 ///
-unsigned short q_latin1string_to_u_short(void* self);
+uint16_t q_latin1string_to_u_short(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toInt)
 ///
@@ -298,13 +298,13 @@ uint32_t q_latin1string_to_u_int(void* self);
 ///
 /// @param self QLatin1String*
 ///
-int64_t q_latin1string_to_long(void* self);
+long q_latin1string_to_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toULong)
 ///
 /// @param self QLatin1String*
 ///
-uint64_t q_latin1string_to_u_long(void* self);
+uintptr_t q_latin1string_to_u_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toLongLong)
 ///
@@ -316,7 +316,7 @@ long long q_latin1string_to_long_long(void* self);
 ///
 /// @param self QLatin1String*
 ///
-uint64_t q_latin1string_to_u_long_long(void* self);
+uintptr_t q_latin1string_to_u_long_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toFloat)
 ///
@@ -366,42 +366,42 @@ const char* q_latin1string_cend(void* self);
 ///
 /// @param self QLatin1String*
 ///
-int64_t q_latin1string_max_size(void* self);
+intptr_t q_latin1string_max_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#maxSize)
 ///
-int64_t q_latin1string_max_size2();
+intptr_t q_latin1string_max_size2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#chop)
 ///
 /// @param self QLatin1String*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-void q_latin1string_chop(void* self, int64_t n);
+void q_latin1string_chop(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#truncate)
 ///
 /// @param self QLatin1String*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-void q_latin1string_truncate(void* self, int64_t n);
+void q_latin1string_truncate(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
 ///
 /// @param self QLatin1String*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_latin1string_index_of24(void* self, void* c, int64_t from);
+intptr_t q_latin1string_index_of24(void* self, void* c, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
 ///
 /// @param self QLatin1String*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_latin1string_index_of34(void* self, void* c, int64_t from, int32_t cs);
+intptr_t q_latin1string_index_of34(void* self, void* c, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#contains)
 ///
@@ -417,16 +417,16 @@ bool q_latin1string_contains24(void* self, void* c, int32_t cs);
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs);
+intptr_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
 ///
 /// @param self QLatin1String*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int32_t cs);
+intptr_t q_latin1string_last_index_of34(void* self, void* c, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#count)
 ///
@@ -434,7 +434,7 @@ int64_t q_latin1string_last_index_of34(void* self, void* c, int64_t from, int32_
 /// @param ch QChar*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_latin1string_count24(void* self, void* ch, int32_t cs);
+intptr_t q_latin1string_count24(void* self, void* ch, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toShort)
 ///
@@ -456,7 +456,7 @@ short q_latin1string_to_short2(void* self, bool* ok, int base);
 /// @param self QLatin1String*
 /// @param ok bool*
 ///
-unsigned short q_latin1string_to_u_short1(void* self, bool* ok);
+uint16_t q_latin1string_to_u_short1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toUShort)
 ///
@@ -464,7 +464,7 @@ unsigned short q_latin1string_to_u_short1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-unsigned short q_latin1string_to_u_short2(void* self, bool* ok, int base);
+uint16_t q_latin1string_to_u_short2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toInt)
 ///
@@ -501,7 +501,7 @@ uint32_t q_latin1string_to_u_int2(void* self, bool* ok, int base);
 /// @param self QLatin1String*
 /// @param ok bool*
 ///
-int64_t q_latin1string_to_long1(void* self, bool* ok);
+long q_latin1string_to_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toLong)
 ///
@@ -509,14 +509,14 @@ int64_t q_latin1string_to_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-int64_t q_latin1string_to_long2(void* self, bool* ok, int base);
+long q_latin1string_to_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toULong)
 ///
 /// @param self QLatin1String*
 /// @param ok bool*
 ///
-uint64_t q_latin1string_to_u_long1(void* self, bool* ok);
+uintptr_t q_latin1string_to_u_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toULong)
 ///
@@ -524,7 +524,7 @@ uint64_t q_latin1string_to_u_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-uint64_t q_latin1string_to_u_long2(void* self, bool* ok, int base);
+uintptr_t q_latin1string_to_u_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toLongLong)
 ///
@@ -546,7 +546,7 @@ long long q_latin1string_to_long_long2(void* self, bool* ok, int base);
 /// @param self QLatin1String*
 /// @param ok bool*
 ///
-uint64_t q_latin1string_to_u_long_long1(void* self, bool* ok);
+uintptr_t q_latin1string_to_u_long_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toULongLong)
 ///
@@ -554,7 +554,7 @@ uint64_t q_latin1string_to_u_long_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-uint64_t q_latin1string_to_u_long_long2(void* self, bool* ok, int base);
+uintptr_t q_latin1string_to_u_long_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#toFloat)
 ///

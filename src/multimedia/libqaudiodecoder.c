@@ -111,11 +111,11 @@ bool q_audiodecoder_buffer_available(void* self) {
     return QAudioDecoder_BufferAvailable((QAudioDecoder*)self);
 }
 
-long long q_audiodecoder_position(void* self) {
+int64_t q_audiodecoder_position(void* self) {
     return QAudioDecoder_Position((QAudioDecoder*)self);
 }
 
-long long q_audiodecoder_duration(void* self) {
+int64_t q_audiodecoder_duration(void* self) {
     return QAudioDecoder_Duration((QAudioDecoder*)self);
 }
 
@@ -155,11 +155,11 @@ void q_audiodecoder_source_changed(void* self) {
     QAudioDecoder_SourceChanged((QAudioDecoder*)self);
 }
 
-void q_audiodecoder_position_changed(void* self, long long position) {
+void q_audiodecoder_position_changed(void* self, int64_t position) {
     QAudioDecoder_PositionChanged((QAudioDecoder*)self, position);
 }
 
-void q_audiodecoder_duration_changed(void* self, long long duration) {
+void q_audiodecoder_duration_changed(void* self, int64_t duration) {
     QAudioDecoder_DurationChanged((QAudioDecoder*)self, duration);
 }
 

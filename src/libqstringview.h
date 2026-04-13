@@ -43,7 +43,7 @@ const char* q_stringview_to_string(void* self);
 ///
 /// @param self QStringView*
 ///
-int64_t q_stringview_size(void* self);
+intptr_t q_stringview_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#data)
 ///
@@ -60,9 +60,9 @@ const QChar* q_stringview_const_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#operator-5b-5d)
 ///
 /// @param self QStringView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-QChar* q_stringview_operator_subscript(void* self, int64_t n);
+QChar* q_stringview_operator_subscript(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toLatin1)
 ///
@@ -99,23 +99,23 @@ libqt_list q_stringview_to_ucs4(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#at)
 ///
 /// @param self QStringView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-QChar* q_stringview_at(void* self, int64_t n);
+QChar* q_stringview_at(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#truncate)
 ///
 /// @param self QStringView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-void q_stringview_truncate(void* self, int64_t n);
+void q_stringview_truncate(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#chop)
 ///
 /// @param self QStringView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-void q_stringview_chop(void* self, int64_t n);
+void q_stringview_chop(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#compare)
 ///
@@ -167,7 +167,7 @@ bool q_stringview_ends_with4(void* self, void* c, int32_t cs);
 /// @param self QStringView*
 /// @param c QChar*
 ///
-int64_t q_stringview_index_of(void* self, void* c);
+intptr_t q_stringview_index_of(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
@@ -181,37 +181,37 @@ bool q_stringview_contains(void* self, void* c);
 /// @param self QStringView*
 /// @param c QChar*
 ///
-int64_t q_stringview_count(void* self, void* c);
+intptr_t q_stringview_count(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// @param self QStringView*
 /// @param c QChar*
 ///
-int64_t q_stringview_last_index_of(void* self, void* c);
+intptr_t q_stringview_last_index_of(void* self, void* c);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// @param self QStringView*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_stringview_last_index_of2(void* self, void* c, int64_t from);
+intptr_t q_stringview_last_index_of2(void* self, void* c, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// @param self QStringView*
 /// @param re QRegularExpression*
 ///
-int64_t q_stringview_index_of4(void* self, void* re);
+intptr_t q_stringview_index_of4(void* self, void* re);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// @param self QStringView*
 /// @param re QRegularExpression*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_stringview_last_index_of7(void* self, void* re, int64_t from);
+intptr_t q_stringview_last_index_of7(void* self, void* re, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
@@ -225,7 +225,7 @@ bool q_stringview_contains4(void* self, void* re);
 /// @param self QStringView*
 /// @param re QRegularExpression*
 ///
-int64_t q_stringview_count4(void* self, void* re);
+intptr_t q_stringview_count4(void* self, void* re);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#isRightToLeft)
 ///
@@ -261,7 +261,7 @@ short q_stringview_to_short(void* self);
 ///
 /// @param self QStringView*
 ///
-unsigned short q_stringview_to_u_short(void* self);
+uint16_t q_stringview_to_u_short(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toInt)
 ///
@@ -279,13 +279,13 @@ uint32_t q_stringview_to_u_int(void* self);
 ///
 /// @param self QStringView*
 ///
-int64_t q_stringview_to_long(void* self);
+long q_stringview_to_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toULong)
 ///
 /// @param self QStringView*
 ///
-uint64_t q_stringview_to_u_long(void* self);
+uintptr_t q_stringview_to_u_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toLongLong)
 ///
@@ -297,7 +297,7 @@ long long q_stringview_to_long_long(void* self);
 ///
 /// @param self QStringView*
 ///
-uint64_t q_stringview_to_u_long_long(void* self);
+uintptr_t q_stringview_to_u_long_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toFloat)
 ///
@@ -357,7 +357,7 @@ QChar* q_stringview_back(void* self);
 ///
 /// @param self QStringView*
 ///
-int64_t q_stringview_max_size(void* self);
+intptr_t q_stringview_max_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#constBegin)
 ///
@@ -387,7 +387,7 @@ bool q_stringview_is_empty(void* self);
 ///
 /// @param self QStringView*
 ///
-int64_t q_stringview_length(void* self);
+intptr_t q_stringview_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#first)
 ///
@@ -403,24 +403,24 @@ QChar* q_stringview_last2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#maxSize)
 ///
-int64_t q_stringview_max_size2();
+intptr_t q_stringview_max_size2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// @param self QStringView*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_stringview_index_of22(void* self, void* c, int64_t from);
+intptr_t q_stringview_index_of22(void* self, void* c, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// @param self QStringView*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_stringview_index_of32(void* self, void* c, int64_t from, int32_t cs);
+intptr_t q_stringview_index_of32(void* self, void* c, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
@@ -436,7 +436,7 @@ bool q_stringview_contains22(void* self, void* c, int32_t cs);
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_stringview_count22(void* self, void* c, int32_t cs);
+intptr_t q_stringview_count22(void* self, void* c, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
@@ -444,42 +444,42 @@ int64_t q_stringview_count22(void* self, void* c, int32_t cs);
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_stringview_last_index_of22(void* self, void* c, int32_t cs);
+intptr_t q_stringview_last_index_of22(void* self, void* c, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// @param self QStringView*
 /// @param c QChar*
-/// @param from int64_t
+/// @param from intptr_t
 /// @param cs enum Qt__CaseSensitivity
 ///
-int64_t q_stringview_last_index_of32(void* self, void* c, int64_t from, int32_t cs);
+intptr_t q_stringview_last_index_of32(void* self, void* c, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// @param self QStringView*
 /// @param re QRegularExpression*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_stringview_index_of25(void* self, void* re, int64_t from);
+intptr_t q_stringview_index_of25(void* self, void* re, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// @param self QStringView*
 /// @param re QRegularExpression*
-/// @param from int64_t
+/// @param from intptr_t
 /// @param rmatch QRegularExpressionMatch*
 ///
-int64_t q_stringview_index_of35(void* self, void* re, int64_t from, void* rmatch);
+intptr_t q_stringview_index_of35(void* self, void* re, intptr_t from, void* rmatch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
 /// @param self QStringView*
 /// @param re QRegularExpression*
-/// @param from int64_t
+/// @param from intptr_t
 /// @param rmatch QRegularExpressionMatch*
 ///
-int64_t q_stringview_last_index_of35(void* self, void* re, int64_t from, void* rmatch);
+intptr_t q_stringview_last_index_of35(void* self, void* re, intptr_t from, void* rmatch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
@@ -509,7 +509,7 @@ short q_stringview_to_short2(void* self, bool* ok, int base);
 /// @param self QStringView*
 /// @param ok bool*
 ///
-unsigned short q_stringview_to_u_short1(void* self, bool* ok);
+uint16_t q_stringview_to_u_short1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toUShort)
 ///
@@ -517,7 +517,7 @@ unsigned short q_stringview_to_u_short1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-unsigned short q_stringview_to_u_short2(void* self, bool* ok, int base);
+uint16_t q_stringview_to_u_short2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toInt)
 ///
@@ -554,7 +554,7 @@ uint32_t q_stringview_to_u_int2(void* self, bool* ok, int base);
 /// @param self QStringView*
 /// @param ok bool*
 ///
-int64_t q_stringview_to_long1(void* self, bool* ok);
+long q_stringview_to_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toLong)
 ///
@@ -562,14 +562,14 @@ int64_t q_stringview_to_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-int64_t q_stringview_to_long2(void* self, bool* ok, int base);
+long q_stringview_to_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toULong)
 ///
 /// @param self QStringView*
 /// @param ok bool*
 ///
-uint64_t q_stringview_to_u_long1(void* self, bool* ok);
+uintptr_t q_stringview_to_u_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toULong)
 ///
@@ -577,7 +577,7 @@ uint64_t q_stringview_to_u_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-uint64_t q_stringview_to_u_long2(void* self, bool* ok, int base);
+uintptr_t q_stringview_to_u_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toLongLong)
 ///
@@ -599,7 +599,7 @@ long long q_stringview_to_long_long2(void* self, bool* ok, int base);
 /// @param self QStringView*
 /// @param ok bool*
 ///
-uint64_t q_stringview_to_u_long_long1(void* self, bool* ok);
+uintptr_t q_stringview_to_u_long_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toULongLong)
 ///
@@ -607,7 +607,7 @@ uint64_t q_stringview_to_u_long_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-uint64_t q_stringview_to_u_long_long2(void* self, bool* ok, int base);
+uintptr_t q_stringview_to_u_long_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#toFloat)
 ///

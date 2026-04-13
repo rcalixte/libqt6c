@@ -230,7 +230,7 @@ bool k_autosavefile_open4(void* self, int fd, int32_t ioFlags) {
     return QFile_Open4((QFile*)self, fd, ioFlags);
 }
 
-bool k_autosavefile_resize2(const char* filename, long long sz) {
+bool k_autosavefile_resize2(const char* filename, int64_t sz) {
     return QFile_Resize2(qstring(filename), sz);
 }
 
@@ -262,7 +262,7 @@ bool k_autosavefile_flush(void* self) {
     return QFileDevice_Flush((QFileDevice*)self);
 }
 
-unsigned char* k_autosavefile_map(void* self, long long offset, long long size) {
+unsigned char* k_autosavefile_map(void* self, int64_t offset, int64_t size) {
     return (unsigned char*)QFileDevice_Map((QFileDevice*)self, offset, size);
 }
 
@@ -278,7 +278,7 @@ bool k_autosavefile_set_file_time(void* self, void* newDate, int32_t fileTime) {
     return QFileDevice_SetFileTime((QFileDevice*)self, (QDateTime*)newDate, fileTime);
 }
 
-unsigned char* k_autosavefile_map3(void* self, long long offset, long long size, int32_t flags) {
+unsigned char* k_autosavefile_map3(void* self, int64_t offset, int64_t size, int32_t flags) {
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
@@ -330,11 +330,11 @@ void k_autosavefile_set_current_write_channel(void* self, int channel) {
     QIODevice_SetCurrentWriteChannel((QIODevice*)self, channel);
 }
 
-long long k_autosavefile_read(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* k_autosavefile_read2(void* self, long long maxlen) {
+char* k_autosavefile_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -348,7 +348,7 @@ char* k_autosavefile_read_all(void* self) {
     return _ret;
 }
 
-long long k_autosavefile_read_line(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
@@ -375,30 +375,30 @@ bool k_autosavefile_is_transaction_started(void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-long long k_autosavefile_write(void* self, const char* data, long long lenVal) {
+int64_t k_autosavefile_write(void* self, const char* data, int64_t lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long k_autosavefile_write2(void* self, const char* data) {
+int64_t k_autosavefile_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long k_autosavefile_write3(void* self, char* data) {
+int64_t k_autosavefile_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
-long long k_autosavefile_peek(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* k_autosavefile_peek2(void* self, long long maxlen) {
+char* k_autosavefile_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-long long k_autosavefile_skip(void* self, long long maxSize) {
+int64_t k_autosavefile_skip(void* self, int64_t maxSize) {
     return QIODevice_Skip((QIODevice*)self, maxSize);
 }
 
@@ -437,19 +437,19 @@ void k_autosavefile_on_channel_ready_read(void* self, void (*callback)(void*, in
     QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-void k_autosavefile_bytes_written(void* self, long long bytes) {
+void k_autosavefile_bytes_written(void* self, int64_t bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void k_autosavefile_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void k_autosavefile_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-void k_autosavefile_channel_bytes_written(void* self, int channel, long long bytes) {
+void k_autosavefile_channel_bytes_written(void* self, int channel, int64_t bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void k_autosavefile_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+void k_autosavefile_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t)) {
     QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
@@ -469,7 +469,7 @@ void k_autosavefile_on_read_channel_finished(void* self, void (*callback)(void*)
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* k_autosavefile_read_line1(void* self, long long maxlen) {
+char* k_autosavefile_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -705,27 +705,27 @@ void k_autosavefile_on_file_name(void* self, const char* (*callback)()) {
     KAutoSaveFile_OnFileName((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_size(void* self) {
+int64_t k_autosavefile_size(void* self) {
     return KAutoSaveFile_Size((KAutoSaveFile*)self);
 }
 
-long long k_autosavefile_super_size(void* self) {
+int64_t k_autosavefile_super_size(void* self) {
     return KAutoSaveFile_SuperSize((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_size(void* self, long long (*callback)()) {
+void k_autosavefile_on_size(void* self, int64_t (*callback)()) {
     KAutoSaveFile_OnSize((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_resize(void* self, long long sz) {
+bool k_autosavefile_resize(void* self, int64_t sz) {
     return KAutoSaveFile_Resize((KAutoSaveFile*)self, sz);
 }
 
-bool k_autosavefile_super_resize(void* self, long long sz) {
+bool k_autosavefile_super_resize(void* self, int64_t sz) {
     return KAutoSaveFile_SuperResize((KAutoSaveFile*)self, sz);
 }
 
-void k_autosavefile_on_resize(void* self, bool (*callback)(void*, long long)) {
+void k_autosavefile_on_resize(void* self, bool (*callback)(void*, int64_t)) {
     KAutoSaveFile_OnResize((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -777,27 +777,27 @@ void k_autosavefile_on_is_sequential(void* self, bool (*callback)()) {
     KAutoSaveFile_OnIsSequential((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_pos(void* self) {
+int64_t k_autosavefile_pos(void* self) {
     return KAutoSaveFile_Pos((KAutoSaveFile*)self);
 }
 
-long long k_autosavefile_super_pos(void* self) {
+int64_t k_autosavefile_super_pos(void* self) {
     return KAutoSaveFile_SuperPos((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_pos(void* self, long long (*callback)()) {
+void k_autosavefile_on_pos(void* self, int64_t (*callback)()) {
     KAutoSaveFile_OnPos((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-bool k_autosavefile_seek(void* self, long long offset) {
+bool k_autosavefile_seek(void* self, int64_t offset) {
     return KAutoSaveFile_Seek((KAutoSaveFile*)self, offset);
 }
 
-bool k_autosavefile_super_seek(void* self, long long offset) {
+bool k_autosavefile_super_seek(void* self, int64_t offset) {
     return KAutoSaveFile_SuperSeek((KAutoSaveFile*)self, offset);
 }
 
-void k_autosavefile_on_seek(void* self, bool (*callback)(void*, long long)) {
+void k_autosavefile_on_seek(void* self, bool (*callback)(void*, int64_t)) {
     KAutoSaveFile_OnSeek((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -813,39 +813,39 @@ void k_autosavefile_on_at_end(void* self, bool (*callback)()) {
     KAutoSaveFile_OnAtEnd((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_read_data(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_read_data(void* self, char* data, int64_t maxlen) {
     return KAutoSaveFile_ReadData((KAutoSaveFile*)self, data, maxlen);
 }
 
-long long k_autosavefile_super_read_data(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_super_read_data(void* self, char* data, int64_t maxlen) {
     return KAutoSaveFile_SuperReadData((KAutoSaveFile*)self, data, maxlen);
 }
 
-void k_autosavefile_on_read_data(void* self, long long (*callback)(void*, char*, long long)) {
+void k_autosavefile_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     KAutoSaveFile_OnReadData((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_write_data(void* self, const char* data, long long lenVal) {
+int64_t k_autosavefile_write_data(void* self, const char* data, int64_t lenVal) {
     return KAutoSaveFile_WriteData((KAutoSaveFile*)self, data, lenVal);
 }
 
-long long k_autosavefile_super_write_data(void* self, const char* data, long long lenVal) {
+int64_t k_autosavefile_super_write_data(void* self, const char* data, int64_t lenVal) {
     return KAutoSaveFile_SuperWriteData((KAutoSaveFile*)self, data, lenVal);
 }
 
-void k_autosavefile_on_write_data(void* self, long long (*callback)(void*, const char*, long long)) {
+void k_autosavefile_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t)) {
     KAutoSaveFile_OnWriteData((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_read_line_data(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_read_line_data(void* self, char* data, int64_t maxlen) {
     return KAutoSaveFile_ReadLineData((KAutoSaveFile*)self, data, maxlen);
 }
 
-long long k_autosavefile_super_read_line_data(void* self, char* data, long long maxlen) {
+int64_t k_autosavefile_super_read_line_data(void* self, char* data, int64_t maxlen) {
     return KAutoSaveFile_SuperReadLineData((KAutoSaveFile*)self, data, maxlen);
 }
 
-void k_autosavefile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long)) {
+void k_autosavefile_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t)) {
     KAutoSaveFile_OnReadLineData((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -861,27 +861,27 @@ void k_autosavefile_on_reset(void* self, bool (*callback)()) {
     KAutoSaveFile_OnReset((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_bytes_available(void* self) {
+int64_t k_autosavefile_bytes_available(void* self) {
     return KAutoSaveFile_BytesAvailable((KAutoSaveFile*)self);
 }
 
-long long k_autosavefile_super_bytes_available(void* self) {
+int64_t k_autosavefile_super_bytes_available(void* self) {
     return KAutoSaveFile_SuperBytesAvailable((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_bytes_available(void* self, long long (*callback)()) {
+void k_autosavefile_on_bytes_available(void* self, int64_t (*callback)()) {
     KAutoSaveFile_OnBytesAvailable((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_bytes_to_write(void* self) {
+int64_t k_autosavefile_bytes_to_write(void* self) {
     return KAutoSaveFile_BytesToWrite((KAutoSaveFile*)self);
 }
 
-long long k_autosavefile_super_bytes_to_write(void* self) {
+int64_t k_autosavefile_super_bytes_to_write(void* self) {
     return KAutoSaveFile_SuperBytesToWrite((KAutoSaveFile*)self);
 }
 
-void k_autosavefile_on_bytes_to_write(void* self, long long (*callback)()) {
+void k_autosavefile_on_bytes_to_write(void* self, int64_t (*callback)()) {
     KAutoSaveFile_OnBytesToWrite((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
@@ -921,15 +921,15 @@ void k_autosavefile_on_wait_for_bytes_written(void* self, bool (*callback)(void*
     KAutoSaveFile_OnWaitForBytesWritten((KAutoSaveFile*)self, (intptr_t)callback);
 }
 
-long long k_autosavefile_skip_data(void* self, long long maxSize) {
+int64_t k_autosavefile_skip_data(void* self, int64_t maxSize) {
     return KAutoSaveFile_SkipData((KAutoSaveFile*)self, maxSize);
 }
 
-long long k_autosavefile_super_skip_data(void* self, long long maxSize) {
+int64_t k_autosavefile_super_skip_data(void* self, int64_t maxSize) {
     return KAutoSaveFile_SuperSkipData((KAutoSaveFile*)self, maxSize);
 }
 
-void k_autosavefile_on_skip_data(void* self, long long (*callback)(void*, long long)) {
+void k_autosavefile_on_skip_data(void* self, int64_t (*callback)(void*, int64_t)) {
     KAutoSaveFile_OnSkipData((KAutoSaveFile*)self, (intptr_t)callback);
 }
 

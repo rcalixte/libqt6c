@@ -57,39 +57,39 @@ bool k_7zip_super_do_write_dir(void* self, const char* name, const char* user, c
     return K7Zip_SuperDoWriteDir((K7Zip*)self, qstring(name), qstring(user), qstring(group), perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_7zip_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
     return K7Zip_DoPrepareWriting((K7Zip*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, long long, mode_t, void*, void*, void*)) {
+void k_7zip_on_do_prepare_writing(void* self, bool (*callback)(void*, const char*, const char*, const char*, int64_t, mode_t, void*, void*, void*)) {
     K7Zip_OnDoPrepareWriting((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_7zip_super_do_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
     return K7Zip_SuperDoPrepareWriting((K7Zip*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-bool k_7zip_do_finish_writing(void* self, long long size) {
+bool k_7zip_do_finish_writing(void* self, int64_t size) {
     return K7Zip_DoFinishWriting((K7Zip*)self, size);
 }
 
-void k_7zip_on_do_finish_writing(void* self, bool (*callback)(void*, long long)) {
+void k_7zip_on_do_finish_writing(void* self, bool (*callback)(void*, int64_t)) {
     K7Zip_OnDoFinishWriting((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_super_do_finish_writing(void* self, long long size) {
+bool k_7zip_super_do_finish_writing(void* self, int64_t size) {
     return K7Zip_SuperDoFinishWriting((K7Zip*)self, size);
 }
 
-bool k_7zip_do_write_data(void* self, const char* data, long long size) {
+bool k_7zip_do_write_data(void* self, const char* data, int64_t size) {
     return K7Zip_DoWriteData((K7Zip*)self, data, size);
 }
 
-void k_7zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, long long)) {
+void k_7zip_on_do_write_data(void* self, bool (*callback)(void*, const char*, int64_t)) {
     K7Zip_OnDoWriteData((K7Zip*)self, (intptr_t)callback);
 }
 
-bool k_7zip_super_do_write_data(void* self, const char* data, long long size) {
+bool k_7zip_super_do_write_data(void* self, const char* data, int64_t size) {
     return K7Zip_SuperDoWriteData((K7Zip*)self, data, size);
 }
 
@@ -193,11 +193,11 @@ bool k_7zip_write_file(void* self, const char* name, char* data) {
     return KArchive_WriteFile((KArchive*)self, qstring(name), qstring(data));
 }
 
-bool k_7zip_prepare_writing(void* self, const char* name, const char* user, const char* group, long long size) {
+bool k_7zip_prepare_writing(void* self, const char* name, const char* user, const char* group, int64_t size) {
     return KArchive_PrepareWriting((KArchive*)self, qstring(name), qstring(user), qstring(group), size);
 }
 
-bool k_7zip_write_data(void* self, const char* data, long long size) {
+bool k_7zip_write_data(void* self, const char* data, int64_t size) {
     return KArchive_WriteData((KArchive*)self, data, size);
 }
 
@@ -205,7 +205,7 @@ bool k_7zip_write_data2(void* self, char* data) {
     return KArchive_WriteData2((KArchive*)self, qstring(data));
 }
 
-bool k_7zip_finish_writing(void* self, long long size) {
+bool k_7zip_finish_writing(void* self, int64_t size) {
     return KArchive_FinishWriting((KArchive*)self, size);
 }
 
@@ -281,19 +281,19 @@ bool k_7zip_write_file8(void* self, const char* name, char* data, mode_t perm, c
     return KArchive_WriteFile8((KArchive*)self, qstring(name), qstring(data), perm, qstring(user), qstring(group), (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 
-bool k_7zip_prepare_writing5(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm) {
+bool k_7zip_prepare_writing5(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm) {
     return KArchive_PrepareWriting5((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm);
 }
 
-bool k_7zip_prepare_writing6(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime) {
+bool k_7zip_prepare_writing6(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime) {
     return KArchive_PrepareWriting6((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime);
 }
 
-bool k_7zip_prepare_writing7(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime) {
+bool k_7zip_prepare_writing7(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime) {
     return KArchive_PrepareWriting7((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime);
 }
 
-bool k_7zip_prepare_writing8(void* self, const char* name, const char* user, const char* group, long long size, mode_t perm, void* atime, void* mtime, void* ctime) {
+bool k_7zip_prepare_writing8(void* self, const char* name, const char* user, const char* group, int64_t size, mode_t perm, void* atime, void* mtime, void* ctime) {
     return KArchive_PrepareWriting8((KArchive*)self, qstring(name), qstring(user), qstring(group), size, perm, (QDateTime*)atime, (QDateTime*)mtime, (QDateTime*)ctime);
 }
 

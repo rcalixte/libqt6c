@@ -1236,7 +1236,7 @@ int32_t k_icondialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_icondialog_find(uint64_t param1) {
+QWidget* k_icondialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

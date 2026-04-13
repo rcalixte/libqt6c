@@ -79,7 +79,7 @@ int32_t q_collator_compare(void* self, const char* s1, const char* s2) {
     return QCollator_Compare((QCollator*)self, qstring(s1), qstring(s2));
 }
 
-int32_t q_collator_compare2(void* self, void* s1, int64_t len1, void* s2, int64_t len2) {
+int32_t q_collator_compare2(void* self, void* s1, intptr_t len1, void* s2, intptr_t len2) {
     return QCollator_Compare2((QCollator*)self, (QChar*)s1, len1, (QChar*)s2, len2);
 }
 

@@ -410,7 +410,7 @@ KTextEditor__Range* k_texteditor__document_document_range(void* self);
 ///
 /// @param self KTextEditor__Document*
 ///
-int64_t k_texteditor__document_total_characters(void* self);
+intptr_t k_texteditor__document_total_characters(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#isEmpty)
 ///
@@ -534,14 +534,14 @@ libqt_list k_texteditor__document_search_text(void* self, void* range, const cha
 /// @param self KTextEditor__Document*
 /// @param c KTextEditor__Cursor*
 ///
-int64_t k_texteditor__document_cursor_to_offset(void* self, void* c);
+intptr_t k_texteditor__document_cursor_to_offset(void* self, void* c);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#offsetToCursor)
 ///
 /// @param self KTextEditor__Document*
-/// @param offset int64_t
+/// @param offset intptr_t
 ///
-KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(void* self, int64_t offset);
+KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(void* self, intptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#editingStarted)
 ///
@@ -853,37 +853,37 @@ KTextEditor__MovingRange* k_texteditor__document_new_moving_range(void* self, vo
 ///
 /// @param self KTextEditor__Document*
 ///
-long long k_texteditor__document_revision(void* self);
+int64_t k_texteditor__document_revision(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#lastSavedRevision)
 ///
 /// @param self KTextEditor__Document*
 ///
-long long k_texteditor__document_last_saved_revision(void* self);
+int64_t k_texteditor__document_last_saved_revision(void* self);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#lockRevision)
 ///
 /// @param self KTextEditor__Document*
-/// @param revision long long
+/// @param revision int64_t
 ///
-void k_texteditor__document_lock_revision(void* self, long long revision);
+void k_texteditor__document_lock_revision(void* self, int64_t revision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#unlockRevision)
 ///
 /// @param self KTextEditor__Document*
-/// @param revision long long
+/// @param revision int64_t
 ///
-void k_texteditor__document_unlock_revision(void* self, long long revision);
+void k_texteditor__document_unlock_revision(void* self, int64_t revision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#transformCursor)
 ///
 /// @param self KTextEditor__Document*
 /// @param cursor KTextEditor__Cursor*
 /// @param insertBehavior enum KTextEditor__MovingCursor__InsertBehavior
-/// @param fromRevision long long
-/// @param toRevision long long
+/// @param fromRevision int64_t
+/// @param toRevision int64_t
 ///
-void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t insertBehavior, long long fromRevision, long long toRevision);
+void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t insertBehavior, int64_t fromRevision, int64_t toRevision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#transformCursor)
 ///
@@ -891,10 +891,10 @@ void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t i
 /// @param line int*
 /// @param column int*
 /// @param insertBehavior enum KTextEditor__MovingCursor__InsertBehavior
-/// @param fromRevision long long
-/// @param toRevision long long
+/// @param fromRevision int64_t
+/// @param toRevision int64_t
 ///
-void k_texteditor__document_transform_cursor2(void* self, int* line, int* column, int32_t insertBehavior, long long fromRevision, long long toRevision);
+void k_texteditor__document_transform_cursor2(void* self, int* line, int* column, int32_t insertBehavior, int64_t fromRevision, int64_t toRevision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#transformRange)
 ///
@@ -902,10 +902,10 @@ void k_texteditor__document_transform_cursor2(void* self, int* line, int* column
 /// @param range KTextEditor__Range*
 /// @param insertBehaviors flag of enum KTextEditor__MovingRange__InsertBehavior
 /// @param emptyBehavior enum KTextEditor__MovingRange__EmptyBehavior
-/// @param fromRevision long long
-/// @param toRevision long long
+/// @param fromRevision int64_t
+/// @param toRevision int64_t
 ///
-void k_texteditor__document_transform_range(void* self, void* range, int32_t insertBehaviors, int32_t emptyBehavior, long long fromRevision, long long toRevision);
+void k_texteditor__document_transform_range(void* self, void* range, int32_t insertBehaviors, int32_t emptyBehavior, int64_t fromRevision, int64_t toRevision);
 
 /// [Upstream resources](https://api.kde.org/ktexteditor-document.html#aboutToDeleteMovingInterfaceContent)
 ///

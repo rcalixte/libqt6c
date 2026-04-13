@@ -152,7 +152,7 @@ int32_t q_wavedecoder_duration(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#headerLength)
 ///
-long long q_wavedecoder_header_length();
+int64_t q_wavedecoder_header_length();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#open)
 ///
@@ -213,18 +213,18 @@ void q_wavedecoder_super_close(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#seek)
 ///
 /// @param self QWaveDecoder*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_wavedecoder_seek(void* self, long long pos);
+bool q_wavedecoder_seek(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#seek)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWaveDecoder*
-/// @param callback bool func(QWaveDecoder* self, long long pos)
+/// @param callback bool func(QWaveDecoder* self, int64_t pos)
 ///
-void q_wavedecoder_on_seek(void* self, bool (*callback)(void*, long long));
+void q_wavedecoder_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_seek` instead
 ///
@@ -235,24 +235,24 @@ void q_wavedecoder_on_seek(void* self, bool (*callback)(void*, long long));
 /// Base class method implementation
 ///
 /// @param self QWaveDecoder*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_wavedecoder_super_seek(void* self, long long pos);
+bool q_wavedecoder_super_seek(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_pos(void* self);
+int64_t q_wavedecoder_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#pos)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWaveDecoder*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_wavedecoder_on_pos(void* self, long long (*callback)());
+void q_wavedecoder_on_pos(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_pos` instead
 ///
@@ -264,7 +264,7 @@ void q_wavedecoder_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_super_pos(void* self);
+int64_t q_wavedecoder_super_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#setIODevice)
 ///
@@ -277,16 +277,16 @@ void q_wavedecoder_set_i_o_device(void* self, void* device);
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_size(void* self);
+int64_t q_wavedecoder_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#size)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWaveDecoder*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_wavedecoder_on_size(void* self, long long (*callback)());
+void q_wavedecoder_on_size(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_size` instead
 ///
@@ -298,7 +298,7 @@ void q_wavedecoder_on_size(void* self, long long (*callback)());
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_super_size(void* self);
+int64_t q_wavedecoder_super_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#isSequential)
 ///
@@ -331,16 +331,16 @@ bool q_wavedecoder_super_is_sequential(void* self);
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_bytes_available(void* self);
+int64_t q_wavedecoder_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#bytesAvailable)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QWaveDecoder*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_wavedecoder_on_bytes_available(void* self, long long (*callback)());
+void q_wavedecoder_on_bytes_available(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_bytes_available` instead
 ///
@@ -352,7 +352,7 @@ void q_wavedecoder_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_super_bytes_available(void* self);
+int64_t q_wavedecoder_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwavedecoder.html#formatKnown)
 ///
@@ -506,9 +506,9 @@ void q_wavedecoder_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QWaveDecoder*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_wavedecoder_read(void* self, char* data, long long maxlen);
+int64_t q_wavedecoder_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -517,9 +517,9 @@ long long q_wavedecoder_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWaveDecoder*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_wavedecoder_read2(void* self, long long maxlen);
+char* q_wavedecoder_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -537,9 +537,9 @@ char* q_wavedecoder_read_all(void* self);
 ///
 /// @param self QWaveDecoder*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_wavedecoder_read_line(void* self, char* data, long long maxlen);
+int64_t q_wavedecoder_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -589,9 +589,9 @@ bool q_wavedecoder_is_transaction_started(void* self);
 ///
 /// @param self QWaveDecoder*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_wavedecoder_write(void* self, const char* data, long long lenVal);
+int64_t q_wavedecoder_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -600,7 +600,7 @@ long long q_wavedecoder_write(void* self, const char* data, long long lenVal);
 /// @param self QWaveDecoder*
 /// @param data const char*
 ///
-long long q_wavedecoder_write2(void* self, const char* data);
+int64_t q_wavedecoder_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -609,7 +609,7 @@ long long q_wavedecoder_write2(void* self, const char* data);
 /// @param self QWaveDecoder*
 /// @param data char*
 ///
-long long q_wavedecoder_write3(void* self, char* data);
+int64_t q_wavedecoder_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -617,9 +617,9 @@ long long q_wavedecoder_write3(void* self, char* data);
 ///
 /// @param self QWaveDecoder*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_wavedecoder_peek(void* self, char* data, long long maxlen);
+int64_t q_wavedecoder_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -628,18 +628,18 @@ long long q_wavedecoder_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWaveDecoder*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_wavedecoder_peek2(void* self, long long maxlen);
+char* q_wavedecoder_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QWaveDecoder*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_wavedecoder_skip(void* self, long long maxSize);
+int64_t q_wavedecoder_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -718,18 +718,18 @@ void q_wavedecoder_on_channel_ready_read(void* self, void (*callback)(void*, int
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QWaveDecoder*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_wavedecoder_bytes_written(void* self, long long bytes);
+void q_wavedecoder_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QWaveDecoder*
-/// @param callback void func(QWaveDecoder* self, long long bytes)
+/// @param callback void func(QWaveDecoder* self, int64_t bytes)
 ///
-void q_wavedecoder_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_wavedecoder_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -737,18 +737,18 @@ void q_wavedecoder_on_bytes_written(void* self, void (*callback)(void*, long lon
 ///
 /// @param self QWaveDecoder*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_wavedecoder_channel_bytes_written(void* self, int channel, long long bytes);
+void q_wavedecoder_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QWaveDecoder*
-/// @param callback void func(QWaveDecoder* self, int channel, long long bytes)
+/// @param callback void func(QWaveDecoder* self, int channel, int64_t bytes)
 ///
-void q_wavedecoder_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_wavedecoder_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -791,9 +791,9 @@ void q_wavedecoder_on_read_channel_finished(void* self, void (*callback)(void*))
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QWaveDecoder*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_wavedecoder_read_line1(void* self, long long maxlen);
+char* q_wavedecoder_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1320,7 +1320,7 @@ void q_wavedecoder_on_reset(void* self, bool (*callback)());
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_bytes_to_write(void* self);
+int64_t q_wavedecoder_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_bytes_to_write` instead
 ///
@@ -1334,7 +1334,7 @@ long long q_wavedecoder_bytes_to_write(void* self);
 ///
 /// @param self QWaveDecoder*
 ///
-long long q_wavedecoder_super_bytes_to_write(void* self);
+int64_t q_wavedecoder_super_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1343,9 +1343,9 @@ long long q_wavedecoder_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWaveDecoder*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_wavedecoder_on_bytes_to_write(void* self, long long (*callback)());
+void q_wavedecoder_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1464,9 +1464,9 @@ void q_wavedecoder_on_wait_for_bytes_written(void* self, bool (*callback)(void*,
 ///
 /// @param self QWaveDecoder*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_wavedecoder_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_wavedecoder_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_read_line_data` instead
 ///
@@ -1480,9 +1480,9 @@ long long q_wavedecoder_read_line_data(void* self, char* data, long long maxlen)
 ///
 /// @param self QWaveDecoder*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_wavedecoder_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_wavedecoder_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -1491,9 +1491,9 @@ long long q_wavedecoder_super_read_line_data(void* self, char* data, long long m
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWaveDecoder*
-/// @param callback long long func(QWaveDecoder* self, char* data, long long maxlen)
+/// @param callback int64_t func(QWaveDecoder* self, char* data, int64_t maxlen)
 ///
-void q_wavedecoder_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_wavedecoder_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1502,9 +1502,9 @@ void q_wavedecoder_on_read_line_data(void* self, long long (*callback)(void*, ch
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QWaveDecoder*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_wavedecoder_skip_data(void* self, long long maxSize);
+int64_t q_wavedecoder_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `q_wavedecoder_super_skip_data` instead
 ///
@@ -1517,9 +1517,9 @@ long long q_wavedecoder_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QWaveDecoder*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_wavedecoder_super_skip_data(void* self, long long maxSize);
+int64_t q_wavedecoder_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -1528,9 +1528,9 @@ long long q_wavedecoder_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QWaveDecoder*
-/// @param callback long long func(QWaveDecoder* self, long long maxSize)
+/// @param callback int64_t func(QWaveDecoder* self, int64_t maxSize)
 ///
-void q_wavedecoder_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_wavedecoder_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///

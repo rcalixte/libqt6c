@@ -279,16 +279,16 @@ void q_lowenergycontroller_on_mtu_changed(void* self, void (*callback)(void*, in
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycontroller.html#rssiRead)
 ///
 /// @param self QLowEnergyController*
-/// @param rssi short
+/// @param rssi int16_t
 ///
-void q_lowenergycontroller_rssi_read(void* self, short rssi);
+void q_lowenergycontroller_rssi_read(void* self, int16_t rssi);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycontroller.html#rssiRead)
 ///
 /// @param self QLowEnergyController*
-/// @param callback void func(QLowEnergyController* self, short rssi)
+/// @param callback void func(QLowEnergyController* self, int16_t rssi)
 ///
-void q_lowenergycontroller_on_rssi_read(void* self, void (*callback)(void*, short));
+void q_lowenergycontroller_on_rssi_read(void* self, void (*callback)(void*, int16_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlowenergycontroller.html#serviceDiscovered)
 ///

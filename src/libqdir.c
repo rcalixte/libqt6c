@@ -198,7 +198,7 @@ void q_dir_set_sorting(void* self, int32_t sort) {
     QDir_SetSorting((QDir*)self, sort);
 }
 
-int64_t q_dir_count(void* self) {
+intptr_t q_dir_count(void* self) {
     return QDir_Count((QDir*)self);
 }
 
@@ -206,7 +206,7 @@ bool q_dir_is_empty(void* self) {
     return QDir_IsEmpty((QDir*)self);
 }
 
-const char* q_dir_operator_subscript(void* self, long long param1) {
+const char* q_dir_operator_subscript(void* self, intptr_t param1) {
     libqt_string _str = QDir_OperatorSubscript((QDir*)self, param1);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);

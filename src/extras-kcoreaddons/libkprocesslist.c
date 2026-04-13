@@ -5,11 +5,11 @@ KProcessList__KProcessInfo* k_processlist__kprocessinfo_new() {
     return KProcessList__KProcessInfo_new();
 }
 
-KProcessList__KProcessInfo* k_processlist__kprocessinfo_new2(long long pid, const char* command, const char* user) {
+KProcessList__KProcessInfo* k_processlist__kprocessinfo_new2(int64_t pid, const char* command, const char* user) {
     return KProcessList__KProcessInfo_new2(pid, qstring(command), qstring(user));
 }
 
-KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(long long pid, const char* command, const char* name, const char* user) {
+KProcessList__KProcessInfo* k_processlist__kprocessinfo_new3(int64_t pid, const char* command, const char* name, const char* user) {
     return KProcessList__KProcessInfo_new3(pid, qstring(command), qstring(name), qstring(user));
 }
 
@@ -25,7 +25,7 @@ bool k_processlist__kprocessinfo_is_valid(void* self) {
     return KProcessList__KProcessInfo_IsValid((KProcessList__KProcessInfo*)self);
 }
 
-long long k_processlist__kprocessinfo_pid(void* self) {
+int64_t k_processlist__kprocessinfo_pid(void* self) {
     return KProcessList__KProcessInfo_Pid((KProcessList__KProcessInfo*)self);
 }
 
@@ -59,6 +59,6 @@ libqt_list /* of KProcessList__KProcessInfo* */ k_processlist_process_info_list(
     return _arr;
 }
 
-KProcessList__KProcessInfo* k_processlist_process_info(long long param1) {
+KProcessList__KProcessInfo* k_processlist_process_info(int64_t param1) {
     return KProcessList_ProcessInfo(param1);
 }

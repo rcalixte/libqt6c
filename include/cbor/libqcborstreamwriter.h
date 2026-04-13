@@ -42,9 +42,9 @@ void q_cborstreamwriter_append(void* self, uint64_t u);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
 /// @param self QCborStreamWriter*
-/// @param i long long
+/// @param i int64_t
 ///
-void q_cborstreamwriter_append2(void* self, long long i);
+void q_cborstreamwriter_append2(void* self, int64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
@@ -99,17 +99,17 @@ void q_cborstreamwriter_append13(void* self, double d);
 ///
 /// @param self QCborStreamWriter*
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-void q_cborstreamwriter_append_byte_string(void* self, const char* data, int64_t lenVal);
+void q_cborstreamwriter_append_byte_string(void* self, const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#appendTextString)
 ///
 /// @param self QCborStreamWriter*
 /// @param utf8 const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-void q_cborstreamwriter_append_text_string(void* self, const char* utf8, int64_t lenVal);
+void q_cborstreamwriter_append_text_string(void* self, const char* utf8, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
@@ -193,9 +193,9 @@ bool q_cborstreamwriter_end_map(void* self);
 ///
 /// @param self QCborStreamWriter*
 /// @param str const char*
-/// @param size int64_t
+/// @param size intptr_t
 ///
-void q_cborstreamwriter_append22(void* self, const char* str, int64_t size);
+void q_cborstreamwriter_append22(void* self, const char* str, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#dtor.QCborStreamWriter)
 ///

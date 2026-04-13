@@ -171,7 +171,7 @@ void q_icon_detach(void* self);
 ///
 /// @param self QIcon*
 ///
-long long q_icon_cache_key(void* self);
+int64_t q_icon_cache_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qicon.html#addPixmap)
 ///

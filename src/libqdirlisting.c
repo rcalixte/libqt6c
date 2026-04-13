@@ -238,7 +238,7 @@ const char* q_dirlisting__direntry_absolute_path(void* self) {
     return _ret;
 }
 
-long long q_dirlisting__direntry_size(void* self) {
+int64_t q_dirlisting__direntry_size(void* self) {
     return QDirListing__DirEntry_Size((QDirListing__DirEntry*)self);
 }
 

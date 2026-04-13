@@ -57,13 +57,13 @@ int32_t q_webenginedownloadrequest_state(void* self);
 ///
 /// @param self QWebEngineDownloadRequest*
 ///
-long long q_webenginedownloadrequest_total_bytes(void* self);
+int64_t q_webenginedownloadrequest_total_bytes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#receivedBytes)
 ///
 /// @param self QWebEngineDownloadRequest*
 ///
-long long q_webenginedownloadrequest_received_bytes(void* self);
+int64_t q_webenginedownloadrequest_received_bytes(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginedownloadrequest.html#url)
 ///

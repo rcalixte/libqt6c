@@ -133,9 +133,9 @@ void k_io__workerbase_list_entries(void* self, libqt_list _entry);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///
 /// @param self KIO__WorkerBase*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-bool k_io__workerbase_can_resume(void* self, uint64_t offset);
+bool k_io__workerbase_can_resume(void* self, uintptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///
@@ -146,44 +146,44 @@ void k_io__workerbase_can_resume2(void* self);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#totalSize)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _bytes uint64_t
+/// @param _bytes uintptr_t
 ///
-void k_io__workerbase_total_size(void* self, uint64_t _bytes);
+void k_io__workerbase_total_size(void* self, uintptr_t _bytes);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#processedSize)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _bytes uint64_t
+/// @param _bytes uintptr_t
 ///
-void k_io__workerbase_processed_size(void* self, uint64_t _bytes);
+void k_io__workerbase_processed_size(void* self, uintptr_t _bytes);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#position)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _pos uint64_t
+/// @param _pos uintptr_t
 ///
-void k_io__workerbase_position(void* self, uint64_t _pos);
+void k_io__workerbase_position(void* self, uintptr_t _pos);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#written)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _bytes uint64_t
+/// @param _bytes uintptr_t
 ///
-void k_io__workerbase_written(void* self, uint64_t _bytes);
+void k_io__workerbase_written(void* self, uintptr_t _bytes);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncated)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _length uint64_t
+/// @param _length uintptr_t
 ///
-void k_io__workerbase_truncated(void* self, uint64_t _length);
+void k_io__workerbase_truncated(void* self, uintptr_t _length);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#speed)
 ///
 /// @param self KIO__WorkerBase*
-/// @param _bytes_per_second uint64_t
+/// @param _bytes_per_second uintptr_t
 ///
-void k_io__workerbase_speed(void* self, uint64_t _bytes_per_second);
+void k_io__workerbase_speed(void* self, uintptr_t _bytes_per_second);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#redirection)
 ///
@@ -360,20 +360,20 @@ void k_io__workerbase_super_app_connection_made(void* self);
 ///
 /// @param self KIO__WorkerBase*
 /// @param host const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param user const char*
 /// @param pass const char*
 ///
-void k_io__workerbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass);
+void k_io__workerbase_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#setHost)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback void func(KIO__WorkerBase* self, const char* host, unsigned short port, const char* user, const char* pass)
+/// @param callback void func(KIO__WorkerBase* self, const char* host, uint16_t port, const char* user, const char* pass)
 ///
-void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char*, unsigned short, const char*, const char*));
+void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char*, uint16_t, const char*, const char*));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_set_host` instead
 ///
@@ -385,11 +385,11 @@ void k_io__workerbase_on_set_host(void* self, void (*callback)(void*, const char
 ///
 /// @param self KIO__WorkerBase*
 /// @param host const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param user const char*
 /// @param pass const char*
 ///
-void k_io__workerbase_super_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass);
+void k_io__workerbase_super_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#openConnection)
 ///
@@ -508,18 +508,18 @@ KIO__WorkerResult* k_io__workerbase_super_open(void* self, void* url, int32_t mo
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
 /// @param self KIO__WorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__workerbase_read(void* self, uint64_t size);
+KIO__WorkerResult* k_io__workerbase_read(void* self, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#read)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uint64_t size)
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uintptr_t size)
 ///
-void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
+void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_read` instead
 ///
@@ -530,9 +530,9 @@ void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__workerbase_super_read(void* self, uint64_t size);
+KIO__WorkerResult* k_io__workerbase_super_read(void* self, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#write)
 ///
@@ -566,18 +566,18 @@ KIO__WorkerResult* k_io__workerbase_super_write(void* self, char* data);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
 /// @param self KIO__WorkerBase*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-KIO__WorkerResult* k_io__workerbase_seek(void* self, uint64_t offset);
+KIO__WorkerResult* k_io__workerbase_seek(void* self, uintptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#seek)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uint64_t offset)
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uintptr_t offset)
 ///
-void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
+void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_seek` instead
 ///
@@ -588,25 +588,25 @@ void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, 
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-KIO__WorkerResult* k_io__workerbase_super_seek(void* self, uint64_t offset);
+KIO__WorkerResult* k_io__workerbase_super_seek(void* self, uintptr_t offset);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
 /// @param self KIO__WorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__workerbase_truncate(void* self, uint64_t size);
+KIO__WorkerResult* k_io__workerbase_truncate(void* self, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncate)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KIO__WorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uint64_t size)
+/// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uintptr_t size)
 ///
-void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
+void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_truncate` instead
 ///
@@ -617,9 +617,9 @@ void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(voi
 /// Base class method implementation
 ///
 /// @param self KIO__WorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__workerbase_super_truncate(void* self, uint64_t size);
+KIO__WorkerResult* k_io__workerbase_super_truncate(void* self, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#close)
 ///

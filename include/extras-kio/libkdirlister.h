@@ -711,36 +711,36 @@ void k_dirlister_on_percent(void* self, void (*callback)(void*, int));
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#totalSize)
 ///
 /// @param self KDirLister*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_dirlister_total_size(void* self, uint64_t size);
+void k_dirlister_total_size(void* self, uintptr_t size);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#totalSize)
 ///
 /// @param self KDirLister*
-/// @param callback void func(KDirLister* self, uint64_t size)
+/// @param callback void func(KDirLister* self, uintptr_t size)
 ///
-void k_dirlister_on_total_size(void* self, void (*callback)(void*, uint64_t));
+void k_dirlister_on_total_size(void* self, void (*callback)(void*, uintptr_t));
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#processedSize)
 ///
 /// @param self KDirLister*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_dirlister_processed_size(void* self, uint64_t size);
+void k_dirlister_processed_size(void* self, uintptr_t size);
 
 /// Inherited from KCoreDirLister
 ///
 /// [Upstream resources](https://api.kde.org/kcoredirlister.html#processedSize)
 ///
 /// @param self KDirLister*
-/// @param callback void func(KDirLister* self, uint64_t size)
+/// @param callback void func(KDirLister* self, uintptr_t size)
 ///
-void k_dirlister_on_processed_size(void* self, void (*callback)(void*, uint64_t));
+void k_dirlister_on_processed_size(void* self, void (*callback)(void*, uintptr_t));
 
 /// Inherited from KCoreDirLister
 ///

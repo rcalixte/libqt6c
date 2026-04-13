@@ -424,9 +424,9 @@ bool q_temporaryfile_open4(void* self, int fd, int32_t ioFlags);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfile.html#resize)
 ///
 /// @param filename const char*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool q_temporaryfile_resize2(const char* filename, long long sz);
+bool q_temporaryfile_resize2(const char* filename, int64_t sz);
 
 /// Inherited from QFile
 ///
@@ -497,10 +497,10 @@ bool q_temporaryfile_flush(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self QTemporaryFile*
-/// @param offset long long
-/// @param size long long
+/// @param offset int64_t
+/// @param size int64_t
 ///
-unsigned char* q_temporaryfile_map(void* self, long long offset, long long size);
+unsigned char* q_temporaryfile_map(void* self, int64_t offset, int64_t size);
 
 /// Inherited from QFileDevice
 ///
@@ -535,11 +535,11 @@ bool q_temporaryfile_set_file_time(void* self, void* newDate, int32_t fileTime);
 /// [Upstream resources](https://doc.qt.io/qt-6/qfiledevice.html#map)
 ///
 /// @param self QTemporaryFile*
-/// @param offset long long
-/// @param size long long
+/// @param offset int64_t
+/// @param size int64_t
 /// @param flags flag of enum QFileDevice__MemoryMapFlag
 ///
-unsigned char* q_temporaryfile_map3(void* self, long long offset, long long size, int32_t flags);
+unsigned char* q_temporaryfile_map3(void* self, int64_t offset, int64_t size, int32_t flags);
 
 /// Inherited from QIODevice
 ///
@@ -648,9 +648,9 @@ void q_temporaryfile_set_current_write_channel(void* self, int channel);
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_read(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_read(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -659,9 +659,9 @@ long long q_temporaryfile_read(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTemporaryFile*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_temporaryfile_read2(void* self, long long maxlen);
+char* q_temporaryfile_read2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -679,9 +679,9 @@ char* q_temporaryfile_read_all(void* self);
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_read_line(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_read_line(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -731,9 +731,9 @@ bool q_temporaryfile_is_transaction_started(void* self);
 ///
 /// @param self QTemporaryFile*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_temporaryfile_write(void* self, const char* data, long long lenVal);
+int64_t q_temporaryfile_write(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QIODevice
 ///
@@ -742,7 +742,7 @@ long long q_temporaryfile_write(void* self, const char* data, long long lenVal);
 /// @param self QTemporaryFile*
 /// @param data const char*
 ///
-long long q_temporaryfile_write2(void* self, const char* data);
+int64_t q_temporaryfile_write2(void* self, const char* data);
 
 /// Inherited from QIODevice
 ///
@@ -751,7 +751,7 @@ long long q_temporaryfile_write2(void* self, const char* data);
 /// @param self QTemporaryFile*
 /// @param data char*
 ///
-long long q_temporaryfile_write3(void* self, char* data);
+int64_t q_temporaryfile_write3(void* self, char* data);
 
 /// Inherited from QIODevice
 ///
@@ -759,9 +759,9 @@ long long q_temporaryfile_write3(void* self, char* data);
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_peek(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_peek(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
@@ -770,18 +770,18 @@ long long q_temporaryfile_peek(void* self, char* data, long long maxlen);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTemporaryFile*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_temporaryfile_peek2(void* self, long long maxlen);
+char* q_temporaryfile_peek2(void* self, int64_t maxlen);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QTemporaryFile*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_temporaryfile_skip(void* self, long long maxSize);
+int64_t q_temporaryfile_skip(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -860,18 +860,18 @@ void q_temporaryfile_on_channel_ready_read(void* self, void (*callback)(void*, i
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QTemporaryFile*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_temporaryfile_bytes_written(void* self, long long bytes);
+void q_temporaryfile_bytes_written(void* self, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void func(QTemporaryFile* self, long long bytes)
+/// @param callback void func(QTemporaryFile* self, int64_t bytes)
 ///
-void q_temporaryfile_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_temporaryfile_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -879,18 +879,18 @@ void q_temporaryfile_on_bytes_written(void* self, void (*callback)(void*, long l
 ///
 /// @param self QTemporaryFile*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_temporaryfile_channel_bytes_written(void* self, int channel, long long bytes);
+void q_temporaryfile_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// Inherited from QIODevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QTemporaryFile*
-/// @param callback void func(QTemporaryFile* self, int channel, long long bytes)
+/// @param callback void func(QTemporaryFile* self, int channel, int64_t bytes)
 ///
-void q_temporaryfile_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_temporaryfile_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -933,9 +933,9 @@ void q_temporaryfile_on_read_channel_finished(void* self, void (*callback)(void*
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QTemporaryFile*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_temporaryfile_read_line1(void* self, long long maxlen);
+char* q_temporaryfile_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///
@@ -1392,7 +1392,7 @@ void q_temporaryfile_on_destroyed1(void* self, void (*callback)(void*, void*));
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_size(void* self);
+int64_t q_temporaryfile_size(void* self);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_size` instead
 ///
@@ -1406,7 +1406,7 @@ long long q_temporaryfile_size(void* self);
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_super_size(void* self);
+int64_t q_temporaryfile_super_size(void* self);
 
 /// Inherited from QFile
 ///
@@ -1415,9 +1415,9 @@ long long q_temporaryfile_super_size(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_temporaryfile_on_size(void* self, long long (*callback)());
+void q_temporaryfile_on_size(void* self, int64_t (*callback)());
 
 /// Inherited from QFile
 ///
@@ -1426,9 +1426,9 @@ void q_temporaryfile_on_size(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool q_temporaryfile_resize(void* self, long long sz);
+bool q_temporaryfile_resize(void* self, int64_t sz);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_resize` instead
 ///
@@ -1441,9 +1441,9 @@ bool q_temporaryfile_resize(void* self, long long sz);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param sz long long
+/// @param sz int64_t
 ///
-bool q_temporaryfile_super_resize(void* self, long long sz);
+bool q_temporaryfile_super_resize(void* self, int64_t sz);
 
 /// Inherited from QFile
 ///
@@ -1452,9 +1452,9 @@ bool q_temporaryfile_super_resize(void* self, long long sz);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool func(QTemporaryFile* self, long long sz)
+/// @param callback bool func(QTemporaryFile* self, int64_t sz)
 ///
-void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, long long));
+void q_temporaryfile_on_resize(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QFile
 ///
@@ -1610,7 +1610,7 @@ void q_temporaryfile_on_is_sequential(void* self, bool (*callback)());
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_pos(void* self);
+int64_t q_temporaryfile_pos(void* self);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_pos` instead
 ///
@@ -1624,7 +1624,7 @@ long long q_temporaryfile_pos(void* self);
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_super_pos(void* self);
+int64_t q_temporaryfile_super_pos(void* self);
 
 /// Inherited from QFileDevice
 ///
@@ -1633,9 +1633,9 @@ long long q_temporaryfile_super_pos(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_temporaryfile_on_pos(void* self, long long (*callback)());
+void q_temporaryfile_on_pos(void* self, int64_t (*callback)());
 
 /// Inherited from QFileDevice
 ///
@@ -1644,9 +1644,9 @@ void q_temporaryfile_on_pos(void* self, long long (*callback)());
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param offset long long
+/// @param offset int64_t
 ///
-bool q_temporaryfile_seek(void* self, long long offset);
+bool q_temporaryfile_seek(void* self, int64_t offset);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_seek` instead
 ///
@@ -1659,9 +1659,9 @@ bool q_temporaryfile_seek(void* self, long long offset);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param offset long long
+/// @param offset int64_t
 ///
-bool q_temporaryfile_super_seek(void* self, long long offset);
+bool q_temporaryfile_super_seek(void* self, int64_t offset);
 
 /// Inherited from QFileDevice
 ///
@@ -1670,9 +1670,9 @@ bool q_temporaryfile_super_seek(void* self, long long offset);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback bool func(QTemporaryFile* self, long long offset)
+/// @param callback bool func(QTemporaryFile* self, int64_t offset)
 ///
-void q_temporaryfile_on_seek(void* self, bool (*callback)(void*, long long));
+void q_temporaryfile_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1717,9 +1717,9 @@ void q_temporaryfile_on_at_end(void* self, bool (*callback)());
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_read_data(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_read_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_read_data` instead
 ///
@@ -1733,9 +1733,9 @@ long long q_temporaryfile_read_data(void* self, char* data, long long maxlen);
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_super_read_data(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QFileDevice
 ///
@@ -1744,9 +1744,9 @@ long long q_temporaryfile_super_read_data(void* self, char* data, long long maxl
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func(QTemporaryFile* self, char* data, long long maxlen)
+/// @param callback int64_t func(QTemporaryFile* self, char* data, int64_t maxlen)
 ///
-void q_temporaryfile_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_temporaryfile_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1756,9 +1756,9 @@ void q_temporaryfile_on_read_data(void* self, long long (*callback)(void*, char*
 ///
 /// @param self QTemporaryFile*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_temporaryfile_write_data(void* self, const char* data, long long lenVal);
+int64_t q_temporaryfile_write_data(void* self, const char* data, int64_t lenVal);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_write_data` instead
 ///
@@ -1772,9 +1772,9 @@ long long q_temporaryfile_write_data(void* self, const char* data, long long len
 ///
 /// @param self QTemporaryFile*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_temporaryfile_super_write_data(void* self, const char* data, long long lenVal);
+int64_t q_temporaryfile_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// Inherited from QFileDevice
 ///
@@ -1783,9 +1783,9 @@ long long q_temporaryfile_super_write_data(void* self, const char* data, long lo
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func(QTemporaryFile* self, const char* data, long long lenVal)
+/// @param callback int64_t func(QTemporaryFile* self, const char* data, int64_t lenVal)
 ///
-void q_temporaryfile_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_temporaryfile_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// Inherited from QFileDevice
 ///
@@ -1795,9 +1795,9 @@ void q_temporaryfile_on_write_data(void* self, long long (*callback)(void*, cons
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_read_line_data` instead
 ///
@@ -1811,9 +1811,9 @@ long long q_temporaryfile_read_line_data(void* self, char* data, long long maxle
 ///
 /// @param self QTemporaryFile*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_temporaryfile_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_temporaryfile_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// Inherited from QFileDevice
 ///
@@ -1822,9 +1822,9 @@ long long q_temporaryfile_super_read_line_data(void* self, char* data, long long
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func(QTemporaryFile* self, char* data, long long maxlen)
+/// @param callback int64_t func(QTemporaryFile* self, char* data, int64_t maxlen)
 ///
-void q_temporaryfile_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_temporaryfile_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// Inherited from QIODevice
 ///
@@ -1869,7 +1869,7 @@ void q_temporaryfile_on_reset(void* self, bool (*callback)());
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_bytes_available(void* self);
+int64_t q_temporaryfile_bytes_available(void* self);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_bytes_available` instead
 ///
@@ -1883,7 +1883,7 @@ long long q_temporaryfile_bytes_available(void* self);
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_super_bytes_available(void* self);
+int64_t q_temporaryfile_super_bytes_available(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1892,9 +1892,9 @@ long long q_temporaryfile_super_bytes_available(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_temporaryfile_on_bytes_available(void* self, long long (*callback)());
+void q_temporaryfile_on_bytes_available(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -1904,7 +1904,7 @@ void q_temporaryfile_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_bytes_to_write(void* self);
+int64_t q_temporaryfile_bytes_to_write(void* self);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_bytes_to_write` instead
 ///
@@ -1918,7 +1918,7 @@ long long q_temporaryfile_bytes_to_write(void* self);
 ///
 /// @param self QTemporaryFile*
 ///
-long long q_temporaryfile_super_bytes_to_write(void* self);
+int64_t q_temporaryfile_super_bytes_to_write(void* self);
 
 /// Inherited from QIODevice
 ///
@@ -1927,9 +1927,9 @@ long long q_temporaryfile_super_bytes_to_write(void* self);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_temporaryfile_on_bytes_to_write(void* self, long long (*callback)());
+void q_temporaryfile_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// Inherited from QIODevice
 ///
@@ -2047,9 +2047,9 @@ void q_temporaryfile_on_wait_for_bytes_written(void* self, bool (*callback)(void
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_temporaryfile_skip_data(void* self, long long maxSize);
+int64_t q_temporaryfile_skip_data(void* self, int64_t maxSize);
 
 /// @warning DEPRECATED: Use `q_temporaryfile_super_skip_data` instead
 ///
@@ -2062,9 +2062,9 @@ long long q_temporaryfile_skip_data(void* self, long long maxSize);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_temporaryfile_super_skip_data(void* self, long long maxSize);
+int64_t q_temporaryfile_super_skip_data(void* self, int64_t maxSize);
 
 /// Inherited from QIODevice
 ///
@@ -2073,9 +2073,9 @@ long long q_temporaryfile_super_skip_data(void* self, long long maxSize);
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self QTemporaryFile*
-/// @param callback long long func(QTemporaryFile* self, long long maxSize)
+/// @param callback int64_t func(QTemporaryFile* self, int64_t maxSize)
 ///
-void q_temporaryfile_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_temporaryfile_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// Inherited from QObject
 ///

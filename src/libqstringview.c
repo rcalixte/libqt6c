@@ -22,7 +22,7 @@ const char* q_stringview_to_string(void* self) {
     return _ret;
 }
 
-int64_t q_stringview_size(void* self) {
+intptr_t q_stringview_size(void* self) {
     return QStringView_Size((QStringView*)self);
 }
 
@@ -34,7 +34,7 @@ const QChar* q_stringview_const_data(void* self) {
     return QStringView_ConstData((QStringView*)self);
 }
 
-QChar* q_stringview_operator_subscript(void* self, int64_t n) {
+QChar* q_stringview_operator_subscript(void* self, intptr_t n) {
     return QStringView_OperatorSubscript((QStringView*)self, n);
 }
 
@@ -64,15 +64,15 @@ libqt_list /* of uint32_t */ q_stringview_to_ucs4(void* self) {
     return _arr;
 }
 
-QChar* q_stringview_at(void* self, int64_t n) {
+QChar* q_stringview_at(void* self, intptr_t n) {
     return QStringView_At((QStringView*)self, n);
 }
 
-void q_stringview_truncate(void* self, int64_t n) {
+void q_stringview_truncate(void* self, intptr_t n) {
     QStringView_Truncate((QStringView*)self, n);
 }
 
-void q_stringview_chop(void* self, int64_t n) {
+void q_stringview_chop(void* self, intptr_t n) {
     QStringView_Chop((QStringView*)self, n);
 }
 
@@ -100,7 +100,7 @@ bool q_stringview_ends_with4(void* self, void* c, int32_t cs) {
     return QStringView_EndsWith4((QStringView*)self, (QChar*)c, cs);
 }
 
-int64_t q_stringview_index_of(void* self, void* c) {
+intptr_t q_stringview_index_of(void* self, void* c) {
     return QStringView_IndexOf((QStringView*)self, (QChar*)c);
 }
 
@@ -108,23 +108,23 @@ bool q_stringview_contains(void* self, void* c) {
     return QStringView_Contains((QStringView*)self, (QChar*)c);
 }
 
-int64_t q_stringview_count(void* self, void* c) {
+intptr_t q_stringview_count(void* self, void* c) {
     return QStringView_Count((QStringView*)self, (QChar*)c);
 }
 
-int64_t q_stringview_last_index_of(void* self, void* c) {
+intptr_t q_stringview_last_index_of(void* self, void* c) {
     return QStringView_LastIndexOf((QStringView*)self, (QChar*)c);
 }
 
-int64_t q_stringview_last_index_of2(void* self, void* c, int64_t from) {
+intptr_t q_stringview_last_index_of2(void* self, void* c, intptr_t from) {
     return QStringView_LastIndexOf2((QStringView*)self, (QChar*)c, from);
 }
 
-int64_t q_stringview_index_of4(void* self, void* re) {
+intptr_t q_stringview_index_of4(void* self, void* re) {
     return QStringView_IndexOf4((QStringView*)self, (QRegularExpression*)re);
 }
 
-int64_t q_stringview_last_index_of7(void* self, void* re, int64_t from) {
+intptr_t q_stringview_last_index_of7(void* self, void* re, intptr_t from) {
     return QStringView_LastIndexOf7((QStringView*)self, (QRegularExpression*)re, from);
 }
 
@@ -132,7 +132,7 @@ bool q_stringview_contains4(void* self, void* re) {
     return QStringView_Contains4((QStringView*)self, (QRegularExpression*)re);
 }
 
-int64_t q_stringview_count4(void* self, void* re) {
+intptr_t q_stringview_count4(void* self, void* re) {
     return QStringView_Count4((QStringView*)self, (QRegularExpression*)re);
 }
 
@@ -156,7 +156,7 @@ short q_stringview_to_short(void* self) {
     return QStringView_ToShort((QStringView*)self);
 }
 
-unsigned short q_stringview_to_u_short(void* self) {
+uint16_t q_stringview_to_u_short(void* self) {
     return QStringView_ToUShort((QStringView*)self);
 }
 
@@ -168,11 +168,11 @@ uint32_t q_stringview_to_u_int(void* self) {
     return QStringView_ToUInt((QStringView*)self);
 }
 
-int64_t q_stringview_to_long(void* self) {
+long q_stringview_to_long(void* self) {
     return QStringView_ToLong((QStringView*)self);
 }
 
-uint64_t q_stringview_to_u_long(void* self) {
+uintptr_t q_stringview_to_u_long(void* self) {
     return QStringView_ToULong((QStringView*)self);
 }
 
@@ -180,7 +180,7 @@ long long q_stringview_to_long_long(void* self) {
     return QStringView_ToLongLong((QStringView*)self);
 }
 
-uint64_t q_stringview_to_u_long_long(void* self) {
+uintptr_t q_stringview_to_u_long_long(void* self) {
     return QStringView_ToULongLong((QStringView*)self);
 }
 
@@ -220,7 +220,7 @@ QChar* q_stringview_back(void* self) {
     return QStringView_Back((QStringView*)self);
 }
 
-int64_t q_stringview_max_size(void* self) {
+intptr_t q_stringview_max_size(void* self) {
     return QStringView_MaxSize((QStringView*)self);
 }
 
@@ -240,7 +240,7 @@ bool q_stringview_is_empty(void* self) {
     return QStringView_IsEmpty((QStringView*)self);
 }
 
-int64_t q_stringview_length(void* self) {
+intptr_t q_stringview_length(void* self) {
     return QStringView_Length((QStringView*)self);
 }
 
@@ -252,15 +252,15 @@ QChar* q_stringview_last2(void* self) {
     return QStringView_Last2((QStringView*)self);
 }
 
-int64_t q_stringview_max_size2() {
+intptr_t q_stringview_max_size2() {
     return QStringView_MaxSize2();
 }
 
-int64_t q_stringview_index_of22(void* self, void* c, int64_t from) {
+intptr_t q_stringview_index_of22(void* self, void* c, intptr_t from) {
     return QStringView_IndexOf22((QStringView*)self, (QChar*)c, from);
 }
 
-int64_t q_stringview_index_of32(void* self, void* c, int64_t from, int32_t cs) {
+intptr_t q_stringview_index_of32(void* self, void* c, intptr_t from, int32_t cs) {
     return QStringView_IndexOf32((QStringView*)self, (QChar*)c, from, cs);
 }
 
@@ -268,27 +268,27 @@ bool q_stringview_contains22(void* self, void* c, int32_t cs) {
     return QStringView_Contains22((QStringView*)self, (QChar*)c, cs);
 }
 
-int64_t q_stringview_count22(void* self, void* c, int32_t cs) {
+intptr_t q_stringview_count22(void* self, void* c, int32_t cs) {
     return QStringView_Count22((QStringView*)self, (QChar*)c, cs);
 }
 
-int64_t q_stringview_last_index_of22(void* self, void* c, int32_t cs) {
+intptr_t q_stringview_last_index_of22(void* self, void* c, int32_t cs) {
     return QStringView_LastIndexOf22((QStringView*)self, (QChar*)c, cs);
 }
 
-int64_t q_stringview_last_index_of32(void* self, void* c, int64_t from, int32_t cs) {
+intptr_t q_stringview_last_index_of32(void* self, void* c, intptr_t from, int32_t cs) {
     return QStringView_LastIndexOf32((QStringView*)self, (QChar*)c, from, cs);
 }
 
-int64_t q_stringview_index_of25(void* self, void* re, int64_t from) {
+intptr_t q_stringview_index_of25(void* self, void* re, intptr_t from) {
     return QStringView_IndexOf25((QStringView*)self, (QRegularExpression*)re, from);
 }
 
-int64_t q_stringview_index_of35(void* self, void* re, int64_t from, void* rmatch) {
+intptr_t q_stringview_index_of35(void* self, void* re, intptr_t from, void* rmatch) {
     return QStringView_IndexOf35((QStringView*)self, (QRegularExpression*)re, from, (QRegularExpressionMatch*)rmatch);
 }
 
-int64_t q_stringview_last_index_of35(void* self, void* re, int64_t from, void* rmatch) {
+intptr_t q_stringview_last_index_of35(void* self, void* re, intptr_t from, void* rmatch) {
     return QStringView_LastIndexOf35((QStringView*)self, (QRegularExpression*)re, from, (QRegularExpressionMatch*)rmatch);
 }
 
@@ -304,11 +304,11 @@ short q_stringview_to_short2(void* self, bool* ok, int base) {
     return QStringView_ToShort2((QStringView*)self, (bool*)ok, base);
 }
 
-unsigned short q_stringview_to_u_short1(void* self, bool* ok) {
+uint16_t q_stringview_to_u_short1(void* self, bool* ok) {
     return QStringView_ToUShort1((QStringView*)self, (bool*)ok);
 }
 
-unsigned short q_stringview_to_u_short2(void* self, bool* ok, int base) {
+uint16_t q_stringview_to_u_short2(void* self, bool* ok, int base) {
     return QStringView_ToUShort2((QStringView*)self, (bool*)ok, base);
 }
 
@@ -328,19 +328,19 @@ uint32_t q_stringview_to_u_int2(void* self, bool* ok, int base) {
     return QStringView_ToUInt2((QStringView*)self, (bool*)ok, base);
 }
 
-int64_t q_stringview_to_long1(void* self, bool* ok) {
+long q_stringview_to_long1(void* self, bool* ok) {
     return QStringView_ToLong1((QStringView*)self, (bool*)ok);
 }
 
-int64_t q_stringview_to_long2(void* self, bool* ok, int base) {
+long q_stringview_to_long2(void* self, bool* ok, int base) {
     return QStringView_ToLong2((QStringView*)self, (bool*)ok, base);
 }
 
-uint64_t q_stringview_to_u_long1(void* self, bool* ok) {
+uintptr_t q_stringview_to_u_long1(void* self, bool* ok) {
     return QStringView_ToULong1((QStringView*)self, (bool*)ok);
 }
 
-uint64_t q_stringview_to_u_long2(void* self, bool* ok, int base) {
+uintptr_t q_stringview_to_u_long2(void* self, bool* ok, int base) {
     return QStringView_ToULong2((QStringView*)self, (bool*)ok, base);
 }
 
@@ -352,11 +352,11 @@ long long q_stringview_to_long_long2(void* self, bool* ok, int base) {
     return QStringView_ToLongLong2((QStringView*)self, (bool*)ok, base);
 }
 
-uint64_t q_stringview_to_u_long_long1(void* self, bool* ok) {
+uintptr_t q_stringview_to_u_long_long1(void* self, bool* ok) {
     return QStringView_ToULongLong1((QStringView*)self, (bool*)ok);
 }
 
-uint64_t q_stringview_to_u_long_long2(void* self, bool* ok, int base) {
+uintptr_t q_stringview_to_u_long_long2(void* self, bool* ok, int base) {
     return QStringView_ToULongLong2((QStringView*)self, (bool*)ok, base);
 }
 

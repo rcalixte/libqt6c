@@ -362,7 +362,7 @@ bool q_palette_is_copy_of(void* self, void* p);
 ///
 /// @param self QPalette*
 ///
-long long q_palette_cache_key(void* self);
+int64_t q_palette_cache_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#resolve)
 ///
@@ -375,14 +375,14 @@ QPalette* q_palette_resolve(void* self, void* other);
 ///
 /// @param self QPalette*
 ///
-uint64_t q_palette_resolve_mask(void* self);
+uintptr_t q_palette_resolve_mask(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#setResolveMask)
 ///
 /// @param self QPalette*
-/// @param mask uint64_t
+/// @param mask uintptr_t
 ///
-void q_palette_set_resolve_mask(void* self, uint64_t mask);
+void q_palette_set_resolve_mask(void* self, uintptr_t mask);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpalette.html#dtor.QPalette)
 ///

@@ -41,21 +41,21 @@ void q_geopolygon_add_hole2(void* self, libqt_list /* of QGeoCoordinate* */ hole
     QGeoPolygon_AddHole2((QGeoPolygon*)self, holePath);
 }
 
-libqt_list /* of QVariant* */ q_geopolygon_hole(void* self, int64_t index) {
+libqt_list /* of QVariant* */ q_geopolygon_hole(void* self, intptr_t index) {
     libqt_list _arr = QGeoPolygon_Hole((QGeoPolygon*)self, index);
     return _arr;
 }
 
-libqt_list /* of QGeoCoordinate* */ q_geopolygon_hole_path(void* self, int64_t index) {
+libqt_list /* of QGeoCoordinate* */ q_geopolygon_hole_path(void* self, intptr_t index) {
     libqt_list _arr = QGeoPolygon_HolePath((QGeoPolygon*)self, index);
     return _arr;
 }
 
-void q_geopolygon_remove_hole(void* self, int64_t index) {
+void q_geopolygon_remove_hole(void* self, intptr_t index) {
     QGeoPolygon_RemoveHole((QGeoPolygon*)self, index);
 }
 
-int64_t q_geopolygon_holes_count(void* self) {
+intptr_t q_geopolygon_holes_count(void* self) {
     return QGeoPolygon_HolesCount((QGeoPolygon*)self);
 }
 
@@ -71,7 +71,7 @@ double q_geopolygon_length(void* self) {
     return QGeoPolygon_Length((QGeoPolygon*)self);
 }
 
-int64_t q_geopolygon_size(void* self) {
+intptr_t q_geopolygon_size(void* self) {
     return QGeoPolygon_Size((QGeoPolygon*)self);
 }
 
@@ -79,15 +79,15 @@ void q_geopolygon_add_coordinate(void* self, void* coordinate) {
     QGeoPolygon_AddCoordinate((QGeoPolygon*)self, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopolygon_insert_coordinate(void* self, int64_t index, void* coordinate) {
+void q_geopolygon_insert_coordinate(void* self, intptr_t index, void* coordinate) {
     QGeoPolygon_InsertCoordinate((QGeoPolygon*)self, index, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopolygon_replace_coordinate(void* self, int64_t index, void* coordinate) {
+void q_geopolygon_replace_coordinate(void* self, intptr_t index, void* coordinate) {
     QGeoPolygon_ReplaceCoordinate((QGeoPolygon*)self, index, (QGeoCoordinate*)coordinate);
 }
 
-QGeoCoordinate* q_geopolygon_coordinate_at(void* self, int64_t index) {
+QGeoCoordinate* q_geopolygon_coordinate_at(void* self, intptr_t index) {
     return QGeoPolygon_CoordinateAt((QGeoPolygon*)self, index);
 }
 
@@ -99,7 +99,7 @@ void q_geopolygon_remove_coordinate(void* self, void* coordinate) {
     QGeoPolygon_RemoveCoordinate((QGeoPolygon*)self, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopolygon_remove_coordinate2(void* self, int64_t index) {
+void q_geopolygon_remove_coordinate2(void* self, intptr_t index) {
     QGeoPolygon_RemoveCoordinate2((QGeoPolygon*)self, index);
 }
 
@@ -110,11 +110,11 @@ const char* q_geopolygon_to_string(void* self) {
     return _ret;
 }
 
-double q_geopolygon_length1(void* self, int64_t indexFrom) {
+double q_geopolygon_length1(void* self, intptr_t indexFrom) {
     return QGeoPolygon_Length1((QGeoPolygon*)self, indexFrom);
 }
 
-double q_geopolygon_length2(void* self, int64_t indexFrom, int64_t indexTo) {
+double q_geopolygon_length2(void* self, intptr_t indexFrom, intptr_t indexTo) {
     return QGeoPolygon_Length2((QGeoPolygon*)self, indexFrom, indexTo);
 }
 

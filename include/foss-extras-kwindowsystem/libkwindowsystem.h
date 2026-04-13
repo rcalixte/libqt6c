@@ -135,9 +135,9 @@ const char* k_windowsystem_tr3(const char* s, const char* c, int n);
 /// [Upstream resources](https://api.kde.org/kwindowsystem.html#activateWindow)
 ///
 /// @param window QWindow*
-/// @param time int64_t
+/// @param time long
 ///
-void k_windowsystem_activate_window2(void* window, int64_t time);
+void k_windowsystem_activate_window2(void* window, long time);
 
 /// Inherited from QObject
 ///

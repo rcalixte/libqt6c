@@ -43,13 +43,13 @@ const char* k_io__filesystemfreespacejob_tr(const char* s);
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
-uint64_t k_io__filesystemfreespacejob_size(void* self);
+uintptr_t k_io__filesystemfreespacejob_size(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio-filesystemfreespacejob.html#availableSize)
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
-uint64_t k_io__filesystemfreespacejob_available_size(void* self);
+uintptr_t k_io__filesystemfreespacejob_available_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -378,7 +378,7 @@ const char* k_io__filesystemfreespacejob_error_text(void* self);
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__filesystemfreespacejob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__filesystemfreespacejob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -387,7 +387,7 @@ uint64_t k_io__filesystemfreespacejob_processed_amount(void* self, int32_t unit)
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__filesystemfreespacejob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__filesystemfreespacejob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -395,7 +395,7 @@ uint64_t k_io__filesystemfreespacejob_total_amount(void* self, int32_t unit);
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
-uint64_t k_io__filesystemfreespacejob_percent(void* self);
+uintptr_t k_io__filesystemfreespacejob_percent(void* self);
 
 /// Inherited from KJob
 ///
@@ -444,7 +444,7 @@ bool k_io__filesystemfreespacejob_is_started_with_exec(void* self);
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 ///
-long long k_io__filesystemfreespacejob_elapsed_time(void* self);
+int64_t k_io__filesystemfreespacejob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
@@ -490,18 +490,18 @@ void k_io__filesystemfreespacejob_on_warning(void* self, void (*callback)(void*,
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__filesystemfreespacejob_total_size(void* self, void* job, uint64_t size);
+void k_io__filesystemfreespacejob_total_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
-/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__filesystemfreespacejob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filesystemfreespacejob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -509,18 +509,18 @@ void k_io__filesystemfreespacejob_on_total_size(void* self, void (*callback)(voi
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__filesystemfreespacejob_processed_size(void* self, void* job, uint64_t size);
+void k_io__filesystemfreespacejob_processed_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
-/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__filesystemfreespacejob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filesystemfreespacejob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -528,18 +528,18 @@ void k_io__filesystemfreespacejob_on_processed_size(void* self, void (*callback)
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
 /// @param job KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_io__filesystemfreespacejob_speed(void* self, void* job, uint64_t speed);
+void k_io__filesystemfreespacejob_speed(void* self, void* job, uintptr_t speed);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
-/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uint64_t speed)
+/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uintptr_t speed)
 ///
-void k_io__filesystemfreespacejob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filesystemfreespacejob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1076,9 +1076,9 @@ void k_io__filesystemfreespacejob_on_result(void* self, void (*callback)(void*, 
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
-/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__filesystemfreespacejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__filesystemfreespacejob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1087,9 +1087,9 @@ void k_io__filesystemfreespacejob_on_total_amount_changed(void* self, void (*cal
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
-/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__filesystemfreespacejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__filesystemfreespacejob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1098,9 +1098,9 @@ void k_io__filesystemfreespacejob_on_processed_amount_changed(void* self, void (
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__FileSystemFreeSpaceJob*
-/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uint64_t percent)
+/// @param callback void func(KIO__FileSystemFreeSpaceJob* self, KJob* job, uintptr_t percent)
 ///
-void k_io__filesystemfreespacejob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__filesystemfreespacejob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from QObject
 ///

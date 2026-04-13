@@ -77,7 +77,7 @@ const char* q_packagekit__details_license(void* self);
 ///
 /// @param self PackageKit__Details*
 ///
-uint64_t q_packagekit__details_size(void* self);
+uintptr_t q_packagekit__details_size(void* self);
 
 /// [Upstream resources](https://github.com/PackageKit/PackageKit-Qt)
 ///

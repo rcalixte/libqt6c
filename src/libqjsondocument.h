@@ -209,9 +209,9 @@ const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key)
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///
 /// @param self QJsonDocument*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-const QJsonValue* q_jsondocument_operator_subscript4(void* self, int64_t i);
+const QJsonValue* q_jsondocument_operator_subscript4(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#isNull)
 ///

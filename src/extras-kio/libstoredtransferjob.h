@@ -131,9 +131,9 @@ QUrl* k_io__storedtransferjob_redirect_url(void* self);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#setTotalSize)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param bytes uint64_t
+/// @param bytes uintptr_t
 ///
-void k_io__storedtransferjob_set_total_size(void* self, uint64_t bytes);
+void k_io__storedtransferjob_set_total_size(void* self, uintptr_t bytes);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -218,18 +218,18 @@ void k_io__storedtransferjob_on_mime_type_found(void* self, void (*callback)(voi
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KIO__Job*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-void k_io__storedtransferjob_can_resume(void* self, void* job, uint64_t offset);
+void k_io__storedtransferjob_can_resume(void* self, void* job, uintptr_t offset);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#canResume)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, uint64_t offset)
+/// @param callback void func(KIO__StoredTransferJob* self, KIO__Job* job, uintptr_t offset)
 ///
-void k_io__storedtransferjob_on_can_resume(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__storedtransferjob_on_can_resume(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -539,7 +539,7 @@ const char* k_io__storedtransferjob_error_text(void* self);
 /// @param self KIO__StoredTransferJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__storedtransferjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__storedtransferjob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -548,7 +548,7 @@ uint64_t k_io__storedtransferjob_processed_amount(void* self, int32_t unit);
 /// @param self KIO__StoredTransferJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__storedtransferjob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__storedtransferjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -556,7 +556,7 @@ uint64_t k_io__storedtransferjob_total_amount(void* self, int32_t unit);
 ///
 /// @param self KIO__StoredTransferJob*
 ///
-uint64_t k_io__storedtransferjob_percent(void* self);
+uintptr_t k_io__storedtransferjob_percent(void* self);
 
 /// Inherited from KJob
 ///
@@ -605,7 +605,7 @@ bool k_io__storedtransferjob_is_started_with_exec(void* self);
 ///
 /// @param self KIO__StoredTransferJob*
 ///
-long long k_io__storedtransferjob_elapsed_time(void* self);
+int64_t k_io__storedtransferjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
@@ -651,18 +651,18 @@ void k_io__storedtransferjob_on_warning(void* self, void (*callback)(void*, void
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__storedtransferjob_total_size(void* self, void* job, uint64_t size);
+void k_io__storedtransferjob_total_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__storedtransferjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__storedtransferjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -670,18 +670,18 @@ void k_io__storedtransferjob_on_total_size(void* self, void (*callback)(void*, v
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__storedtransferjob_processed_size(void* self, void* job, uint64_t size);
+void k_io__storedtransferjob_processed_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__storedtransferjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__storedtransferjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -689,18 +689,18 @@ void k_io__storedtransferjob_on_processed_size(void* self, void (*callback)(void
 ///
 /// @param self KIO__StoredTransferJob*
 /// @param job KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_io__storedtransferjob_speed(void* self, void* job, uint64_t speed);
+void k_io__storedtransferjob_speed(void* self, void* job, uintptr_t speed);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t speed)
+/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uintptr_t speed)
 ///
-void k_io__storedtransferjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__storedtransferjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1237,9 +1237,9 @@ void k_io__storedtransferjob_on_result(void* self, void (*callback)(void*, void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__storedtransferjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__storedtransferjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1248,9 +1248,9 @@ void k_io__storedtransferjob_on_total_amount_changed(void* self, void (*callback
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__storedtransferjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__storedtransferjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1259,9 +1259,9 @@ void k_io__storedtransferjob_on_processed_amount_changed(void* self, void (*call
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__StoredTransferJob*
-/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uint64_t percent)
+/// @param callback void func(KIO__StoredTransferJob* self, KJob* job, uintptr_t percent)
 ///
-void k_io__storedtransferjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__storedtransferjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from QObject
 ///
@@ -1320,8 +1320,8 @@ KIO__StoredTransferJob* k_io_stored_http_post(char* param1, void* param2, int32_
 ///
 /// @param param1 QIODevice*
 /// @param param2 QUrl*
-/// @param param3 long long
+/// @param param3 int64_t
 /// @param param4 flag of enum KIO__JobFlag
 ///
-KIO__StoredTransferJob* k_io_stored_http_post2(void* param1, void* param2, long long param3, int32_t param4);
+KIO__StoredTransferJob* k_io_stored_http_post2(void* param1, void* param2, int64_t param3, int32_t param4);
 #endif

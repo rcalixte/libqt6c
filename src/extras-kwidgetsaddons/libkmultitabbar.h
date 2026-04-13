@@ -2399,9 +2399,9 @@ int32_t k_multitabbar_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_multitabbar_find(uint64_t param1);
+QWidget* k_multitabbar_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///
@@ -7911,9 +7911,9 @@ int32_t k_multitabbarbutton_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_multitabbarbutton_find(uint64_t param1);
+QWidget* k_multitabbarbutton_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///
@@ -11412,9 +11412,9 @@ int32_t k_multitabbartab_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_multitabbartab_find(uint64_t param1);
+QWidget* k_multitabbartab_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

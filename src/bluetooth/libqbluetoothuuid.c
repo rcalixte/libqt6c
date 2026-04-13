@@ -26,7 +26,7 @@ QBluetoothUuid* q_bluetoothuuid_new6(int32_t uuid) {
     return QBluetoothUuid_new6(uuid);
 }
 
-QBluetoothUuid* q_bluetoothuuid_new7(unsigned short uuid) {
+QBluetoothUuid* q_bluetoothuuid_new7(uint16_t uuid) {
     return QBluetoothUuid_new7(uuid);
 }
 
@@ -54,7 +54,7 @@ int32_t q_bluetoothuuid_minimum_size(void* self) {
     return QBluetoothUuid_MinimumSize((QBluetoothUuid*)self);
 }
 
-unsigned short q_bluetoothuuid_to_u_int16(void* self) {
+uint16_t q_bluetoothuuid_to_u_int16(void* self) {
     return QBluetoothUuid_ToUInt16((QBluetoothUuid*)self);
 }
 
@@ -94,7 +94,7 @@ const char* q_bluetoothuuid_descriptor_to_string(int32_t uuid) {
     return _ret;
 }
 
-unsigned short q_bluetoothuuid_to_u_int161(void* self, bool* ok) {
+uint16_t q_bluetoothuuid_to_u_int161(void* self, bool* ok) {
     return QBluetoothUuid_ToUInt161((QBluetoothUuid*)self, (bool*)ok);
 }
 
@@ -175,19 +175,19 @@ void q_bluetoothuuid_set_data1(void* self, uint32_t data1) {
     QUuid_SetData1((QUuid*)self, data1);
 }
 
-unsigned short q_bluetoothuuid_data2(void* self) {
+uint16_t q_bluetoothuuid_data2(void* self) {
     return QUuid_Data2((QUuid*)self);
 }
 
-void q_bluetoothuuid_set_data2(void* self, unsigned short data2) {
+void q_bluetoothuuid_set_data2(void* self, uint16_t data2) {
     QUuid_SetData2((QUuid*)self, data2);
 }
 
-unsigned short q_bluetoothuuid_data3(void* self) {
+uint16_t q_bluetoothuuid_data3(void* self) {
     return QUuid_Data3((QUuid*)self);
 }
 
-void q_bluetoothuuid_set_data3(void* self, unsigned short data3) {
+void q_bluetoothuuid_set_data3(void* self, uint16_t data3) {
     QUuid_SetData3((QUuid*)self, data3);
 }
 

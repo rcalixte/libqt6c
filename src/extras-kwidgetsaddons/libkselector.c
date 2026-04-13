@@ -1295,7 +1295,7 @@ int32_t k_selector_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_selector_find(uint64_t param1) {
+QWidget* k_selector_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -3651,7 +3651,7 @@ int32_t k_gradientselector_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_gradientselector_find(uint64_t param1) {
+QWidget* k_gradientselector_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

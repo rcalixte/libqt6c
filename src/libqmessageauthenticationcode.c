@@ -23,7 +23,7 @@ void q_messageauthenticationcode_set_key(void* self, char* key) {
     QMessageAuthenticationCode_SetKey((QMessageAuthenticationCode*)self, qstring(key));
 }
 
-void q_messageauthenticationcode_add_data(void* self, const char* data, int64_t length) {
+void q_messageauthenticationcode_add_data(void* self, const char* data, intptr_t length) {
     QMessageAuthenticationCode_AddData((QMessageAuthenticationCode*)self, data, length);
 }
 

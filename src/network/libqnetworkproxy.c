@@ -16,7 +16,7 @@ QNetworkProxyQuery* q_networkproxyquery_new3(const char* hostname, int port) {
     return QNetworkProxyQuery_new3(qstring(hostname), port);
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new4(unsigned short bindPort) {
+QNetworkProxyQuery* q_networkproxyquery_new4(uint16_t bindPort) {
     return QNetworkProxyQuery_new4(bindPort);
 }
 
@@ -36,11 +36,11 @@ QNetworkProxyQuery* q_networkproxyquery_new8(const char* hostname, int port, con
     return QNetworkProxyQuery_new8(qstring(hostname), port, qstring(protocolTag), queryType);
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new9(unsigned short bindPort, const char* protocolTag) {
+QNetworkProxyQuery* q_networkproxyquery_new9(uint16_t bindPort, const char* protocolTag) {
     return QNetworkProxyQuery_new9(bindPort, qstring(protocolTag));
 }
 
-QNetworkProxyQuery* q_networkproxyquery_new10(unsigned short bindPort, const char* protocolTag, int32_t queryType) {
+QNetworkProxyQuery* q_networkproxyquery_new10(uint16_t bindPort, const char* protocolTag, int32_t queryType) {
     return QNetworkProxyQuery_new10(bindPort, qstring(protocolTag), queryType);
 }
 
@@ -134,15 +134,15 @@ QNetworkProxy* q_networkproxy_new4(int32_t type, const char* hostName) {
     return QNetworkProxy_new4(type, qstring(hostName));
 }
 
-QNetworkProxy* q_networkproxy_new5(int32_t type, const char* hostName, unsigned short port) {
+QNetworkProxy* q_networkproxy_new5(int32_t type, const char* hostName, uint16_t port) {
     return QNetworkProxy_new5(type, qstring(hostName), port);
 }
 
-QNetworkProxy* q_networkproxy_new6(int32_t type, const char* hostName, unsigned short port, const char* user) {
+QNetworkProxy* q_networkproxy_new6(int32_t type, const char* hostName, uint16_t port, const char* user) {
     return QNetworkProxy_new6(type, qstring(hostName), port, qstring(user));
 }
 
-QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, unsigned short port, const char* user, const char* password) {
+QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, uint16_t port, const char* user, const char* password) {
     return QNetworkProxy_new7(type, qstring(hostName), port, qstring(user), qstring(password));
 }
 
@@ -219,11 +219,11 @@ const char* q_networkproxy_host_name(void* self) {
     return _ret;
 }
 
-void q_networkproxy_set_port(void* self, unsigned short port) {
+void q_networkproxy_set_port(void* self, uint16_t port) {
     QNetworkProxy_SetPort((QNetworkProxy*)self, port);
 }
 
-unsigned short q_networkproxy_port(void* self) {
+uint16_t q_networkproxy_port(void* self) {
     return QNetworkProxy_Port((QNetworkProxy*)self);
 }
 

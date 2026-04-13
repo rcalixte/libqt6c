@@ -35,15 +35,15 @@ void q_http1configuration_operator_assign(void* self, void* other);
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#setNumberOfConnectionsPerHost)
 ///
 /// @param self QHttp1Configuration*
-/// @param amount int64_t
+/// @param amount intptr_t
 ///
-void q_http1configuration_set_number_of_connections_per_host(void* self, int64_t amount);
+void q_http1configuration_set_number_of_connections_per_host(void* self, intptr_t amount);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#numberOfConnectionsPerHost)
 ///
 /// @param self QHttp1Configuration*
 ///
-int64_t q_http1configuration_number_of_connections_per_host(void* self);
+intptr_t q_http1configuration_number_of_connections_per_host(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttp1configuration.html#swap)
 ///

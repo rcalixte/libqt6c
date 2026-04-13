@@ -184,7 +184,7 @@ bool k_solid__opticaldrive_is_hotpluggable(void* self);
 ///
 /// @param self Solid__OpticalDrive*
 ///
-uint64_t k_solid__opticaldrive_size(void* self);
+uintptr_t k_solid__opticaldrive_size(void* self);
 
 /// Inherited from Solid::StorageDrive
 ///

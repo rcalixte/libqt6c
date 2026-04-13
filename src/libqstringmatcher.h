@@ -30,9 +30,9 @@ QStringMatcher* q_stringmatcher_new2(const char* pattern);
 /// q_stringmatcher_new3 constructs a new QStringMatcher object.
 ///
 /// @param uc QChar*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QStringMatcher* q_stringmatcher_new3(void* uc, int64_t lenVal);
+QStringMatcher* q_stringmatcher_new3(void* uc, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html)
 
@@ -56,10 +56,10 @@ QStringMatcher* q_stringmatcher_new5(const char* pattern, int32_t cs);
 /// q_stringmatcher_new6 constructs a new QStringMatcher object.
 ///
 /// @param uc QChar*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 /// @param cs enum Qt__CaseSensitivity
 ///
-QStringMatcher* q_stringmatcher_new6(void* uc, int64_t lenVal, int32_t cs);
+QStringMatcher* q_stringmatcher_new6(void* uc, intptr_t lenVal, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#operator-eq)
 ///
@@ -87,15 +87,15 @@ void q_stringmatcher_set_case_sensitivity(void* self, int32_t cs);
 /// @param self QStringMatcher*
 /// @param str const char*
 ///
-int64_t q_stringmatcher_index_in(void* self, const char* str);
+intptr_t q_stringmatcher_index_in(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// @param self QStringMatcher*
 /// @param str QChar*
-/// @param length int64_t
+/// @param length intptr_t
 ///
-int64_t q_stringmatcher_index_in2(void* self, void* str, int64_t length);
+intptr_t q_stringmatcher_index_in2(void* self, void* str, intptr_t length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#pattern)
 ///
@@ -117,18 +117,18 @@ int32_t q_stringmatcher_case_sensitivity(void* self);
 ///
 /// @param self QStringMatcher*
 /// @param str const char*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_stringmatcher_index_in22(void* self, const char* str, int64_t from);
+intptr_t q_stringmatcher_index_in22(void* self, const char* str, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#indexIn)
 ///
 /// @param self QStringMatcher*
 /// @param str QChar*
-/// @param length int64_t
-/// @param from int64_t
+/// @param length intptr_t
+/// @param from intptr_t
 ///
-int64_t q_stringmatcher_index_in32(void* self, void* str, int64_t length, int64_t from);
+intptr_t q_stringmatcher_index_in32(void* self, void* str, intptr_t length, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringmatcher.html#dtor.QStringMatcher)
 ///

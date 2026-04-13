@@ -90,7 +90,7 @@ bool q_metacontainer_has_size(void* self);
 /// @param self QMetaContainer*
 /// @param container void*
 ///
-int64_t q_metacontainer_size(void* self, void* container);
+intptr_t q_metacontainer_size(void* self, void* container);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#canClear)
 ///
@@ -152,9 +152,9 @@ void q_metacontainer_copy_iterator(void* self, void* target, void* source);
 ///
 /// @param self QMetaContainer*
 /// @param iterator void*
-/// @param step int64_t
+/// @param step intptr_t
 ///
-void q_metacontainer_advance_iterator(void* self, void* iterator, int64_t step);
+void q_metacontainer_advance_iterator(void* self, void* iterator, intptr_t step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffIterator)
 ///
@@ -162,7 +162,7 @@ void q_metacontainer_advance_iterator(void* self, void* iterator, int64_t step);
 /// @param i void*
 /// @param j void*
 ///
-int64_t q_metacontainer_diff_iterator(void* self, void* i, void* j);
+intptr_t q_metacontainer_diff_iterator(void* self, void* i, void* j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#hasConstIterator)
 ///
@@ -211,9 +211,9 @@ void q_metacontainer_copy_const_iterator(void* self, void* target, void* source)
 ///
 /// @param self QMetaContainer*
 /// @param iterator void*
-/// @param step int64_t
+/// @param step intptr_t
 ///
-void q_metacontainer_advance_const_iterator(void* self, void* iterator, int64_t step);
+void q_metacontainer_advance_const_iterator(void* self, void* iterator, intptr_t step);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#diffConstIterator)
 ///
@@ -221,7 +221,7 @@ void q_metacontainer_advance_const_iterator(void* self, void* iterator, int64_t 
 /// @param i void*
 /// @param j void*
 ///
-int64_t q_metacontainer_diff_const_iterator(void* self, void* i, void* j);
+intptr_t q_metacontainer_diff_const_iterator(void* self, void* i, void* j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetacontainer.html#dtor.QMetaContainer)
 ///
@@ -343,10 +343,10 @@ bool q_metasequence_can_get_value_at_index(void* self);
 ///
 /// @param self QMetaSequence*
 /// @param container void*
-/// @param index int64_t
+/// @param index intptr_t
 /// @param result void*
 ///
-void q_metasequence_value_at_index(void* self, void* container, int64_t index, void* result);
+void q_metasequence_value_at_index(void* self, void* container, intptr_t index, void* result);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canSetValueAtIndex)
 ///
@@ -358,10 +358,10 @@ bool q_metasequence_can_set_value_at_index(void* self);
 ///
 /// @param self QMetaSequence*
 /// @param container void*
-/// @param index int64_t
+/// @param index intptr_t
 /// @param value void*
 ///
-void q_metasequence_set_value_at_index(void* self, void* container, int64_t index, void* value);
+void q_metasequence_set_value_at_index(void* self, void* container, intptr_t index, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#canAddValue)
 ///
@@ -523,7 +523,7 @@ bool q_metasequence_has_size(void* self);
 /// @param self QMetaSequence*
 /// @param container void*
 ///
-int64_t q_metasequence_size(void* self, void* container);
+intptr_t q_metasequence_size(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
@@ -603,9 +603,9 @@ void q_metasequence_copy_iterator(void* self, void* target, void* source);
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
-/// @param step int64_t
+/// @param step intptr_t
 ///
-void q_metasequence_advance_iterator(void* self, void* iterator, int64_t step);
+void q_metasequence_advance_iterator(void* self, void* iterator, intptr_t step);
 
 /// Inherited from QMetaContainer
 ///
@@ -615,7 +615,7 @@ void q_metasequence_advance_iterator(void* self, void* iterator, int64_t step);
 /// @param i void*
 /// @param j void*
 ///
-int64_t q_metasequence_diff_iterator(void* self, void* i, void* j);
+intptr_t q_metasequence_diff_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
@@ -678,9 +678,9 @@ void q_metasequence_copy_const_iterator(void* self, void* target, void* source);
 ///
 /// @param self QMetaSequence*
 /// @param iterator void*
-/// @param step int64_t
+/// @param step intptr_t
 ///
-void q_metasequence_advance_const_iterator(void* self, void* iterator, int64_t step);
+void q_metasequence_advance_const_iterator(void* self, void* iterator, intptr_t step);
 
 /// Inherited from QMetaContainer
 ///
@@ -690,7 +690,7 @@ void q_metasequence_advance_const_iterator(void* self, void* iterator, int64_t s
 /// @param i void*
 /// @param j void*
 ///
-int64_t q_metasequence_diff_const_iterator(void* self, void* i, void* j);
+intptr_t q_metasequence_diff_const_iterator(void* self, void* i, void* j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetasequence.html#dtor.QMetaSequence)
 ///
@@ -965,7 +965,7 @@ bool q_metaassociation_has_size(void* self);
 /// @param self QMetaAssociation*
 /// @param container void*
 ///
-int64_t q_metaassociation_size(void* self, void* container);
+intptr_t q_metaassociation_size(void* self, void* container);
 
 /// Inherited from QMetaContainer
 ///
@@ -1045,9 +1045,9 @@ void q_metaassociation_copy_iterator(void* self, void* target, void* source);
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
-/// @param step int64_t
+/// @param step intptr_t
 ///
-void q_metaassociation_advance_iterator(void* self, void* iterator, int64_t step);
+void q_metaassociation_advance_iterator(void* self, void* iterator, intptr_t step);
 
 /// Inherited from QMetaContainer
 ///
@@ -1057,7 +1057,7 @@ void q_metaassociation_advance_iterator(void* self, void* iterator, int64_t step
 /// @param i void*
 /// @param j void*
 ///
-int64_t q_metaassociation_diff_iterator(void* self, void* i, void* j);
+intptr_t q_metaassociation_diff_iterator(void* self, void* i, void* j);
 
 /// Inherited from QMetaContainer
 ///
@@ -1120,9 +1120,9 @@ void q_metaassociation_copy_const_iterator(void* self, void* target, void* sourc
 ///
 /// @param self QMetaAssociation*
 /// @param iterator void*
-/// @param step int64_t
+/// @param step intptr_t
 ///
-void q_metaassociation_advance_const_iterator(void* self, void* iterator, int64_t step);
+void q_metaassociation_advance_const_iterator(void* self, void* iterator, intptr_t step);
 
 /// Inherited from QMetaContainer
 ///
@@ -1132,7 +1132,7 @@ void q_metaassociation_advance_const_iterator(void* self, void* iterator, int64_
 /// @param i void*
 /// @param j void*
 ///
-int64_t q_metaassociation_diff_const_iterator(void* self, void* i, void* j);
+intptr_t q_metaassociation_diff_const_iterator(void* self, void* i, void* j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmetaassociation.html#dtor.QMetaAssociation)
 ///

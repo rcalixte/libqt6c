@@ -173,7 +173,7 @@ QHostAddress* q_websocket_local_address(void* self);
 ///
 /// @param self QWebSocket*
 ///
-unsigned short q_websocket_local_port(void* self);
+uint16_t q_websocket_local_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#pauseMode)
 ///
@@ -201,7 +201,7 @@ const char* q_websocket_peer_name(void* self);
 ///
 /// @param self QWebSocket*
 ///
-unsigned short q_websocket_peer_port(void* self);
+uint16_t q_websocket_peer_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#proxy)
 ///
@@ -233,14 +233,14 @@ const QMaskGenerator* q_websocket_mask_generator(void* self);
 ///
 /// @param self QWebSocket*
 ///
-long long q_websocket_read_buffer_size(void* self);
+int64_t q_websocket_read_buffer_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#setReadBufferSize)
 ///
 /// @param self QWebSocket*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_websocket_set_read_buffer_size(void* self, long long size);
+void q_websocket_set_read_buffer_size(void* self, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#resume)
 ///
@@ -334,14 +334,14 @@ const char* q_websocket_close_reason(void* self);
 /// @param self QWebSocket*
 /// @param message const char*
 ///
-long long q_websocket_send_text_message(void* self, const char* message);
+int64_t q_websocket_send_text_message(void* self, const char* message);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#sendBinaryMessage)
 ///
 /// @param self QWebSocket*
 /// @param data char*
 ///
-long long q_websocket_send_binary_message(void* self, char* data);
+int64_t q_websocket_send_binary_message(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#ignoreSslErrors)
 ///
@@ -373,7 +373,7 @@ QSslConfiguration* q_websocket_ssl_configuration(void* self);
 ///
 /// @param self QWebSocket*
 ///
-long long q_websocket_bytes_to_write(void* self);
+int64_t q_websocket_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#setMaxAllowedIncomingFrameSize)
 ///
@@ -666,16 +666,16 @@ void q_websocket_on_pong(void* self, void (*callback)(void*, uint64_t, libqt_str
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#bytesWritten)
 ///
 /// @param self QWebSocket*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_websocket_bytes_written(void* self, long long bytes);
+void q_websocket_bytes_written(void* self, int64_t bytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#bytesWritten)
 ///
 /// @param self QWebSocket*
-/// @param callback void func(QWebSocket* self, long long bytes)
+/// @param callback void func(QWebSocket* self, int64_t bytes)
 ///
-void q_websocket_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_websocket_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocket.html#peerVerifyError)
 ///

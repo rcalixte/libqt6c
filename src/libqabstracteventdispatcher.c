@@ -43,11 +43,11 @@ void q_abstracteventdispatcher_unregister_socket_notifier(void* self, void* noti
     QAbstractEventDispatcher_UnregisterSocketNotifier((QAbstractEventDispatcher*)self, (QSocketNotifier*)notifier);
 }
 
-int32_t q_abstracteventdispatcher_register_timer2(void* self, long long interval, int32_t timerType, void* object) {
+int32_t q_abstracteventdispatcher_register_timer2(void* self, int64_t interval, int32_t timerType, void* object) {
     return QAbstractEventDispatcher_RegisterTimer2((QAbstractEventDispatcher*)self, interval, timerType, (QObject*)object);
 }
 
-void q_abstracteventdispatcher_register_timer3(void* self, int timerId, long long interval, int32_t timerType, void* object) {
+void q_abstracteventdispatcher_register_timer3(void* self, int timerId, int64_t interval, int32_t timerType, void* object) {
     QAbstractEventDispatcher_RegisterTimer3((QAbstractEventDispatcher*)self, timerId, interval, timerType, (QObject*)object);
 }
 
@@ -428,11 +428,11 @@ void q_abstracteventdispatcherv2_unregister_socket_notifier(void* self, void* no
     QAbstractEventDispatcher_UnregisterSocketNotifier((QAbstractEventDispatcher*)self, (QSocketNotifier*)notifier);
 }
 
-int32_t q_abstracteventdispatcherv2_register_timer2(void* self, long long interval, int32_t timerType, void* object) {
+int32_t q_abstracteventdispatcherv2_register_timer2(void* self, int64_t interval, int32_t timerType, void* object) {
     return QAbstractEventDispatcher_RegisterTimer2((QAbstractEventDispatcher*)self, interval, timerType, (QObject*)object);
 }
 
-void q_abstracteventdispatcherv2_register_timer3(void* self, int timerId, long long interval, int32_t timerType, void* object) {
+void q_abstracteventdispatcherv2_register_timer3(void* self, int timerId, int64_t interval, int32_t timerType, void* object) {
     QAbstractEventDispatcher_RegisterTimer3((QAbstractEventDispatcher*)self, timerId, interval, timerType, (QObject*)object);
 }
 

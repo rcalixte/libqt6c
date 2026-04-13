@@ -14,15 +14,15 @@ QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* stringV
     return QTextBoundaryFinder_new3(type, qstring(stringVal));
 }
 
-QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, int64_t length) {
+QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, intptr_t length) {
     return QTextBoundaryFinder_new4(type, (QChar*)chars, length);
 }
 
-QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, void* chars, int64_t length, unsigned char* buffer) {
+QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, void* chars, intptr_t length, unsigned char* buffer) {
     return QTextBoundaryFinder_new5(type, (QChar*)chars, length, buffer);
 }
 
-QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, int64_t length, unsigned char* buffer, int64_t bufferSize) {
+QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize) {
     return QTextBoundaryFinder_new6(type, (QChar*)chars, length, buffer, bufferSize);
 }
 
@@ -53,19 +53,19 @@ void q_textboundaryfinder_to_end(void* self) {
     QTextBoundaryFinder_ToEnd((QTextBoundaryFinder*)self);
 }
 
-int64_t q_textboundaryfinder_position(void* self) {
+intptr_t q_textboundaryfinder_position(void* self) {
     return QTextBoundaryFinder_Position((QTextBoundaryFinder*)self);
 }
 
-void q_textboundaryfinder_set_position(void* self, int64_t position) {
+void q_textboundaryfinder_set_position(void* self, intptr_t position) {
     QTextBoundaryFinder_SetPosition((QTextBoundaryFinder*)self, position);
 }
 
-int64_t q_textboundaryfinder_to_next_boundary(void* self) {
+intptr_t q_textboundaryfinder_to_next_boundary(void* self) {
     return QTextBoundaryFinder_ToNextBoundary((QTextBoundaryFinder*)self);
 }
 
-int64_t q_textboundaryfinder_to_previous_boundary(void* self) {
+intptr_t q_textboundaryfinder_to_previous_boundary(void* self) {
     return QTextBoundaryFinder_ToPreviousBoundary((QTextBoundaryFinder*)self);
 }
 

@@ -22,11 +22,11 @@ KFindDialog* k_finddialog_new2() {
     return KFindDialog_new2();
 }
 
-KFindDialog* k_finddialog_new3(void* parent, int64_t options) {
+KFindDialog* k_finddialog_new3(void* parent, long options) {
     return KFindDialog_new3((QWidget*)parent, options);
 }
 
-KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findStrings[static 1]) {
+KFindDialog* k_finddialog_new4(void* parent, long options, const char* findStrings[static 1]) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -43,7 +43,7 @@ KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findSt
     return _out;
 }
 
-KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection) {
+KFindDialog* k_finddialog_new5(void* parent, long options, const char* findStrings[static 1], bool hasSelection) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -60,7 +60,7 @@ KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findSt
     return _out;
 }
 
-KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection, bool replaceDialog) {
+KFindDialog* k_finddialog_new6(void* parent, long options, const char* findStrings[static 1], bool hasSelection, bool replaceDialog) {
     size_t findStrings_len = libqt_strv_length(findStrings);
     libqt_string* findStrings_qstr = (libqt_string*)malloc(findStrings_len * sizeof(libqt_string));
     if (findStrings_qstr == NULL) {
@@ -178,11 +178,11 @@ void k_finddialog_set_supports_regular_expression_find(void* self, bool supports
     KFindDialog_SetSupportsRegularExpressionFind((KFindDialog*)self, supports);
 }
 
-void k_finddialog_set_options(void* self, int64_t options) {
+void k_finddialog_set_options(void* self, long options) {
     KFindDialog_SetOptions((KFindDialog*)self, options);
 }
 
-int64_t k_finddialog_options(void* self) {
+long k_finddialog_options(void* self) {
     return KFindDialog_Options((KFindDialog*)self);
 }
 
@@ -1257,7 +1257,7 @@ int32_t k_finddialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_finddialog_find(uint64_t param1) {
+QWidget* k_finddialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

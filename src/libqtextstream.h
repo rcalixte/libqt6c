@@ -159,15 +159,15 @@ void q_textstream_flush(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#seek)
 ///
 /// @param self QTextStream*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_textstream_seek(void* self, long long pos);
+bool q_textstream_seek(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#pos)
 ///
 /// @param self QTextStream*
 ///
-long long q_textstream_pos(void* self);
+int64_t q_textstream_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#skipWhiteSpace)
 ///
@@ -196,9 +196,9 @@ const char* q_textstream_read_all(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-const char* q_textstream_read(void* self, long long maxlen);
+const char* q_textstream_read(void* self, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#setFieldAlignment)
 ///
@@ -343,18 +343,18 @@ QTextStream* q_textstream_operator_shift_right7(void* self, uint32_t* i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
 /// @param self QTextStream*
-/// @param i int64_t*
+/// @param i long*
 ///
-QTextStream* q_textstream_operator_shift_right8(void* self, int64_t* i);
+QTextStream* q_textstream_operator_shift_right8(void* self, long* i);
 #endif
 
 #if defined(__linux__) || defined(__FreeBSD__)
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
 /// @param self QTextStream*
-/// @param i uint64_t*
+/// @param i uintptr_t*
 ///
-QTextStream* q_textstream_operator_shift_right9(void* self, uint64_t* i);
+QTextStream* q_textstream_operator_shift_right9(void* self, uintptr_t* i);
 #endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
@@ -367,9 +367,9 @@ QTextStream* q_textstream_operator_shift_right10(void* self, long long* i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
 /// @param self QTextStream*
-/// @param i uint64_t*
+/// @param i uintptr_t*
 ///
-QTextStream* q_textstream_operator_shift_right11(void* self, uint64_t* i);
+QTextStream* q_textstream_operator_shift_right11(void* self, uintptr_t* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-gt-gt)
 ///
@@ -451,16 +451,16 @@ QTextStream* q_textstream_operator_shift_left7(void* self, uint32_t i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
-/// @param i int64_t
+/// @param i long
 ///
-QTextStream* q_textstream_operator_shift_left8(void* self, int64_t i);
+QTextStream* q_textstream_operator_shift_left8(void* self, long i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
-/// @param i uint64_t
+/// @param i uintptr_t
 ///
-QTextStream* q_textstream_operator_shift_left9(void* self, uint64_t i);
+QTextStream* q_textstream_operator_shift_left9(void* self, uintptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
@@ -472,9 +472,9 @@ QTextStream* q_textstream_operator_shift_left10(void* self, long long i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
-/// @param i uint64_t
+/// @param i uintptr_t
 ///
-QTextStream* q_textstream_operator_shift_left11(void* self, uint64_t i);
+QTextStream* q_textstream_operator_shift_left11(void* self, uintptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
@@ -523,9 +523,9 @@ QTextStream* q_textstream_operator_shift_left19(void* self, void* ptr);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self QTextStream*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-const char* q_textstream_read_line1(void* self, long long maxlen);
+const char* q_textstream_read_line1(void* self, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#dtor.QTextStream)
 ///

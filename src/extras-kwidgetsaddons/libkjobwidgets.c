@@ -20,10 +20,10 @@ QWindow* k_jobwidgets_window_handle(void* param1) {
     return KJobWidgets_WindowHandle((QObject*)param1);
 }
 
-void k_jobwidgets_update_user_timestamp(void* param1, uint64_t param2) {
+void k_jobwidgets_update_user_timestamp(void* param1, uintptr_t param2) {
     KJobWidgets_UpdateUserTimestamp((QObject*)param1, param2);
 }
 
-uint64_t k_jobwidgets_user_timestamp(void* param1) {
+uintptr_t k_jobwidgets_user_timestamp(void* param1) {
     return KJobWidgets_UserTimestamp((QObject*)param1);
 }

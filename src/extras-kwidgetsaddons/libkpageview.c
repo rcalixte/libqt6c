@@ -1139,7 +1139,7 @@ int32_t k_pageview_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_pageview_find(uint64_t param1) {
+QWidget* k_pageview_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

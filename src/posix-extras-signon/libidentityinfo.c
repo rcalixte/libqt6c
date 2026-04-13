@@ -246,7 +246,7 @@ const char** q_signon__identityinfo_mechanisms(void* self, const char* method) {
     return _ret;
 }
 
-void q_signon__identityinfo_set_ref_count(void* self, int refCount) {
+void q_signon__identityinfo_set_ref_count(void* self, int32_t refCount) {
     SignOn__IdentityInfo_SetRefCount((SignOn__IdentityInfo*)self, refCount);
 }
 

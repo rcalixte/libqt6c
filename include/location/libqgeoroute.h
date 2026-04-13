@@ -97,7 +97,7 @@ QGeoRouteSegment* q_georoute_first_route_segment(void* self);
 ///
 /// @param self QGeoRoute*
 ///
-int64_t q_georoute_segments_count(void* self);
+intptr_t q_georoute_segments_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeoroute.html#segments)
 ///

@@ -45,7 +45,7 @@ QVariant* q_variant_new6(long long ll) {
     return QVariant_new6(ll);
 }
 
-QVariant* q_variant_new7(uint64_t ull) {
+QVariant* q_variant_new7(uintptr_t ull) {
     return QVariant_new7(ull);
 }
 
@@ -334,7 +334,7 @@ long long q_variant_to_long_long(void* self) {
     return QVariant_ToLongLong((QVariant*)self);
 }
 
-uint64_t q_variant_to_u_long_long(void* self) {
+uintptr_t q_variant_to_u_long_long(void* self) {
     return QVariant_ToULongLong((QVariant*)self);
 }
 
@@ -610,7 +610,7 @@ long long q_variant_to_long_long1(void* self, bool* ok) {
     return QVariant_ToLongLong1((QVariant*)self, (bool*)ok);
 }
 
-uint64_t q_variant_to_u_long_long1(void* self, bool* ok) {
+uintptr_t q_variant_to_u_long_long1(void* self, bool* ok) {
     return QVariant_ToULongLong1((QVariant*)self, (bool*)ok);
 }
 

@@ -166,7 +166,7 @@ KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long(void* sel
     return KCoreConfigSkeleton_AddItemLongLong((KCoreConfigSkeleton*)self, qstring(name), reference);
 }
 
-KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long(void* self, const char* name, uint64_t* reference) {
+KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long(void* self, const char* name, uintptr_t* reference) {
     return KCoreConfigSkeleton_AddItemULongLong((KCoreConfigSkeleton*)self, qstring(name), (unsigned long long*)reference);
 }
 
@@ -307,11 +307,11 @@ KCoreConfigSkeleton__ItemBool* k_configskeleton_add_item_bool4(void* self, const
     return KCoreConfigSkeleton_AddItemBool4((KCoreConfigSkeleton*)self, qstring(name), (bool*)reference, defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int3(void* self, const char* name, int* reference, int defaultValue) {
+KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int3(void* self, const char* name, int* reference, int32_t defaultValue) {
     return KCoreConfigSkeleton_AddItemInt3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
 }
 
-KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int4(void* self, const char* name, int* reference, int defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemInt* k_configskeleton_add_item_int4(void* self, const char* name, int* reference, int32_t defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemInt4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
 }
 
@@ -323,19 +323,19 @@ KCoreConfigSkeleton__ItemUInt* k_configskeleton_add_item_u_int4(void* self, cons
     return KCoreConfigSkeleton_AddItemUInt4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long3(void* self, const char* name, long long* reference, long long defaultValue) {
+KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long3(void* self, const char* name, long long* reference, int64_t defaultValue) {
     return KCoreConfigSkeleton_AddItemLongLong3((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue);
 }
 
-KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long4(void* self, const char* name, long long* reference, long long defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemLongLong* k_configskeleton_add_item_long_long4(void* self, const char* name, long long* reference, int64_t defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemLongLong4((KCoreConfigSkeleton*)self, qstring(name), reference, defaultValue, qstring(key));
 }
 
-KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long3(void* self, const char* name, uint64_t* reference, uint64_t defaultValue) {
+KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long3(void* self, const char* name, uintptr_t* reference, uint64_t defaultValue) {
     return KCoreConfigSkeleton_AddItemULongLong3((KCoreConfigSkeleton*)self, qstring(name), (unsigned long long*)reference, defaultValue);
 }
 
-KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long4(void* self, const char* name, uint64_t* reference, uint64_t defaultValue, const char* key) {
+KCoreConfigSkeleton__ItemULongLong* k_configskeleton_add_item_u_long_long4(void* self, const char* name, uintptr_t* reference, uint64_t defaultValue, const char* key) {
     return KCoreConfigSkeleton_AddItemULongLong4((KCoreConfigSkeleton*)self, qstring(name), (unsigned long long*)reference, defaultValue, qstring(key));
 }
 

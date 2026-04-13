@@ -175,9 +175,9 @@ void q_datastream_operator_shift_right8(void* self, long long* i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
-/// @param i uint64_t*
+/// @param i uintptr_t*
 ///
-void q_datastream_operator_shift_right9(void* self, uint64_t* i);
+void q_datastream_operator_shift_right9(void* self, uintptr_t* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
@@ -224,30 +224,30 @@ void q_datastream_operator_shift_left2(void* self, signed char i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
-/// @param i unsigned char
+/// @param i uint8_t
 ///
-void q_datastream_operator_shift_left3(void* self, unsigned char i);
+void q_datastream_operator_shift_left3(void* self, uint8_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
-/// @param i short
+/// @param i int16_t
 ///
-void q_datastream_operator_shift_left4(void* self, short i);
+void q_datastream_operator_shift_left4(void* self, int16_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
-/// @param i unsigned short
+/// @param i uint16_t
 ///
-void q_datastream_operator_shift_left5(void* self, unsigned short i);
+void q_datastream_operator_shift_left5(void* self, uint16_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
-/// @param i int
+/// @param i int32_t
 ///
-void q_datastream_operator_shift_left6(void* self, int i);
+void q_datastream_operator_shift_left6(void* self, int32_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
@@ -259,9 +259,9 @@ void q_datastream_operator_shift_left7(void* self, uint32_t i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
 /// @param self QDataStream*
-/// @param i long long
+/// @param i int64_t
 ///
-void q_datastream_operator_shift_left8(void* self, long long i);
+void q_datastream_operator_shift_left8(void* self, int64_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-lt-lt)
 ///
@@ -311,32 +311,32 @@ QDataStream* q_datastream_read_bytes2(void* self, char* param1, long long* lenVa
 ///
 /// @param self QDataStream*
 /// @param param1 char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_datastream_read_raw_data(void* self, char* param1, long long lenVal);
+int64_t q_datastream_read_raw_data(void* self, char* param1, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#writeBytes)
 ///
 /// @param self QDataStream*
 /// @param param1 const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-void q_datastream_write_bytes(void* self, const char* param1, long long lenVal);
+void q_datastream_write_bytes(void* self, const char* param1, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#writeRawData)
 ///
 /// @param self QDataStream*
 /// @param param1 const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_datastream_write_raw_data(void* self, const char* param1, long long lenVal);
+int64_t q_datastream_write_raw_data(void* self, const char* param1, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#skipRawData)
 ///
 /// @param self QDataStream*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_datastream_skip_raw_data(void* self, long long lenVal);
+int64_t q_datastream_skip_raw_data(void* self, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#startTransaction)
 ///

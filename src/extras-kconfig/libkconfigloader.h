@@ -358,9 +358,9 @@ KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long(void* self,
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 ///
-KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long(void* self, const char* name, uint64_t* reference);
+KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long(void* self, const char* name, uintptr_t* reference);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -671,9 +671,9 @@ KCoreConfigSkeleton__ItemBool* k_configloader_add_item_bool4(void* self, const c
 /// @param self KConfigLoader*
 /// @param name const char*
 /// @param reference int*
-/// @param defaultValue int
+/// @param defaultValue int32_t
 ///
-KCoreConfigSkeleton__ItemInt* k_configloader_add_item_int3(void* self, const char* name, int* reference, int defaultValue);
+KCoreConfigSkeleton__ItemInt* k_configloader_add_item_int3(void* self, const char* name, int* reference, int32_t defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -682,10 +682,10 @@ KCoreConfigSkeleton__ItemInt* k_configloader_add_item_int3(void* self, const cha
 /// @param self KConfigLoader*
 /// @param name const char*
 /// @param reference int*
-/// @param defaultValue int
+/// @param defaultValue int32_t
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemInt* k_configloader_add_item_int4(void* self, const char* name, int* reference, int defaultValue, const char* key);
+KCoreConfigSkeleton__ItemInt* k_configloader_add_item_int4(void* self, const char* name, int* reference, int32_t defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -717,9 +717,9 @@ KCoreConfigSkeleton__ItemUInt* k_configloader_add_item_u_int4(void* self, const 
 /// @param self KConfigLoader*
 /// @param name const char*
 /// @param reference long long*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 ///
-KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long3(void* self, const char* name, long long* reference, long long defaultValue);
+KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long3(void* self, const char* name, long long* reference, int64_t defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -728,10 +728,10 @@ KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long3(void* self
 /// @param self KConfigLoader*
 /// @param name const char*
 /// @param reference long long*
-/// @param defaultValue long long
+/// @param defaultValue int64_t
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long4(void* self, const char* name, long long* reference, long long defaultValue, const char* key);
+KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long4(void* self, const char* name, long long* reference, int64_t defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -739,10 +739,10 @@ KCoreConfigSkeleton__ItemLongLong* k_configloader_add_item_long_long4(void* self
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 /// @param defaultValue uint64_t
 ///
-KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long3(void* self, const char* name, uint64_t* reference, uint64_t defaultValue);
+KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long3(void* self, const char* name, uintptr_t* reference, uint64_t defaultValue);
 
 /// Inherited from KCoreConfigSkeleton
 ///
@@ -750,11 +750,11 @@ KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long3(void* s
 ///
 /// @param self KConfigLoader*
 /// @param name const char*
-/// @param reference uint64_t*
+/// @param reference uintptr_t*
 /// @param defaultValue uint64_t
 /// @param key const char*
 ///
-KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long4(void* self, const char* name, uint64_t* reference, uint64_t defaultValue, const char* key);
+KCoreConfigSkeleton__ItemULongLong* k_configloader_add_item_u_long_long4(void* self, const char* name, uintptr_t* reference, uint64_t defaultValue, const char* key);
 
 /// Inherited from KCoreConfigSkeleton
 ///

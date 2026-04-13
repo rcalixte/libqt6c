@@ -101,9 +101,9 @@ QModelRoleDataSpan* q_modelroledataspan_new4(void* modelRoleData);
 /// q_modelroledataspan_new5 constructs a new QModelRoleDataSpan object.
 ///
 /// @param modelRoleData QModelRoleData*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, int64_t lenVal);
+QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledataspan.html)
 
@@ -131,13 +131,13 @@ void q_modelroledataspan_move_assign(void* self, void* other);
 ///
 /// @param self QModelRoleDataSpan*
 ///
-int64_t q_modelroledataspan_size(void* self);
+intptr_t q_modelroledataspan_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledataspan.html#length)
 ///
 /// @param self QModelRoleDataSpan*
 ///
-int64_t q_modelroledataspan_length(void* self);
+intptr_t q_modelroledataspan_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledataspan.html#data)
 ///
@@ -160,9 +160,9 @@ QModelRoleData* q_modelroledataspan_end(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledataspan.html#operator-5b-5d)
 ///
 /// @param self QModelRoleDataSpan*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-QModelRoleData* q_modelroledataspan_operator_subscript(void* self, int64_t index);
+QModelRoleData* q_modelroledataspan_operator_subscript(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmodelroledataspan.html#dataForRole)
 ///

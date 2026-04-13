@@ -10,7 +10,7 @@ QInputDevice* q_inputdevice_new() {
     return QInputDevice_new();
 }
 
-QInputDevice* q_inputdevice_new2(const char* name, long long systemId, int32_t type) {
+QInputDevice* q_inputdevice_new2(const char* name, int64_t systemId, int32_t type) {
     return QInputDevice_new2(qstring(name), systemId, type);
 }
 
@@ -18,11 +18,11 @@ QInputDevice* q_inputdevice_new3(void* parent) {
     return QInputDevice_new3((QObject*)parent);
 }
 
-QInputDevice* q_inputdevice_new4(const char* name, long long systemId, int32_t type, const char* seatName) {
+QInputDevice* q_inputdevice_new4(const char* name, int64_t systemId, int32_t type, const char* seatName) {
     return QInputDevice_new4(qstring(name), systemId, type, qstring(seatName));
 }
 
-QInputDevice* q_inputdevice_new5(const char* name, long long systemId, int32_t type, const char* seatName, void* parent) {
+QInputDevice* q_inputdevice_new5(const char* name, int64_t systemId, int32_t type, const char* seatName, void* parent) {
     return QInputDevice_new5(qstring(name), systemId, type, qstring(seatName), (QObject*)parent);
 }
 
@@ -88,7 +88,7 @@ bool q_inputdevice_has_capability(void* self, int32_t cap) {
     return QInputDevice_HasCapability((QInputDevice*)self, cap);
 }
 
-long long q_inputdevice_system_id(void* self) {
+int64_t q_inputdevice_system_id(void* self) {
     return QInputDevice_SystemId((QInputDevice*)self);
 }
 

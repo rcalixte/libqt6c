@@ -1232,7 +1232,7 @@ int32_t k_ratingwidget_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_ratingwidget_find(uint64_t param1) {
+QWidget* k_ratingwidget_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

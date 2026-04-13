@@ -161,15 +161,15 @@ QPointingDeviceUniqueId* q_eventpoint_unique_id(void* self) {
     return QEventPoint_UniqueId((QEventPoint*)self);
 }
 
-uint64_t q_eventpoint_timestamp(void* self) {
+uintptr_t q_eventpoint_timestamp(void* self) {
     return QEventPoint_Timestamp((QEventPoint*)self);
 }
 
-uint64_t q_eventpoint_last_timestamp(void* self) {
+uintptr_t q_eventpoint_last_timestamp(void* self) {
     return QEventPoint_LastTimestamp((QEventPoint*)self);
 }
 
-uint64_t q_eventpoint_press_timestamp(void* self) {
+uintptr_t q_eventpoint_press_timestamp(void* self) {
     return QEventPoint_PressTimestamp((QEventPoint*)self);
 }
 

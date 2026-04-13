@@ -1153,7 +1153,7 @@ int32_t k_multitabbar_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_multitabbar_find(uint64_t param1) {
+QWidget* k_multitabbar_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -3458,7 +3458,7 @@ int32_t k_multitabbarbutton_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_multitabbarbutton_find(uint64_t param1) {
+QWidget* k_multitabbarbutton_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -5111,7 +5111,7 @@ int32_t k_multitabbartab_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_multitabbartab_find(uint64_t param1) {
+QWidget* k_multitabbartab_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

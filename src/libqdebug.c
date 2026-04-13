@@ -105,15 +105,15 @@ QDebug* q_debug_operator_shift_left9(void* self, uint32_t t) {
     return QDebug_OperatorShiftLeft9((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left10(void* self, int64_t t) {
+QDebug* q_debug_operator_shift_left10(void* self, long t) {
     return QDebug_OperatorShiftLeft10((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left11(void* self, uint64_t t) {
+QDebug* q_debug_operator_shift_left11(void* self, uintptr_t t) {
     return QDebug_OperatorShiftLeft11((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left12(void* self, long long t) {
+QDebug* q_debug_operator_shift_left12(void* self, int64_t t) {
     return QDebug_OperatorShiftLeft12((QDebug*)self, t);
 }
 

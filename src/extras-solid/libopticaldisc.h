@@ -83,7 +83,7 @@ bool k_solid__opticaldisc_is_rewritable(void* self);
 ///
 /// @param self Solid__OpticalDisc*
 ///
-uint64_t k_solid__opticaldisc_capacity(void* self);
+uintptr_t k_solid__opticaldisc_capacity(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
@@ -158,7 +158,7 @@ const char* k_solid__opticaldisc_uuid(void* self);
 ///
 /// @param self Solid__OpticalDisc*
 ///
-uint64_t k_solid__opticaldisc_size(void* self);
+uintptr_t k_solid__opticaldisc_size(void* self);
 
 /// Inherited from Solid::DeviceInterface
 ///

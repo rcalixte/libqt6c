@@ -267,19 +267,19 @@ QPointingDeviceUniqueId* q_eventpoint_unique_id(void* self);
 ///
 /// @param self QEventPoint*
 ///
-uint64_t q_eventpoint_timestamp(void* self);
+uintptr_t q_eventpoint_timestamp(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeventpoint.html#lastTimestamp)
 ///
 /// @param self QEventPoint*
 ///
-uint64_t q_eventpoint_last_timestamp(void* self);
+uintptr_t q_eventpoint_last_timestamp(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeventpoint.html#pressTimestamp)
 ///
 /// @param self QEventPoint*
 ///
-uint64_t q_eventpoint_press_timestamp(void* self);
+uintptr_t q_eventpoint_press_timestamp(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qeventpoint.html#timeHeld)
 ///

@@ -283,9 +283,9 @@ void q_date_get_date(void* self, int* year, int* month, int* day);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addDays)
 ///
 /// @param self QDate*
-/// @param days long long
+/// @param days int64_t
 ///
-QDate* q_date_add_days(void* self, long long days);
+QDate* q_date_add_days(void* self, int64_t days);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#addMonths)
 ///
@@ -322,7 +322,7 @@ QDate* q_date_add_years2(void* self, int years, void* cal);
 /// @param self QDate*
 /// @param d QDate*
 ///
-long long q_date_days_to(void* self, void* d);
+int64_t q_date_days_to(void* self, void* d);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#currentDate)
 ///
@@ -374,15 +374,15 @@ bool q_date_is_leap_year(int year);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromJulianDay)
 ///
-/// @param jd_ long long
+/// @param jd_ int64_t
 ///
-QDate* q_date_from_julian_day(long long jd_);
+QDate* q_date_from_julian_day(int64_t jd_);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toJulianDay)
 ///
 /// @param self QDate*
 ///
-long long q_date_to_julian_day(void* self);
+int64_t q_date_to_julian_day(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#weekNumber)
 ///
@@ -840,13 +840,13 @@ bool q_datetime_is_daylight_time(void* self);
 ///
 /// @param self QDateTime*
 ///
-long long q_datetime_to_m_secs_since_epoch(void* self);
+int64_t q_datetime_to_m_secs_since_epoch(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toSecsSinceEpoch)
 ///
 /// @param self QDateTime*
 ///
-long long q_datetime_to_secs_since_epoch(void* self);
+int64_t q_datetime_to_secs_since_epoch(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#setDate)
 ///
@@ -886,16 +886,16 @@ void q_datetime_set_time_zone(void* self, void* toZone);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#setMSecsSinceEpoch)
 ///
 /// @param self QDateTime*
-/// @param msecs long long
+/// @param msecs int64_t
 ///
-void q_datetime_set_m_secs_since_epoch(void* self, long long msecs);
+void q_datetime_set_m_secs_since_epoch(void* self, int64_t msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#setSecsSinceEpoch)
 ///
 /// @param self QDateTime*
-/// @param secs long long
+/// @param secs int64_t
 ///
-void q_datetime_set_secs_since_epoch(void* self, long long secs);
+void q_datetime_set_secs_since_epoch(void* self, int64_t secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
 ///
@@ -927,9 +927,9 @@ const char* q_datetime_to_string3(void* self, const char* format, void* cal);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addDays)
 ///
 /// @param self QDateTime*
-/// @param days long long
+/// @param days int64_t
 ///
-QDateTime* q_datetime_add_days(void* self, long long days);
+QDateTime* q_datetime_add_days(void* self, int64_t days);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addMonths)
 ///
@@ -948,16 +948,16 @@ QDateTime* q_datetime_add_years(void* self, int years);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addSecs)
 ///
 /// @param self QDateTime*
-/// @param secs long long
+/// @param secs int64_t
 ///
-QDateTime* q_datetime_add_secs(void* self, long long secs);
+QDateTime* q_datetime_add_secs(void* self, int64_t secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addMSecs)
 ///
 /// @param self QDateTime*
-/// @param msecs long long
+/// @param msecs int64_t
 ///
-QDateTime* q_datetime_add_m_secs(void* self, long long msecs);
+QDateTime* q_datetime_add_m_secs(void* self, int64_t msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addDuration)
 ///
@@ -1004,21 +1004,21 @@ QDateTime* q_datetime_to_time_zone(void* self, void* toZone);
 /// @param self QDateTime*
 /// @param param1 QDateTime*
 ///
-long long q_datetime_days_to(void* self, void* param1);
+int64_t q_datetime_days_to(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#secsTo)
 ///
 /// @param self QDateTime*
 /// @param param1 QDateTime*
 ///
-long long q_datetime_secs_to(void* self, void* param1);
+int64_t q_datetime_secs_to(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#msecsTo)
 ///
 /// @param self QDateTime*
 /// @param param1 QDateTime*
 ///
-long long q_datetime_msecs_to(void* self, void* param1);
+int64_t q_datetime_msecs_to(void* self, void* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#currentDateTime)
 ///
@@ -1066,51 +1066,51 @@ QDateTime* q_datetime_from_string11(const char* stringVal, const char* format, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
-/// @param msecs long long
+/// @param msecs int64_t
 /// @param spec enum Qt__TimeSpec
 ///
-QDateTime* q_datetime_from_m_secs_since_epoch(long long msecs, int32_t spec);
+QDateTime* q_datetime_from_m_secs_since_epoch(int64_t msecs, int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
-/// @param secs long long
+/// @param secs int64_t
 /// @param spec enum Qt__TimeSpec
 ///
-QDateTime* q_datetime_from_secs_since_epoch(long long secs, int32_t spec);
+QDateTime* q_datetime_from_secs_since_epoch(int64_t secs, int32_t spec);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
-/// @param msecs long long
+/// @param msecs int64_t
 /// @param timeZone QTimeZone*
 ///
-QDateTime* q_datetime_from_m_secs_since_epoch2(long long msecs, void* timeZone);
+QDateTime* q_datetime_from_m_secs_since_epoch2(int64_t msecs, void* timeZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
-/// @param secs long long
+/// @param secs int64_t
 /// @param timeZone QTimeZone*
 ///
-QDateTime* q_datetime_from_secs_since_epoch2(long long secs, void* timeZone);
+QDateTime* q_datetime_from_secs_since_epoch2(int64_t secs, void* timeZone);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
-/// @param msecs long long
+/// @param msecs int64_t
 ///
-QDateTime* q_datetime_from_m_secs_since_epoch3(long long msecs);
+QDateTime* q_datetime_from_m_secs_since_epoch3(int64_t msecs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
-/// @param secs long long
+/// @param secs int64_t
 ///
-QDateTime* q_datetime_from_secs_since_epoch3(long long secs);
+QDateTime* q_datetime_from_secs_since_epoch3(int64_t secs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#currentMSecsSinceEpoch)
 ///
-long long q_datetime_current_m_secs_since_epoch();
+int64_t q_datetime_current_m_secs_since_epoch();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#currentSecsSinceEpoch)
 ///
-long long q_datetime_current_secs_since_epoch();
+int64_t q_datetime_current_secs_since_epoch();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#operator-2b-eq)
 ///
@@ -1176,19 +1176,19 @@ QDateTime* q_datetime_from_string34(const char* stringVal, const char* format, i
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromMSecsSinceEpoch)
 ///
-/// @param msecs long long
+/// @param msecs int64_t
 /// @param spec enum Qt__TimeSpec
 /// @param offsetFromUtc int
 ///
-QDateTime* q_datetime_from_m_secs_since_epoch32(long long msecs, int32_t spec, int offsetFromUtc);
+QDateTime* q_datetime_from_m_secs_since_epoch32(int64_t msecs, int32_t spec, int offsetFromUtc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromSecsSinceEpoch)
 ///
-/// @param secs long long
+/// @param secs int64_t
 /// @param spec enum Qt__TimeSpec
 /// @param offsetFromUtc int
 ///
-QDateTime* q_datetime_from_secs_since_epoch32(long long secs, int32_t spec, int offsetFromUtc);
+QDateTime* q_datetime_from_secs_since_epoch32(int64_t secs, int32_t spec, int offsetFromUtc);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#dtor.QDateTime)
 ///

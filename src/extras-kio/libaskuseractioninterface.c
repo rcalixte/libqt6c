@@ -28,7 +28,7 @@ const char* k_io__askuseractioninterface_tr(const char* s) {
     return _ret;
 }
 
-void k_io__askuseractioninterface_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uint64_t sizeSrc, uint64_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest) {
+void k_io__askuseractioninterface_ask_user_rename(void* self, void* job, const char* title, void* src, void* dest, int32_t options, uintptr_t sizeSrc, uintptr_t sizeDest, void* ctimeSrc, void* ctimeDest, void* mtimeSrc, void* mtimeDest) {
     KIO__AskUserActionInterface_AskUserRename((KIO__AskUserActionInterface*)self, (KJob*)job, qstring(title), (QUrl*)src, (QUrl*)dest, options, sizeSrc, sizeDest, (QDateTime*)ctimeSrc, (QDateTime*)ctimeDest, (QDateTime*)mtimeSrc, (QDateTime*)mtimeDest);
 }
 

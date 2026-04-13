@@ -25,7 +25,7 @@ QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags) {
     return QStringEncoder_new5(name, flags);
 }
 
-int64_t q_stringencoder_required_space(void* self, int64_t inputLength) {
+intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength) {
     return QStringEncoder_RequiredSpace((QStringEncoder*)self, inputLength);
 }
 
@@ -92,7 +92,7 @@ QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f) {
     return QStringDecoder_new5(name, f);
 }
 
-int64_t q_stringdecoder_required_space(void* self, int64_t inputLength) {
+intptr_t q_stringdecoder_required_space(void* self, intptr_t inputLength) {
     return QStringDecoder_RequiredSpace((QStringDecoder*)self, inputLength);
 }
 

@@ -57,7 +57,7 @@ const char* k_solid__storagevolume_uuid(void* self) {
     return _ret;
 }
 
-uint64_t k_solid__storagevolume_size(void* self) {
+uintptr_t k_solid__storagevolume_size(void* self) {
     return Solid__StorageVolume_Size((Solid__StorageVolume*)self);
 }
 

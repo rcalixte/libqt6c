@@ -69,7 +69,7 @@ bool q_typerevision_has_major_version(void* self);
 ///
 /// @param self QTypeRevision*
 ///
-unsigned char q_typerevision_major_version(void* self);
+uint8_t q_typerevision_major_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#hasMinorVersion)
 ///
@@ -81,7 +81,7 @@ bool q_typerevision_has_minor_version(void* self);
 ///
 /// @param self QTypeRevision*
 ///
-unsigned char q_typerevision_minor_version(void* self);
+uint8_t q_typerevision_minor_version(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtyperevision.html#isValid)
 ///

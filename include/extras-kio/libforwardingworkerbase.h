@@ -1128,9 +1128,9 @@ void k_io__forwardingworkerbase_list_entries(void* self, libqt_list _entry);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#canResume)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-bool k_io__forwardingworkerbase_can_resume(void* self, uint64_t offset);
+bool k_io__forwardingworkerbase_can_resume(void* self, uintptr_t offset);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1145,54 +1145,54 @@ void k_io__forwardingworkerbase_can_resume2(void* self);
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#totalSize)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _bytes uint64_t
+/// @param _bytes uintptr_t
 ///
-void k_io__forwardingworkerbase_total_size(void* self, uint64_t _bytes);
+void k_io__forwardingworkerbase_total_size(void* self, uintptr_t _bytes);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#processedSize)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _bytes uint64_t
+/// @param _bytes uintptr_t
 ///
-void k_io__forwardingworkerbase_processed_size(void* self, uint64_t _bytes);
+void k_io__forwardingworkerbase_processed_size(void* self, uintptr_t _bytes);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#position)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _pos uint64_t
+/// @param _pos uintptr_t
 ///
-void k_io__forwardingworkerbase_position(void* self, uint64_t _pos);
+void k_io__forwardingworkerbase_position(void* self, uintptr_t _pos);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#written)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _bytes uint64_t
+/// @param _bytes uintptr_t
 ///
-void k_io__forwardingworkerbase_written(void* self, uint64_t _bytes);
+void k_io__forwardingworkerbase_written(void* self, uintptr_t _bytes);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#truncated)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _length uint64_t
+/// @param _length uintptr_t
 ///
-void k_io__forwardingworkerbase_truncated(void* self, uint64_t _length);
+void k_io__forwardingworkerbase_truncated(void* self, uintptr_t _length);
 
 /// Inherited from KIO::WorkerBase
 ///
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#speed)
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param _bytes_per_second uint64_t
+/// @param _bytes_per_second uintptr_t
 ///
-void k_io__forwardingworkerbase_speed(void* self, uint64_t _bytes_per_second);
+void k_io__forwardingworkerbase_speed(void* self, uintptr_t _bytes_per_second);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -1993,11 +1993,11 @@ void k_io__forwardingworkerbase_on_app_connection_made(void* self, void (*callba
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param host const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param user const char*
 /// @param pass const char*
 ///
-void k_io__forwardingworkerbase_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass);
+void k_io__forwardingworkerbase_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass);
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_set_host` instead
 ///
@@ -2011,11 +2011,11 @@ void k_io__forwardingworkerbase_set_host(void* self, const char* host, unsigned 
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param host const char*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param user const char*
 /// @param pass const char*
 ///
-void k_io__forwardingworkerbase_super_set_host(void* self, const char* host, unsigned short port, const char* user, const char* pass);
+void k_io__forwardingworkerbase_super_set_host(void* self, const char* host, uint16_t port, const char* user, const char* pass);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2024,9 +2024,9 @@ void k_io__forwardingworkerbase_super_set_host(void* self, const char* host, uns
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param callback void func(KIO__ForwardingWorkerBase* self, const char* host, unsigned short port, const char* user, const char* pass)
+/// @param callback void func(KIO__ForwardingWorkerBase* self, const char* host, uint16_t port, const char* user, const char* pass)
 ///
-void k_io__forwardingworkerbase_on_set_host(void* self, void (*callback)(void*, const char*, unsigned short, const char*, const char*));
+void k_io__forwardingworkerbase_on_set_host(void* self, void (*callback)(void*, const char*, uint16_t, const char*, const char*));
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2144,9 +2144,9 @@ void k_io__forwardingworkerbase_on_open(void* self, KIO__WorkerResult* (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uint64_t size);
+KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uintptr_t size);
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_read` instead
 ///
@@ -2159,9 +2159,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_read(void* self, uint64_t size);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_super_read(void* self, uint64_t size);
+KIO__WorkerResult* k_io__forwardingworkerbase_super_read(void* self, uintptr_t size);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2170,9 +2170,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_read(void* self, uint64_t si
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uint64_t size)
+/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uintptr_t size)
 ///
-void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
+void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2218,9 +2218,9 @@ void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callba
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uint64_t offset);
+KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uintptr_t offset);
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_seek` instead
 ///
@@ -2233,9 +2233,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_seek(void* self, uint64_t offset);
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_super_seek(void* self, uint64_t offset);
+KIO__WorkerResult* k_io__forwardingworkerbase_super_seek(void* self, uintptr_t offset);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2244,9 +2244,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_seek(void* self, uint64_t of
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uint64_t offset)
+/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uintptr_t offset)
 ///
-void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
+void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2255,9 +2255,9 @@ void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callbac
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uint64_t size);
+KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uintptr_t size);
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_truncate` instead
 ///
@@ -2270,9 +2270,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_truncate(void* self, uint64_t size
 /// Wrapper to allow calling base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-KIO__WorkerResult* k_io__forwardingworkerbase_super_truncate(void* self, uint64_t size);
+KIO__WorkerResult* k_io__forwardingworkerbase_super_truncate(void* self, uintptr_t size);
 
 /// Inherited from KIO::WorkerBase
 ///
@@ -2281,9 +2281,9 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_truncate(void* self, uint64_
 /// Wrapper to allow overriding base class virtual or protected method
 ///
 /// @param self KIO__ForwardingWorkerBase*
-/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uint64_t size)
+/// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uintptr_t size)
 ///
-void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uint64_t));
+void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// Inherited from KIO::WorkerBase
 ///

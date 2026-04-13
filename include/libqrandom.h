@@ -22,9 +22,9 @@ QRandomGenerator* q_randomgenerator_new();
 /// q_randomgenerator_new2 constructs a new QRandomGenerator object.
 ///
 /// @param seedBuffer uint32_t*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, int64_t lenVal);
+QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html)
 
@@ -131,33 +131,33 @@ uint64_t q_randomgenerator_bounded7(void* self, uint64_t lowest, uint64_t highes
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator*
-/// @param highest long long
+/// @param highest int64_t
 ///
-long long q_randomgenerator_bounded8(void* self, long long highest);
+int64_t q_randomgenerator_bounded8(void* self, int64_t highest);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator*
-/// @param lowest long long
-/// @param highest long long
+/// @param lowest int64_t
+/// @param highest int64_t
 ///
-long long q_randomgenerator_bounded9(void* self, long long lowest, long long highest);
+int64_t q_randomgenerator_bounded9(void* self, int64_t lowest, int64_t highest);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator*
 /// @param lowest int
-/// @param highest long long
+/// @param highest int64_t
 ///
-long long q_randomgenerator_bounded10(void* self, int lowest, long long highest);
+int64_t q_randomgenerator_bounded10(void* self, int lowest, int64_t highest);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator*
-/// @param lowest long long
+/// @param lowest int64_t
 /// @param highest int
 ///
-long long q_randomgenerator_bounded11(void* self, long long lowest, int highest);
+int64_t q_randomgenerator_bounded11(void* self, int64_t lowest, int highest);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
@@ -198,9 +198,9 @@ void q_randomgenerator_seed(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#discard)
 ///
 /// @param self QRandomGenerator*
-/// @param z uint64_t
+/// @param z uintptr_t
 ///
-void q_randomgenerator_discard(void* self, uint64_t z);
+void q_randomgenerator_discard(void* self, uintptr_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#min)
 ///
@@ -248,9 +248,9 @@ QRandomGenerator64* q_randomgenerator64_new();
 /// q_randomgenerator64_new2 constructs a new QRandomGenerator64 object.
 ///
 /// @param seedBuffer uint32_t*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, int64_t lenVal);
+QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html)
 
@@ -295,22 +295,22 @@ uint64_t q_randomgenerator64_generate(void* self);
 ///
 /// @param self QRandomGenerator64*
 ///
-uint64_t q_randomgenerator64_operator_call(void* self);
+uintptr_t q_randomgenerator64_operator_call(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html#discard)
 ///
 /// @param self QRandomGenerator64*
-/// @param z uint64_t
+/// @param z uintptr_t
 ///
-void q_randomgenerator64_discard(void* self, uint64_t z);
+void q_randomgenerator64_discard(void* self, uintptr_t z);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html#min)
 ///
-uint64_t q_randomgenerator64_min();
+uintptr_t q_randomgenerator64_min();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html#max)
 ///
-uint64_t q_randomgenerator64_max();
+uintptr_t q_randomgenerator64_max();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator64.html#system)
 ///
@@ -418,19 +418,19 @@ uint64_t q_randomgenerator64_bounded7(void* self, uint64_t lowest, uint64_t high
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator64*
-/// @param highest long long
+/// @param highest int64_t
 ///
-long long q_randomgenerator64_bounded8(void* self, long long highest);
+int64_t q_randomgenerator64_bounded8(void* self, int64_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator64*
-/// @param lowest long long
-/// @param highest long long
+/// @param lowest int64_t
+/// @param highest int64_t
 ///
-long long q_randomgenerator64_bounded9(void* self, long long lowest, long long highest);
+int64_t q_randomgenerator64_bounded9(void* self, int64_t lowest, int64_t highest);
 
 /// Inherited from QRandomGenerator
 ///
@@ -438,19 +438,19 @@ long long q_randomgenerator64_bounded9(void* self, long long lowest, long long h
 ///
 /// @param self QRandomGenerator64*
 /// @param lowest int
-/// @param highest long long
+/// @param highest int64_t
 ///
-long long q_randomgenerator64_bounded10(void* self, int lowest, long long highest);
+int64_t q_randomgenerator64_bounded10(void* self, int lowest, int64_t highest);
 
 /// Inherited from QRandomGenerator
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qrandomgenerator.html#bounded)
 ///
 /// @param self QRandomGenerator64*
-/// @param lowest long long
+/// @param lowest int64_t
 /// @param highest int
 ///
-long long q_randomgenerator64_bounded11(void* self, long long lowest, int highest);
+int64_t q_randomgenerator64_bounded11(void* self, int64_t lowest, int highest);
 
 /// Inherited from QRandomGenerator
 ///

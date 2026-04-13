@@ -519,7 +519,7 @@ bool q_filesystemmodel_is_dir(void* self, void* index) {
     return QFileSystemModel_IsDir((QFileSystemModel*)self, (QModelIndex*)index);
 }
 
-long long q_filesystemmodel_size(void* self, void* index) {
+int64_t q_filesystemmodel_size(void* self, void* index) {
     return QFileSystemModel_Size((QFileSystemModel*)self, (QModelIndex*)index);
 }
 

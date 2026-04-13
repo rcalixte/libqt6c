@@ -128,15 +128,15 @@ const char* k_listopenfilesjob_error_text(void* self) {
     return _ret;
 }
 
-uint64_t k_listopenfilesjob_processed_amount(void* self, int32_t unit) {
+uintptr_t k_listopenfilesjob_processed_amount(void* self, int32_t unit) {
     return KJob_ProcessedAmount((KJob*)self, unit);
 }
 
-uint64_t k_listopenfilesjob_total_amount(void* self, int32_t unit) {
+uintptr_t k_listopenfilesjob_total_amount(void* self, int32_t unit) {
     return KJob_TotalAmount((KJob*)self, unit);
 }
 
-uint64_t k_listopenfilesjob_percent(void* self) {
+uintptr_t k_listopenfilesjob_percent(void* self) {
     return KJob_Percent((KJob*)self);
 }
 
@@ -160,7 +160,7 @@ bool k_listopenfilesjob_is_started_with_exec(void* self) {
     return KJob_IsStartedWithExec((KJob*)self);
 }
 
-long long k_listopenfilesjob_elapsed_time(void* self) {
+int64_t k_listopenfilesjob_elapsed_time(void* self) {
     return KJob_ElapsedTime((KJob*)self);
 }
 
@@ -180,27 +180,27 @@ void k_listopenfilesjob_on_warning(void* self, void (*callback)(void*, void*, co
     KJob_Connect_Warning((KJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_total_size(void* self, void* job, uint64_t size) {
+void k_listopenfilesjob_total_size(void* self, void* job, uintptr_t size) {
     KJob_TotalSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_listopenfilesjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_TotalSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_processed_size(void* self, void* job, uint64_t size) {
+void k_listopenfilesjob_processed_size(void* self, void* job, uintptr_t size) {
     KJob_ProcessedSize((KJob*)self, (KJob*)job, size);
 }
 
-void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_listopenfilesjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_ProcessedSize((KJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_speed(void* self, void* job, uint64_t speed) {
+void k_listopenfilesjob_speed(void* self, void* job, uintptr_t speed) {
     KJob_Speed((KJob*)self, (KJob*)job, speed);
 }
 
-void k_listopenfilesjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_listopenfilesjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_Speed((KJob*)self, (intptr_t)callback);
 }
 
@@ -609,27 +609,27 @@ void k_listopenfilesjob_on_set_error_text(void* self, void (*callback)(void*, co
     KListOpenFilesJob_OnSetErrorText((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_listopenfilesjob_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KListOpenFilesJob_SetProcessedAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
-void k_listopenfilesjob_super_set_processed_amount(void* self, int32_t unit, uint64_t amount) {
+void k_listopenfilesjob_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount) {
     KListOpenFilesJob_SuperSetProcessedAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
-void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_listopenfilesjob_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KListOpenFilesJob_OnSetProcessedAmount((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_listopenfilesjob_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KListOpenFilesJob_SetTotalAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
-void k_listopenfilesjob_super_set_total_amount(void* self, int32_t unit, uint64_t amount) {
+void k_listopenfilesjob_super_set_total_amount(void* self, int32_t unit, uintptr_t amount) {
     KListOpenFilesJob_SuperSetTotalAmount((KListOpenFilesJob*)self, unit, amount);
 }
 
-void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t)) {
+void k_listopenfilesjob_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t)) {
     KListOpenFilesJob_OnSetTotalAmount((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
@@ -645,15 +645,15 @@ void k_listopenfilesjob_on_set_progress_unit(void* self, void (*callback)(void*,
     KListOpenFilesJob_OnSetProgressUnit((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_set_percent(void* self, uint64_t percentage) {
+void k_listopenfilesjob_set_percent(void* self, uintptr_t percentage) {
     KListOpenFilesJob_SetPercent((KListOpenFilesJob*)self, percentage);
 }
 
-void k_listopenfilesjob_super_set_percent(void* self, uint64_t percentage) {
+void k_listopenfilesjob_super_set_percent(void* self, uintptr_t percentage) {
     KListOpenFilesJob_SuperSetPercent((KListOpenFilesJob*)self, percentage);
 }
 
-void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uint64_t)) {
+void k_listopenfilesjob_on_set_percent(void* self, void (*callback)(void*, uintptr_t)) {
     KListOpenFilesJob_OnSetPercent((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
@@ -669,27 +669,27 @@ void k_listopenfilesjob_on_emit_result(void* self, void (*callback)()) {
     KListOpenFilesJob_OnEmitResult((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_listopenfilesjob_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KListOpenFilesJob_EmitPercent((KListOpenFilesJob*)self, processedAmount, totalAmount);
 }
 
-void k_listopenfilesjob_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount) {
+void k_listopenfilesjob_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount) {
     KListOpenFilesJob_SuperEmitPercent((KListOpenFilesJob*)self, processedAmount, totalAmount);
 }
 
-void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t)) {
+void k_listopenfilesjob_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t)) {
     KListOpenFilesJob_OnEmitPercent((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_emit_speed(void* self, uint64_t speed) {
+void k_listopenfilesjob_emit_speed(void* self, uintptr_t speed) {
     KListOpenFilesJob_EmitSpeed((KListOpenFilesJob*)self, speed);
 }
 
-void k_listopenfilesjob_super_emit_speed(void* self, uint64_t speed) {
+void k_listopenfilesjob_super_emit_speed(void* self, uintptr_t speed) {
     KListOpenFilesJob_SuperEmitSpeed((KListOpenFilesJob*)self, speed);
 }
 
-void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uint64_t)) {
+void k_listopenfilesjob_on_emit_speed(void* self, void (*callback)(void*, uintptr_t)) {
     KListOpenFilesJob_OnEmitSpeed((KListOpenFilesJob*)self, (intptr_t)callback);
 }
 
@@ -769,15 +769,15 @@ void k_listopenfilesjob_on_result(void* self, void (*callback)(void*, void*)) {
     KJob_Connect_Result((KJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_listopenfilesjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_TotalAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t)) {
+void k_listopenfilesjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t)) {
     KJob_Connect_ProcessedAmountChanged((KJob*)self, (intptr_t)callback);
 }
 
-void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t)) {
+void k_listopenfilesjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t)) {
     KJob_Connect_PercentChanged((KJob*)self, (intptr_t)callback);
 }
 

@@ -123,7 +123,7 @@ const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key)
     return QJsonDocument_OperatorSubscript((QJsonDocument*)self, qstring(key));
 }
 
-const QJsonValue* q_jsondocument_operator_subscript4(void* self, int64_t i) {
+const QJsonValue* q_jsondocument_operator_subscript4(void* self, intptr_t i) {
     return QJsonDocument_OperatorSubscript4((QJsonDocument*)self, i);
 }
 

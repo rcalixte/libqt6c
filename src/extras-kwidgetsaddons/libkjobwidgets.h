@@ -42,13 +42,13 @@ QWindow* k_jobwidgets_window_handle(void* param1);
 /// [Upstream resources](https://api.kde.org/kjobwidgets.html#updateUserTimestamp)
 ///
 /// @param param1 QObject*
-/// @param param2 uint64_t
+/// @param param2 uintptr_t
 ///
-void k_jobwidgets_update_user_timestamp(void* param1, uint64_t param2);
+void k_jobwidgets_update_user_timestamp(void* param1, uintptr_t param2);
 
 /// [Upstream resources](https://api.kde.org/kjobwidgets.html#userTimestamp)
 ///
 /// @param param1 QObject*
 ///
-uint64_t k_jobwidgets_user_timestamp(void* param1);
+uintptr_t k_jobwidgets_user_timestamp(void* param1);
 #endif

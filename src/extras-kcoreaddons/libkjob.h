@@ -346,20 +346,20 @@ const char* k_job_super_error_string(void* self);
 /// @param self KJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_job_processed_amount(void* self, int32_t unit);
+uintptr_t k_job_processed_amount(void* self, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#totalAmount)
 ///
 /// @param self KJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_job_total_amount(void* self, int32_t unit);
+uintptr_t k_job_total_amount(void* self, int32_t unit);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#percent)
 ///
 /// @param self KJob*
 ///
-uint64_t k_job_percent(void* self);
+uintptr_t k_job_percent(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setAutoDelete)
 ///
@@ -396,7 +396,7 @@ bool k_job_is_started_with_exec(void* self);
 ///
 /// @param self KJob*
 ///
-long long k_job_elapsed_time(void* self);
+int64_t k_job_elapsed_time(void* self);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#infoMessage)
 ///
@@ -432,46 +432,46 @@ void k_job_on_warning(void* self, void (*callback)(void*, void*, const char*));
 ///
 /// @param self KJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_job_total_size(void* self, void* job, uint64_t size);
+void k_job_total_size(void* self, void* job, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KJob* self, KJob* job, uintptr_t size)
 ///
-void k_job_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_job_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_job_processed_size(void* self, void* job, uint64_t size);
+void k_job_processed_size(void* self, void* job, uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KJob* self, KJob* job, uintptr_t size)
 ///
-void k_job_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_job_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KJob*
 /// @param job KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_job_speed(void* self, void* job, uint64_t speed);
+void k_job_speed(void* self, void* job, uintptr_t speed);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, KJob* job, uint64_t speed)
+/// @param callback void func(KJob* self, KJob* job, uintptr_t speed)
 ///
-void k_job_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_job_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#isFinished)
 ///
@@ -562,18 +562,18 @@ void k_job_super_set_error_text(void* self, const char* errorText);
 ///
 /// @param self KJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_job_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_job_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setProcessedAmount)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KJob* self, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_job_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
+void k_job_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_job_super_set_processed_amount` instead
 ///
@@ -585,26 +585,26 @@ void k_job_on_set_processed_amount(void* self, void (*callback)(void*, int32_t, 
 ///
 /// @param self KJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_job_super_set_processed_amount(void* self, int32_t unit, uint64_t amount);
+void k_job_super_set_processed_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// @param self KJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_job_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_job_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setTotalAmount)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KJob* self, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_job_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint64_t));
+void k_job_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_job_super_set_total_amount` instead
 ///
@@ -616,9 +616,9 @@ void k_job_on_set_total_amount(void* self, void (*callback)(void*, int32_t, uint
 ///
 /// @param self KJob*
 /// @param unit enum KJob__Unit
-/// @param amount uint64_t
+/// @param amount uintptr_t
 ///
-void k_job_super_set_total_amount(void* self, int32_t unit, uint64_t amount);
+void k_job_super_set_total_amount(void* self, int32_t unit, uintptr_t amount);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setProgressUnit)
 ///
@@ -652,18 +652,18 @@ void k_job_super_set_progress_unit(void* self, int32_t unit);
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// @param self KJob*
-/// @param percentage uint64_t
+/// @param percentage uintptr_t
 ///
-void k_job_set_percent(void* self, uint64_t percentage);
+void k_job_set_percent(void* self, uintptr_t percentage);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#setPercent)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, uint64_t percentage)
+/// @param callback void func(KJob* self, uintptr_t percentage)
 ///
-void k_job_on_set_percent(void* self, void (*callback)(void*, uint64_t));
+void k_job_on_set_percent(void* self, void (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_job_super_set_percent` instead
 ///
@@ -674,9 +674,9 @@ void k_job_on_set_percent(void* self, void (*callback)(void*, uint64_t));
 /// Base class method implementation
 ///
 /// @param self KJob*
-/// @param percentage uint64_t
+/// @param percentage uintptr_t
 ///
-void k_job_super_set_percent(void* self, uint64_t percentage);
+void k_job_super_set_percent(void* self, uintptr_t percentage);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#emitResult)
 ///
@@ -708,19 +708,19 @@ void k_job_super_emit_result(void* self);
 /// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// @param self KJob*
-/// @param processedAmount uint64_t
-/// @param totalAmount uint64_t
+/// @param processedAmount uintptr_t
+/// @param totalAmount uintptr_t
 ///
-void k_job_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_job_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#emitPercent)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, uint64_t processedAmount, uint64_t totalAmount)
+/// @param callback void func(KJob* self, uintptr_t processedAmount, uintptr_t totalAmount)
 ///
-void k_job_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_t));
+void k_job_on_emit_percent(void* self, void (*callback)(void*, uintptr_t, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_job_super_emit_percent` instead
 ///
@@ -731,26 +731,26 @@ void k_job_on_emit_percent(void* self, void (*callback)(void*, uint64_t, uint64_
 /// Base class method implementation
 ///
 /// @param self KJob*
-/// @param processedAmount uint64_t
-/// @param totalAmount uint64_t
+/// @param processedAmount uintptr_t
+/// @param totalAmount uintptr_t
 ///
-void k_job_super_emit_percent(void* self, uint64_t processedAmount, uint64_t totalAmount);
+void k_job_super_emit_percent(void* self, uintptr_t processedAmount, uintptr_t totalAmount);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// @param self KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_job_emit_speed(void* self, uint64_t speed);
+void k_job_emit_speed(void* self, uintptr_t speed);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#emitSpeed)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, uint64_t speed)
+/// @param callback void func(KJob* self, uintptr_t speed)
 ///
-void k_job_on_emit_speed(void* self, void (*callback)(void*, uint64_t));
+void k_job_on_emit_speed(void* self, void (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_job_super_emit_speed` instead
 ///
@@ -761,9 +761,9 @@ void k_job_on_emit_speed(void* self, void (*callback)(void*, uint64_t));
 /// Base class method implementation
 ///
 /// @param self KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_job_super_emit_speed(void* self, uint64_t speed);
+void k_job_super_emit_speed(void* self, uintptr_t speed);
 
 /// [Upstream resources](https://api.kde.org/kjob.html#startElapsedTimer)
 ///
@@ -1718,27 +1718,27 @@ void k_job_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_job_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_job_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#processedAmountChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_job_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_job_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// [Upstream resources](https://api.kde.org/kjob.html#percentChanged)
 ///
 /// Wrapper to allow calling private signal
 ///
 /// @param self KJob*
-/// @param callback void func(KJob* self, KJob* job, uint64_t percent)
+/// @param callback void func(KJob* self, KJob* job, uintptr_t percent)
 ///
-void k_job_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_job_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from QObject
 ///

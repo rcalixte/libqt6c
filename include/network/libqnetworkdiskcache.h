@@ -129,29 +129,29 @@ void q_networkdiskcache_set_cache_directory(void* self, const char* cacheDir);
 ///
 /// @param self QNetworkDiskCache*
 ///
-long long q_networkdiskcache_maximum_cache_size(void* self);
+int64_t q_networkdiskcache_maximum_cache_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdiskcache.html#setMaximumCacheSize)
 ///
 /// @param self QNetworkDiskCache*
-/// @param size long long
+/// @param size int64_t
 ///
-void q_networkdiskcache_set_maximum_cache_size(void* self, long long size);
+void q_networkdiskcache_set_maximum_cache_size(void* self, int64_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdiskcache.html#cacheSize)
 ///
 /// @param self QNetworkDiskCache*
 ///
-long long q_networkdiskcache_cache_size(void* self);
+int64_t q_networkdiskcache_cache_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdiskcache.html#cacheSize)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkDiskCache*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_networkdiskcache_on_cache_size(void* self, long long (*callback)());
+void q_networkdiskcache_on_cache_size(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_networkdiskcache_super_cache_size` instead
 ///
@@ -163,7 +163,7 @@ void q_networkdiskcache_on_cache_size(void* self, long long (*callback)());
 ///
 /// @param self QNetworkDiskCache*
 ///
-long long q_networkdiskcache_super_cache_size(void* self);
+int64_t q_networkdiskcache_super_cache_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdiskcache.html#metaData)
 ///
@@ -377,16 +377,16 @@ void q_networkdiskcache_super_clear(void* self);
 ///
 /// @param self QNetworkDiskCache*
 ///
-long long q_networkdiskcache_expire(void* self);
+int64_t q_networkdiskcache_expire(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkdiskcache.html#expire)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QNetworkDiskCache*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_networkdiskcache_on_expire(void* self, long long (*callback)());
+void q_networkdiskcache_on_expire(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_networkdiskcache_super_expire` instead
 ///
@@ -398,7 +398,7 @@ void q_networkdiskcache_on_expire(void* self, long long (*callback)());
 ///
 /// @param self QNetworkDiskCache*
 ///
-long long q_networkdiskcache_super_expire(void* self);
+int64_t q_networkdiskcache_super_expire(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

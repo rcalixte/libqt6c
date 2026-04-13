@@ -5,7 +5,7 @@ PackageKit__Bitfield* q_packagekit__bitfield_new() {
     return PackageKit__Bitfield_new();
 }
 
-PackageKit__Bitfield* q_packagekit__bitfield_new2(uint64_t val) {
+PackageKit__Bitfield* q_packagekit__bitfield_new2(uintptr_t val) {
     return PackageKit__Bitfield_new2(val);
 }
 
@@ -13,19 +13,19 @@ PackageKit__Bitfield* q_packagekit__bitfield_new3(void* param1) {
     return PackageKit__Bitfield_new3((PackageKit__Bitfield*)param1);
 }
 
-uint64_t q_packagekit__bitfield_operator_bitwise_and(void* self, uint64_t mask) {
+uintptr_t q_packagekit__bitfield_operator_bitwise_and(void* self, uintptr_t mask) {
     return PackageKit__Bitfield_OperatorBitwiseAnd((PackageKit__Bitfield*)self, mask);
 }
 
-void q_packagekit__bitfield_operator_bitwise_and_assign(void* self, uint64_t mask) {
+void q_packagekit__bitfield_operator_bitwise_and_assign(void* self, uintptr_t mask) {
     PackageKit__Bitfield_OperatorBitwiseAndAssign((PackageKit__Bitfield*)self, mask);
 }
 
-uint64_t q_packagekit__bitfield_operator_bitwise_or(void* self, uint64_t mask) {
+uintptr_t q_packagekit__bitfield_operator_bitwise_or(void* self, uintptr_t mask) {
     return PackageKit__Bitfield_OperatorBitwiseOr((PackageKit__Bitfield*)self, mask);
 }
 
-void q_packagekit__bitfield_operator_bitwise_or_assign(void* self, uint64_t mask) {
+void q_packagekit__bitfield_operator_bitwise_or_assign(void* self, uintptr_t mask) {
     PackageKit__Bitfield_OperatorBitwiseOrAssign((PackageKit__Bitfield*)self, mask);
 }
 

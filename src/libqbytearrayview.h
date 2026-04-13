@@ -67,7 +67,7 @@ char* q_bytearrayview_to_byte_array(void* self);
 ///
 /// @param self QByteArrayView*
 ///
-int64_t q_bytearrayview_size(void* self);
+intptr_t q_bytearrayview_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#data)
 ///
@@ -88,122 +88,122 @@ const char* q_bytearrayview_const_data(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#operator-5b-5d)
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-char q_bytearrayview_operator_subscript(void* self, int64_t n);
+char q_bytearrayview_operator_subscript(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#at)
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-char q_bytearrayview_at(void* self, int64_t n);
+char q_bytearrayview_at(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#first)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_first(void* self, int64_t n);
+char* q_bytearrayview_first(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#last)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_last(void* self, int64_t n);
+char* q_bytearrayview_last(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#sliced)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param pos int64_t
+/// @param pos intptr_t
 ///
-char* q_bytearrayview_sliced(void* self, int64_t pos);
+char* q_bytearrayview_sliced(void* self, intptr_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#sliced)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param pos int64_t
-/// @param n int64_t
+/// @param pos intptr_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_sliced2(void* self, int64_t pos, int64_t n);
+char* q_bytearrayview_sliced2(void* self, intptr_t pos, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#slice)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param pos int64_t
+/// @param pos intptr_t
 ///
-char* q_bytearrayview_slice(void* self, int64_t pos);
+char* q_bytearrayview_slice(void* self, intptr_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#slice)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param pos int64_t
-/// @param n int64_t
+/// @param pos intptr_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_slice2(void* self, int64_t pos, int64_t n);
+char* q_bytearrayview_slice2(void* self, intptr_t pos, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#chopped)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-char* q_bytearrayview_chopped(void* self, int64_t lenVal);
+char* q_bytearrayview_chopped(void* self, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#left)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_left(void* self, int64_t n);
+char* q_bytearrayview_left(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#right)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_right(void* self, int64_t n);
+char* q_bytearrayview_right(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#mid)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param pos int64_t
+/// @param pos intptr_t
 ///
-char* q_bytearrayview_mid(void* self, int64_t pos);
+char* q_bytearrayview_mid(void* self, intptr_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#truncate)
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-void q_bytearrayview_truncate(void* self, int64_t n);
+void q_bytearrayview_truncate(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#chop)
 ///
 /// @param self QByteArrayView*
-/// @param n int64_t
+/// @param n intptr_t
 ///
-void q_bytearrayview_chop(void* self, int64_t n);
+void q_bytearrayview_chop(void* self, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#trimmed)
 ///
@@ -223,7 +223,7 @@ short q_bytearrayview_to_short(void* self);
 ///
 /// @param self QByteArrayView*
 ///
-unsigned short q_bytearrayview_to_u_short(void* self);
+uint16_t q_bytearrayview_to_u_short(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toInt)
 ///
@@ -241,13 +241,13 @@ uint32_t q_bytearrayview_to_u_int(void* self);
 ///
 /// @param self QByteArrayView*
 ///
-int64_t q_bytearrayview_to_long(void* self);
+long q_bytearrayview_to_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toULong)
 ///
 /// @param self QByteArrayView*
 ///
-uint64_t q_bytearrayview_to_u_long(void* self);
+uintptr_t q_bytearrayview_to_u_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toLongLong)
 ///
@@ -259,7 +259,7 @@ long long q_bytearrayview_to_long_long(void* self);
 ///
 /// @param self QByteArrayView*
 ///
-uint64_t q_bytearrayview_to_u_long_long(void* self);
+uintptr_t q_bytearrayview_to_u_long_long(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toFloat)
 ///
@@ -306,14 +306,14 @@ bool q_bytearrayview_ends_with2(void* self, char c);
 /// @param self QByteArrayView*
 /// @param a char*
 ///
-int64_t q_bytearrayview_index_of(void* self, char* a);
+intptr_t q_bytearrayview_index_of(void* self, char* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#indexOf)
 ///
 /// @param self QByteArrayView*
 /// @param ch char
 ///
-int64_t q_bytearrayview_index_of2(void* self, char ch);
+intptr_t q_bytearrayview_index_of2(void* self, char ch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#contains)
 ///
@@ -334,36 +334,36 @@ bool q_bytearrayview_contains2(void* self, char c);
 /// @param self QByteArrayView*
 /// @param a char*
 ///
-int64_t q_bytearrayview_last_index_of(void* self, char* a);
+intptr_t q_bytearrayview_last_index_of(void* self, char* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#lastIndexOf)
 ///
 /// @param self QByteArrayView*
 /// @param a char*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_bytearrayview_last_index_of2(void* self, char* a, int64_t from);
+intptr_t q_bytearrayview_last_index_of2(void* self, char* a, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#lastIndexOf)
 ///
 /// @param self QByteArrayView*
 /// @param ch char
 ///
-int64_t q_bytearrayview_last_index_of3(void* self, char ch);
+intptr_t q_bytearrayview_last_index_of3(void* self, char ch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#count)
 ///
 /// @param self QByteArrayView*
 /// @param a char*
 ///
-int64_t q_bytearrayview_count(void* self, char* a);
+intptr_t q_bytearrayview_count(void* self, char* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#count)
 ///
 /// @param self QByteArrayView*
 /// @param ch char
 ///
-int64_t q_bytearrayview_count2(void* self, char ch);
+intptr_t q_bytearrayview_count2(void* self, char ch);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#compare)
 ///
@@ -432,7 +432,7 @@ char q_bytearrayview_back(void* self);
 ///
 /// @param self QByteArrayView*
 ///
-int64_t q_bytearrayview_max_size(void* self);
+intptr_t q_bytearrayview_max_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#isNull)
 ///
@@ -450,7 +450,7 @@ bool q_bytearrayview_is_empty(void* self);
 ///
 /// @param self QByteArrayView*
 ///
-int64_t q_bytearrayview_length(void* self);
+intptr_t q_bytearrayview_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#first)
 ///
@@ -466,17 +466,17 @@ char q_bytearrayview_last2(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#maxSize)
 ///
-int64_t q_bytearrayview_max_size2();
+intptr_t q_bytearrayview_max_size2();
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#mid)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QByteArrayView*
-/// @param pos int64_t
-/// @param n int64_t
+/// @param pos intptr_t
+/// @param n intptr_t
 ///
-char* q_bytearrayview_mid2(void* self, int64_t pos, int64_t n);
+char* q_bytearrayview_mid2(void* self, intptr_t pos, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toShort)
 ///
@@ -498,7 +498,7 @@ short q_bytearrayview_to_short2(void* self, bool* ok, int base);
 /// @param self QByteArrayView*
 /// @param ok bool*
 ///
-unsigned short q_bytearrayview_to_u_short1(void* self, bool* ok);
+uint16_t q_bytearrayview_to_u_short1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toUShort)
 ///
@@ -506,7 +506,7 @@ unsigned short q_bytearrayview_to_u_short1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-unsigned short q_bytearrayview_to_u_short2(void* self, bool* ok, int base);
+uint16_t q_bytearrayview_to_u_short2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toInt)
 ///
@@ -543,7 +543,7 @@ uint32_t q_bytearrayview_to_u_int2(void* self, bool* ok, int base);
 /// @param self QByteArrayView*
 /// @param ok bool*
 ///
-int64_t q_bytearrayview_to_long1(void* self, bool* ok);
+long q_bytearrayview_to_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toLong)
 ///
@@ -551,14 +551,14 @@ int64_t q_bytearrayview_to_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-int64_t q_bytearrayview_to_long2(void* self, bool* ok, int base);
+long q_bytearrayview_to_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toULong)
 ///
 /// @param self QByteArrayView*
 /// @param ok bool*
 ///
-uint64_t q_bytearrayview_to_u_long1(void* self, bool* ok);
+uintptr_t q_bytearrayview_to_u_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toULong)
 ///
@@ -566,7 +566,7 @@ uint64_t q_bytearrayview_to_u_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-uint64_t q_bytearrayview_to_u_long2(void* self, bool* ok, int base);
+uintptr_t q_bytearrayview_to_u_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toLongLong)
 ///
@@ -588,7 +588,7 @@ long long q_bytearrayview_to_long_long2(void* self, bool* ok, int base);
 /// @param self QByteArrayView*
 /// @param ok bool*
 ///
-uint64_t q_bytearrayview_to_u_long_long1(void* self, bool* ok);
+uintptr_t q_bytearrayview_to_u_long_long1(void* self, bool* ok);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toULongLong)
 ///
@@ -596,7 +596,7 @@ uint64_t q_bytearrayview_to_u_long_long1(void* self, bool* ok);
 /// @param ok bool*
 /// @param base int
 ///
-uint64_t q_bytearrayview_to_u_long_long2(void* self, bool* ok, int base);
+uintptr_t q_bytearrayview_to_u_long_long2(void* self, bool* ok, int base);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#toFloat)
 ///
@@ -616,25 +616,25 @@ double q_bytearrayview_to_double1(void* self, bool* ok);
 ///
 /// @param self QByteArrayView*
 /// @param a char*
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_bytearrayview_index_of22(void* self, char* a, int64_t from);
+intptr_t q_bytearrayview_index_of22(void* self, char* a, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#indexOf)
 ///
 /// @param self QByteArrayView*
 /// @param ch char
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_bytearrayview_index_of23(void* self, char ch, int64_t from);
+intptr_t q_bytearrayview_index_of23(void* self, char ch, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#lastIndexOf)
 ///
 /// @param self QByteArrayView*
 /// @param ch char
-/// @param from int64_t
+/// @param from intptr_t
 ///
-int64_t q_bytearrayview_last_index_of22(void* self, char ch, int64_t from);
+intptr_t q_bytearrayview_last_index_of22(void* self, char ch, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbytearrayview.html#compare)
 ///

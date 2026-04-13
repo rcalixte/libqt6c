@@ -304,7 +304,7 @@ void q_calendar__systemid_move_assign(void* self, void* other) {
     QCalendar__SystemId_MoveAssign((QCalendar__SystemId*)self, (QCalendar__SystemId*)other);
 }
 
-uint64_t q_calendar__systemid_index(void* self) {
+uintptr_t q_calendar__systemid_index(void* self) {
     return QCalendar__SystemId_Index((QCalendar__SystemId*)self);
 }
 

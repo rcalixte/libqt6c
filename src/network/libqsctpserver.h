@@ -241,7 +241,7 @@ int32_t q_sctpserver_listen_backlog_size(void* self);
 ///
 /// @param self QSctpServer*
 ///
-unsigned short q_sctpserver_server_port(void* self);
+uint16_t q_sctpserver_server_port(void* self);
 
 /// Inherited from QTcpServer
 ///
@@ -379,9 +379,9 @@ bool q_sctpserver_listen1(void* self, void* address);
 ///
 /// @param self QSctpServer*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_sctpserver_listen2(void* self, void* address, unsigned short port);
+bool q_sctpserver_listen2(void* self, void* address, uint16_t port);
 
 /// Inherited from QTcpServer
 ///

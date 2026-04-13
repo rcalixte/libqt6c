@@ -195,7 +195,7 @@ bool q_abstractnetworkcache_remove(void* self, void* url) {
     return QAbstractNetworkCache_Remove((QAbstractNetworkCache*)self, (QUrl*)url);
 }
 
-long long q_abstractnetworkcache_cache_size(void* self) {
+int64_t q_abstractnetworkcache_cache_size(void* self) {
     return QAbstractNetworkCache_CacheSize((QAbstractNetworkCache*)self);
 }
 

@@ -30,42 +30,42 @@ KFindDialog* k_finddialog_new2();
 /// k_finddialog_new3 constructs a new KFindDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 ///
-KFindDialog* k_finddialog_new3(void* parent, int64_t options);
+KFindDialog* k_finddialog_new3(void* parent, long options);
 
 /// [Upstream resources](https://api.kde.org/kfinddialog.html)
 
 /// k_finddialog_new4 constructs a new KFindDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 /// @param findStrings const char**
 ///
-KFindDialog* k_finddialog_new4(void* parent, int64_t options, const char* findStrings[static 1]);
+KFindDialog* k_finddialog_new4(void* parent, long options, const char* findStrings[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kfinddialog.html)
 
 /// k_finddialog_new5 constructs a new KFindDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 /// @param findStrings const char**
 /// @param hasSelection bool
 ///
-KFindDialog* k_finddialog_new5(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection);
+KFindDialog* k_finddialog_new5(void* parent, long options, const char* findStrings[static 1], bool hasSelection);
 
 /// [Upstream resources](https://api.kde.org/kfinddialog.html)
 
 /// k_finddialog_new6 constructs a new KFindDialog object.
 ///
 /// @param parent QWidget*
-/// @param options int64_t
+/// @param options long
 /// @param findStrings const char**
 /// @param hasSelection bool
 /// @param replaceDialog bool
 ///
-KFindDialog* k_finddialog_new6(void* parent, int64_t options, const char* findStrings[static 1], bool hasSelection, bool replaceDialog);
+KFindDialog* k_finddialog_new6(void* parent, long options, const char* findStrings[static 1], bool hasSelection, bool replaceDialog);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///
@@ -212,15 +212,15 @@ void k_finddialog_set_supports_regular_expression_find(void* self, bool supports
 /// [Upstream resources](https://api.kde.org/kfinddialog.html#setOptions)
 ///
 /// @param self KFindDialog*
-/// @param options int64_t
+/// @param options long
 ///
-void k_finddialog_set_options(void* self, int64_t options);
+void k_finddialog_set_options(void* self, long options);
 
 /// [Upstream resources](https://api.kde.org/kfinddialog.html#options)
 ///
 /// @param self KFindDialog*
 ///
-int64_t k_finddialog_options(void* self);
+long k_finddialog_options(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfinddialog.html#pattern)
 ///
@@ -2471,9 +2471,9 @@ int32_t k_finddialog_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* k_finddialog_find(uint64_t param1);
+QWidget* k_finddialog_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

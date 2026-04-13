@@ -17,33 +17,33 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-const char* k_io_convert_size(uint64_t param1);
+const char* k_io_convert_size(uintptr_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#number)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-const char* k_io_number(uint64_t param1);
+const char* k_io_number(uintptr_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSizeFromKiB)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-const char* k_io_convert_size_from_ki_b(uint64_t param1);
+const char* k_io_convert_size_from_ki_b(uintptr_t param1);
 
 /// [Upstream resources](https://api.kde.org/kio.html#calculateRemainingSeconds)
 ///
-/// @param param1 uint64_t
-/// @param param2 uint64_t
-/// @param param3 uint64_t
+/// @param param1 uintptr_t
+/// @param param2 uintptr_t
+/// @param param3 uintptr_t
 ///
-uint32_t k_io_calculate_remaining_seconds(uint64_t param1, uint64_t param2, uint64_t param3);
+uint32_t k_io_calculate_remaining_seconds(uintptr_t param1, uintptr_t param2, uintptr_t param3);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSeconds)
 ///
@@ -60,10 +60,10 @@ const char* k_io_convert_seconds(uint32_t param1);
 /// @param param1 uint32_t
 /// @param param2 uint32_t
 /// @param param3 uint32_t
-/// @param param4 uint64_t
+/// @param param4 uintptr_t
 /// @param param5 bool
 ///
-const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t param3, uint64_t param4, bool param5);
+const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t param3, uintptr_t param4, bool param5);
 
 /// [Upstream resources](https://api.kde.org/kio.html#encodeFileName)
 ///

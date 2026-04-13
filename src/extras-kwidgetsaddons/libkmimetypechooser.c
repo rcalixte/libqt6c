@@ -1197,7 +1197,7 @@ int32_t k_mimetypechooser_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_mimetypechooser_find(uint64_t param1) {
+QWidget* k_mimetypechooser_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 
@@ -3551,7 +3551,7 @@ int32_t k_mimetypechooserdialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_mimetypechooserdialog_find(uint64_t param1) {
+QWidget* k_mimetypechooserdialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

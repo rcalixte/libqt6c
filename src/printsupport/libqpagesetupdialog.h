@@ -2349,9 +2349,9 @@ int32_t q_pagesetupdialog_window_type(void* self);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qwidget.html#find)
 ///
-/// @param param1 uint64_t
+/// @param param1 uintptr_t
 ///
-QWidget* q_pagesetupdialog_find(uint64_t param1);
+QWidget* q_pagesetupdialog_find(uintptr_t param1);
 
 /// Inherited from QWidget
 ///

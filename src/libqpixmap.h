@@ -373,7 +373,7 @@ void q_pixmap_scroll2(void* self, int dx, int dy, void* rect);
 ///
 /// @param self QPixmap*
 ///
-long long q_pixmap_cache_key(void* self);
+int64_t q_pixmap_cache_key(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#isDetached)
 ///

@@ -158,19 +158,19 @@ bool q_thread_wait(void* self) {
     return QThread_Wait((QThread*)self);
 }
 
-bool q_thread_wait2(void* self, uint64_t time) {
+bool q_thread_wait2(void* self, uintptr_t time) {
     return QThread_Wait2((QThread*)self, time);
 }
 
-void q_thread_sleep(uint64_t param1) {
+void q_thread_sleep(uintptr_t param1) {
     QThread_Sleep(param1);
 }
 
-void q_thread_msleep(uint64_t param1) {
+void q_thread_msleep(uintptr_t param1) {
     QThread_Msleep(param1);
 }
 
-void q_thread_usleep(uint64_t param1) {
+void q_thread_usleep(uintptr_t param1) {
     QThread_Usleep(param1);
 }
 

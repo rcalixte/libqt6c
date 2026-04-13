@@ -158,7 +158,7 @@ int32_t q_tcpserver_listen_backlog_size(void* self);
 ///
 /// @param self QTcpServer*
 ///
-unsigned short q_tcpserver_server_port(void* self);
+uint16_t q_tcpserver_server_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#serverAddress)
 ///
@@ -395,9 +395,9 @@ bool q_tcpserver_listen1(void* self, void* address);
 ///
 /// @param self QTcpServer*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_tcpserver_listen2(void* self, void* address, unsigned short port);
+bool q_tcpserver_listen2(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtcpserver.html#waitForNewConnection)
 ///

@@ -282,7 +282,7 @@ int32_t q_opengldebuglogger_logging_mode(void* self);
 ///
 /// @param self QOpenGLDebugLogger*
 ///
-long long q_opengldebuglogger_maximum_message_length(void* self);
+int64_t q_opengldebuglogger_maximum_message_length(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopengldebuglogger.html#pushGroup)
 ///

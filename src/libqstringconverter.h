@@ -54,9 +54,9 @@ QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#requiredSpace)
 ///
 /// @param self QStringEncoder*
-/// @param inputLength int64_t
+/// @param inputLength intptr_t
 ///
-int64_t q_stringencoder_required_space(void* self, int64_t inputLength);
+intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength);
 
 /// Inherited from QStringConverter
 ///
@@ -161,9 +161,9 @@ QStringDecoder* q_stringdecoder_new5(const char* name, int32_t f);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#requiredSpace)
 ///
 /// @param self QStringDecoder*
-/// @param inputLength int64_t
+/// @param inputLength intptr_t
 ///
-int64_t q_stringdecoder_required_space(void* self, int64_t inputLength);
+intptr_t q_stringdecoder_required_space(void* self, intptr_t inputLength);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringdecoder.html#appendToBuffer)
 ///

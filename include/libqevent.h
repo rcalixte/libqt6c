@@ -350,14 +350,14 @@ void q_pointerevent_super_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// @param self QPointerEvent*
 ///
-int64_t q_pointerevent_point_count(void* self);
+intptr_t q_pointerevent_point_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QPointerEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_pointerevent_point(void* self, int64_t i);
+QEventPoint* q_pointerevent_point(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#points)
 ///
@@ -773,16 +773,16 @@ void q_singlepointevent_set_timestamp(void* self, uint64_t timestamp);
 ///
 /// @param self QSinglePointEvent*
 ///
-int64_t q_singlepointevent_point_count(void* self);
+intptr_t q_singlepointevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QSinglePointEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_singlepointevent_point(void* self, int64_t i);
+QEventPoint* q_singlepointevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -1196,16 +1196,16 @@ int32_t q_enterevent_pointer_type(void* self);
 ///
 /// @param self QEnterEvent*
 ///
-int64_t q_enterevent_point_count(void* self);
+intptr_t q_enterevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QEnterEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_enterevent_point(void* self, int64_t i);
+QEventPoint* q_enterevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -1896,16 +1896,16 @@ int32_t q_mouseevent_pointer_type(void* self);
 ///
 /// @param self QMouseEvent*
 ///
-int64_t q_mouseevent_point_count(void* self);
+intptr_t q_mouseevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QMouseEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_mouseevent_point(void* self, int64_t i);
+QEventPoint* q_mouseevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -2534,16 +2534,16 @@ int32_t q_hoverevent_pointer_type(void* self);
 ///
 /// @param self QHoverEvent*
 ///
-int64_t q_hoverevent_point_count(void* self);
+intptr_t q_hoverevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QHoverEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_hoverevent_point(void* self, int64_t i);
+QEventPoint* q_hoverevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -3192,16 +3192,16 @@ int32_t q_wheelevent_pointer_type(void* self);
 ///
 /// @param self QWheelEvent*
 ///
-int64_t q_wheelevent_point_count(void* self);
+intptr_t q_wheelevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QWheelEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_wheelevent_point(void* self, int64_t i);
+QEventPoint* q_wheelevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -3604,7 +3604,7 @@ double q_tabletevent_hi_res_global_y(void* self);
 ///
 /// @param self QTabletEvent*
 ///
-long long q_tabletevent_unique_id(void* self);
+int64_t q_tabletevent_unique_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtabletevent.html#pressure)
 ///
@@ -3727,16 +3727,16 @@ int32_t q_tabletevent_pointer_type(void* self);
 ///
 /// @param self QTabletEvent*
 ///
-int64_t q_tabletevent_point_count(void* self);
+intptr_t q_tabletevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QTabletEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_tabletevent_point(void* self, int64_t i);
+QEventPoint* q_tabletevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -4347,16 +4347,16 @@ int32_t q_nativegestureevent_pointer_type(void* self);
 ///
 /// @param self QNativeGestureEvent*
 ///
-int64_t q_nativegestureevent_point_count(void* self);
+intptr_t q_nativegestureevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QNativeGestureEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_nativegestureevent_point(void* self, int64_t i);
+QEventPoint* q_nativegestureevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///
@@ -4808,9 +4808,9 @@ QKeyEvent* q_keyevent_new4(int32_t type, int key, int32_t modifiers, const char*
 /// @param modifiers flag of enum Qt__KeyboardModifier
 /// @param text const char*
 /// @param autorep bool
-/// @param count unsigned short
+/// @param count uint16_t
 ///
-QKeyEvent* q_keyevent_new5(int32_t type, int key, int32_t modifiers, const char* text, bool autorep, unsigned short count);
+QKeyEvent* q_keyevent_new5(int32_t type, int key, int32_t modifiers, const char* text, bool autorep, uint16_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyevent.html)
 
@@ -4853,9 +4853,9 @@ QKeyEvent* q_keyevent_new7(int32_t type, int key, int32_t modifiers, uint32_t na
 /// @param nativeModifiers uint32_t
 /// @param text const char*
 /// @param autorep bool
-/// @param count unsigned short
+/// @param count uint16_t
 ///
-QKeyEvent* q_keyevent_new8(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count);
+QKeyEvent* q_keyevent_new8(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, uint16_t count);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyevent.html)
 
@@ -4869,10 +4869,10 @@ QKeyEvent* q_keyevent_new8(int32_t type, int key, int32_t modifiers, uint32_t na
 /// @param nativeModifiers uint32_t
 /// @param text const char*
 /// @param autorep bool
-/// @param count unsigned short
+/// @param count uint16_t
 /// @param device QInputDevice*
 ///
-QKeyEvent* q_keyevent_new9(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, unsigned short count, void* device);
+QKeyEvent* q_keyevent_new9(int32_t type, int key, int32_t modifiers, uint32_t nativeScanCode, uint32_t nativeVirtualKey, uint32_t nativeModifiers, const char* text, bool autorep, uint16_t count, void* device);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qkeyevent.html#clone)
 ///
@@ -10320,16 +10320,16 @@ int32_t q_touchevent_pointer_type(void* self);
 ///
 /// @param self QTouchEvent*
 ///
-int64_t q_touchevent_point_count(void* self);
+intptr_t q_touchevent_point_count(void* self);
 
 /// Inherited from QPointerEvent
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpointerevent.html#point)
 ///
 /// @param self QTouchEvent*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QEventPoint* q_touchevent_point(void* self, int64_t i);
+QEventPoint* q_touchevent_point(void* self, intptr_t i);
 
 /// Inherited from QPointerEvent
 ///

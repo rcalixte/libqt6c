@@ -132,7 +132,7 @@ double q_geopath_length(void* self);
 ///
 /// @param self QGeoPath*
 ///
-int64_t q_geopath_size(void* self);
+intptr_t q_geopath_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#addCoordinate)
 ///
@@ -144,25 +144,25 @@ void q_geopath_add_coordinate(void* self, void* coordinate);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#insertCoordinate)
 ///
 /// @param self QGeoPath*
-/// @param index int64_t
+/// @param index intptr_t
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopath_insert_coordinate(void* self, int64_t index, void* coordinate);
+void q_geopath_insert_coordinate(void* self, intptr_t index, void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#replaceCoordinate)
 ///
 /// @param self QGeoPath*
-/// @param index int64_t
+/// @param index intptr_t
 /// @param coordinate QGeoCoordinate*
 ///
-void q_geopath_replace_coordinate(void* self, int64_t index, void* coordinate);
+void q_geopath_replace_coordinate(void* self, intptr_t index, void* coordinate);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#coordinateAt)
 ///
 /// @param self QGeoPath*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-QGeoCoordinate* q_geopath_coordinate_at(void* self, int64_t index);
+QGeoCoordinate* q_geopath_coordinate_at(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#containsCoordinate)
 ///
@@ -181,9 +181,9 @@ void q_geopath_remove_coordinate(void* self, void* coordinate);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#removeCoordinate)
 ///
 /// @param self QGeoPath*
-/// @param index int64_t
+/// @param index intptr_t
 ///
-void q_geopath_remove_coordinate2(void* self, int64_t index);
+void q_geopath_remove_coordinate2(void* self, intptr_t index);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#toString)
 ///
@@ -196,17 +196,17 @@ const char* q_geopath_to_string(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#length)
 ///
 /// @param self QGeoPath*
-/// @param indexFrom int64_t
+/// @param indexFrom intptr_t
 ///
-double q_geopath_length1(void* self, int64_t indexFrom);
+double q_geopath_length1(void* self, intptr_t indexFrom);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qgeopath.html#length)
 ///
 /// @param self QGeoPath*
-/// @param indexFrom int64_t
-/// @param indexTo int64_t
+/// @param indexFrom intptr_t
+/// @param indexTo intptr_t
 ///
-double q_geopath_length2(void* self, int64_t indexFrom, int64_t indexTo);
+double q_geopath_length2(void* self, intptr_t indexFrom, intptr_t indexTo);
 
 /// Inherited from QGeoShape
 ///

@@ -70,7 +70,7 @@ double q_geopath_length(void* self) {
     return QGeoPath_Length((QGeoPath*)self);
 }
 
-int64_t q_geopath_size(void* self) {
+intptr_t q_geopath_size(void* self) {
     return QGeoPath_Size((QGeoPath*)self);
 }
 
@@ -78,15 +78,15 @@ void q_geopath_add_coordinate(void* self, void* coordinate) {
     QGeoPath_AddCoordinate((QGeoPath*)self, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopath_insert_coordinate(void* self, int64_t index, void* coordinate) {
+void q_geopath_insert_coordinate(void* self, intptr_t index, void* coordinate) {
     QGeoPath_InsertCoordinate((QGeoPath*)self, index, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopath_replace_coordinate(void* self, int64_t index, void* coordinate) {
+void q_geopath_replace_coordinate(void* self, intptr_t index, void* coordinate) {
     QGeoPath_ReplaceCoordinate((QGeoPath*)self, index, (QGeoCoordinate*)coordinate);
 }
 
-QGeoCoordinate* q_geopath_coordinate_at(void* self, int64_t index) {
+QGeoCoordinate* q_geopath_coordinate_at(void* self, intptr_t index) {
     return QGeoPath_CoordinateAt((QGeoPath*)self, index);
 }
 
@@ -98,7 +98,7 @@ void q_geopath_remove_coordinate(void* self, void* coordinate) {
     QGeoPath_RemoveCoordinate((QGeoPath*)self, (QGeoCoordinate*)coordinate);
 }
 
-void q_geopath_remove_coordinate2(void* self, int64_t index) {
+void q_geopath_remove_coordinate2(void* self, intptr_t index) {
     QGeoPath_RemoveCoordinate2((QGeoPath*)self, index);
 }
 
@@ -109,11 +109,11 @@ const char* q_geopath_to_string(void* self) {
     return _ret;
 }
 
-double q_geopath_length1(void* self, int64_t indexFrom) {
+double q_geopath_length1(void* self, intptr_t indexFrom) {
     return QGeoPath_Length1((QGeoPath*)self, indexFrom);
 }
 
-double q_geopath_length2(void* self, int64_t indexFrom, int64_t indexTo) {
+double q_geopath_length2(void* self, intptr_t indexFrom, intptr_t indexTo) {
     return QGeoPath_Length2((QGeoPath*)self, indexFrom, indexTo);
 }
 

@@ -304,7 +304,7 @@ const char* q_dirlisting__direntry_absolute_path(void* self);
 ///
 /// @param self QDirListing__DirEntry*
 ///
-long long q_dirlisting__direntry_size(void* self);
+int64_t q_dirlisting__direntry_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdirlisting-direntry.html#birthTime)
 ///

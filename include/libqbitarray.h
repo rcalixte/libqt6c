@@ -21,9 +21,9 @@ QBitArray* q_bitarray_new();
 
 /// q_bitarray_new2 constructs a new QBitArray object.
 ///
-/// @param size int64_t
+/// @param size intptr_t
 ///
-QBitArray* q_bitarray_new2(int64_t size);
+QBitArray* q_bitarray_new2(intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html)
 
@@ -37,10 +37,10 @@ QBitArray* q_bitarray_new3(void* other);
 
 /// q_bitarray_new4 constructs a new QBitArray object.
 ///
-/// @param size int64_t
+/// @param size intptr_t
 /// @param val bool
 ///
-QBitArray* q_bitarray_new4(int64_t size, bool val);
+QBitArray* q_bitarray_new4(intptr_t size, bool val);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-eq)
 ///
@@ -60,20 +60,20 @@ void q_bitarray_swap(void* self, void* other);
 ///
 /// @param self QBitArray*
 ///
-int64_t q_bitarray_size(void* self);
+intptr_t q_bitarray_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
 /// @param self QBitArray*
 ///
-int64_t q_bitarray_count(void* self);
+intptr_t q_bitarray_count(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#count)
 ///
 /// @param self QBitArray*
 /// @param on bool
 ///
-int64_t q_bitarray_count2(void* self, bool on);
+intptr_t q_bitarray_count2(void* self, bool on);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#isEmpty)
 ///
@@ -90,9 +90,9 @@ bool q_bitarray_is_null(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#resize)
 ///
 /// @param self QBitArray*
-/// @param size int64_t
+/// @param size intptr_t
 ///
-void q_bitarray_resize(void* self, int64_t size);
+void q_bitarray_resize(void* self, intptr_t size);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#detach)
 ///
@@ -115,59 +115,59 @@ void q_bitarray_clear(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#testBit)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-bool q_bitarray_test_bit(void* self, int64_t i);
+bool q_bitarray_test_bit(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#setBit)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-void q_bitarray_set_bit(void* self, int64_t i);
+void q_bitarray_set_bit(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#setBit)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 /// @param val bool
 ///
-void q_bitarray_set_bit2(void* self, int64_t i, bool val);
+void q_bitarray_set_bit2(void* self, intptr_t i, bool val);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#clearBit)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-void q_bitarray_clear_bit(void* self, int64_t i);
+void q_bitarray_clear_bit(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#toggleBit)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-bool q_bitarray_toggle_bit(void* self, int64_t i);
+bool q_bitarray_toggle_bit(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#at)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-bool q_bitarray_at(void* self, int64_t i);
+bool q_bitarray_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QBitRef* q_bitarray_operator_subscript(void* self, int64_t i);
+QBitRef* q_bitarray_operator_subscript(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-5b-5d)
 ///
 /// @param self QBitArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-bool q_bitarray_operator_subscript2(void* self, int64_t i);
+bool q_bitarray_operator_subscript2(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#operator-and-eq)
 ///
@@ -201,17 +201,17 @@ bool q_bitarray_fill(void* self, bool aval);
 ///
 /// @param self QBitArray*
 /// @param val bool
-/// @param first int64_t
-/// @param last int64_t
+/// @param first intptr_t
+/// @param last intptr_t
 ///
-void q_bitarray_fill2(void* self, bool val, int64_t first, int64_t last);
+void q_bitarray_fill2(void* self, bool val, intptr_t first, intptr_t last);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#truncate)
 ///
 /// @param self QBitArray*
-/// @param pos int64_t
+/// @param pos intptr_t
 ///
-void q_bitarray_truncate(void* self, int64_t pos);
+void q_bitarray_truncate(void* self, intptr_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#bits)
 ///
@@ -224,9 +224,9 @@ const char* q_bitarray_bits(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#fromBits)
 ///
 /// @param data const char*
-/// @param lenVal int64_t
+/// @param lenVal intptr_t
 ///
-QBitArray* q_bitarray_from_bits(const char* data, int64_t lenVal);
+QBitArray* q_bitarray_from_bits(const char* data, intptr_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///
@@ -239,9 +239,9 @@ uint32_t q_bitarray_to_u_int32(void* self, int32_t endianness);
 ///
 /// @param self QBitArray*
 /// @param aval bool
-/// @param asize int64_t
+/// @param asize intptr_t
 ///
-bool q_bitarray_fill22(void* self, bool aval, int64_t asize);
+bool q_bitarray_fill22(void* self, bool aval, intptr_t asize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbitarray.html#toUInt32)
 ///

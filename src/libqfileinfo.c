@@ -268,7 +268,7 @@ int32_t q_fileinfo_permissions(void* self) {
     return QFileInfo_Permissions((QFileInfo*)self);
 }
 
-long long q_fileinfo_size(void* self) {
+int64_t q_fileinfo_size(void* self) {
     return QFileInfo_Size((QFileInfo*)self);
 }
 

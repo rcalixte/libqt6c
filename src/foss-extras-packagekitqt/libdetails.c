@@ -75,7 +75,7 @@ const char* q_packagekit__details_license(void* self) {
     return _ret;
 }
 
-uint64_t q_packagekit__details_size(void* self) {
+uintptr_t q_packagekit__details_size(void* self) {
     return PackageKit__Details_Size((PackageKit__Details*)self);
 }
 

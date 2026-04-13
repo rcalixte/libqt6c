@@ -5,7 +5,7 @@
 #include "libkarchivefile.hpp"
 #include "libkarchivefile.h"
 
-KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, long long pos, long long size) {
+KArchiveFile* k_archivefile_new(void* archive, const char* name, int access, void* date, const char* user, const char* group, const char* symlink, int64_t pos, int64_t size) {
     return KArchiveFile_new((KArchive*)archive, qstring(name), access, (QDateTime*)date, qstring(user), qstring(group), qstring(symlink), pos, size);
 }
 
@@ -13,15 +13,15 @@ KArchiveFile* k_archivefile_new2(void* param1) {
     return KArchiveFile_new2((KArchiveFile*)param1);
 }
 
-long long k_archivefile_position(void* self) {
+int64_t k_archivefile_position(void* self) {
     return KArchiveFile_Position((KArchiveFile*)self);
 }
 
-long long k_archivefile_size(void* self) {
+int64_t k_archivefile_size(void* self) {
     return KArchiveFile_Size((KArchiveFile*)self);
 }
 
-void k_archivefile_set_size(void* self, long long s) {
+void k_archivefile_set_size(void* self, int64_t s) {
     KArchiveFile_SetSize((KArchiveFile*)self, s);
 }
 

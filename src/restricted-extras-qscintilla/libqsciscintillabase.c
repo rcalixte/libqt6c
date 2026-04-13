@@ -87,55 +87,55 @@ void q_sciscintillabase_replace_vertical_scroll_bar(void* self, void* scrollBar)
     QsciScintillaBase_ReplaceVerticalScrollBar((QsciScintillaBase*)self, (QScrollBar*)scrollBar);
 }
 
-int64_t q_sciscintillabase_send_scintilla(void* self, uint32_t msg) {
+long q_sciscintillabase_send_scintilla(void* self, uint32_t msg) {
     return QsciScintillaBase_SendScintilla((QsciScintillaBase*)self, msg);
 }
 
-int64_t q_sciscintillabase_send_scintilla2(void* self, uint32_t msg, uint64_t wParam, void* lParam) {
+long q_sciscintillabase_send_scintilla2(void* self, uint32_t msg, uintptr_t wParam, void* lParam) {
     return QsciScintillaBase_SendScintilla2((QsciScintillaBase*)self, msg, wParam, lParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam) {
+long q_sciscintillabase_send_scintilla3(void* self, uint32_t msg, uintptr_t wParam, const char* lParam) {
     return QsciScintillaBase_SendScintilla3((QsciScintillaBase*)self, msg, wParam, lParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla4(void* self, uint32_t msg, const char* lParam) {
+long q_sciscintillabase_send_scintilla4(void* self, uint32_t msg, const char* lParam) {
     return QsciScintillaBase_SendScintilla4((QsciScintillaBase*)self, msg, lParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam) {
+long q_sciscintillabase_send_scintilla5(void* self, uint32_t msg, const char* wParam, const char* lParam) {
     return QsciScintillaBase_SendScintilla5((QsciScintillaBase*)self, msg, wParam, lParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla6(void* self, uint32_t msg, int64_t wParam) {
+long q_sciscintillabase_send_scintilla6(void* self, uint32_t msg, long wParam) {
     return QsciScintillaBase_SendScintilla6((QsciScintillaBase*)self, msg, wParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla7(void* self, uint32_t msg, int wParam) {
+long q_sciscintillabase_send_scintilla7(void* self, uint32_t msg, int wParam) {
     return QsciScintillaBase_SendScintilla7((QsciScintillaBase*)self, msg, wParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla8(void* self, uint32_t msg, int64_t cpMin, int64_t cpMax, char* lpstrText) {
+long q_sciscintillabase_send_scintilla8(void* self, uint32_t msg, long cpMin, long cpMax, char* lpstrText) {
     return QsciScintillaBase_SendScintilla8((QsciScintillaBase*)self, msg, cpMin, cpMax, lpstrText);
 }
 
-int64_t q_sciscintillabase_send_scintilla9(void* self, uint32_t msg, uint64_t wParam, void* col) {
+long q_sciscintillabase_send_scintilla9(void* self, uint32_t msg, uintptr_t wParam, void* col) {
     return QsciScintillaBase_SendScintilla9((QsciScintillaBase*)self, msg, wParam, (QColor*)col);
 }
 
-int64_t q_sciscintillabase_send_scintilla10(void* self, uint32_t msg, void* col) {
+long q_sciscintillabase_send_scintilla10(void* self, uint32_t msg, void* col) {
     return QsciScintillaBase_SendScintilla10((QsciScintillaBase*)self, msg, (QColor*)col);
 }
 
-int64_t q_sciscintillabase_send_scintilla11(void* self, uint32_t msg, uint64_t wParam, void* hdc, void* rc, int64_t cpMin, int64_t cpMax) {
+long q_sciscintillabase_send_scintilla11(void* self, uint32_t msg, uintptr_t wParam, void* hdc, void* rc, long cpMin, long cpMax) {
     return QsciScintillaBase_SendScintilla11((QsciScintillaBase*)self, msg, wParam, (QPainter*)hdc, (QRect*)rc, cpMin, cpMax);
 }
 
-int64_t q_sciscintillabase_send_scintilla12(void* self, uint32_t msg, uint64_t wParam, void* lParam) {
+long q_sciscintillabase_send_scintilla12(void* self, uint32_t msg, uintptr_t wParam, void* lParam) {
     return QsciScintillaBase_SendScintilla12((QsciScintillaBase*)self, msg, wParam, (QPixmap*)lParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla13(void* self, uint32_t msg, uint64_t wParam, void* lParam) {
+long q_sciscintillabase_send_scintilla13(void* self, uint32_t msg, uintptr_t wParam, void* lParam) {
     return QsciScintillaBase_SendScintilla13((QsciScintillaBase*)self, msg, wParam, (QImage*)lParam);
 }
 
@@ -227,7 +227,7 @@ void q_sciscintillabase_s_c_n__i_n_d_i_c_a_t_o_r_r_e_l_e_a_s_e(void* self, int p
     QsciScintillaBase_SCN_INDICATORRELEASE((QsciScintillaBase*)self, position, modifiers);
 }
 
-void q_sciscintillabase_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uint64_t param2, void* param3) {
+void q_sciscintillabase_s_c_n__m_a_c_r_o_r_e_c_o_r_d(void* self, uint32_t param1, uintptr_t param2, void* param3) {
     QsciScintillaBase_SCN_MACRORECORD((QsciScintillaBase*)self, param1, param2, param3);
 }
 
@@ -599,11 +599,11 @@ const char* q_sciscintillabase_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-int64_t q_sciscintillabase_send_scintilla22(void* self, uint32_t msg, uint64_t wParam) {
+long q_sciscintillabase_send_scintilla22(void* self, uint32_t msg, uintptr_t wParam) {
     return QsciScintillaBase_SendScintilla22((QsciScintillaBase*)self, msg, wParam);
 }
 
-int64_t q_sciscintillabase_send_scintilla32(void* self, uint32_t msg, uint64_t wParam, int64_t lParam) {
+long q_sciscintillabase_send_scintilla32(void* self, uint32_t msg, uintptr_t wParam, long lParam) {
     return QsciScintillaBase_SendScintilla32((QsciScintillaBase*)self, msg, wParam, lParam);
 }
 
@@ -1690,7 +1690,7 @@ int32_t q_sciscintillabase_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* q_sciscintillabase_find(uint64_t param1) {
+QWidget* q_sciscintillabase_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

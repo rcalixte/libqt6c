@@ -287,7 +287,7 @@ KTextEditor__Range* k_texteditor__document_document_range(void* self) {
     return KTextEditor__Document_DocumentRange((KTextEditor__Document*)self);
 }
 
-int64_t k_texteditor__document_total_characters(void* self) {
+intptr_t k_texteditor__document_total_characters(void* self) {
     return KTextEditor__Document_TotalCharacters((KTextEditor__Document*)self);
 }
 
@@ -400,11 +400,11 @@ libqt_list /* of KTextEditor__Range* */ k_texteditor__document_search_text(void*
     return _arr;
 }
 
-int64_t k_texteditor__document_cursor_to_offset(void* self, void* c) {
+intptr_t k_texteditor__document_cursor_to_offset(void* self, void* c) {
     return KTextEditor__Document_CursorToOffset((KTextEditor__Document*)self, (KTextEditor__Cursor*)c);
 }
 
-KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(void* self, int64_t offset) {
+KTextEditor__Cursor* k_texteditor__document_offset_to_cursor(void* self, intptr_t offset) {
     return KTextEditor__Document_OffsetToCursor((KTextEditor__Document*)self, offset);
 }
 
@@ -632,31 +632,31 @@ KTextEditor__MovingRange* k_texteditor__document_new_moving_range(void* self, vo
     return KTextEditor__Document_NewMovingRange((KTextEditor__Document*)self, (KTextEditor__Range*)range, insertBehaviors, emptyBehavior);
 }
 
-long long k_texteditor__document_revision(void* self) {
+int64_t k_texteditor__document_revision(void* self) {
     return KTextEditor__Document_Revision((KTextEditor__Document*)self);
 }
 
-long long k_texteditor__document_last_saved_revision(void* self) {
+int64_t k_texteditor__document_last_saved_revision(void* self) {
     return KTextEditor__Document_LastSavedRevision((KTextEditor__Document*)self);
 }
 
-void k_texteditor__document_lock_revision(void* self, long long revision) {
+void k_texteditor__document_lock_revision(void* self, int64_t revision) {
     KTextEditor__Document_LockRevision((KTextEditor__Document*)self, revision);
 }
 
-void k_texteditor__document_unlock_revision(void* self, long long revision) {
+void k_texteditor__document_unlock_revision(void* self, int64_t revision) {
     KTextEditor__Document_UnlockRevision((KTextEditor__Document*)self, revision);
 }
 
-void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t insertBehavior, long long fromRevision, long long toRevision) {
+void k_texteditor__document_transform_cursor(void* self, void* cursor, int32_t insertBehavior, int64_t fromRevision, int64_t toRevision) {
     KTextEditor__Document_TransformCursor((KTextEditor__Document*)self, (KTextEditor__Cursor*)cursor, insertBehavior, fromRevision, toRevision);
 }
 
-void k_texteditor__document_transform_cursor2(void* self, int* line, int* column, int32_t insertBehavior, long long fromRevision, long long toRevision) {
+void k_texteditor__document_transform_cursor2(void* self, int* line, int* column, int32_t insertBehavior, int64_t fromRevision, int64_t toRevision) {
     KTextEditor__Document_TransformCursor2((KTextEditor__Document*)self, line, column, insertBehavior, fromRevision, toRevision);
 }
 
-void k_texteditor__document_transform_range(void* self, void* range, int32_t insertBehaviors, int32_t emptyBehavior, long long fromRevision, long long toRevision) {
+void k_texteditor__document_transform_range(void* self, void* range, int32_t insertBehaviors, int32_t emptyBehavior, int64_t fromRevision, int64_t toRevision) {
     KTextEditor__Document_TransformRange((KTextEditor__Document*)self, (KTextEditor__Range*)range, insertBehaviors, emptyBehavior, fromRevision, toRevision);
 }
 

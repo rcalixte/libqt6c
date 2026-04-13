@@ -120,19 +120,19 @@ int32_t q_videoframe_plane_count(void* self) {
     return QVideoFrame_PlaneCount((QVideoFrame*)self);
 }
 
-long long q_videoframe_start_time(void* self) {
+int64_t q_videoframe_start_time(void* self) {
     return QVideoFrame_StartTime((QVideoFrame*)self);
 }
 
-void q_videoframe_set_start_time(void* self, long long time) {
+void q_videoframe_set_start_time(void* self, int64_t time) {
     QVideoFrame_SetStartTime((QVideoFrame*)self, time);
 }
 
-long long q_videoframe_end_time(void* self) {
+int64_t q_videoframe_end_time(void* self) {
     return QVideoFrame_EndTime((QVideoFrame*)self);
 }
 
-void q_videoframe_set_end_time(void* self, long long time) {
+void q_videoframe_set_end_time(void* self, int64_t time) {
     QVideoFrame_SetEndTime((QVideoFrame*)self, time);
 }
 

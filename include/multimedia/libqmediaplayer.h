@@ -257,13 +257,13 @@ int32_t q_mediaplayer_media_status(void* self);
 ///
 /// @param self QMediaPlayer*
 ///
-long long q_mediaplayer_duration(void* self);
+int64_t q_mediaplayer_duration(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#position)
 ///
 /// @param self QMediaPlayer*
 ///
-long long q_mediaplayer_position(void* self);
+int64_t q_mediaplayer_position(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#hasAudio)
 ///
@@ -369,9 +369,9 @@ void q_mediaplayer_stop(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setPosition)
 ///
 /// @param self QMediaPlayer*
-/// @param position long long
+/// @param position int64_t
 ///
-void q_mediaplayer_set_position(void* self, long long position);
+void q_mediaplayer_set_position(void* self, int64_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#setPlaybackRate)
 ///
@@ -439,30 +439,30 @@ void q_mediaplayer_on_media_status_changed(void* self, void (*callback)(void*, i
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#durationChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param duration long long
+/// @param duration int64_t
 ///
-void q_mediaplayer_duration_changed(void* self, long long duration);
+void q_mediaplayer_duration_changed(void* self, int64_t duration);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#durationChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void func(QMediaPlayer* self, long long duration)
+/// @param callback void func(QMediaPlayer* self, int64_t duration)
 ///
-void q_mediaplayer_on_duration_changed(void* self, void (*callback)(void*, long long));
+void q_mediaplayer_on_duration_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#positionChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param position long long
+/// @param position int64_t
 ///
-void q_mediaplayer_position_changed(void* self, long long position);
+void q_mediaplayer_position_changed(void* self, int64_t position);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#positionChanged)
 ///
 /// @param self QMediaPlayer*
-/// @param callback void func(QMediaPlayer* self, long long position)
+/// @param callback void func(QMediaPlayer* self, int64_t position)
 ///
-void q_mediaplayer_on_position_changed(void* self, void (*callback)(void*, long long));
+void q_mediaplayer_on_position_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qmediaplayer.html#hasAudioChanged)
 ///

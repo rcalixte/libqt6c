@@ -124,9 +124,9 @@ QUrl* k_io__davjob_redirect_url(void* self);
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#setTotalSize)
 ///
 /// @param self KIO__DavJob*
-/// @param bytes uint64_t
+/// @param bytes uintptr_t
 ///
-void k_io__davjob_set_total_size(void* self, uint64_t bytes);
+void k_io__davjob_set_total_size(void* self, uintptr_t bytes);
 
 /// Inherited from KIO::TransferJob
 ///
@@ -230,18 +230,18 @@ void k_io__davjob_on_mime_type_found(void* self, void (*callback)(void*, void*, 
 ///
 /// @param self KIO__DavJob*
 /// @param job KIO__Job*
-/// @param offset uint64_t
+/// @param offset uintptr_t
 ///
-void k_io__davjob_can_resume(void* self, void* job, uint64_t offset);
+void k_io__davjob_can_resume(void* self, void* job, uintptr_t offset);
 
 /// Inherited from KIO::TransferJob
 ///
 /// [Upstream resources](https://api.kde.org/kio-transferjob.html#canResume)
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KIO__Job* job, uint64_t offset)
+/// @param callback void func(KIO__DavJob* self, KIO__Job* job, uintptr_t offset)
 ///
-void k_io__davjob_on_can_resume(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__davjob_on_can_resume(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KIO::SimpleJob
 ///
@@ -551,7 +551,7 @@ const char* k_io__davjob_error_text(void* self);
 /// @param self KIO__DavJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__davjob_processed_amount(void* self, int32_t unit);
+uintptr_t k_io__davjob_processed_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -560,7 +560,7 @@ uint64_t k_io__davjob_processed_amount(void* self, int32_t unit);
 /// @param self KIO__DavJob*
 /// @param unit enum KJob__Unit
 ///
-uint64_t k_io__davjob_total_amount(void* self, int32_t unit);
+uintptr_t k_io__davjob_total_amount(void* self, int32_t unit);
 
 /// Inherited from KJob
 ///
@@ -568,7 +568,7 @@ uint64_t k_io__davjob_total_amount(void* self, int32_t unit);
 ///
 /// @param self KIO__DavJob*
 ///
-uint64_t k_io__davjob_percent(void* self);
+uintptr_t k_io__davjob_percent(void* self);
 
 /// Inherited from KJob
 ///
@@ -617,7 +617,7 @@ bool k_io__davjob_is_started_with_exec(void* self);
 ///
 /// @param self KIO__DavJob*
 ///
-long long k_io__davjob_elapsed_time(void* self);
+int64_t k_io__davjob_elapsed_time(void* self);
 
 /// Inherited from KJob
 ///
@@ -663,18 +663,18 @@ void k_io__davjob_on_warning(void* self, void (*callback)(void*, void*, const ch
 ///
 /// @param self KIO__DavJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__davjob_total_size(void* self, void* job, uint64_t size);
+void k_io__davjob_total_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#totalSize)
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__DavJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__davjob_on_total_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__davjob_on_total_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -682,18 +682,18 @@ void k_io__davjob_on_total_size(void* self, void (*callback)(void*, void*, uint6
 ///
 /// @param self KIO__DavJob*
 /// @param job KJob*
-/// @param size uint64_t
+/// @param size uintptr_t
 ///
-void k_io__davjob_processed_size(void* self, void* job, uint64_t size);
+void k_io__davjob_processed_size(void* self, void* job, uintptr_t size);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#processedSize)
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, uint64_t size)
+/// @param callback void func(KIO__DavJob* self, KJob* job, uintptr_t size)
 ///
-void k_io__davjob_on_processed_size(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__davjob_on_processed_size(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -701,18 +701,18 @@ void k_io__davjob_on_processed_size(void* self, void (*callback)(void*, void*, u
 ///
 /// @param self KIO__DavJob*
 /// @param job KJob*
-/// @param speed uint64_t
+/// @param speed uintptr_t
 ///
-void k_io__davjob_speed(void* self, void* job, uint64_t speed);
+void k_io__davjob_speed(void* self, void* job, uintptr_t speed);
 
 /// Inherited from KJob
 ///
 /// [Upstream resources](https://api.kde.org/kjob.html#speed)
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, uint64_t speed)
+/// @param callback void func(KIO__DavJob* self, KJob* job, uintptr_t speed)
 ///
-void k_io__davjob_on_speed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__davjob_on_speed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1249,9 +1249,9 @@ void k_io__davjob_on_result(void* self, void (*callback)(void*, void*));
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__DavJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__davjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__davjob_on_total_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1260,9 +1260,9 @@ void k_io__davjob_on_total_amount_changed(void* self, void (*callback)(void*, vo
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, enum KJob__Unit unit, uint64_t amount)
+/// @param callback void func(KIO__DavJob* self, KJob* job, enum KJob__Unit unit, uintptr_t amount)
 ///
-void k_io__davjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uint64_t));
+void k_io__davjob_on_processed_amount_changed(void* self, void (*callback)(void*, void*, int32_t, uintptr_t));
 
 /// Inherited from KJob
 ///
@@ -1271,9 +1271,9 @@ void k_io__davjob_on_processed_amount_changed(void* self, void (*callback)(void*
 /// Wrapper to allow calling private signal
 ///
 /// @param self KIO__DavJob*
-/// @param callback void func(KIO__DavJob* self, KJob* job, uint64_t percent)
+/// @param callback void func(KIO__DavJob* self, KJob* job, uintptr_t percent)
 ///
-void k_io__davjob_on_percent_changed(void* self, void (*callback)(void*, void*, uint64_t));
+void k_io__davjob_on_percent_changed(void* self, void (*callback)(void*, void*, uintptr_t));
 
 /// Inherited from QObject
 ///

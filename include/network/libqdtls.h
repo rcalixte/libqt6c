@@ -129,9 +129,9 @@ QDtlsClientVerifier__GeneratorParameters* q_dtlsclientverifier_cookie_generator_
 /// @param socket QUdpSocket*
 /// @param dgram char*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, void* address, unsigned short port);
+bool q_dtlsclientverifier_verify_client(void* self, void* socket, char* dgram, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtlsclientverifier.html#verifiedHello)
 ///
@@ -1153,9 +1153,9 @@ const char* q_dtls_tr(const char* s);
 ///
 /// @param self QDtls*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_dtls_set_peer(void* self, void* address, unsigned short port);
+bool q_dtls_set_peer(void* self, void* address, uint16_t port);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#setPeerVerificationName)
 ///
@@ -1174,7 +1174,7 @@ QHostAddress* q_dtls_peer_address(void* self);
 ///
 /// @param self QDtls*
 ///
-unsigned short q_dtls_peer_port(void* self);
+uint16_t q_dtls_peer_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#peerVerificationName)
 ///
@@ -1195,15 +1195,15 @@ int32_t q_dtls_ssl_mode(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#setMtuHint)
 ///
 /// @param self QDtls*
-/// @param mtuHint unsigned short
+/// @param mtuHint uint16_t
 ///
-void q_dtls_set_mtu_hint(void* self, unsigned short mtuHint);
+void q_dtls_set_mtu_hint(void* self, uint16_t mtuHint);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#mtuHint)
 ///
 /// @param self QDtls*
 ///
-unsigned short q_dtls_mtu_hint(void* self);
+uint16_t q_dtls_mtu_hint(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#setCookieGeneratorParameters)
 ///
@@ -1300,7 +1300,7 @@ int32_t q_dtls_session_protocol(void* self);
 /// @param socket QUdpSocket*
 /// @param dgram char*
 ///
-long long q_dtls_write_datagram_encrypted(void* self, void* socket, char* dgram);
+int64_t q_dtls_write_datagram_encrypted(void* self, void* socket, char* dgram);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#decryptDatagram)
 ///
@@ -1393,10 +1393,10 @@ const char* q_dtls_tr3(const char* s, const char* c, int n);
 ///
 /// @param self QDtls*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 /// @param verificationName const char*
 ///
-bool q_dtls_set_peer3(void* self, void* address, unsigned short port, const char* verificationName);
+bool q_dtls_set_peer3(void* self, void* address, uint16_t port, const char* verificationName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdtls.html#doHandshake)
 ///

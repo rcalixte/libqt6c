@@ -1182,7 +1182,7 @@ int32_t k_messagedialog_window_type(void* self) {
     return QWidget_WindowType((QWidget*)self);
 }
 
-QWidget* k_messagedialog_find(uint64_t param1) {
+QWidget* k_messagedialog_find(uintptr_t param1) {
     return QWidget_Find(param1);
 }
 

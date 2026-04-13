@@ -49,7 +49,7 @@ int32_t q_resource_compression_algorithm(void* self) {
     return QResource_CompressionAlgorithm((QResource*)self);
 }
 
-long long q_resource_size(void* self) {
+int64_t q_resource_size(void* self) {
     return QResource_Size((QResource*)self);
 }
 
@@ -57,7 +57,7 @@ const unsigned char* q_resource_data(void* self) {
     return (unsigned char*)QResource_Data((QResource*)self);
 }
 
-long long q_resource_uncompressed_size(void* self) {
+int64_t q_resource_uncompressed_size(void* self) {
     return QResource_UncompressedSize((QResource*)self);
 }
 

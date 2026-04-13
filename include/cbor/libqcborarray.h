@@ -49,7 +49,7 @@ QCborValue* q_cborarray_to_cbor_value(void* self);
 ///
 /// @param self QCborArray*
 ///
-int64_t q_cborarray_size(void* self);
+intptr_t q_cborarray_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#isEmpty)
 ///
@@ -66,9 +66,9 @@ void q_cborarray_clear(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#at)
 ///
 /// @param self QCborArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QCborValue* q_cborarray_at(void* self, int64_t i);
+QCborValue* q_cborarray_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#first)
 ///
@@ -85,9 +85,9 @@ QCborValue* q_cborarray_last(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#operator-5b-5d)
 ///
 /// @param self QCborArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-const QCborValue* q_cborarray_operator_subscript(void* self, int64_t i);
+const QCborValue* q_cborarray_operator_subscript(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#first)
 ///
@@ -104,17 +104,17 @@ QCborValueRef* q_cborarray_last2(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#operator-5b-5d)
 ///
 /// @param self QCborArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QCborValueRef* q_cborarray_operator_subscript2(void* self, int64_t i);
+QCborValueRef* q_cborarray_operator_subscript2(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#insert)
 ///
 /// @param self QCborArray*
-/// @param i int64_t
+/// @param i intptr_t
 /// @param value QCborValue*
 ///
-void q_cborarray_insert(void* self, int64_t i, void* value);
+void q_cborarray_insert(void* self, intptr_t i, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#prepend)
 ///
@@ -147,16 +147,16 @@ QCborValue* q_cborarray_extract2(void* self, void* it);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#removeAt)
 ///
 /// @param self QCborArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-void q_cborarray_remove_at(void* self, int64_t i);
+void q_cborarray_remove_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#takeAt)
 ///
 /// @param self QCborArray*
-/// @param i int64_t
+/// @param i intptr_t
 ///
-QCborValue* q_cborarray_take_at(void* self, int64_t i);
+QCborValue* q_cborarray_take_at(void* self, intptr_t i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray.html#removeFirst)
 ///
@@ -417,9 +417,9 @@ const QCborValueConstRef* q_cborarray__iterator_operator_minus_greater2(void* se
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator-5b-5d)
 ///
 /// @param self QCborArray__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborValueRef* q_cborarray__iterator_operator_subscript(void* self, int64_t j);
+QCborValueRef* q_cborarray__iterator_operator_subscript(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator-2b-2b)
 ///
@@ -450,37 +450,37 @@ QCborArray__Iterator* q_cborarray__iterator_operator_minus_minus2(void* self, in
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator-2b-eq)
 ///
 /// @param self QCborArray__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__Iterator* q_cborarray__iterator_operator_plus_assign(void* self, int64_t j);
+QCborArray__Iterator* q_cborarray__iterator_operator_plus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator--eq)
 ///
 /// @param self QCborArray__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__Iterator* q_cborarray__iterator_operator_minus_assign(void* self, int64_t j);
+QCborArray__Iterator* q_cborarray__iterator_operator_minus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator-2b)
 ///
 /// @param self QCborArray__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__Iterator* q_cborarray__iterator_operator_plus(void* self, int64_t j);
+QCborArray__Iterator* q_cborarray__iterator_operator_plus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator-)
 ///
 /// @param self QCborArray__Iterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__Iterator* q_cborarray__iterator_operator_minus(void* self, int64_t j);
+QCborArray__Iterator* q_cborarray__iterator_operator_minus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-iterator.html#operator-)
 ///
 /// @param self QCborArray__Iterator*
 /// @param j QCborArray__Iterator*
 ///
-int64_t q_cborarray__iterator_operator_minus2(void* self, void* j);
+intptr_t q_cborarray__iterator_operator_minus2(void* self, void* j);
 
 /// Delete this object from C++ memory.
 ///
@@ -532,9 +532,9 @@ const QCborValueConstRef* q_cborarray__constiterator_operator_minus_greater(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator-5b-5d)
 ///
 /// @param self QCborArray__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborValueConstRef* q_cborarray__constiterator_operator_subscript(void* self, int64_t j);
+QCborValueConstRef* q_cborarray__constiterator_operator_subscript(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator-2b-2b)
 ///
@@ -565,37 +565,37 @@ QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_minus2(void
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator-2b-eq)
 ///
 /// @param self QCborArray__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus_assign(void* self, int64_t j);
+QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator--eq)
 ///
 /// @param self QCborArray__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_assign(void* self, int64_t j);
+QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus_assign(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator-2b)
 ///
 /// @param self QCborArray__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus(void* self, int64_t j);
+QCborArray__ConstIterator* q_cborarray__constiterator_operator_plus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator-)
 ///
 /// @param self QCborArray__ConstIterator*
-/// @param j int64_t
+/// @param j intptr_t
 ///
-QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus(void* self, int64_t j);
+QCborArray__ConstIterator* q_cborarray__constiterator_operator_minus(void* self, intptr_t j);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborarray-constiterator.html#operator-)
 ///
 /// @param self QCborArray__ConstIterator*
 /// @param j QCborArray__ConstIterator*
 ///
-int64_t q_cborarray__constiterator_operator_minus2(void* self, void* j);
+intptr_t q_cborarray__constiterator_operator_minus2(void* self, void* j);
 
 /// Delete this object from C++ memory.
 ///

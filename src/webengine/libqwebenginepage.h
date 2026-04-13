@@ -436,7 +436,7 @@ bool q_webenginepage_recently_audible(void* self);
 ///
 /// @param self QWebEnginePage*
 ///
-long long q_webenginepage_render_process_pid(void* self);
+int64_t q_webenginepage_render_process_pid(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#printToPdf)
 ///
@@ -996,16 +996,16 @@ void q_webenginepage_on_recently_audible_changed(void* self, void (*callback)(vo
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#renderProcessPidChanged)
 ///
 /// @param self QWebEnginePage*
-/// @param pid long long
+/// @param pid int64_t
 ///
-void q_webenginepage_render_process_pid_changed(void* self, long long pid);
+void q_webenginepage_render_process_pid_changed(void* self, int64_t pid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#renderProcessPidChanged)
 ///
 /// @param self QWebEnginePage*
-/// @param callback void func(QWebEnginePage* self, long long pid)
+/// @param callback void func(QWebEnginePage* self, int64_t pid)
 ///
-void q_webenginepage_on_render_process_pid_changed(void* self, void (*callback)(void*, long long));
+void q_webenginepage_on_render_process_pid_changed(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#pdfPrintingFinished)
 ///

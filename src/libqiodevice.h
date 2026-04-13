@@ -274,16 +274,16 @@ void q_iodevice_super_close(void* self);
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_pos(void* self);
+int64_t q_iodevice_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#pos)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_iodevice_on_pos(void* self, long long (*callback)());
+void q_iodevice_on_pos(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_iodevice_super_pos` instead
 ///
@@ -295,22 +295,22 @@ void q_iodevice_on_pos(void* self, long long (*callback)());
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_super_pos(void* self);
+int64_t q_iodevice_super_pos(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#size)
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_size(void* self);
+int64_t q_iodevice_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#size)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_iodevice_on_size(void* self, long long (*callback)());
+void q_iodevice_on_size(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_iodevice_super_size` instead
 ///
@@ -322,23 +322,23 @@ void q_iodevice_on_size(void* self, long long (*callback)());
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_super_size(void* self);
+int64_t q_iodevice_super_size(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
 /// @param self QIODevice*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_iodevice_seek(void* self, long long pos);
+bool q_iodevice_seek(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#seek)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback bool func(QIODevice* self, long long pos)
+/// @param callback bool func(QIODevice* self, int64_t pos)
 ///
-void q_iodevice_on_seek(void* self, bool (*callback)(void*, long long));
+void q_iodevice_on_seek(void* self, bool (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `q_iodevice_super_seek` instead
 ///
@@ -349,9 +349,9 @@ void q_iodevice_on_seek(void* self, bool (*callback)(void*, long long));
 /// Base class method implementation
 ///
 /// @param self QIODevice*
-/// @param pos long long
+/// @param pos int64_t
 ///
-bool q_iodevice_super_seek(void* self, long long pos);
+bool q_iodevice_super_seek(void* self, int64_t pos);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#atEnd)
 ///
@@ -411,16 +411,16 @@ bool q_iodevice_super_reset(void* self);
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_bytes_available(void* self);
+int64_t q_iodevice_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesAvailable)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_iodevice_on_bytes_available(void* self, long long (*callback)());
+void q_iodevice_on_bytes_available(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_iodevice_super_bytes_available` instead
 ///
@@ -432,22 +432,22 @@ void q_iodevice_on_bytes_available(void* self, long long (*callback)());
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_super_bytes_available(void* self);
+int64_t q_iodevice_super_bytes_available(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_bytes_to_write(void* self);
+int64_t q_iodevice_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesToWrite)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func()
+/// @param callback int64_t func()
 ///
-void q_iodevice_on_bytes_to_write(void* self, long long (*callback)());
+void q_iodevice_on_bytes_to_write(void* self, int64_t (*callback)());
 
 /// @warning DEPRECATED: Use `q_iodevice_super_bytes_to_write` instead
 ///
@@ -459,24 +459,24 @@ void q_iodevice_on_bytes_to_write(void* self, long long (*callback)());
 ///
 /// @param self QIODevice*
 ///
-long long q_iodevice_super_bytes_to_write(void* self);
+int64_t q_iodevice_super_bytes_to_write(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_read(void* self, char* data, long long maxlen);
+int64_t q_iodevice_read(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#read)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QIODevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_iodevice_read2(void* self, long long maxlen);
+char* q_iodevice_read2(void* self, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readAll)
 ///
@@ -490,9 +490,9 @@ char* q_iodevice_read_all(void* self);
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_read_line(void* self, char* data, long long maxlen);
+int64_t q_iodevice_read_line(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLine)
 ///
@@ -557,47 +557,47 @@ bool q_iodevice_is_transaction_started(void* self);
 ///
 /// @param self QIODevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_iodevice_write(void* self, const char* data, long long lenVal);
+int64_t q_iodevice_write(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QIODevice*
 /// @param data const char*
 ///
-long long q_iodevice_write2(void* self, const char* data);
+int64_t q_iodevice_write2(void* self, const char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#write)
 ///
 /// @param self QIODevice*
 /// @param data char*
 ///
-long long q_iodevice_write3(void* self, char* data);
+int64_t q_iodevice_write3(void* self, char* data);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_peek(void* self, char* data, long long maxlen);
+int64_t q_iodevice_peek(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#peek)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QIODevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_iodevice_peek2(void* self, long long maxlen);
+char* q_iodevice_peek2(void* self, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skip)
 ///
 /// @param self QIODevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_iodevice_skip(void* self, long long maxSize);
+int64_t q_iodevice_skip(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#waitForReadyRead)
 ///
@@ -716,31 +716,31 @@ void q_iodevice_on_channel_ready_read(void* self, void (*callback)(void*, int));
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QIODevice*
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_iodevice_bytes_written(void* self, long long bytes);
+void q_iodevice_bytes_written(void* self, int64_t bytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#bytesWritten)
 ///
 /// @param self QIODevice*
-/// @param callback void func(QIODevice* self, long long bytes)
+/// @param callback void func(QIODevice* self, int64_t bytes)
 ///
-void q_iodevice_on_bytes_written(void* self, void (*callback)(void*, long long));
+void q_iodevice_on_bytes_written(void* self, void (*callback)(void*, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QIODevice*
 /// @param channel int
-/// @param bytes long long
+/// @param bytes int64_t
 ///
-void q_iodevice_channel_bytes_written(void* self, int channel, long long bytes);
+void q_iodevice_channel_bytes_written(void* self, int channel, int64_t bytes);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#channelBytesWritten)
 ///
 /// @param self QIODevice*
-/// @param callback void func(QIODevice* self, int channel, long long bytes)
+/// @param callback void func(QIODevice* self, int channel, int64_t bytes)
 ///
-void q_iodevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long));
+void q_iodevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t));
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#aboutToClose)
 ///
@@ -772,18 +772,18 @@ void q_iodevice_on_read_channel_finished(void* self, void (*callback)(void*));
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_read_data(void* self, char* data, long long maxlen);
+int64_t q_iodevice_read_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func(QIODevice* self, char* data, long long maxlen)
+/// @param callback int64_t func(QIODevice* self, char* data, int64_t maxlen)
 ///
-void q_iodevice_on_read_data(void* self, long long (*callback)(void*, char*, long long));
+void q_iodevice_on_read_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_iodevice_super_read_data` instead
 ///
@@ -795,26 +795,26 @@ void q_iodevice_on_read_data(void* self, long long (*callback)(void*, char*, lon
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_super_read_data(void* self, char* data, long long maxlen);
+int64_t q_iodevice_super_read_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_iodevice_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#readLineData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func(QIODevice* self, char* data, long long maxlen)
+/// @param callback int64_t func(QIODevice* self, char* data, int64_t maxlen)
 ///
-void q_iodevice_on_read_line_data(void* self, long long (*callback)(void*, char*, long long));
+void q_iodevice_on_read_line_data(void* self, int64_t (*callback)(void*, char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_iodevice_super_read_line_data` instead
 ///
@@ -826,25 +826,25 @@ void q_iodevice_on_read_line_data(void* self, long long (*callback)(void*, char*
 ///
 /// @param self QIODevice*
 /// @param data char*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-long long q_iodevice_super_read_line_data(void* self, char* data, long long maxlen);
+int64_t q_iodevice_super_read_line_data(void* self, char* data, int64_t maxlen);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
 /// @param self QIODevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_iodevice_skip_data(void* self, long long maxSize);
+int64_t q_iodevice_skip_data(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#skipData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func(QIODevice* self, long long maxSize)
+/// @param callback int64_t func(QIODevice* self, int64_t maxSize)
 ///
-void q_iodevice_on_skip_data(void* self, long long (*callback)(void*, long long));
+void q_iodevice_on_skip_data(void* self, int64_t (*callback)(void*, int64_t));
 
 /// @warning DEPRECATED: Use `q_iodevice_super_skip_data` instead
 ///
@@ -855,26 +855,26 @@ void q_iodevice_on_skip_data(void* self, long long (*callback)(void*, long long)
 /// Base class method implementation
 ///
 /// @param self QIODevice*
-/// @param maxSize long long
+/// @param maxSize int64_t
 ///
-long long q_iodevice_super_skip_data(void* self, long long maxSize);
+int64_t q_iodevice_super_skip_data(void* self, int64_t maxSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeData)
 ///
 /// @param self QIODevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_iodevice_write_data(void* self, const char* data, long long lenVal);
+int64_t q_iodevice_write_data(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#writeData)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self QIODevice*
-/// @param callback long long func(QIODevice* self, const char* data, long long lenVal)
+/// @param callback int64_t func(QIODevice* self, const char* data, int64_t lenVal)
 ///
-void q_iodevice_on_write_data(void* self, long long (*callback)(void*, const char*, long long));
+void q_iodevice_on_write_data(void* self, int64_t (*callback)(void*, const char*, int64_t));
 
 /// @warning DEPRECATED: Use `q_iodevice_super_write_data` instead
 ///
@@ -886,9 +886,9 @@ void q_iodevice_on_write_data(void* self, long long (*callback)(void*, const cha
 ///
 /// @param self QIODevice*
 /// @param data const char*
-/// @param lenVal long long
+/// @param lenVal int64_t
 ///
-long long q_iodevice_super_write_data(void* self, const char* data, long long lenVal);
+int64_t q_iodevice_super_write_data(void* self, const char* data, int64_t lenVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qiodevice.html#setOpenMode)
 ///
@@ -972,9 +972,9 @@ const char* q_iodevice_tr3(const char* s, const char* c, int n);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self QIODevice*
-/// @param maxlen long long
+/// @param maxlen int64_t
 ///
-char* q_iodevice_read_line1(void* self, long long maxlen);
+char* q_iodevice_read_line1(void* self, int64_t maxlen);
 
 /// Inherited from QObject
 ///

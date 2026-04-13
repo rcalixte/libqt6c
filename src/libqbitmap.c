@@ -218,7 +218,7 @@ void q_bitmap_scroll2(void* self, int dx, int dy, void* rect) {
     QPixmap_Scroll2((QPixmap*)self, dx, dy, (QRect*)rect);
 }
 
-long long q_bitmap_cache_key(void* self) {
+int64_t q_bitmap_cache_key(void* self) {
     return QPixmap_CacheKey((QPixmap*)self);
 }
 

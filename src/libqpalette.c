@@ -192,7 +192,7 @@ bool q_palette_is_copy_of(void* self, void* p) {
     return QPalette_IsCopyOf((QPalette*)self, (QPalette*)p);
 }
 
-long long q_palette_cache_key(void* self) {
+int64_t q_palette_cache_key(void* self) {
     return QPalette_CacheKey((QPalette*)self);
 }
 
@@ -200,11 +200,11 @@ QPalette* q_palette_resolve(void* self, void* other) {
     return QPalette_Resolve((QPalette*)self, (QPalette*)other);
 }
 
-uint64_t q_palette_resolve_mask(void* self) {
+uintptr_t q_palette_resolve_mask(void* self) {
     return QPalette_ResolveMask((QPalette*)self);
 }
 
-void q_palette_set_resolve_mask(void* self, uint64_t mask) {
+void q_palette_set_resolve_mask(void* self, uintptr_t mask) {
     QPalette_SetResolveMask((QPalette*)self, mask);
 }
 

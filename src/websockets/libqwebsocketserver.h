@@ -178,7 +178,7 @@ int32_t q_websocketserver_handshake_timeout_m_s(void* self);
 ///
 /// @param self QWebSocketServer*
 ///
-unsigned short q_websocketserver_server_port(void* self);
+uint16_t q_websocketserver_server_port(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebsocketserver.html#serverAddress)
 ///
@@ -544,9 +544,9 @@ bool q_websocketserver_listen1(void* self, void* address);
 ///
 /// @param self QWebSocketServer*
 /// @param address QHostAddress*
-/// @param port unsigned short
+/// @param port uint16_t
 ///
-bool q_websocketserver_listen2(void* self, void* address, unsigned short port);
+bool q_websocketserver_listen2(void* self, void* address, uint16_t port);
 
 /// Inherited from QObject
 ///

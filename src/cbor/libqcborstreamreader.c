@@ -7,11 +7,11 @@ QCborStreamReader* q_cborstreamreader_new() {
     return QCborStreamReader_new();
 }
 
-QCborStreamReader* q_cborstreamreader_new2(const char* data, int64_t lenVal) {
+QCborStreamReader* q_cborstreamreader_new2(const char* data, intptr_t lenVal) {
     return QCborStreamReader_new2(data, lenVal);
 }
 
-QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, int64_t lenVal) {
+QCborStreamReader* q_cborstreamreader_new3(unsigned char* data, intptr_t lenVal) {
     return QCborStreamReader_new3(data, lenVal);
 }
 
@@ -35,11 +35,11 @@ void q_cborstreamreader_add_data(void* self, char* data) {
     QCborStreamReader_AddData((QCborStreamReader*)self, qstring(data));
 }
 
-void q_cborstreamreader_add_data2(void* self, const char* data, int64_t lenVal) {
+void q_cborstreamreader_add_data2(void* self, const char* data, intptr_t lenVal) {
     QCborStreamReader_AddData2((QCborStreamReader*)self, data, lenVal);
 }
 
-void q_cborstreamreader_add_data3(void* self, unsigned char* data, int64_t lenVal) {
+void q_cborstreamreader_add_data3(void* self, unsigned char* data, intptr_t lenVal) {
     QCborStreamReader_AddData3((QCborStreamReader*)self, data, lenVal);
 }
 
@@ -59,7 +59,7 @@ QCborError* q_cborstreamreader_last_error(void* self) {
     return QCborStreamReader_LastError((QCborStreamReader*)self);
 }
 
-long long q_cborstreamreader_current_offset(void* self) {
+int64_t q_cborstreamreader_current_offset(void* self) {
     return QCborStreamReader_CurrentOffset((QCborStreamReader*)self);
 }
 
@@ -195,7 +195,7 @@ bool q_cborstreamreader_read_and_append_to_byte_array(void* self, char* dst) {
     return QCborStreamReader_ReadAndAppendToByteArray((QCborStreamReader*)self, qstring(dst));
 }
 
-int64_t q_cborstreamreader_current_string_chunk_size(void* self) {
+intptr_t q_cborstreamreader_current_string_chunk_size(void* self) {
     return QCborStreamReader_CurrentStringChunkSize((QCborStreamReader*)self);
 }
 
@@ -227,7 +227,7 @@ double q_cborstreamreader_to_double(void* self) {
     return QCborStreamReader_ToDouble((QCborStreamReader*)self);
 }
 
-long long q_cborstreamreader_to_integer(void* self) {
+int64_t q_cborstreamreader_to_integer(void* self) {
     return QCborStreamReader_ToInteger((QCborStreamReader*)self);
 }
 

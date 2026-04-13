@@ -174,11 +174,11 @@ const char* k_fileitem_local_path(void* self) {
     return _ret;
 }
 
-uint64_t k_fileitem_size(void* self) {
+uintptr_t k_fileitem_size(void* self) {
     return KFileItem_Size((KFileItem*)self);
 }
 
-uint64_t k_fileitem_recursive_size(void* self) {
+uintptr_t k_fileitem_recursive_size(void* self) {
     return KFileItem_RecursiveSize((KFileItem*)self);
 }
 

@@ -53,11 +53,11 @@ const char* q_filedevice_file_name(void* self) {
     return _ret;
 }
 
-long long q_filedevice_pos(void* self) {
+int64_t q_filedevice_pos(void* self) {
     return QFileDevice_Pos((QFileDevice*)self);
 }
 
-bool q_filedevice_seek(void* self, long long offset) {
+bool q_filedevice_seek(void* self, int64_t offset) {
     return QFileDevice_Seek((QFileDevice*)self, offset);
 }
 
@@ -69,11 +69,11 @@ bool q_filedevice_flush(void* self) {
     return QFileDevice_Flush((QFileDevice*)self);
 }
 
-long long q_filedevice_size(void* self) {
+int64_t q_filedevice_size(void* self) {
     return QFileDevice_Size((QFileDevice*)self);
 }
 
-bool q_filedevice_resize(void* self, long long sz) {
+bool q_filedevice_resize(void* self, int64_t sz) {
     return QFileDevice_Resize((QFileDevice*)self, sz);
 }
 
@@ -85,7 +85,7 @@ bool q_filedevice_set_permissions(void* self, int32_t permissionSpec) {
     return QFileDevice_SetPermissions((QFileDevice*)self, permissionSpec);
 }
 
-unsigned char* q_filedevice_map(void* self, long long offset, long long size) {
+unsigned char* q_filedevice_map(void* self, int64_t offset, int64_t size) {
     return (unsigned char*)QFileDevice_Map((QFileDevice*)self, offset, size);
 }
 
@@ -115,7 +115,7 @@ const char* q_filedevice_tr3(const char* s, const char* c, int n) {
     return _ret;
 }
 
-unsigned char* q_filedevice_map3(void* self, long long offset, long long size, int32_t flags) {
+unsigned char* q_filedevice_map3(void* self, int64_t offset, int64_t size, int32_t flags) {
     return (unsigned char*)QFileDevice_Map3((QFileDevice*)self, offset, size, flags);
 }
 
@@ -175,19 +175,19 @@ bool q_filedevice_reset(void* self) {
     return QIODevice_Reset((QIODevice*)self);
 }
 
-long long q_filedevice_bytes_available(void* self) {
+int64_t q_filedevice_bytes_available(void* self) {
     return QIODevice_BytesAvailable((QIODevice*)self);
 }
 
-long long q_filedevice_bytes_to_write(void* self) {
+int64_t q_filedevice_bytes_to_write(void* self) {
     return QIODevice_BytesToWrite((QIODevice*)self);
 }
 
-long long q_filedevice_read(void* self, char* data, long long maxlen) {
+int64_t q_filedevice_read(void* self, char* data, int64_t maxlen) {
     return QIODevice_Read((QIODevice*)self, data, maxlen);
 }
 
-char* q_filedevice_read2(void* self, long long maxlen) {
+char* q_filedevice_read2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Read2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
@@ -201,7 +201,7 @@ char* q_filedevice_read_all(void* self) {
     return _ret;
 }
 
-long long q_filedevice_read_line(void* self, char* data, long long maxlen) {
+int64_t q_filedevice_read_line(void* self, char* data, int64_t maxlen) {
     return QIODevice_ReadLine((QIODevice*)self, data, maxlen);
 }
 
@@ -232,30 +232,30 @@ bool q_filedevice_is_transaction_started(void* self) {
     return QIODevice_IsTransactionStarted((QIODevice*)self);
 }
 
-long long q_filedevice_write(void* self, const char* data, long long lenVal) {
+int64_t q_filedevice_write(void* self, const char* data, int64_t lenVal) {
     return QIODevice_Write((QIODevice*)self, data, lenVal);
 }
 
-long long q_filedevice_write2(void* self, const char* data) {
+int64_t q_filedevice_write2(void* self, const char* data) {
     return QIODevice_Write2((QIODevice*)self, data);
 }
 
-long long q_filedevice_write3(void* self, char* data) {
+int64_t q_filedevice_write3(void* self, char* data) {
     return QIODevice_Write3((QIODevice*)self, qstring(data));
 }
 
-long long q_filedevice_peek(void* self, char* data, long long maxlen) {
+int64_t q_filedevice_peek(void* self, char* data, int64_t maxlen) {
     return QIODevice_Peek((QIODevice*)self, data, maxlen);
 }
 
-char* q_filedevice_peek2(void* self, long long maxlen) {
+char* q_filedevice_peek2(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_Peek2((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-long long q_filedevice_skip(void* self, long long maxSize) {
+int64_t q_filedevice_skip(void* self, int64_t maxSize) {
     return QIODevice_Skip((QIODevice*)self, maxSize);
 }
 
@@ -302,19 +302,19 @@ void q_filedevice_on_channel_ready_read(void* self, void (*callback)(void*, int)
     QIODevice_Connect_ChannelReadyRead((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_filedevice_bytes_written(void* self, long long bytes) {
+void q_filedevice_bytes_written(void* self, int64_t bytes) {
     QIODevice_BytesWritten((QIODevice*)self, bytes);
 }
 
-void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, long long)) {
+void q_filedevice_on_bytes_written(void* self, void (*callback)(void*, int64_t)) {
     QIODevice_Connect_BytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
-void q_filedevice_channel_bytes_written(void* self, int channel, long long bytes) {
+void q_filedevice_channel_bytes_written(void* self, int channel, int64_t bytes) {
     QIODevice_ChannelBytesWritten((QIODevice*)self, channel, bytes);
 }
 
-void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, long long)) {
+void q_filedevice_on_channel_bytes_written(void* self, void (*callback)(void*, int, int64_t)) {
     QIODevice_Connect_ChannelBytesWritten((QIODevice*)self, (intptr_t)callback);
 }
 
@@ -334,7 +334,7 @@ void q_filedevice_on_read_channel_finished(void* self, void (*callback)(void*)) 
     QIODevice_Connect_ReadChannelFinished((QIODevice*)self, (intptr_t)callback);
 }
 
-char* q_filedevice_read_line1(void* self, long long maxlen) {
+char* q_filedevice_read_line1(void* self, int64_t maxlen) {
     libqt_string _str = QIODevice_ReadLine1((QIODevice*)self, maxlen);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
