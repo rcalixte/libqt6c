@@ -335,7 +335,12 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		}
 	}
 
-	switch p.ParameterType {
+	paramType := p.ParameterType
+	if !(p.ByRef || p.Pointer) && p.IntType() && p.QtCppOriginalType != nil && shouldPreferQualType(p.QtCppOriginalType.ParameterType) {
+		paramType = p.QtCppOriginalType.ParameterType
+	}
+
+	switch paramType {
 	case "GLvoid":
 		ret += ifv((p.Pointer || p.ByRef) && fullEnumName, "*", "") + "void"
 	case "GLchar":
@@ -348,49 +353,23 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		ret += "int16_t"
 	case "ushort", "quint16", "GLushort":
 		ret += "uint16_t"
-	case "long":
-		// Windows ILP32 - 32-bits
-		// Linux LP64 - 64-bits
-		if C.sizeof_long == 4 {
-			ret += "int32_t"
-		} else {
-			ret += "int64_t"
-		}
-	case "ulong", "unsigned long":
-		if C.sizeof_long == 4 {
-			ret += "uint32_t"
-		} else {
-			ret += "uint64_t"
-		}
-
 	case "qint32", "GLint", "GLsizei":
 		ret += "int32_t"
 	case "quint32", "uint", "unsigned int", "GLbitfield", "GLenum", "GLuint":
 		ret += "uint32_t"
-	case "qlonglong", "qint64", "GLint64":
+	case "qint64", "GLint64":
 		ret += "int64_t"
-	case "qulonglong", "quint64", "unsigned long long", "GLuint64":
+	case "quint64", "GLuint64":
 		ret += "uint64_t"
 	case "GLclampf", "GLfloat":
 		ret += "float"
 	case "qreal", "GLdouble":
 		ret += "double"
-	case "size_t": // size_t is unsigned
-		if C.sizeof_size_t == 4 {
-			ret += "uint32_t"
-		} else {
-			ret += "uint64_t"
-		}
-	case "qsizetype", "QIntegerForSizeof<std::size_t>::Signed", "qptrdiff", "ptrdiff_t": // all signed
-		if C.sizeof_size_t == 4 {
-			ret += "int32_t"
-		} else {
-			ret += "int64_t"
-		}
-
-	case "qintptr", "QIntegerForSizeof<void *>::Signed", "GLintptr", "GLsizeiptr":
+	case "ptrdiff_t", "qptrdiff", "qintptr", "qlonglong", "qsizetype",
+		"QIntegerForSizeof<std::size_t>::Signed", "QIntegerForSizeof<void *>::Signed", "GLintptr", "GLsizeiptr":
 		ret += "intptr_t"
-	case "quintptr", "QIntegerForSizeof<void *>::Unsigned":
+	case "ulong", "unsigned long", "size_t", "unsigned long long", "qulonglong", "quintptr",
+		"QIntegerForSizeof<void *>::Unsigned":
 		ret += "uintptr_t"
 	case "quint128":
 		ret = "__uint128_t"
