@@ -10,3 +10,4 @@ cmd/uic-c/uic-c
 cmd/uic-c/uic-c.exe
 docs
 zig-out
+zig-pkg
