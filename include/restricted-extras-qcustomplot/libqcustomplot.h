@@ -26017,14 +26017,14 @@ void q_cpaxis_set_selected_sub_tick_pen(void* self, void* pen);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
-/// @param selectableParts flag of enum QCPAxis__SelectablePart
+/// @param selectableParts flag of enum QCPAxis__SelectablePart*
 ///
 void q_cpaxis_set_selectable_parts(void* self, const int32_t* selectableParts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
-/// @param selectedParts flag of enum QCPAxis__SelectablePart
+/// @param selectedParts flag of enum QCPAxis__SelectablePart*
 ///
 void q_cpaxis_set_selected_parts(void* self, const int32_t* selectedParts);
 
@@ -26220,14 +26220,14 @@ void q_cpaxis_scale_type_changed(void* self, int32_t scaleType);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
-/// @param parts flag of enum QCPAxis__SelectablePart
+/// @param parts flag of enum QCPAxis__SelectablePart*
 ///
 void q_cpaxis_selection_changed(void* self, const int32_t* parts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPAxis.html)
 ///
 /// @param self QCPAxis*
-/// @param parts flag of enum QCPAxis__SelectablePart
+/// @param parts flag of enum QCPAxis__SelectablePart*
 ///
 void q_cpaxis_selectable_changed(void* self, const int32_t* parts);
 
@@ -28333,7 +28333,7 @@ void q_cpselectiondecorator_set_scatter_style(void* self, void* scatterStyle);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecorator.html)
 ///
 /// @param self QCPSelectionDecorator*
-/// @param properties flag of enum QCPScatterStyle__ScatterProperty
+/// @param properties flag of enum QCPScatterStyle__ScatterProperty*
 ///
 void q_cpselectiondecorator_set_used_scatter_properties(void* self, const int32_t* properties);
 
@@ -33404,7 +33404,7 @@ void q_customplot_set_background_scaled_mode(void* self, int32_t mode);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// @param self QCustomPlot*
-/// @param antialiasedElements flag of enum QCP__AntialiasedElement
+/// @param antialiasedElements flag of enum QCP__AntialiasedElement*
 ///
 void q_customplot_set_antialiased_elements(void* self, const int32_t* antialiasedElements);
 
@@ -33418,7 +33418,7 @@ void q_customplot_set_antialiased_element(void* self, int32_t antialiasedElement
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// @param self QCustomPlot*
-/// @param notAntialiasedElements flag of enum QCP__AntialiasedElement
+/// @param notAntialiasedElements flag of enum QCP__AntialiasedElement*
 ///
 void q_customplot_set_not_antialiased_elements(void* self, const int32_t* notAntialiasedElements);
 
@@ -33439,7 +33439,7 @@ void q_customplot_set_auto_add_plottable_to_legend(void* self, bool on);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// @param self QCustomPlot*
-/// @param interactions flag of enum QCP__Interaction
+/// @param interactions flag of enum QCP__Interaction*
 ///
 void q_customplot_set_interactions(void* self, const int32_t* interactions);
 
@@ -33467,7 +33467,7 @@ void q_customplot_set_no_antialiasing_on_drag(void* self, bool enabled);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCustomPlot.html)
 ///
 /// @param self QCustomPlot*
-/// @param hints flag of enum QCP__PlottingHint
+/// @param hints flag of enum QCP__PlottingHint*
 ///
 void q_customplot_set_plotting_hints(void* self, const int32_t* hints);
 
@@ -40895,7 +40895,7 @@ void q_cpselectiondecoratorbracket_set_scatter_style(void* self, void* scatterSt
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPSelectionDecorator.html)
 ///
 /// @param self QCPSelectionDecoratorBracket*
-/// @param properties flag of enum QCPScatterStyle__ScatterProperty
+/// @param properties flag of enum QCPScatterStyle__ScatterProperty*
 ///
 void q_cpselectiondecoratorbracket_set_used_scatter_properties(void* self, const int32_t* properties);
 
@@ -48390,14 +48390,14 @@ void q_cplegend_set_icon_border_pen(void* self, void* pen);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// @param self QCPLegend*
-/// @param selectableParts flag of enum QCPLegend__SelectablePart
+/// @param selectableParts flag of enum QCPLegend__SelectablePart*
 ///
 void q_cplegend_set_selectable_parts(void* self, const int32_t* selectableParts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPLegend.html)
 ///
 /// @param self QCPLegend*
-/// @param selectedParts flag of enum QCPLegend__SelectablePart
+/// @param selectedParts flag of enum QCPLegend__SelectablePart*
 ///
 void q_cplegend_set_selected_parts(void* self, const int32_t* selectedParts);
 
@@ -99011,14 +99011,14 @@ void q_cppolaraxisradial_set_selected_sub_tick_pen(void* self, void* pen);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
-/// @param selectableParts flag of enum QCPPolarAxisRadial__SelectablePart
+/// @param selectableParts flag of enum QCPPolarAxisRadial__SelectablePart*
 ///
 void q_cppolaraxisradial_set_selectable_parts(void* self, const int32_t* selectableParts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
-/// @param selectedParts flag of enum QCPPolarAxisRadial__SelectablePart
+/// @param selectedParts flag of enum QCPPolarAxisRadial__SelectablePart*
 ///
 void q_cppolaraxisradial_set_selected_parts(void* self, const int32_t* selectedParts);
 
@@ -99148,14 +99148,14 @@ void q_cppolaraxisradial_scale_type_changed(void* self, int32_t scaleType);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
-/// @param parts flag of enum QCPPolarAxisRadial__SelectablePart
+/// @param parts flag of enum QCPPolarAxisRadial__SelectablePart*
 ///
 void q_cppolaraxisradial_selection_changed(void* self, const int32_t* parts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisRadial.html)
 ///
 /// @param self QCPPolarAxisRadial*
-/// @param parts flag of enum QCPPolarAxisRadial__SelectablePart
+/// @param parts flag of enum QCPPolarAxisRadial__SelectablePart*
 ///
 void q_cppolaraxisradial_selectable_changed(void* self, const int32_t* parts);
 
@@ -101650,14 +101650,14 @@ void q_cppolaraxisangular_set_selected_sub_tick_pen(void* self, void* pen);
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// @param self QCPPolarAxisAngular*
-/// @param selectableParts flag of enum QCPPolarAxisAngular__SelectablePart
+/// @param selectableParts flag of enum QCPPolarAxisAngular__SelectablePart*
 ///
 void q_cppolaraxisangular_set_selectable_parts(void* self, const int32_t* selectableParts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// @param self QCPPolarAxisAngular*
-/// @param selectedParts flag of enum QCPPolarAxisAngular__SelectablePart
+/// @param selectedParts flag of enum QCPPolarAxisAngular__SelectablePart*
 ///
 void q_cppolaraxisangular_set_selected_parts(void* self, const int32_t* selectedParts);
 
@@ -101972,14 +101972,14 @@ void q_cppolaraxisangular_range_changed2(void* self, void* newRange, void* oldRa
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// @param self QCPPolarAxisAngular*
-/// @param parts flag of enum QCPPolarAxisAngular__SelectablePart
+/// @param parts flag of enum QCPPolarAxisAngular__SelectablePart*
 ///
 void q_cppolaraxisangular_selection_changed(void* self, const int32_t* parts);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPPolarAxisAngular.html)
 ///
 /// @param self QCPPolarAxisAngular*
-/// @param parts flag of enum QCPPolarAxisAngular__SelectablePart
+/// @param parts flag of enum QCPPolarAxisAngular__SelectablePart*
 ///
 void q_cppolaraxisangular_selectable_changed(void* self, const int32_t* parts);
 

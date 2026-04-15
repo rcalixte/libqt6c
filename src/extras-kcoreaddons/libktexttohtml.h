@@ -18,7 +18,7 @@
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param param1 const char*
-/// @param param2 flag of enum KTextToHTML__Option
+/// @param param2 flag of enum KTextToHTML__Option*
 /// @param param3 int
 /// @param param4 int
 ///

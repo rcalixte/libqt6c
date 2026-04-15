@@ -21,7 +21,7 @@ KFontChooserDialog* k_fontchooserdialog_new();
 
 /// k_fontchooserdialog_new2 constructs a new KFontChooserDialog object.
 ///
-/// @param flags flag of enum KFontChooser__DisplayFlag
+/// @param flags flag of enum KFontChooser__DisplayFlag*
 ///
 KFontChooserDialog* k_fontchooserdialog_new2(const int32_t* flags);
 
@@ -29,7 +29,7 @@ KFontChooserDialog* k_fontchooserdialog_new2(const int32_t* flags);
 
 /// k_fontchooserdialog_new3 constructs a new KFontChooserDialog object.
 ///
-/// @param flags flag of enum KFontChooser__DisplayFlag
+/// @param flags flag of enum KFontChooser__DisplayFlag*
 /// @param parent QWidget*
 ///
 KFontChooserDialog* k_fontchooserdialog_new3(const int32_t* flags, void* parent);
@@ -141,7 +141,7 @@ int32_t k_fontchooserdialog_get_font(void* theFont);
 /// [Upstream resources](https://api.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
-/// @param diffFlags flag of enum KFontChooser__FontDiff
+/// @param diffFlags flag of enum KFontChooser__FontDiff*
 ///
 int32_t k_fontchooserdialog_get_font_diff(void* theFont, int32_t* diffFlags);
 
@@ -189,14 +189,14 @@ void k_fontchooserdialog_set_font2(void* self, void* font, bool onlyFixed);
 /// [Upstream resources](https://api.kde.org/kfontchooserdialog.html#getFont)
 ///
 /// @param theFont QFont*
-/// @param flags flag of enum KFontChooser__DisplayFlag
+/// @param flags flag of enum KFontChooser__DisplayFlag*
 ///
 int32_t k_fontchooserdialog_get_font2(void* theFont, const int32_t* flags);
 
 /// [Upstream resources](https://api.kde.org/kfontchooserdialog.html#getFont)
 ///
 /// @param theFont QFont*
-/// @param flags flag of enum KFontChooser__DisplayFlag
+/// @param flags flag of enum KFontChooser__DisplayFlag*
 /// @param parent QWidget*
 ///
 int32_t k_fontchooserdialog_get_font3(void* theFont, const int32_t* flags, void* parent);
@@ -204,16 +204,16 @@ int32_t k_fontchooserdialog_get_font3(void* theFont, const int32_t* flags, void*
 /// [Upstream resources](https://api.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
-/// @param diffFlags flag of enum KFontChooser__FontDiff
-/// @param flags flag of enum KFontChooser__DisplayFlag
+/// @param diffFlags flag of enum KFontChooser__FontDiff*
+/// @param flags flag of enum KFontChooser__DisplayFlag*
 ///
 int32_t k_fontchooserdialog_get_font_diff3(void* theFont, int32_t* diffFlags, const int32_t* flags);
 
 /// [Upstream resources](https://api.kde.org/kfontchooserdialog.html#getFontDiff)
 ///
 /// @param theFont QFont*
-/// @param diffFlags flag of enum KFontChooser__FontDiff
-/// @param flags flag of enum KFontChooser__DisplayFlag
+/// @param diffFlags flag of enum KFontChooser__FontDiff*
+/// @param flags flag of enum KFontChooser__DisplayFlag*
 /// @param parent QWidget*
 ///
 int32_t k_fontchooserdialog_get_font_diff4(void* theFont, int32_t* diffFlags, const int32_t* flags, void* parent);

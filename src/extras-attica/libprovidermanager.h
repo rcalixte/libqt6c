@@ -21,7 +21,7 @@ Attica__ProviderManager* k_attica__providermanager_new();
 
 /// k_attica__providermanager_new2 constructs a new Attica::ProviderManager object.
 ///
-/// @param flags flag of enum Attica__ProviderManager__ProviderFlag
+/// @param flags flag of enum Attica__ProviderManager__ProviderFlag*
 ///
 Attica__ProviderManager* k_attica__providermanager_new2(const int32_t* flags);
 

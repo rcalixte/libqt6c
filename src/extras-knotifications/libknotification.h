@@ -1285,7 +1285,7 @@ int32_t k_notification_flags(void* self);
 /// [Upstream resources](https://api.kde.org/knotification.html#setFlags)
 ///
 /// @param self KNotification*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 void k_notification_set_flags(void* self, const int32_t* flags);
 
@@ -1711,7 +1711,7 @@ KNotification* k_notification_event42(const char* eventId, const char* title, co
 /// @param title const char*
 /// @param text const char*
 /// @param pixmap QPixmap*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event52(const char* eventId, const char* title, const char* text, void* pixmap, const int32_t* flags);
 
@@ -1721,7 +1721,7 @@ KNotification* k_notification_event52(const char* eventId, const char* title, co
 /// @param title const char*
 /// @param text const char*
 /// @param pixmap QPixmap*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 /// @param componentName const char*
 ///
 KNotification* k_notification_event62(const char* eventId, const char* title, const char* text, void* pixmap, const int32_t* flags, const char* componentName);
@@ -1746,7 +1746,7 @@ KNotification* k_notification_event32(const char* eventId, const char* text, voi
 /// @param eventId const char*
 /// @param text const char*
 /// @param pixmap QPixmap*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event43(const char* eventId, const char* text, void* pixmap, const int32_t* flags);
 
@@ -1755,7 +1755,7 @@ KNotification* k_notification_event43(const char* eventId, const char* text, voi
 /// @param eventId const char*
 /// @param text const char*
 /// @param pixmap QPixmap*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 /// @param componentName const char*
 ///
 KNotification* k_notification_event53(const char* eventId, const char* text, void* pixmap, const int32_t* flags, const char* componentName);
@@ -1780,7 +1780,7 @@ KNotification* k_notification_event33(int32_t eventId, const char* text, void* p
 /// @param eventId enum KNotification__StandardEvent
 /// @param text const char*
 /// @param pixmap QPixmap*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event44(int32_t eventId, const char* text, void* pixmap, const int32_t* flags);
 
@@ -1790,7 +1790,7 @@ KNotification* k_notification_event44(int32_t eventId, const char* text, void* p
 /// @param title const char*
 /// @param text const char*
 /// @param pixmap QPixmap*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event54(int32_t eventId, const char* title, const char* text, void* pixmap, const int32_t* flags);
 
@@ -1800,7 +1800,7 @@ KNotification* k_notification_event54(int32_t eventId, const char* title, const 
 /// @param title const char*
 /// @param text const char*
 /// @param iconName const char*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event55(const char* eventId, const char* title, const char* text, const char* iconName, const int32_t* flags);
 
@@ -1810,7 +1810,7 @@ KNotification* k_notification_event55(const char* eventId, const char* title, co
 /// @param title const char*
 /// @param text const char*
 /// @param iconName const char*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 /// @param componentName const char*
 ///
 KNotification* k_notification_event63(const char* eventId, const char* title, const char* text, const char* iconName, const int32_t* flags, const char* componentName);
@@ -1821,7 +1821,7 @@ KNotification* k_notification_event63(const char* eventId, const char* title, co
 /// @param title const char*
 /// @param text const char*
 /// @param iconName const char*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event56(int32_t eventId, const char* title, const char* text, const char* iconName, const int32_t* flags);
 
@@ -1830,7 +1830,7 @@ KNotification* k_notification_event56(int32_t eventId, const char* title, const 
 /// @param eventId enum KNotification__StandardEvent
 /// @param title const char*
 /// @param text const char*
-/// @param flags flag of enum KNotification__NotificationFlag
+/// @param flags flag of enum KNotification__NotificationFlag*
 ///
 KNotification* k_notification_event45(int32_t eventId, const char* title, const char* text, const int32_t* flags);
 
