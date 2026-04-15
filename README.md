@@ -5,7 +5,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/rcalixte/libqt6c/blob/master/LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/rcalixte/libqt6c)](https://goreportcard.com/report/github.com/rcalixte/libqt6c)
-[![Static Badge](https://img.shields.io/badge/v0.15%20(stable)-fdc009?logo=zig&logoColor=f7a41d&label=Zig)](https://ziglang.org/download/)
+[![Static Badge](https://img.shields.io/badge/v0.16%20(stable)-fdc009?logo=zig&logoColor=f7a41d&label=Zig)](https://ziglang.org/download/)
 
 [![Documentation](https://github.com/rcalixte/libqt6c/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/rcalixte/libqt6c/actions/workflows/docs.yml)
 </div>
@@ -20,7 +20,7 @@ For previous libqt6c versions supporting Qt 6.4+, there are branches correspondi
 
 This library is designed to be used as a dependency in a larger application and not as a standalone library. The versioning scheme used by this library is based on the Qt version used as a base to generate the bindings with an additional nod to the library revision number. Any breaking changes to the library will be reflected in the changelog.
 
-These bindings are based on the [MIQT bindings for Go](https://github.com/mappu/miqt) that were released in August 2024. This library features support for Qt Core, GUI, Widgets, and Network as well as [additional Qt modules](https://doc.qt.io/qt-6/qt-additional-modules.html) such as Multimedia, Print Support, Spatial Audio, SQL, SVG, WebChannel, WebEngine, and more. In addition to Qt modules, this library also features support for third-party libraries such as [QCustomPlot](https://www.qcustomplot.com), [QScintilla](https://riverbankcomputing.com/software/qscintilla), various [KDE Frameworks](https://develop.kde.org/products/frameworks/), and others. This library has support for slots/signals, subclassing, custom widgets, async via Qt, etc. In addition, there is library tooling that provides native support for Qt Creator/Designer forms and [the Qt Resource System](https://doc.qt.io/qt-6/resources.html). With improper handling, it is fairly easy to encounter segmentation faults or errors. Q3 of the [FAQ](#faq) is a decent entry point for newcomers in addition to the [examples](https://github.com/rcalixte/libqt6c-examples) and the [demo application](https://github.com/rcalixte/libqt6c-demo). Please try out the library and start a [discussion](https://github.com/rcalixte/libqt6c/discussions) if you have any questions or issues directly relevant to this library.
+These bindings are based on the [MIQT bindings for Go](https://github.com/mappu/miqt) that were released in August 2024. This library features support for Qt Core, GUI, Widgets, and Network as well as [additional Qt modules](https://doc.qt.io/qt-6/qt-additional-modules.html) such as Multimedia, Print Support, Spatial Audio, SQL, SVG, WebChannel, WebEngine, and more. In addition to Qt modules, this library also features support for third-party libraries such as [QCustomPlot](https://www.qcustomplot.com), [QScintilla](https://riverbankcomputing.com/software/qscintilla), various [KDE Frameworks](https://develop.kde.org/products/frameworks/), and others. This library has support for slots/signals, subclassing, custom widgets, async via Qt, etc. In addition, there is library tooling that provides native support for Qt Creator/Designer forms and [the Qt Resource System](https://doc.qt.io/qt-6/resources.html). With improper handling, it is fairly easy to encounter segmentation faults or errors but developing in the Debug build mode affords significant advantages that aid the developer experience. Q3 of the [FAQ](#faq) is a decent entry point for newcomers in addition to the [examples](https://github.com/rcalixte/libqt6c-examples) and the [demo application](https://github.com/rcalixte/libqt6c-demo). Please try out the library and start a [discussion](https://github.com/rcalixte/libqt6c/discussions) if you have any questions or issues directly relevant to this library.
 
 ---
 
@@ -82,11 +82,11 @@ Some libraries have restrictions, either due to limited platform support, less-p
 | extras-            | all platforms<sup>1</sup> | Permissive  |
 | foss-extras-       | BSD & Linux only          | Permissive  |
 | foss-restricted-   | BSD & Linux only          | Restrictive |
-| posix-extras-      | non-Windows               | Permissive  |
-| posix-restricted-  | non-Windows               | Restrictive |
-| restricted-extras- | all platforms             | Restrictive |
+| posix-extras-      | non-Windows<sup>1</sup>   | Permissive  |
+| posix-restricted-  | non-Windows<sup>1</sup>   | Restrictive |
+| restricted-extras- | all platforms<sup>1</sup> | Restrictive |
 
-<sup>1</sup>While macOS and Windows are supported upstream by the libraries, library installation for these platforms may be non-trivial. Therefore, these libraries are disabled by default and must be explicitly enabled with the appropriate build option.
+<sup>1</sup>While macOS and Windows are supported upstream by some of these libraries, library installation for these platforms may be non-trivial. Therefore, these libraries are disabled by default and must be explicitly enabled with the appropriate build option.
 
 License
 -------
@@ -102,43 +102,41 @@ The [`helloworld`](https://github.com/rcalixte/libqt6c-examples/tree/master/src/
 
 ```c
 #include <libqt6c.h>
+// Either the single global header or individual library headers can be used
+#include <libqapplication.h>
+#include <libqwidget.h>
+#include <libqpushbutton.h>
 
 #define BUFFER_SIZE 64
+static size_t counter = 0;
+static char buffer[BUFFER_SIZE];
 
-static long counter = 0;
-
-void button_callback(void* self) {
+void on_clicked(void* self) {
     counter++;
-    char buffer[BUFFER_SIZE];
     snprintf(buffer, BUFFER_SIZE, "You have clicked the button %ld time(s)", counter);
     q_pushbutton_set_text(self, buffer);
 }
 
 int main(int argc, char* argv[]) {
-    // Initialize Qt application
+    // Initialize the Qt application
     QApplication* qapp = q_application_new(&argc, argv);
 
+    // Create a new widget
     QWidget* widget = q_widget_new2();
-    if (!widget) {
-        // we can use assert or check for null to simulate exception handling
-        // assert(widget != NULL);
-        fprintf(stderr, "Failed to create widget\n");
-        return 1;
-    }
 
-    // We don't need to free the button, it's a child of the widget
+    // We don't need to free/delete the button, it's a child of the widget
     QPushButton* button = q_pushbutton_new5("Hello world!", widget);
-    if (!button) {
-        fprintf(stderr, "Failed to create button\n");
-        return 1;
-    }
-
     q_pushbutton_set_fixed_width(button, 320);
-    q_pushbutton_on_clicked(button, button_callback);
+    // Connect the button to the callback function
+    q_pushbutton_on_clicked(button, on_clicked);
+
+    // Display the widget
     q_widget_show(widget);
 
+    // Start the event loop
     int result = q_application_exec();
 
+    // Cleanup the widget and the application objects
     q_widget_delete(widget);
     q_application_delete(qapp);
 
@@ -168,7 +166,7 @@ sudo zig build --prefix-lib-dir /usr/local/lib/libqt6c # creates /usr/local/lib/
 Prefixed libraries have per-library options that can be used to enable or disable them (where supported):
 
 ```bash
-zig build -Denable-charts=true -Denable-qscintilla=false
+zig build -Denable-charts -Denable-qscintilla=false
 ```
 
 In the event that one or more extra library include paths are needed e.g. a locally compiled extra library in a non-standard path, the `extra-paths` option supports this use case:
@@ -429,7 +427,13 @@ The version of the Qt 6 installation path may differ depending on the version of
 Usage
 -----
 
-- If using Zig's build system, use a commit hash to import the library into your project:
+- If using Zig's build system, import the library into your project:
+
+```bash
+zig fetch --save https://github.com/rcalixte/libqt6c
+```
+
+- An alternative option is to use a commit hash to import the library into your project:
 
 ```bash
 zig fetch --save https://github.com/rcalixte/libqt6c/archive/<commit>.tar.gz
@@ -571,7 +575,7 @@ int32_t alignment = QT_ALIGNMENTFLAG_ALIGNLEFT | QT_ALIGNMENTFLAG_ALIGNTOP;
 
 ### Q4. What build modes are supported by the library's build system?
 
-Currently, only `ReleaseFast`, `ReleaseSafe`, and `ReleaseSmall` are supported. The `Debug` build mode is not supported. This may change in the future. The default build mode is `ReleaseFast`. To change the build mode:
+Currently, `Debug`, `ReleaseFast`, `ReleaseSafe`, and `ReleaseSmall` are supported. The default build mode is `Debug`. To change the build mode:
 
 ```bash
 zig build -Doptimize=ReleaseSmall
