@@ -155,7 +155,7 @@ libqt_list k_richtextwidget_super_create_actions(void* self);
 /// [Upstream resources](https://api.kde.org/krichtextwidget.html#setRichTextSupport)
 ///
 /// @param self KRichTextWidget*
-/// @param support flag of enum KRichTextWidget__RichTextSupportValues
+/// @param support flag of enum KRichTextWidget__RichTextSupportValues*
 ///
 void k_richtextwidget_set_rich_text_support(void* self, const int32_t* support);
 

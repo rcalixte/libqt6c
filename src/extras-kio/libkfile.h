@@ -43,37 +43,37 @@ void k_file_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://api.kde.org/kfile.html#isSortByName)
 ///
-/// @param sort flag of enum QDir__SortFlag
+/// @param sort flag of enum QDir__SortFlag*
 ///
 bool k_file_is_sort_by_name(const int32_t* sort);
 
 /// [Upstream resources](https://api.kde.org/kfile.html#isSortBySize)
 ///
-/// @param sort flag of enum QDir__SortFlag
+/// @param sort flag of enum QDir__SortFlag*
 ///
 bool k_file_is_sort_by_size(const int32_t* sort);
 
 /// [Upstream resources](https://api.kde.org/kfile.html#isSortByDate)
 ///
-/// @param sort flag of enum QDir__SortFlag
+/// @param sort flag of enum QDir__SortFlag*
 ///
 bool k_file_is_sort_by_date(const int32_t* sort);
 
 /// [Upstream resources](https://api.kde.org/kfile.html#isSortByType)
 ///
-/// @param sort flag of enum QDir__SortFlag
+/// @param sort flag of enum QDir__SortFlag*
 ///
 bool k_file_is_sort_by_type(const int32_t* sort);
 
 /// [Upstream resources](https://api.kde.org/kfile.html#isSortDirsFirst)
 ///
-/// @param sort flag of enum QDir__SortFlag
+/// @param sort flag of enum QDir__SortFlag*
 ///
 bool k_file_is_sort_dirs_first(const int32_t* sort);
 
 /// [Upstream resources](https://api.kde.org/kfile.html#isSortCaseInsensitive)
 ///
-/// @param sort flag of enum QDir__SortFlag
+/// @param sort flag of enum QDir__SortFlag*
 ///
 bool k_file_is_sort_case_insensitive(const int32_t* sort);
 

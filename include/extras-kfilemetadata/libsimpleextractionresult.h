@@ -42,7 +42,7 @@ KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_ne
 ///
 /// @param url const char*
 /// @param mimetype const char*
-/// @param flags flag of enum KFileMetaData__ExtractionResult__Flag
+/// @param flags flag of enum KFileMetaData__ExtractionResult__Flag*
 ///
 KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new4(const char* url, const char* mimetype, const int32_t* flags);
 

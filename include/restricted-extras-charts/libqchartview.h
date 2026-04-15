@@ -130,7 +130,7 @@ const char* q_chartview_tr(const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qchartview-qtcharts.html#setRubberBand)
 ///
 /// @param self QChartView*
-/// @param rubberBands flag of enum QChartView__RubberBand
+/// @param rubberBands flag of enum QChartView__RubberBand*
 ///
 void q_chartview_set_rubber_band(void* self, const int32_t* rubberBands);
 

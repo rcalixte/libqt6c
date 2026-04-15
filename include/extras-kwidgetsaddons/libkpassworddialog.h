@@ -30,7 +30,7 @@ KPasswordDialog* k_passworddialog_new2();
 /// k_passworddialog_new3 constructs a new KPasswordDialog object.
 ///
 /// @param parent QWidget*
-/// @param flags flag of enum KPasswordDialog__KPasswordDialogFlag
+/// @param flags flag of enum KPasswordDialog__KPasswordDialogFlag*
 ///
 KPasswordDialog* k_passworddialog_new3(void* parent, const int32_t* flags);
 
