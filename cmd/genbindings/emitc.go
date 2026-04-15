@@ -323,7 +323,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 	if p.IsKnownEnum() {
 		if strings.HasPrefix(p.ParameterType, "QFlags<") {
 			if fullEnumName {
-				ret = "flag of enum " + cabiEnumClassName(p.ParameterType[7:len(p.ParameterType)-1])
+				ret = "flag of enum " + cabiEnumClassName(p.ParameterType[7:len(p.ParameterType)-1]) + ifv(p.Pointer || p.ByRef, "*", "")
 			} else {
 				e, _ := KnownEnums[p.ParameterType]
 				ret = ifv(p.Const, "const ", "") + e.EnumTypeC + ifv(p.Pointer || p.ByRef, "*", "")
@@ -459,11 +459,11 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 				enumType := strings.Split(p.ParameterType, "QFlags<")[1]
 				enumType = strings.Split(enumType, ">")[0]
 				enumType = strings.ReplaceAll(enumType, ":", "_")
-				ret = "flag of enum " + enumType
+				ret = "flag of enum " + enumType + ifv(p.Pointer || p.ByRef, "*", "")
 			} else {
 				enumType := p.ParameterType
 				enumType = strings.ReplaceAll(enumType, ":", "_")
-				ret = "flag of enum " + enumType
+				ret = "flag of enum " + enumType + ifv(p.Pointer || p.ByRef, "*", "")
 			}
 		} else {
 			ret = e.EnumTypeC
@@ -833,7 +833,7 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 
 	if rt.IsKnownEnum() {
 		if strings.HasPrefix(rt.ParameterType, "QFlags<") {
-			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1])
+			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1]) + ifv(rt.Pointer || rt.ByRef, "*", "")
 		} else {
 			returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true)
 		}
