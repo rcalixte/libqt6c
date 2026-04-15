@@ -1482,7 +1482,7 @@ func generate(goGenerateArgs string, flagExtraOps UiFlagOptions, u UiFile) ([]by
 
 #include <libqt6c.h>` + maybeInclude + `
 
-/// The type definition for ` + uClass + `Ui containing all the Qt objects
+/// The type definition for ` + uClass + `Ui containing all of the Qt objects
 typedef struct {
 ` + strings.Join(collectClassNames_Widget(&u.Widget), "\n") + `
 } ` + uClass + `Ui;
@@ -1507,7 +1507,10 @@ static void retranslate_` + strings.TrimPrefix(cMethod, "_") + "_ui(" + uClass +
 /// new` + cMethod + "_ui creates all the Qt objects for " + uClass + `Ui
 static ` + uClass + "Ui* new" + cMethod + `_ui() {
     ` + uClass + "Ui* ui = (" + uClass + "Ui*)malloc(sizeof(" + uClass + `Ui));
-if (ui == NULL) return NULL;
+    if (ui == NULL) {
+        fprintf(stderr, "Failed to create ` + uClass + `Ui\n");
+        abort();
+    }
 `)
 
 	ret.WriteString(strings.Join(newFuncBody, ""))
