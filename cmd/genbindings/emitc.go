@@ -351,7 +351,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		ret += "signed char"
 	case "qint16", "GLshort":
 		ret += "int16_t"
-	case "ushort", "quint16", "GLushort":
+	case "ushort", "quint16", "unsigned short", "GLushort":
 		ret += "uint16_t"
 	case "qint32", "GLint", "GLsizei":
 		ret += "int32_t"
@@ -1813,9 +1813,6 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 #include <stddef.h>
 
 #include "` + maybeDots + `libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "` + bindingInclude + `"` + "\n\n")
 
 	getReferencedTypes(src, qtextradefs, qtfuncdefs)
