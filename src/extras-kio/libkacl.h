@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://api.kde.org/kacl.html)
@@ -72,40 +69,40 @@ bool k_acl_is_valid(void* self);
 ///
 /// @param self KACL*
 ///
-unsigned short k_acl_owner_permissions(void* self);
+uint16_t k_acl_owner_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setOwnerPermissions)
 ///
 /// @param self KACL*
-/// @param ownerPermissions unsigned short
+/// @param ownerPermissions uint16_t
 ///
-bool k_acl_set_owner_permissions(void* self, unsigned short ownerPermissions);
+bool k_acl_set_owner_permissions(void* self, uint16_t ownerPermissions);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#owningGroupPermissions)
 ///
 /// @param self KACL*
 ///
-unsigned short k_acl_owning_group_permissions(void* self);
+uint16_t k_acl_owning_group_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setOwningGroupPermissions)
 ///
 /// @param self KACL*
-/// @param owningGroupPermissions unsigned short
+/// @param owningGroupPermissions uint16_t
 ///
-bool k_acl_set_owning_group_permissions(void* self, unsigned short owningGroupPermissions);
+bool k_acl_set_owning_group_permissions(void* self, uint16_t owningGroupPermissions);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#othersPermissions)
 ///
 /// @param self KACL*
 ///
-unsigned short k_acl_others_permissions(void* self);
+uint16_t k_acl_others_permissions(void* self);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setOthersPermissions)
 ///
 /// @param self KACL*
-/// @param othersPermissions unsigned short
+/// @param othersPermissions uint16_t
 ///
-bool k_acl_set_others_permissions(void* self, unsigned short othersPermissions);
+bool k_acl_set_others_permissions(void* self, uint16_t othersPermissions);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#basePermissions)
 ///
@@ -124,14 +121,14 @@ bool k_acl_is_extended(void* self);
 /// @param self KACL*
 /// @param exists bool*
 ///
-unsigned short k_acl_mask_permissions(void* self, bool* exists);
+uint16_t k_acl_mask_permissions(void* self, bool* exists);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setMaskPermissions)
 ///
 /// @param self KACL*
-/// @param maskPermissions unsigned short
+/// @param maskPermissions uint16_t
 ///
-bool k_acl_set_mask_permissions(void* self, unsigned short maskPermissions);
+bool k_acl_set_mask_permissions(void* self, uint16_t maskPermissions);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#namedUserPermissions)
 ///
@@ -139,21 +136,21 @@ bool k_acl_set_mask_permissions(void* self, unsigned short maskPermissions);
 /// @param name const char*
 /// @param exists bool*
 ///
-unsigned short k_acl_named_user_permissions(void* self, const char* name, bool* exists);
+uint16_t k_acl_named_user_permissions(void* self, const char* name, bool* exists);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setNamedUserPermissions)
 ///
 /// @param self KACL*
 /// @param name const char*
-/// @param param2 unsigned short
+/// @param param2 uint16_t
 ///
-bool k_acl_set_named_user_permissions(void* self, const char* name, unsigned short param2);
+bool k_acl_set_named_user_permissions(void* self, const char* name, uint16_t param2);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#allUserPermissions)
 ///
 /// @param self KACL*
 ///
-/// @return libqt_list of libqt_pair tuple of const char* and unsigned short
+/// @return libqt_list of libqt_pair tuple of const char* and uint16_t
 ///
 libqt_list k_acl_all_user_permissions(void* self);
 
@@ -163,21 +160,21 @@ libqt_list k_acl_all_user_permissions(void* self);
 /// @param name const char*
 /// @param exists bool*
 ///
-unsigned short k_acl_named_group_permissions(void* self, const char* name, bool* exists);
+uint16_t k_acl_named_group_permissions(void* self, const char* name, bool* exists);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#setNamedGroupPermissions)
 ///
 /// @param self KACL*
 /// @param name const char*
-/// @param param2 unsigned short
+/// @param param2 uint16_t
 ///
-bool k_acl_set_named_group_permissions(void* self, const char* name, unsigned short param2);
+bool k_acl_set_named_group_permissions(void* self, const char* name, uint16_t param2);
 
 /// [Upstream resources](https://api.kde.org/kacl.html#allGroupPermissions)
 ///
 /// @param self KACL*
 ///
-/// @return libqt_list of libqt_pair tuple of const char* and unsigned short
+/// @return libqt_list of libqt_pair tuple of const char* and uint16_t
 ///
 libqt_list k_acl_all_group_permissions(void* self);
 

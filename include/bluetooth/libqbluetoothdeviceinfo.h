@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothdeviceinfo.html)
@@ -146,7 +143,7 @@ void q_bluetoothdeviceinfo_set_service_uuids(void* self, libqt_list uuids);
 ///
 /// @param self QBluetoothDeviceInfo*
 ///
-/// @return libqt_list of unsigned short
+/// @return libqt_list of uint16_t
 ///
 libqt_list q_bluetoothdeviceinfo_manufacturer_ids(void* self);
 
@@ -172,7 +169,7 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
 /// @warning Caller is responsible for freeing the returned memory using a similar sequence to:
 /// ```c
 /// // Example for freeing the returned map of type:
-/// // libqt_map of unsigned short to char**
+/// // libqt_map of uint16_t to char**
 /// for (size_t i = 0; i < map.len; ++i) {
 ///     for (size_t j = 0; ((char**)map.values)[i][j] != NULL; j++) {
 ///         free((map.values)[i][j]);
@@ -185,7 +182,7 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
 ///
 /// @param self QBluetoothDeviceInfo*
 ///
-/// @return libqt_map of unsigned short to char**
+/// @return libqt_map of uint16_t to char**
 ///
 libqt_map q_bluetoothdeviceinfo_manufacturer_data2(void* self);
 

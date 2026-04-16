@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "qtlibc.h"
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html)
@@ -147,9 +144,9 @@ void q_datastream_operator_shift_right4(void* self, short* i);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///
 /// @param self QDataStream*
-/// @param i unsigned short*
+/// @param i uint16_t*
 ///
-void q_datastream_operator_shift_right5(void* self, unsigned short* i);
+void q_datastream_operator_shift_right5(void* self, uint16_t* i);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatastream.html#operator-gt-gt)
 ///

@@ -79,7 +79,7 @@ void q_datastream_operator_shift_right4(void* self, short* i) {
     QDataStream_OperatorShiftRight4((QDataStream*)self, i);
 }
 
-void q_datastream_operator_shift_right5(void* self, unsigned short* i) {
+void q_datastream_operator_shift_right5(void* self, uint16_t* i) {
     QDataStream_OperatorShiftRight5((QDataStream*)self, i);
 }
 

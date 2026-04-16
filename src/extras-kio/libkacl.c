@@ -33,27 +33,27 @@ bool k_acl_is_valid(void* self) {
     return KACL_IsValid((KACL*)self);
 }
 
-unsigned short k_acl_owner_permissions(void* self) {
+uint16_t k_acl_owner_permissions(void* self) {
     return KACL_OwnerPermissions((KACL*)self);
 }
 
-bool k_acl_set_owner_permissions(void* self, unsigned short ownerPermissions) {
+bool k_acl_set_owner_permissions(void* self, uint16_t ownerPermissions) {
     return KACL_SetOwnerPermissions((KACL*)self, ownerPermissions);
 }
 
-unsigned short k_acl_owning_group_permissions(void* self) {
+uint16_t k_acl_owning_group_permissions(void* self) {
     return KACL_OwningGroupPermissions((KACL*)self);
 }
 
-bool k_acl_set_owning_group_permissions(void* self, unsigned short owningGroupPermissions) {
+bool k_acl_set_owning_group_permissions(void* self, uint16_t owningGroupPermissions) {
     return KACL_SetOwningGroupPermissions((KACL*)self, owningGroupPermissions);
 }
 
-unsigned short k_acl_others_permissions(void* self) {
+uint16_t k_acl_others_permissions(void* self) {
     return KACL_OthersPermissions((KACL*)self);
 }
 
-bool k_acl_set_others_permissions(void* self, unsigned short othersPermissions) {
+bool k_acl_set_others_permissions(void* self, uint16_t othersPermissions) {
     return KACL_SetOthersPermissions((KACL*)self, othersPermissions);
 }
 
@@ -65,23 +65,23 @@ bool k_acl_is_extended(void* self) {
     return KACL_IsExtended((KACL*)self);
 }
 
-unsigned short k_acl_mask_permissions(void* self, bool* exists) {
+uint16_t k_acl_mask_permissions(void* self, bool* exists) {
     return KACL_MaskPermissions((KACL*)self, (bool*)exists);
 }
 
-bool k_acl_set_mask_permissions(void* self, unsigned short maskPermissions) {
+bool k_acl_set_mask_permissions(void* self, uint16_t maskPermissions) {
     return KACL_SetMaskPermissions((KACL*)self, maskPermissions);
 }
 
-unsigned short k_acl_named_user_permissions(void* self, const char* name, bool* exists) {
+uint16_t k_acl_named_user_permissions(void* self, const char* name, bool* exists) {
     return KACL_NamedUserPermissions((KACL*)self, qstring(name), (bool*)exists);
 }
 
-bool k_acl_set_named_user_permissions(void* self, const char* name, unsigned short param2) {
+bool k_acl_set_named_user_permissions(void* self, const char* name, uint16_t param2) {
     return KACL_SetNamedUserPermissions((KACL*)self, qstring(name), param2);
 }
 
-libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_user_permissions(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and uint16_t */ k_acl_all_user_permissions(void* self) {
     libqt_list _arr = KACL_AllUserPermissions((KACL*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {
@@ -97,15 +97,15 @@ libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all
     return _arr;
 }
 
-unsigned short k_acl_named_group_permissions(void* self, const char* name, bool* exists) {
+uint16_t k_acl_named_group_permissions(void* self, const char* name, bool* exists) {
     return KACL_NamedGroupPermissions((KACL*)self, qstring(name), (bool*)exists);
 }
 
-bool k_acl_set_named_group_permissions(void* self, const char* name, unsigned short param2) {
+bool k_acl_set_named_group_permissions(void* self, const char* name, uint16_t param2) {
     return KACL_SetNamedGroupPermissions((KACL*)self, qstring(name), param2);
 }
 
-libqt_list /* of libqt_pair tuple of const char* and unsigned short */ k_acl_all_group_permissions(void* self) {
+libqt_list /* of libqt_pair tuple of const char* and uint16_t */ k_acl_all_group_permissions(void* self) {
     libqt_list _arr = KACL_AllGroupPermissions((KACL*)self);
     libqt_pair* _data = (libqt_pair*)_arr.data.ptr;
     for (size_t i = 0; i < _arr.len; ++i) {

@@ -93,7 +93,7 @@ QDebug* q_debug_operator_shift_left4(void* self, short t) {
     return QDebug_OperatorShiftLeft4((QDebug*)self, t);
 }
 
-QDebug* q_debug_operator_shift_left5(void* self, unsigned short t) {
+QDebug* q_debug_operator_shift_left5(void* self, uint16_t t) {
     return QDebug_OperatorShiftLeft5((QDebug*)self, t);
 }
 

@@ -193,7 +193,7 @@ QTextStream* q_textstream_operator_shift_right4(void* self, short* i) {
     return QTextStream_OperatorShiftRight4((QTextStream*)self, i);
 }
 
-QTextStream* q_textstream_operator_shift_right5(void* self, unsigned short* i) {
+QTextStream* q_textstream_operator_shift_right5(void* self, uint16_t* i) {
     return QTextStream_OperatorShiftRight5((QTextStream*)self, i);
 }
 
@@ -257,7 +257,7 @@ QTextStream* q_textstream_operator_shift_left4(void* self, short i) {
     return QTextStream_OperatorShiftLeft4((QTextStream*)self, i);
 }
 
-QTextStream* q_textstream_operator_shift_left5(void* self, unsigned short i) {
+QTextStream* q_textstream_operator_shift_left5(void* self, uint16_t i) {
     return QTextStream_OperatorShiftLeft5((QTextStream*)self, i);
 }
 

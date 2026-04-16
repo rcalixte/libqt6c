@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "qtlibc.h"
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html)
@@ -160,9 +157,9 @@ QDebug* q_debug_operator_shift_left4(void* self, short t);
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///
 /// @param self QDebug*
-/// @param t unsigned short
+/// @param t uint16_t
 ///
-QDebug* q_debug_operator_shift_left5(void* self, unsigned short t);
+QDebug* q_debug_operator_shift_left5(void* self, uint16_t t);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdebug.html#operator-lt-lt)
 ///

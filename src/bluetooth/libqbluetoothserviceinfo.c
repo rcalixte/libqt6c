@@ -49,7 +49,7 @@ QVariant* q_bluetoothserviceinfo_attribute(void* self, uint16_t attributeId) {
     return QBluetoothServiceInfo_Attribute((QBluetoothServiceInfo*)self, attributeId);
 }
 
-libqt_list /* of unsigned short */ q_bluetoothserviceinfo_attributes(void* self) {
+libqt_list /* of uint16_t */ q_bluetoothserviceinfo_attributes(void* self) {
     libqt_list _arr = QBluetoothServiceInfo_Attributes((QBluetoothServiceInfo*)self);
     return _arr;
 }

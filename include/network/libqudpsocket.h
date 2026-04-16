@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qudpsocket.html)
@@ -270,9 +267,9 @@ int64_t q_udpsocket_read_datagram3(void* self, char* data, int64_t maxlen, void*
 /// @param data char*
 /// @param maxlen int64_t
 /// @param host QHostAddress*
-/// @param port unsigned short*
+/// @param port uint16_t*
 ///
-int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void* host, unsigned short* port);
+int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void* host, uint16_t* port);
 
 /// Inherited from QAbstractSocket
 ///

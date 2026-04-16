@@ -164,7 +164,7 @@ const QDBusArgument* q_dbusargument_operator_shift_right3(void* self, short* arg
     return QDBusArgument_OperatorShiftRight3((QDBusArgument*)self, arg);
 }
 
-const QDBusArgument* q_dbusargument_operator_shift_right4(void* self, unsigned short* arg) {
+const QDBusArgument* q_dbusargument_operator_shift_right4(void* self, uint16_t* arg) {
     return QDBusArgument_OperatorShiftRight4((QDBusArgument*)self, arg);
 }
 
