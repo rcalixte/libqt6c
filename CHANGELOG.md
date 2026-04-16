@@ -1,4 +1,8 @@
 
+### 6.8.2 rev70 (16 April 2026)
+
+* Opt for fixed-width type and cleanup header (#129)
+
 ### 6.8.2 rev69 (15 April 2026)
 
 * **BREAKING CHANGE:** Update to Zig 0.16 and fix documentation comments for enum pointer values (#128)
