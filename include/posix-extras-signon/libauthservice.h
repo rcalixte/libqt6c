@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://accounts-sso.gitlab.io/signond/classSignOn_1_1AuthService.html)

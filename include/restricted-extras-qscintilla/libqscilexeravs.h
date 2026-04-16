@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciLexerAVS.html)

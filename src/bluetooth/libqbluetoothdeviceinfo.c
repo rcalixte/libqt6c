@@ -79,7 +79,7 @@ void q_bluetoothdeviceinfo_set_service_uuids(void* self, libqt_list /* of QBluet
     QBluetoothDeviceInfo_SetServiceUuids((QBluetoothDeviceInfo*)self, uuids);
 }
 
-libqt_list /* of unsigned short */ q_bluetoothdeviceinfo_manufacturer_ids(void* self) {
+libqt_list /* of uint16_t */ q_bluetoothdeviceinfo_manufacturer_ids(void* self) {
     libqt_list _arr = QBluetoothDeviceInfo_ManufacturerIds((QBluetoothDeviceInfo*)self);
     return _arr;
 }
@@ -95,7 +95,7 @@ bool q_bluetoothdeviceinfo_set_manufacturer_data(void* self, uint16_t manufactur
     return QBluetoothDeviceInfo_SetManufacturerData((QBluetoothDeviceInfo*)self, manufacturerId, qstring(data));
 }
 
-libqt_map /* of unsigned short to char** */ q_bluetoothdeviceinfo_manufacturer_data2(void* self) {
+libqt_map /* of uint16_t to char** */ q_bluetoothdeviceinfo_manufacturer_data2(void* self) {
     // Convert QMultiHash<unsigned short,QByteArray> to libqt_map
     libqt_map _out = QBluetoothDeviceInfo_ManufacturerData2((QBluetoothDeviceInfo*)self);
     libqt_map _ret;

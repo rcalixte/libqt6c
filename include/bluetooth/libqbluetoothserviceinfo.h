@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qbluetoothserviceinfo.html)
@@ -93,7 +90,7 @@ QVariant* q_bluetoothserviceinfo_attribute(void* self, uint16_t attributeId);
 ///
 /// @param self QBluetoothServiceInfo*
 ///
-/// @return libqt_list of unsigned short
+/// @return libqt_list of uint16_t
 ///
 libqt_list q_bluetoothserviceinfo_attributes(void* self);
 

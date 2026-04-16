@@ -149,7 +149,7 @@ int64_t q_udpsocket_read_datagram3(void* self, char* data, int64_t maxlen, void*
     return QUdpSocket_ReadDatagram3((QUdpSocket*)self, data, maxlen, (QHostAddress*)host);
 }
 
-int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void* host, unsigned short* port) {
+int64_t q_udpsocket_read_datagram4(void* self, char* data, int64_t maxlen, void* host, uint16_t* port) {
     return QUdpSocket_ReadDatagram4((QUdpSocket*)self, data, maxlen, (QHostAddress*)host, port);
 }
 

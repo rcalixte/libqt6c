@@ -6,9 +6,6 @@
 #include <stddef.h>
 
 #include "../libqttypedefs.h"
-
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-
 #include "../qtlibc.h"
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html)
@@ -264,9 +261,9 @@ const QDBusArgument* q_dbusargument_operator_shift_right3(void* self, short* arg
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
 /// @param self QDBusArgument*
-/// @param arg unsigned short*
+/// @param arg uint16_t*
 ///
-const QDBusArgument* q_dbusargument_operator_shift_right4(void* self, unsigned short* arg);
+const QDBusArgument* q_dbusargument_operator_shift_right4(void* self, uint16_t* arg);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdbusargument.html#operator-gt-gt)
 ///
