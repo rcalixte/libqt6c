@@ -1,4 +1,8 @@
 
+### 6.8.2 rev71 (21 April 2026)
+
+* Add [KStatusNotifierItem](https://api.kde.org/kstatusnotifieritem-index.html) (#130)
+
 ### 6.8.2 rev70 (16 April 2026)
 
 * Opt for fixed-width type and cleanup header (#129)
