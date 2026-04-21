@@ -529,6 +529,7 @@ typedef struct KStartupInfoId KStartupInfoId;
 typedef struct KStartupInfo__Data KStartupInfo__Data;
 typedef struct KStatefulBrush KStatefulBrush;
 typedef struct KStatusBarJobTracker KStatusBarJobTracker;
+typedef struct KStatusNotifierItem KStatusNotifierItem;
 typedef struct KStringHandler KStringHandler;
 typedef struct KStyleExtensions KStyleExtensions;
 typedef struct KStyleManager KStyleManager;
