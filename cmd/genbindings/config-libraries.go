@@ -537,6 +537,17 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags:      "--std=c++17 -I/usr/include/KF6/Sonnet " + pkgConfigCflags("Qt6Widgets"),
 		},
 
+		// KStatusNotifierItem
+		// Depends on Qt Core, GUI, Widgets
+		{
+			path: "extras-kstatusnotifieritem",
+			dirs: []string{
+				"/usr/include/KF6/KStatusNotifierItem",
+			},
+			allowHeader: AllowAllHeaders,
+			cflags:      "--std=c++17 -I/usr/include/KF6/KStatusNotifierItem " + pkgConfigCflags("Qt6Widgets"),
+		},
+
 		// KSvg
 		// Depends on Qt Core, GUI, KConfig
 		{
