@@ -72,7 +72,7 @@ pub fn build(b: *std.Build) !void {
         if (entry.kind == .file and std.mem.endsWith(u8, entry.path, ".cpp")) {
             if (!ok and !std.mem.startsWith(u8, entry.path, "lib")) continue;
             if (is_windows and std.mem.startsWith(u8, entry.path, "webengine")) continue;
-            var basename = std.fs.path.basename(entry.path);
+            var basename = std.Io.Dir.path.basename(entry.path);
             basename = basename[3 .. basename.len - 4];
             if ((!is_linux or distro == .arch or distro == .suse) and
                 (std.mem.eql(u8, basename, "qsctpsocket") or std.mem.eql(u8, basename, "qsctpserver")))
@@ -107,7 +107,7 @@ pub fn build(b: *std.Build) !void {
 
                     const option_value = opt: switch (is_supported) {
                         true => {
-                            const path = std.fs.path.stem(entry.path);
+                            const path = std.Io.Dir.path.stem(entry.path);
                             var library = std.mem.splitBackwardsScalar(u8, path, '-');
                             const name = library.first();
                             const description = b.fmt("Enable {s}", .{name});
@@ -167,7 +167,7 @@ pub fn build(b: *std.Build) !void {
 
     // Create a separate library for each source file
     for (cpp_sources.items) |source| {
-        var basename = std.fs.path.basename(source);
+        var basename = std.Io.Dir.path.basename(source);
         basename = basename[3 .. basename.len - 4];
 
         const lib = b.addLibrary(.{
@@ -198,10 +198,6 @@ pub fn build(b: *std.Build) !void {
     const libqt6c = b.addModule("libqt6c", .{
         .root_source_file = b.path("include/libqt6c.h"),
     });
-
-    // Add options
-    const options = b.addOptions();
-    libqt6c.addOptions("build_options", options);
 
     try b.modules.put(b.allocator, "libqt6c", libqt6c);
 }
@@ -376,6 +372,8 @@ const qt_modules = &.{
     "SonnetCore/sonnet",
     "SonnetUi",
     "SonnetUi/sonnet",
+    // Qt 6 KStatusNotifierItem
+    "KStatusNotifierItem",
     // Qt 6 KSvg
     "KSvg",
     "KSvg/KSvg",
