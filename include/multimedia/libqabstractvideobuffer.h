@@ -10,6 +10,13 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html)
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#map)
+///
+/// @param self QAbstractVideoBuffer*
+/// @param mode enum QVideoFrame__MapMode
+///
+QAbstractVideoBuffer__MapData* q_abstractvideobuffer_map(void* self, int32_t mode);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qabstractvideobuffer.html#unmap)
 ///
 /// @param self QAbstractVideoBuffer*

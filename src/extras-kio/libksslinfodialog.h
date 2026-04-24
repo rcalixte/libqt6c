@@ -107,6 +107,20 @@ int32_t k_sslinfodialog_super_metacall(void* self, int32_t param1, int param2, v
 ///
 const char* k_sslinfodialog_tr(const char* s);
 
+/// [Upstream resources](https://api.kde.org/ksslinfodialog.html#setSslInfo)
+///
+/// @param self KSslInfoDialog*
+/// @param certificateChain libqt_list of QSslCertificate*
+/// @param ip const char*
+/// @param host const char*
+/// @param sslProtocol const char*
+/// @param cipher const char*
+/// @param usedBits int
+/// @param bits int
+/// @param validationErrors libqt_list of int*
+///
+void k_sslinfodialog_set_ssl_info(void* self, libqt_list certificateChain, const char* ip, const char* host, const char* sslProtocol, const char* cipher, int usedBits, int bits, libqt_list validationErrors);
+
 /// [Upstream resources](https://api.kde.org/ksslinfodialog.html#setMainPartEncrypted)
 ///
 /// @param self KSslInfoDialog*
@@ -120,6 +134,14 @@ void k_sslinfodialog_set_main_part_encrypted(void* self, bool mainPartEncrypted)
 /// @param auxiliaryPartsEncrypted bool
 ///
 void k_sslinfodialog_set_auxiliary_parts_encrypted(void* self, bool auxiliaryPartsEncrypted);
+
+/// [Upstream resources](https://api.kde.org/ksslinfodialog.html#certificateErrorsFromString)
+///
+/// @param errorsString const char*
+///
+/// @return libqt_list of libqt_list of enum QSslError__SslError
+///
+libqt_list k_sslinfodialog_certificate_errors_from_string(const char* errorsString);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///

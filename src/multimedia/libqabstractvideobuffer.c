@@ -2,6 +2,10 @@
 #include "libqabstractvideobuffer.hpp"
 #include "libqabstractvideobuffer.h"
 
+QAbstractVideoBuffer__MapData* q_abstractvideobuffer_map(void* self, int32_t mode) {
+    return QAbstractVideoBuffer_Map((QAbstractVideoBuffer*)self, mode);
+}
+
 void q_abstractvideobuffer_unmap(void* self) {
     QAbstractVideoBuffer_Unmap((QAbstractVideoBuffer*)self);
 }
