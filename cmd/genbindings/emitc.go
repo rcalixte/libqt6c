@@ -1336,7 +1336,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 				return shouldReturn + rvalue + ";\n" + afterword
 
-			} else if IsKnownClass(p.ParameterType) {
+			} else if IsKnownClass(p.ParameterType) || p.IsKnownEnum() {
 
 				return shouldReturn + rvalue + ";\n" + afterword
 

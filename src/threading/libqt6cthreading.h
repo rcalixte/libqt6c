@@ -3,7 +3,6 @@
 #define SRCQT6C_LIBQT6CTHREADING_H
 
 #include <stdlib.h>
-#include <string.h>
 
 #ifdef __cplusplus
 extern "C" {

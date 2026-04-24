@@ -9,6 +9,7 @@
 #include "../libqpainter.hpp"
 #include "../libqpoint.hpp"
 #include "../libqsize.hpp"
+#include "../network/libqsslcertificate.hpp"
 #include "../libqvariant.hpp"
 #include "../libqwidget.hpp"
 #include "libksslinfodialog.hpp"
@@ -65,12 +66,20 @@ const char* k_sslinfodialog_tr(const char* s) {
     return _ret;
 }
 
+void k_sslinfodialog_set_ssl_info(void* self, libqt_list /* of QSslCertificate* */ certificateChain, const char* ip, const char* host, const char* sslProtocol, const char* cipher, int usedBits, int bits, libqt_list /* of int* */ validationErrors) {
+    KSslInfoDialog_SetSslInfo((KSslInfoDialog*)self, certificateChain, qstring(ip), qstring(host), qstring(sslProtocol), qstring(cipher), usedBits, bits, validationErrors);
+}
+
 void k_sslinfodialog_set_main_part_encrypted(void* self, bool mainPartEncrypted) {
     KSslInfoDialog_SetMainPartEncrypted((KSslInfoDialog*)self, mainPartEncrypted);
 }
 
 void k_sslinfodialog_set_auxiliary_parts_encrypted(void* self, bool auxiliaryPartsEncrypted) {
     KSslInfoDialog_SetAuxiliaryPartsEncrypted((KSslInfoDialog*)self, auxiliaryPartsEncrypted);
+}
+
+libqt_list /* of libqt_list of enum QSslError__SslError */ k_sslinfodialog_certificate_errors_from_string(const char* errorsString) {
+    return KSslInfoDialog_CertificateErrorsFromString(qstring(errorsString));
 }
 
 const char* k_sslinfodialog_tr2(const char* s, const char* c) {
