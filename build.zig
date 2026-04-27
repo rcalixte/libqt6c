@@ -296,6 +296,8 @@ const qt_modules = &.{
     // Qt 6 SVG
     "QtSvg",
     "QtSvgWidgets",
+    // Qt 6 TextToSpeech
+    "QtTextToSpeech",
     // Qt 6 UI Plugin
     "QtUiPlugin",
     // Qt 6 UI Tools
