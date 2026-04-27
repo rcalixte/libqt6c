@@ -227,6 +227,17 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6SvgWidgets"),
 		},
 
+		// Qt 6 TextToSpeech
+		// Depends on Qt Core
+		{
+			path: "texttospeech",
+			dirs: []string{
+				"/usr/include/" + arch + "-linux-gnu/qt6/QtTextToSpeech",
+			},
+			allowHeader: AllowAllHeaders,
+			cflags:      "--std=c++17 " + pkgConfigCflags("Qt6TextToSpeech"),
+		},
+
 		// Qt 6 UI Plugin
 		// Depends on Qt Core, GUI, Widgets
 		{
@@ -487,7 +498,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KNewStuffWidgets/KNSWidgets",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/KNewStuff -I/usr/include/KF6/KNewStuffCore -I/usr/include/KF6/KNewStuffCore/KNSCore -I/usr/include/KF6/KNewStuffWidgets -I/usr/include/KF6/KNewStuffWidgets/KNSWidgets -I/usr/include/KF6/Attica -I/usr/include/KF6/Attica/Attica -I/usr/include/KF6/Attica/attica " + pkgConfigCflags("Qt6Widgets"),
+			cflags: "--std=c++17 -I/usr/include/KF6/KNewStuff -I/usr/include/KF6/KNewStuffCore -I/usr/include/KF6/KNewStuffCore/KNSCore -I/usr/include/KF6/KNewStuffWidgets" +
+				" -I/usr/include/KF6/KNewStuffWidgets/KNSWidgets -I/usr/include/KF6/Attica -I/usr/include/KF6/Attica/Attica -I/usr/include/KF6/Attica/attica " + pkgConfigCflags("Qt6Widgets"),
 		},
 
 		// KPlotting
@@ -625,7 +637,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KConfigWidgets",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KColorScheme -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui -I/usr/include/KF6/KGuiAddons -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets"),
+			cflags: "--std=c++17 -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KColorScheme -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore" +
+				" -I/usr/include/KF6/KConfigGui -I/usr/include/KF6/KGuiAddons -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets"),
 		},
 
 		// KBookmarks
@@ -671,7 +684,8 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KXmlGui",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/KXmlGui -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KGuiAddons -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets"),
+			cflags: "--std=c++17 -I/usr/include/KF6/KXmlGui -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KConfigGui" +
+				" -I/usr/include/KF6/KConfigWidgets -I/usr/include/KF6/KGuiAddons -I/usr/include/KF6/KWidgetsAddons " + pkgConfigCflags("Qt6Widgets"),
 		},
 
 		// Qt 6 QtKeychain
@@ -783,7 +797,10 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KIOFileWidgets",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/KIO -I/usr/include/KF6/KIOCore -I/usr/include/KF6/KIOCore/kio/KIO -I/usr/include/KF6/KIOGui -I/usr/include/KF6/KIOGui/KIO -I/usr/include/KF6/KIOWidgets -I/usr/include/KF6/KIOWidgets/KIO -I/usr/include/KF6/KIOFileWidgets -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KCoreAddons -I/usr/include/KF6/KWidgetsAddons -I/usr/include/KF6/KBookmarks -I/usr/include/KF6/KCompletion -I/usr/include/KF6/KIconThemes -I/usr/include/KF6/KItemViews -I/usr/include/KF6/KJobWidgets -I/usr/include/KF6/KService -I/usr/include/KF6/Solid " + pkgConfigCflags("Qt6Widgets") + pkgConfigCflags("Qt6Network") + pkgConfigCflags("Qt6DBus") + pkgConfigCflags("Qt6Xml"),
+			cflags: "--std=c++17 -I/usr/include/KF6/KIO -I/usr/include/KF6/KIOCore -I/usr/include/KF6/KIOCore/kio/KIO -I/usr/include/KF6/KIOGui -I/usr/include/KF6/KIOGui/KIO" +
+				" -I/usr/include/KF6/KIOWidgets -I/usr/include/KF6/KIOWidgets/KIO -I/usr/include/KF6/KIOFileWidgets -I/usr/include/KF6/KConfig -I/usr/include/KF6/KConfigCore -I/usr/include/KF6/KCoreAddons" +
+				" -I/usr/include/KF6/KWidgetsAddons -I/usr/include/KF6/KBookmarks -I/usr/include/KF6/KCompletion -I/usr/include/KF6/KIconThemes -I/usr/include/KF6/KItemViews -I/usr/include/KF6/KJobWidgets" +
+				" -I/usr/include/KF6/KService -I/usr/include/KF6/Solid " + pkgConfigCflags("Qt6Widgets") + pkgConfigCflags("Qt6Network") + pkgConfigCflags("Qt6DBus") + pkgConfigCflags("Qt6Xml"),
 		},
 
 		// KParts
@@ -807,7 +824,9 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 				"/usr/include/KF6/KTextEditor/ktexteditor",
 			},
 			allowHeader: AllowAllHeaders,
-			cflags:      "--std=c++17 -I/usr/include/KF6/KTextEditor -I/usr/include/KF6/KTextEditor/KTextEditor -I/usr/include/KF6/KTextEditor/ktexteditor -I/usr/include/KF6/KCompletion -I/usr/include/KF6/KCoreAddons -I/usr/include/KF6/KParts -I/usr/include/KF6/KParts/KParts -I/usr/include/KF6/KParts/kparts -I/usr/include/KF6/KSyntaxHighlighting -I/usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting -I/usr/include/KF6/KXmlGui " + pkgConfigCflags("Qt6Widgets"),
+			cflags: "--std=c++17 -I/usr/include/KF6/KTextEditor -I/usr/include/KF6/KTextEditor/KTextEditor -I/usr/include/KF6/KTextEditor/ktexteditor -I/usr/include/KF6/KCompletion" +
+				" -I/usr/include/KF6/KCoreAddons -I/usr/include/KF6/KParts -I/usr/include/KF6/KParts/KParts -I/usr/include/KF6/KParts/kparts -I/usr/include/KF6/KSyntaxHighlighting" +
+				" -I/usr/include/KF6/KSyntaxHighlighting/KSyntaxHighlighting -I/usr/include/KF6/KXmlGui " + pkgConfigCflags("Qt6Widgets"),
 		},
 
 		// posix-restricted
@@ -875,24 +894,24 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	log.Printf("Starting at %s", startTime.Format(time.RFC1123Z))
 
 	// PASS 1: Gather all types across all modules
-	for _, mod := range modules {
+	for i := range modules {
 		gatherTypes(
-			mod.path,
-			mod.dirs,
-			mod.allowHeader,
+			modules[i].path,
+			modules[i].dirs,
+			modules[i].allowHeader,
 			clangBin,
-			mod.cflags,
+			modules[i].cflags,
 		)
 	}
 
 	var allBatches []*FormatBatch
 
 	// PASS 2: Generate bindings with complete type information
-	for _, mod := range modules {
+	for i := range modules {
 		batch := generate(
-			mod.path,
-			mod.dirs,
-			mod.allowHeader,
+			modules[i].path,
+			modules[i].dirs,
+			modules[i].allowHeader,
 			outDir,
 			&headerList,
 			qtstructdefs,
@@ -918,39 +937,42 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	}
 	sort.Strings(typedefs)
 	outputName := filepath.Join(outDir, "src", "libqttypedefs.h")
-	typedefHeader := "// THIS FILE IS AUTOMATICALLY GENERATED" +
+	var builder strings.Builder
+	builder.Grow(len(structdefs) * 64)
+	builder.WriteString("// THIS FILE IS AUTOMATICALLY GENERATED" +
 		"\n#pragma once" +
 		"\n#include <stddef.h>" +
-		"\n#include <stdint.h>\n\n"
-	for _, k := range structdefs {
-		typedefHeader += k + "\n"
+		"\n#include <stdint.h>\n\n")
+	for i := range structdefs {
+		builder.WriteString(structdefs[i] + "\n")
 	}
-	for _, k := range typedefs {
-		typedefHeader += k + "\n"
+	for i := range typedefs {
+		builder.WriteString(typedefs[i] + "\n")
 	}
 
-	typedefHeader += "\n"
+	builder.WriteString("\n")
 	sortedFunctions := make([]string, 0, len(allqtfuncdefs))
 	for k := range allqtfuncdefs {
 		sortedFunctions = append(sortedFunctions, k)
 	}
 	sort.Strings(sortedFunctions)
-	for _, k := range sortedFunctions {
-		fTypedef := allqtfuncdefs[k]
-		typedefHeader += "typedef " + fTypedef
+	for i := range sortedFunctions {
+		fTypedef := allqtfuncdefs[sortedFunctions[i]]
+		builder.WriteString("typedef " + fTypedef)
 	}
 
-	err := os.WriteFile(outputName, []byte(typedefHeader), 0644)
+	err := os.WriteFile(outputName, []byte(builder.String()), 0644)
 	if err != nil {
 		panic(err)
 	}
 
 	typesFile := filepath.Join(outDir, "src", "libqttypedefs.h")
-	err = os.WriteFile(typesFile, []byte(typedefHeader), 0644)
+	err = os.WriteFile(typesFile, []byte(builder.String()), 0644)
 	if err != nil {
 		panic(err)
 	}
 
+	builder.Reset()
 	includeHeader := filepath.Join(outDir, "include", "libqttypedefs.h")
 
 	err = os.MkdirAll(filepath.Dir(includeHeader), 0755)
@@ -973,9 +995,9 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	var allFiles []string
 	allCopies := make(map[string]string)
 
-	for _, batch := range allBatches {
-		allFiles = append(allFiles, batch.files...)
-		maps.Copy(allCopies, batch.copies)
+	for i := range allBatches {
+		allFiles = append(allFiles, allBatches[i].files...)
+		maps.Copy(allCopies, allBatches[i].copies)
 	}
 
 	if err := processFormatBatch(&FormatBatch{
@@ -988,16 +1010,16 @@ func ProcessLibraries(clangBin, outDir, extraLibsDir string) {
 	log.Printf("Finished formatting all batches in %s", time.Since(startFormattingTime).String())
 	log.Printf("Finished total execution in %s\n", time.Since(startTime).String())
 
-	qt6cHeader := "// THIS FILE IS AUTOMATICALLY GENERATED\n#pragma once\n\n#include \"qtlibc.h\"\n#include \"libqttypedefs.h\"\n#include \"threading/libqt6cthreading.h\"\n"
-	for _, k := range headerList {
-		qt6cHeader += "#include \"" + k + "\"\n"
+	builder.WriteString("// THIS FILE IS AUTOMATICALLY GENERATED\n#pragma once\n\n#include \"qtlibc.h\"\n#include \"libqttypedefs.h\"\n#include \"threading/libqt6cthreading.h\"\n")
+	for i := range headerList {
+		builder.WriteString("#include \"" + headerList[i] + "\"\n")
 	}
-	err = os.WriteFile(filepath.Join(outDir, "src", "libqt6c.h"), []byte(qt6cHeader), 0644)
+	err = os.WriteFile(filepath.Join(outDir, "src", "libqt6c.h"), []byte(builder.String()), 0644)
 	if err != nil {
 		panic(err)
 	}
 
-	err = os.WriteFile(filepath.Join(outDir, "include", "libqt6c.h"), []byte(qt6cHeader), 0644)
+	err = os.WriteFile(filepath.Join(outDir, "include", "libqt6c.h"), []byte(builder.String()), 0644)
 	if err != nil {
 		panic(err)
 	}
