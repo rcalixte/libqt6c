@@ -663,7 +663,10 @@ func (cfs *cFileState) emitCommentParametersC(params []CppParameter, isSlot bool
 		pType := p.RenderTypeC(cfs, false, true, true)
 
 		if t, _, ok := p.QListOf(); ok {
-			if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
+			if l, _, ok := t.QListOf(); ok {
+				pName = cComment("of " + strings.TrimSpace(l.RenderTypeC(cfs, false, true, true)))
+				pType = "libqt_list of libqt_list"
+			} else if IsKnownClass(t.ParameterType) || strings.Contains(t.ParameterType, "::") ||
 				t.IntType() || strings.Contains(pType, "libqt_") || strings.HasPrefix(pType, "pair_") {
 				pName = cComment("of " + strings.TrimSpace(t.RenderTypeC(cfs, false, true, true)))
 				pType = "libqt_list"

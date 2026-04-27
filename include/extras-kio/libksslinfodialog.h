@@ -117,7 +117,7 @@ const char* k_sslinfodialog_tr(const char* s);
 /// @param cipher const char*
 /// @param usedBits int
 /// @param bits int
-/// @param validationErrors libqt_list of int*
+/// @param validationErrors libqt_list of libqt_list of enum QSslError__SslError
 ///
 void k_sslinfodialog_set_ssl_info(void* self, libqt_list certificateChain, const char* ip, const char* host, const char* sslProtocol, const char* cipher, int usedBits, int bits, libqt_list validationErrors);
 

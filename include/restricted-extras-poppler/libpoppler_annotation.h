@@ -2204,7 +2204,7 @@ libqt_list q_poppler__inkannotation_ink_paths(void* self);
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/classPoppler_1_1InkAnnotation.html)
 ///
 /// @param self Poppler__InkAnnotation*
-/// @param paths libqt_list of QPointF*
+/// @param paths libqt_list of libqt_list of QPointF*
 ///
 void q_poppler__inkannotation_set_ink_paths(void* self, libqt_list paths);
 
