@@ -45,8 +45,20 @@ const char* q_stringencoder_name(void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
+int32_t q_stringencoder_encoding_for_name(const char* name) {
+    return QStringConverter_EncodingForName(name);
+}
+
 const char* q_stringencoder_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
+}
+
+int32_t q_stringencoder_encoding_for_data(char* data) {
+    return QStringConverter_EncodingForData(qstring(data));
+}
+
+int32_t q_stringencoder_encoding_for_html(char* data) {
+    return QStringConverter_EncodingForHtml(qstring(data));
 }
 
 const char** q_stringencoder_available_codecs() {
@@ -120,8 +132,20 @@ const char* q_stringdecoder_name(void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
+int32_t q_stringdecoder_encoding_for_name(const char* name) {
+    return QStringConverter_EncodingForName(name);
+}
+
 const char* q_stringdecoder_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
+}
+
+int32_t q_stringdecoder_encoding_for_data(char* data) {
+    return QStringConverter_EncodingForData(qstring(data));
+}
+
+int32_t q_stringdecoder_encoding_for_html(char* data) {
+    return QStringConverter_EncodingForHtml(qstring(data));
 }
 
 const char** q_stringdecoder_available_codecs() {

@@ -1191,6 +1191,10 @@ libqt_list /* of enum Poppler__CryptoSignBackend */ q_poppler_available_crypto_s
     return _arr;
 }
 
+int32_t q_poppler_active_crypto_sign_backend() {
+    return Poppler_ActiveCryptoSignBackend();
+}
+
 bool q_poppler_set_active_crypto_sign_backend(int32_t param1) {
     return Poppler_SetActiveCryptoSignBackend(param1);
 }

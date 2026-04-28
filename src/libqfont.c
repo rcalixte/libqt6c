@@ -1,3 +1,4 @@
+#include "libqanystringview.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqvariant.hpp"
 #include "libqfont.hpp"
@@ -563,6 +564,14 @@ char* q_font__tag_to_string(void* self) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QFont__Tag* q_font__tag_from_value(uint32_t value) {
+    return QFont__Tag_FromValue(value);
+}
+
+QFont__Tag* q_font__tag_from_string(const char* view) {
+    return QFont__Tag_FromString(view);
 }
 
 void q_font__tag_delete(void* self) {

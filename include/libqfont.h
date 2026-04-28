@@ -758,6 +758,22 @@ uint32_t q_font__tag_value(void* self);
 ///
 char* q_font__tag_to_string(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html#fromValue)
+///
+/// @param value uint32_t
+///
+/// @return QFont__Tag* (NOTE: This pointer value could be `NULL`.)
+///
+QFont__Tag* q_font__tag_from_value(uint32_t value);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qfont-tag.html#fromString)
+///
+/// @param view const char*
+///
+/// @return QFont__Tag* (NOTE: This pointer value could be `NULL`.)
+///
+QFont__Tag* q_font__tag_from_string(const char* view);
+
 /// Delete this object from C++ memory.
 ///
 /// @param self QFont__Tag*

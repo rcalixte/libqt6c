@@ -212,6 +212,15 @@ const char* q_fontcombobox_sample_text_for_font(void* self, const char* fontFami
 ///
 void q_fontcombobox_set_display_font(void* self, const char* fontFamily, void* font);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qfontcombobox.html#displayFont)
+///
+/// @param self QFontComboBox*
+/// @param fontFamily const char*
+///
+/// @return QFont* (NOTE: This pointer value could be `NULL`.)
+///
+QFont* q_fontcombobox_display_font(void* self, const char* fontFamily);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qfontcombobox.html#setCurrentFont)
 ///
 /// @param self QFontComboBox*

@@ -29,6 +29,14 @@ void q_restreply_swap(void* self, void* other);
 ///
 QNetworkReply* q_restreply_network_reply(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readJson)
+///
+/// @param self QRestReply*
+///
+/// @return QJsonDocument* (NOTE: This pointer value could be `NULL`.)
+///
+QJsonDocument* q_restreply_read_json(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readBody)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
@@ -84,6 +92,15 @@ int32_t q_restreply_error(void* self);
 /// @param self QRestReply*
 ///
 const char* q_restreply_error_string(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#readJson)
+///
+/// @param self QRestReply*
+/// @param error QJsonParseError*
+///
+/// @return QJsonDocument* (NOTE: This pointer value could be `NULL`.)
+///
+QJsonDocument* q_restreply_read_json1(void* self, void* error);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qrestreply.html#dtor.QRestReply)
 ///

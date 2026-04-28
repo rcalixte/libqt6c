@@ -1,3 +1,5 @@
+#include "libqanystringview.hpp"
+#include "libqbytearrayview.hpp"
 #include "libqstringconverter_base.hpp"
 #include "libqstringconverter_base.h"
 
@@ -17,8 +19,20 @@ const char* q_stringconverter_name(void* self) {
     return QStringConverter_Name((QStringConverter*)self);
 }
 
+int32_t q_stringconverter_encoding_for_name(const char* name) {
+    return QStringConverter_EncodingForName(name);
+}
+
 const char* q_stringconverter_name_for_encoding(int32_t e) {
     return QStringConverter_NameForEncoding(e);
+}
+
+int32_t q_stringconverter_encoding_for_data(char* data) {
+    return QStringConverter_EncodingForData(qstring(data));
+}
+
+int32_t q_stringconverter_encoding_for_html(char* data) {
+    return QStringConverter_EncodingForHtml(qstring(data));
 }
 
 const char** q_stringconverter_available_codecs() {

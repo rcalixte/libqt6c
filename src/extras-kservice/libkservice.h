@@ -318,6 +318,12 @@ const char* k_service_new_service_path(bool showInMenu, const char* suggestedNam
 ///
 const char* k_service_alias_for(void* self);
 
+/// [Upstream resources](https://api.kde.org/kservice.html#startupNotify)
+///
+/// @param self KService*
+///
+bool k_service_startup_notify(void* self);
+
 /// Inherited from KSycocaEntry
 ///
 /// [Upstream resources](https://api.kde.org/ksycocaentry.html#isType)

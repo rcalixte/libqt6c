@@ -1,4 +1,5 @@
 #include "../libqaction.hpp"
+#include "../libqanystringview.hpp"
 #include "../network/libqauthenticator.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqcolor.hpp"
@@ -334,6 +335,10 @@ void q_webenginepage_set_visible(void* self, bool visible) {
 
 QWebEngineFrame* q_webenginepage_main_frame(void* self) {
     return QWebEnginePage_MainFrame((QWebEnginePage*)self);
+}
+
+QWebEngineFrame* q_webenginepage_find_frame_by_name(void* self, const char* name) {
+    return QWebEnginePage_FindFrameByName((QWebEnginePage*)self, name);
 }
 
 void q_webenginepage_accept_as_new_window(void* self, void* request) {

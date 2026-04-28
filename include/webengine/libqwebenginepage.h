@@ -532,6 +532,15 @@ void q_webenginepage_set_visible(void* self, bool visible);
 ///
 QWebEngineFrame* q_webenginepage_main_frame(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#findFrameByName)
+///
+/// @param self QWebEnginePage*
+/// @param name const char*
+///
+/// @return QWebEngineFrame* (NOTE: This pointer value could be `NULL`.)
+///
+QWebEngineFrame* q_webenginepage_find_frame_by_name(void* self, const char* name);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebenginepage.html#acceptAsNewWindow)
 ///
 /// @param self QWebEnginePage*
