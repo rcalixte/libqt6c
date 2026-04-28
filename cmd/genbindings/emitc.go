@@ -835,10 +835,11 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 	uncomment := strings.NewReplacer("/*", "", "*/", "")
 
 	if rt.IsKnownEnum() {
+		maybeDetail := ifv(rt.IsStdOptional, " (Returns -1 for an invalid value)", "")
 		if strings.HasPrefix(rt.ParameterType, "QFlags<") {
-			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1]) + ifv(rt.Pointer || rt.ByRef, "*", "")
+			returnComment = "/// @return flag of enum " + cabiEnumClassName(rt.ParameterType[7:len(rt.ParameterType)-1]) + ifv(rt.Pointer || rt.ByRef, "*", "") + maybeDetail
 		} else {
-			returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true)
+			returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true) + maybeDetail
 		}
 	} else if rt.IsChronoSeconds() {
 		secType := strings.Split(rt.ParameterType, "::")[2]
@@ -858,6 +859,8 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 		returnComment = "/// @return " + strings.TrimSpace(strings.ReplaceAll(uncomment.Replace(rt.RenderTypeC(cfs, true, true, true)), "  ", " "))
 	} else if rt.IsFunctionPointer {
 		returnComment = "/// @return " + rt.FunctionPointer.ReturnType.renderReturnTypeC(cfs, false, false) + " (*" + rt.renderFunctionType() + ")(" + strings.TrimSpace(cfs.emitParametersC(rt.FunctionPointer.Parameters, false)) + ")"
+	} else if rt.IsStdOptional && IsKnownClass(rt.ParameterType) {
+		returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true) + " (NOTE: This pointer value could be `NULL`.)"
 	}
 
 	return ifv(returnComment == "", "", returnComment+"\n///\n")
@@ -1652,7 +1655,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 			return assignExpr + rvalue + ";"
 		}
 
-	} else if reflect.TypeOf(rt.ParameterType).Kind() == reflect.String {
+	} else if reflect.TypeFor[string]().Kind() == reflect.String {
 		// Single type conversion from C++ C ABI State to C State type
 		// This should not be necessary in most cases.
 		return shouldReturn + "(int)" + rvalue + ";"
@@ -2057,7 +2060,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				cmdStructName = cabiClassName(m.InheritedFrom)
 			}
 
-			if m.InheritedInClass != "" {
+			if m.InheritedInClass != "" && m.InheritedInClass != c.ClassName {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n///"
 			}
 
@@ -2261,7 +2264,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				cmdStructName = cabiClassName(m.InheritedFrom)
 			}
 
-			if m.InheritedInClass != "" {
+			if m.InheritedInClass != "" && m.InheritedInClass != c.ClassName {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n ///"
 			}
 
@@ -2345,7 +2348,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				cmdStructName = cabiClassName(m.InheritedFrom)
 			}
 
-			if m.InheritedInClass != "" {
+			if m.InheritedInClass != "" && m.InheritedInClass != c.ClassName {
 				inheritedFrom = "\n/// Inherited from " + m.InheritedInClass + "\n///"
 			}
 
