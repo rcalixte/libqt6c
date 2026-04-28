@@ -293,6 +293,10 @@ const char* k_service_alias_for(void* self) {
     return _ret;
 }
 
+bool k_service_startup_notify(void* self) {
+    return KService_StartupNotify((KService*)self);
+}
+
 bool k_service_is_type(void* self, int32_t t) {
     return KSycocaEntry_IsType((KSycocaEntry*)self, t);
 }

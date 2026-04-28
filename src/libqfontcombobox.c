@@ -126,6 +126,10 @@ void q_fontcombobox_set_display_font(void* self, const char* fontFamily, void* f
     QFontComboBox_SetDisplayFont((QFontComboBox*)self, qstring(fontFamily), (QFont*)font);
 }
 
+QFont* q_fontcombobox_display_font(void* self, const char* fontFamily) {
+    return QFontComboBox_DisplayFont((QFontComboBox*)self, qstring(fontFamily));
+}
+
 void q_fontcombobox_set_current_font(void* self, void* f) {
     QFontComboBox_SetCurrentFont((QFontComboBox*)self, (QFont*)f);
 }

@@ -2281,6 +2281,12 @@ libqt_list q_poppler_available_crypto_sign_backends();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
+/// @return enum Poppler__CryptoSignBackend (Returns -1 for an invalid value)
+///
+int32_t q_poppler_active_crypto_sign_backend();
+
+/// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
+///
 /// @param param1 enum Poppler__CryptoSignBackend
 ///
 bool q_poppler_set_active_crypto_sign_backend(int32_t param1);

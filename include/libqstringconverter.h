@@ -91,6 +91,16 @@ const char* q_stringencoder_name(void* self);
 
 /// Inherited from QStringConverter
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForName)
+///
+/// @param name const char*
+///
+/// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
+///
+int32_t q_stringencoder_encoding_for_name(const char* name);
+
+/// Inherited from QStringConverter
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -98,6 +108,26 @@ const char* q_stringencoder_name(void* self);
 /// @param e enum QStringConverter__Encoding
 ///
 const char* q_stringencoder_name_for_encoding(int32_t e);
+
+/// Inherited from QStringConverter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForData)
+///
+/// @param data char*
+///
+/// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
+///
+int32_t q_stringencoder_encoding_for_data(char* data);
+
+/// Inherited from QStringConverter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForHtml)
+///
+/// @param data char*
+///
+/// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
+///
+int32_t q_stringencoder_encoding_for_html(char* data);
 
 /// Inherited from QStringConverter
 ///
@@ -212,6 +242,16 @@ const char* q_stringdecoder_name(void* self);
 
 /// Inherited from QStringConverter
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForName)
+///
+/// @param name const char*
+///
+/// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
+///
+int32_t q_stringdecoder_encoding_for_name(const char* name);
+
+/// Inherited from QStringConverter
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#nameForEncoding)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -219,6 +259,26 @@ const char* q_stringdecoder_name(void* self);
 /// @param e enum QStringConverter__Encoding
 ///
 const char* q_stringdecoder_name_for_encoding(int32_t e);
+
+/// Inherited from QStringConverter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForData)
+///
+/// @param data char*
+///
+/// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
+///
+int32_t q_stringdecoder_encoding_for_data(char* data);
+
+/// Inherited from QStringConverter
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#encodingForHtml)
+///
+/// @param data char*
+///
+/// @return enum QStringConverter__Encoding (Returns -1 for an invalid value)
+///
+int32_t q_stringdecoder_encoding_for_html(char* data);
 
 /// Inherited from QStringConverter
 ///

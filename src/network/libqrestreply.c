@@ -1,3 +1,4 @@
+#include "../libqjsondocument.hpp"
 #include "libqnetworkreply.hpp"
 #include "libqrestreply.hpp"
 #include "libqrestreply.h"
@@ -12,6 +13,10 @@ void q_restreply_swap(void* self, void* other) {
 
 QNetworkReply* q_restreply_network_reply(void* self) {
     return QRestReply_NetworkReply((QRestReply*)self);
+}
+
+QJsonDocument* q_restreply_read_json(void* self) {
+    return QRestReply_ReadJson((QRestReply*)self);
 }
 
 char* q_restreply_read_body(void* self) {
@@ -53,6 +58,10 @@ const char* q_restreply_error_string(void* self) {
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
+}
+
+QJsonDocument* q_restreply_read_json1(void* self, void* error) {
+    return QRestReply_ReadJson1((QRestReply*)self, (QJsonParseError*)error);
 }
 
 void q_restreply_delete(void* self) {
