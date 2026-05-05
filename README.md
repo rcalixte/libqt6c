@@ -235,11 +235,7 @@ sudo dnf install sysroot-$(uname -m)-fc$(lsb_release -rs)-glibc gcc libstdc++-de
 sudo pacman -S gcc clang qt6-base qt6-charts qt6-connectivity qt6-location qt6-multimedia qt6-positioning qt6-scxml qt6-speech qt6-svg qt6-webchannel qt6-webengine qt6-websockets qt6-tools attica karchive kbookmarks kcodecs kcolorpicker kcolorscheme kcompletion kconfig kconfigwidgets kcoreaddons kcrash kfilemetadata kglobalaccel kguiaddons ki18n kiconthemes kidletime kimageannotator kio kitemmodels kitemviews kjobwidgets knewstuff knotifications kparts kplotting kservice kstatusnotifieritem ksvg ktexteditor ktextwidgets kunitconversion kwidgetsaddons kwindowsystem kxmlgui layer-shell-qt libaccounts-qt packagekit-qt6 poppler-qt6 qcustomplot-qt6 qscintilla-qt6 qtermwidget qtkeychain-qt6 signond solid sonnet syntax-highlighting
 ```
 
-Users of Arch-based distributions need to __make sure that all packages are up-to-date__ and then run the following commands:
-
-```bash
-sudo mkdir -v /usr/$(uname -m)-pc-linux-gnu && sudo cp -pr /usr/include /usr/$(uname -m)-pc-linux-gnu/
-```
+Users of Arch-based distributions need to __make sure that all packages are up-to-date__.
 
 > [!NOTE]
 > The `zig` package will need to be downloaded and installed separately if the latest stable version is not available in the default repositories.
@@ -250,11 +246,7 @@ sudo mkdir -v /usr/$(uname -m)-pc-linux-gnu && sudo cp -pr /usr/include /usr/$(u
 sudo zypper install qt6-base-devel qt6-charts-devel qt6-connectivity-devel qt6-designer-devel qt6-location-devel qt6-multimediawidgets-devel qt6-pdfwidgets-devel qt6-positioning-devel qt6-spatialaudio-devel qt6-statemachine-devel qt6-svg-devel qt6-texttospeech-devel qt6-tools-devel qt6-uitools-devel qt6-webchannel-devel qt6-webenginewidgets-devel qt6-websockets-devel kColorPicker-Qt6-devel kf6-attica-devel kf6-karchive-devel kf6-kbookmarks-devel kf6-kcodecs-devel kf6-kcolorscheme-devel kf6-kcompletion-devel kf6-kconfig-devel kf6-kconfigwidgets-devel kf6-kcoreaddons-devel kf6-kcrash-devel kf6-kfilemetadata-devel kf6-kglobalaccel-devel kf6-kguiaddons-devel kf6-ki18n-devel kf6-kiconthemes-devel kf6-kidletime-devel kf6-kio-devel kf6-kitemmodels-devel kf6-kitemviews-devel kf6-kjobwidgets-devel kf6-knewstuff-devel kf6-knotifications-devel kf6-kparts-devel kf6-kplotting-devel kf6-kservice-devel kf6-kstatusnotifieritem-devel kf6-ksvg-devel kf6-ktexteditor-devel kf6-ktextwidgets-devel kf6-kunitconversion-devel kf6-kwidgetsaddons-devel kf6-kwindowsystem-devel kf6-kxmlgui-devel kf6-solid-devel kf6-sonnet-devel kf6-syntax-highlighting-devel kImageAnnotator-Qt6-devel layer-shell-qt6-devel libaccounts-qt6-devel libpoppler-qt6-devel libsignon-qt6-devel qcustomplot-qt6-devel qscintilla-qt6-devel qtermwidget-devel qtkeychain-qt6-devel packagekitqt6-devel
 ```
 
-Users of openSUSE-based distributions need to __make sure that all packages are up-to-date__ and then run the following commands:
-
-```bash
-sudo cp -pr /usr/include/* /usr/$(uname -m)-suse-linux/include/
-```
+Users of openSUSE-based distributions need to __make sure that all packages are up-to-date__.
 
 > [!NOTE]
 > The `zig` package must be downloaded and installed separately as the version available in the default repositories is too unstable for usage.
@@ -504,7 +496,7 @@ The `QAnyStringView`, `QByteArray`, `QByteArrayView`, and `QString` types are pr
 
 - The `libqt6c` library does not extend the C standard library and therefore it is up to the developer to provide their own functions for complex types like `QHash`, `QMap`, `QSet`, etc. beyond the scope of the helper library's containers.
 
-Where Qt returns a C++ object by value (e.g. `QSize`), the binding may have moved it to the heap, and in C, this may be represented as a pointer type. In such cases, the caller is the owner and must free the object (using either `_delete` methods for the type or deallocation with `free`, `libqt_string_free`, etc.). This means code using `libqt6c` can look similar to the Qt C++ equivalent code but with the addition of proper memory management.
+Where Qt returns a C++ object by value (e.g. `QSize`), the binding may have moved it to the heap, and in C, this may be represented as a pointer type. In such cases, the caller is the owner and must free the object (using either `_delete` methods for the type or deallocation with `free`, `libqt_string_free`, etc.). This means code using `libqt6c` can look similar to the Qt C++ equivalent code but with the addition of proper memory management to avoid memory leaks.
 
 The `connect(targetObject, SIGNAL(signal()), targetSlot, SLOT(slot()))` methods are projected as `_on_signal(targetObject, slot)`. While the parameters in the methods themselves are more convenient to use, the documentation comments in the C header code should be used for reference for the proper usage of the parameter types and Qt vtable references. The example code above includes a simple callback function that can be used as a reference.
 
