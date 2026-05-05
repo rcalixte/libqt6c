@@ -258,7 +258,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
 		p.ParameterType == "QStringView" || p.ParameterType == "SignOn::MethodName" ||
-		p.ParameterType == "QAnyStringView" {
+		p.ParameterType == "QAnyStringView" || p.ParameterType == "QLatin1StringView" {
 		return "const char*"
 	}
 
@@ -503,7 +503,7 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 
 func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) string {
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
-		strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
+		p.ParameterType == "QLatin1StringView" || strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
 		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
 		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
 
@@ -889,7 +889,8 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 	}
 
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
-		p.ParameterType == "QByteArrayView" || p.ParameterType == "SignOn::MethodName" {
+		p.ParameterType == "QByteArrayView" || p.ParameterType == "SignOn::MethodName" ||
+		p.ParameterType == "QLatin1StringView" {
 		// Return the C string struct without allocation since the
 		// temporary libqt_string is passed by value
 		rvalue = "qstring(" + nameprefix + ")"
@@ -1192,7 +1193,7 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 	} else if rt.ParameterType == "QString" || rt.ParameterType == "QStringView" ||
 		rt.ParameterType == "QByteArray" || rt.ParameterType == "QByteArrayView" ||
-		rt.ParameterType == "SignOn::MethodName" {
+		rt.ParameterType == "SignOn::MethodName" || rt.ParameterType == "QLatin1StringView" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
 		afterword += cfs.checkAndClearAllocCleanups(false)
 		afterword += "char* " + namePrefix + "_ret = qstring_to_char(" + namePrefix + "_str);\n"
@@ -2023,6 +2024,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				continue
 			}
 
+			if !m.IsStatic && isBindingRemoved(c.ClassName) {
+				continue
+			}
+
 			mSafeMethodName := m.SafeMethodName()
 
 			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
@@ -2384,7 +2389,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				slotComma + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
 
-		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
+		if c.CanDelete && !isBindingRemoved(cStructName) && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
 
 			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) ||
@@ -2759,6 +2764,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				continue
 			}
 
+			if !m.IsStatic && isBindingRemoved(c.ClassName) {
+				continue
+			}
+
 			mSafeMethodName := m.SafeMethodName()
 
 			if _, ok := skippedMethods[c.ClassName+"_"+mSafeMethodName]; ok {
@@ -3035,7 +3044,7 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				cmdStructName + "_Connect_" + mSafeMethodName + "((" + cmdStructName + "*)self, (intptr_t)callback);\n}\n\n")
 		}
 
-		if c.CanDelete && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
+		if c.CanDelete && !isBindingRemoved(c.ClassName) && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			ret.WriteString("void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self) {\n" +
 				cStructName + "_Delete((" + cStructName + "*)(self));\n}\n")
 		}
