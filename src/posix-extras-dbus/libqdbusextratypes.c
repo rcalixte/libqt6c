@@ -14,8 +14,12 @@ QDBusObjectPath* q_dbusobjectpath_new3(const char* path) {
     return QDBusObjectPath_new3(qstring(path));
 }
 
-QDBusObjectPath* q_dbusobjectpath_new4(void* param1) {
-    return QDBusObjectPath_new4((QDBusObjectPath*)param1);
+QDBusObjectPath* q_dbusobjectpath_new4(const char* path) {
+    return QDBusObjectPath_new4(qstring(path));
+}
+
+QDBusObjectPath* q_dbusobjectpath_new5(void* param1) {
+    return QDBusObjectPath_new5((QDBusObjectPath*)param1);
 }
 
 void q_dbusobjectpath_swap(void* self, void* other) {
@@ -53,8 +57,12 @@ QDBusSignature* q_dbussignature_new3(const char* signature) {
     return QDBusSignature_new3(qstring(signature));
 }
 
-QDBusSignature* q_dbussignature_new4(void* param1) {
-    return QDBusSignature_new4((QDBusSignature*)param1);
+QDBusSignature* q_dbussignature_new4(const char* signature) {
+    return QDBusSignature_new4(qstring(signature));
+}
+
+QDBusSignature* q_dbussignature_new5(void* param1) {
+    return QDBusSignature_new5((QDBusSignature*)param1);
 }
 
 void q_dbussignature_swap(void* self, void* other) {

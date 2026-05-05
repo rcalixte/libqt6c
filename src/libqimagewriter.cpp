@@ -4,8 +4,6 @@
 #include <QImageWriter>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qimagewriter.h>
 #include "libqimagewriter.hpp"
 #include "libqimagewriter.hxx"

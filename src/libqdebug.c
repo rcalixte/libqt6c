@@ -137,6 +137,10 @@ QDebug* q_debug_operator_shift_left19(void* self, const char* t) {
     return QDebug_OperatorShiftLeft19((QDebug*)self, qstring(t));
 }
 
+QDebug* q_debug_operator_shift_left22(void* self, const char* t) {
+    return QDebug_OperatorShiftLeft22((QDebug*)self, qstring(t));
+}
+
 QDebug* q_debug_operator_shift_left23(void* self, char* t) {
     return QDebug_OperatorShiftLeft23((QDebug*)self, qstring(t));
 }

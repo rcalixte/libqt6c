@@ -1,7 +1,5 @@
 #include <QPlaceContactDetail>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qplacecontactdetail.h>
 #include "libqplacecontactdetail.hpp"
 #include "libqplacecontactdetail.hxx"

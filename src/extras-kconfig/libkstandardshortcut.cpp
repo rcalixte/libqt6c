@@ -2,8 +2,6 @@
 #include <QKeySequence>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kstandardshortcut.h>
 #include "libkstandardshortcut.hpp"
 #include "libkstandardshortcut.hxx"

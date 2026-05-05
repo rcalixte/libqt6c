@@ -190,6 +190,18 @@ QJsonValueRef* q_jsonobject_operator_subscript2(void* self, const char* key) {
     return QJsonObject_OperatorSubscript2((QJsonObject*)self, qstring(key));
 }
 
+QJsonValue* q_jsonobject_value3(void* self, const char* key) {
+    return QJsonObject_Value3((QJsonObject*)self, qstring(key));
+}
+
+QJsonValue* q_jsonobject_operator_subscript4(void* self, const char* key) {
+    return QJsonObject_OperatorSubscript4((QJsonObject*)self, qstring(key));
+}
+
+QJsonValueRef* q_jsonobject_operator_subscript6(void* self, const char* key) {
+    return QJsonObject_OperatorSubscript6((QJsonObject*)self, qstring(key));
+}
+
 void q_jsonobject_remove(void* self, const char* key) {
     QJsonObject_Remove((QJsonObject*)self, qstring(key));
 }
@@ -200,6 +212,18 @@ QJsonValue* q_jsonobject_take(void* self, const char* key) {
 
 bool q_jsonobject_contains(void* self, const char* key) {
     return QJsonObject_Contains((QJsonObject*)self, qstring(key));
+}
+
+void q_jsonobject_remove3(void* self, const char* key) {
+    QJsonObject_Remove3((QJsonObject*)self, qstring(key));
+}
+
+QJsonValue* q_jsonobject_take3(void* self, const char* key) {
+    return QJsonObject_Take3((QJsonObject*)self, qstring(key));
+}
+
+bool q_jsonobject_contains3(void* self, const char* key) {
+    return QJsonObject_Contains3((QJsonObject*)self, qstring(key));
 }
 
 QJsonObject__iterator* q_jsonobject_begin(void* self) {
@@ -244,6 +268,22 @@ QJsonObject__const_iterator* q_jsonobject_const_find(void* self, const char* key
 
 QJsonObject__iterator* q_jsonobject_insert(void* self, const char* key, void* value) {
     return QJsonObject_Insert((QJsonObject*)self, qstring(key), (QJsonValue*)value);
+}
+
+QJsonObject__iterator* q_jsonobject_find4(void* self, const char* key) {
+    return QJsonObject_Find4((QJsonObject*)self, qstring(key));
+}
+
+QJsonObject__const_iterator* q_jsonobject_find6(void* self, const char* key) {
+    return QJsonObject_Find6((QJsonObject*)self, qstring(key));
+}
+
+QJsonObject__const_iterator* q_jsonobject_const_find3(void* self, const char* key) {
+    return QJsonObject_ConstFind3((QJsonObject*)self, qstring(key));
+}
+
+QJsonObject__iterator* q_jsonobject_insert3(void* self, const char* key, void* value) {
+    return QJsonObject_Insert3((QJsonObject*)self, qstring(key), (QJsonValue*)value);
 }
 
 bool q_jsonobject_empty(void* self) {

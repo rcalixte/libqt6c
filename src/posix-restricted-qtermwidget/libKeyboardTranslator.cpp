@@ -7,8 +7,6 @@
 #include <QIODevice>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <KeyboardTranslator.h>
 #include "libKeyboardTranslator.hpp"
 #include "libKeyboardTranslator.hxx"

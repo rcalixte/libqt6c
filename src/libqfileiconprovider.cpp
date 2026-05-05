@@ -3,8 +3,6 @@
 #include <QFileInfo>
 #include <QIcon>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qfileiconprovider.h>
 #include "libqfileiconprovider.hpp"
 #include "libqfileiconprovider.hxx"

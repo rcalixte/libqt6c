@@ -3,8 +3,6 @@
 #include <QList>
 #include <QPair>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <metadata.h>
 #include "libmetadata.hpp"
 #include "libmetadata.hxx"

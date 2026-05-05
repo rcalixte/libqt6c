@@ -30,6 +30,10 @@ void q_cborstreamwriter_append4(void* self, char* ba) {
     QCborStreamWriter_Append4((QCborStreamWriter*)self, qstring(ba));
 }
 
+void q_cborstreamwriter_append5(void* self, const char* str) {
+    QCborStreamWriter_Append5((QCborStreamWriter*)self, qstring(str));
+}
+
 void q_cborstreamwriter_append7(void* self, uint64_t tag) {
     QCborStreamWriter_Append7((QCborStreamWriter*)self, tag);
 }

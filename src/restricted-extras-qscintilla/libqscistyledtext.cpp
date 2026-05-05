@@ -1,6 +1,4 @@
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qscistyledtext.h>
 #include "libqscistyledtext.hpp"
 #include "libqscistyledtext.hxx"

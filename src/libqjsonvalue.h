@@ -66,33 +66,41 @@ QJsonValue* q_jsonvalue_new7(const char* s);
 
 /// q_jsonvalue_new8 constructs a new QJsonValue object.
 ///
-/// @param a QJsonArray*
+/// @param s const char*
 ///
-QJsonValue* q_jsonvalue_new8(void* a);
+QJsonValue* q_jsonvalue_new8(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
 
 /// q_jsonvalue_new9 constructs a new QJsonValue object.
 ///
-/// @param o QJsonObject*
+/// @param a QJsonArray*
 ///
-QJsonValue* q_jsonvalue_new9(void* o);
+QJsonValue* q_jsonvalue_new9(void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
 
 /// q_jsonvalue_new10 constructs a new QJsonValue object.
 ///
-/// @param other QJsonValue*
+/// @param o QJsonObject*
 ///
-QJsonValue* q_jsonvalue_new10(void* other);
+QJsonValue* q_jsonvalue_new10(void* o);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
 
 /// q_jsonvalue_new11 constructs a new QJsonValue object.
 ///
+/// @param other QJsonValue*
+///
+QJsonValue* q_jsonvalue_new11(void* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
+
+/// q_jsonvalue_new12 constructs a new QJsonValue object.
+///
 /// @param param1 enum QJsonValue__Type
 ///
-QJsonValue* q_jsonvalue_new11(int32_t param1);
+QJsonValue* q_jsonvalue_new12(int32_t param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#operator-eq)
 ///
@@ -243,6 +251,13 @@ QJsonObject* q_jsonvalue_to_object2(void* self, void* defaultValue);
 /// @param key const char*
 ///
 const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
+///
+/// @param self QJsonValue*
+/// @param key const char*
+///
+const QJsonValue* q_jsonvalue_operator_subscript3(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
 ///
@@ -408,6 +423,13 @@ QJsonArray* q_jsonvalueconstref_to_array(void* self);
 /// @param self QJsonValueConstRef*
 ///
 QJsonObject* q_jsonvalueconstref_to_object(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-5b-5d)
+///
+/// @param self QJsonValueConstRef*
+/// @param key const char*
+///
+const QJsonValue* q_jsonvalueconstref_operator_subscript2(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-5b-5d)
 ///
@@ -614,6 +636,13 @@ QJsonArray* q_jsonvalueref_to_array(void* self);
 /// @param self QJsonValueRef*
 ///
 QJsonObject* q_jsonvalueref_to_object(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-5b-5d)
+///
+/// @param self QJsonValueRef*
+/// @param key const char*
+///
+const QJsonValue* q_jsonvalueref_operator_subscript2(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-5b-5d)
 ///

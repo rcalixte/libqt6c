@@ -8,8 +8,6 @@
 #include <QList>
 #include <QObject>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qdbusconnection.h>
 #include "libqdbusconnection.hpp"
 #include "libqdbusconnection.hxx"

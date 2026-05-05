@@ -45,6 +45,10 @@ QCborValue* q_cbormap_value(void* self, int64_t key) {
     return QCborMap_Value((QCborMap*)self, key);
 }
 
+QCborValue* q_cbormap_value2(void* self, const char* key) {
+    return QCborMap_Value2((QCborMap*)self, qstring(key));
+}
+
 QCborValue* q_cbormap_value3(void* self, const char* key) {
     return QCborMap_Value3((QCborMap*)self, qstring(key));
 }
@@ -55,6 +59,10 @@ QCborValue* q_cbormap_value4(void* self, void* key) {
 
 const QCborValue* q_cbormap_operator_subscript(void* self, int64_t key) {
     return QCborMap_OperatorSubscript((QCborMap*)self, key);
+}
+
+const QCborValue* q_cbormap_operator_subscript2(void* self, const char* key) {
+    return QCborMap_OperatorSubscript2((QCborMap*)self, qstring(key));
 }
 
 const QCborValue* q_cbormap_operator_subscript3(void* self, const char* key) {
@@ -69,6 +77,10 @@ QCborValueRef* q_cbormap_operator_subscript5(void* self, int64_t key) {
     return QCborMap_OperatorSubscript5((QCborMap*)self, key);
 }
 
+QCborValueRef* q_cbormap_operator_subscript6(void* self, const char* key) {
+    return QCborMap_OperatorSubscript6((QCborMap*)self, qstring(key));
+}
+
 QCborValueRef* q_cbormap_operator_subscript7(void* self, const char* key) {
     return QCborMap_OperatorSubscript7((QCborMap*)self, qstring(key));
 }
@@ -79,6 +91,10 @@ QCborValueRef* q_cbormap_operator_subscript8(void* self, void* key) {
 
 QCborValue* q_cbormap_take(void* self, int64_t key) {
     return QCborMap_Take((QCborMap*)self, key);
+}
+
+QCborValue* q_cbormap_take2(void* self, const char* key) {
+    return QCborMap_Take2((QCborMap*)self, qstring(key));
 }
 
 QCborValue* q_cbormap_take3(void* self, const char* key) {
@@ -93,6 +109,10 @@ void q_cbormap_remove(void* self, int64_t key) {
     QCborMap_Remove((QCborMap*)self, key);
 }
 
+void q_cbormap_remove2(void* self, const char* key) {
+    QCborMap_Remove2((QCborMap*)self, qstring(key));
+}
+
 void q_cbormap_remove3(void* self, const char* key) {
     QCborMap_Remove3((QCborMap*)self, qstring(key));
 }
@@ -103,6 +123,10 @@ void q_cbormap_remove4(void* self, void* key) {
 
 bool q_cbormap_contains(void* self, int64_t key) {
     return QCborMap_Contains((QCborMap*)self, key);
+}
+
+bool q_cbormap_contains2(void* self, const char* key) {
+    return QCborMap_Contains2((QCborMap*)self, qstring(key));
 }
 
 bool q_cbormap_contains3(void* self, const char* key) {
@@ -173,6 +197,10 @@ QCborMap__Iterator* q_cbormap_find(void* self, int64_t key) {
     return QCborMap_Find((QCborMap*)self, key);
 }
 
+QCborMap__Iterator* q_cbormap_find2(void* self, const char* key) {
+    return QCborMap_Find2((QCborMap*)self, qstring(key));
+}
+
 QCborMap__Iterator* q_cbormap_find3(void* self, const char* key) {
     return QCborMap_Find3((QCborMap*)self, qstring(key));
 }
@@ -183,6 +211,10 @@ QCborMap__Iterator* q_cbormap_find4(void* self, void* key) {
 
 QCborMap__ConstIterator* q_cbormap_const_find(void* self, int64_t key) {
     return QCborMap_ConstFind((QCborMap*)self, key);
+}
+
+QCborMap__ConstIterator* q_cbormap_const_find2(void* self, const char* key) {
+    return QCborMap_ConstFind2((QCborMap*)self, qstring(key));
 }
 
 QCborMap__ConstIterator* q_cbormap_const_find3(void* self, const char* key) {
@@ -197,6 +229,10 @@ QCborMap__ConstIterator* q_cbormap_find5(void* self, int64_t key) {
     return QCborMap_Find5((QCborMap*)self, key);
 }
 
+QCborMap__ConstIterator* q_cbormap_find6(void* self, const char* key) {
+    return QCborMap_Find6((QCborMap*)self, qstring(key));
+}
+
 QCborMap__ConstIterator* q_cbormap_find7(void* self, const char* key) {
     return QCborMap_Find7((QCborMap*)self, qstring(key));
 }
@@ -207,6 +243,10 @@ QCborMap__ConstIterator* q_cbormap_find8(void* self, void* key) {
 
 QCborMap__Iterator* q_cbormap_insert(void* self, int64_t key, void* value_) {
     return QCborMap_Insert((QCborMap*)self, key, (QCborValue*)value_);
+}
+
+QCborMap__Iterator* q_cbormap_insert2(void* self, const char* key, void* value_) {
+    return QCborMap_Insert2((QCborMap*)self, qstring(key), (QCborValue*)value_);
 }
 
 QCborMap__Iterator* q_cbormap_insert3(void* self, const char* key, void* value_) {

@@ -3,8 +3,6 @@
 #include <QCollatorSortKey>
 #include <QLocale>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qcollator.h>
 #include "libqcollator.hpp"
 #include "libqcollator.hxx"

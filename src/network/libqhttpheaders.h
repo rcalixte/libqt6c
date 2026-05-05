@@ -190,6 +190,15 @@ const char** q_httpheaders_values2(void* self, int32_t name);
 ///
 char* q_httpheaders_value_at(void* self, intptr_t i);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#nameAt)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QHttpHeaders*
+/// @param i intptr_t
+///
+const char* q_httpheaders_name_at(void* self, intptr_t i);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qhttpheaders.html#combinedValue)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`

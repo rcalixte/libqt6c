@@ -7,8 +7,6 @@
 #include <QRect>
 #include <QSize>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qiconengine.h>
 #include "libqiconengine.hpp"
 #include "libqiconengine.hxx"

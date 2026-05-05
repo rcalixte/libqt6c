@@ -3,8 +3,6 @@
 #include <QList>
 #include <QSharedData>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kservicegroup.h>
 #include "libkservicegroup.hpp"
 #include "libkservicegroup.hxx"

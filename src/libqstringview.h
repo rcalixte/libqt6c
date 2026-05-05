@@ -117,6 +117,13 @@ void q_stringview_chop(void* self, intptr_t n);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#compare)
 ///
 /// @param self QStringView*
+/// @param other const char*
+///
+int32_t q_stringview_compare2(void* self, const char* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#compare)
+///
+/// @param self QStringView*
 /// @param c QChar*
 ///
 int32_t q_stringview_compare4(void* self, void* c);
@@ -132,6 +139,13 @@ int32_t q_stringview_compare5(void* self, void* c, int32_t cs);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#startsWith)
 ///
 /// @param self QStringView*
+/// @param s const char*
+///
+bool q_stringview_starts_with2(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#startsWith)
+///
+/// @param self QStringView*
 /// @param c QChar*
 ///
 bool q_stringview_starts_with3(void* self, void* c);
@@ -143,6 +157,13 @@ bool q_stringview_starts_with3(void* self, void* c);
 /// @param cs enum Qt__CaseSensitivity
 ///
 bool q_stringview_starts_with4(void* self, void* c, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#endsWith)
+///
+/// @param self QStringView*
+/// @param s const char*
+///
+bool q_stringview_ends_with2(void* self, const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#endsWith)
 ///
@@ -166,6 +187,13 @@ bool q_stringview_ends_with4(void* self, void* c, int32_t cs);
 ///
 intptr_t q_stringview_index_of(void* self, void* c);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+///
+intptr_t q_stringview_index_of3(void* self, const char* s);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
 /// @param self QStringView*
@@ -173,12 +201,26 @@ intptr_t q_stringview_index_of(void* self, void* c);
 ///
 bool q_stringview_contains(void* self, void* c);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
+///
+/// @param self QStringView*
+/// @param s const char*
+///
+bool q_stringview_contains3(void* self, const char* s);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#count)
 ///
 /// @param self QStringView*
 /// @param c QChar*
 ///
 intptr_t q_stringview_count(void* self, void* c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#count)
+///
+/// @param self QStringView*
+/// @param s const char*
+///
+intptr_t q_stringview_count3(void* self, const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
@@ -194,6 +236,21 @@ intptr_t q_stringview_last_index_of(void* self, void* c);
 /// @param from intptr_t
 ///
 intptr_t q_stringview_last_index_of2(void* self, void* c, intptr_t from);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+///
+intptr_t q_stringview_last_index_of5(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param from intptr_t
+///
+intptr_t q_stringview_last_index_of6(void* self, const char* s, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
@@ -402,6 +459,30 @@ QChar* q_stringview_last2(void* self);
 ///
 intptr_t q_stringview_max_size2();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#compare)
+///
+/// @param self QStringView*
+/// @param other const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+int32_t q_stringview_compare23(void* self, const char* other, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#startsWith)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+bool q_stringview_starts_with23(void* self, const char* s, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#endsWith)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+bool q_stringview_ends_with23(void* self, const char* s, int32_t cs);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///
 /// @param self QStringView*
@@ -419,6 +500,23 @@ intptr_t q_stringview_index_of22(void* self, void* c, intptr_t from);
 ///
 intptr_t q_stringview_index_of32(void* self, void* c, intptr_t from, int32_t cs);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param from intptr_t
+///
+intptr_t q_stringview_index_of24(void* self, const char* s, intptr_t from);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param from intptr_t
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_stringview_index_of34(void* self, const char* s, intptr_t from, int32_t cs);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
 ///
 /// @param self QStringView*
@@ -427,6 +525,14 @@ intptr_t q_stringview_index_of32(void* self, void* c, intptr_t from, int32_t cs)
 ///
 bool q_stringview_contains22(void* self, void* c, int32_t cs);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#contains)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+bool q_stringview_contains24(void* self, const char* s, int32_t cs);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#count)
 ///
 /// @param self QStringView*
@@ -434,6 +540,14 @@ bool q_stringview_contains22(void* self, void* c, int32_t cs);
 /// @param cs enum Qt__CaseSensitivity
 ///
 intptr_t q_stringview_count22(void* self, void* c, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#count)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_stringview_count24(void* self, const char* s, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
 ///
@@ -451,6 +565,23 @@ intptr_t q_stringview_last_index_of22(void* self, void* c, int32_t cs);
 /// @param cs enum Qt__CaseSensitivity
 ///
 intptr_t q_stringview_last_index_of32(void* self, void* c, intptr_t from, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_stringview_last_index_of24(void* self, const char* s, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#lastIndexOf)
+///
+/// @param self QStringView*
+/// @param s const char*
+/// @param from intptr_t
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_stringview_last_index_of34(void* self, const char* s, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringview.html#indexOf)
 ///

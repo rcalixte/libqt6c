@@ -2,8 +2,6 @@
 #include <KConfigGroup>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kconfigbase.h>
 #include "libkconfigbase.hpp"
 #include "libkconfigbase.hxx"

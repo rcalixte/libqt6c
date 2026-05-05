@@ -147,9 +147,13 @@ pub fn build(b: *std.Build) !void {
     inline for (base_cpp_flags) |flag|
         try cpp_flags.append(b.allocator, b.dupe(flag));
 
-    if (is_linux)
+    const libc_override = distro == .arch or distro == .suse;
+    if (is_linux) {
         inline for (linux_cpp_flags) |flag|
             try cpp_flags.append(b.allocator, b.dupe(flag));
+        if (libc_override) inline for (linux_c_flags) |flag|
+            try cpp_flags.append(b.allocator, b.dupe(flag));
+    }
 
     // Add include paths
     for (qt_include_path.items) |qt_path|
@@ -165,6 +169,41 @@ pub fn build(b: *std.Build) !void {
             try cpp_flags.append(b.allocator, b.fmt("-I{s}", .{includePath}));
         };
 
+    var override_dir: []const u8 = undefined;
+    var aw = std.Io.Writer.Allocating.init(b.allocator);
+    defer aw.deinit();
+
+    if (libc_override) {
+        const result = try std.process.run(b.allocator, b.graph.io, .{
+            .argv = &.{ "gcc", "-xc", "-E", "-Wp,-v", "/dev/null" },
+        });
+
+        var lines = std.mem.splitScalar(u8, result.stderr, '\n');
+        var gcc_dir: ?[]const u8 = null;
+        while (lines.next()) |line|
+            if (std.mem.startsWith(u8, line, " /")) {
+                const gcc_path = std.mem.trim(u8, line, &std.ascii.whitespace);
+                std.Io.Dir.cwd().access(b.graph.io, gcc_path, .{}) catch {
+                    continue;
+                };
+                if (gcc_dir == null) gcc_dir = gcc_path;
+                override_dir = gcc_path;
+            };
+
+        var libc = try std.zig.LibCInstallation.findNative(b.allocator, b.graph.io, .{
+            .environ_map = &b.graph.environ_map,
+            .target = &b.graph.host.result,
+        });
+        defer libc.deinit(b.allocator);
+
+        libc.gcc_dir = gcc_dir;
+        try libc.render(&aw.writer);
+        try aw.writer.flush();
+    }
+
+    const wf = b.addWriteFiles();
+    const libc_path = wf.add("libc.txt", try aw.toOwnedSlice());
+
     // Create a separate library for each source file
     for (cpp_sources.items) |source| {
         var basename = std.Io.Dir.path.basename(source);
@@ -178,12 +217,16 @@ pub fn build(b: *std.Build) !void {
                 .sanitize_c = .off,
                 .strip = strip,
                 .pic = true,
-                .link_libc = true,
+                .link_libc = !libc_override,
+                .link_libcpp = !is_linux,
             }),
             .linkage = linkage,
         });
 
-        if (!is_linux) lib.root_module.link_libcpp = true;
+        if (libc_override) {
+            lib.setLibCFile(libc_path);
+            lib.root_module.addIncludePath(.{ .cwd_relative = override_dir });
+        }
 
         lib.root_module.addIncludePath(b.path("include"));
         lib.root_module.addCSourceFiles(.{ .files = &.{source}, .flags = cpp_flags.items });
@@ -246,6 +289,11 @@ const base_cpp_flags = &.{
 const linux_cpp_flags = &.{
     "-nostdinc++",
     "-nostdlib++",
+};
+
+const linux_c_flags = &.{
+    "-nostdinc",
+    "-nostdlib",
 };
 
 const c_flags = &.{

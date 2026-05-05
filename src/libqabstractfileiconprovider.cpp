@@ -2,8 +2,6 @@
 #include <QFileInfo>
 #include <QIcon>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qabstractfileiconprovider.h>
 #include "libqabstractfileiconprovider.hpp"
 #include "libqabstractfileiconprovider.hxx"

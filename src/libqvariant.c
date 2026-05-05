@@ -250,12 +250,16 @@ QVariant* q_variant_new41(const char* str) {
     return QVariant_new41(str);
 }
 
-QVariant* q_variant_new42(int32_t type) {
-    return QVariant_new42(type);
+QVariant* q_variant_new42(const char* stringVal) {
+    return QVariant_new42(qstring(stringVal));
 }
 
-QVariant* q_variant_new43(void* type, void* copyVal) {
-    return QVariant_new43((QMetaType*)type, copyVal);
+QVariant* q_variant_new43(int32_t type) {
+    return QVariant_new43(type);
+}
+
+QVariant* q_variant_new44(void* type, void* copyVal) {
+    return QVariant_new44((QMetaType*)type, copyVal);
 }
 
 void q_variant_operator_assign(void* self, void* other) {

@@ -1,8 +1,6 @@
 #include <KCompletionMatches>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kcompletionmatches.h>
 #include "libkcompletionmatches.hpp"
 #include "libkcompletionmatches.hxx"

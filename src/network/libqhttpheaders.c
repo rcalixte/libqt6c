@@ -1,4 +1,3 @@
-#include "../libqanystringview.hpp"
 #include "../libqbytearrayview.hpp"
 #include "libqhttpheaders.hpp"
 #include "libqhttpheaders.h"
@@ -129,6 +128,13 @@ const char** q_httpheaders_values2(void* self, int32_t name) {
 
 char* q_httpheaders_value_at(void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_ValueAt((QHttpHeaders*)self, i);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_httpheaders_name_at(void* self, intptr_t i) {
+    libqt_string _str = QHttpHeaders_NameAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

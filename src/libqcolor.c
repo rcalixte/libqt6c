@@ -1,4 +1,3 @@
-#include "libqanystringview.hpp"
 #include "libqrgba64.hpp"
 #include "libqvariant.hpp"
 #include "libqcolor.hpp"
@@ -40,24 +39,28 @@ QColor* q_color_new9(const char* aname) {
     return QColor_new9(aname);
 }
 
-QColor* q_color_new10(int32_t spec) {
-    return QColor_new10(spec);
+QColor* q_color_new10(const char* name) {
+    return QColor_new10(qstring(name));
 }
 
-QColor* q_color_new11(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
-    return QColor_new11(spec, a1, a2, a3, a4);
+QColor* q_color_new11(int32_t spec) {
+    return QColor_new11(spec);
 }
 
-QColor* q_color_new12(void* param1) {
-    return QColor_new12((QColor*)param1);
+QColor* q_color_new12(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
+    return QColor_new12(spec, a1, a2, a3, a4);
 }
 
-QColor* q_color_new13(int r, int g, int b, int a) {
-    return QColor_new13(r, g, b, a);
+QColor* q_color_new13(void* param1) {
+    return QColor_new13((QColor*)param1);
 }
 
-QColor* q_color_new14(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
-    return QColor_new14(spec, a1, a2, a3, a4, a5);
+QColor* q_color_new14(int r, int g, int b, int a) {
+    return QColor_new14(r, g, b, a);
+}
+
+QColor* q_color_new15(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
+    return QColor_new15(spec, a1, a2, a3, a4, a5);
 }
 
 void q_color_copy_assign(void* self, void* other) {
@@ -89,6 +92,10 @@ const char* q_color_name(void* self) {
 
 void q_color_set_named_color(void* self, const char* name) {
     QColor_SetNamedColor((QColor*)self, qstring(name));
+}
+
+void q_color_set_named_color3(void* self, const char* name) {
+    QColor_SetNamedColor3((QColor*)self, qstring(name));
 }
 
 const char** q_color_color_names() {

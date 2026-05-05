@@ -338,18 +338,26 @@ QVariant* q_variant_new41(const char* str);
 
 /// q_variant_new42 constructs a new QVariant object.
 ///
-/// @param type enum QVariant__Type
+/// @param stringVal const char*
 ///
-QVariant* q_variant_new42(int32_t type);
+QVariant* q_variant_new42(const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
 /// q_variant_new43 constructs a new QVariant object.
 ///
+/// @param type enum QVariant__Type
+///
+QVariant* q_variant_new43(int32_t type);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
+
+/// q_variant_new44 constructs a new QVariant object.
+///
 /// @param type QMetaType*
 /// @param copyVal void*
 ///
-QVariant* q_variant_new43(void* type, void* copyVal);
+QVariant* q_variant_new44(void* type, void* copyVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html#operator-eq)
 ///

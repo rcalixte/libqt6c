@@ -7,8 +7,6 @@
 #include <QMetaObject>
 #include <QObject>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <daemon.h>
 #include "libdaemon.hpp"
 #include "libdaemon.hxx"

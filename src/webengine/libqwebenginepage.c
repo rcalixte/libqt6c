@@ -1,5 +1,4 @@
 #include "../libqaction.hpp"
-#include "../libqanystringview.hpp"
 #include "../network/libqauthenticator.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqcolor.hpp"

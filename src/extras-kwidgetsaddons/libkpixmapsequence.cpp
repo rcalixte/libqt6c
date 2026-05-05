@@ -2,8 +2,6 @@
 #include <QPixmap>
 #include <QSize>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kpixmapsequence.h>
 #include "libkpixmapsequence.hpp"
 #include "libkpixmapsequence.hxx"

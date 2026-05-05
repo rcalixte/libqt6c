@@ -1,8 +1,6 @@
 #include <KPixmapSequence>
 #include <KPixmapSequenceLoader>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kpixmapsequenceloader.h>
 #include "libkpixmapsequenceloader.hpp"
 #include "libkpixmapsequenceloader.hxx"

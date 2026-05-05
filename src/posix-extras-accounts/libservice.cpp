@@ -2,8 +2,6 @@
 #include <QDomDocument>
 #include <QSet>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <service.h>
 #include "libservice.hpp"
 #include "libservice.hxx"

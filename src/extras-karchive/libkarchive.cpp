@@ -4,8 +4,6 @@
 #include <QDateTime>
 #include <QIODevice>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <karchive.h>
 #include "libkarchive.hpp"
 #include "libkarchive.hxx"

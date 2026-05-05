@@ -4,8 +4,6 @@
 #include <QLowEnergyCharacteristic>
 #include <QLowEnergyDescriptor>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qlowenergycharacteristic.h>
 #include "libqlowenergycharacteristic.hpp"
 #include "libqlowenergycharacteristic.hxx"

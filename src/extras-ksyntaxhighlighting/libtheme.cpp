@@ -1,7 +1,5 @@
 #include <KSyntaxHighlighting/Theme>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <theme.h>
 #include "libtheme.hpp"
 #include "libtheme.hxx"

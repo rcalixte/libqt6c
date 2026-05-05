@@ -170,91 +170,99 @@ QCborValue* q_cborvalue_new11(const char* s);
 
 /// q_cborvalue_new12 constructs a new QCborValue object.
 ///
-/// @param a QCborArray*
+/// @param s const char*
 ///
-QCborValue* q_cborvalue_new12(void* a);
+QCborValue* q_cborvalue_new12(const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new13 constructs a new QCborValue object.
 ///
-/// @param m QCborMap*
+/// @param a QCborArray*
 ///
-QCborValue* q_cborvalue_new13(void* m);
+QCborValue* q_cborvalue_new13(void* a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new14 constructs a new QCborValue object.
 ///
-/// @param tag enum QCborValue__QCborTag
+/// @param m QCborMap*
 ///
-QCborValue* q_cborvalue_new14(uint64_t tag);
+QCborValue* q_cborvalue_new14(void* m);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new15 constructs a new QCborValue object.
 ///
-/// @param t_ enum QCborValue__QCborKnownTags
+/// @param tag enum QCborValue__QCborTag
 ///
-QCborValue* q_cborvalue_new15(int32_t t_);
+QCborValue* q_cborvalue_new15(uint64_t tag);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new16 constructs a new QCborValue object.
 ///
-/// @param dt QDateTime*
+/// @param t_ enum QCborValue__QCborKnownTags
 ///
-QCborValue* q_cborvalue_new16(void* dt);
+QCborValue* q_cborvalue_new16(int32_t t_);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new17 constructs a new QCborValue object.
 ///
-/// @param url QUrl*
+/// @param dt QDateTime*
 ///
-QCborValue* q_cborvalue_new17(void* url);
+QCborValue* q_cborvalue_new17(void* dt);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new18 constructs a new QCborValue object.
 ///
-/// @param rx QRegularExpression*
+/// @param url QUrl*
 ///
-QCborValue* q_cborvalue_new18(void* rx);
+QCborValue* q_cborvalue_new18(void* url);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new19 constructs a new QCborValue object.
 ///
-/// @param uuid QUuid*
+/// @param rx QRegularExpression*
 ///
-QCborValue* q_cborvalue_new19(void* uuid);
+QCborValue* q_cborvalue_new19(void* rx);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new20 constructs a new QCborValue object.
 ///
-/// @param other QCborValue*
+/// @param uuid QUuid*
 ///
-QCborValue* q_cborvalue_new20(void* other);
+QCborValue* q_cborvalue_new20(void* uuid);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new21 constructs a new QCborValue object.
 ///
-/// @param tag enum QCborValue__QCborTag
-/// @param taggedValue QCborValue*
+/// @param other QCborValue*
 ///
-QCborValue* q_cborvalue_new21(uint64_t tag, void* taggedValue);
+QCborValue* q_cborvalue_new21(void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
 
 /// q_cborvalue_new22 constructs a new QCborValue object.
 ///
+/// @param tag enum QCborValue__QCborTag
+/// @param taggedValue QCborValue*
+///
+QCborValue* q_cborvalue_new22(uint64_t tag, void* taggedValue);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html)
+
+/// q_cborvalue_new23 constructs a new QCborValue object.
+///
 /// @param t_ enum QCborValue__QCborKnownTags
 /// @param tv QCborValue*
 ///
-QCborValue* q_cborvalue_new22(int32_t t_, void* tv);
+QCborValue* q_cborvalue_new23(int32_t t_, void* tv);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-eq)
 ///
@@ -515,6 +523,13 @@ const QCborValue* q_cborvalue_operator_subscript(void* self, const char* key);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
 /// @param self QCborValue*
+/// @param key const char*
+///
+const QCborValue* q_cborvalue_operator_subscript2(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
+///
+/// @param self QCborValue*
 /// @param key int64_t
 ///
 const QCborValue* q_cborvalue_operator_subscript3(void* self, int64_t key);
@@ -525,6 +540,13 @@ const QCborValue* q_cborvalue_operator_subscript3(void* self, int64_t key);
 /// @param key int64_t
 ///
 QCborValueRef* q_cborvalue_operator_subscript4(void* self, int64_t key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
+///
+/// @param self QCborValue*
+/// @param key const char*
+///
+QCborValueRef* q_cborvalue_operator_subscript5(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalue.html#operator-5b-5d)
 ///
@@ -1029,6 +1051,13 @@ const QCborValue* q_cborvalueconstref_operator_subscript(void* self, const char*
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
 ///
 /// @param self QCborValueConstRef*
+/// @param key const char*
+///
+const QCborValue* q_cborvalueconstref_operator_subscript2(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueconstref.html#operator-5b-5d)
+///
+/// @param self QCborValueConstRef*
 /// @param key int64_t
 ///
 const QCborValue* q_cborvalueconstref_operator_subscript3(void* self, int64_t key);
@@ -1245,6 +1274,13 @@ void q_cborvalueref_operator_assign2(void* self, void* other);
 /// @param key int64_t
 ///
 QCborValueRef* q_cborvalueref_operator_subscript(void* self, int64_t key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
+///
+/// @param self QCborValueRef*
+/// @param key const char*
+///
+QCborValueRef* q_cborvalueref_operator_subscript2(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///
@@ -1500,6 +1536,13 @@ QCborMap* q_cborvalueref_to_map2(void* self, void* m);
 /// @param key const char*
 ///
 const QCborValue* q_cborvalueref_operator_subscript4(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
+///
+/// @param self QCborValueRef*
+/// @param key const char*
+///
+const QCborValue* q_cborvalueref_operator_subscript5(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborvalueref.html#operator-5b-5d)
 ///

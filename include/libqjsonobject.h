@@ -141,6 +141,27 @@ QJsonValue* q_jsonobject_operator_subscript(void* self, const char* key);
 ///
 QJsonValueRef* q_jsonobject_operator_subscript2(void* self, const char* key);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#value)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonValue* q_jsonobject_value3(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#operator-5b-5d)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonValue* q_jsonobject_operator_subscript4(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#operator-5b-5d)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonValueRef* q_jsonobject_operator_subscript6(void* self, const char* key);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#remove)
 ///
 /// @param self QJsonObject*
@@ -161,6 +182,27 @@ QJsonValue* q_jsonobject_take(void* self, const char* key);
 /// @param key const char*
 ///
 bool q_jsonobject_contains(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#remove)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+void q_jsonobject_remove3(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#take)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonValue* q_jsonobject_take3(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#contains)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+bool q_jsonobject_contains3(void* self, const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#begin)
 ///
@@ -233,6 +275,35 @@ QJsonObject__const_iterator* q_jsonobject_const_find(void* self, const char* key
 /// @param value QJsonValue*
 ///
 QJsonObject__iterator* q_jsonobject_insert(void* self, const char* key, void* value);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#find)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonObject__iterator* q_jsonobject_find4(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#find)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonObject__const_iterator* q_jsonobject_find6(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#constFind)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+///
+QJsonObject__const_iterator* q_jsonobject_const_find3(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#insert)
+///
+/// @param self QJsonObject*
+/// @param key const char*
+/// @param value QJsonValue*
+///
+QJsonObject__iterator* q_jsonobject_insert3(void* self, const char* key, void* value);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#empty)
 ///

@@ -4,8 +4,6 @@
 #include <QList>
 #include <QSet>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <abstractpromotioninterface.h>
 #include "libabstractpromotioninterface.hpp"
 #include "libabstractpromotioninterface.hxx"

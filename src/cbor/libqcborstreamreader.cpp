@@ -3,8 +3,6 @@
 #include <QCborStreamReader>
 #include <QIODevice>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qcborstreamreader.h>
 #include "libqcborstreamreader.hpp"
 #include "libqcborstreamreader.hxx"

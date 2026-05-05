@@ -1,8 +1,6 @@
 #include <KConfig>
 #include <KConfigGui>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kconfiggui.h>
 #include "libkconfiggui.hpp"
 #include "libkconfiggui.hxx"

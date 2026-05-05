@@ -1,4 +1,3 @@
-#include "libqanystringview.hpp"
 #include "libqcoreevent.hpp"
 #include "libqmetaobject.hpp"
 #include "libqobjectdefs.hpp"
