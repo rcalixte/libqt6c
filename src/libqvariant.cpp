@@ -27,8 +27,6 @@
 #include <QSize>
 #include <QSizeF>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <QTime>
 #include <QUrl>
 #include <QUuid>
@@ -231,11 +229,16 @@ QVariant* QVariant_new41(const char* str) {
     return new QVariant(str);
 }
 
-QVariant* QVariant_new42(int type) {
+QVariant* QVariant_new42(libqt_string stringVal) {
+    QLatin1StringView stringVal_QString = QLatin1StringView(stringVal.data, stringVal.len);
+    return new QVariant(stringVal_QString);
+}
+
+QVariant* QVariant_new43(int type) {
     return new QVariant(static_cast<QVariant::Type>(type));
 }
 
-QVariant* QVariant_new43(QMetaType* type, const void* copyVal) {
+QVariant* QVariant_new44(QMetaType* type, const void* copyVal) {
     return new QVariant(*type, copyVal);
 }
 

@@ -7,8 +7,6 @@
 #include <QRect>
 #include <QSize>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qimagereader.h>
 #include "libqimagereader.hpp"
 #include "libqimagereader.hxx"

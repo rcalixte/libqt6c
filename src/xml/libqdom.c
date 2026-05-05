@@ -1,4 +1,3 @@
-#include "../libqanystringview.hpp"
 #include "../libqiodevice.hpp"
 #include "../libqtextstream.hpp"
 #include "../libqxmlstream.hpp"

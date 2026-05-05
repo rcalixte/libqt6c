@@ -1,7 +1,5 @@
 #define WORKAROUND_INNER_CLASS_DEFINITION_Attica__Config
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <config.h>
 #include "libconfig.hpp"
 #include "libconfig.hxx"

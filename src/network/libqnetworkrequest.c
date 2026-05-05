@@ -1,4 +1,3 @@
-#include "../libqanystringview.hpp"
 #include "libqhttp1configuration.hpp"
 #include "libqhttp2configuration.hpp"
 #include "libqhttpheaders.hpp"

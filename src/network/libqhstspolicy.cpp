@@ -1,8 +1,6 @@
 #include <QDateTime>
 #include <QHstsPolicy>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qhstspolicy.h>
 #include "libqhstspolicy.hpp"
 #include "libqhstspolicy.hxx"

@@ -3,8 +3,6 @@
 #include <QByteArray>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qaudiodevice.h>
 #include "libqaudiodevice.hpp"
 #include "libqaudiodevice.hxx"

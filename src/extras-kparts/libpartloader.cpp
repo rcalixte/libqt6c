@@ -3,8 +3,6 @@
 #include <QList>
 #include <QMetaObject>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <partloader.h>
 #include "libpartloader.hpp"
 #include "libpartloader.hxx"

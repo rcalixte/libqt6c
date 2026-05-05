@@ -2,8 +2,6 @@
 #define WORKAROUND_INNER_CLASS_DEFINITION_KFileMetaData__ExtractorCollection
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <extractorcollection.h>
 #include "libextractorcollection.hpp"
 #include "libextractorcollection.hxx"

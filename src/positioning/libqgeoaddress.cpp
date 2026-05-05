@@ -1,7 +1,5 @@
 #include <QGeoAddress>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qgeoaddress.h>
 #include "libqgeoaddress.hpp"
 #include "libqgeoaddress.hxx"

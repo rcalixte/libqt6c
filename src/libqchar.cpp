@@ -1,8 +1,6 @@
 #include <QChar>
 #include <QLatin1Char>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qchar.h>
 #include "libqchar.hpp"
 #include "libqchar.hxx"

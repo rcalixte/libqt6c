@@ -2,8 +2,6 @@
 #include <QDomDocument>
 #include <QSet>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <provider.h>
 #include "libprovider_2.hpp"
 #include "libprovider_2.hxx"

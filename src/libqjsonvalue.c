@@ -29,23 +29,27 @@ QJsonValue* q_jsonvalue_new6(const char* s) {
 }
 
 QJsonValue* q_jsonvalue_new7(const char* s) {
-    return QJsonValue_new7(s);
+    return QJsonValue_new7(qstring(s));
 }
 
-QJsonValue* q_jsonvalue_new8(void* a) {
-    return QJsonValue_new8((QJsonArray*)a);
+QJsonValue* q_jsonvalue_new8(const char* s) {
+    return QJsonValue_new8(s);
 }
 
-QJsonValue* q_jsonvalue_new9(void* o) {
-    return QJsonValue_new9((QJsonObject*)o);
+QJsonValue* q_jsonvalue_new9(void* a) {
+    return QJsonValue_new9((QJsonArray*)a);
 }
 
-QJsonValue* q_jsonvalue_new10(void* other) {
-    return QJsonValue_new10((QJsonValue*)other);
+QJsonValue* q_jsonvalue_new10(void* o) {
+    return QJsonValue_new10((QJsonObject*)o);
 }
 
-QJsonValue* q_jsonvalue_new11(int32_t param1) {
-    return QJsonValue_new11(param1);
+QJsonValue* q_jsonvalue_new11(void* other) {
+    return QJsonValue_new11((QJsonValue*)other);
+}
+
+QJsonValue* q_jsonvalue_new12(int32_t param1) {
+    return QJsonValue_new12(param1);
 }
 
 void q_jsonvalue_operator_assign(void* self, void* other) {
@@ -144,6 +148,10 @@ QJsonObject* q_jsonvalue_to_object2(void* self, void* defaultValue) {
 
 const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key) {
     return QJsonValue_OperatorSubscript((QJsonValue*)self, qstring(key));
+}
+
+const QJsonValue* q_jsonvalue_operator_subscript3(void* self, const char* key) {
+    return QJsonValue_OperatorSubscript3((QJsonValue*)self, qstring(key));
 }
 
 const QJsonValue* q_jsonvalue_operator_subscript4(void* self, intptr_t i) {
@@ -247,6 +255,10 @@ QJsonArray* q_jsonvalueconstref_to_array(void* self) {
 
 QJsonObject* q_jsonvalueconstref_to_object(void* self) {
     return QJsonValueConstRef_ToObject((QJsonValueConstRef*)self);
+}
+
+const QJsonValue* q_jsonvalueconstref_operator_subscript2(void* self, const char* key) {
+    return QJsonValueConstRef_OperatorSubscript2((QJsonValueConstRef*)self, qstring(key));
 }
 
 const QJsonValue* q_jsonvalueconstref_operator_subscript3(void* self, intptr_t i) {
@@ -373,6 +385,10 @@ QJsonArray* q_jsonvalueref_to_array(void* self) {
 
 QJsonObject* q_jsonvalueref_to_object(void* self) {
     return QJsonValueRef_ToObject((QJsonValueRef*)self);
+}
+
+const QJsonValue* q_jsonvalueref_operator_subscript2(void* self, const char* key) {
+    return QJsonValueRef_OperatorSubscript2((QJsonValueRef*)self, qstring(key));
 }
 
 const QJsonValue* q_jsonvalueref_operator_subscript3(void* self, intptr_t i) {

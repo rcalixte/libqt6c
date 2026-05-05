@@ -4,8 +4,6 @@
 #include <QList>
 #include <QPluginLoader>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kpluginmetadata.h>
 #include "libkpluginmetadata.hpp"
 #include "libkpluginmetadata.hxx"

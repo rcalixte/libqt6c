@@ -1,11 +1,8 @@
-#include <QAnyStringView>
 #include <QList>
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 #include <QRegularExpressionMatchIterator>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qregularexpression.h>
 #include "libqregularexpression.hpp"
 #include "libqregularexpression.hxx"

@@ -2,8 +2,6 @@
 #include <KCountrySubdivision>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kcountrysubdivision.h>
 #include "libkcountrysubdivision.hpp"
 #include "libkcountrysubdivision.hxx"

@@ -189,6 +189,13 @@ QLatin1Char* q_latin1string_back(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#compare)
 ///
 /// @param self QLatin1String*
+/// @param other const char*
+///
+int32_t q_latin1string_compare2(void* self, const char* other);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#compare)
+///
+/// @param self QLatin1String*
 /// @param c QChar*
 ///
 int32_t q_latin1string_compare4(void* self, void* c);
@@ -200,6 +207,13 @@ int32_t q_latin1string_compare4(void* self, void* c);
 /// @param cs enum Qt__CaseSensitivity
 ///
 int32_t q_latin1string_compare5(void* self, void* c, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#startsWith)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+///
+bool q_latin1string_starts_with2(void* self, const char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#startsWith)
 ///
@@ -219,6 +233,13 @@ bool q_latin1string_starts_with4(void* self, void* c, int32_t cs);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#endsWith)
 ///
 /// @param self QLatin1String*
+/// @param s const char*
+///
+bool q_latin1string_ends_with2(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#endsWith)
+///
+/// @param self QLatin1String*
 /// @param c QChar*
 ///
 bool q_latin1string_ends_with3(void* self, void* c);
@@ -234,6 +255,13 @@ bool q_latin1string_ends_with4(void* self, void* c, int32_t cs);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
 ///
 /// @param self QLatin1String*
+/// @param s const char*
+///
+intptr_t q_latin1string_index_of2(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
+///
+/// @param self QLatin1String*
 /// @param c QChar*
 ///
 intptr_t q_latin1string_index_of3(void* self, void* c);
@@ -241,9 +269,31 @@ intptr_t q_latin1string_index_of3(void* self, void* c);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#contains)
 ///
 /// @param self QLatin1String*
+/// @param s const char*
+///
+bool q_latin1string_contains2(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#contains)
+///
+/// @param self QLatin1String*
 /// @param c QChar*
 ///
 bool q_latin1string_contains3(void* self, void* c);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+///
+intptr_t q_latin1string_last_index_of3(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param from intptr_t
+///
+intptr_t q_latin1string_last_index_of4(void* self, const char* s, intptr_t from);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
 ///
@@ -259,6 +309,13 @@ intptr_t q_latin1string_last_index_of5(void* self, void* c);
 /// @param from intptr_t
 ///
 intptr_t q_latin1string_last_index_of6(void* self, void* c, intptr_t from);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#count)
+///
+/// @param self QLatin1String*
+/// @param str const char*
+///
+intptr_t q_latin1string_count2(void* self, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#count)
 ///
@@ -369,6 +426,98 @@ intptr_t q_latin1string_max_size(void* self);
 ///
 intptr_t q_latin1string_max_size2();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#mid)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param pos intptr_t
+///
+const char* q_latin1string_mid(void* self, intptr_t pos);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#left)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param n intptr_t
+///
+const char* q_latin1string_left(void* self, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#right)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param n intptr_t
+///
+const char* q_latin1string_right(void* self, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#sliced)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param pos intptr_t
+///
+const char* q_latin1string_sliced(void* self, intptr_t pos);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#sliced)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param pos intptr_t
+/// @param n intptr_t
+///
+const char* q_latin1string_sliced2(void* self, intptr_t pos, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#first)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param n intptr_t
+///
+const char* q_latin1string_first2(void* self, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#last)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param n intptr_t
+///
+const char* q_latin1string_last2(void* self, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#chopped)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param n intptr_t
+///
+const char* q_latin1string_chopped(void* self, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#slice)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param pos intptr_t
+///
+const char* q_latin1string_slice(void* self, intptr_t pos);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#slice)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param pos intptr_t
+/// @param n intptr_t
+///
+const char* q_latin1string_slice2(void* self, intptr_t pos, intptr_t n);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#chop)
 ///
 /// @param self QLatin1String*
@@ -382,6 +531,55 @@ void q_latin1string_chop(void* self, intptr_t n);
 /// @param n intptr_t
 ///
 void q_latin1string_truncate(void* self, intptr_t n);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#trimmed)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+///
+const char* q_latin1string_trimmed(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#compare)
+///
+/// @param self QLatin1String*
+/// @param other const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+int32_t q_latin1string_compare23(void* self, const char* other, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#startsWith)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+bool q_latin1string_starts_with23(void* self, const char* s, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#endsWith)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+bool q_latin1string_ends_with23(void* self, const char* s, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param from intptr_t
+///
+intptr_t q_latin1string_index_of23(void* self, const char* s, intptr_t from);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param from intptr_t
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_latin1string_index_of33(void* self, const char* s, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#indexOf)
 ///
@@ -403,10 +601,35 @@ intptr_t q_latin1string_index_of34(void* self, void* c, intptr_t from, int32_t c
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#contains)
 ///
 /// @param self QLatin1String*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+bool q_latin1string_contains23(void* self, const char* s, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#contains)
+///
+/// @param self QLatin1String*
 /// @param c QChar*
 /// @param cs enum Qt__CaseSensitivity
 ///
 bool q_latin1string_contains24(void* self, void* c, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_latin1string_last_index_of23(void* self, const char* s, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
+///
+/// @param self QLatin1String*
+/// @param s const char*
+/// @param from intptr_t
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_latin1string_last_index_of33(void* self, const char* s, intptr_t from, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#lastIndexOf)
 ///
@@ -424,6 +647,14 @@ intptr_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs);
 /// @param cs enum Qt__CaseSensitivity
 ///
 intptr_t q_latin1string_last_index_of34(void* self, void* c, intptr_t from, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#count)
+///
+/// @param self QLatin1String*
+/// @param str const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+intptr_t q_latin1string_count23(void* self, const char* str, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#count)
 ///
@@ -566,6 +797,16 @@ float q_latin1string_to_float1(void* self, bool* ok);
 /// @param ok bool*
 ///
 double q_latin1string_to_double1(void* self, bool* ok);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#mid)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QLatin1String*
+/// @param pos intptr_t
+/// @param n intptr_t
+///
+const char* q_latin1string_mid2(void* self, intptr_t pos, intptr_t n);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlatin1string.html#dtor.QLatin1String)
 ///

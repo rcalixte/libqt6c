@@ -4,8 +4,6 @@
 #include <QNetworkInformation>
 #include <QObject>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qnetworkinformation.h>
 #include "libqnetworkinformation.hpp"
 #include "libqnetworkinformation.hxx"

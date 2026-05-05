@@ -1,8 +1,6 @@
 #include <KConfig>
 #include <KMessageBoxDontAskAgainInterface>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kmessageboxdontaskagaininterface.h>
 #include "libkmessageboxdontaskagaininterface.hpp"
 #include "libkmessageboxdontaskagaininterface.hxx"

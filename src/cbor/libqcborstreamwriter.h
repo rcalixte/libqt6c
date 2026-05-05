@@ -60,6 +60,13 @@ void q_cborstreamwriter_append4(void* self, char* ba);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
 ///
 /// @param self QCborStreamWriter*
+/// @param str const char*
+///
+void q_cborstreamwriter_append5(void* self, const char* str);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcborstreamwriter.html#append)
+///
+/// @param self QCborStreamWriter*
 /// @param tag enum QCborStreamWriter__QCborTag
 ///
 void q_cborstreamwriter_append7(void* self, uint64_t tag);

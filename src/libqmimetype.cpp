@@ -1,8 +1,6 @@
 #include <QList>
 #include <QMimeType>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qmimetype.h>
 #include "libqmimetype.hpp"
 #include "libqmimetype.hxx"

@@ -3,8 +3,6 @@
 #include <QList>
 #include <QRegularExpression>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kstringhandler.h>
 #include "libkstringhandler.hpp"
 #include "libkstringhandler.hxx"

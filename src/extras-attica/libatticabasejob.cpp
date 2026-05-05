@@ -6,8 +6,6 @@
 #include <QNetworkReply>
 #include <QObject>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <atticabasejob.h>
 #include "libatticabasejob.hpp"
 #include "libatticabasejob.hxx"

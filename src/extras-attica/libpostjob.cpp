@@ -6,8 +6,6 @@
 #include <QMetaObject>
 #include <QObject>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <postjob.h>
 #include "libpostjob.hpp"
 #include "libpostjob.hxx"

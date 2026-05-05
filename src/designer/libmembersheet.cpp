@@ -2,8 +2,6 @@
 #include <QDesignerMemberSheetExtension>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <membersheet.h>
 #include "libmembersheet.hpp"
 #include "libmembersheet.hxx"

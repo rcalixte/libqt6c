@@ -1,4 +1,3 @@
-#include "libqanystringview.hpp"
 #include "libqpaintdevice.hpp"
 #include "libqvariant.hpp"
 #include "libqfont.hpp"

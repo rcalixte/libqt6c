@@ -1,7 +1,5 @@
 #define WORKAROUND_INNER_CLASS_DEFINITION_Attica__BuildServiceJob
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <buildservicejob.h>
 #include "libbuildservicejob.hpp"
 #include "libbuildservicejob.hxx"

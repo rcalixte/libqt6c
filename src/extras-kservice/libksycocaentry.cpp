@@ -1,8 +1,6 @@
 #include <KSycocaEntry>
 #include <QSharedData>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <ksycocaentry.h>
 #include "libksycocaentry.hpp"
 #include "libksycocaentry.hxx"

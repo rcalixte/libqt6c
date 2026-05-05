@@ -1,8 +1,6 @@
 #include <KOSRelease>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kosrelease.h>
 #include "libkosrelease.hpp"
 #include "libkosrelease.hxx"

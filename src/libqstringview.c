@@ -76,6 +76,10 @@ void q_stringview_chop(void* self, intptr_t n) {
     QStringView_Chop((QStringView*)self, n);
 }
 
+int32_t q_stringview_compare2(void* self, const char* other) {
+    return QStringView_Compare2((QStringView*)self, qstring(other));
+}
+
 int32_t q_stringview_compare4(void* self, void* c) {
     return QStringView_Compare4((QStringView*)self, (QChar*)c);
 }
@@ -84,12 +88,20 @@ int32_t q_stringview_compare5(void* self, void* c, int32_t cs) {
     return QStringView_Compare5((QStringView*)self, (QChar*)c, cs);
 }
 
+bool q_stringview_starts_with2(void* self, const char* s) {
+    return QStringView_StartsWith2((QStringView*)self, qstring(s));
+}
+
 bool q_stringview_starts_with3(void* self, void* c) {
     return QStringView_StartsWith3((QStringView*)self, (QChar*)c);
 }
 
 bool q_stringview_starts_with4(void* self, void* c, int32_t cs) {
     return QStringView_StartsWith4((QStringView*)self, (QChar*)c, cs);
+}
+
+bool q_stringview_ends_with2(void* self, const char* s) {
+    return QStringView_EndsWith2((QStringView*)self, qstring(s));
 }
 
 bool q_stringview_ends_with3(void* self, void* c) {
@@ -104,12 +116,24 @@ intptr_t q_stringview_index_of(void* self, void* c) {
     return QStringView_IndexOf((QStringView*)self, (QChar*)c);
 }
 
+intptr_t q_stringview_index_of3(void* self, const char* s) {
+    return QStringView_IndexOf3((QStringView*)self, qstring(s));
+}
+
 bool q_stringview_contains(void* self, void* c) {
     return QStringView_Contains((QStringView*)self, (QChar*)c);
 }
 
+bool q_stringview_contains3(void* self, const char* s) {
+    return QStringView_Contains3((QStringView*)self, qstring(s));
+}
+
 intptr_t q_stringview_count(void* self, void* c) {
     return QStringView_Count((QStringView*)self, (QChar*)c);
+}
+
+intptr_t q_stringview_count3(void* self, const char* s) {
+    return QStringView_Count3((QStringView*)self, qstring(s));
 }
 
 intptr_t q_stringview_last_index_of(void* self, void* c) {
@@ -118,6 +142,14 @@ intptr_t q_stringview_last_index_of(void* self, void* c) {
 
 intptr_t q_stringview_last_index_of2(void* self, void* c, intptr_t from) {
     return QStringView_LastIndexOf2((QStringView*)self, (QChar*)c, from);
+}
+
+intptr_t q_stringview_last_index_of5(void* self, const char* s) {
+    return QStringView_LastIndexOf5((QStringView*)self, qstring(s));
+}
+
+intptr_t q_stringview_last_index_of6(void* self, const char* s, intptr_t from) {
+    return QStringView_LastIndexOf6((QStringView*)self, qstring(s), from);
 }
 
 intptr_t q_stringview_index_of4(void* self, void* re) {
@@ -256,6 +288,18 @@ intptr_t q_stringview_max_size2() {
     return QStringView_MaxSize2();
 }
 
+int32_t q_stringview_compare23(void* self, const char* other, int32_t cs) {
+    return QStringView_Compare23((QStringView*)self, qstring(other), cs);
+}
+
+bool q_stringview_starts_with23(void* self, const char* s, int32_t cs) {
+    return QStringView_StartsWith23((QStringView*)self, qstring(s), cs);
+}
+
+bool q_stringview_ends_with23(void* self, const char* s, int32_t cs) {
+    return QStringView_EndsWith23((QStringView*)self, qstring(s), cs);
+}
+
 intptr_t q_stringview_index_of22(void* self, void* c, intptr_t from) {
     return QStringView_IndexOf22((QStringView*)self, (QChar*)c, from);
 }
@@ -264,12 +308,28 @@ intptr_t q_stringview_index_of32(void* self, void* c, intptr_t from, int32_t cs)
     return QStringView_IndexOf32((QStringView*)self, (QChar*)c, from, cs);
 }
 
+intptr_t q_stringview_index_of24(void* self, const char* s, intptr_t from) {
+    return QStringView_IndexOf24((QStringView*)self, qstring(s), from);
+}
+
+intptr_t q_stringview_index_of34(void* self, const char* s, intptr_t from, int32_t cs) {
+    return QStringView_IndexOf34((QStringView*)self, qstring(s), from, cs);
+}
+
 bool q_stringview_contains22(void* self, void* c, int32_t cs) {
     return QStringView_Contains22((QStringView*)self, (QChar*)c, cs);
 }
 
+bool q_stringview_contains24(void* self, const char* s, int32_t cs) {
+    return QStringView_Contains24((QStringView*)self, qstring(s), cs);
+}
+
 intptr_t q_stringview_count22(void* self, void* c, int32_t cs) {
     return QStringView_Count22((QStringView*)self, (QChar*)c, cs);
+}
+
+intptr_t q_stringview_count24(void* self, const char* s, int32_t cs) {
+    return QStringView_Count24((QStringView*)self, qstring(s), cs);
 }
 
 intptr_t q_stringview_last_index_of22(void* self, void* c, int32_t cs) {
@@ -278,6 +338,14 @@ intptr_t q_stringview_last_index_of22(void* self, void* c, int32_t cs) {
 
 intptr_t q_stringview_last_index_of32(void* self, void* c, intptr_t from, int32_t cs) {
     return QStringView_LastIndexOf32((QStringView*)self, (QChar*)c, from, cs);
+}
+
+intptr_t q_stringview_last_index_of24(void* self, const char* s, int32_t cs) {
+    return QStringView_LastIndexOf24((QStringView*)self, qstring(s), cs);
+}
+
+intptr_t q_stringview_last_index_of34(void* self, const char* s, intptr_t from, int32_t cs) {
+    return QStringView_LastIndexOf34((QStringView*)self, qstring(s), from, cs);
 }
 
 intptr_t q_stringview_index_of25(void* self, void* re, intptr_t from) {

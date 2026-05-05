@@ -106,12 +106,20 @@ QLatin1Char* q_latin1string_back(void* self) {
     return QLatin1String_Back((QLatin1String*)self);
 }
 
+int32_t q_latin1string_compare2(void* self, const char* other) {
+    return QLatin1String_Compare2((QLatin1String*)self, qstring(other));
+}
+
 int32_t q_latin1string_compare4(void* self, void* c) {
     return QLatin1String_Compare4((QLatin1String*)self, (QChar*)c);
 }
 
 int32_t q_latin1string_compare5(void* self, void* c, int32_t cs) {
     return QLatin1String_Compare5((QLatin1String*)self, (QChar*)c, cs);
+}
+
+bool q_latin1string_starts_with2(void* self, const char* s) {
+    return QLatin1String_StartsWith2((QLatin1String*)self, qstring(s));
 }
 
 bool q_latin1string_starts_with3(void* self, void* c) {
@@ -122,6 +130,10 @@ bool q_latin1string_starts_with4(void* self, void* c, int32_t cs) {
     return QLatin1String_StartsWith4((QLatin1String*)self, (QChar*)c, cs);
 }
 
+bool q_latin1string_ends_with2(void* self, const char* s) {
+    return QLatin1String_EndsWith2((QLatin1String*)self, qstring(s));
+}
+
 bool q_latin1string_ends_with3(void* self, void* c) {
     return QLatin1String_EndsWith3((QLatin1String*)self, (QChar*)c);
 }
@@ -130,12 +142,28 @@ bool q_latin1string_ends_with4(void* self, void* c, int32_t cs) {
     return QLatin1String_EndsWith4((QLatin1String*)self, (QChar*)c, cs);
 }
 
+intptr_t q_latin1string_index_of2(void* self, const char* s) {
+    return QLatin1String_IndexOf2((QLatin1String*)self, qstring(s));
+}
+
 intptr_t q_latin1string_index_of3(void* self, void* c) {
     return QLatin1String_IndexOf3((QLatin1String*)self, (QChar*)c);
 }
 
+bool q_latin1string_contains2(void* self, const char* s) {
+    return QLatin1String_Contains2((QLatin1String*)self, qstring(s));
+}
+
 bool q_latin1string_contains3(void* self, void* c) {
     return QLatin1String_Contains3((QLatin1String*)self, (QChar*)c);
+}
+
+intptr_t q_latin1string_last_index_of3(void* self, const char* s) {
+    return QLatin1String_LastIndexOf3((QLatin1String*)self, qstring(s));
+}
+
+intptr_t q_latin1string_last_index_of4(void* self, const char* s, intptr_t from) {
+    return QLatin1String_LastIndexOf4((QLatin1String*)self, qstring(s), from);
 }
 
 intptr_t q_latin1string_last_index_of5(void* self, void* c) {
@@ -144,6 +172,10 @@ intptr_t q_latin1string_last_index_of5(void* self, void* c) {
 
 intptr_t q_latin1string_last_index_of6(void* self, void* c, intptr_t from) {
     return QLatin1String_LastIndexOf6((QLatin1String*)self, (QChar*)c, from);
+}
+
+intptr_t q_latin1string_count2(void* self, const char* str) {
+    return QLatin1String_Count2((QLatin1String*)self, qstring(str));
 }
 
 intptr_t q_latin1string_count3(void* self, void* ch) {
@@ -214,12 +246,109 @@ intptr_t q_latin1string_max_size2() {
     return QLatin1String_MaxSize2();
 }
 
+const char* q_latin1string_mid(void* self, intptr_t pos) {
+    libqt_string _str = QLatin1String_Mid((QLatin1String*)self, pos);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_left(void* self, intptr_t n) {
+    libqt_string _str = QLatin1String_Left((QLatin1String*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_right(void* self, intptr_t n) {
+    libqt_string _str = QLatin1String_Right((QLatin1String*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_sliced(void* self, intptr_t pos) {
+    libqt_string _str = QLatin1String_Sliced((QLatin1String*)self, pos);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_sliced2(void* self, intptr_t pos, intptr_t n) {
+    libqt_string _str = QLatin1String_Sliced2((QLatin1String*)self, pos, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_first2(void* self, intptr_t n) {
+    libqt_string _str = QLatin1String_First2((QLatin1String*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_last2(void* self, intptr_t n) {
+    libqt_string _str = QLatin1String_Last2((QLatin1String*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_chopped(void* self, intptr_t n) {
+    libqt_string _str = QLatin1String_Chopped((QLatin1String*)self, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_slice(void* self, intptr_t pos) {
+    libqt_string _str = QLatin1String_Slice((QLatin1String*)self, pos);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_latin1string_slice2(void* self, intptr_t pos, intptr_t n) {
+    libqt_string _str = QLatin1String_Slice2((QLatin1String*)self, pos, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 void q_latin1string_chop(void* self, intptr_t n) {
     QLatin1String_Chop((QLatin1String*)self, n);
 }
 
 void q_latin1string_truncate(void* self, intptr_t n) {
     QLatin1String_Truncate((QLatin1String*)self, n);
+}
+
+const char* q_latin1string_trimmed(void* self) {
+    libqt_string _str = QLatin1String_Trimmed((QLatin1String*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+int32_t q_latin1string_compare23(void* self, const char* other, int32_t cs) {
+    return QLatin1String_Compare23((QLatin1String*)self, qstring(other), cs);
+}
+
+bool q_latin1string_starts_with23(void* self, const char* s, int32_t cs) {
+    return QLatin1String_StartsWith23((QLatin1String*)self, qstring(s), cs);
+}
+
+bool q_latin1string_ends_with23(void* self, const char* s, int32_t cs) {
+    return QLatin1String_EndsWith23((QLatin1String*)self, qstring(s), cs);
+}
+
+intptr_t q_latin1string_index_of23(void* self, const char* s, intptr_t from) {
+    return QLatin1String_IndexOf23((QLatin1String*)self, qstring(s), from);
+}
+
+intptr_t q_latin1string_index_of33(void* self, const char* s, intptr_t from, int32_t cs) {
+    return QLatin1String_IndexOf33((QLatin1String*)self, qstring(s), from, cs);
 }
 
 intptr_t q_latin1string_index_of24(void* self, void* c, intptr_t from) {
@@ -230,8 +359,20 @@ intptr_t q_latin1string_index_of34(void* self, void* c, intptr_t from, int32_t c
     return QLatin1String_IndexOf34((QLatin1String*)self, (QChar*)c, from, cs);
 }
 
+bool q_latin1string_contains23(void* self, const char* s, int32_t cs) {
+    return QLatin1String_Contains23((QLatin1String*)self, qstring(s), cs);
+}
+
 bool q_latin1string_contains24(void* self, void* c, int32_t cs) {
     return QLatin1String_Contains24((QLatin1String*)self, (QChar*)c, cs);
+}
+
+intptr_t q_latin1string_last_index_of23(void* self, const char* s, int32_t cs) {
+    return QLatin1String_LastIndexOf23((QLatin1String*)self, qstring(s), cs);
+}
+
+intptr_t q_latin1string_last_index_of33(void* self, const char* s, intptr_t from, int32_t cs) {
+    return QLatin1String_LastIndexOf33((QLatin1String*)self, qstring(s), from, cs);
 }
 
 intptr_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs) {
@@ -240,6 +381,10 @@ intptr_t q_latin1string_last_index_of24(void* self, void* c, int32_t cs) {
 
 intptr_t q_latin1string_last_index_of34(void* self, void* c, intptr_t from, int32_t cs) {
     return QLatin1String_LastIndexOf34((QLatin1String*)self, (QChar*)c, from, cs);
+}
+
+intptr_t q_latin1string_count23(void* self, const char* str, int32_t cs) {
+    return QLatin1String_Count23((QLatin1String*)self, qstring(str), cs);
 }
 
 intptr_t q_latin1string_count24(void* self, void* ch, int32_t cs) {
@@ -316,6 +461,13 @@ float q_latin1string_to_float1(void* self, bool* ok) {
 
 double q_latin1string_to_double1(void* self, bool* ok) {
     return QLatin1String_ToDouble1((QLatin1String*)self, (bool*)ok);
+}
+
+const char* q_latin1string_mid2(void* self, intptr_t pos, intptr_t n) {
+    libqt_string _str = QLatin1String_Mid2((QLatin1String*)self, pos, n);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 void q_latin1string_delete(void* self) {

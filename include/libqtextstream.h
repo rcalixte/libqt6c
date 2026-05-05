@@ -497,6 +497,13 @@ QTextStream* q_textstream_operator_shift_left14(void* self, const char* s);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
 ///
 /// @param self QTextStream*
+/// @param s const char*
+///
+QTextStream* q_textstream_operator_shift_left16(void* self, const char* s);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextstream.html#operator-lt-lt)
+///
+/// @param self QTextStream*
 /// @param array char*
 ///
 QTextStream* q_textstream_operator_shift_left17(void* self, char* array);

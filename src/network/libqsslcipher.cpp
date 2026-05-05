@@ -1,7 +1,5 @@
 #include <QSslCipher>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <qsslcipher.h>
 #include "libqsslcipher.hpp"
 #include "libqsslcipher.hxx"

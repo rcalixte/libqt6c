@@ -1,8 +1,6 @@
 #include <KRecentDirs>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <krecentdirs.h>
 #include "libkrecentdirs.hpp"
 #include "libkrecentdirs.hxx"

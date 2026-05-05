@@ -1,8 +1,6 @@
 #include <KPlotAxis>
 #include <QList>
 #include <QString>
-#include <QByteArray>
-#include <cstring>
 #include <kplotaxis.h>
 #include "libkplotaxis.hpp"
 #include "libkplotaxis.hxx"
