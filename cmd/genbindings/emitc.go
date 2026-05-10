@@ -141,6 +141,21 @@ func (cfs *cFileState) getPageUrl(pageType PageType, pageName, cmdURL, className
 		return preUrl + "https://accounts-sso.gitlab.io/signond/classSignOn_1_1" + strings.ToUpper(classUrl[0:1]) + classUrl[1:] + ".html" + postUrl
 	}
 
+	if cfs.currentPackageName == "restricted-extras-ktextaddons" && className[0] != 'K' && className[0] != 'Q' && !strings.HasPrefix(className, "Sonnet") {
+		if pageType == EnumPage {
+			return ""
+		}
+		classUrl := strings.Split(className, "__")
+		switch len(classUrl) {
+		case 1:
+			return preUrl + "https://api.kde.org/legacy/ktextaddons/html/class" + classUrl[0] + ".html" + postUrl
+		case 2:
+			return preUrl + "https://api.kde.org/legacy/ktextaddons/html/class" + classUrl[0] + "_1_1" + classUrl[1] + ".html" + postUrl
+		default:
+			return ""
+		}
+	}
+
 	if pageType == DtorPage && strings.Contains(className, "__") {
 		return ""
 	}
@@ -842,8 +857,9 @@ func (cfs *cFileState) emitReturnComment(rt CppParameter) string {
 			returnComment = "/// @return " + rt.RenderTypeC(cfs, true, true, true) + maybeDetail
 		}
 	} else if rt.IsChronoSeconds() {
+		maybeDetail := ifv(rt.IsStdOptional, " (Returns -1 for an invalid duration)", "")
 		secType := strings.Split(rt.ParameterType, "::")[2]
-		returnComment = "/// @return " + rt.renderReturnTypeC(cfs, false, true) + " of " + secType
+		returnComment = "/// @return " + rt.renderReturnTypeC(cfs, false, true) + " of " + secType + maybeDetail
 	} else if t, _, ok := rt.QListOf(); ok {
 		if _, ok := KnownEnums[t.ParameterType]; ok {
 			returnComment = "/// @return libqt_list of enum " + cabiEnumClassName(t.ParameterType)
