@@ -422,7 +422,7 @@ Usage
 - If using Zig's build system, import the library into your project:
 
 ```bash
-zig fetch --save https://github.com/rcalixte/libqt6c
+zig fetch --save git+https://github.com/rcalixte/libqt6c
 ```
 
 - An alternative option is to use a commit hash to import the library into your project:
@@ -449,7 +449,8 @@ const qt6c = b.dependency("libqt6c", .{
 exe.root_module.addIncludePath(qt6c.path("include"));
 
 // Link the compiled libqt6c libraries to the executable
-// qt_lib_name is the name of the target library without prefix and suffix, e.g. qapplication, qwidget, etc.
+// qt_lib_name is the name of the target library without prefix and suffix,
+// e.g. qapplication, qwidget, etc.
 exe.root_module.linkLibrary(qt6c.artifact(qt_lib_name));
 ```
 
