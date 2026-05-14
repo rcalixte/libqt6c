@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"path/filepath"
+	"regexp"
 	"slices"
 	"strconv"
 	"strings"
@@ -40,6 +41,7 @@ var (
 	WidgetItemsMap        = map[string][]string{}
 	WidgetItems           = []string{}
 	TableWidgetMap        = map[string]struct{}{}
+	alphabeticRegex       = regexp.MustCompile(`^[a-zA-Z]+$`)
 	cReservedWord         = map[string]struct{}{ // not an exhaustive list
 		"auto":     {},
 		"break":    {},
@@ -335,6 +337,11 @@ func renderProperties(properties []UiProperty, ret *strings.Builder, targetName,
 	enumVariantName := targetName + "_variant_enum"
 
 	for _, prop := range properties {
+		if !alphabeticRegex.MatchString(prop.Name) {
+			fmt.Println("WARNING: Invalid property name: " + prop.Name)
+			continue
+		}
+
 		setterFunc := "_set_" + cMethodName(prop.Name)
 
 		if prop.Name == "geometry" {
