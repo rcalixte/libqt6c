@@ -531,6 +531,16 @@ void k_datepickerpopup_set_icon(void* self, void* icon);
 ///
 void k_datepickerpopup_set_no_replay_for(void* self, void* widget);
 
+#ifdef __APPLE__
+/// Inherited from QMenu
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#setAsDockMenu)
+///
+/// @param self KDatePickerPopup*
+///
+void k_datepickerpopup_set_as_dock_menu(void* self);
+#endif
+
 /// Inherited from QMenu
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#separatorsCollapsible)

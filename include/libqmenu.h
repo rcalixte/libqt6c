@@ -390,6 +390,14 @@ void q_menu_set_icon(void* self, void* icon);
 ///
 void q_menu_set_no_replay_for(void* self, void* widget);
 
+#ifdef __APPLE__
+/// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#setAsDockMenu)
+///
+/// @param self QMenu*
+///
+void q_menu_set_as_dock_menu(void* self);
+#endif
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qmenu.html#separatorsCollapsible)
 ///
 /// @param self QMenu*

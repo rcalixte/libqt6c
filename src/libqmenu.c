@@ -231,6 +231,12 @@ void q_menu_set_no_replay_for(void* self, void* widget) {
     QMenu_SetNoReplayFor((QMenu*)self, (QWidget*)widget);
 }
 
+#ifdef __APPLE__
+void q_menu_set_as_dock_menu(void* self) {
+    QMenu_SetAsDockMenu((QMenu*)self);
+}
+#endif
+
 bool q_menu_separators_collapsible(void* self) {
     return QMenu_SeparatorsCollapsible((QMenu*)self);
 }

@@ -289,6 +289,12 @@ void k_recentfilesmenu_set_no_replay_for(void* self, void* widget) {
     QMenu_SetNoReplayFor((QMenu*)self, (QWidget*)widget);
 }
 
+#ifdef __APPLE__
+void k_recentfilesmenu_set_as_dock_menu(void* self) {
+    QMenu_SetAsDockMenu((QMenu*)self);
+}
+#endif
+
 bool k_recentfilesmenu_separators_collapsible(void* self) {
     return QMenu_SeparatorsCollapsible((QMenu*)self);
 }
