@@ -1946,6 +1946,10 @@ extern "C" {
 				if m.LinuxOnly {
 					maybeMacro = "#ifdef __linux__\n"
 					maybeEndMacro = "#endif\n"
+				} else if mSafeMethodName == "SetAsDockMenu" {
+					// hack for QMenu::setAsDockMenu
+					maybeMacro = "#ifdef __APPLE__\n"
+					maybeEndMacro = "#endif\n"
 				}
 
 				ret.WriteString(maybeMacro + returnCabi + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ");\n" + maybeEndMacro)
@@ -2383,6 +2387,12 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				}
 
 				retExpr, _ = emitAssignCppToCabi("\treturn ", m.ReturnType, returnCallTarget)
+
+				if mSafeMethodName == "SetAsDockMenu" {
+					// hack for QMenu::setAsDockMenu
+					maybeMacro = "#ifdef __APPLE__\n"
+					maybeEndMacro = "#endif\n"
+				}
 
 				ret.WriteString(maybeMacro + returnCabi + " " + methodPrefixName + "_" + mSafeMethodName + "(" + emitParametersCabi(m, maybeConst+methodPrefixName+"*") + ") {\n" +
 					preamble + virtualStart + retExpr +

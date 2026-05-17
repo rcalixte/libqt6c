@@ -598,6 +598,9 @@ func AllowType(p CppParameter, isReturnType bool) error {
 	if strings.HasPrefix(p.ParameterType, "QUrlTwoFlags<") {
 		return ErrTooComplex // e.g. qurl.h
 	}
+	if strings.HasPrefix(p.ParameterType, "struct __") {
+		return ErrTooComplex // e.g. Qt 6 qopenglcontext_platform.h
+	}
 	if strings.HasPrefix(p.ParameterType, "FillResult<") {
 		return ErrTooComplex // Scintilla
 	}
@@ -621,9 +624,6 @@ func AllowType(p CppParameter, isReturnType bool) error {
 	}
 	if strings.HasPrefix(p.ParameterType, "Result<") {
 		return ErrTooComplex // e.g. Qt 6 kpluginfactory.h . Template type
-	}
-	if strings.HasPrefix(p.ParameterType, "struct __") {
-		return ErrTooComplex // e.g. Qt 6 qopenglcontext_platform.h
 	}
 
 	if t, ok := p.UniquePtrOf(); ok {
@@ -762,6 +762,7 @@ func AllowType(p CppParameter, isReturnType bool) error {
 		"char32_t",                        // e.g. QDebug().operator<< overload, unnecessary
 		"wchar_t",                         // e.g. qstringview.h overloads, unnecessary
 		"FILE",                            // e.g. qfile.h constructors
+		"NSMenu",                          // e.g. OS-specific forward declaration, QMenu::toNSMenu
 		"sockaddr",                        // Qt network Qhostaddress. Should be possible to make this work but may be platform-specific
 		"qInternalCallback",               // e.g. qnamespace.h
 		"QGraphicsEffectSource",           // e.g. used by qgraphicseffect.h, but the definition is in ????
