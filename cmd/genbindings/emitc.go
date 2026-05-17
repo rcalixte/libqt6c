@@ -2092,6 +2092,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			} else if m.LinuxOnly {
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __linux__")
+			} else if mSafeMethodName == "SetAsDockMenu" {
+				// hack for QMenu::setAsDockMenu
+				needsPlatformMacro = true
+				ret.WriteString("\n#ifdef __APPLE__")
 			}
 
 			ret.WriteString(inheritedFrom)
@@ -2848,6 +2852,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			} else if m.LinuxOnly {
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __linux__\n")
+			} else if mSafeMethodName == "SetAsDockMenu" {
+				// hack for QMenu::setAsDockMenu
+				needsPlatformMacro = true
+				ret.WriteString("\n#ifdef __APPLE__\n")
 			}
 
 			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
