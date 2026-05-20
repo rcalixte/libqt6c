@@ -1,4 +1,9 @@
 
+### 6.8.2 rev75 (20 May 2026)
+
+* **BREAKING CHANGE:** Fix memory leaks from callback return values (#138)
+* Add platform-specific method (#137)
+
 ### 6.8.2 rev74 (10 May 2026)
 
 * Add [KTextAddons](https://api.kde.org/legacy/ktextaddons/html/) (#135)
