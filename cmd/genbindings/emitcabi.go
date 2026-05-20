@@ -330,7 +330,7 @@ func emitParametersCABI2CppForwarding(params []CppParameter, indent, currentVirt
 	tmp := make([]string, 0, len(params)+1)
 
 	for i := range params {
-		addPre, addFwd := emitCABI2CppForwarding(params[i], indent, currentVirtualClass, false)
+		addPre, addFwd := emitCABI2CppForwarding(params[i], indent, currentVirtualClass, false, false)
 		preamble += addPre
 		tmp = append(tmp, addFwd)
 	}
@@ -343,7 +343,7 @@ func makeNamePrefix(in string) string {
 	return replacer.Replace(in)
 }
 
-func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot bool) (preamble, forwarding string) {
+func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot, needsCleanup bool) (preamble, forwarding string) {
 	nameprefix := makeNamePrefix(p.ParameterName)
 
 	if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QLatin1StringView" {
@@ -437,7 +437,7 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 		preamble += indent + "for(size_t " + iterator + " = 0; " + iterator + " < " + p.ParameterName + iterField + "; ++" + iterator + ") {\n"
 
 		listType.ParameterName = nameprefix + "_arr[" + iterator + "]"
-		addPre, addFwd := emitCABI2CppForwarding(listType, indent+"\t", currentClass, isSlot)
+		addPre, addFwd := emitCABI2CppForwarding(listType, indent+"\t", currentClass, isSlot, needsCleanup)
 		preamble += addPre
 		preamble += indent + "\t" + nameprefix + "_" + containerType + refType + "push_back(" + addFwd + ");\n"
 
@@ -485,11 +485,11 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 		preamble += indent + "for(size_t i = 0; i < " + p.ParameterName + methodDeref + "len; ++i) {\n"
 
 		kType.ParameterName = nameprefix + "_karr[i]"
-		addPreK, addFwdK := emitCABI2CppForwarding(kType, indent+"\t", currentClass, false)
+		addPreK, addFwdK := emitCABI2CppForwarding(kType, indent+"\t", currentClass, false, needsCleanup)
 		preamble += addPreK
 
 		vType.ParameterName = nameprefix + "_varr[i]"
-		addPreV, addFwdV := emitCABI2CppForwarding(vType, indent+"\t", currentClass, false)
+		addPreV, addFwdV := emitCABI2CppForwarding(vType, indent+"\t", currentClass, false, needsCleanup)
 
 		if isQMulti {
 			preamble += indent + "\tlibqt_list " + nameprefix + "_" + containerType + "_list = " + vType.ParameterName + ";\n"
@@ -542,11 +542,11 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 			preamble += indent + vType.RenderTypeCabi(false) + "* " + nameprefix + "_second = static_cast<" + vType.RenderTypeCabi(false) + "*>(" + p.ParameterName + ".second);\n"
 
 			kType.ParameterName = nameprefix + "_first[0]"
-			addPreK, addFwdK := emitCABI2CppForwarding(kType, indent+"\t", currentClass, false)
+			addPreK, addFwdK := emitCABI2CppForwarding(kType, indent+"\t", currentClass, false, needsCleanup)
 			preamble += addPreK
 
 			vType.ParameterName = nameprefix + "_second[0]"
-			addPreV, addFwdV := emitCABI2CppForwarding(vType, indent+"\t", currentClass, false)
+			addPreV, addFwdV := emitCABI2CppForwarding(vType, indent+"\t", currentClass, false, needsCleanup)
 			preamble += addPreV
 
 			preamble += indent + nameprefix + "_QPair.first = " + addFwdK + ";\n"
@@ -695,6 +695,11 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot 
 		// Dereference the passed-in pointer
 		if strings.Contains(p.ParameterName, "[") {
 			return preamble, "*(" + p.ParameterName + ")" // Extra brackets aren't necessary, just nice
+		}
+		if needsCleanup {
+			preamble += indent + "auto " + nameprefix + "_Value = std::move(*" + p.ParameterName + ");\n"
+			preamble += indent + "delete " + nameprefix + ";\n"
+			return preamble, nameprefix + "_Value"
 		}
 		return preamble, "*" + p.ParameterName
 
@@ -1606,7 +1611,7 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 					maybeReturn2 = m.ReturnType.RenderTypeCabi(true) + " callback_ret = "
 					returnParam := m.ReturnType // copy
 					returnParam.ParameterName = "callback_ret"
-					retTransformP, retTransformF = emitCABI2CppForwarding(returnParam, "\t\t", c.ClassName, true)
+					retTransformP, retTransformF = emitCABI2CppForwarding(returnParam, "\t\t", c.ClassName, true, true)
 				}
 
 				var customCallback, maybeThis, signalCode, sigCleanup string
@@ -1642,15 +1647,6 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 
 				cbName := strings.ToLower(mSafeMethodName) + "_cb"
 				returnDecl := m.ReturnType.RenderTypeQtCpp()
-				retString := ifv(len(signalCode) > 0, signalCode+"\n", "")
-				if IsKnownClass(m.ReturnType.ParameterType) && !m.ReturnType.Pointer && m.ReturnType.ParameterType != "QByteArrayView" {
-					retString += maybeReturn2 + cbName + "(" + strings.Join(paramArgs, ", ") + ");\n"
-					retString += sigCleanup
-					retString += "return *callback_ret;\n"
-				} else {
-					retString += maybeReturn2 + cbName + "(" + strings.Join(paramArgs, ", ") + ");\n"
-					retString += retTransformP + sigCleanup + ifv(returnDecl == "void", "", "return "+retTransformF+";\n")
-				}
 
 				if !m.IsPureVirtual && !m.IsPrivate {
 					customCallback += indent + "if (" + isBaseName + ") {\n"
@@ -1662,7 +1658,8 @@ func emitVirtualBindingHeader(src *CppParsedHeader, packageName string) (string,
 
 				customCallback += indent + "auto " + cbName + " = " + callbackName + ";\n"
 				customCallback += indent + "if (" + cbName + ") {\n"
-				customCallback += indent + "\t" + retString
+				customCallback += indent + "\t" + signalCode + maybeReturn2 + cbName + "(" + strings.Join(paramArgs, ", ") + ");\n"
+				customCallback += retTransformP + sigCleanup + ifv(returnDecl == "void", "", "return "+retTransformF+";\n")
 
 				if m.IsPureVirtual || m.IsPrivate {
 					if returnDecl != "void" {
