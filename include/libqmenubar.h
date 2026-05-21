@@ -195,6 +195,8 @@ QSize* q_menubar_size_hint(void* self);
 /// @param self QMenuBar*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_menubar_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_menubar_super_size_hint` instead
@@ -221,6 +223,8 @@ QSize* q_menubar_minimum_size_hint(void* self);
 ///
 /// @param self QMenuBar*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_menubar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4673,6 +4677,8 @@ QVariant* q_menubar_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QMenuBar*
 /// @param callback QVariant* func(QMenuBar* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_menubar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

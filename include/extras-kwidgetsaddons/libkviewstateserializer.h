@@ -221,6 +221,8 @@ QModelIndex* k_viewstateserializer_index_from_config_string(void* self, void* mo
 /// @param self KViewStateSerializer*
 /// @param callback QModelIndex* func(KViewStateSerializer* self, QAbstractItemModel* model, const char* key)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_viewstateserializer_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*));
 
 /// @warning DEPRECATED: Use `k_viewstateserializer_super_index_from_config_string` instead

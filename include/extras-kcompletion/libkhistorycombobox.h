@@ -4553,6 +4553,8 @@ QSize* k_historycombobox_super_minimum_size_hint(void* self);
 /// @param self KHistoryComboBox*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_historycombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from KComboBox
@@ -4738,6 +4740,8 @@ QSize* k_historycombobox_super_size_hint(void* self);
 /// @param self KHistoryComboBox*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_historycombobox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -4881,6 +4885,8 @@ QVariant* k_historycombobox_super_input_method_query(void* self, int32_t param1)
 ///
 /// @param self KHistoryComboBox*
 /// @param callback QVariant* func(KHistoryComboBox* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_historycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

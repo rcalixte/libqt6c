@@ -250,7 +250,7 @@ QVariant* q_variant_new41(const char* str) {
     return QVariant_new41(str);
 }
 
-QVariant* q_variant_new42(const char* stringVal) {
+QVariant* q_variant_new42(char* stringVal) {
     return QVariant_new42(qstring(stringVal));
 }
 

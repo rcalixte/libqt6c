@@ -87,8 +87,24 @@ bool q_collator_operator_call(void* self, const char* s1, const char* s2) {
     return QCollator_OperatorCall((QCollator*)self, qstring(s1), qstring(s2));
 }
 
+int32_t q_collator_compare3(void* self, const char* s1, const char* s2) {
+    return QCollator_Compare3((QCollator*)self, qstring(s1), qstring(s2));
+}
+
+bool q_collator_operator_call2(void* self, const char* s1, const char* s2) {
+    return QCollator_OperatorCall2((QCollator*)self, qstring(s1), qstring(s2));
+}
+
 QCollatorSortKey* q_collator_sort_key(void* self, const char* stringVal) {
     return QCollator_SortKey((QCollator*)self, qstring(stringVal));
+}
+
+int32_t q_collator_default_compare(const char* s1, const char* s2) {
+    return QCollator_DefaultCompare(qstring(s1), qstring(s2));
+}
+
+QCollatorSortKey* q_collator_default_sort_key(const char* key) {
+    return QCollator_DefaultSortKey(qstring(key));
 }
 
 void q_collator_delete(void* self) {

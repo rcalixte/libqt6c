@@ -461,6 +461,8 @@ QPlaceCategory* q_placemanagerengine_category(void* self, const char* categoryId
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlaceCategory* func(QPlaceManagerEngine* self, const char* categoryId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_placemanagerengine_on_category(void* self, QPlaceCategory* (*callback)(void*, const char*));
 
 /// @warning DEPRECATED: Use `q_placemanagerengine_super_category` instead
@@ -584,6 +586,8 @@ QUrl* q_placemanagerengine_construct_icon_url(void* self, void* icon, void* size
 /// @param self QPlaceManagerEngine*
 /// @param callback QUrl* func(QPlaceManagerEngine* self, QPlaceIcon* icon, QSize* size)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_placemanagerengine_on_construct_icon_url(void* self, QUrl* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_placemanagerengine_super_construct_icon_url` instead
@@ -613,6 +617,8 @@ QPlace* q_placemanagerengine_compatible_place(void* self, void* original);
 ///
 /// @param self QPlaceManagerEngine*
 /// @param callback QPlace* func(QPlaceManagerEngine* self, QPlace* original)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_placemanagerengine_on_compatible_place(void* self, QPlace* (*callback)(void*, void*));
 

@@ -137,6 +137,8 @@ QSize* k_datepicker_size_hint(void* self);
 /// @param self KDatePicker*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_datepicker_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_datepicker_super_size_hint` instead
@@ -3983,6 +3985,8 @@ QSize* k_datepicker_super_minimum_size_hint(void* self);
 /// @param self KDatePicker*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_datepicker_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -5164,6 +5168,8 @@ QVariant* k_datepicker_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KDatePicker*
 /// @param callback QVariant* func(KDatePicker* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_datepicker_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

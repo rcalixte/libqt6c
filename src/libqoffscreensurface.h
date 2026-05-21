@@ -185,6 +185,8 @@ QSurfaceFormat* q_offscreensurface_format(void* self);
 /// @param self QOffscreenSurface*
 /// @param callback QSurfaceFormat* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_offscreensurface_on_format(void* self, QSurfaceFormat* (*callback)());
 
 /// @warning DEPRECATED: Use `q_offscreensurface_super_format` instead
@@ -217,6 +219,8 @@ QSize* q_offscreensurface_size(void* self);
 ///
 /// @param self QOffscreenSurface*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_offscreensurface_on_size(void* self, QSize* (*callback)());
 

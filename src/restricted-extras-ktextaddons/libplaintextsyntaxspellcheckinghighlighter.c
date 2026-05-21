@@ -2,6 +2,7 @@
 #include "../extras-ksyntaxhighlighting/libdefinition.hpp"
 #include "../extras-ksyntaxhighlighting/libfoldingregion.hpp"
 #include "../extras-ksyntaxhighlighting/libformat.hpp"
+#include "../extras-ksyntaxhighlighting/libstate.hpp"
 #include "../extras-ksyntaxhighlighting/libtheme.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqcolor.hpp"
@@ -805,6 +806,18 @@ bool k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_is_signal
 
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
     TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_OnIsSignalConnected((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, (intptr_t)callback);
+}
+
+KSyntaxHighlighting__State* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_highlight_line(void* self, const char* text, void* state) {
+    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_HighlightLine((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, qstring(text), (KSyntaxHighlighting__State*)state);
+}
+
+KSyntaxHighlighting__State* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_super_highlight_line(void* self, const char* text, void* state) {
+    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_SuperHighlightLine((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, qstring(text), (KSyntaxHighlighting__State*)state);
+}
+
+void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_highlight_line(void* self, KSyntaxHighlighting__State* (*callback)(void*, const char*, void*)) {
+    TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_OnHighlightLine((TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter*)self, (intptr_t)callback);
 }
 
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

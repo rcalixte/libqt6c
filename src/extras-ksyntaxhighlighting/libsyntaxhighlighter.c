@@ -2,6 +2,7 @@
 #include "libdefinition.hpp"
 #include "libfoldingregion.hpp"
 #include "libformat.hpp"
+#include "libstate.hpp"
 #include "libtheme.hpp"
 #include "../libqcoreevent.hpp"
 #include "../libqmetaobject.hpp"
@@ -612,6 +613,18 @@ bool k_syntaxhighlighting__syntaxhighlighter_super_is_signal_connected(void* sel
 
 void k_syntaxhighlighting__syntaxhighlighter_on_is_signal_connected(void* self, bool (*callback)(void*, void*)) {
     KSyntaxHighlighting__SyntaxHighlighter_OnIsSignalConnected((KSyntaxHighlighting__SyntaxHighlighter*)self, (intptr_t)callback);
+}
+
+KSyntaxHighlighting__State* k_syntaxhighlighting__syntaxhighlighter_highlight_line(void* self, const char* text, void* state) {
+    return KSyntaxHighlighting__SyntaxHighlighter_HighlightLine((KSyntaxHighlighting__SyntaxHighlighter*)self, qstring(text), (KSyntaxHighlighting__State*)state);
+}
+
+KSyntaxHighlighting__State* k_syntaxhighlighting__syntaxhighlighter_super_highlight_line(void* self, const char* text, void* state) {
+    return KSyntaxHighlighting__SyntaxHighlighter_SuperHighlightLine((KSyntaxHighlighting__SyntaxHighlighter*)self, qstring(text), (KSyntaxHighlighting__State*)state);
+}
+
+void k_syntaxhighlighting__syntaxhighlighter_on_highlight_line(void* self, KSyntaxHighlighting__State* (*callback)(void*, const char*, void*)) {
+    KSyntaxHighlighting__SyntaxHighlighter_OnHighlightLine((KSyntaxHighlighting__SyntaxHighlighter*)self, (intptr_t)callback);
 }
 
 void k_syntaxhighlighting__syntaxhighlighter_on_object_name_changed(void* self, void (*callback)(void*, const char*)) {

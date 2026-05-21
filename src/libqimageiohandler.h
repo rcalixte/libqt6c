@@ -148,6 +148,8 @@ QVariant* q_imageiohandler_option(void* self, int32_t option);
 /// @param self QImageIOHandler*
 /// @param callback QVariant* func(QImageIOHandler* self, enum QImageIOHandler__ImageOption option)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_imageiohandler_on_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_imageiohandler_super_option` instead
@@ -399,6 +401,8 @@ QRect* q_imageiohandler_current_image_rect(void* self);
 ///
 /// @param self QImageIOHandler*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_imageiohandler_on_current_image_rect(void* self, QRect* (*callback)());
 

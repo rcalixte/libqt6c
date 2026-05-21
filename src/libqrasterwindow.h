@@ -2245,6 +2245,8 @@ QSurfaceFormat* q_rasterwindow_super_format(void* self);
 /// @param self QRasterWindow*
 /// @param callback QSurfaceFormat* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_rasterwindow_on_format(void* self, QSurfaceFormat* (*callback)());
 
 /// Inherited from QWindow
@@ -2279,6 +2281,8 @@ QSize* q_rasterwindow_super_size(void* self);
 ///
 /// @param self QRasterWindow*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_rasterwindow_on_size(void* self, QSize* (*callback)());
 

@@ -358,6 +358,8 @@ QMetaEnum* q_abstractformbuilder_tool_bar_area_meta_enum(void* self);
 /// @param self QAbstractFormBuilder*
 /// @param callback QMetaEnum* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractformbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)());
 
 /// @warning DEPRECATED: Use `q_abstractformbuilder_super_tool_bar_area_meta_enum` instead

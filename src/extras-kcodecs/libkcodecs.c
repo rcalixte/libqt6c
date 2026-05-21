@@ -57,6 +57,20 @@ void k_codecs_base64_decode2(char* param1, char* param2) {
     KCodecs_Base64Decode2(qstring(param1), qstring(param2));
 }
 
+const char* k_codecs_decode_r_f_c2047_string(const char* param1) {
+    libqt_string _str = KCodecs_DecodeRFC2047String(qstring(param1));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+char* k_codecs_encode_r_f_c2047_string(const char* param1, char* param2) {
+    libqt_string _str = KCodecs_EncodeRFC2047String(qstring(param1), qstring(param2));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 char* k_codecs_base45_decode(char* param1) {
     libqt_string _str = KCodecs_Base45Decode(qstring(param1));
     char* _ret = qstring_to_char(_str);

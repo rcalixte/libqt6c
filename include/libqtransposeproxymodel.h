@@ -210,6 +210,8 @@ QVariant* q_transposeproxymodel_header_data(void* self, int section, int32_t ori
 /// @param self QTransposeProxyModel*
 /// @param callback QVariant* func(QTransposeProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// @warning DEPRECATED: Use `q_transposeproxymodel_super_header_data` instead
@@ -307,6 +309,8 @@ QSize* q_transposeproxymodel_span(void* self, void* index);
 /// @param self QTransposeProxyModel*
 /// @param callback QSize* func(QTransposeProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_transposeproxymodel_super_span` instead
@@ -380,6 +384,8 @@ QModelIndex* q_transposeproxymodel_map_from_source(void* self, void* sourceIndex
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, QModelIndex* sourceIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_transposeproxymodel_super_map_from_source` instead
@@ -409,6 +415,8 @@ QModelIndex* q_transposeproxymodel_map_to_source(void* self, void* proxyIndex);
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_transposeproxymodel_super_map_to_source` instead
@@ -437,6 +445,8 @@ QModelIndex* q_transposeproxymodel_parent(void* self, void* index);
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -468,6 +478,8 @@ QModelIndex* q_transposeproxymodel_index(void* self, int row, int column, void* 
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int column, QModelIndex* parent)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -1531,6 +1543,8 @@ QItemSelection* q_transposeproxymodel_super_map_selection_to_source(void* self, 
 /// @param self QTransposeProxyModel*
 /// @param callback QItemSelection* func(QTransposeProxyModel* self, QItemSelection* selection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -1567,6 +1581,8 @@ QItemSelection* q_transposeproxymodel_super_map_selection_from_source(void* self
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback QItemSelection* func(QTransposeProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -1676,6 +1692,8 @@ QVariant* q_transposeproxymodel_super_data(void* self, void* proxyIndex, int rol
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback QVariant* func(QTransposeProxyModel* self, QModelIndex* proxyIndex, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
@@ -1833,6 +1851,8 @@ QModelIndex* q_transposeproxymodel_super_buddy(void* self, void* index);
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -1984,6 +2004,8 @@ QModelIndex* q_transposeproxymodel_super_sibling(void* self, int row, int column
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -2715,6 +2737,8 @@ QModelIndex* q_transposeproxymodel_super_create_source_index(void* self, int row
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_transposeproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2753,6 +2777,8 @@ QModelIndex* q_transposeproxymodel_super_create_index(void* self, int row, int c
 ///
 /// @param self QTransposeProxyModel*
 /// @param callback QModelIndex* func(QTransposeProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_transposeproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

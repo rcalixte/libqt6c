@@ -1135,6 +1135,8 @@ QTextCharFormat* k_syntaxhighlighting__syntaxhighlighter_super_format(void* self
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param callback QTextCharFormat* func(KSyntaxHighlighting__SyntaxHighlighter* self, int pos)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_syntaxhighlighting__syntaxhighlighter_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
 /// Inherited from QSyntaxHighlighter
@@ -1349,6 +1351,8 @@ QTextBlock* k_syntaxhighlighting__syntaxhighlighter_super_current_block(void* se
 /// @param self KSyntaxHighlighting__SyntaxHighlighter*
 /// @param callback QTextBlock* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_syntaxhighlighting__syntaxhighlighter_on_current_block(void* self, QTextBlock* (*callback)());
 
 /// Inherited from QObject
@@ -1494,6 +1498,47 @@ bool k_syntaxhighlighting__syntaxhighlighter_super_is_signal_connected(void* sel
 /// @param callback bool func(KSyntaxHighlighting__SyntaxHighlighter* self, QMetaMethod* signal)
 ///
 void k_syntaxhighlighting__syntaxhighlighter_on_is_signal_connected(void* self, bool (*callback)(void*, void*));
+
+/// Inherited from KSyntaxHighlighting::AbstractHighlighter
+///
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#highlightLine)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+/// @param text const char*
+/// @param state KSyntaxHighlighting__State*
+///
+KSyntaxHighlighting__State* k_syntaxhighlighting__syntaxhighlighter_highlight_line(void* self, const char* text, void* state);
+
+/// @warning DEPRECATED: Use `k_syntaxhighlighting__syntaxhighlighter_super_highlight_line` instead
+///
+#define k_syntaxhighlighting__syntaxhighlighter_qbase_highlight_line k_syntaxhighlighting__syntaxhighlighter_super_highlight_line
+
+/// Inherited from KSyntaxHighlighting::AbstractHighlighter
+///
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#highlightLine)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+/// @param text const char*
+/// @param state KSyntaxHighlighting__State*
+///
+KSyntaxHighlighting__State* k_syntaxhighlighting__syntaxhighlighter_super_highlight_line(void* self, const char* text, void* state);
+
+/// Inherited from KSyntaxHighlighting::AbstractHighlighter
+///
+/// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-abstracthighlighter.html#highlightLine)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self KSyntaxHighlighting__SyntaxHighlighter*
+/// @param callback KSyntaxHighlighting__State* func(KSyntaxHighlighting__SyntaxHighlighter* self, const char* text, KSyntaxHighlighting__State* state)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void k_syntaxhighlighting__syntaxhighlighter_on_highlight_line(void* self, KSyntaxHighlighting__State* (*callback)(void*, const char*, void*));
 
 /// Inherited from QObject
 ///

@@ -1239,6 +1239,8 @@ QColor* q_scilexerfortran_super_color(void* self, int style);
 /// @param self QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerfortran_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1312,6 +1314,8 @@ QFont* q_scilexerfortran_super_font(void* self, int style);
 ///
 /// @param self QsciLexerFortran*
 /// @param callback QFont* func(QsciLexerFortran* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerfortran_on_font(void* self, QFont* (*callback)(void*, int));
 
@@ -1461,6 +1465,8 @@ QColor* q_scilexerfortran_super_paper(void* self, int style);
 /// @param self QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerfortran_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1497,6 +1503,8 @@ QColor* q_scilexerfortran_super_default_color2(void* self, int style);
 ///
 /// @param self QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerfortran_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
@@ -1572,6 +1580,8 @@ QFont* q_scilexerfortran_super_default_font2(void* self, int style);
 /// @param self QsciLexerFortran*
 /// @param callback QFont* func(QsciLexerFortran* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerfortran_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1608,6 +1618,8 @@ QColor* q_scilexerfortran_super_default_paper2(void* self, int style);
 ///
 /// @param self QsciLexerFortran*
 /// @param callback QColor* func(QsciLexerFortran* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerfortran_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 

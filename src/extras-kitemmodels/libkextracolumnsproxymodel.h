@@ -137,6 +137,8 @@ QVariant* k_extracolumnsproxymodel_extra_column_data(void* self, void* parent, i
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QVariant* func(KExtraColumnsProxyModel* self, QModelIndex* parent, int row, int extraColumn, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_extra_column_data(void* self, QVariant* (*callback)(void*, void*, int, int, int));
 
 /// @warning DEPRECATED: Use `k_extracolumnsproxymodel_super_extra_column_data` instead
@@ -259,6 +261,8 @@ QModelIndex* k_extracolumnsproxymodel_map_to_source(void* self, void* proxyIndex
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_extracolumnsproxymodel_super_map_to_source` instead
@@ -287,6 +291,8 @@ QItemSelection* k_extracolumnsproxymodel_map_selection_to_source(void* self, voi
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QItemSelection* func(KExtraColumnsProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -346,6 +352,8 @@ QVariant* k_extracolumnsproxymodel_data(void* self, void* index, int role);
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QVariant* func(KExtraColumnsProxyModel* self, QModelIndex* index, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
@@ -412,6 +420,8 @@ QModelIndex* k_extracolumnsproxymodel_sibling(void* self, int row, int column, v
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `k_extracolumnsproxymodel_super_sibling` instead
@@ -442,6 +452,8 @@ QModelIndex* k_extracolumnsproxymodel_buddy(void* self, void* index);
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -536,6 +548,8 @@ QVariant* k_extracolumnsproxymodel_header_data(void* self, int section, int32_t 
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QVariant* func(KExtraColumnsProxyModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// @warning DEPRECATED: Use `k_extracolumnsproxymodel_super_header_data` instead
@@ -569,6 +583,8 @@ QModelIndex* k_extracolumnsproxymodel_index(void* self, int row, int column, voi
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `k_extracolumnsproxymodel_super_index` instead
@@ -599,6 +615,8 @@ QModelIndex* k_extracolumnsproxymodel_parent(void* self, void* child);
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1446,6 +1464,8 @@ QModelIndex* k_extracolumnsproxymodel_super_map_from_source(void* self, void* so
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, QModelIndex* sourceIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QIdentityProxyModel
@@ -1564,6 +1584,8 @@ QItemSelection* k_extracolumnsproxymodel_super_map_selection_from_source(void* s
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QItemSelection* func(KExtraColumnsProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -2269,6 +2291,8 @@ QSize* k_extracolumnsproxymodel_super_span(void* self, void* index);
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QSize* func(KExtraColumnsProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2980,6 +3004,8 @@ QModelIndex* k_extracolumnsproxymodel_super_create_source_index(void* self, int 
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extracolumnsproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3018,6 +3044,8 @@ QModelIndex* k_extracolumnsproxymodel_super_create_index(void* self, int row, in
 ///
 /// @param self KExtraColumnsProxyModel*
 /// @param callback QModelIndex* func(KExtraColumnsProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extracolumnsproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

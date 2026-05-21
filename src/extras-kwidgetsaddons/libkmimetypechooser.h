@@ -3259,6 +3259,8 @@ QSize* k_mimetypechooser_super_size_hint(void* self);
 /// @param self KMimeTypeChooser*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_mimetypechooser_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3293,6 +3295,8 @@ QSize* k_mimetypechooser_super_minimum_size_hint(void* self);
 ///
 /// @param self KMimeTypeChooser*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_mimetypechooser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4624,6 +4628,8 @@ QVariant* k_mimetypechooser_super_input_method_query(void* self, int32_t param1)
 /// @param self KMimeTypeChooser*
 /// @param callback QVariant* func(KMimeTypeChooser* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_mimetypechooser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -5473,6 +5479,8 @@ QSize* k_mimetypechooserdialog_size_hint(void* self);
 ///
 /// @param self KMimeTypeChooserDialog*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_mimetypechooserdialog_on_size_hint(void* self, QSize* (*callback)());
 
@@ -8629,6 +8637,8 @@ QSize* k_mimetypechooserdialog_super_minimum_size_hint(void* self);
 /// @param self KMimeTypeChooserDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_mimetypechooserdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -10209,6 +10219,8 @@ QVariant* k_mimetypechooserdialog_super_input_method_query(void* self, int32_t p
 ///
 /// @param self KMimeTypeChooserDialog*
 /// @param callback QVariant* func(KMimeTypeChooserDialog* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_mimetypechooserdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

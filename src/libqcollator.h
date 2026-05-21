@@ -161,12 +161,41 @@ int32_t q_collator_compare2(void* self, void* s1, intptr_t len1, void* s2, intpt
 ///
 bool q_collator_operator_call(void* self, const char* s1, const char* s2);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#compare)
+///
+/// @param self QCollator*
+/// @param s1 const char*
+/// @param s2 const char*
+///
+int32_t q_collator_compare3(void* self, const char* s1, const char* s2);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#operator-28-29)
+///
+/// @param self QCollator*
+/// @param s1 const char*
+/// @param s2 const char*
+///
+bool q_collator_operator_call2(void* self, const char* s1, const char* s2);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#sortKey)
 ///
 /// @param self QCollator*
 /// @param stringVal const char*
 ///
 QCollatorSortKey* q_collator_sort_key(void* self, const char* stringVal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#defaultCompare)
+///
+/// @param s1 const char*
+/// @param s2 const char*
+///
+int32_t q_collator_default_compare(const char* s1, const char* s2);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#defaultSortKey)
+///
+/// @param key const char*
+///
+QCollatorSortKey* q_collator_default_sort_key(const char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#dtor.QCollator)
 ///

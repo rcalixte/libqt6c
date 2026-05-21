@@ -4392,6 +4392,8 @@ QRect* q_undoview_super_visual_rect(void* self, void* index);
 /// @param self QUndoView*
 /// @param callback QRect* func(QUndoView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_undoview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -4467,6 +4469,8 @@ QModelIndex* q_undoview_super_index_at(void* self, void* p);
 ///
 /// @param self QUndoView*
 /// @param callback QModelIndex* func(QUndoView* self, QPoint* p)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -5290,6 +5294,8 @@ QModelIndex* q_undoview_super_move_cursor(void* self, int32_t cursorAction, int3
 /// @param self QUndoView*
 /// @param callback QModelIndex* func(QUndoView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_undoview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QListView
@@ -5365,6 +5371,8 @@ QRegion* q_undoview_super_visual_region_for_selection(void* self, void* selectio
 ///
 /// @param self QUndoView*
 /// @param callback QRegion* func(QUndoView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -5589,6 +5597,8 @@ QSize* q_undoview_super_viewport_size_hint(void* self);
 ///
 /// @param self QUndoView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5848,6 +5858,8 @@ QVariant* q_undoview_super_input_method_query(void* self, int32_t query);
 ///
 /// @param self QUndoView*
 /// @param callback QVariant* func(QUndoView* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -6706,6 +6718,8 @@ QSize* q_undoview_super_minimum_size_hint(void* self);
 /// @param self QUndoView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_undoview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6740,6 +6754,8 @@ QSize* q_undoview_super_size_hint(void* self);
 ///
 /// @param self QUndoView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_size_hint(void* self, QSize* (*callback)());
 
@@ -7810,6 +7826,8 @@ QSize* q_undoview_super_contents_size(void* self);
 /// @param self QUndoView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_undoview_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
@@ -7846,6 +7864,8 @@ QRect* q_undoview_super_rect_for_index(void* self, void* index);
 ///
 /// @param self QUndoView*
 /// @param callback QRect* func(QUndoView* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
@@ -8143,6 +8163,8 @@ QPoint* q_undoview_super_dirty_region_offset(void* self);
 /// @param self QUndoView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_undoview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8364,6 +8386,8 @@ QMargins* q_undoview_super_viewport_margins(void* self);
 ///
 /// @param self QUndoView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_undoview_on_viewport_margins(void* self, QMargins* (*callback)());
 

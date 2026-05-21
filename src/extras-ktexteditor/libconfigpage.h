@@ -172,6 +172,8 @@ QIcon* k_texteditor__configpage_icon(void* self);
 /// @param self KTextEditor__ConfigPage*
 /// @param callback QIcon* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__configpage_on_icon(void* self, QIcon* (*callback)());
 
 /// @warning DEPRECATED: Use `k_texteditor__configpage_super_icon` instead
@@ -3361,6 +3363,8 @@ QSize* k_texteditor__configpage_super_size_hint(void* self);
 /// @param self KTextEditor__ConfigPage*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__configpage_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3395,6 +3399,8 @@ QSize* k_texteditor__configpage_super_minimum_size_hint(void* self);
 ///
 /// @param self KTextEditor__ConfigPage*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__configpage_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4725,6 +4731,8 @@ QVariant* k_texteditor__configpage_super_input_method_query(void* self, int32_t 
 ///
 /// @param self KTextEditor__ConfigPage*
 /// @param callback QVariant* func(KTextEditor__ConfigPage* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__configpage_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

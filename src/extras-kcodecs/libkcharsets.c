@@ -14,6 +14,14 @@ KCharsets* k_charsets_charsets() {
     return KCharsets_Charsets();
 }
 
+QChar* k_charsets_from_entity(const char* str) {
+    return KCharsets_FromEntity(qstring(str));
+}
+
+QChar* k_charsets_from_entity2(const char* str, int* lenVal) {
+    return KCharsets_FromEntity2(qstring(str), lenVal);
+}
+
 const char* k_charsets_to_entity(void* ch) {
     libqt_string _str = KCharsets_ToEntity((QChar*)ch);
     char* _ret = qstring_to_char(_str);
@@ -95,6 +103,13 @@ libqt_list /* of const char** */ k_charsets_encodings_by_script(void* self) {
     _out.len = _arr.len;
     _out.data.ptr = (void*)_data;
     return _out;
+}
+
+const char* k_charsets_description_for_encoding(void* self, const char* encoding) {
+    libqt_string _str = KCharsets_DescriptionForEncoding((KCharsets*)self, qstring(encoding));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 const char* k_charsets_encoding_for_name(void* self, const char* descriptiveName) {

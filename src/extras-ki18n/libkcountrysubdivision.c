@@ -58,6 +58,10 @@ libqt_list /* of KCountrySubdivision* */ k_countrysubdivision_subdivisions(void*
     return _arr;
 }
 
+KCountrySubdivision* k_countrysubdivision_from_code(const char* code) {
+    return KCountrySubdivision_FromCode(qstring(code));
+}
+
 KCountrySubdivision* k_countrysubdivision_from_code2(const char* code) {
     return KCountrySubdivision_FromCode2(code);
 }

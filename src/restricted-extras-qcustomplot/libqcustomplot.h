@@ -4713,6 +4713,8 @@ QRect* q_cplayerable_clip_rect(void* self);
 /// @param self QCPLayerable*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplayerable_on_clip_rect(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cplayerable_super_clip_rect` instead
@@ -7671,6 +7673,8 @@ QRect* q_cpselectionrect_super_clip_rect(void* self);
 /// @param self QCPSelectionRect*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpselectionrect_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPLayerable
@@ -9917,6 +9921,8 @@ QSize* q_cplayoutelement_minimum_outer_size_hint(void* self);
 /// @param self QCPLayoutElement*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplayoutelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cplayoutelement_super_minimum_outer_size_hint` instead
@@ -9943,6 +9949,8 @@ QSize* q_cplayoutelement_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPLayoutElement*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -10806,6 +10814,8 @@ QRect* q_cplayoutelement_super_clip_rect(void* self);
 ///
 /// @param self QCPLayoutElement*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutelement_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -12925,6 +12935,8 @@ QSize* q_cplayout_super_minimum_outer_size_hint(void* self);
 /// @param self QCPLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplayout_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutElement
@@ -12959,6 +12971,8 @@ QSize* q_cplayout_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayout_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -13257,6 +13271,8 @@ QRect* q_cplayout_super_clip_rect(void* self);
 ///
 /// @param self QCPLayout*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayout_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -14528,6 +14544,8 @@ QSize* q_cplayoutgrid_minimum_outer_size_hint(void* self);
 /// @param self QCPLayoutGrid*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplayoutgrid_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cplayoutgrid_super_minimum_outer_size_hint` instead
@@ -14554,6 +14572,8 @@ QSize* q_cplayoutgrid_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPLayoutGrid*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutgrid_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -15835,6 +15855,8 @@ QRect* q_cplayoutgrid_super_clip_rect(void* self);
 ///
 /// @param self QCPLayoutGrid*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutgrid_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -18106,6 +18128,8 @@ QSize* q_cplayoutinset_super_minimum_outer_size_hint(void* self);
 /// @param self QCPLayoutInset*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplayoutinset_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutElement
@@ -18140,6 +18164,8 @@ QSize* q_cplayoutinset_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPLayoutInset*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutinset_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -18397,6 +18423,8 @@ QRect* q_cplayoutinset_super_clip_rect(void* self);
 ///
 /// @param self QCPLayoutInset*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplayoutinset_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -24518,6 +24546,8 @@ QRect* q_cpgrid_super_clip_rect(void* self);
 /// @param self QCPGrid*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpgrid_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPLayerable
@@ -26570,6 +26600,8 @@ QPen* q_cpaxis_get_base_pen(void* self);
 /// @param self QCPAxis*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpaxis_on_get_base_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpaxis_super_get_base_pen` instead
@@ -26596,6 +26628,8 @@ QPen* q_cpaxis_get_tick_pen(void* self);
 ///
 /// @param self QCPAxis*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_get_tick_pen(void* self, QPen* (*callback)());
 
@@ -26624,6 +26658,8 @@ QPen* q_cpaxis_get_sub_tick_pen(void* self);
 /// @param self QCPAxis*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpaxis_on_get_sub_tick_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpaxis_super_get_sub_tick_pen` instead
@@ -26650,6 +26686,8 @@ QFont* q_cpaxis_get_tick_label_font(void* self);
 ///
 /// @param self QCPAxis*
 /// @param callback QFont* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_get_tick_label_font(void* self, QFont* (*callback)());
 
@@ -26678,6 +26716,8 @@ QFont* q_cpaxis_get_label_font(void* self);
 /// @param self QCPAxis*
 /// @param callback QFont* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpaxis_on_get_label_font(void* self, QFont* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpaxis_super_get_label_font` instead
@@ -26705,6 +26745,8 @@ QColor* q_cpaxis_get_tick_label_color(void* self);
 /// @param self QCPAxis*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpaxis_on_get_tick_label_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpaxis_super_get_tick_label_color` instead
@@ -26731,6 +26773,8 @@ QColor* q_cpaxis_get_label_color(void* self);
 ///
 /// @param self QCPAxis*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_get_label_color(void* self, QColor* (*callback)());
 
@@ -27414,6 +27458,8 @@ QRect* q_cpaxis_super_clip_rect(void* self);
 ///
 /// @param self QCPAxis*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxis_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -28769,6 +28815,8 @@ QCPRange* q_cpabstractplottable_get_key_range(void* self, bool* foundRange, int3
 /// @param self QCPAbstractPlottable*
 /// @param callback QCPRange* func(QCPAbstractPlottable* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpabstractplottable_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpabstractplottable_super_get_key_range` instead
@@ -28800,6 +28848,8 @@ QCPRange* q_cpabstractplottable_get_value_range(void* self, bool* foundRange, in
 ///
 /// @param self QCPAbstractPlottable*
 /// @param callback QCPRange* func(QCPAbstractPlottable* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractplottable_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -28932,6 +28982,8 @@ QRect* q_cpabstractplottable_clip_rect(void* self);
 ///
 /// @param self QCPAbstractPlottable*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractplottable_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -30636,6 +30688,8 @@ QPointF* q_cpitemanchor_pixel_position(void* self);
 /// @param self QCPItemAnchor*
 /// @param callback QPointF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemanchor_on_pixel_position(void* self, QPointF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemanchor_super_pixel_position` instead
@@ -30901,6 +30955,8 @@ QPointF* q_cpitemposition_pixel_position(void* self);
 ///
 /// @param self QCPItemPosition*
 /// @param callback QPointF* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemposition_on_pixel_position(void* self, QPointF* (*callback)());
 
@@ -31499,6 +31555,8 @@ QRect* q_cpabstractitem_clip_rect(void* self);
 /// @param self QCPAbstractItem*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpabstractitem_on_clip_rect(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpabstractitem_super_clip_rect` instead
@@ -31648,6 +31706,8 @@ QPointF* q_cpabstractitem_anchor_pixel_position(void* self, int anchorId);
 ///
 /// @param self QCPAbstractItem*
 /// @param callback QPointF* func(QCPAbstractItem* self, int anchorId)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractitem_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -34192,6 +34252,8 @@ QSize* q_customplot_minimum_size_hint(void* self);
 /// @param self QCustomPlot*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_customplot_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_customplot_super_minimum_size_hint` instead
@@ -34218,6 +34280,8 @@ QSize* q_customplot_size_hint(void* self);
 ///
 /// @param self QCustomPlot*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_customplot_on_size_hint(void* self, QSize* (*callback)());
 
@@ -39621,6 +39685,8 @@ QVariant* q_customplot_super_input_method_query(void* self, int32_t param1);
 /// @param self QCustomPlot*
 /// @param callback QVariant* func(QCustomPlot* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_customplot_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -40809,6 +40875,8 @@ QPointF* q_cpselectiondecoratorbracket_get_pixel_coordinates(void* self, void* i
 ///
 /// @param self QCPSelectionDecoratorBracket*
 /// @param callback QPointF* func(QCPSelectionDecoratorBracket* self, QCPPlottableInterface1D* interface1d, int dataIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpselectiondecoratorbracket_on_get_pixel_coordinates(void* self, QPointF* (*callback)(void*, void*, int));
 
@@ -42674,6 +42742,8 @@ QSize* q_cpaxisrect_super_minimum_outer_size_hint(void* self);
 /// @param self QCPAxisRect*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpaxisrect_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutElement
@@ -42708,6 +42778,8 @@ QSize* q_cpaxisrect_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPAxisRect*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxisrect_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -42860,6 +42932,8 @@ QRect* q_cpaxisrect_super_clip_rect(void* self);
 ///
 /// @param self QCPAxisRect*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpaxisrect_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -43871,6 +43945,8 @@ QRect* q_cpabstractlegenditem_clip_rect(void* self);
 /// @param self QCPAbstractLegendItem*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpabstractlegenditem_on_clip_rect(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpabstractlegenditem_super_clip_rect` instead
@@ -44815,6 +44891,8 @@ QSize* q_cpabstractlegenditem_super_minimum_outer_size_hint(void* self);
 /// @param self QCPAbstractLegendItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpabstractlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutElement
@@ -44849,6 +44927,8 @@ QSize* q_cpabstractlegenditem_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPAbstractLegendItem*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpabstractlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -45915,6 +45995,8 @@ QSize* q_cpplottablelegenditem_minimum_outer_size_hint(void* self);
 /// @param self QCPPlottableLegendItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpplottablelegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_minimum_outer_size_hint` instead
@@ -45941,6 +46023,8 @@ QPen* q_cpplottablelegenditem_get_icon_border_pen(void* self);
 ///
 /// @param self QCPPlottableLegendItem*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpplottablelegenditem_on_get_icon_border_pen(void* self, QPen* (*callback)());
 
@@ -45969,6 +46053,8 @@ QColor* q_cpplottablelegenditem_get_text_color(void* self);
 /// @param self QCPPlottableLegendItem*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpplottablelegenditem_on_get_text_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpplottablelegenditem_super_get_text_color` instead
@@ -45995,6 +46081,8 @@ QFont* q_cpplottablelegenditem_get_font(void* self);
 ///
 /// @param self QCPPlottableLegendItem*
 /// @param callback QFont* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpplottablelegenditem_on_get_font(void* self, QFont* (*callback)());
 
@@ -47073,6 +47161,8 @@ QRect* q_cpplottablelegenditem_super_clip_rect(void* self);
 /// @param self QCPPlottableLegendItem*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpplottablelegenditem_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPAbstractLegendItem
@@ -47224,6 +47314,8 @@ QSize* q_cpplottablelegenditem_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPPlottableLegendItem*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpplottablelegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -48758,6 +48850,8 @@ QPen* q_cplegend_get_border_pen(void* self);
 /// @param self QCPLegend*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplegend_on_get_border_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cplegend_super_get_border_pen` instead
@@ -48784,6 +48878,8 @@ QBrush* q_cplegend_get_brush(void* self);
 ///
 /// @param self QCPLegend*
 /// @param callback QBrush* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplegend_on_get_brush(void* self, QBrush* (*callback)());
 
@@ -50125,6 +50221,8 @@ QSize* q_cplegend_super_minimum_outer_size_hint(void* self);
 /// @param self QCPLegend*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cplegend_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutGrid
@@ -50159,6 +50257,8 @@ QSize* q_cplegend_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPLegend*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplegend_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -50303,6 +50403,8 @@ QRect* q_cplegend_super_clip_rect(void* self);
 ///
 /// @param self QCPLegend*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cplegend_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -51803,6 +51905,8 @@ QSize* q_cptextelement_minimum_outer_size_hint(void* self);
 /// @param self QCPTextElement*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cptextelement_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cptextelement_super_minimum_outer_size_hint` instead
@@ -51829,6 +51933,8 @@ QSize* q_cptextelement_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPTextElement*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cptextelement_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -51921,6 +52027,8 @@ QFont* q_cptextelement_main_font(void* self);
 /// @param self QCPTextElement*
 /// @param callback QFont* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cptextelement_on_main_font(void* self, QFont* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cptextelement_super_main_font` instead
@@ -51947,6 +52055,8 @@ QColor* q_cptextelement_main_text_color(void* self);
 ///
 /// @param self QCPTextElement*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cptextelement_on_main_text_color(void* self, QColor* (*callback)());
 
@@ -52987,6 +53097,8 @@ QRect* q_cptextelement_super_clip_rect(void* self);
 ///
 /// @param self QCPTextElement*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cptextelement_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -54890,6 +55002,8 @@ QSize* q_cpcolorscale_super_minimum_outer_size_hint(void* self);
 /// @param self QCPColorScale*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpcolorscale_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutElement
@@ -54924,6 +55038,8 @@ QSize* q_cpcolorscale_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPColorScale*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcolorscale_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -55226,6 +55342,8 @@ QRect* q_cpcolorscale_super_clip_rect(void* self);
 ///
 /// @param self QCPColorScale*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcolorscale_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -56280,6 +56398,8 @@ QCPRange* q_cpgraph_get_key_range(void* self, bool* foundRange, int32_t inSignDo
 /// @param self QCPGraph*
 /// @param callback QCPRange* func(QCPGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpgraph_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpgraph_super_get_key_range` instead
@@ -56311,6 +56431,8 @@ QCPRange* q_cpgraph_get_value_range(void* self, bool* foundRange, int32_t inSign
 ///
 /// @param self QCPGraph*
 /// @param callback QCPRange* func(QCPGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpgraph_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -56866,6 +56988,8 @@ QPointF* q_cpgraph_get_fill_base_point(void* self, void* matchingDataPoint);
 ///
 /// @param self QCPGraph*
 /// @param callback QPointF* func(QCPGraph* self, QPointF* matchingDataPoint)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpgraph_on_get_fill_base_point(void* self, QPointF* (*callback)(void*, void*));
 
@@ -58131,6 +58255,8 @@ QCPRange* q_cpgraph_super_data_value_range(void* self, int index);
 /// @param self QCPGraph*
 /// @param callback QCPRange* func(QCPGraph* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpgraph_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
 /// Inherited from QCPPlottableInterface1D
@@ -58167,6 +58293,8 @@ QPointF* q_cpgraph_super_data_pixel_position(void* self, int index);
 ///
 /// @param self QCPGraph*
 /// @param callback QPointF* func(QCPGraph* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpgraph_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -58241,6 +58369,8 @@ QCPDataSelection* q_cpgraph_super_select_test_rect(void* self, void* rect, bool 
 ///
 /// @param self QCPGraph*
 /// @param callback QCPDataSelection* func(QCPGraph* self, QRectF* rect, bool onlySelectable)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpgraph_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
@@ -58389,6 +58519,8 @@ QRect* q_cpgraph_super_clip_rect(void* self);
 ///
 /// @param self QCPGraph*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpgraph_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -59799,6 +59931,8 @@ QCPRange* q_cpcurve_get_key_range(void* self, bool* foundRange, int32_t inSignDo
 /// @param self QCPCurve*
 /// @param callback QCPRange* func(QCPCurve* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpcurve_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpcurve_super_get_key_range` instead
@@ -59830,6 +59964,8 @@ QCPRange* q_cpcurve_get_value_range(void* self, bool* foundRange, int32_t inSign
 ///
 /// @param self QCPCurve*
 /// @param callback QCPRange* func(QCPCurve* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -60098,6 +60234,8 @@ QPointF* q_cpcurve_get_optimized_point(void* self, int otherRegion, double other
 ///
 /// @param self QCPCurve*
 /// @param callback QPointF* func(QCPCurve* self, int otherRegion, double otherKey, double otherValue, double key, double value, double keyMin, double valueMax, double keyMax, double valueMin)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_get_optimized_point(void* self, QPointF* (*callback)(void*, int, double, double, double, double, double, double, double, double));
 
@@ -61421,6 +61559,8 @@ QCPRange* q_cpcurve_super_data_value_range(void* self, int index);
 /// @param self QCPCurve*
 /// @param callback QCPRange* func(QCPCurve* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpcurve_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
 /// Inherited from QCPPlottableInterface1D
@@ -61457,6 +61597,8 @@ QPointF* q_cpcurve_super_data_pixel_position(void* self, int index);
 ///
 /// @param self QCPCurve*
 /// @param callback QPointF* func(QCPCurve* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -61531,6 +61673,8 @@ QCPDataSelection* q_cpcurve_super_select_test_rect(void* self, void* rect, bool 
 ///
 /// @param self QCPCurve*
 /// @param callback QCPDataSelection* func(QCPCurve* self, QRectF* rect, bool onlySelectable)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
@@ -61679,6 +61823,8 @@ QRect* q_cpcurve_super_clip_rect(void* self);
 ///
 /// @param self QCPCurve*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcurve_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -64260,6 +64406,8 @@ QCPDataSelection* q_cpbars_select_test_rect(void* self, void* rect, bool onlySel
 /// @param self QCPBars*
 /// @param callback QCPDataSelection* func(QCPBars* self, QRectF* rect, bool onlySelectable)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
 /// @warning DEPRECATED: Use `q_cpbars_super_select_test_rect` instead
@@ -64324,6 +64472,8 @@ QCPRange* q_cpbars_get_key_range(void* self, bool* foundRange, int32_t inSignDom
 /// @param self QCPBars*
 /// @param callback QCPRange* func(QCPBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpbars_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpbars_super_get_key_range` instead
@@ -64356,6 +64506,8 @@ QCPRange* q_cpbars_get_value_range(void* self, bool* foundRange, int32_t inSignD
 /// @param self QCPBars*
 /// @param callback QCPRange* func(QCPBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpbars_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
 /// @warning DEPRECATED: Use `q_cpbars_super_get_value_range` instead
@@ -64386,6 +64538,8 @@ QPointF* q_cpbars_data_pixel_position(void* self, int index);
 ///
 /// @param self QCPBars*
 /// @param callback QPointF* func(QCPBars* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpbars_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -64476,6 +64630,8 @@ QRectF* q_cpbars_get_bar_rect(void* self, double key, double value);
 ///
 /// @param self QCPBars*
 /// @param callback QRectF* func(QCPBars* self, double key, double value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpbars_on_get_bar_rect(void* self, QRectF* (*callback)(void*, double, double));
 
@@ -65713,6 +65869,8 @@ QCPRange* q_cpbars_super_data_value_range(void* self, int index);
 /// @param self QCPBars*
 /// @param callback QCPRange* func(QCPBars* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpbars_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
 /// Inherited from QCPPlottableInterface1D
@@ -65895,6 +66053,8 @@ QRect* q_cpbars_super_clip_rect(void* self);
 ///
 /// @param self QCPBars*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpbars_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -67348,6 +67508,8 @@ QCPDataSelection* q_cpstatisticalbox_select_test_rect(void* self, void* rect, bo
 /// @param self QCPStatisticalBox*
 /// @param callback QCPDataSelection* func(QCPStatisticalBox* self, QRectF* rect, bool onlySelectable)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpstatisticalbox_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
 /// @warning DEPRECATED: Use `q_cpstatisticalbox_super_select_test_rect` instead
@@ -67412,6 +67574,8 @@ QCPRange* q_cpstatisticalbox_get_key_range(void* self, bool* foundRange, int32_t
 /// @param self QCPStatisticalBox*
 /// @param callback QCPRange* func(QCPStatisticalBox* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpstatisticalbox_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpstatisticalbox_super_get_key_range` instead
@@ -67443,6 +67607,8 @@ QCPRange* q_cpstatisticalbox_get_value_range(void* self, bool* foundRange, int32
 ///
 /// @param self QCPStatisticalBox*
 /// @param callback QCPRange* func(QCPStatisticalBox* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpstatisticalbox_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -68667,6 +68833,8 @@ QCPRange* q_cpstatisticalbox_super_data_value_range(void* self, int index);
 /// @param self QCPStatisticalBox*
 /// @param callback QCPRange* func(QCPStatisticalBox* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpstatisticalbox_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
 /// Inherited from QCPPlottableInterface1D
@@ -68703,6 +68871,8 @@ QPointF* q_cpstatisticalbox_super_data_pixel_position(void* self, int index);
 ///
 /// @param self QCPStatisticalBox*
 /// @param callback QPointF* func(QCPStatisticalBox* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpstatisticalbox_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -68886,6 +69056,8 @@ QRect* q_cpstatisticalbox_super_clip_rect(void* self);
 ///
 /// @param self QCPStatisticalBox*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpstatisticalbox_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -70391,6 +70563,8 @@ QCPRange* q_cpcolormap_get_key_range(void* self, bool* foundRange, int32_t inSig
 /// @param self QCPColorMap*
 /// @param callback QCPRange* func(QCPColorMap* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpcolormap_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpcolormap_super_get_key_range` instead
@@ -70422,6 +70596,8 @@ QCPRange* q_cpcolormap_get_value_range(void* self, bool* foundRange, int32_t inS
 ///
 /// @param self QCPColorMap*
 /// @param callback QCPRange* func(QCPColorMap* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcolormap_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -71583,6 +71759,8 @@ QRect* q_cpcolormap_super_clip_rect(void* self);
 ///
 /// @param self QCPColorMap*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpcolormap_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -73037,6 +73215,8 @@ QCPDataSelection* q_cpfinancial_select_test_rect(void* self, void* rect, bool on
 /// @param self QCPFinancial*
 /// @param callback QCPDataSelection* func(QCPFinancial* self, QRectF* rect, bool onlySelectable)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpfinancial_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
 /// @warning DEPRECATED: Use `q_cpfinancial_super_select_test_rect` instead
@@ -73101,6 +73281,8 @@ QCPRange* q_cpfinancial_get_key_range(void* self, bool* foundRange, int32_t inSi
 /// @param self QCPFinancial*
 /// @param callback QCPRange* func(QCPFinancial* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpfinancial_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpfinancial_super_get_key_range` instead
@@ -73132,6 +73314,8 @@ QCPRange* q_cpfinancial_get_value_range(void* self, bool* foundRange, int32_t in
 ///
 /// @param self QCPFinancial*
 /// @param callback QCPRange* func(QCPFinancial* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpfinancial_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -74372,6 +74556,8 @@ QCPRange* q_cpfinancial_super_data_value_range(void* self, int index);
 /// @param self QCPFinancial*
 /// @param callback QCPRange* func(QCPFinancial* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpfinancial_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
 /// Inherited from QCPPlottableInterface1D
@@ -74408,6 +74594,8 @@ QPointF* q_cpfinancial_super_data_pixel_position(void* self, int index);
 ///
 /// @param self QCPFinancial*
 /// @param callback QPointF* func(QCPFinancial* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpfinancial_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -74591,6 +74779,8 @@ QRect* q_cpfinancial_super_clip_rect(void* self);
 ///
 /// @param self QCPFinancial*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpfinancial_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -76048,6 +76238,8 @@ QCPRange* q_cperrorbars_data_value_range(void* self, int index);
 /// @param self QCPErrorBars*
 /// @param callback QCPRange* func(QCPErrorBars* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cperrorbars_on_data_value_range(void* self, QCPRange* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_cperrorbars_super_data_value_range` instead
@@ -76076,6 +76268,8 @@ QPointF* q_cperrorbars_data_pixel_position(void* self, int index);
 ///
 /// @param self QCPErrorBars*
 /// @param callback QPointF* func(QCPErrorBars* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cperrorbars_on_data_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -76133,6 +76327,8 @@ QCPDataSelection* q_cperrorbars_select_test_rect(void* self, void* rect, bool on
 ///
 /// @param self QCPErrorBars*
 /// @param callback QCPDataSelection* func(QCPErrorBars* self, QRectF* rect, bool onlySelectable)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cperrorbars_on_select_test_rect(void* self, QCPDataSelection* (*callback)(void*, void*, bool));
 
@@ -76347,6 +76543,8 @@ QCPRange* q_cperrorbars_get_key_range(void* self, bool* foundRange, int32_t inSi
 /// @param self QCPErrorBars*
 /// @param callback QCPRange* func(QCPErrorBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cperrorbars_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cperrorbars_super_get_key_range` instead
@@ -76378,6 +76576,8 @@ QCPRange* q_cperrorbars_get_value_range(void* self, bool* foundRange, int32_t in
 ///
 /// @param self QCPErrorBars*
 /// @param callback QCPRange* func(QCPErrorBars* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cperrorbars_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -77445,6 +77645,8 @@ QRect* q_cperrorbars_super_clip_rect(void* self);
 ///
 /// @param self QCPErrorBars*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cperrorbars_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -78695,6 +78897,8 @@ QLineF* q_cpitemstraightline_get_rect_clipped_straight_line(void* self, void* ba
 /// @param self QCPItemStraightLine*
 /// @param callback QLineF* func(QCPItemStraightLine* self, QCPVector2D* base, QCPVector2D* vec, QRect* rect)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemstraightline_on_get_rect_clipped_straight_line(void* self, QLineF* (*callback)(void*, void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_cpitemstraightline_super_get_rect_clipped_straight_line` instead
@@ -78724,6 +78928,8 @@ QPen* q_cpitemstraightline_main_pen(void* self);
 ///
 /// @param self QCPItemStraightLine*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemstraightline_on_main_pen(void* self, QPen* (*callback)());
 
@@ -79530,6 +79736,8 @@ QRect* q_cpitemstraightline_super_clip_rect(void* self);
 /// @param self QCPItemStraightLine*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemstraightline_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPAbstractItem
@@ -79683,6 +79891,8 @@ QPointF* q_cpitemstraightline_super_anchor_pixel_position(void* self, int anchor
 ///
 /// @param self QCPItemStraightLine*
 /// @param callback QPointF* func(QCPItemStraightLine* self, int anchorId)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemstraightline_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -80846,6 +81056,8 @@ QLineF* q_cpitemline_get_rect_clipped_line(void* self, void* start, void* end, v
 /// @param self QCPItemLine*
 /// @param callback QLineF* func(QCPItemLine* self, QCPVector2D* start, QCPVector2D* end, QRect* rect)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemline_on_get_rect_clipped_line(void* self, QLineF* (*callback)(void*, void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_cpitemline_super_get_rect_clipped_line` instead
@@ -80875,6 +81087,8 @@ QPen* q_cpitemline_main_pen(void* self);
 ///
 /// @param self QCPItemLine*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemline_on_main_pen(void* self, QPen* (*callback)());
 
@@ -81681,6 +81895,8 @@ QRect* q_cpitemline_super_clip_rect(void* self);
 /// @param self QCPItemLine*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemline_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPAbstractItem
@@ -81834,6 +82050,8 @@ QPointF* q_cpitemline_super_anchor_pixel_position(void* self, int anchorId);
 ///
 /// @param self QCPItemLine*
 /// @param callback QPointF* func(QCPItemLine* self, int anchorId)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemline_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -83006,6 +83224,8 @@ QPen* q_cpitemcurve_main_pen(void* self);
 /// @param self QCPItemCurve*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemcurve_on_main_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemcurve_super_main_pen` instead
@@ -83811,6 +84031,8 @@ QRect* q_cpitemcurve_super_clip_rect(void* self);
 /// @param self QCPItemCurve*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemcurve_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPAbstractItem
@@ -83964,6 +84186,8 @@ QPointF* q_cpitemcurve_super_anchor_pixel_position(void* self, int anchorId);
 ///
 /// @param self QCPItemCurve*
 /// @param callback QPointF* func(QCPItemCurve* self, int anchorId)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemcurve_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -85161,6 +85385,8 @@ QPointF* q_cpitemrect_anchor_pixel_position(void* self, int anchorId);
 /// @param self QCPItemRect*
 /// @param callback QPointF* func(QCPItemRect* self, int anchorId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemrect_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_cpitemrect_super_anchor_pixel_position` instead
@@ -85189,6 +85415,8 @@ QPen* q_cpitemrect_main_pen(void* self);
 /// @param self QCPItemRect*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemrect_on_main_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemrect_super_main_pen` instead
@@ -85215,6 +85443,8 @@ QBrush* q_cpitemrect_main_brush(void* self);
 ///
 /// @param self QCPItemRect*
 /// @param callback QBrush* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemrect_on_main_brush(void* self, QBrush* (*callback)());
 
@@ -86020,6 +86250,8 @@ QRect* q_cpitemrect_super_clip_rect(void* self);
 ///
 /// @param self QCPItemRect*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemrect_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -87463,6 +87695,8 @@ QPointF* q_cpitemtext_anchor_pixel_position(void* self, int anchorId);
 /// @param self QCPItemText*
 /// @param callback QPointF* func(QCPItemText* self, int anchorId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemtext_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_cpitemtext_super_anchor_pixel_position` instead
@@ -87494,6 +87728,8 @@ QPointF* q_cpitemtext_get_text_draw_point(void* self, void* pos, void* rect, int
 /// @param self QCPItemText*
 /// @param callback QPointF* func(QCPItemText* self, QPointF* pos, QRectF* rect, flag of enum Qt__AlignmentFlag positionAlignment)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemtext_on_get_text_draw_point(void* self, QPointF* (*callback)(void*, void*, void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cpitemtext_super_get_text_draw_point` instead
@@ -87524,6 +87760,8 @@ QFont* q_cpitemtext_main_font(void* self);
 /// @param self QCPItemText*
 /// @param callback QFont* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemtext_on_main_font(void* self, QFont* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemtext_super_main_font` instead
@@ -87550,6 +87788,8 @@ QColor* q_cpitemtext_main_color(void* self);
 ///
 /// @param self QCPItemText*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtext_on_main_color(void* self, QColor* (*callback)());
 
@@ -87578,6 +87818,8 @@ QPen* q_cpitemtext_main_pen(void* self);
 /// @param self QCPItemText*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemtext_on_main_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemtext_super_main_pen` instead
@@ -87604,6 +87846,8 @@ QBrush* q_cpitemtext_main_brush(void* self);
 ///
 /// @param self QCPItemText*
 /// @param callback QBrush* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtext_on_main_brush(void* self, QBrush* (*callback)());
 
@@ -88400,6 +88644,8 @@ QRect* q_cpitemtext_super_clip_rect(void* self);
 ///
 /// @param self QCPItemText*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtext_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -89732,6 +89978,8 @@ QPointF* q_cpitemellipse_anchor_pixel_position(void* self, int anchorId);
 /// @param self QCPItemEllipse*
 /// @param callback QPointF* func(QCPItemEllipse* self, int anchorId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemellipse_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_cpitemellipse_super_anchor_pixel_position` instead
@@ -89760,6 +90008,8 @@ QPen* q_cpitemellipse_main_pen(void* self);
 /// @param self QCPItemEllipse*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemellipse_on_main_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemellipse_super_main_pen` instead
@@ -89786,6 +90036,8 @@ QBrush* q_cpitemellipse_main_brush(void* self);
 ///
 /// @param self QCPItemEllipse*
 /// @param callback QBrush* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemellipse_on_main_brush(void* self, QBrush* (*callback)());
 
@@ -90591,6 +90843,8 @@ QRect* q_cpitemellipse_super_clip_rect(void* self);
 ///
 /// @param self QCPItemEllipse*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemellipse_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -91921,6 +92175,8 @@ QPointF* q_cpitempixmap_anchor_pixel_position(void* self, int anchorId);
 /// @param self QCPItemPixmap*
 /// @param callback QPointF* func(QCPItemPixmap* self, int anchorId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitempixmap_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_cpitempixmap_super_anchor_pixel_position` instead
@@ -91976,6 +92232,8 @@ QRect* q_cpitempixmap_get_final_rect(void* self);
 /// @param self QCPItemPixmap*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitempixmap_on_get_final_rect(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitempixmap_super_get_final_rect` instead
@@ -92002,6 +92260,8 @@ QPen* q_cpitempixmap_main_pen(void* self);
 ///
 /// @param self QCPItemPixmap*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitempixmap_on_main_pen(void* self, QPen* (*callback)());
 
@@ -92160,6 +92420,8 @@ QRect* q_cpitempixmap_get_final_rect1(void* self, bool* flippedHorz);
 /// @param self QCPItemPixmap*
 /// @param callback QRect* func(QCPItemPixmap* self, bool* flippedHorz)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitempixmap_on_get_final_rect1(void* self, QRect* (*callback)(void*, bool*));
 
 /// @warning DEPRECATED: Use `q_cpitempixmap_super_get_final_rect1` instead
@@ -92189,6 +92451,8 @@ QRect* q_cpitempixmap_get_final_rect2(void* self, bool* flippedHorz, bool* flipp
 ///
 /// @param self QCPItemPixmap*
 /// @param callback QRect* func(QCPItemPixmap* self, bool* flippedHorz, bool* flippedVert)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitempixmap_on_get_final_rect2(void* self, QRect* (*callback)(void*, bool*, bool*));
 
@@ -92977,6 +93241,8 @@ QRect* q_cpitempixmap_super_clip_rect(void* self);
 ///
 /// @param self QCPItemPixmap*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitempixmap_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -94321,6 +94587,8 @@ QPen* q_cpitemtracer_main_pen(void* self);
 /// @param self QCPItemTracer*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemtracer_on_main_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cpitemtracer_super_main_pen` instead
@@ -94347,6 +94615,8 @@ QBrush* q_cpitemtracer_main_brush(void* self);
 ///
 /// @param self QCPItemTracer*
 /// @param callback QBrush* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtracer_on_main_brush(void* self, QBrush* (*callback)());
 
@@ -95144,6 +95414,8 @@ QRect* q_cpitemtracer_super_clip_rect(void* self);
 /// @param self QCPItemTracer*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitemtracer_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPAbstractItem
@@ -95297,6 +95569,8 @@ QPointF* q_cpitemtracer_super_anchor_pixel_position(void* self, int anchorId);
 ///
 /// @param self QCPItemTracer*
 /// @param callback QPointF* func(QCPItemTracer* self, int anchorId)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitemtracer_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
@@ -96466,6 +96740,8 @@ QPointF* q_cpitembracket_anchor_pixel_position(void* self, int anchorId);
 /// @param self QCPItemBracket*
 /// @param callback QPointF* func(QCPItemBracket* self, int anchorId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cpitembracket_on_anchor_pixel_position(void* self, QPointF* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_cpitembracket_super_anchor_pixel_position` instead
@@ -96493,6 +96769,8 @@ QPen* q_cpitembracket_main_pen(void* self);
 ///
 /// @param self QCPItemBracket*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitembracket_on_main_pen(void* self, QPen* (*callback)());
 
@@ -97298,6 +97576,8 @@ QRect* q_cpitembracket_super_clip_rect(void* self);
 ///
 /// @param self QCPItemBracket*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cpitembracket_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -99502,6 +99782,8 @@ QPen* q_cppolaraxisradial_get_base_pen(void* self);
 /// @param self QCPPolarAxisRadial*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisradial_on_get_base_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_base_pen` instead
@@ -99528,6 +99810,8 @@ QPen* q_cppolaraxisradial_get_tick_pen(void* self);
 ///
 /// @param self QCPPolarAxisRadial*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_get_tick_pen(void* self, QPen* (*callback)());
 
@@ -99556,6 +99840,8 @@ QPen* q_cppolaraxisradial_get_sub_tick_pen(void* self);
 /// @param self QCPPolarAxisRadial*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisradial_on_get_sub_tick_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_sub_tick_pen` instead
@@ -99582,6 +99868,8 @@ QFont* q_cppolaraxisradial_get_tick_label_font(void* self);
 ///
 /// @param self QCPPolarAxisRadial*
 /// @param callback QFont* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_get_tick_label_font(void* self, QFont* (*callback)());
 
@@ -99610,6 +99898,8 @@ QFont* q_cppolaraxisradial_get_label_font(void* self);
 /// @param self QCPPolarAxisRadial*
 /// @param callback QFont* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisradial_on_get_label_font(void* self, QFont* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_label_font` instead
@@ -99637,6 +99927,8 @@ QColor* q_cppolaraxisradial_get_tick_label_color(void* self);
 /// @param self QCPPolarAxisRadial*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisradial_on_get_tick_label_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisradial_super_get_tick_label_color` instead
@@ -99663,6 +99955,8 @@ QColor* q_cppolaraxisradial_get_label_color(void* self);
 ///
 /// @param self QCPPolarAxisRadial*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_get_label_color(void* self, QColor* (*callback)());
 
@@ -100338,6 +100632,8 @@ QRect* q_cppolaraxisradial_super_clip_rect(void* self);
 ///
 /// @param self QCPPolarAxisRadial*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisradial_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -102293,6 +102589,8 @@ QPen* q_cppolaraxisangular_get_base_pen(void* self);
 /// @param self QCPPolarAxisAngular*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisangular_on_get_base_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_base_pen` instead
@@ -102319,6 +102617,8 @@ QPen* q_cppolaraxisangular_get_tick_pen(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_tick_pen(void* self, QPen* (*callback)());
 
@@ -102347,6 +102647,8 @@ QPen* q_cppolaraxisangular_get_sub_tick_pen(void* self);
 /// @param self QCPPolarAxisAngular*
 /// @param callback QPen* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisangular_on_get_sub_tick_pen(void* self, QPen* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_sub_tick_pen` instead
@@ -102373,6 +102675,8 @@ QFont* q_cppolaraxisangular_get_tick_label_font(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 /// @param callback QFont* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_tick_label_font(void* self, QFont* (*callback)());
 
@@ -102401,6 +102705,8 @@ QFont* q_cppolaraxisangular_get_label_font(void* self);
 /// @param self QCPPolarAxisAngular*
 /// @param callback QFont* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisangular_on_get_label_font(void* self, QFont* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_label_font` instead
@@ -102428,6 +102734,8 @@ QColor* q_cppolaraxisangular_get_tick_label_color(void* self);
 /// @param self QCPPolarAxisAngular*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisangular_on_get_tick_label_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolaraxisangular_super_get_tick_label_color` instead
@@ -102454,6 +102762,8 @@ QColor* q_cppolaraxisangular_get_label_color(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_get_label_color(void* self, QColor* (*callback)());
 
@@ -103315,6 +103625,8 @@ QSize* q_cppolaraxisangular_super_minimum_outer_size_hint(void* self);
 /// @param self QCPPolarAxisAngular*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolaraxisangular_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QCPLayoutElement
@@ -103349,6 +103661,8 @@ QSize* q_cppolaraxisangular_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -103493,6 +103807,8 @@ QRect* q_cppolaraxisangular_super_clip_rect(void* self);
 ///
 /// @param self QCPPolarAxisAngular*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolaraxisangular_on_clip_rect(void* self, QRect* (*callback)());
 
@@ -105305,6 +105621,8 @@ QRect* q_cppolargrid_super_clip_rect(void* self);
 /// @param self QCPPolarGrid*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolargrid_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPLayerable
@@ -106300,6 +106618,8 @@ QSize* q_cppolarlegenditem_minimum_outer_size_hint(void* self);
 /// @param self QCPPolarLegendItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolarlegenditem_on_minimum_outer_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolarlegenditem_super_minimum_outer_size_hint` instead
@@ -106326,6 +106646,8 @@ QPen* q_cppolarlegenditem_get_icon_border_pen(void* self);
 ///
 /// @param self QCPPolarLegendItem*
 /// @param callback QPen* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolarlegenditem_on_get_icon_border_pen(void* self, QPen* (*callback)());
 
@@ -106354,6 +106676,8 @@ QColor* q_cppolarlegenditem_get_text_color(void* self);
 /// @param self QCPPolarLegendItem*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolarlegenditem_on_get_text_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_cppolarlegenditem_super_get_text_color` instead
@@ -106380,6 +106704,8 @@ QFont* q_cppolarlegenditem_get_font(void* self);
 ///
 /// @param self QCPPolarLegendItem*
 /// @param callback QFont* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolarlegenditem_on_get_font(void* self, QFont* (*callback)());
 
@@ -107458,6 +107784,8 @@ QRect* q_cppolarlegenditem_super_clip_rect(void* self);
 /// @param self QCPPolarLegendItem*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolarlegenditem_on_clip_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QCPAbstractLegendItem
@@ -107609,6 +107937,8 @@ QSize* q_cppolarlegenditem_super_maximum_outer_size_hint(void* self);
 ///
 /// @param self QCPPolarLegendItem*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolarlegenditem_on_maximum_outer_size_hint(void* self, QSize* (*callback)());
 
@@ -108975,6 +109305,8 @@ QCPRange* q_cppolargraph_get_key_range(void* self, bool* foundRange, int32_t inS
 /// @param self QCPPolarGraph*
 /// @param callback QCPRange* func(QCPPolarGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_cppolargraph_on_get_key_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t));
 
 /// @warning DEPRECATED: Use `q_cppolargraph_super_get_key_range` instead
@@ -109006,6 +109338,8 @@ QCPRange* q_cppolargraph_get_value_range(void* self, bool* foundRange, int32_t i
 ///
 /// @param self QCPPolarGraph*
 /// @param callback QCPRange* func(QCPPolarGraph* self, bool* foundRange, enum QCP__SignDomain inSignDomain, QCPRange* inKeyRange)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolargraph_on_get_value_range(void* self, QCPRange* (*callback)(void*, bool*, int32_t, void*));
 
@@ -109057,6 +109391,8 @@ QRect* q_cppolargraph_clip_rect(void* self);
 ///
 /// @param self QCPPolarGraph*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_cppolargraph_on_clip_rect(void* self, QRect* (*callback)());
 

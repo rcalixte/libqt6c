@@ -206,6 +206,13 @@ bool k_pluginmetadata_is_enabled_by_default(void* self) {
     return KPluginMetaData_IsEnabledByDefault((KPluginMetaData*)self);
 }
 
+const char* k_pluginmetadata_value(void* self, const char* key) {
+    libqt_string _str = KPluginMetaData_Value((KPluginMetaData*)self, qstring(key));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 const char* k_pluginmetadata_value2(void* self, const char* key) {
     libqt_string _str = KPluginMetaData_Value2((KPluginMetaData*)self, qstring(key));
     char* _ret = qstring_to_char(_str);
@@ -213,12 +220,50 @@ const char* k_pluginmetadata_value2(void* self, const char* key) {
     return _ret;
 }
 
+bool k_pluginmetadata_value3(void* self, const char* key, bool defaultValue) {
+    return KPluginMetaData_Value3((KPluginMetaData*)self, qstring(key), defaultValue);
+}
+
 bool k_pluginmetadata_value4(void* self, const char* key, bool defaultValue) {
     return KPluginMetaData_Value4((KPluginMetaData*)self, qstring(key), defaultValue);
 }
 
+int32_t k_pluginmetadata_value5(void* self, const char* key, int defaultValue) {
+    return KPluginMetaData_Value5((KPluginMetaData*)self, qstring(key), defaultValue);
+}
+
 int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue) {
     return KPluginMetaData_Value6((KPluginMetaData*)self, qstring(key), defaultValue);
+}
+
+const char** k_pluginmetadata_value7(void* self, const char* key, const char* defaultValue[static 1]) {
+    size_t defaultValue_len = libqt_strv_length(defaultValue);
+    libqt_string* defaultValue_qstr = (libqt_string*)malloc(defaultValue_len * sizeof(libqt_string));
+    if (defaultValue_qstr == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value7\n");
+        abort();
+    }
+    for (size_t i = 0; i < defaultValue_len; ++i) {
+        defaultValue_qstr[i] = qstring(defaultValue[i]);
+    }
+    libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
+    libqt_list _arr = KPluginMetaData_Value7((KPluginMetaData*)self, qstring(key), defaultValue_list);
+    free(defaultValue_qstr);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_pluginmetadata_value7\n");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
 }
 
 const char** k_pluginmetadata_value8(void* self, const char* key, const char* defaultValue[static 1]) {
@@ -275,6 +320,13 @@ libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins2(const char* 
 libqt_list /* of KPluginMetaData* */ k_pluginmetadata_find_plugins3(const char* directory, bool (*filter)(void* funcparam1), int32_t options) {
     libqt_list _arr = KPluginMetaData_FindPlugins3(qstring(directory), (intptr_t)filter, options);
     return _arr;
+}
+
+const char* k_pluginmetadata_value22(void* self, const char* key, const char* defaultValue) {
+    libqt_string _str = KPluginMetaData_Value22((KPluginMetaData*)self, qstring(key), qstring(defaultValue));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 const char* k_pluginmetadata_value23(void* self, const char* key, const char* defaultValue) {

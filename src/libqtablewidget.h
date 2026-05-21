@@ -411,6 +411,8 @@ QVariant* q_tablewidgetitem_data(void* self, int role);
 /// @param self QTableWidgetItem*
 /// @param callback QVariant* func(QTableWidgetItem* self, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tablewidgetitem_on_data(void* self, QVariant* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_tablewidgetitem_super_data` instead
@@ -5872,6 +5874,8 @@ QRect* q_tablewidget_super_visual_rect(void* self, void* index);
 /// @param self QTableWidget*
 /// @param callback QRect* func(QTableWidget* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tablewidget_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QTableView
@@ -5947,6 +5951,8 @@ QModelIndex* q_tablewidget_super_index_at(void* self, void* p);
 ///
 /// @param self QTableWidget*
 /// @param callback QModelIndex* func(QTableWidget* self, QPoint* p)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tablewidget_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -6207,6 +6213,8 @@ QModelIndex* q_tablewidget_super_move_cursor(void* self, int32_t cursorAction, i
 /// @param self QTableWidget*
 /// @param callback QModelIndex* func(QTableWidget* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tablewidget_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QTableView
@@ -6282,6 +6290,8 @@ QRegion* q_tablewidget_super_visual_region_for_selection(void* self, void* selec
 ///
 /// @param self QTableWidget*
 /// @param callback QRegion* func(QTableWidget* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tablewidget_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -6391,6 +6401,8 @@ QSize* q_tablewidget_super_viewport_size_hint(void* self);
 ///
 /// @param self QTableWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tablewidget_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6765,6 +6777,8 @@ QVariant* q_tablewidget_super_input_method_query(void* self, int32_t query);
 ///
 /// @param self QTableWidget*
 /// @param callback QVariant* func(QTableWidget* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tablewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -7929,6 +7943,8 @@ QSize* q_tablewidget_super_minimum_size_hint(void* self);
 /// @param self QTableWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tablewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -7963,6 +7979,8 @@ QSize* q_tablewidget_super_size_hint(void* self);
 ///
 /// @param self QTableWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tablewidget_on_size_hint(void* self, QSize* (*callback)());
 
@@ -9495,6 +9513,8 @@ QPoint* q_tablewidget_super_dirty_region_offset(void* self);
 /// @param self QTableWidget*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tablewidget_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -9716,6 +9736,8 @@ QMargins* q_tablewidget_super_viewport_margins(void* self);
 ///
 /// @param self QTableWidget*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tablewidget_on_viewport_margins(void* self, QMargins* (*callback)());
 

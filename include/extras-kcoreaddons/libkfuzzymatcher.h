@@ -116,6 +116,32 @@ void k_fuzzymatcher__range_set_length(void* self, int length);
 ///
 void k_fuzzymatcher__range_delete(void* self);
 
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher.html)
+
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#matchSimple)
+///
+/// @param param1 const char*
+/// @param param2 const char*
+///
+bool k_fuzzymatcher_match_simple(const char* param1, const char* param2);
+
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#match)
+///
+/// @param param1 const char*
+/// @param param2 const char*
+///
+KFuzzyMatcher__Result* k_fuzzymatcher_match(const char* param1, const char* param2);
+
+/// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#matchedRanges)
+///
+/// @param param1 const char*
+/// @param param2 const char*
+/// @param param3 enum KFuzzyMatcher__RangeType
+///
+/// @return libqt_list of KFuzzyMatcher__Range*
+///
+libqt_list k_fuzzymatcher_matched_ranges(const char* param1, const char* param2, uint8_t param3);
+
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#public-types)
 
 typedef enum {

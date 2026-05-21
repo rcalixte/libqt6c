@@ -1,6 +1,7 @@
 #include "libdefinition.hpp"
 #include "libfoldingregion.hpp"
 #include "libformat.hpp"
+#include "libstate.hpp"
 #include "libtheme.hpp"
 #include "libabstracthighlighter.hpp"
 #include "libabstracthighlighter.h"

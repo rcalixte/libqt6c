@@ -456,6 +456,8 @@ QPixmap* q_designerformwindowmanagerinterface_create_preview_pixmap(void* self);
 /// @param self QDesignerFormWindowManagerInterface*
 /// @param callback QPixmap* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerformwindowmanagerinterface_on_create_preview_pixmap(void* self, QPixmap* (*callback)());
 
 /// @warning DEPRECATED: Use `q_designerformwindowmanagerinterface_super_create_preview_pixmap` instead

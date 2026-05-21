@@ -3937,6 +3937,8 @@ QSize* k_listwidgetsearchline_super_size_hint(void* self);
 /// @param self KListWidgetSearchLine*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_listwidgetsearchline_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QLineEdit
@@ -3971,6 +3973,8 @@ QSize* k_listwidgetsearchline_super_minimum_size_hint(void* self);
 ///
 /// @param self KListWidgetSearchLine*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_listwidgetsearchline_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4637,6 +4641,8 @@ QVariant* k_listwidgetsearchline_super_input_method_query(void* self, int32_t pa
 ///
 /// @param self KListWidgetSearchLine*
 /// @param callback QVariant* func(KListWidgetSearchLine* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_listwidgetsearchline_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5669,6 +5675,8 @@ QRect* k_listwidgetsearchline_super_cursor_rect(void* self);
 ///
 /// @param self KListWidgetSearchLine*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_listwidgetsearchline_on_cursor_rect(void* self, QRect* (*callback)());
 

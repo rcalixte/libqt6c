@@ -1430,6 +1430,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_to_source(void* self
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__emojiproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1466,6 +1468,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_map_from_source(void* se
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* sourceIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1504,6 +1508,8 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_to_sour
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QItemSelection* func(TextEmoticonsCore__EmojiProxyModel* self, QItemSelection* proxySelection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__emojiproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1540,6 +1546,8 @@ QItemSelection* k_textemoticonscore__emojiproxymodel_super_map_selection_from_so
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QItemSelection* func(TextEmoticonsCore__EmojiProxyModel* self, QItemSelection* sourceSelection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -1621,6 +1629,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_index(void* self, int ro
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__emojiproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1657,6 +1667,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_parent(void* self, void*
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1698,6 +1710,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_sibling(void* self, int 
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -1849,6 +1863,8 @@ QVariant* k_textemoticonscore__emojiproxymodel_super_data(void* self, void* inde
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QVariant* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__emojiproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -1930,6 +1946,8 @@ QVariant* k_textemoticonscore__emojiproxymodel_super_header_data(void* self, int
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QVariant* func(TextEmoticonsCore__EmojiProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2372,6 +2390,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_buddy(void* self, void* 
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__emojiproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -2457,6 +2477,8 @@ QSize* k_textemoticonscore__emojiproxymodel_super_span(void* self, void* index);
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QSize* func(TextEmoticonsCore__EmojiProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3500,6 +3522,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_source_index(void
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__emojiproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3538,6 +3562,8 @@ QModelIndex* k_textemoticonscore__emojiproxymodel_super_create_index(void* self,
 ///
 /// @param self TextEmoticonsCore__EmojiProxyModel*
 /// @param callback QModelIndex* func(TextEmoticonsCore__EmojiProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textemoticonscore__emojiproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

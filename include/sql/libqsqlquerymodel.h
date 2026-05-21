@@ -193,6 +193,8 @@ QVariant* q_sqlquerymodel_data(void* self, void* item, int role);
 /// @param self QSqlQueryModel*
 /// @param callback QVariant* func(QSqlQueryModel* self, QModelIndex* item, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sqlquerymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_sqlquerymodel_super_data` instead
@@ -224,6 +226,8 @@ QVariant* q_sqlquerymodel_header_data(void* self, int section, int32_t orientati
 ///
 /// @param self QSqlQueryModel*
 /// @param callback QVariant* func(QSqlQueryModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqlquerymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -831,6 +835,8 @@ QModelIndex* q_sqlquerymodel_index_in_query(void* self, void* item);
 /// @param self QSqlQueryModel*
 /// @param callback QModelIndex* func(QSqlQueryModel* self, QModelIndex* item)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sqlquerymodel_on_index_in_query(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_sqlquerymodel_super_index_in_query` instead
@@ -929,6 +935,8 @@ QModelIndex* q_sqlquerymodel_parent(void* self, void* child);
 ///
 /// @param self QSqlQueryModel*
 /// @param callback QModelIndex* func(QSqlQueryModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqlquerymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1757,6 +1765,8 @@ QModelIndex* q_sqlquerymodel_super_index(void* self, int row, int column, void* 
 /// @param self QSqlQueryModel*
 /// @param callback QModelIndex* func(QSqlQueryModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sqlquerymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractTableModel
@@ -1797,6 +1807,8 @@ QModelIndex* q_sqlquerymodel_super_sibling(void* self, int row, int column, void
 ///
 /// @param self QSqlQueryModel*
 /// @param callback QModelIndex* func(QSqlQueryModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqlquerymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -2511,6 +2523,8 @@ QModelIndex* q_sqlquerymodel_super_buddy(void* self, void* index);
 /// @param self QSqlQueryModel*
 /// @param callback QModelIndex* func(QSqlQueryModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sqlquerymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2596,6 +2610,8 @@ QSize* q_sqlquerymodel_super_span(void* self, void* index);
 ///
 /// @param self QSqlQueryModel*
 /// @param callback QSize* func(QSqlQueryModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqlquerymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3040,6 +3056,8 @@ QModelIndex* q_sqlquerymodel_super_create_index(void* self, int row, int column)
 ///
 /// @param self QSqlQueryModel*
 /// @param callback QModelIndex* func(QSqlQueryModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqlquerymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

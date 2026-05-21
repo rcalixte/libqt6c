@@ -454,6 +454,8 @@ QSize* q_wizard_size_hint(void* self);
 /// @param self QWizard*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_wizard_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_wizard_super_size_hint` instead
@@ -3848,6 +3850,8 @@ QSize* q_wizard_super_minimum_size_hint(void* self);
 /// @param self QWizard*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_wizard_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -5281,6 +5285,8 @@ QVariant* q_wizard_super_input_method_query(void* self, int32_t param1);
 /// @param self QWizard*
 /// @param callback QVariant* func(QWizard* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_wizard_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -6298,6 +6304,8 @@ QVariant* q_wizardpage_field(void* self, const char* name);
 ///
 /// @param self QWizardPage*
 /// @param callback QVariant* func(QWizardPage* self, const char* name)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_wizardpage_on_field(void* self, QVariant* (*callback)(void*, const char*));
 
@@ -9521,6 +9529,8 @@ QSize* q_wizardpage_super_size_hint(void* self);
 /// @param self QWizardPage*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_wizardpage_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -9555,6 +9565,8 @@ QSize* q_wizardpage_super_minimum_size_hint(void* self);
 ///
 /// @param self QWizardPage*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_wizardpage_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -10885,6 +10897,8 @@ QVariant* q_wizardpage_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QWizardPage*
 /// @param callback QVariant* func(QWizardPage* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_wizardpage_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

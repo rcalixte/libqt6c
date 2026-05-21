@@ -125,7 +125,19 @@ libqt_list k_country_subdivisions(void* self);
 ///
 /// @param alpha2Code const char*
 ///
+KCountry* k_country_from_alpha2(const char* alpha2Code);
+
+/// [Upstream resources](https://api.kde.org/kcountry.html#fromAlpha2)
+///
+/// @param alpha2Code const char*
+///
 KCountry* k_country_from_alpha22(const char* alpha2Code);
+
+/// [Upstream resources](https://api.kde.org/kcountry.html#fromAlpha3)
+///
+/// @param alpha3Code const char*
+///
+KCountry* k_country_from_alpha3(const char* alpha3Code);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#fromAlpha3)
 ///
@@ -145,6 +157,12 @@ KCountry* k_country_from_location(float latitude, float longitude);
 /// @param country enum QLocale__Country
 ///
 KCountry* k_country_from_q_locale(uint16_t country);
+
+/// [Upstream resources](https://api.kde.org/kcountry.html#fromName)
+///
+/// @param name const char*
+///
+KCountry* k_country_from_name(const char* name);
 
 /// [Upstream resources](https://api.kde.org/kcountry.html#allCountries)
 ///

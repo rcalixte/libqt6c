@@ -195,6 +195,8 @@ QSize* q_progressbar_size_hint(void* self);
 /// @param self QProgressBar*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_progressbar_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_progressbar_super_size_hint` instead
@@ -221,6 +223,8 @@ QSize* q_progressbar_minimum_size_hint(void* self);
 ///
 /// @param self QProgressBar*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_progressbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4737,6 +4741,8 @@ QVariant* q_progressbar_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QProgressBar*
 /// @param callback QVariant* func(QProgressBar* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_progressbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

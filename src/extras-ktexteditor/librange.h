@@ -109,6 +109,12 @@ KTextEditor__Range* k_texteditor__range_invalid();
 ///
 const char* k_texteditor__range_to_string(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor-range.html#fromString)
+///
+/// @param str const char*
+///
+KTextEditor__Range* k_texteditor__range_from_string(const char* str);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-range.html#start)
 ///
 /// @param self KTextEditor__Range*

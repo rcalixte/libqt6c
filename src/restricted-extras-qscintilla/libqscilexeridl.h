@@ -1592,6 +1592,8 @@ QColor* q_scilexeridl_super_color(void* self, int style);
 /// @param self QsciLexerIDL*
 /// @param callback QColor* func(QsciLexerIDL* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexeridl_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1665,6 +1667,8 @@ QFont* q_scilexeridl_super_font(void* self, int style);
 ///
 /// @param self QsciLexerIDL*
 /// @param callback QFont* func(QsciLexerIDL* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexeridl_on_font(void* self, QFont* (*callback)(void*, int));
 
@@ -1773,6 +1777,8 @@ QColor* q_scilexeridl_super_paper(void* self, int style);
 /// @param self QsciLexerIDL*
 /// @param callback QColor* func(QsciLexerIDL* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexeridl_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1809,6 +1815,8 @@ QColor* q_scilexeridl_super_default_color2(void* self, int style);
 ///
 /// @param self QsciLexerIDL*
 /// @param callback QColor* func(QsciLexerIDL* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexeridl_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
@@ -1884,6 +1892,8 @@ QFont* q_scilexeridl_super_default_font2(void* self, int style);
 /// @param self QsciLexerIDL*
 /// @param callback QFont* func(QsciLexerIDL* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexeridl_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1920,6 +1930,8 @@ QColor* q_scilexeridl_super_default_paper2(void* self, int style);
 ///
 /// @param self QsciLexerIDL*
 /// @param callback QColor* func(QsciLexerIDL* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexeridl_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 

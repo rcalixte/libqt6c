@@ -97,6 +97,12 @@ libqt_list k_countrysubdivision_subdivisions(void* self);
 ///
 /// @param code const char*
 ///
+KCountrySubdivision* k_countrysubdivision_from_code(const char* code);
+
+/// [Upstream resources](https://api.kde.org/kcountrysubdivision.html#fromCode)
+///
+/// @param code const char*
+///
 KCountrySubdivision* k_countrysubdivision_from_code2(const char* code);
 
 /// [Upstream resources](https://api.kde.org/kcountrysubdivision.html#fromLocation)

@@ -1355,6 +1355,8 @@ QVariant* k_pagewidgetmodel_data(void* self, void* index, int role);
 /// @param self KPageWidgetModel*
 /// @param callback QVariant* func(KPageWidgetModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_pagewidgetmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_pagewidgetmodel_super_data` instead
@@ -1453,6 +1455,8 @@ QModelIndex* k_pagewidgetmodel_index(void* self, int row, int column, void* pare
 /// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_pagewidgetmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `k_pagewidgetmodel_super_index` instead
@@ -1483,6 +1487,8 @@ QModelIndex* k_pagewidgetmodel_parent(void* self, void* index);
 ///
 /// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_pagewidgetmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -2361,6 +2367,8 @@ QModelIndex* k_pagewidgetmodel_super_sibling(void* self, int row, int column, vo
 /// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_pagewidgetmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2438,6 +2446,8 @@ QVariant* k_pagewidgetmodel_super_header_data(void* self, int section, int32_t o
 ///
 /// @param self KPageWidgetModel*
 /// @param callback QVariant* func(KPageWidgetModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_pagewidgetmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -3269,6 +3279,8 @@ QModelIndex* k_pagewidgetmodel_super_buddy(void* self, void* index);
 /// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_pagewidgetmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3354,6 +3366,8 @@ QSize* k_pagewidgetmodel_super_span(void* self, void* index);
 ///
 /// @param self KPageWidgetModel*
 /// @param callback QSize* func(KPageWidgetModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_pagewidgetmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3859,6 +3873,8 @@ QModelIndex* k_pagewidgetmodel_super_create_index(void* self, int row, int colum
 ///
 /// @param self KPageWidgetModel*
 /// @param callback QModelIndex* func(KPageWidgetModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_pagewidgetmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

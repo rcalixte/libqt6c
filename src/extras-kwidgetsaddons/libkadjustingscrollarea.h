@@ -120,6 +120,8 @@ QSize* k_adjustingscrollarea_minimum_size_hint(void* self);
 /// @param self KAdjustingScrollArea*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_adjustingscrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_adjustingscrollarea_super_minimum_size_hint` instead
@@ -146,6 +148,8 @@ QSize* k_adjustingscrollarea_size_hint(void* self);
 ///
 /// @param self KAdjustingScrollArea*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_adjustingscrollarea_on_size_hint(void* self, QSize* (*callback)());
 
@@ -3704,6 +3708,8 @@ QSize* k_adjustingscrollarea_super_viewport_size_hint(void* self);
 /// @param self KAdjustingScrollArea*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_adjustingscrollarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5143,6 +5149,8 @@ QVariant* k_adjustingscrollarea_super_input_method_query(void* self, int32_t par
 /// @param self KAdjustingScrollArea*
 /// @param callback QVariant* func(KAdjustingScrollArea* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_adjustingscrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QObject
@@ -5405,6 +5413,8 @@ QMargins* k_adjustingscrollarea_super_viewport_margins(void* self);
 ///
 /// @param self KAdjustingScrollArea*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_adjustingscrollarea_on_viewport_margins(void* self, QMargins* (*callback)());
 

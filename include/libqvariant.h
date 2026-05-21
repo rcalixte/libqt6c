@@ -338,9 +338,9 @@ QVariant* q_variant_new41(const char* str);
 
 /// q_variant_new42 constructs a new QVariant object.
 ///
-/// @param stringVal const char*
+/// @param stringVal char*
 ///
-QVariant* q_variant_new42(const char* stringVal);
+QVariant* q_variant_new42(char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 

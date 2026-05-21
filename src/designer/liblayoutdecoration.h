@@ -73,6 +73,8 @@ QRect* q_designerlayoutdecorationextension_item_info(void* self, int index);
 /// @param self QDesignerLayoutDecorationExtension*
 /// @param callback QRect* func(QDesignerLayoutDecorationExtension* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerlayoutdecorationextension_on_item_info(void* self, QRect* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_designerlayoutdecorationextension_super_item_info` instead

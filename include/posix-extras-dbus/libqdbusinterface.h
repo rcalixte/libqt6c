@@ -1065,6 +1065,8 @@ QVariant* q_dbusinterface_super_internal_prop_get(void* self, const char* propna
 /// @param self QDBusInterface*
 /// @param callback QVariant* func(QDBusInterface* self, const char* propname)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_dbusinterface_on_internal_prop_get(void* self, QVariant* (*callback)(void*, const char*));
 
 /// Inherited from QDBusAbstractInterface
@@ -1142,6 +1144,8 @@ QDBusMessage* q_dbusinterface_super_internal_const_call(void* self, int32_t mode
 ///
 /// @param self QDBusInterface*
 /// @param callback QDBusMessage* func(QDBusInterface* self, enum QDBus__CallMode mode, const char* method)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_dbusinterface_on_internal_const_call(void* self, QDBusMessage* (*callback)(void*, int32_t, const char*));
 

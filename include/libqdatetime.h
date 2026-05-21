@@ -249,6 +249,25 @@ const char* q_date_to_string2(void* self, const char* format);
 ///
 const char* q_date_to_string3(void* self, const char* format, void* cal);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QDate*
+/// @param format const char*
+///
+const char* q_date_to_string4(void* self, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QDate*
+/// @param format const char*
+/// @param cal QCalendar*
+///
+const char* q_date_to_string5(void* self, const char* format, void* cal);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#setDate)
 ///
 /// @param self QDate*
@@ -329,6 +348,12 @@ QDate* q_date_current_date();
 ///
 /// @param stringVal const char*
 ///
+QDate* q_date_from_string(const char* stringVal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+///
 QDate* q_date_from_string2(const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
@@ -337,7 +362,55 @@ QDate* q_date_from_string2(const char* stringVal);
 /// @param format const char*
 /// @param cal QCalendar*
 ///
+QDate* q_date_from_string3(const char* stringVal, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param cal QCalendar*
+///
+QDate* q_date_from_string4(const char* stringVal, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param cal QCalendar*
+///
 QDate* q_date_from_string5(const char* stringVal, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+///
+QDate* q_date_from_string6(const char* stringVal, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+/// @param cal QCalendar*
+///
+QDate* q_date_from_string7(const char* stringVal, const char* format, int baseYear, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+///
+QDate* q_date_from_string8(const char* stringVal, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+/// @param cal QCalendar*
+///
+QDate* q_date_from_string9(const char* stringVal, const char* format, int baseYear, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
 ///
@@ -418,7 +491,30 @@ const char* q_date_to_string1(void* self, int32_t format);
 /// @param stringVal const char*
 /// @param format enum Qt__DateFormat
 ///
+QDate* q_date_from_string22(const char* stringVal, int32_t format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format enum Qt__DateFormat
+///
 QDate* q_date_from_string23(const char* stringVal, int32_t format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+///
+QDate* q_date_from_string32(const char* stringVal, const char* format, int baseYear);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+///
+QDate* q_date_from_string33(const char* stringVal, const char* format, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdate.html#fromString)
 ///
@@ -563,6 +659,15 @@ const char* q_time_to_string(void* self);
 ///
 const char* q_time_to_string2(void* self, const char* format);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QTime*
+/// @param format const char*
+///
+const char* q_time_to_string3(void* self, const char* format);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#setHMS)
 ///
 /// @param self QTime*
@@ -620,6 +725,26 @@ QTime* q_time_current_time();
 ///
 /// @param stringVal const char*
 ///
+QTime* q_time_from_string(const char* stringVal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+///
+QTime* q_time_from_string2(const char* stringVal, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+///
+QTime* q_time_from_string3(const char* stringVal, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromString)
+///
+/// @param stringVal const char*
+///
 QTime* q_time_from_string4(const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromString)
@@ -655,6 +780,13 @@ const char* q_time_to_string1(void* self, int32_t f);
 /// @param ms int
 ///
 bool q_time_set_h_m_s4(void* self, int h, int m, int s, int ms);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format enum Qt__DateFormat
+///
+QTime* q_time_from_string22(const char* stringVal, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtime.html#fromString)
 ///
@@ -921,6 +1053,25 @@ const char* q_datetime_to_string2(void* self, const char* format);
 ///
 const char* q_datetime_to_string3(void* self, const char* format, void* cal);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QDateTime*
+/// @param format const char*
+///
+const char* q_datetime_to_string4(void* self, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#toString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QDateTime*
+/// @param format const char*
+/// @param cal QCalendar*
+///
+const char* q_datetime_to_string5(void* self, const char* format, void* cal);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#addDays)
 ///
 /// @param self QDateTime*
@@ -1035,6 +1186,12 @@ QDateTime* q_datetime_current_date_time_utc();
 ///
 /// @param stringVal const char*
 ///
+QDateTime* q_datetime_from_string(const char* stringVal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+///
 QDateTime* q_datetime_from_string2(const char* stringVal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
@@ -1043,7 +1200,55 @@ QDateTime* q_datetime_from_string2(const char* stringVal);
 /// @param format const char*
 /// @param cal QCalendar*
 ///
+QDateTime* q_datetime_from_string3(const char* stringVal, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param cal QCalendar*
+///
+QDateTime* q_datetime_from_string4(const char* stringVal, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param cal QCalendar*
+///
 QDateTime* q_datetime_from_string5(const char* stringVal, const char* format, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+///
+QDateTime* q_datetime_from_string6(const char* stringVal, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+/// @param cal QCalendar*
+///
+QDateTime* q_datetime_from_string7(const char* stringVal, const char* format, int baseYear, void* cal);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+///
+QDateTime* q_datetime_from_string8(const char* stringVal, const char* format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+/// @param cal QCalendar*
+///
+QDateTime* q_datetime_from_string9(const char* stringVal, const char* format, int baseYear, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
 ///
@@ -1161,7 +1366,30 @@ const char* q_datetime_to_string1(void* self, int32_t format);
 /// @param stringVal const char*
 /// @param format enum Qt__DateFormat
 ///
+QDateTime* q_datetime_from_string22(const char* stringVal, int32_t format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format enum Qt__DateFormat
+///
 QDateTime* q_datetime_from_string23(const char* stringVal, int32_t format);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+///
+QDateTime* q_datetime_from_string32(const char* stringVal, const char* format, int baseYear);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
+///
+/// @param stringVal const char*
+/// @param format const char*
+/// @param baseYear int
+///
+QDateTime* q_datetime_from_string33(const char* stringVal, const char* format, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qdatetime.html#fromString)
 ///

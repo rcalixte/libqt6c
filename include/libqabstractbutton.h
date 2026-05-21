@@ -3826,6 +3826,8 @@ QSize* q_abstractbutton_super_size_hint(void* self);
 /// @param self QAbstractButton*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3860,6 +3862,8 @@ QSize* q_abstractbutton_super_minimum_size_hint(void* self);
 ///
 /// @param self QAbstractButton*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4820,6 +4824,8 @@ QVariant* q_abstractbutton_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QAbstractButton*
 /// @param callback QVariant* func(QAbstractButton* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

@@ -58,6 +58,10 @@ const char* k_texteditor__range_to_string(void* self) {
     return _ret;
 }
 
+KTextEditor__Range* k_texteditor__range_from_string(const char* str) {
+    return KTextEditor__Range_FromString(qstring(str));
+}
+
 KTextEditor__Cursor* k_texteditor__range_start(void* self) {
     return KTextEditor__Range_Start((KTextEditor__Range*)self);
 }

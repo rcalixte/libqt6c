@@ -277,6 +277,8 @@ QTextCharFormat* q_syntaxhighlighter_format(void* self, int pos);
 /// @param self QSyntaxHighlighter*
 /// @param callback QTextCharFormat* func(QSyntaxHighlighter* self, int pos)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_syntaxhighlighter_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_syntaxhighlighter_super_format` instead
@@ -443,6 +445,8 @@ QTextBlock* q_syntaxhighlighter_current_block(void* self);
 ///
 /// @param self QSyntaxHighlighter*
 /// @param callback QTextBlock* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_syntaxhighlighter_on_current_block(void* self, QTextBlock* (*callback)());
 

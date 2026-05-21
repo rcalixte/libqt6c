@@ -156,6 +156,8 @@ QModelIndex* q_abstractproxymodel_map_to_source(void* self, void* proxyIndex);
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractproxymodel_super_map_to_source` instead
@@ -184,6 +186,8 @@ QModelIndex* q_abstractproxymodel_map_from_source(void* self, void* sourceIndex)
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, QModelIndex* sourceIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -214,6 +218,8 @@ QItemSelection* q_abstractproxymodel_map_selection_to_source(void* self, void* s
 /// @param self QAbstractProxyModel*
 /// @param callback QItemSelection* func(QAbstractProxyModel* self, QItemSelection* selection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractproxymodel_super_map_selection_to_source` instead
@@ -242,6 +248,8 @@ QItemSelection* q_abstractproxymodel_map_selection_from_source(void* self, void*
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QItemSelection* func(QAbstractProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -327,6 +335,8 @@ QVariant* q_abstractproxymodel_data(void* self, void* proxyIndex, int role);
 /// @param self QAbstractProxyModel*
 /// @param callback QVariant* func(QAbstractProxyModel* self, QModelIndex* proxyIndex, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_abstractproxymodel_super_data` instead
@@ -358,6 +368,8 @@ QVariant* q_abstractproxymodel_header_data(void* self, int section, int32_t orie
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QVariant* func(QAbstractProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -595,6 +607,8 @@ QModelIndex* q_abstractproxymodel_buddy(void* self, void* index);
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractproxymodel_super_buddy` instead
@@ -713,6 +727,8 @@ QSize* q_abstractproxymodel_span(void* self, void* index);
 /// @param self QAbstractProxyModel*
 /// @param callback QSize* func(QAbstractProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractproxymodel_super_span` instead
@@ -772,6 +788,8 @@ QModelIndex* q_abstractproxymodel_sibling(void* self, int row, int column, void*
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -1041,6 +1059,8 @@ QModelIndex* q_abstractproxymodel_create_source_index(void* self, int row, int c
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, int row, int col, void* internalPtr)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -1863,6 +1883,8 @@ QModelIndex* q_abstractproxymodel_super_index(void* self, int row, int column, v
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1899,6 +1921,8 @@ QModelIndex* q_abstractproxymodel_super_parent(void* self, void* child);
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -2650,6 +2674,8 @@ QModelIndex* q_abstractproxymodel_super_create_index(void* self, int row, int co
 ///
 /// @param self QAbstractProxyModel*
 /// @param callback QModelIndex* func(QAbstractProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

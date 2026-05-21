@@ -28,7 +28,7 @@ libqt_list /* set of const char* */ QDesignerPromotionInterface_ReferencedPromot
     int _sctr = 0;
     QSetIterator<QString> _itr(_ret);
     while (_itr.hasNext()) {
-        QString _sv_ret = _itr.next();
+        auto _sv_ret = _itr.next();
         // Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory
         QByteArray _sv_b = _sv_ret.toUtf8();
         auto _sv_str_len = _sv_b.length();

@@ -219,6 +219,8 @@ QModelIndex* k_texteditor__codecompletionmodel_index(void* self, int row, int co
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__codecompletionmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `k_texteditor__codecompletionmodel_super_index` instead
@@ -293,6 +295,8 @@ QModelIndex* k_texteditor__codecompletionmodel_parent(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1205,6 +1209,8 @@ QModelIndex* k_texteditor__codecompletionmodel_super_sibling(void* self, int row
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__codecompletionmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1280,6 +1286,8 @@ QVariant* k_texteditor__codecompletionmodel_super_data(void* self, void* index, 
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QVariant* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
@@ -1362,6 +1370,8 @@ QVariant* k_texteditor__codecompletionmodel_super_header_data(void* self, int se
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QVariant* func(KTextEditor__CodeCompletionModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2171,6 +2181,8 @@ QModelIndex* k_texteditor__codecompletionmodel_super_buddy(void* self, void* ind
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__codecompletionmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2256,6 +2268,8 @@ QSize* k_texteditor__codecompletionmodel_super_span(void* self, void* index);
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QSize* func(KTextEditor__CodeCompletionModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2761,6 +2775,8 @@ QModelIndex* k_texteditor__codecompletionmodel_super_create_index(void* self, in
 ///
 /// @param self KTextEditor__CodeCompletionModel*
 /// @param callback QModelIndex* func(KTextEditor__CodeCompletionModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

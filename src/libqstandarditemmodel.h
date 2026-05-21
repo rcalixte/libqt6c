@@ -62,6 +62,8 @@ QVariant* q_standarditem_data(void* self, int role);
 /// @param self QStandardItem*
 /// @param callback QVariant* func(QStandardItem* self, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_standarditem_on_data(void* self, QVariant* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_standarditem_super_data` instead
@@ -1083,6 +1085,8 @@ QModelIndex* q_standarditemmodel_index(void* self, int row, int column, void* pa
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_standarditemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_standarditemmodel_super_index` instead
@@ -1113,6 +1117,8 @@ QModelIndex* q_standarditemmodel_parent(void* self, void* child);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_standarditemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1230,6 +1236,8 @@ QVariant* q_standarditemmodel_data(void* self, void* index, int role);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QVariant* func(QStandardItemModel* self, QModelIndex* index, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_standarditemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
@@ -1355,6 +1363,8 @@ QVariant* q_standarditemmodel_header_data(void* self, int section, int32_t orien
 ///
 /// @param self QStandardItemModel*
 /// @param callback QVariant* func(QStandardItemModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_standarditemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2879,6 +2889,8 @@ QModelIndex* q_standarditemmodel_super_sibling(void* self, int row, int column, 
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_standarditemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3164,6 +3176,8 @@ QModelIndex* q_standarditemmodel_super_buddy(void* self, void* index);
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_standarditemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3249,6 +3263,8 @@ QSize* q_standarditemmodel_super_span(void* self, void* index);
 ///
 /// @param self QStandardItemModel*
 /// @param callback QSize* func(QStandardItemModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_standarditemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3654,6 +3670,8 @@ QModelIndex* q_standarditemmodel_super_create_index(void* self, int row, int col
 ///
 /// @param self QStandardItemModel*
 /// @param callback QModelIndex* func(QStandardItemModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_standarditemmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

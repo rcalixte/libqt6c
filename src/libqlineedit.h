@@ -261,6 +261,8 @@ QSize* q_lineedit_size_hint(void* self);
 /// @param self QLineEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_lineedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_lineedit_super_size_hint` instead
@@ -287,6 +289,8 @@ QSize* q_lineedit_minimum_size_hint(void* self);
 ///
 /// @param self QLineEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_lineedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -1214,6 +1218,8 @@ QVariant* q_lineedit_input_method_query(void* self, int32_t param1);
 /// @param self QLineEdit*
 /// @param callback QVariant* func(QLineEdit* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_lineedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_lineedit_super_input_method_query` instead
@@ -1307,6 +1313,8 @@ QRect* q_lineedit_cursor_rect(void* self);
 ///
 /// @param self QLineEdit*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_lineedit_on_cursor_rect(void* self, QRect* (*callback)());
 

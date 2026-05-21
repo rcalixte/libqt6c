@@ -121,6 +121,8 @@ QSize* k_splittercollapserbutton_size_hint(void* self);
 /// @param self KSplitterCollapserButton*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_splittercollapserbutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_splittercollapserbutton_super_size_hint` instead
@@ -3752,6 +3754,8 @@ QSize* k_splittercollapserbutton_super_minimum_size_hint(void* self);
 /// @param self KSplitterCollapserButton*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_splittercollapserbutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QToolButton
@@ -5186,6 +5190,8 @@ QVariant* k_splittercollapserbutton_super_input_method_query(void* self, int32_t
 ///
 /// @param self KSplitterCollapserButton*
 /// @param callback QVariant* func(KSplitterCollapserButton* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_splittercollapserbutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

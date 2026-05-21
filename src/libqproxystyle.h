@@ -326,6 +326,8 @@ QSize* q_proxystyle_size_from_contents(void* self, int32_t type, void* option, v
 /// @param self QProxyStyle*
 /// @param callback QSize* func(QProxyStyle* self, enum QStyle__ContentsType type, QStyleOption* option, QSize* size, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_proxystyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_proxystyle_super_size_from_contents` instead
@@ -360,6 +362,8 @@ QRect* q_proxystyle_sub_element_rect(void* self, int32_t element, void* option, 
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, enum QStyle__SubElement element, QStyleOption* option, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_proxystyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_proxystyle_super_sub_element_rect` instead
@@ -393,6 +397,8 @@ QRect* q_proxystyle_sub_control_rect(void* self, int32_t cc, void* opt, int32_t 
 ///
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_proxystyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
@@ -430,6 +436,8 @@ QRect* q_proxystyle_item_text_rect(void* self, void* fm, void* r, int flags, boo
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_proxystyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// @warning DEPRECATED: Use `q_proxystyle_super_item_text_rect` instead
@@ -464,6 +472,8 @@ QRect* q_proxystyle_item_pixmap_rect(void* self, void* r, int flags, void* pixma
 ///
 /// @param self QProxyStyle*
 /// @param callback QRect* func(QProxyStyle* self, QRect* r, int flags, QPixmap* pixmap)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_proxystyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
@@ -642,6 +652,8 @@ QIcon* q_proxystyle_standard_icon(void* self, int32_t standardIcon, void* option
 /// @param self QProxyStyle*
 /// @param callback QIcon* func(QProxyStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_proxystyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_proxystyle_super_standard_icon` instead
@@ -674,6 +686,8 @@ QPixmap* q_proxystyle_standard_pixmap(void* self, int32_t standardPixmap, void* 
 ///
 /// @param self QProxyStyle*
 /// @param callback QPixmap* func(QProxyStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_proxystyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
@@ -708,6 +722,8 @@ QPixmap* q_proxystyle_generated_icon_pixmap(void* self, int32_t iconMode, void* 
 /// @param self QProxyStyle*
 /// @param callback QPixmap* func(QProxyStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_proxystyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_proxystyle_super_generated_icon_pixmap` instead
@@ -737,6 +753,8 @@ QPalette* q_proxystyle_standard_palette(void* self);
 ///
 /// @param self QProxyStyle*
 /// @param callback QPalette* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_proxystyle_on_standard_palette(void* self, QPalette* (*callback)());
 

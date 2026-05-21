@@ -2178,6 +2178,8 @@ QVariant* k_configskeleton__itemcolor_property(void* self);
 /// @param self KConfigSkeleton__ItemColor*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_configskeleton__itemcolor_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_configskeleton__itemcolor_super_property` instead
@@ -2318,6 +2320,8 @@ QVariant* k_configskeleton__itemfont_property(void* self);
 ///
 /// @param self KConfigSkeleton__ItemFont*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_configskeleton__itemfont_on_property(void* self, QVariant* (*callback)());
 

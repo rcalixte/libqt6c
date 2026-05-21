@@ -76,29 +76,37 @@ QColor* q_color_new8(const char* name);
 
 /// q_color_new9 constructs a new QColor object.
 ///
-/// @param aname const char*
+/// @param name const char*
 ///
-QColor* q_color_new9(const char* aname);
+QColor* q_color_new9(const char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
 /// q_color_new10 constructs a new QColor object.
 ///
-/// @param name const char*
+/// @param aname const char*
 ///
-QColor* q_color_new10(const char* name);
+QColor* q_color_new10(const char* aname);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
 /// q_color_new11 constructs a new QColor object.
 ///
-/// @param spec enum QColor__Spec
+/// @param name char*
 ///
-QColor* q_color_new11(int32_t spec);
+QColor* q_color_new11(char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
 /// q_color_new12 constructs a new QColor object.
+///
+/// @param spec enum QColor__Spec
+///
+QColor* q_color_new12(int32_t spec);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
+
+/// q_color_new13 constructs a new QColor object.
 ///
 /// @param spec enum QColor__Spec
 /// @param a1 uint16_t
@@ -106,30 +114,30 @@ QColor* q_color_new11(int32_t spec);
 /// @param a3 uint16_t
 /// @param a4 uint16_t
 ///
-QColor* q_color_new12(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4);
-
-/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
-
-/// q_color_new13 constructs a new QColor object.
-///
-/// @param param1 QColor*
-///
-QColor* q_color_new13(void* param1);
+QColor* q_color_new13(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
 /// q_color_new14 constructs a new QColor object.
+///
+/// @param param1 QColor*
+///
+QColor* q_color_new14(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
+
+/// q_color_new15 constructs a new QColor object.
 ///
 /// @param r int
 /// @param g int
 /// @param b int
 /// @param a int
 ///
-QColor* q_color_new14(int r, int g, int b, int a);
+QColor* q_color_new15(int r, int g, int b, int a);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html)
 
-/// q_color_new15 constructs a new QColor object.
+/// q_color_new16 constructs a new QColor object.
 ///
 /// @param spec enum QColor__Spec
 /// @param a1 uint16_t
@@ -138,7 +146,7 @@ QColor* q_color_new14(int r, int g, int b, int a);
 /// @param a4 uint16_t
 /// @param a5 uint16_t
 ///
-QColor* q_color_new15(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5);
+QColor* q_color_new16(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5);
 
 /// q_color_copy_assign shallow copies `other` into `self`.
 ///
@@ -193,7 +201,14 @@ void q_color_set_named_color(void* self, const char* name);
 /// @param self QColor*
 /// @param name const char*
 ///
-void q_color_set_named_color3(void* self, const char* name);
+void q_color_set_named_color2(void* self, const char* name);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#setNamedColor)
+///
+/// @param self QColor*
+/// @param name char*
+///
+void q_color_set_named_color3(void* self, char* name);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#colorNames)
 ///
@@ -810,6 +825,18 @@ QVariant* q_color_to_q_variant(void* self);
 /// @param name const char*
 ///
 bool q_color_is_valid_color(const char* name);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColor)
+///
+/// @param param1 const char*
+///
+bool q_color_is_valid_color2(const char* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColor)
+///
+/// @param param1 char*
+///
+bool q_color_is_valid_color3(char* param1);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcolor.html#isValidColorName)
 ///

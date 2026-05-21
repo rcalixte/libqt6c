@@ -505,6 +505,8 @@ QRect* q_treeview_visual_rect(void* self, void* index);
 /// @param self QTreeView*
 /// @param callback QRect* func(QTreeView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_treeview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_treeview_super_visual_rect` instead
@@ -564,6 +566,8 @@ QModelIndex* q_treeview_index_at(void* self, void* p);
 ///
 /// @param self QTreeView*
 /// @param callback QModelIndex* func(QTreeView* self, QPoint* p)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_treeview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1097,6 +1101,8 @@ QModelIndex* q_treeview_move_cursor(void* self, int32_t cursorAction, int32_t mo
 /// @param self QTreeView*
 /// @param callback QModelIndex* func(QTreeView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_treeview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_treeview_super_move_cursor` instead
@@ -1211,6 +1217,8 @@ QRegion* q_treeview_visual_region_for_selection(void* self, void* selection);
 ///
 /// @param self QTreeView*
 /// @param callback QRegion* func(QTreeView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_treeview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -1684,6 +1692,8 @@ QSize* q_treeview_viewport_size_hint(void* self);
 ///
 /// @param self QTreeView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_treeview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5890,6 +5900,8 @@ QVariant* q_treeview_super_input_method_query(void* self, int32_t query);
 /// @param self QTreeView*
 /// @param callback QVariant* func(QTreeView* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_treeview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6712,6 +6724,8 @@ QSize* q_treeview_super_minimum_size_hint(void* self);
 /// @param self QTreeView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_treeview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6746,6 +6760,8 @@ QSize* q_treeview_super_size_hint(void* self);
 ///
 /// @param self QTreeView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_treeview_on_size_hint(void* self, QSize* (*callback)());
 
@@ -7999,6 +8015,8 @@ QPoint* q_treeview_super_dirty_region_offset(void* self);
 /// @param self QTreeView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_treeview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8220,6 +8238,8 @@ QMargins* q_treeview_super_viewport_margins(void* self);
 ///
 /// @param self QTreeView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_treeview_on_viewport_margins(void* self, QMargins* (*callback)());
 

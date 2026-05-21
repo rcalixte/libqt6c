@@ -44,6 +44,10 @@ const char* k_texteditor__linerange_to_string(void* self) {
     return _ret;
 }
 
+KTextEditor__LineRange* k_texteditor__linerange_from_string(const char* str) {
+    return KTextEditor__LineRange_FromString(qstring(str));
+}
+
 int32_t k_texteditor__linerange_start(void* self) {
     return KTextEditor__LineRange_Start((KTextEditor__LineRange*)self);
 }

@@ -18,6 +18,41 @@ QXmlStreamAttribute* q_xmlstreamattribute_new4(void* param1) {
     return QXmlStreamAttribute_new4((QXmlStreamAttribute*)param1);
 }
 
+const char* q_xmlstreamattribute_namespace_uri(void* self) {
+    libqt_string _str = QXmlStreamAttribute_NamespaceUri((QXmlStreamAttribute*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamattribute_name(void* self) {
+    libqt_string _str = QXmlStreamAttribute_Name((QXmlStreamAttribute*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamattribute_qualified_name(void* self) {
+    libqt_string _str = QXmlStreamAttribute_QualifiedName((QXmlStreamAttribute*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamattribute_prefix(void* self) {
+    libqt_string _str = QXmlStreamAttribute_Prefix((QXmlStreamAttribute*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamattribute_value(void* self) {
+    libqt_string _str = QXmlStreamAttribute_Value((QXmlStreamAttribute*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 bool q_xmlstreamattribute_is_default(void* self) {
     return QXmlStreamAttribute_IsDefault((QXmlStreamAttribute*)self);
 }
@@ -30,6 +65,20 @@ void q_xmlstreamattribute_delete(void* self) {
 
 QXmlStreamAttributes* q_xmlstreamattributes_new() {
     return QXmlStreamAttributes_new();
+}
+
+const char* q_xmlstreamattributes_value(void* self, const char* namespaceUri, const char* name) {
+    libqt_string _str = QXmlStreamAttributes_Value((QXmlStreamAttributes*)self, namespaceUri, name);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamattributes_value2(void* self, const char* qualifiedName) {
+    libqt_string _str = QXmlStreamAttributes_Value2((QXmlStreamAttributes*)self, qualifiedName);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 void q_xmlstreamattributes_append(void* self, const char* namespaceUri, const char* name, const char* value) {
@@ -64,6 +113,20 @@ QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new3(void* param
     return QXmlStreamNamespaceDeclaration_new3((QXmlStreamNamespaceDeclaration*)param1);
 }
 
+const char* q_xmlstreamnamespacedeclaration_prefix(void* self) {
+    libqt_string _str = QXmlStreamNamespaceDeclaration_Prefix((QXmlStreamNamespaceDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamnamespacedeclaration_namespace_uri(void* self) {
+    libqt_string _str = QXmlStreamNamespaceDeclaration_NamespaceUri((QXmlStreamNamespaceDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 void q_xmlstreamnamespacedeclaration_delete(void* self) {
     QXmlStreamNamespaceDeclaration_Delete((QXmlStreamNamespaceDeclaration*)(self));
 }
@@ -76,6 +139,27 @@ QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new2(void* param1)
     return QXmlStreamNotationDeclaration_new2((QXmlStreamNotationDeclaration*)param1);
 }
 
+const char* q_xmlstreamnotationdeclaration_name(void* self) {
+    libqt_string _str = QXmlStreamNotationDeclaration_Name((QXmlStreamNotationDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamnotationdeclaration_system_id(void* self) {
+    libqt_string _str = QXmlStreamNotationDeclaration_SystemId((QXmlStreamNotationDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamnotationdeclaration_public_id(void* self) {
+    libqt_string _str = QXmlStreamNotationDeclaration_PublicId((QXmlStreamNotationDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 void q_xmlstreamnotationdeclaration_delete(void* self) {
     QXmlStreamNotationDeclaration_Delete((QXmlStreamNotationDeclaration*)(self));
 }
@@ -86,6 +170,41 @@ QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new() {
 
 QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new2(void* param1) {
     return QXmlStreamEntityDeclaration_new2((QXmlStreamEntityDeclaration*)param1);
+}
+
+const char* q_xmlstreamentitydeclaration_name(void* self) {
+    libqt_string _str = QXmlStreamEntityDeclaration_Name((QXmlStreamEntityDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamentitydeclaration_notation_name(void* self) {
+    libqt_string _str = QXmlStreamEntityDeclaration_NotationName((QXmlStreamEntityDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamentitydeclaration_system_id(void* self) {
+    libqt_string _str = QXmlStreamEntityDeclaration_SystemId((QXmlStreamEntityDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamentitydeclaration_public_id(void* self) {
+    libqt_string _str = QXmlStreamEntityDeclaration_PublicId((QXmlStreamEntityDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamentitydeclaration_value(void* self) {
+    libqt_string _str = QXmlStreamEntityDeclaration_Value((QXmlStreamEntityDeclaration*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 void q_xmlstreamentitydeclaration_delete(void* self) {
@@ -251,6 +370,20 @@ bool q_xmlstreamreader_has_standalone_declaration(void* self) {
     return QXmlStreamReader_HasStandaloneDeclaration((QXmlStreamReader*)self);
 }
 
+const char* q_xmlstreamreader_document_version(void* self) {
+    libqt_string _str = QXmlStreamReader_DocumentVersion((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_document_encoding(void* self) {
+    libqt_string _str = QXmlStreamReader_DocumentEncoding((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 int64_t q_xmlstreamreader_line_number(void* self) {
     return QXmlStreamReader_LineNumber((QXmlStreamReader*)self);
 }
@@ -269,6 +402,55 @@ QXmlStreamAttributes* q_xmlstreamreader_attributes(void* self) {
 
 const char* q_xmlstreamreader_read_element_text(void* self) {
     libqt_string _str = QXmlStreamReader_ReadElementText((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_name(void* self) {
+    libqt_string _str = QXmlStreamReader_Name((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_namespace_uri(void* self) {
+    libqt_string _str = QXmlStreamReader_NamespaceUri((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_qualified_name(void* self) {
+    libqt_string _str = QXmlStreamReader_QualifiedName((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_prefix(void* self) {
+    libqt_string _str = QXmlStreamReader_Prefix((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_processing_instruction_target(void* self) {
+    libqt_string _str = QXmlStreamReader_ProcessingInstructionTarget((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_processing_instruction_data(void* self) {
+    libqt_string _str = QXmlStreamReader_ProcessingInstructionData((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_text(void* self) {
+    libqt_string _str = QXmlStreamReader_Text((QXmlStreamReader*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -295,6 +477,27 @@ libqt_list /* of QXmlStreamNotationDeclaration* */ q_xmlstreamreader_notation_de
 libqt_list /* of QXmlStreamEntityDeclaration* */ q_xmlstreamreader_entity_declarations(void* self) {
     libqt_list _arr = QXmlStreamReader_EntityDeclarations((QXmlStreamReader*)self);
     return _arr;
+}
+
+const char* q_xmlstreamreader_dtd_name(void* self) {
+    libqt_string _str = QXmlStreamReader_DtdName((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_dtd_public_id(void* self) {
+    libqt_string _str = QXmlStreamReader_DtdPublicId((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_xmlstreamreader_dtd_system_id(void* self) {
+    libqt_string _str = QXmlStreamReader_DtdSystemId((QXmlStreamReader*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
 }
 
 int32_t q_xmlstreamreader_entity_expansion_limit(void* self) {

@@ -3264,6 +3264,8 @@ QSize* k_textedittexttospeech__texttospeechwidget_super_size_hint(void* self);
 /// @param self TextEditTextToSpeech__TextToSpeechWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textedittexttospeech__texttospeechwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3298,6 +3300,8 @@ QSize* k_textedittexttospeech__texttospeechwidget_super_minimum_size_hint(void* 
 ///
 /// @param self TextEditTextToSpeech__TextToSpeechWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textedittexttospeech__texttospeechwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4628,6 +4632,8 @@ QVariant* k_textedittexttospeech__texttospeechwidget_super_input_method_query(vo
 ///
 /// @param self TextEditTextToSpeech__TextToSpeechWidget*
 /// @param callback QVariant* func(TextEditTextToSpeech__TextToSpeechWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textedittexttospeech__texttospeechwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

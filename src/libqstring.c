@@ -75,16 +75,28 @@ int32_t q_string_compare5(const char* s1, const char* s2) {
     return QString_Compare5(qstring(s1), qstring(s2));
 }
 
-int32_t q_string_compare6(const char* s1, const char* s2) {
+int32_t q_string_compare6(const char* s1, char* s2) {
     return QString_Compare6(qstring(s1), qstring(s2));
 }
 
-int32_t q_string_compare7(const char* s1, const char* s2) {
+int32_t q_string_compare7(char* s1, const char* s2) {
     return QString_Compare7(qstring(s1), qstring(s2));
+}
+
+int32_t q_string_compare8(const char* s1, const char* s2) {
+    return QString_Compare8(qstring(s1), qstring(s2));
+}
+
+int32_t q_string_compare9(const char* s1, const char* s2) {
+    return QString_Compare9(qstring(s1), qstring(s2));
 }
 
 int32_t q_string_locale_aware_compare3(const char* s1, const char* s2) {
     return QString_LocaleAwareCompare3(qstring(s1), qstring(s2));
+}
+
+int32_t q_string_locale_aware_compare4(const char* s1, const char* s2) {
+    return QString_LocaleAwareCompare4(qstring(s1), qstring(s2));
 }
 
 const char* q_string_number(int param1) {
@@ -154,12 +166,20 @@ int32_t q_string_compare32(const char* s1, const char* s2, int32_t cs) {
     return QString_Compare32(qstring(s1), qstring(s2), cs);
 }
 
-int32_t q_string_compare33(const char* s1, const char* s2, int32_t cs) {
+int32_t q_string_compare33(const char* s1, char* s2, int32_t cs) {
     return QString_Compare33(qstring(s1), qstring(s2), cs);
 }
 
-int32_t q_string_compare34(const char* s1, const char* s2, int32_t cs) {
+int32_t q_string_compare34(char* s1, const char* s2, int32_t cs) {
     return QString_Compare34(qstring(s1), qstring(s2), cs);
+}
+
+int32_t q_string_compare35(const char* s1, const char* s2, int32_t cs) {
+    return QString_Compare35(qstring(s1), qstring(s2), cs);
+}
+
+int32_t q_string_compare36(const char* s1, const char* s2, int32_t cs) {
+    return QString_Compare36(qstring(s1), qstring(s2), cs);
 }
 
 const char* q_string_number22(int param1, int base) {

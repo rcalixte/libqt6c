@@ -349,6 +349,8 @@ QSize* q_tabbar_size_hint(void* self);
 /// @param self QTabBar*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tabbar_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_tabbar_super_size_hint` instead
@@ -375,6 +377,8 @@ QSize* q_tabbar_minimum_size_hint(void* self);
 ///
 /// @param self QTabBar*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tabbar_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -648,6 +652,8 @@ QSize* q_tabbar_tab_size_hint(void* self, int index);
 /// @param self QTabBar*
 /// @param callback QSize* func(QTabBar* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tabbar_on_tab_size_hint(void* self, QSize* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_tabbar_super_tab_size_hint` instead
@@ -676,6 +682,8 @@ QSize* q_tabbar_minimum_tab_size_hint(void* self, int index);
 ///
 /// @param self QTabBar*
 /// @param callback QSize* func(QTabBar* self, int index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tabbar_on_minimum_tab_size_hint(void* self, QSize* (*callback)(void*, int));
 
@@ -5116,6 +5124,8 @@ QVariant* q_tabbar_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QTabBar*
 /// @param callback QVariant* func(QTabBar* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tabbar_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

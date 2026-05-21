@@ -1006,6 +1006,8 @@ QUrl* k_shellcompletion_super_dir(void* self);
 /// @param self KShellCompletion*
 /// @param callback QUrl* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_shellcompletion_on_dir(void* self, QUrl* (*callback)());
 
 /// Inherited from KUrlCompletion

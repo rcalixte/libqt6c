@@ -716,6 +716,8 @@ KConfigGroup* k_configgroup_group_impl(void* self, const char* groupName);
 /// @param self KConfigGroup*
 /// @param callback KConfigGroup* func(KConfigGroup* self, const char* groupName)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_configgroup_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
 /// @warning DEPRECATED: Use `k_configgroup_super_group_impl` instead
@@ -744,6 +746,8 @@ const KConfigGroup* k_configgroup_group_impl2(void* self, const char* groupName)
 ///
 /// @param self KConfigGroup*
 /// @param callback const KConfigGroup* func(KConfigGroup* self, const char* groupName)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_configgroup_on_group_impl2(void* self, const KConfigGroup* (*callback)(void*, const char*));
 

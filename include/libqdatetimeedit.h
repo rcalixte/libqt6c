@@ -476,6 +476,8 @@ QSize* q_datetimeedit_size_hint(void* self);
 /// @param self QDateTimeEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_datetimeedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_datetimeedit_super_size_hint` instead
@@ -831,6 +833,8 @@ QDateTime* q_datetimeedit_date_time_from_text(void* self, const char* text);
 ///
 /// @param self QDateTimeEdit*
 /// @param callback QDateTime* func(QDateTimeEdit* self, const char* text)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_datetimeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
@@ -4250,6 +4254,8 @@ QSize* q_datetimeedit_super_minimum_size_hint(void* self);
 /// @param self QDateTimeEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_datetimeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -4286,6 +4292,8 @@ QVariant* q_datetimeedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QDateTimeEdit*
 /// @param callback QVariant* func(QDateTimeEdit* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_datetimeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -9965,6 +9973,8 @@ QSize* q_timeedit_super_size_hint(void* self);
 /// @param self QTimeEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_timeedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -10339,6 +10349,8 @@ QDateTime* q_timeedit_super_date_time_from_text(void* self, const char* text);
 /// @param self QTimeEdit*
 /// @param callback QDateTime* func(QTimeEdit* self, const char* text)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_timeedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
 /// Inherited from QDateTimeEdit
@@ -10565,6 +10577,8 @@ QSize* q_timeedit_super_minimum_size_hint(void* self);
 /// @param self QTimeEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_timeedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -10601,6 +10615,8 @@ QVariant* q_timeedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QTimeEdit*
 /// @param callback QVariant* func(QTimeEdit* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_timeedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -16280,6 +16296,8 @@ QSize* q_dateedit_super_size_hint(void* self);
 /// @param self QDateEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_dateedit_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDateTimeEdit
@@ -16654,6 +16672,8 @@ QDateTime* q_dateedit_super_date_time_from_text(void* self, const char* text);
 /// @param self QDateEdit*
 /// @param callback QDateTime* func(QDateEdit* self, const char* text)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_dateedit_on_date_time_from_text(void* self, QDateTime* (*callback)(void*, const char*));
 
 /// Inherited from QDateTimeEdit
@@ -16880,6 +16900,8 @@ QSize* q_dateedit_super_minimum_size_hint(void* self);
 /// @param self QDateEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_dateedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractSpinBox
@@ -16916,6 +16938,8 @@ QVariant* q_dateedit_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QDateEdit*
 /// @param callback QVariant* func(QDateEdit* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_dateedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

@@ -1261,6 +1261,8 @@ QTextCharFormat* k_sonnet__highlighter_super_format(void* self, int pos);
 /// @param self Sonnet__Highlighter*
 /// @param callback QTextCharFormat* func(Sonnet__Highlighter* self, int pos)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_sonnet__highlighter_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 
 /// Inherited from QSyntaxHighlighter
@@ -1474,6 +1476,8 @@ QTextBlock* k_sonnet__highlighter_super_current_block(void* self);
 ///
 /// @param self Sonnet__Highlighter*
 /// @param callback QTextBlock* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_sonnet__highlighter_on_current_block(void* self, QTextBlock* (*callback)());
 

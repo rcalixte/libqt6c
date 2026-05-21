@@ -303,6 +303,8 @@ QVariant* q_mimedata_retrieve_data(void* self, const char* mimetype, void* prefe
 /// @param self QMimeData*
 /// @param callback QVariant* func(QMimeData* self, const char* mimetype, QMetaType* preferredType)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_mimedata_on_retrieve_data(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// @warning DEPRECATED: Use `q_mimedata_super_retrieve_data` instead

@@ -79,6 +79,12 @@ KTextEditor__LineRange* k_texteditor__linerange_invalid();
 ///
 const char* k_texteditor__linerange_to_string(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#fromString)
+///
+/// @param str const char*
+///
+KTextEditor__LineRange* k_texteditor__linerange_from_string(const char* str);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-linerange.html#start)
 ///
 /// @param self KTextEditor__LineRange*

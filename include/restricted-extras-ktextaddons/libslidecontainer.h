@@ -133,6 +133,8 @@ QSize* k_textaddonswidgets__slidecontainer_size_hint(void* self);
 /// @param self TextAddonsWidgets__SlideContainer*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textaddonswidgets__slidecontainer_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_textaddonswidgets__slidecontainer_super_size_hint` instead
@@ -159,6 +161,8 @@ QSize* k_textaddonswidgets__slidecontainer_minimum_size_hint(void* self);
 ///
 /// @param self TextAddonsWidgets__SlideContainer*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textaddonswidgets__slidecontainer_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4774,6 +4778,8 @@ QVariant* k_textaddonswidgets__slidecontainer_super_input_method_query(void* sel
 ///
 /// @param self TextAddonsWidgets__SlideContainer*
 /// @param callback QVariant* func(TextAddonsWidgets__SlideContainer* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textaddonswidgets__slidecontainer_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

@@ -14,16 +14,24 @@ QStringMatcher* q_stringmatcher_new3(void* uc, intptr_t lenVal) {
     return QStringMatcher_new3((QChar*)uc, lenVal);
 }
 
-QStringMatcher* q_stringmatcher_new4(void* other) {
-    return QStringMatcher_new4((QStringMatcher*)other);
+QStringMatcher* q_stringmatcher_new4(const char* pattern) {
+    return QStringMatcher_new4(qstring(pattern));
 }
 
-QStringMatcher* q_stringmatcher_new5(const char* pattern, int32_t cs) {
-    return QStringMatcher_new5(qstring(pattern), cs);
+QStringMatcher* q_stringmatcher_new5(void* other) {
+    return QStringMatcher_new5((QStringMatcher*)other);
 }
 
-QStringMatcher* q_stringmatcher_new6(void* uc, intptr_t lenVal, int32_t cs) {
-    return QStringMatcher_new6((QChar*)uc, lenVal, cs);
+QStringMatcher* q_stringmatcher_new6(const char* pattern, int32_t cs) {
+    return QStringMatcher_new6(qstring(pattern), cs);
+}
+
+QStringMatcher* q_stringmatcher_new7(void* uc, intptr_t lenVal, int32_t cs) {
+    return QStringMatcher_new7((QChar*)uc, lenVal, cs);
+}
+
+QStringMatcher* q_stringmatcher_new8(const char* pattern, int32_t cs) {
+    return QStringMatcher_new8(qstring(pattern), cs);
 }
 
 void q_stringmatcher_operator_assign(void* self, void* other) {
@@ -46,8 +54,19 @@ intptr_t q_stringmatcher_index_in2(void* self, void* str, intptr_t length) {
     return QStringMatcher_IndexIn2((QStringMatcher*)self, (QChar*)str, length);
 }
 
+intptr_t q_stringmatcher_index_in3(void* self, const char* str) {
+    return QStringMatcher_IndexIn3((QStringMatcher*)self, qstring(str));
+}
+
 const char* q_stringmatcher_pattern(void* self) {
     libqt_string _str = QStringMatcher_Pattern((QStringMatcher*)self);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_stringmatcher_pattern_view(void* self) {
+    libqt_string _str = QStringMatcher_PatternView((QStringMatcher*)self);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -63,6 +82,10 @@ intptr_t q_stringmatcher_index_in22(void* self, const char* str, intptr_t from) 
 
 intptr_t q_stringmatcher_index_in32(void* self, void* str, intptr_t length, intptr_t from) {
     return QStringMatcher_IndexIn32((QStringMatcher*)self, (QChar*)str, length, from);
+}
+
+intptr_t q_stringmatcher_index_in23(void* self, const char* str, intptr_t from) {
+    return QStringMatcher_IndexIn23((QStringMatcher*)self, qstring(str), from);
 }
 
 void q_stringmatcher_delete(void* self) {

@@ -263,6 +263,8 @@ QVariant* q_nmeasatelliteinfosource_backend_property(void* self, const char* nam
 /// @param self QNmeaSatelliteInfoSource*
 /// @param callback QVariant* func(QNmeaSatelliteInfoSource* self, const char* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_nmeasatelliteinfosource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*));
 
 /// @warning DEPRECATED: Use `q_nmeasatelliteinfosource_super_backend_property` instead

@@ -187,6 +187,8 @@ QModelIndex* k_selectionproxymodel_map_from_source(void* self, void* sourceIndex
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, QModelIndex* sourceIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_selectionproxymodel_super_map_from_source` instead
@@ -215,6 +217,8 @@ QModelIndex* k_selectionproxymodel_map_to_source(void* self, void* proxyIndex);
 ///
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, QModelIndex* proxyIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -245,6 +249,8 @@ QItemSelection* k_selectionproxymodel_map_selection_from_source(void* self, void
 /// @param self KSelectionProxyModel*
 /// @param callback QItemSelection* func(KSelectionProxyModel* self, QItemSelection* selection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_selectionproxymodel_super_map_selection_from_source` instead
@@ -273,6 +279,8 @@ QItemSelection* k_selectionproxymodel_map_selection_to_source(void* self, void* 
 ///
 /// @param self KSelectionProxyModel*
 /// @param callback QItemSelection* func(KSelectionProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -337,6 +345,8 @@ QVariant* k_selectionproxymodel_data(void* self, void* index, int role);
 /// @param self KSelectionProxyModel*
 /// @param callback QVariant* func(KSelectionProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_selectionproxymodel_super_data` instead
@@ -397,6 +407,8 @@ QVariant* k_selectionproxymodel_header_data(void* self, int section, int32_t ori
 ///
 /// @param self KSelectionProxyModel*
 /// @param callback QVariant* func(KSelectionProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -586,6 +598,8 @@ QModelIndex* k_selectionproxymodel_index(void* self, int param1, int param2, voi
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int param1, int param2, QModelIndex* param3)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `k_selectionproxymodel_super_index` instead
@@ -616,6 +630,8 @@ QModelIndex* k_selectionproxymodel_parent(void* self, void* param1);
 ///
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, QModelIndex* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1834,6 +1850,8 @@ QModelIndex* k_selectionproxymodel_super_buddy(void* self, void* index);
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -1984,6 +2002,8 @@ QSize* k_selectionproxymodel_super_span(void* self, void* index);
 /// @param self KSelectionProxyModel*
 /// @param callback QSize* func(KSelectionProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2024,6 +2044,8 @@ QModelIndex* k_selectionproxymodel_super_sibling(void* self, int row, int column
 ///
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -2800,6 +2822,8 @@ QModelIndex* k_selectionproxymodel_super_create_source_index(void* self, int row
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selectionproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2838,6 +2862,8 @@ QModelIndex* k_selectionproxymodel_super_create_index(void* self, int row, int c
 ///
 /// @param self KSelectionProxyModel*
 /// @param callback QModelIndex* func(KSelectionProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selectionproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

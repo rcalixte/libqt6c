@@ -246,6 +246,8 @@ QSurfaceFormat* q_window_format(void* self);
 /// @param self QWindow*
 /// @param callback QSurfaceFormat* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_window_on_format(void* self, QSurfaceFormat* (*callback)());
 
 /// @warning DEPRECATED: Use `q_window_super_format` instead
@@ -556,6 +558,8 @@ QSize* q_window_size(void* self);
 ///
 /// @param self QWindow*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_window_on_size(void* self, QSize* (*callback)());
 

@@ -172,6 +172,8 @@ QSize* q_headerview_size_hint(void* self);
 /// @param self QHeaderView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_headerview_super_size_hint` instead
@@ -1344,6 +1346,8 @@ QSize* q_headerview_section_size_from_contents(void* self, int logicalIndex);
 /// @param self QHeaderView*
 /// @param callback QSize* func(QHeaderView* self, int logicalIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_section_size_from_contents(void* self, QSize* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_headerview_super_section_size_from_contents` instead
@@ -1551,6 +1555,8 @@ QRect* q_headerview_visual_rect(void* self, void* index);
 /// @param self QHeaderView*
 /// @param callback QRect* func(QHeaderView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_headerview_super_visual_rect` instead
@@ -1611,6 +1617,8 @@ QModelIndex* q_headerview_index_at(void* self, void* p);
 /// @param self QHeaderView*
 /// @param callback QModelIndex* func(QHeaderView* self, QPoint* p)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_headerview_super_index_at` instead
@@ -1669,6 +1677,8 @@ QModelIndex* q_headerview_move_cursor(void* self, int32_t param1, int32_t param2
 ///
 /// @param self QHeaderView*
 /// @param callback QModelIndex* func(QHeaderView* self, enum QAbstractItemView__CursorAction param1, flag of enum Qt__KeyboardModifier param2)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_headerview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
@@ -1730,6 +1740,8 @@ QRegion* q_headerview_visual_region_for_selection(void* self, void* selection);
 ///
 /// @param self QHeaderView*
 /// @param callback QRegion* func(QHeaderView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_headerview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -5893,6 +5905,8 @@ QVariant* q_headerview_super_input_method_query(void* self, int32_t query);
 /// @param self QHeaderView*
 /// @param callback QVariant* func(QHeaderView* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -7054,6 +7068,8 @@ QSize* q_headerview_super_viewport_size_hint(void* self);
 /// @param self QHeaderView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -7088,6 +7104,8 @@ QSize* q_headerview_super_minimum_size_hint(void* self);
 ///
 /// @param self QHeaderView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_headerview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -8304,6 +8322,8 @@ QPoint* q_headerview_super_dirty_region_offset(void* self);
 /// @param self QHeaderView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_headerview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8525,6 +8545,8 @@ QMargins* q_headerview_super_viewport_margins(void* self);
 ///
 /// @param self QHeaderView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_headerview_on_viewport_margins(void* self, QMargins* (*callback)());
 

@@ -590,6 +590,8 @@ QModelIndex* q_abstractitemmodel_index(void* self, int row, int column, void* pa
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_abstractitemmodel_super_index` instead
@@ -621,6 +623,8 @@ QModelIndex* q_abstractitemmodel_parent(void* self, void* child);
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, QModelIndex* child)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractitemmodel_super_parent` instead
@@ -651,6 +655,8 @@ QModelIndex* q_abstractitemmodel_sibling(void* self, int row, int column, void* 
 ///
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -771,6 +777,8 @@ QVariant* q_abstractitemmodel_data(void* self, void* index, int role);
 /// @param self QAbstractItemModel*
 /// @param callback QVariant* func(QAbstractItemModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_abstractitemmodel_super_data` instead
@@ -835,6 +843,8 @@ QVariant* q_abstractitemmodel_header_data(void* self, int section, int32_t orien
 ///
 /// @param self QAbstractItemModel*
 /// @param callback QVariant* func(QAbstractItemModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -1576,6 +1586,8 @@ QModelIndex* q_abstractitemmodel_buddy(void* self, void* index);
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractitemmodel_super_buddy` instead
@@ -1645,6 +1657,8 @@ QSize* q_abstractitemmodel_span(void* self, void* index);
 ///
 /// @param self QAbstractItemModel*
 /// @param callback QSize* func(QAbstractItemModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -1894,6 +1908,8 @@ QModelIndex* q_abstractitemmodel_create_index(void* self, int row, int column);
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, int row, int column)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
 /// @warning DEPRECATED: Use `q_abstractitemmodel_super_create_index` instead
@@ -1925,6 +1941,8 @@ QModelIndex* q_abstractitemmodel_create_index2(void* self, int row, int column, 
 ///
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, int row, int column, uintptr_t id)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_create_index2(void* self, QModelIndex* (*callback)(void*, int, int, uintptr_t));
 
@@ -2681,6 +2699,8 @@ QModelIndex* q_abstractitemmodel_create_index3(void* self, int row, int column, 
 ///
 /// @param self QAbstractItemModel*
 /// @param callback QModelIndex* func(QAbstractItemModel* self, int row, int column, void* data)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemmodel_on_create_index3(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -3803,6 +3823,8 @@ QModelIndex* q_abstracttablemodel_index(void* self, int row, int column, void* p
 /// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstracttablemodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_abstracttablemodel_super_index` instead
@@ -3835,6 +3857,8 @@ QModelIndex* q_abstracttablemodel_sibling(void* self, int row, int column, void*
 ///
 /// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttablemodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -3969,6 +3993,8 @@ QModelIndex* q_abstracttablemodel_parent(void* self, void* child);
 ///
 /// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttablemodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -4869,6 +4895,8 @@ QVariant* q_abstracttablemodel_super_data(void* self, void* index, int role);
 /// @param self QAbstractTableModel*
 /// @param callback QVariant* func(QAbstractTableModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstracttablemodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -4950,6 +4978,8 @@ QVariant* q_abstracttablemodel_super_header_data(void* self, int section, int32_
 ///
 /// @param self QAbstractTableModel*
 /// @param callback QVariant* func(QAbstractTableModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttablemodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -5736,6 +5766,8 @@ QModelIndex* q_abstracttablemodel_super_buddy(void* self, void* index);
 /// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstracttablemodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -5821,6 +5853,8 @@ QSize* q_abstracttablemodel_super_span(void* self, void* index);
 ///
 /// @param self QAbstractTableModel*
 /// @param callback QSize* func(QAbstractTableModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttablemodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -6326,6 +6360,8 @@ QModelIndex* q_abstracttablemodel_super_create_index(void* self, int row, int co
 ///
 /// @param self QAbstractTableModel*
 /// @param callback QModelIndex* func(QAbstractTableModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttablemodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 
@@ -7494,6 +7530,8 @@ QModelIndex* q_abstractlistmodel_index(void* self, int row, int column, void* pa
 /// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_abstractlistmodel_super_index` instead
@@ -7526,6 +7564,8 @@ QModelIndex* q_abstractlistmodel_sibling(void* self, int row, int column, void* 
 ///
 /// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -7660,6 +7700,8 @@ QModelIndex* q_abstractlistmodel_parent(void* self, void* child);
 ///
 /// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -8558,6 +8600,8 @@ QVariant* q_abstractlistmodel_super_data(void* self, void* index, int role);
 /// @param self QAbstractListModel*
 /// @param callback QVariant* func(QAbstractListModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QAbstractItemModel
@@ -8639,6 +8683,8 @@ QVariant* q_abstractlistmodel_super_header_data(void* self, int section, int32_t
 ///
 /// @param self QAbstractListModel*
 /// @param callback QVariant* func(QAbstractListModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -9425,6 +9471,8 @@ QModelIndex* q_abstractlistmodel_super_buddy(void* self, void* index);
 /// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -9510,6 +9558,8 @@ QSize* q_abstractlistmodel_super_span(void* self, void* index);
 ///
 /// @param self QAbstractListModel*
 /// @param callback QSize* func(QAbstractListModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -10015,6 +10065,8 @@ QModelIndex* q_abstractlistmodel_super_create_index(void* self, int row, int col
 ///
 /// @param self QAbstractListModel*
 /// @param callback QModelIndex* func(QAbstractListModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractlistmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

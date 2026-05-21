@@ -164,6 +164,8 @@ QVariant* k_nscore__providersmodel_data(void* self, void* index, int role);
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QVariant* func(KNSCore__ProvidersModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_nscore__providersmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_nscore__providersmodel_super_data` instead
@@ -274,6 +276,8 @@ QModelIndex* k_nscore__providersmodel_parent(void* self, void* child);
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QModelIndex* func(KNSCore__ProvidersModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_nscore__providersmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1137,6 +1141,8 @@ QModelIndex* k_nscore__providersmodel_super_index(void* self, int row, int colum
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QModelIndex* func(KNSCore__ProvidersModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_nscore__providersmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -1177,6 +1183,8 @@ QModelIndex* k_nscore__providersmodel_super_sibling(void* self, int row, int col
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QModelIndex* func(KNSCore__ProvidersModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_nscore__providersmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -1345,6 +1353,8 @@ QVariant* k_nscore__providersmodel_super_header_data(void* self, int section, in
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QVariant* func(KNSCore__ProvidersModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_nscore__providersmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2131,6 +2141,8 @@ QModelIndex* k_nscore__providersmodel_super_buddy(void* self, void* index);
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QModelIndex* func(KNSCore__ProvidersModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_nscore__providersmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2216,6 +2228,8 @@ QSize* k_nscore__providersmodel_super_span(void* self, void* index);
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QSize* func(KNSCore__ProvidersModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_nscore__providersmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2660,6 +2674,8 @@ QModelIndex* k_nscore__providersmodel_super_create_index(void* self, int row, in
 ///
 /// @param self KNSCore__ProvidersModel*
 /// @param callback QModelIndex* func(KNSCore__ProvidersModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_nscore__providersmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

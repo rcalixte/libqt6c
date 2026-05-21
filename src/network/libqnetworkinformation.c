@@ -58,8 +58,16 @@ bool q_networkinformation_load_default_backend() {
     return QNetworkInformation_LoadDefaultBackend();
 }
 
+bool q_networkinformation_load_backend_by_name(const char* backend) {
+    return QNetworkInformation_LoadBackendByName(qstring(backend));
+}
+
 bool q_networkinformation_load_backend_by_features(int32_t features) {
     return QNetworkInformation_LoadBackendByFeatures(features);
+}
+
+bool q_networkinformation_load(const char* backend) {
+    return QNetworkInformation_Load(qstring(backend));
 }
 
 bool q_networkinformation_load2(int32_t features) {

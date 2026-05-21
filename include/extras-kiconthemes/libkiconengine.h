@@ -72,6 +72,8 @@ QSize* k_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t st
 /// @param self KIconEngine*
 /// @param callback QSize* func(KIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_iconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `k_iconengine_super_actual_size` instead
@@ -140,6 +142,8 @@ QPixmap* k_iconengine_pixmap(void* self, void* size, int32_t mode, int32_t state
 /// @param self KIconEngine*
 /// @param callback QPixmap* func(KIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_iconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `k_iconengine_super_pixmap` instead
@@ -173,6 +177,8 @@ QPixmap* k_iconengine_scaled_pixmap(void* self, void* size, int32_t mode, int32_
 ///
 /// @param self KIconEngine*
 /// @param callback QPixmap* func(KIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state, double scale)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_iconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 

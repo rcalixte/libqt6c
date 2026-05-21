@@ -4485,6 +4485,8 @@ QVariant* k_textgrammarcheck__grammarresulttextedit_super_load_resource(void* se
 /// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QVariant* func(TextGrammarCheck__GrammarResultTextEdit* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textgrammarcheck__grammarresulttextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QTextEdit
@@ -4521,6 +4523,8 @@ QVariant* k_textgrammarcheck__grammarresulttextedit_super_input_method_query(voi
 ///
 /// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QVariant* func(TextGrammarCheck__GrammarResultTextEdit* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__grammarresulttextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5445,6 +5449,8 @@ QSize* k_textgrammarcheck__grammarresulttextedit_super_minimum_size_hint(void* s
 /// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textgrammarcheck__grammarresulttextedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5479,6 +5485,8 @@ QSize* k_textgrammarcheck__grammarresulttextedit_super_size_hint(void* self);
 ///
 /// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__grammarresulttextedit_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5627,6 +5635,8 @@ QSize* k_textgrammarcheck__grammarresulttextedit_super_viewport_size_hint(void* 
 ///
 /// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__grammarresulttextedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6552,6 +6562,8 @@ QMargins* k_textgrammarcheck__grammarresulttextedit_super_viewport_margins(void*
 ///
 /// @param self TextGrammarCheck__GrammarResultTextEdit*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__grammarresulttextedit_on_viewport_margins(void* self, QMargins* (*callback)());
 

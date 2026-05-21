@@ -168,6 +168,8 @@ QSize* q_itemdelegate_size_hint(void* self, void* option, void* index);
 /// @param self QItemDelegate*
 /// @param callback QSize* func(QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_itemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_itemdelegate_super_size_hint` instead
@@ -551,6 +553,8 @@ QRect* q_itemdelegate_rect(void* self, void* option, void* index, int role);
 /// @param self QItemDelegate*
 /// @param callback QRect* func(QItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_itemdelegate_on_rect(void* self, QRect* (*callback)(void*, void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_itemdelegate_super_rect` instead
@@ -649,6 +653,8 @@ QStyleOptionViewItem* q_itemdelegate_set_options(void* self, void* index, void* 
 /// @param self QItemDelegate*
 /// @param callback QStyleOptionViewItem* func(QItemDelegate* self, QModelIndex* index, QStyleOptionViewItem* option)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_itemdelegate_on_set_options(void* self, QStyleOptionViewItem* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_itemdelegate_super_set_options` instead
@@ -679,6 +685,8 @@ QPixmap* q_itemdelegate_decoration(void* self, void* option, void* variant);
 ///
 /// @param self QItemDelegate*
 /// @param callback QPixmap* func(QItemDelegate* self, QStyleOptionViewItem* option, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_itemdelegate_on_decoration(void* self, QPixmap* (*callback)(void*, void*, void*));
 
@@ -711,6 +719,8 @@ QRect* q_itemdelegate_do_check(void* self, void* option, void* bounding, void* v
 ///
 /// @param self QItemDelegate*
 /// @param callback QRect* func(QItemDelegate* self, QStyleOptionViewItem* option, QRect* bounding, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_itemdelegate_on_do_check(void* self, QRect* (*callback)(void*, void*, void*, void*));
 
@@ -745,6 +755,8 @@ QRect* q_itemdelegate_text_rectangle(void* self, void* painter, void* rect, void
 ///
 /// @param self QItemDelegate*
 /// @param callback QRect* func(QItemDelegate* self, QPainter* painter, QRect* rect, QFont* font, const char* text)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_itemdelegate_on_text_rectangle(void* self, QRect* (*callback)(void*, void*, void*, void*, const char*));
 

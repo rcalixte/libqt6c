@@ -83,6 +83,12 @@ KTextEditor__Cursor* k_texteditor__cursor_start();
 ///
 const char* k_texteditor__cursor_to_string(void* self);
 
+/// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#fromString)
+///
+/// @param str const char*
+///
+KTextEditor__Cursor* k_texteditor__cursor_from_string(const char* str);
+
 /// [Upstream resources](https://api.kde.org/ktexteditor-cursor.html#setPosition)
 ///
 /// @param self KTextEditor__Cursor*

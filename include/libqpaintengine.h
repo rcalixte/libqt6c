@@ -735,6 +735,8 @@ QPoint* q_paintengine_coordinate_offset(void* self);
 /// @param self QPaintEngine*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_paintengine_on_coordinate_offset(void* self, QPoint* (*callback)());
 
 /// @warning DEPRECATED: Use `q_paintengine_super_coordinate_offset` instead
@@ -850,6 +852,8 @@ QPixmap* q_paintengine_create_pixmap(void* self, void* size);
 /// @param self QPaintEngine*
 /// @param callback QPixmap* func(QPaintEngine* self, QSize* size)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_paintengine_on_create_pixmap(void* self, QPixmap* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_paintengine_super_create_pixmap` instead
@@ -879,6 +883,8 @@ QPixmap* q_paintengine_create_pixmap_from_image(void* self, void* image, int32_t
 ///
 /// @param self QPaintEngine*
 /// @param callback QPixmap* func(QPaintEngine* self, QImage* image, flag of enum Qt__ImageConversionFlag flags)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_paintengine_on_create_pixmap_from_image(void* self, QPixmap* (*callback)(void*, void*, int32_t));
 

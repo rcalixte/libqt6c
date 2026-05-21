@@ -145,6 +145,8 @@ QVariant* q_designersettingsinterface_value(void* self, const char* key, void* d
 /// @param self QDesignerSettingsInterface*
 /// @param callback QVariant* func(QDesignerSettingsInterface* self, const char* key, QVariant* defaultValue)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designersettingsinterface_on_value(void* self, QVariant* (*callback)(void*, const char*, void*));
 
 /// @warning DEPRECATED: Use `q_designersettingsinterface_super_value` instead

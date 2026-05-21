@@ -491,6 +491,8 @@ QVariant* q_abstractsocket_socket_option(void* self, int32_t option);
 /// @param self QAbstractSocket*
 /// @param callback QVariant* func(QAbstractSocket* self, enum QAbstractSocket__SocketOption option)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_abstractsocket_super_socket_option` instead

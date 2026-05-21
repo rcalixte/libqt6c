@@ -120,6 +120,8 @@ QSize* k_plotwidget_minimum_size_hint(void* self);
 /// @param self KPlotWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_plotwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_plotwidget_super_minimum_size_hint` instead
@@ -146,6 +148,8 @@ QSize* k_plotwidget_size_hint(void* self);
 ///
 /// @param self KPlotWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_plotwidget_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5048,6 +5052,8 @@ QVariant* k_plotwidget_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KPlotWidget*
 /// @param callback QVariant* func(KPlotWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_plotwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

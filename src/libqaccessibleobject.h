@@ -95,6 +95,8 @@ QRect* q_accessibleobject_rect(void* self);
 /// @param self QAccessibleObject*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessibleobject_on_rect(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `q_accessibleobject_super_rect` instead
@@ -619,6 +621,8 @@ QAccessible__State* q_accessibleobject_super_state(void* self);
 /// @param self QAccessibleObject*
 /// @param callback QAccessible__State* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessibleobject_on_state(void* self, QAccessible__State* (*callback)());
 
 /// Inherited from QAccessibleInterface
@@ -654,6 +658,8 @@ QColor* q_accessibleobject_super_foreground_color(void* self);
 /// @param self QAccessibleObject*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessibleobject_on_foreground_color(void* self, QColor* (*callback)());
 
 /// Inherited from QAccessibleInterface
@@ -688,6 +694,8 @@ QColor* q_accessibleobject_super_background_color(void* self);
 ///
 /// @param self QAccessibleObject*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_accessibleobject_on_background_color(void* self, QColor* (*callback)());
 
@@ -1014,6 +1022,8 @@ QAccessible__State* q_accessibleapplication_state(void* self);
 /// @param self QAccessibleApplication*
 /// @param callback QAccessible__State* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessibleapplication_on_state(void* self, QAccessible__State* (*callback)());
 
 /// @warning DEPRECATED: Use `q_accessibleapplication_super_state` instead
@@ -1211,6 +1221,8 @@ QRect* q_accessibleapplication_super_rect(void* self);
 /// @param self QAccessibleApplication*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessibleapplication_on_rect(void* self, QRect* (*callback)());
 
 /// Inherited from QAccessibleObject
@@ -1365,6 +1377,8 @@ QColor* q_accessibleapplication_super_foreground_color(void* self);
 /// @param self QAccessibleApplication*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessibleapplication_on_foreground_color(void* self, QColor* (*callback)());
 
 /// Inherited from QAccessibleInterface
@@ -1399,6 +1413,8 @@ QColor* q_accessibleapplication_super_background_color(void* self);
 ///
 /// @param self QAccessibleApplication*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_accessibleapplication_on_background_color(void* self, QColor* (*callback)());
 

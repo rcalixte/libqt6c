@@ -203,6 +203,13 @@ void k_svg__svg_resize3(void* self);
 ///
 QSizeF* k_svg__svg_element_size(void* self, const char* elementId);
 
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementSize)
+///
+/// @param self KSvg__Svg*
+/// @param elementId const char*
+///
+QSizeF* k_svg__svg_element_size2(void* self, const char* elementId);
+
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementRect)
 ///
 /// @param self KSvg__Svg*
@@ -210,12 +217,26 @@ QSizeF* k_svg__svg_element_size(void* self, const char* elementId);
 ///
 QRectF* k_svg__svg_element_rect(void* self, const char* elementId);
 
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#elementRect)
+///
+/// @param self KSvg__Svg*
+/// @param elementId const char*
+///
+QRectF* k_svg__svg_element_rect2(void* self, const char* elementId);
+
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#hasElement)
 ///
 /// @param self KSvg__Svg*
 /// @param elementId const char*
 ///
 bool k_svg__svg_has_element(void* self, const char* elementId);
+
+/// [Upstream resources](https://api.kde.org/ksvg-svg.html#hasElement)
+///
+/// @param self KSvg__Svg*
+/// @param elementId const char*
+///
+bool k_svg__svg_has_element2(void* self, const char* elementId);
 
 /// [Upstream resources](https://api.kde.org/ksvg-svg.html#isValid)
 ///

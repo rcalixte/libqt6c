@@ -251,6 +251,19 @@ const char* q_calendar_week_day_name(void* self, void* locale, int day);
 ///
 const char* q_calendar_standalone_week_day_name(void* self, void* locale, int day);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#dateTimeToString)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QCalendar*
+/// @param format const char*
+/// @param datetime QDateTime*
+/// @param dateOnly QDate*
+/// @param timeOnly QTime*
+/// @param locale QLocale*
+///
+const char* q_calendar_date_time_to_string(void* self, const char* format, void* datetime, void* dateOnly, void* timeOnly, void* locale);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qcalendar.html#availableCalendars)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`

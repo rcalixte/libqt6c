@@ -169,6 +169,8 @@ QModelIndex* q_stringlistmodel_sibling(void* self, int row, int column, void* id
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_stringlistmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_stringlistmodel_super_sibling` instead
@@ -200,6 +202,8 @@ QVariant* q_stringlistmodel_data(void* self, void* index, int role);
 ///
 /// @param self QStringListModel*
 /// @param callback QVariant* func(QStringListModel* self, QModelIndex* index, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_stringlistmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
@@ -613,6 +617,8 @@ QModelIndex* q_stringlistmodel_parent(void* self, void* child);
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_stringlistmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1476,6 +1482,8 @@ QModelIndex* q_stringlistmodel_super_index(void* self, int row, int column, void
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_stringlistmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractListModel
@@ -1561,6 +1569,8 @@ QVariant* q_stringlistmodel_super_header_data(void* self, int section, int32_t o
 ///
 /// @param self QStringListModel*
 /// @param callback QVariant* func(QStringListModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_stringlistmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2003,6 +2013,8 @@ QModelIndex* q_stringlistmodel_super_buddy(void* self, void* index);
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_stringlistmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2088,6 +2100,8 @@ QSize* q_stringlistmodel_super_span(void* self, void* index);
 ///
 /// @param self QStringListModel*
 /// @param callback QSize* func(QStringListModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_stringlistmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2593,6 +2607,8 @@ QModelIndex* q_stringlistmodel_super_create_index(void* self, int row, int colum
 ///
 /// @param self QStringListModel*
 /// @param callback QModelIndex* func(QStringListModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_stringlistmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

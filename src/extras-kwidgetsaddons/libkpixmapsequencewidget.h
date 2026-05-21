@@ -149,6 +149,8 @@ QSize* k_pixmapsequencewidget_size_hint(void* self);
 /// @param self KPixmapSequenceWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_pixmapsequencewidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_pixmapsequencewidget_super_size_hint` instead
@@ -3258,6 +3260,8 @@ QSize* k_pixmapsequencewidget_super_minimum_size_hint(void* self);
 /// @param self KPixmapSequenceWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_pixmapsequencewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -4587,6 +4591,8 @@ QVariant* k_pixmapsequencewidget_super_input_method_query(void* self, int32_t pa
 ///
 /// @param self KPixmapSequenceWidget*
 /// @param callback QVariant* func(KPixmapSequenceWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_pixmapsequencewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

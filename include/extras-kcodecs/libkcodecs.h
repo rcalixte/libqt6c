@@ -88,6 +88,23 @@ char* k_codecs_base64_decode(char* param1);
 ///
 void k_codecs_base64_decode2(char* param1, char* param2);
 
+/// [Upstream resources](https://api.kde.org/kcodecs.html#decodeRFC2047String)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param param1 const char*
+///
+const char* k_codecs_decode_r_f_c2047_string(const char* param1);
+
+/// [Upstream resources](https://api.kde.org/kcodecs.html#encodeRFC2047String)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param param1 const char*
+/// @param param2 char*
+///
+char* k_codecs_encode_r_f_c2047_string(const char* param1, char* param2);
+
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base45Decode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`

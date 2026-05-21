@@ -18,12 +18,24 @@ QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, intptr
     return QTextBoundaryFinder_new4(type, (QChar*)chars, length);
 }
 
-QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, void* chars, intptr_t length, unsigned char* buffer) {
-    return QTextBoundaryFinder_new5(type, (QChar*)chars, length, buffer);
+QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, const char* str) {
+    return QTextBoundaryFinder_new5(type, qstring(str));
 }
 
-QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize) {
-    return QTextBoundaryFinder_new6(type, (QChar*)chars, length, buffer, bufferSize);
+QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer) {
+    return QTextBoundaryFinder_new6(type, (QChar*)chars, length, buffer);
+}
+
+QTextBoundaryFinder* q_textboundaryfinder_new7(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize) {
+    return QTextBoundaryFinder_new7(type, (QChar*)chars, length, buffer, bufferSize);
+}
+
+QTextBoundaryFinder* q_textboundaryfinder_new8(int32_t type, const char* str, unsigned char* buffer) {
+    return QTextBoundaryFinder_new8(type, qstring(str), buffer);
+}
+
+QTextBoundaryFinder* q_textboundaryfinder_new9(int32_t type, const char* str, unsigned char* buffer, intptr_t bufferSize) {
+    return QTextBoundaryFinder_new9(type, qstring(str), buffer, bufferSize);
 }
 
 void q_textboundaryfinder_operator_assign(void* self, void* other) {

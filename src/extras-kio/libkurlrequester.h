@@ -3545,6 +3545,8 @@ QSize* k_urlrequester_super_size_hint(void* self);
 /// @param self KUrlRequester*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_urlrequester_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3579,6 +3581,8 @@ QSize* k_urlrequester_super_minimum_size_hint(void* self);
 ///
 /// @param self KUrlRequester*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_urlrequester_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4872,6 +4876,8 @@ QVariant* k_urlrequester_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KUrlRequester*
 /// @param callback QVariant* func(KUrlRequester* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_urlrequester_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -9079,6 +9085,8 @@ QSize* k_urlcomborequester_super_size_hint(void* self);
 /// @param self KUrlComboRequester*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_urlcomborequester_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -9113,6 +9121,8 @@ QSize* k_urlcomborequester_super_minimum_size_hint(void* self);
 ///
 /// @param self KUrlComboRequester*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_urlcomborequester_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -10406,6 +10416,8 @@ QVariant* k_urlcomborequester_super_input_method_query(void* self, int32_t param
 ///
 /// @param self KUrlComboRequester*
 /// @param callback QVariant* func(KUrlComboRequester* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_urlcomborequester_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

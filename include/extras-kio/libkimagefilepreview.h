@@ -120,6 +120,8 @@ QSize* k_imagefilepreview_size_hint(void* self);
 /// @param self KImageFilePreview*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_imagefilepreview_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_imagefilepreview_super_size_hint` instead
@@ -3432,6 +3434,8 @@ QSize* k_imagefilepreview_super_minimum_size_hint(void* self);
 /// @param self KImageFilePreview*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_imagefilepreview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -4724,6 +4728,8 @@ QVariant* k_imagefilepreview_super_input_method_query(void* self, int32_t param1
 ///
 /// @param self KImageFilePreview*
 /// @param callback QVariant* func(KImageFilePreview* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_imagefilepreview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

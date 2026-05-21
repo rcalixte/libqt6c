@@ -35,32 +35,36 @@ QColor* q_color_new8(const char* name) {
     return QColor_new8(qstring(name));
 }
 
-QColor* q_color_new9(const char* aname) {
-    return QColor_new9(aname);
+QColor* q_color_new9(const char* name) {
+    return QColor_new9(qstring(name));
 }
 
-QColor* q_color_new10(const char* name) {
-    return QColor_new10(qstring(name));
+QColor* q_color_new10(const char* aname) {
+    return QColor_new10(aname);
 }
 
-QColor* q_color_new11(int32_t spec) {
-    return QColor_new11(spec);
+QColor* q_color_new11(char* name) {
+    return QColor_new11(qstring(name));
 }
 
-QColor* q_color_new12(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
-    return QColor_new12(spec, a1, a2, a3, a4);
+QColor* q_color_new12(int32_t spec) {
+    return QColor_new12(spec);
 }
 
-QColor* q_color_new13(void* param1) {
-    return QColor_new13((QColor*)param1);
+QColor* q_color_new13(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
+    return QColor_new13(spec, a1, a2, a3, a4);
 }
 
-QColor* q_color_new14(int r, int g, int b, int a) {
-    return QColor_new14(r, g, b, a);
+QColor* q_color_new14(void* param1) {
+    return QColor_new14((QColor*)param1);
 }
 
-QColor* q_color_new15(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
-    return QColor_new15(spec, a1, a2, a3, a4, a5);
+QColor* q_color_new15(int r, int g, int b, int a) {
+    return QColor_new15(r, g, b, a);
+}
+
+QColor* q_color_new16(int32_t spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
+    return QColor_new16(spec, a1, a2, a3, a4, a5);
 }
 
 void q_color_copy_assign(void* self, void* other) {
@@ -94,7 +98,11 @@ void q_color_set_named_color(void* self, const char* name) {
     QColor_SetNamedColor((QColor*)self, qstring(name));
 }
 
-void q_color_set_named_color3(void* self, const char* name) {
+void q_color_set_named_color2(void* self, const char* name) {
+    QColor_SetNamedColor2((QColor*)self, qstring(name));
+}
+
+void q_color_set_named_color3(void* self, char* name) {
     QColor_SetNamedColor3((QColor*)self, qstring(name));
 }
 
@@ -463,6 +471,14 @@ QVariant* q_color_to_q_variant(void* self) {
 
 bool q_color_is_valid_color(const char* name) {
     return QColor_IsValidColor(qstring(name));
+}
+
+bool q_color_is_valid_color2(const char* param1) {
+    return QColor_IsValidColor2(qstring(param1));
+}
+
+bool q_color_is_valid_color3(char* param1) {
+    return QColor_IsValidColor3(qstring(param1));
 }
 
 bool q_color_is_valid_color_name(const char* param1) {

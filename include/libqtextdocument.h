@@ -962,6 +962,8 @@ QVariant* q_textdocument_load_resource(void* self, int type, void* name);
 /// @param self QTextDocument*
 /// @param callback QVariant* func(QTextDocument* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_textdocument_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// @warning DEPRECATED: Use `q_textdocument_super_load_resource` instead

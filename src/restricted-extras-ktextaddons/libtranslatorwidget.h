@@ -4207,6 +4207,8 @@ QVariant* k_texttranslator__translatortextedit_super_load_resource(void* self, i
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QVariant* func(TextTranslator__TranslatorTextEdit* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatortextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QPlainTextEdit
@@ -4243,6 +4245,8 @@ QVariant* k_texttranslator__translatortextedit_super_input_method_query(void* se
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QVariant* func(TextTranslator__TranslatorTextEdit* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatortextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5241,6 +5245,8 @@ QSize* k_texttranslator__translatortextedit_super_minimum_size_hint(void* self);
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatortextedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5275,6 +5281,8 @@ QSize* k_texttranslator__translatortextedit_super_size_hint(void* self);
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatortextedit_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5423,6 +5431,8 @@ QSize* k_texttranslator__translatortextedit_super_viewport_size_hint(void* self)
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatortextedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6269,6 +6279,8 @@ QTextBlock* k_texttranslator__translatortextedit_super_first_visible_block(void*
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QTextBlock* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatortextedit_on_first_visible_block(void* self, QTextBlock* (*callback)());
 
 /// Inherited from QPlainTextEdit
@@ -6303,6 +6315,8 @@ QPointF* k_texttranslator__translatortextedit_super_content_offset(void* self);
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QPointF* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatortextedit_on_content_offset(void* self, QPointF* (*callback)());
 
@@ -6341,6 +6355,8 @@ QRectF* k_texttranslator__translatortextedit_super_block_bounding_rect(void* sel
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QRectF* func(TextTranslator__TranslatorTextEdit* self, QTextBlock* block)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatortextedit_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
 /// Inherited from QPlainTextEdit
@@ -6378,6 +6394,8 @@ QRectF* k_texttranslator__translatortextedit_super_block_bounding_geometry(void*
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QRectF* func(TextTranslator__TranslatorTextEdit* self, QTextBlock* block)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatortextedit_on_block_bounding_geometry(void* self, QRectF* (*callback)(void*, void*));
 
 /// Inherited from QPlainTextEdit
@@ -6412,6 +6430,8 @@ QAbstractTextDocumentLayout__PaintContext* k_texttranslator__translatortextedit_
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QAbstractTextDocumentLayout__PaintContext* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatortextedit_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)());
 
@@ -6527,6 +6547,8 @@ QMargins* k_texttranslator__translatortextedit_super_viewport_margins(void* self
 ///
 /// @param self TextTranslator__TranslatorTextEdit*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatortextedit_on_viewport_margins(void* self, QMargins* (*callback)());
 
@@ -10221,6 +10243,8 @@ QSize* k_texttranslator__translatorwidget_super_size_hint(void* self);
 /// @param self TextTranslator__TranslatorWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatorwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -10255,6 +10279,8 @@ QSize* k_texttranslator__translatorwidget_super_minimum_size_hint(void* self);
 ///
 /// @param self TextTranslator__TranslatorWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatorwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -11548,6 +11574,8 @@ QVariant* k_texttranslator__translatorwidget_super_input_method_query(void* self
 ///
 /// @param self TextTranslator__TranslatorWidget*
 /// @param callback QVariant* func(TextTranslator__TranslatorWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatorwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

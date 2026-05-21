@@ -409,6 +409,8 @@ QRect* q_tableview_visual_rect(void* self, void* index);
 /// @param self QTableView*
 /// @param callback QRect* func(QTableView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tableview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_tableview_super_visual_rect` instead
@@ -468,6 +470,8 @@ QModelIndex* q_tableview_index_at(void* self, void* p);
 ///
 /// @param self QTableView*
 /// @param callback QModelIndex* func(QTableView* self, QPoint* p)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tableview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1009,6 +1013,8 @@ QModelIndex* q_tableview_move_cursor(void* self, int32_t cursorAction, int32_t m
 /// @param self QTableView*
 /// @param callback QModelIndex* func(QTableView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tableview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_tableview_super_move_cursor` instead
@@ -1069,6 +1075,8 @@ QRegion* q_tableview_visual_region_for_selection(void* self, void* selection);
 ///
 /// @param self QTableView*
 /// @param callback QRegion* func(QTableView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tableview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -1155,6 +1163,8 @@ QSize* q_tableview_viewport_size_hint(void* self);
 ///
 /// @param self QTableView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tableview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5353,6 +5363,8 @@ QVariant* q_tableview_super_input_method_query(void* self, int32_t query);
 /// @param self QTableView*
 /// @param callback QVariant* func(QTableView* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tableview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6553,6 +6565,8 @@ QSize* q_tableview_super_minimum_size_hint(void* self);
 /// @param self QTableView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tableview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6587,6 +6601,8 @@ QSize* q_tableview_super_size_hint(void* self);
 ///
 /// @param self QTableView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tableview_on_size_hint(void* self, QSize* (*callback)());
 
@@ -7877,6 +7893,8 @@ QPoint* q_tableview_super_dirty_region_offset(void* self);
 /// @param self QTableView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tableview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8098,6 +8116,8 @@ QMargins* q_tableview_super_viewport_margins(void* self);
 ///
 /// @param self QTableView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_tableview_on_viewport_margins(void* self, QMargins* (*callback)());
 

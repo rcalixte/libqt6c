@@ -143,6 +143,8 @@ QSize* k_imageannotator__kimageannotator_size_hint(void* self);
 /// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_imageannotator__kimageannotator_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_imageannotator__kimageannotator_super_size_hint` instead
@@ -3490,6 +3492,8 @@ QSize* k_imageannotator__kimageannotator_super_minimum_size_hint(void* self);
 /// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_imageannotator__kimageannotator_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -4819,6 +4823,8 @@ QVariant* k_imageannotator__kimageannotator_super_input_method_query(void* self,
 ///
 /// @param self kImageAnnotator__KImageAnnotator*
 /// @param callback QVariant* func(kImageAnnotator__KImageAnnotator* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_imageannotator__kimageannotator_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

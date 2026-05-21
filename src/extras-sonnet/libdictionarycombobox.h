@@ -4006,6 +4006,8 @@ QSize* k_sonnet__dictionarycombobox_super_size_hint(void* self);
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_sonnet__dictionarycombobox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -4040,6 +4042,8 @@ QSize* k_sonnet__dictionarycombobox_super_minimum_size_hint(void* self);
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_sonnet__dictionarycombobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4184,6 +4188,8 @@ QVariant* k_sonnet__dictionarycombobox_super_input_method_query(void* self, int3
 ///
 /// @param self Sonnet__DictionaryComboBox*
 /// @param callback QVariant* func(Sonnet__DictionaryComboBox* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_sonnet__dictionarycombobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

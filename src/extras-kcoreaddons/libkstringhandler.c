@@ -61,6 +61,25 @@ const char* k_stringhandler_rsqueeze(const char* param1, int param2) {
     return _ret;
 }
 
+const char** k_stringhandler_perl_split(const char* param1, const char* param2, int param3) {
+    libqt_list _arr = KStringHandler_PerlSplit(qstring(param1), qstring(param2), param3);
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_stringhandler_perl_split\n");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
 const char** k_stringhandler_perl_split2(const char* param1, const char* param2, int param3) {
     libqt_list _arr = KStringHandler_PerlSplit2(qstring(param1), qstring(param2), param3);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;

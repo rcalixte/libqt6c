@@ -235,6 +235,8 @@ QSizeF* q_abstracttextdocumentlayout_document_size(void* self);
 /// @param self QAbstractTextDocumentLayout*
 /// @param callback QSizeF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstracttextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_abstracttextdocumentlayout_super_document_size` instead
@@ -262,6 +264,8 @@ QRectF* q_abstracttextdocumentlayout_frame_bounding_rect(void* self, void* frame
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param callback QRectF* func(QAbstractTextDocumentLayout* self, QTextFrame* frame)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
@@ -291,6 +295,8 @@ QRectF* q_abstracttextdocumentlayout_block_bounding_rect(void* self, void* block
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param callback QRectF* func(QAbstractTextDocumentLayout* self, QTextBlock* block)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
@@ -581,6 +587,8 @@ QTextCharFormat* q_abstracttextdocumentlayout_format(void* self, int pos);
 ///
 /// @param self QAbstractTextDocumentLayout*
 /// @param callback QTextCharFormat* func(QAbstractTextDocumentLayout* self, int pos)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstracttextdocumentlayout_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 

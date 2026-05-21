@@ -4812,6 +4812,8 @@ QVariant* k_textcustomeditor__plaintexteditor_super_load_resource(void* self, in
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QVariant* func(TextCustomEditor__PlainTextEditor* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__plaintexteditor_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QPlainTextEdit
@@ -4848,6 +4850,8 @@ QVariant* k_textcustomeditor__plaintexteditor_super_input_method_query(void* sel
 ///
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QVariant* func(TextCustomEditor__PlainTextEditor* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__plaintexteditor_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5698,6 +5702,8 @@ QSize* k_textcustomeditor__plaintexteditor_super_minimum_size_hint(void* self);
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__plaintexteditor_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5732,6 +5738,8 @@ QSize* k_textcustomeditor__plaintexteditor_super_size_hint(void* self);
 ///
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__plaintexteditor_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5880,6 +5888,8 @@ QSize* k_textcustomeditor__plaintexteditor_super_viewport_size_hint(void* self);
 ///
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__plaintexteditor_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6726,6 +6736,8 @@ QTextBlock* k_textcustomeditor__plaintexteditor_super_first_visible_block(void* 
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QTextBlock* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__plaintexteditor_on_first_visible_block(void* self, QTextBlock* (*callback)());
 
 /// Inherited from QPlainTextEdit
@@ -6760,6 +6772,8 @@ QPointF* k_textcustomeditor__plaintexteditor_super_content_offset(void* self);
 ///
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QPointF* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__plaintexteditor_on_content_offset(void* self, QPointF* (*callback)());
 
@@ -6798,6 +6812,8 @@ QRectF* k_textcustomeditor__plaintexteditor_super_block_bounding_rect(void* self
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QRectF* func(TextCustomEditor__PlainTextEditor* self, QTextBlock* block)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__plaintexteditor_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
 /// Inherited from QPlainTextEdit
@@ -6835,6 +6851,8 @@ QRectF* k_textcustomeditor__plaintexteditor_super_block_bounding_geometry(void* 
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QRectF* func(TextCustomEditor__PlainTextEditor* self, QTextBlock* block)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__plaintexteditor_on_block_bounding_geometry(void* self, QRectF* (*callback)(void*, void*));
 
 /// Inherited from QPlainTextEdit
@@ -6869,6 +6887,8 @@ QAbstractTextDocumentLayout__PaintContext* k_textcustomeditor__plaintexteditor_s
 ///
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QAbstractTextDocumentLayout__PaintContext* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__plaintexteditor_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)());
 
@@ -6984,6 +7004,8 @@ QMargins* k_textcustomeditor__plaintexteditor_super_viewport_margins(void* self)
 ///
 /// @param self TextCustomEditor__PlainTextEditor*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__plaintexteditor_on_viewport_margins(void* self, QMargins* (*callback)());
 

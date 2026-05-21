@@ -355,6 +355,8 @@ QVariant* q_designerpropertysheetextension_property(void* self, int index);
 /// @param self QDesignerPropertySheetExtension*
 /// @param callback QVariant* func(QDesignerPropertySheetExtension* self, int index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerpropertysheetextension_on_property(void* self, QVariant* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_designerpropertysheetextension_super_property` instead

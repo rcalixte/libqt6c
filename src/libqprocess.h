@@ -712,6 +712,14 @@ const char** q_process_system_environment();
 ///
 const char* q_process_null_device();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#splitCommand)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param command const char*
+///
+const char** q_process_split_command(const char* command);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#terminate)
 ///
 /// @param self QProcess*

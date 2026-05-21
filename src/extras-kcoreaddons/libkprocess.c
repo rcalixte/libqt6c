@@ -533,6 +533,25 @@ const char* k_process_null_device() {
     return _ret;
 }
 
+const char** k_process_split_command(const char* command) {
+    libqt_list _arr = QProcess_SplitCommand(qstring(command));
+    const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
+    const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
+    if (_ret == NULL) {
+        fprintf(stderr, "Failed to allocate memory for string list in k_process_split_command\n");
+        abort();
+    }
+    for (size_t i = 0; i < _arr.len; ++i) {
+        _ret[i] = qstring_to_char(_qstr[i]);
+    }
+    _ret[_arr.len] = NULL;
+    for (size_t i = 0; i < _arr.len; ++i) {
+        libqt_string_free((libqt_string*)&_qstr[i]);
+    }
+    libqt_free(_arr.data.ptr);
+    return _ret;
+}
+
 void k_process_terminate(void* self) {
     QProcess_Terminate((QProcess*)self);
 }

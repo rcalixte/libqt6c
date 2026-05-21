@@ -133,7 +133,7 @@ char* q_httpheaders_value_at(void* self, intptr_t i) {
     return _ret;
 }
 
-const char* q_httpheaders_name_at(void* self, intptr_t i) {
+char* q_httpheaders_name_at(void* self, intptr_t i) {
     libqt_string _str = QHttpHeaders_NameAt((QHttpHeaders*)self, i);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
