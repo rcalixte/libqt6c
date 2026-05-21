@@ -267,13 +267,14 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 		return "char" + strings.Repeat("*", max(p.PointerCount, 1))
 	}
 
-	if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
+	if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" {
 		return "char*"
 	}
 
 	if p.ParameterType == "QString" || p.ParameterType == "QByteArrayView" ||
 		p.ParameterType == "QStringView" || p.ParameterType == "SignOn::MethodName" ||
-		p.ParameterType == "QAnyStringView" || p.ParameterType == "QLatin1StringView" {
+		p.ParameterType == "QAnyStringView" {
 		return "const char*"
 	}
 
@@ -517,8 +518,8 @@ func (p CppParameter) RenderTypeC(cfs *cFileState, isReturnType, fullEnumName, i
 }
 
 func (p CppParameter) returnAllocComment(cfs *cFileState, returnType string) string {
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
-		p.ParameterType == "QLatin1StringView" || strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" || p.ParameterType == "QStringView" ||
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" || strings.HasPrefix(returnType, "char*") || strings.HasPrefix(returnType, "const char*") {
 		freeMethod := ifv(returnType == "const char*", "libqt_", "") + "free()"
 		return "\n/// @warning Caller is responsible for freeing the returned memory using `" + freeMethod + "`\n///"
 
@@ -904,20 +905,15 @@ func (cfs *cFileState) emitParameterC2CABIForwarding(p CppParameter) (preamble, 
 		p.ParameterName = "_" + p.ParameterName
 	}
 
-	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" ||
+	if p.ParameterType == "QString" || p.ParameterType == "QByteArray" || p.ParameterType == "QLatin1String" ||
 		p.ParameterType == "QByteArrayView" || p.ParameterType == "SignOn::MethodName" ||
-		p.ParameterType == "QLatin1StringView" {
+		p.ParameterType == "QLatin1StringView" || p.ParameterType == "QStringView" {
 		// Return the C string struct without allocation since the
 		// temporary libqt_string is passed by value
 		rvalue = "qstring(" + nameprefix + ")"
 
 	} else if p.ParameterType == "QAnyStringView" {
 		rvalue = nameprefix
-
-	} else if p.ParameterType == "QStringView" {
-		// Take the address of the pointer and cast it to the expected type
-		preamble += "libqt_string " + nameprefix + "_string = qstring(" + p.ParameterName + ");\n"
-		rvalue = "(" + p.ParameterType + "*)&" + nameprefix + "_string"
 
 	} else if t, _, ok := p.QListOf(); ok {
 		// QList<T>
@@ -2200,7 +2196,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			}
 
 			if (m.IsVirtual || m.IsProtected) && len(virtualMethods) > 0 && virtualEligible {
-				var maybeCommentStruct, maybeVoid, maybeComma, maybeMacro, maybeEndMacro string
+				var maybeCommentStruct, maybeVoid, maybeComma, maybeMacro, maybeEndMacro, maybeReturnString string
 				if len(m.Parameters) > 0 {
 					maybeComma = ", "
 				}
@@ -2221,10 +2217,13 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				}
 
 				onDocComment := "\n/// Allows for overriding the related default method\n///"
+				if !m.ReturnType.Pointer && IsKnownClass(m.ReturnType.ParameterType) {
+					maybeReturnString = "/// @warning Memory for the returned type of the callback is freed by the library.\n///\n"
+				}
 
 				ret.WriteString(maybeMacro + inheritedFrom + docCommentUrl + onDocComment + "\n/// @param self " + cStructName +
 					"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeCommentStruct +
-					cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
+					cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" + maybeReturnString +
 					"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
 					"(*callback)(" + maybeVoid + maybeComma + cfs.emitParametersC(m.Parameters, true) + "));\n" + maybeEndMacro + "\n\n")
 
@@ -2340,7 +2339,7 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				cfs.emitCommentParametersC(m.Parameters, false) + "\n" + returnComment + maybeFinalNewLine +
 				returnTypeDecl + " " + cmdMethodName + "_super" + safeMethodName + "(void* self" + commaParams + cfsParams + ");\n")
 
-			var maybeCommentStruct, maybeVoid string
+			var maybeCommentStruct, maybeVoid, maybeReturnString string
 			if showHiddenParams && (len(m.Parameters) > 0 || len(m.HiddenParams) > 0) {
 				commaParams = ", "
 			}
@@ -2355,10 +2354,13 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			}
 
 			headerComment = "\n/// Wrapper to allow overriding base class virtual or protected method\n ///\n"
+			if !m.ReturnType.Pointer && IsKnownClass(m.ReturnType.ParameterType) {
+				maybeReturnString = "/// @warning Memory for the returned type of the callback is freed by the library.\n///\n"
+			}
 
 			ret.WriteString(inheritedFrom + documentationURL + headerComment + "/// @param self " + cStructName +
 				"*\n/// @param callback " + m.ReturnType.renderReturnTypeC(&cfs, true, true) + " func(" + maybeCommentStruct +
-				cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" +
+				cfs.emitCommentParametersC(m.Parameters, true) + ")\n///\n" + maybeReturnString +
 				"void " + cmdMethodName + "_on" + safeMethodName + "(void* self, " + m.ReturnType.renderReturnTypeC(&cfs, true, false) +
 				"(*callback)(" + maybeVoid + commaParams + cfs.emitParametersC(m.Parameters, true) + "));\n")
 		}
