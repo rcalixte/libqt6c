@@ -208,7 +208,14 @@ const QJsonValue* q_jsondocument_operator_subscript(void* self, const char* key)
 /// @param self QJsonDocument*
 /// @param key const char*
 ///
-const QJsonValue* q_jsondocument_operator_subscript3(void* self, const char* key);
+const QJsonValue* q_jsondocument_operator_subscript2(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
+///
+/// @param self QJsonDocument*
+/// @param key char*
+///
+const QJsonValue* q_jsondocument_operator_subscript3(void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsondocument.html#operator-5b-5d)
 ///

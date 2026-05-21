@@ -155,6 +155,8 @@ QSize* q_styleditemdelegate_size_hint(void* self, void* option, void* index);
 /// @param self QStyledItemDelegate*
 /// @param callback QSize* func(QStyledItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_styleditemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_styleditemdelegate_super_size_hint` instead

@@ -4396,6 +4396,8 @@ QSize* q_chartview_super_size_hint(void* self);
 /// @param self QChartView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_chartview_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QGraphicsView
@@ -4432,6 +4434,8 @@ QVariant* q_chartview_super_input_method_query(void* self, int32_t query);
 ///
 /// @param self QChartView*
 /// @param callback QVariant* func(QChartView* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_chartview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5294,6 +5298,8 @@ QSize* q_chartview_super_minimum_size_hint(void* self);
 /// @param self QChartView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_chartview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5367,6 +5373,8 @@ QSize* q_chartview_super_viewport_size_hint(void* self);
 ///
 /// @param self QChartView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_chartview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6329,6 +6337,8 @@ QMargins* q_chartview_super_viewport_margins(void* self);
 ///
 /// @param self QChartView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_chartview_on_viewport_margins(void* self, QMargins* (*callback)());
 

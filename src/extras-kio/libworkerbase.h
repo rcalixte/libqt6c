@@ -401,6 +401,8 @@ KIO__WorkerResult* k_io__workerbase_open_connection(void* self);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_open_connection(void* self, KIO__WorkerResult* (*callback)());
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_open_connection` instead
@@ -456,6 +458,8 @@ KIO__WorkerResult* k_io__workerbase_get(void* self, void* url);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_get` instead
@@ -485,6 +489,8 @@ KIO__WorkerResult* k_io__workerbase_open(void* self, void* url, int32_t mode);
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, flag of enum QIODeviceBase__OpenModeFlag mode)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, void*, int32_t));
 
@@ -516,6 +522,8 @@ KIO__WorkerResult* k_io__workerbase_read(void* self, uintptr_t size);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uintptr_t size)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_read` instead
@@ -544,6 +552,8 @@ KIO__WorkerResult* k_io__workerbase_write(void* self, char* data);
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, libqt_string data)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
@@ -574,6 +584,8 @@ KIO__WorkerResult* k_io__workerbase_seek(void* self, uintptr_t offset);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uintptr_t offset)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_seek` instead
@@ -603,6 +615,8 @@ KIO__WorkerResult* k_io__workerbase_truncate(void* self, uintptr_t size);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, uintptr_t size)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_truncate` instead
@@ -630,6 +644,8 @@ KIO__WorkerResult* k_io__workerbase_close(void* self);
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_close(void* self, KIO__WorkerResult* (*callback)());
 
@@ -660,6 +676,8 @@ KIO__WorkerResult* k_io__workerbase_put(void* self, void* url, int permissions, 
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, int permissions, flag of enum KIO__JobFlag flags)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, void*, int, int32_t));
 
@@ -692,6 +710,8 @@ KIO__WorkerResult* k_io__workerbase_stat(void* self, void* url);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_stat` instead
@@ -720,6 +740,8 @@ KIO__WorkerResult* k_io__workerbase_mimetype(void* self, void* url);
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
@@ -750,6 +772,8 @@ KIO__WorkerResult* k_io__workerbase_list_dir(void* self, void* url);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_list_dir` instead
@@ -779,6 +803,8 @@ KIO__WorkerResult* k_io__workerbase_mkdir(void* self, void* url, int permissions
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, int permissions)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
@@ -811,6 +837,8 @@ KIO__WorkerResult* k_io__workerbase_rename(void* self, void* src, void* dest, in
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* src, QUrl* dest, flag of enum KIO__JobFlag flags)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int32_t));
 
@@ -845,6 +873,8 @@ KIO__WorkerResult* k_io__workerbase_symlink(void* self, const char* target, void
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, const char* target, QUrl* dest, flag of enum KIO__JobFlag flags)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, void*, int32_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_symlink` instead
@@ -876,6 +906,8 @@ KIO__WorkerResult* k_io__workerbase_chmod(void* self, void* url, int permissions
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, int permissions)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
@@ -909,6 +941,8 @@ KIO__WorkerResult* k_io__workerbase_chown(void* self, void* url, const char* own
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, const char* owner, const char* group)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*, void*, const char*, const char*));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_chown` instead
@@ -940,6 +974,8 @@ KIO__WorkerResult* k_io__workerbase_set_modification_time(void* self, void* url,
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, QDateTime* mtime)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*));
 
@@ -974,6 +1010,8 @@ KIO__WorkerResult* k_io__workerbase_copy(void* self, void* src, void* dest, int 
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* src, QUrl* dest, int permissions, flag of enum KIO__JobFlag flags)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int, int32_t));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_copy` instead
@@ -1007,6 +1045,8 @@ KIO__WorkerResult* k_io__workerbase_del(void* self, void* url, bool isfile);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url, bool isfile)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, void*, bool));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_del` instead
@@ -1037,6 +1077,8 @@ KIO__WorkerResult* k_io__workerbase_special(void* self, char* data);
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, libqt_string data)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__workerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// @warning DEPRECATED: Use `k_io__workerbase_super_special` instead
@@ -1065,6 +1107,8 @@ KIO__WorkerResult* k_io__workerbase_file_system_free_space(void* self, void* url
 ///
 /// @param self KIO__WorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__WorkerBase* self, QUrl* url)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__workerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 

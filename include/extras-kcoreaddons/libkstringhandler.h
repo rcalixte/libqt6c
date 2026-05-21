@@ -61,6 +61,16 @@ const char* k_stringhandler_rsqueeze(const char* param1, int param2);
 /// @param param2 const char*
 /// @param param3 int
 ///
+const char** k_stringhandler_perl_split(const char* param1, const char* param2, int param3);
+
+/// [Upstream resources](https://api.kde.org/kstringhandler.html#perlSplit)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param param1 const char*
+/// @param param2 const char*
+/// @param param3 int
+///
 const char** k_stringhandler_perl_split2(const char* param1, const char* param2, int param3);
 
 /// [Upstream resources](https://api.kde.org/kstringhandler.html#perlSplit)

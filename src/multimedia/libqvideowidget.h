@@ -134,6 +134,8 @@ QSize* q_videowidget_size_hint(void* self);
 /// @param self QVideoWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_videowidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_videowidget_super_size_hint` instead
@@ -3416,6 +3418,8 @@ QSize* q_videowidget_super_minimum_size_hint(void* self);
 /// @param self QVideoWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_videowidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -4560,6 +4564,8 @@ QVariant* q_videowidget_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QVideoWidget*
 /// @param callback QVariant* func(QVideoWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_videowidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

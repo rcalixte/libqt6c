@@ -36,6 +36,8 @@ QIcon* k_textemoticonscore__customemojiiconmanager_generate_icon(void* self, con
 /// @param self TextEmoticonsCore__CustomEmojiIconManager*
 /// @param callback QIcon* func(TextEmoticonsCore__CustomEmojiIconManager* self, const char* customIdentifier)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textemoticonscore__customemojiiconmanager_on_generate_icon(void* self, QIcon* (*callback)(void*, const char*));
 
 /// @warning DEPRECATED: Use `k_textemoticonscore__customemojiiconmanager_super_generate_icon` instead

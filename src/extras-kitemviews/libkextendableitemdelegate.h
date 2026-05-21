@@ -116,6 +116,8 @@ QSize* k_extendableitemdelegate_size_hint(void* self, void* option, void* index)
 /// @param self KExtendableItemDelegate*
 /// @param callback QSize* func(KExtendableItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extendableitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `k_extendableitemdelegate_super_size_hint` instead
@@ -272,6 +274,8 @@ QRect* k_extendableitemdelegate_extender_rect(void* self, void* extender, void* 
 /// @param self KExtendableItemDelegate*
 /// @param callback QRect* func(KExtendableItemDelegate* self, QWidget* extender, QStyleOptionViewItem* option, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extendableitemdelegate_on_extender_rect(void* self, QRect* (*callback)(void*, void*, void*, void*));
 
 /// @warning DEPRECATED: Use `k_extendableitemdelegate_super_extender_rect` instead
@@ -360,6 +364,8 @@ QPixmap* k_extendableitemdelegate_extend_pixmap(void* self);
 /// @param self KExtendableItemDelegate*
 /// @param callback QPixmap* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_extendableitemdelegate_on_extend_pixmap(void* self, QPixmap* (*callback)());
 
 /// @warning DEPRECATED: Use `k_extendableitemdelegate_super_extend_pixmap` instead
@@ -386,6 +392,8 @@ QPixmap* k_extendableitemdelegate_contract_pixmap(void* self);
 ///
 /// @param self KExtendableItemDelegate*
 /// @param callback QPixmap* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_extendableitemdelegate_on_contract_pixmap(void* self, QPixmap* (*callback)());
 

@@ -78,7 +78,7 @@ func getUnionType(t CppParameter) (unionType, castType, lParen, rParen string) {
 }
 
 func (p CppParameter) RenderTypeCabi(isSlot bool) string {
-	if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QLatin1StringView" {
+	if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QStringView" {
 		if isSlot {
 			return "const char*"
 		} else {
@@ -88,7 +88,8 @@ func (p CppParameter) RenderTypeCabi(isSlot bool) string {
 	} else if p.ParameterType == "QAnyStringView" {
 		return "const char*"
 
-	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
+	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" {
 		return "libqt_string"
 
 	} else if inner, _, ok := p.QListOf(); ok {
@@ -346,7 +347,7 @@ func makeNamePrefix(in string) string {
 func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot, needsCleanup bool) (preamble, forwarding string) {
 	nameprefix := makeNamePrefix(p.ParameterName)
 
-	if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QLatin1StringView" {
+	if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QStringView" {
 		var maybePointer string
 		if isSlot {
 			if p.Pointer || p.ByRef {
@@ -359,15 +360,12 @@ func emitCABI2CppForwarding(p CppParameter, indent, currentClass string, isSlot,
 			// The CABI received parameter is a libqt_string, passed by value
 			// C++ needs it as a QString. Create one on the stack for automatic cleanup
 			// The caller will free the libqt_string
-			if p.ParameterType == "QLatin1StringView" {
-				preamble += indent + "QLatin1StringView " + nameprefix + "_QString = QLatin1StringView(" + p.ParameterName + ".data, " + p.ParameterName + ".len);\n"
-			} else {
-				preamble += indent + "QString " + nameprefix + "_QString = QString::fromUtf8(" + p.ParameterName + ".data, " + p.ParameterName + ".len);\n"
-			}
+			preamble += indent + "QString " + nameprefix + "_QString = QString::fromUtf8(" + p.ParameterName + ".data, " + p.ParameterName + ".len);\n"
 		}
 		return preamble, maybePointer + nameprefix + "_QString"
 
-	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
+	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" {
 		if (isSlot && strings.Contains(p.ParameterName, "_arr[")) || strings.HasSuffix(p.ParameterName, "_arr") {
 			preamble += indent + p.ParameterType + " " + nameprefix + "_" + p.ParameterType + "(" + p.ParameterName + ");\n"
 		} else {
@@ -730,10 +728,10 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 		shouldReturn = ""
 		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
-	} else if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QLatin1StringView" {
+	} else if p.ParameterType == "QString" || p.ParameterType == "SignOn::MethodName" || p.ParameterType == "QStringView" {
 
+		shouldReturn = maybeConst + "auto " + namePrefix + "_ret = "
 		if isSignal {
-			shouldReturn = maybeConst + "QString " + namePrefix + "_ret = "
 			afterCall += indent + "// Convert QString from UTF-16 in C++ RAII memory to UTF-8 chars in manually-managed C memory\n"
 			afterCall += indent + "QByteArray " + namePrefix + "_b = " + namePrefix + "_ret.toUtf8();\n"
 
@@ -751,12 +749,10 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 				// These are rare, and probably expected to be lightweight references
 				// But, a copy is the best we can project it as
 				// Un-pointer-ify
-				shouldReturn = maybeConst + "QString* " + namePrefix + "_ret = "
 				afterCall += indent + "// Convert QString pointer from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory\n"
 				afterCall += indent + "QByteArray " + namePrefix + "_b = " + namePrefix + "_ret->toUtf8();\n"
 
 			} else {
-				shouldReturn = maybeConst + "QString " + namePrefix + "_ret = "
 				afterCall += indent + "// Convert QString from UTF-16 in C++ RAII memory to UTF-8 in manually-managed C memory\n"
 				afterCall += indent + "QByteArray " + namePrefix + "_b = " + namePrefix + "_ret.toUtf8();\n"
 			}
@@ -791,7 +787,8 @@ func emitAssignCppToCabi(assignExpression string, p CppParameter, rvalue string)
 
 		return indent + shouldReturn + rvalue + ";\n" + afterCall, cleanupType
 
-	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" {
+	} else if p.ParameterType == "QByteArray" || p.ParameterType == "QByteArrayView" ||
+		p.ParameterType == "QLatin1String" || p.ParameterType == "QLatin1StringView" {
 
 		// C++ has given us a QByteArray. CABI needs this as a libqt_string
 		// Do not free the data, the caller will free it
@@ -1337,7 +1334,8 @@ func cabiClassName(className string) string {
 
 func isBindingRemoved(className string) bool {
 	switch className {
-	case "QAnyStringView", "QByteArray", "QLatin1StringView", "QString",
+	case "QAnyStringView", "QByteArray", "QLatin1String", "QLatin1StringView",
+		"QString", "QStringView",
 		"QSet", "QMap", "QMultiMap", "QHash", "QMultiHash",
 		"QPair", "QList", "QVector", "QSpan":
 		return true // These types are reprojected
@@ -2088,6 +2086,8 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 		ret.WriteString("#include <poppler-form.h>\n")
 	case "qwebengineprofile.h":
 		ret.WriteString("#include <QWebEngineNotification>\n")
+	case "wildcardmatcher.h":
+		ret.WriteString("#include <QString>\n")
 	}
 
 	ret.WriteString("#include <" + srcFilename + ">\n")

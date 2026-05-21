@@ -12,6 +12,14 @@
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextUtils_1_1ConvertText.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param param1 const char*
+///
+const char* k_textutils__converttext_normalize(const char* param1);
+
+/// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextUtils_1_1ConvertText.html)
+///
 /// @param param1 QTextCursor*
 ///
 void k_textutils__converttext_upper_case(void* param1);

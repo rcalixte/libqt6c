@@ -272,6 +272,8 @@ QSize* q_abstractspinbox_size_hint(void* self);
 /// @param self QAbstractSpinBox*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractspinbox_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_abstractspinbox_super_size_hint` instead
@@ -298,6 +300,8 @@ QSize* q_abstractspinbox_minimum_size_hint(void* self);
 ///
 /// @param self QAbstractSpinBox*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractspinbox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -361,6 +365,8 @@ QVariant* q_abstractspinbox_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QAbstractSpinBox*
 /// @param callback QVariant* func(QAbstractSpinBox* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractspinbox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

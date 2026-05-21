@@ -187,6 +187,8 @@ QGeoPositionInfo* q_geopositioninfosource_last_known_position(void* self, bool f
 /// @param self QGeoPositionInfoSource*
 /// @param callback QGeoPositionInfo* func(QGeoPositionInfoSource* self, bool fromSatellitePositioningMethodsOnly)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_geopositioninfosource_on_last_known_position(void* self, QGeoPositionInfo* (*callback)(void*, bool));
 
 /// @warning DEPRECATED: Use `q_geopositioninfosource_super_last_known_position` instead
@@ -312,6 +314,8 @@ QVariant* q_geopositioninfosource_backend_property(void* self, const char* name)
 ///
 /// @param self QGeoPositionInfoSource*
 /// @param callback QVariant* func(QGeoPositionInfoSource* self, const char* name)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_geopositioninfosource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*));
 

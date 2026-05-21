@@ -420,6 +420,8 @@ QVariant* k_configdialogmanager_property(void* self, void* w);
 /// @param self KConfigDialogManager*
 /// @param callback QVariant* func(KConfigDialogManager* self, QWidget* w)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_configdialogmanager_on_property(void* self, QVariant* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_configdialogmanager_super_property` instead

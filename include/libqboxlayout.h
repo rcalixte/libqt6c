@@ -342,6 +342,8 @@ QSize* q_boxlayout_size_hint(void* self);
 /// @param self QBoxLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_boxlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_boxlayout_super_size_hint` instead
@@ -369,6 +371,8 @@ QSize* q_boxlayout_minimum_size(void* self);
 /// @param self QBoxLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_boxlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_boxlayout_super_minimum_size` instead
@@ -395,6 +399,8 @@ QSize* q_boxlayout_maximum_size(void* self);
 ///
 /// @param self QBoxLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_boxlayout_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -1502,6 +1508,8 @@ QRect* q_boxlayout_super_geometry(void* self);
 /// @param self QBoxLayout*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_boxlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -2204,6 +2212,8 @@ QRect* q_boxlayout_super_alignment_rect(void* self, void* param1);
 ///
 /// @param self QBoxLayout*
 /// @param callback QRect* func(QBoxLayout* self, QRect* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_boxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
@@ -3599,6 +3609,8 @@ QSize* q_hboxlayout_super_size_hint(void* self);
 /// @param self QHBoxLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_hboxlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -3634,6 +3646,8 @@ QSize* q_hboxlayout_super_minimum_size(void* self);
 /// @param self QHBoxLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_hboxlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -3668,6 +3682,8 @@ QSize* q_hboxlayout_super_maximum_size(void* self);
 ///
 /// @param self QHBoxLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_hboxlayout_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -4032,6 +4048,8 @@ QRect* q_hboxlayout_super_geometry(void* self);
 ///
 /// @param self QHBoxLayout*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_hboxlayout_on_geometry(void* self, QRect* (*callback)());
 
@@ -4735,6 +4753,8 @@ QRect* q_hboxlayout_super_alignment_rect(void* self, void* param1);
 ///
 /// @param self QHBoxLayout*
 /// @param callback QRect* func(QHBoxLayout* self, QRect* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_hboxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 
@@ -6130,6 +6150,8 @@ QSize* q_vboxlayout_super_size_hint(void* self);
 /// @param self QVBoxLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_vboxlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -6165,6 +6187,8 @@ QSize* q_vboxlayout_super_minimum_size(void* self);
 /// @param self QVBoxLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_vboxlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// Inherited from QBoxLayout
@@ -6199,6 +6223,8 @@ QSize* q_vboxlayout_super_maximum_size(void* self);
 ///
 /// @param self QVBoxLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_vboxlayout_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -6563,6 +6589,8 @@ QRect* q_vboxlayout_super_geometry(void* self);
 ///
 /// @param self QVBoxLayout*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_vboxlayout_on_geometry(void* self, QRect* (*callback)());
 
@@ -7266,6 +7294,8 @@ QRect* q_vboxlayout_super_alignment_rect(void* self, void* param1);
 ///
 /// @param self QVBoxLayout*
 /// @param callback QRect* func(QVBoxLayout* self, QRect* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_vboxlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 

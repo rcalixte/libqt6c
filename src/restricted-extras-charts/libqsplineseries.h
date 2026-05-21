@@ -2125,6 +2125,8 @@ QColor* q_splineseries_super_color(void* self);
 /// @param self QSplineSeries*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_splineseries_on_color(void* self, QColor* (*callback)());
 
 /// Inherited from QObject

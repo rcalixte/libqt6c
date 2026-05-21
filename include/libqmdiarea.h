@@ -120,6 +120,8 @@ QSize* q_mdiarea_size_hint(void* self);
 /// @param self QMdiArea*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_mdiarea_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_mdiarea_super_size_hint` instead
@@ -146,6 +148,8 @@ QSize* q_mdiarea_minimum_size_hint(void* self);
 ///
 /// @param self QMdiArea*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_mdiarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4381,6 +4385,8 @@ QSize* q_mdiarea_super_viewport_size_hint(void* self);
 /// @param self QMdiArea*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_mdiarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QFrame
@@ -5265,6 +5271,8 @@ QVariant* q_mdiarea_super_input_method_query(void* self, int32_t param1);
 /// @param self QMdiArea*
 /// @param callback QVariant* func(QMdiArea* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_mdiarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -5490,6 +5498,8 @@ QMargins* q_mdiarea_super_viewport_margins(void* self);
 ///
 /// @param self QMdiArea*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_mdiarea_on_viewport_margins(void* self, QMargins* (*callback)());
 

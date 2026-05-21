@@ -244,6 +244,8 @@ QColor* q_scatterseries_color(void* self);
 /// @param self QScatterSeries*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scatterseries_on_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_scatterseries_super_color` instead

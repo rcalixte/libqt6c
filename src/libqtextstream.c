@@ -297,7 +297,11 @@ QTextStream* q_textstream_operator_shift_left14(void* self, const char* s) {
     return QTextStream_OperatorShiftLeft14((QTextStream*)self, qstring(s));
 }
 
-QTextStream* q_textstream_operator_shift_left16(void* self, const char* s) {
+QTextStream* q_textstream_operator_shift_left15(void* self, const char* s) {
+    return QTextStream_OperatorShiftLeft15((QTextStream*)self, qstring(s));
+}
+
+QTextStream* q_textstream_operator_shift_left16(void* self, char* s) {
     return QTextStream_OperatorShiftLeft16((QTextStream*)self, qstring(s));
 }
 

@@ -1161,6 +1161,8 @@ QVariant* q_propertyanimation_super_interpolated(void* self, void* from, void* t
 /// @param self QPropertyAnimation*
 /// @param callback QVariant* func(QPropertyAnimation* self, QVariant* from, QVariant* to, double progress)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_propertyanimation_on_interpolated(void* self, QVariant* (*callback)(void*, void*, void*, double));
 
 /// Inherited from QAbstractAnimation

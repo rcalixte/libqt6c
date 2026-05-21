@@ -172,6 +172,8 @@ QSize* k_fileplacesview_size_hint(void* self);
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesview_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_fileplacesview_super_size_hint` instead
@@ -4955,6 +4957,8 @@ QRect* k_fileplacesview_super_visual_rect(void* self, void* index);
 /// @param self KFilePlacesView*
 /// @param callback QRect* func(KFilePlacesView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5030,6 +5034,8 @@ QModelIndex* k_fileplacesview_super_index_at(void* self, void* p);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QModelIndex* func(KFilePlacesView* self, QPoint* p)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -5549,6 +5555,8 @@ QModelIndex* k_fileplacesview_super_move_cursor(void* self, int32_t cursorAction
 /// @param self KFilePlacesView*
 /// @param callback QModelIndex* func(KFilePlacesView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// Inherited from QListView
@@ -5624,6 +5632,8 @@ QRegion* k_fileplacesview_super_visual_region_for_selection(void* self, void* se
 ///
 /// @param self KFilePlacesView*
 /// @param callback QRegion* func(KFilePlacesView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -5849,6 +5859,8 @@ QSize* k_fileplacesview_super_viewport_size_hint(void* self);
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -6070,6 +6082,8 @@ QVariant* k_fileplacesview_super_input_method_query(void* self, int32_t query);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QVariant* func(KFilePlacesView* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -6816,6 +6830,8 @@ QSize* k_fileplacesview_super_minimum_size_hint(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -7775,6 +7791,8 @@ QSize* k_fileplacesview_super_contents_size(void* self);
 /// @param self KFilePlacesView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesview_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
@@ -7811,6 +7829,8 @@ QRect* k_fileplacesview_super_rect_for_index(void* self, void* index);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QRect* func(KFilePlacesView* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
@@ -8108,6 +8128,8 @@ QPoint* k_fileplacesview_super_dirty_region_offset(void* self);
 /// @param self KFilePlacesView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8329,6 +8351,8 @@ QMargins* k_fileplacesview_super_viewport_margins(void* self);
 ///
 /// @param self KFilePlacesView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesview_on_viewport_margins(void* self, QMargins* (*callback)());
 

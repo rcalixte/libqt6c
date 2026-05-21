@@ -356,6 +356,8 @@ QVariant* k_fileplacesmodel_data(void* self, void* index, int role);
 /// @param self KFilePlacesModel*
 /// @param callback QVariant* func(KFilePlacesModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_fileplacesmodel_super_data` instead
@@ -388,6 +390,8 @@ QModelIndex* k_fileplacesmodel_index(void* self, int row, int column, void* pare
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `k_fileplacesmodel_super_index` instead
@@ -418,6 +422,8 @@ QModelIndex* k_fileplacesmodel_parent(void* self, void* child);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1657,6 +1663,8 @@ QModelIndex* k_fileplacesmodel_super_sibling(void* self, int row, int column, vo
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1775,6 +1783,8 @@ QVariant* k_fileplacesmodel_super_header_data(void* self, int section, int32_t o
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QVariant* func(KFilePlacesModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2446,6 +2456,8 @@ QModelIndex* k_fileplacesmodel_super_buddy(void* self, void* index);
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplacesmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2531,6 +2543,8 @@ QSize* k_fileplacesmodel_super_span(void* self, void* index);
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QSize* func(KFilePlacesModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2975,6 +2989,8 @@ QModelIndex* k_fileplacesmodel_super_create_index(void* self, int row, int colum
 ///
 /// @param self KFilePlacesModel*
 /// @param callback QModelIndex* func(KFilePlacesModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplacesmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

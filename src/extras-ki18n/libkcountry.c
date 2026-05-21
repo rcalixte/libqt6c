@@ -80,8 +80,16 @@ libqt_list /* of KCountrySubdivision* */ k_country_subdivisions(void* self) {
     return _arr;
 }
 
+KCountry* k_country_from_alpha2(const char* alpha2Code) {
+    return KCountry_FromAlpha2(qstring(alpha2Code));
+}
+
 KCountry* k_country_from_alpha22(const char* alpha2Code) {
     return KCountry_FromAlpha22(alpha2Code);
+}
+
+KCountry* k_country_from_alpha3(const char* alpha3Code) {
+    return KCountry_FromAlpha3(qstring(alpha3Code));
 }
 
 KCountry* k_country_from_alpha32(const char* alpha3Code) {
@@ -94,6 +102,10 @@ KCountry* k_country_from_location(float latitude, float longitude) {
 
 KCountry* k_country_from_q_locale(uint16_t country) {
     return KCountry_FromQLocale(country);
+}
+
+KCountry* k_country_from_name(const char* name) {
+    return KCountry_FromName(qstring(name));
 }
 
 libqt_list /* of KCountry* */ k_country_all_countries() {

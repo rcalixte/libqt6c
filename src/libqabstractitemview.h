@@ -481,6 +481,8 @@ QRect* q_abstractitemview_visual_rect(void* self, void* index);
 /// @param self QAbstractItemView*
 /// @param callback QRect* func(QAbstractItemView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractitemview_super_visual_rect` instead
@@ -540,6 +542,8 @@ QModelIndex* q_abstractitemview_index_at(void* self, void* point);
 ///
 /// @param self QAbstractItemView*
 /// @param callback QModelIndex* func(QAbstractItemView* self, QPoint* point)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -736,6 +740,8 @@ QVariant* q_abstractitemview_input_method_query(void* self, int32_t query);
 ///
 /// @param self QAbstractItemView*
 /// @param callback QVariant* func(QAbstractItemView* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -1460,6 +1466,8 @@ QModelIndex* q_abstractitemview_move_cursor(void* self, int32_t cursorAction, in
 /// @param self QAbstractItemView*
 /// @param callback QModelIndex* func(QAbstractItemView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_abstractitemview_super_move_cursor` instead
@@ -1603,6 +1611,8 @@ QRegion* q_abstractitemview_visual_region_for_selection(void* self, void* select
 ///
 /// @param self QAbstractItemView*
 /// @param callback QRegion* func(QAbstractItemView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -1962,6 +1972,8 @@ QPoint* q_abstractitemview_dirty_region_offset(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param callback QPoint* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
@@ -2625,6 +2637,8 @@ QSize* q_abstractitemview_viewport_size_hint(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5909,6 +5923,8 @@ QSize* q_abstractitemview_super_minimum_size_hint(void* self);
 /// @param self QAbstractItemView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5943,6 +5959,8 @@ QSize* q_abstractitemview_super_size_hint(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_size_hint(void* self, QSize* (*callback)());
 
@@ -7129,6 +7147,8 @@ QMargins* q_abstractitemview_super_viewport_margins(void* self);
 ///
 /// @param self QAbstractItemView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractitemview_on_viewport_margins(void* self, QMargins* (*callback)());
 

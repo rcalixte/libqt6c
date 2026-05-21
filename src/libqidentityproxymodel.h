@@ -152,6 +152,8 @@ QModelIndex* q_identityproxymodel_index(void* self, int row, int column, void* p
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_identityproxymodel_super_index` instead
@@ -183,6 +185,8 @@ QModelIndex* q_identityproxymodel_map_from_source(void* self, void* sourceIndex)
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, QModelIndex* sourceIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_identityproxymodel_super_map_from_source` instead
@@ -212,6 +216,8 @@ QModelIndex* q_identityproxymodel_map_to_source(void* self, void* proxyIndex);
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_identityproxymodel_super_map_to_source` instead
@@ -240,6 +246,8 @@ QModelIndex* q_identityproxymodel_parent(void* self, void* child);
 ///
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -300,6 +308,8 @@ QVariant* q_identityproxymodel_header_data(void* self, int section, int32_t orie
 ///
 /// @param self QIdentityProxyModel*
 /// @param callback QVariant* func(QIdentityProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -371,6 +381,8 @@ QModelIndex* q_identityproxymodel_sibling(void* self, int row, int column, void*
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_identityproxymodel_super_sibling` instead
@@ -402,6 +414,8 @@ QItemSelection* q_identityproxymodel_map_selection_from_source(void* self, void*
 /// @param self QIdentityProxyModel*
 /// @param callback QItemSelection* func(QIdentityProxyModel* self, QItemSelection* selection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_identityproxymodel_super_map_selection_from_source` instead
@@ -430,6 +444,8 @@ QItemSelection* q_identityproxymodel_map_selection_to_source(void* self, void* s
 ///
 /// @param self QIdentityProxyModel*
 /// @param callback QItemSelection* func(QIdentityProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -1672,6 +1688,8 @@ QVariant* q_identityproxymodel_super_data(void* self, void* proxyIndex, int role
 /// @param self QIdentityProxyModel*
 /// @param callback QVariant* func(QIdentityProxyModel* self, QModelIndex* proxyIndex, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QAbstractProxyModel
@@ -1973,6 +1991,8 @@ QModelIndex* q_identityproxymodel_super_buddy(void* self, void* index);
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2122,6 +2142,8 @@ QSize* q_identityproxymodel_super_span(void* self, void* index);
 ///
 /// @param self QIdentityProxyModel*
 /// @param callback QSize* func(QIdentityProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2796,6 +2818,8 @@ QModelIndex* q_identityproxymodel_super_create_source_index(void* self, int row,
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_identityproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2834,6 +2858,8 @@ QModelIndex* q_identityproxymodel_super_create_index(void* self, int row, int co
 ///
 /// @param self QIdentityProxyModel*
 /// @param callback QModelIndex* func(QIdentityProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_identityproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

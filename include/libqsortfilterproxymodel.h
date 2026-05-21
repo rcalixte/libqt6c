@@ -150,6 +150,8 @@ QModelIndex* q_sortfilterproxymodel_map_to_source(void* self, void* proxyIndex);
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_sortfilterproxymodel_super_map_to_source` instead
@@ -178,6 +180,8 @@ QModelIndex* q_sortfilterproxymodel_map_from_source(void* self, void* sourceInde
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* sourceIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -208,6 +212,8 @@ QItemSelection* q_sortfilterproxymodel_map_selection_to_source(void* self, void*
 /// @param self QSortFilterProxyModel*
 /// @param callback QItemSelection* func(QSortFilterProxyModel* self, QItemSelection* proxySelection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_sortfilterproxymodel_super_map_selection_to_source` instead
@@ -236,6 +242,8 @@ QItemSelection* q_sortfilterproxymodel_map_selection_from_source(void* self, voi
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QItemSelection* func(QSortFilterProxyModel* self, QItemSelection* sourceSelection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -617,6 +625,8 @@ QModelIndex* q_sortfilterproxymodel_index(void* self, int row, int column, void*
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_sortfilterproxymodel_super_index` instead
@@ -648,6 +658,8 @@ QModelIndex* q_sortfilterproxymodel_parent(void* self, void* child);
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* child)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_sortfilterproxymodel_super_parent` instead
@@ -678,6 +690,8 @@ QModelIndex* q_sortfilterproxymodel_sibling(void* self, int row, int column, voi
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -798,6 +812,8 @@ QVariant* q_sortfilterproxymodel_data(void* self, void* index, int role);
 /// @param self QSortFilterProxyModel*
 /// @param callback QVariant* func(QSortFilterProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_sortfilterproxymodel_super_data` instead
@@ -862,6 +878,8 @@ QVariant* q_sortfilterproxymodel_header_data(void* self, int section, int32_t or
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QVariant* func(QSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -1218,6 +1236,8 @@ QModelIndex* q_sortfilterproxymodel_buddy(void* self, void* index);
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_sortfilterproxymodel_super_buddy` instead
@@ -1287,6 +1307,8 @@ QSize* q_sortfilterproxymodel_span(void* self, void* index);
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QSize* func(QSortFilterProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3097,6 +3119,8 @@ QModelIndex* q_sortfilterproxymodel_super_create_source_index(void* self, int ro
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3135,6 +3159,8 @@ QModelIndex* q_sortfilterproxymodel_super_create_index(void* self, int row, int 
 ///
 /// @param self QSortFilterProxyModel*
 /// @param callback QModelIndex* func(QSortFilterProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

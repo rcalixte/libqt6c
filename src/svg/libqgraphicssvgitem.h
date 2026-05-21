@@ -191,6 +191,8 @@ QRectF* q_graphicssvgitem_bounding_rect(void* self);
 /// @param self QGraphicsSvgItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicssvgitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicssvgitem_super_bounding_rect` instead
@@ -2803,6 +2805,8 @@ QPainterPath* q_graphicssvgitem_super_shape(void* self);
 /// @param self QGraphicsSvgItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicssvgitem_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -2989,6 +2993,8 @@ QPainterPath* q_graphicssvgitem_super_opaque_area(void* self);
 ///
 /// @param self QGraphicsSvgItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssvgitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -3769,6 +3775,8 @@ QVariant* q_graphicssvgitem_super_input_method_query(void* self, int32_t query);
 /// @param self QGraphicsSvgItem*
 /// @param callback QVariant* func(QGraphicsSvgItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicssvgitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -3807,6 +3815,8 @@ QVariant* q_graphicssvgitem_super_item_change(void* self, int32_t change, void* 
 ///
 /// @param self QGraphicsSvgItem*
 /// @param callback QVariant* func(QGraphicsSvgItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssvgitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -3920,6 +3930,8 @@ QVariant* q_graphicssvgitem_super_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsSvgItem*
 /// @param callback QVariant* func(QGraphicsSvgItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssvgitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 

@@ -1316,6 +1316,8 @@ QColor* q_scilexerverilog_super_color(void* self, int style);
 /// @param self QsciLexerVerilog*
 /// @param callback QColor* func(QsciLexerVerilog* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerverilog_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1389,6 +1391,8 @@ QFont* q_scilexerverilog_super_font(void* self, int style);
 ///
 /// @param self QsciLexerVerilog*
 /// @param callback QFont* func(QsciLexerVerilog* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerverilog_on_font(void* self, QFont* (*callback)(void*, int));
 
@@ -1497,6 +1501,8 @@ QColor* q_scilexerverilog_super_paper(void* self, int style);
 /// @param self QsciLexerVerilog*
 /// @param callback QColor* func(QsciLexerVerilog* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerverilog_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1533,6 +1539,8 @@ QColor* q_scilexerverilog_super_default_color2(void* self, int style);
 ///
 /// @param self QsciLexerVerilog*
 /// @param callback QColor* func(QsciLexerVerilog* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerverilog_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
@@ -1571,6 +1579,8 @@ QFont* q_scilexerverilog_super_default_font2(void* self, int style);
 /// @param self QsciLexerVerilog*
 /// @param callback QFont* func(QsciLexerVerilog* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerverilog_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1607,6 +1617,8 @@ QColor* q_scilexerverilog_super_default_paper2(void* self, int style);
 ///
 /// @param self QsciLexerVerilog*
 /// @param callback QColor* func(QsciLexerVerilog* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerverilog_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 

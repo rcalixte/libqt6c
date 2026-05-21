@@ -28,6 +28,10 @@ intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength) {
     return QStringEncoder_RequiredSpace((QStringEncoder*)self, inputLength);
 }
 
+char* q_stringencoder_append_to_buffer(void* self, char* out, const char* in) {
+    return QStringEncoder_AppendToBuffer((QStringEncoder*)self, out, qstring(in));
+}
+
 bool q_stringencoder_is_valid(void* self) {
     return QStringConverter_IsValid((QStringConverter*)self);
 }

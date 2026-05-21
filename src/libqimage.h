@@ -1040,6 +1040,8 @@ QImage* q_image_mirrored_helper(void* self, bool horizontal, bool vertical);
 /// @param self QImage*
 /// @param callback QImage* func(QImage* self, bool horizontal, bool vertical)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_image_on_mirrored_helper(void* self, QImage* (*callback)(void*, bool, bool));
 
 /// @warning DEPRECATED: Use `q_image_super_mirrored_helper` instead
@@ -1068,6 +1070,8 @@ QImage* q_image_rgb_swapped_helper(void* self);
 ///
 /// @param self QImage*
 /// @param callback QImage* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_image_on_rgb_swapped_helper(void* self, QImage* (*callback)());
 
@@ -1156,6 +1160,8 @@ QImage* q_image_convert_to_format_helper(void* self, int32_t format, int32_t fla
 /// @param self QImage*
 /// @param callback QImage* func(QImage* self, enum QImage__Format format, flag of enum Qt__ImageConversionFlag flags)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_image_on_convert_to_format_helper(void* self, QImage* (*callback)(void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_image_super_convert_to_format_helper` instead
@@ -1217,6 +1223,8 @@ QImage* q_image_smooth_scaled(void* self, int w, int h);
 ///
 /// @param self QImage*
 /// @param callback QImage* func(QImage* self, int w, int h)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_image_on_smooth_scaled(void* self, QImage* (*callback)(void*, int, int));
 

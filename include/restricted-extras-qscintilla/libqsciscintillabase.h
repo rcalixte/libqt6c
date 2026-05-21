@@ -966,6 +966,8 @@ QVariant* q_sciscintillabase_input_method_query(void* self, int32_t query);
 /// @param self QsciScintillaBase*
 /// @param callback QVariant* func(QsciScintillaBase* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sciscintillabase_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_sciscintillabase_super_input_method_query` instead
@@ -4538,6 +4540,8 @@ QSize* q_sciscintillabase_super_minimum_size_hint(void* self);
 /// @param self QsciScintillaBase*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sciscintillabase_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -4572,6 +4576,8 @@ QSize* q_sciscintillabase_super_size_hint(void* self);
 ///
 /// @param self QsciScintillaBase*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sciscintillabase_on_size_hint(void* self, QSize* (*callback)());
 
@@ -4794,6 +4800,8 @@ QSize* q_sciscintillabase_super_viewport_size_hint(void* self);
 ///
 /// @param self QsciScintillaBase*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sciscintillabase_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5793,6 +5801,8 @@ QMargins* q_sciscintillabase_super_viewport_margins(void* self);
 ///
 /// @param self QsciScintillaBase*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sciscintillabase_on_viewport_margins(void* self, QMargins* (*callback)());
 

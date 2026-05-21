@@ -308,6 +308,8 @@ QSize* k_combobox_minimum_size_hint(void* self);
 /// @param self KComboBox*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_combobox_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_combobox_super_minimum_size_hint` instead
@@ -4482,6 +4484,8 @@ QSize* k_combobox_super_size_hint(void* self);
 /// @param self KComboBox*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_combobox_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QComboBox
@@ -4625,6 +4629,8 @@ QVariant* k_combobox_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KComboBox*
 /// @param callback QVariant* func(KComboBox* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_combobox_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

@@ -468,6 +468,8 @@ QLocale* q_texttospeechengine_locale(void* self);
 /// @param self QTextToSpeechEngine*
 /// @param callback QLocale* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_texttospeechengine_on_locale(void* self, QLocale* (*callback)());
 
 /// @warning DEPRECATED: Use `q_texttospeechengine_super_locale` instead
@@ -579,6 +581,8 @@ QVoice* q_texttospeechengine_voice(void* self);
 ///
 /// @param self QTextToSpeechEngine*
 /// @param callback QVoice* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_texttospeechengine_on_voice(void* self, QVoice* (*callback)());
 
@@ -732,6 +736,8 @@ QVoice* q_texttospeechengine_create_voice(void* self, const char* name, void* lo
 /// @param self QTextToSpeechEngine*
 /// @param callback QVoice* func(QTextToSpeechEngine* self, const char* name, QLocale* locale, enum QVoice__Gender gender, enum QVoice__Age age, QVariant* data)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_texttospeechengine_on_create_voice(void* self, QVoice* (*callback)(void*, const char*, void*, int32_t, int32_t, void*));
 
 /// @warning DEPRECATED: Use `q_texttospeechengine_super_create_voice` instead
@@ -764,6 +770,8 @@ QVariant* q_texttospeechengine_voice_data(void* self, void* voice);
 ///
 /// @param self QTextToSpeechEngine*
 /// @param callback QVariant* func(QTextToSpeechEngine* self, QVoice* voice)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_texttospeechengine_on_voice_data(void* self, QVariant* (*callback)(void*, void*));
 

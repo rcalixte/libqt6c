@@ -3348,6 +3348,8 @@ QSize* k_fileplaceeditdialog_super_size_hint(void* self);
 /// @param self KFilePlaceEditDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileplaceeditdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3382,6 +3384,8 @@ QSize* k_fileplaceeditdialog_super_minimum_size_hint(void* self);
 ///
 /// @param self KFilePlaceEditDialog*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplaceeditdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4963,6 +4967,8 @@ QVariant* k_fileplaceeditdialog_super_input_method_query(void* self, int32_t par
 ///
 /// @param self KFilePlaceEditDialog*
 /// @param callback QVariant* func(KFilePlaceEditDialog* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_fileplaceeditdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

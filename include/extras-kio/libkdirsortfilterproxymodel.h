@@ -1603,6 +1603,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_map_to_source(void* self, void* pro
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirsortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1639,6 +1641,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_map_from_source(void* self, void* s
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* sourceIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1677,6 +1681,8 @@ QItemSelection* k_dirsortfilterproxymodel_super_map_selection_to_source(void* se
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QItemSelection* func(KDirSortFilterProxyModel* self, QItemSelection* proxySelection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirsortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1713,6 +1719,8 @@ QItemSelection* k_dirsortfilterproxymodel_super_map_selection_from_source(void* 
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QItemSelection* func(KDirSortFilterProxyModel* self, QItemSelection* sourceSelection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -1833,6 +1841,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_index(void* self, int row, int colu
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirsortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1869,6 +1879,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_parent(void* self, void* child);
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1910,6 +1922,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_sibling(void* self, int row, int co
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -2024,6 +2038,8 @@ QVariant* k_dirsortfilterproxymodel_super_data(void* self, void* index, int role
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QVariant* func(KDirSortFilterProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirsortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -2105,6 +2121,8 @@ QVariant* k_dirsortfilterproxymodel_super_header_data(void* self, int section, i
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QVariant* func(KDirSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2510,6 +2528,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_buddy(void* self, void* index);
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -2595,6 +2615,8 @@ QSize* k_dirsortfilterproxymodel_super_span(void* self, void* index);
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QSize* func(KDirSortFilterProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3599,6 +3621,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_create_source_index(void* self, int
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirsortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3637,6 +3661,8 @@ QModelIndex* k_dirsortfilterproxymodel_super_create_index(void* self, int row, i
 ///
 /// @param self KDirSortFilterProxyModel*
 /// @param callback QModelIndex* func(KDirSortFilterProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

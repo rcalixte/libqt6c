@@ -4387,6 +4387,8 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_load_resourc
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QVariant* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QTextEdit
@@ -4423,6 +4425,8 @@ QVariant* k_textautocorrectionwidgets__autocorrectiontextedit_super_input_method
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QVariant* func(TextAutoCorrectionWidgets__AutoCorrectionTextEdit* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5421,6 +5425,8 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_minimum_size_hi
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5455,6 +5461,8 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_size_hint(void*
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5603,6 +5611,8 @@ QSize* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_size_h
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6528,6 +6538,8 @@ QMargins* k_textautocorrectionwidgets__autocorrectiontextedit_super_viewport_mar
 ///
 /// @param self TextAutoCorrectionWidgets__AutoCorrectionTextEdit*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textautocorrectionwidgets__autocorrectiontextedit_on_viewport_margins(void* self, QMargins* (*callback)());
 

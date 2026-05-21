@@ -179,6 +179,8 @@ KFileItemList* k_parts__fileinfoextension_query_for(void* self, int32_t mode);
 /// @param self KParts__FileInfoExtension*
 /// @param callback KFileItemList* func(KParts__FileInfoExtension* self, enum KParts__FileInfoExtension__QueryMode mode)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_parts__fileinfoextension_on_query_for(void* self, KFileItemList* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `k_parts__fileinfoextension_super_query_for` instead

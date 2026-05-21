@@ -336,6 +336,8 @@ QRect* q_listview_visual_rect(void* self, void* index);
 /// @param self QListView*
 /// @param callback QRect* func(QListView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_listview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_listview_super_visual_rect` instead
@@ -395,6 +397,8 @@ QModelIndex* q_listview_index_at(void* self, void* p);
 ///
 /// @param self QListView*
 /// @param callback QModelIndex* func(QListView* self, QPoint* p)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -611,6 +615,8 @@ QSize* q_listview_contents_size(void* self);
 ///
 /// @param self QListView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_contents_size(void* self, QSize* (*callback)());
 
@@ -1113,6 +1119,8 @@ QModelIndex* q_listview_move_cursor(void* self, int32_t cursorAction, int32_t mo
 /// @param self QListView*
 /// @param callback QModelIndex* func(QListView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_listview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_listview_super_move_cursor` instead
@@ -1142,6 +1150,8 @@ QRect* q_listview_rect_for_index(void* self, void* index);
 ///
 /// @param self QListView*
 /// @param callback QRect* func(QListView* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
@@ -1233,6 +1243,8 @@ QRegion* q_listview_visual_region_for_selection(void* self, void* selection);
 ///
 /// @param self QListView*
 /// @param callback QRegion* func(QListView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -1410,6 +1422,8 @@ QSize* q_listview_viewport_size_hint(void* self);
 ///
 /// @param self QListView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5549,6 +5563,8 @@ QVariant* q_listview_super_input_method_query(void* self, int32_t query);
 /// @param self QListView*
 /// @param callback QVariant* func(QListView* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_listview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6406,6 +6422,8 @@ QSize* q_listview_super_minimum_size_hint(void* self);
 /// @param self QListView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_listview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6440,6 +6458,8 @@ QSize* q_listview_super_size_hint(void* self);
 ///
 /// @param self QListView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_size_hint(void* self, QSize* (*callback)());
 
@@ -7693,6 +7713,8 @@ QPoint* q_listview_super_dirty_region_offset(void* self);
 /// @param self QListView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_listview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7914,6 +7936,8 @@ QMargins* q_listview_super_viewport_margins(void* self);
 ///
 /// @param self QListView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_listview_on_viewport_margins(void* self, QMargins* (*callback)());
 

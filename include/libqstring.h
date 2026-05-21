@@ -100,16 +100,30 @@ int32_t q_string_compare5(const char* s1, const char* s2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
 /// @param s1 const char*
+/// @param s2 char*
+///
+int32_t q_string_compare6(const char* s1, char* s2);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
+///
+/// @param s1 char*
 /// @param s2 const char*
 ///
-int32_t q_string_compare6(const char* s1, const char* s2);
+int32_t q_string_compare7(char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
 /// @param s1 const char*
 /// @param s2 const char*
 ///
-int32_t q_string_compare7(const char* s1, const char* s2);
+int32_t q_string_compare8(const char* s1, const char* s2);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
+///
+/// @param s1 const char*
+/// @param s2 const char*
+///
+int32_t q_string_compare9(const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#localeAwareCompare)
 ///
@@ -117,6 +131,13 @@ int32_t q_string_compare7(const char* s1, const char* s2);
 /// @param s2 const char*
 ///
 int32_t q_string_locale_aware_compare3(const char* s1, const char* s2);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#localeAwareCompare)
+///
+/// @param s1 const char*
+/// @param s2 const char*
+///
+int32_t q_string_locale_aware_compare4(const char* s1, const char* s2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#number)
 ///
@@ -203,10 +224,18 @@ int32_t q_string_compare32(const char* s1, const char* s2, int32_t cs);
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
 /// @param s1 const char*
+/// @param s2 char*
+/// @param cs enum Qt__CaseSensitivity
+///
+int32_t q_string_compare33(const char* s1, char* s2, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
+///
+/// @param s1 char*
 /// @param s2 const char*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int32_t q_string_compare33(const char* s1, const char* s2, int32_t cs);
+int32_t q_string_compare34(char* s1, const char* s2, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
 ///
@@ -214,7 +243,15 @@ int32_t q_string_compare33(const char* s1, const char* s2, int32_t cs);
 /// @param s2 const char*
 /// @param cs enum Qt__CaseSensitivity
 ///
-int32_t q_string_compare34(const char* s1, const char* s2, int32_t cs);
+int32_t q_string_compare35(const char* s1, const char* s2, int32_t cs);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#compare)
+///
+/// @param s1 const char*
+/// @param s2 const char*
+/// @param cs enum Qt__CaseSensitivity
+///
+int32_t q_string_compare36(const char* s1, const char* s2, int32_t cs);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qstring.html#number)
 ///

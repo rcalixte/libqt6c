@@ -181,6 +181,8 @@ QVariant* k_parts__listingfilterextension_filter(void* self, int32_t mode);
 /// @param self KParts__ListingFilterExtension*
 /// @param callback QVariant* func(KParts__ListingFilterExtension* self, enum KParts__ListingFilterExtension__FilterMode mode)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_parts__listingfilterextension_on_filter(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `k_parts__listingfilterextension_super_filter` instead

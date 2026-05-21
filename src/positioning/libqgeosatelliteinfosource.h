@@ -281,6 +281,8 @@ QVariant* q_geosatelliteinfosource_backend_property(void* self, const char* name
 /// @param self QGeoSatelliteInfoSource*
 /// @param callback QVariant* func(QGeoSatelliteInfoSource* self, const char* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_geosatelliteinfosource_on_backend_property(void* self, QVariant* (*callback)(void*, const char*));
 
 /// @warning DEPRECATED: Use `q_geosatelliteinfosource_super_backend_property` instead

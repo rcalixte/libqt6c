@@ -46,11 +46,9 @@ QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, intptr
 /// q_textboundaryfinder_new5 constructs a new QTextBoundaryFinder object.
 ///
 /// @param type enum QTextBoundaryFinder__BoundaryType
-/// @param chars QChar*
-/// @param length intptr_t
-/// @param buffer unsigned char*
+/// @param str const char*
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, void* chars, intptr_t length, unsigned char* buffer);
+QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, const char* str);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
 
@@ -60,9 +58,41 @@ QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, void* chars, intptr
 /// @param chars QChar*
 /// @param length intptr_t
 /// @param buffer unsigned char*
+///
+QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
+
+/// q_textboundaryfinder_new7 constructs a new QTextBoundaryFinder object.
+///
+/// @param type enum QTextBoundaryFinder__BoundaryType
+/// @param chars QChar*
+/// @param length intptr_t
+/// @param buffer unsigned char*
 /// @param bufferSize intptr_t
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize);
+QTextBoundaryFinder* q_textboundaryfinder_new7(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
+
+/// q_textboundaryfinder_new8 constructs a new QTextBoundaryFinder object.
+///
+/// @param type enum QTextBoundaryFinder__BoundaryType
+/// @param str const char*
+/// @param buffer unsigned char*
+///
+QTextBoundaryFinder* q_textboundaryfinder_new8(int32_t type, const char* str, unsigned char* buffer);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
+
+/// q_textboundaryfinder_new9 constructs a new QTextBoundaryFinder object.
+///
+/// @param type enum QTextBoundaryFinder__BoundaryType
+/// @param str const char*
+/// @param buffer unsigned char*
+/// @param bufferSize intptr_t
+///
+QTextBoundaryFinder* q_textboundaryfinder_new9(int32_t type, const char* str, unsigned char* buffer, intptr_t bufferSize);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html#operator-eq)
 ///

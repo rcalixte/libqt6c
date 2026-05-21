@@ -91,11 +91,23 @@ int32_t q_networkinformation_supported_features(void* self);
 ///
 bool q_networkinformation_load_default_backend();
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#loadBackendByName)
+///
+/// @param backend const char*
+///
+bool q_networkinformation_load_backend_by_name(const char* backend);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#loadBackendByFeatures)
 ///
 /// @param features flag of enum QNetworkInformation__Feature
 ///
 bool q_networkinformation_load_backend_by_features(int32_t features);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#load)
+///
+/// @param backend const char*
+///
+bool q_networkinformation_load(const char* backend);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnetworkinformation.html#load)
 ///

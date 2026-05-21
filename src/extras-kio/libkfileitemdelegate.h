@@ -122,6 +122,8 @@ QSize* k_fileitemdelegate_size_hint(void* self, void* option, void* index);
 /// @param self KFileItemDelegate*
 /// @param callback QSize* func(KFileItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_fileitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `k_fileitemdelegate_super_size_hint` instead

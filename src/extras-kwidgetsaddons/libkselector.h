@@ -3948,6 +3948,8 @@ QSize* k_selector_super_size_hint(void* self);
 /// @param self KSelector*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3982,6 +3984,8 @@ QSize* k_selector_super_minimum_size_hint(void* self);
 ///
 /// @param self KSelector*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_selector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -5017,6 +5021,8 @@ QVariant* k_selector_super_input_method_query(void* self, int32_t param1);
 /// @param self KSelector*
 /// @param callback QVariant* func(KSelector* self, enum Qt__InputMethodQuery param1)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_selector_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QWidget
@@ -5940,6 +5946,8 @@ QSize* k_gradientselector_minimum_size(void* self);
 ///
 /// @param self KGradientSelector*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_gradientselector_on_minimum_size(void* self, QSize* (*callback)());
 
@@ -9788,6 +9796,8 @@ QSize* k_gradientselector_super_size_hint(void* self);
 /// @param self KGradientSelector*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_gradientselector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -9822,6 +9832,8 @@ QSize* k_gradientselector_super_minimum_size_hint(void* self);
 ///
 /// @param self KGradientSelector*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_gradientselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -10856,6 +10868,8 @@ QVariant* k_gradientselector_super_input_method_query(void* self, int32_t param1
 ///
 /// @param self KGradientSelector*
 /// @param callback QVariant* func(KGradientSelector* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_gradientselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

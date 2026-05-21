@@ -639,6 +639,8 @@ QSize* q_formlayout_minimum_size(void* self);
 /// @param self QFormLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_formlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_formlayout_super_minimum_size` instead
@@ -665,6 +667,8 @@ QSize* q_formlayout_size_hint(void* self);
 ///
 /// @param self QFormLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_formlayout_on_size_hint(void* self, QSize* (*callback)());
 
@@ -1603,6 +1607,8 @@ QRect* q_formlayout_super_geometry(void* self);
 /// @param self QFormLayout*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_formlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -1637,6 +1643,8 @@ QSize* q_formlayout_super_maximum_size(void* self);
 ///
 /// @param self QFormLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_formlayout_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -2377,6 +2385,8 @@ QRect* q_formlayout_super_alignment_rect(void* self, void* param1);
 ///
 /// @param self QFormLayout*
 /// @param callback QRect* func(QFormLayout* self, QRect* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_formlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 

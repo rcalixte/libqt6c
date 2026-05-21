@@ -429,6 +429,8 @@ QVariant* q_textedit_load_resource(void* self, int type, void* name);
 /// @param self QTextEdit*
 /// @param callback QVariant* func(QTextEdit* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_textedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// @warning DEPRECATED: Use `q_textedit_super_load_resource` instead
@@ -587,6 +589,8 @@ QVariant* q_textedit_input_method_query(void* self, int32_t property);
 ///
 /// @param self QTextEdit*
 /// @param callback QVariant* func(QTextEdit* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5007,6 +5011,8 @@ QSize* q_textedit_super_minimum_size_hint(void* self);
 /// @param self QTextEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_textedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5041,6 +5047,8 @@ QSize* q_textedit_super_size_hint(void* self);
 ///
 /// @param self QTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textedit_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5189,6 +5197,8 @@ QSize* q_textedit_super_viewport_size_hint(void* self);
 ///
 /// @param self QTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6077,6 +6087,8 @@ QMargins* q_textedit_super_viewport_margins(void* self);
 ///
 /// @param self QTextEdit*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textedit_on_viewport_margins(void* self, QMargins* (*callback)());
 

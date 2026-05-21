@@ -28,6 +28,8 @@ QIcon* q_fileiconprovider_icon(void* self, int32_t type);
 /// @param self QFileIconProvider*
 /// @param callback QIcon* func(QFileIconProvider* self, enum QAbstractFileIconProvider__IconType type)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_fileiconprovider_on_icon(void* self, QIcon* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_fileiconprovider_super_icon` instead
@@ -56,6 +58,8 @@ QIcon* q_fileiconprovider_icon2(void* self, void* info);
 ///
 /// @param self QFileIconProvider*
 /// @param callback QIcon* func(QFileIconProvider* self, QFileInfo* info)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_fileiconprovider_on_icon2(void* self, QIcon* (*callback)(void*, void*));
 

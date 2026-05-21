@@ -58,9 +58,9 @@ QJsonValue* q_jsonvalue_new6(const char* s);
 
 /// q_jsonvalue_new7 constructs a new QJsonValue object.
 ///
-/// @param s const char*
+/// @param s char*
 ///
-QJsonValue* q_jsonvalue_new7(const char* s);
+QJsonValue* q_jsonvalue_new7(char* s);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html)
 
@@ -257,7 +257,14 @@ const QJsonValue* q_jsonvalue_operator_subscript(void* self, const char* key);
 /// @param self QJsonValue*
 /// @param key const char*
 ///
-const QJsonValue* q_jsonvalue_operator_subscript3(void* self, const char* key);
+const QJsonValue* q_jsonvalue_operator_subscript2(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
+///
+/// @param self QJsonValue*
+/// @param key char*
+///
+const QJsonValue* q_jsonvalue_operator_subscript3(void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalue.html#operator-5b-5d)
 ///
@@ -429,7 +436,14 @@ QJsonObject* q_jsonvalueconstref_to_object(void* self);
 /// @param self QJsonValueConstRef*
 /// @param key const char*
 ///
-const QJsonValue* q_jsonvalueconstref_operator_subscript2(void* self, const char* key);
+const QJsonValue* q_jsonvalueconstref_operator_subscript(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-5b-5d)
+///
+/// @param self QJsonValueConstRef*
+/// @param key char*
+///
+const QJsonValue* q_jsonvalueconstref_operator_subscript2(void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueconstref.html#operator-5b-5d)
 ///
@@ -642,7 +656,14 @@ QJsonObject* q_jsonvalueref_to_object(void* self);
 /// @param self QJsonValueRef*
 /// @param key const char*
 ///
-const QJsonValue* q_jsonvalueref_operator_subscript2(void* self, const char* key);
+const QJsonValue* q_jsonvalueref_operator_subscript(void* self, const char* key);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-5b-5d)
+///
+/// @param self QJsonValueRef*
+/// @param key char*
+///
+const QJsonValue* q_jsonvalueref_operator_subscript2(void* self, char* key);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonvalueref.html#operator-5b-5d)
 ///

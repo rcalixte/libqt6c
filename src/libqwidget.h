@@ -1505,6 +1505,8 @@ QSize* q_widget_size_hint(void* self);
 /// @param self QWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_widget_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_widget_super_size_hint` instead
@@ -1531,6 +1533,8 @@ QSize* q_widget_minimum_size_hint(void* self);
 ///
 /// @param self QWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -2985,6 +2989,8 @@ QVariant* q_widget_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QWidget*
 /// @param callback QVariant* func(QWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

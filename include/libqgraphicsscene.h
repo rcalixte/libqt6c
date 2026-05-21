@@ -531,6 +531,8 @@ QVariant* q_graphicsscene_input_method_query(void* self, int32_t query);
 /// @param self QGraphicsScene*
 /// @param callback QVariant* func(QGraphicsScene* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsscene_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_graphicsscene_super_input_method_query` instead

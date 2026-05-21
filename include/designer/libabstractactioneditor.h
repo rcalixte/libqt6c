@@ -3305,6 +3305,8 @@ QSize* q_designeractioneditorinterface_super_size_hint(void* self);
 /// @param self QDesignerActionEditorInterface*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designeractioneditorinterface_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3339,6 +3341,8 @@ QSize* q_designeractioneditorinterface_super_minimum_size_hint(void* self);
 ///
 /// @param self QDesignerActionEditorInterface*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designeractioneditorinterface_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4669,6 +4673,8 @@ QVariant* q_designeractioneditorinterface_super_input_method_query(void* self, i
 ///
 /// @param self QDesignerActionEditorInterface*
 /// @param callback QVariant* func(QDesignerActionEditorInterface* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designeractioneditorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

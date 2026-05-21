@@ -735,6 +735,8 @@ QModelIndex* k_configviewstatesaver_super_index_from_config_string(void* self, v
 /// @param self KConfigViewStateSaver*
 /// @param callback QModelIndex* func(KConfigViewStateSaver* self, QAbstractItemModel* model, const char* key)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_configviewstatesaver_on_index_from_config_string(void* self, QModelIndex* (*callback)(void*, void*, const char*));
 
 /// Inherited from KViewStateSerializer

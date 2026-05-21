@@ -168,6 +168,8 @@ QVariant* k_checkableproxymodel_data(void* self, void* index, int role);
 /// @param self KCheckableProxyModel*
 /// @param callback QVariant* func(KCheckableProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_checkableproxymodel_super_data` instead
@@ -1184,6 +1186,8 @@ QModelIndex* k_checkableproxymodel_super_index(void* self, int row, int column, 
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QIdentityProxyModel
@@ -1220,6 +1224,8 @@ QModelIndex* k_checkableproxymodel_super_map_from_source(void* self, void* sourc
 ///
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* sourceIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_checkableproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1258,6 +1264,8 @@ QModelIndex* k_checkableproxymodel_super_map_to_source(void* self, void* proxyIn
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QIdentityProxyModel
@@ -1294,6 +1302,8 @@ QModelIndex* k_checkableproxymodel_super_parent(void* self, void* child);
 ///
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_checkableproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1372,6 +1382,8 @@ QVariant* k_checkableproxymodel_super_header_data(void* self, int section, int32
 ///
 /// @param self KCheckableProxyModel*
 /// @param callback QVariant* func(KCheckableProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_checkableproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -1459,6 +1471,8 @@ QModelIndex* k_checkableproxymodel_super_sibling(void* self, int row, int column
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QIdentityProxyModel
@@ -1496,6 +1510,8 @@ QItemSelection* k_checkableproxymodel_super_map_selection_from_source(void* self
 /// @param self KCheckableProxyModel*
 /// @param callback QItemSelection* func(KCheckableProxyModel* self, QItemSelection* selection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QIdentityProxyModel
@@ -1532,6 +1548,8 @@ QItemSelection* k_checkableproxymodel_super_map_selection_to_source(void* self, 
 ///
 /// @param self KCheckableProxyModel*
 /// @param callback QItemSelection* func(KCheckableProxyModel* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_checkableproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -2125,6 +2143,8 @@ QModelIndex* k_checkableproxymodel_super_buddy(void* self, void* index);
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractProxyModel
@@ -2274,6 +2294,8 @@ QSize* k_checkableproxymodel_super_span(void* self, void* index);
 ///
 /// @param self KCheckableProxyModel*
 /// @param callback QSize* func(KCheckableProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_checkableproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2961,6 +2983,8 @@ QModelIndex* k_checkableproxymodel_super_create_source_index(void* self, int row
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_checkableproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2999,6 +3023,8 @@ QModelIndex* k_checkableproxymodel_super_create_index(void* self, int row, int c
 ///
 /// @param self KCheckableProxyModel*
 /// @param callback QModelIndex* func(KCheckableProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_checkableproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

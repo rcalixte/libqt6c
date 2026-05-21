@@ -392,6 +392,8 @@ KBookmark* k_bookmarkcontextmenu_bookmark(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param callback KBookmark* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_bookmarkcontextmenu_on_bookmark(void* self, KBookmark* (*callback)());
 
 /// @warning DEPRECATED: Use `k_bookmarkcontextmenu_super_bookmark` instead
@@ -3870,6 +3872,8 @@ QSize* k_bookmarkcontextmenu_super_size_hint(void* self);
 /// @param self KBookmarkContextMenu*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_bookmarkcontextmenu_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QMenu
@@ -4533,6 +4537,8 @@ QSize* k_bookmarkcontextmenu_super_minimum_size_hint(void* self);
 ///
 /// @param self KBookmarkContextMenu*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_bookmarkcontextmenu_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -5419,6 +5425,8 @@ QVariant* k_bookmarkcontextmenu_super_input_method_query(void* self, int32_t par
 ///
 /// @param self KBookmarkContextMenu*
 /// @param callback QVariant* func(KBookmarkContextMenu* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_bookmarkcontextmenu_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

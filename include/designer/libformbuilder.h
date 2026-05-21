@@ -542,6 +542,8 @@ QMetaEnum* q_formbuilder_super_tool_bar_area_meta_enum(void* self);
 /// @param self QFormBuilder*
 /// @param callback QMetaEnum* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_formbuilder_on_tool_bar_area_meta_enum(void* self, QMetaEnum* (*callback)());
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qformbuilder.html#dtor.QFormBuilder)

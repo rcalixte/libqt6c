@@ -692,6 +692,8 @@ QSizeF* q_graphicslayout_super_size_hint(void* self, int32_t which, void* constr
 /// @param self QGraphicsLayout*
 /// @param callback QSizeF* func(QGraphicsLayout* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicslayout_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsLayoutItem

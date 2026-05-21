@@ -164,6 +164,8 @@ QRect* k_categorizedview_visual_rect(void* self, void* index);
 /// @param self KCategorizedView*
 /// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_categorizedview_super_visual_rect` instead
@@ -262,6 +264,8 @@ QModelIndex* k_categorizedview_index_at(void* self, void* point);
 ///
 /// @param self KCategorizedView*
 /// @param callback QModelIndex* func(KCategorizedView* self, QPoint* point)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -711,6 +715,8 @@ QModelIndex* k_categorizedview_move_cursor(void* self, int32_t cursorAction, int
 ///
 /// @param self KCategorizedView*
 /// @param callback QModelIndex* func(KCategorizedView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
@@ -5468,6 +5474,8 @@ QRegion* k_categorizedview_super_visual_region_for_selection(void* self, void* s
 /// @param self KCategorizedView*
 /// @param callback QRegion* func(KCategorizedView* self, QItemSelection* selection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
 /// Inherited from QListView
@@ -5617,6 +5625,8 @@ QSize* k_categorizedview_super_viewport_size_hint(void* self);
 ///
 /// @param self KCategorizedView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5839,6 +5849,8 @@ QVariant* k_categorizedview_super_input_method_query(void* self, int32_t query);
 ///
 /// @param self KCategorizedView*
 /// @param callback QVariant* func(KCategorizedView* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -6623,6 +6635,8 @@ QSize* k_categorizedview_super_minimum_size_hint(void* self);
 /// @param self KCategorizedView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6657,6 +6671,8 @@ QSize* k_categorizedview_super_size_hint(void* self);
 ///
 /// @param self KCategorizedView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_size_hint(void* self, QSize* (*callback)());
 
@@ -7690,6 +7706,8 @@ QSize* k_categorizedview_super_contents_size(void* self);
 /// @param self KCategorizedView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedview_on_contents_size(void* self, QSize* (*callback)());
 
 /// Inherited from QListView
@@ -7726,6 +7744,8 @@ QRect* k_categorizedview_super_rect_for_index(void* self, void* index);
 ///
 /// @param self KCategorizedView*
 /// @param callback QRect* func(KCategorizedView* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_rect_for_index(void* self, QRect* (*callback)(void*, void*));
 
@@ -8023,6 +8043,8 @@ QPoint* k_categorizedview_super_dirty_region_offset(void* self);
 /// @param self KCategorizedView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -8244,6 +8266,8 @@ QMargins* k_categorizedview_super_viewport_margins(void* self);
 ///
 /// @param self KCategorizedView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedview_on_viewport_margins(void* self, QMargins* (*callback)());
 

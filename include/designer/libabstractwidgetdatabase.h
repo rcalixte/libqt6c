@@ -317,6 +317,8 @@ QIcon* q_designerwidgetdatabaseiteminterface_icon(void* self);
 /// @param self QDesignerWidgetDataBaseItemInterface*
 /// @param callback QIcon* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerwidgetdatabaseiteminterface_on_icon(void* self, QIcon* (*callback)());
 
 /// @warning DEPRECATED: Use `q_designerwidgetdatabaseiteminterface_super_icon` instead

@@ -658,6 +658,16 @@ const char* k_process_null_device();
 
 /// Inherited from QProcess
 ///
+/// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#splitCommand)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param command const char*
+///
+const char** k_process_split_command(const char* command);
+
+/// Inherited from QProcess
+///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#terminate)
 ///
 /// @param self KProcess*

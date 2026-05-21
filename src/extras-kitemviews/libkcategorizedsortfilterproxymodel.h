@@ -1469,6 +1469,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_map_to_source(void* self, v
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* proxyIndex)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedsortfilterproxymodel_on_map_to_source(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1505,6 +1507,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_map_from_source(void* self,
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* sourceIndex)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_map_from_source(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1543,6 +1547,8 @@ QItemSelection* k_categorizedsortfilterproxymodel_super_map_selection_to_source(
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QItemSelection* func(KCategorizedSortFilterProxyModel* self, QItemSelection* proxySelection)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedsortfilterproxymodel_on_map_selection_to_source(void* self, QItemSelection* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1579,6 +1585,8 @@ QItemSelection* k_categorizedsortfilterproxymodel_super_map_selection_from_sourc
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QItemSelection* func(KCategorizedSortFilterProxyModel* self, QItemSelection* sourceSelection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_map_selection_from_source(void* self, QItemSelection* (*callback)(void*, void*));
 
@@ -1699,6 +1707,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_index(void* self, int row, 
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedsortfilterproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -1735,6 +1745,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_parent(void* self, void* ch
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* child)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1776,6 +1788,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_sibling(void* self, int row
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int column, QModelIndex* idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -1927,6 +1941,8 @@ QVariant* k_categorizedsortfilterproxymodel_super_data(void* self, void* index, 
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QVariant* func(KCategorizedSortFilterProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedsortfilterproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// Inherited from QSortFilterProxyModel
@@ -2008,6 +2024,8 @@ QVariant* k_categorizedsortfilterproxymodel_super_header_data(void* self, int se
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QVariant* func(KCategorizedSortFilterProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2450,6 +2468,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_buddy(void* self, void* ind
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedsortfilterproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QSortFilterProxyModel
@@ -2535,6 +2555,8 @@ QSize* k_categorizedsortfilterproxymodel_super_span(void* self, void* index);
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QSize* func(KCategorizedSortFilterProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -3539,6 +3561,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_create_source_index(void* s
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int col, void* internalPtr)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_categorizedsortfilterproxymodel_on_create_source_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -3577,6 +3601,8 @@ QModelIndex* k_categorizedsortfilterproxymodel_super_create_index(void* self, in
 ///
 /// @param self KCategorizedSortFilterProxyModel*
 /// @param callback QModelIndex* func(KCategorizedSortFilterProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_categorizedsortfilterproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

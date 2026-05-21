@@ -3322,6 +3322,8 @@ QSize* k_languagebutton_super_size_hint(void* self);
 /// @param self KLanguageButton*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_languagebutton_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3356,6 +3358,8 @@ QSize* k_languagebutton_super_minimum_size_hint(void* self);
 ///
 /// @param self KLanguageButton*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_languagebutton_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4686,6 +4690,8 @@ QVariant* k_languagebutton_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KLanguageButton*
 /// @param callback QVariant* func(KLanguageButton* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_languagebutton_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

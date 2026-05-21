@@ -55,6 +55,16 @@ QStringEncoder* q_stringencoder_new5(const char* name, int32_t flags);
 ///
 intptr_t q_stringencoder_required_space(void* self, intptr_t inputLength);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qstringencoder.html#appendToBuffer)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self QStringEncoder*
+/// @param out char*
+/// @param in const char*
+///
+char* q_stringencoder_append_to_buffer(void* self, char* out, const char* in);
+
 /// Inherited from QStringConverter
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qstringconverter.html#isValid)

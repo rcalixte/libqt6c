@@ -230,6 +230,8 @@ QRect* q_accessiblewidget_rect(void* self);
 /// @param self QAccessibleWidget*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessiblewidget_on_rect(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `q_accessiblewidget_super_rect` instead
@@ -375,6 +377,8 @@ QAccessible__State* q_accessiblewidget_state(void* self);
 /// @param self QAccessibleWidget*
 /// @param callback QAccessible__State* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessiblewidget_on_state(void* self, QAccessible__State* (*callback)());
 
 /// @warning DEPRECATED: Use `q_accessiblewidget_super_state` instead
@@ -402,6 +406,8 @@ QColor* q_accessiblewidget_foreground_color(void* self);
 /// @param self QAccessibleWidget*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_accessiblewidget_on_foreground_color(void* self, QColor* (*callback)());
 
 /// @warning DEPRECATED: Use `q_accessiblewidget_super_foreground_color` instead
@@ -428,6 +434,8 @@ QColor* q_accessiblewidget_background_color(void* self);
 ///
 /// @param self QAccessibleWidget*
 /// @param callback QColor* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_accessiblewidget_on_background_color(void* self, QColor* (*callback)());
 

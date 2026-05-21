@@ -276,6 +276,8 @@ QPdfLink* q_pdfpagenavigator_current_link(void* self);
 /// @param self QPdfPageNavigator*
 /// @param callback QPdfLink* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_pdfpagenavigator_on_current_link(void* self, QPdfLink* (*callback)());
 
 /// @warning DEPRECATED: Use `q_pdfpagenavigator_super_current_link` instead

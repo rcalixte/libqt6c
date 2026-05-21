@@ -210,6 +210,8 @@ QSize* q_progressdialog_size_hint(void* self);
 /// @param self QProgressDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_progressdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_progressdialog_super_size_hint` instead
@@ -3623,6 +3625,8 @@ QSize* q_progressdialog_super_minimum_size_hint(void* self);
 /// @param self QProgressDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_progressdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -5055,6 +5059,8 @@ QVariant* q_progressdialog_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QProgressDialog*
 /// @param callback QVariant* func(QProgressDialog* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_progressdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

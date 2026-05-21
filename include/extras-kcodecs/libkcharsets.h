@@ -22,6 +22,19 @@ const char* k_charsets_tr(const char* sourceText);
 ///
 KCharsets* k_charsets_charsets();
 
+/// [Upstream resources](https://api.kde.org/kcharsets.html#fromEntity)
+///
+/// @param str const char*
+///
+QChar* k_charsets_from_entity(const char* str);
+
+/// [Upstream resources](https://api.kde.org/kcharsets.html#fromEntity)
+///
+/// @param str const char*
+/// @param lenVal int*
+///
+QChar* k_charsets_from_entity2(const char* str, int* lenVal);
+
 /// [Upstream resources](https://api.kde.org/kcharsets.html#toEntity)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -61,6 +74,15 @@ const char** k_charsets_descriptive_encoding_names(void* self);
 /// @return libqt_list of const char**
 ///
 libqt_list k_charsets_encodings_by_script(void* self);
+
+/// [Upstream resources](https://api.kde.org/kcharsets.html#descriptionForEncoding)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self KCharsets*
+/// @param encoding const char*
+///
+const char* k_charsets_description_for_encoding(void* self, const char* encoding);
 
 /// [Upstream resources](https://api.kde.org/kcharsets.html#encodingForName)
 ///

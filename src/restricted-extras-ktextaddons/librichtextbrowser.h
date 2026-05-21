@@ -4869,6 +4869,8 @@ QVariant* k_textcustomeditor__richtextbrowser_super_load_resource(void* self, in
 /// @param self TextCustomEditor__RichTextBrowser*
 /// @param callback QVariant* func(TextCustomEditor__RichTextBrowser* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__richtextbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QTextBrowser
@@ -5306,6 +5308,8 @@ QVariant* k_textcustomeditor__richtextbrowser_super_input_method_query(void* sel
 ///
 /// @param self TextCustomEditor__RichTextBrowser*
 /// @param callback QVariant* func(TextCustomEditor__RichTextBrowser* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__richtextbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -5971,6 +5975,8 @@ QSize* k_textcustomeditor__richtextbrowser_super_minimum_size_hint(void* self);
 /// @param self TextCustomEditor__RichTextBrowser*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textcustomeditor__richtextbrowser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6005,6 +6011,8 @@ QSize* k_textcustomeditor__richtextbrowser_super_size_hint(void* self);
 ///
 /// @param self TextCustomEditor__RichTextBrowser*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__richtextbrowser_on_size_hint(void* self, QSize* (*callback)());
 
@@ -6153,6 +6161,8 @@ QSize* k_textcustomeditor__richtextbrowser_super_viewport_size_hint(void* self);
 ///
 /// @param self TextCustomEditor__RichTextBrowser*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__richtextbrowser_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -7078,6 +7088,8 @@ QMargins* k_textcustomeditor__richtextbrowser_super_viewport_margins(void* self)
 ///
 /// @param self TextCustomEditor__RichTextBrowser*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textcustomeditor__richtextbrowser_on_viewport_margins(void* self, QMargins* (*callback)());
 

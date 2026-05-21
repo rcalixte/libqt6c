@@ -148,6 +148,20 @@ const char* q_date_to_string3(void* self, const char* format, void* cal) {
     return _ret;
 }
 
+const char* q_date_to_string4(void* self, const char* format) {
+    libqt_string _str = QDate_ToString4((QDate*)self, qstring(format));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_date_to_string5(void* self, const char* format, void* cal) {
+    libqt_string _str = QDate_ToString5((QDate*)self, qstring(format), (QCalendar*)cal);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 bool q_date_set_date(void* self, int year, int month, int day) {
     return QDate_SetDate((QDate*)self, year, month, day);
 }
@@ -188,12 +202,40 @@ QDate* q_date_current_date() {
     return QDate_CurrentDate();
 }
 
+QDate* q_date_from_string(const char* stringVal) {
+    return QDate_FromString(qstring(stringVal));
+}
+
 QDate* q_date_from_string2(const char* stringVal) {
     return QDate_FromString2(qstring(stringVal));
 }
 
+QDate* q_date_from_string3(const char* stringVal, const char* format, void* cal) {
+    return QDate_FromString3(qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
+QDate* q_date_from_string4(const char* stringVal, const char* format, void* cal) {
+    return QDate_FromString4(qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
 QDate* q_date_from_string5(const char* stringVal, const char* format, void* cal) {
     return QDate_FromString5(qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
+QDate* q_date_from_string6(const char* stringVal, const char* format) {
+    return QDate_FromString6(qstring(stringVal), qstring(format));
+}
+
+QDate* q_date_from_string7(const char* stringVal, const char* format, int baseYear, void* cal) {
+    return QDate_FromString7(qstring(stringVal), qstring(format), baseYear, (QCalendar*)cal);
+}
+
+QDate* q_date_from_string8(const char* stringVal, const char* format) {
+    return QDate_FromString8(qstring(stringVal), qstring(format));
+}
+
+QDate* q_date_from_string9(const char* stringVal, const char* format, int baseYear, void* cal) {
+    return QDate_FromString9(qstring(stringVal), qstring(format), baseYear, (QCalendar*)cal);
 }
 
 QDate* q_date_from_string10(const char* stringVal, const char* format) {
@@ -239,8 +281,20 @@ const char* q_date_to_string1(void* self, int32_t format) {
     return _ret;
 }
 
+QDate* q_date_from_string22(const char* stringVal, int32_t format) {
+    return QDate_FromString22(qstring(stringVal), format);
+}
+
 QDate* q_date_from_string23(const char* stringVal, int32_t format) {
     return QDate_FromString23(qstring(stringVal), format);
+}
+
+QDate* q_date_from_string32(const char* stringVal, const char* format, int baseYear) {
+    return QDate_FromString32(qstring(stringVal), qstring(format), baseYear);
+}
+
+QDate* q_date_from_string33(const char* stringVal, const char* format, int baseYear) {
+    return QDate_FromString33(qstring(stringVal), qstring(format), baseYear);
 }
 
 QDate* q_date_from_string34(const char* stringVal, const char* format, int baseYear) {
@@ -325,6 +379,13 @@ const char* q_time_to_string2(void* self, const char* format) {
     return _ret;
 }
 
+const char* q_time_to_string3(void* self, const char* format) {
+    libqt_string _str = QTime_ToString3((QTime*)self, qstring(format));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 bool q_time_set_h_m_s(void* self, int h, int m, int s) {
     return QTime_SetHMS((QTime*)self, h, m, s);
 }
@@ -357,6 +418,18 @@ QTime* q_time_current_time() {
     return QTime_CurrentTime();
 }
 
+QTime* q_time_from_string(const char* stringVal) {
+    return QTime_FromString(qstring(stringVal));
+}
+
+QTime* q_time_from_string2(const char* stringVal, const char* format) {
+    return QTime_FromString2(qstring(stringVal), qstring(format));
+}
+
+QTime* q_time_from_string3(const char* stringVal, const char* format) {
+    return QTime_FromString3(qstring(stringVal), qstring(format));
+}
+
 QTime* q_time_from_string4(const char* stringVal) {
     return QTime_FromString4(qstring(stringVal));
 }
@@ -378,6 +451,10 @@ const char* q_time_to_string1(void* self, int32_t f) {
 
 bool q_time_set_h_m_s4(void* self, int h, int m, int s, int ms) {
     return QTime_SetHMS4((QTime*)self, h, m, s, ms);
+}
+
+QTime* q_time_from_string22(const char* stringVal, int32_t format) {
+    return QTime_FromString22(qstring(stringVal), format);
 }
 
 QTime* q_time_from_string23(const char* stringVal, int32_t format) {
@@ -532,6 +609,20 @@ const char* q_datetime_to_string3(void* self, const char* format, void* cal) {
     return _ret;
 }
 
+const char* q_datetime_to_string4(void* self, const char* format) {
+    libqt_string _str = QDateTime_ToString4((QDateTime*)self, qstring(format));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_datetime_to_string5(void* self, const char* format, void* cal) {
+    libqt_string _str = QDateTime_ToString5((QDateTime*)self, qstring(format), (QCalendar*)cal);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 QDateTime* q_datetime_add_days(void* self, int64_t days) {
     return QDateTime_AddDays((QDateTime*)self, days);
 }
@@ -600,12 +691,40 @@ QDateTime* q_datetime_current_date_time_utc() {
     return QDateTime_CurrentDateTimeUtc();
 }
 
+QDateTime* q_datetime_from_string(const char* stringVal) {
+    return QDateTime_FromString(qstring(stringVal));
+}
+
 QDateTime* q_datetime_from_string2(const char* stringVal) {
     return QDateTime_FromString2(qstring(stringVal));
 }
 
+QDateTime* q_datetime_from_string3(const char* stringVal, const char* format, void* cal) {
+    return QDateTime_FromString3(qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
+QDateTime* q_datetime_from_string4(const char* stringVal, const char* format, void* cal) {
+    return QDateTime_FromString4(qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
 QDateTime* q_datetime_from_string5(const char* stringVal, const char* format, void* cal) {
     return QDateTime_FromString5(qstring(stringVal), qstring(format), (QCalendar*)cal);
+}
+
+QDateTime* q_datetime_from_string6(const char* stringVal, const char* format) {
+    return QDateTime_FromString6(qstring(stringVal), qstring(format));
+}
+
+QDateTime* q_datetime_from_string7(const char* stringVal, const char* format, int baseYear, void* cal) {
+    return QDateTime_FromString7(qstring(stringVal), qstring(format), baseYear, (QCalendar*)cal);
+}
+
+QDateTime* q_datetime_from_string8(const char* stringVal, const char* format) {
+    return QDateTime_FromString8(qstring(stringVal), qstring(format));
+}
+
+QDateTime* q_datetime_from_string9(const char* stringVal, const char* format, int baseYear, void* cal) {
+    return QDateTime_FromString9(qstring(stringVal), qstring(format), baseYear, (QCalendar*)cal);
 }
 
 QDateTime* q_datetime_from_string10(const char* stringVal, const char* format) {
@@ -675,8 +794,20 @@ const char* q_datetime_to_string1(void* self, int32_t format) {
     return _ret;
 }
 
+QDateTime* q_datetime_from_string22(const char* stringVal, int32_t format) {
+    return QDateTime_FromString22(qstring(stringVal), format);
+}
+
 QDateTime* q_datetime_from_string23(const char* stringVal, int32_t format) {
     return QDateTime_FromString23(qstring(stringVal), format);
+}
+
+QDateTime* q_datetime_from_string32(const char* stringVal, const char* format, int baseYear) {
+    return QDateTime_FromString32(qstring(stringVal), qstring(format), baseYear);
+}
+
+QDateTime* q_datetime_from_string33(const char* stringVal, const char* format, int baseYear) {
+    return QDateTime_FromString33(qstring(stringVal), qstring(format), baseYear);
 }
 
 QDateTime* q_datetime_from_string34(const char* stringVal, const char* format, int baseYear) {

@@ -151,6 +151,8 @@ QVariant* q_textbrowser_load_resource(void* self, int type, void* name);
 /// @param self QTextBrowser*
 /// @param callback QVariant* func(QTextBrowser* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_textbrowser_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// @warning DEPRECATED: Use `q_textbrowser_super_load_resource` instead
@@ -4937,6 +4939,8 @@ QVariant* q_textbrowser_super_input_method_query(void* self, int32_t property);
 /// @param self QTextBrowser*
 /// @param callback QVariant* func(QTextBrowser* self, enum Qt__InputMethodQuery property)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_textbrowser_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QTextEdit
@@ -5675,6 +5679,8 @@ QSize* q_textbrowser_super_minimum_size_hint(void* self);
 /// @param self QTextBrowser*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_textbrowser_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5709,6 +5715,8 @@ QSize* q_textbrowser_super_size_hint(void* self);
 ///
 /// @param self QTextBrowser*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textbrowser_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5857,6 +5865,8 @@ QSize* q_textbrowser_super_viewport_size_hint(void* self);
 ///
 /// @param self QTextBrowser*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textbrowser_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6782,6 +6792,8 @@ QMargins* q_textbrowser_super_viewport_margins(void* self);
 ///
 /// @param self QTextBrowser*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_textbrowser_on_viewport_margins(void* self, QMargins* (*callback)());
 

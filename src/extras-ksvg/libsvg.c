@@ -116,12 +116,24 @@ QSizeF* k_svg__svg_element_size(void* self, const char* elementId) {
     return KSvg__Svg_ElementSize((KSvg__Svg*)self, qstring(elementId));
 }
 
+QSizeF* k_svg__svg_element_size2(void* self, const char* elementId) {
+    return KSvg__Svg_ElementSize2((KSvg__Svg*)self, qstring(elementId));
+}
+
 QRectF* k_svg__svg_element_rect(void* self, const char* elementId) {
     return KSvg__Svg_ElementRect((KSvg__Svg*)self, qstring(elementId));
 }
 
+QRectF* k_svg__svg_element_rect2(void* self, const char* elementId) {
+    return KSvg__Svg_ElementRect2((KSvg__Svg*)self, qstring(elementId));
+}
+
 bool k_svg__svg_has_element(void* self, const char* elementId) {
     return KSvg__Svg_HasElement((KSvg__Svg*)self, qstring(elementId));
+}
+
+bool k_svg__svg_has_element2(void* self, const char* elementId) {
+    return KSvg__Svg_HasElement2((KSvg__Svg*)self, qstring(elementId));
 }
 
 bool k_svg__svg_is_valid(void* self) {

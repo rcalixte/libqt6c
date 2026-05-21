@@ -176,6 +176,8 @@ QNetworkCacheMetaData* q_networkdiskcache_meta_data(void* self, void* url);
 /// @param self QNetworkDiskCache*
 /// @param callback QNetworkCacheMetaData* func(QNetworkDiskCache* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_networkdiskcache_on_meta_data(void* self, QNetworkCacheMetaData* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_networkdiskcache_super_meta_data` instead

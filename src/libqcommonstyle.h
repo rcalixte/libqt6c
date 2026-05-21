@@ -185,6 +185,8 @@ QRect* q_commonstyle_sub_element_rect(void* self, int32_t r, void* opt, void* wi
 /// @param self QCommonStyle*
 /// @param callback QRect* func(QCommonStyle* self, enum QStyle__SubElement r, QStyleOption* opt, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_commonstyle_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_commonstyle_super_sub_element_rect` instead
@@ -293,6 +295,8 @@ QRect* q_commonstyle_sub_control_rect(void* self, int32_t cc, void* opt, int32_t
 /// @param self QCommonStyle*
 /// @param callback QRect* func(QCommonStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* w)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_commonstyle_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
 /// @warning DEPRECATED: Use `q_commonstyle_super_sub_control_rect` instead
@@ -327,6 +331,8 @@ QSize* q_commonstyle_size_from_contents(void* self, int32_t ct, void* opt, void*
 ///
 /// @param self QCommonStyle*
 /// @param callback QSize* func(QCommonStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* widget)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_commonstyle_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
@@ -430,6 +436,8 @@ QIcon* q_commonstyle_standard_icon(void* self, int32_t standardIcon, void* opt, 
 /// @param self QCommonStyle*
 /// @param callback QIcon* func(QCommonStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* opt, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_commonstyle_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_commonstyle_super_standard_icon` instead
@@ -463,6 +471,8 @@ QPixmap* q_commonstyle_standard_pixmap(void* self, int32_t sp, void* opt, void* 
 /// @param self QCommonStyle*
 /// @param callback QPixmap* func(QCommonStyle* self, enum QStyle__StandardPixmap sp, QStyleOption* opt, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_commonstyle_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_commonstyle_super_standard_pixmap` instead
@@ -495,6 +505,8 @@ QPixmap* q_commonstyle_generated_icon_pixmap(void* self, int32_t iconMode, void*
 ///
 /// @param self QCommonStyle*
 /// @param callback QPixmap* func(QCommonStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_commonstyle_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
@@ -1346,6 +1358,8 @@ QRect* q_commonstyle_super_item_text_rect(void* self, void* fm, void* r, int fla
 /// @param self QCommonStyle*
 /// @param callback QRect* func(QCommonStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_commonstyle_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// Inherited from QStyle
@@ -1386,6 +1400,8 @@ QRect* q_commonstyle_super_item_pixmap_rect(void* self, void* r, int flags, void
 ///
 /// @param self QCommonStyle*
 /// @param callback QRect* func(QCommonStyle* self, QRect* r, int flags, QPixmap* pixmap)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_commonstyle_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
@@ -1513,6 +1529,8 @@ QPalette* q_commonstyle_super_standard_palette(void* self);
 ///
 /// @param self QCommonStyle*
 /// @param callback QPalette* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_commonstyle_on_standard_palette(void* self, QPalette* (*callback)());
 

@@ -135,6 +135,8 @@ QVariant* q_pdfbookmarkmodel_data(void* self, void* index, int role);
 /// @param self QPdfBookmarkModel*
 /// @param callback QVariant* func(QPdfBookmarkModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_pdfbookmarkmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_pdfbookmarkmodel_super_data` instead
@@ -167,6 +169,8 @@ QModelIndex* q_pdfbookmarkmodel_index(void* self, int row, int column, void* par
 /// @param self QPdfBookmarkModel*
 /// @param callback QModelIndex* func(QPdfBookmarkModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_pdfbookmarkmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_pdfbookmarkmodel_super_index` instead
@@ -197,6 +201,8 @@ QModelIndex* q_pdfbookmarkmodel_parent(void* self, void* index);
 ///
 /// @param self QPdfBookmarkModel*
 /// @param callback QModelIndex* func(QPdfBookmarkModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_pdfbookmarkmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -1131,6 +1137,8 @@ QModelIndex* q_pdfbookmarkmodel_super_sibling(void* self, int row, int column, v
 /// @param self QPdfBookmarkModel*
 /// @param callback QModelIndex* func(QPdfBookmarkModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_pdfbookmarkmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -1249,6 +1257,8 @@ QVariant* q_pdfbookmarkmodel_super_header_data(void* self, int section, int32_t 
 ///
 /// @param self QPdfBookmarkModel*
 /// @param callback QVariant* func(QPdfBookmarkModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_pdfbookmarkmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -2121,6 +2131,8 @@ QModelIndex* q_pdfbookmarkmodel_super_buddy(void* self, void* index);
 /// @param self QPdfBookmarkModel*
 /// @param callback QModelIndex* func(QPdfBookmarkModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_pdfbookmarkmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2206,6 +2218,8 @@ QSize* q_pdfbookmarkmodel_super_span(void* self, void* index);
 ///
 /// @param self QPdfBookmarkModel*
 /// @param callback QSize* func(QPdfBookmarkModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_pdfbookmarkmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2650,6 +2664,8 @@ QModelIndex* q_pdfbookmarkmodel_super_create_index(void* self, int row, int colu
 ///
 /// @param self QPdfBookmarkModel*
 /// @param callback QModelIndex* func(QPdfBookmarkModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_pdfbookmarkmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

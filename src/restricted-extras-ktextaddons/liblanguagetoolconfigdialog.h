@@ -3248,6 +3248,8 @@ QSize* k_textgrammarcheck__languagetoolconfigdialog_super_size_hint(void* self);
 /// @param self TextGrammarCheck__LanguageToolConfigDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textgrammarcheck__languagetoolconfigdialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3282,6 +3284,8 @@ QSize* k_textgrammarcheck__languagetoolconfigdialog_super_minimum_size_hint(void
 ///
 /// @param self TextGrammarCheck__LanguageToolConfigDialog*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__languagetoolconfigdialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4863,6 +4867,8 @@ QVariant* k_textgrammarcheck__languagetoolconfigdialog_super_input_method_query(
 ///
 /// @param self TextGrammarCheck__LanguageToolConfigDialog*
 /// @param callback QVariant* func(TextGrammarCheck__LanguageToolConfigDialog* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__languagetoolconfigdialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

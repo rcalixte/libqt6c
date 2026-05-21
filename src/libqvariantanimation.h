@@ -376,6 +376,8 @@ QVariant* q_variantanimation_interpolated(void* self, void* from, void* to, doub
 /// @param self QVariantAnimation*
 /// @param callback QVariant* func(QVariantAnimation* self, QVariant* from, QVariant* to, double progress)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_variantanimation_on_interpolated(void* self, QVariant* (*callback)(void*, void*, void*, double));
 
 /// @warning DEPRECATED: Use `q_variantanimation_super_interpolated` instead

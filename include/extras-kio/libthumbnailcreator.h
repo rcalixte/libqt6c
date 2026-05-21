@@ -237,6 +237,8 @@ KIO__ThumbnailResult* k_io__thumbnailcreator_create(void* self, void* request);
 /// @param self KIO__ThumbnailCreator*
 /// @param callback KIO__ThumbnailResult* func(KIO__ThumbnailCreator* self, KIO__ThumbnailRequest* request)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__thumbnailcreator_on_create(void* self, KIO__ThumbnailResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__thumbnailcreator_super_create` instead

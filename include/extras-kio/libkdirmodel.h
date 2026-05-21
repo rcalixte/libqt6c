@@ -248,6 +248,8 @@ QVariant* k_dirmodel_data(void* self, void* index, int role);
 /// @param self KDirModel*
 /// @param callback QVariant* func(KDirModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirmodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_dirmodel_super_data` instead
@@ -408,6 +410,8 @@ QVariant* k_dirmodel_header_data(void* self, int section, int32_t orientation, i
 /// @param self KDirModel*
 /// @param callback QVariant* func(KDirModel* self, int section, enum Qt__Orientation orientation, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirmodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
 /// @warning DEPRECATED: Use `k_dirmodel_super_header_data` instead
@@ -440,6 +444,8 @@ QModelIndex* k_dirmodel_index(void* self, int row, int column, void* parent);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, int row, int column, QModelIndex* parent)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirmodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -530,6 +536,8 @@ QModelIndex* k_dirmodel_parent(void* self, void* index);
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirmodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_dirmodel_super_parent` instead
@@ -560,6 +568,8 @@ QModelIndex* k_dirmodel_sibling(void* self, int row, int column, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, int row, int column, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirmodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
@@ -2122,6 +2132,8 @@ QModelIndex* k_dirmodel_super_buddy(void* self, void* index);
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_dirmodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2207,6 +2219,8 @@ QSize* k_dirmodel_super_span(void* self, void* index);
 ///
 /// @param self KDirModel*
 /// @param callback QSize* func(KDirModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirmodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -2651,6 +2665,8 @@ QModelIndex* k_dirmodel_super_create_index(void* self, int row, int column);
 ///
 /// @param self KDirModel*
 /// @param callback QModelIndex* func(KDirModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_dirmodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

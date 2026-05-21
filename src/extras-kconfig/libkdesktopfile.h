@@ -706,6 +706,8 @@ KConfigGroup* k_desktopfile_super_group_impl(void* self, const char* groupName);
 /// @param self KDesktopFile*
 /// @param callback KConfigGroup* func(KDesktopFile* self, const char* groupName)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_desktopfile_on_group_impl(void* self, KConfigGroup* (*callback)(void*, const char*));
 
 /// Inherited from KConfig

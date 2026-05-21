@@ -285,6 +285,8 @@ QSize* q_label_size_hint(void* self);
 /// @param self QLabel*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_label_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_label_super_size_hint` instead
@@ -311,6 +313,8 @@ QSize* q_label_minimum_size_hint(void* self);
 ///
 /// @param self QLabel*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_label_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4938,6 +4942,8 @@ QVariant* q_label_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QLabel*
 /// @param callback QVariant* func(QLabel* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_label_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

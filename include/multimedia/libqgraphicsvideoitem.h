@@ -173,6 +173,8 @@ QRectF* q_graphicsvideoitem_bounding_rect(void* self);
 /// @param self QGraphicsVideoItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsvideoitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsvideoitem_super_bounding_rect` instead
@@ -304,6 +306,8 @@ QVariant* q_graphicsvideoitem_item_change(void* self, int32_t change, void* valu
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback QVariant* func(QGraphicsVideoItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsvideoitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -2822,6 +2826,8 @@ QPainterPath* q_graphicsvideoitem_super_shape(void* self);
 /// @param self QGraphicsVideoItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsvideoitem_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -3008,6 +3014,8 @@ QPainterPath* q_graphicsvideoitem_super_opaque_area(void* self);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsvideoitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -3788,6 +3796,8 @@ QVariant* q_graphicsvideoitem_super_input_method_query(void* self, int32_t query
 /// @param self QGraphicsVideoItem*
 /// @param callback QVariant* func(QGraphicsVideoItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsvideoitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -3900,6 +3910,8 @@ QVariant* q_graphicsvideoitem_super_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsVideoItem*
 /// @param callback QVariant* func(QGraphicsVideoItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsvideoitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 

@@ -155,6 +155,8 @@ QSize* q_abstractitemdelegate_size_hint(void* self, void* option, void* index);
 /// @param self QAbstractItemDelegate*
 /// @param callback QSize* func(QAbstractItemDelegate* self, QStyleOptionViewItem* option, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractitemdelegate_on_size_hint(void* self, QSize* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `q_abstractitemdelegate_super_size_hint` instead

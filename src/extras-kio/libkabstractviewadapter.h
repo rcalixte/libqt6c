@@ -56,6 +56,8 @@ QSize* k_abstractviewadapter_icon_size(void* self);
 /// @param self KAbstractViewAdapter*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_abstractviewadapter_on_icon_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_abstractviewadapter_super_icon_size` instead
@@ -82,6 +84,8 @@ QPalette* k_abstractviewadapter_palette(void* self);
 ///
 /// @param self KAbstractViewAdapter*
 /// @param callback QPalette* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_abstractviewadapter_on_palette(void* self, QPalette* (*callback)());
 
@@ -110,6 +114,8 @@ QRect* k_abstractviewadapter_visible_area(void* self);
 /// @param self KAbstractViewAdapter*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_abstractviewadapter_on_visible_area(void* self, QRect* (*callback)());
 
 /// @warning DEPRECATED: Use `k_abstractviewadapter_super_visible_area` instead
@@ -137,6 +143,8 @@ QRect* k_abstractviewadapter_visual_rect(void* self, void* index);
 ///
 /// @param self KAbstractViewAdapter*
 /// @param callback QRect* func(KAbstractViewAdapter* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_abstractviewadapter_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 

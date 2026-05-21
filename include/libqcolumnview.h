@@ -135,6 +135,8 @@ QModelIndex* q_columnview_index_at(void* self, void* point);
 /// @param self QColumnView*
 /// @param callback QModelIndex* func(QColumnView* self, QPoint* point)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_columnview_on_index_at(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_columnview_super_index_at` instead
@@ -194,6 +196,8 @@ QSize* q_columnview_size_hint(void* self);
 /// @param self QColumnView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_columnview_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_columnview_super_size_hint` instead
@@ -221,6 +225,8 @@ QRect* q_columnview_visual_rect(void* self, void* index);
 ///
 /// @param self QColumnView*
 /// @param callback QRect* func(QColumnView* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_columnview_on_visual_rect(void* self, QRect* (*callback)(void*, void*));
 
@@ -436,6 +442,8 @@ QModelIndex* q_columnview_move_cursor(void* self, int32_t cursorAction, int32_t 
 /// @param self QColumnView*
 /// @param callback QModelIndex* func(QColumnView* self, enum QAbstractItemView__CursorAction cursorAction, flag of enum Qt__KeyboardModifier modifiers)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_columnview_on_move_cursor(void* self, QModelIndex* (*callback)(void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `q_columnview_super_move_cursor` instead
@@ -525,6 +533,8 @@ QRegion* q_columnview_visual_region_for_selection(void* self, void* selection);
 ///
 /// @param self QColumnView*
 /// @param callback QRegion* func(QColumnView* self, QItemSelection* selection)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_columnview_on_visual_region_for_selection(void* self, QRegion* (*callback)(void*, void*));
 
@@ -4798,6 +4808,8 @@ QVariant* q_columnview_super_input_method_query(void* self, int32_t query);
 /// @param self QColumnView*
 /// @param callback QVariant* func(QColumnView* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_columnview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractItemView
@@ -6218,6 +6230,8 @@ QSize* q_columnview_super_viewport_size_hint(void* self);
 /// @param self QColumnView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_columnview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6252,6 +6266,8 @@ QSize* q_columnview_super_minimum_size_hint(void* self);
 ///
 /// @param self QColumnView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_columnview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -7579,6 +7595,8 @@ QPoint* q_columnview_super_dirty_region_offset(void* self);
 /// @param self QColumnView*
 /// @param callback QPoint* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_columnview_on_dirty_region_offset(void* self, QPoint* (*callback)());
 
 /// Inherited from QAbstractItemView
@@ -7800,6 +7818,8 @@ QMargins* q_columnview_super_viewport_margins(void* self);
 ///
 /// @param self QColumnView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_columnview_on_viewport_margins(void* self, QMargins* (*callback)());
 

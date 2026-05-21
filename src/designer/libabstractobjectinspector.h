@@ -3247,6 +3247,8 @@ QSize* q_designerobjectinspectorinterface_super_size_hint(void* self);
 /// @param self QDesignerObjectInspectorInterface*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerobjectinspectorinterface_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3281,6 +3283,8 @@ QSize* q_designerobjectinspectorinterface_super_minimum_size_hint(void* self);
 ///
 /// @param self QDesignerObjectInspectorInterface*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designerobjectinspectorinterface_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4611,6 +4615,8 @@ QVariant* q_designerobjectinspectorinterface_super_input_method_query(void* self
 ///
 /// @param self QDesignerObjectInspectorInterface*
 /// @param callback QVariant* func(QDesignerObjectInspectorInterface* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designerobjectinspectorinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

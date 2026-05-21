@@ -43,6 +43,8 @@ QSize* q_layoutitem_size_hint(void* self);
 /// @param self QLayoutItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_layoutitem_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_layoutitem_super_size_hint` instead
@@ -70,6 +72,8 @@ QSize* q_layoutitem_minimum_size(void* self);
 /// @param self QLayoutItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_layoutitem_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_layoutitem_super_minimum_size` instead
@@ -96,6 +100,8 @@ QSize* q_layoutitem_maximum_size(void* self);
 ///
 /// @param self QLayoutItem*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_layoutitem_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -183,6 +189,8 @@ QRect* q_layoutitem_geometry(void* self);
 ///
 /// @param self QLayoutItem*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_layoutitem_on_geometry(void* self, QRect* (*callback)());
 
@@ -560,6 +568,8 @@ QSize* q_spaceritem_size_hint(void* self);
 /// @param self QSpacerItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_spaceritem_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_spaceritem_super_size_hint` instead
@@ -587,6 +597,8 @@ QSize* q_spaceritem_minimum_size(void* self);
 /// @param self QSpacerItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_spaceritem_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_spaceritem_super_minimum_size` instead
@@ -613,6 +625,8 @@ QSize* q_spaceritem_maximum_size(void* self);
 ///
 /// @param self QSpacerItem*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_spaceritem_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -727,6 +741,8 @@ QRect* q_spaceritem_geometry(void* self);
 ///
 /// @param self QSpacerItem*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_spaceritem_on_geometry(void* self, QRect* (*callback)());
 
@@ -1095,6 +1111,8 @@ QSize* q_widgetitem_size_hint(void* self);
 /// @param self QWidgetItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_widgetitem_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_widgetitem_super_size_hint` instead
@@ -1122,6 +1140,8 @@ QSize* q_widgetitem_minimum_size(void* self);
 /// @param self QWidgetItem*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_widgetitem_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_widgetitem_super_minimum_size` instead
@@ -1148,6 +1168,8 @@ QSize* q_widgetitem_maximum_size(void* self);
 ///
 /// @param self QWidgetItem*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widgetitem_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -1262,6 +1284,8 @@ QRect* q_widgetitem_geometry(void* self);
 ///
 /// @param self QWidgetItem*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widgetitem_on_geometry(void* self, QRect* (*callback)());
 
@@ -1573,6 +1597,8 @@ QSize* q_widgetitemv2_size_hint(void* self);
 /// @param self QWidgetItemV2*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_widgetitemv2_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_widgetitemv2_super_size_hint` instead
@@ -1600,6 +1626,8 @@ QSize* q_widgetitemv2_minimum_size(void* self);
 /// @param self QWidgetItemV2*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_widgetitemv2_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_widgetitemv2_super_minimum_size` instead
@@ -1626,6 +1654,8 @@ QSize* q_widgetitemv2_maximum_size(void* self);
 ///
 /// @param self QWidgetItemV2*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widgetitemv2_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -1832,6 +1862,8 @@ QRect* q_widgetitemv2_super_geometry(void* self);
 ///
 /// @param self QWidgetItemV2*
 /// @param callback QRect* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_widgetitemv2_on_geometry(void* self, QRect* (*callback)());
 

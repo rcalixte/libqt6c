@@ -716,6 +716,8 @@ QRectF* q_graphicsitem_bounding_rect(void* self);
 /// @param self QGraphicsItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsitem_super_bounding_rect` instead
@@ -754,6 +756,8 @@ QPainterPath* q_graphicsitem_shape(void* self);
 ///
 /// @param self QGraphicsItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -937,6 +941,8 @@ QPainterPath* q_graphicsitem_opaque_area(void* self);
 ///
 /// @param self QGraphicsItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -1987,6 +1993,8 @@ QVariant* q_graphicsitem_input_method_query(void* self, int32_t query);
 /// @param self QGraphicsItem*
 /// @param callback QVariant* func(QGraphicsItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_graphicsitem_super_input_method_query` instead
@@ -2016,6 +2024,8 @@ QVariant* q_graphicsitem_item_change(void* self, int32_t change, void* value);
 ///
 /// @param self QGraphicsItem*
 /// @param callback QVariant* func(QGraphicsItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -2106,6 +2116,8 @@ QVariant* q_graphicsitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsItem*
 /// @param callback QVariant* func(QGraphicsItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -4938,6 +4950,8 @@ QRectF* q_graphicsobject_super_bounding_rect(void* self);
 /// @param self QGraphicsObject*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsobject_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -4972,6 +4986,8 @@ QPainterPath* q_graphicsobject_super_shape(void* self);
 ///
 /// @param self QGraphicsObject*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsobject_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -5159,6 +5175,8 @@ QPainterPath* q_graphicsobject_super_opaque_area(void* self);
 ///
 /// @param self QGraphicsObject*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsobject_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -6015,6 +6033,8 @@ QVariant* q_graphicsobject_super_input_method_query(void* self, int32_t query);
 /// @param self QGraphicsObject*
 /// @param callback QVariant* func(QGraphicsObject* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsobject_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -6053,6 +6073,8 @@ QVariant* q_graphicsobject_super_item_change(void* self, int32_t change, void* v
 ///
 /// @param self QGraphicsObject*
 /// @param callback QVariant* func(QGraphicsObject* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsobject_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -6166,6 +6188,8 @@ QVariant* q_graphicsobject_super_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsObject*
 /// @param callback QVariant* func(QGraphicsObject* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsobject_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -6518,6 +6542,8 @@ QPainterPath* q_abstractgraphicsshapeitem_opaque_area(void* self);
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractgraphicsshapeitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -8112,6 +8138,8 @@ QRectF* q_abstractgraphicsshapeitem_super_bounding_rect(void* self);
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractgraphicsshapeitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -8146,6 +8174,8 @@ QPainterPath* q_abstractgraphicsshapeitem_super_shape(void* self);
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractgraphicsshapeitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -9117,6 +9147,8 @@ QVariant* q_abstractgraphicsshapeitem_super_input_method_query(void* self, int32
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QVariant* func(QAbstractGraphicsShapeItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractgraphicsshapeitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -9155,6 +9187,8 @@ QVariant* q_abstractgraphicsshapeitem_super_item_change(void* self, int32_t chan
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QVariant* func(QAbstractGraphicsShapeItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractgraphicsshapeitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -9268,6 +9302,8 @@ QVariant* q_abstractgraphicsshapeitem_super_extension(void* self, void* variant)
 ///
 /// @param self QAbstractGraphicsShapeItem*
 /// @param callback QVariant* func(QAbstractGraphicsShapeItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractgraphicsshapeitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -9476,6 +9512,8 @@ QRectF* q_graphicspathitem_bounding_rect(void* self);
 /// @param self QGraphicsPathItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspathitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicspathitem_super_bounding_rect` instead
@@ -9502,6 +9540,8 @@ QPainterPath* q_graphicspathitem_shape(void* self);
 ///
 /// @param self QGraphicsPathItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspathitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -9621,6 +9661,8 @@ QPainterPath* q_graphicspathitem_opaque_area(void* self);
 /// @param self QGraphicsPathItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspathitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicspathitem_super_opaque_area` instead
@@ -9735,6 +9777,8 @@ QVariant* q_graphicspathitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsPathItem*
 /// @param callback QVariant* func(QGraphicsPathItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspathitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -12186,6 +12230,8 @@ QVariant* q_graphicspathitem_super_input_method_query(void* self, int32_t query)
 /// @param self QGraphicsPathItem*
 /// @param callback QVariant* func(QGraphicsPathItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspathitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -12224,6 +12270,8 @@ QVariant* q_graphicspathitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @param self QGraphicsPathItem*
 /// @param callback QVariant* func(QGraphicsPathItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspathitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -12465,6 +12513,8 @@ QRectF* q_graphicsrectitem_bounding_rect(void* self);
 /// @param self QGraphicsRectItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsrectitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsrectitem_super_bounding_rect` instead
@@ -12491,6 +12541,8 @@ QPainterPath* q_graphicsrectitem_shape(void* self);
 ///
 /// @param self QGraphicsRectItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsrectitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -12610,6 +12662,8 @@ QPainterPath* q_graphicsrectitem_opaque_area(void* self);
 /// @param self QGraphicsRectItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsrectitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsrectitem_super_opaque_area` instead
@@ -12724,6 +12778,8 @@ QVariant* q_graphicsrectitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsRectItem*
 /// @param callback QVariant* func(QGraphicsRectItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsrectitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -15175,6 +15231,8 @@ QVariant* q_graphicsrectitem_super_input_method_query(void* self, int32_t query)
 /// @param self QGraphicsRectItem*
 /// @param callback QVariant* func(QGraphicsRectItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsrectitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -15213,6 +15271,8 @@ QVariant* q_graphicsrectitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @param self QGraphicsRectItem*
 /// @param callback QVariant* func(QGraphicsRectItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsrectitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -15480,6 +15540,8 @@ QRectF* q_graphicsellipseitem_bounding_rect(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsellipseitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsellipseitem_super_bounding_rect` instead
@@ -15506,6 +15568,8 @@ QPainterPath* q_graphicsellipseitem_shape(void* self);
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsellipseitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -15625,6 +15689,8 @@ QPainterPath* q_graphicsellipseitem_opaque_area(void* self);
 /// @param self QGraphicsEllipseItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsellipseitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsellipseitem_super_opaque_area` instead
@@ -15739,6 +15805,8 @@ QVariant* q_graphicsellipseitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param callback QVariant* func(QGraphicsEllipseItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsellipseitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -18190,6 +18258,8 @@ QVariant* q_graphicsellipseitem_super_input_method_query(void* self, int32_t que
 /// @param self QGraphicsEllipseItem*
 /// @param callback QVariant* func(QGraphicsEllipseItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsellipseitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -18228,6 +18298,8 @@ QVariant* q_graphicsellipseitem_super_item_change(void* self, int32_t change, vo
 ///
 /// @param self QGraphicsEllipseItem*
 /// @param callback QVariant* func(QGraphicsEllipseItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsellipseitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -18421,6 +18493,8 @@ QRectF* q_graphicspolygonitem_bounding_rect(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspolygonitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicspolygonitem_super_bounding_rect` instead
@@ -18447,6 +18521,8 @@ QPainterPath* q_graphicspolygonitem_shape(void* self);
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspolygonitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -18566,6 +18642,8 @@ QPainterPath* q_graphicspolygonitem_opaque_area(void* self);
 /// @param self QGraphicsPolygonItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspolygonitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicspolygonitem_super_opaque_area` instead
@@ -18680,6 +18758,8 @@ QVariant* q_graphicspolygonitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param callback QVariant* func(QGraphicsPolygonItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspolygonitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -21131,6 +21211,8 @@ QVariant* q_graphicspolygonitem_super_input_method_query(void* self, int32_t que
 /// @param self QGraphicsPolygonItem*
 /// @param callback QVariant* func(QGraphicsPolygonItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspolygonitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -21169,6 +21251,8 @@ QVariant* q_graphicspolygonitem_super_item_change(void* self, int32_t change, vo
 ///
 /// @param self QGraphicsPolygonItem*
 /// @param callback QVariant* func(QGraphicsPolygonItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspolygonitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -21423,6 +21507,8 @@ QRectF* q_graphicslineitem_bounding_rect(void* self);
 /// @param self QGraphicsLineItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicslineitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicslineitem_super_bounding_rect` instead
@@ -21449,6 +21535,8 @@ QPainterPath* q_graphicslineitem_shape(void* self);
 ///
 /// @param self QGraphicsLineItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicslineitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -21568,6 +21656,8 @@ QPainterPath* q_graphicslineitem_opaque_area(void* self);
 /// @param self QGraphicsLineItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicslineitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicslineitem_super_opaque_area` instead
@@ -21682,6 +21772,8 @@ QVariant* q_graphicslineitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsLineItem*
 /// @param callback QVariant* func(QGraphicsLineItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicslineitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -24099,6 +24191,8 @@ QVariant* q_graphicslineitem_super_input_method_query(void* self, int32_t query)
 /// @param self QGraphicsLineItem*
 /// @param callback QVariant* func(QGraphicsLineItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicslineitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -24137,6 +24231,8 @@ QVariant* q_graphicslineitem_super_item_change(void* self, int32_t change, void*
 ///
 /// @param self QGraphicsLineItem*
 /// @param callback QVariant* func(QGraphicsLineItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicslineitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -24381,6 +24477,8 @@ QRectF* q_graphicspixmapitem_bounding_rect(void* self);
 /// @param self QGraphicsPixmapItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspixmapitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicspixmapitem_super_bounding_rect` instead
@@ -24407,6 +24505,8 @@ QPainterPath* q_graphicspixmapitem_shape(void* self);
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspixmapitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -24525,6 +24625,8 @@ QPainterPath* q_graphicspixmapitem_opaque_area(void* self);
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspixmapitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -24655,6 +24757,8 @@ QVariant* q_graphicspixmapitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback QVariant* func(QGraphicsPixmapItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspixmapitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -27072,6 +27176,8 @@ QVariant* q_graphicspixmapitem_super_input_method_query(void* self, int32_t quer
 /// @param self QGraphicsPixmapItem*
 /// @param callback QVariant* func(QGraphicsPixmapItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicspixmapitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -27110,6 +27216,8 @@ QVariant* q_graphicspixmapitem_super_item_change(void* self, int32_t change, voi
 ///
 /// @param self QGraphicsPixmapItem*
 /// @param callback QVariant* func(QGraphicsPixmapItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicspixmapitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -27446,6 +27554,8 @@ QRectF* q_graphicstextitem_bounding_rect(void* self);
 /// @param self QGraphicsTextItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicstextitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicstextitem_super_bounding_rect` instead
@@ -27472,6 +27582,8 @@ QPainterPath* q_graphicstextitem_shape(void* self);
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicstextitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -27590,6 +27702,8 @@ QPainterPath* q_graphicstextitem_opaque_area(void* self);
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicstextitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -28282,6 +28396,8 @@ QVariant* q_graphicstextitem_input_method_query(void* self, int32_t query);
 /// @param self QGraphicsTextItem*
 /// @param callback QVariant* func(QGraphicsTextItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicstextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_graphicstextitem_super_input_method_query` instead
@@ -28370,6 +28486,8 @@ QVariant* q_graphicstextitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsTextItem*
 /// @param callback QVariant* func(QGraphicsTextItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicstextitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -31082,6 +31200,8 @@ QVariant* q_graphicstextitem_super_item_change(void* self, int32_t change, void*
 /// @param self QGraphicsTextItem*
 /// @param callback QVariant* func(QGraphicsTextItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicstextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// Inherited from QGraphicsObject
@@ -31459,6 +31579,8 @@ QRectF* q_graphicssimpletextitem_bounding_rect(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicssimpletextitem_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_bounding_rect` instead
@@ -31485,6 +31607,8 @@ QPainterPath* q_graphicssimpletextitem_shape(void* self);
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssimpletextitem_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -31604,6 +31728,8 @@ QPainterPath* q_graphicssimpletextitem_opaque_area(void* self);
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicssimpletextitem_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicssimpletextitem_super_opaque_area` instead
@@ -31718,6 +31844,8 @@ QVariant* q_graphicssimpletextitem_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QVariant* func(QGraphicsSimpleTextItem* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssimpletextitem_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
@@ -34169,6 +34297,8 @@ QVariant* q_graphicssimpletextitem_super_input_method_query(void* self, int32_t 
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QVariant* func(QGraphicsSimpleTextItem* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicssimpletextitem_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -34207,6 +34337,8 @@ QVariant* q_graphicssimpletextitem_super_item_change(void* self, int32_t change,
 ///
 /// @param self QGraphicsSimpleTextItem*
 /// @param callback QVariant* func(QGraphicsSimpleTextItem* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicssimpletextitem_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -34399,6 +34531,8 @@ QRectF* q_graphicsitemgroup_bounding_rect(void* self);
 /// @param self QGraphicsItemGroup*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsitemgroup_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsitemgroup_super_bounding_rect` instead
@@ -34487,6 +34621,8 @@ QPainterPath* q_graphicsitemgroup_opaque_area(void* self);
 ///
 /// @param self QGraphicsItemGroup*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitemgroup_on_opaque_area(void* self, QPainterPath* (*callback)());
 
@@ -36108,6 +36244,8 @@ QPainterPath* q_graphicsitemgroup_super_shape(void* self);
 /// @param self QGraphicsItemGroup*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsitemgroup_on_shape(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -37002,6 +37140,8 @@ QVariant* q_graphicsitemgroup_super_input_method_query(void* self, int32_t query
 /// @param self QGraphicsItemGroup*
 /// @param callback QVariant* func(QGraphicsItemGroup* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsitemgroup_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -37040,6 +37180,8 @@ QVariant* q_graphicsitemgroup_super_item_change(void* self, int32_t change, void
 ///
 /// @param self QGraphicsItemGroup*
 /// @param callback QVariant* func(QGraphicsItemGroup* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitemgroup_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
@@ -37153,6 +37295,8 @@ QVariant* q_graphicsitemgroup_super_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsItemGroup*
 /// @param callback QVariant* func(QGraphicsItemGroup* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsitemgroup_on_extension(void* self, QVariant* (*callback)(void*, void*));
 

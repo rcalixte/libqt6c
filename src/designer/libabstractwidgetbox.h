@@ -157,6 +157,8 @@ QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface_category(voi
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback QDesignerWidgetBoxInterface__Category* func(QDesignerWidgetBoxInterface* self, int cat_idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerwidgetboxinterface_on_category(void* self, QDesignerWidgetBoxInterface__Category* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_designerwidgetboxinterface_super_category` instead
@@ -273,6 +275,8 @@ QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface_widget(void* s
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback QDesignerWidgetBoxInterface__Widget* func(QDesignerWidgetBoxInterface* self, int cat_idx, int wgt_idx)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designerwidgetboxinterface_on_widget(void* self, QDesignerWidgetBoxInterface__Widget* (*callback)(void*, int, int));
 
@@ -3583,6 +3587,8 @@ QSize* q_designerwidgetboxinterface_super_size_hint(void* self);
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_designerwidgetboxinterface_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3617,6 +3623,8 @@ QSize* q_designerwidgetboxinterface_super_minimum_size_hint(void* self);
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designerwidgetboxinterface_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4947,6 +4955,8 @@ QVariant* q_designerwidgetboxinterface_super_input_method_query(void* self, int3
 ///
 /// @param self QDesignerWidgetBoxInterface*
 /// @param callback QVariant* func(QDesignerWidgetBoxInterface* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_designerwidgetboxinterface_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

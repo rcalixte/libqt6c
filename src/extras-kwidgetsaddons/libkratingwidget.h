@@ -154,6 +154,8 @@ QSize* k_ratingwidget_size_hint(void* self);
 /// @param self KRatingWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_ratingwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `k_ratingwidget_super_size_hint` instead
@@ -3689,6 +3691,8 @@ QSize* k_ratingwidget_super_minimum_size_hint(void* self);
 /// @param self KRatingWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_ratingwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -4759,6 +4763,8 @@ QVariant* k_ratingwidget_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KRatingWidget*
 /// @param callback QVariant* func(KRatingWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_ratingwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

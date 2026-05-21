@@ -48,6 +48,10 @@ const char* k_texteditor__cursor_to_string(void* self) {
     return _ret;
 }
 
+KTextEditor__Cursor* k_texteditor__cursor_from_string(const char* str) {
+    return KTextEditor__Cursor_FromString(qstring(str));
+}
+
 void k_texteditor__cursor_set_position(void* self, void* position) {
     KTextEditor__Cursor_SetPosition((KTextEditor__Cursor*)self, (KTextEditor__Cursor*)position);
 }

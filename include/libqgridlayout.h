@@ -120,6 +120,8 @@ QSize* q_gridlayout_size_hint(void* self);
 /// @param self QGridLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_gridlayout_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_gridlayout_super_size_hint` instead
@@ -147,6 +149,8 @@ QSize* q_gridlayout_minimum_size(void* self);
 /// @param self QGridLayout*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_gridlayout_on_minimum_size(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_gridlayout_super_minimum_size` instead
@@ -173,6 +177,8 @@ QSize* q_gridlayout_maximum_size(void* self);
 ///
 /// @param self QGridLayout*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_gridlayout_on_maximum_size(void* self, QSize* (*callback)());
 
@@ -1578,6 +1584,8 @@ QRect* q_gridlayout_super_geometry(void* self);
 /// @param self QGridLayout*
 /// @param callback QRect* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_gridlayout_on_geometry(void* self, QRect* (*callback)());
 
 /// Inherited from QLayout
@@ -2280,6 +2288,8 @@ QRect* q_gridlayout_super_alignment_rect(void* self, void* param1);
 ///
 /// @param self QGridLayout*
 /// @param callback QRect* func(QGridLayout* self, QRect* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_gridlayout_on_alignment_rect(void* self, QRect* (*callback)(void*, void*));
 

@@ -2125,6 +2125,8 @@ QColor* q_lineseries_super_color(void* self);
 /// @param self QLineSeries*
 /// @param callback QColor* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_lineseries_on_color(void* self, QColor* (*callback)());
 
 /// Inherited from QObject

@@ -123,6 +123,8 @@ QPixmap* k_countryflagemojiiconengine_pixmap(void* self, void* size, int32_t mod
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param callback QPixmap* func(KCountryFlagEmojiIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_countryflagemojiiconengine_on_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t));
 
 /// @warning DEPRECATED: Use `k_countryflagemojiiconengine_super_pixmap` instead
@@ -156,6 +158,8 @@ QPixmap* k_countryflagemojiiconengine_scaled_pixmap(void* self, void* size, int3
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param callback QPixmap* func(KCountryFlagEmojiIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state, double scale)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_countryflagemojiiconengine_on_scaled_pixmap(void* self, QPixmap* (*callback)(void*, void*, int32_t, int32_t, double));
 
@@ -246,6 +250,8 @@ QSize* k_countryflagemojiiconengine_super_actual_size(void* self, void* size, in
 ///
 /// @param self KCountryFlagEmojiIconEngine*
 /// @param callback QSize* func(KCountryFlagEmojiIconEngine* self, QSize* size, enum QIcon__Mode mode, enum QIcon__State state)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_countryflagemojiiconengine_on_actual_size(void* self, QSize* (*callback)(void*, void*, int32_t, int32_t));
 

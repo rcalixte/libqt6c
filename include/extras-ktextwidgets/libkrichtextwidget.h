@@ -5424,6 +5424,8 @@ QVariant* k_richtextwidget_super_load_resource(void* self, int type, void* name)
 /// @param self KRichTextWidget*
 /// @param callback QVariant* func(KRichTextWidget* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_richtextwidget_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// Inherited from QTextEdit
@@ -5460,6 +5462,8 @@ QVariant* k_richtextwidget_super_input_method_query(void* self, int32_t property
 ///
 /// @param self KRichTextWidget*
 /// @param callback QVariant* func(KRichTextWidget* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_richtextwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -6310,6 +6314,8 @@ QSize* k_richtextwidget_super_minimum_size_hint(void* self);
 /// @param self KRichTextWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_richtextwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -6344,6 +6350,8 @@ QSize* k_richtextwidget_super_size_hint(void* self);
 ///
 /// @param self KRichTextWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_richtextwidget_on_size_hint(void* self, QSize* (*callback)());
 
@@ -6492,6 +6500,8 @@ QSize* k_richtextwidget_super_viewport_size_hint(void* self);
 ///
 /// @param self KRichTextWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_richtextwidget_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -7697,6 +7707,8 @@ QMargins* k_richtextwidget_super_viewport_margins(void* self);
 ///
 /// @param self KRichTextWidget*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_richtextwidget_on_viewport_margins(void* self, QMargins* (*callback)());
 

@@ -117,6 +117,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_get(void* self, void* url);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_get(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_get` instead
@@ -147,6 +149,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_put(void* self, void* url, int per
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, int permissions, flag of enum KIO__JobFlag flags)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_put(void* self, KIO__WorkerResult* (*callback)(void*, void*, int, int32_t));
 
@@ -179,6 +183,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_stat(void* self, void* url);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_stat(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_stat` instead
@@ -207,6 +213,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_mimetype(void* self, void* url);
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_mimetype(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
@@ -237,6 +245,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_list_dir(void* self, void* url);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_list_dir(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_list_dir` instead
@@ -266,6 +276,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_mkdir(void* self, void* url, int p
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, int permissions)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_mkdir(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
@@ -298,6 +310,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_rename(void* self, void* src, void
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* src, QUrl* dest, flag of enum KIO__JobFlag flags)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_rename(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int32_t));
 
@@ -332,6 +346,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_symlink(void* self, const char* ta
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, const char* target, QUrl* dest, flag of enum KIO__JobFlag flags)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_symlink(void* self, KIO__WorkerResult* (*callback)(void*, const char*, void*, int32_t));
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_symlink` instead
@@ -364,6 +380,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_chmod(void* self, void* url, int p
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, int permissions)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_chmod(void* self, KIO__WorkerResult* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_chmod` instead
@@ -394,6 +412,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_set_modification_time(void* self, 
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, QDateTime* mtime)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_set_modification_time(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*));
 
@@ -428,6 +448,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_copy(void* self, void* src, void* 
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* src, QUrl* dest, int permissions, flag of enum KIO__JobFlag flags)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_copy(void* self, KIO__WorkerResult* (*callback)(void*, void*, void*, int, int32_t));
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_copy` instead
@@ -460,6 +482,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_del(void* self, void* url, bool is
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, bool isfile)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_del(void* self, KIO__WorkerResult* (*callback)(void*, void*, bool));
 
@@ -552,6 +576,8 @@ QUrl* k_io__forwardingworkerbase_processed_url(void* self);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback QUrl* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_processed_url(void* self, QUrl* (*callback)());
 
 /// @warning DEPRECATED: Use `k_io__forwardingworkerbase_super_processed_url` instead
@@ -578,6 +604,8 @@ QUrl* k_io__forwardingworkerbase_requested_url(void* self);
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback QUrl* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_requested_url(void* self, QUrl* (*callback)());
 
@@ -2058,6 +2086,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_open_connection(void* self);
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_open_connection(void* self, KIO__WorkerResult* (*callback)());
 
 /// Inherited from KIO::WorkerBase
@@ -2132,6 +2162,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_open(void* self, void* url, 
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, flag of enum QIODeviceBase__OpenModeFlag mode)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_open(void* self, KIO__WorkerResult* (*callback)(void*, void*, int32_t));
 
 /// Inherited from KIO::WorkerBase
@@ -2168,6 +2200,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_read(void* self, uintptr_t s
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uintptr_t size)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_read(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
@@ -2206,6 +2240,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_write(void* self, char* data
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, libqt_string data)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_write(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// Inherited from KIO::WorkerBase
@@ -2242,6 +2278,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_seek(void* self, uintptr_t o
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uintptr_t offset)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_seek(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
@@ -2280,6 +2318,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_truncate(void* self, uintptr
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, uintptr_t size)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_truncate(void* self, KIO__WorkerResult* (*callback)(void*, uintptr_t));
 
 /// Inherited from KIO::WorkerBase
@@ -2314,6 +2354,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_close(void* self);
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_close(void* self, KIO__WorkerResult* (*callback)());
 
@@ -2356,6 +2398,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_chown(void* self, void* url,
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url, const char* owner, const char* group)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_chown(void* self, KIO__WorkerResult* (*callback)(void*, void*, const char*, const char*));
 
 /// Inherited from KIO::WorkerBase
@@ -2393,6 +2437,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_special(void* self, char* da
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, libqt_string data)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_io__forwardingworkerbase_on_special(void* self, KIO__WorkerResult* (*callback)(void*, libqt_string));
 
 /// Inherited from KIO::WorkerBase
@@ -2429,6 +2475,8 @@ KIO__WorkerResult* k_io__forwardingworkerbase_super_file_system_free_space(void*
 ///
 /// @param self KIO__ForwardingWorkerBase*
 /// @param callback KIO__WorkerResult* func(KIO__ForwardingWorkerBase* self, QUrl* url)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_io__forwardingworkerbase_on_file_system_free_space(void* self, KIO__WorkerResult* (*callback)(void*, void*));
 

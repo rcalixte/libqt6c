@@ -64,6 +64,8 @@ KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_complet
 /// @param self KTextEditor__CodeCompletionModelControllerInterface*
 /// @param callback KTextEditor__Range* func(KTextEditor__CodeCompletionModelControllerInterface* self, KTextEditor__View* view, KTextEditor__Cursor* position)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_completion_range(void* self, KTextEditor__Range* (*callback)(void*, void*, void*));
 
 /// @warning DEPRECATED: Use `k_texteditor__codecompletionmodelcontrollerinterface_super_completion_range` instead
@@ -94,6 +96,8 @@ KTextEditor__Range* k_texteditor__codecompletionmodelcontrollerinterface_update_
 ///
 /// @param self KTextEditor__CodeCompletionModelControllerInterface*
 /// @param callback KTextEditor__Range* func(KTextEditor__CodeCompletionModelControllerInterface* self, KTextEditor__View* view, KTextEditor__Range* range)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texteditor__codecompletionmodelcontrollerinterface_on_update_completion_range(void* self, KTextEditor__Range* (*callback)(void*, void*, void*));
 

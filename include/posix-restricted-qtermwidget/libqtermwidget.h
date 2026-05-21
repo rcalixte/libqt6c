@@ -137,6 +137,8 @@ QSize* q_termwidget_size_hint(void* self);
 /// @param self QTermWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_termwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_termwidget_super_size_hint` instead
@@ -385,6 +387,8 @@ QFont* q_termwidget_get_terminal_font(void* self);
 ///
 /// @param self QTermWidget*
 /// @param callback QFont* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_termwidget_on_get_terminal_font(void* self, QFont* (*callback)());
 
@@ -5385,6 +5389,8 @@ QSize* q_termwidget_super_minimum_size_hint(void* self);
 /// @param self QTermWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_termwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -6677,6 +6683,8 @@ QVariant* q_termwidget_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QTermWidget*
 /// @param callback QVariant* func(QTermWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_termwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

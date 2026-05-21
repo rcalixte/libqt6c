@@ -158,6 +158,8 @@ QVariant* q_concatenatetablesproxymodel_data(void* self, void* index, int role);
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QVariant* func(QConcatenateTablesProxyModel* self, QModelIndex* index, int role)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_concatenatetablesproxymodel_on_data(void* self, QVariant* (*callback)(void*, void*, int));
 
 /// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_data` instead
@@ -331,6 +333,8 @@ QModelIndex* q_concatenatetablesproxymodel_index(void* self, int row, int column
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* parent)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_concatenatetablesproxymodel_on_index(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// @warning DEPRECATED: Use `q_concatenatetablesproxymodel_super_index` instead
@@ -361,6 +365,8 @@ QModelIndex* q_concatenatetablesproxymodel_parent(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_concatenatetablesproxymodel_on_parent(void* self, QModelIndex* (*callback)(void*, void*));
 
@@ -421,6 +427,8 @@ QVariant* q_concatenatetablesproxymodel_header_data(void* self, int section, int
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QVariant* func(QConcatenateTablesProxyModel* self, int section, enum Qt__Orientation orientation, int role)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_concatenatetablesproxymodel_on_header_data(void* self, QVariant* (*callback)(void*, int, int32_t, int));
 
@@ -613,6 +621,8 @@ QSize* q_concatenatetablesproxymodel_span(void* self, void* index);
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QSize* func(QConcatenateTablesProxyModel* self, QModelIndex* index)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_concatenatetablesproxymodel_on_span(void* self, QSize* (*callback)(void*, void*));
 
@@ -1433,6 +1443,8 @@ QModelIndex* q_concatenatetablesproxymodel_super_sibling(void* self, int row, in
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, int row, int column, QModelIndex* idx)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_concatenatetablesproxymodel_on_sibling(void* self, QModelIndex* (*callback)(void*, int, int, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2032,6 +2044,8 @@ QModelIndex* q_concatenatetablesproxymodel_super_buddy(void* self, void* index);
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, QModelIndex* index)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_concatenatetablesproxymodel_on_buddy(void* self, QModelIndex* (*callback)(void*, void*));
 
 /// Inherited from QAbstractItemModel
@@ -2585,6 +2599,8 @@ QModelIndex* q_concatenatetablesproxymodel_super_create_index(void* self, int ro
 ///
 /// @param self QConcatenateTablesProxyModel*
 /// @param callback QModelIndex* func(QConcatenateTablesProxyModel* self, int row, int column)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_concatenatetablesproxymodel_on_create_index(void* self, QModelIndex* (*callback)(void*, int, int));
 

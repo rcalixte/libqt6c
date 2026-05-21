@@ -302,6 +302,8 @@ QVariant* k_configskeletonitem_property(void* self);
 /// @param self KConfigSkeletonItem*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_configskeletonitem_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_configskeletonitem_super_property` instead
@@ -329,6 +331,8 @@ QVariant* k_configskeletonitem_min_value(void* self);
 /// @param self KConfigSkeletonItem*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_configskeletonitem_on_min_value(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_configskeletonitem_super_min_value` instead
@@ -355,6 +359,8 @@ QVariant* k_configskeletonitem_max_value(void* self);
 ///
 /// @param self KConfigSkeletonItem*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_configskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 
@@ -515,6 +521,8 @@ QVariant* k_propertyskeletonitem_property(void* self);
 ///
 /// @param self KPropertySkeletonItem*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_propertyskeletonitem_on_property(void* self, QVariant* (*callback)());
 
@@ -952,6 +960,8 @@ QVariant* k_propertyskeletonitem_super_min_value(void* self);
 /// @param self KPropertySkeletonItem*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_propertyskeletonitem_on_min_value(void* self, QVariant* (*callback)());
 
 /// Inherited from KConfigSkeletonItem
@@ -986,6 +996,8 @@ QVariant* k_propertyskeletonitem_super_max_value(void* self);
 ///
 /// @param self KPropertySkeletonItem*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_propertyskeletonitem_on_max_value(void* self, QVariant* (*callback)());
 
@@ -3243,6 +3255,8 @@ QVariant* k_coreconfigskeleton__itemstring_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemString*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemstring_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemstring_super_property` instead
@@ -3465,6 +3479,8 @@ QVariant* k_coreconfigskeleton__itempassword_super_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemPassword*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itempassword_on_property(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.
@@ -3675,6 +3691,8 @@ QVariant* k_coreconfigskeleton__itempath_super_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemPath*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itempath_on_property(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.
@@ -3833,6 +3851,8 @@ QVariant* k_coreconfigskeleton__itemurl_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemUrl*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemurl_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurl_super_property` instead
@@ -3973,6 +3993,8 @@ QVariant* k_coreconfigskeleton__itemproperty_property(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemProperty*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemproperty_on_property(void* self, QVariant* (*callback)());
 
@@ -4115,6 +4137,8 @@ QVariant* k_coreconfigskeleton__itembool_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemBool*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itembool_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itembool_super_property` instead
@@ -4256,6 +4280,8 @@ QVariant* k_coreconfigskeleton__itemint_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemint_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_property` instead
@@ -4283,6 +4309,8 @@ QVariant* k_coreconfigskeleton__itemint_min_value(void* self);
 /// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemint_on_min_value(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemint_super_min_value` instead
@@ -4309,6 +4337,8 @@ QVariant* k_coreconfigskeleton__itemint_max_value(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemInt*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemint_on_max_value(void* self, QVariant* (*callback)());
 
@@ -4451,6 +4481,8 @@ QVariant* k_coreconfigskeleton__itemlonglong_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemlonglong_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_property` instead
@@ -4478,6 +4510,8 @@ QVariant* k_coreconfigskeleton__itemlonglong_min_value(void* self);
 /// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemlonglong_on_min_value(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemlonglong_super_min_value` instead
@@ -4504,6 +4538,8 @@ QVariant* k_coreconfigskeleton__itemlonglong_max_value(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemLongLong*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemlonglong_on_max_value(void* self, QVariant* (*callback)());
 
@@ -4854,6 +4890,8 @@ QVariant* k_coreconfigskeleton__itemenum_super_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemenum_on_property(void* self, QVariant* (*callback)());
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
@@ -4889,6 +4927,8 @@ QVariant* k_coreconfigskeleton__itemenum_super_min_value(void* self);
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemenum_on_min_value(void* self, QVariant* (*callback)());
 
 /// Inherited from KCoreConfigSkeleton::ItemInt
@@ -4923,6 +4963,8 @@ QVariant* k_coreconfigskeleton__itemenum_super_max_value(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemEnum*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemenum_on_max_value(void* self, QVariant* (*callback)());
 
@@ -5053,6 +5095,8 @@ QVariant* k_coreconfigskeleton__itemuint_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemuint_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_property` instead
@@ -5080,6 +5124,8 @@ QVariant* k_coreconfigskeleton__itemuint_min_value(void* self);
 /// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemuint_on_min_value(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemuint_super_min_value` instead
@@ -5106,6 +5152,8 @@ QVariant* k_coreconfigskeleton__itemuint_max_value(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemUInt*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemuint_on_max_value(void* self, QVariant* (*callback)());
 
@@ -5262,6 +5310,8 @@ QVariant* k_coreconfigskeleton__itemulonglong_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemulonglong_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_property` instead
@@ -5289,6 +5339,8 @@ QVariant* k_coreconfigskeleton__itemulonglong_min_value(void* self);
 /// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemulonglong_on_min_value(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemulonglong_super_min_value` instead
@@ -5315,6 +5367,8 @@ QVariant* k_coreconfigskeleton__itemulonglong_max_value(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemULongLong*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemulonglong_on_max_value(void* self, QVariant* (*callback)());
 
@@ -5471,6 +5525,8 @@ QVariant* k_coreconfigskeleton__itemdouble_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemdouble_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_property` instead
@@ -5498,6 +5554,8 @@ QVariant* k_coreconfigskeleton__itemdouble_min_value(void* self);
 /// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemdouble_on_min_value(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdouble_super_min_value` instead
@@ -5524,6 +5582,8 @@ QVariant* k_coreconfigskeleton__itemdouble_max_value(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemDouble*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemdouble_on_max_value(void* self, QVariant* (*callback)());
 
@@ -5680,6 +5740,8 @@ QVariant* k_coreconfigskeleton__itemrect_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemRect*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemrect_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemrect_super_property` instead
@@ -5820,6 +5882,8 @@ QVariant* k_coreconfigskeleton__itemrectf_property(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemRectF*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemrectf_on_property(void* self, QVariant* (*callback)());
 
@@ -5962,6 +6026,8 @@ QVariant* k_coreconfigskeleton__itempoint_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemPoint*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itempoint_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itempoint_super_property` instead
@@ -6102,6 +6168,8 @@ QVariant* k_coreconfigskeleton__itempointf_property(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemPointF*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itempointf_on_property(void* self, QVariant* (*callback)());
 
@@ -6244,6 +6312,8 @@ QVariant* k_coreconfigskeleton__itemsize_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemSize*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemsize_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemsize_super_property` instead
@@ -6384,6 +6454,8 @@ QVariant* k_coreconfigskeleton__itemsizef_property(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemSizeF*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemsizef_on_property(void* self, QVariant* (*callback)());
 
@@ -6526,6 +6598,8 @@ QVariant* k_coreconfigskeleton__itemdatetime_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemDateTime*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemdatetime_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemdatetime_super_property` instead
@@ -6666,6 +6740,8 @@ QVariant* k_coreconfigskeleton__itemstringlist_property(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemStringList*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemstringlist_on_property(void* self, QVariant* (*callback)());
 
@@ -6873,6 +6949,8 @@ QVariant* k_coreconfigskeleton__itempathlist_super_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemPathList*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itempathlist_on_property(void* self, QVariant* (*callback)());
 
 /// Delete this object from C++ memory.
@@ -7031,6 +7109,8 @@ QVariant* k_coreconfigskeleton__itemurllist_property(void* self);
 /// @param self KCoreConfigSkeleton__ItemUrlList*
 /// @param callback QVariant* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_coreconfigskeleton__itemurllist_on_property(void* self, QVariant* (*callback)());
 
 /// @warning DEPRECATED: Use `k_coreconfigskeleton__itemurllist_super_property` instead
@@ -7171,6 +7251,8 @@ QVariant* k_coreconfigskeleton__itemintlist_property(void* self);
 ///
 /// @param self KCoreConfigSkeleton__ItemIntList*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_coreconfigskeleton__itemintlist_on_property(void* self, QVariant* (*callback)());
 

@@ -164,6 +164,8 @@ QSize* q_dialog_size_hint(void* self);
 /// @param self QDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_dialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_dialog_super_size_hint` instead
@@ -190,6 +192,8 @@ QSize* q_dialog_minimum_size_hint(void* self);
 ///
 /// @param self QDialog*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_dialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4767,6 +4771,8 @@ QVariant* q_dialog_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self QDialog*
 /// @param callback QVariant* func(QDialog* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_dialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

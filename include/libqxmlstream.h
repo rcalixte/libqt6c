@@ -41,6 +41,46 @@ QXmlStreamAttribute* q_xmlstreamattribute_new3(const char* namespaceUri, const c
 ///
 QXmlStreamAttribute* q_xmlstreamattribute_new4(void* param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattribute.html#namespaceUri)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttribute*
+///
+const char* q_xmlstreamattribute_namespace_uri(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattribute.html#name)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttribute*
+///
+const char* q_xmlstreamattribute_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattribute.html#qualifiedName)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttribute*
+///
+const char* q_xmlstreamattribute_qualified_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattribute.html#prefix)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttribute*
+///
+const char* q_xmlstreamattribute_prefix(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattribute.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttribute*
+///
+const char* q_xmlstreamattribute_value(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattribute.html#isDefault)
 ///
 /// @param self QXmlStreamAttribute*
@@ -60,6 +100,25 @@ void q_xmlstreamattribute_delete(void* self);
 /// q_xmlstreamattributes_new constructs a new QXmlStreamAttributes object.
 ///
 QXmlStreamAttributes* q_xmlstreamattributes_new();
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattributes.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttributes*
+/// @param namespaceUri const char*
+/// @param name const char*
+///
+const char* q_xmlstreamattributes_value(void* self, const char* namespaceUri, const char* name);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattributes.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamAttributes*
+/// @param qualifiedName const char*
+///
+const char* q_xmlstreamattributes_value2(void* self, const char* qualifiedName);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamattributes.html#append)
 ///
@@ -124,6 +183,22 @@ QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new2(const char*
 ///
 QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new3(void* param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#prefix)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamNamespaceDeclaration*
+///
+const char* q_xmlstreamnamespacedeclaration_prefix(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#namespaceUri)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamNamespaceDeclaration*
+///
+const char* q_xmlstreamnamespacedeclaration_namespace_uri(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnamespacedeclaration.html#dtor.QXmlStreamNamespaceDeclaration)
 ///
 /// Delete this object from C++ memory.
@@ -146,6 +221,30 @@ QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new();
 ///
 QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new2(void* param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#name)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamNotationDeclaration*
+///
+const char* q_xmlstreamnotationdeclaration_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#systemId)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamNotationDeclaration*
+///
+const char* q_xmlstreamnotationdeclaration_system_id(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#publicId)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamNotationDeclaration*
+///
+const char* q_xmlstreamnotationdeclaration_public_id(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamnotationdeclaration.html#dtor.QXmlStreamNotationDeclaration)
 ///
 /// Delete this object from C++ memory.
@@ -167,6 +266,46 @@ QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new();
 /// @param param1 QXmlStreamEntityDeclaration*
 ///
 QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new2(void* param1);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#name)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamEntityDeclaration*
+///
+const char* q_xmlstreamentitydeclaration_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#notationName)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamEntityDeclaration*
+///
+const char* q_xmlstreamentitydeclaration_notation_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#systemId)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamEntityDeclaration*
+///
+const char* q_xmlstreamentitydeclaration_system_id(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#publicId)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamEntityDeclaration*
+///
+const char* q_xmlstreamentitydeclaration_public_id(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamEntityDeclaration*
+///
+const char* q_xmlstreamentitydeclaration_value(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamentitydeclaration.html#dtor.QXmlStreamEntityDeclaration)
 ///
@@ -435,6 +574,22 @@ bool q_xmlstreamreader_is_standalone_document(void* self);
 ///
 bool q_xmlstreamreader_has_standalone_declaration(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#documentVersion)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_document_version(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#documentEncoding)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_document_encoding(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#lineNumber)
 ///
 /// @param self QXmlStreamReader*
@@ -466,6 +621,62 @@ QXmlStreamAttributes* q_xmlstreamreader_attributes(void* self);
 /// @param self QXmlStreamReader*
 ///
 const char* q_xmlstreamreader_read_element_text(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#name)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#namespaceUri)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_namespace_uri(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#qualifiedName)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_qualified_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#prefix)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_prefix(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#processingInstructionTarget)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_processing_instruction_target(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#processingInstructionData)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_processing_instruction_data(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#text)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_text(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#namespaceDeclarations)
 ///
@@ -504,6 +715,30 @@ libqt_list q_xmlstreamreader_notation_declarations(void* self);
 /// @return libqt_list of QXmlStreamEntityDeclaration*
 ///
 libqt_list q_xmlstreamreader_entity_declarations(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#dtdName)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_dtd_name(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#dtdPublicId)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_dtd_public_id(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#dtdSystemId)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QXmlStreamReader*
+///
+const char* q_xmlstreamreader_dtd_system_id(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qxmlstreamreader.html#entityExpansionLimit)
 ///

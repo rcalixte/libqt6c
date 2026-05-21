@@ -150,6 +150,13 @@ const char* q_calendar_standalone_week_day_name(void* self, void* locale, int da
     return _ret;
 }
 
+const char* q_calendar_date_time_to_string(void* self, const char* format, void* datetime, void* dateOnly, void* timeOnly, void* locale) {
+    libqt_string _str = QCalendar_DateTimeToString((QCalendar*)self, qstring(format), (QDateTime*)datetime, (QDate*)dateOnly, (QTime*)timeOnly, (QLocale*)locale);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 const char** q_calendar_available_calendars() {
     libqt_list _arr = QCalendar_AvailableCalendars();
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;

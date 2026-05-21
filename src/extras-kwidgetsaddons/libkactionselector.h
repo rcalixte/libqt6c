@@ -3453,6 +3453,8 @@ QSize* k_actionselector_super_size_hint(void* self);
 /// @param self KActionSelector*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_actionselector_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3487,6 +3489,8 @@ QSize* k_actionselector_super_minimum_size_hint(void* self);
 ///
 /// @param self KActionSelector*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_actionselector_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4780,6 +4784,8 @@ QVariant* k_actionselector_super_input_method_query(void* self, int32_t param1);
 ///
 /// @param self KActionSelector*
 /// @param callback QVariant* func(KActionSelector* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_actionselector_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

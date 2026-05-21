@@ -1194,6 +1194,8 @@ QColor* q_scilexerintelhex_super_color(void* self, int style);
 /// @param self QsciLexerIntelHex*
 /// @param callback QColor* func(QsciLexerIntelHex* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerintelhex_on_color(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1267,6 +1269,8 @@ QFont* q_scilexerintelhex_super_font(void* self, int style);
 ///
 /// @param self QsciLexerIntelHex*
 /// @param callback QFont* func(QsciLexerIntelHex* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerintelhex_on_font(void* self, QFont* (*callback)(void*, int));
 
@@ -1416,6 +1420,8 @@ QColor* q_scilexerintelhex_super_paper(void* self, int style);
 /// @param self QsciLexerIntelHex*
 /// @param callback QColor* func(QsciLexerIntelHex* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerintelhex_on_paper(void* self, QColor* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1452,6 +1458,8 @@ QColor* q_scilexerintelhex_super_default_color2(void* self, int style);
 ///
 /// @param self QsciLexerIntelHex*
 /// @param callback QColor* func(QsciLexerIntelHex* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerintelhex_on_default_color2(void* self, QColor* (*callback)(void*, int));
 
@@ -1527,6 +1535,8 @@ QFont* q_scilexerintelhex_super_default_font2(void* self, int style);
 /// @param self QsciLexerIntelHex*
 /// @param callback QFont* func(QsciLexerIntelHex* self, int style)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_scilexerintelhex_on_default_font2(void* self, QFont* (*callback)(void*, int));
 
 /// Inherited from QsciLexer
@@ -1563,6 +1573,8 @@ QColor* q_scilexerintelhex_super_default_paper2(void* self, int style);
 ///
 /// @param self QsciLexerIntelHex*
 /// @param callback QColor* func(QsciLexerIntelHex* self, int style)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_scilexerintelhex_on_default_paper2(void* self, QColor* (*callback)(void*, int));
 

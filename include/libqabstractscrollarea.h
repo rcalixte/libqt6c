@@ -225,6 +225,8 @@ QSize* q_abstractscrollarea_minimum_size_hint(void* self);
 /// @param self QAbstractScrollArea*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_abstractscrollarea_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_abstractscrollarea_super_minimum_size_hint` instead
@@ -251,6 +253,8 @@ QSize* q_abstractscrollarea_size_hint(void* self);
 ///
 /// @param self QAbstractScrollArea*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractscrollarea_on_size_hint(void* self, QSize* (*callback)());
 
@@ -386,6 +390,8 @@ QMargins* q_abstractscrollarea_viewport_margins(void* self);
 ///
 /// @param self QAbstractScrollArea*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractscrollarea_on_viewport_margins(void* self, QMargins* (*callback)());
 
@@ -910,6 +916,8 @@ QSize* q_abstractscrollarea_viewport_size_hint(void* self);
 ///
 /// @param self QAbstractScrollArea*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractscrollarea_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -4933,6 +4941,8 @@ QVariant* q_abstractscrollarea_super_input_method_query(void* self, int32_t para
 ///
 /// @param self QAbstractScrollArea*
 /// @param callback QVariant* func(QAbstractScrollArea* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_abstractscrollarea_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

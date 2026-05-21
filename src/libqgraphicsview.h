@@ -137,6 +137,8 @@ QSize* q_graphicsview_size_hint(void* self);
 /// @param self QGraphicsView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsview_on_size_hint(void* self, QSize* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicsview_super_size_hint` instead
@@ -629,6 +631,8 @@ QVariant* q_graphicsview_input_method_query(void* self, int32_t query);
 ///
 /// @param self QGraphicsView*
 /// @param callback QVariant* func(QGraphicsView* self, enum Qt__InputMethodQuery query)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsview_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -4892,6 +4896,8 @@ QSize* q_graphicsview_super_minimum_size_hint(void* self);
 /// @param self QGraphicsView*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsview_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -4965,6 +4971,8 @@ QSize* q_graphicsview_super_viewport_size_hint(void* self);
 ///
 /// @param self QGraphicsView*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsview_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -5927,6 +5935,8 @@ QMargins* q_graphicsview_super_viewport_margins(void* self);
 ///
 /// @param self QGraphicsView*
 /// @param callback QMargins* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsview_on_viewport_margins(void* self, QMargins* (*callback)());
 

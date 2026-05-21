@@ -266,6 +266,8 @@ QSqlIndex* q_sqldriver_primary_index(void* self, const char* tableName);
 /// @param self QSqlDriver*
 /// @param callback QSqlIndex* func(QSqlDriver* self, const char* tableName)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_sqldriver_on_primary_index(void* self, QSqlIndex* (*callback)(void*, const char*));
 
 /// @warning DEPRECATED: Use `q_sqldriver_super_primary_index` instead
@@ -294,6 +296,8 @@ QSqlRecord* q_sqldriver_record(void* self, const char* tableName);
 ///
 /// @param self QSqlDriver*
 /// @param callback QSqlRecord* func(QSqlDriver* self, const char* tableName)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqldriver_on_record(void* self, QSqlRecord* (*callback)(void*, const char*));
 
@@ -431,6 +435,8 @@ QVariant* q_sqldriver_handle(void* self);
 ///
 /// @param self QSqlDriver*
 /// @param callback QVariant* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_sqldriver_on_handle(void* self, QVariant* (*callback)());
 

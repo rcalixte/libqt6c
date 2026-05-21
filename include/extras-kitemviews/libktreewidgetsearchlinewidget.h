@@ -3259,6 +3259,8 @@ QSize* k_treewidgetsearchlinewidget_super_size_hint(void* self);
 /// @param self KTreeWidgetSearchLineWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_treewidgetsearchlinewidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3293,6 +3295,8 @@ QSize* k_treewidgetsearchlinewidget_super_minimum_size_hint(void* self);
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_treewidgetsearchlinewidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4623,6 +4627,8 @@ QVariant* k_treewidgetsearchlinewidget_super_input_method_query(void* self, int3
 ///
 /// @param self KTreeWidgetSearchLineWidget*
 /// @param callback QVariant* func(KTreeWidgetSearchLineWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_treewidgetsearchlinewidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

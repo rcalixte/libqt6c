@@ -366,6 +366,8 @@ QVariant* q_plaintextedit_load_resource(void* self, int type, void* name);
 /// @param self QPlainTextEdit*
 /// @param callback QVariant* func(QPlainTextEdit* self, int type, QUrl* name)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_plaintextedit_on_load_resource(void* self, QVariant* (*callback)(void*, int, void*));
 
 /// @warning DEPRECATED: Use `q_plaintextedit_super_load_resource` instead
@@ -517,6 +519,8 @@ QVariant* q_plaintextedit_input_method_query(void* self, int32_t property);
 ///
 /// @param self QPlainTextEdit*
 /// @param callback QVariant* func(QPlainTextEdit* self, enum Qt__InputMethodQuery property)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextedit_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
@@ -1549,6 +1553,8 @@ QTextBlock* q_plaintextedit_first_visible_block(void* self);
 /// @param self QPlainTextEdit*
 /// @param callback QTextBlock* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_plaintextedit_on_first_visible_block(void* self, QTextBlock* (*callback)());
 
 /// @warning DEPRECATED: Use `q_plaintextedit_super_first_visible_block` instead
@@ -1575,6 +1581,8 @@ QPointF* q_plaintextedit_content_offset(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param callback QPointF* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextedit_on_content_offset(void* self, QPointF* (*callback)());
 
@@ -1603,6 +1611,8 @@ QRectF* q_plaintextedit_block_bounding_rect(void* self, void* block);
 ///
 /// @param self QPlainTextEdit*
 /// @param callback QRectF* func(QPlainTextEdit* self, QTextBlock* block)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextedit_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
@@ -1633,6 +1643,8 @@ QRectF* q_plaintextedit_block_bounding_geometry(void* self, void* block);
 /// @param self QPlainTextEdit*
 /// @param callback QRectF* func(QPlainTextEdit* self, QTextBlock* block)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_plaintextedit_on_block_bounding_geometry(void* self, QRectF* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_plaintextedit_super_block_bounding_geometry` instead
@@ -1660,6 +1672,8 @@ QAbstractTextDocumentLayout__PaintContext* q_plaintextedit_get_paint_context(voi
 ///
 /// @param self QPlainTextEdit*
 /// @param callback QAbstractTextDocumentLayout__PaintContext* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextedit_on_get_paint_context(void* self, QAbstractTextDocumentLayout__PaintContext* (*callback)());
 
@@ -5011,6 +5025,8 @@ QSize* q_plaintextedit_super_minimum_size_hint(void* self);
 /// @param self QPlainTextEdit*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_plaintextedit_on_minimum_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QAbstractScrollArea
@@ -5045,6 +5061,8 @@ QSize* q_plaintextedit_super_size_hint(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextedit_on_size_hint(void* self, QSize* (*callback)());
 
@@ -5193,6 +5211,8 @@ QSize* q_plaintextedit_super_viewport_size_hint(void* self);
 ///
 /// @param self QPlainTextEdit*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextedit_on_viewport_size_hint(void* self, QSize* (*callback)());
 
@@ -6082,6 +6102,8 @@ QMargins* q_plaintextedit_super_viewport_margins(void* self);
 /// @param self QPlainTextEdit*
 /// @param callback QMargins* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_plaintextedit_on_viewport_margins(void* self, QMargins* (*callback)());
 
 /// Inherited from QFrame
@@ -6693,6 +6715,8 @@ QSizeF* q_plaintextdocumentlayout_document_size(void* self);
 /// @param self QPlainTextDocumentLayout*
 /// @param callback QSizeF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_plaintextdocumentlayout_on_document_size(void* self, QSizeF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_plaintextdocumentlayout_super_document_size` instead
@@ -6720,6 +6744,8 @@ QRectF* q_plaintextdocumentlayout_frame_bounding_rect(void* self, void* param1);
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param callback QRectF* func(QPlainTextDocumentLayout* self, QTextFrame* param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextdocumentlayout_on_frame_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
@@ -6749,6 +6775,8 @@ QRectF* q_plaintextdocumentlayout_block_bounding_rect(void* self, void* block);
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param callback QRectF* func(QPlainTextDocumentLayout* self, QTextBlock* block)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextdocumentlayout_on_block_bounding_rect(void* self, QRectF* (*callback)(void*, void*));
 
@@ -7941,6 +7969,8 @@ QTextCharFormat* q_plaintextdocumentlayout_super_format(void* self, int pos);
 ///
 /// @param self QPlainTextDocumentLayout*
 /// @param callback QTextCharFormat* func(QPlainTextDocumentLayout* self, int pos)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_plaintextdocumentlayout_on_format(void* self, QTextCharFormat* (*callback)(void*, int));
 

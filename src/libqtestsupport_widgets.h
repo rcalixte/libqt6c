@@ -54,6 +54,8 @@ QTest__QTouchEventWidgetSequence* q_test__qtoucheventwidgetsequence_stationary(v
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param callback QTest__QTouchEventWidgetSequence* func(QTest__QTouchEventWidgetSequence* self, int touchId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_test__qtoucheventwidgetsequence_on_stationary(void* self, QTest__QTouchEventWidgetSequence* (*callback)(void*, int));
 
 /// @warning DEPRECATED: Use `q_test__qtoucheventwidgetsequence_super_stationary` instead
@@ -160,6 +162,8 @@ QEventPoint* q_test__qtoucheventwidgetsequence_super_point(void* self, int touch
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param callback QEventPoint* func(QTest__QTouchEventWidgetSequence* self, int touchId)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_test__qtoucheventwidgetsequence_on_point(void* self, QEventPoint* (*callback)(void*, int));
 
 /// Inherited from QTest::QTouchEventSequence
@@ -196,6 +200,8 @@ QEventPoint* q_test__qtoucheventwidgetsequence_super_point_or_previous_point(voi
 ///
 /// @param self QTest__QTouchEventWidgetSequence*
 /// @param callback QEventPoint* func(QTest__QTouchEventWidgetSequence* self, int touchId)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_test__qtoucheventwidgetsequence_on_point_or_previous_point(void* self, QEventPoint* (*callback)(void*, int));
 

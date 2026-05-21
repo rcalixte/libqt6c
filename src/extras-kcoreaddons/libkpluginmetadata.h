@@ -267,7 +267,24 @@ bool k_pluginmetadata_is_enabled_by_default(void* self);
 /// @param self KPluginMetaData*
 /// @param key const char*
 ///
+const char* k_pluginmetadata_value(void* self, const char* key);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self KPluginMetaData*
+/// @param key const char*
+///
 const char* k_pluginmetadata_value2(void* self, const char* key);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
+///
+/// @param self KPluginMetaData*
+/// @param key const char*
+/// @param defaultValue bool
+///
+bool k_pluginmetadata_value3(void* self, const char* key, bool defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
@@ -283,7 +300,25 @@ bool k_pluginmetadata_value4(void* self, const char* key, bool defaultValue);
 /// @param key const char*
 /// @param defaultValue int
 ///
+int32_t k_pluginmetadata_value5(void* self, const char* key, int defaultValue);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
+///
+/// @param self KPluginMetaData*
+/// @param key const char*
+/// @param defaultValue int
+///
 int32_t k_pluginmetadata_value6(void* self, const char* key, int defaultValue);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self KPluginMetaData*
+/// @param key const char*
+/// @param defaultValue const char**
+///
+const char** k_pluginmetadata_value7(void* self, const char* key, const char* defaultValue[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///
@@ -341,6 +376,16 @@ libqt_list k_pluginmetadata_find_plugins2(const char* directory, bool (*filter)(
 /// @return libqt_list of KPluginMetaData*
 ///
 libqt_list k_pluginmetadata_find_plugins3(const char* directory, bool (*filter)(void* funcparam1), int32_t options);
+
+/// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self KPluginMetaData*
+/// @param key const char*
+/// @param defaultValue const char*
+///
+const char* k_pluginmetadata_value22(void* self, const char* key, const char* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kpluginmetadata.html#value)
 ///

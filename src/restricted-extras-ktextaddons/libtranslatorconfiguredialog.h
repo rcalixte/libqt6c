@@ -3290,6 +3290,8 @@ QSize* k_texttranslator__translatorconfiguredialog_super_size_hint(void* self);
 /// @param self TextTranslator__TranslatorConfigureDialog*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texttranslator__translatorconfiguredialog_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QDialog
@@ -3324,6 +3326,8 @@ QSize* k_texttranslator__translatorconfiguredialog_super_minimum_size_hint(void*
 ///
 /// @param self TextTranslator__TranslatorConfigureDialog*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatorconfiguredialog_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4905,6 +4909,8 @@ QVariant* k_texttranslator__translatorconfiguredialog_super_input_method_query(v
 ///
 /// @param self TextTranslator__TranslatorConfigureDialog*
 /// @param callback QVariant* func(TextTranslator__TranslatorConfigureDialog* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_texttranslator__translatorconfiguredialog_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

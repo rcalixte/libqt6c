@@ -1668,6 +1668,8 @@ QVariant* q_tcpsocket_super_socket_option(void* self, int32_t option);
 /// @param self QTcpSocket*
 /// @param callback QVariant* func(QTcpSocket* self, enum QAbstractSocket__SocketOption option)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_tcpsocket_on_socket_option(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QAbstractSocket

@@ -121,6 +121,8 @@ QRectF* q_graphicseffect_bounding_rect_for(void* self, void* sourceRect);
 /// @param self QGraphicsEffect*
 /// @param callback QRectF* func(QGraphicsEffect* self, QRectF* sourceRect)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicseffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `q_graphicseffect_super_bounding_rect_for` instead
@@ -300,6 +302,8 @@ QRectF* q_graphicseffect_source_bounding_rect(void* self);
 /// @param self QGraphicsEffect*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicseffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicseffect_super_source_bounding_rect` instead
@@ -356,6 +360,8 @@ QPixmap* q_graphicseffect_source_pixmap(void* self);
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicseffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicseffect_super_source_pixmap` instead
@@ -403,6 +409,8 @@ QRectF* q_graphicseffect_source_bounding_rect1(void* self, int32_t system);
 /// @param self QGraphicsEffect*
 /// @param callback QRectF* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicseffect_on_source_bounding_rect1(void* self, QRectF* (*callback)(void*, int32_t));
 
 /// @warning DEPRECATED: Use `q_graphicseffect_super_source_bounding_rect1` instead
@@ -431,6 +439,8 @@ QPixmap* q_graphicseffect_source_pixmap1(void* self, int32_t system);
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicseffect_on_source_pixmap1(void* self, QPixmap* (*callback)(void*, int32_t));
 
@@ -461,6 +471,8 @@ QPixmap* q_graphicseffect_source_pixmap2(void* self, int32_t system, void* offse
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicseffect_on_source_pixmap2(void* self, QPixmap* (*callback)(void*, int32_t, void*));
 
@@ -493,6 +505,8 @@ QPixmap* q_graphicseffect_source_pixmap3(void* self, int32_t system, void* offse
 ///
 /// @param self QGraphicsEffect*
 /// @param callback QPixmap* func(QGraphicsEffect* self, enum Qt__CoordinateSystem system, QPoint* offset, enum QGraphicsEffect__PixmapPadMode mode)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicseffect_on_source_pixmap3(void* self, QPixmap* (*callback)(void*, int32_t, void*, int32_t));
 
@@ -2116,6 +2130,8 @@ QRectF* q_graphicscolorizeeffect_super_bounding_rect_for(void* self, void* sourc
 /// @param self QGraphicsColorizeEffect*
 /// @param callback QRectF* func(QGraphicsColorizeEffect* self, QRectF* sourceRect)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicscolorizeeffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsEffect
@@ -2519,6 +2535,8 @@ QRectF* q_graphicscolorizeeffect_super_source_bounding_rect(void* self);
 /// @param self QGraphicsColorizeEffect*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicscolorizeeffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsEffect
@@ -2590,6 +2608,8 @@ QPixmap* q_graphicscolorizeeffect_super_source_pixmap(void* self);
 ///
 /// @param self QGraphicsColorizeEffect*
 /// @param callback QPixmap* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicscolorizeeffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 
@@ -2868,6 +2888,8 @@ QRectF* q_graphicsblureffect_bounding_rect_for(void* self, void* rect);
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param callback QRectF* func(QGraphicsBlurEffect* self, QRectF* rect)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsblureffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
@@ -3887,6 +3909,8 @@ QRectF* q_graphicsblureffect_super_source_bounding_rect(void* self);
 /// @param self QGraphicsBlurEffect*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsblureffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsEffect
@@ -3958,6 +3982,8 @@ QPixmap* q_graphicsblureffect_super_source_pixmap(void* self);
 ///
 /// @param self QGraphicsBlurEffect*
 /// @param callback QPixmap* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsblureffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 
@@ -4236,6 +4262,8 @@ QRectF* q_graphicsdropshadoweffect_bounding_rect_for(void* self, void* rect);
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback QRectF* func(QGraphicsDropShadowEffect* self, QRectF* rect)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsdropshadoweffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
@@ -5321,6 +5349,8 @@ QRectF* q_graphicsdropshadoweffect_super_source_bounding_rect(void* self);
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsdropshadoweffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsEffect
@@ -5392,6 +5422,8 @@ QPixmap* q_graphicsdropshadoweffect_super_source_pixmap(void* self);
 ///
 /// @param self QGraphicsDropShadowEffect*
 /// @param callback QPixmap* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsdropshadoweffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 
@@ -6292,6 +6324,8 @@ QRectF* q_graphicsopacityeffect_super_bounding_rect_for(void* self, void* source
 /// @param self QGraphicsOpacityEffect*
 /// @param callback QRectF* func(QGraphicsOpacityEffect* self, QRectF* sourceRect)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsopacityeffect_on_bounding_rect_for(void* self, QRectF* (*callback)(void*, void*));
 
 /// Inherited from QGraphicsEffect
@@ -6695,6 +6729,8 @@ QRectF* q_graphicsopacityeffect_super_source_bounding_rect(void* self);
 /// @param self QGraphicsOpacityEffect*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicsopacityeffect_on_source_bounding_rect(void* self, QRectF* (*callback)());
 
 /// Inherited from QGraphicsEffect
@@ -6766,6 +6802,8 @@ QPixmap* q_graphicsopacityeffect_super_source_pixmap(void* self);
 ///
 /// @param self QGraphicsOpacityEffect*
 /// @param callback QPixmap* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicsopacityeffect_on_source_pixmap(void* self, QPixmap* (*callback)());
 

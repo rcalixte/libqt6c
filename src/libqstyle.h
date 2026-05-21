@@ -270,6 +270,8 @@ QRect* q_style_item_text_rect(void* self, void* fm, void* r, int flags, bool ena
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, QFontMetrics* fm, QRect* r, int flags, bool enabled, const char* text)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_style_on_item_text_rect(void* self, QRect* (*callback)(void*, void*, void*, int, bool, const char*));
 
 /// @warning DEPRECATED: Use `q_style_super_item_text_rect` instead
@@ -304,6 +306,8 @@ QRect* q_style_item_pixmap_rect(void* self, void* r, int flags, void* pixmap);
 ///
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, QRect* r, int flags, QPixmap* pixmap)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_style_on_item_pixmap_rect(void* self, QRect* (*callback)(void*, void*, int, void*));
 
@@ -411,6 +415,8 @@ QPalette* q_style_standard_palette(void* self);
 /// @param self QStyle*
 /// @param callback QPalette* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_style_on_standard_palette(void* self, QPalette* (*callback)());
 
 /// @warning DEPRECATED: Use `q_style_super_standard_palette` instead
@@ -510,6 +516,8 @@ QRect* q_style_sub_element_rect(void* self, int32_t subElement, void* option, vo
 ///
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, enum QStyle__SubElement subElement, QStyleOption* option, QWidget* widget)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_style_on_sub_element_rect(void* self, QRect* (*callback)(void*, int32_t, void*, void*));
 
@@ -619,6 +627,8 @@ QRect* q_style_sub_control_rect(void* self, int32_t cc, void* opt, int32_t sc, v
 /// @param self QStyle*
 /// @param callback QRect* func(QStyle* self, enum QStyle__ComplexControl cc, QStyleOptionComplex* opt, enum QStyle__SubControl sc, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_style_on_sub_control_rect(void* self, QRect* (*callback)(void*, int32_t, void*, int32_t, void*));
 
 /// @warning DEPRECATED: Use `q_style_super_sub_control_rect` instead
@@ -686,6 +696,8 @@ QSize* q_style_size_from_contents(void* self, int32_t ct, void* opt, void* conte
 ///
 /// @param self QStyle*
 /// @param callback QSize* func(QStyle* self, enum QStyle__ContentsType ct, QStyleOption* opt, QSize* contentsSize, QWidget* w)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_style_on_size_from_contents(void* self, QSize* (*callback)(void*, int32_t, void*, void*, void*));
 
@@ -756,6 +768,8 @@ QPixmap* q_style_standard_pixmap(void* self, int32_t standardPixmap, void* opt, 
 /// @param self QStyle*
 /// @param callback QPixmap* func(QStyle* self, enum QStyle__StandardPixmap standardPixmap, QStyleOption* opt, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_style_on_standard_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_style_super_standard_pixmap` instead
@@ -789,6 +803,8 @@ QIcon* q_style_standard_icon(void* self, int32_t standardIcon, void* option, voi
 /// @param self QStyle*
 /// @param callback QIcon* func(QStyle* self, enum QStyle__StandardPixmap standardIcon, QStyleOption* option, QWidget* widget)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_style_on_standard_icon(void* self, QIcon* (*callback)(void*, int32_t, void*, void*));
 
 /// @warning DEPRECATED: Use `q_style_super_standard_icon` instead
@@ -821,6 +837,8 @@ QPixmap* q_style_generated_icon_pixmap(void* self, int32_t iconMode, void* pixma
 ///
 /// @param self QStyle*
 /// @param callback QPixmap* func(QStyle* self, enum QIcon__Mode iconMode, QPixmap* pixmap, QStyleOption* opt)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_style_on_generated_icon_pixmap(void* self, QPixmap* (*callback)(void*, int32_t, void*, void*));
 

@@ -146,6 +146,8 @@ QSize* k_texteditor__inlinenoteprovider_inline_note_size(void* self, void* note)
 /// @param self KTextEditor__InlineNoteProvider*
 /// @param callback QSize* func(KTextEditor__InlineNoteProvider* self, KTextEditor__InlineNote* note)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_texteditor__inlinenoteprovider_on_inline_note_size(void* self, QSize* (*callback)(void*, void*));
 
 /// @warning DEPRECATED: Use `k_texteditor__inlinenoteprovider_super_inline_note_size` instead

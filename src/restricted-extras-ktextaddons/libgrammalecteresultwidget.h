@@ -3337,6 +3337,8 @@ QSize* k_textgrammarcheck__grammalecteresultwidget_super_size_hint(void* self);
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 /// @param callback QSize* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void k_textgrammarcheck__grammalecteresultwidget_on_size_hint(void* self, QSize* (*callback)());
 
 /// Inherited from QWidget
@@ -3371,6 +3373,8 @@ QSize* k_textgrammarcheck__grammalecteresultwidget_super_minimum_size_hint(void*
 ///
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 /// @param callback QSize* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__grammalecteresultwidget_on_minimum_size_hint(void* self, QSize* (*callback)());
 
@@ -4701,6 +4705,8 @@ QVariant* k_textgrammarcheck__grammalecteresultwidget_super_input_method_query(v
 ///
 /// @param self TextGrammarCheck__GrammalecteResultWidget*
 /// @param callback QVariant* func(TextGrammarCheck__GrammalecteResultWidget* self, enum Qt__InputMethodQuery param1)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void k_textgrammarcheck__grammalecteresultwidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 

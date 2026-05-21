@@ -636,6 +636,8 @@ QRectF* q_graphicswidget_bounding_rect(void* self);
 /// @param self QGraphicsWidget*
 /// @param callback QRectF* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicswidget_on_bounding_rect(void* self, QRectF* (*callback)());
 
 /// @warning DEPRECATED: Use `q_graphicswidget_super_bounding_rect` instead
@@ -662,6 +664,8 @@ QPainterPath* q_graphicswidget_shape(void* self);
 ///
 /// @param self QGraphicsWidget*
 /// @param callback QPainterPath* func()
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicswidget_on_shape(void* self, QPainterPath* (*callback)());
 
@@ -753,6 +757,8 @@ QSizeF* q_graphicswidget_size_hint(void* self, int32_t which, void* constraint);
 /// @param self QGraphicsWidget*
 /// @param callback QSizeF* func(QGraphicsWidget* self, enum Qt__SizeHint which, QSizeF* constraint)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicswidget_on_size_hint(void* self, QSizeF* (*callback)(void*, int32_t, void*));
 
 /// @warning DEPRECATED: Use `q_graphicswidget_super_size_hint` instead
@@ -811,6 +817,8 @@ QVariant* q_graphicswidget_item_change(void* self, int32_t change, void* value);
 /// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, enum QGraphicsItem__GraphicsItemChange change, QVariant* value)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicswidget_on_item_change(void* self, QVariant* (*callback)(void*, int32_t, void*));
 
 /// @warning DEPRECATED: Use `q_graphicswidget_super_item_change` instead
@@ -841,6 +849,8 @@ QVariant* q_graphicswidget_property_change(void* self, const char* propertyName,
 ///
 /// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, const char* propertyName, QVariant* value)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicswidget_on_property_change(void* self, QVariant* (*callback)(void*, const char*, void*));
 
@@ -4422,6 +4432,8 @@ QPainterPath* q_graphicswidget_super_opaque_area(void* self);
 /// @param self QGraphicsWidget*
 /// @param callback QPainterPath* func()
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicswidget_on_opaque_area(void* self, QPainterPath* (*callback)());
 
 /// Inherited from QGraphicsItem
@@ -5016,6 +5028,8 @@ QVariant* q_graphicswidget_super_input_method_query(void* self, int32_t query);
 /// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, enum Qt__InputMethodQuery query)
 ///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
 void q_graphicswidget_on_input_method_query(void* self, QVariant* (*callback)(void*, int32_t));
 
 /// Inherited from QGraphicsItem
@@ -5128,6 +5142,8 @@ QVariant* q_graphicswidget_super_extension(void* self, void* variant);
 ///
 /// @param self QGraphicsWidget*
 /// @param callback QVariant* func(QGraphicsWidget* self, QVariant* variant)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
 ///
 void q_graphicswidget_on_extension(void* self, QVariant* (*callback)(void*, void*));
 
