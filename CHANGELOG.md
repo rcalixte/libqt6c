@@ -1,4 +1,8 @@
 
+### 6.8.2 rev76 (21 May 2026)
+
+* **BREAKING CHANGE:** Unblock additional string types (#139)
+
 ### 6.8.2 rev75 (20 May 2026)
 
 * **BREAKING CHANGE:** Fix memory leaks from callback return values (#138)
