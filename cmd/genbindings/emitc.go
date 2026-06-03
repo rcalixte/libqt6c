@@ -1205,7 +1205,8 @@ func (cfs *cFileState) emitCabiToC(assignExpr string, rt CppParameter, rvalue st
 
 	} else if rt.ParameterType == "QString" || rt.ParameterType == "QStringView" ||
 		rt.ParameterType == "QByteArray" || rt.ParameterType == "QByteArrayView" ||
-		rt.ParameterType == "SignOn::MethodName" || rt.ParameterType == "QLatin1StringView" {
+		rt.ParameterType == "QLatin1String" || rt.ParameterType == "QLatin1StringView" ||
+		rt.ParameterType == "SignOn::MethodName" {
 		shouldReturn := "libqt_string " + namePrefix + "_str = "
 		afterword += cfs.checkAndClearAllocCleanups(false)
 		afterword += "char* " + namePrefix + "_ret = qstring_to_char(" + namePrefix + "_str);\n"
