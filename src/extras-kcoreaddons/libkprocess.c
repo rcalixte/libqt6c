@@ -392,25 +392,35 @@ void k_process_set_standard_output_process(void* self, void* destination) {
     QProcess_SetStandardOutputProcess((QProcess*)self, (QProcess*)destination);
 }
 
+#ifndef _WIN32
 void k_process_set_child_process_modifier(void* self, void (*modifier)()) {
     QProcess_SetChildProcessModifier((QProcess*)self, (intptr_t)modifier);
 }
+#endif
 
+#ifndef _WIN32
 void k_process_fail_child_process_modifier(void* self, const char* description) {
     QProcess_FailChildProcessModifier((QProcess*)self, description);
 }
+#endif
 
+#ifndef _WIN32
 QProcess__UnixProcessParameters* k_process_unix_process_parameters(void* self) {
     return QProcess_UnixProcessParameters((QProcess*)self);
 }
+#endif
 
+#ifndef _WIN32
 void k_process_set_unix_process_parameters(void* self, void* params) {
     QProcess_SetUnixProcessParameters((QProcess*)self, (QProcess__UnixProcessParameters*)params);
 }
+#endif
 
+#ifndef _WIN32
 void k_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly) {
     QProcess_SetUnixProcessParameters2((QProcess*)self, flagsOnly);
 }
+#endif
 
 const char* k_process_working_directory(void* self) {
     libqt_string _str = QProcess_WorkingDirectory((QProcess*)self);
@@ -626,9 +636,11 @@ void k_process_set_standard_error_file2(void* self, const char* fileName, int32_
     QProcess_SetStandardErrorFile2((QProcess*)self, qstring(fileName), mode);
 }
 
+#ifndef _WIN32
 void k_process_fail_child_process_modifier2(void* self, const char* description, int error) {
     QProcess_FailChildProcessModifier2((QProcess*)self, description, error);
 }
+#endif
 
 bool k_process_wait_for_started1(void* self, int msecs) {
     return QProcess_WaitForStarted1((QProcess*)self, msecs);

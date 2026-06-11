@@ -408,39 +408,49 @@ void q_process_set_standard_error_file(void* self, const char* fileName);
 ///
 void q_process_set_standard_output_process(void* self, void* destination);
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setChildProcessModifier)
 ///
 /// @param self QProcess*
 /// @param modifier void func()
 ///
 void q_process_set_child_process_modifier(void* self, void (*modifier)());
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
 ///
 /// @param self QProcess*
 /// @param description const char*
 ///
 void q_process_fail_child_process_modifier(void* self, const char* description);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#unixProcessParameters)
 ///
 /// @param self QProcess*
 ///
 QProcess__UnixProcessParameters* q_process_unix_process_parameters(void* self);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setUnixProcessParameters)
 ///
 /// @param self QProcess*
 /// @param params QProcess__UnixProcessParameters*
 ///
 void q_process_set_unix_process_parameters(void* self, void* params);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setUnixProcessParameters)
 ///
 /// @param self QProcess*
 /// @param flagsOnly flag of enum QProcess__UnixProcessFlag
 ///
 void q_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
+#endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#workingDirectory)
 ///
@@ -925,6 +935,7 @@ void q_process_set_standard_output_file2(void* self, const char* fileName, int32
 ///
 void q_process_set_standard_error_file2(void* self, const char* fileName, int32_t mode);
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
 ///
 /// @param self QProcess*
@@ -932,6 +943,7 @@ void q_process_set_standard_error_file2(void* self, const char* fileName, int32_
 /// @param error int
 ///
 void q_process_fail_child_process_modifier2(void* self, const char* description, int error);
+#endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#waitForStarted)
 ///
@@ -2695,34 +2707,43 @@ void q_process_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html)
 
+#ifndef _WIN32
 /// q_process__unixprocessparameters_new constructs a new QProcess::UnixProcessParameters object.
 ///
 /// @param other QProcess__UnixProcessParameters*
 ///
 QProcess__UnixProcessParameters* q_process__unixprocessparameters_new(void* other);
+#endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html)
 
+#ifndef _WIN32
 /// q_process__unixprocessparameters_new2 constructs a new QProcess::UnixProcessParameters object and invalidates the source QProcess::UnixProcessParameters object.
 ///
 /// @param other QProcess__UnixProcessParameters*
 ///
 QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other);
+#endif
 
+#ifndef _WIN32
 /// q_process__unixprocessparameters_copy_assign shallow copies `other` into `self`.
 ///
 /// @param self QProcess__UnixProcessParameters*
 /// @param other QProcess__UnixProcessParameters*
 ///
 void q_process__unixprocessparameters_copy_assign(void* self, void* other);
+#endif
 
+#ifndef _WIN32
 /// q_process__unixprocessparameters_move_assign moves `other` into `self` and invalidates `other`.
 ///
 /// @param self QProcess__UnixProcessParameters*
 /// @param other QProcess__UnixProcessParameters*
 ///
 void q_process__unixprocessparameters_move_assign(void* self, void* other);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#flags-var)
 ///
 /// @param self QProcess__UnixProcessParameters*
@@ -2730,32 +2751,41 @@ void q_process__unixprocessparameters_move_assign(void* self, void* other);
 /// @return flag of enum QProcess__UnixProcessFlag
 ///
 uint32_t q_process__unixprocessparameters_flags(void* self);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#flags-var)
 ///
 /// @param self QProcess__UnixProcessParameters*
 /// @param flags flag of enum QProcess__UnixProcessFlag
 ///
 void q_process__unixprocessparameters_set_flags(void* self, uint32_t flags);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#lowestFileDescriptorToClose-var)
 ///
 /// @param self QProcess__UnixProcessParameters*
 ///
 int32_t q_process__unixprocessparameters_lowest_file_descriptor_to_close(void* self);
+#endif
 
+#ifndef _WIN32
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess-unixprocessparameters.html#lowestFileDescriptorToClose-var)
 ///
 /// @param self QProcess__UnixProcessParameters*
 /// @param lowestFileDescriptorToClose int
 ///
 void q_process__unixprocessparameters_set_lowest_file_descriptor_to_close(void* self, int lowestFileDescriptorToClose);
+#endif
 
+#ifndef _WIN32
 /// Delete this object from C++ memory.
 ///
 /// @param self QProcess__UnixProcessParameters*
 ///
 void q_process__unixprocessparameters_delete(void* self);
+#endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#public-types)
 
