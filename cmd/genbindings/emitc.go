@@ -1943,6 +1943,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 			if ctor.LinuxOnly {
 				maybeMacro = "#ifdef __linux__\n"
 				maybeEndMacro = "#endif\n"
+			} else if c.ClassName == "QProcess::UnixProcessParameters" {
+				// Windows hacks for QProcess
+				maybeMacro = "#ifndef _WIN32\n"
+				maybeEndMacro = "#endif\n"
 			}
 
 			cfs.castType = cStructName
@@ -1957,16 +1961,22 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				cStructName + "* " + cMethodPrefix + "_new" + maybeSuffix(i) + "(" + cfs.emitParametersC(ctor.Parameters, false) + ");\n" + maybeEndMacro + "\n\n")
 		}
 
+		var maybeAMacro, maybeAEndMacro string
+		if c.ClassName == "QProcess::UnixProcessParameters" {
+			// Windows hacks for QProcess
+			maybeAMacro = "#ifndef _WIN32\n"
+			maybeAEndMacro = "#endif\n"
+		}
 		if c.HasTrivialCopyAssign {
-			ret.WriteString("/// " + cMethodPrefix + "_copy_assign shallow copies `other` into `self`.\n///\n" +
+			ret.WriteString(maybeAMacro + "/// " + cMethodPrefix + "_copy_assign shallow copies `other` into `self`.\n///\n" +
 				"/// @param self " + cStructName + "*\n/// @param other " + cStructName + "*\n///\n" +
-				"void " + cMethodPrefix + "_copy_assign(void* self, void* other);\n\n")
+				"void " + cMethodPrefix + "_copy_assign(void* self, void* other);\n" + maybeAEndMacro + "\n")
 		}
 
 		if c.HasTrivialMoveAssign {
-			ret.WriteString("/// " + cMethodPrefix + "_move_assign moves `other` into `self` and invalidates `other`.\n///\n" +
+			ret.WriteString(maybeAMacro + "/// " + cMethodPrefix + "_move_assign moves `other` into `self` and invalidates `other`.\n///\n" +
 				"/// @param self " + cStructName + "*\n/// @param other " + cStructName + "*\n///\n" +
-				"void " + cMethodPrefix + "_move_assign(void* self, void* other);\n\n")
+				"void " + cMethodPrefix + "_move_assign(void* self, void* other);\n" + maybeAEndMacro + "\n")
 		}
 
 		seenMethods := make(map[string]struct{})
@@ -2093,6 +2103,10 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 				// hack for QMenu::setAsDockMenu
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __APPLE__")
+			} else if c.ClassName == "QProcess::UnixProcessParameters" || (cmdStructName == "QProcess" && (slices.Contains(nonWinQProcess, m.MethodName) || slices.Contains(nonWinQProcess, m.OverrideMethodName))) {
+				// Windows hacks for QProcess
+				needsPlatformMacro = true
+				ret.WriteString("\n#ifndef _WIN32")
 			}
 
 			ret.WriteString(inheritedFrom)
@@ -2414,16 +2428,22 @@ func emitH(src *CppParsedHeader, headerName, packageName string) (string, map[st
 
 		if c.CanDelete && !isBindingRemoved(cStructName) && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
 			maybeCharts := ifv(strings.Contains(src.Filename, "QtCharts"), "-qtcharts", "")
+			var maybeMacro, maybeEndMacro string
+			if c.ClassName == "QProcess::UnixProcessParameters" {
+				// Windows hacks for QProcess
+				maybeMacro = "\n#ifndef _WIN32"
+				maybeEndMacro = "#endif\n"
+			}
 
 			isSpecialCase := (cfs.currentHeaderName == "qcustomplot" && strings.HasPrefix(cStructName, "QCP")) ||
 				(strings.Contains(src.Filename, "accounts-qt") && cStructName[0] != 'Q') ||
 				(strings.Contains(src.Filename, "signon-qt") && cStructName[0] != 'Q')
 
 			pageUrl := cfs.getPageUrl(DtorPage, ifv(isSpecialCase, cStructName, getPageName(cStructName))+maybeCharts, "", cStructName)
-			ret.WriteString(ifv(pageUrl != "", "\n"+pageUrl+"///\n", "\n") +
+			ret.WriteString(maybeMacro + ifv(pageUrl != "", "\n"+pageUrl+"///\n", "\n") +
 				"/// Delete this object from C++ memory.\n///\n" +
 				"/// @param self " + cStructName + "*\n///\n" +
-				"void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self);\n\n")
+				"void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self);\n" + maybeEndMacro + "\n")
 		}
 	}
 
@@ -2700,6 +2720,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				if ctor.LinuxOnly {
 					maybeMacro = "#ifdef __linux__\n"
 					maybeEndMacro = "#endif\n"
+				} else if c.ClassName == "QProcess::UnixProcessParameters" {
+					// Windows hacks for QProcess
+					maybeMacro = "#ifndef _WIN32\n"
+					maybeEndMacro = "#endif\n"
 				}
 
 				preamble = ifv(preamble != "", preamble+"\n", "")
@@ -2709,14 +2733,21 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 			}
 		}
 
+		var maybeAMacro, maybeAEndMacro string
+		if c.ClassName == "QProcess::UnixProcessParameters" {
+			// Windows hacks for QProcess
+			maybeAMacro = "#ifndef _WIN32\n"
+			maybeAEndMacro = "#endif\n"
+		}
+
 		if c.HasTrivialCopyAssign {
-			ret.WriteString("void " + cMethodPrefix + "_copy_assign(void* self, void* other) {\n" +
-				cStructName + "_CopyAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n}\n\n")
+			ret.WriteString(maybeAMacro + "void " + cMethodPrefix + "_copy_assign(void* self, void* other) {\n" +
+				cStructName + "_CopyAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n}\n" + maybeAEndMacro + "\n")
 		}
 
 		if c.HasTrivialMoveAssign {
-			ret.WriteString("void " + cMethodPrefix + "_move_assign(void* self, void* other) {\n" +
-				cStructName + "_MoveAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n}\n\n")
+			ret.WriteString(maybeAMacro + "void " + cMethodPrefix + "_move_assign(void* self, void* other) {\n" +
+				cStructName + "_MoveAssign((" + cStructName + "*)self, (" + cStructName + "*)other);\n}\n" + maybeAEndMacro + "\n")
 		}
 
 		seenMethods := make(map[string]struct{})
@@ -2859,6 +2890,10 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 				// hack for QMenu::setAsDockMenu
 				needsPlatformMacro = true
 				ret.WriteString("\n#ifdef __APPLE__\n")
+			} else if c.ClassName == "QProcess::UnixProcessParameters" || (cmdStructName == "QProcess" && (slices.Contains(nonWinQProcess, m.MethodName) || slices.Contains(nonWinQProcess, m.OverrideMethodName))) {
+				// Windows hacks for QProcess
+				needsPlatformMacro = true
+				ret.WriteString("\n#ifndef _WIN32\n")
 			}
 
 			ret.WriteString(returnTypeDecl + " " + cmdMethodName + method + cfs.emitParametersC(m.Parameters, false) + ") {")
@@ -3072,8 +3107,14 @@ func emitC(src *CppParsedHeader, headerName, packageName string) (string, error)
 		}
 
 		if c.CanDelete && !isBindingRemoved(c.ClassName) && (len(c.Methods) > 0 || len(c.VirtualMethods()) > 0 || len(c.Ctors) > 0) {
-			ret.WriteString("void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self) {\n" +
-				cStructName + "_Delete((" + cStructName + "*)(self));\n}\n")
+			var maybeMacro, maybeEndMacro string
+			if c.ClassName == "QProcess::UnixProcessParameters" {
+				// Windows hacks for QProcess
+				maybeMacro = "#ifndef _WIN32\n"
+				maybeEndMacro = "#endif\n"
+			}
+			ret.WriteString(maybeMacro + "void " + cPrefix + cSafeMethodName(strings.ToLower(cStructName[nameIndex:])) + "_delete(void* self) {\n" +
+				cStructName + "_Delete((" + cStructName + "*)(self));\n}" + maybeEndMacro + "\n")
 		}
 	}
 
