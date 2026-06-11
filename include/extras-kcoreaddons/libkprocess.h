@@ -459,6 +459,7 @@ void k_process_set_standard_error_file(void* self, const char* fileName);
 ///
 void k_process_set_standard_output_process(void* self, void* destination);
 
+#ifndef _WIN32
 /// Inherited from QProcess
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setChildProcessModifier)
@@ -467,7 +468,9 @@ void k_process_set_standard_output_process(void* self, void* destination);
 /// @param modifier void func()
 ///
 void k_process_set_child_process_modifier(void* self, void (*modifier)());
+#endif
 
+#ifndef _WIN32
 /// Inherited from QProcess
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
@@ -476,7 +479,9 @@ void k_process_set_child_process_modifier(void* self, void (*modifier)());
 /// @param description const char*
 ///
 void k_process_fail_child_process_modifier(void* self, const char* description);
+#endif
 
+#ifndef _WIN32
 /// Inherited from QProcess
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#unixProcessParameters)
@@ -484,7 +489,9 @@ void k_process_fail_child_process_modifier(void* self, const char* description);
 /// @param self KProcess*
 ///
 QProcess__UnixProcessParameters* k_process_unix_process_parameters(void* self);
+#endif
 
+#ifndef _WIN32
 /// Inherited from QProcess
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setUnixProcessParameters)
@@ -493,7 +500,9 @@ QProcess__UnixProcessParameters* k_process_unix_process_parameters(void* self);
 /// @param params QProcess__UnixProcessParameters*
 ///
 void k_process_set_unix_process_parameters(void* self, void* params);
+#endif
 
+#ifndef _WIN32
 /// Inherited from QProcess
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#setUnixProcessParameters)
@@ -502,6 +511,7 @@ void k_process_set_unix_process_parameters(void* self, void* params);
 /// @param flagsOnly flag of enum QProcess__UnixProcessFlag
 ///
 void k_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly);
+#endif
 
 /// Inherited from QProcess
 ///
@@ -787,6 +797,7 @@ void k_process_set_standard_output_file2(void* self, const char* fileName, int32
 ///
 void k_process_set_standard_error_file2(void* self, const char* fileName, int32_t mode);
 
+#ifndef _WIN32
 /// Inherited from QProcess
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qprocess.html#failChildProcessModifier)
@@ -796,6 +807,7 @@ void k_process_set_standard_error_file2(void* self, const char* fileName, int32_
 /// @param error int
 ///
 void k_process_fail_child_process_modifier2(void* self, const char* description, int error);
+#endif
 
 /// Inherited from QProcess
 ///

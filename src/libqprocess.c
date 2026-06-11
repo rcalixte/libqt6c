@@ -287,25 +287,35 @@ void q_process_set_standard_output_process(void* self, void* destination) {
     QProcess_SetStandardOutputProcess((QProcess*)self, (QProcess*)destination);
 }
 
+#ifndef _WIN32
 void q_process_set_child_process_modifier(void* self, void (*modifier)()) {
     QProcess_SetChildProcessModifier((QProcess*)self, (intptr_t)modifier);
 }
+#endif
 
+#ifndef _WIN32
 void q_process_fail_child_process_modifier(void* self, const char* description) {
     QProcess_FailChildProcessModifier((QProcess*)self, description);
 }
+#endif
 
+#ifndef _WIN32
 QProcess__UnixProcessParameters* q_process_unix_process_parameters(void* self) {
     return QProcess_UnixProcessParameters((QProcess*)self);
 }
+#endif
 
+#ifndef _WIN32
 void q_process_set_unix_process_parameters(void* self, void* params) {
     QProcess_SetUnixProcessParameters((QProcess*)self, (QProcess__UnixProcessParameters*)params);
 }
+#endif
 
+#ifndef _WIN32
 void q_process_set_unix_process_parameters2(void* self, uint32_t flagsOnly) {
     QProcess_SetUnixProcessParameters2((QProcess*)self, flagsOnly);
 }
+#endif
 
 const char* q_process_working_directory(void* self) {
     libqt_string _str = QProcess_WorkingDirectory((QProcess*)self);
@@ -639,9 +649,11 @@ void q_process_set_standard_error_file2(void* self, const char* fileName, int32_
     QProcess_SetStandardErrorFile2((QProcess*)self, qstring(fileName), mode);
 }
 
+#ifndef _WIN32
 void q_process_fail_child_process_modifier2(void* self, const char* description, int error) {
     QProcess_FailChildProcessModifier2((QProcess*)self, description, error);
 }
+#endif
 
 bool q_process_wait_for_started1(void* self, int msecs) {
     return QProcess_WaitForStarted1((QProcess*)self, msecs);
@@ -1416,38 +1428,56 @@ void q_process_delete(void* self) {
     QProcess_Delete((QProcess*)(self));
 }
 
+#ifndef _WIN32
 QProcess__UnixProcessParameters* q_process__unixprocessparameters_new(void* other) {
     return QProcess__UnixProcessParameters_new((QProcess__UnixProcessParameters*)other);
 }
+#endif
 
+#ifndef _WIN32
 QProcess__UnixProcessParameters* q_process__unixprocessparameters_new2(void* other) {
     return QProcess__UnixProcessParameters_new2((QProcess__UnixProcessParameters*)other);
 }
+#endif
 
+#ifndef _WIN32
 void q_process__unixprocessparameters_copy_assign(void* self, void* other) {
     QProcess__UnixProcessParameters_CopyAssign((QProcess__UnixProcessParameters*)self, (QProcess__UnixProcessParameters*)other);
 }
+#endif
 
+#ifndef _WIN32
 void q_process__unixprocessparameters_move_assign(void* self, void* other) {
     QProcess__UnixProcessParameters_MoveAssign((QProcess__UnixProcessParameters*)self, (QProcess__UnixProcessParameters*)other);
 }
+#endif
 
+#ifndef _WIN32
 uint32_t q_process__unixprocessparameters_flags(void* self) {
     return QProcess__UnixProcessParameters_Flags((QProcess__UnixProcessParameters*)self);
 }
+#endif
 
+#ifndef _WIN32
 void q_process__unixprocessparameters_set_flags(void* self, uint32_t flags) {
     QProcess__UnixProcessParameters_SetFlags((QProcess__UnixProcessParameters*)self, flags);
 }
+#endif
 
+#ifndef _WIN32
 int32_t q_process__unixprocessparameters_lowest_file_descriptor_to_close(void* self) {
     return QProcess__UnixProcessParameters_LowestFileDescriptorToClose((QProcess__UnixProcessParameters*)self);
 }
+#endif
 
+#ifndef _WIN32
 void q_process__unixprocessparameters_set_lowest_file_descriptor_to_close(void* self, int lowestFileDescriptorToClose) {
     QProcess__UnixProcessParameters_SetLowestFileDescriptorToClose((QProcess__UnixProcessParameters*)self, lowestFileDescriptorToClose);
 }
+#endif
 
+#ifndef _WIN32
 void q_process__unixprocessparameters_delete(void* self) {
     QProcess__UnixProcessParameters_Delete((QProcess__UnixProcessParameters*)(self));
 }
+#endif
