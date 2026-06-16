@@ -354,17 +354,17 @@ void k_onsole__emulation_super_send_mouse_event(void* self, int buttons, int col
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// @param self Konsole__Emulation*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param length int
 ///
-void k_onsole__emulation_send_string(void* self, const char* stringVal, int length);
+void k_onsole__emulation_send_string(void* self, const char* string, int length);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self Konsole__Emulation*
-/// @param callback void func(Konsole__Emulation* self, const char* stringVal, int length)
+/// @param callback void func(Konsole__Emulation* self, const char* string, int length)
 ///
 void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, const char*, int));
 
@@ -377,10 +377,10 @@ void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, cons
 /// Base class method implementation
 ///
 /// @param self Konsole__Emulation*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param length int
 ///
-void k_onsole__emulation_super_send_string(void* self, const char* stringVal, int length);
+void k_onsole__emulation_super_send_string(void* self, const char* string, int length);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///

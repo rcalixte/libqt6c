@@ -24,17 +24,17 @@ struct pair_kguiitem_kguiitem {
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#guiItem)
 ///
-/// @param param1 enum KStandardGuiItem__StandardItem
+/// @param id enum KStandardGuiItem__StandardItem
 ///
-KGuiItem* k_standardguiitem_gui_item(int32_t param1);
+KGuiItem* k_standardguiitem_gui_item(int32_t id);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#standardItem)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 enum KStandardGuiItem__StandardItem
+/// @param id enum KStandardGuiItem__StandardItem
 ///
-const char* k_standardguiitem_standard_item(int32_t param1);
+const char* k_standardguiitem_standard_item(int32_t id);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#ok)
 ///
@@ -126,15 +126,15 @@ KGuiItem* k_standardguiitem_open();
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#back)
 ///
-/// @param param1 enum KStandardGuiItem__BidiMode
+/// @param useBidi enum KStandardGuiItem__BidiMode
 ///
-KGuiItem* k_standardguiitem_back(int32_t param1);
+KGuiItem* k_standardguiitem_back(int32_t useBidi);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#forward)
 ///
-/// @param param1 enum KStandardGuiItem__BidiMode
+/// @param useBidi enum KStandardGuiItem__BidiMode
 ///
-KGuiItem* k_standardguiitem_forward(int32_t param1);
+KGuiItem* k_standardguiitem_forward(int32_t useBidi);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#configure)
 ///
@@ -172,10 +172,10 @@ KGuiItem* k_standardguiitem_test();
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#assign)
 ///
-/// @param param1 QPushButton*
-/// @param param2 enum KStandardGuiItem__StandardItem
+/// @param button QPushButton*
+/// @param item enum KStandardGuiItem__StandardItem
 ///
-void k_standardguiitem_assign(void* param1, int32_t param2);
+void k_standardguiitem_assign(void* button, int32_t item);
 
 /// [Upstream resources](https://api.kde.org/kstandardguiitem.html#public-types)
 

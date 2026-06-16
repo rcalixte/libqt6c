@@ -452,6 +452,10 @@ exe.root_module.addIncludePath(qt6c.path("include"));
 // qt_lib_name is the name of the target library without prefix and suffix,
 // e.g. qapplication, qwidget, etc.
 exe.root_module.linkLibrary(qt6c.artifact(qt_lib_name));
+
+// Use the library-provided convenience method to configure much of the exe
+const configureQtExeRootModule = @import("libqt6c").configureQtExeRootModule;
+try configureQtExeRootModule(b, exe, .{});
 ```
 
 - Use the library in your code:
@@ -461,7 +465,7 @@ exe.root_module.linkLibrary(qt6c.artifact(qt_lib_name));
 #include <libqt6c.h>
 ```
 
-Full examples of the build system and sample applications can be found in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository.
+Full examples of the build system and sample applications can be found in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository. For a simpler build system and a single demo application, visit the [`libqt6c-demo`](https://github.com/rcalixte/libqt6c-demo) repository.
 
 FAQ
 ---

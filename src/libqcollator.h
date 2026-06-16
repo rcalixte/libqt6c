@@ -180,9 +180,9 @@ bool q_collator_operator_call2(void* self, const char* s1, const char* s2);
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#sortKey)
 ///
 /// @param self QCollator*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QCollatorSortKey* q_collator_sort_key(void* self, const char* stringVal);
+QCollatorSortKey* q_collator_sort_key(void* self, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcollator.html#defaultCompare)
 ///

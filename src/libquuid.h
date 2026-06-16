@@ -60,9 +60,9 @@ QUuid* q_uuid_new5(void* id128);
 
 /// q_uuid_new6 constructs a new QUuid object.
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QUuid* q_uuid_new6(const char* stringVal);
+QUuid* q_uuid_new6(const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html)
 
@@ -97,9 +97,9 @@ void q_uuid_move_assign(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromString)
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QUuid* q_uuid_from_string(const char* stringVal);
+QUuid* q_uuid_from_string(const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#toString)
 ///

@@ -1285,8 +1285,8 @@ void k_io__mimetypejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mimetype)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__MimetypeJob* k_io_mimetype(void* param1, int32_t param2);
+KIO__MimetypeJob* k_io_mimetype(void* url, int32_t flags);
 #endif

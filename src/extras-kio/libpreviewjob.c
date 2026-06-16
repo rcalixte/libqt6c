@@ -1175,18 +1175,18 @@ void k_io__previewjob_delete(void* self) {
     KIO__PreviewJob_Delete((KIO__PreviewJob*)(self));
 }
 
-KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param3[static 1]) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+KIO__PreviewJob* k_io_file_preview(void* items, void* size, const char* enabledPlugins[static 1]) {
+    size_t enabledPlugins_len = libqt_strv_length(enabledPlugins);
+    libqt_string* enabledPlugins_qstr = (libqt_string*)malloc(enabledPlugins_len * sizeof(libqt_string));
+    if (enabledPlugins_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_io_file_preview\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < enabledPlugins_len; ++i) {
+        enabledPlugins_qstr[i] = qstring(enabledPlugins[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    KIO__PreviewJob* _out = KIO_FilePreview((KFileItemList*)param1, (QSize*)param2, param3_list);
-    free(param3_qstr);
+    libqt_list enabledPlugins_list = qlist(enabledPlugins_qstr, enabledPlugins_len);
+    KIO__PreviewJob* _out = KIO_FilePreview((KFileItemList*)items, (QSize*)size, enabledPlugins_list);
+    free(enabledPlugins_qstr);
     return _out;
 }

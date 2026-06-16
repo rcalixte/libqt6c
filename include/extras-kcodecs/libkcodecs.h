@@ -14,104 +14,104 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
-/// @param param2 bool
+/// @param in char*
+/// @param useCRLF bool
 ///
-char* k_codecs_quoted_printable_encode(char* param1, bool param2);
+char* k_codecs_quoted_printable_encode(char* in, bool useCRLF);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableEncode)
 ///
-/// @param param1 char*
-/// @param param2 char*
-/// @param param3 bool
+/// @param in char*
+/// @param out char*
+/// @param useCRLF bool
 ///
-void k_codecs_quoted_printable_encode2(char* param1, char* param2, bool param3);
+void k_codecs_quoted_printable_encode2(char* in, char* out, bool useCRLF);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableDecode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param in char*
 ///
-char* k_codecs_quoted_printable_decode(char* param1);
+char* k_codecs_quoted_printable_decode(char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#quotedPrintableDecode)
 ///
-/// @param param1 char*
-/// @param param2 char*
+/// @param in char*
+/// @param out char*
 ///
-void k_codecs_quoted_printable_decode2(char* param1, char* param2);
+void k_codecs_quoted_printable_decode2(char* in, char* out);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#uudecode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param in char*
 ///
-char* k_codecs_uudecode(char* param1);
+char* k_codecs_uudecode(char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#uudecode)
 ///
-/// @param param1 char*
-/// @param param2 char*
+/// @param in char*
+/// @param out char*
 ///
-void k_codecs_uudecode2(char* param1, char* param2);
+void k_codecs_uudecode2(char* in, char* out);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Encode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param in char*
 ///
-char* k_codecs_base64_encode(char* param1);
+char* k_codecs_base64_encode(char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Encode)
 ///
-/// @param param1 char*
-/// @param param2 char*
-/// @param param3 bool
+/// @param in char*
+/// @param out char*
+/// @param insertLFs bool
 ///
-void k_codecs_base64_encode2(char* param1, char* param2, bool param3);
+void k_codecs_base64_encode2(char* in, char* out, bool insertLFs);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Decode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param in char*
 ///
-char* k_codecs_base64_decode(char* param1);
+char* k_codecs_base64_decode(char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base64Decode)
 ///
-/// @param param1 char*
-/// @param param2 char*
+/// @param in char*
+/// @param out char*
 ///
-void k_codecs_base64_decode2(char* param1, char* param2);
+void k_codecs_base64_decode2(char* in, char* out);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#decodeRFC2047String)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param text const char*
 ///
-const char* k_codecs_decode_r_f_c2047_string(const char* param1);
+const char* k_codecs_decode_r_f_c2047_string(const char* text);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#encodeRFC2047String)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
-/// @param param2 char*
+/// @param src const char*
+/// @param charset char*
 ///
-char* k_codecs_encode_r_f_c2047_string(const char* param1, char* param2);
+char* k_codecs_encode_r_f_c2047_string(const char* src, char* charset);
 
 /// [Upstream resources](https://api.kde.org/kcodecs.html#base45Decode)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param in char*
 ///
-char* k_codecs_base45_decode(char* param1);
+char* k_codecs_base45_decode(char* in);
 
 /// [Upstream resources](https://api.kde.org/kcodecs-codec.html)
 

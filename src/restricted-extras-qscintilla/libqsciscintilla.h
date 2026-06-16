@@ -3954,14 +3954,14 @@ void q_sciscintilla_on_text_changed(void* self, void (*callback)(void*));
 ///
 /// @param self QsciScintilla*
 /// @param id int
-/// @param stringVal const char*
+/// @param string const char*
 ///
-void q_sciscintilla_user_list_activated(void* self, int id, const char* stringVal);
+void q_sciscintilla_user_list_activated(void* self, int id, const char* string);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintilla.html)
 ///
 /// @param self QsciScintilla*
-/// @param callback void func(QsciScintilla* self, int id, const char* stringVal)
+/// @param callback void func(QsciScintilla* self, int id, const char* string)
 ///
 void q_sciscintilla_on_user_list_activated(void* self, void (*callback)(void*, int, const char*));
 

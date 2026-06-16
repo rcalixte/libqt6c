@@ -12,14 +12,14 @@
 
 /// [Upstream resources](https://api.kde.org/kjobwindows.html#setWindow)
 ///
-/// @param param1 QObject*
-/// @param param2 QWindow*
+/// @param job QObject*
+/// @param window QWindow*
 ///
-void k_jobwindows_set_window(void* param1, void* param2);
+void k_jobwindows_set_window(void* job, void* window);
 
 /// [Upstream resources](https://api.kde.org/kjobwindows.html#window)
 ///
-/// @param param1 QObject*
+/// @param job QObject*
 ///
-QWindow* k_jobwindows_window(void* param1);
+QWindow* k_jobwindows_window(void* job);
 #endif

@@ -1217,10 +1217,10 @@ void q_openglfunctions_4_3_compatibility_gl_use_program(void* self, uint32_t pro
 /// @param self QOpenGLFunctions_4_3_Compatibility*
 /// @param shader uint32_t
 /// @param count int32_t
-/// @param stringVal const char**
+/// @param string const char**
 /// @param length int32_t*
 ///
-void q_openglfunctions_4_3_compatibility_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+void q_openglfunctions_4_3_compatibility_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** string, int32_t* length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glLinkProgram)
 ///
@@ -4756,26 +4756,26 @@ void q_openglfunctions_4_3_compatibility_gl_get_polygon_stipple(void* self, uint
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glGetPixelMapusv)
 ///
 /// @param self QOpenGLFunctions_4_3_Compatibility*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param values uint16_t*
 ///
-void q_openglfunctions_4_3_compatibility_gl_get_pixel_mapusv(void* self, uint32_t mapVal, uint16_t* values);
+void q_openglfunctions_4_3_compatibility_gl_get_pixel_mapusv(void* self, uint32_t map, uint16_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glGetPixelMapuiv)
 ///
 /// @param self QOpenGLFunctions_4_3_Compatibility*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param values uint32_t*
 ///
-void q_openglfunctions_4_3_compatibility_gl_get_pixel_mapuiv(void* self, uint32_t mapVal, uint32_t* values);
+void q_openglfunctions_4_3_compatibility_gl_get_pixel_mapuiv(void* self, uint32_t map, uint32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glGetPixelMapfv)
 ///
 /// @param self QOpenGLFunctions_4_3_Compatibility*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param values float*
 ///
-void q_openglfunctions_4_3_compatibility_gl_get_pixel_mapfv(void* self, uint32_t mapVal, float* values);
+void q_openglfunctions_4_3_compatibility_gl_get_pixel_mapfv(void* self, uint32_t map, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glGetMaterialiv)
 ///
@@ -4873,29 +4873,29 @@ void q_openglfunctions_4_3_compatibility_gl_copy_pixels(void* self, int32_t x, i
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glPixelMapusv)
 ///
 /// @param self QOpenGLFunctions_4_3_Compatibility*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param mapsize int32_t
 /// @param values uint16_t*
 ///
-void q_openglfunctions_4_3_compatibility_gl_pixel_mapusv(void* self, uint32_t mapVal, int32_t mapsize, uint16_t* values);
+void q_openglfunctions_4_3_compatibility_gl_pixel_mapusv(void* self, uint32_t map, int32_t mapsize, uint16_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glPixelMapuiv)
 ///
 /// @param self QOpenGLFunctions_4_3_Compatibility*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param mapsize int32_t
 /// @param values uint32_t*
 ///
-void q_openglfunctions_4_3_compatibility_gl_pixel_mapuiv(void* self, uint32_t mapVal, int32_t mapsize, uint32_t* values);
+void q_openglfunctions_4_3_compatibility_gl_pixel_mapuiv(void* self, uint32_t map, int32_t mapsize, uint32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glPixelMapfv)
 ///
 /// @param self QOpenGLFunctions_4_3_Compatibility*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param mapsize int32_t
 /// @param values float*
 ///
-void q_openglfunctions_4_3_compatibility_gl_pixel_mapfv(void* self, uint32_t mapVal, int32_t mapsize, float* values);
+void q_openglfunctions_4_3_compatibility_gl_pixel_mapfv(void* self, uint32_t map, int32_t mapsize, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-3-compatibility.html#glPixelTransferi)
 ///

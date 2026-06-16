@@ -12,18 +12,18 @@
 
 /// [Upstream resources](https://api.kde.org/kbackup.html#simpleBackupFile)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 const char*
+/// @param filename const char*
+/// @param backupDir const char*
+/// @param backupExtension const char*
 ///
-bool k_backup_simple_backup_file(const char* param1, const char* param2, const char* param3);
+bool k_backup_simple_backup_file(const char* filename, const char* backupDir, const char* backupExtension);
 
 /// [Upstream resources](https://api.kde.org/kbackup.html#numberedBackupFile)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 const char*
-/// @param param4 uint32_t
+/// @param filename const char*
+/// @param backupDir const char*
+/// @param backupExtension const char*
+/// @param maxBackups uint32_t
 ///
-bool k_backup_numbered_backup_file(const char* param1, const char* param2, const char* param3, uint32_t param4);
+bool k_backup_numbered_backup_file(const char* filename, const char* backupDir, const char* backupExtension, uint32_t maxBackups);
 #endif

@@ -32,10 +32,10 @@ KJobUiDelegate* k_io_create_default_job_ui_delegate();
 
 /// [Upstream resources](https://api.kde.org/kio.html#createDefaultJobUiDelegate)
 ///
-/// @param param1 flag of enum KJobUiDelegate__Flag
-/// @param param2 QWidget*
+/// @param flags flag of enum KJobUiDelegate__Flag
+/// @param window QWidget*
 ///
-KJobUiDelegate* k_io_create_default_job_ui_delegate2(int32_t param1, void* param2);
+KJobUiDelegate* k_io_create_default_job_ui_delegate2(int32_t flags, void* window);
 
 /// [Upstream resources](https://api.kde.org/kio.html#defaultJobUiDelegateFactory)
 ///
@@ -43,7 +43,7 @@ KIO__JobUiDelegateFactory* k_io_default_job_ui_delegate_factory();
 
 /// [Upstream resources](https://api.kde.org/kio.html#setDefaultJobUiDelegateFactory)
 ///
-/// @param param1 KIO__JobUiDelegateFactory*
+/// @param factory KIO__JobUiDelegateFactory*
 ///
-void k_io_set_default_job_ui_delegate_factory(void* param1);
+void k_io_set_default_job_ui_delegate_factory(void* factory);
 #endif

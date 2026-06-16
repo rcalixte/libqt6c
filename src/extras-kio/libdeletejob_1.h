@@ -1142,15 +1142,15 @@ void k_io__deletejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#del)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param src QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DeleteJob* k_io_del(void* param1, int32_t param2);
+KIO__DeleteJob* k_io_del(void* src, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#del)
 ///
-/// @param param1 libqt_list of QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param src libqt_list of QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DeleteJob* k_io_del2(libqt_list param1, int32_t param2);
+KIO__DeleteJob* k_io_del2(libqt_list src, int32_t flags);
 #endif

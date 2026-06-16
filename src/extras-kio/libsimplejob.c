@@ -620,42 +620,42 @@ void k_io__simplejob_delete(void* self) {
     KIO__SimpleJob_Delete((KIO__SimpleJob*)(self));
 }
 
-KIO__SimpleJob* k_io_rmdir(void* param1) {
-    return KIO_Rmdir((QUrl*)param1);
+KIO__SimpleJob* k_io_rmdir(void* url) {
+    return KIO_Rmdir((QUrl*)url);
 }
 
-KIO__SimpleJob* k_io_chown(void* param1, const char* param2, const char* param3) {
-    return KIO_Chown((QUrl*)param1, qstring(param2), qstring(param3));
+KIO__SimpleJob* k_io_chown(void* url, const char* owner, const char* group) {
+    return KIO_Chown((QUrl*)url, qstring(owner), qstring(group));
 }
 
-KIO__SimpleJob* k_io_set_modification_time(void* param1, void* param2) {
-    return KIO_SetModificationTime((QUrl*)param1, (QDateTime*)param2);
+KIO__SimpleJob* k_io_set_modification_time(void* url, void* mtime) {
+    return KIO_SetModificationTime((QUrl*)url, (QDateTime*)mtime);
 }
 
-KIO__SimpleJob* k_io_rename(void* param1, void* param2, int32_t param3) {
-    return KIO_Rename((QUrl*)param1, (QUrl*)param2, param3);
+KIO__SimpleJob* k_io_rename(void* src, void* dest, int32_t flags) {
+    return KIO_Rename((QUrl*)src, (QUrl*)dest, flags);
 }
 
-KIO__SimpleJob* k_io_symlink(const char* param1, void* param2, int32_t param3) {
-    return KIO_Symlink(qstring(param1), (QUrl*)param2, param3);
+KIO__SimpleJob* k_io_symlink(const char* target, void* dest, int32_t flags) {
+    return KIO_Symlink(qstring(target), (QUrl*)dest, flags);
 }
 
-KIO__SimpleJob* k_io_special(void* param1, char* param2, int32_t param3) {
-    return KIO_Special((QUrl*)param1, qstring(param2), param3);
+KIO__SimpleJob* k_io_special(void* url, char* data, int32_t flags) {
+    return KIO_Special((QUrl*)url, qstring(data), flags);
 }
 
-KIO__SimpleJob* k_io_mount(bool param1, char* param2, const char* param3, const char* param4, int32_t param5) {
-    return KIO_Mount(param1, qstring(param2), qstring(param3), qstring(param4), param5);
+KIO__SimpleJob* k_io_mount(bool ro, char* fstype, const char* dev, const char* point, int32_t flags) {
+    return KIO_Mount(ro, qstring(fstype), qstring(dev), qstring(point), flags);
 }
 
-KIO__SimpleJob* k_io_unmount(const char* param1, int32_t param2) {
-    return KIO_Unmount(qstring(param1), param2);
+KIO__SimpleJob* k_io_unmount(const char* point, int32_t flags) {
+    return KIO_Unmount(qstring(point), flags);
 }
 
-KIO__SimpleJob* k_io_http_update_cache(void* param1, bool param2, void* param3) {
-    return KIO_HttpUpdateCache((QUrl*)param1, param2, (QDateTime*)param3);
+KIO__SimpleJob* k_io_http_update_cache(void* url, bool no_cache, void* expireDate) {
+    return KIO_HttpUpdateCache((QUrl*)url, no_cache, (QDateTime*)expireDate);
 }
 
-KIO__SimpleJob* k_io_file_delete(void* param1, int32_t param2) {
-    return KIO_FileDelete((QUrl*)param1, param2);
+KIO__SimpleJob* k_io_file_delete(void* src, int32_t flags) {
+    return KIO_FileDelete((QUrl*)src, flags);
 }

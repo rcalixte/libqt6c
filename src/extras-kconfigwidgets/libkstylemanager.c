@@ -7,6 +7,6 @@ void k_stylemanager_init_style() {
     KStyleManager_InitStyle();
 }
 
-QAction* k_stylemanager_create_configure_action(void* param1) {
-    return KStyleManager_CreateConfigureAction((QObject*)param1);
+QAction* k_stylemanager_create_configure_action(void* parent) {
+    return KStyleManager_CreateConfigureAction((QObject*)parent);
 }

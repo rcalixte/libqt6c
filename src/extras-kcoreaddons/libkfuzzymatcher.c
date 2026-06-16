@@ -65,15 +65,15 @@ void k_fuzzymatcher__range_delete(void* self) {
     KFuzzyMatcher__Range_Delete((KFuzzyMatcher__Range*)(self));
 }
 
-bool k_fuzzymatcher_match_simple(const char* param1, const char* param2) {
-    return KFuzzyMatcher_MatchSimple(qstring(param1), qstring(param2));
+bool k_fuzzymatcher_match_simple(const char* pattern, const char* str) {
+    return KFuzzyMatcher_MatchSimple(qstring(pattern), qstring(str));
 }
 
-KFuzzyMatcher__Result* k_fuzzymatcher_match(const char* param1, const char* param2) {
-    return KFuzzyMatcher_Match(qstring(param1), qstring(param2));
+KFuzzyMatcher__Result* k_fuzzymatcher_match(const char* pattern, const char* str) {
+    return KFuzzyMatcher_Match(qstring(pattern), qstring(str));
 }
 
-libqt_list /* of KFuzzyMatcher__Range* */ k_fuzzymatcher_matched_ranges(const char* param1, const char* param2, uint8_t param3) {
-    libqt_list _arr = KFuzzyMatcher_MatchedRanges(qstring(param1), qstring(param2), param3);
+libqt_list /* of KFuzzyMatcher__Range* */ k_fuzzymatcher_matched_ranges(const char* pattern, const char* str, uint8_t type) {
+    libqt_list _arr = KFuzzyMatcher_MatchedRanges(qstring(pattern), qstring(str), type);
     return _arr;
 }

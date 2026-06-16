@@ -181,9 +181,9 @@ __uint128_t q_bluetoothuuid_to_u_int1281(void* self, int32_t order);
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/quuid.html#fromString)
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QUuid* q_bluetoothuuid_from_string(const char* stringVal);
+QUuid* q_bluetoothuuid_from_string(const char* string);
 
 /// Inherited from QUuid
 ///

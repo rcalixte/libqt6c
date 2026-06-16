@@ -38,9 +38,9 @@ void q_jsonobject_swap(void* self, void* other);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#fromVariantMap)
 ///
-/// @param mapVal libqt_map of const char* to QVariant*
+/// @param map libqt_map of const char* to QVariant*
 ///
-QJsonObject* q_jsonobject_from_variant_map(libqt_map mapVal);
+QJsonObject* q_jsonobject_from_variant_map(libqt_map map);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#toVariantMap)
 ///
@@ -64,9 +64,9 @@ libqt_map q_jsonobject_to_variant_map(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#fromVariantHash)
 ///
-/// @param mapVal libqt_map of const char* to QVariant*
+/// @param map libqt_map of const char* to QVariant*
 ///
-QJsonObject* q_jsonobject_from_variant_hash(libqt_map mapVal);
+QJsonObject* q_jsonobject_from_variant_hash(libqt_map map);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qjsonobject.html#toVariantHash)
 ///

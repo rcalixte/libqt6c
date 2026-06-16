@@ -3,12 +3,12 @@
 #include "libkstandardguiitem.hpp"
 #include "libkstandardguiitem.h"
 
-KGuiItem* k_standardguiitem_gui_item(int32_t param1) {
-    return KStandardGuiItem_GuiItem(param1);
+KGuiItem* k_standardguiitem_gui_item(int32_t id) {
+    return KStandardGuiItem_GuiItem(id);
 }
 
-const char* k_standardguiitem_standard_item(int32_t param1) {
-    libqt_string _str = KStandardGuiItem_StandardItem(param1);
+const char* k_standardguiitem_standard_item(int32_t id) {
+    libqt_string _str = KStandardGuiItem_StandardItem(id);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -102,12 +102,12 @@ KGuiItem* k_standardguiitem_open() {
     return KStandardGuiItem_Open();
 }
 
-KGuiItem* k_standardguiitem_back(int32_t param1) {
-    return KStandardGuiItem_Back(param1);
+KGuiItem* k_standardguiitem_back(int32_t useBidi) {
+    return KStandardGuiItem_Back(useBidi);
 }
 
-KGuiItem* k_standardguiitem_forward(int32_t param1) {
-    return KStandardGuiItem_Forward(param1);
+KGuiItem* k_standardguiitem_forward(int32_t useBidi) {
+    return KStandardGuiItem_Forward(useBidi);
 }
 
 KGuiItem* k_standardguiitem_configure() {
@@ -142,6 +142,6 @@ KGuiItem* k_standardguiitem_test() {
     return KStandardGuiItem_Test();
 }
 
-void k_standardguiitem_assign(void* param1, int32_t param2) {
-    KStandardGuiItem_Assign((QPushButton*)param1, param2);
+void k_standardguiitem_assign(void* button, int32_t item) {
+    KStandardGuiItem_Assign((QPushButton*)button, item);
 }

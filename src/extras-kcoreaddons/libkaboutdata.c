@@ -5,8 +5,8 @@
 #include "libkaboutdata.hpp"
 #include "libkaboutdata.h"
 
-void k_crash_default_crash_handler(int param1) {
-    KCrash_DefaultCrashHandler(param1);
+void k_crash_default_crash_handler(int sig) {
+    KCrash_DefaultCrashHandler(sig);
 }
 
 KAboutPerson* k_aboutperson_new() {

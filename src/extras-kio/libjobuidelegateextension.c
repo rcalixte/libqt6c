@@ -14,6 +14,6 @@ KIO__JobUiDelegateExtension* k_io_default_job_ui_delegate_extension() {
     return KIO_DefaultJobUiDelegateExtension();
 }
 
-void k_io_set_default_job_ui_delegate_extension(void* param1) {
-    KIO_SetDefaultJobUiDelegateExtension((KIO__JobUiDelegateExtension*)param1);
+void k_io_set_default_job_ui_delegate_extension(void* extension) {
+    KIO_SetDefaultJobUiDelegateExtension((KIO__JobUiDelegateExtension*)extension);
 }

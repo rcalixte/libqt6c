@@ -178,9 +178,9 @@ QVariant* q_variant_new21(void* locale);
 
 /// q_variant_new22 constructs a new QVariant object.
 ///
-/// @param mapVal libqt_map of const char* to QVariant*
+/// @param map libqt_map of const char* to QVariant*
 ///
-QVariant* q_variant_new22(libqt_map mapVal);
+QVariant* q_variant_new22(libqt_map map);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -194,9 +194,9 @@ QVariant* q_variant_new23(void* re);
 
 /// q_variant_new24 constructs a new QVariant object.
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QVariant* q_variant_new24(const char* stringVal);
+QVariant* q_variant_new24(const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 
@@ -338,9 +338,9 @@ QVariant* q_variant_new41(const char* str);
 
 /// q_variant_new42 constructs a new QVariant object.
 ///
-/// @param stringVal char*
+/// @param string char*
 ///
-QVariant* q_variant_new42(char* stringVal);
+QVariant* q_variant_new42(char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qvariant.html)
 

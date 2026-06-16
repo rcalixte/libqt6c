@@ -16,7 +16,7 @@ KJobTrackerInterface* k_io_get_job_tracker();
 
 /// [Upstream resources](https://api.kde.org/kio.html#setJobTracker)
 ///
-/// @param param1 KJobTrackerInterface*
+/// @param tracker KJobTrackerInterface*
 ///
-void k_io_set_job_tracker(void* param1);
+void k_io_set_job_tracker(void* tracker);
 #endif

@@ -3,40 +3,40 @@
 #include "libkurlmimedata.hpp"
 #include "libkurlmimedata.h"
 
-void k_urlmimedata_set_urls(libqt_list /* of QUrl* */ param1, libqt_list /* of QUrl* */ param2, void* param3) {
-    KUrlMimeData_SetUrls(param1, param2, (QMimeData*)param3);
+void k_urlmimedata_set_urls(libqt_list /* of QUrl* */ urls, libqt_list /* of QUrl* */ mostLocalUrls, void* mimeData) {
+    KUrlMimeData_SetUrls(urls, mostLocalUrls, (QMimeData*)mimeData);
 }
 
-bool k_urlmimedata_export_urls_to_portal(void* param1) {
-    return KUrlMimeData_ExportUrlsToPortal((QMimeData*)param1);
+bool k_urlmimedata_export_urls_to_portal(void* mimeData) {
+    return KUrlMimeData_ExportUrlsToPortal((QMimeData*)mimeData);
 }
 
-void k_urlmimedata_set_meta_data(libqt_map /* of const char* to const char* */ param1, void* param2) {
+void k_urlmimedata_set_meta_data(libqt_map /* of const char* to const char* */ metaData, void* mimeData) {
     // Convert libqt_map to QMap<QString,QString>
-    libqt_map param1_ret;
-    param1_ret.len = param1.len;
-    param1_ret.keys = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
-    if (param1_ret.keys == NULL) {
+    libqt_map metaData_ret;
+    metaData_ret.len = metaData.len;
+    metaData_ret.keys = (libqt_string*)malloc(metaData_ret.len * sizeof(libqt_string));
+    if (metaData_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_urlmimedata_set_meta_data\n");
         abort();
     }
-    param1_ret.values = (libqt_string*)malloc(param1_ret.len * sizeof(libqt_string));
-    if (param1_ret.values == NULL) {
-        free(param1_ret.keys);
+    metaData_ret.values = (libqt_string*)malloc(metaData_ret.len * sizeof(libqt_string));
+    if (metaData_ret.values == NULL) {
+        free(metaData_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_urlmimedata_set_meta_data\n");
         abort();
     }
-    const char** param1_karr = (const char**)param1.keys;
-    libqt_string* param1_kdest = (libqt_string*)param1_ret.keys;
-    const char** param1_varr = (const char**)param1.values;
-    libqt_string* param1_vdest = (libqt_string*)param1_ret.values;
-    for (size_t i = 0; i < param1_ret.len; ++i) {
-        param1_kdest[i] = qstring(param1_karr[i]);
-        param1_vdest[i] = qstring(param1_varr[i]);
+    const char** metaData_karr = (const char**)metaData.keys;
+    libqt_string* metaData_kdest = (libqt_string*)metaData_ret.keys;
+    const char** metaData_varr = (const char**)metaData.values;
+    libqt_string* metaData_vdest = (libqt_string*)metaData_ret.values;
+    for (size_t i = 0; i < metaData_ret.len; ++i) {
+        metaData_kdest[i] = qstring(metaData_karr[i]);
+        metaData_vdest[i] = qstring(metaData_varr[i]);
     }
-    KUrlMimeData_SetMetaData(param1_ret, (QMimeData*)param2);
-    free(param1_ret.keys);
-    free(param1_ret.values);
+    KUrlMimeData_SetMetaData(metaData_ret, (QMimeData*)mimeData);
+    free(metaData_ret.keys);
+    free(metaData_ret.values);
 }
 
 const char** k_urlmimedata_mime_data_types() {
@@ -58,31 +58,31 @@ const char** k_urlmimedata_mime_data_types() {
     return _ret;
 }
 
-libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* param1, int32_t param2, libqt_map* /* of const char* to const char* */ param3) {
+libqt_list /* of QUrl* */ k_urlmimedata_urls_from_mime_data(void* mimeData, int32_t decodeOptions, libqt_map* /* of const char* to const char* */ metaData) {
     // Convert libqt_map to QMap<QString,QString>
-    libqt_map param3_ret;
-    param3_ret.len = param3->len;
-    param3_ret.keys = (libqt_string*)malloc(param3_ret.len * sizeof(libqt_string));
-    if (param3_ret.keys == NULL) {
+    libqt_map metaData_ret;
+    metaData_ret.len = metaData->len;
+    metaData_ret.keys = (libqt_string*)malloc(metaData_ret.len * sizeof(libqt_string));
+    if (metaData_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_urlmimedata_urls_from_mime_data\n");
         abort();
     }
-    param3_ret.values = (libqt_string*)malloc(param3_ret.len * sizeof(libqt_string));
-    if (param3_ret.values == NULL) {
-        free(param3_ret.keys);
+    metaData_ret.values = (libqt_string*)malloc(metaData_ret.len * sizeof(libqt_string));
+    if (metaData_ret.values == NULL) {
+        free(metaData_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_urlmimedata_urls_from_mime_data\n");
         abort();
     }
-    const char** param3_karr = (const char**)param3->keys;
-    libqt_string* param3_kdest = (libqt_string*)param3_ret.keys;
-    const char** param3_varr = (const char**)param3->values;
-    libqt_string* param3_vdest = (libqt_string*)param3_ret.values;
-    for (size_t i = 0; i < param3_ret.len; ++i) {
-        param3_kdest[i] = qstring(param3_karr[i]);
-        param3_vdest[i] = qstring(param3_varr[i]);
+    const char** metaData_karr = (const char**)metaData->keys;
+    libqt_string* metaData_kdest = (libqt_string*)metaData_ret.keys;
+    const char** metaData_varr = (const char**)metaData->values;
+    libqt_string* metaData_vdest = (libqt_string*)metaData_ret.values;
+    for (size_t i = 0; i < metaData_ret.len; ++i) {
+        metaData_kdest[i] = qstring(metaData_karr[i]);
+        metaData_vdest[i] = qstring(metaData_varr[i]);
     }
-    libqt_list _arr = KUrlMimeData_UrlsFromMimeData((QMimeData*)param1, param2, &param3_ret);
-    free(param3_ret.keys);
-    free(param3_ret.values);
+    libqt_list _arr = KUrlMimeData_UrlsFromMimeData((QMimeData*)mimeData, decodeOptions, &metaData_ret);
+    free(metaData_ret.keys);
+    free(metaData_ret.values);
     return _arr;
 }

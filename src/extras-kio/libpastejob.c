@@ -612,6 +612,6 @@ void k_io__pastejob_delete(void* self) {
     KIO__PasteJob_Delete((KIO__PasteJob*)(self));
 }
 
-KIO__PasteJob* k_io_paste(void* param1, void* param2, int32_t param3) {
-    return KIO_Paste((QMimeData*)param1, (QUrl*)param2, param3);
+KIO__PasteJob* k_io_paste(void* mimeData, void* destDir, int32_t flags) {
+    return KIO_Paste((QMimeData*)mimeData, (QUrl*)destDir, flags);
 }

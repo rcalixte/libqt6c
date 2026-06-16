@@ -261,32 +261,32 @@ QCborMap__Iterator* q_cbormap_insert5(void* self, pair_qcborvalue_qcborvalue /* 
     return QCborMap_Insert5((QCborMap*)self, v);
 }
 
-QCborMap* q_cbormap_from_variant_map(libqt_map /* of const char* to QVariant* */ mapVal) {
+QCborMap* q_cbormap_from_variant_map(libqt_map /* of const char* to QVariant* */ map) {
     // Convert libqt_map to QMap<QString,QVariant>
-    libqt_map mapVal_ret;
-    mapVal_ret.len = mapVal.len;
-    mapVal_ret.keys = (libqt_string*)malloc(mapVal_ret.len * sizeof(libqt_string));
-    if (mapVal_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in q_cbormap_from_variant_map\n");
         abort();
     }
-    mapVal_ret.values = (QVariant**)malloc(mapVal_ret.len * sizeof(QVariant*));
-    if (mapVal_ret.values == NULL) {
-        free(mapVal_ret.keys);
+    map_ret.values = (QVariant**)malloc(map_ret.len * sizeof(QVariant*));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in q_cbormap_from_variant_map\n");
         abort();
     }
-    const char** mapVal_karr = (const char**)mapVal.keys;
-    libqt_string* mapVal_kdest = (libqt_string*)mapVal_ret.keys;
-    QVariant** mapVal_varr = (QVariant**)mapVal.values;
-    QVariant** mapVal_vdest = (QVariant**)mapVal_ret.values;
-    for (size_t i = 0; i < mapVal_ret.len; ++i) {
-        mapVal_kdest[i] = qstring(mapVal_karr[i]);
-        mapVal_vdest[i] = mapVal_varr[i];
+    const char** map_karr = (const char**)map.keys;
+    libqt_string* map_kdest = (libqt_string*)map_ret.keys;
+    QVariant** map_varr = (QVariant**)map.values;
+    QVariant** map_vdest = (QVariant**)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = qstring(map_karr[i]);
+        map_vdest[i] = map_varr[i];
     }
-    QCborMap* _out = QCborMap_FromVariantMap(mapVal_ret);
-    free(mapVal_ret.keys);
-    free(mapVal_ret.values);
+    QCborMap* _out = QCborMap_FromVariantMap(map_ret);
+    free(map_ret.keys);
+    free(map_ret.values);
     return _out;
 }
 

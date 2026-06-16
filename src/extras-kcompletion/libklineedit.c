@@ -26,16 +26,16 @@ KLineEdit* k_lineedit_new(void* parent) {
     return KLineEdit_new((QWidget*)parent);
 }
 
-KLineEdit* k_lineedit_new2(const char* stringVal) {
-    return KLineEdit_new2(qstring(stringVal));
+KLineEdit* k_lineedit_new2(const char* string) {
+    return KLineEdit_new2(qstring(string));
 }
 
 KLineEdit* k_lineedit_new3() {
     return KLineEdit_new3();
 }
 
-KLineEdit* k_lineedit_new4(const char* stringVal, void* parent) {
-    return KLineEdit_new4(qstring(stringVal), (QWidget*)parent);
+KLineEdit* k_lineedit_new4(const char* string, void* parent) {
+    return KLineEdit_new4(qstring(string), (QWidget*)parent);
 }
 
 const QMetaObject* k_lineedit_meta_object(void* self) {

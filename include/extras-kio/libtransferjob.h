@@ -1247,41 +1247,41 @@ void k_io__transferjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#get)
 ///
-/// @param param1 QUrl*
-/// @param param2 enum KIO__LoadType
-/// @param param3 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param reload enum KIO__LoadType
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__TransferJob* k_io_get(void* param1, int32_t param2, int32_t param3);
+KIO__TransferJob* k_io_get(void* url, int32_t reload, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#put)
 ///
-/// @param param1 QUrl*
-/// @param param2 int
-/// @param param3 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param permissions int
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__TransferJob* k_io_put(void* param1, int param2, int32_t param3);
+KIO__TransferJob* k_io_put(void* url, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#http_post)
 ///
-/// @param param1 QUrl*
-/// @param param2 char*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param postData char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__TransferJob* k_io_http_post(void* param1, char* param2, int32_t param3);
+KIO__TransferJob* k_io_http_post(void* url, char* postData, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#http_post)
 ///
-/// @param param1 QUrl*
-/// @param param2 QIODevice*
-/// @param param3 int64_t
-/// @param param4 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param device QIODevice*
+/// @param size int64_t
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__TransferJob* k_io_http_post2(void* param1, void* param2, int64_t param3, int32_t param4);
+KIO__TransferJob* k_io_http_post2(void* url, void* device, int64_t size, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#http_delete)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__TransferJob* k_io_http_delete(void* param1, int32_t param2);
+KIO__TransferJob* k_io_http_delete(void* url, int32_t flags);
 #endif

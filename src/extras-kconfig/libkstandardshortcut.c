@@ -3,51 +3,51 @@
 #include "libkstandardshortcut.hpp"
 #include "libkstandardshortcut.h"
 
-libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t param1) {
-    libqt_list _arr = KStandardShortcut_Shortcut(param1);
+libqt_list /* of QKeySequence* */ k_standardshortcut_shortcut(int32_t id) {
+    libqt_list _arr = KStandardShortcut_Shortcut(id);
     return _arr;
 }
 
-const char* k_standardshortcut_name(int32_t param1) {
-    libqt_string _str = KStandardShortcut_Name(param1);
+const char* k_standardshortcut_name(int32_t id) {
+    libqt_string _str = KStandardShortcut_Name(id);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_standardshortcut_label(int32_t param1) {
-    libqt_string _str = KStandardShortcut_Label(param1);
+const char* k_standardshortcut_label(int32_t id) {
+    libqt_string _str = KStandardShortcut_Label(id);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_standardshortcut_whats_this(int32_t param1) {
-    libqt_string _str = KStandardShortcut_WhatsThis(param1);
+const char* k_standardshortcut_whats_this(int32_t id) {
+    libqt_string _str = KStandardShortcut_WhatsThis(id);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-int32_t k_standardshortcut_find(void* param1) {
-    return KStandardShortcut_Find((QKeySequence*)param1);
+int32_t k_standardshortcut_find(void* keySeq) {
+    return KStandardShortcut_Find((QKeySequence*)keySeq);
 }
 
-int32_t k_standardshortcut_find_by_name(const char* param1) {
-    return KStandardShortcut_FindByName(qstring(param1));
+int32_t k_standardshortcut_find_by_name(const char* name) {
+    return KStandardShortcut_FindByName(qstring(name));
 }
 
-libqt_list /* of QKeySequence* */ k_standardshortcut_hardcoded_default_shortcut(int32_t param1) {
-    libqt_list _arr = KStandardShortcut_HardcodedDefaultShortcut(param1);
+libqt_list /* of QKeySequence* */ k_standardshortcut_hardcoded_default_shortcut(int32_t id) {
+    libqt_list _arr = KStandardShortcut_HardcodedDefaultShortcut(id);
     return _arr;
 }
 
-void k_standardshortcut_save_shortcut(int32_t param1, libqt_list /* of QKeySequence* */ param2) {
-    KStandardShortcut_SaveShortcut(param1, param2);
+void k_standardshortcut_save_shortcut(int32_t id, libqt_list /* of QKeySequence* */ newShortcut) {
+    KStandardShortcut_SaveShortcut(id, newShortcut);
 }
 
-int32_t k_standardshortcut_category(int32_t param1) {
-    return KStandardShortcut_Category(param1);
+int32_t k_standardshortcut_category(int32_t id) {
+    return KStandardShortcut_Category(id);
 }
 
 libqt_list /* of QKeySequence* */ k_standardshortcut_open() {

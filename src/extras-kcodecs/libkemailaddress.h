@@ -14,62 +14,62 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param aStr const char*
 ///
-const char** k_emailaddress_split_address_list(const char* param1);
+const char** k_emailaddress_split_address_list(const char* aStr);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddress)
 ///
-/// @param param1 char*
-/// @param param2 char*
-/// @param param3 char*
-/// @param param4 char*
+/// @param address char*
+/// @param displayName char*
+/// @param addrSpec char*
+/// @param comment char*
 ///
 /// @return enum KEmailAddress__EmailParseResult
 ///
-int32_t k_emailaddress_split_address(char* param1, char* param2, char* param3, char* param4);
+int32_t k_emailaddress_split_address(char* address, char* displayName, char* addrSpec, char* comment);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#splitAddress)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 const char*
-/// @param param4 const char*
+/// @param address const char*
+/// @param displayName const char*
+/// @param addrSpec const char*
+/// @param comment const char*
 ///
 /// @return enum KEmailAddress__EmailParseResult
 ///
-int32_t k_emailaddress_split_address2(const char* param1, const char* param2, const char* param3, const char* param4);
+int32_t k_emailaddress_split_address2(const char* address, const char* displayName, const char* addrSpec, const char* comment);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#isValidAddress)
 ///
-/// @param param1 const char*
+/// @param aStr const char*
 ///
 /// @return enum KEmailAddress__EmailParseResult
 ///
-int32_t k_emailaddress_is_valid_address(const char* param1);
+int32_t k_emailaddress_is_valid_address(const char* aStr);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#isValidAddressList)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param aStr const char*
+/// @param badAddr const char*
 ///
 /// @return enum KEmailAddress__EmailParseResult
 ///
-int32_t k_emailaddress_is_valid_address_list(const char* param1, const char* param2);
+int32_t k_emailaddress_is_valid_address_list(const char* aStr, const char* badAddr);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#emailParseResultToString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 enum KEmailAddress__EmailParseResult
+/// @param errorCode enum KEmailAddress__EmailParseResult
 ///
-const char* k_emailaddress_email_parse_result_to_string(int32_t param1);
+const char* k_emailaddress_email_parse_result_to_string(int32_t errorCode);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#isValidSimpleAddress)
 ///
-/// @param param1 const char*
+/// @param aStr const char*
 ///
-bool k_emailaddress_is_valid_simple_address(const char* param1);
+bool k_emailaddress_is_valid_simple_address(const char* aStr);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#simpleEmailAddressErrorMsg)
 ///
@@ -81,149 +81,149 @@ const char* k_emailaddress_simple_email_address_error_msg();
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param address char*
 ///
-char* k_emailaddress_extract_email_address(char* param1);
+char* k_emailaddress_extract_email_address(char* address);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
-/// @param param2 const char*
+/// @param address char*
+/// @param errorMessage const char*
 ///
-char* k_emailaddress_extract_email_address2(char* param1, const char* param2);
+char* k_emailaddress_extract_email_address2(char* address, const char* errorMessage);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param address const char*
 ///
-const char* k_emailaddress_extract_email_address3(const char* param1);
+const char* k_emailaddress_extract_email_address3(const char* address);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param address const char*
+/// @param errorMessage const char*
 ///
-const char* k_emailaddress_extract_email_address4(const char* param1, const char* param2);
+const char* k_emailaddress_extract_email_address4(const char* address, const char* errorMessage);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
+/// @param addresses char*
 ///
-char* k_emailaddress_first_email_address(char* param1);
+char* k_emailaddress_first_email_address(char* addresses);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 char*
-/// @param param2 const char*
+/// @param addresses char*
+/// @param errorMessage const char*
 ///
-char* k_emailaddress_first_email_address2(char* param1, const char* param2);
+char* k_emailaddress_first_email_address2(char* addresses, const char* errorMessage);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param addresses const char*
 ///
-const char* k_emailaddress_first_email_address3(const char* param1);
+const char* k_emailaddress_first_email_address3(const char* addresses);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#firstEmailAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param addresses const char*
+/// @param errorMessage const char*
 ///
-const char* k_emailaddress_first_email_address4(const char* param1, const char* param2);
+const char* k_emailaddress_first_email_address4(const char* addresses, const char* errorMessage);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#extractEmailAddressAndName)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 const char*
+/// @param aStr const char*
+/// @param mail const char*
+/// @param name const char*
 ///
-bool k_emailaddress_extract_email_address_and_name(const char* param1, const char* param2, const char* param3);
+bool k_emailaddress_extract_email_address_and_name(const char* aStr, const char* mail, const char* name);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#compareEmail)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 bool
+/// @param email1 const char*
+/// @param email2 const char*
+/// @param matchName bool
 ///
-bool k_emailaddress_compare_email(const char* param1, const char* param2, bool param3);
+bool k_emailaddress_compare_email(const char* email1, const char* email2, bool matchName);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizedAddress)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 const char*
+/// @param displayName const char*
+/// @param addrSpec const char*
+/// @param comment const char*
 ///
-const char* k_emailaddress_normalized_address(const char* param1, const char* param2, const char* param3);
+const char* k_emailaddress_normalized_address(const char* displayName, const char* addrSpec, const char* comment);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#fromIdn)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param addrSpec const char*
 ///
-const char* k_emailaddress_from_idn(const char* param1);
+const char* k_emailaddress_from_idn(const char* addrSpec);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#toIdn)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param addrSpec const char*
 ///
-const char* k_emailaddress_to_idn(const char* param1);
+const char* k_emailaddress_to_idn(const char* addrSpec);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizeAddressesAndDecodeIdn)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param addresses const char*
 ///
-const char* k_emailaddress_normalize_addresses_and_decode_idn(const char* param1);
+const char* k_emailaddress_normalize_addresses_and_decode_idn(const char* addresses);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#normalizeAddressesAndEncodeIdn)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param str const char*
 ///
-const char* k_emailaddress_normalize_addresses_and_encode_idn(const char* param1);
+const char* k_emailaddress_normalize_addresses_and_encode_idn(const char* str);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#quoteNameIfNecessary)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param str const char*
 ///
-const char* k_emailaddress_quote_name_if_necessary(const char* param1);
+const char* k_emailaddress_quote_name_if_necessary(const char* str);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#encodeMailtoUrl)
 ///
-/// @param param1 const char*
+/// @param mailbox const char*
 ///
-QUrl* k_emailaddress_encode_mailto_url(const char* param1);
+QUrl* k_emailaddress_encode_mailto_url(const char* mailbox);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#decodeMailtoUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 QUrl*
+/// @param mailtoUrl QUrl*
 ///
-const char* k_emailaddress_decode_mailto_url(void* param1);
+const char* k_emailaddress_decode_mailto_url(void* mailtoUrl);
 
 /// [Upstream resources](https://api.kde.org/kemailaddress.html#public-types)
 

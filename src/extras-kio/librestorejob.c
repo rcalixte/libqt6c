@@ -599,6 +599,6 @@ void k_io__restorejob_delete(void* self) {
     KIO__RestoreJob_Delete((KIO__RestoreJob*)(self));
 }
 
-KIO__RestoreJob* k_io_restore_from_trash(libqt_list /* of QUrl* */ param1, int32_t param2) {
-    return KIO_RestoreFromTrash(param1, param2);
+KIO__RestoreJob* k_io_restore_from_trash(libqt_list /* of QUrl* */ urls, int32_t flags) {
+    return KIO_RestoreFromTrash(urls, flags);
 }

@@ -16,7 +16,7 @@ void k_stylemanager_init_style();
 
 /// [Upstream resources](https://api.kde.org/kstylemanager.html#createConfigureAction)
 ///
-/// @param param1 QObject*
+/// @param parent QObject*
 ///
-QAction* k_stylemanager_create_configure_action(void* param1);
+QAction* k_stylemanager_create_configure_action(void* parent);
 #endif

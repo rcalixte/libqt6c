@@ -1067,8 +1067,8 @@ void k_io__restorejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#restoreFromTrash)
 ///
-/// @param param1 libqt_list of QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param urls libqt_list of QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__RestoreJob* k_io_restore_from_trash(libqt_list param1, int32_t param2);
+KIO__RestoreJob* k_io_restore_from_trash(libqt_list urls, int32_t flags);
 #endif

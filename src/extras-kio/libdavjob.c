@@ -706,18 +706,18 @@ void k_io__davjob_delete(void* self) {
     KIO__DavJob_Delete((KIO__DavJob*)(self));
 }
 
-KIO__DavJob* k_io_dav_prop_find(void* param1, const char* param2, const char* param3, int32_t param4) {
-    return KIO_DavPropFind((QUrl*)param1, qstring(param2), qstring(param3), param4);
+KIO__DavJob* k_io_dav_prop_find(void* url, const char* properties, const char* depth, int32_t flags) {
+    return KIO_DavPropFind((QUrl*)url, qstring(properties), qstring(depth), flags);
 }
 
-KIO__DavJob* k_io_dav_prop_patch(void* param1, const char* param2, int32_t param3) {
-    return KIO_DavPropPatch((QUrl*)param1, qstring(param2), param3);
+KIO__DavJob* k_io_dav_prop_patch(void* url, const char* properties, int32_t flags) {
+    return KIO_DavPropPatch((QUrl*)url, qstring(properties), flags);
 }
 
-KIO__DavJob* k_io_dav_search(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
-    return KIO_DavSearch((QUrl*)param1, qstring(param2), qstring(param3), qstring(param4), param5);
+KIO__DavJob* k_io_dav_search(void* url, const char* nsURI, const char* qName, const char* query, int32_t flags) {
+    return KIO_DavSearch((QUrl*)url, qstring(nsURI), qstring(qName), qstring(query), flags);
 }
 
-KIO__DavJob* k_io_dav_report(void* param1, const char* param2, const char* param3, int32_t param4) {
-    return KIO_DavReport((QUrl*)param1, qstring(param2), qstring(param3), param4);
+KIO__DavJob* k_io_dav_report(void* url, const char* report, const char* depth, int32_t flags) {
+    return KIO_DavReport((QUrl*)url, qstring(report), qstring(depth), flags);
 }

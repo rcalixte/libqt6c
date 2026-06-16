@@ -267,9 +267,9 @@ const char* k_shellcompletion_replaced_path3(const char* text, bool replaceHome,
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char** k_shellcompletion_substring_completion(void* self, const char* stringVal);
+const char** k_shellcompletion_substring_completion(void* self, const char* string);
 
 /// Inherited from KCompletion
 ///
@@ -342,9 +342,9 @@ const char** k_shellcompletion_all_matches(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KShellCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char** k_shellcompletion_all_matches2(void* self, const char* stringVal);
+const char** k_shellcompletion_all_matches2(void* self, const char* string);
 
 /// Inherited from KCompletion
 ///
@@ -359,9 +359,9 @@ KCompletionMatches* k_shellcompletion_all_weighted_matches(void* self);
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allWeightedMatches)
 ///
 /// @param self KShellCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-KCompletionMatches* k_shellcompletion_all_weighted_matches2(void* self, const char* stringVal);
+KCompletionMatches* k_shellcompletion_all_weighted_matches2(void* self, const char* string);
 
 /// Inherited from KCompletion
 ///

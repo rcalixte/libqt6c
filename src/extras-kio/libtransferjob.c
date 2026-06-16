@@ -700,22 +700,22 @@ void k_io__transferjob_delete(void* self) {
     KIO__TransferJob_Delete((KIO__TransferJob*)(self));
 }
 
-KIO__TransferJob* k_io_get(void* param1, int32_t param2, int32_t param3) {
-    return KIO_Get((QUrl*)param1, param2, param3);
+KIO__TransferJob* k_io_get(void* url, int32_t reload, int32_t flags) {
+    return KIO_Get((QUrl*)url, reload, flags);
 }
 
-KIO__TransferJob* k_io_put(void* param1, int param2, int32_t param3) {
-    return KIO_Put((QUrl*)param1, param2, param3);
+KIO__TransferJob* k_io_put(void* url, int permissions, int32_t flags) {
+    return KIO_Put((QUrl*)url, permissions, flags);
 }
 
-KIO__TransferJob* k_io_http_post(void* param1, char* param2, int32_t param3) {
-    return KIO_HttpPost((QUrl*)param1, qstring(param2), param3);
+KIO__TransferJob* k_io_http_post(void* url, char* postData, int32_t flags) {
+    return KIO_HttpPost((QUrl*)url, qstring(postData), flags);
 }
 
-KIO__TransferJob* k_io_http_post2(void* param1, void* param2, int64_t param3, int32_t param4) {
-    return KIO_HttpPost2((QUrl*)param1, (QIODevice*)param2, param3, param4);
+KIO__TransferJob* k_io_http_post2(void* url, void* device, int64_t size, int32_t flags) {
+    return KIO_HttpPost2((QUrl*)url, (QIODevice*)device, size, flags);
 }
 
-KIO__TransferJob* k_io_http_delete(void* param1, int32_t param2) {
-    return KIO_HttpDelete((QUrl*)param1, param2);
+KIO__TransferJob* k_io_http_delete(void* url, int32_t flags) {
+    return KIO_HttpDelete((QUrl*)url, flags);
 }

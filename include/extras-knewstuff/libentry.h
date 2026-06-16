@@ -14,16 +14,16 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param unformattedText const char*
 ///
-const char* k_nscore_replace_b_b_code(const char* param1);
+const char* k_nscore_replace_b_b_code(const char* unformattedText);
 
 /// [Upstream resources](https://api.kde.org/knscore.html#qHash)
 ///
-/// @param param1 KNSCore__Entry*
-/// @param param2 uintptr_t
+/// @param entry KNSCore__Entry*
+/// @param seed uintptr_t
 ///
-uintptr_t k_nscore_q_hash(void* param1, uintptr_t param2);
+uintptr_t k_nscore_q_hash(void* entry, uintptr_t seed);
 
 /// [Upstream resources](https://api.kde.org/knscore-entry.html)
 

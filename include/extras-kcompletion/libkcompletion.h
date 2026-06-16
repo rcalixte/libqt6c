@@ -104,9 +104,9 @@ const char* k_completion_tr(const char* s);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char** k_completion_substring_completion(void* self, const char* stringVal);
+const char** k_completion_substring_completion(void* self, const char* string);
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#lastMatch)
 ///
@@ -279,9 +279,9 @@ const char** k_completion_all_matches(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
 /// @param self KCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char** k_completion_all_matches2(void* self, const char* stringVal);
+const char** k_completion_all_matches2(void* self, const char* string);
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allWeightedMatches)
 ///
@@ -292,9 +292,9 @@ KCompletionMatches* k_completion_all_weighted_matches(void* self);
 /// [Upstream resources](https://api.kde.org/kcompletion.html#allWeightedMatches)
 ///
 /// @param self KCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* stringVal);
+KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* string);
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#setSoundsEnabled)
 ///
@@ -342,16 +342,16 @@ bool k_completion_has_multiple_matches(void* self);
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
 /// @param self KCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char* k_completion_make_completion(void* self, const char* stringVal);
+const char* k_completion_make_completion(void* self, const char* string);
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#makeCompletion)
 ///
 /// Allows for overriding the related default method
 ///
 /// @param self KCompletion*
-/// @param callback const char* func(KCompletion* self, const char* stringVal)
+/// @param callback const char* func(KCompletion* self, const char* string)
 ///
 void k_completion_on_make_completion(void* self, const char* (*callback)(void*, const char*));
 
@@ -364,9 +364,9 @@ void k_completion_on_make_completion(void* self, const char* (*callback)(void*, 
 /// Base class method implementation
 ///
 /// @param self KCompletion*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char* k_completion_super_make_completion(void* self, const char* stringVal);
+const char* k_completion_super_make_completion(void* self, const char* string);
 
 /// [Upstream resources](https://api.kde.org/kcompletion.html#previousMatch)
 ///

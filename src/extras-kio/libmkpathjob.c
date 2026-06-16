@@ -602,6 +602,6 @@ void k_io__mkpathjob_delete(void* self) {
     KIO__MkpathJob_Delete((KIO__MkpathJob*)(self));
 }
 
-KIO__MkpathJob* k_io_mkpath(void* param1, void* param2, int32_t param3) {
-    return KIO_Mkpath((QUrl*)param1, (QUrl*)param2, param3);
+KIO__MkpathJob* k_io_mkpath(void* url, void* baseUrl, int32_t flags) {
+    return KIO_Mkpath((QUrl*)url, (QUrl*)baseUrl, flags);
 }

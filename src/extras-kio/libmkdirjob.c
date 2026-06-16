@@ -635,6 +635,6 @@ void k_io__mkdirjob_delete(void* self) {
     KIO__MkdirJob_Delete((KIO__MkdirJob*)(self));
 }
 
-KIO__MkdirJob* k_io_mkdir(void* param1, int param2) {
-    return KIO_Mkdir((QUrl*)param1, param2);
+KIO__MkdirJob* k_io_mkdir(void* url, int permissions) {
+    return KIO_Mkdir((QUrl*)url, permissions);
 }

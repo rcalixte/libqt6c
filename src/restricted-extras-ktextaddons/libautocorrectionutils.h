@@ -97,9 +97,9 @@ TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrec
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param lang const char*
 ///
-const char* k_textautocorrectioncore__autocorrectionutils_libreoffice_file(const char* param1);
+const char* k_textautocorrectioncore__autocorrectionutils_libreoffice_file(const char* lang);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1AutoCorrectionUtils.html)
 ///
@@ -117,9 +117,9 @@ const char** k_textautocorrectioncore__autocorrectionutils_search_auto_correct_l
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char**
+/// @param langs const char**
 ///
-const char** k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_office_language_to_string(const char* param1[static 1]);
+const char** k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_office_language_to_string(const char* langs[static 1]);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1AutoCorrectionUtils.html)
 ///
@@ -131,11 +131,11 @@ const char* k_textautocorrectioncore__autocorrectionutils_libre_office_writable_
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 const char*
+/// @param lang const char*
+/// @param customSystemPath const char*
+/// @param customWritablePath const char*
 ///
-const char* k_textautocorrectioncore__autocorrectionutils_contains_auto_correction_file(const char* param1, const char* param2, const char* param3);
+const char* k_textautocorrectioncore__autocorrectionutils_contains_auto_correction_file(const char* lang, const char* customSystemPath, const char* customWritablePath);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextAutoCorrectionCore_1_1AutoCorrectionUtils.html)
 ///
@@ -153,7 +153,7 @@ const char* k_textautocorrectioncore__autocorrectionutils_libre_office_local_pat
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param string const char*
 ///
-const char** k_textautocorrectioncore__autocorrectionutils_words_from_sentence(const char* param1);
+const char** k_textautocorrectioncore__autocorrectionutils_words_from_sentence(const char* string);
 #endif

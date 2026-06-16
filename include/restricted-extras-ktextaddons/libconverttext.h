@@ -14,31 +14,31 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param str const char*
 ///
-const char* k_textutils__converttext_normalize(const char* param1);
+const char* k_textutils__converttext_normalize(const char* str);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextUtils_1_1ConvertText.html)
 ///
-/// @param param1 QTextCursor*
+/// @param cursor QTextCursor*
 ///
-void k_textutils__converttext_upper_case(void* param1);
+void k_textutils__converttext_upper_case(void* cursor);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextUtils_1_1ConvertText.html)
 ///
-/// @param param1 QTextCursor*
+/// @param cursor QTextCursor*
 ///
-void k_textutils__converttext_lower_case(void* param1);
+void k_textutils__converttext_lower_case(void* cursor);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextUtils_1_1ConvertText.html)
 ///
-/// @param param1 QTextCursor*
+/// @param cursor QTextCursor*
 ///
-void k_textutils__converttext_sentence_case(void* param1);
+void k_textutils__converttext_sentence_case(void* cursor);
 
 /// [Upstream resources](https://api.kde.org/legacy/ktextaddons/html/classTextUtils_1_1ConvertText.html)
 ///
-/// @param param1 QTextCursor*
+/// @param cursor QTextCursor*
 ///
-void k_textutils__converttext_reverse_case(void* param1);
+void k_textutils__converttext_reverse_case(void* cursor);
 #endif

@@ -4,12 +4,12 @@
 #include "libkstandardactions.hpp"
 #include "libkstandardactions.h"
 
-QAction* k_standardactions_kgui_create_internal(int32_t param1, void* param2) {
-    return KStandardActions_KguiCreateInternal(param1, (QObject*)param2);
+QAction* k_standardactions_kgui_create_internal(int32_t id, void* parent) {
+    return KStandardActions_KguiCreateInternal(id, (QObject*)parent);
 }
 
-const char* k_standardactions_name(int32_t param1) {
-    libqt_string _str = KStandardActions_Name(param1);
+const char* k_standardactions_name(int32_t id) {
+    libqt_string _str = KStandardActions_Name(id);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -20,6 +20,6 @@ libqt_list /* of enum KStandardActions__StandardAction */ k_standardactions_acti
     return _arr;
 }
 
-int32_t k_standardactions_shortcut_for_action_id(int32_t param1) {
-    return KStandardActions_ShortcutForActionId(param1);
+int32_t k_standardactions_shortcut_for_action_id(int32_t id) {
+    return KStandardActions_ShortcutForActionId(id);
 }

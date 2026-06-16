@@ -631,10 +631,10 @@ void k_io__filecopyjob_delete(void* self) {
     KIO__FileCopyJob_Delete((KIO__FileCopyJob*)(self));
 }
 
-KIO__FileCopyJob* k_io_file_copy(void* param1, void* param2, int param3, int32_t param4) {
-    return KIO_FileCopy((QUrl*)param1, (QUrl*)param2, param3, param4);
+KIO__FileCopyJob* k_io_file_copy(void* src, void* dest, int permissions, int32_t flags) {
+    return KIO_FileCopy((QUrl*)src, (QUrl*)dest, permissions, flags);
 }
 
-KIO__FileCopyJob* k_io_file_move(void* param1, void* param2, int param3, int32_t param4) {
-    return KIO_FileMove((QUrl*)param1, (QUrl*)param2, param3, param4);
+KIO__FileCopyJob* k_io_file_move(void* src, void* dest, int permissions, int32_t flags) {
+    return KIO_FileMove((QUrl*)src, (QUrl*)dest, permissions, flags);
 }

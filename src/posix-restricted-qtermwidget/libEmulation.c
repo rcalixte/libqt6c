@@ -169,16 +169,16 @@ void k_onsole__emulation_super_send_mouse_event(void* self, int buttons, int col
     Konsole__Emulation_SuperSendMouseEvent((Konsole__Emulation*)self, buttons, column, line, eventType);
 }
 
-void k_onsole__emulation_send_string(void* self, const char* stringVal, int length) {
-    Konsole__Emulation_SendString((Konsole__Emulation*)self, stringVal, length);
+void k_onsole__emulation_send_string(void* self, const char* string, int length) {
+    Konsole__Emulation_SendString((Konsole__Emulation*)self, string, length);
 }
 
 void k_onsole__emulation_on_send_string(void* self, void (*callback)(void*, const char*, int)) {
     Konsole__Emulation_OnSendString((Konsole__Emulation*)self, (intptr_t)callback);
 }
 
-void k_onsole__emulation_super_send_string(void* self, const char* stringVal, int length) {
-    Konsole__Emulation_SuperSendString((Konsole__Emulation*)self, stringVal, length);
+void k_onsole__emulation_super_send_string(void* self, const char* string, int length) {
+    Konsole__Emulation_SuperSendString((Konsole__Emulation*)self, string, length);
 }
 
 void k_onsole__emulation_receive_data(void* self, const char* buffer, int lenVal) {

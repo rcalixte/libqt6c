@@ -1120,7 +1120,7 @@ void k_io__filesystemfreespacejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#fileSystemFreeSpace)
 ///
-/// @param param1 QUrl*
+/// @param url QUrl*
 ///
-KIO__FileSystemFreeSpaceJob* k_io_file_system_free_space(void* param1);
+KIO__FileSystemFreeSpaceJob* k_io_file_system_free_space(void* url);
 #endif

@@ -808,6 +808,6 @@ void k_io__openfilemanagerwindowjob_delete(void* self) {
     KIO__OpenFileManagerWindowJob_Delete((KIO__OpenFileManagerWindowJob*)(self));
 }
 
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ param1, char* param2) {
-    return KIO_HighlightInFileManager(param1, qstring(param2));
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list /* of QUrl* */ urls, char* asn) {
+    return KIO_HighlightInFileManager(urls, qstring(asn));
 }

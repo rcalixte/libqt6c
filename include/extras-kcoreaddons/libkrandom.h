@@ -14,7 +14,7 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 int
+/// @param length int
 ///
-const char* k_random_random_string(int param1);
+const char* k_random_random_string(int length);
 #endif

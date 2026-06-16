@@ -2503,11 +2503,11 @@ void k_io__previewjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#filePreview)
 ///
-/// @param param1 KFileItemList*
-/// @param param2 QSize*
-/// @param param3 const char**
+/// @param items KFileItemList*
+/// @param size QSize*
+/// @param enabledPlugins const char**
 ///
-KIO__PreviewJob* k_io_file_preview(void* param1, void* param2, const char* param3[static 1]);
+KIO__PreviewJob* k_io_file_preview(void* items, void* size, const char* enabledPlugins[static 1]);
 
 /// [Upstream resources](https://api.kde.org/kio-previewjob.html#public-types)
 

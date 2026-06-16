@@ -311,8 +311,8 @@ const char* k_urlcompletion_replaced_path3(const char* text, bool replaceHome, b
     return _ret;
 }
 
-const char** k_urlcompletion_substring_completion(void* self, const char* stringVal) {
-    libqt_list _arr = KCompletion_SubstringCompletion((KCompletion*)self, qstring(stringVal));
+const char** k_urlcompletion_substring_completion(void* self, const char* string) {
+    libqt_list _arr = KCompletion_SubstringCompletion((KCompletion*)self, qstring(string));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -388,8 +388,8 @@ const char** k_urlcompletion_all_matches(void* self) {
     return _ret;
 }
 
-const char** k_urlcompletion_all_matches2(void* self, const char* stringVal) {
-    libqt_list _arr = KCompletion_AllMatches2((KCompletion*)self, qstring(stringVal));
+const char** k_urlcompletion_all_matches2(void* self, const char* string) {
+    libqt_list _arr = KCompletion_AllMatches2((KCompletion*)self, qstring(string));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -411,8 +411,8 @@ KCompletionMatches* k_urlcompletion_all_weighted_matches(void* self) {
     return KCompletion_AllWeightedMatches((KCompletion*)self);
 }
 
-KCompletionMatches* k_urlcompletion_all_weighted_matches2(void* self, const char* stringVal) {
-    return KCompletion_AllWeightedMatches2((KCompletion*)self, qstring(stringVal));
+KCompletionMatches* k_urlcompletion_all_weighted_matches2(void* self, const char* string) {
+    return KCompletion_AllWeightedMatches2((KCompletion*)self, qstring(string));
 }
 
 bool k_urlcompletion_sounds_enabled(void* self) {

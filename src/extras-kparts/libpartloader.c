@@ -19,11 +19,11 @@ const char* k_parts_get_enum_name2(int32_t param1) {
     return KParts_GetEnumName2(param1);
 }
 
-int32_t k_parts__partloader_part_capabilities(void* param1) {
-    return KParts__PartLoader_PartCapabilities((KPluginMetaData*)param1);
+int32_t k_parts__partloader_part_capabilities(void* data) {
+    return KParts__PartLoader_PartCapabilities((KPluginMetaData*)data);
 }
 
-libqt_list /* of KPluginMetaData* */ k_parts__partloader_parts_for_mime_type(const char* param1) {
-    libqt_list _arr = KParts__PartLoader_PartsForMimeType(qstring(param1));
+libqt_list /* of KPluginMetaData* */ k_parts__partloader_parts_for_mime_type(const char* mimeType) {
+    libqt_list _arr = KParts__PartLoader_PartsForMimeType(qstring(mimeType));
     return _arr;
 }

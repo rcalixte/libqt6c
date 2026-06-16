@@ -112,8 +112,8 @@ QDateTime* k_filemetadata__extractorplugin_date_time_from_string(const char* dat
     return KFileMetaData__ExtractorPlugin_DateTimeFromString(qstring(dateString));
 }
 
-const char** k_filemetadata__extractorplugin_contacts_from_string(const char* stringVal) {
-    libqt_list _arr = KFileMetaData__ExtractorPlugin_ContactsFromString(qstring(stringVal));
+const char** k_filemetadata__extractorplugin_contacts_from_string(const char* string) {
+    libqt_list _arr = KFileMetaData__ExtractorPlugin_ContactsFromString(qstring(string));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {

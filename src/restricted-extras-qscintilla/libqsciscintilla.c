@@ -1948,8 +1948,8 @@ void q_sciscintilla_on_text_changed(void* self, void (*callback)(void*)) {
     QsciScintilla_Connect_TextChanged((QsciScintilla*)self, (intptr_t)callback);
 }
 
-void q_sciscintilla_user_list_activated(void* self, int id, const char* stringVal) {
-    QsciScintilla_UserListActivated((QsciScintilla*)self, id, qstring(stringVal));
+void q_sciscintilla_user_list_activated(void* self, int id, const char* string) {
+    QsciScintilla_UserListActivated((QsciScintilla*)self, id, qstring(string));
 }
 
 void q_sciscintilla_on_user_list_activated(void* self, void (*callback)(void*, int, const char*)) {

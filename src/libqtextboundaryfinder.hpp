@@ -21,7 +21,7 @@ typedef struct QTextBoundaryFinder QTextBoundaryFinder;
 
 QTextBoundaryFinder* QTextBoundaryFinder_new();
 QTextBoundaryFinder* QTextBoundaryFinder_new2(const QTextBoundaryFinder* other);
-QTextBoundaryFinder* QTextBoundaryFinder_new3(int type, const libqt_string stringVal);
+QTextBoundaryFinder* QTextBoundaryFinder_new3(int type, const libqt_string string);
 QTextBoundaryFinder* QTextBoundaryFinder_new4(int type, const QChar* chars, ptrdiff_t length);
 QTextBoundaryFinder* QTextBoundaryFinder_new5(int type, libqt_string str);
 QTextBoundaryFinder* QTextBoundaryFinder_new6(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer);

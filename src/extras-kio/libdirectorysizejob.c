@@ -598,10 +598,10 @@ void k_io__directorysizejob_delete(void* self) {
     KIO__DirectorySizeJob_Delete((KIO__DirectorySizeJob*)(self));
 }
 
-KIO__DirectorySizeJob* k_io_directory_size(void* param1) {
-    return KIO_DirectorySize((QUrl*)param1);
+KIO__DirectorySizeJob* k_io_directory_size(void* directory) {
+    return KIO_DirectorySize((QUrl*)directory);
 }
 
-KIO__DirectorySizeJob* k_io_directory_size2(void* param1) {
-    return KIO_DirectorySize2((KFileItemList*)param1);
+KIO__DirectorySizeJob* k_io_directory_size2(void* lstItems) {
+    return KIO_DirectorySize2((KFileItemList*)lstItems);
 }

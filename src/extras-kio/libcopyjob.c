@@ -705,46 +705,46 @@ void k_io__copyjob_delete(void* self) {
     KIO__CopyJob_Delete((KIO__CopyJob*)(self));
 }
 
-KIO__CopyJob* k_io_copy(void* param1, void* param2, int32_t param3) {
-    return KIO_Copy((QUrl*)param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_copy(void* src, void* dest, int32_t flags) {
+    return KIO_Copy((QUrl*)src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_copy_as(void* param1, void* param2, int32_t param3) {
-    return KIO_CopyAs((QUrl*)param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_copy_as(void* src, void* dest, int32_t flags) {
+    return KIO_CopyAs((QUrl*)src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_copy2(libqt_list /* of QUrl* */ param1, void* param2, int32_t param3) {
-    return KIO_Copy2(param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_copy2(libqt_list /* of QUrl* */ src, void* dest, int32_t flags) {
+    return KIO_Copy2(src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_move(void* param1, void* param2, int32_t param3) {
-    return KIO_Move((QUrl*)param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_move(void* src, void* dest, int32_t flags) {
+    return KIO_Move((QUrl*)src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_move_as(void* param1, void* param2, int32_t param3) {
-    return KIO_MoveAs((QUrl*)param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_move_as(void* src, void* dest, int32_t flags) {
+    return KIO_MoveAs((QUrl*)src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_move2(libqt_list /* of QUrl* */ param1, void* param2, int32_t param3) {
-    return KIO_Move2(param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_move2(libqt_list /* of QUrl* */ src, void* dest, int32_t flags) {
+    return KIO_Move2(src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_link(void* param1, void* param2, int32_t param3) {
-    return KIO_Link((QUrl*)param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_link(void* src, void* destDir, int32_t flags) {
+    return KIO_Link((QUrl*)src, (QUrl*)destDir, flags);
 }
 
-KIO__CopyJob* k_io_link2(libqt_list /* of QUrl* */ param1, void* param2, int32_t param3) {
-    return KIO_Link2(param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_link2(libqt_list /* of QUrl* */ src, void* destDir, int32_t flags) {
+    return KIO_Link2(src, (QUrl*)destDir, flags);
 }
 
-KIO__CopyJob* k_io_link_as(void* param1, void* param2, int32_t param3) {
-    return KIO_LinkAs((QUrl*)param1, (QUrl*)param2, param3);
+KIO__CopyJob* k_io_link_as(void* src, void* dest, int32_t flags) {
+    return KIO_LinkAs((QUrl*)src, (QUrl*)dest, flags);
 }
 
-KIO__CopyJob* k_io_trash(void* param1, int32_t param2) {
-    return KIO_Trash((QUrl*)param1, param2);
+KIO__CopyJob* k_io_trash(void* src, int32_t flags) {
+    return KIO_Trash((QUrl*)src, flags);
 }
 
-KIO__CopyJob* k_io_trash2(libqt_list /* of QUrl* */ param1, int32_t param2) {
-    return KIO_Trash2(param1, param2);
+KIO__CopyJob* k_io_trash2(libqt_list /* of QUrl* */ src, int32_t flags) {
+    return KIO_Trash2(src, flags);
 }

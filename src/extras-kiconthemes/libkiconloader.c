@@ -861,26 +861,26 @@ void k_iconloader_delete(void* self) {
     KIconLoader_Delete((KIconLoader*)(self));
 }
 
-QIcon* k_de_icon(const char* param1, void* param2) {
-    return KDE_Icon(qstring(param1), (KIconLoader*)param2);
+QIcon* k_de_icon(const char* iconName, void* iconLoader) {
+    return KDE_Icon(qstring(iconName), (KIconLoader*)iconLoader);
 }
 
-QIcon* k_de_icon2(const char* param1, void* param2, void* param3) {
-    return KDE_Icon2(qstring(param1), (KIconColors*)param2, (KIconLoader*)param3);
+QIcon* k_de_icon2(const char* iconName, void* colors, void* iconLoader) {
+    return KDE_Icon2(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader);
 }
 
-QIcon* k_de_icon3(const char* param1, const char* param2[static 1], void* param3) {
-    size_t param2_len = libqt_strv_length(param2);
-    libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
-    if (param2_qstr == NULL) {
+QIcon* k_de_icon3(const char* iconName, const char* overlays[static 1], void* iconLoader) {
+    size_t overlays_len = libqt_strv_length(overlays);
+    libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
+    if (overlays_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_de_icon3\n");
         abort();
     }
-    for (size_t i = 0; i < param2_len; ++i) {
-        param2_qstr[i] = qstring(param2[i]);
+    for (size_t i = 0; i < overlays_len; ++i) {
+        overlays_qstr[i] = qstring(overlays[i]);
     }
-    libqt_list param2_list = qlist(param2_qstr, param2_len);
-    QIcon* _out = KDE_Icon3(qstring(param1), param2_list, (KIconLoader*)param3);
-    free(param2_qstr);
+    libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
+    QIcon* _out = KDE_Icon3(qstring(iconName), overlays_list, (KIconLoader*)iconLoader);
+    free(overlays_qstr);
     return _out;
 }

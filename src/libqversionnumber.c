@@ -81,13 +81,13 @@ const char* q_versionnumber_to_string(void* self) {
     return _ret;
 }
 
-QVersionNumber* q_versionnumber_from_string(const char* stringVal) {
-    return QVersionNumber_FromString(stringVal);
+QVersionNumber* q_versionnumber_from_string(const char* string) {
+    return QVersionNumber_FromString(string);
 }
 
 #if defined(__linux__) || defined(__FreeBSD__)
-QVersionNumber* q_versionnumber_from_string2(const char* stringVal, intptr_t* suffixIndex) {
-    return QVersionNumber_FromString2(stringVal, suffixIndex);
+QVersionNumber* q_versionnumber_from_string2(const char* string, intptr_t* suffixIndex) {
+    return QVersionNumber_FromString2(string, suffixIndex);
 }
 #endif
 

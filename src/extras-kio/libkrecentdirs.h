@@ -14,22 +14,22 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char*
+/// @param fileClass const char*
 ///
-const char** k_recentdirs_list(const char* param1);
+const char** k_recentdirs_list(const char* fileClass);
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#dir)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param fileClass const char*
 ///
-const char* k_recentdirs_dir(const char* param1);
+const char* k_recentdirs_dir(const char* fileClass);
 
 /// [Upstream resources](https://api.kde.org/krecentdirs.html#add)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param fileClass const char*
+/// @param directory const char*
 ///
-void k_recentdirs_add(const char* param1, const char* param2);
+void k_recentdirs_add(const char* fileClass, const char* directory);
 #endif

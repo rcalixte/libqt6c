@@ -53,8 +53,8 @@ const char* k_completion_tr(const char* s) {
     return _ret;
 }
 
-const char** k_completion_substring_completion(void* self, const char* stringVal) {
-    libqt_list _arr = KCompletion_SubstringCompletion((KCompletion*)self, qstring(stringVal));
+const char** k_completion_substring_completion(void* self, const char* string) {
+    libqt_list _arr = KCompletion_SubstringCompletion((KCompletion*)self, qstring(string));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -184,8 +184,8 @@ const char** k_completion_all_matches(void* self) {
     return _ret;
 }
 
-const char** k_completion_all_matches2(void* self, const char* stringVal) {
-    libqt_list _arr = KCompletion_AllMatches2((KCompletion*)self, qstring(stringVal));
+const char** k_completion_all_matches2(void* self, const char* string) {
+    libqt_list _arr = KCompletion_AllMatches2((KCompletion*)self, qstring(string));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -207,8 +207,8 @@ KCompletionMatches* k_completion_all_weighted_matches(void* self) {
     return KCompletion_AllWeightedMatches((KCompletion*)self);
 }
 
-KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* stringVal) {
-    return KCompletion_AllWeightedMatches2((KCompletion*)self, qstring(stringVal));
+KCompletionMatches* k_completion_all_weighted_matches2(void* self, const char* string) {
+    return KCompletion_AllWeightedMatches2((KCompletion*)self, qstring(string));
 }
 
 void k_completion_set_sounds_enabled(void* self, bool enable) {
@@ -231,8 +231,8 @@ bool k_completion_has_multiple_matches(void* self) {
     return KCompletion_HasMultipleMatches((KCompletion*)self);
 }
 
-const char* k_completion_make_completion(void* self, const char* stringVal) {
-    libqt_string _str = KCompletion_MakeCompletion((KCompletion*)self, qstring(stringVal));
+const char* k_completion_make_completion(void* self, const char* string) {
+    libqt_string _str = KCompletion_MakeCompletion((KCompletion*)self, qstring(string));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -242,8 +242,8 @@ void k_completion_on_make_completion(void* self, const char* (*callback)(void*, 
     KCompletion_OnMakeCompletion((KCompletion*)self, (intptr_t)callback);
 }
 
-const char* k_completion_super_make_completion(void* self, const char* stringVal) {
-    libqt_string _str = KCompletion_SuperMakeCompletion((KCompletion*)self, qstring(stringVal));
+const char* k_completion_super_make_completion(void* self, const char* string) {
+    libqt_string _str = KCompletion_SuperMakeCompletion((KCompletion*)self, qstring(string));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

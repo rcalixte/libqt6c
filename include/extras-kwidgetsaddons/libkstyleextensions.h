@@ -12,28 +12,28 @@
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customControlElement)
 ///
-/// @param param1 const char*
-/// @param param2 QWidget*
+/// @param element const char*
+/// @param widget QWidget*
 ///
 /// @return enum QStyle__ControlElement
 ///
-int32_t k_styleextensions_custom_control_element(const char* param1, void* param2);
+int32_t k_styleextensions_custom_control_element(const char* element, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customStyleHint)
 ///
-/// @param param1 const char*
-/// @param param2 QWidget*
+/// @param element const char*
+/// @param widget QWidget*
 ///
 /// @return enum QStyle__StyleHint
 ///
-int32_t k_styleextensions_custom_style_hint(const char* param1, void* param2);
+int32_t k_styleextensions_custom_style_hint(const char* element, void* widget);
 
 /// [Upstream resources](https://api.kde.org/kstyleextensions.html#customSubElement)
 ///
-/// @param param1 const char*
-/// @param param2 QWidget*
+/// @param element const char*
+/// @param widget QWidget*
 ///
 /// @return enum QStyle__SubElement
 ///
-int32_t k_styleextensions_custom_sub_element(const char* param1, void* param2);
+int32_t k_styleextensions_custom_sub_element(const char* element, void* widget);
 #endif

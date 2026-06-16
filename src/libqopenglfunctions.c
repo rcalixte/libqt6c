@@ -438,8 +438,8 @@ void q_openglfunctions_gl_shader_binary(void* self, int32_t n, uint32_t* shaders
     QOpenGLFunctions_GlShaderBinary((QOpenGLFunctions*)self, n, shaders, binaryformat, binary, length);
 }
 
-void q_openglfunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length) {
-    QOpenGLFunctions_GlShaderSource((QOpenGLFunctions*)self, shader, count, stringVal, length);
+void q_openglfunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** string, int32_t* length) {
+    QOpenGLFunctions_GlShaderSource((QOpenGLFunctions*)self, shader, count, string, length);
 }
 
 void q_openglfunctions_gl_stencil_func_separate(void* self, uint32_t face, uint32_t func, int32_t ref, uint32_t mask) {

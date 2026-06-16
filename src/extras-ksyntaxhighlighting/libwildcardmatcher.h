@@ -12,8 +12,8 @@
 
 /// [Upstream resources](https://api.kde.org/ksyntaxhighlighting-wildcardmatcher.html#exactMatch)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param candidate const char*
+/// @param wildcard const char*
 ///
-bool k_syntaxhighlighting__wildcardmatcher_exact_match(const char* param1, const char* param2);
+bool k_syntaxhighlighting__wildcardmatcher_exact_match(const char* candidate, const char* wildcard);
 #endif

@@ -16,10 +16,10 @@ KConfig* k_configgui_session_config();
 
 /// [Upstream resources](https://api.kde.org/kconfiggui.html#setSessionConfig)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param id const char*
+/// @param key const char*
 ///
-void k_configgui_set_session_config(const char* param1, const char* param2);
+void k_configgui_set_session_config(const char* id, const char* key);
 
 /// [Upstream resources](https://api.kde.org/kconfiggui.html#hasSessionConfig)
 ///

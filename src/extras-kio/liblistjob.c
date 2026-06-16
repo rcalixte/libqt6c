@@ -660,10 +660,10 @@ void k_io__listjob_delete(void* self) {
     KIO__ListJob_Delete((KIO__ListJob*)(self));
 }
 
-KIO__ListJob* k_io_list_dir(void* param1, int32_t param2, int32_t param3) {
-    return KIO_ListDir((QUrl*)param1, param2, param3);
+KIO__ListJob* k_io_list_dir(void* url, int32_t flags, int32_t listFlags) {
+    return KIO_ListDir((QUrl*)url, flags, listFlags);
 }
 
-KIO__ListJob* k_io_list_recursive(void* param1, int32_t param2, int32_t param3) {
-    return KIO_ListRecursive((QUrl*)param1, param2, param3);
+KIO__ListJob* k_io_list_recursive(void* url, int32_t flags, int32_t listFlags) {
+    return KIO_ListRecursive((QUrl*)url, flags, listFlags);
 }

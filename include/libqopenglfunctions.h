@@ -946,10 +946,10 @@ void q_openglfunctions_gl_shader_binary(void* self, int32_t n, uint32_t* shaders
 /// @param self QOpenGLFunctions*
 /// @param shader uint32_t
 /// @param count int32_t
-/// @param stringVal const char**
+/// @param string const char**
 /// @param length int32_t*
 ///
-void q_openglfunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+void q_openglfunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** string, int32_t* length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions.html#glStencilFuncSeparate)
 ///

@@ -12,19 +12,19 @@
 
 /// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemType)
 ///
-/// @param param1 const char*
+/// @param path const char*
 ///
 /// @return enum KFileSystemType__Type
 ///
-int32_t k_filesystemtype_file_system_type(const char* param1);
+int32_t k_filesystemtype_file_system_type(const char* path);
 
 /// [Upstream resources](https://api.kde.org/kfilesystemtype.html#fileSystemName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 enum KFileSystemType__Type
+/// @param type enum KFileSystemType__Type
 ///
-const char* k_filesystemtype_file_system_name(int32_t param1);
+const char* k_filesystemtype_file_system_name(int32_t type);
 
 /// [Upstream resources](https://api.kde.org/kfilesystemtype.html#public-types)
 

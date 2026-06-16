@@ -1087,9 +1087,9 @@ void k_io__pastejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#paste)
 ///
-/// @param param1 QMimeData*
-/// @param param2 QUrl*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param mimeData QMimeData*
+/// @param destDir QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__PasteJob* k_io_paste(void* param1, void* param2, int32_t param3);
+KIO__PasteJob* k_io_paste(void* mimeData, void* destDir, int32_t flags);
 #endif

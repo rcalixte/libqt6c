@@ -386,16 +386,16 @@ void q_openglfunctions_1_2_gl_get_polygon_stipple(void* self, uint8_t* mask) {
     QOpenGLFunctions_1_2_GlGetPolygonStipple((QOpenGLFunctions_1_2*)self, mask);
 }
 
-void q_openglfunctions_1_2_gl_get_pixel_mapusv(void* self, uint32_t mapVal, uint16_t* values) {
-    QOpenGLFunctions_1_2_GlGetPixelMapusv((QOpenGLFunctions_1_2*)self, mapVal, values);
+void q_openglfunctions_1_2_gl_get_pixel_mapusv(void* self, uint32_t map, uint16_t* values) {
+    QOpenGLFunctions_1_2_GlGetPixelMapusv((QOpenGLFunctions_1_2*)self, map, values);
 }
 
-void q_openglfunctions_1_2_gl_get_pixel_mapuiv(void* self, uint32_t mapVal, uint32_t* values) {
-    QOpenGLFunctions_1_2_GlGetPixelMapuiv((QOpenGLFunctions_1_2*)self, mapVal, values);
+void q_openglfunctions_1_2_gl_get_pixel_mapuiv(void* self, uint32_t map, uint32_t* values) {
+    QOpenGLFunctions_1_2_GlGetPixelMapuiv((QOpenGLFunctions_1_2*)self, map, values);
 }
 
-void q_openglfunctions_1_2_gl_get_pixel_mapfv(void* self, uint32_t mapVal, float* values) {
-    QOpenGLFunctions_1_2_GlGetPixelMapfv((QOpenGLFunctions_1_2*)self, mapVal, values);
+void q_openglfunctions_1_2_gl_get_pixel_mapfv(void* self, uint32_t map, float* values) {
+    QOpenGLFunctions_1_2_GlGetPixelMapfv((QOpenGLFunctions_1_2*)self, map, values);
 }
 
 void q_openglfunctions_1_2_gl_get_materialiv(void* self, uint32_t face, uint32_t pname, int32_t* params) {
@@ -438,16 +438,16 @@ void q_openglfunctions_1_2_gl_copy_pixels(void* self, int32_t x, int32_t y, int3
     QOpenGLFunctions_1_2_GlCopyPixels((QOpenGLFunctions_1_2*)self, x, y, width, height, type);
 }
 
-void q_openglfunctions_1_2_gl_pixel_mapusv(void* self, uint32_t mapVal, int32_t mapsize, uint16_t* values) {
-    QOpenGLFunctions_1_2_GlPixelMapusv((QOpenGLFunctions_1_2*)self, mapVal, mapsize, values);
+void q_openglfunctions_1_2_gl_pixel_mapusv(void* self, uint32_t map, int32_t mapsize, uint16_t* values) {
+    QOpenGLFunctions_1_2_GlPixelMapusv((QOpenGLFunctions_1_2*)self, map, mapsize, values);
 }
 
-void q_openglfunctions_1_2_gl_pixel_mapuiv(void* self, uint32_t mapVal, int32_t mapsize, uint32_t* values) {
-    QOpenGLFunctions_1_2_GlPixelMapuiv((QOpenGLFunctions_1_2*)self, mapVal, mapsize, values);
+void q_openglfunctions_1_2_gl_pixel_mapuiv(void* self, uint32_t map, int32_t mapsize, uint32_t* values) {
+    QOpenGLFunctions_1_2_GlPixelMapuiv((QOpenGLFunctions_1_2*)self, map, mapsize, values);
 }
 
-void q_openglfunctions_1_2_gl_pixel_mapfv(void* self, uint32_t mapVal, int32_t mapsize, float* values) {
-    QOpenGLFunctions_1_2_GlPixelMapfv((QOpenGLFunctions_1_2*)self, mapVal, mapsize, values);
+void q_openglfunctions_1_2_gl_pixel_mapfv(void* self, uint32_t map, int32_t mapsize, float* values) {
+    QOpenGLFunctions_1_2_GlPixelMapfv((QOpenGLFunctions_1_2*)self, map, mapsize, values);
 }
 
 void q_openglfunctions_1_2_gl_pixel_transferi(void* self, uint32_t pname, int32_t param) {

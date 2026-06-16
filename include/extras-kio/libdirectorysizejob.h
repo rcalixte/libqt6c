@@ -1058,13 +1058,13 @@ void k_io__directorysizejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#directorySize)
 ///
-/// @param param1 QUrl*
+/// @param directory QUrl*
 ///
-KIO__DirectorySizeJob* k_io_directory_size(void* param1);
+KIO__DirectorySizeJob* k_io_directory_size(void* directory);
 
 /// [Upstream resources](https://api.kde.org/kio.html#directorySize)
 ///
-/// @param param1 KFileItemList*
+/// @param lstItems KFileItemList*
 ///
-KIO__DirectorySizeJob* k_io_directory_size2(void* param1);
+KIO__DirectorySizeJob* k_io_directory_size2(void* lstItems);
 #endif

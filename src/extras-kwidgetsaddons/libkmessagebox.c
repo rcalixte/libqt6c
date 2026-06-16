@@ -9,346 +9,346 @@
 #include "libkmessagebox.hpp"
 #include "libkmessagebox.h"
 
-int32_t k_messagebox_question_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
-    return KMessageBox_QuestionTwoActions((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
+int32_t k_messagebox_question_two_actions(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_QuestionTwoActions((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    return KMessageBox_QuestionTwoActionsCancel((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
+int32_t k_messagebox_question_two_actions_cancel(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_QuestionTwoActionsCancel((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_list(void* param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_question_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_question_two_actions_list\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_QuestionTwoActionsList((QWidget*)param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_QuestionTwoActionsList((QWidget*)parent, qstring(text), strlist_list, qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
-    return KMessageBox_WarningTwoActions((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
+int32_t k_messagebox_warning_two_actions(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_WarningTwoActions((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_list(void* param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_warning_two_actions_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_list\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_WarningTwoActionsList((QWidget*)param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_WarningTwoActionsList((QWidget*)parent, qstring(text), strlist_list, qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_warning_continue_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
-    return KMessageBox_WarningContinueCancel((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
+int32_t k_messagebox_warning_continue_cancel(void* parent, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_WarningContinueCancel((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_continue_cancel_detailed(void* param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7, const char* param8) {
-    return KMessageBox_WarningContinueCancelDetailed((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7, qstring(param8));
+int32_t k_messagebox_warning_continue_cancel_detailed(void* parent, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options, const char* details) {
+    return KMessageBox_WarningContinueCancelDetailed((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options, qstring(details));
 }
 
-int32_t k_messagebox_warning_continue_cancel_list(void* param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_warning_continue_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_continue_cancel_list\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_WarningContinueCancelList((QWidget*)param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_WarningContinueCancelList((QWidget*)parent, qstring(text), strlist_list, qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_cancel(void* param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    return KMessageBox_WarningTwoActionsCancel((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
+int32_t k_messagebox_warning_two_actions_cancel(void* parent, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_WarningTwoActionsCancel((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_list(void* param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_warning_two_actions_cancel_list(void* parent, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_cancel_list\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_WarningTwoActionsCancelList((QWidget*)param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, (KGuiItem*)param7, qstring(param8), param9);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_WarningTwoActionsCancelList((QWidget*)parent, qstring(text), strlist_list, qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-void k_messagebox_error(void* param1, const char* param2, const char* param3, int32_t param4) {
-    KMessageBox_Error((QWidget*)param1, qstring(param2), qstring(param3), param4);
+void k_messagebox_error(void* parent, const char* text, const char* title, int32_t options) {
+    KMessageBox_Error((QWidget*)parent, qstring(text), qstring(title), options);
 }
 
-void k_messagebox_error2(void* param1, const char* param2, const char* param3, void* param4, int32_t param5) {
-    KMessageBox_Error2((QWidget*)param1, qstring(param2), qstring(param3), (KGuiItem*)param4, param5);
+void k_messagebox_error2(void* parent, const char* text, const char* title, void* buttonOk, int32_t options) {
+    KMessageBox_Error2((QWidget*)parent, qstring(text), qstring(title), (KGuiItem*)buttonOk, options);
 }
 
-void k_messagebox_error_list(void* param1, const char* param2, const char* param3[static 1], const char* param4, int32_t param5) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+void k_messagebox_error_list(void* parent, const char* text, const char* strlist[static 1], const char* title, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_error_list\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    KMessageBox_ErrorList((QWidget*)param1, qstring(param2), param3_list, qstring(param4), param5);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    KMessageBox_ErrorList((QWidget*)parent, qstring(text), strlist_list, qstring(title), options);
+    free(strlist_qstr);
 }
 
-void k_messagebox_detailed_error(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
-    KMessageBox_DetailedError((QWidget*)param1, qstring(param2), qstring(param3), qstring(param4), param5);
+void k_messagebox_detailed_error(void* parent, const char* text, const char* details, const char* title, int32_t options) {
+    KMessageBox_DetailedError((QWidget*)parent, qstring(text), qstring(details), qstring(title), options);
 }
 
-void k_messagebox_detailed_error2(void* param1, const char* param2, const char* param3, const char* param4, void* param5, int32_t param6) {
-    KMessageBox_DetailedError2((QWidget*)param1, qstring(param2), qstring(param3), qstring(param4), (KGuiItem*)param5, param6);
+void k_messagebox_detailed_error2(void* parent, const char* text, const char* details, const char* title, void* buttonOk, int32_t options) {
+    KMessageBox_DetailedError2((QWidget*)parent, qstring(text), qstring(details), qstring(title), (KGuiItem*)buttonOk, options);
 }
 
-void k_messagebox_information(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
-    KMessageBox_Information((QWidget*)param1, qstring(param2), qstring(param3), qstring(param4), param5);
+void k_messagebox_information(void* parent, const char* text, const char* title, const char* dontShowAgainName, int32_t options) {
+    KMessageBox_Information((QWidget*)parent, qstring(text), qstring(title), qstring(dontShowAgainName), options);
 }
 
-void k_messagebox_information_list(void* param1, const char* param2, const char* param3[static 1], const char* param4, const char* param5, int32_t param6) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+void k_messagebox_information_list(void* parent, const char* text, const char* strlist[static 1], const char* title, const char* dontShowAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_information_list\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    KMessageBox_InformationList((QWidget*)param1, qstring(param2), param3_list, qstring(param4), qstring(param5), param6);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    KMessageBox_InformationList((QWidget*)parent, qstring(text), strlist_list, qstring(title), qstring(dontShowAgainName), options);
+    free(strlist_qstr);
 }
 
 void k_messagebox_enable_all_messages() {
     KMessageBox_EnableAllMessages();
 }
 
-void k_messagebox_enable_message(const char* param1) {
-    KMessageBox_EnableMessage(qstring(param1));
+void k_messagebox_enable_message(const char* dontShowAgainName) {
+    KMessageBox_EnableMessage(qstring(dontShowAgainName));
 }
 
-int32_t k_messagebox_message_box(void* param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
-    return KMessageBox_MessageBox((QWidget*)param1, param2, qstring(param3), qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, (KGuiItem*)param7, qstring(param8), param9);
+int32_t k_messagebox_message_box(void* parent, int32_t type, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontShowAskAgainName, int32_t options) {
+    return KMessageBox_MessageBox((QWidget*)parent, type, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontShowAskAgainName), options);
 }
 
-bool k_messagebox_should_be_shown_two_actions(const char* param1, int32_t* param2) {
-    return KMessageBox_ShouldBeShownTwoActions(qstring(param1), param2);
+bool k_messagebox_should_be_shown_two_actions(const char* dontShowAgainName, int32_t* result) {
+    return KMessageBox_ShouldBeShownTwoActions(qstring(dontShowAgainName), result);
 }
 
-bool k_messagebox_should_be_shown_continue(const char* param1) {
-    return KMessageBox_ShouldBeShownContinue(qstring(param1));
+bool k_messagebox_should_be_shown_continue(const char* dontShowAgainName) {
+    return KMessageBox_ShouldBeShownContinue(qstring(dontShowAgainName));
 }
 
-void k_messagebox_save_dont_show_again_two_actions(const char* param1, int32_t param2) {
-    KMessageBox_SaveDontShowAgainTwoActions(qstring(param1), param2);
+void k_messagebox_save_dont_show_again_two_actions(const char* dontShowAgainName, int32_t result) {
+    KMessageBox_SaveDontShowAgainTwoActions(qstring(dontShowAgainName), result);
 }
 
-void k_messagebox_save_dont_show_again_continue(const char* param1) {
-    KMessageBox_SaveDontShowAgainContinue(qstring(param1));
+void k_messagebox_save_dont_show_again_continue(const char* dontShowAgainName) {
+    KMessageBox_SaveDontShowAgainContinue(qstring(dontShowAgainName));
 }
 
-void k_messagebox_set_dont_show_again_config(void* param1) {
-    KMessageBox_SetDontShowAgainConfig((KConfig*)param1);
+void k_messagebox_set_dont_show_again_config(void* cfg) {
+    KMessageBox_SetDontShowAgainConfig((KConfig*)cfg);
 }
 
-void k_messagebox_set_dont_show_again_interface(void* param1) {
-    KMessageBox_SetDontShowAgainInterface((KMessageBoxDontAskAgainInterface*)param1);
+void k_messagebox_set_dont_show_again_interface(void* dontAskAgainInterface) {
+    KMessageBox_SetDontShowAgainInterface((KMessageBoxDontAskAgainInterface*)dontAskAgainInterface);
 }
 
-void k_messagebox_set_notify_interface(void* param1) {
-    KMessageBox_SetNotifyInterface((KMessageBoxNotifyInterface*)param1);
+void k_messagebox_set_notify_interface(void* notifyInterface) {
+    KMessageBox_SetNotifyInterface((KMessageBoxNotifyInterface*)notifyInterface);
 }
 
-int32_t k_messagebox_create_k_message_box(void* param1, void* param2, int32_t param3, const char* param4, const char* param5[static 1], const char* param6, bool* param7, int32_t param8, const char* param9) {
-    size_t param5_len = libqt_strv_length(param5);
-    libqt_string* param5_qstr = (libqt_string*)malloc(param5_len * sizeof(libqt_string));
-    if (param5_qstr == NULL) {
+int32_t k_messagebox_create_k_message_box(void* dialog, void* buttons, int32_t icon, const char* text, const char* strlist[static 1], const char* ask, bool* checkboxReturn, int32_t options, const char* details) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_create_k_message_box\n");
         abort();
     }
-    for (size_t i = 0; i < param5_len; ++i) {
-        param5_qstr[i] = qstring(param5[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param5_list = qlist(param5_qstr, param5_len);
-    int32_t _out = KMessageBox_CreateKMessageBox((QDialog*)param1, (QDialogButtonBox*)param2, param3, qstring(param4), param5_list, qstring(param6), (bool*)param7, param8, qstring(param9));
-    free(param5_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_CreateKMessageBox((QDialog*)dialog, (QDialogButtonBox*)buttons, icon, qstring(text), strlist_list, qstring(ask), (bool*)checkboxReturn, options, qstring(details));
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_create_k_message_box2(void* param1, void* param2, void* param3, const char* param4, const char* param5[static 1], const char* param6, bool* param7, int32_t param8, const char* param9, int32_t param10) {
-    size_t param5_len = libqt_strv_length(param5);
-    libqt_string* param5_qstr = (libqt_string*)malloc(param5_len * sizeof(libqt_string));
-    if (param5_qstr == NULL) {
+int32_t k_messagebox_create_k_message_box2(void* dialog, void* buttons, void* icon, const char* text, const char* strlist[static 1], const char* ask, bool* checkboxReturn, int32_t options, const char* details, int32_t notifyType) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_create_k_message_box2\n");
         abort();
     }
-    for (size_t i = 0; i < param5_len; ++i) {
-        param5_qstr[i] = qstring(param5[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param5_list = qlist(param5_qstr, param5_len);
-    int32_t _out = KMessageBox_CreateKMessageBox2((QDialog*)param1, (QDialogButtonBox*)param2, (QIcon*)param3, qstring(param4), param5_list, qstring(param6), (bool*)param7, param8, qstring(param9), param10);
-    free(param5_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_CreateKMessageBox2((QDialog*)dialog, (QDialogButtonBox*)buttons, (QIcon*)icon, qstring(text), strlist_list, qstring(ask), (bool*)checkboxReturn, options, qstring(details), notifyType);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_question_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
-    return KMessageBox_QuestionTwoActionsWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
+int32_t k_messagebox_question_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_QuestionTwoActionsWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    return KMessageBox_QuestionTwoActionsCancelWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
+int32_t k_messagebox_question_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_QuestionTwoActionsCancelWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_question_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_question_two_actions_list_w_id\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_QuestionTwoActionsListWId(param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_QuestionTwoActionsListWId(parent_id, qstring(text), strlist_list, qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
-    return KMessageBox_WarningTwoActionsWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
+int32_t k_messagebox_warning_two_actions_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_WarningTwoActionsWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_warning_two_actions_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_list_w_id\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_WarningTwoActionsListWId(param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_WarningTwoActionsListWId(parent_id, qstring(text), strlist_list, qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, const char* param6, int32_t param7) {
-    return KMessageBox_WarningContinueCancelWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, qstring(param6), param7);
+int32_t k_messagebox_warning_continue_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_WarningContinueCancelWId(parent_id, qstring(text), qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_warning_continue_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* buttonContinue, void* buttonCancel, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_continue_cancel_list_w_id\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_WarningContinueCancelListWId(param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_WarningContinueCancelListWId(parent_id, qstring(text), strlist_list, qstring(title), (KGuiItem*)buttonContinue, (KGuiItem*)buttonCancel, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t param1, const char* param2, const char* param3, void* param4, void* param5, void* param6, const char* param7, int32_t param8) {
-    return KMessageBox_WarningTwoActionsCancelWId(param1, qstring(param2), qstring(param3), (KGuiItem*)param4, (KGuiItem*)param5, (KGuiItem*)param6, qstring(param7), param8);
+int32_t k_messagebox_warning_two_actions_cancel_w_id(uintptr_t parent_id, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+    return KMessageBox_WarningTwoActionsCancelWId(parent_id, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
 }
 
-int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t param1, const char* param2, const char* param3[static 1], const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+int32_t k_messagebox_warning_two_actions_cancel_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontAskAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_warning_two_actions_cancel_list_w_id\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    int32_t _out = KMessageBox_WarningTwoActionsCancelListWId(param1, qstring(param2), param3_list, qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, (KGuiItem*)param7, qstring(param8), param9);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    int32_t _out = KMessageBox_WarningTwoActionsCancelListWId(parent_id, qstring(text), strlist_list, qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontAskAgainName), options);
+    free(strlist_qstr);
     return _out;
 }
 
-void k_messagebox_error_w_id(uintptr_t param1, const char* param2, const char* param3, int32_t param4) {
-    KMessageBox_ErrorWId(param1, qstring(param2), qstring(param3), param4);
+void k_messagebox_error_w_id(uintptr_t parent_id, const char* text, const char* title, int32_t options) {
+    KMessageBox_ErrorWId(parent_id, qstring(text), qstring(title), options);
 }
 
-void k_messagebox_error_list_w_id(uintptr_t param1, const char* param2, const char* param3[static 1], const char* param4, int32_t param5) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+void k_messagebox_error_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_error_list_w_id\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    KMessageBox_ErrorListWId(param1, qstring(param2), param3_list, qstring(param4), param5);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    KMessageBox_ErrorListWId(parent_id, qstring(text), strlist_list, qstring(title), options);
+    free(strlist_qstr);
 }
 
-void k_messagebox_detailed_error_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
-    KMessageBox_DetailedErrorWId(param1, qstring(param2), qstring(param3), qstring(param4), param5);
+void k_messagebox_detailed_error_w_id(uintptr_t parent_id, const char* text, const char* details, const char* title, int32_t options) {
+    KMessageBox_DetailedErrorWId(parent_id, qstring(text), qstring(details), qstring(title), options);
 }
 
-void k_messagebox_detailed_error_w_id2(uintptr_t param1, const char* param2, const char* param3, const char* param4, void* param5, int32_t param6) {
-    KMessageBox_DetailedErrorWId2(param1, qstring(param2), qstring(param3), qstring(param4), (KGuiItem*)param5, param6);
+void k_messagebox_detailed_error_w_id2(uintptr_t parent_id, const char* text, const char* details, const char* title, void* buttonOk, int32_t options) {
+    KMessageBox_DetailedErrorWId2(parent_id, qstring(text), qstring(details), qstring(title), (KGuiItem*)buttonOk, options);
 }
 
-void k_messagebox_information_w_id(uintptr_t param1, const char* param2, const char* param3, const char* param4, int32_t param5) {
-    KMessageBox_InformationWId(param1, qstring(param2), qstring(param3), qstring(param4), param5);
+void k_messagebox_information_w_id(uintptr_t parent_id, const char* text, const char* title, const char* dontShowAgainName, int32_t options) {
+    KMessageBox_InformationWId(parent_id, qstring(text), qstring(title), qstring(dontShowAgainName), options);
 }
 
-void k_messagebox_information_list_w_id(uintptr_t param1, const char* param2, const char* param3[static 1], const char* param4, const char* param5, int32_t param6) {
-    size_t param3_len = libqt_strv_length(param3);
-    libqt_string* param3_qstr = (libqt_string*)malloc(param3_len * sizeof(libqt_string));
-    if (param3_qstr == NULL) {
+void k_messagebox_information_list_w_id(uintptr_t parent_id, const char* text, const char* strlist[static 1], const char* title, const char* dontShowAgainName, int32_t options) {
+    size_t strlist_len = libqt_strv_length(strlist);
+    libqt_string* strlist_qstr = (libqt_string*)malloc(strlist_len * sizeof(libqt_string));
+    if (strlist_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_messagebox_information_list_w_id\n");
         abort();
     }
-    for (size_t i = 0; i < param3_len; ++i) {
-        param3_qstr[i] = qstring(param3[i]);
+    for (size_t i = 0; i < strlist_len; ++i) {
+        strlist_qstr[i] = qstring(strlist[i]);
     }
-    libqt_list param3_list = qlist(param3_qstr, param3_len);
-    KMessageBox_InformationListWId(param1, qstring(param2), param3_list, qstring(param4), qstring(param5), param6);
-    free(param3_qstr);
+    libqt_list strlist_list = qlist(strlist_qstr, strlist_len);
+    KMessageBox_InformationListWId(parent_id, qstring(text), strlist_list, qstring(title), qstring(dontShowAgainName), options);
+    free(strlist_qstr);
 }
 
-int32_t k_messagebox_message_box_w_id(uintptr_t param1, int32_t param2, const char* param3, const char* param4, void* param5, void* param6, void* param7, const char* param8, int32_t param9) {
-    return KMessageBox_MessageBoxWId(param1, param2, qstring(param3), qstring(param4), (KGuiItem*)param5, (KGuiItem*)param6, (KGuiItem*)param7, qstring(param8), param9);
+int32_t k_messagebox_message_box_w_id(uintptr_t parent_id, int32_t type, const char* text, const char* title, void* primaryAction, void* secondaryAction, void* cancelAction, const char* dontShowAskAgainName, int32_t options) {
+    return KMessageBox_MessageBoxWId(parent_id, type, qstring(text), qstring(title), (KGuiItem*)primaryAction, (KGuiItem*)secondaryAction, (KGuiItem*)cancelAction, qstring(dontShowAskAgainName), options);
 }

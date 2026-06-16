@@ -12,24 +12,24 @@
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#setUrls)
 ///
-/// @param param1 libqt_list of QUrl*
-/// @param param2 libqt_list of QUrl*
-/// @param param3 QMimeData*
+/// @param urls libqt_list of QUrl*
+/// @param mostLocalUrls libqt_list of QUrl*
+/// @param mimeData QMimeData*
 ///
-void k_urlmimedata_set_urls(libqt_list param1, libqt_list param2, void* param3);
+void k_urlmimedata_set_urls(libqt_list urls, libqt_list mostLocalUrls, void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#exportUrlsToPortal)
 ///
-/// @param param1 QMimeData*
+/// @param mimeData QMimeData*
 ///
-bool k_urlmimedata_export_urls_to_portal(void* param1);
+bool k_urlmimedata_export_urls_to_portal(void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#setMetaData)
 ///
-/// @param param1 libqt_map of const char* to const char*
-/// @param param2 QMimeData*
+/// @param metaData libqt_map of const char* to const char*
+/// @param mimeData QMimeData*
 ///
-void k_urlmimedata_set_meta_data(libqt_map param1, void* param2);
+void k_urlmimedata_set_meta_data(libqt_map metaData, void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#mimeDataTypes)
 ///
@@ -39,13 +39,13 @@ const char** k_urlmimedata_mime_data_types();
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#urlsFromMimeData)
 ///
-/// @param param1 QMimeData*
-/// @param param2 flag of enum KUrlMimeData__DecodeOption
-/// @param param3 libqt_map* of const char* to const char*
+/// @param mimeData QMimeData*
+/// @param decodeOptions flag of enum KUrlMimeData__DecodeOption
+/// @param metaData libqt_map* of const char* to const char*
 ///
 /// @return libqt_list of QUrl*
 ///
-libqt_list k_urlmimedata_urls_from_mime_data(void* param1, int32_t param2, libqt_map* param3);
+libqt_list k_urlmimedata_urls_from_mime_data(void* mimeData, int32_t decodeOptions, libqt_map* metaData);
 
 /// [Upstream resources](https://api.kde.org/kurlmimedata.html#public-types)
 

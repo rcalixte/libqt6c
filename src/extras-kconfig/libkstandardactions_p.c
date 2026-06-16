@@ -68,8 +68,8 @@ void k_standardactions__kstandardactionsinfo_delete(void* self) {
     KStandardActions__KStandardActionsInfo_Delete((KStandardActions__KStandardActionsInfo*)(self));
 }
 
-const KStandardActions__KStandardActionsInfo* k_standardactions_info_ptr(int32_t param1) {
-    return KStandardActions_InfoPtr(param1);
+const KStandardActions__KStandardActionsInfo* k_standardactions_info_ptr(int32_t id) {
+    return KStandardActions_InfoPtr(id);
 }
 
 const char** k_standardactions_internal_std_names() {

@@ -1074,11 +1074,11 @@ void k_io__batchrenamejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#batchRename)
 ///
-/// @param param1 libqt_list of QUrl*
-/// @param param2 const char*
-/// @param param3 int
-/// @param param4 QChar*
-/// @param param5 flag of enum KIO__JobFlag
+/// @param src libqt_list of QUrl*
+/// @param newName const char*
+/// @param index int
+/// @param placeHolder QChar*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__BatchRenameJob* k_io_batch_rename(libqt_list param1, const char* param2, int param3, void* param4, int32_t param5);
+KIO__BatchRenameJob* k_io_batch_rename(libqt_list src, const char* newName, int index, void* placeHolder, int32_t flags);
 #endif

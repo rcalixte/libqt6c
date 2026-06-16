@@ -16,15 +16,15 @@ void k_crash_initialize();
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#defaultCrashHandler)
 ///
-/// @param param1 int
+/// @param signal int
 ///
-void k_crash_default_crash_handler(int param1);
+void k_crash_default_crash_handler(int signal);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setCrashHandler)
 ///
-/// @param param1 void func(int param1)
+/// @param handler void func(int param1)
 ///
-void k_crash_set_crash_handler(void (*param1)(int funcparam1));
+void k_crash_set_crash_handler(void (*handler)(int funcparam1));
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#crashHandler)
 ///
@@ -34,9 +34,9 @@ KCrash__HandlerType k_crash_crash_handler();
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setEmergencySaveFunction)
 ///
-/// @param param1 void func(int param1)
+/// @param saveFunction void func(int param1)
 ///
-void k_crash_set_emergency_save_function(void (*param1)(int funcparam1));
+void k_crash_set_emergency_save_function(void (*saveFunction)(int funcparam1));
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#emergencySaveFunction)
 ///
@@ -46,15 +46,15 @@ KCrash__HandlerType k_crash_emergency_save_function();
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setFlags)
 ///
-/// @param param1 flag of enum KCrash__CrashFlag
+/// @param flags flag of enum KCrash__CrashFlag
 ///
-void k_crash_set_flags(int32_t param1);
+void k_crash_set_flags(int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setDrKonqiEnabled)
 ///
-/// @param param1 bool
+/// @param enabled bool
 ///
-void k_crash_set_dr_konqi_enabled(bool param1);
+void k_crash_set_dr_konqi_enabled(bool enabled);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#isDrKonqiEnabled)
 ///
@@ -62,27 +62,27 @@ bool k_crash_is_dr_konqi_enabled();
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setErrorMessage)
 ///
-/// @param param1 const char*
+/// @param message const char*
 ///
-void k_crash_set_error_message(const char* param1);
+void k_crash_set_error_message(const char* message);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setErrorTags)
 ///
-/// @param param1 libqt_map of const char* to const char*
+/// @param details libqt_map of const char* to const char*
 ///
-void k_crash_set_error_tags(libqt_map param1);
+void k_crash_set_error_tags(libqt_map details);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setErrorExtraData)
 ///
-/// @param param1 libqt_map of const char* to const char*
+/// @param details libqt_map of const char* to const char*
 ///
-void k_crash_set_error_extra_data(libqt_map param1);
+void k_crash_set_error_extra_data(libqt_map details);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#setGPUData)
 ///
-/// @param param1 libqt_map of const char* to QVariant*
+/// @param data libqt_map of const char* to QVariant*
 ///
-void k_crash_set_g_p_u_data(libqt_map param1);
+void k_crash_set_g_p_u_data(libqt_map data);
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#public-types)
 

@@ -2,44 +2,44 @@
 #include "libkfileutils.hpp"
 #include "libkfileutils.h"
 
-const char* k_fileutils_suggest_name(void* param1, const char* param2) {
-    libqt_string _str = KFileUtils_SuggestName((QUrl*)param1, qstring(param2));
+const char* k_fileutils_suggest_name(void* baseURL, const char* oldName) {
+    libqt_string _str = KFileUtils_SuggestName((QUrl*)baseURL, qstring(oldName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_fileutils_make_suggested_name(const char* param1) {
-    libqt_string _str = KFileUtils_MakeSuggestedName(qstring(param1));
+const char* k_fileutils_make_suggested_name(const char* oldName) {
+    libqt_string _str = KFileUtils_MakeSuggestedName(qstring(oldName));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_fileutils_find_all_unique_files(const char* param1[static 1], const char* param2[static 1]) {
-    size_t param1_len = libqt_strv_length(param1);
-    libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
-    if (param1_qstr == NULL) {
+const char** k_fileutils_find_all_unique_files(const char* dirs[static 1], const char* nameFilters[static 1]) {
+    size_t dirs_len = libqt_strv_length(dirs);
+    libqt_string* dirs_qstr = (libqt_string*)malloc(dirs_len * sizeof(libqt_string));
+    if (dirs_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
-    for (size_t i = 0; i < param1_len; ++i) {
-        param1_qstr[i] = qstring(param1[i]);
+    for (size_t i = 0; i < dirs_len; ++i) {
+        dirs_qstr[i] = qstring(dirs[i]);
     }
-    libqt_list param1_list = qlist(param1_qstr, param1_len);
-    size_t param2_len = libqt_strv_length(param2);
-    libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
-    if (param2_qstr == NULL) {
+    libqt_list dirs_list = qlist(dirs_qstr, dirs_len);
+    size_t nameFilters_len = libqt_strv_length(nameFilters);
+    libqt_string* nameFilters_qstr = (libqt_string*)malloc(nameFilters_len * sizeof(libqt_string));
+    if (nameFilters_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_fileutils_find_all_unique_files\n");
         abort();
     }
-    for (size_t i = 0; i < param2_len; ++i) {
-        param2_qstr[i] = qstring(param2[i]);
+    for (size_t i = 0; i < nameFilters_len; ++i) {
+        nameFilters_qstr[i] = qstring(nameFilters[i]);
     }
-    libqt_list param2_list = qlist(param2_qstr, param2_len);
-    libqt_list _arr = KFileUtils_FindAllUniqueFiles(param1_list, param2_list);
-    free(param1_qstr);
-    free(param2_qstr);
+    libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
+    libqt_list _arr = KFileUtils_FindAllUniqueFiles(dirs_list, nameFilters_list);
+    free(dirs_qstr);
+    free(nameFilters_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {

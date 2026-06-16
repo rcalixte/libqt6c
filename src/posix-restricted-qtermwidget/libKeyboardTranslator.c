@@ -155,8 +155,8 @@ void k_onsole__keyboardtranslatormanager_delete(void* self) {
     Konsole__KeyboardTranslatorManager_Delete((Konsole__KeyboardTranslatorManager*)(self));
 }
 
-int32_t k_onsole_one_or_zero(int param1) {
-    return Konsole_OneOrZero(param1);
+int32_t k_onsole_one_or_zero(int value) {
+    return Konsole_OneOrZero(value);
 }
 
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator__entry_new() {

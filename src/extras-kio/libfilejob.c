@@ -707,6 +707,6 @@ void k_io__filejob_delete(void* self) {
     KIO__FileJob_Delete((KIO__FileJob*)(self));
 }
 
-KIO__FileJob* k_io_open(void* param1, int32_t param2) {
-    return KIO_Open((QUrl*)param1, param2);
+KIO__FileJob* k_io_open(void* url, int32_t mode) {
+    return KIO_Open((QUrl*)url, mode);
 }

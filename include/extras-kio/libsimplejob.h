@@ -1096,78 +1096,78 @@ void k_io__simplejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#rmdir)
 ///
-/// @param param1 QUrl*
+/// @param url QUrl*
 ///
-KIO__SimpleJob* k_io_rmdir(void* param1);
+KIO__SimpleJob* k_io_rmdir(void* url);
 
 /// [Upstream resources](https://api.kde.org/kio.html#chown)
 ///
-/// @param param1 QUrl*
-/// @param param2 const char*
-/// @param param3 const char*
+/// @param url QUrl*
+/// @param owner const char*
+/// @param group const char*
 ///
-KIO__SimpleJob* k_io_chown(void* param1, const char* param2, const char* param3);
+KIO__SimpleJob* k_io_chown(void* url, const char* owner, const char* group);
 
 /// [Upstream resources](https://api.kde.org/kio.html#setModificationTime)
 ///
-/// @param param1 QUrl*
-/// @param param2 QDateTime*
+/// @param url QUrl*
+/// @param mtime QDateTime*
 ///
-KIO__SimpleJob* k_io_set_modification_time(void* param1, void* param2);
+KIO__SimpleJob* k_io_set_modification_time(void* url, void* mtime);
 
 /// [Upstream resources](https://api.kde.org/kio.html#rename)
 ///
-/// @param param1 QUrl*
-/// @param param2 QUrl*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param src QUrl*
+/// @param dest QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_rename(void* param1, void* param2, int32_t param3);
+KIO__SimpleJob* k_io_rename(void* src, void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#symlink)
 ///
-/// @param param1 const char*
-/// @param param2 QUrl*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param target const char*
+/// @param dest QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_symlink(const char* param1, void* param2, int32_t param3);
+KIO__SimpleJob* k_io_symlink(const char* target, void* dest, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#special)
 ///
-/// @param param1 QUrl*
-/// @param param2 char*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param data char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_special(void* param1, char* param2, int32_t param3);
+KIO__SimpleJob* k_io_special(void* url, char* data, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mount)
 ///
-/// @param param1 bool
-/// @param param2 char*
-/// @param param3 const char*
-/// @param param4 const char*
-/// @param param5 flag of enum KIO__JobFlag
+/// @param ro bool
+/// @param fstype char*
+/// @param dev const char*
+/// @param point const char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_mount(bool param1, char* param2, const char* param3, const char* param4, int32_t param5);
+KIO__SimpleJob* k_io_mount(bool ro, char* fstype, const char* dev, const char* point, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#unmount)
 ///
-/// @param param1 const char*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param point const char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_unmount(const char* param1, int32_t param2);
+KIO__SimpleJob* k_io_unmount(const char* point, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#http_update_cache)
 ///
-/// @param param1 QUrl*
-/// @param param2 bool
-/// @param param3 QDateTime*
+/// @param url QUrl*
+/// @param no_cache bool
+/// @param expireDate QDateTime*
 ///
-KIO__SimpleJob* k_io_http_update_cache(void* param1, bool param2, void* param3);
+KIO__SimpleJob* k_io_http_update_cache(void* url, bool no_cache, void* expireDate);
 
 /// [Upstream resources](https://api.kde.org/kio.html#file_delete)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param src QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__SimpleJob* k_io_file_delete(void* param1, int32_t param2);
+KIO__SimpleJob* k_io_file_delete(void* src, int32_t flags);
 #endif

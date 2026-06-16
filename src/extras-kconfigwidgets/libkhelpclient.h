@@ -12,8 +12,8 @@
 
 /// [Upstream resources](https://api.kde.org/khelpclient.html#invokeHelp)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param anchor const char*
+/// @param appname const char*
 ///
-void k_helpclient_invoke_help(const char* param1, const char* param2);
+void k_helpclient_invoke_help(const char* anchor, const char* appname);
 #endif

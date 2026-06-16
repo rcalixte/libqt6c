@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://api.kde.org/kcrash.html#defaultCrashHandler)
 ///
-/// @param param1 int
+/// @param sig int
 ///
-void k_crash_default_crash_handler(int param1);
+void k_crash_default_crash_handler(int sig);
 
 /// [Upstream resources](https://api.kde.org/kaboutperson.html)
 

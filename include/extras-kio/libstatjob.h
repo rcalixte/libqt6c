@@ -1165,26 +1165,26 @@ void k_io__statjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#stat)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__StatJob* k_io_stat(void* param1, int32_t param2);
+KIO__StatJob* k_io_stat(void* url, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#stat)
 ///
-/// @param param1 QUrl*
-/// @param param2 enum KIO__StatJob__StatSide
-/// @param param3 flag of enum KIO__StatDetail
-/// @param param4 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param side enum KIO__StatJob__StatSide
+/// @param details flag of enum KIO__StatDetail
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__StatJob* k_io_stat2(void* param1, int32_t param2, int32_t param3, int32_t param4);
+KIO__StatJob* k_io_stat2(void* url, int32_t side, int32_t details, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mostLocalUrl)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__StatJob* k_io_most_local_url(void* param1, int32_t param2);
+KIO__StatJob* k_io_most_local_url(void* url, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-statjob.html#public-types)
 

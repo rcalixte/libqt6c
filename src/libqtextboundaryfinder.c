@@ -10,8 +10,8 @@ QTextBoundaryFinder* q_textboundaryfinder_new2(void* other) {
     return QTextBoundaryFinder_new2((QTextBoundaryFinder*)other);
 }
 
-QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* stringVal) {
-    return QTextBoundaryFinder_new3(type, qstring(stringVal));
+QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* string) {
+    return QTextBoundaryFinder_new3(type, qstring(string));
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, intptr_t length) {

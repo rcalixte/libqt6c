@@ -130,9 +130,9 @@ void k_standardactions__kstandardactionsinfo_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kstandardactions.html#infoPtr)
 ///
-/// @param param1 enum KStandardActions__StandardAction
+/// @param id enum KStandardActions__StandardAction
 ///
-const KStandardActions__KStandardActionsInfo* k_standardactions_info_ptr(int32_t param1);
+const KStandardActions__KStandardActionsInfo* k_standardactions_info_ptr(int32_t id);
 
 /// [Upstream resources](https://api.kde.org/kstandardactions.html#internal_stdNames)
 ///

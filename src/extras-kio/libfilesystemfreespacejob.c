@@ -627,6 +627,6 @@ void k_io__filesystemfreespacejob_delete(void* self) {
     KIO__FileSystemFreeSpaceJob_Delete((KIO__FileSystemFreeSpaceJob*)(self));
 }
 
-KIO__FileSystemFreeSpaceJob* k_io_file_system_free_space(void* param1) {
-    return KIO_FileSystemFreeSpace((QUrl*)param1);
+KIO__FileSystemFreeSpaceJob* k_io_file_system_free_space(void* url) {
+    return KIO_FileSystemFreeSpace((QUrl*)url);
 }

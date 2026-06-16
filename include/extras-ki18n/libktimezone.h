@@ -14,14 +14,14 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 float
-/// @param param2 float
+/// @param latitude float
+/// @param longitude float
 ///
-const char* k_timezone_from_location(float param1, float param2);
+const char* k_timezone_from_location(float latitude, float longitude);
 
 /// [Upstream resources](https://api.kde.org/ktimezone.html#country)
 ///
-/// @param param1 const char*
+/// @param ianaId const char*
 ///
-KCountry* k_timezone_country(const char* param1);
+KCountry* k_timezone_country(const char* ianaId);
 #endif

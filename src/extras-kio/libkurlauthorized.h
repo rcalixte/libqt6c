@@ -12,17 +12,17 @@
 
 /// [Upstream resources](https://api.kde.org/kurlauthorized.html#authorizeUrlAction)
 ///
-/// @param param1 const char*
-/// @param param2 QUrl*
-/// @param param3 QUrl*
+/// @param action const char*
+/// @param baseUrl QUrl*
+/// @param destUrl QUrl*
 ///
-bool k_urlauthorized_authorize_url_action(const char* param1, void* param2, void* param3);
+bool k_urlauthorized_authorize_url_action(const char* action, void* baseUrl, void* destUrl);
 
 /// [Upstream resources](https://api.kde.org/kurlauthorized.html#allowUrlAction)
 ///
-/// @param param1 const char*
-/// @param param2 QUrl*
-/// @param param3 QUrl*
+/// @param action const char*
+/// @param baseUrl QUrl*
+/// @param destUrl QUrl*
 ///
-void k_urlauthorized_allow_url_action(const char* param1, void* param2, void* param3);
+void k_urlauthorized_allow_url_action(const char* action, void* baseUrl, void* destUrl);
 #endif

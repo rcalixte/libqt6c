@@ -119,8 +119,8 @@ void q_textlayout_set_raw_font(void* self, void* rawFont) {
     QTextLayout_SetRawFont((QTextLayout*)self, (QRawFont*)rawFont);
 }
 
-void q_textlayout_set_text(void* self, const char* stringVal) {
-    QTextLayout_SetText((QTextLayout*)self, qstring(stringVal));
+void q_textlayout_set_text(void* self, const char* string) {
+    QTextLayout_SetText((QTextLayout*)self, qstring(string));
 }
 
 const char* q_textlayout_text(void* self) {

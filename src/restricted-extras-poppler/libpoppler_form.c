@@ -1195,8 +1195,8 @@ int32_t q_poppler_active_crypto_sign_backend() {
     return Poppler_ActiveCryptoSignBackend();
 }
 
-bool q_poppler_set_active_crypto_sign_backend(int32_t param1) {
-    return Poppler_SetActiveCryptoSignBackend(param1);
+bool q_poppler_set_active_crypto_sign_backend(int32_t backend) {
+    return Poppler_SetActiveCryptoSignBackend(backend);
 }
 
 bool q_poppler_has_crypto_sign_backend_feature(int32_t param1, int32_t param2) {
@@ -1219,16 +1219,16 @@ const char* q_poppler_get_n_s_s_dir() {
     return _ret;
 }
 
-void q_poppler_set_n_s_s_dir(const char* param1) {
-    Poppler_SetNSSDir(qstring(param1));
+void q_poppler_set_n_s_s_dir(const char* pathURL) {
+    Poppler_SetNSSDir(qstring(pathURL));
 }
 
-void q_poppler_set_n_s_s_password_callback(char* (*param1)(const char* funcparam1)) {
-    Poppler_SetNSSPasswordCallback((intptr_t)param1);
+void q_poppler_set_n_s_s_password_callback(char* (*f)(const char* funcparam1)) {
+    Poppler_SetNSSPasswordCallback((intptr_t)f);
 }
 
-void q_poppler_set_pgp_signatures_allowed(bool param1) {
-    Poppler_SetPgpSignaturesAllowed(param1);
+void q_poppler_set_pgp_signatures_allowed(bool allowed) {
+    Poppler_SetPgpSignaturesAllowed(allowed);
 }
 
 bool q_poppler_are_pgp_signatures_allowed() {

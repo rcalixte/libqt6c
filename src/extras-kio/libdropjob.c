@@ -634,10 +634,10 @@ void k_io__dropjob_delete(void* self) {
     KIO__DropJob_Delete((KIO__DropJob*)(self));
 }
 
-KIO__DropJob* k_io_drop(void* param1, void* param2, int32_t param3) {
-    return KIO_Drop((QDropEvent*)param1, (QUrl*)param2, param3);
+KIO__DropJob* k_io_drop(void* dropEvent, void* destUrl, int32_t flags) {
+    return KIO_Drop((QDropEvent*)dropEvent, (QUrl*)destUrl, flags);
 }
 
-KIO__DropJob* k_io_drop2(void* param1, void* param2, int32_t param3, int32_t param4) {
-    return KIO_Drop2((QDropEvent*)param1, (QUrl*)param2, param3, param4);
+KIO__DropJob* k_io_drop2(void* dropEvent, void* destUrl, int32_t dropjobFlags, int32_t flags) {
+    return KIO_Drop2((QDropEvent*)dropEvent, (QUrl*)destUrl, dropjobFlags, flags);
 }

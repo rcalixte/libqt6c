@@ -42,19 +42,19 @@ const char* k_parts_get_enum_name2(int32_t param1);
 
 /// [Upstream resources](https://api.kde.org/kparts-partloader.html#partCapabilities)
 ///
-/// @param param1 KPluginMetaData*
+/// @param data KPluginMetaData*
 ///
 /// @return flag of enum KParts__PartCapability
 ///
-int32_t k_parts__partloader_part_capabilities(void* param1);
+int32_t k_parts__partloader_part_capabilities(void* data);
 
 /// [Upstream resources](https://api.kde.org/kparts-partloader.html#partsForMimeType)
 ///
-/// @param param1 const char*
+/// @param mimeType const char*
 ///
 /// @return libqt_list of KPluginMetaData*
 ///
-libqt_list k_parts__partloader_parts_for_mime_type(const char* param1);
+libqt_list k_parts__partloader_parts_for_mime_type(const char* mimeType);
 
 /// [Upstream resources](https://api.kde.org/kparts-partloader.html#public-types)
 

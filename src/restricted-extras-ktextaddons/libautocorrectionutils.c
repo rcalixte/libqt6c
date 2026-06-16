@@ -65,8 +65,8 @@ TextAutoCorrectionCore__AutoCorrectionUtils__TypographicQuotes* k_textautocorrec
     return TextAutoCorrectionCore__AutoCorrectionUtils_TypographicDefaultFrenchQuotes();
 }
 
-const char* k_textautocorrectioncore__autocorrectionutils_libreoffice_file(const char* param1) {
-    libqt_string _str = TextAutoCorrectionCore__AutoCorrectionUtils_LibreofficeFile(qstring(param1));
+const char* k_textautocorrectioncore__autocorrectionutils_libreoffice_file(const char* lang) {
+    libqt_string _str = TextAutoCorrectionCore__AutoCorrectionUtils_LibreofficeFile(qstring(lang));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -110,19 +110,19 @@ const char** k_textautocorrectioncore__autocorrectionutils_search_auto_correct_l
     return _ret;
 }
 
-const char** k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_office_language_to_string(const char* param1[static 1]) {
-    size_t param1_len = libqt_strv_length(param1);
-    libqt_string* param1_qstr = (libqt_string*)malloc(param1_len * sizeof(libqt_string));
-    if (param1_qstr == NULL) {
+const char** k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_office_language_to_string(const char* langs[static 1]) {
+    size_t langs_len = libqt_strv_length(langs);
+    libqt_string* langs_qstr = (libqt_string*)malloc(langs_len * sizeof(libqt_string));
+    if (langs_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_textautocorrectioncore__autocorrectionutils_auto_correct_libre_office_language_to_string\n");
         abort();
     }
-    for (size_t i = 0; i < param1_len; ++i) {
-        param1_qstr[i] = qstring(param1[i]);
+    for (size_t i = 0; i < langs_len; ++i) {
+        langs_qstr[i] = qstring(langs[i]);
     }
-    libqt_list param1_list = qlist(param1_qstr, param1_len);
-    libqt_list _arr = TextAutoCorrectionCore__AutoCorrectionUtils_AutoCorrectLibreOfficeLanguageToString(param1_list);
-    free(param1_qstr);
+    libqt_list langs_list = qlist(langs_qstr, langs_len);
+    libqt_list _arr = TextAutoCorrectionCore__AutoCorrectionUtils_AutoCorrectLibreOfficeLanguageToString(langs_list);
+    free(langs_qstr);
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -147,8 +147,8 @@ const char* k_textautocorrectioncore__autocorrectionutils_libre_office_writable_
     return _ret;
 }
 
-const char* k_textautocorrectioncore__autocorrectionutils_contains_auto_correction_file(const char* param1, const char* param2, const char* param3) {
-    libqt_string _str = TextAutoCorrectionCore__AutoCorrectionUtils_ContainsAutoCorrectionFile(qstring(param1), qstring(param2), qstring(param3));
+const char* k_textautocorrectioncore__autocorrectionutils_contains_auto_correction_file(const char* lang, const char* customSystemPath, const char* customWritablePath) {
+    libqt_string _str = TextAutoCorrectionCore__AutoCorrectionUtils_ContainsAutoCorrectionFile(qstring(lang), qstring(customSystemPath), qstring(customWritablePath));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -168,8 +168,8 @@ const char* k_textautocorrectioncore__autocorrectionutils_libre_office_local_pat
     return _ret;
 }
 
-const char** k_textautocorrectioncore__autocorrectionutils_words_from_sentence(const char* param1) {
-    libqt_list _arr = TextAutoCorrectionCore__AutoCorrectionUtils_WordsFromSentence(qstring(param1));
+const char** k_textautocorrectioncore__autocorrectionutils_words_from_sentence(const char* string) {
+    libqt_list _arr = TextAutoCorrectionCore__AutoCorrectionUtils_WordsFromSentence(qstring(string));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
