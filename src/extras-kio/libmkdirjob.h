@@ -1139,8 +1139,8 @@ void k_io__mkdirjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mkdir)
 ///
-/// @param param1 QUrl*
-/// @param param2 int
+/// @param url QUrl*
+/// @param permissions int
 ///
-KIO__MkdirJob* k_io_mkdir(void* param1, int param2);
+KIO__MkdirJob* k_io_mkdir(void* url, int permissions);
 #endif

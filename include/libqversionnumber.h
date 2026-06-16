@@ -145,17 +145,17 @@ const char* q_versionnumber_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QVersionNumber* q_versionnumber_from_string(const char* stringVal);
+QVersionNumber* q_versionnumber_from_string(const char* string);
 
 #if defined(__linux__) || defined(__FreeBSD__)
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#fromString)
 ///
-/// @param stringVal const char*
+/// @param string const char*
 /// @param suffixIndex intptr_t*
 ///
-QVersionNumber* q_versionnumber_from_string2(const char* stringVal, intptr_t* suffixIndex);
+QVersionNumber* q_versionnumber_from_string2(const char* string, intptr_t* suffixIndex);
 #endif
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qversionnumber.html#dtor.QVersionNumber)

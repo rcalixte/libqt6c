@@ -24,16 +24,16 @@ bool k_sandbox_is_snap();
 
 /// [Upstream resources](https://api.kde.org/ksandbox.html#makeHostContext)
 ///
-/// @param param1 QProcess*
+/// @param process QProcess*
 ///
-KSandbox__ProcessContext* k_sandbox_make_host_context(void* param1);
+KSandbox__ProcessContext* k_sandbox_make_host_context(void* process);
 
 /// [Upstream resources](https://api.kde.org/ksandbox.html#startHostProcess)
 ///
-/// @param param1 QProcess*
-/// @param param2 flag of enum QIODeviceBase__OpenModeFlag
+/// @param process QProcess*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-void k_sandbox_start_host_process(void* param1, int32_t param2);
+void k_sandbox_start_host_process(void* process, int32_t mode);
 
 /// [Upstream resources](https://api.kde.org/ksandbox-processcontext.html)
 

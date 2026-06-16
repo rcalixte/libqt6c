@@ -1118,19 +1118,19 @@ void k_io__filecopyjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#file_copy)
 ///
-/// @param param1 QUrl*
-/// @param param2 QUrl*
-/// @param param3 int
-/// @param param4 flag of enum KIO__JobFlag
+/// @param src QUrl*
+/// @param dest QUrl*
+/// @param permissions int
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__FileCopyJob* k_io_file_copy(void* param1, void* param2, int param3, int32_t param4);
+KIO__FileCopyJob* k_io_file_copy(void* src, void* dest, int permissions, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#file_move)
 ///
-/// @param param1 QUrl*
-/// @param param2 QUrl*
-/// @param param3 int
-/// @param param4 flag of enum KIO__JobFlag
+/// @param src QUrl*
+/// @param dest QUrl*
+/// @param permissions int
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__FileCopyJob* k_io_file_move(void* param1, void* param2, int param3, int32_t param4);
+KIO__FileCopyJob* k_io_file_move(void* src, void* dest, int permissions, int32_t flags);
 #endif

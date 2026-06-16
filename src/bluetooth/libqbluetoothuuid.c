@@ -106,8 +106,8 @@ __uint128_t q_bluetoothuuid_to_u_int1281(void* self, int32_t order) {
     return QBluetoothUuid_ToUInt1281((QBluetoothUuid*)self, order);
 }
 
-QUuid* q_bluetoothuuid_from_string(const char* stringVal) {
-    return QUuid_FromString(stringVal);
+QUuid* q_bluetoothuuid_from_string(const char* string) {
+    return QUuid_FromString(string);
 }
 
 const char* q_bluetoothuuid_to_string(void* self) {

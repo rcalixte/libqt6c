@@ -15,8 +15,8 @@
 #include "libpoppler_qt6.hpp"
 #include "libpoppler_qt6.h"
 
-QDateTime* q_poppler_convert_date(const char* param1) {
-    return Poppler_ConvertDate(param1);
+QDateTime* q_poppler_convert_date(const char* dateString) {
+    return Poppler_ConvertDate(dateString);
 }
 
 bool q_poppler_is_cms_available() {

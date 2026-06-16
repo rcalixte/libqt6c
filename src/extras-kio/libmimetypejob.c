@@ -699,6 +699,6 @@ void k_io__mimetypejob_delete(void* self) {
     KIO__MimetypeJob_Delete((KIO__MimetypeJob*)(self));
 }
 
-KIO__MimetypeJob* k_io_mimetype(void* param1, int32_t param2) {
-    return KIO_Mimetype((QUrl*)param1, param2);
+KIO__MimetypeJob* k_io_mimetype(void* url, int32_t flags) {
+    return KIO_Mimetype((QUrl*)url, flags);
 }

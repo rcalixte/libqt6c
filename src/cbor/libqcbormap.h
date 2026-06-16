@@ -462,9 +462,9 @@ QCborMap__Iterator* q_cbormap_insert5(void* self, pair_qcborvalue_qcborvalue v);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#fromVariantMap)
 ///
-/// @param mapVal libqt_map of const char* to QVariant*
+/// @param map libqt_map of const char* to QVariant*
 ///
-QCborMap* q_cbormap_from_variant_map(libqt_map mapVal);
+QCborMap* q_cbormap_from_variant_map(libqt_map map);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qcbormap.html#fromVariantHash)
 ///

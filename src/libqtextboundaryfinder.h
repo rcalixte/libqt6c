@@ -27,9 +27,9 @@ QTextBoundaryFinder* q_textboundaryfinder_new2(void* other);
 /// q_textboundaryfinder_new3 constructs a new QTextBoundaryFinder object.
 ///
 /// @param type enum QTextBoundaryFinder__BoundaryType
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* stringVal);
+QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextboundaryfinder.html)
 

@@ -1073,9 +1073,9 @@ void k_io__mkpathjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#mkpath)
 ///
-/// @param param1 QUrl*
-/// @param param2 QUrl*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param baseUrl QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__MkpathJob* k_io_mkpath(void* param1, void* param2, int32_t param3);
+KIO__MkpathJob* k_io_mkpath(void* url, void* baseUrl, int32_t flags);
 #endif

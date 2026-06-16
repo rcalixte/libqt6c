@@ -199,9 +199,9 @@ void q_textlayout_set_raw_font(void* self, void* rawFont);
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#setText)
 ///
 /// @param self QTextLayout*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-void q_textlayout_set_text(void* self, const char* stringVal);
+void q_textlayout_set_text(void* self, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qtextlayout.html#text)
 ///

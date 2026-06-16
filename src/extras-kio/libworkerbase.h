@@ -1442,10 +1442,10 @@ void k_io__workerbase_delete(void* self);
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
-/// @param param2 int
+/// @param protocol const char*
+/// @param cmd int
 ///
-const char* k_io_unsupported_action_error_string(const char* param1, int param2);
+const char* k_io_unsupported_action_error_string(const char* protocol, int cmd);
 
 /// [Upstream resources](https://api.kde.org/kio-workerbase.html#public-types)
 

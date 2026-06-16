@@ -16,7 +16,7 @@ uintptr_t k_usertimestamp_user_timestamp();
 
 /// [Upstream resources](https://api.kde.org/kusertimestamp.html#updateUserTimestamp)
 ///
-/// @param param1 uintptr_t
+/// @param time uintptr_t
 ///
-void k_usertimestamp_update_user_timestamp(uintptr_t param1);
+void k_usertimestamp_update_user_timestamp(uintptr_t time);
 #endif

@@ -95,8 +95,8 @@ bool q_collator_operator_call2(void* self, const char* s1, const char* s2) {
     return QCollator_OperatorCall2((QCollator*)self, qstring(s1), qstring(s2));
 }
 
-QCollatorSortKey* q_collator_sort_key(void* self, const char* stringVal) {
-    return QCollator_SortKey((QCollator*)self, qstring(stringVal));
+QCollatorSortKey* q_collator_sort_key(void* self, const char* string) {
+    return QCollator_SortKey((QCollator*)self, qstring(string));
 }
 
 int32_t q_collator_default_compare(const char* s1, const char* s2) {

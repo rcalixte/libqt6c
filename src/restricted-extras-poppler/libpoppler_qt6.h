@@ -12,9 +12,9 @@
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
-/// @param param1 const char*
+/// @param dateString const char*
 ///
-QDateTime* q_poppler_convert_date(const char* param1);
+QDateTime* q_poppler_convert_date(const char* dateString);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///

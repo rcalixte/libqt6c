@@ -1123,20 +1123,20 @@ void k_io__dropjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#drop)
 ///
-/// @param param1 QDropEvent*
-/// @param param2 QUrl*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param dropEvent QDropEvent*
+/// @param destUrl QUrl*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DropJob* k_io_drop(void* param1, void* param2, int32_t param3);
+KIO__DropJob* k_io_drop(void* dropEvent, void* destUrl, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#drop)
 ///
-/// @param param1 QDropEvent*
-/// @param param2 QUrl*
-/// @param param3 flag of enum KIO__DropJobFlag
-/// @param param4 flag of enum KIO__JobFlag
+/// @param dropEvent QDropEvent*
+/// @param destUrl QUrl*
+/// @param dropjobFlags flag of enum KIO__DropJobFlag
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DropJob* k_io_drop2(void* param1, void* param2, int32_t param3, int32_t param4);
+KIO__DropJob* k_io_drop2(void* dropEvent, void* destUrl, int32_t dropjobFlags, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio-dropjob.html#public-types)
 

@@ -2,77 +2,77 @@
 #include "libkcodecs.hpp"
 #include "libkcodecs.h"
 
-char* k_codecs_quoted_printable_encode(char* param1, bool param2) {
-    libqt_string _str = KCodecs_QuotedPrintableEncode(qstring(param1), param2);
+char* k_codecs_quoted_printable_encode(char* in, bool useCRLF) {
+    libqt_string _str = KCodecs_QuotedPrintableEncode(qstring(in), useCRLF);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_quoted_printable_encode2(char* param1, char* param2, bool param3) {
-    KCodecs_QuotedPrintableEncode2(qstring(param1), qstring(param2), param3);
+void k_codecs_quoted_printable_encode2(char* in, char* out, bool useCRLF) {
+    KCodecs_QuotedPrintableEncode2(qstring(in), qstring(out), useCRLF);
 }
 
-char* k_codecs_quoted_printable_decode(char* param1) {
-    libqt_string _str = KCodecs_QuotedPrintableDecode(qstring(param1));
+char* k_codecs_quoted_printable_decode(char* in) {
+    libqt_string _str = KCodecs_QuotedPrintableDecode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_quoted_printable_decode2(char* param1, char* param2) {
-    KCodecs_QuotedPrintableDecode2(qstring(param1), qstring(param2));
+void k_codecs_quoted_printable_decode2(char* in, char* out) {
+    KCodecs_QuotedPrintableDecode2(qstring(in), qstring(out));
 }
 
-char* k_codecs_uudecode(char* param1) {
-    libqt_string _str = KCodecs_Uudecode(qstring(param1));
+char* k_codecs_uudecode(char* in) {
+    libqt_string _str = KCodecs_Uudecode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_uudecode2(char* param1, char* param2) {
-    KCodecs_Uudecode2(qstring(param1), qstring(param2));
+void k_codecs_uudecode2(char* in, char* out) {
+    KCodecs_Uudecode2(qstring(in), qstring(out));
 }
 
-char* k_codecs_base64_encode(char* param1) {
-    libqt_string _str = KCodecs_Base64Encode(qstring(param1));
+char* k_codecs_base64_encode(char* in) {
+    libqt_string _str = KCodecs_Base64Encode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_base64_encode2(char* param1, char* param2, bool param3) {
-    KCodecs_Base64Encode2(qstring(param1), qstring(param2), param3);
+void k_codecs_base64_encode2(char* in, char* out, bool insertLFs) {
+    KCodecs_Base64Encode2(qstring(in), qstring(out), insertLFs);
 }
 
-char* k_codecs_base64_decode(char* param1) {
-    libqt_string _str = KCodecs_Base64Decode(qstring(param1));
+char* k_codecs_base64_decode(char* in) {
+    libqt_string _str = KCodecs_Base64Decode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-void k_codecs_base64_decode2(char* param1, char* param2) {
-    KCodecs_Base64Decode2(qstring(param1), qstring(param2));
+void k_codecs_base64_decode2(char* in, char* out) {
+    KCodecs_Base64Decode2(qstring(in), qstring(out));
 }
 
-const char* k_codecs_decode_r_f_c2047_string(const char* param1) {
-    libqt_string _str = KCodecs_DecodeRFC2047String(qstring(param1));
+const char* k_codecs_decode_r_f_c2047_string(const char* text) {
+    libqt_string _str = KCodecs_DecodeRFC2047String(qstring(text));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs_encode_r_f_c2047_string(const char* param1, char* param2) {
-    libqt_string _str = KCodecs_EncodeRFC2047String(qstring(param1), qstring(param2));
+char* k_codecs_encode_r_f_c2047_string(const char* src, char* charset) {
+    libqt_string _str = KCodecs_EncodeRFC2047String(qstring(src), qstring(charset));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-char* k_codecs_base45_decode(char* param1) {
-    libqt_string _str = KCodecs_Base45Decode(qstring(param1));
+char* k_codecs_base45_decode(char* in) {
+    libqt_string _str = KCodecs_Base45Decode(qstring(in));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

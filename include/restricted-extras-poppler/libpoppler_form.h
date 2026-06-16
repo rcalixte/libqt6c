@@ -2287,9 +2287,9 @@ int32_t q_poppler_active_crypto_sign_backend();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
-/// @param param1 enum Poppler__CryptoSignBackend
+/// @param backend enum Poppler__CryptoSignBackend
 ///
-bool q_poppler_set_active_crypto_sign_backend(int32_t param1);
+bool q_poppler_set_active_crypto_sign_backend(int32_t backend);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
@@ -2316,21 +2316,21 @@ const char* q_poppler_get_n_s_s_dir();
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
-/// @param param1 const char*
+/// @param pathURL const char*
 ///
-void q_poppler_set_n_s_s_dir(const char* param1);
+void q_poppler_set_n_s_s_dir(const char* pathURL);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
-/// @param param1 char* func(const char* param1)
+/// @param f char* func(const char* param1)
 ///
-void q_poppler_set_n_s_s_password_callback(char* (*param1)(const char* funcparam1));
+void q_poppler_set_n_s_s_password_callback(char* (*f)(const char* funcparam1));
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///
-/// @param param1 bool
+/// @param allowed bool
 ///
-void q_poppler_set_pgp_signatures_allowed(bool param1);
+void q_poppler_set_pgp_signatures_allowed(bool allowed);
 
 /// [Upstream resources](https://poppler.freedesktop.org/api/qt6/namespacePoppler.html)
 ///

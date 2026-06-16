@@ -1182,19 +1182,19 @@ void k_io__listjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#listDir)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
-/// @param param3 flag of enum KIO__ListJob__ListFlag
+/// @param url QUrl*
+/// @param flags flag of enum KIO__JobFlag
+/// @param listFlags flag of enum KIO__ListJob__ListFlag
 ///
-KIO__ListJob* k_io_list_dir(void* param1, int32_t param2, int32_t param3);
+KIO__ListJob* k_io_list_dir(void* url, int32_t flags, int32_t listFlags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#listRecursive)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum KIO__JobFlag
-/// @param param3 flag of enum KIO__ListJob__ListFlag
+/// @param url QUrl*
+/// @param flags flag of enum KIO__JobFlag
+/// @param listFlags flag of enum KIO__ListJob__ListFlag
 ///
-KIO__ListJob* k_io_list_recursive(void* param1, int32_t param2, int32_t param3);
+KIO__ListJob* k_io_list_recursive(void* url, int32_t flags, int32_t listFlags);
 
 /// [Upstream resources](https://api.kde.org/kio-listjob.html#public-types)
 

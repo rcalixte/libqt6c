@@ -14,18 +14,18 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param code const char*
 ///
-const char* k_languagename_name_for_code(const char* param1);
+const char* k_languagename_name_for_code(const char* code);
 
 /// [Upstream resources](https://api.kde.org/klanguagename.html#nameForCodeInLocale)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param code const char*
+/// @param outputLocale const char*
 ///
-const char* k_languagename_name_for_code_in_locale(const char* param1, const char* param2);
+const char* k_languagename_name_for_code_in_locale(const char* code, const char* outputLocale);
 
 /// [Upstream resources](https://api.kde.org/klanguagename.html#allLanguageCodes)
 ///

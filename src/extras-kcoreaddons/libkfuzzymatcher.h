@@ -120,27 +120,27 @@ void k_fuzzymatcher__range_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#matchSimple)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param pattern const char*
+/// @param str const char*
 ///
-bool k_fuzzymatcher_match_simple(const char* param1, const char* param2);
+bool k_fuzzymatcher_match_simple(const char* pattern, const char* str);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#match)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
+/// @param pattern const char*
+/// @param str const char*
 ///
-KFuzzyMatcher__Result* k_fuzzymatcher_match(const char* param1, const char* param2);
+KFuzzyMatcher__Result* k_fuzzymatcher_match(const char* pattern, const char* str);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#matchedRanges)
 ///
-/// @param param1 const char*
-/// @param param2 const char*
-/// @param param3 enum KFuzzyMatcher__RangeType
+/// @param pattern const char*
+/// @param str const char*
+/// @param type enum KFuzzyMatcher__RangeType
 ///
 /// @return libqt_list of KFuzzyMatcher__Range*
 ///
-libqt_list k_fuzzymatcher_matched_ranges(const char* param1, const char* param2, uint8_t param3);
+libqt_list k_fuzzymatcher_matched_ranges(const char* pattern, const char* str, uint8_t type);
 
 /// [Upstream resources](https://api.kde.org/kfuzzymatcher.html#public-types)
 

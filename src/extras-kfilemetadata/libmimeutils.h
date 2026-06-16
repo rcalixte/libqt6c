@@ -12,8 +12,8 @@
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-mimeutils.html#strictMimeType)
 ///
-/// @param param1 const char*
-/// @param param2 QMimeDatabase*
+/// @param filePath const char*
+/// @param db QMimeDatabase*
 ///
-QMimeType* k_filemetadata__mimeutils_strict_mime_type(const char* param1, void* param2);
+QMimeType* k_filemetadata__mimeutils_strict_mime_type(const char* filePath, void* db);
 #endif

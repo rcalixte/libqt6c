@@ -206,31 +206,31 @@ const char* q_cp_get_enum_name13(int32_t param1);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @param param1 double
+/// @param value double
 ///
-bool q_cp_is_invalid_data(double param1);
+bool q_cp_is_invalid_data(double value);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @param param1 double
-/// @param param2 double
+/// @param value1 double
+/// @param value2 double
 ///
-bool q_cp_is_invalid_data2(double param1, double param2);
+bool q_cp_is_invalid_data2(double value1, double value2);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @param param1 QMargins*
-/// @param param2 enum QCP__MarginSide
-/// @param param3 int
+/// @param margins QMargins*
+/// @param side enum QCP__MarginSide
+/// @param value int
 ///
-void q_cp_set_margin_value(void* param1, int32_t param2, int param3);
+void q_cp_set_margin_value(void* margins, int32_t side, int value);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/namespaceQCP.html)
 ///
-/// @param param1 QMargins*
-/// @param param2 enum QCP__MarginSide
+/// @param margins QMargins*
+/// @param side enum QCP__MarginSide
 ///
-int32_t q_cp_get_margin_value(void* param1, int32_t param2);
+int32_t q_cp_get_margin_value(void* margins, int32_t side);
 
 /// [Upstream resources](https://www.qcustomplot.com/documentation/classQCPVector2D.html)
 

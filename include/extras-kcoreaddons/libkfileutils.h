@@ -14,25 +14,25 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 QUrl*
-/// @param param2 const char*
+/// @param baseURL QUrl*
+/// @param oldName const char*
 ///
-const char* k_fileutils_suggest_name(void* param1, const char* param2);
+const char* k_fileutils_suggest_name(void* baseURL, const char* oldName);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#makeSuggestedName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param oldName const char*
 ///
-const char* k_fileutils_make_suggested_name(const char* param1);
+const char* k_fileutils_make_suggested_name(const char* oldName);
 
 /// [Upstream resources](https://api.kde.org/kfileutils.html#findAllUniqueFiles)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 const char**
-/// @param param2 const char**
+/// @param dirs const char**
+/// @param nameFilters const char**
 ///
-const char** k_fileutils_find_all_unique_files(const char* param1[static 1], const char* param2[static 1]);
+const char** k_fileutils_find_all_unique_files(const char* dirs[static 1], const char* nameFilters[static 1]);
 #endif

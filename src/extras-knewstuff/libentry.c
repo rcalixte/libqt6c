@@ -6,15 +6,15 @@
 #include "libentry.hpp"
 #include "libentry.h"
 
-const char* k_nscore_replace_b_b_code(const char* param1) {
-    libqt_string _str = KNSCore_ReplaceBBCode(qstring(param1));
+const char* k_nscore_replace_b_b_code(const char* unformattedText) {
+    libqt_string _str = KNSCore_ReplaceBBCode(qstring(unformattedText));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-uintptr_t k_nscore_q_hash(void* param1, uintptr_t param2) {
-    return KNSCore_QHash((KNSCore__Entry*)param1, param2);
+uintptr_t k_nscore_q_hash(void* entry, uintptr_t seed) {
+    return KNSCore_QHash((KNSCore__Entry*)entry, seed);
 }
 
 KNSCore__Entry* k_nscore__entry_new() {

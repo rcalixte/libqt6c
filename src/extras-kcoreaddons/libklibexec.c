@@ -1,15 +1,15 @@
 #include "libklibexec.hpp"
 #include "libklibexec.h"
 
-const char* k_libexec_path_from_address(const char* param1, void* param2) {
-    libqt_string _str = KLibexec_PathFromAddress(qstring(param1), param2);
+const char* k_libexec_path_from_address(const char* relativePath, void* address) {
+    libqt_string _str = KLibexec_PathFromAddress(qstring(relativePath), address);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_libexec_path_candidates(const char* param1) {
-    libqt_list _arr = KLibexec_PathCandidates(qstring(param1));
+const char** k_libexec_path_candidates(const char* relativePath) {
+    libqt_list _arr = KLibexec_PathCandidates(qstring(relativePath));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {
@@ -27,15 +27,15 @@ const char** k_libexec_path_candidates(const char* param1) {
     return _ret;
 }
 
-const char* k_libexec_path(const char* param1) {
-    libqt_string _str = KLibexec_Path(qstring(param1));
+const char* k_libexec_path(const char* relativePath) {
+    libqt_string _str = KLibexec_Path(qstring(relativePath));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char** k_libexec_kde_frameworks_paths(const char* param1) {
-    libqt_list _arr = KLibexec_KdeFrameworksPaths(qstring(param1));
+const char** k_libexec_kde_frameworks_paths(const char* relativePath) {
+    libqt_list _arr = KLibexec_KdeFrameworksPaths(qstring(relativePath));
     const libqt_string* _qstr = (libqt_string*)_arr.data.ptr;
     const char** _ret = (const char**)malloc((_arr.len + 1) * sizeof(const char*));
     if (_ret == NULL) {

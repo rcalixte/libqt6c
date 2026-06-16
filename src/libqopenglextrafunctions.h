@@ -3110,10 +3110,10 @@ void q_openglextrafunctions_gl_shader_binary(void* self, int32_t n, uint32_t* sh
 /// @param self QOpenGLExtraFunctions*
 /// @param shader uint32_t
 /// @param count int32_t
-/// @param stringVal const char**
+/// @param string const char**
 /// @param length int32_t*
 ///
-void q_openglextrafunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+void q_openglextrafunctions_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** string, int32_t* length);
 
 /// Inherited from QOpenGLFunctions
 ///

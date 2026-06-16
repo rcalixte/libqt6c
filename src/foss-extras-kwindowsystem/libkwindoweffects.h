@@ -12,36 +12,36 @@
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#isEffectAvailable)
 ///
-/// @param param1 enum KWindowEffects__Effect
+/// @param effect enum KWindowEffects__Effect
 ///
-bool k_windoweffects_is_effect_available(int32_t param1);
+bool k_windoweffects_is_effect_available(int32_t effect);
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#enableBlurBehind)
 ///
-/// @param param1 QWindow*
-/// @param param2 bool
-/// @param param3 QRegion*
+/// @param window QWindow*
+/// @param enable bool
+/// @param region QRegion*
 ///
-void k_windoweffects_enable_blur_behind(void* param1, bool param2, void* param3);
+void k_windoweffects_enable_blur_behind(void* window, bool enable, void* region);
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#enableBackgroundContrast)
 ///
-/// @param param1 QWindow*
-/// @param param2 bool
-/// @param param3 double
-/// @param param4 double
-/// @param param5 double
-/// @param param6 QRegion*
+/// @param window QWindow*
+/// @param enable bool
+/// @param contrast double
+/// @param intensity double
+/// @param saturation double
+/// @param region QRegion*
 ///
-void k_windoweffects_enable_background_contrast(void* param1, bool param2, double param3, double param4, double param5, void* param6);
+void k_windoweffects_enable_background_contrast(void* window, bool enable, double contrast, double intensity, double saturation, void* region);
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#slideWindow)
 ///
-/// @param param1 QWindow*
-/// @param param2 enum KWindowEffects__SlideFromLocation
-/// @param param3 int
+/// @param window QWindow*
+/// @param location enum KWindowEffects__SlideFromLocation
+/// @param offset int
 ///
-void k_windoweffects_slide_window(void* param1, int32_t param2, int param3);
+void k_windoweffects_slide_window(void* window, int32_t location, int offset);
 
 /// [Upstream resources](https://api.kde.org/kwindoweffects.html#public-types)
 

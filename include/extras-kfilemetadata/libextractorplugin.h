@@ -169,9 +169,9 @@ QDateTime* k_filemetadata__extractorplugin_date_time_from_string(const char* dat
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-const char** k_filemetadata__extractorplugin_contacts_from_string(const char* stringVal);
+const char** k_filemetadata__extractorplugin_contacts_from_string(const char* string);
 
 /// [Upstream resources](https://api.kde.org/kfilemetadata-extractorplugin.html#getSupportedMimeType)
 ///

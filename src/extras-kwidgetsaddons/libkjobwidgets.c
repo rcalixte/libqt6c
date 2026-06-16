@@ -4,26 +4,26 @@
 #include "libkjobwidgets.hpp"
 #include "libkjobwidgets.h"
 
-void k_jobwidgets_set_window(void* param1, void* param2) {
-    KJobWidgets_SetWindow((QObject*)param1, (QWidget*)param2);
+void k_jobwidgets_set_window(void* job, void* widget) {
+    KJobWidgets_SetWindow((QObject*)job, (QWidget*)widget);
 }
 
-void k_jobwidgets_set_window_handle(void* param1, void* param2) {
-    KJobWidgets_SetWindowHandle((QObject*)param1, (QWindow*)param2);
+void k_jobwidgets_set_window_handle(void* job, void* window) {
+    KJobWidgets_SetWindowHandle((QObject*)job, (QWindow*)window);
 }
 
-QWidget* k_jobwidgets_window(void* param1) {
-    return KJobWidgets_Window((QObject*)param1);
+QWidget* k_jobwidgets_window(void* job) {
+    return KJobWidgets_Window((QObject*)job);
 }
 
-QWindow* k_jobwidgets_window_handle(void* param1) {
-    return KJobWidgets_WindowHandle((QObject*)param1);
+QWindow* k_jobwidgets_window_handle(void* job) {
+    return KJobWidgets_WindowHandle((QObject*)job);
 }
 
-void k_jobwidgets_update_user_timestamp(void* param1, uintptr_t param2) {
-    KJobWidgets_UpdateUserTimestamp((QObject*)param1, param2);
+void k_jobwidgets_update_user_timestamp(void* job, uintptr_t time) {
+    KJobWidgets_UpdateUserTimestamp((QObject*)job, time);
 }
 
-uintptr_t k_jobwidgets_user_timestamp(void* param1) {
-    return KJobWidgets_UserTimestamp((QObject*)param1);
+uintptr_t k_jobwidgets_user_timestamp(void* job) {
+    return KJobWidgets_UserTimestamp((QObject*)job);
 }

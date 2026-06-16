@@ -981,26 +981,26 @@ void q_openglfunctions_1_3_gl_get_polygon_stipple(void* self, uint8_t* mask);
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glGetPixelMapusv)
 ///
 /// @param self QOpenGLFunctions_1_3*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param values uint16_t*
 ///
-void q_openglfunctions_1_3_gl_get_pixel_mapusv(void* self, uint32_t mapVal, uint16_t* values);
+void q_openglfunctions_1_3_gl_get_pixel_mapusv(void* self, uint32_t map, uint16_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glGetPixelMapuiv)
 ///
 /// @param self QOpenGLFunctions_1_3*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param values uint32_t*
 ///
-void q_openglfunctions_1_3_gl_get_pixel_mapuiv(void* self, uint32_t mapVal, uint32_t* values);
+void q_openglfunctions_1_3_gl_get_pixel_mapuiv(void* self, uint32_t map, uint32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glGetPixelMapfv)
 ///
 /// @param self QOpenGLFunctions_1_3*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param values float*
 ///
-void q_openglfunctions_1_3_gl_get_pixel_mapfv(void* self, uint32_t mapVal, float* values);
+void q_openglfunctions_1_3_gl_get_pixel_mapfv(void* self, uint32_t map, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glGetMaterialiv)
 ///
@@ -1098,29 +1098,29 @@ void q_openglfunctions_1_3_gl_copy_pixels(void* self, int32_t x, int32_t y, int3
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glPixelMapusv)
 ///
 /// @param self QOpenGLFunctions_1_3*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param mapsize int32_t
 /// @param values uint16_t*
 ///
-void q_openglfunctions_1_3_gl_pixel_mapusv(void* self, uint32_t mapVal, int32_t mapsize, uint16_t* values);
+void q_openglfunctions_1_3_gl_pixel_mapusv(void* self, uint32_t map, int32_t mapsize, uint16_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glPixelMapuiv)
 ///
 /// @param self QOpenGLFunctions_1_3*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param mapsize int32_t
 /// @param values uint32_t*
 ///
-void q_openglfunctions_1_3_gl_pixel_mapuiv(void* self, uint32_t mapVal, int32_t mapsize, uint32_t* values);
+void q_openglfunctions_1_3_gl_pixel_mapuiv(void* self, uint32_t map, int32_t mapsize, uint32_t* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glPixelMapfv)
 ///
 /// @param self QOpenGLFunctions_1_3*
-/// @param mapVal uint32_t
+/// @param map uint32_t
 /// @param mapsize int32_t
 /// @param values float*
 ///
-void q_openglfunctions_1_3_gl_pixel_mapfv(void* self, uint32_t mapVal, int32_t mapsize, float* values);
+void q_openglfunctions_1_3_gl_pixel_mapfv(void* self, uint32_t map, int32_t mapsize, float* values);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-1-3.html#glPixelTransferi)
 ///

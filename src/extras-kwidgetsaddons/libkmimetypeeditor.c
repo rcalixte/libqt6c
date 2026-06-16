@@ -2,6 +2,6 @@
 #include "libkmimetypeeditor.hpp"
 #include "libkmimetypeeditor.h"
 
-void k_mimetypeeditor_edit_mime_type(const char* param1, void* param2) {
-    KMimeTypeEditor_EditMimeType(qstring(param1), (QWidget*)param2);
+void k_mimetypeeditor_edit_mime_type(const char* mimeType, void* widget) {
+    KMimeTypeEditor_EditMimeType(qstring(mimeType), (QWidget*)widget);
 }

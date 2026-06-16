@@ -50,9 +50,9 @@ void q_webengineglobalsettings__dnsmode_delete(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings.html#setDnsMode)
 ///
-/// @param param1 QWebEngineGlobalSettings__DnsMode*
+/// @param dnsMode QWebEngineGlobalSettings__DnsMode*
 ///
-bool q_webengineglobalsettings_set_dns_mode(void* param1);
+bool q_webengineglobalsettings_set_dns_mode(void* dnsMode);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qwebengineglobalsettings.html#public-types)
 

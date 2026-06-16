@@ -8,16 +8,16 @@
 #include "libkstandardaction.hpp"
 #include "libkstandardaction.h"
 
-QAction* k_standardaction_create(int32_t param1, void* param2, const char* param3, void* param4) {
-    return KStandardAction_Create(param1, (QObject*)param2, param3, (QObject*)param4);
+QAction* k_standardaction_create(int32_t id, void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Create(id, (QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_k_create_internal(int32_t param1, void* param2) {
-    return KStandardAction_KCreateInternal(param1, (QObject*)param2);
+QAction* k_standardaction_k_create_internal(int32_t id, void* parent) {
+    return KStandardAction_KCreateInternal(id, (QObject*)parent);
 }
 
-const char* k_standardaction_name(int32_t param1) {
-    libqt_string _str = KStandardAction_Name(param1);
+const char* k_standardaction_name(int32_t id) {
+    libqt_string _str = KStandardAction_Name(id);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
@@ -47,286 +47,286 @@ libqt_list /* of enum KStandardAction__StandardAction */ k_standardaction_action
     return _arr;
 }
 
-int32_t k_standardaction_shortcut_for_action_id(int32_t param1) {
-    return KStandardAction_ShortcutForActionId(param1);
+int32_t k_standardaction_shortcut_for_action_id(int32_t id) {
+    return KStandardAction_ShortcutForActionId(id);
 }
 
-QAction* k_standardaction_open_new(void* param1, const char* param2, void* param3) {
-    return KStandardAction_OpenNew((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_open_new(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_OpenNew((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_open(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Open((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_open(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Open((QObject*)recvr, slot, (QObject*)parent);
 }
 
-KRecentFilesAction* k_standardaction_open_recent(void* param1, const char* param2, void* param3) {
-    return KStandardAction_OpenRecent((QObject*)param1, param2, (QObject*)param3);
+KRecentFilesAction* k_standardaction_open_recent(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_OpenRecent((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_save(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Save((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_save(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Save((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_save_as(void* param1, const char* param2, void* param3) {
-    return KStandardAction_SaveAs((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_save_as(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_SaveAs((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_revert(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Revert((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_revert(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Revert((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_close(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Close((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_close(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Close((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_print(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Print((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_print(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Print((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_print_preview(void* param1, const char* param2, void* param3) {
-    return KStandardAction_PrintPreview((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_print_preview(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_PrintPreview((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_mail(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Mail((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_mail(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Mail((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_quit(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Quit((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_quit(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Quit((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_undo(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Undo((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_undo(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Undo((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_redo(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Redo((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_redo(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Redo((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_cut(void* param1) {
-    return KStandardAction_Cut((QObject*)param1);
+QAction* k_standardaction_cut(void* parent) {
+    return KStandardAction_Cut((QObject*)parent);
 }
 
-QAction* k_standardaction_copy(void* param1) {
-    return KStandardAction_Copy((QObject*)param1);
+QAction* k_standardaction_copy(void* parent) {
+    return KStandardAction_Copy((QObject*)parent);
 }
 
-QAction* k_standardaction_paste(void* param1) {
-    return KStandardAction_Paste((QObject*)param1);
+QAction* k_standardaction_paste(void* parent) {
+    return KStandardAction_Paste((QObject*)parent);
 }
 
-QAction* k_standardaction_clear(void* param1) {
-    return KStandardAction_Clear((QObject*)param1);
+QAction* k_standardaction_clear(void* parent) {
+    return KStandardAction_Clear((QObject*)parent);
 }
 
-QAction* k_standardaction_select_all(void* param1) {
-    return KStandardAction_SelectAll((QObject*)param1);
+QAction* k_standardaction_select_all(void* parent) {
+    return KStandardAction_SelectAll((QObject*)parent);
 }
 
-QAction* k_standardaction_cut2(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Cut2((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_cut2(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Cut2((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_copy2(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Copy2((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_copy2(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Copy2((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_paste2(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Paste2((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_paste2(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Paste2((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_clear2(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Clear2((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_clear2(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Clear2((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_select_all2(void* param1, const char* param2, void* param3) {
-    return KStandardAction_SelectAll2((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_select_all2(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_SelectAll2((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_deselect(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Deselect((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_deselect(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Deselect((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_find(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Find((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_find(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Find((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_find_next(void* param1, const char* param2, void* param3) {
-    return KStandardAction_FindNext((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_find_next(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_FindNext((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_find_prev(void* param1, const char* param2, void* param3) {
-    return KStandardAction_FindPrev((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_find_prev(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_FindPrev((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_replace(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Replace((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_replace(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Replace((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_actual_size(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ActualSize((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_actual_size(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ActualSize((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_fit_to_page(void* param1, const char* param2, void* param3) {
-    return KStandardAction_FitToPage((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_fit_to_page(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_FitToPage((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_fit_to_width(void* param1, const char* param2, void* param3) {
-    return KStandardAction_FitToWidth((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_fit_to_width(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_FitToWidth((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_fit_to_height(void* param1, const char* param2, void* param3) {
-    return KStandardAction_FitToHeight((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_fit_to_height(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_FitToHeight((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_zoom_in(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ZoomIn((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_zoom_in(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ZoomIn((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_zoom_out(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ZoomOut((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_zoom_out(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ZoomOut((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_zoom(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Zoom((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_zoom(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Zoom((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_redisplay(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Redisplay((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_redisplay(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Redisplay((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_up(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Up((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_up(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Up((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_back(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Back((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_back(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Back((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_forward(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Forward((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_forward(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Forward((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_home(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Home((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_home(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Home((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_prior(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Prior((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_prior(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Prior((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_next(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Next((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_next(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Next((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_go_to(void* param1, const char* param2, void* param3) {
-    return KStandardAction_GoTo((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_go_to(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_GoTo((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_goto_page(void* param1, const char* param2, void* param3) {
-    return KStandardAction_GotoPage((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_goto_page(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_GotoPage((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_goto_line(void* param1, const char* param2, void* param3) {
-    return KStandardAction_GotoLine((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_goto_line(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_GotoLine((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_first_page(void* param1, const char* param2, void* param3) {
-    return KStandardAction_FirstPage((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_first_page(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_FirstPage((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_last_page(void* param1, const char* param2, void* param3) {
-    return KStandardAction_LastPage((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_last_page(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_LastPage((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_document_back(void* param1, const char* param2, void* param3) {
-    return KStandardAction_DocumentBack((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_document_back(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_DocumentBack((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_document_forward(void* param1, const char* param2, void* param3) {
-    return KStandardAction_DocumentForward((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_document_forward(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_DocumentForward((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_add_bookmark(void* param1, const char* param2, void* param3) {
-    return KStandardAction_AddBookmark((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_add_bookmark(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_AddBookmark((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_edit_bookmarks(void* param1, const char* param2, void* param3) {
-    return KStandardAction_EditBookmarks((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_edit_bookmarks(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_EditBookmarks((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_spelling(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Spelling((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_spelling(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Spelling((QObject*)recvr, slot, (QObject*)parent);
 }
 
-KToggleAction* k_standardaction_show_menubar(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ShowMenubar((QObject*)param1, param2, (QObject*)param3);
+KToggleAction* k_standardaction_show_menubar(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ShowMenubar((QObject*)recvr, slot, (QObject*)parent);
 }
 
-KToggleAction* k_standardaction_show_statusbar(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ShowStatusbar((QObject*)param1, param2, (QObject*)param3);
+KToggleAction* k_standardaction_show_statusbar(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ShowStatusbar((QObject*)recvr, slot, (QObject*)parent);
 }
 
-KToggleFullScreenAction* k_standardaction_full_screen(void* param1, const char* param2, void* param3, void* param4) {
-    return KStandardAction_FullScreen((QObject*)param1, param2, (QWidget*)param3, (QObject*)param4);
+KToggleFullScreenAction* k_standardaction_full_screen(void* recvr, const char* slot, void* window, void* parent) {
+    return KStandardAction_FullScreen((QObject*)recvr, slot, (QWidget*)window, (QObject*)parent);
 }
 
-QAction* k_standardaction_key_bindings(void* param1, const char* param2, void* param3) {
-    return KStandardAction_KeyBindings((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_key_bindings(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_KeyBindings((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_preferences(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Preferences((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_preferences(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Preferences((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_configure_toolbars(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ConfigureToolbars((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_configure_toolbars(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ConfigureToolbars((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_configure_notifications(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ConfigureNotifications((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_configure_notifications(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ConfigureNotifications((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_switch_application_language(void* param1, const char* param2, void* param3) {
-    return KStandardAction_SwitchApplicationLanguage((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_switch_application_language(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_SwitchApplicationLanguage((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_help_contents(void* param1, const char* param2, void* param3) {
-    return KStandardAction_HelpContents((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_help_contents(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_HelpContents((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_whats_this(void* param1, const char* param2, void* param3) {
-    return KStandardAction_WhatsThis((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_whats_this(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_WhatsThis((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_report_bug(void* param1, const char* param2, void* param3) {
-    return KStandardAction_ReportBug((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_report_bug(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_ReportBug((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_about_app(void* param1, const char* param2, void* param3) {
-    return KStandardAction_AboutApp((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_about_app(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_AboutApp((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_about_k_d_e(void* param1, const char* param2, void* param3) {
-    return KStandardAction_AboutKDE((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_about_k_d_e(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_AboutKDE((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_delete_file(void* param1, const char* param2, void* param3) {
-    return KStandardAction_DeleteFile((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_delete_file(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_DeleteFile((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_rename_file(void* param1, const char* param2, void* param3) {
-    return KStandardAction_RenameFile((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_rename_file(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_RenameFile((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_move_to_trash(void* param1, const char* param2, void* param3) {
-    return KStandardAction_MoveToTrash((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_move_to_trash(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_MoveToTrash((QObject*)recvr, slot, (QObject*)parent);
 }
 
-QAction* k_standardaction_donate(void* param1, const char* param2, void* param3) {
-    return KStandardAction_Donate((QObject*)param1, param2, (QObject*)param3);
+QAction* k_standardaction_donate(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_Donate((QObject*)recvr, slot, (QObject*)parent);
 }
 
-KHamburgerMenu* k_standardaction_hamburger_menu(void* param1, const char* param2, void* param3) {
-    return KStandardAction_HamburgerMenu((QObject*)param1, param2, (QObject*)param3);
+KHamburgerMenu* k_standardaction_hamburger_menu(void* recvr, const char* slot, void* parent) {
+    return KStandardAction_HamburgerMenu((QObject*)recvr, slot, (QObject*)parent);
 }

@@ -14,19 +14,19 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 int
-/// @param param2 const char*
+/// @param errorCode int
+/// @param errorText const char*
 ///
-const char* k_io_build_error_string(int param1, const char* param2);
+const char* k_io_build_error_string(int errorCode, const char* errorText);
 
 /// [Upstream resources](https://api.kde.org/kio.html#rawErrorDetail)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `free()`
 ///
-/// @param param1 int
-/// @param param2 const char*
-/// @param param3 QUrl*
-/// @param param4 int
+/// @param errorCode int
+/// @param errorText const char*
+/// @param reqUrl QUrl*
+/// @param method int
 ///
-char* k_io_raw_error_detail(int param1, const char* param2, void* param3, int param4);
+char* k_io_raw_error_detail(int errorCode, const char* errorText, void* reqUrl, int method);
 #endif

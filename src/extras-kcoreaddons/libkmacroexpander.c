@@ -370,325 +370,325 @@ void k_charmacroexpander_delete(void* self) {
     KCharMacroExpander_Delete((KCharMacroExpander*)(self));
 }
 
-const char* k_macroexpander_expand_macros(const char* param1, libqt_map /* of QChar* to const char* */ param2, void* param3) {
+const char* k_macroexpander_expand_macros(const char* str, libqt_map /* of QChar* to const char* */ map, void* c) {
     // Convert libqt_map to QHash<QChar,QString>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (QChar**)malloc(param2_ret.len * sizeof(QChar*));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (QChar**)malloc(map_ret.len * sizeof(QChar*));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros\n");
         abort();
     }
-    param2_ret.values = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros\n");
         abort();
     }
-    QChar** param2_karr = (QChar**)param2.keys;
-    QChar** param2_kdest = (QChar**)param2_ret.keys;
-    const char** param2_varr = (const char**)param2.values;
-    libqt_string* param2_vdest = (libqt_string*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = param2_karr[i];
-        param2_vdest[i] = qstring(param2_varr[i]);
+    QChar** map_karr = (QChar**)map.keys;
+    QChar** map_kdest = (QChar**)map_ret.keys;
+    const char** map_varr = (const char**)map.values;
+    libqt_string* map_vdest = (libqt_string*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = map_karr[i];
+        map_vdest[i] = qstring(map_varr[i]);
     }
-    libqt_string _str = KMacroExpander_ExpandMacros(qstring(param1), param2_ret, (QChar*)param3);
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    libqt_string _str = KMacroExpander_ExpandMacros(qstring(str), map_ret, (QChar*)c);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros_shell_quote(const char* param1, libqt_map /* of QChar* to const char* */ param2, void* param3) {
+const char* k_macroexpander_expand_macros_shell_quote(const char* str, libqt_map /* of QChar* to const char* */ map, void* c) {
     // Convert libqt_map to QHash<QChar,QString>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (QChar**)malloc(param2_ret.len * sizeof(QChar*));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (QChar**)malloc(map_ret.len * sizeof(QChar*));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros_shell_quote\n");
         abort();
     }
-    param2_ret.values = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros_shell_quote\n");
         abort();
     }
-    QChar** param2_karr = (QChar**)param2.keys;
-    QChar** param2_kdest = (QChar**)param2_ret.keys;
-    const char** param2_varr = (const char**)param2.values;
-    libqt_string* param2_vdest = (libqt_string*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = param2_karr[i];
-        param2_vdest[i] = qstring(param2_varr[i]);
+    QChar** map_karr = (QChar**)map.keys;
+    QChar** map_kdest = (QChar**)map_ret.keys;
+    const char** map_varr = (const char**)map.values;
+    libqt_string* map_vdest = (libqt_string*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = map_karr[i];
+        map_vdest[i] = qstring(map_varr[i]);
     }
-    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote(qstring(param1), param2_ret, (QChar*)param3);
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote(qstring(str), map_ret, (QChar*)c);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros2(const char* param1, libqt_map /* of const char* to const char* */ param2, void* param3) {
+const char* k_macroexpander_expand_macros2(const char* str, libqt_map /* of const char* to const char* */ map, void* c) {
     // Convert libqt_map to QHash<QString,QString>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros2\n");
         abort();
     }
-    param2_ret.values = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros2\n");
         abort();
     }
-    const char** param2_karr = (const char**)param2.keys;
-    libqt_string* param2_kdest = (libqt_string*)param2_ret.keys;
-    const char** param2_varr = (const char**)param2.values;
-    libqt_string* param2_vdest = (libqt_string*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = qstring(param2_karr[i]);
-        param2_vdest[i] = qstring(param2_varr[i]);
+    const char** map_karr = (const char**)map.keys;
+    libqt_string* map_kdest = (libqt_string*)map_ret.keys;
+    const char** map_varr = (const char**)map.values;
+    libqt_string* map_vdest = (libqt_string*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = qstring(map_karr[i]);
+        map_vdest[i] = qstring(map_varr[i]);
     }
-    libqt_string _str = KMacroExpander_ExpandMacros2(qstring(param1), param2_ret, (QChar*)param3);
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    libqt_string _str = KMacroExpander_ExpandMacros2(qstring(str), map_ret, (QChar*)c);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros_shell_quote2(const char* param1, libqt_map /* of const char* to const char* */ param2, void* param3) {
+const char* k_macroexpander_expand_macros_shell_quote2(const char* str, libqt_map /* of const char* to const char* */ map, void* c) {
     // Convert libqt_map to QHash<QString,QString>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros_shell_quote2\n");
         abort();
     }
-    param2_ret.values = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros_shell_quote2\n");
         abort();
     }
-    const char** param2_karr = (const char**)param2.keys;
-    libqt_string* param2_kdest = (libqt_string*)param2_ret.keys;
-    const char** param2_varr = (const char**)param2.values;
-    libqt_string* param2_vdest = (libqt_string*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = qstring(param2_karr[i]);
-        param2_vdest[i] = qstring(param2_varr[i]);
+    const char** map_karr = (const char**)map.keys;
+    libqt_string* map_kdest = (libqt_string*)map_ret.keys;
+    const char** map_varr = (const char**)map.values;
+    libqt_string* map_vdest = (libqt_string*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = qstring(map_karr[i]);
+        map_vdest[i] = qstring(map_varr[i]);
     }
-    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote2(qstring(param1), param2_ret, (QChar*)param3);
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote2(qstring(str), map_ret, (QChar*)c);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros3(const char* param1, libqt_map /* of QChar* to const char** */ param2, void* param3) {
+const char* k_macroexpander_expand_macros3(const char* str, libqt_map /* of QChar* to const char** */ map, void* c) {
     // Convert libqt_map to QHash<QChar,QList<QString>>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (QChar**)malloc(param2_ret.len * sizeof(QChar*));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (QChar**)malloc(map_ret.len * sizeof(QChar*));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros3\n");
         abort();
     }
-    param2_ret.values = (libqt_list*)malloc(param2_ret.len * sizeof(libqt_list));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_list*)malloc(map_ret.len * sizeof(libqt_list));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros3\n");
         abort();
     }
-    QChar** param2_karr = (QChar**)param2.keys;
-    QChar** param2_kdest = (QChar**)param2_ret.keys;
-    const char*** param2_varr = (const char***)param2.values;
-    libqt_list* param2_vdest = (libqt_list*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = param2_karr[i];
-        const char** param2_array = param2_varr[i];
-        size_t param2_value_count = libqt_strv_length((const char**)param2_array);
-        libqt_string* param2_value_strings = (libqt_string*)malloc(param2_value_count * sizeof(libqt_string));
-        if (param2_value_strings == NULL) {
+    QChar** map_karr = (QChar**)map.keys;
+    QChar** map_kdest = (QChar**)map_ret.keys;
+    const char*** map_varr = (const char***)map.values;
+    libqt_list* map_vdest = (libqt_list*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = map_karr[i];
+        const char** map_array = map_varr[i];
+        size_t map_value_count = libqt_strv_length((const char**)map_array);
+        libqt_string* map_value_strings = (libqt_string*)malloc(map_value_count * sizeof(libqt_string));
+        if (map_value_strings == NULL) {
             for (size_t j = 0; j < i; j++) {
-                free(((libqt_list*)param2_ret.values)[j].data.ptr);
+                free(((libqt_list*)map_ret.values)[j].data.ptr);
             }
-            free(param2_ret.keys);
-            free(param2_ret.values);
+            free(map_ret.keys);
+            free(map_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in k_macroexpander_expand_macros3\n");
             abort();
         }
-        for (size_t j = 0; j < param2_value_count; j++) {
-            param2_value_strings[j] = qstring(param2_array[j]);
+        for (size_t j = 0; j < map_value_count; j++) {
+            map_value_strings[j] = qstring(map_array[j]);
         }
-        param2_vdest[i].len = param2_value_count;
-        param2_vdest[i].data.ptr = param2_value_strings;
+        map_vdest[i].len = map_value_count;
+        map_vdest[i].data.ptr = map_value_strings;
     }
-    libqt_string _str = KMacroExpander_ExpandMacros3(qstring(param1), param2_ret, (QChar*)param3);
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        free(((libqt_list*)param2_ret.values)[i].data.ptr);
+    libqt_string _str = KMacroExpander_ExpandMacros3(qstring(str), map_ret, (QChar*)c);
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        free(((libqt_list*)map_ret.values)[i].data.ptr);
     }
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros4(const char* param1, libqt_map /* of const char* to const char** */ param2, void* param3) {
+const char* k_macroexpander_expand_macros4(const char* str, libqt_map /* of const char* to const char** */ map, void* c) {
     // Convert libqt_map to QHash<QString,QList<QString>>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros4\n");
         abort();
     }
-    param2_ret.values = (libqt_list*)malloc(param2_ret.len * sizeof(libqt_list));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_list*)malloc(map_ret.len * sizeof(libqt_list));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros4\n");
         abort();
     }
-    const char** param2_karr = (const char**)param2.keys;
-    libqt_string* param2_kdest = (libqt_string*)param2_ret.keys;
-    const char*** param2_varr = (const char***)param2.values;
-    libqt_list* param2_vdest = (libqt_list*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = qstring(param2_karr[i]);
-        const char** param2_array = param2_varr[i];
-        size_t param2_value_count = libqt_strv_length((const char**)param2_array);
-        libqt_string* param2_value_strings = (libqt_string*)malloc(param2_value_count * sizeof(libqt_string));
-        if (param2_value_strings == NULL) {
+    const char** map_karr = (const char**)map.keys;
+    libqt_string* map_kdest = (libqt_string*)map_ret.keys;
+    const char*** map_varr = (const char***)map.values;
+    libqt_list* map_vdest = (libqt_list*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = qstring(map_karr[i]);
+        const char** map_array = map_varr[i];
+        size_t map_value_count = libqt_strv_length((const char**)map_array);
+        libqt_string* map_value_strings = (libqt_string*)malloc(map_value_count * sizeof(libqt_string));
+        if (map_value_strings == NULL) {
             for (size_t j = 0; j < i; j++) {
-                free(((libqt_list*)param2_ret.values)[j].data.ptr);
+                free(((libqt_list*)map_ret.values)[j].data.ptr);
             }
-            free(param2_ret.keys);
-            free(param2_ret.values);
+            free(map_ret.keys);
+            free(map_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in k_macroexpander_expand_macros4\n");
             abort();
         }
-        for (size_t j = 0; j < param2_value_count; j++) {
-            param2_value_strings[j] = qstring(param2_array[j]);
+        for (size_t j = 0; j < map_value_count; j++) {
+            map_value_strings[j] = qstring(map_array[j]);
         }
-        param2_vdest[i].len = param2_value_count;
-        param2_vdest[i].data.ptr = param2_value_strings;
+        map_vdest[i].len = map_value_count;
+        map_vdest[i].data.ptr = map_value_strings;
     }
-    libqt_string _str = KMacroExpander_ExpandMacros4(qstring(param1), param2_ret, (QChar*)param3);
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        free(((libqt_list*)param2_ret.values)[i].data.ptr);
+    libqt_string _str = KMacroExpander_ExpandMacros4(qstring(str), map_ret, (QChar*)c);
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        free(((libqt_list*)map_ret.values)[i].data.ptr);
     }
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros_shell_quote3(const char* param1, libqt_map /* of QChar* to const char** */ param2, void* param3) {
+const char* k_macroexpander_expand_macros_shell_quote3(const char* str, libqt_map /* of QChar* to const char** */ map, void* c) {
     // Convert libqt_map to QHash<QChar,QList<QString>>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (QChar**)malloc(param2_ret.len * sizeof(QChar*));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (QChar**)malloc(map_ret.len * sizeof(QChar*));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros_shell_quote3\n");
         abort();
     }
-    param2_ret.values = (libqt_list*)malloc(param2_ret.len * sizeof(libqt_list));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_list*)malloc(map_ret.len * sizeof(libqt_list));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros_shell_quote3\n");
         abort();
     }
-    QChar** param2_karr = (QChar**)param2.keys;
-    QChar** param2_kdest = (QChar**)param2_ret.keys;
-    const char*** param2_varr = (const char***)param2.values;
-    libqt_list* param2_vdest = (libqt_list*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = param2_karr[i];
-        const char** param2_array = param2_varr[i];
-        size_t param2_value_count = libqt_strv_length((const char**)param2_array);
-        libqt_string* param2_value_strings = (libqt_string*)malloc(param2_value_count * sizeof(libqt_string));
-        if (param2_value_strings == NULL) {
+    QChar** map_karr = (QChar**)map.keys;
+    QChar** map_kdest = (QChar**)map_ret.keys;
+    const char*** map_varr = (const char***)map.values;
+    libqt_list* map_vdest = (libqt_list*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = map_karr[i];
+        const char** map_array = map_varr[i];
+        size_t map_value_count = libqt_strv_length((const char**)map_array);
+        libqt_string* map_value_strings = (libqt_string*)malloc(map_value_count * sizeof(libqt_string));
+        if (map_value_strings == NULL) {
             for (size_t j = 0; j < i; j++) {
-                free(((libqt_list*)param2_ret.values)[j].data.ptr);
+                free(((libqt_list*)map_ret.values)[j].data.ptr);
             }
-            free(param2_ret.keys);
-            free(param2_ret.values);
+            free(map_ret.keys);
+            free(map_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in k_macroexpander_expand_macros_shell_quote3\n");
             abort();
         }
-        for (size_t j = 0; j < param2_value_count; j++) {
-            param2_value_strings[j] = qstring(param2_array[j]);
+        for (size_t j = 0; j < map_value_count; j++) {
+            map_value_strings[j] = qstring(map_array[j]);
         }
-        param2_vdest[i].len = param2_value_count;
-        param2_vdest[i].data.ptr = param2_value_strings;
+        map_vdest[i].len = map_value_count;
+        map_vdest[i].data.ptr = map_value_strings;
     }
-    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote3(qstring(param1), param2_ret, (QChar*)param3);
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        free(((libqt_list*)param2_ret.values)[i].data.ptr);
+    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote3(qstring(str), map_ret, (QChar*)c);
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        free(((libqt_list*)map_ret.values)[i].data.ptr);
     }
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_macroexpander_expand_macros_shell_quote4(const char* param1, libqt_map /* of const char* to const char** */ param2, void* param3) {
+const char* k_macroexpander_expand_macros_shell_quote4(const char* str, libqt_map /* of const char* to const char** */ map, void* c) {
     // Convert libqt_map to QHash<QString,QList<QString>>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (libqt_string*)malloc(param2_ret.len * sizeof(libqt_string));
-    if (param2_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_macroexpander_expand_macros_shell_quote4\n");
         abort();
     }
-    param2_ret.values = (libqt_list*)malloc(param2_ret.len * sizeof(libqt_list));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    map_ret.values = (libqt_list*)malloc(map_ret.len * sizeof(libqt_list));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_macroexpander_expand_macros_shell_quote4\n");
         abort();
     }
-    const char** param2_karr = (const char**)param2.keys;
-    libqt_string* param2_kdest = (libqt_string*)param2_ret.keys;
-    const char*** param2_varr = (const char***)param2.values;
-    libqt_list* param2_vdest = (libqt_list*)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = qstring(param2_karr[i]);
-        const char** param2_array = param2_varr[i];
-        size_t param2_value_count = libqt_strv_length((const char**)param2_array);
-        libqt_string* param2_value_strings = (libqt_string*)malloc(param2_value_count * sizeof(libqt_string));
-        if (param2_value_strings == NULL) {
+    const char** map_karr = (const char**)map.keys;
+    libqt_string* map_kdest = (libqt_string*)map_ret.keys;
+    const char*** map_varr = (const char***)map.values;
+    libqt_list* map_vdest = (libqt_list*)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = qstring(map_karr[i]);
+        const char** map_array = map_varr[i];
+        size_t map_value_count = libqt_strv_length((const char**)map_array);
+        libqt_string* map_value_strings = (libqt_string*)malloc(map_value_count * sizeof(libqt_string));
+        if (map_value_strings == NULL) {
             for (size_t j = 0; j < i; j++) {
-                free(((libqt_list*)param2_ret.values)[j].data.ptr);
+                free(((libqt_list*)map_ret.values)[j].data.ptr);
             }
-            free(param2_ret.keys);
-            free(param2_ret.values);
+            free(map_ret.keys);
+            free(map_ret.values);
             fprintf(stderr, "Failed to allocate memory for map string key in k_macroexpander_expand_macros_shell_quote4\n");
             abort();
         }
-        for (size_t j = 0; j < param2_value_count; j++) {
-            param2_value_strings[j] = qstring(param2_array[j]);
+        for (size_t j = 0; j < map_value_count; j++) {
+            map_value_strings[j] = qstring(map_array[j]);
         }
-        param2_vdest[i].len = param2_value_count;
-        param2_vdest[i].data.ptr = param2_value_strings;
+        map_vdest[i].len = map_value_count;
+        map_vdest[i].data.ptr = map_value_strings;
     }
-    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote4(qstring(param1), param2_ret, (QChar*)param3);
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        free(((libqt_list*)param2_ret.values)[i].data.ptr);
+    libqt_string _str = KMacroExpander_ExpandMacrosShellQuote4(qstring(str), map_ret, (QChar*)c);
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        free(((libqt_list*)map_ret.values)[i].data.ptr);
     }
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    free(map_ret.keys);
+    free(map_ret.values);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

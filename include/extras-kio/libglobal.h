@@ -14,115 +14,115 @@
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uintptr_t
+/// @param size uintptr_t
 ///
-const char* k_io_convert_size(uintptr_t param1);
+const char* k_io_convert_size(uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio.html#number)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uintptr_t
+/// @param size uintptr_t
 ///
-const char* k_io_number(uintptr_t param1);
+const char* k_io_number(uintptr_t size);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSizeFromKiB)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uintptr_t
+/// @param kibSize uintptr_t
 ///
-const char* k_io_convert_size_from_ki_b(uintptr_t param1);
+const char* k_io_convert_size_from_ki_b(uintptr_t kibSize);
 
 /// [Upstream resources](https://api.kde.org/kio.html#calculateRemainingSeconds)
 ///
-/// @param param1 uintptr_t
-/// @param param2 uintptr_t
-/// @param param3 uintptr_t
+/// @param totalSize uintptr_t
+/// @param processedSize uintptr_t
+/// @param speed uintptr_t
 ///
-uint32_t k_io_calculate_remaining_seconds(uintptr_t param1, uintptr_t param2, uintptr_t param3);
+uint32_t k_io_calculate_remaining_seconds(uintptr_t totalSize, uintptr_t processedSize, uintptr_t speed);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertSeconds)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uint32_t
+/// @param seconds uint32_t
 ///
-const char* k_io_convert_seconds(uint32_t param1);
+const char* k_io_convert_seconds(uint32_t seconds);
 
 /// [Upstream resources](https://api.kde.org/kio.html#itemsSummaryString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 uint32_t
-/// @param param2 uint32_t
-/// @param param3 uint32_t
-/// @param param4 uintptr_t
-/// @param param5 bool
+/// @param items uint32_t
+/// @param files uint32_t
+/// @param dirs uint32_t
+/// @param size uintptr_t
+/// @param showSize bool
 ///
-const char* k_io_items_summary_string(uint32_t param1, uint32_t param2, uint32_t param3, uintptr_t param4, bool param5);
+const char* k_io_items_summary_string(uint32_t items, uint32_t files, uint32_t dirs, uintptr_t size, bool showSize);
 
 /// [Upstream resources](https://api.kde.org/kio.html#encodeFileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param str const char*
 ///
-const char* k_io_encode_file_name(const char* param1);
+const char* k_io_encode_file_name(const char* str);
 
 /// [Upstream resources](https://api.kde.org/kio.html#decodeFileName)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 const char*
+/// @param str const char*
 ///
-const char* k_io_decode_file_name(const char* param1);
+const char* k_io_decode_file_name(const char* str);
 
 /// [Upstream resources](https://api.kde.org/kio.html#parseCacheControl)
 ///
-/// @param param1 const char*
+/// @param cacheControl const char*
 ///
 /// @return enum KIO__CacheControl
 ///
-int32_t k_io_parse_cache_control(const char* param1);
+int32_t k_io_parse_cache_control(const char* cacheControl);
 
 /// [Upstream resources](https://api.kde.org/kio.html#getCacheControlString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 enum KIO__CacheControl
+/// @param cacheControl enum KIO__CacheControl
 ///
-const char* k_io_get_cache_control_string(int32_t param1);
+const char* k_io_get_cache_control_string(int32_t cacheControl);
 
 /// [Upstream resources](https://api.kde.org/kio.html#favIconForUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 QUrl*
+/// @param url QUrl*
 ///
-const char* k_io_fav_icon_for_url(void* param1);
+const char* k_io_fav_icon_for_url(void* url);
 
 /// [Upstream resources](https://api.kde.org/kio.html#convertPermissions)
 ///
-/// @param param1 int
+/// @param permissions int
 ///
 /// @return flag of enum QFileDevice__Permission
 ///
-int32_t k_io_convert_permissions(int param1);
+int32_t k_io_convert_permissions(int permissions);
 
 /// [Upstream resources](https://api.kde.org/kio.html#iconNameForUrl)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 QUrl*
+/// @param url QUrl*
 ///
-const char* k_io_icon_name_for_url(void* param1);
+const char* k_io_icon_name_for_url(void* url);
 
 /// [Upstream resources](https://api.kde.org/kio.html#upUrl)
 ///
-/// @param param1 QUrl*
+/// @param url QUrl*
 ///
-QUrl* k_io_up_url(void* param1);
+QUrl* k_io_up_url(void* url);
 
 /// [Upstream resources](https://api.kde.org/kio-global.html#public-types)
 

@@ -548,83 +548,83 @@ const char* q_locale_date_time_format(void* self);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QTime* q_locale_to_time(void* self, const char* stringVal);
+QTime* q_locale_to_time(void* self, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 ///
-QTime* q_locale_to_time2(void* self, const char* stringVal, const char* format);
+QTime* q_locale_to_time2(void* self, const char* string, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QDate* q_locale_to_date(void* self, const char* stringVal);
+QDate* q_locale_to_date(void* self, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 ///
-QDate* q_locale_to_date2(void* self, const char* stringVal, const char* format);
+QDate* q_locale_to_date2(void* self, const char* string, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QDateTime* q_locale_to_date_time(void* self, const char* stringVal);
+QDateTime* q_locale_to_date_time(void* self, const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 ///
-QDateTime* q_locale_to_date_time2(void* self, const char* stringVal, const char* format);
+QDateTime* q_locale_to_date_time2(void* self, const char* string, const char* format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
 ///
-QDate* q_locale_to_date3(void* self, const char* stringVal, int32_t format, void* cal);
+QDate* q_locale_to_date3(void* self, const char* string, int32_t format, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 /// @param cal QCalendar*
 ///
-QDate* q_locale_to_date4(void* self, const char* stringVal, const char* format, void* cal);
+QDate* q_locale_to_date4(void* self, const char* string, const char* format, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
 ///
-QDateTime* q_locale_to_date_time3(void* self, const char* stringVal, int32_t format, void* cal);
+QDateTime* q_locale_to_date_time3(void* self, const char* string, int32_t format, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 /// @param cal QCalendar*
 ///
-QDateTime* q_locale_to_date_time4(void* self, const char* stringVal, const char* format, void* cal);
+QDateTime* q_locale_to_date_time4(void* self, const char* string, const char* format, void* cal);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#decimalPoint)
 ///
@@ -1337,102 +1337,102 @@ const char* q_locale_date_time_format1(void* self, int32_t format);
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param param2 enum QLocale__FormatType
 ///
-QTime* q_locale_to_time22(void* self, const char* stringVal, int32_t param2);
+QTime* q_locale_to_time22(void* self, const char* string, int32_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param param2 enum QLocale__FormatType
 ///
-QDate* q_locale_to_date22(void* self, const char* stringVal, int32_t param2);
+QDate* q_locale_to_date22(void* self, const char* string, int32_t param2);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param param2 enum QLocale__FormatType
 /// @param baseYear int
 ///
-QDate* q_locale_to_date32(void* self, const char* stringVal, int32_t param2, int baseYear);
+QDate* q_locale_to_date32(void* self, const char* string, int32_t param2, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 /// @param baseYear int
 ///
-QDate* q_locale_to_date33(void* self, const char* stringVal, const char* format, int baseYear);
+QDate* q_locale_to_date33(void* self, const char* string, const char* format, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format enum QLocale__FormatType
 ///
-QDateTime* q_locale_to_date_time22(void* self, const char* stringVal, int32_t format);
+QDateTime* q_locale_to_date_time22(void* self, const char* string, int32_t format);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format enum QLocale__FormatType
 /// @param baseYear int
 ///
-QDateTime* q_locale_to_date_time32(void* self, const char* stringVal, int32_t format, int baseYear);
+QDateTime* q_locale_to_date_time32(void* self, const char* string, int32_t format, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 /// @param baseYear int
 ///
-QDateTime* q_locale_to_date_time33(void* self, const char* stringVal, const char* format, int baseYear);
+QDateTime* q_locale_to_date_time33(void* self, const char* string, const char* format, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
 /// @param baseYear int
 ///
-QDate* q_locale_to_date42(void* self, const char* stringVal, int32_t format, void* cal, int baseYear);
+QDate* q_locale_to_date42(void* self, const char* string, int32_t format, void* cal, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDate)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 /// @param cal QCalendar*
 /// @param baseYear int
 ///
-QDate* q_locale_to_date43(void* self, const char* stringVal, const char* format, void* cal, int baseYear);
+QDate* q_locale_to_date43(void* self, const char* string, const char* format, void* cal, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format enum QLocale__FormatType
 /// @param cal QCalendar*
 /// @param baseYear int
 ///
-QDateTime* q_locale_to_date_time42(void* self, const char* stringVal, int32_t format, void* cal, int baseYear);
+QDateTime* q_locale_to_date_time42(void* self, const char* string, int32_t format, void* cal, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#toDateTime)
 ///
 /// @param self QLocale*
-/// @param stringVal const char*
+/// @param string const char*
 /// @param format const char*
 /// @param cal QCalendar*
 /// @param baseYear int
 ///
-QDateTime* q_locale_to_date_time43(void* self, const char* stringVal, const char* format, void* cal, int baseYear);
+QDateTime* q_locale_to_date_time43(void* self, const char* string, const char* format, void* cal, int baseYear);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qlocale.html#monthName)
 ///

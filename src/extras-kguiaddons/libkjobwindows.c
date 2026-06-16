@@ -3,10 +3,10 @@
 #include "libkjobwindows.hpp"
 #include "libkjobwindows.h"
 
-void k_jobwindows_set_window(void* param1, void* param2) {
-    KJobWindows_SetWindow((QObject*)param1, (QWindow*)param2);
+void k_jobwindows_set_window(void* job, void* window) {
+    KJobWindows_SetWindow((QObject*)job, (QWindow*)window);
 }
 
-QWindow* k_jobwindows_window(void* param1) {
-    return KJobWindows_Window((QObject*)param1);
+QWindow* k_jobwindows_window(void* job) {
+    return KJobWindows_Window((QObject*)job);
 }

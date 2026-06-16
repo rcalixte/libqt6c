@@ -67,8 +67,8 @@ const char* q_nativeipckey_to_string(void* self) {
     return _ret;
 }
 
-QNativeIpcKey* q_nativeipckey_from_string(const char* stringVal) {
-    return QNativeIpcKey_FromString(qstring(stringVal));
+QNativeIpcKey* q_nativeipckey_from_string(const char* string) {
+    return QNativeIpcKey_FromString(qstring(string));
 }
 
 void q_nativeipckey_delete(void* self) {

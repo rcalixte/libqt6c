@@ -22,8 +22,8 @@ QUuid* q_uuid_new5(void* id128) {
     return QUuid_new5((QUuid__Id128Bytes*)id128);
 }
 
-QUuid* q_uuid_new6(const char* stringVal) {
-    return QUuid_new6(stringVal);
+QUuid* q_uuid_new6(const char* string) {
+    return QUuid_new6(string);
 }
 
 QUuid* q_uuid_new7(void* param1) {
@@ -42,8 +42,8 @@ void q_uuid_move_assign(void* self, void* other) {
     QUuid_MoveAssign((QUuid*)self, (QUuid*)other);
 }
 
-QUuid* q_uuid_from_string(const char* stringVal) {
-    return QUuid_FromString(stringVal);
+QUuid* q_uuid_from_string(const char* string) {
+    return QUuid_FromString(string);
 }
 
 const char* q_uuid_to_string(void* self) {

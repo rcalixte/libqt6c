@@ -12,8 +12,8 @@
 
 /// [Upstream resources](https://api.kde.org/kcolorschememenu.html#createMenu)
 ///
-/// @param param1 KColorSchemeManager*
-/// @param param2 QObject*
+/// @param manager KColorSchemeManager*
+/// @param parent QObject*
 ///
-KActionMenu* k_colorschememenu_create_menu(void* param1, void* param2);
+KActionMenu* k_colorschememenu_create_menu(void* manager, void* parent);
 #endif

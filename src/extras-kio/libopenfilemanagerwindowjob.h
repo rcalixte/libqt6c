@@ -1994,10 +1994,10 @@ void k_io__openfilemanagerwindowjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#highlightInFileManager)
 ///
-/// @param param1 libqt_list of QUrl*
-/// @param param2 char*
+/// @param urls libqt_list of QUrl*
+/// @param asn char*
 ///
-KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list param1, char* param2);
+KIO__OpenFileManagerWindowJob* k_io_highlight_in_file_manager(libqt_list urls, char* asn);
 
 /// [Upstream resources](https://api.kde.org/kio-openfilemanagerwindowjob.html#public-types)
 

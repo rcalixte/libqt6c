@@ -12,19 +12,19 @@
 
 /// [Upstream resources](https://api.kde.org/kjsonutils.html#readTranslatedValue)
 ///
-/// @param param1 QJsonObject*
-/// @param param2 const char*
-/// @param param3 QJsonValue*
+/// @param jo QJsonObject*
+/// @param key const char*
+/// @param defaultValue QJsonValue*
 ///
-QJsonValue* k_jsonutils_read_translated_value(void* param1, const char* param2, void* param3);
+QJsonValue* k_jsonutils_read_translated_value(void* jo, const char* key, void* defaultValue);
 
 /// [Upstream resources](https://api.kde.org/kjsonutils.html#readTranslatedString)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
 ///
-/// @param param1 QJsonObject*
-/// @param param2 const char*
-/// @param param3 const char*
+/// @param jo QJsonObject*
+/// @param key const char*
+/// @param defaultValue const char*
 ///
-const char* k_jsonutils_read_translated_string(void* param1, const char* param2, const char* param3);
+const char* k_jsonutils_read_translated_string(void* jo, const char* key, const char* defaultValue);
 #endif

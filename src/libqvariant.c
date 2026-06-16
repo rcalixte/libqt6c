@@ -131,33 +131,33 @@ QVariant* q_variant_new21(void* locale) {
     return QVariant_new21((QLocale*)locale);
 }
 
-QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ mapVal) {
+QVariant* q_variant_new22(libqt_map /* of const char* to QVariant* */ map) {
     // Convert libqt_map to QMap<QString,QVariant>
-    libqt_map mapVal_ret;
-    mapVal_ret.len = mapVal.len;
-    mapVal_ret.keys = (libqt_string*)malloc(mapVal_ret.len * sizeof(libqt_string));
-    if (mapVal_ret.keys == NULL) {
+    libqt_map map_ret;
+    map_ret.len = map.len;
+    map_ret.keys = (libqt_string*)malloc(map_ret.len * sizeof(libqt_string));
+    if (map_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in q_variant_new22\n");
         abort();
     }
-    mapVal_ret.values = (QVariant**)malloc(mapVal_ret.len * sizeof(QVariant*));
-    if (mapVal_ret.values == NULL) {
-        free(mapVal_ret.keys);
+    map_ret.values = (QVariant**)malloc(map_ret.len * sizeof(QVariant*));
+    if (map_ret.values == NULL) {
+        free(map_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in q_variant_new22\n");
         abort();
     }
-    const char** mapVal_karr = (const char**)mapVal.keys;
-    libqt_string* mapVal_kdest = (libqt_string*)mapVal_ret.keys;
-    QVariant** mapVal_varr = (QVariant**)mapVal.values;
-    QVariant** mapVal_vdest = (QVariant**)mapVal_ret.values;
-    for (size_t i = 0; i < mapVal_ret.len; ++i) {
-        mapVal_kdest[i] = qstring(mapVal_karr[i]);
-        mapVal_vdest[i] = mapVal_varr[i];
+    const char** map_karr = (const char**)map.keys;
+    libqt_string* map_kdest = (libqt_string*)map_ret.keys;
+    QVariant** map_varr = (QVariant**)map.values;
+    QVariant** map_vdest = (QVariant**)map_ret.values;
+    for (size_t i = 0; i < map_ret.len; ++i) {
+        map_kdest[i] = qstring(map_karr[i]);
+        map_vdest[i] = map_varr[i];
     }
 
-    QVariant* _out = QVariant_new22(mapVal_ret);
-    free(mapVal_ret.keys);
-    free(mapVal_ret.values);
+    QVariant* _out = QVariant_new22(map_ret);
+    free(map_ret.keys);
+    free(map_ret.values);
     return _out;
 }
 
@@ -165,8 +165,8 @@ QVariant* q_variant_new23(void* re) {
     return QVariant_new23((QRegularExpression*)re);
 }
 
-QVariant* q_variant_new24(const char* stringVal) {
-    return QVariant_new24(qstring(stringVal));
+QVariant* q_variant_new24(const char* string) {
+    return QVariant_new24(qstring(string));
 }
 
 QVariant* q_variant_new25(const char* stringlist[static 1]) {
@@ -250,8 +250,8 @@ QVariant* q_variant_new41(const char* str) {
     return QVariant_new41(str);
 }
 
-QVariant* q_variant_new42(char* stringVal) {
-    return QVariant_new42(qstring(stringVal));
+QVariant* q_variant_new42(char* string) {
+    return QVariant_new42(qstring(string));
 }
 
 QVariant* q_variant_new43(int32_t type) {

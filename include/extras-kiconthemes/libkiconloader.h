@@ -1415,26 +1415,26 @@ void k_iconloader_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kde.html#icon)
 ///
-/// @param param1 const char*
-/// @param param2 KIconLoader*
+/// @param iconName const char*
+/// @param iconLoader KIconLoader*
 ///
-QIcon* k_de_icon(const char* param1, void* param2);
+QIcon* k_de_icon(const char* iconName, void* iconLoader);
 
 /// [Upstream resources](https://api.kde.org/kde.html#icon)
 ///
-/// @param param1 const char*
-/// @param param2 KIconColors*
-/// @param param3 KIconLoader*
+/// @param iconName const char*
+/// @param colors KIconColors*
+/// @param iconLoader KIconLoader*
 ///
-QIcon* k_de_icon2(const char* param1, void* param2, void* param3);
+QIcon* k_de_icon2(const char* iconName, void* colors, void* iconLoader);
 
 /// [Upstream resources](https://api.kde.org/kde.html#icon)
 ///
-/// @param param1 const char*
-/// @param param2 const char**
-/// @param param3 KIconLoader*
+/// @param iconName const char*
+/// @param overlays const char**
+/// @param iconLoader KIconLoader*
 ///
-QIcon* k_de_icon3(const char* param1, const char* param2[static 1], void* param3);
+QIcon* k_de_icon3(const char* iconName, const char* overlays[static 1], void* iconLoader);
 
 /// [Upstream resources](https://api.kde.org/kiconloader.html#public-types)
 

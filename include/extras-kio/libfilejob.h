@@ -1266,8 +1266,8 @@ void k_io__filejob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#open)
 ///
-/// @param param1 QUrl*
-/// @param param2 flag of enum QIODeviceBase__OpenModeFlag
+/// @param url QUrl*
+/// @param mode flag of enum QIODeviceBase__OpenModeFlag
 ///
-KIO__FileJob* k_io_open(void* param1, int32_t param2);
+KIO__FileJob* k_io_open(void* url, int32_t mode);
 #endif

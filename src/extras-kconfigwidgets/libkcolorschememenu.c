@@ -4,6 +4,6 @@
 #include "libkcolorschememenu.hpp"
 #include "libkcolorschememenu.h"
 
-KActionMenu* k_colorschememenu_create_menu(void* param1, void* param2) {
-    return KColorSchemeMenu_CreateMenu((KColorSchemeManager*)param1, (QObject*)param2);
+KActionMenu* k_colorschememenu_create_menu(void* manager, void* parent) {
+    return KColorSchemeMenu_CreateMenu((KColorSchemeManager*)manager, (QObject*)parent);
 }

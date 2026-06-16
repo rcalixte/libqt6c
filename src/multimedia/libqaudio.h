@@ -12,11 +12,11 @@
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#convertVolume)
 ///
-/// @param param1 float
-/// @param param2 enum QAudio__VolumeScale
-/// @param param3 enum QAudio__VolumeScale
+/// @param volume float
+/// @param from enum QAudio__VolumeScale
+/// @param to enum QAudio__VolumeScale
 ///
-float q_audio_convert_volume(float param1, int32_t param2, int32_t param3);
+float q_audio_convert_volume(float volume, int32_t from, int32_t to);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qaudio.html#public-types)
 

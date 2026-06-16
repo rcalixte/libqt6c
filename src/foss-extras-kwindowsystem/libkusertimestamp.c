@@ -5,6 +5,6 @@ uintptr_t k_usertimestamp_user_timestamp() {
     return KUserTimestamp_UserTimestamp();
 }
 
-void k_usertimestamp_update_user_timestamp(uintptr_t param1) {
-    KUserTimestamp_UpdateUserTimestamp(param1);
+void k_usertimestamp_update_user_timestamp(uintptr_t time) {
+    KUserTimestamp_UpdateUserTimestamp(time);
 }

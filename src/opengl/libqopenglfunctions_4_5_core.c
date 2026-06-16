@@ -654,8 +654,8 @@ void q_openglfunctions_4_5_core_gl_use_program(void* self, uint32_t program) {
     QOpenGLFunctions_4_5_Core_GlUseProgram((QOpenGLFunctions_4_5_Core*)self, program);
 }
 
-void q_openglfunctions_4_5_core_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length) {
-    QOpenGLFunctions_4_5_Core_GlShaderSource((QOpenGLFunctions_4_5_Core*)self, shader, count, stringVal, length);
+void q_openglfunctions_4_5_core_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** string, int32_t* length) {
+    QOpenGLFunctions_4_5_Core_GlShaderSource((QOpenGLFunctions_4_5_Core*)self, shader, count, string, length);
 }
 
 void q_openglfunctions_4_5_core_gl_link_program(void* self, uint32_t program) {

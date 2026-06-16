@@ -131,20 +131,20 @@ const char* q_cp_get_enum_name13(int32_t param1) {
     return QCP_GetEnumName13(param1);
 }
 
-bool q_cp_is_invalid_data(double param1) {
-    return QCP_IsInvalidData(param1);
+bool q_cp_is_invalid_data(double value) {
+    return QCP_IsInvalidData(value);
 }
 
-bool q_cp_is_invalid_data2(double param1, double param2) {
-    return QCP_IsInvalidData2(param1, param2);
+bool q_cp_is_invalid_data2(double value1, double value2) {
+    return QCP_IsInvalidData2(value1, value2);
 }
 
-void q_cp_set_margin_value(void* param1, int32_t param2, int param3) {
-    QCP_SetMarginValue((QMargins*)param1, param2, param3);
+void q_cp_set_margin_value(void* margins, int32_t side, int value) {
+    QCP_SetMarginValue((QMargins*)margins, side, value);
 }
 
-int32_t q_cp_get_margin_value(void* param1, int32_t param2) {
-    return QCP_GetMarginValue((QMargins*)param1, param2);
+int32_t q_cp_get_margin_value(void* margins, int32_t side) {
+    return QCP_GetMarginValue((QMargins*)margins, side);
 }
 
 QCPVector2D* q_cpvector2d_new(void* other) {

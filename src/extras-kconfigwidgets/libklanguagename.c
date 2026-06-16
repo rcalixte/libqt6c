@@ -1,15 +1,15 @@
 #include "libklanguagename.hpp"
 #include "libklanguagename.h"
 
-const char* k_languagename_name_for_code(const char* param1) {
-    libqt_string _str = KLanguageName_NameForCode(qstring(param1));
+const char* k_languagename_name_for_code(const char* code) {
+    libqt_string _str = KLanguageName_NameForCode(qstring(code));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;
 }
 
-const char* k_languagename_name_for_code_in_locale(const char* param1, const char* param2) {
-    libqt_string _str = KLanguageName_NameForCodeInLocale(qstring(param1), qstring(param2));
+const char* k_languagename_name_for_code_in_locale(const char* code, const char* outputLocale) {
+    libqt_string _str = KLanguageName_NameForCodeInLocale(qstring(code), qstring(outputLocale));
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

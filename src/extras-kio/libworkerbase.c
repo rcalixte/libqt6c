@@ -708,8 +708,8 @@ void k_io__workerbase_delete(void* self) {
     KIO__WorkerBase_Delete((KIO__WorkerBase*)(self));
 }
 
-const char* k_io_unsupported_action_error_string(const char* param1, int param2) {
-    libqt_string _str = KIO_UnsupportedActionErrorString(qstring(param1), param2);
+const char* k_io_unsupported_action_error_string(const char* protocol, int cmd) {
+    libqt_string _str = KIO_UnsupportedActionErrorString(qstring(protocol), cmd);
     char* _ret = qstring_to_char(_str);
     libqt_string_free(&_str);
     return _ret;

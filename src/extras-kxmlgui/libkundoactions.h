@@ -12,17 +12,17 @@
 
 /// [Upstream resources](https://api.kde.org/kundoactions.html#createRedoAction)
 ///
-/// @param param1 QUndoStack*
-/// @param param2 KActionCollection*
-/// @param param3 const char*
+/// @param undoStack QUndoStack*
+/// @param actionCollection KActionCollection*
+/// @param actionName const char*
 ///
-QAction* k_undoactions_create_redo_action(void* param1, void* param2, const char* param3);
+QAction* k_undoactions_create_redo_action(void* undoStack, void* actionCollection, const char* actionName);
 
 /// [Upstream resources](https://api.kde.org/kundoactions.html#createUndoAction)
 ///
-/// @param param1 QUndoStack*
-/// @param param2 KActionCollection*
-/// @param param3 const char*
+/// @param undoStack QUndoStack*
+/// @param actionCollection KActionCollection*
+/// @param actionName const char*
 ///
-QAction* k_undoactions_create_undo_action(void* param1, void* param2, const char* param3);
+QAction* k_undoactions_create_undo_action(void* undoStack, void* actionCollection, const char* actionName);
 #endif

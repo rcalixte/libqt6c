@@ -2,67 +2,67 @@
 #include "libkiconutils.hpp"
 #include "libkiconutils.h"
 
-QIcon* k_iconutils_add_overlay(void* param1, void* param2, int32_t param3) {
-    return KIconUtils_AddOverlay((QIcon*)param1, (QIcon*)param2, param3);
+QIcon* k_iconutils_add_overlay(void* icon, void* overlay, int32_t position) {
+    return KIconUtils_AddOverlay((QIcon*)icon, (QIcon*)overlay, position);
 }
 
-QIcon* k_iconutils_add_overlays(void* param1, libqt_map /* of enum Qt__Corner to QIcon* */ param2) {
+QIcon* k_iconutils_add_overlays(void* icon, libqt_map /* of enum Qt__Corner to QIcon* */ overlays) {
     // Convert libqt_map to QHash<Qt::Corner,QIcon>
-    libqt_map param2_ret;
-    param2_ret.len = param2.len;
-    param2_ret.keys = (int32_t*)malloc(param2_ret.len * sizeof(int32_t));
-    if (param2_ret.keys == NULL) {
+    libqt_map overlays_ret;
+    overlays_ret.len = overlays.len;
+    overlays_ret.keys = (int32_t*)malloc(overlays_ret.len * sizeof(int32_t));
+    if (overlays_ret.keys == NULL) {
         fprintf(stderr, "Failed to allocate memory for map keys in k_iconutils_add_overlays\n");
         abort();
     }
-    param2_ret.values = (QIcon**)malloc(param2_ret.len * sizeof(QIcon*));
-    if (param2_ret.values == NULL) {
-        free(param2_ret.keys);
+    overlays_ret.values = (QIcon**)malloc(overlays_ret.len * sizeof(QIcon*));
+    if (overlays_ret.values == NULL) {
+        free(overlays_ret.keys);
         fprintf(stderr, "Failed to allocate memory for map values in k_iconutils_add_overlays\n");
         abort();
     }
-    int32_t* param2_karr = (int32_t*)param2.keys;
-    int32_t* param2_kdest = (int32_t*)param2_ret.keys;
-    QIcon** param2_varr = (QIcon**)param2.values;
-    QIcon** param2_vdest = (QIcon**)param2_ret.values;
-    for (size_t i = 0; i < param2_ret.len; ++i) {
-        param2_kdest[i] = param2_karr[i];
-        param2_vdest[i] = param2_varr[i];
+    int32_t* overlays_karr = (int32_t*)overlays.keys;
+    int32_t* overlays_kdest = (int32_t*)overlays_ret.keys;
+    QIcon** overlays_varr = (QIcon**)overlays.values;
+    QIcon** overlays_vdest = (QIcon**)overlays_ret.values;
+    for (size_t i = 0; i < overlays_ret.len; ++i) {
+        overlays_kdest[i] = overlays_karr[i];
+        overlays_vdest[i] = overlays_varr[i];
     }
-    QIcon* _out = KIconUtils_AddOverlays((QIcon*)param1, param2_ret);
-    free(param2_ret.keys);
-    free(param2_ret.values);
+    QIcon* _out = KIconUtils_AddOverlays((QIcon*)icon, overlays_ret);
+    free(overlays_ret.keys);
+    free(overlays_ret.values);
     return _out;
 }
 
-QIcon* k_iconutils_add_overlays2(void* param1, const char* param2[static 1]) {
-    size_t param2_len = libqt_strv_length(param2);
-    libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
-    if (param2_qstr == NULL) {
+QIcon* k_iconutils_add_overlays2(void* icon, const char* overlays[static 1]) {
+    size_t overlays_len = libqt_strv_length(overlays);
+    libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
+    if (overlays_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_iconutils_add_overlays2\n");
         abort();
     }
-    for (size_t i = 0; i < param2_len; ++i) {
-        param2_qstr[i] = qstring(param2[i]);
+    for (size_t i = 0; i < overlays_len; ++i) {
+        overlays_qstr[i] = qstring(overlays[i]);
     }
-    libqt_list param2_list = qlist(param2_qstr, param2_len);
-    QIcon* _out = KIconUtils_AddOverlays2((QIcon*)param1, param2_list);
-    free(param2_qstr);
+    libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
+    QIcon* _out = KIconUtils_AddOverlays2((QIcon*)icon, overlays_list);
+    free(overlays_qstr);
     return _out;
 }
 
-QIcon* k_iconutils_add_overlays3(const char* param1, const char* param2[static 1]) {
-    size_t param2_len = libqt_strv_length(param2);
-    libqt_string* param2_qstr = (libqt_string*)malloc(param2_len * sizeof(libqt_string));
-    if (param2_qstr == NULL) {
+QIcon* k_iconutils_add_overlays3(const char* iconName, const char* overlays[static 1]) {
+    size_t overlays_len = libqt_strv_length(overlays);
+    libqt_string* overlays_qstr = (libqt_string*)malloc(overlays_len * sizeof(libqt_string));
+    if (overlays_qstr == NULL) {
         fprintf(stderr, "Failed to allocate memory for string list in k_iconutils_add_overlays3\n");
         abort();
     }
-    for (size_t i = 0; i < param2_len; ++i) {
-        param2_qstr[i] = qstring(param2[i]);
+    for (size_t i = 0; i < overlays_len; ++i) {
+        overlays_qstr[i] = qstring(overlays[i]);
     }
-    libqt_list param2_list = qlist(param2_qstr, param2_len);
-    QIcon* _out = KIconUtils_AddOverlays3(qstring(param1), param2_list);
-    free(param2_qstr);
+    libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
+    QIcon* _out = KIconUtils_AddOverlays3(qstring(iconName), overlays_list);
+    free(overlays_qstr);
     return _out;
 }

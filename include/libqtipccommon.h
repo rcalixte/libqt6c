@@ -119,9 +119,9 @@ const char* q_nativeipckey_to_string(void* self);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#fromString)
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-QNativeIpcKey* q_nativeipckey_from_string(const char* stringVal);
+QNativeIpcKey* q_nativeipckey_from_string(const char* string);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qnativeipckey.html#dtor.QNativeIpcKey)
 ///

@@ -603,6 +603,6 @@ void k_io__batchrenamejob_delete(void* self) {
     KIO__BatchRenameJob_Delete((KIO__BatchRenameJob*)(self));
 }
 
-KIO__BatchRenameJob* k_io_batch_rename(libqt_list /* of QUrl* */ param1, const char* param2, int param3, void* param4, int32_t param5) {
-    return KIO_BatchRename(param1, qstring(param2), param3, (QChar*)param4, param5);
+KIO__BatchRenameJob* k_io_batch_rename(libqt_list /* of QUrl* */ src, const char* newName, int index, void* placeHolder, int32_t flags) {
+    return KIO_BatchRename(src, qstring(newName), index, (QChar*)placeHolder, flags);
 }

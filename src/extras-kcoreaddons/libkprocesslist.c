@@ -59,6 +59,6 @@ libqt_list /* of KProcessList__KProcessInfo* */ k_processlist_process_info_list(
     return _arr;
 }
 
-KProcessList__KProcessInfo* k_processlist_process_info(int64_t param1) {
-    return KProcessList_ProcessInfo(param1);
+KProcessList__KProcessInfo* k_processlist_process_info(int64_t pid) {
+    return KProcessList_ProcessInfo(pid);
 }

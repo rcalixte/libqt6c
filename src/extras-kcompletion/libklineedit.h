@@ -20,9 +20,9 @@ KLineEdit* k_lineedit_new(void* parent);
 
 /// k_lineedit_new2 constructs a new KLineEdit object.
 ///
-/// @param stringVal const char*
+/// @param string const char*
 ///
-KLineEdit* k_lineedit_new2(const char* stringVal);
+KLineEdit* k_lineedit_new2(const char* string);
 
 /// [Upstream resources](https://api.kde.org/klineedit.html)
 
@@ -34,10 +34,10 @@ KLineEdit* k_lineedit_new3();
 
 /// k_lineedit_new4 constructs a new KLineEdit object.
 ///
-/// @param stringVal const char*
+/// @param string const char*
 /// @param parent QWidget*
 ///
-KLineEdit* k_lineedit_new4(const char* stringVal, void* parent);
+KLineEdit* k_lineedit_new4(const char* string, void* parent);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#metaObject)
 ///

@@ -1293,37 +1293,37 @@ void k_io__davjob_delete(void* self);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davPropFind)
 ///
-/// @param param1 QUrl*
-/// @param param2 const char*
-/// @param param3 const char*
-/// @param param4 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param properties const char*
+/// @param depth const char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_prop_find(void* param1, const char* param2, const char* param3, int32_t param4);
+KIO__DavJob* k_io_dav_prop_find(void* url, const char* properties, const char* depth, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davPropPatch)
 ///
-/// @param param1 QUrl*
-/// @param param2 const char*
-/// @param param3 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param properties const char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_prop_patch(void* param1, const char* param2, int32_t param3);
+KIO__DavJob* k_io_dav_prop_patch(void* url, const char* properties, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davSearch)
 ///
-/// @param param1 QUrl*
-/// @param param2 const char*
-/// @param param3 const char*
-/// @param param4 const char*
-/// @param param5 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param nsURI const char*
+/// @param qName const char*
+/// @param query const char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_search(void* param1, const char* param2, const char* param3, const char* param4, int32_t param5);
+KIO__DavJob* k_io_dav_search(void* url, const char* nsURI, const char* qName, const char* query, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kio.html#davReport)
 ///
-/// @param param1 QUrl*
-/// @param param2 const char*
-/// @param param3 const char*
-/// @param param4 flag of enum KIO__JobFlag
+/// @param url QUrl*
+/// @param report const char*
+/// @param depth const char*
+/// @param flags flag of enum KIO__JobFlag
 ///
-KIO__DavJob* k_io_dav_report(void* param1, const char* param2, const char* param3, int32_t param4);
+KIO__DavJob* k_io_dav_report(void* url, const char* report, const char* depth, int32_t flags);
 #endif

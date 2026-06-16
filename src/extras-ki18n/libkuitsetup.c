@@ -2,8 +2,8 @@
 #include "libkuitsetup.hpp"
 #include "libkuitsetup.h"
 
-KuitSetup* k_uit_setup_for_domain(char* param1) {
-    return Kuit_SetupForDomain(qstring(param1));
+KuitSetup* k_uit_setup_for_domain(char* domain) {
+    return Kuit_SetupForDomain(qstring(domain));
 }
 
 void k_uitsetup_set_tag_pattern(void* self, const char* tagName, const char* attribNames[static 1], int32_t format, void* pattern) {

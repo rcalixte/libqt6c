@@ -1504,10 +1504,10 @@ void q_openglfunctions_4_4_core_gl_use_program(void* self, uint32_t program);
 /// @param self QOpenGLFunctions_4_4_Core*
 /// @param shader uint32_t
 /// @param count int32_t
-/// @param stringVal const char**
+/// @param string const char**
 /// @param length int32_t*
 ///
-void q_openglfunctions_4_4_core_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** stringVal, int32_t* length);
+void q_openglfunctions_4_4_core_gl_shader_source(void* self, uint32_t shader, int32_t count, const char** string, int32_t* length);
 
 /// [Upstream resources](https://doc.qt.io/qt-6/qopenglfunctions-4-4-core.html#glLinkProgram)
 ///

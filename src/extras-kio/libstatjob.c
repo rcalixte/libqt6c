@@ -652,14 +652,14 @@ void k_io__statjob_delete(void* self) {
     KIO__StatJob_Delete((KIO__StatJob*)(self));
 }
 
-KIO__StatJob* k_io_stat(void* param1, int32_t param2) {
-    return KIO_Stat((QUrl*)param1, param2);
+KIO__StatJob* k_io_stat(void* url, int32_t flags) {
+    return KIO_Stat((QUrl*)url, flags);
 }
 
-KIO__StatJob* k_io_stat2(void* param1, int32_t param2, int32_t param3, int32_t param4) {
-    return KIO_Stat2((QUrl*)param1, param2, param3, param4);
+KIO__StatJob* k_io_stat2(void* url, int32_t side, int32_t details, int32_t flags) {
+    return KIO_Stat2((QUrl*)url, side, details, flags);
 }
 
-KIO__StatJob* k_io_most_local_url(void* param1, int32_t param2) {
-    return KIO_MostLocalUrl((QUrl*)param1, param2);
+KIO__StatJob* k_io_most_local_url(void* url, int32_t flags) {
+    return KIO_MostLocalUrl((QUrl*)url, flags);
 }

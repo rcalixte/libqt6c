@@ -12,26 +12,26 @@
 
 /// [Upstream resources](https://api.kde.org/kfontutils.html#adaptFontSize)
 ///
-/// @param param1 QPainter*
-/// @param param2 const char*
-/// @param param3 double
-/// @param param4 double
-/// @param param5 double
-/// @param param6 double
-/// @param param7 flag of enum KFontUtils__AdaptFontSizeOption
+/// @param painter QPainter*
+/// @param text const char*
+/// @param width double
+/// @param height double
+/// @param maxFontSize double
+/// @param minFontSize double
+/// @param flags flag of enum KFontUtils__AdaptFontSizeOption
 ///
-double k_fontutils_adapt_font_size(void* param1, const char* param2, double param3, double param4, double param5, double param6, int32_t param7);
+double k_fontutils_adapt_font_size(void* painter, const char* text, double width, double height, double maxFontSize, double minFontSize, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kfontutils.html#adaptFontSize)
 ///
-/// @param param1 QPainter*
-/// @param param2 const char*
-/// @param param3 QSizeF*
-/// @param param4 double
-/// @param param5 double
-/// @param param6 flag of enum KFontUtils__AdaptFontSizeOption
+/// @param painter QPainter*
+/// @param text const char*
+/// @param availableSize QSizeF*
+/// @param maxFontSize double
+/// @param minFontSize double
+/// @param flags flag of enum KFontUtils__AdaptFontSizeOption
 ///
-double k_fontutils_adapt_font_size2(void* param1, const char* param2, void* param3, double param4, double param5, int32_t param6);
+double k_fontutils_adapt_font_size2(void* painter, const char* text, void* availableSize, double maxFontSize, double minFontSize, int32_t flags);
 
 /// [Upstream resources](https://api.kde.org/kfontutils.html#public-types)
 

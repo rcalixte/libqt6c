@@ -102,7 +102,7 @@ libqt_list k_processlist_process_info_list();
 
 /// [Upstream resources](https://api.kde.org/kprocesslist.html#processInfo)
 ///
-/// @param param1 int64_t
+/// @param pid int64_t
 ///
-KProcessList__KProcessInfo* k_processlist_process_info(int64_t param1);
+KProcessList__KProcessInfo* k_processlist_process_info(int64_t pid);
 #endif

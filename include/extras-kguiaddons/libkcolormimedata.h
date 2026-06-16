@@ -12,27 +12,27 @@
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#populateMimeData)
 ///
-/// @param param1 QMimeData*
-/// @param param2 QColor*
+/// @param mimeData QMimeData*
+/// @param color QColor*
 ///
-void k_colormimedata_populate_mime_data(void* param1, void* param2);
+void k_colormimedata_populate_mime_data(void* mimeData, void* color);
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#canDecode)
 ///
-/// @param param1 QMimeData*
+/// @param mimeData QMimeData*
 ///
-bool k_colormimedata_can_decode(void* param1);
+bool k_colormimedata_can_decode(void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#fromMimeData)
 ///
-/// @param param1 QMimeData*
+/// @param mimeData QMimeData*
 ///
-QColor* k_colormimedata_from_mime_data(void* param1);
+QColor* k_colormimedata_from_mime_data(void* mimeData);
 
 /// [Upstream resources](https://api.kde.org/kcolormimedata.html#createDrag)
 ///
-/// @param param1 QColor*
-/// @param param2 QObject*
+/// @param color QColor*
+/// @param dragsource QObject*
 ///
-QDrag* k_colormimedata_create_drag(void* param1, void* param2);
+QDrag* k_colormimedata_create_drag(void* color, void* dragsource);
 #endif

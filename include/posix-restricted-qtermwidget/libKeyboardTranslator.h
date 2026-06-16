@@ -237,9 +237,9 @@ void k_onsole__keyboardtranslatormanager_delete(void* self);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 ///
-/// @param param1 int
+/// @param value int
 ///
-int32_t k_onsole_one_or_zero(int param1);
+int32_t k_onsole_one_or_zero(int value);
 
 /// [Upstream resources](https://github.com/lxqt/qtermwidget?tab=readme-ov-file#api)
 

@@ -639,10 +639,10 @@ void k_io__deletejob_delete(void* self) {
     KIO__DeleteJob_Delete((KIO__DeleteJob*)(self));
 }
 
-KIO__DeleteJob* k_io_del(void* param1, int32_t param2) {
-    return KIO_Del((QUrl*)param1, param2);
+KIO__DeleteJob* k_io_del(void* src, int32_t flags) {
+    return KIO_Del((QUrl*)src, flags);
 }
 
-KIO__DeleteJob* k_io_del2(libqt_list /* of QUrl* */ param1, int32_t param2) {
-    return KIO_Del2(param1, param2);
+KIO__DeleteJob* k_io_del2(libqt_list /* of QUrl* */ src, int32_t flags) {
+    return KIO_Del2(src, flags);
 }

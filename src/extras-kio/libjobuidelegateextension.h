@@ -35,9 +35,9 @@ KIO__JobUiDelegateExtension* k_io_default_job_ui_delegate_extension();
 
 /// [Upstream resources](https://api.kde.org/kio.html#setDefaultJobUiDelegateExtension)
 ///
-/// @param param1 KIO__JobUiDelegateExtension*
+/// @param extension KIO__JobUiDelegateExtension*
 ///
-void k_io_set_default_job_ui_delegate_extension(void* param1);
+void k_io_set_default_job_ui_delegate_extension(void* extension);
 
 /// [Upstream resources](https://api.kde.org/kio-jobuidelegateextension.html#public-types)
 
