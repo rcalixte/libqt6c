@@ -1,4 +1,9 @@
 
+### 6.8.2 rev78 (16 June 2026)
+
+* Add build system export and use upstream parameter names when possible (#142)
+* Support QProcess on Windows (#141)
+
 ### 6.8.2 rev77 (3 June 2026)
 
 * Minor updates (#140)
