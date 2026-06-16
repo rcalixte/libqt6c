@@ -920,7 +920,9 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 	wClassC := cClassMethodPrefix(strings.ReplaceAll(wClass, "::", "__"))
 	ctor := wClassC + "_new"
 
-	if parentName == "" || parentClass == "QDockWidget" || parentClass == "QScrollArea" ||
+	if w.Class == "QDockWidget" && parentName == "" {
+		ret.WriteString("\nui->" + w.Name + " = " + ctor + "3();\n")
+	} else if parentName == "" || parentClass == "QDockWidget" || parentClass == "QScrollArea" ||
 		parentClass == "QStackedWidget" || parentClass == "QTabWidget" ||
 		parentClass == "QToolBox" || parentClass == "QWizard" {
 		ret.WriteString("\nui->" + w.Name + " = " + ctor + "2();\n")
