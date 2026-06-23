@@ -704,6 +704,41 @@ void q_itemdelegate_on_decoration(void* self, QPixmap* (*callback)(void*, void*,
 ///
 QPixmap* q_itemdelegate_super_decoration(void* self, void* option, void* variant);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qitemdelegate.html#selectedPixmap)
+///
+/// @param self QItemDelegate*
+/// @param pixmap QPixmap*
+/// @param palette QPalette*
+/// @param enabled bool
+///
+QPixmap* q_itemdelegate_selected_pixmap(void* self, void* pixmap, void* palette, bool enabled);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qitemdelegate.html#selectedPixmap)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QItemDelegate*
+/// @param callback QPixmap* func(QItemDelegate* self, QPixmap* pixmap, QPalette* palette, bool enabled)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void q_itemdelegate_on_selected_pixmap(void* self, QPixmap* (*callback)(void*, void*, void*, bool));
+
+/// @warning DEPRECATED: Use `q_itemdelegate_super_selected_pixmap` instead
+///
+#define q_itemdelegate_qbase_selected_pixmap q_itemdelegate_super_selected_pixmap
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qitemdelegate.html#selectedPixmap)
+///
+/// Base class method implementation
+///
+/// @param self QItemDelegate*
+/// @param pixmap QPixmap*
+/// @param palette QPalette*
+/// @param enabled bool
+///
+QPixmap* q_itemdelegate_super_selected_pixmap(void* self, void* pixmap, void* palette, bool enabled);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qitemdelegate.html#doCheck)
 ///
 /// @param self QItemDelegate*

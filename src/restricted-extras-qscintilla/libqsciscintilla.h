@@ -9956,6 +9956,90 @@ void q_sciscintilla_on_set_scroll_bars(void* self, void (*callback)());
 ///
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self QsciScintilla*
+/// @param text const char*
+///
+char* q_sciscintilla_text_as_bytes(void* self, const char* text);
+
+/// @warning DEPRECATED: Use `q_sciscintilla_super_text_as_bytes` instead
+///
+#define q_sciscintilla_qbase_text_as_bytes q_sciscintilla_super_text_as_bytes
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self QsciScintilla*
+/// @param text const char*
+///
+char* q_sciscintilla_super_text_as_bytes(void* self, const char* text);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self QsciScintilla*
+/// @param callback libqt_string func(QsciScintilla* self, const char* text)
+///
+void q_sciscintilla_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self QsciScintilla*
+/// @param bytes const char*
+/// @param size int
+///
+const char* q_sciscintilla_bytes_as_text(void* self, const char* bytes, int size);
+
+/// @warning DEPRECATED: Use `q_sciscintilla_super_bytes_as_text` instead
+///
+#define q_sciscintilla_qbase_bytes_as_text q_sciscintilla_super_bytes_as_text
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self QsciScintilla*
+/// @param bytes const char*
+/// @param size int
+///
+const char* q_sciscintilla_super_bytes_as_text(void* self, const char* bytes, int size);
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self QsciScintilla*
+/// @param callback const char* func(QsciScintilla* self, const char* bytes, int size)
+///
+void q_sciscintilla_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
+
+/// Inherited from QsciScintillaBase
+///
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// Wrapper to allow calling virtual or protected method
 ///
 /// @param self QsciScintilla*

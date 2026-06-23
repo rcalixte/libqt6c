@@ -348,6 +348,33 @@ void q_thread_on_exec(void* self, int32_t (*callback)());
 ///
 int32_t q_thread_super_exec(void* self);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#setTerminationEnabled)
+///
+/// @param self QThread*
+///
+void q_thread_set_termination_enabled(void* self);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#setTerminationEnabled)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QThread*
+/// @param callback void func()
+///
+void q_thread_on_set_termination_enabled(void* self, void (*callback)());
+
+/// @warning DEPRECATED: Use `q_thread_super_set_termination_enabled` instead
+///
+#define q_thread_qbase_set_termination_enabled q_thread_super_set_termination_enabled
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#setTerminationEnabled)
+///
+/// Base class method implementation
+///
+/// @param self QThread*
+///
+void q_thread_super_set_termination_enabled(void* self);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qobject.html#tr)
 ///
 /// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
@@ -387,6 +414,35 @@ void q_thread_exit1(void* self, int retcode);
 /// @param deadline QDeadlineTimer*
 ///
 bool q_thread_wait1(void* self, void* deadline);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#setTerminationEnabled)
+///
+/// @param self QThread*
+/// @param enabled bool
+///
+void q_thread_set_termination_enabled1(void* self, bool enabled);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#setTerminationEnabled)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QThread*
+/// @param callback void func(QThread* self, bool enabled)
+///
+void q_thread_on_set_termination_enabled1(void* self, void (*callback)(void*, bool));
+
+/// @warning DEPRECATED: Use `q_thread_super_set_termination_enabled1` instead
+///
+#define q_thread_qbase_set_termination_enabled1 q_thread_super_set_termination_enabled1
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qthread.html#setTerminationEnabled)
+///
+/// Base class method implementation
+///
+/// @param self QThread*
+/// @param enabled bool
+///
+void q_thread_super_set_termination_enabled1(void* self, bool enabled);
 
 /// Inherited from QObject
 ///

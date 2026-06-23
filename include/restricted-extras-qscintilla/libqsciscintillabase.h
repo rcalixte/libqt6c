@@ -1217,6 +1217,70 @@ void q_sciscintillabase_super_set_scroll_bars(void* self);
 
 /// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
 ///
+/// @warning Caller is responsible for freeing the returned memory using `free()`
+///
+/// @param self QsciScintillaBase*
+/// @param text const char*
+///
+char* q_sciscintillabase_text_as_bytes(void* self, const char* text);
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintillaBase*
+/// @param callback libqt_string func(QsciScintillaBase* self, const char* text)
+///
+void q_sciscintillabase_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*));
+
+/// @warning DEPRECATED: Use `q_sciscintillabase_super_text_as_bytes` instead
+///
+#define q_sciscintillabase_qbase_text_as_bytes q_sciscintillabase_super_text_as_bytes
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Base class method implementation
+///
+/// @param self QsciScintillaBase*
+/// @param text const char*
+///
+char* q_sciscintillabase_super_text_as_bytes(void* self, const char* text);
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// @warning Caller is responsible for freeing the returned memory using `libqt_free()`
+///
+/// @param self QsciScintillaBase*
+/// @param bytes const char*
+/// @param size int
+///
+const char* q_sciscintillabase_bytes_as_text(void* self, const char* bytes, int size);
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QsciScintillaBase*
+/// @param callback const char* func(QsciScintillaBase* self, const char* bytes, int size)
+///
+void q_sciscintillabase_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int));
+
+/// @warning DEPRECATED: Use `q_sciscintillabase_super_bytes_as_text` instead
+///
+#define q_sciscintillabase_qbase_bytes_as_text q_sciscintillabase_super_bytes_as_text
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
+/// Base class method implementation
+///
+/// @param self QsciScintillaBase*
+/// @param bytes const char*
+/// @param size int
+///
+const char* q_sciscintillabase_super_bytes_as_text(void* self, const char* bytes, int size);
+
+/// [Upstream resources](https://www.riverbankcomputing.com/static/Docs/QScintilla/classQsciScintillaBase.html)
+///
 /// @param self QsciScintillaBase*
 /// @param x int
 /// @param y int
