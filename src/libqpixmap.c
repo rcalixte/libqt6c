@@ -259,6 +259,18 @@ int32_t q_pixmap_super_metric(void* self, int32_t param1) {
     return QPixmap_SuperMetric((QPixmap*)self, param1);
 }
 
+QPixmap* q_pixmap_from_image_in_place(void* self, void* image) {
+    return QPixmap_FromImageInPlace((QPixmap*)self, (QImage*)image);
+}
+
+void q_pixmap_on_from_image_in_place(void* self, QPixmap* (*callback)(void*, void*)) {
+    QPixmap_OnFromImageInPlace((QPixmap*)self, (intptr_t)callback);
+}
+
+QPixmap* q_pixmap_super_from_image_in_place(void* self, void* image) {
+    return QPixmap_SuperFromImageInPlace((QPixmap*)self, (QImage*)image);
+}
+
 void q_pixmap_fill1(void* self, void* fillColor) {
     QPixmap_Fill1((QPixmap*)self, (QColor*)fillColor);
 }
@@ -361,6 +373,18 @@ void q_pixmap_scroll7(void* self, int dx, int dy, int x, int y, int width, int h
 
 void q_pixmap_scroll4(void* self, int dx, int dy, void* rect, void* exposed) {
     QPixmap_Scroll4((QPixmap*)self, dx, dy, (QRect*)rect, (QRegion*)exposed);
+}
+
+QPixmap* q_pixmap_from_image_in_place2(void* self, void* image, int32_t flags) {
+    return QPixmap_FromImageInPlace2((QPixmap*)self, (QImage*)image, flags);
+}
+
+void q_pixmap_on_from_image_in_place2(void* self, QPixmap* (*callback)(void*, void*, int32_t)) {
+    QPixmap_OnFromImageInPlace2((QPixmap*)self, (intptr_t)callback);
+}
+
+QPixmap* q_pixmap_super_from_image_in_place2(void* self, void* image, int32_t flags) {
+    return QPixmap_SuperFromImageInPlace2((QPixmap*)self, (QImage*)image, flags);
 }
 
 bool q_pixmap_painting_active(void* self) {

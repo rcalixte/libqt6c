@@ -452,6 +452,37 @@ void q_pixmap_on_metric(void* self, int32_t (*callback)(void*, int32_t));
 ///
 int32_t q_pixmap_super_metric(void* self, int32_t param1);
 
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// @param self QPixmap*
+/// @param image QImage*
+///
+QPixmap* q_pixmap_from_image_in_place(void* self, void* image);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPixmap*
+/// @param callback QPixmap* func(QPixmap* self, QImage* image)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void q_pixmap_on_from_image_in_place(void* self, QPixmap* (*callback)(void*, void*));
+
+/// @warning DEPRECATED: Use `q_pixmap_super_from_image_in_place` instead
+///
+#define q_pixmap_qbase_from_image_in_place q_pixmap_super_from_image_in_place
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Base class method implementation
+///
+/// @param self QPixmap*
+/// @param image QImage*
+///
+QPixmap* q_pixmap_super_from_image_in_place(void* self, void* image);
+
 /// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fill)
 ///
 /// @param self QPixmap*
@@ -672,6 +703,39 @@ void q_pixmap_scroll7(void* self, int dx, int dy, int x, int y, int width, int h
 /// @param exposed QRegion*
 ///
 void q_pixmap_scroll4(void* self, int dx, int dy, void* rect, void* exposed);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// @param self QPixmap*
+/// @param image QImage*
+/// @param flags flag of enum Qt__ImageConversionFlag
+///
+QPixmap* q_pixmap_from_image_in_place2(void* self, void* image, int32_t flags);
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Allows for overriding the related default method
+///
+/// @param self QPixmap*
+/// @param callback QPixmap* func(QPixmap* self, QImage* image, flag of enum Qt__ImageConversionFlag flags)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void q_pixmap_on_from_image_in_place2(void* self, QPixmap* (*callback)(void*, void*, int32_t));
+
+/// @warning DEPRECATED: Use `q_pixmap_super_from_image_in_place2` instead
+///
+#define q_pixmap_qbase_from_image_in_place2 q_pixmap_super_from_image_in_place2
+
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Base class method implementation
+///
+/// @param self QPixmap*
+/// @param image QImage*
+/// @param flags flag of enum Qt__ImageConversionFlag
+///
+QPixmap* q_pixmap_super_from_image_in_place2(void* self, void* image, int32_t flags);
 
 /// Inherited from QPaintDevice
 ///

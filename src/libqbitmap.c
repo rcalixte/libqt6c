@@ -454,6 +454,18 @@ void q_bitmap_on_shared_painter(void* self, QPainter* (*callback)()) {
     QBitmap_OnSharedPainter((QBitmap*)self, (intptr_t)callback);
 }
 
+QPixmap* q_bitmap_from_image_in_place(void* self, void* image) {
+    return QBitmap_FromImageInPlace((QBitmap*)self, (QImage*)image);
+}
+
+QPixmap* q_bitmap_super_from_image_in_place(void* self, void* image) {
+    return QBitmap_SuperFromImageInPlace((QBitmap*)self, (QImage*)image);
+}
+
+void q_bitmap_on_from_image_in_place(void* self, QPixmap* (*callback)(void*, void*)) {
+    QBitmap_OnFromImageInPlace((QBitmap*)self, (intptr_t)callback);
+}
+
 double q_bitmap_get_decoded_metric_f(void* self, int32_t metricA, int32_t metricB) {
     return QBitmap_GetDecodedMetricF((QBitmap*)self, metricA, metricB);
 }

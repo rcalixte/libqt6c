@@ -573,6 +573,42 @@ void q_sciscintillabase_super_set_scroll_bars(void* self) {
     QsciScintillaBase_SuperSetScrollBars((QsciScintillaBase*)self);
 }
 
+char* q_sciscintillabase_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciScintillaBase_TextAsBytes((QsciScintillaBase*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_sciscintillabase_on_text_as_bytes(void* self, libqt_string (*callback)(void*, const char*)) {
+    QsciScintillaBase_OnTextAsBytes((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
+char* q_sciscintillabase_super_text_as_bytes(void* self, const char* text) {
+    libqt_string _str = QsciScintillaBase_SuperTextAsBytes((QsciScintillaBase*)self, qstring(text));
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+const char* q_sciscintillabase_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciScintillaBase_BytesAsText((QsciScintillaBase*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
+void q_sciscintillabase_on_bytes_as_text(void* self, const char* (*callback)(void*, const char*, int)) {
+    QsciScintillaBase_OnBytesAsText((QsciScintillaBase*)self, (intptr_t)callback);
+}
+
+const char* q_sciscintillabase_super_bytes_as_text(void* self, const char* bytes, int size) {
+    libqt_string _str = QsciScintillaBase_SuperBytesAsText((QsciScintillaBase*)self, bytes, size);
+    char* _ret = qstring_to_char(_str);
+    libqt_string_free(&_str);
+    return _ret;
+}
+
 bool q_sciscintillabase_context_menu_needed(void* self, int x, int y) {
     return QsciScintillaBase_ContextMenuNeeded((QsciScintillaBase*)self, x, y);
 }

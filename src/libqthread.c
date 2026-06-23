@@ -202,6 +202,18 @@ int32_t q_thread_super_exec(void* self) {
     return QThread_SuperExec((QThread*)self);
 }
 
+void q_thread_set_termination_enabled(void* self) {
+    QThread_SetTerminationEnabled((QThread*)self);
+}
+
+void q_thread_on_set_termination_enabled(void* self, void (*callback)()) {
+    QThread_OnSetTerminationEnabled((QThread*)self, (intptr_t)callback);
+}
+
+void q_thread_super_set_termination_enabled(void* self) {
+    QThread_SuperSetTerminationEnabled((QThread*)self);
+}
+
 const char* q_thread_tr2(const char* s, const char* c) {
     libqt_string _str = QObject_Tr2(s, c);
     char* _ret = qstring_to_char(_str);
@@ -226,6 +238,18 @@ void q_thread_exit1(void* self, int retcode) {
 
 bool q_thread_wait1(void* self, void* deadline) {
     return QThread_Wait1((QThread*)self, (QDeadlineTimer*)deadline);
+}
+
+void q_thread_set_termination_enabled1(void* self, bool enabled) {
+    QThread_SetTerminationEnabled1((QThread*)self, enabled);
+}
+
+void q_thread_on_set_termination_enabled1(void* self, void (*callback)(void*, bool)) {
+    QThread_OnSetTerminationEnabled1((QThread*)self, (intptr_t)callback);
+}
+
+void q_thread_super_set_termination_enabled1(void* self, bool enabled) {
+    QThread_SuperSetTerminationEnabled1((QThread*)self, enabled);
 }
 
 const char* q_thread_object_name(void* self) {

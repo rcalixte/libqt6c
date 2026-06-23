@@ -1045,6 +1045,45 @@ QPainter* q_bitmap_super_shared_painter(void* self);
 ///
 void q_bitmap_on_shared_painter(void* self, QPainter* (*callback)());
 
+/// Inherited from QPixmap
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Wrapper to allow calling virtual or protected method
+///
+/// @param self QBitmap*
+/// @param image QImage*
+///
+QPixmap* q_bitmap_from_image_in_place(void* self, void* image);
+
+/// @warning DEPRECATED: Use `q_bitmap_super_from_image_in_place` instead
+///
+#define q_bitmap_qbase_from_image_in_place q_bitmap_super_from_image_in_place
+
+/// Inherited from QPixmap
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Wrapper to allow calling base class virtual or protected method
+///
+/// @param self QBitmap*
+/// @param image QImage*
+///
+QPixmap* q_bitmap_super_from_image_in_place(void* self, void* image);
+
+/// Inherited from QPixmap
+///
+/// [Upstream resources](https://doc.qt.io/qt-6/qpixmap.html#fromImageInPlace)
+///
+/// Wrapper to allow overriding base class virtual or protected method
+///
+/// @param self QBitmap*
+/// @param callback QPixmap* func(QBitmap* self, QImage* image)
+///
+/// @warning Memory for the returned type of the callback is freed by the library.
+///
+void q_bitmap_on_from_image_in_place(void* self, QPixmap* (*callback)(void*, void*));
+
 /// Inherited from QPaintDevice
 ///
 /// [Upstream resources](https://doc.qt.io/qt-6/qpaintdevice.html#getDecodedMetricF)

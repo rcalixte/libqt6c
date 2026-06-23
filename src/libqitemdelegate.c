@@ -9,6 +9,7 @@
 #include "libqobjectdefs.hpp"
 #include "libqobject.hpp"
 #include "libqpainter.hpp"
+#include "libqpalette.hpp"
 #include "libqpixmap.hpp"
 #include "libqrect.hpp"
 #include "libqsize.hpp"
@@ -287,6 +288,18 @@ void q_itemdelegate_on_decoration(void* self, QPixmap* (*callback)(void*, void*,
 
 QPixmap* q_itemdelegate_super_decoration(void* self, void* option, void* variant) {
     return QItemDelegate_SuperDecoration((QItemDelegate*)self, (QStyleOptionViewItem*)option, (QVariant*)variant);
+}
+
+QPixmap* q_itemdelegate_selected_pixmap(void* self, void* pixmap, void* palette, bool enabled) {
+    return QItemDelegate_SelectedPixmap((QItemDelegate*)self, (QPixmap*)pixmap, (QPalette*)palette, enabled);
+}
+
+void q_itemdelegate_on_selected_pixmap(void* self, QPixmap* (*callback)(void*, void*, void*, bool)) {
+    QItemDelegate_OnSelectedPixmap((QItemDelegate*)self, (intptr_t)callback);
+}
+
+QPixmap* q_itemdelegate_super_selected_pixmap(void* self, void* pixmap, void* palette, bool enabled) {
+    return QItemDelegate_SuperSelectedPixmap((QItemDelegate*)self, (QPixmap*)pixmap, (QPalette*)palette, enabled);
 }
 
 QRect* q_itemdelegate_do_check(void* self, void* option, void* bounding, void* variant) {
