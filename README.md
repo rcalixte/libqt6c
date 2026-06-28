@@ -146,7 +146,7 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-Full examples are available in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository.
+Full examples are available in the [`libqt6c-examples`](https://github.com/rcalixte/libqt6c-examples) repository. An [overview of the examples](https://github.com/rcalixte/libqt6c-examples/blob/master/OVERVIEW.md) is also available for a simpler/quicker glance.
 
 Building
 --------
