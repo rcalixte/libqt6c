@@ -4,7 +4,6 @@
 <img alt="libqt6c" src="assets/libqt6c.png" height="128px;" />
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/rcalixte/libqt6c/blob/master/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/rcalixte/libqt6c)](https://goreportcard.com/report/github.com/rcalixte/libqt6c)
 [![Static Badge](https://img.shields.io/badge/v0.16%20(stable)-fdc009?logo=zig&logoColor=f7a41d&label=Zig)](https://ziglang.org/download/)
 
 [![Documentation](https://github.com/rcalixte/libqt6c/actions/workflows/docs.yml/badge.svg?branch=master)](https://github.com/rcalixte/libqt6c/actions/workflows/docs.yml)
