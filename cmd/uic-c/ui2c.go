@@ -1326,7 +1326,7 @@ func generateWidget(w UiWidget, parentName, parentClass string) (string, error) 
 		}
 
 		if prop, ok := propertyByName(child.Attributes, "tabBarAutoHide"); ok {
-			ret.WriteString(cClassMethodPrefix(child.Class) + "_tab_bar_auto_hide(ui->" + child.Name + ", " + strconv.FormatBool(*prop.BoolVal) + ");\n")
+			ret.WriteString(cClassMethodPrefix(child.Class) + "_set_tab_bar_auto_hide(ui->" + child.Name + ", " + strconv.FormatBool(*prop.BoolVal) + ");\n")
 		}
 
 		if prop, ok := propertyByName(child.Attributes, "orientation"); ok {
