@@ -7,15 +7,15 @@
 #include "libqprinterinfo.hpp"
 #include "libqprinterinfo.hxx"
 
-QPrinterInfo* QPrinterInfo_new() {
+QPrinterInfo* QPrinterInfo_New() {
     return new QPrinterInfo();
 }
 
-QPrinterInfo* QPrinterInfo_new2(const QPrinterInfo* other) {
+QPrinterInfo* QPrinterInfo_New2(const QPrinterInfo* other) {
     return new QPrinterInfo(*other);
 }
 
-QPrinterInfo* QPrinterInfo_new3(const QPrinter* printer) {
+QPrinterInfo* QPrinterInfo_New3(const QPrinter* printer) {
     return new QPrinterInfo(*printer);
 }
 

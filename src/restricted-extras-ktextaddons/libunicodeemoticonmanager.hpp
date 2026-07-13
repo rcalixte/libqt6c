@@ -35,8 +35,8 @@ typedef struct TextEmoticonsCore__UnicodeEmoticon TextEmoticonsCore__UnicodeEmot
 typedef struct TextEmoticonsCore__UnicodeEmoticonManager TextEmoticonsCore__UnicodeEmoticonManager;
 #endif
 
-TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_new();
-TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_new2(QObject* parent);
+TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_New();
+TextEmoticonsCore__UnicodeEmoticonManager* TextEmoticonsCore__UnicodeEmoticonManager_New2(QObject* parent);
 QMetaObject* TextEmoticonsCore__UnicodeEmoticonManager_MetaObject(const TextEmoticonsCore__UnicodeEmoticonManager* self);
 void* TextEmoticonsCore__UnicodeEmoticonManager_Metacast(TextEmoticonsCore__UnicodeEmoticonManager* self, const char* param1);
 int TextEmoticonsCore__UnicodeEmoticonManager_Metacall(TextEmoticonsCore__UnicodeEmoticonManager* self, int param1, int param2, void** param3);

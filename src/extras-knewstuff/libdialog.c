@@ -17,11 +17,11 @@
 #include "libdialog.h"
 
 KNSWidgets__Dialog* k_nswidgets__dialog_new(const char* configFile) {
-    return KNSWidgets__Dialog_new(qstring(configFile));
+    return KNSWidgets__Dialog_New(qstring(configFile));
 }
 
 KNSWidgets__Dialog* k_nswidgets__dialog_new2(const char* configFile, void* parent) {
-    return KNSWidgets__Dialog_new2(qstring(configFile), (QWidget*)parent);
+    return KNSWidgets__Dialog_New2(qstring(configFile), (QWidget*)parent);
 }
 
 const QMetaObject* k_nswidgets__dialog_meta_object(void* self) {

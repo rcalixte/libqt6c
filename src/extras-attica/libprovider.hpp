@@ -65,8 +65,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-Attica__Provider* Attica__Provider_new();
-Attica__Provider* Attica__Provider_new2(const Attica__Provider* other);
+Attica__Provider* Attica__Provider_New();
+Attica__Provider* Attica__Provider_New2(const Attica__Provider* other);
 void Attica__Provider_OperatorAssign(Attica__Provider* self, const Attica__Provider* other);
 bool Attica__Provider_IsValid(const Attica__Provider* self);
 bool Attica__Provider_IsEnabled(const Attica__Provider* self);

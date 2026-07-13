@@ -37,20 +37,20 @@
 #include "libklanguagebutton.hpp"
 #include "libklanguagebutton.hxx"
 
-KLanguageButton* KLanguageButton_new(QWidget* parent) {
+KLanguageButton* KLanguageButton_New(QWidget* parent) {
     return new VirtualKLanguageButton(parent);
 }
 
-KLanguageButton* KLanguageButton_new2() {
+KLanguageButton* KLanguageButton_New2() {
     return new VirtualKLanguageButton();
 }
 
-KLanguageButton* KLanguageButton_new3(const libqt_string text) {
+KLanguageButton* KLanguageButton_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKLanguageButton(text_QString);
 }
 
-KLanguageButton* KLanguageButton_new4(const libqt_string text, QWidget* parent) {
+KLanguageButton* KLanguageButton_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKLanguageButton(text_QString, parent);
 }

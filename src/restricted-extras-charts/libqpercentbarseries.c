@@ -8,11 +8,11 @@
 #include "libqpercentbarseries.h"
 
 QPercentBarSeries* q_percentbarseries_new() {
-    return QPercentBarSeries_new();
+    return QPercentBarSeries_New();
 }
 
 QPercentBarSeries* q_percentbarseries_new2(void* parent) {
-    return QPercentBarSeries_new2((QObject*)parent);
+    return QPercentBarSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_percentbarseries_meta_object(void* self) {

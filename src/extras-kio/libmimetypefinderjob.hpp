@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_new(const QUrl* url);
-KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_new2(const QUrl* url, QObject* parent);
+KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_New(const QUrl* url);
+KIO__MimeTypeFinderJob* KIO__MimeTypeFinderJob_New2(const QUrl* url, QObject* parent);
 QMetaObject* KIO__MimeTypeFinderJob_MetaObject(const KIO__MimeTypeFinderJob* self);
 void* KIO__MimeTypeFinderJob_Metacast(KIO__MimeTypeFinderJob* self, const char* param1);
 int KIO__MimeTypeFinderJob_Metacall(KIO__MimeTypeFinderJob* self, int param1, int param2, void** param3);

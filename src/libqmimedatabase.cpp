@@ -10,7 +10,7 @@
 #include "libqmimedatabase.hpp"
 #include "libqmimedatabase.hxx"
 
-QMimeDatabase* QMimeDatabase_new() {
+QMimeDatabase* QMimeDatabase_New() {
     return new QMimeDatabase();
 }
 

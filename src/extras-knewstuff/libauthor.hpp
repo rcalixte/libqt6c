@@ -22,8 +22,8 @@ typedef struct KNSCore__Author KNSCore__Author;
 typedef struct QUrl QUrl;
 #endif
 
-KNSCore__Author* KNSCore__Author_new();
-KNSCore__Author* KNSCore__Author_new2(const KNSCore__Author* other);
+KNSCore__Author* KNSCore__Author_New();
+KNSCore__Author* KNSCore__Author_New2(const KNSCore__Author* other);
 void KNSCore__Author_OperatorAssign(KNSCore__Author* self, const KNSCore__Author* other);
 void KNSCore__Author_SetId(KNSCore__Author* self, const libqt_string id);
 libqt_string KNSCore__Author_Id(const KNSCore__Author* self);

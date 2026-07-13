@@ -2,11 +2,11 @@
 #include "libkosrelease.h"
 
 KOSRelease* k_osrelease_new() {
-    return KOSRelease_new();
+    return KOSRelease_New();
 }
 
 KOSRelease* k_osrelease_new2(const char* filePath) {
-    return KOSRelease_new2(qstring(filePath));
+    return KOSRelease_New2(qstring(filePath));
 }
 
 const char* k_osrelease_name(void* self) {

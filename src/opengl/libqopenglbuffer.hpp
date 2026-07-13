@@ -18,9 +18,9 @@ extern "C" {
 typedef struct QOpenGLBuffer QOpenGLBuffer;
 #endif
 
-QOpenGLBuffer* QOpenGLBuffer_new();
-QOpenGLBuffer* QOpenGLBuffer_new2(int type);
-QOpenGLBuffer* QOpenGLBuffer_new3(const QOpenGLBuffer* other);
+QOpenGLBuffer* QOpenGLBuffer_New();
+QOpenGLBuffer* QOpenGLBuffer_New2(int type);
+QOpenGLBuffer* QOpenGLBuffer_New3(const QOpenGLBuffer* other);
 void QOpenGLBuffer_OperatorAssign(QOpenGLBuffer* self, const QOpenGLBuffer* other);
 void QOpenGLBuffer_Swap(QOpenGLBuffer* self, QOpenGLBuffer* other);
 int QOpenGLBuffer_Type(const QOpenGLBuffer* self);

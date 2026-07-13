@@ -21,8 +21,8 @@ typedef Attica::Metadata Attica__Metadata;
 typedef struct Attica__Metadata Attica__Metadata;
 #endif
 
-Attica__Metadata* Attica__Metadata_new();
-Attica__Metadata* Attica__Metadata_new2(const Attica__Metadata* other);
+Attica__Metadata* Attica__Metadata_New();
+Attica__Metadata* Attica__Metadata_New2(const Attica__Metadata* other);
 void Attica__Metadata_OperatorAssign(Attica__Metadata* self, const Attica__Metadata* other);
 int Attica__Metadata_Error(const Attica__Metadata* self);
 void Attica__Metadata_SetError(Attica__Metadata* self, int error);

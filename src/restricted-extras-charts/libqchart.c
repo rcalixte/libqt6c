@@ -28,15 +28,15 @@
 #include "libqchart.h"
 
 QChart* q_chart_new() {
-    return QChart_new();
+    return QChart_New();
 }
 
 QChart* q_chart_new2(void* parent) {
-    return QChart_new2((QGraphicsItem*)parent);
+    return QChart_New2((QGraphicsItem*)parent);
 }
 
 QChart* q_chart_new3(void* parent, int32_t wFlags) {
-    return QChart_new3((QGraphicsItem*)parent, wFlags);
+    return QChart_New3((QGraphicsItem*)parent, wFlags);
 }
 
 const QMetaObject* q_chart_meta_object(void* self) {

@@ -4,11 +4,11 @@
 #include "libhomepagetype.hpp"
 #include "libhomepagetype.hxx"
 
-Attica__HomePageType* Attica__HomePageType_new() {
+Attica__HomePageType* Attica__HomePageType_New() {
     return new Attica::HomePageType();
 }
 
-Attica__HomePageType* Attica__HomePageType_new2(const Attica__HomePageType* other) {
+Attica__HomePageType* Attica__HomePageType_New2(const Attica__HomePageType* other) {
     return new Attica::HomePageType(*other);
 }
 

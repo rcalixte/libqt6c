@@ -22,15 +22,15 @@ typedef struct QSize QSize;
 typedef struct QSizeF QSizeF;
 #endif
 
-QPageSize* QPageSize_new();
-QPageSize* QPageSize_new2(int pageSizeId);
-QPageSize* QPageSize_new3(const QSize* pointSize);
-QPageSize* QPageSize_new4(const QSizeF* size, int units);
-QPageSize* QPageSize_new5(const QPageSize* other);
-QPageSize* QPageSize_new6(const QSize* pointSize, const libqt_string name);
-QPageSize* QPageSize_new7(const QSize* pointSize, const libqt_string name, int matchPolicy);
-QPageSize* QPageSize_new8(const QSizeF* size, int units, const libqt_string name);
-QPageSize* QPageSize_new9(const QSizeF* size, int units, const libqt_string name, int matchPolicy);
+QPageSize* QPageSize_New();
+QPageSize* QPageSize_New2(int pageSizeId);
+QPageSize* QPageSize_New3(const QSize* pointSize);
+QPageSize* QPageSize_New4(const QSizeF* size, int units);
+QPageSize* QPageSize_New5(const QPageSize* other);
+QPageSize* QPageSize_New6(const QSize* pointSize, const libqt_string name);
+QPageSize* QPageSize_New7(const QSize* pointSize, const libqt_string name, int matchPolicy);
+QPageSize* QPageSize_New8(const QSizeF* size, int units, const libqt_string name);
+QPageSize* QPageSize_New9(const QSizeF* size, int units, const libqt_string name, int matchPolicy);
 void QPageSize_OperatorAssign(QPageSize* self, const QPageSize* other);
 void QPageSize_Swap(QPageSize* self, QPageSize* other);
 bool QPageSize_IsEquivalentTo(const QPageSize* self, const QPageSize* other);

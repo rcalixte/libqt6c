@@ -14,11 +14,11 @@
 #include "libtexttospeechcontainerwidget.h"
 
 TextEditTextToSpeech__TextToSpeechContainerWidget* k_textedittexttospeech__texttospeechcontainerwidget_new(void* parent) {
-    return TextEditTextToSpeech__TextToSpeechContainerWidget_new((QWidget*)parent);
+    return TextEditTextToSpeech__TextToSpeechContainerWidget_New((QWidget*)parent);
 }
 
 TextEditTextToSpeech__TextToSpeechContainerWidget* k_textedittexttospeech__texttospeechcontainerwidget_new2() {
-    return TextEditTextToSpeech__TextToSpeechContainerWidget_new2();
+    return TextEditTextToSpeech__TextToSpeechContainerWidget_New2();
 }
 
 const QMetaObject* k_textedittexttospeech__texttospeechcontainerwidget_meta_object(void* self) {

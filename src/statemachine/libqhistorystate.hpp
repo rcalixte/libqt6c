@@ -27,10 +27,10 @@ typedef struct QState QState;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QHistoryState* QHistoryState_new();
-QHistoryState* QHistoryState_new2(int type);
-QHistoryState* QHistoryState_new3(QState* parent);
-QHistoryState* QHistoryState_new4(int type, QState* parent);
+QHistoryState* QHistoryState_New();
+QHistoryState* QHistoryState_New2(int type);
+QHistoryState* QHistoryState_New3(QState* parent);
+QHistoryState* QHistoryState_New4(int type, QState* parent);
 QMetaObject* QHistoryState_MetaObject(const QHistoryState* self);
 void* QHistoryState_Metacast(QHistoryState* self, const char* param1);
 int QHistoryState_Metacall(QHistoryState* self, int param1, int param2, void** param3);

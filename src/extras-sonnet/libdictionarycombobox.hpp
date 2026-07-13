@@ -56,8 +56,8 @@ typedef struct QWidget QWidget;
 typedef struct Sonnet__DictionaryComboBox Sonnet__DictionaryComboBox;
 #endif
 
-Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_new(QWidget* parent);
-Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_new2();
+Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_New(QWidget* parent);
+Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_New2();
 QMetaObject* Sonnet__DictionaryComboBox_MetaObject(const Sonnet__DictionaryComboBox* self);
 void* Sonnet__DictionaryComboBox_Metacast(Sonnet__DictionaryComboBox* self, const char* param1);
 int Sonnet__DictionaryComboBox_Metacall(Sonnet__DictionaryComboBox* self, int param1, int param2, void** param3);

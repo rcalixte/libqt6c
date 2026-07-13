@@ -29,10 +29,10 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KFontAction* KFontAction_new(unsigned int fontListCriteria, QObject* parent);
-KFontAction* KFontAction_new2(QObject* parent);
-KFontAction* KFontAction_new3(const libqt_string text, QObject* parent);
-KFontAction* KFontAction_new4(const QIcon* icon, const libqt_string text, QObject* parent);
+KFontAction* KFontAction_New(unsigned int fontListCriteria, QObject* parent);
+KFontAction* KFontAction_New2(QObject* parent);
+KFontAction* KFontAction_New3(const libqt_string text, QObject* parent);
+KFontAction* KFontAction_New4(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KFontAction_MetaObject(const KFontAction* self);
 void* KFontAction_Metacast(KFontAction* self, const char* param1);
 int KFontAction_Metacall(KFontAction* self, int param1, int param2, void** param3);

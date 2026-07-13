@@ -14,11 +14,11 @@
 #include "libqscilexermatlab.hpp"
 #include "libqscilexermatlab.hxx"
 
-QsciLexerMatlab* QsciLexerMatlab_new() {
+QsciLexerMatlab* QsciLexerMatlab_New() {
     return new VirtualQsciLexerMatlab();
 }
 
-QsciLexerMatlab* QsciLexerMatlab_new2(QObject* parent) {
+QsciLexerMatlab* QsciLexerMatlab_New2(QObject* parent) {
     return new VirtualQsciLexerMatlab(parent);
 }
 

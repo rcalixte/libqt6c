@@ -6,11 +6,11 @@
 #include "libqpdfoutputintent.hpp"
 #include "libqpdfoutputintent.hxx"
 
-QPdfOutputIntent* QPdfOutputIntent_new() {
+QPdfOutputIntent* QPdfOutputIntent_New() {
     return new QPdfOutputIntent();
 }
 
-QPdfOutputIntent* QPdfOutputIntent_new2(const QPdfOutputIntent* other) {
+QPdfOutputIntent* QPdfOutputIntent_New2(const QPdfOutputIntent* other) {
     return new QPdfOutputIntent(*other);
 }
 

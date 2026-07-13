@@ -56,7 +56,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KConfigDialog* KConfigDialog_new(QWidget* parent, const libqt_string name, KCoreConfigSkeleton* config);
+KConfigDialog* KConfigDialog_New(QWidget* parent, const libqt_string name, KCoreConfigSkeleton* config);
 QMetaObject* KConfigDialog_MetaObject(const KConfigDialog* self);
 void* KConfigDialog_Metacast(KConfigDialog* self, const char* param1);
 int KConfigDialog_Metacall(KConfigDialog* self, int param1, int param2, void** param3);

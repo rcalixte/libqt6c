@@ -4,11 +4,11 @@
 #include "libqlowenergycharacteristic.h"
 
 QLowEnergyCharacteristic* q_lowenergycharacteristic_new() {
-    return QLowEnergyCharacteristic_new();
+    return QLowEnergyCharacteristic_New();
 }
 
 QLowEnergyCharacteristic* q_lowenergycharacteristic_new2(void* other) {
-    return QLowEnergyCharacteristic_new2((QLowEnergyCharacteristic*)other);
+    return QLowEnergyCharacteristic_New2((QLowEnergyCharacteristic*)other);
 }
 
 void q_lowenergycharacteristic_operator_assign(void* self, void* other) {

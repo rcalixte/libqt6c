@@ -52,8 +52,8 @@ typedef struct QWidget QWidget;
 typedef struct QWindow QWindow;
 #endif
 
-KToolTipWidget* KToolTipWidget_new(QWidget* parent);
-KToolTipWidget* KToolTipWidget_new2();
+KToolTipWidget* KToolTipWidget_New(QWidget* parent);
+KToolTipWidget* KToolTipWidget_New2();
 QMetaObject* KToolTipWidget_MetaObject(const KToolTipWidget* self);
 void* KToolTipWidget_Metacast(KToolTipWidget* self, const char* param1);
 int KToolTipWidget_Metacall(KToolTipWidget* self, int param1, int param2, void** param3);

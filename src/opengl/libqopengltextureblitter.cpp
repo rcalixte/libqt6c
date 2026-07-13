@@ -6,7 +6,7 @@
 #include "libqopengltextureblitter.hpp"
 #include "libqopengltextureblitter.hxx"
 
-QOpenGLTextureBlitter* QOpenGLTextureBlitter_new() {
+QOpenGLTextureBlitter* QOpenGLTextureBlitter_New() {
     return new QOpenGLTextureBlitter();
 }
 

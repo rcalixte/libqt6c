@@ -7,11 +7,11 @@
 #include "libgrammarerror.hpp"
 #include "libgrammarerror.hxx"
 
-TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_new() {
+TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_New() {
     return new VirtualTextGrammarCheckGrammarError();
 }
 
-TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_new2(const TextGrammarCheck__GrammarError* param1) {
+TextGrammarCheck__GrammarError* TextGrammarCheck__GrammarError_New2(const TextGrammarCheck__GrammarError* param1) {
     return new VirtualTextGrammarCheckGrammarError(*param1);
 }
 

@@ -14,7 +14,7 @@
 #include "libqspatialsound.hpp"
 #include "libqspatialsound.hxx"
 
-QSpatialSound* QSpatialSound_new(QAudioEngine* engine) {
+QSpatialSound* QSpatialSound_New(QAudioEngine* engine) {
     return new VirtualQSpatialSound(engine);
 }
 

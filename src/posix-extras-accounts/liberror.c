@@ -2,19 +2,19 @@
 #include "liberror.h"
 
 Accounts__Error* q_accounts__error_new() {
-    return Accounts__Error_new();
+    return Accounts__Error_New();
 }
 
 Accounts__Error* q_accounts__error_new2(void* src) {
-    return Accounts__Error_new2((Accounts__Error*)src);
+    return Accounts__Error_New2((Accounts__Error*)src);
 }
 
 Accounts__Error* q_accounts__error_new3(int32_t type) {
-    return Accounts__Error_new3(type);
+    return Accounts__Error_New3(type);
 }
 
 Accounts__Error* q_accounts__error_new4(int32_t type, const char* message) {
-    return Accounts__Error_new4(type, qstring(message));
+    return Accounts__Error_New4(type, qstring(message));
 }
 
 void q_accounts__error_operator_assign(void* self, void* src) {

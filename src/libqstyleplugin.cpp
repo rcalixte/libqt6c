@@ -11,11 +11,11 @@
 #include "libqstyleplugin.hpp"
 #include "libqstyleplugin.hxx"
 
-QStylePlugin* QStylePlugin_new() {
+QStylePlugin* QStylePlugin_New() {
     return new VirtualQStylePlugin();
 }
 
-QStylePlugin* QStylePlugin_new2(QObject* parent) {
+QStylePlugin* QStylePlugin_New2(QObject* parent) {
     return new VirtualQStylePlugin(parent);
 }
 

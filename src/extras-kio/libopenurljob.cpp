@@ -15,20 +15,20 @@
 #include "libopenurljob.hpp"
 #include "libopenurljob.hxx"
 
-KIO__OpenUrlJob* KIO__OpenUrlJob_new(const QUrl* url) {
+KIO__OpenUrlJob* KIO__OpenUrlJob_New(const QUrl* url) {
     return new VirtualKIOOpenUrlJob(*url);
 }
 
-KIO__OpenUrlJob* KIO__OpenUrlJob_new2(const QUrl* url, const libqt_string mimeType) {
+KIO__OpenUrlJob* KIO__OpenUrlJob_New2(const QUrl* url, const libqt_string mimeType) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     return new VirtualKIOOpenUrlJob(*url, mimeType_QString);
 }
 
-KIO__OpenUrlJob* KIO__OpenUrlJob_new3(const QUrl* url, QObject* parent) {
+KIO__OpenUrlJob* KIO__OpenUrlJob_New3(const QUrl* url, QObject* parent) {
     return new VirtualKIOOpenUrlJob(*url, parent);
 }
 
-KIO__OpenUrlJob* KIO__OpenUrlJob_new4(const QUrl* url, const libqt_string mimeType, QObject* parent) {
+KIO__OpenUrlJob* KIO__OpenUrlJob_New4(const QUrl* url, const libqt_string mimeType, QObject* parent) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     return new VirtualKIOOpenUrlJob(*url, mimeType_QString, parent);
 }

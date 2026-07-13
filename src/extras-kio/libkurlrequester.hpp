@@ -61,11 +61,11 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KUrlRequester* KUrlRequester_new(QWidget* parent);
-KUrlRequester* KUrlRequester_new2();
-KUrlRequester* KUrlRequester_new3(const QUrl* url);
-KUrlRequester* KUrlRequester_new4(QWidget* editWidget, QWidget* parent);
-KUrlRequester* KUrlRequester_new5(const QUrl* url, QWidget* parent);
+KUrlRequester* KUrlRequester_New(QWidget* parent);
+KUrlRequester* KUrlRequester_New2();
+KUrlRequester* KUrlRequester_New3(const QUrl* url);
+KUrlRequester* KUrlRequester_New4(QWidget* editWidget, QWidget* parent);
+KUrlRequester* KUrlRequester_New5(const QUrl* url, QWidget* parent);
 QMetaObject* KUrlRequester_MetaObject(const KUrlRequester* self);
 void* KUrlRequester_Metacast(KUrlRequester* self, const char* param1);
 int KUrlRequester_Metacall(KUrlRequester* self, int param1, int param2, void** param3);
@@ -286,8 +286,8 @@ void KUrlRequester_OnGetDecodedMetricF(const KUrlRequester* self, intptr_t slot)
 double KUrlRequester_SuperGetDecodedMetricF(const KUrlRequester* self, int metricA, int metricB);
 void KUrlRequester_Delete(KUrlRequester* self);
 
-KUrlComboRequester* KUrlComboRequester_new(QWidget* parent);
-KUrlComboRequester* KUrlComboRequester_new2();
+KUrlComboRequester* KUrlComboRequester_New(QWidget* parent);
+KUrlComboRequester* KUrlComboRequester_New2();
 QMetaObject* KUrlComboRequester_MetaObject(const KUrlComboRequester* self);
 void* KUrlComboRequester_Metacast(KUrlComboRequester* self, const char* param1);
 int KUrlComboRequester_Metacall(KUrlComboRequester* self, int param1, int param2, void** param3);

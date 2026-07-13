@@ -7,23 +7,23 @@
 #include "libqstringconverter.hpp"
 #include "libqstringconverter.hxx"
 
-QStringEncoder* QStringEncoder_new() {
+QStringEncoder* QStringEncoder_New() {
     return new QStringEncoder();
 }
 
-QStringEncoder* QStringEncoder_new2(int encoding) {
+QStringEncoder* QStringEncoder_New2(int encoding) {
     return new QStringEncoder(static_cast<QStringConverter::Encoding>(encoding));
 }
 
-QStringEncoder* QStringEncoder_new3(const char* name) {
+QStringEncoder* QStringEncoder_New3(const char* name) {
     return new QStringEncoder(QAnyStringView(name));
 }
 
-QStringEncoder* QStringEncoder_new4(int encoding, int flags) {
+QStringEncoder* QStringEncoder_New4(int encoding, int flags) {
     return new QStringEncoder(static_cast<QStringConverter::Encoding>(encoding), static_cast<QStringConverterBase::Flags>(flags));
 }
 
-QStringEncoder* QStringEncoder_new5(const char* name, int flags) {
+QStringEncoder* QStringEncoder_New5(const char* name, int flags) {
     return new QStringEncoder(QAnyStringView(name), static_cast<QStringConverterBase::Flags>(flags));
 }
 
@@ -40,23 +40,23 @@ void QStringEncoder_Delete(QStringEncoder* self) {
     delete self;
 }
 
-QStringDecoder* QStringDecoder_new(int encoding) {
+QStringDecoder* QStringDecoder_New(int encoding) {
     return new QStringDecoder(static_cast<QStringConverter::Encoding>(encoding));
 }
 
-QStringDecoder* QStringDecoder_new2() {
+QStringDecoder* QStringDecoder_New2() {
     return new QStringDecoder();
 }
 
-QStringDecoder* QStringDecoder_new3(const char* name) {
+QStringDecoder* QStringDecoder_New3(const char* name) {
     return new QStringDecoder(QAnyStringView(name));
 }
 
-QStringDecoder* QStringDecoder_new4(int encoding, int flags) {
+QStringDecoder* QStringDecoder_New4(int encoding, int flags) {
     return new QStringDecoder(static_cast<QStringConverter::Encoding>(encoding), static_cast<QStringConverterBase::Flags>(flags));
 }
 
-QStringDecoder* QStringDecoder_new5(const char* name, int f) {
+QStringDecoder* QStringDecoder_New5(const char* name, int f) {
     return new QStringDecoder(QAnyStringView(name), static_cast<QStringConverterBase::Flags>(f));
 }
 

@@ -15,11 +15,11 @@
 #include "libqprogressbar.h"
 
 QProgressBar* q_progressbar_new(void* parent) {
-    return QProgressBar_new((QWidget*)parent);
+    return QProgressBar_New((QWidget*)parent);
 }
 
 QProgressBar* q_progressbar_new2() {
-    return QProgressBar_new2();
+    return QProgressBar_New2();
 }
 
 const QMetaObject* q_progressbar_meta_object(void* self) {

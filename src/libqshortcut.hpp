@@ -25,15 +25,15 @@ typedef struct QShortcut QShortcut;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QShortcut* QShortcut_new(QObject* parent);
-QShortcut* QShortcut_new2(const QKeySequence* key, QObject* parent);
-QShortcut* QShortcut_new3(int key, QObject* parent);
-QShortcut* QShortcut_new4(const QKeySequence* key, QObject* parent, const char* member);
-QShortcut* QShortcut_new5(const QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember);
-QShortcut* QShortcut_new6(const QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember, int context);
-QShortcut* QShortcut_new7(int key, QObject* parent, const char* member);
-QShortcut* QShortcut_new8(int key, QObject* parent, const char* member, const char* ambiguousMember);
-QShortcut* QShortcut_new9(int key, QObject* parent, const char* member, const char* ambiguousMember, int context);
+QShortcut* QShortcut_New(QObject* parent);
+QShortcut* QShortcut_New2(const QKeySequence* key, QObject* parent);
+QShortcut* QShortcut_New3(int key, QObject* parent);
+QShortcut* QShortcut_New4(const QKeySequence* key, QObject* parent, const char* member);
+QShortcut* QShortcut_New5(const QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember);
+QShortcut* QShortcut_New6(const QKeySequence* key, QObject* parent, const char* member, const char* ambiguousMember, int context);
+QShortcut* QShortcut_New7(int key, QObject* parent, const char* member);
+QShortcut* QShortcut_New8(int key, QObject* parent, const char* member, const char* ambiguousMember);
+QShortcut* QShortcut_New9(int key, QObject* parent, const char* member, const char* ambiguousMember, int context);
 QMetaObject* QShortcut_MetaObject(const QShortcut* self);
 void* QShortcut_Metacast(QShortcut* self, const char* param1);
 int QShortcut_Metacall(QShortcut* self, int param1, int param2, void** param3);

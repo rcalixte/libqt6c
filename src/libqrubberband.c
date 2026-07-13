@@ -16,11 +16,11 @@
 #include "libqrubberband.h"
 
 QRubberBand* q_rubberband_new(int32_t param1) {
-    return QRubberBand_new(param1);
+    return QRubberBand_New(param1);
 }
 
 QRubberBand* q_rubberband_new2(int32_t param1, void* param2) {
-    return QRubberBand_new2(param1, (QWidget*)param2);
+    return QRubberBand_New2(param1, (QWidget*)param2);
 }
 
 const QMetaObject* q_rubberband_meta_object(void* self) {

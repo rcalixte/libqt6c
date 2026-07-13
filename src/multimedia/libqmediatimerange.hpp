@@ -22,10 +22,10 @@ typedef struct QMediaTimeRange QMediaTimeRange;
 typedef struct QMediaTimeRange__Interval QMediaTimeRange__Interval;
 #endif
 
-QMediaTimeRange* QMediaTimeRange_new();
-QMediaTimeRange* QMediaTimeRange_new2(long long start, long long end);
-QMediaTimeRange* QMediaTimeRange_new3(const QMediaTimeRange__Interval* param1);
-QMediaTimeRange* QMediaTimeRange_new4(const QMediaTimeRange* range);
+QMediaTimeRange* QMediaTimeRange_New();
+QMediaTimeRange* QMediaTimeRange_New2(long long start, long long end);
+QMediaTimeRange* QMediaTimeRange_New3(const QMediaTimeRange__Interval* param1);
+QMediaTimeRange* QMediaTimeRange_New4(const QMediaTimeRange* range);
 void QMediaTimeRange_OperatorAssign(QMediaTimeRange* self, const QMediaTimeRange* param1);
 void QMediaTimeRange_Swap(QMediaTimeRange* self, QMediaTimeRange* other);
 void QMediaTimeRange_Detach(QMediaTimeRange* self);
@@ -49,11 +49,11 @@ QMediaTimeRange* QMediaTimeRange_OperatorMinusAssign2(QMediaTimeRange* self, con
 void QMediaTimeRange_Clear(QMediaTimeRange* self);
 void QMediaTimeRange_Delete(QMediaTimeRange* self);
 
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_new(const QMediaTimeRange__Interval* other);
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_new2(QMediaTimeRange__Interval* other);
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_new3();
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_new4(long long start, long long end);
-QMediaTimeRange__Interval* QMediaTimeRange__Interval_new5(const QMediaTimeRange__Interval* param1);
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New(const QMediaTimeRange__Interval* other);
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New2(QMediaTimeRange__Interval* other);
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New3();
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New4(long long start, long long end);
+QMediaTimeRange__Interval* QMediaTimeRange__Interval_New5(const QMediaTimeRange__Interval* param1);
 void QMediaTimeRange__Interval_CopyAssign(QMediaTimeRange__Interval* self, QMediaTimeRange__Interval* other);
 void QMediaTimeRange__Interval_MoveAssign(QMediaTimeRange__Interval* self, QMediaTimeRange__Interval* other);
 long long QMediaTimeRange__Interval_Start(const QMediaTimeRange__Interval* self);

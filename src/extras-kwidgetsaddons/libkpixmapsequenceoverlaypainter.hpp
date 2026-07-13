@@ -28,10 +28,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_new();
-KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_new2(const KPixmapSequence* seq);
-KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_new3(QObject* parent);
-KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_new4(const KPixmapSequence* seq, QObject* parent);
+KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_New();
+KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_New2(const KPixmapSequence* seq);
+KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_New3(QObject* parent);
+KPixmapSequenceOverlayPainter* KPixmapSequenceOverlayPainter_New4(const KPixmapSequence* seq, QObject* parent);
 QMetaObject* KPixmapSequenceOverlayPainter_MetaObject(const KPixmapSequenceOverlayPainter* self);
 void* KPixmapSequenceOverlayPainter_Metacast(KPixmapSequenceOverlayPainter* self, const char* param1);
 int KPixmapSequenceOverlayPainter_Metacall(KPixmapSequenceOverlayPainter* self, int param1, int param2, void** param3);

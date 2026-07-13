@@ -41,23 +41,23 @@
 #include "libkshortcutsdialog.hpp"
 #include "libkshortcutsdialog.hxx"
 
-KShortcutsDialog* KShortcutsDialog_new(QWidget* parent) {
+KShortcutsDialog* KShortcutsDialog_New(QWidget* parent) {
     return new VirtualKShortcutsDialog(parent);
 }
 
-KShortcutsDialog* KShortcutsDialog_new2() {
+KShortcutsDialog* KShortcutsDialog_New2() {
     return new VirtualKShortcutsDialog();
 }
 
-KShortcutsDialog* KShortcutsDialog_new3(int actionTypes) {
+KShortcutsDialog* KShortcutsDialog_New3(int actionTypes) {
     return new VirtualKShortcutsDialog(static_cast<KShortcutsEditor::ActionTypes>(actionTypes));
 }
 
-KShortcutsDialog* KShortcutsDialog_new4(int actionTypes, int allowLetterShortcuts) {
+KShortcutsDialog* KShortcutsDialog_New4(int actionTypes, int allowLetterShortcuts) {
     return new VirtualKShortcutsDialog(static_cast<KShortcutsEditor::ActionTypes>(actionTypes), static_cast<KShortcutsEditor::LetterShortcuts>(allowLetterShortcuts));
 }
 
-KShortcutsDialog* KShortcutsDialog_new5(int actionTypes, int allowLetterShortcuts, QWidget* parent) {
+KShortcutsDialog* KShortcutsDialog_New5(int actionTypes, int allowLetterShortcuts, QWidget* parent) {
     return new VirtualKShortcutsDialog(static_cast<KShortcutsEditor::ActionTypes>(actionTypes), static_cast<KShortcutsEditor::LetterShortcuts>(allowLetterShortcuts), parent);
 }
 

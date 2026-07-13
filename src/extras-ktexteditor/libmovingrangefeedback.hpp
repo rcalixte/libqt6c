@@ -27,7 +27,7 @@ typedef struct KTextEditor__MovingRangeFeedback KTextEditor__MovingRangeFeedback
 typedef struct KTextEditor__View KTextEditor__View;
 #endif
 
-KTextEditor__MovingRangeFeedback* KTextEditor__MovingRangeFeedback_new();
+KTextEditor__MovingRangeFeedback* KTextEditor__MovingRangeFeedback_New();
 void KTextEditor__MovingRangeFeedback_RangeEmpty(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range);
 void KTextEditor__MovingRangeFeedback_RangeInvalid(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range);
 void KTextEditor__MovingRangeFeedback_MouseEnteredRange(KTextEditor__MovingRangeFeedback* self, KTextEditor__MovingRange* range, KTextEditor__View* view);

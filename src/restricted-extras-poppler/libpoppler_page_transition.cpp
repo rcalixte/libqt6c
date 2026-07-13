@@ -3,7 +3,7 @@
 #include "libpoppler_page_transition.hpp"
 #include "libpoppler_page_transition.hxx"
 
-Poppler__PageTransition* Poppler__PageTransition_new(const Poppler__PageTransition* pt) {
+Poppler__PageTransition* Poppler__PageTransition_New(const Poppler__PageTransition* pt) {
     return new Poppler::PageTransition(*pt);
 }
 

@@ -22,7 +22,7 @@ typedef struct Accounts__AuthData Accounts__AuthData;
 typedef struct QVariant QVariant;
 #endif
 
-Accounts__AuthData* Accounts__AuthData_new(const Accounts__AuthData* other);
+Accounts__AuthData* Accounts__AuthData_New(const Accounts__AuthData* other);
 unsigned int Accounts__AuthData_CredentialsId(const Accounts__AuthData* self);
 libqt_string Accounts__AuthData_Method(const Accounts__AuthData* self);
 libqt_string Accounts__AuthData_Mechanism(const Accounts__AuthData* self);

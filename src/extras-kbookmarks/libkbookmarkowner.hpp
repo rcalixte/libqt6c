@@ -25,7 +25,7 @@ typedef struct KBookmarkOwner__FutureBookmark KBookmarkOwner__FutureBookmark;
 typedef struct QUrl QUrl;
 #endif
 
-KBookmarkOwner* KBookmarkOwner_new();
+KBookmarkOwner* KBookmarkOwner_New();
 libqt_string KBookmarkOwner_CurrentTitle(const KBookmarkOwner* self);
 QUrl* KBookmarkOwner_CurrentUrl(const KBookmarkOwner* self);
 libqt_string KBookmarkOwner_CurrentIcon(const KBookmarkOwner* self);
@@ -58,8 +58,8 @@ void KBookmarkOwner_OnOpenInNewWindow(KBookmarkOwner* self, intptr_t slot);
 void KBookmarkOwner_SuperOpenInNewWindow(KBookmarkOwner* self, const KBookmark* bm);
 void KBookmarkOwner_Delete(KBookmarkOwner* self);
 
-KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_new(const libqt_string title, const QUrl* url, const libqt_string icon);
-KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_new2(const KBookmarkOwner__FutureBookmark* other);
+KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_New(const libqt_string title, const QUrl* url, const libqt_string icon);
+KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_New2(const KBookmarkOwner__FutureBookmark* other);
 void KBookmarkOwner__FutureBookmark_OperatorAssign(KBookmarkOwner__FutureBookmark* self, const KBookmarkOwner__FutureBookmark* other);
 libqt_string KBookmarkOwner__FutureBookmark_Title(const KBookmarkOwner__FutureBookmark* self);
 QUrl* KBookmarkOwner__FutureBookmark_Url(const KBookmarkOwner__FutureBookmark* self);

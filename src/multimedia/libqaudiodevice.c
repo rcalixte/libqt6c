@@ -3,11 +3,11 @@
 #include "libqaudiodevice.h"
 
 QAudioDevice* q_audiodevice_new() {
-    return QAudioDevice_new();
+    return QAudioDevice_New();
 }
 
 QAudioDevice* q_audiodevice_new2(void* other) {
-    return QAudioDevice_new2((QAudioDevice*)other);
+    return QAudioDevice_New2((QAudioDevice*)other);
 }
 
 void q_audiodevice_swap(void* self, void* other) {

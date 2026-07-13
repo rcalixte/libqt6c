@@ -20,9 +20,9 @@ typedef struct KLocalizedString KLocalizedString;
 typedef struct QChar QChar;
 #endif
 
-KLazyLocalizedString* KLazyLocalizedString_new(const KLazyLocalizedString* other);
-KLazyLocalizedString* KLazyLocalizedString_new2(KLazyLocalizedString* other);
-KLazyLocalizedString* KLazyLocalizedString_new3();
+KLazyLocalizedString* KLazyLocalizedString_New(const KLazyLocalizedString* other);
+KLazyLocalizedString* KLazyLocalizedString_New2(KLazyLocalizedString* other);
+KLazyLocalizedString* KLazyLocalizedString_New3();
 void KLazyLocalizedString_CopyAssign(KLazyLocalizedString* self, KLazyLocalizedString* other);
 void KLazyLocalizedString_MoveAssign(KLazyLocalizedString* self, KLazyLocalizedString* other);
 KLocalizedString* KLazyLocalizedString_ToKLocalizedString(const KLazyLocalizedString* self);

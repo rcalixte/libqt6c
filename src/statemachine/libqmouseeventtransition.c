@@ -10,19 +10,19 @@
 #include "libqmouseeventtransition.h"
 
 QMouseEventTransition* q_mouseeventtransition_new() {
-    return QMouseEventTransition_new();
+    return QMouseEventTransition_New();
 }
 
 QMouseEventTransition* q_mouseeventtransition_new2(void* object, int32_t type, int32_t button) {
-    return QMouseEventTransition_new2((QObject*)object, type, button);
+    return QMouseEventTransition_New2((QObject*)object, type, button);
 }
 
 QMouseEventTransition* q_mouseeventtransition_new3(void* sourceState) {
-    return QMouseEventTransition_new3((QState*)sourceState);
+    return QMouseEventTransition_New3((QState*)sourceState);
 }
 
 QMouseEventTransition* q_mouseeventtransition_new4(void* object, int32_t type, int32_t button, void* sourceState) {
-    return QMouseEventTransition_new4((QObject*)object, type, button, (QState*)sourceState);
+    return QMouseEventTransition_New4((QObject*)object, type, button, (QState*)sourceState);
 }
 
 const QMetaObject* q_mouseeventtransition_meta_object(void* self) {

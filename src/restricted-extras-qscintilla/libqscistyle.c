@@ -5,23 +5,23 @@
 #include "libqscistyle.h"
 
 QsciStyle* q_scistyle_new() {
-    return QsciStyle_new();
+    return QsciStyle_New();
 }
 
 QsciStyle* q_scistyle_new2(int style, const char* description, void* color, void* paper, void* font) {
-    return QsciStyle_new2(style, qstring(description), (QColor*)color, (QColor*)paper, (QFont*)font);
+    return QsciStyle_New2(style, qstring(description), (QColor*)color, (QColor*)paper, (QFont*)font);
 }
 
 QsciStyle* q_scistyle_new3(void* param1) {
-    return QsciStyle_new3((QsciStyle*)param1);
+    return QsciStyle_New3((QsciStyle*)param1);
 }
 
 QsciStyle* q_scistyle_new4(int style) {
-    return QsciStyle_new4(style);
+    return QsciStyle_New4(style);
 }
 
 QsciStyle* q_scistyle_new5(int style, const char* description, void* color, void* paper, void* font, bool eolFill) {
-    return QsciStyle_new5(style, qstring(description), (QColor*)color, (QColor*)paper, (QFont*)font, eolFill);
+    return QsciStyle_New5(style, qstring(description), (QColor*)color, (QColor*)paper, (QFont*)font, eolFill);
 }
 
 void q_scistyle_apply(void* self, void* sci) {

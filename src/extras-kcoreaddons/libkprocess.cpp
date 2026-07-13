@@ -14,11 +14,11 @@
 #include "libkprocess.hpp"
 #include "libkprocess.hxx"
 
-KProcess* KProcess_new() {
+KProcess* KProcess_New() {
     return new VirtualKProcess();
 }
 
-KProcess* KProcess_new2(QObject* parent) {
+KProcess* KProcess_New2(QObject* parent) {
     return new VirtualKProcess(parent);
 }
 

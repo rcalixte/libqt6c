@@ -17,12 +17,12 @@
 #include "libthumbnailcreator.hpp"
 #include "libthumbnailcreator.hxx"
 
-KIO__ThumbnailRequest* KIO__ThumbnailRequest_new(const QUrl* url, const QSize* targetSize, const libqt_string mimeType, double dpr, float sequenceIndex) {
+KIO__ThumbnailRequest* KIO__ThumbnailRequest_New(const QUrl* url, const QSize* targetSize, const libqt_string mimeType, double dpr, float sequenceIndex) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     return new KIO::ThumbnailRequest(*url, *targetSize, mimeType_QString, static_cast<qreal>(dpr), static_cast<float>(sequenceIndex));
 }
 
-KIO__ThumbnailRequest* KIO__ThumbnailRequest_new2(const KIO__ThumbnailRequest* param1) {
+KIO__ThumbnailRequest* KIO__ThumbnailRequest_New2(const KIO__ThumbnailRequest* param1) {
     return new KIO::ThumbnailRequest(*param1);
 }
 
@@ -62,7 +62,7 @@ void KIO__ThumbnailRequest_Delete(KIO__ThumbnailRequest* self) {
     delete self;
 }
 
-KIO__ThumbnailResult* KIO__ThumbnailResult_new(const KIO__ThumbnailResult* param1) {
+KIO__ThumbnailResult* KIO__ThumbnailResult_New(const KIO__ThumbnailResult* param1) {
     return new KIO::ThumbnailResult(*param1);
 }
 
@@ -98,7 +98,7 @@ void KIO__ThumbnailResult_Delete(KIO__ThumbnailResult* self) {
     delete self;
 }
 
-KIO__ThumbnailCreator* KIO__ThumbnailCreator_new(QObject* parent, const libqt_list /* of QVariant* */ args) {
+KIO__ThumbnailCreator* KIO__ThumbnailCreator_New(QObject* parent, const libqt_list /* of QVariant* */ args) {
     QList<QVariant> args_QList;
     args_QList.reserve(args.len);
     QVariant** args_arr = static_cast<QVariant**>(args.data.ptr);

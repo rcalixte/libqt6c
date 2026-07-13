@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QStringTokenizerBaseBase QStringTokenizerBaseBase;
 #endif
 
-QStringTokenizerBaseBase* QStringTokenizerBaseBase_new(const QStringTokenizerBaseBase* other);
-QStringTokenizerBaseBase* QStringTokenizerBaseBase_new2(const QStringTokenizerBaseBase* param1);
+QStringTokenizerBaseBase* QStringTokenizerBaseBase_New(const QStringTokenizerBaseBase* other);
+QStringTokenizerBaseBase* QStringTokenizerBaseBase_New2(const QStringTokenizerBaseBase* param1);
 void QStringTokenizerBaseBase_CopyAssign(QStringTokenizerBaseBase* self, QStringTokenizerBaseBase* other);
 
 #ifdef __cplusplus

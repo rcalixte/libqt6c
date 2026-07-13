@@ -9,11 +9,11 @@
 #include "libqplacematchreply.h"
 
 QPlaceMatchReply* q_placematchreply_new() {
-    return QPlaceMatchReply_new();
+    return QPlaceMatchReply_New();
 }
 
 QPlaceMatchReply* q_placematchreply_new2(void* parent) {
-    return QPlaceMatchReply_new2((QObject*)parent);
+    return QPlaceMatchReply_New2((QObject*)parent);
 }
 
 const QMetaObject* q_placematchreply_meta_object(void* self) {

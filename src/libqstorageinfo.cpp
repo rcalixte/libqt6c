@@ -7,20 +7,20 @@
 #include "libqstorageinfo.hpp"
 #include "libqstorageinfo.hxx"
 
-QStorageInfo* QStorageInfo_new() {
+QStorageInfo* QStorageInfo_New() {
     return new QStorageInfo();
 }
 
-QStorageInfo* QStorageInfo_new2(const libqt_string path) {
+QStorageInfo* QStorageInfo_New2(const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QStorageInfo(path_QString);
 }
 
-QStorageInfo* QStorageInfo_new3(const QDir* dir) {
+QStorageInfo* QStorageInfo_New3(const QDir* dir) {
     return new QStorageInfo(*dir);
 }
 
-QStorageInfo* QStorageInfo_new4(const QStorageInfo* other) {
+QStorageInfo* QStorageInfo_New4(const QStorageInfo* other) {
     return new QStorageInfo(*other);
 }
 

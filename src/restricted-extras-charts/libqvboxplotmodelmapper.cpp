@@ -13,11 +13,11 @@
 #include "libqvboxplotmodelmapper.hpp"
 #include "libqvboxplotmodelmapper.hxx"
 
-QVBoxPlotModelMapper* QVBoxPlotModelMapper_new() {
+QVBoxPlotModelMapper* QVBoxPlotModelMapper_New() {
     return new VirtualQVBoxPlotModelMapper();
 }
 
-QVBoxPlotModelMapper* QVBoxPlotModelMapper_new2(QObject* parent) {
+QVBoxPlotModelMapper* QVBoxPlotModelMapper_New2(QObject* parent) {
     return new VirtualQVBoxPlotModelMapper(parent);
 }
 

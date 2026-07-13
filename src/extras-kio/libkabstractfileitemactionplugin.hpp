@@ -27,7 +27,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KAbstractFileItemActionPlugin* KAbstractFileItemActionPlugin_new(QObject* parent);
+KAbstractFileItemActionPlugin* KAbstractFileItemActionPlugin_New(QObject* parent);
 QMetaObject* KAbstractFileItemActionPlugin_MetaObject(const KAbstractFileItemActionPlugin* self);
 void* KAbstractFileItemActionPlugin_Metacast(KAbstractFileItemActionPlugin* self, const char* param1);
 int KAbstractFileItemActionPlugin_Metacall(KAbstractFileItemActionPlugin* self, int param1, int param2, void** param3);

@@ -19,11 +19,11 @@
 #include "libpreviewjob.hpp"
 #include "libpreviewjob.hxx"
 
-KIO__PreviewJob* KIO__PreviewJob_new(const KFileItemList* items, const QSize* size) {
+KIO__PreviewJob* KIO__PreviewJob_New(const KFileItemList* items, const QSize* size) {
     return new VirtualKIOPreviewJob(*items, *size);
 }
 
-KIO__PreviewJob* KIO__PreviewJob_new2(const KFileItemList* items, const QSize* size, const libqt_list /* of libqt_string */ enabledPlugins) {
+KIO__PreviewJob* KIO__PreviewJob_New2(const KFileItemList* items, const QSize* size, const libqt_list /* of libqt_string */ enabledPlugins) {
     QList<QString> enabledPlugins_QList;
     enabledPlugins_QList.reserve(enabledPlugins.len);
     libqt_string* enabledPlugins_arr = static_cast<libqt_string*>(enabledPlugins.data.ptr);

@@ -9,21 +9,21 @@
 #include "libqtextdocumentwriter.hpp"
 #include "libqtextdocumentwriter.hxx"
 
-QTextDocumentWriter* QTextDocumentWriter_new() {
+QTextDocumentWriter* QTextDocumentWriter_New() {
     return new QTextDocumentWriter();
 }
 
-QTextDocumentWriter* QTextDocumentWriter_new2(QIODevice* device, const libqt_string format) {
+QTextDocumentWriter* QTextDocumentWriter_New2(QIODevice* device, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     return new QTextDocumentWriter(device, format_QByteArray);
 }
 
-QTextDocumentWriter* QTextDocumentWriter_new3(const libqt_string fileName) {
+QTextDocumentWriter* QTextDocumentWriter_New3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QTextDocumentWriter(fileName_QString);
 }
 
-QTextDocumentWriter* QTextDocumentWriter_new4(const libqt_string fileName, const libqt_string format) {
+QTextDocumentWriter* QTextDocumentWriter_New4(const libqt_string fileName, const libqt_string format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new QTextDocumentWriter(fileName_QString, format_QByteArray);

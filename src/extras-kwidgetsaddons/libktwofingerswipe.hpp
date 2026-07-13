@@ -28,8 +28,8 @@ typedef struct QPointF QPointF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KTwoFingerSwipe* KTwoFingerSwipe_new();
-KTwoFingerSwipe* KTwoFingerSwipe_new2(QObject* parent);
+KTwoFingerSwipe* KTwoFingerSwipe_New();
+KTwoFingerSwipe* KTwoFingerSwipe_New2(QObject* parent);
 QMetaObject* KTwoFingerSwipe_MetaObject(const KTwoFingerSwipe* self);
 void* KTwoFingerSwipe_Metacast(KTwoFingerSwipe* self, const char* param1);
 int KTwoFingerSwipe_Metacall(KTwoFingerSwipe* self, int param1, int param2, void** param3);
@@ -82,7 +82,7 @@ void KTwoFingerSwipe_OnIsSignalConnected(const KTwoFingerSwipe* self, intptr_t s
 bool KTwoFingerSwipe_SuperIsSignalConnected(const KTwoFingerSwipe* self, const QMetaMethod* signal);
 void KTwoFingerSwipe_Delete(KTwoFingerSwipe* self);
 
-KTwoFingerSwipeRecognizer* KTwoFingerSwipeRecognizer_new();
+KTwoFingerSwipeRecognizer* KTwoFingerSwipeRecognizer_New();
 QGesture* KTwoFingerSwipeRecognizer_Create(KTwoFingerSwipeRecognizer* self, QObject* target);
 int KTwoFingerSwipeRecognizer_Recognize(KTwoFingerSwipeRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event);
 int KTwoFingerSwipeRecognizer_MaxSwipeTime(const KTwoFingerSwipeRecognizer* self);

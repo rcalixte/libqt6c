@@ -8,11 +8,11 @@
 #include "libqpdflink.hpp"
 #include "libqpdflink.hxx"
 
-QPdfLink* QPdfLink_new() {
+QPdfLink* QPdfLink_New() {
     return new QPdfLink();
 }
 
-QPdfLink* QPdfLink_new2(const QPdfLink* other) {
+QPdfLink* QPdfLink_New2(const QPdfLink* other) {
     return new QPdfLink(*other);
 }
 

@@ -5,11 +5,11 @@
 #include "libqopenglversionfunctionsfactory.hpp"
 #include "libqopenglversionfunctionsfactory.hxx"
 
-QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_new(const QOpenGLVersionFunctionsFactory* other) {
+QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_New(const QOpenGLVersionFunctionsFactory* other) {
     return new QOpenGLVersionFunctionsFactory(*other);
 }
 
-QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_new2(QOpenGLVersionFunctionsFactory* other) {
+QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_New2(QOpenGLVersionFunctionsFactory* other) {
     return new QOpenGLVersionFunctionsFactory(std::move(*other));
 }
 

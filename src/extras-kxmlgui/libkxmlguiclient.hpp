@@ -29,8 +29,8 @@ typedef struct QDomElement QDomElement;
 typedef struct QWidget QWidget;
 #endif
 
-KXMLGUIClient* KXMLGUIClient_new();
-KXMLGUIClient* KXMLGUIClient_new2(KXMLGUIClient* parent);
+KXMLGUIClient* KXMLGUIClient_New();
+KXMLGUIClient* KXMLGUIClient_New2(KXMLGUIClient* parent);
 QAction* KXMLGUIClient_Action(const KXMLGUIClient* self, const libqt_string name);
 QAction* KXMLGUIClient_Action2(const KXMLGUIClient* self, const QDomElement* element);
 KActionCollection* KXMLGUIClient_ActionCollection(const KXMLGUIClient* self);

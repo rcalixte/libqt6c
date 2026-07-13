@@ -11,11 +11,11 @@
 #include "libkwindowstatesaver.hpp"
 #include "libkwindowstatesaver.hxx"
 
-KWindowStateSaver* KWindowStateSaver_new(QWindow* window, const KConfigGroup* configGroup) {
+KWindowStateSaver* KWindowStateSaver_New(QWindow* window, const KConfigGroup* configGroup) {
     return new VirtualKWindowStateSaver(window, *configGroup);
 }
 
-KWindowStateSaver* KWindowStateSaver_new2(QWindow* window, const libqt_string configGroupName) {
+KWindowStateSaver* KWindowStateSaver_New2(QWindow* window, const libqt_string configGroupName) {
     QString configGroupName_QString = QString::fromUtf8(configGroupName.data, configGroupName.len);
     return new VirtualKWindowStateSaver(window, configGroupName_QString);
 }

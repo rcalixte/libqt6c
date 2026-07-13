@@ -4,19 +4,19 @@
 #include "libqtextdocumentfragment.h"
 
 QTextDocumentFragment* q_textdocumentfragment_new() {
-    return QTextDocumentFragment_new();
+    return QTextDocumentFragment_New();
 }
 
 QTextDocumentFragment* q_textdocumentfragment_new2(void* document) {
-    return QTextDocumentFragment_new2((QTextDocument*)document);
+    return QTextDocumentFragment_New2((QTextDocument*)document);
 }
 
 QTextDocumentFragment* q_textdocumentfragment_new3(void* range) {
-    return QTextDocumentFragment_new3((QTextCursor*)range);
+    return QTextDocumentFragment_New3((QTextCursor*)range);
 }
 
 QTextDocumentFragment* q_textdocumentfragment_new4(void* rhs) {
-    return QTextDocumentFragment_new4((QTextDocumentFragment*)rhs);
+    return QTextDocumentFragment_New4((QTextDocumentFragment*)rhs);
 }
 
 void q_textdocumentfragment_operator_assign(void* self, void* rhs) {

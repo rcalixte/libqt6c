@@ -19,10 +19,10 @@ typedef struct QDir QDir;
 typedef struct QStorageInfo QStorageInfo;
 #endif
 
-QStorageInfo* QStorageInfo_new();
-QStorageInfo* QStorageInfo_new2(const libqt_string path);
-QStorageInfo* QStorageInfo_new3(const QDir* dir);
-QStorageInfo* QStorageInfo_new4(const QStorageInfo* other);
+QStorageInfo* QStorageInfo_New();
+QStorageInfo* QStorageInfo_New2(const libqt_string path);
+QStorageInfo* QStorageInfo_New3(const QDir* dir);
+QStorageInfo* QStorageInfo_New4(const QStorageInfo* other);
 void QStorageInfo_OperatorAssign(QStorageInfo* self, const QStorageInfo* other);
 void QStorageInfo_Swap(QStorageInfo* self, QStorageInfo* other);
 void QStorageInfo_SetPath(QStorageInfo* self, const libqt_string path);

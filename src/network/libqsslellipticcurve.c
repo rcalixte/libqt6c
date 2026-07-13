@@ -2,19 +2,19 @@
 #include "libqsslellipticcurve.h"
 
 QSslEllipticCurve* q_sslellipticcurve_new(void* other) {
-    return QSslEllipticCurve_new((QSslEllipticCurve*)other);
+    return QSslEllipticCurve_New((QSslEllipticCurve*)other);
 }
 
 QSslEllipticCurve* q_sslellipticcurve_new2(void* other) {
-    return QSslEllipticCurve_new2((QSslEllipticCurve*)other);
+    return QSslEllipticCurve_New2((QSslEllipticCurve*)other);
 }
 
 QSslEllipticCurve* q_sslellipticcurve_new3() {
-    return QSslEllipticCurve_new3();
+    return QSslEllipticCurve_New3();
 }
 
 QSslEllipticCurve* q_sslellipticcurve_new4(void* param1) {
-    return QSslEllipticCurve_new4((QSslEllipticCurve*)param1);
+    return QSslEllipticCurve_New4((QSslEllipticCurve*)param1);
 }
 
 void q_sslellipticcurve_copy_assign(void* self, void* other) {

@@ -2,11 +2,11 @@
 #include "libkplotaxis.h"
 
 KPlotAxis* k_plotaxis_new() {
-    return KPlotAxis_new();
+    return KPlotAxis_New();
 }
 
 KPlotAxis* k_plotaxis_new2(const char* label) {
-    return KPlotAxis_new2(qstring(label));
+    return KPlotAxis_New2(qstring(label));
 }
 
 bool k_plotaxis_is_visible(void* self) {

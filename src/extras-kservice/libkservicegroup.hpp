@@ -20,8 +20,8 @@ typedef struct KSycocaEntry KSycocaEntry;
 typedef struct QSharedData QSharedData;
 #endif
 
-KServiceGroup* KServiceGroup_new(const libqt_string name);
-KServiceGroup* KServiceGroup_new2(const libqt_string _fullpath, const libqt_string _relpath);
+KServiceGroup* KServiceGroup_New(const libqt_string name);
+KServiceGroup* KServiceGroup_New2(const libqt_string _fullpath, const libqt_string _relpath);
 libqt_string KServiceGroup_RelPath(const KServiceGroup* self);
 libqt_string KServiceGroup_Caption(const KServiceGroup* self);
 libqt_string KServiceGroup_Icon(const KServiceGroup* self);

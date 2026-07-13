@@ -11,11 +11,11 @@
 #include "libqscilexermatlab.h"
 
 QsciLexerMatlab* q_scilexermatlab_new() {
-    return QsciLexerMatlab_new();
+    return QsciLexerMatlab_New();
 }
 
 QsciLexerMatlab* q_scilexermatlab_new2(void* parent) {
-    return QsciLexerMatlab_new2((QObject*)parent);
+    return QsciLexerMatlab_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexermatlab_meta_object(void* self) {

@@ -15,7 +15,7 @@
 #include "libqmimedata.hpp"
 #include "libqmimedata.hxx"
 
-QMimeData* QMimeData_new() {
+QMimeData* QMimeData_New() {
     return new VirtualQMimeData();
 }
 

@@ -11,19 +11,19 @@
 #include "libqpauseanimation.hpp"
 #include "libqpauseanimation.hxx"
 
-QPauseAnimation* QPauseAnimation_new() {
+QPauseAnimation* QPauseAnimation_New() {
     return new VirtualQPauseAnimation();
 }
 
-QPauseAnimation* QPauseAnimation_new2(int msecs) {
+QPauseAnimation* QPauseAnimation_New2(int msecs) {
     return new VirtualQPauseAnimation(static_cast<int>(msecs));
 }
 
-QPauseAnimation* QPauseAnimation_new3(QObject* parent) {
+QPauseAnimation* QPauseAnimation_New3(QObject* parent) {
     return new VirtualQPauseAnimation(parent);
 }
 
-QPauseAnimation* QPauseAnimation_new4(int msecs, QObject* parent) {
+QPauseAnimation* QPauseAnimation_New4(int msecs, QObject* parent) {
     return new VirtualQPauseAnimation(static_cast<int>(msecs), parent);
 }
 

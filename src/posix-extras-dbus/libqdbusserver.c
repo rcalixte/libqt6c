@@ -8,19 +8,19 @@
 #include "libqdbusserver.h"
 
 QDBusServer* q_dbusserver_new(const char* address) {
-    return QDBusServer_new(qstring(address));
+    return QDBusServer_New(qstring(address));
 }
 
 QDBusServer* q_dbusserver_new2() {
-    return QDBusServer_new2();
+    return QDBusServer_New2();
 }
 
 QDBusServer* q_dbusserver_new3(const char* address, void* parent) {
-    return QDBusServer_new3(qstring(address), (QObject*)parent);
+    return QDBusServer_New3(qstring(address), (QObject*)parent);
 }
 
 QDBusServer* q_dbusserver_new4(void* parent) {
-    return QDBusServer_new4((QObject*)parent);
+    return QDBusServer_New4((QObject*)parent);
 }
 
 const QMetaObject* q_dbusserver_meta_object(void* self) {

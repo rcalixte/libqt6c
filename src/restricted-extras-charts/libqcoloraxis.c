@@ -8,11 +8,11 @@
 #include "libqcoloraxis.h"
 
 QColorAxis* q_coloraxis_new() {
-    return QColorAxis_new();
+    return QColorAxis_New();
 }
 
 QColorAxis* q_coloraxis_new2(void* parent) {
-    return QColorAxis_new2((QObject*)parent);
+    return QColorAxis_New2((QObject*)parent);
 }
 
 const QMetaObject* q_coloraxis_meta_object(void* self) {

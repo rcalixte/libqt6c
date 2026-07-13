@@ -21,14 +21,14 @@ typedef struct QVector3D QVector3D;
 typedef struct QVector4D QVector4D;
 #endif
 
-QQuaternion* QQuaternion_new(const QQuaternion* other);
-QQuaternion* QQuaternion_new2(QQuaternion* other);
-QQuaternion* QQuaternion_new3();
-QQuaternion* QQuaternion_new4(int param1);
-QQuaternion* QQuaternion_new5(float scalar, float xpos, float ypos, float zpos);
-QQuaternion* QQuaternion_new6(float scalar, const QVector3D* vector);
-QQuaternion* QQuaternion_new7(const QVector4D* vector);
-QQuaternion* QQuaternion_new8(const QQuaternion* param1);
+QQuaternion* QQuaternion_New(const QQuaternion* other);
+QQuaternion* QQuaternion_New2(QQuaternion* other);
+QQuaternion* QQuaternion_New3();
+QQuaternion* QQuaternion_New4(int param1);
+QQuaternion* QQuaternion_New5(float scalar, float xpos, float ypos, float zpos);
+QQuaternion* QQuaternion_New6(float scalar, const QVector3D* vector);
+QQuaternion* QQuaternion_New7(const QVector4D* vector);
+QQuaternion* QQuaternion_New8(const QQuaternion* param1);
 void QQuaternion_CopyAssign(QQuaternion* self, QQuaternion* other);
 void QQuaternion_MoveAssign(QQuaternion* self, QQuaternion* other);
 bool QQuaternion_IsNull(const QQuaternion* self);

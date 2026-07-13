@@ -11,11 +11,11 @@
 #include "libqopenglvertexarrayobject.hpp"
 #include "libqopenglvertexarrayobject.hxx"
 
-QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_new() {
+QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_New() {
     return new VirtualQOpenGLVertexArrayObject();
 }
 
-QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_new2(QObject* parent) {
+QOpenGLVertexArrayObject* QOpenGLVertexArrayObject_New2(QObject* parent) {
     return new VirtualQOpenGLVertexArrayObject(parent);
 }
 
@@ -435,7 +435,7 @@ void QOpenGLVertexArrayObject_Delete(QOpenGLVertexArrayObject* self) {
     delete self;
 }
 
-QOpenGLVertexArrayObject__Binder* QOpenGLVertexArrayObject__Binder_new(QOpenGLVertexArrayObject* v) {
+QOpenGLVertexArrayObject__Binder* QOpenGLVertexArrayObject__Binder_New(QOpenGLVertexArrayObject* v) {
     return new QOpenGLVertexArrayObject::Binder(v);
 }
 

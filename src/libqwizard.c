@@ -17,15 +17,15 @@
 #include "libqwizard.h"
 
 QWizard* q_wizard_new(void* parent) {
-    return QWizard_new((QWidget*)parent);
+    return QWizard_New((QWidget*)parent);
 }
 
 QWizard* q_wizard_new2() {
-    return QWizard_new2();
+    return QWizard_New2();
 }
 
 QWizard* q_wizard_new3(void* parent, int32_t flags) {
-    return QWizard_new3((QWidget*)parent, flags);
+    return QWizard_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_wizard_meta_object(void* self) {
@@ -2520,11 +2520,11 @@ void q_wizard_delete(void* self) {
 }
 
 QWizardPage* q_wizardpage_new(void* parent) {
-    return QWizardPage_new((QWidget*)parent);
+    return QWizardPage_New((QWidget*)parent);
 }
 
 QWizardPage* q_wizardpage_new2() {
-    return QWizardPage_new2();
+    return QWizardPage_New2();
 }
 
 const QMetaObject* q_wizardpage_meta_object(void* self) {

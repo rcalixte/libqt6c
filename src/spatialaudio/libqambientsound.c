@@ -8,7 +8,7 @@
 #include "libqambientsound.h"
 
 QAmbientSound* q_ambientsound_new(void* engine) {
-    return QAmbientSound_new((QAudioEngine*)engine);
+    return QAmbientSound_New((QAudioEngine*)engine);
 }
 
 const QMetaObject* q_ambientsound_meta_object(void* self) {

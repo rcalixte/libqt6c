@@ -15,11 +15,11 @@
 #include "libqdatawidgetmapper.hpp"
 #include "libqdatawidgetmapper.hxx"
 
-QDataWidgetMapper* QDataWidgetMapper_new() {
+QDataWidgetMapper* QDataWidgetMapper_New() {
     return new VirtualQDataWidgetMapper();
 }
 
-QDataWidgetMapper* QDataWidgetMapper_new2(QObject* parent) {
+QDataWidgetMapper* QDataWidgetMapper_New2(QObject* parent) {
     return new VirtualQDataWidgetMapper(parent);
 }
 

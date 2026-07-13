@@ -38,8 +38,8 @@ void QGraphicsAnchor_SetSizePolicy(QGraphicsAnchor* self, int policy);
 int QGraphicsAnchor_SizePolicy(const QGraphicsAnchor* self);
 void QGraphicsAnchor_Delete(QGraphicsAnchor* self);
 
-QGraphicsAnchorLayout* QGraphicsAnchorLayout_new();
-QGraphicsAnchorLayout* QGraphicsAnchorLayout_new2(QGraphicsLayoutItem* parent);
+QGraphicsAnchorLayout* QGraphicsAnchorLayout_New();
+QGraphicsAnchorLayout* QGraphicsAnchorLayout_New2(QGraphicsLayoutItem* parent);
 QGraphicsAnchor* QGraphicsAnchorLayout_AddAnchor(QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, int firstEdge, QGraphicsLayoutItem* secondItem, int secondEdge);
 QGraphicsAnchor* QGraphicsAnchorLayout_Anchor(QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, int firstEdge, QGraphicsLayoutItem* secondItem, int secondEdge);
 void QGraphicsAnchorLayout_AddCornerAnchors(QGraphicsAnchorLayout* self, QGraphicsLayoutItem* firstItem, int firstCorner, QGraphicsLayoutItem* secondItem, int secondCorner);

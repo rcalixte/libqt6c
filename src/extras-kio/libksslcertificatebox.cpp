@@ -38,11 +38,11 @@
 #include "libksslcertificatebox.hpp"
 #include "libksslcertificatebox.hxx"
 
-KSslCertificateBox* KSslCertificateBox_new(QWidget* parent) {
+KSslCertificateBox* KSslCertificateBox_New(QWidget* parent) {
     return new VirtualKSslCertificateBox(parent);
 }
 
-KSslCertificateBox* KSslCertificateBox_new2() {
+KSslCertificateBox* KSslCertificateBox_New2() {
     return new VirtualKSslCertificateBox();
 }
 

@@ -5,11 +5,11 @@
 #include "libudsentry.hpp"
 #include "libudsentry.hxx"
 
-KIO__UDSEntry* KIO__UDSEntry_new() {
+KIO__UDSEntry* KIO__UDSEntry_New() {
     return new KIO::UDSEntry();
 }
 
-KIO__UDSEntry* KIO__UDSEntry_new2(const KIO__UDSEntry* param1) {
+KIO__UDSEntry* KIO__UDSEntry_New2(const KIO__UDSEntry* param1) {
     return new KIO::UDSEntry(*param1);
 }
 

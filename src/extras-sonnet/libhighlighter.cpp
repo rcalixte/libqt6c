@@ -20,19 +20,19 @@
 #include "libhighlighter.hpp"
 #include "libhighlighter.hxx"
 
-Sonnet__Highlighter* Sonnet__Highlighter_new(QTextEdit* textEdit) {
+Sonnet__Highlighter* Sonnet__Highlighter_New(QTextEdit* textEdit) {
     return new VirtualSonnetHighlighter(textEdit);
 }
 
-Sonnet__Highlighter* Sonnet__Highlighter_new2(QPlainTextEdit* textEdit) {
+Sonnet__Highlighter* Sonnet__Highlighter_New2(QPlainTextEdit* textEdit) {
     return new VirtualSonnetHighlighter(textEdit);
 }
 
-Sonnet__Highlighter* Sonnet__Highlighter_new3(QTextEdit* textEdit, const QColor* col) {
+Sonnet__Highlighter* Sonnet__Highlighter_New3(QTextEdit* textEdit, const QColor* col) {
     return new VirtualSonnetHighlighter(textEdit, *col);
 }
 
-Sonnet__Highlighter* Sonnet__Highlighter_new4(QPlainTextEdit* textEdit, const QColor* col) {
+Sonnet__Highlighter* Sonnet__Highlighter_New4(QPlainTextEdit* textEdit, const QColor* col) {
     return new VirtualSonnetHighlighter(textEdit, *col);
 }
 

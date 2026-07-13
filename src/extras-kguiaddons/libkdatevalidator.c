@@ -8,11 +8,11 @@
 #include "libkdatevalidator.h"
 
 KDateValidator* k_datevalidator_new() {
-    return KDateValidator_new();
+    return KDateValidator_New();
 }
 
 KDateValidator* k_datevalidator_new2(void* parent) {
-    return KDateValidator_new2((QObject*)parent);
+    return KDateValidator_New2((QObject*)parent);
 }
 
 const QMetaObject* k_datevalidator_meta_object(void* self) {

@@ -6,11 +6,11 @@
 #include "libkcolorschemewatcher.h"
 
 KColorSchemeWatcher* k_colorschemewatcher_new() {
-    return KColorSchemeWatcher_new();
+    return KColorSchemeWatcher_New();
 }
 
 KColorSchemeWatcher* k_colorschemewatcher_new2(void* parent) {
-    return KColorSchemeWatcher_new2((QObject*)parent);
+    return KColorSchemeWatcher_New2((QObject*)parent);
 }
 
 const QMetaObject* k_colorschemewatcher_meta_object(void* self) {

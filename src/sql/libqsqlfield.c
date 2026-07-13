@@ -4,31 +4,31 @@
 #include "libqsqlfield.h"
 
 QSqlField* q_sqlfield_new() {
-    return QSqlField_new();
+    return QSqlField_New();
 }
 
 QSqlField* q_sqlfield_new2(void* other) {
-    return QSqlField_new2((QSqlField*)other);
+    return QSqlField_New2((QSqlField*)other);
 }
 
 QSqlField* q_sqlfield_new3(const char* fieldName, int32_t type) {
-    return QSqlField_new3(qstring(fieldName), type);
+    return QSqlField_New3(qstring(fieldName), type);
 }
 
 QSqlField* q_sqlfield_new4(const char* fieldName) {
-    return QSqlField_new4(qstring(fieldName));
+    return QSqlField_New4(qstring(fieldName));
 }
 
 QSqlField* q_sqlfield_new5(const char* fieldName, void* type) {
-    return QSqlField_new5(qstring(fieldName), (QMetaType*)type);
+    return QSqlField_New5(qstring(fieldName), (QMetaType*)type);
 }
 
 QSqlField* q_sqlfield_new6(const char* fieldName, void* type, const char* tableName) {
-    return QSqlField_new6(qstring(fieldName), (QMetaType*)type, qstring(tableName));
+    return QSqlField_New6(qstring(fieldName), (QMetaType*)type, qstring(tableName));
 }
 
 QSqlField* q_sqlfield_new7(const char* fieldName, int32_t type, const char* tableName) {
-    return QSqlField_new7(qstring(fieldName), type, qstring(tableName));
+    return QSqlField_New7(qstring(fieldName), type, qstring(tableName));
 }
 
 void q_sqlfield_operator_assign(void* self, void* other) {

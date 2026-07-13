@@ -31,8 +31,8 @@ typedef struct QUdpSocket QUdpSocket;
 typedef struct QVariant QVariant;
 #endif
 
-QUdpSocket* QUdpSocket_new();
-QUdpSocket* QUdpSocket_new2(QObject* parent);
+QUdpSocket* QUdpSocket_New();
+QUdpSocket* QUdpSocket_New2(QObject* parent);
 QMetaObject* QUdpSocket_MetaObject(const QUdpSocket* self);
 void* QUdpSocket_Metacast(QUdpSocket* self, const char* param1);
 int QUdpSocket_Metacall(QUdpSocket* self, int param1, int param2, void** param3);

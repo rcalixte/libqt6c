@@ -5,7 +5,7 @@
 #include "libkemailsettings.hpp"
 #include "libkemailsettings.hxx"
 
-KEMailSettings* KEMailSettings_new() {
+KEMailSettings* KEMailSettings_New() {
     return new KEMailSettings();
 }
 

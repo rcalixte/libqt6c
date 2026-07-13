@@ -12,26 +12,26 @@
 #include "libqinputdevice.hpp"
 #include "libqinputdevice.hxx"
 
-QInputDevice* QInputDevice_new() {
+QInputDevice* QInputDevice_New() {
     return new VirtualQInputDevice();
 }
 
-QInputDevice* QInputDevice_new2(const libqt_string name, long long systemId, int type) {
+QInputDevice* QInputDevice_New2(const libqt_string name, long long systemId, int type) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(type));
 }
 
-QInputDevice* QInputDevice_new3(QObject* parent) {
+QInputDevice* QInputDevice_New3(QObject* parent) {
     return new VirtualQInputDevice(parent);
 }
 
-QInputDevice* QInputDevice_new4(const libqt_string name, long long systemId, int type, const libqt_string seatName) {
+QInputDevice* QInputDevice_New4(const libqt_string name, long long systemId, int type, const libqt_string seatName) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
     return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(type), seatName_QString);
 }
 
-QInputDevice* QInputDevice_new5(const libqt_string name, long long systemId, int type, const libqt_string seatName, QObject* parent) {
+QInputDevice* QInputDevice_New5(const libqt_string name, long long systemId, int type, const libqt_string seatName, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString seatName_QString = QString::fromUtf8(seatName.data, seatName.len);
     return new VirtualQInputDevice(name_QString, static_cast<qint64>(systemId), static_cast<QInputDevice::DeviceType>(type), seatName_QString, parent);

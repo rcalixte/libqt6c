@@ -12,11 +12,11 @@
 #include "liblanguagetoolmanager.hpp"
 #include "liblanguagetoolmanager.hxx"
 
-TextGrammarCheck__LanguageToolManager* TextGrammarCheck__LanguageToolManager_new() {
+TextGrammarCheck__LanguageToolManager* TextGrammarCheck__LanguageToolManager_New() {
     return new VirtualTextGrammarCheckLanguageToolManager();
 }
 
-TextGrammarCheck__LanguageToolManager* TextGrammarCheck__LanguageToolManager_new2(QObject* parent) {
+TextGrammarCheck__LanguageToolManager* TextGrammarCheck__LanguageToolManager_New2(QObject* parent) {
     return new VirtualTextGrammarCheckLanguageToolManager(parent);
 }
 

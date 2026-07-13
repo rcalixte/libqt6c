@@ -19,8 +19,8 @@ typedef struct QLocale QLocale;
 typedef struct QVoice QVoice;
 #endif
 
-QVoice* QVoice_new();
-QVoice* QVoice_new2(const QVoice* other);
+QVoice* QVoice_New();
+QVoice* QVoice_New2(const QVoice* other);
 void QVoice_OperatorAssign(QVoice* self, const QVoice* other);
 void QVoice_Swap(QVoice* self, QVoice* other);
 libqt_string QVoice_Name(const QVoice* self);

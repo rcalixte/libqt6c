@@ -7,11 +7,11 @@
 #include "libqlowenergyadvertisingdata.hpp"
 #include "libqlowenergyadvertisingdata.hxx"
 
-QLowEnergyAdvertisingData* QLowEnergyAdvertisingData_new() {
+QLowEnergyAdvertisingData* QLowEnergyAdvertisingData_New() {
     return new QLowEnergyAdvertisingData();
 }
 
-QLowEnergyAdvertisingData* QLowEnergyAdvertisingData_new2(const QLowEnergyAdvertisingData* other) {
+QLowEnergyAdvertisingData* QLowEnergyAdvertisingData_New2(const QLowEnergyAdvertisingData* other) {
     return new QLowEnergyAdvertisingData(*other);
 }
 

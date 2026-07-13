@@ -6,7 +6,7 @@
 #include "libqabstractfileiconprovider.hpp"
 #include "libqabstractfileiconprovider.hxx"
 
-QAbstractFileIconProvider* QAbstractFileIconProvider_new() {
+QAbstractFileIconProvider* QAbstractFileIconProvider_New() {
     return new VirtualQAbstractFileIconProvider();
 }
 

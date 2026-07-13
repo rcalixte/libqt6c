@@ -7,11 +7,11 @@
 #include "libqaccessibleplugin.h"
 
 QAccessiblePlugin* q_accessibleplugin_new() {
-    return QAccessiblePlugin_new();
+    return QAccessiblePlugin_New();
 }
 
 QAccessiblePlugin* q_accessibleplugin_new2(void* parent) {
-    return QAccessiblePlugin_new2((QObject*)parent);
+    return QAccessiblePlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_accessibleplugin_meta_object(void* self) {

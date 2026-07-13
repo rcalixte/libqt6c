@@ -7,7 +7,7 @@
 #include "liblayoutdecoration.h"
 
 QDesignerLayoutDecorationExtension* q_designerlayoutdecorationextension_new() {
-    return QDesignerLayoutDecorationExtension_new();
+    return QDesignerLayoutDecorationExtension_New();
 }
 
 libqt_list /* of QWidget* */ q_designerlayoutdecorationextension_widgets(void* self, void* layout) {

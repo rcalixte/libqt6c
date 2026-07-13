@@ -13,11 +13,11 @@
 #include "libqopenglshaderprogram.h"
 
 QOpenGLShader* q_openglshader_new(int32_t type) {
-    return QOpenGLShader_new(type);
+    return QOpenGLShader_New(type);
 }
 
 QOpenGLShader* q_openglshader_new2(int32_t type, void* parent) {
-    return QOpenGLShader_new2(type, (QObject*)parent);
+    return QOpenGLShader_New2(type, (QObject*)parent);
 }
 
 const QMetaObject* q_openglshader_meta_object(void* self) {
@@ -479,11 +479,11 @@ void q_openglshader_delete(void* self) {
 }
 
 QOpenGLShaderProgram* q_openglshaderprogram_new() {
-    return QOpenGLShaderProgram_new();
+    return QOpenGLShaderProgram_New();
 }
 
 QOpenGLShaderProgram* q_openglshaderprogram_new2(void* parent) {
-    return QOpenGLShaderProgram_new2((QObject*)parent);
+    return QOpenGLShaderProgram_New2((QObject*)parent);
 }
 
 const QMetaObject* q_openglshaderprogram_meta_object(void* self) {

@@ -7,11 +7,11 @@
 #include "libqscimacro.h"
 
 QsciMacro* q_scimacro_new(void* parent) {
-    return QsciMacro_new((QsciScintilla*)parent);
+    return QsciMacro_New((QsciScintilla*)parent);
 }
 
 QsciMacro* q_scimacro_new2(const char* asc, void* parent) {
-    return QsciMacro_new2(qstring(asc), (QsciScintilla*)parent);
+    return QsciMacro_New2(qstring(asc), (QsciScintilla*)parent);
 }
 
 const QMetaObject* q_scimacro_meta_object(void* self) {

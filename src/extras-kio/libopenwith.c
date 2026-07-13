@@ -2,11 +2,11 @@
 #include "libopenwith.h"
 
 KIO__OpenWith* k_io__openwith_new(void* other) {
-    return KIO__OpenWith_new((KIO__OpenWith*)other);
+    return KIO__OpenWith_New((KIO__OpenWith*)other);
 }
 
 KIO__OpenWith* k_io__openwith_new2(void* other) {
-    return KIO__OpenWith_new2((KIO__OpenWith*)other);
+    return KIO__OpenWith_New2((KIO__OpenWith*)other);
 }
 
 void k_io__openwith_copy_assign(void* self, void* other) {
@@ -22,7 +22,7 @@ void k_io__openwith_delete(void* self) {
 }
 
 KIO__OpenWith__AcceptResult* k_io__openwith__acceptresult_new(void* param1) {
-    return KIO__OpenWith__AcceptResult_new((KIO__OpenWith__AcceptResult*)param1);
+    return KIO__OpenWith__AcceptResult_New((KIO__OpenWith__AcceptResult*)param1);
 }
 
 bool k_io__openwith__acceptresult_accept(void* self) {

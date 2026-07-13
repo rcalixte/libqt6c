@@ -20,8 +20,8 @@ typedef struct QGeoManeuver QGeoManeuver;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoManeuver* QGeoManeuver_new();
-QGeoManeuver* QGeoManeuver_new2(const QGeoManeuver* other);
+QGeoManeuver* QGeoManeuver_New();
+QGeoManeuver* QGeoManeuver_New2(const QGeoManeuver* other);
 void QGeoManeuver_OperatorAssign(QGeoManeuver* self, const QGeoManeuver* other);
 void QGeoManeuver_Swap(QGeoManeuver* self, QGeoManeuver* other);
 bool QGeoManeuver_IsValid(const QGeoManeuver* self);

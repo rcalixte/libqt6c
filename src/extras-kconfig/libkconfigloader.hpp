@@ -30,10 +30,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KConfigLoader* KConfigLoader_new(const libqt_string configFile, QIODevice* xml);
-KConfigLoader* KConfigLoader_new2(const KConfigGroup* config, QIODevice* xml);
-KConfigLoader* KConfigLoader_new3(const libqt_string configFile, QIODevice* xml, QObject* parent);
-KConfigLoader* KConfigLoader_new4(const KConfigGroup* config, QIODevice* xml, QObject* parent);
+KConfigLoader* KConfigLoader_New(const libqt_string configFile, QIODevice* xml);
+KConfigLoader* KConfigLoader_New2(const KConfigGroup* config, QIODevice* xml);
+KConfigLoader* KConfigLoader_New3(const libqt_string configFile, QIODevice* xml, QObject* parent);
+KConfigLoader* KConfigLoader_New4(const KConfigGroup* config, QIODevice* xml, QObject* parent);
 KConfigSkeletonItem* KConfigLoader_FindItem(const KConfigLoader* self, const libqt_string group, const libqt_string key);
 KConfigSkeletonItem* KConfigLoader_FindItemByName(const KConfigLoader* self, const libqt_string name);
 QVariant* KConfigLoader_Property(const KConfigLoader* self, const libqt_string name);

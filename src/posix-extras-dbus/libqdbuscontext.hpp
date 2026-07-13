@@ -20,7 +20,7 @@ typedef struct QDBusContext QDBusContext;
 typedef struct QDBusMessage QDBusMessage;
 #endif
 
-QDBusContext* QDBusContext_new();
+QDBusContext* QDBusContext_New();
 bool QDBusContext_CalledFromDBus(const QDBusContext* self);
 QDBusConnection* QDBusContext_Connection(const QDBusContext* self);
 QDBusMessage* QDBusContext_Message(const QDBusContext* self);

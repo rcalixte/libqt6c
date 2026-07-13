@@ -5,11 +5,11 @@
 #include "libgrammaraction.hpp"
 #include "libgrammaraction.hxx"
 
-TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_new() {
+TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_New() {
     return new TextGrammarCheck::GrammarAction();
 }
 
-TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_new2(const TextGrammarCheck__GrammarAction* param1) {
+TextGrammarCheck__GrammarAction* TextGrammarCheck__GrammarAction_New2(const TextGrammarCheck__GrammarAction* param1) {
     return new TextGrammarCheck::GrammarAction(*param1);
 }
 

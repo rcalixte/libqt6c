@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KParts__PartManager* KParts__PartManager_new(QWidget* parent);
-KParts__PartManager* KParts__PartManager_new2(QWidget* topLevel, QObject* parent);
+KParts__PartManager* KParts__PartManager_New(QWidget* parent);
+KParts__PartManager* KParts__PartManager_New2(QWidget* topLevel, QObject* parent);
 QMetaObject* KParts__PartManager_MetaObject(const KParts__PartManager* self);
 void* KParts__PartManager_Metacast(KParts__PartManager* self, const char* param1);
 int KParts__PartManager_Metacall(KParts__PartManager* self, int param1, int param2, void** param3);

@@ -15,11 +15,11 @@
 #include "libabstractannotationitemdelegate.hpp"
 #include "libabstractannotationitemdelegate.hxx"
 
-KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_new() {
+KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_New() {
     return new KTextEditor::StyleOptionAnnotationItem();
 }
 
-KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_new2(const KTextEditor__StyleOptionAnnotationItem* other) {
+KTextEditor__StyleOptionAnnotationItem* KTextEditor__StyleOptionAnnotationItem_New2(const KTextEditor__StyleOptionAnnotationItem* other) {
     return new KTextEditor::StyleOptionAnnotationItem(*other);
 }
 

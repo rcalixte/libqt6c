@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDataWidgetMapper* QDataWidgetMapper_new();
-QDataWidgetMapper* QDataWidgetMapper_new2(QObject* parent);
+QDataWidgetMapper* QDataWidgetMapper_New();
+QDataWidgetMapper* QDataWidgetMapper_New2(QObject* parent);
 QMetaObject* QDataWidgetMapper_MetaObject(const QDataWidgetMapper* self);
 void* QDataWidgetMapper_Metacast(QDataWidgetMapper* self, const char* param1);
 int QDataWidgetMapper_Metacall(QDataWidgetMapper* self, int param1, int param2, void** param3);

@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QMediaDevices* QMediaDevices_new();
-QMediaDevices* QMediaDevices_new2(QObject* parent);
+QMediaDevices* QMediaDevices_New();
+QMediaDevices* QMediaDevices_New2(QObject* parent);
 QMetaObject* QMediaDevices_MetaObject(const QMediaDevices* self);
 void* QMediaDevices_Metacast(QMediaDevices* self, const char* param1);
 int QMediaDevices_Metacall(QMediaDevices* self, int param1, int param2, void** param3);

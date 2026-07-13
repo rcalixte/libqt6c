@@ -43,11 +43,11 @@
 #include "libkbookmarkcontextmenu.hpp"
 #include "libkbookmarkcontextmenu.hxx"
 
-KBookmarkContextMenu* KBookmarkContextMenu_new(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner) {
+KBookmarkContextMenu* KBookmarkContextMenu_New(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner) {
     return new VirtualKBookmarkContextMenu(*bm, manager, owner);
 }
 
-KBookmarkContextMenu* KBookmarkContextMenu_new2(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner, QWidget* parent) {
+KBookmarkContextMenu* KBookmarkContextMenu_New2(const KBookmark* bm, KBookmarkManager* manager, KBookmarkOwner* owner, QWidget* parent) {
     return new VirtualKBookmarkContextMenu(*bm, manager, owner, parent);
 }
 

@@ -16,19 +16,19 @@
 #include "libqfontdialog.h"
 
 QFontDialog* q_fontdialog_new(void* parent) {
-    return QFontDialog_new((QWidget*)parent);
+    return QFontDialog_New((QWidget*)parent);
 }
 
 QFontDialog* q_fontdialog_new2() {
-    return QFontDialog_new2();
+    return QFontDialog_New2();
 }
 
 QFontDialog* q_fontdialog_new3(void* initial) {
-    return QFontDialog_new3((QFont*)initial);
+    return QFontDialog_New3((QFont*)initial);
 }
 
 QFontDialog* q_fontdialog_new4(void* initial, void* parent) {
-    return QFontDialog_new4((QFont*)initial, (QWidget*)parent);
+    return QFontDialog_New4((QFont*)initial, (QWidget*)parent);
 }
 
 const QMetaObject* q_fontdialog_meta_object(void* self) {

@@ -6,11 +6,11 @@
 #include "libqdebug.h"
 
 QDebug* q_debug_new(void* device) {
-    return QDebug_new((QIODevice*)device);
+    return QDebug_New((QIODevice*)device);
 }
 
 QDebug* q_debug_new2(void* o) {
-    return QDebug_new2((QDebug*)o);
+    return QDebug_New2((QDebug*)o);
 }
 
 void q_debug_operator_assign(void* self, void* other) {
@@ -170,7 +170,7 @@ void q_debug_delete(void* self) {
 }
 
 QDebugStateSaver* q_debugstatesaver_new(void* dbg) {
-    return QDebugStateSaver_new((QDebug*)dbg);
+    return QDebugStateSaver_New((QDebug*)dbg);
 }
 
 void q_debugstatesaver_delete(void* self) {
@@ -178,11 +178,11 @@ void q_debugstatesaver_delete(void* self) {
 }
 
 QNoDebug* q_nodebug_new(void* other) {
-    return QNoDebug_new((QNoDebug*)other);
+    return QNoDebug_New((QNoDebug*)other);
 }
 
 QNoDebug* q_nodebug_new2(void* other) {
-    return QNoDebug_new2((QNoDebug*)other);
+    return QNoDebug_New2((QNoDebug*)other);
 }
 
 void q_nodebug_copy_assign(void* self, void* other) {

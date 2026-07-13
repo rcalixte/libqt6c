@@ -7,11 +7,11 @@
 #include "libqplaceidreply.h"
 
 QPlaceIdReply* q_placeidreply_new(int32_t operationType) {
-    return QPlaceIdReply_new(operationType);
+    return QPlaceIdReply_New(operationType);
 }
 
 QPlaceIdReply* q_placeidreply_new2(int32_t operationType, void* parent) {
-    return QPlaceIdReply_new2(operationType, (QObject*)parent);
+    return QPlaceIdReply_New2(operationType, (QObject*)parent);
 }
 
 const QMetaObject* q_placeidreply_meta_object(void* self) {

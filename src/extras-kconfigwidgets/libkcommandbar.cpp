@@ -42,7 +42,7 @@
 #include "libkcommandbar.hpp"
 #include "libkcommandbar.hxx"
 
-KCommandBar* KCommandBar_new(QWidget* parent) {
+KCommandBar* KCommandBar_New(QWidget* parent) {
     return new VirtualKCommandBar(parent);
 }
 
@@ -1844,11 +1844,11 @@ void KCommandBar_Delete(KCommandBar* self) {
     delete self;
 }
 
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_new(const KCommandBar__ActionGroup* param1) {
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New(const KCommandBar__ActionGroup* param1) {
     return new KCommandBar::ActionGroup(*param1);
 }
 
-KCommandBar__ActionGroup* KCommandBar__ActionGroup_new2() {
+KCommandBar__ActionGroup* KCommandBar__ActionGroup_New2() {
     return new KCommandBar::ActionGroup();
 }
 

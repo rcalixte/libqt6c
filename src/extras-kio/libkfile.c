@@ -2,11 +2,11 @@
 #include "libkfile.h"
 
 KFile* k_file_new(void* other) {
-    return KFile_new((KFile*)other);
+    return KFile_New((KFile*)other);
 }
 
 KFile* k_file_new2(void* other) {
-    return KFile_new2((KFile*)other);
+    return KFile_New2((KFile*)other);
 }
 
 void k_file_copy_assign(void* self, void* other) {

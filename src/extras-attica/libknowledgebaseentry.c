@@ -4,11 +4,11 @@
 #include "libknowledgebaseentry.h"
 
 Attica__KnowledgeBaseEntry* k_attica__knowledgebaseentry_new() {
-    return Attica__KnowledgeBaseEntry_new();
+    return Attica__KnowledgeBaseEntry_New();
 }
 
 Attica__KnowledgeBaseEntry* k_attica__knowledgebaseentry_new2(void* other) {
-    return Attica__KnowledgeBaseEntry_new2((Attica__KnowledgeBaseEntry*)other);
+    return Attica__KnowledgeBaseEntry_New2((Attica__KnowledgeBaseEntry*)other);
 }
 
 void k_attica__knowledgebaseentry_operator_assign(void* self, void* other) {

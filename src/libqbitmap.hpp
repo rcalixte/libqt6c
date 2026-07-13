@@ -27,13 +27,13 @@ typedef struct QTransform QTransform;
 typedef struct QVariant QVariant;
 #endif
 
-QBitmap* QBitmap_new();
-QBitmap* QBitmap_new2(const QPixmap* param1);
-QBitmap* QBitmap_new3(int w, int h);
-QBitmap* QBitmap_new4(const QSize* param1);
-QBitmap* QBitmap_new5(const libqt_string fileName);
-QBitmap* QBitmap_new6(const QBitmap* param1);
-QBitmap* QBitmap_new7(const libqt_string fileName, const char* format);
+QBitmap* QBitmap_New();
+QBitmap* QBitmap_New2(const QPixmap* param1);
+QBitmap* QBitmap_New3(int w, int h);
+QBitmap* QBitmap_New4(const QSize* param1);
+QBitmap* QBitmap_New5(const libqt_string fileName);
+QBitmap* QBitmap_New6(const QBitmap* param1);
+QBitmap* QBitmap_New7(const libqt_string fileName, const char* format);
 void QBitmap_OperatorAssign(QBitmap* self, const QPixmap* param1);
 void QBitmap_Swap(QBitmap* self, QBitmap* other);
 QVariant* QBitmap_ToQVariant(const QBitmap* self);

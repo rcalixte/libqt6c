@@ -20,23 +20,23 @@
 #include "libqtextformat.hpp"
 #include "libqtextformat.hxx"
 
-QTextLength* QTextLength_new(const QTextLength* other) {
+QTextLength* QTextLength_New(const QTextLength* other) {
     return new QTextLength(*other);
 }
 
-QTextLength* QTextLength_new2(QTextLength* other) {
+QTextLength* QTextLength_New2(QTextLength* other) {
     return new QTextLength(std::move(*other));
 }
 
-QTextLength* QTextLength_new3() {
+QTextLength* QTextLength_New3() {
     return new QTextLength();
 }
 
-QTextLength* QTextLength_new4(int type, double value) {
+QTextLength* QTextLength_New4(int type, double value) {
     return new QTextLength(static_cast<QTextLength::Type>(type), static_cast<qreal>(value));
 }
 
-QTextLength* QTextLength_new5(const QTextLength* param1) {
+QTextLength* QTextLength_New5(const QTextLength* param1) {
     return new QTextLength(*param1);
 }
 
@@ -76,15 +76,15 @@ void QTextLength_Delete(QTextLength* self) {
     delete self;
 }
 
-QTextFormat* QTextFormat_new() {
+QTextFormat* QTextFormat_New() {
     return new QTextFormat();
 }
 
-QTextFormat* QTextFormat_new2(int type) {
+QTextFormat* QTextFormat_New2(int type) {
     return new QTextFormat(static_cast<int>(type));
 }
 
-QTextFormat* QTextFormat_new3(const QTextFormat* rhs) {
+QTextFormat* QTextFormat_New3(const QTextFormat* rhs) {
     return new QTextFormat(*rhs);
 }
 
@@ -333,11 +333,11 @@ void QTextFormat_Delete(QTextFormat* self) {
     delete self;
 }
 
-QTextCharFormat* QTextCharFormat_new() {
+QTextCharFormat* QTextCharFormat_New() {
     return new QTextCharFormat();
 }
 
-QTextCharFormat* QTextCharFormat_new2(const QTextCharFormat* param1) {
+QTextCharFormat* QTextCharFormat_New2(const QTextCharFormat* param1) {
     return new QTextCharFormat(*param1);
 }
 
@@ -680,11 +680,11 @@ void QTextCharFormat_Delete(QTextCharFormat* self) {
     delete self;
 }
 
-QTextBlockFormat* QTextBlockFormat_new() {
+QTextBlockFormat* QTextBlockFormat_New() {
     return new QTextBlockFormat();
 }
 
-QTextBlockFormat* QTextBlockFormat_new2(const QTextBlockFormat* param1) {
+QTextBlockFormat* QTextBlockFormat_New2(const QTextBlockFormat* param1) {
     return new QTextBlockFormat(*param1);
 }
 
@@ -823,11 +823,11 @@ void QTextBlockFormat_Delete(QTextBlockFormat* self) {
     delete self;
 }
 
-QTextListFormat* QTextListFormat_new() {
+QTextListFormat* QTextListFormat_New() {
     return new QTextListFormat();
 }
 
-QTextListFormat* QTextListFormat_new2(const QTextListFormat* param1) {
+QTextListFormat* QTextListFormat_New2(const QTextListFormat* param1) {
     return new QTextListFormat(*param1);
 }
 
@@ -897,11 +897,11 @@ void QTextListFormat_Delete(QTextListFormat* self) {
     delete self;
 }
 
-QTextImageFormat* QTextImageFormat_new() {
+QTextImageFormat* QTextImageFormat_New() {
     return new QTextImageFormat();
 }
 
-QTextImageFormat* QTextImageFormat_new2(const QTextImageFormat* param1) {
+QTextImageFormat* QTextImageFormat_New2(const QTextImageFormat* param1) {
     return new QTextImageFormat(*param1);
 }
 
@@ -966,11 +966,11 @@ void QTextImageFormat_Delete(QTextImageFormat* self) {
     delete self;
 }
 
-QTextFrameFormat* QTextFrameFormat_new() {
+QTextFrameFormat* QTextFrameFormat_New() {
     return new QTextFrameFormat();
 }
 
-QTextFrameFormat* QTextFrameFormat_new2(const QTextFrameFormat* param1) {
+QTextFrameFormat* QTextFrameFormat_New2(const QTextFrameFormat* param1) {
     return new QTextFrameFormat(*param1);
 }
 
@@ -1094,11 +1094,11 @@ void QTextFrameFormat_Delete(QTextFrameFormat* self) {
     delete self;
 }
 
-QTextTableFormat* QTextTableFormat_new() {
+QTextTableFormat* QTextTableFormat_New() {
     return new QTextTableFormat();
 }
 
-QTextTableFormat* QTextTableFormat_new2(const QTextTableFormat* param1) {
+QTextTableFormat* QTextTableFormat_New2(const QTextTableFormat* param1) {
     return new QTextTableFormat(*param1);
 }
 
@@ -1185,11 +1185,11 @@ void QTextTableFormat_Delete(QTextTableFormat* self) {
     delete self;
 }
 
-QTextTableCellFormat* QTextTableCellFormat_new() {
+QTextTableCellFormat* QTextTableCellFormat_New() {
     return new QTextTableCellFormat();
 }
 
-QTextTableCellFormat* QTextTableCellFormat_new2(const QTextTableCellFormat* param1) {
+QTextTableCellFormat* QTextTableCellFormat_New2(const QTextTableCellFormat* param1) {
     return new QTextTableCellFormat(*param1);
 }
 

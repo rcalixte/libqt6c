@@ -41,11 +41,11 @@
 #include "libqfontcombobox.hpp"
 #include "libqfontcombobox.hxx"
 
-QFontComboBox* QFontComboBox_new(QWidget* parent) {
+QFontComboBox* QFontComboBox_New(QWidget* parent) {
     return new VirtualQFontComboBox(parent);
 }
 
-QFontComboBox* QFontComboBox_new2() {
+QFontComboBox* QFontComboBox_New2() {
     return new VirtualQFontComboBox();
 }
 

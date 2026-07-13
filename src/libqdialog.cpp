@@ -37,15 +37,15 @@
 #include "libqdialog.hpp"
 #include "libqdialog.hxx"
 
-QDialog* QDialog_new(QWidget* parent) {
+QDialog* QDialog_New(QWidget* parent) {
     return new VirtualQDialog(parent);
 }
 
-QDialog* QDialog_new2() {
+QDialog* QDialog_New2() {
     return new VirtualQDialog();
 }
 
-QDialog* QDialog_new3(QWidget* parent, int f) {
+QDialog* QDialog_New3(QWidget* parent, int f) {
     return new VirtualQDialog(parent, static_cast<Qt::WindowFlags>(f));
 }
 

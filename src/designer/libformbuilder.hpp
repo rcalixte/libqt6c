@@ -28,7 +28,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QFormBuilder* QFormBuilder_new();
+QFormBuilder* QFormBuilder_New();
 libqt_list /* of libqt_string */ QFormBuilder_PluginPaths(const QFormBuilder* self);
 void QFormBuilder_ClearPluginPaths(QFormBuilder* self);
 void QFormBuilder_AddPluginPath(QFormBuilder* self, const libqt_string pluginPath);

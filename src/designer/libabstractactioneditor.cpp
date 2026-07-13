@@ -40,11 +40,11 @@
 #include "libabstractactioneditor.hpp"
 #include "libabstractactioneditor.hxx"
 
-QDesignerActionEditorInterface* QDesignerActionEditorInterface_new(QWidget* parent) {
+QDesignerActionEditorInterface* QDesignerActionEditorInterface_New(QWidget* parent) {
     return new VirtualQDesignerActionEditorInterface(parent);
 }
 
-QDesignerActionEditorInterface* QDesignerActionEditorInterface_new2(QWidget* parent, int flags) {
+QDesignerActionEditorInterface* QDesignerActionEditorInterface_New2(QWidget* parent, int flags) {
     return new VirtualQDesignerActionEditorInterface(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

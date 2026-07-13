@@ -7,7 +7,7 @@
 #include "libqfileiconprovider.hpp"
 #include "libqfileiconprovider.hxx"
 
-QFileIconProvider* QFileIconProvider_new() {
+QFileIconProvider* QFileIconProvider_New() {
     return new VirtualQFileIconProvider();
 }
 

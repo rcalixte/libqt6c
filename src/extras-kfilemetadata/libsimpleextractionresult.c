@@ -4,19 +4,19 @@
 #include "libsimpleextractionresult.h"
 
 KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new(const char* url) {
-    return KFileMetaData__SimpleExtractionResult_new(qstring(url));
+    return KFileMetaData__SimpleExtractionResult_New(qstring(url));
 }
 
 KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new2(void* rhs) {
-    return KFileMetaData__SimpleExtractionResult_new2((KFileMetaData__SimpleExtractionResult*)rhs);
+    return KFileMetaData__SimpleExtractionResult_New2((KFileMetaData__SimpleExtractionResult*)rhs);
 }
 
 KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new3(const char* url, const char* mimetype) {
-    return KFileMetaData__SimpleExtractionResult_new3(qstring(url), qstring(mimetype));
+    return KFileMetaData__SimpleExtractionResult_New3(qstring(url), qstring(mimetype));
 }
 
 KFileMetaData__SimpleExtractionResult* k_filemetadata__simpleextractionresult_new4(const char* url, const char* mimetype, const int32_t* flags) {
-    return KFileMetaData__SimpleExtractionResult_new4(qstring(url), qstring(mimetype), flags);
+    return KFileMetaData__SimpleExtractionResult_New4(qstring(url), qstring(mimetype), flags);
 }
 
 void k_filemetadata__simpleextractionresult_operator_assign(void* self, void* rhs) {

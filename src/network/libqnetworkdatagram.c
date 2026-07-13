@@ -3,23 +3,23 @@
 #include "libqnetworkdatagram.h"
 
 QNetworkDatagram* q_networkdatagram_new() {
-    return QNetworkDatagram_new();
+    return QNetworkDatagram_New();
 }
 
 QNetworkDatagram* q_networkdatagram_new2(char* data) {
-    return QNetworkDatagram_new2(qstring(data));
+    return QNetworkDatagram_New2(qstring(data));
 }
 
 QNetworkDatagram* q_networkdatagram_new3(void* other) {
-    return QNetworkDatagram_new3((QNetworkDatagram*)other);
+    return QNetworkDatagram_New3((QNetworkDatagram*)other);
 }
 
 QNetworkDatagram* q_networkdatagram_new4(char* data, void* destinationAddress) {
-    return QNetworkDatagram_new4(qstring(data), (QHostAddress*)destinationAddress);
+    return QNetworkDatagram_New4(qstring(data), (QHostAddress*)destinationAddress);
 }
 
 QNetworkDatagram* q_networkdatagram_new5(char* data, void* destinationAddress, uint16_t port) {
-    return QNetworkDatagram_new5(qstring(data), (QHostAddress*)destinationAddress, port);
+    return QNetworkDatagram_New5(qstring(data), (QHostAddress*)destinationAddress, port);
 }
 
 void q_networkdatagram_operator_assign(void* self, void* other) {

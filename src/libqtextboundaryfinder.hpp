@@ -19,15 +19,15 @@ typedef struct QChar QChar;
 typedef struct QTextBoundaryFinder QTextBoundaryFinder;
 #endif
 
-QTextBoundaryFinder* QTextBoundaryFinder_new();
-QTextBoundaryFinder* QTextBoundaryFinder_new2(const QTextBoundaryFinder* other);
-QTextBoundaryFinder* QTextBoundaryFinder_new3(int type, const libqt_string string);
-QTextBoundaryFinder* QTextBoundaryFinder_new4(int type, const QChar* chars, ptrdiff_t length);
-QTextBoundaryFinder* QTextBoundaryFinder_new5(int type, libqt_string str);
-QTextBoundaryFinder* QTextBoundaryFinder_new6(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer);
-QTextBoundaryFinder* QTextBoundaryFinder_new7(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer, ptrdiff_t bufferSize);
-QTextBoundaryFinder* QTextBoundaryFinder_new8(int type, libqt_string str, unsigned char* buffer);
-QTextBoundaryFinder* QTextBoundaryFinder_new9(int type, libqt_string str, unsigned char* buffer, ptrdiff_t bufferSize);
+QTextBoundaryFinder* QTextBoundaryFinder_New();
+QTextBoundaryFinder* QTextBoundaryFinder_New2(const QTextBoundaryFinder* other);
+QTextBoundaryFinder* QTextBoundaryFinder_New3(int type, const libqt_string string);
+QTextBoundaryFinder* QTextBoundaryFinder_New4(int type, const QChar* chars, ptrdiff_t length);
+QTextBoundaryFinder* QTextBoundaryFinder_New5(int type, libqt_string str);
+QTextBoundaryFinder* QTextBoundaryFinder_New6(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer);
+QTextBoundaryFinder* QTextBoundaryFinder_New7(int type, const QChar* chars, ptrdiff_t length, unsigned char* buffer, ptrdiff_t bufferSize);
+QTextBoundaryFinder* QTextBoundaryFinder_New8(int type, libqt_string str, unsigned char* buffer);
+QTextBoundaryFinder* QTextBoundaryFinder_New9(int type, libqt_string str, unsigned char* buffer, ptrdiff_t bufferSize);
 void QTextBoundaryFinder_OperatorAssign(QTextBoundaryFinder* self, const QTextBoundaryFinder* other);
 bool QTextBoundaryFinder_IsValid(const QTextBoundaryFinder* self);
 int QTextBoundaryFinder_Type(const QTextBoundaryFinder* self);

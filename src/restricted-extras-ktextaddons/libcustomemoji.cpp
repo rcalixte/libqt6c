@@ -4,11 +4,11 @@
 #include "libcustomemoji.hpp"
 #include "libcustomemoji.hxx"
 
-TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_new() {
+TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_New() {
     return new TextEmoticonsCore::CustomEmoji();
 }
 
-TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_new2(const TextEmoticonsCore__CustomEmoji* param1) {
+TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_New2(const TextEmoticonsCore__CustomEmoji* param1) {
     return new TextEmoticonsCore::CustomEmoji(*param1);
 }
 

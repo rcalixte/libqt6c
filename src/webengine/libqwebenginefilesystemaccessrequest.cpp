@@ -4,7 +4,7 @@
 #include "libqwebenginefilesystemaccessrequest.hpp"
 #include "libqwebenginefilesystemaccessrequest.hxx"
 
-QWebEngineFileSystemAccessRequest* QWebEngineFileSystemAccessRequest_new(const QWebEngineFileSystemAccessRequest* other) {
+QWebEngineFileSystemAccessRequest* QWebEngineFileSystemAccessRequest_New(const QWebEngineFileSystemAccessRequest* other) {
     return new QWebEngineFileSystemAccessRequest(*other);
 }
 

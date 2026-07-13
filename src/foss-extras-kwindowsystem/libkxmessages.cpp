@@ -10,32 +10,32 @@
 #include "libkxmessages.hpp"
 #include "libkxmessages.hxx"
 
-KXMessages* KXMessages_new() {
+KXMessages* KXMessages_New() {
     return new VirtualKXMessages();
 }
 
 #ifdef __Q_OS_LINUX__
-KXMessages* KXMessages_new2(xcb_connection_t* connection, xcb_window_t rootWindow) {
+KXMessages* KXMessages_New2(xcb_connection_t* connection, xcb_window_t rootWindow) {
     return new VirtualKXMessages(connection, rootWindow);
 }
 #endif
 
-KXMessages* KXMessages_new3(const char* accept_broadcast) {
+KXMessages* KXMessages_New3(const char* accept_broadcast) {
     return new VirtualKXMessages(accept_broadcast);
 }
 
-KXMessages* KXMessages_new4(const char* accept_broadcast, QObject* parent) {
+KXMessages* KXMessages_New4(const char* accept_broadcast, QObject* parent) {
     return new VirtualKXMessages(accept_broadcast, parent);
 }
 
 #ifdef __Q_OS_LINUX__
-KXMessages* KXMessages_new5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {
+KXMessages* KXMessages_New5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {
     return new VirtualKXMessages(connection, rootWindow, accept_broadcast);
 }
 #endif
 
 #ifdef __Q_OS_LINUX__
-KXMessages* KXMessages_new6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, QObject* parent) {
+KXMessages* KXMessages_New6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, QObject* parent) {
     return new VirtualKXMessages(connection, rootWindow, accept_broadcast, parent);
 }
 #endif

@@ -9,11 +9,11 @@
 #include "libqplacematchrequest.hpp"
 #include "libqplacematchrequest.hxx"
 
-QPlaceMatchRequest* QPlaceMatchRequest_new() {
+QPlaceMatchRequest* QPlaceMatchRequest_New() {
     return new QPlaceMatchRequest();
 }
 
-QPlaceMatchRequest* QPlaceMatchRequest_new2(const QPlaceMatchRequest* other) {
+QPlaceMatchRequest* QPlaceMatchRequest_New2(const QPlaceMatchRequest* other) {
     return new QPlaceMatchRequest(*other);
 }
 

@@ -13,19 +13,19 @@
 #include "libqbluetoothlocaldevice.hpp"
 #include "libqbluetoothlocaldevice.hxx"
 
-QBluetoothLocalDevice* QBluetoothLocalDevice_new() {
+QBluetoothLocalDevice* QBluetoothLocalDevice_New() {
     return new VirtualQBluetoothLocalDevice();
 }
 
-QBluetoothLocalDevice* QBluetoothLocalDevice_new2(const QBluetoothAddress* address) {
+QBluetoothLocalDevice* QBluetoothLocalDevice_New2(const QBluetoothAddress* address) {
     return new VirtualQBluetoothLocalDevice(*address);
 }
 
-QBluetoothLocalDevice* QBluetoothLocalDevice_new3(QObject* parent) {
+QBluetoothLocalDevice* QBluetoothLocalDevice_New3(QObject* parent) {
     return new VirtualQBluetoothLocalDevice(parent);
 }
 
-QBluetoothLocalDevice* QBluetoothLocalDevice_new4(const QBluetoothAddress* address, QObject* parent) {
+QBluetoothLocalDevice* QBluetoothLocalDevice_New4(const QBluetoothAddress* address, QObject* parent) {
     return new VirtualQBluetoothLocalDevice(*address, parent);
 }
 

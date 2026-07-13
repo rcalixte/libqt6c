@@ -5,11 +5,11 @@
 #include "libimportlibreofficeautocorrection.hpp"
 #include "libimportlibreofficeautocorrection.hxx"
 
-TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_new() {
+TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_New() {
     return new VirtualTextAutoCorrectionCoreImportLibreOfficeAutocorrection();
 }
 
-TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_new2(const TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* param1) {
+TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_New2(const TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* param1) {
     return new VirtualTextAutoCorrectionCoreImportLibreOfficeAutocorrection(*param1);
 }
 

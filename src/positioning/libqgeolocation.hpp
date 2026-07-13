@@ -22,8 +22,8 @@ typedef struct QGeoShape QGeoShape;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoLocation* QGeoLocation_new();
-QGeoLocation* QGeoLocation_new2(const QGeoLocation* other);
+QGeoLocation* QGeoLocation_New();
+QGeoLocation* QGeoLocation_New2(const QGeoLocation* other);
 void QGeoLocation_OperatorAssign(QGeoLocation* self, const QGeoLocation* other);
 void QGeoLocation_Swap(QGeoLocation* self, QGeoLocation* other);
 QGeoAddress* QGeoLocation_Address(const QGeoLocation* self);

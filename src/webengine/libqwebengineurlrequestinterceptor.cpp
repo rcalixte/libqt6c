@@ -11,11 +11,11 @@
 #include "libqwebengineurlrequestinterceptor.hpp"
 #include "libqwebengineurlrequestinterceptor.hxx"
 
-QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_new() {
+QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_New() {
     return new VirtualQWebEngineUrlRequestInterceptor();
 }
 
-QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_new2(QObject* p) {
+QWebEngineUrlRequestInterceptor* QWebEngineUrlRequestInterceptor_New2(QObject* p) {
     return new VirtualQWebEngineUrlRequestInterceptor(p);
 }
 

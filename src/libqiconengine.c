@@ -7,7 +7,7 @@
 #include "libqiconengine.h"
 
 QIconEngine* q_iconengine_new() {
-    return QIconEngine_new();
+    return QIconEngine_New();
 }
 
 void q_iconengine_paint(void* self, void* painter, void* rect, int32_t mode, int32_t state) {
@@ -197,7 +197,7 @@ void q_iconengine_delete(void* self) {
 }
 
 QIconEngine__ScaledPixmapArgument* q_iconengine__scaledpixmapargument_new(void* param1) {
-    return QIconEngine__ScaledPixmapArgument_new((QIconEngine__ScaledPixmapArgument*)param1);
+    return QIconEngine__ScaledPixmapArgument_New((QIconEngine__ScaledPixmapArgument*)param1);
 }
 
 QSize* q_iconengine__scaledpixmapargument_size(void* self) {

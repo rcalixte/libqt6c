@@ -11,11 +11,11 @@
 #include "libqimagecapture.h"
 
 QImageCapture* q_imagecapture_new() {
-    return QImageCapture_new();
+    return QImageCapture_New();
 }
 
 QImageCapture* q_imagecapture_new2(void* parent) {
-    return QImageCapture_new2((QObject*)parent);
+    return QImageCapture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_imagecapture_meta_object(void* self) {

@@ -5,15 +5,15 @@
 #include "libkbookmark.h"
 
 KBookmark* k_bookmark_new() {
-    return KBookmark_new();
+    return KBookmark_New();
 }
 
 KBookmark* k_bookmark_new2(void* elem) {
-    return KBookmark_new2((QDomElement*)elem);
+    return KBookmark_New2((QDomElement*)elem);
 }
 
 KBookmark* k_bookmark_new3(void* param1) {
-    return KBookmark_new3((KBookmark*)param1);
+    return KBookmark_New3((KBookmark*)param1);
 }
 
 KBookmark* k_bookmark_standalone_bookmark(const char* text, void* url, const char* icon) {
@@ -194,11 +194,11 @@ void k_bookmark_delete(void* self) {
 }
 
 KBookmarkGroup* k_bookmarkgroup_new() {
-    return KBookmarkGroup_new();
+    return KBookmarkGroup_New();
 }
 
 KBookmarkGroup* k_bookmarkgroup_new2(void* elem) {
-    return KBookmarkGroup_new2((QDomElement*)elem);
+    return KBookmarkGroup_New2((QDomElement*)elem);
 }
 
 bool k_bookmarkgroup_is_open(void* self) {
@@ -438,7 +438,7 @@ void k_bookmarkgroup_delete(void* self) {
 // Also inherits unprojectable QList<KBookmark>
 
 KBookmark__List* k_bookmark__list_new() {
-    return KBookmark__List_new();
+    return KBookmark__List_New();
 }
 
 void k_bookmark__list_populate_mime_data(void* self, void* mimeData) {

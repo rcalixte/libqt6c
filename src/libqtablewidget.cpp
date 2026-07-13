@@ -58,19 +58,19 @@
 #include "libqtablewidget.hpp"
 #include "libqtablewidget.hxx"
 
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_new(const QTableWidgetSelectionRange* other) {
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New(const QTableWidgetSelectionRange* other) {
     return new QTableWidgetSelectionRange(*other);
 }
 
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_new2(QTableWidgetSelectionRange* other) {
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New2(QTableWidgetSelectionRange* other) {
     return new QTableWidgetSelectionRange(std::move(*other));
 }
 
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_new3() {
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New3() {
     return new QTableWidgetSelectionRange();
 }
 
-QTableWidgetSelectionRange* QTableWidgetSelectionRange_new4(int top, int left, int bottom, int right) {
+QTableWidgetSelectionRange* QTableWidgetSelectionRange_New4(int top, int left, int bottom, int right) {
     return new QTableWidgetSelectionRange(static_cast<int>(top), static_cast<int>(left), static_cast<int>(bottom), static_cast<int>(right));
 }
 
@@ -110,34 +110,34 @@ void QTableWidgetSelectionRange_Delete(QTableWidgetSelectionRange* self) {
     delete self;
 }
 
-QTableWidgetItem* QTableWidgetItem_new() {
+QTableWidgetItem* QTableWidgetItem_New() {
     return new VirtualQTableWidgetItem();
 }
 
-QTableWidgetItem* QTableWidgetItem_new2(const libqt_string text) {
+QTableWidgetItem* QTableWidgetItem_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(text_QString);
 }
 
-QTableWidgetItem* QTableWidgetItem_new3(const QIcon* icon, const libqt_string text) {
+QTableWidgetItem* QTableWidgetItem_New3(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(*icon, text_QString);
 }
 
-QTableWidgetItem* QTableWidgetItem_new4(const QTableWidgetItem* other) {
+QTableWidgetItem* QTableWidgetItem_New4(const QTableWidgetItem* other) {
     return new VirtualQTableWidgetItem(*other);
 }
 
-QTableWidgetItem* QTableWidgetItem_new5(int type) {
+QTableWidgetItem* QTableWidgetItem_New5(int type) {
     return new VirtualQTableWidgetItem(static_cast<int>(type));
 }
 
-QTableWidgetItem* QTableWidgetItem_new6(const libqt_string text, int type) {
+QTableWidgetItem* QTableWidgetItem_New6(const libqt_string text, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(text_QString, static_cast<int>(type));
 }
 
-QTableWidgetItem* QTableWidgetItem_new7(const QIcon* icon, const libqt_string text, int type) {
+QTableWidgetItem* QTableWidgetItem_New7(const QIcon* icon, const libqt_string text, int type) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTableWidgetItem(*icon, text_QString, static_cast<int>(type));
 }
@@ -452,19 +452,19 @@ void QTableWidgetItem_Delete(QTableWidgetItem* self) {
     delete self;
 }
 
-QTableWidget* QTableWidget_new(QWidget* parent) {
+QTableWidget* QTableWidget_New(QWidget* parent) {
     return new VirtualQTableWidget(parent);
 }
 
-QTableWidget* QTableWidget_new2() {
+QTableWidget* QTableWidget_New2() {
     return new VirtualQTableWidget();
 }
 
-QTableWidget* QTableWidget_new3(int rows, int columns) {
+QTableWidget* QTableWidget_New3(int rows, int columns) {
     return new VirtualQTableWidget(static_cast<int>(rows), static_cast<int>(columns));
 }
 
-QTableWidget* QTableWidget_new4(int rows, int columns, QWidget* parent) {
+QTableWidget* QTableWidget_New4(int rows, int columns, QWidget* parent) {
     return new VirtualQTableWidget(static_cast<int>(rows), static_cast<int>(columns), parent);
 }
 

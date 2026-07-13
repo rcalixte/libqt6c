@@ -18,11 +18,11 @@
 #include "libqtabbar.h"
 
 QTabBar* q_tabbar_new(void* parent) {
-    return QTabBar_new((QWidget*)parent);
+    return QTabBar_New((QWidget*)parent);
 }
 
 QTabBar* q_tabbar_new2() {
-    return QTabBar_new2();
+    return QTabBar_New2();
 }
 
 const QMetaObject* q_tabbar_meta_object(void* self) {

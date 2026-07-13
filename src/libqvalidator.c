@@ -8,11 +8,11 @@
 #include "libqvalidator.h"
 
 QValidator* q_validator_new() {
-    return QValidator_new();
+    return QValidator_New();
 }
 
 QValidator* q_validator_new2(void* parent) {
-    return QValidator_new2((QObject*)parent);
+    return QValidator_New2((QObject*)parent);
 }
 
 const QMetaObject* q_validator_meta_object(void* self) {
@@ -464,19 +464,19 @@ void q_validator_delete(void* self) {
 }
 
 QIntValidator* q_intvalidator_new() {
-    return QIntValidator_new();
+    return QIntValidator_New();
 }
 
 QIntValidator* q_intvalidator_new2(int bottom, int top) {
-    return QIntValidator_new2(bottom, top);
+    return QIntValidator_New2(bottom, top);
 }
 
 QIntValidator* q_intvalidator_new3(void* parent) {
-    return QIntValidator_new3((QObject*)parent);
+    return QIntValidator_New3((QObject*)parent);
 }
 
 QIntValidator* q_intvalidator_new4(int bottom, int top, void* parent) {
-    return QIntValidator_new4(bottom, top, (QObject*)parent);
+    return QIntValidator_New4(bottom, top, (QObject*)parent);
 }
 
 const QMetaObject* q_intvalidator_meta_object(void* self) {
@@ -964,19 +964,19 @@ void q_intvalidator_delete(void* self) {
 }
 
 QDoubleValidator* q_doublevalidator_new() {
-    return QDoubleValidator_new();
+    return QDoubleValidator_New();
 }
 
 QDoubleValidator* q_doublevalidator_new2(double bottom, double top, int decimals) {
-    return QDoubleValidator_new2(bottom, top, decimals);
+    return QDoubleValidator_New2(bottom, top, decimals);
 }
 
 QDoubleValidator* q_doublevalidator_new3(void* parent) {
-    return QDoubleValidator_new3((QObject*)parent);
+    return QDoubleValidator_New3((QObject*)parent);
 }
 
 QDoubleValidator* q_doublevalidator_new4(double bottom, double top, int decimals, void* parent) {
-    return QDoubleValidator_new4(bottom, top, decimals, (QObject*)parent);
+    return QDoubleValidator_New4(bottom, top, decimals, (QObject*)parent);
 }
 
 const QMetaObject* q_doublevalidator_meta_object(void* self) {
@@ -1500,19 +1500,19 @@ void q_doublevalidator_delete(void* self) {
 }
 
 QRegularExpressionValidator* q_regularexpressionvalidator_new() {
-    return QRegularExpressionValidator_new();
+    return QRegularExpressionValidator_New();
 }
 
 QRegularExpressionValidator* q_regularexpressionvalidator_new2(void* re) {
-    return QRegularExpressionValidator_new2((QRegularExpression*)re);
+    return QRegularExpressionValidator_New2((QRegularExpression*)re);
 }
 
 QRegularExpressionValidator* q_regularexpressionvalidator_new3(void* parent) {
-    return QRegularExpressionValidator_new3((QObject*)parent);
+    return QRegularExpressionValidator_New3((QObject*)parent);
 }
 
 QRegularExpressionValidator* q_regularexpressionvalidator_new4(void* re, void* parent) {
-    return QRegularExpressionValidator_new4((QRegularExpression*)re, (QObject*)parent);
+    return QRegularExpressionValidator_New4((QRegularExpression*)re, (QObject*)parent);
 }
 
 const QMetaObject* q_regularexpressionvalidator_meta_object(void* self) {

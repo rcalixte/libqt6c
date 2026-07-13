@@ -20,8 +20,8 @@ typedef struct QDateTime QDateTime;
 typedef struct QUrl QUrl;
 #endif
 
-KRecentDocument* KRecentDocument_new(const KRecentDocument* other);
-KRecentDocument* KRecentDocument_new2(KRecentDocument* other);
+KRecentDocument* KRecentDocument_New(const KRecentDocument* other);
+KRecentDocument* KRecentDocument_New2(KRecentDocument* other);
 void KRecentDocument_CopyAssign(KRecentDocument* self, KRecentDocument* other);
 void KRecentDocument_MoveAssign(KRecentDocument* self, KRecentDocument* other);
 libqt_list /* of QUrl* */ KRecentDocument_RecentUrls();

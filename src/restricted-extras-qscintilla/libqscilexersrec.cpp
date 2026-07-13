@@ -14,11 +14,11 @@
 #include "libqscilexersrec.hpp"
 #include "libqscilexersrec.hxx"
 
-QsciLexerSRec* QsciLexerSRec_new() {
+QsciLexerSRec* QsciLexerSRec_New() {
     return new VirtualQsciLexerSRec();
 }
 
-QsciLexerSRec* QsciLexerSRec_new2(QObject* parent) {
+QsciLexerSRec* QsciLexerSRec_New2(QObject* parent) {
     return new VirtualQsciLexerSRec(parent);
 }
 

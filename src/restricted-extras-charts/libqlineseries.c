@@ -11,11 +11,11 @@
 #include "libqlineseries.h"
 
 QLineSeries* q_lineseries_new() {
-    return QLineSeries_new();
+    return QLineSeries_New();
 }
 
 QLineSeries* q_lineseries_new2(void* parent) {
-    return QLineSeries_new2((QObject*)parent);
+    return QLineSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_lineseries_meta_object(void* self) {

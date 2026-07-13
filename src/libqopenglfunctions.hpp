@@ -21,8 +21,8 @@ typedef struct QOpenGLContext QOpenGLContext;
 typedef struct QOpenGLFunctions QOpenGLFunctions;
 #endif
 
-QOpenGLFunctions* QOpenGLFunctions_new();
-QOpenGLFunctions* QOpenGLFunctions_new2(QOpenGLContext* context);
+QOpenGLFunctions* QOpenGLFunctions_New();
+QOpenGLFunctions* QOpenGLFunctions_New2(QOpenGLContext* context);
 int QOpenGLFunctions_OpenGLFeatures(const QOpenGLFunctions* self);
 bool QOpenGLFunctions_HasOpenGLFeature(const QOpenGLFunctions* self, int feature);
 void QOpenGLFunctions_InitializeOpenGLFunctions(QOpenGLFunctions* self);

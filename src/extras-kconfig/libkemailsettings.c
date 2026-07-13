@@ -3,7 +3,7 @@
 #include "libkemailsettings.h"
 
 KEMailSettings* k_emailsettings_new() {
-    return KEMailSettings_new();
+    return KEMailSettings_New();
 }
 
 const char* k_emailsettings_tr(const char* sourceText) {

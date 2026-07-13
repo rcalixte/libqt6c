@@ -17,16 +17,16 @@
 #include "libknotification.hpp"
 #include "libknotification.hxx"
 
-KNotificationAction* KNotificationAction_new() {
+KNotificationAction* KNotificationAction_New() {
     return new VirtualKNotificationAction();
 }
 
-KNotificationAction* KNotificationAction_new2(const libqt_string label) {
+KNotificationAction* KNotificationAction_New2(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualKNotificationAction(label_QString);
 }
 
-KNotificationAction* KNotificationAction_new3(QObject* parent) {
+KNotificationAction* KNotificationAction_New3(QObject* parent) {
     return new VirtualKNotificationAction(parent);
 }
 
@@ -471,17 +471,17 @@ void KNotificationAction_Delete(KNotificationAction* self) {
     delete self;
 }
 
-KNotification* KNotification_new(const libqt_string eventId) {
+KNotification* KNotification_New(const libqt_string eventId) {
     QString eventId_QString = QString::fromUtf8(eventId.data, eventId.len);
     return new VirtualKNotification(eventId_QString);
 }
 
-KNotification* KNotification_new2(const libqt_string eventId, int flags) {
+KNotification* KNotification_New2(const libqt_string eventId, int flags) {
     QString eventId_QString = QString::fromUtf8(eventId.data, eventId.len);
     return new VirtualKNotification(eventId_QString, static_cast<KNotification::NotificationFlags>(flags));
 }
 
-KNotification* KNotification_new3(const libqt_string eventId, int flags, QObject* parent) {
+KNotification* KNotification_New3(const libqt_string eventId, int flags, QObject* parent) {
     QString eventId_QString = QString::fromUtf8(eventId.data, eventId.len);
     return new VirtualKNotification(eventId_QString, static_cast<KNotification::NotificationFlags>(flags), parent);
 }

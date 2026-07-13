@@ -14,11 +14,11 @@
 #include "libqpdfdocument.h"
 
 QPdfDocument* q_pdfdocument_new() {
-    return QPdfDocument_new();
+    return QPdfDocument_New();
 }
 
 QPdfDocument* q_pdfdocument_new2(void* parent) {
-    return QPdfDocument_new2((QObject*)parent);
+    return QPdfDocument_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pdfdocument_meta_object(void* self) {

@@ -3,7 +3,7 @@
 #include "libkpasswdserverclient.h"
 
 KPasswdServerClient* k_passwdserverclient_new() {
-    return KPasswdServerClient_new();
+    return KPasswdServerClient_New();
 }
 
 bool k_passwdserverclient_check_auth_info(void* self, void* info, long long windowId, long long usertime) {

@@ -4,27 +4,27 @@
 #include "libkconfig.h"
 
 KConfig* k_config_new() {
-    return KConfig_new();
+    return KConfig_New();
 }
 
 KConfig* k_config_new2(const char* file, const char* backend) {
-    return KConfig_new2(qstring(file), qstring(backend));
+    return KConfig_New2(qstring(file), qstring(backend));
 }
 
 KConfig* k_config_new3(const char* file) {
-    return KConfig_new3(qstring(file));
+    return KConfig_New3(qstring(file));
 }
 
 KConfig* k_config_new4(const char* file, int32_t mode) {
-    return KConfig_new4(qstring(file), mode);
+    return KConfig_New4(qstring(file), mode);
 }
 
 KConfig* k_config_new5(const char* file, int32_t mode, int32_t type) {
-    return KConfig_new5(qstring(file), mode, type);
+    return KConfig_New5(qstring(file), mode, type);
 }
 
 KConfig* k_config_new6(const char* file, const char* backend, int32_t type) {
-    return KConfig_new6(qstring(file), qstring(backend), type);
+    return KConfig_New6(qstring(file), qstring(backend), type);
 }
 
 int32_t k_config_location_type(void* self) {

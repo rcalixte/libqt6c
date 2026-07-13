@@ -18,7 +18,7 @@ extern "C" {
 typedef struct QDesignerMemberSheetExtension QDesignerMemberSheetExtension;
 #endif
 
-QDesignerMemberSheetExtension* QDesignerMemberSheetExtension_new();
+QDesignerMemberSheetExtension* QDesignerMemberSheetExtension_New();
 int QDesignerMemberSheetExtension_Count(const QDesignerMemberSheetExtension* self);
 int QDesignerMemberSheetExtension_IndexOf(const QDesignerMemberSheetExtension* self, const libqt_string name);
 libqt_string QDesignerMemberSheetExtension_MemberName(const QDesignerMemberSheetExtension* self, int index);

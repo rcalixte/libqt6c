@@ -47,11 +47,11 @@
 #include "libqsciscintillabase.hpp"
 #include "libqsciscintillabase.hxx"
 
-QsciScintillaBase* QsciScintillaBase_new(QWidget* parent) {
+QsciScintillaBase* QsciScintillaBase_New(QWidget* parent) {
     return new VirtualQsciScintillaBase(parent);
 }
 
-QsciScintillaBase* QsciScintillaBase_new2() {
+QsciScintillaBase* QsciScintillaBase_New2() {
     return new VirtualQsciScintillaBase();
 }
 

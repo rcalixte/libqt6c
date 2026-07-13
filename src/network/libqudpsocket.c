@@ -13,11 +13,11 @@
 #include "libqudpsocket.h"
 
 QUdpSocket* q_udpsocket_new() {
-    return QUdpSocket_new();
+    return QUdpSocket_New();
 }
 
 QUdpSocket* q_udpsocket_new2(void* parent) {
-    return QUdpSocket_new2((QObject*)parent);
+    return QUdpSocket_New2((QObject*)parent);
 }
 
 const QMetaObject* q_udpsocket_meta_object(void* self) {

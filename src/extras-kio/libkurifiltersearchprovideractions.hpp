@@ -28,8 +28,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_new();
-KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_new2(QObject* parent);
+KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_New();
+KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_New2(QObject* parent);
 QMetaObject* KIO__KUriFilterSearchProviderActions_MetaObject(const KIO__KUriFilterSearchProviderActions* self);
 void* KIO__KUriFilterSearchProviderActions_Metacast(KIO__KUriFilterSearchProviderActions* self, const char* param1);
 int KIO__KUriFilterSearchProviderActions_Metacall(KIO__KUriFilterSearchProviderActions* self, int param1, int param2, void** param3);

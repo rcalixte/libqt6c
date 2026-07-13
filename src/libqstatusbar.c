@@ -14,11 +14,11 @@
 #include "libqstatusbar.h"
 
 QStatusBar* q_statusbar_new(void* parent) {
-    return QStatusBar_new((QWidget*)parent);
+    return QStatusBar_New((QWidget*)parent);
 }
 
 QStatusBar* q_statusbar_new2() {
-    return QStatusBar_new2();
+    return QStatusBar_New2();
 }
 
 const QMetaObject* q_statusbar_meta_object(void* self) {

@@ -10,7 +10,7 @@
 #include "libpoppler_form.h"
 
 Poppler__FormFieldIcon* q_poppler__formfieldicon_new(void* ffIcon) {
-    return Poppler__FormFieldIcon_new((Poppler__FormFieldIcon*)ffIcon);
+    return Poppler__FormFieldIcon_New((Poppler__FormFieldIcon*)ffIcon);
 }
 
 void q_poppler__formfieldicon_operator_assign(void* self, void* ffIcon) {
@@ -488,11 +488,11 @@ void q_poppler__formfieldchoice_delete(void* self) {
 }
 
 Poppler__CertificateInfo* q_poppler__certificateinfo_new() {
-    return Poppler__CertificateInfo_new();
+    return Poppler__CertificateInfo_New();
 }
 
 Poppler__CertificateInfo* q_poppler__certificateinfo_new2(void* other) {
-    return Poppler__CertificateInfo_new2((Poppler__CertificateInfo*)other);
+    return Poppler__CertificateInfo_New2((Poppler__CertificateInfo*)other);
 }
 
 bool q_poppler__certificateinfo_is_null(void* self) {
@@ -594,7 +594,7 @@ void q_poppler__certificateinfo_delete(void* self) {
 }
 
 Poppler__SignatureValidationInfo* q_poppler__signaturevalidationinfo_new(void* other) {
-    return Poppler__SignatureValidationInfo_new((Poppler__SignatureValidationInfo*)other);
+    return Poppler__SignatureValidationInfo_New((Poppler__SignatureValidationInfo*)other);
 }
 
 int32_t q_poppler__signaturevalidationinfo_signature_status(void* self) {
@@ -670,7 +670,7 @@ void q_poppler__signaturevalidationinfo_delete(void* self) {
 }
 
 Poppler__AsyncObject* q_poppler__asyncobject_new() {
-    return Poppler__AsyncObject_new();
+    return Poppler__AsyncObject_New();
 }
 
 const QMetaObject* q_poppler__asyncobject_meta_object(void* self) {

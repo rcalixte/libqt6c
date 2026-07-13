@@ -12,28 +12,28 @@
 #include "libqsslcertificate.hpp"
 #include "libqsslcertificate.hxx"
 
-QSslCertificate* QSslCertificate_new(QIODevice* device) {
+QSslCertificate* QSslCertificate_New(QIODevice* device) {
     return new QSslCertificate(device);
 }
 
-QSslCertificate* QSslCertificate_new2() {
+QSslCertificate* QSslCertificate_New2() {
     return new QSslCertificate();
 }
 
-QSslCertificate* QSslCertificate_new3(const QSslCertificate* other) {
+QSslCertificate* QSslCertificate_New3(const QSslCertificate* other) {
     return new QSslCertificate(*other);
 }
 
-QSslCertificate* QSslCertificate_new4(QIODevice* device, int format) {
+QSslCertificate* QSslCertificate_New4(QIODevice* device, int format) {
     return new QSslCertificate(device, static_cast<QSsl::EncodingFormat>(format));
 }
 
-QSslCertificate* QSslCertificate_new5(const libqt_string data) {
+QSslCertificate* QSslCertificate_New5(const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     return new QSslCertificate(data_QByteArray);
 }
 
-QSslCertificate* QSslCertificate_new6(const libqt_string data, int format) {
+QSslCertificate* QSslCertificate_New6(const libqt_string data, int format) {
     QByteArray data_QByteArray(data.data, data.len);
     return new QSslCertificate(data_QByteArray, static_cast<QSsl::EncodingFormat>(format));
 }

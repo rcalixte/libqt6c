@@ -7,15 +7,15 @@
 #include "libksslerroruidata.hpp"
 #include "libksslerroruidata.hxx"
 
-KSslErrorUiData* KSslErrorUiData_new() {
+KSslErrorUiData* KSslErrorUiData_New() {
     return new KSslErrorUiData();
 }
 
-KSslErrorUiData* KSslErrorUiData_new2(const QSslSocket* socket) {
+KSslErrorUiData* KSslErrorUiData_New2(const QSslSocket* socket) {
     return new KSslErrorUiData(socket);
 }
 
-KSslErrorUiData* KSslErrorUiData_new3(const QNetworkReply* reply, const libqt_list /* of QSslError* */ sslErrors) {
+KSslErrorUiData* KSslErrorUiData_New3(const QNetworkReply* reply, const libqt_list /* of QSslError* */ sslErrors) {
     QList<QSslError> sslErrors_QList;
     sslErrors_QList.reserve(sslErrors.len);
     QSslError** sslErrors_arr = static_cast<QSslError**>(sslErrors.data.ptr);
@@ -25,7 +25,7 @@ KSslErrorUiData* KSslErrorUiData_new3(const QNetworkReply* reply, const libqt_li
     return new KSslErrorUiData(reply, sslErrors_QList);
 }
 
-KSslErrorUiData* KSslErrorUiData_new4(const KSslErrorUiData* other) {
+KSslErrorUiData* KSslErrorUiData_New4(const KSslErrorUiData* other) {
     return new KSslErrorUiData(*other);
 }
 

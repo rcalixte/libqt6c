@@ -37,9 +37,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlTableModel* QSqlTableModel_new();
-QSqlTableModel* QSqlTableModel_new2(QObject* parent);
-QSqlTableModel* QSqlTableModel_new3(QObject* parent, const QSqlDatabase* db);
+QSqlTableModel* QSqlTableModel_New();
+QSqlTableModel* QSqlTableModel_New2(QObject* parent);
+QSqlTableModel* QSqlTableModel_New3(QObject* parent, const QSqlDatabase* db);
 QMetaObject* QSqlTableModel_MetaObject(const QSqlTableModel* self);
 void* QSqlTableModel_Metacast(QSqlTableModel* self, const char* param1);
 int QSqlTableModel_Metacall(QSqlTableModel* self, int param1, int param2, void** param3);

@@ -14,11 +14,11 @@
 #include "libqscilexerpascal.hpp"
 #include "libqscilexerpascal.hxx"
 
-QsciLexerPascal* QsciLexerPascal_new() {
+QsciLexerPascal* QsciLexerPascal_New() {
     return new VirtualQsciLexerPascal();
 }
 
-QsciLexerPascal* QsciLexerPascal_new2(QObject* parent) {
+QsciLexerPascal* QsciLexerPascal_New2(QObject* parent) {
     return new VirtualQsciLexerPascal(parent);
 }
 

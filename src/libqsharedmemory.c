@@ -7,27 +7,27 @@
 #include "libqsharedmemory.h"
 
 QSharedMemory* q_sharedmemory_new() {
-    return QSharedMemory_new();
+    return QSharedMemory_New();
 }
 
 QSharedMemory* q_sharedmemory_new2(void* key) {
-    return QSharedMemory_new2((QNativeIpcKey*)key);
+    return QSharedMemory_New2((QNativeIpcKey*)key);
 }
 
 QSharedMemory* q_sharedmemory_new3(const char* key) {
-    return QSharedMemory_new3(qstring(key));
+    return QSharedMemory_New3(qstring(key));
 }
 
 QSharedMemory* q_sharedmemory_new4(void* parent) {
-    return QSharedMemory_new4((QObject*)parent);
+    return QSharedMemory_New4((QObject*)parent);
 }
 
 QSharedMemory* q_sharedmemory_new5(void* key, void* parent) {
-    return QSharedMemory_new5((QNativeIpcKey*)key, (QObject*)parent);
+    return QSharedMemory_New5((QNativeIpcKey*)key, (QObject*)parent);
 }
 
 QSharedMemory* q_sharedmemory_new6(const char* key, void* parent) {
-    return QSharedMemory_new6(qstring(key), (QObject*)parent);
+    return QSharedMemory_New6(qstring(key), (QObject*)parent);
 }
 
 const QMetaObject* q_sharedmemory_meta_object(void* self) {

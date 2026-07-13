@@ -7,40 +7,40 @@
 #include "libpredicate.hpp"
 #include "libpredicate.hxx"
 
-Solid__Predicate* Solid__Predicate_new() {
+Solid__Predicate* Solid__Predicate_New() {
     return new Solid::Predicate();
 }
 
-Solid__Predicate* Solid__Predicate_new2(const Solid__Predicate* other) {
+Solid__Predicate* Solid__Predicate_New2(const Solid__Predicate* other) {
     return new Solid::Predicate(*other);
 }
 
-Solid__Predicate* Solid__Predicate_new3(const int* ifaceType, const libqt_string property, const QVariant* value) {
+Solid__Predicate* Solid__Predicate_New3(const int* ifaceType, const libqt_string property, const QVariant* value) {
     QString property_QString = QString::fromUtf8(property.data, property.len);
     return new Solid::Predicate((const Solid::DeviceInterface::Type&)(*ifaceType), property_QString, *value);
 }
 
-Solid__Predicate* Solid__Predicate_new4(const libqt_string ifaceName, const libqt_string property, const QVariant* value) {
+Solid__Predicate* Solid__Predicate_New4(const libqt_string ifaceName, const libqt_string property, const QVariant* value) {
     QString ifaceName_QString = QString::fromUtf8(ifaceName.data, ifaceName.len);
     QString property_QString = QString::fromUtf8(property.data, property.len);
     return new Solid::Predicate(ifaceName_QString, property_QString, *value);
 }
 
-Solid__Predicate* Solid__Predicate_new5(const int* ifaceType) {
+Solid__Predicate* Solid__Predicate_New5(const int* ifaceType) {
     return new Solid::Predicate((const Solid::DeviceInterface::Type&)(*ifaceType));
 }
 
-Solid__Predicate* Solid__Predicate_new6(const libqt_string ifaceName) {
+Solid__Predicate* Solid__Predicate_New6(const libqt_string ifaceName) {
     QString ifaceName_QString = QString::fromUtf8(ifaceName.data, ifaceName.len);
     return new Solid::Predicate(ifaceName_QString);
 }
 
-Solid__Predicate* Solid__Predicate_new7(const int* ifaceType, const libqt_string property, const QVariant* value, int compOperator) {
+Solid__Predicate* Solid__Predicate_New7(const int* ifaceType, const libqt_string property, const QVariant* value, int compOperator) {
     QString property_QString = QString::fromUtf8(property.data, property.len);
     return new Solid::Predicate((const Solid::DeviceInterface::Type&)(*ifaceType), property_QString, *value, static_cast<Solid::Predicate::ComparisonOperator>(compOperator));
 }
 
-Solid__Predicate* Solid__Predicate_new8(const libqt_string ifaceName, const libqt_string property, const QVariant* value, int compOperator) {
+Solid__Predicate* Solid__Predicate_New8(const libqt_string ifaceName, const libqt_string property, const QVariant* value, int compOperator) {
     QString ifaceName_QString = QString::fromUtf8(ifaceName.data, ifaceName.len);
     QString property_QString = QString::fromUtf8(property.data, property.len);
     return new Solid::Predicate(ifaceName_QString, property_QString, *value, static_cast<Solid::Predicate::ComparisonOperator>(compOperator));

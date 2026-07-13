@@ -3,11 +3,11 @@
 #include "libqpixmapcache.h"
 
 QPixmapCache* q_pixmapcache_new(void* other) {
-    return QPixmapCache_new((QPixmapCache*)other);
+    return QPixmapCache_New((QPixmapCache*)other);
 }
 
 QPixmapCache* q_pixmapcache_new2(void* other) {
-    return QPixmapCache_new2((QPixmapCache*)other);
+    return QPixmapCache_New2((QPixmapCache*)other);
 }
 
 void q_pixmapcache_copy_assign(void* self, void* other) {
@@ -63,11 +63,11 @@ void q_pixmapcache_delete(void* self) {
 }
 
 QPixmapCache__Key* q_pixmapcache__key_new() {
-    return QPixmapCache__Key_new();
+    return QPixmapCache__Key_New();
 }
 
 QPixmapCache__Key* q_pixmapcache__key_new2(void* other) {
-    return QPixmapCache__Key_new2((QPixmapCache__Key*)other);
+    return QPixmapCache__Key_New2((QPixmapCache__Key*)other);
 }
 
 bool q_pixmapcache__key_operator_equal(void* self, void* key) {

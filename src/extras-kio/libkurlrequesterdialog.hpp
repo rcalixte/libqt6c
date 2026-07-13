@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KUrlRequesterDialog* KUrlRequesterDialog_new(const QUrl* url);
-KUrlRequesterDialog* KUrlRequesterDialog_new2(const QUrl* url, const libqt_string text, QWidget* parent);
-KUrlRequesterDialog* KUrlRequesterDialog_new3(const QUrl* url, QWidget* parent);
+KUrlRequesterDialog* KUrlRequesterDialog_New(const QUrl* url);
+KUrlRequesterDialog* KUrlRequesterDialog_New2(const QUrl* url, const libqt_string text, QWidget* parent);
+KUrlRequesterDialog* KUrlRequesterDialog_New3(const QUrl* url, QWidget* parent);
 QMetaObject* KUrlRequesterDialog_MetaObject(const KUrlRequesterDialog* self);
 void* KUrlRequesterDialog_Metacast(KUrlRequesterDialog* self, const char* param1);
 int KUrlRequesterDialog_Metacall(KUrlRequesterDialog* self, int param1, int param2, void** param3);

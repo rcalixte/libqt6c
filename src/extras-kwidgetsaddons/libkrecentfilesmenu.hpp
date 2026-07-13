@@ -54,10 +54,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KRecentFilesMenu* KRecentFilesMenu_new(QWidget* parent);
-KRecentFilesMenu* KRecentFilesMenu_new2(const libqt_string title);
-KRecentFilesMenu* KRecentFilesMenu_new3();
-KRecentFilesMenu* KRecentFilesMenu_new4(const libqt_string title, QWidget* parent);
+KRecentFilesMenu* KRecentFilesMenu_New(QWidget* parent);
+KRecentFilesMenu* KRecentFilesMenu_New2(const libqt_string title);
+KRecentFilesMenu* KRecentFilesMenu_New3();
+KRecentFilesMenu* KRecentFilesMenu_New4(const libqt_string title, QWidget* parent);
 QMetaObject* KRecentFilesMenu_MetaObject(const KRecentFilesMenu* self);
 void* KRecentFilesMenu_Metacast(KRecentFilesMenu* self, const char* param1);
 int KRecentFilesMenu_Metacall(KRecentFilesMenu* self, int param1, int param2, void** param3);

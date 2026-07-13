@@ -8,16 +8,16 @@
 #include "libk7zip.hpp"
 #include "libk7zip.hxx"
 
-K7Zip* K7Zip_new(const libqt_string filename) {
+K7Zip* K7Zip_New(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualK7Zip(filename_QString);
 }
 
-K7Zip* K7Zip_new2(QIODevice* dev) {
+K7Zip* K7Zip_New2(QIODevice* dev) {
     return new VirtualK7Zip(dev);
 }
 
-K7Zip* K7Zip_new3(const K7Zip* param1) {
+K7Zip* K7Zip_New3(const K7Zip* param1) {
     return new VirtualK7Zip(*param1);
 }
 

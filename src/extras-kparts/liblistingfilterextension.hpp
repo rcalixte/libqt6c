@@ -32,7 +32,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KParts__ListingFilterExtension* KParts__ListingFilterExtension_new(KParts__ReadOnlyPart* parent);
+KParts__ListingFilterExtension* KParts__ListingFilterExtension_New(KParts__ReadOnlyPart* parent);
 QMetaObject* KParts__ListingFilterExtension_MetaObject(const KParts__ListingFilterExtension* self);
 void* KParts__ListingFilterExtension_Metacast(KParts__ListingFilterExtension* self, const char* param1);
 int KParts__ListingFilterExtension_Metacall(KParts__ListingFilterExtension* self, int param1, int param2, void** param3);

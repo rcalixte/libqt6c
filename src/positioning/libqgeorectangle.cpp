@@ -7,19 +7,19 @@
 #include "libqgeorectangle.hpp"
 #include "libqgeorectangle.hxx"
 
-QGeoRectangle* QGeoRectangle_new() {
+QGeoRectangle* QGeoRectangle_New() {
     return new QGeoRectangle();
 }
 
-QGeoRectangle* QGeoRectangle_new2(const QGeoCoordinate* center, double degreesWidth, double degreesHeight) {
+QGeoRectangle* QGeoRectangle_New2(const QGeoCoordinate* center, double degreesWidth, double degreesHeight) {
     return new QGeoRectangle(*center, static_cast<double>(degreesWidth), static_cast<double>(degreesHeight));
 }
 
-QGeoRectangle* QGeoRectangle_new3(const QGeoCoordinate* topLeft, const QGeoCoordinate* bottomRight) {
+QGeoRectangle* QGeoRectangle_New3(const QGeoCoordinate* topLeft, const QGeoCoordinate* bottomRight) {
     return new QGeoRectangle(*topLeft, *bottomRight);
 }
 
-QGeoRectangle* QGeoRectangle_new4(const libqt_list /* of QGeoCoordinate* */ coordinates) {
+QGeoRectangle* QGeoRectangle_New4(const libqt_list /* of QGeoCoordinate* */ coordinates) {
     QList<QGeoCoordinate> coordinates_QList;
     coordinates_QList.reserve(coordinates.len);
     QGeoCoordinate** coordinates_arr = static_cast<QGeoCoordinate**>(coordinates.data.ptr);
@@ -29,11 +29,11 @@ QGeoRectangle* QGeoRectangle_new4(const libqt_list /* of QGeoCoordinate* */ coor
     return new QGeoRectangle(coordinates_QList);
 }
 
-QGeoRectangle* QGeoRectangle_new5(const QGeoRectangle* other) {
+QGeoRectangle* QGeoRectangle_New5(const QGeoRectangle* other) {
     return new QGeoRectangle(*other);
 }
 
-QGeoRectangle* QGeoRectangle_new6(const QGeoShape* other) {
+QGeoRectangle* QGeoRectangle_New6(const QGeoShape* other) {
     return new QGeoRectangle(*other);
 }
 

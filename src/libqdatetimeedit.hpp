@@ -61,14 +61,14 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDateTimeEdit* QDateTimeEdit_new(QWidget* parent);
-QDateTimeEdit* QDateTimeEdit_new2();
-QDateTimeEdit* QDateTimeEdit_new3(const QDateTime* dt);
-QDateTimeEdit* QDateTimeEdit_new4(QDate* d);
-QDateTimeEdit* QDateTimeEdit_new5(QTime* t);
-QDateTimeEdit* QDateTimeEdit_new6(const QDateTime* dt, QWidget* parent);
-QDateTimeEdit* QDateTimeEdit_new7(QDate* d, QWidget* parent);
-QDateTimeEdit* QDateTimeEdit_new8(QTime* t, QWidget* parent);
+QDateTimeEdit* QDateTimeEdit_New(QWidget* parent);
+QDateTimeEdit* QDateTimeEdit_New2();
+QDateTimeEdit* QDateTimeEdit_New3(const QDateTime* dt);
+QDateTimeEdit* QDateTimeEdit_New4(QDate* d);
+QDateTimeEdit* QDateTimeEdit_New5(QTime* t);
+QDateTimeEdit* QDateTimeEdit_New6(const QDateTime* dt, QWidget* parent);
+QDateTimeEdit* QDateTimeEdit_New7(QDate* d, QWidget* parent);
+QDateTimeEdit* QDateTimeEdit_New8(QTime* t, QWidget* parent);
 QMetaObject* QDateTimeEdit_MetaObject(const QDateTimeEdit* self);
 void* QDateTimeEdit_Metacast(QDateTimeEdit* self, const char* param1);
 int QDateTimeEdit_Metacall(QDateTimeEdit* self, int param1, int param2, void** param3);
@@ -335,10 +335,10 @@ void QDateTimeEdit_OnGetDecodedMetricF(const QDateTimeEdit* self, intptr_t slot)
 double QDateTimeEdit_SuperGetDecodedMetricF(const QDateTimeEdit* self, int metricA, int metricB);
 void QDateTimeEdit_Delete(QDateTimeEdit* self);
 
-QTimeEdit* QTimeEdit_new(QWidget* parent);
-QTimeEdit* QTimeEdit_new2();
-QTimeEdit* QTimeEdit_new3(QTime* time);
-QTimeEdit* QTimeEdit_new4(QTime* time, QWidget* parent);
+QTimeEdit* QTimeEdit_New(QWidget* parent);
+QTimeEdit* QTimeEdit_New2();
+QTimeEdit* QTimeEdit_New3(QTime* time);
+QTimeEdit* QTimeEdit_New4(QTime* time, QWidget* parent);
 QMetaObject* QTimeEdit_MetaObject(const QTimeEdit* self);
 void* QTimeEdit_Metacast(QTimeEdit* self, const char* param1);
 int QTimeEdit_Metacall(QTimeEdit* self, int param1, int param2, void** param3);
@@ -553,10 +553,10 @@ void QTimeEdit_OnGetDecodedMetricF(const QTimeEdit* self, intptr_t slot);
 double QTimeEdit_SuperGetDecodedMetricF(const QTimeEdit* self, int metricA, int metricB);
 void QTimeEdit_Delete(QTimeEdit* self);
 
-QDateEdit* QDateEdit_new(QWidget* parent);
-QDateEdit* QDateEdit_new2();
-QDateEdit* QDateEdit_new3(QDate* date);
-QDateEdit* QDateEdit_new4(QDate* date, QWidget* parent);
+QDateEdit* QDateEdit_New(QWidget* parent);
+QDateEdit* QDateEdit_New2();
+QDateEdit* QDateEdit_New3(QDate* date);
+QDateEdit* QDateEdit_New4(QDate* date, QWidget* parent);
 QMetaObject* QDateEdit_MetaObject(const QDateEdit* self);
 void* QDateEdit_Metacast(QDateEdit* self, const char* param1);
 int QDateEdit_Metacall(QDateEdit* self, int param1, int param2, void** param3);

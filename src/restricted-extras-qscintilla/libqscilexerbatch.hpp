@@ -29,8 +29,8 @@ typedef struct QsciLexerBatch QsciLexerBatch;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerBatch* QsciLexerBatch_new();
-QsciLexerBatch* QsciLexerBatch_new2(QObject* parent);
+QsciLexerBatch* QsciLexerBatch_New();
+QsciLexerBatch* QsciLexerBatch_New2(QObject* parent);
 QMetaObject* QsciLexerBatch_MetaObject(const QsciLexerBatch* self);
 void* QsciLexerBatch_Metacast(QsciLexerBatch* self, const char* param1);
 int QsciLexerBatch_Metacall(QsciLexerBatch* self, int param1, int param2, void** param3);

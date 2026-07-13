@@ -14,11 +14,11 @@
 #include "libqsciprinter.hpp"
 #include "libqsciprinter.hxx"
 
-QsciPrinter* QsciPrinter_new() {
+QsciPrinter* QsciPrinter_New() {
     return new VirtualQsciPrinter();
 }
 
-QsciPrinter* QsciPrinter_new2(int mode) {
+QsciPrinter* QsciPrinter_New2(int mode) {
     return new VirtualQsciPrinter(static_cast<QPrinter::PrinterMode>(mode));
 }
 

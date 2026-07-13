@@ -1108,7 +1108,7 @@ void KTextEditor__Document_Delete(KTextEditor__Document* self) {
     delete self;
 }
 
-KTextEditor__Document__EditingTransaction* KTextEditor__Document__EditingTransaction_new(KTextEditor__Document* document) {
+KTextEditor__Document__EditingTransaction* KTextEditor__Document__EditingTransaction_New(KTextEditor__Document* document) {
     return new KTextEditor::Document::EditingTransaction(document);
 }
 

@@ -5,31 +5,31 @@
 #include "libkstatefulbrush.hpp"
 #include "libkstatefulbrush.hxx"
 
-KStatefulBrush* KStatefulBrush_new() {
+KStatefulBrush* KStatefulBrush_New() {
     return new KStatefulBrush();
 }
 
-KStatefulBrush* KStatefulBrush_new2(int param1, int param2) {
+KStatefulBrush* KStatefulBrush_New2(int param1, int param2) {
     return new KStatefulBrush(static_cast<KColorScheme::ColorSet>(param1), static_cast<KColorScheme::ForegroundRole>(param2));
 }
 
-KStatefulBrush* KStatefulBrush_new3(int param1, int param2) {
+KStatefulBrush* KStatefulBrush_New3(int param1, int param2) {
     return new KStatefulBrush(static_cast<KColorScheme::ColorSet>(param1), static_cast<KColorScheme::BackgroundRole>(param2));
 }
 
-KStatefulBrush* KStatefulBrush_new4(int param1, int param2) {
+KStatefulBrush* KStatefulBrush_New4(int param1, int param2) {
     return new KStatefulBrush(static_cast<KColorScheme::ColorSet>(param1), static_cast<KColorScheme::DecorationRole>(param2));
 }
 
-KStatefulBrush* KStatefulBrush_new5(const QBrush* param1) {
+KStatefulBrush* KStatefulBrush_New5(const QBrush* param1) {
     return new KStatefulBrush(*param1);
 }
 
-KStatefulBrush* KStatefulBrush_new6(const QBrush* param1, const QBrush* background) {
+KStatefulBrush* KStatefulBrush_New6(const QBrush* param1, const QBrush* background) {
     return new KStatefulBrush(*param1, *background);
 }
 
-KStatefulBrush* KStatefulBrush_new7(const KStatefulBrush* param1) {
+KStatefulBrush* KStatefulBrush_New7(const KStatefulBrush* param1) {
     return new KStatefulBrush(*param1);
 }
 

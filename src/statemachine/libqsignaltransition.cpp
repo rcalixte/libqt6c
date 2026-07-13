@@ -13,19 +13,19 @@
 #include "libqsignaltransition.hpp"
 #include "libqsignaltransition.hxx"
 
-QSignalTransition* QSignalTransition_new() {
+QSignalTransition* QSignalTransition_New() {
     return new VirtualQSignalTransition();
 }
 
-QSignalTransition* QSignalTransition_new2(const QObject* sender, const char* signal) {
+QSignalTransition* QSignalTransition_New2(const QObject* sender, const char* signal) {
     return new VirtualQSignalTransition(sender, signal);
 }
 
-QSignalTransition* QSignalTransition_new3(QState* sourceState) {
+QSignalTransition* QSignalTransition_New3(QState* sourceState) {
     return new VirtualQSignalTransition(sourceState);
 }
 
-QSignalTransition* QSignalTransition_new4(const QObject* sender, const char* signal, QState* sourceState) {
+QSignalTransition* QSignalTransition_New4(const QObject* sender, const char* signal, QState* sourceState) {
     return new VirtualQSignalTransition(sender, signal, sourceState);
 }
 

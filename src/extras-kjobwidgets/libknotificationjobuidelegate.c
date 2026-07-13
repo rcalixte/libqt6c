@@ -7,11 +7,11 @@
 #include "libknotificationjobuidelegate.h"
 
 KNotificationJobUiDelegate* k_notificationjobuidelegate_new() {
-    return KNotificationJobUiDelegate_new();
+    return KNotificationJobUiDelegate_New();
 }
 
 KNotificationJobUiDelegate* k_notificationjobuidelegate_new2(int32_t flags) {
-    return KNotificationJobUiDelegate_new2(flags);
+    return KNotificationJobUiDelegate_New2(flags);
 }
 
 const QMetaObject* k_notificationjobuidelegate_meta_object(void* self) {

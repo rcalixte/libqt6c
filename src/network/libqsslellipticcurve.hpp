@@ -18,10 +18,10 @@ extern "C" {
 typedef struct QSslEllipticCurve QSslEllipticCurve;
 #endif
 
-QSslEllipticCurve* QSslEllipticCurve_new(const QSslEllipticCurve* other);
-QSslEllipticCurve* QSslEllipticCurve_new2(QSslEllipticCurve* other);
-QSslEllipticCurve* QSslEllipticCurve_new3();
-QSslEllipticCurve* QSslEllipticCurve_new4(const QSslEllipticCurve* param1);
+QSslEllipticCurve* QSslEllipticCurve_New(const QSslEllipticCurve* other);
+QSslEllipticCurve* QSslEllipticCurve_New2(QSslEllipticCurve* other);
+QSslEllipticCurve* QSslEllipticCurve_New3();
+QSslEllipticCurve* QSslEllipticCurve_New4(const QSslEllipticCurve* param1);
 void QSslEllipticCurve_CopyAssign(QSslEllipticCurve* self, QSslEllipticCurve* other);
 void QSslEllipticCurve_MoveAssign(QSslEllipticCurve* self, QSslEllipticCurve* other);
 QSslEllipticCurve* QSslEllipticCurve_FromShortName(const libqt_string name);

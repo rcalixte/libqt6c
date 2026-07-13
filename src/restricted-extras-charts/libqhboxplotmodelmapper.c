@@ -9,11 +9,11 @@
 #include "libqhboxplotmodelmapper.h"
 
 QHBoxPlotModelMapper* q_hboxplotmodelmapper_new() {
-    return QHBoxPlotModelMapper_new();
+    return QHBoxPlotModelMapper_New();
 }
 
 QHBoxPlotModelMapper* q_hboxplotmodelmapper_new2(void* parent) {
-    return QHBoxPlotModelMapper_new2((QObject*)parent);
+    return QHBoxPlotModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_hboxplotmodelmapper_meta_object(void* self) {

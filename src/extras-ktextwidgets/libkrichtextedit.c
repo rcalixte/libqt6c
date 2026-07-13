@@ -26,19 +26,19 @@
 #include "libkrichtextedit.h"
 
 KRichTextEdit* k_richtextedit_new(void* parent) {
-    return KRichTextEdit_new((QWidget*)parent);
+    return KRichTextEdit_New((QWidget*)parent);
 }
 
 KRichTextEdit* k_richtextedit_new2(const char* text) {
-    return KRichTextEdit_new2(qstring(text));
+    return KRichTextEdit_New2(qstring(text));
 }
 
 KRichTextEdit* k_richtextedit_new3() {
-    return KRichTextEdit_new3();
+    return KRichTextEdit_New3();
 }
 
 KRichTextEdit* k_richtextedit_new4(const char* text, void* parent) {
-    return KRichTextEdit_new4(qstring(text), (QWidget*)parent);
+    return KRichTextEdit_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_richtextedit_meta_object(void* self) {

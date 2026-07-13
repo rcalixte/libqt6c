@@ -4,24 +4,24 @@
 #include "libqtipccommon.hpp"
 #include "libqtipccommon.hxx"
 
-QNativeIpcKey* QNativeIpcKey_new() {
+QNativeIpcKey* QNativeIpcKey_New() {
     return new QNativeIpcKey();
 }
 
-QNativeIpcKey* QNativeIpcKey_new2(uint16_t type) {
+QNativeIpcKey* QNativeIpcKey_New2(uint16_t type) {
     return new QNativeIpcKey(static_cast<QNativeIpcKey::Type>(type));
 }
 
-QNativeIpcKey* QNativeIpcKey_new3(const libqt_string k) {
+QNativeIpcKey* QNativeIpcKey_New3(const libqt_string k) {
     QString k_QString = QString::fromUtf8(k.data, k.len);
     return new QNativeIpcKey(k_QString);
 }
 
-QNativeIpcKey* QNativeIpcKey_new4(const QNativeIpcKey* other) {
+QNativeIpcKey* QNativeIpcKey_New4(const QNativeIpcKey* other) {
     return new QNativeIpcKey(*other);
 }
 
-QNativeIpcKey* QNativeIpcKey_new5(const libqt_string k, uint16_t type) {
+QNativeIpcKey* QNativeIpcKey_New5(const libqt_string k, uint16_t type) {
     QString k_QString = QString::fromUtf8(k.data, k.len);
     return new QNativeIpcKey(k_QString, static_cast<QNativeIpcKey::Type>(type));
 }

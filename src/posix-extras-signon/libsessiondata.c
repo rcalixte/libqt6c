@@ -3,11 +3,11 @@
 #include "libsessiondata.h"
 
 SignOn__SessionData* q_signon__sessiondata_new() {
-    return SignOn__SessionData_new();
+    return SignOn__SessionData_New();
 }
 
 SignOn__SessionData* q_signon__sessiondata_new2(void* other) {
-    return SignOn__SessionData_new2((SignOn__SessionData*)other);
+    return SignOn__SessionData_New2((SignOn__SessionData*)other);
 }
 
 SignOn__SessionData* q_signon__sessiondata_new3(libqt_map /* of const char* to QVariant* */ data) {
@@ -34,7 +34,7 @@ SignOn__SessionData* q_signon__sessiondata_new3(libqt_map /* of const char* to Q
         data_vdest[i] = data_varr[i];
     }
 
-    SignOn__SessionData* _out = SignOn__SessionData_new3(data_ret);
+    SignOn__SessionData* _out = SignOn__SessionData_New3(data_ret);
     free(data_ret.keys);
     free(data_ret.values);
     return _out;

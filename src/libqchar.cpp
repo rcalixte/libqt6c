@@ -5,19 +5,19 @@
 #include "libqchar.hpp"
 #include "libqchar.hxx"
 
-QLatin1Char* QLatin1Char_new(const QLatin1Char* other) {
+QLatin1Char* QLatin1Char_New(const QLatin1Char* other) {
     return new QLatin1Char(*other);
 }
 
-QLatin1Char* QLatin1Char_new2(QLatin1Char* other) {
+QLatin1Char* QLatin1Char_New2(QLatin1Char* other) {
     return new QLatin1Char(std::move(*other));
 }
 
-QLatin1Char* QLatin1Char_new3(char c) {
+QLatin1Char* QLatin1Char_New3(char c) {
     return new QLatin1Char(static_cast<char>(c));
 }
 
-QLatin1Char* QLatin1Char_new4(const QLatin1Char* param1) {
+QLatin1Char* QLatin1Char_New4(const QLatin1Char* param1) {
     return new QLatin1Char(*param1);
 }
 
@@ -37,55 +37,55 @@ void QLatin1Char_Delete(QLatin1Char* self) {
     delete self;
 }
 
-QChar* QChar_new(const QChar* other) {
+QChar* QChar_New(const QChar* other) {
     return new QChar(*other);
 }
 
-QChar* QChar_new2(QChar* other) {
+QChar* QChar_New2(QChar* other) {
     return new QChar(std::move(*other));
 }
 
-QChar* QChar_new3() {
+QChar* QChar_New3() {
     return new QChar();
 }
 
-QChar* QChar_new4(uint16_t rc) {
+QChar* QChar_New4(uint16_t rc) {
     return new QChar(static_cast<ushort>(rc));
 }
 
-QChar* QChar_new5(unsigned char c, unsigned char r) {
+QChar* QChar_New5(unsigned char c, unsigned char r) {
     return new QChar(static_cast<uchar>(c), static_cast<uchar>(r));
 }
 
-QChar* QChar_new6(int16_t rc) {
+QChar* QChar_New6(int16_t rc) {
     return new QChar(static_cast<short>(rc));
 }
 
-QChar* QChar_new7(unsigned int rc) {
+QChar* QChar_New7(unsigned int rc) {
     return new QChar(static_cast<uint>(rc));
 }
 
-QChar* QChar_new8(int rc) {
+QChar* QChar_New8(int rc) {
     return new QChar(static_cast<int>(rc));
 }
 
-QChar* QChar_new9(int s) {
+QChar* QChar_New9(int s) {
     return new QChar(static_cast<QChar::SpecialCharacter>(s));
 }
 
-QChar* QChar_new10(QLatin1Char* ch) {
+QChar* QChar_New10(QLatin1Char* ch) {
     return new QChar(*ch);
 }
 
-QChar* QChar_new11(char c) {
+QChar* QChar_New11(char c) {
     return new QChar(static_cast<char>(c));
 }
 
-QChar* QChar_new12(unsigned char c) {
+QChar* QChar_New12(unsigned char c) {
     return new QChar(static_cast<uchar>(c));
 }
 
-QChar* QChar_new13(const QChar* param1) {
+QChar* QChar_New13(const QChar* param1) {
     return new QChar(*param1);
 }
 

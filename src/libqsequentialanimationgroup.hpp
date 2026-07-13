@@ -27,8 +27,8 @@ typedef struct QSequentialAnimationGroup QSequentialAnimationGroup;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSequentialAnimationGroup* QSequentialAnimationGroup_new();
-QSequentialAnimationGroup* QSequentialAnimationGroup_new2(QObject* parent);
+QSequentialAnimationGroup* QSequentialAnimationGroup_New();
+QSequentialAnimationGroup* QSequentialAnimationGroup_New2(QObject* parent);
 QMetaObject* QSequentialAnimationGroup_MetaObject(const QSequentialAnimationGroup* self);
 void* QSequentialAnimationGroup_Metacast(QSequentialAnimationGroup* self, const char* param1);
 int QSequentialAnimationGroup_Metacall(QSequentialAnimationGroup* self, int param1, int param2, void** param3);

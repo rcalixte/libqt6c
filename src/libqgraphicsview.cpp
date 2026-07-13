@@ -51,19 +51,19 @@
 #include "libqgraphicsview.hpp"
 #include "libqgraphicsview.hxx"
 
-QGraphicsView* QGraphicsView_new(QWidget* parent) {
+QGraphicsView* QGraphicsView_New(QWidget* parent) {
     return new VirtualQGraphicsView(parent);
 }
 
-QGraphicsView* QGraphicsView_new2() {
+QGraphicsView* QGraphicsView_New2() {
     return new VirtualQGraphicsView();
 }
 
-QGraphicsView* QGraphicsView_new3(QGraphicsScene* scene) {
+QGraphicsView* QGraphicsView_New3(QGraphicsScene* scene) {
     return new VirtualQGraphicsView(scene);
 }
 
-QGraphicsView* QGraphicsView_new4(QGraphicsScene* scene, QWidget* parent) {
+QGraphicsView* QGraphicsView_New4(QGraphicsScene* scene, QWidget* parent) {
     return new VirtualQGraphicsView(scene, parent);
 }
 

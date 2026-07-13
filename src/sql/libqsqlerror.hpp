@@ -18,12 +18,12 @@ extern "C" {
 typedef struct QSqlError QSqlError;
 #endif
 
-QSqlError* QSqlError_new();
-QSqlError* QSqlError_new2(const QSqlError* other);
-QSqlError* QSqlError_new3(const libqt_string driverText);
-QSqlError* QSqlError_new4(const libqt_string driverText, const libqt_string databaseText);
-QSqlError* QSqlError_new5(const libqt_string driverText, const libqt_string databaseText, int type);
-QSqlError* QSqlError_new6(const libqt_string driverText, const libqt_string databaseText, int type, const libqt_string errorCode);
+QSqlError* QSqlError_New();
+QSqlError* QSqlError_New2(const QSqlError* other);
+QSqlError* QSqlError_New3(const libqt_string driverText);
+QSqlError* QSqlError_New4(const libqt_string driverText, const libqt_string databaseText);
+QSqlError* QSqlError_New5(const libqt_string driverText, const libqt_string databaseText, int type);
+QSqlError* QSqlError_New6(const libqt_string driverText, const libqt_string databaseText, int type, const libqt_string errorCode);
 void QSqlError_OperatorAssign(QSqlError* self, const QSqlError* other);
 bool QSqlError_OperatorEqual(const QSqlError* self, const QSqlError* other);
 bool QSqlError_OperatorNotEqual(const QSqlError* self, const QSqlError* other);

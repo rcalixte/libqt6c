@@ -25,11 +25,11 @@
 #include "libkfileitemdelegate.hpp"
 #include "libkfileitemdelegate.hxx"
 
-KFileItemDelegate* KFileItemDelegate_new() {
+KFileItemDelegate* KFileItemDelegate_New() {
     return new VirtualKFileItemDelegate();
 }
 
-KFileItemDelegate* KFileItemDelegate_new2(QObject* parent) {
+KFileItemDelegate* KFileItemDelegate_New2(QObject* parent) {
     return new VirtualKFileItemDelegate(parent);
 }
 

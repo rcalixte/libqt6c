@@ -14,11 +14,11 @@
 #include "libqscilexerintelhex.hpp"
 #include "libqscilexerintelhex.hxx"
 
-QsciLexerIntelHex* QsciLexerIntelHex_new() {
+QsciLexerIntelHex* QsciLexerIntelHex_New() {
     return new VirtualQsciLexerIntelHex();
 }
 
-QsciLexerIntelHex* QsciLexerIntelHex_new2(QObject* parent) {
+QsciLexerIntelHex* QsciLexerIntelHex_New2(QObject* parent) {
     return new VirtualQsciLexerIntelHex(parent);
 }
 

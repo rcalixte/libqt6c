@@ -29,7 +29,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoAreaMonitorSource* QGeoAreaMonitorSource_new(QObject* parent);
+QGeoAreaMonitorSource* QGeoAreaMonitorSource_New(QObject* parent);
 QMetaObject* QGeoAreaMonitorSource_MetaObject(const QGeoAreaMonitorSource* self);
 void* QGeoAreaMonitorSource_Metacast(QGeoAreaMonitorSource* self, const char* param1);
 int QGeoAreaMonitorSource_Metacall(QGeoAreaMonitorSource* self, int param1, int param2, void** param3);

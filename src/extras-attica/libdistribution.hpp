@@ -21,8 +21,8 @@ typedef Attica::Distribution Attica__Distribution;
 typedef struct Attica__Distribution Attica__Distribution;
 #endif
 
-Attica__Distribution* Attica__Distribution_new();
-Attica__Distribution* Attica__Distribution_new2(const Attica__Distribution* other);
+Attica__Distribution* Attica__Distribution_New();
+Attica__Distribution* Attica__Distribution_New2(const Attica__Distribution* other);
 void Attica__Distribution_OperatorAssign(Attica__Distribution* self, const Attica__Distribution* other);
 unsigned int Attica__Distribution_Id(const Attica__Distribution* self);
 void Attica__Distribution_SetId(Attica__Distribution* self, unsigned int id);

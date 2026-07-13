@@ -6,24 +6,24 @@
 #include "libkprocesslist.hpp"
 #include "libkprocesslist.hxx"
 
-KProcessList__KProcessInfo* KProcessList__KProcessInfo_new() {
+KProcessList__KProcessInfo* KProcessList__KProcessInfo_New() {
     return new KProcessList::KProcessInfo();
 }
 
-KProcessList__KProcessInfo* KProcessList__KProcessInfo_new2(long long pid, const libqt_string command, const libqt_string user) {
+KProcessList__KProcessInfo* KProcessList__KProcessInfo_New2(long long pid, const libqt_string command, const libqt_string user) {
     QString command_QString = QString::fromUtf8(command.data, command.len);
     QString user_QString = QString::fromUtf8(user.data, user.len);
     return new KProcessList::KProcessInfo(static_cast<qint64>(pid), command_QString, user_QString);
 }
 
-KProcessList__KProcessInfo* KProcessList__KProcessInfo_new3(long long pid, const libqt_string command, const libqt_string name, const libqt_string user) {
+KProcessList__KProcessInfo* KProcessList__KProcessInfo_New3(long long pid, const libqt_string command, const libqt_string name, const libqt_string user) {
     QString command_QString = QString::fromUtf8(command.data, command.len);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString user_QString = QString::fromUtf8(user.data, user.len);
     return new KProcessList::KProcessInfo(static_cast<qint64>(pid), command_QString, name_QString, user_QString);
 }
 
-KProcessList__KProcessInfo* KProcessList__KProcessInfo_new4(const KProcessList__KProcessInfo* other) {
+KProcessList__KProcessInfo* KProcessList__KProcessInfo_New4(const KProcessList__KProcessInfo* other) {
     return new KProcessList::KProcessInfo(*other);
 }
 

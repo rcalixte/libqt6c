@@ -26,8 +26,8 @@ typedef struct QPieSlice QPieSlice;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPieSeries* QPieSeries_new();
-QPieSeries* QPieSeries_new2(QObject* parent);
+QPieSeries* QPieSeries_New();
+QPieSeries* QPieSeries_New2(QObject* parent);
 QMetaObject* QPieSeries_MetaObject(const QPieSeries* self);
 void* QPieSeries_Metacast(QPieSeries* self, const char* param1);
 int QPieSeries_Metacall(QPieSeries* self, int param1, int param2, void** param3);

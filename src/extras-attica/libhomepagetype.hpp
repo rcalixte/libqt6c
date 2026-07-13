@@ -21,8 +21,8 @@ typedef Attica::HomePageType Attica__HomePageType;
 typedef struct Attica__HomePageType Attica__HomePageType;
 #endif
 
-Attica__HomePageType* Attica__HomePageType_new();
-Attica__HomePageType* Attica__HomePageType_new2(const Attica__HomePageType* other);
+Attica__HomePageType* Attica__HomePageType_New();
+Attica__HomePageType* Attica__HomePageType_New2(const Attica__HomePageType* other);
 void Attica__HomePageType_OperatorAssign(Attica__HomePageType* self, const Attica__HomePageType* other);
 unsigned int Attica__HomePageType_Id(const Attica__HomePageType* self);
 void Attica__HomePageType_SetId(Attica__HomePageType* self, unsigned int id);

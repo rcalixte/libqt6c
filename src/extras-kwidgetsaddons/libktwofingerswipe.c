@@ -9,11 +9,11 @@
 #include "libktwofingerswipe.h"
 
 KTwoFingerSwipe* k_twofingerswipe_new() {
-    return KTwoFingerSwipe_new();
+    return KTwoFingerSwipe_New();
 }
 
 KTwoFingerSwipe* k_twofingerswipe_new2(void* parent) {
-    return KTwoFingerSwipe_new2((QObject*)parent);
+    return KTwoFingerSwipe_New2((QObject*)parent);
 }
 
 const QMetaObject* k_twofingerswipe_meta_object(void* self) {
@@ -489,7 +489,7 @@ void k_twofingerswipe_delete(void* self) {
 }
 
 KTwoFingerSwipeRecognizer* k_twofingerswiperecognizer_new() {
-    return KTwoFingerSwipeRecognizer_new();
+    return KTwoFingerSwipeRecognizer_New();
 }
 
 QGesture* k_twofingerswiperecognizer_create(void* self, void* target) {

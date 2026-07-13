@@ -25,25 +25,25 @@
 #include "libqstandarditemmodel.hpp"
 #include "libqstandarditemmodel.hxx"
 
-QStandardItem* QStandardItem_new() {
+QStandardItem* QStandardItem_New() {
     return new VirtualQStandardItem();
 }
 
-QStandardItem* QStandardItem_new2(const libqt_string text) {
+QStandardItem* QStandardItem_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQStandardItem(text_QString);
 }
 
-QStandardItem* QStandardItem_new3(const QIcon* icon, const libqt_string text) {
+QStandardItem* QStandardItem_New3(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQStandardItem(*icon, text_QString);
 }
 
-QStandardItem* QStandardItem_new4(int rows) {
+QStandardItem* QStandardItem_New4(int rows) {
     return new VirtualQStandardItem(static_cast<int>(rows));
 }
 
-QStandardItem* QStandardItem_new5(int rows, int columns) {
+QStandardItem* QStandardItem_New5(int rows, int columns) {
     return new VirtualQStandardItem(static_cast<int>(rows), static_cast<int>(columns));
 }
 
@@ -717,19 +717,19 @@ void QStandardItem_Delete(QStandardItem* self) {
     delete self;
 }
 
-QStandardItemModel* QStandardItemModel_new() {
+QStandardItemModel* QStandardItemModel_New() {
     return new VirtualQStandardItemModel();
 }
 
-QStandardItemModel* QStandardItemModel_new2(int rows, int columns) {
+QStandardItemModel* QStandardItemModel_New2(int rows, int columns) {
     return new VirtualQStandardItemModel(static_cast<int>(rows), static_cast<int>(columns));
 }
 
-QStandardItemModel* QStandardItemModel_new3(QObject* parent) {
+QStandardItemModel* QStandardItemModel_New3(QObject* parent) {
     return new VirtualQStandardItemModel(parent);
 }
 
-QStandardItemModel* QStandardItemModel_new4(int rows, int columns, QObject* parent) {
+QStandardItemModel* QStandardItemModel_New4(int rows, int columns, QObject* parent) {
     return new VirtualQStandardItemModel(static_cast<int>(rows), static_cast<int>(columns), parent);
 }
 

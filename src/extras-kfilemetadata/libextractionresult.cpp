@@ -7,22 +7,22 @@
 #include "libextractionresult.hpp"
 #include "libextractionresult.hxx"
 
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new(const libqt_string url) {
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New(const libqt_string url) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     return new VirtualKFileMetaDataExtractionResult(url_QString);
 }
 
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new2(const KFileMetaData__ExtractionResult* rhs) {
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New2(const KFileMetaData__ExtractionResult* rhs) {
     return new VirtualKFileMetaDataExtractionResult(*rhs);
 }
 
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new3(const libqt_string url, const libqt_string mimetype) {
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New3(const libqt_string url, const libqt_string mimetype) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     return new VirtualKFileMetaDataExtractionResult(url_QString, mimetype_QString);
 }
 
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new4(const libqt_string url, const libqt_string mimetype, const int* flags) {
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New4(const libqt_string url, const libqt_string mimetype, const int* flags) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     return new VirtualKFileMetaDataExtractionResult(url_QString, mimetype_QString, (const KFileMetaData::ExtractionResult::Flags&)(*flags));

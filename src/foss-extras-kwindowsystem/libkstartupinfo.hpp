@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWindow QWindow;
 #endif
 
-KStartupInfo* KStartupInfo_new(int flags);
-KStartupInfo* KStartupInfo_new2(int flags, QObject* parent);
+KStartupInfo* KStartupInfo_New(int flags);
+KStartupInfo* KStartupInfo_New2(int flags, QObject* parent);
 QMetaObject* KStartupInfo_MetaObject(const KStartupInfo* self);
 void* KStartupInfo_Metacast(KStartupInfo* self, const char* param1);
 int KStartupInfo_Metacall(KStartupInfo* self, int param1, int param2, void** param3);
@@ -112,8 +112,8 @@ void KStartupInfo_OnIsSignalConnected(const KStartupInfo* self, intptr_t slot);
 bool KStartupInfo_SuperIsSignalConnected(const KStartupInfo* self, const QMetaMethod* signal);
 void KStartupInfo_Delete(KStartupInfo* self);
 
-KStartupInfoId* KStartupInfoId_new();
-KStartupInfoId* KStartupInfoId_new2(const KStartupInfoId* data);
+KStartupInfoId* KStartupInfoId_New();
+KStartupInfoId* KStartupInfoId_New2(const KStartupInfoId* data);
 bool KStartupInfoId_OperatorEqual(const KStartupInfoId* self, const KStartupInfoId* id);
 bool KStartupInfoId_OperatorNotEqual(const KStartupInfoId* self, const KStartupInfoId* id);
 bool KStartupInfoId_IsNull(const KStartupInfoId* self);
@@ -126,8 +126,8 @@ bool KStartupInfoId_OperatorLesser(const KStartupInfoId* self, const KStartupInf
 void KStartupInfoId_InitId1(KStartupInfoId* self, const libqt_string id);
 void KStartupInfoId_Delete(KStartupInfoId* self);
 
-KStartupInfoData* KStartupInfoData_new();
-KStartupInfoData* KStartupInfoData_new2(const KStartupInfoData* data);
+KStartupInfoData* KStartupInfoData_New();
+KStartupInfoData* KStartupInfoData_New2(const KStartupInfoData* data);
 void KStartupInfoData_SetBin(KStartupInfoData* self, const libqt_string bin);
 libqt_string KStartupInfoData_Bin(const KStartupInfoData* self);
 void KStartupInfoData_SetName(KStartupInfoData* self, const libqt_string name);

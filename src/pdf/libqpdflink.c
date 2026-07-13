@@ -5,11 +5,11 @@
 #include "libqpdflink.h"
 
 QPdfLink* q_pdflink_new() {
-    return QPdfLink_new();
+    return QPdfLink_New();
 }
 
 QPdfLink* q_pdflink_new2(void* other) {
-    return QPdfLink_new2((QPdfLink*)other);
+    return QPdfLink_New2((QPdfLink*)other);
 }
 
 void q_pdflink_operator_assign(void* self, void* other) {

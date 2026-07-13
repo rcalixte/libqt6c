@@ -25,14 +25,14 @@ typedef struct QMicrophonePermission QMicrophonePermission;
 typedef struct QPermission QPermission;
 #endif
 
-QPermission* QPermission_new();
-QPermission* QPermission_new2(const QPermission* param1);
+QPermission* QPermission_New();
+QPermission* QPermission_New2(const QPermission* param1);
 int QPermission_Status(const QPermission* self);
 QMetaType* QPermission_Type(const QPermission* self);
 void QPermission_Delete(QPermission* self);
 
-QLocationPermission* QLocationPermission_new();
-QLocationPermission* QLocationPermission_new2(const QLocationPermission* other);
+QLocationPermission* QLocationPermission_New();
+QLocationPermission* QLocationPermission_New2(const QLocationPermission* other);
 void QLocationPermission_SetAccuracy(QLocationPermission* self, uint8_t accuracy);
 uint8_t QLocationPermission_Accuracy(const QLocationPermission* self);
 void QLocationPermission_SetAvailability(QLocationPermission* self, uint8_t availability);
@@ -41,38 +41,38 @@ void QLocationPermission_OperatorAssign(QLocationPermission* self, const QLocati
 void QLocationPermission_Swap(QLocationPermission* self, QLocationPermission* other);
 void QLocationPermission_Delete(QLocationPermission* self);
 
-QCalendarPermission* QCalendarPermission_new();
-QCalendarPermission* QCalendarPermission_new2(const QCalendarPermission* other);
+QCalendarPermission* QCalendarPermission_New();
+QCalendarPermission* QCalendarPermission_New2(const QCalendarPermission* other);
 void QCalendarPermission_SetAccessMode(QCalendarPermission* self, uint8_t mode);
 uint8_t QCalendarPermission_AccessMode(const QCalendarPermission* self);
 void QCalendarPermission_OperatorAssign(QCalendarPermission* self, const QCalendarPermission* other);
 void QCalendarPermission_Swap(QCalendarPermission* self, QCalendarPermission* other);
 void QCalendarPermission_Delete(QCalendarPermission* self);
 
-QContactsPermission* QContactsPermission_new();
-QContactsPermission* QContactsPermission_new2(const QContactsPermission* other);
+QContactsPermission* QContactsPermission_New();
+QContactsPermission* QContactsPermission_New2(const QContactsPermission* other);
 void QContactsPermission_SetAccessMode(QContactsPermission* self, uint8_t mode);
 uint8_t QContactsPermission_AccessMode(const QContactsPermission* self);
 void QContactsPermission_OperatorAssign(QContactsPermission* self, const QContactsPermission* other);
 void QContactsPermission_Swap(QContactsPermission* self, QContactsPermission* other);
 void QContactsPermission_Delete(QContactsPermission* self);
 
-QBluetoothPermission* QBluetoothPermission_new();
-QBluetoothPermission* QBluetoothPermission_new2(const QBluetoothPermission* other);
+QBluetoothPermission* QBluetoothPermission_New();
+QBluetoothPermission* QBluetoothPermission_New2(const QBluetoothPermission* other);
 void QBluetoothPermission_SetCommunicationModes(QBluetoothPermission* self, uint8_t modes);
 uint8_t QBluetoothPermission_CommunicationModes(const QBluetoothPermission* self);
 void QBluetoothPermission_OperatorAssign(QBluetoothPermission* self, const QBluetoothPermission* other);
 void QBluetoothPermission_Swap(QBluetoothPermission* self, QBluetoothPermission* other);
 void QBluetoothPermission_Delete(QBluetoothPermission* self);
 
-QCameraPermission* QCameraPermission_new();
-QCameraPermission* QCameraPermission_new2(const QCameraPermission* other);
+QCameraPermission* QCameraPermission_New();
+QCameraPermission* QCameraPermission_New2(const QCameraPermission* other);
 void QCameraPermission_OperatorAssign(QCameraPermission* self, const QCameraPermission* other);
 void QCameraPermission_Swap(QCameraPermission* self, QCameraPermission* other);
 void QCameraPermission_Delete(QCameraPermission* self);
 
-QMicrophonePermission* QMicrophonePermission_new();
-QMicrophonePermission* QMicrophonePermission_new2(const QMicrophonePermission* other);
+QMicrophonePermission* QMicrophonePermission_New();
+QMicrophonePermission* QMicrophonePermission_New2(const QMicrophonePermission* other);
 void QMicrophonePermission_OperatorAssign(QMicrophonePermission* self, const QMicrophonePermission* other);
 void QMicrophonePermission_Swap(QMicrophonePermission* self, QMicrophonePermission* other);
 void QMicrophonePermission_Delete(QMicrophonePermission* self);

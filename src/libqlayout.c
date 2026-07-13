@@ -11,11 +11,11 @@
 #include "libqlayout.h"
 
 QLayout* q_layout_new(void* parent) {
-    return QLayout_new((QWidget*)parent);
+    return QLayout_New((QWidget*)parent);
 }
 
 QLayout* q_layout_new2() {
-    return QLayout_new2();
+    return QLayout_New2();
 }
 
 const QMetaObject* q_layout_meta_object(void* self) {

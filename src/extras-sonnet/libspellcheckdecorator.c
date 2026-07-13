@@ -9,11 +9,11 @@
 #include "libspellcheckdecorator.h"
 
 Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new(void* textEdit) {
-    return Sonnet__SpellCheckDecorator_new((QTextEdit*)textEdit);
+    return Sonnet__SpellCheckDecorator_New((QTextEdit*)textEdit);
 }
 
 Sonnet__SpellCheckDecorator* k_sonnet__spellcheckdecorator_new2(void* textEdit) {
-    return Sonnet__SpellCheckDecorator_new2((QPlainTextEdit*)textEdit);
+    return Sonnet__SpellCheckDecorator_New2((QPlainTextEdit*)textEdit);
 }
 
 const QMetaObject* k_sonnet__spellcheckdecorator_meta_object(void* self) {

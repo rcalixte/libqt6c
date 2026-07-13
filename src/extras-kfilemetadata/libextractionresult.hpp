@@ -22,10 +22,10 @@ typedef struct KFileMetaData__ExtractionResult KFileMetaData__ExtractionResult;
 typedef struct QVariant QVariant;
 #endif
 
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new(const libqt_string url);
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new2(const KFileMetaData__ExtractionResult* rhs);
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new3(const libqt_string url, const libqt_string mimetype);
-KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_new4(const libqt_string url, const libqt_string mimetype, const int* flags);
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New(const libqt_string url);
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New2(const KFileMetaData__ExtractionResult* rhs);
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New3(const libqt_string url, const libqt_string mimetype);
+KFileMetaData__ExtractionResult* KFileMetaData__ExtractionResult_New4(const libqt_string url, const libqt_string mimetype, const int* flags);
 libqt_string KFileMetaData__ExtractionResult_InputUrl(const KFileMetaData__ExtractionResult* self);
 libqt_string KFileMetaData__ExtractionResult_InputMimetype(const KFileMetaData__ExtractionResult* self);
 int KFileMetaData__ExtractionResult_InputFlags(const KFileMetaData__ExtractionResult* self);

@@ -12,12 +12,12 @@
 #include "libkbookmarkmanager.hpp"
 #include "libkbookmarkmanager.hxx"
 
-KBookmarkManager* KBookmarkManager_new(const libqt_string bookmarksFile) {
+KBookmarkManager* KBookmarkManager_New(const libqt_string bookmarksFile) {
     QString bookmarksFile_QString = QString::fromUtf8(bookmarksFile.data, bookmarksFile.len);
     return new VirtualKBookmarkManager(bookmarksFile_QString);
 }
 
-KBookmarkManager* KBookmarkManager_new2(const libqt_string bookmarksFile, QObject* parent) {
+KBookmarkManager* KBookmarkManager_New2(const libqt_string bookmarksFile, QObject* parent) {
     QString bookmarksFile_QString = QString::fromUtf8(bookmarksFile.data, bookmarksFile.len);
     return new VirtualKBookmarkManager(bookmarksFile_QString, parent);
 }

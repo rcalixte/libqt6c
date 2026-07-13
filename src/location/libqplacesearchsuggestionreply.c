@@ -7,11 +7,11 @@
 #include "libqplacesearchsuggestionreply.h"
 
 QPlaceSearchSuggestionReply* q_placesearchsuggestionreply_new() {
-    return QPlaceSearchSuggestionReply_new();
+    return QPlaceSearchSuggestionReply_New();
 }
 
 QPlaceSearchSuggestionReply* q_placesearchsuggestionreply_new2(void* parent) {
-    return QPlaceSearchSuggestionReply_new2((QObject*)parent);
+    return QPlaceSearchSuggestionReply_New2((QObject*)parent);
 }
 
 const QMetaObject* q_placesearchsuggestionreply_meta_object(void* self) {

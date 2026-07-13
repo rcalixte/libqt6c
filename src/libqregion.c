@@ -6,31 +6,31 @@
 #include "libqregion.h"
 
 QRegion* q_region_new() {
-    return QRegion_new();
+    return QRegion_New();
 }
 
 QRegion* q_region_new2(int x, int y, int w, int h) {
-    return QRegion_new2(x, y, w, h);
+    return QRegion_New2(x, y, w, h);
 }
 
 QRegion* q_region_new3(void* r) {
-    return QRegion_new3((QRect*)r);
+    return QRegion_New3((QRect*)r);
 }
 
 QRegion* q_region_new4(void* region) {
-    return QRegion_new4((QRegion*)region);
+    return QRegion_New4((QRegion*)region);
 }
 
 QRegion* q_region_new5(void* bitmap) {
-    return QRegion_new5((QBitmap*)bitmap);
+    return QRegion_New5((QBitmap*)bitmap);
 }
 
 QRegion* q_region_new6(int x, int y, int w, int h, int32_t t) {
-    return QRegion_new6(x, y, w, h, t);
+    return QRegion_New6(x, y, w, h, t);
 }
 
 QRegion* q_region_new7(void* r, int32_t t) {
-    return QRegion_new7((QRect*)r, t);
+    return QRegion_New7((QRect*)r, t);
 }
 
 void q_region_operator_assign(void* self, void* param1) {

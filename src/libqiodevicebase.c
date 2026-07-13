@@ -2,7 +2,7 @@
 #include "libqiodevicebase.h"
 
 QIODeviceBase* q_iodevicebase_new(void* other) {
-    return QIODeviceBase_new((QIODeviceBase*)other);
+    return QIODeviceBase_New((QIODeviceBase*)other);
 }
 
 void q_iodevicebase_copy_assign(void* self, void* other) {

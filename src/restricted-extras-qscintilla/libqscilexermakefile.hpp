@@ -29,8 +29,8 @@ typedef struct QsciLexerMakefile QsciLexerMakefile;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerMakefile* QsciLexerMakefile_new();
-QsciLexerMakefile* QsciLexerMakefile_new2(QObject* parent);
+QsciLexerMakefile* QsciLexerMakefile_New();
+QsciLexerMakefile* QsciLexerMakefile_New2(QObject* parent);
 QMetaObject* QsciLexerMakefile_MetaObject(const QsciLexerMakefile* self);
 void* QsciLexerMakefile_Metacast(QsciLexerMakefile* self, const char* param1);
 int QsciLexerMakefile_Metacall(QsciLexerMakefile* self, int param1, int param2, void** param3);

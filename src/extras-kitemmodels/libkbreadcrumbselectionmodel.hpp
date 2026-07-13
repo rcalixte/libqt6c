@@ -27,10 +27,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new(QItemSelectionModel* selectionModel);
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new2(QItemSelectionModel* selectionModel, int target);
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new3(QItemSelectionModel* selectionModel, QObject* parent);
-KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_new4(QItemSelectionModel* selectionModel, int target, QObject* parent);
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New(QItemSelectionModel* selectionModel);
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New2(QItemSelectionModel* selectionModel, int target);
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New3(QItemSelectionModel* selectionModel, QObject* parent);
+KBreadcrumbSelectionModel* KBreadcrumbSelectionModel_New4(QItemSelectionModel* selectionModel, int target, QObject* parent);
 QMetaObject* KBreadcrumbSelectionModel_MetaObject(const KBreadcrumbSelectionModel* self);
 void* KBreadcrumbSelectionModel_Metacast(KBreadcrumbSelectionModel* self, const char* param1);
 int KBreadcrumbSelectionModel_Metacall(KBreadcrumbSelectionModel* self, int param1, int param2, void** param3);

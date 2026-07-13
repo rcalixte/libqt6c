@@ -23,8 +23,8 @@ typedef struct Accounts__Application Accounts__Application;
 typedef struct Accounts__Service Accounts__Service;
 #endif
 
-Accounts__Application* Accounts__Application_new();
-Accounts__Application* Accounts__Application_new2(const Accounts__Application* other);
+Accounts__Application* Accounts__Application_New();
+Accounts__Application* Accounts__Application_New2(const Accounts__Application* other);
 void Accounts__Application_OperatorAssign(Accounts__Application* self, const Accounts__Application* other);
 bool Accounts__Application_IsValid(const Accounts__Application* self);
 libqt_string Accounts__Application_Name(const Accounts__Application* self);

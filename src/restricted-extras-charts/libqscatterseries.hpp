@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QXYSeries QXYSeries;
 #endif
 
-QScatterSeries* QScatterSeries_new();
-QScatterSeries* QScatterSeries_new2(QObject* parent);
+QScatterSeries* QScatterSeries_New();
+QScatterSeries* QScatterSeries_New2(QObject* parent);
 QMetaObject* QScatterSeries_MetaObject(const QScatterSeries* self);
 void* QScatterSeries_Metacast(QScatterSeries* self, const char* param1);
 int QScatterSeries_Metacall(QScatterSeries* self, int param1, int param2, void** param3);

@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVector3D QVector3D;
 #endif
 
-QGraphicsTransform* QGraphicsTransform_new();
-QGraphicsTransform* QGraphicsTransform_new2(QObject* parent);
+QGraphicsTransform* QGraphicsTransform_New();
+QGraphicsTransform* QGraphicsTransform_New2(QObject* parent);
 QMetaObject* QGraphicsTransform_MetaObject(const QGraphicsTransform* self);
 void* QGraphicsTransform_Metacast(QGraphicsTransform* self, const char* param1);
 int QGraphicsTransform_Metacall(QGraphicsTransform* self, int param1, int param2, void** param3);
@@ -80,8 +80,8 @@ void QGraphicsTransform_OnIsSignalConnected(const QGraphicsTransform* self, intp
 bool QGraphicsTransform_SuperIsSignalConnected(const QGraphicsTransform* self, const QMetaMethod* signal);
 void QGraphicsTransform_Delete(QGraphicsTransform* self);
 
-QGraphicsScale* QGraphicsScale_new();
-QGraphicsScale* QGraphicsScale_new2(QObject* parent);
+QGraphicsScale* QGraphicsScale_New();
+QGraphicsScale* QGraphicsScale_New2(QObject* parent);
 QMetaObject* QGraphicsScale_MetaObject(const QGraphicsScale* self);
 void* QGraphicsScale_Metacast(QGraphicsScale* self, const char* param1);
 int QGraphicsScale_Metacall(QGraphicsScale* self, int param1, int param2, void** param3);
@@ -150,8 +150,8 @@ void QGraphicsScale_OnIsSignalConnected(const QGraphicsScale* self, intptr_t slo
 bool QGraphicsScale_SuperIsSignalConnected(const QGraphicsScale* self, const QMetaMethod* signal);
 void QGraphicsScale_Delete(QGraphicsScale* self);
 
-QGraphicsRotation* QGraphicsRotation_new();
-QGraphicsRotation* QGraphicsRotation_new2(QObject* parent);
+QGraphicsRotation* QGraphicsRotation_New();
+QGraphicsRotation* QGraphicsRotation_New2(QObject* parent);
 QMetaObject* QGraphicsRotation_MetaObject(const QGraphicsRotation* self);
 void* QGraphicsRotation_Metacast(QGraphicsRotation* self, const char* param1);
 int QGraphicsRotation_Metacall(QGraphicsRotation* self, int param1, int param2, void** param3);

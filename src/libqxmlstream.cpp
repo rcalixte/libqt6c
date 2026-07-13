@@ -13,24 +13,24 @@
 #include "libqxmlstream.hpp"
 #include "libqxmlstream.hxx"
 
-QXmlStreamAttribute* QXmlStreamAttribute_new() {
+QXmlStreamAttribute* QXmlStreamAttribute_New() {
     return new QXmlStreamAttribute();
 }
 
-QXmlStreamAttribute* QXmlStreamAttribute_new2(const libqt_string qualifiedName, const libqt_string value) {
+QXmlStreamAttribute* QXmlStreamAttribute_New2(const libqt_string qualifiedName, const libqt_string value) {
     QString qualifiedName_QString = QString::fromUtf8(qualifiedName.data, qualifiedName.len);
     QString value_QString = QString::fromUtf8(value.data, value.len);
     return new QXmlStreamAttribute(qualifiedName_QString, value_QString);
 }
 
-QXmlStreamAttribute* QXmlStreamAttribute_new3(const libqt_string namespaceUri, const libqt_string name, const libqt_string value) {
+QXmlStreamAttribute* QXmlStreamAttribute_New3(const libqt_string namespaceUri, const libqt_string name, const libqt_string value) {
     QString namespaceUri_QString = QString::fromUtf8(namespaceUri.data, namespaceUri.len);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString value_QString = QString::fromUtf8(value.data, value.len);
     return new QXmlStreamAttribute(namespaceUri_QString, name_QString, value_QString);
 }
 
-QXmlStreamAttribute* QXmlStreamAttribute_new4(const QXmlStreamAttribute* param1) {
+QXmlStreamAttribute* QXmlStreamAttribute_New4(const QXmlStreamAttribute* param1) {
     return new QXmlStreamAttribute(*param1);
 }
 
@@ -102,7 +102,7 @@ void QXmlStreamAttribute_Delete(QXmlStreamAttribute* self) {
     delete self;
 }
 
-QXmlStreamAttributes* QXmlStreamAttributes_new() {
+QXmlStreamAttributes* QXmlStreamAttributes_New() {
     return new QXmlStreamAttributes();
 }
 
@@ -155,17 +155,17 @@ void QXmlStreamAttributes_Delete(QXmlStreamAttributes* self) {
     delete self;
 }
 
-QXmlStreamNamespaceDeclaration* QXmlStreamNamespaceDeclaration_new() {
+QXmlStreamNamespaceDeclaration* QXmlStreamNamespaceDeclaration_New() {
     return new QXmlStreamNamespaceDeclaration();
 }
 
-QXmlStreamNamespaceDeclaration* QXmlStreamNamespaceDeclaration_new2(const libqt_string prefix, const libqt_string namespaceUri) {
+QXmlStreamNamespaceDeclaration* QXmlStreamNamespaceDeclaration_New2(const libqt_string prefix, const libqt_string namespaceUri) {
     QString prefix_QString = QString::fromUtf8(prefix.data, prefix.len);
     QString namespaceUri_QString = QString::fromUtf8(namespaceUri.data, namespaceUri.len);
     return new QXmlStreamNamespaceDeclaration(prefix_QString, namespaceUri_QString);
 }
 
-QXmlStreamNamespaceDeclaration* QXmlStreamNamespaceDeclaration_new3(const QXmlStreamNamespaceDeclaration* param1) {
+QXmlStreamNamespaceDeclaration* QXmlStreamNamespaceDeclaration_New3(const QXmlStreamNamespaceDeclaration* param1) {
     return new QXmlStreamNamespaceDeclaration(*param1);
 }
 
@@ -197,11 +197,11 @@ void QXmlStreamNamespaceDeclaration_Delete(QXmlStreamNamespaceDeclaration* self)
     delete self;
 }
 
-QXmlStreamNotationDeclaration* QXmlStreamNotationDeclaration_new() {
+QXmlStreamNotationDeclaration* QXmlStreamNotationDeclaration_New() {
     return new QXmlStreamNotationDeclaration();
 }
 
-QXmlStreamNotationDeclaration* QXmlStreamNotationDeclaration_new2(const QXmlStreamNotationDeclaration* param1) {
+QXmlStreamNotationDeclaration* QXmlStreamNotationDeclaration_New2(const QXmlStreamNotationDeclaration* param1) {
     return new QXmlStreamNotationDeclaration(*param1);
 }
 
@@ -245,11 +245,11 @@ void QXmlStreamNotationDeclaration_Delete(QXmlStreamNotationDeclaration* self) {
     delete self;
 }
 
-QXmlStreamEntityDeclaration* QXmlStreamEntityDeclaration_new() {
+QXmlStreamEntityDeclaration* QXmlStreamEntityDeclaration_New() {
     return new QXmlStreamEntityDeclaration();
 }
 
-QXmlStreamEntityDeclaration* QXmlStreamEntityDeclaration_new2(const QXmlStreamEntityDeclaration* param1) {
+QXmlStreamEntityDeclaration* QXmlStreamEntityDeclaration_New2(const QXmlStreamEntityDeclaration* param1) {
     return new QXmlStreamEntityDeclaration(*param1);
 }
 
@@ -317,7 +317,7 @@ void QXmlStreamEntityDeclaration_Delete(QXmlStreamEntityDeclaration* self) {
     delete self;
 }
 
-QXmlStreamEntityResolver* QXmlStreamEntityResolver_new() {
+QXmlStreamEntityResolver* QXmlStreamEntityResolver_New() {
     return new VirtualQXmlStreamEntityResolver();
 }
 
@@ -425,15 +425,15 @@ void QXmlStreamEntityResolver_Delete(QXmlStreamEntityResolver* self) {
     delete self;
 }
 
-QXmlStreamReader* QXmlStreamReader_new() {
+QXmlStreamReader* QXmlStreamReader_New() {
     return new QXmlStreamReader();
 }
 
-QXmlStreamReader* QXmlStreamReader_new2(QIODevice* device) {
+QXmlStreamReader* QXmlStreamReader_New2(QIODevice* device) {
     return new QXmlStreamReader(device);
 }
 
-QXmlStreamReader* QXmlStreamReader_new3(const char* data) {
+QXmlStreamReader* QXmlStreamReader_New3(const char* data) {
     return new QXmlStreamReader(QAnyStringView(data));
 }
 
@@ -831,11 +831,11 @@ void QXmlStreamReader_Delete(QXmlStreamReader* self) {
     delete self;
 }
 
-QXmlStreamWriter* QXmlStreamWriter_new() {
+QXmlStreamWriter* QXmlStreamWriter_New() {
     return new QXmlStreamWriter();
 }
 
-QXmlStreamWriter* QXmlStreamWriter_new2(QIODevice* device) {
+QXmlStreamWriter* QXmlStreamWriter_New2(QIODevice* device) {
     return new QXmlStreamWriter(device);
 }
 

@@ -15,7 +15,7 @@
 #include "libconfigpage.h"
 
 KTextEditor__ConfigPage* k_texteditor__configpage_new(void* parent) {
-    return KTextEditor__ConfigPage_new((QWidget*)parent);
+    return KTextEditor__ConfigPage_New((QWidget*)parent);
 }
 
 const QMetaObject* k_texteditor__configpage_meta_object(void* self) {

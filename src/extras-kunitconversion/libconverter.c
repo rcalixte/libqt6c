@@ -5,11 +5,11 @@
 #include "libconverter.h"
 
 KUnitConversion__Converter* k_unitconversion__converter_new() {
-    return KUnitConversion__Converter_new();
+    return KUnitConversion__Converter_New();
 }
 
 KUnitConversion__Converter* k_unitconversion__converter_new2(void* other) {
-    return KUnitConversion__Converter_new2((KUnitConversion__Converter*)other);
+    return KUnitConversion__Converter_New2((KUnitConversion__Converter*)other);
 }
 
 void k_unitconversion__converter_operator_assign(void* self, void* other) {

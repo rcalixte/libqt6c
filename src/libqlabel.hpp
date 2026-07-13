@@ -55,12 +55,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QLabel* QLabel_new(QWidget* parent);
-QLabel* QLabel_new2();
-QLabel* QLabel_new3(const libqt_string text);
-QLabel* QLabel_new4(QWidget* parent, int f);
-QLabel* QLabel_new5(const libqt_string text, QWidget* parent);
-QLabel* QLabel_new6(const libqt_string text, QWidget* parent, int f);
+QLabel* QLabel_New(QWidget* parent);
+QLabel* QLabel_New2();
+QLabel* QLabel_New3(const libqt_string text);
+QLabel* QLabel_New4(QWidget* parent, int f);
+QLabel* QLabel_New5(const libqt_string text, QWidget* parent);
+QLabel* QLabel_New6(const libqt_string text, QWidget* parent, int f);
 QMetaObject* QLabel_MetaObject(const QLabel* self);
 void* QLabel_Metacast(QLabel* self, const char* param1);
 int QLabel_Metacall(QLabel* self, int param1, int param2, void** param3);

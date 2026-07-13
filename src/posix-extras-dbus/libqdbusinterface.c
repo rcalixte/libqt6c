@@ -10,19 +10,19 @@
 #include "libqdbusinterface.h"
 
 QDBusInterface* q_dbusinterface_new(const char* service, const char* path) {
-    return QDBusInterface_new(qstring(service), qstring(path));
+    return QDBusInterface_New(qstring(service), qstring(path));
 }
 
 QDBusInterface* q_dbusinterface_new2(const char* service, const char* path, const char* interface) {
-    return QDBusInterface_new2(qstring(service), qstring(path), qstring(interface));
+    return QDBusInterface_New2(qstring(service), qstring(path), qstring(interface));
 }
 
 QDBusInterface* q_dbusinterface_new3(const char* service, const char* path, const char* interface, void* connection) {
-    return QDBusInterface_new3(qstring(service), qstring(path), qstring(interface), (QDBusConnection*)connection);
+    return QDBusInterface_New3(qstring(service), qstring(path), qstring(interface), (QDBusConnection*)connection);
 }
 
 QDBusInterface* q_dbusinterface_new4(const char* service, const char* path, const char* interface, void* connection, void* parent) {
-    return QDBusInterface_new4(qstring(service), qstring(path), qstring(interface), (QDBusConnection*)connection, (QObject*)parent);
+    return QDBusInterface_New4(qstring(service), qstring(path), qstring(interface), (QDBusConnection*)connection, (QObject*)parent);
 }
 
 const QMetaObject* q_dbusinterface_meta_object(void* self) {

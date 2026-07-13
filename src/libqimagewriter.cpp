@@ -8,21 +8,21 @@
 #include "libqimagewriter.hpp"
 #include "libqimagewriter.hxx"
 
-QImageWriter* QImageWriter_new() {
+QImageWriter* QImageWriter_New() {
     return new QImageWriter();
 }
 
-QImageWriter* QImageWriter_new2(QIODevice* device, const libqt_string format) {
+QImageWriter* QImageWriter_New2(QIODevice* device, const libqt_string format) {
     QByteArray format_QByteArray(format.data, format.len);
     return new QImageWriter(device, format_QByteArray);
 }
 
-QImageWriter* QImageWriter_new3(const libqt_string fileName) {
+QImageWriter* QImageWriter_New3(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QImageWriter(fileName_QString);
 }
 
-QImageWriter* QImageWriter_new4(const libqt_string fileName, const libqt_string format) {
+QImageWriter* QImageWriter_New4(const libqt_string fileName, const libqt_string format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     QByteArray format_QByteArray(format.data, format.len);
     return new QImageWriter(fileName_QString, format_QByteArray);

@@ -6,24 +6,24 @@
 #include "libkpixmapsequence.hpp"
 #include "libkpixmapsequence.hxx"
 
-KPixmapSequence* KPixmapSequence_new() {
+KPixmapSequence* KPixmapSequence_New() {
     return new KPixmapSequence();
 }
 
-KPixmapSequence* KPixmapSequence_new2(const KPixmapSequence* other) {
+KPixmapSequence* KPixmapSequence_New2(const KPixmapSequence* other) {
     return new KPixmapSequence(*other);
 }
 
-KPixmapSequence* KPixmapSequence_new3(const QPixmap* pixmap) {
+KPixmapSequence* KPixmapSequence_New3(const QPixmap* pixmap) {
     return new KPixmapSequence(*pixmap);
 }
 
-KPixmapSequence* KPixmapSequence_new4(const libqt_string fullPath, int size) {
+KPixmapSequence* KPixmapSequence_New4(const libqt_string fullPath, int size) {
     QString fullPath_QString = QString::fromUtf8(fullPath.data, fullPath.len);
     return new KPixmapSequence(fullPath_QString, static_cast<int>(size));
 }
 
-KPixmapSequence* KPixmapSequence_new5(const QPixmap* pixmap, const QSize* frameSize) {
+KPixmapSequence* KPixmapSequence_New5(const QPixmap* pixmap, const QSize* frameSize) {
     return new KPixmapSequence(*pixmap, *frameSize);
 }
 

@@ -20,12 +20,12 @@ typedef struct QGeoRectangle QGeoRectangle;
 typedef struct QGeoShape QGeoShape;
 #endif
 
-QGeoRectangle* QGeoRectangle_new();
-QGeoRectangle* QGeoRectangle_new2(const QGeoCoordinate* center, double degreesWidth, double degreesHeight);
-QGeoRectangle* QGeoRectangle_new3(const QGeoCoordinate* topLeft, const QGeoCoordinate* bottomRight);
-QGeoRectangle* QGeoRectangle_new4(const libqt_list /* of QGeoCoordinate* */ coordinates);
-QGeoRectangle* QGeoRectangle_new5(const QGeoRectangle* other);
-QGeoRectangle* QGeoRectangle_new6(const QGeoShape* other);
+QGeoRectangle* QGeoRectangle_New();
+QGeoRectangle* QGeoRectangle_New2(const QGeoCoordinate* center, double degreesWidth, double degreesHeight);
+QGeoRectangle* QGeoRectangle_New3(const QGeoCoordinate* topLeft, const QGeoCoordinate* bottomRight);
+QGeoRectangle* QGeoRectangle_New4(const libqt_list /* of QGeoCoordinate* */ coordinates);
+QGeoRectangle* QGeoRectangle_New5(const QGeoRectangle* other);
+QGeoRectangle* QGeoRectangle_New6(const QGeoShape* other);
 void QGeoRectangle_OperatorAssign(QGeoRectangle* self, const QGeoRectangle* other);
 void QGeoRectangle_SetTopLeft(QGeoRectangle* self, const QGeoCoordinate* topLeft);
 QGeoCoordinate* QGeoRectangle_TopLeft(const QGeoRectangle* self);

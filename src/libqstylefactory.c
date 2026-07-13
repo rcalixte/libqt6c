@@ -3,11 +3,11 @@
 #include "libqstylefactory.h"
 
 QStyleFactory* q_stylefactory_new(void* other) {
-    return QStyleFactory_new((QStyleFactory*)other);
+    return QStyleFactory_New((QStyleFactory*)other);
 }
 
 QStyleFactory* q_stylefactory_new2(void* other) {
-    return QStyleFactory_new2((QStyleFactory*)other);
+    return QStyleFactory_New2((QStyleFactory*)other);
 }
 
 void q_stylefactory_copy_assign(void* self, void* other) {

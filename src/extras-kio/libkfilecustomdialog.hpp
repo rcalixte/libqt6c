@@ -53,10 +53,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFileCustomDialog* KFileCustomDialog_new(QWidget* parent);
-KFileCustomDialog* KFileCustomDialog_new2();
-KFileCustomDialog* KFileCustomDialog_new3(const QUrl* startDir);
-KFileCustomDialog* KFileCustomDialog_new4(const QUrl* startDir, QWidget* parent);
+KFileCustomDialog* KFileCustomDialog_New(QWidget* parent);
+KFileCustomDialog* KFileCustomDialog_New2();
+KFileCustomDialog* KFileCustomDialog_New3(const QUrl* startDir);
+KFileCustomDialog* KFileCustomDialog_New4(const QUrl* startDir, QWidget* parent);
 QMetaObject* KFileCustomDialog_MetaObject(const KFileCustomDialog* self);
 void* KFileCustomDialog_Metacast(KFileCustomDialog* self, const char* param1);
 int KFileCustomDialog_Metacall(KFileCustomDialog* self, int param1, int param2, void** param3);

@@ -6,7 +6,7 @@
 #include "libqwaitcondition.hpp"
 #include "libqwaitcondition.hxx"
 
-QWaitCondition* QWaitCondition_new() {
+QWaitCondition* QWaitCondition_New() {
     return new QWaitCondition();
 }
 

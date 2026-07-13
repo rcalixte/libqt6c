@@ -8,11 +8,11 @@
 #include "libkxmlguiclient.h"
 
 KXMLGUIClient* k_xmlguiclient_new() {
-    return KXMLGUIClient_new();
+    return KXMLGUIClient_New();
 }
 
 KXMLGUIClient* k_xmlguiclient_new2(void* parent) {
-    return KXMLGUIClient_new2((KXMLGUIClient*)parent);
+    return KXMLGUIClient_New2((KXMLGUIClient*)parent);
 }
 
 QAction* k_xmlguiclient_action(void* self, const char* name) {

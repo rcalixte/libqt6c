@@ -30,8 +30,8 @@ typedef struct QsciLexerXML QsciLexerXML;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerXML* QsciLexerXML_new();
-QsciLexerXML* QsciLexerXML_new2(QObject* parent);
+QsciLexerXML* QsciLexerXML_New();
+QsciLexerXML* QsciLexerXML_New2(QObject* parent);
 QMetaObject* QsciLexerXML_MetaObject(const QsciLexerXML* self);
 void* QsciLexerXML_Metacast(QsciLexerXML* self, const char* param1);
 int QsciLexerXML_Metacall(QsciLexerXML* self, int param1, int param2, void** param3);

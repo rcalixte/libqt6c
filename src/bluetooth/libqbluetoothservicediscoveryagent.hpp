@@ -27,10 +27,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_new();
-QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_new2(const QBluetoothAddress* deviceAdapter);
-QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_new3(QObject* parent);
-QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_new4(const QBluetoothAddress* deviceAdapter, QObject* parent);
+QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_New();
+QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_New2(const QBluetoothAddress* deviceAdapter);
+QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_New3(QObject* parent);
+QBluetoothServiceDiscoveryAgent* QBluetoothServiceDiscoveryAgent_New4(const QBluetoothAddress* deviceAdapter, QObject* parent);
 QMetaObject* QBluetoothServiceDiscoveryAgent_MetaObject(const QBluetoothServiceDiscoveryAgent* self);
 void* QBluetoothServiceDiscoveryAgent_Metacast(QBluetoothServiceDiscoveryAgent* self, const char* param1);
 int QBluetoothServiceDiscoveryAgent_Metacall(QBluetoothServiceDiscoveryAgent* self, int param1, int param2, void** param3);

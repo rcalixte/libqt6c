@@ -19,19 +19,19 @@
 #include "libkmultitabbar.h"
 
 KMultiTabBar* k_multitabbar_new(void* parent) {
-    return KMultiTabBar_new((QWidget*)parent);
+    return KMultiTabBar_New((QWidget*)parent);
 }
 
 KMultiTabBar* k_multitabbar_new2() {
-    return KMultiTabBar_new2();
+    return KMultiTabBar_New2();
 }
 
 KMultiTabBar* k_multitabbar_new3(int32_t pos) {
-    return KMultiTabBar_new3(pos);
+    return KMultiTabBar_New3(pos);
 }
 
 KMultiTabBar* k_multitabbar_new4(int32_t pos, void* parent) {
-    return KMultiTabBar_new4(pos, (QWidget*)parent);
+    return KMultiTabBar_New4(pos, (QWidget*)parent);
 }
 
 const QMetaObject* k_multitabbar_meta_object(void* self) {

@@ -18,15 +18,15 @@
 #include "libKColorPicker.h"
 
 kColorPicker__KColorPicker* k_colorpicker__kcolorpicker_new() {
-    return kColorPicker__KColorPicker_new();
+    return kColorPicker__KColorPicker_New();
 }
 
 kColorPicker__KColorPicker* k_colorpicker__kcolorpicker_new2(bool showAlphaChannel) {
-    return kColorPicker__KColorPicker_new2(showAlphaChannel);
+    return kColorPicker__KColorPicker_New2(showAlphaChannel);
 }
 
 kColorPicker__KColorPicker* k_colorpicker__kcolorpicker_new3(bool showAlphaChannel, void* parent) {
-    return kColorPicker__KColorPicker_new3(showAlphaChannel, (QWidget*)parent);
+    return kColorPicker__KColorPicker_New3(showAlphaChannel, (QWidget*)parent);
 }
 
 const QMetaObject* k_colorpicker__kcolorpicker_meta_object(void* self) {

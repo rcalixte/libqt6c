@@ -37,7 +37,7 @@
 #include "libqsizegrip.hpp"
 #include "libqsizegrip.hxx"
 
-QSizeGrip* QSizeGrip_new(QWidget* parent) {
+QSizeGrip* QSizeGrip_New(QWidget* parent) {
     return new VirtualQSizeGrip(parent);
 }
 

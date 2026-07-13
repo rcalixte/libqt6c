@@ -4,15 +4,15 @@
 #include "libqdatastream.h"
 
 QDataStream* q_datastream_new() {
-    return QDataStream_new();
+    return QDataStream_New();
 }
 
 QDataStream* q_datastream_new2(void* param1) {
-    return QDataStream_new2((QIODevice*)param1);
+    return QDataStream_New2((QIODevice*)param1);
 }
 
 QDataStream* q_datastream_new3(char* param1) {
-    return QDataStream_new3(qstring(param1));
+    return QDataStream_New3(qstring(param1));
 }
 
 QIODevice* q_datastream_device(void* self) {

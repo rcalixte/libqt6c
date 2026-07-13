@@ -55,10 +55,10 @@ typedef struct QWebEngineUrlRequestInterceptor QWebEngineUrlRequestInterceptor;
 typedef struct QWebEngineWebAuthUxRequest QWebEngineWebAuthUxRequest;
 #endif
 
-QWebEnginePage* QWebEnginePage_new();
-QWebEnginePage* QWebEnginePage_new2(QWebEngineProfile* profile);
-QWebEnginePage* QWebEnginePage_new3(QObject* parent);
-QWebEnginePage* QWebEnginePage_new4(QWebEngineProfile* profile, QObject* parent);
+QWebEnginePage* QWebEnginePage_New();
+QWebEnginePage* QWebEnginePage_New2(QWebEngineProfile* profile);
+QWebEnginePage* QWebEnginePage_New3(QObject* parent);
+QWebEnginePage* QWebEnginePage_New4(QWebEngineProfile* profile, QObject* parent);
 QMetaObject* QWebEnginePage_MetaObject(const QWebEnginePage* self);
 void* QWebEnginePage_Metacast(QWebEnginePage* self, const char* param1);
 int QWebEnginePage_Metacall(QWebEnginePage* self, int param1, int param2, void** param3);

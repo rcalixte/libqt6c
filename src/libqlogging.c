@@ -4,11 +4,11 @@
 #include "libqlogging.h"
 
 QMessageLogContext* q_messagelogcontext_new() {
-    return QMessageLogContext_new();
+    return QMessageLogContext_New();
 }
 
 QMessageLogContext* q_messagelogcontext_new2(const char* fileName, int lineNumber, const char* functionName, const char* categoryName) {
-    return QMessageLogContext_new2(fileName, lineNumber, functionName, categoryName);
+    return QMessageLogContext_New2(fileName, lineNumber, functionName, categoryName);
 }
 
 int32_t q_messagelogcontext_version(void* self) {
@@ -56,15 +56,15 @@ void q_messagelogcontext_delete(void* self) {
 }
 
 QMessageLogger* q_messagelogger_new() {
-    return QMessageLogger_new();
+    return QMessageLogger_New();
 }
 
 QMessageLogger* q_messagelogger_new2(const char* file, int line, const char* function) {
-    return QMessageLogger_new2(file, line, function);
+    return QMessageLogger_New2(file, line, function);
 }
 
 QMessageLogger* q_messagelogger_new3(const char* file, int line, const char* function, const char* category) {
-    return QMessageLogger_new3(file, line, function, category);
+    return QMessageLogger_New3(file, line, function, category);
 }
 
 QDebug* q_messagelogger_debug(void* self) {

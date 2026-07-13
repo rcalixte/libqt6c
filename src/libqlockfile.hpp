@@ -18,7 +18,7 @@ extern "C" {
 typedef struct QLockFile QLockFile;
 #endif
 
-QLockFile* QLockFile_new(const libqt_string fileName);
+QLockFile* QLockFile_New(const libqt_string fileName);
 libqt_string QLockFile_FileName(const QLockFile* self);
 bool QLockFile_Lock(QLockFile* self);
 bool QLockFile_TryLock(QLockFile* self, int timeout);

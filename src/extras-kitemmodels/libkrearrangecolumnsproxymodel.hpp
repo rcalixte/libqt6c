@@ -34,8 +34,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_new();
-KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_new2(QObject* parent);
+KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_New();
+KRearrangeColumnsProxyModel* KRearrangeColumnsProxyModel_New2(QObject* parent);
 QMetaObject* KRearrangeColumnsProxyModel_MetaObject(const KRearrangeColumnsProxyModel* self);
 void* KRearrangeColumnsProxyModel_Metacast(KRearrangeColumnsProxyModel* self, const char* param1);
 int KRearrangeColumnsProxyModel_Metacall(KRearrangeColumnsProxyModel* self, int param1, int param2, void** param3);

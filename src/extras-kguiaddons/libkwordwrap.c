@@ -5,7 +5,7 @@
 #include "libkwordwrap.h"
 
 KWordWrap* k_wordwrap_new(void* other) {
-    return KWordWrap_new((KWordWrap*)other);
+    return KWordWrap_New((KWordWrap*)other);
 }
 
 KWordWrap* k_wordwrap_format_text(void* fm, void* r, int flags, const char* str) {

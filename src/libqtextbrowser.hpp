@@ -58,8 +58,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QTextBrowser* QTextBrowser_new(QWidget* parent);
-QTextBrowser* QTextBrowser_new2();
+QTextBrowser* QTextBrowser_New(QWidget* parent);
+QTextBrowser* QTextBrowser_New2();
 QMetaObject* QTextBrowser_MetaObject(const QTextBrowser* self);
 void* QTextBrowser_Metacast(QTextBrowser* self, const char* param1);
 int QTextBrowser_Metacall(QTextBrowser* self, int param1, int param2, void** param3);

@@ -54,10 +54,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KSqueezedTextLabel* KSqueezedTextLabel_new(QWidget* parent);
-KSqueezedTextLabel* KSqueezedTextLabel_new2();
-KSqueezedTextLabel* KSqueezedTextLabel_new3(const libqt_string text);
-KSqueezedTextLabel* KSqueezedTextLabel_new4(const libqt_string text, QWidget* parent);
+KSqueezedTextLabel* KSqueezedTextLabel_New(QWidget* parent);
+KSqueezedTextLabel* KSqueezedTextLabel_New2();
+KSqueezedTextLabel* KSqueezedTextLabel_New3(const libqt_string text);
+KSqueezedTextLabel* KSqueezedTextLabel_New4(const libqt_string text, QWidget* parent);
 QMetaObject* KSqueezedTextLabel_MetaObject(const KSqueezedTextLabel* self);
 void* KSqueezedTextLabel_Metacast(KSqueezedTextLabel* self, const char* param1);
 int KSqueezedTextLabel_Metacall(KSqueezedTextLabel* self, int param1, int param2, void** param3);

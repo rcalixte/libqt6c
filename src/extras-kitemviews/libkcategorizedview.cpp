@@ -53,11 +53,11 @@
 #include "libkcategorizedview.hpp"
 #include "libkcategorizedview.hxx"
 
-KCategorizedView* KCategorizedView_new(QWidget* parent) {
+KCategorizedView* KCategorizedView_New(QWidget* parent) {
     return new VirtualKCategorizedView(parent);
 }
 
-KCategorizedView* KCategorizedView_new2() {
+KCategorizedView* KCategorizedView_New2() {
     return new VirtualKCategorizedView();
 }
 

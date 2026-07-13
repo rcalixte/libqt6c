@@ -20,12 +20,12 @@
 #include "libqwebsocketserver.hpp"
 #include "libqwebsocketserver.hxx"
 
-QWebSocketServer* QWebSocketServer_new(const libqt_string serverName, int secureMode) {
+QWebSocketServer* QWebSocketServer_New(const libqt_string serverName, int secureMode) {
     QString serverName_QString = QString::fromUtf8(serverName.data, serverName.len);
     return new VirtualQWebSocketServer(serverName_QString, static_cast<QWebSocketServer::SslMode>(secureMode));
 }
 
-QWebSocketServer* QWebSocketServer_new2(const libqt_string serverName, int secureMode, QObject* parent) {
+QWebSocketServer* QWebSocketServer_New2(const libqt_string serverName, int secureMode, QObject* parent) {
     QString serverName_QString = QString::fromUtf8(serverName.data, serverName.len);
     return new VirtualQWebSocketServer(serverName_QString, static_cast<QWebSocketServer::SslMode>(secureMode), parent);
 }

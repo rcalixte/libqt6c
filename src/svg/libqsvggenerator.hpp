@@ -26,8 +26,8 @@ typedef struct QSize QSize;
 typedef struct QSvgGenerator QSvgGenerator;
 #endif
 
-QSvgGenerator* QSvgGenerator_new();
-QSvgGenerator* QSvgGenerator_new2(int version);
+QSvgGenerator* QSvgGenerator_New();
+QSvgGenerator* QSvgGenerator_New2(int version);
 libqt_string QSvgGenerator_Title(const QSvgGenerator* self);
 void QSvgGenerator_SetTitle(QSvgGenerator* self, const libqt_string title);
 libqt_string QSvgGenerator_Description(const QSvgGenerator* self);

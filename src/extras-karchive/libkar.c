@@ -7,15 +7,15 @@
 #include "libkar.h"
 
 KAr* k_ar_new(const char* filename) {
-    return KAr_new(qstring(filename));
+    return KAr_New(qstring(filename));
 }
 
 KAr* k_ar_new2(void* dev) {
-    return KAr_new2((QIODevice*)dev);
+    return KAr_New2((QIODevice*)dev);
 }
 
 KAr* k_ar_new3(void* param1) {
-    return KAr_new3((KAr*)param1);
+    return KAr_New3((KAr*)param1);
 }
 
 const char* k_ar_tr(const char* sourceText) {

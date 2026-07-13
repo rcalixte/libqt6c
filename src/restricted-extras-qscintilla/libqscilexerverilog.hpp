@@ -29,8 +29,8 @@ typedef struct QsciLexerVerilog QsciLexerVerilog;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerVerilog* QsciLexerVerilog_new();
-QsciLexerVerilog* QsciLexerVerilog_new2(QObject* parent);
+QsciLexerVerilog* QsciLexerVerilog_New();
+QsciLexerVerilog* QsciLexerVerilog_New2(QObject* parent);
 QMetaObject* QsciLexerVerilog_MetaObject(const QsciLexerVerilog* self);
 void* QsciLexerVerilog_Metacast(QsciLexerVerilog* self, const char* param1);
 int QsciLexerVerilog_Metacall(QsciLexerVerilog* self, int param1, int param2, void** param3);

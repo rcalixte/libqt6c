@@ -18,11 +18,11 @@
 #include "libplaintextsyntaxspellcheckinghighlighter.h"
 
 TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_new(void* plainText) {
-    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_new((TextCustomEditor__PlainTextEditor*)plainText);
+    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_New((TextCustomEditor__PlainTextEditor*)plainText);
 }
 
 TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_new2(void* plainText, void* misspelledColor) {
-    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_new2((TextCustomEditor__PlainTextEditor*)plainText, (QColor*)misspelledColor);
+    return TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_New2((TextCustomEditor__PlainTextEditor*)plainText, (QColor*)misspelledColor);
 }
 
 void k_textcustomeditor__plaintextsyntaxspellcheckinghighlighter_toggle_spell_highlighting(void* self, bool on) {

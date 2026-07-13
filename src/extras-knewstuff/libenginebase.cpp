@@ -22,11 +22,11 @@
 #include "libenginebase.hpp"
 #include "libenginebase.hxx"
 
-KNSCore__EngineBase* KNSCore__EngineBase_new() {
+KNSCore__EngineBase* KNSCore__EngineBase_New() {
     return new VirtualKNSCoreEngineBase();
 }
 
-KNSCore__EngineBase* KNSCore__EngineBase_new2(QObject* parent) {
+KNSCore__EngineBase* KNSCore__EngineBase_New2(QObject* parent) {
     return new VirtualKNSCoreEngineBase(parent);
 }
 

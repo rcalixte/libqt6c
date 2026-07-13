@@ -13,11 +13,11 @@
 #include "libqmediaplayer.h"
 
 QMediaPlayer* q_mediaplayer_new() {
-    return QMediaPlayer_new();
+    return QMediaPlayer_New();
 }
 
 QMediaPlayer* q_mediaplayer_new2(void* parent) {
-    return QMediaPlayer_new2((QObject*)parent);
+    return QMediaPlayer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_mediaplayer_meta_object(void* self) {

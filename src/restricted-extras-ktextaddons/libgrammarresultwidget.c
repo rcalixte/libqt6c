@@ -16,11 +16,11 @@
 #include "libgrammarresultwidget.h"
 
 TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_new(void* parent) {
-    return TextGrammarCheck__GrammarResultWidget_new((QWidget*)parent);
+    return TextGrammarCheck__GrammarResultWidget_New((QWidget*)parent);
 }
 
 TextGrammarCheck__GrammarResultWidget* k_textgrammarcheck__grammarresultwidget_new2() {
-    return TextGrammarCheck__GrammarResultWidget_new2();
+    return TextGrammarCheck__GrammarResultWidget_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__grammarresultwidget_meta_object(void* self) {

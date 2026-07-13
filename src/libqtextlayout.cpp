@@ -19,15 +19,15 @@
 #include "libqtextlayout.hpp"
 #include "libqtextlayout.hxx"
 
-QTextInlineObject* QTextInlineObject_new(const QTextInlineObject* other) {
+QTextInlineObject* QTextInlineObject_New(const QTextInlineObject* other) {
     return new QTextInlineObject(*other);
 }
 
-QTextInlineObject* QTextInlineObject_new2(QTextInlineObject* other) {
+QTextInlineObject* QTextInlineObject_New2(QTextInlineObject* other) {
     return new QTextInlineObject(std::move(*other));
 }
 
-QTextInlineObject* QTextInlineObject_new3() {
+QTextInlineObject* QTextInlineObject_New3() {
     return new QTextInlineObject();
 }
 
@@ -95,25 +95,25 @@ void QTextInlineObject_Delete(QTextInlineObject* self) {
     delete self;
 }
 
-QTextLayout* QTextLayout_new() {
+QTextLayout* QTextLayout_New() {
     return new QTextLayout();
 }
 
-QTextLayout* QTextLayout_new2(const libqt_string text) {
+QTextLayout* QTextLayout_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new QTextLayout(text_QString);
 }
 
-QTextLayout* QTextLayout_new3(const libqt_string text, const QFont* font) {
+QTextLayout* QTextLayout_New3(const libqt_string text, const QFont* font) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new QTextLayout(text_QString, *font);
 }
 
-QTextLayout* QTextLayout_new4(const QTextBlock* b) {
+QTextLayout* QTextLayout_New4(const QTextBlock* b) {
     return new QTextLayout(*b);
 }
 
-QTextLayout* QTextLayout_new5(const libqt_string text, const QFont* font, const QPaintDevice* paintdevice) {
+QTextLayout* QTextLayout_New5(const libqt_string text, const QFont* font, const QPaintDevice* paintdevice) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new QTextLayout(text_QString, *font, paintdevice);
 }
@@ -389,15 +389,15 @@ void QTextLayout_Delete(QTextLayout* self) {
     delete self;
 }
 
-QTextLine* QTextLine_new(const QTextLine* other) {
+QTextLine* QTextLine_New(const QTextLine* other) {
     return new QTextLine(*other);
 }
 
-QTextLine* QTextLine_new2(QTextLine* other) {
+QTextLine* QTextLine_New2(QTextLine* other) {
     return new QTextLine(std::move(*other));
 }
 
-QTextLine* QTextLine_new3() {
+QTextLine* QTextLine_New3() {
     return new QTextLine();
 }
 
@@ -581,11 +581,11 @@ void QTextLine_Delete(QTextLine* self) {
     delete self;
 }
 
-QTextLayout__FormatRange* QTextLayout__FormatRange_new() {
+QTextLayout__FormatRange* QTextLayout__FormatRange_New() {
     return new QTextLayout::FormatRange();
 }
 
-QTextLayout__FormatRange* QTextLayout__FormatRange_new2(const QTextLayout__FormatRange* param1) {
+QTextLayout__FormatRange* QTextLayout__FormatRange_New2(const QTextLayout__FormatRange* param1) {
     return new QTextLayout::FormatRange(*param1);
 }
 

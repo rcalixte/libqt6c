@@ -11,11 +11,11 @@
 #include "libqscilexerproperties.h"
 
 QsciLexerProperties* q_scilexerproperties_new() {
-    return QsciLexerProperties_new();
+    return QsciLexerProperties_New();
 }
 
 QsciLexerProperties* q_scilexerproperties_new2(void* parent) {
-    return QsciLexerProperties_new2((QObject*)parent);
+    return QsciLexerProperties_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerproperties_meta_object(void* self) {

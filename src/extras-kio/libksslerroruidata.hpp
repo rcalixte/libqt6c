@@ -21,10 +21,10 @@ typedef struct QSslError QSslError;
 typedef struct QSslSocket QSslSocket;
 #endif
 
-KSslErrorUiData* KSslErrorUiData_new();
-KSslErrorUiData* KSslErrorUiData_new2(const QSslSocket* socket);
-KSslErrorUiData* KSslErrorUiData_new3(const QNetworkReply* reply, const libqt_list /* of QSslError* */ sslErrors);
-KSslErrorUiData* KSslErrorUiData_new4(const KSslErrorUiData* other);
+KSslErrorUiData* KSslErrorUiData_New();
+KSslErrorUiData* KSslErrorUiData_New2(const QSslSocket* socket);
+KSslErrorUiData* KSslErrorUiData_New3(const QNetworkReply* reply, const libqt_list /* of QSslError* */ sslErrors);
+KSslErrorUiData* KSslErrorUiData_New4(const KSslErrorUiData* other);
 void KSslErrorUiData_OperatorAssign(KSslErrorUiData* self, const KSslErrorUiData* param1);
 void KSslErrorUiData_Delete(KSslErrorUiData* self);
 

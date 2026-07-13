@@ -38,11 +38,11 @@
 #include "libconfigview.hpp"
 #include "libconfigview.hxx"
 
-Sonnet__ConfigView* Sonnet__ConfigView_new(QWidget* parent) {
+Sonnet__ConfigView* Sonnet__ConfigView_New(QWidget* parent) {
     return new VirtualSonnetConfigView(parent);
 }
 
-Sonnet__ConfigView* Sonnet__ConfigView_new2() {
+Sonnet__ConfigView* Sonnet__ConfigView_New2() {
     return new VirtualSonnetConfigView();
 }
 

@@ -34,8 +34,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QFormLayout* QFormLayout_new(QWidget* parent);
-QFormLayout* QFormLayout_new2();
+QFormLayout* QFormLayout_New(QWidget* parent);
+QFormLayout* QFormLayout_New2();
 QMetaObject* QFormLayout_MetaObject(const QFormLayout* self);
 void* QFormLayout_Metacast(QFormLayout* self, const char* param1);
 int QFormLayout_Metacall(QFormLayout* self, int param1, int param2, void** param3);
@@ -210,8 +210,8 @@ void QFormLayout_OnIsSignalConnected(const QFormLayout* self, intptr_t slot);
 bool QFormLayout_SuperIsSignalConnected(const QFormLayout* self, const QMetaMethod* signal);
 void QFormLayout_Delete(QFormLayout* self);
 
-QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new();
-QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_new2(const QFormLayout__TakeRowResult* param1);
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_New();
+QFormLayout__TakeRowResult* QFormLayout__TakeRowResult_New2(const QFormLayout__TakeRowResult* param1);
 QLayoutItem* QFormLayout__TakeRowResult_LabelItem(const QFormLayout__TakeRowResult* self);
 void QFormLayout__TakeRowResult_SetLabelItem(QFormLayout__TakeRowResult* self, QLayoutItem* labelItem);
 QLayoutItem* QFormLayout__TakeRowResult_FieldItem(const QFormLayout__TakeRowResult* self);

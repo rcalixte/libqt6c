@@ -19,7 +19,7 @@ typedef struct KMessageBoxNotifyInterface KMessageBoxNotifyInterface;
 typedef struct QWidget QWidget;
 #endif
 
-KMessageBoxNotifyInterface* KMessageBoxNotifyInterface_new();
+KMessageBoxNotifyInterface* KMessageBoxNotifyInterface_New();
 void KMessageBoxNotifyInterface_SendNotification(KMessageBoxNotifyInterface* self, int notificationType, const libqt_string message, QWidget* parent);
 void KMessageBoxNotifyInterface_OperatorAssign(KMessageBoxNotifyInterface* self, const KMessageBoxNotifyInterface* param1);
 void KMessageBoxNotifyInterface_OnSendNotification(KMessageBoxNotifyInterface* self, intptr_t slot);

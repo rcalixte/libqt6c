@@ -39,15 +39,15 @@
 #include "libktreewidgetsearchlinewidget.hpp"
 #include "libktreewidgetsearchlinewidget.hxx"
 
-KTreeWidgetSearchLineWidget* KTreeWidgetSearchLineWidget_new(QWidget* parent) {
+KTreeWidgetSearchLineWidget* KTreeWidgetSearchLineWidget_New(QWidget* parent) {
     return new VirtualKTreeWidgetSearchLineWidget(parent);
 }
 
-KTreeWidgetSearchLineWidget* KTreeWidgetSearchLineWidget_new2() {
+KTreeWidgetSearchLineWidget* KTreeWidgetSearchLineWidget_New2() {
     return new VirtualKTreeWidgetSearchLineWidget();
 }
 
-KTreeWidgetSearchLineWidget* KTreeWidgetSearchLineWidget_new3(QWidget* parent, QTreeWidget* treeWidget) {
+KTreeWidgetSearchLineWidget* KTreeWidgetSearchLineWidget_New3(QWidget* parent, QTreeWidget* treeWidget) {
     return new VirtualKTreeWidgetSearchLineWidget(parent, treeWidget);
 }
 

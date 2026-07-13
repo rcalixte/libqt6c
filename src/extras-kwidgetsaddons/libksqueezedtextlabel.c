@@ -18,19 +18,19 @@
 #include "libksqueezedtextlabel.h"
 
 KSqueezedTextLabel* k_squeezedtextlabel_new(void* parent) {
-    return KSqueezedTextLabel_new((QWidget*)parent);
+    return KSqueezedTextLabel_New((QWidget*)parent);
 }
 
 KSqueezedTextLabel* k_squeezedtextlabel_new2() {
-    return KSqueezedTextLabel_new2();
+    return KSqueezedTextLabel_New2();
 }
 
 KSqueezedTextLabel* k_squeezedtextlabel_new3(const char* text) {
-    return KSqueezedTextLabel_new3(qstring(text));
+    return KSqueezedTextLabel_New3(qstring(text));
 }
 
 KSqueezedTextLabel* k_squeezedtextlabel_new4(const char* text, void* parent) {
-    return KSqueezedTextLabel_new4(qstring(text), (QWidget*)parent);
+    return KSqueezedTextLabel_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_squeezedtextlabel_meta_object(void* self) {

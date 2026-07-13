@@ -15,19 +15,19 @@
 #include "libplaintexteditorwidget.h"
 
 TextCustomEditor__PlainTextEditorWidget* k_textcustomeditor__plaintexteditorwidget_new(void* parent) {
-    return TextCustomEditor__PlainTextEditorWidget_new((QWidget*)parent);
+    return TextCustomEditor__PlainTextEditorWidget_New((QWidget*)parent);
 }
 
 TextCustomEditor__PlainTextEditorWidget* k_textcustomeditor__plaintexteditorwidget_new2() {
-    return TextCustomEditor__PlainTextEditorWidget_new2();
+    return TextCustomEditor__PlainTextEditorWidget_New2();
 }
 
 TextCustomEditor__PlainTextEditorWidget* k_textcustomeditor__plaintexteditorwidget_new3(void* customEditor) {
-    return TextCustomEditor__PlainTextEditorWidget_new3((TextCustomEditor__PlainTextEditor*)customEditor);
+    return TextCustomEditor__PlainTextEditorWidget_New3((TextCustomEditor__PlainTextEditor*)customEditor);
 }
 
 TextCustomEditor__PlainTextEditorWidget* k_textcustomeditor__plaintexteditorwidget_new4(void* customEditor, void* parent) {
-    return TextCustomEditor__PlainTextEditorWidget_new4((TextCustomEditor__PlainTextEditor*)customEditor, (QWidget*)parent);
+    return TextCustomEditor__PlainTextEditorWidget_New4((TextCustomEditor__PlainTextEditor*)customEditor, (QWidget*)parent);
 }
 
 const QMetaObject* k_textcustomeditor__plaintexteditorwidget_meta_object(void* self) {

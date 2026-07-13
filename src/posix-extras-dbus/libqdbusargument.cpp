@@ -12,11 +12,11 @@
 #include "libqdbusargument.hpp"
 #include "libqdbusargument.hxx"
 
-QDBusArgument* QDBusArgument_new() {
+QDBusArgument* QDBusArgument_New() {
     return new QDBusArgument();
 }
 
-QDBusArgument* QDBusArgument_new2(const QDBusArgument* other) {
+QDBusArgument* QDBusArgument_New2(const QDBusArgument* other) {
     return new QDBusArgument(*other);
 }
 

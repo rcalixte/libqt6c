@@ -25,19 +25,19 @@
 #include "libkcombobox.h"
 
 KComboBox* k_combobox_new(void* parent) {
-    return KComboBox_new((QWidget*)parent);
+    return KComboBox_New((QWidget*)parent);
 }
 
 KComboBox* k_combobox_new2() {
-    return KComboBox_new2();
+    return KComboBox_New2();
 }
 
 KComboBox* k_combobox_new3(bool rw) {
-    return KComboBox_new3(rw);
+    return KComboBox_New3(rw);
 }
 
 KComboBox* k_combobox_new4(bool rw, void* parent) {
-    return KComboBox_new4(rw, (QWidget*)parent);
+    return KComboBox_New4(rw, (QWidget*)parent);
 }
 
 const QMetaObject* k_combobox_meta_object(void* self) {

@@ -21,39 +21,39 @@
 #include "libktoolbar.h"
 
 KToolBar* k_toolbar_new(void* parent) {
-    return KToolBar_new((QWidget*)parent);
+    return KToolBar_New((QWidget*)parent);
 }
 
 KToolBar* k_toolbar_new2(const char* objectName, void* parent) {
-    return KToolBar_new2(qstring(objectName), (QWidget*)parent);
+    return KToolBar_New2(qstring(objectName), (QWidget*)parent);
 }
 
 KToolBar* k_toolbar_new3(const char* objectName, void* parentWindow, int32_t area) {
-    return KToolBar_new3(qstring(objectName), (QMainWindow*)parentWindow, area);
+    return KToolBar_New3(qstring(objectName), (QMainWindow*)parentWindow, area);
 }
 
 KToolBar* k_toolbar_new4(void* parent, bool isMainToolBar) {
-    return KToolBar_new4((QWidget*)parent, isMainToolBar);
+    return KToolBar_New4((QWidget*)parent, isMainToolBar);
 }
 
 KToolBar* k_toolbar_new5(void* parent, bool isMainToolBar, bool readConfig) {
-    return KToolBar_new5((QWidget*)parent, isMainToolBar, readConfig);
+    return KToolBar_New5((QWidget*)parent, isMainToolBar, readConfig);
 }
 
 KToolBar* k_toolbar_new6(const char* objectName, void* parent, bool readConfig) {
-    return KToolBar_new6(qstring(objectName), (QWidget*)parent, readConfig);
+    return KToolBar_New6(qstring(objectName), (QWidget*)parent, readConfig);
 }
 
 KToolBar* k_toolbar_new7(const char* objectName, void* parentWindow, int32_t area, bool newLine) {
-    return KToolBar_new7(qstring(objectName), (QMainWindow*)parentWindow, area, newLine);
+    return KToolBar_New7(qstring(objectName), (QMainWindow*)parentWindow, area, newLine);
 }
 
 KToolBar* k_toolbar_new8(const char* objectName, void* parentWindow, int32_t area, bool newLine, bool isMainToolBar) {
-    return KToolBar_new8(qstring(objectName), (QMainWindow*)parentWindow, area, newLine, isMainToolBar);
+    return KToolBar_New8(qstring(objectName), (QMainWindow*)parentWindow, area, newLine, isMainToolBar);
 }
 
 KToolBar* k_toolbar_new9(const char* objectName, void* parentWindow, int32_t area, bool newLine, bool isMainToolBar, bool readConfig) {
-    return KToolBar_new9(qstring(objectName), (QMainWindow*)parentWindow, area, newLine, isMainToolBar, readConfig);
+    return KToolBar_New9(qstring(objectName), (QMainWindow*)parentWindow, area, newLine, isMainToolBar, readConfig);
 }
 
 const QMetaObject* k_toolbar_meta_object(void* self) {

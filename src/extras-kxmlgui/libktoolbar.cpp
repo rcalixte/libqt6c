@@ -44,44 +44,44 @@
 #include "libktoolbar.hpp"
 #include "libktoolbar.hxx"
 
-KToolBar* KToolBar_new(QWidget* parent) {
+KToolBar* KToolBar_New(QWidget* parent) {
     return new VirtualKToolBar(parent);
 }
 
-KToolBar* KToolBar_new2(const libqt_string objectName, QWidget* parent) {
+KToolBar* KToolBar_New2(const libqt_string objectName, QWidget* parent) {
     QString objectName_QString = QString::fromUtf8(objectName.data, objectName.len);
     return new VirtualKToolBar(objectName_QString, parent);
 }
 
-KToolBar* KToolBar_new3(const libqt_string objectName, QMainWindow* parentWindow, int area) {
+KToolBar* KToolBar_New3(const libqt_string objectName, QMainWindow* parentWindow, int area) {
     QString objectName_QString = QString::fromUtf8(objectName.data, objectName.len);
     return new VirtualKToolBar(objectName_QString, parentWindow, static_cast<Qt::ToolBarArea>(area));
 }
 
-KToolBar* KToolBar_new4(QWidget* parent, bool isMainToolBar) {
+KToolBar* KToolBar_New4(QWidget* parent, bool isMainToolBar) {
     return new VirtualKToolBar(parent, isMainToolBar);
 }
 
-KToolBar* KToolBar_new5(QWidget* parent, bool isMainToolBar, bool readConfig) {
+KToolBar* KToolBar_New5(QWidget* parent, bool isMainToolBar, bool readConfig) {
     return new VirtualKToolBar(parent, isMainToolBar, readConfig);
 }
 
-KToolBar* KToolBar_new6(const libqt_string objectName, QWidget* parent, bool readConfig) {
+KToolBar* KToolBar_New6(const libqt_string objectName, QWidget* parent, bool readConfig) {
     QString objectName_QString = QString::fromUtf8(objectName.data, objectName.len);
     return new VirtualKToolBar(objectName_QString, parent, readConfig);
 }
 
-KToolBar* KToolBar_new7(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine) {
+KToolBar* KToolBar_New7(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine) {
     QString objectName_QString = QString::fromUtf8(objectName.data, objectName.len);
     return new VirtualKToolBar(objectName_QString, parentWindow, static_cast<Qt::ToolBarArea>(area), newLine);
 }
 
-KToolBar* KToolBar_new8(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar) {
+KToolBar* KToolBar_New8(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar) {
     QString objectName_QString = QString::fromUtf8(objectName.data, objectName.len);
     return new VirtualKToolBar(objectName_QString, parentWindow, static_cast<Qt::ToolBarArea>(area), newLine, isMainToolBar);
 }
 
-KToolBar* KToolBar_new9(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar, bool readConfig) {
+KToolBar* KToolBar_New9(const libqt_string objectName, QMainWindow* parentWindow, int area, bool newLine, bool isMainToolBar, bool readConfig) {
     QString objectName_QString = QString::fromUtf8(objectName.data, objectName.len);
     return new VirtualKToolBar(objectName_QString, parentWindow, static_cast<Qt::ToolBarArea>(area), newLine, isMainToolBar, readConfig);
 }

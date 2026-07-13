@@ -33,8 +33,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QPdfDocument* QPdfDocument_new();
-QPdfDocument* QPdfDocument_new2(QObject* parent);
+QPdfDocument* QPdfDocument_New();
+QPdfDocument* QPdfDocument_New2(QObject* parent);
 QMetaObject* QPdfDocument_MetaObject(const QPdfDocument* self);
 void* QPdfDocument_Metacast(QPdfDocument* self, const char* param1);
 int QPdfDocument_Metacall(QPdfDocument* self, int param1, int param2, void** param3);

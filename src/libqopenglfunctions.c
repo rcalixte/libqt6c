@@ -3,11 +3,11 @@
 #include "libqopenglfunctions.h"
 
 QOpenGLFunctions* q_openglfunctions_new() {
-    return QOpenGLFunctions_new();
+    return QOpenGLFunctions_New();
 }
 
 QOpenGLFunctions* q_openglfunctions_new2(void* context) {
-    return QOpenGLFunctions_new2((QOpenGLContext*)context);
+    return QOpenGLFunctions_New2((QOpenGLContext*)context);
 }
 
 int32_t q_openglfunctions_open_g_l_features(void* self) {

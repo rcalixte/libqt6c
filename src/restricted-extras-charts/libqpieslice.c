@@ -11,19 +11,19 @@
 #include "libqpieslice.h"
 
 QPieSlice* q_pieslice_new() {
-    return QPieSlice_new();
+    return QPieSlice_New();
 }
 
 QPieSlice* q_pieslice_new2(const char* label, double value) {
-    return QPieSlice_new2(qstring(label), value);
+    return QPieSlice_New2(qstring(label), value);
 }
 
 QPieSlice* q_pieslice_new3(void* parent) {
-    return QPieSlice_new3((QObject*)parent);
+    return QPieSlice_New3((QObject*)parent);
 }
 
 QPieSlice* q_pieslice_new4(const char* label, double value, void* parent) {
-    return QPieSlice_new4(qstring(label), value, (QObject*)parent);
+    return QPieSlice_New4(qstring(label), value, (QObject*)parent);
 }
 
 const QMetaObject* q_pieslice_meta_object(void* self) {

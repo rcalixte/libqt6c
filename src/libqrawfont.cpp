@@ -14,30 +14,30 @@
 #include "libqrawfont.hpp"
 #include "libqrawfont.hxx"
 
-QRawFont* QRawFont_new() {
+QRawFont* QRawFont_New() {
     return new QRawFont();
 }
 
-QRawFont* QRawFont_new2(const libqt_string fileName, double pixelSize) {
+QRawFont* QRawFont_New2(const libqt_string fileName, double pixelSize) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QRawFont(fileName_QString, static_cast<qreal>(pixelSize));
 }
 
-QRawFont* QRawFont_new3(const libqt_string fontData, double pixelSize) {
+QRawFont* QRawFont_New3(const libqt_string fontData, double pixelSize) {
     QByteArray fontData_QByteArray(fontData.data, fontData.len);
     return new QRawFont(fontData_QByteArray, static_cast<qreal>(pixelSize));
 }
 
-QRawFont* QRawFont_new4(const QRawFont* other) {
+QRawFont* QRawFont_New4(const QRawFont* other) {
     return new QRawFont(*other);
 }
 
-QRawFont* QRawFont_new5(const libqt_string fileName, double pixelSize, int hintingPreference) {
+QRawFont* QRawFont_New5(const libqt_string fileName, double pixelSize, int hintingPreference) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new QRawFont(fileName_QString, static_cast<qreal>(pixelSize), static_cast<QFont::HintingPreference>(hintingPreference));
 }
 
-QRawFont* QRawFont_new6(const libqt_string fontData, double pixelSize, int hintingPreference) {
+QRawFont* QRawFont_New6(const libqt_string fontData, double pixelSize, int hintingPreference) {
     QByteArray fontData_QByteArray(fontData.data, fontData.len);
     return new QRawFont(fontData_QByteArray, static_cast<qreal>(pixelSize), static_cast<QFont::HintingPreference>(hintingPreference));
 }

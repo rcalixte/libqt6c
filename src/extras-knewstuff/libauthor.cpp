@@ -5,11 +5,11 @@
 #include "libauthor.hpp"
 #include "libauthor.hxx"
 
-KNSCore__Author* KNSCore__Author_new() {
+KNSCore__Author* KNSCore__Author_New() {
     return new KNSCore::Author();
 }
 
-KNSCore__Author* KNSCore__Author_new2(const KNSCore__Author* other) {
+KNSCore__Author* KNSCore__Author_New2(const KNSCore__Author* other) {
     return new KNSCore::Author(*other);
 }
 

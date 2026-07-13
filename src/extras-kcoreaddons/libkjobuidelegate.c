@@ -7,11 +7,11 @@
 #include "libkjobuidelegate.h"
 
 KJobUiDelegate* k_jobuidelegate_new() {
-    return KJobUiDelegate_new();
+    return KJobUiDelegate_New();
 }
 
 KJobUiDelegate* k_jobuidelegate_new2(int32_t flags) {
-    return KJobUiDelegate_new2(flags);
+    return KJobUiDelegate_New2(flags);
 }
 
 const QMetaObject* k_jobuidelegate_meta_object(void* self) {

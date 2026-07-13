@@ -51,8 +51,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KNewPasswordWidget* KNewPasswordWidget_new(QWidget* parent);
-KNewPasswordWidget* KNewPasswordWidget_new2();
+KNewPasswordWidget* KNewPasswordWidget_New(QWidget* parent);
+KNewPasswordWidget* KNewPasswordWidget_New2();
 QMetaObject* KNewPasswordWidget_MetaObject(const KNewPasswordWidget* self);
 void* KNewPasswordWidget_Metacast(KNewPasswordWidget* self, const char* param1);
 int KNewPasswordWidget_Metacall(KNewPasswordWidget* self, int param1, int param2, void** param3);

@@ -39,7 +39,7 @@
 #include "libkpreviewwidgetbase.hpp"
 #include "libkpreviewwidgetbase.hxx"
 
-KPreviewWidgetBase* KPreviewWidgetBase_new(QWidget* parent) {
+KPreviewWidgetBase* KPreviewWidgetBase_New(QWidget* parent) {
     return new VirtualKPreviewWidgetBase(parent);
 }
 

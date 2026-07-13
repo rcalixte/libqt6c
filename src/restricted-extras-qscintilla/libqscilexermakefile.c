@@ -11,11 +11,11 @@
 #include "libqscilexermakefile.h"
 
 QsciLexerMakefile* q_scilexermakefile_new() {
-    return QsciLexerMakefile_new();
+    return QsciLexerMakefile_New();
 }
 
 QsciLexerMakefile* q_scilexermakefile_new2(void* parent) {
-    return QsciLexerMakefile_new2((QObject*)parent);
+    return QsciLexerMakefile_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexermakefile_meta_object(void* self) {

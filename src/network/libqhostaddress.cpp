@@ -6,11 +6,11 @@
 #include "libqhostaddress.hpp"
 #include "libqhostaddress.hxx"
 
-QIPv6Address* QIPv6Address_new() {
+QIPv6Address* QIPv6Address_New() {
     return new QIPv6Address();
 }
 
-QIPv6Address* QIPv6Address_new2(const QIPv6Address* param1) {
+QIPv6Address* QIPv6Address_New2(const QIPv6Address* param1) {
     return new QIPv6Address(*param1);
 }
 
@@ -26,32 +26,32 @@ void QIPv6Address_Delete(QIPv6Address* self) {
     delete self;
 }
 
-QHostAddress* QHostAddress_new() {
+QHostAddress* QHostAddress_New() {
     return new QHostAddress();
 }
 
-QHostAddress* QHostAddress_new2(unsigned int ip4Addr) {
+QHostAddress* QHostAddress_New2(unsigned int ip4Addr) {
     return new QHostAddress(static_cast<quint32>(ip4Addr));
 }
 
-QHostAddress* QHostAddress_new3(const unsigned char* ip6Addr) {
+QHostAddress* QHostAddress_New3(const unsigned char* ip6Addr) {
     return new QHostAddress(static_cast<const quint8*>(ip6Addr));
 }
 
-QHostAddress* QHostAddress_new4(const QIPv6Address* ip6Addr) {
+QHostAddress* QHostAddress_New4(const QIPv6Address* ip6Addr) {
     return new QHostAddress(*ip6Addr);
 }
 
-QHostAddress* QHostAddress_new5(const libqt_string address) {
+QHostAddress* QHostAddress_New5(const libqt_string address) {
     QString address_QString = QString::fromUtf8(address.data, address.len);
     return new QHostAddress(address_QString);
 }
 
-QHostAddress* QHostAddress_new6(const QHostAddress* copyVal) {
+QHostAddress* QHostAddress_New6(const QHostAddress* copyVal) {
     return new QHostAddress(*copyVal);
 }
 
-QHostAddress* QHostAddress_new7(int address) {
+QHostAddress* QHostAddress_New7(int address) {
     return new QHostAddress(static_cast<QHostAddress::SpecialAddress>(address));
 }
 

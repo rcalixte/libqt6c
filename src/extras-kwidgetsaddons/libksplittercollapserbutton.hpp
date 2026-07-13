@@ -54,7 +54,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KSplitterCollapserButton* KSplitterCollapserButton_new(QWidget* childWidget, QSplitter* splitter);
+KSplitterCollapserButton* KSplitterCollapserButton_New(QWidget* childWidget, QSplitter* splitter);
 QMetaObject* KSplitterCollapserButton_MetaObject(const KSplitterCollapserButton* self);
 void* KSplitterCollapserButton_Metacast(KSplitterCollapserButton* self, const char* param1);
 int KSplitterCollapserButton_Metacall(KSplitterCollapserButton* self, int param1, int param2, void** param3);

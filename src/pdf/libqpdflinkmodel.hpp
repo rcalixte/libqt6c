@@ -35,8 +35,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QPdfLinkModel* QPdfLinkModel_new();
-QPdfLinkModel* QPdfLinkModel_new2(QObject* parent);
+QPdfLinkModel* QPdfLinkModel_New();
+QPdfLinkModel* QPdfLinkModel_New2(QObject* parent);
 QMetaObject* QPdfLinkModel_MetaObject(const QPdfLinkModel* self);
 void* QPdfLinkModel_Metacast(QPdfLinkModel* self, const char* param1);
 int QPdfLinkModel_Metacall(QPdfLinkModel* self, int param1, int param2, void** param3);

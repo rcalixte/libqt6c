@@ -25,7 +25,7 @@ typedef struct QRect QRect;
 typedef struct QSize QSize;
 #endif
 
-KCountryFlagEmojiIconEngine* KCountryFlagEmojiIconEngine_new(const libqt_string regionOrCountry);
+KCountryFlagEmojiIconEngine* KCountryFlagEmojiIconEngine_New(const libqt_string regionOrCountry);
 QIconEngine* KCountryFlagEmojiIconEngine_Clone(const KCountryFlagEmojiIconEngine* self);
 libqt_string KCountryFlagEmojiIconEngine_Key(const KCountryFlagEmojiIconEngine* self);
 void KCountryFlagEmojiIconEngine_Paint(KCountryFlagEmojiIconEngine* self, QPainter* painter, const QRect* rect, int mode, int state);

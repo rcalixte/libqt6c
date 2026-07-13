@@ -14,15 +14,15 @@
 #include "libfaviconrequestjob.hpp"
 #include "libfaviconrequestjob.hxx"
 
-KIO__FavIconRequestJob* KIO__FavIconRequestJob_new(const QUrl* hostUrl) {
+KIO__FavIconRequestJob* KIO__FavIconRequestJob_New(const QUrl* hostUrl) {
     return new VirtualKIOFavIconRequestJob(*hostUrl);
 }
 
-KIO__FavIconRequestJob* KIO__FavIconRequestJob_new2(const QUrl* hostUrl, int reload) {
+KIO__FavIconRequestJob* KIO__FavIconRequestJob_New2(const QUrl* hostUrl, int reload) {
     return new VirtualKIOFavIconRequestJob(*hostUrl, static_cast<KIO::LoadType>(reload));
 }
 
-KIO__FavIconRequestJob* KIO__FavIconRequestJob_new3(const QUrl* hostUrl, int reload, QObject* parent) {
+KIO__FavIconRequestJob* KIO__FavIconRequestJob_New3(const QUrl* hostUrl, int reload, QObject* parent) {
     return new VirtualKIOFavIconRequestJob(*hostUrl, static_cast<KIO::LoadType>(reload), parent);
 }
 

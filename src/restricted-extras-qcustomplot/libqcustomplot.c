@@ -148,31 +148,31 @@ int32_t q_cp_get_margin_value(void* margins, int32_t side) {
 }
 
 QCPVector2D* q_cpvector2d_new(void* other) {
-    return QCPVector2D_new((QCPVector2D*)other);
+    return QCPVector2D_New((QCPVector2D*)other);
 }
 
 QCPVector2D* q_cpvector2d_new2(void* other) {
-    return QCPVector2D_new2((QCPVector2D*)other);
+    return QCPVector2D_New2((QCPVector2D*)other);
 }
 
 QCPVector2D* q_cpvector2d_new3() {
-    return QCPVector2D_new3();
+    return QCPVector2D_New3();
 }
 
 QCPVector2D* q_cpvector2d_new4(double x, double y) {
-    return QCPVector2D_new4(x, y);
+    return QCPVector2D_New4(x, y);
 }
 
 QCPVector2D* q_cpvector2d_new5(void* point) {
-    return QCPVector2D_new5((QPoint*)point);
+    return QCPVector2D_New5((QPoint*)point);
 }
 
 QCPVector2D* q_cpvector2d_new6(void* point) {
-    return QCPVector2D_new6((QPointF*)point);
+    return QCPVector2D_New6((QPointF*)point);
 }
 
 QCPVector2D* q_cpvector2d_new7(void* param1) {
-    return QCPVector2D_new7((QCPVector2D*)param1);
+    return QCPVector2D_New7((QCPVector2D*)param1);
 }
 
 void q_cpvector2d_copy_assign(void* self, void* other) {
@@ -280,11 +280,11 @@ void q_cpvector2d_delete(void* self) {
 }
 
 QCPPainter* q_cppainter_new() {
-    return QCPPainter_new();
+    return QCPPainter_New();
 }
 
 QCPPainter* q_cppainter_new2(void* device) {
-    return QCPPainter_new2((QPaintDevice*)device);
+    return QCPPainter_New2((QPaintDevice*)device);
 }
 
 bool q_cppainter_antialiasing(void* self) {
@@ -1196,11 +1196,11 @@ void q_cppainter_delete(void* self) {
 }
 
 QCPAbstractPaintBuffer* q_cpabstractpaintbuffer_new(void* size, double devicePixelRatio) {
-    return QCPAbstractPaintBuffer_new((QSize*)size, devicePixelRatio);
+    return QCPAbstractPaintBuffer_New((QSize*)size, devicePixelRatio);
 }
 
 QCPAbstractPaintBuffer* q_cpabstractpaintbuffer_new2(void* param1) {
-    return QCPAbstractPaintBuffer_new2((QCPAbstractPaintBuffer*)param1);
+    return QCPAbstractPaintBuffer_New2((QCPAbstractPaintBuffer*)param1);
 }
 
 QSize* q_cpabstractpaintbuffer_size(void* self) {
@@ -1308,11 +1308,11 @@ void q_cpabstractpaintbuffer_delete(void* self) {
 }
 
 QCPPaintBufferPixmap* q_cppaintbufferpixmap_new(void* size, double devicePixelRatio) {
-    return QCPPaintBufferPixmap_new((QSize*)size, devicePixelRatio);
+    return QCPPaintBufferPixmap_New((QSize*)size, devicePixelRatio);
 }
 
 QCPPaintBufferPixmap* q_cppaintbufferpixmap_new2(void* param1) {
-    return QCPPaintBufferPixmap_new2((QCPPaintBufferPixmap*)param1);
+    return QCPPaintBufferPixmap_New2((QCPPaintBufferPixmap*)param1);
 }
 
 QCPPainter* q_cppaintbufferpixmap_start_painting(void* self) {
@@ -1420,7 +1420,7 @@ void q_cppaintbufferpixmap_delete(void* self) {
 }
 
 QCPLayer* q_cplayer_new(void* parentPlot, const char* layerName) {
-    return QCPLayer_new((QCustomPlot*)parentPlot, qstring(layerName));
+    return QCPLayer_New((QCustomPlot*)parentPlot, qstring(layerName));
 }
 
 const QMetaObject* q_cplayer_meta_object(void* self) {
@@ -1915,15 +1915,15 @@ void q_cplayer_delete(void* self) {
 }
 
 QCPLayerable* q_cplayerable_new(void* plot) {
-    return QCPLayerable_new((QCustomPlot*)plot);
+    return QCPLayerable_New((QCustomPlot*)plot);
 }
 
 QCPLayerable* q_cplayerable_new2(void* plot, const char* targetLayer) {
-    return QCPLayerable_new2((QCustomPlot*)plot, qstring(targetLayer));
+    return QCPLayerable_New2((QCustomPlot*)plot, qstring(targetLayer));
 }
 
 QCPLayerable* q_cplayerable_new3(void* plot, const char* targetLayer, void* parentLayerable) {
-    return QCPLayerable_new3((QCustomPlot*)plot, qstring(targetLayer), (QCPLayerable*)parentLayerable);
+    return QCPLayerable_New3((QCustomPlot*)plot, qstring(targetLayer), (QCPLayerable*)parentLayerable);
 }
 
 const QMetaObject* q_cplayerable_meta_object(void* self) {
@@ -2587,23 +2587,23 @@ void q_cplayerable_delete(void* self) {
 }
 
 QCPRange* q_cprange_new(void* other) {
-    return QCPRange_new((QCPRange*)other);
+    return QCPRange_New((QCPRange*)other);
 }
 
 QCPRange* q_cprange_new2(void* other) {
-    return QCPRange_new2((QCPRange*)other);
+    return QCPRange_New2((QCPRange*)other);
 }
 
 QCPRange* q_cprange_new3() {
-    return QCPRange_new3();
+    return QCPRange_New3();
 }
 
 QCPRange* q_cprange_new4(double lower, double upper) {
-    return QCPRange_new4(lower, upper);
+    return QCPRange_New4(lower, upper);
 }
 
 QCPRange* q_cprange_new5(void* param1) {
-    return QCPRange_new5((QCPRange*)param1);
+    return QCPRange_New5((QCPRange*)param1);
 }
 
 void q_cprange_copy_assign(void* self, void* other) {
@@ -2711,23 +2711,23 @@ void q_cprange_delete(void* self) {
 }
 
 QCPDataRange* q_cpdatarange_new(void* other) {
-    return QCPDataRange_new((QCPDataRange*)other);
+    return QCPDataRange_New((QCPDataRange*)other);
 }
 
 QCPDataRange* q_cpdatarange_new2(void* other) {
-    return QCPDataRange_new2((QCPDataRange*)other);
+    return QCPDataRange_New2((QCPDataRange*)other);
 }
 
 QCPDataRange* q_cpdatarange_new3() {
-    return QCPDataRange_new3();
+    return QCPDataRange_New3();
 }
 
 QCPDataRange* q_cpdatarange_new4(int begin, int end) {
-    return QCPDataRange_new4(begin, end);
+    return QCPDataRange_New4(begin, end);
 }
 
 QCPDataRange* q_cpdatarange_new5(void* param1) {
-    return QCPDataRange_new5((QCPDataRange*)param1);
+    return QCPDataRange_New5((QCPDataRange*)param1);
 }
 
 void q_cpdatarange_copy_assign(void* self, void* other) {
@@ -2807,15 +2807,15 @@ void q_cpdatarange_delete(void* self) {
 }
 
 QCPDataSelection* q_cpdataselection_new() {
-    return QCPDataSelection_new();
+    return QCPDataSelection_New();
 }
 
 QCPDataSelection* q_cpdataselection_new2(void* range) {
-    return QCPDataSelection_new2((QCPDataRange*)range);
+    return QCPDataSelection_New2((QCPDataRange*)range);
 }
 
 QCPDataSelection* q_cpdataselection_new3(void* param1) {
-    return QCPDataSelection_new3((QCPDataSelection*)param1);
+    return QCPDataSelection_New3((QCPDataSelection*)param1);
 }
 
 bool q_cpdataselection_operator_equal(void* self, void* other) {
@@ -2912,7 +2912,7 @@ void q_cpdataselection_delete(void* self) {
 }
 
 QCPSelectionRect* q_cpselectionrect_new(void* parentPlot) {
-    return QCPSelectionRect_new((QCustomPlot*)parentPlot);
+    return QCPSelectionRect_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpselectionrect_meta_object(void* self) {
@@ -3688,7 +3688,7 @@ void q_cpselectionrect_delete(void* self) {
 }
 
 QCPMarginGroup* q_cpmargingroup_new(void* parentPlot) {
-    return QCPMarginGroup_new((QCustomPlot*)parentPlot);
+    return QCPMarginGroup_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpmargingroup_meta_object(void* self) {
@@ -4149,11 +4149,11 @@ void q_cpmargingroup_delete(void* self) {
 }
 
 QCPLayoutElement* q_cplayoutelement_new() {
-    return QCPLayoutElement_new();
+    return QCPLayoutElement_New();
 }
 
 QCPLayoutElement* q_cplayoutelement_new2(void* parentPlot) {
-    return QCPLayoutElement_new2((QCustomPlot*)parentPlot);
+    return QCPLayoutElement_New2((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cplayoutelement_meta_object(void* self) {
@@ -4981,7 +4981,7 @@ void q_cplayoutelement_delete(void* self) {
 }
 
 QCPLayout* q_cplayout_new() {
-    return QCPLayout_new();
+    return QCPLayout_New();
 }
 
 const QMetaObject* q_cplayout_meta_object(void* self) {
@@ -5943,7 +5943,7 @@ void q_cplayout_delete(void* self) {
 }
 
 QCPLayoutGrid* q_cplayoutgrid_new() {
-    return QCPLayoutGrid_new();
+    return QCPLayoutGrid_New();
 }
 
 const QMetaObject* q_cplayoutgrid_meta_object(void* self) {
@@ -7035,7 +7035,7 @@ void q_cplayoutgrid_delete(void* self) {
 }
 
 QCPLayoutInset* q_cplayoutinset_new() {
-    return QCPLayoutInset_new();
+    return QCPLayoutInset_New();
 }
 
 const QMetaObject* q_cplayoutinset_meta_object(void* self) {
@@ -8029,35 +8029,35 @@ void q_cplayoutinset_delete(void* self) {
 }
 
 QCPLineEnding* q_cplineending_new(void* other) {
-    return QCPLineEnding_new((QCPLineEnding*)other);
+    return QCPLineEnding_New((QCPLineEnding*)other);
 }
 
 QCPLineEnding* q_cplineending_new2(void* other) {
-    return QCPLineEnding_new2((QCPLineEnding*)other);
+    return QCPLineEnding_New2((QCPLineEnding*)other);
 }
 
 QCPLineEnding* q_cplineending_new3() {
-    return QCPLineEnding_new3();
+    return QCPLineEnding_New3();
 }
 
 QCPLineEnding* q_cplineending_new4(int32_t style) {
-    return QCPLineEnding_new4(style);
+    return QCPLineEnding_New4(style);
 }
 
 QCPLineEnding* q_cplineending_new5(void* param1) {
-    return QCPLineEnding_new5((QCPLineEnding*)param1);
+    return QCPLineEnding_New5((QCPLineEnding*)param1);
 }
 
 QCPLineEnding* q_cplineending_new6(int32_t style, double width) {
-    return QCPLineEnding_new6(style, width);
+    return QCPLineEnding_New6(style, width);
 }
 
 QCPLineEnding* q_cplineending_new7(int32_t style, double width, double length) {
-    return QCPLineEnding_new7(style, width, length);
+    return QCPLineEnding_New7(style, width, length);
 }
 
 QCPLineEnding* q_cplineending_new8(int32_t style, double width, double length, bool inverted) {
-    return QCPLineEnding_new8(style, width, length, inverted);
+    return QCPLineEnding_New8(style, width, length, inverted);
 }
 
 void q_cplineending_copy_assign(void* self, void* other) {
@@ -8121,7 +8121,7 @@ void q_cplineending_delete(void* self) {
 }
 
 QCPAxisTicker* q_cpaxisticker_new() {
-    return QCPAxisTicker_new();
+    return QCPAxisTicker_New();
 }
 
 int32_t q_cpaxisticker_tick_step_strategy(void* self) {
@@ -8358,7 +8358,7 @@ void q_cpaxisticker_delete(void* self) {
 }
 
 QCPAxisTickerDateTime* q_cpaxistickerdatetime_new() {
-    return QCPAxisTickerDateTime_new();
+    return QCPAxisTickerDateTime_New();
 }
 
 const char* q_cpaxistickerdatetime_date_time_format(void* self) {
@@ -8631,7 +8631,7 @@ void q_cpaxistickerdatetime_delete(void* self) {
 }
 
 QCPAxisTickerTime* q_cpaxistickertime_new() {
-    return QCPAxisTickerTime_new();
+    return QCPAxisTickerTime_New();
 }
 
 const char* q_cpaxistickertime_time_format(void* self) {
@@ -8888,7 +8888,7 @@ void q_cpaxistickertime_delete(void* self) {
 }
 
 QCPAxisTickerFixed* q_cpaxistickerfixed_new() {
-    return QCPAxisTickerFixed_new();
+    return QCPAxisTickerFixed_New();
 }
 
 double q_cpaxistickerfixed_tick_step(void* self) {
@@ -9130,7 +9130,7 @@ void q_cpaxistickerfixed_delete(void* self) {
 }
 
 QCPAxisTickerText* q_cpaxistickertext_new() {
-    return QCPAxisTickerText_new();
+    return QCPAxisTickerText_New();
 }
 
 libqt_map /* of double to const char* */ q_cpaxistickertext_ticks(void* self) {
@@ -9491,7 +9491,7 @@ void q_cpaxistickertext_delete(void* self) {
 }
 
 QCPAxisTickerPi* q_cpaxistickerpi_new() {
-    return QCPAxisTickerPi_new();
+    return QCPAxisTickerPi_New();
 }
 
 const char* q_cpaxistickerpi_pi_symbol(void* self) {
@@ -9836,7 +9836,7 @@ void q_cpaxistickerpi_delete(void* self) {
 }
 
 QCPAxisTickerLog* q_cpaxistickerlog_new() {
-    return QCPAxisTickerLog_new();
+    return QCPAxisTickerLog_New();
 }
 
 double q_cpaxistickerlog_log_base(void* self) {
@@ -10078,7 +10078,7 @@ void q_cpaxistickerlog_delete(void* self) {
 }
 
 QCPGrid* q_cpgrid_new(void* parentAxis) {
-    return QCPGrid_new((QCPAxis*)parentAxis);
+    return QCPGrid_New((QCPAxis*)parentAxis);
 }
 
 const QMetaObject* q_cpgrid_meta_object(void* self) {
@@ -10814,7 +10814,7 @@ void q_cpgrid_delete(void* self) {
 }
 
 QCPAxis* q_cpaxis_new(void* parent, int32_t type) {
-    return QCPAxis_new((QCPAxisRect*)parent, type);
+    return QCPAxis_New((QCPAxisRect*)parent, type);
 }
 
 const QMetaObject* q_cpaxis_meta_object(void* self) {
@@ -12051,47 +12051,47 @@ void q_cpaxis_delete(void* self) {
 }
 
 QCPScatterStyle* q_cpscatterstyle_new() {
-    return QCPScatterStyle_new();
+    return QCPScatterStyle_New();
 }
 
 QCPScatterStyle* q_cpscatterstyle_new2(int32_t shape) {
-    return QCPScatterStyle_new2(shape);
+    return QCPScatterStyle_New2(shape);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new3(int32_t shape, void* color, double size) {
-    return QCPScatterStyle_new3(shape, (QColor*)color, size);
+    return QCPScatterStyle_New3(shape, (QColor*)color, size);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new4(int32_t shape, void* color, void* fill, double size) {
-    return QCPScatterStyle_new4(shape, (QColor*)color, (QColor*)fill, size);
+    return QCPScatterStyle_New4(shape, (QColor*)color, (QColor*)fill, size);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new5(int32_t shape, void* pen, void* brush, double size) {
-    return QCPScatterStyle_new5(shape, (QPen*)pen, (QBrush*)brush, size);
+    return QCPScatterStyle_New5(shape, (QPen*)pen, (QBrush*)brush, size);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new6(void* pixmap) {
-    return QCPScatterStyle_new6((QPixmap*)pixmap);
+    return QCPScatterStyle_New6((QPixmap*)pixmap);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new7(void* customPath, void* pen) {
-    return QCPScatterStyle_new7((QPainterPath*)customPath, (QPen*)pen);
+    return QCPScatterStyle_New7((QPainterPath*)customPath, (QPen*)pen);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new8(void* param1) {
-    return QCPScatterStyle_new8((QCPScatterStyle*)param1);
+    return QCPScatterStyle_New8((QCPScatterStyle*)param1);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new9(int32_t shape, double size) {
-    return QCPScatterStyle_new9(shape, size);
+    return QCPScatterStyle_New9(shape, size);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new10(void* customPath, void* pen, void* brush) {
-    return QCPScatterStyle_new10((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush);
+    return QCPScatterStyle_New10((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush);
 }
 
 QCPScatterStyle* q_cpscatterstyle_new11(void* customPath, void* pen, void* brush, double size) {
-    return QCPScatterStyle_new11((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush, size);
+    return QCPScatterStyle_New11((QPainterPath*)customPath, (QPen*)pen, (QBrush*)brush, size);
 }
 
 double q_cpscatterstyle_size(void* self) {
@@ -12175,7 +12175,7 @@ void q_cpscatterstyle_delete(void* self) {
 }
 
 QCPSelectionDecorator* q_cpselectiondecorator_new() {
-    return QCPSelectionDecorator_new();
+    return QCPSelectionDecorator_New();
 }
 
 QPen* q_cpselectiondecorator_pen(void* self) {
@@ -12267,7 +12267,7 @@ void q_cpselectiondecorator_delete(void* self) {
 }
 
 QCPAbstractPlottable* q_cpabstractplottable_new(void* keyAxis, void* valueAxis) {
-    return QCPAbstractPlottable_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPAbstractPlottable_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpabstractplottable_meta_object(void* self) {
@@ -13162,11 +13162,11 @@ void q_cpabstractplottable_delete(void* self) {
 }
 
 QCPItemAnchor* q_cpitemanchor_new(void* parentPlot, void* parentItem, const char* name) {
-    return QCPItemAnchor_new((QCustomPlot*)parentPlot, (QCPAbstractItem*)parentItem, qstring(name));
+    return QCPItemAnchor_New((QCustomPlot*)parentPlot, (QCPAbstractItem*)parentItem, qstring(name));
 }
 
 QCPItemAnchor* q_cpitemanchor_new2(void* parentPlot, void* parentItem, const char* name, int anchorId) {
-    return QCPItemAnchor_new2((QCustomPlot*)parentPlot, (QCPAbstractItem*)parentItem, qstring(name), anchorId);
+    return QCPItemAnchor_New2((QCustomPlot*)parentPlot, (QCPAbstractItem*)parentItem, qstring(name), anchorId);
 }
 
 const char* q_cpitemanchor_name(void* self) {
@@ -13253,7 +13253,7 @@ void q_cpitemanchor_delete(void* self) {
 }
 
 QCPItemPosition* q_cpitemposition_new(void* parentPlot, void* parentItem, const char* name) {
-    return QCPItemPosition_new((QCustomPlot*)parentPlot, (QCPAbstractItem*)parentItem, qstring(name));
+    return QCPItemPosition_New((QCustomPlot*)parentPlot, (QCPAbstractItem*)parentItem, qstring(name));
 }
 
 int32_t q_cpitemposition_type(void* self) {
@@ -13444,7 +13444,7 @@ void q_cpitemposition_delete(void* self) {
 }
 
 QCPAbstractItem* q_cpabstractitem_new(void* parentPlot) {
-    return QCPAbstractItem_new((QCustomPlot*)parentPlot);
+    return QCPAbstractItem_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpabstractitem_meta_object(void* self) {
@@ -14226,11 +14226,11 @@ void q_cpabstractitem_delete(void* self) {
 }
 
 QCustomPlot* q_customplot_new(void* parent) {
-    return QCustomPlot_new((QWidget*)parent);
+    return QCustomPlot_New((QWidget*)parent);
 }
 
 QCustomPlot* q_customplot_new2() {
-    return QCustomPlot_new2();
+    return QCustomPlot_New2();
 }
 
 const QMetaObject* q_customplot_meta_object(void* self) {
@@ -17410,15 +17410,15 @@ void q_cpplottableinterface1d_delete(void* self) {
 }
 
 QCPColorGradient* q_cpcolorgradient_new() {
-    return QCPColorGradient_new();
+    return QCPColorGradient_New();
 }
 
 QCPColorGradient* q_cpcolorgradient_new2(int32_t preset) {
-    return QCPColorGradient_new2(preset);
+    return QCPColorGradient_New2(preset);
 }
 
 QCPColorGradient* q_cpcolorgradient_new3(void* param1) {
-    return QCPColorGradient_new3((QCPColorGradient*)param1);
+    return QCPColorGradient_New3((QCPColorGradient*)param1);
 }
 
 bool q_cpcolorgradient_operator_equal(void* self, void* other) {
@@ -17560,7 +17560,7 @@ void q_cpcolorgradient_delete(void* self) {
 }
 
 QCPSelectionDecoratorBracket* q_cpselectiondecoratorbracket_new() {
-    return QCPSelectionDecoratorBracket_new();
+    return QCPSelectionDecoratorBracket_New();
 }
 
 QPen* q_cpselectiondecoratorbracket_bracket_pen(void* self) {
@@ -17744,11 +17744,11 @@ void q_cpselectiondecoratorbracket_delete(void* self) {
 }
 
 QCPAxisRect* q_cpaxisrect_new(void* parentPlot) {
-    return QCPAxisRect_new((QCustomPlot*)parentPlot);
+    return QCPAxisRect_New((QCustomPlot*)parentPlot);
 }
 
 QCPAxisRect* q_cpaxisrect_new2(void* parentPlot, bool setupDefaultAxes) {
-    return QCPAxisRect_new2((QCustomPlot*)parentPlot, setupDefaultAxes);
+    return QCPAxisRect_New2((QCustomPlot*)parentPlot, setupDefaultAxes);
 }
 
 const QMetaObject* q_cpaxisrect_meta_object(void* self) {
@@ -18832,7 +18832,7 @@ void q_cpaxisrect_delete(void* self) {
 }
 
 QCPAbstractLegendItem* q_cpabstractlegenditem_new(void* parent) {
-    return QCPAbstractLegendItem_new((QCPLegend*)parent);
+    return QCPAbstractLegendItem_New((QCPLegend*)parent);
 }
 
 const QMetaObject* q_cpabstractlegenditem_meta_object(void* self) {
@@ -19728,7 +19728,7 @@ void q_cpabstractlegenditem_delete(void* self) {
 }
 
 QCPPlottableLegendItem* q_cpplottablelegenditem_new(void* parent, void* plottable) {
-    return QCPPlottableLegendItem_new((QCPLegend*)parent, (QCPAbstractPlottable*)plottable);
+    return QCPPlottableLegendItem_New((QCPLegend*)parent, (QCPAbstractPlottable*)plottable);
 }
 
 const QMetaObject* q_cpplottablelegenditem_meta_object(void* self) {
@@ -20664,7 +20664,7 @@ void q_cpplottablelegenditem_delete(void* self) {
 }
 
 QCPLegend* q_cplegend_new() {
-    return QCPLegend_new();
+    return QCPLegend_New();
 }
 
 const QMetaObject* q_cplegend_meta_object(void* self) {
@@ -21953,23 +21953,23 @@ void q_cplegend_delete(void* self) {
 }
 
 QCPTextElement* q_cptextelement_new(void* parentPlot) {
-    return QCPTextElement_new((QCustomPlot*)parentPlot);
+    return QCPTextElement_New((QCustomPlot*)parentPlot);
 }
 
 QCPTextElement* q_cptextelement_new2(void* parentPlot, const char* text) {
-    return QCPTextElement_new2((QCustomPlot*)parentPlot, qstring(text));
+    return QCPTextElement_New2((QCustomPlot*)parentPlot, qstring(text));
 }
 
 QCPTextElement* q_cptextelement_new3(void* parentPlot, const char* text, double pointSize) {
-    return QCPTextElement_new3((QCustomPlot*)parentPlot, qstring(text), pointSize);
+    return QCPTextElement_New3((QCustomPlot*)parentPlot, qstring(text), pointSize);
 }
 
 QCPTextElement* q_cptextelement_new4(void* parentPlot, const char* text, const char* fontFamily, double pointSize) {
-    return QCPTextElement_new4((QCustomPlot*)parentPlot, qstring(text), qstring(fontFamily), pointSize);
+    return QCPTextElement_New4((QCustomPlot*)parentPlot, qstring(text), qstring(fontFamily), pointSize);
 }
 
 QCPTextElement* q_cptextelement_new5(void* parentPlot, const char* text, void* font) {
-    return QCPTextElement_new5((QCustomPlot*)parentPlot, qstring(text), (QFont*)font);
+    return QCPTextElement_New5((QCustomPlot*)parentPlot, qstring(text), (QFont*)font);
 }
 
 const QMetaObject* q_cptextelement_meta_object(void* self) {
@@ -22920,7 +22920,7 @@ void q_cptextelement_delete(void* self) {
 }
 
 QCPColorScale* q_cpcolorscale_new(void* parentPlot) {
-    return QCPColorScale_new((QCustomPlot*)parentPlot);
+    return QCPColorScale_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpcolorscale_meta_object(void* self) {
@@ -23852,23 +23852,23 @@ void q_cpcolorscale_delete(void* self) {
 }
 
 QCPGraphData* q_cpgraphdata_new(void* other) {
-    return QCPGraphData_new((QCPGraphData*)other);
+    return QCPGraphData_New((QCPGraphData*)other);
 }
 
 QCPGraphData* q_cpgraphdata_new2(void* other) {
-    return QCPGraphData_new2((QCPGraphData*)other);
+    return QCPGraphData_New2((QCPGraphData*)other);
 }
 
 QCPGraphData* q_cpgraphdata_new3() {
-    return QCPGraphData_new3();
+    return QCPGraphData_New3();
 }
 
 QCPGraphData* q_cpgraphdata_new4(double key, double value) {
-    return QCPGraphData_new4(key, value);
+    return QCPGraphData_New4(key, value);
 }
 
 QCPGraphData* q_cpgraphdata_new5(void* param1) {
-    return QCPGraphData_new5((QCPGraphData*)param1);
+    return QCPGraphData_New5((QCPGraphData*)param1);
 }
 
 void q_cpgraphdata_copy_assign(void* self, void* other) {
@@ -23924,7 +23924,7 @@ void q_cpgraphdata_delete(void* self) {
 }
 
 QCPGraph* q_cpgraph_new(void* keyAxis, void* valueAxis) {
-    return QCPGraph_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPGraph_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpgraph_meta_object(void* self) {
@@ -25243,23 +25243,23 @@ void q_cpgraph_delete(void* self) {
 }
 
 QCPCurveData* q_cpcurvedata_new(void* other) {
-    return QCPCurveData_new((QCPCurveData*)other);
+    return QCPCurveData_New((QCPCurveData*)other);
 }
 
 QCPCurveData* q_cpcurvedata_new2(void* other) {
-    return QCPCurveData_new2((QCPCurveData*)other);
+    return QCPCurveData_New2((QCPCurveData*)other);
 }
 
 QCPCurveData* q_cpcurvedata_new3() {
-    return QCPCurveData_new3();
+    return QCPCurveData_New3();
 }
 
 QCPCurveData* q_cpcurvedata_new4(double t, double key, double value) {
-    return QCPCurveData_new4(t, key, value);
+    return QCPCurveData_New4(t, key, value);
 }
 
 QCPCurveData* q_cpcurvedata_new5(void* param1) {
-    return QCPCurveData_new5((QCPCurveData*)param1);
+    return QCPCurveData_New5((QCPCurveData*)param1);
 }
 
 void q_cpcurvedata_copy_assign(void* self, void* other) {
@@ -25323,7 +25323,7 @@ void q_cpcurvedata_delete(void* self) {
 }
 
 QCPCurve* q_cpcurve_new(void* keyAxis, void* valueAxis) {
-    return QCPCurve_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPCurve_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpcurve_meta_object(void* self) {
@@ -26520,7 +26520,7 @@ void q_cpcurve_delete(void* self) {
 }
 
 QCPBarsGroup* q_cpbarsgroup_new(void* parentPlot) {
-    return QCPBarsGroup_new((QCustomPlot*)parentPlot);
+    return QCPBarsGroup_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpbarsgroup_meta_object(void* self) {
@@ -27033,23 +27033,23 @@ void q_cpbarsgroup_delete(void* self) {
 }
 
 QCPBarsData* q_cpbarsdata_new(void* other) {
-    return QCPBarsData_new((QCPBarsData*)other);
+    return QCPBarsData_New((QCPBarsData*)other);
 }
 
 QCPBarsData* q_cpbarsdata_new2(void* other) {
-    return QCPBarsData_new2((QCPBarsData*)other);
+    return QCPBarsData_New2((QCPBarsData*)other);
 }
 
 QCPBarsData* q_cpbarsdata_new3() {
-    return QCPBarsData_new3();
+    return QCPBarsData_New3();
 }
 
 QCPBarsData* q_cpbarsdata_new4(double key, double value) {
-    return QCPBarsData_new4(key, value);
+    return QCPBarsData_New4(key, value);
 }
 
 QCPBarsData* q_cpbarsdata_new5(void* param1) {
-    return QCPBarsData_new5((QCPBarsData*)param1);
+    return QCPBarsData_New5((QCPBarsData*)param1);
 }
 
 void q_cpbarsdata_copy_assign(void* self, void* other) {
@@ -27105,7 +27105,7 @@ void q_cpbarsdata_delete(void* self) {
 }
 
 QCPBars* q_cpbars_new(void* keyAxis, void* valueAxis) {
-    return QCPBars_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPBars_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpbars_meta_object(void* self) {
@@ -28248,19 +28248,19 @@ void q_cpbars_delete(void* self) {
 }
 
 QCPStatisticalBoxData* q_cpstatisticalboxdata_new() {
-    return QCPStatisticalBoxData_new();
+    return QCPStatisticalBoxData_New();
 }
 
 QCPStatisticalBoxData* q_cpstatisticalboxdata_new2(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum) {
-    return QCPStatisticalBoxData_new2(key, minimum, lowerQuartile, median, upperQuartile, maximum);
+    return QCPStatisticalBoxData_New2(key, minimum, lowerQuartile, median, upperQuartile, maximum);
 }
 
 QCPStatisticalBoxData* q_cpstatisticalboxdata_new3(void* param1) {
-    return QCPStatisticalBoxData_new3((QCPStatisticalBoxData*)param1);
+    return QCPStatisticalBoxData_New3((QCPStatisticalBoxData*)param1);
 }
 
 QCPStatisticalBoxData* q_cpstatisticalboxdata_new4(double key, double minimum, double lowerQuartile, double median, double upperQuartile, double maximum, libqt_list /* of double */ outliers) {
-    return QCPStatisticalBoxData_new4(key, minimum, lowerQuartile, median, upperQuartile, maximum, outliers);
+    return QCPStatisticalBoxData_New4(key, minimum, lowerQuartile, median, upperQuartile, maximum, outliers);
 }
 
 double q_cpstatisticalboxdata_sort_key(void* self) {
@@ -28349,7 +28349,7 @@ void q_cpstatisticalboxdata_delete(void* self) {
 }
 
 QCPStatisticalBox* q_cpstatisticalbox_new(void* keyAxis, void* valueAxis) {
-    return QCPStatisticalBox_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPStatisticalBox_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpstatisticalbox_meta_object(void* self) {
@@ -29448,11 +29448,11 @@ void q_cpstatisticalbox_delete(void* self) {
 }
 
 QCPColorMapData* q_cpcolormapdata_new(int keySize, int valueSize, void* keyRange, void* valueRange) {
-    return QCPColorMapData_new(keySize, valueSize, (QCPRange*)keyRange, (QCPRange*)valueRange);
+    return QCPColorMapData_New(keySize, valueSize, (QCPRange*)keyRange, (QCPRange*)valueRange);
 }
 
 QCPColorMapData* q_cpcolormapdata_new2(void* other) {
-    return QCPColorMapData_new2((QCPColorMapData*)other);
+    return QCPColorMapData_New2((QCPColorMapData*)other);
 }
 
 void q_cpcolormapdata_operator_assign(void* self, void* other) {
@@ -29564,7 +29564,7 @@ void q_cpcolormapdata_delete(void* self) {
 }
 
 QCPColorMap* q_cpcolormap_new(void* keyAxis, void* valueAxis) {
-    return QCPColorMap_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPColorMap_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpcolormap_meta_object(void* self) {
@@ -30575,23 +30575,23 @@ void q_cpcolormap_delete(void* self) {
 }
 
 QCPFinancialData* q_cpfinancialdata_new(void* other) {
-    return QCPFinancialData_new((QCPFinancialData*)other);
+    return QCPFinancialData_New((QCPFinancialData*)other);
 }
 
 QCPFinancialData* q_cpfinancialdata_new2(void* other) {
-    return QCPFinancialData_new2((QCPFinancialData*)other);
+    return QCPFinancialData_New2((QCPFinancialData*)other);
 }
 
 QCPFinancialData* q_cpfinancialdata_new3() {
-    return QCPFinancialData_new3();
+    return QCPFinancialData_New3();
 }
 
 QCPFinancialData* q_cpfinancialdata_new4(double key, double open, double high, double low, double close) {
-    return QCPFinancialData_new4(key, open, high, low, close);
+    return QCPFinancialData_New4(key, open, high, low, close);
 }
 
 QCPFinancialData* q_cpfinancialdata_new5(void* param1) {
-    return QCPFinancialData_new5((QCPFinancialData*)param1);
+    return QCPFinancialData_New5((QCPFinancialData*)param1);
 }
 
 void q_cpfinancialdata_copy_assign(void* self, void* other) {
@@ -30671,7 +30671,7 @@ void q_cpfinancialdata_delete(void* self) {
 }
 
 QCPFinancial* q_cpfinancial_new(void* keyAxis, void* valueAxis) {
-    return QCPFinancial_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPFinancial_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cpfinancial_meta_object(void* self) {
@@ -31786,27 +31786,27 @@ void q_cpfinancial_delete(void* self) {
 }
 
 QCPErrorBarsData* q_cperrorbarsdata_new(void* other) {
-    return QCPErrorBarsData_new((QCPErrorBarsData*)other);
+    return QCPErrorBarsData_New((QCPErrorBarsData*)other);
 }
 
 QCPErrorBarsData* q_cperrorbarsdata_new2(void* other) {
-    return QCPErrorBarsData_new2((QCPErrorBarsData*)other);
+    return QCPErrorBarsData_New2((QCPErrorBarsData*)other);
 }
 
 QCPErrorBarsData* q_cperrorbarsdata_new3() {
-    return QCPErrorBarsData_new3();
+    return QCPErrorBarsData_New3();
 }
 
 QCPErrorBarsData* q_cperrorbarsdata_new4(double error) {
-    return QCPErrorBarsData_new4(error);
+    return QCPErrorBarsData_New4(error);
 }
 
 QCPErrorBarsData* q_cperrorbarsdata_new5(double errorMinus, double errorPlus) {
-    return QCPErrorBarsData_new5(errorMinus, errorPlus);
+    return QCPErrorBarsData_New5(errorMinus, errorPlus);
 }
 
 QCPErrorBarsData* q_cperrorbarsdata_new6(void* param1) {
-    return QCPErrorBarsData_new6((QCPErrorBarsData*)param1);
+    return QCPErrorBarsData_New6((QCPErrorBarsData*)param1);
 }
 
 void q_cperrorbarsdata_copy_assign(void* self, void* other) {
@@ -31838,7 +31838,7 @@ void q_cperrorbarsdata_delete(void* self) {
 }
 
 QCPErrorBars* q_cperrorbars_new(void* keyAxis, void* valueAxis) {
-    return QCPErrorBars_new((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
+    return QCPErrorBars_New((QCPAxis*)keyAxis, (QCPAxis*)valueAxis);
 }
 
 const QMetaObject* q_cperrorbars_meta_object(void* self) {
@@ -32949,7 +32949,7 @@ void q_cperrorbars_delete(void* self) {
 }
 
 QCPItemStraightLine* q_cpitemstraightline_new(void* parentPlot) {
-    return QCPItemStraightLine_new((QCustomPlot*)parentPlot);
+    return QCPItemStraightLine_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemstraightline_meta_object(void* self) {
@@ -33779,7 +33779,7 @@ void q_cpitemstraightline_delete(void* self) {
 }
 
 QCPItemLine* q_cpitemline_new(void* parentPlot) {
-    return QCPItemLine_new((QCustomPlot*)parentPlot);
+    return QCPItemLine_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemline_meta_object(void* self) {
@@ -34625,7 +34625,7 @@ void q_cpitemline_delete(void* self) {
 }
 
 QCPItemCurve* q_cpitemcurve_new(void* parentPlot) {
-    return QCPItemCurve_new((QCustomPlot*)parentPlot);
+    return QCPItemCurve_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemcurve_meta_object(void* self) {
@@ -35467,7 +35467,7 @@ void q_cpitemcurve_delete(void* self) {
 }
 
 QCPItemRect* q_cpitemrect_new(void* parentPlot) {
-    return QCPItemRect_new((QCustomPlot*)parentPlot);
+    return QCPItemRect_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemrect_meta_object(void* self) {
@@ -36337,7 +36337,7 @@ void q_cpitemrect_delete(void* self) {
 }
 
 QCPItemText* q_cpitemtext_new(void* parentPlot) {
-    return QCPItemText_new((QCustomPlot*)parentPlot);
+    return QCPItemText_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemtext_meta_object(void* self) {
@@ -37318,7 +37318,7 @@ void q_cpitemtext_delete(void* self) {
 }
 
 QCPItemEllipse* q_cpitemellipse_new(void* parentPlot) {
-    return QCPItemEllipse_new((QCustomPlot*)parentPlot);
+    return QCPItemEllipse_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemellipse_meta_object(void* self) {
@@ -38200,7 +38200,7 @@ void q_cpitemellipse_delete(void* self) {
 }
 
 QCPItemPixmap* q_cpitempixmap_new(void* parentPlot) {
-    return QCPItemPixmap_new((QCustomPlot*)parentPlot);
+    return QCPItemPixmap_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitempixmap_meta_object(void* self) {
@@ -39158,7 +39158,7 @@ void q_cpitempixmap_delete(void* self) {
 }
 
 QCPItemTracer* q_cpitemtracer_new(void* parentPlot) {
-    return QCPItemTracer_new((QCustomPlot*)parentPlot);
+    return QCPItemTracer_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitemtracer_meta_object(void* self) {
@@ -40040,7 +40040,7 @@ void q_cpitemtracer_delete(void* self) {
 }
 
 QCPItemBracket* q_cpitembracket_new(void* parentPlot) {
-    return QCPItemBracket_new((QCustomPlot*)parentPlot);
+    return QCPItemBracket_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cpitembracket_meta_object(void* self) {
@@ -40878,7 +40878,7 @@ void q_cpitembracket_delete(void* self) {
 }
 
 QCPPolarAxisRadial* q_cppolaraxisradial_new(void* parent) {
-    return QCPPolarAxisRadial_new((QCPPolarAxisAngular*)parent);
+    return QCPPolarAxisRadial_New((QCPPolarAxisAngular*)parent);
 }
 
 const QMetaObject* q_cppolaraxisradial_meta_object(void* self) {
@@ -42085,7 +42085,7 @@ void q_cppolaraxisradial_delete(void* self) {
 }
 
 QCPPolarAxisAngular* q_cppolaraxisangular_new(void* parentPlot) {
-    return QCPPolarAxisAngular_new((QCustomPlot*)parentPlot);
+    return QCPPolarAxisAngular_New((QCustomPlot*)parentPlot);
 }
 
 const QMetaObject* q_cppolaraxisangular_meta_object(void* self) {
@@ -43576,7 +43576,7 @@ void q_cppolaraxisangular_delete(void* self) {
 }
 
 QCPPolarGrid* q_cppolargrid_new(void* parentAxis) {
-    return QCPPolarGrid_new((QCPPolarAxisAngular*)parentAxis);
+    return QCPPolarGrid_New((QCPPolarAxisAngular*)parentAxis);
 }
 
 const QMetaObject* q_cppolargrid_meta_object(void* self) {
@@ -44356,7 +44356,7 @@ void q_cppolargrid_delete(void* self) {
 }
 
 QCPPolarLegendItem* q_cppolarlegenditem_new(void* parent, void* graph) {
-    return QCPPolarLegendItem_new((QCPLegend*)parent, (QCPPolarGraph*)graph);
+    return QCPPolarLegendItem_New((QCPLegend*)parent, (QCPPolarGraph*)graph);
 }
 
 const QMetaObject* q_cppolarlegenditem_meta_object(void* self) {
@@ -45292,7 +45292,7 @@ void q_cppolarlegenditem_delete(void* self) {
 }
 
 QCPPolarGraph* q_cppolargraph_new(void* keyAxis, void* valueAxis) {
-    return QCPPolarGraph_new((QCPPolarAxisAngular*)keyAxis, (QCPPolarAxisRadial*)valueAxis);
+    return QCPPolarGraph_New((QCPPolarAxisAngular*)keyAxis, (QCPPolarAxisRadial*)valueAxis);
 }
 
 const QMetaObject* q_cppolargraph_meta_object(void* self) {

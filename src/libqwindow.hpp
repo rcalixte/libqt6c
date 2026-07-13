@@ -49,9 +49,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWindow QWindow;
 #endif
 
-QWindow* QWindow_new();
-QWindow* QWindow_new2(QWindow* parent);
-QWindow* QWindow_new3(QScreen* screen);
+QWindow* QWindow_New();
+QWindow* QWindow_New2(QWindow* parent);
+QWindow* QWindow_New3(QScreen* screen);
 QMetaObject* QWindow_MetaObject(const QWindow* self);
 void* QWindow_Metacast(QWindow* self, const char* param1);
 int QWindow_Metacall(QWindow* self, int param1, int param2, void** param3);

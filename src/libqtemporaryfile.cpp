@@ -14,20 +14,20 @@
 #include "libqtemporaryfile.hpp"
 #include "libqtemporaryfile.hxx"
 
-QTemporaryFile* QTemporaryFile_new() {
+QTemporaryFile* QTemporaryFile_New() {
     return new VirtualQTemporaryFile();
 }
 
-QTemporaryFile* QTemporaryFile_new2(const libqt_string templateName) {
+QTemporaryFile* QTemporaryFile_New2(const libqt_string templateName) {
     QString templateName_QString = QString::fromUtf8(templateName.data, templateName.len);
     return new VirtualQTemporaryFile(templateName_QString);
 }
 
-QTemporaryFile* QTemporaryFile_new3(QObject* parent) {
+QTemporaryFile* QTemporaryFile_New3(QObject* parent) {
     return new VirtualQTemporaryFile(parent);
 }
 
-QTemporaryFile* QTemporaryFile_new4(const libqt_string templateName, QObject* parent) {
+QTemporaryFile* QTemporaryFile_New4(const libqt_string templateName, QObject* parent) {
     QString templateName_QString = QString::fromUtf8(templateName.data, templateName.len);
     return new VirtualQTemporaryFile(templateName_QString, parent);
 }

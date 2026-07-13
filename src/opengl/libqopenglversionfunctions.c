@@ -3,23 +3,23 @@
 #include "libqopenglversionfunctions.h"
 
 QOpenGLVersionStatus* q_openglversionstatus_new(void* other) {
-    return QOpenGLVersionStatus_new((QOpenGLVersionStatus*)other);
+    return QOpenGLVersionStatus_New((QOpenGLVersionStatus*)other);
 }
 
 QOpenGLVersionStatus* q_openglversionstatus_new2(void* other) {
-    return QOpenGLVersionStatus_new2((QOpenGLVersionStatus*)other);
+    return QOpenGLVersionStatus_New2((QOpenGLVersionStatus*)other);
 }
 
 QOpenGLVersionStatus* q_openglversionstatus_new3() {
-    return QOpenGLVersionStatus_new3();
+    return QOpenGLVersionStatus_New3();
 }
 
 QOpenGLVersionStatus* q_openglversionstatus_new4(int majorVersion, int minorVersion, int32_t functionStatus) {
-    return QOpenGLVersionStatus_new4(majorVersion, minorVersion, functionStatus);
+    return QOpenGLVersionStatus_New4(majorVersion, minorVersion, functionStatus);
 }
 
 QOpenGLVersionStatus* q_openglversionstatus_new5(void* param1) {
-    return QOpenGLVersionStatus_new5((QOpenGLVersionStatus*)param1);
+    return QOpenGLVersionStatus_New5((QOpenGLVersionStatus*)param1);
 }
 
 pair_int_int /* tuple of int and int */ q_openglversionstatus_version(void* self) {

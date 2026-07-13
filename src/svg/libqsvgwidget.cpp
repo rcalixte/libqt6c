@@ -38,20 +38,20 @@
 #include "libqsvgwidget.hpp"
 #include "libqsvgwidget.hxx"
 
-QSvgWidget* QSvgWidget_new(QWidget* parent) {
+QSvgWidget* QSvgWidget_New(QWidget* parent) {
     return new VirtualQSvgWidget(parent);
 }
 
-QSvgWidget* QSvgWidget_new2() {
+QSvgWidget* QSvgWidget_New2() {
     return new VirtualQSvgWidget();
 }
 
-QSvgWidget* QSvgWidget_new3(const libqt_string file) {
+QSvgWidget* QSvgWidget_New3(const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualQSvgWidget(file_QString);
 }
 
-QSvgWidget* QSvgWidget_new4(const libqt_string file, QWidget* parent) {
+QSvgWidget* QSvgWidget_New4(const libqt_string file, QWidget* parent) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualQSvgWidget(file_QString, parent);
 }

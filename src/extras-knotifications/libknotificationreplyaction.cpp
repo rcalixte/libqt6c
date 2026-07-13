@@ -10,7 +10,7 @@
 #include "libknotificationreplyaction.hpp"
 #include "libknotificationreplyaction.hxx"
 
-KNotificationReplyAction* KNotificationReplyAction_new(const libqt_string label) {
+KNotificationReplyAction* KNotificationReplyAction_New(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualKNotificationReplyAction(label_QString);
 }

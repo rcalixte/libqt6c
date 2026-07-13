@@ -20,11 +20,11 @@
 #include "libqdtls.hpp"
 #include "libqdtls.hxx"
 
-QDtlsClientVerifier* QDtlsClientVerifier_new() {
+QDtlsClientVerifier* QDtlsClientVerifier_New() {
     return new VirtualQDtlsClientVerifier();
 }
 
-QDtlsClientVerifier* QDtlsClientVerifier_new2(QObject* parent) {
+QDtlsClientVerifier* QDtlsClientVerifier_New2(QObject* parent) {
     return new VirtualQDtlsClientVerifier(parent);
 }
 
@@ -458,11 +458,11 @@ void QDtlsClientVerifier_Delete(QDtlsClientVerifier* self) {
     delete self;
 }
 
-QDtls* QDtls_new(int mode) {
+QDtls* QDtls_New(int mode) {
     return new VirtualQDtls(static_cast<QSslSocket::SslMode>(mode));
 }
 
-QDtls* QDtls_new2(int mode, QObject* parent) {
+QDtls* QDtls_New2(int mode, QObject* parent) {
     return new VirtualQDtls(static_cast<QSslSocket::SslMode>(mode), parent);
 }
 
@@ -1038,16 +1038,16 @@ void QDtls_Delete(QDtls* self) {
     delete self;
 }
 
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new() {
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_New() {
     return new QDtlsClientVerifier::GeneratorParameters();
 }
 
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new2(int a, const libqt_string s) {
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_New2(int a, const libqt_string s) {
     QByteArray s_QByteArray(s.data, s.len);
     return new QDtlsClientVerifier::GeneratorParameters(static_cast<QCryptographicHash::Algorithm>(a), s_QByteArray);
 }
 
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new3(const QDtlsClientVerifier__GeneratorParameters* param1) {
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_New3(const QDtlsClientVerifier__GeneratorParameters* param1) {
     return new QDtlsClientVerifier::GeneratorParameters(*param1);
 }
 

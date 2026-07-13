@@ -3,11 +3,11 @@
 #include "libqwebenginefindtextresult.hpp"
 #include "libqwebenginefindtextresult.hxx"
 
-QWebEngineFindTextResult* QWebEngineFindTextResult_new() {
+QWebEngineFindTextResult* QWebEngineFindTextResult_New() {
     return new QWebEngineFindTextResult();
 }
 
-QWebEngineFindTextResult* QWebEngineFindTextResult_new2(const QWebEngineFindTextResult* other) {
+QWebEngineFindTextResult* QWebEngineFindTextResult_New2(const QWebEngineFindTextResult* other) {
     return new QWebEngineFindTextResult(*other);
 }
 

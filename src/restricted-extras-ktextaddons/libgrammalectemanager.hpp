@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct TextGrammarCheck__GrammalecteManager TextGrammarCheck__GrammalecteManager;
 #endif
 
-TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_new();
-TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_new2(QObject* parent);
+TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_New();
+TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_New2(QObject* parent);
 QMetaObject* TextGrammarCheck__GrammalecteManager_MetaObject(const TextGrammarCheck__GrammalecteManager* self);
 void* TextGrammarCheck__GrammalecteManager_Metacast(TextGrammarCheck__GrammalecteManager* self, const char* param1);
 int TextGrammarCheck__GrammalecteManager_Metacall(TextGrammarCheck__GrammalecteManager* self, int param1, int param2, void** param3);

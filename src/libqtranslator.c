@@ -7,11 +7,11 @@
 #include "libqtranslator.h"
 
 QTranslator* q_translator_new() {
-    return QTranslator_new();
+    return QTranslator_New();
 }
 
 QTranslator* q_translator_new2(void* parent) {
-    return QTranslator_new2((QObject*)parent);
+    return QTranslator_New2((QObject*)parent);
 }
 
 const QMetaObject* q_translator_meta_object(void* self) {

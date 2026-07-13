@@ -2,19 +2,19 @@
 #include "libqhashfunctions.h"
 
 QHashSeed* q_hashseed_new(void* other) {
-    return QHashSeed_new((QHashSeed*)other);
+    return QHashSeed_New((QHashSeed*)other);
 }
 
 QHashSeed* q_hashseed_new2(void* other) {
-    return QHashSeed_new2((QHashSeed*)other);
+    return QHashSeed_New2((QHashSeed*)other);
 }
 
 QHashSeed* q_hashseed_new3() {
-    return QHashSeed_new3();
+    return QHashSeed_New3();
 }
 
 QHashSeed* q_hashseed_new4(uintptr_t d) {
-    return QHashSeed_new4(d);
+    return QHashSeed_New4(d);
 }
 
 void q_hashseed_copy_assign(void* self, void* other) {

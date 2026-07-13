@@ -28,8 +28,8 @@ typedef struct QPen QPen;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBoxPlotSeries* QBoxPlotSeries_new();
-QBoxPlotSeries* QBoxPlotSeries_new2(QObject* parent);
+QBoxPlotSeries* QBoxPlotSeries_New();
+QBoxPlotSeries* QBoxPlotSeries_New2(QObject* parent);
 QMetaObject* QBoxPlotSeries_MetaObject(const QBoxPlotSeries* self);
 void* QBoxPlotSeries_Metacast(QBoxPlotSeries* self, const char* param1);
 int QBoxPlotSeries_Metacall(QBoxPlotSeries* self, int param1, int param2, void** param3);

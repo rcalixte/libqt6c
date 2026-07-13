@@ -25,8 +25,8 @@ typedef struct QSqlDriverPlugin QSqlDriverPlugin;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QSqlDriverPlugin* QSqlDriverPlugin_new();
-QSqlDriverPlugin* QSqlDriverPlugin_new2(QObject* parent);
+QSqlDriverPlugin* QSqlDriverPlugin_New();
+QSqlDriverPlugin* QSqlDriverPlugin_New2(QObject* parent);
 QMetaObject* QSqlDriverPlugin_MetaObject(const QSqlDriverPlugin* self);
 void* QSqlDriverPlugin_Metacast(QSqlDriverPlugin* self, const char* param1);
 int QSqlDriverPlugin_Metacall(QSqlDriverPlugin* self, int param1, int param2, void** param3);

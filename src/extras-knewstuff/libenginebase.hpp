@@ -62,8 +62,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KNSCore__EngineBase* KNSCore__EngineBase_new();
-KNSCore__EngineBase* KNSCore__EngineBase_new2(QObject* parent);
+KNSCore__EngineBase* KNSCore__EngineBase_New();
+KNSCore__EngineBase* KNSCore__EngineBase_New2(QObject* parent);
 QMetaObject* KNSCore__EngineBase_MetaObject(const KNSCore__EngineBase* self);
 void* KNSCore__EngineBase_Metacast(KNSCore__EngineBase* self, const char* param1);
 int KNSCore__EngineBase_Metacall(KNSCore__EngineBase* self, int param1, int param2, void** param3);

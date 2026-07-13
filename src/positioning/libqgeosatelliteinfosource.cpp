@@ -14,7 +14,7 @@
 #include "libqgeosatelliteinfosource.hpp"
 #include "libqgeosatelliteinfosource.hxx"
 
-QGeoSatelliteInfoSource* QGeoSatelliteInfoSource_new(QObject* parent) {
+QGeoSatelliteInfoSource* QGeoSatelliteInfoSource_New(QObject* parent) {
     return new VirtualQGeoSatelliteInfoSource(parent);
 }
 

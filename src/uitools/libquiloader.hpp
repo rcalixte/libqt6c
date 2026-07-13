@@ -30,8 +30,8 @@ typedef struct QUiLoader QUiLoader;
 typedef struct QWidget QWidget;
 #endif
 
-QUiLoader* QUiLoader_new();
-QUiLoader* QUiLoader_new2(QObject* parent);
+QUiLoader* QUiLoader_New();
+QUiLoader* QUiLoader_New2(QObject* parent);
 QMetaObject* QUiLoader_MetaObject(const QUiLoader* self);
 void* QUiLoader_Metacast(QUiLoader* self, const char* param1);
 int QUiLoader_Metacall(QUiLoader* self, int param1, int param2, void** param3);

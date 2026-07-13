@@ -11,11 +11,11 @@
 #include "libprovidersmodel.h"
 
 KNSCore__ProvidersModel* k_nscore__providersmodel_new() {
-    return KNSCore__ProvidersModel_new();
+    return KNSCore__ProvidersModel_New();
 }
 
 KNSCore__ProvidersModel* k_nscore__providersmodel_new2(void* parent) {
-    return KNSCore__ProvidersModel_new2((QObject*)parent);
+    return KNSCore__ProvidersModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_nscore__providersmodel_meta_object(void* self) {

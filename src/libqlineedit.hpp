@@ -58,10 +58,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QLineEdit* QLineEdit_new(QWidget* parent);
-QLineEdit* QLineEdit_new2();
-QLineEdit* QLineEdit_new3(const libqt_string param1);
-QLineEdit* QLineEdit_new4(const libqt_string param1, QWidget* parent);
+QLineEdit* QLineEdit_New(QWidget* parent);
+QLineEdit* QLineEdit_New2();
+QLineEdit* QLineEdit_New3(const libqt_string param1);
+QLineEdit* QLineEdit_New4(const libqt_string param1, QWidget* parent);
 QMetaObject* QLineEdit_MetaObject(const QLineEdit* self);
 void* QLineEdit_Metacast(QLineEdit* self, const char* param1);
 int QLineEdit_Metacall(QLineEdit* self, int param1, int param2, void** param3);

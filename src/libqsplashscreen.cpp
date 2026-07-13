@@ -40,27 +40,27 @@
 #include "libqsplashscreen.hpp"
 #include "libqsplashscreen.hxx"
 
-QSplashScreen* QSplashScreen_new() {
+QSplashScreen* QSplashScreen_New() {
     return new VirtualQSplashScreen();
 }
 
-QSplashScreen* QSplashScreen_new2(QScreen* screen) {
+QSplashScreen* QSplashScreen_New2(QScreen* screen) {
     return new VirtualQSplashScreen(screen);
 }
 
-QSplashScreen* QSplashScreen_new3(const QPixmap* pixmap) {
+QSplashScreen* QSplashScreen_New3(const QPixmap* pixmap) {
     return new VirtualQSplashScreen(*pixmap);
 }
 
-QSplashScreen* QSplashScreen_new4(const QPixmap* pixmap, int f) {
+QSplashScreen* QSplashScreen_New4(const QPixmap* pixmap, int f) {
     return new VirtualQSplashScreen(*pixmap, static_cast<Qt::WindowFlags>(f));
 }
 
-QSplashScreen* QSplashScreen_new5(QScreen* screen, const QPixmap* pixmap) {
+QSplashScreen* QSplashScreen_New5(QScreen* screen, const QPixmap* pixmap) {
     return new VirtualQSplashScreen(screen, *pixmap);
 }
 
-QSplashScreen* QSplashScreen_new6(QScreen* screen, const QPixmap* pixmap, int f) {
+QSplashScreen* QSplashScreen_New6(QScreen* screen, const QPixmap* pixmap, int f) {
     return new VirtualQSplashScreen(screen, *pixmap, static_cast<Qt::WindowFlags>(f));
 }
 

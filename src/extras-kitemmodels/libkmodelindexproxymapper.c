@@ -8,11 +8,11 @@
 #include "libkmodelindexproxymapper.h"
 
 KModelIndexProxyMapper* k_modelindexproxymapper_new(void* leftModel, void* rightModel) {
-    return KModelIndexProxyMapper_new((QAbstractItemModel*)leftModel, (QAbstractItemModel*)rightModel);
+    return KModelIndexProxyMapper_New((QAbstractItemModel*)leftModel, (QAbstractItemModel*)rightModel);
 }
 
 KModelIndexProxyMapper* k_modelindexproxymapper_new2(void* leftModel, void* rightModel, void* parent) {
-    return KModelIndexProxyMapper_new2((QAbstractItemModel*)leftModel, (QAbstractItemModel*)rightModel, (QObject*)parent);
+    return KModelIndexProxyMapper_New2((QAbstractItemModel*)leftModel, (QAbstractItemModel*)rightModel, (QObject*)parent);
 }
 
 const QMetaObject* k_modelindexproxymapper_meta_object(void* self) {

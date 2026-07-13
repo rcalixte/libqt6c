@@ -14,19 +14,19 @@
 #include "libklanguagebutton.h"
 
 KLanguageButton* k_languagebutton_new(void* parent) {
-    return KLanguageButton_new((QWidget*)parent);
+    return KLanguageButton_New((QWidget*)parent);
 }
 
 KLanguageButton* k_languagebutton_new2() {
-    return KLanguageButton_new2();
+    return KLanguageButton_New2();
 }
 
 KLanguageButton* k_languagebutton_new3(const char* text) {
-    return KLanguageButton_new3(qstring(text));
+    return KLanguageButton_New3(qstring(text));
 }
 
 KLanguageButton* k_languagebutton_new4(const char* text, void* parent) {
-    return KLanguageButton_new4(qstring(text), (QWidget*)parent);
+    return KLanguageButton_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_languagebutton_meta_object(void* self) {

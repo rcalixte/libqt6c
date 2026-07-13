@@ -16,11 +16,11 @@
 #include "libslidecontainer.h"
 
 TextAddonsWidgets__SlideContainer* k_textaddonswidgets__slidecontainer_new(void* parent) {
-    return TextAddonsWidgets__SlideContainer_new((QWidget*)parent);
+    return TextAddonsWidgets__SlideContainer_New((QWidget*)parent);
 }
 
 TextAddonsWidgets__SlideContainer* k_textaddonswidgets__slidecontainer_new2() {
-    return TextAddonsWidgets__SlideContainer_new2();
+    return TextAddonsWidgets__SlideContainer_New2();
 }
 
 const QMetaObject* k_textaddonswidgets__slidecontainer_meta_object(void* self) {

@@ -3,11 +3,11 @@
 #include "libqplacecategory.h"
 
 QPlaceCategory* q_placecategory_new() {
-    return QPlaceCategory_new();
+    return QPlaceCategory_New();
 }
 
 QPlaceCategory* q_placecategory_new2(void* other) {
-    return QPlaceCategory_new2((QPlaceCategory*)other);
+    return QPlaceCategory_New2((QPlaceCategory*)other);
 }
 
 void q_placecategory_operator_assign(void* self, void* other) {

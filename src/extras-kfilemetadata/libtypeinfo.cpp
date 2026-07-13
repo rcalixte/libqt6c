@@ -5,15 +5,15 @@
 #include "libtypeinfo.hpp"
 #include "libtypeinfo.hxx"
 
-KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_new() {
+KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_New() {
     return new KFileMetaData::TypeInfo();
 }
 
-KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_new2(int type) {
+KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_New2(int type) {
     return new KFileMetaData::TypeInfo(static_cast<KFileMetaData::Type::Type>(type));
 }
 
-KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_new3(const KFileMetaData__TypeInfo* ti) {
+KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_New3(const KFileMetaData__TypeInfo* ti) {
     return new KFileMetaData::TypeInfo(*ti);
 }
 

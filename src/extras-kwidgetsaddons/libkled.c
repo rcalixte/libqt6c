@@ -15,27 +15,27 @@
 #include "libkled.h"
 
 KLed* k_led_new(void* parent) {
-    return KLed_new((QWidget*)parent);
+    return KLed_New((QWidget*)parent);
 }
 
 KLed* k_led_new2() {
-    return KLed_new2();
+    return KLed_New2();
 }
 
 KLed* k_led_new3(void* color) {
-    return KLed_new3((QColor*)color);
+    return KLed_New3((QColor*)color);
 }
 
 KLed* k_led_new4(void* color, int32_t state, int32_t look, int32_t shape) {
-    return KLed_new4((QColor*)color, state, look, shape);
+    return KLed_New4((QColor*)color, state, look, shape);
 }
 
 KLed* k_led_new5(void* color, void* parent) {
-    return KLed_new5((QColor*)color, (QWidget*)parent);
+    return KLed_New5((QColor*)color, (QWidget*)parent);
 }
 
 KLed* k_led_new6(void* color, int32_t state, int32_t look, int32_t shape, void* parent) {
-    return KLed_new6((QColor*)color, state, look, shape, (QWidget*)parent);
+    return KLed_New6((QColor*)color, state, look, shape, (QWidget*)parent);
 }
 
 const QMetaObject* k_led_meta_object(void* self) {

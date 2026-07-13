@@ -38,27 +38,27 @@
 #include "libqprintpreviewwidget.hpp"
 #include "libqprintpreviewwidget.hxx"
 
-QPrintPreviewWidget* QPrintPreviewWidget_new(QWidget* parent) {
+QPrintPreviewWidget* QPrintPreviewWidget_New(QWidget* parent) {
     return new VirtualQPrintPreviewWidget(parent);
 }
 
-QPrintPreviewWidget* QPrintPreviewWidget_new2(QPrinter* printer) {
+QPrintPreviewWidget* QPrintPreviewWidget_New2(QPrinter* printer) {
     return new VirtualQPrintPreviewWidget(printer);
 }
 
-QPrintPreviewWidget* QPrintPreviewWidget_new3() {
+QPrintPreviewWidget* QPrintPreviewWidget_New3() {
     return new VirtualQPrintPreviewWidget();
 }
 
-QPrintPreviewWidget* QPrintPreviewWidget_new4(QPrinter* printer, QWidget* parent) {
+QPrintPreviewWidget* QPrintPreviewWidget_New4(QPrinter* printer, QWidget* parent) {
     return new VirtualQPrintPreviewWidget(printer, parent);
 }
 
-QPrintPreviewWidget* QPrintPreviewWidget_new5(QPrinter* printer, QWidget* parent, int flags) {
+QPrintPreviewWidget* QPrintPreviewWidget_New5(QPrinter* printer, QWidget* parent, int flags) {
     return new VirtualQPrintPreviewWidget(printer, parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QPrintPreviewWidget* QPrintPreviewWidget_new6(QWidget* parent, int flags) {
+QPrintPreviewWidget* QPrintPreviewWidget_New6(QWidget* parent, int flags) {
     return new VirtualQPrintPreviewWidget(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

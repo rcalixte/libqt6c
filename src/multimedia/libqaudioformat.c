@@ -2,19 +2,19 @@
 #include "libqaudioformat.h"
 
 QAudioFormat* q_audioformat_new(void* other) {
-    return QAudioFormat_new((QAudioFormat*)other);
+    return QAudioFormat_New((QAudioFormat*)other);
 }
 
 QAudioFormat* q_audioformat_new2(void* other) {
-    return QAudioFormat_new2((QAudioFormat*)other);
+    return QAudioFormat_New2((QAudioFormat*)other);
 }
 
 QAudioFormat* q_audioformat_new3() {
-    return QAudioFormat_new3();
+    return QAudioFormat_New3();
 }
 
 QAudioFormat* q_audioformat_new4(void* param1) {
-    return QAudioFormat_new4((QAudioFormat*)param1);
+    return QAudioFormat_New4((QAudioFormat*)param1);
 }
 
 void q_audioformat_copy_assign(void* self, void* other) {

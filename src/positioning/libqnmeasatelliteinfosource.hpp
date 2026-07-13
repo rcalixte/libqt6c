@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_new(int mode);
-QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_new2(int mode, QObject* parent);
+QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_New(int mode);
+QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_New2(int mode, QObject* parent);
 QMetaObject* QNmeaSatelliteInfoSource_MetaObject(const QNmeaSatelliteInfoSource* self);
 void* QNmeaSatelliteInfoSource_Metacast(QNmeaSatelliteInfoSource* self, const char* param1);
 int QNmeaSatelliteInfoSource_Metacall(QNmeaSatelliteInfoSource* self, int param1, int param2, void** param3);

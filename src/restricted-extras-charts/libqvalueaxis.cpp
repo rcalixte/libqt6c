@@ -11,11 +11,11 @@
 #include "libqvalueaxis.hpp"
 #include "libqvalueaxis.hxx"
 
-QValueAxis* QValueAxis_new() {
+QValueAxis* QValueAxis_New() {
     return new VirtualQValueAxis();
 }
 
-QValueAxis* QValueAxis_new2(QObject* parent) {
+QValueAxis* QValueAxis_New2(QObject* parent) {
     return new VirtualQValueAxis(parent);
 }
 

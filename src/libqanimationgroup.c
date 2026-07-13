@@ -7,11 +7,11 @@
 #include "libqanimationgroup.h"
 
 QAnimationGroup* q_animationgroup_new() {
-    return QAnimationGroup_new();
+    return QAnimationGroup_New();
 }
 
 QAnimationGroup* q_animationgroup_new2(void* parent) {
-    return QAnimationGroup_new2((QObject*)parent);
+    return QAnimationGroup_New2((QObject*)parent);
 }
 
 const QMetaObject* q_animationgroup_meta_object(void* self) {

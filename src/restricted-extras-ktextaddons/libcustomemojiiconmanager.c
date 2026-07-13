@@ -7,11 +7,11 @@
 #include "libcustomemojiiconmanager.h"
 
 TextEmoticonsCore__CustomEmojiIconManager* k_textemoticonscore__customemojiiconmanager_new() {
-    return TextEmoticonsCore__CustomEmojiIconManager_new();
+    return TextEmoticonsCore__CustomEmojiIconManager_New();
 }
 
 TextEmoticonsCore__CustomEmojiIconManager* k_textemoticonscore__customemojiiconmanager_new2(void* parent) {
-    return TextEmoticonsCore__CustomEmojiIconManager_new2((QObject*)parent);
+    return TextEmoticonsCore__CustomEmojiIconManager_New2((QObject*)parent);
 }
 
 QIcon* k_textemoticonscore__customemojiiconmanager_generate_icon(void* self, const char* customIdentifier) {

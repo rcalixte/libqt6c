@@ -28,15 +28,15 @@
 #include "libreadonlypart.hpp"
 #include "libreadonlypart.hxx"
 
-KParts__ReadOnlyPart* KParts__ReadOnlyPart_new() {
+KParts__ReadOnlyPart* KParts__ReadOnlyPart_New() {
     return new VirtualKPartsReadOnlyPart();
 }
 
-KParts__ReadOnlyPart* KParts__ReadOnlyPart_new2(QObject* parent) {
+KParts__ReadOnlyPart* KParts__ReadOnlyPart_New2(QObject* parent) {
     return new VirtualKPartsReadOnlyPart(parent);
 }
 
-KParts__ReadOnlyPart* KParts__ReadOnlyPart_new3(QObject* parent, const KPluginMetaData* data) {
+KParts__ReadOnlyPart* KParts__ReadOnlyPart_New3(QObject* parent, const KPluginMetaData* data) {
     return new VirtualKPartsReadOnlyPart(parent, *data);
 }
 

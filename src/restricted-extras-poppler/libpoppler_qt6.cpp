@@ -49,7 +49,7 @@ bool Poppler_IsOverprintPreviewAvailable() {
     return Poppler::isOverprintPreviewAvailable();
 }
 
-Poppler__TextBox* Poppler__TextBox_new(const libqt_string text, const QRectF* bBox) {
+Poppler__TextBox* Poppler__TextBox_New(const libqt_string text, const QRectF* bBox) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new Poppler::TextBox(text_QString, *bBox);
 }
@@ -86,11 +86,11 @@ void Poppler__TextBox_Delete(Poppler__TextBox* self) {
     delete self;
 }
 
-Poppler__FontInfo* Poppler__FontInfo_new() {
+Poppler__FontInfo* Poppler__FontInfo_New() {
     return new Poppler::FontInfo();
 }
 
-Poppler__FontInfo* Poppler__FontInfo_new2(const Poppler__FontInfo* fi) {
+Poppler__FontInfo* Poppler__FontInfo_New2(const Poppler__FontInfo* fi) {
     return new Poppler::FontInfo(*fi);
 }
 
@@ -582,11 +582,11 @@ void Poppler__Page_Delete(Poppler__Page* self) {
     delete self;
 }
 
-Poppler__OutlineItem* Poppler__OutlineItem_new() {
+Poppler__OutlineItem* Poppler__OutlineItem_New() {
     return new Poppler::OutlineItem();
 }
 
-Poppler__OutlineItem* Poppler__OutlineItem_new2(const Poppler__OutlineItem* other) {
+Poppler__OutlineItem* Poppler__OutlineItem_New2(const Poppler__OutlineItem* other) {
     return new Poppler::OutlineItem(*other);
 }
 

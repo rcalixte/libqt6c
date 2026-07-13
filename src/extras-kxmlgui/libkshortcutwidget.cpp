@@ -40,11 +40,11 @@
 #include "libkshortcutwidget.hpp"
 #include "libkshortcutwidget.hxx"
 
-KShortcutWidget* KShortcutWidget_new(QWidget* parent) {
+KShortcutWidget* KShortcutWidget_New(QWidget* parent) {
     return new VirtualKShortcutWidget(parent);
 }
 
-KShortcutWidget* KShortcutWidget_new2() {
+KShortcutWidget* KShortcutWidget_New2() {
     return new VirtualKShortcutWidget();
 }
 

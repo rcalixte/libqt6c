@@ -20,7 +20,7 @@ typedef struct KCompletionBase KCompletionBase;
 typedef struct QKeySequence QKeySequence;
 #endif
 
-KCompletionBase* KCompletionBase_new();
+KCompletionBase* KCompletionBase_New();
 KCompletion* KCompletionBase_CompletionObject(KCompletionBase* self);
 void KCompletionBase_SetCompletionObject(KCompletionBase* self, KCompletion* completionObject, bool handleSignals);
 void KCompletionBase_SetHandleSignals(KCompletionBase* self, bool handle);

@@ -43,51 +43,51 @@
 #include "libqmessagebox.hpp"
 #include "libqmessagebox.hxx"
 
-QMessageBox* QMessageBox_new(QWidget* parent) {
+QMessageBox* QMessageBox_New(QWidget* parent) {
     return new VirtualQMessageBox(parent);
 }
 
-QMessageBox* QMessageBox_new2() {
+QMessageBox* QMessageBox_New2() {
     return new VirtualQMessageBox();
 }
 
-QMessageBox* QMessageBox_new3(int icon, const libqt_string title, const libqt_string text) {
+QMessageBox* QMessageBox_New3(int icon, const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString);
 }
 
-QMessageBox* QMessageBox_new4(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2) {
+QMessageBox* QMessageBox_New4(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(title_QString, text_QString, static_cast<QMessageBox::Icon>(icon), static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2));
 }
 
-QMessageBox* QMessageBox_new5(int icon, const libqt_string title, const libqt_string text, int buttons) {
+QMessageBox* QMessageBox_New5(int icon, const libqt_string title, const libqt_string text, int buttons) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons));
 }
 
-QMessageBox* QMessageBox_new6(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent) {
+QMessageBox* QMessageBox_New6(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), parent);
 }
 
-QMessageBox* QMessageBox_new7(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent, int flags) {
+QMessageBox* QMessageBox_New7(int icon, const libqt_string title, const libqt_string text, int buttons, QWidget* parent, int flags) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(static_cast<QMessageBox::Icon>(icon), title_QString, text_QString, static_cast<QMessageBox::StandardButtons>(buttons), parent, static_cast<Qt::WindowFlags>(flags));
 }
 
-QMessageBox* QMessageBox_new8(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent) {
+QMessageBox* QMessageBox_New8(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(title_QString, text_QString, static_cast<QMessageBox::Icon>(icon), static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2), parent);
 }
 
-QMessageBox* QMessageBox_new9(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent, int f) {
+QMessageBox* QMessageBox_New9(const libqt_string title, const libqt_string text, int icon, int button0, int button1, int button2, QWidget* parent, int f) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQMessageBox(title_QString, text_QString, static_cast<QMessageBox::Icon>(icon), static_cast<int>(button0), static_cast<int>(button1), static_cast<int>(button2), parent, static_cast<Qt::WindowFlags>(f));

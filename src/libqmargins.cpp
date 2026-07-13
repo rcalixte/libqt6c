@@ -4,23 +4,23 @@
 #include "libqmargins.hpp"
 #include "libqmargins.hxx"
 
-QMargins* QMargins_new(const QMargins* other) {
+QMargins* QMargins_New(const QMargins* other) {
     return new QMargins(*other);
 }
 
-QMargins* QMargins_new2(QMargins* other) {
+QMargins* QMargins_New2(QMargins* other) {
     return new QMargins(std::move(*other));
 }
 
-QMargins* QMargins_new3() {
+QMargins* QMargins_New3() {
     return new QMargins();
 }
 
-QMargins* QMargins_new4(int left, int top, int right, int bottom) {
+QMargins* QMargins_New4(int left, int top, int right, int bottom) {
     return new QMargins(static_cast<int>(left), static_cast<int>(top), static_cast<int>(right), static_cast<int>(bottom));
 }
 
-QMargins* QMargins_new5(const QMargins* param1) {
+QMargins* QMargins_New5(const QMargins* param1) {
     return new QMargins(*param1);
 }
 
@@ -124,27 +124,27 @@ void QMargins_Delete(QMargins* self) {
     delete self;
 }
 
-QMarginsF* QMarginsF_new(const QMarginsF* other) {
+QMarginsF* QMarginsF_New(const QMarginsF* other) {
     return new QMarginsF(*other);
 }
 
-QMarginsF* QMarginsF_new2(QMarginsF* other) {
+QMarginsF* QMarginsF_New2(QMarginsF* other) {
     return new QMarginsF(std::move(*other));
 }
 
-QMarginsF* QMarginsF_new3() {
+QMarginsF* QMarginsF_New3() {
     return new QMarginsF();
 }
 
-QMarginsF* QMarginsF_new4(double left, double top, double right, double bottom) {
+QMarginsF* QMarginsF_New4(double left, double top, double right, double bottom) {
     return new QMarginsF(static_cast<qreal>(left), static_cast<qreal>(top), static_cast<qreal>(right), static_cast<qreal>(bottom));
 }
 
-QMarginsF* QMarginsF_new5(const QMargins* margins) {
+QMarginsF* QMarginsF_New5(const QMargins* margins) {
     return new QMarginsF(*margins);
 }
 
-QMarginsF* QMarginsF_new6(const QMarginsF* param1) {
+QMarginsF* QMarginsF_New6(const QMarginsF* param1) {
     return new QMarginsF(*param1);
 }
 

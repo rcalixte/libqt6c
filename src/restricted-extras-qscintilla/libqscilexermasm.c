@@ -13,11 +13,11 @@
 #include "libqscilexermasm.h"
 
 QsciLexerMASM* q_scilexermasm_new() {
-    return QsciLexerMASM_new();
+    return QsciLexerMASM_New();
 }
 
 QsciLexerMASM* q_scilexermasm_new2(void* parent) {
-    return QsciLexerMASM_new2((QObject*)parent);
+    return QsciLexerMASM_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexermasm_meta_object(void* self) {

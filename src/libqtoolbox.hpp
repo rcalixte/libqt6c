@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QToolBox* QToolBox_new(QWidget* parent);
-QToolBox* QToolBox_new2();
-QToolBox* QToolBox_new3(QWidget* parent, int f);
+QToolBox* QToolBox_New(QWidget* parent);
+QToolBox* QToolBox_New2();
+QToolBox* QToolBox_New3(QWidget* parent, int f);
 QMetaObject* QToolBox_MetaObject(const QToolBox* self);
 void* QToolBox_Metacast(QToolBox* self, const char* param1);
 int QToolBox_Metacall(QToolBox* self, int param1, int param2, void** param3);

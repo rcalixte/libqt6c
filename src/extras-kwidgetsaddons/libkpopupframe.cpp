@@ -39,11 +39,11 @@
 #include "libkpopupframe.hpp"
 #include "libkpopupframe.hxx"
 
-KPopupFrame* KPopupFrame_new(QWidget* parent) {
+KPopupFrame* KPopupFrame_New(QWidget* parent) {
     return new VirtualKPopupFrame(parent);
 }
 
-KPopupFrame* KPopupFrame_new2() {
+KPopupFrame* KPopupFrame_New2() {
     return new VirtualKPopupFrame();
 }
 

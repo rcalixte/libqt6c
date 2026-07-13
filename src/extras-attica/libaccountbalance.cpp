@@ -4,11 +4,11 @@
 #include "libaccountbalance.hpp"
 #include "libaccountbalance.hxx"
 
-Attica__AccountBalance* Attica__AccountBalance_new() {
+Attica__AccountBalance* Attica__AccountBalance_New() {
     return new Attica::AccountBalance();
 }
 
-Attica__AccountBalance* Attica__AccountBalance_new2(const Attica__AccountBalance* other) {
+Attica__AccountBalance* Attica__AccountBalance_New2(const Attica__AccountBalance* other) {
     return new Attica::AccountBalance(*other);
 }
 

@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBuffer* QBuffer_new();
-QBuffer* QBuffer_new2(QObject* parent);
+QBuffer* QBuffer_New();
+QBuffer* QBuffer_New2(QObject* parent);
 QMetaObject* QBuffer_MetaObject(const QBuffer* self);
 void* QBuffer_Metacast(QBuffer* self, const char* param1);
 int QBuffer_Metacall(QBuffer* self, int param1, int param2, void** param3);

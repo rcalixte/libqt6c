@@ -35,15 +35,15 @@
 #include "libqwidget.h"
 
 QWidget* q_widget_new(void* parent) {
-    return QWidget_new((QWidget*)parent);
+    return QWidget_New((QWidget*)parent);
 }
 
 QWidget* q_widget_new2() {
-    return QWidget_new2();
+    return QWidget_New2();
 }
 
 QWidget* q_widget_new3(void* parent, int32_t f) {
-    return QWidget_new3((QWidget*)parent, f);
+    return QWidget_New3((QWidget*)parent, f);
 }
 
 const QMetaObject* q_widget_meta_object(void* self) {

@@ -4,11 +4,11 @@
 #include "libkserviceconversioncheck_p.hpp"
 #include "libkserviceconversioncheck_p.hxx"
 
-KServiceConversionCheck__supported* KServiceConversionCheck__supported_new(const KServiceConversionCheck__supported* other) {
+KServiceConversionCheck__supported* KServiceConversionCheck__supported_New(const KServiceConversionCheck__supported* other) {
     return new KServiceConversionCheck::supported(*other);
 }
 
-KServiceConversionCheck__supported* KServiceConversionCheck__supported_new2(KServiceConversionCheck__supported* other) {
+KServiceConversionCheck__supported* KServiceConversionCheck__supported_New2(KServiceConversionCheck__supported* other) {
     return new KServiceConversionCheck::supported(std::move(*other));
 }
 
@@ -24,11 +24,11 @@ void KServiceConversionCheck__supported_Delete(KServiceConversionCheck__supporte
     delete self;
 }
 
-KServiceConversionCheck__unsupported* KServiceConversionCheck__unsupported_new(const KServiceConversionCheck__unsupported* other) {
+KServiceConversionCheck__unsupported* KServiceConversionCheck__unsupported_New(const KServiceConversionCheck__unsupported* other) {
     return new KServiceConversionCheck::unsupported(*other);
 }
 
-KServiceConversionCheck__unsupported* KServiceConversionCheck__unsupported_new2(KServiceConversionCheck__unsupported* other) {
+KServiceConversionCheck__unsupported* KServiceConversionCheck__unsupported_New2(KServiceConversionCheck__unsupported* other) {
     return new KServiceConversionCheck::unsupported(std::move(*other));
 }
 

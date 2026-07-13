@@ -13,11 +13,11 @@
 #include "libspecialjob.h"
 
 KIO__SpecialJob* k_io__specialjob_new(void* url) {
-    return KIO__SpecialJob_new((QUrl*)url);
+    return KIO__SpecialJob_New((QUrl*)url);
 }
 
 KIO__SpecialJob* k_io__specialjob_new2(void* url, char* data) {
-    return KIO__SpecialJob_new2((QUrl*)url, qstring(data));
+    return KIO__SpecialJob_New2((QUrl*)url, qstring(data));
 }
 
 const QMetaObject* k_io__specialjob_meta_object(void* self) {

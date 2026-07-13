@@ -37,7 +37,7 @@
 #include "libconfigwidget.hpp"
 #include "libconfigwidget.hxx"
 
-Sonnet__ConfigWidget* Sonnet__ConfigWidget_new(QWidget* parent) {
+Sonnet__ConfigWidget* Sonnet__ConfigWidget_New(QWidget* parent) {
     return new VirtualSonnetConfigWidget(parent);
 }
 

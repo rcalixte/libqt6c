@@ -31,8 +31,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_new(KSyntaxHighlighting__Repository* repo);
-KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_new2(KSyntaxHighlighting__Repository* repo, QObject* parent);
+KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_New(KSyntaxHighlighting__Repository* repo);
+KSyntaxHighlighting__DefinitionDownloader* KSyntaxHighlighting__DefinitionDownloader_New2(KSyntaxHighlighting__Repository* repo, QObject* parent);
 QMetaObject* KSyntaxHighlighting__DefinitionDownloader_MetaObject(const KSyntaxHighlighting__DefinitionDownloader* self);
 void* KSyntaxHighlighting__DefinitionDownloader_Metacast(KSyntaxHighlighting__DefinitionDownloader* self, const char* param1);
 int KSyntaxHighlighting__DefinitionDownloader_Metacall(KSyntaxHighlighting__DefinitionDownloader* self, int param1, int param2, void** param3);

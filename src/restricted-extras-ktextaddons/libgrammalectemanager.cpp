@@ -11,11 +11,11 @@
 #include "libgrammalectemanager.hpp"
 #include "libgrammalectemanager.hxx"
 
-TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_new() {
+TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_New() {
     return new VirtualTextGrammarCheckGrammalecteManager();
 }
 
-TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_new2(QObject* parent) {
+TextGrammarCheck__GrammalecteManager* TextGrammarCheck__GrammalecteManager_New2(QObject* parent) {
     return new VirtualTextGrammarCheckGrammalecteManager(parent);
 }
 

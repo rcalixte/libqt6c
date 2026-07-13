@@ -3,7 +3,7 @@
 #include "libqcborstreamwriter.h"
 
 QCborStreamWriter* q_cborstreamwriter_new(void* device) {
-    return QCborStreamWriter_new((QIODevice*)device);
+    return QCborStreamWriter_New((QIODevice*)device);
 }
 
 void q_cborstreamwriter_set_device(void* self, void* device) {

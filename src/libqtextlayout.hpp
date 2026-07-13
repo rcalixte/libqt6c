@@ -35,9 +35,9 @@ typedef struct QTextLine QTextLine;
 typedef struct QTextOption QTextOption;
 #endif
 
-QTextInlineObject* QTextInlineObject_new(const QTextInlineObject* other);
-QTextInlineObject* QTextInlineObject_new2(QTextInlineObject* other);
-QTextInlineObject* QTextInlineObject_new3();
+QTextInlineObject* QTextInlineObject_New(const QTextInlineObject* other);
+QTextInlineObject* QTextInlineObject_New2(QTextInlineObject* other);
+QTextInlineObject* QTextInlineObject_New3();
 void QTextInlineObject_CopyAssign(QTextInlineObject* self, QTextInlineObject* other);
 void QTextInlineObject_MoveAssign(QTextInlineObject* self, QTextInlineObject* other);
 bool QTextInlineObject_IsValid(const QTextInlineObject* self);
@@ -55,11 +55,11 @@ int QTextInlineObject_FormatIndex(const QTextInlineObject* self);
 QTextFormat* QTextInlineObject_Format(const QTextInlineObject* self);
 void QTextInlineObject_Delete(QTextInlineObject* self);
 
-QTextLayout* QTextLayout_new();
-QTextLayout* QTextLayout_new2(const libqt_string text);
-QTextLayout* QTextLayout_new3(const libqt_string text, const QFont* font);
-QTextLayout* QTextLayout_new4(const QTextBlock* b);
-QTextLayout* QTextLayout_new5(const libqt_string text, const QFont* font, const QPaintDevice* paintdevice);
+QTextLayout* QTextLayout_New();
+QTextLayout* QTextLayout_New2(const libqt_string text);
+QTextLayout* QTextLayout_New3(const libqt_string text, const QFont* font);
+QTextLayout* QTextLayout_New4(const QTextBlock* b);
+QTextLayout* QTextLayout_New5(const libqt_string text, const QFont* font, const QPaintDevice* paintdevice);
 void QTextLayout_SetFont(QTextLayout* self, const QFont* f);
 QFont* QTextLayout_Font(const QTextLayout* self);
 void QTextLayout_SetRawFont(QTextLayout* self, const QRawFont* rawFont);
@@ -108,9 +108,9 @@ libqt_list /* of QGlyphRun* */ QTextLayout_GlyphRuns1(const QTextLayout* self, i
 libqt_list /* of QGlyphRun* */ QTextLayout_GlyphRuns22(const QTextLayout* self, int from, int length);
 void QTextLayout_Delete(QTextLayout* self);
 
-QTextLine* QTextLine_new(const QTextLine* other);
-QTextLine* QTextLine_new2(QTextLine* other);
-QTextLine* QTextLine_new3();
+QTextLine* QTextLine_New(const QTextLine* other);
+QTextLine* QTextLine_New2(QTextLine* other);
+QTextLine* QTextLine_New3();
 void QTextLine_CopyAssign(QTextLine* self, QTextLine* other);
 void QTextLine_MoveAssign(QTextLine* self, QTextLine* other);
 bool QTextLine_IsValid(const QTextLine* self);
@@ -148,8 +148,8 @@ libqt_list /* of QGlyphRun* */ QTextLine_GlyphRuns1(const QTextLine* self, int f
 libqt_list /* of QGlyphRun* */ QTextLine_GlyphRuns22(const QTextLine* self, int from, int length);
 void QTextLine_Delete(QTextLine* self);
 
-QTextLayout__FormatRange* QTextLayout__FormatRange_new();
-QTextLayout__FormatRange* QTextLayout__FormatRange_new2(const QTextLayout__FormatRange* param1);
+QTextLayout__FormatRange* QTextLayout__FormatRange_New();
+QTextLayout__FormatRange* QTextLayout__FormatRange_New2(const QTextLayout__FormatRange* param1);
 int QTextLayout__FormatRange_Start(const QTextLayout__FormatRange* self);
 void QTextLayout__FormatRange_SetStart(QTextLayout__FormatRange* self, int start);
 int QTextLayout__FormatRange_Length(const QTextLayout__FormatRange* self);

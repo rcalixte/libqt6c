@@ -24,8 +24,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QGenericPlugin* QGenericPlugin_new();
-QGenericPlugin* QGenericPlugin_new2(QObject* parent);
+QGenericPlugin* QGenericPlugin_New();
+QGenericPlugin* QGenericPlugin_New2(QObject* parent);
 QMetaObject* QGenericPlugin_MetaObject(const QGenericPlugin* self);
 void* QGenericPlugin_Metacast(QGenericPlugin* self, const char* param1);
 int QGenericPlugin_Metacall(QGenericPlugin* self, int param1, int param2, void** param3);

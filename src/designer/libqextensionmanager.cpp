@@ -12,11 +12,11 @@
 #include "libqextensionmanager.hpp"
 #include "libqextensionmanager.hxx"
 
-QExtensionManager* QExtensionManager_new() {
+QExtensionManager* QExtensionManager_New() {
     return new VirtualQExtensionManager();
 }
 
-QExtensionManager* QExtensionManager_new2(QObject* parent) {
+QExtensionManager* QExtensionManager_New2(QObject* parent) {
     return new VirtualQExtensionManager(parent);
 }
 

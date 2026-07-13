@@ -10,15 +10,15 @@
 #include "libkactionmenu.h"
 
 KActionMenu* k_actionmenu_new(void* parent) {
-    return KActionMenu_new((QObject*)parent);
+    return KActionMenu_New((QObject*)parent);
 }
 
 KActionMenu* k_actionmenu_new2(const char* text, void* parent) {
-    return KActionMenu_new2(qstring(text), (QObject*)parent);
+    return KActionMenu_New2(qstring(text), (QObject*)parent);
 }
 
 KActionMenu* k_actionmenu_new3(void* icon, const char* text, void* parent) {
-    return KActionMenu_new3((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KActionMenu_New3((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_actionmenu_meta_object(void* self) {

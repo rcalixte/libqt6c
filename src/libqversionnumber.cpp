@@ -6,11 +6,11 @@
 #include "libqversionnumber.hpp"
 #include "libqversionnumber.hxx"
 
-QVersionNumber* QVersionNumber_new() {
+QVersionNumber* QVersionNumber_New() {
     return new QVersionNumber();
 }
 
-QVersionNumber* QVersionNumber_new2(libqt_list /* of const int */ args) {
+QVersionNumber* QVersionNumber_New2(libqt_list /* of const int */ args) {
     QList<int> args_QSpan;
     args_QSpan.reserve(args.len);
     int* args_arr = static_cast<int*>(args.data.ints);
@@ -20,19 +20,19 @@ QVersionNumber* QVersionNumber_new2(libqt_list /* of const int */ args) {
     return new QVersionNumber(args_QSpan);
 }
 
-QVersionNumber* QVersionNumber_new3(int maj) {
+QVersionNumber* QVersionNumber_New3(int maj) {
     return new QVersionNumber(static_cast<int>(maj));
 }
 
-QVersionNumber* QVersionNumber_new4(int maj, int min) {
+QVersionNumber* QVersionNumber_New4(int maj, int min) {
     return new QVersionNumber(static_cast<int>(maj), static_cast<int>(min));
 }
 
-QVersionNumber* QVersionNumber_new5(int maj, int min, int mic) {
+QVersionNumber* QVersionNumber_New5(int maj, int min, int mic) {
     return new QVersionNumber(static_cast<int>(maj), static_cast<int>(min), static_cast<int>(mic));
 }
 
-QVersionNumber* QVersionNumber_new6(const QVersionNumber* param1) {
+QVersionNumber* QVersionNumber_New6(const QVersionNumber* param1) {
     return new QVersionNumber(*param1);
 }
 

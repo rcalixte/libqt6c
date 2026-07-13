@@ -11,27 +11,27 @@
 #include "libqaction.h"
 
 QAction* q_action_new() {
-    return QAction_new();
+    return QAction_New();
 }
 
 QAction* q_action_new2(const char* text) {
-    return QAction_new2(qstring(text));
+    return QAction_New2(qstring(text));
 }
 
 QAction* q_action_new3(void* icon, const char* text) {
-    return QAction_new3((QIcon*)icon, qstring(text));
+    return QAction_New3((QIcon*)icon, qstring(text));
 }
 
 QAction* q_action_new4(void* parent) {
-    return QAction_new4((QObject*)parent);
+    return QAction_New4((QObject*)parent);
 }
 
 QAction* q_action_new5(const char* text, void* parent) {
-    return QAction_new5(qstring(text), (QObject*)parent);
+    return QAction_New5(qstring(text), (QObject*)parent);
 }
 
 QAction* q_action_new6(void* icon, const char* text, void* parent) {
-    return QAction_new6((QIcon*)icon, qstring(text), (QObject*)parent);
+    return QAction_New6((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* q_action_meta_object(void* self) {

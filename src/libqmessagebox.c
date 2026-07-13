@@ -19,39 +19,39 @@
 #include "libqmessagebox.h"
 
 QMessageBox* q_messagebox_new(void* parent) {
-    return QMessageBox_new((QWidget*)parent);
+    return QMessageBox_New((QWidget*)parent);
 }
 
 QMessageBox* q_messagebox_new2() {
-    return QMessageBox_new2();
+    return QMessageBox_New2();
 }
 
 QMessageBox* q_messagebox_new3(int32_t icon, const char* title, const char* text) {
-    return QMessageBox_new3(icon, qstring(title), qstring(text));
+    return QMessageBox_New3(icon, qstring(title), qstring(text));
 }
 
 QMessageBox* q_messagebox_new4(const char* title, const char* text, int32_t icon, int button0, int button1, int button2) {
-    return QMessageBox_new4(qstring(title), qstring(text), icon, button0, button1, button2);
+    return QMessageBox_New4(qstring(title), qstring(text), icon, button0, button1, button2);
 }
 
 QMessageBox* q_messagebox_new5(int32_t icon, const char* title, const char* text, int32_t buttons) {
-    return QMessageBox_new5(icon, qstring(title), qstring(text), buttons);
+    return QMessageBox_New5(icon, qstring(title), qstring(text), buttons);
 }
 
 QMessageBox* q_messagebox_new6(int32_t icon, const char* title, const char* text, int32_t buttons, void* parent) {
-    return QMessageBox_new6(icon, qstring(title), qstring(text), buttons, (QWidget*)parent);
+    return QMessageBox_New6(icon, qstring(title), qstring(text), buttons, (QWidget*)parent);
 }
 
 QMessageBox* q_messagebox_new7(int32_t icon, const char* title, const char* text, int32_t buttons, void* parent, int32_t flags) {
-    return QMessageBox_new7(icon, qstring(title), qstring(text), buttons, (QWidget*)parent, flags);
+    return QMessageBox_New7(icon, qstring(title), qstring(text), buttons, (QWidget*)parent, flags);
 }
 
 QMessageBox* q_messagebox_new8(const char* title, const char* text, int32_t icon, int button0, int button1, int button2, void* parent) {
-    return QMessageBox_new8(qstring(title), qstring(text), icon, button0, button1, button2, (QWidget*)parent);
+    return QMessageBox_New8(qstring(title), qstring(text), icon, button0, button1, button2, (QWidget*)parent);
 }
 
 QMessageBox* q_messagebox_new9(const char* title, const char* text, int32_t icon, int button0, int button1, int button2, void* parent, int32_t f) {
-    return QMessageBox_new9(qstring(title), qstring(text), icon, button0, button1, button2, (QWidget*)parent, f);
+    return QMessageBox_New9(qstring(title), qstring(text), icon, button0, button1, button2, (QWidget*)parent, f);
 }
 
 const QMetaObject* q_messagebox_meta_object(void* self) {

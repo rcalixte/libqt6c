@@ -15,11 +15,11 @@
 #include "libqscilexernasm.hpp"
 #include "libqscilexernasm.hxx"
 
-QsciLexerNASM* QsciLexerNASM_new() {
+QsciLexerNASM* QsciLexerNASM_New() {
     return new VirtualQsciLexerNASM();
 }
 
-QsciLexerNASM* QsciLexerNASM_new2(QObject* parent) {
+QsciLexerNASM* QsciLexerNASM_New2(QObject* parent) {
     return new VirtualQsciLexerNASM(parent);
 }
 

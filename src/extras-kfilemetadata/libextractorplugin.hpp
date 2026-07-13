@@ -32,7 +32,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KFileMetaData__ExtractorPlugin* KFileMetaData__ExtractorPlugin_new(QObject* parent);
+KFileMetaData__ExtractorPlugin* KFileMetaData__ExtractorPlugin_New(QObject* parent);
 QMetaObject* KFileMetaData__ExtractorPlugin_MetaObject(const KFileMetaData__ExtractorPlugin* self);
 void* KFileMetaData__ExtractorPlugin_Metacast(KFileMetaData__ExtractorPlugin* self, const char* param1);
 int KFileMetaData__ExtractorPlugin_Metacall(KFileMetaData__ExtractorPlugin* self, int param1, int param2, void** param3);

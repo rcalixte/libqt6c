@@ -9,19 +9,19 @@
 #include "libqsavefile.h"
 
 QSaveFile* q_savefile_new(const char* name) {
-    return QSaveFile_new(qstring(name));
+    return QSaveFile_New(qstring(name));
 }
 
 QSaveFile* q_savefile_new2() {
-    return QSaveFile_new2();
+    return QSaveFile_New2();
 }
 
 QSaveFile* q_savefile_new3(const char* name, void* parent) {
-    return QSaveFile_new3(qstring(name), (QObject*)parent);
+    return QSaveFile_New3(qstring(name), (QObject*)parent);
 }
 
 QSaveFile* q_savefile_new4(void* parent) {
-    return QSaveFile_new4((QObject*)parent);
+    return QSaveFile_New4((QObject*)parent);
 }
 
 const QMetaObject* q_savefile_meta_object(void* self) {

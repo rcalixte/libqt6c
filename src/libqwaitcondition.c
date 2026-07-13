@@ -5,7 +5,7 @@
 #include "libqwaitcondition.h"
 
 QWaitCondition* q_waitcondition_new() {
-    return QWaitCondition_new();
+    return QWaitCondition_New();
 }
 
 bool q_waitcondition_wait(void* self, void* lockedMutex) {

@@ -53,8 +53,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KActionSelector* KActionSelector_new(QWidget* parent);
-KActionSelector* KActionSelector_new2();
+KActionSelector* KActionSelector_New(QWidget* parent);
+KActionSelector* KActionSelector_New2();
 QMetaObject* KActionSelector_MetaObject(const KActionSelector* self);
 void* KActionSelector_Metacast(KActionSelector* self, const char* param1);
 int KActionSelector_Metacall(KActionSelector* self, int param1, int param2, void** param3);

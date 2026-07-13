@@ -42,7 +42,7 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KNSCore__Provider* KNSCore__Provider_new();
+KNSCore__Provider* KNSCore__Provider_New();
 QMetaObject* KNSCore__Provider_MetaObject(const KNSCore__Provider* self);
 void* KNSCore__Provider_Metacast(KNSCore__Provider* self, const char* param1);
 int KNSCore__Provider_Metacall(KNSCore__Provider* self, int param1, int param2, void** param3);
@@ -181,14 +181,14 @@ void KNSCore__Provider_OnIsSignalConnected(const KNSCore__Provider* self, intptr
 bool KNSCore__Provider_SuperIsSignalConnected(const KNSCore__Provider* self, const QMetaMethod* signal);
 void KNSCore__Provider_Delete(KNSCore__Provider* self);
 
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new();
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new2(const KNSCore__Provider__SearchRequest* param1);
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new3(int sortMode_);
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new4(int sortMode_, int filter_);
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new5(int sortMode_, int filter_, const libqt_string searchTerm_);
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new6(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_);
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new7(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_);
-KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_new8(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_, int pageSize_);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New();
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New2(const KNSCore__Provider__SearchRequest* param1);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New3(int sortMode_);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New4(int sortMode_, int filter_);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New5(int sortMode_, int filter_, const libqt_string searchTerm_);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New6(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New7(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_);
+KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchRequest_New8(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_, int pageSize_);
 int KNSCore__Provider__SearchRequest_SortMode(const KNSCore__Provider__SearchRequest* self);
 void KNSCore__Provider__SearchRequest_SetSortMode(KNSCore__Provider__SearchRequest* self, int sortMode);
 int KNSCore__Provider__SearchRequest_Filter(const KNSCore__Provider__SearchRequest* self);
@@ -206,7 +206,7 @@ bool KNSCore__Provider__SearchRequest_OperatorEqual(const KNSCore__Provider__Sea
 void KNSCore__Provider__SearchRequest_OperatorAssign(KNSCore__Provider__SearchRequest* self, const KNSCore__Provider__SearchRequest* param1);
 void KNSCore__Provider__SearchRequest_Delete(KNSCore__Provider__SearchRequest* self);
 
-KNSCore__Provider__CategoryMetadata* KNSCore__Provider__CategoryMetadata_new(const KNSCore__Provider__CategoryMetadata* param1);
+KNSCore__Provider__CategoryMetadata* KNSCore__Provider__CategoryMetadata_New(const KNSCore__Provider__CategoryMetadata* param1);
 libqt_string KNSCore__Provider__CategoryMetadata_Id(const KNSCore__Provider__CategoryMetadata* self);
 void KNSCore__Provider__CategoryMetadata_SetId(KNSCore__Provider__CategoryMetadata* self, libqt_string id);
 libqt_string KNSCore__Provider__CategoryMetadata_Name(const KNSCore__Provider__CategoryMetadata* self);
@@ -216,7 +216,7 @@ void KNSCore__Provider__CategoryMetadata_SetDisplayName(KNSCore__Provider__Categ
 void KNSCore__Provider__CategoryMetadata_OperatorAssign(KNSCore__Provider__CategoryMetadata* self, const KNSCore__Provider__CategoryMetadata* param1);
 void KNSCore__Provider__CategoryMetadata_Delete(KNSCore__Provider__CategoryMetadata* self);
 
-KNSCore__Provider__SearchPreset* KNSCore__Provider__SearchPreset_new(const KNSCore__Provider__SearchPreset* param1);
+KNSCore__Provider__SearchPreset* KNSCore__Provider__SearchPreset_New(const KNSCore__Provider__SearchPreset* param1);
 KNSCore__Provider__SearchRequest* KNSCore__Provider__SearchPreset_Request(const KNSCore__Provider__SearchPreset* self);
 void KNSCore__Provider__SearchPreset_SetRequest(KNSCore__Provider__SearchPreset* self, KNSCore__Provider__SearchRequest* request);
 libqt_string KNSCore__Provider__SearchPreset_DisplayName(const KNSCore__Provider__SearchPreset* self);

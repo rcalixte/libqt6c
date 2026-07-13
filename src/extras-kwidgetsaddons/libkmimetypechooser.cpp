@@ -40,16 +40,16 @@
 #include "libkmimetypechooser.hpp"
 #include "libkmimetypechooser.hxx"
 
-KMimeTypeChooser* KMimeTypeChooser_new() {
+KMimeTypeChooser* KMimeTypeChooser_New() {
     return new VirtualKMimeTypeChooser();
 }
 
-KMimeTypeChooser* KMimeTypeChooser_new2(const libqt_string text) {
+KMimeTypeChooser* KMimeTypeChooser_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMimeTypeChooser(text_QString);
 }
 
-KMimeTypeChooser* KMimeTypeChooser_new3(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes) {
+KMimeTypeChooser* KMimeTypeChooser_New3(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
     selectedMimeTypes_QList.reserve(selectedMimeTypes.len);
@@ -61,7 +61,7 @@ KMimeTypeChooser* KMimeTypeChooser_new3(const libqt_string text, const libqt_lis
     return new VirtualKMimeTypeChooser(text_QString, selectedMimeTypes_QList);
 }
 
-KMimeTypeChooser* KMimeTypeChooser_new4(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup) {
+KMimeTypeChooser* KMimeTypeChooser_New4(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
     selectedMimeTypes_QList.reserve(selectedMimeTypes.len);
@@ -74,7 +74,7 @@ KMimeTypeChooser* KMimeTypeChooser_new4(const libqt_string text, const libqt_lis
     return new VirtualKMimeTypeChooser(text_QString, selectedMimeTypes_QList, defaultGroup_QString);
 }
 
-KMimeTypeChooser* KMimeTypeChooser_new5(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow) {
+KMimeTypeChooser* KMimeTypeChooser_New5(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
     selectedMimeTypes_QList.reserve(selectedMimeTypes.len);
@@ -94,7 +94,7 @@ KMimeTypeChooser* KMimeTypeChooser_new5(const libqt_string text, const libqt_lis
     return new VirtualKMimeTypeChooser(text_QString, selectedMimeTypes_QList, defaultGroup_QString, groupsToShow_QList);
 }
 
-KMimeTypeChooser* KMimeTypeChooser_new6(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals) {
+KMimeTypeChooser* KMimeTypeChooser_New6(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
     selectedMimeTypes_QList.reserve(selectedMimeTypes.len);
@@ -114,7 +114,7 @@ KMimeTypeChooser* KMimeTypeChooser_new6(const libqt_string text, const libqt_lis
     return new VirtualKMimeTypeChooser(text_QString, selectedMimeTypes_QList, defaultGroup_QString, groupsToShow_QList, static_cast<int>(visuals));
 }
 
-KMimeTypeChooser* KMimeTypeChooser_new7(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent) {
+KMimeTypeChooser* KMimeTypeChooser_New7(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
     selectedMimeTypes_QList.reserve(selectedMimeTypes.len);
@@ -1904,11 +1904,11 @@ void KMimeTypeChooser_Delete(KMimeTypeChooser* self) {
     delete self;
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new() {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New() {
     return new VirtualKMimeTypeChooserDialog();
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new2(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New2(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
@@ -1922,18 +1922,18 @@ KMimeTypeChooserDialog* KMimeTypeChooserDialog_new2(const libqt_string title, co
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString, selectedMimeTypes_QList, defaultGroup_QString);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new3(const libqt_string title) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New3(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKMimeTypeChooserDialog(title_QString);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new4(const libqt_string title, const libqt_string text) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New4(const libqt_string title, const libqt_string text) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new5(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New5(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
@@ -1946,7 +1946,7 @@ KMimeTypeChooserDialog* KMimeTypeChooserDialog_new5(const libqt_string title, co
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString, selectedMimeTypes_QList);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new6(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New6(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
@@ -1960,7 +1960,7 @@ KMimeTypeChooserDialog* KMimeTypeChooserDialog_new6(const libqt_string title, co
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString, selectedMimeTypes_QList, defaultGroup_QString);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new7(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New7(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
@@ -1981,7 +1981,7 @@ KMimeTypeChooserDialog* KMimeTypeChooserDialog_new7(const libqt_string title, co
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString, selectedMimeTypes_QList, defaultGroup_QString, groupsToShow_QList);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new8(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New8(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
@@ -2002,7 +2002,7 @@ KMimeTypeChooserDialog* KMimeTypeChooserDialog_new8(const libqt_string title, co
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString, selectedMimeTypes_QList, defaultGroup_QString, groupsToShow_QList, static_cast<int>(visuals));
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new9(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New9(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;
@@ -2023,7 +2023,7 @@ KMimeTypeChooserDialog* KMimeTypeChooserDialog_new9(const libqt_string title, co
     return new VirtualKMimeTypeChooserDialog(title_QString, text_QString, selectedMimeTypes_QList, defaultGroup_QString, groupsToShow_QList, static_cast<int>(visuals), parent);
 }
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new10(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, QWidget* parent) {
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New10(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QList<QString> selectedMimeTypes_QList;

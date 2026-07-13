@@ -35,8 +35,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KCheckableProxyModel* KCheckableProxyModel_new();
-KCheckableProxyModel* KCheckableProxyModel_new2(QObject* parent);
+KCheckableProxyModel* KCheckableProxyModel_New();
+KCheckableProxyModel* KCheckableProxyModel_New2(QObject* parent);
 QMetaObject* KCheckableProxyModel_MetaObject(const KCheckableProxyModel* self);
 void* KCheckableProxyModel_Metacast(KCheckableProxyModel* self, const char* param1);
 int KCheckableProxyModel_Metacall(KCheckableProxyModel* self, int param1, int param2, void** param3);

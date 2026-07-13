@@ -17,30 +17,30 @@
 #include "libkcodecaction.hpp"
 #include "libkcodecaction.hxx"
 
-KCodecAction* KCodecAction_new(QObject* parent) {
+KCodecAction* KCodecAction_New(QObject* parent) {
     return new VirtualKCodecAction(parent);
 }
 
-KCodecAction* KCodecAction_new2(const libqt_string text, QObject* parent) {
+KCodecAction* KCodecAction_New2(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKCodecAction(text_QString, parent);
 }
 
-KCodecAction* KCodecAction_new3(const QIcon* icon, const libqt_string text, QObject* parent) {
+KCodecAction* KCodecAction_New3(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKCodecAction(*icon, text_QString, parent);
 }
 
-KCodecAction* KCodecAction_new4(QObject* parent, bool showAutoOptions) {
+KCodecAction* KCodecAction_New4(QObject* parent, bool showAutoOptions) {
     return new VirtualKCodecAction(parent, showAutoOptions);
 }
 
-KCodecAction* KCodecAction_new5(const libqt_string text, QObject* parent, bool showAutoOptions) {
+KCodecAction* KCodecAction_New5(const libqt_string text, QObject* parent, bool showAutoOptions) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKCodecAction(text_QString, parent, showAutoOptions);
 }
 
-KCodecAction* KCodecAction_new6(const QIcon* icon, const libqt_string text, QObject* parent, bool showAutoOptions) {
+KCodecAction* KCodecAction_New6(const QIcon* icon, const libqt_string text, QObject* parent, bool showAutoOptions) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKCodecAction(*icon, text_QString, parent, showAutoOptions);
 }

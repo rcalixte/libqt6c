@@ -2,11 +2,11 @@
 #include "libudsentry.h"
 
 KIO__UDSEntry* k_io__udsentry_new() {
-    return KIO__UDSEntry_new();
+    return KIO__UDSEntry_New();
 }
 
 KIO__UDSEntry* k_io__udsentry_new2(void* param1) {
-    return KIO__UDSEntry_new2((KIO__UDSEntry*)param1);
+    return KIO__UDSEntry_New2((KIO__UDSEntry*)param1);
 }
 
 void k_io__udsentry_operator_assign(void* self, void* param1) {

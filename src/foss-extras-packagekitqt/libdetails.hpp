@@ -20,8 +20,8 @@ typedef struct PackageKit__Details PackageKit__Details;
 typedef struct QVariant QVariant;
 #endif
 
-PackageKit__Details* PackageKit__Details_new();
-PackageKit__Details* PackageKit__Details_new2(const libqt_map /* of libqt_string to QVariant* */ other);
+PackageKit__Details* PackageKit__Details_New();
+PackageKit__Details* PackageKit__Details_New2(const libqt_map /* of libqt_string to QVariant* */ other);
 libqt_string PackageKit__Details_PackageId(const PackageKit__Details* self);
 libqt_string PackageKit__Details_Description(const PackageKit__Details* self);
 int PackageKit__Details_Group(const PackageKit__Details* self);

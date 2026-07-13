@@ -16,11 +16,11 @@
 #include "libabstractobjectinspector.h"
 
 QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_new(void* parent) {
-    return QDesignerObjectInspectorInterface_new((QWidget*)parent);
+    return QDesignerObjectInspectorInterface_New((QWidget*)parent);
 }
 
 QDesignerObjectInspectorInterface* q_designerobjectinspectorinterface_new2(void* parent, int32_t flags) {
-    return QDesignerObjectInspectorInterface_new2((QWidget*)parent, flags);
+    return QDesignerObjectInspectorInterface_New2((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_designerobjectinspectorinterface_meta_object(void* self) {

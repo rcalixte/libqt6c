@@ -51,10 +51,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KCapacityBar* KCapacityBar_new(QWidget* parent);
-KCapacityBar* KCapacityBar_new2();
-KCapacityBar* KCapacityBar_new3(int drawTextMode);
-KCapacityBar* KCapacityBar_new4(int drawTextMode, QWidget* parent);
+KCapacityBar* KCapacityBar_New(QWidget* parent);
+KCapacityBar* KCapacityBar_New2();
+KCapacityBar* KCapacityBar_New3(int drawTextMode);
+KCapacityBar* KCapacityBar_New4(int drawTextMode, QWidget* parent);
 QMetaObject* KCapacityBar_MetaObject(const KCapacityBar* self);
 void* KCapacityBar_Metacast(KCapacityBar* self, const char* param1);
 int KCapacityBar_Metacall(KCapacityBar* self, int param1, int param2, void** param3);

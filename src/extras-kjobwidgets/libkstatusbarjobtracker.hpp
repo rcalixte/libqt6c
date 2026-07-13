@@ -25,9 +25,9 @@ typedef struct QObject QObject;
 typedef struct QWidget QWidget;
 #endif
 
-KStatusBarJobTracker* KStatusBarJobTracker_new(QWidget* parent);
-KStatusBarJobTracker* KStatusBarJobTracker_new2();
-KStatusBarJobTracker* KStatusBarJobTracker_new3(QWidget* parent, bool button);
+KStatusBarJobTracker* KStatusBarJobTracker_New(QWidget* parent);
+KStatusBarJobTracker* KStatusBarJobTracker_New2();
+KStatusBarJobTracker* KStatusBarJobTracker_New3(QWidget* parent, bool button);
 QMetaObject* KStatusBarJobTracker_MetaObject(const KStatusBarJobTracker* self);
 void* KStatusBarJobTracker_Metacast(KStatusBarJobTracker* self, const char* param1);
 int KStatusBarJobTracker_Metacall(KStatusBarJobTracker* self, int param1, int param2, void** param3);

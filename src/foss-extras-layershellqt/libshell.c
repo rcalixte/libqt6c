@@ -2,11 +2,11 @@
 #include "libshell.h"
 
 LayerShellQt__Shell* k_layershellqt__shell_new(void* other) {
-    return LayerShellQt__Shell_new((LayerShellQt__Shell*)other);
+    return LayerShellQt__Shell_New((LayerShellQt__Shell*)other);
 }
 
 LayerShellQt__Shell* k_layershellqt__shell_new2(void* other) {
-    return LayerShellQt__Shell_new2((LayerShellQt__Shell*)other);
+    return LayerShellQt__Shell_New2((LayerShellQt__Shell*)other);
 }
 
 void k_layershellqt__shell_copy_assign(void* self, void* other) {

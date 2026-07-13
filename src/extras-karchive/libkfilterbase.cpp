@@ -5,7 +5,7 @@
 #include "libkfilterbase.hpp"
 #include "libkfilterbase.hxx"
 
-KFilterBase* KFilterBase_new() {
+KFilterBase* KFilterBase_New() {
     return new VirtualKFilterBase();
 }
 

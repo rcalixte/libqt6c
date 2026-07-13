@@ -21,11 +21,11 @@
 #include "libkwidgetitemdelegate.hpp"
 #include "libkwidgetitemdelegate.hxx"
 
-KWidgetItemDelegate* KWidgetItemDelegate_new(QAbstractItemView* itemView) {
+KWidgetItemDelegate* KWidgetItemDelegate_New(QAbstractItemView* itemView) {
     return new VirtualKWidgetItemDelegate(itemView);
 }
 
-KWidgetItemDelegate* KWidgetItemDelegate_new2(QAbstractItemView* itemView, QObject* parent) {
+KWidgetItemDelegate* KWidgetItemDelegate_New2(QAbstractItemView* itemView, QObject* parent) {
     return new VirtualKWidgetItemDelegate(itemView, parent);
 }
 

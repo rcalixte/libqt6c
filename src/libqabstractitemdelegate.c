@@ -13,11 +13,11 @@
 #include "libqabstractitemdelegate.h"
 
 QAbstractItemDelegate* q_abstractitemdelegate_new() {
-    return QAbstractItemDelegate_new();
+    return QAbstractItemDelegate_New();
 }
 
 QAbstractItemDelegate* q_abstractitemdelegate_new2(void* parent) {
-    return QAbstractItemDelegate_new2((QObject*)parent);
+    return QAbstractItemDelegate_New2((QObject*)parent);
 }
 
 const QMetaObject* q_abstractitemdelegate_meta_object(void* self) {

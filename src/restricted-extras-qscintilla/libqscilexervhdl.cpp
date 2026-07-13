@@ -14,11 +14,11 @@
 #include "libqscilexervhdl.hpp"
 #include "libqscilexervhdl.hxx"
 
-QsciLexerVHDL* QsciLexerVHDL_new() {
+QsciLexerVHDL* QsciLexerVHDL_New() {
     return new VirtualQsciLexerVHDL();
 }
 
-QsciLexerVHDL* QsciLexerVHDL_new2(QObject* parent) {
+QsciLexerVHDL* QsciLexerVHDL_New2(QObject* parent) {
     return new VirtualQsciLexerVHDL(parent);
 }
 

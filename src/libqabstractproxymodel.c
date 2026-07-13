@@ -12,11 +12,11 @@
 #include "libqabstractproxymodel.h"
 
 QAbstractProxyModel* q_abstractproxymodel_new() {
-    return QAbstractProxyModel_new();
+    return QAbstractProxyModel_New();
 }
 
 QAbstractProxyModel* q_abstractproxymodel_new2(void* parent) {
-    return QAbstractProxyModel_new2((QObject*)parent);
+    return QAbstractProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_abstractproxymodel_meta_object(void* self) {

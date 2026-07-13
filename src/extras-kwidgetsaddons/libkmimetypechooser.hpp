@@ -52,13 +52,13 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KMimeTypeChooser* KMimeTypeChooser_new();
-KMimeTypeChooser* KMimeTypeChooser_new2(const libqt_string text);
-KMimeTypeChooser* KMimeTypeChooser_new3(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes);
-KMimeTypeChooser* KMimeTypeChooser_new4(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup);
-KMimeTypeChooser* KMimeTypeChooser_new5(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow);
-KMimeTypeChooser* KMimeTypeChooser_new6(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals);
-KMimeTypeChooser* KMimeTypeChooser_new7(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent);
+KMimeTypeChooser* KMimeTypeChooser_New();
+KMimeTypeChooser* KMimeTypeChooser_New2(const libqt_string text);
+KMimeTypeChooser* KMimeTypeChooser_New3(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes);
+KMimeTypeChooser* KMimeTypeChooser_New4(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup);
+KMimeTypeChooser* KMimeTypeChooser_New5(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow);
+KMimeTypeChooser* KMimeTypeChooser_New6(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals);
+KMimeTypeChooser* KMimeTypeChooser_New7(const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent);
 QMetaObject* KMimeTypeChooser_MetaObject(const KMimeTypeChooser* self);
 void* KMimeTypeChooser_Metacast(KMimeTypeChooser* self, const char* param1);
 int KMimeTypeChooser_Metacall(KMimeTypeChooser* self, int param1, int param2, void** param3);
@@ -243,16 +243,16 @@ void KMimeTypeChooser_OnGetDecodedMetricF(const KMimeTypeChooser* self, intptr_t
 double KMimeTypeChooser_SuperGetDecodedMetricF(const KMimeTypeChooser* self, int metricA, int metricB);
 void KMimeTypeChooser_Delete(KMimeTypeChooser* self);
 
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new();
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new2(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new3(const libqt_string title);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new4(const libqt_string title, const libqt_string text);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new5(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new6(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new7(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new8(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new9(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent);
-KMimeTypeChooserDialog* KMimeTypeChooserDialog_new10(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, QWidget* parent);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New();
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New2(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New3(const libqt_string title);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New4(const libqt_string title, const libqt_string text);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New5(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New6(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New7(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New8(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New9(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, const libqt_list /* of libqt_string */ groupsToShow, int visuals, QWidget* parent);
+KMimeTypeChooserDialog* KMimeTypeChooserDialog_New10(const libqt_string title, const libqt_string text, const libqt_list /* of libqt_string */ selectedMimeTypes, const libqt_string defaultGroup, QWidget* parent);
 QMetaObject* KMimeTypeChooserDialog_MetaObject(const KMimeTypeChooserDialog* self);
 void* KMimeTypeChooserDialog_Metacast(KMimeTypeChooserDialog* self, const char* param1);
 int KMimeTypeChooserDialog_Metacall(KMimeTypeChooserDialog* self, int param1, int param2, void** param3);

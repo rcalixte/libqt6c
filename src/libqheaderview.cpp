@@ -51,11 +51,11 @@
 #include "libqheaderview.hpp"
 #include "libqheaderview.hxx"
 
-QHeaderView* QHeaderView_new(int orientation) {
+QHeaderView* QHeaderView_New(int orientation) {
     return new VirtualQHeaderView(static_cast<Qt::Orientation>(orientation));
 }
 
-QHeaderView* QHeaderView_new2(int orientation, QWidget* parent) {
+QHeaderView* QHeaderView_New2(int orientation, QWidget* parent) {
     return new VirtualQHeaderView(static_cast<Qt::Orientation>(orientation), parent);
 }
 

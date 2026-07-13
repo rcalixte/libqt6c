@@ -19,12 +19,12 @@ typedef struct QNativeIpcKey QNativeIpcKey;
 typedef struct QSystemSemaphore QSystemSemaphore;
 #endif
 
-QSystemSemaphore* QSystemSemaphore_new(const QNativeIpcKey* key);
-QSystemSemaphore* QSystemSemaphore_new2(const libqt_string key);
-QSystemSemaphore* QSystemSemaphore_new3(const QNativeIpcKey* key, int initialValue);
-QSystemSemaphore* QSystemSemaphore_new4(const QNativeIpcKey* key, int initialValue, int param3);
-QSystemSemaphore* QSystemSemaphore_new5(const libqt_string key, int initialValue);
-QSystemSemaphore* QSystemSemaphore_new6(const libqt_string key, int initialValue, int mode);
+QSystemSemaphore* QSystemSemaphore_New(const QNativeIpcKey* key);
+QSystemSemaphore* QSystemSemaphore_New2(const libqt_string key);
+QSystemSemaphore* QSystemSemaphore_New3(const QNativeIpcKey* key, int initialValue);
+QSystemSemaphore* QSystemSemaphore_New4(const QNativeIpcKey* key, int initialValue, int param3);
+QSystemSemaphore* QSystemSemaphore_New5(const libqt_string key, int initialValue);
+QSystemSemaphore* QSystemSemaphore_New6(const libqt_string key, int initialValue, int mode);
 void QSystemSemaphore_SetNativeKey(QSystemSemaphore* self, const QNativeIpcKey* key);
 void QSystemSemaphore_SetNativeKey2(QSystemSemaphore* self, const libqt_string key);
 QNativeIpcKey* QSystemSemaphore_NativeIpcKey(const QSystemSemaphore* self);

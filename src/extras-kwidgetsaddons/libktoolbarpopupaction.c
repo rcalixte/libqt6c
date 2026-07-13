@@ -11,7 +11,7 @@
 #include "libktoolbarpopupaction.h"
 
 KToolBarPopupAction* k_toolbarpopupaction_new(void* icon, const char* text, void* parent) {
-    return KToolBarPopupAction_new((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KToolBarPopupAction_New((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_toolbarpopupaction_meta_object(void* self) {

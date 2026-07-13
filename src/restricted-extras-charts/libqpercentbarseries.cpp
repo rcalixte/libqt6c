@@ -12,11 +12,11 @@
 #include "libqpercentbarseries.hpp"
 #include "libqpercentbarseries.hxx"
 
-QPercentBarSeries* QPercentBarSeries_new() {
+QPercentBarSeries* QPercentBarSeries_New() {
     return new VirtualQPercentBarSeries();
 }
 
-QPercentBarSeries* QPercentBarSeries_new2(QObject* parent) {
+QPercentBarSeries* QPercentBarSeries_New2(QObject* parent) {
     return new VirtualQPercentBarSeries(parent);
 }
 

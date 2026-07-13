@@ -3,51 +3,51 @@
 #include "libqsslkey.h"
 
 QSslKey* q_sslkey_new() {
-    return QSslKey_new();
+    return QSslKey_New();
 }
 
 QSslKey* q_sslkey_new2(char* encoded, int32_t algorithm) {
-    return QSslKey_new2(qstring(encoded), algorithm);
+    return QSslKey_New2(qstring(encoded), algorithm);
 }
 
 QSslKey* q_sslkey_new3(void* device, int32_t algorithm) {
-    return QSslKey_new3((QIODevice*)device, algorithm);
+    return QSslKey_New3((QIODevice*)device, algorithm);
 }
 
 QSslKey* q_sslkey_new4(void* handle) {
-    return QSslKey_new4(handle);
+    return QSslKey_New4(handle);
 }
 
 QSslKey* q_sslkey_new5(void* other) {
-    return QSslKey_new5((QSslKey*)other);
+    return QSslKey_New5((QSslKey*)other);
 }
 
 QSslKey* q_sslkey_new6(char* encoded, int32_t algorithm, int32_t format) {
-    return QSslKey_new6(qstring(encoded), algorithm, format);
+    return QSslKey_New6(qstring(encoded), algorithm, format);
 }
 
 QSslKey* q_sslkey_new7(char* encoded, int32_t algorithm, int32_t format, int32_t type) {
-    return QSslKey_new7(qstring(encoded), algorithm, format, type);
+    return QSslKey_New7(qstring(encoded), algorithm, format, type);
 }
 
 QSslKey* q_sslkey_new8(char* encoded, int32_t algorithm, int32_t format, int32_t type, char* passPhrase) {
-    return QSslKey_new8(qstring(encoded), algorithm, format, type, qstring(passPhrase));
+    return QSslKey_New8(qstring(encoded), algorithm, format, type, qstring(passPhrase));
 }
 
 QSslKey* q_sslkey_new9(void* device, int32_t algorithm, int32_t format) {
-    return QSslKey_new9((QIODevice*)device, algorithm, format);
+    return QSslKey_New9((QIODevice*)device, algorithm, format);
 }
 
 QSslKey* q_sslkey_new10(void* device, int32_t algorithm, int32_t format, int32_t type) {
-    return QSslKey_new10((QIODevice*)device, algorithm, format, type);
+    return QSslKey_New10((QIODevice*)device, algorithm, format, type);
 }
 
 QSslKey* q_sslkey_new11(void* device, int32_t algorithm, int32_t format, int32_t type, char* passPhrase) {
-    return QSslKey_new11((QIODevice*)device, algorithm, format, type, qstring(passPhrase));
+    return QSslKey_New11((QIODevice*)device, algorithm, format, type, qstring(passPhrase));
 }
 
 QSslKey* q_sslkey_new12(void* handle, int32_t type) {
-    return QSslKey_new12(handle, type);
+    return QSslKey_New12(handle, type);
 }
 
 void q_sslkey_operator_assign(void* self, void* other) {

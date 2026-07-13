@@ -14,11 +14,11 @@
 #include "libtexteditorcompleter.hpp"
 #include "libtexteditorcompleter.hxx"
 
-TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_new(QTextEdit* editor, QObject* parent) {
+TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_New(QTextEdit* editor, QObject* parent) {
     return new VirtualTextCustomEditorTextEditorCompleter(editor, parent);
 }
 
-TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_new2(QPlainTextEdit* editor, QObject* parent) {
+TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_New2(QPlainTextEdit* editor, QObject* parent) {
     return new VirtualTextCustomEditorTextEditorCompleter(editor, parent);
 }
 

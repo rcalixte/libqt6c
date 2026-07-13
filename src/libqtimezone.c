@@ -5,35 +5,35 @@
 #include "libqtimezone.h"
 
 QTimeZone* q_timezone_new() {
-    return QTimeZone_new();
+    return QTimeZone_New();
 }
 
 QTimeZone* q_timezone_new2(int32_t spec) {
-    return QTimeZone_new2(spec);
+    return QTimeZone_New2(spec);
 }
 
 QTimeZone* q_timezone_new3(int offsetSeconds) {
-    return QTimeZone_new3(offsetSeconds);
+    return QTimeZone_New3(offsetSeconds);
 }
 
 QTimeZone* q_timezone_new4(char* ianaId) {
-    return QTimeZone_new4(qstring(ianaId));
+    return QTimeZone_New4(qstring(ianaId));
 }
 
 QTimeZone* q_timezone_new5(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation) {
-    return QTimeZone_new5(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation));
+    return QTimeZone_New5(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation));
 }
 
 QTimeZone* q_timezone_new6(void* other) {
-    return QTimeZone_new6((QTimeZone*)other);
+    return QTimeZone_New6((QTimeZone*)other);
 }
 
 QTimeZone* q_timezone_new7(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory) {
-    return QTimeZone_new7(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory);
+    return QTimeZone_New7(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory);
 }
 
 QTimeZone* q_timezone_new8(char* zoneId, int offsetSeconds, const char* name, const char* abbreviation, uint16_t territory, const char* comment) {
-    return QTimeZone_new8(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory, qstring(comment));
+    return QTimeZone_New8(qstring(zoneId), offsetSeconds, qstring(name), qstring(abbreviation), territory, qstring(comment));
 }
 
 void q_timezone_operator_assign(void* self, void* other) {
@@ -332,11 +332,11 @@ void q_timezone_delete(void* self) {
 }
 
 QTimeZone__OffsetData* q_timezone__offsetdata_new(void* param1) {
-    return QTimeZone__OffsetData_new((QTimeZone__OffsetData*)param1);
+    return QTimeZone__OffsetData_New((QTimeZone__OffsetData*)param1);
 }
 
 QTimeZone__OffsetData* q_timezone__offsetdata_new2() {
-    return QTimeZone__OffsetData_new2();
+    return QTimeZone__OffsetData_New2();
 }
 
 const char* q_timezone__offsetdata_abbreviation(void* self) {

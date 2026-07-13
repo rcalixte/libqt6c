@@ -52,11 +52,11 @@ void QOpenGLContextGroup_Delete(QOpenGLContextGroup* self) {
     delete self;
 }
 
-QOpenGLContext* QOpenGLContext_new() {
+QOpenGLContext* QOpenGLContext_New() {
     return new VirtualQOpenGLContext();
 }
 
-QOpenGLContext* QOpenGLContext_new2(QObject* parent) {
+QOpenGLContext* QOpenGLContext_New2(QObject* parent) {
     return new VirtualQOpenGLContext(parent);
 }
 

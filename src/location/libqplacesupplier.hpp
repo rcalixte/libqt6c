@@ -20,8 +20,8 @@ typedef struct QPlaceSupplier QPlaceSupplier;
 typedef struct QUrl QUrl;
 #endif
 
-QPlaceSupplier* QPlaceSupplier_new();
-QPlaceSupplier* QPlaceSupplier_new2(const QPlaceSupplier* other);
+QPlaceSupplier* QPlaceSupplier_New();
+QPlaceSupplier* QPlaceSupplier_New2(const QPlaceSupplier* other);
 void QPlaceSupplier_OperatorAssign(QPlaceSupplier* self, const QPlaceSupplier* other);
 void QPlaceSupplier_Swap(QPlaceSupplier* self, QPlaceSupplier* other);
 libqt_string QPlaceSupplier_Name(const QPlaceSupplier* self);

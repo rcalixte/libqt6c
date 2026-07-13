@@ -8,19 +8,19 @@
 #include "libklinkitemselectionmodel.h"
 
 KLinkItemSelectionModel* k_linkitemselectionmodel_new(void* targetModel, void* linkedItemSelectionModel) {
-    return KLinkItemSelectionModel_new((QAbstractItemModel*)targetModel, (QItemSelectionModel*)linkedItemSelectionModel);
+    return KLinkItemSelectionModel_New((QAbstractItemModel*)targetModel, (QItemSelectionModel*)linkedItemSelectionModel);
 }
 
 KLinkItemSelectionModel* k_linkitemselectionmodel_new2() {
-    return KLinkItemSelectionModel_new2();
+    return KLinkItemSelectionModel_New2();
 }
 
 KLinkItemSelectionModel* k_linkitemselectionmodel_new3(void* targetModel, void* linkedItemSelectionModel, void* parent) {
-    return KLinkItemSelectionModel_new3((QAbstractItemModel*)targetModel, (QItemSelectionModel*)linkedItemSelectionModel, (QObject*)parent);
+    return KLinkItemSelectionModel_New3((QAbstractItemModel*)targetModel, (QItemSelectionModel*)linkedItemSelectionModel, (QObject*)parent);
 }
 
 KLinkItemSelectionModel* k_linkitemselectionmodel_new4(void* parent) {
-    return KLinkItemSelectionModel_new4((QObject*)parent);
+    return KLinkItemSelectionModel_New4((QObject*)parent);
 }
 
 const QMetaObject* k_linkitemselectionmodel_meta_object(void* self) {

@@ -11,7 +11,7 @@
 #include "libqgeoareamonitorsource.h"
 
 QGeoAreaMonitorSource* q_geoareamonitorsource_new(void* parent) {
-    return QGeoAreaMonitorSource_new((QObject*)parent);
+    return QGeoAreaMonitorSource_New((QObject*)parent);
 }
 
 const QMetaObject* q_geoareamonitorsource_meta_object(void* self) {

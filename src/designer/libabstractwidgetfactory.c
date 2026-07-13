@@ -9,11 +9,11 @@
 #include "libabstractwidgetfactory.h"
 
 QDesignerWidgetFactoryInterface* q_designerwidgetfactoryinterface_new() {
-    return QDesignerWidgetFactoryInterface_new();
+    return QDesignerWidgetFactoryInterface_New();
 }
 
 QDesignerWidgetFactoryInterface* q_designerwidgetfactoryinterface_new2(void* parent) {
-    return QDesignerWidgetFactoryInterface_new2((QObject*)parent);
+    return QDesignerWidgetFactoryInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* q_designerwidgetfactoryinterface_meta_object(void* self) {

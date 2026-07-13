@@ -2,11 +2,11 @@
 #include "libqplacecontactdetail.h"
 
 QPlaceContactDetail* q_placecontactdetail_new() {
-    return QPlaceContactDetail_new();
+    return QPlaceContactDetail_New();
 }
 
 QPlaceContactDetail* q_placecontactdetail_new2(void* other) {
-    return QPlaceContactDetail_new2((QPlaceContactDetail*)other);
+    return QPlaceContactDetail_New2((QPlaceContactDetail*)other);
 }
 
 void q_placecontactdetail_operator_assign(void* self, void* other) {

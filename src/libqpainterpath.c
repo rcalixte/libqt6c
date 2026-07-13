@@ -7,15 +7,15 @@
 #include "libqpainterpath.h"
 
 QPainterPath* q_painterpath_new() {
-    return QPainterPath_new();
+    return QPainterPath_New();
 }
 
 QPainterPath* q_painterpath_new2(void* startPoint) {
-    return QPainterPath_new2((QPointF*)startPoint);
+    return QPainterPath_New2((QPointF*)startPoint);
 }
 
 QPainterPath* q_painterpath_new3(void* other) {
-    return QPainterPath_new3((QPainterPath*)other);
+    return QPainterPath_New3((QPainterPath*)other);
 }
 
 void q_painterpath_operator_assign(void* self, void* other) {
@@ -303,11 +303,11 @@ void q_painterpath_delete(void* self) {
 }
 
 QPainterPathStroker* q_painterpathstroker_new() {
-    return QPainterPathStroker_new();
+    return QPainterPathStroker_New();
 }
 
 QPainterPathStroker* q_painterpathstroker_new2(void* pen) {
-    return QPainterPathStroker_new2((QPen*)pen);
+    return QPainterPathStroker_New2((QPen*)pen);
 }
 
 void q_painterpathstroker_set_width(void* self, double width) {
@@ -380,11 +380,11 @@ void q_painterpathstroker_delete(void* self) {
 }
 
 QPainterPath__Element* q_painterpath__element_new() {
-    return QPainterPath__Element_new();
+    return QPainterPath__Element_New();
 }
 
 QPainterPath__Element* q_painterpath__element_new2(void* param1) {
-    return QPainterPath__Element_new2((QPainterPath__Element*)param1);
+    return QPainterPath__Element_New2((QPainterPath__Element*)param1);
 }
 
 double q_painterpath__element_x(void* self) {

@@ -67,7 +67,7 @@ bool Poppler__PDFConverter_Sign(Poppler__PDFConverter* self, const Poppler__PDFC
 bool Poppler__PDFConverter_Convert(Poppler__PDFConverter* self);
 void Poppler__PDFConverter_Delete(Poppler__PDFConverter* self);
 
-Poppler__PDFConverter__NewSignatureData* Poppler__PDFConverter__NewSignatureData_new();
+Poppler__PDFConverter__NewSignatureData* Poppler__PDFConverter__NewSignatureData_New();
 libqt_string Poppler__PDFConverter__NewSignatureData_CertNickname(const Poppler__PDFConverter__NewSignatureData* self);
 void Poppler__PDFConverter__NewSignatureData_SetCertNickname(Poppler__PDFConverter__NewSignatureData* self, const libqt_string certNickname);
 libqt_string Poppler__PDFConverter__NewSignatureData_Password(const Poppler__PDFConverter__NewSignatureData* self);

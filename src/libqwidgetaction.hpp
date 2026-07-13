@@ -26,7 +26,7 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-QWidgetAction* QWidgetAction_new(QObject* parent);
+QWidgetAction* QWidgetAction_New(QObject* parent);
 QMetaObject* QWidgetAction_MetaObject(const QWidgetAction* self);
 void* QWidgetAction_Metacast(QWidgetAction* self, const char* param1);
 int QWidgetAction_Metacall(QWidgetAction* self, int param1, int param2, void** param3);

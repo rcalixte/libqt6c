@@ -10,11 +10,11 @@
 #include "libqcompleter.h"
 
 QCompleter* q_completer_new() {
-    return QCompleter_new();
+    return QCompleter_New();
 }
 
 QCompleter* q_completer_new2(void* model) {
-    return QCompleter_new2((QAbstractItemModel*)model);
+    return QCompleter_New2((QAbstractItemModel*)model);
 }
 
 QCompleter* q_completer_new3(const char* completions[static 1]) {
@@ -29,17 +29,17 @@ QCompleter* q_completer_new3(const char* completions[static 1]) {
     }
     libqt_list completions_list = qlist(completions_qstr, completions_len);
 
-    QCompleter* _out = QCompleter_new3(completions_list);
+    QCompleter* _out = QCompleter_New3(completions_list);
     free(completions_qstr);
     return _out;
 }
 
 QCompleter* q_completer_new4(void* parent) {
-    return QCompleter_new4((QObject*)parent);
+    return QCompleter_New4((QObject*)parent);
 }
 
 QCompleter* q_completer_new5(void* model, void* parent) {
-    return QCompleter_new5((QAbstractItemModel*)model, (QObject*)parent);
+    return QCompleter_New5((QAbstractItemModel*)model, (QObject*)parent);
 }
 
 QCompleter* q_completer_new6(const char* completions[static 1], void* parent) {
@@ -54,7 +54,7 @@ QCompleter* q_completer_new6(const char* completions[static 1], void* parent) {
     }
     libqt_list completions_list = qlist(completions_qstr, completions_len);
 
-    QCompleter* _out = QCompleter_new6(completions_list, (QObject*)parent);
+    QCompleter* _out = QCompleter_New6(completions_list, (QObject*)parent);
     free(completions_qstr);
     return _out;
 }

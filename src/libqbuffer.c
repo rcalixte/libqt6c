@@ -8,11 +8,11 @@
 #include "libqbuffer.h"
 
 QBuffer* q_buffer_new() {
-    return QBuffer_new();
+    return QBuffer_New();
 }
 
 QBuffer* q_buffer_new2(void* parent) {
-    return QBuffer_new2((QObject*)parent);
+    return QBuffer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_buffer_meta_object(void* self) {

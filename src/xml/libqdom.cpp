@@ -25,11 +25,11 @@
 #include "libqdom.hpp"
 #include "libqdom.hxx"
 
-QDomImplementation* QDomImplementation_new() {
+QDomImplementation* QDomImplementation_New() {
     return new QDomImplementation();
 }
 
-QDomImplementation* QDomImplementation_new2(const QDomImplementation* implementation) {
+QDomImplementation* QDomImplementation_New2(const QDomImplementation* implementation) {
     return new QDomImplementation(*implementation);
 }
 
@@ -80,11 +80,11 @@ void QDomImplementation_Delete(QDomImplementation* self) {
     delete self;
 }
 
-QDomNode* QDomNode_new() {
+QDomNode* QDomNode_New() {
     return new QDomNode();
 }
 
-QDomNode* QDomNode_new2(const QDomNode* node) {
+QDomNode* QDomNode_New2(const QDomNode* node) {
     return new QDomNode(*node);
 }
 
@@ -449,11 +449,11 @@ void QDomNode_Delete(QDomNode* self) {
     delete self;
 }
 
-QDomNodeList* QDomNodeList_new() {
+QDomNodeList* QDomNodeList_New() {
     return new QDomNodeList();
 }
 
-QDomNodeList* QDomNodeList_new2(const QDomNodeList* nodeList) {
+QDomNodeList* QDomNodeList_New2(const QDomNodeList* nodeList) {
     return new QDomNodeList(*nodeList);
 }
 
@@ -497,11 +497,11 @@ void QDomNodeList_Delete(QDomNodeList* self) {
     delete self;
 }
 
-QDomDocumentType* QDomDocumentType_new() {
+QDomDocumentType* QDomDocumentType_New() {
     return new QDomDocumentType();
 }
 
-QDomDocumentType* QDomDocumentType_new2(const QDomDocumentType* documentType) {
+QDomDocumentType* QDomDocumentType_New2(const QDomDocumentType* documentType) {
     return new QDomDocumentType(*documentType);
 }
 
@@ -573,20 +573,20 @@ void QDomDocumentType_Delete(QDomDocumentType* self) {
     delete self;
 }
 
-QDomDocument* QDomDocument_new() {
+QDomDocument* QDomDocument_New() {
     return new QDomDocument();
 }
 
-QDomDocument* QDomDocument_new2(const libqt_string name) {
+QDomDocument* QDomDocument_New2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QDomDocument(name_QString);
 }
 
-QDomDocument* QDomDocument_new3(const QDomDocumentType* doctype) {
+QDomDocument* QDomDocument_New3(const QDomDocumentType* doctype) {
     return new QDomDocument(*doctype);
 }
 
-QDomDocument* QDomDocument_new4(const QDomDocument* document) {
+QDomDocument* QDomDocument_New4(const QDomDocument* document) {
     return new QDomDocument(*document);
 }
 
@@ -770,11 +770,11 @@ void QDomDocument_Delete(QDomDocument* self) {
     delete self;
 }
 
-QDomNamedNodeMap* QDomNamedNodeMap_new() {
+QDomNamedNodeMap* QDomNamedNodeMap_New() {
     return new QDomNamedNodeMap();
 }
 
-QDomNamedNodeMap* QDomNamedNodeMap_new2(const QDomNamedNodeMap* namedNodeMap) {
+QDomNamedNodeMap* QDomNamedNodeMap_New2(const QDomNamedNodeMap* namedNodeMap) {
     return new QDomNamedNodeMap(*namedNodeMap);
 }
 
@@ -849,11 +849,11 @@ void QDomNamedNodeMap_Delete(QDomNamedNodeMap* self) {
     delete self;
 }
 
-QDomDocumentFragment* QDomDocumentFragment_new() {
+QDomDocumentFragment* QDomDocumentFragment_New() {
     return new QDomDocumentFragment();
 }
 
-QDomDocumentFragment* QDomDocumentFragment_new2(const QDomDocumentFragment* documentFragment) {
+QDomDocumentFragment* QDomDocumentFragment_New2(const QDomDocumentFragment* documentFragment) {
     return new QDomDocumentFragment(*documentFragment);
 }
 
@@ -869,11 +869,11 @@ void QDomDocumentFragment_Delete(QDomDocumentFragment* self) {
     delete self;
 }
 
-QDomCharacterData* QDomCharacterData_new() {
+QDomCharacterData* QDomCharacterData_New() {
     return new QDomCharacterData();
 }
 
-QDomCharacterData* QDomCharacterData_new2(const QDomCharacterData* characterData) {
+QDomCharacterData* QDomCharacterData_New2(const QDomCharacterData* characterData) {
     return new QDomCharacterData(*characterData);
 }
 
@@ -941,11 +941,11 @@ void QDomCharacterData_Delete(QDomCharacterData* self) {
     delete self;
 }
 
-QDomAttr* QDomAttr_new() {
+QDomAttr* QDomAttr_New() {
     return new QDomAttr();
 }
 
-QDomAttr* QDomAttr_new2(const QDomAttr* attr) {
+QDomAttr* QDomAttr_New2(const QDomAttr* attr) {
     return new QDomAttr(*attr);
 }
 
@@ -998,11 +998,11 @@ void QDomAttr_Delete(QDomAttr* self) {
     delete self;
 }
 
-QDomElement* QDomElement_new() {
+QDomElement* QDomElement_New() {
     return new QDomElement();
 }
 
-QDomElement* QDomElement_new2(const QDomElement* element) {
+QDomElement* QDomElement_New2(const QDomElement* element) {
     return new QDomElement(*element);
 }
 
@@ -1236,11 +1236,11 @@ void QDomElement_Delete(QDomElement* self) {
     delete self;
 }
 
-QDomText* QDomText_new() {
+QDomText* QDomText_New() {
     return new QDomText();
 }
 
-QDomText* QDomText_new2(const QDomText* text) {
+QDomText* QDomText_New2(const QDomText* text) {
     return new QDomText(*text);
 }
 
@@ -1260,11 +1260,11 @@ void QDomText_Delete(QDomText* self) {
     delete self;
 }
 
-QDomComment* QDomComment_new() {
+QDomComment* QDomComment_New() {
     return new QDomComment();
 }
 
-QDomComment* QDomComment_new2(const QDomComment* comment) {
+QDomComment* QDomComment_New2(const QDomComment* comment) {
     return new QDomComment(*comment);
 }
 
@@ -1280,11 +1280,11 @@ void QDomComment_Delete(QDomComment* self) {
     delete self;
 }
 
-QDomCDATASection* QDomCDATASection_new() {
+QDomCDATASection* QDomCDATASection_New() {
     return new QDomCDATASection();
 }
 
-QDomCDATASection* QDomCDATASection_new2(const QDomCDATASection* cdataSection) {
+QDomCDATASection* QDomCDATASection_New2(const QDomCDATASection* cdataSection) {
     return new QDomCDATASection(*cdataSection);
 }
 
@@ -1300,11 +1300,11 @@ void QDomCDATASection_Delete(QDomCDATASection* self) {
     delete self;
 }
 
-QDomNotation* QDomNotation_new() {
+QDomNotation* QDomNotation_New() {
     return new QDomNotation();
 }
 
-QDomNotation* QDomNotation_new2(const QDomNotation* notation) {
+QDomNotation* QDomNotation_New2(const QDomNotation* notation) {
     return new QDomNotation(*notation);
 }
 
@@ -1344,11 +1344,11 @@ void QDomNotation_Delete(QDomNotation* self) {
     delete self;
 }
 
-QDomEntity* QDomEntity_new() {
+QDomEntity* QDomEntity_New() {
     return new QDomEntity();
 }
 
-QDomEntity* QDomEntity_new2(const QDomEntity* entity) {
+QDomEntity* QDomEntity_New2(const QDomEntity* entity) {
     return new QDomEntity(*entity);
 }
 
@@ -1400,11 +1400,11 @@ void QDomEntity_Delete(QDomEntity* self) {
     delete self;
 }
 
-QDomEntityReference* QDomEntityReference_new() {
+QDomEntityReference* QDomEntityReference_New() {
     return new QDomEntityReference();
 }
 
-QDomEntityReference* QDomEntityReference_new2(const QDomEntityReference* entityReference) {
+QDomEntityReference* QDomEntityReference_New2(const QDomEntityReference* entityReference) {
     return new QDomEntityReference(*entityReference);
 }
 
@@ -1420,11 +1420,11 @@ void QDomEntityReference_Delete(QDomEntityReference* self) {
     delete self;
 }
 
-QDomProcessingInstruction* QDomProcessingInstruction_new() {
+QDomProcessingInstruction* QDomProcessingInstruction_New() {
     return new QDomProcessingInstruction();
 }
 
-QDomProcessingInstruction* QDomProcessingInstruction_new2(const QDomProcessingInstruction* processingInstruction) {
+QDomProcessingInstruction* QDomProcessingInstruction_New2(const QDomProcessingInstruction* processingInstruction) {
     return new QDomProcessingInstruction(*processingInstruction);
 }
 
@@ -1469,7 +1469,7 @@ void QDomProcessingInstruction_Delete(QDomProcessingInstruction* self) {
     delete self;
 }
 
-QDomDocument__ParseResult* QDomDocument__ParseResult_new(const QDomDocument__ParseResult* param1) {
+QDomDocument__ParseResult* QDomDocument__ParseResult_New(const QDomDocument__ParseResult* param1) {
     return new QDomDocument::ParseResult(*param1);
 }
 

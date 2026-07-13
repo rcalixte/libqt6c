@@ -41,15 +41,15 @@
 #include "libabstractwidgetbox.hpp"
 #include "libabstractwidgetbox.hxx"
 
-QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_new(QWidget* parent) {
+QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_New(QWidget* parent) {
     return new VirtualQDesignerWidgetBoxInterface(parent);
 }
 
-QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_new2() {
+QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_New2() {
     return new VirtualQDesignerWidgetBoxInterface();
 }
 
-QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_new3(QWidget* parent, int flags) {
+QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_New3(QWidget* parent, int flags) {
     return new VirtualQDesignerWidgetBoxInterface(parent, static_cast<Qt::WindowFlags>(flags));
 }
 
@@ -2123,33 +2123,33 @@ void QDesignerWidgetBoxInterface_Delete(QDesignerWidgetBoxInterface* self) {
     delete self;
 }
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new() {
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New() {
     return new QDesignerWidgetBoxInterface::Widget();
 }
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new2(const QDesignerWidgetBoxInterface__Widget* w) {
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New2(const QDesignerWidgetBoxInterface__Widget* w) {
     return new QDesignerWidgetBoxInterface::Widget(*w);
 }
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new3(const libqt_string aname) {
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New3(const libqt_string aname) {
     QString aname_QString = QString::fromUtf8(aname.data, aname.len);
     return new QDesignerWidgetBoxInterface::Widget(aname_QString);
 }
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new4(const libqt_string aname, const libqt_string xml) {
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New4(const libqt_string aname, const libqt_string xml) {
     QString aname_QString = QString::fromUtf8(aname.data, aname.len);
     QString xml_QString = QString::fromUtf8(xml.data, xml.len);
     return new QDesignerWidgetBoxInterface::Widget(aname_QString, xml_QString);
 }
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new5(const libqt_string aname, const libqt_string xml, const libqt_string icon_name) {
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New5(const libqt_string aname, const libqt_string xml, const libqt_string icon_name) {
     QString aname_QString = QString::fromUtf8(aname.data, aname.len);
     QString xml_QString = QString::fromUtf8(xml.data, xml.len);
     QString icon_name_QString = QString::fromUtf8(icon_name.data, icon_name.len);
     return new QDesignerWidgetBoxInterface::Widget(aname_QString, xml_QString, icon_name_QString);
 }
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new6(const libqt_string aname, const libqt_string xml, const libqt_string icon_name, int atype) {
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New6(const libqt_string aname, const libqt_string xml, const libqt_string icon_name, int atype) {
     QString aname_QString = QString::fromUtf8(aname.data, aname.len);
     QString xml_QString = QString::fromUtf8(xml.data, xml.len);
     QString icon_name_QString = QString::fromUtf8(icon_name.data, icon_name.len);
@@ -2227,20 +2227,20 @@ void QDesignerWidgetBoxInterface__Widget_Delete(QDesignerWidgetBoxInterface__Wid
     delete self;
 }
 
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new() {
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New() {
     return new QDesignerWidgetBoxInterface::Category();
 }
 
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new2(const QDesignerWidgetBoxInterface__Category* param1) {
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New2(const QDesignerWidgetBoxInterface__Category* param1) {
     return new QDesignerWidgetBoxInterface::Category(*param1);
 }
 
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new3(const libqt_string aname) {
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New3(const libqt_string aname) {
     QString aname_QString = QString::fromUtf8(aname.data, aname.len);
     return new QDesignerWidgetBoxInterface::Category(aname_QString);
 }
 
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new4(const libqt_string aname, int atype) {
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New4(const libqt_string aname, int atype) {
     QString aname_QString = QString::fromUtf8(aname.data, aname.len);
     return new QDesignerWidgetBoxInterface::Category(aname_QString, static_cast<QDesignerWidgetBoxInterface::Category::Type>(atype));
 }

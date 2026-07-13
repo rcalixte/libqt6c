@@ -6,11 +6,11 @@
 #include "libqsignalmapper.h"
 
 QSignalMapper* q_signalmapper_new() {
-    return QSignalMapper_new();
+    return QSignalMapper_New();
 }
 
 QSignalMapper* q_signalmapper_new2(void* parent) {
-    return QSignalMapper_new2((QObject*)parent);
+    return QSignalMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_signalmapper_meta_object(void* self) {

@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QColorAxis* QColorAxis_new();
-QColorAxis* QColorAxis_new2(QObject* parent);
+QColorAxis* QColorAxis_New();
+QColorAxis* QColorAxis_New2(QObject* parent);
 QMetaObject* QColorAxis_MetaObject(const QColorAxis* self);
 void* QColorAxis_Metacast(QColorAxis* self, const char* param1);
 int QColorAxis_Metacall(QColorAxis* self, int param1, int param2, void** param3);

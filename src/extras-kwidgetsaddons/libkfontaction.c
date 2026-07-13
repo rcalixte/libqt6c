@@ -11,19 +11,19 @@
 #include "libkfontaction.h"
 
 KFontAction* k_fontaction_new(uint32_t fontListCriteria, void* parent) {
-    return KFontAction_new(fontListCriteria, (QObject*)parent);
+    return KFontAction_New(fontListCriteria, (QObject*)parent);
 }
 
 KFontAction* k_fontaction_new2(void* parent) {
-    return KFontAction_new2((QObject*)parent);
+    return KFontAction_New2((QObject*)parent);
 }
 
 KFontAction* k_fontaction_new3(const char* text, void* parent) {
-    return KFontAction_new3(qstring(text), (QObject*)parent);
+    return KFontAction_New3(qstring(text), (QObject*)parent);
 }
 
 KFontAction* k_fontaction_new4(void* icon, const char* text, void* parent) {
-    return KFontAction_new4((QIcon*)icon, qstring(text), (QObject*)parent);
+    return KFontAction_New4((QIcon*)icon, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_fontaction_meta_object(void* self) {

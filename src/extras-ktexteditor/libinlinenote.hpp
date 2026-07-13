@@ -32,8 +32,8 @@ typedef struct KTextEditor__View KTextEditor__View;
 typedef struct QFont QFont;
 #endif
 
-KTextEditor__InlineNote* KTextEditor__InlineNote_new(const KTextEditor__InlineNote* other);
-KTextEditor__InlineNote* KTextEditor__InlineNote_new2(KTextEditor__InlineNote* other);
+KTextEditor__InlineNote* KTextEditor__InlineNote_New(const KTextEditor__InlineNote* other);
+KTextEditor__InlineNote* KTextEditor__InlineNote_New2(KTextEditor__InlineNote* other);
 double KTextEditor__InlineNote_Width(const KTextEditor__InlineNote* self);
 KTextEditor__InlineNoteProvider* KTextEditor__InlineNote_Provider(const KTextEditor__InlineNote* self);
 KTextEditor__View* KTextEditor__InlineNote_View(const KTextEditor__InlineNote* self);

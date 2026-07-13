@@ -16,11 +16,11 @@
 #include "libqgraphicsitemanimation.hpp"
 #include "libqgraphicsitemanimation.hxx"
 
-QGraphicsItemAnimation* QGraphicsItemAnimation_new() {
+QGraphicsItemAnimation* QGraphicsItemAnimation_New() {
     return new VirtualQGraphicsItemAnimation();
 }
 
-QGraphicsItemAnimation* QGraphicsItemAnimation_new2(QObject* parent) {
+QGraphicsItemAnimation* QGraphicsItemAnimation_New2(QObject* parent) {
     return new VirtualQGraphicsItemAnimation(parent);
 }
 

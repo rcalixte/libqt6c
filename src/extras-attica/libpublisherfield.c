@@ -2,11 +2,11 @@
 #include "libpublisherfield.h"
 
 Attica__PublisherField* k_attica__publisherfield_new() {
-    return Attica__PublisherField_new();
+    return Attica__PublisherField_New();
 }
 
 Attica__PublisherField* k_attica__publisherfield_new2(void* other) {
-    return Attica__PublisherField_new2((Attica__PublisherField*)other);
+    return Attica__PublisherField_New2((Attica__PublisherField*)other);
 }
 
 void k_attica__publisherfield_operator_assign(void* self, void* other) {

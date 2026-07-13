@@ -12,11 +12,11 @@
 #include "libqvideosink.hpp"
 #include "libqvideosink.hxx"
 
-QVideoSink* QVideoSink_new() {
+QVideoSink* QVideoSink_New() {
     return new VirtualQVideoSink();
 }
 
-QVideoSink* QVideoSink_new2(QObject* parent) {
+QVideoSink* QVideoSink_New2(QObject* parent) {
     return new VirtualQVideoSink(parent);
 }
 

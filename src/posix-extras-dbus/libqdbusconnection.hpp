@@ -24,8 +24,8 @@ typedef struct QDBusVirtualObject QDBusVirtualObject;
 typedef struct QObject QObject;
 #endif
 
-QDBusConnection* QDBusConnection_new(const libqt_string name);
-QDBusConnection* QDBusConnection_new2(const QDBusConnection* other);
+QDBusConnection* QDBusConnection_New(const libqt_string name);
+QDBusConnection* QDBusConnection_New2(const QDBusConnection* other);
 void QDBusConnection_OperatorAssign(QDBusConnection* self, const QDBusConnection* other);
 void QDBusConnection_Swap(QDBusConnection* self, QDBusConnection* other);
 bool QDBusConnection_IsConnected(const QDBusConnection* self);

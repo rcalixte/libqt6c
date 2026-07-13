@@ -12,11 +12,11 @@
 #include "libqfinalstate.hpp"
 #include "libqfinalstate.hxx"
 
-QFinalState* QFinalState_new() {
+QFinalState* QFinalState_New() {
     return new VirtualQFinalState();
 }
 
-QFinalState* QFinalState_new2(QState* parent) {
+QFinalState* QFinalState_New2(QState* parent) {
     return new VirtualQFinalState(parent);
 }
 

@@ -27,8 +27,8 @@ typedef struct QXYModelMapper QXYModelMapper;
 typedef struct QXYSeries QXYSeries;
 #endif
 
-QVXYModelMapper* QVXYModelMapper_new();
-QVXYModelMapper* QVXYModelMapper_new2(QObject* parent);
+QVXYModelMapper* QVXYModelMapper_New();
+QVXYModelMapper* QVXYModelMapper_New2(QObject* parent);
 QMetaObject* QVXYModelMapper_MetaObject(const QVXYModelMapper* self);
 void* QVXYModelMapper_Metacast(QVXYModelMapper* self, const char* param1);
 int QVXYModelMapper_Metacall(QVXYModelMapper* self, int param1, int param2, void** param3);

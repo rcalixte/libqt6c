@@ -34,8 +34,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KDirModel* KDirModel_new();
-KDirModel* KDirModel_new2(QObject* parent);
+KDirModel* KDirModel_New();
+KDirModel* KDirModel_New2(QObject* parent);
 QMetaObject* KDirModel_MetaObject(const KDirModel* self);
 void* KDirModel_Metacast(KDirModel* self, const char* param1);
 int KDirModel_Metacall(KDirModel* self, int param1, int param2, void** param3);

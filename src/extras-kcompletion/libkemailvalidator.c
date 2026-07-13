@@ -7,11 +7,11 @@
 #include "libkemailvalidator.h"
 
 KEmailValidator* k_emailvalidator_new() {
-    return KEmailValidator_new();
+    return KEmailValidator_New();
 }
 
 KEmailValidator* k_emailvalidator_new2(void* parent) {
-    return KEmailValidator_new2((QObject*)parent);
+    return KEmailValidator_New2((QObject*)parent);
 }
 
 const QMetaObject* k_emailvalidator_meta_object(void* self) {

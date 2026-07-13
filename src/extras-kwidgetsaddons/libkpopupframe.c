@@ -16,11 +16,11 @@
 #include "libkpopupframe.h"
 
 KPopupFrame* k_popupframe_new(void* parent) {
-    return KPopupFrame_new((QWidget*)parent);
+    return KPopupFrame_New((QWidget*)parent);
 }
 
 KPopupFrame* k_popupframe_new2() {
-    return KPopupFrame_new2();
+    return KPopupFrame_New2();
 }
 
 const QMetaObject* k_popupframe_meta_object(void* self) {

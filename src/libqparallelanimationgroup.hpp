@@ -26,8 +26,8 @@ typedef struct QParallelAnimationGroup QParallelAnimationGroup;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QParallelAnimationGroup* QParallelAnimationGroup_new();
-QParallelAnimationGroup* QParallelAnimationGroup_new2(QObject* parent);
+QParallelAnimationGroup* QParallelAnimationGroup_New();
+QParallelAnimationGroup* QParallelAnimationGroup_New2(QObject* parent);
 QMetaObject* QParallelAnimationGroup_MetaObject(const QParallelAnimationGroup* self);
 void* QParallelAnimationGroup_Metacast(QParallelAnimationGroup* self, const char* param1);
 int QParallelAnimationGroup_Metacall(QParallelAnimationGroup* self, int param1, int param2, void** param3);

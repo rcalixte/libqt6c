@@ -53,12 +53,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QCommandLinkButton* QCommandLinkButton_new(QWidget* parent);
-QCommandLinkButton* QCommandLinkButton_new2();
-QCommandLinkButton* QCommandLinkButton_new3(const libqt_string text);
-QCommandLinkButton* QCommandLinkButton_new4(const libqt_string text, const libqt_string description);
-QCommandLinkButton* QCommandLinkButton_new5(const libqt_string text, QWidget* parent);
-QCommandLinkButton* QCommandLinkButton_new6(const libqt_string text, const libqt_string description, QWidget* parent);
+QCommandLinkButton* QCommandLinkButton_New(QWidget* parent);
+QCommandLinkButton* QCommandLinkButton_New2();
+QCommandLinkButton* QCommandLinkButton_New3(const libqt_string text);
+QCommandLinkButton* QCommandLinkButton_New4(const libqt_string text, const libqt_string description);
+QCommandLinkButton* QCommandLinkButton_New5(const libqt_string text, QWidget* parent);
+QCommandLinkButton* QCommandLinkButton_New6(const libqt_string text, const libqt_string description, QWidget* parent);
 QMetaObject* QCommandLinkButton_MetaObject(const QCommandLinkButton* self);
 void* QCommandLinkButton_Metacast(QCommandLinkButton* self, const char* param1);
 int QCommandLinkButton_Metacall(QCommandLinkButton* self, int param1, int param2, void** param3);

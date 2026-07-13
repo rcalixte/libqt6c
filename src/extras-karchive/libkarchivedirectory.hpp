@@ -22,8 +22,8 @@ typedef struct KArchiveFile KArchiveFile;
 typedef struct QDateTime QDateTime;
 #endif
 
-KArchiveDirectory* KArchiveDirectory_new(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink);
-KArchiveDirectory* KArchiveDirectory_new2(const KArchiveDirectory* param1);
+KArchiveDirectory* KArchiveDirectory_New(KArchive* archive, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink);
+KArchiveDirectory* KArchiveDirectory_New2(const KArchiveDirectory* param1);
 libqt_list /* of libqt_string */ KArchiveDirectory_Entries(const KArchiveDirectory* self);
 KArchiveEntry* KArchiveDirectory_Entry(const KArchiveDirectory* self, const libqt_string name);
 KArchiveFile* KArchiveDirectory_File(const KArchiveDirectory* self, const libqt_string name);

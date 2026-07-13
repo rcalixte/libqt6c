@@ -14,11 +14,11 @@
 #include "libqbluetoothserver.hpp"
 #include "libqbluetoothserver.hxx"
 
-QBluetoothServer* QBluetoothServer_new(int serverType) {
+QBluetoothServer* QBluetoothServer_New(int serverType) {
     return new VirtualQBluetoothServer(static_cast<QBluetoothServiceInfo::Protocol>(serverType));
 }
 
-QBluetoothServer* QBluetoothServer_new2(int serverType, QObject* parent) {
+QBluetoothServer* QBluetoothServer_New2(int serverType, QObject* parent) {
     return new VirtualQBluetoothServer(static_cast<QBluetoothServiceInfo::Protocol>(serverType), parent);
 }
 

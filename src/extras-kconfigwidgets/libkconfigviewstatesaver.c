@@ -9,11 +9,11 @@
 #include "libkconfigviewstatesaver.h"
 
 KConfigViewStateSaver* k_configviewstatesaver_new() {
-    return KConfigViewStateSaver_new();
+    return KConfigViewStateSaver_New();
 }
 
 KConfigViewStateSaver* k_configviewstatesaver_new2(void* parent) {
-    return KConfigViewStateSaver_new2((QObject*)parent);
+    return KConfigViewStateSaver_New2((QObject*)parent);
 }
 
 const QMetaObject* k_configviewstatesaver_meta_object(void* self) {

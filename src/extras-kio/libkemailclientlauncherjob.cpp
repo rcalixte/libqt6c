@@ -14,11 +14,11 @@
 #include "libkemailclientlauncherjob.hpp"
 #include "libkemailclientlauncherjob.hxx"
 
-KEMailClientLauncherJob* KEMailClientLauncherJob_new() {
+KEMailClientLauncherJob* KEMailClientLauncherJob_New() {
     return new VirtualKEMailClientLauncherJob();
 }
 
-KEMailClientLauncherJob* KEMailClientLauncherJob_new2(QObject* parent) {
+KEMailClientLauncherJob* KEMailClientLauncherJob_New2(QObject* parent) {
     return new VirtualKEMailClientLauncherJob(parent);
 }
 

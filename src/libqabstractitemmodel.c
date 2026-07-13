@@ -10,11 +10,11 @@
 #include "libqabstractitemmodel.h"
 
 QModelRoleData* q_modelroledata_new(int role) {
-    return QModelRoleData_new(role);
+    return QModelRoleData_New(role);
 }
 
 QModelRoleData* q_modelroledata_new2(void* param1) {
-    return QModelRoleData_new2((QModelRoleData*)param1);
+    return QModelRoleData_New2((QModelRoleData*)param1);
 }
 
 int32_t q_modelroledata_role(void* self) {
@@ -42,27 +42,27 @@ void q_modelroledata_delete(void* self) {
 }
 
 QModelRoleDataSpan* q_modelroledataspan_new(void* other) {
-    return QModelRoleDataSpan_new((QModelRoleDataSpan*)other);
+    return QModelRoleDataSpan_New((QModelRoleDataSpan*)other);
 }
 
 QModelRoleDataSpan* q_modelroledataspan_new2(void* other) {
-    return QModelRoleDataSpan_new2((QModelRoleDataSpan*)other);
+    return QModelRoleDataSpan_New2((QModelRoleDataSpan*)other);
 }
 
 QModelRoleDataSpan* q_modelroledataspan_new3() {
-    return QModelRoleDataSpan_new3();
+    return QModelRoleDataSpan_New3();
 }
 
 QModelRoleDataSpan* q_modelroledataspan_new4(void* modelRoleData) {
-    return QModelRoleDataSpan_new4((QModelRoleData*)modelRoleData);
+    return QModelRoleDataSpan_New4((QModelRoleData*)modelRoleData);
 }
 
 QModelRoleDataSpan* q_modelroledataspan_new5(void* modelRoleData, intptr_t lenVal) {
-    return QModelRoleDataSpan_new5((QModelRoleData*)modelRoleData, lenVal);
+    return QModelRoleDataSpan_New5((QModelRoleData*)modelRoleData, lenVal);
 }
 
 QModelRoleDataSpan* q_modelroledataspan_new6(void* param1) {
-    return QModelRoleDataSpan_new6((QModelRoleDataSpan*)param1);
+    return QModelRoleDataSpan_New6((QModelRoleDataSpan*)param1);
 }
 
 void q_modelroledataspan_copy_assign(void* self, void* other) {
@@ -106,19 +106,19 @@ void q_modelroledataspan_delete(void* self) {
 }
 
 QModelIndex* q_modelindex_new(void* other) {
-    return QModelIndex_new((QModelIndex*)other);
+    return QModelIndex_New((QModelIndex*)other);
 }
 
 QModelIndex* q_modelindex_new2(void* other) {
-    return QModelIndex_new2((QModelIndex*)other);
+    return QModelIndex_New2((QModelIndex*)other);
 }
 
 QModelIndex* q_modelindex_new3() {
-    return QModelIndex_new3();
+    return QModelIndex_New3();
 }
 
 QModelIndex* q_modelindex_new4(void* param1) {
-    return QModelIndex_new4((QModelIndex*)param1);
+    return QModelIndex_New4((QModelIndex*)param1);
 }
 
 void q_modelindex_copy_assign(void* self, void* other) {
@@ -194,15 +194,15 @@ void q_modelindex_delete(void* self) {
 }
 
 QPersistentModelIndex* q_persistentmodelindex_new() {
-    return QPersistentModelIndex_new();
+    return QPersistentModelIndex_New();
 }
 
 QPersistentModelIndex* q_persistentmodelindex_new2(void* index) {
-    return QPersistentModelIndex_new2((QModelIndex*)index);
+    return QPersistentModelIndex_New2((QModelIndex*)index);
 }
 
 QPersistentModelIndex* q_persistentmodelindex_new3(void* other) {
-    return QPersistentModelIndex_new3((QPersistentModelIndex*)other);
+    return QPersistentModelIndex_New3((QPersistentModelIndex*)other);
 }
 
 void q_persistentmodelindex_operator_assign(void* self, void* other) {
@@ -278,11 +278,11 @@ void q_persistentmodelindex_delete(void* self) {
 }
 
 QAbstractItemModel* q_abstractitemmodel_new() {
-    return QAbstractItemModel_new();
+    return QAbstractItemModel_New();
 }
 
 QAbstractItemModel* q_abstractitemmodel_new2(void* parent) {
-    return QAbstractItemModel_new2((QObject*)parent);
+    return QAbstractItemModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_abstractitemmodel_meta_object(void* self) {
@@ -1733,11 +1733,11 @@ void q_abstractitemmodel_delete(void* self) {
 }
 
 QAbstractTableModel* q_abstracttablemodel_new() {
-    return QAbstractTableModel_new();
+    return QAbstractTableModel_New();
 }
 
 QAbstractTableModel* q_abstracttablemodel_new2(void* parent) {
-    return QAbstractTableModel_new2((QObject*)parent);
+    return QAbstractTableModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_abstracttablemodel_meta_object(void* self) {
@@ -3167,11 +3167,11 @@ void q_abstracttablemodel_delete(void* self) {
 }
 
 QAbstractListModel* q_abstractlistmodel_new() {
-    return QAbstractListModel_new();
+    return QAbstractListModel_New();
 }
 
 QAbstractListModel* q_abstractlistmodel_new2(void* parent) {
-    return QAbstractListModel_new2((QObject*)parent);
+    return QAbstractListModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_abstractlistmodel_meta_object(void* self) {

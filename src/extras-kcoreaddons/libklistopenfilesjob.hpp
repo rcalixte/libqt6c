@@ -29,7 +29,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KListOpenFilesJob* KListOpenFilesJob_new(const libqt_string path);
+KListOpenFilesJob* KListOpenFilesJob_New(const libqt_string path);
 QMetaObject* KListOpenFilesJob_MetaObject(const KListOpenFilesJob* self);
 void* KListOpenFilesJob_Metacast(KListOpenFilesJob* self, const char* param1);
 int KListOpenFilesJob_Metacall(KListOpenFilesJob* self, int param1, int param2, void** param3);

@@ -11,11 +11,11 @@
 #include "libqconcatenatetablesproxymodel.h"
 
 QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new() {
-    return QConcatenateTablesProxyModel_new();
+    return QConcatenateTablesProxyModel_New();
 }
 
 QConcatenateTablesProxyModel* q_concatenatetablesproxymodel_new2(void* parent) {
-    return QConcatenateTablesProxyModel_new2((QObject*)parent);
+    return QConcatenateTablesProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_concatenatetablesproxymodel_meta_object(void* self) {

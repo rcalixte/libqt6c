@@ -18,9 +18,9 @@ extern "C" {
 typedef struct KIconTheme KIconTheme;
 #endif
 
-KIconTheme* KIconTheme_new(const libqt_string name);
-KIconTheme* KIconTheme_new2(const libqt_string name, const libqt_string appName);
-KIconTheme* KIconTheme_new3(const libqt_string name, const libqt_string appName, const libqt_string basePathHint);
+KIconTheme* KIconTheme_New(const libqt_string name);
+KIconTheme* KIconTheme_New2(const libqt_string name, const libqt_string appName);
+KIconTheme* KIconTheme_New3(const libqt_string name, const libqt_string appName, const libqt_string basePathHint);
 libqt_string KIconTheme_Name(const KIconTheme* self);
 libqt_string KIconTheme_InternalName(const KIconTheme* self);
 libqt_string KIconTheme_Description(const KIconTheme* self);

@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QAbstractPrintDialog* QAbstractPrintDialog_new(QPrinter* printer);
-QAbstractPrintDialog* QAbstractPrintDialog_new2(QPrinter* printer, QWidget* parent);
+QAbstractPrintDialog* QAbstractPrintDialog_New(QPrinter* printer);
+QAbstractPrintDialog* QAbstractPrintDialog_New2(QPrinter* printer, QWidget* parent);
 QMetaObject* QAbstractPrintDialog_MetaObject(const QAbstractPrintDialog* self);
 void* QAbstractPrintDialog_Metacast(QAbstractPrintDialog* self, const char* param1);
 int QAbstractPrintDialog_Metacall(QAbstractPrintDialog* self, int param1, int param2, void** param3);

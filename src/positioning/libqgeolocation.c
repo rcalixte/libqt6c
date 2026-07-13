@@ -6,11 +6,11 @@
 #include "libqgeolocation.h"
 
 QGeoLocation* q_geolocation_new() {
-    return QGeoLocation_new();
+    return QGeoLocation_New();
 }
 
 QGeoLocation* q_geolocation_new2(void* other) {
-    return QGeoLocation_new2((QGeoLocation*)other);
+    return QGeoLocation_New2((QGeoLocation*)other);
 }
 
 void q_geolocation_operator_assign(void* self, void* other) {

@@ -11,31 +11,31 @@
 #include "libqbitmap.h"
 
 QBitmap* q_bitmap_new() {
-    return QBitmap_new();
+    return QBitmap_New();
 }
 
 QBitmap* q_bitmap_new2(void* param1) {
-    return QBitmap_new2((QPixmap*)param1);
+    return QBitmap_New2((QPixmap*)param1);
 }
 
 QBitmap* q_bitmap_new3(int w, int h) {
-    return QBitmap_new3(w, h);
+    return QBitmap_New3(w, h);
 }
 
 QBitmap* q_bitmap_new4(void* param1) {
-    return QBitmap_new4((QSize*)param1);
+    return QBitmap_New4((QSize*)param1);
 }
 
 QBitmap* q_bitmap_new5(const char* fileName) {
-    return QBitmap_new5(qstring(fileName));
+    return QBitmap_New5(qstring(fileName));
 }
 
 QBitmap* q_bitmap_new6(void* param1) {
-    return QBitmap_new6((QBitmap*)param1);
+    return QBitmap_New6((QBitmap*)param1);
 }
 
 QBitmap* q_bitmap_new7(const char* fileName, const char* format) {
-    return QBitmap_new7(qstring(fileName), format);
+    return QBitmap_New7(qstring(fileName), format);
 }
 
 void q_bitmap_operator_assign(void* self, void* param1) {

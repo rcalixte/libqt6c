@@ -10,27 +10,27 @@
 #include "libkhelpmenu.h"
 
 KHelpMenu* k_helpmenu_new(void* parent) {
-    return KHelpMenu_new((QWidget*)parent);
+    return KHelpMenu_New((QWidget*)parent);
 }
 
 KHelpMenu* k_helpmenu_new2(void* parent, const char* unused) {
-    return KHelpMenu_new2((QWidget*)parent, qstring(unused));
+    return KHelpMenu_New2((QWidget*)parent, qstring(unused));
 }
 
 KHelpMenu* k_helpmenu_new3() {
-    return KHelpMenu_new3();
+    return KHelpMenu_New3();
 }
 
 KHelpMenu* k_helpmenu_new4(void* parent, void* aboutData, bool showWhatsThis) {
-    return KHelpMenu_new4((QWidget*)parent, (KAboutData*)aboutData, showWhatsThis);
+    return KHelpMenu_New4((QWidget*)parent, (KAboutData*)aboutData, showWhatsThis);
 }
 
 KHelpMenu* k_helpmenu_new5(void* parent, void* aboutData) {
-    return KHelpMenu_new5((QWidget*)parent, (KAboutData*)aboutData);
+    return KHelpMenu_New5((QWidget*)parent, (KAboutData*)aboutData);
 }
 
 KHelpMenu* k_helpmenu_new6(void* parent, const char* unused, bool showWhatsThis) {
-    return KHelpMenu_new6((QWidget*)parent, qstring(unused), showWhatsThis);
+    return KHelpMenu_New6((QWidget*)parent, qstring(unused), showWhatsThis);
 }
 
 const QMetaObject* k_helpmenu_meta_object(void* self) {

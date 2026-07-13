@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QPlaceRatings QPlaceRatings;
 #endif
 
-QPlaceRatings* QPlaceRatings_new();
-QPlaceRatings* QPlaceRatings_new2(const QPlaceRatings* other);
+QPlaceRatings* QPlaceRatings_New();
+QPlaceRatings* QPlaceRatings_New2(const QPlaceRatings* other);
 void QPlaceRatings_OperatorAssign(QPlaceRatings* self, const QPlaceRatings* other);
 void QPlaceRatings_Swap(QPlaceRatings* self, QPlaceRatings* other);
 double QPlaceRatings_Average(const QPlaceRatings* self);

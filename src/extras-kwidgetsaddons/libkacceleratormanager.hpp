@@ -19,8 +19,8 @@ typedef struct KAcceleratorManager KAcceleratorManager;
 typedef struct QWidget QWidget;
 #endif
 
-KAcceleratorManager* KAcceleratorManager_new(const KAcceleratorManager* other);
-KAcceleratorManager* KAcceleratorManager_new2(KAcceleratorManager* other);
+KAcceleratorManager* KAcceleratorManager_New(const KAcceleratorManager* other);
+KAcceleratorManager* KAcceleratorManager_New2(KAcceleratorManager* other);
 void KAcceleratorManager_CopyAssign(KAcceleratorManager* self, KAcceleratorManager* other);
 void KAcceleratorManager_MoveAssign(KAcceleratorManager* self, KAcceleratorManager* other);
 void KAcceleratorManager_Manage(QWidget* widget);

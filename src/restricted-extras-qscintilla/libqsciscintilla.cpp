@@ -48,11 +48,11 @@
 #include "libqsciscintilla.hpp"
 #include "libqsciscintilla.hxx"
 
-QsciScintilla* QsciScintilla_new(QWidget* parent) {
+QsciScintilla* QsciScintilla_New(QWidget* parent) {
     return new VirtualQsciScintilla(parent);
 }
 
-QsciScintilla* QsciScintilla_new2() {
+QsciScintilla* QsciScintilla_New2() {
     return new VirtualQsciScintilla();
 }
 

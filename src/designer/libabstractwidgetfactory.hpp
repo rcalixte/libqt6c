@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_new();
-QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_new2(QObject* parent);
+QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_New();
+QDesignerWidgetFactoryInterface* QDesignerWidgetFactoryInterface_New2(QObject* parent);
 QMetaObject* QDesignerWidgetFactoryInterface_MetaObject(const QDesignerWidgetFactoryInterface* self);
 void* QDesignerWidgetFactoryInterface_Metacast(QDesignerWidgetFactoryInterface* self, const char* param1);
 int QDesignerWidgetFactoryInterface_Metacall(QDesignerWidgetFactoryInterface* self, int param1, int param2, void** param3);

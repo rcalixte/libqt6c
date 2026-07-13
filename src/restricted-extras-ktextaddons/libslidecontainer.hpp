@@ -55,8 +55,8 @@ typedef struct QWidget QWidget;
 typedef struct TextAddonsWidgets__SlideContainer TextAddonsWidgets__SlideContainer;
 #endif
 
-TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_new(QWidget* parent);
-TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_new2();
+TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_New(QWidget* parent);
+TextAddonsWidgets__SlideContainer* TextAddonsWidgets__SlideContainer_New2();
 QMetaObject* TextAddonsWidgets__SlideContainer_MetaObject(const TextAddonsWidgets__SlideContainer* self);
 void* TextAddonsWidgets__SlideContainer_Metacast(TextAddonsWidgets__SlideContainer* self, const char* param1);
 int TextAddonsWidgets__SlideContainer_Metacall(TextAddonsWidgets__SlideContainer* self, int param1, int param2, void** param3);

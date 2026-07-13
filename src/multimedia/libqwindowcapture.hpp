@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWindowCapture QWindowCapture;
 #endif
 
-QWindowCapture* QWindowCapture_new();
-QWindowCapture* QWindowCapture_new2(QObject* parent);
+QWindowCapture* QWindowCapture_New();
+QWindowCapture* QWindowCapture_New2(QObject* parent);
 QMetaObject* QWindowCapture_MetaObject(const QWindowCapture* self);
 void* QWindowCapture_Metacast(QWindowCapture* self, const char* param1);
 int QWindowCapture_Metacall(QWindowCapture* self, int param1, int param2, void** param3);

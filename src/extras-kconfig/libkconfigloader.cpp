@@ -16,21 +16,21 @@
 #include "libkconfigloader.hpp"
 #include "libkconfigloader.hxx"
 
-KConfigLoader* KConfigLoader_new(const libqt_string configFile, QIODevice* xml) {
+KConfigLoader* KConfigLoader_New(const libqt_string configFile, QIODevice* xml) {
     QString configFile_QString = QString::fromUtf8(configFile.data, configFile.len);
     return new VirtualKConfigLoader(configFile_QString, xml);
 }
 
-KConfigLoader* KConfigLoader_new2(const KConfigGroup* config, QIODevice* xml) {
+KConfigLoader* KConfigLoader_New2(const KConfigGroup* config, QIODevice* xml) {
     return new VirtualKConfigLoader(*config, xml);
 }
 
-KConfigLoader* KConfigLoader_new3(const libqt_string configFile, QIODevice* xml, QObject* parent) {
+KConfigLoader* KConfigLoader_New3(const libqt_string configFile, QIODevice* xml, QObject* parent) {
     QString configFile_QString = QString::fromUtf8(configFile.data, configFile.len);
     return new VirtualKConfigLoader(configFile_QString, xml, parent);
 }
 
-KConfigLoader* KConfigLoader_new4(const KConfigGroup* config, QIODevice* xml, QObject* parent) {
+KConfigLoader* KConfigLoader_New4(const KConfigGroup* config, QIODevice* xml, QObject* parent) {
     return new VirtualKConfigLoader(*config, xml, parent);
 }
 

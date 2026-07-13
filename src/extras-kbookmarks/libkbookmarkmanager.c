@@ -8,11 +8,11 @@
 #include "libkbookmarkmanager.h"
 
 KBookmarkManager* k_bookmarkmanager_new(const char* bookmarksFile) {
-    return KBookmarkManager_new(qstring(bookmarksFile));
+    return KBookmarkManager_New(qstring(bookmarksFile));
 }
 
 KBookmarkManager* k_bookmarkmanager_new2(const char* bookmarksFile, void* parent) {
-    return KBookmarkManager_new2(qstring(bookmarksFile), (QObject*)parent);
+    return KBookmarkManager_New2(qstring(bookmarksFile), (QObject*)parent);
 }
 
 const QMetaObject* k_bookmarkmanager_meta_object(void* self) {

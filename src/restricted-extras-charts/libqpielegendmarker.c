@@ -10,11 +10,11 @@
 #include "libqpielegendmarker.h"
 
 QPieLegendMarker* q_pielegendmarker_new(void* series, void* slice, void* legend) {
-    return QPieLegendMarker_new((QPieSeries*)series, (QPieSlice*)slice, (QLegend*)legend);
+    return QPieLegendMarker_New((QPieSeries*)series, (QPieSlice*)slice, (QLegend*)legend);
 }
 
 QPieLegendMarker* q_pielegendmarker_new2(void* series, void* slice, void* legend, void* parent) {
-    return QPieLegendMarker_new2((QPieSeries*)series, (QPieSlice*)slice, (QLegend*)legend, (QObject*)parent);
+    return QPieLegendMarker_New2((QPieSeries*)series, (QPieSlice*)slice, (QLegend*)legend, (QObject*)parent);
 }
 
 const QMetaObject* q_pielegendmarker_meta_object(void* self) {

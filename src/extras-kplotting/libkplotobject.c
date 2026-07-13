@@ -9,23 +9,23 @@
 #include "libkplotobject.h"
 
 KPlotObject* k_plotobject_new() {
-    return KPlotObject_new();
+    return KPlotObject_New();
 }
 
 KPlotObject* k_plotobject_new2(void* color) {
-    return KPlotObject_new2((QColor*)color);
+    return KPlotObject_New2((QColor*)color);
 }
 
 KPlotObject* k_plotobject_new3(void* color, int32_t otype) {
-    return KPlotObject_new3((QColor*)color, otype);
+    return KPlotObject_New3((QColor*)color, otype);
 }
 
 KPlotObject* k_plotobject_new4(void* color, int32_t otype, double size) {
-    return KPlotObject_new4((QColor*)color, otype, size);
+    return KPlotObject_New4((QColor*)color, otype, size);
 }
 
 KPlotObject* k_plotobject_new5(void* color, int32_t otype, double size, int32_t ps) {
-    return KPlotObject_new5((QColor*)color, otype, size, ps);
+    return KPlotObject_New5((QColor*)color, otype, size, ps);
 }
 
 int32_t k_plotobject_plot_types(void* self) {

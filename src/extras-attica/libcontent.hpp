@@ -35,8 +35,8 @@ typedef struct QDateTime QDateTime;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__Content* Attica__Content_new();
-Attica__Content* Attica__Content_new2(const Attica__Content* other);
+Attica__Content* Attica__Content_New();
+Attica__Content* Attica__Content_New2(const Attica__Content* other);
 void Attica__Content_OperatorAssign(Attica__Content* self, const Attica__Content* other);
 void Attica__Content_SetId(Attica__Content* self, const libqt_string id);
 libqt_string Attica__Content_Id(const Attica__Content* self);

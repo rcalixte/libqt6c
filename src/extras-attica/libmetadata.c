@@ -2,11 +2,11 @@
 #include "libmetadata.h"
 
 Attica__Metadata* k_attica__metadata_new() {
-    return Attica__Metadata_new();
+    return Attica__Metadata_New();
 }
 
 Attica__Metadata* k_attica__metadata_new2(void* other) {
-    return Attica__Metadata_new2((Attica__Metadata*)other);
+    return Attica__Metadata_New2((Attica__Metadata*)other);
 }
 
 void k_attica__metadata_operator_assign(void* self, void* other) {

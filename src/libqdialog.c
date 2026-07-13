@@ -14,15 +14,15 @@
 #include "libqdialog.h"
 
 QDialog* q_dialog_new(void* parent) {
-    return QDialog_new((QWidget*)parent);
+    return QDialog_New((QWidget*)parent);
 }
 
 QDialog* q_dialog_new2() {
-    return QDialog_new2();
+    return QDialog_New2();
 }
 
 QDialog* q_dialog_new3(void* parent, int32_t f) {
-    return QDialog_new3((QWidget*)parent, f);
+    return QDialog_New3((QWidget*)parent, f);
 }
 
 const QMetaObject* q_dialog_meta_object(void* self) {

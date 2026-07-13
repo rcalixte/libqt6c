@@ -8,7 +8,7 @@
 #include "libqgeosatelliteinfosource.h"
 
 QGeoSatelliteInfoSource* q_geosatelliteinfosource_new(void* parent) {
-    return QGeoSatelliteInfoSource_new((QObject*)parent);
+    return QGeoSatelliteInfoSource_New((QObject*)parent);
 }
 
 const QMetaObject* q_geosatelliteinfosource_meta_object(void* self) {

@@ -13,11 +13,11 @@
 #include "libqtcpserver.hpp"
 #include "libqtcpserver.hxx"
 
-QTcpServer* QTcpServer_new() {
+QTcpServer* QTcpServer_New() {
     return new VirtualQTcpServer();
 }
 
-QTcpServer* QTcpServer_new2(QObject* parent) {
+QTcpServer* QTcpServer_New2(QObject* parent) {
     return new VirtualQTcpServer(parent);
 }
 

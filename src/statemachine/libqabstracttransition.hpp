@@ -28,8 +28,8 @@ typedef struct QStateMachine QStateMachine;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QAbstractTransition* QAbstractTransition_new();
-QAbstractTransition* QAbstractTransition_new2(QState* sourceState);
+QAbstractTransition* QAbstractTransition_New();
+QAbstractTransition* QAbstractTransition_New2(QState* sourceState);
 QMetaObject* QAbstractTransition_MetaObject(const QAbstractTransition* self);
 void* QAbstractTransition_Metacast(QAbstractTransition* self, const char* param1);
 int QAbstractTransition_Metacall(QAbstractTransition* self, int param1, int param2, void** param3);

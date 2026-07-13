@@ -21,17 +21,17 @@ KIconEngine* k_iconengine_new(const char* iconName, void* iconLoader, const char
     }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
 
-    KIconEngine* _out = KIconEngine_new(qstring(iconName), (KIconLoader*)iconLoader, overlays_list);
+    KIconEngine* _out = KIconEngine_New(qstring(iconName), (KIconLoader*)iconLoader, overlays_list);
     free(overlays_qstr);
     return _out;
 }
 
 KIconEngine* k_iconengine_new2(const char* iconName, void* iconLoader) {
-    return KIconEngine_new2(qstring(iconName), (KIconLoader*)iconLoader);
+    return KIconEngine_New2(qstring(iconName), (KIconLoader*)iconLoader);
 }
 
 KIconEngine* k_iconengine_new3(const char* iconName, void* colors, void* iconLoader) {
-    return KIconEngine_new3(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader);
+    return KIconEngine_New3(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader);
 }
 
 KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoader, const char* overlays[static 1]) {
@@ -46,13 +46,13 @@ KIconEngine* k_iconengine_new4(const char* iconName, void* colors, void* iconLoa
     }
     libqt_list overlays_list = qlist(overlays_qstr, overlays_len);
 
-    KIconEngine* _out = KIconEngine_new4(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader, overlays_list);
+    KIconEngine* _out = KIconEngine_New4(qstring(iconName), (KIconColors*)colors, (KIconLoader*)iconLoader, overlays_list);
     free(overlays_qstr);
     return _out;
 }
 
 KIconEngine* k_iconengine_new5(void* param1) {
-    return KIconEngine_new5((KIconEngine*)param1);
+    return KIconEngine_New5((KIconEngine*)param1);
 }
 
 QSize* k_iconengine_actual_size(void* self, void* size, int32_t mode, int32_t state) {

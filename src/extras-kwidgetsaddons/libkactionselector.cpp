@@ -40,11 +40,11 @@
 #include "libkactionselector.hpp"
 #include "libkactionselector.hxx"
 
-KActionSelector* KActionSelector_new(QWidget* parent) {
+KActionSelector* KActionSelector_New(QWidget* parent) {
     return new VirtualKActionSelector(parent);
 }
 
-KActionSelector* KActionSelector_new2() {
+KActionSelector* KActionSelector_New2() {
     return new VirtualKActionSelector();
 }
 

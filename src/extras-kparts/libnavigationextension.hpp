@@ -39,7 +39,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KParts__NavigationExtension* KParts__NavigationExtension_new(KParts__ReadOnlyPart* parent);
+KParts__NavigationExtension* KParts__NavigationExtension_New(KParts__ReadOnlyPart* parent);
 QMetaObject* KParts__NavigationExtension_MetaObject(const KParts__NavigationExtension* self);
 void* KParts__NavigationExtension_Metacast(KParts__NavigationExtension* self, const char* param1);
 int KParts__NavigationExtension_Metacall(KParts__NavigationExtension* self, int param1, int param2, void** param3);

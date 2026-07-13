@@ -8,20 +8,20 @@
 #include "libqurlquery.hpp"
 #include "libqurlquery.hxx"
 
-QUrlQuery* QUrlQuery_new() {
+QUrlQuery* QUrlQuery_New() {
     return new QUrlQuery();
 }
 
-QUrlQuery* QUrlQuery_new2(const QUrl* url) {
+QUrlQuery* QUrlQuery_New2(const QUrl* url) {
     return new QUrlQuery(*url);
 }
 
-QUrlQuery* QUrlQuery_new3(const libqt_string queryString) {
+QUrlQuery* QUrlQuery_New3(const libqt_string queryString) {
     QString queryString_QString = QString::fromUtf8(queryString.data, queryString.len);
     return new QUrlQuery(queryString_QString);
 }
 
-QUrlQuery* QUrlQuery_new4(const QUrlQuery* other) {
+QUrlQuery* QUrlQuery_New4(const QUrlQuery* other) {
     return new QUrlQuery(*other);
 }
 

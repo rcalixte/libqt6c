@@ -39,19 +39,19 @@
 #include "libkfinddialog.hpp"
 #include "libkfinddialog.hxx"
 
-KFindDialog* KFindDialog_new(QWidget* parent) {
+KFindDialog* KFindDialog_New(QWidget* parent) {
     return new VirtualKFindDialog(parent);
 }
 
-KFindDialog* KFindDialog_new2() {
+KFindDialog* KFindDialog_New2() {
     return new VirtualKFindDialog();
 }
 
-KFindDialog* KFindDialog_new3(QWidget* parent, long options) {
+KFindDialog* KFindDialog_New3(QWidget* parent, long options) {
     return new VirtualKFindDialog(parent, static_cast<long>(options));
 }
 
-KFindDialog* KFindDialog_new4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings) {
+KFindDialog* KFindDialog_New4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings) {
     QList<QString> findStrings_QList;
     findStrings_QList.reserve(findStrings.len);
     libqt_string* findStrings_arr = static_cast<libqt_string*>(findStrings.data.ptr);
@@ -62,7 +62,7 @@ KFindDialog* KFindDialog_new4(QWidget* parent, long options, const libqt_list /*
     return new VirtualKFindDialog(parent, static_cast<long>(options), findStrings_QList);
 }
 
-KFindDialog* KFindDialog_new5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection) {
+KFindDialog* KFindDialog_New5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection) {
     QList<QString> findStrings_QList;
     findStrings_QList.reserve(findStrings.len);
     libqt_string* findStrings_arr = static_cast<libqt_string*>(findStrings.data.ptr);
@@ -73,7 +73,7 @@ KFindDialog* KFindDialog_new5(QWidget* parent, long options, const libqt_list /*
     return new VirtualKFindDialog(parent, static_cast<long>(options), findStrings_QList, hasSelection);
 }
 
-KFindDialog* KFindDialog_new6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection, bool replaceDialog) {
+KFindDialog* KFindDialog_New6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, bool hasSelection, bool replaceDialog) {
     QList<QString> findStrings_QList;
     findStrings_QList.reserve(findStrings.len);
     libqt_string* findStrings_arr = static_cast<libqt_string*>(findStrings.data.ptr);

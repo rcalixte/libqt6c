@@ -5,7 +5,7 @@
 #include "libqgesturerecognizer.h"
 
 QGestureRecognizer* q_gesturerecognizer_new() {
-    return QGestureRecognizer_new();
+    return QGestureRecognizer_New();
 }
 
 QGesture* q_gesturerecognizer_create(void* self, void* target) {

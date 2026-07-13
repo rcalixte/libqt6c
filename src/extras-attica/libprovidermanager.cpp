@@ -13,11 +13,11 @@
 #include "libprovidermanager.hpp"
 #include "libprovidermanager.hxx"
 
-Attica__ProviderManager* Attica__ProviderManager_new() {
+Attica__ProviderManager* Attica__ProviderManager_New() {
     return new VirtualAtticaProviderManager();
 }
 
-Attica__ProviderManager* Attica__ProviderManager_new2(const int* flags) {
+Attica__ProviderManager* Attica__ProviderManager_New2(const int* flags) {
     return new VirtualAtticaProviderManager((const Attica::ProviderManager::ProviderFlags&)(*flags));
 }
 

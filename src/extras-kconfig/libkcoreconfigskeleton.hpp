@@ -134,8 +134,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KConfigSkeletonItem* KConfigSkeletonItem_new(const libqt_string _group, const libqt_string _key);
-KConfigSkeletonItem* KConfigSkeletonItem_new2(const KConfigSkeletonItem* param1);
+KConfigSkeletonItem* KConfigSkeletonItem_New(const libqt_string _group, const libqt_string _key);
+KConfigSkeletonItem* KConfigSkeletonItem_New2(const KConfigSkeletonItem* param1);
 void KConfigSkeletonItem_SetGroup(KConfigSkeletonItem* self, const libqt_string _group);
 libqt_string KConfigSkeletonItem_Group(const KConfigSkeletonItem* self);
 void KConfigSkeletonItem_SetGroup2(KConfigSkeletonItem* self, const KConfigGroup* cg);
@@ -191,8 +191,8 @@ void KConfigSkeletonItem_OnReadImmutability(KConfigSkeletonItem* self, intptr_t 
 void KConfigSkeletonItem_SuperReadImmutability(KConfigSkeletonItem* self, const KConfigGroup* group);
 void KConfigSkeletonItem_Delete(KConfigSkeletonItem* self);
 
-KPropertySkeletonItem* KPropertySkeletonItem_new(QObject* object, const libqt_string propertyName, const QVariant* defaultValue);
-KPropertySkeletonItem* KPropertySkeletonItem_new2(const KPropertySkeletonItem* param1);
+KPropertySkeletonItem* KPropertySkeletonItem_New(QObject* object, const libqt_string propertyName, const QVariant* defaultValue);
+KPropertySkeletonItem* KPropertySkeletonItem_New2(const KPropertySkeletonItem* param1);
 QVariant* KPropertySkeletonItem_Property(const KPropertySkeletonItem* self);
 void KPropertySkeletonItem_SetProperty(KPropertySkeletonItem* self, const QVariant* p);
 bool KPropertySkeletonItem_IsEqual(const KPropertySkeletonItem* self, const QVariant* p);
@@ -245,9 +245,9 @@ void KConfigCompilerSignallingItem_SetGroup(KConfigCompilerSignallingItem* self,
 KConfigGroup* KConfigCompilerSignallingItem_ConfigGroup(const KConfigCompilerSignallingItem* self, KConfig* config);
 void KConfigCompilerSignallingItem_Delete(KConfigCompilerSignallingItem* self);
 
-KCoreConfigSkeleton* KCoreConfigSkeleton_new();
-KCoreConfigSkeleton* KCoreConfigSkeleton_new2(const libqt_string configname);
-KCoreConfigSkeleton* KCoreConfigSkeleton_new3(const libqt_string configname, QObject* parent);
+KCoreConfigSkeleton* KCoreConfigSkeleton_New();
+KCoreConfigSkeleton* KCoreConfigSkeleton_New2(const libqt_string configname);
+KCoreConfigSkeleton* KCoreConfigSkeleton_New3(const libqt_string configname, QObject* parent);
 QMetaObject* KCoreConfigSkeleton_MetaObject(const KCoreConfigSkeleton* self);
 void* KCoreConfigSkeleton_Metacast(KCoreConfigSkeleton* self, const char* param1);
 int KCoreConfigSkeleton_Metacall(KCoreConfigSkeleton* self, int param1, int param2, void** param3);
@@ -385,9 +385,9 @@ void KCoreConfigSkeleton_OnIsSignalConnected(const KCoreConfigSkeleton* self, in
 bool KCoreConfigSkeleton_SuperIsSignalConnected(const KCoreConfigSkeleton* self, const QMetaMethod* signal);
 void KCoreConfigSkeleton_Delete(KCoreConfigSkeleton* self);
 
-KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new(const libqt_string _group, const libqt_string _key, libqt_string reference);
-KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue);
-KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new3(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue, int type);
+KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_New(const libqt_string _group, const libqt_string _key, libqt_string reference);
+KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_New2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue);
+KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_New3(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue, int type);
 void KCoreConfigSkeleton__ItemString_WriteConfig(KCoreConfigSkeleton__ItemString* self, KConfig* config);
 void KCoreConfigSkeleton__ItemString_ReadConfig(KCoreConfigSkeleton__ItemString* self, KConfig* config);
 void KCoreConfigSkeleton__ItemString_SetProperty(KCoreConfigSkeleton__ItemString* self, const QVariant* p);
@@ -405,8 +405,8 @@ void KCoreConfigSkeleton__ItemString_OnProperty(const KCoreConfigSkeleton__ItemS
 QVariant* KCoreConfigSkeleton__ItemString_SuperProperty(const KCoreConfigSkeleton__ItemString* self);
 void KCoreConfigSkeleton__ItemString_Delete(KCoreConfigSkeleton__ItemString* self);
 
-KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_new(const libqt_string _group, const libqt_string _key, libqt_string reference);
-KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_new2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue);
+KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_New(const libqt_string _group, const libqt_string _key, libqt_string reference);
+KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_New2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue);
 void KCoreConfigSkeleton__ItemPassword_WriteConfig(KCoreConfigSkeleton__ItemPassword* self, KConfig* config);
 void KCoreConfigSkeleton__ItemPassword_OnWriteConfig(KCoreConfigSkeleton__ItemPassword* self, intptr_t slot);
 void KCoreConfigSkeleton__ItemPassword_SuperWriteConfig(KCoreConfigSkeleton__ItemPassword* self, KConfig* config);
@@ -424,8 +424,8 @@ void KCoreConfigSkeleton__ItemPassword_OnProperty(const KCoreConfigSkeleton__Ite
 QVariant* KCoreConfigSkeleton__ItemPassword_SuperProperty(const KCoreConfigSkeleton__ItemPassword* self);
 void KCoreConfigSkeleton__ItemPassword_Delete(KCoreConfigSkeleton__ItemPassword* self);
 
-KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_new(const libqt_string _group, const libqt_string _key, libqt_string reference);
-KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_new2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue);
+KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_New(const libqt_string _group, const libqt_string _key, libqt_string reference);
+KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_New2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue);
 void KCoreConfigSkeleton__ItemPath_WriteConfig(KCoreConfigSkeleton__ItemPath* self, KConfig* config);
 void KCoreConfigSkeleton__ItemPath_OnWriteConfig(KCoreConfigSkeleton__ItemPath* self, intptr_t slot);
 void KCoreConfigSkeleton__ItemPath_SuperWriteConfig(KCoreConfigSkeleton__ItemPath* self, KConfig* config);
@@ -443,8 +443,8 @@ void KCoreConfigSkeleton__ItemPath_OnProperty(const KCoreConfigSkeleton__ItemPat
 QVariant* KCoreConfigSkeleton__ItemPath_SuperProperty(const KCoreConfigSkeleton__ItemPath* self);
 void KCoreConfigSkeleton__ItemPath_Delete(KCoreConfigSkeleton__ItemPath* self);
 
-KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_new(const libqt_string _group, const libqt_string _key, QUrl* reference);
-KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_new2(const libqt_string _group, const libqt_string _key, QUrl* reference, const QUrl* defaultValue);
+KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_New(const libqt_string _group, const libqt_string _key, QUrl* reference);
+KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_New2(const libqt_string _group, const libqt_string _key, QUrl* reference, const QUrl* defaultValue);
 void KCoreConfigSkeleton__ItemUrl_WriteConfig(KCoreConfigSkeleton__ItemUrl* self, KConfig* config);
 void KCoreConfigSkeleton__ItemUrl_ReadConfig(KCoreConfigSkeleton__ItemUrl* self, KConfig* config);
 void KCoreConfigSkeleton__ItemUrl_SetProperty(KCoreConfigSkeleton__ItemUrl* self, const QVariant* p);
@@ -462,8 +462,8 @@ void KCoreConfigSkeleton__ItemUrl_OnProperty(const KCoreConfigSkeleton__ItemUrl*
 QVariant* KCoreConfigSkeleton__ItemUrl_SuperProperty(const KCoreConfigSkeleton__ItemUrl* self);
 void KCoreConfigSkeleton__ItemUrl_Delete(KCoreConfigSkeleton__ItemUrl* self);
 
-KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_new(const libqt_string _group, const libqt_string _key, QVariant* reference);
-KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_new2(const libqt_string _group, const libqt_string _key, QVariant* reference, const QVariant* defaultValue);
+KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_New(const libqt_string _group, const libqt_string _key, QVariant* reference);
+KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_New2(const libqt_string _group, const libqt_string _key, QVariant* reference, const QVariant* defaultValue);
 void KCoreConfigSkeleton__ItemProperty_ReadConfig(KCoreConfigSkeleton__ItemProperty* self, KConfig* config);
 void KCoreConfigSkeleton__ItemProperty_SetProperty(KCoreConfigSkeleton__ItemProperty* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemProperty_IsEqual(const KCoreConfigSkeleton__ItemProperty* self, const QVariant* p);
@@ -478,8 +478,8 @@ void KCoreConfigSkeleton__ItemProperty_OnProperty(const KCoreConfigSkeleton__Ite
 QVariant* KCoreConfigSkeleton__ItemProperty_SuperProperty(const KCoreConfigSkeleton__ItemProperty* self);
 void KCoreConfigSkeleton__ItemProperty_Delete(KCoreConfigSkeleton__ItemProperty* self);
 
-KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_new(const libqt_string _group, const libqt_string _key, bool* reference);
-KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_new2(const libqt_string _group, const libqt_string _key, bool* reference, bool defaultValue);
+KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_New(const libqt_string _group, const libqt_string _key, bool* reference);
+KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_New2(const libqt_string _group, const libqt_string _key, bool* reference, bool defaultValue);
 void KCoreConfigSkeleton__ItemBool_ReadConfig(KCoreConfigSkeleton__ItemBool* self, KConfig* config);
 void KCoreConfigSkeleton__ItemBool_SetProperty(KCoreConfigSkeleton__ItemBool* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemBool_IsEqual(const KCoreConfigSkeleton__ItemBool* self, const QVariant* p);
@@ -494,8 +494,8 @@ void KCoreConfigSkeleton__ItemBool_OnProperty(const KCoreConfigSkeleton__ItemBoo
 QVariant* KCoreConfigSkeleton__ItemBool_SuperProperty(const KCoreConfigSkeleton__ItemBool* self);
 void KCoreConfigSkeleton__ItemBool_Delete(KCoreConfigSkeleton__ItemBool* self);
 
-KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_new(const libqt_string _group, const libqt_string _key, int* reference);
-KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_new2(const libqt_string _group, const libqt_string _key, int* reference, int defaultValue);
+KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_New(const libqt_string _group, const libqt_string _key, int* reference);
+KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_New2(const libqt_string _group, const libqt_string _key, int* reference, int defaultValue);
 void KCoreConfigSkeleton__ItemInt_ReadConfig(KCoreConfigSkeleton__ItemInt* self, KConfig* config);
 void KCoreConfigSkeleton__ItemInt_SetProperty(KCoreConfigSkeleton__ItemInt* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemInt_IsEqual(const KCoreConfigSkeleton__ItemInt* self, const QVariant* p);
@@ -516,8 +516,8 @@ void KCoreConfigSkeleton__ItemInt_OnMaxValue(const KCoreConfigSkeleton__ItemInt*
 QVariant* KCoreConfigSkeleton__ItemInt_SuperMaxValue(const KCoreConfigSkeleton__ItemInt* self);
 void KCoreConfigSkeleton__ItemInt_Delete(KCoreConfigSkeleton__ItemInt* self);
 
-KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_new(const libqt_string _group, const libqt_string _key, long long* reference);
-KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_new2(const libqt_string _group, const libqt_string _key, long long* reference, long long defaultValue);
+KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_New(const libqt_string _group, const libqt_string _key, long long* reference);
+KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_New2(const libqt_string _group, const libqt_string _key, long long* reference, long long defaultValue);
 void KCoreConfigSkeleton__ItemLongLong_ReadConfig(KCoreConfigSkeleton__ItemLongLong* self, KConfig* config);
 void KCoreConfigSkeleton__ItemLongLong_SetProperty(KCoreConfigSkeleton__ItemLongLong* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemLongLong_IsEqual(const KCoreConfigSkeleton__ItemLongLong* self, const QVariant* p);
@@ -540,8 +540,8 @@ void KCoreConfigSkeleton__ItemLongLong_OnMaxValue(const KCoreConfigSkeleton__Ite
 QVariant* KCoreConfigSkeleton__ItemLongLong_SuperMaxValue(const KCoreConfigSkeleton__ItemLongLong* self);
 void KCoreConfigSkeleton__ItemLongLong_Delete(KCoreConfigSkeleton__ItemLongLong* self);
 
-KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_new(const KCoreConfigSkeleton__ItemEnum__Choice* param1);
-KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_new2();
+KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New(const KCoreConfigSkeleton__ItemEnum__Choice* param1);
+KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New2();
 libqt_string KCoreConfigSkeleton__ItemEnum__Choice_Name(const KCoreConfigSkeleton__ItemEnum__Choice* self);
 void KCoreConfigSkeleton__ItemEnum__Choice_SetName(KCoreConfigSkeleton__ItemEnum__Choice* self, libqt_string name);
 libqt_string KCoreConfigSkeleton__ItemEnum__Choice_Label(const KCoreConfigSkeleton__ItemEnum__Choice* self);
@@ -555,8 +555,8 @@ void KCoreConfigSkeleton__ItemEnum__Choice_SetValue(KCoreConfigSkeleton__ItemEnu
 void KCoreConfigSkeleton__ItemEnum__Choice_OperatorAssign(KCoreConfigSkeleton__ItemEnum__Choice* self, const KCoreConfigSkeleton__ItemEnum__Choice* param1);
 void KCoreConfigSkeleton__ItemEnum__Choice_Delete(KCoreConfigSkeleton__ItemEnum__Choice* self);
 
-KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_new(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices);
-KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_new2(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices, int defaultValue);
+KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_New(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices);
+KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_New2(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices, int defaultValue);
 libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ KCoreConfigSkeleton__ItemEnum_Choices(const KCoreConfigSkeleton__ItemEnum* self);
 void KCoreConfigSkeleton__ItemEnum_ReadConfig(KCoreConfigSkeleton__ItemEnum* self, KConfig* config);
 void KCoreConfigSkeleton__ItemEnum_WriteConfig(KCoreConfigSkeleton__ItemEnum* self, KConfig* config);
@@ -583,8 +583,8 @@ void KCoreConfigSkeleton__ItemEnum_OnMaxValue(const KCoreConfigSkeleton__ItemEnu
 QVariant* KCoreConfigSkeleton__ItemEnum_SuperMaxValue(const KCoreConfigSkeleton__ItemEnum* self);
 void KCoreConfigSkeleton__ItemEnum_Delete(KCoreConfigSkeleton__ItemEnum* self);
 
-KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_new(const libqt_string _group, const libqt_string _key, unsigned int* reference);
-KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_new2(const libqt_string _group, const libqt_string _key, unsigned int* reference, unsigned int defaultValue);
+KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_New(const libqt_string _group, const libqt_string _key, unsigned int* reference);
+KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_New2(const libqt_string _group, const libqt_string _key, unsigned int* reference, unsigned int defaultValue);
 void KCoreConfigSkeleton__ItemUInt_ReadConfig(KCoreConfigSkeleton__ItemUInt* self, KConfig* config);
 void KCoreConfigSkeleton__ItemUInt_SetProperty(KCoreConfigSkeleton__ItemUInt* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemUInt_IsEqual(const KCoreConfigSkeleton__ItemUInt* self, const QVariant* p);
@@ -607,8 +607,8 @@ void KCoreConfigSkeleton__ItemUInt_OnMaxValue(const KCoreConfigSkeleton__ItemUIn
 QVariant* KCoreConfigSkeleton__ItemUInt_SuperMaxValue(const KCoreConfigSkeleton__ItemUInt* self);
 void KCoreConfigSkeleton__ItemUInt_Delete(KCoreConfigSkeleton__ItemUInt* self);
 
-KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_new(const libqt_string _group, const libqt_string _key, unsigned long long* reference);
-KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_new2(const libqt_string _group, const libqt_string _key, unsigned long long* reference, unsigned long long defaultValue);
+KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_New(const libqt_string _group, const libqt_string _key, unsigned long long* reference);
+KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_New2(const libqt_string _group, const libqt_string _key, unsigned long long* reference, unsigned long long defaultValue);
 void KCoreConfigSkeleton__ItemULongLong_ReadConfig(KCoreConfigSkeleton__ItemULongLong* self, KConfig* config);
 void KCoreConfigSkeleton__ItemULongLong_SetProperty(KCoreConfigSkeleton__ItemULongLong* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemULongLong_IsEqual(const KCoreConfigSkeleton__ItemULongLong* self, const QVariant* p);
@@ -631,8 +631,8 @@ void KCoreConfigSkeleton__ItemULongLong_OnMaxValue(const KCoreConfigSkeleton__It
 QVariant* KCoreConfigSkeleton__ItemULongLong_SuperMaxValue(const KCoreConfigSkeleton__ItemULongLong* self);
 void KCoreConfigSkeleton__ItemULongLong_Delete(KCoreConfigSkeleton__ItemULongLong* self);
 
-KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_new(const libqt_string _group, const libqt_string _key, double* reference);
-KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_new2(const libqt_string _group, const libqt_string _key, double* reference, double defaultValue);
+KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_New(const libqt_string _group, const libqt_string _key, double* reference);
+KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_New2(const libqt_string _group, const libqt_string _key, double* reference, double defaultValue);
 void KCoreConfigSkeleton__ItemDouble_ReadConfig(KCoreConfigSkeleton__ItemDouble* self, KConfig* config);
 void KCoreConfigSkeleton__ItemDouble_SetProperty(KCoreConfigSkeleton__ItemDouble* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemDouble_IsEqual(const KCoreConfigSkeleton__ItemDouble* self, const QVariant* p);
@@ -655,8 +655,8 @@ void KCoreConfigSkeleton__ItemDouble_OnMaxValue(const KCoreConfigSkeleton__ItemD
 QVariant* KCoreConfigSkeleton__ItemDouble_SuperMaxValue(const KCoreConfigSkeleton__ItemDouble* self);
 void KCoreConfigSkeleton__ItemDouble_Delete(KCoreConfigSkeleton__ItemDouble* self);
 
-KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_new(const libqt_string _group, const libqt_string _key, QRect* reference);
-KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_new2(const libqt_string _group, const libqt_string _key, QRect* reference, const QRect* defaultValue);
+KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_New(const libqt_string _group, const libqt_string _key, QRect* reference);
+KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_New2(const libqt_string _group, const libqt_string _key, QRect* reference, const QRect* defaultValue);
 void KCoreConfigSkeleton__ItemRect_ReadConfig(KCoreConfigSkeleton__ItemRect* self, KConfig* config);
 void KCoreConfigSkeleton__ItemRect_SetProperty(KCoreConfigSkeleton__ItemRect* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemRect_IsEqual(const KCoreConfigSkeleton__ItemRect* self, const QVariant* p);
@@ -671,8 +671,8 @@ void KCoreConfigSkeleton__ItemRect_OnProperty(const KCoreConfigSkeleton__ItemRec
 QVariant* KCoreConfigSkeleton__ItemRect_SuperProperty(const KCoreConfigSkeleton__ItemRect* self);
 void KCoreConfigSkeleton__ItemRect_Delete(KCoreConfigSkeleton__ItemRect* self);
 
-KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_new(const libqt_string _group, const libqt_string _key, QRectF* reference);
-KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_new2(const libqt_string _group, const libqt_string _key, QRectF* reference, const QRectF* defaultValue);
+KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_New(const libqt_string _group, const libqt_string _key, QRectF* reference);
+KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_New2(const libqt_string _group, const libqt_string _key, QRectF* reference, const QRectF* defaultValue);
 void KCoreConfigSkeleton__ItemRectF_ReadConfig(KCoreConfigSkeleton__ItemRectF* self, KConfig* config);
 void KCoreConfigSkeleton__ItemRectF_SetProperty(KCoreConfigSkeleton__ItemRectF* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemRectF_IsEqual(const KCoreConfigSkeleton__ItemRectF* self, const QVariant* p);
@@ -687,8 +687,8 @@ void KCoreConfigSkeleton__ItemRectF_OnProperty(const KCoreConfigSkeleton__ItemRe
 QVariant* KCoreConfigSkeleton__ItemRectF_SuperProperty(const KCoreConfigSkeleton__ItemRectF* self);
 void KCoreConfigSkeleton__ItemRectF_Delete(KCoreConfigSkeleton__ItemRectF* self);
 
-KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_new(const libqt_string _group, const libqt_string _key, QPoint* reference);
-KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_new2(const libqt_string _group, const libqt_string _key, QPoint* reference, const QPoint* defaultValue);
+KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_New(const libqt_string _group, const libqt_string _key, QPoint* reference);
+KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_New2(const libqt_string _group, const libqt_string _key, QPoint* reference, const QPoint* defaultValue);
 void KCoreConfigSkeleton__ItemPoint_ReadConfig(KCoreConfigSkeleton__ItemPoint* self, KConfig* config);
 void KCoreConfigSkeleton__ItemPoint_SetProperty(KCoreConfigSkeleton__ItemPoint* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemPoint_IsEqual(const KCoreConfigSkeleton__ItemPoint* self, const QVariant* p);
@@ -703,8 +703,8 @@ void KCoreConfigSkeleton__ItemPoint_OnProperty(const KCoreConfigSkeleton__ItemPo
 QVariant* KCoreConfigSkeleton__ItemPoint_SuperProperty(const KCoreConfigSkeleton__ItemPoint* self);
 void KCoreConfigSkeleton__ItemPoint_Delete(KCoreConfigSkeleton__ItemPoint* self);
 
-KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_new(const libqt_string _group, const libqt_string _key, QPointF* reference);
-KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_new2(const libqt_string _group, const libqt_string _key, QPointF* reference, const QPointF* defaultValue);
+KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_New(const libqt_string _group, const libqt_string _key, QPointF* reference);
+KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_New2(const libqt_string _group, const libqt_string _key, QPointF* reference, const QPointF* defaultValue);
 void KCoreConfigSkeleton__ItemPointF_ReadConfig(KCoreConfigSkeleton__ItemPointF* self, KConfig* config);
 void KCoreConfigSkeleton__ItemPointF_SetProperty(KCoreConfigSkeleton__ItemPointF* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemPointF_IsEqual(const KCoreConfigSkeleton__ItemPointF* self, const QVariant* p);
@@ -719,8 +719,8 @@ void KCoreConfigSkeleton__ItemPointF_OnProperty(const KCoreConfigSkeleton__ItemP
 QVariant* KCoreConfigSkeleton__ItemPointF_SuperProperty(const KCoreConfigSkeleton__ItemPointF* self);
 void KCoreConfigSkeleton__ItemPointF_Delete(KCoreConfigSkeleton__ItemPointF* self);
 
-KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_new(const libqt_string _group, const libqt_string _key, QSize* reference);
-KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_new2(const libqt_string _group, const libqt_string _key, QSize* reference, const QSize* defaultValue);
+KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_New(const libqt_string _group, const libqt_string _key, QSize* reference);
+KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_New2(const libqt_string _group, const libqt_string _key, QSize* reference, const QSize* defaultValue);
 void KCoreConfigSkeleton__ItemSize_ReadConfig(KCoreConfigSkeleton__ItemSize* self, KConfig* config);
 void KCoreConfigSkeleton__ItemSize_SetProperty(KCoreConfigSkeleton__ItemSize* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemSize_IsEqual(const KCoreConfigSkeleton__ItemSize* self, const QVariant* p);
@@ -735,8 +735,8 @@ void KCoreConfigSkeleton__ItemSize_OnProperty(const KCoreConfigSkeleton__ItemSiz
 QVariant* KCoreConfigSkeleton__ItemSize_SuperProperty(const KCoreConfigSkeleton__ItemSize* self);
 void KCoreConfigSkeleton__ItemSize_Delete(KCoreConfigSkeleton__ItemSize* self);
 
-KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_new(const libqt_string _group, const libqt_string _key, QSizeF* reference);
-KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_new2(const libqt_string _group, const libqt_string _key, QSizeF* reference, const QSizeF* defaultValue);
+KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_New(const libqt_string _group, const libqt_string _key, QSizeF* reference);
+KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_New2(const libqt_string _group, const libqt_string _key, QSizeF* reference, const QSizeF* defaultValue);
 void KCoreConfigSkeleton__ItemSizeF_ReadConfig(KCoreConfigSkeleton__ItemSizeF* self, KConfig* config);
 void KCoreConfigSkeleton__ItemSizeF_SetProperty(KCoreConfigSkeleton__ItemSizeF* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemSizeF_IsEqual(const KCoreConfigSkeleton__ItemSizeF* self, const QVariant* p);
@@ -751,8 +751,8 @@ void KCoreConfigSkeleton__ItemSizeF_OnProperty(const KCoreConfigSkeleton__ItemSi
 QVariant* KCoreConfigSkeleton__ItemSizeF_SuperProperty(const KCoreConfigSkeleton__ItemSizeF* self);
 void KCoreConfigSkeleton__ItemSizeF_Delete(KCoreConfigSkeleton__ItemSizeF* self);
 
-KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_new(const libqt_string _group, const libqt_string _key, QDateTime* reference);
-KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_new2(const libqt_string _group, const libqt_string _key, QDateTime* reference, const QDateTime* defaultValue);
+KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_New(const libqt_string _group, const libqt_string _key, QDateTime* reference);
+KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_New2(const libqt_string _group, const libqt_string _key, QDateTime* reference, const QDateTime* defaultValue);
 void KCoreConfigSkeleton__ItemDateTime_ReadConfig(KCoreConfigSkeleton__ItemDateTime* self, KConfig* config);
 void KCoreConfigSkeleton__ItemDateTime_SetProperty(KCoreConfigSkeleton__ItemDateTime* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemDateTime_IsEqual(const KCoreConfigSkeleton__ItemDateTime* self, const QVariant* p);
@@ -767,8 +767,8 @@ void KCoreConfigSkeleton__ItemDateTime_OnProperty(const KCoreConfigSkeleton__Ite
 QVariant* KCoreConfigSkeleton__ItemDateTime_SuperProperty(const KCoreConfigSkeleton__ItemDateTime* self);
 void KCoreConfigSkeleton__ItemDateTime_Delete(KCoreConfigSkeleton__ItemDateTime* self);
 
-KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference);
-KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue);
+KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference);
+KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue);
 void KCoreConfigSkeleton__ItemStringList_ReadConfig(KCoreConfigSkeleton__ItemStringList* self, KConfig* config);
 void KCoreConfigSkeleton__ItemStringList_SetProperty(KCoreConfigSkeleton__ItemStringList* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemStringList_IsEqual(const KCoreConfigSkeleton__ItemStringList* self, const QVariant* p);
@@ -783,8 +783,8 @@ void KCoreConfigSkeleton__ItemStringList_OnProperty(const KCoreConfigSkeleton__I
 QVariant* KCoreConfigSkeleton__ItemStringList_SuperProperty(const KCoreConfigSkeleton__ItemStringList* self);
 void KCoreConfigSkeleton__ItemStringList_Delete(KCoreConfigSkeleton__ItemStringList* self);
 
-KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference);
-KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue);
+KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference);
+KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue);
 void KCoreConfigSkeleton__ItemPathList_ReadConfig(KCoreConfigSkeleton__ItemPathList* self, KConfig* config);
 void KCoreConfigSkeleton__ItemPathList_WriteConfig(KCoreConfigSkeleton__ItemPathList* self, KConfig* config);
 void KCoreConfigSkeleton__ItemPathList_OnReadConfig(KCoreConfigSkeleton__ItemPathList* self, intptr_t slot);
@@ -802,8 +802,8 @@ void KCoreConfigSkeleton__ItemPathList_OnProperty(const KCoreConfigSkeleton__Ite
 QVariant* KCoreConfigSkeleton__ItemPathList_SuperProperty(const KCoreConfigSkeleton__ItemPathList* self);
 void KCoreConfigSkeleton__ItemPathList_Delete(KCoreConfigSkeleton__ItemPathList* self);
 
-KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference);
-KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference, const libqt_list /* of QUrl* */ defaultValue);
+KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference);
+KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference, const libqt_list /* of QUrl* */ defaultValue);
 void KCoreConfigSkeleton__ItemUrlList_ReadConfig(KCoreConfigSkeleton__ItemUrlList* self, KConfig* config);
 void KCoreConfigSkeleton__ItemUrlList_WriteConfig(KCoreConfigSkeleton__ItemUrlList* self, KConfig* config);
 void KCoreConfigSkeleton__ItemUrlList_SetProperty(KCoreConfigSkeleton__ItemUrlList* self, const QVariant* p);
@@ -821,8 +821,8 @@ void KCoreConfigSkeleton__ItemUrlList_OnProperty(const KCoreConfigSkeleton__Item
 QVariant* KCoreConfigSkeleton__ItemUrlList_SuperProperty(const KCoreConfigSkeleton__ItemUrlList* self);
 void KCoreConfigSkeleton__ItemUrlList_Delete(KCoreConfigSkeleton__ItemUrlList* self);
 
-KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference);
-KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference, const libqt_list /* of int */ defaultValue);
+KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference);
+KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference, const libqt_list /* of int */ defaultValue);
 void KCoreConfigSkeleton__ItemIntList_ReadConfig(KCoreConfigSkeleton__ItemIntList* self, KConfig* config);
 void KCoreConfigSkeleton__ItemIntList_SetProperty(KCoreConfigSkeleton__ItemIntList* self, const QVariant* p);
 bool KCoreConfigSkeleton__ItemIntList_IsEqual(const KCoreConfigSkeleton__ItemIntList* self, const QVariant* p);

@@ -4,11 +4,11 @@
 #include "libkdesktopfileaction.hpp"
 #include "libkdesktopfileaction.hxx"
 
-KDesktopFileAction* KDesktopFileAction_new() {
+KDesktopFileAction* KDesktopFileAction_New() {
     return new KDesktopFileAction();
 }
 
-KDesktopFileAction* KDesktopFileAction_new2(const libqt_string name, const libqt_string text, const libqt_string icon, const libqt_string exec, const libqt_string desktopFilePath) {
+KDesktopFileAction* KDesktopFileAction_New2(const libqt_string name, const libqt_string text, const libqt_string icon, const libqt_string exec, const libqt_string desktopFilePath) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
@@ -17,7 +17,7 @@ KDesktopFileAction* KDesktopFileAction_new2(const libqt_string name, const libqt
     return new KDesktopFileAction(name_QString, text_QString, icon_QString, exec_QString, desktopFilePath_QString);
 }
 
-KDesktopFileAction* KDesktopFileAction_new3(const KDesktopFileAction* other) {
+KDesktopFileAction* KDesktopFileAction_New3(const KDesktopFileAction* other) {
     return new KDesktopFileAction(*other);
 }
 

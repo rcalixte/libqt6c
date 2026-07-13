@@ -23,11 +23,11 @@
 #include "libqabstractitemview.h"
 
 QAbstractItemView* q_abstractitemview_new(void* parent) {
-    return QAbstractItemView_new((QWidget*)parent);
+    return QAbstractItemView_New((QWidget*)parent);
 }
 
 QAbstractItemView* q_abstractitemview_new2() {
-    return QAbstractItemView_new2();
+    return QAbstractItemView_New2();
 }
 
 const QMetaObject* q_abstractitemview_meta_object(void* self) {

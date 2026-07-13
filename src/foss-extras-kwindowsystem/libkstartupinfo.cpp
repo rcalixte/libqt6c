@@ -14,11 +14,11 @@
 #include "libkstartupinfo.hpp"
 #include "libkstartupinfo.hxx"
 
-KStartupInfo* KStartupInfo_new(int flags) {
+KStartupInfo* KStartupInfo_New(int flags) {
     return new VirtualKStartupInfo(static_cast<int>(flags));
 }
 
-KStartupInfo* KStartupInfo_new2(int flags, QObject* parent) {
+KStartupInfo* KStartupInfo_New2(int flags, QObject* parent) {
     return new VirtualKStartupInfo(static_cast<int>(flags), parent);
 }
 
@@ -564,11 +564,11 @@ void KStartupInfo_Delete(KStartupInfo* self) {
     delete self;
 }
 
-KStartupInfoId* KStartupInfoId_new() {
+KStartupInfoId* KStartupInfoId_New() {
     return new KStartupInfoId();
 }
 
-KStartupInfoId* KStartupInfoId_new2(const KStartupInfoId* data) {
+KStartupInfoId* KStartupInfoId_New2(const KStartupInfoId* data) {
     return new KStartupInfoId(*data);
 }
 
@@ -622,11 +622,11 @@ void KStartupInfoId_Delete(KStartupInfoId* self) {
     delete self;
 }
 
-KStartupInfoData* KStartupInfoData_new() {
+KStartupInfoData* KStartupInfoData_New() {
     return new KStartupInfoData();
 }
 
-KStartupInfoData* KStartupInfoData_new2(const KStartupInfoData* data) {
+KStartupInfoData* KStartupInfoData_New2(const KStartupInfoData* data) {
     return new KStartupInfoData(*data);
 }
 

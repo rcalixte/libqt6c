@@ -9,7 +9,7 @@
 #include "libqdrag.h"
 
 QDrag* q_drag_new(void* dragSource) {
-    return QDrag_new((QObject*)dragSource);
+    return QDrag_New((QObject*)dragSource);
 }
 
 const QMetaObject* q_drag_meta_object(void* self) {

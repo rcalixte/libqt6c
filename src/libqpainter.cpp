@@ -30,11 +30,11 @@
 #include "libqpainter.hpp"
 #include "libqpainter.hxx"
 
-QPainter* QPainter_new() {
+QPainter* QPainter_New() {
     return new QPainter();
 }
 
-QPainter* QPainter_new2(QPaintDevice* param1) {
+QPainter* QPainter_New2(QPaintDevice* param1) {
     return new QPainter(param1);
 }
 
@@ -985,11 +985,11 @@ void QPainter_Delete(QPainter* self) {
     delete self;
 }
 
-QPainter__PixmapFragment* QPainter__PixmapFragment_new() {
+QPainter__PixmapFragment* QPainter__PixmapFragment_New() {
     return new QPainter::PixmapFragment();
 }
 
-QPainter__PixmapFragment* QPainter__PixmapFragment_new2(const QPainter__PixmapFragment* param1) {
+QPainter__PixmapFragment* QPainter__PixmapFragment_New2(const QPainter__PixmapFragment* param1) {
     return new QPainter::PixmapFragment(*param1);
 }
 

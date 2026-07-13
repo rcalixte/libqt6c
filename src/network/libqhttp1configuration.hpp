@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QHttp1Configuration QHttp1Configuration;
 #endif
 
-QHttp1Configuration* QHttp1Configuration_new();
-QHttp1Configuration* QHttp1Configuration_new2(const QHttp1Configuration* other);
+QHttp1Configuration* QHttp1Configuration_New();
+QHttp1Configuration* QHttp1Configuration_New2(const QHttp1Configuration* other);
 void QHttp1Configuration_OperatorAssign(QHttp1Configuration* self, const QHttp1Configuration* other);
 void QHttp1Configuration_SetNumberOfConnectionsPerHost(QHttp1Configuration* self, ptrdiff_t amount);
 ptrdiff_t QHttp1Configuration_NumberOfConnectionsPerHost(const QHttp1Configuration* self);

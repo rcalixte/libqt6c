@@ -8,11 +8,11 @@
 #include "libqplacedetailsreply.h"
 
 QPlaceDetailsReply* q_placedetailsreply_new() {
-    return QPlaceDetailsReply_new();
+    return QPlaceDetailsReply_New();
 }
 
 QPlaceDetailsReply* q_placedetailsreply_new2(void* parent) {
-    return QPlaceDetailsReply_new2((QObject*)parent);
+    return QPlaceDetailsReply_New2((QObject*)parent);
 }
 
 const QMetaObject* q_placedetailsreply_meta_object(void* self) {

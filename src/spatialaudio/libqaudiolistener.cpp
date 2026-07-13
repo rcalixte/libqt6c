@@ -12,7 +12,7 @@
 #include "libqaudiolistener.hpp"
 #include "libqaudiolistener.hxx"
 
-QAudioListener* QAudioListener_new(QAudioEngine* engine) {
+QAudioListener* QAudioListener_New(QAudioEngine* engine) {
     return new VirtualQAudioListener(engine);
 }
 

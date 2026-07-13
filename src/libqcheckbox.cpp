@@ -39,20 +39,20 @@
 #include "libqcheckbox.hpp"
 #include "libqcheckbox.hxx"
 
-QCheckBox* QCheckBox_new(QWidget* parent) {
+QCheckBox* QCheckBox_New(QWidget* parent) {
     return new VirtualQCheckBox(parent);
 }
 
-QCheckBox* QCheckBox_new2() {
+QCheckBox* QCheckBox_New2() {
     return new VirtualQCheckBox();
 }
 
-QCheckBox* QCheckBox_new3(const libqt_string text) {
+QCheckBox* QCheckBox_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCheckBox(text_QString);
 }
 
-QCheckBox* QCheckBox_new4(const libqt_string text, QWidget* parent) {
+QCheckBox* QCheckBox_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQCheckBox(text_QString, parent);
 }

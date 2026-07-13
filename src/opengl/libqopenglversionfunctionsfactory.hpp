@@ -21,8 +21,8 @@ typedef struct QOpenGLVersionFunctionsFactory QOpenGLVersionFunctionsFactory;
 typedef struct QOpenGLVersionProfile QOpenGLVersionProfile;
 #endif
 
-QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_new(const QOpenGLVersionFunctionsFactory* other);
-QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_new2(QOpenGLVersionFunctionsFactory* other);
+QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_New(const QOpenGLVersionFunctionsFactory* other);
+QOpenGLVersionFunctionsFactory* QOpenGLVersionFunctionsFactory_New2(QOpenGLVersionFunctionsFactory* other);
 void QOpenGLVersionFunctionsFactory_CopyAssign(QOpenGLVersionFunctionsFactory* self, QOpenGLVersionFunctionsFactory* other);
 void QOpenGLVersionFunctionsFactory_MoveAssign(QOpenGLVersionFunctionsFactory* self, QOpenGLVersionFunctionsFactory* other);
 QAbstractOpenGLFunctions* QOpenGLVersionFunctionsFactory_Get();

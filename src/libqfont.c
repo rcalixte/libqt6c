@@ -4,11 +4,11 @@
 #include "libqfont.h"
 
 QFont* q_font_new() {
-    return QFont_new();
+    return QFont_New();
 }
 
 QFont* q_font_new2(const char* family) {
-    return QFont_new2(qstring(family));
+    return QFont_New2(qstring(family));
 }
 
 QFont* q_font_new3(const char* families[static 1]) {
@@ -23,29 +23,29 @@ QFont* q_font_new3(const char* families[static 1]) {
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    QFont* _out = QFont_new3(families_list);
+    QFont* _out = QFont_New3(families_list);
     free(families_qstr);
     return _out;
 }
 
 QFont* q_font_new4(void* font, void* pd) {
-    return QFont_new4((QFont*)font, (QPaintDevice*)pd);
+    return QFont_New4((QFont*)font, (QPaintDevice*)pd);
 }
 
 QFont* q_font_new5(void* font) {
-    return QFont_new5((QFont*)font);
+    return QFont_New5((QFont*)font);
 }
 
 QFont* q_font_new6(const char* family, int pointSize) {
-    return QFont_new6(qstring(family), pointSize);
+    return QFont_New6(qstring(family), pointSize);
 }
 
 QFont* q_font_new7(const char* family, int pointSize, int weight) {
-    return QFont_new7(qstring(family), pointSize, weight);
+    return QFont_New7(qstring(family), pointSize, weight);
 }
 
 QFont* q_font_new8(const char* family, int pointSize, int weight, bool italic) {
-    return QFont_new8(qstring(family), pointSize, weight, italic);
+    return QFont_New8(qstring(family), pointSize, weight, italic);
 }
 
 QFont* q_font_new9(const char* families[static 1], int pointSize) {
@@ -60,7 +60,7 @@ QFont* q_font_new9(const char* families[static 1], int pointSize) {
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    QFont* _out = QFont_new9(families_list, pointSize);
+    QFont* _out = QFont_New9(families_list, pointSize);
     free(families_qstr);
     return _out;
 }
@@ -77,7 +77,7 @@ QFont* q_font_new10(const char* families[static 1], int pointSize, int weight) {
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    QFont* _out = QFont_new10(families_list, pointSize, weight);
+    QFont* _out = QFont_New10(families_list, pointSize, weight);
     free(families_qstr);
     return _out;
 }
@@ -94,7 +94,7 @@ QFont* q_font_new11(const char* families[static 1], int pointSize, int weight, b
     }
     libqt_list families_list = qlist(families_qstr, families_len);
 
-    QFont* _out = QFont_new11(families_list, pointSize, weight, italic);
+    QFont* _out = QFont_New11(families_list, pointSize, weight, italic);
     free(families_qstr);
     return _out;
 }
@@ -527,19 +527,19 @@ void q_font_delete(void* self) {
 }
 
 QFont__Tag* q_font__tag_new(void* other) {
-    return QFont__Tag_new((QFont__Tag*)other);
+    return QFont__Tag_New((QFont__Tag*)other);
 }
 
 QFont__Tag* q_font__tag_new2(void* other) {
-    return QFont__Tag_new2((QFont__Tag*)other);
+    return QFont__Tag_New2((QFont__Tag*)other);
 }
 
 QFont__Tag* q_font__tag_new3() {
-    return QFont__Tag_new3();
+    return QFont__Tag_New3();
 }
 
 QFont__Tag* q_font__tag_new4(void* param1) {
-    return QFont__Tag_new4((QFont__Tag*)param1);
+    return QFont__Tag_New4((QFont__Tag*)param1);
 }
 
 void q_font__tag_copy_assign(void* self, void* other) {

@@ -6,7 +6,7 @@
 #include "libqwebengineclientcertificateselection.hpp"
 #include "libqwebengineclientcertificateselection.hxx"
 
-QWebEngineClientCertificateSelection* QWebEngineClientCertificateSelection_new(const QWebEngineClientCertificateSelection* param1) {
+QWebEngineClientCertificateSelection* QWebEngineClientCertificateSelection_New(const QWebEngineClientCertificateSelection* param1) {
     return new QWebEngineClientCertificateSelection(*param1);
 }
 

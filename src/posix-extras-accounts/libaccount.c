@@ -11,11 +11,11 @@
 #include "libaccount.h"
 
 Accounts__Watch* q_accounts__watch_new() {
-    return Accounts__Watch_new();
+    return Accounts__Watch_New();
 }
 
 Accounts__Watch* q_accounts__watch_new2(void* parent) {
-    return Accounts__Watch_new2((QObject*)parent);
+    return Accounts__Watch_New2((QObject*)parent);
 }
 
 const QMetaObject* q_accounts__watch_meta_object(void* self) {
@@ -435,11 +435,11 @@ void q_accounts__watch_delete(void* self) {
 }
 
 Accounts__Account* q_accounts__account_new(void* manager, const char* provider) {
-    return Accounts__Account_new((Accounts__Manager*)manager, qstring(provider));
+    return Accounts__Account_New((Accounts__Manager*)manager, qstring(provider));
 }
 
 Accounts__Account* q_accounts__account_new2(void* manager, const char* provider, void* parent) {
-    return Accounts__Account_new2((Accounts__Manager*)manager, qstring(provider), (QObject*)parent);
+    return Accounts__Account_New2((Accounts__Manager*)manager, qstring(provider), (QObject*)parent);
 }
 
 const QMetaObject* q_accounts__account_meta_object(void* self) {

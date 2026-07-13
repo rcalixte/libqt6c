@@ -4,12 +4,12 @@
 #include "libqwebsocketcorsauthenticator.hpp"
 #include "libqwebsocketcorsauthenticator.hxx"
 
-QWebSocketCorsAuthenticator* QWebSocketCorsAuthenticator_new(const libqt_string origin) {
+QWebSocketCorsAuthenticator* QWebSocketCorsAuthenticator_New(const libqt_string origin) {
     QString origin_QString = QString::fromUtf8(origin.data, origin.len);
     return new QWebSocketCorsAuthenticator(origin_QString);
 }
 
-QWebSocketCorsAuthenticator* QWebSocketCorsAuthenticator_new2(const QWebSocketCorsAuthenticator* other) {
+QWebSocketCorsAuthenticator* QWebSocketCorsAuthenticator_New2(const QWebSocketCorsAuthenticator* other) {
     return new QWebSocketCorsAuthenticator(*other);
 }
 

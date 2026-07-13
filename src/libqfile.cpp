@@ -14,20 +14,20 @@
 #include "libqfile.hpp"
 #include "libqfile.hxx"
 
-QFile* QFile_new() {
+QFile* QFile_New() {
     return new VirtualQFile();
 }
 
-QFile* QFile_new2(const libqt_string name) {
+QFile* QFile_New2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQFile(name_QString);
 }
 
-QFile* QFile_new3(QObject* parent) {
+QFile* QFile_New3(QObject* parent) {
     return new VirtualQFile(parent);
 }
 
-QFile* QFile_new4(const libqt_string name, QObject* parent) {
+QFile* QFile_New4(const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQFile(name_QString, parent);
 }

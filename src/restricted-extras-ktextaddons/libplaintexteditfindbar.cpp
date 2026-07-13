@@ -40,11 +40,11 @@
 #include "libplaintexteditfindbar.hpp"
 #include "libplaintexteditfindbar.hxx"
 
-TextCustomEditor__PlainTextEditFindBar* TextCustomEditor__PlainTextEditFindBar_new(QPlainTextEdit* view) {
+TextCustomEditor__PlainTextEditFindBar* TextCustomEditor__PlainTextEditFindBar_New(QPlainTextEdit* view) {
     return new VirtualTextCustomEditorPlainTextEditFindBar(view);
 }
 
-TextCustomEditor__PlainTextEditFindBar* TextCustomEditor__PlainTextEditFindBar_new2(QPlainTextEdit* view, QWidget* parent) {
+TextCustomEditor__PlainTextEditFindBar* TextCustomEditor__PlainTextEditFindBar_New2(QPlainTextEdit* view, QWidget* parent) {
     return new VirtualTextCustomEditorPlainTextEditFindBar(view, parent);
 }
 

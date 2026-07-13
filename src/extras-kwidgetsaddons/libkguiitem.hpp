@@ -20,15 +20,15 @@ typedef struct QIcon QIcon;
 typedef struct QPushButton QPushButton;
 #endif
 
-KGuiItem* KGuiItem_new();
-KGuiItem* KGuiItem_new2(const libqt_string text);
-KGuiItem* KGuiItem_new3(const libqt_string text, const QIcon* icon);
-KGuiItem* KGuiItem_new4(const KGuiItem* other);
-KGuiItem* KGuiItem_new5(const libqt_string text, const libqt_string iconName);
-KGuiItem* KGuiItem_new6(const libqt_string text, const libqt_string iconName, const libqt_string toolTip);
-KGuiItem* KGuiItem_new7(const libqt_string text, const libqt_string iconName, const libqt_string toolTip, const libqt_string whatsThis);
-KGuiItem* KGuiItem_new8(const libqt_string text, const QIcon* icon, const libqt_string toolTip);
-KGuiItem* KGuiItem_new9(const libqt_string text, const QIcon* icon, const libqt_string toolTip, const libqt_string whatsThis);
+KGuiItem* KGuiItem_New();
+KGuiItem* KGuiItem_New2(const libqt_string text);
+KGuiItem* KGuiItem_New3(const libqt_string text, const QIcon* icon);
+KGuiItem* KGuiItem_New4(const KGuiItem* other);
+KGuiItem* KGuiItem_New5(const libqt_string text, const libqt_string iconName);
+KGuiItem* KGuiItem_New6(const libqt_string text, const libqt_string iconName, const libqt_string toolTip);
+KGuiItem* KGuiItem_New7(const libqt_string text, const libqt_string iconName, const libqt_string toolTip, const libqt_string whatsThis);
+KGuiItem* KGuiItem_New8(const libqt_string text, const QIcon* icon, const libqt_string toolTip);
+KGuiItem* KGuiItem_New9(const libqt_string text, const QIcon* icon, const libqt_string toolTip, const libqt_string whatsThis);
 void KGuiItem_OperatorAssign(KGuiItem* self, const KGuiItem* other);
 void KGuiItem_SetText(KGuiItem* self, const libqt_string text);
 libqt_string KGuiItem_Text(const KGuiItem* self);

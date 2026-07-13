@@ -53,8 +53,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KAnimatedButton* KAnimatedButton_new(QWidget* parent);
-KAnimatedButton* KAnimatedButton_new2();
+KAnimatedButton* KAnimatedButton_New(QWidget* parent);
+KAnimatedButton* KAnimatedButton_New2();
 QMetaObject* KAnimatedButton_MetaObject(const KAnimatedButton* self);
 void* KAnimatedButton_Metacast(KAnimatedButton* self, const char* param1);
 int KAnimatedButton_Metacall(KAnimatedButton* self, int param1, int param2, void** param3);

@@ -20,9 +20,9 @@ typedef struct QPlaceResult QPlaceResult;
 typedef struct QPlaceSearchResult QPlaceSearchResult;
 #endif
 
-QPlaceResult* QPlaceResult_new();
-QPlaceResult* QPlaceResult_new2(const QPlaceSearchResult* other);
-QPlaceResult* QPlaceResult_new3(const QPlaceResult* param1);
+QPlaceResult* QPlaceResult_New();
+QPlaceResult* QPlaceResult_New2(const QPlaceSearchResult* other);
+QPlaceResult* QPlaceResult_New3(const QPlaceResult* param1);
 double QPlaceResult_Distance(const QPlaceResult* self);
 void QPlaceResult_SetDistance(QPlaceResult* self, double distance);
 QPlace* QPlaceResult_Place(const QPlaceResult* self);

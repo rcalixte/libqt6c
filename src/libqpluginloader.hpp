@@ -26,10 +26,10 @@ typedef struct QStaticPlugin QStaticPlugin;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPluginLoader* QPluginLoader_new();
-QPluginLoader* QPluginLoader_new2(const libqt_string fileName);
-QPluginLoader* QPluginLoader_new3(QObject* parent);
-QPluginLoader* QPluginLoader_new4(const libqt_string fileName, QObject* parent);
+QPluginLoader* QPluginLoader_New();
+QPluginLoader* QPluginLoader_New2(const libqt_string fileName);
+QPluginLoader* QPluginLoader_New3(QObject* parent);
+QPluginLoader* QPluginLoader_New4(const libqt_string fileName, QObject* parent);
 QMetaObject* QPluginLoader_MetaObject(const QPluginLoader* self);
 void* QPluginLoader_Metacast(QPluginLoader* self, const char* param1);
 int QPluginLoader_Metacall(QPluginLoader* self, int param1, int param2, void** param3);

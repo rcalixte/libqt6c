@@ -57,8 +57,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QPdfView* QPdfView_new(QWidget* parent);
-QPdfView* QPdfView_new2();
+QPdfView* QPdfView_New(QWidget* parent);
+QPdfView* QPdfView_New2();
 QMetaObject* QPdfView_MetaObject(const QPdfView* self);
 void* QPdfView_Metacast(QPdfView* self, const char* param1);
 int QPdfView_Metacall(QPdfView* self, int param1, int param2, void** param3);

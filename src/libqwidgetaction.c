@@ -8,7 +8,7 @@
 #include "libqwidgetaction.h"
 
 QWidgetAction* q_widgetaction_new(void* parent) {
-    return QWidgetAction_new((QObject*)parent);
+    return QWidgetAction_New((QObject*)parent);
 }
 
 const QMetaObject* q_widgetaction_meta_object(void* self) {

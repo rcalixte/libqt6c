@@ -51,14 +51,14 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KRuler* KRuler_new(QWidget* parent);
-KRuler* KRuler_new2();
-KRuler* KRuler_new3(int orient);
-KRuler* KRuler_new4(int orient, int widgetWidth);
-KRuler* KRuler_new5(int orient, QWidget* parent);
-KRuler* KRuler_new6(int orient, QWidget* parent, int f);
-KRuler* KRuler_new7(int orient, int widgetWidth, QWidget* parent);
-KRuler* KRuler_new8(int orient, int widgetWidth, QWidget* parent, int f);
+KRuler* KRuler_New(QWidget* parent);
+KRuler* KRuler_New2();
+KRuler* KRuler_New3(int orient);
+KRuler* KRuler_New4(int orient, int widgetWidth);
+KRuler* KRuler_New5(int orient, QWidget* parent);
+KRuler* KRuler_New6(int orient, QWidget* parent, int f);
+KRuler* KRuler_New7(int orient, int widgetWidth, QWidget* parent);
+KRuler* KRuler_New8(int orient, int widgetWidth, QWidget* parent, int f);
 QMetaObject* KRuler_MetaObject(const KRuler* self);
 void* KRuler_Metacast(KRuler* self, const char* param1);
 int KRuler_Metacall(KRuler* self, int param1, int param2, void** param3);

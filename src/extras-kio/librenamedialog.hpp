@@ -56,13 +56,13 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KIO__RenameDialog* KIO__RenameDialog_new(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options);
-KIO__RenameDialog* KIO__RenameDialog_new2(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc);
-KIO__RenameDialog* KIO__RenameDialog_new3(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest);
-KIO__RenameDialog* KIO__RenameDialog_new4(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc);
-KIO__RenameDialog* KIO__RenameDialog_new5(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest);
-KIO__RenameDialog* KIO__RenameDialog_new6(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc);
-KIO__RenameDialog* KIO__RenameDialog_new7(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc, const QDateTime* mtimeDest);
+KIO__RenameDialog* KIO__RenameDialog_New(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options);
+KIO__RenameDialog* KIO__RenameDialog_New2(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc);
+KIO__RenameDialog* KIO__RenameDialog_New3(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest);
+KIO__RenameDialog* KIO__RenameDialog_New4(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc);
+KIO__RenameDialog* KIO__RenameDialog_New5(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest);
+KIO__RenameDialog* KIO__RenameDialog_New6(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc);
+KIO__RenameDialog* KIO__RenameDialog_New7(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc, const QDateTime* mtimeDest);
 QMetaObject* KIO__RenameDialog_MetaObject(const KIO__RenameDialog* self);
 void* KIO__RenameDialog_Metacast(KIO__RenameDialog* self, const char* param1);
 int KIO__RenameDialog_Metacall(KIO__RenameDialog* self, int param1, int param2, void** param3);

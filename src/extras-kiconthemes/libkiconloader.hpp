@@ -32,10 +32,10 @@ typedef struct QPixmap QPixmap;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KIconLoader* KIconLoader_new();
-KIconLoader* KIconLoader_new2(const libqt_string appname);
-KIconLoader* KIconLoader_new3(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths);
-KIconLoader* KIconLoader_new4(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths, QObject* parent);
+KIconLoader* KIconLoader_New();
+KIconLoader* KIconLoader_New2(const libqt_string appname);
+KIconLoader* KIconLoader_New3(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths);
+KIconLoader* KIconLoader_New4(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths, QObject* parent);
 QMetaObject* KIconLoader_MetaObject(const KIconLoader* self);
 void* KIconLoader_Metacast(KIconLoader* self, const char* param1);
 int KIconLoader_Metacall(KIconLoader* self, int param1, int param2, void** param3);

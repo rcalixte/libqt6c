@@ -16,7 +16,7 @@
 #include "libknameandurlinputdialog.h"
 
 KNameAndUrlInputDialog* k_nameandurlinputdialog_new(const char* nameLabel, const char* urlLabel, void* startDir, void* parent) {
-    return KNameAndUrlInputDialog_new(qstring(nameLabel), qstring(urlLabel), (QUrl*)startDir, (QWidget*)parent);
+    return KNameAndUrlInputDialog_New(qstring(nameLabel), qstring(urlLabel), (QUrl*)startDir, (QWidget*)parent);
 }
 
 const QMetaObject* k_nameandurlinputdialog_meta_object(void* self) {

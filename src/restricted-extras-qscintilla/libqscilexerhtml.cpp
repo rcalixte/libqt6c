@@ -14,11 +14,11 @@
 #include "libqscilexerhtml.hpp"
 #include "libqscilexerhtml.hxx"
 
-QsciLexerHTML* QsciLexerHTML_new() {
+QsciLexerHTML* QsciLexerHTML_New() {
     return new VirtualQsciLexerHTML();
 }
 
-QsciLexerHTML* QsciLexerHTML_new2(QObject* parent) {
+QsciLexerHTML* QsciLexerHTML_New2(QObject* parent) {
     return new VirtualQsciLexerHTML(parent);
 }
 

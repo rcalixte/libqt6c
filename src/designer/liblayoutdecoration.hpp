@@ -35,7 +35,7 @@ struct pair_int_int {
 };
 #endif
 
-QDesignerLayoutDecorationExtension* QDesignerLayoutDecorationExtension_new();
+QDesignerLayoutDecorationExtension* QDesignerLayoutDecorationExtension_New();
 libqt_list /* of QWidget* */ QDesignerLayoutDecorationExtension_Widgets(const QDesignerLayoutDecorationExtension* self, QLayout* layout);
 QRect* QDesignerLayoutDecorationExtension_ItemInfo(const QDesignerLayoutDecorationExtension* self, int index);
 int QDesignerLayoutDecorationExtension_IndexOf(const QDesignerLayoutDecorationExtension* self, QWidget* widget);

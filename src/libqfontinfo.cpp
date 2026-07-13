@@ -5,11 +5,11 @@
 #include "libqfontinfo.hpp"
 #include "libqfontinfo.hxx"
 
-QFontInfo* QFontInfo_new(const QFont* param1) {
+QFontInfo* QFontInfo_New(const QFont* param1) {
     return new QFontInfo(*param1);
 }
 
-QFontInfo* QFontInfo_new2(const QFontInfo* param1) {
+QFontInfo* QFontInfo_New2(const QFontInfo* param1) {
     return new QFontInfo(*param1);
 }
 

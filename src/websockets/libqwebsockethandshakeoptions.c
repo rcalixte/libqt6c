@@ -2,11 +2,11 @@
 #include "libqwebsockethandshakeoptions.h"
 
 QWebSocketHandshakeOptions* q_websockethandshakeoptions_new() {
-    return QWebSocketHandshakeOptions_new();
+    return QWebSocketHandshakeOptions_New();
 }
 
 QWebSocketHandshakeOptions* q_websockethandshakeoptions_new2(void* other) {
-    return QWebSocketHandshakeOptions_new2((QWebSocketHandshakeOptions*)other);
+    return QWebSocketHandshakeOptions_New2((QWebSocketHandshakeOptions*)other);
 }
 
 void q_websockethandshakeoptions_operator_assign(void* self, void* other) {

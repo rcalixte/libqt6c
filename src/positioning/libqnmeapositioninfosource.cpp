@@ -15,11 +15,11 @@
 #include "libqnmeapositioninfosource.hpp"
 #include "libqnmeapositioninfosource.hxx"
 
-QNmeaPositionInfoSource* QNmeaPositionInfoSource_new(int updateMode) {
+QNmeaPositionInfoSource* QNmeaPositionInfoSource_New(int updateMode) {
     return new VirtualQNmeaPositionInfoSource(static_cast<QNmeaPositionInfoSource::UpdateMode>(updateMode));
 }
 
-QNmeaPositionInfoSource* QNmeaPositionInfoSource_new2(int updateMode, QObject* parent) {
+QNmeaPositionInfoSource* QNmeaPositionInfoSource_New2(int updateMode, QObject* parent) {
     return new VirtualQNmeaPositionInfoSource(static_cast<QNmeaPositionInfoSource::UpdateMode>(updateMode), parent);
 }
 

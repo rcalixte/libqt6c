@@ -17,15 +17,15 @@
 #include "libkpassworddialog.h"
 
 KPasswordDialog* k_passworddialog_new(void* parent) {
-    return KPasswordDialog_new((QWidget*)parent);
+    return KPasswordDialog_New((QWidget*)parent);
 }
 
 KPasswordDialog* k_passworddialog_new2() {
-    return KPasswordDialog_new2();
+    return KPasswordDialog_New2();
 }
 
 KPasswordDialog* k_passworddialog_new3(void* parent, const int32_t* flags) {
-    return KPasswordDialog_new3((QWidget*)parent, flags);
+    return KPasswordDialog_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* k_passworddialog_meta_object(void* self) {

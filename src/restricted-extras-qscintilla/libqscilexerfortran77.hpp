@@ -29,8 +29,8 @@ typedef struct QsciLexerFortran77 QsciLexerFortran77;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerFortran77* QsciLexerFortran77_new();
-QsciLexerFortran77* QsciLexerFortran77_new2(QObject* parent);
+QsciLexerFortran77* QsciLexerFortran77_New();
+QsciLexerFortran77* QsciLexerFortran77_New2(QObject* parent);
 QMetaObject* QsciLexerFortran77_MetaObject(const QsciLexerFortran77* self);
 void* QsciLexerFortran77_Metacast(QsciLexerFortran77* self, const char* param1);
 int QsciLexerFortran77_Metacall(QsciLexerFortran77* self, int param1, int param2, void** param3);

@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QRadioButton* QRadioButton_new(QWidget* parent);
-QRadioButton* QRadioButton_new2();
-QRadioButton* QRadioButton_new3(const libqt_string text);
-QRadioButton* QRadioButton_new4(const libqt_string text, QWidget* parent);
+QRadioButton* QRadioButton_New(QWidget* parent);
+QRadioButton* QRadioButton_New2();
+QRadioButton* QRadioButton_New3(const libqt_string text);
+QRadioButton* QRadioButton_New4(const libqt_string text, QWidget* parent);
 QMetaObject* QRadioButton_MetaObject(const QRadioButton* self);
 void* QRadioButton_Metacast(QRadioButton* self, const char* param1);
 int QRadioButton_Metacall(QRadioButton* self, int param1, int param2, void** param3);

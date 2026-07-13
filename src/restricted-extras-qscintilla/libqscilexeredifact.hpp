@@ -29,8 +29,8 @@ typedef struct QsciLexerEDIFACT QsciLexerEDIFACT;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerEDIFACT* QsciLexerEDIFACT_new();
-QsciLexerEDIFACT* QsciLexerEDIFACT_new2(QObject* parent);
+QsciLexerEDIFACT* QsciLexerEDIFACT_New();
+QsciLexerEDIFACT* QsciLexerEDIFACT_New2(QObject* parent);
 QMetaObject* QsciLexerEDIFACT_MetaObject(const QsciLexerEDIFACT* self);
 void* QsciLexerEDIFACT_Metacast(QsciLexerEDIFACT* self, const char* param1);
 int QsciLexerEDIFACT_Metacall(QsciLexerEDIFACT* self, int param1, int param2, void** param3);

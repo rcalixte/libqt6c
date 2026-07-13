@@ -6,11 +6,11 @@
 #include "libqlibraryinfo.hpp"
 #include "libqlibraryinfo.hxx"
 
-QLibraryInfo* QLibraryInfo_new(const QLibraryInfo* other) {
+QLibraryInfo* QLibraryInfo_New(const QLibraryInfo* other) {
     return new QLibraryInfo(*other);
 }
 
-QLibraryInfo* QLibraryInfo_new2(QLibraryInfo* other) {
+QLibraryInfo* QLibraryInfo_New2(QLibraryInfo* other) {
     return new QLibraryInfo(std::move(*other));
 }
 

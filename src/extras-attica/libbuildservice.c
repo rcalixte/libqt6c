@@ -2,7 +2,7 @@
 #include "libbuildservice.h"
 
 Attica__Target* k_attica__target_new(void* param1) {
-    return Attica__Target_new((Attica__Target*)param1);
+    return Attica__Target_New((Attica__Target*)param1);
 }
 
 const char* k_attica__target_id(void* self) {
@@ -36,11 +36,11 @@ void k_attica__target_delete(void* self) {
 }
 
 Attica__BuildService* k_attica__buildservice_new() {
-    return Attica__BuildService_new();
+    return Attica__BuildService_New();
 }
 
 Attica__BuildService* k_attica__buildservice_new2(void* other) {
-    return Attica__BuildService_new2((Attica__BuildService*)other);
+    return Attica__BuildService_New2((Attica__BuildService*)other);
 }
 
 void k_attica__buildservice_operator_assign(void* self, void* other) {

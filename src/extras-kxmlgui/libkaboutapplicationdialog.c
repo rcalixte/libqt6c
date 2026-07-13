@@ -16,19 +16,19 @@
 #include "libkaboutapplicationdialog.h"
 
 KAboutApplicationDialog* k_aboutapplicationdialog_new(void* aboutData, int32_t opts) {
-    return KAboutApplicationDialog_new((KAboutData*)aboutData, opts);
+    return KAboutApplicationDialog_New((KAboutData*)aboutData, opts);
 }
 
 KAboutApplicationDialog* k_aboutapplicationdialog_new2(void* aboutData) {
-    return KAboutApplicationDialog_new2((KAboutData*)aboutData);
+    return KAboutApplicationDialog_New2((KAboutData*)aboutData);
 }
 
 KAboutApplicationDialog* k_aboutapplicationdialog_new3(void* aboutData, int32_t opts, void* parent) {
-    return KAboutApplicationDialog_new3((KAboutData*)aboutData, opts, (QWidget*)parent);
+    return KAboutApplicationDialog_New3((KAboutData*)aboutData, opts, (QWidget*)parent);
 }
 
 KAboutApplicationDialog* k_aboutapplicationdialog_new4(void* aboutData, void* parent) {
-    return KAboutApplicationDialog_new4((KAboutData*)aboutData, (QWidget*)parent);
+    return KAboutApplicationDialog_New4((KAboutData*)aboutData, (QWidget*)parent);
 }
 
 const QMetaObject* k_aboutapplicationdialog_meta_object(void* self) {

@@ -4,15 +4,15 @@
 #include "libqprinterinfo.h"
 
 QPrinterInfo* q_printerinfo_new() {
-    return QPrinterInfo_new();
+    return QPrinterInfo_New();
 }
 
 QPrinterInfo* q_printerinfo_new2(void* other) {
-    return QPrinterInfo_new2((QPrinterInfo*)other);
+    return QPrinterInfo_New2((QPrinterInfo*)other);
 }
 
 QPrinterInfo* q_printerinfo_new3(void* printer) {
-    return QPrinterInfo_new3((QPrinter*)printer);
+    return QPrinterInfo_New3((QPrinter*)printer);
 }
 
 void q_printerinfo_operator_assign(void* self, void* other) {

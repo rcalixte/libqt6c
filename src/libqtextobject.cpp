@@ -68,7 +68,7 @@ int QTextBlockGroup_Metacall(QTextBlockGroup* self, int param1, int param2, void
     return self->qt_metacall(static_cast<QMetaObject::Call>(param1), static_cast<int>(param2), param3);
 }
 
-QTextFrame* QTextFrame_new(QTextDocument* doc) {
+QTextFrame* QTextFrame_New(QTextDocument* doc) {
     return new VirtualQTextFrame(doc);
 }
 
@@ -550,11 +550,11 @@ void QTextBlockUserData_Delete(QTextBlockUserData* self) {
     delete self;
 }
 
-QTextBlock* QTextBlock_new() {
+QTextBlock* QTextBlock_New() {
     return new QTextBlock();
 }
 
-QTextBlock* QTextBlock_new2(const QTextBlock* o) {
+QTextBlock* QTextBlock_New2(const QTextBlock* o) {
     return new QTextBlock(*o);
 }
 
@@ -723,11 +723,11 @@ void QTextBlock_Delete(QTextBlock* self) {
     delete self;
 }
 
-QTextFragment* QTextFragment_new() {
+QTextFragment* QTextFragment_New() {
     return new QTextFragment();
 }
 
-QTextFragment* QTextFragment_new2(const QTextFragment* o) {
+QTextFragment* QTextFragment_New2(const QTextFragment* o) {
     return new QTextFragment(*o);
 }
 
@@ -826,19 +826,19 @@ void QTextFragment_Delete(QTextFragment* self) {
     delete self;
 }
 
-QTextFrame__iterator* QTextFrame__iterator_new(const QTextFrame__iterator* other) {
+QTextFrame__iterator* QTextFrame__iterator_New(const QTextFrame__iterator* other) {
     return new QTextFrame::iterator(*other);
 }
 
-QTextFrame__iterator* QTextFrame__iterator_new2(QTextFrame__iterator* other) {
+QTextFrame__iterator* QTextFrame__iterator_New2(QTextFrame__iterator* other) {
     return new QTextFrame::iterator(std::move(*other));
 }
 
-QTextFrame__iterator* QTextFrame__iterator_new3() {
+QTextFrame__iterator* QTextFrame__iterator_New3() {
     return new QTextFrame::iterator();
 }
 
-QTextFrame__iterator* QTextFrame__iterator_new4(const QTextFrame__iterator* param1) {
+QTextFrame__iterator* QTextFrame__iterator_New4(const QTextFrame__iterator* param1) {
     return new QTextFrame::iterator(*param1);
 }
 
@@ -898,19 +898,19 @@ void QTextFrame__iterator_Delete(QTextFrame__iterator* self) {
     delete self;
 }
 
-QTextBlock__iterator* QTextBlock__iterator_new(const QTextBlock__iterator* other) {
+QTextBlock__iterator* QTextBlock__iterator_New(const QTextBlock__iterator* other) {
     return new QTextBlock::iterator(*other);
 }
 
-QTextBlock__iterator* QTextBlock__iterator_new2(QTextBlock__iterator* other) {
+QTextBlock__iterator* QTextBlock__iterator_New2(QTextBlock__iterator* other) {
     return new QTextBlock::iterator(std::move(*other));
 }
 
-QTextBlock__iterator* QTextBlock__iterator_new3() {
+QTextBlock__iterator* QTextBlock__iterator_New3() {
     return new QTextBlock::iterator();
 }
 
-QTextBlock__iterator* QTextBlock__iterator_new4(const QTextBlock__iterator* param1) {
+QTextBlock__iterator* QTextBlock__iterator_New4(const QTextBlock__iterator* param1) {
     return new QTextBlock::iterator(*param1);
 }
 

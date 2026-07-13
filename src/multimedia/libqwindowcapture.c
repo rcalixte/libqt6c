@@ -8,11 +8,11 @@
 #include "libqwindowcapture.h"
 
 QWindowCapture* q_windowcapture_new() {
-    return QWindowCapture_new();
+    return QWindowCapture_New();
 }
 
 QWindowCapture* q_windowcapture_new2(void* parent) {
-    return QWindowCapture_new2((QObject*)parent);
+    return QWindowCapture_New2((QObject*)parent);
 }
 
 const QMetaObject* q_windowcapture_meta_object(void* self) {

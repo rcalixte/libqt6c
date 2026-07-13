@@ -2,11 +2,11 @@
 #include "libqsysinfo.h"
 
 QSysInfo* q_sysinfo_new(void* other) {
-    return QSysInfo_new((QSysInfo*)other);
+    return QSysInfo_New((QSysInfo*)other);
 }
 
 QSysInfo* q_sysinfo_new2(void* other) {
-    return QSysInfo_new2((QSysInfo*)other);
+    return QSysInfo_New2((QSysInfo*)other);
 }
 
 void q_sysinfo_copy_assign(void* self, void* other) {

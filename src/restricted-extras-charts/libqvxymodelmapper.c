@@ -9,11 +9,11 @@
 #include "libqvxymodelmapper.h"
 
 QVXYModelMapper* q_vxymodelmapper_new() {
-    return QVXYModelMapper_new();
+    return QVXYModelMapper_New();
 }
 
 QVXYModelMapper* q_vxymodelmapper_new2(void* parent) {
-    return QVXYModelMapper_new2((QObject*)parent);
+    return QVXYModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_vxymodelmapper_meta_object(void* self) {

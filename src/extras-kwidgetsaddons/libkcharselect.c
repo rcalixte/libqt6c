@@ -16,19 +16,19 @@
 #include "libkcharselect.h"
 
 KCharSelect* k_charselect_new(void* parent) {
-    return KCharSelect_new((QWidget*)parent);
+    return KCharSelect_New((QWidget*)parent);
 }
 
 KCharSelect* k_charselect_new2(void* parent, void* actionParent) {
-    return KCharSelect_new2((QWidget*)parent, (QObject*)actionParent);
+    return KCharSelect_New2((QWidget*)parent, (QObject*)actionParent);
 }
 
 KCharSelect* k_charselect_new3(void* parent, const int32_t controls) {
-    return KCharSelect_new3((QWidget*)parent, controls);
+    return KCharSelect_New3((QWidget*)parent, controls);
 }
 
 KCharSelect* k_charselect_new4(void* parent, void* actionParent, const int32_t controls) {
-    return KCharSelect_new4((QWidget*)parent, (QObject*)actionParent, controls);
+    return KCharSelect_New4((QWidget*)parent, (QObject*)actionParent, controls);
 }
 
 const QMetaObject* k_charselect_meta_object(void* self) {

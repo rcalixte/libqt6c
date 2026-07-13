@@ -15,15 +15,15 @@
 #include "libabstractwidgetbox.h"
 
 QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_new(void* parent) {
-    return QDesignerWidgetBoxInterface_new((QWidget*)parent);
+    return QDesignerWidgetBoxInterface_New((QWidget*)parent);
 }
 
 QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_new2() {
-    return QDesignerWidgetBoxInterface_new2();
+    return QDesignerWidgetBoxInterface_New2();
 }
 
 QDesignerWidgetBoxInterface* q_designerwidgetboxinterface_new3(void* parent, int32_t flags) {
-    return QDesignerWidgetBoxInterface_new3((QWidget*)parent, flags);
+    return QDesignerWidgetBoxInterface_New3((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_designerwidgetboxinterface_meta_object(void* self) {
@@ -2323,27 +2323,27 @@ void q_designerwidgetboxinterface_delete(void* self) {
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new() {
-    return QDesignerWidgetBoxInterface__Widget_new();
+    return QDesignerWidgetBoxInterface__Widget_New();
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new2(void* w) {
-    return QDesignerWidgetBoxInterface__Widget_new2((QDesignerWidgetBoxInterface__Widget*)w);
+    return QDesignerWidgetBoxInterface__Widget_New2((QDesignerWidgetBoxInterface__Widget*)w);
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new3(const char* aname) {
-    return QDesignerWidgetBoxInterface__Widget_new3(qstring(aname));
+    return QDesignerWidgetBoxInterface__Widget_New3(qstring(aname));
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new4(const char* aname, const char* xml) {
-    return QDesignerWidgetBoxInterface__Widget_new4(qstring(aname), qstring(xml));
+    return QDesignerWidgetBoxInterface__Widget_New4(qstring(aname), qstring(xml));
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new5(const char* aname, const char* xml, const char* icon_name) {
-    return QDesignerWidgetBoxInterface__Widget_new5(qstring(aname), qstring(xml), qstring(icon_name));
+    return QDesignerWidgetBoxInterface__Widget_New5(qstring(aname), qstring(xml), qstring(icon_name));
 }
 
 QDesignerWidgetBoxInterface__Widget* q_designerwidgetboxinterface__widget_new6(const char* aname, const char* xml, const char* icon_name, int32_t atype) {
-    return QDesignerWidgetBoxInterface__Widget_new6(qstring(aname), qstring(xml), qstring(icon_name), atype);
+    return QDesignerWidgetBoxInterface__Widget_New6(qstring(aname), qstring(xml), qstring(icon_name), atype);
 }
 
 void q_designerwidgetboxinterface__widget_operator_assign(void* self, void* w) {
@@ -2400,19 +2400,19 @@ void q_designerwidgetboxinterface__widget_delete(void* self) {
 }
 
 QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_new() {
-    return QDesignerWidgetBoxInterface__Category_new();
+    return QDesignerWidgetBoxInterface__Category_New();
 }
 
 QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_new2(void* param1) {
-    return QDesignerWidgetBoxInterface__Category_new2((QDesignerWidgetBoxInterface__Category*)param1);
+    return QDesignerWidgetBoxInterface__Category_New2((QDesignerWidgetBoxInterface__Category*)param1);
 }
 
 QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_new3(const char* aname) {
-    return QDesignerWidgetBoxInterface__Category_new3(qstring(aname));
+    return QDesignerWidgetBoxInterface__Category_New3(qstring(aname));
 }
 
 QDesignerWidgetBoxInterface__Category* q_designerwidgetboxinterface__category_new4(const char* aname, int32_t atype) {
-    return QDesignerWidgetBoxInterface__Category_new4(qstring(aname), atype);
+    return QDesignerWidgetBoxInterface__Category_New4(qstring(aname), atype);
 }
 
 const char* q_designerwidgetboxinterface__category_name(void* self) {

@@ -23,8 +23,8 @@ typedef struct QHttpMultiPart QHttpMultiPart;
 typedef struct QIODevice QIODevice;
 #endif
 
-QFormDataPartBuilder* QFormDataPartBuilder_new();
-QFormDataPartBuilder* QFormDataPartBuilder_new2(const QFormDataPartBuilder* param1);
+QFormDataPartBuilder* QFormDataPartBuilder_New();
+QFormDataPartBuilder* QFormDataPartBuilder_New2(const QFormDataPartBuilder* param1);
 void QFormDataPartBuilder_Swap(QFormDataPartBuilder* self, QFormDataPartBuilder* other);
 QFormDataPartBuilder* QFormDataPartBuilder_SetBody(QFormDataPartBuilder* self, libqt_string data);
 QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice(QFormDataPartBuilder* self, QIODevice* body);
@@ -35,7 +35,7 @@ QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice2(QFormDataPartBuilder* 
 QFormDataPartBuilder* QFormDataPartBuilder_SetBodyDevice3(QFormDataPartBuilder* self, QIODevice* body, const char* fileName, const char* mimeType);
 void QFormDataPartBuilder_Delete(QFormDataPartBuilder* self);
 
-QFormDataBuilder* QFormDataBuilder_new();
+QFormDataBuilder* QFormDataBuilder_New();
 void QFormDataBuilder_Swap(QFormDataBuilder* self, QFormDataBuilder* other);
 QFormDataPartBuilder* QFormDataBuilder_Part(QFormDataBuilder* self, const char* name);
 QHttpMultiPart* QFormDataBuilder_BuildMultiPart(QFormDataBuilder* self);

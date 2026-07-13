@@ -11,11 +11,11 @@
 #include "libqcandlestickseries.h"
 
 QCandlestickSeries* q_candlestickseries_new() {
-    return QCandlestickSeries_new();
+    return QCandlestickSeries_New();
 }
 
 QCandlestickSeries* q_candlestickseries_new2(void* parent) {
-    return QCandlestickSeries_new2((QObject*)parent);
+    return QCandlestickSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_candlestickseries_meta_object(void* self) {

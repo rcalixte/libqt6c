@@ -30,7 +30,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__DndPopupMenuPlugin* KIO__DndPopupMenuPlugin_new(QObject* parent);
+KIO__DndPopupMenuPlugin* KIO__DndPopupMenuPlugin_New(QObject* parent);
 QMetaObject* KIO__DndPopupMenuPlugin_MetaObject(const KIO__DndPopupMenuPlugin* self);
 void* KIO__DndPopupMenuPlugin_Metacast(KIO__DndPopupMenuPlugin* self, const char* param1);
 int KIO__DndPopupMenuPlugin_Metacall(KIO__DndPopupMenuPlugin* self, int param1, int param2, void** param3);

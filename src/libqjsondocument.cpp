@@ -10,11 +10,11 @@
 #include "libqjsondocument.hpp"
 #include "libqjsondocument.hxx"
 
-QJsonParseError* QJsonParseError_new(const QJsonParseError* other) {
+QJsonParseError* QJsonParseError_New(const QJsonParseError* other) {
     return new QJsonParseError(*other);
 }
 
-QJsonParseError* QJsonParseError_new2(QJsonParseError* other) {
+QJsonParseError* QJsonParseError_New2(QJsonParseError* other) {
     return new QJsonParseError(std::move(*other));
 }
 
@@ -58,19 +58,19 @@ void QJsonParseError_Delete(QJsonParseError* self) {
     delete self;
 }
 
-QJsonDocument* QJsonDocument_new() {
+QJsonDocument* QJsonDocument_New() {
     return new QJsonDocument();
 }
 
-QJsonDocument* QJsonDocument_new2(const QJsonObject* object) {
+QJsonDocument* QJsonDocument_New2(const QJsonObject* object) {
     return new QJsonDocument(*object);
 }
 
-QJsonDocument* QJsonDocument_new3(const QJsonArray* array) {
+QJsonDocument* QJsonDocument_New3(const QJsonArray* array) {
     return new QJsonDocument(*array);
 }
 
-QJsonDocument* QJsonDocument_new4(const QJsonDocument* other) {
+QJsonDocument* QJsonDocument_New4(const QJsonDocument* other) {
     return new QJsonDocument(*other);
 }
 

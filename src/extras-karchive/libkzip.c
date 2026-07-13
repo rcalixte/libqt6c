@@ -7,15 +7,15 @@
 #include "libkzip.h"
 
 KZip* k_zip_new(const char* filename) {
-    return KZip_new(qstring(filename));
+    return KZip_New(qstring(filename));
 }
 
 KZip* k_zip_new2(void* dev) {
-    return KZip_new2((QIODevice*)dev);
+    return KZip_New2((QIODevice*)dev);
 }
 
 KZip* k_zip_new3(void* param1) {
-    return KZip_new3((KZip*)param1);
+    return KZip_New3((KZip*)param1);
 }
 
 const char* k_zip_tr(const char* sourceText) {

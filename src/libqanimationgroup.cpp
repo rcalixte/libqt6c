@@ -11,11 +11,11 @@
 #include "libqanimationgroup.hpp"
 #include "libqanimationgroup.hxx"
 
-QAnimationGroup* QAnimationGroup_new() {
+QAnimationGroup* QAnimationGroup_New() {
     return new VirtualQAnimationGroup();
 }
 
-QAnimationGroup* QAnimationGroup_new2(QObject* parent) {
+QAnimationGroup* QAnimationGroup_New2(QObject* parent) {
     return new VirtualQAnimationGroup(parent);
 }
 

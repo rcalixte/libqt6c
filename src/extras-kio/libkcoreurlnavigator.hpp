@@ -26,9 +26,9 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KCoreUrlNavigator* KCoreUrlNavigator_new();
-KCoreUrlNavigator* KCoreUrlNavigator_new2(const QUrl* url);
-KCoreUrlNavigator* KCoreUrlNavigator_new3(const QUrl* url, QObject* parent);
+KCoreUrlNavigator* KCoreUrlNavigator_New();
+KCoreUrlNavigator* KCoreUrlNavigator_New2(const QUrl* url);
+KCoreUrlNavigator* KCoreUrlNavigator_New3(const QUrl* url, QObject* parent);
 QMetaObject* KCoreUrlNavigator_MetaObject(const KCoreUrlNavigator* self);
 void* KCoreUrlNavigator_Metacast(KCoreUrlNavigator* self, const char* param1);
 int KCoreUrlNavigator_Metacall(KCoreUrlNavigator* self, int param1, int param2, void** param3);

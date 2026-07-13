@@ -141,7 +141,7 @@ void q_poppler__pdfconverter_delete(void* self) {
 }
 
 Poppler__PDFConverter__NewSignatureData* q_poppler__pdfconverter__newsignaturedata_new() {
-    return Poppler__PDFConverter__NewSignatureData_new();
+    return Poppler__PDFConverter__NewSignatureData_New();
 }
 
 const char* q_poppler__pdfconverter__newsignaturedata_cert_nickname(void* self) {

@@ -13,11 +13,11 @@
 #include "libqthreadpool.hpp"
 #include "libqthreadpool.hxx"
 
-QThreadPool* QThreadPool_new() {
+QThreadPool* QThreadPool_New() {
     return new VirtualQThreadPool();
 }
 
-QThreadPool* QThreadPool_new2(QObject* parent) {
+QThreadPool* QThreadPool_New2(QObject* parent) {
     return new VirtualQThreadPool(parent);
 }
 

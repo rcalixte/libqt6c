@@ -14,11 +14,11 @@
 #include "libkdirmodel.h"
 
 KDirModel* k_dirmodel_new() {
-    return KDirModel_new();
+    return KDirModel_New();
 }
 
 KDirModel* k_dirmodel_new2(void* parent) {
-    return KDirModel_new2((QObject*)parent);
+    return KDirModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_dirmodel_meta_object(void* self) {

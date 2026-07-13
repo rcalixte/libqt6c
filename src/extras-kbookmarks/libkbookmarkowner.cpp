@@ -8,7 +8,7 @@
 #include "libkbookmarkowner.hpp"
 #include "libkbookmarkowner.hxx"
 
-KBookmarkOwner* KBookmarkOwner_new() {
+KBookmarkOwner* KBookmarkOwner_New() {
     return new VirtualKBookmarkOwner();
 }
 
@@ -321,13 +321,13 @@ void KBookmarkOwner_Delete(KBookmarkOwner* self) {
     delete self;
 }
 
-KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_new(const libqt_string title, const QUrl* url, const libqt_string icon) {
+KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_New(const libqt_string title, const QUrl* url, const libqt_string icon) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
     return new KBookmarkOwner::FutureBookmark(title_QString, *url, icon_QString);
 }
 
-KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_new2(const KBookmarkOwner__FutureBookmark* other) {
+KBookmarkOwner__FutureBookmark* KBookmarkOwner__FutureBookmark_New2(const KBookmarkOwner__FutureBookmark* other) {
     return new KBookmarkOwner::FutureBookmark(*other);
 }
 

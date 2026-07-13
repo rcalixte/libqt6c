@@ -19,7 +19,7 @@ typedef struct QDesignerDynamicPropertySheetExtension QDesignerDynamicPropertySh
 typedef struct QVariant QVariant;
 #endif
 
-QDesignerDynamicPropertySheetExtension* QDesignerDynamicPropertySheetExtension_new();
+QDesignerDynamicPropertySheetExtension* QDesignerDynamicPropertySheetExtension_New();
 bool QDesignerDynamicPropertySheetExtension_DynamicPropertiesAllowed(const QDesignerDynamicPropertySheetExtension* self);
 int QDesignerDynamicPropertySheetExtension_AddDynamicProperty(QDesignerDynamicPropertySheetExtension* self, const libqt_string propertyName, const QVariant* value);
 bool QDesignerDynamicPropertySheetExtension_RemoveDynamicProperty(QDesignerDynamicPropertySheetExtension* self, int index);

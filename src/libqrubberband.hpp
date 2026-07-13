@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QRubberBand* QRubberBand_new(int param1);
-QRubberBand* QRubberBand_new2(int param1, QWidget* param2);
+QRubberBand* QRubberBand_New(int param1);
+QRubberBand* QRubberBand_New2(int param1, QWidget* param2);
 QMetaObject* QRubberBand_MetaObject(const QRubberBand* self);
 void* QRubberBand_Metacast(QRubberBand* self, const char* param1);
 int QRubberBand_Metacall(QRubberBand* self, int param1, int param2, void** param3);

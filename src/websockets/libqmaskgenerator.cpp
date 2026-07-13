@@ -9,11 +9,11 @@
 #include "libqmaskgenerator.hpp"
 #include "libqmaskgenerator.hxx"
 
-QMaskGenerator* QMaskGenerator_new() {
+QMaskGenerator* QMaskGenerator_New() {
     return new VirtualQMaskGenerator();
 }
 
-QMaskGenerator* QMaskGenerator_new2(QObject* parent) {
+QMaskGenerator* QMaskGenerator_New2(QObject* parent) {
     return new VirtualQMaskGenerator(parent);
 }
 

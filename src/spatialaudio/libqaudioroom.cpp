@@ -13,7 +13,7 @@
 #include "libqaudioroom.hpp"
 #include "libqaudioroom.hxx"
 
-QAudioRoom* QAudioRoom_new(QAudioEngine* engine) {
+QAudioRoom* QAudioRoom_New(QAudioEngine* engine) {
     return new VirtualQAudioRoom(engine);
 }
 

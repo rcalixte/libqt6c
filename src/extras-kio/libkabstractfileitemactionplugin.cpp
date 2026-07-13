@@ -14,7 +14,7 @@
 #include "libkabstractfileitemactionplugin.hpp"
 #include "libkabstractfileitemactionplugin.hxx"
 
-KAbstractFileItemActionPlugin* KAbstractFileItemActionPlugin_new(QObject* parent) {
+KAbstractFileItemActionPlugin* KAbstractFileItemActionPlugin_New(QObject* parent) {
     return new VirtualKAbstractFileItemActionPlugin(parent);
 }
 

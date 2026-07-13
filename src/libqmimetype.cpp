@@ -5,11 +5,11 @@
 #include "libqmimetype.hpp"
 #include "libqmimetype.hxx"
 
-QMimeType* QMimeType_new() {
+QMimeType* QMimeType_New() {
     return new QMimeType();
 }
 
-QMimeType* QMimeType_new2(const QMimeType* other) {
+QMimeType* QMimeType_New2(const QMimeType* other) {
     return new QMimeType(*other);
 }
 

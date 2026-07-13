@@ -20,8 +20,8 @@ typedef struct QDBusMessage QDBusMessage;
 typedef struct QVariant QVariant;
 #endif
 
-QDBusMessage* QDBusMessage_new();
-QDBusMessage* QDBusMessage_new2(const QDBusMessage* other);
+QDBusMessage* QDBusMessage_New();
+QDBusMessage* QDBusMessage_New2(const QDBusMessage* other);
 void QDBusMessage_OperatorAssign(QDBusMessage* self, const QDBusMessage* other);
 void QDBusMessage_Swap(QDBusMessage* self, QDBusMessage* other);
 QDBusMessage* QDBusMessage_CreateSignal(const libqt_string path, const libqt_string interface, const libqt_string name);

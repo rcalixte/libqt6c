@@ -2,7 +2,7 @@
 #include "libembeddedimagedata.h"
 
 KFileMetaData__EmbeddedImageData* k_filemetadata__embeddedimagedata_new() {
-    return KFileMetaData__EmbeddedImageData_new();
+    return KFileMetaData__EmbeddedImageData_New();
 }
 
 void k_filemetadata__embeddedimagedata_delete(void* self) {

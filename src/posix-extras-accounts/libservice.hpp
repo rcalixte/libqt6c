@@ -22,8 +22,8 @@ typedef struct Accounts__Service Accounts__Service;
 typedef struct QDomDocument QDomDocument;
 #endif
 
-Accounts__Service* Accounts__Service_new();
-Accounts__Service* Accounts__Service_new2(const Accounts__Service* other);
+Accounts__Service* Accounts__Service_New();
+Accounts__Service* Accounts__Service_New2(const Accounts__Service* other);
 void Accounts__Service_OperatorAssign(Accounts__Service* self, const Accounts__Service* other);
 bool Accounts__Service_IsValid(const Accounts__Service* self);
 libqt_string Accounts__Service_Name(const Accounts__Service* self);

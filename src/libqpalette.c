@@ -5,31 +5,31 @@
 #include "libqpalette.h"
 
 QPalette* q_palette_new() {
-    return QPalette_new();
+    return QPalette_New();
 }
 
 QPalette* q_palette_new2(void* button) {
-    return QPalette_new2((QColor*)button);
+    return QPalette_New2((QColor*)button);
 }
 
 QPalette* q_palette_new3(int32_t button) {
-    return QPalette_new3(button);
+    return QPalette_New3(button);
 }
 
 QPalette* q_palette_new4(void* button, void* window) {
-    return QPalette_new4((QColor*)button, (QColor*)window);
+    return QPalette_New4((QColor*)button, (QColor*)window);
 }
 
 QPalette* q_palette_new5(void* windowText, void* button, void* light, void* dark, void* mid, void* text, void* bright_text, void* base, void* window) {
-    return QPalette_new5((QBrush*)windowText, (QBrush*)button, (QBrush*)light, (QBrush*)dark, (QBrush*)mid, (QBrush*)text, (QBrush*)bright_text, (QBrush*)base, (QBrush*)window);
+    return QPalette_New5((QBrush*)windowText, (QBrush*)button, (QBrush*)light, (QBrush*)dark, (QBrush*)mid, (QBrush*)text, (QBrush*)bright_text, (QBrush*)base, (QBrush*)window);
 }
 
 QPalette* q_palette_new6(void* windowText, void* window, void* light, void* dark, void* mid, void* text, void* base) {
-    return QPalette_new6((QColor*)windowText, (QColor*)window, (QColor*)light, (QColor*)dark, (QColor*)mid, (QColor*)text, (QColor*)base);
+    return QPalette_New6((QColor*)windowText, (QColor*)window, (QColor*)light, (QColor*)dark, (QColor*)mid, (QColor*)text, (QColor*)base);
 }
 
 QPalette* q_palette_new7(void* palette) {
-    return QPalette_new7((QPalette*)palette);
+    return QPalette_New7((QPalette*)palette);
 }
 
 void q_palette_operator_assign(void* self, void* palette) {

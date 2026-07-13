@@ -8,11 +8,11 @@
 #include "libqundogroup.h"
 
 QUndoGroup* q_undogroup_new() {
-    return QUndoGroup_new();
+    return QUndoGroup_New();
 }
 
 QUndoGroup* q_undogroup_new2(void* parent) {
-    return QUndoGroup_new2((QObject*)parent);
+    return QUndoGroup_New2((QObject*)parent);
 }
 
 const QMetaObject* q_undogroup_meta_object(void* self) {

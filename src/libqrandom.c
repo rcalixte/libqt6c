@@ -2,23 +2,23 @@
 #include "libqrandom.h"
 
 QRandomGenerator* q_randomgenerator_new() {
-    return QRandomGenerator_new();
+    return QRandomGenerator_New();
 }
 
 QRandomGenerator* q_randomgenerator_new2(uint32_t* seedBuffer, intptr_t lenVal) {
-    return QRandomGenerator_new2(seedBuffer, lenVal);
+    return QRandomGenerator_New2(seedBuffer, lenVal);
 }
 
 QRandomGenerator* q_randomgenerator_new3(uint32_t* begin, uint32_t* end) {
-    return QRandomGenerator_new3(begin, end);
+    return QRandomGenerator_New3(begin, end);
 }
 
 QRandomGenerator* q_randomgenerator_new4(void* other) {
-    return QRandomGenerator_new4((QRandomGenerator*)other);
+    return QRandomGenerator_New4((QRandomGenerator*)other);
 }
 
 QRandomGenerator* q_randomgenerator_new5(uint32_t seedValue) {
-    return QRandomGenerator_new5(seedValue);
+    return QRandomGenerator_New5(seedValue);
 }
 
 void q_randomgenerator_operator_assign(void* self, void* other) {
@@ -134,27 +134,27 @@ void q_randomgenerator_delete(void* self) {
 }
 
 QRandomGenerator64* q_randomgenerator64_new() {
-    return QRandomGenerator64_new();
+    return QRandomGenerator64_New();
 }
 
 QRandomGenerator64* q_randomgenerator64_new2(uint32_t* seedBuffer, intptr_t lenVal) {
-    return QRandomGenerator64_new2(seedBuffer, lenVal);
+    return QRandomGenerator64_New2(seedBuffer, lenVal);
 }
 
 QRandomGenerator64* q_randomgenerator64_new3(uint32_t* begin, uint32_t* end) {
-    return QRandomGenerator64_new3(begin, end);
+    return QRandomGenerator64_New3(begin, end);
 }
 
 QRandomGenerator64* q_randomgenerator64_new4(void* other) {
-    return QRandomGenerator64_new4((QRandomGenerator*)other);
+    return QRandomGenerator64_New4((QRandomGenerator*)other);
 }
 
 QRandomGenerator64* q_randomgenerator64_new5(void* param1) {
-    return QRandomGenerator64_new5((QRandomGenerator64*)param1);
+    return QRandomGenerator64_New5((QRandomGenerator64*)param1);
 }
 
 QRandomGenerator64* q_randomgenerator64_new6(uint32_t seedValue) {
-    return QRandomGenerator64_new6(seedValue);
+    return QRandomGenerator64_New6(seedValue);
 }
 
 uint64_t q_randomgenerator64_generate(void* self) {

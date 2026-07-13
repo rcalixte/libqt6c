@@ -11,11 +11,11 @@
 #include "libqsqldriverplugin.hpp"
 #include "libqsqldriverplugin.hxx"
 
-QSqlDriverPlugin* QSqlDriverPlugin_new() {
+QSqlDriverPlugin* QSqlDriverPlugin_New() {
     return new VirtualQSqlDriverPlugin();
 }
 
-QSqlDriverPlugin* QSqlDriverPlugin_new2(QObject* parent) {
+QSqlDriverPlugin* QSqlDriverPlugin_New2(QObject* parent) {
     return new VirtualQSqlDriverPlugin(parent);
 }
 

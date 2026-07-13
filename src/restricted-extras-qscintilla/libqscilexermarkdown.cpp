@@ -14,11 +14,11 @@
 #include "libqscilexermarkdown.hpp"
 #include "libqscilexermarkdown.hxx"
 
-QsciLexerMarkdown* QsciLexerMarkdown_new() {
+QsciLexerMarkdown* QsciLexerMarkdown_New() {
     return new VirtualQsciLexerMarkdown();
 }
 
-QsciLexerMarkdown* QsciLexerMarkdown_new2(QObject* parent) {
+QsciLexerMarkdown* QsciLexerMarkdown_New2(QObject* parent) {
     return new VirtualQsciLexerMarkdown(parent);
 }
 

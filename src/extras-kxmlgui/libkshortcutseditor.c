@@ -15,27 +15,27 @@
 #include "libkshortcutseditor.h"
 
 KShortcutsEditor* k_shortcutseditor_new(void* parent) {
-    return KShortcutsEditor_new((QWidget*)parent);
+    return KShortcutsEditor_New((QWidget*)parent);
 }
 
 KShortcutsEditor* k_shortcutseditor_new2(void* collection, void* parent) {
-    return KShortcutsEditor_new2((KActionCollection*)collection, (QWidget*)parent);
+    return KShortcutsEditor_New2((KActionCollection*)collection, (QWidget*)parent);
 }
 
 KShortcutsEditor* k_shortcutseditor_new3(void* collection, void* parent, int32_t actionTypes) {
-    return KShortcutsEditor_new3((KActionCollection*)collection, (QWidget*)parent, actionTypes);
+    return KShortcutsEditor_New3((KActionCollection*)collection, (QWidget*)parent, actionTypes);
 }
 
 KShortcutsEditor* k_shortcutseditor_new4(void* collection, void* parent, int32_t actionTypes, int32_t allowLetterShortcuts) {
-    return KShortcutsEditor_new4((KActionCollection*)collection, (QWidget*)parent, actionTypes, allowLetterShortcuts);
+    return KShortcutsEditor_New4((KActionCollection*)collection, (QWidget*)parent, actionTypes, allowLetterShortcuts);
 }
 
 KShortcutsEditor* k_shortcutseditor_new5(void* parent, int32_t actionTypes) {
-    return KShortcutsEditor_new5((QWidget*)parent, actionTypes);
+    return KShortcutsEditor_New5((QWidget*)parent, actionTypes);
 }
 
 KShortcutsEditor* k_shortcutseditor_new6(void* parent, int32_t actionTypes, int32_t allowLetterShortcuts) {
-    return KShortcutsEditor_new6((QWidget*)parent, actionTypes, allowLetterShortcuts);
+    return KShortcutsEditor_New6((QWidget*)parent, actionTypes, allowLetterShortcuts);
 }
 
 const QMetaObject* k_shortcutseditor_meta_object(void* self) {

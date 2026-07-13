@@ -3,7 +3,7 @@
 #include "libqcolormap.h"
 
 QColormap* q_colormap_new(void* colormap) {
-    return QColormap_new((QColormap*)colormap);
+    return QColormap_New((QColormap*)colormap);
 }
 
 void q_colormap_initialize() {

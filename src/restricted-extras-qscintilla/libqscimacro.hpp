@@ -25,8 +25,8 @@ typedef struct QsciMacro QsciMacro;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciMacro* QsciMacro_new(QsciScintilla* parent);
-QsciMacro* QsciMacro_new2(const libqt_string asc, QsciScintilla* parent);
+QsciMacro* QsciMacro_New(QsciScintilla* parent);
+QsciMacro* QsciMacro_New2(const libqt_string asc, QsciScintilla* parent);
 QMetaObject* QsciMacro_MetaObject(const QsciMacro* self);
 void* QsciMacro_Metacast(QsciMacro* self, const char* param1);
 int QsciMacro_Metacall(QsciMacro* self, int param1, int param2, void** param3);

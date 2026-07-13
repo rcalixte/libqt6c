@@ -25,8 +25,8 @@ typedef struct QOpenGLDebugMessage QOpenGLDebugMessage;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QOpenGLDebugMessage* QOpenGLDebugMessage_new();
-QOpenGLDebugMessage* QOpenGLDebugMessage_new2(const QOpenGLDebugMessage* debugMessage);
+QOpenGLDebugMessage* QOpenGLDebugMessage_New();
+QOpenGLDebugMessage* QOpenGLDebugMessage_New2(const QOpenGLDebugMessage* debugMessage);
 void QOpenGLDebugMessage_OperatorAssign(QOpenGLDebugMessage* self, const QOpenGLDebugMessage* debugMessage);
 void QOpenGLDebugMessage_Swap(QOpenGLDebugMessage* self, QOpenGLDebugMessage* other);
 int QOpenGLDebugMessage_Source(const QOpenGLDebugMessage* self);
@@ -46,8 +46,8 @@ QOpenGLDebugMessage* QOpenGLDebugMessage_CreateThirdPartyMessage3(const libqt_st
 QOpenGLDebugMessage* QOpenGLDebugMessage_CreateThirdPartyMessage4(const libqt_string text, uint32_t id, int severity, int type);
 void QOpenGLDebugMessage_Delete(QOpenGLDebugMessage* self);
 
-QOpenGLDebugLogger* QOpenGLDebugLogger_new();
-QOpenGLDebugLogger* QOpenGLDebugLogger_new2(QObject* parent);
+QOpenGLDebugLogger* QOpenGLDebugLogger_New();
+QOpenGLDebugLogger* QOpenGLDebugLogger_New2(QObject* parent);
 QMetaObject* QOpenGLDebugLogger_MetaObject(const QOpenGLDebugLogger* self);
 void* QOpenGLDebugLogger_Metacast(QOpenGLDebugLogger* self, const char* param1);
 int QOpenGLDebugLogger_Metacall(QOpenGLDebugLogger* self, int param1, int param2, void** param3);

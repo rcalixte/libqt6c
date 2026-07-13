@@ -12,11 +12,11 @@
 #include "libqhorizontalpercentbarseries.hpp"
 #include "libqhorizontalpercentbarseries.hxx"
 
-QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_new() {
+QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_New() {
     return new VirtualQHorizontalPercentBarSeries();
 }
 
-QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_new2(QObject* parent) {
+QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_New2(QObject* parent) {
     return new VirtualQHorizontalPercentBarSeries(parent);
 }
 

@@ -66,8 +66,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFilePlacesView* KFilePlacesView_new(QWidget* parent);
-KFilePlacesView* KFilePlacesView_new2();
+KFilePlacesView* KFilePlacesView_New(QWidget* parent);
+KFilePlacesView* KFilePlacesView_New2();
 QMetaObject* KFilePlacesView_MetaObject(const KFilePlacesView* self);
 void* KFilePlacesView_Metacast(KFilePlacesView* self, const char* param1);
 int KFilePlacesView_Metacall(KFilePlacesView* self, int param1, int param2, void** param3);

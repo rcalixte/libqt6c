@@ -16,7 +16,7 @@
 #include "libqabstractsocket.hpp"
 #include "libqabstractsocket.hxx"
 
-QAbstractSocket* QAbstractSocket_new(int socketType, QObject* parent) {
+QAbstractSocket* QAbstractSocket_New(int socketType, QObject* parent) {
     return new VirtualQAbstractSocket(static_cast<QAbstractSocket::SocketType>(socketType), parent);
 }
 

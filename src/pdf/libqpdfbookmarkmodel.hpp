@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QPdfBookmarkModel* QPdfBookmarkModel_new();
-QPdfBookmarkModel* QPdfBookmarkModel_new2(QObject* parent);
+QPdfBookmarkModel* QPdfBookmarkModel_New();
+QPdfBookmarkModel* QPdfBookmarkModel_New2(QObject* parent);
 QMetaObject* QPdfBookmarkModel_MetaObject(const QPdfBookmarkModel* self);
 void* QPdfBookmarkModel_Metacast(QPdfBookmarkModel* self, const char* param1);
 int QPdfBookmarkModel_Metacall(QPdfBookmarkModel* self, int param1, int param2, void** param3);

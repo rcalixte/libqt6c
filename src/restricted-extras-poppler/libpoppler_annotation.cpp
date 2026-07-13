@@ -182,7 +182,7 @@ void Poppler__Annotation_Delete(Poppler__Annotation* self) {
     delete self;
 }
 
-Poppler__TextAnnotation* Poppler__TextAnnotation_new(int type) {
+Poppler__TextAnnotation* Poppler__TextAnnotation_New(int type) {
     return new VirtualPopplerTextAnnotation(static_cast<Poppler::TextAnnotation::TextType>(type));
 }
 
@@ -293,7 +293,7 @@ void Poppler__TextAnnotation_Delete(Poppler__TextAnnotation* self) {
     delete self;
 }
 
-Poppler__LineAnnotation* Poppler__LineAnnotation_new(int type) {
+Poppler__LineAnnotation* Poppler__LineAnnotation_New(int type) {
     return new VirtualPopplerLineAnnotation(static_cast<Poppler::LineAnnotation::LineType>(type));
 }
 
@@ -415,7 +415,7 @@ void Poppler__LineAnnotation_Delete(Poppler__LineAnnotation* self) {
     delete self;
 }
 
-Poppler__GeomAnnotation* Poppler__GeomAnnotation_new() {
+Poppler__GeomAnnotation* Poppler__GeomAnnotation_New() {
     return new VirtualPopplerGeomAnnotation();
 }
 
@@ -462,7 +462,7 @@ void Poppler__GeomAnnotation_Delete(Poppler__GeomAnnotation* self) {
     delete self;
 }
 
-Poppler__HighlightAnnotation* Poppler__HighlightAnnotation_new() {
+Poppler__HighlightAnnotation* Poppler__HighlightAnnotation_New() {
     return new VirtualPopplerHighlightAnnotation();
 }
 
@@ -524,7 +524,7 @@ void Poppler__HighlightAnnotation_Delete(Poppler__HighlightAnnotation* self) {
     delete self;
 }
 
-Poppler__StampAnnotation* Poppler__StampAnnotation_new() {
+Poppler__StampAnnotation* Poppler__StampAnnotation_New() {
     return new VirtualPopplerStampAnnotation();
 }
 
@@ -576,7 +576,7 @@ void Poppler__StampAnnotation_Delete(Poppler__StampAnnotation* self) {
     delete self;
 }
 
-Poppler__SignatureAnnotation* Poppler__SignatureAnnotation_new() {
+Poppler__SignatureAnnotation* Poppler__SignatureAnnotation_New() {
     return new VirtualPopplerSignatureAnnotation();
 }
 
@@ -704,7 +704,7 @@ void Poppler__SignatureAnnotation_Delete(Poppler__SignatureAnnotation* self) {
     delete self;
 }
 
-Poppler__InkAnnotation* Poppler__InkAnnotation_new() {
+Poppler__InkAnnotation* Poppler__InkAnnotation_New() {
     return new VirtualPopplerInkAnnotation();
 }
 
@@ -801,7 +801,7 @@ void Poppler__LinkAnnotation_Delete(Poppler__LinkAnnotation* self) {
     delete self;
 }
 
-Poppler__CaretAnnotation* Poppler__CaretAnnotation_new() {
+Poppler__CaretAnnotation* Poppler__CaretAnnotation_New() {
     return new VirtualPopplerCaretAnnotation();
 }
 
@@ -1004,11 +1004,11 @@ void Poppler__RichMediaAnnotation_Delete(Poppler__RichMediaAnnotation* self) {
     delete self;
 }
 
-Poppler__Annotation__Style* Poppler__Annotation__Style_new() {
+Poppler__Annotation__Style* Poppler__Annotation__Style_New() {
     return new Poppler::Annotation::Style();
 }
 
-Poppler__Annotation__Style* Poppler__Annotation__Style_new2(const Poppler__Annotation__Style* other) {
+Poppler__Annotation__Style* Poppler__Annotation__Style_New2(const Poppler__Annotation__Style* other) {
     return new Poppler::Annotation::Style(*other);
 }
 
@@ -1107,11 +1107,11 @@ void Poppler__Annotation__Style_Delete(Poppler__Annotation__Style* self) {
     delete self;
 }
 
-Poppler__Annotation__Popup* Poppler__Annotation__Popup_new() {
+Poppler__Annotation__Popup* Poppler__Annotation__Popup_New() {
     return new Poppler::Annotation::Popup();
 }
 
-Poppler__Annotation__Popup* Poppler__Annotation__Popup_new2(const Poppler__Annotation__Popup* other) {
+Poppler__Annotation__Popup* Poppler__Annotation__Popup_New2(const Poppler__Annotation__Popup* other) {
     return new Poppler::Annotation::Popup(*other);
 }
 
@@ -1218,7 +1218,7 @@ void Poppler__HighlightAnnotation__Quad_Delete(Poppler__HighlightAnnotation__Qua
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Params* Poppler__RichMediaAnnotation__Params_new() {
+Poppler__RichMediaAnnotation__Params* Poppler__RichMediaAnnotation__Params_New() {
     return new Poppler::RichMediaAnnotation::Params();
 }
 
@@ -1238,7 +1238,7 @@ void Poppler__RichMediaAnnotation__Params_Delete(Poppler__RichMediaAnnotation__P
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Instance* Poppler__RichMediaAnnotation__Instance_new() {
+Poppler__RichMediaAnnotation__Instance* Poppler__RichMediaAnnotation__Instance_New() {
     return new Poppler::RichMediaAnnotation::Instance();
 }
 
@@ -1254,7 +1254,7 @@ void Poppler__RichMediaAnnotation__Instance_Delete(Poppler__RichMediaAnnotation_
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Configuration* Poppler__RichMediaAnnotation__Configuration_new() {
+Poppler__RichMediaAnnotation__Configuration* Poppler__RichMediaAnnotation__Configuration_New() {
     return new Poppler::RichMediaAnnotation::Configuration();
 }
 
@@ -1291,7 +1291,7 @@ void Poppler__RichMediaAnnotation__Configuration_Delete(Poppler__RichMediaAnnota
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Asset* Poppler__RichMediaAnnotation__Asset_new() {
+Poppler__RichMediaAnnotation__Asset* Poppler__RichMediaAnnotation__Asset_New() {
     return new Poppler::RichMediaAnnotation::Asset();
 }
 
@@ -1315,7 +1315,7 @@ void Poppler__RichMediaAnnotation__Asset_Delete(Poppler__RichMediaAnnotation__As
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Content* Poppler__RichMediaAnnotation__Content_new() {
+Poppler__RichMediaAnnotation__Content* Poppler__RichMediaAnnotation__Content_New() {
     return new Poppler::RichMediaAnnotation::Content();
 }
 
@@ -1349,7 +1349,7 @@ void Poppler__RichMediaAnnotation__Content_Delete(Poppler__RichMediaAnnotation__
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Activation* Poppler__RichMediaAnnotation__Activation_new() {
+Poppler__RichMediaAnnotation__Activation* Poppler__RichMediaAnnotation__Activation_New() {
     return new Poppler::RichMediaAnnotation::Activation();
 }
 
@@ -1361,7 +1361,7 @@ void Poppler__RichMediaAnnotation__Activation_Delete(Poppler__RichMediaAnnotatio
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Deactivation* Poppler__RichMediaAnnotation__Deactivation_new() {
+Poppler__RichMediaAnnotation__Deactivation* Poppler__RichMediaAnnotation__Deactivation_New() {
     return new Poppler::RichMediaAnnotation::Deactivation();
 }
 
@@ -1373,7 +1373,7 @@ void Poppler__RichMediaAnnotation__Deactivation_Delete(Poppler__RichMediaAnnotat
     delete self;
 }
 
-Poppler__RichMediaAnnotation__Settings* Poppler__RichMediaAnnotation__Settings_new() {
+Poppler__RichMediaAnnotation__Settings* Poppler__RichMediaAnnotation__Settings_New() {
     return new Poppler::RichMediaAnnotation::Settings();
 }
 

@@ -18,11 +18,11 @@
 #include "libqabstractscrollarea.h"
 
 QAbstractScrollArea* q_abstractscrollarea_new(void* parent) {
-    return QAbstractScrollArea_new((QWidget*)parent);
+    return QAbstractScrollArea_New((QWidget*)parent);
 }
 
 QAbstractScrollArea* q_abstractscrollarea_new2() {
-    return QAbstractScrollArea_new2();
+    return QAbstractScrollArea_New2();
 }
 
 const QMetaObject* q_abstractscrollarea_meta_object(void* self) {

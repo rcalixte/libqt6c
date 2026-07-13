@@ -38,11 +38,11 @@
 #include "liblanguagetoolconfigdialog.hpp"
 #include "liblanguagetoolconfigdialog.hxx"
 
-TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_new(QWidget* parent) {
+TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_New(QWidget* parent) {
     return new VirtualTextGrammarCheckLanguageToolConfigDialog(parent);
 }
 
-TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_new2() {
+TextGrammarCheck__LanguageToolConfigDialog* TextGrammarCheck__LanguageToolConfigDialog_New2() {
     return new VirtualTextGrammarCheckLanguageToolConfigDialog();
 }
 

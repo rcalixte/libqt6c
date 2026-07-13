@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QOpenGLWidget* QOpenGLWidget_new(QWidget* parent);
-QOpenGLWidget* QOpenGLWidget_new2();
-QOpenGLWidget* QOpenGLWidget_new3(QWidget* parent, int f);
+QOpenGLWidget* QOpenGLWidget_New(QWidget* parent);
+QOpenGLWidget* QOpenGLWidget_New2();
+QOpenGLWidget* QOpenGLWidget_New3(QWidget* parent, int f);
 QMetaObject* QOpenGLWidget_MetaObject(const QOpenGLWidget* self);
 void* QOpenGLWidget_Metacast(QOpenGLWidget* self, const char* param1);
 int QOpenGLWidget_Metacall(QOpenGLWidget* self, int param1, int param2, void** param3);

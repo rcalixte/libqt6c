@@ -39,15 +39,15 @@
 #include "libqinputdialog.hpp"
 #include "libqinputdialog.hxx"
 
-QInputDialog* QInputDialog_new(QWidget* parent) {
+QInputDialog* QInputDialog_New(QWidget* parent) {
     return new VirtualQInputDialog(parent);
 }
 
-QInputDialog* QInputDialog_new2() {
+QInputDialog* QInputDialog_New2() {
     return new VirtualQInputDialog();
 }
 
-QInputDialog* QInputDialog_new3(QWidget* parent, int flags) {
+QInputDialog* QInputDialog_New3(QWidget* parent, int flags) {
     return new VirtualQInputDialog(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

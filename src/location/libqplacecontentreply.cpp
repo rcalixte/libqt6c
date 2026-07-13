@@ -14,11 +14,11 @@
 #include "libqplacecontentreply.hpp"
 #include "libqplacecontentreply.hxx"
 
-QPlaceContentReply* QPlaceContentReply_new() {
+QPlaceContentReply* QPlaceContentReply_New() {
     return new VirtualQPlaceContentReply();
 }
 
-QPlaceContentReply* QPlaceContentReply_new2(QObject* parent) {
+QPlaceContentReply* QPlaceContentReply_New2(QObject* parent) {
     return new VirtualQPlaceContentReply(parent);
 }
 

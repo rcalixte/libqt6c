@@ -21,14 +21,14 @@ typedef struct QPen QPen;
 typedef struct QVariant QVariant;
 #endif
 
-QPen* QPen_new();
-QPen* QPen_new2(int param1);
-QPen* QPen_new3(const QColor* color);
-QPen* QPen_new4(const QBrush* brush, double width);
-QPen* QPen_new5(const QPen* pen);
-QPen* QPen_new6(const QBrush* brush, double width, int s);
-QPen* QPen_new7(const QBrush* brush, double width, int s, int c);
-QPen* QPen_new8(const QBrush* brush, double width, int s, int c, int j);
+QPen* QPen_New();
+QPen* QPen_New2(int param1);
+QPen* QPen_New3(const QColor* color);
+QPen* QPen_New4(const QBrush* brush, double width);
+QPen* QPen_New5(const QPen* pen);
+QPen* QPen_New6(const QBrush* brush, double width, int s);
+QPen* QPen_New7(const QBrush* brush, double width, int s, int c);
+QPen* QPen_New8(const QBrush* brush, double width, int s, int c, int j);
 void QPen_OperatorAssign(QPen* self, const QPen* pen);
 void QPen_Swap(QPen* self, QPen* other);
 int QPen_Style(const QPen* self);

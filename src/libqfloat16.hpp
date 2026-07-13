@@ -18,9 +18,9 @@ extern "C" {
 typedef struct qfloat16 qfloat16;
 #endif
 
-qfloat16* qfloat16_new();
-qfloat16* qfloat16_new2(int param1);
-qfloat16* qfloat16_new3(float f);
+qfloat16* qfloat16_New();
+qfloat16* qfloat16_New2(int param1);
+qfloat16* qfloat16_New3(float f);
 void qfloat16_CopyAssign(qfloat16* self, qfloat16* other);
 void qfloat16_MoveAssign(qfloat16* self, qfloat16* other);
 float qfloat16_ToFloat(const qfloat16* self);

@@ -7,11 +7,11 @@
 #include "libdefinitiondownloader.h"
 
 KSyntaxHighlighting__DefinitionDownloader* k_syntaxhighlighting__definitiondownloader_new(void* repo) {
-    return KSyntaxHighlighting__DefinitionDownloader_new((KSyntaxHighlighting__Repository*)repo);
+    return KSyntaxHighlighting__DefinitionDownloader_New((KSyntaxHighlighting__Repository*)repo);
 }
 
 KSyntaxHighlighting__DefinitionDownloader* k_syntaxhighlighting__definitiondownloader_new2(void* repo, void* parent) {
-    return KSyntaxHighlighting__DefinitionDownloader_new2((KSyntaxHighlighting__Repository*)repo, (QObject*)parent);
+    return KSyntaxHighlighting__DefinitionDownloader_New2((KSyntaxHighlighting__Repository*)repo, (QObject*)parent);
 }
 
 const QMetaObject* k_syntaxhighlighting__definitiondownloader_meta_object(void* self) {

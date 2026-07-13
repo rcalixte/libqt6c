@@ -42,11 +42,11 @@
 #include "libqmenubar.hpp"
 #include "libqmenubar.hxx"
 
-QMenuBar* QMenuBar_new(QWidget* parent) {
+QMenuBar* QMenuBar_New(QWidget* parent) {
     return new VirtualQMenuBar(parent);
 }
 
-QMenuBar* QMenuBar_new2() {
+QMenuBar* QMenuBar_New2() {
     return new VirtualQMenuBar();
 }
 

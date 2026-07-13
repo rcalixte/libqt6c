@@ -5,31 +5,31 @@
 #include "libkpluginmetadata.h"
 
 KPluginMetaData* k_pluginmetadata_new() {
-    return KPluginMetaData_new();
+    return KPluginMetaData_New();
 }
 
 KPluginMetaData* k_pluginmetadata_new2(void* loader) {
-    return KPluginMetaData_new2((QPluginLoader*)loader);
+    return KPluginMetaData_New2((QPluginLoader*)loader);
 }
 
 KPluginMetaData* k_pluginmetadata_new3(const char* pluginFile) {
-    return KPluginMetaData_new3(qstring(pluginFile));
+    return KPluginMetaData_New3(qstring(pluginFile));
 }
 
 KPluginMetaData* k_pluginmetadata_new4(void* metaData, const char* fileName) {
-    return KPluginMetaData_new4((QJsonObject*)metaData, qstring(fileName));
+    return KPluginMetaData_New4((QJsonObject*)metaData, qstring(fileName));
 }
 
 KPluginMetaData* k_pluginmetadata_new5(void* param1) {
-    return KPluginMetaData_new5((KPluginMetaData*)param1);
+    return KPluginMetaData_New5((KPluginMetaData*)param1);
 }
 
 KPluginMetaData* k_pluginmetadata_new6(void* loader, int32_t options) {
-    return KPluginMetaData_new6((QPluginLoader*)loader, options);
+    return KPluginMetaData_New6((QPluginLoader*)loader, options);
 }
 
 KPluginMetaData* k_pluginmetadata_new7(const char* pluginFile, int32_t options) {
-    return KPluginMetaData_new7(qstring(pluginFile), options);
+    return KPluginMetaData_New7(qstring(pluginFile), options);
 }
 
 void k_pluginmetadata_operator_assign(void* self, void* param1) {

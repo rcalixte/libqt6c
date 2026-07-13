@@ -9,19 +9,19 @@
 #include "libqfile.h"
 
 QFile* q_file_new() {
-    return QFile_new();
+    return QFile_New();
 }
 
 QFile* q_file_new2(const char* name) {
-    return QFile_new2(qstring(name));
+    return QFile_New2(qstring(name));
 }
 
 QFile* q_file_new3(void* parent) {
-    return QFile_new3((QObject*)parent);
+    return QFile_New3((QObject*)parent);
 }
 
 QFile* q_file_new4(const char* name, void* parent) {
-    return QFile_new4(qstring(name), (QObject*)parent);
+    return QFile_New4(qstring(name), (QObject*)parent);
 }
 
 const QMetaObject* q_file_meta_object(void* self) {

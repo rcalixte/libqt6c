@@ -3,15 +3,15 @@
 #include "libqlowenergydescriptordata.h"
 
 QLowEnergyDescriptorData* q_lowenergydescriptordata_new() {
-    return QLowEnergyDescriptorData_new();
+    return QLowEnergyDescriptorData_New();
 }
 
 QLowEnergyDescriptorData* q_lowenergydescriptordata_new2(void* uuid, char* value) {
-    return QLowEnergyDescriptorData_new2((QBluetoothUuid*)uuid, qstring(value));
+    return QLowEnergyDescriptorData_New2((QBluetoothUuid*)uuid, qstring(value));
 }
 
 QLowEnergyDescriptorData* q_lowenergydescriptordata_new3(void* other) {
-    return QLowEnergyDescriptorData_new3((QLowEnergyDescriptorData*)other);
+    return QLowEnergyDescriptorData_New3((QLowEnergyDescriptorData*)other);
 }
 
 void q_lowenergydescriptordata_operator_assign(void* self, void* other) {

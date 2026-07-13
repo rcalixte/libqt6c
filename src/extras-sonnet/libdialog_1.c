@@ -16,7 +16,7 @@
 #include "libdialog_1.h"
 
 Sonnet__Dialog* k_sonnet__dialog_new(void* checker, void* parent) {
-    return Sonnet__Dialog_new((Sonnet__BackgroundChecker*)checker, (QWidget*)parent);
+    return Sonnet__Dialog_New((Sonnet__BackgroundChecker*)checker, (QWidget*)parent);
 }
 
 const QMetaObject* k_sonnet__dialog_meta_object(void* self) {

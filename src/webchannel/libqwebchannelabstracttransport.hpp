@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWebChannelAbstractTransport QWebChannelAbstractTransport;
 #endif
 
-QWebChannelAbstractTransport* QWebChannelAbstractTransport_new();
-QWebChannelAbstractTransport* QWebChannelAbstractTransport_new2(QObject* parent);
+QWebChannelAbstractTransport* QWebChannelAbstractTransport_New();
+QWebChannelAbstractTransport* QWebChannelAbstractTransport_New2(QObject* parent);
 QMetaObject* QWebChannelAbstractTransport_MetaObject(const QWebChannelAbstractTransport* self);
 void* QWebChannelAbstractTransport_Metacast(QWebChannelAbstractTransport* self, const char* param1);
 int QWebChannelAbstractTransport_Metacall(QWebChannelAbstractTransport* self, int param1, int param2, void** param3);

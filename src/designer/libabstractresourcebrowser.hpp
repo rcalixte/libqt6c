@@ -50,8 +50,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_new(QWidget* parent);
-QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_new2();
+QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_New(QWidget* parent);
+QDesignerResourceBrowserInterface* QDesignerResourceBrowserInterface_New2();
 QMetaObject* QDesignerResourceBrowserInterface_MetaObject(const QDesignerResourceBrowserInterface* self);
 void* QDesignerResourceBrowserInterface_Metacast(QDesignerResourceBrowserInterface* self, const char* param1);
 int QDesignerResourceBrowserInterface_Metacall(QDesignerResourceBrowserInterface* self, int param1, int param2, void** param3);

@@ -27,15 +27,15 @@
 #include "libkdiroperator.h"
 
 KDirOperator* k_diroperator_new() {
-    return KDirOperator_new();
+    return KDirOperator_New();
 }
 
 KDirOperator* k_diroperator_new2(void* urlName) {
-    return KDirOperator_new2((QUrl*)urlName);
+    return KDirOperator_New2((QUrl*)urlName);
 }
 
 KDirOperator* k_diroperator_new3(void* urlName, void* parent) {
-    return KDirOperator_new3((QUrl*)urlName, (QWidget*)parent);
+    return KDirOperator_New3((QUrl*)urlName, (QWidget*)parent);
 }
 
 const QMetaObject* k_diroperator_meta_object(void* self) {

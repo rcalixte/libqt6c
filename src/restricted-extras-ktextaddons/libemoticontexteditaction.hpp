@@ -31,7 +31,7 @@ typedef struct QWidgetAction QWidgetAction;
 typedef struct TextEmoticonsWidgets__EmoticonTextEditAction TextEmoticonsWidgets__EmoticonTextEditAction;
 #endif
 
-TextEmoticonsWidgets__EmoticonTextEditAction* TextEmoticonsWidgets__EmoticonTextEditAction_new(QObject* parent);
+TextEmoticonsWidgets__EmoticonTextEditAction* TextEmoticonsWidgets__EmoticonTextEditAction_New(QObject* parent);
 QMetaObject* TextEmoticonsWidgets__EmoticonTextEditAction_MetaObject(const TextEmoticonsWidgets__EmoticonTextEditAction* self);
 void* TextEmoticonsWidgets__EmoticonTextEditAction_Metacast(TextEmoticonsWidgets__EmoticonTextEditAction* self, const char* param1);
 int TextEmoticonsWidgets__EmoticonTextEditAction_Metacall(TextEmoticonsWidgets__EmoticonTextEditAction* self, int param1, int param2, void** param3);

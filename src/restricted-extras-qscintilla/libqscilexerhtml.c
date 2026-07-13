@@ -11,11 +11,11 @@
 #include "libqscilexerhtml.h"
 
 QsciLexerHTML* q_scilexerhtml_new() {
-    return QsciLexerHTML_new();
+    return QsciLexerHTML_New();
 }
 
 QsciLexerHTML* q_scilexerhtml_new2(void* parent) {
-    return QsciLexerHTML_new2((QObject*)parent);
+    return QsciLexerHTML_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerhtml_meta_object(void* self) {

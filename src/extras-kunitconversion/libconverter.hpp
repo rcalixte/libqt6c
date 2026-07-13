@@ -31,8 +31,8 @@ typedef struct KUnitConversion__UnitCategory KUnitConversion__UnitCategory;
 typedef struct KUnitConversion__Value KUnitConversion__Value;
 #endif
 
-KUnitConversion__Converter* KUnitConversion__Converter_new();
-KUnitConversion__Converter* KUnitConversion__Converter_new2(const KUnitConversion__Converter* other);
+KUnitConversion__Converter* KUnitConversion__Converter_New();
+KUnitConversion__Converter* KUnitConversion__Converter_New2(const KUnitConversion__Converter* other);
 void KUnitConversion__Converter_OperatorAssign(KUnitConversion__Converter* self, const KUnitConversion__Converter* other);
 KUnitConversion__Value* KUnitConversion__Converter_Convert(const KUnitConversion__Converter* self, const KUnitConversion__Value* value);
 KUnitConversion__Value* KUnitConversion__Converter_Convert2(const KUnitConversion__Converter* self, const KUnitConversion__Value* value, int toUnit);

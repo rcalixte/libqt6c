@@ -5,7 +5,7 @@
 #include "libkmessageboxdontaskagaininterface.hpp"
 #include "libkmessageboxdontaskagaininterface.hxx"
 
-KMessageBoxDontAskAgainInterface* KMessageBoxDontAskAgainInterface_new() {
+KMessageBoxDontAskAgainInterface* KMessageBoxDontAskAgainInterface_New() {
     return new VirtualKMessageBoxDontAskAgainInterface();
 }
 

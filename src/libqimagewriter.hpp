@@ -20,10 +20,10 @@ typedef struct QImage QImage;
 typedef struct QImageWriter QImageWriter;
 #endif
 
-QImageWriter* QImageWriter_new();
-QImageWriter* QImageWriter_new2(QIODevice* device, const libqt_string format);
-QImageWriter* QImageWriter_new3(const libqt_string fileName);
-QImageWriter* QImageWriter_new4(const libqt_string fileName, const libqt_string format);
+QImageWriter* QImageWriter_New();
+QImageWriter* QImageWriter_New2(QIODevice* device, const libqt_string format);
+QImageWriter* QImageWriter_New3(const libqt_string fileName);
+QImageWriter* QImageWriter_New4(const libqt_string fileName, const libqt_string format);
 void QImageWriter_SetFormat(QImageWriter* self, const libqt_string format);
 libqt_string QImageWriter_Format(const QImageWriter* self);
 void QImageWriter_SetDevice(QImageWriter* self, QIODevice* device);

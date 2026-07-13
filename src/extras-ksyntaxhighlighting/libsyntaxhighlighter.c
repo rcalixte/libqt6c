@@ -16,15 +16,15 @@
 #include "libsyntaxhighlighter.h"
 
 KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_new() {
-    return KSyntaxHighlighting__SyntaxHighlighter_new();
+    return KSyntaxHighlighting__SyntaxHighlighter_New();
 }
 
 KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_new2(void* document) {
-    return KSyntaxHighlighting__SyntaxHighlighter_new2((QTextDocument*)document);
+    return KSyntaxHighlighting__SyntaxHighlighter_New2((QTextDocument*)document);
 }
 
 KSyntaxHighlighting__SyntaxHighlighter* k_syntaxhighlighting__syntaxhighlighter_new3(void* parent) {
-    return KSyntaxHighlighting__SyntaxHighlighter_new3((QObject*)parent);
+    return KSyntaxHighlighting__SyntaxHighlighter_New3((QObject*)parent);
 }
 
 const QMetaObject* k_syntaxhighlighting__syntaxhighlighter_meta_object(void* self) {

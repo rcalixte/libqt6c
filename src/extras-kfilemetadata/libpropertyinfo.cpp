@@ -6,15 +6,15 @@
 #include "libpropertyinfo.hpp"
 #include "libpropertyinfo.hxx"
 
-KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_new() {
+KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_New() {
     return new KFileMetaData::PropertyInfo();
 }
 
-KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_new2(int property) {
+KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_New2(int property) {
     return new KFileMetaData::PropertyInfo(static_cast<KFileMetaData::Property::Property>(property));
 }
 
-KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_new3(const KFileMetaData__PropertyInfo* pi) {
+KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_New3(const KFileMetaData__PropertyInfo* pi) {
     return new KFileMetaData::PropertyInfo(*pi);
 }
 

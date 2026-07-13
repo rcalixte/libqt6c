@@ -6,11 +6,11 @@
 #include "libcomment.hpp"
 #include "libcomment.hxx"
 
-Attica__Comment* Attica__Comment_new() {
+Attica__Comment* Attica__Comment_New() {
     return new Attica::Comment();
 }
 
-Attica__Comment* Attica__Comment_new2(const Attica__Comment* other) {
+Attica__Comment* Attica__Comment_New2(const Attica__Comment* other) {
     return new Attica::Comment(*other);
 }
 

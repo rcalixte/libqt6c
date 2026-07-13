@@ -9,11 +9,11 @@
 #include "libqxylegendmarker.h"
 
 QXYLegendMarker* q_xylegendmarker_new(void* series, void* legend) {
-    return QXYLegendMarker_new((QXYSeries*)series, (QLegend*)legend);
+    return QXYLegendMarker_New((QXYSeries*)series, (QLegend*)legend);
 }
 
 QXYLegendMarker* q_xylegendmarker_new2(void* series, void* legend, void* parent) {
-    return QXYLegendMarker_new2((QXYSeries*)series, (QLegend*)legend, (QObject*)parent);
+    return QXYLegendMarker_New2((QXYSeries*)series, (QLegend*)legend, (QObject*)parent);
 }
 
 const QMetaObject* q_xylegendmarker_meta_object(void* self) {

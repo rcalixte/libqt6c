@@ -23,8 +23,8 @@ typedef struct QJsonValue QJsonValue;
 typedef struct QVariant QVariant;
 #endif
 
-QJsonParseError* QJsonParseError_new(const QJsonParseError* other);
-QJsonParseError* QJsonParseError_new2(QJsonParseError* other);
+QJsonParseError* QJsonParseError_New(const QJsonParseError* other);
+QJsonParseError* QJsonParseError_New2(QJsonParseError* other);
 void QJsonParseError_CopyAssign(QJsonParseError* self, QJsonParseError* other);
 void QJsonParseError_MoveAssign(QJsonParseError* self, QJsonParseError* other);
 libqt_string QJsonParseError_ErrorString(const QJsonParseError* self);
@@ -34,10 +34,10 @@ int QJsonParseError_Error(const QJsonParseError* self);
 void QJsonParseError_SetError(QJsonParseError* self, int error);
 void QJsonParseError_Delete(QJsonParseError* self);
 
-QJsonDocument* QJsonDocument_new();
-QJsonDocument* QJsonDocument_new2(const QJsonObject* object);
-QJsonDocument* QJsonDocument_new3(const QJsonArray* array);
-QJsonDocument* QJsonDocument_new4(const QJsonDocument* other);
+QJsonDocument* QJsonDocument_New();
+QJsonDocument* QJsonDocument_New2(const QJsonObject* object);
+QJsonDocument* QJsonDocument_New3(const QJsonArray* array);
+QJsonDocument* QJsonDocument_New4(const QJsonDocument* other);
 void QJsonDocument_OperatorAssign(QJsonDocument* self, const QJsonDocument* other);
 void QJsonDocument_Swap(QJsonDocument* self, QJsonDocument* other);
 QJsonDocument* QJsonDocument_FromVariant(const QVariant* variant);

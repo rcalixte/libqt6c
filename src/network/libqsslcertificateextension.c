@@ -3,11 +3,11 @@
 #include "libqsslcertificateextension.h"
 
 QSslCertificateExtension* q_sslcertificateextension_new() {
-    return QSslCertificateExtension_new();
+    return QSslCertificateExtension_New();
 }
 
 QSslCertificateExtension* q_sslcertificateextension_new2(void* other) {
-    return QSslCertificateExtension_new2((QSslCertificateExtension*)other);
+    return QSslCertificateExtension_New2((QSslCertificateExtension*)other);
 }
 
 void q_sslcertificateextension_operator_assign(void* self, void* other) {

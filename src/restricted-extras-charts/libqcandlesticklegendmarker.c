@@ -9,11 +9,11 @@
 #include "libqcandlesticklegendmarker.h"
 
 QCandlestickLegendMarker* q_candlesticklegendmarker_new(void* series, void* legend) {
-    return QCandlestickLegendMarker_new((QCandlestickSeries*)series, (QLegend*)legend);
+    return QCandlestickLegendMarker_New((QCandlestickSeries*)series, (QLegend*)legend);
 }
 
 QCandlestickLegendMarker* q_candlesticklegendmarker_new2(void* series, void* legend, void* parent) {
-    return QCandlestickLegendMarker_new2((QCandlestickSeries*)series, (QLegend*)legend, (QObject*)parent);
+    return QCandlestickLegendMarker_New2((QCandlestickSeries*)series, (QLegend*)legend, (QObject*)parent);
 }
 
 const QMetaObject* q_candlesticklegendmarker_meta_object(void* self) {

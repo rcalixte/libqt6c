@@ -4,11 +4,11 @@
 #include "libqjsonobject.h"
 
 QJsonObject* q_jsonobject_new() {
-    return QJsonObject_new();
+    return QJsonObject_New();
 }
 
 QJsonObject* q_jsonobject_new2(void* other) {
-    return QJsonObject_new2((QJsonObject*)other);
+    return QJsonObject_New2((QJsonObject*)other);
 }
 
 void q_jsonobject_operator_assign(void* self, void* other) {
@@ -335,19 +335,19 @@ void q_jsonobject_delete(void* self) {
 }
 
 QJsonObject__iterator* q_jsonobject__iterator_new(void* other) {
-    return QJsonObject__iterator_new((QJsonObject__iterator*)other);
+    return QJsonObject__iterator_New((QJsonObject__iterator*)other);
 }
 
 QJsonObject__iterator* q_jsonobject__iterator_new2() {
-    return QJsonObject__iterator_new2();
+    return QJsonObject__iterator_New2();
 }
 
 QJsonObject__iterator* q_jsonobject__iterator_new3(void* obj, intptr_t index) {
-    return QJsonObject__iterator_new3((QJsonObject*)obj, index);
+    return QJsonObject__iterator_New3((QJsonObject*)obj, index);
 }
 
 QJsonObject__iterator* q_jsonobject__iterator_new4(void* other) {
-    return QJsonObject__iterator_new4((QJsonObject__iterator*)other);
+    return QJsonObject__iterator_New4((QJsonObject__iterator*)other);
 }
 
 void q_jsonobject__iterator_operator_assign(void* self, void* other) {
@@ -422,23 +422,23 @@ void q_jsonobject__iterator_delete(void* self) {
 }
 
 QJsonObject__const_iterator* q_jsonobject__const_iterator_new(void* other) {
-    return QJsonObject__const_iterator_new((QJsonObject__const_iterator*)other);
+    return QJsonObject__const_iterator_New((QJsonObject__const_iterator*)other);
 }
 
 QJsonObject__const_iterator* q_jsonobject__const_iterator_new2() {
-    return QJsonObject__const_iterator_new2();
+    return QJsonObject__const_iterator_New2();
 }
 
 QJsonObject__const_iterator* q_jsonobject__const_iterator_new3(void* obj, intptr_t index) {
-    return QJsonObject__const_iterator_new3((QJsonObject*)obj, index);
+    return QJsonObject__const_iterator_New3((QJsonObject*)obj, index);
 }
 
 QJsonObject__const_iterator* q_jsonobject__const_iterator_new4(void* other) {
-    return QJsonObject__const_iterator_new4((QJsonObject__iterator*)other);
+    return QJsonObject__const_iterator_New4((QJsonObject__iterator*)other);
 }
 
 QJsonObject__const_iterator* q_jsonobject__const_iterator_new5(void* other) {
-    return QJsonObject__const_iterator_new5((QJsonObject__const_iterator*)other);
+    return QJsonObject__const_iterator_New5((QJsonObject__const_iterator*)other);
 }
 
 void q_jsonobject__const_iterator_operator_assign(void* self, void* other) {

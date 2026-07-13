@@ -32,7 +32,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KParts__FileInfoExtension* KParts__FileInfoExtension_new(KParts__ReadOnlyPart* parent);
+KParts__FileInfoExtension* KParts__FileInfoExtension_New(KParts__ReadOnlyPart* parent);
 QMetaObject* KParts__FileInfoExtension_MetaObject(const KParts__FileInfoExtension* self);
 void* KParts__FileInfoExtension_Metacast(KParts__FileInfoExtension* self, const char* param1);
 int KParts__FileInfoExtension_Metacall(KParts__FileInfoExtension* self, int param1, int param2, void** param3);

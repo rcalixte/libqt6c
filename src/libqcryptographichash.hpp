@@ -20,7 +20,7 @@ typedef struct QCryptographicHash QCryptographicHash;
 typedef struct QIODevice QIODevice;
 #endif
 
-QCryptographicHash* QCryptographicHash_new(int method);
+QCryptographicHash* QCryptographicHash_New(int method);
 void QCryptographicHash_Swap(QCryptographicHash* self, QCryptographicHash* other);
 void QCryptographicHash_Reset(QCryptographicHash* self);
 int QCryptographicHash_Algorithm(const QCryptographicHash* self);

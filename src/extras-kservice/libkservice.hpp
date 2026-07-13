@@ -22,11 +22,11 @@ typedef struct KSycocaEntry KSycocaEntry;
 typedef struct QSharedData QSharedData;
 #endif
 
-KService* KService_new(const libqt_string name, const libqt_string exec, const libqt_string icon);
-KService* KService_new2(const libqt_string fullpath);
-KService* KService_new3(const KDesktopFile* config);
-KService* KService_new4(const KService* other);
-KService* KService_new5(const KDesktopFile* config, const libqt_string entryPath);
+KService* KService_New(const libqt_string name, const libqt_string exec, const libqt_string icon);
+KService* KService_New2(const libqt_string fullpath);
+KService* KService_New3(const KDesktopFile* config);
+KService* KService_New4(const KService* other);
+KService* KService_New5(const KDesktopFile* config, const libqt_string entryPath);
 bool KService_IsApplication(const KService* self);
 libqt_string KService_Exec(const KService* self);
 libqt_string KService_Icon(const KService* self);

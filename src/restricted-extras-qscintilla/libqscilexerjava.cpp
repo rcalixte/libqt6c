@@ -14,11 +14,11 @@
 #include "libqscilexerjava.hpp"
 #include "libqscilexerjava.hxx"
 
-QsciLexerJava* QsciLexerJava_new() {
+QsciLexerJava* QsciLexerJava_New() {
     return new VirtualQsciLexerJava();
 }
 
-QsciLexerJava* QsciLexerJava_new2(QObject* parent) {
+QsciLexerJava* QsciLexerJava_New2(QObject* parent) {
     return new VirtualQsciLexerJava(parent);
 }
 

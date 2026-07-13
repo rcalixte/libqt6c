@@ -14,11 +14,11 @@
 #include "libqscilexerbatch.hpp"
 #include "libqscilexerbatch.hxx"
 
-QsciLexerBatch* QsciLexerBatch_new() {
+QsciLexerBatch* QsciLexerBatch_New() {
     return new VirtualQsciLexerBatch();
 }
 
-QsciLexerBatch* QsciLexerBatch_new2(QObject* parent) {
+QsciLexerBatch* QsciLexerBatch_New2(QObject* parent) {
     return new VirtualQsciLexerBatch(parent);
 }
 

@@ -19,7 +19,7 @@ typedef struct QDesignerContainerExtension QDesignerContainerExtension;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerContainerExtension* QDesignerContainerExtension_new();
+QDesignerContainerExtension* QDesignerContainerExtension_New();
 int QDesignerContainerExtension_Count(const QDesignerContainerExtension* self);
 QWidget* QDesignerContainerExtension_Widget(const QDesignerContainerExtension* self, int index);
 int QDesignerContainerExtension_CurrentIndex(const QDesignerContainerExtension* self);

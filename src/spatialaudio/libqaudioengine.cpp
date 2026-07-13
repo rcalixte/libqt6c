@@ -11,19 +11,19 @@
 #include "libqaudioengine.hpp"
 #include "libqaudioengine.hxx"
 
-QAudioEngine* QAudioEngine_new() {
+QAudioEngine* QAudioEngine_New() {
     return new VirtualQAudioEngine();
 }
 
-QAudioEngine* QAudioEngine_new2(QObject* parent) {
+QAudioEngine* QAudioEngine_New2(QObject* parent) {
     return new VirtualQAudioEngine(parent);
 }
 
-QAudioEngine* QAudioEngine_new3(int sampleRate) {
+QAudioEngine* QAudioEngine_New3(int sampleRate) {
     return new VirtualQAudioEngine(static_cast<int>(sampleRate));
 }
 
-QAudioEngine* QAudioEngine_new4(int sampleRate, QObject* parent) {
+QAudioEngine* QAudioEngine_New4(int sampleRate, QObject* parent) {
     return new VirtualQAudioEngine(static_cast<int>(sampleRate), parent);
 }
 

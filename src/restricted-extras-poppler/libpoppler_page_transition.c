@@ -2,7 +2,7 @@
 #include "libpoppler_page_transition.h"
 
 Poppler__PageTransition* q_poppler__pagetransition_new(void* pt) {
-    return Poppler__PageTransition_new((Poppler__PageTransition*)pt);
+    return Poppler__PageTransition_New((Poppler__PageTransition*)pt);
 }
 
 void q_poppler__pagetransition_operator_assign(void* self, void* other) {

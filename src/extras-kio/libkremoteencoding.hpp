@@ -19,8 +19,8 @@ typedef struct KRemoteEncoding KRemoteEncoding;
 typedef struct QUrl QUrl;
 #endif
 
-KRemoteEncoding* KRemoteEncoding_new();
-KRemoteEncoding* KRemoteEncoding_new2(const char* name);
+KRemoteEncoding* KRemoteEncoding_New();
+KRemoteEncoding* KRemoteEncoding_New2(const char* name);
 libqt_string KRemoteEncoding_Decode(const KRemoteEncoding* self, const libqt_string name);
 libqt_string KRemoteEncoding_Encode(const KRemoteEncoding* self, const libqt_string name);
 libqt_string KRemoteEncoding_Encode2(const KRemoteEncoding* self, const QUrl* url);

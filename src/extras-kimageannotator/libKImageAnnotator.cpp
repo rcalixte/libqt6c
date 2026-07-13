@@ -48,7 +48,7 @@ void kImageAnnotator_LoadTranslations() {
     kImageAnnotator::loadTranslations();
 }
 
-kImageAnnotator__KImageAnnotator* kImageAnnotator__KImageAnnotator_new() {
+kImageAnnotator__KImageAnnotator* kImageAnnotator__KImageAnnotator_New() {
     return new VirtualkImageAnnotatorKImageAnnotator();
 }
 

@@ -16,27 +16,27 @@
 #include "libapplicationlauncherjob.hpp"
 #include "libapplicationlauncherjob.hxx"
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new(const KServiceAction* serviceAction) {
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New(const KServiceAction* serviceAction) {
     return new VirtualKIOApplicationLauncherJob(*serviceAction);
 }
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new2(const KDesktopFileAction* desktopFileAction) {
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New2(const KDesktopFileAction* desktopFileAction) {
     return new VirtualKIOApplicationLauncherJob(*desktopFileAction);
 }
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new3() {
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New3() {
     return new VirtualKIOApplicationLauncherJob();
 }
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new4(const KServiceAction* serviceAction, QObject* parent) {
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New4(const KServiceAction* serviceAction, QObject* parent) {
     return new VirtualKIOApplicationLauncherJob(*serviceAction, parent);
 }
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new5(const KDesktopFileAction* desktopFileAction, QObject* parent) {
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New5(const KDesktopFileAction* desktopFileAction, QObject* parent) {
     return new VirtualKIOApplicationLauncherJob(*desktopFileAction, parent);
 }
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new6(QObject* parent) {
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New6(QObject* parent) {
     return new VirtualKIOApplicationLauncherJob(parent);
 }
 

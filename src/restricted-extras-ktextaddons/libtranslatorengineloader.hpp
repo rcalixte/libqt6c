@@ -32,8 +32,8 @@ typedef struct TextTranslator__TranslatorEngineClient TextTranslator__Translator
 typedef struct TextTranslator__TranslatorEngineLoader TextTranslator__TranslatorEngineLoader;
 #endif
 
-TextTranslator__TranslatorEngineLoader* TextTranslator__TranslatorEngineLoader_new();
-TextTranslator__TranslatorEngineLoader* TextTranslator__TranslatorEngineLoader_new2(QObject* parent);
+TextTranslator__TranslatorEngineLoader* TextTranslator__TranslatorEngineLoader_New();
+TextTranslator__TranslatorEngineLoader* TextTranslator__TranslatorEngineLoader_New2(QObject* parent);
 QMetaObject* TextTranslator__TranslatorEngineLoader_MetaObject(const TextTranslator__TranslatorEngineLoader* self);
 void* TextTranslator__TranslatorEngineLoader_Metacast(TextTranslator__TranslatorEngineLoader* self, const char* param1);
 int TextTranslator__TranslatorEngineLoader_Metacall(TextTranslator__TranslatorEngineLoader* self, int param1, int param2, void** param3);

@@ -25,7 +25,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KCompletion* KCompletion_new();
+KCompletion* KCompletion_New();
 QMetaObject* KCompletion_MetaObject(const KCompletion* self);
 void* KCompletion_Metacast(KCompletion* self, const char* param1);
 int KCompletion_Metacall(KCompletion* self, int param1, int param2, void** param3);

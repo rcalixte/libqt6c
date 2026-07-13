@@ -37,7 +37,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QStyle* QStyle_new();
+QStyle* QStyle_New();
 QMetaObject* QStyle_MetaObject(const QStyle* self);
 void* QStyle_Metacast(QStyle* self, const char* param1);
 int QStyle_Metacall(QStyle* self, int param1, int param2, void** param3);

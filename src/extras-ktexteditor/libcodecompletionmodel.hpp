@@ -42,7 +42,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KTextEditor__CodeCompletionModel* KTextEditor__CodeCompletionModel_new(QObject* parent);
+KTextEditor__CodeCompletionModel* KTextEditor__CodeCompletionModel_New(QObject* parent);
 QMetaObject* KTextEditor__CodeCompletionModel_MetaObject(const KTextEditor__CodeCompletionModel* self);
 void* KTextEditor__CodeCompletionModel_Metacast(KTextEditor__CodeCompletionModel* self, const char* param1);
 int KTextEditor__CodeCompletionModel_Metacall(KTextEditor__CodeCompletionModel* self, int param1, int param2, void** param3);

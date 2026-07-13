@@ -22,28 +22,28 @@ const char* KNSCore_GetEnumName2(int param1) {
     return (const char*)KNSCore::qt_getEnumName(static_cast<KNSCore::Filter>(param1));
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new() {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New() {
     return new KNSCore::SearchRequest();
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new2(const KNSCore__SearchRequest* param1) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New2(const KNSCore__SearchRequest* param1) {
     return new KNSCore::SearchRequest(*param1);
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new3(int sortMode_) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New3(int sortMode_) {
     return new KNSCore::SearchRequest(static_cast<KNSCore::SortMode>(sortMode_));
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new4(int sortMode_, int filter_) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New4(int sortMode_, int filter_) {
     return new KNSCore::SearchRequest(static_cast<KNSCore::SortMode>(sortMode_), static_cast<KNSCore::Filter>(filter_));
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new5(int sortMode_, int filter_, const libqt_string searchTerm_) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New5(int sortMode_, int filter_, const libqt_string searchTerm_) {
     QString searchTerm__QString = QString::fromUtf8(searchTerm_.data, searchTerm_.len);
     return new KNSCore::SearchRequest(static_cast<KNSCore::SortMode>(sortMode_), static_cast<KNSCore::Filter>(filter_), searchTerm__QString);
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new6(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New6(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_) {
     QString searchTerm__QString = QString::fromUtf8(searchTerm_.data, searchTerm_.len);
     QList<QString> categories__QList;
     categories__QList.reserve(categories_.len);
@@ -55,7 +55,7 @@ KNSCore__SearchRequest* KNSCore__SearchRequest_new6(int sortMode_, int filter_, 
     return new KNSCore::SearchRequest(static_cast<KNSCore::SortMode>(sortMode_), static_cast<KNSCore::Filter>(filter_), searchTerm__QString, categories__QList);
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new7(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New7(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_) {
     QString searchTerm__QString = QString::fromUtf8(searchTerm_.data, searchTerm_.len);
     QList<QString> categories__QList;
     categories__QList.reserve(categories_.len);
@@ -67,7 +67,7 @@ KNSCore__SearchRequest* KNSCore__SearchRequest_new7(int sortMode_, int filter_, 
     return new KNSCore::SearchRequest(static_cast<KNSCore::SortMode>(sortMode_), static_cast<KNSCore::Filter>(filter_), searchTerm__QString, categories__QList, static_cast<int>(page_));
 }
 
-KNSCore__SearchRequest* KNSCore__SearchRequest_new8(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_, int pageSize_) {
+KNSCore__SearchRequest* KNSCore__SearchRequest_New8(int sortMode_, int filter_, const libqt_string searchTerm_, const libqt_list /* of libqt_string */ categories_, int page_, int pageSize_) {
     QString searchTerm__QString = QString::fromUtf8(searchTerm_.data, searchTerm_.len);
     QList<QString> categories__QList;
     categories__QList.reserve(categories_.len);

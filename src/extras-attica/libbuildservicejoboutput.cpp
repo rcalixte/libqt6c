@@ -4,11 +4,11 @@
 #include "libbuildservicejoboutput.hpp"
 #include "libbuildservicejoboutput.hxx"
 
-Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_new() {
+Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_New() {
     return new Attica::BuildServiceJobOutput();
 }
 
-Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_new2(const Attica__BuildServiceJobOutput* other) {
+Attica__BuildServiceJobOutput* Attica__BuildServiceJobOutput_New2(const Attica__BuildServiceJobOutput* other) {
     return new Attica::BuildServiceJobOutput(*other);
 }
 

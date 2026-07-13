@@ -6,11 +6,11 @@
 #include "libgrammalectegenerateconfigoptionjob.h"
 
 TextGrammarCheck__GrammalecteGenerateConfigOptionJob* k_textgrammarcheck__grammalectegenerateconfigoptionjob_new() {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_new();
+    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_New();
 }
 
 TextGrammarCheck__GrammalecteGenerateConfigOptionJob* k_textgrammarcheck__grammalectegenerateconfigoptionjob_new2(void* parent) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_new2((QObject*)parent);
+    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textgrammarcheck__grammalectegenerateconfigoptionjob_meta_object(void* self) {
@@ -468,11 +468,11 @@ void k_textgrammarcheck__grammalectegenerateconfigoptionjob_delete(void* self) {
 }
 
 TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new(void* param1) {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_new((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)param1);
+    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New((TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option*)param1);
 }
 
 TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_new2() {
-    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_new2();
+    return TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New2();
 }
 
 const char* k_textgrammarcheck__grammalectegenerateconfigoptionjob__option_option_name(void* self) {

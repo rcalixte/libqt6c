@@ -16,7 +16,7 @@
 #include "libforwardingworkerbase.hpp"
 #include "libforwardingworkerbase.hxx"
 
-KIO__ForwardingWorkerBase* KIO__ForwardingWorkerBase_new(const libqt_string protocol, const libqt_string poolSocket, const libqt_string appSocket) {
+KIO__ForwardingWorkerBase* KIO__ForwardingWorkerBase_New(const libqt_string protocol, const libqt_string poolSocket, const libqt_string appSocket) {
     QByteArray protocol_QByteArray(protocol.data, protocol.len);
     QByteArray poolSocket_QByteArray(poolSocket.data, poolSocket.len);
     QByteArray appSocket_QByteArray(appSocket.data, appSocket.len);

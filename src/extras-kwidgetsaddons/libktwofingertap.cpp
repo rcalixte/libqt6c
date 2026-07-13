@@ -13,11 +13,11 @@
 #include "libktwofingertap.hpp"
 #include "libktwofingertap.hxx"
 
-KTwoFingerTap* KTwoFingerTap_new() {
+KTwoFingerTap* KTwoFingerTap_New() {
     return new VirtualKTwoFingerTap();
 }
 
-KTwoFingerTap* KTwoFingerTap_new2(QObject* parent) {
+KTwoFingerTap* KTwoFingerTap_New2(QObject* parent) {
     return new VirtualKTwoFingerTap(parent);
 }
 
@@ -437,7 +437,7 @@ void KTwoFingerTap_Delete(KTwoFingerTap* self) {
     delete self;
 }
 
-KTwoFingerTapRecognizer* KTwoFingerTapRecognizer_new() {
+KTwoFingerTapRecognizer* KTwoFingerTapRecognizer_New() {
     return new VirtualKTwoFingerTapRecognizer();
 }
 

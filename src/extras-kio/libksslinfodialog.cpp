@@ -40,11 +40,11 @@
 #include "libksslinfodialog.hpp"
 #include "libksslinfodialog.hxx"
 
-KSslInfoDialog* KSslInfoDialog_new(QWidget* parent) {
+KSslInfoDialog* KSslInfoDialog_New(QWidget* parent) {
     return new VirtualKSslInfoDialog(parent);
 }
 
-KSslInfoDialog* KSslInfoDialog_new2() {
+KSslInfoDialog* KSslInfoDialog_New2() {
     return new VirtualKSslInfoDialog();
 }
 

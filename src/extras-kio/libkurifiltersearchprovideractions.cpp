@@ -11,11 +11,11 @@
 #include "libkurifiltersearchprovideractions.hpp"
 #include "libkurifiltersearchprovideractions.hxx"
 
-KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_new() {
+KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_New() {
     return new VirtualKIOKUriFilterSearchProviderActions();
 }
 
-KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_new2(QObject* parent) {
+KIO__KUriFilterSearchProviderActions* KIO__KUriFilterSearchProviderActions_New2(QObject* parent) {
     return new VirtualKIOKUriFilterSearchProviderActions(parent);
 }
 

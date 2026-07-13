@@ -4,32 +4,32 @@
 #include "libqsqlerror.hpp"
 #include "libqsqlerror.hxx"
 
-QSqlError* QSqlError_new() {
+QSqlError* QSqlError_New() {
     return new QSqlError();
 }
 
-QSqlError* QSqlError_new2(const QSqlError* other) {
+QSqlError* QSqlError_New2(const QSqlError* other) {
     return new QSqlError(*other);
 }
 
-QSqlError* QSqlError_new3(const libqt_string driverText) {
+QSqlError* QSqlError_New3(const libqt_string driverText) {
     QString driverText_QString = QString::fromUtf8(driverText.data, driverText.len);
     return new QSqlError(driverText_QString);
 }
 
-QSqlError* QSqlError_new4(const libqt_string driverText, const libqt_string databaseText) {
+QSqlError* QSqlError_New4(const libqt_string driverText, const libqt_string databaseText) {
     QString driverText_QString = QString::fromUtf8(driverText.data, driverText.len);
     QString databaseText_QString = QString::fromUtf8(databaseText.data, databaseText.len);
     return new QSqlError(driverText_QString, databaseText_QString);
 }
 
-QSqlError* QSqlError_new5(const libqt_string driverText, const libqt_string databaseText, int type) {
+QSqlError* QSqlError_New5(const libqt_string driverText, const libqt_string databaseText, int type) {
     QString driverText_QString = QString::fromUtf8(driverText.data, driverText.len);
     QString databaseText_QString = QString::fromUtf8(databaseText.data, databaseText.len);
     return new QSqlError(driverText_QString, databaseText_QString, static_cast<QSqlError::ErrorType>(type));
 }
 
-QSqlError* QSqlError_new6(const libqt_string driverText, const libqt_string databaseText, int type, const libqt_string errorCode) {
+QSqlError* QSqlError_New6(const libqt_string driverText, const libqt_string databaseText, int type, const libqt_string errorCode) {
     QString driverText_QString = QString::fromUtf8(driverText.data, driverText.len);
     QString databaseText_QString = QString::fromUtf8(databaseText.data, databaseText.len);
     QString errorCode_QString = QString::fromUtf8(errorCode.data, errorCode.len);

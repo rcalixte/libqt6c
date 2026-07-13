@@ -12,7 +12,7 @@
 #include "libkcompletion.hpp"
 #include "libkcompletion.hxx"
 
-KCompletion* KCompletion_new() {
+KCompletion* KCompletion_New() {
     return new VirtualKCompletion();
 }
 

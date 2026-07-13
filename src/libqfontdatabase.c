@@ -4,15 +4,15 @@
 #include "libqfontdatabase.h"
 
 QFontDatabase* q_fontdatabase_new(void* other) {
-    return QFontDatabase_new((QFontDatabase*)other);
+    return QFontDatabase_New((QFontDatabase*)other);
 }
 
 QFontDatabase* q_fontdatabase_new2(void* other) {
-    return QFontDatabase_new2((QFontDatabase*)other);
+    return QFontDatabase_New2((QFontDatabase*)other);
 }
 
 QFontDatabase* q_fontdatabase_new3() {
-    return QFontDatabase_new3();
+    return QFontDatabase_New3();
 }
 
 void q_fontdatabase_copy_assign(void* self, void* other) {

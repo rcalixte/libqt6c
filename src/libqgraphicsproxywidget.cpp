@@ -36,15 +36,15 @@
 #include "libqgraphicsproxywidget.hpp"
 #include "libqgraphicsproxywidget.hxx"
 
-QGraphicsProxyWidget* QGraphicsProxyWidget_new() {
+QGraphicsProxyWidget* QGraphicsProxyWidget_New() {
     return new VirtualQGraphicsProxyWidget();
 }
 
-QGraphicsProxyWidget* QGraphicsProxyWidget_new2(QGraphicsItem* parent) {
+QGraphicsProxyWidget* QGraphicsProxyWidget_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsProxyWidget(parent);
 }
 
-QGraphicsProxyWidget* QGraphicsProxyWidget_new3(QGraphicsItem* parent, int wFlags) {
+QGraphicsProxyWidget* QGraphicsProxyWidget_New3(QGraphicsItem* parent, int wFlags) {
     return new VirtualQGraphicsProxyWidget(parent, static_cast<Qt::WindowFlags>(wFlags));
 }
 

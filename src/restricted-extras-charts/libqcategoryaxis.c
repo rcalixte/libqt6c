@@ -8,11 +8,11 @@
 #include "libqcategoryaxis.h"
 
 QCategoryAxis* q_categoryaxis_new() {
-    return QCategoryAxis_new();
+    return QCategoryAxis_New();
 }
 
 QCategoryAxis* q_categoryaxis_new2(void* parent) {
-    return QCategoryAxis_new2((QObject*)parent);
+    return QCategoryAxis_New2((QObject*)parent);
 }
 
 const QMetaObject* q_categoryaxis_meta_object(void* self) {

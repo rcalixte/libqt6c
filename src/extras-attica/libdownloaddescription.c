@@ -2,11 +2,11 @@
 #include "libdownloaddescription.h"
 
 Attica__DownloadDescription* k_attica__downloaddescription_new() {
-    return Attica__DownloadDescription_new();
+    return Attica__DownloadDescription_New();
 }
 
 Attica__DownloadDescription* k_attica__downloaddescription_new2(void* other) {
-    return Attica__DownloadDescription_new2((Attica__DownloadDescription*)other);
+    return Attica__DownloadDescription_New2((Attica__DownloadDescription*)other);
 }
 
 void k_attica__downloaddescription_operator_assign(void* self, void* other) {

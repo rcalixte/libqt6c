@@ -7,11 +7,11 @@
 #include "libkcompositejob.h"
 
 KCompositeJob* k_compositejob_new() {
-    return KCompositeJob_new();
+    return KCompositeJob_New();
 }
 
 KCompositeJob* k_compositejob_new2(void* parent) {
-    return KCompositeJob_new2((QObject*)parent);
+    return KCompositeJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_compositejob_meta_object(void* self) {

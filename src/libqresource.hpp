@@ -20,9 +20,9 @@ typedef struct QLocale QLocale;
 typedef struct QResource QResource;
 #endif
 
-QResource* QResource_new();
-QResource* QResource_new2(const libqt_string file);
-QResource* QResource_new3(const libqt_string file, const QLocale* locale);
+QResource* QResource_New();
+QResource* QResource_New2(const libqt_string file);
+QResource* QResource_New3(const libqt_string file, const QLocale* locale);
 void QResource_SetFileName(QResource* self, const libqt_string file);
 libqt_string QResource_FileName(const QResource* self);
 libqt_string QResource_AbsoluteFilePath(const QResource* self);

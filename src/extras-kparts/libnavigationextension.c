@@ -13,7 +13,7 @@
 #include "libnavigationextension.h"
 
 KParts__NavigationExtension* k_parts__navigationextension_new(void* parent) {
-    return KParts__NavigationExtension_new((KParts__ReadOnlyPart*)parent);
+    return KParts__NavigationExtension_New((KParts__ReadOnlyPart*)parent);
 }
 
 const QMetaObject* k_parts__navigationextension_meta_object(void* self) {

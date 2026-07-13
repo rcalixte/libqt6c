@@ -3,11 +3,11 @@
 #include "libklocalizedstring.h"
 
 KLocalizedString* k_localizedstring_new() {
-    return KLocalizedString_new();
+    return KLocalizedString_New();
 }
 
 KLocalizedString* k_localizedstring_new2(void* rhs) {
-    return KLocalizedString_new2((KLocalizedString*)rhs);
+    return KLocalizedString_New2((KLocalizedString*)rhs);
 }
 
 void k_localizedstring_operator_assign(void* self, void* rhs) {

@@ -8,27 +8,27 @@
 #include "libqsqlquery.h"
 
 QSqlQuery* q_sqlquery_new(void* r) {
-    return QSqlQuery_new((QSqlResult*)r);
+    return QSqlQuery_New((QSqlResult*)r);
 }
 
 QSqlQuery* q_sqlquery_new2() {
-    return QSqlQuery_new2();
+    return QSqlQuery_New2();
 }
 
 QSqlQuery* q_sqlquery_new3(void* db) {
-    return QSqlQuery_new3((QSqlDatabase*)db);
+    return QSqlQuery_New3((QSqlDatabase*)db);
 }
 
 QSqlQuery* q_sqlquery_new4(void* other) {
-    return QSqlQuery_new4((QSqlQuery*)other);
+    return QSqlQuery_New4((QSqlQuery*)other);
 }
 
 QSqlQuery* q_sqlquery_new5(const char* query) {
-    return QSqlQuery_new5(qstring(query));
+    return QSqlQuery_New5(qstring(query));
 }
 
 QSqlQuery* q_sqlquery_new6(const char* query, void* db) {
-    return QSqlQuery_new6(qstring(query), (QSqlDatabase*)db);
+    return QSqlQuery_New6(qstring(query), (QSqlDatabase*)db);
 }
 
 void q_sqlquery_operator_assign(void* self, void* other) {

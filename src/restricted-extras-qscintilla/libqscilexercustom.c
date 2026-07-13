@@ -12,11 +12,11 @@
 #include "libqscilexercustom.h"
 
 QsciLexerCustom* q_scilexercustom_new() {
-    return QsciLexerCustom_new();
+    return QsciLexerCustom_New();
 }
 
 QsciLexerCustom* q_scilexercustom_new2(void* parent) {
-    return QsciLexerCustom_new2((QObject*)parent);
+    return QsciLexerCustom_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexercustom_meta_object(void* self) {

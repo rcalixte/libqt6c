@@ -12,26 +12,26 @@
 #include "libimageset.hpp"
 #include "libimageset.hxx"
 
-KSvg__ImageSet* KSvg__ImageSet_new() {
+KSvg__ImageSet* KSvg__ImageSet_New() {
     return new VirtualKSvgImageSet();
 }
 
-KSvg__ImageSet* KSvg__ImageSet_new2(const libqt_string imageSetName) {
+KSvg__ImageSet* KSvg__ImageSet_New2(const libqt_string imageSetName) {
     QString imageSetName_QString = QString::fromUtf8(imageSetName.data, imageSetName.len);
     return new VirtualKSvgImageSet(imageSetName_QString);
 }
 
-KSvg__ImageSet* KSvg__ImageSet_new3(QObject* parent) {
+KSvg__ImageSet* KSvg__ImageSet_New3(QObject* parent) {
     return new VirtualKSvgImageSet(parent);
 }
 
-KSvg__ImageSet* KSvg__ImageSet_new4(const libqt_string imageSetName, const libqt_string basePath) {
+KSvg__ImageSet* KSvg__ImageSet_New4(const libqt_string imageSetName, const libqt_string basePath) {
     QString imageSetName_QString = QString::fromUtf8(imageSetName.data, imageSetName.len);
     QString basePath_QString = QString::fromUtf8(basePath.data, basePath.len);
     return new VirtualKSvgImageSet(imageSetName_QString, basePath_QString);
 }
 
-KSvg__ImageSet* KSvg__ImageSet_new5(const libqt_string imageSetName, const libqt_string basePath, QObject* parent) {
+KSvg__ImageSet* KSvg__ImageSet_New5(const libqt_string imageSetName, const libqt_string basePath, QObject* parent) {
     QString imageSetName_QString = QString::fromUtf8(imageSetName.data, imageSetName.len);
     QString basePath_QString = QString::fromUtf8(basePath.data, basePath.len);
     return new VirtualKSvgImageSet(imageSetName_QString, basePath_QString, parent);

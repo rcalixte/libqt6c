@@ -25,11 +25,11 @@
 #include "librichtexteditor.h"
 
 TextCustomEditor__RichTextEditor* k_textcustomeditor__richtexteditor_new(void* parent) {
-    return TextCustomEditor__RichTextEditor_new((QWidget*)parent);
+    return TextCustomEditor__RichTextEditor_New((QWidget*)parent);
 }
 
 TextCustomEditor__RichTextEditor* k_textcustomeditor__richtexteditor_new2() {
-    return TextCustomEditor__RichTextEditor_new2();
+    return TextCustomEditor__RichTextEditor_New2();
 }
 
 const QMetaObject* k_textcustomeditor__richtexteditor_meta_object(void* self) {

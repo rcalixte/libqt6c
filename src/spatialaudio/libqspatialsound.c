@@ -10,7 +10,7 @@
 #include "libqspatialsound.h"
 
 QSpatialSound* q_spatialsound_new(void* engine) {
-    return QSpatialSound_new((QAudioEngine*)engine);
+    return QSpatialSound_New((QAudioEngine*)engine);
 }
 
 const QMetaObject* q_spatialsound_meta_object(void* self) {

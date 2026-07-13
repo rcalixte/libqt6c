@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QGeoSatelliteInfo QGeoSatelliteInfo;
 #endif
 
-QGeoSatelliteInfo* QGeoSatelliteInfo_new();
-QGeoSatelliteInfo* QGeoSatelliteInfo_new2(const QGeoSatelliteInfo* other);
+QGeoSatelliteInfo* QGeoSatelliteInfo_New();
+QGeoSatelliteInfo* QGeoSatelliteInfo_New2(const QGeoSatelliteInfo* other);
 void QGeoSatelliteInfo_OperatorAssign(QGeoSatelliteInfo* self, const QGeoSatelliteInfo* other);
 void QGeoSatelliteInfo_Swap(QGeoSatelliteInfo* self, QGeoSatelliteInfo* other);
 void QGeoSatelliteInfo_SetSatelliteSystem(QGeoSatelliteInfo* self, int system);

@@ -13,19 +13,19 @@
 #include "libqsoundeffect.hpp"
 #include "libqsoundeffect.hxx"
 
-QSoundEffect* QSoundEffect_new() {
+QSoundEffect* QSoundEffect_New() {
     return new VirtualQSoundEffect();
 }
 
-QSoundEffect* QSoundEffect_new2(const QAudioDevice* audioDevice) {
+QSoundEffect* QSoundEffect_New2(const QAudioDevice* audioDevice) {
     return new VirtualQSoundEffect(*audioDevice);
 }
 
-QSoundEffect* QSoundEffect_new3(QObject* parent) {
+QSoundEffect* QSoundEffect_New3(QObject* parent) {
     return new VirtualQSoundEffect(parent);
 }
 
-QSoundEffect* QSoundEffect_new4(const QAudioDevice* audioDevice, QObject* parent) {
+QSoundEffect* QSoundEffect_New4(const QAudioDevice* audioDevice, QObject* parent) {
     return new VirtualQSoundEffect(*audioDevice, parent);
 }
 

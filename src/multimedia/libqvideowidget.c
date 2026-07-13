@@ -15,11 +15,11 @@
 #include "libqvideowidget.h"
 
 QVideoWidget* q_videowidget_new(void* parent) {
-    return QVideoWidget_new((QWidget*)parent);
+    return QVideoWidget_New((QWidget*)parent);
 }
 
 QVideoWidget* q_videowidget_new2() {
-    return QVideoWidget_new2();
+    return QVideoWidget_New2();
 }
 
 const QMetaObject* q_videowidget_meta_object(void* self) {

@@ -11,11 +11,11 @@
 #include "libqscilexeravs.h"
 
 QsciLexerAVS* q_scilexeravs_new() {
-    return QsciLexerAVS_new();
+    return QsciLexerAVS_New();
 }
 
 QsciLexerAVS* q_scilexeravs_new2(void* parent) {
-    return QsciLexerAVS_new2((QObject*)parent);
+    return QsciLexerAVS_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexeravs_meta_object(void* self) {

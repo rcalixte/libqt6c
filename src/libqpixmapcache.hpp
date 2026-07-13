@@ -23,8 +23,8 @@ typedef struct QPixmapCache QPixmapCache;
 typedef struct QPixmapCache__Key QPixmapCache__Key;
 #endif
 
-QPixmapCache* QPixmapCache_new(const QPixmapCache* other);
-QPixmapCache* QPixmapCache_new2(QPixmapCache* other);
+QPixmapCache* QPixmapCache_New(const QPixmapCache* other);
+QPixmapCache* QPixmapCache_New2(QPixmapCache* other);
 void QPixmapCache_CopyAssign(QPixmapCache* self, QPixmapCache* other);
 void QPixmapCache_MoveAssign(QPixmapCache* self, QPixmapCache* other);
 int QPixmapCache_CacheLimit();
@@ -39,8 +39,8 @@ void QPixmapCache_Remove2(const QPixmapCache__Key* key);
 void QPixmapCache_Clear();
 void QPixmapCache_Delete(QPixmapCache* self);
 
-QPixmapCache__Key* QPixmapCache__Key_new();
-QPixmapCache__Key* QPixmapCache__Key_new2(const QPixmapCache__Key* other);
+QPixmapCache__Key* QPixmapCache__Key_New();
+QPixmapCache__Key* QPixmapCache__Key_New2(const QPixmapCache__Key* other);
 bool QPixmapCache__Key_OperatorEqual(const QPixmapCache__Key* self, const QPixmapCache__Key* key);
 bool QPixmapCache__Key_OperatorNotEqual(const QPixmapCache__Key* self, const QPixmapCache__Key* key);
 void QPixmapCache__Key_OperatorAssign(QPixmapCache__Key* self, const QPixmapCache__Key* other);

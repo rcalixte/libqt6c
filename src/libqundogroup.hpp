@@ -26,8 +26,8 @@ typedef struct QUndoGroup QUndoGroup;
 typedef struct QUndoStack QUndoStack;
 #endif
 
-QUndoGroup* QUndoGroup_new();
-QUndoGroup* QUndoGroup_new2(QObject* parent);
+QUndoGroup* QUndoGroup_New();
+QUndoGroup* QUndoGroup_New2(QObject* parent);
 QMetaObject* QUndoGroup_MetaObject(const QUndoGroup* self);
 void* QUndoGroup_Metacast(QUndoGroup* self, const char* param1);
 int QUndoGroup_Metacall(QUndoGroup* self, int param1, int param2, void** param3);

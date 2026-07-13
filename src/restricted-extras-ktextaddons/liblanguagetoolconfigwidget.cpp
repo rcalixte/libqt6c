@@ -37,11 +37,11 @@
 #include "liblanguagetoolconfigwidget.hpp"
 #include "liblanguagetoolconfigwidget.hxx"
 
-TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_new(QWidget* parent) {
+TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_New(QWidget* parent) {
     return new VirtualTextGrammarCheckLanguageToolConfigWidget(parent);
 }
 
-TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_new2() {
+TextGrammarCheck__LanguageToolConfigWidget* TextGrammarCheck__LanguageToolConfigWidget_New2() {
     return new VirtualTextGrammarCheckLanguageToolConfigWidget();
 }
 

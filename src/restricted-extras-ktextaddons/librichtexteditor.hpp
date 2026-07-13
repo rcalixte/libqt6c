@@ -70,8 +70,8 @@ typedef struct Sonnet__SpellCheckDecorator Sonnet__SpellCheckDecorator;
 typedef struct TextCustomEditor__RichTextEditor TextCustomEditor__RichTextEditor;
 #endif
 
-TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_new(QWidget* parent);
-TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_new2();
+TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_New(QWidget* parent);
+TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_New2();
 QMetaObject* TextCustomEditor__RichTextEditor_MetaObject(const TextCustomEditor__RichTextEditor* self);
 void* TextCustomEditor__RichTextEditor_Metacast(TextCustomEditor__RichTextEditor* self, const char* param1);
 int TextCustomEditor__RichTextEditor_Metacall(TextCustomEditor__RichTextEditor* self, int param1, int param2, void** param3);

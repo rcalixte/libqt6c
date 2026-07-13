@@ -25,11 +25,11 @@
 #include "libqtreeview.h"
 
 QTreeView* q_treeview_new(void* parent) {
-    return QTreeView_new((QWidget*)parent);
+    return QTreeView_New((QWidget*)parent);
 }
 
 QTreeView* q_treeview_new2() {
-    return QTreeView_new2();
+    return QTreeView_New2();
 }
 
 const QMetaObject* q_treeview_meta_object(void* self) {

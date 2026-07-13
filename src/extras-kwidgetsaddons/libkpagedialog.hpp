@@ -56,9 +56,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPageDialog* KPageDialog_new(QWidget* parent);
-KPageDialog* KPageDialog_new2();
-KPageDialog* KPageDialog_new3(QWidget* parent, int flags);
+KPageDialog* KPageDialog_New(QWidget* parent);
+KPageDialog* KPageDialog_New2();
+KPageDialog* KPageDialog_New3(QWidget* parent, int flags);
 QMetaObject* KPageDialog_MetaObject(const KPageDialog* self);
 void* KPageDialog_Metacast(KPageDialog* self, const char* param1);
 int KPageDialog_Metacall(KPageDialog* self, int param1, int param2, void** param3);

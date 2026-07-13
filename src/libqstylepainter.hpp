@@ -27,9 +27,9 @@ typedef struct QStylePainter QStylePainter;
 typedef struct QWidget QWidget;
 #endif
 
-QStylePainter* QStylePainter_new(QWidget* w);
-QStylePainter* QStylePainter_new2();
-QStylePainter* QStylePainter_new3(QPaintDevice* pd, QWidget* w);
+QStylePainter* QStylePainter_New(QWidget* w);
+QStylePainter* QStylePainter_New2();
+QStylePainter* QStylePainter_New3(QPaintDevice* pd, QWidget* w);
 bool QStylePainter_Begin(QStylePainter* self, QWidget* w);
 bool QStylePainter_Begin2(QStylePainter* self, QPaintDevice* pd, QWidget* w);
 void QStylePainter_DrawPrimitive(QStylePainter* self, int pe, const QStyleOption* opt);

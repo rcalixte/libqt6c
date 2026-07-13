@@ -11,11 +11,11 @@
 #include "libqscilexersql.h"
 
 QsciLexerSQL* q_scilexersql_new() {
-    return QsciLexerSQL_new();
+    return QsciLexerSQL_New();
 }
 
 QsciLexerSQL* q_scilexersql_new2(void* parent) {
-    return QsciLexerSQL_new2((QObject*)parent);
+    return QsciLexerSQL_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexersql_meta_object(void* self) {

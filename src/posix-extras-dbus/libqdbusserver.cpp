@@ -12,21 +12,21 @@
 #include "libqdbusserver.hpp"
 #include "libqdbusserver.hxx"
 
-QDBusServer* QDBusServer_new(const libqt_string address) {
+QDBusServer* QDBusServer_New(const libqt_string address) {
     QString address_QString = QString::fromUtf8(address.data, address.len);
     return new VirtualQDBusServer(address_QString);
 }
 
-QDBusServer* QDBusServer_new2() {
+QDBusServer* QDBusServer_New2() {
     return new VirtualQDBusServer();
 }
 
-QDBusServer* QDBusServer_new3(const libqt_string address, QObject* parent) {
+QDBusServer* QDBusServer_New3(const libqt_string address, QObject* parent) {
     QString address_QString = QString::fromUtf8(address.data, address.len);
     return new VirtualQDBusServer(address_QString, parent);
 }
 
-QDBusServer* QDBusServer_new4(QObject* parent) {
+QDBusServer* QDBusServer_New4(QObject* parent) {
     return new VirtualQDBusServer(parent);
 }
 

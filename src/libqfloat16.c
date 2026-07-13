@@ -2,15 +2,15 @@
 #include "libqfloat16.h"
 
 qfloat16* q_qfloat16_new() {
-    return qfloat16_new();
+    return qfloat16_New();
 }
 
 qfloat16* q_qfloat16_new2(int32_t param1) {
-    return qfloat16_new2(param1);
+    return qfloat16_New2(param1);
 }
 
 qfloat16* q_qfloat16_new3(float f) {
-    return qfloat16_new3(f);
+    return qfloat16_New3(f);
 }
 
 void q_qfloat16_copy_assign(void* self, void* other) {

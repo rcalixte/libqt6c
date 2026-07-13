@@ -23,11 +23,11 @@
 #include "libqstyleditemdelegate.hpp"
 #include "libqstyleditemdelegate.hxx"
 
-QStyledItemDelegate* QStyledItemDelegate_new() {
+QStyledItemDelegate* QStyledItemDelegate_New() {
     return new VirtualQStyledItemDelegate();
 }
 
-QStyledItemDelegate* QStyledItemDelegate_new2(QObject* parent) {
+QStyledItemDelegate* QStyledItemDelegate_New2(QObject* parent) {
     return new VirtualQStyledItemDelegate(parent);
 }
 

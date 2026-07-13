@@ -2,11 +2,11 @@
 #include "libknotifyconfig.h"
 
 KNotifyConfig* k_notifyconfig_new(const char* applicationName, const char* eventId) {
-    return KNotifyConfig_new(qstring(applicationName), qstring(eventId));
+    return KNotifyConfig_New(qstring(applicationName), qstring(eventId));
 }
 
 KNotifyConfig* k_notifyconfig_new2(void* other) {
-    return KNotifyConfig_new2((KNotifyConfig*)other);
+    return KNotifyConfig_New2((KNotifyConfig*)other);
 }
 
 void k_notifyconfig_operator_assign(void* self, void* other) {

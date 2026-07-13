@@ -7,11 +7,11 @@
 #include "libqlocalserver.h"
 
 QLocalServer* q_localserver_new() {
-    return QLocalServer_new();
+    return QLocalServer_New();
 }
 
 QLocalServer* q_localserver_new2(void* parent) {
-    return QLocalServer_new2((QObject*)parent);
+    return QLocalServer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_localserver_meta_object(void* self) {

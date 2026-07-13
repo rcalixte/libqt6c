@@ -13,7 +13,7 @@
 #include "libplugin.hpp"
 #include "libplugin.hxx"
 
-KTextEditor__Plugin* KTextEditor__Plugin_new(QObject* parent) {
+KTextEditor__Plugin* KTextEditor__Plugin_New(QObject* parent) {
     return new VirtualKTextEditorPlugin(parent);
 }
 

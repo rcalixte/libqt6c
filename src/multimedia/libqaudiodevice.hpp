@@ -19,8 +19,8 @@ typedef struct QAudioDevice QAudioDevice;
 typedef struct QAudioFormat QAudioFormat;
 #endif
 
-QAudioDevice* QAudioDevice_new();
-QAudioDevice* QAudioDevice_new2(const QAudioDevice* other);
+QAudioDevice* QAudioDevice_New();
+QAudioDevice* QAudioDevice_New2(const QAudioDevice* other);
 void QAudioDevice_Swap(QAudioDevice* self, QAudioDevice* other);
 void QAudioDevice_OperatorAssign(QAudioDevice* self, const QAudioDevice* other);
 bool QAudioDevice_OperatorEqual(const QAudioDevice* self, const QAudioDevice* other);

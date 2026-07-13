@@ -29,8 +29,8 @@ QVideoFrameFormat* QAbstractVideoBuffer_Format(const QAbstractVideoBuffer* self)
 void QAbstractVideoBuffer_OperatorAssign(QAbstractVideoBuffer* self, const QAbstractVideoBuffer* param1);
 void QAbstractVideoBuffer_Delete(QAbstractVideoBuffer* self);
 
-QAbstractVideoBuffer__MapData* QAbstractVideoBuffer__MapData_new(const QAbstractVideoBuffer__MapData* other);
-QAbstractVideoBuffer__MapData* QAbstractVideoBuffer__MapData_new2(QAbstractVideoBuffer__MapData* other);
+QAbstractVideoBuffer__MapData* QAbstractVideoBuffer__MapData_New(const QAbstractVideoBuffer__MapData* other);
+QAbstractVideoBuffer__MapData* QAbstractVideoBuffer__MapData_New2(QAbstractVideoBuffer__MapData* other);
 void QAbstractVideoBuffer__MapData_CopyAssign(QAbstractVideoBuffer__MapData* self, QAbstractVideoBuffer__MapData* other);
 void QAbstractVideoBuffer__MapData_MoveAssign(QAbstractVideoBuffer__MapData* self, QAbstractVideoBuffer__MapData* other);
 int QAbstractVideoBuffer__MapData_PlaneCount(const QAbstractVideoBuffer__MapData* self);

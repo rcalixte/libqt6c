@@ -17,11 +17,11 @@
 #include "libkactioncollection.hpp"
 #include "libkactioncollection.hxx"
 
-KActionCollection* KActionCollection_new(QObject* parent) {
+KActionCollection* KActionCollection_New(QObject* parent) {
     return new VirtualKActionCollection(parent);
 }
 
-KActionCollection* KActionCollection_new2(QObject* parent, const libqt_string cName) {
+KActionCollection* KActionCollection_New2(QObject* parent, const libqt_string cName) {
     QString cName_QString = QString::fromUtf8(cName.data, cName.len);
     return new VirtualKActionCollection(parent, cName_QString);
 }

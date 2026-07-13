@@ -4,15 +4,15 @@
 #include "libklazylocalizedstring.h"
 
 KLazyLocalizedString* k_lazylocalizedstring_new(void* other) {
-    return KLazyLocalizedString_new((KLazyLocalizedString*)other);
+    return KLazyLocalizedString_New((KLazyLocalizedString*)other);
 }
 
 KLazyLocalizedString* k_lazylocalizedstring_new2(void* other) {
-    return KLazyLocalizedString_new2((KLazyLocalizedString*)other);
+    return KLazyLocalizedString_New2((KLazyLocalizedString*)other);
 }
 
 KLazyLocalizedString* k_lazylocalizedstring_new3() {
-    return KLazyLocalizedString_new3();
+    return KLazyLocalizedString_New3();
 }
 
 void k_lazylocalizedstring_copy_assign(void* self, void* other) {

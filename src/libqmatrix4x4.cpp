@@ -12,39 +12,39 @@
 #include "libqmatrix4x4.hpp"
 #include "libqmatrix4x4.hxx"
 
-QMatrix4x4* QMatrix4x4_new(const QMatrix4x4* other) {
+QMatrix4x4* QMatrix4x4_New(const QMatrix4x4* other) {
     return new QMatrix4x4(*other);
 }
 
-QMatrix4x4* QMatrix4x4_new2(QMatrix4x4* other) {
+QMatrix4x4* QMatrix4x4_New2(QMatrix4x4* other) {
     return new QMatrix4x4(std::move(*other));
 }
 
-QMatrix4x4* QMatrix4x4_new3() {
+QMatrix4x4* QMatrix4x4_New3() {
     return new QMatrix4x4();
 }
 
-QMatrix4x4* QMatrix4x4_new4(int param1) {
+QMatrix4x4* QMatrix4x4_New4(int param1) {
     return new QMatrix4x4(static_cast<Qt::Initialization>(param1));
 }
 
-QMatrix4x4* QMatrix4x4_new5(const float* values) {
+QMatrix4x4* QMatrix4x4_New5(const float* values) {
     return new QMatrix4x4(static_cast<const float*>(values));
 }
 
-QMatrix4x4* QMatrix4x4_new6(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44) {
+QMatrix4x4* QMatrix4x4_New6(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44) {
     return new QMatrix4x4(static_cast<float>(m11), static_cast<float>(m12), static_cast<float>(m13), static_cast<float>(m14), static_cast<float>(m21), static_cast<float>(m22), static_cast<float>(m23), static_cast<float>(m24), static_cast<float>(m31), static_cast<float>(m32), static_cast<float>(m33), static_cast<float>(m34), static_cast<float>(m41), static_cast<float>(m42), static_cast<float>(m43), static_cast<float>(m44));
 }
 
-QMatrix4x4* QMatrix4x4_new7(const float* values, int cols, int rows) {
+QMatrix4x4* QMatrix4x4_New7(const float* values, int cols, int rows) {
     return new QMatrix4x4(static_cast<const float*>(values), static_cast<int>(cols), static_cast<int>(rows));
 }
 
-QMatrix4x4* QMatrix4x4_new8(const QTransform* transform) {
+QMatrix4x4* QMatrix4x4_New8(const QTransform* transform) {
     return new QMatrix4x4(*transform);
 }
 
-QMatrix4x4* QMatrix4x4_new9(const QMatrix4x4* param1) {
+QMatrix4x4* QMatrix4x4_New9(const QMatrix4x4* param1) {
     return new QMatrix4x4(*param1);
 }
 

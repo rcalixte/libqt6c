@@ -13,11 +13,11 @@
 #include "libqboxplotlegendmarker.hpp"
 #include "libqboxplotlegendmarker.hxx"
 
-QBoxPlotLegendMarker* QBoxPlotLegendMarker_new(QBoxPlotSeries* series, QLegend* legend) {
+QBoxPlotLegendMarker* QBoxPlotLegendMarker_New(QBoxPlotSeries* series, QLegend* legend) {
     return new VirtualQBoxPlotLegendMarker(series, legend);
 }
 
-QBoxPlotLegendMarker* QBoxPlotLegendMarker_new2(QBoxPlotSeries* series, QLegend* legend, QObject* parent) {
+QBoxPlotLegendMarker* QBoxPlotLegendMarker_New2(QBoxPlotSeries* series, QLegend* legend, QObject* parent) {
     return new VirtualQBoxPlotLegendMarker(series, legend, parent);
 }
 

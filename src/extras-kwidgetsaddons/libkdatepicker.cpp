@@ -40,19 +40,19 @@
 #include "libkdatepicker.hpp"
 #include "libkdatepicker.hxx"
 
-KDatePicker* KDatePicker_new(QWidget* parent) {
+KDatePicker* KDatePicker_New(QWidget* parent) {
     return new VirtualKDatePicker(parent);
 }
 
-KDatePicker* KDatePicker_new2() {
+KDatePicker* KDatePicker_New2() {
     return new VirtualKDatePicker();
 }
 
-KDatePicker* KDatePicker_new3(const QDate* dt) {
+KDatePicker* KDatePicker_New3(const QDate* dt) {
     return new VirtualKDatePicker(*dt);
 }
 
-KDatePicker* KDatePicker_new4(const QDate* dt, QWidget* parent) {
+KDatePicker* KDatePicker_New4(const QDate* dt, QWidget* parent) {
     return new VirtualKDatePicker(*dt, parent);
 }
 

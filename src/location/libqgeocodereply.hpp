@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QGeoCodeReply* QGeoCodeReply_new(int error, const libqt_string errorString);
-QGeoCodeReply* QGeoCodeReply_new2(int error, const libqt_string errorString, QObject* parent);
+QGeoCodeReply* QGeoCodeReply_New(int error, const libqt_string errorString);
+QGeoCodeReply* QGeoCodeReply_New2(int error, const libqt_string errorString, QObject* parent);
 QMetaObject* QGeoCodeReply_MetaObject(const QGeoCodeReply* self);
 void* QGeoCodeReply_Metacast(QGeoCodeReply* self, const char* param1);
 int QGeoCodeReply_Metacall(QGeoCodeReply* self, int param1, int param2, void** param3);

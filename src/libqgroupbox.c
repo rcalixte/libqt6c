@@ -15,19 +15,19 @@
 #include "libqgroupbox.h"
 
 QGroupBox* q_groupbox_new(void* parent) {
-    return QGroupBox_new((QWidget*)parent);
+    return QGroupBox_New((QWidget*)parent);
 }
 
 QGroupBox* q_groupbox_new2() {
-    return QGroupBox_new2();
+    return QGroupBox_New2();
 }
 
 QGroupBox* q_groupbox_new3(const char* title) {
-    return QGroupBox_new3(qstring(title));
+    return QGroupBox_New3(qstring(title));
 }
 
 QGroupBox* q_groupbox_new4(const char* title, void* parent) {
-    return QGroupBox_new4(qstring(title), (QWidget*)parent);
+    return QGroupBox_New4(qstring(title), (QWidget*)parent);
 }
 
 const QMetaObject* q_groupbox_meta_object(void* self) {

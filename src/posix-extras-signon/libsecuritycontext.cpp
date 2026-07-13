@@ -4,17 +4,17 @@
 #include "libsecuritycontext.hpp"
 #include "libsecuritycontext.hxx"
 
-SignOn__SecurityContext* SignOn__SecurityContext_new() {
+SignOn__SecurityContext* SignOn__SecurityContext_New() {
     return new SignOn::SecurityContext();
 }
 
-SignOn__SecurityContext* SignOn__SecurityContext_new2(const libqt_string systemContext, const libqt_string applicationContext) {
+SignOn__SecurityContext* SignOn__SecurityContext_New2(const libqt_string systemContext, const libqt_string applicationContext) {
     QString systemContext_QString = QString::fromUtf8(systemContext.data, systemContext.len);
     QString applicationContext_QString = QString::fromUtf8(applicationContext.data, applicationContext.len);
     return new SignOn::SecurityContext(systemContext_QString, applicationContext_QString);
 }
 
-SignOn__SecurityContext* SignOn__SecurityContext_new3(const SignOn__SecurityContext* param1) {
+SignOn__SecurityContext* SignOn__SecurityContext_New3(const SignOn__SecurityContext* param1) {
     return new SignOn::SecurityContext(*param1);
 }
 

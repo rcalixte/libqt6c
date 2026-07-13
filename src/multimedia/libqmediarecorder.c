@@ -12,11 +12,11 @@
 #include "libqmediarecorder.h"
 
 QMediaRecorder* q_mediarecorder_new() {
-    return QMediaRecorder_new();
+    return QMediaRecorder_New();
 }
 
 QMediaRecorder* q_mediarecorder_new2(void* parent) {
-    return QMediaRecorder_new2((QObject*)parent);
+    return QMediaRecorder_New2((QObject*)parent);
 }
 
 const QMetaObject* q_mediarecorder_meta_object(void* self) {

@@ -19,11 +19,11 @@
 #include "libsvg.hpp"
 #include "libsvg.hxx"
 
-KSvg__Svg* KSvg__Svg_new() {
+KSvg__Svg* KSvg__Svg_New() {
     return new VirtualKSvgSvg();
 }
 
-KSvg__Svg* KSvg__Svg_new2(QObject* parent) {
+KSvg__Svg* KSvg__Svg_New2(QObject* parent) {
     return new VirtualKSvgSvg(parent);
 }
 

@@ -18,10 +18,10 @@ extern "C" {
 typedef struct KACL KACL;
 #endif
 
-KACL* KACL_new(const libqt_string aclString);
-KACL* KACL_new2(const KACL* rhs);
-KACL* KACL_new3(mode_t basicPermissions);
-KACL* KACL_new4();
+KACL* KACL_New(const libqt_string aclString);
+KACL* KACL_New2(const KACL* rhs);
+KACL* KACL_New3(mode_t basicPermissions);
+KACL* KACL_New4();
 void KACL_OperatorAssign(KACL* self, const KACL* rhs);
 bool KACL_OperatorEqual(const KACL* self, const KACL* rhs);
 bool KACL_OperatorNotEqual(const KACL* self, const KACL* rhs);

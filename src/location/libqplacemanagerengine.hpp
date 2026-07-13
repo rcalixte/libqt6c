@@ -42,8 +42,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-QPlaceManagerEngine* QPlaceManagerEngine_new(const libqt_map /* of libqt_string to QVariant* */ parameters);
-QPlaceManagerEngine* QPlaceManagerEngine_new2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent);
+QPlaceManagerEngine* QPlaceManagerEngine_New(const libqt_map /* of libqt_string to QVariant* */ parameters);
+QPlaceManagerEngine* QPlaceManagerEngine_New2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent);
 QMetaObject* QPlaceManagerEngine_MetaObject(const QPlaceManagerEngine* self);
 void* QPlaceManagerEngine_Metacast(QPlaceManagerEngine* self, const char* param1);
 int QPlaceManagerEngine_Metacall(QPlaceManagerEngine* self, int param1, int param2, void** param3);

@@ -15,19 +15,19 @@
 #include "libqsvgwidget.h"
 
 QSvgWidget* q_svgwidget_new(void* parent) {
-    return QSvgWidget_new((QWidget*)parent);
+    return QSvgWidget_New((QWidget*)parent);
 }
 
 QSvgWidget* q_svgwidget_new2() {
-    return QSvgWidget_new2();
+    return QSvgWidget_New2();
 }
 
 QSvgWidget* q_svgwidget_new3(const char* file) {
-    return QSvgWidget_new3(qstring(file));
+    return QSvgWidget_New3(qstring(file));
 }
 
 QSvgWidget* q_svgwidget_new4(const char* file, void* parent) {
-    return QSvgWidget_new4(qstring(file), (QWidget*)parent);
+    return QSvgWidget_New4(qstring(file), (QWidget*)parent);
 }
 
 const QMetaObject* q_svgwidget_meta_object(void* self) {

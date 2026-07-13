@@ -11,55 +11,55 @@
 #include "libkselectionowner.hxx"
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new(xcb_atom_t selection) {
+KSelectionOwner* KSelectionOwner_New(xcb_atom_t selection) {
     return new VirtualKSelectionOwner(selection);
 }
 #endif
 
-KSelectionOwner* KSelectionOwner_new2(const char* selection) {
+KSelectionOwner* KSelectionOwner_New2(const char* selection) {
     return new VirtualKSelectionOwner(selection);
 }
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
+KSelectionOwner* KSelectionOwner_New3(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionOwner(selection, c, root);
 }
 #endif
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
+KSelectionOwner* KSelectionOwner_New4(const char* selection, xcb_connection_t* c, xcb_window_t root) {
     return new VirtualKSelectionOwner(selection, c, root);
 }
 #endif
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new5(xcb_atom_t selection, int screen) {
+KSelectionOwner* KSelectionOwner_New5(xcb_atom_t selection, int screen) {
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen));
 }
 #endif
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new6(xcb_atom_t selection, int screen, QObject* parent) {
+KSelectionOwner* KSelectionOwner_New6(xcb_atom_t selection, int screen, QObject* parent) {
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen), parent);
 }
 #endif
 
-KSelectionOwner* KSelectionOwner_new7(const char* selection, int screen) {
+KSelectionOwner* KSelectionOwner_New7(const char* selection, int screen) {
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen));
 }
 
-KSelectionOwner* KSelectionOwner_new8(const char* selection, int screen, QObject* parent) {
+KSelectionOwner* KSelectionOwner_New8(const char* selection, int screen, QObject* parent) {
     return new VirtualKSelectionOwner(selection, static_cast<int>(screen), parent);
 }
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
+KSelectionOwner* KSelectionOwner_New9(xcb_atom_t selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionOwner(selection, c, root, parent);
 }
 #endif
 
 #ifdef __Q_OS_LINUX__
-KSelectionOwner* KSelectionOwner_new10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
+KSelectionOwner* KSelectionOwner_New10(const char* selection, xcb_connection_t* c, xcb_window_t root, QObject* parent) {
     return new VirtualKSelectionOwner(selection, c, root, parent);
 }
 #endif

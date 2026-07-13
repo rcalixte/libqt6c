@@ -40,19 +40,19 @@
 #include "libkreplacedialog.hpp"
 #include "libkreplacedialog.hxx"
 
-KReplaceDialog* KReplaceDialog_new(QWidget* parent) {
+KReplaceDialog* KReplaceDialog_New(QWidget* parent) {
     return new VirtualKReplaceDialog(parent);
 }
 
-KReplaceDialog* KReplaceDialog_new2() {
+KReplaceDialog* KReplaceDialog_New2() {
     return new VirtualKReplaceDialog();
 }
 
-KReplaceDialog* KReplaceDialog_new3(QWidget* parent, long options) {
+KReplaceDialog* KReplaceDialog_New3(QWidget* parent, long options) {
     return new VirtualKReplaceDialog(parent, static_cast<long>(options));
 }
 
-KReplaceDialog* KReplaceDialog_new4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings) {
+KReplaceDialog* KReplaceDialog_New4(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings) {
     QList<QString> findStrings_QList;
     findStrings_QList.reserve(findStrings.len);
     libqt_string* findStrings_arr = static_cast<libqt_string*>(findStrings.data.ptr);
@@ -63,7 +63,7 @@ KReplaceDialog* KReplaceDialog_new4(QWidget* parent, long options, const libqt_l
     return new VirtualKReplaceDialog(parent, static_cast<long>(options), findStrings_QList);
 }
 
-KReplaceDialog* KReplaceDialog_new5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings) {
+KReplaceDialog* KReplaceDialog_New5(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings) {
     QList<QString> findStrings_QList;
     findStrings_QList.reserve(findStrings.len);
     libqt_string* findStrings_arr = static_cast<libqt_string*>(findStrings.data.ptr);
@@ -81,7 +81,7 @@ KReplaceDialog* KReplaceDialog_new5(QWidget* parent, long options, const libqt_l
     return new VirtualKReplaceDialog(parent, static_cast<long>(options), findStrings_QList, replaceStrings_QList);
 }
 
-KReplaceDialog* KReplaceDialog_new6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings, bool hasSelection) {
+KReplaceDialog* KReplaceDialog_New6(QWidget* parent, long options, const libqt_list /* of libqt_string */ findStrings, const libqt_list /* of libqt_string */ replaceStrings, bool hasSelection) {
     QList<QString> findStrings_QList;
     findStrings_QList.reserve(findStrings.len);
     libqt_string* findStrings_arr = static_cast<libqt_string*>(findStrings.data.ptr);

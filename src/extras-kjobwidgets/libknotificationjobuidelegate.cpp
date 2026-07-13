@@ -9,11 +9,11 @@
 #include "libknotificationjobuidelegate.hpp"
 #include "libknotificationjobuidelegate.hxx"
 
-KNotificationJobUiDelegate* KNotificationJobUiDelegate_new() {
+KNotificationJobUiDelegate* KNotificationJobUiDelegate_New() {
     return new KNotificationJobUiDelegate();
 }
 
-KNotificationJobUiDelegate* KNotificationJobUiDelegate_new2(int flags) {
+KNotificationJobUiDelegate* KNotificationJobUiDelegate_New2(int flags) {
     return new KNotificationJobUiDelegate(static_cast<KJobUiDelegate::Flags>(flags));
 }
 

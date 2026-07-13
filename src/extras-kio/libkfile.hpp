@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KFile KFile;
 #endif
 
-KFile* KFile_new(const KFile* other);
-KFile* KFile_new2(KFile* other);
+KFile* KFile_New(const KFile* other);
+KFile* KFile_New2(KFile* other);
 void KFile_CopyAssign(KFile* self, KFile* other);
 void KFile_MoveAssign(KFile* self, KFile* other);
 bool KFile_IsSortByName(const int* sort);

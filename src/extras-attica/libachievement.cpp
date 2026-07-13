@@ -7,11 +7,11 @@
 #include "libachievement.hpp"
 #include "libachievement.hxx"
 
-Attica__Achievement* Attica__Achievement_new() {
+Attica__Achievement* Attica__Achievement_New() {
     return new Attica::Achievement();
 }
 
-Attica__Achievement* Attica__Achievement_new2(const Attica__Achievement* other) {
+Attica__Achievement* Attica__Achievement_New2(const Attica__Achievement* other) {
     return new Attica::Achievement(*other);
 }
 

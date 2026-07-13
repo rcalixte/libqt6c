@@ -9,11 +9,11 @@
 #include "libqhxymodelmapper.h"
 
 QHXYModelMapper* q_hxymodelmapper_new() {
-    return QHXYModelMapper_new();
+    return QHXYModelMapper_New();
 }
 
 QHXYModelMapper* q_hxymodelmapper_new2(void* parent) {
-    return QHXYModelMapper_new2((QObject*)parent);
+    return QHXYModelMapper_New2((QObject*)parent);
 }
 
 const QMetaObject* q_hxymodelmapper_meta_object(void* self) {

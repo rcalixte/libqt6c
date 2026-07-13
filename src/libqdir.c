@@ -4,27 +4,27 @@
 #include "libqdir.h"
 
 QDir* q_dir_new(void* param1) {
-    return QDir_new((QDir*)param1);
+    return QDir_New((QDir*)param1);
 }
 
 QDir* q_dir_new2() {
-    return QDir_new2();
+    return QDir_New2();
 }
 
 QDir* q_dir_new3(const char* path, const char* nameFilter) {
-    return QDir_new3(qstring(path), qstring(nameFilter));
+    return QDir_New3(qstring(path), qstring(nameFilter));
 }
 
 QDir* q_dir_new4(const char* path) {
-    return QDir_new4(qstring(path));
+    return QDir_New4(qstring(path));
 }
 
 QDir* q_dir_new5(const char* path, const char* nameFilter, int32_t sort) {
-    return QDir_new5(qstring(path), qstring(nameFilter), sort);
+    return QDir_New5(qstring(path), qstring(nameFilter), sort);
 }
 
 QDir* q_dir_new6(const char* path, const char* nameFilter, int32_t sort, int32_t filter) {
-    return QDir_new6(qstring(path), qstring(nameFilter), sort, filter);
+    return QDir_New6(qstring(path), qstring(nameFilter), sort, filter);
 }
 
 void q_dir_operator_assign(void* self, void* param1) {

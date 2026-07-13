@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KDirLister* KDirLister_new();
-KDirLister* KDirLister_new2(QObject* parent);
+KDirLister* KDirLister_New();
+KDirLister* KDirLister_New2(QObject* parent);
 QMetaObject* KDirLister_MetaObject(const KDirLister* self);
 void* KDirLister_Metacast(KDirLister* self, const char* param1);
 int KDirLister_Metacall(KDirLister* self, int param1, int param2, void** param3);

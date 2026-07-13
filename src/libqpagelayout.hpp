@@ -23,11 +23,11 @@ typedef struct QRect QRect;
 typedef struct QRectF QRectF;
 #endif
 
-QPageLayout* QPageLayout_new();
-QPageLayout* QPageLayout_new2(const QPageSize* pageSize, int orientation, const QMarginsF* margins);
-QPageLayout* QPageLayout_new3(const QPageLayout* other);
-QPageLayout* QPageLayout_new4(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units);
-QPageLayout* QPageLayout_new5(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units, const QMarginsF* minMargins);
+QPageLayout* QPageLayout_New();
+QPageLayout* QPageLayout_New2(const QPageSize* pageSize, int orientation, const QMarginsF* margins);
+QPageLayout* QPageLayout_New3(const QPageLayout* other);
+QPageLayout* QPageLayout_New4(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units);
+QPageLayout* QPageLayout_New5(const QPageSize* pageSize, int orientation, const QMarginsF* margins, int units, const QMarginsF* minMargins);
 void QPageLayout_OperatorAssign(QPageLayout* self, const QPageLayout* other);
 void QPageLayout_Swap(QPageLayout* self, QPageLayout* other);
 bool QPageLayout_IsEquivalentTo(const QPageLayout* self, const QPageLayout* other);

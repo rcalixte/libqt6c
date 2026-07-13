@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KBugReport* KBugReport_new(const KAboutData* aboutData);
-KBugReport* KBugReport_new2(const KAboutData* aboutData, QWidget* parent);
+KBugReport* KBugReport_New(const KAboutData* aboutData);
+KBugReport* KBugReport_New2(const KAboutData* aboutData, QWidget* parent);
 QMetaObject* KBugReport_MetaObject(const KBugReport* self);
 void* KBugReport_Metacast(KBugReport* self, const char* param1);
 int KBugReport_Metacall(KBugReport* self, int param1, int param2, void** param3);

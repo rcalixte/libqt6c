@@ -21,15 +21,15 @@
 #include "libsyntaxhighlighter.hpp"
 #include "libsyntaxhighlighter.hxx"
 
-KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_new() {
+KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_New() {
     return new VirtualKSyntaxHighlightingSyntaxHighlighter();
 }
 
-KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_new2(QTextDocument* document) {
+KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_New2(QTextDocument* document) {
     return new VirtualKSyntaxHighlightingSyntaxHighlighter(document);
 }
 
-KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_new3(QObject* parent) {
+KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_New3(QObject* parent) {
     return new VirtualKSyntaxHighlightingSyntaxHighlighter(parent);
 }
 

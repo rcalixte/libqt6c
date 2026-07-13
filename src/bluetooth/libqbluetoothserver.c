@@ -10,11 +10,11 @@
 #include "libqbluetoothserver.h"
 
 QBluetoothServer* q_bluetoothserver_new(int32_t serverType) {
-    return QBluetoothServer_new(serverType);
+    return QBluetoothServer_New(serverType);
 }
 
 QBluetoothServer* q_bluetoothserver_new2(int32_t serverType, void* parent) {
-    return QBluetoothServer_new2(serverType, (QObject*)parent);
+    return QBluetoothServer_New2(serverType, (QObject*)parent);
 }
 
 const QMetaObject* q_bluetoothserver_meta_object(void* self) {

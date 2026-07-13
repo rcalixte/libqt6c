@@ -14,12 +14,12 @@
 #include "libcommandlauncherjob.hpp"
 #include "libcommandlauncherjob.hxx"
 
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new(const libqt_string command) {
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New(const libqt_string command) {
     QString command_QString = QString::fromUtf8(command.data, command.len);
     return new VirtualKIOCommandLauncherJob(command_QString);
 }
 
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new2(const libqt_string executable, const libqt_list /* of libqt_string */ args) {
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New2(const libqt_string executable, const libqt_list /* of libqt_string */ args) {
     QString executable_QString = QString::fromUtf8(executable.data, executable.len);
     QList<QString> args_QList;
     args_QList.reserve(args.len);
@@ -31,12 +31,12 @@ KIO__CommandLauncherJob* KIO__CommandLauncherJob_new2(const libqt_string executa
     return new VirtualKIOCommandLauncherJob(executable_QString, args_QList);
 }
 
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new3(const libqt_string command, QObject* parent) {
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New3(const libqt_string command, QObject* parent) {
     QString command_QString = QString::fromUtf8(command.data, command.len);
     return new VirtualKIOCommandLauncherJob(command_QString, parent);
 }
 
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new4(const libqt_string executable, const libqt_list /* of libqt_string */ args, QObject* parent) {
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New4(const libqt_string executable, const libqt_list /* of libqt_string */ args, QObject* parent) {
     QString executable_QString = QString::fromUtf8(executable.data, executable.len);
     QList<QString> args_QList;
     args_QList.reserve(args.len);

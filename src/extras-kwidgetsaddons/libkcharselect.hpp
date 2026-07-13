@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KCharSelect* KCharSelect_new(QWidget* parent);
-KCharSelect* KCharSelect_new2(QWidget* parent, QObject* actionParent);
-KCharSelect* KCharSelect_new3(QWidget* parent, const int controls);
-KCharSelect* KCharSelect_new4(QWidget* parent, QObject* actionParent, const int controls);
+KCharSelect* KCharSelect_New(QWidget* parent);
+KCharSelect* KCharSelect_New2(QWidget* parent, QObject* actionParent);
+KCharSelect* KCharSelect_New3(QWidget* parent, const int controls);
+KCharSelect* KCharSelect_New4(QWidget* parent, QObject* actionParent, const int controls);
 QMetaObject* KCharSelect_MetaObject(const KCharSelect* self);
 void* KCharSelect_Metacast(KCharSelect* self, const char* param1);
 int KCharSelect_Metacall(KCharSelect* self, int param1, int param2, void** param3);

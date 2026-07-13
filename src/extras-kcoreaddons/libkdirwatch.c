@@ -7,11 +7,11 @@
 #include "libkdirwatch.h"
 
 KDirWatch* k_dirwatch_new() {
-    return KDirWatch_new();
+    return KDirWatch_New();
 }
 
 KDirWatch* k_dirwatch_new2(void* parent) {
-    return KDirWatch_new2((QObject*)parent);
+    return KDirWatch_New2((QObject*)parent);
 }
 
 const QMetaObject* k_dirwatch_meta_object(void* self) {

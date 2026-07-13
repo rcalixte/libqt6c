@@ -13,11 +13,11 @@
 #include "libqsctpserver.hpp"
 #include "libqsctpserver.hxx"
 
-QSctpServer* QSctpServer_new() {
+QSctpServer* QSctpServer_New() {
     return new VirtualQSctpServer();
 }
 
-QSctpServer* QSctpServer_new2(QObject* parent) {
+QSctpServer* QSctpServer_New2(QObject* parent) {
     return new VirtualQSctpServer(parent);
 }
 

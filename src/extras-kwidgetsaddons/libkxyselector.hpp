@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KXYSelector* KXYSelector_new(QWidget* parent);
-KXYSelector* KXYSelector_new2();
+KXYSelector* KXYSelector_New(QWidget* parent);
+KXYSelector* KXYSelector_New2();
 QMetaObject* KXYSelector_MetaObject(const KXYSelector* self);
 void* KXYSelector_Metacast(KXYSelector* self, const char* param1);
 int KXYSelector_Metacall(KXYSelector* self, int param1, int param2, void** param3);

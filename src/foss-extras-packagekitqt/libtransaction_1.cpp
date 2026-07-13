@@ -14,7 +14,7 @@
 #include "libtransaction_1.hpp"
 #include "libtransaction_1.hxx"
 
-PackageKit__Transaction* PackageKit__Transaction_new(const QDBusObjectPath* tid) {
+PackageKit__Transaction* PackageKit__Transaction_New(const QDBusObjectPath* tid) {
     return new VirtualPackageKitTransaction(*tid);
 }
 

@@ -38,11 +38,11 @@
 #include "libknewpasswordwidget.hpp"
 #include "libknewpasswordwidget.hxx"
 
-KNewPasswordWidget* KNewPasswordWidget_new(QWidget* parent) {
+KNewPasswordWidget* KNewPasswordWidget_New(QWidget* parent) {
     return new VirtualKNewPasswordWidget(parent);
 }
 
-KNewPasswordWidget* KNewPasswordWidget_new2() {
+KNewPasswordWidget* KNewPasswordWidget_New2() {
     return new VirtualKNewPasswordWidget();
 }
 

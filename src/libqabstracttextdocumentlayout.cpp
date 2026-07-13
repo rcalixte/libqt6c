@@ -27,7 +27,7 @@
 #include "libqabstracttextdocumentlayout.hpp"
 #include "libqabstracttextdocumentlayout.hxx"
 
-QAbstractTextDocumentLayout* QAbstractTextDocumentLayout_new(QTextDocument* doc) {
+QAbstractTextDocumentLayout* QAbstractTextDocumentLayout_New(QTextDocument* doc) {
     return new VirtualQAbstractTextDocumentLayout(doc);
 }
 
@@ -862,11 +862,11 @@ void QTextObjectInterface_Delete(QTextObjectInterface* self) {
     delete self;
 }
 
-QAbstractTextDocumentLayout__Selection* QAbstractTextDocumentLayout__Selection_new(const QAbstractTextDocumentLayout__Selection* param1) {
+QAbstractTextDocumentLayout__Selection* QAbstractTextDocumentLayout__Selection_New(const QAbstractTextDocumentLayout__Selection* param1) {
     return new QAbstractTextDocumentLayout::Selection(*param1);
 }
 
-QAbstractTextDocumentLayout__Selection* QAbstractTextDocumentLayout__Selection_new2() {
+QAbstractTextDocumentLayout__Selection* QAbstractTextDocumentLayout__Selection_New2() {
     return new QAbstractTextDocumentLayout::Selection();
 }
 
@@ -894,11 +894,11 @@ void QAbstractTextDocumentLayout__Selection_Delete(QAbstractTextDocumentLayout__
     delete self;
 }
 
-QAbstractTextDocumentLayout__PaintContext* QAbstractTextDocumentLayout__PaintContext_new() {
+QAbstractTextDocumentLayout__PaintContext* QAbstractTextDocumentLayout__PaintContext_New() {
     return new QAbstractTextDocumentLayout::PaintContext();
 }
 
-QAbstractTextDocumentLayout__PaintContext* QAbstractTextDocumentLayout__PaintContext_new2(const QAbstractTextDocumentLayout__PaintContext* param1) {
+QAbstractTextDocumentLayout__PaintContext* QAbstractTextDocumentLayout__PaintContext_New2(const QAbstractTextDocumentLayout__PaintContext* param1) {
     return new QAbstractTextDocumentLayout::PaintContext(*param1);
 }
 

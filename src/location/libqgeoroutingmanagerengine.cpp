@@ -17,7 +17,7 @@
 #include "libqgeoroutingmanagerengine.hpp"
 #include "libqgeoroutingmanagerengine.hxx"
 
-QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_new(const libqt_map /* of libqt_string to QVariant* */ parameters) {
+QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_New(const libqt_map /* of libqt_string to QVariant* */ parameters) {
     QMap<QString, QVariant> parameters_QMap;
     libqt_string* parameters_karr = static_cast<libqt_string*>(parameters.keys);
     QVariant** parameters_varr = static_cast<QVariant**>(parameters.values);
@@ -28,7 +28,7 @@ QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_new(const libqt_map /* of lib
     return new VirtualQGeoRoutingManagerEngine(parameters_QMap);
 }
 
-QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_new2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent) {
+QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_New2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent) {
     QMap<QString, QVariant> parameters_QMap;
     libqt_string* parameters_karr = static_cast<libqt_string*>(parameters.keys);
     QVariant** parameters_varr = static_cast<QVariant**>(parameters.values);

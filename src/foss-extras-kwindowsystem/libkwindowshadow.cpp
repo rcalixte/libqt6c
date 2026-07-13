@@ -14,7 +14,7 @@
 #include "libkwindowshadow.hpp"
 #include "libkwindowshadow.hxx"
 
-KWindowShadowTile* KWindowShadowTile_new() {
+KWindowShadowTile* KWindowShadowTile_New() {
     return new KWindowShadowTile();
 }
 
@@ -38,11 +38,11 @@ void KWindowShadowTile_Delete(KWindowShadowTile* self) {
     delete self;
 }
 
-KWindowShadow* KWindowShadow_new() {
+KWindowShadow* KWindowShadow_New() {
     return new VirtualKWindowShadow();
 }
 
-KWindowShadow* KWindowShadow_new2(QObject* parent) {
+KWindowShadow* KWindowShadow_New2(QObject* parent) {
     return new VirtualKWindowShadow(parent);
 }
 

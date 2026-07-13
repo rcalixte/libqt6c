@@ -14,11 +14,11 @@
 #include "libkcoreconfigskeleton.h"
 
 KConfigSkeletonItem* k_configskeletonitem_new(const char* _group, const char* _key) {
-    return KConfigSkeletonItem_new(qstring(_group), qstring(_key));
+    return KConfigSkeletonItem_New(qstring(_group), qstring(_key));
 }
 
 KConfigSkeletonItem* k_configskeletonitem_new2(void* param1) {
-    return KConfigSkeletonItem_new2((KConfigSkeletonItem*)param1);
+    return KConfigSkeletonItem_New2((KConfigSkeletonItem*)param1);
 }
 
 void k_configskeletonitem_set_group(void* self, const char* _group) {
@@ -256,11 +256,11 @@ void k_configskeletonitem_delete(void* self) {
 }
 
 KPropertySkeletonItem* k_propertyskeletonitem_new(void* object, char* propertyName, void* defaultValue) {
-    return KPropertySkeletonItem_new((QObject*)object, qstring(propertyName), (QVariant*)defaultValue);
+    return KPropertySkeletonItem_New((QObject*)object, qstring(propertyName), (QVariant*)defaultValue);
 }
 
 KPropertySkeletonItem* k_propertyskeletonitem_new2(void* param1) {
-    return KPropertySkeletonItem_new2((KPropertySkeletonItem*)param1);
+    return KPropertySkeletonItem_New2((KPropertySkeletonItem*)param1);
 }
 
 QVariant* k_propertyskeletonitem_property(void* self) {
@@ -644,15 +644,15 @@ void k_configcompilersignallingitem_delete(void* self) {
 }
 
 KCoreConfigSkeleton* k_coreconfigskeleton_new() {
-    return KCoreConfigSkeleton_new();
+    return KCoreConfigSkeleton_New();
 }
 
 KCoreConfigSkeleton* k_coreconfigskeleton_new2(const char* configname) {
-    return KCoreConfigSkeleton_new2(qstring(configname));
+    return KCoreConfigSkeleton_New2(qstring(configname));
 }
 
 KCoreConfigSkeleton* k_coreconfigskeleton_new3(const char* configname, void* parent) {
-    return KCoreConfigSkeleton_new3(qstring(configname), (QObject*)parent);
+    return KCoreConfigSkeleton_New3(qstring(configname), (QObject*)parent);
 }
 
 const QMetaObject* k_coreconfigskeleton_meta_object(void* self) {
@@ -1498,15 +1498,15 @@ void k_coreconfigskeleton_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemString* k_coreconfigskeleton__itemstring_new(const char* _group, const char* _key, const char* reference) {
-    return KCoreConfigSkeleton__ItemString_new(qstring(_group), qstring(_key), qstring(reference));
+    return KCoreConfigSkeleton__ItemString_New(qstring(_group), qstring(_key), qstring(reference));
 }
 
 KCoreConfigSkeleton__ItemString* k_coreconfigskeleton__itemstring_new2(const char* _group, const char* _key, const char* reference, const char* defaultValue) {
-    return KCoreConfigSkeleton__ItemString_new2(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue));
+    return KCoreConfigSkeleton__ItemString_New2(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue));
 }
 
 KCoreConfigSkeleton__ItemString* k_coreconfigskeleton__itemstring_new3(const char* _group, const char* _key, const char* reference, const char* defaultValue, int32_t type) {
-    return KCoreConfigSkeleton__ItemString_new3(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue), type);
+    return KCoreConfigSkeleton__ItemString_New3(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue), type);
 }
 
 void k_coreconfigskeleton__itemstring_write_config(void* self, void* config) {
@@ -1574,11 +1574,11 @@ void k_coreconfigskeleton__itemstring_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemPassword* k_coreconfigskeleton__itempassword_new(const char* _group, const char* _key, const char* reference) {
-    return KCoreConfigSkeleton__ItemPassword_new(qstring(_group), qstring(_key), qstring(reference));
+    return KCoreConfigSkeleton__ItemPassword_New(qstring(_group), qstring(_key), qstring(reference));
 }
 
 KCoreConfigSkeleton__ItemPassword* k_coreconfigskeleton__itempassword_new2(const char* _group, const char* _key, const char* reference, const char* defaultValue) {
-    return KCoreConfigSkeleton__ItemPassword_new2(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue));
+    return KCoreConfigSkeleton__ItemPassword_New2(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue));
 }
 
 void k_coreconfigskeleton__itempassword_write_config(void* self, void* config) {
@@ -1646,11 +1646,11 @@ void k_coreconfigskeleton__itempassword_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton__itempath_new(const char* _group, const char* _key, const char* reference) {
-    return KCoreConfigSkeleton__ItemPath_new(qstring(_group), qstring(_key), qstring(reference));
+    return KCoreConfigSkeleton__ItemPath_New(qstring(_group), qstring(_key), qstring(reference));
 }
 
 KCoreConfigSkeleton__ItemPath* k_coreconfigskeleton__itempath_new2(const char* _group, const char* _key, const char* reference, const char* defaultValue) {
-    return KCoreConfigSkeleton__ItemPath_new2(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue));
+    return KCoreConfigSkeleton__ItemPath_New2(qstring(_group), qstring(_key), qstring(reference), qstring(defaultValue));
 }
 
 void k_coreconfigskeleton__itempath_write_config(void* self, void* config) {
@@ -1718,11 +1718,11 @@ void k_coreconfigskeleton__itempath_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemUrl_new(qstring(_group), qstring(_key), (QUrl*)reference);
+    return KCoreConfigSkeleton__ItemUrl_New(qstring(_group), qstring(_key), (QUrl*)reference);
 }
 
 KCoreConfigSkeleton__ItemUrl* k_coreconfigskeleton__itemurl_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemUrl_new2(qstring(_group), qstring(_key), (QUrl*)reference, (QUrl*)defaultValue);
+    return KCoreConfigSkeleton__ItemUrl_New2(qstring(_group), qstring(_key), (QUrl*)reference, (QUrl*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemurl_write_config(void* self, void* config) {
@@ -1790,11 +1790,11 @@ void k_coreconfigskeleton__itemurl_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemProperty_new(qstring(_group), qstring(_key), (QVariant*)reference);
+    return KCoreConfigSkeleton__ItemProperty_New(qstring(_group), qstring(_key), (QVariant*)reference);
 }
 
 KCoreConfigSkeleton__ItemProperty* k_coreconfigskeleton__itemproperty_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemProperty_new2(qstring(_group), qstring(_key), (QVariant*)reference, (QVariant*)defaultValue);
+    return KCoreConfigSkeleton__ItemProperty_New2(qstring(_group), qstring(_key), (QVariant*)reference, (QVariant*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemproperty_read_config(void* self, void* config) {
@@ -1850,11 +1850,11 @@ void k_coreconfigskeleton__itemproperty_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton__itembool_new(const char* _group, const char* _key, bool* reference) {
-    return KCoreConfigSkeleton__ItemBool_new(qstring(_group), qstring(_key), (bool*)reference);
+    return KCoreConfigSkeleton__ItemBool_New(qstring(_group), qstring(_key), (bool*)reference);
 }
 
 KCoreConfigSkeleton__ItemBool* k_coreconfigskeleton__itembool_new2(const char* _group, const char* _key, bool* reference, bool defaultValue) {
-    return KCoreConfigSkeleton__ItemBool_new2(qstring(_group), qstring(_key), (bool*)reference, defaultValue);
+    return KCoreConfigSkeleton__ItemBool_New2(qstring(_group), qstring(_key), (bool*)reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itembool_read_config(void* self, void* config) {
@@ -1910,11 +1910,11 @@ void k_coreconfigskeleton__itembool_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new(const char* _group, const char* _key, int* reference) {
-    return KCoreConfigSkeleton__ItemInt_new(qstring(_group), qstring(_key), reference);
+    return KCoreConfigSkeleton__ItemInt_New(qstring(_group), qstring(_key), reference);
 }
 
 KCoreConfigSkeleton__ItemInt* k_coreconfigskeleton__itemint_new2(const char* _group, const char* _key, int* reference, int32_t defaultValue) {
-    return KCoreConfigSkeleton__ItemInt_new2(qstring(_group), qstring(_key), reference, defaultValue);
+    return KCoreConfigSkeleton__ItemInt_New2(qstring(_group), qstring(_key), reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemint_read_config(void* self, void* config) {
@@ -1994,11 +1994,11 @@ void k_coreconfigskeleton__itemint_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new(const char* _group, const char* _key, long long* reference) {
-    return KCoreConfigSkeleton__ItemLongLong_new(qstring(_group), qstring(_key), reference);
+    return KCoreConfigSkeleton__ItemLongLong_New(qstring(_group), qstring(_key), reference);
 }
 
 KCoreConfigSkeleton__ItemLongLong* k_coreconfigskeleton__itemlonglong_new2(const char* _group, const char* _key, long long* reference, int64_t defaultValue) {
-    return KCoreConfigSkeleton__ItemLongLong_new2(qstring(_group), qstring(_key), reference, defaultValue);
+    return KCoreConfigSkeleton__ItemLongLong_New2(qstring(_group), qstring(_key), reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemlonglong_read_config(void* self, void* config) {
@@ -2086,11 +2086,11 @@ void k_coreconfigskeleton__itemlonglong_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new(void* param1) {
-    return KCoreConfigSkeleton__ItemEnum__Choice_new((KCoreConfigSkeleton__ItemEnum__Choice*)param1);
+    return KCoreConfigSkeleton__ItemEnum__Choice_New((KCoreConfigSkeleton__ItemEnum__Choice*)param1);
 }
 
 KCoreConfigSkeleton__ItemEnum__Choice* k_coreconfigskeleton__itemenum__choice_new2() {
-    return KCoreConfigSkeleton__ItemEnum__Choice_new2();
+    return KCoreConfigSkeleton__ItemEnum__Choice_New2();
 }
 
 const char* k_coreconfigskeleton__itemenum__choice_name(void* self) {
@@ -2157,11 +2157,11 @@ void k_coreconfigskeleton__itemenum__choice_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new(const char* _group, const char* _key, int* reference, libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices) {
-    return KCoreConfigSkeleton__ItemEnum_new(qstring(_group), qstring(_key), reference, choices);
+    return KCoreConfigSkeleton__ItemEnum_New(qstring(_group), qstring(_key), reference, choices);
 }
 
 KCoreConfigSkeleton__ItemEnum* k_coreconfigskeleton__itemenum_new2(const char* _group, const char* _key, int* reference, libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices, int32_t defaultValue) {
-    return KCoreConfigSkeleton__ItemEnum_new2(qstring(_group), qstring(_key), reference, choices, defaultValue);
+    return KCoreConfigSkeleton__ItemEnum_New2(qstring(_group), qstring(_key), reference, choices, defaultValue);
 }
 
 libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ k_coreconfigskeleton__itemenum_choices(void* self) {
@@ -2269,11 +2269,11 @@ void k_coreconfigskeleton__itemenum_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton__itemuint_new(const char* _group, const char* _key, uint32_t* reference) {
-    return KCoreConfigSkeleton__ItemUInt_new(qstring(_group), qstring(_key), reference);
+    return KCoreConfigSkeleton__ItemUInt_New(qstring(_group), qstring(_key), reference);
 }
 
 KCoreConfigSkeleton__ItemUInt* k_coreconfigskeleton__itemuint_new2(const char* _group, const char* _key, uint32_t* reference, uint32_t defaultValue) {
-    return KCoreConfigSkeleton__ItemUInt_new2(qstring(_group), qstring(_key), reference, defaultValue);
+    return KCoreConfigSkeleton__ItemUInt_New2(qstring(_group), qstring(_key), reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemuint_read_config(void* self, void* config) {
@@ -2361,11 +2361,11 @@ void k_coreconfigskeleton__itemuint_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new(const char* _group, const char* _key, uintptr_t* reference) {
-    return KCoreConfigSkeleton__ItemULongLong_new(qstring(_group), qstring(_key), (unsigned long long*)reference);
+    return KCoreConfigSkeleton__ItemULongLong_New(qstring(_group), qstring(_key), (unsigned long long*)reference);
 }
 
 KCoreConfigSkeleton__ItemULongLong* k_coreconfigskeleton__itemulonglong_new2(const char* _group, const char* _key, uintptr_t* reference, uint64_t defaultValue) {
-    return KCoreConfigSkeleton__ItemULongLong_new2(qstring(_group), qstring(_key), (unsigned long long*)reference, defaultValue);
+    return KCoreConfigSkeleton__ItemULongLong_New2(qstring(_group), qstring(_key), (unsigned long long*)reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemulonglong_read_config(void* self, void* config) {
@@ -2453,11 +2453,11 @@ void k_coreconfigskeleton__itemulonglong_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton__itemdouble_new(const char* _group, const char* _key, double* reference) {
-    return KCoreConfigSkeleton__ItemDouble_new(qstring(_group), qstring(_key), reference);
+    return KCoreConfigSkeleton__ItemDouble_New(qstring(_group), qstring(_key), reference);
 }
 
 KCoreConfigSkeleton__ItemDouble* k_coreconfigskeleton__itemdouble_new2(const char* _group, const char* _key, double* reference, double defaultValue) {
-    return KCoreConfigSkeleton__ItemDouble_new2(qstring(_group), qstring(_key), reference, defaultValue);
+    return KCoreConfigSkeleton__ItemDouble_New2(qstring(_group), qstring(_key), reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemdouble_read_config(void* self, void* config) {
@@ -2545,11 +2545,11 @@ void k_coreconfigskeleton__itemdouble_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemRect_new(qstring(_group), qstring(_key), (QRect*)reference);
+    return KCoreConfigSkeleton__ItemRect_New(qstring(_group), qstring(_key), (QRect*)reference);
 }
 
 KCoreConfigSkeleton__ItemRect* k_coreconfigskeleton__itemrect_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemRect_new2(qstring(_group), qstring(_key), (QRect*)reference, (QRect*)defaultValue);
+    return KCoreConfigSkeleton__ItemRect_New2(qstring(_group), qstring(_key), (QRect*)reference, (QRect*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemrect_read_config(void* self, void* config) {
@@ -2605,11 +2605,11 @@ void k_coreconfigskeleton__itemrect_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemRectF_new(qstring(_group), qstring(_key), (QRectF*)reference);
+    return KCoreConfigSkeleton__ItemRectF_New(qstring(_group), qstring(_key), (QRectF*)reference);
 }
 
 KCoreConfigSkeleton__ItemRectF* k_coreconfigskeleton__itemrectf_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemRectF_new2(qstring(_group), qstring(_key), (QRectF*)reference, (QRectF*)defaultValue);
+    return KCoreConfigSkeleton__ItemRectF_New2(qstring(_group), qstring(_key), (QRectF*)reference, (QRectF*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemrectf_read_config(void* self, void* config) {
@@ -2665,11 +2665,11 @@ void k_coreconfigskeleton__itemrectf_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemPoint_new(qstring(_group), qstring(_key), (QPoint*)reference);
+    return KCoreConfigSkeleton__ItemPoint_New(qstring(_group), qstring(_key), (QPoint*)reference);
 }
 
 KCoreConfigSkeleton__ItemPoint* k_coreconfigskeleton__itempoint_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemPoint_new2(qstring(_group), qstring(_key), (QPoint*)reference, (QPoint*)defaultValue);
+    return KCoreConfigSkeleton__ItemPoint_New2(qstring(_group), qstring(_key), (QPoint*)reference, (QPoint*)defaultValue);
 }
 
 void k_coreconfigskeleton__itempoint_read_config(void* self, void* config) {
@@ -2725,11 +2725,11 @@ void k_coreconfigskeleton__itempoint_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemPointF_new(qstring(_group), qstring(_key), (QPointF*)reference);
+    return KCoreConfigSkeleton__ItemPointF_New(qstring(_group), qstring(_key), (QPointF*)reference);
 }
 
 KCoreConfigSkeleton__ItemPointF* k_coreconfigskeleton__itempointf_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemPointF_new2(qstring(_group), qstring(_key), (QPointF*)reference, (QPointF*)defaultValue);
+    return KCoreConfigSkeleton__ItemPointF_New2(qstring(_group), qstring(_key), (QPointF*)reference, (QPointF*)defaultValue);
 }
 
 void k_coreconfigskeleton__itempointf_read_config(void* self, void* config) {
@@ -2785,11 +2785,11 @@ void k_coreconfigskeleton__itempointf_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemSize_new(qstring(_group), qstring(_key), (QSize*)reference);
+    return KCoreConfigSkeleton__ItemSize_New(qstring(_group), qstring(_key), (QSize*)reference);
 }
 
 KCoreConfigSkeleton__ItemSize* k_coreconfigskeleton__itemsize_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemSize_new2(qstring(_group), qstring(_key), (QSize*)reference, (QSize*)defaultValue);
+    return KCoreConfigSkeleton__ItemSize_New2(qstring(_group), qstring(_key), (QSize*)reference, (QSize*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemsize_read_config(void* self, void* config) {
@@ -2845,11 +2845,11 @@ void k_coreconfigskeleton__itemsize_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemSizeF_new(qstring(_group), qstring(_key), (QSizeF*)reference);
+    return KCoreConfigSkeleton__ItemSizeF_New(qstring(_group), qstring(_key), (QSizeF*)reference);
 }
 
 KCoreConfigSkeleton__ItemSizeF* k_coreconfigskeleton__itemsizef_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemSizeF_new2(qstring(_group), qstring(_key), (QSizeF*)reference, (QSizeF*)defaultValue);
+    return KCoreConfigSkeleton__ItemSizeF_New2(qstring(_group), qstring(_key), (QSizeF*)reference, (QSizeF*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemsizef_read_config(void* self, void* config) {
@@ -2905,11 +2905,11 @@ void k_coreconfigskeleton__itemsizef_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new(const char* _group, const char* _key, void* reference) {
-    return KCoreConfigSkeleton__ItemDateTime_new(qstring(_group), qstring(_key), (QDateTime*)reference);
+    return KCoreConfigSkeleton__ItemDateTime_New(qstring(_group), qstring(_key), (QDateTime*)reference);
 }
 
 KCoreConfigSkeleton__ItemDateTime* k_coreconfigskeleton__itemdatetime_new2(const char* _group, const char* _key, void* reference, void* defaultValue) {
-    return KCoreConfigSkeleton__ItemDateTime_new2(qstring(_group), qstring(_key), (QDateTime*)reference, (QDateTime*)defaultValue);
+    return KCoreConfigSkeleton__ItemDateTime_New2(qstring(_group), qstring(_key), (QDateTime*)reference, (QDateTime*)defaultValue);
 }
 
 void k_coreconfigskeleton__itemdatetime_read_config(void* self, void* config) {
@@ -2976,7 +2976,7 @@ KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new(co
     }
     libqt_list reference_list = qlist(reference_qstr, reference_len);
 
-    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton__ItemStringList_new(qstring(_group), qstring(_key), reference_list);
+    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton__ItemStringList_New(qstring(_group), qstring(_key), reference_list);
     free(reference_qstr);
     return _out;
 }
@@ -3003,7 +3003,7 @@ KCoreConfigSkeleton__ItemStringList* k_coreconfigskeleton__itemstringlist_new2(c
     }
     libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
 
-    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton__ItemStringList_new2(qstring(_group), qstring(_key), reference_list, defaultValue_list);
+    KCoreConfigSkeleton__ItemStringList* _out = KCoreConfigSkeleton__ItemStringList_New2(qstring(_group), qstring(_key), reference_list, defaultValue_list);
     free(reference_qstr);
     free(defaultValue_qstr);
     return _out;
@@ -3073,7 +3073,7 @@ KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new(const 
     }
     libqt_list reference_list = qlist(reference_qstr, reference_len);
 
-    KCoreConfigSkeleton__ItemPathList* _out = KCoreConfigSkeleton__ItemPathList_new(qstring(_group), qstring(_key), reference_list);
+    KCoreConfigSkeleton__ItemPathList* _out = KCoreConfigSkeleton__ItemPathList_New(qstring(_group), qstring(_key), reference_list);
     free(reference_qstr);
     return _out;
 }
@@ -3100,7 +3100,7 @@ KCoreConfigSkeleton__ItemPathList* k_coreconfigskeleton__itempathlist_new2(const
     }
     libqt_list defaultValue_list = qlist(defaultValue_qstr, defaultValue_len);
 
-    KCoreConfigSkeleton__ItemPathList* _out = KCoreConfigSkeleton__ItemPathList_new2(qstring(_group), qstring(_key), reference_list, defaultValue_list);
+    KCoreConfigSkeleton__ItemPathList* _out = KCoreConfigSkeleton__ItemPathList_New2(qstring(_group), qstring(_key), reference_list, defaultValue_list);
     free(reference_qstr);
     free(defaultValue_qstr);
     return _out;
@@ -3171,11 +3171,11 @@ void k_coreconfigskeleton__itempathlist_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new(const char* _group, const char* _key, libqt_list /* of QUrl* */ reference) {
-    return KCoreConfigSkeleton__ItemUrlList_new(qstring(_group), qstring(_key), reference);
+    return KCoreConfigSkeleton__ItemUrlList_New(qstring(_group), qstring(_key), reference);
 }
 
 KCoreConfigSkeleton__ItemUrlList* k_coreconfigskeleton__itemurllist_new2(const char* _group, const char* _key, libqt_list /* of QUrl* */ reference, libqt_list /* of QUrl* */ defaultValue) {
-    return KCoreConfigSkeleton__ItemUrlList_new2(qstring(_group), qstring(_key), reference, defaultValue);
+    return KCoreConfigSkeleton__ItemUrlList_New2(qstring(_group), qstring(_key), reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemurllist_read_config(void* self, void* config) {
@@ -3243,11 +3243,11 @@ void k_coreconfigskeleton__itemurllist_delete(void* self) {
 }
 
 KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new(const char* _group, const char* _key, libqt_list /* of int */ reference) {
-    return KCoreConfigSkeleton__ItemIntList_new(qstring(_group), qstring(_key), reference);
+    return KCoreConfigSkeleton__ItemIntList_New(qstring(_group), qstring(_key), reference);
 }
 
 KCoreConfigSkeleton__ItemIntList* k_coreconfigskeleton__itemintlist_new2(const char* _group, const char* _key, libqt_list /* of int */ reference, libqt_list /* of int */ defaultValue) {
-    return KCoreConfigSkeleton__ItemIntList_new2(qstring(_group), qstring(_key), reference, defaultValue);
+    return KCoreConfigSkeleton__ItemIntList_New2(qstring(_group), qstring(_key), reference, defaultValue);
 }
 
 void k_coreconfigskeleton__itemintlist_read_config(void* self, void* config) {

@@ -8,19 +8,19 @@
 #include "libqbluetoothlocaldevice.h"
 
 QBluetoothLocalDevice* q_bluetoothlocaldevice_new() {
-    return QBluetoothLocalDevice_new();
+    return QBluetoothLocalDevice_New();
 }
 
 QBluetoothLocalDevice* q_bluetoothlocaldevice_new2(void* address) {
-    return QBluetoothLocalDevice_new2((QBluetoothAddress*)address);
+    return QBluetoothLocalDevice_New2((QBluetoothAddress*)address);
 }
 
 QBluetoothLocalDevice* q_bluetoothlocaldevice_new3(void* parent) {
-    return QBluetoothLocalDevice_new3((QObject*)parent);
+    return QBluetoothLocalDevice_New3((QObject*)parent);
 }
 
 QBluetoothLocalDevice* q_bluetoothlocaldevice_new4(void* address, void* parent) {
-    return QBluetoothLocalDevice_new4((QBluetoothAddress*)address, (QObject*)parent);
+    return QBluetoothLocalDevice_New4((QBluetoothAddress*)address, (QObject*)parent);
 }
 
 const QMetaObject* q_bluetoothlocaldevice_meta_object(void* self) {

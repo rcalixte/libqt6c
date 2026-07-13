@@ -7,16 +7,16 @@
 #include "libqresource.hpp"
 #include "libqresource.hxx"
 
-QResource* QResource_new() {
+QResource* QResource_New() {
     return new QResource();
 }
 
-QResource* QResource_new2(const libqt_string file) {
+QResource* QResource_New2(const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new QResource(file_QString);
 }
 
-QResource* QResource_new3(const libqt_string file, const QLocale* locale) {
+QResource* QResource_New3(const libqt_string file, const QLocale* locale) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new QResource(file_QString, *locale);
 }

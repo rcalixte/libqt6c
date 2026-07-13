@@ -3,15 +3,15 @@
 #include "libqeasingcurve.h"
 
 QEasingCurve* q_easingcurve_new() {
-    return QEasingCurve_new();
+    return QEasingCurve_New();
 }
 
 QEasingCurve* q_easingcurve_new2(void* other) {
-    return QEasingCurve_new2((QEasingCurve*)other);
+    return QEasingCurve_New2((QEasingCurve*)other);
 }
 
 QEasingCurve* q_easingcurve_new3(int32_t type) {
-    return QEasingCurve_new3(type);
+    return QEasingCurve_New3(type);
 }
 
 void q_easingcurve_operator_assign(void* self, void* other) {

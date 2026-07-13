@@ -8,31 +8,31 @@
 #include "libqregion.hpp"
 #include "libqregion.hxx"
 
-QRegion* QRegion_new() {
+QRegion* QRegion_New() {
     return new QRegion();
 }
 
-QRegion* QRegion_new2(int x, int y, int w, int h) {
+QRegion* QRegion_New2(int x, int y, int w, int h) {
     return new QRegion(static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h));
 }
 
-QRegion* QRegion_new3(const QRect* r) {
+QRegion* QRegion_New3(const QRect* r) {
     return new QRegion(*r);
 }
 
-QRegion* QRegion_new4(const QRegion* region) {
+QRegion* QRegion_New4(const QRegion* region) {
     return new QRegion(*region);
 }
 
-QRegion* QRegion_new5(const QBitmap* bitmap) {
+QRegion* QRegion_New5(const QBitmap* bitmap) {
     return new QRegion(*bitmap);
 }
 
-QRegion* QRegion_new6(int x, int y, int w, int h, int t) {
+QRegion* QRegion_New6(int x, int y, int w, int h, int t) {
     return new QRegion(static_cast<int>(x), static_cast<int>(y), static_cast<int>(w), static_cast<int>(h), static_cast<QRegion::RegionType>(t));
 }
 
-QRegion* QRegion_new7(const QRect* r, int t) {
+QRegion* QRegion_New7(const QRect* r, int t) {
     return new QRegion(*r, static_cast<QRegion::RegionType>(t));
 }
 

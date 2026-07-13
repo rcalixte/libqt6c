@@ -21,9 +21,9 @@ typedef Sonnet::Speller Sonnet__Speller;
 typedef struct Sonnet__Speller Sonnet__Speller;
 #endif
 
-Sonnet__Speller* Sonnet__Speller_new();
-Sonnet__Speller* Sonnet__Speller_new2(const Sonnet__Speller* speller);
-Sonnet__Speller* Sonnet__Speller_new3(const libqt_string lang);
+Sonnet__Speller* Sonnet__Speller_New();
+Sonnet__Speller* Sonnet__Speller_New2(const Sonnet__Speller* speller);
+Sonnet__Speller* Sonnet__Speller_New3(const libqt_string lang);
 void Sonnet__Speller_OperatorAssign(Sonnet__Speller* self, const Sonnet__Speller* speller);
 bool Sonnet__Speller_IsValid(const Sonnet__Speller* self);
 void Sonnet__Speller_SetLanguage(Sonnet__Speller* self, const libqt_string lang);

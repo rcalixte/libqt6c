@@ -5,15 +5,15 @@
 #include "libqopengltexture.h"
 
 QOpenGLTexture* q_opengltexture_new(int32_t target) {
-    return QOpenGLTexture_new(target);
+    return QOpenGLTexture_New(target);
 }
 
 QOpenGLTexture* q_opengltexture_new2(void* image) {
-    return QOpenGLTexture_new2((QImage*)image);
+    return QOpenGLTexture_New2((QImage*)image);
 }
 
 QOpenGLTexture* q_opengltexture_new3(void* image, int32_t genMipMaps) {
-    return QOpenGLTexture_new3((QImage*)image, genMipMaps);
+    return QOpenGLTexture_New3((QImage*)image, genMipMaps);
 }
 
 int32_t q_opengltexture_target(void* self) {

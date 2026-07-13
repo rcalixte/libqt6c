@@ -8,19 +8,19 @@
 #include "libqsoundeffect.h"
 
 QSoundEffect* q_soundeffect_new() {
-    return QSoundEffect_new();
+    return QSoundEffect_New();
 }
 
 QSoundEffect* q_soundeffect_new2(void* audioDevice) {
-    return QSoundEffect_new2((QAudioDevice*)audioDevice);
+    return QSoundEffect_New2((QAudioDevice*)audioDevice);
 }
 
 QSoundEffect* q_soundeffect_new3(void* parent) {
-    return QSoundEffect_new3((QObject*)parent);
+    return QSoundEffect_New3((QObject*)parent);
 }
 
 QSoundEffect* q_soundeffect_new4(void* audioDevice, void* parent) {
-    return QSoundEffect_new4((QAudioDevice*)audioDevice, (QObject*)parent);
+    return QSoundEffect_New4((QAudioDevice*)audioDevice, (QObject*)parent);
 }
 
 const QMetaObject* q_soundeffect_meta_object(void* self) {

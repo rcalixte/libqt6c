@@ -5,7 +5,7 @@
 #include "libabstractoptionspage.hpp"
 #include "libabstractoptionspage.hxx"
 
-QDesignerOptionsPageInterface* QDesignerOptionsPageInterface_new() {
+QDesignerOptionsPageInterface* QDesignerOptionsPageInterface_New() {
     return new VirtualQDesignerOptionsPageInterface();
 }
 

@@ -11,11 +11,11 @@
 #include "libqscilexerspice.h"
 
 QsciLexerSpice* q_scilexerspice_new() {
-    return QsciLexerSpice_new();
+    return QsciLexerSpice_New();
 }
 
 QsciLexerSpice* q_scilexerspice_new2(void* parent) {
-    return QsciLexerSpice_new2((QObject*)parent);
+    return QsciLexerSpice_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerspice_meta_object(void* self) {

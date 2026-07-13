@@ -3,11 +3,11 @@
 #include "libqwebengineregisterprotocolhandlerrequest.h"
 
 QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new() {
-    return QWebEngineRegisterProtocolHandlerRequest_new();
+    return QWebEngineRegisterProtocolHandlerRequest_New();
 }
 
 QWebEngineRegisterProtocolHandlerRequest* q_webengineregisterprotocolhandlerrequest_new2(void* param1) {
-    return QWebEngineRegisterProtocolHandlerRequest_new2((QWebEngineRegisterProtocolHandlerRequest*)param1);
+    return QWebEngineRegisterProtocolHandlerRequest_New2((QWebEngineRegisterProtocolHandlerRequest*)param1);
 }
 
 void q_webengineregisterprotocolhandlerrequest_accept(void* self) {

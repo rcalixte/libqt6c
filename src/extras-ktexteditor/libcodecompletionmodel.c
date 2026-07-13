@@ -13,7 +13,7 @@
 #include "libcodecompletionmodel.h"
 
 KTextEditor__CodeCompletionModel* k_texteditor__codecompletionmodel_new(void* parent) {
-    return KTextEditor__CodeCompletionModel_new((QObject*)parent);
+    return KTextEditor__CodeCompletionModel_New((QObject*)parent);
 }
 
 const QMetaObject* k_texteditor__codecompletionmodel_meta_object(void* self) {

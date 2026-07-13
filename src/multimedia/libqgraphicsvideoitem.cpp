@@ -29,11 +29,11 @@
 #include "libqgraphicsvideoitem.hpp"
 #include "libqgraphicsvideoitem.hxx"
 
-QGraphicsVideoItem* QGraphicsVideoItem_new() {
+QGraphicsVideoItem* QGraphicsVideoItem_New() {
     return new VirtualQGraphicsVideoItem();
 }
 
-QGraphicsVideoItem* QGraphicsVideoItem_new2(QGraphicsItem* parent) {
+QGraphicsVideoItem* QGraphicsVideoItem_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsVideoItem(parent);
 }
 

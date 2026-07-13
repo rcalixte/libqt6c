@@ -2,15 +2,15 @@
 #include "libsecuritycontext.h"
 
 SignOn__SecurityContext* q_signon__securitycontext_new() {
-    return SignOn__SecurityContext_new();
+    return SignOn__SecurityContext_New();
 }
 
 SignOn__SecurityContext* q_signon__securitycontext_new2(const char* systemContext, const char* applicationContext) {
-    return SignOn__SecurityContext_new2(qstring(systemContext), qstring(applicationContext));
+    return SignOn__SecurityContext_New2(qstring(systemContext), qstring(applicationContext));
 }
 
 SignOn__SecurityContext* q_signon__securitycontext_new3(void* param1) {
-    return SignOn__SecurityContext_new3((SignOn__SecurityContext*)param1);
+    return SignOn__SecurityContext_New3((SignOn__SecurityContext*)param1);
 }
 
 void q_signon__securitycontext_set_system_context(void* self, const char* systemContext) {

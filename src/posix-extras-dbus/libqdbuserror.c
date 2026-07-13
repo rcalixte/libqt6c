@@ -3,19 +3,19 @@
 #include "libqdbuserror.h"
 
 QDBusError* q_dbuserror_new() {
-    return QDBusError_new();
+    return QDBusError_New();
 }
 
 QDBusError* q_dbuserror_new2(void* msg) {
-    return QDBusError_new2((QDBusMessage*)msg);
+    return QDBusError_New2((QDBusMessage*)msg);
 }
 
 QDBusError* q_dbuserror_new3(int32_t error, const char* message) {
-    return QDBusError_new3(error, qstring(message));
+    return QDBusError_New3(error, qstring(message));
 }
 
 QDBusError* q_dbuserror_new4(void* other) {
-    return QDBusError_new4((QDBusError*)other);
+    return QDBusError_New4((QDBusError*)other);
 }
 
 void q_dbuserror_operator_assign(void* self, void* other) {

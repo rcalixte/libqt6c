@@ -4,11 +4,11 @@
 #include "libicon.hpp"
 #include "libicon.hxx"
 
-Attica__Icon* Attica__Icon_new() {
+Attica__Icon* Attica__Icon_New() {
     return new Attica::Icon();
 }
 
-Attica__Icon* Attica__Icon_new2(const Attica__Icon* other) {
+Attica__Icon* Attica__Icon_New2(const Attica__Icon* other) {
     return new Attica::Icon(*other);
 }
 

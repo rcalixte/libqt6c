@@ -27,9 +27,9 @@ typedef struct QSizeF QSizeF;
 typedef struct QTextOption QTextOption;
 #endif
 
-QFontMetrics* QFontMetrics_new(const QFont* param1);
-QFontMetrics* QFontMetrics_new2(const QFont* font, const QPaintDevice* pd);
-QFontMetrics* QFontMetrics_new3(const QFontMetrics* param1);
+QFontMetrics* QFontMetrics_New(const QFont* param1);
+QFontMetrics* QFontMetrics_New2(const QFont* font, const QPaintDevice* pd);
+QFontMetrics* QFontMetrics_New3(const QFontMetrics* param1);
 void QFontMetrics_OperatorAssign(QFontMetrics* self, const QFontMetrics* param1);
 void QFontMetrics_Swap(QFontMetrics* self, QFontMetrics* other);
 int QFontMetrics_Ascent(const QFontMetrics* self);
@@ -76,10 +76,10 @@ QSize* QFontMetrics_Size4(const QFontMetrics* self, int flags, const libqt_strin
 libqt_string QFontMetrics_ElidedText4(const QFontMetrics* self, const libqt_string text, int mode, int width, int flags);
 void QFontMetrics_Delete(QFontMetrics* self);
 
-QFontMetricsF* QFontMetricsF_new(const QFont* font);
-QFontMetricsF* QFontMetricsF_new2(const QFont* font, const QPaintDevice* pd);
-QFontMetricsF* QFontMetricsF_new3(const QFontMetrics* param1);
-QFontMetricsF* QFontMetricsF_new4(const QFontMetricsF* param1);
+QFontMetricsF* QFontMetricsF_New(const QFont* font);
+QFontMetricsF* QFontMetricsF_New2(const QFont* font, const QPaintDevice* pd);
+QFontMetricsF* QFontMetricsF_New3(const QFontMetrics* param1);
+QFontMetricsF* QFontMetricsF_New4(const QFontMetricsF* param1);
 void QFontMetricsF_OperatorAssign(QFontMetricsF* self, const QFontMetricsF* param1);
 void QFontMetricsF_OperatorAssign2(QFontMetricsF* self, const QFontMetrics* param1);
 void QFontMetricsF_Swap(QFontMetricsF* self, QFontMetricsF* other);

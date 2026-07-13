@@ -20,15 +20,15 @@
 #include "libreadwritepart.h"
 
 KParts__ReadWritePart* k_parts__readwritepart_new() {
-    return KParts__ReadWritePart_new();
+    return KParts__ReadWritePart_New();
 }
 
 KParts__ReadWritePart* k_parts__readwritepart_new2(void* parent) {
-    return KParts__ReadWritePart_new2((QObject*)parent);
+    return KParts__ReadWritePart_New2((QObject*)parent);
 }
 
 KParts__ReadWritePart* k_parts__readwritepart_new3(void* parent, void* data) {
-    return KParts__ReadWritePart_new3((QObject*)parent, (KPluginMetaData*)data);
+    return KParts__ReadWritePart_New3((QObject*)parent, (KPluginMetaData*)data);
 }
 
 const QMetaObject* k_parts__readwritepart_meta_object(void* self) {

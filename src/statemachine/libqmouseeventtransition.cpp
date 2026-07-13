@@ -14,19 +14,19 @@
 #include "libqmouseeventtransition.hpp"
 #include "libqmouseeventtransition.hxx"
 
-QMouseEventTransition* QMouseEventTransition_new() {
+QMouseEventTransition* QMouseEventTransition_New() {
     return new VirtualQMouseEventTransition();
 }
 
-QMouseEventTransition* QMouseEventTransition_new2(QObject* object, int type, int button) {
+QMouseEventTransition* QMouseEventTransition_New2(QObject* object, int type, int button) {
     return new VirtualQMouseEventTransition(object, static_cast<QEvent::Type>(type), static_cast<Qt::MouseButton>(button));
 }
 
-QMouseEventTransition* QMouseEventTransition_new3(QState* sourceState) {
+QMouseEventTransition* QMouseEventTransition_New3(QState* sourceState) {
     return new VirtualQMouseEventTransition(sourceState);
 }
 
-QMouseEventTransition* QMouseEventTransition_new4(QObject* object, int type, int button, QState* sourceState) {
+QMouseEventTransition* QMouseEventTransition_New4(QObject* object, int type, int button, QState* sourceState) {
     return new VirtualQMouseEventTransition(object, static_cast<QEvent::Type>(type), static_cast<Qt::MouseButton>(button), sourceState);
 }
 

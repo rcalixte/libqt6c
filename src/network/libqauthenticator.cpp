@@ -6,11 +6,11 @@
 #include "libqauthenticator.hpp"
 #include "libqauthenticator.hxx"
 
-QAuthenticator* QAuthenticator_new() {
+QAuthenticator* QAuthenticator_New() {
     return new QAuthenticator();
 }
 
-QAuthenticator* QAuthenticator_new2(const QAuthenticator* other) {
+QAuthenticator* QAuthenticator_New2(const QAuthenticator* other) {
     return new QAuthenticator(*other);
 }
 

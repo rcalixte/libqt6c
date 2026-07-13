@@ -19,7 +19,7 @@ typedef struct KFilterBase KFilterBase;
 typedef struct QIODevice QIODevice;
 #endif
 
-KFilterBase* KFilterBase_new();
+KFilterBase* KFilterBase_New();
 void KFilterBase_SetDevice(KFilterBase* self, QIODevice* dev);
 QIODevice* KFilterBase_Device(KFilterBase* self);
 bool KFilterBase_Init(KFilterBase* self, int mode);

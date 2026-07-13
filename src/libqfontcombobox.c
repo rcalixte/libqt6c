@@ -18,11 +18,11 @@
 #include "libqfontcombobox.h"
 
 QFontComboBox* q_fontcombobox_new(void* parent) {
-    return QFontComboBox_new((QWidget*)parent);
+    return QFontComboBox_New((QWidget*)parent);
 }
 
 QFontComboBox* q_fontcombobox_new2() {
-    return QFontComboBox_new2();
+    return QFontComboBox_New2();
 }
 
 const QMetaObject* q_fontcombobox_meta_object(void* self) {

@@ -69,10 +69,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QTextEdit* QTextEdit_new(QWidget* parent);
-QTextEdit* QTextEdit_new2();
-QTextEdit* QTextEdit_new3(const libqt_string text);
-QTextEdit* QTextEdit_new4(const libqt_string text, QWidget* parent);
+QTextEdit* QTextEdit_New(QWidget* parent);
+QTextEdit* QTextEdit_New2();
+QTextEdit* QTextEdit_New3(const libqt_string text);
+QTextEdit* QTextEdit_New4(const libqt_string text, QWidget* parent);
 QMetaObject* QTextEdit_MetaObject(const QTextEdit* self);
 void* QTextEdit_Metacast(QTextEdit* self, const char* param1);
 int QTextEdit_Metacall(QTextEdit* self, int param1, int param2, void** param3);
@@ -405,7 +405,7 @@ void QTextEdit_OnGetDecodedMetricF(const QTextEdit* self, intptr_t slot);
 double QTextEdit_SuperGetDecodedMetricF(const QTextEdit* self, int metricA, int metricB);
 void QTextEdit_Delete(QTextEdit* self);
 
-QTextEdit__ExtraSelection* QTextEdit__ExtraSelection_new(const QTextEdit__ExtraSelection* param1);
+QTextEdit__ExtraSelection* QTextEdit__ExtraSelection_New(const QTextEdit__ExtraSelection* param1);
 QTextCursor* QTextEdit__ExtraSelection_Cursor(const QTextEdit__ExtraSelection* self);
 void QTextEdit__ExtraSelection_SetCursor(QTextEdit__ExtraSelection* self, QTextCursor* cursor);
 QTextCharFormat* QTextEdit__ExtraSelection_Format(const QTextEdit__ExtraSelection* self);

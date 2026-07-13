@@ -36,8 +36,8 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_new();
-KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_new2(QObject* parent);
+KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_New();
+KIO__WidgetsAskUserActionHandler* KIO__WidgetsAskUserActionHandler_New2(QObject* parent);
 QMetaObject* KIO__WidgetsAskUserActionHandler_MetaObject(const KIO__WidgetsAskUserActionHandler* self);
 void* KIO__WidgetsAskUserActionHandler_Metacast(KIO__WidgetsAskUserActionHandler* self, const char* param1);
 int KIO__WidgetsAskUserActionHandler_Metacall(KIO__WidgetsAskUserActionHandler* self, int param1, int param2, void** param3);

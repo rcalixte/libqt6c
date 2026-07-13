@@ -15,11 +15,11 @@
 #include "libkbookmarkmenu.hpp"
 #include "libkbookmarkmenu.hxx"
 
-KBookmarkMenu* KBookmarkMenu_new(KBookmarkManager* manager, KBookmarkOwner* owner, QMenu* parentMenu) {
+KBookmarkMenu* KBookmarkMenu_New(KBookmarkManager* manager, KBookmarkOwner* owner, QMenu* parentMenu) {
     return new VirtualKBookmarkMenu(manager, owner, parentMenu);
 }
 
-KBookmarkMenu* KBookmarkMenu_new2(KBookmarkManager* mgr, KBookmarkOwner* owner, QMenu* parentMenu, const libqt_string parentAddress) {
+KBookmarkMenu* KBookmarkMenu_New2(KBookmarkManager* mgr, KBookmarkOwner* owner, QMenu* parentMenu, const libqt_string parentAddress) {
     QString parentAddress_QString = QString::fromUtf8(parentAddress.data, parentAddress.len);
     return new VirtualKBookmarkMenu(mgr, owner, parentMenu, parentAddress_QString);
 }

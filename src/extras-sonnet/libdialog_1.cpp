@@ -39,7 +39,7 @@
 #include "libdialog_1.hpp"
 #include "libdialog_1.hxx"
 
-Sonnet__Dialog* Sonnet__Dialog_new(Sonnet__BackgroundChecker* checker, QWidget* parent) {
+Sonnet__Dialog* Sonnet__Dialog_New(Sonnet__BackgroundChecker* checker, QWidget* parent) {
     return new VirtualSonnetDialog(checker, parent);
 }
 

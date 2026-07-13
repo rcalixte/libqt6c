@@ -15,11 +15,11 @@
 #include "liblanguagetoolresultwidget.h"
 
 TextGrammarCheck__LanguageToolResultWidget* k_textgrammarcheck__languagetoolresultwidget_new(void* parent) {
-    return TextGrammarCheck__LanguageToolResultWidget_new((QWidget*)parent);
+    return TextGrammarCheck__LanguageToolResultWidget_New((QWidget*)parent);
 }
 
 TextGrammarCheck__LanguageToolResultWidget* k_textgrammarcheck__languagetoolresultwidget_new2() {
-    return TextGrammarCheck__LanguageToolResultWidget_new2();
+    return TextGrammarCheck__LanguageToolResultWidget_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__languagetoolresultwidget_meta_object(void* self) {

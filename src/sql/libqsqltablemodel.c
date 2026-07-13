@@ -16,15 +16,15 @@
 #include "libqsqltablemodel.h"
 
 QSqlTableModel* q_sqltablemodel_new() {
-    return QSqlTableModel_new();
+    return QSqlTableModel_New();
 }
 
 QSqlTableModel* q_sqltablemodel_new2(void* parent) {
-    return QSqlTableModel_new2((QObject*)parent);
+    return QSqlTableModel_New2((QObject*)parent);
 }
 
 QSqlTableModel* q_sqltablemodel_new3(void* parent, void* db) {
-    return QSqlTableModel_new3((QObject*)parent, (QSqlDatabase*)db);
+    return QSqlTableModel_New3((QObject*)parent, (QSqlDatabase*)db);
 }
 
 const QMetaObject* q_sqltablemodel_meta_object(void* self) {

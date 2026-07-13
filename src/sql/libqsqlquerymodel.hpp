@@ -36,8 +36,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlQueryModel* QSqlQueryModel_new();
-QSqlQueryModel* QSqlQueryModel_new2(QObject* parent);
+QSqlQueryModel* QSqlQueryModel_New();
+QSqlQueryModel* QSqlQueryModel_New2(QObject* parent);
 QMetaObject* QSqlQueryModel_MetaObject(const QSqlQueryModel* self);
 void* QSqlQueryModel_Metacast(QSqlQueryModel* self, const char* param1);
 int QSqlQueryModel_Metacall(QSqlQueryModel* self, int param1, int param2, void** param3);

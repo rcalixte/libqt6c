@@ -19,7 +19,7 @@ typedef struct QCborStreamWriter QCborStreamWriter;
 typedef struct QIODevice QIODevice;
 #endif
 
-QCborStreamWriter* QCborStreamWriter_new(QIODevice* device);
+QCborStreamWriter* QCborStreamWriter_New(QIODevice* device);
 void QCborStreamWriter_SetDevice(QCborStreamWriter* self, QIODevice* device);
 QIODevice* QCborStreamWriter_Device(const QCborStreamWriter* self);
 void QCborStreamWriter_Append(QCborStreamWriter* self, unsigned long long u);

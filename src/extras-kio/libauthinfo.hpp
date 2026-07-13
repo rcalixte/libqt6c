@@ -23,8 +23,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KIO__AuthInfo* KIO__AuthInfo_new();
-KIO__AuthInfo* KIO__AuthInfo_new2(const KIO__AuthInfo* info);
+KIO__AuthInfo* KIO__AuthInfo_New();
+KIO__AuthInfo* KIO__AuthInfo_New2(const KIO__AuthInfo* info);
 void KIO__AuthInfo_OperatorAssign(KIO__AuthInfo* self, const KIO__AuthInfo* info);
 bool KIO__AuthInfo_IsModified(const KIO__AuthInfo* self);
 void KIO__AuthInfo_SetModified(KIO__AuthInfo* self, bool flag);

@@ -4,11 +4,11 @@
 #include "libkbookmarkactioninterface.hpp"
 #include "libkbookmarkactioninterface.hxx"
 
-KBookmarkActionInterface* KBookmarkActionInterface_new(const KBookmark* bk) {
+KBookmarkActionInterface* KBookmarkActionInterface_New(const KBookmark* bk) {
     return new KBookmarkActionInterface(*bk);
 }
 
-KBookmarkActionInterface* KBookmarkActionInterface_new2(const KBookmarkActionInterface* param1) {
+KBookmarkActionInterface* KBookmarkActionInterface_New2(const KBookmarkActionInterface* param1) {
     return new KBookmarkActionInterface(*param1);
 }
 

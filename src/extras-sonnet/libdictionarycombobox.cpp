@@ -40,11 +40,11 @@
 #include "libdictionarycombobox.hpp"
 #include "libdictionarycombobox.hxx"
 
-Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_new(QWidget* parent) {
+Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_New(QWidget* parent) {
     return new VirtualSonnetDictionaryComboBox(parent);
 }
 
-Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_new2() {
+Sonnet__DictionaryComboBox* Sonnet__DictionaryComboBox_New2() {
     return new VirtualSonnetDictionaryComboBox();
 }
 

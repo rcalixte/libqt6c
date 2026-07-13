@@ -38,7 +38,7 @@
 #include "libskipdialog.hpp"
 #include "libskipdialog.hxx"
 
-KIO__SkipDialog* KIO__SkipDialog_new(QWidget* parent, int options, const libqt_string _error_text) {
+KIO__SkipDialog* KIO__SkipDialog_New(QWidget* parent, int options, const libqt_string _error_text) {
     QString _error_text_QString = QString::fromUtf8(_error_text.data, _error_text.len);
     return new VirtualKIOSkipDialog(parent, static_cast<KIO::SkipDialog_Options>(options), _error_text_QString);
 }

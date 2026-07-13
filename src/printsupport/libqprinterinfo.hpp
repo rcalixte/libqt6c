@@ -20,9 +20,9 @@ typedef struct QPrinter QPrinter;
 typedef struct QPrinterInfo QPrinterInfo;
 #endif
 
-QPrinterInfo* QPrinterInfo_new();
-QPrinterInfo* QPrinterInfo_new2(const QPrinterInfo* other);
-QPrinterInfo* QPrinterInfo_new3(const QPrinter* printer);
+QPrinterInfo* QPrinterInfo_New();
+QPrinterInfo* QPrinterInfo_New2(const QPrinterInfo* other);
+QPrinterInfo* QPrinterInfo_New3(const QPrinter* printer);
 void QPrinterInfo_OperatorAssign(QPrinterInfo* self, const QPrinterInfo* other);
 libqt_string QPrinterInfo_PrinterName(const QPrinterInfo* self);
 libqt_string QPrinterInfo_Description(const QPrinterInfo* self);

@@ -31,19 +31,19 @@
 #include "libqplaintextedit.h"
 
 QPlainTextEdit* q_plaintextedit_new(void* parent) {
-    return QPlainTextEdit_new((QWidget*)parent);
+    return QPlainTextEdit_New((QWidget*)parent);
 }
 
 QPlainTextEdit* q_plaintextedit_new2() {
-    return QPlainTextEdit_new2();
+    return QPlainTextEdit_New2();
 }
 
 QPlainTextEdit* q_plaintextedit_new3(const char* text) {
-    return QPlainTextEdit_new3(qstring(text));
+    return QPlainTextEdit_New3(qstring(text));
 }
 
 QPlainTextEdit* q_plaintextedit_new4(const char* text, void* parent) {
-    return QPlainTextEdit_new4(qstring(text), (QWidget*)parent);
+    return QPlainTextEdit_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* q_plaintextedit_meta_object(void* self) {
@@ -2891,7 +2891,7 @@ void q_plaintextedit_delete(void* self) {
 }
 
 QPlainTextDocumentLayout* q_plaintextdocumentlayout_new(void* document) {
-    return QPlainTextDocumentLayout_new((QTextDocument*)document);
+    return QPlainTextDocumentLayout_New((QTextDocument*)document);
 }
 
 const QMetaObject* q_plaintextdocumentlayout_meta_object(void* self) {

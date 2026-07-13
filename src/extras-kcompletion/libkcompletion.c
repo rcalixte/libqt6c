@@ -7,7 +7,7 @@
 #include "libkcompletion.h"
 
 KCompletion* k_completion_new() {
-    return KCompletion_new();
+    return KCompletion_New();
 }
 
 const QMetaObject* k_completion_meta_object(void* self) {

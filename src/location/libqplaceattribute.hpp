@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QPlaceAttribute QPlaceAttribute;
 #endif
 
-QPlaceAttribute* QPlaceAttribute_new();
-QPlaceAttribute* QPlaceAttribute_new2(const QPlaceAttribute* other);
+QPlaceAttribute* QPlaceAttribute_New();
+QPlaceAttribute* QPlaceAttribute_New2(const QPlaceAttribute* other);
 void QPlaceAttribute_OperatorAssign(QPlaceAttribute* self, const QPlaceAttribute* other);
 void QPlaceAttribute_Swap(QPlaceAttribute* self, QPlaceAttribute* other);
 libqt_string QPlaceAttribute_Label(const QPlaceAttribute* self);

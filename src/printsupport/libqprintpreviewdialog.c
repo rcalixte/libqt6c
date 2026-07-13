@@ -16,27 +16,27 @@
 #include "libqprintpreviewdialog.h"
 
 QPrintPreviewDialog* q_printpreviewdialog_new(void* parent) {
-    return QPrintPreviewDialog_new((QWidget*)parent);
+    return QPrintPreviewDialog_New((QWidget*)parent);
 }
 
 QPrintPreviewDialog* q_printpreviewdialog_new2() {
-    return QPrintPreviewDialog_new2();
+    return QPrintPreviewDialog_New2();
 }
 
 QPrintPreviewDialog* q_printpreviewdialog_new3(void* printer) {
-    return QPrintPreviewDialog_new3((QPrinter*)printer);
+    return QPrintPreviewDialog_New3((QPrinter*)printer);
 }
 
 QPrintPreviewDialog* q_printpreviewdialog_new4(void* parent, int32_t flags) {
-    return QPrintPreviewDialog_new4((QWidget*)parent, flags);
+    return QPrintPreviewDialog_New4((QWidget*)parent, flags);
 }
 
 QPrintPreviewDialog* q_printpreviewdialog_new5(void* printer, void* parent) {
-    return QPrintPreviewDialog_new5((QPrinter*)printer, (QWidget*)parent);
+    return QPrintPreviewDialog_New5((QPrinter*)printer, (QWidget*)parent);
 }
 
 QPrintPreviewDialog* q_printpreviewdialog_new6(void* printer, void* parent, int32_t flags) {
-    return QPrintPreviewDialog_new6((QPrinter*)printer, (QWidget*)parent, flags);
+    return QPrintPreviewDialog_New6((QPrinter*)printer, (QWidget*)parent, flags);
 }
 
 const QMetaObject* q_printpreviewdialog_meta_object(void* self) {

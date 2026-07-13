@@ -24,9 +24,9 @@ typedef struct QUrlQuery QUrlQuery;
 typedef struct QVariant QVariant;
 #endif
 
-QNetworkRequestFactory* QNetworkRequestFactory_new();
-QNetworkRequestFactory* QNetworkRequestFactory_new2(const QUrl* baseUrl);
-QNetworkRequestFactory* QNetworkRequestFactory_new3(const QNetworkRequestFactory* other);
+QNetworkRequestFactory* QNetworkRequestFactory_New();
+QNetworkRequestFactory* QNetworkRequestFactory_New2(const QUrl* baseUrl);
+QNetworkRequestFactory* QNetworkRequestFactory_New3(const QNetworkRequestFactory* other);
 void QNetworkRequestFactory_OperatorAssign(QNetworkRequestFactory* self, const QNetworkRequestFactory* other);
 void QNetworkRequestFactory_Swap(QNetworkRequestFactory* self, QNetworkRequestFactory* other);
 QUrl* QNetworkRequestFactory_BaseUrl(const QNetworkRequestFactory* self);

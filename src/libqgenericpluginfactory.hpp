@@ -19,8 +19,8 @@ typedef struct QGenericPluginFactory QGenericPluginFactory;
 typedef struct QObject QObject;
 #endif
 
-QGenericPluginFactory* QGenericPluginFactory_new(const QGenericPluginFactory* other);
-QGenericPluginFactory* QGenericPluginFactory_new2(QGenericPluginFactory* other);
+QGenericPluginFactory* QGenericPluginFactory_New(const QGenericPluginFactory* other);
+QGenericPluginFactory* QGenericPluginFactory_New2(QGenericPluginFactory* other);
 void QGenericPluginFactory_CopyAssign(QGenericPluginFactory* self, QGenericPluginFactory* other);
 void QGenericPluginFactory_MoveAssign(QGenericPluginFactory* self, QGenericPluginFactory* other);
 libqt_list /* of libqt_string */ QGenericPluginFactory_Keys();

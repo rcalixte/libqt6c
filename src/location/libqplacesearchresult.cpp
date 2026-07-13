@@ -5,11 +5,11 @@
 #include "libqplacesearchresult.hpp"
 #include "libqplacesearchresult.hxx"
 
-QPlaceSearchResult* QPlaceSearchResult_new() {
+QPlaceSearchResult* QPlaceSearchResult_New() {
     return new QPlaceSearchResult();
 }
 
-QPlaceSearchResult* QPlaceSearchResult_new2(const QPlaceSearchResult* other) {
+QPlaceSearchResult* QPlaceSearchResult_New2(const QPlaceSearchResult* other) {
     return new QPlaceSearchResult(*other);
 }
 

@@ -4,35 +4,35 @@
 #include "libqlocale.h"
 
 QLocale* q_locale_new() {
-    return QLocale_new();
+    return QLocale_New();
 }
 
 QLocale* q_locale_new2(const char* name) {
-    return QLocale_new2(qstring(name));
+    return QLocale_New2(qstring(name));
 }
 
 QLocale* q_locale_new3(const char* name) {
-    return QLocale_new3(qstring(name));
+    return QLocale_New3(qstring(name));
 }
 
 QLocale* q_locale_new4(uint16_t language, uint16_t territory) {
-    return QLocale_new4(language, territory);
+    return QLocale_New4(language, territory);
 }
 
 QLocale* q_locale_new5(uint16_t language) {
-    return QLocale_new5(language);
+    return QLocale_New5(language);
 }
 
 QLocale* q_locale_new6(void* other) {
-    return QLocale_new6((QLocale*)other);
+    return QLocale_New6((QLocale*)other);
 }
 
 QLocale* q_locale_new7(uint16_t language, uint16_t script) {
-    return QLocale_new7(language, script);
+    return QLocale_New7(language, script);
 }
 
 QLocale* q_locale_new8(uint16_t language, uint16_t script, uint16_t territory) {
-    return QLocale_new8(language, script, territory);
+    return QLocale_New8(language, script, territory);
 }
 
 void q_locale_operator_assign(void* self, void* other) {

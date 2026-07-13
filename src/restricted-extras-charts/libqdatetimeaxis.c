@@ -8,11 +8,11 @@
 #include "libqdatetimeaxis.h"
 
 QDateTimeAxis* q_datetimeaxis_new() {
-    return QDateTimeAxis_new();
+    return QDateTimeAxis_New();
 }
 
 QDateTimeAxis* q_datetimeaxis_new2(void* parent) {
-    return QDateTimeAxis_new2((QObject*)parent);
+    return QDateTimeAxis_New2((QObject*)parent);
 }
 
 const QMetaObject* q_datetimeaxis_meta_object(void* self) {

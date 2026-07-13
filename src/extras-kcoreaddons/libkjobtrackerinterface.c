@@ -6,11 +6,11 @@
 #include "libkjobtrackerinterface.h"
 
 KJobTrackerInterface* k_jobtrackerinterface_new() {
-    return KJobTrackerInterface_new();
+    return KJobTrackerInterface_New();
 }
 
 KJobTrackerInterface* k_jobtrackerinterface_new2(void* parent) {
-    return KJobTrackerInterface_new2((QObject*)parent);
+    return KJobTrackerInterface_New2((QObject*)parent);
 }
 
 const QMetaObject* k_jobtrackerinterface_meta_object(void* self) {

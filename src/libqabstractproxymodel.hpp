@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QAbstractProxyModel* QAbstractProxyModel_new();
-QAbstractProxyModel* QAbstractProxyModel_new2(QObject* parent);
+QAbstractProxyModel* QAbstractProxyModel_New();
+QAbstractProxyModel* QAbstractProxyModel_New2(QObject* parent);
 QMetaObject* QAbstractProxyModel_MetaObject(const QAbstractProxyModel* self);
 void* QAbstractProxyModel_Metacast(QAbstractProxyModel* self, const char* param1);
 int QAbstractProxyModel_Metacall(QAbstractProxyModel* self, int param1, int param2, void** param3);

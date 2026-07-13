@@ -22,8 +22,8 @@ typedef struct KTimeZone KTimeZone;
 
 KCountry* KTimeZone_Country(const char* param1);
 
-KCountry* KCountry_new();
-KCountry* KCountry_new2(const KCountry* param1);
+KCountry* KCountry_New();
+KCountry* KCountry_New2(const KCountry* param1);
 void KCountry_OperatorAssign(KCountry* self, const KCountry* param1);
 bool KCountry_OperatorEqual(const KCountry* self, const KCountry* other);
 bool KCountry_OperatorNotEqual(const KCountry* self, const KCountry* other);

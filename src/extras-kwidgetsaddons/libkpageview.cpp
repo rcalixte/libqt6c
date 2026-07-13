@@ -41,11 +41,11 @@
 #include "libkpageview.hpp"
 #include "libkpageview.hxx"
 
-KPageView* KPageView_new(QWidget* parent) {
+KPageView* KPageView_New(QWidget* parent) {
     return new VirtualKPageView(parent);
 }
 
-KPageView* KPageView_new2() {
+KPageView* KPageView_New2() {
     return new VirtualKPageView();
 }
 

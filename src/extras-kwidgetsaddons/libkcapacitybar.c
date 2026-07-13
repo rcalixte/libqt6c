@@ -15,19 +15,19 @@
 #include "libkcapacitybar.h"
 
 KCapacityBar* k_capacitybar_new(void* parent) {
-    return KCapacityBar_new((QWidget*)parent);
+    return KCapacityBar_New((QWidget*)parent);
 }
 
 KCapacityBar* k_capacitybar_new2() {
-    return KCapacityBar_new2();
+    return KCapacityBar_New2();
 }
 
 KCapacityBar* k_capacitybar_new3(int32_t drawTextMode) {
-    return KCapacityBar_new3(drawTextMode);
+    return KCapacityBar_New3(drawTextMode);
 }
 
 KCapacityBar* k_capacitybar_new4(int32_t drawTextMode, void* parent) {
-    return KCapacityBar_new4(drawTextMode, (QWidget*)parent);
+    return KCapacityBar_New4(drawTextMode, (QWidget*)parent);
 }
 
 const QMetaObject* k_capacitybar_meta_object(void* self) {

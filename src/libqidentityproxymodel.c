@@ -13,11 +13,11 @@
 #include "libqidentityproxymodel.h"
 
 QIdentityProxyModel* q_identityproxymodel_new() {
-    return QIdentityProxyModel_new();
+    return QIdentityProxyModel_New();
 }
 
 QIdentityProxyModel* q_identityproxymodel_new2(void* parent) {
-    return QIdentityProxyModel_new2((QObject*)parent);
+    return QIdentityProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_identityproxymodel_meta_object(void* self) {

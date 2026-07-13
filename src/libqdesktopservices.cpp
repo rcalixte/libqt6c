@@ -6,11 +6,11 @@
 #include "libqdesktopservices.hpp"
 #include "libqdesktopservices.hxx"
 
-QDesktopServices* QDesktopServices_new(const QDesktopServices* other) {
+QDesktopServices* QDesktopServices_New(const QDesktopServices* other) {
     return new QDesktopServices(*other);
 }
 
-QDesktopServices* QDesktopServices_new2(QDesktopServices* other) {
+QDesktopServices* QDesktopServices_New2(QDesktopServices* other) {
     return new QDesktopServices(std::move(*other));
 }
 

@@ -41,7 +41,7 @@
 #include "libksplittercollapserbutton.hpp"
 #include "libksplittercollapserbutton.hxx"
 
-KSplitterCollapserButton* KSplitterCollapserButton_new(QWidget* childWidget, QSplitter* splitter) {
+KSplitterCollapserButton* KSplitterCollapserButton_New(QWidget* childWidget, QSplitter* splitter) {
     return new VirtualKSplitterCollapserButton(childWidget, splitter);
 }
 

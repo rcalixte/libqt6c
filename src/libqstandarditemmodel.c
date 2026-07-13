@@ -14,23 +14,23 @@
 #include "libqstandarditemmodel.h"
 
 QStandardItem* q_standarditem_new() {
-    return QStandardItem_new();
+    return QStandardItem_New();
 }
 
 QStandardItem* q_standarditem_new2(const char* text) {
-    return QStandardItem_new2(qstring(text));
+    return QStandardItem_New2(qstring(text));
 }
 
 QStandardItem* q_standarditem_new3(void* icon, const char* text) {
-    return QStandardItem_new3((QIcon*)icon, qstring(text));
+    return QStandardItem_New3((QIcon*)icon, qstring(text));
 }
 
 QStandardItem* q_standarditem_new4(int rows) {
-    return QStandardItem_new4(rows);
+    return QStandardItem_New4(rows);
 }
 
 QStandardItem* q_standarditem_new5(int rows, int columns) {
-    return QStandardItem_new5(rows, columns);
+    return QStandardItem_New5(rows, columns);
 }
 
 QVariant* q_standarditem_data(void* self, int role) {
@@ -494,19 +494,19 @@ void q_standarditem_delete(void* self) {
 }
 
 QStandardItemModel* q_standarditemmodel_new() {
-    return QStandardItemModel_new();
+    return QStandardItemModel_New();
 }
 
 QStandardItemModel* q_standarditemmodel_new2(int rows, int columns) {
-    return QStandardItemModel_new2(rows, columns);
+    return QStandardItemModel_New2(rows, columns);
 }
 
 QStandardItemModel* q_standarditemmodel_new3(void* parent) {
-    return QStandardItemModel_new3((QObject*)parent);
+    return QStandardItemModel_New3((QObject*)parent);
 }
 
 QStandardItemModel* q_standarditemmodel_new4(int rows, int columns, void* parent) {
-    return QStandardItemModel_new4(rows, columns, (QObject*)parent);
+    return QStandardItemModel_New4(rows, columns, (QObject*)parent);
 }
 
 const QMetaObject* q_standarditemmodel_meta_object(void* self) {

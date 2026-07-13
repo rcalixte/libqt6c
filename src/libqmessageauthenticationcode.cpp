@@ -7,11 +7,11 @@
 #include "libqmessageauthenticationcode.hpp"
 #include "libqmessageauthenticationcode.hxx"
 
-QMessageAuthenticationCode* QMessageAuthenticationCode_new(int method) {
+QMessageAuthenticationCode* QMessageAuthenticationCode_New(int method) {
     return new QMessageAuthenticationCode(static_cast<QCryptographicHash::Algorithm>(method));
 }
 
-QMessageAuthenticationCode* QMessageAuthenticationCode_new2(int method, libqt_string key) {
+QMessageAuthenticationCode* QMessageAuthenticationCode_New2(int method, libqt_string key) {
     QByteArrayView key_QByteArrayView(key.data, key.len);
     return new QMessageAuthenticationCode(static_cast<QCryptographicHash::Algorithm>(method), key_QByteArrayView);
 }

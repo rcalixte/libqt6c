@@ -4,7 +4,7 @@
 #include "libtexthintinterface.h"
 
 KTextEditor__TextHintProvider* k_texteditor__texthintprovider_new() {
-    return KTextEditor__TextHintProvider_new();
+    return KTextEditor__TextHintProvider_New();
 }
 
 const char* k_texteditor__texthintprovider_text_hint(void* self, void* view, void* position) {

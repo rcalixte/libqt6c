@@ -2,7 +2,7 @@
 #include "libqlockfile.h"
 
 QLockFile* q_lockfile_new(const char* fileName) {
-    return QLockFile_new(qstring(fileName));
+    return QLockFile_New(qstring(fileName));
 }
 
 const char* q_lockfile_file_name(void* self) {

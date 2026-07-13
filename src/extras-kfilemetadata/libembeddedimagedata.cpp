@@ -3,7 +3,7 @@
 #include "libembeddedimagedata.hpp"
 #include "libembeddedimagedata.hxx"
 
-KFileMetaData__EmbeddedImageData* KFileMetaData__EmbeddedImageData_new() {
+KFileMetaData__EmbeddedImageData* KFileMetaData__EmbeddedImageData_New() {
     return new KFileMetaData::EmbeddedImageData();
 }
 

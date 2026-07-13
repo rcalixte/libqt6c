@@ -25,11 +25,11 @@
 #include "libqtableview.h"
 
 QTableView* q_tableview_new(void* parent) {
-    return QTableView_new((QWidget*)parent);
+    return QTableView_New((QWidget*)parent);
 }
 
 QTableView* q_tableview_new2() {
-    return QTableView_new2();
+    return QTableView_New2();
 }
 
 const QMetaObject* q_tableview_meta_object(void* self) {

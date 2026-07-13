@@ -8,11 +8,11 @@
 #include "libqnetworkinterface.hpp"
 #include "libqnetworkinterface.hxx"
 
-QNetworkAddressEntry* QNetworkAddressEntry_new() {
+QNetworkAddressEntry* QNetworkAddressEntry_New() {
     return new QNetworkAddressEntry();
 }
 
-QNetworkAddressEntry* QNetworkAddressEntry_new2(const QNetworkAddressEntry* other) {
+QNetworkAddressEntry* QNetworkAddressEntry_New2(const QNetworkAddressEntry* other) {
     return new QNetworkAddressEntry(*other);
 }
 
@@ -104,11 +104,11 @@ void QNetworkAddressEntry_Delete(QNetworkAddressEntry* self) {
     delete self;
 }
 
-QNetworkInterface* QNetworkInterface_new() {
+QNetworkInterface* QNetworkInterface_New() {
     return new QNetworkInterface();
 }
 
-QNetworkInterface* QNetworkInterface_new2(const QNetworkInterface* other) {
+QNetworkInterface* QNetworkInterface_New2(const QNetworkInterface* other) {
     return new QNetworkInterface(*other);
 }
 

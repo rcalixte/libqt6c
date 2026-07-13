@@ -16,11 +16,11 @@
 #include "libqrasterwindow.h"
 
 QRasterWindow* q_rasterwindow_new() {
-    return QRasterWindow_new();
+    return QRasterWindow_New();
 }
 
 QRasterWindow* q_rasterwindow_new2(void* parent) {
-    return QRasterWindow_new2((QWindow*)parent);
+    return QRasterWindow_New2((QWindow*)parent);
 }
 
 const QMetaObject* q_rasterwindow_meta_object(void* self) {

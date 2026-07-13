@@ -22,19 +22,19 @@
 #include "libkhistorycombobox.h"
 
 KHistoryComboBox* k_historycombobox_new(void* parent) {
-    return KHistoryComboBox_new((QWidget*)parent);
+    return KHistoryComboBox_New((QWidget*)parent);
 }
 
 KHistoryComboBox* k_historycombobox_new2() {
-    return KHistoryComboBox_new2();
+    return KHistoryComboBox_New2();
 }
 
 KHistoryComboBox* k_historycombobox_new3(bool useCompletion) {
-    return KHistoryComboBox_new3(useCompletion);
+    return KHistoryComboBox_New3(useCompletion);
 }
 
 KHistoryComboBox* k_historycombobox_new4(bool useCompletion, void* parent) {
-    return KHistoryComboBox_new4(useCompletion, (QWidget*)parent);
+    return KHistoryComboBox_New4(useCompletion, (QWidget*)parent);
 }
 
 const QMetaObject* k_historycombobox_meta_object(void* self) {

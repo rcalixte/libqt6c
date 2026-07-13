@@ -7,11 +7,11 @@
 #include "libqgraphicslayout.h"
 
 QGraphicsLayout* q_graphicslayout_new() {
-    return QGraphicsLayout_new();
+    return QGraphicsLayout_New();
 }
 
 QGraphicsLayout* q_graphicslayout_new2(void* parent) {
-    return QGraphicsLayout_new2((QGraphicsLayoutItem*)parent);
+    return QGraphicsLayout_New2((QGraphicsLayoutItem*)parent);
 }
 
 void q_graphicslayout_set_contents_margins(void* self, double left, double top, double right, double bottom) {

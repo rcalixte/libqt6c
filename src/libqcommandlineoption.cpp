@@ -5,12 +5,12 @@
 #include "libqcommandlineoption.hpp"
 #include "libqcommandlineoption.hxx"
 
-QCommandLineOption* QCommandLineOption_new(const libqt_string name) {
+QCommandLineOption* QCommandLineOption_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QCommandLineOption(name_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new2(const libqt_list /* of libqt_string */ names) {
+QCommandLineOption* QCommandLineOption_New2(const libqt_list /* of libqt_string */ names) {
     QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
@@ -21,13 +21,13 @@ QCommandLineOption* QCommandLineOption_new2(const libqt_list /* of libqt_string 
     return new QCommandLineOption(names_QList);
 }
 
-QCommandLineOption* QCommandLineOption_new3(const libqt_string name, const libqt_string description) {
+QCommandLineOption* QCommandLineOption_New3(const libqt_string name, const libqt_string description) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new QCommandLineOption(name_QString, description_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new4(const libqt_list /* of libqt_string */ names, const libqt_string description) {
+QCommandLineOption* QCommandLineOption_New4(const libqt_list /* of libqt_string */ names, const libqt_string description) {
     QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
@@ -39,18 +39,18 @@ QCommandLineOption* QCommandLineOption_new4(const libqt_list /* of libqt_string 
     return new QCommandLineOption(names_QList, description_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new5(const QCommandLineOption* other) {
+QCommandLineOption* QCommandLineOption_New5(const QCommandLineOption* other) {
     return new QCommandLineOption(*other);
 }
 
-QCommandLineOption* QCommandLineOption_new6(const libqt_string name, const libqt_string description, const libqt_string valueName) {
+QCommandLineOption* QCommandLineOption_New6(const libqt_string name, const libqt_string description, const libqt_string valueName) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString valueName_QString = QString::fromUtf8(valueName.data, valueName.len);
     return new QCommandLineOption(name_QString, description_QString, valueName_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new7(const libqt_string name, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue) {
+QCommandLineOption* QCommandLineOption_New7(const libqt_string name, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString description_QString = QString::fromUtf8(description.data, description.len);
     QString valueName_QString = QString::fromUtf8(valueName.data, valueName.len);
@@ -58,7 +58,7 @@ QCommandLineOption* QCommandLineOption_new7(const libqt_string name, const libqt
     return new QCommandLineOption(name_QString, description_QString, valueName_QString, defaultValue_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new8(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName) {
+QCommandLineOption* QCommandLineOption_New8(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName) {
     QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);
@@ -71,7 +71,7 @@ QCommandLineOption* QCommandLineOption_new8(const libqt_list /* of libqt_string 
     return new QCommandLineOption(names_QList, description_QString, valueName_QString);
 }
 
-QCommandLineOption* QCommandLineOption_new9(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue) {
+QCommandLineOption* QCommandLineOption_New9(const libqt_list /* of libqt_string */ names, const libqt_string description, const libqt_string valueName, const libqt_string defaultValue) {
     QList<QString> names_QList;
     names_QList.reserve(names.len);
     libqt_string* names_arr = static_cast<libqt_string*>(names.data.ptr);

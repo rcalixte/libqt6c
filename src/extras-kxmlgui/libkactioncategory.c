@@ -8,11 +8,11 @@
 #include "libkactioncategory.h"
 
 KActionCategory* k_actioncategory_new(const char* text) {
-    return KActionCategory_new(qstring(text));
+    return KActionCategory_New(qstring(text));
 }
 
 KActionCategory* k_actioncategory_new2(const char* text, void* parent) {
-    return KActionCategory_new2(qstring(text), (KActionCollection*)parent);
+    return KActionCategory_New2(qstring(text), (KActionCollection*)parent);
 }
 
 const QMetaObject* k_actioncategory_meta_object(void* self) {

@@ -3,11 +3,11 @@
 #include "libqwebenginepermission.h"
 
 QWebEnginePermission* q_webenginepermission_new() {
-    return QWebEnginePermission_new();
+    return QWebEnginePermission_New();
 }
 
 QWebEnginePermission* q_webenginepermission_new2(void* other) {
-    return QWebEnginePermission_new2((QWebEnginePermission*)other);
+    return QWebEnginePermission_New2((QWebEnginePermission*)other);
 }
 
 void q_webenginepermission_operator_assign(void* self, void* other) {

@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QValueAxis QValueAxis;
 #endif
 
-QCategoryAxis* QCategoryAxis_new();
-QCategoryAxis* QCategoryAxis_new2(QObject* parent);
+QCategoryAxis* QCategoryAxis_New();
+QCategoryAxis* QCategoryAxis_New2(QObject* parent);
 QMetaObject* QCategoryAxis_MetaObject(const QCategoryAxis* self);
 void* QCategoryAxis_Metacast(QCategoryAxis* self, const char* param1);
 int QCategoryAxis_Metacall(QCategoryAxis* self, int param1, int param2, void** param3);

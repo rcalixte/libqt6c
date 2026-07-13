@@ -9,7 +9,7 @@
 #include "libkcountryflagemojiiconengine.h"
 
 KCountryFlagEmojiIconEngine* k_countryflagemojiiconengine_new(const char* regionOrCountry) {
-    return KCountryFlagEmojiIconEngine_new(qstring(regionOrCountry));
+    return KCountryFlagEmojiIconEngine_New(qstring(regionOrCountry));
 }
 
 QIconEngine* k_countryflagemojiiconengine_clone(void* self) {

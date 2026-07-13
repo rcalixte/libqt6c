@@ -16,19 +16,19 @@
 #include "libqwebsocket.h"
 
 QWebSocket* q_websocket_new() {
-    return QWebSocket_new();
+    return QWebSocket_New();
 }
 
 QWebSocket* q_websocket_new2(const char* origin) {
-    return QWebSocket_new2(qstring(origin));
+    return QWebSocket_New2(qstring(origin));
 }
 
 QWebSocket* q_websocket_new3(const char* origin, int32_t version) {
-    return QWebSocket_new3(qstring(origin), version);
+    return QWebSocket_New3(qstring(origin), version);
 }
 
 QWebSocket* q_websocket_new4(const char* origin, int32_t version, void* parent) {
-    return QWebSocket_new4(qstring(origin), version, (QObject*)parent);
+    return QWebSocket_New4(qstring(origin), version, (QObject*)parent);
 }
 
 const QMetaObject* q_websocket_meta_object(void* self) {

@@ -29,7 +29,7 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KToolBarPopupAction* KToolBarPopupAction_new(const QIcon* icon, const libqt_string text, QObject* parent);
+KToolBarPopupAction* KToolBarPopupAction_New(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KToolBarPopupAction_MetaObject(const KToolBarPopupAction* self);
 void* KToolBarPopupAction_Metacast(KToolBarPopupAction* self, const char* param1);
 int KToolBarPopupAction_Metacall(KToolBarPopupAction* self, int param1, int param2, void** param3);

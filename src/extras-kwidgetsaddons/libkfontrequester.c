@@ -17,15 +17,15 @@
 #include "libkfontrequester.h"
 
 KFontRequester* k_fontrequester_new(void* parent) {
-    return KFontRequester_new((QWidget*)parent);
+    return KFontRequester_New((QWidget*)parent);
 }
 
 KFontRequester* k_fontrequester_new2() {
-    return KFontRequester_new2();
+    return KFontRequester_New2();
 }
 
 KFontRequester* k_fontrequester_new3(void* parent, bool onlyFixed) {
-    return KFontRequester_new3((QWidget*)parent, onlyFixed);
+    return KFontRequester_New3((QWidget*)parent, onlyFixed);
 }
 
 const QMetaObject* k_fontrequester_meta_object(void* self) {

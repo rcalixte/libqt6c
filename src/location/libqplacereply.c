@@ -6,11 +6,11 @@
 #include "libqplacereply.h"
 
 QPlaceReply* q_placereply_new() {
-    return QPlaceReply_new();
+    return QPlaceReply_New();
 }
 
 QPlaceReply* q_placereply_new2(void* parent) {
-    return QPlaceReply_new2((QObject*)parent);
+    return QPlaceReply_New2((QObject*)parent);
 }
 
 const QMetaObject* q_placereply_meta_object(void* self) {

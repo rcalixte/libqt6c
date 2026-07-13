@@ -40,7 +40,7 @@ struct pair_qaccessibleinterface_int32_t {
 };
 #endif
 
-QAccessibleObject* QAccessibleObject_new(QObject* object);
+QAccessibleObject* QAccessibleObject_New(QObject* object);
 bool QAccessibleObject_IsValid(const QAccessibleObject* self);
 QObject* QAccessibleObject_Object(const QAccessibleObject* self);
 QRect* QAccessibleObject_Rect(const QAccessibleObject* self);
@@ -99,7 +99,7 @@ void* QAccessibleObject_InterfaceCast(QAccessibleObject* self, int param1);
 void QAccessibleObject_OnInterfaceCast(QAccessibleObject* self, intptr_t slot);
 void* QAccessibleObject_SuperInterfaceCast(QAccessibleObject* self, int param1);
 
-QAccessibleApplication* QAccessibleApplication_new();
+QAccessibleApplication* QAccessibleApplication_New();
 QWindow* QAccessibleApplication_Window(const QAccessibleApplication* self);
 int QAccessibleApplication_ChildCount(const QAccessibleApplication* self);
 int QAccessibleApplication_IndexOfChild(const QAccessibleApplication* self, const QAccessibleInterface* param1);

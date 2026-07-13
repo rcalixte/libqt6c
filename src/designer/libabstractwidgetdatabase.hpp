@@ -28,7 +28,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QDesignerWidgetDataBaseItemInterface* QDesignerWidgetDataBaseItemInterface_new();
+QDesignerWidgetDataBaseItemInterface* QDesignerWidgetDataBaseItemInterface_New();
 libqt_string QDesignerWidgetDataBaseItemInterface_Name(const QDesignerWidgetDataBaseItemInterface* self);
 void QDesignerWidgetDataBaseItemInterface_SetName(QDesignerWidgetDataBaseItemInterface* self, const libqt_string name);
 libqt_string QDesignerWidgetDataBaseItemInterface_Group(const QDesignerWidgetDataBaseItemInterface* self);
@@ -109,8 +109,8 @@ void QDesignerWidgetDataBaseItemInterface_OnDefaultPropertyValues(const QDesigne
 libqt_list /* of QVariant* */ QDesignerWidgetDataBaseItemInterface_SuperDefaultPropertyValues(const QDesignerWidgetDataBaseItemInterface* self);
 void QDesignerWidgetDataBaseItemInterface_Delete(QDesignerWidgetDataBaseItemInterface* self);
 
-QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_new();
-QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_new2(QObject* parent);
+QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_New();
+QDesignerWidgetDataBaseInterface* QDesignerWidgetDataBaseInterface_New2(QObject* parent);
 QMetaObject* QDesignerWidgetDataBaseInterface_MetaObject(const QDesignerWidgetDataBaseInterface* self);
 void* QDesignerWidgetDataBaseInterface_Metacast(QDesignerWidgetDataBaseInterface* self, const char* param1);
 int QDesignerWidgetDataBaseInterface_Metacall(QDesignerWidgetDataBaseInterface* self, int param1, int param2, void** param3);

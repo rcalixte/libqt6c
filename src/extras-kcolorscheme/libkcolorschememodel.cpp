@@ -22,11 +22,11 @@
 #include "libkcolorschememodel.hpp"
 #include "libkcolorschememodel.hxx"
 
-KColorSchemeModel* KColorSchemeModel_new() {
+KColorSchemeModel* KColorSchemeModel_New() {
     return new VirtualKColorSchemeModel();
 }
 
-KColorSchemeModel* KColorSchemeModel_new2(QObject* parent) {
+KColorSchemeModel* KColorSchemeModel_New2(QObject* parent) {
     return new VirtualKColorSchemeModel(parent);
 }
 

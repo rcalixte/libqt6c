@@ -11,7 +11,7 @@
 #include "libformbuilder.h"
 
 QFormBuilder* q_formbuilder_new() {
-    return QFormBuilder_new();
+    return QFormBuilder_New();
 }
 
 const char** q_formbuilder_plugin_paths(void* self) {

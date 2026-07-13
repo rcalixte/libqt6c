@@ -42,15 +42,15 @@
 #include "libqwizard.hpp"
 #include "libqwizard.hxx"
 
-QWizard* QWizard_new(QWidget* parent) {
+QWizard* QWizard_New(QWidget* parent) {
     return new VirtualQWizard(parent);
 }
 
-QWizard* QWizard_new2() {
+QWizard* QWizard_New2() {
     return new VirtualQWizard();
 }
 
-QWizard* QWizard_new3(QWidget* parent, int flags) {
+QWizard* QWizard_New3(QWidget* parent, int flags) {
     return new VirtualQWizard(parent, static_cast<Qt::WindowFlags>(flags));
 }
 
@@ -2277,11 +2277,11 @@ void QWizard_Delete(QWizard* self) {
     delete self;
 }
 
-QWizardPage* QWizardPage_new(QWidget* parent) {
+QWizardPage* QWizardPage_New(QWidget* parent) {
     return new VirtualQWizardPage(parent);
 }
 
-QWizardPage* QWizardPage_new2() {
+QWizardPage* QWizardPage_New2() {
     return new VirtualQWizardPage();
 }
 

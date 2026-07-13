@@ -12,11 +12,11 @@
 #include "libqbarcategoryaxis.hpp"
 #include "libqbarcategoryaxis.hxx"
 
-QBarCategoryAxis* QBarCategoryAxis_new() {
+QBarCategoryAxis* QBarCategoryAxis_New() {
     return new VirtualQBarCategoryAxis();
 }
 
-QBarCategoryAxis* QBarCategoryAxis_new2(QObject* parent) {
+QBarCategoryAxis* QBarCategoryAxis_New2(QObject* parent) {
     return new VirtualQBarCategoryAxis(parent);
 }
 

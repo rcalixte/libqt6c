@@ -14,11 +14,11 @@
 #include "libqhttpmultipart.hpp"
 #include "libqhttpmultipart.hxx"
 
-QHttpPart* QHttpPart_new() {
+QHttpPart* QHttpPart_New() {
     return new QHttpPart();
 }
 
-QHttpPart* QHttpPart_new2(const QHttpPart* other) {
+QHttpPart* QHttpPart_New2(const QHttpPart* other) {
     return new QHttpPart(*other);
 }
 
@@ -61,19 +61,19 @@ void QHttpPart_Delete(QHttpPart* self) {
     delete self;
 }
 
-QHttpMultiPart* QHttpMultiPart_new() {
+QHttpMultiPart* QHttpMultiPart_New() {
     return new VirtualQHttpMultiPart();
 }
 
-QHttpMultiPart* QHttpMultiPart_new2(int contentType) {
+QHttpMultiPart* QHttpMultiPart_New2(int contentType) {
     return new VirtualQHttpMultiPart(static_cast<QHttpMultiPart::ContentType>(contentType));
 }
 
-QHttpMultiPart* QHttpMultiPart_new3(QObject* parent) {
+QHttpMultiPart* QHttpMultiPart_New3(QObject* parent) {
     return new VirtualQHttpMultiPart(parent);
 }
 
-QHttpMultiPart* QHttpMultiPart_new4(int contentType, QObject* parent) {
+QHttpMultiPart* QHttpMultiPart_New4(int contentType, QObject* parent) {
     return new VirtualQHttpMultiPart(static_cast<QHttpMultiPart::ContentType>(contentType), parent);
 }
 

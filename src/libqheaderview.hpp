@@ -63,8 +63,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QHeaderView* QHeaderView_new(int orientation);
-QHeaderView* QHeaderView_new2(int orientation, QWidget* parent);
+QHeaderView* QHeaderView_New(int orientation);
+QHeaderView* QHeaderView_New2(int orientation, QWidget* parent);
 QMetaObject* QHeaderView_MetaObject(const QHeaderView* self);
 void* QHeaderView_Metacast(QHeaderView* self, const char* param1);
 int QHeaderView_Metacall(QHeaderView* self, int param1, int param2, void** param3);

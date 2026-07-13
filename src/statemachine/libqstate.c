@@ -10,19 +10,19 @@
 #include "libqstate.h"
 
 QState* q_state_new() {
-    return QState_new();
+    return QState_New();
 }
 
 QState* q_state_new2(int32_t childMode) {
-    return QState_new2(childMode);
+    return QState_New2(childMode);
 }
 
 QState* q_state_new3(void* parent) {
-    return QState_new3((QState*)parent);
+    return QState_New3((QState*)parent);
 }
 
 QState* q_state_new4(int32_t childMode, void* parent) {
-    return QState_new4(childMode, (QState*)parent);
+    return QState_New4(childMode, (QState*)parent);
 }
 
 const QMetaObject* q_state_meta_object(void* self) {

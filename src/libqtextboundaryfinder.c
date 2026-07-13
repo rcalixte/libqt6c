@@ -3,39 +3,39 @@
 #include "libqtextboundaryfinder.h"
 
 QTextBoundaryFinder* q_textboundaryfinder_new() {
-    return QTextBoundaryFinder_new();
+    return QTextBoundaryFinder_New();
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new2(void* other) {
-    return QTextBoundaryFinder_new2((QTextBoundaryFinder*)other);
+    return QTextBoundaryFinder_New2((QTextBoundaryFinder*)other);
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new3(int32_t type, const char* string) {
-    return QTextBoundaryFinder_new3(type, qstring(string));
+    return QTextBoundaryFinder_New3(type, qstring(string));
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new4(int32_t type, void* chars, intptr_t length) {
-    return QTextBoundaryFinder_new4(type, (QChar*)chars, length);
+    return QTextBoundaryFinder_New4(type, (QChar*)chars, length);
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new5(int32_t type, const char* str) {
-    return QTextBoundaryFinder_new5(type, qstring(str));
+    return QTextBoundaryFinder_New5(type, qstring(str));
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new6(int32_t type, void* chars, intptr_t length, unsigned char* buffer) {
-    return QTextBoundaryFinder_new6(type, (QChar*)chars, length, buffer);
+    return QTextBoundaryFinder_New6(type, (QChar*)chars, length, buffer);
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new7(int32_t type, void* chars, intptr_t length, unsigned char* buffer, intptr_t bufferSize) {
-    return QTextBoundaryFinder_new7(type, (QChar*)chars, length, buffer, bufferSize);
+    return QTextBoundaryFinder_New7(type, (QChar*)chars, length, buffer, bufferSize);
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new8(int32_t type, const char* str, unsigned char* buffer) {
-    return QTextBoundaryFinder_new8(type, qstring(str), buffer);
+    return QTextBoundaryFinder_New8(type, qstring(str), buffer);
 }
 
 QTextBoundaryFinder* q_textboundaryfinder_new9(int32_t type, const char* str, unsigned char* buffer, intptr_t bufferSize) {
-    return QTextBoundaryFinder_new9(type, qstring(str), buffer, bufferSize);
+    return QTextBoundaryFinder_New9(type, qstring(str), buffer, bufferSize);
 }
 
 void q_textboundaryfinder_operator_assign(void* self, void* other) {

@@ -17,15 +17,15 @@
 #include "libkcontextualhelpbutton.h"
 
 KContextualHelpButton* k_contextualhelpbutton_new(void* parent) {
-    return KContextualHelpButton_new((QWidget*)parent);
+    return KContextualHelpButton_New((QWidget*)parent);
 }
 
 KContextualHelpButton* k_contextualhelpbutton_new2(const char* contextualHelpText, void* heightHintWidget, void* parent) {
-    return KContextualHelpButton_new2(qstring(contextualHelpText), (QWidget*)heightHintWidget, (QWidget*)parent);
+    return KContextualHelpButton_New2(qstring(contextualHelpText), (QWidget*)heightHintWidget, (QWidget*)parent);
 }
 
 KContextualHelpButton* k_contextualhelpbutton_new3() {
-    return KContextualHelpButton_new3();
+    return KContextualHelpButton_New3();
 }
 
 const QMetaObject* k_contextualhelpbutton_meta_object(void* self) {

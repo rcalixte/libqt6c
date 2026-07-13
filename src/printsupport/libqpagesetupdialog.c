@@ -16,19 +16,19 @@
 #include "libqpagesetupdialog.h"
 
 QPageSetupDialog* q_pagesetupdialog_new(void* parent) {
-    return QPageSetupDialog_new((QWidget*)parent);
+    return QPageSetupDialog_New((QWidget*)parent);
 }
 
 QPageSetupDialog* q_pagesetupdialog_new2(void* printer) {
-    return QPageSetupDialog_new2((QPrinter*)printer);
+    return QPageSetupDialog_New2((QPrinter*)printer);
 }
 
 QPageSetupDialog* q_pagesetupdialog_new3() {
-    return QPageSetupDialog_new3();
+    return QPageSetupDialog_New3();
 }
 
 QPageSetupDialog* q_pagesetupdialog_new4(void* printer, void* parent) {
-    return QPageSetupDialog_new4((QPrinter*)printer, (QWidget*)parent);
+    return QPageSetupDialog_New4((QPrinter*)printer, (QWidget*)parent);
 }
 
 const QMetaObject* q_pagesetupdialog_meta_object(void* self) {

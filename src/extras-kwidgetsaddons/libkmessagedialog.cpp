@@ -41,17 +41,17 @@
 #include "libkmessagedialog.hpp"
 #include "libkmessagedialog.hxx"
 
-KMessageDialog* KMessageDialog_new(int type, const libqt_string text) {
+KMessageDialog* KMessageDialog_New(int type, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(type), text_QString);
 }
 
-KMessageDialog* KMessageDialog_new2(int type, const libqt_string text, uintptr_t parent_id) {
+KMessageDialog* KMessageDialog_New2(int type, const libqt_string text, uintptr_t parent_id) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(type), text_QString, static_cast<WId>(parent_id));
 }
 
-KMessageDialog* KMessageDialog_new3(int type, const libqt_string text, QWidget* parent) {
+KMessageDialog* KMessageDialog_New3(int type, const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKMessageDialog(static_cast<KMessageDialog::Type>(type), text_QString, parent);
 }

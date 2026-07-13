@@ -4,11 +4,11 @@
 #include "libqsqlrecord.h"
 
 QSqlRecord* q_sqlrecord_new() {
-    return QSqlRecord_new();
+    return QSqlRecord_New();
 }
 
 QSqlRecord* q_sqlrecord_new2(void* other) {
-    return QSqlRecord_new2((QSqlRecord*)other);
+    return QSqlRecord_New2((QSqlRecord*)other);
 }
 
 void q_sqlrecord_operator_assign(void* self, void* other) {

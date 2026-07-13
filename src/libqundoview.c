@@ -28,27 +28,27 @@
 #include "libqundoview.h"
 
 QUndoView* q_undoview_new(void* parent) {
-    return QUndoView_new((QWidget*)parent);
+    return QUndoView_New((QWidget*)parent);
 }
 
 QUndoView* q_undoview_new2() {
-    return QUndoView_new2();
+    return QUndoView_New2();
 }
 
 QUndoView* q_undoview_new3(void* stack) {
-    return QUndoView_new3((QUndoStack*)stack);
+    return QUndoView_New3((QUndoStack*)stack);
 }
 
 QUndoView* q_undoview_new4(void* group) {
-    return QUndoView_new4((QUndoGroup*)group);
+    return QUndoView_New4((QUndoGroup*)group);
 }
 
 QUndoView* q_undoview_new5(void* stack, void* parent) {
-    return QUndoView_new5((QUndoStack*)stack, (QWidget*)parent);
+    return QUndoView_New5((QUndoStack*)stack, (QWidget*)parent);
 }
 
 QUndoView* q_undoview_new6(void* group, void* parent) {
-    return QUndoView_new6((QUndoGroup*)group, (QWidget*)parent);
+    return QUndoView_New6((QUndoGroup*)group, (QWidget*)parent);
 }
 
 const QMetaObject* q_undoview_meta_object(void* self) {

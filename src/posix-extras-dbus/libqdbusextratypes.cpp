@@ -7,25 +7,25 @@
 #include "libqdbusextratypes.hpp"
 #include "libqdbusextratypes.hxx"
 
-QDBusObjectPath* QDBusObjectPath_new() {
+QDBusObjectPath* QDBusObjectPath_New() {
     return new QDBusObjectPath();
 }
 
-QDBusObjectPath* QDBusObjectPath_new2(const char* path) {
+QDBusObjectPath* QDBusObjectPath_New2(const char* path) {
     return new QDBusObjectPath(path);
 }
 
-QDBusObjectPath* QDBusObjectPath_new3(libqt_string path) {
+QDBusObjectPath* QDBusObjectPath_New3(libqt_string path) {
     QLatin1StringView path_QLatin1StringView(path.data, path.len);
     return new QDBusObjectPath(path_QLatin1StringView);
 }
 
-QDBusObjectPath* QDBusObjectPath_new4(const libqt_string path) {
+QDBusObjectPath* QDBusObjectPath_New4(const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDBusObjectPath(path_QString);
 }
 
-QDBusObjectPath* QDBusObjectPath_new5(const QDBusObjectPath* param1) {
+QDBusObjectPath* QDBusObjectPath_New5(const QDBusObjectPath* param1) {
     return new QDBusObjectPath(*param1);
 }
 
@@ -58,25 +58,25 @@ void QDBusObjectPath_Delete(QDBusObjectPath* self) {
     delete self;
 }
 
-QDBusSignature* QDBusSignature_new() {
+QDBusSignature* QDBusSignature_New() {
     return new QDBusSignature();
 }
 
-QDBusSignature* QDBusSignature_new2(const char* signature) {
+QDBusSignature* QDBusSignature_New2(const char* signature) {
     return new QDBusSignature(signature);
 }
 
-QDBusSignature* QDBusSignature_new3(libqt_string signature) {
+QDBusSignature* QDBusSignature_New3(libqt_string signature) {
     QLatin1StringView signature_QLatin1StringView(signature.data, signature.len);
     return new QDBusSignature(signature_QLatin1StringView);
 }
 
-QDBusSignature* QDBusSignature_new4(const libqt_string signature) {
+QDBusSignature* QDBusSignature_New4(const libqt_string signature) {
     QString signature_QString = QString::fromUtf8(signature.data, signature.len);
     return new QDBusSignature(signature_QString);
 }
 
-QDBusSignature* QDBusSignature_new5(const QDBusSignature* param1) {
+QDBusSignature* QDBusSignature_New5(const QDBusSignature* param1) {
     return new QDBusSignature(*param1);
 }
 
@@ -105,15 +105,15 @@ void QDBusSignature_Delete(QDBusSignature* self) {
     delete self;
 }
 
-QDBusVariant* QDBusVariant_new() {
+QDBusVariant* QDBusVariant_New() {
     return new QDBusVariant();
 }
 
-QDBusVariant* QDBusVariant_new2(const QVariant* variant) {
+QDBusVariant* QDBusVariant_New2(const QVariant* variant) {
     return new QDBusVariant(*variant);
 }
 
-QDBusVariant* QDBusVariant_new3(const QDBusVariant* param1) {
+QDBusVariant* QDBusVariant_New3(const QDBusVariant* param1) {
     return new QDBusVariant(*param1);
 }
 

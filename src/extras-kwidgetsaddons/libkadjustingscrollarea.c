@@ -19,11 +19,11 @@
 #include "libkadjustingscrollarea.h"
 
 KAdjustingScrollArea* k_adjustingscrollarea_new(void* parent) {
-    return KAdjustingScrollArea_new((QWidget*)parent);
+    return KAdjustingScrollArea_New((QWidget*)parent);
 }
 
 KAdjustingScrollArea* k_adjustingscrollarea_new2() {
-    return KAdjustingScrollArea_new2();
+    return KAdjustingScrollArea_New2();
 }
 
 const QMetaObject* k_adjustingscrollarea_meta_object(void* self) {

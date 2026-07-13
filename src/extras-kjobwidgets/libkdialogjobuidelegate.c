@@ -8,11 +8,11 @@
 #include "libkdialogjobuidelegate.h"
 
 KDialogJobUiDelegate* k_dialogjobuidelegate_new() {
-    return KDialogJobUiDelegate_new();
+    return KDialogJobUiDelegate_New();
 }
 
 KDialogJobUiDelegate* k_dialogjobuidelegate_new2(int32_t flags, void* window) {
-    return KDialogJobUiDelegate_new2(flags, (QWidget*)window);
+    return KDialogJobUiDelegate_New2(flags, (QWidget*)window);
 }
 
 const QMetaObject* k_dialogjobuidelegate_meta_object(void* self) {

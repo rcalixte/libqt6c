@@ -3,7 +3,7 @@
 #include "libsearchpreset.h"
 
 KNSCore__SearchPreset* k_nscore__searchpreset_new(void* param1) {
-    return KNSCore__SearchPreset_new((KNSCore__SearchPreset*)param1);
+    return KNSCore__SearchPreset_New((KNSCore__SearchPreset*)param1);
 }
 
 KNSCore__SearchRequest* k_nscore__searchpreset_request(void* self) {

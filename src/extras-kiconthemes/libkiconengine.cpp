@@ -13,7 +13,7 @@
 #include "libkiconengine.hpp"
 #include "libkiconengine.hxx"
 
-KIconEngine* KIconEngine_new(const libqt_string iconName, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays) {
+KIconEngine* KIconEngine_New(const libqt_string iconName, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays) {
     QString iconName_QString = QString::fromUtf8(iconName.data, iconName.len);
     QList<QString> overlays_QList;
     overlays_QList.reserve(overlays.len);
@@ -25,17 +25,17 @@ KIconEngine* KIconEngine_new(const libqt_string iconName, KIconLoader* iconLoade
     return new VirtualKIconEngine(iconName_QString, iconLoader, overlays_QList);
 }
 
-KIconEngine* KIconEngine_new2(const libqt_string iconName, KIconLoader* iconLoader) {
+KIconEngine* KIconEngine_New2(const libqt_string iconName, KIconLoader* iconLoader) {
     QString iconName_QString = QString::fromUtf8(iconName.data, iconName.len);
     return new VirtualKIconEngine(iconName_QString, iconLoader);
 }
 
-KIconEngine* KIconEngine_new3(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader) {
+KIconEngine* KIconEngine_New3(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader) {
     QString iconName_QString = QString::fromUtf8(iconName.data, iconName.len);
     return new VirtualKIconEngine(iconName_QString, *colors, iconLoader);
 }
 
-KIconEngine* KIconEngine_new4(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays) {
+KIconEngine* KIconEngine_New4(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays) {
     QString iconName_QString = QString::fromUtf8(iconName.data, iconName.len);
     QList<QString> overlays_QList;
     overlays_QList.reserve(overlays.len);
@@ -47,7 +47,7 @@ KIconEngine* KIconEngine_new4(const libqt_string iconName, const KIconColors* co
     return new VirtualKIconEngine(iconName_QString, *colors, iconLoader, overlays_QList);
 }
 
-KIconEngine* KIconEngine_new5(const KIconEngine* param1) {
+KIconEngine* KIconEngine_New5(const KIconEngine* param1) {
     return new VirtualKIconEngine(*param1);
 }
 

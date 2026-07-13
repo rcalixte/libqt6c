@@ -16,15 +16,15 @@
 #include "libkfontchooserdialog.h"
 
 KFontChooserDialog* k_fontchooserdialog_new() {
-    return KFontChooserDialog_new();
+    return KFontChooserDialog_New();
 }
 
 KFontChooserDialog* k_fontchooserdialog_new2(const int32_t* flags) {
-    return KFontChooserDialog_new2(flags);
+    return KFontChooserDialog_New2(flags);
 }
 
 KFontChooserDialog* k_fontchooserdialog_new3(const int32_t* flags, void* parent) {
-    return KFontChooserDialog_new3(flags, (QWidget*)parent);
+    return KFontChooserDialog_New3(flags, (QWidget*)parent);
 }
 
 const QMetaObject* k_fontchooserdialog_meta_object(void* self) {

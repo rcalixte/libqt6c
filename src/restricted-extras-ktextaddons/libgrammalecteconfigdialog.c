@@ -15,15 +15,15 @@
 #include "libgrammalecteconfigdialog.h"
 
 TextGrammarCheck__GrammalecteConfigDialog* k_textgrammarcheck__grammalecteconfigdialog_new(void* parent) {
-    return TextGrammarCheck__GrammalecteConfigDialog_new((QWidget*)parent);
+    return TextGrammarCheck__GrammalecteConfigDialog_New((QWidget*)parent);
 }
 
 TextGrammarCheck__GrammalecteConfigDialog* k_textgrammarcheck__grammalecteconfigdialog_new2() {
-    return TextGrammarCheck__GrammalecteConfigDialog_new2();
+    return TextGrammarCheck__GrammalecteConfigDialog_New2();
 }
 
 TextGrammarCheck__GrammalecteConfigDialog* k_textgrammarcheck__grammalecteconfigdialog_new3(void* parent, bool disableMessageBox) {
-    return TextGrammarCheck__GrammalecteConfigDialog_new3((QWidget*)parent, disableMessageBox);
+    return TextGrammarCheck__GrammalecteConfigDialog_New3((QWidget*)parent, disableMessageBox);
 }
 
 const QMetaObject* k_textgrammarcheck__grammalecteconfigdialog_meta_object(void* self) {

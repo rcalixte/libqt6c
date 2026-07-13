@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWindow QWindow;
 #endif
 
-KKeySequenceRecorder* KKeySequenceRecorder_new(QWindow* window);
-KKeySequenceRecorder* KKeySequenceRecorder_new2(QWindow* window, QObject* parent);
+KKeySequenceRecorder* KKeySequenceRecorder_New(QWindow* window);
+KKeySequenceRecorder* KKeySequenceRecorder_New2(QWindow* window, QObject* parent);
 QMetaObject* KKeySequenceRecorder_MetaObject(const KKeySequenceRecorder* self);
 void* KKeySequenceRecorder_Metacast(KKeySequenceRecorder* self, const char* param1);
 int KKeySequenceRecorder_Metacall(KKeySequenceRecorder* self, int param1, int param2, void** param3);

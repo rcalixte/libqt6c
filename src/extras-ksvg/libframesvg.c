@@ -13,11 +13,11 @@
 #include "libframesvg.h"
 
 KSvg__FrameSvg* k_svg__framesvg_new() {
-    return KSvg__FrameSvg_new();
+    return KSvg__FrameSvg_New();
 }
 
 KSvg__FrameSvg* k_svg__framesvg_new2(void* parent) {
-    return KSvg__FrameSvg_new2((QObject*)parent);
+    return KSvg__FrameSvg_New2((QObject*)parent);
 }
 
 const QMetaObject* k_svg__framesvg_meta_object(void* self) {

@@ -30,15 +30,15 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KFileItem* KFileItem_new();
-KFileItem* KFileItem_new2(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl);
-KFileItem* KFileItem_new3(const QUrl* url);
-KFileItem* KFileItem_new4(const QUrl* url, int mimeTypeDetermination);
-KFileItem* KFileItem_new5(const KFileItem* param1);
-KFileItem* KFileItem_new6(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes);
-KFileItem* KFileItem_new7(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory);
-KFileItem* KFileItem_new8(const QUrl* url, const libqt_string mimeType);
-KFileItem* KFileItem_new9(const QUrl* url, const libqt_string mimeType, mode_t mode);
+KFileItem* KFileItem_New();
+KFileItem* KFileItem_New2(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl);
+KFileItem* KFileItem_New3(const QUrl* url);
+KFileItem* KFileItem_New4(const QUrl* url, int mimeTypeDetermination);
+KFileItem* KFileItem_New5(const KFileItem* param1);
+KFileItem* KFileItem_New6(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes);
+KFileItem* KFileItem_New7(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory);
+KFileItem* KFileItem_New8(const QUrl* url, const libqt_string mimeType);
+KFileItem* KFileItem_New9(const QUrl* url, const libqt_string mimeType, mode_t mode);
 void KFileItem_OperatorAssign(KFileItem* self, const KFileItem* param1);
 void KFileItem_Refresh(KFileItem* self);
 void KFileItem_RefreshMimeType(KFileItem* self);
@@ -104,15 +104,15 @@ libqt_string KFileItem_Name1(const KFileItem* self, bool lowerCase);
 QUrl* KFileItem_MostLocalUrl1(const KFileItem* self, bool* local);
 void KFileItem_Delete(KFileItem* self);
 
-KFileItemList* KFileItemList_new();
-KFileItemList* KFileItemList_new2(const libqt_list /* of KFileItem* */ items);
+KFileItemList* KFileItemList_New();
+KFileItemList* KFileItemList_New2(const libqt_list /* of KFileItem* */ items);
 KFileItem* KFileItemList_FindByName(const KFileItemList* self, const libqt_string fileName);
 KFileItem* KFileItemList_FindByUrl(const KFileItemList* self, const QUrl* url);
 libqt_list /* of QUrl* */ KFileItemList_UrlList(const KFileItemList* self);
 libqt_list /* of QUrl* */ KFileItemList_TargetUrlList(const KFileItemList* self);
 void KFileItemList_Delete(KFileItemList* self);
 
-KFileItem__MostLocalUrlResult* KFileItem__MostLocalUrlResult_new(const KFileItem__MostLocalUrlResult* param1);
+KFileItem__MostLocalUrlResult* KFileItem__MostLocalUrlResult_New(const KFileItem__MostLocalUrlResult* param1);
 QUrl* KFileItem__MostLocalUrlResult_Url(const KFileItem__MostLocalUrlResult* self);
 void KFileItem__MostLocalUrlResult_SetUrl(KFileItem__MostLocalUrlResult* self, QUrl* url);
 bool KFileItem__MostLocalUrlResult_Local(const KFileItem__MostLocalUrlResult* self);

@@ -6,11 +6,11 @@
 #include "libgrammalectemanager.h"
 
 TextGrammarCheck__GrammalecteManager* k_textgrammarcheck__grammalectemanager_new() {
-    return TextGrammarCheck__GrammalecteManager_new();
+    return TextGrammarCheck__GrammalecteManager_New();
 }
 
 TextGrammarCheck__GrammalecteManager* k_textgrammarcheck__grammalectemanager_new2(void* parent) {
-    return TextGrammarCheck__GrammalecteManager_new2((QObject*)parent);
+    return TextGrammarCheck__GrammalecteManager_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textgrammarcheck__grammalectemanager_meta_object(void* self) {

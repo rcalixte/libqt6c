@@ -16,30 +16,30 @@
 #include "libqaction.hpp"
 #include "libqaction.hxx"
 
-QAction* QAction_new() {
+QAction* QAction_New() {
     return new VirtualQAction();
 }
 
-QAction* QAction_new2(const libqt_string text) {
+QAction* QAction_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(text_QString);
 }
 
-QAction* QAction_new3(const QIcon* icon, const libqt_string text) {
+QAction* QAction_New3(const QIcon* icon, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(*icon, text_QString);
 }
 
-QAction* QAction_new4(QObject* parent) {
+QAction* QAction_New4(QObject* parent) {
     return new VirtualQAction(parent);
 }
 
-QAction* QAction_new5(const libqt_string text, QObject* parent) {
+QAction* QAction_New5(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(text_QString, parent);
 }
 
-QAction* QAction_new6(const QIcon* icon, const libqt_string text, QObject* parent) {
+QAction* QAction_New6(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAction(*icon, text_QString, parent);
 }

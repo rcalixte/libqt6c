@@ -2,19 +2,19 @@
 #include "libsignonerror.h"
 
 SignOn__Error* q_signon__error_new() {
-    return SignOn__Error_new();
+    return SignOn__Error_New();
 }
 
 SignOn__Error* q_signon__error_new2(void* src) {
-    return SignOn__Error_new2((SignOn__Error*)src);
+    return SignOn__Error_New2((SignOn__Error*)src);
 }
 
 SignOn__Error* q_signon__error_new3(int type) {
-    return SignOn__Error_new3(type);
+    return SignOn__Error_New3(type);
 }
 
 SignOn__Error* q_signon__error_new4(int type, const char* message) {
-    return SignOn__Error_new4(type, qstring(message));
+    return SignOn__Error_New4(type, qstring(message));
 }
 
 void q_signon__error_operator_assign(void* self, void* src) {

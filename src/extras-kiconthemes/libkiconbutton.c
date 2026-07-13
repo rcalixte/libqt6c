@@ -18,11 +18,11 @@
 #include "libkiconbutton.h"
 
 KIconButton* k_iconbutton_new(void* parent) {
-    return KIconButton_new((QWidget*)parent);
+    return KIconButton_New((QWidget*)parent);
 }
 
 KIconButton* k_iconbutton_new2() {
-    return KIconButton_new2();
+    return KIconButton_New2();
 }
 
 const QMetaObject* k_iconbutton_meta_object(void* self) {

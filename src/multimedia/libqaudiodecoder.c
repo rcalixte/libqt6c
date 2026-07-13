@@ -10,11 +10,11 @@
 #include "libqaudiodecoder.h"
 
 QAudioDecoder* q_audiodecoder_new() {
-    return QAudioDecoder_new();
+    return QAudioDecoder_New();
 }
 
 QAudioDecoder* q_audiodecoder_new2(void* parent) {
-    return QAudioDecoder_new2((QObject*)parent);
+    return QAudioDecoder_New2((QObject*)parent);
 }
 
 const QMetaObject* q_audiodecoder_meta_object(void* self) {

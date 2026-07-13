@@ -15,19 +15,19 @@
 #include "librichtexteditorwidget.h"
 
 TextCustomEditor__RichTextEditorWidget* k_textcustomeditor__richtexteditorwidget_new(void* parent) {
-    return TextCustomEditor__RichTextEditorWidget_new((QWidget*)parent);
+    return TextCustomEditor__RichTextEditorWidget_New((QWidget*)parent);
 }
 
 TextCustomEditor__RichTextEditorWidget* k_textcustomeditor__richtexteditorwidget_new2() {
-    return TextCustomEditor__RichTextEditorWidget_new2();
+    return TextCustomEditor__RichTextEditorWidget_New2();
 }
 
 TextCustomEditor__RichTextEditorWidget* k_textcustomeditor__richtexteditorwidget_new3(void* customEditor) {
-    return TextCustomEditor__RichTextEditorWidget_new3((TextCustomEditor__RichTextEditor*)customEditor);
+    return TextCustomEditor__RichTextEditorWidget_New3((TextCustomEditor__RichTextEditor*)customEditor);
 }
 
 TextCustomEditor__RichTextEditorWidget* k_textcustomeditor__richtexteditorwidget_new4(void* customEditor, void* parent) {
-    return TextCustomEditor__RichTextEditorWidget_new4((TextCustomEditor__RichTextEditor*)customEditor, (QWidget*)parent);
+    return TextCustomEditor__RichTextEditorWidget_New4((TextCustomEditor__RichTextEditor*)customEditor, (QWidget*)parent);
 }
 
 const QMetaObject* k_textcustomeditor__richtexteditorwidget_meta_object(void* self) {

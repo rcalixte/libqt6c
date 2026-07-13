@@ -22,7 +22,7 @@ typedef struct KIO__AuthInfo KIO__AuthInfo;
 typedef struct KPasswdServerClient KPasswdServerClient;
 #endif
 
-KPasswdServerClient* KPasswdServerClient_new();
+KPasswdServerClient* KPasswdServerClient_New();
 bool KPasswdServerClient_CheckAuthInfo(KPasswdServerClient* self, KIO__AuthInfo* info, long long windowId, long long usertime);
 int KPasswdServerClient_QueryAuthInfo(KPasswdServerClient* self, KIO__AuthInfo* info, const libqt_string errorMsg, long long windowId, long long usertime);
 void KPasswdServerClient_AddAuthInfo(KPasswdServerClient* self, const KIO__AuthInfo* info, long long windowId);

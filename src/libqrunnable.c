@@ -2,7 +2,7 @@
 #include "libqrunnable.h"
 
 QRunnable* q_runnable_new() {
-    return QRunnable_new();
+    return QRunnable_New();
 }
 
 void q_runnable_run(void* self) {

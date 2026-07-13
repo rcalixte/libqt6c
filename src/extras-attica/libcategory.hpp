@@ -21,8 +21,8 @@ typedef Attica::Category Attica__Category;
 typedef struct Attica__Category Attica__Category;
 #endif
 
-Attica__Category* Attica__Category_new();
-Attica__Category* Attica__Category_new2(const Attica__Category* other);
+Attica__Category* Attica__Category_New();
+Attica__Category* Attica__Category_New2(const Attica__Category* other);
 void Attica__Category_OperatorAssign(Attica__Category* self, const Attica__Category* other);
 void Attica__Category_SetId(Attica__Category* self, const libqt_string id);
 libqt_string Attica__Category_Id(const Attica__Category* self);

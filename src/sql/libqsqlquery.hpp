@@ -24,12 +24,12 @@ typedef struct QSqlResult QSqlResult;
 typedef struct QVariant QVariant;
 #endif
 
-QSqlQuery* QSqlQuery_new(QSqlResult* r);
-QSqlQuery* QSqlQuery_new2();
-QSqlQuery* QSqlQuery_new3(const QSqlDatabase* db);
-QSqlQuery* QSqlQuery_new4(const QSqlQuery* other);
-QSqlQuery* QSqlQuery_new5(const libqt_string query);
-QSqlQuery* QSqlQuery_new6(const libqt_string query, const QSqlDatabase* db);
+QSqlQuery* QSqlQuery_New(QSqlResult* r);
+QSqlQuery* QSqlQuery_New2();
+QSqlQuery* QSqlQuery_New3(const QSqlDatabase* db);
+QSqlQuery* QSqlQuery_New4(const QSqlQuery* other);
+QSqlQuery* QSqlQuery_New5(const libqt_string query);
+QSqlQuery* QSqlQuery_New6(const libqt_string query, const QSqlDatabase* db);
 void QSqlQuery_OperatorAssign(QSqlQuery* self, const QSqlQuery* other);
 void QSqlQuery_Swap(QSqlQuery* self, QSqlQuery* other);
 bool QSqlQuery_IsValid(const QSqlQuery* self);

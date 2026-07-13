@@ -3,19 +3,19 @@
 #include "libqsslerror.h"
 
 QSslError* q_sslerror_new() {
-    return QSslError_new();
+    return QSslError_New();
 }
 
 QSslError* q_sslerror_new2(int32_t error) {
-    return QSslError_new2(error);
+    return QSslError_New2(error);
 }
 
 QSslError* q_sslerror_new3(int32_t error, void* certificate) {
-    return QSslError_new3(error, (QSslCertificate*)certificate);
+    return QSslError_New3(error, (QSslCertificate*)certificate);
 }
 
 QSslError* q_sslerror_new4(void* other) {
-    return QSslError_new4((QSslError*)other);
+    return QSslError_New4((QSslError*)other);
 }
 
 void q_sslerror_swap(void* self, void* other) {

@@ -9,19 +9,19 @@
 #include "libopenurljob.h"
 
 KIO__OpenUrlJob* k_io__openurljob_new(void* url) {
-    return KIO__OpenUrlJob_new((QUrl*)url);
+    return KIO__OpenUrlJob_New((QUrl*)url);
 }
 
 KIO__OpenUrlJob* k_io__openurljob_new2(void* url, const char* mimeType) {
-    return KIO__OpenUrlJob_new2((QUrl*)url, qstring(mimeType));
+    return KIO__OpenUrlJob_New2((QUrl*)url, qstring(mimeType));
 }
 
 KIO__OpenUrlJob* k_io__openurljob_new3(void* url, void* parent) {
-    return KIO__OpenUrlJob_new3((QUrl*)url, (QObject*)parent);
+    return KIO__OpenUrlJob_New3((QUrl*)url, (QObject*)parent);
 }
 
 KIO__OpenUrlJob* k_io__openurljob_new4(void* url, const char* mimeType, void* parent) {
-    return KIO__OpenUrlJob_new4((QUrl*)url, qstring(mimeType), (QObject*)parent);
+    return KIO__OpenUrlJob_New4((QUrl*)url, qstring(mimeType), (QObject*)parent);
 }
 
 const QMetaObject* k_io__openurljob_meta_object(void* self) {

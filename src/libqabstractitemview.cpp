@@ -50,11 +50,11 @@
 #include "libqabstractitemview.hpp"
 #include "libqabstractitemview.hxx"
 
-QAbstractItemView* QAbstractItemView_new(QWidget* parent) {
+QAbstractItemView* QAbstractItemView_New(QWidget* parent) {
     return new VirtualQAbstractItemView(parent);
 }
 
-QAbstractItemView* QAbstractItemView_new2() {
+QAbstractItemView* QAbstractItemView_New2() {
     return new VirtualQAbstractItemView();
 }
 

@@ -22,11 +22,11 @@
 #include "libqpdfbookmarkmodel.hpp"
 #include "libqpdfbookmarkmodel.hxx"
 
-QPdfBookmarkModel* QPdfBookmarkModel_new() {
+QPdfBookmarkModel* QPdfBookmarkModel_New() {
     return new VirtualQPdfBookmarkModel();
 }
 
-QPdfBookmarkModel* QPdfBookmarkModel_new2(QObject* parent) {
+QPdfBookmarkModel* QPdfBookmarkModel_New2(QObject* parent) {
     return new VirtualQPdfBookmarkModel(parent);
 }
 

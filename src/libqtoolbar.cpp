@@ -40,20 +40,20 @@
 #include "libqtoolbar.hpp"
 #include "libqtoolbar.hxx"
 
-QToolBar* QToolBar_new(QWidget* parent) {
+QToolBar* QToolBar_New(QWidget* parent) {
     return new VirtualQToolBar(parent);
 }
 
-QToolBar* QToolBar_new2(const libqt_string title) {
+QToolBar* QToolBar_New2(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQToolBar(title_QString);
 }
 
-QToolBar* QToolBar_new3() {
+QToolBar* QToolBar_New3() {
     return new VirtualQToolBar();
 }
 
-QToolBar* QToolBar_new4(const libqt_string title, QWidget* parent) {
+QToolBar* QToolBar_New4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualQToolBar(title_QString, parent);
 }

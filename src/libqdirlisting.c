@@ -5,7 +5,7 @@
 #include "libqdirlisting.h"
 
 QDirListing* q_dirlisting_new(const char* path) {
-    return QDirListing_new(qstring(path));
+    return QDirListing_New(qstring(path));
 }
 
 QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[static 1]) {
@@ -20,13 +20,13 @@ QDirListing* q_dirlisting_new2(const char* path, const char* nameFilters[static 
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    QDirListing* _out = QDirListing_new2(qstring(path), nameFilters_list);
+    QDirListing* _out = QDirListing_New2(qstring(path), nameFilters_list);
     free(nameFilters_qstr);
     return _out;
 }
 
 QDirListing* q_dirlisting_new3(const char* path, int32_t flags) {
-    return QDirListing_new3(qstring(path), flags);
+    return QDirListing_New3(qstring(path), flags);
 }
 
 QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[static 1], int32_t flags) {
@@ -41,7 +41,7 @@ QDirListing* q_dirlisting_new4(const char* path, const char* nameFilters[static 
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    QDirListing* _out = QDirListing_new4(qstring(path), nameFilters_list, flags);
+    QDirListing* _out = QDirListing_New4(qstring(path), nameFilters_list, flags);
     free(nameFilters_qstr);
     return _out;
 }
@@ -109,19 +109,19 @@ void q_dirlisting_delete(void* self) {
 }
 
 QDirListing__DirEntry* q_dirlisting__direntry_new(void* other) {
-    return QDirListing__DirEntry_new((QDirListing__DirEntry*)other);
+    return QDirListing__DirEntry_New((QDirListing__DirEntry*)other);
 }
 
 QDirListing__DirEntry* q_dirlisting__direntry_new2(void* other) {
-    return QDirListing__DirEntry_new2((QDirListing__DirEntry*)other);
+    return QDirListing__DirEntry_New2((QDirListing__DirEntry*)other);
 }
 
 QDirListing__DirEntry* q_dirlisting__direntry_new3(void* param1) {
-    return QDirListing__DirEntry_new3((QDirListing__DirEntry*)param1);
+    return QDirListing__DirEntry_New3((QDirListing__DirEntry*)param1);
 }
 
 QDirListing__DirEntry* q_dirlisting__direntry_new4() {
-    return QDirListing__DirEntry_new4();
+    return QDirListing__DirEntry_New4();
 }
 
 void q_dirlisting__direntry_copy_assign(void* self, void* other) {
@@ -271,19 +271,19 @@ void q_dirlisting__direntry_delete(void* self) {
 }
 
 QDirListing__sentinel* q_dirlisting__sentinel_new(void* other) {
-    return QDirListing__sentinel_new((QDirListing__sentinel*)other);
+    return QDirListing__sentinel_New((QDirListing__sentinel*)other);
 }
 
 QDirListing__sentinel* q_dirlisting__sentinel_new2(void* other) {
-    return QDirListing__sentinel_new2((QDirListing__sentinel*)other);
+    return QDirListing__sentinel_New2((QDirListing__sentinel*)other);
 }
 
 QDirListing__sentinel* q_dirlisting__sentinel_new3() {
-    return QDirListing__sentinel_new3();
+    return QDirListing__sentinel_New3();
 }
 
 QDirListing__sentinel* q_dirlisting__sentinel_new4(void* param1) {
-    return QDirListing__sentinel_new4((QDirListing__sentinel*)param1);
+    return QDirListing__sentinel_New4((QDirListing__sentinel*)param1);
 }
 
 void q_dirlisting__sentinel_copy_assign(void* self, void* other) {
@@ -299,7 +299,7 @@ void q_dirlisting__sentinel_delete(void* self) {
 }
 
 QDirListing__const_iterator* q_dirlisting__const_iterator_new2(void* other) {
-    return QDirListing__const_iterator_new2((QDirListing__const_iterator*)other);
+    return QDirListing__const_iterator_New2((QDirListing__const_iterator*)other);
 }
 
 void q_dirlisting__const_iterator_move_assign(void* self, void* other) {

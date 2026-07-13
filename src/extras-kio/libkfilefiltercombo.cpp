@@ -48,11 +48,11 @@
 #include "libkfilefiltercombo.hpp"
 #include "libkfilefiltercombo.hxx"
 
-KFileFilterCombo* KFileFilterCombo_new(QWidget* parent) {
+KFileFilterCombo* KFileFilterCombo_New(QWidget* parent) {
     return new VirtualKFileFilterCombo(parent);
 }
 
-KFileFilterCombo* KFileFilterCombo_new2() {
+KFileFilterCombo* KFileFilterCombo_New2() {
     return new VirtualKFileFilterCombo();
 }
 

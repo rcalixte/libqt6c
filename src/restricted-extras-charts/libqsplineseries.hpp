@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QXYSeries QXYSeries;
 #endif
 
-QSplineSeries* QSplineSeries_new();
-QSplineSeries* QSplineSeries_new2(QObject* parent);
+QSplineSeries* QSplineSeries_New();
+QSplineSeries* QSplineSeries_New2(QObject* parent);
 QMetaObject* QSplineSeries_MetaObject(const QSplineSeries* self);
 void* QSplineSeries_Metacast(QSplineSeries* self, const char* param1);
 int QSplineSeries_Metacall(QSplineSeries* self, int param1, int param2, void** param3);

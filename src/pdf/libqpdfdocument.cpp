@@ -19,11 +19,11 @@
 #include "libqpdfdocument.hpp"
 #include "libqpdfdocument.hxx"
 
-QPdfDocument* QPdfDocument_new() {
+QPdfDocument* QPdfDocument_New() {
     return new VirtualQPdfDocument();
 }
 
-QPdfDocument* QPdfDocument_new2(QObject* parent) {
+QPdfDocument* QPdfDocument_New2(QObject* parent) {
     return new VirtualQPdfDocument(parent);
 }
 

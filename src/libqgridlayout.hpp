@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QGridLayout* QGridLayout_new(QWidget* parent);
-QGridLayout* QGridLayout_new2();
+QGridLayout* QGridLayout_New(QWidget* parent);
+QGridLayout* QGridLayout_New2();
 QMetaObject* QGridLayout_MetaObject(const QGridLayout* self);
 void* QGridLayout_Metacast(QGridLayout* self, const char* param1);
 int QGridLayout_Metacall(QGridLayout* self, int param1, int param2, void** param3);

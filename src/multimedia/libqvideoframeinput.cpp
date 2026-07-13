@@ -13,19 +13,19 @@
 #include "libqvideoframeinput.hpp"
 #include "libqvideoframeinput.hxx"
 
-QVideoFrameInput* QVideoFrameInput_new() {
+QVideoFrameInput* QVideoFrameInput_New() {
     return new VirtualQVideoFrameInput();
 }
 
-QVideoFrameInput* QVideoFrameInput_new2(const QVideoFrameFormat* format) {
+QVideoFrameInput* QVideoFrameInput_New2(const QVideoFrameFormat* format) {
     return new VirtualQVideoFrameInput(*format);
 }
 
-QVideoFrameInput* QVideoFrameInput_new3(QObject* parent) {
+QVideoFrameInput* QVideoFrameInput_New3(QObject* parent) {
     return new VirtualQVideoFrameInput(parent);
 }
 
-QVideoFrameInput* QVideoFrameInput_new4(const QVideoFrameFormat* format, QObject* parent) {
+QVideoFrameInput* QVideoFrameInput_New4(const QVideoFrameFormat* format, QObject* parent) {
     return new VirtualQVideoFrameInput(*format, parent);
 }
 

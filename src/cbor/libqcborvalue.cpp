@@ -19,11 +19,11 @@
 #include "libqcborvalue.hpp"
 #include "libqcborvalue.hxx"
 
-QCborParserError* QCborParserError_new(const QCborParserError* other) {
+QCborParserError* QCborParserError_New(const QCborParserError* other) {
     return new QCborParserError(*other);
 }
 
-QCborParserError* QCborParserError_new2(QCborParserError* other) {
+QCborParserError* QCborParserError_New2(QCborParserError* other) {
     return new QCborParserError(std::move(*other));
 }
 
@@ -67,103 +67,103 @@ void QCborParserError_Delete(QCborParserError* self) {
     delete self;
 }
 
-QCborValue* QCborValue_new() {
+QCborValue* QCborValue_New() {
     return new QCborValue();
 }
 
-QCborValue* QCborValue_new2(int t_) {
+QCborValue* QCborValue_New2(int t_) {
     return new QCborValue(static_cast<QCborValue::Type>(t_));
 }
 
-QCborValue* QCborValue_new3(bool b_) {
+QCborValue* QCborValue_New3(bool b_) {
     return new QCborValue(b_);
 }
 
-QCborValue* QCborValue_new4(int i) {
+QCborValue* QCborValue_New4(int i) {
     return new QCborValue(static_cast<int>(i));
 }
 
-QCborValue* QCborValue_new5(unsigned int u) {
+QCborValue* QCborValue_New5(unsigned int u) {
     return new QCborValue(static_cast<unsigned int>(u));
 }
 
-QCborValue* QCborValue_new6(long long i) {
+QCborValue* QCborValue_New6(long long i) {
     return new QCborValue(static_cast<qint64>(i));
 }
 
-QCborValue* QCborValue_new7(double v) {
+QCborValue* QCborValue_New7(double v) {
     return new QCborValue(static_cast<double>(v));
 }
 
-QCborValue* QCborValue_new8(uint8_t st) {
+QCborValue* QCborValue_New8(uint8_t st) {
     return new QCborValue(static_cast<QCborSimpleType>(st));
 }
 
-QCborValue* QCborValue_new9(const libqt_string ba) {
+QCborValue* QCborValue_New9(const libqt_string ba) {
     QByteArray ba_QByteArray(ba.data, ba.len);
     return new QCborValue(ba_QByteArray);
 }
 
-QCborValue* QCborValue_new10(const libqt_string s) {
+QCborValue* QCborValue_New10(const libqt_string s) {
     QString s_QString = QString::fromUtf8(s.data, s.len);
     return new QCborValue(s_QString);
 }
 
-QCborValue* QCborValue_new11(libqt_string s) {
+QCborValue* QCborValue_New11(libqt_string s) {
     QString s_QString = QString::fromUtf8(s.data, s.len);
     return new QCborValue(s_QString);
 }
 
-QCborValue* QCborValue_new12(libqt_string s) {
+QCborValue* QCborValue_New12(libqt_string s) {
     QLatin1StringView s_QLatin1StringView(s.data, s.len);
     return new QCborValue(s_QLatin1StringView);
 }
 
-QCborValue* QCborValue_new13(const char* s) {
+QCborValue* QCborValue_New13(const char* s) {
     return new QCborValue(s);
 }
 
-QCborValue* QCborValue_new14(const QCborArray* a) {
+QCborValue* QCborValue_New14(const QCborArray* a) {
     return new QCborValue(*a);
 }
 
-QCborValue* QCborValue_new15(const QCborMap* m) {
+QCborValue* QCborValue_New15(const QCborMap* m) {
     return new QCborValue(*m);
 }
 
-QCborValue* QCborValue_new16(uint64_t tag) {
+QCborValue* QCborValue_New16(uint64_t tag) {
     return new QCborValue(static_cast<QCborTag>(tag));
 }
 
-QCborValue* QCborValue_new17(int t_) {
+QCborValue* QCborValue_New17(int t_) {
     return new QCborValue(static_cast<QCborKnownTags>(t_));
 }
 
-QCborValue* QCborValue_new18(const QDateTime* dt) {
+QCborValue* QCborValue_New18(const QDateTime* dt) {
     return new QCborValue(*dt);
 }
 
-QCborValue* QCborValue_new19(const QUrl* url) {
+QCborValue* QCborValue_New19(const QUrl* url) {
     return new QCborValue(*url);
 }
 
-QCborValue* QCborValue_new20(const QRegularExpression* rx) {
+QCborValue* QCborValue_New20(const QRegularExpression* rx) {
     return new QCborValue(*rx);
 }
 
-QCborValue* QCborValue_new21(const QUuid* uuid) {
+QCborValue* QCborValue_New21(const QUuid* uuid) {
     return new QCborValue(*uuid);
 }
 
-QCborValue* QCborValue_new22(const QCborValue* other) {
+QCborValue* QCborValue_New22(const QCborValue* other) {
     return new QCborValue(*other);
 }
 
-QCborValue* QCborValue_new23(uint64_t tag, const QCborValue* taggedValue) {
+QCborValue* QCborValue_New23(uint64_t tag, const QCborValue* taggedValue) {
     return new QCborValue(static_cast<QCborTag>(tag), *taggedValue);
 }
 
-QCborValue* QCborValue_new24(int t_, const QCborValue* tv) {
+QCborValue* QCborValue_New24(int t_, const QCborValue* tv) {
     return new QCborValue(static_cast<QCborKnownTags>(t_), *tv);
 }
 
@@ -531,11 +531,11 @@ void QCborValue_Delete(QCborValue* self) {
     delete self;
 }
 
-QCborValueConstRef* QCborValueConstRef_new(const QCborValueConstRef* other) {
+QCborValueConstRef* QCborValueConstRef_New(const QCborValueConstRef* other) {
     return new QCborValueConstRef(*other);
 }
 
-QCborValueConstRef* QCborValueConstRef_new2(const QCborValueConstRef* param1) {
+QCborValueConstRef* QCborValueConstRef_New2(const QCborValueConstRef* param1) {
     return new QCborValueConstRef(*param1);
 }
 
@@ -847,15 +847,15 @@ void QCborValueConstRef_Delete(QCborValueConstRef* self) {
     delete self;
 }
 
-QCborValueRef* QCborValueRef_new(const QCborValueRef* other) {
+QCborValueRef* QCborValueRef_New(const QCborValueRef* other) {
     return new QCborValueRef(*other);
 }
 
-QCborValueRef* QCborValueRef_new2(QCborValueRef* other) {
+QCborValueRef* QCborValueRef_New2(QCborValueRef* other) {
     return new QCborValueRef(std::move(*other));
 }
 
-QCborValueRef* QCborValueRef_new3(const QCborValueRef* param1) {
+QCborValueRef* QCborValueRef_New3(const QCborValueRef* param1) {
     return new QCborValueRef(*param1);
 }
 

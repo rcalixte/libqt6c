@@ -8,11 +8,11 @@
 #include "libqvideosink.h"
 
 QVideoSink* q_videosink_new() {
-    return QVideoSink_new();
+    return QVideoSink_New();
 }
 
 QVideoSink* q_videosink_new2(void* parent) {
-    return QVideoSink_new2((QObject*)parent);
+    return QVideoSink_New2((QObject*)parent);
 }
 
 const QMetaObject* q_videosink_meta_object(void* self) {

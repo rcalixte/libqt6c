@@ -21,8 +21,8 @@ typedef struct QPlaceSearchRequest QPlaceSearchRequest;
 typedef struct QVariant QVariant;
 #endif
 
-QPlaceSearchRequest* QPlaceSearchRequest_new();
-QPlaceSearchRequest* QPlaceSearchRequest_new2(const QPlaceSearchRequest* other);
+QPlaceSearchRequest* QPlaceSearchRequest_New();
+QPlaceSearchRequest* QPlaceSearchRequest_New2(const QPlaceSearchRequest* other);
 void QPlaceSearchRequest_OperatorAssign(QPlaceSearchRequest* self, const QPlaceSearchRequest* other);
 void QPlaceSearchRequest_Swap(QPlaceSearchRequest* self, QPlaceSearchRequest* other);
 libqt_string QPlaceSearchRequest_SearchTerm(const QPlaceSearchRequest* self);

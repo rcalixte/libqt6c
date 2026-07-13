@@ -15,15 +15,15 @@
 #include "libkfinddialog.h"
 
 KFindDialog* k_finddialog_new(void* parent) {
-    return KFindDialog_new((QWidget*)parent);
+    return KFindDialog_New((QWidget*)parent);
 }
 
 KFindDialog* k_finddialog_new2() {
-    return KFindDialog_new2();
+    return KFindDialog_New2();
 }
 
 KFindDialog* k_finddialog_new3(void* parent, long options) {
-    return KFindDialog_new3((QWidget*)parent, options);
+    return KFindDialog_New3((QWidget*)parent, options);
 }
 
 KFindDialog* k_finddialog_new4(void* parent, long options, const char* findStrings[static 1]) {
@@ -38,7 +38,7 @@ KFindDialog* k_finddialog_new4(void* parent, long options, const char* findStrin
     }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
-    KFindDialog* _out = KFindDialog_new4((QWidget*)parent, options, findStrings_list);
+    KFindDialog* _out = KFindDialog_New4((QWidget*)parent, options, findStrings_list);
     free(findStrings_qstr);
     return _out;
 }
@@ -55,7 +55,7 @@ KFindDialog* k_finddialog_new5(void* parent, long options, const char* findStrin
     }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
-    KFindDialog* _out = KFindDialog_new5((QWidget*)parent, options, findStrings_list, hasSelection);
+    KFindDialog* _out = KFindDialog_New5((QWidget*)parent, options, findStrings_list, hasSelection);
     free(findStrings_qstr);
     return _out;
 }
@@ -72,7 +72,7 @@ KFindDialog* k_finddialog_new6(void* parent, long options, const char* findStrin
     }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
-    KFindDialog* _out = KFindDialog_new6((QWidget*)parent, options, findStrings_list, hasSelection, replaceDialog);
+    KFindDialog* _out = KFindDialog_New6((QWidget*)parent, options, findStrings_list, hasSelection, replaceDialog);
     free(findStrings_qstr);
     return _out;
 }

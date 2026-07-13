@@ -16,11 +16,11 @@
 #include "libqnmeasatelliteinfosource.hpp"
 #include "libqnmeasatelliteinfosource.hxx"
 
-QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_new(int mode) {
+QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_New(int mode) {
     return new VirtualQNmeaSatelliteInfoSource(static_cast<QNmeaSatelliteInfoSource::UpdateMode>(mode));
 }
 
-QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_new2(int mode, QObject* parent) {
+QNmeaSatelliteInfoSource* QNmeaSatelliteInfoSource_New2(int mode, QObject* parent) {
     return new VirtualQNmeaSatelliteInfoSource(static_cast<QNmeaSatelliteInfoSource::UpdateMode>(mode), parent);
 }
 

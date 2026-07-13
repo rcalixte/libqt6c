@@ -38,19 +38,19 @@
 #include "libplaintexteditorwidget.hpp"
 #include "libplaintexteditorwidget.hxx"
 
-TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_new(QWidget* parent) {
+TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_New(QWidget* parent) {
     return new VirtualTextCustomEditorPlainTextEditorWidget(parent);
 }
 
-TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_new2() {
+TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_New2() {
     return new VirtualTextCustomEditorPlainTextEditorWidget();
 }
 
-TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_new3(TextCustomEditor__PlainTextEditor* customEditor) {
+TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_New3(TextCustomEditor__PlainTextEditor* customEditor) {
     return new VirtualTextCustomEditorPlainTextEditorWidget(customEditor);
 }
 
-TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_new4(TextCustomEditor__PlainTextEditor* customEditor, QWidget* parent) {
+TextCustomEditor__PlainTextEditorWidget* TextCustomEditor__PlainTextEditorWidget_New4(TextCustomEditor__PlainTextEditor* customEditor, QWidget* parent) {
     return new VirtualTextCustomEditorPlainTextEditorWidget(customEditor, parent);
 }
 

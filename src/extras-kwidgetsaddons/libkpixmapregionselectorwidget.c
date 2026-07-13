@@ -18,11 +18,11 @@
 #include "libkpixmapregionselectorwidget.h"
 
 KPixmapRegionSelectorWidget* k_pixmapregionselectorwidget_new(void* parent) {
-    return KPixmapRegionSelectorWidget_new((QWidget*)parent);
+    return KPixmapRegionSelectorWidget_New((QWidget*)parent);
 }
 
 KPixmapRegionSelectorWidget* k_pixmapregionselectorwidget_new2() {
-    return KPixmapRegionSelectorWidget_new2();
+    return KPixmapRegionSelectorWidget_New2();
 }
 
 const QMetaObject* k_pixmapregionselectorwidget_meta_object(void* self) {

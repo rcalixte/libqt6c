@@ -14,11 +14,11 @@
 #include "libtranslatorconfigurelanguagelistwidget.h"
 
 TextTranslator__TranslatorConfigureLanguageListWidget* k_texttranslator__translatorconfigurelanguagelistwidget_new(const char* labelText) {
-    return TextTranslator__TranslatorConfigureLanguageListWidget_new(qstring(labelText));
+    return TextTranslator__TranslatorConfigureLanguageListWidget_New(qstring(labelText));
 }
 
 TextTranslator__TranslatorConfigureLanguageListWidget* k_texttranslator__translatorconfigurelanguagelistwidget_new2(const char* labelText, void* parent) {
-    return TextTranslator__TranslatorConfigureLanguageListWidget_new2(qstring(labelText), (QWidget*)parent);
+    return TextTranslator__TranslatorConfigureLanguageListWidget_New2(qstring(labelText), (QWidget*)parent);
 }
 
 const QMetaObject* k_texttranslator__translatorconfigurelanguagelistwidget_meta_object(void* self) {

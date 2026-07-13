@@ -13,11 +13,11 @@
 #include "libqbuffer.hpp"
 #include "libqbuffer.hxx"
 
-QBuffer* QBuffer_new() {
+QBuffer* QBuffer_New() {
     return new VirtualQBuffer();
 }
 
-QBuffer* QBuffer_new2(QObject* parent) {
+QBuffer* QBuffer_New2(QObject* parent) {
     return new VirtualQBuffer(parent);
 }
 

@@ -52,9 +52,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QMdiSubWindow* QMdiSubWindow_new(QWidget* parent);
-QMdiSubWindow* QMdiSubWindow_new2();
-QMdiSubWindow* QMdiSubWindow_new3(QWidget* parent, int flags);
+QMdiSubWindow* QMdiSubWindow_New(QWidget* parent);
+QMdiSubWindow* QMdiSubWindow_New2();
+QMdiSubWindow* QMdiSubWindow_New3(QWidget* parent, int flags);
 QMetaObject* QMdiSubWindow_MetaObject(const QMdiSubWindow* self);
 void* QMdiSubWindow_Metacast(QMdiSubWindow* self, const char* param1);
 int QMdiSubWindow_Metacall(QMdiSubWindow* self, int param1, int param2, void** param3);

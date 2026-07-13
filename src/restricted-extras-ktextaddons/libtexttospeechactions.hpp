@@ -28,8 +28,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct TextEditTextToSpeech__TextToSpeechActions TextEditTextToSpeech__TextToSpeechActions;
 #endif
 
-TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_new();
-TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_new2(QObject* parent);
+TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_New();
+TextEditTextToSpeech__TextToSpeechActions* TextEditTextToSpeech__TextToSpeechActions_New2(QObject* parent);
 QMetaObject* TextEditTextToSpeech__TextToSpeechActions_MetaObject(const TextEditTextToSpeech__TextToSpeechActions* self);
 void* TextEditTextToSpeech__TextToSpeechActions_Metacast(TextEditTextToSpeech__TextToSpeechActions* self, const char* param1);
 int TextEditTextToSpeech__TextToSpeechActions_Metacall(TextEditTextToSpeech__TextToSpeechActions* self, int param1, int param2, void** param3);

@@ -55,8 +55,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPluralHandlingSpinBox* KPluralHandlingSpinBox_new(QWidget* parent);
-KPluralHandlingSpinBox* KPluralHandlingSpinBox_new2();
+KPluralHandlingSpinBox* KPluralHandlingSpinBox_New(QWidget* parent);
+KPluralHandlingSpinBox* KPluralHandlingSpinBox_New2();
 QMetaObject* KPluralHandlingSpinBox_MetaObject(const KPluralHandlingSpinBox* self);
 void* KPluralHandlingSpinBox_Metacast(KPluralHandlingSpinBox* self, const char* param1);
 int KPluralHandlingSpinBox_Metacall(KPluralHandlingSpinBox* self, int param1, int param2, void** param3);

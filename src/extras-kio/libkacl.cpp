@@ -6,20 +6,20 @@
 #include "libkacl.hpp"
 #include "libkacl.hxx"
 
-KACL* KACL_new(const libqt_string aclString) {
+KACL* KACL_New(const libqt_string aclString) {
     QString aclString_QString = QString::fromUtf8(aclString.data, aclString.len);
     return new VirtualKACL(aclString_QString);
 }
 
-KACL* KACL_new2(const KACL* rhs) {
+KACL* KACL_New2(const KACL* rhs) {
     return new VirtualKACL(*rhs);
 }
 
-KACL* KACL_new3(mode_t basicPermissions) {
+KACL* KACL_New3(mode_t basicPermissions) {
     return new VirtualKACL(basicPermissions);
 }
 
-KACL* KACL_new4() {
+KACL* KACL_New4() {
     return new VirtualKACL();
 }
 

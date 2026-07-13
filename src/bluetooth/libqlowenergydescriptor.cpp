@@ -6,11 +6,11 @@
 #include "libqlowenergydescriptor.hpp"
 #include "libqlowenergydescriptor.hxx"
 
-QLowEnergyDescriptor* QLowEnergyDescriptor_new() {
+QLowEnergyDescriptor* QLowEnergyDescriptor_New() {
     return new QLowEnergyDescriptor();
 }
 
-QLowEnergyDescriptor* QLowEnergyDescriptor_new2(const QLowEnergyDescriptor* other) {
+QLowEnergyDescriptor* QLowEnergyDescriptor_New2(const QLowEnergyDescriptor* other) {
     return new QLowEnergyDescriptor(*other);
 }
 

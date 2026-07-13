@@ -9,7 +9,7 @@
 #include "libqaudioroom.h"
 
 QAudioRoom* q_audioroom_new(void* engine) {
-    return QAudioRoom_new((QAudioEngine*)engine);
+    return QAudioRoom_New((QAudioEngine*)engine);
 }
 
 const QMetaObject* q_audioroom_meta_object(void* self) {

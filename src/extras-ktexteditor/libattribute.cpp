@@ -9,16 +9,16 @@
 #include "libattribute.hpp"
 #include "libattribute.hxx"
 
-KTextEditor__Attribute* KTextEditor__Attribute_new() {
+KTextEditor__Attribute* KTextEditor__Attribute_New() {
     return new KTextEditor::Attribute();
 }
 
-KTextEditor__Attribute* KTextEditor__Attribute_new2(const libqt_string name, int style) {
+KTextEditor__Attribute* KTextEditor__Attribute_New2(const libqt_string name, int style) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KTextEditor::Attribute(name_QString, static_cast<KSyntaxHighlighting::Theme::TextStyle>(style));
 }
 
-KTextEditor__Attribute* KTextEditor__Attribute_new3(const KTextEditor__Attribute* a) {
+KTextEditor__Attribute* KTextEditor__Attribute_New3(const KTextEditor__Attribute* a) {
     return new KTextEditor::Attribute(*a);
 }
 
@@ -121,7 +121,7 @@ void KTextEditor__Attribute_Delete(KTextEditor__Attribute* self) {
     delete self;
 }
 
-KTextEditor__AttributeBlock* KTextEditor__AttributeBlock_new(const KTextEditor__AttributeBlock* param1) {
+KTextEditor__AttributeBlock* KTextEditor__AttributeBlock_New(const KTextEditor__AttributeBlock* param1) {
     return new KTextEditor::AttributeBlock(*param1);
 }
 

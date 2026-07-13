@@ -7,11 +7,11 @@
 #include "libkoverlayiconplugin.h"
 
 KOverlayIconPlugin* k_overlayiconplugin_new() {
-    return KOverlayIconPlugin_new();
+    return KOverlayIconPlugin_New();
 }
 
 KOverlayIconPlugin* k_overlayiconplugin_new2(void* parent) {
-    return KOverlayIconPlugin_new2((QObject*)parent);
+    return KOverlayIconPlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* k_overlayiconplugin_meta_object(void* self) {

@@ -4,7 +4,7 @@
 #include "libqcryptographichash.h"
 
 QCryptographicHash* q_cryptographichash_new(int32_t method) {
-    return QCryptographicHash_new(method);
+    return QCryptographicHash_New(method);
 }
 
 void q_cryptographichash_swap(void* self, void* other) {

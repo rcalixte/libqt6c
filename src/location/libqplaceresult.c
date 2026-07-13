@@ -4,15 +4,15 @@
 #include "libqplaceresult.h"
 
 QPlaceResult* q_placeresult_new() {
-    return QPlaceResult_new();
+    return QPlaceResult_New();
 }
 
 QPlaceResult* q_placeresult_new2(void* other) {
-    return QPlaceResult_new2((QPlaceSearchResult*)other);
+    return QPlaceResult_New2((QPlaceSearchResult*)other);
 }
 
 QPlaceResult* q_placeresult_new3(void* param1) {
-    return QPlaceResult_new3((QPlaceResult*)param1);
+    return QPlaceResult_New3((QPlaceResult*)param1);
 }
 
 double q_placeresult_distance(void* self) {

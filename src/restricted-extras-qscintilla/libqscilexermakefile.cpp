@@ -14,11 +14,11 @@
 #include "libqscilexermakefile.hpp"
 #include "libqscilexermakefile.hxx"
 
-QsciLexerMakefile* QsciLexerMakefile_new() {
+QsciLexerMakefile* QsciLexerMakefile_New() {
     return new VirtualQsciLexerMakefile();
 }
 
-QsciLexerMakefile* QsciLexerMakefile_new2(QObject* parent) {
+QsciLexerMakefile* QsciLexerMakefile_New2(QObject* parent) {
     return new VirtualQsciLexerMakefile(parent);
 }
 

@@ -5,15 +5,15 @@
 #include "libqplacecontent.h"
 
 QPlaceContent* q_placecontent_new() {
-    return QPlaceContent_new();
+    return QPlaceContent_New();
 }
 
 QPlaceContent* q_placecontent_new2(void* other) {
-    return QPlaceContent_new2((QPlaceContent*)other);
+    return QPlaceContent_New2((QPlaceContent*)other);
 }
 
 QPlaceContent* q_placecontent_new3(int32_t type) {
-    return QPlaceContent_new3(type);
+    return QPlaceContent_New3(type);
 }
 
 void q_placecontent_operator_assign(void* self, void* other) {

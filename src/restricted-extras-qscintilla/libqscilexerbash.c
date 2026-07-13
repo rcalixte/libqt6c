@@ -11,11 +11,11 @@
 #include "libqscilexerbash.h"
 
 QsciLexerBash* q_scilexerbash_new() {
-    return QsciLexerBash_new();
+    return QsciLexerBash_New();
 }
 
 QsciLexerBash* q_scilexerbash_new2(void* parent) {
-    return QsciLexerBash_new2((QObject*)parent);
+    return QsciLexerBash_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerbash_meta_object(void* self) {

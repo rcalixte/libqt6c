@@ -34,8 +34,8 @@ typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
 #endif
 
-KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_new();
-KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_new2(const KUnitConversion__UnitCategory* other);
+KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_New();
+KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_New2(const KUnitConversion__UnitCategory* other);
 void KUnitConversion__UnitCategory_OperatorAssign(KUnitConversion__UnitCategory* self, const KUnitConversion__UnitCategory* other);
 bool KUnitConversion__UnitCategory_OperatorEqual(const KUnitConversion__UnitCategory* self, const KUnitConversion__UnitCategory* other);
 bool KUnitConversion__UnitCategory_OperatorNotEqual(const KUnitConversion__UnitCategory* self, const KUnitConversion__UnitCategory* other);

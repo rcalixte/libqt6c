@@ -4,23 +4,23 @@
 #include "libqpoint.hpp"
 #include "libqpoint.hxx"
 
-QPoint* QPoint_new(const QPoint* other) {
+QPoint* QPoint_New(const QPoint* other) {
     return new QPoint(*other);
 }
 
-QPoint* QPoint_new2(QPoint* other) {
+QPoint* QPoint_New2(QPoint* other) {
     return new QPoint(std::move(*other));
 }
 
-QPoint* QPoint_new3() {
+QPoint* QPoint_New3() {
     return new QPoint();
 }
 
-QPoint* QPoint_new4(int xpos, int ypos) {
+QPoint* QPoint_New4(int xpos, int ypos) {
     return new QPoint(static_cast<int>(xpos), static_cast<int>(ypos));
 }
 
-QPoint* QPoint_new5(const QPoint* param1) {
+QPoint* QPoint_New5(const QPoint* param1) {
     return new QPoint(*param1);
 }
 
@@ -116,27 +116,27 @@ void QPoint_Delete(QPoint* self) {
     delete self;
 }
 
-QPointF* QPointF_new(const QPointF* other) {
+QPointF* QPointF_New(const QPointF* other) {
     return new QPointF(*other);
 }
 
-QPointF* QPointF_new2(QPointF* other) {
+QPointF* QPointF_New2(QPointF* other) {
     return new QPointF(std::move(*other));
 }
 
-QPointF* QPointF_new3() {
+QPointF* QPointF_New3() {
     return new QPointF();
 }
 
-QPointF* QPointF_new4(const QPoint* p) {
+QPointF* QPointF_New4(const QPoint* p) {
     return new QPointF(*p);
 }
 
-QPointF* QPointF_new5(double xpos, double ypos) {
+QPointF* QPointF_New5(double xpos, double ypos) {
     return new QPointF(static_cast<qreal>(xpos), static_cast<qreal>(ypos));
 }
 
-QPointF* QPointF_new6(const QPointF* param1) {
+QPointF* QPointF_New6(const QPointF* param1) {
     return new QPointF(*param1);
 }
 

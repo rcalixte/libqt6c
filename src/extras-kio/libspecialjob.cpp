@@ -19,11 +19,11 @@
 #include "libspecialjob.hpp"
 #include "libspecialjob.hxx"
 
-KIO__SpecialJob* KIO__SpecialJob_new(const QUrl* url) {
+KIO__SpecialJob* KIO__SpecialJob_New(const QUrl* url) {
     return new VirtualKIOSpecialJob(*url);
 }
 
-KIO__SpecialJob* KIO__SpecialJob_new2(const QUrl* url, const libqt_string data) {
+KIO__SpecialJob* KIO__SpecialJob_New2(const QUrl* url, const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     return new VirtualKIOSpecialJob(*url, data_QByteArray);
 }

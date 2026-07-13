@@ -36,10 +36,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct Sonnet__Highlighter Sonnet__Highlighter;
 #endif
 
-Sonnet__Highlighter* Sonnet__Highlighter_new(QTextEdit* textEdit);
-Sonnet__Highlighter* Sonnet__Highlighter_new2(QPlainTextEdit* textEdit);
-Sonnet__Highlighter* Sonnet__Highlighter_new3(QTextEdit* textEdit, const QColor* col);
-Sonnet__Highlighter* Sonnet__Highlighter_new4(QPlainTextEdit* textEdit, const QColor* col);
+Sonnet__Highlighter* Sonnet__Highlighter_New(QTextEdit* textEdit);
+Sonnet__Highlighter* Sonnet__Highlighter_New2(QPlainTextEdit* textEdit);
+Sonnet__Highlighter* Sonnet__Highlighter_New3(QTextEdit* textEdit, const QColor* col);
+Sonnet__Highlighter* Sonnet__Highlighter_New4(QPlainTextEdit* textEdit, const QColor* col);
 QMetaObject* Sonnet__Highlighter_MetaObject(const Sonnet__Highlighter* self);
 void* Sonnet__Highlighter_Metacast(Sonnet__Highlighter* self, const char* param1);
 int Sonnet__Highlighter_Metacall(Sonnet__Highlighter* self, int param1, int param2, void** param3);

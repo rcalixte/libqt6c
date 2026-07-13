@@ -18,19 +18,19 @@
 #include "libqstyleoption.h"
 
 QStyleOption* q_styleoption_new() {
-    return QStyleOption_new();
+    return QStyleOption_New();
 }
 
 QStyleOption* q_styleoption_new2(void* other) {
-    return QStyleOption_new2((QStyleOption*)other);
+    return QStyleOption_New2((QStyleOption*)other);
 }
 
 QStyleOption* q_styleoption_new3(int version) {
-    return QStyleOption_new3(version);
+    return QStyleOption_New3(version);
 }
 
 QStyleOption* q_styleoption_new4(int version, int type) {
-    return QStyleOption_new4(version, type);
+    return QStyleOption_New4(version, type);
 }
 
 int32_t q_styleoption_version(void* self) {
@@ -110,11 +110,11 @@ void q_styleoption_delete(void* self) {
 }
 
 QStyleOptionFocusRect* q_styleoptionfocusrect_new() {
-    return QStyleOptionFocusRect_new();
+    return QStyleOptionFocusRect_New();
 }
 
 QStyleOptionFocusRect* q_styleoptionfocusrect_new2(void* other) {
-    return QStyleOptionFocusRect_new2((QStyleOptionFocusRect*)other);
+    return QStyleOptionFocusRect_New2((QStyleOptionFocusRect*)other);
 }
 
 QColor* q_styleoptionfocusrect_background_color(void* self) {
@@ -202,11 +202,11 @@ void q_styleoptionfocusrect_delete(void* self) {
 }
 
 QStyleOptionFrame* q_styleoptionframe_new() {
-    return QStyleOptionFrame_new();
+    return QStyleOptionFrame_New();
 }
 
 QStyleOptionFrame* q_styleoptionframe_new2(void* other) {
-    return QStyleOptionFrame_new2((QStyleOptionFrame*)other);
+    return QStyleOptionFrame_New2((QStyleOptionFrame*)other);
 }
 
 int32_t q_styleoptionframe_line_width(void* self) {
@@ -318,11 +318,11 @@ void q_styleoptionframe_delete(void* self) {
 }
 
 QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new() {
-    return QStyleOptionTabWidgetFrame_new();
+    return QStyleOptionTabWidgetFrame_New();
 }
 
 QStyleOptionTabWidgetFrame* q_styleoptiontabwidgetframe_new2(void* other) {
-    return QStyleOptionTabWidgetFrame_new2((QStyleOptionTabWidgetFrame*)other);
+    return QStyleOptionTabWidgetFrame_New2((QStyleOptionTabWidgetFrame*)other);
 }
 
 int32_t q_styleoptiontabwidgetframe_line_width(void* self) {
@@ -466,11 +466,11 @@ void q_styleoptiontabwidgetframe_delete(void* self) {
 }
 
 QStyleOptionTabBarBase* q_styleoptiontabbarbase_new() {
-    return QStyleOptionTabBarBase_new();
+    return QStyleOptionTabBarBase_New();
 }
 
 QStyleOptionTabBarBase* q_styleoptiontabbarbase_new2(void* other) {
-    return QStyleOptionTabBarBase_new2((QStyleOptionTabBarBase*)other);
+    return QStyleOptionTabBarBase_New2((QStyleOptionTabBarBase*)other);
 }
 
 int32_t q_styleoptiontabbarbase_shape(void* self) {
@@ -582,11 +582,11 @@ void q_styleoptiontabbarbase_delete(void* self) {
 }
 
 QStyleOptionHeader* q_styleoptionheader_new() {
-    return QStyleOptionHeader_new();
+    return QStyleOptionHeader_New();
 }
 
 QStyleOptionHeader* q_styleoptionheader_new2(void* other) {
-    return QStyleOptionHeader_new2((QStyleOptionHeader*)other);
+    return QStyleOptionHeader_New2((QStyleOptionHeader*)other);
 }
 
 int32_t q_styleoptionheader_section(void* self) {
@@ -741,11 +741,11 @@ void q_styleoptionheader_delete(void* self) {
 }
 
 QStyleOptionHeaderV2* q_styleoptionheaderv2_new() {
-    return QStyleOptionHeaderV2_new();
+    return QStyleOptionHeaderV2_New();
 }
 
 QStyleOptionHeaderV2* q_styleoptionheaderv2_new2(void* other) {
-    return QStyleOptionHeaderV2_new2((QStyleOptionHeaderV2*)other);
+    return QStyleOptionHeaderV2_New2((QStyleOptionHeaderV2*)other);
 }
 
 void q_styleoptionheaderv2_operator_assign(void* self, void* param1) {
@@ -924,11 +924,11 @@ void q_styleoptionheaderv2_delete(void* self) {
 }
 
 QStyleOptionButton* q_styleoptionbutton_new() {
-    return QStyleOptionButton_new();
+    return QStyleOptionButton_New();
 }
 
 QStyleOptionButton* q_styleoptionbutton_new2(void* other) {
-    return QStyleOptionButton_new2((QStyleOptionButton*)other);
+    return QStyleOptionButton_New2((QStyleOptionButton*)other);
 }
 
 int32_t q_styleoptionbutton_features(void* self) {
@@ -1043,11 +1043,11 @@ void q_styleoptionbutton_delete(void* self) {
 }
 
 QStyleOptionTab* q_styleoptiontab_new() {
-    return QStyleOptionTab_new();
+    return QStyleOptionTab_New();
 }
 
 QStyleOptionTab* q_styleoptiontab_new2(void* other) {
-    return QStyleOptionTab_new2((QStyleOptionTab*)other);
+    return QStyleOptionTab_New2((QStyleOptionTab*)other);
 }
 
 int32_t q_styleoptiontab_shape(void* self) {
@@ -1234,11 +1234,11 @@ void q_styleoptiontab_delete(void* self) {
 }
 
 QStyleOptionToolBar* q_styleoptiontoolbar_new() {
-    return QStyleOptionToolBar_new();
+    return QStyleOptionToolBar_New();
 }
 
 QStyleOptionToolBar* q_styleoptiontoolbar_new2(void* other) {
-    return QStyleOptionToolBar_new2((QStyleOptionToolBar*)other);
+    return QStyleOptionToolBar_New2((QStyleOptionToolBar*)other);
 }
 
 int32_t q_styleoptiontoolbar_position_of_line(void* self) {
@@ -1366,11 +1366,11 @@ void q_styleoptiontoolbar_delete(void* self) {
 }
 
 QStyleOptionProgressBar* q_styleoptionprogressbar_new() {
-    return QStyleOptionProgressBar_new();
+    return QStyleOptionProgressBar_New();
 }
 
 QStyleOptionProgressBar* q_styleoptionprogressbar_new2(void* other) {
-    return QStyleOptionProgressBar_new2((QStyleOptionProgressBar*)other);
+    return QStyleOptionProgressBar_New2((QStyleOptionProgressBar*)other);
 }
 
 int32_t q_styleoptionprogressbar_minimum(void* self) {
@@ -1517,11 +1517,11 @@ void q_styleoptionprogressbar_delete(void* self) {
 }
 
 QStyleOptionMenuItem* q_styleoptionmenuitem_new() {
-    return QStyleOptionMenuItem_new();
+    return QStyleOptionMenuItem_New();
 }
 
 QStyleOptionMenuItem* q_styleoptionmenuitem_new2(void* other) {
-    return QStyleOptionMenuItem_new2((QStyleOptionMenuItem*)other);
+    return QStyleOptionMenuItem_New2((QStyleOptionMenuItem*)other);
 }
 
 int32_t q_styleoptionmenuitem_menu_item_type(void* self) {
@@ -1684,11 +1684,11 @@ void q_styleoptionmenuitem_delete(void* self) {
 }
 
 QStyleOptionDockWidget* q_styleoptiondockwidget_new() {
-    return QStyleOptionDockWidget_new();
+    return QStyleOptionDockWidget_New();
 }
 
 QStyleOptionDockWidget* q_styleoptiondockwidget_new2(void* other) {
-    return QStyleOptionDockWidget_new2((QStyleOptionDockWidget*)other);
+    return QStyleOptionDockWidget_New2((QStyleOptionDockWidget*)other);
 }
 
 const char* q_styleoptiondockwidget_title(void* self) {
@@ -1811,11 +1811,11 @@ void q_styleoptiondockwidget_delete(void* self) {
 }
 
 QStyleOptionViewItem* q_styleoptionviewitem_new() {
-    return QStyleOptionViewItem_new();
+    return QStyleOptionViewItem_New();
 }
 
 QStyleOptionViewItem* q_styleoptionviewitem_new2(void* other) {
-    return QStyleOptionViewItem_new2((QStyleOptionViewItem*)other);
+    return QStyleOptionViewItem_New2((QStyleOptionViewItem*)other);
 }
 
 int32_t q_styleoptionviewitem_display_alignment(void* self) {
@@ -2026,11 +2026,11 @@ void q_styleoptionviewitem_delete(void* self) {
 }
 
 QStyleOptionToolBox* q_styleoptiontoolbox_new() {
-    return QStyleOptionToolBox_new();
+    return QStyleOptionToolBox_New();
 }
 
 QStyleOptionToolBox* q_styleoptiontoolbox_new2(void* other) {
-    return QStyleOptionToolBox_new2((QStyleOptionToolBox*)other);
+    return QStyleOptionToolBox_New2((QStyleOptionToolBox*)other);
 }
 
 const char* q_styleoptiontoolbox_text(void* self) {
@@ -2145,11 +2145,11 @@ void q_styleoptiontoolbox_delete(void* self) {
 }
 
 QStyleOptionRubberBand* q_styleoptionrubberband_new() {
-    return QStyleOptionRubberBand_new();
+    return QStyleOptionRubberBand_New();
 }
 
 QStyleOptionRubberBand* q_styleoptionrubberband_new2(void* other) {
-    return QStyleOptionRubberBand_new2((QStyleOptionRubberBand*)other);
+    return QStyleOptionRubberBand_New2((QStyleOptionRubberBand*)other);
 }
 
 int32_t q_styleoptionrubberband_shape(void* self) {
@@ -2245,19 +2245,19 @@ void q_styleoptionrubberband_delete(void* self) {
 }
 
 QStyleOptionComplex* q_styleoptioncomplex_new() {
-    return QStyleOptionComplex_new();
+    return QStyleOptionComplex_New();
 }
 
 QStyleOptionComplex* q_styleoptioncomplex_new2(void* other) {
-    return QStyleOptionComplex_new2((QStyleOptionComplex*)other);
+    return QStyleOptionComplex_New2((QStyleOptionComplex*)other);
 }
 
 QStyleOptionComplex* q_styleoptioncomplex_new3(int version) {
-    return QStyleOptionComplex_new3(version);
+    return QStyleOptionComplex_New3(version);
 }
 
 QStyleOptionComplex* q_styleoptioncomplex_new4(int version, int type) {
-    return QStyleOptionComplex_new4(version, type);
+    return QStyleOptionComplex_New4(version, type);
 }
 
 int32_t q_styleoptioncomplex_sub_controls(void* self) {
@@ -2353,11 +2353,11 @@ void q_styleoptioncomplex_delete(void* self) {
 }
 
 QStyleOptionSlider* q_styleoptionslider_new() {
-    return QStyleOptionSlider_new();
+    return QStyleOptionSlider_New();
 }
 
 QStyleOptionSlider* q_styleoptionslider_new2(void* other) {
-    return QStyleOptionSlider_new2((QStyleOptionSlider*)other);
+    return QStyleOptionSlider_New2((QStyleOptionSlider*)other);
 }
 
 int32_t q_styleoptionslider_orientation(void* self) {
@@ -2557,11 +2557,11 @@ void q_styleoptionslider_delete(void* self) {
 }
 
 QStyleOptionSpinBox* q_styleoptionspinbox_new() {
-    return QStyleOptionSpinBox_new();
+    return QStyleOptionSpinBox_New();
 }
 
 QStyleOptionSpinBox* q_styleoptionspinbox_new2(void* other) {
-    return QStyleOptionSpinBox_new2((QStyleOptionSpinBox*)other);
+    return QStyleOptionSpinBox_New2((QStyleOptionSpinBox*)other);
 }
 
 int32_t q_styleoptionspinbox_button_symbols(void* self) {
@@ -2681,11 +2681,11 @@ void q_styleoptionspinbox_delete(void* self) {
 }
 
 QStyleOptionToolButton* q_styleoptiontoolbutton_new() {
-    return QStyleOptionToolButton_new();
+    return QStyleOptionToolButton_New();
 }
 
 QStyleOptionToolButton* q_styleoptiontoolbutton_new2(void* other) {
-    return QStyleOptionToolButton_new2((QStyleOptionToolButton*)other);
+    return QStyleOptionToolButton_New2((QStyleOptionToolButton*)other);
 }
 
 int32_t q_styleoptiontoolbutton_features(void* self) {
@@ -2848,11 +2848,11 @@ void q_styleoptiontoolbutton_delete(void* self) {
 }
 
 QStyleOptionComboBox* q_styleoptioncombobox_new() {
-    return QStyleOptionComboBox_new();
+    return QStyleOptionComboBox_New();
 }
 
 QStyleOptionComboBox* q_styleoptioncombobox_new2(void* other) {
-    return QStyleOptionComboBox_new2((QStyleOptionComboBox*)other);
+    return QStyleOptionComboBox_New2((QStyleOptionComboBox*)other);
 }
 
 bool q_styleoptioncombobox_editable(void* self) {
@@ -3007,11 +3007,11 @@ void q_styleoptioncombobox_delete(void* self) {
 }
 
 QStyleOptionTitleBar* q_styleoptiontitlebar_new() {
-    return QStyleOptionTitleBar_new();
+    return QStyleOptionTitleBar_New();
 }
 
 QStyleOptionTitleBar* q_styleoptiontitlebar_new2(void* other) {
-    return QStyleOptionTitleBar_new2((QStyleOptionTitleBar*)other);
+    return QStyleOptionTitleBar_New2((QStyleOptionTitleBar*)other);
 }
 
 const char* q_styleoptiontitlebar_text(void* self) {
@@ -3142,11 +3142,11 @@ void q_styleoptiontitlebar_delete(void* self) {
 }
 
 QStyleOptionGroupBox* q_styleoptiongroupbox_new() {
-    return QStyleOptionGroupBox_new();
+    return QStyleOptionGroupBox_New();
 }
 
 QStyleOptionGroupBox* q_styleoptiongroupbox_new2(void* other) {
-    return QStyleOptionGroupBox_new2((QStyleOptionGroupBox*)other);
+    return QStyleOptionGroupBox_New2((QStyleOptionGroupBox*)other);
 }
 
 int32_t q_styleoptiongroupbox_features(void* self) {
@@ -3293,11 +3293,11 @@ void q_styleoptiongroupbox_delete(void* self) {
 }
 
 QStyleOptionSizeGrip* q_styleoptionsizegrip_new() {
-    return QStyleOptionSizeGrip_new();
+    return QStyleOptionSizeGrip_New();
 }
 
 QStyleOptionSizeGrip* q_styleoptionsizegrip_new2(void* other) {
-    return QStyleOptionSizeGrip_new2((QStyleOptionSizeGrip*)other);
+    return QStyleOptionSizeGrip_New2((QStyleOptionSizeGrip*)other);
 }
 
 int32_t q_styleoptionsizegrip_corner(void* self) {
@@ -3401,11 +3401,11 @@ void q_styleoptionsizegrip_delete(void* self) {
 }
 
 QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new() {
-    return QStyleOptionGraphicsItem_new();
+    return QStyleOptionGraphicsItem_New();
 }
 
 QStyleOptionGraphicsItem* q_styleoptiongraphicsitem_new2(void* other) {
-    return QStyleOptionGraphicsItem_new2((QStyleOptionGraphicsItem*)other);
+    return QStyleOptionGraphicsItem_New2((QStyleOptionGraphicsItem*)other);
 }
 
 QRectF* q_styleoptiongraphicsitem_exposed_rect(void* self) {
@@ -3497,19 +3497,19 @@ void q_styleoptiongraphicsitem_delete(void* self) {
 }
 
 QStyleHintReturn* q_stylehintreturn_new() {
-    return QStyleHintReturn_new();
+    return QStyleHintReturn_New();
 }
 
 QStyleHintReturn* q_stylehintreturn_new2(void* param1) {
-    return QStyleHintReturn_new2((QStyleHintReturn*)param1);
+    return QStyleHintReturn_New2((QStyleHintReturn*)param1);
 }
 
 QStyleHintReturn* q_stylehintreturn_new3(int version) {
-    return QStyleHintReturn_new3(version);
+    return QStyleHintReturn_New3(version);
 }
 
 QStyleHintReturn* q_stylehintreturn_new4(int version, int type) {
-    return QStyleHintReturn_new4(version, type);
+    return QStyleHintReturn_New4(version, type);
 }
 
 int32_t q_stylehintreturn_version(void* self) {
@@ -3537,11 +3537,11 @@ void q_stylehintreturn_delete(void* self) {
 }
 
 QStyleHintReturnMask* q_stylehintreturnmask_new() {
-    return QStyleHintReturnMask_new();
+    return QStyleHintReturnMask_New();
 }
 
 QStyleHintReturnMask* q_stylehintreturnmask_new2(void* param1) {
-    return QStyleHintReturnMask_new2((QStyleHintReturnMask*)param1);
+    return QStyleHintReturnMask_New2((QStyleHintReturnMask*)param1);
 }
 
 QRegion* q_stylehintreturnmask_region(void* self) {
@@ -3577,11 +3577,11 @@ void q_stylehintreturnmask_delete(void* self) {
 }
 
 QStyleHintReturnVariant* q_stylehintreturnvariant_new() {
-    return QStyleHintReturnVariant_new();
+    return QStyleHintReturnVariant_New();
 }
 
 QStyleHintReturnVariant* q_stylehintreturnvariant_new2(void* param1) {
-    return QStyleHintReturnVariant_new2((QStyleHintReturnVariant*)param1);
+    return QStyleHintReturnVariant_New2((QStyleHintReturnVariant*)param1);
 }
 
 QVariant* q_stylehintreturnvariant_variant(void* self) {

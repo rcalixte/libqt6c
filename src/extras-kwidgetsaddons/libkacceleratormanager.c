@@ -3,11 +3,11 @@
 #include "libkacceleratormanager.h"
 
 KAcceleratorManager* k_acceleratormanager_new(void* other) {
-    return KAcceleratorManager_new((KAcceleratorManager*)other);
+    return KAcceleratorManager_New((KAcceleratorManager*)other);
 }
 
 KAcceleratorManager* k_acceleratormanager_new2(void* other) {
-    return KAcceleratorManager_new2((KAcceleratorManager*)other);
+    return KAcceleratorManager_New2((KAcceleratorManager*)other);
 }
 
 void k_acceleratormanager_copy_assign(void* self, void* other) {

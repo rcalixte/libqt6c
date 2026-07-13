@@ -16,15 +16,15 @@
 #include "libktreewidgetsearchlinewidget.h"
 
 KTreeWidgetSearchLineWidget* k_treewidgetsearchlinewidget_new(void* parent) {
-    return KTreeWidgetSearchLineWidget_new((QWidget*)parent);
+    return KTreeWidgetSearchLineWidget_New((QWidget*)parent);
 }
 
 KTreeWidgetSearchLineWidget* k_treewidgetsearchlinewidget_new2() {
-    return KTreeWidgetSearchLineWidget_new2();
+    return KTreeWidgetSearchLineWidget_New2();
 }
 
 KTreeWidgetSearchLineWidget* k_treewidgetsearchlinewidget_new3(void* parent, void* treeWidget) {
-    return KTreeWidgetSearchLineWidget_new3((QWidget*)parent, (QTreeWidget*)treeWidget);
+    return KTreeWidgetSearchLineWidget_New3((QWidget*)parent, (QTreeWidget*)treeWidget);
 }
 
 const QMetaObject* k_treewidgetsearchlinewidget_meta_object(void* self) {

@@ -19,9 +19,9 @@ typedef struct QUrl QUrl;
 typedef struct QWebEngineQuotaRequest QWebEngineQuotaRequest;
 #endif
 
-QWebEngineQuotaRequest* QWebEngineQuotaRequest_new(const QWebEngineQuotaRequest* other);
-QWebEngineQuotaRequest* QWebEngineQuotaRequest_new2(QWebEngineQuotaRequest* other);
-QWebEngineQuotaRequest* QWebEngineQuotaRequest_new3();
+QWebEngineQuotaRequest* QWebEngineQuotaRequest_New(const QWebEngineQuotaRequest* other);
+QWebEngineQuotaRequest* QWebEngineQuotaRequest_New2(QWebEngineQuotaRequest* other);
+QWebEngineQuotaRequest* QWebEngineQuotaRequest_New3();
 void QWebEngineQuotaRequest_CopyAssign(QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* other);
 void QWebEngineQuotaRequest_MoveAssign(QWebEngineQuotaRequest* self, QWebEngineQuotaRequest* other);
 void QWebEngineQuotaRequest_Accept(QWebEngineQuotaRequest* self);

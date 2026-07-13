@@ -5,11 +5,11 @@
 #include "libqgeoroute.h"
 
 QGeoRoute* q_georoute_new() {
-    return QGeoRoute_new();
+    return QGeoRoute_New();
 }
 
 QGeoRoute* q_georoute_new2(void* other) {
-    return QGeoRoute_new2((QGeoRoute*)other);
+    return QGeoRoute_New2((QGeoRoute*)other);
 }
 
 void q_georoute_operator_assign(void* self, void* other) {

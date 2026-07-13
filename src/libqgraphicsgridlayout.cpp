@@ -9,11 +9,11 @@
 #include "libqgraphicsgridlayout.hpp"
 #include "libqgraphicsgridlayout.hxx"
 
-QGraphicsGridLayout* QGraphicsGridLayout_new() {
+QGraphicsGridLayout* QGraphicsGridLayout_New() {
     return new VirtualQGraphicsGridLayout();
 }
 
-QGraphicsGridLayout* QGraphicsGridLayout_new2(QGraphicsLayoutItem* parent) {
+QGraphicsGridLayout* QGraphicsGridLayout_New2(QGraphicsLayoutItem* parent) {
     return new VirtualQGraphicsGridLayout(parent);
 }
 

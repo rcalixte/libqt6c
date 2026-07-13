@@ -30,8 +30,8 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerIntegrationInterface* QDesignerIntegrationInterface_new(QDesignerFormEditorInterface* core);
-QDesignerIntegrationInterface* QDesignerIntegrationInterface_new2(QDesignerFormEditorInterface* core, QObject* parent);
+QDesignerIntegrationInterface* QDesignerIntegrationInterface_New(QDesignerFormEditorInterface* core);
+QDesignerIntegrationInterface* QDesignerIntegrationInterface_New2(QDesignerFormEditorInterface* core, QObject* parent);
 QMetaObject* QDesignerIntegrationInterface_MetaObject(const QDesignerIntegrationInterface* self);
 void* QDesignerIntegrationInterface_Metacast(QDesignerIntegrationInterface* self, const char* param1);
 int QDesignerIntegrationInterface_Metacall(QDesignerIntegrationInterface* self, int param1, int param2, void** param3);
@@ -147,8 +147,8 @@ void QDesignerIntegrationInterface_OnIsSignalConnected(const QDesignerIntegratio
 bool QDesignerIntegrationInterface_SuperIsSignalConnected(const QDesignerIntegrationInterface* self, const QMetaMethod* signal);
 void QDesignerIntegrationInterface_Delete(QDesignerIntegrationInterface* self);
 
-QDesignerIntegration* QDesignerIntegration_new(QDesignerFormEditorInterface* core);
-QDesignerIntegration* QDesignerIntegration_new2(QDesignerFormEditorInterface* core, QObject* parent);
+QDesignerIntegration* QDesignerIntegration_New(QDesignerFormEditorInterface* core);
+QDesignerIntegration* QDesignerIntegration_New2(QDesignerFormEditorInterface* core, QObject* parent);
 QMetaObject* QDesignerIntegration_MetaObject(const QDesignerIntegration* self);
 void* QDesignerIntegration_Metacast(QDesignerIntegration* self, const char* param1);
 int QDesignerIntegration_Metacall(QDesignerIntegration* self, int param1, int param2, void** param3);

@@ -10,11 +10,11 @@
 #include "libkuiserverv2jobtracker.hpp"
 #include "libkuiserverv2jobtracker.hxx"
 
-KUiServerV2JobTracker* KUiServerV2JobTracker_new() {
+KUiServerV2JobTracker* KUiServerV2JobTracker_New() {
     return new KUiServerV2JobTracker();
 }
 
-KUiServerV2JobTracker* KUiServerV2JobTracker_new2(QObject* parent) {
+KUiServerV2JobTracker* KUiServerV2JobTracker_New2(QObject* parent) {
     return new KUiServerV2JobTracker(parent);
 }
 

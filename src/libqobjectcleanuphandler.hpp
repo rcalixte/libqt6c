@@ -24,7 +24,7 @@ typedef struct QObjectCleanupHandler QObjectCleanupHandler;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QObjectCleanupHandler* QObjectCleanupHandler_new();
+QObjectCleanupHandler* QObjectCleanupHandler_New();
 QMetaObject* QObjectCleanupHandler_MetaObject(const QObjectCleanupHandler* self);
 void* QObjectCleanupHandler_Metacast(QObjectCleanupHandler* self, const char* param1);
 int QObjectCleanupHandler_Metacall(QObjectCleanupHandler* self, int param1, int param2, void** param3);

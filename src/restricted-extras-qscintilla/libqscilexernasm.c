@@ -13,11 +13,11 @@
 #include "libqscilexernasm.h"
 
 QsciLexerNASM* q_scilexernasm_new() {
-    return QsciLexerNASM_new();
+    return QsciLexerNASM_New();
 }
 
 QsciLexerNASM* q_scilexernasm_new2(void* parent) {
-    return QsciLexerNASM_new2((QObject*)parent);
+    return QsciLexerNASM_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexernasm_meta_object(void* self) {

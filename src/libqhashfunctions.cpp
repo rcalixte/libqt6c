@@ -3,19 +3,19 @@
 #include "libqhashfunctions.hpp"
 #include "libqhashfunctions.hxx"
 
-QHashSeed* QHashSeed_new(const QHashSeed* other) {
+QHashSeed* QHashSeed_New(const QHashSeed* other) {
     return new QHashSeed(*other);
 }
 
-QHashSeed* QHashSeed_new2(QHashSeed* other) {
+QHashSeed* QHashSeed_New2(QHashSeed* other) {
     return new QHashSeed(std::move(*other));
 }
 
-QHashSeed* QHashSeed_new3() {
+QHashSeed* QHashSeed_New3() {
     return new QHashSeed();
 }
 
-QHashSeed* QHashSeed_new4(size_t d) {
+QHashSeed* QHashSeed_New4(size_t d) {
     return new QHashSeed(static_cast<size_t>(d));
 }
 

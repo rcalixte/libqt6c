@@ -57,8 +57,8 @@ typedef struct TextEditTextToSpeech__TextToSpeechInterface TextEditTextToSpeech_
 typedef struct TextEditTextToSpeech__TextToSpeechWidget TextEditTextToSpeech__TextToSpeechWidget;
 #endif
 
-TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_new(QWidget* parent);
-TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_new2();
+TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_New(QWidget* parent);
+TextEditTextToSpeech__TextToSpeechWidget* TextEditTextToSpeech__TextToSpeechWidget_New2();
 QMetaObject* TextEditTextToSpeech__TextToSpeechWidget_MetaObject(const TextEditTextToSpeech__TextToSpeechWidget* self);
 void* TextEditTextToSpeech__TextToSpeechWidget_Metacast(TextEditTextToSpeech__TextToSpeechWidget* self, const char* param1);
 int TextEditTextToSpeech__TextToSpeechWidget_Metacall(TextEditTextToSpeech__TextToSpeechWidget* self, int param1, int param2, void** param3);

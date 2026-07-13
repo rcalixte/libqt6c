@@ -27,11 +27,11 @@
 #include "libkfileplacesview.h"
 
 KFilePlacesView* k_fileplacesview_new(void* parent) {
-    return KFilePlacesView_new((QWidget*)parent);
+    return KFilePlacesView_New((QWidget*)parent);
 }
 
 KFilePlacesView* k_fileplacesview_new2() {
-    return KFilePlacesView_new2();
+    return KFilePlacesView_New2();
 }
 
 const QMetaObject* k_fileplacesview_meta_object(void* self) {

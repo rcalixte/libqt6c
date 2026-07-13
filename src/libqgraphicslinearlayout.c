@@ -8,19 +8,19 @@
 #include "libqgraphicslinearlayout.h"
 
 QGraphicsLinearLayout* q_graphicslinearlayout_new() {
-    return QGraphicsLinearLayout_new();
+    return QGraphicsLinearLayout_New();
 }
 
 QGraphicsLinearLayout* q_graphicslinearlayout_new2(int32_t orientation) {
-    return QGraphicsLinearLayout_new2(orientation);
+    return QGraphicsLinearLayout_New2(orientation);
 }
 
 QGraphicsLinearLayout* q_graphicslinearlayout_new3(void* parent) {
-    return QGraphicsLinearLayout_new3((QGraphicsLayoutItem*)parent);
+    return QGraphicsLinearLayout_New3((QGraphicsLayoutItem*)parent);
 }
 
 QGraphicsLinearLayout* q_graphicslinearlayout_new4(int32_t orientation, void* parent) {
-    return QGraphicsLinearLayout_new4(orientation, (QGraphicsLayoutItem*)parent);
+    return QGraphicsLinearLayout_New4(orientation, (QGraphicsLayoutItem*)parent);
 }
 
 void q_graphicslinearlayout_set_orientation(void* self, int32_t orientation) {

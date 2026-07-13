@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVCandlestickModelMapper QVCandlestickModelMapper;
 #endif
 
-QVCandlestickModelMapper* QVCandlestickModelMapper_new();
-QVCandlestickModelMapper* QVCandlestickModelMapper_new2(QObject* parent);
+QVCandlestickModelMapper* QVCandlestickModelMapper_New();
+QVCandlestickModelMapper* QVCandlestickModelMapper_New2(QObject* parent);
 QMetaObject* QVCandlestickModelMapper_MetaObject(const QVCandlestickModelMapper* self);
 void* QVCandlestickModelMapper_Metacast(QVCandlestickModelMapper* self, const char* param1);
 int QVCandlestickModelMapper_Metacall(QVCandlestickModelMapper* self, int param1, int param2, void** param3);

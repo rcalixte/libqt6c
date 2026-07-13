@@ -38,27 +38,27 @@
 #include "libkshortcutseditor.hpp"
 #include "libkshortcutseditor.hxx"
 
-KShortcutsEditor* KShortcutsEditor_new(QWidget* parent) {
+KShortcutsEditor* KShortcutsEditor_New(QWidget* parent) {
     return new VirtualKShortcutsEditor(parent);
 }
 
-KShortcutsEditor* KShortcutsEditor_new2(KActionCollection* collection, QWidget* parent) {
+KShortcutsEditor* KShortcutsEditor_New2(KActionCollection* collection, QWidget* parent) {
     return new VirtualKShortcutsEditor(collection, parent);
 }
 
-KShortcutsEditor* KShortcutsEditor_new3(KActionCollection* collection, QWidget* parent, int actionTypes) {
+KShortcutsEditor* KShortcutsEditor_New3(KActionCollection* collection, QWidget* parent, int actionTypes) {
     return new VirtualKShortcutsEditor(collection, parent, static_cast<KShortcutsEditor::ActionTypes>(actionTypes));
 }
 
-KShortcutsEditor* KShortcutsEditor_new4(KActionCollection* collection, QWidget* parent, int actionTypes, int allowLetterShortcuts) {
+KShortcutsEditor* KShortcutsEditor_New4(KActionCollection* collection, QWidget* parent, int actionTypes, int allowLetterShortcuts) {
     return new VirtualKShortcutsEditor(collection, parent, static_cast<KShortcutsEditor::ActionTypes>(actionTypes), static_cast<KShortcutsEditor::LetterShortcuts>(allowLetterShortcuts));
 }
 
-KShortcutsEditor* KShortcutsEditor_new5(QWidget* parent, int actionTypes) {
+KShortcutsEditor* KShortcutsEditor_New5(QWidget* parent, int actionTypes) {
     return new VirtualKShortcutsEditor(parent, static_cast<KShortcutsEditor::ActionTypes>(actionTypes));
 }
 
-KShortcutsEditor* KShortcutsEditor_new6(QWidget* parent, int actionTypes, int allowLetterShortcuts) {
+KShortcutsEditor* KShortcutsEditor_New6(QWidget* parent, int actionTypes, int allowLetterShortcuts) {
     return new VirtualKShortcutsEditor(parent, static_cast<KShortcutsEditor::ActionTypes>(actionTypes), static_cast<KShortcutsEditor::LetterShortcuts>(allowLetterShortcuts));
 }
 

@@ -13,12 +13,12 @@
 #include "libqgeoroutereply.hpp"
 #include "libqgeoroutereply.hxx"
 
-QGeoRouteReply* QGeoRouteReply_new(int error, const libqt_string errorString) {
+QGeoRouteReply* QGeoRouteReply_New(int error, const libqt_string errorString) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     return new VirtualQGeoRouteReply(static_cast<QGeoRouteReply::Error>(error), errorString_QString);
 }
 
-QGeoRouteReply* QGeoRouteReply_new2(int error, const libqt_string errorString, QObject* parent) {
+QGeoRouteReply* QGeoRouteReply_New2(int error, const libqt_string errorString, QObject* parent) {
     QString errorString_QString = QString::fromUtf8(errorString.data, errorString.len);
     return new VirtualQGeoRouteReply(static_cast<QGeoRouteReply::Error>(error), errorString_QString, parent);
 }

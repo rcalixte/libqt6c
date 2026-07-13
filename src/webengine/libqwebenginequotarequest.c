@@ -3,15 +3,15 @@
 #include "libqwebenginequotarequest.h"
 
 QWebEngineQuotaRequest* q_webenginequotarequest_new(void* other) {
-    return QWebEngineQuotaRequest_new((QWebEngineQuotaRequest*)other);
+    return QWebEngineQuotaRequest_New((QWebEngineQuotaRequest*)other);
 }
 
 QWebEngineQuotaRequest* q_webenginequotarequest_new2(void* other) {
-    return QWebEngineQuotaRequest_new2((QWebEngineQuotaRequest*)other);
+    return QWebEngineQuotaRequest_New2((QWebEngineQuotaRequest*)other);
 }
 
 QWebEngineQuotaRequest* q_webenginequotarequest_new3() {
-    return QWebEngineQuotaRequest_new3();
+    return QWebEngineQuotaRequest_New3();
 }
 
 void q_webenginequotarequest_copy_assign(void* self, void* other) {

@@ -30,14 +30,14 @@ typedef struct QSize QSize;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QMovie* QMovie_new();
-QMovie* QMovie_new2(QIODevice* device);
-QMovie* QMovie_new3(const libqt_string fileName);
-QMovie* QMovie_new4(QObject* parent);
-QMovie* QMovie_new5(QIODevice* device, const libqt_string format);
-QMovie* QMovie_new6(QIODevice* device, const libqt_string format, QObject* parent);
-QMovie* QMovie_new7(const libqt_string fileName, const libqt_string format);
-QMovie* QMovie_new8(const libqt_string fileName, const libqt_string format, QObject* parent);
+QMovie* QMovie_New();
+QMovie* QMovie_New2(QIODevice* device);
+QMovie* QMovie_New3(const libqt_string fileName);
+QMovie* QMovie_New4(QObject* parent);
+QMovie* QMovie_New5(QIODevice* device, const libqt_string format);
+QMovie* QMovie_New6(QIODevice* device, const libqt_string format, QObject* parent);
+QMovie* QMovie_New7(const libqt_string fileName, const libqt_string format);
+QMovie* QMovie_New8(const libqt_string fileName, const libqt_string format, QObject* parent);
 QMetaObject* QMovie_MetaObject(const QMovie* self);
 void* QMovie_Metacast(QMovie* self, const char* param1);
 int QMovie_Metacall(QMovie* self, int param1, int param2, void** param3);

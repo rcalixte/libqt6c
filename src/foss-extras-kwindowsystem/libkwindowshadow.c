@@ -9,7 +9,7 @@
 #include "libkwindowshadow.h"
 
 KWindowShadowTile* k_windowshadowtile_new() {
-    return KWindowShadowTile_new();
+    return KWindowShadowTile_New();
 }
 
 QImage* k_windowshadowtile_image(void* self) {
@@ -33,11 +33,11 @@ void k_windowshadowtile_delete(void* self) {
 }
 
 KWindowShadow* k_windowshadow_new() {
-    return KWindowShadow_new();
+    return KWindowShadow_New();
 }
 
 KWindowShadow* k_windowshadow_new2(void* parent) {
-    return KWindowShadow_new2((QObject*)parent);
+    return KWindowShadow_New2((QObject*)parent);
 }
 
 const QMetaObject* k_windowshadow_meta_object(void* self) {

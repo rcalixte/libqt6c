@@ -6,11 +6,11 @@
 #include "libproject.hpp"
 #include "libproject.hxx"
 
-Attica__Project* Attica__Project_new() {
+Attica__Project* Attica__Project_New() {
     return new Attica::Project();
 }
 
-Attica__Project* Attica__Project_new2(const Attica__Project* other) {
+Attica__Project* Attica__Project_New2(const Attica__Project* other) {
     return new Attica::Project(*other);
 }
 

@@ -12,11 +12,11 @@
 #include "libqscilexeridl.h"
 
 QsciLexerIDL* q_scilexeridl_new() {
-    return QsciLexerIDL_new();
+    return QsciLexerIDL_New();
 }
 
 QsciLexerIDL* q_scilexeridl_new2(void* parent) {
-    return QsciLexerIDL_new2((QObject*)parent);
+    return QsciLexerIDL_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexeridl_meta_object(void* self) {

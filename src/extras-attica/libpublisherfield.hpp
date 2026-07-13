@@ -21,8 +21,8 @@ typedef Attica::PublisherField Attica__PublisherField;
 typedef struct Attica__PublisherField Attica__PublisherField;
 #endif
 
-Attica__PublisherField* Attica__PublisherField_new();
-Attica__PublisherField* Attica__PublisherField_new2(const Attica__PublisherField* other);
+Attica__PublisherField* Attica__PublisherField_New();
+Attica__PublisherField* Attica__PublisherField_New2(const Attica__PublisherField* other);
 void Attica__PublisherField_OperatorAssign(Attica__PublisherField* self, const Attica__PublisherField* other);
 void Attica__PublisherField_SetName(Attica__PublisherField* self, const libqt_string value);
 libqt_string Attica__PublisherField_Name(const Attica__PublisherField* self);

@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct TextGrammarCheck__GrammalecteResultJob TextGrammarCheck__GrammalecteResultJob;
 #endif
 
-TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_new();
-TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_new2(QObject* parent);
+TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_New();
+TextGrammarCheck__GrammalecteResultJob* TextGrammarCheck__GrammalecteResultJob_New2(QObject* parent);
 QMetaObject* TextGrammarCheck__GrammalecteResultJob_MetaObject(const TextGrammarCheck__GrammalecteResultJob* self);
 void* TextGrammarCheck__GrammalecteResultJob_Metacast(TextGrammarCheck__GrammalecteResultJob* self, const char* param1);
 int TextGrammarCheck__GrammalecteResultJob_Metacall(TextGrammarCheck__GrammalecteResultJob* self, int param1, int param2, void** param3);

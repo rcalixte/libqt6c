@@ -24,11 +24,11 @@
 #include "libkdirmodel.hpp"
 #include "libkdirmodel.hxx"
 
-KDirModel* KDirModel_new() {
+KDirModel* KDirModel_New() {
     return new VirtualKDirModel();
 }
 
-KDirModel* KDirModel_new2(QObject* parent) {
+KDirModel* KDirModel_New2(QObject* parent) {
     return new VirtualKDirModel(parent);
 }
 

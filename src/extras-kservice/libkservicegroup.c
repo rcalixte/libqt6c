@@ -4,11 +4,11 @@
 #include "libkservicegroup.h"
 
 KServiceGroup* k_servicegroup_new(const char* name) {
-    return KServiceGroup_new(qstring(name));
+    return KServiceGroup_New(qstring(name));
 }
 
 KServiceGroup* k_servicegroup_new2(const char* _fullpath, const char* _relpath) {
-    return KServiceGroup_new2(qstring(_fullpath), qstring(_relpath));
+    return KServiceGroup_New2(qstring(_fullpath), qstring(_relpath));
 }
 
 const char* k_servicegroup_rel_path(void* self) {

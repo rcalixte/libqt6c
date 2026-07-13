@@ -11,35 +11,35 @@
 #include "libqsvgrenderer.h"
 
 QSvgRenderer* q_svgrenderer_new() {
-    return QSvgRenderer_new();
+    return QSvgRenderer_New();
 }
 
 QSvgRenderer* q_svgrenderer_new2(const char* filename) {
-    return QSvgRenderer_new2(qstring(filename));
+    return QSvgRenderer_New2(qstring(filename));
 }
 
 QSvgRenderer* q_svgrenderer_new3(char* contents) {
-    return QSvgRenderer_new3(qstring(contents));
+    return QSvgRenderer_New3(qstring(contents));
 }
 
 QSvgRenderer* q_svgrenderer_new4(void* contents) {
-    return QSvgRenderer_new4((QXmlStreamReader*)contents);
+    return QSvgRenderer_New4((QXmlStreamReader*)contents);
 }
 
 QSvgRenderer* q_svgrenderer_new5(void* parent) {
-    return QSvgRenderer_new5((QObject*)parent);
+    return QSvgRenderer_New5((QObject*)parent);
 }
 
 QSvgRenderer* q_svgrenderer_new6(const char* filename, void* parent) {
-    return QSvgRenderer_new6(qstring(filename), (QObject*)parent);
+    return QSvgRenderer_New6(qstring(filename), (QObject*)parent);
 }
 
 QSvgRenderer* q_svgrenderer_new7(char* contents, void* parent) {
-    return QSvgRenderer_new7(qstring(contents), (QObject*)parent);
+    return QSvgRenderer_New7(qstring(contents), (QObject*)parent);
 }
 
 QSvgRenderer* q_svgrenderer_new8(void* contents, void* parent) {
-    return QSvgRenderer_new8((QXmlStreamReader*)contents, (QObject*)parent);
+    return QSvgRenderer_New8((QXmlStreamReader*)contents, (QObject*)parent);
 }
 
 const QMetaObject* q_svgrenderer_meta_object(void* self) {

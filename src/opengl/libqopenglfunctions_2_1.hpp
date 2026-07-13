@@ -22,7 +22,7 @@ typedef struct QOpenGLContext QOpenGLContext;
 typedef struct QOpenGLFunctions_2_1 QOpenGLFunctions_2_1;
 #endif
 
-QOpenGLFunctions_2_1* QOpenGLFunctions_2_1_new();
+QOpenGLFunctions_2_1* QOpenGLFunctions_2_1_New();
 bool QOpenGLFunctions_2_1_InitializeOpenGLFunctions(QOpenGLFunctions_2_1* self);
 void QOpenGLFunctions_2_1_GlViewport(QOpenGLFunctions_2_1* self, int32_t x, int32_t y, int32_t width, int32_t height);
 void QOpenGLFunctions_2_1_GlDepthRange(QOpenGLFunctions_2_1* self, double nearVal, double farVal);

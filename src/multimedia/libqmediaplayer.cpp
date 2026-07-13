@@ -18,11 +18,11 @@
 #include "libqmediaplayer.hpp"
 #include "libqmediaplayer.hxx"
 
-QMediaPlayer* QMediaPlayer_new() {
+QMediaPlayer* QMediaPlayer_New() {
     return new VirtualQMediaPlayer();
 }
 
-QMediaPlayer* QMediaPlayer_new2(QObject* parent) {
+QMediaPlayer* QMediaPlayer_New2(QObject* parent) {
     return new VirtualQMediaPlayer(parent);
 }
 

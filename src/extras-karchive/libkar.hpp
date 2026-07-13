@@ -22,9 +22,9 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-KAr* KAr_new(const libqt_string filename);
-KAr* KAr_new2(QIODevice* dev);
-KAr* KAr_new3(const KAr* param1);
+KAr* KAr_New(const libqt_string filename);
+KAr* KAr_New2(QIODevice* dev);
+KAr* KAr_New3(const KAr* param1);
 bool KAr_DoPrepareWriting(KAr* self, const libqt_string name, const libqt_string user, const libqt_string group, long long size, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);
 bool KAr_DoFinishWriting(KAr* self, long long size);
 bool KAr_DoWriteDir(KAr* self, const libqt_string name, const libqt_string user, const libqt_string group, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);

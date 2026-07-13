@@ -7,19 +7,19 @@
 #include "libqgeorouterequest.hpp"
 #include "libqgeorouterequest.hxx"
 
-QGeoRouteRequest* QGeoRouteRequest_new() {
+QGeoRouteRequest* QGeoRouteRequest_New() {
     return new QGeoRouteRequest();
 }
 
-QGeoRouteRequest* QGeoRouteRequest_new2(const QGeoCoordinate* origin, const QGeoCoordinate* destination) {
+QGeoRouteRequest* QGeoRouteRequest_New2(const QGeoCoordinate* origin, const QGeoCoordinate* destination) {
     return new QGeoRouteRequest(*origin, *destination);
 }
 
-QGeoRouteRequest* QGeoRouteRequest_new3(const QGeoRouteRequest* other) {
+QGeoRouteRequest* QGeoRouteRequest_New3(const QGeoRouteRequest* other) {
     return new QGeoRouteRequest(*other);
 }
 
-QGeoRouteRequest* QGeoRouteRequest_new4(const libqt_list /* of QGeoCoordinate* */ waypoints) {
+QGeoRouteRequest* QGeoRouteRequest_New4(const libqt_list /* of QGeoCoordinate* */ waypoints) {
     QList<QGeoCoordinate> waypoints_QList;
     waypoints_QList.reserve(waypoints.len);
     QGeoCoordinate** waypoints_arr = static_cast<QGeoCoordinate**>(waypoints.data.ptr);

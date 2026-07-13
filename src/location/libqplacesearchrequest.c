@@ -4,11 +4,11 @@
 #include "libqplacesearchrequest.h"
 
 QPlaceSearchRequest* q_placesearchrequest_new() {
-    return QPlaceSearchRequest_new();
+    return QPlaceSearchRequest_New();
 }
 
 QPlaceSearchRequest* q_placesearchrequest_new2(void* other) {
-    return QPlaceSearchRequest_new2((QPlaceSearchRequest*)other);
+    return QPlaceSearchRequest_New2((QPlaceSearchRequest*)other);
 }
 
 void q_placesearchrequest_operator_assign(void* self, void* other) {

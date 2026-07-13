@@ -23,12 +23,12 @@
 #include "libqpdfwriter.hpp"
 #include "libqpdfwriter.hxx"
 
-QPdfWriter* QPdfWriter_new(const libqt_string filename) {
+QPdfWriter* QPdfWriter_New(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualQPdfWriter(filename_QString);
 }
 
-QPdfWriter* QPdfWriter_new2(QIODevice* device) {
+QPdfWriter* QPdfWriter_New2(QIODevice* device) {
     return new VirtualQPdfWriter(device);
 }
 

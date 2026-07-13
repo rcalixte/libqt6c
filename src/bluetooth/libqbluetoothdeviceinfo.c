@@ -4,19 +4,19 @@
 #include "libqbluetoothdeviceinfo.h"
 
 QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new() {
-    return QBluetoothDeviceInfo_new();
+    return QBluetoothDeviceInfo_New();
 }
 
 QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new2(void* address, const char* name, uint32_t classOfDevice) {
-    return QBluetoothDeviceInfo_new2((QBluetoothAddress*)address, qstring(name), classOfDevice);
+    return QBluetoothDeviceInfo_New2((QBluetoothAddress*)address, qstring(name), classOfDevice);
 }
 
 QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new3(void* uuid, const char* name, uint32_t classOfDevice) {
-    return QBluetoothDeviceInfo_new3((QBluetoothUuid*)uuid, qstring(name), classOfDevice);
+    return QBluetoothDeviceInfo_New3((QBluetoothUuid*)uuid, qstring(name), classOfDevice);
 }
 
 QBluetoothDeviceInfo* q_bluetoothdeviceinfo_new4(void* other) {
-    return QBluetoothDeviceInfo_new4((QBluetoothDeviceInfo*)other);
+    return QBluetoothDeviceInfo_New4((QBluetoothDeviceInfo*)other);
 }
 
 bool q_bluetoothdeviceinfo_is_valid(void* self) {

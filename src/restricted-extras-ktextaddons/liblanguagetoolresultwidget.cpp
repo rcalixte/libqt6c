@@ -38,11 +38,11 @@
 #include "liblanguagetoolresultwidget.hpp"
 #include "liblanguagetoolresultwidget.hxx"
 
-TextGrammarCheck__LanguageToolResultWidget* TextGrammarCheck__LanguageToolResultWidget_new(QWidget* parent) {
+TextGrammarCheck__LanguageToolResultWidget* TextGrammarCheck__LanguageToolResultWidget_New(QWidget* parent) {
     return new VirtualTextGrammarCheckLanguageToolResultWidget(parent);
 }
 
-TextGrammarCheck__LanguageToolResultWidget* TextGrammarCheck__LanguageToolResultWidget_new2() {
+TextGrammarCheck__LanguageToolResultWidget* TextGrammarCheck__LanguageToolResultWidget_New2() {
     return new VirtualTextGrammarCheckLanguageToolResultWidget();
 }
 

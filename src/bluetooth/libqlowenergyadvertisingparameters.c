@@ -3,11 +3,11 @@
 #include "libqlowenergyadvertisingparameters.h"
 
 QLowEnergyAdvertisingParameters* q_lowenergyadvertisingparameters_new() {
-    return QLowEnergyAdvertisingParameters_new();
+    return QLowEnergyAdvertisingParameters_New();
 }
 
 QLowEnergyAdvertisingParameters* q_lowenergyadvertisingparameters_new2(void* other) {
-    return QLowEnergyAdvertisingParameters_new2((QLowEnergyAdvertisingParameters*)other);
+    return QLowEnergyAdvertisingParameters_New2((QLowEnergyAdvertisingParameters*)other);
 }
 
 void q_lowenergyadvertisingparameters_operator_assign(void* self, void* other) {
@@ -56,15 +56,15 @@ void q_lowenergyadvertisingparameters_delete(void* self) {
 }
 
 QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new(void* addr, int32_t t) {
-    return QLowEnergyAdvertisingParameters__AddressInfo_new((QBluetoothAddress*)addr, t);
+    return QLowEnergyAdvertisingParameters__AddressInfo_New((QBluetoothAddress*)addr, t);
 }
 
 QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new2() {
-    return QLowEnergyAdvertisingParameters__AddressInfo_new2();
+    return QLowEnergyAdvertisingParameters__AddressInfo_New2();
 }
 
 QLowEnergyAdvertisingParameters__AddressInfo* q_lowenergyadvertisingparameters__addressinfo_new3(void* param1) {
-    return QLowEnergyAdvertisingParameters__AddressInfo_new3((QLowEnergyAdvertisingParameters__AddressInfo*)param1);
+    return QLowEnergyAdvertisingParameters__AddressInfo_New3((QLowEnergyAdvertisingParameters__AddressInfo*)param1);
 }
 
 QBluetoothAddress* q_lowenergyadvertisingparameters__addressinfo_address(void* self) {

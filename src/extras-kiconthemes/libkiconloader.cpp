@@ -18,16 +18,16 @@
 #include "libkiconloader.hpp"
 #include "libkiconloader.hxx"
 
-KIconLoader* KIconLoader_new() {
+KIconLoader* KIconLoader_New() {
     return new VirtualKIconLoader();
 }
 
-KIconLoader* KIconLoader_new2(const libqt_string appname) {
+KIconLoader* KIconLoader_New2(const libqt_string appname) {
     QString appname_QString = QString::fromUtf8(appname.data, appname.len);
     return new VirtualKIconLoader(appname_QString);
 }
 
-KIconLoader* KIconLoader_new3(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths) {
+KIconLoader* KIconLoader_New3(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths) {
     QString appname_QString = QString::fromUtf8(appname.data, appname.len);
     QList<QString> extraSearchPaths_QList;
     extraSearchPaths_QList.reserve(extraSearchPaths.len);
@@ -39,7 +39,7 @@ KIconLoader* KIconLoader_new3(const libqt_string appname, const libqt_list /* of
     return new VirtualKIconLoader(appname_QString, extraSearchPaths_QList);
 }
 
-KIconLoader* KIconLoader_new4(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths, QObject* parent) {
+KIconLoader* KIconLoader_New4(const libqt_string appname, const libqt_list /* of libqt_string */ extraSearchPaths, QObject* parent) {
     QString appname_QString = QString::fromUtf8(appname.data, appname.len);
     QList<QString> extraSearchPaths_QList;
     extraSearchPaths_QList.reserve(extraSearchPaths.len);

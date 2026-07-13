@@ -2,15 +2,15 @@
 #include "libkicontheme.h"
 
 KIconTheme* k_icontheme_new(const char* name) {
-    return KIconTheme_new(qstring(name));
+    return KIconTheme_New(qstring(name));
 }
 
 KIconTheme* k_icontheme_new2(const char* name, const char* appName) {
-    return KIconTheme_new2(qstring(name), qstring(appName));
+    return KIconTheme_New2(qstring(name), qstring(appName));
 }
 
 KIconTheme* k_icontheme_new3(const char* name, const char* appName, const char* basePathHint) {
-    return KIconTheme_new3(qstring(name), qstring(appName), qstring(basePathHint));
+    return KIconTheme_New3(qstring(name), qstring(appName), qstring(basePathHint));
 }
 
 const char* k_icontheme_name(void* self) {

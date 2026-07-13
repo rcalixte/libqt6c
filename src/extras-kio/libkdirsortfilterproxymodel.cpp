@@ -26,11 +26,11 @@
 #include "libkdirsortfilterproxymodel.hpp"
 #include "libkdirsortfilterproxymodel.hxx"
 
-KDirSortFilterProxyModel* KDirSortFilterProxyModel_new() {
+KDirSortFilterProxyModel* KDirSortFilterProxyModel_New() {
     return new VirtualKDirSortFilterProxyModel();
 }
 
-KDirSortFilterProxyModel* KDirSortFilterProxyModel_new2(QObject* parent) {
+KDirSortFilterProxyModel* KDirSortFilterProxyModel_New2(QObject* parent) {
     return new VirtualKDirSortFilterProxyModel(parent);
 }
 

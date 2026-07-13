@@ -5,34 +5,34 @@
 #include "libkplotpoint.hpp"
 #include "libkplotpoint.hxx"
 
-KPlotPoint* KPlotPoint_new() {
+KPlotPoint* KPlotPoint_New() {
     return new KPlotPoint();
 }
 
-KPlotPoint* KPlotPoint_new2(double x, double y) {
+KPlotPoint* KPlotPoint_New2(double x, double y) {
     return new KPlotPoint(static_cast<double>(x), static_cast<double>(y));
 }
 
-KPlotPoint* KPlotPoint_new3(const QPointF* p) {
+KPlotPoint* KPlotPoint_New3(const QPointF* p) {
     return new KPlotPoint(*p);
 }
 
-KPlotPoint* KPlotPoint_new4(double x, double y, const libqt_string label) {
+KPlotPoint* KPlotPoint_New4(double x, double y, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new KPlotPoint(static_cast<double>(x), static_cast<double>(y), label_QString);
 }
 
-KPlotPoint* KPlotPoint_new5(double x, double y, const libqt_string label, double width) {
+KPlotPoint* KPlotPoint_New5(double x, double y, const libqt_string label, double width) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new KPlotPoint(static_cast<double>(x), static_cast<double>(y), label_QString, static_cast<double>(width));
 }
 
-KPlotPoint* KPlotPoint_new6(const QPointF* p, const libqt_string label) {
+KPlotPoint* KPlotPoint_New6(const QPointF* p, const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new KPlotPoint(*p, label_QString);
 }
 
-KPlotPoint* KPlotPoint_new7(const QPointF* p, const libqt_string label, double width) {
+KPlotPoint* KPlotPoint_New7(const QPointF* p, const libqt_string label, double width) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new KPlotPoint(*p, label_QString, static_cast<double>(width));
 }

@@ -13,19 +13,19 @@
 #include "libqareaseries.h"
 
 QAreaSeries* q_areaseries_new() {
-    return QAreaSeries_new();
+    return QAreaSeries_New();
 }
 
 QAreaSeries* q_areaseries_new2(void* upperSeries) {
-    return QAreaSeries_new2((QLineSeries*)upperSeries);
+    return QAreaSeries_New2((QLineSeries*)upperSeries);
 }
 
 QAreaSeries* q_areaseries_new3(void* parent) {
-    return QAreaSeries_new3((QObject*)parent);
+    return QAreaSeries_New3((QObject*)parent);
 }
 
 QAreaSeries* q_areaseries_new4(void* upperSeries, void* lowerSeries) {
-    return QAreaSeries_new4((QLineSeries*)upperSeries, (QLineSeries*)lowerSeries);
+    return QAreaSeries_New4((QLineSeries*)upperSeries, (QLineSeries*)lowerSeries);
 }
 
 const QMetaObject* q_areaseries_meta_object(void* self) {

@@ -28,9 +28,9 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KActionMenu* KActionMenu_new(QObject* parent);
-KActionMenu* KActionMenu_new2(const libqt_string text, QObject* parent);
-KActionMenu* KActionMenu_new3(const QIcon* icon, const libqt_string text, QObject* parent);
+KActionMenu* KActionMenu_New(QObject* parent);
+KActionMenu* KActionMenu_New2(const libqt_string text, QObject* parent);
+KActionMenu* KActionMenu_New3(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KActionMenu_MetaObject(const KActionMenu* self);
 void* KActionMenu_Metacast(KActionMenu* self, const char* param1);
 int KActionMenu_Metacall(KActionMenu* self, int param1, int param2, void** param3);

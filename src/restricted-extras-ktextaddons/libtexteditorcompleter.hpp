@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct TextCustomEditor__TextEditorCompleter TextCustomEditor__TextEditorCompleter;
 #endif
 
-TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_new(QTextEdit* editor, QObject* parent);
-TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_new2(QPlainTextEdit* editor, QObject* parent);
+TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_New(QTextEdit* editor, QObject* parent);
+TextCustomEditor__TextEditorCompleter* TextCustomEditor__TextEditorCompleter_New2(QPlainTextEdit* editor, QObject* parent);
 QMetaObject* TextCustomEditor__TextEditorCompleter_MetaObject(const TextCustomEditor__TextEditorCompleter* self);
 void* TextCustomEditor__TextEditorCompleter_Metacast(TextCustomEditor__TextEditorCompleter* self, const char* param1);
 int TextCustomEditor__TextEditorCompleter_Metacall(TextCustomEditor__TextEditorCompleter* self, int param1, int param2, void** param3);

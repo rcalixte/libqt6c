@@ -15,7 +15,7 @@
 #include "libemoticontexteditaction.hpp"
 #include "libemoticontexteditaction.hxx"
 
-TextEmoticonsWidgets__EmoticonTextEditAction* TextEmoticonsWidgets__EmoticonTextEditAction_new(QObject* parent) {
+TextEmoticonsWidgets__EmoticonTextEditAction* TextEmoticonsWidgets__EmoticonTextEditAction_New(QObject* parent) {
     return new VirtualTextEmoticonsWidgetsEmoticonTextEditAction(parent);
 }
 

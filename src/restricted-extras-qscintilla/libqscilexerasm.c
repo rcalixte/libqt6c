@@ -12,11 +12,11 @@
 #include "libqscilexerasm.h"
 
 QsciLexerAsm* q_scilexerasm_new() {
-    return QsciLexerAsm_new();
+    return QsciLexerAsm_New();
 }
 
 QsciLexerAsm* q_scilexerasm_new2(void* parent) {
-    return QsciLexerAsm_new2((QObject*)parent);
+    return QsciLexerAsm_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerasm_meta_object(void* self) {

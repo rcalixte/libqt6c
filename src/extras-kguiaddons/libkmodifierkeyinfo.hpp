@@ -24,8 +24,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KModifierKeyInfo* KModifierKeyInfo_new();
-KModifierKeyInfo* KModifierKeyInfo_new2(QObject* parent);
+KModifierKeyInfo* KModifierKeyInfo_New();
+KModifierKeyInfo* KModifierKeyInfo_New2(QObject* parent);
 QMetaObject* KModifierKeyInfo_MetaObject(const KModifierKeyInfo* self);
 void* KModifierKeyInfo_Metacast(KModifierKeyInfo* self, const char* param1);
 int KModifierKeyInfo_Metacall(KModifierKeyInfo* self, int param1, int param2, void** param3);

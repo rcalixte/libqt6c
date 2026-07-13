@@ -17,15 +17,15 @@
 #include "libkurlnavigator.h"
 
 KUrlNavigator* k_urlnavigator_new(void* parent) {
-    return KUrlNavigator_new((QWidget*)parent);
+    return KUrlNavigator_New((QWidget*)parent);
 }
 
 KUrlNavigator* k_urlnavigator_new2() {
-    return KUrlNavigator_new2();
+    return KUrlNavigator_New2();
 }
 
 KUrlNavigator* k_urlnavigator_new3(void* placesModel, void* url, void* parent) {
-    return KUrlNavigator_new3((KFilePlacesModel*)placesModel, (QUrl*)url, (QWidget*)parent);
+    return KUrlNavigator_New3((KFilePlacesModel*)placesModel, (QUrl*)url, (QWidget*)parent);
 }
 
 const QMetaObject* k_urlnavigator_meta_object(void* self) {

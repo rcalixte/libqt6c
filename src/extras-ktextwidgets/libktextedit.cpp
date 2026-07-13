@@ -48,20 +48,20 @@
 #include "libktextedit.hpp"
 #include "libktextedit.hxx"
 
-KTextEdit* KTextEdit_new(QWidget* parent) {
+KTextEdit* KTextEdit_New(QWidget* parent) {
     return new VirtualKTextEdit(parent);
 }
 
-KTextEdit* KTextEdit_new2(const libqt_string text) {
+KTextEdit* KTextEdit_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKTextEdit(text_QString);
 }
 
-KTextEdit* KTextEdit_new3() {
+KTextEdit* KTextEdit_New3() {
     return new VirtualKTextEdit();
 }
 
-KTextEdit* KTextEdit_new4(const libqt_string text, QWidget* parent) {
+KTextEdit* KTextEdit_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKTextEdit(text_QString, parent);
 }

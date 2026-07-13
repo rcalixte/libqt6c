@@ -24,11 +24,11 @@
 #include "libgrammarresulttextedit.h"
 
 TextGrammarCheck__GrammarResultTextEdit* k_textgrammarcheck__grammarresulttextedit_new(void* parent) {
-    return TextGrammarCheck__GrammarResultTextEdit_new((QWidget*)parent);
+    return TextGrammarCheck__GrammarResultTextEdit_New((QWidget*)parent);
 }
 
 TextGrammarCheck__GrammarResultTextEdit* k_textgrammarcheck__grammarresulttextedit_new2() {
-    return TextGrammarCheck__GrammarResultTextEdit_new2();
+    return TextGrammarCheck__GrammarResultTextEdit_New2();
 }
 
 const QMetaObject* k_textgrammarcheck__grammarresulttextedit_meta_object(void* self) {

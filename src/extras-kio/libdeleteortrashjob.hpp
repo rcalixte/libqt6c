@@ -30,7 +30,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__DeleteOrTrashJob* KIO__DeleteOrTrashJob_new(const libqt_list /* of QUrl* */ urls, int deletionType, int confirm, QObject* parent);
+KIO__DeleteOrTrashJob* KIO__DeleteOrTrashJob_New(const libqt_list /* of QUrl* */ urls, int deletionType, int confirm, QObject* parent);
 QMetaObject* KIO__DeleteOrTrashJob_MetaObject(const KIO__DeleteOrTrashJob* self);
 void* KIO__DeleteOrTrashJob_Metacast(KIO__DeleteOrTrashJob* self, const char* param1);
 int KIO__DeleteOrTrashJob_Metacall(KIO__DeleteOrTrashJob* self, int param1, int param2, void** param3);

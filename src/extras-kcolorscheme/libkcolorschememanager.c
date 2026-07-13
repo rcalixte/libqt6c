@@ -7,11 +7,11 @@
 #include "libkcolorschememanager.h"
 
 KColorSchemeManager* k_colorschememanager_new() {
-    return KColorSchemeManager_new();
+    return KColorSchemeManager_New();
 }
 
 KColorSchemeManager* k_colorschememanager_new2(void* parent) {
-    return KColorSchemeManager_new2((QObject*)parent);
+    return KColorSchemeManager_New2((QObject*)parent);
 }
 
 const QMetaObject* k_colorschememanager_meta_object(void* self) {

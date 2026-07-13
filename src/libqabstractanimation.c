@@ -7,11 +7,11 @@
 #include "libqabstractanimation.h"
 
 QAbstractAnimation* q_abstractanimation_new() {
-    return QAbstractAnimation_new();
+    return QAbstractAnimation_New();
 }
 
 QAbstractAnimation* q_abstractanimation_new2(void* parent) {
-    return QAbstractAnimation_new2((QObject*)parent);
+    return QAbstractAnimation_New2((QObject*)parent);
 }
 
 const QMetaObject* q_abstractanimation_meta_object(void* self) {
@@ -571,11 +571,11 @@ void q_abstractanimation_delete(void* self) {
 }
 
 QAnimationDriver* q_animationdriver_new() {
-    return QAnimationDriver_new();
+    return QAnimationDriver_New();
 }
 
 QAnimationDriver* q_animationdriver_new2(void* parent) {
-    return QAnimationDriver_new2((QObject*)parent);
+    return QAnimationDriver_New2((QObject*)parent);
 }
 
 const QMetaObject* q_animationdriver_meta_object(void* self) {

@@ -16,19 +16,19 @@
 #include "libqitemselectionmodel.hpp"
 #include "libqitemselectionmodel.hxx"
 
-QItemSelectionRange* QItemSelectionRange_new() {
+QItemSelectionRange* QItemSelectionRange_New() {
     return new QItemSelectionRange();
 }
 
-QItemSelectionRange* QItemSelectionRange_new2(const QModelIndex* topL, const QModelIndex* bottomR) {
+QItemSelectionRange* QItemSelectionRange_New2(const QModelIndex* topL, const QModelIndex* bottomR) {
     return new QItemSelectionRange(*topL, *bottomR);
 }
 
-QItemSelectionRange* QItemSelectionRange_new3(const QModelIndex* index) {
+QItemSelectionRange* QItemSelectionRange_New3(const QModelIndex* index) {
     return new QItemSelectionRange(*index);
 }
 
-QItemSelectionRange* QItemSelectionRange_new4(const QItemSelectionRange* param1) {
+QItemSelectionRange* QItemSelectionRange_New4(const QItemSelectionRange* param1) {
     return new QItemSelectionRange(*param1);
 }
 
@@ -121,15 +121,15 @@ void QItemSelectionRange_Delete(QItemSelectionRange* self) {
     delete self;
 }
 
-QItemSelectionModel* QItemSelectionModel_new() {
+QItemSelectionModel* QItemSelectionModel_New() {
     return new VirtualQItemSelectionModel();
 }
 
-QItemSelectionModel* QItemSelectionModel_new2(QAbstractItemModel* model, QObject* parent) {
+QItemSelectionModel* QItemSelectionModel_New2(QAbstractItemModel* model, QObject* parent) {
     return new VirtualQItemSelectionModel(model, parent);
 }
 
-QItemSelectionModel* QItemSelectionModel_new3(QAbstractItemModel* model) {
+QItemSelectionModel* QItemSelectionModel_New3(QAbstractItemModel* model) {
     return new VirtualQItemSelectionModel(model);
 }
 
@@ -901,15 +901,15 @@ void QItemSelectionModel_Delete(QItemSelectionModel* self) {
     delete self;
 }
 
-QItemSelection* QItemSelection_new(const QModelIndex* topLeft, const QModelIndex* bottomRight) {
+QItemSelection* QItemSelection_New(const QModelIndex* topLeft, const QModelIndex* bottomRight) {
     return new QItemSelection(*topLeft, *bottomRight);
 }
 
-QItemSelection* QItemSelection_new2() {
+QItemSelection* QItemSelection_New2() {
     return new QItemSelection();
 }
 
-QItemSelection* QItemSelection_new3(const QItemSelection* param1) {
+QItemSelection* QItemSelection_New3(const QItemSelection* param1) {
     return new QItemSelection(*param1);
 }
 

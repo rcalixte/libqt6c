@@ -6,19 +6,19 @@
 #include "libkcolorscheme.hpp"
 #include "libkcolorscheme.hxx"
 
-KColorScheme* KColorScheme_new(const KColorScheme* param1) {
+KColorScheme* KColorScheme_New(const KColorScheme* param1) {
     return new KColorScheme(*param1);
 }
 
-KColorScheme* KColorScheme_new2() {
+KColorScheme* KColorScheme_New2() {
     return new KColorScheme();
 }
 
-KColorScheme* KColorScheme_new3(int param1) {
+KColorScheme* KColorScheme_New3(int param1) {
     return new KColorScheme(static_cast<QPalette::ColorGroup>(param1));
 }
 
-KColorScheme* KColorScheme_new4(int param1, int param2) {
+KColorScheme* KColorScheme_New4(int param1, int param2) {
     return new KColorScheme(static_cast<QPalette::ColorGroup>(param1), static_cast<KColorScheme::ColorSet>(param2));
 }
 

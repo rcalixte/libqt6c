@@ -3,11 +3,11 @@
 #include "libqscrollerproperties.h"
 
 QScrollerProperties* q_scrollerproperties_new() {
-    return QScrollerProperties_new();
+    return QScrollerProperties_New();
 }
 
 QScrollerProperties* q_scrollerproperties_new2(void* sp) {
-    return QScrollerProperties_new2((QScrollerProperties*)sp);
+    return QScrollerProperties_New2((QScrollerProperties*)sp);
 }
 
 void q_scrollerproperties_operator_assign(void* self, void* sp) {

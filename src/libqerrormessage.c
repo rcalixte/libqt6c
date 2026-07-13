@@ -15,11 +15,11 @@
 #include "libqerrormessage.h"
 
 QErrorMessage* q_errormessage_new(void* parent) {
-    return QErrorMessage_new((QWidget*)parent);
+    return QErrorMessage_New((QWidget*)parent);
 }
 
 QErrorMessage* q_errormessage_new2() {
-    return QErrorMessage_new2();
+    return QErrorMessage_New2();
 }
 
 const QMetaObject* q_errormessage_meta_object(void* self) {

@@ -29,9 +29,9 @@ typedef struct QsciLexerCPP QsciLexerCPP;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerCPP* QsciLexerCPP_new();
-QsciLexerCPP* QsciLexerCPP_new2(QObject* parent);
-QsciLexerCPP* QsciLexerCPP_new3(QObject* parent, bool caseInsensitiveKeywords);
+QsciLexerCPP* QsciLexerCPP_New();
+QsciLexerCPP* QsciLexerCPP_New2(QObject* parent);
+QsciLexerCPP* QsciLexerCPP_New3(QObject* parent, bool caseInsensitiveKeywords);
 QMetaObject* QsciLexerCPP_MetaObject(const QsciLexerCPP* self);
 void* QsciLexerCPP_Metacast(QsciLexerCPP* self, const char* param1);
 int QsciLexerCPP_Metacall(QsciLexerCPP* self, int param1, int param2, void** param3);

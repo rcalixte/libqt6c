@@ -10,11 +10,11 @@
 #include "libmessage_1.h"
 
 KTextEditor__Message* k_texteditor__message_new(const char* richtext) {
-    return KTextEditor__Message_new(qstring(richtext));
+    return KTextEditor__Message_New(qstring(richtext));
 }
 
 KTextEditor__Message* k_texteditor__message_new2(const char* richtext, int32_t type) {
-    return KTextEditor__Message_new2(qstring(richtext), type);
+    return KTextEditor__Message_New2(qstring(richtext), type);
 }
 
 const QMetaObject* k_texteditor__message_meta_object(void* self) {

@@ -22,8 +22,8 @@ typedef struct KSyntaxHighlighting__Theme KSyntaxHighlighting__Theme;
 typedef struct QColor QColor;
 #endif
 
-KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_new();
-KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_new2(const KSyntaxHighlighting__Format* other);
+KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_New();
+KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_New2(const KSyntaxHighlighting__Format* other);
 void KSyntaxHighlighting__Format_OperatorAssign(KSyntaxHighlighting__Format* self, const KSyntaxHighlighting__Format* other);
 bool KSyntaxHighlighting__Format_IsValid(const KSyntaxHighlighting__Format* self);
 libqt_string KSyntaxHighlighting__Format_Name(const KSyntaxHighlighting__Format* self);

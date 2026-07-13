@@ -27,9 +27,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KReplace* KReplace_new(const libqt_string pattern, const libqt_string replacement, long options);
-KReplace* KReplace_new2(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent, QWidget* replaceDialog);
-KReplace* KReplace_new3(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent);
+KReplace* KReplace_New(const libqt_string pattern, const libqt_string replacement, long options);
+KReplace* KReplace_New2(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent, QWidget* replaceDialog);
+KReplace* KReplace_New3(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent);
 QMetaObject* KReplace_MetaObject(const KReplace* self);
 void* KReplace_Metacast(KReplace* self, const char* param1);
 int KReplace_Metacall(KReplace* self, int param1, int param2, void** param3);

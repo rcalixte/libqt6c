@@ -12,15 +12,15 @@
 #include "libqtextlayout.h"
 
 QTextInlineObject* q_textinlineobject_new(void* other) {
-    return QTextInlineObject_new((QTextInlineObject*)other);
+    return QTextInlineObject_New((QTextInlineObject*)other);
 }
 
 QTextInlineObject* q_textinlineobject_new2(void* other) {
-    return QTextInlineObject_new2((QTextInlineObject*)other);
+    return QTextInlineObject_New2((QTextInlineObject*)other);
 }
 
 QTextInlineObject* q_textinlineobject_new3() {
-    return QTextInlineObject_new3();
+    return QTextInlineObject_New3();
 }
 
 void q_textinlineobject_copy_assign(void* self, void* other) {
@@ -88,23 +88,23 @@ void q_textinlineobject_delete(void* self) {
 }
 
 QTextLayout* q_textlayout_new() {
-    return QTextLayout_new();
+    return QTextLayout_New();
 }
 
 QTextLayout* q_textlayout_new2(const char* text) {
-    return QTextLayout_new2(qstring(text));
+    return QTextLayout_New2(qstring(text));
 }
 
 QTextLayout* q_textlayout_new3(const char* text, void* font) {
-    return QTextLayout_new3(qstring(text), (QFont*)font);
+    return QTextLayout_New3(qstring(text), (QFont*)font);
 }
 
 QTextLayout* q_textlayout_new4(void* b) {
-    return QTextLayout_new4((QTextBlock*)b);
+    return QTextLayout_New4((QTextBlock*)b);
 }
 
 QTextLayout* q_textlayout_new5(const char* text, void* font, void* paintdevice) {
-    return QTextLayout_new5(qstring(text), (QFont*)font, (QPaintDevice*)paintdevice);
+    return QTextLayout_New5(qstring(text), (QFont*)font, (QPaintDevice*)paintdevice);
 }
 
 void q_textlayout_set_font(void* self, void* f) {
@@ -307,15 +307,15 @@ void q_textlayout_delete(void* self) {
 }
 
 QTextLine* q_textline_new(void* other) {
-    return QTextLine_new((QTextLine*)other);
+    return QTextLine_New((QTextLine*)other);
 }
 
 QTextLine* q_textline_new2(void* other) {
-    return QTextLine_new2((QTextLine*)other);
+    return QTextLine_New2((QTextLine*)other);
 }
 
 QTextLine* q_textline_new3() {
-    return QTextLine_new3();
+    return QTextLine_New3();
 }
 
 void q_textline_copy_assign(void* self, void* other) {
@@ -467,11 +467,11 @@ void q_textline_delete(void* self) {
 }
 
 QTextLayout__FormatRange* q_textlayout__formatrange_new() {
-    return QTextLayout__FormatRange_new();
+    return QTextLayout__FormatRange_New();
 }
 
 QTextLayout__FormatRange* q_textlayout__formatrange_new2(void* param1) {
-    return QTextLayout__FormatRange_new2((QTextLayout__FormatRange*)param1);
+    return QTextLayout__FormatRange_New2((QTextLayout__FormatRange*)param1);
 }
 
 int32_t q_textlayout__formatrange_start(void* self) {

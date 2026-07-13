@@ -17,15 +17,15 @@
 #include "libpart.h"
 
 KParts__Part* k_parts__part_new() {
-    return KParts__Part_new();
+    return KParts__Part_New();
 }
 
 KParts__Part* k_parts__part_new2(void* parent) {
-    return KParts__Part_new2((QObject*)parent);
+    return KParts__Part_New2((QObject*)parent);
 }
 
 KParts__Part* k_parts__part_new3(void* parent, void* data) {
-    return KParts__Part_new3((QObject*)parent, (KPluginMetaData*)data);
+    return KParts__Part_New3((QObject*)parent, (KPluginMetaData*)data);
 }
 
 const QMetaObject* k_parts__part_meta_object(void* self) {

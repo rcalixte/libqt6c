@@ -9,7 +9,7 @@
 #include "libkxmlguibuilder.hpp"
 #include "libkxmlguibuilder.hxx"
 
-KXMLGUIBuilder* KXMLGUIBuilder_new(QWidget* widget) {
+KXMLGUIBuilder* KXMLGUIBuilder_New(QWidget* widget) {
     return new VirtualKXMLGUIBuilder(widget);
 }
 

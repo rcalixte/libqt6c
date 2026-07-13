@@ -51,9 +51,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QInputDialog* QInputDialog_new(QWidget* parent);
-QInputDialog* QInputDialog_new2();
-QInputDialog* QInputDialog_new3(QWidget* parent, int flags);
+QInputDialog* QInputDialog_New(QWidget* parent);
+QInputDialog* QInputDialog_New2();
+QInputDialog* QInputDialog_New3(QWidget* parent, int flags);
 QMetaObject* QInputDialog_MetaObject(const QInputDialog* self);
 void* QInputDialog_Metacast(QInputDialog* self, const char* param1);
 int QInputDialog_Metacall(QInputDialog* self, int param1, int param2, void** param3);

@@ -4,15 +4,15 @@
 #include "libqplugin.hpp"
 #include "libqplugin.hxx"
 
-QStaticPlugin* QStaticPlugin_new(const QStaticPlugin* other) {
+QStaticPlugin* QStaticPlugin_New(const QStaticPlugin* other) {
     return new QStaticPlugin(*other);
 }
 
-QStaticPlugin* QStaticPlugin_new2(QStaticPlugin* other) {
+QStaticPlugin* QStaticPlugin_New2(QStaticPlugin* other) {
     return new QStaticPlugin(std::move(*other));
 }
 
-QStaticPlugin* QStaticPlugin_new3(const QStaticPlugin* param1) {
+QStaticPlugin* QStaticPlugin_New3(const QStaticPlugin* param1) {
     return new QStaticPlugin(*param1);
 }
 

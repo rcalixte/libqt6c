@@ -52,7 +52,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KNameAndUrlInputDialog* KNameAndUrlInputDialog_new(const libqt_string nameLabel, const libqt_string urlLabel, const QUrl* startDir, QWidget* parent);
+KNameAndUrlInputDialog* KNameAndUrlInputDialog_New(const libqt_string nameLabel, const libqt_string urlLabel, const QUrl* startDir, QWidget* parent);
 QMetaObject* KNameAndUrlInputDialog_MetaObject(const KNameAndUrlInputDialog* self);
 void* KNameAndUrlInputDialog_Metacast(KNameAndUrlInputDialog* self, const char* param1);
 int KNameAndUrlInputDialog_Metacall(KNameAndUrlInputDialog* self, int param1, int param2, void** param3);

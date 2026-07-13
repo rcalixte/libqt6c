@@ -11,27 +11,27 @@
 #include "libqcalendar.hpp"
 #include "libqcalendar.hxx"
 
-QCalendar* QCalendar_new(const QCalendar* other) {
+QCalendar* QCalendar_New(const QCalendar* other) {
     return new QCalendar(*other);
 }
 
-QCalendar* QCalendar_new2(QCalendar* other) {
+QCalendar* QCalendar_New2(QCalendar* other) {
     return new QCalendar(std::move(*other));
 }
 
-QCalendar* QCalendar_new3() {
+QCalendar* QCalendar_New3() {
     return new QCalendar();
 }
 
-QCalendar* QCalendar_new4(int system) {
+QCalendar* QCalendar_New4(int system) {
     return new QCalendar(static_cast<QCalendar::System>(system));
 }
 
-QCalendar* QCalendar_new5(const char* name) {
+QCalendar* QCalendar_New5(const char* name) {
     return new QCalendar(QAnyStringView(name));
 }
 
-QCalendar* QCalendar_new6(QCalendar__SystemId* id) {
+QCalendar* QCalendar_New6(QCalendar__SystemId* id) {
     return new QCalendar(*id);
 }
 
@@ -297,27 +297,27 @@ void QCalendar_Delete(QCalendar* self) {
     delete self;
 }
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new(const QCalendar__YearMonthDay* other) {
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New(const QCalendar__YearMonthDay* other) {
     return new QCalendar::YearMonthDay(*other);
 }
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new2(QCalendar__YearMonthDay* other) {
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New2(QCalendar__YearMonthDay* other) {
     return new QCalendar::YearMonthDay(std::move(*other));
 }
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new3() {
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New3() {
     return new QCalendar::YearMonthDay();
 }
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new4(int y) {
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New4(int y) {
     return new QCalendar::YearMonthDay(static_cast<int>(y));
 }
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new5(int y, int m) {
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New5(int y, int m) {
     return new QCalendar::YearMonthDay(static_cast<int>(y), static_cast<int>(m));
 }
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new6(int y, int m, int d) {
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New6(int y, int m, int d) {
     return new QCalendar::YearMonthDay(static_cast<int>(y), static_cast<int>(m), static_cast<int>(d));
 }
 
@@ -361,15 +361,15 @@ void QCalendar__YearMonthDay_Delete(QCalendar__YearMonthDay* self) {
     delete self;
 }
 
-QCalendar__SystemId* QCalendar__SystemId_new(const QCalendar__SystemId* other) {
+QCalendar__SystemId* QCalendar__SystemId_New(const QCalendar__SystemId* other) {
     return new QCalendar::SystemId(*other);
 }
 
-QCalendar__SystemId* QCalendar__SystemId_new2(QCalendar__SystemId* other) {
+QCalendar__SystemId* QCalendar__SystemId_New2(QCalendar__SystemId* other) {
     return new QCalendar::SystemId(std::move(*other));
 }
 
-QCalendar__SystemId* QCalendar__SystemId_new3() {
+QCalendar__SystemId* QCalendar__SystemId_New3() {
     return new QCalendar::SystemId();
 }
 

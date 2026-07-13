@@ -7,11 +7,11 @@
 #include "libkrcc.h"
 
 KRcc* k_rcc_new(const char* filename) {
-    return KRcc_new(qstring(filename));
+    return KRcc_New(qstring(filename));
 }
 
 KRcc* k_rcc_new2(void* param1) {
-    return KRcc_new2((KRcc*)param1);
+    return KRcc_New2((KRcc*)param1);
 }
 
 const char* k_rcc_tr(const char* sourceText) {

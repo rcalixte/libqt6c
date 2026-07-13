@@ -32,7 +32,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KParts__ListingNotificationExtension* KParts__ListingNotificationExtension_new(KParts__ReadOnlyPart* parent);
+KParts__ListingNotificationExtension* KParts__ListingNotificationExtension_New(KParts__ReadOnlyPart* parent);
 QMetaObject* KParts__ListingNotificationExtension_MetaObject(const KParts__ListingNotificationExtension* self);
 void* KParts__ListingNotificationExtension_Metacast(KParts__ListingNotificationExtension* self, const char* param1);
 int KParts__ListingNotificationExtension_Metacall(KParts__ListingNotificationExtension* self, int param1, int param2, void** param3);

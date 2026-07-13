@@ -29,10 +29,10 @@ typedef struct QProcessEnvironment QProcessEnvironment;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new(const libqt_string command);
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new2(const libqt_string executable, const libqt_list /* of libqt_string */ args);
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new3(const libqt_string command, QObject* parent);
-KIO__CommandLauncherJob* KIO__CommandLauncherJob_new4(const libqt_string executable, const libqt_list /* of libqt_string */ args, QObject* parent);
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New(const libqt_string command);
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New2(const libqt_string executable, const libqt_list /* of libqt_string */ args);
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New3(const libqt_string command, QObject* parent);
+KIO__CommandLauncherJob* KIO__CommandLauncherJob_New4(const libqt_string executable, const libqt_list /* of libqt_string */ args, QObject* parent);
 void KIO__CommandLauncherJob_SetCommand(KIO__CommandLauncherJob* self, const libqt_string command);
 libqt_string KIO__CommandLauncherJob_Command(const KIO__CommandLauncherJob* self);
 void KIO__CommandLauncherJob_SetExecutable(KIO__CommandLauncherJob* self, const libqt_string executable);

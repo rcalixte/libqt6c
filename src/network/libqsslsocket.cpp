@@ -25,11 +25,11 @@
 #include "libqsslsocket.hpp"
 #include "libqsslsocket.hxx"
 
-QSslSocket* QSslSocket_new() {
+QSslSocket* QSslSocket_New() {
     return new VirtualQSslSocket();
 }
 
-QSslSocket* QSslSocket_new2(QObject* parent) {
+QSslSocket* QSslSocket_New2(QObject* parent) {
     return new VirtualQSslSocket(parent);
 }
 

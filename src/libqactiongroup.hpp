@@ -26,7 +26,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QActionGroup* QActionGroup_new(QObject* parent);
+QActionGroup* QActionGroup_New(QObject* parent);
 QMetaObject* QActionGroup_MetaObject(const QActionGroup* self);
 void* QActionGroup_Metacast(QActionGroup* self, const char* param1);
 int QActionGroup_Metacall(QActionGroup* self, int param1, int param2, void** param3);

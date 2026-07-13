@@ -35,8 +35,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUdpSocket QUdpSocket;
 #endif
 
-QDtlsClientVerifier* QDtlsClientVerifier_new();
-QDtlsClientVerifier* QDtlsClientVerifier_new2(QObject* parent);
+QDtlsClientVerifier* QDtlsClientVerifier_New();
+QDtlsClientVerifier* QDtlsClientVerifier_New2(QObject* parent);
 QMetaObject* QDtlsClientVerifier_MetaObject(const QDtlsClientVerifier* self);
 void* QDtlsClientVerifier_Metacast(QDtlsClientVerifier* self, const char* param1);
 int QDtlsClientVerifier_Metacall(QDtlsClientVerifier* self, int param1, int param2, void** param3);
@@ -87,8 +87,8 @@ void QDtlsClientVerifier_OnIsSignalConnected(const QDtlsClientVerifier* self, in
 bool QDtlsClientVerifier_SuperIsSignalConnected(const QDtlsClientVerifier* self, const QMetaMethod* signal);
 void QDtlsClientVerifier_Delete(QDtlsClientVerifier* self);
 
-QDtls* QDtls_new(int mode);
-QDtls* QDtls_new2(int mode, QObject* parent);
+QDtls* QDtls_New(int mode);
+QDtls* QDtls_New2(int mode, QObject* parent);
 QMetaObject* QDtls_MetaObject(const QDtls* self);
 void* QDtls_Metacast(QDtls* self, const char* param1);
 int QDtls_Metacall(QDtls* self, int param1, int param2, void** param3);
@@ -166,9 +166,9 @@ void QDtls_OnIsSignalConnected(const QDtls* self, intptr_t slot);
 bool QDtls_SuperIsSignalConnected(const QDtls* self, const QMetaMethod* signal);
 void QDtls_Delete(QDtls* self);
 
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new();
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new2(int a, const libqt_string s);
-QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_new3(const QDtlsClientVerifier__GeneratorParameters* param1);
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_New();
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_New2(int a, const libqt_string s);
+QDtlsClientVerifier__GeneratorParameters* QDtlsClientVerifier__GeneratorParameters_New3(const QDtlsClientVerifier__GeneratorParameters* param1);
 int QDtlsClientVerifier__GeneratorParameters_Hash(const QDtlsClientVerifier__GeneratorParameters* self);
 void QDtlsClientVerifier__GeneratorParameters_SetHash(QDtlsClientVerifier__GeneratorParameters* self, int hash);
 libqt_string QDtlsClientVerifier__GeneratorParameters_Secret(const QDtlsClientVerifier__GeneratorParameters* self);

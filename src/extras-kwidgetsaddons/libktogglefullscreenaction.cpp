@@ -13,11 +13,11 @@
 #include "libktogglefullscreenaction.hpp"
 #include "libktogglefullscreenaction.hxx"
 
-KToggleFullScreenAction* KToggleFullScreenAction_new(QObject* parent) {
+KToggleFullScreenAction* KToggleFullScreenAction_New(QObject* parent) {
     return new VirtualKToggleFullScreenAction(parent);
 }
 
-KToggleFullScreenAction* KToggleFullScreenAction_new2(QWidget* window, QObject* parent) {
+KToggleFullScreenAction* KToggleFullScreenAction_New2(QWidget* window, QObject* parent) {
     return new VirtualKToggleFullScreenAction(window, parent);
 }
 

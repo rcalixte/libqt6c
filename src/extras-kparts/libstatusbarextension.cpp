@@ -14,11 +14,11 @@
 #include "libstatusbarextension.hpp"
 #include "libstatusbarextension.hxx"
 
-KParts__StatusBarExtension* KParts__StatusBarExtension_new(KParts__Part* parent) {
+KParts__StatusBarExtension* KParts__StatusBarExtension_New(KParts__Part* parent) {
     return new VirtualKPartsStatusBarExtension(parent);
 }
 
-KParts__StatusBarExtension* KParts__StatusBarExtension_new2(KParts__ReadOnlyPart* parent) {
+KParts__StatusBarExtension* KParts__StatusBarExtension_New2(KParts__ReadOnlyPart* parent) {
     return new VirtualKPartsStatusBarExtension(parent);
 }
 

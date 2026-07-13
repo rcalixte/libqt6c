@@ -38,19 +38,19 @@
 #include "libkcapacitybar.hpp"
 #include "libkcapacitybar.hxx"
 
-KCapacityBar* KCapacityBar_new(QWidget* parent) {
+KCapacityBar* KCapacityBar_New(QWidget* parent) {
     return new VirtualKCapacityBar(parent);
 }
 
-KCapacityBar* KCapacityBar_new2() {
+KCapacityBar* KCapacityBar_New2() {
     return new VirtualKCapacityBar();
 }
 
-KCapacityBar* KCapacityBar_new3(int drawTextMode) {
+KCapacityBar* KCapacityBar_New3(int drawTextMode) {
     return new VirtualKCapacityBar(static_cast<KCapacityBar::DrawTextMode>(drawTextMode));
 }
 
-KCapacityBar* KCapacityBar_new4(int drawTextMode, QWidget* parent) {
+KCapacityBar* KCapacityBar_New4(int drawTextMode, QWidget* parent) {
     return new VirtualKCapacityBar(static_cast<KCapacityBar::DrawTextMode>(drawTextMode), parent);
 }
 

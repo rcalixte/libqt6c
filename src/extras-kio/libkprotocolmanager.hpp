@@ -19,8 +19,8 @@ typedef struct KProtocolManager KProtocolManager;
 typedef struct QUrl QUrl;
 #endif
 
-KProtocolManager* KProtocolManager_new(const KProtocolManager* other);
-KProtocolManager* KProtocolManager_new2(KProtocolManager* other);
+KProtocolManager* KProtocolManager_New(const KProtocolManager* other);
+KProtocolManager* KProtocolManager_New2(KProtocolManager* other);
 void KProtocolManager_CopyAssign(KProtocolManager* self, KProtocolManager* other);
 void KProtocolManager_MoveAssign(KProtocolManager* self, KProtocolManager* other);
 int KProtocolManager_ReadTimeout();

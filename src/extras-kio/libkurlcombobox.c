@@ -24,19 +24,19 @@
 #include "libkurlcombobox.h"
 
 KUrlComboBox* k_urlcombobox_new(int32_t mode) {
-    return KUrlComboBox_new(mode);
+    return KUrlComboBox_New(mode);
 }
 
 KUrlComboBox* k_urlcombobox_new2(int32_t mode, bool rw) {
-    return KUrlComboBox_new2(mode, rw);
+    return KUrlComboBox_New2(mode, rw);
 }
 
 KUrlComboBox* k_urlcombobox_new3(int32_t mode, void* parent) {
-    return KUrlComboBox_new3(mode, (QWidget*)parent);
+    return KUrlComboBox_New3(mode, (QWidget*)parent);
 }
 
 KUrlComboBox* k_urlcombobox_new4(int32_t mode, bool rw, void* parent) {
-    return KUrlComboBox_new4(mode, rw, (QWidget*)parent);
+    return KUrlComboBox_New4(mode, rw, (QWidget*)parent);
 }
 
 const QMetaObject* k_urlcombobox_meta_object(void* self) {

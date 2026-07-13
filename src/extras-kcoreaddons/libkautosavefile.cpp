@@ -16,19 +16,19 @@
 #include "libkautosavefile.hpp"
 #include "libkautosavefile.hxx"
 
-KAutoSaveFile* KAutoSaveFile_new(const QUrl* filename) {
+KAutoSaveFile* KAutoSaveFile_New(const QUrl* filename) {
     return new VirtualKAutoSaveFile(*filename);
 }
 
-KAutoSaveFile* KAutoSaveFile_new2() {
+KAutoSaveFile* KAutoSaveFile_New2() {
     return new VirtualKAutoSaveFile();
 }
 
-KAutoSaveFile* KAutoSaveFile_new3(const QUrl* filename, QObject* parent) {
+KAutoSaveFile* KAutoSaveFile_New3(const QUrl* filename, QObject* parent) {
     return new VirtualKAutoSaveFile(*filename, parent);
 }
 
-KAutoSaveFile* KAutoSaveFile_new4(QObject* parent) {
+KAutoSaveFile* KAutoSaveFile_New4(QObject* parent) {
     return new VirtualKAutoSaveFile(parent);
 }
 

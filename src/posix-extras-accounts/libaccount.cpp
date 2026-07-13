@@ -17,11 +17,11 @@
 #include "libaccount.hpp"
 #include "libaccount.hxx"
 
-Accounts__Watch* Accounts__Watch_new() {
+Accounts__Watch* Accounts__Watch_New() {
     return new VirtualAccountsWatch();
 }
 
-Accounts__Watch* Accounts__Watch_new2(QObject* parent) {
+Accounts__Watch* Accounts__Watch_New2(QObject* parent) {
     return new VirtualAccountsWatch(parent);
 }
 
@@ -429,12 +429,12 @@ void Accounts__Watch_Delete(Accounts__Watch* self) {
     delete self;
 }
 
-Accounts__Account* Accounts__Account_new(Accounts__Manager* manager, const libqt_string provider) {
+Accounts__Account* Accounts__Account_New(Accounts__Manager* manager, const libqt_string provider) {
     QString provider_QString = QString::fromUtf8(provider.data, provider.len);
     return new VirtualAccountsAccount(manager, provider_QString);
 }
 
-Accounts__Account* Accounts__Account_new2(Accounts__Manager* manager, const libqt_string provider, QObject* parent) {
+Accounts__Account* Accounts__Account_New2(Accounts__Manager* manager, const libqt_string provider, QObject* parent) {
     QString provider_QString = QString::fromUtf8(provider.data, provider.len);
     return new VirtualAccountsAccount(manager, provider_QString, parent);
 }

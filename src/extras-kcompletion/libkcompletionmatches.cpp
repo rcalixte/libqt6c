@@ -5,11 +5,11 @@
 #include "libkcompletionmatches.hpp"
 #include "libkcompletionmatches.hxx"
 
-KCompletionMatches* KCompletionMatches_new(bool sort) {
+KCompletionMatches* KCompletionMatches_New(bool sort) {
     return new KCompletionMatches(sort);
 }
 
-KCompletionMatches* KCompletionMatches_new2(const KCompletionMatches* param1) {
+KCompletionMatches* KCompletionMatches_New2(const KCompletionMatches* param1) {
     return new KCompletionMatches(*param1);
 }
 

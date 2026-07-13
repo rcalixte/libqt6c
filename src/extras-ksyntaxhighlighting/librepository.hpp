@@ -32,7 +32,7 @@ typedef struct QPalette QPalette;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KSyntaxHighlighting__Repository* KSyntaxHighlighting__Repository_new();
+KSyntaxHighlighting__Repository* KSyntaxHighlighting__Repository_New();
 QMetaObject* KSyntaxHighlighting__Repository_MetaObject(const KSyntaxHighlighting__Repository* self);
 void* KSyntaxHighlighting__Repository_Metacast(KSyntaxHighlighting__Repository* self, const char* param1);
 int KSyntaxHighlighting__Repository_Metacall(KSyntaxHighlighting__Repository* self, int param1, int param2, void** param3);

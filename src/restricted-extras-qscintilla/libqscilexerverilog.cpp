@@ -14,11 +14,11 @@
 #include "libqscilexerverilog.hpp"
 #include "libqscilexerverilog.hxx"
 
-QsciLexerVerilog* QsciLexerVerilog_new() {
+QsciLexerVerilog* QsciLexerVerilog_New() {
     return new VirtualQsciLexerVerilog();
 }
 
-QsciLexerVerilog* QsciLexerVerilog_new2(QObject* parent) {
+QsciLexerVerilog* QsciLexerVerilog_New2(QObject* parent) {
     return new VirtualQsciLexerVerilog(parent);
 }
 

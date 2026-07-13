@@ -24,11 +24,11 @@
 #include "libkcategorizedsortfilterproxymodel.hpp"
 #include "libkcategorizedsortfilterproxymodel.hxx"
 
-KCategorizedSortFilterProxyModel* KCategorizedSortFilterProxyModel_new() {
+KCategorizedSortFilterProxyModel* KCategorizedSortFilterProxyModel_New() {
     return new VirtualKCategorizedSortFilterProxyModel();
 }
 
-KCategorizedSortFilterProxyModel* KCategorizedSortFilterProxyModel_new2(QObject* parent) {
+KCategorizedSortFilterProxyModel* KCategorizedSortFilterProxyModel_New2(QObject* parent) {
     return new VirtualKCategorizedSortFilterProxyModel(parent);
 }
 

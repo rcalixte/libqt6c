@@ -30,7 +30,7 @@ typedef struct QStyleOption QStyleOption;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KCategoryDrawer* KCategoryDrawer_new(KCategorizedView* view);
+KCategoryDrawer* KCategoryDrawer_New(KCategorizedView* view);
 QMetaObject* KCategoryDrawer_MetaObject(const KCategoryDrawer* self);
 void* KCategoryDrawer_Metacast(KCategoryDrawer* self, const char* param1);
 int KCategoryDrawer_Metacall(KCategoryDrawer* self, int param1, int param2, void** param3);

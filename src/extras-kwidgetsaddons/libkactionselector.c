@@ -16,11 +16,11 @@
 #include "libkactionselector.h"
 
 KActionSelector* k_actionselector_new(void* parent) {
-    return KActionSelector_new((QWidget*)parent);
+    return KActionSelector_New((QWidget*)parent);
 }
 
 KActionSelector* k_actionselector_new2() {
-    return KActionSelector_new2();
+    return KActionSelector_New2();
 }
 
 const QMetaObject* k_actionselector_meta_object(void* self) {

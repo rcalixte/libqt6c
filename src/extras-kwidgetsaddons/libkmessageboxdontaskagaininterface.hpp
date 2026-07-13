@@ -19,7 +19,7 @@ typedef struct KConfig KConfig;
 typedef struct KMessageBoxDontAskAgainInterface KMessageBoxDontAskAgainInterface;
 #endif
 
-KMessageBoxDontAskAgainInterface* KMessageBoxDontAskAgainInterface_new();
+KMessageBoxDontAskAgainInterface* KMessageBoxDontAskAgainInterface_New();
 bool KMessageBoxDontAskAgainInterface_ShouldBeShownTwoActions(KMessageBoxDontAskAgainInterface* self, const libqt_string dontShowAgainName, int* result);
 bool KMessageBoxDontAskAgainInterface_ShouldBeShownContinue(KMessageBoxDontAskAgainInterface* self, const libqt_string dontShowAgainName);
 void KMessageBoxDontAskAgainInterface_SaveDontShowAgainTwoActions(KMessageBoxDontAskAgainInterface* self, const libqt_string dontShowAgainName, int result);

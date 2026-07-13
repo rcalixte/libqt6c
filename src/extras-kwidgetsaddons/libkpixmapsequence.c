@@ -4,23 +4,23 @@
 #include "libkpixmapsequence.h"
 
 KPixmapSequence* k_pixmapsequence_new() {
-    return KPixmapSequence_new();
+    return KPixmapSequence_New();
 }
 
 KPixmapSequence* k_pixmapsequence_new2(void* other) {
-    return KPixmapSequence_new2((KPixmapSequence*)other);
+    return KPixmapSequence_New2((KPixmapSequence*)other);
 }
 
 KPixmapSequence* k_pixmapsequence_new3(void* pixmap) {
-    return KPixmapSequence_new3((QPixmap*)pixmap);
+    return KPixmapSequence_New3((QPixmap*)pixmap);
 }
 
 KPixmapSequence* k_pixmapsequence_new4(const char* fullPath, int size) {
-    return KPixmapSequence_new4(qstring(fullPath), size);
+    return KPixmapSequence_New4(qstring(fullPath), size);
 }
 
 KPixmapSequence* k_pixmapsequence_new5(void* pixmap, void* frameSize) {
-    return KPixmapSequence_new5((QPixmap*)pixmap, (QSize*)frameSize);
+    return KPixmapSequence_New5((QPixmap*)pixmap, (QSize*)frameSize);
 }
 
 void k_pixmapsequence_operator_assign(void* self, void* other) {

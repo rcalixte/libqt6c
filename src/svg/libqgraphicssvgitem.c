@@ -18,19 +18,19 @@
 #include "libqgraphicssvgitem.h"
 
 QGraphicsSvgItem* q_graphicssvgitem_new() {
-    return QGraphicsSvgItem_new();
+    return QGraphicsSvgItem_New();
 }
 
 QGraphicsSvgItem* q_graphicssvgitem_new2(const char* fileName) {
-    return QGraphicsSvgItem_new2(qstring(fileName));
+    return QGraphicsSvgItem_New2(qstring(fileName));
 }
 
 QGraphicsSvgItem* q_graphicssvgitem_new3(void* parentItem) {
-    return QGraphicsSvgItem_new3((QGraphicsItem*)parentItem);
+    return QGraphicsSvgItem_New3((QGraphicsItem*)parentItem);
 }
 
 QGraphicsSvgItem* q_graphicssvgitem_new4(const char* fileName, void* parentItem) {
-    return QGraphicsSvgItem_new4(qstring(fileName), (QGraphicsItem*)parentItem);
+    return QGraphicsSvgItem_New4(qstring(fileName), (QGraphicsItem*)parentItem);
 }
 
 const QMetaObject* q_graphicssvgitem_meta_object(void* self) {

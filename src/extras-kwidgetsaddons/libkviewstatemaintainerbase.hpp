@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KViewStateMaintainerBase* KViewStateMaintainerBase_new();
-KViewStateMaintainerBase* KViewStateMaintainerBase_new2(QObject* parent);
+KViewStateMaintainerBase* KViewStateMaintainerBase_New();
+KViewStateMaintainerBase* KViewStateMaintainerBase_New2(QObject* parent);
 QMetaObject* KViewStateMaintainerBase_MetaObject(const KViewStateMaintainerBase* self);
 void* KViewStateMaintainerBase_Metacast(KViewStateMaintainerBase* self, const char* param1);
 int KViewStateMaintainerBase_Metacall(KViewStateMaintainerBase* self, int param1, int param2, void** param3);

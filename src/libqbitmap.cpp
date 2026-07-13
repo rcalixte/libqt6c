@@ -13,32 +13,32 @@
 #include "libqbitmap.hpp"
 #include "libqbitmap.hxx"
 
-QBitmap* QBitmap_new() {
+QBitmap* QBitmap_New() {
     return new VirtualQBitmap();
 }
 
-QBitmap* QBitmap_new2(const QPixmap* param1) {
+QBitmap* QBitmap_New2(const QPixmap* param1) {
     return new VirtualQBitmap(*param1);
 }
 
-QBitmap* QBitmap_new3(int w, int h) {
+QBitmap* QBitmap_New3(int w, int h) {
     return new VirtualQBitmap(static_cast<int>(w), static_cast<int>(h));
 }
 
-QBitmap* QBitmap_new4(const QSize* param1) {
+QBitmap* QBitmap_New4(const QSize* param1) {
     return new VirtualQBitmap(*param1);
 }
 
-QBitmap* QBitmap_new5(const libqt_string fileName) {
+QBitmap* QBitmap_New5(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQBitmap(fileName_QString);
 }
 
-QBitmap* QBitmap_new6(const QBitmap* param1) {
+QBitmap* QBitmap_New6(const QBitmap* param1) {
     return new VirtualQBitmap(*param1);
 }
 
-QBitmap* QBitmap_new7(const libqt_string fileName, const char* format) {
+QBitmap* QBitmap_New7(const libqt_string fileName, const char* format) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQBitmap(fileName_QString, format);
 }

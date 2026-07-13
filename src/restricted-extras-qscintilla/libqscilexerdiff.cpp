@@ -14,11 +14,11 @@
 #include "libqscilexerdiff.hpp"
 #include "libqscilexerdiff.hxx"
 
-QsciLexerDiff* QsciLexerDiff_new() {
+QsciLexerDiff* QsciLexerDiff_New() {
     return new VirtualQsciLexerDiff();
 }
 
-QsciLexerDiff* QsciLexerDiff_new2(QObject* parent) {
+QsciLexerDiff* QsciLexerDiff_New2(QObject* parent) {
     return new VirtualQsciLexerDiff(parent);
 }
 

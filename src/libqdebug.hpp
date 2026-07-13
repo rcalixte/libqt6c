@@ -24,8 +24,8 @@ typedef struct QIODeviceBase QIODeviceBase;
 typedef struct QNoDebug QNoDebug;
 #endif
 
-QDebug* QDebug_new(QIODevice* device);
-QDebug* QDebug_new2(const QDebug* o);
+QDebug* QDebug_New(QIODevice* device);
+QDebug* QDebug_New2(const QDebug* o);
 void QDebug_OperatorAssign(QDebug* self, const QDebug* other);
 void QDebug_Swap(QDebug* self, QDebug* other);
 QDebug* QDebug_ResetFormat(QDebug* self);
@@ -66,11 +66,11 @@ QDebug* QDebug_OperatorShiftLeft28(QDebug* self, intptr_t f);
 QDebug* QDebug_MaybeQuote1(QDebug* self, char c);
 void QDebug_Delete(QDebug* self);
 
-QDebugStateSaver* QDebugStateSaver_new(QDebug* dbg);
+QDebugStateSaver* QDebugStateSaver_New(QDebug* dbg);
 void QDebugStateSaver_Delete(QDebugStateSaver* self);
 
-QNoDebug* QNoDebug_new(const QNoDebug* other);
-QNoDebug* QNoDebug_new2(QNoDebug* other);
+QNoDebug* QNoDebug_New(const QNoDebug* other);
+QNoDebug* QNoDebug_New2(QNoDebug* other);
 void QNoDebug_CopyAssign(QNoDebug* self, QNoDebug* other);
 void QNoDebug_MoveAssign(QNoDebug* self, QNoDebug* other);
 QNoDebug* QNoDebug_OperatorShiftLeft(QNoDebug* self, intptr_t param1);

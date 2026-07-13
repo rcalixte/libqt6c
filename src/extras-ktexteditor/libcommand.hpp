@@ -36,8 +36,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KTextEditor__Command* KTextEditor__Command_new(const libqt_list /* of libqt_string */ cmds);
-KTextEditor__Command* KTextEditor__Command_new2(const libqt_list /* of libqt_string */ cmds, QObject* parent);
+KTextEditor__Command* KTextEditor__Command_New(const libqt_list /* of libqt_string */ cmds);
+KTextEditor__Command* KTextEditor__Command_New2(const libqt_list /* of libqt_string */ cmds, QObject* parent);
 QMetaObject* KTextEditor__Command_MetaObject(const KTextEditor__Command* self);
 void* KTextEditor__Command_Metacast(KTextEditor__Command* self, const char* param1);
 int KTextEditor__Command_Metacall(KTextEditor__Command* self, int param1, int param2, void** param3);

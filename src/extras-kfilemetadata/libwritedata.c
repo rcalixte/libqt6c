@@ -3,11 +3,11 @@
 #include "libwritedata.h"
 
 KFileMetaData__WriteData* k_filemetadata__writedata_new(const char* url, const char* mimetype) {
-    return KFileMetaData__WriteData_new(qstring(url), qstring(mimetype));
+    return KFileMetaData__WriteData_New(qstring(url), qstring(mimetype));
 }
 
 KFileMetaData__WriteData* k_filemetadata__writedata_new2(void* rhs) {
-    return KFileMetaData__WriteData_new2((KFileMetaData__WriteData*)rhs);
+    return KFileMetaData__WriteData_New2((KFileMetaData__WriteData*)rhs);
 }
 
 void k_filemetadata__writedata_operator_assign(void* self, void* rhs) {

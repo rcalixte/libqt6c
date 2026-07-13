@@ -13,11 +13,11 @@
 #include "libqpdfsearchmodel.h"
 
 QPdfSearchModel* q_pdfsearchmodel_new() {
-    return QPdfSearchModel_new();
+    return QPdfSearchModel_New();
 }
 
 QPdfSearchModel* q_pdfsearchmodel_new2(void* parent) {
-    return QPdfSearchModel_new2((QObject*)parent);
+    return QPdfSearchModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pdfsearchmodel_meta_object(void* self) {

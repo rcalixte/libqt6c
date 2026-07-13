@@ -7,11 +7,11 @@
 #include "libforum.hpp"
 #include "libforum.hxx"
 
-Attica__Forum* Attica__Forum_new() {
+Attica__Forum* Attica__Forum_New() {
     return new Attica::Forum();
 }
 
-Attica__Forum* Attica__Forum_new2(const Attica__Forum* other) {
+Attica__Forum* Attica__Forum_New2(const Attica__Forum* other) {
     return new Attica::Forum(*other);
 }
 

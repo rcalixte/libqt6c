@@ -4,39 +4,39 @@
 #include "libqpagesize.h"
 
 QPageSize* q_pagesize_new() {
-    return QPageSize_new();
+    return QPageSize_New();
 }
 
 QPageSize* q_pagesize_new2(int32_t pageSizeId) {
-    return QPageSize_new2(pageSizeId);
+    return QPageSize_New2(pageSizeId);
 }
 
 QPageSize* q_pagesize_new3(void* pointSize) {
-    return QPageSize_new3((QSize*)pointSize);
+    return QPageSize_New3((QSize*)pointSize);
 }
 
 QPageSize* q_pagesize_new4(void* size, int32_t units) {
-    return QPageSize_new4((QSizeF*)size, units);
+    return QPageSize_New4((QSizeF*)size, units);
 }
 
 QPageSize* q_pagesize_new5(void* other) {
-    return QPageSize_new5((QPageSize*)other);
+    return QPageSize_New5((QPageSize*)other);
 }
 
 QPageSize* q_pagesize_new6(void* pointSize, const char* name) {
-    return QPageSize_new6((QSize*)pointSize, qstring(name));
+    return QPageSize_New6((QSize*)pointSize, qstring(name));
 }
 
 QPageSize* q_pagesize_new7(void* pointSize, const char* name, int32_t matchPolicy) {
-    return QPageSize_new7((QSize*)pointSize, qstring(name), matchPolicy);
+    return QPageSize_New7((QSize*)pointSize, qstring(name), matchPolicy);
 }
 
 QPageSize* q_pagesize_new8(void* size, int32_t units, const char* name) {
-    return QPageSize_new8((QSizeF*)size, units, qstring(name));
+    return QPageSize_New8((QSizeF*)size, units, qstring(name));
 }
 
 QPageSize* q_pagesize_new9(void* size, int32_t units, const char* name, int32_t matchPolicy) {
-    return QPageSize_new9((QSizeF*)size, units, qstring(name), matchPolicy);
+    return QPageSize_New9((QSizeF*)size, units, qstring(name), matchPolicy);
 }
 
 void q_pagesize_operator_assign(void* self, void* other) {

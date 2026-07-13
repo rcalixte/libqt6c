@@ -2,11 +2,11 @@
 #include "libfolder.h"
 
 Attica__Folder* k_attica__folder_new() {
-    return Attica__Folder_new();
+    return Attica__Folder_New();
 }
 
 Attica__Folder* k_attica__folder_new2(void* other) {
-    return Attica__Folder_new2((Attica__Folder*)other);
+    return Attica__Folder_New2((Attica__Folder*)other);
 }
 
 void k_attica__folder_operator_assign(void* self, void* other) {

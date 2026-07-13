@@ -8,27 +8,27 @@
 #include "libqdatetime.hpp"
 #include "libqdatetime.hxx"
 
-QDate* QDate_new(const QDate* other) {
+QDate* QDate_New(const QDate* other) {
     return new QDate(*other);
 }
 
-QDate* QDate_new2(QDate* other) {
+QDate* QDate_New2(QDate* other) {
     return new QDate(std::move(*other));
 }
 
-QDate* QDate_new3() {
+QDate* QDate_New3() {
     return new QDate();
 }
 
-QDate* QDate_new4(int y, int m, int d) {
+QDate* QDate_New4(int y, int m, int d) {
     return new QDate(static_cast<int>(y), static_cast<int>(m), static_cast<int>(d));
 }
 
-QDate* QDate_new5(int y, int m, int d, QCalendar* cal) {
+QDate* QDate_New5(int y, int m, int d, QCalendar* cal) {
     return new QDate(static_cast<int>(y), static_cast<int>(m), static_cast<int>(d), *cal);
 }
 
-QDate* QDate_new6(const QDate* param1) {
+QDate* QDate_New6(const QDate* param1) {
     return new QDate(*param1);
 }
 
@@ -372,31 +372,31 @@ void QDate_Delete(QDate* self) {
     delete self;
 }
 
-QTime* QTime_new(const QTime* other) {
+QTime* QTime_New(const QTime* other) {
     return new QTime(*other);
 }
 
-QTime* QTime_new2(QTime* other) {
+QTime* QTime_New2(QTime* other) {
     return new QTime(std::move(*other));
 }
 
-QTime* QTime_new3() {
+QTime* QTime_New3() {
     return new QTime();
 }
 
-QTime* QTime_new4(int h, int m) {
+QTime* QTime_New4(int h, int m) {
     return new QTime(static_cast<int>(h), static_cast<int>(m));
 }
 
-QTime* QTime_new5(const QTime* param1) {
+QTime* QTime_New5(const QTime* param1) {
     return new QTime(*param1);
 }
 
-QTime* QTime_new6(int h, int m, int s) {
+QTime* QTime_New6(int h, int m, int s) {
     return new QTime(static_cast<int>(h), static_cast<int>(m), static_cast<int>(s));
 }
 
-QTime* QTime_new7(int h, int m, int s, int ms) {
+QTime* QTime_New7(int h, int m, int s, int ms) {
     return new QTime(static_cast<int>(h), static_cast<int>(m), static_cast<int>(s), static_cast<int>(ms));
 }
 
@@ -568,35 +568,35 @@ void QTime_Delete(QTime* self) {
     delete self;
 }
 
-QDateTime* QDateTime_new() {
+QDateTime* QDateTime_New() {
     return new QDateTime();
 }
 
-QDateTime* QDateTime_new2(QDate* date, QTime* time, int spec) {
+QDateTime* QDateTime_New2(QDate* date, QTime* time, int spec) {
     return new QDateTime(*date, *time, static_cast<Qt::TimeSpec>(spec));
 }
 
-QDateTime* QDateTime_new3(QDate* date, QTime* time, const QTimeZone* timeZone) {
+QDateTime* QDateTime_New3(QDate* date, QTime* time, const QTimeZone* timeZone) {
     return new QDateTime(*date, *time, *timeZone);
 }
 
-QDateTime* QDateTime_new4(QDate* date, QTime* time) {
+QDateTime* QDateTime_New4(QDate* date, QTime* time) {
     return new QDateTime(*date, *time);
 }
 
-QDateTime* QDateTime_new5(const QDateTime* other) {
+QDateTime* QDateTime_New5(const QDateTime* other) {
     return new QDateTime(*other);
 }
 
-QDateTime* QDateTime_new6(QDate* date, QTime* time, int spec, int offsetSeconds) {
+QDateTime* QDateTime_New6(QDate* date, QTime* time, int spec, int offsetSeconds) {
     return new QDateTime(*date, *time, static_cast<Qt::TimeSpec>(spec), static_cast<int>(offsetSeconds));
 }
 
-QDateTime* QDateTime_new7(QDate* date, QTime* time, const QTimeZone* timeZone, int resolve) {
+QDateTime* QDateTime_New7(QDate* date, QTime* time, const QTimeZone* timeZone, int resolve) {
     return new QDateTime(*date, *time, *timeZone, static_cast<QDateTime::TransitionResolution>(resolve));
 }
 
-QDateTime* QDateTime_new8(QDate* date, QTime* time, int resolve) {
+QDateTime* QDateTime_New8(QDate* date, QTime* time, int resolve) {
     return new QDateTime(*date, *time, static_cast<QDateTime::TransitionResolution>(resolve));
 }
 

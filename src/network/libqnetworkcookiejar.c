@@ -8,11 +8,11 @@
 #include "libqnetworkcookiejar.h"
 
 QNetworkCookieJar* q_networkcookiejar_new() {
-    return QNetworkCookieJar_new();
+    return QNetworkCookieJar_New();
 }
 
 QNetworkCookieJar* q_networkcookiejar_new2(void* parent) {
-    return QNetworkCookieJar_new2((QObject*)parent);
+    return QNetworkCookieJar_New2((QObject*)parent);
 }
 
 const QMetaObject* q_networkcookiejar_meta_object(void* self) {

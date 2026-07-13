@@ -3,19 +3,19 @@
 #include "libqxmlstream.h"
 
 QXmlStreamAttribute* q_xmlstreamattribute_new() {
-    return QXmlStreamAttribute_new();
+    return QXmlStreamAttribute_New();
 }
 
 QXmlStreamAttribute* q_xmlstreamattribute_new2(const char* qualifiedName, const char* value) {
-    return QXmlStreamAttribute_new2(qstring(qualifiedName), qstring(value));
+    return QXmlStreamAttribute_New2(qstring(qualifiedName), qstring(value));
 }
 
 QXmlStreamAttribute* q_xmlstreamattribute_new3(const char* namespaceUri, const char* name, const char* value) {
-    return QXmlStreamAttribute_new3(qstring(namespaceUri), qstring(name), qstring(value));
+    return QXmlStreamAttribute_New3(qstring(namespaceUri), qstring(name), qstring(value));
 }
 
 QXmlStreamAttribute* q_xmlstreamattribute_new4(void* param1) {
-    return QXmlStreamAttribute_new4((QXmlStreamAttribute*)param1);
+    return QXmlStreamAttribute_New4((QXmlStreamAttribute*)param1);
 }
 
 const char* q_xmlstreamattribute_namespace_uri(void* self) {
@@ -64,7 +64,7 @@ void q_xmlstreamattribute_delete(void* self) {
 // Also inherits unprojectable QList<QXmlStreamAttribute>
 
 QXmlStreamAttributes* q_xmlstreamattributes_new() {
-    return QXmlStreamAttributes_new();
+    return QXmlStreamAttributes_New();
 }
 
 const char* q_xmlstreamattributes_value(void* self, const char* namespaceUri, const char* name) {
@@ -102,15 +102,15 @@ void q_xmlstreamattributes_delete(void* self) {
 }
 
 QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new() {
-    return QXmlStreamNamespaceDeclaration_new();
+    return QXmlStreamNamespaceDeclaration_New();
 }
 
 QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new2(const char* prefix, const char* namespaceUri) {
-    return QXmlStreamNamespaceDeclaration_new2(qstring(prefix), qstring(namespaceUri));
+    return QXmlStreamNamespaceDeclaration_New2(qstring(prefix), qstring(namespaceUri));
 }
 
 QXmlStreamNamespaceDeclaration* q_xmlstreamnamespacedeclaration_new3(void* param1) {
-    return QXmlStreamNamespaceDeclaration_new3((QXmlStreamNamespaceDeclaration*)param1);
+    return QXmlStreamNamespaceDeclaration_New3((QXmlStreamNamespaceDeclaration*)param1);
 }
 
 const char* q_xmlstreamnamespacedeclaration_prefix(void* self) {
@@ -132,11 +132,11 @@ void q_xmlstreamnamespacedeclaration_delete(void* self) {
 }
 
 QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new() {
-    return QXmlStreamNotationDeclaration_new();
+    return QXmlStreamNotationDeclaration_New();
 }
 
 QXmlStreamNotationDeclaration* q_xmlstreamnotationdeclaration_new2(void* param1) {
-    return QXmlStreamNotationDeclaration_new2((QXmlStreamNotationDeclaration*)param1);
+    return QXmlStreamNotationDeclaration_New2((QXmlStreamNotationDeclaration*)param1);
 }
 
 const char* q_xmlstreamnotationdeclaration_name(void* self) {
@@ -165,11 +165,11 @@ void q_xmlstreamnotationdeclaration_delete(void* self) {
 }
 
 QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new() {
-    return QXmlStreamEntityDeclaration_new();
+    return QXmlStreamEntityDeclaration_New();
 }
 
 QXmlStreamEntityDeclaration* q_xmlstreamentitydeclaration_new2(void* param1) {
-    return QXmlStreamEntityDeclaration_new2((QXmlStreamEntityDeclaration*)param1);
+    return QXmlStreamEntityDeclaration_New2((QXmlStreamEntityDeclaration*)param1);
 }
 
 const char* q_xmlstreamentitydeclaration_name(void* self) {
@@ -212,7 +212,7 @@ void q_xmlstreamentitydeclaration_delete(void* self) {
 }
 
 QXmlStreamEntityResolver* q_xmlstreamentityresolver_new() {
-    return QXmlStreamEntityResolver_new();
+    return QXmlStreamEntityResolver_New();
 }
 
 const char* q_xmlstreamentityresolver_resolve_entity(void* self, const char* publicId, const char* systemId) {
@@ -256,15 +256,15 @@ void q_xmlstreamentityresolver_delete(void* self) {
 }
 
 QXmlStreamReader* q_xmlstreamreader_new() {
-    return QXmlStreamReader_new();
+    return QXmlStreamReader_New();
 }
 
 QXmlStreamReader* q_xmlstreamreader_new2(void* device) {
-    return QXmlStreamReader_new2((QIODevice*)device);
+    return QXmlStreamReader_New2((QIODevice*)device);
 }
 
 QXmlStreamReader* q_xmlstreamreader_new3(const char* data) {
-    return QXmlStreamReader_new3(data);
+    return QXmlStreamReader_New3(data);
 }
 
 void q_xmlstreamreader_set_device(void* self, void* device) {
@@ -551,11 +551,11 @@ void q_xmlstreamreader_delete(void* self) {
 }
 
 QXmlStreamWriter* q_xmlstreamwriter_new() {
-    return QXmlStreamWriter_new();
+    return QXmlStreamWriter_New();
 }
 
 QXmlStreamWriter* q_xmlstreamwriter_new2(void* device) {
-    return QXmlStreamWriter_new2((QIODevice*)device);
+    return QXmlStreamWriter_New2((QIODevice*)device);
 }
 
 void q_xmlstreamwriter_set_device(void* self, void* device) {

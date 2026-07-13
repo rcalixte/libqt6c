@@ -4,27 +4,27 @@
 #include "libqgeorectangle.h"
 
 QGeoRectangle* q_georectangle_new() {
-    return QGeoRectangle_new();
+    return QGeoRectangle_New();
 }
 
 QGeoRectangle* q_georectangle_new2(void* center, double degreesWidth, double degreesHeight) {
-    return QGeoRectangle_new2((QGeoCoordinate*)center, degreesWidth, degreesHeight);
+    return QGeoRectangle_New2((QGeoCoordinate*)center, degreesWidth, degreesHeight);
 }
 
 QGeoRectangle* q_georectangle_new3(void* topLeft, void* bottomRight) {
-    return QGeoRectangle_new3((QGeoCoordinate*)topLeft, (QGeoCoordinate*)bottomRight);
+    return QGeoRectangle_New3((QGeoCoordinate*)topLeft, (QGeoCoordinate*)bottomRight);
 }
 
 QGeoRectangle* q_georectangle_new4(libqt_list /* of QGeoCoordinate* */ coordinates) {
-    return QGeoRectangle_new4(coordinates);
+    return QGeoRectangle_New4(coordinates);
 }
 
 QGeoRectangle* q_georectangle_new5(void* other) {
-    return QGeoRectangle_new5((QGeoRectangle*)other);
+    return QGeoRectangle_New5((QGeoRectangle*)other);
 }
 
 QGeoRectangle* q_georectangle_new6(void* other) {
-    return QGeoRectangle_new6((QGeoShape*)other);
+    return QGeoRectangle_New6((QGeoShape*)other);
 }
 
 void q_georectangle_operator_assign(void* self, void* other) {

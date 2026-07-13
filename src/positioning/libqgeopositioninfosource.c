@@ -8,7 +8,7 @@
 #include "libqgeopositioninfosource.h"
 
 QGeoPositionInfoSource* q_geopositioninfosource_new(void* parent) {
-    return QGeoPositionInfoSource_new((QObject*)parent);
+    return QGeoPositionInfoSource_New((QObject*)parent);
 }
 
 const QMetaObject* q_geopositioninfosource_meta_object(void* self) {

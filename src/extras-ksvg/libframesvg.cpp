@@ -17,11 +17,11 @@
 #include "libframesvg.hpp"
 #include "libframesvg.hxx"
 
-KSvg__FrameSvg* KSvg__FrameSvg_new() {
+KSvg__FrameSvg* KSvg__FrameSvg_New() {
     return new VirtualKSvgFrameSvg();
 }
 
-KSvg__FrameSvg* KSvg__FrameSvg_new2(QObject* parent) {
+KSvg__FrameSvg* KSvg__FrameSvg_New2(QObject* parent) {
     return new VirtualKSvgFrameSvg(parent);
 }
 

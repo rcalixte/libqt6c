@@ -4,11 +4,11 @@
 #include "libremoteaccount.hpp"
 #include "libremoteaccount.hxx"
 
-Attica__RemoteAccount* Attica__RemoteAccount_new() {
+Attica__RemoteAccount* Attica__RemoteAccount_New() {
     return new Attica::RemoteAccount();
 }
 
-Attica__RemoteAccount* Attica__RemoteAccount_new2(const Attica__RemoteAccount* other) {
+Attica__RemoteAccount* Attica__RemoteAccount_New2(const Attica__RemoteAccount* other) {
     return new Attica::RemoteAccount(*other);
 }
 

@@ -30,7 +30,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QAbstractSocket* QAbstractSocket_new(int socketType, QObject* parent);
+QAbstractSocket* QAbstractSocket_New(int socketType, QObject* parent);
 QMetaObject* QAbstractSocket_MetaObject(const QAbstractSocket* self);
 void* QAbstractSocket_Metacast(QAbstractSocket* self, const char* param1);
 int QAbstractSocket_Metacall(QAbstractSocket* self, int param1, int param2, void** param3);

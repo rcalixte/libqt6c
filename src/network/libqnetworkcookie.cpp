@@ -9,20 +9,20 @@
 #include "libqnetworkcookie.hpp"
 #include "libqnetworkcookie.hxx"
 
-QNetworkCookie* QNetworkCookie_new() {
+QNetworkCookie* QNetworkCookie_New() {
     return new QNetworkCookie();
 }
 
-QNetworkCookie* QNetworkCookie_new2(const QNetworkCookie* other) {
+QNetworkCookie* QNetworkCookie_New2(const QNetworkCookie* other) {
     return new QNetworkCookie(*other);
 }
 
-QNetworkCookie* QNetworkCookie_new3(const libqt_string name) {
+QNetworkCookie* QNetworkCookie_New3(const libqt_string name) {
     QByteArray name_QByteArray(name.data, name.len);
     return new QNetworkCookie(name_QByteArray);
 }
 
-QNetworkCookie* QNetworkCookie_new4(const libqt_string name, const libqt_string value) {
+QNetworkCookie* QNetworkCookie_New4(const libqt_string name, const libqt_string value) {
     QByteArray name_QByteArray(name.data, name.len);
     QByteArray value_QByteArray(value.data, value.len);
     return new QNetworkCookie(name_QByteArray, value_QByteArray);

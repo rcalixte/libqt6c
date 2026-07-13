@@ -44,11 +44,11 @@
 #include "libkdatetimeedit.hpp"
 #include "libkdatetimeedit.hxx"
 
-KDateTimeEdit* KDateTimeEdit_new(QWidget* parent) {
+KDateTimeEdit* KDateTimeEdit_New(QWidget* parent) {
     return new VirtualKDateTimeEdit(parent);
 }
 
-KDateTimeEdit* KDateTimeEdit_new2() {
+KDateTimeEdit* KDateTimeEdit_New2() {
     return new VirtualKDateTimeEdit();
 }
 

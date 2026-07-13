@@ -30,7 +30,7 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KNSWidgets__Action* KNSWidgets__Action_new(const libqt_string text, const libqt_string configFile, QObject* parent);
+KNSWidgets__Action* KNSWidgets__Action_New(const libqt_string text, const libqt_string configFile, QObject* parent);
 QMetaObject* KNSWidgets__Action_MetaObject(const KNSWidgets__Action* self);
 void* KNSWidgets__Action_Metacast(KNSWidgets__Action* self, const char* param1);
 int KNSWidgets__Action_Metacall(KNSWidgets__Action* self, int param1, int param2, void** param3);

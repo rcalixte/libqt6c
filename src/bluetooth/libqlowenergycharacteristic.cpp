@@ -8,11 +8,11 @@
 #include "libqlowenergycharacteristic.hpp"
 #include "libqlowenergycharacteristic.hxx"
 
-QLowEnergyCharacteristic* QLowEnergyCharacteristic_new() {
+QLowEnergyCharacteristic* QLowEnergyCharacteristic_New() {
     return new QLowEnergyCharacteristic();
 }
 
-QLowEnergyCharacteristic* QLowEnergyCharacteristic_new2(const QLowEnergyCharacteristic* other) {
+QLowEnergyCharacteristic* QLowEnergyCharacteristic_New2(const QLowEnergyCharacteristic* other) {
     return new QLowEnergyCharacteristic(*other);
 }
 

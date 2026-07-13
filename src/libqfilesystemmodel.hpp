@@ -37,8 +37,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QFileSystemModel* QFileSystemModel_new();
-QFileSystemModel* QFileSystemModel_new2(QObject* parent);
+QFileSystemModel* QFileSystemModel_New();
+QFileSystemModel* QFileSystemModel_New2(QObject* parent);
 QMetaObject* QFileSystemModel_MetaObject(const QFileSystemModel* self);
 void* QFileSystemModel_Metacast(QFileSystemModel* self, const char* param1);
 int QFileSystemModel_Metacall(QFileSystemModel* self, int param1, int param2, void** param3);

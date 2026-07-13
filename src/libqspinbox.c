@@ -17,11 +17,11 @@
 #include "libqspinbox.h"
 
 QSpinBox* q_spinbox_new(void* parent) {
-    return QSpinBox_new((QWidget*)parent);
+    return QSpinBox_New((QWidget*)parent);
 }
 
 QSpinBox* q_spinbox_new2() {
-    return QSpinBox_new2();
+    return QSpinBox_New2();
 }
 
 const QMetaObject* q_spinbox_meta_object(void* self) {
@@ -2496,11 +2496,11 @@ void q_spinbox_delete(void* self) {
 }
 
 QDoubleSpinBox* q_doublespinbox_new(void* parent) {
-    return QDoubleSpinBox_new((QWidget*)parent);
+    return QDoubleSpinBox_New((QWidget*)parent);
 }
 
 QDoubleSpinBox* q_doublespinbox_new2() {
-    return QDoubleSpinBox_new2();
+    return QDoubleSpinBox_New2();
 }
 
 const QMetaObject* q_doublespinbox_meta_object(void* self) {

@@ -16,11 +16,11 @@
 #include "libqcoreapplication.hpp"
 #include "libqcoreapplication.hxx"
 
-QCoreApplication* QCoreApplication_new(int* argc, char** argv) {
+QCoreApplication* QCoreApplication_New(int* argc, char** argv) {
     return new VirtualQCoreApplication(static_cast<int&>(*argc), argv);
 }
 
-QCoreApplication* QCoreApplication_new2(int* argc, char** argv, int param3) {
+QCoreApplication* QCoreApplication_New2(int* argc, char** argv, int param3) {
     return new VirtualQCoreApplication(static_cast<int&>(*argc), argv, static_cast<int>(param3));
 }
 

@@ -22,8 +22,8 @@ typedef struct Attica__Icon Attica__Icon;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__Icon* Attica__Icon_new();
-Attica__Icon* Attica__Icon_new2(const Attica__Icon* other);
+Attica__Icon* Attica__Icon_New();
+Attica__Icon* Attica__Icon_New2(const Attica__Icon* other);
 void Attica__Icon_OperatorAssign(Attica__Icon* self, const Attica__Icon* other);
 QUrl* Attica__Icon_Url(const Attica__Icon* self);
 void Attica__Icon_SetUrl(Attica__Icon* self, const QUrl* url);

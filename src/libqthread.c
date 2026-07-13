@@ -8,11 +8,11 @@
 #include "libqthread.h"
 
 QThread* q_thread_new() {
-    return QThread_new();
+    return QThread_New();
 }
 
 QThread* q_thread_new2(void* parent) {
-    return QThread_new2((QObject*)parent);
+    return QThread_New2((QObject*)parent);
 }
 
 const QMetaObject* q_thread_meta_object(void* self) {

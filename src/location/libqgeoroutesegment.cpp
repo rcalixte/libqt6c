@@ -6,11 +6,11 @@
 #include "libqgeoroutesegment.hpp"
 #include "libqgeoroutesegment.hxx"
 
-QGeoRouteSegment* QGeoRouteSegment_new() {
+QGeoRouteSegment* QGeoRouteSegment_New() {
     return new QGeoRouteSegment();
 }
 
-QGeoRouteSegment* QGeoRouteSegment_new2(const QGeoRouteSegment* other) {
+QGeoRouteSegment* QGeoRouteSegment_New2(const QGeoRouteSegment* other) {
     return new QGeoRouteSegment(*other);
 }
 

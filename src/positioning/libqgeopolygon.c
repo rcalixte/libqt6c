@@ -5,19 +5,19 @@
 #include "libqgeopolygon.h"
 
 QGeoPolygon* q_geopolygon_new() {
-    return QGeoPolygon_new();
+    return QGeoPolygon_New();
 }
 
 QGeoPolygon* q_geopolygon_new2(libqt_list /* of QGeoCoordinate* */ path) {
-    return QGeoPolygon_new2(path);
+    return QGeoPolygon_New2(path);
 }
 
 QGeoPolygon* q_geopolygon_new3(void* other) {
-    return QGeoPolygon_new3((QGeoPolygon*)other);
+    return QGeoPolygon_New3((QGeoPolygon*)other);
 }
 
 QGeoPolygon* q_geopolygon_new4(void* other) {
-    return QGeoPolygon_new4((QGeoShape*)other);
+    return QGeoPolygon_New4((QGeoShape*)other);
 }
 
 void q_geopolygon_operator_assign(void* self, void* other) {

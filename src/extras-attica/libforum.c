@@ -4,11 +4,11 @@
 #include "libforum.h"
 
 Attica__Forum* k_attica__forum_new() {
-    return Attica__Forum_new();
+    return Attica__Forum_New();
 }
 
 Attica__Forum* k_attica__forum_new2(void* other) {
-    return Attica__Forum_new2((Attica__Forum*)other);
+    return Attica__Forum_New2((Attica__Forum*)other);
 }
 
 void k_attica__forum_operator_assign(void* self, void* other) {

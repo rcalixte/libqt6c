@@ -3,11 +3,11 @@
 #include "libqsemaphore.h"
 
 QSemaphore* q_semaphore_new() {
-    return QSemaphore_new();
+    return QSemaphore_New();
 }
 
 QSemaphore* q_semaphore_new2(int n) {
-    return QSemaphore_new2(n);
+    return QSemaphore_New2(n);
 }
 
 void q_semaphore_acquire(void* self) {
@@ -55,23 +55,23 @@ void q_semaphore_delete(void* self) {
 }
 
 QSemaphoreReleaser* q_semaphorereleaser_new() {
-    return QSemaphoreReleaser_new();
+    return QSemaphoreReleaser_New();
 }
 
 QSemaphoreReleaser* q_semaphorereleaser_new2(void* sem) {
-    return QSemaphoreReleaser_new2((QSemaphore*)sem);
+    return QSemaphoreReleaser_New2((QSemaphore*)sem);
 }
 
 QSemaphoreReleaser* q_semaphorereleaser_new3(void* sem) {
-    return QSemaphoreReleaser_new3((QSemaphore*)sem);
+    return QSemaphoreReleaser_New3((QSemaphore*)sem);
 }
 
 QSemaphoreReleaser* q_semaphorereleaser_new4(void* sem, int n) {
-    return QSemaphoreReleaser_new4((QSemaphore*)sem, n);
+    return QSemaphoreReleaser_New4((QSemaphore*)sem, n);
 }
 
 QSemaphoreReleaser* q_semaphorereleaser_new5(void* sem, int n) {
-    return QSemaphoreReleaser_new5((QSemaphore*)sem, n);
+    return QSemaphoreReleaser_New5((QSemaphore*)sem, n);
 }
 
 void q_semaphorereleaser_swap(void* self, void* other) {

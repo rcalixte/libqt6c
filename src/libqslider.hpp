@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QSlider* QSlider_new(QWidget* parent);
-QSlider* QSlider_new2();
-QSlider* QSlider_new3(int orientation);
-QSlider* QSlider_new4(int orientation, QWidget* parent);
+QSlider* QSlider_New(QWidget* parent);
+QSlider* QSlider_New2();
+QSlider* QSlider_New3(int orientation);
+QSlider* QSlider_New4(int orientation, QWidget* parent);
 QMetaObject* QSlider_MetaObject(const QSlider* self);
 void* QSlider_Metacast(QSlider* self, const char* param1);
 int QSlider_Metacall(QSlider* self, int param1, int param2, void** param3);

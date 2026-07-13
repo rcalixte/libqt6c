@@ -19,11 +19,11 @@ typedef struct QRandomGenerator QRandomGenerator;
 typedef struct QRandomGenerator64 QRandomGenerator64;
 #endif
 
-QRandomGenerator* QRandomGenerator_new();
-QRandomGenerator* QRandomGenerator_new2(const unsigned int* seedBuffer, ptrdiff_t lenVal);
-QRandomGenerator* QRandomGenerator_new3(const unsigned int* begin, const unsigned int* end);
-QRandomGenerator* QRandomGenerator_new4(const QRandomGenerator* other);
-QRandomGenerator* QRandomGenerator_new5(unsigned int seedValue);
+QRandomGenerator* QRandomGenerator_New();
+QRandomGenerator* QRandomGenerator_New2(const unsigned int* seedBuffer, ptrdiff_t lenVal);
+QRandomGenerator* QRandomGenerator_New3(const unsigned int* begin, const unsigned int* end);
+QRandomGenerator* QRandomGenerator_New4(const QRandomGenerator* other);
+QRandomGenerator* QRandomGenerator_New5(unsigned int seedValue);
 void QRandomGenerator_OperatorAssign(QRandomGenerator* self, const QRandomGenerator* other);
 unsigned int QRandomGenerator_Generate(QRandomGenerator* self);
 unsigned long long QRandomGenerator_Generate64(QRandomGenerator* self);
@@ -53,12 +53,12 @@ QRandomGenerator* QRandomGenerator_SecurelySeeded();
 void QRandomGenerator_Seed1(QRandomGenerator* self, unsigned int s);
 void QRandomGenerator_Delete(QRandomGenerator* self);
 
-QRandomGenerator64* QRandomGenerator64_new();
-QRandomGenerator64* QRandomGenerator64_new2(const unsigned int* seedBuffer, ptrdiff_t lenVal);
-QRandomGenerator64* QRandomGenerator64_new3(const unsigned int* begin, const unsigned int* end);
-QRandomGenerator64* QRandomGenerator64_new4(const QRandomGenerator* other);
-QRandomGenerator64* QRandomGenerator64_new5(const QRandomGenerator64* param1);
-QRandomGenerator64* QRandomGenerator64_new6(unsigned int seedValue);
+QRandomGenerator64* QRandomGenerator64_New();
+QRandomGenerator64* QRandomGenerator64_New2(const unsigned int* seedBuffer, ptrdiff_t lenVal);
+QRandomGenerator64* QRandomGenerator64_New3(const unsigned int* begin, const unsigned int* end);
+QRandomGenerator64* QRandomGenerator64_New4(const QRandomGenerator* other);
+QRandomGenerator64* QRandomGenerator64_New5(const QRandomGenerator64* param1);
+QRandomGenerator64* QRandomGenerator64_New6(unsigned int seedValue);
 unsigned long long QRandomGenerator64_Generate(QRandomGenerator64* self);
 unsigned long long QRandomGenerator64_OperatorCall(QRandomGenerator64* self);
 void QRandomGenerator64_Discard(QRandomGenerator64* self, unsigned long long z);

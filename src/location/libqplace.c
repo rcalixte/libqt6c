@@ -10,11 +10,11 @@
 #include "libqplace.h"
 
 QPlace* q_place_new() {
-    return QPlace_new();
+    return QPlace_New();
 }
 
 QPlace* q_place_new2(void* other) {
-    return QPlace_new2((QPlace*)other);
+    return QPlace_New2((QPlace*)other);
 }
 
 void q_place_operator_assign(void* self, void* other) {

@@ -13,11 +13,11 @@
 #include "libkxmlguiclient.hpp"
 #include "libkxmlguiclient.hxx"
 
-KXMLGUIClient* KXMLGUIClient_new() {
+KXMLGUIClient* KXMLGUIClient_New() {
     return new VirtualKXMLGUIClient();
 }
 
-KXMLGUIClient* KXMLGUIClient_new2(KXMLGUIClient* parent) {
+KXMLGUIClient* KXMLGUIClient_New2(KXMLGUIClient* parent) {
     return new VirtualKXMLGUIClient(parent);
 }
 

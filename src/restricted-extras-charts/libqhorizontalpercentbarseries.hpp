@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_new();
-QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_new2(QObject* parent);
+QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_New();
+QHorizontalPercentBarSeries* QHorizontalPercentBarSeries_New2(QObject* parent);
 QMetaObject* QHorizontalPercentBarSeries_MetaObject(const QHorizontalPercentBarSeries* self);
 void* QHorizontalPercentBarSeries_Metacast(QHorizontalPercentBarSeries* self, const char* param1);
 int QHorizontalPercentBarSeries_Metacall(QHorizontalPercentBarSeries* self, int param1, int param2, void** param3);

@@ -4,11 +4,11 @@
 #include "libauthinfo.h"
 
 KIO__AuthInfo* k_io__authinfo_new() {
-    return KIO__AuthInfo_new();
+    return KIO__AuthInfo_New();
 }
 
 KIO__AuthInfo* k_io__authinfo_new2(void* info) {
-    return KIO__AuthInfo_new2((KIO__AuthInfo*)info);
+    return KIO__AuthInfo_New2((KIO__AuthInfo*)info);
 }
 
 void k_io__authinfo_operator_assign(void* self, void* info) {

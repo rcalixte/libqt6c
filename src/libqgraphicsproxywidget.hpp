@@ -50,9 +50,9 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QGraphicsProxyWidget* QGraphicsProxyWidget_new();
-QGraphicsProxyWidget* QGraphicsProxyWidget_new2(QGraphicsItem* parent);
-QGraphicsProxyWidget* QGraphicsProxyWidget_new3(QGraphicsItem* parent, int wFlags);
+QGraphicsProxyWidget* QGraphicsProxyWidget_New();
+QGraphicsProxyWidget* QGraphicsProxyWidget_New2(QGraphicsItem* parent);
+QGraphicsProxyWidget* QGraphicsProxyWidget_New3(QGraphicsItem* parent, int wFlags);
 QMetaObject* QGraphicsProxyWidget_MetaObject(const QGraphicsProxyWidget* self);
 void* QGraphicsProxyWidget_Metacast(QGraphicsProxyWidget* self, const char* param1);
 int QGraphicsProxyWidget_Metacall(QGraphicsProxyWidget* self, int param1, int param2, void** param3);

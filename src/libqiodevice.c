@@ -7,11 +7,11 @@
 #include "libqiodevice.h"
 
 QIODevice* q_iodevice_new() {
-    return QIODevice_new();
+    return QIODevice_New();
 }
 
 QIODevice* q_iodevice_new2(void* parent) {
-    return QIODevice_new2((QObject*)parent);
+    return QIODevice_New2((QObject*)parent);
 }
 
 const QMetaObject* q_iodevice_meta_object(void* self) {

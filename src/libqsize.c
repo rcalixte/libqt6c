@@ -3,23 +3,23 @@
 #include "libqsize.h"
 
 QSize* q_size_new(void* other) {
-    return QSize_new((QSize*)other);
+    return QSize_New((QSize*)other);
 }
 
 QSize* q_size_new2(void* other) {
-    return QSize_new2((QSize*)other);
+    return QSize_New2((QSize*)other);
 }
 
 QSize* q_size_new3() {
-    return QSize_new3();
+    return QSize_New3();
 }
 
 QSize* q_size_new4(int w, int h) {
-    return QSize_new4(w, h);
+    return QSize_New4(w, h);
 }
 
 QSize* q_size_new5(void* param1) {
-    return QSize_new5((QSize*)param1);
+    return QSize_New5((QSize*)param1);
 }
 
 void q_size_copy_assign(void* self, void* other) {
@@ -131,27 +131,27 @@ void q_size_delete(void* self) {
 }
 
 QSizeF* q_sizef_new(void* other) {
-    return QSizeF_new((QSizeF*)other);
+    return QSizeF_New((QSizeF*)other);
 }
 
 QSizeF* q_sizef_new2(void* other) {
-    return QSizeF_new2((QSizeF*)other);
+    return QSizeF_New2((QSizeF*)other);
 }
 
 QSizeF* q_sizef_new3() {
-    return QSizeF_new3();
+    return QSizeF_New3();
 }
 
 QSizeF* q_sizef_new4(void* sz) {
-    return QSizeF_new4((QSize*)sz);
+    return QSizeF_New4((QSize*)sz);
 }
 
 QSizeF* q_sizef_new5(double w, double h) {
-    return QSizeF_new5(w, h);
+    return QSizeF_New5(w, h);
 }
 
 QSizeF* q_sizef_new6(void* param1) {
-    return QSizeF_new6((QSizeF*)param1);
+    return QSizeF_New6((QSizeF*)param1);
 }
 
 void q_sizef_copy_assign(void* self, void* other) {

@@ -6,11 +6,11 @@
 #include "libkacceleratormanager.hpp"
 #include "libkacceleratormanager.hxx"
 
-KAcceleratorManager* KAcceleratorManager_new(const KAcceleratorManager* other) {
+KAcceleratorManager* KAcceleratorManager_New(const KAcceleratorManager* other) {
     return new KAcceleratorManager(*other);
 }
 
-KAcceleratorManager* KAcceleratorManager_new2(KAcceleratorManager* other) {
+KAcceleratorManager* KAcceleratorManager_New2(KAcceleratorManager* other) {
     return new KAcceleratorManager(std::move(*other));
 }
 

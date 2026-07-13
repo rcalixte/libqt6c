@@ -11,7 +11,7 @@
 #include "libkhamburgermenu.h"
 
 KHamburgerMenu* k_hamburgermenu_new(void* parent) {
-    return KHamburgerMenu_new((QObject*)parent);
+    return KHamburgerMenu_New((QObject*)parent);
 }
 
 const QMetaObject* k_hamburgermenu_meta_object(void* self) {

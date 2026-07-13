@@ -5,7 +5,7 @@
 #include "libqcommandlineparser.h"
 
 QCommandLineParser* q_commandlineparser_new() {
-    return QCommandLineParser_new();
+    return QCommandLineParser_New();
 }
 
 const char* q_commandlineparser_tr(const char* sourceText) {

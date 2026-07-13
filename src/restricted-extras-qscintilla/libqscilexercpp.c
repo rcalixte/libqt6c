@@ -11,15 +11,15 @@
 #include "libqscilexercpp.h"
 
 QsciLexerCPP* q_scilexercpp_new() {
-    return QsciLexerCPP_new();
+    return QsciLexerCPP_New();
 }
 
 QsciLexerCPP* q_scilexercpp_new2(void* parent) {
-    return QsciLexerCPP_new2((QObject*)parent);
+    return QsciLexerCPP_New2((QObject*)parent);
 }
 
 QsciLexerCPP* q_scilexercpp_new3(void* parent, bool caseInsensitiveKeywords) {
-    return QsciLexerCPP_new3((QObject*)parent, caseInsensitiveKeywords);
+    return QsciLexerCPP_New3((QObject*)parent, caseInsensitiveKeywords);
 }
 
 const QMetaObject* q_scilexercpp_meta_object(void* self) {

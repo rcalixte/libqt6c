@@ -43,15 +43,15 @@
 #include "libqmainwindow.hpp"
 #include "libqmainwindow.hxx"
 
-QMainWindow* QMainWindow_new(QWidget* parent) {
+QMainWindow* QMainWindow_New(QWidget* parent) {
     return new VirtualQMainWindow(parent);
 }
 
-QMainWindow* QMainWindow_new2() {
+QMainWindow* QMainWindow_New2() {
     return new VirtualQMainWindow();
 }
 
-QMainWindow* QMainWindow_new3(QWidget* parent, int flags) {
+QMainWindow* QMainWindow_New3(QWidget* parent, int flags) {
     return new VirtualQMainWindow(parent, static_cast<Qt::WindowFlags>(flags));
 }
 

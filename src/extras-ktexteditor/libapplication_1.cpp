@@ -15,7 +15,7 @@
 #include "libapplication_1.hpp"
 #include "libapplication_1.hxx"
 
-KTextEditor__Application* KTextEditor__Application_new(QObject* parent) {
+KTextEditor__Application* KTextEditor__Application_New(QObject* parent) {
     return new VirtualKTextEditorApplication(parent);
 }
 

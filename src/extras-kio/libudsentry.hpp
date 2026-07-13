@@ -19,8 +19,8 @@ typedef KIO::UDSEntry KIO__UDSEntry;
 typedef struct KIO__UDSEntry KIO__UDSEntry;
 #endif
 
-KIO__UDSEntry* KIO__UDSEntry_new();
-KIO__UDSEntry* KIO__UDSEntry_new2(const KIO__UDSEntry* param1);
+KIO__UDSEntry* KIO__UDSEntry_New();
+KIO__UDSEntry* KIO__UDSEntry_New2(const KIO__UDSEntry* param1);
 void KIO__UDSEntry_OperatorAssign(KIO__UDSEntry* self, const KIO__UDSEntry* param1);
 libqt_string KIO__UDSEntry_StringValue(const KIO__UDSEntry* self, unsigned int field);
 long long KIO__UDSEntry_NumberValue(const KIO__UDSEntry* self, unsigned int field);

@@ -10,7 +10,7 @@
 #include "libkbookmarkaction.h"
 
 KBookmarkAction* k_bookmarkaction_new(void* bk, void* owner, void* parent) {
-    return KBookmarkAction_new((KBookmark*)bk, (KBookmarkOwner*)owner, (QObject*)parent);
+    return KBookmarkAction_New((KBookmark*)bk, (KBookmarkOwner*)owner, (QObject*)parent);
 }
 
 const QMetaObject* k_bookmarkaction_meta_object(void* self) {

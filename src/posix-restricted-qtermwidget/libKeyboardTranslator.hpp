@@ -39,8 +39,8 @@ typedef struct Konsole__KeyboardTranslator__Entry Konsole__KeyboardTranslator__E
 typedef struct QIODevice QIODevice;
 #endif
 
-Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_new(const libqt_string name);
-Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_new2(const Konsole__KeyboardTranslator* param1);
+Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_New(const libqt_string name);
+Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_New2(const Konsole__KeyboardTranslator* param1);
 libqt_string Konsole__KeyboardTranslator_Name(const Konsole__KeyboardTranslator* self);
 void Konsole__KeyboardTranslator_SetName(Konsole__KeyboardTranslator* self, const libqt_string name);
 libqt_string Konsole__KeyboardTranslator_Description(const Konsole__KeyboardTranslator* self);
@@ -53,7 +53,7 @@ libqt_list /* of Konsole__KeyboardTranslator__Entry* */ Konsole__KeyboardTransla
 Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator_FindEntry3(const Konsole__KeyboardTranslator* self, int keyCode, int modifiers, int state);
 void Konsole__KeyboardTranslator_Delete(Konsole__KeyboardTranslator* self);
 
-Konsole__KeyboardTranslatorReader* Konsole__KeyboardTranslatorReader_new(QIODevice* source);
+Konsole__KeyboardTranslatorReader* Konsole__KeyboardTranslatorReader_New(QIODevice* source);
 libqt_string Konsole__KeyboardTranslatorReader_Description(const Konsole__KeyboardTranslatorReader* self);
 bool Konsole__KeyboardTranslatorReader_HasNextEntry(const Konsole__KeyboardTranslatorReader* self);
 Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslatorReader_NextEntry(Konsole__KeyboardTranslatorReader* self);
@@ -61,12 +61,12 @@ bool Konsole__KeyboardTranslatorReader_ParseError(Konsole__KeyboardTranslatorRea
 Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslatorReader_CreateEntry(const libqt_string condition, const libqt_string result);
 void Konsole__KeyboardTranslatorReader_Delete(Konsole__KeyboardTranslatorReader* self);
 
-Konsole__KeyboardTranslatorWriter* Konsole__KeyboardTranslatorWriter_new(QIODevice* destination);
+Konsole__KeyboardTranslatorWriter* Konsole__KeyboardTranslatorWriter_New(QIODevice* destination);
 void Konsole__KeyboardTranslatorWriter_WriteHeader(Konsole__KeyboardTranslatorWriter* self, const libqt_string description);
 void Konsole__KeyboardTranslatorWriter_WriteEntry(Konsole__KeyboardTranslatorWriter* self, const Konsole__KeyboardTranslator__Entry* entry);
 void Konsole__KeyboardTranslatorWriter_Delete(Konsole__KeyboardTranslatorWriter* self);
 
-Konsole__KeyboardTranslatorManager* Konsole__KeyboardTranslatorManager_new();
+Konsole__KeyboardTranslatorManager* Konsole__KeyboardTranslatorManager_New();
 void Konsole__KeyboardTranslatorManager_AddTranslator(Konsole__KeyboardTranslatorManager* self, Konsole__KeyboardTranslator* translator);
 bool Konsole__KeyboardTranslatorManager_DeleteTranslator(Konsole__KeyboardTranslatorManager* self, const libqt_string name);
 Konsole__KeyboardTranslator* Konsole__KeyboardTranslatorManager_DefaultTranslator(Konsole__KeyboardTranslatorManager* self);
@@ -77,8 +77,8 @@ void Konsole__KeyboardTranslatorManager_Delete(Konsole__KeyboardTranslatorManage
 
 int Konsole_OneOrZero(int value);
 
-Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_new();
-Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_new2(const Konsole__KeyboardTranslator__Entry* param1);
+Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_New();
+Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_New2(const Konsole__KeyboardTranslator__Entry* param1);
 bool Konsole__KeyboardTranslator__Entry_IsNull(const Konsole__KeyboardTranslator__Entry* self);
 int Konsole__KeyboardTranslator__Entry_Command(const Konsole__KeyboardTranslator__Entry* self);
 void Konsole__KeyboardTranslator__Entry_SetCommand(Konsole__KeyboardTranslator__Entry* self, int command);

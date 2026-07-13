@@ -11,15 +11,15 @@
 #include "libknotification.h"
 
 KNotificationAction* k_notificationaction_new() {
-    return KNotificationAction_new();
+    return KNotificationAction_New();
 }
 
 KNotificationAction* k_notificationaction_new2(const char* label) {
-    return KNotificationAction_new2(qstring(label));
+    return KNotificationAction_New2(qstring(label));
 }
 
 KNotificationAction* k_notificationaction_new3(void* parent) {
-    return KNotificationAction_new3((QObject*)parent);
+    return KNotificationAction_New3((QObject*)parent);
 }
 
 const QMetaObject* k_notificationaction_meta_object(void* self) {
@@ -458,15 +458,15 @@ void k_notificationaction_delete(void* self) {
 }
 
 KNotification* k_notification_new(const char* eventId) {
-    return KNotification_new(qstring(eventId));
+    return KNotification_New(qstring(eventId));
 }
 
 KNotification* k_notification_new2(const char* eventId, int32_t flags) {
-    return KNotification_new2(qstring(eventId), flags);
+    return KNotification_New2(qstring(eventId), flags);
 }
 
 KNotification* k_notification_new3(const char* eventId, int32_t flags, void* parent) {
-    return KNotification_new3(qstring(eventId), flags, (QObject*)parent);
+    return KNotification_New3(qstring(eventId), flags, (QObject*)parent);
 }
 
 const QMetaObject* k_notification_meta_object(void* self) {

@@ -13,19 +13,19 @@
 #include "libqwavedecoder.hpp"
 #include "libqwavedecoder.hxx"
 
-QWaveDecoder* QWaveDecoder_new(QIODevice* device) {
+QWaveDecoder* QWaveDecoder_New(QIODevice* device) {
     return new VirtualQWaveDecoder(device);
 }
 
-QWaveDecoder* QWaveDecoder_new2(QIODevice* device, const QAudioFormat* format) {
+QWaveDecoder* QWaveDecoder_New2(QIODevice* device, const QAudioFormat* format) {
     return new VirtualQWaveDecoder(device, *format);
 }
 
-QWaveDecoder* QWaveDecoder_new3(QIODevice* device, QObject* parent) {
+QWaveDecoder* QWaveDecoder_New3(QIODevice* device, QObject* parent) {
     return new VirtualQWaveDecoder(device, parent);
 }
 
-QWaveDecoder* QWaveDecoder_new4(QIODevice* device, const QAudioFormat* format, QObject* parent) {
+QWaveDecoder* QWaveDecoder_New4(QIODevice* device, const QAudioFormat* format, QObject* parent) {
     return new VirtualQWaveDecoder(device, *format, parent);
 }
 

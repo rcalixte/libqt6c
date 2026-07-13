@@ -30,8 +30,8 @@ typedef struct QsciLexerOctave QsciLexerOctave;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerOctave* QsciLexerOctave_new();
-QsciLexerOctave* QsciLexerOctave_new2(QObject* parent);
+QsciLexerOctave* QsciLexerOctave_New();
+QsciLexerOctave* QsciLexerOctave_New2(QObject* parent);
 QMetaObject* QsciLexerOctave_MetaObject(const QsciLexerOctave* self);
 void* QsciLexerOctave_Metacast(QsciLexerOctave* self, const char* param1);
 int QsciLexerOctave_Metacall(QsciLexerOctave* self, int param1, int param2, void** param3);

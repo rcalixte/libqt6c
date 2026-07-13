@@ -33,8 +33,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KDescendantsProxyModel* KDescendantsProxyModel_new();
-KDescendantsProxyModel* KDescendantsProxyModel_new2(QObject* parent);
+KDescendantsProxyModel* KDescendantsProxyModel_New();
+KDescendantsProxyModel* KDescendantsProxyModel_New2(QObject* parent);
 QMetaObject* KDescendantsProxyModel_MetaObject(const KDescendantsProxyModel* self);
 void* KDescendantsProxyModel_Metacast(KDescendantsProxyModel* self, const char* param1);
 int KDescendantsProxyModel_Metacall(KDescendantsProxyModel* self, int param1, int param2, void** param3);

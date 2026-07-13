@@ -52,14 +52,14 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDialogButtonBox* QDialogButtonBox_new(QWidget* parent);
-QDialogButtonBox* QDialogButtonBox_new2();
-QDialogButtonBox* QDialogButtonBox_new3(int orientation);
-QDialogButtonBox* QDialogButtonBox_new4(int buttons);
-QDialogButtonBox* QDialogButtonBox_new5(int buttons, int orientation);
-QDialogButtonBox* QDialogButtonBox_new6(int orientation, QWidget* parent);
-QDialogButtonBox* QDialogButtonBox_new7(int buttons, QWidget* parent);
-QDialogButtonBox* QDialogButtonBox_new8(int buttons, int orientation, QWidget* parent);
+QDialogButtonBox* QDialogButtonBox_New(QWidget* parent);
+QDialogButtonBox* QDialogButtonBox_New2();
+QDialogButtonBox* QDialogButtonBox_New3(int orientation);
+QDialogButtonBox* QDialogButtonBox_New4(int buttons);
+QDialogButtonBox* QDialogButtonBox_New5(int buttons, int orientation);
+QDialogButtonBox* QDialogButtonBox_New6(int orientation, QWidget* parent);
+QDialogButtonBox* QDialogButtonBox_New7(int buttons, QWidget* parent);
+QDialogButtonBox* QDialogButtonBox_New8(int buttons, int orientation, QWidget* parent);
 QMetaObject* QDialogButtonBox_MetaObject(const QDialogButtonBox* self);
 void* QDialogButtonBox_Metacast(QDialogButtonBox* self, const char* param1);
 int QDialogButtonBox_Metacall(QDialogButtonBox* self, int param1, int param2, void** param3);

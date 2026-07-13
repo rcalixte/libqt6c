@@ -11,11 +11,11 @@
 #include "libqlogvalueaxis.hpp"
 #include "libqlogvalueaxis.hxx"
 
-QLogValueAxis* QLogValueAxis_new() {
+QLogValueAxis* QLogValueAxis_New() {
     return new VirtualQLogValueAxis();
 }
 
-QLogValueAxis* QLogValueAxis_new2(QObject* parent) {
+QLogValueAxis* QLogValueAxis_New2(QObject* parent) {
     return new VirtualQLogValueAxis(parent);
 }
 

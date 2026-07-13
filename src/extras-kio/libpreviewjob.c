@@ -14,7 +14,7 @@
 #include "libpreviewjob.h"
 
 KIO__PreviewJob* k_io__previewjob_new(void* items, void* size) {
-    return KIO__PreviewJob_new((KFileItemList*)items, (QSize*)size);
+    return KIO__PreviewJob_New((KFileItemList*)items, (QSize*)size);
 }
 
 KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enabledPlugins[static 1]) {
@@ -29,7 +29,7 @@ KIO__PreviewJob* k_io__previewjob_new2(void* items, void* size, const char* enab
     }
     libqt_list enabledPlugins_list = qlist(enabledPlugins_qstr, enabledPlugins_len);
 
-    KIO__PreviewJob* _out = KIO__PreviewJob_new2((KFileItemList*)items, (QSize*)size, enabledPlugins_list);
+    KIO__PreviewJob* _out = KIO__PreviewJob_New2((KFileItemList*)items, (QSize*)size, enabledPlugins_list);
     free(enabledPlugins_qstr);
     return _out;
 }

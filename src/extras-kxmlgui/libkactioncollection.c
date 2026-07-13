@@ -12,11 +12,11 @@
 #include "libkactioncollection.h"
 
 KActionCollection* k_actioncollection_new(void* parent) {
-    return KActionCollection_new((QObject*)parent);
+    return KActionCollection_New((QObject*)parent);
 }
 
 KActionCollection* k_actioncollection_new2(void* parent, const char* cName) {
-    return KActionCollection_new2((QObject*)parent, qstring(cName));
+    return KActionCollection_New2((QObject*)parent, qstring(cName));
 }
 
 const QMetaObject* k_actioncollection_meta_object(void* self) {

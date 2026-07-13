@@ -10,7 +10,7 @@
 #include "libqwebenginehistory.h"
 
 QWebEngineHistoryItem* q_webenginehistoryitem_new(void* other) {
-    return QWebEngineHistoryItem_new((QWebEngineHistoryItem*)other);
+    return QWebEngineHistoryItem_New((QWebEngineHistoryItem*)other);
 }
 
 void q_webenginehistoryitem_operator_assign(void* self, void* other) {

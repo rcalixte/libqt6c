@@ -52,16 +52,16 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KOpenWithDialog* KOpenWithDialog_new(QWidget* parent);
-KOpenWithDialog* KOpenWithDialog_new2(const libqt_list /* of QUrl* */ urls);
-KOpenWithDialog* KOpenWithDialog_new3(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value);
-KOpenWithDialog* KOpenWithDialog_new4(const libqt_string mimeType, const libqt_string value);
-KOpenWithDialog* KOpenWithDialog_new5(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value);
-KOpenWithDialog* KOpenWithDialog_new6();
-KOpenWithDialog* KOpenWithDialog_new7(const libqt_list /* of QUrl* */ urls, QWidget* parent);
-KOpenWithDialog* KOpenWithDialog_new8(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value, QWidget* parent);
-KOpenWithDialog* KOpenWithDialog_new9(const libqt_string mimeType, const libqt_string value, QWidget* parent);
-KOpenWithDialog* KOpenWithDialog_new10(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value, QWidget* parent);
+KOpenWithDialog* KOpenWithDialog_New(QWidget* parent);
+KOpenWithDialog* KOpenWithDialog_New2(const libqt_list /* of QUrl* */ urls);
+KOpenWithDialog* KOpenWithDialog_New3(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value);
+KOpenWithDialog* KOpenWithDialog_New4(const libqt_string mimeType, const libqt_string value);
+KOpenWithDialog* KOpenWithDialog_New5(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value);
+KOpenWithDialog* KOpenWithDialog_New6();
+KOpenWithDialog* KOpenWithDialog_New7(const libqt_list /* of QUrl* */ urls, QWidget* parent);
+KOpenWithDialog* KOpenWithDialog_New8(const libqt_list /* of QUrl* */ urls, const libqt_string text, const libqt_string value, QWidget* parent);
+KOpenWithDialog* KOpenWithDialog_New9(const libqt_string mimeType, const libqt_string value, QWidget* parent);
+KOpenWithDialog* KOpenWithDialog_New10(const libqt_list /* of QUrl* */ urls, const libqt_string mimeType, const libqt_string text, const libqt_string value, QWidget* parent);
 QMetaObject* KOpenWithDialog_MetaObject(const KOpenWithDialog* self);
 void* KOpenWithDialog_Metacast(KOpenWithDialog* self, const char* param1);
 int KOpenWithDialog_Metacall(KOpenWithDialog* self, int param1, int param2, void** param3);

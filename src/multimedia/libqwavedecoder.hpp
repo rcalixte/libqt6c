@@ -27,10 +27,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWaveDecoder QWaveDecoder;
 #endif
 
-QWaveDecoder* QWaveDecoder_new(QIODevice* device);
-QWaveDecoder* QWaveDecoder_new2(QIODevice* device, const QAudioFormat* format);
-QWaveDecoder* QWaveDecoder_new3(QIODevice* device, QObject* parent);
-QWaveDecoder* QWaveDecoder_new4(QIODevice* device, const QAudioFormat* format, QObject* parent);
+QWaveDecoder* QWaveDecoder_New(QIODevice* device);
+QWaveDecoder* QWaveDecoder_New2(QIODevice* device, const QAudioFormat* format);
+QWaveDecoder* QWaveDecoder_New3(QIODevice* device, QObject* parent);
+QWaveDecoder* QWaveDecoder_New4(QIODevice* device, const QAudioFormat* format, QObject* parent);
 QMetaObject* QWaveDecoder_MetaObject(const QWaveDecoder* self);
 void* QWaveDecoder_Metacast(QWaveDecoder* self, const char* param1);
 int QWaveDecoder_Metacall(QWaveDecoder* self, int param1, int param2, void** param3);

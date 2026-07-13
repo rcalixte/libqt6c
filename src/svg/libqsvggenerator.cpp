@@ -12,11 +12,11 @@
 #include "libqsvggenerator.hpp"
 #include "libqsvggenerator.hxx"
 
-QSvgGenerator* QSvgGenerator_new() {
+QSvgGenerator* QSvgGenerator_New() {
     return new VirtualQSvgGenerator();
 }
 
-QSvgGenerator* QSvgGenerator_new2(int version) {
+QSvgGenerator* QSvgGenerator_New2(int version) {
     return new VirtualQSvgGenerator(static_cast<QSvgGenerator::SvgVersion>(version));
 }
 

@@ -6,11 +6,11 @@
 #include "libdetails.hpp"
 #include "libdetails.hxx"
 
-PackageKit__Details* PackageKit__Details_new() {
+PackageKit__Details* PackageKit__Details_New() {
     return new PackageKit::Details();
 }
 
-PackageKit__Details* PackageKit__Details_new2(const libqt_map /* of libqt_string to QVariant* */ other) {
+PackageKit__Details* PackageKit__Details_New2(const libqt_map /* of libqt_string to QVariant* */ other) {
     QMap<QString, QVariant> other_QMap;
     libqt_string* other_karr = static_cast<libqt_string*>(other.keys);
     QVariant** other_varr = static_cast<QVariant**>(other.values);

@@ -49,20 +49,20 @@
 #include "libkrichtextedit.hpp"
 #include "libkrichtextedit.hxx"
 
-KRichTextEdit* KRichTextEdit_new(QWidget* parent) {
+KRichTextEdit* KRichTextEdit_New(QWidget* parent) {
     return new VirtualKRichTextEdit(parent);
 }
 
-KRichTextEdit* KRichTextEdit_new2(const libqt_string text) {
+KRichTextEdit* KRichTextEdit_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKRichTextEdit(text_QString);
 }
 
-KRichTextEdit* KRichTextEdit_new3() {
+KRichTextEdit* KRichTextEdit_New3() {
     return new VirtualKRichTextEdit();
 }
 
-KRichTextEdit* KRichTextEdit_new4(const libqt_string text, QWidget* parent) {
+KRichTextEdit* KRichTextEdit_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKRichTextEdit(text_QString, parent);
 }

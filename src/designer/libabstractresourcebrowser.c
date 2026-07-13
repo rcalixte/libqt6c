@@ -14,11 +14,11 @@
 #include "libabstractresourcebrowser.h"
 
 QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_new(void* parent) {
-    return QDesignerResourceBrowserInterface_new((QWidget*)parent);
+    return QDesignerResourceBrowserInterface_New((QWidget*)parent);
 }
 
 QDesignerResourceBrowserInterface* q_designerresourcebrowserinterface_new2() {
-    return QDesignerResourceBrowserInterface_new2();
+    return QDesignerResourceBrowserInterface_New2();
 }
 
 const QMetaObject* q_designerresourcebrowserinterface_meta_object(void* self) {

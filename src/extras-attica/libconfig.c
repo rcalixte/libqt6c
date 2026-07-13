@@ -2,11 +2,11 @@
 #include "libconfig.h"
 
 Attica__Config* k_attica__config_new() {
-    return Attica__Config_new();
+    return Attica__Config_New();
 }
 
 Attica__Config* k_attica__config_new2(void* other) {
-    return Attica__Config_new2((Attica__Config*)other);
+    return Attica__Config_New2((Attica__Config*)other);
 }
 
 void k_attica__config_operator_assign(void* self, void* other) {

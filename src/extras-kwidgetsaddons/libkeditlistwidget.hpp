@@ -58,12 +58,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KEditListWidget* KEditListWidget_new(QWidget* parent);
-KEditListWidget* KEditListWidget_new2();
-KEditListWidget* KEditListWidget_new3(const KEditListWidget__CustomEditor* customEditor);
-KEditListWidget* KEditListWidget_new4(const KEditListWidget__CustomEditor* customEditor, QWidget* parent);
-KEditListWidget* KEditListWidget_new5(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering);
-KEditListWidget* KEditListWidget_new6(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering, int buttons);
+KEditListWidget* KEditListWidget_New(QWidget* parent);
+KEditListWidget* KEditListWidget_New2();
+KEditListWidget* KEditListWidget_New3(const KEditListWidget__CustomEditor* customEditor);
+KEditListWidget* KEditListWidget_New4(const KEditListWidget__CustomEditor* customEditor, QWidget* parent);
+KEditListWidget* KEditListWidget_New5(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering);
+KEditListWidget* KEditListWidget_New6(const KEditListWidget__CustomEditor* customEditor, QWidget* parent, bool checkAtEntering, int buttons);
 QMetaObject* KEditListWidget_MetaObject(const KEditListWidget* self);
 void* KEditListWidget_Metacast(KEditListWidget* self, const char* param1);
 int KEditListWidget_Metacall(KEditListWidget* self, int param1, int param2, void** param3);
@@ -274,9 +274,9 @@ void KEditListWidget_OnGetDecodedMetricF(const KEditListWidget* self, intptr_t s
 double KEditListWidget_SuperGetDecodedMetricF(const KEditListWidget* self, int metricA, int metricB);
 void KEditListWidget_Delete(KEditListWidget* self);
 
-KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_new();
-KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_new2(QWidget* repWidget, QLineEdit* edit);
-KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_new3(QComboBox* combo);
+KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_New();
+KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_New2(QWidget* repWidget, QLineEdit* edit);
+KEditListWidget__CustomEditor* KEditListWidget__CustomEditor_New3(QComboBox* combo);
 void KEditListWidget__CustomEditor_SetRepresentationWidget(KEditListWidget__CustomEditor* self, QWidget* repWidget);
 void KEditListWidget__CustomEditor_SetLineEdit(KEditListWidget__CustomEditor* self, QLineEdit* edit);
 QWidget* KEditListWidget__CustomEditor_RepresentationWidget(const KEditListWidget__CustomEditor* self);

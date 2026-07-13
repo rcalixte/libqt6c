@@ -6,23 +6,23 @@
 #include "libqfileinfo.h"
 
 QFileInfo* q_fileinfo_new() {
-    return QFileInfo_new();
+    return QFileInfo_New();
 }
 
 QFileInfo* q_fileinfo_new2(const char* file) {
-    return QFileInfo_new2(qstring(file));
+    return QFileInfo_New2(qstring(file));
 }
 
 QFileInfo* q_fileinfo_new3(void* file) {
-    return QFileInfo_new3((QFileDevice*)file);
+    return QFileInfo_New3((QFileDevice*)file);
 }
 
 QFileInfo* q_fileinfo_new4(void* dir, const char* file) {
-    return QFileInfo_new4((QDir*)dir, qstring(file));
+    return QFileInfo_New4((QDir*)dir, qstring(file));
 }
 
 QFileInfo* q_fileinfo_new5(void* fileinfo) {
-    return QFileInfo_new5((QFileInfo*)fileinfo);
+    return QFileInfo_New5((QFileInfo*)fileinfo);
 }
 
 void q_fileinfo_operator_assign(void* self, void* fileinfo) {

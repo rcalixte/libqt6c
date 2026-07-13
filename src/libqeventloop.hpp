@@ -27,8 +27,8 @@ typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QEventLoop* QEventLoop_new();
-QEventLoop* QEventLoop_new2(QObject* parent);
+QEventLoop* QEventLoop_New();
+QEventLoop* QEventLoop_New2(QObject* parent);
 QMetaObject* QEventLoop_MetaObject(const QEventLoop* self);
 void* QEventLoop_Metacast(QEventLoop* self, const char* param1);
 int QEventLoop_Metacall(QEventLoop* self, int param1, int param2, void** param3);
@@ -84,9 +84,9 @@ void QEventLoop_OnIsSignalConnected(const QEventLoop* self, intptr_t slot);
 bool QEventLoop_SuperIsSignalConnected(const QEventLoop* self, const QMetaMethod* signal);
 void QEventLoop_Delete(QEventLoop* self);
 
-QEventLoopLocker* QEventLoopLocker_new();
-QEventLoopLocker* QEventLoopLocker_new2(QEventLoop* loop);
-QEventLoopLocker* QEventLoopLocker_new3(QThread* thread);
+QEventLoopLocker* QEventLoopLocker_New();
+QEventLoopLocker* QEventLoopLocker_New2(QEventLoop* loop);
+QEventLoopLocker* QEventLoopLocker_New3(QThread* thread);
 void QEventLoopLocker_Swap(QEventLoopLocker* self, QEventLoopLocker* other);
 void QEventLoopLocker_Delete(QEventLoopLocker* self);
 

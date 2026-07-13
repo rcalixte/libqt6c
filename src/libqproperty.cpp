@@ -12,7 +12,7 @@
 #include "libqproperty.hpp"
 #include "libqproperty.hxx"
 
-QScopedPropertyUpdateGroup* QScopedPropertyUpdateGroup_new() {
+QScopedPropertyUpdateGroup* QScopedPropertyUpdateGroup_New() {
     return new QScopedPropertyUpdateGroup();
 }
 
@@ -20,19 +20,19 @@ void QScopedPropertyUpdateGroup_Delete(QScopedPropertyUpdateGroup* self) {
     delete self;
 }
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new(const QPropertyBindingSourceLocation* other) {
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New(const QPropertyBindingSourceLocation* other) {
     return new QPropertyBindingSourceLocation(*other);
 }
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new2(QPropertyBindingSourceLocation* other) {
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New2(QPropertyBindingSourceLocation* other) {
     return new QPropertyBindingSourceLocation(std::move(*other));
 }
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new3() {
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New3() {
     return new QPropertyBindingSourceLocation();
 }
 
-QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_new4(const QPropertyBindingSourceLocation* param1) {
+QPropertyBindingSourceLocation* QPropertyBindingSourceLocation_New4(const QPropertyBindingSourceLocation* param1) {
     return new QPropertyBindingSourceLocation(*param1);
 }
 
@@ -80,19 +80,19 @@ void QPropertyBindingSourceLocation_Delete(QPropertyBindingSourceLocation* self)
     delete self;
 }
 
-QPropertyBindingError* QPropertyBindingError_new() {
+QPropertyBindingError* QPropertyBindingError_New() {
     return new QPropertyBindingError();
 }
 
-QPropertyBindingError* QPropertyBindingError_new2(int type) {
+QPropertyBindingError* QPropertyBindingError_New2(int type) {
     return new QPropertyBindingError(static_cast<QPropertyBindingError::Type>(type));
 }
 
-QPropertyBindingError* QPropertyBindingError_new3(const QPropertyBindingError* other) {
+QPropertyBindingError* QPropertyBindingError_New3(const QPropertyBindingError* other) {
     return new QPropertyBindingError(*other);
 }
 
-QPropertyBindingError* QPropertyBindingError_new4(int type, const libqt_string description) {
+QPropertyBindingError* QPropertyBindingError_New4(int type, const libqt_string description) {
     QString description_QString = QString::fromUtf8(description.data, description.len);
     return new QPropertyBindingError(static_cast<QPropertyBindingError::Type>(type), description_QString);
 }
@@ -125,11 +125,11 @@ void QPropertyBindingError_Delete(QPropertyBindingError* self) {
     delete self;
 }
 
-QUntypedPropertyBinding* QUntypedPropertyBinding_new() {
+QUntypedPropertyBinding* QUntypedPropertyBinding_New() {
     return new QUntypedPropertyBinding();
 }
 
-QUntypedPropertyBinding* QUntypedPropertyBinding_new2(const QUntypedPropertyBinding* other) {
+QUntypedPropertyBinding* QUntypedPropertyBinding_New2(const QUntypedPropertyBinding* other) {
     return new QUntypedPropertyBinding(*other);
 }
 
@@ -153,11 +153,11 @@ void QUntypedPropertyBinding_Delete(QUntypedPropertyBinding* self) {
     delete self;
 }
 
-QPropertyObserverBase* QPropertyObserverBase_new() {
+QPropertyObserverBase* QPropertyObserverBase_New() {
     return new QPropertyObserverBase();
 }
 
-QPropertyObserverBase* QPropertyObserverBase_new2(const QPropertyObserverBase* param1) {
+QPropertyObserverBase* QPropertyObserverBase_New2(const QPropertyObserverBase* param1) {
     return new QPropertyObserverBase(*param1);
 }
 
@@ -165,7 +165,7 @@ void QPropertyObserverBase_Delete(QPropertyObserverBase* self) {
     delete self;
 }
 
-QPropertyObserver* QPropertyObserver_new() {
+QPropertyObserver* QPropertyObserver_New() {
     return new QPropertyObserver();
 }
 
@@ -173,7 +173,7 @@ void QPropertyObserver_Delete(QPropertyObserver* self) {
     delete self;
 }
 
-QPropertyNotifier* QPropertyNotifier_new() {
+QPropertyNotifier* QPropertyNotifier_New() {
     return new QPropertyNotifier();
 }
 
@@ -181,19 +181,19 @@ void QPropertyNotifier_Delete(QPropertyNotifier* self) {
     delete self;
 }
 
-QUntypedBindable* QUntypedBindable_new(const QUntypedBindable* other) {
+QUntypedBindable* QUntypedBindable_New(const QUntypedBindable* other) {
     return new QUntypedBindable(*other);
 }
 
-QUntypedBindable* QUntypedBindable_new2(QUntypedBindable* other) {
+QUntypedBindable* QUntypedBindable_New2(QUntypedBindable* other) {
     return new QUntypedBindable(std::move(*other));
 }
 
-QUntypedBindable* QUntypedBindable_new3() {
+QUntypedBindable* QUntypedBindable_New3() {
     return new QUntypedBindable();
 }
 
-QUntypedBindable* QUntypedBindable_new4(const QUntypedBindable* param1) {
+QUntypedBindable* QUntypedBindable_New4(const QUntypedBindable* param1) {
     return new QUntypedBindable(*param1);
 }
 

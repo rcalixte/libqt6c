@@ -13,7 +13,7 @@
 #include "libqwidgetaction.hpp"
 #include "libqwidgetaction.hxx"
 
-QWidgetAction* QWidgetAction_new(QObject* parent) {
+QWidgetAction* QWidgetAction_New(QObject* parent) {
     return new VirtualQWidgetAction(parent);
 }
 

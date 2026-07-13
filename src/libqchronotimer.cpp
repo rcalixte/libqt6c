@@ -10,19 +10,19 @@
 #include "libqchronotimer.hpp"
 #include "libqchronotimer.hxx"
 
-QChronoTimer* QChronoTimer_new(int64_t nsec) {
+QChronoTimer* QChronoTimer_New(int64_t nsec) {
     return new VirtualQChronoTimer(static_cast<std::chrono::nanoseconds>(nsec));
 }
 
-QChronoTimer* QChronoTimer_new2() {
+QChronoTimer* QChronoTimer_New2() {
     return new VirtualQChronoTimer();
 }
 
-QChronoTimer* QChronoTimer_new3(int64_t nsec, QObject* parent) {
+QChronoTimer* QChronoTimer_New3(int64_t nsec, QObject* parent) {
     return new VirtualQChronoTimer(static_cast<std::chrono::nanoseconds>(nsec), parent);
 }
 
-QChronoTimer* QChronoTimer_new4(QObject* parent) {
+QChronoTimer* QChronoTimer_New4(QObject* parent) {
     return new VirtualQChronoTimer(parent);
 }
 

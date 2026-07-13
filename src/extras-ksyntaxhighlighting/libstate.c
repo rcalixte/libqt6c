@@ -2,11 +2,11 @@
 #include "libstate.h"
 
 KSyntaxHighlighting__State* k_syntaxhighlighting__state_new() {
-    return KSyntaxHighlighting__State_new();
+    return KSyntaxHighlighting__State_New();
 }
 
 KSyntaxHighlighting__State* k_syntaxhighlighting__state_new2(void* other) {
-    return KSyntaxHighlighting__State_new2((KSyntaxHighlighting__State*)other);
+    return KSyntaxHighlighting__State_New2((KSyntaxHighlighting__State*)other);
 }
 
 void k_syntaxhighlighting__state_operator_assign(void* self, void* rhs) {

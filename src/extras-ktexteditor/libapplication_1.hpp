@@ -32,7 +32,7 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KTextEditor__Application* KTextEditor__Application_new(QObject* parent);
+KTextEditor__Application* KTextEditor__Application_New(QObject* parent);
 QMetaObject* KTextEditor__Application_MetaObject(const KTextEditor__Application* self);
 void* KTextEditor__Application_Metacast(KTextEditor__Application* self, const char* param1);
 int KTextEditor__Application_Metacall(KTextEditor__Application* self, int param1, int param2, void** param3);

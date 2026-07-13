@@ -6,11 +6,11 @@
 #include "libqstylefactory.hpp"
 #include "libqstylefactory.hxx"
 
-QStyleFactory* QStyleFactory_new(const QStyleFactory* other) {
+QStyleFactory* QStyleFactory_New(const QStyleFactory* other) {
     return new QStyleFactory(*other);
 }
 
-QStyleFactory* QStyleFactory_new2(QStyleFactory* other) {
+QStyleFactory* QStyleFactory_New2(QStyleFactory* other) {
     return new QStyleFactory(std::move(*other));
 }
 

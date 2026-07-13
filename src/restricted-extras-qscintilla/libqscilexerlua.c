@@ -11,11 +11,11 @@
 #include "libqscilexerlua.h"
 
 QsciLexerLua* q_scilexerlua_new() {
-    return QsciLexerLua_new();
+    return QsciLexerLua_New();
 }
 
 QsciLexerLua* q_scilexerlua_new2(void* parent) {
-    return QsciLexerLua_new2((QObject*)parent);
+    return QsciLexerLua_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerlua_meta_object(void* self) {

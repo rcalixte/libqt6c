@@ -28,15 +28,15 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWindow QWindow;
 #endif
 
-KWindowShadowTile* KWindowShadowTile_new();
+KWindowShadowTile* KWindowShadowTile_New();
 QImage* KWindowShadowTile_Image(const KWindowShadowTile* self);
 void KWindowShadowTile_SetImage(KWindowShadowTile* self, const QImage* image);
 bool KWindowShadowTile_IsCreated(const KWindowShadowTile* self);
 bool KWindowShadowTile_Create(KWindowShadowTile* self);
 void KWindowShadowTile_Delete(KWindowShadowTile* self);
 
-KWindowShadow* KWindowShadow_new();
-KWindowShadow* KWindowShadow_new2(QObject* parent);
+KWindowShadow* KWindowShadow_New();
+KWindowShadow* KWindowShadow_New2(QObject* parent);
 QMetaObject* KWindowShadow_MetaObject(const KWindowShadow* self);
 void* KWindowShadow_Metacast(KWindowShadow* self, const char* param1);
 int KWindowShadow_Metacall(KWindowShadow* self, int param1, int param2, void** param3);

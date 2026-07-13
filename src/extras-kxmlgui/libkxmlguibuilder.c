@@ -6,7 +6,7 @@
 #include "libkxmlguibuilder.h"
 
 KXMLGUIBuilder* k_xmlguibuilder_new(void* widget) {
-    return KXMLGUIBuilder_new((QWidget*)widget);
+    return KXMLGUIBuilder_New((QWidget*)widget);
 }
 
 KXMLGUIClient* k_xmlguibuilder_builder_client(void* self) {

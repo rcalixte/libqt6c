@@ -9,11 +9,11 @@
 #include "libqplacecontentreply.h"
 
 QPlaceContentReply* q_placecontentreply_new() {
-    return QPlaceContentReply_new();
+    return QPlaceContentReply_New();
 }
 
 QPlaceContentReply* q_placecontentreply_new2(void* parent) {
-    return QPlaceContentReply_new2((QObject*)parent);
+    return QPlaceContentReply_New2((QObject*)parent);
 }
 
 const QMetaObject* q_placecontentreply_meta_object(void* self) {

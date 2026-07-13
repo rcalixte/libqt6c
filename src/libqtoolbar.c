@@ -17,19 +17,19 @@
 #include "libqtoolbar.h"
 
 QToolBar* q_toolbar_new(void* parent) {
-    return QToolBar_new((QWidget*)parent);
+    return QToolBar_New((QWidget*)parent);
 }
 
 QToolBar* q_toolbar_new2(const char* title) {
-    return QToolBar_new2(qstring(title));
+    return QToolBar_New2(qstring(title));
 }
 
 QToolBar* q_toolbar_new3() {
-    return QToolBar_new3();
+    return QToolBar_New3();
 }
 
 QToolBar* q_toolbar_new4(const char* title, void* parent) {
-    return QToolBar_new4(qstring(title), (QWidget*)parent);
+    return QToolBar_New4(qstring(title), (QWidget*)parent);
 }
 
 const QMetaObject* q_toolbar_meta_object(void* self) {

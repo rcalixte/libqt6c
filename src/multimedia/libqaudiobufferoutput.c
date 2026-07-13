@@ -8,19 +8,19 @@
 #include "libqaudiobufferoutput.h"
 
 QAudioBufferOutput* q_audiobufferoutput_new() {
-    return QAudioBufferOutput_new();
+    return QAudioBufferOutput_New();
 }
 
 QAudioBufferOutput* q_audiobufferoutput_new2(void* format) {
-    return QAudioBufferOutput_new2((QAudioFormat*)format);
+    return QAudioBufferOutput_New2((QAudioFormat*)format);
 }
 
 QAudioBufferOutput* q_audiobufferoutput_new3(void* parent) {
-    return QAudioBufferOutput_new3((QObject*)parent);
+    return QAudioBufferOutput_New3((QObject*)parent);
 }
 
 QAudioBufferOutput* q_audiobufferoutput_new4(void* format, void* parent) {
-    return QAudioBufferOutput_new4((QAudioFormat*)format, (QObject*)parent);
+    return QAudioBufferOutput_New4((QAudioFormat*)format, (QObject*)parent);
 }
 
 const QMetaObject* q_audiobufferoutput_meta_object(void* self) {

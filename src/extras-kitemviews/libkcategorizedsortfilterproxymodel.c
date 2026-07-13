@@ -14,11 +14,11 @@
 #include "libkcategorizedsortfilterproxymodel.h"
 
 KCategorizedSortFilterProxyModel* k_categorizedsortfilterproxymodel_new() {
-    return KCategorizedSortFilterProxyModel_new();
+    return KCategorizedSortFilterProxyModel_New();
 }
 
 KCategorizedSortFilterProxyModel* k_categorizedsortfilterproxymodel_new2(void* parent) {
-    return KCategorizedSortFilterProxyModel_new2((QObject*)parent);
+    return KCategorizedSortFilterProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_categorizedsortfilterproxymodel_meta_object(void* self) {

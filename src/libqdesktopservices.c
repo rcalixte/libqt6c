@@ -4,11 +4,11 @@
 #include "libqdesktopservices.h"
 
 QDesktopServices* q_desktopservices_new(void* other) {
-    return QDesktopServices_new((QDesktopServices*)other);
+    return QDesktopServices_New((QDesktopServices*)other);
 }
 
 QDesktopServices* q_desktopservices_new2(void* other) {
-    return QDesktopServices_new2((QDesktopServices*)other);
+    return QDesktopServices_New2((QDesktopServices*)other);
 }
 
 void q_desktopservices_copy_assign(void* self, void* other) {

@@ -7,15 +7,15 @@
 #include "libqlayoutitem.h"
 
 QLayoutItem* q_layoutitem_new() {
-    return QLayoutItem_new();
+    return QLayoutItem_New();
 }
 
 QLayoutItem* q_layoutitem_new2(void* param1) {
-    return QLayoutItem_new2((QLayoutItem*)param1);
+    return QLayoutItem_New2((QLayoutItem*)param1);
 }
 
 QLayoutItem* q_layoutitem_new3(int32_t alignment) {
-    return QLayoutItem_new3(alignment);
+    return QLayoutItem_New3(alignment);
 }
 
 QSize* q_layoutitem_size_hint(void* self) {
@@ -223,19 +223,19 @@ void q_layoutitem_delete(void* self) {
 }
 
 QSpacerItem* q_spaceritem_new(int w, int h) {
-    return QSpacerItem_new(w, h);
+    return QSpacerItem_New(w, h);
 }
 
 QSpacerItem* q_spaceritem_new2(void* param1) {
-    return QSpacerItem_new2((QSpacerItem*)param1);
+    return QSpacerItem_New2((QSpacerItem*)param1);
 }
 
 QSpacerItem* q_spaceritem_new3(int w, int h, int32_t hData) {
-    return QSpacerItem_new3(w, h, hData);
+    return QSpacerItem_New3(w, h, hData);
 }
 
 QSpacerItem* q_spaceritem_new4(int w, int h, int32_t hData, int32_t vData) {
-    return QSpacerItem_new4(w, h, hData, vData);
+    return QSpacerItem_New4(w, h, hData, vData);
 }
 
 void q_spaceritem_change_size(void* self, int w, int h) {
@@ -447,7 +447,7 @@ void q_spaceritem_delete(void* self) {
 }
 
 QWidgetItem* q_widgetitem_new(void* w) {
-    return QWidgetItem_new((QWidget*)w);
+    return QWidgetItem_New((QWidget*)w);
 }
 
 QSize* q_widgetitem_size_hint(void* self) {
@@ -643,7 +643,7 @@ void q_widgetitem_delete(void* self) {
 }
 
 QWidgetItemV2* q_widgetitemv2_new(void* widget) {
-    return QWidgetItemV2_new((QWidget*)widget);
+    return QWidgetItemV2_New((QWidget*)widget);
 }
 
 QSize* q_widgetitemv2_size_hint(void* self) {

@@ -53,11 +53,11 @@
 #include "libqgraphicsitem.hpp"
 #include "libqgraphicsitem.hxx"
 
-QGraphicsItem* QGraphicsItem_new() {
+QGraphicsItem* QGraphicsItem_New() {
     return new VirtualQGraphicsItem();
 }
 
-QGraphicsItem* QGraphicsItem_new2(QGraphicsItem* parent) {
+QGraphicsItem* QGraphicsItem_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsItem(parent);
 }
 
@@ -1779,11 +1779,11 @@ void QGraphicsItem_Delete(QGraphicsItem* self) {
     delete self;
 }
 
-QGraphicsObject* QGraphicsObject_new() {
+QGraphicsObject* QGraphicsObject_New() {
     return new VirtualQGraphicsObject();
 }
 
-QGraphicsObject* QGraphicsObject_new2(QGraphicsItem* parent) {
+QGraphicsObject* QGraphicsObject_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsObject(parent);
 }
 
@@ -3446,11 +3446,11 @@ void QGraphicsObject_Delete(QGraphicsObject* self) {
     delete self;
 }
 
-QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_new() {
+QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_New() {
     return new VirtualQAbstractGraphicsShapeItem();
 }
 
-QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_new2(QGraphicsItem* parent) {
+QAbstractGraphicsShapeItem* QAbstractGraphicsShapeItem_New2(QGraphicsItem* parent) {
     return new VirtualQAbstractGraphicsShapeItem(parent);
 }
 
@@ -4587,19 +4587,19 @@ void QAbstractGraphicsShapeItem_Delete(QAbstractGraphicsShapeItem* self) {
     delete self;
 }
 
-QGraphicsPathItem* QGraphicsPathItem_new() {
+QGraphicsPathItem* QGraphicsPathItem_New() {
     return new VirtualQGraphicsPathItem();
 }
 
-QGraphicsPathItem* QGraphicsPathItem_new2(const QPainterPath* path) {
+QGraphicsPathItem* QGraphicsPathItem_New2(const QPainterPath* path) {
     return new VirtualQGraphicsPathItem(*path);
 }
 
-QGraphicsPathItem* QGraphicsPathItem_new3(QGraphicsItem* parent) {
+QGraphicsPathItem* QGraphicsPathItem_New3(QGraphicsItem* parent) {
     return new VirtualQGraphicsPathItem(parent);
 }
 
-QGraphicsPathItem* QGraphicsPathItem_new4(const QPainterPath* path, QGraphicsItem* parent) {
+QGraphicsPathItem* QGraphicsPathItem_New4(const QPainterPath* path, QGraphicsItem* parent) {
     return new VirtualQGraphicsPathItem(*path, parent);
 }
 
@@ -5692,27 +5692,27 @@ void QGraphicsPathItem_Delete(QGraphicsPathItem* self) {
     delete self;
 }
 
-QGraphicsRectItem* QGraphicsRectItem_new() {
+QGraphicsRectItem* QGraphicsRectItem_New() {
     return new VirtualQGraphicsRectItem();
 }
 
-QGraphicsRectItem* QGraphicsRectItem_new2(const QRectF* rect) {
+QGraphicsRectItem* QGraphicsRectItem_New2(const QRectF* rect) {
     return new VirtualQGraphicsRectItem(*rect);
 }
 
-QGraphicsRectItem* QGraphicsRectItem_new3(double x, double y, double w, double h) {
+QGraphicsRectItem* QGraphicsRectItem_New3(double x, double y, double w, double h) {
     return new VirtualQGraphicsRectItem(static_cast<qreal>(x), static_cast<qreal>(y), static_cast<qreal>(w), static_cast<qreal>(h));
 }
 
-QGraphicsRectItem* QGraphicsRectItem_new4(QGraphicsItem* parent) {
+QGraphicsRectItem* QGraphicsRectItem_New4(QGraphicsItem* parent) {
     return new VirtualQGraphicsRectItem(parent);
 }
 
-QGraphicsRectItem* QGraphicsRectItem_new5(const QRectF* rect, QGraphicsItem* parent) {
+QGraphicsRectItem* QGraphicsRectItem_New5(const QRectF* rect, QGraphicsItem* parent) {
     return new VirtualQGraphicsRectItem(*rect, parent);
 }
 
-QGraphicsRectItem* QGraphicsRectItem_new6(double x, double y, double w, double h, QGraphicsItem* parent) {
+QGraphicsRectItem* QGraphicsRectItem_New6(double x, double y, double w, double h, QGraphicsItem* parent) {
     return new VirtualQGraphicsRectItem(static_cast<qreal>(x), static_cast<qreal>(y), static_cast<qreal>(w), static_cast<qreal>(h), parent);
 }
 
@@ -6809,27 +6809,27 @@ void QGraphicsRectItem_Delete(QGraphicsRectItem* self) {
     delete self;
 }
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new() {
+QGraphicsEllipseItem* QGraphicsEllipseItem_New() {
     return new VirtualQGraphicsEllipseItem();
 }
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new2(const QRectF* rect) {
+QGraphicsEllipseItem* QGraphicsEllipseItem_New2(const QRectF* rect) {
     return new VirtualQGraphicsEllipseItem(*rect);
 }
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new3(double x, double y, double w, double h) {
+QGraphicsEllipseItem* QGraphicsEllipseItem_New3(double x, double y, double w, double h) {
     return new VirtualQGraphicsEllipseItem(static_cast<qreal>(x), static_cast<qreal>(y), static_cast<qreal>(w), static_cast<qreal>(h));
 }
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new4(QGraphicsItem* parent) {
+QGraphicsEllipseItem* QGraphicsEllipseItem_New4(QGraphicsItem* parent) {
     return new VirtualQGraphicsEllipseItem(parent);
 }
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new5(const QRectF* rect, QGraphicsItem* parent) {
+QGraphicsEllipseItem* QGraphicsEllipseItem_New5(const QRectF* rect, QGraphicsItem* parent) {
     return new VirtualQGraphicsEllipseItem(*rect, parent);
 }
 
-QGraphicsEllipseItem* QGraphicsEllipseItem_new6(double x, double y, double w, double h, QGraphicsItem* parent) {
+QGraphicsEllipseItem* QGraphicsEllipseItem_New6(double x, double y, double w, double h, QGraphicsItem* parent) {
     return new VirtualQGraphicsEllipseItem(static_cast<qreal>(x), static_cast<qreal>(y), static_cast<qreal>(w), static_cast<qreal>(h), parent);
 }
 
@@ -7942,11 +7942,11 @@ void QGraphicsEllipseItem_Delete(QGraphicsEllipseItem* self) {
     delete self;
 }
 
-QGraphicsPolygonItem* QGraphicsPolygonItem_new() {
+QGraphicsPolygonItem* QGraphicsPolygonItem_New() {
     return new VirtualQGraphicsPolygonItem();
 }
 
-QGraphicsPolygonItem* QGraphicsPolygonItem_new2(QGraphicsItem* parent) {
+QGraphicsPolygonItem* QGraphicsPolygonItem_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsPolygonItem(parent);
 }
 
@@ -9039,27 +9039,27 @@ void QGraphicsPolygonItem_Delete(QGraphicsPolygonItem* self) {
     delete self;
 }
 
-QGraphicsLineItem* QGraphicsLineItem_new() {
+QGraphicsLineItem* QGraphicsLineItem_New() {
     return new VirtualQGraphicsLineItem();
 }
 
-QGraphicsLineItem* QGraphicsLineItem_new2(const QLineF* line) {
+QGraphicsLineItem* QGraphicsLineItem_New2(const QLineF* line) {
     return new VirtualQGraphicsLineItem(*line);
 }
 
-QGraphicsLineItem* QGraphicsLineItem_new3(double x1, double y1, double x2, double y2) {
+QGraphicsLineItem* QGraphicsLineItem_New3(double x1, double y1, double x2, double y2) {
     return new VirtualQGraphicsLineItem(static_cast<qreal>(x1), static_cast<qreal>(y1), static_cast<qreal>(x2), static_cast<qreal>(y2));
 }
 
-QGraphicsLineItem* QGraphicsLineItem_new4(QGraphicsItem* parent) {
+QGraphicsLineItem* QGraphicsLineItem_New4(QGraphicsItem* parent) {
     return new VirtualQGraphicsLineItem(parent);
 }
 
-QGraphicsLineItem* QGraphicsLineItem_new5(const QLineF* line, QGraphicsItem* parent) {
+QGraphicsLineItem* QGraphicsLineItem_New5(const QLineF* line, QGraphicsItem* parent) {
     return new VirtualQGraphicsLineItem(*line, parent);
 }
 
-QGraphicsLineItem* QGraphicsLineItem_new6(double x1, double y1, double x2, double y2, QGraphicsItem* parent) {
+QGraphicsLineItem* QGraphicsLineItem_New6(double x1, double y1, double x2, double y2, QGraphicsItem* parent) {
     return new VirtualQGraphicsLineItem(static_cast<qreal>(x1), static_cast<qreal>(y1), static_cast<qreal>(x2), static_cast<qreal>(y2), parent);
 }
 
@@ -10164,19 +10164,19 @@ void QGraphicsLineItem_Delete(QGraphicsLineItem* self) {
     delete self;
 }
 
-QGraphicsPixmapItem* QGraphicsPixmapItem_new() {
+QGraphicsPixmapItem* QGraphicsPixmapItem_New() {
     return new VirtualQGraphicsPixmapItem();
 }
 
-QGraphicsPixmapItem* QGraphicsPixmapItem_new2(const QPixmap* pixmap) {
+QGraphicsPixmapItem* QGraphicsPixmapItem_New2(const QPixmap* pixmap) {
     return new VirtualQGraphicsPixmapItem(*pixmap);
 }
 
-QGraphicsPixmapItem* QGraphicsPixmapItem_new3(QGraphicsItem* parent) {
+QGraphicsPixmapItem* QGraphicsPixmapItem_New3(QGraphicsItem* parent) {
     return new VirtualQGraphicsPixmapItem(parent);
 }
 
-QGraphicsPixmapItem* QGraphicsPixmapItem_new4(const QPixmap* pixmap, QGraphicsItem* parent) {
+QGraphicsPixmapItem* QGraphicsPixmapItem_New4(const QPixmap* pixmap, QGraphicsItem* parent) {
     return new VirtualQGraphicsPixmapItem(*pixmap, parent);
 }
 
@@ -11297,20 +11297,20 @@ void QGraphicsPixmapItem_Delete(QGraphicsPixmapItem* self) {
     delete self;
 }
 
-QGraphicsTextItem* QGraphicsTextItem_new() {
+QGraphicsTextItem* QGraphicsTextItem_New() {
     return new VirtualQGraphicsTextItem();
 }
 
-QGraphicsTextItem* QGraphicsTextItem_new2(const libqt_string text) {
+QGraphicsTextItem* QGraphicsTextItem_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQGraphicsTextItem(text_QString);
 }
 
-QGraphicsTextItem* QGraphicsTextItem_new3(QGraphicsItem* parent) {
+QGraphicsTextItem* QGraphicsTextItem_New3(QGraphicsItem* parent) {
     return new VirtualQGraphicsTextItem(parent);
 }
 
-QGraphicsTextItem* QGraphicsTextItem_new4(const libqt_string text, QGraphicsItem* parent) {
+QGraphicsTextItem* QGraphicsTextItem_New4(const libqt_string text, QGraphicsItem* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQGraphicsTextItem(text_QString, parent);
 }
@@ -12874,20 +12874,20 @@ void QGraphicsTextItem_Delete(QGraphicsTextItem* self) {
     delete self;
 }
 
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new() {
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New() {
     return new VirtualQGraphicsSimpleTextItem();
 }
 
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new2(const libqt_string text) {
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New2(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQGraphicsSimpleTextItem(text_QString);
 }
 
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new3(QGraphicsItem* parent) {
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New3(QGraphicsItem* parent) {
     return new VirtualQGraphicsSimpleTextItem(parent);
 }
 
-QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_new4(const libqt_string text, QGraphicsItem* parent) {
+QGraphicsSimpleTextItem* QGraphicsSimpleTextItem_New4(const libqt_string text, QGraphicsItem* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQGraphicsSimpleTextItem(text_QString, parent);
 }
@@ -13998,11 +13998,11 @@ void QGraphicsSimpleTextItem_Delete(QGraphicsSimpleTextItem* self) {
     delete self;
 }
 
-QGraphicsItemGroup* QGraphicsItemGroup_new() {
+QGraphicsItemGroup* QGraphicsItemGroup_New() {
     return new VirtualQGraphicsItemGroup();
 }
 
-QGraphicsItemGroup* QGraphicsItemGroup_new2(QGraphicsItem* parent) {
+QGraphicsItemGroup* QGraphicsItemGroup_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsItemGroup(parent);
 }
 

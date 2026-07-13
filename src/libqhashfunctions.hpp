@@ -18,10 +18,10 @@ extern "C" {
 typedef struct QHashSeed QHashSeed;
 #endif
 
-QHashSeed* QHashSeed_new(const QHashSeed* other);
-QHashSeed* QHashSeed_new2(QHashSeed* other);
-QHashSeed* QHashSeed_new3();
-QHashSeed* QHashSeed_new4(size_t d);
+QHashSeed* QHashSeed_New(const QHashSeed* other);
+QHashSeed* QHashSeed_New2(QHashSeed* other);
+QHashSeed* QHashSeed_New3();
+QHashSeed* QHashSeed_New4(size_t d);
 void QHashSeed_CopyAssign(QHashSeed* self, QHashSeed* other);
 void QHashSeed_MoveAssign(QHashSeed* self, QHashSeed* other);
 size_t QHashSeed_ToUnsignedLong(const QHashSeed* self);

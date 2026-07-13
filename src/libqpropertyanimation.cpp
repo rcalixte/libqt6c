@@ -14,20 +14,20 @@
 #include "libqpropertyanimation.hpp"
 #include "libqpropertyanimation.hxx"
 
-QPropertyAnimation* QPropertyAnimation_new() {
+QPropertyAnimation* QPropertyAnimation_New() {
     return new VirtualQPropertyAnimation();
 }
 
-QPropertyAnimation* QPropertyAnimation_new2(QObject* target, const libqt_string propertyName) {
+QPropertyAnimation* QPropertyAnimation_New2(QObject* target, const libqt_string propertyName) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     return new VirtualQPropertyAnimation(target, propertyName_QByteArray);
 }
 
-QPropertyAnimation* QPropertyAnimation_new3(QObject* parent) {
+QPropertyAnimation* QPropertyAnimation_New3(QObject* parent) {
     return new VirtualQPropertyAnimation(parent);
 }
 
-QPropertyAnimation* QPropertyAnimation_new4(QObject* target, const libqt_string propertyName, QObject* parent) {
+QPropertyAnimation* QPropertyAnimation_New4(QObject* target, const libqt_string propertyName, QObject* parent) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     return new VirtualQPropertyAnimation(target, propertyName_QByteArray, parent);
 }

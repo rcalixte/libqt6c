@@ -20,11 +20,11 @@
 #include "libqmediacapturesession.hpp"
 #include "libqmediacapturesession.hxx"
 
-QMediaCaptureSession* QMediaCaptureSession_new() {
+QMediaCaptureSession* QMediaCaptureSession_New() {
     return new VirtualQMediaCaptureSession();
 }
 
-QMediaCaptureSession* QMediaCaptureSession_new2(QObject* parent) {
+QMediaCaptureSession* QMediaCaptureSession_New2(QObject* parent) {
     return new VirtualQMediaCaptureSession(parent);
 }
 

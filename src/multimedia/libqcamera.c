@@ -9,27 +9,27 @@
 #include "libqcamera.h"
 
 QCamera* q_camera_new() {
-    return QCamera_new();
+    return QCamera_New();
 }
 
 QCamera* q_camera_new2(void* cameraDevice) {
-    return QCamera_new2((QCameraDevice*)cameraDevice);
+    return QCamera_New2((QCameraDevice*)cameraDevice);
 }
 
 QCamera* q_camera_new3(int32_t position) {
-    return QCamera_new3(position);
+    return QCamera_New3(position);
 }
 
 QCamera* q_camera_new4(void* parent) {
-    return QCamera_new4((QObject*)parent);
+    return QCamera_New4((QObject*)parent);
 }
 
 QCamera* q_camera_new5(void* cameraDevice, void* parent) {
-    return QCamera_new5((QCameraDevice*)cameraDevice, (QObject*)parent);
+    return QCamera_New5((QCameraDevice*)cameraDevice, (QObject*)parent);
 }
 
 QCamera* q_camera_new6(int32_t position, void* parent) {
-    return QCamera_new6(position, (QObject*)parent);
+    return QCamera_New6(position, (QObject*)parent);
 }
 
 const QMetaObject* q_camera_meta_object(void* self) {

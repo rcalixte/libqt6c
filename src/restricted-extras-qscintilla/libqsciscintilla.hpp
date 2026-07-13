@@ -67,8 +67,8 @@ typedef struct QsciStyle QsciStyle;
 typedef struct QsciStyledText QsciStyledText;
 #endif
 
-QsciScintilla* QsciScintilla_new(QWidget* parent);
-QsciScintilla* QsciScintilla_new2();
+QsciScintilla* QsciScintilla_New(QWidget* parent);
+QsciScintilla* QsciScintilla_New2();
 QMetaObject* QsciScintilla_MetaObject(const QsciScintilla* self);
 void* QsciScintilla_Metacast(QsciScintilla* self, const char* param1);
 int QsciScintilla_Metacall(QsciScintilla* self, int param1, int param2, void** param3);

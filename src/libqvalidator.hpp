@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QValidator QValidator;
 #endif
 
-QValidator* QValidator_new();
-QValidator* QValidator_new2(QObject* parent);
+QValidator* QValidator_New();
+QValidator* QValidator_New2(QObject* parent);
 QMetaObject* QValidator_MetaObject(const QValidator* self);
 void* QValidator_Metacast(QValidator* self, const char* param1);
 int QValidator_Metacall(QValidator* self, int param1, int param2, void** param3);
@@ -85,10 +85,10 @@ void QValidator_OnIsSignalConnected(const QValidator* self, intptr_t slot);
 bool QValidator_SuperIsSignalConnected(const QValidator* self, const QMetaMethod* signal);
 void QValidator_Delete(QValidator* self);
 
-QIntValidator* QIntValidator_new();
-QIntValidator* QIntValidator_new2(int bottom, int top);
-QIntValidator* QIntValidator_new3(QObject* parent);
-QIntValidator* QIntValidator_new4(int bottom, int top, QObject* parent);
+QIntValidator* QIntValidator_New();
+QIntValidator* QIntValidator_New2(int bottom, int top);
+QIntValidator* QIntValidator_New3(QObject* parent);
+QIntValidator* QIntValidator_New4(int bottom, int top, QObject* parent);
 QMetaObject* QIntValidator_MetaObject(const QIntValidator* self);
 void* QIntValidator_Metacast(QIntValidator* self, const char* param1);
 int QIntValidator_Metacall(QIntValidator* self, int param1, int param2, void** param3);
@@ -148,10 +148,10 @@ void QIntValidator_OnIsSignalConnected(const QIntValidator* self, intptr_t slot)
 bool QIntValidator_SuperIsSignalConnected(const QIntValidator* self, const QMetaMethod* signal);
 void QIntValidator_Delete(QIntValidator* self);
 
-QDoubleValidator* QDoubleValidator_new();
-QDoubleValidator* QDoubleValidator_new2(double bottom, double top, int decimals);
-QDoubleValidator* QDoubleValidator_new3(QObject* parent);
-QDoubleValidator* QDoubleValidator_new4(double bottom, double top, int decimals, QObject* parent);
+QDoubleValidator* QDoubleValidator_New();
+QDoubleValidator* QDoubleValidator_New2(double bottom, double top, int decimals);
+QDoubleValidator* QDoubleValidator_New3(QObject* parent);
+QDoubleValidator* QDoubleValidator_New4(double bottom, double top, int decimals, QObject* parent);
 QMetaObject* QDoubleValidator_MetaObject(const QDoubleValidator* self);
 void* QDoubleValidator_Metacast(QDoubleValidator* self, const char* param1);
 int QDoubleValidator_Metacall(QDoubleValidator* self, int param1, int param2, void** param3);
@@ -220,10 +220,10 @@ void QDoubleValidator_OnIsSignalConnected(const QDoubleValidator* self, intptr_t
 bool QDoubleValidator_SuperIsSignalConnected(const QDoubleValidator* self, const QMetaMethod* signal);
 void QDoubleValidator_Delete(QDoubleValidator* self);
 
-QRegularExpressionValidator* QRegularExpressionValidator_new();
-QRegularExpressionValidator* QRegularExpressionValidator_new2(const QRegularExpression* re);
-QRegularExpressionValidator* QRegularExpressionValidator_new3(QObject* parent);
-QRegularExpressionValidator* QRegularExpressionValidator_new4(const QRegularExpression* re, QObject* parent);
+QRegularExpressionValidator* QRegularExpressionValidator_New();
+QRegularExpressionValidator* QRegularExpressionValidator_New2(const QRegularExpression* re);
+QRegularExpressionValidator* QRegularExpressionValidator_New3(QObject* parent);
+QRegularExpressionValidator* QRegularExpressionValidator_New4(const QRegularExpression* re, QObject* parent);
 QMetaObject* QRegularExpressionValidator_MetaObject(const QRegularExpressionValidator* self);
 void* QRegularExpressionValidator_Metacast(QRegularExpressionValidator* self, const char* param1);
 int QRegularExpressionValidator_Metacall(QRegularExpressionValidator* self, int param1, int param2, void** param3);

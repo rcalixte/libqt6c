@@ -11,11 +11,11 @@
 #include "libkbookmarkmenu.h"
 
 KBookmarkMenu* k_bookmarkmenu_new(void* manager, void* owner, void* parentMenu) {
-    return KBookmarkMenu_new((KBookmarkManager*)manager, (KBookmarkOwner*)owner, (QMenu*)parentMenu);
+    return KBookmarkMenu_New((KBookmarkManager*)manager, (KBookmarkOwner*)owner, (QMenu*)parentMenu);
 }
 
 KBookmarkMenu* k_bookmarkmenu_new2(void* mgr, void* owner, void* parentMenu, const char* parentAddress) {
-    return KBookmarkMenu_new2((KBookmarkManager*)mgr, (KBookmarkOwner*)owner, (QMenu*)parentMenu, qstring(parentAddress));
+    return KBookmarkMenu_New2((KBookmarkManager*)mgr, (KBookmarkOwner*)owner, (QMenu*)parentMenu, qstring(parentAddress));
 }
 
 const QMetaObject* k_bookmarkmenu_meta_object(void* self) {

@@ -29,8 +29,8 @@ typedef struct QsciLexerYAML QsciLexerYAML;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerYAML* QsciLexerYAML_new();
-QsciLexerYAML* QsciLexerYAML_new2(QObject* parent);
+QsciLexerYAML* QsciLexerYAML_New();
+QsciLexerYAML* QsciLexerYAML_New2(QObject* parent);
 QMetaObject* QsciLexerYAML_MetaObject(const QsciLexerYAML* self);
 void* QsciLexerYAML_Metacast(QsciLexerYAML* self, const char* param1);
 int QsciLexerYAML_Metacall(QsciLexerYAML* self, int param1, int param2, void** param3);

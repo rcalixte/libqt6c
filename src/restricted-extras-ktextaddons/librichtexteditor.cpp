@@ -49,11 +49,11 @@
 #include "librichtexteditor.hpp"
 #include "librichtexteditor.hxx"
 
-TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_new(QWidget* parent) {
+TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_New(QWidget* parent) {
     return new VirtualTextCustomEditorRichTextEditor(parent);
 }
 
-TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_new2() {
+TextCustomEditor__RichTextEditor* TextCustomEditor__RichTextEditor_New2() {
     return new VirtualTextCustomEditorRichTextEditor();
 }
 

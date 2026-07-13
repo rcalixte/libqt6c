@@ -16,11 +16,11 @@
 #include "libprovider.h"
 
 Attica__Provider* k_attica__provider_new() {
-    return Attica__Provider_new();
+    return Attica__Provider_New();
 }
 
 Attica__Provider* k_attica__provider_new2(void* other) {
-    return Attica__Provider_new2((Attica__Provider*)other);
+    return Attica__Provider_New2((Attica__Provider*)other);
 }
 
 void k_attica__provider_operator_assign(void* self, void* other) {

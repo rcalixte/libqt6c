@@ -7,12 +7,12 @@
 #include "libkservicegroup.hpp"
 #include "libkservicegroup.hxx"
 
-KServiceGroup* KServiceGroup_new(const libqt_string name) {
+KServiceGroup* KServiceGroup_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KServiceGroup(name_QString);
 }
 
-KServiceGroup* KServiceGroup_new2(const libqt_string _fullpath, const libqt_string _relpath) {
+KServiceGroup* KServiceGroup_New2(const libqt_string _fullpath, const libqt_string _relpath) {
     QString _fullpath_QString = QString::fromUtf8(_fullpath.data, _fullpath.len);
     QString _relpath_QString = QString::fromUtf8(_relpath.data, _relpath.len);
     return new KServiceGroup(_fullpath_QString, _relpath_QString);

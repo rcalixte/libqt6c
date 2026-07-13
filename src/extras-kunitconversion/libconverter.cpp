@@ -8,11 +8,11 @@
 #include "libconverter.hpp"
 #include "libconverter.hxx"
 
-KUnitConversion__Converter* KUnitConversion__Converter_new() {
+KUnitConversion__Converter* KUnitConversion__Converter_New() {
     return new KUnitConversion::Converter();
 }
 
-KUnitConversion__Converter* KUnitConversion__Converter_new2(const KUnitConversion__Converter* other) {
+KUnitConversion__Converter* KUnitConversion__Converter_New2(const KUnitConversion__Converter* other) {
     return new KUnitConversion::Converter(*other);
 }
 

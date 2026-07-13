@@ -7,7 +7,7 @@
 #include "libqwebengineloadinginfo.hpp"
 #include "libqwebengineloadinginfo.hxx"
 
-QWebEngineLoadingInfo* QWebEngineLoadingInfo_new(const QWebEngineLoadingInfo* other) {
+QWebEngineLoadingInfo* QWebEngineLoadingInfo_New(const QWebEngineLoadingInfo* other) {
     return new QWebEngineLoadingInfo(*other);
 }
 

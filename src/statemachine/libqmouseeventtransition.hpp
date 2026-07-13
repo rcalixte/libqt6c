@@ -28,10 +28,10 @@ typedef struct QState QState;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QMouseEventTransition* QMouseEventTransition_new();
-QMouseEventTransition* QMouseEventTransition_new2(QObject* object, int type, int button);
-QMouseEventTransition* QMouseEventTransition_new3(QState* sourceState);
-QMouseEventTransition* QMouseEventTransition_new4(QObject* object, int type, int button, QState* sourceState);
+QMouseEventTransition* QMouseEventTransition_New();
+QMouseEventTransition* QMouseEventTransition_New2(QObject* object, int type, int button);
+QMouseEventTransition* QMouseEventTransition_New3(QState* sourceState);
+QMouseEventTransition* QMouseEventTransition_New4(QObject* object, int type, int button, QState* sourceState);
 QMetaObject* QMouseEventTransition_MetaObject(const QMouseEventTransition* self);
 void* QMouseEventTransition_Metacast(QMouseEventTransition* self, const char* param1);
 int QMouseEventTransition_Metacall(QMouseEventTransition* self, int param1, int param2, void** param3);

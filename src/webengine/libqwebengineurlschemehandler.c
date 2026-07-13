@@ -7,11 +7,11 @@
 #include "libqwebengineurlschemehandler.h"
 
 QWebEngineUrlSchemeHandler* q_webengineurlschemehandler_new() {
-    return QWebEngineUrlSchemeHandler_new();
+    return QWebEngineUrlSchemeHandler_New();
 }
 
 QWebEngineUrlSchemeHandler* q_webengineurlschemehandler_new2(void* parent) {
-    return QWebEngineUrlSchemeHandler_new2((QObject*)parent);
+    return QWebEngineUrlSchemeHandler_New2((QObject*)parent);
 }
 
 const QMetaObject* q_webengineurlschemehandler_meta_object(void* self) {

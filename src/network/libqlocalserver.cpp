@@ -11,11 +11,11 @@
 #include "libqlocalserver.hpp"
 #include "libqlocalserver.hxx"
 
-QLocalServer* QLocalServer_new() {
+QLocalServer* QLocalServer_New() {
     return new VirtualQLocalServer();
 }
 
-QLocalServer* QLocalServer_new2(QObject* parent) {
+QLocalServer* QLocalServer_New2(QObject* parent) {
     return new VirtualQLocalServer(parent);
 }
 

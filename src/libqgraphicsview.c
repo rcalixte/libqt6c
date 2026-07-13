@@ -24,19 +24,19 @@
 #include "libqgraphicsview.h"
 
 QGraphicsView* q_graphicsview_new(void* parent) {
-    return QGraphicsView_new((QWidget*)parent);
+    return QGraphicsView_New((QWidget*)parent);
 }
 
 QGraphicsView* q_graphicsview_new2() {
-    return QGraphicsView_new2();
+    return QGraphicsView_New2();
 }
 
 QGraphicsView* q_graphicsview_new3(void* scene) {
-    return QGraphicsView_new3((QGraphicsScene*)scene);
+    return QGraphicsView_New3((QGraphicsScene*)scene);
 }
 
 QGraphicsView* q_graphicsview_new4(void* scene, void* parent) {
-    return QGraphicsView_new4((QGraphicsScene*)scene, (QWidget*)parent);
+    return QGraphicsView_New4((QGraphicsScene*)scene, (QWidget*)parent);
 }
 
 const QMetaObject* q_graphicsview_meta_object(void* self) {

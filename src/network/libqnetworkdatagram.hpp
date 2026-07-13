@@ -19,11 +19,11 @@ typedef struct QHostAddress QHostAddress;
 typedef struct QNetworkDatagram QNetworkDatagram;
 #endif
 
-QNetworkDatagram* QNetworkDatagram_new();
-QNetworkDatagram* QNetworkDatagram_new2(const libqt_string data);
-QNetworkDatagram* QNetworkDatagram_new3(const QNetworkDatagram* other);
-QNetworkDatagram* QNetworkDatagram_new4(const libqt_string data, const QHostAddress* destinationAddress);
-QNetworkDatagram* QNetworkDatagram_new5(const libqt_string data, const QHostAddress* destinationAddress, uint16_t port);
+QNetworkDatagram* QNetworkDatagram_New();
+QNetworkDatagram* QNetworkDatagram_New2(const libqt_string data);
+QNetworkDatagram* QNetworkDatagram_New3(const QNetworkDatagram* other);
+QNetworkDatagram* QNetworkDatagram_New4(const libqt_string data, const QHostAddress* destinationAddress);
+QNetworkDatagram* QNetworkDatagram_New5(const libqt_string data, const QHostAddress* destinationAddress, uint16_t port);
 void QNetworkDatagram_OperatorAssign(QNetworkDatagram* self, const QNetworkDatagram* other);
 void QNetworkDatagram_Swap(QNetworkDatagram* self, QNetworkDatagram* other);
 void QNetworkDatagram_Clear(QNetworkDatagram* self);

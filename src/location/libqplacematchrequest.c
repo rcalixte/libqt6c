@@ -5,11 +5,11 @@
 #include "libqplacematchrequest.h"
 
 QPlaceMatchRequest* q_placematchrequest_new() {
-    return QPlaceMatchRequest_new();
+    return QPlaceMatchRequest_New();
 }
 
 QPlaceMatchRequest* q_placematchrequest_new2(void* other) {
-    return QPlaceMatchRequest_new2((QPlaceMatchRequest*)other);
+    return QPlaceMatchRequest_New2((QPlaceMatchRequest*)other);
 }
 
 void q_placematchrequest_operator_assign(void* self, void* other) {

@@ -40,11 +40,11 @@
 #include "libqtabwidget.hpp"
 #include "libqtabwidget.hxx"
 
-QTabWidget* QTabWidget_new(QWidget* parent) {
+QTabWidget* QTabWidget_New(QWidget* parent) {
     return new VirtualQTabWidget(parent);
 }
 
-QTabWidget* QTabWidget_new2() {
+QTabWidget* QTabWidget_New2() {
     return new VirtualQTabWidget();
 }
 

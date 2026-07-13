@@ -6,23 +6,23 @@
 #include "libqgeocircle.hpp"
 #include "libqgeocircle.hxx"
 
-QGeoCircle* QGeoCircle_new() {
+QGeoCircle* QGeoCircle_New() {
     return new QGeoCircle();
 }
 
-QGeoCircle* QGeoCircle_new2(const QGeoCoordinate* center) {
+QGeoCircle* QGeoCircle_New2(const QGeoCoordinate* center) {
     return new QGeoCircle(*center);
 }
 
-QGeoCircle* QGeoCircle_new3(const QGeoCircle* other) {
+QGeoCircle* QGeoCircle_New3(const QGeoCircle* other) {
     return new QGeoCircle(*other);
 }
 
-QGeoCircle* QGeoCircle_new4(const QGeoShape* other) {
+QGeoCircle* QGeoCircle_New4(const QGeoShape* other) {
     return new QGeoCircle(*other);
 }
 
-QGeoCircle* QGeoCircle_new5(const QGeoCoordinate* center, double radius) {
+QGeoCircle* QGeoCircle_New5(const QGeoCoordinate* center, double radius) {
     return new QGeoCircle(*center, static_cast<qreal>(radius));
 }
 

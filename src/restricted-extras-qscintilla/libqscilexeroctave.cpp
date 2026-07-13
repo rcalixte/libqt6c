@@ -14,11 +14,11 @@
 #include "libqscilexeroctave.hpp"
 #include "libqscilexeroctave.hxx"
 
-QsciLexerOctave* QsciLexerOctave_new() {
+QsciLexerOctave* QsciLexerOctave_New() {
     return new VirtualQsciLexerOctave();
 }
 
-QsciLexerOctave* QsciLexerOctave_new2(QObject* parent) {
+QsciLexerOctave* QsciLexerOctave_New2(QObject* parent) {
     return new VirtualQsciLexerOctave(parent);
 }
 

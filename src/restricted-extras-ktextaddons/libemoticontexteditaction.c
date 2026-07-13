@@ -10,7 +10,7 @@
 #include "libemoticontexteditaction.h"
 
 TextEmoticonsWidgets__EmoticonTextEditAction* k_textemoticonswidgets__emoticontexteditaction_new(void* parent) {
-    return TextEmoticonsWidgets__EmoticonTextEditAction_new((QObject*)parent);
+    return TextEmoticonsWidgets__EmoticonTextEditAction_New((QObject*)parent);
 }
 
 const QMetaObject* k_textemoticonswidgets__emoticontexteditaction_meta_object(void* self) {

@@ -4,27 +4,27 @@
 #include "libqdatetime.h"
 
 QDate* q_date_new(void* other) {
-    return QDate_new((QDate*)other);
+    return QDate_New((QDate*)other);
 }
 
 QDate* q_date_new2(void* other) {
-    return QDate_new2((QDate*)other);
+    return QDate_New2((QDate*)other);
 }
 
 QDate* q_date_new3() {
-    return QDate_new3();
+    return QDate_New3();
 }
 
 QDate* q_date_new4(int y, int m, int d) {
-    return QDate_new4(y, m, d);
+    return QDate_New4(y, m, d);
 }
 
 QDate* q_date_new5(int y, int m, int d, void* cal) {
-    return QDate_new5(y, m, d, (QCalendar*)cal);
+    return QDate_New5(y, m, d, (QCalendar*)cal);
 }
 
 QDate* q_date_new6(void* param1) {
-    return QDate_new6((QDate*)param1);
+    return QDate_New6((QDate*)param1);
 }
 
 void q_date_copy_assign(void* self, void* other) {
@@ -306,31 +306,31 @@ void q_date_delete(void* self) {
 }
 
 QTime* q_time_new(void* other) {
-    return QTime_new((QTime*)other);
+    return QTime_New((QTime*)other);
 }
 
 QTime* q_time_new2(void* other) {
-    return QTime_new2((QTime*)other);
+    return QTime_New2((QTime*)other);
 }
 
 QTime* q_time_new3() {
-    return QTime_new3();
+    return QTime_New3();
 }
 
 QTime* q_time_new4(int h, int m) {
-    return QTime_new4(h, m);
+    return QTime_New4(h, m);
 }
 
 QTime* q_time_new5(void* param1) {
-    return QTime_new5((QTime*)param1);
+    return QTime_New5((QTime*)param1);
 }
 
 QTime* q_time_new6(int h, int m, int s) {
-    return QTime_new6(h, m, s);
+    return QTime_New6(h, m, s);
 }
 
 QTime* q_time_new7(int h, int m, int s, int ms) {
-    return QTime_new7(h, m, s, ms);
+    return QTime_New7(h, m, s, ms);
 }
 
 void q_time_copy_assign(void* self, void* other) {
@@ -470,35 +470,35 @@ void q_time_delete(void* self) {
 }
 
 QDateTime* q_datetime_new() {
-    return QDateTime_new();
+    return QDateTime_New();
 }
 
 QDateTime* q_datetime_new2(void* date, void* time, int32_t spec) {
-    return QDateTime_new2((QDate*)date, (QTime*)time, spec);
+    return QDateTime_New2((QDate*)date, (QTime*)time, spec);
 }
 
 QDateTime* q_datetime_new3(void* date, void* time, void* timeZone) {
-    return QDateTime_new3((QDate*)date, (QTime*)time, (QTimeZone*)timeZone);
+    return QDateTime_New3((QDate*)date, (QTime*)time, (QTimeZone*)timeZone);
 }
 
 QDateTime* q_datetime_new4(void* date, void* time) {
-    return QDateTime_new4((QDate*)date, (QTime*)time);
+    return QDateTime_New4((QDate*)date, (QTime*)time);
 }
 
 QDateTime* q_datetime_new5(void* other) {
-    return QDateTime_new5((QDateTime*)other);
+    return QDateTime_New5((QDateTime*)other);
 }
 
 QDateTime* q_datetime_new6(void* date, void* time, int32_t spec, int offsetSeconds) {
-    return QDateTime_new6((QDate*)date, (QTime*)time, spec, offsetSeconds);
+    return QDateTime_New6((QDate*)date, (QTime*)time, spec, offsetSeconds);
 }
 
 QDateTime* q_datetime_new7(void* date, void* time, void* timeZone, int32_t resolve) {
-    return QDateTime_new7((QDate*)date, (QTime*)time, (QTimeZone*)timeZone, resolve);
+    return QDateTime_New7((QDate*)date, (QTime*)time, (QTimeZone*)timeZone, resolve);
 }
 
 QDateTime* q_datetime_new8(void* date, void* time, int32_t resolve) {
-    return QDateTime_new8((QDate*)date, (QTime*)time, resolve);
+    return QDateTime_New8((QDate*)date, (QTime*)time, resolve);
 }
 
 void q_datetime_operator_assign(void* self, void* other) {

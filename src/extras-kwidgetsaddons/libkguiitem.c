@@ -4,39 +4,39 @@
 #include "libkguiitem.h"
 
 KGuiItem* k_guiitem_new() {
-    return KGuiItem_new();
+    return KGuiItem_New();
 }
 
 KGuiItem* k_guiitem_new2(const char* text) {
-    return KGuiItem_new2(qstring(text));
+    return KGuiItem_New2(qstring(text));
 }
 
 KGuiItem* k_guiitem_new3(const char* text, void* icon) {
-    return KGuiItem_new3(qstring(text), (QIcon*)icon);
+    return KGuiItem_New3(qstring(text), (QIcon*)icon);
 }
 
 KGuiItem* k_guiitem_new4(void* other) {
-    return KGuiItem_new4((KGuiItem*)other);
+    return KGuiItem_New4((KGuiItem*)other);
 }
 
 KGuiItem* k_guiitem_new5(const char* text, const char* iconName) {
-    return KGuiItem_new5(qstring(text), qstring(iconName));
+    return KGuiItem_New5(qstring(text), qstring(iconName));
 }
 
 KGuiItem* k_guiitem_new6(const char* text, const char* iconName, const char* toolTip) {
-    return KGuiItem_new6(qstring(text), qstring(iconName), qstring(toolTip));
+    return KGuiItem_New6(qstring(text), qstring(iconName), qstring(toolTip));
 }
 
 KGuiItem* k_guiitem_new7(const char* text, const char* iconName, const char* toolTip, const char* whatsThis) {
-    return KGuiItem_new7(qstring(text), qstring(iconName), qstring(toolTip), qstring(whatsThis));
+    return KGuiItem_New7(qstring(text), qstring(iconName), qstring(toolTip), qstring(whatsThis));
 }
 
 KGuiItem* k_guiitem_new8(const char* text, void* icon, const char* toolTip) {
-    return KGuiItem_new8(qstring(text), (QIcon*)icon, qstring(toolTip));
+    return KGuiItem_New8(qstring(text), (QIcon*)icon, qstring(toolTip));
 }
 
 KGuiItem* k_guiitem_new9(const char* text, void* icon, const char* toolTip, const char* whatsThis) {
-    return KGuiItem_new9(qstring(text), (QIcon*)icon, qstring(toolTip), qstring(whatsThis));
+    return KGuiItem_New9(qstring(text), (QIcon*)icon, qstring(toolTip), qstring(whatsThis));
 }
 
 void k_guiitem_operator_assign(void* self, void* other) {

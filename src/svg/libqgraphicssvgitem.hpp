@@ -43,10 +43,10 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QGraphicsSvgItem* QGraphicsSvgItem_new();
-QGraphicsSvgItem* QGraphicsSvgItem_new2(const libqt_string fileName);
-QGraphicsSvgItem* QGraphicsSvgItem_new3(QGraphicsItem* parentItem);
-QGraphicsSvgItem* QGraphicsSvgItem_new4(const libqt_string fileName, QGraphicsItem* parentItem);
+QGraphicsSvgItem* QGraphicsSvgItem_New();
+QGraphicsSvgItem* QGraphicsSvgItem_New2(const libqt_string fileName);
+QGraphicsSvgItem* QGraphicsSvgItem_New3(QGraphicsItem* parentItem);
+QGraphicsSvgItem* QGraphicsSvgItem_New4(const libqt_string fileName, QGraphicsItem* parentItem);
 QMetaObject* QGraphicsSvgItem_MetaObject(const QGraphicsSvgItem* self);
 void* QGraphicsSvgItem_Metacast(QGraphicsSvgItem* self, const char* param1);
 int QGraphicsSvgItem_Metacall(QGraphicsSvgItem* self, int param1, int param2, void** param3);

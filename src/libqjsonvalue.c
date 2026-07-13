@@ -5,51 +5,51 @@
 #include "libqjsonvalue.h"
 
 QJsonValue* q_jsonvalue_new() {
-    return QJsonValue_new();
+    return QJsonValue_New();
 }
 
 QJsonValue* q_jsonvalue_new2(bool b) {
-    return QJsonValue_new2(b);
+    return QJsonValue_New2(b);
 }
 
 QJsonValue* q_jsonvalue_new3(double n) {
-    return QJsonValue_new3(n);
+    return QJsonValue_New3(n);
 }
 
 QJsonValue* q_jsonvalue_new4(int n) {
-    return QJsonValue_new4(n);
+    return QJsonValue_New4(n);
 }
 
 QJsonValue* q_jsonvalue_new5(int64_t v) {
-    return QJsonValue_new5(v);
+    return QJsonValue_New5(v);
 }
 
 QJsonValue* q_jsonvalue_new6(const char* s) {
-    return QJsonValue_new6(qstring(s));
+    return QJsonValue_New6(qstring(s));
 }
 
 QJsonValue* q_jsonvalue_new7(char* s) {
-    return QJsonValue_new7(qstring(s));
+    return QJsonValue_New7(qstring(s));
 }
 
 QJsonValue* q_jsonvalue_new8(const char* s) {
-    return QJsonValue_new8(s);
+    return QJsonValue_New8(s);
 }
 
 QJsonValue* q_jsonvalue_new9(void* a) {
-    return QJsonValue_new9((QJsonArray*)a);
+    return QJsonValue_New9((QJsonArray*)a);
 }
 
 QJsonValue* q_jsonvalue_new10(void* o) {
-    return QJsonValue_new10((QJsonObject*)o);
+    return QJsonValue_New10((QJsonObject*)o);
 }
 
 QJsonValue* q_jsonvalue_new11(void* other) {
-    return QJsonValue_new11((QJsonValue*)other);
+    return QJsonValue_New11((QJsonValue*)other);
 }
 
 QJsonValue* q_jsonvalue_new12(int32_t param1) {
-    return QJsonValue_new12(param1);
+    return QJsonValue_New12(param1);
 }
 
 void q_jsonvalue_operator_assign(void* self, void* other) {
@@ -183,11 +183,11 @@ void q_jsonvalue_delete(void* self) {
 }
 
 QJsonValueConstRef* q_jsonvalueconstref_new(void* other) {
-    return QJsonValueConstRef_new((QJsonValueConstRef*)other);
+    return QJsonValueConstRef_New((QJsonValueConstRef*)other);
 }
 
 QJsonValueConstRef* q_jsonvalueconstref_new2(void* param1) {
-    return QJsonValueConstRef_new2((QJsonValueConstRef*)param1);
+    return QJsonValueConstRef_New2((QJsonValueConstRef*)param1);
 }
 
 QJsonValue* q_jsonvalueconstref_to_q_json_value(void* self) {
@@ -301,19 +301,19 @@ void q_jsonvalueconstref_delete(void* self) {
 }
 
 QJsonValueRef* q_jsonvalueref_new(void* other) {
-    return QJsonValueRef_new((QJsonValueRef*)other);
+    return QJsonValueRef_New((QJsonValueRef*)other);
 }
 
 QJsonValueRef* q_jsonvalueref_new2(void* param1) {
-    return QJsonValueRef_new2((QJsonValueRef*)param1);
+    return QJsonValueRef_New2((QJsonValueRef*)param1);
 }
 
 QJsonValueRef* q_jsonvalueref_new3(void* array, intptr_t idx) {
-    return QJsonValueRef_new3((QJsonArray*)array, idx);
+    return QJsonValueRef_New3((QJsonArray*)array, idx);
 }
 
 QJsonValueRef* q_jsonvalueref_new4(void* object, intptr_t idx) {
-    return QJsonValueRef_new4((QJsonObject*)object, idx);
+    return QJsonValueRef_New4((QJsonObject*)object, idx);
 }
 
 void q_jsonvalueref_operator_assign(void* self, void* val) {

@@ -44,11 +44,11 @@
 #include "libqmdiarea.hpp"
 #include "libqmdiarea.hxx"
 
-QMdiArea* QMdiArea_new(QWidget* parent) {
+QMdiArea* QMdiArea_New(QWidget* parent) {
     return new VirtualQMdiArea(parent);
 }
 
-QMdiArea* QMdiArea_new2() {
+QMdiArea* QMdiArea_New2() {
     return new VirtualQMdiArea();
 }
 

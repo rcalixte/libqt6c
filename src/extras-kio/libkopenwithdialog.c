@@ -16,43 +16,43 @@
 #include "libkopenwithdialog.h"
 
 KOpenWithDialog* k_openwithdialog_new(void* parent) {
-    return KOpenWithDialog_new((QWidget*)parent);
+    return KOpenWithDialog_New((QWidget*)parent);
 }
 
 KOpenWithDialog* k_openwithdialog_new2(libqt_list /* of QUrl* */ urls) {
-    return KOpenWithDialog_new2(urls);
+    return KOpenWithDialog_New2(urls);
 }
 
 KOpenWithDialog* k_openwithdialog_new3(libqt_list /* of QUrl* */ urls, const char* text, const char* value) {
-    return KOpenWithDialog_new3(urls, qstring(text), qstring(value));
+    return KOpenWithDialog_New3(urls, qstring(text), qstring(value));
 }
 
 KOpenWithDialog* k_openwithdialog_new4(const char* mimeType, const char* value) {
-    return KOpenWithDialog_new4(qstring(mimeType), qstring(value));
+    return KOpenWithDialog_New4(qstring(mimeType), qstring(value));
 }
 
 KOpenWithDialog* k_openwithdialog_new5(libqt_list /* of QUrl* */ urls, const char* mimeType, const char* text, const char* value) {
-    return KOpenWithDialog_new5(urls, qstring(mimeType), qstring(text), qstring(value));
+    return KOpenWithDialog_New5(urls, qstring(mimeType), qstring(text), qstring(value));
 }
 
 KOpenWithDialog* k_openwithdialog_new6() {
-    return KOpenWithDialog_new6();
+    return KOpenWithDialog_New6();
 }
 
 KOpenWithDialog* k_openwithdialog_new7(libqt_list /* of QUrl* */ urls, void* parent) {
-    return KOpenWithDialog_new7(urls, (QWidget*)parent);
+    return KOpenWithDialog_New7(urls, (QWidget*)parent);
 }
 
 KOpenWithDialog* k_openwithdialog_new8(libqt_list /* of QUrl* */ urls, const char* text, const char* value, void* parent) {
-    return KOpenWithDialog_new8(urls, qstring(text), qstring(value), (QWidget*)parent);
+    return KOpenWithDialog_New8(urls, qstring(text), qstring(value), (QWidget*)parent);
 }
 
 KOpenWithDialog* k_openwithdialog_new9(const char* mimeType, const char* value, void* parent) {
-    return KOpenWithDialog_new9(qstring(mimeType), qstring(value), (QWidget*)parent);
+    return KOpenWithDialog_New9(qstring(mimeType), qstring(value), (QWidget*)parent);
 }
 
 KOpenWithDialog* k_openwithdialog_new10(libqt_list /* of QUrl* */ urls, const char* mimeType, const char* text, const char* value, void* parent) {
-    return KOpenWithDialog_new10(urls, qstring(mimeType), qstring(text), qstring(value), (QWidget*)parent);
+    return KOpenWithDialog_New10(urls, qstring(mimeType), qstring(text), qstring(value), (QWidget*)parent);
 }
 
 const QMetaObject* k_openwithdialog_meta_object(void* self) {

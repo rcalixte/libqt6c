@@ -51,7 +51,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPreviewWidgetBase* KPreviewWidgetBase_new(QWidget* parent);
+KPreviewWidgetBase* KPreviewWidgetBase_New(QWidget* parent);
 QMetaObject* KPreviewWidgetBase_MetaObject(const KPreviewWidgetBase* self);
 void* KPreviewWidgetBase_Metacast(KPreviewWidgetBase* self, const char* param1);
 int KPreviewWidgetBase_Metacall(KPreviewWidgetBase* self, int param1, int param2, void** param3);

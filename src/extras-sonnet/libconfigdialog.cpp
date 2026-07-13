@@ -38,7 +38,7 @@
 #include "libconfigdialog.hpp"
 #include "libconfigdialog.hxx"
 
-Sonnet__ConfigDialog* Sonnet__ConfigDialog_new(QWidget* parent) {
+Sonnet__ConfigDialog* Sonnet__ConfigDialog_New(QWidget* parent) {
     return new VirtualSonnetConfigDialog(parent);
 }
 

@@ -38,11 +38,11 @@
 #include "libqfocusframe.hpp"
 #include "libqfocusframe.hxx"
 
-QFocusFrame* QFocusFrame_new(QWidget* parent) {
+QFocusFrame* QFocusFrame_New(QWidget* parent) {
     return new VirtualQFocusFrame(parent);
 }
 
-QFocusFrame* QFocusFrame_new2() {
+QFocusFrame* QFocusFrame_New2() {
     return new VirtualQFocusFrame();
 }
 

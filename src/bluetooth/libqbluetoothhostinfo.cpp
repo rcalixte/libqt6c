@@ -5,11 +5,11 @@
 #include "libqbluetoothhostinfo.hpp"
 #include "libqbluetoothhostinfo.hxx"
 
-QBluetoothHostInfo* QBluetoothHostInfo_new() {
+QBluetoothHostInfo* QBluetoothHostInfo_New() {
     return new QBluetoothHostInfo();
 }
 
-QBluetoothHostInfo* QBluetoothHostInfo_new2(const QBluetoothHostInfo* other) {
+QBluetoothHostInfo* QBluetoothHostInfo_New2(const QBluetoothHostInfo* other) {
     return new QBluetoothHostInfo(*other);
 }
 

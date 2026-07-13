@@ -15,27 +15,27 @@
 #include "libqdbusinterface.hpp"
 #include "libqdbusinterface.hxx"
 
-QDBusInterface* QDBusInterface_new(const libqt_string service, const libqt_string path) {
+QDBusInterface* QDBusInterface_New(const libqt_string service, const libqt_string path) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new VirtualQDBusInterface(service_QString, path_QString);
 }
 
-QDBusInterface* QDBusInterface_new2(const libqt_string service, const libqt_string path, const libqt_string interface) {
+QDBusInterface* QDBusInterface_New2(const libqt_string service, const libqt_string path, const libqt_string interface) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString interface_QString = QString::fromUtf8(interface.data, interface.len);
     return new VirtualQDBusInterface(service_QString, path_QString, interface_QString);
 }
 
-QDBusInterface* QDBusInterface_new3(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection) {
+QDBusInterface* QDBusInterface_New3(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString interface_QString = QString::fromUtf8(interface.data, interface.len);
     return new VirtualQDBusInterface(service_QString, path_QString, interface_QString, *connection);
 }
 
-QDBusInterface* QDBusInterface_new4(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection, QObject* parent) {
+QDBusInterface* QDBusInterface_New4(const libqt_string service, const libqt_string path, const libqt_string interface, const QDBusConnection* connection, QObject* parent) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QString interface_QString = QString::fromUtf8(interface.data, interface.len);

@@ -5,7 +5,7 @@
 #include "libtagsfilterchecker.hpp"
 #include "libtagsfilterchecker.hxx"
 
-KNSCore__TagsFilterChecker* KNSCore__TagsFilterChecker_new(const libqt_list /* of libqt_string */ tagFilter) {
+KNSCore__TagsFilterChecker* KNSCore__TagsFilterChecker_New(const libqt_list /* of libqt_string */ tagFilter) {
     QList<QString> tagFilter_QList;
     tagFilter_QList.reserve(tagFilter.len);
     libqt_string* tagFilter_arr = static_cast<libqt_string*>(tagFilter.data.ptr);

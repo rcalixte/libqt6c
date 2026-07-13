@@ -16,11 +16,11 @@
 #include "libkfileplacesmodel.h"
 
 KFilePlacesModel* k_fileplacesmodel_new() {
-    return KFilePlacesModel_new();
+    return KFilePlacesModel_New();
 }
 
 KFilePlacesModel* k_fileplacesmodel_new2(void* parent) {
-    return KFilePlacesModel_new2((QObject*)parent);
+    return KFilePlacesModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_fileplacesmodel_meta_object(void* self) {

@@ -20,9 +20,9 @@ typedef struct QHostInfo QHostInfo;
 typedef struct QObject QObject;
 #endif
 
-QHostInfo* QHostInfo_new();
-QHostInfo* QHostInfo_new2(const QHostInfo* d);
-QHostInfo* QHostInfo_new3(int lookupId);
+QHostInfo* QHostInfo_New();
+QHostInfo* QHostInfo_New2(const QHostInfo* d);
+QHostInfo* QHostInfo_New3(int lookupId);
 void QHostInfo_OperatorAssign(QHostInfo* self, const QHostInfo* d);
 void QHostInfo_Swap(QHostInfo* self, QHostInfo* other);
 libqt_string QHostInfo_HostName(const QHostInfo* self);

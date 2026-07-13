@@ -5,11 +5,11 @@
 #include "libqglyphrun.h"
 
 QGlyphRun* q_glyphrun_new() {
-    return QGlyphRun_new();
+    return QGlyphRun_New();
 }
 
 QGlyphRun* q_glyphrun_new2(void* other) {
-    return QGlyphRun_new2((QGlyphRun*)other);
+    return QGlyphRun_New2((QGlyphRun*)other);
 }
 
 void q_glyphrun_operator_assign(void* self, void* other) {

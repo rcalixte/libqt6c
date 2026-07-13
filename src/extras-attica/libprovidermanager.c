@@ -8,11 +8,11 @@
 #include "libprovidermanager.h"
 
 Attica__ProviderManager* k_attica__providermanager_new() {
-    return Attica__ProviderManager_new();
+    return Attica__ProviderManager_New();
 }
 
 Attica__ProviderManager* k_attica__providermanager_new2(const int32_t* flags) {
-    return Attica__ProviderManager_new2(flags);
+    return Attica__ProviderManager_New2(flags);
 }
 
 const QMetaObject* k_attica__providermanager_meta_object(void* self) {

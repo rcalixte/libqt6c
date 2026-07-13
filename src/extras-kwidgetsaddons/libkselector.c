@@ -17,19 +17,19 @@
 #include "libkselector.h"
 
 KSelector* k_selector_new(void* parent) {
-    return KSelector_new((QWidget*)parent);
+    return KSelector_New((QWidget*)parent);
 }
 
 KSelector* k_selector_new2() {
-    return KSelector_new2();
+    return KSelector_New2();
 }
 
 KSelector* k_selector_new3(int32_t o) {
-    return KSelector_new3(o);
+    return KSelector_New3(o);
 }
 
 KSelector* k_selector_new4(int32_t o, void* parent) {
-    return KSelector_new4(o, (QWidget*)parent);
+    return KSelector_New4(o, (QWidget*)parent);
 }
 
 const QMetaObject* k_selector_meta_object(void* self) {
@@ -2383,19 +2383,19 @@ void k_selector_delete(void* self) {
 }
 
 KGradientSelector* k_gradientselector_new(void* parent) {
-    return KGradientSelector_new((QWidget*)parent);
+    return KGradientSelector_New((QWidget*)parent);
 }
 
 KGradientSelector* k_gradientselector_new2() {
-    return KGradientSelector_new2();
+    return KGradientSelector_New2();
 }
 
 KGradientSelector* k_gradientselector_new3(int32_t o) {
-    return KGradientSelector_new3(o);
+    return KGradientSelector_New3(o);
 }
 
 KGradientSelector* k_gradientselector_new4(int32_t o, void* parent) {
-    return KGradientSelector_new4(o, (QWidget*)parent);
+    return KGradientSelector_New4(o, (QWidget*)parent);
 }
 
 const QMetaObject* k_gradientselector_meta_object(void* self) {

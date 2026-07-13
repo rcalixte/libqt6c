@@ -18,12 +18,12 @@ extern "C" {
 typedef struct QVersionNumber QVersionNumber;
 #endif
 
-QVersionNumber* QVersionNumber_new();
-QVersionNumber* QVersionNumber_new2(libqt_list /* of const int */ args);
-QVersionNumber* QVersionNumber_new3(int maj);
-QVersionNumber* QVersionNumber_new4(int maj, int min);
-QVersionNumber* QVersionNumber_new5(int maj, int min, int mic);
-QVersionNumber* QVersionNumber_new6(const QVersionNumber* param1);
+QVersionNumber* QVersionNumber_New();
+QVersionNumber* QVersionNumber_New2(libqt_list /* of const int */ args);
+QVersionNumber* QVersionNumber_New3(int maj);
+QVersionNumber* QVersionNumber_New4(int maj, int min);
+QVersionNumber* QVersionNumber_New5(int maj, int min, int mic);
+QVersionNumber* QVersionNumber_New6(const QVersionNumber* param1);
 bool QVersionNumber_IsNull(const QVersionNumber* self);
 bool QVersionNumber_IsNormalized(const QVersionNumber* self);
 int QVersionNumber_MajorVersion(const QVersionNumber* self);

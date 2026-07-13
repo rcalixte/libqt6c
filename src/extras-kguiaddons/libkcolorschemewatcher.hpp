@@ -24,8 +24,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KColorSchemeWatcher* KColorSchemeWatcher_new();
-KColorSchemeWatcher* KColorSchemeWatcher_new2(QObject* parent);
+KColorSchemeWatcher* KColorSchemeWatcher_New();
+KColorSchemeWatcher* KColorSchemeWatcher_New2(QObject* parent);
 QMetaObject* KColorSchemeWatcher_MetaObject(const KColorSchemeWatcher* self);
 void* KColorSchemeWatcher_Metacast(KColorSchemeWatcher* self, const char* param1);
 int KColorSchemeWatcher_Metacall(KColorSchemeWatcher* self, int param1, int param2, void** param3);

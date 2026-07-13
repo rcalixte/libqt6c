@@ -7,11 +7,11 @@
 #include "libklocalizedtranslator.h"
 
 KLocalizedTranslator* k_localizedtranslator_new() {
-    return KLocalizedTranslator_new();
+    return KLocalizedTranslator_New();
 }
 
 KLocalizedTranslator* k_localizedtranslator_new2(void* parent) {
-    return KLocalizedTranslator_new2((QObject*)parent);
+    return KLocalizedTranslator_New2((QObject*)parent);
 }
 
 const QMetaObject* k_localizedtranslator_meta_object(void* self) {

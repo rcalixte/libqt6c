@@ -25,7 +25,7 @@ typedef struct KFileMetaData__Extractor KFileMetaData__Extractor;
 typedef struct KFileMetaData__ExtractorCollection KFileMetaData__ExtractorCollection;
 #endif
 
-KFileMetaData__ExtractorCollection* KFileMetaData__ExtractorCollection_new();
+KFileMetaData__ExtractorCollection* KFileMetaData__ExtractorCollection_New();
 libqt_list /* of KFileMetaData__Extractor* */ KFileMetaData__ExtractorCollection_FetchExtractors(const KFileMetaData__ExtractorCollection* self, const libqt_string mimetype);
 void KFileMetaData__ExtractorCollection_Delete(KFileMetaData__ExtractorCollection* self);
 

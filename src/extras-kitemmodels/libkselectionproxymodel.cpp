@@ -25,15 +25,15 @@
 #include "libkselectionproxymodel.hpp"
 #include "libkselectionproxymodel.hxx"
 
-KSelectionProxyModel* KSelectionProxyModel_new(QItemSelectionModel* selectionModel) {
+KSelectionProxyModel* KSelectionProxyModel_New(QItemSelectionModel* selectionModel) {
     return new VirtualKSelectionProxyModel(selectionModel);
 }
 
-KSelectionProxyModel* KSelectionProxyModel_new2() {
+KSelectionProxyModel* KSelectionProxyModel_New2() {
     return new VirtualKSelectionProxyModel();
 }
 
-KSelectionProxyModel* KSelectionProxyModel_new3(QItemSelectionModel* selectionModel, QObject* parent) {
+KSelectionProxyModel* KSelectionProxyModel_New3(QItemSelectionModel* selectionModel, QObject* parent) {
     return new VirtualKSelectionProxyModel(selectionModel, parent);
 }
 

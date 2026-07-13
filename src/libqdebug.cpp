@@ -11,11 +11,11 @@
 #include "libqdebug.hpp"
 #include "libqdebug.hxx"
 
-QDebug* QDebug_new(QIODevice* device) {
+QDebug* QDebug_New(QIODevice* device) {
     return new QDebug(device);
 }
 
-QDebug* QDebug_new2(const QDebug* o) {
+QDebug* QDebug_New2(const QDebug* o) {
     return new QDebug(*o);
 }
 
@@ -241,7 +241,7 @@ void QDebug_Delete(QDebug* self) {
     delete self;
 }
 
-QDebugStateSaver* QDebugStateSaver_new(QDebug* dbg) {
+QDebugStateSaver* QDebugStateSaver_New(QDebug* dbg) {
     return new QDebugStateSaver(*dbg);
 }
 
@@ -249,11 +249,11 @@ void QDebugStateSaver_Delete(QDebugStateSaver* self) {
     delete self;
 }
 
-QNoDebug* QNoDebug_new(const QNoDebug* other) {
+QNoDebug* QNoDebug_New(const QNoDebug* other) {
     return new QNoDebug(*other);
 }
 
-QNoDebug* QNoDebug_new2(QNoDebug* other) {
+QNoDebug* QNoDebug_New2(QNoDebug* other) {
     return new QNoDebug(std::move(*other));
 }
 

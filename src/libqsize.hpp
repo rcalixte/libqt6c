@@ -21,11 +21,11 @@ typedef struct QSize QSize;
 typedef struct QSizeF QSizeF;
 #endif
 
-QSize* QSize_new(const QSize* other);
-QSize* QSize_new2(QSize* other);
-QSize* QSize_new3();
-QSize* QSize_new4(int w, int h);
-QSize* QSize_new5(const QSize* param1);
+QSize* QSize_New(const QSize* other);
+QSize* QSize_New2(QSize* other);
+QSize* QSize_New3();
+QSize* QSize_New4(int w, int h);
+QSize* QSize_New5(const QSize* param1);
 void QSize_CopyAssign(QSize* self, QSize* other);
 void QSize_MoveAssign(QSize* self, QSize* other);
 bool QSize_IsNull(const QSize* self);
@@ -54,12 +54,12 @@ QSize* QSize_OperatorDivideAssign(QSize* self, double c);
 QSizeF* QSize_ToSizeF(const QSize* self);
 void QSize_Delete(QSize* self);
 
-QSizeF* QSizeF_new(const QSizeF* other);
-QSizeF* QSizeF_new2(QSizeF* other);
-QSizeF* QSizeF_new3();
-QSizeF* QSizeF_new4(const QSize* sz);
-QSizeF* QSizeF_new5(double w, double h);
-QSizeF* QSizeF_new6(const QSizeF* param1);
+QSizeF* QSizeF_New(const QSizeF* other);
+QSizeF* QSizeF_New2(QSizeF* other);
+QSizeF* QSizeF_New3();
+QSizeF* QSizeF_New4(const QSize* sz);
+QSizeF* QSizeF_New5(double w, double h);
+QSizeF* QSizeF_New6(const QSizeF* param1);
 void QSizeF_CopyAssign(QSizeF* self, QSizeF* other);
 void QSizeF_MoveAssign(QSizeF* self, QSizeF* other);
 bool QSizeF_IsNull(const QSizeF* self);

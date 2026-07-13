@@ -11,11 +11,11 @@
 #include "libqscilexerhex.h"
 
 QsciLexerHex* q_scilexerhex_new() {
-    return QsciLexerHex_new();
+    return QsciLexerHex_New();
 }
 
 QsciLexerHex* q_scilexerhex_new2(void* parent) {
-    return QsciLexerHex_new2((QObject*)parent);
+    return QsciLexerHex_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerhex_meta_object(void* self) {

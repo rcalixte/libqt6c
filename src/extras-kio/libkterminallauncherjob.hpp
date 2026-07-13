@@ -26,8 +26,8 @@ typedef struct QProcessEnvironment QProcessEnvironment;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KTerminalLauncherJob* KTerminalLauncherJob_new(const libqt_string command);
-KTerminalLauncherJob* KTerminalLauncherJob_new2(const libqt_string command, QObject* parent);
+KTerminalLauncherJob* KTerminalLauncherJob_New(const libqt_string command);
+KTerminalLauncherJob* KTerminalLauncherJob_New2(const libqt_string command, QObject* parent);
 QMetaObject* KTerminalLauncherJob_MetaObject(const KTerminalLauncherJob* self);
 void* KTerminalLauncherJob_Metacast(KTerminalLauncherJob* self, const char* param1);
 int KTerminalLauncherJob_Metacall(KTerminalLauncherJob* self, int param1, int param2, void** param3);

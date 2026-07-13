@@ -29,20 +29,20 @@
 #include "libqgraphicssvgitem.hpp"
 #include "libqgraphicssvgitem.hxx"
 
-QGraphicsSvgItem* QGraphicsSvgItem_new() {
+QGraphicsSvgItem* QGraphicsSvgItem_New() {
     return new VirtualQGraphicsSvgItem();
 }
 
-QGraphicsSvgItem* QGraphicsSvgItem_new2(const libqt_string fileName) {
+QGraphicsSvgItem* QGraphicsSvgItem_New2(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQGraphicsSvgItem(fileName_QString);
 }
 
-QGraphicsSvgItem* QGraphicsSvgItem_new3(QGraphicsItem* parentItem) {
+QGraphicsSvgItem* QGraphicsSvgItem_New3(QGraphicsItem* parentItem) {
     return new VirtualQGraphicsSvgItem(parentItem);
 }
 
-QGraphicsSvgItem* QGraphicsSvgItem_new4(const libqt_string fileName, QGraphicsItem* parentItem) {
+QGraphicsSvgItem* QGraphicsSvgItem_New4(const libqt_string fileName, QGraphicsItem* parentItem) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQGraphicsSvgItem(fileName_QString, parentItem);
 }

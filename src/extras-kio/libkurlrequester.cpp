@@ -45,23 +45,23 @@
 #include "libkurlrequester.hpp"
 #include "libkurlrequester.hxx"
 
-KUrlRequester* KUrlRequester_new(QWidget* parent) {
+KUrlRequester* KUrlRequester_New(QWidget* parent) {
     return new VirtualKUrlRequester(parent);
 }
 
-KUrlRequester* KUrlRequester_new2() {
+KUrlRequester* KUrlRequester_New2() {
     return new VirtualKUrlRequester();
 }
 
-KUrlRequester* KUrlRequester_new3(const QUrl* url) {
+KUrlRequester* KUrlRequester_New3(const QUrl* url) {
     return new VirtualKUrlRequester(*url);
 }
 
-KUrlRequester* KUrlRequester_new4(QWidget* editWidget, QWidget* parent) {
+KUrlRequester* KUrlRequester_New4(QWidget* editWidget, QWidget* parent) {
     return new VirtualKUrlRequester(editWidget, parent);
 }
 
-KUrlRequester* KUrlRequester_new5(const QUrl* url, QWidget* parent) {
+KUrlRequester* KUrlRequester_New5(const QUrl* url, QWidget* parent) {
     return new VirtualKUrlRequester(*url, parent);
 }
 
@@ -2069,11 +2069,11 @@ void KUrlRequester_Delete(KUrlRequester* self) {
     delete self;
 }
 
-KUrlComboRequester* KUrlComboRequester_new(QWidget* parent) {
+KUrlComboRequester* KUrlComboRequester_New(QWidget* parent) {
     return new VirtualKUrlComboRequester(parent);
 }
 
-KUrlComboRequester* KUrlComboRequester_new2() {
+KUrlComboRequester* KUrlComboRequester_New2() {
     return new VirtualKUrlComboRequester();
 }
 

@@ -2,11 +2,11 @@
 #include "libdistribution.h"
 
 Attica__Distribution* k_attica__distribution_new() {
-    return Attica__Distribution_new();
+    return Attica__Distribution_New();
 }
 
 Attica__Distribution* k_attica__distribution_new2(void* other) {
-    return Attica__Distribution_new2((Attica__Distribution*)other);
+    return Attica__Distribution_New2((Attica__Distribution*)other);
 }
 
 void k_attica__distribution_operator_assign(void* self, void* other) {

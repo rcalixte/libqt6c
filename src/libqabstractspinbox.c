@@ -16,11 +16,11 @@
 #include "libqabstractspinbox.h"
 
 QAbstractSpinBox* q_abstractspinbox_new(void* parent) {
-    return QAbstractSpinBox_new((QWidget*)parent);
+    return QAbstractSpinBox_New((QWidget*)parent);
 }
 
 QAbstractSpinBox* q_abstractspinbox_new2() {
-    return QAbstractSpinBox_new2();
+    return QAbstractSpinBox_New2();
 }
 
 const QMetaObject* q_abstractspinbox_meta_object(void* self) {

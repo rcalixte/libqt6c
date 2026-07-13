@@ -4,19 +4,19 @@
 #include "libqpdfdocumentrenderoptions.h"
 
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new(void* other) {
-    return QPdfDocumentRenderOptions_new((QPdfDocumentRenderOptions*)other);
+    return QPdfDocumentRenderOptions_New((QPdfDocumentRenderOptions*)other);
 }
 
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new2(void* other) {
-    return QPdfDocumentRenderOptions_new2((QPdfDocumentRenderOptions*)other);
+    return QPdfDocumentRenderOptions_New2((QPdfDocumentRenderOptions*)other);
 }
 
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new3() {
-    return QPdfDocumentRenderOptions_new3();
+    return QPdfDocumentRenderOptions_New3();
 }
 
 QPdfDocumentRenderOptions* q_pdfdocumentrenderoptions_new4(void* param1) {
-    return QPdfDocumentRenderOptions_new4((QPdfDocumentRenderOptions*)param1);
+    return QPdfDocumentRenderOptions_New4((QPdfDocumentRenderOptions*)param1);
 }
 
 void q_pdfdocumentrenderoptions_copy_assign(void* self, void* other) {

@@ -16,19 +16,19 @@
 #include "libqradiobutton.h"
 
 QRadioButton* q_radiobutton_new(void* parent) {
-    return QRadioButton_new((QWidget*)parent);
+    return QRadioButton_New((QWidget*)parent);
 }
 
 QRadioButton* q_radiobutton_new2() {
-    return QRadioButton_new2();
+    return QRadioButton_New2();
 }
 
 QRadioButton* q_radiobutton_new3(const char* text) {
-    return QRadioButton_new3(qstring(text));
+    return QRadioButton_New3(qstring(text));
 }
 
 QRadioButton* q_radiobutton_new4(const char* text, void* parent) {
-    return QRadioButton_new4(qstring(text), (QWidget*)parent);
+    return QRadioButton_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* q_radiobutton_meta_object(void* self) {

@@ -3,7 +3,7 @@
 #include "libauth_data.h"
 
 Accounts__AuthData* q_accounts__authdata_new(void* other) {
-    return Accounts__AuthData_new((Accounts__AuthData*)other);
+    return Accounts__AuthData_New((Accounts__AuthData*)other);
 }
 
 uint32_t q_accounts__authdata_credentials_id(void* self) {

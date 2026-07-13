@@ -15,11 +15,11 @@
 #include "libqsciprinter.h"
 
 QsciPrinter* q_sciprinter_new() {
-    return QsciPrinter_new();
+    return QsciPrinter_New();
 }
 
 QsciPrinter* q_sciprinter_new2(int32_t mode) {
-    return QsciPrinter_new2(mode);
+    return QsciPrinter_New2(mode);
 }
 
 void q_sciprinter_format_page(void* self, void* painter, bool drawing, void* area, int pagenr) {

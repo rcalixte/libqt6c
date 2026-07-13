@@ -28,7 +28,7 @@ bool q_poppler_is_overprint_preview_available() {
 }
 
 Poppler__TextBox* q_poppler__textbox_new(const char* text, void* bBox) {
-    return Poppler__TextBox_new(qstring(text), (QRectF*)bBox);
+    return Poppler__TextBox_New(qstring(text), (QRectF*)bBox);
 }
 
 const char* q_poppler__textbox_text(void* self) {
@@ -59,11 +59,11 @@ void q_poppler__textbox_delete(void* self) {
 }
 
 Poppler__FontInfo* q_poppler__fontinfo_new() {
-    return Poppler__FontInfo_new();
+    return Poppler__FontInfo_New();
 }
 
 Poppler__FontInfo* q_poppler__fontinfo_new2(void* fi) {
-    return Poppler__FontInfo_new2((Poppler__FontInfo*)fi);
+    return Poppler__FontInfo_New2((Poppler__FontInfo*)fi);
 }
 
 const char* q_poppler__fontinfo_name(void* self) {
@@ -394,11 +394,11 @@ void q_poppler__page_delete(void* self) {
 }
 
 Poppler__OutlineItem* q_poppler__outlineitem_new() {
-    return Poppler__OutlineItem_new();
+    return Poppler__OutlineItem_New();
 }
 
 Poppler__OutlineItem* q_poppler__outlineitem_new2(void* other) {
-    return Poppler__OutlineItem_new2((Poppler__OutlineItem*)other);
+    return Poppler__OutlineItem_New2((Poppler__OutlineItem*)other);
 }
 
 void q_poppler__outlineitem_operator_assign(void* self, void* other) {

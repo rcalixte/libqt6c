@@ -14,7 +14,7 @@
 #include "libkabstractviewadapter.hpp"
 #include "libkabstractviewadapter.hxx"
 
-KAbstractViewAdapter* KAbstractViewAdapter_new(QObject* parent) {
+KAbstractViewAdapter* KAbstractViewAdapter_New(QObject* parent) {
     return new VirtualKAbstractViewAdapter(parent);
 }
 

@@ -2,15 +2,15 @@
 #include "libqwebengineurlscheme.h"
 
 QWebEngineUrlScheme* q_webengineurlscheme_new() {
-    return QWebEngineUrlScheme_new();
+    return QWebEngineUrlScheme_New();
 }
 
 QWebEngineUrlScheme* q_webengineurlscheme_new2(char* name) {
-    return QWebEngineUrlScheme_new2(qstring(name));
+    return QWebEngineUrlScheme_New2(qstring(name));
 }
 
 QWebEngineUrlScheme* q_webengineurlscheme_new3(void* that) {
-    return QWebEngineUrlScheme_new3((QWebEngineUrlScheme*)that);
+    return QWebEngineUrlScheme_New3((QWebEngineUrlScheme*)that);
 }
 
 void q_webengineurlscheme_operator_assign(void* self, void* that) {

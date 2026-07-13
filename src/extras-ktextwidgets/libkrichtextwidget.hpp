@@ -62,9 +62,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KRichTextWidget* KRichTextWidget_new(QWidget* parent);
-KRichTextWidget* KRichTextWidget_new2(const libqt_string text);
-KRichTextWidget* KRichTextWidget_new3(const libqt_string text, QWidget* parent);
+KRichTextWidget* KRichTextWidget_New(QWidget* parent);
+KRichTextWidget* KRichTextWidget_New2(const libqt_string text);
+KRichTextWidget* KRichTextWidget_New3(const libqt_string text, QWidget* parent);
 QMetaObject* KRichTextWidget_MetaObject(const KRichTextWidget* self);
 void* KRichTextWidget_Metacast(KRichTextWidget* self, const char* param1);
 int KRichTextWidget_Metacall(KRichTextWidget* self, int param1, int param2, void** param3);

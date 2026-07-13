@@ -25,9 +25,9 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-QNetworkRequest* QNetworkRequest_new();
-QNetworkRequest* QNetworkRequest_new2(const QUrl* url);
-QNetworkRequest* QNetworkRequest_new3(const QNetworkRequest* other);
+QNetworkRequest* QNetworkRequest_New();
+QNetworkRequest* QNetworkRequest_New2(const QUrl* url);
+QNetworkRequest* QNetworkRequest_New3(const QNetworkRequest* other);
 void QNetworkRequest_OperatorAssign(QNetworkRequest* self, const QNetworkRequest* other);
 void QNetworkRequest_Swap(QNetworkRequest* self, QNetworkRequest* other);
 bool QNetworkRequest_OperatorEqual(const QNetworkRequest* self, const QNetworkRequest* other);

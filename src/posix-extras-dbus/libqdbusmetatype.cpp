@@ -6,11 +6,11 @@
 #include "libqdbusmetatype.hpp"
 #include "libqdbusmetatype.hxx"
 
-QDBusMetaType* QDBusMetaType_new(const QDBusMetaType* other) {
+QDBusMetaType* QDBusMetaType_New(const QDBusMetaType* other) {
     return new QDBusMetaType(*other);
 }
 
-QDBusMetaType* QDBusMetaType_new2(QDBusMetaType* other) {
+QDBusMetaType* QDBusMetaType_New2(QDBusMetaType* other) {
     return new QDBusMetaType(std::move(*other));
 }
 

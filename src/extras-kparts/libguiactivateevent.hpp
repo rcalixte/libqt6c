@@ -22,7 +22,7 @@ typedef struct KParts__GUIActivateEvent KParts__GUIActivateEvent;
 typedef struct QEvent QEvent;
 #endif
 
-KParts__GUIActivateEvent* KParts__GUIActivateEvent_new(bool activated);
+KParts__GUIActivateEvent* KParts__GUIActivateEvent_New(bool activated);
 bool KParts__GUIActivateEvent_Activated(const KParts__GUIActivateEvent* self);
 bool KParts__GUIActivateEvent_Test(const QEvent* event);
 void KParts__GUIActivateEvent_SetAccepted(KParts__GUIActivateEvent* self, bool accepted);

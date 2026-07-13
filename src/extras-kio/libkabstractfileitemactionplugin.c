@@ -9,7 +9,7 @@
 #include "libkabstractfileitemactionplugin.h"
 
 KAbstractFileItemActionPlugin* k_abstractfileitemactionplugin_new(void* parent) {
-    return KAbstractFileItemActionPlugin_new((QObject*)parent);
+    return KAbstractFileItemActionPlugin_New((QObject*)parent);
 }
 
 const QMetaObject* k_abstractfileitemactionplugin_meta_object(void* self) {

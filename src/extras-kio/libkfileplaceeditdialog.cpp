@@ -39,25 +39,25 @@
 #include "libkfileplaceeditdialog.hpp"
 #include "libkfileplaceeditdialog.hxx"
 
-KFilePlaceEditDialog* KFilePlaceEditDialog_new(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace) {
+KFilePlaceEditDialog* KFilePlaceEditDialog_New(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
     return new VirtualKFilePlaceEditDialog(allowGlobal, *url, label_QString, icon_QString, isAddingNewPlace);
 }
 
-KFilePlaceEditDialog* KFilePlaceEditDialog_new2(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal) {
+KFilePlaceEditDialog* KFilePlaceEditDialog_New2(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
     return new VirtualKFilePlaceEditDialog(allowGlobal, *url, label_QString, icon_QString, isAddingNewPlace, appLocal);
 }
 
-KFilePlaceEditDialog* KFilePlaceEditDialog_new3(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize) {
+KFilePlaceEditDialog* KFilePlaceEditDialog_New3(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
     return new VirtualKFilePlaceEditDialog(allowGlobal, *url, label_QString, icon_QString, isAddingNewPlace, appLocal, static_cast<int>(iconSize));
 }
 
-KFilePlaceEditDialog* KFilePlaceEditDialog_new4(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize, QWidget* parent) {
+KFilePlaceEditDialog* KFilePlaceEditDialog_New4(bool allowGlobal, const QUrl* url, const libqt_string label, const libqt_string icon, bool isAddingNewPlace, bool appLocal, int iconSize, QWidget* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     QString icon_QString = QString::fromUtf8(icon.data, icon.len);
     return new VirtualKFilePlaceEditDialog(allowGlobal, *url, label_QString, icon_QString, isAddingNewPlace, appLocal, static_cast<int>(iconSize), parent);

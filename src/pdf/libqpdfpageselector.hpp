@@ -51,8 +51,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QPdfPageSelector* QPdfPageSelector_new(QWidget* parent);
-QPdfPageSelector* QPdfPageSelector_new2();
+QPdfPageSelector* QPdfPageSelector_New(QWidget* parent);
+QPdfPageSelector* QPdfPageSelector_New2();
 QMetaObject* QPdfPageSelector_MetaObject(const QPdfPageSelector* self);
 void* QPdfPageSelector_Metacast(QPdfPageSelector* self, const char* param1);
 int QPdfPageSelector_Metacall(QPdfPageSelector* self, int param1, int param2, void** param3);

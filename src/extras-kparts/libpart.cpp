@@ -22,15 +22,15 @@
 #include "libpart.hpp"
 #include "libpart.hxx"
 
-KParts__Part* KParts__Part_new() {
+KParts__Part* KParts__Part_New() {
     return new VirtualKPartsPart();
 }
 
-KParts__Part* KParts__Part_new2(QObject* parent) {
+KParts__Part* KParts__Part_New2(QObject* parent) {
     return new VirtualKPartsPart(parent);
 }
 
-KParts__Part* KParts__Part_new3(QObject* parent, const KPluginMetaData* data) {
+KParts__Part* KParts__Part_New3(QObject* parent, const KPluginMetaData* data) {
     return new VirtualKPartsPart(parent, *data);
 }
 

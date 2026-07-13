@@ -12,11 +12,11 @@
 #include "libqparallelanimationgroup.hpp"
 #include "libqparallelanimationgroup.hxx"
 
-QParallelAnimationGroup* QParallelAnimationGroup_new() {
+QParallelAnimationGroup* QParallelAnimationGroup_New() {
     return new VirtualQParallelAnimationGroup();
 }
 
-QParallelAnimationGroup* QParallelAnimationGroup_new2(QObject* parent) {
+QParallelAnimationGroup* QParallelAnimationGroup_New2(QObject* parent) {
     return new VirtualQParallelAnimationGroup(parent);
 }
 

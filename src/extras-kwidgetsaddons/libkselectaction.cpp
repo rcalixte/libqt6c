@@ -16,16 +16,16 @@
 #include "libkselectaction.hpp"
 #include "libkselectaction.hxx"
 
-KSelectAction* KSelectAction_new(QObject* parent) {
+KSelectAction* KSelectAction_New(QObject* parent) {
     return new VirtualKSelectAction(parent);
 }
 
-KSelectAction* KSelectAction_new2(const libqt_string text, QObject* parent) {
+KSelectAction* KSelectAction_New2(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKSelectAction(text_QString, parent);
 }
 
-KSelectAction* KSelectAction_new3(const QIcon* icon, const libqt_string text, QObject* parent) {
+KSelectAction* KSelectAction_New3(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKSelectAction(*icon, text_QString, parent);
 }

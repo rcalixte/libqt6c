@@ -21,7 +21,7 @@ typedef struct QReadWriteLock QReadWriteLock;
 typedef struct QWaitCondition QWaitCondition;
 #endif
 
-QWaitCondition* QWaitCondition_new();
+QWaitCondition* QWaitCondition_New();
 bool QWaitCondition_Wait(QWaitCondition* self, QMutex* lockedMutex);
 bool QWaitCondition_Wait2(QWaitCondition* self, QMutex* lockedMutex, unsigned long time);
 bool QWaitCondition_Wait3(QWaitCondition* self, QReadWriteLock* lockedReadWriteLock);

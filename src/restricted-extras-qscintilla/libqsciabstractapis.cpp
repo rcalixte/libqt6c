@@ -10,7 +10,7 @@
 #include "libqsciabstractapis.hpp"
 #include "libqsciabstractapis.hxx"
 
-QsciAbstractAPIs* QsciAbstractAPIs_new(QsciLexer* lexer) {
+QsciAbstractAPIs* QsciAbstractAPIs_New(QsciLexer* lexer) {
     return new VirtualQsciAbstractAPIs(lexer);
 }
 

@@ -22,9 +22,9 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-K7Zip* K7Zip_new(const libqt_string filename);
-K7Zip* K7Zip_new2(QIODevice* dev);
-K7Zip* K7Zip_new3(const K7Zip* param1);
+K7Zip* K7Zip_New(const libqt_string filename);
+K7Zip* K7Zip_New2(QIODevice* dev);
+K7Zip* K7Zip_New3(const K7Zip* param1);
 void K7Zip_SetPassword(K7Zip* self, const libqt_string password);
 bool K7Zip_PasswordNeeded(const K7Zip* self);
 bool K7Zip_DoWriteSymLink(K7Zip* self, const libqt_string name, const libqt_string target, const libqt_string user, const libqt_string group, mode_t perm, const QDateTime* atime, const QDateTime* mtime, const QDateTime* ctime);

@@ -7,11 +7,11 @@
 #include "libactivity.hpp"
 #include "libactivity.hxx"
 
-Attica__Activity* Attica__Activity_new() {
+Attica__Activity* Attica__Activity_New() {
     return new Attica::Activity();
 }
 
-Attica__Activity* Attica__Activity_new2(const Attica__Activity* other) {
+Attica__Activity* Attica__Activity_New2(const Attica__Activity* other) {
     return new Attica::Activity(*other);
 }
 

@@ -3,27 +3,27 @@
 #include "libkuser.h"
 
 KUser* k_user_new() {
-    return KUser_new();
+    return KUser_New();
 }
 
 KUser* k_user_new2(uid_t uid) {
-    return KUser_new2(uid);
+    return KUser_New2(uid);
 }
 
 KUser* k_user_new3(const char* name) {
-    return KUser_new3(qstring(name));
+    return KUser_New3(qstring(name));
 }
 
 KUser* k_user_new4(const char* name) {
-    return KUser_new4(name);
+    return KUser_New4(name);
 }
 
 KUser* k_user_new5(void* user) {
-    return KUser_new5((KUser*)user);
+    return KUser_New5((KUser*)user);
 }
 
 KUser* k_user_new6(int32_t mode) {
-    return KUser_new6(mode);
+    return KUser_New6(mode);
 }
 
 void k_user_operator_assign(void* self, void* user) {
@@ -179,27 +179,27 @@ void k_user_delete(void* self) {
 }
 
 KUserGroup* k_usergroup_new(const char* name) {
-    return KUserGroup_new(qstring(name));
+    return KUserGroup_New(qstring(name));
 }
 
 KUserGroup* k_usergroup_new2(const char* name) {
-    return KUserGroup_new2(name);
+    return KUserGroup_New2(name);
 }
 
 KUserGroup* k_usergroup_new3() {
-    return KUserGroup_new3();
+    return KUserGroup_New3();
 }
 
 KUserGroup* k_usergroup_new4(gid_t gid) {
-    return KUserGroup_new4(gid);
+    return KUserGroup_New4(gid);
 }
 
 KUserGroup* k_usergroup_new5(void* group) {
-    return KUserGroup_new5((KUserGroup*)group);
+    return KUserGroup_New5((KUserGroup*)group);
 }
 
 KUserGroup* k_usergroup_new6(int32_t mode) {
-    return KUserGroup_new6(mode);
+    return KUserGroup_New6(mode);
 }
 
 void k_usergroup_operator_assign(void* self, void* group) {

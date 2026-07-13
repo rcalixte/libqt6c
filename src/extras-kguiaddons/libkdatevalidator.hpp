@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QValidator QValidator;
 #endif
 
-KDateValidator* KDateValidator_new();
-KDateValidator* KDateValidator_new2(QObject* parent);
+KDateValidator* KDateValidator_New();
+KDateValidator* KDateValidator_New2(QObject* parent);
 QMetaObject* KDateValidator_MetaObject(const KDateValidator* self);
 void* KDateValidator_Metacast(KDateValidator* self, const char* param1);
 int KDateValidator_Metacall(KDateValidator* self, int param1, int param2, void** param3);

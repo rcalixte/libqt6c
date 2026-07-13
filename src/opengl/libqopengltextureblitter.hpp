@@ -21,7 +21,7 @@ typedef struct QRect QRect;
 typedef struct QRectF QRectF;
 #endif
 
-QOpenGLTextureBlitter* QOpenGLTextureBlitter_new();
+QOpenGLTextureBlitter* QOpenGLTextureBlitter_New();
 bool QOpenGLTextureBlitter_Create(QOpenGLTextureBlitter* self);
 bool QOpenGLTextureBlitter_IsCreated(const QOpenGLTextureBlitter* self);
 void QOpenGLTextureBlitter_Destroy(QOpenGLTextureBlitter* self);

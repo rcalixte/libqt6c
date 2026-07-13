@@ -14,7 +14,7 @@
 #include "libqsizegrip.h"
 
 QSizeGrip* q_sizegrip_new(void* parent) {
-    return QSizeGrip_new((QWidget*)parent);
+    return QSizeGrip_New((QWidget*)parent);
 }
 
 const QMetaObject* q_sizegrip_meta_object(void* self) {

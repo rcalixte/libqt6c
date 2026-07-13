@@ -16,11 +16,11 @@
 #include "libqmediacapturesession.h"
 
 QMediaCaptureSession* q_mediacapturesession_new() {
-    return QMediaCaptureSession_new();
+    return QMediaCaptureSession_New();
 }
 
 QMediaCaptureSession* q_mediacapturesession_new2(void* parent) {
-    return QMediaCaptureSession_new2((QObject*)parent);
+    return QMediaCaptureSession_New2((QObject*)parent);
 }
 
 const QMetaObject* q_mediacapturesession_meta_object(void* self) {

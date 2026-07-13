@@ -11,11 +11,11 @@
 #include "libkcolumnheadersmodel.h"
 
 KColumnHeadersModel* k_columnheadersmodel_new() {
-    return KColumnHeadersModel_new();
+    return KColumnHeadersModel_New();
 }
 
 KColumnHeadersModel* k_columnheadersmodel_new2(void* parent) {
-    return KColumnHeadersModel_new2((QObject*)parent);
+    return KColumnHeadersModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_columnheadersmodel_meta_object(void* self) {

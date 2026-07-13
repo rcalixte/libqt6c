@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QTcpSocket* QTcpSocket_new();
-QTcpSocket* QTcpSocket_new2(QObject* parent);
+QTcpSocket* QTcpSocket_New();
+QTcpSocket* QTcpSocket_New2(QObject* parent);
 QMetaObject* QTcpSocket_MetaObject(const QTcpSocket* self);
 void* QTcpSocket_Metacast(QTcpSocket* self, const char* param1);
 int QTcpSocket_Metacall(QTcpSocket* self, int param1, int param2, void** param3);

@@ -39,11 +39,11 @@
 #include "libqdial.hpp"
 #include "libqdial.hxx"
 
-QDial* QDial_new(QWidget* parent) {
+QDial* QDial_New(QWidget* parent) {
     return new VirtualQDial(parent);
 }
 
-QDial* QDial_new2() {
+QDial* QDial_New2() {
     return new VirtualQDial();
 }
 

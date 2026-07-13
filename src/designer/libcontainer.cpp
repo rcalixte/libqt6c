@@ -4,7 +4,7 @@
 #include "libcontainer.hpp"
 #include "libcontainer.hxx"
 
-QDesignerContainerExtension* QDesignerContainerExtension_new() {
+QDesignerContainerExtension* QDesignerContainerExtension_New() {
     return new VirtualQDesignerContainerExtension();
 }
 

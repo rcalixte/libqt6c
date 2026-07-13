@@ -6,11 +6,11 @@
 #include "libqmaskgenerator.h"
 
 QMaskGenerator* q_maskgenerator_new() {
-    return QMaskGenerator_new();
+    return QMaskGenerator_New();
 }
 
 QMaskGenerator* q_maskgenerator_new2(void* parent) {
-    return QMaskGenerator_new2((QObject*)parent);
+    return QMaskGenerator_New2((QObject*)parent);
 }
 
 bool q_maskgenerator_seed(void* self) {

@@ -12,11 +12,11 @@
 #include "libqsqldriver.h"
 
 QSqlDriver* q_sqldriver_new() {
-    return QSqlDriver_new();
+    return QSqlDriver_New();
 }
 
 QSqlDriver* q_sqldriver_new2(void* parent) {
-    return QSqlDriver_new2((QObject*)parent);
+    return QSqlDriver_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sqldriver_meta_object(void* self) {

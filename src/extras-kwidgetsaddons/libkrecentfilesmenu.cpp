@@ -42,20 +42,20 @@
 #include "libkrecentfilesmenu.hpp"
 #include "libkrecentfilesmenu.hxx"
 
-KRecentFilesMenu* KRecentFilesMenu_new(QWidget* parent) {
+KRecentFilesMenu* KRecentFilesMenu_New(QWidget* parent) {
     return new VirtualKRecentFilesMenu(parent);
 }
 
-KRecentFilesMenu* KRecentFilesMenu_new2(const libqt_string title) {
+KRecentFilesMenu* KRecentFilesMenu_New2(const libqt_string title) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKRecentFilesMenu(title_QString);
 }
 
-KRecentFilesMenu* KRecentFilesMenu_new3() {
+KRecentFilesMenu* KRecentFilesMenu_New3() {
     return new VirtualKRecentFilesMenu();
 }
 
-KRecentFilesMenu* KRecentFilesMenu_new4(const libqt_string title, QWidget* parent) {
+KRecentFilesMenu* KRecentFilesMenu_New4(const libqt_string title, QWidget* parent) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKRecentFilesMenu(title_QString, parent);
 }

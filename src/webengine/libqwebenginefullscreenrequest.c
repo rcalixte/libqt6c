@@ -3,7 +3,7 @@
 #include "libqwebenginefullscreenrequest.h"
 
 QWebEngineFullScreenRequest* q_webenginefullscreenrequest_new(void* other) {
-    return QWebEngineFullScreenRequest_new((QWebEngineFullScreenRequest*)other);
+    return QWebEngineFullScreenRequest_New((QWebEngineFullScreenRequest*)other);
 }
 
 void q_webenginefullscreenrequest_operator_assign(void* self, void* other) {

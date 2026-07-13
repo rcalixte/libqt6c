@@ -22,8 +22,8 @@ typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
 #endif
 
-KJobTrackerInterface* KJobTrackerInterface_new();
-KJobTrackerInterface* KJobTrackerInterface_new2(QObject* parent);
+KJobTrackerInterface* KJobTrackerInterface_New();
+KJobTrackerInterface* KJobTrackerInterface_New2(QObject* parent);
 QMetaObject* KJobTrackerInterface_MetaObject(const KJobTrackerInterface* self);
 void* KJobTrackerInterface_Metacast(KJobTrackerInterface* self, const char* param1);
 int KJobTrackerInterface_Metacall(KJobTrackerInterface* self, int param1, int param2, void** param3);

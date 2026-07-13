@@ -8,11 +8,11 @@
 #include "libqlocalsocket.h"
 
 QLocalSocket* q_localsocket_new() {
-    return QLocalSocket_new();
+    return QLocalSocket_New();
 }
 
 QLocalSocket* q_localsocket_new2(void* parent) {
-    return QLocalSocket_new2((QObject*)parent);
+    return QLocalSocket_New2((QObject*)parent);
 }
 
 const QMetaObject* q_localsocket_meta_object(void* self) {

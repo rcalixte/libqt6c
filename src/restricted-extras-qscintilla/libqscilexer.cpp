@@ -14,11 +14,11 @@
 #include "libqscilexer.hpp"
 #include "libqscilexer.hxx"
 
-QsciLexer* QsciLexer_new() {
+QsciLexer* QsciLexer_New() {
     return new VirtualQsciLexer();
 }
 
-QsciLexer* QsciLexer_new2(QObject* parent) {
+QsciLexer* QsciLexer_New2(QObject* parent) {
     return new VirtualQsciLexer(parent);
 }
 

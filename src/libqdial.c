@@ -16,11 +16,11 @@
 #include "libqdial.h"
 
 QDial* q_dial_new(void* parent) {
-    return QDial_new((QWidget*)parent);
+    return QDial_New((QWidget*)parent);
 }
 
 QDial* q_dial_new2() {
-    return QDial_new2();
+    return QDial_New2();
 }
 
 const QMetaObject* q_dial_meta_object(void* self) {

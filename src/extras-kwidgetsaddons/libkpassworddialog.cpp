@@ -41,15 +41,15 @@
 #include "libkpassworddialog.hpp"
 #include "libkpassworddialog.hxx"
 
-KPasswordDialog* KPasswordDialog_new(QWidget* parent) {
+KPasswordDialog* KPasswordDialog_New(QWidget* parent) {
     return new VirtualKPasswordDialog(parent);
 }
 
-KPasswordDialog* KPasswordDialog_new2() {
+KPasswordDialog* KPasswordDialog_New2() {
     return new VirtualKPasswordDialog();
 }
 
-KPasswordDialog* KPasswordDialog_new3(QWidget* parent, const int* flags) {
+KPasswordDialog* KPasswordDialog_New3(QWidget* parent, const int* flags) {
     return new VirtualKPasswordDialog(parent, (const KPasswordDialog::KPasswordDialogFlags&)(*flags));
 }
 

@@ -11,15 +11,15 @@
 #include "libqstackedlayout.h"
 
 QStackedLayout* q_stackedlayout_new(void* parent) {
-    return QStackedLayout_new((QWidget*)parent);
+    return QStackedLayout_New((QWidget*)parent);
 }
 
 QStackedLayout* q_stackedlayout_new2() {
-    return QStackedLayout_new2();
+    return QStackedLayout_New2();
 }
 
 QStackedLayout* q_stackedlayout_new3(void* parentLayout) {
-    return QStackedLayout_new3((QLayout*)parentLayout);
+    return QStackedLayout_New3((QLayout*)parentLayout);
 }
 
 const QMetaObject* q_stackedlayout_meta_object(void* self) {

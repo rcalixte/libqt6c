@@ -5,7 +5,7 @@
 #include "libtaskmenu.hpp"
 #include "libtaskmenu.hxx"
 
-QDesignerTaskMenuExtension* QDesignerTaskMenuExtension_new() {
+QDesignerTaskMenuExtension* QDesignerTaskMenuExtension_New() {
     return new VirtualQDesignerTaskMenuExtension();
 }
 

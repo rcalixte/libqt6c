@@ -20,11 +20,11 @@ void q_sqldrivercreatorbase_delete(void* self) {
 }
 
 QSqlDatabase* q_sqldatabase_new() {
-    return QSqlDatabase_new();
+    return QSqlDatabase_New();
 }
 
 QSqlDatabase* q_sqldatabase_new2(void* other) {
-    return QSqlDatabase_new2((QSqlDatabase*)other);
+    return QSqlDatabase_New2((QSqlDatabase*)other);
 }
 
 void q_sqldatabase_operator_assign(void* self, void* other) {

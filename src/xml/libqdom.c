@@ -5,11 +5,11 @@
 #include "libqdom.h"
 
 QDomImplementation* q_domimplementation_new() {
-    return QDomImplementation_new();
+    return QDomImplementation_New();
 }
 
 QDomImplementation* q_domimplementation_new2(void* implementation) {
-    return QDomImplementation_new2((QDomImplementation*)implementation);
+    return QDomImplementation_New2((QDomImplementation*)implementation);
 }
 
 void q_domimplementation_operator_assign(void* self, void* other) {
@@ -53,11 +53,11 @@ void q_domimplementation_delete(void* self) {
 }
 
 QDomNode* q_domnode_new() {
-    return QDomNode_new();
+    return QDomNode_New();
 }
 
 QDomNode* q_domnode_new2(void* node) {
-    return QDomNode_new2((QDomNode*)node);
+    return QDomNode_New2((QDomNode*)node);
 }
 
 void q_domnode_operator_assign(void* self, void* other) {
@@ -380,11 +380,11 @@ void q_domnode_delete(void* self) {
 }
 
 QDomNodeList* q_domnodelist_new() {
-    return QDomNodeList_new();
+    return QDomNodeList_New();
 }
 
 QDomNodeList* q_domnodelist_new2(void* nodeList) {
-    return QDomNodeList_new2((QDomNodeList*)nodeList);
+    return QDomNodeList_New2((QDomNodeList*)nodeList);
 }
 
 void q_domnodelist_operator_assign(void* self, void* other) {
@@ -428,11 +428,11 @@ void q_domnodelist_delete(void* self) {
 }
 
 QDomDocumentType* q_domdocumenttype_new() {
-    return QDomDocumentType_new();
+    return QDomDocumentType_New();
 }
 
 QDomDocumentType* q_domdocumenttype_new2(void* documentType) {
-    return QDomDocumentType_new2((QDomDocumentType*)documentType);
+    return QDomDocumentType_New2((QDomDocumentType*)documentType);
 }
 
 void q_domdocumenttype_operator_assign(void* self, void* other) {
@@ -791,19 +791,19 @@ void q_domdocumenttype_delete(void* self) {
 }
 
 QDomDocument* q_domdocument_new() {
-    return QDomDocument_new();
+    return QDomDocument_New();
 }
 
 QDomDocument* q_domdocument_new2(const char* name) {
-    return QDomDocument_new2(qstring(name));
+    return QDomDocument_New2(qstring(name));
 }
 
 QDomDocument* q_domdocument_new3(void* doctype) {
-    return QDomDocument_new3((QDomDocumentType*)doctype);
+    return QDomDocument_New3((QDomDocumentType*)doctype);
 }
 
 QDomDocument* q_domdocument_new4(void* document) {
-    return QDomDocument_new4((QDomDocument*)document);
+    return QDomDocument_New4((QDomDocument*)document);
 }
 
 void q_domdocument_operator_assign(void* self, void* other) {
@@ -1262,11 +1262,11 @@ void q_domdocument_delete(void* self) {
 }
 
 QDomNamedNodeMap* q_domnamednodemap_new() {
-    return QDomNamedNodeMap_new();
+    return QDomNamedNodeMap_New();
 }
 
 QDomNamedNodeMap* q_domnamednodemap_new2(void* namedNodeMap) {
-    return QDomNamedNodeMap_new2((QDomNamedNodeMap*)namedNodeMap);
+    return QDomNamedNodeMap_New2((QDomNamedNodeMap*)namedNodeMap);
 }
 
 void q_domnamednodemap_operator_assign(void* self, void* other) {
@@ -1334,11 +1334,11 @@ void q_domnamednodemap_delete(void* self) {
 }
 
 QDomDocumentFragment* q_domdocumentfragment_new() {
-    return QDomDocumentFragment_new();
+    return QDomDocumentFragment_New();
 }
 
 QDomDocumentFragment* q_domdocumentfragment_new2(void* documentFragment) {
-    return QDomDocumentFragment_new2((QDomDocumentFragment*)documentFragment);
+    return QDomDocumentFragment_New2((QDomDocumentFragment*)documentFragment);
 }
 
 void q_domdocumentfragment_operator_assign(void* self, void* other) {
@@ -1661,11 +1661,11 @@ void q_domdocumentfragment_delete(void* self) {
 }
 
 QDomCharacterData* q_domcharacterdata_new() {
-    return QDomCharacterData_new();
+    return QDomCharacterData_New();
 }
 
 QDomCharacterData* q_domcharacterdata_new2(void* characterData) {
-    return QDomCharacterData_new2((QDomCharacterData*)characterData);
+    return QDomCharacterData_New2((QDomCharacterData*)characterData);
 }
 
 void q_domcharacterdata_operator_assign(void* self, void* other) {
@@ -2026,11 +2026,11 @@ void q_domcharacterdata_delete(void* self) {
 }
 
 QDomAttr* q_domattr_new() {
-    return QDomAttr_new();
+    return QDomAttr_New();
 }
 
 QDomAttr* q_domattr_new2(void* attr) {
-    return QDomAttr_new2((QDomAttr*)attr);
+    return QDomAttr_New2((QDomAttr*)attr);
 }
 
 void q_domattr_operator_assign(void* self, void* other) {
@@ -2379,11 +2379,11 @@ void q_domattr_delete(void* self) {
 }
 
 QDomElement* q_domelement_new() {
-    return QDomElement_new();
+    return QDomElement_New();
 }
 
 QDomElement* q_domelement_new2(void* element) {
-    return QDomElement_new2((QDomElement*)element);
+    return QDomElement_New2((QDomElement*)element);
 }
 
 void q_domelement_operator_assign(void* self, void* other) {
@@ -2848,11 +2848,11 @@ void q_domelement_delete(void* self) {
 }
 
 QDomText* q_domtext_new() {
-    return QDomText_new();
+    return QDomText_New();
 }
 
 QDomText* q_domtext_new2(void* text) {
-    return QDomText_new2((QDomText*)text);
+    return QDomText_New2((QDomText*)text);
 }
 
 void q_domtext_operator_assign(void* self, void* other) {
@@ -3217,11 +3217,11 @@ void q_domtext_delete(void* self) {
 }
 
 QDomComment* q_domcomment_new() {
-    return QDomComment_new();
+    return QDomComment_New();
 }
 
 QDomComment* q_domcomment_new2(void* comment) {
-    return QDomComment_new2((QDomComment*)comment);
+    return QDomComment_New2((QDomComment*)comment);
 }
 
 void q_domcomment_operator_assign(void* self, void* other) {
@@ -3582,11 +3582,11 @@ void q_domcomment_delete(void* self) {
 }
 
 QDomCDATASection* q_domcdatasection_new() {
-    return QDomCDATASection_new();
+    return QDomCDATASection_New();
 }
 
 QDomCDATASection* q_domcdatasection_new2(void* cdataSection) {
-    return QDomCDATASection_new2((QDomCDATASection*)cdataSection);
+    return QDomCDATASection_New2((QDomCDATASection*)cdataSection);
 }
 
 void q_domcdatasection_operator_assign(void* self, void* other) {
@@ -3951,11 +3951,11 @@ void q_domcdatasection_delete(void* self) {
 }
 
 QDomNotation* q_domnotation_new() {
-    return QDomNotation_new();
+    return QDomNotation_New();
 }
 
 QDomNotation* q_domnotation_new2(void* notation) {
-    return QDomNotation_new2((QDomNotation*)notation);
+    return QDomNotation_New2((QDomNotation*)notation);
 }
 
 void q_domnotation_operator_assign(void* self, void* other) {
@@ -4292,11 +4292,11 @@ void q_domnotation_delete(void* self) {
 }
 
 QDomEntity* q_domentity_new() {
-    return QDomEntity_new();
+    return QDomEntity_New();
 }
 
 QDomEntity* q_domentity_new2(void* entity) {
-    return QDomEntity_new2((QDomEntity*)entity);
+    return QDomEntity_New2((QDomEntity*)entity);
 }
 
 void q_domentity_operator_assign(void* self, void* other) {
@@ -4640,11 +4640,11 @@ void q_domentity_delete(void* self) {
 }
 
 QDomEntityReference* q_domentityreference_new() {
-    return QDomEntityReference_new();
+    return QDomEntityReference_New();
 }
 
 QDomEntityReference* q_domentityreference_new2(void* entityReference) {
-    return QDomEntityReference_new2((QDomEntityReference*)entityReference);
+    return QDomEntityReference_New2((QDomEntityReference*)entityReference);
 }
 
 void q_domentityreference_operator_assign(void* self, void* other) {
@@ -4967,11 +4967,11 @@ void q_domentityreference_delete(void* self) {
 }
 
 QDomProcessingInstruction* q_domprocessinginstruction_new() {
-    return QDomProcessingInstruction_new();
+    return QDomProcessingInstruction_New();
 }
 
 QDomProcessingInstruction* q_domprocessinginstruction_new2(void* processingInstruction) {
-    return QDomProcessingInstruction_new2((QDomProcessingInstruction*)processingInstruction);
+    return QDomProcessingInstruction_New2((QDomProcessingInstruction*)processingInstruction);
 }
 
 void q_domprocessinginstruction_operator_assign(void* self, void* other) {
@@ -5312,7 +5312,7 @@ void q_domprocessinginstruction_delete(void* self) {
 }
 
 QDomDocument__ParseResult* q_domdocument__parseresult_new(void* param1) {
-    return QDomDocument__ParseResult_new((QDomDocument__ParseResult*)param1);
+    return QDomDocument__ParseResult_New((QDomDocument__ParseResult*)param1);
 }
 
 const char* q_domdocument__parseresult_error_message(void* self) {

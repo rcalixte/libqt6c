@@ -4,21 +4,21 @@
 #include "libqsslcipher.hpp"
 #include "libqsslcipher.hxx"
 
-QSslCipher* QSslCipher_new() {
+QSslCipher* QSslCipher_New() {
     return new QSslCipher();
 }
 
-QSslCipher* QSslCipher_new2(const libqt_string name) {
+QSslCipher* QSslCipher_New2(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QSslCipher(name_QString);
 }
 
-QSslCipher* QSslCipher_new3(const libqt_string name, int protocol) {
+QSslCipher* QSslCipher_New3(const libqt_string name, int protocol) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QSslCipher(name_QString, static_cast<QSsl::SslProtocol>(protocol));
 }
 
-QSslCipher* QSslCipher_new4(const QSslCipher* other) {
+QSslCipher* QSslCipher_New4(const QSslCipher* other) {
     return new QSslCipher(*other);
 }
 

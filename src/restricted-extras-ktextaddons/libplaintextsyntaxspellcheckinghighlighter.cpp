@@ -23,11 +23,11 @@
 #include "libplaintextsyntaxspellcheckinghighlighter.hpp"
 #include "libplaintextsyntaxspellcheckinghighlighter.hxx"
 
-TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_new(TextCustomEditor__PlainTextEditor* plainText) {
+TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_New(TextCustomEditor__PlainTextEditor* plainText) {
     return new VirtualTextCustomEditorPlainTextSyntaxSpellCheckingHighlighter(plainText);
 }
 
-TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_new2(TextCustomEditor__PlainTextEditor* plainText, const QColor* misspelledColor) {
+TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter* TextCustomEditor__PlainTextSyntaxSpellCheckingHighlighter_New2(TextCustomEditor__PlainTextEditor* plainText, const QColor* misspelledColor) {
     return new VirtualTextCustomEditorPlainTextSyntaxSpellCheckingHighlighter(plainText, *misspelledColor);
 }
 

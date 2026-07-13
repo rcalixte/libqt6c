@@ -22,11 +22,11 @@
 #include "libkcolumnheadersmodel.hpp"
 #include "libkcolumnheadersmodel.hxx"
 
-KColumnHeadersModel* KColumnHeadersModel_new() {
+KColumnHeadersModel* KColumnHeadersModel_New() {
     return new VirtualKColumnHeadersModel();
 }
 
-KColumnHeadersModel* KColumnHeadersModel_new2(QObject* parent) {
+KColumnHeadersModel* KColumnHeadersModel_New2(QObject* parent) {
     return new VirtualKColumnHeadersModel(parent);
 }
 

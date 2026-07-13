@@ -5,7 +5,7 @@
 #include "libsearchpreset.hpp"
 #include "libsearchpreset.hxx"
 
-KNSCore__SearchPreset* KNSCore__SearchPreset_new(const KNSCore__SearchPreset* param1) {
+KNSCore__SearchPreset* KNSCore__SearchPreset_New(const KNSCore__SearchPreset* param1) {
     return new KNSCore::SearchPreset(*param1);
 }
 

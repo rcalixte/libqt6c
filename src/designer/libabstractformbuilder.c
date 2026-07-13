@@ -11,7 +11,7 @@
 #include "libabstractformbuilder.h"
 
 QAbstractFormBuilder* q_abstractformbuilder_new() {
-    return QAbstractFormBuilder_new();
+    return QAbstractFormBuilder_New();
 }
 
 QDir* q_abstractformbuilder_working_directory(void* self) {

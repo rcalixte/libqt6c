@@ -11,11 +11,11 @@
 #include "libqscilexerperl.h"
 
 QsciLexerPerl* q_scilexerperl_new() {
-    return QsciLexerPerl_new();
+    return QsciLexerPerl_New();
 }
 
 QsciLexerPerl* q_scilexerperl_new2(void* parent) {
-    return QsciLexerPerl_new2((QObject*)parent);
+    return QsciLexerPerl_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerperl_meta_object(void* self) {

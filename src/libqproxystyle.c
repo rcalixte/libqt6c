@@ -19,15 +19,15 @@
 #include "libqproxystyle.h"
 
 QProxyStyle* q_proxystyle_new() {
-    return QProxyStyle_new();
+    return QProxyStyle_New();
 }
 
 QProxyStyle* q_proxystyle_new2(const char* key) {
-    return QProxyStyle_new2(qstring(key));
+    return QProxyStyle_New2(qstring(key));
 }
 
 QProxyStyle* q_proxystyle_new3(void* style) {
-    return QProxyStyle_new3((QStyle*)style);
+    return QProxyStyle_New3((QStyle*)style);
 }
 
 const QMetaObject* q_proxystyle_meta_object(void* self) {

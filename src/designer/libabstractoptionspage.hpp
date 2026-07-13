@@ -19,7 +19,7 @@ typedef struct QDesignerOptionsPageInterface QDesignerOptionsPageInterface;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerOptionsPageInterface* QDesignerOptionsPageInterface_new();
+QDesignerOptionsPageInterface* QDesignerOptionsPageInterface_New();
 libqt_string QDesignerOptionsPageInterface_Name(const QDesignerOptionsPageInterface* self);
 QWidget* QDesignerOptionsPageInterface_CreatePage(QDesignerOptionsPageInterface* self, QWidget* parent);
 void QDesignerOptionsPageInterface_Apply(QDesignerOptionsPageInterface* self);

@@ -2,11 +2,11 @@
 #include "libqplaceuser.h"
 
 QPlaceUser* q_placeuser_new() {
-    return QPlaceUser_new();
+    return QPlaceUser_New();
 }
 
 QPlaceUser* q_placeuser_new2(void* other) {
-    return QPlaceUser_new2((QPlaceUser*)other);
+    return QPlaceUser_New2((QPlaceUser*)other);
 }
 
 void q_placeuser_operator_assign(void* self, void* other) {

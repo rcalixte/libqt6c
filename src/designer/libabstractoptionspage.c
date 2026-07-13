@@ -3,7 +3,7 @@
 #include "libabstractoptionspage.h"
 
 QDesignerOptionsPageInterface* q_designeroptionspageinterface_new() {
-    return QDesignerOptionsPageInterface_new();
+    return QDesignerOptionsPageInterface_New();
 }
 
 const char* q_designeroptionspageinterface_name(void* self) {

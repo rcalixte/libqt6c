@@ -10,19 +10,19 @@
 #include "libqstatemachine.h"
 
 QStateMachine* q_statemachine_new() {
-    return QStateMachine_new();
+    return QStateMachine_New();
 }
 
 QStateMachine* q_statemachine_new2(int32_t childMode) {
-    return QStateMachine_new2(childMode);
+    return QStateMachine_New2(childMode);
 }
 
 QStateMachine* q_statemachine_new3(void* parent) {
-    return QStateMachine_new3((QObject*)parent);
+    return QStateMachine_New3((QObject*)parent);
 }
 
 QStateMachine* q_statemachine_new4(int32_t childMode, void* parent) {
-    return QStateMachine_new4(childMode, (QObject*)parent);
+    return QStateMachine_New4(childMode, (QObject*)parent);
 }
 
 const QMetaObject* q_statemachine_meta_object(void* self) {
@@ -711,11 +711,11 @@ void q_statemachine_delete(void* self) {
 }
 
 QStateMachine__SignalEvent* q_statemachine__signalevent_new(void* sender, int signalIndex, libqt_list /* of QVariant* */ arguments) {
-    return QStateMachine__SignalEvent_new((QObject*)sender, signalIndex, arguments);
+    return QStateMachine__SignalEvent_New((QObject*)sender, signalIndex, arguments);
 }
 
 QStateMachine__SignalEvent* q_statemachine__signalevent_new2(void* param1) {
-    return QStateMachine__SignalEvent_new2((QStateMachine__SignalEvent*)param1);
+    return QStateMachine__SignalEvent_New2((QStateMachine__SignalEvent*)param1);
 }
 
 QObject* q_statemachine__signalevent_sender(void* self) {
@@ -800,11 +800,11 @@ void q_statemachine__signalevent_delete(void* self) {
 }
 
 QStateMachine__WrappedEvent* q_statemachine__wrappedevent_new(void* object, void* event) {
-    return QStateMachine__WrappedEvent_new((QObject*)object, (QEvent*)event);
+    return QStateMachine__WrappedEvent_New((QObject*)object, (QEvent*)event);
 }
 
 QStateMachine__WrappedEvent* q_statemachine__wrappedevent_new2(void* param1) {
-    return QStateMachine__WrappedEvent_new2((QStateMachine__WrappedEvent*)param1);
+    return QStateMachine__WrappedEvent_New2((QStateMachine__WrappedEvent*)param1);
 }
 
 QObject* q_statemachine__wrappedevent_object(void* self) {

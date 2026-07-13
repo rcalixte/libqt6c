@@ -20,11 +20,11 @@
 #include "libqdnslookup.hpp"
 #include "libqdnslookup.hxx"
 
-QDnsDomainNameRecord* QDnsDomainNameRecord_new() {
+QDnsDomainNameRecord* QDnsDomainNameRecord_New() {
     return new QDnsDomainNameRecord();
 }
 
-QDnsDomainNameRecord* QDnsDomainNameRecord_new2(const QDnsDomainNameRecord* other) {
+QDnsDomainNameRecord* QDnsDomainNameRecord_New2(const QDnsDomainNameRecord* other) {
     return new QDnsDomainNameRecord(*other);
 }
 
@@ -68,11 +68,11 @@ void QDnsDomainNameRecord_Delete(QDnsDomainNameRecord* self) {
     delete self;
 }
 
-QDnsHostAddressRecord* QDnsHostAddressRecord_new() {
+QDnsHostAddressRecord* QDnsHostAddressRecord_New() {
     return new QDnsHostAddressRecord();
 }
 
-QDnsHostAddressRecord* QDnsHostAddressRecord_new2(const QDnsHostAddressRecord* other) {
+QDnsHostAddressRecord* QDnsHostAddressRecord_New2(const QDnsHostAddressRecord* other) {
     return new QDnsHostAddressRecord(*other);
 }
 
@@ -108,11 +108,11 @@ void QDnsHostAddressRecord_Delete(QDnsHostAddressRecord* self) {
     delete self;
 }
 
-QDnsMailExchangeRecord* QDnsMailExchangeRecord_new() {
+QDnsMailExchangeRecord* QDnsMailExchangeRecord_New() {
     return new QDnsMailExchangeRecord();
 }
 
-QDnsMailExchangeRecord* QDnsMailExchangeRecord_new2(const QDnsMailExchangeRecord* other) {
+QDnsMailExchangeRecord* QDnsMailExchangeRecord_New2(const QDnsMailExchangeRecord* other) {
     return new QDnsMailExchangeRecord(*other);
 }
 
@@ -160,11 +160,11 @@ void QDnsMailExchangeRecord_Delete(QDnsMailExchangeRecord* self) {
     delete self;
 }
 
-QDnsServiceRecord* QDnsServiceRecord_new() {
+QDnsServiceRecord* QDnsServiceRecord_New() {
     return new QDnsServiceRecord();
 }
 
-QDnsServiceRecord* QDnsServiceRecord_new2(const QDnsServiceRecord* other) {
+QDnsServiceRecord* QDnsServiceRecord_New2(const QDnsServiceRecord* other) {
     return new QDnsServiceRecord(*other);
 }
 
@@ -220,11 +220,11 @@ void QDnsServiceRecord_Delete(QDnsServiceRecord* self) {
     delete self;
 }
 
-QDnsTextRecord* QDnsTextRecord_new() {
+QDnsTextRecord* QDnsTextRecord_New() {
     return new QDnsTextRecord();
 }
 
-QDnsTextRecord* QDnsTextRecord_new2(const QDnsTextRecord* other) {
+QDnsTextRecord* QDnsTextRecord_New2(const QDnsTextRecord* other) {
     return new QDnsTextRecord(*other);
 }
 
@@ -274,11 +274,11 @@ void QDnsTextRecord_Delete(QDnsTextRecord* self) {
     delete self;
 }
 
-QDnsTlsAssociationRecord* QDnsTlsAssociationRecord_new() {
+QDnsTlsAssociationRecord* QDnsTlsAssociationRecord_New() {
     return new QDnsTlsAssociationRecord();
 }
 
-QDnsTlsAssociationRecord* QDnsTlsAssociationRecord_new2(const QDnsTlsAssociationRecord* other) {
+QDnsTlsAssociationRecord* QDnsTlsAssociationRecord_New2(const QDnsTlsAssociationRecord* other) {
     return new QDnsTlsAssociationRecord(*other);
 }
 
@@ -331,55 +331,55 @@ void QDnsTlsAssociationRecord_Delete(QDnsTlsAssociationRecord* self) {
     delete self;
 }
 
-QDnsLookup* QDnsLookup_new() {
+QDnsLookup* QDnsLookup_New() {
     return new VirtualQDnsLookup();
 }
 
-QDnsLookup* QDnsLookup_new2(int type, const libqt_string name) {
+QDnsLookup* QDnsLookup_New2(int type, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString);
 }
 
-QDnsLookup* QDnsLookup_new3(int type, const libqt_string name, const QHostAddress* nameserver) {
+QDnsLookup* QDnsLookup_New3(int type, const libqt_string name, const QHostAddress* nameserver) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver);
 }
 
-QDnsLookup* QDnsLookup_new4(int type, const libqt_string name, const QHostAddress* nameserver, uint16_t port) {
+QDnsLookup* QDnsLookup_New4(int type, const libqt_string name, const QHostAddress* nameserver, uint16_t port) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver, static_cast<quint16>(port));
 }
 
-QDnsLookup* QDnsLookup_new5(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver) {
+QDnsLookup* QDnsLookup_New5(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver);
 }
 
-QDnsLookup* QDnsLookup_new6(QObject* parent) {
+QDnsLookup* QDnsLookup_New6(QObject* parent) {
     return new VirtualQDnsLookup(parent);
 }
 
-QDnsLookup* QDnsLookup_new7(int type, const libqt_string name, QObject* parent) {
+QDnsLookup* QDnsLookup_New7(int type, const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, parent);
 }
 
-QDnsLookup* QDnsLookup_new8(int type, const libqt_string name, const QHostAddress* nameserver, QObject* parent) {
+QDnsLookup* QDnsLookup_New8(int type, const libqt_string name, const QHostAddress* nameserver, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver, parent);
 }
 
-QDnsLookup* QDnsLookup_new9(int type, const libqt_string name, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
+QDnsLookup* QDnsLookup_New9(int type, const libqt_string name, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, *nameserver, static_cast<quint16>(port), parent);
 }
 
-QDnsLookup* QDnsLookup_new10(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port) {
+QDnsLookup* QDnsLookup_New10(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver, static_cast<quint16>(port));
 }
 
-QDnsLookup* QDnsLookup_new11(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
+QDnsLookup* QDnsLookup_New11(int type, const libqt_string name, uint8_t protocol, const QHostAddress* nameserver, uint16_t port, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQDnsLookup(static_cast<QDnsLookup::Type>(type), name_QString, static_cast<QDnsLookup::Protocol>(protocol), *nameserver, static_cast<quint16>(port), parent);
 }

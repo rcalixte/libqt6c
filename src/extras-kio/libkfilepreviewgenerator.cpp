@@ -14,11 +14,11 @@
 #include "libkfilepreviewgenerator.hpp"
 #include "libkfilepreviewgenerator.hxx"
 
-KFilePreviewGenerator* KFilePreviewGenerator_new(QAbstractItemView* parent) {
+KFilePreviewGenerator* KFilePreviewGenerator_New(QAbstractItemView* parent) {
     return new VirtualKFilePreviewGenerator(parent);
 }
 
-KFilePreviewGenerator* KFilePreviewGenerator_new2(KAbstractViewAdapter* parent, QAbstractProxyModel* model) {
+KFilePreviewGenerator* KFilePreviewGenerator_New2(KAbstractViewAdapter* parent, QAbstractProxyModel* model) {
     return new VirtualKFilePreviewGenerator(parent, model);
 }
 

@@ -4,7 +4,7 @@
 #include "libqwebenginefullscreenrequest.hpp"
 #include "libqwebenginefullscreenrequest.hxx"
 
-QWebEngineFullScreenRequest* QWebEngineFullScreenRequest_new(const QWebEngineFullScreenRequest* other) {
+QWebEngineFullScreenRequest* QWebEngineFullScreenRequest_New(const QWebEngineFullScreenRequest* other) {
     return new QWebEngineFullScreenRequest(*other);
 }
 

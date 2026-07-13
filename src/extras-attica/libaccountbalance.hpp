@@ -21,8 +21,8 @@ typedef Attica::AccountBalance Attica__AccountBalance;
 typedef struct Attica__AccountBalance Attica__AccountBalance;
 #endif
 
-Attica__AccountBalance* Attica__AccountBalance_new();
-Attica__AccountBalance* Attica__AccountBalance_new2(const Attica__AccountBalance* other);
+Attica__AccountBalance* Attica__AccountBalance_New();
+Attica__AccountBalance* Attica__AccountBalance_New2(const Attica__AccountBalance* other);
 void Attica__AccountBalance_OperatorAssign(Attica__AccountBalance* self, const Attica__AccountBalance* other);
 void Attica__AccountBalance_SetCurrency(Attica__AccountBalance* self, const libqt_string currency);
 libqt_string Attica__AccountBalance_Currency(const Attica__AccountBalance* self);

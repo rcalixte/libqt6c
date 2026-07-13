@@ -11,12 +11,12 @@
 #include "libqdirlisting.hpp"
 #include "libqdirlisting.hxx"
 
-QDirListing* QDirListing_new(const libqt_string path) {
+QDirListing* QDirListing_New(const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDirListing(path_QString);
 }
 
-QDirListing* QDirListing_new2(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters) {
+QDirListing* QDirListing_New2(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QList<QString> nameFilters_QList;
     nameFilters_QList.reserve(nameFilters.len);
@@ -28,12 +28,12 @@ QDirListing* QDirListing_new2(const libqt_string path, const libqt_list /* of li
     return new QDirListing(path_QString, nameFilters_QList);
 }
 
-QDirListing* QDirListing_new3(const libqt_string path, int flags) {
+QDirListing* QDirListing_New3(const libqt_string path, int flags) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDirListing(path_QString, static_cast<QDirListing::IteratorFlags>(flags));
 }
 
-QDirListing* QDirListing_new4(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters, int flags) {
+QDirListing* QDirListing_New4(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters, int flags) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QList<QString> nameFilters_QList;
     nameFilters_QList.reserve(nameFilters.len);
@@ -114,19 +114,19 @@ void QDirListing_Delete(QDirListing* self) {
     delete self;
 }
 
-QDirListing__DirEntry* QDirListing__DirEntry_new(const QDirListing__DirEntry* other) {
+QDirListing__DirEntry* QDirListing__DirEntry_New(const QDirListing__DirEntry* other) {
     return new QDirListing::DirEntry(*other);
 }
 
-QDirListing__DirEntry* QDirListing__DirEntry_new2(QDirListing__DirEntry* other) {
+QDirListing__DirEntry* QDirListing__DirEntry_New2(QDirListing__DirEntry* other) {
     return new QDirListing::DirEntry(std::move(*other));
 }
 
-QDirListing__DirEntry* QDirListing__DirEntry_new3(const QDirListing__DirEntry* param1) {
+QDirListing__DirEntry* QDirListing__DirEntry_New3(const QDirListing__DirEntry* param1) {
     return new QDirListing::DirEntry(*param1);
 }
 
-QDirListing__DirEntry* QDirListing__DirEntry_new4() {
+QDirListing__DirEntry* QDirListing__DirEntry_New4() {
     return new QDirListing::DirEntry();
 }
 
@@ -326,19 +326,19 @@ void QDirListing__DirEntry_Delete(QDirListing__DirEntry* self) {
     delete self;
 }
 
-QDirListing__sentinel* QDirListing__sentinel_new(const QDirListing__sentinel* other) {
+QDirListing__sentinel* QDirListing__sentinel_New(const QDirListing__sentinel* other) {
     return new QDirListing::sentinel(*other);
 }
 
-QDirListing__sentinel* QDirListing__sentinel_new2(QDirListing__sentinel* other) {
+QDirListing__sentinel* QDirListing__sentinel_New2(QDirListing__sentinel* other) {
     return new QDirListing::sentinel(std::move(*other));
 }
 
-QDirListing__sentinel* QDirListing__sentinel_new3() {
+QDirListing__sentinel* QDirListing__sentinel_New3() {
     return new QDirListing::sentinel();
 }
 
-QDirListing__sentinel* QDirListing__sentinel_new4(const QDirListing__sentinel* param1) {
+QDirListing__sentinel* QDirListing__sentinel_New4(const QDirListing__sentinel* param1) {
     return new QDirListing::sentinel(*param1);
 }
 
@@ -354,7 +354,7 @@ void QDirListing__sentinel_Delete(QDirListing__sentinel* self) {
     delete self;
 }
 
-QDirListing__const_iterator* QDirListing__const_iterator_new2(QDirListing__const_iterator* other) {
+QDirListing__const_iterator* QDirListing__const_iterator_New2(QDirListing__const_iterator* other) {
     return new QDirListing::const_iterator(std::move(*other));
 }
 

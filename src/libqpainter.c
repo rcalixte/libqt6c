@@ -22,11 +22,11 @@
 #include "libqpainter.h"
 
 QPainter* q_painter_new() {
-    return QPainter_new();
+    return QPainter_New();
 }
 
 QPainter* q_painter_new2(void* param1) {
-    return QPainter_new2((QPaintDevice*)param1);
+    return QPainter_New2((QPaintDevice*)param1);
 }
 
 QPaintDevice* q_painter_device(void* self) {
@@ -910,11 +910,11 @@ void q_painter_delete(void* self) {
 }
 
 QPainter__PixmapFragment* q_painter__pixmapfragment_new() {
-    return QPainter__PixmapFragment_new();
+    return QPainter__PixmapFragment_New();
 }
 
 QPainter__PixmapFragment* q_painter__pixmapfragment_new2(void* param1) {
-    return QPainter__PixmapFragment_new2((QPainter__PixmapFragment*)param1);
+    return QPainter__PixmapFragment_New2((QPainter__PixmapFragment*)param1);
 }
 
 double q_painter__pixmapfragment_x(void* self) {

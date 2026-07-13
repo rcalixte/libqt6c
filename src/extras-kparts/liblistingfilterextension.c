@@ -8,7 +8,7 @@
 #include "liblistingfilterextension.h"
 
 KParts__ListingFilterExtension* k_parts__listingfilterextension_new(void* parent) {
-    return KParts__ListingFilterExtension_new((KParts__ReadOnlyPart*)parent);
+    return KParts__ListingFilterExtension_New((KParts__ReadOnlyPart*)parent);
 }
 
 const QMetaObject* k_parts__listingfilterextension_meta_object(void* self) {

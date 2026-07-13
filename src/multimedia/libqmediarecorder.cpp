@@ -16,11 +16,11 @@
 #include "libqmediarecorder.hpp"
 #include "libqmediarecorder.hxx"
 
-QMediaRecorder* QMediaRecorder_new() {
+QMediaRecorder* QMediaRecorder_New() {
     return new VirtualQMediaRecorder();
 }
 
-QMediaRecorder* QMediaRecorder_new2(QObject* parent) {
+QMediaRecorder* QMediaRecorder_New2(QObject* parent) {
     return new VirtualQMediaRecorder(parent);
 }
 

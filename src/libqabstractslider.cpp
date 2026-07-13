@@ -37,11 +37,11 @@
 #include "libqabstractslider.hpp"
 #include "libqabstractslider.hxx"
 
-QAbstractSlider* QAbstractSlider_new(QWidget* parent) {
+QAbstractSlider* QAbstractSlider_New(QWidget* parent) {
     return new VirtualQAbstractSlider(parent);
 }
 
-QAbstractSlider* QAbstractSlider_new2() {
+QAbstractSlider* QAbstractSlider_New2() {
     return new VirtualQAbstractSlider();
 }
 

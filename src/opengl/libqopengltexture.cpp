@@ -7,15 +7,15 @@
 #include "libqopengltexture.hpp"
 #include "libqopengltexture.hxx"
 
-QOpenGLTexture* QOpenGLTexture_new(int target) {
+QOpenGLTexture* QOpenGLTexture_New(int target) {
     return new QOpenGLTexture(static_cast<QOpenGLTexture::Target>(target));
 }
 
-QOpenGLTexture* QOpenGLTexture_new2(const QImage* image) {
+QOpenGLTexture* QOpenGLTexture_New2(const QImage* image) {
     return new QOpenGLTexture(*image);
 }
 
-QOpenGLTexture* QOpenGLTexture_new3(const QImage* image, int genMipMaps) {
+QOpenGLTexture* QOpenGLTexture_New3(const QImage* image, int genMipMaps) {
     return new QOpenGLTexture(*image, static_cast<QOpenGLTexture::MipMapGeneration>(genMipMaps));
 }
 

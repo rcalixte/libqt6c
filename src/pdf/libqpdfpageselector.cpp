@@ -38,11 +38,11 @@
 #include "libqpdfpageselector.hpp"
 #include "libqpdfpageselector.hxx"
 
-QPdfPageSelector* QPdfPageSelector_new(QWidget* parent) {
+QPdfPageSelector* QPdfPageSelector_New(QWidget* parent) {
     return new VirtualQPdfPageSelector(parent);
 }
 
-QPdfPageSelector* QPdfPageSelector_new2() {
+QPdfPageSelector* QPdfPageSelector_New2() {
     return new VirtualQPdfPageSelector();
 }
 

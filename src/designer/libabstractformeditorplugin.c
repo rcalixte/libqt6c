@@ -4,7 +4,7 @@
 #include "libabstractformeditorplugin.h"
 
 QDesignerFormEditorPluginInterface* q_designerformeditorplugininterface_new() {
-    return QDesignerFormEditorPluginInterface_new();
+    return QDesignerFormEditorPluginInterface_New();
 }
 
 bool q_designerformeditorplugininterface_is_initialized(void* self) {

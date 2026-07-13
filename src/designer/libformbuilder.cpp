@@ -15,7 +15,7 @@
 #include "libformbuilder.hpp"
 #include "libformbuilder.hxx"
 
-QFormBuilder* QFormBuilder_new() {
+QFormBuilder* QFormBuilder_New() {
     return new VirtualQFormBuilder();
 }
 

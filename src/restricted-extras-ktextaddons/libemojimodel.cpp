@@ -25,11 +25,11 @@
 #include "libemojimodel.hpp"
 #include "libemojimodel.hxx"
 
-TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_new() {
+TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_New() {
     return new VirtualTextEmoticonsCoreEmojiModel();
 }
 
-TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_new2(QObject* parent) {
+TextEmoticonsCore__EmojiModel* TextEmoticonsCore__EmojiModel_New2(QObject* parent) {
     return new VirtualTextEmoticonsCoreEmojiModel(parent);
 }
 

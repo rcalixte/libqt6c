@@ -21,8 +21,8 @@ typedef TextEmoticonsCore::CustomEmoji TextEmoticonsCore__CustomEmoji;
 typedef struct TextEmoticonsCore__CustomEmoji TextEmoticonsCore__CustomEmoji;
 #endif
 
-TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_new();
-TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_new2(const TextEmoticonsCore__CustomEmoji* param1);
+TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_New();
+TextEmoticonsCore__CustomEmoji* TextEmoticonsCore__CustomEmoji_New2(const TextEmoticonsCore__CustomEmoji* param1);
 libqt_string TextEmoticonsCore__CustomEmoji_Identifier(const TextEmoticonsCore__CustomEmoji* self);
 void TextEmoticonsCore__CustomEmoji_SetIdentifier(TextEmoticonsCore__CustomEmoji* self, const libqt_string newIdentifier);
 libqt_string TextEmoticonsCore__CustomEmoji_Category(const TextEmoticonsCore__CustomEmoji* self);

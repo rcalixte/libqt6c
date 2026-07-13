@@ -2,7 +2,7 @@
 #include "libkfilefilter.h"
 
 KFileFilter* k_filefilter_new() {
-    return KFileFilter_new();
+    return KFileFilter_New();
 }
 
 KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[static 1], const char* mimePatterns[static 1]) {
@@ -27,14 +27,14 @@ KFileFilter* k_filefilter_new2(const char* label, const char* filePatterns[stati
     }
     libqt_list mimePatterns_list = qlist(mimePatterns_qstr, mimePatterns_len);
 
-    KFileFilter* _out = KFileFilter_new2(qstring(label), filePatterns_list, mimePatterns_list);
+    KFileFilter* _out = KFileFilter_New2(qstring(label), filePatterns_list, mimePatterns_list);
     free(filePatterns_qstr);
     free(mimePatterns_qstr);
     return _out;
 }
 
 KFileFilter* k_filefilter_new3(void* other) {
-    return KFileFilter_new3((KFileFilter*)other);
+    return KFileFilter_New3((KFileFilter*)other);
 }
 
 void k_filefilter_operator_assign(void* self, void* other) {

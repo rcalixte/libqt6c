@@ -28,10 +28,10 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QState* QState_new();
-QState* QState_new2(int childMode);
-QState* QState_new3(QState* parent);
-QState* QState_new4(int childMode, QState* parent);
+QState* QState_New();
+QState* QState_New2(int childMode);
+QState* QState_New3(QState* parent);
+QState* QState_New4(int childMode, QState* parent);
 QMetaObject* QState_MetaObject(const QState* self);
 void* QState_Metacast(QState* self, const char* param1);
 int QState_Metacall(QState* self, int param1, int param2, void** param3);

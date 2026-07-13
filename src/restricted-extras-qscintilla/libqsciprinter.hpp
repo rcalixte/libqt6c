@@ -31,8 +31,8 @@ typedef struct QsciPrinter QsciPrinter;
 typedef struct QsciScintillaBase QsciScintillaBase;
 #endif
 
-QsciPrinter* QsciPrinter_new();
-QsciPrinter* QsciPrinter_new2(int mode);
+QsciPrinter* QsciPrinter_New();
+QsciPrinter* QsciPrinter_New2(int mode);
 void QsciPrinter_FormatPage(QsciPrinter* self, QPainter* painter, bool drawing, QRect* area, int pagenr);
 int QsciPrinter_Magnification(const QsciPrinter* self);
 void QsciPrinter_SetMagnification(QsciPrinter* self, int magnification);

@@ -10,11 +10,11 @@
 #include "libqbarset.h"
 
 QBarSet* q_barset_new(const char* label) {
-    return QBarSet_new(qstring(label));
+    return QBarSet_New(qstring(label));
 }
 
 QBarSet* q_barset_new2(const char* label, void* parent) {
-    return QBarSet_new2(qstring(label), (QObject*)parent);
+    return QBarSet_New2(qstring(label), (QObject*)parent);
 }
 
 const QMetaObject* q_barset_meta_object(void* self) {

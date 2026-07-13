@@ -41,7 +41,7 @@
 #include "librenamefiledialog.hpp"
 #include "librenamefiledialog.hxx"
 
-KIO__RenameFileDialog* KIO__RenameFileDialog_new(const KFileItemList* items, QWidget* parent) {
+KIO__RenameFileDialog* KIO__RenameFileDialog_New(const KFileItemList* items, QWidget* parent) {
     return new VirtualKIORenameFileDialog(*items, parent);
 }
 

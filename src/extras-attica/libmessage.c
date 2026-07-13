@@ -3,11 +3,11 @@
 #include "libmessage.h"
 
 Attica__Message* k_attica__message_new() {
-    return Attica__Message_new();
+    return Attica__Message_New();
 }
 
 Attica__Message* k_attica__message_new2(void* other) {
-    return Attica__Message_new2((Attica__Message*)other);
+    return Attica__Message_New2((Attica__Message*)other);
 }
 
 void k_attica__message_operator_assign(void* self, void* other) {

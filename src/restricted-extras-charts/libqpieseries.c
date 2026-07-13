@@ -8,11 +8,11 @@
 #include "libqpieseries.h"
 
 QPieSeries* q_pieseries_new() {
-    return QPieSeries_new();
+    return QPieSeries_New();
 }
 
 QPieSeries* q_pieseries_new2(void* parent) {
-    return QPieSeries_new2((QObject*)parent);
+    return QPieSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_pieseries_meta_object(void* self) {

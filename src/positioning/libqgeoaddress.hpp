@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QGeoAddress QGeoAddress;
 #endif
 
-QGeoAddress* QGeoAddress_new();
-QGeoAddress* QGeoAddress_new2(const QGeoAddress* other);
+QGeoAddress* QGeoAddress_New();
+QGeoAddress* QGeoAddress_New2(const QGeoAddress* other);
 void QGeoAddress_OperatorAssign(QGeoAddress* self, const QGeoAddress* other);
 void QGeoAddress_Swap(QGeoAddress* self, QGeoAddress* other);
 libqt_string QGeoAddress_Text(const QGeoAddress* self);

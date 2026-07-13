@@ -12,15 +12,15 @@
 #include "libquestion.hpp"
 #include "libquestion.hxx"
 
-KNSCore__Question* KNSCore__Question_new() {
+KNSCore__Question* KNSCore__Question_New() {
     return new VirtualKNSCoreQuestion();
 }
 
-KNSCore__Question* KNSCore__Question_new2(int param1) {
+KNSCore__Question* KNSCore__Question_New2(int param1) {
     return new VirtualKNSCoreQuestion(static_cast<KNSCore::Question::QuestionType>(param1));
 }
 
-KNSCore__Question* KNSCore__Question_new3(int param1, QObject* parent) {
+KNSCore__Question* KNSCore__Question_New3(int param1, QObject* parent) {
     return new VirtualKNSCoreQuestion(static_cast<KNSCore::Question::QuestionType>(param1), parent);
 }
 

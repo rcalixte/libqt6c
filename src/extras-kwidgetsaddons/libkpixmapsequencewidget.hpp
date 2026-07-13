@@ -51,10 +51,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPixmapSequenceWidget* KPixmapSequenceWidget_new(QWidget* parent);
-KPixmapSequenceWidget* KPixmapSequenceWidget_new2();
-KPixmapSequenceWidget* KPixmapSequenceWidget_new3(const KPixmapSequence* seq);
-KPixmapSequenceWidget* KPixmapSequenceWidget_new4(const KPixmapSequence* seq, QWidget* parent);
+KPixmapSequenceWidget* KPixmapSequenceWidget_New(QWidget* parent);
+KPixmapSequenceWidget* KPixmapSequenceWidget_New2();
+KPixmapSequenceWidget* KPixmapSequenceWidget_New3(const KPixmapSequence* seq);
+KPixmapSequenceWidget* KPixmapSequenceWidget_New4(const KPixmapSequence* seq, QWidget* parent);
 QMetaObject* KPixmapSequenceWidget_MetaObject(const KPixmapSequenceWidget* self);
 void* KPixmapSequenceWidget_Metacast(KPixmapSequenceWidget* self, const char* param1);
 int KPixmapSequenceWidget_Metacall(KPixmapSequenceWidget* self, int param1, int param2, void** param3);

@@ -4,7 +4,7 @@
 #include "libqopengltextureblitter.h"
 
 QOpenGLTextureBlitter* q_opengltextureblitter_new() {
-    return QOpenGLTextureBlitter_new();
+    return QOpenGLTextureBlitter_New();
 }
 
 bool q_opengltextureblitter_create(void* self) {

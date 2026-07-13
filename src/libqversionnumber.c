@@ -2,27 +2,27 @@
 #include "libqversionnumber.h"
 
 QVersionNumber* q_versionnumber_new() {
-    return QVersionNumber_new();
+    return QVersionNumber_New();
 }
 
 QVersionNumber* q_versionnumber_new2(libqt_list /* of int */ args) {
-    return QVersionNumber_new2(args);
+    return QVersionNumber_New2(args);
 }
 
 QVersionNumber* q_versionnumber_new3(int maj) {
-    return QVersionNumber_new3(maj);
+    return QVersionNumber_New3(maj);
 }
 
 QVersionNumber* q_versionnumber_new4(int maj, int min) {
-    return QVersionNumber_new4(maj, min);
+    return QVersionNumber_New4(maj, min);
 }
 
 QVersionNumber* q_versionnumber_new5(int maj, int min, int mic) {
-    return QVersionNumber_new5(maj, min, mic);
+    return QVersionNumber_New5(maj, min, mic);
 }
 
 QVersionNumber* q_versionnumber_new6(void* param1) {
-    return QVersionNumber_new6((QVersionNumber*)param1);
+    return QVersionNumber_New6((QVersionNumber*)param1);
 }
 
 bool q_versionnumber_is_null(void* self) {

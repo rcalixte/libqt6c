@@ -13,11 +13,11 @@
 #include "libkdirlister.hpp"
 #include "libkdirlister.hxx"
 
-KDirLister* KDirLister_new() {
+KDirLister* KDirLister_New() {
     return new VirtualKDirLister();
 }
 
-KDirLister* KDirLister_new2(QObject* parent) {
+KDirLister* KDirLister_New2(QObject* parent) {
     return new VirtualKDirLister(parent);
 }
 

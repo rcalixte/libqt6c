@@ -8,11 +8,11 @@
 #include "libqgeopolygon.hpp"
 #include "libqgeopolygon.hxx"
 
-QGeoPolygon* QGeoPolygon_new() {
+QGeoPolygon* QGeoPolygon_New() {
     return new QGeoPolygon();
 }
 
-QGeoPolygon* QGeoPolygon_new2(const libqt_list /* of QGeoCoordinate* */ path) {
+QGeoPolygon* QGeoPolygon_New2(const libqt_list /* of QGeoCoordinate* */ path) {
     QList<QGeoCoordinate> path_QList;
     path_QList.reserve(path.len);
     QGeoCoordinate** path_arr = static_cast<QGeoCoordinate**>(path.data.ptr);
@@ -22,11 +22,11 @@ QGeoPolygon* QGeoPolygon_new2(const libqt_list /* of QGeoCoordinate* */ path) {
     return new QGeoPolygon(path_QList);
 }
 
-QGeoPolygon* QGeoPolygon_new3(const QGeoPolygon* other) {
+QGeoPolygon* QGeoPolygon_New3(const QGeoPolygon* other) {
     return new QGeoPolygon(*other);
 }
 
-QGeoPolygon* QGeoPolygon_new4(const QGeoShape* other) {
+QGeoPolygon* QGeoPolygon_New4(const QGeoShape* other) {
     return new QGeoPolygon(*other);
 }
 

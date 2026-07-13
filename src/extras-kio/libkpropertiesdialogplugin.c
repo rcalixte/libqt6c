@@ -6,7 +6,7 @@
 #include "libkpropertiesdialogplugin.h"
 
 KPropertiesDialogPlugin* k_propertiesdialogplugin_new(void* parent) {
-    return KPropertiesDialogPlugin_new((QObject*)parent);
+    return KPropertiesDialogPlugin_New((QObject*)parent);
 }
 
 const QMetaObject* k_propertiesdialogplugin_meta_object(void* self) {

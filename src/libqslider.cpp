@@ -39,19 +39,19 @@
 #include "libqslider.hpp"
 #include "libqslider.hxx"
 
-QSlider* QSlider_new(QWidget* parent) {
+QSlider* QSlider_New(QWidget* parent) {
     return new VirtualQSlider(parent);
 }
 
-QSlider* QSlider_new2() {
+QSlider* QSlider_New2() {
     return new VirtualQSlider();
 }
 
-QSlider* QSlider_new3(int orientation) {
+QSlider* QSlider_New3(int orientation) {
     return new VirtualQSlider(static_cast<Qt::Orientation>(orientation));
 }
 
-QSlider* QSlider_new4(int orientation, QWidget* parent) {
+QSlider* QSlider_New4(int orientation, QWidget* parent) {
     return new VirtualQSlider(static_cast<Qt::Orientation>(orientation), parent);
 }
 

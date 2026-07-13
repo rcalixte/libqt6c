@@ -3,19 +3,19 @@
 #include "libqoperatingsystemversion.h"
 
 QOperatingSystemVersionBase* q_operatingsystemversionbase_new(int32_t osType, int vmajor) {
-    return QOperatingSystemVersionBase_new(osType, vmajor);
+    return QOperatingSystemVersionBase_New(osType, vmajor);
 }
 
 QOperatingSystemVersionBase* q_operatingsystemversionbase_new2(void* param1) {
-    return QOperatingSystemVersionBase_new2((QOperatingSystemVersionBase*)param1);
+    return QOperatingSystemVersionBase_New2((QOperatingSystemVersionBase*)param1);
 }
 
 QOperatingSystemVersionBase* q_operatingsystemversionbase_new3(int32_t osType, int vmajor, int vminor) {
-    return QOperatingSystemVersionBase_new3(osType, vmajor, vminor);
+    return QOperatingSystemVersionBase_New3(osType, vmajor, vminor);
 }
 
 QOperatingSystemVersionBase* q_operatingsystemversionbase_new4(int32_t osType, int vmajor, int vminor, int vmicro) {
-    return QOperatingSystemVersionBase_new4(osType, vmajor, vminor, vmicro);
+    return QOperatingSystemVersionBase_New4(osType, vmajor, vminor, vmicro);
 }
 
 QOperatingSystemVersionBase* q_operatingsystemversionbase_current() {
@@ -69,19 +69,19 @@ void q_operatingsystemversionbase_delete(void* self) {
 }
 
 QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new(void* other) {
-    return QOperatingSystemVersionUnexported_new((QOperatingSystemVersionBase*)other);
+    return QOperatingSystemVersionUnexported_New((QOperatingSystemVersionBase*)other);
 }
 
 QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new2() {
-    return QOperatingSystemVersionUnexported_new2();
+    return QOperatingSystemVersionUnexported_New2();
 }
 
 QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new3(void* param1) {
-    return QOperatingSystemVersionUnexported_new3((QOperatingSystemVersionUnexported*)param1);
+    return QOperatingSystemVersionUnexported_New3((QOperatingSystemVersionUnexported*)param1);
 }
 
 QOperatingSystemVersionUnexported* q_operatingsystemversionunexported_new4(int32_t param1, int param2, int param3, int param4) {
-    return QOperatingSystemVersionUnexported_new4(param1, param2, param3, param4);
+    return QOperatingSystemVersionUnexported_New4(param1, param2, param3, param4);
 }
 
 QOperatingSystemVersionBase* q_operatingsystemversionunexported_current() {
@@ -135,23 +135,23 @@ void q_operatingsystemversionunexported_delete(void* self) {
 }
 
 QOperatingSystemVersion* q_operatingsystemversion_new(void* osversion) {
-    return QOperatingSystemVersion_new((QOperatingSystemVersionBase*)osversion);
+    return QOperatingSystemVersion_New((QOperatingSystemVersionBase*)osversion);
 }
 
 QOperatingSystemVersion* q_operatingsystemversion_new2(int32_t osType, int vmajor) {
-    return QOperatingSystemVersion_new2(osType, vmajor);
+    return QOperatingSystemVersion_New2(osType, vmajor);
 }
 
 QOperatingSystemVersion* q_operatingsystemversion_new3(void* param1) {
-    return QOperatingSystemVersion_new3((QOperatingSystemVersion*)param1);
+    return QOperatingSystemVersion_New3((QOperatingSystemVersion*)param1);
 }
 
 QOperatingSystemVersion* q_operatingsystemversion_new4(int32_t osType, int vmajor, int vminor) {
-    return QOperatingSystemVersion_new4(osType, vmajor, vminor);
+    return QOperatingSystemVersion_New4(osType, vmajor, vminor);
 }
 
 QOperatingSystemVersion* q_operatingsystemversion_new5(int32_t osType, int vmajor, int vminor, int vmicro) {
-    return QOperatingSystemVersion_new5(osType, vmajor, vminor, vmicro);
+    return QOperatingSystemVersion_New5(osType, vmajor, vminor, vmicro);
 }
 
 int32_t q_operatingsystemversion_current_type() {

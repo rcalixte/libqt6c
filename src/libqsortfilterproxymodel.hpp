@@ -34,8 +34,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QSortFilterProxyModel* QSortFilterProxyModel_new();
-QSortFilterProxyModel* QSortFilterProxyModel_new2(QObject* parent);
+QSortFilterProxyModel* QSortFilterProxyModel_New();
+QSortFilterProxyModel* QSortFilterProxyModel_New2(QObject* parent);
 QMetaObject* QSortFilterProxyModel_MetaObject(const QSortFilterProxyModel* self);
 void* QSortFilterProxyModel_Metacast(QSortFilterProxyModel* self, const char* param1);
 int QSortFilterProxyModel_Metacall(QSortFilterProxyModel* self, int param1, int param2, void** param3);

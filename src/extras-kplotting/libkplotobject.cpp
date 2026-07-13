@@ -12,23 +12,23 @@
 #include "libkplotobject.hpp"
 #include "libkplotobject.hxx"
 
-KPlotObject* KPlotObject_new() {
+KPlotObject* KPlotObject_New() {
     return new KPlotObject();
 }
 
-KPlotObject* KPlotObject_new2(const QColor* color) {
+KPlotObject* KPlotObject_New2(const QColor* color) {
     return new KPlotObject(*color);
 }
 
-KPlotObject* KPlotObject_new3(const QColor* color, int otype) {
+KPlotObject* KPlotObject_New3(const QColor* color, int otype) {
     return new KPlotObject(*color, static_cast<KPlotObject::PlotType>(otype));
 }
 
-KPlotObject* KPlotObject_new4(const QColor* color, int otype, double size) {
+KPlotObject* KPlotObject_New4(const QColor* color, int otype, double size) {
     return new KPlotObject(*color, static_cast<KPlotObject::PlotType>(otype), static_cast<double>(size));
 }
 
-KPlotObject* KPlotObject_new5(const QColor* color, int otype, double size, int ps) {
+KPlotObject* KPlotObject_New5(const QColor* color, int otype, double size, int ps) {
     return new KPlotObject(*color, static_cast<KPlotObject::PlotType>(otype), static_cast<double>(size), static_cast<KPlotObject::PointStyle>(ps));
 }
 

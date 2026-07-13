@@ -59,8 +59,8 @@ typedef struct TextCustomEditor__RichTextBrowserFindBar TextCustomEditor__RichTe
 typedef struct TextCustomEditor__TextEditFindBarBase TextCustomEditor__TextEditFindBarBase;
 #endif
 
-TextCustomEditor__RichTextBrowserFindBar* TextCustomEditor__RichTextBrowserFindBar_new(QTextBrowser* view);
-TextCustomEditor__RichTextBrowserFindBar* TextCustomEditor__RichTextBrowserFindBar_new2(QTextBrowser* view, QWidget* parent);
+TextCustomEditor__RichTextBrowserFindBar* TextCustomEditor__RichTextBrowserFindBar_New(QTextBrowser* view);
+TextCustomEditor__RichTextBrowserFindBar* TextCustomEditor__RichTextBrowserFindBar_New2(QTextBrowser* view, QWidget* parent);
 QMetaObject* TextCustomEditor__RichTextBrowserFindBar_MetaObject(const TextCustomEditor__RichTextBrowserFindBar* self);
 void* TextCustomEditor__RichTextBrowserFindBar_Metacast(TextCustomEditor__RichTextBrowserFindBar* self, const char* param1);
 int TextCustomEditor__RichTextBrowserFindBar_Metacall(TextCustomEditor__RichTextBrowserFindBar* self, int param1, int param2, void** param3);

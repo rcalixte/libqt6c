@@ -24,11 +24,11 @@
 #include "librichtextbrowser.h"
 
 TextCustomEditor__RichTextBrowser* k_textcustomeditor__richtextbrowser_new(void* parent) {
-    return TextCustomEditor__RichTextBrowser_new((QWidget*)parent);
+    return TextCustomEditor__RichTextBrowser_New((QWidget*)parent);
 }
 
 TextCustomEditor__RichTextBrowser* k_textcustomeditor__richtextbrowser_new2() {
-    return TextCustomEditor__RichTextBrowser_new2();
+    return TextCustomEditor__RichTextBrowser_New2();
 }
 
 const QMetaObject* k_textcustomeditor__richtextbrowser_meta_object(void* self) {

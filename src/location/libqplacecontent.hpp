@@ -21,9 +21,9 @@ typedef struct QPlaceUser QPlaceUser;
 typedef struct QVariant QVariant;
 #endif
 
-QPlaceContent* QPlaceContent_new();
-QPlaceContent* QPlaceContent_new2(const QPlaceContent* other);
-QPlaceContent* QPlaceContent_new3(int type);
+QPlaceContent* QPlaceContent_New();
+QPlaceContent* QPlaceContent_New2(const QPlaceContent* other);
+QPlaceContent* QPlaceContent_New3(int type);
 void QPlaceContent_OperatorAssign(QPlaceContent* self, const QPlaceContent* other);
 void QPlaceContent_Swap(QPlaceContent* self, QPlaceContent* other);
 void QPlaceContent_Detach(QPlaceContent* self);

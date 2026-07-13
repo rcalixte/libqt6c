@@ -18,27 +18,27 @@
 #include "libqopenglwindow.h"
 
 QOpenGLWindow* q_openglwindow_new() {
-    return QOpenGLWindow_new();
+    return QOpenGLWindow_New();
 }
 
 QOpenGLWindow* q_openglwindow_new2(void* shareContext) {
-    return QOpenGLWindow_new2((QOpenGLContext*)shareContext);
+    return QOpenGLWindow_New2((QOpenGLContext*)shareContext);
 }
 
 QOpenGLWindow* q_openglwindow_new3(int32_t updateBehavior) {
-    return QOpenGLWindow_new3(updateBehavior);
+    return QOpenGLWindow_New3(updateBehavior);
 }
 
 QOpenGLWindow* q_openglwindow_new4(int32_t updateBehavior, void* parent) {
-    return QOpenGLWindow_new4(updateBehavior, (QWindow*)parent);
+    return QOpenGLWindow_New4(updateBehavior, (QWindow*)parent);
 }
 
 QOpenGLWindow* q_openglwindow_new5(void* shareContext, int32_t updateBehavior) {
-    return QOpenGLWindow_new5((QOpenGLContext*)shareContext, updateBehavior);
+    return QOpenGLWindow_New5((QOpenGLContext*)shareContext, updateBehavior);
 }
 
 QOpenGLWindow* q_openglwindow_new6(void* shareContext, int32_t updateBehavior, void* parent) {
-    return QOpenGLWindow_new6((QOpenGLContext*)shareContext, updateBehavior, (QWindow*)parent);
+    return QOpenGLWindow_New6((QOpenGLContext*)shareContext, updateBehavior, (QWindow*)parent);
 }
 
 const QMetaObject* q_openglwindow_meta_object(void* self) {

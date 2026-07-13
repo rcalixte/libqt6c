@@ -28,12 +28,12 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KHelpMenu* KHelpMenu_new(QWidget* parent);
-KHelpMenu* KHelpMenu_new2(QWidget* parent, const libqt_string unused);
-KHelpMenu* KHelpMenu_new3();
-KHelpMenu* KHelpMenu_new4(QWidget* parent, const KAboutData* aboutData, bool showWhatsThis);
-KHelpMenu* KHelpMenu_new5(QWidget* parent, const KAboutData* aboutData);
-KHelpMenu* KHelpMenu_new6(QWidget* parent, const libqt_string unused, bool showWhatsThis);
+KHelpMenu* KHelpMenu_New(QWidget* parent);
+KHelpMenu* KHelpMenu_New2(QWidget* parent, const libqt_string unused);
+KHelpMenu* KHelpMenu_New3();
+KHelpMenu* KHelpMenu_New4(QWidget* parent, const KAboutData* aboutData, bool showWhatsThis);
+KHelpMenu* KHelpMenu_New5(QWidget* parent, const KAboutData* aboutData);
+KHelpMenu* KHelpMenu_New6(QWidget* parent, const libqt_string unused, bool showWhatsThis);
 QMetaObject* KHelpMenu_MetaObject(const KHelpMenu* self);
 void* KHelpMenu_Metacast(KHelpMenu* self, const char* param1);
 int KHelpMenu_Metacall(KHelpMenu* self, int param1, int param2, void** param3);

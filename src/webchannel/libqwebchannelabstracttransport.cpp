@@ -11,11 +11,11 @@
 #include "libqwebchannelabstracttransport.hpp"
 #include "libqwebchannelabstracttransport.hxx"
 
-QWebChannelAbstractTransport* QWebChannelAbstractTransport_new() {
+QWebChannelAbstractTransport* QWebChannelAbstractTransport_New() {
     return new VirtualQWebChannelAbstractTransport();
 }
 
-QWebChannelAbstractTransport* QWebChannelAbstractTransport_new2(QObject* parent) {
+QWebChannelAbstractTransport* QWebChannelAbstractTransport_New2(QObject* parent) {
     return new VirtualQWebChannelAbstractTransport(parent);
 }
 

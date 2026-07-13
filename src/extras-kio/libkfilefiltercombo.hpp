@@ -59,8 +59,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFileFilterCombo* KFileFilterCombo_new(QWidget* parent);
-KFileFilterCombo* KFileFilterCombo_new2();
+KFileFilterCombo* KFileFilterCombo_New(QWidget* parent);
+KFileFilterCombo* KFileFilterCombo_New2();
 QMetaObject* KFileFilterCombo_MetaObject(const KFileFilterCombo* self);
 void* KFileFilterCombo_Metacast(KFileFilterCombo* self, const char* param1);
 int KFileFilterCombo_Metacall(KFileFilterCombo* self, int param1, int param2, void** param3);

@@ -14,7 +14,7 @@
 #include "librepository.hpp"
 #include "librepository.hxx"
 
-KSyntaxHighlighting__Repository* KSyntaxHighlighting__Repository_new() {
+KSyntaxHighlighting__Repository* KSyntaxHighlighting__Repository_New() {
     return new VirtualKSyntaxHighlightingRepository();
 }
 

@@ -13,7 +13,7 @@
 #include "libqdbuspendingcall.hpp"
 #include "libqdbuspendingcall.hxx"
 
-QDBusPendingCall* QDBusPendingCall_new(const QDBusPendingCall* other) {
+QDBusPendingCall* QDBusPendingCall_New(const QDBusPendingCall* other) {
     return new QDBusPendingCall(*other);
 }
 
@@ -61,11 +61,11 @@ void QDBusPendingCall_Delete(QDBusPendingCall* self) {
     delete self;
 }
 
-QDBusPendingCallWatcher* QDBusPendingCallWatcher_new(const QDBusPendingCall* call) {
+QDBusPendingCallWatcher* QDBusPendingCallWatcher_New(const QDBusPendingCall* call) {
     return new VirtualQDBusPendingCallWatcher(*call);
 }
 
-QDBusPendingCallWatcher* QDBusPendingCallWatcher_new2(const QDBusPendingCall* call, QObject* parent) {
+QDBusPendingCallWatcher* QDBusPendingCallWatcher_New2(const QDBusPendingCall* call, QObject* parent) {
     return new VirtualQDBusPendingCallWatcher(*call, parent);
 }
 

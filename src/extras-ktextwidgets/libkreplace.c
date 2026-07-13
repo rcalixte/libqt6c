@@ -9,15 +9,15 @@
 #include "libkreplace.h"
 
 KReplace* k_replace_new(const char* pattern, const char* replacement, long options) {
-    return KReplace_new(qstring(pattern), qstring(replacement), options);
+    return KReplace_New(qstring(pattern), qstring(replacement), options);
 }
 
 KReplace* k_replace_new2(const char* pattern, const char* replacement, long options, void* parent, void* replaceDialog) {
-    return KReplace_new2(qstring(pattern), qstring(replacement), options, (QWidget*)parent, (QWidget*)replaceDialog);
+    return KReplace_New2(qstring(pattern), qstring(replacement), options, (QWidget*)parent, (QWidget*)replaceDialog);
 }
 
 KReplace* k_replace_new3(const char* pattern, const char* replacement, long options, void* parent) {
-    return KReplace_new3(qstring(pattern), qstring(replacement), options, (QWidget*)parent);
+    return KReplace_New3(qstring(pattern), qstring(replacement), options, (QWidget*)parent);
 }
 
 const QMetaObject* k_replace_meta_object(void* self) {

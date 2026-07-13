@@ -2,7 +2,7 @@
 #include "libqloggingcategory.h"
 
 QLoggingCategory* q_loggingcategory_new(const char* category) {
-    return QLoggingCategory_new(category);
+    return QLoggingCategory_New(category);
 }
 
 bool q_loggingcategory_is_debug_enabled(void* self) {

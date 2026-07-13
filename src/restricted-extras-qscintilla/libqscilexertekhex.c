@@ -12,11 +12,11 @@
 #include "libqscilexertekhex.h"
 
 QsciLexerTekHex* q_scilexertekhex_new() {
-    return QsciLexerTekHex_new();
+    return QsciLexerTekHex_New();
 }
 
 QsciLexerTekHex* q_scilexertekhex_new2(void* parent) {
-    return QsciLexerTekHex_new2((QObject*)parent);
+    return QsciLexerTekHex_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexertekhex_meta_object(void* self) {

@@ -7,19 +7,19 @@
 #include "libqmetaobject.h"
 
 QMetaMethod* q_metamethod_new(void* other) {
-    return QMetaMethod_new((QMetaMethod*)other);
+    return QMetaMethod_New((QMetaMethod*)other);
 }
 
 QMetaMethod* q_metamethod_new2(void* other) {
-    return QMetaMethod_new2((QMetaMethod*)other);
+    return QMetaMethod_New2((QMetaMethod*)other);
 }
 
 QMetaMethod* q_metamethod_new3() {
-    return QMetaMethod_new3();
+    return QMetaMethod_New3();
 }
 
 QMetaMethod* q_metamethod_new4(void* param1) {
-    return QMetaMethod_new4((QMetaMethod*)param1);
+    return QMetaMethod_New4((QMetaMethod*)param1);
 }
 
 void q_metamethod_copy_assign(void* self, void* other) {
@@ -414,19 +414,19 @@ void q_metamethod_delete(void* self) {
 }
 
 QMetaEnum* q_metaenum_new(void* other) {
-    return QMetaEnum_new((QMetaEnum*)other);
+    return QMetaEnum_New((QMetaEnum*)other);
 }
 
 QMetaEnum* q_metaenum_new2(void* other) {
-    return QMetaEnum_new2((QMetaEnum*)other);
+    return QMetaEnum_New2((QMetaEnum*)other);
 }
 
 QMetaEnum* q_metaenum_new3() {
-    return QMetaEnum_new3();
+    return QMetaEnum_New3();
 }
 
 QMetaEnum* q_metaenum_new4(void* param1) {
-    return QMetaEnum_new4((QMetaEnum*)param1);
+    return QMetaEnum_New4((QMetaEnum*)param1);
 }
 
 void q_metaenum_copy_assign(void* self, void* other) {
@@ -513,15 +513,15 @@ void q_metaenum_delete(void* self) {
 }
 
 QMetaProperty* q_metaproperty_new(void* other) {
-    return QMetaProperty_new((QMetaProperty*)other);
+    return QMetaProperty_New((QMetaProperty*)other);
 }
 
 QMetaProperty* q_metaproperty_new2(void* other) {
-    return QMetaProperty_new2((QMetaProperty*)other);
+    return QMetaProperty_New2((QMetaProperty*)other);
 }
 
 QMetaProperty* q_metaproperty_new3() {
-    return QMetaProperty_new3();
+    return QMetaProperty_New3();
 }
 
 void q_metaproperty_copy_assign(void* self, void* other) {
@@ -685,19 +685,19 @@ void q_metaproperty_delete(void* self) {
 }
 
 QMetaClassInfo* q_metaclassinfo_new(void* other) {
-    return QMetaClassInfo_new((QMetaClassInfo*)other);
+    return QMetaClassInfo_New((QMetaClassInfo*)other);
 }
 
 QMetaClassInfo* q_metaclassinfo_new2(void* other) {
-    return QMetaClassInfo_new2((QMetaClassInfo*)other);
+    return QMetaClassInfo_New2((QMetaClassInfo*)other);
 }
 
 QMetaClassInfo* q_metaclassinfo_new3() {
-    return QMetaClassInfo_new3();
+    return QMetaClassInfo_New3();
 }
 
 QMetaClassInfo* q_metaclassinfo_new4(void* param1) {
-    return QMetaClassInfo_new4((QMetaClassInfo*)param1);
+    return QMetaClassInfo_New4((QMetaClassInfo*)param1);
 }
 
 void q_metaclassinfo_copy_assign(void* self, void* other) {

@@ -11,11 +11,11 @@
 #include "libqscilexercss.h"
 
 QsciLexerCSS* q_scilexercss_new() {
-    return QsciLexerCSS_new();
+    return QsciLexerCSS_New();
 }
 
 QsciLexerCSS* q_scilexercss_new2(void* parent) {
-    return QsciLexerCSS_new2((QObject*)parent);
+    return QsciLexerCSS_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexercss_meta_object(void* self) {

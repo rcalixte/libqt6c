@@ -12,27 +12,27 @@
 #include "libqvideoframe.hpp"
 #include "libqvideoframe.hxx"
 
-QVideoFrame* QVideoFrame_new() {
+QVideoFrame* QVideoFrame_New() {
     return new QVideoFrame();
 }
 
-QVideoFrame* QVideoFrame_new2(const QVideoFrameFormat* format) {
+QVideoFrame* QVideoFrame_New2(const QVideoFrameFormat* format) {
     return new QVideoFrame(*format);
 }
 
-QVideoFrame* QVideoFrame_new3(const QImage* image) {
+QVideoFrame* QVideoFrame_New3(const QImage* image) {
     return new QVideoFrame(*image);
 }
 
-QVideoFrame* QVideoFrame_new4(QAbstractVideoBuffer* videoBuffer) {
+QVideoFrame* QVideoFrame_New4(QAbstractVideoBuffer* videoBuffer) {
     return new QVideoFrame(std::unique_ptr<QAbstractVideoBuffer>(videoBuffer));
 }
 
-QVideoFrame* QVideoFrame_new5(const QVideoFrame* other) {
+QVideoFrame* QVideoFrame_New5(const QVideoFrame* other) {
     return new QVideoFrame(*other);
 }
 
-QVideoFrame* QVideoFrame_new6(QAbstractVideoBuffer* buffer, const QVideoFrameFormat* format) {
+QVideoFrame* QVideoFrame_New6(QAbstractVideoBuffer* buffer, const QVideoFrameFormat* format) {
     return new QVideoFrame(buffer, *format);
 }
 
@@ -205,11 +205,11 @@ void QVideoFrame_Delete(QVideoFrame* self) {
     delete self;
 }
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new(const QVideoFrame__PaintOptions* other) {
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New(const QVideoFrame__PaintOptions* other) {
     return new QVideoFrame::PaintOptions(*other);
 }
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new2(QVideoFrame__PaintOptions* other) {
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New2(QVideoFrame__PaintOptions* other) {
     return new QVideoFrame::PaintOptions(std::move(*other));
 }
 

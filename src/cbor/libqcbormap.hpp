@@ -43,8 +43,8 @@ struct pair_qcborvalue_qcborvalue {
 };
 #endif
 
-QCborMap* QCborMap_new();
-QCborMap* QCborMap_new2(const QCborMap* other);
+QCborMap* QCborMap_New();
+QCborMap* QCborMap_New2(const QCborMap* other);
 void QCborMap_OperatorAssign(QCborMap* self, const QCborMap* other);
 void QCborMap_Swap(QCborMap* self, QCborMap* other);
 QCborValue* QCborMap_ToCborValue(const QCborMap* self);
@@ -115,9 +115,9 @@ libqt_map /* of libqt_string to QVariant* */ QCborMap_ToVariantHash(const QCborM
 QJsonObject* QCborMap_ToJsonObject(const QCborMap* self);
 void QCborMap_Delete(QCborMap* self);
 
-QCborMap__Iterator* QCborMap__Iterator_new(const QCborMap__Iterator* other);
-QCborMap__Iterator* QCborMap__Iterator_new2();
-QCborMap__Iterator* QCborMap__Iterator_new3(const QCborMap__Iterator* param1);
+QCborMap__Iterator* QCborMap__Iterator_New(const QCborMap__Iterator* other);
+QCborMap__Iterator* QCborMap__Iterator_New2();
+QCborMap__Iterator* QCborMap__Iterator_New3(const QCborMap__Iterator* param1);
 void QCborMap__Iterator_OperatorAssign(QCborMap__Iterator* self, const QCborMap__Iterator* other);
 pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ QCborMap__Iterator_OperatorMultiply(const QCborMap__Iterator* self);
 pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ QCborMap__Iterator_OperatorSubscript(const QCborMap__Iterator* self, ptrdiff_t j);
@@ -136,9 +136,9 @@ QCborMap__Iterator* QCborMap__Iterator_OperatorMinus(const QCborMap__Iterator* s
 ptrdiff_t QCborMap__Iterator_OperatorMinus2(const QCborMap__Iterator* self, QCborMap__Iterator* j);
 void QCborMap__Iterator_Delete(QCborMap__Iterator* self);
 
-QCborMap__ConstIterator* QCborMap__ConstIterator_new(const QCborMap__ConstIterator* other);
-QCborMap__ConstIterator* QCborMap__ConstIterator_new2();
-QCborMap__ConstIterator* QCborMap__ConstIterator_new3(const QCborMap__ConstIterator* param1);
+QCborMap__ConstIterator* QCborMap__ConstIterator_New(const QCborMap__ConstIterator* other);
+QCborMap__ConstIterator* QCborMap__ConstIterator_New2();
+QCborMap__ConstIterator* QCborMap__ConstIterator_New3(const QCborMap__ConstIterator* param1);
 void QCborMap__ConstIterator_OperatorAssign(QCborMap__ConstIterator* self, const QCborMap__ConstIterator* other);
 pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ QCborMap__ConstIterator_OperatorMultiply(const QCborMap__ConstIterator* self);
 pair_qcborvalue_qcborvalue /* tuple of QCborValue* and QCborValue* */ QCborMap__ConstIterator_OperatorSubscript(const QCborMap__ConstIterator* self, ptrdiff_t j);

@@ -13,11 +13,11 @@
 #include "libqpieseries.hpp"
 #include "libqpieseries.hxx"
 
-QPieSeries* QPieSeries_new() {
+QPieSeries* QPieSeries_New() {
     return new VirtualQPieSeries();
 }
 
-QPieSeries* QPieSeries_new2(QObject* parent) {
+QPieSeries* QPieSeries_New2(QObject* parent) {
     return new VirtualQPieSeries(parent);
 }
 

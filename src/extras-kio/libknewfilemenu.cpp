@@ -17,7 +17,7 @@
 #include "libknewfilemenu.hpp"
 #include "libknewfilemenu.hxx"
 
-KNewFileMenu* KNewFileMenu_new(QObject* parent) {
+KNewFileMenu* KNewFileMenu_New(QObject* parent) {
     return new VirtualKNewFileMenu(parent);
 }
 

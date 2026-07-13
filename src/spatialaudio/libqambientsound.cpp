@@ -12,7 +12,7 @@
 #include "libqambientsound.hpp"
 #include "libqambientsound.hxx"
 
-QAmbientSound* QAmbientSound_new(QAudioEngine* engine) {
+QAmbientSound* QAmbientSound_New(QAudioEngine* engine) {
     return new VirtualQAmbientSound(engine);
 }
 

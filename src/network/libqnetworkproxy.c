@@ -5,43 +5,43 @@
 #include "libqnetworkproxy.h"
 
 QNetworkProxyQuery* q_networkproxyquery_new() {
-    return QNetworkProxyQuery_new();
+    return QNetworkProxyQuery_New();
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new2(void* requestUrl) {
-    return QNetworkProxyQuery_new2((QUrl*)requestUrl);
+    return QNetworkProxyQuery_New2((QUrl*)requestUrl);
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new3(const char* hostname, int port) {
-    return QNetworkProxyQuery_new3(qstring(hostname), port);
+    return QNetworkProxyQuery_New3(qstring(hostname), port);
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new4(uint16_t bindPort) {
-    return QNetworkProxyQuery_new4(bindPort);
+    return QNetworkProxyQuery_New4(bindPort);
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new5(void* other) {
-    return QNetworkProxyQuery_new5((QNetworkProxyQuery*)other);
+    return QNetworkProxyQuery_New5((QNetworkProxyQuery*)other);
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new6(void* requestUrl, int32_t queryType) {
-    return QNetworkProxyQuery_new6((QUrl*)requestUrl, queryType);
+    return QNetworkProxyQuery_New6((QUrl*)requestUrl, queryType);
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new7(const char* hostname, int port, const char* protocolTag) {
-    return QNetworkProxyQuery_new7(qstring(hostname), port, qstring(protocolTag));
+    return QNetworkProxyQuery_New7(qstring(hostname), port, qstring(protocolTag));
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new8(const char* hostname, int port, const char* protocolTag, int32_t queryType) {
-    return QNetworkProxyQuery_new8(qstring(hostname), port, qstring(protocolTag), queryType);
+    return QNetworkProxyQuery_New8(qstring(hostname), port, qstring(protocolTag), queryType);
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new9(uint16_t bindPort, const char* protocolTag) {
-    return QNetworkProxyQuery_new9(bindPort, qstring(protocolTag));
+    return QNetworkProxyQuery_New9(bindPort, qstring(protocolTag));
 }
 
 QNetworkProxyQuery* q_networkproxyquery_new10(uint16_t bindPort, const char* protocolTag, int32_t queryType) {
-    return QNetworkProxyQuery_new10(bindPort, qstring(protocolTag), queryType);
+    return QNetworkProxyQuery_New10(bindPort, qstring(protocolTag), queryType);
 }
 
 void q_networkproxyquery_operator_assign(void* self, void* other) {
@@ -119,31 +119,31 @@ void q_networkproxyquery_delete(void* self) {
 }
 
 QNetworkProxy* q_networkproxy_new() {
-    return QNetworkProxy_new();
+    return QNetworkProxy_New();
 }
 
 QNetworkProxy* q_networkproxy_new2(int32_t type) {
-    return QNetworkProxy_new2(type);
+    return QNetworkProxy_New2(type);
 }
 
 QNetworkProxy* q_networkproxy_new3(void* other) {
-    return QNetworkProxy_new3((QNetworkProxy*)other);
+    return QNetworkProxy_New3((QNetworkProxy*)other);
 }
 
 QNetworkProxy* q_networkproxy_new4(int32_t type, const char* hostName) {
-    return QNetworkProxy_new4(type, qstring(hostName));
+    return QNetworkProxy_New4(type, qstring(hostName));
 }
 
 QNetworkProxy* q_networkproxy_new5(int32_t type, const char* hostName, uint16_t port) {
-    return QNetworkProxy_new5(type, qstring(hostName), port);
+    return QNetworkProxy_New5(type, qstring(hostName), port);
 }
 
 QNetworkProxy* q_networkproxy_new6(int32_t type, const char* hostName, uint16_t port, const char* user) {
-    return QNetworkProxy_new6(type, qstring(hostName), port, qstring(user));
+    return QNetworkProxy_New6(type, qstring(hostName), port, qstring(user));
 }
 
 QNetworkProxy* q_networkproxy_new7(int32_t type, const char* hostName, uint16_t port, const char* user, const char* password) {
-    return QNetworkProxy_new7(type, qstring(hostName), port, qstring(user), qstring(password));
+    return QNetworkProxy_New7(type, qstring(hostName), port, qstring(user), qstring(password));
 }
 
 void q_networkproxy_operator_assign(void* self, void* other) {
@@ -290,7 +290,7 @@ void q_networkproxy_delete(void* self) {
 }
 
 QNetworkProxyFactory* q_networkproxyfactory_new() {
-    return QNetworkProxyFactory_new();
+    return QNetworkProxyFactory_New();
 }
 
 libqt_list /* of QNetworkProxy* */ q_networkproxyfactory_query_proxy(void* self, void* query) {

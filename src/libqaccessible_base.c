@@ -5,11 +5,11 @@
 #include "libqaccessible_base.h"
 
 QAccessible* q_accessible_new(void* other) {
-    return QAccessible_new((QAccessible*)other);
+    return QAccessible_New((QAccessible*)other);
 }
 
 QAccessible* q_accessible_new2(void* other) {
-    return QAccessible_new2((QAccessible*)other);
+    return QAccessible_New2((QAccessible*)other);
 }
 
 void q_accessible_copy_assign(void* self, void* other) {
@@ -85,15 +85,15 @@ void q_accessible_delete(void* self) {
 }
 
 QAccessible__State* q_accessible__state_new(void* other) {
-    return QAccessible__State_new((QAccessible__State*)other);
+    return QAccessible__State_New((QAccessible__State*)other);
 }
 
 QAccessible__State* q_accessible__state_new2(void* other) {
-    return QAccessible__State_new2((QAccessible__State*)other);
+    return QAccessible__State_New2((QAccessible__State*)other);
 }
 
 QAccessible__State* q_accessible__state_new3() {
-    return QAccessible__State_new3();
+    return QAccessible__State_New3();
 }
 
 void q_accessible__state_copy_assign(void* self, void* other) {

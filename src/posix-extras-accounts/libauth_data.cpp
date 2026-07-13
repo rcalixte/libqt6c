@@ -6,7 +6,7 @@
 #include "libauth_data.hpp"
 #include "libauth_data.hxx"
 
-Accounts__AuthData* Accounts__AuthData_new(const Accounts__AuthData* other) {
+Accounts__AuthData* Accounts__AuthData_New(const Accounts__AuthData* other) {
     return new Accounts::AuthData(*other);
 }
 

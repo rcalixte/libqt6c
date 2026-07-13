@@ -53,9 +53,9 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QPolarChart* QPolarChart_new();
-QPolarChart* QPolarChart_new2(QGraphicsItem* parent);
-QPolarChart* QPolarChart_new3(QGraphicsItem* parent, int wFlags);
+QPolarChart* QPolarChart_New();
+QPolarChart* QPolarChart_New2(QGraphicsItem* parent);
+QPolarChart* QPolarChart_New3(QGraphicsItem* parent, int wFlags);
 QMetaObject* QPolarChart_MetaObject(const QPolarChart* self);
 void* QPolarChart_Metacast(QPolarChart* self, const char* param1);
 int QPolarChart_Metacall(QPolarChart* self, int param1, int param2, void** param3);

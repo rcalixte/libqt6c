@@ -41,15 +41,15 @@
 #include "libkurlnavigator.hpp"
 #include "libkurlnavigator.hxx"
 
-KUrlNavigator* KUrlNavigator_new(QWidget* parent) {
+KUrlNavigator* KUrlNavigator_New(QWidget* parent) {
     return new VirtualKUrlNavigator(parent);
 }
 
-KUrlNavigator* KUrlNavigator_new2() {
+KUrlNavigator* KUrlNavigator_New2() {
     return new VirtualKUrlNavigator();
 }
 
-KUrlNavigator* KUrlNavigator_new3(KFilePlacesModel* placesModel, const QUrl* url, QWidget* parent) {
+KUrlNavigator* KUrlNavigator_New3(KFilePlacesModel* placesModel, const QUrl* url, QWidget* parent) {
     return new VirtualKUrlNavigator(placesModel, *url, parent);
 }
 

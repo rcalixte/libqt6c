@@ -7,21 +7,21 @@
 #include "libqdiriterator.hpp"
 #include "libqdiriterator.hxx"
 
-QDirIterator* QDirIterator_new(const QDir* dir) {
+QDirIterator* QDirIterator_New(const QDir* dir) {
     return new QDirIterator(*dir);
 }
 
-QDirIterator* QDirIterator_new2(const libqt_string path) {
+QDirIterator* QDirIterator_New2(const libqt_string path) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDirIterator(path_QString);
 }
 
-QDirIterator* QDirIterator_new3(const libqt_string path, int filter) {
+QDirIterator* QDirIterator_New3(const libqt_string path, int filter) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDirIterator(path_QString, static_cast<QDir::Filters>(filter));
 }
 
-QDirIterator* QDirIterator_new4(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters) {
+QDirIterator* QDirIterator_New4(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QList<QString> nameFilters_QList;
     nameFilters_QList.reserve(nameFilters.len);
@@ -33,21 +33,21 @@ QDirIterator* QDirIterator_new4(const libqt_string path, const libqt_list /* of 
     return new QDirIterator(path_QString, nameFilters_QList);
 }
 
-QDirIterator* QDirIterator_new5(const QDir* dir, int flags) {
+QDirIterator* QDirIterator_New5(const QDir* dir, int flags) {
     return new QDirIterator(*dir, static_cast<QDirIterator::IteratorFlags>(flags));
 }
 
-QDirIterator* QDirIterator_new6(const libqt_string path, int flags) {
+QDirIterator* QDirIterator_New6(const libqt_string path, int flags) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDirIterator(path_QString, static_cast<QDirIterator::IteratorFlags>(flags));
 }
 
-QDirIterator* QDirIterator_new7(const libqt_string path, int filter, int flags) {
+QDirIterator* QDirIterator_New7(const libqt_string path, int filter, int flags) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     return new QDirIterator(path_QString, static_cast<QDir::Filters>(filter), static_cast<QDirIterator::IteratorFlags>(flags));
 }
 
-QDirIterator* QDirIterator_new8(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters, int filters) {
+QDirIterator* QDirIterator_New8(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters, int filters) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QList<QString> nameFilters_QList;
     nameFilters_QList.reserve(nameFilters.len);
@@ -59,7 +59,7 @@ QDirIterator* QDirIterator_new8(const libqt_string path, const libqt_list /* of 
     return new QDirIterator(path_QString, nameFilters_QList, static_cast<QDir::Filters>(filters));
 }
 
-QDirIterator* QDirIterator_new9(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters, int filters, int flags) {
+QDirIterator* QDirIterator_New9(const libqt_string path, const libqt_list /* of libqt_string */ nameFilters, int filters, int flags) {
     QString path_QString = QString::fromUtf8(path.data, path.len);
     QList<QString> nameFilters_QList;
     nameFilters_QList.reserve(nameFilters.len);

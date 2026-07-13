@@ -4,19 +4,19 @@
 #include "libkiconcolors.h"
 
 KIconColors* k_iconcolors_new() {
-    return KIconColors_new();
+    return KIconColors_New();
 }
 
 KIconColors* k_iconcolors_new2(void* color) {
-    return KIconColors_new2((QColor*)color);
+    return KIconColors_New2((QColor*)color);
 }
 
 KIconColors* k_iconcolors_new3(void* palette) {
-    return KIconColors_new3((QPalette*)palette);
+    return KIconColors_New3((QPalette*)palette);
 }
 
 KIconColors* k_iconcolors_new4(void* other) {
-    return KIconColors_new4((KIconColors*)other);
+    return KIconColors_New4((KIconColors*)other);
 }
 
 void k_iconcolors_operator_assign(void* self, void* other) {

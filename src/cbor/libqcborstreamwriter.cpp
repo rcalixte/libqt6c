@@ -5,7 +5,7 @@
 #include "libqcborstreamwriter.hpp"
 #include "libqcborstreamwriter.hxx"
 
-QCborStreamWriter* QCborStreamWriter_new(QIODevice* device) {
+QCborStreamWriter* QCborStreamWriter_New(QIODevice* device) {
     return new QCborStreamWriter(device);
 }
 

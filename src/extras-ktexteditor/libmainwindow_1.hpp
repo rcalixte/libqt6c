@@ -38,7 +38,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-KTextEditor__MainWindow* KTextEditor__MainWindow_new(QObject* parent);
+KTextEditor__MainWindow* KTextEditor__MainWindow_New(QObject* parent);
 QMetaObject* KTextEditor__MainWindow_MetaObject(const KTextEditor__MainWindow* self);
 void* KTextEditor__MainWindow_Metacast(KTextEditor__MainWindow* self, const char* param1);
 int KTextEditor__MainWindow_Metacall(KTextEditor__MainWindow* self, int param1, int param2, void** param3);

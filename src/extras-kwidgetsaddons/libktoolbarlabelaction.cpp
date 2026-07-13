@@ -14,12 +14,12 @@
 #include "libktoolbarlabelaction.hpp"
 #include "libktoolbarlabelaction.hxx"
 
-KToolBarLabelAction* KToolBarLabelAction_new(const libqt_string text, QObject* parent) {
+KToolBarLabelAction* KToolBarLabelAction_New(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKToolBarLabelAction(text_QString, parent);
 }
 
-KToolBarLabelAction* KToolBarLabelAction_new2(QAction* buddy, const libqt_string text, QObject* parent) {
+KToolBarLabelAction* KToolBarLabelAction_New2(QAction* buddy, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKToolBarLabelAction(buddy, text_QString, parent);
 }

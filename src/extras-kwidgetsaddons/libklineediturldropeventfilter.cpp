@@ -10,11 +10,11 @@
 #include "libklineediturldropeventfilter.hpp"
 #include "libklineediturldropeventfilter.hxx"
 
-KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_new() {
+KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_New() {
     return new VirtualKLineEditUrlDropEventFilter();
 }
 
-KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_new2(QObject* parent) {
+KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_New2(QObject* parent) {
     return new VirtualKLineEditUrlDropEventFilter(parent);
 }
 

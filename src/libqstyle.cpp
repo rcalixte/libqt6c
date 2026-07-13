@@ -23,7 +23,7 @@
 #include "libqstyle.hpp"
 #include "libqstyle.hxx"
 
-QStyle* QStyle_new() {
+QStyle* QStyle_New() {
     return new VirtualQStyle();
 }
 

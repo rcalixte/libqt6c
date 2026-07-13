@@ -8,11 +8,11 @@
 #include "libkterminallauncherjob.h"
 
 KTerminalLauncherJob* k_terminallauncherjob_new(const char* command) {
-    return KTerminalLauncherJob_new(qstring(command));
+    return KTerminalLauncherJob_New(qstring(command));
 }
 
 KTerminalLauncherJob* k_terminallauncherjob_new2(const char* command, void* parent) {
-    return KTerminalLauncherJob_new2(qstring(command), (QObject*)parent);
+    return KTerminalLauncherJob_New2(qstring(command), (QObject*)parent);
 }
 
 const QMetaObject* k_terminallauncherjob_meta_object(void* self) {

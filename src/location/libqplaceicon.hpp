@@ -22,8 +22,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-QPlaceIcon* QPlaceIcon_new();
-QPlaceIcon* QPlaceIcon_new2(const QPlaceIcon* other);
+QPlaceIcon* QPlaceIcon_New();
+QPlaceIcon* QPlaceIcon_New2(const QPlaceIcon* other);
 void QPlaceIcon_OperatorAssign(QPlaceIcon* self, const QPlaceIcon* other);
 void QPlaceIcon_Swap(QPlaceIcon* self, QPlaceIcon* other);
 QUrl* QPlaceIcon_Url(const QPlaceIcon* self);

@@ -54,20 +54,20 @@
 #include "libqtextedit.hpp"
 #include "libqtextedit.hxx"
 
-QTextEdit* QTextEdit_new(QWidget* parent) {
+QTextEdit* QTextEdit_New(QWidget* parent) {
     return new VirtualQTextEdit(parent);
 }
 
-QTextEdit* QTextEdit_new2() {
+QTextEdit* QTextEdit_New2() {
     return new VirtualQTextEdit();
 }
 
-QTextEdit* QTextEdit_new3(const libqt_string text) {
+QTextEdit* QTextEdit_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextEdit(text_QString);
 }
 
-QTextEdit* QTextEdit_new4(const libqt_string text, QWidget* parent) {
+QTextEdit* QTextEdit_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQTextEdit(text_QString, parent);
 }
@@ -2664,7 +2664,7 @@ void QTextEdit_Delete(QTextEdit* self) {
     delete self;
 }
 
-QTextEdit__ExtraSelection* QTextEdit__ExtraSelection_new(const QTextEdit__ExtraSelection* param1) {
+QTextEdit__ExtraSelection* QTextEdit__ExtraSelection_New(const QTextEdit__ExtraSelection* param1) {
     return new QTextEdit::ExtraSelection(*param1);
 }
 

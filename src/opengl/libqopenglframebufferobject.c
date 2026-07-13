@@ -5,51 +5,51 @@
 #include "libqopenglframebufferobject.h"
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new(void* size) {
-    return QOpenGLFramebufferObject_new((QSize*)size);
+    return QOpenGLFramebufferObject_New((QSize*)size);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new2(int width, int height) {
-    return QOpenGLFramebufferObject_new2(width, height);
+    return QOpenGLFramebufferObject_New2(width, height);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new3(void* size, int32_t attachment) {
-    return QOpenGLFramebufferObject_new3((QSize*)size, attachment);
+    return QOpenGLFramebufferObject_New3((QSize*)size, attachment);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new4(int width, int height, int32_t attachment) {
-    return QOpenGLFramebufferObject_new4(width, height, attachment);
+    return QOpenGLFramebufferObject_New4(width, height, attachment);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new5(void* size, void* format) {
-    return QOpenGLFramebufferObject_new5((QSize*)size, (QOpenGLFramebufferObjectFormat*)format);
+    return QOpenGLFramebufferObject_New5((QSize*)size, (QOpenGLFramebufferObjectFormat*)format);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new6(int width, int height, void* format) {
-    return QOpenGLFramebufferObject_new6(width, height, (QOpenGLFramebufferObjectFormat*)format);
+    return QOpenGLFramebufferObject_New6(width, height, (QOpenGLFramebufferObjectFormat*)format);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new7(void* size, uint32_t target) {
-    return QOpenGLFramebufferObject_new7((QSize*)size, target);
+    return QOpenGLFramebufferObject_New7((QSize*)size, target);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new8(int width, int height, uint32_t target) {
-    return QOpenGLFramebufferObject_new8(width, height, target);
+    return QOpenGLFramebufferObject_New8(width, height, target);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new9(void* size, int32_t attachment, uint32_t target) {
-    return QOpenGLFramebufferObject_new9((QSize*)size, attachment, target);
+    return QOpenGLFramebufferObject_New9((QSize*)size, attachment, target);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new10(void* size, int32_t attachment, uint32_t target, uint32_t internalFormat) {
-    return QOpenGLFramebufferObject_new10((QSize*)size, attachment, target, internalFormat);
+    return QOpenGLFramebufferObject_New10((QSize*)size, attachment, target, internalFormat);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new11(int width, int height, int32_t attachment, uint32_t target) {
-    return QOpenGLFramebufferObject_new11(width, height, attachment, target);
+    return QOpenGLFramebufferObject_New11(width, height, attachment, target);
 }
 
 QOpenGLFramebufferObject* q_openglframebufferobject_new12(int width, int height, int32_t attachment, uint32_t target, uint32_t internalFormat) {
-    return QOpenGLFramebufferObject_new12(width, height, attachment, target, internalFormat);
+    return QOpenGLFramebufferObject_New12(width, height, attachment, target, internalFormat);
 }
 
 void q_openglframebufferobject_add_color_attachment(void* self, void* size) {
@@ -195,11 +195,11 @@ void q_openglframebufferobject_delete(void* self) {
 }
 
 QOpenGLFramebufferObjectFormat* q_openglframebufferobjectformat_new() {
-    return QOpenGLFramebufferObjectFormat_new();
+    return QOpenGLFramebufferObjectFormat_New();
 }
 
 QOpenGLFramebufferObjectFormat* q_openglframebufferobjectformat_new2(void* other) {
-    return QOpenGLFramebufferObjectFormat_new2((QOpenGLFramebufferObjectFormat*)other);
+    return QOpenGLFramebufferObjectFormat_New2((QOpenGLFramebufferObjectFormat*)other);
 }
 
 void q_openglframebufferobjectformat_operator_assign(void* self, void* other) {

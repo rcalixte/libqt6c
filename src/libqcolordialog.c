@@ -16,19 +16,19 @@
 #include "libqcolordialog.h"
 
 QColorDialog* q_colordialog_new(void* parent) {
-    return QColorDialog_new((QWidget*)parent);
+    return QColorDialog_New((QWidget*)parent);
 }
 
 QColorDialog* q_colordialog_new2() {
-    return QColorDialog_new2();
+    return QColorDialog_New2();
 }
 
 QColorDialog* q_colordialog_new3(void* initial) {
-    return QColorDialog_new3((QColor*)initial);
+    return QColorDialog_New3((QColor*)initial);
 }
 
 QColorDialog* q_colordialog_new4(void* initial, void* parent) {
-    return QColorDialog_new4((QColor*)initial, (QWidget*)parent);
+    return QColorDialog_New4((QColor*)initial, (QWidget*)parent);
 }
 
 const QMetaObject* q_colordialog_meta_object(void* self) {

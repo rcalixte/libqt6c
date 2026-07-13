@@ -6,11 +6,11 @@
 #include "libqopenglvertexarrayobject.h"
 
 QOpenGLVertexArrayObject* q_openglvertexarrayobject_new() {
-    return QOpenGLVertexArrayObject_new();
+    return QOpenGLVertexArrayObject_New();
 }
 
 QOpenGLVertexArrayObject* q_openglvertexarrayobject_new2(void* parent) {
-    return QOpenGLVertexArrayObject_new2((QObject*)parent);
+    return QOpenGLVertexArrayObject_New2((QObject*)parent);
 }
 
 const QMetaObject* q_openglvertexarrayobject_meta_object(void* self) {
@@ -446,7 +446,7 @@ void q_openglvertexarrayobject_delete(void* self) {
 }
 
 QOpenGLVertexArrayObject__Binder* q_openglvertexarrayobject__binder_new(void* v) {
-    return QOpenGLVertexArrayObject__Binder_new((QOpenGLVertexArrayObject*)v);
+    return QOpenGLVertexArrayObject__Binder_New((QOpenGLVertexArrayObject*)v);
 }
 
 void q_openglvertexarrayobject__binder_release(void* self) {

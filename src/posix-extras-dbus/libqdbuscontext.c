@@ -4,7 +4,7 @@
 #include "libqdbuscontext.h"
 
 QDBusContext* q_dbuscontext_new() {
-    return QDBusContext_new();
+    return QDBusContext_New();
 }
 
 bool q_dbuscontext_called_from_d_bus(void* self) {

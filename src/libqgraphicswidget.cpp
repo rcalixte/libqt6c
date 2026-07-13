@@ -43,15 +43,15 @@
 #include "libqgraphicswidget.hpp"
 #include "libqgraphicswidget.hxx"
 
-QGraphicsWidget* QGraphicsWidget_new() {
+QGraphicsWidget* QGraphicsWidget_New() {
     return new VirtualQGraphicsWidget();
 }
 
-QGraphicsWidget* QGraphicsWidget_new2(QGraphicsItem* parent) {
+QGraphicsWidget* QGraphicsWidget_New2(QGraphicsItem* parent) {
     return new VirtualQGraphicsWidget(parent);
 }
 
-QGraphicsWidget* QGraphicsWidget_new3(QGraphicsItem* parent, int wFlags) {
+QGraphicsWidget* QGraphicsWidget_New3(QGraphicsItem* parent, int wFlags) {
     return new VirtualQGraphicsWidget(parent, static_cast<Qt::WindowFlags>(wFlags));
 }
 

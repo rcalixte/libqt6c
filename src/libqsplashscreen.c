@@ -17,27 +17,27 @@
 #include "libqsplashscreen.h"
 
 QSplashScreen* q_splashscreen_new() {
-    return QSplashScreen_new();
+    return QSplashScreen_New();
 }
 
 QSplashScreen* q_splashscreen_new2(void* screen) {
-    return QSplashScreen_new2((QScreen*)screen);
+    return QSplashScreen_New2((QScreen*)screen);
 }
 
 QSplashScreen* q_splashscreen_new3(void* pixmap) {
-    return QSplashScreen_new3((QPixmap*)pixmap);
+    return QSplashScreen_New3((QPixmap*)pixmap);
 }
 
 QSplashScreen* q_splashscreen_new4(void* pixmap, int32_t f) {
-    return QSplashScreen_new4((QPixmap*)pixmap, f);
+    return QSplashScreen_New4((QPixmap*)pixmap, f);
 }
 
 QSplashScreen* q_splashscreen_new5(void* screen, void* pixmap) {
-    return QSplashScreen_new5((QScreen*)screen, (QPixmap*)pixmap);
+    return QSplashScreen_New5((QScreen*)screen, (QPixmap*)pixmap);
 }
 
 QSplashScreen* q_splashscreen_new6(void* screen, void* pixmap, int32_t f) {
-    return QSplashScreen_new6((QScreen*)screen, (QPixmap*)pixmap, f);
+    return QSplashScreen_New6((QScreen*)screen, (QPixmap*)pixmap, f);
 }
 
 const QMetaObject* q_splashscreen_meta_object(void* self) {

@@ -7,15 +7,15 @@
 #include "libkformat.hpp"
 #include "libkformat.hxx"
 
-KFormat* KFormat_new() {
+KFormat* KFormat_New() {
     return new KFormat();
 }
 
-KFormat* KFormat_new2(const KFormat* other) {
+KFormat* KFormat_New2(const KFormat* other) {
     return new KFormat(*other);
 }
 
-KFormat* KFormat_new3(const QLocale* locale) {
+KFormat* KFormat_New3(const QLocale* locale) {
     return new KFormat(*locale);
 }
 

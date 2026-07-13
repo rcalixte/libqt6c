@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-KColumnHeadersModel* KColumnHeadersModel_new();
-KColumnHeadersModel* KColumnHeadersModel_new2(QObject* parent);
+KColumnHeadersModel* KColumnHeadersModel_New();
+KColumnHeadersModel* KColumnHeadersModel_New2(QObject* parent);
 QMetaObject* KColumnHeadersModel_MetaObject(const KColumnHeadersModel* self);
 void* KColumnHeadersModel_Metacast(KColumnHeadersModel* self, const char* param1);
 int KColumnHeadersModel_Metacall(KColumnHeadersModel* self, int param1, int param2, void** param3);

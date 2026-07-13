@@ -9,21 +9,21 @@
 #include "libqbluetoothdeviceinfo.hpp"
 #include "libqbluetoothdeviceinfo.hxx"
 
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new() {
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New() {
     return new QBluetoothDeviceInfo();
 }
 
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new2(const QBluetoothAddress* address, const libqt_string name, unsigned int classOfDevice) {
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New2(const QBluetoothAddress* address, const libqt_string name, unsigned int classOfDevice) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QBluetoothDeviceInfo(*address, name_QString, static_cast<quint32>(classOfDevice));
 }
 
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new3(const QBluetoothUuid* uuid, const libqt_string name, unsigned int classOfDevice) {
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New3(const QBluetoothUuid* uuid, const libqt_string name, unsigned int classOfDevice) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QBluetoothDeviceInfo(*uuid, name_QString, static_cast<quint32>(classOfDevice));
 }
 
-QBluetoothDeviceInfo* QBluetoothDeviceInfo_new4(const QBluetoothDeviceInfo* other) {
+QBluetoothDeviceInfo* QBluetoothDeviceInfo_New4(const QBluetoothDeviceInfo* other) {
     return new QBluetoothDeviceInfo(*other);
 }
 

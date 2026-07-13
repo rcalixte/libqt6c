@@ -14,7 +14,7 @@
 #include "libmainwindow_1.h"
 
 KTextEditor__MainWindow* k_texteditor__mainwindow_new(void* parent) {
-    return KTextEditor__MainWindow_new((QObject*)parent);
+    return KTextEditor__MainWindow_New((QObject*)parent);
 }
 
 const QMetaObject* k_texteditor__mainwindow_meta_object(void* self) {

@@ -10,11 +10,11 @@
 #include "libkcoredirlister.h"
 
 KCoreDirLister* k_coredirlister_new() {
-    return KCoreDirLister_new();
+    return KCoreDirLister_New();
 }
 
 KCoreDirLister* k_coredirlister_new2(void* parent) {
-    return KCoreDirLister_new2((QObject*)parent);
+    return KCoreDirLister_New2((QObject*)parent);
 }
 
 const QMetaObject* k_coredirlister_meta_object(void* self) {

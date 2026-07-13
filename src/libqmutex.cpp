@@ -6,7 +6,7 @@
 #include "libqmutex.hpp"
 #include "libqmutex.hxx"
 
-QBasicMutex* QBasicMutex_new() {
+QBasicMutex* QBasicMutex_New() {
     return new QBasicMutex();
 }
 
@@ -30,7 +30,7 @@ void QBasicMutex_Delete(QBasicMutex* self) {
     delete self;
 }
 
-QMutex* QMutex_new() {
+QMutex* QMutex_New() {
     return new QMutex();
 }
 
@@ -50,7 +50,7 @@ void QMutex_Delete(QMutex* self) {
     delete self;
 }
 
-QRecursiveMutex* QRecursiveMutex_new() {
+QRecursiveMutex* QRecursiveMutex_New() {
     return new QRecursiveMutex();
 }
 

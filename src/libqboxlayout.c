@@ -11,11 +11,11 @@
 #include "libqboxlayout.h"
 
 QBoxLayout* q_boxlayout_new(int32_t param1) {
-    return QBoxLayout_new(param1);
+    return QBoxLayout_New(param1);
 }
 
 QBoxLayout* q_boxlayout_new2(int32_t param1, void* parent) {
-    return QBoxLayout_new2(param1, (QWidget*)parent);
+    return QBoxLayout_New2(param1, (QWidget*)parent);
 }
 
 const QMetaObject* q_boxlayout_meta_object(void* self) {
@@ -983,11 +983,11 @@ void q_boxlayout_delete(void* self) {
 }
 
 QHBoxLayout* q_hboxlayout_new(void* parent) {
-    return QHBoxLayout_new((QWidget*)parent);
+    return QHBoxLayout_New((QWidget*)parent);
 }
 
 QHBoxLayout* q_hboxlayout_new2() {
-    return QHBoxLayout_new2();
+    return QHBoxLayout_New2();
 }
 
 const QMetaObject* q_hboxlayout_meta_object(void* self) {
@@ -1955,11 +1955,11 @@ void q_hboxlayout_delete(void* self) {
 }
 
 QVBoxLayout* q_vboxlayout_new(void* parent) {
-    return QVBoxLayout_new((QWidget*)parent);
+    return QVBoxLayout_New((QWidget*)parent);
 }
 
 QVBoxLayout* q_vboxlayout_new2() {
-    return QVBoxLayout_new2();
+    return QVBoxLayout_New2();
 }
 
 const QMetaObject* q_vboxlayout_meta_object(void* self) {

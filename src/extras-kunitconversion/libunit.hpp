@@ -24,8 +24,8 @@ typedef struct KUnitConversion__UnitCategory KUnitConversion__UnitCategory;
 typedef struct QChar QChar;
 #endif
 
-KUnitConversion__Unit* KUnitConversion__Unit_new();
-KUnitConversion__Unit* KUnitConversion__Unit_new2(const KUnitConversion__Unit* other);
+KUnitConversion__Unit* KUnitConversion__Unit_New();
+KUnitConversion__Unit* KUnitConversion__Unit_New2(const KUnitConversion__Unit* other);
 void KUnitConversion__Unit_OperatorAssign(KUnitConversion__Unit* self, const KUnitConversion__Unit* other);
 bool KUnitConversion__Unit_OperatorEqual(const KUnitConversion__Unit* self, const KUnitConversion__Unit* other);
 bool KUnitConversion__Unit_OperatorNotEqual(const KUnitConversion__Unit* self, const KUnitConversion__Unit* other);

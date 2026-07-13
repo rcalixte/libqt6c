@@ -4,11 +4,11 @@
 #include "libevent.h"
 
 Attica__Event* k_attica__event_new() {
-    return Attica__Event_new();
+    return Attica__Event_New();
 }
 
 Attica__Event* k_attica__event_new2(void* other) {
-    return Attica__Event_new2((Attica__Event*)other);
+    return Attica__Event_New2((Attica__Event*)other);
 }
 
 void k_attica__event_operator_assign(void* self, void* other) {

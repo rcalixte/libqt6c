@@ -3,7 +3,7 @@
 #include "libqwebengineloadinginfo.h"
 
 QWebEngineLoadingInfo* q_webengineloadinginfo_new(void* other) {
-    return QWebEngineLoadingInfo_new((QWebEngineLoadingInfo*)other);
+    return QWebEngineLoadingInfo_New((QWebEngineLoadingInfo*)other);
 }
 
 void q_webengineloadinginfo_operator_assign(void* self, void* other) {

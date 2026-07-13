@@ -683,11 +683,11 @@ void q_accessibleattributesinterface_delete(void* self) {
 }
 
 QAccessibleEvent* q_accessibleevent_new(void* obj, int32_t typ) {
-    return QAccessibleEvent_new((QObject*)obj, typ);
+    return QAccessibleEvent_New((QObject*)obj, typ);
 }
 
 QAccessibleEvent* q_accessibleevent_new2(void* iface, int32_t typ) {
-    return QAccessibleEvent_new2((QAccessibleInterface*)iface, typ);
+    return QAccessibleEvent_New2((QAccessibleInterface*)iface, typ);
 }
 
 int32_t q_accessibleevent_type(void* self) {
@@ -727,11 +727,11 @@ void q_accessibleevent_delete(void* self) {
 }
 
 QAccessibleStateChangeEvent* q_accessiblestatechangeevent_new(void* obj, void* state) {
-    return QAccessibleStateChangeEvent_new((QObject*)obj, (QAccessible__State*)state);
+    return QAccessibleStateChangeEvent_New((QObject*)obj, (QAccessible__State*)state);
 }
 
 QAccessibleStateChangeEvent* q_accessiblestatechangeevent_new2(void* iface, void* state) {
-    return QAccessibleStateChangeEvent_new2((QAccessibleInterface*)iface, (QAccessible__State*)state);
+    return QAccessibleStateChangeEvent_New2((QAccessibleInterface*)iface, (QAccessible__State*)state);
 }
 
 QAccessible__State* q_accessiblestatechangeevent_changed_states(void* self) {
@@ -775,11 +775,11 @@ void q_accessiblestatechangeevent_delete(void* self) {
 }
 
 QAccessibleTextCursorEvent* q_accessibletextcursorevent_new(void* obj, int cursorPos) {
-    return QAccessibleTextCursorEvent_new((QObject*)obj, cursorPos);
+    return QAccessibleTextCursorEvent_New((QObject*)obj, cursorPos);
 }
 
 QAccessibleTextCursorEvent* q_accessibletextcursorevent_new2(void* iface, int cursorPos) {
-    return QAccessibleTextCursorEvent_new2((QAccessibleInterface*)iface, cursorPos);
+    return QAccessibleTextCursorEvent_New2((QAccessibleInterface*)iface, cursorPos);
 }
 
 void q_accessibletextcursorevent_set_cursor_position(void* self, int position) {
@@ -827,11 +827,11 @@ void q_accessibletextcursorevent_delete(void* self) {
 }
 
 QAccessibleTextSelectionEvent* q_accessibletextselectionevent_new(void* obj, int start, int end) {
-    return QAccessibleTextSelectionEvent_new((QObject*)obj, start, end);
+    return QAccessibleTextSelectionEvent_New((QObject*)obj, start, end);
 }
 
 QAccessibleTextSelectionEvent* q_accessibletextselectionevent_new2(void* iface, int start, int end) {
-    return QAccessibleTextSelectionEvent_new2((QAccessibleInterface*)iface, start, end);
+    return QAccessibleTextSelectionEvent_New2((QAccessibleInterface*)iface, start, end);
 }
 
 void q_accessibletextselectionevent_set_selection(void* self, int start, int end) {
@@ -891,11 +891,11 @@ void q_accessibletextselectionevent_delete(void* self) {
 }
 
 QAccessibleTextInsertEvent* q_accessibletextinsertevent_new(void* obj, int position, const char* text) {
-    return QAccessibleTextInsertEvent_new((QObject*)obj, position, qstring(text));
+    return QAccessibleTextInsertEvent_New((QObject*)obj, position, qstring(text));
 }
 
 QAccessibleTextInsertEvent* q_accessibletextinsertevent_new2(void* iface, int position, const char* text) {
-    return QAccessibleTextInsertEvent_new2((QAccessibleInterface*)iface, position, qstring(text));
+    return QAccessibleTextInsertEvent_New2((QAccessibleInterface*)iface, position, qstring(text));
 }
 
 const char* q_accessibletextinsertevent_text_inserted(void* self) {
@@ -954,11 +954,11 @@ void q_accessibletextinsertevent_delete(void* self) {
 }
 
 QAccessibleTextRemoveEvent* q_accessibletextremoveevent_new(void* obj, int position, const char* text) {
-    return QAccessibleTextRemoveEvent_new((QObject*)obj, position, qstring(text));
+    return QAccessibleTextRemoveEvent_New((QObject*)obj, position, qstring(text));
 }
 
 QAccessibleTextRemoveEvent* q_accessibletextremoveevent_new2(void* iface, int position, const char* text) {
-    return QAccessibleTextRemoveEvent_new2((QAccessibleInterface*)iface, position, qstring(text));
+    return QAccessibleTextRemoveEvent_New2((QAccessibleInterface*)iface, position, qstring(text));
 }
 
 const char* q_accessibletextremoveevent_text_removed(void* self) {
@@ -1017,11 +1017,11 @@ void q_accessibletextremoveevent_delete(void* self) {
 }
 
 QAccessibleTextUpdateEvent* q_accessibletextupdateevent_new(void* obj, int position, const char* oldText, const char* text) {
-    return QAccessibleTextUpdateEvent_new((QObject*)obj, position, qstring(oldText), qstring(text));
+    return QAccessibleTextUpdateEvent_New((QObject*)obj, position, qstring(oldText), qstring(text));
 }
 
 QAccessibleTextUpdateEvent* q_accessibletextupdateevent_new2(void* iface, int position, const char* oldText, const char* text) {
-    return QAccessibleTextUpdateEvent_new2((QAccessibleInterface*)iface, position, qstring(oldText), qstring(text));
+    return QAccessibleTextUpdateEvent_New2((QAccessibleInterface*)iface, position, qstring(oldText), qstring(text));
 }
 
 const char* q_accessibletextupdateevent_text_removed(void* self) {
@@ -1087,11 +1087,11 @@ void q_accessibletextupdateevent_delete(void* self) {
 }
 
 QAccessibleValueChangeEvent* q_accessiblevaluechangeevent_new(void* obj, void* val) {
-    return QAccessibleValueChangeEvent_new((QObject*)obj, (QVariant*)val);
+    return QAccessibleValueChangeEvent_New((QObject*)obj, (QVariant*)val);
 }
 
 QAccessibleValueChangeEvent* q_accessiblevaluechangeevent_new2(void* iface, void* val) {
-    return QAccessibleValueChangeEvent_new2((QAccessibleInterface*)iface, (QVariant*)val);
+    return QAccessibleValueChangeEvent_New2((QAccessibleInterface*)iface, (QVariant*)val);
 }
 
 void q_accessiblevaluechangeevent_set_value(void* self, void* val) {
@@ -1139,11 +1139,11 @@ void q_accessiblevaluechangeevent_delete(void* self) {
 }
 
 QAccessibleTableModelChangeEvent* q_accessibletablemodelchangeevent_new(void* obj, int32_t changeType) {
-    return QAccessibleTableModelChangeEvent_new((QObject*)obj, changeType);
+    return QAccessibleTableModelChangeEvent_New((QObject*)obj, changeType);
 }
 
 QAccessibleTableModelChangeEvent* q_accessibletablemodelchangeevent_new2(void* iface, int32_t changeType) {
-    return QAccessibleTableModelChangeEvent_new2((QAccessibleInterface*)iface, changeType);
+    return QAccessibleTableModelChangeEvent_New2((QAccessibleInterface*)iface, changeType);
 }
 
 void q_accessibletablemodelchangeevent_set_model_change_type(void* self, int32_t changeType) {
@@ -1223,11 +1223,11 @@ void q_accessibletablemodelchangeevent_delete(void* self) {
 }
 
 QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new(void* object, const char* message) {
-    return QAccessibleAnnouncementEvent_new((QObject*)object, qstring(message));
+    return QAccessibleAnnouncementEvent_New((QObject*)object, qstring(message));
 }
 
 QAccessibleAnnouncementEvent* q_accessibleannouncementevent_new2(void* iface, const char* message) {
-    return QAccessibleAnnouncementEvent_new2((QAccessibleInterface*)iface, qstring(message));
+    return QAccessibleAnnouncementEvent_New2((QAccessibleInterface*)iface, qstring(message));
 }
 
 const char* q_accessibleannouncementevent_message(void* self) {

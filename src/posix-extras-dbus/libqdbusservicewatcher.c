@@ -7,23 +7,23 @@
 #include "libqdbusservicewatcher.h"
 
 QDBusServiceWatcher* q_dbusservicewatcher_new() {
-    return QDBusServiceWatcher_new();
+    return QDBusServiceWatcher_New();
 }
 
 QDBusServiceWatcher* q_dbusservicewatcher_new2(const char* service, void* connection) {
-    return QDBusServiceWatcher_new2(qstring(service), (QDBusConnection*)connection);
+    return QDBusServiceWatcher_New2(qstring(service), (QDBusConnection*)connection);
 }
 
 QDBusServiceWatcher* q_dbusservicewatcher_new3(void* parent) {
-    return QDBusServiceWatcher_new3((QObject*)parent);
+    return QDBusServiceWatcher_New3((QObject*)parent);
 }
 
 QDBusServiceWatcher* q_dbusservicewatcher_new4(const char* service, void* connection, int32_t watchMode) {
-    return QDBusServiceWatcher_new4(qstring(service), (QDBusConnection*)connection, watchMode);
+    return QDBusServiceWatcher_New4(qstring(service), (QDBusConnection*)connection, watchMode);
 }
 
 QDBusServiceWatcher* q_dbusservicewatcher_new5(const char* service, void* connection, int32_t watchMode, void* parent) {
-    return QDBusServiceWatcher_new5(qstring(service), (QDBusConnection*)connection, watchMode, (QObject*)parent);
+    return QDBusServiceWatcher_New5(qstring(service), (QDBusConnection*)connection, watchMode, (QObject*)parent);
 }
 
 const QMetaObject* q_dbusservicewatcher_meta_object(void* self) {

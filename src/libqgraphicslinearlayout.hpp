@@ -24,10 +24,10 @@ typedef struct QRectF QRectF;
 typedef struct QSizeF QSizeF;
 #endif
 
-QGraphicsLinearLayout* QGraphicsLinearLayout_new();
-QGraphicsLinearLayout* QGraphicsLinearLayout_new2(int orientation);
-QGraphicsLinearLayout* QGraphicsLinearLayout_new3(QGraphicsLayoutItem* parent);
-QGraphicsLinearLayout* QGraphicsLinearLayout_new4(int orientation, QGraphicsLayoutItem* parent);
+QGraphicsLinearLayout* QGraphicsLinearLayout_New();
+QGraphicsLinearLayout* QGraphicsLinearLayout_New2(int orientation);
+QGraphicsLinearLayout* QGraphicsLinearLayout_New3(QGraphicsLayoutItem* parent);
+QGraphicsLinearLayout* QGraphicsLinearLayout_New4(int orientation, QGraphicsLayoutItem* parent);
 void QGraphicsLinearLayout_SetOrientation(QGraphicsLinearLayout* self, int orientation);
 int QGraphicsLinearLayout_Orientation(const QGraphicsLinearLayout* self);
 void QGraphicsLinearLayout_AddItem(QGraphicsLinearLayout* self, QGraphicsLayoutItem* item);

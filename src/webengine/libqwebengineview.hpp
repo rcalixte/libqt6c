@@ -64,12 +64,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QWebEngineView* QWebEngineView_new(QWidget* parent);
-QWebEngineView* QWebEngineView_new2();
-QWebEngineView* QWebEngineView_new3(QWebEngineProfile* profile);
-QWebEngineView* QWebEngineView_new4(QWebEnginePage* page);
-QWebEngineView* QWebEngineView_new5(QWebEngineProfile* profile, QWidget* parent);
-QWebEngineView* QWebEngineView_new6(QWebEnginePage* page, QWidget* parent);
+QWebEngineView* QWebEngineView_New(QWidget* parent);
+QWebEngineView* QWebEngineView_New2();
+QWebEngineView* QWebEngineView_New3(QWebEngineProfile* profile);
+QWebEngineView* QWebEngineView_New4(QWebEnginePage* page);
+QWebEngineView* QWebEngineView_New5(QWebEngineProfile* profile, QWidget* parent);
+QWebEngineView* QWebEngineView_New6(QWebEnginePage* page, QWidget* parent);
 QMetaObject* QWebEngineView_MetaObject(const QWebEngineView* self);
 void* QWebEngineView_Metacast(QWebEngineView* self, const char* param1);
 int QWebEngineView_Metacall(QWebEngineView* self, int param1, int param2, void** param3);

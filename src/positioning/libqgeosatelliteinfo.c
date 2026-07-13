@@ -2,11 +2,11 @@
 #include "libqgeosatelliteinfo.h"
 
 QGeoSatelliteInfo* q_geosatelliteinfo_new() {
-    return QGeoSatelliteInfo_new();
+    return QGeoSatelliteInfo_New();
 }
 
 QGeoSatelliteInfo* q_geosatelliteinfo_new2(void* other) {
-    return QGeoSatelliteInfo_new2((QGeoSatelliteInfo*)other);
+    return QGeoSatelliteInfo_New2((QGeoSatelliteInfo*)other);
 }
 
 void q_geosatelliteinfo_operator_assign(void* self, void* other) {

@@ -47,13 +47,13 @@
 #include "libkcoreconfigskeleton.hpp"
 #include "libkcoreconfigskeleton.hxx"
 
-KConfigSkeletonItem* KConfigSkeletonItem_new(const libqt_string _group, const libqt_string _key) {
+KConfigSkeletonItem* KConfigSkeletonItem_New(const libqt_string _group, const libqt_string _key) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKConfigSkeletonItem(_group_QString, _key_QString);
 }
 
-KConfigSkeletonItem* KConfigSkeletonItem_new2(const KConfigSkeletonItem* param1) {
+KConfigSkeletonItem* KConfigSkeletonItem_New2(const KConfigSkeletonItem* param1) {
     return new VirtualKConfigSkeletonItem(*param1);
 }
 
@@ -454,12 +454,12 @@ void KConfigSkeletonItem_Delete(KConfigSkeletonItem* self) {
     delete self;
 }
 
-KPropertySkeletonItem* KPropertySkeletonItem_new(QObject* object, const libqt_string propertyName, const QVariant* defaultValue) {
+KPropertySkeletonItem* KPropertySkeletonItem_New(QObject* object, const libqt_string propertyName, const QVariant* defaultValue) {
     QByteArray propertyName_QByteArray(propertyName.data, propertyName.len);
     return new VirtualKPropertySkeletonItem(object, propertyName_QByteArray, *defaultValue);
 }
 
-KPropertySkeletonItem* KPropertySkeletonItem_new2(const KPropertySkeletonItem* param1) {
+KPropertySkeletonItem* KPropertySkeletonItem_New2(const KPropertySkeletonItem* param1) {
     return new VirtualKPropertySkeletonItem(*param1);
 }
 
@@ -805,16 +805,16 @@ void KConfigCompilerSignallingItem_Delete(KConfigCompilerSignallingItem* self) {
     delete self;
 }
 
-KCoreConfigSkeleton* KCoreConfigSkeleton_new() {
+KCoreConfigSkeleton* KCoreConfigSkeleton_New() {
     return new VirtualKCoreConfigSkeleton();
 }
 
-KCoreConfigSkeleton* KCoreConfigSkeleton_new2(const libqt_string configname) {
+KCoreConfigSkeleton* KCoreConfigSkeleton_New2(const libqt_string configname) {
     QString configname_QString = QString::fromUtf8(configname.data, configname.len);
     return new VirtualKCoreConfigSkeleton(configname_QString);
 }
 
-KCoreConfigSkeleton* KCoreConfigSkeleton_new3(const libqt_string configname, QObject* parent) {
+KCoreConfigSkeleton* KCoreConfigSkeleton_New3(const libqt_string configname, QObject* parent) {
     QString configname_QString = QString::fromUtf8(configname.data, configname.len);
     return new VirtualKCoreConfigSkeleton(configname_QString, parent);
 }
@@ -1844,14 +1844,14 @@ void KCoreConfigSkeleton_Delete(KCoreConfigSkeleton* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new(const libqt_string _group, const libqt_string _key, libqt_string reference) {
+KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_New(const libqt_string _group, const libqt_string _key, libqt_string reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
     return new VirtualKCoreConfigSkeletonItemString(_group_QString, _key_QString, reference_QString);
 }
 
-KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue) {
+KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_New2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
@@ -1859,7 +1859,7 @@ KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new2(const libq
     return new VirtualKCoreConfigSkeletonItemString(_group_QString, _key_QString, reference_QString, defaultValue_QString);
 }
 
-KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_new3(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue, int type) {
+KCoreConfigSkeleton__ItemString* KCoreConfigSkeleton__ItemString_New3(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue, int type) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
@@ -1986,14 +1986,14 @@ void KCoreConfigSkeleton__ItemString_Delete(KCoreConfigSkeleton__ItemString* sel
     delete self;
 }
 
-KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_new(const libqt_string _group, const libqt_string _key, libqt_string reference) {
+KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_New(const libqt_string _group, const libqt_string _key, libqt_string reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
     return new VirtualKCoreConfigSkeletonItemPassword(_group_QString, _key_QString, reference_QString);
 }
 
-KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_new2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue) {
+KCoreConfigSkeleton__ItemPassword* KCoreConfigSkeleton__ItemPassword_New2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
@@ -2150,14 +2150,14 @@ void KCoreConfigSkeleton__ItemPassword_Delete(KCoreConfigSkeleton__ItemPassword*
     delete self;
 }
 
-KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_new(const libqt_string _group, const libqt_string _key, libqt_string reference) {
+KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_New(const libqt_string _group, const libqt_string _key, libqt_string reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
     return new VirtualKCoreConfigSkeletonItemPath(_group_QString, _key_QString, reference_QString);
 }
 
-KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_new2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue) {
+KCoreConfigSkeleton__ItemPath* KCoreConfigSkeleton__ItemPath_New2(const libqt_string _group, const libqt_string _key, libqt_string reference, const libqt_string defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QString reference_QString = QString::fromUtf8(reference.data, reference.len);
@@ -2314,13 +2314,13 @@ void KCoreConfigSkeleton__ItemPath_Delete(KCoreConfigSkeleton__ItemPath* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_new(const libqt_string _group, const libqt_string _key, QUrl* reference) {
+KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_New(const libqt_string _group, const libqt_string _key, QUrl* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemUrl(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_new2(const libqt_string _group, const libqt_string _key, QUrl* reference, const QUrl* defaultValue) {
+KCoreConfigSkeleton__ItemUrl* KCoreConfigSkeleton__ItemUrl_New2(const libqt_string _group, const libqt_string _key, QUrl* reference, const QUrl* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemUrl(_group_QString, _key_QString, *reference, *defaultValue);
@@ -2445,13 +2445,13 @@ void KCoreConfigSkeleton__ItemUrl_Delete(KCoreConfigSkeleton__ItemUrl* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_new(const libqt_string _group, const libqt_string _key, QVariant* reference) {
+KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_New(const libqt_string _group, const libqt_string _key, QVariant* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemProperty(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_new2(const libqt_string _group, const libqt_string _key, QVariant* reference, const QVariant* defaultValue) {
+KCoreConfigSkeleton__ItemProperty* KCoreConfigSkeleton__ItemProperty_New2(const libqt_string _group, const libqt_string _key, QVariant* reference, const QVariant* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemProperty(_group_QString, _key_QString, *reference, *defaultValue);
@@ -2553,13 +2553,13 @@ void KCoreConfigSkeleton__ItemProperty_Delete(KCoreConfigSkeleton__ItemProperty*
     delete self;
 }
 
-KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_new(const libqt_string _group, const libqt_string _key, bool* reference) {
+KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_New(const libqt_string _group, const libqt_string _key, bool* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemBool(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_new2(const libqt_string _group, const libqt_string _key, bool* reference, bool defaultValue) {
+KCoreConfigSkeleton__ItemBool* KCoreConfigSkeleton__ItemBool_New2(const libqt_string _group, const libqt_string _key, bool* reference, bool defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemBool(_group_QString, _key_QString, *reference, defaultValue);
@@ -2661,13 +2661,13 @@ void KCoreConfigSkeleton__ItemBool_Delete(KCoreConfigSkeleton__ItemBool* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_new(const libqt_string _group, const libqt_string _key, int* reference) {
+KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_New(const libqt_string _group, const libqt_string _key, int* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemInt(_group_QString, _key_QString, static_cast<qint32&>(*reference));
 }
 
-KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_new2(const libqt_string _group, const libqt_string _key, int* reference, int defaultValue) {
+KCoreConfigSkeleton__ItemInt* KCoreConfigSkeleton__ItemInt_New2(const libqt_string _group, const libqt_string _key, int* reference, int defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemInt(_group_QString, _key_QString, static_cast<qint32&>(*reference), static_cast<qint32>(defaultValue));
@@ -2815,13 +2815,13 @@ void KCoreConfigSkeleton__ItemInt_Delete(KCoreConfigSkeleton__ItemInt* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_new(const libqt_string _group, const libqt_string _key, long long* reference) {
+KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_New(const libqt_string _group, const libqt_string _key, long long* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemLongLong(_group_QString, _key_QString, static_cast<qint64&>(*reference));
 }
 
-KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_new2(const libqt_string _group, const libqt_string _key, long long* reference, long long defaultValue) {
+KCoreConfigSkeleton__ItemLongLong* KCoreConfigSkeleton__ItemLongLong_New2(const libqt_string _group, const libqt_string _key, long long* reference, long long defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemLongLong(_group_QString, _key_QString, static_cast<qint64&>(*reference), static_cast<qint64>(defaultValue));
@@ -2977,11 +2977,11 @@ void KCoreConfigSkeleton__ItemLongLong_Delete(KCoreConfigSkeleton__ItemLongLong*
     delete self;
 }
 
-KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_new(const KCoreConfigSkeleton__ItemEnum__Choice* param1) {
+KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New(const KCoreConfigSkeleton__ItemEnum__Choice* param1) {
     return new KCoreConfigSkeleton::ItemEnum::Choice(*param1);
 }
 
-KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_new2() {
+KCoreConfigSkeleton__ItemEnum__Choice* KCoreConfigSkeleton__ItemEnum__Choice_New2() {
     return new KCoreConfigSkeleton::ItemEnum::Choice();
 }
 
@@ -3078,7 +3078,7 @@ void KCoreConfigSkeleton__ItemEnum__Choice_Delete(KCoreConfigSkeleton__ItemEnum_
     delete self;
 }
 
-KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_new(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices) {
+KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_New(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<KCoreConfigSkeleton::ItemEnum::Choice> choices_QList;
@@ -3090,7 +3090,7 @@ KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_new(const libqt_str
     return new VirtualKCoreConfigSkeletonItemEnum(_group_QString, _key_QString, static_cast<qint32&>(*reference), choices_QList);
 }
 
-KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_new2(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices, int defaultValue) {
+KCoreConfigSkeleton__ItemEnum* KCoreConfigSkeleton__ItemEnum_New2(const libqt_string _group, const libqt_string _key, int* reference, const libqt_list /* of KCoreConfigSkeleton__ItemEnum__Choice* */ choices, int defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<KCoreConfigSkeleton::ItemEnum::Choice> choices_QList;
@@ -3329,13 +3329,13 @@ void KCoreConfigSkeleton__ItemEnum_Delete(KCoreConfigSkeleton__ItemEnum* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_new(const libqt_string _group, const libqt_string _key, unsigned int* reference) {
+KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_New(const libqt_string _group, const libqt_string _key, unsigned int* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemUInt(_group_QString, _key_QString, static_cast<quint32&>(*reference));
 }
 
-KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_new2(const libqt_string _group, const libqt_string _key, unsigned int* reference, unsigned int defaultValue) {
+KCoreConfigSkeleton__ItemUInt* KCoreConfigSkeleton__ItemUInt_New2(const libqt_string _group, const libqt_string _key, unsigned int* reference, unsigned int defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemUInt(_group_QString, _key_QString, static_cast<quint32&>(*reference), static_cast<quint32>(defaultValue));
@@ -3491,13 +3491,13 @@ void KCoreConfigSkeleton__ItemUInt_Delete(KCoreConfigSkeleton__ItemUInt* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_new(const libqt_string _group, const libqt_string _key, unsigned long long* reference) {
+KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_New(const libqt_string _group, const libqt_string _key, unsigned long long* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemULongLong(_group_QString, _key_QString, static_cast<quint64&>(*reference));
 }
 
-KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_new2(const libqt_string _group, const libqt_string _key, unsigned long long* reference, unsigned long long defaultValue) {
+KCoreConfigSkeleton__ItemULongLong* KCoreConfigSkeleton__ItemULongLong_New2(const libqt_string _group, const libqt_string _key, unsigned long long* reference, unsigned long long defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemULongLong(_group_QString, _key_QString, static_cast<quint64&>(*reference), static_cast<quint64>(defaultValue));
@@ -3653,13 +3653,13 @@ void KCoreConfigSkeleton__ItemULongLong_Delete(KCoreConfigSkeleton__ItemULongLon
     delete self;
 }
 
-KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_new(const libqt_string _group, const libqt_string _key, double* reference) {
+KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_New(const libqt_string _group, const libqt_string _key, double* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemDouble(_group_QString, _key_QString, static_cast<double&>(*reference));
 }
 
-KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_new2(const libqt_string _group, const libqt_string _key, double* reference, double defaultValue) {
+KCoreConfigSkeleton__ItemDouble* KCoreConfigSkeleton__ItemDouble_New2(const libqt_string _group, const libqt_string _key, double* reference, double defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemDouble(_group_QString, _key_QString, static_cast<double&>(*reference), static_cast<double>(defaultValue));
@@ -3815,13 +3815,13 @@ void KCoreConfigSkeleton__ItemDouble_Delete(KCoreConfigSkeleton__ItemDouble* sel
     delete self;
 }
 
-KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_new(const libqt_string _group, const libqt_string _key, QRect* reference) {
+KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_New(const libqt_string _group, const libqt_string _key, QRect* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemRect(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_new2(const libqt_string _group, const libqt_string _key, QRect* reference, const QRect* defaultValue) {
+KCoreConfigSkeleton__ItemRect* KCoreConfigSkeleton__ItemRect_New2(const libqt_string _group, const libqt_string _key, QRect* reference, const QRect* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemRect(_group_QString, _key_QString, *reference, *defaultValue);
@@ -3923,13 +3923,13 @@ void KCoreConfigSkeleton__ItemRect_Delete(KCoreConfigSkeleton__ItemRect* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_new(const libqt_string _group, const libqt_string _key, QRectF* reference) {
+KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_New(const libqt_string _group, const libqt_string _key, QRectF* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemRectF(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_new2(const libqt_string _group, const libqt_string _key, QRectF* reference, const QRectF* defaultValue) {
+KCoreConfigSkeleton__ItemRectF* KCoreConfigSkeleton__ItemRectF_New2(const libqt_string _group, const libqt_string _key, QRectF* reference, const QRectF* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemRectF(_group_QString, _key_QString, *reference, *defaultValue);
@@ -4031,13 +4031,13 @@ void KCoreConfigSkeleton__ItemRectF_Delete(KCoreConfigSkeleton__ItemRectF* self)
     delete self;
 }
 
-KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_new(const libqt_string _group, const libqt_string _key, QPoint* reference) {
+KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_New(const libqt_string _group, const libqt_string _key, QPoint* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemPoint(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_new2(const libqt_string _group, const libqt_string _key, QPoint* reference, const QPoint* defaultValue) {
+KCoreConfigSkeleton__ItemPoint* KCoreConfigSkeleton__ItemPoint_New2(const libqt_string _group, const libqt_string _key, QPoint* reference, const QPoint* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemPoint(_group_QString, _key_QString, *reference, *defaultValue);
@@ -4139,13 +4139,13 @@ void KCoreConfigSkeleton__ItemPoint_Delete(KCoreConfigSkeleton__ItemPoint* self)
     delete self;
 }
 
-KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_new(const libqt_string _group, const libqt_string _key, QPointF* reference) {
+KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_New(const libqt_string _group, const libqt_string _key, QPointF* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemPointF(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_new2(const libqt_string _group, const libqt_string _key, QPointF* reference, const QPointF* defaultValue) {
+KCoreConfigSkeleton__ItemPointF* KCoreConfigSkeleton__ItemPointF_New2(const libqt_string _group, const libqt_string _key, QPointF* reference, const QPointF* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemPointF(_group_QString, _key_QString, *reference, *defaultValue);
@@ -4247,13 +4247,13 @@ void KCoreConfigSkeleton__ItemPointF_Delete(KCoreConfigSkeleton__ItemPointF* sel
     delete self;
 }
 
-KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_new(const libqt_string _group, const libqt_string _key, QSize* reference) {
+KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_New(const libqt_string _group, const libqt_string _key, QSize* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemSize(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_new2(const libqt_string _group, const libqt_string _key, QSize* reference, const QSize* defaultValue) {
+KCoreConfigSkeleton__ItemSize* KCoreConfigSkeleton__ItemSize_New2(const libqt_string _group, const libqt_string _key, QSize* reference, const QSize* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemSize(_group_QString, _key_QString, *reference, *defaultValue);
@@ -4355,13 +4355,13 @@ void KCoreConfigSkeleton__ItemSize_Delete(KCoreConfigSkeleton__ItemSize* self) {
     delete self;
 }
 
-KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_new(const libqt_string _group, const libqt_string _key, QSizeF* reference) {
+KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_New(const libqt_string _group, const libqt_string _key, QSizeF* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemSizeF(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_new2(const libqt_string _group, const libqt_string _key, QSizeF* reference, const QSizeF* defaultValue) {
+KCoreConfigSkeleton__ItemSizeF* KCoreConfigSkeleton__ItemSizeF_New2(const libqt_string _group, const libqt_string _key, QSizeF* reference, const QSizeF* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemSizeF(_group_QString, _key_QString, *reference, *defaultValue);
@@ -4463,13 +4463,13 @@ void KCoreConfigSkeleton__ItemSizeF_Delete(KCoreConfigSkeleton__ItemSizeF* self)
     delete self;
 }
 
-KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_new(const libqt_string _group, const libqt_string _key, QDateTime* reference) {
+KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_New(const libqt_string _group, const libqt_string _key, QDateTime* reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemDateTime(_group_QString, _key_QString, *reference);
 }
 
-KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_new2(const libqt_string _group, const libqt_string _key, QDateTime* reference, const QDateTime* defaultValue) {
+KCoreConfigSkeleton__ItemDateTime* KCoreConfigSkeleton__ItemDateTime_New2(const libqt_string _group, const libqt_string _key, QDateTime* reference, const QDateTime* defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     return new VirtualKCoreConfigSkeletonItemDateTime(_group_QString, _key_QString, *reference, *defaultValue);
@@ -4571,7 +4571,7 @@ void KCoreConfigSkeleton__ItemDateTime_Delete(KCoreConfigSkeleton__ItemDateTime*
     delete self;
 }
 
-KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference) {
+KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<QString> reference_QList;
@@ -4584,7 +4584,7 @@ KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_new(con
     return new VirtualKCoreConfigSkeletonItemStringList(_group_QString, _key_QString, reference_QList);
 }
 
-KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue) {
+KCoreConfigSkeleton__ItemStringList* KCoreConfigSkeleton__ItemStringList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<QString> reference_QList;
@@ -4700,7 +4700,7 @@ void KCoreConfigSkeleton__ItemStringList_Delete(KCoreConfigSkeleton__ItemStringL
     delete self;
 }
 
-KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference) {
+KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<QString> reference_QList;
@@ -4713,7 +4713,7 @@ KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_new(const l
     return new VirtualKCoreConfigSkeletonItemPathList(_group_QString, _key_QString, reference_QList);
 }
 
-KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue) {
+KCoreConfigSkeleton__ItemPathList* KCoreConfigSkeleton__ItemPathList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of libqt_string */ reference, const libqt_list /* of libqt_string */ defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<QString> reference_QList;
@@ -4870,7 +4870,7 @@ void KCoreConfigSkeleton__ItemPathList_Delete(KCoreConfigSkeleton__ItemPathList*
     delete self;
 }
 
-KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference) {
+KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<QUrl> reference_QList;
@@ -4882,7 +4882,7 @@ KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_new(const lib
     return new VirtualKCoreConfigSkeletonItemUrlList(_group_QString, _key_QString, reference_QList);
 }
 
-KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference, const libqt_list /* of QUrl* */ defaultValue) {
+KCoreConfigSkeleton__ItemUrlList* KCoreConfigSkeleton__ItemUrlList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of QUrl* */ reference, const libqt_list /* of QUrl* */ defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<QUrl> reference_QList;
@@ -5019,7 +5019,7 @@ void KCoreConfigSkeleton__ItemUrlList_Delete(KCoreConfigSkeleton__ItemUrlList* s
     delete self;
 }
 
-KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_new(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference) {
+KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_New(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<int> reference_QList;
@@ -5031,7 +5031,7 @@ KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_new(const lib
     return new VirtualKCoreConfigSkeletonItemIntList(_group_QString, _key_QString, reference_QList);
 }
 
-KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_new2(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference, const libqt_list /* of int */ defaultValue) {
+KCoreConfigSkeleton__ItemIntList* KCoreConfigSkeleton__ItemIntList_New2(const libqt_string _group, const libqt_string _key, libqt_list /* of int */ reference, const libqt_list /* of int */ defaultValue) {
     QString _group_QString = QString::fromUtf8(_group.data, _group.len);
     QString _key_QString = QString::fromUtf8(_key.data, _key.len);
     QList<int> reference_QList;

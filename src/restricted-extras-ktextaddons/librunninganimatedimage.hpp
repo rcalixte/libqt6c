@@ -24,7 +24,7 @@ typedef struct QPersistentModelIndex QPersistentModelIndex;
 typedef struct TextEmoticonsCore__RunningAnimatedImage TextEmoticonsCore__RunningAnimatedImage;
 #endif
 
-TextEmoticonsCore__RunningAnimatedImage* TextEmoticonsCore__RunningAnimatedImage_new(const QModelIndex* idx);
+TextEmoticonsCore__RunningAnimatedImage* TextEmoticonsCore__RunningAnimatedImage_New(const QModelIndex* idx);
 QPersistentModelIndex* TextEmoticonsCore__RunningAnimatedImage_Index(const TextEmoticonsCore__RunningAnimatedImage* self);
 void TextEmoticonsCore__RunningAnimatedImage_SetIndex(TextEmoticonsCore__RunningAnimatedImage* self, QPersistentModelIndex* index);
 QMovie* TextEmoticonsCore__RunningAnimatedImage_Movie(const TextEmoticonsCore__RunningAnimatedImage* self);

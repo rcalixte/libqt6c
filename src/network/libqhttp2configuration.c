@@ -2,11 +2,11 @@
 #include "libqhttp2configuration.h"
 
 QHttp2Configuration* q_http2configuration_new() {
-    return QHttp2Configuration_new();
+    return QHttp2Configuration_New();
 }
 
 QHttp2Configuration* q_http2configuration_new2(void* other) {
-    return QHttp2Configuration_new2((QHttp2Configuration*)other);
+    return QHttp2Configuration_New2((QHttp2Configuration*)other);
 }
 
 void q_http2configuration_operator_assign(void* self, void* other) {

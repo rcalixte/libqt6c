@@ -16,15 +16,15 @@
 #include "libkreplacedialog.h"
 
 KReplaceDialog* k_replacedialog_new(void* parent) {
-    return KReplaceDialog_new((QWidget*)parent);
+    return KReplaceDialog_New((QWidget*)parent);
 }
 
 KReplaceDialog* k_replacedialog_new2() {
-    return KReplaceDialog_new2();
+    return KReplaceDialog_New2();
 }
 
 KReplaceDialog* k_replacedialog_new3(void* parent, long options) {
-    return KReplaceDialog_new3((QWidget*)parent, options);
+    return KReplaceDialog_New3((QWidget*)parent, options);
 }
 
 KReplaceDialog* k_replacedialog_new4(void* parent, long options, const char* findStrings[static 1]) {
@@ -39,7 +39,7 @@ KReplaceDialog* k_replacedialog_new4(void* parent, long options, const char* fin
     }
     libqt_list findStrings_list = qlist(findStrings_qstr, findStrings_len);
 
-    KReplaceDialog* _out = KReplaceDialog_new4((QWidget*)parent, options, findStrings_list);
+    KReplaceDialog* _out = KReplaceDialog_New4((QWidget*)parent, options, findStrings_list);
     free(findStrings_qstr);
     return _out;
 }
@@ -66,7 +66,7 @@ KReplaceDialog* k_replacedialog_new5(void* parent, long options, const char* fin
     }
     libqt_list replaceStrings_list = qlist(replaceStrings_qstr, replaceStrings_len);
 
-    KReplaceDialog* _out = KReplaceDialog_new5((QWidget*)parent, options, findStrings_list, replaceStrings_list);
+    KReplaceDialog* _out = KReplaceDialog_New5((QWidget*)parent, options, findStrings_list, replaceStrings_list);
     free(findStrings_qstr);
     free(replaceStrings_qstr);
     return _out;
@@ -94,7 +94,7 @@ KReplaceDialog* k_replacedialog_new6(void* parent, long options, const char* fin
     }
     libqt_list replaceStrings_list = qlist(replaceStrings_qstr, replaceStrings_len);
 
-    KReplaceDialog* _out = KReplaceDialog_new6((QWidget*)parent, options, findStrings_list, replaceStrings_list, hasSelection);
+    KReplaceDialog* _out = KReplaceDialog_New6((QWidget*)parent, options, findStrings_list, replaceStrings_list, hasSelection);
     free(findStrings_qstr);
     free(replaceStrings_qstr);
     return _out;

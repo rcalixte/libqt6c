@@ -11,11 +11,11 @@
 #include "libqnmeapositioninfosource.h"
 
 QNmeaPositionInfoSource* q_nmeapositioninfosource_new(int32_t updateMode) {
-    return QNmeaPositionInfoSource_new(updateMode);
+    return QNmeaPositionInfoSource_New(updateMode);
 }
 
 QNmeaPositionInfoSource* q_nmeapositioninfosource_new2(int32_t updateMode, void* parent) {
-    return QNmeaPositionInfoSource_new2(updateMode, (QObject*)parent);
+    return QNmeaPositionInfoSource_New2(updateMode, (QObject*)parent);
 }
 
 const QMetaObject* q_nmeapositioninfosource_meta_object(void* self) {

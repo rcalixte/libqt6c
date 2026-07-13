@@ -6,7 +6,7 @@
 #include "libqmimedatabase.h"
 
 QMimeDatabase* q_mimedatabase_new() {
-    return QMimeDatabase_new();
+    return QMimeDatabase_New();
 }
 
 QMimeType* q_mimedatabase_mime_type_for_name(void* self, const char* nameOrAlias) {

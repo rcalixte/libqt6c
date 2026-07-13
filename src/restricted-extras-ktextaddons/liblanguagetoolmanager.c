@@ -8,11 +8,11 @@
 #include "liblanguagetoolmanager.h"
 
 TextGrammarCheck__LanguageToolManager* k_textgrammarcheck__languagetoolmanager_new() {
-    return TextGrammarCheck__LanguageToolManager_new();
+    return TextGrammarCheck__LanguageToolManager_New();
 }
 
 TextGrammarCheck__LanguageToolManager* k_textgrammarcheck__languagetoolmanager_new2(void* parent) {
-    return TextGrammarCheck__LanguageToolManager_new2((QObject*)parent);
+    return TextGrammarCheck__LanguageToolManager_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textgrammarcheck__languagetoolmanager_meta_object(void* self) {

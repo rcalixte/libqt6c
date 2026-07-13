@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_new(QWidget* parent);
-QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_new2(QWidget* parent, int flags);
+QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_New(QWidget* parent);
+QDesignerObjectInspectorInterface* QDesignerObjectInspectorInterface_New2(QWidget* parent, int flags);
 QMetaObject* QDesignerObjectInspectorInterface_MetaObject(const QDesignerObjectInspectorInterface* self);
 void* QDesignerObjectInspectorInterface_Metacast(QDesignerObjectInspectorInterface* self, const char* param1);
 int QDesignerObjectInspectorInterface_Metacall(QDesignerObjectInspectorInterface* self, int param1, int param2, void** param3);

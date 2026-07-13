@@ -9,11 +9,11 @@
 #include "libkviewstateserializer.h"
 
 KViewStateSerializer* k_viewstateserializer_new() {
-    return KViewStateSerializer_new();
+    return KViewStateSerializer_New();
 }
 
 KViewStateSerializer* k_viewstateserializer_new2(void* parent) {
-    return KViewStateSerializer_new2((QObject*)parent);
+    return KViewStateSerializer_New2((QObject*)parent);
 }
 
 const QMetaObject* k_viewstateserializer_meta_object(void* self) {

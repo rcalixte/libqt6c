@@ -4,11 +4,11 @@
 #include "libprovider_2.h"
 
 Accounts__Provider* q_accounts__provider_new() {
-    return Accounts__Provider_new();
+    return Accounts__Provider_New();
 }
 
 Accounts__Provider* q_accounts__provider_new2(void* other) {
-    return Accounts__Provider_new2((Accounts__Provider*)other);
+    return Accounts__Provider_New2((Accounts__Provider*)other);
 }
 
 void q_accounts__provider_operator_assign(void* self, void* other) {

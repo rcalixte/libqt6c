@@ -13,15 +13,15 @@
 #include "libkselectionproxymodel.h"
 
 KSelectionProxyModel* k_selectionproxymodel_new(void* selectionModel) {
-    return KSelectionProxyModel_new((QItemSelectionModel*)selectionModel);
+    return KSelectionProxyModel_New((QItemSelectionModel*)selectionModel);
 }
 
 KSelectionProxyModel* k_selectionproxymodel_new2() {
-    return KSelectionProxyModel_new2();
+    return KSelectionProxyModel_New2();
 }
 
 KSelectionProxyModel* k_selectionproxymodel_new3(void* selectionModel, void* parent) {
-    return KSelectionProxyModel_new3((QItemSelectionModel*)selectionModel, (QObject*)parent);
+    return KSelectionProxyModel_New3((QItemSelectionModel*)selectionModel, (QObject*)parent);
 }
 
 const QMetaObject* k_selectionproxymodel_meta_object(void* self) {

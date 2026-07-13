@@ -14,15 +14,15 @@
 #include "libqoffscreensurface.hpp"
 #include "libqoffscreensurface.hxx"
 
-QOffscreenSurface* QOffscreenSurface_new() {
+QOffscreenSurface* QOffscreenSurface_New() {
     return new VirtualQOffscreenSurface();
 }
 
-QOffscreenSurface* QOffscreenSurface_new2(QScreen* screen) {
+QOffscreenSurface* QOffscreenSurface_New2(QScreen* screen) {
     return new VirtualQOffscreenSurface(screen);
 }
 
-QOffscreenSurface* QOffscreenSurface_new3(QScreen* screen, QObject* parent) {
+QOffscreenSurface* QOffscreenSurface_New3(QScreen* screen, QObject* parent) {
     return new VirtualQOffscreenSurface(screen, parent);
 }
 

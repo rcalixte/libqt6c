@@ -13,11 +13,11 @@
 #include "libqsslconfiguration.hpp"
 #include "libqsslconfiguration.hxx"
 
-QSslConfiguration* QSslConfiguration_new() {
+QSslConfiguration* QSslConfiguration_New() {
     return new QSslConfiguration();
 }
 
-QSslConfiguration* QSslConfiguration_new2(const QSslConfiguration* other) {
+QSslConfiguration* QSslConfiguration_New2(const QSslConfiguration* other) {
     return new QSslConfiguration(*other);
 }
 

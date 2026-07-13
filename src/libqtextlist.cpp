@@ -16,7 +16,7 @@
 #include "libqtextlist.hpp"
 #include "libqtextlist.hxx"
 
-QTextList* QTextList_new(QTextDocument* doc) {
+QTextList* QTextList_New(QTextDocument* doc) {
     return new VirtualQTextList(doc);
 }
 

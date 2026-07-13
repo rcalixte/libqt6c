@@ -36,8 +36,8 @@ typedef struct QVector3D QVector3D;
 typedef struct QVector4D QVector4D;
 #endif
 
-QOpenGLShader* QOpenGLShader_new(int type);
-QOpenGLShader* QOpenGLShader_new2(int type, QObject* parent);
+QOpenGLShader* QOpenGLShader_New(int type);
+QOpenGLShader* QOpenGLShader_New2(int type, QObject* parent);
 QMetaObject* QOpenGLShader_MetaObject(const QOpenGLShader* self);
 void* QOpenGLShader_Metacast(QOpenGLShader* self, const char* param1);
 int QOpenGLShader_Metacall(QOpenGLShader* self, int param1, int param2, void** param3);
@@ -93,8 +93,8 @@ void QOpenGLShader_OnIsSignalConnected(const QOpenGLShader* self, intptr_t slot)
 bool QOpenGLShader_SuperIsSignalConnected(const QOpenGLShader* self, const QMetaMethod* signal);
 void QOpenGLShader_Delete(QOpenGLShader* self);
 
-QOpenGLShaderProgram* QOpenGLShaderProgram_new();
-QOpenGLShaderProgram* QOpenGLShaderProgram_new2(QObject* parent);
+QOpenGLShaderProgram* QOpenGLShaderProgram_New();
+QOpenGLShaderProgram* QOpenGLShaderProgram_New2(QObject* parent);
 QMetaObject* QOpenGLShaderProgram_MetaObject(const QOpenGLShaderProgram* self);
 void* QOpenGLShaderProgram_Metacast(QOpenGLShaderProgram* self, const char* param1);
 int QOpenGLShaderProgram_Metacall(QOpenGLShaderProgram* self, int param1, int param2, void** param3);

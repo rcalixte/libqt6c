@@ -31,12 +31,12 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new(const KServiceAction* serviceAction);
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new2(const KDesktopFileAction* desktopFileAction);
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new3();
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new4(const KServiceAction* serviceAction, QObject* parent);
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new5(const KDesktopFileAction* desktopFileAction, QObject* parent);
-KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_new6(QObject* parent);
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New(const KServiceAction* serviceAction);
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New2(const KDesktopFileAction* desktopFileAction);
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New3();
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New4(const KServiceAction* serviceAction, QObject* parent);
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New5(const KDesktopFileAction* desktopFileAction, QObject* parent);
+KIO__ApplicationLauncherJob* KIO__ApplicationLauncherJob_New6(QObject* parent);
 void KIO__ApplicationLauncherJob_SetUrls(KIO__ApplicationLauncherJob* self, const libqt_list /* of QUrl* */ urls);
 void KIO__ApplicationLauncherJob_SetRunFlags(KIO__ApplicationLauncherJob* self, int runFlags);
 void KIO__ApplicationLauncherJob_SetSuggestedFileName(KIO__ApplicationLauncherJob* self, const libqt_string suggestedFileName);

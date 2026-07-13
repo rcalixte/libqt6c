@@ -22,11 +22,11 @@
 #include "libqcombobox.h"
 
 QComboBox* q_combobox_new(void* parent) {
-    return QComboBox_new((QWidget*)parent);
+    return QComboBox_New((QWidget*)parent);
 }
 
 QComboBox* q_combobox_new2() {
-    return QComboBox_new2();
+    return QComboBox_New2();
 }
 
 const QMetaObject* q_combobox_meta_object(void* self) {

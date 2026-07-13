@@ -19,8 +19,8 @@ typedef struct QPlaceContentRequest QPlaceContentRequest;
 typedef struct QVariant QVariant;
 #endif
 
-QPlaceContentRequest* QPlaceContentRequest_new();
-QPlaceContentRequest* QPlaceContentRequest_new2(const QPlaceContentRequest* other);
+QPlaceContentRequest* QPlaceContentRequest_New();
+QPlaceContentRequest* QPlaceContentRequest_New2(const QPlaceContentRequest* other);
 void QPlaceContentRequest_OperatorAssign(QPlaceContentRequest* self, const QPlaceContentRequest* other);
 void QPlaceContentRequest_Swap(QPlaceContentRequest* self, QPlaceContentRequest* other);
 int QPlaceContentRequest_ContentType(const QPlaceContentRequest* self);

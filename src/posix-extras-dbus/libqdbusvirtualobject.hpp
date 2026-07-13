@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QDBusVirtualObject* QDBusVirtualObject_new();
-QDBusVirtualObject* QDBusVirtualObject_new2(QObject* parent);
+QDBusVirtualObject* QDBusVirtualObject_New();
+QDBusVirtualObject* QDBusVirtualObject_New2(QObject* parent);
 QMetaObject* QDBusVirtualObject_MetaObject(const QDBusVirtualObject* self);
 void* QDBusVirtualObject_Metacast(QDBusVirtualObject* self, const char* param1);
 int QDBusVirtualObject_Metacall(QDBusVirtualObject* self, int param1, int param2, void** param3);

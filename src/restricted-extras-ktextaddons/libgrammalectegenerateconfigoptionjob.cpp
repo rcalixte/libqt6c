@@ -12,11 +12,11 @@
 #include "libgrammalectegenerateconfigoptionjob.hpp"
 #include "libgrammalectegenerateconfigoptionjob.hxx"
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob* TextGrammarCheck__GrammalecteGenerateConfigOptionJob_new() {
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob* TextGrammarCheck__GrammalecteGenerateConfigOptionJob_New() {
     return new VirtualTextGrammarCheckGrammalecteGenerateConfigOptionJob();
 }
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob* TextGrammarCheck__GrammalecteGenerateConfigOptionJob_new2(QObject* parent) {
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob* TextGrammarCheck__GrammalecteGenerateConfigOptionJob_New2(QObject* parent) {
     return new VirtualTextGrammarCheckGrammalecteGenerateConfigOptionJob(parent);
 }
 
@@ -493,11 +493,11 @@ void TextGrammarCheck__GrammalecteGenerateConfigOptionJob_Delete(TextGrammarChec
     delete self;
 }
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_new(const TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* param1) {
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New(const TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* param1) {
     return new TextGrammarCheck::GrammalecteGenerateConfigOptionJob::Option(*param1);
 }
 
-TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_new2() {
+TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option* TextGrammarCheck__GrammalecteGenerateConfigOptionJob__Option_New2() {
     return new TextGrammarCheck::GrammalecteGenerateConfigOptionJob::Option();
 }
 

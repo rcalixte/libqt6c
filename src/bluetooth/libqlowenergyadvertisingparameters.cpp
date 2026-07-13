@@ -6,11 +6,11 @@
 #include "libqlowenergyadvertisingparameters.hpp"
 #include "libqlowenergyadvertisingparameters.hxx"
 
-QLowEnergyAdvertisingParameters* QLowEnergyAdvertisingParameters_new() {
+QLowEnergyAdvertisingParameters* QLowEnergyAdvertisingParameters_New() {
     return new QLowEnergyAdvertisingParameters();
 }
 
-QLowEnergyAdvertisingParameters* QLowEnergyAdvertisingParameters_new2(const QLowEnergyAdvertisingParameters* other) {
+QLowEnergyAdvertisingParameters* QLowEnergyAdvertisingParameters_New2(const QLowEnergyAdvertisingParameters* other) {
     return new QLowEnergyAdvertisingParameters(*other);
 }
 
@@ -73,15 +73,15 @@ void QLowEnergyAdvertisingParameters_Delete(QLowEnergyAdvertisingParameters* sel
     delete self;
 }
 
-QLowEnergyAdvertisingParameters__AddressInfo* QLowEnergyAdvertisingParameters__AddressInfo_new(const QBluetoothAddress* addr, int t) {
+QLowEnergyAdvertisingParameters__AddressInfo* QLowEnergyAdvertisingParameters__AddressInfo_New(const QBluetoothAddress* addr, int t) {
     return new QLowEnergyAdvertisingParameters::AddressInfo(*addr, static_cast<QLowEnergyController::RemoteAddressType>(t));
 }
 
-QLowEnergyAdvertisingParameters__AddressInfo* QLowEnergyAdvertisingParameters__AddressInfo_new2() {
+QLowEnergyAdvertisingParameters__AddressInfo* QLowEnergyAdvertisingParameters__AddressInfo_New2() {
     return new QLowEnergyAdvertisingParameters::AddressInfo();
 }
 
-QLowEnergyAdvertisingParameters__AddressInfo* QLowEnergyAdvertisingParameters__AddressInfo_new3(const QLowEnergyAdvertisingParameters__AddressInfo* param1) {
+QLowEnergyAdvertisingParameters__AddressInfo* QLowEnergyAdvertisingParameters__AddressInfo_New3(const QLowEnergyAdvertisingParameters__AddressInfo* param1) {
     return new QLowEnergyAdvertisingParameters::AddressInfo(*param1);
 }
 

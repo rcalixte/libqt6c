@@ -25,7 +25,7 @@ typedef struct KFileMetaData__Writer KFileMetaData__Writer;
 typedef struct KFileMetaData__WriterCollection KFileMetaData__WriterCollection;
 #endif
 
-KFileMetaData__WriterCollection* KFileMetaData__WriterCollection_new();
+KFileMetaData__WriterCollection* KFileMetaData__WriterCollection_New();
 libqt_list /* of KFileMetaData__Writer* */ KFileMetaData__WriterCollection_FetchWriters(const KFileMetaData__WriterCollection* self, const libqt_string mimetype);
 void KFileMetaData__WriterCollection_Delete(KFileMetaData__WriterCollection* self);
 

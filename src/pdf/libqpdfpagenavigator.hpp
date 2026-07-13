@@ -26,8 +26,8 @@ typedef struct QPointF QPointF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPdfPageNavigator* QPdfPageNavigator_new();
-QPdfPageNavigator* QPdfPageNavigator_new2(QObject* parent);
+QPdfPageNavigator* QPdfPageNavigator_New();
+QPdfPageNavigator* QPdfPageNavigator_New2(QObject* parent);
 QMetaObject* QPdfPageNavigator_MetaObject(const QPdfPageNavigator* self);
 void* QPdfPageNavigator_Metacast(QPdfPageNavigator* self, const char* param1);
 int QPdfPageNavigator_Metacall(QPdfPageNavigator* self, int param1, int param2, void** param3);

@@ -4,11 +4,11 @@
 #include "libkurifilter.h"
 
 KUriFilterSearchProvider* k_urifiltersearchprovider_new() {
-    return KUriFilterSearchProvider_new();
+    return KUriFilterSearchProvider_New();
 }
 
 KUriFilterSearchProvider* k_urifiltersearchprovider_new2(void* param1) {
-    return KUriFilterSearchProvider_new2((KUriFilterSearchProvider*)param1);
+    return KUriFilterSearchProvider_New2((KUriFilterSearchProvider*)param1);
 }
 
 const char* k_urifiltersearchprovider_desktop_entry_name(void* self) {
@@ -147,19 +147,19 @@ void k_urifiltersearchprovider_delete(void* self) {
 }
 
 KUriFilterData* k_urifilterdata_new() {
-    return KUriFilterData_new();
+    return KUriFilterData_New();
 }
 
 KUriFilterData* k_urifilterdata_new2(void* url) {
-    return KUriFilterData_new2((QUrl*)url);
+    return KUriFilterData_New2((QUrl*)url);
 }
 
 KUriFilterData* k_urifilterdata_new3(const char* url) {
-    return KUriFilterData_new3(qstring(url));
+    return KUriFilterData_New3(qstring(url));
 }
 
 KUriFilterData* k_urifilterdata_new4(void* other) {
-    return KUriFilterData_new4((KUriFilterData*)other);
+    return KUriFilterData_New4((KUriFilterData*)other);
 }
 
 QUrl* k_urifilterdata_uri(void* self) {

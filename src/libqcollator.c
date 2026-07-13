@@ -4,7 +4,7 @@
 #include "libqcollator.h"
 
 QCollatorSortKey* q_collatorsortkey_new(void* other) {
-    return QCollatorSortKey_new((QCollatorSortKey*)other);
+    return QCollatorSortKey_New((QCollatorSortKey*)other);
 }
 
 void q_collatorsortkey_operator_assign(void* self, void* other) {
@@ -24,15 +24,15 @@ void q_collatorsortkey_delete(void* self) {
 }
 
 QCollator* q_collator_new() {
-    return QCollator_new();
+    return QCollator_New();
 }
 
 QCollator* q_collator_new2(void* locale) {
-    return QCollator_new2((QLocale*)locale);
+    return QCollator_New2((QLocale*)locale);
 }
 
 QCollator* q_collator_new3(void* param1) {
-    return QCollator_new3((QCollator*)param1);
+    return QCollator_New3((QCollator*)param1);
 }
 
 void q_collator_operator_assign(void* self, void* param1) {

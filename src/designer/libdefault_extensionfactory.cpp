@@ -12,11 +12,11 @@
 #include "libdefault_extensionfactory.hpp"
 #include "libdefault_extensionfactory.hxx"
 
-QExtensionFactory* QExtensionFactory_new() {
+QExtensionFactory* QExtensionFactory_New() {
     return new VirtualQExtensionFactory();
 }
 
-QExtensionFactory* QExtensionFactory_new2(QExtensionManager* parent) {
+QExtensionFactory* QExtensionFactory_New2(QExtensionManager* parent) {
     return new VirtualQExtensionFactory(parent);
 }
 

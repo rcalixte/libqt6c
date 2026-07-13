@@ -22,18 +22,18 @@ typedef struct QRect QRect;
 typedef struct QSize QSize;
 #endif
 
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new(const QSize* size);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new2(int width, int height);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new3(const QSize* size, int attachment);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new4(int width, int height, int attachment);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new5(const QSize* size, const QOpenGLFramebufferObjectFormat* format);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new6(int width, int height, const QOpenGLFramebufferObjectFormat* format);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new7(const QSize* size, uint32_t target);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new8(int width, int height, uint32_t target);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new9(const QSize* size, int attachment, uint32_t target);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new10(const QSize* size, int attachment, uint32_t target, uint32_t internalFormat);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new11(int width, int height, int attachment, uint32_t target);
-QOpenGLFramebufferObject* QOpenGLFramebufferObject_new12(int width, int height, int attachment, uint32_t target, uint32_t internalFormat);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New(const QSize* size);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New2(int width, int height);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New3(const QSize* size, int attachment);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New4(int width, int height, int attachment);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New5(const QSize* size, const QOpenGLFramebufferObjectFormat* format);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New6(int width, int height, const QOpenGLFramebufferObjectFormat* format);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New7(const QSize* size, uint32_t target);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New8(int width, int height, uint32_t target);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New9(const QSize* size, int attachment, uint32_t target);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New10(const QSize* size, int attachment, uint32_t target, uint32_t internalFormat);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New11(int width, int height, int attachment, uint32_t target);
+QOpenGLFramebufferObject* QOpenGLFramebufferObject_New12(int width, int height, int attachment, uint32_t target, uint32_t internalFormat);
 void QOpenGLFramebufferObject_AddColorAttachment(QOpenGLFramebufferObject* self, const QSize* size);
 void QOpenGLFramebufferObject_AddColorAttachment2(QOpenGLFramebufferObject* self, int width, int height);
 QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObject_Format(const QOpenGLFramebufferObject* self);
@@ -70,8 +70,8 @@ void QOpenGLFramebufferObject_BlitFramebuffer32(QOpenGLFramebufferObject* target
 void QOpenGLFramebufferObject_BlitFramebuffer42(QOpenGLFramebufferObject* target, QOpenGLFramebufferObject* source, uint32_t buffers, uint32_t filter);
 void QOpenGLFramebufferObject_Delete(QOpenGLFramebufferObject* self);
 
-QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_new();
-QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_new2(const QOpenGLFramebufferObjectFormat* other);
+QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_New();
+QOpenGLFramebufferObjectFormat* QOpenGLFramebufferObjectFormat_New2(const QOpenGLFramebufferObjectFormat* other);
 void QOpenGLFramebufferObjectFormat_OperatorAssign(QOpenGLFramebufferObjectFormat* self, const QOpenGLFramebufferObjectFormat* other);
 void QOpenGLFramebufferObjectFormat_SetSamples(QOpenGLFramebufferObjectFormat* self, int samples);
 int QOpenGLFramebufferObjectFormat_Samples(const QOpenGLFramebufferObjectFormat* self);

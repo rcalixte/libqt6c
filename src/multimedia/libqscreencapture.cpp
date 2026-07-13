@@ -12,11 +12,11 @@
 #include "libqscreencapture.hpp"
 #include "libqscreencapture.hxx"
 
-QScreenCapture* QScreenCapture_new() {
+QScreenCapture* QScreenCapture_New() {
     return new VirtualQScreenCapture();
 }
 
-QScreenCapture* QScreenCapture_new2(QObject* parent) {
+QScreenCapture* QScreenCapture_New2(QObject* parent) {
     return new VirtualQScreenCapture(parent);
 }
 

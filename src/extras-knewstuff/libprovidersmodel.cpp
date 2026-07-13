@@ -22,11 +22,11 @@
 #include "libprovidersmodel.hpp"
 #include "libprovidersmodel.hxx"
 
-KNSCore__ProvidersModel* KNSCore__ProvidersModel_new() {
+KNSCore__ProvidersModel* KNSCore__ProvidersModel_New() {
     return new VirtualKNSCoreProvidersModel();
 }
 
-KNSCore__ProvidersModel* KNSCore__ProvidersModel_new2(QObject* parent) {
+KNSCore__ProvidersModel* KNSCore__ProvidersModel_New2(QObject* parent) {
     return new VirtualKNSCoreProvidersModel(parent);
 }
 

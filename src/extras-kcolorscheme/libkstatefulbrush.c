@@ -4,31 +4,31 @@
 #include "libkstatefulbrush.h"
 
 KStatefulBrush* k_statefulbrush_new() {
-    return KStatefulBrush_new();
+    return KStatefulBrush_New();
 }
 
 KStatefulBrush* k_statefulbrush_new2(int32_t param1, int32_t param2) {
-    return KStatefulBrush_new2(param1, param2);
+    return KStatefulBrush_New2(param1, param2);
 }
 
 KStatefulBrush* k_statefulbrush_new3(int32_t param1, int32_t param2) {
-    return KStatefulBrush_new3(param1, param2);
+    return KStatefulBrush_New3(param1, param2);
 }
 
 KStatefulBrush* k_statefulbrush_new4(int32_t param1, int32_t param2) {
-    return KStatefulBrush_new4(param1, param2);
+    return KStatefulBrush_New4(param1, param2);
 }
 
 KStatefulBrush* k_statefulbrush_new5(void* param1) {
-    return KStatefulBrush_new5((QBrush*)param1);
+    return KStatefulBrush_New5((QBrush*)param1);
 }
 
 KStatefulBrush* k_statefulbrush_new6(void* param1, void* background) {
-    return KStatefulBrush_new6((QBrush*)param1, (QBrush*)background);
+    return KStatefulBrush_New6((QBrush*)param1, (QBrush*)background);
 }
 
 KStatefulBrush* k_statefulbrush_new7(void* param1) {
-    return KStatefulBrush_new7((KStatefulBrush*)param1);
+    return KStatefulBrush_New7((KStatefulBrush*)param1);
 }
 
 void k_statefulbrush_operator_assign(void* self, void* param1) {

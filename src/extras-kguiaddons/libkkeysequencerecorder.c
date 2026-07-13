@@ -8,11 +8,11 @@
 #include "libkkeysequencerecorder.h"
 
 KKeySequenceRecorder* k_keysequencerecorder_new(void* window) {
-    return KKeySequenceRecorder_new((QWindow*)window);
+    return KKeySequenceRecorder_New((QWindow*)window);
 }
 
 KKeySequenceRecorder* k_keysequencerecorder_new2(void* window, void* parent) {
-    return KKeySequenceRecorder_new2((QWindow*)window, (QObject*)parent);
+    return KKeySequenceRecorder_New2((QWindow*)window, (QObject*)parent);
 }
 
 const QMetaObject* k_keysequencerecorder_meta_object(void* self) {

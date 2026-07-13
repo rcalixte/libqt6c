@@ -8,11 +8,11 @@
 #include "libqgraphicstransform.h"
 
 QGraphicsTransform* q_graphicstransform_new() {
-    return QGraphicsTransform_new();
+    return QGraphicsTransform_New();
 }
 
 QGraphicsTransform* q_graphicstransform_new2(void* parent) {
-    return QGraphicsTransform_new2((QObject*)parent);
+    return QGraphicsTransform_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicstransform_meta_object(void* self) {
@@ -448,11 +448,11 @@ void q_graphicstransform_delete(void* self) {
 }
 
 QGraphicsScale* q_graphicsscale_new() {
-    return QGraphicsScale_new();
+    return QGraphicsScale_New();
 }
 
 QGraphicsScale* q_graphicsscale_new2(void* parent) {
-    return QGraphicsScale_new2((QObject*)parent);
+    return QGraphicsScale_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicsscale_meta_object(void* self) {
@@ -960,11 +960,11 @@ void q_graphicsscale_delete(void* self) {
 }
 
 QGraphicsRotation* q_graphicsrotation_new() {
-    return QGraphicsRotation_new();
+    return QGraphicsRotation_New();
 }
 
 QGraphicsRotation* q_graphicsrotation_new2(void* parent) {
-    return QGraphicsRotation_new2((QObject*)parent);
+    return QGraphicsRotation_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicsrotation_meta_object(void* self) {

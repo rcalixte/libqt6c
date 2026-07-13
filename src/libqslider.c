@@ -16,19 +16,19 @@
 #include "libqslider.h"
 
 QSlider* q_slider_new(void* parent) {
-    return QSlider_new((QWidget*)parent);
+    return QSlider_New((QWidget*)parent);
 }
 
 QSlider* q_slider_new2() {
-    return QSlider_new2();
+    return QSlider_New2();
 }
 
 QSlider* q_slider_new3(int32_t orientation) {
-    return QSlider_new3(orientation);
+    return QSlider_New3(orientation);
 }
 
 QSlider* q_slider_new4(int32_t orientation, void* parent) {
-    return QSlider_new4(orientation, (QWidget*)parent);
+    return QSlider_New4(orientation, (QWidget*)parent);
 }
 
 const QMetaObject* q_slider_meta_object(void* self) {

@@ -37,15 +37,15 @@
 #include "libgrammalecteconfigwidget.hpp"
 #include "libgrammalecteconfigwidget.hxx"
 
-TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_new(QWidget* parent) {
+TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_New(QWidget* parent) {
     return new VirtualTextGrammarCheckGrammalecteConfigWidget(parent);
 }
 
-TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_new2() {
+TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_New2() {
     return new VirtualTextGrammarCheckGrammalecteConfigWidget();
 }
 
-TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_new3(QWidget* parent, bool disableMessageBox) {
+TextGrammarCheck__GrammalecteConfigWidget* TextGrammarCheck__GrammalecteConfigWidget_New3(QWidget* parent, bool disableMessageBox) {
     return new VirtualTextGrammarCheckGrammalecteConfigWidget(parent, disableMessageBox);
 }
 

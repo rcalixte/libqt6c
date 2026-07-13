@@ -17,11 +17,11 @@
 #include "libqfilesystemmodel.h"
 
 QFileSystemModel* q_filesystemmodel_new() {
-    return QFileSystemModel_new();
+    return QFileSystemModel_New();
 }
 
 QFileSystemModel* q_filesystemmodel_new2(void* parent) {
-    return QFileSystemModel_new2((QObject*)parent);
+    return QFileSystemModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_filesystemmodel_meta_object(void* self) {

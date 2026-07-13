@@ -17,11 +17,11 @@
 #include "libkkeysequencewidget.h"
 
 KKeySequenceWidget* k_keysequencewidget_new(void* parent) {
-    return KKeySequenceWidget_new((QWidget*)parent);
+    return KKeySequenceWidget_New((QWidget*)parent);
 }
 
 KKeySequenceWidget* k_keysequencewidget_new2() {
-    return KKeySequenceWidget_new2();
+    return KKeySequenceWidget_New2();
 }
 
 const QMetaObject* k_keysequencewidget_meta_object(void* self) {

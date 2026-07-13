@@ -11,19 +11,19 @@
 #include "libqsocketnotifier.hpp"
 #include "libqsocketnotifier.hxx"
 
-QSocketNotifier* QSocketNotifier_new(int param1) {
+QSocketNotifier* QSocketNotifier_New(int param1) {
     return new VirtualQSocketNotifier(static_cast<QSocketNotifier::Type>(param1));
 }
 
-QSocketNotifier* QSocketNotifier_new2(intptr_t socket, int param2) {
+QSocketNotifier* QSocketNotifier_New2(intptr_t socket, int param2) {
     return new VirtualQSocketNotifier((qintptr)(socket), static_cast<QSocketNotifier::Type>(param2));
 }
 
-QSocketNotifier* QSocketNotifier_new3(int param1, QObject* parent) {
+QSocketNotifier* QSocketNotifier_New3(int param1, QObject* parent) {
     return new VirtualQSocketNotifier(static_cast<QSocketNotifier::Type>(param1), parent);
 }
 
-QSocketNotifier* QSocketNotifier_new4(intptr_t socket, int param2, QObject* parent) {
+QSocketNotifier* QSocketNotifier_New4(intptr_t socket, int param2, QObject* parent) {
     return new VirtualQSocketNotifier((qintptr)(socket), static_cast<QSocketNotifier::Type>(param2), parent);
 }
 
@@ -451,23 +451,23 @@ void QSocketNotifier_Delete(QSocketNotifier* self) {
     delete self;
 }
 
-QSocketDescriptor* QSocketDescriptor_new(const QSocketDescriptor* other) {
+QSocketDescriptor* QSocketDescriptor_New(const QSocketDescriptor* other) {
     return new QSocketDescriptor(*other);
 }
 
-QSocketDescriptor* QSocketDescriptor_new2(QSocketDescriptor* other) {
+QSocketDescriptor* QSocketDescriptor_New2(QSocketDescriptor* other) {
     return new QSocketDescriptor(std::move(*other));
 }
 
-QSocketDescriptor* QSocketDescriptor_new3() {
+QSocketDescriptor* QSocketDescriptor_New3() {
     return new QSocketDescriptor();
 }
 
-QSocketDescriptor* QSocketDescriptor_new4(const QSocketDescriptor* param1) {
+QSocketDescriptor* QSocketDescriptor_New4(const QSocketDescriptor* param1) {
     return new QSocketDescriptor(*param1);
 }
 
-QSocketDescriptor* QSocketDescriptor_new5(int descriptor) {
+QSocketDescriptor* QSocketDescriptor_New5(int descriptor) {
 #if defined(Q_OS_LINUX) || defined(Q_OS_BSD4)
     return new QSocketDescriptor(static_cast<QSocketDescriptor::DescriptorType>(descriptor));
 #else

@@ -15,11 +15,11 @@
 #include "libkfileitemactions.hpp"
 #include "libkfileitemactions.hxx"
 
-KFileItemActions* KFileItemActions_new() {
+KFileItemActions* KFileItemActions_New() {
     return new VirtualKFileItemActions();
 }
 
-KFileItemActions* KFileItemActions_new2(QObject* parent) {
+KFileItemActions* KFileItemActions_New2(QObject* parent) {
     return new VirtualKFileItemActions(parent);
 }
 

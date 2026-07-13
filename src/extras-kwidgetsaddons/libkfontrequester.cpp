@@ -40,15 +40,15 @@
 #include "libkfontrequester.hpp"
 #include "libkfontrequester.hxx"
 
-KFontRequester* KFontRequester_new(QWidget* parent) {
+KFontRequester* KFontRequester_New(QWidget* parent) {
     return new VirtualKFontRequester(parent);
 }
 
-KFontRequester* KFontRequester_new2() {
+KFontRequester* KFontRequester_New2() {
     return new VirtualKFontRequester();
 }
 
-KFontRequester* KFontRequester_new3(QWidget* parent, bool onlyFixed) {
+KFontRequester* KFontRequester_New3(QWidget* parent, bool onlyFixed) {
     return new VirtualKFontRequester(parent, onlyFixed);
 }
 

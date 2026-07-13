@@ -14,11 +14,11 @@
 #include "libconfigview.h"
 
 Sonnet__ConfigView* k_sonnet__configview_new(void* parent) {
-    return Sonnet__ConfigView_new((QWidget*)parent);
+    return Sonnet__ConfigView_New((QWidget*)parent);
 }
 
 Sonnet__ConfigView* k_sonnet__configview_new2() {
-    return Sonnet__ConfigView_new2();
+    return Sonnet__ConfigView_New2();
 }
 
 const QMetaObject* k_sonnet__configview_meta_object(void* self) {

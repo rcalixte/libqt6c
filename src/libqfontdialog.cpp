@@ -39,19 +39,19 @@
 #include "libqfontdialog.hpp"
 #include "libqfontdialog.hxx"
 
-QFontDialog* QFontDialog_new(QWidget* parent) {
+QFontDialog* QFontDialog_New(QWidget* parent) {
     return new VirtualQFontDialog(parent);
 }
 
-QFontDialog* QFontDialog_new2() {
+QFontDialog* QFontDialog_New2() {
     return new VirtualQFontDialog();
 }
 
-QFontDialog* QFontDialog_new3(const QFont* initial) {
+QFontDialog* QFontDialog_New3(const QFont* initial) {
     return new VirtualQFontDialog(*initial);
 }
 
-QFontDialog* QFontDialog_new4(const QFont* initial, QWidget* parent) {
+QFontDialog* QFontDialog_New4(const QFont* initial, QWidget* parent) {
     return new VirtualQFontDialog(*initial, parent);
 }
 

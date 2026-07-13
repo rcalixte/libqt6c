@@ -19,13 +19,13 @@ typedef struct KPlotPoint KPlotPoint;
 typedef struct QPointF QPointF;
 #endif
 
-KPlotPoint* KPlotPoint_new();
-KPlotPoint* KPlotPoint_new2(double x, double y);
-KPlotPoint* KPlotPoint_new3(const QPointF* p);
-KPlotPoint* KPlotPoint_new4(double x, double y, const libqt_string label);
-KPlotPoint* KPlotPoint_new5(double x, double y, const libqt_string label, double width);
-KPlotPoint* KPlotPoint_new6(const QPointF* p, const libqt_string label);
-KPlotPoint* KPlotPoint_new7(const QPointF* p, const libqt_string label, double width);
+KPlotPoint* KPlotPoint_New();
+KPlotPoint* KPlotPoint_New2(double x, double y);
+KPlotPoint* KPlotPoint_New3(const QPointF* p);
+KPlotPoint* KPlotPoint_New4(double x, double y, const libqt_string label);
+KPlotPoint* KPlotPoint_New5(double x, double y, const libqt_string label, double width);
+KPlotPoint* KPlotPoint_New6(const QPointF* p, const libqt_string label);
+KPlotPoint* KPlotPoint_New7(const QPointF* p, const libqt_string label, double width);
 QPointF* KPlotPoint_Position(const KPlotPoint* self);
 void KPlotPoint_SetPosition(KPlotPoint* self, const QPointF* pos);
 double KPlotPoint_X(const KPlotPoint* self);

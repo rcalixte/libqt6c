@@ -41,11 +41,11 @@
 #include "libqtabbar.hpp"
 #include "libqtabbar.hxx"
 
-QTabBar* QTabBar_new(QWidget* parent) {
+QTabBar* QTabBar_New(QWidget* parent) {
     return new VirtualQTabBar(parent);
 }
 
-QTabBar* QTabBar_new2() {
+QTabBar* QTabBar_New2() {
     return new VirtualQTabBar();
 }
 

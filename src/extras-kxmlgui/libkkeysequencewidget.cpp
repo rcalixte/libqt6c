@@ -41,11 +41,11 @@
 #include "libkkeysequencewidget.hpp"
 #include "libkkeysequencewidget.hxx"
 
-KKeySequenceWidget* KKeySequenceWidget_new(QWidget* parent) {
+KKeySequenceWidget* KKeySequenceWidget_New(QWidget* parent) {
     return new VirtualKKeySequenceWidget(parent);
 }
 
-KKeySequenceWidget* KKeySequenceWidget_new2() {
+KKeySequenceWidget* KKeySequenceWidget_New2() {
     return new VirtualKKeySequenceWidget();
 }
 

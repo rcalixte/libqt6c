@@ -4,7 +4,7 @@
 #include "libkcompletionbase.h"
 
 KCompletionBase* k_completionbase_new() {
-    return KCompletionBase_new();
+    return KCompletionBase_New();
 }
 
 KCompletion* k_completionbase_completion_object(void* self) {

@@ -6,19 +6,19 @@
 #include "libqsocketnotifier.h"
 
 QSocketNotifier* q_socketnotifier_new(int32_t param1) {
-    return QSocketNotifier_new(param1);
+    return QSocketNotifier_New(param1);
 }
 
 QSocketNotifier* q_socketnotifier_new2(intptr_t socket, int32_t param2) {
-    return QSocketNotifier_new2(socket, param2);
+    return QSocketNotifier_New2(socket, param2);
 }
 
 QSocketNotifier* q_socketnotifier_new3(int32_t param1, void* parent) {
-    return QSocketNotifier_new3(param1, (QObject*)parent);
+    return QSocketNotifier_New3(param1, (QObject*)parent);
 }
 
 QSocketNotifier* q_socketnotifier_new4(intptr_t socket, int32_t param2, void* parent) {
-    return QSocketNotifier_new4(socket, param2, (QObject*)parent);
+    return QSocketNotifier_New4(socket, param2, (QObject*)parent);
 }
 
 const QMetaObject* q_socketnotifier_meta_object(void* self) {
@@ -458,19 +458,19 @@ void q_socketnotifier_delete(void* self) {
 }
 
 QSocketDescriptor* q_socketdescriptor_new(void* other) {
-    return QSocketDescriptor_new((QSocketDescriptor*)other);
+    return QSocketDescriptor_New((QSocketDescriptor*)other);
 }
 
 QSocketDescriptor* q_socketdescriptor_new2(void* other) {
-    return QSocketDescriptor_new2((QSocketDescriptor*)other);
+    return QSocketDescriptor_New2((QSocketDescriptor*)other);
 }
 
 QSocketDescriptor* q_socketdescriptor_new3() {
-    return QSocketDescriptor_new3();
+    return QSocketDescriptor_New3();
 }
 
 QSocketDescriptor* q_socketdescriptor_new4(void* param1) {
-    return QSocketDescriptor_new4((QSocketDescriptor*)param1);
+    return QSocketDescriptor_New4((QSocketDescriptor*)param1);
 }
 
 QSocketDescriptor* q_socketdescriptor_new5(int descriptor) {
@@ -479,7 +479,7 @@ QSocketDescriptor* q_socketdescriptor_new5(int descriptor) {
     abort();
 #endif
 
-    return QSocketDescriptor_new5(descriptor);
+    return QSocketDescriptor_New5(descriptor);
 }
 
 void q_socketdescriptor_copy_assign(void* self, void* other) {

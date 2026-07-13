@@ -112,7 +112,7 @@ void KMountPoint_Delete(KMountPoint* self) {
     delete self;
 }
 
-KMountPoint__List* KMountPoint__List_new() {
+KMountPoint__List* KMountPoint__List_New() {
     return new KMountPoint::List();
 }
 

@@ -12,11 +12,11 @@
 #include "libqpdfpagenavigator.hpp"
 #include "libqpdfpagenavigator.hxx"
 
-QPdfPageNavigator* QPdfPageNavigator_new() {
+QPdfPageNavigator* QPdfPageNavigator_New() {
     return new VirtualQPdfPageNavigator();
 }
 
-QPdfPageNavigator* QPdfPageNavigator_new2(QObject* parent) {
+QPdfPageNavigator* QPdfPageNavigator_New2(QObject* parent) {
     return new VirtualQPdfPageNavigator(parent);
 }
 

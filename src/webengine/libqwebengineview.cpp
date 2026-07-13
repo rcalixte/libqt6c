@@ -51,27 +51,27 @@
 #include "libqwebengineview.hpp"
 #include "libqwebengineview.hxx"
 
-QWebEngineView* QWebEngineView_new(QWidget* parent) {
+QWebEngineView* QWebEngineView_New(QWidget* parent) {
     return new VirtualQWebEngineView(parent);
 }
 
-QWebEngineView* QWebEngineView_new2() {
+QWebEngineView* QWebEngineView_New2() {
     return new VirtualQWebEngineView();
 }
 
-QWebEngineView* QWebEngineView_new3(QWebEngineProfile* profile) {
+QWebEngineView* QWebEngineView_New3(QWebEngineProfile* profile) {
     return new VirtualQWebEngineView(profile);
 }
 
-QWebEngineView* QWebEngineView_new4(QWebEnginePage* page) {
+QWebEngineView* QWebEngineView_New4(QWebEnginePage* page) {
     return new VirtualQWebEngineView(page);
 }
 
-QWebEngineView* QWebEngineView_new5(QWebEngineProfile* profile, QWidget* parent) {
+QWebEngineView* QWebEngineView_New5(QWebEngineProfile* profile, QWidget* parent) {
     return new VirtualQWebEngineView(profile, parent);
 }
 
-QWebEngineView* QWebEngineView_new6(QWebEnginePage* page, QWidget* parent) {
+QWebEngineView* QWebEngineView_New6(QWebEnginePage* page, QWidget* parent) {
     return new VirtualQWebEngineView(page, parent);
 }
 

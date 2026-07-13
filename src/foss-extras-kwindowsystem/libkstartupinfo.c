@@ -7,11 +7,11 @@
 #include "libkstartupinfo.h"
 
 KStartupInfo* k_startupinfo_new(int flags) {
-    return KStartupInfo_new(flags);
+    return KStartupInfo_New(flags);
 }
 
 KStartupInfo* k_startupinfo_new2(int flags, void* parent) {
-    return KStartupInfo_new2(flags, (QObject*)parent);
+    return KStartupInfo_New2(flags, (QObject*)parent);
 }
 
 const QMetaObject* k_startupinfo_meta_object(void* self) {
@@ -548,11 +548,11 @@ void k_startupinfo_delete(void* self) {
 }
 
 KStartupInfoId* k_startupinfoid_new() {
-    return KStartupInfoId_new();
+    return KStartupInfoId_New();
 }
 
 KStartupInfoId* k_startupinfoid_new2(void* data) {
-    return KStartupInfoId_new2((KStartupInfoId*)data);
+    return KStartupInfoId_New2((KStartupInfoId*)data);
 }
 
 bool k_startupinfoid_operator_equal(void* self, void* id) {
@@ -603,11 +603,11 @@ void k_startupinfoid_delete(void* self) {
 }
 
 KStartupInfoData* k_startupinfodata_new() {
-    return KStartupInfoData_new();
+    return KStartupInfoData_New();
 }
 
 KStartupInfoData* k_startupinfodata_new2(void* data) {
-    return KStartupInfoData_new2((KStartupInfoData*)data);
+    return KStartupInfoData_New2((KStartupInfoData*)data);
 }
 
 void k_startupinfodata_set_bin(void* self, const char* bin) {

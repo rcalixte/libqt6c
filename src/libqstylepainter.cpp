@@ -13,15 +13,15 @@
 #include "libqstylepainter.hpp"
 #include "libqstylepainter.hxx"
 
-QStylePainter* QStylePainter_new(QWidget* w) {
+QStylePainter* QStylePainter_New(QWidget* w) {
     return new QStylePainter(w);
 }
 
-QStylePainter* QStylePainter_new2() {
+QStylePainter* QStylePainter_New2() {
     return new QStylePainter();
 }
 
-QStylePainter* QStylePainter_new3(QPaintDevice* pd, QWidget* w) {
+QStylePainter* QStylePainter_New3(QPaintDevice* pd, QWidget* w) {
     return new QStylePainter(pd, w);
 }
 

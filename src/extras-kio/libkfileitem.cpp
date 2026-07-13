@@ -12,40 +12,40 @@
 #include "libkfileitem.hpp"
 #include "libkfileitem.hxx"
 
-KFileItem* KFileItem_new() {
+KFileItem* KFileItem_New() {
     return new KFileItem();
 }
 
-KFileItem* KFileItem_new2(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl) {
+KFileItem* KFileItem_New2(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl) {
     return new KFileItem(*entry, *itemOrDirUrl);
 }
 
-KFileItem* KFileItem_new3(const QUrl* url) {
+KFileItem* KFileItem_New3(const QUrl* url) {
     return new KFileItem(*url);
 }
 
-KFileItem* KFileItem_new4(const QUrl* url, int mimeTypeDetermination) {
+KFileItem* KFileItem_New4(const QUrl* url, int mimeTypeDetermination) {
     return new KFileItem(*url, static_cast<KFileItem::MimeTypeDetermination>(mimeTypeDetermination));
 }
 
-KFileItem* KFileItem_new5(const KFileItem* param1) {
+KFileItem* KFileItem_New5(const KFileItem* param1) {
     return new KFileItem(*param1);
 }
 
-KFileItem* KFileItem_new6(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes) {
+KFileItem* KFileItem_New6(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes) {
     return new KFileItem(*entry, *itemOrDirUrl, delayedMimeTypes);
 }
 
-KFileItem* KFileItem_new7(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory) {
+KFileItem* KFileItem_New7(const KIO__UDSEntry* entry, const QUrl* itemOrDirUrl, bool delayedMimeTypes, bool urlIsDirectory) {
     return new KFileItem(*entry, *itemOrDirUrl, delayedMimeTypes, urlIsDirectory);
 }
 
-KFileItem* KFileItem_new8(const QUrl* url, const libqt_string mimeType) {
+KFileItem* KFileItem_New8(const QUrl* url, const libqt_string mimeType) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     return new KFileItem(*url, mimeType_QString);
 }
 
-KFileItem* KFileItem_new9(const QUrl* url, const libqt_string mimeType, mode_t mode) {
+KFileItem* KFileItem_New9(const QUrl* url, const libqt_string mimeType, mode_t mode) {
     QString mimeType_QString = QString::fromUtf8(mimeType.data, mimeType.len);
     return new KFileItem(*url, mimeType_QString, mode);
 }
@@ -453,11 +453,11 @@ void KFileItem_Delete(KFileItem* self) {
     delete self;
 }
 
-KFileItemList* KFileItemList_new() {
+KFileItemList* KFileItemList_New() {
     return new KFileItemList();
 }
 
-KFileItemList* KFileItemList_new2(const libqt_list /* of KFileItem* */ items) {
+KFileItemList* KFileItemList_New2(const libqt_list /* of KFileItem* */ items) {
     QList<KFileItem> items_QList;
     items_QList.reserve(items.len);
     KFileItem** items_arr = static_cast<KFileItem**>(items.data.ptr);
@@ -506,7 +506,7 @@ void KFileItemList_Delete(KFileItemList* self) {
     delete self;
 }
 
-KFileItem__MostLocalUrlResult* KFileItem__MostLocalUrlResult_new(const KFileItem__MostLocalUrlResult* param1) {
+KFileItem__MostLocalUrlResult* KFileItem__MostLocalUrlResult_New(const KFileItem__MostLocalUrlResult* param1) {
     return new KFileItem::MostLocalUrlResult(*param1);
 }
 

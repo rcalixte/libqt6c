@@ -8,11 +8,11 @@
 #include "libtranslatorengineloader.h"
 
 TextTranslator__TranslatorEngineLoader* k_texttranslator__translatorengineloader_new() {
-    return TextTranslator__TranslatorEngineLoader_new();
+    return TextTranslator__TranslatorEngineLoader_New();
 }
 
 TextTranslator__TranslatorEngineLoader* k_texttranslator__translatorengineloader_new2(void* parent) {
-    return TextTranslator__TranslatorEngineLoader_new2((QObject*)parent);
+    return TextTranslator__TranslatorEngineLoader_New2((QObject*)parent);
 }
 
 const QMetaObject* k_texttranslator__translatorengineloader_meta_object(void* self) {

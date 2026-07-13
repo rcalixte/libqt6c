@@ -13,7 +13,7 @@ KNSCore__TagsFilterChecker* k_nscore__tagsfilterchecker_new(const char* tagFilte
     }
     libqt_list tagFilter_list = qlist(tagFilter_qstr, tagFilter_len);
 
-    KNSCore__TagsFilterChecker* _out = KNSCore__TagsFilterChecker_new(tagFilter_list);
+    KNSCore__TagsFilterChecker* _out = KNSCore__TagsFilterChecker_New(tagFilter_list);
     free(tagFilter_qstr);
     return _out;
 }

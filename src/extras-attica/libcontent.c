@@ -7,11 +7,11 @@
 #include "libcontent.h"
 
 Attica__Content* k_attica__content_new() {
-    return Attica__Content_new();
+    return Attica__Content_New();
 }
 
 Attica__Content* k_attica__content_new2(void* other) {
-    return Attica__Content_new2((Attica__Content*)other);
+    return Attica__Content_New2((Attica__Content*)other);
 }
 
 void k_attica__content_operator_assign(void* self, void* other) {

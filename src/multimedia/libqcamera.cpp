@@ -14,27 +14,27 @@
 #include "libqcamera.hpp"
 #include "libqcamera.hxx"
 
-QCamera* QCamera_new() {
+QCamera* QCamera_New() {
     return new VirtualQCamera();
 }
 
-QCamera* QCamera_new2(const QCameraDevice* cameraDevice) {
+QCamera* QCamera_New2(const QCameraDevice* cameraDevice) {
     return new VirtualQCamera(*cameraDevice);
 }
 
-QCamera* QCamera_new3(int position) {
+QCamera* QCamera_New3(int position) {
     return new VirtualQCamera(static_cast<QCameraDevice::Position>(position));
 }
 
-QCamera* QCamera_new4(QObject* parent) {
+QCamera* QCamera_New4(QObject* parent) {
     return new VirtualQCamera(parent);
 }
 
-QCamera* QCamera_new5(const QCameraDevice* cameraDevice, QObject* parent) {
+QCamera* QCamera_New5(const QCameraDevice* cameraDevice, QObject* parent) {
     return new VirtualQCamera(*cameraDevice, parent);
 }
 
-QCamera* QCamera_new6(int position, QObject* parent) {
+QCamera* QCamera_New6(int position, QObject* parent) {
     return new VirtualQCamera(static_cast<QCameraDevice::Position>(position), parent);
 }
 

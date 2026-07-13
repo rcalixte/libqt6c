@@ -27,12 +27,12 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QAudioSource* QAudioSource_new();
-QAudioSource* QAudioSource_new2(const QAudioDevice* audioDeviceInfo);
-QAudioSource* QAudioSource_new3(const QAudioFormat* format);
-QAudioSource* QAudioSource_new4(const QAudioFormat* format, QObject* parent);
-QAudioSource* QAudioSource_new5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format);
-QAudioSource* QAudioSource_new6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent);
+QAudioSource* QAudioSource_New();
+QAudioSource* QAudioSource_New2(const QAudioDevice* audioDeviceInfo);
+QAudioSource* QAudioSource_New3(const QAudioFormat* format);
+QAudioSource* QAudioSource_New4(const QAudioFormat* format, QObject* parent);
+QAudioSource* QAudioSource_New5(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format);
+QAudioSource* QAudioSource_New6(const QAudioDevice* audioDeviceInfo, const QAudioFormat* format, QObject* parent);
 QMetaObject* QAudioSource_MetaObject(const QAudioSource* self);
 void* QAudioSource_Metacast(QAudioSource* self, const char* param1);
 int QAudioSource_Metacall(QAudioSource* self, int param1, int param2, void** param3);

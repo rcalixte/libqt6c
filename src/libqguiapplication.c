@@ -18,11 +18,11 @@
 #include "libqguiapplication.h"
 
 QGuiApplication* q_guiapplication_new(int* argc, char** argv) {
-    return QGuiApplication_new(argc, argv);
+    return QGuiApplication_New(argc, argv);
 }
 
 QGuiApplication* q_guiapplication_new2(int* argc, char** argv, int param3) {
-    return QGuiApplication_new2(argc, argv, param3);
+    return QGuiApplication_New2(argc, argv, param3);
 }
 
 const QMetaObject* q_guiapplication_meta_object(void* self) {

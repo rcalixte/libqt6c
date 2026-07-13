@@ -4,7 +4,7 @@
 #include "libsessionconfiginterface.hpp"
 #include "libsessionconfiginterface.hxx"
 
-KTextEditor__SessionConfigInterface* KTextEditor__SessionConfigInterface_new() {
+KTextEditor__SessionConfigInterface* KTextEditor__SessionConfigInterface_New() {
     return new VirtualKTextEditorSessionConfigInterface();
 }
 

@@ -15,19 +15,19 @@
 #include "libqbluetoothsocket.hpp"
 #include "libqbluetoothsocket.hxx"
 
-QBluetoothSocket* QBluetoothSocket_new(int socketType) {
+QBluetoothSocket* QBluetoothSocket_New(int socketType) {
     return new VirtualQBluetoothSocket(static_cast<QBluetoothServiceInfo::Protocol>(socketType));
 }
 
-QBluetoothSocket* QBluetoothSocket_new2() {
+QBluetoothSocket* QBluetoothSocket_New2() {
     return new VirtualQBluetoothSocket();
 }
 
-QBluetoothSocket* QBluetoothSocket_new3(int socketType, QObject* parent) {
+QBluetoothSocket* QBluetoothSocket_New3(int socketType, QObject* parent) {
     return new VirtualQBluetoothSocket(static_cast<QBluetoothServiceInfo::Protocol>(socketType), parent);
 }
 
-QBluetoothSocket* QBluetoothSocket_new4(QObject* parent) {
+QBluetoothSocket* QBluetoothSocket_New4(QObject* parent) {
     return new VirtualQBluetoothSocket(parent);
 }
 

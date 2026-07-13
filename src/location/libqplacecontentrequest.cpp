@@ -5,11 +5,11 @@
 #include "libqplacecontentrequest.hpp"
 #include "libqplacecontentrequest.hxx"
 
-QPlaceContentRequest* QPlaceContentRequest_new() {
+QPlaceContentRequest* QPlaceContentRequest_New() {
     return new QPlaceContentRequest();
 }
 
-QPlaceContentRequest* QPlaceContentRequest_new2(const QPlaceContentRequest* other) {
+QPlaceContentRequest* QPlaceContentRequest_New2(const QPlaceContentRequest* other) {
     return new QPlaceContentRequest(*other);
 }
 

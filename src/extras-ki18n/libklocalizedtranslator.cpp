@@ -11,11 +11,11 @@
 #include "libklocalizedtranslator.hpp"
 #include "libklocalizedtranslator.hxx"
 
-KLocalizedTranslator* KLocalizedTranslator_new() {
+KLocalizedTranslator* KLocalizedTranslator_New() {
     return new VirtualKLocalizedTranslator();
 }
 
-KLocalizedTranslator* KLocalizedTranslator_new2(QObject* parent) {
+KLocalizedTranslator* KLocalizedTranslator_New2(QObject* parent) {
     return new VirtualKLocalizedTranslator(parent);
 }
 

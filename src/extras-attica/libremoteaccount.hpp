@@ -21,8 +21,8 @@ typedef Attica::RemoteAccount Attica__RemoteAccount;
 typedef struct Attica__RemoteAccount Attica__RemoteAccount;
 #endif
 
-Attica__RemoteAccount* Attica__RemoteAccount_new();
-Attica__RemoteAccount* Attica__RemoteAccount_new2(const Attica__RemoteAccount* other);
+Attica__RemoteAccount* Attica__RemoteAccount_New();
+Attica__RemoteAccount* Attica__RemoteAccount_New2(const Attica__RemoteAccount* other);
 void Attica__RemoteAccount_OperatorAssign(Attica__RemoteAccount* self, const Attica__RemoteAccount* other);
 void Attica__RemoteAccount_SetId(Attica__RemoteAccount* self, const libqt_string id);
 libqt_string Attica__RemoteAccount_Id(const Attica__RemoteAccount* self);

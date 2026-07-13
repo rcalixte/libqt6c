@@ -15,11 +15,11 @@
 #include "libabstractpropertyeditor.h"
 
 QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_new(void* parent) {
-    return QDesignerPropertyEditorInterface_new((QWidget*)parent);
+    return QDesignerPropertyEditorInterface_New((QWidget*)parent);
 }
 
 QDesignerPropertyEditorInterface* q_designerpropertyeditorinterface_new2(void* parent, int32_t flags) {
-    return QDesignerPropertyEditorInterface_new2((QWidget*)parent, flags);
+    return QDesignerPropertyEditorInterface_New2((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_designerpropertyeditorinterface_meta_object(void* self) {

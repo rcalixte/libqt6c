@@ -14,11 +14,11 @@
 #include "libsvg.h"
 
 KSvg__Svg* k_svg__svg_new() {
-    return KSvg__Svg_new();
+    return KSvg__Svg_New();
 }
 
 KSvg__Svg* k_svg__svg_new2(void* parent) {
-    return KSvg__Svg_new2((QObject*)parent);
+    return KSvg__Svg_New2((QObject*)parent);
 }
 
 const QMetaObject* k_svg__svg_meta_object(void* self) {

@@ -15,27 +15,27 @@
 #include "libqprintpreviewwidget.h"
 
 QPrintPreviewWidget* q_printpreviewwidget_new(void* parent) {
-    return QPrintPreviewWidget_new((QWidget*)parent);
+    return QPrintPreviewWidget_New((QWidget*)parent);
 }
 
 QPrintPreviewWidget* q_printpreviewwidget_new2(void* printer) {
-    return QPrintPreviewWidget_new2((QPrinter*)printer);
+    return QPrintPreviewWidget_New2((QPrinter*)printer);
 }
 
 QPrintPreviewWidget* q_printpreviewwidget_new3() {
-    return QPrintPreviewWidget_new3();
+    return QPrintPreviewWidget_New3();
 }
 
 QPrintPreviewWidget* q_printpreviewwidget_new4(void* printer, void* parent) {
-    return QPrintPreviewWidget_new4((QPrinter*)printer, (QWidget*)parent);
+    return QPrintPreviewWidget_New4((QPrinter*)printer, (QWidget*)parent);
 }
 
 QPrintPreviewWidget* q_printpreviewwidget_new5(void* printer, void* parent, int32_t flags) {
-    return QPrintPreviewWidget_new5((QPrinter*)printer, (QWidget*)parent, flags);
+    return QPrintPreviewWidget_New5((QPrinter*)printer, (QWidget*)parent, flags);
 }
 
 QPrintPreviewWidget* q_printpreviewwidget_new6(void* parent, int32_t flags) {
-    return QPrintPreviewWidget_new6((QWidget*)parent, flags);
+    return QPrintPreviewWidget_New6((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_printpreviewwidget_meta_object(void* self) {

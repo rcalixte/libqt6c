@@ -14,11 +14,11 @@
 #include "libqscilexercsharp.hpp"
 #include "libqscilexercsharp.hxx"
 
-QsciLexerCSharp* QsciLexerCSharp_new() {
+QsciLexerCSharp* QsciLexerCSharp_New() {
     return new VirtualQsciLexerCSharp();
 }
 
-QsciLexerCSharp* QsciLexerCSharp_new2(QObject* parent) {
+QsciLexerCSharp* QsciLexerCSharp_New2(QObject* parent) {
     return new VirtualQsciLexerCSharp(parent);
 }
 

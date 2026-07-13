@@ -19,8 +19,8 @@ typedef KParts::OpenUrlArguments KParts__OpenUrlArguments;
 typedef struct KParts__OpenUrlArguments KParts__OpenUrlArguments;
 #endif
 
-KParts__OpenUrlArguments* KParts__OpenUrlArguments_new();
-KParts__OpenUrlArguments* KParts__OpenUrlArguments_new2(const KParts__OpenUrlArguments* other);
+KParts__OpenUrlArguments* KParts__OpenUrlArguments_New();
+KParts__OpenUrlArguments* KParts__OpenUrlArguments_New2(const KParts__OpenUrlArguments* other);
 void KParts__OpenUrlArguments_OperatorAssign(KParts__OpenUrlArguments* self, const KParts__OpenUrlArguments* other);
 bool KParts__OpenUrlArguments_Reload(const KParts__OpenUrlArguments* self);
 void KParts__OpenUrlArguments_SetReload(KParts__OpenUrlArguments* self, bool b);

@@ -4,7 +4,7 @@
 #include "librunninganimatedimage.h"
 
 TextEmoticonsCore__RunningAnimatedImage* k_textemoticonscore__runninganimatedimage_new(void* idx) {
-    return TextEmoticonsCore__RunningAnimatedImage_new((QModelIndex*)idx);
+    return TextEmoticonsCore__RunningAnimatedImage_New((QModelIndex*)idx);
 }
 
 QPersistentModelIndex* k_textemoticonscore__runninganimatedimage_index(void* self) {

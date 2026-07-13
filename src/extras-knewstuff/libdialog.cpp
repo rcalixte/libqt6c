@@ -41,12 +41,12 @@
 #include "libdialog.hpp"
 #include "libdialog.hxx"
 
-KNSWidgets__Dialog* KNSWidgets__Dialog_new(const libqt_string configFile) {
+KNSWidgets__Dialog* KNSWidgets__Dialog_New(const libqt_string configFile) {
     QString configFile_QString = QString::fromUtf8(configFile.data, configFile.len);
     return new VirtualKNSWidgetsDialog(configFile_QString);
 }
 
-KNSWidgets__Dialog* KNSWidgets__Dialog_new2(const libqt_string configFile, QWidget* parent) {
+KNSWidgets__Dialog* KNSWidgets__Dialog_New2(const libqt_string configFile, QWidget* parent) {
     QString configFile_QString = QString::fromUtf8(configFile.data, configFile.len);
     return new VirtualKNSWidgetsDialog(configFile_QString, parent);
 }

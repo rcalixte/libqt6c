@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KUrlNavigator* KUrlNavigator_new(QWidget* parent);
-KUrlNavigator* KUrlNavigator_new2();
-KUrlNavigator* KUrlNavigator_new3(KFilePlacesModel* placesModel, const QUrl* url, QWidget* parent);
+KUrlNavigator* KUrlNavigator_New(QWidget* parent);
+KUrlNavigator* KUrlNavigator_New2();
+KUrlNavigator* KUrlNavigator_New3(KFilePlacesModel* placesModel, const QUrl* url, QWidget* parent);
 QMetaObject* KUrlNavigator_MetaObject(const KUrlNavigator* self);
 void* KUrlNavigator_Metacast(KUrlNavigator* self, const char* param1);
 int KUrlNavigator_Metacall(KUrlNavigator* self, int param1, int param2, void** param3);

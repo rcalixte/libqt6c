@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QValidator QValidator;
 #endif
 
-KEmailValidator* KEmailValidator_new();
-KEmailValidator* KEmailValidator_new2(QObject* parent);
+KEmailValidator* KEmailValidator_New();
+KEmailValidator* KEmailValidator_New2(QObject* parent);
 QMetaObject* KEmailValidator_MetaObject(const KEmailValidator* self);
 void* KEmailValidator_Metacast(KEmailValidator* self, const char* param1);
 int KEmailValidator_Metacall(KEmailValidator* self, int param1, int param2, void** param3);

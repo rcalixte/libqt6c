@@ -11,11 +11,11 @@
 #include "libqscilexertcl.h"
 
 QsciLexerTCL* q_scilexertcl_new() {
-    return QsciLexerTCL_new();
+    return QsciLexerTCL_New();
 }
 
 QsciLexerTCL* q_scilexertcl_new2(void* parent) {
-    return QsciLexerTCL_new2((QObject*)parent);
+    return QsciLexerTCL_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexertcl_meta_object(void* self) {

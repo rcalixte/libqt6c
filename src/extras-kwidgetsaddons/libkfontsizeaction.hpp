@@ -29,9 +29,9 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KFontSizeAction* KFontSizeAction_new(QObject* parent);
-KFontSizeAction* KFontSizeAction_new2(const libqt_string text, QObject* parent);
-KFontSizeAction* KFontSizeAction_new3(const QIcon* icon, const libqt_string text, QObject* parent);
+KFontSizeAction* KFontSizeAction_New(QObject* parent);
+KFontSizeAction* KFontSizeAction_New2(const libqt_string text, QObject* parent);
+KFontSizeAction* KFontSizeAction_New3(const QIcon* icon, const libqt_string text, QObject* parent);
 QMetaObject* KFontSizeAction_MetaObject(const KFontSizeAction* self);
 void* KFontSizeAction_Metacast(KFontSizeAction* self, const char* param1);
 int KFontSizeAction_Metacall(KFontSizeAction* self, int param1, int param2, void** param3);

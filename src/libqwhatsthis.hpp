@@ -22,8 +22,8 @@ typedef struct QWhatsThis QWhatsThis;
 typedef struct QWidget QWidget;
 #endif
 
-QWhatsThis* QWhatsThis_new(const QWhatsThis* other);
-QWhatsThis* QWhatsThis_new2(QWhatsThis* other);
+QWhatsThis* QWhatsThis_New(const QWhatsThis* other);
+QWhatsThis* QWhatsThis_New2(QWhatsThis* other);
 void QWhatsThis_CopyAssign(QWhatsThis* self, QWhatsThis* other);
 void QWhatsThis_MoveAssign(QWhatsThis* self, QWhatsThis* other);
 void QWhatsThis_EnterWhatsThisMode();

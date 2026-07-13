@@ -6,11 +6,11 @@
 #include "libkdesktopfile.h"
 
 KDesktopFile* k_desktopfile_new(int32_t resourceType, const char* fileName) {
-    return KDesktopFile_new(resourceType, qstring(fileName));
+    return KDesktopFile_New(resourceType, qstring(fileName));
 }
 
 KDesktopFile* k_desktopfile_new2(const char* fileName) {
-    return KDesktopFile_new2(qstring(fileName));
+    return KDesktopFile_New2(qstring(fileName));
 }
 
 bool k_desktopfile_is_desktop_file(const char* path) {

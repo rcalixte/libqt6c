@@ -14,11 +14,11 @@
 #include "libauthservice.hpp"
 #include "libauthservice.hxx"
 
-SignOn__AuthService* SignOn__AuthService_new() {
+SignOn__AuthService* SignOn__AuthService_New() {
     return new VirtualSignOnAuthService();
 }
 
-SignOn__AuthService* SignOn__AuthService_new2(QObject* parent) {
+SignOn__AuthService* SignOn__AuthService_New2(QObject* parent) {
     return new VirtualSignOnAuthService(parent);
 }
 
@@ -560,12 +560,12 @@ void SignOn__AuthService_Delete(SignOn__AuthService* self) {
     delete self;
 }
 
-SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_new(const libqt_string pattern) {
+SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_New(const libqt_string pattern) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     return new SignOn::AuthService::IdentityRegExp(pattern_QString);
 }
 
-SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_new2(const SignOn__AuthService__IdentityRegExp* src) {
+SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_New2(const SignOn__AuthService__IdentityRegExp* src) {
     return new SignOn::AuthService::IdentityRegExp(*src);
 }
 

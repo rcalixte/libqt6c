@@ -5,7 +5,7 @@
 #include "libabstractformeditorplugin.hpp"
 #include "libabstractformeditorplugin.hxx"
 
-QDesignerFormEditorPluginInterface* QDesignerFormEditorPluginInterface_new() {
+QDesignerFormEditorPluginInterface* QDesignerFormEditorPluginInterface_New() {
     return new VirtualQDesignerFormEditorPluginInterface();
 }
 

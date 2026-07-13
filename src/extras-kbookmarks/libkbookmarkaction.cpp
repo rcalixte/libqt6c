@@ -14,7 +14,7 @@
 #include "libkbookmarkaction.hpp"
 #include "libkbookmarkaction.hxx"
 
-KBookmarkAction* KBookmarkAction_new(const KBookmark* bk, KBookmarkOwner* owner, QObject* parent) {
+KBookmarkAction* KBookmarkAction_New(const KBookmark* bk, KBookmarkOwner* owner, QObject* parent) {
     return new VirtualKBookmarkAction(*bk, owner, parent);
 }
 

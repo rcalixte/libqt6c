@@ -11,7 +11,7 @@
 #include "liblistingnotificationextension.hpp"
 #include "liblistingnotificationextension.hxx"
 
-KParts__ListingNotificationExtension* KParts__ListingNotificationExtension_new(KParts__ReadOnlyPart* parent) {
+KParts__ListingNotificationExtension* KParts__ListingNotificationExtension_New(KParts__ReadOnlyPart* parent) {
     return new VirtualKPartsListingNotificationExtension(parent);
 }
 

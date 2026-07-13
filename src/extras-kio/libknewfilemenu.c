@@ -12,7 +12,7 @@
 #include "libknewfilemenu.h"
 
 KNewFileMenu* k_newfilemenu_new(void* parent) {
-    return KNewFileMenu_new((QObject*)parent);
+    return KNewFileMenu_New((QObject*)parent);
 }
 
 const QMetaObject* k_newfilemenu_meta_object(void* self) {

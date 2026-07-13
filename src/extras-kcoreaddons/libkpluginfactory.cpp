@@ -14,7 +14,7 @@
 #include "libkpluginfactory.hpp"
 #include "libkpluginfactory.hxx"
 
-KPluginFactory* KPluginFactory_new() {
+KPluginFactory* KPluginFactory_New() {
     return new VirtualKPluginFactory();
 }
 

@@ -3,39 +3,39 @@
 #include "libqnamespace.hpp"
 #include "libqnamespace.hxx"
 
-QKeyCombination* QKeyCombination_new(const QKeyCombination* other) {
+QKeyCombination* QKeyCombination_New(const QKeyCombination* other) {
     return new QKeyCombination(*other);
 }
 
-QKeyCombination* QKeyCombination_new2(QKeyCombination* other) {
+QKeyCombination* QKeyCombination_New2(QKeyCombination* other) {
     return new QKeyCombination(std::move(*other));
 }
 
-QKeyCombination* QKeyCombination_new3() {
+QKeyCombination* QKeyCombination_New3() {
     return new QKeyCombination();
 }
 
-QKeyCombination* QKeyCombination_new4(int modifiers) {
+QKeyCombination* QKeyCombination_New4(int modifiers) {
     return new QKeyCombination(static_cast<Qt::Modifiers>(modifiers));
 }
 
-QKeyCombination* QKeyCombination_new5(int modifiers) {
+QKeyCombination* QKeyCombination_New5(int modifiers) {
     return new QKeyCombination(static_cast<Qt::KeyboardModifiers>(modifiers));
 }
 
-QKeyCombination* QKeyCombination_new6(const QKeyCombination* param1) {
+QKeyCombination* QKeyCombination_New6(const QKeyCombination* param1) {
     return new QKeyCombination(*param1);
 }
 
-QKeyCombination* QKeyCombination_new7(int key) {
+QKeyCombination* QKeyCombination_New7(int key) {
     return new QKeyCombination(static_cast<Qt::Key>(key));
 }
 
-QKeyCombination* QKeyCombination_new8(int modifiers, int key) {
+QKeyCombination* QKeyCombination_New8(int modifiers, int key) {
     return new QKeyCombination(static_cast<Qt::Modifiers>(modifiers), static_cast<Qt::Key>(key));
 }
 
-QKeyCombination* QKeyCombination_new9(int modifiers, int key) {
+QKeyCombination* QKeyCombination_New9(int modifiers, int key) {
     return new QKeyCombination(static_cast<Qt::KeyboardModifiers>(modifiers), static_cast<Qt::Key>(key));
 }
 

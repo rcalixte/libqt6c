@@ -13,15 +13,15 @@
 #include "libqnetworkrequest.hpp"
 #include "libqnetworkrequest.hxx"
 
-QNetworkRequest* QNetworkRequest_new() {
+QNetworkRequest* QNetworkRequest_New() {
     return new QNetworkRequest();
 }
 
-QNetworkRequest* QNetworkRequest_new2(const QUrl* url) {
+QNetworkRequest* QNetworkRequest_New2(const QUrl* url) {
     return new QNetworkRequest(*url);
 }
 
-QNetworkRequest* QNetworkRequest_new3(const QNetworkRequest* other) {
+QNetworkRequest* QNetworkRequest_New3(const QNetworkRequest* other) {
     return new QNetworkRequest(*other);
 }
 

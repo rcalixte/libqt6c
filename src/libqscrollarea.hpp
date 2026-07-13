@@ -54,8 +54,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QScrollArea* QScrollArea_new(QWidget* parent);
-QScrollArea* QScrollArea_new2();
+QScrollArea* QScrollArea_New(QWidget* parent);
+QScrollArea* QScrollArea_New2();
 QMetaObject* QScrollArea_MetaObject(const QScrollArea* self);
 void* QScrollArea_Metacast(QScrollArea* self, const char* param1);
 int QScrollArea_Metacall(QScrollArea* self, int param1, int param2, void** param3);

@@ -10,11 +10,11 @@
 #include "libaccount_service.h"
 
 Accounts__AccountService* q_accounts__accountservice_new(void* account, void* service) {
-    return Accounts__AccountService_new((Accounts__Account*)account, (Accounts__Service*)service);
+    return Accounts__AccountService_New((Accounts__Account*)account, (Accounts__Service*)service);
 }
 
 Accounts__AccountService* q_accounts__accountservice_new2(void* account, void* service, void* parent) {
-    return Accounts__AccountService_new2((Accounts__Account*)account, (Accounts__Service*)service, (QObject*)parent);
+    return Accounts__AccountService_New2((Accounts__Account*)account, (Accounts__Service*)service, (QObject*)parent);
 }
 
 const QMetaObject* q_accounts__accountservice_meta_object(void* self) {

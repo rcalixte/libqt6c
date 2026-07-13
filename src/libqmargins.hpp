@@ -19,11 +19,11 @@ typedef struct QMargins QMargins;
 typedef struct QMarginsF QMarginsF;
 #endif
 
-QMargins* QMargins_new(const QMargins* other);
-QMargins* QMargins_new2(QMargins* other);
-QMargins* QMargins_new3();
-QMargins* QMargins_new4(int left, int top, int right, int bottom);
-QMargins* QMargins_new5(const QMargins* param1);
+QMargins* QMargins_New(const QMargins* other);
+QMargins* QMargins_New2(QMargins* other);
+QMargins* QMargins_New3();
+QMargins* QMargins_New4(int left, int top, int right, int bottom);
+QMargins* QMargins_New5(const QMargins* param1);
 void QMargins_CopyAssign(QMargins* self, QMargins* other);
 void QMargins_MoveAssign(QMargins* self, QMargins* other);
 bool QMargins_IsNull(const QMargins* self);
@@ -46,12 +46,12 @@ QMargins* QMargins_OperatorDivideAssign2(QMargins* self, double param1);
 QMarginsF* QMargins_ToMarginsF(const QMargins* self);
 void QMargins_Delete(QMargins* self);
 
-QMarginsF* QMarginsF_new(const QMarginsF* other);
-QMarginsF* QMarginsF_new2(QMarginsF* other);
-QMarginsF* QMarginsF_new3();
-QMarginsF* QMarginsF_new4(double left, double top, double right, double bottom);
-QMarginsF* QMarginsF_new5(const QMargins* margins);
-QMarginsF* QMarginsF_new6(const QMarginsF* param1);
+QMarginsF* QMarginsF_New(const QMarginsF* other);
+QMarginsF* QMarginsF_New2(QMarginsF* other);
+QMarginsF* QMarginsF_New3();
+QMarginsF* QMarginsF_New4(double left, double top, double right, double bottom);
+QMarginsF* QMarginsF_New5(const QMargins* margins);
+QMarginsF* QMarginsF_New6(const QMarginsF* param1);
 void QMarginsF_CopyAssign(QMarginsF* self, QMarginsF* other);
 void QMarginsF_MoveAssign(QMarginsF* self, QMarginsF* other);
 bool QMarginsF_IsNull(const QMarginsF* self);

@@ -46,11 +46,11 @@
 #include "libqtextbrowser.hpp"
 #include "libqtextbrowser.hxx"
 
-QTextBrowser* QTextBrowser_new(QWidget* parent) {
+QTextBrowser* QTextBrowser_New(QWidget* parent) {
     return new VirtualQTextBrowser(parent);
 }
 
-QTextBrowser* QTextBrowser_new2() {
+QTextBrowser* QTextBrowser_New2() {
     return new VirtualQTextBrowser();
 }
 

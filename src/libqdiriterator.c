@@ -4,15 +4,15 @@
 #include "libqdiriterator.h"
 
 QDirIterator* q_diriterator_new(void* dir) {
-    return QDirIterator_new((QDir*)dir);
+    return QDirIterator_New((QDir*)dir);
 }
 
 QDirIterator* q_diriterator_new2(const char* path) {
-    return QDirIterator_new2(qstring(path));
+    return QDirIterator_New2(qstring(path));
 }
 
 QDirIterator* q_diriterator_new3(const char* path, int32_t filter) {
-    return QDirIterator_new3(qstring(path), filter);
+    return QDirIterator_New3(qstring(path), filter);
 }
 
 QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[static 1]) {
@@ -27,21 +27,21 @@ QDirIterator* q_diriterator_new4(const char* path, const char* nameFilters[stati
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    QDirIterator* _out = QDirIterator_new4(qstring(path), nameFilters_list);
+    QDirIterator* _out = QDirIterator_New4(qstring(path), nameFilters_list);
     free(nameFilters_qstr);
     return _out;
 }
 
 QDirIterator* q_diriterator_new5(void* dir, int32_t flags) {
-    return QDirIterator_new5((QDir*)dir, flags);
+    return QDirIterator_New5((QDir*)dir, flags);
 }
 
 QDirIterator* q_diriterator_new6(const char* path, int32_t flags) {
-    return QDirIterator_new6(qstring(path), flags);
+    return QDirIterator_New6(qstring(path), flags);
 }
 
 QDirIterator* q_diriterator_new7(const char* path, int32_t filter, int32_t flags) {
-    return QDirIterator_new7(qstring(path), filter, flags);
+    return QDirIterator_New7(qstring(path), filter, flags);
 }
 
 QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[static 1], int32_t filters) {
@@ -56,7 +56,7 @@ QDirIterator* q_diriterator_new8(const char* path, const char* nameFilters[stati
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    QDirIterator* _out = QDirIterator_new8(qstring(path), nameFilters_list, filters);
+    QDirIterator* _out = QDirIterator_New8(qstring(path), nameFilters_list, filters);
     free(nameFilters_qstr);
     return _out;
 }
@@ -73,7 +73,7 @@ QDirIterator* q_diriterator_new9(const char* path, const char* nameFilters[stati
     }
     libqt_list nameFilters_list = qlist(nameFilters_qstr, nameFilters_len);
 
-    QDirIterator* _out = QDirIterator_new9(qstring(path), nameFilters_list, filters, flags);
+    QDirIterator* _out = QDirIterator_New9(qstring(path), nameFilters_list, filters, flags);
     free(nameFilters_qstr);
     return _out;
 }

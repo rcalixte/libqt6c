@@ -20,9 +20,9 @@ typedef struct QPlaceSearchRequest QPlaceSearchRequest;
 typedef struct QPlaceSearchResult QPlaceSearchResult;
 #endif
 
-QPlaceProposedSearchResult* QPlaceProposedSearchResult_new();
-QPlaceProposedSearchResult* QPlaceProposedSearchResult_new2(const QPlaceSearchResult* other);
-QPlaceProposedSearchResult* QPlaceProposedSearchResult_new3(const QPlaceProposedSearchResult* param1);
+QPlaceProposedSearchResult* QPlaceProposedSearchResult_New();
+QPlaceProposedSearchResult* QPlaceProposedSearchResult_New2(const QPlaceSearchResult* other);
+QPlaceProposedSearchResult* QPlaceProposedSearchResult_New3(const QPlaceProposedSearchResult* param1);
 QPlaceSearchRequest* QPlaceProposedSearchResult_SearchRequest(const QPlaceProposedSearchResult* self);
 void QPlaceProposedSearchResult_SetSearchRequest(QPlaceProposedSearchResult* self, const QPlaceSearchRequest* request);
 void QPlaceProposedSearchResult_Delete(QPlaceProposedSearchResult* self);

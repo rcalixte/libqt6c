@@ -8,19 +8,19 @@
 #include "libkbreadcrumbselectionmodel.h"
 
 KBreadcrumbSelectionModel* k_breadcrumbselectionmodel_new(void* selectionModel) {
-    return KBreadcrumbSelectionModel_new((QItemSelectionModel*)selectionModel);
+    return KBreadcrumbSelectionModel_New((QItemSelectionModel*)selectionModel);
 }
 
 KBreadcrumbSelectionModel* k_breadcrumbselectionmodel_new2(void* selectionModel, int32_t target) {
-    return KBreadcrumbSelectionModel_new2((QItemSelectionModel*)selectionModel, target);
+    return KBreadcrumbSelectionModel_New2((QItemSelectionModel*)selectionModel, target);
 }
 
 KBreadcrumbSelectionModel* k_breadcrumbselectionmodel_new3(void* selectionModel, void* parent) {
-    return KBreadcrumbSelectionModel_new3((QItemSelectionModel*)selectionModel, (QObject*)parent);
+    return KBreadcrumbSelectionModel_New3((QItemSelectionModel*)selectionModel, (QObject*)parent);
 }
 
 KBreadcrumbSelectionModel* k_breadcrumbselectionmodel_new4(void* selectionModel, int32_t target, void* parent) {
-    return KBreadcrumbSelectionModel_new4((QItemSelectionModel*)selectionModel, target, (QObject*)parent);
+    return KBreadcrumbSelectionModel_New4((QItemSelectionModel*)selectionModel, target, (QObject*)parent);
 }
 
 const QMetaObject* k_breadcrumbselectionmodel_meta_object(void* self) {

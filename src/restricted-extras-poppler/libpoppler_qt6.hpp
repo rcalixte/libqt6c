@@ -111,7 +111,7 @@ QDateTime* Poppler_ConvertDate(const char* dateString);
 bool Poppler_IsCmsAvailable();
 bool Poppler_IsOverprintPreviewAvailable();
 
-Poppler__TextBox* Poppler__TextBox_new(const libqt_string text, const QRectF* bBox);
+Poppler__TextBox* Poppler__TextBox_New(const libqt_string text, const QRectF* bBox);
 libqt_string Poppler__TextBox_Text(const Poppler__TextBox* self);
 QRectF* Poppler__TextBox_BoundingBox(const Poppler__TextBox* self);
 Poppler__TextBox* Poppler__TextBox_NextWord(const Poppler__TextBox* self);
@@ -119,8 +119,8 @@ QRectF* Poppler__TextBox_CharBoundingBox(const Poppler__TextBox* self, int i);
 bool Poppler__TextBox_HasSpaceAfter(const Poppler__TextBox* self);
 void Poppler__TextBox_Delete(Poppler__TextBox* self);
 
-Poppler__FontInfo* Poppler__FontInfo_new();
-Poppler__FontInfo* Poppler__FontInfo_new2(const Poppler__FontInfo* fi);
+Poppler__FontInfo* Poppler__FontInfo_New();
+Poppler__FontInfo* Poppler__FontInfo_New2(const Poppler__FontInfo* fi);
 libqt_string Poppler__FontInfo_Name(const Poppler__FontInfo* self);
 libqt_string Poppler__FontInfo_SubstituteName(const Poppler__FontInfo* self);
 libqt_string Poppler__FontInfo_File(const Poppler__FontInfo* self);
@@ -195,8 +195,8 @@ libqt_list /* of QRectF* */ Poppler__Page_Search3(const Poppler__Page* self, con
 libqt_list /* of Poppler__TextBox* */ Poppler__Page_TextList1(const Poppler__Page* self, int rotate);
 void Poppler__Page_Delete(Poppler__Page* self);
 
-Poppler__OutlineItem* Poppler__OutlineItem_new();
-Poppler__OutlineItem* Poppler__OutlineItem_new2(const Poppler__OutlineItem* other);
+Poppler__OutlineItem* Poppler__OutlineItem_New();
+Poppler__OutlineItem* Poppler__OutlineItem_New2(const Poppler__OutlineItem* other);
 void Poppler__OutlineItem_OperatorAssign(Poppler__OutlineItem* self, const Poppler__OutlineItem* other);
 bool Poppler__OutlineItem_IsNull(const Poppler__OutlineItem* self);
 libqt_string Poppler__OutlineItem_Name(const Poppler__OutlineItem* self);

@@ -13,11 +13,11 @@
 #include "libqsequentialanimationgroup.hpp"
 #include "libqsequentialanimationgroup.hxx"
 
-QSequentialAnimationGroup* QSequentialAnimationGroup_new() {
+QSequentialAnimationGroup* QSequentialAnimationGroup_New() {
     return new VirtualQSequentialAnimationGroup();
 }
 
-QSequentialAnimationGroup* QSequentialAnimationGroup_new2(QObject* parent) {
+QSequentialAnimationGroup* QSequentialAnimationGroup_New2(QObject* parent) {
     return new VirtualQSequentialAnimationGroup(parent);
 }
 

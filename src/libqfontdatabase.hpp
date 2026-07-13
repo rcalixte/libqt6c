@@ -20,9 +20,9 @@ typedef struct QFontDatabase QFontDatabase;
 typedef struct QFontInfo QFontInfo;
 #endif
 
-QFontDatabase* QFontDatabase_new(const QFontDatabase* other);
-QFontDatabase* QFontDatabase_new2(QFontDatabase* other);
-QFontDatabase* QFontDatabase_new3();
+QFontDatabase* QFontDatabase_New(const QFontDatabase* other);
+QFontDatabase* QFontDatabase_New2(QFontDatabase* other);
+QFontDatabase* QFontDatabase_New3();
 void QFontDatabase_CopyAssign(QFontDatabase* self, QFontDatabase* other);
 void QFontDatabase_MoveAssign(QFontDatabase* self, QFontDatabase* other);
 libqt_list /* of int */ QFontDatabase_StandardSizes();

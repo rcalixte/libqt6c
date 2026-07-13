@@ -22,9 +22,9 @@ typedef struct KFileMetaData__PropertyInfo KFileMetaData__PropertyInfo;
 typedef struct QVariant QVariant;
 #endif
 
-KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_new();
-KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_new2(int property);
-KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_new3(const KFileMetaData__PropertyInfo* pi);
+KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_New();
+KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_New2(int property);
+KFileMetaData__PropertyInfo* KFileMetaData__PropertyInfo_New3(const KFileMetaData__PropertyInfo* pi);
 void KFileMetaData__PropertyInfo_OperatorAssign(KFileMetaData__PropertyInfo* self, const KFileMetaData__PropertyInfo* rhs);
 bool KFileMetaData__PropertyInfo_OperatorEqual(const KFileMetaData__PropertyInfo* self, const KFileMetaData__PropertyInfo* rhs);
 int KFileMetaData__PropertyInfo_Property(const KFileMetaData__PropertyInfo* self);

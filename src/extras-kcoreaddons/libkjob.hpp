@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KJob* KJob_new();
-KJob* KJob_new2(QObject* parent);
+KJob* KJob_New();
+KJob* KJob_New2(QObject* parent);
 QMetaObject* KJob_MetaObject(const KJob* self);
 void* KJob_Metacast(KJob* self, const char* param1);
 int KJob_Metacall(KJob* self, int param1, int param2, void** param3);

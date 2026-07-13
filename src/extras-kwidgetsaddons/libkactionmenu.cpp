@@ -15,16 +15,16 @@
 #include "libkactionmenu.hpp"
 #include "libkactionmenu.hxx"
 
-KActionMenu* KActionMenu_new(QObject* parent) {
+KActionMenu* KActionMenu_New(QObject* parent) {
     return new VirtualKActionMenu(parent);
 }
 
-KActionMenu* KActionMenu_new2(const libqt_string text, QObject* parent) {
+KActionMenu* KActionMenu_New2(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKActionMenu(text_QString, parent);
 }
 
-KActionMenu* KActionMenu_new3(const QIcon* icon, const libqt_string text, QObject* parent) {
+KActionMenu* KActionMenu_New3(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKActionMenu(*icon, text_QString, parent);
 }

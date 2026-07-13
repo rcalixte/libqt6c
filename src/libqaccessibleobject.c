@@ -8,7 +8,7 @@
 #include "libqaccessibleobject.h"
 
 QAccessibleObject* q_accessibleobject_new(void* object) {
-    return QAccessibleObject_new((QObject*)object);
+    return QAccessibleObject_New((QObject*)object);
 }
 
 bool q_accessibleobject_is_valid(void* self) {
@@ -286,7 +286,7 @@ void q_accessibleobject_on_interface_cast(void* self, void* (*callback)(void*, i
 }
 
 QAccessibleApplication* q_accessibleapplication_new() {
-    return QAccessibleApplication_new();
+    return QAccessibleApplication_New();
 }
 
 QWindow* q_accessibleapplication_window(void* self) {

@@ -4,21 +4,21 @@
 #include "libqbytearrayview.hpp"
 #include "libqbytearrayview.hxx"
 
-QByteArrayView* QByteArrayView_new(const libqt_string other) {
+QByteArrayView* QByteArrayView_New(const libqt_string other) {
     QByteArrayView other_QByteArrayView(other.data, other.len);
     return new QByteArrayView(other_QByteArrayView);
 }
 
-QByteArrayView* QByteArrayView_new2(libqt_string other) {
+QByteArrayView* QByteArrayView_New2(libqt_string other) {
     QByteArrayView other_QByteArrayView(other.data, other.len);
     return new QByteArrayView(std::move(other_QByteArrayView));
 }
 
-QByteArrayView* QByteArrayView_new3() {
+QByteArrayView* QByteArrayView_New3() {
     return new QByteArrayView();
 }
 
-QByteArrayView* QByteArrayView_new4(const libqt_string param1) {
+QByteArrayView* QByteArrayView_New4(const libqt_string param1) {
     QByteArrayView param1_QByteArrayView(param1.data, param1.len);
     return new QByteArrayView(param1_QByteArrayView);
 }

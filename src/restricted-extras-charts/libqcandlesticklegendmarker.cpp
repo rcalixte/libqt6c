@@ -13,11 +13,11 @@
 #include "libqcandlesticklegendmarker.hpp"
 #include "libqcandlesticklegendmarker.hxx"
 
-QCandlestickLegendMarker* QCandlestickLegendMarker_new(QCandlestickSeries* series, QLegend* legend) {
+QCandlestickLegendMarker* QCandlestickLegendMarker_New(QCandlestickSeries* series, QLegend* legend) {
     return new VirtualQCandlestickLegendMarker(series, legend);
 }
 
-QCandlestickLegendMarker* QCandlestickLegendMarker_new2(QCandlestickSeries* series, QLegend* legend, QObject* parent) {
+QCandlestickLegendMarker* QCandlestickLegendMarker_New2(QCandlestickSeries* series, QLegend* legend, QObject* parent) {
     return new VirtualQCandlestickLegendMarker(series, legend, parent);
 }
 

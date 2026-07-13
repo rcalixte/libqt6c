@@ -4,11 +4,11 @@
 #include "libemoticoncategory.hpp"
 #include "libemoticoncategory.hxx"
 
-TextEmoticonsCore__EmoticonCategory* TextEmoticonsCore__EmoticonCategory_new() {
+TextEmoticonsCore__EmoticonCategory* TextEmoticonsCore__EmoticonCategory_New() {
     return new TextEmoticonsCore::EmoticonCategory();
 }
 
-TextEmoticonsCore__EmoticonCategory* TextEmoticonsCore__EmoticonCategory_new2(const TextEmoticonsCore__EmoticonCategory* param1) {
+TextEmoticonsCore__EmoticonCategory* TextEmoticonsCore__EmoticonCategory_New2(const TextEmoticonsCore__EmoticonCategory* param1) {
     return new TextEmoticonsCore::EmoticonCategory(*param1);
 }
 

@@ -6,11 +6,11 @@
 #include "libprovider_2.hpp"
 #include "libprovider_2.hxx"
 
-Accounts__Provider* Accounts__Provider_new() {
+Accounts__Provider* Accounts__Provider_New() {
     return new Accounts::Provider();
 }
 
-Accounts__Provider* Accounts__Provider_new2(const Accounts__Provider* other) {
+Accounts__Provider* Accounts__Provider_New2(const Accounts__Provider* other) {
     return new Accounts::Provider(*other);
 }
 

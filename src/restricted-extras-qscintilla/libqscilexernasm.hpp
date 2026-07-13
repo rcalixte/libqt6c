@@ -31,8 +31,8 @@ typedef struct QsciLexerNASM QsciLexerNASM;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerNASM* QsciLexerNASM_new();
-QsciLexerNASM* QsciLexerNASM_new2(QObject* parent);
+QsciLexerNASM* QsciLexerNASM_New();
+QsciLexerNASM* QsciLexerNASM_New2(QObject* parent);
 QMetaObject* QsciLexerNASM_MetaObject(const QsciLexerNASM* self);
 void* QsciLexerNASM_Metacast(QsciLexerNASM* self, const char* param1);
 int QsciLexerNASM_Metacall(QsciLexerNASM* self, int param1, int param2, void** param3);

@@ -51,8 +51,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QErrorMessage* QErrorMessage_new(QWidget* parent);
-QErrorMessage* QErrorMessage_new2();
+QErrorMessage* QErrorMessage_New(QWidget* parent);
+QErrorMessage* QErrorMessage_New2();
 QMetaObject* QErrorMessage_MetaObject(const QErrorMessage* self);
 void* QErrorMessage_Metacast(QErrorMessage* self, const char* param1);
 int QErrorMessage_Metacall(QErrorMessage* self, int param1, int param2, void** param3);

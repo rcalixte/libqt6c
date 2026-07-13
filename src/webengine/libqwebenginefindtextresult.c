@@ -2,11 +2,11 @@
 #include "libqwebenginefindtextresult.h"
 
 QWebEngineFindTextResult* q_webenginefindtextresult_new() {
-    return QWebEngineFindTextResult_new();
+    return QWebEngineFindTextResult_New();
 }
 
 QWebEngineFindTextResult* q_webenginefindtextresult_new2(void* other) {
-    return QWebEngineFindTextResult_new2((QWebEngineFindTextResult*)other);
+    return QWebEngineFindTextResult_New2((QWebEngineFindTextResult*)other);
 }
 
 int32_t q_webenginefindtextresult_number_of_matches(void* self) {

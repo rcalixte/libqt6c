@@ -42,8 +42,8 @@ struct pair_int_int {
 };
 #endif
 
-QAccessible* QAccessible_new(const QAccessible* other);
-QAccessible* QAccessible_new2(QAccessible* other);
+QAccessible* QAccessible_New(const QAccessible* other);
+QAccessible* QAccessible_New2(QAccessible* other);
 void QAccessible_CopyAssign(QAccessible* self, QAccessible* other);
 void QAccessible_MoveAssign(QAccessible* self, QAccessible* other);
 intptr_t QAccessible_InstallUpdateHandler(intptr_t param1);
@@ -63,9 +63,9 @@ void QAccessible_Cleanup();
 pair_int_int /* tuple of int and int */ QAccessible_QAccessibleTextBoundaryHelper(const QTextCursor* cursor, int boundaryType);
 void QAccessible_Delete(QAccessible* self);
 
-QAccessible__State* QAccessible__State_new(const QAccessible__State* other);
-QAccessible__State* QAccessible__State_new2(QAccessible__State* other);
-QAccessible__State* QAccessible__State_new3();
+QAccessible__State* QAccessible__State_New(const QAccessible__State* other);
+QAccessible__State* QAccessible__State_New2(QAccessible__State* other);
+QAccessible__State* QAccessible__State_New3();
 void QAccessible__State_CopyAssign(QAccessible__State* self, QAccessible__State* other);
 void QAccessible__State_MoveAssign(QAccessible__State* self, QAccessible__State* other);
 unsigned long long QAccessible__State_Disabled(const QAccessible__State* self);

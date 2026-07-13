@@ -13,20 +13,20 @@
 #include "libqpluginloader.hpp"
 #include "libqpluginloader.hxx"
 
-QPluginLoader* QPluginLoader_new() {
+QPluginLoader* QPluginLoader_New() {
     return new VirtualQPluginLoader();
 }
 
-QPluginLoader* QPluginLoader_new2(const libqt_string fileName) {
+QPluginLoader* QPluginLoader_New2(const libqt_string fileName) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPluginLoader(fileName_QString);
 }
 
-QPluginLoader* QPluginLoader_new3(QObject* parent) {
+QPluginLoader* QPluginLoader_New3(QObject* parent) {
     return new VirtualQPluginLoader(parent);
 }
 
-QPluginLoader* QPluginLoader_new4(const libqt_string fileName, QObject* parent) {
+QPluginLoader* QPluginLoader_New4(const libqt_string fileName, QObject* parent) {
     QString fileName_QString = QString::fromUtf8(fileName.data, fileName.len);
     return new VirtualQPluginLoader(fileName_QString, parent);
 }

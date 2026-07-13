@@ -4,13 +4,13 @@
 #include "libknotifyconfig.hpp"
 #include "libknotifyconfig.hxx"
 
-KNotifyConfig* KNotifyConfig_new(const libqt_string applicationName, const libqt_string eventId) {
+KNotifyConfig* KNotifyConfig_New(const libqt_string applicationName, const libqt_string eventId) {
     QString applicationName_QString = QString::fromUtf8(applicationName.data, applicationName.len);
     QString eventId_QString = QString::fromUtf8(eventId.data, eventId.len);
     return new KNotifyConfig(applicationName_QString, eventId_QString);
 }
 
-KNotifyConfig* KNotifyConfig_new2(const KNotifyConfig* other) {
+KNotifyConfig* KNotifyConfig_New2(const KNotifyConfig* other) {
     return new KNotifyConfig(*other);
 }
 

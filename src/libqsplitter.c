@@ -16,19 +16,19 @@
 #include "libqsplitter.h"
 
 QSplitter* q_splitter_new(void* parent) {
-    return QSplitter_new((QWidget*)parent);
+    return QSplitter_New((QWidget*)parent);
 }
 
 QSplitter* q_splitter_new2() {
-    return QSplitter_new2();
+    return QSplitter_New2();
 }
 
 QSplitter* q_splitter_new3(int32_t param1) {
-    return QSplitter_new3(param1);
+    return QSplitter_New3(param1);
 }
 
 QSplitter* q_splitter_new4(int32_t param1, void* parent) {
-    return QSplitter_new4(param1, (QWidget*)parent);
+    return QSplitter_New4(param1, (QWidget*)parent);
 }
 
 const QMetaObject* q_splitter_meta_object(void* self) {
@@ -2398,7 +2398,7 @@ void q_splitter_delete(void* self) {
 }
 
 QSplitterHandle* q_splitterhandle_new(int32_t o, void* parent) {
-    return QSplitterHandle_new(o, (QSplitter*)parent);
+    return QSplitterHandle_New(o, (QSplitter*)parent);
 }
 
 const QMetaObject* q_splitterhandle_meta_object(void* self) {

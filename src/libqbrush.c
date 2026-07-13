@@ -8,51 +8,51 @@
 #include "libqbrush.h"
 
 QBrush* q_brush_new() {
-    return QBrush_new();
+    return QBrush_New();
 }
 
 QBrush* q_brush_new2(int32_t bs) {
-    return QBrush_new2(bs);
+    return QBrush_New2(bs);
 }
 
 QBrush* q_brush_new3(void* color) {
-    return QBrush_new3((QColor*)color);
+    return QBrush_New3((QColor*)color);
 }
 
 QBrush* q_brush_new4(int32_t color) {
-    return QBrush_new4(color);
+    return QBrush_New4(color);
 }
 
 QBrush* q_brush_new5(void* color, void* pixmap) {
-    return QBrush_new5((QColor*)color, (QPixmap*)pixmap);
+    return QBrush_New5((QColor*)color, (QPixmap*)pixmap);
 }
 
 QBrush* q_brush_new6(int32_t color, void* pixmap) {
-    return QBrush_new6(color, (QPixmap*)pixmap);
+    return QBrush_New6(color, (QPixmap*)pixmap);
 }
 
 QBrush* q_brush_new7(void* pixmap) {
-    return QBrush_new7((QPixmap*)pixmap);
+    return QBrush_New7((QPixmap*)pixmap);
 }
 
 QBrush* q_brush_new8(void* image) {
-    return QBrush_new8((QImage*)image);
+    return QBrush_New8((QImage*)image);
 }
 
 QBrush* q_brush_new9(void* brush) {
-    return QBrush_new9((QBrush*)brush);
+    return QBrush_New9((QBrush*)brush);
 }
 
 QBrush* q_brush_new10(void* gradient) {
-    return QBrush_new10((QGradient*)gradient);
+    return QBrush_New10((QGradient*)gradient);
 }
 
 QBrush* q_brush_new11(void* color, int32_t bs) {
-    return QBrush_new11((QColor*)color, bs);
+    return QBrush_New11((QColor*)color, bs);
 }
 
 QBrush* q_brush_new12(int32_t color, int32_t bs) {
-    return QBrush_new12(color, bs);
+    return QBrush_New12(color, bs);
 }
 
 void q_brush_operator_assign(void* self, void* brush) {
@@ -136,15 +136,15 @@ void q_brush_delete(void* self) {
 }
 
 QGradient* q_gradient_new() {
-    return QGradient_new();
+    return QGradient_New();
 }
 
 QGradient* q_gradient_new2(int32_t param1) {
-    return QGradient_new2(param1);
+    return QGradient_New2(param1);
 }
 
 QGradient* q_gradient_new3(void* param1) {
-    return QGradient_new3((QGradient*)param1);
+    return QGradient_New3((QGradient*)param1);
 }
 
 int32_t q_gradient_type(void* self) {
@@ -200,19 +200,19 @@ void q_gradient_delete(void* self) {
 }
 
 QLinearGradient* q_lineargradient_new() {
-    return QLinearGradient_new();
+    return QLinearGradient_New();
 }
 
 QLinearGradient* q_lineargradient_new2(void* start, void* finalStop) {
-    return QLinearGradient_new2((QPointF*)start, (QPointF*)finalStop);
+    return QLinearGradient_New2((QPointF*)start, (QPointF*)finalStop);
 }
 
 QLinearGradient* q_lineargradient_new3(double xStart, double yStart, double xFinalStop, double yFinalStop) {
-    return QLinearGradient_new3(xStart, yStart, xFinalStop, yFinalStop);
+    return QLinearGradient_New3(xStart, yStart, xFinalStop, yFinalStop);
 }
 
 QLinearGradient* q_lineargradient_new4(void* param1) {
-    return QLinearGradient_new4((QLinearGradient*)param1);
+    return QLinearGradient_New4((QLinearGradient*)param1);
 }
 
 QPointF* q_lineargradient_start(void* self) {
@@ -292,35 +292,35 @@ void q_lineargradient_delete(void* self) {
 }
 
 QRadialGradient* q_radialgradient_new() {
-    return QRadialGradient_new();
+    return QRadialGradient_New();
 }
 
 QRadialGradient* q_radialgradient_new2(void* center, double radius, void* focalPoint) {
-    return QRadialGradient_new2((QPointF*)center, radius, (QPointF*)focalPoint);
+    return QRadialGradient_New2((QPointF*)center, radius, (QPointF*)focalPoint);
 }
 
 QRadialGradient* q_radialgradient_new3(double cx, double cy, double radius, double fx, double fy) {
-    return QRadialGradient_new3(cx, cy, radius, fx, fy);
+    return QRadialGradient_New3(cx, cy, radius, fx, fy);
 }
 
 QRadialGradient* q_radialgradient_new4(void* center, double radius) {
-    return QRadialGradient_new4((QPointF*)center, radius);
+    return QRadialGradient_New4((QPointF*)center, radius);
 }
 
 QRadialGradient* q_radialgradient_new5(double cx, double cy, double radius) {
-    return QRadialGradient_new5(cx, cy, radius);
+    return QRadialGradient_New5(cx, cy, radius);
 }
 
 QRadialGradient* q_radialgradient_new6(void* center, double centerRadius, void* focalPoint, double focalRadius) {
-    return QRadialGradient_new6((QPointF*)center, centerRadius, (QPointF*)focalPoint, focalRadius);
+    return QRadialGradient_New6((QPointF*)center, centerRadius, (QPointF*)focalPoint, focalRadius);
 }
 
 QRadialGradient* q_radialgradient_new7(double cx, double cy, double centerRadius, double fx, double fy, double focalRadius) {
-    return QRadialGradient_new7(cx, cy, centerRadius, fx, fy, focalRadius);
+    return QRadialGradient_New7(cx, cy, centerRadius, fx, fy, focalRadius);
 }
 
 QRadialGradient* q_radialgradient_new8(void* param1) {
-    return QRadialGradient_new8((QRadialGradient*)param1);
+    return QRadialGradient_New8((QRadialGradient*)param1);
 }
 
 QPointF* q_radialgradient_center(void* self) {
@@ -424,19 +424,19 @@ void q_radialgradient_delete(void* self) {
 }
 
 QConicalGradient* q_conicalgradient_new() {
-    return QConicalGradient_new();
+    return QConicalGradient_New();
 }
 
 QConicalGradient* q_conicalgradient_new2(void* center, double startAngle) {
-    return QConicalGradient_new2((QPointF*)center, startAngle);
+    return QConicalGradient_New2((QPointF*)center, startAngle);
 }
 
 QConicalGradient* q_conicalgradient_new3(double cx, double cy, double startAngle) {
-    return QConicalGradient_new3(cx, cy, startAngle);
+    return QConicalGradient_New3(cx, cy, startAngle);
 }
 
 QConicalGradient* q_conicalgradient_new4(void* param1) {
-    return QConicalGradient_new4((QConicalGradient*)param1);
+    return QConicalGradient_New4((QConicalGradient*)param1);
 }
 
 QPointF* q_conicalgradient_center(void* self) {
@@ -512,7 +512,7 @@ void q_conicalgradient_delete(void* self) {
 }
 
 QGradient__QGradientData* q_gradient__qgradientdata_new(void* param1) {
-    return QGradient__QGradientData_new((QGradient__QGradientData*)param1);
+    return QGradient__QGradientData_New((QGradient__QGradientData*)param1);
 }
 
 void q_gradient__qgradientdata_delete(void* self) {

@@ -41,11 +41,11 @@
 #include "libkratingwidget.hpp"
 #include "libkratingwidget.hxx"
 
-KRatingWidget* KRatingWidget_new(QWidget* parent) {
+KRatingWidget* KRatingWidget_New(QWidget* parent) {
     return new VirtualKRatingWidget(parent);
 }
 
-KRatingWidget* KRatingWidget_new2() {
+KRatingWidget* KRatingWidget_New2() {
     return new VirtualKRatingWidget();
 }
 

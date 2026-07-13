@@ -2,11 +2,11 @@
 #include "libgrammaraction.h"
 
 TextGrammarCheck__GrammarAction* k_textgrammarcheck__grammaraction_new() {
-    return TextGrammarCheck__GrammarAction_new();
+    return TextGrammarCheck__GrammarAction_New();
 }
 
 TextGrammarCheck__GrammarAction* k_textgrammarcheck__grammaraction_new2(void* param1) {
-    return TextGrammarCheck__GrammarAction_new2((TextGrammarCheck__GrammarAction*)param1);
+    return TextGrammarCheck__GrammarAction_New2((TextGrammarCheck__GrammarAction*)param1);
 }
 
 const char* k_textgrammarcheck__grammaraction_replacement(void* self) {

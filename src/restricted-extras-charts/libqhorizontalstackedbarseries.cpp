@@ -12,11 +12,11 @@
 #include "libqhorizontalstackedbarseries.hpp"
 #include "libqhorizontalstackedbarseries.hxx"
 
-QHorizontalStackedBarSeries* QHorizontalStackedBarSeries_new() {
+QHorizontalStackedBarSeries* QHorizontalStackedBarSeries_New() {
     return new VirtualQHorizontalStackedBarSeries();
 }
 
-QHorizontalStackedBarSeries* QHorizontalStackedBarSeries_new2(QObject* parent) {
+QHorizontalStackedBarSeries* QHorizontalStackedBarSeries_New2(QObject* parent) {
     return new VirtualQHorizontalStackedBarSeries(parent);
 }
 

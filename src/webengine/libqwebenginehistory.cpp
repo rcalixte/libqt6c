@@ -19,7 +19,7 @@
 #include "libqwebenginehistory.hpp"
 #include "libqwebenginehistory.hxx"
 
-QWebEngineHistoryItem* QWebEngineHistoryItem_new(const QWebEngineHistoryItem* other) {
+QWebEngineHistoryItem* QWebEngineHistoryItem_New(const QWebEngineHistoryItem* other) {
     return new QWebEngineHistoryItem(*other);
 }
 

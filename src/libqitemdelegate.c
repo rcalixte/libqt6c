@@ -20,11 +20,11 @@
 #include "libqitemdelegate.h"
 
 QItemDelegate* q_itemdelegate_new() {
-    return QItemDelegate_new();
+    return QItemDelegate_New();
 }
 
 QItemDelegate* q_itemdelegate_new2(void* parent) {
-    return QItemDelegate_new2((QObject*)parent);
+    return QItemDelegate_New2((QObject*)parent);
 }
 
 const QMetaObject* q_itemdelegate_meta_object(void* self) {

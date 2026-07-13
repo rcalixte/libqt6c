@@ -3,7 +3,7 @@
 #include "libqproperty.h"
 
 QScopedPropertyUpdateGroup* q_scopedpropertyupdategroup_new() {
-    return QScopedPropertyUpdateGroup_new();
+    return QScopedPropertyUpdateGroup_New();
 }
 
 void q_scopedpropertyupdategroup_delete(void* self) {
@@ -11,19 +11,19 @@ void q_scopedpropertyupdategroup_delete(void* self) {
 }
 
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new(void* other) {
-    return QPropertyBindingSourceLocation_new((QPropertyBindingSourceLocation*)other);
+    return QPropertyBindingSourceLocation_New((QPropertyBindingSourceLocation*)other);
 }
 
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new2(void* other) {
-    return QPropertyBindingSourceLocation_new2((QPropertyBindingSourceLocation*)other);
+    return QPropertyBindingSourceLocation_New2((QPropertyBindingSourceLocation*)other);
 }
 
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new3() {
-    return QPropertyBindingSourceLocation_new3();
+    return QPropertyBindingSourceLocation_New3();
 }
 
 QPropertyBindingSourceLocation* q_propertybindingsourcelocation_new4(void* param1) {
-    return QPropertyBindingSourceLocation_new4((QPropertyBindingSourceLocation*)param1);
+    return QPropertyBindingSourceLocation_New4((QPropertyBindingSourceLocation*)param1);
 }
 
 void q_propertybindingsourcelocation_copy_assign(void* self, void* other) {
@@ -71,19 +71,19 @@ void q_propertybindingsourcelocation_delete(void* self) {
 }
 
 QPropertyBindingError* q_propertybindingerror_new() {
-    return QPropertyBindingError_new();
+    return QPropertyBindingError_New();
 }
 
 QPropertyBindingError* q_propertybindingerror_new2(int32_t type) {
-    return QPropertyBindingError_new2(type);
+    return QPropertyBindingError_New2(type);
 }
 
 QPropertyBindingError* q_propertybindingerror_new3(void* other) {
-    return QPropertyBindingError_new3((QPropertyBindingError*)other);
+    return QPropertyBindingError_New3((QPropertyBindingError*)other);
 }
 
 QPropertyBindingError* q_propertybindingerror_new4(int32_t type, const char* description) {
-    return QPropertyBindingError_new4(type, qstring(description));
+    return QPropertyBindingError_New4(type, qstring(description));
 }
 
 void q_propertybindingerror_operator_assign(void* self, void* other) {
@@ -110,11 +110,11 @@ void q_propertybindingerror_delete(void* self) {
 }
 
 QUntypedPropertyBinding* q_untypedpropertybinding_new() {
-    return QUntypedPropertyBinding_new();
+    return QUntypedPropertyBinding_New();
 }
 
 QUntypedPropertyBinding* q_untypedpropertybinding_new2(void* other) {
-    return QUntypedPropertyBinding_new2((QUntypedPropertyBinding*)other);
+    return QUntypedPropertyBinding_New2((QUntypedPropertyBinding*)other);
 }
 
 void q_untypedpropertybinding_operator_assign(void* self, void* other) {
@@ -138,11 +138,11 @@ void q_untypedpropertybinding_delete(void* self) {
 }
 
 QPropertyObserverBase* q_propertyobserverbase_new() {
-    return QPropertyObserverBase_new();
+    return QPropertyObserverBase_New();
 }
 
 QPropertyObserverBase* q_propertyobserverbase_new2(void* param1) {
-    return QPropertyObserverBase_new2((QPropertyObserverBase*)param1);
+    return QPropertyObserverBase_New2((QPropertyObserverBase*)param1);
 }
 
 void q_propertyobserverbase_delete(void* self) {
@@ -150,7 +150,7 @@ void q_propertyobserverbase_delete(void* self) {
 }
 
 QPropertyObserver* q_propertyobserver_new() {
-    return QPropertyObserver_new();
+    return QPropertyObserver_New();
 }
 
 void q_propertyobserver_delete(void* self) {
@@ -158,7 +158,7 @@ void q_propertyobserver_delete(void* self) {
 }
 
 QPropertyNotifier* q_propertynotifier_new() {
-    return QPropertyNotifier_new();
+    return QPropertyNotifier_New();
 }
 
 void q_propertynotifier_delete(void* self) {
@@ -166,19 +166,19 @@ void q_propertynotifier_delete(void* self) {
 }
 
 QUntypedBindable* q_untypedbindable_new(void* other) {
-    return QUntypedBindable_new((QUntypedBindable*)other);
+    return QUntypedBindable_New((QUntypedBindable*)other);
 }
 
 QUntypedBindable* q_untypedbindable_new2(void* other) {
-    return QUntypedBindable_new2((QUntypedBindable*)other);
+    return QUntypedBindable_New2((QUntypedBindable*)other);
 }
 
 QUntypedBindable* q_untypedbindable_new3() {
-    return QUntypedBindable_new3();
+    return QUntypedBindable_New3();
 }
 
 QUntypedBindable* q_untypedbindable_new4(void* param1) {
-    return QUntypedBindable_new4((QUntypedBindable*)param1);
+    return QUntypedBindable_New4((QUntypedBindable*)param1);
 }
 
 void q_untypedbindable_copy_assign(void* self, void* other) {

@@ -16,20 +16,20 @@
 #include "libkfontaction.hpp"
 #include "libkfontaction.hxx"
 
-KFontAction* KFontAction_new(unsigned int fontListCriteria, QObject* parent) {
+KFontAction* KFontAction_New(unsigned int fontListCriteria, QObject* parent) {
     return new VirtualKFontAction(static_cast<uint>(fontListCriteria), parent);
 }
 
-KFontAction* KFontAction_new2(QObject* parent) {
+KFontAction* KFontAction_New2(QObject* parent) {
     return new VirtualKFontAction(parent);
 }
 
-KFontAction* KFontAction_new3(const libqt_string text, QObject* parent) {
+KFontAction* KFontAction_New3(const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKFontAction(text_QString, parent);
 }
 
-KFontAction* KFontAction_new4(const QIcon* icon, const libqt_string text, QObject* parent) {
+KFontAction* KFontAction_New4(const QIcon* icon, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKFontAction(*icon, text_QString, parent);
 }

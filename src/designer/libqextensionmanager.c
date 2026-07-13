@@ -7,11 +7,11 @@
 #include "libqextensionmanager.h"
 
 QExtensionManager* q_extensionmanager_new() {
-    return QExtensionManager_new();
+    return QExtensionManager_New();
 }
 
 QExtensionManager* q_extensionmanager_new2(void* parent) {
-    return QExtensionManager_new2((QObject*)parent);
+    return QExtensionManager_New2((QObject*)parent);
 }
 
 const QMetaObject* q_extensionmanager_meta_object(void* self) {

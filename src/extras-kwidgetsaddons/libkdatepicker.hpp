@@ -53,10 +53,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KDatePicker* KDatePicker_new(QWidget* parent);
-KDatePicker* KDatePicker_new2();
-KDatePicker* KDatePicker_new3(const QDate* dt);
-KDatePicker* KDatePicker_new4(const QDate* dt, QWidget* parent);
+KDatePicker* KDatePicker_New(QWidget* parent);
+KDatePicker* KDatePicker_New2();
+KDatePicker* KDatePicker_New3(const QDate* dt);
+KDatePicker* KDatePicker_New4(const QDate* dt, QWidget* parent);
 QMetaObject* KDatePicker_MetaObject(const KDatePicker* self);
 void* KDatePicker_Metacast(KDatePicker* self, const char* param1);
 int KDatePicker_Metacall(KDatePicker* self, int param1, int param2, void** param3);

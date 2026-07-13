@@ -25,11 +25,11 @@
 #include "libqnetworkaccessmanager.hpp"
 #include "libqnetworkaccessmanager.hxx"
 
-QNetworkAccessManager* QNetworkAccessManager_new() {
+QNetworkAccessManager* QNetworkAccessManager_New() {
     return new VirtualQNetworkAccessManager();
 }
 
-QNetworkAccessManager* QNetworkAccessManager_new2(QObject* parent) {
+QNetworkAccessManager* QNetworkAccessManager_New2(QObject* parent) {
     return new VirtualQNetworkAccessManager(parent);
 }
 

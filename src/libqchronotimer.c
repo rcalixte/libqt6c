@@ -6,19 +6,19 @@
 #include "libqchronotimer.h"
 
 QChronoTimer* q_chronotimer_new(int64_t nsec) {
-    return QChronoTimer_new(nsec);
+    return QChronoTimer_New(nsec);
 }
 
 QChronoTimer* q_chronotimer_new2() {
-    return QChronoTimer_new2();
+    return QChronoTimer_New2();
 }
 
 QChronoTimer* q_chronotimer_new3(int64_t nsec, void* parent) {
-    return QChronoTimer_new3(nsec, (QObject*)parent);
+    return QChronoTimer_New3(nsec, (QObject*)parent);
 }
 
 QChronoTimer* q_chronotimer_new4(void* parent) {
-    return QChronoTimer_new4((QObject*)parent);
+    return QChronoTimer_New4((QObject*)parent);
 }
 
 const QMetaObject* q_chronotimer_meta_object(void* self) {

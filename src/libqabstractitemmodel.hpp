@@ -34,8 +34,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QModelRoleData* QModelRoleData_new(int role);
-QModelRoleData* QModelRoleData_new2(const QModelRoleData* param1);
+QModelRoleData* QModelRoleData_New(int role);
+QModelRoleData* QModelRoleData_New2(const QModelRoleData* param1);
 int QModelRoleData_Role(const QModelRoleData* self);
 QVariant* QModelRoleData_Data(QModelRoleData* self);
 QVariant* QModelRoleData_Data2(const QModelRoleData* self);
@@ -43,12 +43,12 @@ void QModelRoleData_ClearData(QModelRoleData* self);
 void QModelRoleData_OperatorAssign(QModelRoleData* self, const QModelRoleData* param1);
 void QModelRoleData_Delete(QModelRoleData* self);
 
-QModelRoleDataSpan* QModelRoleDataSpan_new(const QModelRoleDataSpan* other);
-QModelRoleDataSpan* QModelRoleDataSpan_new2(QModelRoleDataSpan* other);
-QModelRoleDataSpan* QModelRoleDataSpan_new3();
-QModelRoleDataSpan* QModelRoleDataSpan_new4(QModelRoleData* modelRoleData);
-QModelRoleDataSpan* QModelRoleDataSpan_new5(QModelRoleData* modelRoleData, ptrdiff_t lenVal);
-QModelRoleDataSpan* QModelRoleDataSpan_new6(const QModelRoleDataSpan* param1);
+QModelRoleDataSpan* QModelRoleDataSpan_New(const QModelRoleDataSpan* other);
+QModelRoleDataSpan* QModelRoleDataSpan_New2(QModelRoleDataSpan* other);
+QModelRoleDataSpan* QModelRoleDataSpan_New3();
+QModelRoleDataSpan* QModelRoleDataSpan_New4(QModelRoleData* modelRoleData);
+QModelRoleDataSpan* QModelRoleDataSpan_New5(QModelRoleData* modelRoleData, ptrdiff_t lenVal);
+QModelRoleDataSpan* QModelRoleDataSpan_New6(const QModelRoleDataSpan* param1);
 void QModelRoleDataSpan_CopyAssign(QModelRoleDataSpan* self, QModelRoleDataSpan* other);
 void QModelRoleDataSpan_MoveAssign(QModelRoleDataSpan* self, QModelRoleDataSpan* other);
 ptrdiff_t QModelRoleDataSpan_Size(const QModelRoleDataSpan* self);
@@ -60,10 +60,10 @@ QModelRoleData* QModelRoleDataSpan_OperatorSubscript(const QModelRoleDataSpan* s
 QVariant* QModelRoleDataSpan_DataForRole(const QModelRoleDataSpan* self, int role);
 void QModelRoleDataSpan_Delete(QModelRoleDataSpan* self);
 
-QModelIndex* QModelIndex_new(const QModelIndex* other);
-QModelIndex* QModelIndex_new2(QModelIndex* other);
-QModelIndex* QModelIndex_new3();
-QModelIndex* QModelIndex_new4(const QModelIndex* param1);
+QModelIndex* QModelIndex_New(const QModelIndex* other);
+QModelIndex* QModelIndex_New2(QModelIndex* other);
+QModelIndex* QModelIndex_New3();
+QModelIndex* QModelIndex_New4(const QModelIndex* param1);
 void QModelIndex_CopyAssign(QModelIndex* self, QModelIndex* other);
 void QModelIndex_MoveAssign(QModelIndex* self, QModelIndex* other);
 int QModelIndex_Row(const QModelIndex* self);
@@ -83,9 +83,9 @@ bool QModelIndex_IsValid(const QModelIndex* self);
 QVariant* QModelIndex_Data1(const QModelIndex* self, int role);
 void QModelIndex_Delete(QModelIndex* self);
 
-QPersistentModelIndex* QPersistentModelIndex_new();
-QPersistentModelIndex* QPersistentModelIndex_new2(const QModelIndex* index);
-QPersistentModelIndex* QPersistentModelIndex_new3(const QPersistentModelIndex* other);
+QPersistentModelIndex* QPersistentModelIndex_New();
+QPersistentModelIndex* QPersistentModelIndex_New2(const QModelIndex* index);
+QPersistentModelIndex* QPersistentModelIndex_New3(const QPersistentModelIndex* other);
 void QPersistentModelIndex_OperatorAssign(QPersistentModelIndex* self, const QPersistentModelIndex* other);
 void QPersistentModelIndex_Swap(QPersistentModelIndex* self, QPersistentModelIndex* other);
 void QPersistentModelIndex_OperatorAssign2(QPersistentModelIndex* self, const QModelIndex* other);
@@ -105,8 +105,8 @@ bool QPersistentModelIndex_IsValid(const QPersistentModelIndex* self);
 QVariant* QPersistentModelIndex_Data1(const QPersistentModelIndex* self, int role);
 void QPersistentModelIndex_Delete(QPersistentModelIndex* self);
 
-QAbstractItemModel* QAbstractItemModel_new();
-QAbstractItemModel* QAbstractItemModel_new2(QObject* parent);
+QAbstractItemModel* QAbstractItemModel_New();
+QAbstractItemModel* QAbstractItemModel_New2(QObject* parent);
 QMetaObject* QAbstractItemModel_MetaObject(const QAbstractItemModel* self);
 void* QAbstractItemModel_Metacast(QAbstractItemModel* self, const char* param1);
 int QAbstractItemModel_Metacall(QAbstractItemModel* self, int param1, int param2, void** param3);
@@ -374,8 +374,8 @@ void QAbstractItemModel_Connect_ColumnsAboutToBeMoved(QAbstractItemModel* self, 
 void QAbstractItemModel_Connect_ColumnsMoved(QAbstractItemModel* self, intptr_t slot);
 void QAbstractItemModel_Delete(QAbstractItemModel* self);
 
-QAbstractTableModel* QAbstractTableModel_new();
-QAbstractTableModel* QAbstractTableModel_new2(QObject* parent);
+QAbstractTableModel* QAbstractTableModel_New();
+QAbstractTableModel* QAbstractTableModel_New2(QObject* parent);
 QMetaObject* QAbstractTableModel_MetaObject(const QAbstractTableModel* self);
 void* QAbstractTableModel_Metacast(QAbstractTableModel* self, const char* param1);
 int QAbstractTableModel_Metacall(QAbstractTableModel* self, int param1, int param2, void** param3);
@@ -585,8 +585,8 @@ void QAbstractTableModel_OnIsSignalConnected(const QAbstractTableModel* self, in
 bool QAbstractTableModel_SuperIsSignalConnected(const QAbstractTableModel* self, const QMetaMethod* signal);
 void QAbstractTableModel_Delete(QAbstractTableModel* self);
 
-QAbstractListModel* QAbstractListModel_new();
-QAbstractListModel* QAbstractListModel_new2(QObject* parent);
+QAbstractListModel* QAbstractListModel_New();
+QAbstractListModel* QAbstractListModel_New2(QObject* parent);
 QMetaObject* QAbstractListModel_MetaObject(const QAbstractListModel* self);
 void* QAbstractListModel_Metacast(QAbstractListModel* self, const char* param1);
 int QAbstractListModel_Metacall(QAbstractListModel* self, int param1, int param2, void** param3);

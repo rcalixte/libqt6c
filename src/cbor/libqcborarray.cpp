@@ -12,11 +12,11 @@
 #include "libqcborarray.hpp"
 #include "libqcborarray.hxx"
 
-QCborArray* QCborArray_new() {
+QCborArray* QCborArray_New() {
     return new QCborArray();
 }
 
-QCborArray* QCborArray_new2(const QCborArray* other) {
+QCborArray* QCborArray_New2(const QCborArray* other) {
     return new QCborArray(*other);
 }
 
@@ -254,15 +254,15 @@ void QCborArray_Delete(QCborArray* self) {
     delete self;
 }
 
-QCborArray__Iterator* QCborArray__Iterator_new(const QCborArray__Iterator* other) {
+QCborArray__Iterator* QCborArray__Iterator_New(const QCborArray__Iterator* other) {
     return new QCborArray::Iterator(*other);
 }
 
-QCborArray__Iterator* QCborArray__Iterator_new2() {
+QCborArray__Iterator* QCborArray__Iterator_New2() {
     return new QCborArray::Iterator();
 }
 
-QCborArray__Iterator* QCborArray__Iterator_new3(const QCborArray__Iterator* param1) {
+QCborArray__Iterator* QCborArray__Iterator_New3(const QCborArray__Iterator* param1) {
     return new QCborArray::Iterator(*param1);
 }
 
@@ -334,15 +334,15 @@ void QCborArray__Iterator_Delete(QCborArray__Iterator* self) {
     delete self;
 }
 
-QCborArray__ConstIterator* QCborArray__ConstIterator_new(const QCborArray__ConstIterator* other) {
+QCborArray__ConstIterator* QCborArray__ConstIterator_New(const QCborArray__ConstIterator* other) {
     return new QCborArray::ConstIterator(*other);
 }
 
-QCborArray__ConstIterator* QCborArray__ConstIterator_new2() {
+QCborArray__ConstIterator* QCborArray__ConstIterator_New2() {
     return new QCborArray::ConstIterator();
 }
 
-QCborArray__ConstIterator* QCborArray__ConstIterator_new3(const QCborArray__ConstIterator* param1) {
+QCborArray__ConstIterator* QCborArray__ConstIterator_New3(const QCborArray__ConstIterator* param1) {
     return new QCborArray::ConstIterator(*param1);
 }
 

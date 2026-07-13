@@ -19,8 +19,8 @@ typedef struct QByteArrayView QByteArrayView;
 typedef struct QHttpHeaders QHttpHeaders;
 #endif
 
-QHttpHeaders* QHttpHeaders_new();
-QHttpHeaders* QHttpHeaders_new2(const QHttpHeaders* other);
+QHttpHeaders* QHttpHeaders_New();
+QHttpHeaders* QHttpHeaders_New2(const QHttpHeaders* other);
 void QHttpHeaders_OperatorAssign(QHttpHeaders* self, const QHttpHeaders* other);
 void QHttpHeaders_Swap(QHttpHeaders* self, QHttpHeaders* other);
 bool QHttpHeaders_Append(QHttpHeaders* self, const char* name, const char* value);

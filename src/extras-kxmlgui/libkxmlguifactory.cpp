@@ -17,11 +17,11 @@
 #include "libkxmlguifactory.hpp"
 #include "libkxmlguifactory.hxx"
 
-KXMLGUIFactory* KXMLGUIFactory_new(KXMLGUIBuilder* builder) {
+KXMLGUIFactory* KXMLGUIFactory_New(KXMLGUIBuilder* builder) {
     return new VirtualKXMLGUIFactory(builder);
 }
 
-KXMLGUIFactory* KXMLGUIFactory_new2(KXMLGUIBuilder* builder, QObject* parent) {
+KXMLGUIFactory* KXMLGUIFactory_New2(KXMLGUIBuilder* builder, QObject* parent) {
     return new VirtualKXMLGUIFactory(builder, parent);
 }
 

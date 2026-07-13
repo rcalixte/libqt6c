@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPopupFrame* KPopupFrame_new(QWidget* parent);
-KPopupFrame* KPopupFrame_new2();
+KPopupFrame* KPopupFrame_New(QWidget* parent);
+KPopupFrame* KPopupFrame_New2();
 QMetaObject* KPopupFrame_MetaObject(const KPopupFrame* self);
 void* KPopupFrame_Metacast(KPopupFrame* self, const char* param1);
 int KPopupFrame_Metacall(KPopupFrame* self, int param1, int param2, void** param3);

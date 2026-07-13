@@ -17,11 +17,11 @@
 #include "libabstractactioneditor.h"
 
 QDesignerActionEditorInterface* q_designeractioneditorinterface_new(void* parent) {
-    return QDesignerActionEditorInterface_new((QWidget*)parent);
+    return QDesignerActionEditorInterface_New((QWidget*)parent);
 }
 
 QDesignerActionEditorInterface* q_designeractioneditorinterface_new2(void* parent, int32_t flags) {
-    return QDesignerActionEditorInterface_new2((QWidget*)parent, flags);
+    return QDesignerActionEditorInterface_New2((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_designeractioneditorinterface_meta_object(void* self) {

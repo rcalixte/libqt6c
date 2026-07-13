@@ -10,19 +10,19 @@
 #include "libqtemporaryfile.h"
 
 QTemporaryFile* q_temporaryfile_new() {
-    return QTemporaryFile_new();
+    return QTemporaryFile_New();
 }
 
 QTemporaryFile* q_temporaryfile_new2(const char* templateName) {
-    return QTemporaryFile_new2(qstring(templateName));
+    return QTemporaryFile_New2(qstring(templateName));
 }
 
 QTemporaryFile* q_temporaryfile_new3(void* parent) {
-    return QTemporaryFile_new3((QObject*)parent);
+    return QTemporaryFile_New3((QObject*)parent);
 }
 
 QTemporaryFile* q_temporaryfile_new4(const char* templateName, void* parent) {
-    return QTemporaryFile_new4(qstring(templateName), (QObject*)parent);
+    return QTemporaryFile_New4(qstring(templateName), (QObject*)parent);
 }
 
 const QMetaObject* q_temporaryfile_meta_object(void* self) {

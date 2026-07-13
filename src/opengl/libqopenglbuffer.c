@@ -2,15 +2,15 @@
 #include "libqopenglbuffer.h"
 
 QOpenGLBuffer* q_openglbuffer_new() {
-    return QOpenGLBuffer_new();
+    return QOpenGLBuffer_New();
 }
 
 QOpenGLBuffer* q_openglbuffer_new2(int32_t type) {
-    return QOpenGLBuffer_new2(type);
+    return QOpenGLBuffer_New2(type);
 }
 
 QOpenGLBuffer* q_openglbuffer_new3(void* other) {
-    return QOpenGLBuffer_new3((QOpenGLBuffer*)other);
+    return QOpenGLBuffer_New3((QOpenGLBuffer*)other);
 }
 
 void q_openglbuffer_operator_assign(void* self, void* other) {

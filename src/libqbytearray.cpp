@@ -214,11 +214,11 @@ libqt_string QByteArray_FromPercentEncoding2(const libqt_string pctEncoded, char
     return _str;
 }
 
-QByteArray__FromBase64Result* QByteArray__FromBase64Result_new(const QByteArray__FromBase64Result* param1) {
+QByteArray__FromBase64Result* QByteArray__FromBase64Result_New(const QByteArray__FromBase64Result* param1) {
     return new QByteArray::FromBase64Result(*param1);
 }
 
-QByteArray__FromBase64Result* QByteArray__FromBase64Result_new2() {
+QByteArray__FromBase64Result* QByteArray__FromBase64Result_New2() {
     return new QByteArray::FromBase64Result();
 }
 

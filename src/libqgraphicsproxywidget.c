@@ -19,15 +19,15 @@
 #include "libqgraphicsproxywidget.h"
 
 QGraphicsProxyWidget* q_graphicsproxywidget_new() {
-    return QGraphicsProxyWidget_new();
+    return QGraphicsProxyWidget_New();
 }
 
 QGraphicsProxyWidget* q_graphicsproxywidget_new2(void* parent) {
-    return QGraphicsProxyWidget_new2((QGraphicsItem*)parent);
+    return QGraphicsProxyWidget_New2((QGraphicsItem*)parent);
 }
 
 QGraphicsProxyWidget* q_graphicsproxywidget_new3(void* parent, int32_t wFlags) {
-    return QGraphicsProxyWidget_new3((QGraphicsItem*)parent, wFlags);
+    return QGraphicsProxyWidget_New3((QGraphicsItem*)parent, wFlags);
 }
 
 const QMetaObject* q_graphicsproxywidget_meta_object(void* self) {

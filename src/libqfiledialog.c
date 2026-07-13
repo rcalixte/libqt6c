@@ -20,27 +20,27 @@
 #include "libqfiledialog.h"
 
 QFileDialog* q_filedialog_new(void* parent) {
-    return QFileDialog_new((QWidget*)parent);
+    return QFileDialog_New((QWidget*)parent);
 }
 
 QFileDialog* q_filedialog_new2(void* parent, int32_t f) {
-    return QFileDialog_new2((QWidget*)parent, f);
+    return QFileDialog_New2((QWidget*)parent, f);
 }
 
 QFileDialog* q_filedialog_new3() {
-    return QFileDialog_new3();
+    return QFileDialog_New3();
 }
 
 QFileDialog* q_filedialog_new4(void* parent, const char* caption) {
-    return QFileDialog_new4((QWidget*)parent, qstring(caption));
+    return QFileDialog_New4((QWidget*)parent, qstring(caption));
 }
 
 QFileDialog* q_filedialog_new5(void* parent, const char* caption, const char* directory) {
-    return QFileDialog_new5((QWidget*)parent, qstring(caption), qstring(directory));
+    return QFileDialog_New5((QWidget*)parent, qstring(caption), qstring(directory));
 }
 
 QFileDialog* q_filedialog_new6(void* parent, const char* caption, const char* directory, const char* filter) {
-    return QFileDialog_new6((QWidget*)parent, qstring(caption), qstring(directory), qstring(filter));
+    return QFileDialog_New6((QWidget*)parent, qstring(caption), qstring(directory), qstring(filter));
 }
 
 const QMetaObject* q_filedialog_meta_object(void* self) {

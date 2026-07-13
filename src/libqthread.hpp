@@ -26,8 +26,8 @@ typedef struct QThread QThread;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QThread* QThread_new();
-QThread* QThread_new2(QObject* parent);
+QThread* QThread_New();
+QThread* QThread_New2(QObject* parent);
 QMetaObject* QThread_MetaObject(const QThread* self);
 void* QThread_Metacast(QThread* self, const char* param1);
 int QThread_Metacall(QThread* self, int param1, int param2, void** param3);

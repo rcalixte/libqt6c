@@ -9,15 +9,15 @@
 #include "libqnetworkrequest.h"
 
 QNetworkRequest* q_networkrequest_new() {
-    return QNetworkRequest_new();
+    return QNetworkRequest_New();
 }
 
 QNetworkRequest* q_networkrequest_new2(void* url) {
-    return QNetworkRequest_new2((QUrl*)url);
+    return QNetworkRequest_New2((QUrl*)url);
 }
 
 QNetworkRequest* q_networkrequest_new3(void* other) {
-    return QNetworkRequest_new3((QNetworkRequest*)other);
+    return QNetworkRequest_New3((QNetworkRequest*)other);
 }
 
 void q_networkrequest_operator_assign(void* self, void* other) {

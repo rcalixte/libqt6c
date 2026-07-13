@@ -4,19 +4,19 @@
 #include "libqbitarray.hpp"
 #include "libqbitarray.hxx"
 
-QBitArray* QBitArray_new() {
+QBitArray* QBitArray_New() {
     return new QBitArray();
 }
 
-QBitArray* QBitArray_new2(ptrdiff_t size) {
+QBitArray* QBitArray_New2(ptrdiff_t size) {
     return new QBitArray((qsizetype)(size));
 }
 
-QBitArray* QBitArray_new3(const QBitArray* other) {
+QBitArray* QBitArray_New3(const QBitArray* other) {
     return new QBitArray(*other);
 }
 
-QBitArray* QBitArray_new4(ptrdiff_t size, bool val) {
+QBitArray* QBitArray_New4(ptrdiff_t size, bool val) {
     return new QBitArray((qsizetype)(size), val);
 }
 
@@ -144,11 +144,11 @@ void QBitArray_Delete(QBitArray* self) {
     delete self;
 }
 
-QBitRef* QBitRef_new(const QBitRef* other) {
+QBitRef* QBitRef_New(const QBitRef* other) {
     return new QBitRef(*other);
 }
 
-QBitRef* QBitRef_new2(const QBitRef* param1) {
+QBitRef* QBitRef_New2(const QBitRef* param1) {
     return new QBitRef(*param1);
 }
 

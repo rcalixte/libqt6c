@@ -29,9 +29,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoServiceProvider* QGeoServiceProvider_new(const libqt_string providerName);
-QGeoServiceProvider* QGeoServiceProvider_new2(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters);
-QGeoServiceProvider* QGeoServiceProvider_new3(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters, bool allowExperimental);
+QGeoServiceProvider* QGeoServiceProvider_New(const libqt_string providerName);
+QGeoServiceProvider* QGeoServiceProvider_New2(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters);
+QGeoServiceProvider* QGeoServiceProvider_New3(const libqt_string providerName, const libqt_map /* of libqt_string to QVariant* */ parameters, bool allowExperimental);
 QMetaObject* QGeoServiceProvider_MetaObject(const QGeoServiceProvider* self);
 void* QGeoServiceProvider_Metacast(QGeoServiceProvider* self, const char* param1);
 int QGeoServiceProvider_Metacall(QGeoServiceProvider* self, int param1, int param2, void** param3);

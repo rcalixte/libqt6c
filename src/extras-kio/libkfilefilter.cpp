@@ -5,11 +5,11 @@
 #include "libkfilefilter.hpp"
 #include "libkfilefilter.hxx"
 
-KFileFilter* KFileFilter_new() {
+KFileFilter* KFileFilter_New() {
     return new KFileFilter();
 }
 
-KFileFilter* KFileFilter_new2(const libqt_string label, const libqt_list /* of libqt_string */ filePatterns, const libqt_list /* of libqt_string */ mimePatterns) {
+KFileFilter* KFileFilter_New2(const libqt_string label, const libqt_list /* of libqt_string */ filePatterns, const libqt_list /* of libqt_string */ mimePatterns) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     QList<QString> filePatterns_QList;
     filePatterns_QList.reserve(filePatterns.len);
@@ -28,7 +28,7 @@ KFileFilter* KFileFilter_new2(const libqt_string label, const libqt_list /* of l
     return new KFileFilter(label_QString, filePatterns_QList, mimePatterns_QList);
 }
 
-KFileFilter* KFileFilter_new3(const KFileFilter* other) {
+KFileFilter* KFileFilter_New3(const KFileFilter* other) {
     return new KFileFilter(*other);
 }
 

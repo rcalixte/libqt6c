@@ -17,39 +17,39 @@
 #include "libqsvgrenderer.hpp"
 #include "libqsvgrenderer.hxx"
 
-QSvgRenderer* QSvgRenderer_new() {
+QSvgRenderer* QSvgRenderer_New() {
     return new VirtualQSvgRenderer();
 }
 
-QSvgRenderer* QSvgRenderer_new2(const libqt_string filename) {
+QSvgRenderer* QSvgRenderer_New2(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualQSvgRenderer(filename_QString);
 }
 
-QSvgRenderer* QSvgRenderer_new3(const libqt_string contents) {
+QSvgRenderer* QSvgRenderer_New3(const libqt_string contents) {
     QByteArray contents_QByteArray(contents.data, contents.len);
     return new VirtualQSvgRenderer(contents_QByteArray);
 }
 
-QSvgRenderer* QSvgRenderer_new4(QXmlStreamReader* contents) {
+QSvgRenderer* QSvgRenderer_New4(QXmlStreamReader* contents) {
     return new VirtualQSvgRenderer(contents);
 }
 
-QSvgRenderer* QSvgRenderer_new5(QObject* parent) {
+QSvgRenderer* QSvgRenderer_New5(QObject* parent) {
     return new VirtualQSvgRenderer(parent);
 }
 
-QSvgRenderer* QSvgRenderer_new6(const libqt_string filename, QObject* parent) {
+QSvgRenderer* QSvgRenderer_New6(const libqt_string filename, QObject* parent) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualQSvgRenderer(filename_QString, parent);
 }
 
-QSvgRenderer* QSvgRenderer_new7(const libqt_string contents, QObject* parent) {
+QSvgRenderer* QSvgRenderer_New7(const libqt_string contents, QObject* parent) {
     QByteArray contents_QByteArray(contents.data, contents.len);
     return new VirtualQSvgRenderer(contents_QByteArray, parent);
 }
 
-QSvgRenderer* QSvgRenderer_new8(QXmlStreamReader* contents, QObject* parent) {
+QSvgRenderer* QSvgRenderer_New8(QXmlStreamReader* contents, QObject* parent) {
     return new VirtualQSvgRenderer(contents, parent);
 }
 

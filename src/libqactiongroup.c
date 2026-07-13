@@ -8,7 +8,7 @@
 #include "libqactiongroup.h"
 
 QActionGroup* q_actiongroup_new(void* parent) {
-    return QActionGroup_new((QObject*)parent);
+    return QActionGroup_New((QObject*)parent);
 }
 
 const QMetaObject* q_actiongroup_meta_object(void* self) {

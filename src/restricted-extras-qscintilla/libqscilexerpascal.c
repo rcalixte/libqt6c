@@ -11,11 +11,11 @@
 #include "libqscilexerpascal.h"
 
 QsciLexerPascal* q_scilexerpascal_new() {
-    return QsciLexerPascal_new();
+    return QsciLexerPascal_New();
 }
 
 QsciLexerPascal* q_scilexerpascal_new2(void* parent) {
-    return QsciLexerPascal_new2((QObject*)parent);
+    return QsciLexerPascal_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerpascal_meta_object(void* self) {

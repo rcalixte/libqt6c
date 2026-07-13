@@ -6,11 +6,11 @@
 #include "libformat.hpp"
 #include "libformat.hxx"
 
-KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_new() {
+KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_New() {
     return new KSyntaxHighlighting::Format();
 }
 
-KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_new2(const KSyntaxHighlighting__Format* other) {
+KSyntaxHighlighting__Format* KSyntaxHighlighting__Format_New2(const KSyntaxHighlighting__Format* other) {
     return new KSyntaxHighlighting::Format(*other);
 }
 

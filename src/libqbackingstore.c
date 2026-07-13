@@ -7,7 +7,7 @@
 #include "libqbackingstore.h"
 
 QBackingStore* q_backingstore_new(void* window) {
-    return QBackingStore_new((QWindow*)window);
+    return QBackingStore_New((QWindow*)window);
 }
 
 QWindow* q_backingstore_window(void* self) {

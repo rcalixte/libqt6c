@@ -29,7 +29,7 @@ typedef struct QTextObject QTextObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QTextList* QTextList_new(QTextDocument* doc);
+QTextList* QTextList_New(QTextDocument* doc);
 QMetaObject* QTextList_MetaObject(const QTextList* self);
 void* QTextList_Metacast(QTextList* self, const char* param1);
 int QTextList_Metacall(QTextList* self, int param1, int param2, void** param3);

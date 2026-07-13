@@ -25,8 +25,8 @@ typedef struct QOpenGLTimerQuery QOpenGLTimerQuery;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QOpenGLTimerQuery* QOpenGLTimerQuery_new();
-QOpenGLTimerQuery* QOpenGLTimerQuery_new2(QObject* parent);
+QOpenGLTimerQuery* QOpenGLTimerQuery_New();
+QOpenGLTimerQuery* QOpenGLTimerQuery_New2(QObject* parent);
 QMetaObject* QOpenGLTimerQuery_MetaObject(const QOpenGLTimerQuery* self);
 void* QOpenGLTimerQuery_Metacast(QOpenGLTimerQuery* self, const char* param1);
 int QOpenGLTimerQuery_Metacall(QOpenGLTimerQuery* self, int param1, int param2, void** param3);
@@ -81,8 +81,8 @@ void QOpenGLTimerQuery_OnIsSignalConnected(const QOpenGLTimerQuery* self, intptr
 bool QOpenGLTimerQuery_SuperIsSignalConnected(const QOpenGLTimerQuery* self, const QMetaMethod* signal);
 void QOpenGLTimerQuery_Delete(QOpenGLTimerQuery* self);
 
-QOpenGLTimeMonitor* QOpenGLTimeMonitor_new();
-QOpenGLTimeMonitor* QOpenGLTimeMonitor_new2(QObject* parent);
+QOpenGLTimeMonitor* QOpenGLTimeMonitor_New();
+QOpenGLTimeMonitor* QOpenGLTimeMonitor_New2(QObject* parent);
 QMetaObject* QOpenGLTimeMonitor_MetaObject(const QOpenGLTimeMonitor* self);
 void* QOpenGLTimeMonitor_Metacast(QOpenGLTimeMonitor* self, const char* param1);
 int QOpenGLTimeMonitor_Metacall(QOpenGLTimeMonitor* self, int param1, int param2, void** param3);

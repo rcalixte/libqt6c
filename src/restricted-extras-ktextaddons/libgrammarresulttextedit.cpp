@@ -48,11 +48,11 @@
 #include "libgrammarresulttextedit.hpp"
 #include "libgrammarresulttextedit.hxx"
 
-TextGrammarCheck__GrammarResultTextEdit* TextGrammarCheck__GrammarResultTextEdit_new(QWidget* parent) {
+TextGrammarCheck__GrammarResultTextEdit* TextGrammarCheck__GrammarResultTextEdit_New(QWidget* parent) {
     return new VirtualTextGrammarCheckGrammarResultTextEdit(parent);
 }
 
-TextGrammarCheck__GrammarResultTextEdit* TextGrammarCheck__GrammarResultTextEdit_new2() {
+TextGrammarCheck__GrammarResultTextEdit* TextGrammarCheck__GrammarResultTextEdit_New2() {
     return new VirtualTextGrammarCheckGrammarResultTextEdit();
 }
 

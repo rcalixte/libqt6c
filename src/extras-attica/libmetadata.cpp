@@ -7,11 +7,11 @@
 #include "libmetadata.hpp"
 #include "libmetadata.hxx"
 
-Attica__Metadata* Attica__Metadata_new() {
+Attica__Metadata* Attica__Metadata_New() {
     return new Attica::Metadata();
 }
 
-Attica__Metadata* Attica__Metadata_new2(const Attica__Metadata* other) {
+Attica__Metadata* Attica__Metadata_New2(const Attica__Metadata* other) {
     return new Attica::Metadata(*other);
 }
 

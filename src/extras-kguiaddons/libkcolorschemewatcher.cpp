@@ -10,11 +10,11 @@
 #include "libkcolorschemewatcher.hpp"
 #include "libkcolorschemewatcher.hxx"
 
-KColorSchemeWatcher* KColorSchemeWatcher_new() {
+KColorSchemeWatcher* KColorSchemeWatcher_New() {
     return new VirtualKColorSchemeWatcher();
 }
 
-KColorSchemeWatcher* KColorSchemeWatcher_new2(QObject* parent) {
+KColorSchemeWatcher* KColorSchemeWatcher_New2(QObject* parent) {
     return new VirtualKColorSchemeWatcher(parent);
 }
 

@@ -3,7 +3,7 @@
 #include "libqbasictimer.h"
 
 QBasicTimer* q_basictimer_new() {
-    return QBasicTimer_new();
+    return QBasicTimer_New();
 }
 
 void q_basictimer_swap(void* self, void* other) {

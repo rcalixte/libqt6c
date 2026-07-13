@@ -6,11 +6,11 @@
 #include "libkremoteencoding.hpp"
 #include "libkremoteencoding.hxx"
 
-KRemoteEncoding* KRemoteEncoding_new() {
+KRemoteEncoding* KRemoteEncoding_New() {
     return new VirtualKRemoteEncoding();
 }
 
-KRemoteEncoding* KRemoteEncoding_new2(const char* name) {
+KRemoteEncoding* KRemoteEncoding_New2(const char* name) {
     return new VirtualKRemoteEncoding(name);
 }
 

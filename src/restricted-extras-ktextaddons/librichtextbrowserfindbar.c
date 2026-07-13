@@ -17,11 +17,11 @@
 #include "librichtextbrowserfindbar.h"
 
 TextCustomEditor__RichTextBrowserFindBar* k_textcustomeditor__richtextbrowserfindbar_new(void* view) {
-    return TextCustomEditor__RichTextBrowserFindBar_new((QTextBrowser*)view);
+    return TextCustomEditor__RichTextBrowserFindBar_New((QTextBrowser*)view);
 }
 
 TextCustomEditor__RichTextBrowserFindBar* k_textcustomeditor__richtextbrowserfindbar_new2(void* view, void* parent) {
-    return TextCustomEditor__RichTextBrowserFindBar_new2((QTextBrowser*)view, (QWidget*)parent);
+    return TextCustomEditor__RichTextBrowserFindBar_New2((QTextBrowser*)view, (QWidget*)parent);
 }
 
 const QMetaObject* k_textcustomeditor__richtextbrowserfindbar_meta_object(void* self) {

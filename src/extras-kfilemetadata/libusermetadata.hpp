@@ -22,8 +22,8 @@ typedef struct KFileMetaData__UserMetaData KFileMetaData__UserMetaData;
 typedef struct QUrl QUrl;
 #endif
 
-KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_new(const libqt_string filePath);
-KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_new2(const KFileMetaData__UserMetaData* rhs);
+KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_New(const libqt_string filePath);
+KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_New2(const KFileMetaData__UserMetaData* rhs);
 void KFileMetaData__UserMetaData_OperatorAssign(KFileMetaData__UserMetaData* self, const KFileMetaData__UserMetaData* rhs);
 libqt_string KFileMetaData__UserMetaData_FilePath(const KFileMetaData__UserMetaData* self);
 bool KFileMetaData__UserMetaData_IsSupported(const KFileMetaData__UserMetaData* self);

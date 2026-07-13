@@ -5,23 +5,23 @@
 #include "libnetwm_def.hpp"
 #include "libnetwm_def.hxx"
 
-NETPoint* NETPoint_new(const NETPoint* other) {
+NETPoint* NETPoint_New(const NETPoint* other) {
     return new NETPoint(*other);
 }
 
-NETPoint* NETPoint_new2(NETPoint* other) {
+NETPoint* NETPoint_New2(NETPoint* other) {
     return new NETPoint(std::move(*other));
 }
 
-NETPoint* NETPoint_new3() {
+NETPoint* NETPoint_New3() {
     return new NETPoint();
 }
 
-NETPoint* NETPoint_new4(const QPoint* p) {
+NETPoint* NETPoint_New4(const QPoint* p) {
     return new NETPoint(*p);
 }
 
-NETPoint* NETPoint_new5(const NETPoint* param1) {
+NETPoint* NETPoint_New5(const NETPoint* param1) {
     return new NETPoint(*param1);
 }
 
@@ -57,23 +57,23 @@ void NETPoint_Delete(NETPoint* self) {
     delete self;
 }
 
-NETSize* NETSize_new(const NETSize* other) {
+NETSize* NETSize_New(const NETSize* other) {
     return new NETSize(*other);
 }
 
-NETSize* NETSize_new2(NETSize* other) {
+NETSize* NETSize_New2(NETSize* other) {
     return new NETSize(std::move(*other));
 }
 
-NETSize* NETSize_new3() {
+NETSize* NETSize_New3() {
     return new NETSize();
 }
 
-NETSize* NETSize_new4(const QSize* size) {
+NETSize* NETSize_New4(const QSize* size) {
     return new NETSize(*size);
 }
 
-NETSize* NETSize_new5(const NETSize* param1) {
+NETSize* NETSize_New5(const NETSize* param1) {
     return new NETSize(*param1);
 }
 
@@ -109,19 +109,19 @@ void NETSize_Delete(NETSize* self) {
     delete self;
 }
 
-NETRect* NETRect_new(const NETRect* other) {
+NETRect* NETRect_New(const NETRect* other) {
     return new NETRect(*other);
 }
 
-NETRect* NETRect_new2(NETRect* other) {
+NETRect* NETRect_New2(NETRect* other) {
     return new NETRect(std::move(*other));
 }
 
-NETRect* NETRect_new3() {
+NETRect* NETRect_New3() {
     return new NETRect();
 }
 
-NETRect* NETRect_new4(const QRect* rect) {
+NETRect* NETRect_New4(const QRect* rect) {
     return new NETRect(*rect);
 }
 
@@ -157,15 +157,15 @@ void NETRect_Delete(NETRect* self) {
     delete self;
 }
 
-NETIcon* NETIcon_new(const NETIcon* other) {
+NETIcon* NETIcon_New(const NETIcon* other) {
     return new NETIcon(*other);
 }
 
-NETIcon* NETIcon_new2(NETIcon* other) {
+NETIcon* NETIcon_New2(NETIcon* other) {
     return new NETIcon(std::move(*other));
 }
 
-NETIcon* NETIcon_new3() {
+NETIcon* NETIcon_New3() {
     return new NETIcon();
 }
 
@@ -197,15 +197,15 @@ void NETIcon_Delete(NETIcon* self) {
     delete self;
 }
 
-NETExtendedStrut* NETExtendedStrut_new(const NETExtendedStrut* other) {
+NETExtendedStrut* NETExtendedStrut_New(const NETExtendedStrut* other) {
     return new NETExtendedStrut(*other);
 }
 
-NETExtendedStrut* NETExtendedStrut_new2(NETExtendedStrut* other) {
+NETExtendedStrut* NETExtendedStrut_New2(NETExtendedStrut* other) {
     return new NETExtendedStrut(std::move(*other));
 }
 
-NETExtendedStrut* NETExtendedStrut_new3() {
+NETExtendedStrut* NETExtendedStrut_New3() {
     return new NETExtendedStrut();
 }
 
@@ -317,15 +317,15 @@ void NETExtendedStrut_Delete(NETExtendedStrut* self) {
     delete self;
 }
 
-NETStrut* NETStrut_new(const NETStrut* other) {
+NETStrut* NETStrut_New(const NETStrut* other) {
     return new NETStrut(*other);
 }
 
-NETStrut* NETStrut_new2(NETStrut* other) {
+NETStrut* NETStrut_New2(NETStrut* other) {
     return new NETStrut(std::move(*other));
 }
 
-NETStrut* NETStrut_new3() {
+NETStrut* NETStrut_New3() {
     return new NETStrut();
 }
 
@@ -373,15 +373,15 @@ void NETStrut_Delete(NETStrut* self) {
     delete self;
 }
 
-NETFullscreenMonitors* NETFullscreenMonitors_new(const NETFullscreenMonitors* other) {
+NETFullscreenMonitors* NETFullscreenMonitors_New(const NETFullscreenMonitors* other) {
     return new NETFullscreenMonitors(*other);
 }
 
-NETFullscreenMonitors* NETFullscreenMonitors_new2(NETFullscreenMonitors* other) {
+NETFullscreenMonitors* NETFullscreenMonitors_New2(NETFullscreenMonitors* other) {
     return new NETFullscreenMonitors(std::move(*other));
 }
 
-NETFullscreenMonitors* NETFullscreenMonitors_new3() {
+NETFullscreenMonitors* NETFullscreenMonitors_New3() {
     return new NETFullscreenMonitors();
 }
 
@@ -433,11 +433,11 @@ void NETFullscreenMonitors_Delete(NETFullscreenMonitors* self) {
     delete self;
 }
 
-NET* NET_new(const NET* other) {
+NET* NET_New(const NET* other) {
     return new NET(*other);
 }
 
-NET* NET_new2(NET* other) {
+NET* NET_New2(NET* other) {
     return new NET(std::move(*other));
 }
 

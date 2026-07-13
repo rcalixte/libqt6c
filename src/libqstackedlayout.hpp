@@ -30,9 +30,9 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QStackedLayout* QStackedLayout_new(QWidget* parent);
-QStackedLayout* QStackedLayout_new2();
-QStackedLayout* QStackedLayout_new3(QLayout* parentLayout);
+QStackedLayout* QStackedLayout_New(QWidget* parent);
+QStackedLayout* QStackedLayout_New2();
+QStackedLayout* QStackedLayout_New3(QLayout* parentLayout);
 QMetaObject* QStackedLayout_MetaObject(const QStackedLayout* self);
 void* QStackedLayout_Metacast(QStackedLayout* self, const char* param1);
 int QStackedLayout_Metacall(QStackedLayout* self, int param1, int param2, void** param3);

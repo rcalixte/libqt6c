@@ -10,7 +10,7 @@
 #include "libpartbase.hpp"
 #include "libpartbase.hxx"
 
-KParts__PartBase* KParts__PartBase_new() {
+KParts__PartBase* KParts__PartBase_New() {
     return new VirtualKPartsPartBase();
 }
 

@@ -6,32 +6,32 @@
 #include "libkxmessages.h"
 
 KXMessages* k_xmessages_new() {
-    return KXMessages_new();
+    return KXMessages_New();
 }
 
 #ifdef __linux__
 KXMessages* k_xmessages_new2(xcb_connection_t* connection, xcb_window_t rootWindow) {
-    return KXMessages_new2(connection, rootWindow);
+    return KXMessages_New2(connection, rootWindow);
 }
 #endif
 
 KXMessages* k_xmessages_new3(const char* accept_broadcast) {
-    return KXMessages_new3(accept_broadcast);
+    return KXMessages_New3(accept_broadcast);
 }
 
 KXMessages* k_xmessages_new4(const char* accept_broadcast, void* parent) {
-    return KXMessages_new4(accept_broadcast, (QObject*)parent);
+    return KXMessages_New4(accept_broadcast, (QObject*)parent);
 }
 
 #ifdef __linux__
 KXMessages* k_xmessages_new5(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast) {
-    return KXMessages_new5(connection, rootWindow, accept_broadcast);
+    return KXMessages_New5(connection, rootWindow, accept_broadcast);
 }
 #endif
 
 #ifdef __linux__
 KXMessages* k_xmessages_new6(xcb_connection_t* connection, xcb_window_t rootWindow, const char* accept_broadcast, void* parent) {
-    return KXMessages_new6(connection, rootWindow, accept_broadcast, (QObject*)parent);
+    return KXMessages_New6(connection, rootWindow, accept_broadcast, (QObject*)parent);
 }
 #endif
 

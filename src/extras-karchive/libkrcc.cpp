@@ -8,12 +8,12 @@
 #include "libkrcc.hpp"
 #include "libkrcc.hxx"
 
-KRcc* KRcc_new(const libqt_string filename) {
+KRcc* KRcc_New(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualKRcc(filename_QString);
 }
 
-KRcc* KRcc_new2(const KRcc* param1) {
+KRcc* KRcc_New2(const KRcc* param1) {
     return new VirtualKRcc(*param1);
 }
 

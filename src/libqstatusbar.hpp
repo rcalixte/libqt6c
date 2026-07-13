@@ -50,8 +50,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QStatusBar* QStatusBar_new(QWidget* parent);
-QStatusBar* QStatusBar_new2();
+QStatusBar* QStatusBar_New(QWidget* parent);
+QStatusBar* QStatusBar_New2();
 QMetaObject* QStatusBar_MetaObject(const QStatusBar* self);
 void* QStatusBar_Metacast(QStatusBar* self, const char* param1);
 int QStatusBar_Metacall(QStatusBar* self, int param1, int param2, void** param3);

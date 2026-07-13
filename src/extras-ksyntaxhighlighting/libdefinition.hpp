@@ -22,8 +22,8 @@ typedef struct KSyntaxHighlighting__Format KSyntaxHighlighting__Format;
 typedef struct QChar QChar;
 #endif
 
-KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_new();
-KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_new2(const KSyntaxHighlighting__Definition* other);
+KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_New();
+KSyntaxHighlighting__Definition* KSyntaxHighlighting__Definition_New2(const KSyntaxHighlighting__Definition* other);
 void KSyntaxHighlighting__Definition_OperatorAssign(KSyntaxHighlighting__Definition* self, const KSyntaxHighlighting__Definition* rhs);
 bool KSyntaxHighlighting__Definition_OperatorEqual(const KSyntaxHighlighting__Definition* self, const KSyntaxHighlighting__Definition* other);
 bool KSyntaxHighlighting__Definition_OperatorNotEqual(const KSyntaxHighlighting__Definition* self, const KSyntaxHighlighting__Definition* other);

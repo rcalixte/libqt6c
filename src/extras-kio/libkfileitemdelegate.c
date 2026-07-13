@@ -19,11 +19,11 @@
 #include "libkfileitemdelegate.h"
 
 KFileItemDelegate* k_fileitemdelegate_new() {
-    return KFileItemDelegate_new();
+    return KFileItemDelegate_New();
 }
 
 KFileItemDelegate* k_fileitemdelegate_new2(void* parent) {
-    return KFileItemDelegate_new2((QObject*)parent);
+    return KFileItemDelegate_New2((QObject*)parent);
 }
 
 const QMetaObject* k_fileitemdelegate_meta_object(void* self) {

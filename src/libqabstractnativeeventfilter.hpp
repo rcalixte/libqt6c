@@ -18,7 +18,7 @@ extern "C" {
 typedef struct QAbstractNativeEventFilter QAbstractNativeEventFilter;
 #endif
 
-QAbstractNativeEventFilter* QAbstractNativeEventFilter_new();
+QAbstractNativeEventFilter* QAbstractNativeEventFilter_New();
 bool QAbstractNativeEventFilter_NativeEventFilter(QAbstractNativeEventFilter* self, const libqt_string eventType, void* message, intptr_t* result);
 void QAbstractNativeEventFilter_OnNativeEventFilter(QAbstractNativeEventFilter* self, intptr_t slot);
 bool QAbstractNativeEventFilter_SuperNativeEventFilter(QAbstractNativeEventFilter* self, const libqt_string eventType, void* message, intptr_t* result);

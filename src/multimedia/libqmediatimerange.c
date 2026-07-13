@@ -2,19 +2,19 @@
 #include "libqmediatimerange.h"
 
 QMediaTimeRange* q_mediatimerange_new() {
-    return QMediaTimeRange_new();
+    return QMediaTimeRange_New();
 }
 
 QMediaTimeRange* q_mediatimerange_new2(int64_t start, int64_t end) {
-    return QMediaTimeRange_new2(start, end);
+    return QMediaTimeRange_New2(start, end);
 }
 
 QMediaTimeRange* q_mediatimerange_new3(void* param1) {
-    return QMediaTimeRange_new3((QMediaTimeRange__Interval*)param1);
+    return QMediaTimeRange_New3((QMediaTimeRange__Interval*)param1);
 }
 
 QMediaTimeRange* q_mediatimerange_new4(void* range) {
-    return QMediaTimeRange_new4((QMediaTimeRange*)range);
+    return QMediaTimeRange_New4((QMediaTimeRange*)range);
 }
 
 void q_mediatimerange_operator_assign(void* self, void* param1) {
@@ -107,23 +107,23 @@ void q_mediatimerange_delete(void* self) {
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new(void* other) {
-    return QMediaTimeRange__Interval_new((QMediaTimeRange__Interval*)other);
+    return QMediaTimeRange__Interval_New((QMediaTimeRange__Interval*)other);
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new2(void* other) {
-    return QMediaTimeRange__Interval_new2((QMediaTimeRange__Interval*)other);
+    return QMediaTimeRange__Interval_New2((QMediaTimeRange__Interval*)other);
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new3() {
-    return QMediaTimeRange__Interval_new3();
+    return QMediaTimeRange__Interval_New3();
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new4(int64_t start, int64_t end) {
-    return QMediaTimeRange__Interval_new4(start, end);
+    return QMediaTimeRange__Interval_New4(start, end);
 }
 
 QMediaTimeRange__Interval* q_mediatimerange__interval_new5(void* param1) {
-    return QMediaTimeRange__Interval_new5((QMediaTimeRange__Interval*)param1);
+    return QMediaTimeRange__Interval_New5((QMediaTimeRange__Interval*)param1);
 }
 
 void q_mediatimerange__interval_copy_assign(void* self, void* other) {

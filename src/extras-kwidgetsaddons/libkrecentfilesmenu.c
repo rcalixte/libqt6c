@@ -18,19 +18,19 @@
 #include "libkrecentfilesmenu.h"
 
 KRecentFilesMenu* k_recentfilesmenu_new(void* parent) {
-    return KRecentFilesMenu_new((QWidget*)parent);
+    return KRecentFilesMenu_New((QWidget*)parent);
 }
 
 KRecentFilesMenu* k_recentfilesmenu_new2(const char* title) {
-    return KRecentFilesMenu_new2(qstring(title));
+    return KRecentFilesMenu_New2(qstring(title));
 }
 
 KRecentFilesMenu* k_recentfilesmenu_new3() {
-    return KRecentFilesMenu_new3();
+    return KRecentFilesMenu_New3();
 }
 
 KRecentFilesMenu* k_recentfilesmenu_new4(const char* title, void* parent) {
-    return KRecentFilesMenu_new4(qstring(title), (QWidget*)parent);
+    return KRecentFilesMenu_New4(qstring(title), (QWidget*)parent);
 }
 
 const QMetaObject* k_recentfilesmenu_meta_object(void* self) {

@@ -2,11 +2,11 @@
 #include "libopenurlarguments.h"
 
 KParts__OpenUrlArguments* k_parts__openurlarguments_new() {
-    return KParts__OpenUrlArguments_new();
+    return KParts__OpenUrlArguments_New();
 }
 
 KParts__OpenUrlArguments* k_parts__openurlarguments_new2(void* other) {
-    return KParts__OpenUrlArguments_new2((KParts__OpenUrlArguments*)other);
+    return KParts__OpenUrlArguments_New2((KParts__OpenUrlArguments*)other);
 }
 
 void k_parts__openurlarguments_operator_assign(void* self, void* other) {

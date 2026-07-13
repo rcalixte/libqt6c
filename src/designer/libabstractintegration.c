@@ -11,11 +11,11 @@
 #include "libabstractintegration.h"
 
 QDesignerIntegrationInterface* q_designerintegrationinterface_new(void* core) {
-    return QDesignerIntegrationInterface_new((QDesignerFormEditorInterface*)core);
+    return QDesignerIntegrationInterface_New((QDesignerFormEditorInterface*)core);
 }
 
 QDesignerIntegrationInterface* q_designerintegrationinterface_new2(void* core, void* parent) {
-    return QDesignerIntegrationInterface_new2((QDesignerFormEditorInterface*)core, (QObject*)parent);
+    return QDesignerIntegrationInterface_New2((QDesignerFormEditorInterface*)core, (QObject*)parent);
 }
 
 const QMetaObject* q_designerintegrationinterface_meta_object(void* self) {
@@ -741,11 +741,11 @@ void q_designerintegrationinterface_delete(void* self) {
 }
 
 QDesignerIntegration* q_designerintegration_new(void* core) {
-    return QDesignerIntegration_new((QDesignerFormEditorInterface*)core);
+    return QDesignerIntegration_New((QDesignerFormEditorInterface*)core);
 }
 
 QDesignerIntegration* q_designerintegration_new2(void* core, void* parent) {
-    return QDesignerIntegration_new2((QDesignerFormEditorInterface*)core, (QObject*)parent);
+    return QDesignerIntegration_New2((QDesignerFormEditorInterface*)core, (QObject*)parent);
 }
 
 const QMetaObject* q_designerintegration_meta_object(void* self) {

@@ -37,11 +37,11 @@
 #include "libemoticontexteditselector.hpp"
 #include "libemoticontexteditselector.hxx"
 
-TextEmoticonsWidgets__EmoticonTextEditSelector* TextEmoticonsWidgets__EmoticonTextEditSelector_new(QWidget* parent) {
+TextEmoticonsWidgets__EmoticonTextEditSelector* TextEmoticonsWidgets__EmoticonTextEditSelector_New(QWidget* parent) {
     return new VirtualTextEmoticonsWidgetsEmoticonTextEditSelector(parent);
 }
 
-TextEmoticonsWidgets__EmoticonTextEditSelector* TextEmoticonsWidgets__EmoticonTextEditSelector_new2() {
+TextEmoticonsWidgets__EmoticonTextEditSelector* TextEmoticonsWidgets__EmoticonTextEditSelector_New2() {
     return new VirtualTextEmoticonsWidgetsEmoticonTextEditSelector();
 }
 

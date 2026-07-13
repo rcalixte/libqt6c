@@ -9,11 +9,11 @@
 #include "libkfilepreviewgenerator.h"
 
 KFilePreviewGenerator* k_filepreviewgenerator_new(void* parent) {
-    return KFilePreviewGenerator_new((QAbstractItemView*)parent);
+    return KFilePreviewGenerator_New((QAbstractItemView*)parent);
 }
 
 KFilePreviewGenerator* k_filepreviewgenerator_new2(void* parent, void* model) {
-    return KFilePreviewGenerator_new2((KAbstractViewAdapter*)parent, (QAbstractProxyModel*)model);
+    return KFilePreviewGenerator_New2((KAbstractViewAdapter*)parent, (QAbstractProxyModel*)model);
 }
 
 const QMetaObject* k_filepreviewgenerator_meta_object(void* self) {

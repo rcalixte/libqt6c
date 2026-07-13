@@ -125,12 +125,12 @@ void QKeychain__Job_Delete(QKeychain__Job* self) {
     delete self;
 }
 
-QKeychain__ReadPasswordJob* QKeychain__ReadPasswordJob_new(const libqt_string service) {
+QKeychain__ReadPasswordJob* QKeychain__ReadPasswordJob_New(const libqt_string service) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQKeychainReadPasswordJob(service_QString);
 }
 
-QKeychain__ReadPasswordJob* QKeychain__ReadPasswordJob_new2(const libqt_string service, QObject* parent) {
+QKeychain__ReadPasswordJob* QKeychain__ReadPasswordJob_New2(const libqt_string service, QObject* parent) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQKeychainReadPasswordJob(service_QString, parent);
 }
@@ -577,12 +577,12 @@ void QKeychain__ReadPasswordJob_Delete(QKeychain__ReadPasswordJob* self) {
     delete self;
 }
 
-QKeychain__WritePasswordJob* QKeychain__WritePasswordJob_new(const libqt_string service) {
+QKeychain__WritePasswordJob* QKeychain__WritePasswordJob_New(const libqt_string service) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQKeychainWritePasswordJob(service_QString);
 }
 
-QKeychain__WritePasswordJob* QKeychain__WritePasswordJob_new2(const libqt_string service, QObject* parent) {
+QKeychain__WritePasswordJob* QKeychain__WritePasswordJob_New2(const libqt_string service, QObject* parent) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQKeychainWritePasswordJob(service_QString, parent);
 }
@@ -1018,12 +1018,12 @@ void QKeychain__WritePasswordJob_Delete(QKeychain__WritePasswordJob* self) {
     delete self;
 }
 
-QKeychain__DeletePasswordJob* QKeychain__DeletePasswordJob_new(const libqt_string service) {
+QKeychain__DeletePasswordJob* QKeychain__DeletePasswordJob_New(const libqt_string service) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQKeychainDeletePasswordJob(service_QString);
 }
 
-QKeychain__DeletePasswordJob* QKeychain__DeletePasswordJob_new2(const libqt_string service, QObject* parent) {
+QKeychain__DeletePasswordJob* QKeychain__DeletePasswordJob_New2(const libqt_string service, QObject* parent) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQKeychainDeletePasswordJob(service_QString, parent);
 }

@@ -15,11 +15,11 @@
 #include "libqboxplotseries.hpp"
 #include "libqboxplotseries.hxx"
 
-QBoxPlotSeries* QBoxPlotSeries_new() {
+QBoxPlotSeries* QBoxPlotSeries_New() {
     return new VirtualQBoxPlotSeries();
 }
 
-QBoxPlotSeries* QBoxPlotSeries_new2(QObject* parent) {
+QBoxPlotSeries* QBoxPlotSeries_New2(QObject* parent) {
     return new VirtualQBoxPlotSeries(parent);
 }
 

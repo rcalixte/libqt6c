@@ -16,35 +16,35 @@
 #include "libqpixmap.h"
 
 QPixmap* q_pixmap_new() {
-    return QPixmap_new();
+    return QPixmap_New();
 }
 
 QPixmap* q_pixmap_new2(int w, int h) {
-    return QPixmap_new2(w, h);
+    return QPixmap_New2(w, h);
 }
 
 QPixmap* q_pixmap_new3(void* param1) {
-    return QPixmap_new3((QSize*)param1);
+    return QPixmap_New3((QSize*)param1);
 }
 
 QPixmap* q_pixmap_new4(const char* fileName) {
-    return QPixmap_new4(qstring(fileName));
+    return QPixmap_New4(qstring(fileName));
 }
 
 QPixmap* q_pixmap_new5(const char** xpm) {
-    return QPixmap_new5(xpm);
+    return QPixmap_New5(xpm);
 }
 
 QPixmap* q_pixmap_new6(void* param1) {
-    return QPixmap_new6((QPixmap*)param1);
+    return QPixmap_New6((QPixmap*)param1);
 }
 
 QPixmap* q_pixmap_new7(const char* fileName, const char* format) {
-    return QPixmap_new7(qstring(fileName), format);
+    return QPixmap_New7(qstring(fileName), format);
 }
 
 QPixmap* q_pixmap_new8(const char* fileName, const char* format, int32_t flags) {
-    return QPixmap_new8(qstring(fileName), format, flags);
+    return QPixmap_New8(qstring(fileName), format, flags);
 }
 
 void q_pixmap_operator_assign(void* self, void* param1) {

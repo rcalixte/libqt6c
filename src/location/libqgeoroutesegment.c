@@ -3,11 +3,11 @@
 #include "libqgeoroutesegment.h"
 
 QGeoRouteSegment* q_georoutesegment_new() {
-    return QGeoRouteSegment_new();
+    return QGeoRouteSegment_New();
 }
 
 QGeoRouteSegment* q_georoutesegment_new2(void* other) {
-    return QGeoRouteSegment_new2((QGeoRouteSegment*)other);
+    return QGeoRouteSegment_New2((QGeoRouteSegment*)other);
 }
 
 void q_georoutesegment_operator_assign(void* self, void* other) {

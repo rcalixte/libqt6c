@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QColorDialog* QColorDialog_new(QWidget* parent);
-QColorDialog* QColorDialog_new2();
-QColorDialog* QColorDialog_new3(const QColor* initial);
-QColorDialog* QColorDialog_new4(const QColor* initial, QWidget* parent);
+QColorDialog* QColorDialog_New(QWidget* parent);
+QColorDialog* QColorDialog_New2();
+QColorDialog* QColorDialog_New3(const QColor* initial);
+QColorDialog* QColorDialog_New4(const QColor* initial, QWidget* parent);
 QMetaObject* QColorDialog_MetaObject(const QColorDialog* self);
 void* QColorDialog_Metacast(QColorDialog* self, const char* param1);
 int QColorDialog_Metacall(QColorDialog* self, int param1, int param2, void** param3);

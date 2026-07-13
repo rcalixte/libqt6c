@@ -1410,7 +1410,7 @@ void k_texteditor__document_delete(void* self) {
 }
 
 KTextEditor__Document__EditingTransaction* k_texteditor__document__editingtransaction_new(void* document) {
-    return KTextEditor__Document__EditingTransaction_new((KTextEditor__Document*)document);
+    return KTextEditor__Document__EditingTransaction_New((KTextEditor__Document*)document);
 }
 
 void k_texteditor__document__editingtransaction_start(void* self) {

@@ -18,27 +18,27 @@
 #include "libkcolorbutton.h"
 
 KColorButton* k_colorbutton_new(void* parent) {
-    return KColorButton_new((QWidget*)parent);
+    return KColorButton_New((QWidget*)parent);
 }
 
 KColorButton* k_colorbutton_new2() {
-    return KColorButton_new2();
+    return KColorButton_New2();
 }
 
 KColorButton* k_colorbutton_new3(void* c) {
-    return KColorButton_new3((QColor*)c);
+    return KColorButton_New3((QColor*)c);
 }
 
 KColorButton* k_colorbutton_new4(void* c, void* defaultColor) {
-    return KColorButton_new4((QColor*)c, (QColor*)defaultColor);
+    return KColorButton_New4((QColor*)c, (QColor*)defaultColor);
 }
 
 KColorButton* k_colorbutton_new5(void* c, void* parent) {
-    return KColorButton_new5((QColor*)c, (QWidget*)parent);
+    return KColorButton_New5((QColor*)c, (QWidget*)parent);
 }
 
 KColorButton* k_colorbutton_new6(void* c, void* defaultColor, void* parent) {
-    return KColorButton_new6((QColor*)c, (QColor*)defaultColor, (QWidget*)parent);
+    return KColorButton_New6((QColor*)c, (QColor*)defaultColor, (QWidget*)parent);
 }
 
 const QMetaObject* k_colorbutton_meta_object(void* self) {

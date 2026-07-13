@@ -26,8 +26,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_new(QWidget* parent);
-KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_new2();
+KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_New(QWidget* parent);
+KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_New2();
 QMetaObject* KDragWidgetDecoratorBase_MetaObject(const KDragWidgetDecoratorBase* self);
 void* KDragWidgetDecoratorBase_Metacast(KDragWidgetDecoratorBase* self, const char* param1);
 int KDragWidgetDecoratorBase_Metacall(KDragWidgetDecoratorBase* self, int param1, int param2, void** param3);

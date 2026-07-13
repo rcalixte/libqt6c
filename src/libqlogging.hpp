@@ -22,8 +22,8 @@ typedef struct QMessageLogger QMessageLogger;
 typedef struct QNoDebug QNoDebug;
 #endif
 
-QMessageLogContext* QMessageLogContext_new();
-QMessageLogContext* QMessageLogContext_new2(const char* fileName, int lineNumber, const char* functionName, const char* categoryName);
+QMessageLogContext* QMessageLogContext_New();
+QMessageLogContext* QMessageLogContext_New2(const char* fileName, int lineNumber, const char* functionName, const char* categoryName);
 int QMessageLogContext_Version(const QMessageLogContext* self);
 void QMessageLogContext_SetVersion(QMessageLogContext* self, int version);
 int QMessageLogContext_Line(const QMessageLogContext* self);
@@ -36,9 +36,9 @@ const char* QMessageLogContext_Category(const QMessageLogContext* self);
 void QMessageLogContext_SetCategory(QMessageLogContext* self, const char* category);
 void QMessageLogContext_Delete(QMessageLogContext* self);
 
-QMessageLogger* QMessageLogger_new();
-QMessageLogger* QMessageLogger_new2(const char* file, int line, const char* function);
-QMessageLogger* QMessageLogger_new3(const char* file, int line, const char* function, const char* category);
+QMessageLogger* QMessageLogger_New();
+QMessageLogger* QMessageLogger_New2(const char* file, int line, const char* function);
+QMessageLogger* QMessageLogger_New3(const char* file, int line, const char* function, const char* category);
 QDebug* QMessageLogger_Debug(const QMessageLogger* self);
 QDebug* QMessageLogger_Debug2(const QMessageLogger* self, const QLoggingCategory* cat);
 QDebug* QMessageLogger_Debug3(const QMessageLogger* self, intptr_t catFunc);

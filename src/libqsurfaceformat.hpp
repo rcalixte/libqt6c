@@ -31,9 +31,9 @@ struct pair_int_int {
 };
 #endif
 
-QSurfaceFormat* QSurfaceFormat_new();
-QSurfaceFormat* QSurfaceFormat_new2(int options);
-QSurfaceFormat* QSurfaceFormat_new3(const QSurfaceFormat* other);
+QSurfaceFormat* QSurfaceFormat_New();
+QSurfaceFormat* QSurfaceFormat_New2(int options);
+QSurfaceFormat* QSurfaceFormat_New3(const QSurfaceFormat* other);
 void QSurfaceFormat_OperatorAssign(QSurfaceFormat* self, const QSurfaceFormat* other);
 void QSurfaceFormat_SetDepthBufferSize(QSurfaceFormat* self, int size);
 int QSurfaceFormat_DepthBufferSize(const QSurfaceFormat* self);

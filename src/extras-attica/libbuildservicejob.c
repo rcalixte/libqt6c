@@ -2,11 +2,11 @@
 #include "libbuildservicejob.h"
 
 Attica__BuildServiceJob* k_attica__buildservicejob_new() {
-    return Attica__BuildServiceJob_new();
+    return Attica__BuildServiceJob_New();
 }
 
 Attica__BuildServiceJob* k_attica__buildservicejob_new2(void* other) {
-    return Attica__BuildServiceJob_new2((Attica__BuildServiceJob*)other);
+    return Attica__BuildServiceJob_New2((Attica__BuildServiceJob*)other);
 }
 
 void k_attica__buildservicejob_operator_assign(void* self, void* other) {

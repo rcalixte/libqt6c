@@ -21,8 +21,8 @@ typedef Attica::DownloadDescription Attica__DownloadDescription;
 typedef struct Attica__DownloadDescription Attica__DownloadDescription;
 #endif
 
-Attica__DownloadDescription* Attica__DownloadDescription_new();
-Attica__DownloadDescription* Attica__DownloadDescription_new2(const Attica__DownloadDescription* other);
+Attica__DownloadDescription* Attica__DownloadDescription_New();
+Attica__DownloadDescription* Attica__DownloadDescription_New2(const Attica__DownloadDescription* other);
 void Attica__DownloadDescription_OperatorAssign(Attica__DownloadDescription* self, const Attica__DownloadDescription* other);
 int Attica__DownloadDescription_Id(const Attica__DownloadDescription* self);
 int Attica__DownloadDescription_Type(const Attica__DownloadDescription* self);

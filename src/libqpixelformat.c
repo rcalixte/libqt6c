@@ -2,31 +2,31 @@
 #include "libqpixelformat.h"
 
 QPixelFormat* q_pixelformat_new(void* other) {
-    return QPixelFormat_new((QPixelFormat*)other);
+    return QPixelFormat_New((QPixelFormat*)other);
 }
 
 QPixelFormat* q_pixelformat_new2(void* other) {
-    return QPixelFormat_new2((QPixelFormat*)other);
+    return QPixelFormat_New2((QPixelFormat*)other);
 }
 
 QPixelFormat* q_pixelformat_new3() {
-    return QPixelFormat_new3();
+    return QPixelFormat_New3();
 }
 
 QPixelFormat* q_pixelformat_new4(int32_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int32_t alphaUsage, int32_t alphaPosition, int32_t premultiplied, int32_t typeInterpretation) {
-    return QPixelFormat_new4(colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation);
+    return QPixelFormat_New4(colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation);
 }
 
 QPixelFormat* q_pixelformat_new5(void* param1) {
-    return QPixelFormat_new5((QPixelFormat*)param1);
+    return QPixelFormat_New5((QPixelFormat*)param1);
 }
 
 QPixelFormat* q_pixelformat_new6(int32_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int32_t alphaUsage, int32_t alphaPosition, int32_t premultiplied, int32_t typeInterpretation, int32_t byteOrder) {
-    return QPixelFormat_new6(colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder);
+    return QPixelFormat_New6(colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder);
 }
 
 QPixelFormat* q_pixelformat_new7(int32_t colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int32_t alphaUsage, int32_t alphaPosition, int32_t premultiplied, int32_t typeInterpretation, int32_t byteOrder, unsigned char subEnum) {
-    return QPixelFormat_new7(colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum);
+    return QPixelFormat_New7(colorModel, firstSize, secondSize, thirdSize, fourthSize, fifthSize, alphaSize, alphaUsage, alphaPosition, premultiplied, typeInterpretation, byteOrder, subEnum);
 }
 
 void q_pixelformat_copy_assign(void* self, void* other) {

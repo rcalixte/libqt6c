@@ -6,15 +6,15 @@
 #include "libqcompare.hpp"
 #include "libqcompare.hxx"
 
-partial_ordering* partial_ordering_new(const partial_ordering* other) {
+partial_ordering* partial_ordering_New(const partial_ordering* other) {
     return new Qt::partial_ordering(*other);
 }
 
-partial_ordering* partial_ordering_new2(partial_ordering* other) {
+partial_ordering* partial_ordering_New2(partial_ordering* other) {
     return new Qt::partial_ordering(std::move(*other));
 }
 
-partial_ordering* partial_ordering_new3(const partial_ordering* param1) {
+partial_ordering* partial_ordering_New3(const partial_ordering* param1) {
     return new Qt::partial_ordering(*param1);
 }
 
@@ -30,15 +30,15 @@ void partial_ordering_Delete(partial_ordering* self) {
     delete self;
 }
 
-weak_ordering* weak_ordering_new(const weak_ordering* other) {
+weak_ordering* weak_ordering_New(const weak_ordering* other) {
     return new Qt::weak_ordering(*other);
 }
 
-weak_ordering* weak_ordering_new2(weak_ordering* other) {
+weak_ordering* weak_ordering_New2(weak_ordering* other) {
     return new Qt::weak_ordering(std::move(*other));
 }
 
-weak_ordering* weak_ordering_new3(const weak_ordering* param1) {
+weak_ordering* weak_ordering_New3(const weak_ordering* param1) {
     return new Qt::weak_ordering(*param1);
 }
 
@@ -58,15 +58,15 @@ void weak_ordering_Delete(weak_ordering* self) {
     delete self;
 }
 
-strong_ordering* strong_ordering_new(const strong_ordering* other) {
+strong_ordering* strong_ordering_New(const strong_ordering* other) {
     return new Qt::strong_ordering(*other);
 }
 
-strong_ordering* strong_ordering_new2(strong_ordering* other) {
+strong_ordering* strong_ordering_New2(strong_ordering* other) {
     return new Qt::strong_ordering(std::move(*other));
 }
 
-strong_ordering* strong_ordering_new3(const strong_ordering* param1) {
+strong_ordering* strong_ordering_New3(const strong_ordering* param1) {
     return new Qt::strong_ordering(*param1);
 }
 
@@ -90,27 +90,27 @@ void strong_ordering_Delete(strong_ordering* self) {
     delete self;
 }
 
-QPartialOrdering* QPartialOrdering_new(const QPartialOrdering* other) {
+QPartialOrdering* QPartialOrdering_New(const QPartialOrdering* other) {
     return new QPartialOrdering(*other);
 }
 
-QPartialOrdering* QPartialOrdering_new2(QPartialOrdering* other) {
+QPartialOrdering* QPartialOrdering_New2(QPartialOrdering* other) {
     return new QPartialOrdering(std::move(*other));
 }
 
-QPartialOrdering* QPartialOrdering_new3(partial_ordering* order) {
+QPartialOrdering* QPartialOrdering_New3(partial_ordering* order) {
     return new QPartialOrdering(*order);
 }
 
-QPartialOrdering* QPartialOrdering_new4(weak_ordering* stdorder) {
+QPartialOrdering* QPartialOrdering_New4(weak_ordering* stdorder) {
     return new QPartialOrdering(*stdorder);
 }
 
-QPartialOrdering* QPartialOrdering_new5(strong_ordering* stdorder) {
+QPartialOrdering* QPartialOrdering_New5(strong_ordering* stdorder) {
     return new QPartialOrdering(*stdorder);
 }
 
-QPartialOrdering* QPartialOrdering_new6(const QPartialOrdering* param1) {
+QPartialOrdering* QPartialOrdering_New6(const QPartialOrdering* param1) {
     return new QPartialOrdering(*param1);
 }
 

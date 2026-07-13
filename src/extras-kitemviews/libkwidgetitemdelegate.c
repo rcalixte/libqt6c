@@ -14,11 +14,11 @@
 #include "libkwidgetitemdelegate.h"
 
 KWidgetItemDelegate* k_widgetitemdelegate_new(void* itemView) {
-    return KWidgetItemDelegate_new((QAbstractItemView*)itemView);
+    return KWidgetItemDelegate_New((QAbstractItemView*)itemView);
 }
 
 KWidgetItemDelegate* k_widgetitemdelegate_new2(void* itemView, void* parent) {
-    return KWidgetItemDelegate_new2((QAbstractItemView*)itemView, (QObject*)parent);
+    return KWidgetItemDelegate_New2((QAbstractItemView*)itemView, (QObject*)parent);
 }
 
 const QMetaObject* k_widgetitemdelegate_meta_object(void* self) {

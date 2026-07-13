@@ -8,11 +8,11 @@
 #include "libauthservice.h"
 
 SignOn__AuthService* q_signon__authservice_new() {
-    return SignOn__AuthService_new();
+    return SignOn__AuthService_New();
 }
 
 SignOn__AuthService* q_signon__authservice_new2(void* parent) {
-    return SignOn__AuthService_new2((QObject*)parent);
+    return SignOn__AuthService_New2((QObject*)parent);
 }
 
 const QMetaObject* q_signon__authservice_meta_object(void* self) {
@@ -502,11 +502,11 @@ void q_signon__authservice_delete(void* self) {
 }
 
 SignOn__AuthService__IdentityRegExp* q_signon__authservice__identityregexp_new(const char* pattern) {
-    return SignOn__AuthService__IdentityRegExp_new(qstring(pattern));
+    return SignOn__AuthService__IdentityRegExp_New(qstring(pattern));
 }
 
 SignOn__AuthService__IdentityRegExp* q_signon__authservice__identityregexp_new2(void* src) {
-    return SignOn__AuthService__IdentityRegExp_new2((SignOn__AuthService__IdentityRegExp*)src);
+    return SignOn__AuthService__IdentityRegExp_New2((SignOn__AuthService__IdentityRegExp*)src);
 }
 
 bool q_signon__authservice__identityregexp_is_valid(void* self) {

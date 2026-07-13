@@ -12,11 +12,11 @@
 #include "libqwebchannel.hpp"
 #include "libqwebchannel.hxx"
 
-QWebChannel* QWebChannel_new() {
+QWebChannel* QWebChannel_New() {
     return new VirtualQWebChannel();
 }
 
-QWebChannel* QWebChannel_new2(QObject* parent) {
+QWebChannel* QWebChannel_New2(QObject* parent) {
     return new VirtualQWebChannel(parent);
 }
 

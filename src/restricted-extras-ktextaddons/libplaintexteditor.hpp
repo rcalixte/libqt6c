@@ -77,8 +77,8 @@ typedef struct Sonnet__SpellCheckDecorator Sonnet__SpellCheckDecorator;
 typedef struct TextCustomEditor__PlainTextEditor TextCustomEditor__PlainTextEditor;
 #endif
 
-TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_new(QWidget* parent);
-TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_new2();
+TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_New(QWidget* parent);
+TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_New2();
 QMetaObject* TextCustomEditor__PlainTextEditor_MetaObject(const TextCustomEditor__PlainTextEditor* self);
 void* TextCustomEditor__PlainTextEditor_Metacast(TextCustomEditor__PlainTextEditor* self, const char* param1);
 int TextCustomEditor__PlainTextEditor_Metacall(TextCustomEditor__PlainTextEditor* self, int param1, int param2, void** param3);

@@ -7,7 +7,7 @@
 #include "libqwebenginecertificateerror.hpp"
 #include "libqwebenginecertificateerror.hxx"
 
-QWebEngineCertificateError* QWebEngineCertificateError_new(const QWebEngineCertificateError* other) {
+QWebEngineCertificateError* QWebEngineCertificateError_New(const QWebEngineCertificateError* other) {
     return new QWebEngineCertificateError(*other);
 }
 

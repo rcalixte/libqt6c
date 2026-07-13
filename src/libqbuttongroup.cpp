@@ -12,11 +12,11 @@
 #include "libqbuttongroup.hpp"
 #include "libqbuttongroup.hxx"
 
-QButtonGroup* QButtonGroup_new() {
+QButtonGroup* QButtonGroup_New() {
     return new VirtualQButtonGroup();
 }
 
-QButtonGroup* QButtonGroup_new2(QObject* parent) {
+QButtonGroup* QButtonGroup_New2(QObject* parent) {
     return new VirtualQButtonGroup(parent);
 }
 

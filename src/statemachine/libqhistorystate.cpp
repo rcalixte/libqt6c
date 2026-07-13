@@ -13,19 +13,19 @@
 #include "libqhistorystate.hpp"
 #include "libqhistorystate.hxx"
 
-QHistoryState* QHistoryState_new() {
+QHistoryState* QHistoryState_New() {
     return new VirtualQHistoryState();
 }
 
-QHistoryState* QHistoryState_new2(int type) {
+QHistoryState* QHistoryState_New2(int type) {
     return new VirtualQHistoryState(static_cast<QHistoryState::HistoryType>(type));
 }
 
-QHistoryState* QHistoryState_new3(QState* parent) {
+QHistoryState* QHistoryState_New3(QState* parent) {
     return new VirtualQHistoryState(parent);
 }
 
-QHistoryState* QHistoryState_new4(int type, QState* parent) {
+QHistoryState* QHistoryState_New4(int type, QState* parent) {
     return new VirtualQHistoryState(static_cast<QHistoryState::HistoryType>(type), parent);
 }
 

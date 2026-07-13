@@ -4,7 +4,7 @@
 #include "libqwebengineclientcertificateselection.h"
 
 QWebEngineClientCertificateSelection* q_webengineclientcertificateselection_new(void* param1) {
-    return QWebEngineClientCertificateSelection_new((QWebEngineClientCertificateSelection*)param1);
+    return QWebEngineClientCertificateSelection_New((QWebEngineClientCertificateSelection*)param1);
 }
 
 void q_webengineclientcertificateselection_operator_assign(void* self, void* param1) {

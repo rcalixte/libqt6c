@@ -12,11 +12,11 @@
 #include "libkwidgetjobtracker.hpp"
 #include "libkwidgetjobtracker.hxx"
 
-KWidgetJobTracker* KWidgetJobTracker_new(QWidget* parent) {
+KWidgetJobTracker* KWidgetJobTracker_New(QWidget* parent) {
     return new KWidgetJobTracker(parent);
 }
 
-KWidgetJobTracker* KWidgetJobTracker_new2() {
+KWidgetJobTracker* KWidgetJobTracker_New2() {
     return new KWidgetJobTracker();
 }
 

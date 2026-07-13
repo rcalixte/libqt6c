@@ -38,11 +38,11 @@
 #include "libqerrormessage.hpp"
 #include "libqerrormessage.hxx"
 
-QErrorMessage* QErrorMessage_new(QWidget* parent) {
+QErrorMessage* QErrorMessage_New(QWidget* parent) {
     return new VirtualQErrorMessage(parent);
 }
 
-QErrorMessage* QErrorMessage_new2() {
+QErrorMessage* QErrorMessage_New2() {
     return new VirtualQErrorMessage();
 }
 

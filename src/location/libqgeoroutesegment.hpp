@@ -20,8 +20,8 @@ typedef struct QGeoManeuver QGeoManeuver;
 typedef struct QGeoRouteSegment QGeoRouteSegment;
 #endif
 
-QGeoRouteSegment* QGeoRouteSegment_new();
-QGeoRouteSegment* QGeoRouteSegment_new2(const QGeoRouteSegment* other);
+QGeoRouteSegment* QGeoRouteSegment_New();
+QGeoRouteSegment* QGeoRouteSegment_New2(const QGeoRouteSegment* other);
 void QGeoRouteSegment_OperatorAssign(QGeoRouteSegment* self, const QGeoRouteSegment* other);
 void QGeoRouteSegment_Swap(QGeoRouteSegment* self, QGeoRouteSegment* other);
 bool QGeoRouteSegment_IsValid(const QGeoRouteSegment* self);

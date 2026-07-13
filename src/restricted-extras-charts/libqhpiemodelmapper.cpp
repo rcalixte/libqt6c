@@ -13,11 +13,11 @@
 #include "libqhpiemodelmapper.hpp"
 #include "libqhpiemodelmapper.hxx"
 
-QHPieModelMapper* QHPieModelMapper_new() {
+QHPieModelMapper* QHPieModelMapper_New() {
     return new VirtualQHPieModelMapper();
 }
 
-QHPieModelMapper* QHPieModelMapper_new2(QObject* parent) {
+QHPieModelMapper* QHPieModelMapper_New2(QObject* parent) {
     return new VirtualQHPieModelMapper(parent);
 }
 

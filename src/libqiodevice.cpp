@@ -12,11 +12,11 @@
 #include "libqiodevice.hpp"
 #include "libqiodevice.hxx"
 
-QIODevice* QIODevice_new() {
+QIODevice* QIODevice_New() {
     return new VirtualQIODevice();
 }
 
-QIODevice* QIODevice_new2(QObject* parent) {
+QIODevice* QIODevice_New2(QObject* parent) {
     return new VirtualQIODevice(parent);
 }
 

@@ -6,15 +6,15 @@
 #include "libkfileitemlistproperties.hpp"
 #include "libkfileitemlistproperties.hxx"
 
-KFileItemListProperties* KFileItemListProperties_new() {
+KFileItemListProperties* KFileItemListProperties_New() {
     return new KFileItemListProperties();
 }
 
-KFileItemListProperties* KFileItemListProperties_new2(const KFileItemList* items) {
+KFileItemListProperties* KFileItemListProperties_New2(const KFileItemList* items) {
     return new KFileItemListProperties(*items);
 }
 
-KFileItemListProperties* KFileItemListProperties_new3(const KFileItemListProperties* param1) {
+KFileItemListProperties* KFileItemListProperties_New3(const KFileItemListProperties* param1) {
     return new KFileItemListProperties(*param1);
 }
 

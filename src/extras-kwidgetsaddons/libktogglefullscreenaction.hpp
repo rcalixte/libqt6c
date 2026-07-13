@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KToggleFullScreenAction* KToggleFullScreenAction_new(QObject* parent);
-KToggleFullScreenAction* KToggleFullScreenAction_new2(QWidget* window, QObject* parent);
+KToggleFullScreenAction* KToggleFullScreenAction_New(QObject* parent);
+KToggleFullScreenAction* KToggleFullScreenAction_New2(QWidget* window, QObject* parent);
 QMetaObject* KToggleFullScreenAction_MetaObject(const KToggleFullScreenAction* self);
 void* KToggleFullScreenAction_Metacast(KToggleFullScreenAction* self, const char* param1);
 int KToggleFullScreenAction_Metacall(KToggleFullScreenAction* self, int param1, int param2, void** param3);

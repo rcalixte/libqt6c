@@ -315,7 +315,7 @@ void q_webenginecookiestore_delete(void* self) {
 }
 
 QWebEngineCookieStore__FilterRequest* q_webenginecookiestore__filterrequest_new(void* param1) {
-    return QWebEngineCookieStore__FilterRequest_new((QWebEngineCookieStore__FilterRequest*)param1);
+    return QWebEngineCookieStore__FilterRequest_New((QWebEngineCookieStore__FilterRequest*)param1);
 }
 
 QUrl* q_webenginecookiestore__filterrequest_first_party_url(void* self) {

@@ -11,11 +11,11 @@
 #include "libqscilexerbatch.h"
 
 QsciLexerBatch* q_scilexerbatch_new() {
-    return QsciLexerBatch_new();
+    return QsciLexerBatch_New();
 }
 
 QsciLexerBatch* q_scilexerbatch_new2(void* parent) {
-    return QsciLexerBatch_new2((QObject*)parent);
+    return QsciLexerBatch_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerbatch_meta_object(void* self) {

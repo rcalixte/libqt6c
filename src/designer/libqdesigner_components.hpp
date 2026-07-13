@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerComponents* QDesignerComponents_new(const QDesignerComponents* other);
-QDesignerComponents* QDesignerComponents_new2(QDesignerComponents* other);
+QDesignerComponents* QDesignerComponents_New(const QDesignerComponents* other);
+QDesignerComponents* QDesignerComponents_New2(QDesignerComponents* other);
 void QDesignerComponents_CopyAssign(QDesignerComponents* self, QDesignerComponents* other);
 void QDesignerComponents_MoveAssign(QDesignerComponents* self, QDesignerComponents* other);
 void QDesignerComponents_InitializeResources();

@@ -24,8 +24,8 @@ typedef struct QDateTime QDateTime;
 typedef struct QIODevice QIODevice;
 #endif
 
-KZipFileEntry* KZipFileEntry_new(KZip* zip, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, const libqt_string path, long long start, long long uncompressedSize, int encoding, long long compressedSize);
-KZipFileEntry* KZipFileEntry_new2(const KZipFileEntry* param1);
+KZipFileEntry* KZipFileEntry_New(KZip* zip, const libqt_string name, int access, const QDateTime* date, const libqt_string user, const libqt_string group, const libqt_string symlink, const libqt_string path, long long start, long long uncompressedSize, int encoding, long long compressedSize);
+KZipFileEntry* KZipFileEntry_New2(const KZipFileEntry* param1);
 int KZipFileEntry_Encoding(const KZipFileEntry* self);
 long long KZipFileEntry_CompressedSize(const KZipFileEntry* self);
 void KZipFileEntry_SetCompressedSize(KZipFileEntry* self, long long compressedSize);

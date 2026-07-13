@@ -4,7 +4,7 @@
 #include "libqloggingcategory.hpp"
 #include "libqloggingcategory.hxx"
 
-QLoggingCategory* QLoggingCategory_new(const char* category) {
+QLoggingCategory* QLoggingCategory_New(const char* category) {
     return new QLoggingCategory(category);
 }
 

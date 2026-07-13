@@ -14,11 +14,11 @@
 #include "libqgraphicstransform.hpp"
 #include "libqgraphicstransform.hxx"
 
-QGraphicsTransform* QGraphicsTransform_new() {
+QGraphicsTransform* QGraphicsTransform_New() {
     return new VirtualQGraphicsTransform();
 }
 
-QGraphicsTransform* QGraphicsTransform_new2(QObject* parent) {
+QGraphicsTransform* QGraphicsTransform_New2(QObject* parent) {
     return new VirtualQGraphicsTransform(parent);
 }
 
@@ -466,11 +466,11 @@ void QGraphicsTransform_Delete(QGraphicsTransform* self) {
     delete self;
 }
 
-QGraphicsScale* QGraphicsScale_new() {
+QGraphicsScale* QGraphicsScale_New() {
     return new VirtualQGraphicsScale();
 }
 
-QGraphicsScale* QGraphicsScale_new2(QObject* parent) {
+QGraphicsScale* QGraphicsScale_New2(QObject* parent) {
     return new VirtualQGraphicsScale(parent);
 }
 
@@ -1005,11 +1005,11 @@ void QGraphicsScale_Delete(QGraphicsScale* self) {
     delete self;
 }
 
-QGraphicsRotation* QGraphicsRotation_new() {
+QGraphicsRotation* QGraphicsRotation_New() {
     return new VirtualQGraphicsRotation();
 }
 
-QGraphicsRotation* QGraphicsRotation_new2(QObject* parent) {
+QGraphicsRotation* QGraphicsRotation_New2(QObject* parent) {
     return new VirtualQGraphicsRotation(parent);
 }
 

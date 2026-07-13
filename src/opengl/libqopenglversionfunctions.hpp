@@ -169,11 +169,11 @@ struct pair_int_int {
 };
 #endif
 
-QOpenGLVersionStatus* QOpenGLVersionStatus_new(const QOpenGLVersionStatus* other);
-QOpenGLVersionStatus* QOpenGLVersionStatus_new2(QOpenGLVersionStatus* other);
-QOpenGLVersionStatus* QOpenGLVersionStatus_new3();
-QOpenGLVersionStatus* QOpenGLVersionStatus_new4(int majorVersion, int minorVersion, int functionStatus);
-QOpenGLVersionStatus* QOpenGLVersionStatus_new5(const QOpenGLVersionStatus* param1);
+QOpenGLVersionStatus* QOpenGLVersionStatus_New(const QOpenGLVersionStatus* other);
+QOpenGLVersionStatus* QOpenGLVersionStatus_New2(QOpenGLVersionStatus* other);
+QOpenGLVersionStatus* QOpenGLVersionStatus_New3();
+QOpenGLVersionStatus* QOpenGLVersionStatus_New4(int majorVersion, int minorVersion, int functionStatus);
+QOpenGLVersionStatus* QOpenGLVersionStatus_New5(const QOpenGLVersionStatus* param1);
 pair_int_int /* tuple of int and int */ QOpenGLVersionStatus_Version(const QOpenGLVersionStatus* self);
 void QOpenGLVersionStatus_SetVersion(QOpenGLVersionStatus* self, pair_int_int /* tuple of int and int */ version);
 int QOpenGLVersionStatus_Status(const QOpenGLVersionStatus* self);

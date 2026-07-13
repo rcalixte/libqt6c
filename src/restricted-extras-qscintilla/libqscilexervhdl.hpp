@@ -29,8 +29,8 @@ typedef struct QsciLexerVHDL QsciLexerVHDL;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerVHDL* QsciLexerVHDL_new();
-QsciLexerVHDL* QsciLexerVHDL_new2(QObject* parent);
+QsciLexerVHDL* QsciLexerVHDL_New();
+QsciLexerVHDL* QsciLexerVHDL_New2(QObject* parent);
 QMetaObject* QsciLexerVHDL_MetaObject(const QsciLexerVHDL* self);
 void* QsciLexerVHDL_Metacast(QsciLexerVHDL* self, const char* param1);
 int QsciLexerVHDL_Metacall(QsciLexerVHDL* self, int param1, int param2, void** param3);

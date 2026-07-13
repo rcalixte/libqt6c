@@ -11,15 +11,15 @@
 #include "libqlayoutitem.hpp"
 #include "libqlayoutitem.hxx"
 
-QLayoutItem* QLayoutItem_new() {
+QLayoutItem* QLayoutItem_New() {
     return new VirtualQLayoutItem();
 }
 
-QLayoutItem* QLayoutItem_new2(const QLayoutItem* param1) {
+QLayoutItem* QLayoutItem_New2(const QLayoutItem* param1) {
     return new VirtualQLayoutItem(*param1);
 }
 
-QLayoutItem* QLayoutItem_new3(int alignment) {
+QLayoutItem* QLayoutItem_New3(int alignment) {
     return new VirtualQLayoutItem(static_cast<Qt::Alignment>(alignment));
 }
 
@@ -409,19 +409,19 @@ void QLayoutItem_Delete(QLayoutItem* self) {
     delete self;
 }
 
-QSpacerItem* QSpacerItem_new(int w, int h) {
+QSpacerItem* QSpacerItem_New(int w, int h) {
     return new VirtualQSpacerItem(static_cast<int>(w), static_cast<int>(h));
 }
 
-QSpacerItem* QSpacerItem_new2(const QSpacerItem* param1) {
+QSpacerItem* QSpacerItem_New2(const QSpacerItem* param1) {
     return new VirtualQSpacerItem(*param1);
 }
 
-QSpacerItem* QSpacerItem_new3(int w, int h, int hData) {
+QSpacerItem* QSpacerItem_New3(int w, int h, int hData) {
     return new VirtualQSpacerItem(static_cast<int>(w), static_cast<int>(h), static_cast<QSizePolicy::Policy>(hData));
 }
 
-QSpacerItem* QSpacerItem_new4(int w, int h, int hData, int vData) {
+QSpacerItem* QSpacerItem_New4(int w, int h, int hData, int vData) {
     return new VirtualQSpacerItem(static_cast<int>(w), static_cast<int>(h), static_cast<QSizePolicy::Policy>(hData), static_cast<QSizePolicy::Policy>(vData));
 }
 
@@ -832,7 +832,7 @@ void QSpacerItem_Delete(QSpacerItem* self) {
     delete self;
 }
 
-QWidgetItem* QWidgetItem_new(QWidget* w) {
+QWidgetItem* QWidgetItem_New(QWidget* w) {
     return new VirtualQWidgetItem(w);
 }
 
@@ -1203,7 +1203,7 @@ void QWidgetItem_Delete(QWidgetItem* self) {
     delete self;
 }
 
-QWidgetItemV2* QWidgetItemV2_new(QWidget* widget) {
+QWidgetItemV2* QWidgetItemV2_New(QWidget* widget) {
     return new VirtualQWidgetItemV2(widget);
 }
 

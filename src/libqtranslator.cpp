@@ -11,11 +11,11 @@
 #include "libqtranslator.hpp"
 #include "libqtranslator.hxx"
 
-QTranslator* QTranslator_new() {
+QTranslator* QTranslator_New() {
     return new VirtualQTranslator();
 }
 
-QTranslator* QTranslator_new2(QObject* parent) {
+QTranslator* QTranslator_New2(QObject* parent) {
     return new VirtualQTranslator(parent);
 }
 

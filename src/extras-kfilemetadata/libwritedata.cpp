@@ -8,13 +8,13 @@
 #include "libwritedata.hpp"
 #include "libwritedata.hxx"
 
-KFileMetaData__WriteData* KFileMetaData__WriteData_new(const libqt_string url, const libqt_string mimetype) {
+KFileMetaData__WriteData* KFileMetaData__WriteData_New(const libqt_string url, const libqt_string mimetype) {
     QString url_QString = QString::fromUtf8(url.data, url.len);
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     return new KFileMetaData::WriteData(url_QString, mimetype_QString);
 }
 
-KFileMetaData__WriteData* KFileMetaData__WriteData_new2(const KFileMetaData__WriteData* rhs) {
+KFileMetaData__WriteData* KFileMetaData__WriteData_New2(const KFileMetaData__WriteData* rhs) {
     return new KFileMetaData::WriteData(*rhs);
 }
 

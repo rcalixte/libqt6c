@@ -18,9 +18,9 @@ extern "C" {
 typedef struct QWebEngineUrlScheme QWebEngineUrlScheme;
 #endif
 
-QWebEngineUrlScheme* QWebEngineUrlScheme_new();
-QWebEngineUrlScheme* QWebEngineUrlScheme_new2(const libqt_string name);
-QWebEngineUrlScheme* QWebEngineUrlScheme_new3(const QWebEngineUrlScheme* that);
+QWebEngineUrlScheme* QWebEngineUrlScheme_New();
+QWebEngineUrlScheme* QWebEngineUrlScheme_New2(const libqt_string name);
+QWebEngineUrlScheme* QWebEngineUrlScheme_New3(const QWebEngineUrlScheme* that);
 void QWebEngineUrlScheme_OperatorAssign(QWebEngineUrlScheme* self, const QWebEngineUrlScheme* that);
 bool QWebEngineUrlScheme_OperatorEqual(const QWebEngineUrlScheme* self, const QWebEngineUrlScheme* that);
 bool QWebEngineUrlScheme_OperatorNotEqual(const QWebEngineUrlScheme* self, const QWebEngineUrlScheme* that);

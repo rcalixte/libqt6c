@@ -22,15 +22,15 @@
 #include "libreadonlypart.h"
 
 KParts__ReadOnlyPart* k_parts__readonlypart_new() {
-    return KParts__ReadOnlyPart_new();
+    return KParts__ReadOnlyPart_New();
 }
 
 KParts__ReadOnlyPart* k_parts__readonlypart_new2(void* parent) {
-    return KParts__ReadOnlyPart_new2((QObject*)parent);
+    return KParts__ReadOnlyPart_New2((QObject*)parent);
 }
 
 KParts__ReadOnlyPart* k_parts__readonlypart_new3(void* parent, void* data) {
-    return KParts__ReadOnlyPart_new3((QObject*)parent, (KPluginMetaData*)data);
+    return KParts__ReadOnlyPart_New3((QObject*)parent, (KPluginMetaData*)data);
 }
 
 const QMetaObject* k_parts__readonlypart_meta_object(void* self) {

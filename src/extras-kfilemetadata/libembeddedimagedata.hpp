@@ -21,7 +21,7 @@ typedef KFileMetaData::EmbeddedImageData KFileMetaData__EmbeddedImageData;
 typedef struct KFileMetaData__EmbeddedImageData KFileMetaData__EmbeddedImageData;
 #endif
 
-KFileMetaData__EmbeddedImageData* KFileMetaData__EmbeddedImageData_new();
+KFileMetaData__EmbeddedImageData* KFileMetaData__EmbeddedImageData_New();
 void KFileMetaData__EmbeddedImageData_Delete(KFileMetaData__EmbeddedImageData* self);
 
 #ifdef __cplusplus

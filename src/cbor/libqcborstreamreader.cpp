@@ -7,24 +7,24 @@
 #include "libqcborstreamreader.hpp"
 #include "libqcborstreamreader.hxx"
 
-QCborStreamReader* QCborStreamReader_new() {
+QCborStreamReader* QCborStreamReader_New() {
     return new QCborStreamReader();
 }
 
-QCborStreamReader* QCborStreamReader_new2(const char* data, ptrdiff_t lenVal) {
+QCborStreamReader* QCborStreamReader_New2(const char* data, ptrdiff_t lenVal) {
     return new QCborStreamReader(data, (qsizetype)(lenVal));
 }
 
-QCborStreamReader* QCborStreamReader_new3(const unsigned char* data, ptrdiff_t lenVal) {
+QCborStreamReader* QCborStreamReader_New3(const unsigned char* data, ptrdiff_t lenVal) {
     return new QCborStreamReader(static_cast<const quint8*>(data), (qsizetype)(lenVal));
 }
 
-QCborStreamReader* QCborStreamReader_new4(const libqt_string data) {
+QCborStreamReader* QCborStreamReader_New4(const libqt_string data) {
     QByteArray data_QByteArray(data.data, data.len);
     return new QCborStreamReader(data_QByteArray);
 }
 
-QCborStreamReader* QCborStreamReader_new5(QIODevice* device) {
+QCborStreamReader* QCborStreamReader_New5(QIODevice* device) {
     return new QCborStreamReader(device);
 }
 

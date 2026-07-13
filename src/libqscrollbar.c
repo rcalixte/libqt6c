@@ -16,19 +16,19 @@
 #include "libqscrollbar.h"
 
 QScrollBar* q_scrollbar_new(void* parent) {
-    return QScrollBar_new((QWidget*)parent);
+    return QScrollBar_New((QWidget*)parent);
 }
 
 QScrollBar* q_scrollbar_new2() {
-    return QScrollBar_new2();
+    return QScrollBar_New2();
 }
 
 QScrollBar* q_scrollbar_new3(int32_t param1) {
-    return QScrollBar_new3(param1);
+    return QScrollBar_New3(param1);
 }
 
 QScrollBar* q_scrollbar_new4(int32_t param1, void* parent) {
-    return QScrollBar_new4(param1, (QWidget*)parent);
+    return QScrollBar_New4(param1, (QWidget*)parent);
 }
 
 const QMetaObject* q_scrollbar_meta_object(void* self) {

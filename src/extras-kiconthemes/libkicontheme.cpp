@@ -5,18 +5,18 @@
 #include "libkicontheme.hpp"
 #include "libkicontheme.hxx"
 
-KIconTheme* KIconTheme_new(const libqt_string name) {
+KIconTheme* KIconTheme_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new KIconTheme(name_QString);
 }
 
-KIconTheme* KIconTheme_new2(const libqt_string name, const libqt_string appName) {
+KIconTheme* KIconTheme_New2(const libqt_string name, const libqt_string appName) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString appName_QString = QString::fromUtf8(appName.data, appName.len);
     return new KIconTheme(name_QString, appName_QString);
 }
 
-KIconTheme* KIconTheme_new3(const libqt_string name, const libqt_string appName, const libqt_string basePathHint) {
+KIconTheme* KIconTheme_New3(const libqt_string name, const libqt_string appName, const libqt_string basePathHint) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     QString appName_QString = QString::fromUtf8(appName.data, appName.len);
     QString basePathHint_QString = QString::fromUtf8(basePathHint.data, basePathHint.len);

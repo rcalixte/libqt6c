@@ -37,8 +37,8 @@ libqt_list /* of QOpenGLContext* */ QOpenGLContextGroup_Shares(const QOpenGLCont
 QOpenGLContextGroup* QOpenGLContextGroup_CurrentContextGroup();
 void QOpenGLContextGroup_Delete(QOpenGLContextGroup* self);
 
-QOpenGLContext* QOpenGLContext_new();
-QOpenGLContext* QOpenGLContext_new2(QObject* parent);
+QOpenGLContext* QOpenGLContext_New();
+QOpenGLContext* QOpenGLContext_New2(QObject* parent);
 QMetaObject* QOpenGLContext_MetaObject(const QOpenGLContext* self);
 void* QOpenGLContext_Metacast(QOpenGLContext* self, const char* param1);
 int QOpenGLContext_Metacall(QOpenGLContext* self, int param1, int param2, void** param3);

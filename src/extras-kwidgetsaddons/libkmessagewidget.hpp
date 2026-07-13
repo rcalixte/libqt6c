@@ -54,10 +54,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KMessageWidget* KMessageWidget_new(QWidget* parent);
-KMessageWidget* KMessageWidget_new2();
-KMessageWidget* KMessageWidget_new3(const libqt_string text);
-KMessageWidget* KMessageWidget_new4(const libqt_string text, QWidget* parent);
+KMessageWidget* KMessageWidget_New(QWidget* parent);
+KMessageWidget* KMessageWidget_New2();
+KMessageWidget* KMessageWidget_New3(const libqt_string text);
+KMessageWidget* KMessageWidget_New4(const libqt_string text, QWidget* parent);
 QMetaObject* KMessageWidget_MetaObject(const KMessageWidget* self);
 void* KMessageWidget_Metacast(KMessageWidget* self, const char* param1);
 int KMessageWidget_Metacall(KMessageWidget* self, int param1, int param2, void** param3);

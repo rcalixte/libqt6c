@@ -44,19 +44,19 @@
 #include "libkmultitabbar.hpp"
 #include "libkmultitabbar.hxx"
 
-KMultiTabBar* KMultiTabBar_new(QWidget* parent) {
+KMultiTabBar* KMultiTabBar_New(QWidget* parent) {
     return new VirtualKMultiTabBar(parent);
 }
 
-KMultiTabBar* KMultiTabBar_new2() {
+KMultiTabBar* KMultiTabBar_New2() {
     return new VirtualKMultiTabBar();
 }
 
-KMultiTabBar* KMultiTabBar_new3(int pos) {
+KMultiTabBar* KMultiTabBar_New3(int pos) {
     return new VirtualKMultiTabBar(static_cast<KMultiTabBar::KMultiTabBarPosition>(pos));
 }
 
-KMultiTabBar* KMultiTabBar_new4(int pos, QWidget* parent) {
+KMultiTabBar* KMultiTabBar_New4(int pos, QWidget* parent) {
     return new VirtualKMultiTabBar(static_cast<KMultiTabBar::KMultiTabBarPosition>(pos), parent);
 }
 

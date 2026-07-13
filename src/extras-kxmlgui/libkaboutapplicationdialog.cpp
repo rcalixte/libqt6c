@@ -39,19 +39,19 @@
 #include "libkaboutapplicationdialog.hpp"
 #include "libkaboutapplicationdialog.hxx"
 
-KAboutApplicationDialog* KAboutApplicationDialog_new(const KAboutData* aboutData, int opts) {
+KAboutApplicationDialog* KAboutApplicationDialog_New(const KAboutData* aboutData, int opts) {
     return new VirtualKAboutApplicationDialog(*aboutData, static_cast<KAboutApplicationDialog::Options>(opts));
 }
 
-KAboutApplicationDialog* KAboutApplicationDialog_new2(const KAboutData* aboutData) {
+KAboutApplicationDialog* KAboutApplicationDialog_New2(const KAboutData* aboutData) {
     return new VirtualKAboutApplicationDialog(*aboutData);
 }
 
-KAboutApplicationDialog* KAboutApplicationDialog_new3(const KAboutData* aboutData, int opts, QWidget* parent) {
+KAboutApplicationDialog* KAboutApplicationDialog_New3(const KAboutData* aboutData, int opts, QWidget* parent) {
     return new VirtualKAboutApplicationDialog(*aboutData, static_cast<KAboutApplicationDialog::Options>(opts), parent);
 }
 
-KAboutApplicationDialog* KAboutApplicationDialog_new4(const KAboutData* aboutData, QWidget* parent) {
+KAboutApplicationDialog* KAboutApplicationDialog_New4(const KAboutData* aboutData, QWidget* parent) {
     return new VirtualKAboutApplicationDialog(*aboutData, parent);
 }
 

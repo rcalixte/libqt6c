@@ -892,11 +892,11 @@ void QAccessibleAttributesInterface_Delete(QAccessibleAttributesInterface* self)
     delete self;
 }
 
-QAccessibleEvent* QAccessibleEvent_new(QObject* obj, int typ) {
+QAccessibleEvent* QAccessibleEvent_New(QObject* obj, int typ) {
     return new VirtualQAccessibleEvent(obj, static_cast<QAccessible::Event>(typ));
 }
 
-QAccessibleEvent* QAccessibleEvent_new2(QAccessibleInterface* iface, int typ) {
+QAccessibleEvent* QAccessibleEvent_New2(QAccessibleInterface* iface, int typ) {
     return new VirtualQAccessibleEvent(iface, static_cast<QAccessible::Event>(typ));
 }
 
@@ -947,11 +947,11 @@ void QAccessibleEvent_Delete(QAccessibleEvent* self) {
     delete self;
 }
 
-QAccessibleStateChangeEvent* QAccessibleStateChangeEvent_new(QObject* obj, QAccessible__State* state) {
+QAccessibleStateChangeEvent* QAccessibleStateChangeEvent_New(QObject* obj, QAccessible__State* state) {
     return new VirtualQAccessibleStateChangeEvent(obj, *state);
 }
 
-QAccessibleStateChangeEvent* QAccessibleStateChangeEvent_new2(QAccessibleInterface* iface, QAccessible__State* state) {
+QAccessibleStateChangeEvent* QAccessibleStateChangeEvent_New2(QAccessibleInterface* iface, QAccessible__State* state) {
     return new VirtualQAccessibleStateChangeEvent(iface, *state);
 }
 
@@ -992,11 +992,11 @@ void QAccessibleStateChangeEvent_Delete(QAccessibleStateChangeEvent* self) {
     delete self;
 }
 
-QAccessibleTextCursorEvent* QAccessibleTextCursorEvent_new(QObject* obj, int cursorPos) {
+QAccessibleTextCursorEvent* QAccessibleTextCursorEvent_New(QObject* obj, int cursorPos) {
     return new VirtualQAccessibleTextCursorEvent(obj, static_cast<int>(cursorPos));
 }
 
-QAccessibleTextCursorEvent* QAccessibleTextCursorEvent_new2(QAccessibleInterface* iface, int cursorPos) {
+QAccessibleTextCursorEvent* QAccessibleTextCursorEvent_New2(QAccessibleInterface* iface, int cursorPos) {
     return new VirtualQAccessibleTextCursorEvent(iface, static_cast<int>(cursorPos));
 }
 
@@ -1041,11 +1041,11 @@ void QAccessibleTextCursorEvent_Delete(QAccessibleTextCursorEvent* self) {
     delete self;
 }
 
-QAccessibleTextSelectionEvent* QAccessibleTextSelectionEvent_new(QObject* obj, int start, int end) {
+QAccessibleTextSelectionEvent* QAccessibleTextSelectionEvent_New(QObject* obj, int start, int end) {
     return new VirtualQAccessibleTextSelectionEvent(obj, static_cast<int>(start), static_cast<int>(end));
 }
 
-QAccessibleTextSelectionEvent* QAccessibleTextSelectionEvent_new2(QAccessibleInterface* iface, int start, int end) {
+QAccessibleTextSelectionEvent* QAccessibleTextSelectionEvent_New2(QAccessibleInterface* iface, int start, int end) {
     return new VirtualQAccessibleTextSelectionEvent(iface, static_cast<int>(start), static_cast<int>(end));
 }
 
@@ -1094,12 +1094,12 @@ void QAccessibleTextSelectionEvent_Delete(QAccessibleTextSelectionEvent* self) {
     delete self;
 }
 
-QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_new(QObject* obj, int position, const libqt_string text) {
+QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_New(QObject* obj, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextInsertEvent(obj, static_cast<int>(position), text_QString);
 }
 
-QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_new2(QAccessibleInterface* iface, int position, const libqt_string text) {
+QAccessibleTextInsertEvent* QAccessibleTextInsertEvent_New2(QAccessibleInterface* iface, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextInsertEvent(iface, static_cast<int>(position), text_QString);
 }
@@ -1153,12 +1153,12 @@ void QAccessibleTextInsertEvent_Delete(QAccessibleTextInsertEvent* self) {
     delete self;
 }
 
-QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_new(QObject* obj, int position, const libqt_string text) {
+QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_New(QObject* obj, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextRemoveEvent(obj, static_cast<int>(position), text_QString);
 }
 
-QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_new2(QAccessibleInterface* iface, int position, const libqt_string text) {
+QAccessibleTextRemoveEvent* QAccessibleTextRemoveEvent_New2(QAccessibleInterface* iface, int position, const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextRemoveEvent(iface, static_cast<int>(position), text_QString);
 }
@@ -1212,13 +1212,13 @@ void QAccessibleTextRemoveEvent_Delete(QAccessibleTextRemoveEvent* self) {
     delete self;
 }
 
-QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_new(QObject* obj, int position, const libqt_string oldText, const libqt_string text) {
+QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_New(QObject* obj, int position, const libqt_string oldText, const libqt_string text) {
     QString oldText_QString = QString::fromUtf8(oldText.data, oldText.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextUpdateEvent(obj, static_cast<int>(position), oldText_QString, text_QString);
 }
 
-QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_new2(QAccessibleInterface* iface, int position, const libqt_string oldText, const libqt_string text) {
+QAccessibleTextUpdateEvent* QAccessibleTextUpdateEvent_New2(QAccessibleInterface* iface, int position, const libqt_string oldText, const libqt_string text) {
     QString oldText_QString = QString::fromUtf8(oldText.data, oldText.len);
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQAccessibleTextUpdateEvent(iface, static_cast<int>(position), oldText_QString, text_QString);
@@ -1285,11 +1285,11 @@ void QAccessibleTextUpdateEvent_Delete(QAccessibleTextUpdateEvent* self) {
     delete self;
 }
 
-QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_new(QObject* obj, const QVariant* val) {
+QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_New(QObject* obj, const QVariant* val) {
     return new VirtualQAccessibleValueChangeEvent(obj, *val);
 }
 
-QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_new2(QAccessibleInterface* iface, const QVariant* val) {
+QAccessibleValueChangeEvent* QAccessibleValueChangeEvent_New2(QAccessibleInterface* iface, const QVariant* val) {
     return new VirtualQAccessibleValueChangeEvent(iface, *val);
 }
 
@@ -1334,11 +1334,11 @@ void QAccessibleValueChangeEvent_Delete(QAccessibleValueChangeEvent* self) {
     delete self;
 }
 
-QAccessibleTableModelChangeEvent* QAccessibleTableModelChangeEvent_new(QObject* obj, int changeType) {
+QAccessibleTableModelChangeEvent* QAccessibleTableModelChangeEvent_New(QObject* obj, int changeType) {
     return new VirtualQAccessibleTableModelChangeEvent(obj, static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>(changeType));
 }
 
-QAccessibleTableModelChangeEvent* QAccessibleTableModelChangeEvent_new2(QAccessibleInterface* iface, int changeType) {
+QAccessibleTableModelChangeEvent* QAccessibleTableModelChangeEvent_New2(QAccessibleInterface* iface, int changeType) {
     return new VirtualQAccessibleTableModelChangeEvent(iface, static_cast<QAccessibleTableModelChangeEvent::ModelChangeType>(changeType));
 }
 
@@ -1415,12 +1415,12 @@ void QAccessibleTableModelChangeEvent_Delete(QAccessibleTableModelChangeEvent* s
     delete self;
 }
 
-QAccessibleAnnouncementEvent* QAccessibleAnnouncementEvent_new(QObject* object, const libqt_string message) {
+QAccessibleAnnouncementEvent* QAccessibleAnnouncementEvent_New(QObject* object, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     return new VirtualQAccessibleAnnouncementEvent(object, message_QString);
 }
 
-QAccessibleAnnouncementEvent* QAccessibleAnnouncementEvent_new2(QAccessibleInterface* iface, const libqt_string message) {
+QAccessibleAnnouncementEvent* QAccessibleAnnouncementEvent_New2(QAccessibleInterface* iface, const libqt_string message) {
     QString message_QString = QString::fromUtf8(message.data, message.len);
     return new VirtualQAccessibleAnnouncementEvent(iface, message_QString);
 }

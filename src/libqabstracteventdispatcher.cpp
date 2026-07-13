@@ -190,19 +190,19 @@ void QAbstractEventDispatcherV2_Delete(QAbstractEventDispatcherV2* self) {
     delete self;
 }
 
-QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_new(const QAbstractEventDispatcher__TimerInfo* other) {
+QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_New(const QAbstractEventDispatcher__TimerInfo* other) {
     return new QAbstractEventDispatcher::TimerInfo(*other);
 }
 
-QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_new2(QAbstractEventDispatcher__TimerInfo* other) {
+QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_New2(QAbstractEventDispatcher__TimerInfo* other) {
     return new QAbstractEventDispatcher::TimerInfo(std::move(*other));
 }
 
-QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_new3(int id, int i, int t) {
+QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_New3(int id, int i, int t) {
     return new QAbstractEventDispatcher::TimerInfo(static_cast<int>(id), static_cast<int>(i), static_cast<Qt::TimerType>(t));
 }
 
-QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_new4(const QAbstractEventDispatcher__TimerInfo* param1) {
+QAbstractEventDispatcher__TimerInfo* QAbstractEventDispatcher__TimerInfo_New4(const QAbstractEventDispatcher__TimerInfo* param1) {
     return new QAbstractEventDispatcher::TimerInfo(*param1);
 }
 
@@ -242,11 +242,11 @@ void QAbstractEventDispatcher__TimerInfo_Delete(QAbstractEventDispatcher__TimerI
     delete self;
 }
 
-QAbstractEventDispatcher__TimerInfoV2* QAbstractEventDispatcher__TimerInfoV2_new(const QAbstractEventDispatcher__TimerInfoV2* param1) {
+QAbstractEventDispatcher__TimerInfoV2* QAbstractEventDispatcher__TimerInfoV2_New(const QAbstractEventDispatcher__TimerInfoV2* param1) {
     return new QAbstractEventDispatcher::TimerInfoV2(*param1);
 }
 
-QAbstractEventDispatcher__TimerInfoV2* QAbstractEventDispatcher__TimerInfoV2_new2() {
+QAbstractEventDispatcher__TimerInfoV2* QAbstractEventDispatcher__TimerInfoV2_New2() {
     return new QAbstractEventDispatcher::TimerInfoV2();
 }
 

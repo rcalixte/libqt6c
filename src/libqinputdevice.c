@@ -7,23 +7,23 @@
 #include "libqinputdevice.h"
 
 QInputDevice* q_inputdevice_new() {
-    return QInputDevice_new();
+    return QInputDevice_New();
 }
 
 QInputDevice* q_inputdevice_new2(const char* name, int64_t systemId, int32_t type) {
-    return QInputDevice_new2(qstring(name), systemId, type);
+    return QInputDevice_New2(qstring(name), systemId, type);
 }
 
 QInputDevice* q_inputdevice_new3(void* parent) {
-    return QInputDevice_new3((QObject*)parent);
+    return QInputDevice_New3((QObject*)parent);
 }
 
 QInputDevice* q_inputdevice_new4(const char* name, int64_t systemId, int32_t type, const char* seatName) {
-    return QInputDevice_new4(qstring(name), systemId, type, qstring(seatName));
+    return QInputDevice_New4(qstring(name), systemId, type, qstring(seatName));
 }
 
 QInputDevice* q_inputdevice_new5(const char* name, int64_t systemId, int32_t type, const char* seatName, void* parent) {
-    return QInputDevice_new5(qstring(name), systemId, type, qstring(seatName), (QObject*)parent);
+    return QInputDevice_New5(qstring(name), systemId, type, qstring(seatName), (QObject*)parent);
 }
 
 const QMetaObject* q_inputdevice_meta_object(void* self) {

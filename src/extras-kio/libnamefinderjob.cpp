@@ -14,7 +14,7 @@
 #include "libnamefinderjob.hpp"
 #include "libnamefinderjob.hxx"
 
-KIO__NameFinderJob* KIO__NameFinderJob_new(const QUrl* baseUrl, const libqt_string name, QObject* parent) {
+KIO__NameFinderJob* KIO__NameFinderJob_New(const QUrl* baseUrl, const libqt_string name, QObject* parent) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualKIONameFinderJob(*baseUrl, name_QString, parent);
 }

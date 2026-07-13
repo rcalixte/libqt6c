@@ -28,9 +28,9 @@ typedef struct QRectF QRectF;
 typedef struct QRegion QRegion;
 #endif
 
-QPainterPath* QPainterPath_new();
-QPainterPath* QPainterPath_new2(const QPointF* startPoint);
-QPainterPath* QPainterPath_new3(const QPainterPath* other);
+QPainterPath* QPainterPath_New();
+QPainterPath* QPainterPath_New2(const QPointF* startPoint);
+QPainterPath* QPainterPath_New3(const QPainterPath* other);
 void QPainterPath_OperatorAssign(QPainterPath* self, const QPainterPath* other);
 void QPainterPath_Swap(QPainterPath* self, QPainterPath* other);
 void QPainterPath_Clear(QPainterPath* self);
@@ -103,8 +103,8 @@ void QPainterPath_AddRoundedRect4(QPainterPath* self, const QRectF* rect, double
 void QPainterPath_AddRoundedRect7(QPainterPath* self, double x, double y, double w, double h, double xRadius, double yRadius, int mode);
 void QPainterPath_Delete(QPainterPath* self);
 
-QPainterPathStroker* QPainterPathStroker_new();
-QPainterPathStroker* QPainterPathStroker_new2(const QPen* pen);
+QPainterPathStroker* QPainterPathStroker_New();
+QPainterPathStroker* QPainterPathStroker_New2(const QPen* pen);
 void QPainterPathStroker_SetWidth(QPainterPathStroker* self, double width);
 double QPainterPathStroker_Width(const QPainterPathStroker* self);
 void QPainterPathStroker_SetCapStyle(QPainterPathStroker* self, int style);
@@ -123,8 +123,8 @@ double QPainterPathStroker_DashOffset(const QPainterPathStroker* self);
 QPainterPath* QPainterPathStroker_CreateStroke(const QPainterPathStroker* self, const QPainterPath* path);
 void QPainterPathStroker_Delete(QPainterPathStroker* self);
 
-QPainterPath__Element* QPainterPath__Element_new();
-QPainterPath__Element* QPainterPath__Element_new2(const QPainterPath__Element* param1);
+QPainterPath__Element* QPainterPath__Element_New();
+QPainterPath__Element* QPainterPath__Element_New2(const QPainterPath__Element* param1);
 double QPainterPath__Element_X(const QPainterPath__Element* self);
 void QPainterPath__Element_SetX(QPainterPath__Element* self, double x);
 double QPainterPath__Element_Y(const QPainterPath__Element* self);

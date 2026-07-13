@@ -3,11 +3,11 @@
 #include "libqplacecontentrequest.h"
 
 QPlaceContentRequest* q_placecontentrequest_new() {
-    return QPlaceContentRequest_new();
+    return QPlaceContentRequest_New();
 }
 
 QPlaceContentRequest* q_placecontentrequest_new2(void* other) {
-    return QPlaceContentRequest_new2((QPlaceContentRequest*)other);
+    return QPlaceContentRequest_New2((QPlaceContentRequest*)other);
 }
 
 void q_placecontentrequest_operator_assign(void* self, void* other) {

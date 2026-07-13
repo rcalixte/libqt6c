@@ -26,8 +26,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KActionCategory* KActionCategory_new(const libqt_string text);
-KActionCategory* KActionCategory_new2(const libqt_string text, KActionCollection* parent);
+KActionCategory* KActionCategory_New(const libqt_string text);
+KActionCategory* KActionCategory_New2(const libqt_string text, KActionCollection* parent);
 QMetaObject* KActionCategory_MetaObject(const KActionCategory* self);
 void* KActionCategory_Metacast(KActionCategory* self, const char* param1);
 int KActionCategory_Metacall(KActionCategory* self, int param1, int param2, void** param3);

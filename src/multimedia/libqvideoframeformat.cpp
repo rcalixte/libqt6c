@@ -6,15 +6,15 @@
 #include "libqvideoframeformat.hpp"
 #include "libqvideoframeformat.hxx"
 
-QVideoFrameFormat* QVideoFrameFormat_new() {
+QVideoFrameFormat* QVideoFrameFormat_New() {
     return new QVideoFrameFormat();
 }
 
-QVideoFrameFormat* QVideoFrameFormat_new2(const QSize* size, int pixelFormat) {
+QVideoFrameFormat* QVideoFrameFormat_New2(const QSize* size, int pixelFormat) {
     return new QVideoFrameFormat(*size, static_cast<QVideoFrameFormat::PixelFormat>(pixelFormat));
 }
 
-QVideoFrameFormat* QVideoFrameFormat_new3(const QVideoFrameFormat* format) {
+QVideoFrameFormat* QVideoFrameFormat_New3(const QVideoFrameFormat* format) {
     return new QVideoFrameFormat(*format);
 }
 

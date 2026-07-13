@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KSslInfoDialog* KSslInfoDialog_new(QWidget* parent);
-KSslInfoDialog* KSslInfoDialog_new2();
+KSslInfoDialog* KSslInfoDialog_New(QWidget* parent);
+KSslInfoDialog* KSslInfoDialog_New2();
 QMetaObject* KSslInfoDialog_MetaObject(const KSslInfoDialog* self);
 void* KSslInfoDialog_Metacast(KSslInfoDialog* self, const char* param1);
 int KSslInfoDialog_Metacall(KSslInfoDialog* self, int param1, int param2, void** param3);

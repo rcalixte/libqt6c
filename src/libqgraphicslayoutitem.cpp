@@ -7,15 +7,15 @@
 #include "libqgraphicslayoutitem.hpp"
 #include "libqgraphicslayoutitem.hxx"
 
-QGraphicsLayoutItem* QGraphicsLayoutItem_new() {
+QGraphicsLayoutItem* QGraphicsLayoutItem_New() {
     return new VirtualQGraphicsLayoutItem();
 }
 
-QGraphicsLayoutItem* QGraphicsLayoutItem_new2(QGraphicsLayoutItem* parent) {
+QGraphicsLayoutItem* QGraphicsLayoutItem_New2(QGraphicsLayoutItem* parent) {
     return new VirtualQGraphicsLayoutItem(parent);
 }
 
-QGraphicsLayoutItem* QGraphicsLayoutItem_new3(QGraphicsLayoutItem* parent, bool isLayout) {
+QGraphicsLayoutItem* QGraphicsLayoutItem_New3(QGraphicsLayoutItem* parent, bool isLayout) {
     return new VirtualQGraphicsLayoutItem(parent, isLayout);
 }
 

@@ -25,19 +25,19 @@
 #include "libktextedit.h"
 
 KTextEdit* k_textedit_new(void* parent) {
-    return KTextEdit_new((QWidget*)parent);
+    return KTextEdit_New((QWidget*)parent);
 }
 
 KTextEdit* k_textedit_new2(const char* text) {
-    return KTextEdit_new2(qstring(text));
+    return KTextEdit_New2(qstring(text));
 }
 
 KTextEdit* k_textedit_new3() {
-    return KTextEdit_new3();
+    return KTextEdit_New3();
 }
 
 KTextEdit* k_textedit_new4(const char* text, void* parent) {
-    return KTextEdit_new4(qstring(text), (QWidget*)parent);
+    return KTextEdit_New4(qstring(text), (QWidget*)parent);
 }
 
 const QMetaObject* k_textedit_meta_object(void* self) {

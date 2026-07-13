@@ -40,19 +40,19 @@
 #include "libqkeysequenceedit.hpp"
 #include "libqkeysequenceedit.hxx"
 
-QKeySequenceEdit* QKeySequenceEdit_new(QWidget* parent) {
+QKeySequenceEdit* QKeySequenceEdit_New(QWidget* parent) {
     return new VirtualQKeySequenceEdit(parent);
 }
 
-QKeySequenceEdit* QKeySequenceEdit_new2() {
+QKeySequenceEdit* QKeySequenceEdit_New2() {
     return new VirtualQKeySequenceEdit();
 }
 
-QKeySequenceEdit* QKeySequenceEdit_new3(const QKeySequence* keySequence) {
+QKeySequenceEdit* QKeySequenceEdit_New3(const QKeySequence* keySequence) {
     return new VirtualQKeySequenceEdit(*keySequence);
 }
 
-QKeySequenceEdit* QKeySequenceEdit_new4(const QKeySequence* keySequence, QWidget* parent) {
+QKeySequenceEdit* QKeySequenceEdit_New4(const QKeySequence* keySequence, QWidget* parent) {
     return new VirtualQKeySequenceEdit(*keySequence, parent);
 }
 

@@ -47,19 +47,19 @@
 #include "libkhistorycombobox.hpp"
 #include "libkhistorycombobox.hxx"
 
-KHistoryComboBox* KHistoryComboBox_new(QWidget* parent) {
+KHistoryComboBox* KHistoryComboBox_New(QWidget* parent) {
     return new VirtualKHistoryComboBox(parent);
 }
 
-KHistoryComboBox* KHistoryComboBox_new2() {
+KHistoryComboBox* KHistoryComboBox_New2() {
     return new VirtualKHistoryComboBox();
 }
 
-KHistoryComboBox* KHistoryComboBox_new3(bool useCompletion) {
+KHistoryComboBox* KHistoryComboBox_New3(bool useCompletion) {
     return new VirtualKHistoryComboBox(useCompletion);
 }
 
-KHistoryComboBox* KHistoryComboBox_new4(bool useCompletion, QWidget* parent) {
+KHistoryComboBox* KHistoryComboBox_New4(bool useCompletion, QWidget* parent) {
     return new VirtualKHistoryComboBox(useCompletion, parent);
 }
 

@@ -17,7 +17,7 @@
 #include "libqgraphicssceneevent.hpp"
 #include "libqgraphicssceneevent.hxx"
 
-QGraphicsSceneEvent* QGraphicsSceneEvent_new(int type) {
+QGraphicsSceneEvent* QGraphicsSceneEvent_New(int type) {
     return new VirtualQGraphicsSceneEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -99,11 +99,11 @@ void QGraphicsSceneEvent_Delete(QGraphicsSceneEvent* self) {
     delete self;
 }
 
-QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new() {
+QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_New() {
     return new VirtualQGraphicsSceneMouseEvent();
 }
 
-QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new2(int type) {
+QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_New2(int type) {
     return new VirtualQGraphicsSceneMouseEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -281,11 +281,11 @@ void QGraphicsSceneMouseEvent_Delete(QGraphicsSceneMouseEvent* self) {
     delete self;
 }
 
-QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new() {
+QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_New() {
     return new VirtualQGraphicsSceneWheelEvent();
 }
 
-QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new2(int type) {
+QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_New2(int type) {
     return new VirtualQGraphicsSceneWheelEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -431,11 +431,11 @@ void QGraphicsSceneWheelEvent_Delete(QGraphicsSceneWheelEvent* self) {
     delete self;
 }
 
-QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new() {
+QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_New() {
     return new VirtualQGraphicsSceneContextMenuEvent();
 }
 
-QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new2(int type) {
+QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_New2(int type) {
     return new VirtualQGraphicsSceneContextMenuEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -541,11 +541,11 @@ void QGraphicsSceneContextMenuEvent_Delete(QGraphicsSceneContextMenuEvent* self)
     delete self;
 }
 
-QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new() {
+QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_New() {
     return new VirtualQGraphicsSceneHoverEvent();
 }
 
-QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new2(int type) {
+QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_New2(int type) {
     return new VirtualQGraphicsSceneHoverEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -667,11 +667,11 @@ void QGraphicsSceneHoverEvent_Delete(QGraphicsSceneHoverEvent* self) {
     delete self;
 }
 
-QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new() {
+QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_New() {
     return new VirtualQGraphicsSceneHelpEvent();
 }
 
-QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new2(int type) {
+QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_New2(int type) {
     return new VirtualQGraphicsSceneHelpEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -753,11 +753,11 @@ void QGraphicsSceneHelpEvent_Delete(QGraphicsSceneHelpEvent* self) {
     delete self;
 }
 
-QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new() {
+QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_New() {
     return new VirtualQGraphicsSceneDragDropEvent();
 }
 
-QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new2(int type) {
+QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_New2(int type) {
     return new VirtualQGraphicsSceneDragDropEvent(static_cast<QEvent::Type>(type));
 }
 
@@ -907,7 +907,7 @@ void QGraphicsSceneDragDropEvent_Delete(QGraphicsSceneDragDropEvent* self) {
     delete self;
 }
 
-QGraphicsSceneResizeEvent* QGraphicsSceneResizeEvent_new() {
+QGraphicsSceneResizeEvent* QGraphicsSceneResizeEvent_New() {
     return new VirtualQGraphicsSceneResizeEvent();
 }
 
@@ -989,7 +989,7 @@ void QGraphicsSceneResizeEvent_Delete(QGraphicsSceneResizeEvent* self) {
     delete self;
 }
 
-QGraphicsSceneMoveEvent* QGraphicsSceneMoveEvent_new() {
+QGraphicsSceneMoveEvent* QGraphicsSceneMoveEvent_New() {
     return new VirtualQGraphicsSceneMoveEvent();
 }
 

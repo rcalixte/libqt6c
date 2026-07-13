@@ -22,9 +22,9 @@ typedef struct QOpenGLExtraFunctions QOpenGLExtraFunctions;
 typedef struct QOpenGLFunctions QOpenGLFunctions;
 #endif
 
-QOpenGLExtraFunctions* QOpenGLExtraFunctions_new();
-QOpenGLExtraFunctions* QOpenGLExtraFunctions_new2(QOpenGLContext* context);
-QOpenGLExtraFunctions* QOpenGLExtraFunctions_new3(const QOpenGLExtraFunctions* param1);
+QOpenGLExtraFunctions* QOpenGLExtraFunctions_New();
+QOpenGLExtraFunctions* QOpenGLExtraFunctions_New2(QOpenGLContext* context);
+QOpenGLExtraFunctions* QOpenGLExtraFunctions_New3(const QOpenGLExtraFunctions* param1);
 void QOpenGLExtraFunctions_GlReadBuffer(QOpenGLExtraFunctions* self, uint32_t mode);
 void QOpenGLExtraFunctions_GlDrawRangeElements(QOpenGLExtraFunctions* self, uint32_t mode, uint32_t start, uint32_t end, int32_t count, uint32_t type, const void* indices);
 void QOpenGLExtraFunctions_GlTexImage3D(QOpenGLExtraFunctions* self, uint32_t target, int32_t level, int32_t internalformat, int32_t width, int32_t height, int32_t depth, int32_t border, uint32_t format, uint32_t type, const void* pixels);

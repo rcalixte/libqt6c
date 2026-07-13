@@ -13,11 +13,11 @@
 #include "libemojimodelmanager.hpp"
 #include "libemojimodelmanager.hxx"
 
-TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_new() {
+TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_New() {
     return new VirtualTextEmoticonsCoreEmojiModelManager();
 }
 
-TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_new2(QObject* parent) {
+TextEmoticonsCore__EmojiModelManager* TextEmoticonsCore__EmojiModelManager_New2(QObject* parent) {
     return new VirtualTextEmoticonsCoreEmojiModelManager(parent);
 }
 

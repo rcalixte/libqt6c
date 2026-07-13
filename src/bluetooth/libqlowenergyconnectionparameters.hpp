@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QLowEnergyConnectionParameters QLowEnergyConnectionParameters;
 #endif
 
-QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_new();
-QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_new2(const QLowEnergyConnectionParameters* other);
+QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_New();
+QLowEnergyConnectionParameters* QLowEnergyConnectionParameters_New2(const QLowEnergyConnectionParameters* other);
 void QLowEnergyConnectionParameters_OperatorAssign(QLowEnergyConnectionParameters* self, const QLowEnergyConnectionParameters* other);
 void QLowEnergyConnectionParameters_SetIntervalRange(QLowEnergyConnectionParameters* self, double minimum, double maximum);
 double QLowEnergyConnectionParameters_MinimumInterval(const QLowEnergyConnectionParameters* self);

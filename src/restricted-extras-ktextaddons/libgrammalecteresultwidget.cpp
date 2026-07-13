@@ -38,11 +38,11 @@
 #include "libgrammalecteresultwidget.hpp"
 #include "libgrammalecteresultwidget.hxx"
 
-TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_new(QWidget* parent) {
+TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_New(QWidget* parent) {
     return new VirtualTextGrammarCheckGrammalecteResultWidget(parent);
 }
 
-TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_new2() {
+TextGrammarCheck__GrammalecteResultWidget* TextGrammarCheck__GrammalecteResultWidget_New2() {
     return new VirtualTextGrammarCheckGrammalecteResultWidget();
 }
 

@@ -6,19 +6,19 @@
 #include "libqtextdocumentfragment.hpp"
 #include "libqtextdocumentfragment.hxx"
 
-QTextDocumentFragment* QTextDocumentFragment_new() {
+QTextDocumentFragment* QTextDocumentFragment_New() {
     return new QTextDocumentFragment();
 }
 
-QTextDocumentFragment* QTextDocumentFragment_new2(const QTextDocument* document) {
+QTextDocumentFragment* QTextDocumentFragment_New2(const QTextDocument* document) {
     return new QTextDocumentFragment(document);
 }
 
-QTextDocumentFragment* QTextDocumentFragment_new3(const QTextCursor* range) {
+QTextDocumentFragment* QTextDocumentFragment_New3(const QTextCursor* range) {
     return new QTextDocumentFragment(*range);
 }
 
-QTextDocumentFragment* QTextDocumentFragment_new4(const QTextDocumentFragment* rhs) {
+QTextDocumentFragment* QTextDocumentFragment_New4(const QTextDocumentFragment* rhs) {
     return new QTextDocumentFragment(*rhs);
 }
 

@@ -7,27 +7,27 @@
 #include "libqsslcertificate.h"
 
 QSslCertificate* q_sslcertificate_new(void* device) {
-    return QSslCertificate_new((QIODevice*)device);
+    return QSslCertificate_New((QIODevice*)device);
 }
 
 QSslCertificate* q_sslcertificate_new2() {
-    return QSslCertificate_new2();
+    return QSslCertificate_New2();
 }
 
 QSslCertificate* q_sslcertificate_new3(void* other) {
-    return QSslCertificate_new3((QSslCertificate*)other);
+    return QSslCertificate_New3((QSslCertificate*)other);
 }
 
 QSslCertificate* q_sslcertificate_new4(void* device, int32_t format) {
-    return QSslCertificate_new4((QIODevice*)device, format);
+    return QSslCertificate_New4((QIODevice*)device, format);
 }
 
 QSslCertificate* q_sslcertificate_new5(char* data) {
-    return QSslCertificate_new5(qstring(data));
+    return QSslCertificate_New5(qstring(data));
 }
 
 QSslCertificate* q_sslcertificate_new6(char* data, int32_t format) {
-    return QSslCertificate_new6(qstring(data), format);
+    return QSslCertificate_New6(qstring(data), format);
 }
 
 void q_sslcertificate_operator_assign(void* self, void* other) {

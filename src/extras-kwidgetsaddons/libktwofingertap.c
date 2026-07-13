@@ -9,11 +9,11 @@
 #include "libktwofingertap.h"
 
 KTwoFingerTap* k_twofingertap_new() {
-    return KTwoFingerTap_new();
+    return KTwoFingerTap_New();
 }
 
 KTwoFingerTap* k_twofingertap_new2(void* parent) {
-    return KTwoFingerTap_new2((QObject*)parent);
+    return KTwoFingerTap_New2((QObject*)parent);
 }
 
 const QMetaObject* k_twofingertap_meta_object(void* self) {
@@ -481,7 +481,7 @@ void k_twofingertap_delete(void* self) {
 }
 
 KTwoFingerTapRecognizer* k_twofingertaprecognizer_new() {
-    return KTwoFingerTapRecognizer_new();
+    return KTwoFingerTapRecognizer_New();
 }
 
 QGesture* k_twofingertaprecognizer_create(void* self, void* target) {

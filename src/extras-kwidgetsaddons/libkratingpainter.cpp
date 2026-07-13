@@ -8,7 +8,7 @@
 #include "libkratingpainter.hpp"
 #include "libkratingpainter.hxx"
 
-KRatingPainter* KRatingPainter_new() {
+KRatingPainter* KRatingPainter_New() {
     return new KRatingPainter();
 }
 

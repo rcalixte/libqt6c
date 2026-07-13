@@ -40,11 +40,11 @@
 #include "libknewpassworddialog.hpp"
 #include "libknewpassworddialog.hxx"
 
-KNewPasswordDialog* KNewPasswordDialog_new(QWidget* parent) {
+KNewPasswordDialog* KNewPasswordDialog_New(QWidget* parent) {
     return new VirtualKNewPasswordDialog(parent);
 }
 
-KNewPasswordDialog* KNewPasswordDialog_new2() {
+KNewPasswordDialog* KNewPasswordDialog_New2() {
     return new VirtualKNewPasswordDialog();
 }
 

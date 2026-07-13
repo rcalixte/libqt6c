@@ -17,19 +17,19 @@
 #include "libqprintdialog.h"
 
 QPrintDialog* q_printdialog_new(void* parent) {
-    return QPrintDialog_new((QWidget*)parent);
+    return QPrintDialog_New((QWidget*)parent);
 }
 
 QPrintDialog* q_printdialog_new2(void* printer) {
-    return QPrintDialog_new2((QPrinter*)printer);
+    return QPrintDialog_New2((QPrinter*)printer);
 }
 
 QPrintDialog* q_printdialog_new3() {
-    return QPrintDialog_new3();
+    return QPrintDialog_New3();
 }
 
 QPrintDialog* q_printdialog_new4(void* printer, void* parent) {
-    return QPrintDialog_new4((QPrinter*)printer, (QWidget*)parent);
+    return QPrintDialog_New4((QPrinter*)printer, (QWidget*)parent);
 }
 
 const QMetaObject* q_printdialog_meta_object(void* self) {

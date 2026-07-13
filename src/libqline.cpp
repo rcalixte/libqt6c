@@ -6,27 +6,27 @@
 #include "libqline.hpp"
 #include "libqline.hxx"
 
-QLine* QLine_new(const QLine* other) {
+QLine* QLine_New(const QLine* other) {
     return new QLine(*other);
 }
 
-QLine* QLine_new2(QLine* other) {
+QLine* QLine_New2(QLine* other) {
     return new QLine(std::move(*other));
 }
 
-QLine* QLine_new3() {
+QLine* QLine_New3() {
     return new QLine();
 }
 
-QLine* QLine_new4(const QPoint* pt1, const QPoint* pt2) {
+QLine* QLine_New4(const QPoint* pt1, const QPoint* pt2) {
     return new QLine(*pt1, *pt2);
 }
 
-QLine* QLine_new5(int x1, int y1, int x2, int y2) {
+QLine* QLine_New5(int x1, int y1, int x2, int y2) {
     return new QLine(static_cast<int>(x1), static_cast<int>(y1), static_cast<int>(x2), static_cast<int>(y2));
 }
 
-QLine* QLine_new6(const QLine* param1) {
+QLine* QLine_New6(const QLine* param1) {
     return new QLine(*param1);
 }
 
@@ -118,31 +118,31 @@ void QLine_Delete(QLine* self) {
     delete self;
 }
 
-QLineF* QLineF_new(const QLineF* other) {
+QLineF* QLineF_New(const QLineF* other) {
     return new QLineF(*other);
 }
 
-QLineF* QLineF_new2(QLineF* other) {
+QLineF* QLineF_New2(QLineF* other) {
     return new QLineF(std::move(*other));
 }
 
-QLineF* QLineF_new3() {
+QLineF* QLineF_New3() {
     return new QLineF();
 }
 
-QLineF* QLineF_new4(const QPointF* pt1, const QPointF* pt2) {
+QLineF* QLineF_New4(const QPointF* pt1, const QPointF* pt2) {
     return new QLineF(*pt1, *pt2);
 }
 
-QLineF* QLineF_new5(double x1, double y1, double x2, double y2) {
+QLineF* QLineF_New5(double x1, double y1, double x2, double y2) {
     return new QLineF(static_cast<qreal>(x1), static_cast<qreal>(y1), static_cast<qreal>(x2), static_cast<qreal>(y2));
 }
 
-QLineF* QLineF_new6(const QLine* line) {
+QLineF* QLineF_New6(const QLine* line) {
     return new QLineF(*line);
 }
 
-QLineF* QLineF_new7(const QLineF* param1) {
+QLineF* QLineF_New7(const QLineF* param1) {
     return new QLineF(*param1);
 }
 

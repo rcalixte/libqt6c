@@ -8,32 +8,32 @@
 #include "libkconfig.hpp"
 #include "libkconfig.hxx"
 
-KConfig* KConfig_new() {
+KConfig* KConfig_New() {
     return new VirtualKConfig();
 }
 
-KConfig* KConfig_new2(const libqt_string file, const libqt_string backend) {
+KConfig* KConfig_New2(const libqt_string file, const libqt_string backend) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     QString backend_QString = QString::fromUtf8(backend.data, backend.len);
     return new VirtualKConfig(file_QString, backend_QString);
 }
 
-KConfig* KConfig_new3(const libqt_string file) {
+KConfig* KConfig_New3(const libqt_string file) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualKConfig(file_QString);
 }
 
-KConfig* KConfig_new4(const libqt_string file, int mode) {
+KConfig* KConfig_New4(const libqt_string file, int mode) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualKConfig(file_QString, static_cast<KConfig::OpenFlags>(mode));
 }
 
-KConfig* KConfig_new5(const libqt_string file, int mode, int type) {
+KConfig* KConfig_New5(const libqt_string file, int mode, int type) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     return new VirtualKConfig(file_QString, static_cast<KConfig::OpenFlags>(mode), static_cast<QStandardPaths::StandardLocation>(type));
 }
 
-KConfig* KConfig_new6(const libqt_string file, const libqt_string backend, int type) {
+KConfig* KConfig_New6(const libqt_string file, const libqt_string backend, int type) {
     QString file_QString = QString::fromUtf8(file.data, file.len);
     QString backend_QString = QString::fromUtf8(backend.data, backend.len);
     return new VirtualKConfig(file_QString, backend_QString, static_cast<QStandardPaths::StandardLocation>(type));

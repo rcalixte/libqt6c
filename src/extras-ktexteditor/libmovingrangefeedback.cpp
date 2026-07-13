@@ -5,7 +5,7 @@
 #include "libmovingrangefeedback.hpp"
 #include "libmovingrangefeedback.hxx"
 
-KTextEditor__MovingRangeFeedback* KTextEditor__MovingRangeFeedback_new() {
+KTextEditor__MovingRangeFeedback* KTextEditor__MovingRangeFeedback_New() {
     return new VirtualKTextEditorMovingRangeFeedback();
 }
 

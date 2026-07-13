@@ -4,7 +4,7 @@
 #include "libqopenglfunctions_4_3_compatibility.hpp"
 #include "libqopenglfunctions_4_3_compatibility.hxx"
 
-QOpenGLFunctions_4_3_Compatibility* QOpenGLFunctions_4_3_Compatibility_new() {
+QOpenGLFunctions_4_3_Compatibility* QOpenGLFunctions_4_3_Compatibility_New() {
     return new VirtualQOpenGLFunctions_4_3_Compatibility();
 }
 

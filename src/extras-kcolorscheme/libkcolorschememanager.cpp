@@ -12,11 +12,11 @@
 #include "libkcolorschememanager.hpp"
 #include "libkcolorschememanager.hxx"
 
-KColorSchemeManager* KColorSchemeManager_new() {
+KColorSchemeManager* KColorSchemeManager_New() {
     return new VirtualKColorSchemeManager();
 }
 
-KColorSchemeManager* KColorSchemeManager_new2(QObject* parent) {
+KColorSchemeManager* KColorSchemeManager_New2(QObject* parent) {
     return new VirtualKColorSchemeManager(parent);
 }
 

@@ -15,12 +15,12 @@
 #include "libqbarset.hpp"
 #include "libqbarset.hxx"
 
-QBarSet* QBarSet_new(const libqt_string label) {
+QBarSet* QBarSet_New(const libqt_string label) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBarSet(label_QString);
 }
 
-QBarSet* QBarSet_new2(const libqt_string label, QObject* parent) {
+QBarSet* QBarSet_New2(const libqt_string label, QObject* parent) {
     QString label_QString = QString::fromUtf8(label.data, label.len);
     return new VirtualQBarSet(label_QString, parent);
 }

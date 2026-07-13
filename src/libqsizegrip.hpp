@@ -50,7 +50,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QSizeGrip* QSizeGrip_new(QWidget* parent);
+QSizeGrip* QSizeGrip_New(QWidget* parent);
 QMetaObject* QSizeGrip_MetaObject(const QSizeGrip* self);
 void* QSizeGrip_Metacast(QSizeGrip* self, const char* param1);
 int QSizeGrip_Metacall(QSizeGrip* self, int param1, int param2, void** param3);

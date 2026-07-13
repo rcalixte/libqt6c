@@ -10,11 +10,11 @@
 #include "libqboxplotseries.h"
 
 QBoxPlotSeries* q_boxplotseries_new() {
-    return QBoxPlotSeries_new();
+    return QBoxPlotSeries_New();
 }
 
 QBoxPlotSeries* q_boxplotseries_new2(void* parent) {
-    return QBoxPlotSeries_new2((QObject*)parent);
+    return QBoxPlotSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_boxplotseries_meta_object(void* self) {

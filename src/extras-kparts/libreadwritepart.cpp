@@ -25,15 +25,15 @@
 #include "libreadwritepart.hpp"
 #include "libreadwritepart.hxx"
 
-KParts__ReadWritePart* KParts__ReadWritePart_new() {
+KParts__ReadWritePart* KParts__ReadWritePart_New() {
     return new VirtualKPartsReadWritePart();
 }
 
-KParts__ReadWritePart* KParts__ReadWritePart_new2(QObject* parent) {
+KParts__ReadWritePart* KParts__ReadWritePart_New2(QObject* parent) {
     return new VirtualKPartsReadWritePart(parent);
 }
 
-KParts__ReadWritePart* KParts__ReadWritePart_new3(QObject* parent, const KPluginMetaData* data) {
+KParts__ReadWritePart* KParts__ReadWritePart_New3(QObject* parent, const KPluginMetaData* data) {
     return new VirtualKPartsReadWritePart(parent, *data);
 }
 

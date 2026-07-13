@@ -5,19 +5,19 @@
 #include "libkiconcolors.hpp"
 #include "libkiconcolors.hxx"
 
-KIconColors* KIconColors_new() {
+KIconColors* KIconColors_New() {
     return new KIconColors();
 }
 
-KIconColors* KIconColors_new2(const QColor* color) {
+KIconColors* KIconColors_New2(const QColor* color) {
     return new KIconColors(*color);
 }
 
-KIconColors* KIconColors_new3(const QPalette* palette) {
+KIconColors* KIconColors_New3(const QPalette* palette) {
     return new KIconColors(*palette);
 }
 
-KIconColors* KIconColors_new4(const KIconColors* other) {
+KIconColors* KIconColors_New4(const KIconColors* other) {
     return new KIconColors(*other);
 }
 

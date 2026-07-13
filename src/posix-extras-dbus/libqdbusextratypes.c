@@ -3,23 +3,23 @@
 #include "libqdbusextratypes.h"
 
 QDBusObjectPath* q_dbusobjectpath_new() {
-    return QDBusObjectPath_new();
+    return QDBusObjectPath_New();
 }
 
 QDBusObjectPath* q_dbusobjectpath_new2(const char* path) {
-    return QDBusObjectPath_new2(path);
+    return QDBusObjectPath_New2(path);
 }
 
 QDBusObjectPath* q_dbusobjectpath_new3(char* path) {
-    return QDBusObjectPath_new3(qstring(path));
+    return QDBusObjectPath_New3(qstring(path));
 }
 
 QDBusObjectPath* q_dbusobjectpath_new4(const char* path) {
-    return QDBusObjectPath_new4(qstring(path));
+    return QDBusObjectPath_New4(qstring(path));
 }
 
 QDBusObjectPath* q_dbusobjectpath_new5(void* param1) {
-    return QDBusObjectPath_new5((QDBusObjectPath*)param1);
+    return QDBusObjectPath_New5((QDBusObjectPath*)param1);
 }
 
 void q_dbusobjectpath_swap(void* self, void* other) {
@@ -46,23 +46,23 @@ void q_dbusobjectpath_delete(void* self) {
 }
 
 QDBusSignature* q_dbussignature_new() {
-    return QDBusSignature_new();
+    return QDBusSignature_New();
 }
 
 QDBusSignature* q_dbussignature_new2(const char* signature) {
-    return QDBusSignature_new2(signature);
+    return QDBusSignature_New2(signature);
 }
 
 QDBusSignature* q_dbussignature_new3(char* signature) {
-    return QDBusSignature_new3(qstring(signature));
+    return QDBusSignature_New3(qstring(signature));
 }
 
 QDBusSignature* q_dbussignature_new4(const char* signature) {
-    return QDBusSignature_new4(qstring(signature));
+    return QDBusSignature_New4(qstring(signature));
 }
 
 QDBusSignature* q_dbussignature_new5(void* param1) {
-    return QDBusSignature_new5((QDBusSignature*)param1);
+    return QDBusSignature_New5((QDBusSignature*)param1);
 }
 
 void q_dbussignature_swap(void* self, void* other) {
@@ -85,15 +85,15 @@ void q_dbussignature_delete(void* self) {
 }
 
 QDBusVariant* q_dbusvariant_new() {
-    return QDBusVariant_new();
+    return QDBusVariant_New();
 }
 
 QDBusVariant* q_dbusvariant_new2(void* variant) {
-    return QDBusVariant_new2((QVariant*)variant);
+    return QDBusVariant_New2((QVariant*)variant);
 }
 
 QDBusVariant* q_dbusvariant_new3(void* param1) {
-    return QDBusVariant_new3((QDBusVariant*)param1);
+    return QDBusVariant_New3((QDBusVariant*)param1);
 }
 
 void q_dbusvariant_swap(void* self, void* other) {

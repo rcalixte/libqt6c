@@ -7,11 +7,11 @@
 #include "libkmacroexpander.hpp"
 #include "libkmacroexpander.hxx"
 
-KMacroExpanderBase* KMacroExpanderBase_new() {
+KMacroExpanderBase* KMacroExpanderBase_New() {
     return new VirtualKMacroExpanderBase();
 }
 
-KMacroExpanderBase* KMacroExpanderBase_new2(QChar* c) {
+KMacroExpanderBase* KMacroExpanderBase_New2(QChar* c) {
     return new VirtualKMacroExpanderBase(*c);
 }
 
@@ -128,11 +128,11 @@ void KMacroExpanderBase_Delete(KMacroExpanderBase* self) {
     delete self;
 }
 
-KWordMacroExpander* KWordMacroExpander_new() {
+KWordMacroExpander* KWordMacroExpander_New() {
     return new VirtualKWordMacroExpander();
 }
 
-KWordMacroExpander* KWordMacroExpander_new2(QChar* c) {
+KWordMacroExpander* KWordMacroExpander_New2(QChar* c) {
     return new VirtualKWordMacroExpander(*c);
 }
 
@@ -269,11 +269,11 @@ void KWordMacroExpander_Delete(KWordMacroExpander* self) {
     delete self;
 }
 
-KCharMacroExpander* KCharMacroExpander_new() {
+KCharMacroExpander* KCharMacroExpander_New() {
     return new VirtualKCharMacroExpander();
 }
 
-KCharMacroExpander* KCharMacroExpander_new2(QChar* c) {
+KCharMacroExpander* KCharMacroExpander_New2(QChar* c) {
     return new VirtualKCharMacroExpander(*c);
 }
 

@@ -35,27 +35,27 @@
 #include "libqopenglwindow.hpp"
 #include "libqopenglwindow.hxx"
 
-QOpenGLWindow* QOpenGLWindow_new() {
+QOpenGLWindow* QOpenGLWindow_New() {
     return new VirtualQOpenGLWindow();
 }
 
-QOpenGLWindow* QOpenGLWindow_new2(QOpenGLContext* shareContext) {
+QOpenGLWindow* QOpenGLWindow_New2(QOpenGLContext* shareContext) {
     return new VirtualQOpenGLWindow(shareContext);
 }
 
-QOpenGLWindow* QOpenGLWindow_new3(int updateBehavior) {
+QOpenGLWindow* QOpenGLWindow_New3(int updateBehavior) {
     return new VirtualQOpenGLWindow(static_cast<QOpenGLWindow::UpdateBehavior>(updateBehavior));
 }
 
-QOpenGLWindow* QOpenGLWindow_new4(int updateBehavior, QWindow* parent) {
+QOpenGLWindow* QOpenGLWindow_New4(int updateBehavior, QWindow* parent) {
     return new VirtualQOpenGLWindow(static_cast<QOpenGLWindow::UpdateBehavior>(updateBehavior), parent);
 }
 
-QOpenGLWindow* QOpenGLWindow_new5(QOpenGLContext* shareContext, int updateBehavior) {
+QOpenGLWindow* QOpenGLWindow_New5(QOpenGLContext* shareContext, int updateBehavior) {
     return new VirtualQOpenGLWindow(shareContext, static_cast<QOpenGLWindow::UpdateBehavior>(updateBehavior));
 }
 
-QOpenGLWindow* QOpenGLWindow_new6(QOpenGLContext* shareContext, int updateBehavior, QWindow* parent) {
+QOpenGLWindow* QOpenGLWindow_New6(QOpenGLContext* shareContext, int updateBehavior, QWindow* parent) {
     return new VirtualQOpenGLWindow(shareContext, static_cast<QOpenGLWindow::UpdateBehavior>(updateBehavior), parent);
 }
 

@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QTranslator QTranslator;
 #endif
 
-QTranslator* QTranslator_new();
-QTranslator* QTranslator_new2(QObject* parent);
+QTranslator* QTranslator_New();
+QTranslator* QTranslator_New2(QObject* parent);
 QMetaObject* QTranslator_MetaObject(const QTranslator* self);
 void* QTranslator_Metacast(QTranslator* self, const char* param1);
 int QTranslator_Metacall(QTranslator* self, int param1, int param2, void** param3);

@@ -33,11 +33,11 @@
 #include "libqrasterwindow.hpp"
 #include "libqrasterwindow.hxx"
 
-QRasterWindow* QRasterWindow_new() {
+QRasterWindow* QRasterWindow_New() {
     return new VirtualQRasterWindow();
 }
 
-QRasterWindow* QRasterWindow_new2(QWindow* parent) {
+QRasterWindow* QRasterWindow_New2(QWindow* parent) {
     return new VirtualQRasterWindow(parent);
 }
 

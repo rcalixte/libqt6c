@@ -8,23 +8,23 @@
 #include "libqeventpoint.hpp"
 #include "libqeventpoint.hxx"
 
-QEventPoint* QEventPoint_new() {
+QEventPoint* QEventPoint_New() {
     return new QEventPoint();
 }
 
-QEventPoint* QEventPoint_new2(int pointId, uint8_t state, const QPointF* scenePosition, const QPointF* globalPosition) {
+QEventPoint* QEventPoint_New2(int pointId, uint8_t state, const QPointF* scenePosition, const QPointF* globalPosition) {
     return new QEventPoint(static_cast<int>(pointId), static_cast<QEventPoint::State>(state), *scenePosition, *globalPosition);
 }
 
-QEventPoint* QEventPoint_new3(const QEventPoint* other) {
+QEventPoint* QEventPoint_New3(const QEventPoint* other) {
     return new QEventPoint(*other);
 }
 
-QEventPoint* QEventPoint_new4(int id) {
+QEventPoint* QEventPoint_New4(int id) {
     return new QEventPoint(static_cast<int>(id));
 }
 
-QEventPoint* QEventPoint_new5(int id, const QPointingDevice* device) {
+QEventPoint* QEventPoint_New5(int id, const QPointingDevice* device) {
     return new QEventPoint(static_cast<int>(id), device);
 }
 

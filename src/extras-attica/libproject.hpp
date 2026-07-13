@@ -21,8 +21,8 @@ typedef Attica::Project Attica__Project;
 typedef struct Attica__Project Attica__Project;
 #endif
 
-Attica__Project* Attica__Project_new();
-Attica__Project* Attica__Project_new2(const Attica__Project* other);
+Attica__Project* Attica__Project_New();
+Attica__Project* Attica__Project_New2(const Attica__Project* other);
 void Attica__Project_OperatorAssign(Attica__Project* self, const Attica__Project* other);
 void Attica__Project_SetId(Attica__Project* self, const libqt_string id);
 libqt_string Attica__Project_Id(const Attica__Project* self);

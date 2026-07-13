@@ -4,7 +4,7 @@
 #include "libqbasictimer.hpp"
 #include "libqbasictimer.hxx"
 
-QBasicTimer* QBasicTimer_new() {
+QBasicTimer* QBasicTimer_New() {
     return new QBasicTimer();
 }
 

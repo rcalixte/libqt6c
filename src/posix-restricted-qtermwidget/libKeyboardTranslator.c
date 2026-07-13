@@ -3,11 +3,11 @@
 #include "libKeyboardTranslator.h"
 
 Konsole__KeyboardTranslator* k_onsole__keyboardtranslator_new(const char* name) {
-    return Konsole__KeyboardTranslator_new(qstring(name));
+    return Konsole__KeyboardTranslator_New(qstring(name));
 }
 
 Konsole__KeyboardTranslator* k_onsole__keyboardtranslator_new2(void* param1) {
-    return Konsole__KeyboardTranslator_new2((Konsole__KeyboardTranslator*)param1);
+    return Konsole__KeyboardTranslator_New2((Konsole__KeyboardTranslator*)param1);
 }
 
 const char* k_onsole__keyboardtranslator_name(void* self) {
@@ -62,7 +62,7 @@ void k_onsole__keyboardtranslator_delete(void* self) {
 }
 
 Konsole__KeyboardTranslatorReader* k_onsole__keyboardtranslatorreader_new(void* source) {
-    return Konsole__KeyboardTranslatorReader_new((QIODevice*)source);
+    return Konsole__KeyboardTranslatorReader_New((QIODevice*)source);
 }
 
 const char* k_onsole__keyboardtranslatorreader_description(void* self) {
@@ -93,7 +93,7 @@ void k_onsole__keyboardtranslatorreader_delete(void* self) {
 }
 
 Konsole__KeyboardTranslatorWriter* k_onsole__keyboardtranslatorwriter_new(void* destination) {
-    return Konsole__KeyboardTranslatorWriter_new((QIODevice*)destination);
+    return Konsole__KeyboardTranslatorWriter_New((QIODevice*)destination);
 }
 
 void k_onsole__keyboardtranslatorwriter_write_header(void* self, const char* description) {
@@ -109,7 +109,7 @@ void k_onsole__keyboardtranslatorwriter_delete(void* self) {
 }
 
 Konsole__KeyboardTranslatorManager* k_onsole__keyboardtranslatormanager_new() {
-    return Konsole__KeyboardTranslatorManager_new();
+    return Konsole__KeyboardTranslatorManager_New();
 }
 
 void k_onsole__keyboardtranslatormanager_add_translator(void* self, void* translator) {
@@ -160,11 +160,11 @@ int32_t k_onsole_one_or_zero(int value) {
 }
 
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator__entry_new() {
-    return Konsole__KeyboardTranslator__Entry_new();
+    return Konsole__KeyboardTranslator__Entry_New();
 }
 
 Konsole__KeyboardTranslator__Entry* k_onsole__keyboardtranslator__entry_new2(void* param1) {
-    return Konsole__KeyboardTranslator__Entry_new2((Konsole__KeyboardTranslator__Entry*)param1);
+    return Konsole__KeyboardTranslator__Entry_New2((Konsole__KeyboardTranslator__Entry*)param1);
 }
 
 bool k_onsole__keyboardtranslator__entry_is_null(void* self) {

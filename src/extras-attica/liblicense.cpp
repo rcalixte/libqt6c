@@ -5,11 +5,11 @@
 #include "liblicense.hpp"
 #include "liblicense.hxx"
 
-Attica__License* Attica__License_new() {
+Attica__License* Attica__License_New() {
     return new Attica::License();
 }
 
-Attica__License* Attica__License_new2(const Attica__License* other) {
+Attica__License* Attica__License_New2(const Attica__License* other) {
     return new Attica::License(*other);
 }
 

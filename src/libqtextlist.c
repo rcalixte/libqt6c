@@ -9,7 +9,7 @@
 #include "libqtextlist.h"
 
 QTextList* q_textlist_new(void* doc) {
-    return QTextList_new((QTextDocument*)doc);
+    return QTextList_New((QTextDocument*)doc);
 }
 
 const QMetaObject* q_textlist_meta_object(void* self) {

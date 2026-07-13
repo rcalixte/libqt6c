@@ -15,15 +15,15 @@
 #include "libqaccessiblewidget.hpp"
 #include "libqaccessiblewidget.hxx"
 
-QAccessibleWidget* QAccessibleWidget_new(QWidget* o) {
+QAccessibleWidget* QAccessibleWidget_New(QWidget* o) {
     return new VirtualQAccessibleWidget(o);
 }
 
-QAccessibleWidget* QAccessibleWidget_new2(QWidget* o, int r) {
+QAccessibleWidget* QAccessibleWidget_New2(QWidget* o, int r) {
     return new VirtualQAccessibleWidget(o, static_cast<QAccessible::Role>(r));
 }
 
-QAccessibleWidget* QAccessibleWidget_new3(QWidget* o, int r, const libqt_string name) {
+QAccessibleWidget* QAccessibleWidget_New3(QWidget* o, int r, const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new VirtualQAccessibleWidget(o, static_cast<QAccessible::Role>(r), name_QString);
 }

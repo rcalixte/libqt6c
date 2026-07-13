@@ -39,19 +39,19 @@
 #include "libqpagesetupdialog.hpp"
 #include "libqpagesetupdialog.hxx"
 
-QPageSetupDialog* QPageSetupDialog_new(QWidget* parent) {
+QPageSetupDialog* QPageSetupDialog_New(QWidget* parent) {
     return new VirtualQPageSetupDialog(parent);
 }
 
-QPageSetupDialog* QPageSetupDialog_new2(QPrinter* printer) {
+QPageSetupDialog* QPageSetupDialog_New2(QPrinter* printer) {
     return new VirtualQPageSetupDialog(printer);
 }
 
-QPageSetupDialog* QPageSetupDialog_new3() {
+QPageSetupDialog* QPageSetupDialog_New3() {
     return new VirtualQPageSetupDialog();
 }
 
-QPageSetupDialog* QPageSetupDialog_new4(QPrinter* printer, QWidget* parent) {
+QPageSetupDialog* QPageSetupDialog_New4(QPrinter* printer, QWidget* parent) {
     return new VirtualQPageSetupDialog(printer, parent);
 }
 

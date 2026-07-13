@@ -19,27 +19,27 @@
 #include "libqlabel.h"
 
 QLabel* q_label_new(void* parent) {
-    return QLabel_new((QWidget*)parent);
+    return QLabel_New((QWidget*)parent);
 }
 
 QLabel* q_label_new2() {
-    return QLabel_new2();
+    return QLabel_New2();
 }
 
 QLabel* q_label_new3(const char* text) {
-    return QLabel_new3(qstring(text));
+    return QLabel_New3(qstring(text));
 }
 
 QLabel* q_label_new4(void* parent, int32_t f) {
-    return QLabel_new4((QWidget*)parent, f);
+    return QLabel_New4((QWidget*)parent, f);
 }
 
 QLabel* q_label_new5(const char* text, void* parent) {
-    return QLabel_new5(qstring(text), (QWidget*)parent);
+    return QLabel_New5(qstring(text), (QWidget*)parent);
 }
 
 QLabel* q_label_new6(const char* text, void* parent, int32_t f) {
-    return QLabel_new6(qstring(text), (QWidget*)parent, f);
+    return QLabel_New6(qstring(text), (QWidget*)parent, f);
 }
 
 const QMetaObject* q_label_meta_object(void* self) {

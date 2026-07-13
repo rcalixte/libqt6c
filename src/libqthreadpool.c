@@ -9,11 +9,11 @@
 #include "libqthreadpool.h"
 
 QThreadPool* q_threadpool_new() {
-    return QThreadPool_new();
+    return QThreadPool_New();
 }
 
 QThreadPool* q_threadpool_new2(void* parent) {
-    return QThreadPool_new2((QObject*)parent);
+    return QThreadPool_New2((QObject*)parent);
 }
 
 const QMetaObject* q_threadpool_meta_object(void* self) {

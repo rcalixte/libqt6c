@@ -23,11 +23,11 @@
 #include "libqtransposeproxymodel.hpp"
 #include "libqtransposeproxymodel.hxx"
 
-QTransposeProxyModel* QTransposeProxyModel_new() {
+QTransposeProxyModel* QTransposeProxyModel_New() {
     return new VirtualQTransposeProxyModel();
 }
 
-QTransposeProxyModel* QTransposeProxyModel_new2(QObject* parent) {
+QTransposeProxyModel* QTransposeProxyModel_New2(QObject* parent) {
     return new VirtualQTransposeProxyModel(parent);
 }
 

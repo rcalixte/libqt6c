@@ -6,11 +6,11 @@
 #include "libqgenericplugin.h"
 
 QGenericPlugin* q_genericplugin_new() {
-    return QGenericPlugin_new();
+    return QGenericPlugin_New();
 }
 
 QGenericPlugin* q_genericplugin_new2(void* parent) {
-    return QGenericPlugin_new2((QObject*)parent);
+    return QGenericPlugin_New2((QObject*)parent);
 }
 
 const QMetaObject* q_genericplugin_meta_object(void* self) {

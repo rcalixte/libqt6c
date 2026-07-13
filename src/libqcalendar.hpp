@@ -30,12 +30,12 @@ typedef struct QLocale QLocale;
 typedef struct QTime QTime;
 #endif
 
-QCalendar* QCalendar_new(const QCalendar* other);
-QCalendar* QCalendar_new2(QCalendar* other);
-QCalendar* QCalendar_new3();
-QCalendar* QCalendar_new4(int system);
-QCalendar* QCalendar_new5(const char* name);
-QCalendar* QCalendar_new6(QCalendar__SystemId* id);
+QCalendar* QCalendar_New(const QCalendar* other);
+QCalendar* QCalendar_New2(QCalendar* other);
+QCalendar* QCalendar_New3();
+QCalendar* QCalendar_New4(int system);
+QCalendar* QCalendar_New5(const char* name);
+QCalendar* QCalendar_New6(QCalendar__SystemId* id);
 void QCalendar_CopyAssign(QCalendar* self, QCalendar* other);
 void QCalendar_MoveAssign(QCalendar* self, QCalendar* other);
 bool QCalendar_IsValid(const QCalendar* self);
@@ -74,12 +74,12 @@ libqt_string QCalendar_WeekDayName3(const QCalendar* self, const QLocale* locale
 libqt_string QCalendar_StandaloneWeekDayName3(const QCalendar* self, const QLocale* locale, int day, int format);
 void QCalendar_Delete(QCalendar* self);
 
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new(const QCalendar__YearMonthDay* other);
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new2(QCalendar__YearMonthDay* other);
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new3();
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new4(int y);
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new5(int y, int m);
-QCalendar__YearMonthDay* QCalendar__YearMonthDay_new6(int y, int m, int d);
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New(const QCalendar__YearMonthDay* other);
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New2(QCalendar__YearMonthDay* other);
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New3();
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New4(int y);
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New5(int y, int m);
+QCalendar__YearMonthDay* QCalendar__YearMonthDay_New6(int y, int m, int d);
 void QCalendar__YearMonthDay_CopyAssign(QCalendar__YearMonthDay* self, QCalendar__YearMonthDay* other);
 void QCalendar__YearMonthDay_MoveAssign(QCalendar__YearMonthDay* self, QCalendar__YearMonthDay* other);
 bool QCalendar__YearMonthDay_IsValid(const QCalendar__YearMonthDay* self);
@@ -91,9 +91,9 @@ int QCalendar__YearMonthDay_Day(const QCalendar__YearMonthDay* self);
 void QCalendar__YearMonthDay_SetDay(QCalendar__YearMonthDay* self, int day);
 void QCalendar__YearMonthDay_Delete(QCalendar__YearMonthDay* self);
 
-QCalendar__SystemId* QCalendar__SystemId_new(const QCalendar__SystemId* other);
-QCalendar__SystemId* QCalendar__SystemId_new2(QCalendar__SystemId* other);
-QCalendar__SystemId* QCalendar__SystemId_new3();
+QCalendar__SystemId* QCalendar__SystemId_New(const QCalendar__SystemId* other);
+QCalendar__SystemId* QCalendar__SystemId_New2(QCalendar__SystemId* other);
+QCalendar__SystemId* QCalendar__SystemId_New3();
 void QCalendar__SystemId_CopyAssign(QCalendar__SystemId* self, QCalendar__SystemId* other);
 void QCalendar__SystemId_MoveAssign(QCalendar__SystemId* self, QCalendar__SystemId* other);
 size_t QCalendar__SystemId_Index(const QCalendar__SystemId* self);

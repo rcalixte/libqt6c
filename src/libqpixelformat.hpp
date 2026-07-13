@@ -18,13 +18,13 @@ extern "C" {
 typedef struct QPixelFormat QPixelFormat;
 #endif
 
-QPixelFormat* QPixelFormat_new(const QPixelFormat* other);
-QPixelFormat* QPixelFormat_new2(QPixelFormat* other);
-QPixelFormat* QPixelFormat_new3();
-QPixelFormat* QPixelFormat_new4(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation);
-QPixelFormat* QPixelFormat_new5(const QPixelFormat* param1);
-QPixelFormat* QPixelFormat_new6(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation, int byteOrder);
-QPixelFormat* QPixelFormat_new7(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation, int byteOrder, unsigned char subEnum);
+QPixelFormat* QPixelFormat_New(const QPixelFormat* other);
+QPixelFormat* QPixelFormat_New2(QPixelFormat* other);
+QPixelFormat* QPixelFormat_New3();
+QPixelFormat* QPixelFormat_New4(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation);
+QPixelFormat* QPixelFormat_New5(const QPixelFormat* param1);
+QPixelFormat* QPixelFormat_New6(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation, int byteOrder);
+QPixelFormat* QPixelFormat_New7(int colorModel, unsigned char firstSize, unsigned char secondSize, unsigned char thirdSize, unsigned char fourthSize, unsigned char fifthSize, unsigned char alphaSize, int alphaUsage, int alphaPosition, int premultiplied, int typeInterpretation, int byteOrder, unsigned char subEnum);
 void QPixelFormat_CopyAssign(QPixelFormat* self, QPixelFormat* other);
 void QPixelFormat_MoveAssign(QPixelFormat* self, QPixelFormat* other);
 int QPixelFormat_ColorModel(const QPixelFormat* self);

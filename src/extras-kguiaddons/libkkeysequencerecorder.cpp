@@ -12,11 +12,11 @@
 #include "libkkeysequencerecorder.hpp"
 #include "libkkeysequencerecorder.hxx"
 
-KKeySequenceRecorder* KKeySequenceRecorder_new(QWindow* window) {
+KKeySequenceRecorder* KKeySequenceRecorder_New(QWindow* window) {
     return new VirtualKKeySequenceRecorder(window);
 }
 
-KKeySequenceRecorder* KKeySequenceRecorder_new2(QWindow* window, QObject* parent) {
+KKeySequenceRecorder* KKeySequenceRecorder_New2(QWindow* window, QObject* parent) {
     return new VirtualKKeySequenceRecorder(window, parent);
 }
 

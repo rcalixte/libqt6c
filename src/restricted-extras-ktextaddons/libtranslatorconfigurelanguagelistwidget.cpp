@@ -38,12 +38,12 @@
 #include "libtranslatorconfigurelanguagelistwidget.hpp"
 #include "libtranslatorconfigurelanguagelistwidget.hxx"
 
-TextTranslator__TranslatorConfigureLanguageListWidget* TextTranslator__TranslatorConfigureLanguageListWidget_new(const libqt_string labelText) {
+TextTranslator__TranslatorConfigureLanguageListWidget* TextTranslator__TranslatorConfigureLanguageListWidget_New(const libqt_string labelText) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     return new VirtualTextTranslatorTranslatorConfigureLanguageListWidget(labelText_QString);
 }
 
-TextTranslator__TranslatorConfigureLanguageListWidget* TextTranslator__TranslatorConfigureLanguageListWidget_new2(const libqt_string labelText, QWidget* parent) {
+TextTranslator__TranslatorConfigureLanguageListWidget* TextTranslator__TranslatorConfigureLanguageListWidget_New2(const libqt_string labelText, QWidget* parent) {
     QString labelText_QString = QString::fromUtf8(labelText.data, labelText.len);
     return new VirtualTextTranslatorTranslatorConfigureLanguageListWidget(labelText_QString, parent);
 }

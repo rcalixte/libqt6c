@@ -30,14 +30,14 @@ typedef struct QTransform QTransform;
 typedef struct QXmlStreamReader QXmlStreamReader;
 #endif
 
-QSvgRenderer* QSvgRenderer_new();
-QSvgRenderer* QSvgRenderer_new2(const libqt_string filename);
-QSvgRenderer* QSvgRenderer_new3(const libqt_string contents);
-QSvgRenderer* QSvgRenderer_new4(QXmlStreamReader* contents);
-QSvgRenderer* QSvgRenderer_new5(QObject* parent);
-QSvgRenderer* QSvgRenderer_new6(const libqt_string filename, QObject* parent);
-QSvgRenderer* QSvgRenderer_new7(const libqt_string contents, QObject* parent);
-QSvgRenderer* QSvgRenderer_new8(QXmlStreamReader* contents, QObject* parent);
+QSvgRenderer* QSvgRenderer_New();
+QSvgRenderer* QSvgRenderer_New2(const libqt_string filename);
+QSvgRenderer* QSvgRenderer_New3(const libqt_string contents);
+QSvgRenderer* QSvgRenderer_New4(QXmlStreamReader* contents);
+QSvgRenderer* QSvgRenderer_New5(QObject* parent);
+QSvgRenderer* QSvgRenderer_New6(const libqt_string filename, QObject* parent);
+QSvgRenderer* QSvgRenderer_New7(const libqt_string contents, QObject* parent);
+QSvgRenderer* QSvgRenderer_New8(QXmlStreamReader* contents, QObject* parent);
 QMetaObject* QSvgRenderer_MetaObject(const QSvgRenderer* self);
 void* QSvgRenderer_Metacast(QSvgRenderer* self, const char* param1);
 int QSvgRenderer_Metacall(QSvgRenderer* self, int param1, int param2, void** param3);

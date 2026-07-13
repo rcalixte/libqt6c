@@ -3,11 +3,11 @@
 #include "libimportlibreofficeautocorrection.h"
 
 TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* k_textautocorrectioncore__importlibreofficeautocorrection_new() {
-    return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_new();
+    return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_New();
 }
 
 TextAutoCorrectionCore__ImportLibreOfficeAutocorrection* k_textautocorrectioncore__importlibreofficeautocorrection_new2(void* param1) {
-    return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_new2((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)param1);
+    return TextAutoCorrectionCore__ImportLibreOfficeAutocorrection_New2((TextAutoCorrectionCore__ImportLibreOfficeAutocorrection*)param1);
 }
 
 bool k_textautocorrectioncore__importlibreofficeautocorrection_import(void* self, const char* fileName, const char* errorMessage, int32_t loadAttribute) {

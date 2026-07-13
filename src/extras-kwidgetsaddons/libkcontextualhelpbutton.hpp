@@ -53,9 +53,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KContextualHelpButton* KContextualHelpButton_new(QWidget* parent);
-KContextualHelpButton* KContextualHelpButton_new2(const libqt_string contextualHelpText, const QWidget* heightHintWidget, QWidget* parent);
-KContextualHelpButton* KContextualHelpButton_new3();
+KContextualHelpButton* KContextualHelpButton_New(QWidget* parent);
+KContextualHelpButton* KContextualHelpButton_New2(const libqt_string contextualHelpText, const QWidget* heightHintWidget, QWidget* parent);
+KContextualHelpButton* KContextualHelpButton_New3();
 QMetaObject* KContextualHelpButton_MetaObject(const KContextualHelpButton* self);
 void* KContextualHelpButton_Metacast(KContextualHelpButton* self, const char* param1);
 int KContextualHelpButton_Metacall(KContextualHelpButton* self, int param1, int param2, void** param3);

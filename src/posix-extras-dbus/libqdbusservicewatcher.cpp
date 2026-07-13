@@ -12,25 +12,25 @@
 #include "libqdbusservicewatcher.hpp"
 #include "libqdbusservicewatcher.hxx"
 
-QDBusServiceWatcher* QDBusServiceWatcher_new() {
+QDBusServiceWatcher* QDBusServiceWatcher_New() {
     return new VirtualQDBusServiceWatcher();
 }
 
-QDBusServiceWatcher* QDBusServiceWatcher_new2(const libqt_string service, const QDBusConnection* connection) {
+QDBusServiceWatcher* QDBusServiceWatcher_New2(const libqt_string service, const QDBusConnection* connection) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQDBusServiceWatcher(service_QString, *connection);
 }
 
-QDBusServiceWatcher* QDBusServiceWatcher_new3(QObject* parent) {
+QDBusServiceWatcher* QDBusServiceWatcher_New3(QObject* parent) {
     return new VirtualQDBusServiceWatcher(parent);
 }
 
-QDBusServiceWatcher* QDBusServiceWatcher_new4(const libqt_string service, const QDBusConnection* connection, int watchMode) {
+QDBusServiceWatcher* QDBusServiceWatcher_New4(const libqt_string service, const QDBusConnection* connection, int watchMode) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQDBusServiceWatcher(service_QString, *connection, static_cast<QDBusServiceWatcher::WatchMode>(watchMode));
 }
 
-QDBusServiceWatcher* QDBusServiceWatcher_new5(const libqt_string service, const QDBusConnection* connection, int watchMode, QObject* parent) {
+QDBusServiceWatcher* QDBusServiceWatcher_New5(const libqt_string service, const QDBusConnection* connection, int watchMode, QObject* parent) {
     QString service_QString = QString::fromUtf8(service.data, service.len);
     return new VirtualQDBusServiceWatcher(service_QString, *connection, static_cast<QDBusServiceWatcher::WatchMode>(watchMode), parent);
 }

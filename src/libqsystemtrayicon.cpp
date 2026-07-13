@@ -13,19 +13,19 @@
 #include "libqsystemtrayicon.hpp"
 #include "libqsystemtrayicon.hxx"
 
-QSystemTrayIcon* QSystemTrayIcon_new() {
+QSystemTrayIcon* QSystemTrayIcon_New() {
     return new VirtualQSystemTrayIcon();
 }
 
-QSystemTrayIcon* QSystemTrayIcon_new2(const QIcon* icon) {
+QSystemTrayIcon* QSystemTrayIcon_New2(const QIcon* icon) {
     return new VirtualQSystemTrayIcon(*icon);
 }
 
-QSystemTrayIcon* QSystemTrayIcon_new3(QObject* parent) {
+QSystemTrayIcon* QSystemTrayIcon_New3(QObject* parent) {
     return new VirtualQSystemTrayIcon(parent);
 }
 
-QSystemTrayIcon* QSystemTrayIcon_new4(const QIcon* icon, QObject* parent) {
+QSystemTrayIcon* QSystemTrayIcon_New4(const QIcon* icon, QObject* parent) {
     return new VirtualQSystemTrayIcon(*icon, parent);
 }
 

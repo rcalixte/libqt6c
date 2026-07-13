@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QUntypedPropertyData QUntypedPropertyData;
 #endif
 
-QUntypedPropertyData* QUntypedPropertyData_new(const QUntypedPropertyData* other);
-QUntypedPropertyData* QUntypedPropertyData_new2(QUntypedPropertyData* other);
+QUntypedPropertyData* QUntypedPropertyData_New(const QUntypedPropertyData* other);
+QUntypedPropertyData* QUntypedPropertyData_New2(QUntypedPropertyData* other);
 void QUntypedPropertyData_CopyAssign(QUntypedPropertyData* self, QUntypedPropertyData* other);
 void QUntypedPropertyData_MoveAssign(QUntypedPropertyData* self, QUntypedPropertyData* other);
 void QUntypedPropertyData_Delete(QUntypedPropertyData* self);

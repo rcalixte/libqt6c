@@ -51,15 +51,15 @@
 #include "libkdiroperator.hpp"
 #include "libkdiroperator.hxx"
 
-KDirOperator* KDirOperator_new() {
+KDirOperator* KDirOperator_New() {
     return new VirtualKDirOperator();
 }
 
-KDirOperator* KDirOperator_new2(const QUrl* urlName) {
+KDirOperator* KDirOperator_New2(const QUrl* urlName) {
     return new VirtualKDirOperator(*urlName);
 }
 
-KDirOperator* KDirOperator_new3(const QUrl* urlName, QWidget* parent) {
+KDirOperator* KDirOperator_New3(const QUrl* urlName, QWidget* parent) {
     return new VirtualKDirOperator(*urlName, parent);
 }
 

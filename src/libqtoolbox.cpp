@@ -40,15 +40,15 @@
 #include "libqtoolbox.hpp"
 #include "libqtoolbox.hxx"
 
-QToolBox* QToolBox_new(QWidget* parent) {
+QToolBox* QToolBox_New(QWidget* parent) {
     return new VirtualQToolBox(parent);
 }
 
-QToolBox* QToolBox_new2() {
+QToolBox* QToolBox_New2() {
     return new VirtualQToolBox();
 }
 
-QToolBox* QToolBox_new3(QWidget* parent, int f) {
+QToolBox* QToolBox_New3(QWidget* parent, int f) {
     return new VirtualQToolBox(parent, static_cast<Qt::WindowFlags>(f));
 }
 

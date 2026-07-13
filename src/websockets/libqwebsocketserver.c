@@ -15,11 +15,11 @@
 #include "libqwebsocketserver.h"
 
 QWebSocketServer* q_websocketserver_new(const char* serverName, int32_t secureMode) {
-    return QWebSocketServer_new(qstring(serverName), secureMode);
+    return QWebSocketServer_New(qstring(serverName), secureMode);
 }
 
 QWebSocketServer* q_websocketserver_new2(const char* serverName, int32_t secureMode, void* parent) {
-    return QWebSocketServer_new2(qstring(serverName), secureMode, (QObject*)parent);
+    return QWebSocketServer_New2(qstring(serverName), secureMode, (QObject*)parent);
 }
 
 const QMetaObject* q_websocketserver_meta_object(void* self) {

@@ -19,12 +19,12 @@ typedef struct QSizePolicy QSizePolicy;
 typedef struct QVariant QVariant;
 #endif
 
-QSizePolicy* QSizePolicy_new(const QSizePolicy* other);
-QSizePolicy* QSizePolicy_new2(QSizePolicy* other);
-QSizePolicy* QSizePolicy_new3();
-QSizePolicy* QSizePolicy_new4(int horizontal, int vertical);
-QSizePolicy* QSizePolicy_new5(const QSizePolicy* param1);
-QSizePolicy* QSizePolicy_new6(int horizontal, int vertical, int type);
+QSizePolicy* QSizePolicy_New(const QSizePolicy* other);
+QSizePolicy* QSizePolicy_New2(QSizePolicy* other);
+QSizePolicy* QSizePolicy_New3();
+QSizePolicy* QSizePolicy_New4(int horizontal, int vertical);
+QSizePolicy* QSizePolicy_New5(const QSizePolicy* param1);
+QSizePolicy* QSizePolicy_New6(int horizontal, int vertical, int type);
 void QSizePolicy_CopyAssign(QSizePolicy* self, QSizePolicy* other);
 void QSizePolicy_MoveAssign(QSizePolicy* self, QSizePolicy* other);
 int QSizePolicy_HorizontalPolicy(const QSizePolicy* self);

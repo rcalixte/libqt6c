@@ -20,7 +20,7 @@
 #include "libmainwindow_1.hpp"
 #include "libmainwindow_1.hxx"
 
-KTextEditor__MainWindow* KTextEditor__MainWindow_new(QObject* parent) {
+KTextEditor__MainWindow* KTextEditor__MainWindow_New(QObject* parent) {
     return new VirtualKTextEditorMainWindow(parent);
 }
 

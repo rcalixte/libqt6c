@@ -29,8 +29,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct TextTranslator__TranslatorMenu TextTranslator__TranslatorMenu;
 #endif
 
-TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_new();
-TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_new2(QObject* parent);
+TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_New();
+TextTranslator__TranslatorMenu* TextTranslator__TranslatorMenu_New2(QObject* parent);
 QMetaObject* TextTranslator__TranslatorMenu_MetaObject(const TextTranslator__TranslatorMenu* self);
 void* TextTranslator__TranslatorMenu_Metacast(TextTranslator__TranslatorMenu* self, const char* param1);
 int TextTranslator__TranslatorMenu_Metacall(TextTranslator__TranslatorMenu* self, int param1, int param2, void** param3);

@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QCapturableWindow QCapturableWindow;
 #endif
 
-QCapturableWindow* QCapturableWindow_new();
-QCapturableWindow* QCapturableWindow_new2(const QCapturableWindow* other);
+QCapturableWindow* QCapturableWindow_New();
+QCapturableWindow* QCapturableWindow_New2(const QCapturableWindow* other);
 void QCapturableWindow_OperatorAssign(QCapturableWindow* self, const QCapturableWindow* other);
 void QCapturableWindow_Swap(QCapturableWindow* self, QCapturableWindow* other);
 bool QCapturableWindow_IsValid(const QCapturableWindow* self);

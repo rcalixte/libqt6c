@@ -39,8 +39,8 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-KIO__ThumbnailRequest* KIO__ThumbnailRequest_new(const QUrl* url, const QSize* targetSize, const libqt_string mimeType, double dpr, float sequenceIndex);
-KIO__ThumbnailRequest* KIO__ThumbnailRequest_new2(const KIO__ThumbnailRequest* param1);
+KIO__ThumbnailRequest* KIO__ThumbnailRequest_New(const QUrl* url, const QSize* targetSize, const libqt_string mimeType, double dpr, float sequenceIndex);
+KIO__ThumbnailRequest* KIO__ThumbnailRequest_New2(const KIO__ThumbnailRequest* param1);
 void KIO__ThumbnailRequest_OperatorAssign(KIO__ThumbnailRequest* self, const KIO__ThumbnailRequest* param1);
 QUrl* KIO__ThumbnailRequest_Url(const KIO__ThumbnailRequest* self);
 QSize* KIO__ThumbnailRequest_TargetSize(const KIO__ThumbnailRequest* self);
@@ -49,7 +49,7 @@ double KIO__ThumbnailRequest_DevicePixelRatio(const KIO__ThumbnailRequest* self)
 float KIO__ThumbnailRequest_SequenceIndex(const KIO__ThumbnailRequest* self);
 void KIO__ThumbnailRequest_Delete(KIO__ThumbnailRequest* self);
 
-KIO__ThumbnailResult* KIO__ThumbnailResult_new(const KIO__ThumbnailResult* param1);
+KIO__ThumbnailResult* KIO__ThumbnailResult_New(const KIO__ThumbnailResult* param1);
 void KIO__ThumbnailResult_OperatorAssign(KIO__ThumbnailResult* self, const KIO__ThumbnailResult* param1);
 QImage* KIO__ThumbnailResult_Image(const KIO__ThumbnailResult* self);
 bool KIO__ThumbnailResult_IsValid(const KIO__ThumbnailResult* self);
@@ -59,7 +59,7 @@ KIO__ThumbnailResult* KIO__ThumbnailResult_Pass(const QImage* image);
 KIO__ThumbnailResult* KIO__ThumbnailResult_Fail();
 void KIO__ThumbnailResult_Delete(KIO__ThumbnailResult* self);
 
-KIO__ThumbnailCreator* KIO__ThumbnailCreator_new(QObject* parent, const libqt_list /* of QVariant* */ args);
+KIO__ThumbnailCreator* KIO__ThumbnailCreator_New(QObject* parent, const libqt_list /* of QVariant* */ args);
 QMetaObject* KIO__ThumbnailCreator_MetaObject(const KIO__ThumbnailCreator* self);
 void* KIO__ThumbnailCreator_Metacast(KIO__ThumbnailCreator* self, const char* param1);
 int KIO__ThumbnailCreator_Metacall(KIO__ThumbnailCreator* self, int param1, int param2, void** param3);

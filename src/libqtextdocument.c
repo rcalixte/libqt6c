@@ -36,19 +36,19 @@ void q_abstractundoitem_delete(void* self) {
 }
 
 QTextDocument* q_textdocument_new() {
-    return QTextDocument_new();
+    return QTextDocument_New();
 }
 
 QTextDocument* q_textdocument_new2(const char* text) {
-    return QTextDocument_new2(qstring(text));
+    return QTextDocument_New2(qstring(text));
 }
 
 QTextDocument* q_textdocument_new3(void* parent) {
-    return QTextDocument_new3((QObject*)parent);
+    return QTextDocument_New3((QObject*)parent);
 }
 
 QTextDocument* q_textdocument_new4(const char* text, void* parent) {
-    return QTextDocument_new4(qstring(text), (QObject*)parent);
+    return QTextDocument_New4(qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* q_textdocument_meta_object(void* self) {

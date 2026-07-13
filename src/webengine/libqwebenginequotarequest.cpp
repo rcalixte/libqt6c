@@ -4,15 +4,15 @@
 #include "libqwebenginequotarequest.hpp"
 #include "libqwebenginequotarequest.hxx"
 
-QWebEngineQuotaRequest* QWebEngineQuotaRequest_new(const QWebEngineQuotaRequest* other) {
+QWebEngineQuotaRequest* QWebEngineQuotaRequest_New(const QWebEngineQuotaRequest* other) {
     return new QWebEngineQuotaRequest(*other);
 }
 
-QWebEngineQuotaRequest* QWebEngineQuotaRequest_new2(QWebEngineQuotaRequest* other) {
+QWebEngineQuotaRequest* QWebEngineQuotaRequest_New2(QWebEngineQuotaRequest* other) {
     return new QWebEngineQuotaRequest(std::move(*other));
 }
 
-QWebEngineQuotaRequest* QWebEngineQuotaRequest_new3() {
+QWebEngineQuotaRequest* QWebEngineQuotaRequest_New3() {
     return new QWebEngineQuotaRequest();
 }
 

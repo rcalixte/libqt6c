@@ -10,11 +10,11 @@
 #include "libthumbnailcreator.h"
 
 KIO__ThumbnailRequest* k_io__thumbnailrequest_new(void* url, void* targetSize, const char* mimeType, double dpr, float sequenceIndex) {
-    return KIO__ThumbnailRequest_new((QUrl*)url, (QSize*)targetSize, qstring(mimeType), dpr, sequenceIndex);
+    return KIO__ThumbnailRequest_New((QUrl*)url, (QSize*)targetSize, qstring(mimeType), dpr, sequenceIndex);
 }
 
 KIO__ThumbnailRequest* k_io__thumbnailrequest_new2(void* param1) {
-    return KIO__ThumbnailRequest_new2((KIO__ThumbnailRequest*)param1);
+    return KIO__ThumbnailRequest_New2((KIO__ThumbnailRequest*)param1);
 }
 
 void k_io__thumbnailrequest_operator_assign(void* self, void* param1) {
@@ -49,7 +49,7 @@ void k_io__thumbnailrequest_delete(void* self) {
 }
 
 KIO__ThumbnailResult* k_io__thumbnailresult_new(void* param1) {
-    return KIO__ThumbnailResult_new((KIO__ThumbnailResult*)param1);
+    return KIO__ThumbnailResult_New((KIO__ThumbnailResult*)param1);
 }
 
 void k_io__thumbnailresult_operator_assign(void* self, void* param1) {
@@ -85,7 +85,7 @@ void k_io__thumbnailresult_delete(void* self) {
 }
 
 KIO__ThumbnailCreator* k_io__thumbnailcreator_new(void* parent, libqt_list /* of QVariant* */ args) {
-    return KIO__ThumbnailCreator_new((QObject*)parent, args);
+    return KIO__ThumbnailCreator_New((QObject*)parent, args);
 }
 
 const QMetaObject* k_io__thumbnailcreator_meta_object(void* self) {

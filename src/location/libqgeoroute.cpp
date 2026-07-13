@@ -11,11 +11,11 @@
 #include "libqgeoroute.hpp"
 #include "libqgeoroute.hxx"
 
-QGeoRoute* QGeoRoute_new() {
+QGeoRoute* QGeoRoute_New() {
     return new QGeoRoute();
 }
 
-QGeoRoute* QGeoRoute_new2(const QGeoRoute* other) {
+QGeoRoute* QGeoRoute_New2(const QGeoRoute* other) {
     return new QGeoRoute(*other);
 }
 

@@ -2,11 +2,11 @@
 #include "libkshareddatacache.h"
 
 KSharedDataCache* k_shareddatacache_new(const char* cacheName, uint32_t defaultCacheSize) {
-    return KSharedDataCache_new(qstring(cacheName), defaultCacheSize);
+    return KSharedDataCache_New(qstring(cacheName), defaultCacheSize);
 }
 
 KSharedDataCache* k_shareddatacache_new2(const char* cacheName, uint32_t defaultCacheSize, uint32_t expectedItemSize) {
-    return KSharedDataCache_new2(qstring(cacheName), defaultCacheSize, expectedItemSize);
+    return KSharedDataCache_New2(qstring(cacheName), defaultCacheSize, expectedItemSize);
 }
 
 int32_t k_shareddatacache_eviction_policy(void* self) {

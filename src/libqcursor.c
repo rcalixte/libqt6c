@@ -7,39 +7,39 @@
 #include "libqcursor.h"
 
 QCursor* q_cursor_new() {
-    return QCursor_new();
+    return QCursor_New();
 }
 
 QCursor* q_cursor_new2(int32_t shape) {
-    return QCursor_new2(shape);
+    return QCursor_New2(shape);
 }
 
 QCursor* q_cursor_new3(void* bitmap, void* mask) {
-    return QCursor_new3((QBitmap*)bitmap, (QBitmap*)mask);
+    return QCursor_New3((QBitmap*)bitmap, (QBitmap*)mask);
 }
 
 QCursor* q_cursor_new4(void* pixmap) {
-    return QCursor_new4((QPixmap*)pixmap);
+    return QCursor_New4((QPixmap*)pixmap);
 }
 
 QCursor* q_cursor_new5(void* cursor) {
-    return QCursor_new5((QCursor*)cursor);
+    return QCursor_New5((QCursor*)cursor);
 }
 
 QCursor* q_cursor_new6(void* bitmap, void* mask, int hotX) {
-    return QCursor_new6((QBitmap*)bitmap, (QBitmap*)mask, hotX);
+    return QCursor_New6((QBitmap*)bitmap, (QBitmap*)mask, hotX);
 }
 
 QCursor* q_cursor_new7(void* bitmap, void* mask, int hotX, int hotY) {
-    return QCursor_new7((QBitmap*)bitmap, (QBitmap*)mask, hotX, hotY);
+    return QCursor_New7((QBitmap*)bitmap, (QBitmap*)mask, hotX, hotY);
 }
 
 QCursor* q_cursor_new8(void* pixmap, int hotX) {
-    return QCursor_new8((QPixmap*)pixmap, hotX);
+    return QCursor_New8((QPixmap*)pixmap, hotX);
 }
 
 QCursor* q_cursor_new9(void* pixmap, int hotX, int hotY) {
-    return QCursor_new9((QPixmap*)pixmap, hotX, hotY);
+    return QCursor_New9((QPixmap*)pixmap, hotX, hotY);
 }
 
 void q_cursor_operator_assign(void* self, void* cursor) {

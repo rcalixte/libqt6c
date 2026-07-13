@@ -24,8 +24,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_new();
-KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_new2(QObject* parent);
+KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_New();
+KLineEditUrlDropEventFilter* KLineEditUrlDropEventFilter_New2(QObject* parent);
 QMetaObject* KLineEditUrlDropEventFilter_MetaObject(const KLineEditUrlDropEventFilter* self);
 void* KLineEditUrlDropEventFilter_Metacast(KLineEditUrlDropEventFilter* self, const char* param1);
 int KLineEditUrlDropEventFilter_Metacall(KLineEditUrlDropEventFilter* self, int param1, int param2, void** param3);

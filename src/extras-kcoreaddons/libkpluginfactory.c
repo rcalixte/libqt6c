@@ -9,7 +9,7 @@
 #include "libkpluginfactory.h"
 
 KPluginFactory* k_pluginfactory_new() {
-    return KPluginFactory_new();
+    return KPluginFactory_New();
 }
 
 const QMetaObject* k_pluginfactory_meta_object(void* self) {

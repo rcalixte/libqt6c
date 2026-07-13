@@ -40,15 +40,15 @@
 #include "libqpolarchart.hpp"
 #include "libqpolarchart.hxx"
 
-QPolarChart* QPolarChart_new() {
+QPolarChart* QPolarChart_New() {
     return new VirtualQPolarChart();
 }
 
-QPolarChart* QPolarChart_new2(QGraphicsItem* parent) {
+QPolarChart* QPolarChart_New2(QGraphicsItem* parent) {
     return new VirtualQPolarChart(parent);
 }
 
-QPolarChart* QPolarChart_new3(QGraphicsItem* parent, int wFlags) {
+QPolarChart* QPolarChart_New3(QGraphicsItem* parent, int wFlags) {
     return new VirtualQPolarChart(parent, static_cast<Qt::WindowFlags>(wFlags));
 }
 

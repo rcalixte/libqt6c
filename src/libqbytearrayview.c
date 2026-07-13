@@ -2,19 +2,19 @@
 #include "libqbytearrayview.h"
 
 QByteArrayView* q_bytearrayview_new(char* other) {
-    return QByteArrayView_new(qstring(other));
+    return QByteArrayView_New(qstring(other));
 }
 
 QByteArrayView* q_bytearrayview_new2(char* other) {
-    return QByteArrayView_new2(qstring(other));
+    return QByteArrayView_New2(qstring(other));
 }
 
 QByteArrayView* q_bytearrayview_new3() {
-    return QByteArrayView_new3();
+    return QByteArrayView_New3();
 }
 
 QByteArrayView* q_bytearrayview_new4(char* param1) {
-    return QByteArrayView_new4(qstring(param1));
+    return QByteArrayView_New4(qstring(param1));
 }
 
 void q_bytearrayview_copy_assign(void* self, void* other) {

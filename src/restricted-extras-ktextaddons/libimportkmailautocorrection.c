@@ -3,11 +3,11 @@
 #include "libimportkmailautocorrection.h"
 
 TextAutoCorrectionCore__ImportKMailAutocorrection* k_textautocorrectioncore__importkmailautocorrection_new() {
-    return TextAutoCorrectionCore__ImportKMailAutocorrection_new();
+    return TextAutoCorrectionCore__ImportKMailAutocorrection_New();
 }
 
 TextAutoCorrectionCore__ImportKMailAutocorrection* k_textautocorrectioncore__importkmailautocorrection_new2(void* param1) {
-    return TextAutoCorrectionCore__ImportKMailAutocorrection_new2((TextAutoCorrectionCore__ImportKMailAutocorrection*)param1);
+    return TextAutoCorrectionCore__ImportKMailAutocorrection_New2((TextAutoCorrectionCore__ImportKMailAutocorrection*)param1);
 }
 
 bool k_textautocorrectioncore__importkmailautocorrection_import(void* self, const char* fileName, const char* errorMessage, int32_t loadAttribute) {

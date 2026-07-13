@@ -6,7 +6,7 @@
 #include "libtexthintinterface.hpp"
 #include "libtexthintinterface.hxx"
 
-KTextEditor__TextHintProvider* KTextEditor__TextHintProvider_new() {
+KTextEditor__TextHintProvider* KTextEditor__TextHintProvider_New() {
     return new VirtualKTextEditorTextHintProvider();
 }
 

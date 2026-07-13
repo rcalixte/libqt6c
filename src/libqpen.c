@@ -5,35 +5,35 @@
 #include "libqpen.h"
 
 QPen* q_pen_new() {
-    return QPen_new();
+    return QPen_New();
 }
 
 QPen* q_pen_new2(int32_t param1) {
-    return QPen_new2(param1);
+    return QPen_New2(param1);
 }
 
 QPen* q_pen_new3(void* color) {
-    return QPen_new3((QColor*)color);
+    return QPen_New3((QColor*)color);
 }
 
 QPen* q_pen_new4(void* brush, double width) {
-    return QPen_new4((QBrush*)brush, width);
+    return QPen_New4((QBrush*)brush, width);
 }
 
 QPen* q_pen_new5(void* pen) {
-    return QPen_new5((QPen*)pen);
+    return QPen_New5((QPen*)pen);
 }
 
 QPen* q_pen_new6(void* brush, double width, int32_t s) {
-    return QPen_new6((QBrush*)brush, width, s);
+    return QPen_New6((QBrush*)brush, width, s);
 }
 
 QPen* q_pen_new7(void* brush, double width, int32_t s, int32_t c) {
-    return QPen_new7((QBrush*)brush, width, s, c);
+    return QPen_New7((QBrush*)brush, width, s, c);
 }
 
 QPen* q_pen_new8(void* brush, double width, int32_t s, int32_t c, int32_t j) {
-    return QPen_new8((QBrush*)brush, width, s, c, j);
+    return QPen_New8((QBrush*)brush, width, s, c, j);
 }
 
 void q_pen_operator_assign(void* self, void* pen) {

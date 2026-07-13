@@ -11,11 +11,11 @@
 #include "libqscilexerverilog.h"
 
 QsciLexerVerilog* q_scilexerverilog_new() {
-    return QsciLexerVerilog_new();
+    return QsciLexerVerilog_New();
 }
 
 QsciLexerVerilog* q_scilexerverilog_new2(void* parent) {
-    return QsciLexerVerilog_new2((QObject*)parent);
+    return QsciLexerVerilog_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerverilog_meta_object(void* self) {

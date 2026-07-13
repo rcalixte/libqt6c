@@ -8,19 +8,19 @@
 #include "libqsignaltransition.h"
 
 QSignalTransition* q_signaltransition_new() {
-    return QSignalTransition_new();
+    return QSignalTransition_New();
 }
 
 QSignalTransition* q_signaltransition_new2(void* sender, const char* signal) {
-    return QSignalTransition_new2((QObject*)sender, signal);
+    return QSignalTransition_New2((QObject*)sender, signal);
 }
 
 QSignalTransition* q_signaltransition_new3(void* sourceState) {
-    return QSignalTransition_new3((QState*)sourceState);
+    return QSignalTransition_New3((QState*)sourceState);
 }
 
 QSignalTransition* q_signaltransition_new4(void* sender, const char* signal, void* sourceState) {
-    return QSignalTransition_new4((QObject*)sender, signal, (QState*)sourceState);
+    return QSignalTransition_New4((QObject*)sender, signal, (QState*)sourceState);
 }
 
 const QMetaObject* q_signaltransition_meta_object(void* self) {

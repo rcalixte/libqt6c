@@ -2,19 +2,19 @@
 #include "libqsslcipher.h"
 
 QSslCipher* q_sslcipher_new() {
-    return QSslCipher_new();
+    return QSslCipher_New();
 }
 
 QSslCipher* q_sslcipher_new2(const char* name) {
-    return QSslCipher_new2(qstring(name));
+    return QSslCipher_New2(qstring(name));
 }
 
 QSslCipher* q_sslcipher_new3(const char* name, int32_t protocol) {
-    return QSslCipher_new3(qstring(name), protocol);
+    return QSslCipher_New3(qstring(name), protocol);
 }
 
 QSslCipher* q_sslcipher_new4(void* other) {
-    return QSslCipher_new4((QSslCipher*)other);
+    return QSslCipher_New4((QSslCipher*)other);
 }
 
 void q_sslcipher_operator_assign(void* self, void* other) {

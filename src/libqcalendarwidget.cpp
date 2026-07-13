@@ -42,11 +42,11 @@
 #include "libqcalendarwidget.hpp"
 #include "libqcalendarwidget.hxx"
 
-QCalendarWidget* QCalendarWidget_new(QWidget* parent) {
+QCalendarWidget* QCalendarWidget_New(QWidget* parent) {
     return new VirtualQCalendarWidget(parent);
 }
 
-QCalendarWidget* QCalendarWidget_new2() {
+QCalendarWidget* QCalendarWidget_New2() {
     return new VirtualQCalendarWidget();
 }
 

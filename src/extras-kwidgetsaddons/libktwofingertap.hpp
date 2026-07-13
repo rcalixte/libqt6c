@@ -28,8 +28,8 @@ typedef struct QPointF QPointF;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KTwoFingerTap* KTwoFingerTap_new();
-KTwoFingerTap* KTwoFingerTap_new2(QObject* parent);
+KTwoFingerTap* KTwoFingerTap_New();
+KTwoFingerTap* KTwoFingerTap_New2(QObject* parent);
 QMetaObject* KTwoFingerTap_MetaObject(const KTwoFingerTap* self);
 void* KTwoFingerTap_Metacast(KTwoFingerTap* self, const char* param1);
 int KTwoFingerTap_Metacall(KTwoFingerTap* self, int param1, int param2, void** param3);
@@ -80,7 +80,7 @@ void KTwoFingerTap_OnIsSignalConnected(const KTwoFingerTap* self, intptr_t slot)
 bool KTwoFingerTap_SuperIsSignalConnected(const KTwoFingerTap* self, const QMetaMethod* signal);
 void KTwoFingerTap_Delete(KTwoFingerTap* self);
 
-KTwoFingerTapRecognizer* KTwoFingerTapRecognizer_new();
+KTwoFingerTapRecognizer* KTwoFingerTapRecognizer_New();
 QGesture* KTwoFingerTapRecognizer_Create(KTwoFingerTapRecognizer* self, QObject* target);
 int KTwoFingerTapRecognizer_Recognize(KTwoFingerTapRecognizer* self, QGesture* gesture, QObject* watched, QEvent* event);
 int KTwoFingerTapRecognizer_TapRadius(const KTwoFingerTapRecognizer* self);

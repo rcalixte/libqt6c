@@ -16,27 +16,27 @@
 #include "libkseparator.h"
 
 KSeparator* k_separator_new(void* parent) {
-    return KSeparator_new((QWidget*)parent);
+    return KSeparator_New((QWidget*)parent);
 }
 
 KSeparator* k_separator_new2() {
-    return KSeparator_new2();
+    return KSeparator_New2();
 }
 
 KSeparator* k_separator_new3(int32_t orientation) {
-    return KSeparator_new3(orientation);
+    return KSeparator_New3(orientation);
 }
 
 KSeparator* k_separator_new4(void* parent, int32_t f) {
-    return KSeparator_new4((QWidget*)parent, f);
+    return KSeparator_New4((QWidget*)parent, f);
 }
 
 KSeparator* k_separator_new5(int32_t orientation, void* parent) {
-    return KSeparator_new5(orientation, (QWidget*)parent);
+    return KSeparator_New5(orientation, (QWidget*)parent);
 }
 
 KSeparator* k_separator_new6(int32_t orientation, void* parent, int32_t f) {
-    return KSeparator_new6(orientation, (QWidget*)parent, f);
+    return KSeparator_New6(orientation, (QWidget*)parent, f);
 }
 
 const QMetaObject* k_separator_meta_object(void* self) {

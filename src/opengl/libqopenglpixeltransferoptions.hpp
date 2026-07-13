@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QOpenGLPixelTransferOptions QOpenGLPixelTransferOptions;
 #endif
 
-QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_new();
-QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_new2(const QOpenGLPixelTransferOptions* param1);
+QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_New();
+QOpenGLPixelTransferOptions* QOpenGLPixelTransferOptions_New2(const QOpenGLPixelTransferOptions* param1);
 void QOpenGLPixelTransferOptions_OperatorAssign(QOpenGLPixelTransferOptions* self, const QOpenGLPixelTransferOptions* param1);
 void QOpenGLPixelTransferOptions_Swap(QOpenGLPixelTransferOptions* self, QOpenGLPixelTransferOptions* other);
 void QOpenGLPixelTransferOptions_SetAlignment(QOpenGLPixelTransferOptions* self, int alignment);

@@ -12,11 +12,11 @@
 #include "libqdbusvirtualobject.hpp"
 #include "libqdbusvirtualobject.hxx"
 
-QDBusVirtualObject* QDBusVirtualObject_new() {
+QDBusVirtualObject* QDBusVirtualObject_New() {
     return new VirtualQDBusVirtualObject();
 }
 
-QDBusVirtualObject* QDBusVirtualObject_new2(QObject* parent) {
+QDBusVirtualObject* QDBusVirtualObject_New2(QObject* parent) {
     return new VirtualQDBusVirtualObject(parent);
 }
 

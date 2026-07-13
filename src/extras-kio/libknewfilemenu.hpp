@@ -30,7 +30,7 @@ typedef struct QWidget QWidget;
 typedef struct QWidgetAction QWidgetAction;
 #endif
 
-KNewFileMenu* KNewFileMenu_new(QObject* parent);
+KNewFileMenu* KNewFileMenu_New(QObject* parent);
 QMetaObject* KNewFileMenu_MetaObject(const KNewFileMenu* self);
 void* KNewFileMenu_Metacast(KNewFileMenu* self, const char* param1);
 int KNewFileMenu_Metacall(KNewFileMenu* self, int param1, int param2, void** param3);

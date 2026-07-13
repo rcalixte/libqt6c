@@ -3,35 +3,35 @@
 #include "libqstringmatcher.h"
 
 QStringMatcher* q_stringmatcher_new() {
-    return QStringMatcher_new();
+    return QStringMatcher_New();
 }
 
 QStringMatcher* q_stringmatcher_new2(const char* pattern) {
-    return QStringMatcher_new2(qstring(pattern));
+    return QStringMatcher_New2(qstring(pattern));
 }
 
 QStringMatcher* q_stringmatcher_new3(void* uc, intptr_t lenVal) {
-    return QStringMatcher_new3((QChar*)uc, lenVal);
+    return QStringMatcher_New3((QChar*)uc, lenVal);
 }
 
 QStringMatcher* q_stringmatcher_new4(const char* pattern) {
-    return QStringMatcher_new4(qstring(pattern));
+    return QStringMatcher_New4(qstring(pattern));
 }
 
 QStringMatcher* q_stringmatcher_new5(void* other) {
-    return QStringMatcher_new5((QStringMatcher*)other);
+    return QStringMatcher_New5((QStringMatcher*)other);
 }
 
 QStringMatcher* q_stringmatcher_new6(const char* pattern, int32_t cs) {
-    return QStringMatcher_new6(qstring(pattern), cs);
+    return QStringMatcher_New6(qstring(pattern), cs);
 }
 
 QStringMatcher* q_stringmatcher_new7(void* uc, intptr_t lenVal, int32_t cs) {
-    return QStringMatcher_new7((QChar*)uc, lenVal, cs);
+    return QStringMatcher_New7((QChar*)uc, lenVal, cs);
 }
 
 QStringMatcher* q_stringmatcher_new8(const char* pattern, int32_t cs) {
-    return QStringMatcher_new8(qstring(pattern), cs);
+    return QStringMatcher_New8(qstring(pattern), cs);
 }
 
 void q_stringmatcher_operator_assign(void* self, void* other) {

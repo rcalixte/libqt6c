@@ -4,27 +4,27 @@
 #include "libqcalendar.h"
 
 QCalendar* q_calendar_new(void* other) {
-    return QCalendar_new((QCalendar*)other);
+    return QCalendar_New((QCalendar*)other);
 }
 
 QCalendar* q_calendar_new2(void* other) {
-    return QCalendar_new2((QCalendar*)other);
+    return QCalendar_New2((QCalendar*)other);
 }
 
 QCalendar* q_calendar_new3() {
-    return QCalendar_new3();
+    return QCalendar_New3();
 }
 
 QCalendar* q_calendar_new4(int32_t system) {
-    return QCalendar_new4(system);
+    return QCalendar_New4(system);
 }
 
 QCalendar* q_calendar_new5(const char* name) {
-    return QCalendar_new5(name);
+    return QCalendar_New5(name);
 }
 
 QCalendar* q_calendar_new6(void* id) {
-    return QCalendar_new6((QCalendar__SystemId*)id);
+    return QCalendar_New6((QCalendar__SystemId*)id);
 }
 
 void q_calendar_copy_assign(void* self, void* other) {
@@ -227,27 +227,27 @@ void q_calendar_delete(void* self) {
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new(void* other) {
-    return QCalendar__YearMonthDay_new((QCalendar__YearMonthDay*)other);
+    return QCalendar__YearMonthDay_New((QCalendar__YearMonthDay*)other);
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new2(void* other) {
-    return QCalendar__YearMonthDay_new2((QCalendar__YearMonthDay*)other);
+    return QCalendar__YearMonthDay_New2((QCalendar__YearMonthDay*)other);
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new3() {
-    return QCalendar__YearMonthDay_new3();
+    return QCalendar__YearMonthDay_New3();
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new4(int y) {
-    return QCalendar__YearMonthDay_new4(y);
+    return QCalendar__YearMonthDay_New4(y);
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new5(int y, int m) {
-    return QCalendar__YearMonthDay_new5(y, m);
+    return QCalendar__YearMonthDay_New5(y, m);
 }
 
 QCalendar__YearMonthDay* q_calendar__yearmonthday_new6(int y, int m, int d) {
-    return QCalendar__YearMonthDay_new6(y, m, d);
+    return QCalendar__YearMonthDay_New6(y, m, d);
 }
 
 void q_calendar__yearmonthday_copy_assign(void* self, void* other) {
@@ -291,15 +291,15 @@ void q_calendar__yearmonthday_delete(void* self) {
 }
 
 QCalendar__SystemId* q_calendar__systemid_new(void* other) {
-    return QCalendar__SystemId_new((QCalendar__SystemId*)other);
+    return QCalendar__SystemId_New((QCalendar__SystemId*)other);
 }
 
 QCalendar__SystemId* q_calendar__systemid_new2(void* other) {
-    return QCalendar__SystemId_new2((QCalendar__SystemId*)other);
+    return QCalendar__SystemId_New2((QCalendar__SystemId*)other);
 }
 
 QCalendar__SystemId* q_calendar__systemid_new3() {
-    return QCalendar__SystemId_new3();
+    return QCalendar__SystemId_New3();
 }
 
 void q_calendar__systemid_copy_assign(void* self, void* other) {

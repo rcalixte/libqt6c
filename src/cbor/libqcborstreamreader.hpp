@@ -20,11 +20,11 @@ typedef struct QCborStreamReader QCborStreamReader;
 typedef struct QIODevice QIODevice;
 #endif
 
-QCborStreamReader* QCborStreamReader_new();
-QCborStreamReader* QCborStreamReader_new2(const char* data, ptrdiff_t lenVal);
-QCborStreamReader* QCborStreamReader_new3(const unsigned char* data, ptrdiff_t lenVal);
-QCborStreamReader* QCborStreamReader_new4(const libqt_string data);
-QCborStreamReader* QCborStreamReader_new5(QIODevice* device);
+QCborStreamReader* QCborStreamReader_New();
+QCborStreamReader* QCborStreamReader_New2(const char* data, ptrdiff_t lenVal);
+QCborStreamReader* QCborStreamReader_New3(const unsigned char* data, ptrdiff_t lenVal);
+QCborStreamReader* QCborStreamReader_New4(const libqt_string data);
+QCborStreamReader* QCborStreamReader_New5(QIODevice* device);
 void QCborStreamReader_SetDevice(QCborStreamReader* self, QIODevice* device);
 QIODevice* QCborStreamReader_Device(const QCborStreamReader* self);
 void QCborStreamReader_AddData(QCborStreamReader* self, const libqt_string data);

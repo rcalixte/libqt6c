@@ -13,7 +13,7 @@
 #include "libktoggletoolbaraction.hpp"
 #include "libktoggletoolbaraction.hxx"
 
-KToggleToolBarAction* KToggleToolBarAction_new(KToolBar* toolBar, const libqt_string text, QObject* parent) {
+KToggleToolBarAction* KToggleToolBarAction_New(KToolBar* toolBar, const libqt_string text, QObject* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualKToggleToolBarAction(toolBar, text_QString, parent);
 }

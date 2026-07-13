@@ -27,7 +27,7 @@ typedef struct QUrl QUrl;
 typedef struct QVariant QVariant;
 #endif
 
-QMimeData* QMimeData_new();
+QMimeData* QMimeData_New();
 QMetaObject* QMimeData_MetaObject(const QMimeData* self);
 void* QMimeData_Metacast(QMimeData* self, const char* param1);
 int QMimeData_Metacall(QMimeData* self, int param1, int param2, void** param3);

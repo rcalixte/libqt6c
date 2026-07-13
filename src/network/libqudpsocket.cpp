@@ -18,11 +18,11 @@
 #include "libqudpsocket.hpp"
 #include "libqudpsocket.hxx"
 
-QUdpSocket* QUdpSocket_new() {
+QUdpSocket* QUdpSocket_New() {
     return new VirtualQUdpSocket();
 }
 
-QUdpSocket* QUdpSocket_new2(QObject* parent) {
+QUdpSocket* QUdpSocket_New2(QObject* parent) {
     return new VirtualQUdpSocket(parent);
 }
 

@@ -17,11 +17,11 @@
 #include "libqtabwidget.h"
 
 QTabWidget* q_tabwidget_new(void* parent) {
-    return QTabWidget_new((QWidget*)parent);
+    return QTabWidget_New((QWidget*)parent);
 }
 
 QTabWidget* q_tabwidget_new2() {
-    return QTabWidget_new2();
+    return QTabWidget_New2();
 }
 
 const QMetaObject* q_tabwidget_meta_object(void* self) {

@@ -28,27 +28,27 @@
 #include "libqwebengineview.h"
 
 QWebEngineView* q_webengineview_new(void* parent) {
-    return QWebEngineView_new((QWidget*)parent);
+    return QWebEngineView_New((QWidget*)parent);
 }
 
 QWebEngineView* q_webengineview_new2() {
-    return QWebEngineView_new2();
+    return QWebEngineView_New2();
 }
 
 QWebEngineView* q_webengineview_new3(void* profile) {
-    return QWebEngineView_new3((QWebEngineProfile*)profile);
+    return QWebEngineView_New3((QWebEngineProfile*)profile);
 }
 
 QWebEngineView* q_webengineview_new4(void* page) {
-    return QWebEngineView_new4((QWebEnginePage*)page);
+    return QWebEngineView_New4((QWebEnginePage*)page);
 }
 
 QWebEngineView* q_webengineview_new5(void* profile, void* parent) {
-    return QWebEngineView_new5((QWebEngineProfile*)profile, (QWidget*)parent);
+    return QWebEngineView_New5((QWebEngineProfile*)profile, (QWidget*)parent);
 }
 
 QWebEngineView* q_webengineview_new6(void* page, void* parent) {
-    return QWebEngineView_new6((QWebEnginePage*)page, (QWidget*)parent);
+    return QWebEngineView_New6((QWebEnginePage*)page, (QWidget*)parent);
 }
 
 const QMetaObject* q_webengineview_meta_object(void* self) {

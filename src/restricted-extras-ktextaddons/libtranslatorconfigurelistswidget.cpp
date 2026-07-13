@@ -37,11 +37,11 @@
 #include "libtranslatorconfigurelistswidget.hpp"
 #include "libtranslatorconfigurelistswidget.hxx"
 
-TextTranslator__TranslatorConfigureListsWidget* TextTranslator__TranslatorConfigureListsWidget_new(QWidget* parent) {
+TextTranslator__TranslatorConfigureListsWidget* TextTranslator__TranslatorConfigureListsWidget_New(QWidget* parent) {
     return new VirtualTextTranslatorTranslatorConfigureListsWidget(parent);
 }
 
-TextTranslator__TranslatorConfigureListsWidget* TextTranslator__TranslatorConfigureListsWidget_new2() {
+TextTranslator__TranslatorConfigureListsWidget* TextTranslator__TranslatorConfigureListsWidget_New2() {
     return new VirtualTextTranslatorTranslatorConfigureListsWidget();
 }
 

@@ -7,11 +7,11 @@
 #include "libqlogvalueaxis.h"
 
 QLogValueAxis* q_logvalueaxis_new() {
-    return QLogValueAxis_new();
+    return QLogValueAxis_New();
 }
 
 QLogValueAxis* q_logvalueaxis_new2(void* parent) {
-    return QLogValueAxis_new2((QObject*)parent);
+    return QLogValueAxis_New2((QObject*)parent);
 }
 
 const QMetaObject* q_logvalueaxis_meta_object(void* self) {

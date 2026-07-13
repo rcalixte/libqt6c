@@ -3,11 +3,11 @@
 #include "libkfile.hpp"
 #include "libkfile.hxx"
 
-KFile* KFile_new(const KFile* other) {
+KFile* KFile_New(const KFile* other) {
     return new KFile(*other);
 }
 
-KFile* KFile_new2(KFile* other) {
+KFile* KFile_New2(KFile* other) {
     return new KFile(std::move(*other));
 }
 

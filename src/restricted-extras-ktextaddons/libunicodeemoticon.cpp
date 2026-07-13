@@ -5,11 +5,11 @@
 #include "libunicodeemoticon.hpp"
 #include "libunicodeemoticon.hxx"
 
-TextEmoticonsCore__UnicodeEmoticon* TextEmoticonsCore__UnicodeEmoticon_new() {
+TextEmoticonsCore__UnicodeEmoticon* TextEmoticonsCore__UnicodeEmoticon_New() {
     return new TextEmoticonsCore::UnicodeEmoticon();
 }
 
-TextEmoticonsCore__UnicodeEmoticon* TextEmoticonsCore__UnicodeEmoticon_new2(const TextEmoticonsCore__UnicodeEmoticon* param1) {
+TextEmoticonsCore__UnicodeEmoticon* TextEmoticonsCore__UnicodeEmoticon_New2(const TextEmoticonsCore__UnicodeEmoticon* param1) {
     return new TextEmoticonsCore::UnicodeEmoticon(*param1);
 }
 

@@ -17,11 +17,11 @@
 #include "libqabstractnetworkcache.hpp"
 #include "libqabstractnetworkcache.hxx"
 
-QNetworkCacheMetaData* QNetworkCacheMetaData_new() {
+QNetworkCacheMetaData* QNetworkCacheMetaData_New() {
     return new QNetworkCacheMetaData();
 }
 
-QNetworkCacheMetaData* QNetworkCacheMetaData_new2(const QNetworkCacheMetaData* other) {
+QNetworkCacheMetaData* QNetworkCacheMetaData_New2(const QNetworkCacheMetaData* other) {
     return new QNetworkCacheMetaData(*other);
 }
 

@@ -7,11 +7,11 @@
 #include "libqwebchannelabstracttransport.h"
 
 QWebChannelAbstractTransport* q_webchannelabstracttransport_new() {
-    return QWebChannelAbstractTransport_new();
+    return QWebChannelAbstractTransport_New();
 }
 
 QWebChannelAbstractTransport* q_webchannelabstracttransport_new2(void* parent) {
-    return QWebChannelAbstractTransport_new2((QObject*)parent);
+    return QWebChannelAbstractTransport_New2((QObject*)parent);
 }
 
 const QMetaObject* q_webchannelabstracttransport_meta_object(void* self) {

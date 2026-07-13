@@ -7,11 +7,11 @@
 #include "libunitcategory.h"
 
 KUnitConversion__UnitCategory* k_unitconversion__unitcategory_new() {
-    return KUnitConversion__UnitCategory_new();
+    return KUnitConversion__UnitCategory_New();
 }
 
 KUnitConversion__UnitCategory* k_unitconversion__unitcategory_new2(void* other) {
-    return KUnitConversion__UnitCategory_new2((KUnitConversion__UnitCategory*)other);
+    return KUnitConversion__UnitCategory_New2((KUnitConversion__UnitCategory*)other);
 }
 
 void k_unitconversion__unitcategory_operator_assign(void* self, void* other) {

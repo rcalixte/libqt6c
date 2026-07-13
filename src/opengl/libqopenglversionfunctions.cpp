@@ -31,23 +31,23 @@
 #include "libqopenglversionfunctions.hpp"
 #include "libqopenglversionfunctions.hxx"
 
-QOpenGLVersionStatus* QOpenGLVersionStatus_new(const QOpenGLVersionStatus* other) {
+QOpenGLVersionStatus* QOpenGLVersionStatus_New(const QOpenGLVersionStatus* other) {
     return new QOpenGLVersionStatus(*other);
 }
 
-QOpenGLVersionStatus* QOpenGLVersionStatus_new2(QOpenGLVersionStatus* other) {
+QOpenGLVersionStatus* QOpenGLVersionStatus_New2(QOpenGLVersionStatus* other) {
     return new QOpenGLVersionStatus(std::move(*other));
 }
 
-QOpenGLVersionStatus* QOpenGLVersionStatus_new3() {
+QOpenGLVersionStatus* QOpenGLVersionStatus_New3() {
     return new QOpenGLVersionStatus();
 }
 
-QOpenGLVersionStatus* QOpenGLVersionStatus_new4(int majorVersion, int minorVersion, int functionStatus) {
+QOpenGLVersionStatus* QOpenGLVersionStatus_New4(int majorVersion, int minorVersion, int functionStatus) {
     return new QOpenGLVersionStatus(static_cast<int>(majorVersion), static_cast<int>(minorVersion), static_cast<QOpenGLVersionStatus::OpenGLStatus>(functionStatus));
 }
 
-QOpenGLVersionStatus* QOpenGLVersionStatus_new5(const QOpenGLVersionStatus* param1) {
+QOpenGLVersionStatus* QOpenGLVersionStatus_New5(const QOpenGLVersionStatus* param1) {
     return new QOpenGLVersionStatus(*param1);
 }
 

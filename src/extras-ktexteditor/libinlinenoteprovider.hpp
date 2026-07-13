@@ -34,7 +34,7 @@ typedef struct QSize QSize;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KTextEditor__InlineNoteProvider* KTextEditor__InlineNoteProvider_new();
+KTextEditor__InlineNoteProvider* KTextEditor__InlineNoteProvider_New();
 QMetaObject* KTextEditor__InlineNoteProvider_MetaObject(const KTextEditor__InlineNoteProvider* self);
 void* KTextEditor__InlineNoteProvider_Metacast(KTextEditor__InlineNoteProvider* self, const char* param1);
 int KTextEditor__InlineNoteProvider_Metacall(KTextEditor__InlineNoteProvider* self, int param1, int param2, void** param3);

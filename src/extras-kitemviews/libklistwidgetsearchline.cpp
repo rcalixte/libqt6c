@@ -42,15 +42,15 @@
 #include "libklistwidgetsearchline.hpp"
 #include "libklistwidgetsearchline.hxx"
 
-KListWidgetSearchLine* KListWidgetSearchLine_new(QWidget* parent) {
+KListWidgetSearchLine* KListWidgetSearchLine_New(QWidget* parent) {
     return new VirtualKListWidgetSearchLine(parent);
 }
 
-KListWidgetSearchLine* KListWidgetSearchLine_new2() {
+KListWidgetSearchLine* KListWidgetSearchLine_New2() {
     return new VirtualKListWidgetSearchLine();
 }
 
-KListWidgetSearchLine* KListWidgetSearchLine_new3(QWidget* parent, QListWidget* listWidget) {
+KListWidgetSearchLine* KListWidgetSearchLine_New3(QWidget* parent, QListWidget* listWidget) {
     return new VirtualKListWidgetSearchLine(parent, listWidget);
 }
 

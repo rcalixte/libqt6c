@@ -14,11 +14,11 @@
 #include "libqsortfilterproxymodel.h"
 
 QSortFilterProxyModel* q_sortfilterproxymodel_new() {
-    return QSortFilterProxyModel_new();
+    return QSortFilterProxyModel_New();
 }
 
 QSortFilterProxyModel* q_sortfilterproxymodel_new2(void* parent) {
-    return QSortFilterProxyModel_new2((QObject*)parent);
+    return QSortFilterProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sortfilterproxymodel_meta_object(void* self) {

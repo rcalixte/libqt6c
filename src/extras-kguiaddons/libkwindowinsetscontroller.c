@@ -7,11 +7,11 @@
 #include "libkwindowinsetscontroller.h"
 
 KWindowInsetsController* k_windowinsetscontroller_new() {
-    return KWindowInsetsController_new();
+    return KWindowInsetsController_New();
 }
 
 KWindowInsetsController* k_windowinsetscontroller_new2(void* parent) {
-    return KWindowInsetsController_new2((QObject*)parent);
+    return KWindowInsetsController_New2((QObject*)parent);
 }
 
 const QMetaObject* k_windowinsetscontroller_meta_object(void* self) {

@@ -7,11 +7,11 @@
 #include "libqtooltip.h"
 
 QToolTip* q_tooltip_new(void* other) {
-    return QToolTip_new((QToolTip*)other);
+    return QToolTip_New((QToolTip*)other);
 }
 
 QToolTip* q_tooltip_new2(void* other) {
-    return QToolTip_new2((QToolTip*)other);
+    return QToolTip_New2((QToolTip*)other);
 }
 
 void q_tooltip_copy_assign(void* self, void* other) {

@@ -37,10 +37,10 @@ typedef struct QTextItem QTextItem;
 typedef struct QTransform QTransform;
 #endif
 
-QTextItem* QTextItem_new(const QTextItem* other);
-QTextItem* QTextItem_new2(QTextItem* other);
-QTextItem* QTextItem_new3();
-QTextItem* QTextItem_new4(const QTextItem* param1);
+QTextItem* QTextItem_New(const QTextItem* other);
+QTextItem* QTextItem_New2(QTextItem* other);
+QTextItem* QTextItem_New3();
+QTextItem* QTextItem_New4(const QTextItem* param1);
 void QTextItem_CopyAssign(QTextItem* self, QTextItem* other);
 void QTextItem_MoveAssign(QTextItem* self, QTextItem* other);
 double QTextItem_Descent(const QTextItem* self);
@@ -51,8 +51,8 @@ libqt_string QTextItem_Text(const QTextItem* self);
 QFont* QTextItem_Font(const QTextItem* self);
 void QTextItem_Delete(QTextItem* self);
 
-QPaintEngine* QPaintEngine_new();
-QPaintEngine* QPaintEngine_new2(int features);
+QPaintEngine* QPaintEngine_New();
+QPaintEngine* QPaintEngine_New2(int features);
 bool QPaintEngine_IsActive(const QPaintEngine* self);
 void QPaintEngine_SetActive(QPaintEngine* self, bool newState);
 bool QPaintEngine_Begin(QPaintEngine* self, QPaintDevice* pdev);
@@ -137,8 +137,8 @@ void QPaintEngine_OnCreatePixmapFromImage(QPaintEngine* self, intptr_t slot);
 QPixmap* QPaintEngine_SuperCreatePixmapFromImage(QPaintEngine* self, QImage* image, int flags);
 void QPaintEngine_Delete(QPaintEngine* self);
 
-QPaintEngineState* QPaintEngineState_new(const QPaintEngineState* other);
-QPaintEngineState* QPaintEngineState_new2(QPaintEngineState* other);
+QPaintEngineState* QPaintEngineState_New(const QPaintEngineState* other);
+QPaintEngineState* QPaintEngineState_New2(QPaintEngineState* other);
 void QPaintEngineState_CopyAssign(QPaintEngineState* self, QPaintEngineState* other);
 void QPaintEngineState_MoveAssign(QPaintEngineState* self, QPaintEngineState* other);
 int QPaintEngineState_State(const QPaintEngineState* self);

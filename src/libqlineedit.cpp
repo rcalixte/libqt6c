@@ -45,20 +45,20 @@
 #include "libqlineedit.hpp"
 #include "libqlineedit.hxx"
 
-QLineEdit* QLineEdit_new(QWidget* parent) {
+QLineEdit* QLineEdit_New(QWidget* parent) {
     return new VirtualQLineEdit(parent);
 }
 
-QLineEdit* QLineEdit_new2() {
+QLineEdit* QLineEdit_New2() {
     return new VirtualQLineEdit();
 }
 
-QLineEdit* QLineEdit_new3(const libqt_string param1) {
+QLineEdit* QLineEdit_New3(const libqt_string param1) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     return new VirtualQLineEdit(param1_QString);
 }
 
-QLineEdit* QLineEdit_new4(const libqt_string param1, QWidget* parent) {
+QLineEdit* QLineEdit_New4(const libqt_string param1, QWidget* parent) {
     QString param1_QString = QString::fromUtf8(param1.data, param1.len);
     return new VirtualQLineEdit(param1_QString, parent);
 }

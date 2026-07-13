@@ -25,15 +25,15 @@
 #include "libqgraphicswidget.h"
 
 QGraphicsWidget* q_graphicswidget_new() {
-    return QGraphicsWidget_new();
+    return QGraphicsWidget_New();
 }
 
 QGraphicsWidget* q_graphicswidget_new2(void* parent) {
-    return QGraphicsWidget_new2((QGraphicsItem*)parent);
+    return QGraphicsWidget_New2((QGraphicsItem*)parent);
 }
 
 QGraphicsWidget* q_graphicswidget_new3(void* parent, int32_t wFlags) {
-    return QGraphicsWidget_new3((QGraphicsItem*)parent, wFlags);
+    return QGraphicsWidget_New3((QGraphicsItem*)parent, wFlags);
 }
 
 const QMetaObject* q_graphicswidget_meta_object(void* self) {

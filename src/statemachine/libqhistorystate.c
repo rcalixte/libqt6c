@@ -9,19 +9,19 @@
 #include "libqhistorystate.h"
 
 QHistoryState* q_historystate_new() {
-    return QHistoryState_new();
+    return QHistoryState_New();
 }
 
 QHistoryState* q_historystate_new2(int32_t type) {
-    return QHistoryState_new2(type);
+    return QHistoryState_New2(type);
 }
 
 QHistoryState* q_historystate_new3(void* parent) {
-    return QHistoryState_new3((QState*)parent);
+    return QHistoryState_New3((QState*)parent);
 }
 
 QHistoryState* q_historystate_new4(int32_t type, void* parent) {
-    return QHistoryState_new4(type, (QState*)parent);
+    return QHistoryState_New4(type, (QState*)parent);
 }
 
 const QMetaObject* q_historystate_meta_object(void* self) {

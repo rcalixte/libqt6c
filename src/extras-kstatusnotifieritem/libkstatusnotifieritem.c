@@ -11,19 +11,19 @@
 #include "libkstatusnotifieritem.h"
 
 KStatusNotifierItem* k_statusnotifieritem_new() {
-    return KStatusNotifierItem_new();
+    return KStatusNotifierItem_New();
 }
 
 KStatusNotifierItem* k_statusnotifieritem_new2(const char* id) {
-    return KStatusNotifierItem_new2(qstring(id));
+    return KStatusNotifierItem_New2(qstring(id));
 }
 
 KStatusNotifierItem* k_statusnotifieritem_new3(void* parent) {
-    return KStatusNotifierItem_new3((QObject*)parent);
+    return KStatusNotifierItem_New3((QObject*)parent);
 }
 
 KStatusNotifierItem* k_statusnotifieritem_new4(const char* id, void* parent) {
-    return KStatusNotifierItem_new4(qstring(id), (QObject*)parent);
+    return KStatusNotifierItem_New4(qstring(id), (QObject*)parent);
 }
 
 const QMetaObject* k_statusnotifieritem_meta_object(void* self) {

@@ -63,8 +63,8 @@ typedef struct QWidget QWidget;
 typedef struct TextCustomEditor__RichTextBrowser TextCustomEditor__RichTextBrowser;
 #endif
 
-TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_new(QWidget* parent);
-TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_new2();
+TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_New(QWidget* parent);
+TextCustomEditor__RichTextBrowser* TextCustomEditor__RichTextBrowser_New2();
 QMetaObject* TextCustomEditor__RichTextBrowser_MetaObject(const TextCustomEditor__RichTextBrowser* self);
 void* TextCustomEditor__RichTextBrowser_Metacast(TextCustomEditor__RichTextBrowser* self, const char* param1);
 int TextCustomEditor__RichTextBrowser_Metacall(TextCustomEditor__RichTextBrowser* self, int param1, int param2, void** param3);

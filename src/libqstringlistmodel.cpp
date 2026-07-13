@@ -22,11 +22,11 @@
 #include "libqstringlistmodel.hpp"
 #include "libqstringlistmodel.hxx"
 
-QStringListModel* QStringListModel_new() {
+QStringListModel* QStringListModel_New() {
     return new VirtualQStringListModel();
 }
 
-QStringListModel* QStringListModel_new2(const libqt_list /* of libqt_string */ strings) {
+QStringListModel* QStringListModel_New2(const libqt_list /* of libqt_string */ strings) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -37,11 +37,11 @@ QStringListModel* QStringListModel_new2(const libqt_list /* of libqt_string */ s
     return new VirtualQStringListModel(strings_QList);
 }
 
-QStringListModel* QStringListModel_new3(QObject* parent) {
+QStringListModel* QStringListModel_New3(QObject* parent) {
     return new VirtualQStringListModel(parent);
 }
 
-QStringListModel* QStringListModel_new4(const libqt_list /* of libqt_string */ strings, QObject* parent) {
+QStringListModel* QStringListModel_New4(const libqt_list /* of libqt_string */ strings, QObject* parent) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);

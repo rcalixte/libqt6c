@@ -16,20 +16,20 @@
 #include "libkstatusnotifieritem.hpp"
 #include "libkstatusnotifieritem.hxx"
 
-KStatusNotifierItem* KStatusNotifierItem_new() {
+KStatusNotifierItem* KStatusNotifierItem_New() {
     return new VirtualKStatusNotifierItem();
 }
 
-KStatusNotifierItem* KStatusNotifierItem_new2(const libqt_string id) {
+KStatusNotifierItem* KStatusNotifierItem_New2(const libqt_string id) {
     QString id_QString = QString::fromUtf8(id.data, id.len);
     return new VirtualKStatusNotifierItem(id_QString);
 }
 
-KStatusNotifierItem* KStatusNotifierItem_new3(QObject* parent) {
+KStatusNotifierItem* KStatusNotifierItem_New3(QObject* parent) {
     return new VirtualKStatusNotifierItem(parent);
 }
 
-KStatusNotifierItem* KStatusNotifierItem_new4(const libqt_string id, QObject* parent) {
+KStatusNotifierItem* KStatusNotifierItem_New4(const libqt_string id, QObject* parent) {
     QString id_QString = QString::fromUtf8(id.data, id.len);
     return new VirtualKStatusNotifierItem(id_QString, parent);
 }

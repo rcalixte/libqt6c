@@ -53,8 +53,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KNewPasswordDialog* KNewPasswordDialog_new(QWidget* parent);
-KNewPasswordDialog* KNewPasswordDialog_new2();
+KNewPasswordDialog* KNewPasswordDialog_New(QWidget* parent);
+KNewPasswordDialog* KNewPasswordDialog_New2();
 QMetaObject* KNewPasswordDialog_MetaObject(const KNewPasswordDialog* self);
 void* KNewPasswordDialog_Metacast(KNewPasswordDialog* self, const char* param1);
 int KNewPasswordDialog_Metacall(KNewPasswordDialog* self, int param1, int param2, void** param3);

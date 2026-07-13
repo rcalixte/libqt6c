@@ -11,11 +11,11 @@
 #include "libkdragwidgetdecorator.hpp"
 #include "libkdragwidgetdecorator.hxx"
 
-KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_new(QWidget* parent) {
+KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_New(QWidget* parent) {
     return new VirtualKDragWidgetDecoratorBase(parent);
 }
 
-KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_new2() {
+KDragWidgetDecoratorBase* KDragWidgetDecoratorBase_New2() {
     return new VirtualKDragWidgetDecoratorBase();
 }
 

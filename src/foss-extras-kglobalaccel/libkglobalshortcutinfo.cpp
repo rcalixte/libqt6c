@@ -12,11 +12,11 @@
 #include "libkglobalshortcutinfo.hpp"
 #include "libkglobalshortcutinfo.hxx"
 
-KGlobalShortcutInfo* KGlobalShortcutInfo_new() {
+KGlobalShortcutInfo* KGlobalShortcutInfo_New() {
     return new VirtualKGlobalShortcutInfo();
 }
 
-KGlobalShortcutInfo* KGlobalShortcutInfo_new2(const KGlobalShortcutInfo* rhs) {
+KGlobalShortcutInfo* KGlobalShortcutInfo_New2(const KGlobalShortcutInfo* rhs) {
     return new VirtualKGlobalShortcutInfo(*rhs);
 }
 

@@ -9,19 +9,19 @@
 #include "libqbluetoothservicediscoveryagent.h"
 
 QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new() {
-    return QBluetoothServiceDiscoveryAgent_new();
+    return QBluetoothServiceDiscoveryAgent_New();
 }
 
 QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new2(void* deviceAdapter) {
-    return QBluetoothServiceDiscoveryAgent_new2((QBluetoothAddress*)deviceAdapter);
+    return QBluetoothServiceDiscoveryAgent_New2((QBluetoothAddress*)deviceAdapter);
 }
 
 QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new3(void* parent) {
-    return QBluetoothServiceDiscoveryAgent_new3((QObject*)parent);
+    return QBluetoothServiceDiscoveryAgent_New3((QObject*)parent);
 }
 
 QBluetoothServiceDiscoveryAgent* q_bluetoothservicediscoveryagent_new4(void* deviceAdapter, void* parent) {
-    return QBluetoothServiceDiscoveryAgent_new4((QBluetoothAddress*)deviceAdapter, (QObject*)parent);
+    return QBluetoothServiceDiscoveryAgent_New4((QBluetoothAddress*)deviceAdapter, (QObject*)parent);
 }
 
 const QMetaObject* q_bluetoothservicediscoveryagent_meta_object(void* self) {

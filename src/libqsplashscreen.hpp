@@ -53,12 +53,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QSplashScreen* QSplashScreen_new();
-QSplashScreen* QSplashScreen_new2(QScreen* screen);
-QSplashScreen* QSplashScreen_new3(const QPixmap* pixmap);
-QSplashScreen* QSplashScreen_new4(const QPixmap* pixmap, int f);
-QSplashScreen* QSplashScreen_new5(QScreen* screen, const QPixmap* pixmap);
-QSplashScreen* QSplashScreen_new6(QScreen* screen, const QPixmap* pixmap, int f);
+QSplashScreen* QSplashScreen_New();
+QSplashScreen* QSplashScreen_New2(QScreen* screen);
+QSplashScreen* QSplashScreen_New3(const QPixmap* pixmap);
+QSplashScreen* QSplashScreen_New4(const QPixmap* pixmap, int f);
+QSplashScreen* QSplashScreen_New5(QScreen* screen, const QPixmap* pixmap);
+QSplashScreen* QSplashScreen_New6(QScreen* screen, const QPixmap* pixmap, int f);
 QMetaObject* QSplashScreen_MetaObject(const QSplashScreen* self);
 void* QSplashScreen_Metacast(QSplashScreen* self, const char* param1);
 int QSplashScreen_Metacall(QSplashScreen* self, int param1, int param2, void** param3);

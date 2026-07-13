@@ -6,7 +6,7 @@
 #include "libextractorcollection.hpp"
 #include "libextractorcollection.hxx"
 
-KFileMetaData__ExtractorCollection* KFileMetaData__ExtractorCollection_new() {
+KFileMetaData__ExtractorCollection* KFileMetaData__ExtractorCollection_New() {
     return new KFileMetaData::ExtractorCollection();
 }
 

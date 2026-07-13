@@ -3,27 +3,27 @@
 #include "libqdrawutil.hpp"
 #include "libqdrawutil.hxx"
 
-QTileRules* QTileRules_new(const QTileRules* other) {
+QTileRules* QTileRules_New(const QTileRules* other) {
     return new QTileRules(*other);
 }
 
-QTileRules* QTileRules_new2(QTileRules* other) {
+QTileRules* QTileRules_New2(QTileRules* other) {
     return new QTileRules(std::move(*other));
 }
 
-QTileRules* QTileRules_new3(int horizontalRule, int verticalRule) {
+QTileRules* QTileRules_New3(int horizontalRule, int verticalRule) {
     return new QTileRules(static_cast<Qt::TileRule>(horizontalRule), static_cast<Qt::TileRule>(verticalRule));
 }
 
-QTileRules* QTileRules_new4() {
+QTileRules* QTileRules_New4() {
     return new QTileRules();
 }
 
-QTileRules* QTileRules_new5(const QTileRules* param1) {
+QTileRules* QTileRules_New5(const QTileRules* param1) {
     return new QTileRules(*param1);
 }
 
-QTileRules* QTileRules_new6(int rule) {
+QTileRules* QTileRules_New6(int rule) {
     return new QTileRules(static_cast<Qt::TileRule>(rule));
 }
 

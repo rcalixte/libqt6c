@@ -5,57 +5,57 @@
 #include "libqsslkey.hpp"
 #include "libqsslkey.hxx"
 
-QSslKey* QSslKey_new() {
+QSslKey* QSslKey_New() {
     return new QSslKey();
 }
 
-QSslKey* QSslKey_new2(const libqt_string encoded, int algorithm) {
+QSslKey* QSslKey_New2(const libqt_string encoded, int algorithm) {
     QByteArray encoded_QByteArray(encoded.data, encoded.len);
     return new QSslKey(encoded_QByteArray, static_cast<QSsl::KeyAlgorithm>(algorithm));
 }
 
-QSslKey* QSslKey_new3(QIODevice* device, int algorithm) {
+QSslKey* QSslKey_New3(QIODevice* device, int algorithm) {
     return new QSslKey(device, static_cast<QSsl::KeyAlgorithm>(algorithm));
 }
 
-QSslKey* QSslKey_new4(void* handle) {
+QSslKey* QSslKey_New4(void* handle) {
     return new QSslKey(handle);
 }
 
-QSslKey* QSslKey_new5(const QSslKey* other) {
+QSslKey* QSslKey_New5(const QSslKey* other) {
     return new QSslKey(*other);
 }
 
-QSslKey* QSslKey_new6(const libqt_string encoded, int algorithm, int format) {
+QSslKey* QSslKey_New6(const libqt_string encoded, int algorithm, int format) {
     QByteArray encoded_QByteArray(encoded.data, encoded.len);
     return new QSslKey(encoded_QByteArray, static_cast<QSsl::KeyAlgorithm>(algorithm), static_cast<QSsl::EncodingFormat>(format));
 }
 
-QSslKey* QSslKey_new7(const libqt_string encoded, int algorithm, int format, int type) {
+QSslKey* QSslKey_New7(const libqt_string encoded, int algorithm, int format, int type) {
     QByteArray encoded_QByteArray(encoded.data, encoded.len);
     return new QSslKey(encoded_QByteArray, static_cast<QSsl::KeyAlgorithm>(algorithm), static_cast<QSsl::EncodingFormat>(format), static_cast<QSsl::KeyType>(type));
 }
 
-QSslKey* QSslKey_new8(const libqt_string encoded, int algorithm, int format, int type, const libqt_string passPhrase) {
+QSslKey* QSslKey_New8(const libqt_string encoded, int algorithm, int format, int type, const libqt_string passPhrase) {
     QByteArray encoded_QByteArray(encoded.data, encoded.len);
     QByteArray passPhrase_QByteArray(passPhrase.data, passPhrase.len);
     return new QSslKey(encoded_QByteArray, static_cast<QSsl::KeyAlgorithm>(algorithm), static_cast<QSsl::EncodingFormat>(format), static_cast<QSsl::KeyType>(type), passPhrase_QByteArray);
 }
 
-QSslKey* QSslKey_new9(QIODevice* device, int algorithm, int format) {
+QSslKey* QSslKey_New9(QIODevice* device, int algorithm, int format) {
     return new QSslKey(device, static_cast<QSsl::KeyAlgorithm>(algorithm), static_cast<QSsl::EncodingFormat>(format));
 }
 
-QSslKey* QSslKey_new10(QIODevice* device, int algorithm, int format, int type) {
+QSslKey* QSslKey_New10(QIODevice* device, int algorithm, int format, int type) {
     return new QSslKey(device, static_cast<QSsl::KeyAlgorithm>(algorithm), static_cast<QSsl::EncodingFormat>(format), static_cast<QSsl::KeyType>(type));
 }
 
-QSslKey* QSslKey_new11(QIODevice* device, int algorithm, int format, int type, const libqt_string passPhrase) {
+QSslKey* QSslKey_New11(QIODevice* device, int algorithm, int format, int type, const libqt_string passPhrase) {
     QByteArray passPhrase_QByteArray(passPhrase.data, passPhrase.len);
     return new QSslKey(device, static_cast<QSsl::KeyAlgorithm>(algorithm), static_cast<QSsl::EncodingFormat>(format), static_cast<QSsl::KeyType>(type), passPhrase_QByteArray);
 }
 
-QSslKey* QSslKey_new12(void* handle, int type) {
+QSslKey* QSslKey_New12(void* handle, int type) {
     return new QSslKey(handle, static_cast<QSsl::KeyType>(type));
 }
 

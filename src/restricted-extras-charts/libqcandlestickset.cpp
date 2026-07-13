@@ -12,27 +12,27 @@
 #include "libqcandlestickset.hpp"
 #include "libqcandlestickset.hxx"
 
-QCandlestickSet* QCandlestickSet_new() {
+QCandlestickSet* QCandlestickSet_New() {
     return new VirtualQCandlestickSet();
 }
 
-QCandlestickSet* QCandlestickSet_new2(double open, double high, double low, double close) {
+QCandlestickSet* QCandlestickSet_New2(double open, double high, double low, double close) {
     return new VirtualQCandlestickSet(static_cast<qreal>(open), static_cast<qreal>(high), static_cast<qreal>(low), static_cast<qreal>(close));
 }
 
-QCandlestickSet* QCandlestickSet_new3(double timestamp) {
+QCandlestickSet* QCandlestickSet_New3(double timestamp) {
     return new VirtualQCandlestickSet(static_cast<qreal>(timestamp));
 }
 
-QCandlestickSet* QCandlestickSet_new4(double timestamp, QObject* parent) {
+QCandlestickSet* QCandlestickSet_New4(double timestamp, QObject* parent) {
     return new VirtualQCandlestickSet(static_cast<qreal>(timestamp), parent);
 }
 
-QCandlestickSet* QCandlestickSet_new5(double open, double high, double low, double close, double timestamp) {
+QCandlestickSet* QCandlestickSet_New5(double open, double high, double low, double close, double timestamp) {
     return new VirtualQCandlestickSet(static_cast<qreal>(open), static_cast<qreal>(high), static_cast<qreal>(low), static_cast<qreal>(close), static_cast<qreal>(timestamp));
 }
 
-QCandlestickSet* QCandlestickSet_new6(double open, double high, double low, double close, double timestamp, QObject* parent) {
+QCandlestickSet* QCandlestickSet_New6(double open, double high, double low, double close, double timestamp, QObject* parent) {
     return new VirtualQCandlestickSet(static_cast<qreal>(open), static_cast<qreal>(high), static_cast<qreal>(low), static_cast<qreal>(close), static_cast<qreal>(timestamp), parent);
 }
 

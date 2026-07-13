@@ -29,8 +29,8 @@ typedef struct QsciLexerCoffeeScript QsciLexerCoffeeScript;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerCoffeeScript* QsciLexerCoffeeScript_new();
-QsciLexerCoffeeScript* QsciLexerCoffeeScript_new2(QObject* parent);
+QsciLexerCoffeeScript* QsciLexerCoffeeScript_New();
+QsciLexerCoffeeScript* QsciLexerCoffeeScript_New2(QObject* parent);
 QMetaObject* QsciLexerCoffeeScript_MetaObject(const QsciLexerCoffeeScript* self);
 void* QsciLexerCoffeeScript_Metacast(QsciLexerCoffeeScript* self, const char* param1);
 int QsciLexerCoffeeScript_Metacall(QsciLexerCoffeeScript* self, int param1, int param2, void** param3);

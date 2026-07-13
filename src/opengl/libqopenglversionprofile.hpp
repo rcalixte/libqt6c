@@ -31,9 +31,9 @@ struct pair_int_int {
 };
 #endif
 
-QOpenGLVersionProfile* QOpenGLVersionProfile_new();
-QOpenGLVersionProfile* QOpenGLVersionProfile_new2(const QSurfaceFormat* format);
-QOpenGLVersionProfile* QOpenGLVersionProfile_new3(const QOpenGLVersionProfile* other);
+QOpenGLVersionProfile* QOpenGLVersionProfile_New();
+QOpenGLVersionProfile* QOpenGLVersionProfile_New2(const QSurfaceFormat* format);
+QOpenGLVersionProfile* QOpenGLVersionProfile_New3(const QOpenGLVersionProfile* other);
 void QOpenGLVersionProfile_OperatorAssign(QOpenGLVersionProfile* self, const QOpenGLVersionProfile* rhs);
 pair_int_int /* tuple of int and int */ QOpenGLVersionProfile_Version(const QOpenGLVersionProfile* self);
 void QOpenGLVersionProfile_SetVersion(QOpenGLVersionProfile* self, int majorVersion, int minorVersion);

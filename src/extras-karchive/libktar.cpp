@@ -9,20 +9,20 @@
 #include "libktar.hpp"
 #include "libktar.hxx"
 
-KTar* KTar_new(const libqt_string filename) {
+KTar* KTar_New(const libqt_string filename) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     return new VirtualKTar(filename_QString);
 }
 
-KTar* KTar_new2(QIODevice* dev) {
+KTar* KTar_New2(QIODevice* dev) {
     return new VirtualKTar(dev);
 }
 
-KTar* KTar_new3(const KTar* param1) {
+KTar* KTar_New3(const KTar* param1) {
     return new VirtualKTar(*param1);
 }
 
-KTar* KTar_new4(const libqt_string filename, const libqt_string mimetype) {
+KTar* KTar_New4(const libqt_string filename, const libqt_string mimetype) {
     QString filename_QString = QString::fromUtf8(filename.data, filename.len);
     QString mimetype_QString = QString::fromUtf8(mimetype.data, mimetype.len);
     return new VirtualKTar(filename_QString, mimetype_QString);

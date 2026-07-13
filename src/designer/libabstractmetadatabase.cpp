@@ -14,7 +14,7 @@
 #include "libabstractmetadatabase.hpp"
 #include "libabstractmetadatabase.hxx"
 
-QDesignerMetaDataBaseItemInterface* QDesignerMetaDataBaseItemInterface_new() {
+QDesignerMetaDataBaseItemInterface* QDesignerMetaDataBaseItemInterface_New() {
     return new VirtualQDesignerMetaDataBaseItemInterface();
 }
 
@@ -225,11 +225,11 @@ void QDesignerMetaDataBaseItemInterface_Delete(QDesignerMetaDataBaseItemInterfac
     delete self;
 }
 
-QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_new() {
+QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_New() {
     return new VirtualQDesignerMetaDataBaseInterface();
 }
 
-QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_new2(QObject* parent) {
+QDesignerMetaDataBaseInterface* QDesignerMetaDataBaseInterface_New2(QObject* parent) {
     return new VirtualQDesignerMetaDataBaseInterface(parent);
 }
 

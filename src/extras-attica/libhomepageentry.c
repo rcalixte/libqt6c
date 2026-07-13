@@ -3,11 +3,11 @@
 #include "libhomepageentry.h"
 
 Attica__HomePageEntry* k_attica__homepageentry_new() {
-    return Attica__HomePageEntry_new();
+    return Attica__HomePageEntry_New();
 }
 
 Attica__HomePageEntry* k_attica__homepageentry_new2(void* other) {
-    return Attica__HomePageEntry_new2((Attica__HomePageEntry*)other);
+    return Attica__HomePageEntry_New2((Attica__HomePageEntry*)other);
 }
 
 void k_attica__homepageentry_operator_assign(void* self, void* other) {

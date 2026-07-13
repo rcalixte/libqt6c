@@ -4,11 +4,11 @@
 #include "libpublisherfield.hpp"
 #include "libpublisherfield.hxx"
 
-Attica__PublisherField* Attica__PublisherField_new() {
+Attica__PublisherField* Attica__PublisherField_New() {
     return new Attica::PublisherField();
 }
 
-Attica__PublisherField* Attica__PublisherField_new2(const Attica__PublisherField* other) {
+Attica__PublisherField* Attica__PublisherField_New2(const Attica__PublisherField* other) {
     return new Attica::PublisherField(*other);
 }
 

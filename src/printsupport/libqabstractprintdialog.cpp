@@ -40,11 +40,11 @@
 #include "libqabstractprintdialog.hpp"
 #include "libqabstractprintdialog.hxx"
 
-QAbstractPrintDialog* QAbstractPrintDialog_new(QPrinter* printer) {
+QAbstractPrintDialog* QAbstractPrintDialog_New(QPrinter* printer) {
     return new VirtualQAbstractPrintDialog(printer);
 }
 
-QAbstractPrintDialog* QAbstractPrintDialog_new2(QPrinter* printer, QWidget* parent) {
+QAbstractPrintDialog* QAbstractPrintDialog_New2(QPrinter* printer, QWidget* parent) {
     return new VirtualQAbstractPrintDialog(printer, parent);
 }
 

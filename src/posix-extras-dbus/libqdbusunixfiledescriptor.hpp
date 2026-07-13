@@ -18,9 +18,9 @@ extern "C" {
 typedef struct QDBusUnixFileDescriptor QDBusUnixFileDescriptor;
 #endif
 
-QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_new();
-QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_new2(int fileDescriptor);
-QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_new3(const QDBusUnixFileDescriptor* other);
+QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_New();
+QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_New2(int fileDescriptor);
+QDBusUnixFileDescriptor* QDBusUnixFileDescriptor_New3(const QDBusUnixFileDescriptor* other);
 void QDBusUnixFileDescriptor_OperatorAssign(QDBusUnixFileDescriptor* self, const QDBusUnixFileDescriptor* other);
 void QDBusUnixFileDescriptor_Swap(QDBusUnixFileDescriptor* self, QDBusUnixFileDescriptor* other);
 bool QDBusUnixFileDescriptor_IsValid(const QDBusUnixFileDescriptor* self);

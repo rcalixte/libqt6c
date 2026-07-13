@@ -29,7 +29,7 @@ bool KSandbox_IsSnap();
 KSandbox__ProcessContext* KSandbox_MakeHostContext(const QProcess* process);
 void KSandbox_StartHostProcess(QProcess* process, int mode);
 
-KSandbox__ProcessContext* KSandbox__ProcessContext_new(const KSandbox__ProcessContext* param1);
+KSandbox__ProcessContext* KSandbox__ProcessContext_New(const KSandbox__ProcessContext* param1);
 void KSandbox__ProcessContext_Delete(KSandbox__ProcessContext* self);
 
 #ifdef __cplusplus

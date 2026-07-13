@@ -11,11 +11,11 @@
 #include "libqscilexercmake.h"
 
 QsciLexerCMake* q_scilexercmake_new() {
-    return QsciLexerCMake_new();
+    return QsciLexerCMake_New();
 }
 
 QsciLexerCMake* q_scilexercmake_new2(void* parent) {
-    return QsciLexerCMake_new2((QObject*)parent);
+    return QsciLexerCMake_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexercmake_meta_object(void* self) {

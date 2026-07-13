@@ -12,7 +12,7 @@
 #include "libkcategorydrawer.h"
 
 KCategoryDrawer* k_categorydrawer_new(void* view) {
-    return KCategoryDrawer_new((KCategorizedView*)view);
+    return KCategoryDrawer_New((KCategorizedView*)view);
 }
 
 const QMetaObject* k_categorydrawer_meta_object(void* self) {

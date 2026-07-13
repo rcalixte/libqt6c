@@ -9,7 +9,7 @@
 #include "libkfilecopytomenu.h"
 
 KFileCopyToMenu* k_filecopytomenu_new(void* parentWidget) {
-    return KFileCopyToMenu_new((QWidget*)parentWidget);
+    return KFileCopyToMenu_New((QWidget*)parentWidget);
 }
 
 const QMetaObject* k_filecopytomenu_meta_object(void* self) {

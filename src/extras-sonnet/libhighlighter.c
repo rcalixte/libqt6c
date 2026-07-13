@@ -14,19 +14,19 @@
 #include "libhighlighter.h"
 
 Sonnet__Highlighter* k_sonnet__highlighter_new(void* textEdit) {
-    return Sonnet__Highlighter_new((QTextEdit*)textEdit);
+    return Sonnet__Highlighter_New((QTextEdit*)textEdit);
 }
 
 Sonnet__Highlighter* k_sonnet__highlighter_new2(void* textEdit) {
-    return Sonnet__Highlighter_new2((QPlainTextEdit*)textEdit);
+    return Sonnet__Highlighter_New2((QPlainTextEdit*)textEdit);
 }
 
 Sonnet__Highlighter* k_sonnet__highlighter_new3(void* textEdit, void* col) {
-    return Sonnet__Highlighter_new3((QTextEdit*)textEdit, (QColor*)col);
+    return Sonnet__Highlighter_New3((QTextEdit*)textEdit, (QColor*)col);
 }
 
 Sonnet__Highlighter* k_sonnet__highlighter_new4(void* textEdit, void* col) {
-    return Sonnet__Highlighter_new4((QPlainTextEdit*)textEdit, (QColor*)col);
+    return Sonnet__Highlighter_New4((QPlainTextEdit*)textEdit, (QColor*)col);
 }
 
 const QMetaObject* k_sonnet__highlighter_meta_object(void* self) {

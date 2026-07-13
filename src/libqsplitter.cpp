@@ -41,19 +41,19 @@
 #include "libqsplitter.hpp"
 #include "libqsplitter.hxx"
 
-QSplitter* QSplitter_new(QWidget* parent) {
+QSplitter* QSplitter_New(QWidget* parent) {
     return new VirtualQSplitter(parent);
 }
 
-QSplitter* QSplitter_new2() {
+QSplitter* QSplitter_New2() {
     return new VirtualQSplitter();
 }
 
-QSplitter* QSplitter_new3(int param1) {
+QSplitter* QSplitter_New3(int param1) {
     return new VirtualQSplitter(static_cast<Qt::Orientation>(param1));
 }
 
-QSplitter* QSplitter_new4(int param1, QWidget* parent) {
+QSplitter* QSplitter_New4(int param1, QWidget* parent) {
     return new VirtualQSplitter(static_cast<Qt::Orientation>(param1), parent);
 }
 
@@ -2068,7 +2068,7 @@ void QSplitter_Delete(QSplitter* self) {
     delete self;
 }
 
-QSplitterHandle* QSplitterHandle_new(int o, QSplitter* parent) {
+QSplitterHandle* QSplitterHandle_New(int o, QSplitter* parent) {
     return new VirtualQSplitterHandle(static_cast<Qt::Orientation>(o), parent);
 }
 

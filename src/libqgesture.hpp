@@ -32,8 +32,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QGesture* QGesture_new();
-QGesture* QGesture_new2(QObject* parent);
+QGesture* QGesture_New();
+QGesture* QGesture_New2(QObject* parent);
 QMetaObject* QGesture_MetaObject(const QGesture* self);
 void* QGesture_Metacast(QGesture* self, const char* param1);
 int QGesture_Metacall(QGesture* self, int param1, int param2, void** param3);
@@ -86,8 +86,8 @@ void QGesture_OnIsSignalConnected(const QGesture* self, intptr_t slot);
 bool QGesture_SuperIsSignalConnected(const QGesture* self, const QMetaMethod* signal);
 void QGesture_Delete(QGesture* self);
 
-QPanGesture* QPanGesture_new();
-QPanGesture* QPanGesture_new2(QObject* parent);
+QPanGesture* QPanGesture_New();
+QPanGesture* QPanGesture_New2(QObject* parent);
 QMetaObject* QPanGesture_MetaObject(const QPanGesture* self);
 void* QPanGesture_Metacast(QPanGesture* self, const char* param1);
 int QPanGesture_Metacall(QPanGesture* self, int param1, int param2, void** param3);
@@ -139,8 +139,8 @@ void QPanGesture_OnIsSignalConnected(const QPanGesture* self, intptr_t slot);
 bool QPanGesture_SuperIsSignalConnected(const QPanGesture* self, const QMetaMethod* signal);
 void QPanGesture_Delete(QPanGesture* self);
 
-QPinchGesture* QPinchGesture_new();
-QPinchGesture* QPinchGesture_new2(QObject* parent);
+QPinchGesture* QPinchGesture_New();
+QPinchGesture* QPinchGesture_New2(QObject* parent);
 QMetaObject* QPinchGesture_MetaObject(const QPinchGesture* self);
 void* QPinchGesture_Metacast(QPinchGesture* self, const char* param1);
 int QPinchGesture_Metacall(QPinchGesture* self, int param1, int param2, void** param3);
@@ -207,8 +207,8 @@ void QPinchGesture_OnIsSignalConnected(const QPinchGesture* self, intptr_t slot)
 bool QPinchGesture_SuperIsSignalConnected(const QPinchGesture* self, const QMetaMethod* signal);
 void QPinchGesture_Delete(QPinchGesture* self);
 
-QSwipeGesture* QSwipeGesture_new();
-QSwipeGesture* QSwipeGesture_new2(QObject* parent);
+QSwipeGesture* QSwipeGesture_New();
+QSwipeGesture* QSwipeGesture_New2(QObject* parent);
 QMetaObject* QSwipeGesture_MetaObject(const QSwipeGesture* self);
 void* QSwipeGesture_Metacast(QSwipeGesture* self, const char* param1);
 int QSwipeGesture_Metacall(QSwipeGesture* self, int param1, int param2, void** param3);
@@ -257,8 +257,8 @@ void QSwipeGesture_OnIsSignalConnected(const QSwipeGesture* self, intptr_t slot)
 bool QSwipeGesture_SuperIsSignalConnected(const QSwipeGesture* self, const QMetaMethod* signal);
 void QSwipeGesture_Delete(QSwipeGesture* self);
 
-QTapGesture* QTapGesture_new();
-QTapGesture* QTapGesture_new2(QObject* parent);
+QTapGesture* QTapGesture_New();
+QTapGesture* QTapGesture_New2(QObject* parent);
 QMetaObject* QTapGesture_MetaObject(const QTapGesture* self);
 void* QTapGesture_Metacast(QTapGesture* self, const char* param1);
 int QTapGesture_Metacall(QTapGesture* self, int param1, int param2, void** param3);
@@ -305,8 +305,8 @@ void QTapGesture_OnIsSignalConnected(const QTapGesture* self, intptr_t slot);
 bool QTapGesture_SuperIsSignalConnected(const QTapGesture* self, const QMetaMethod* signal);
 void QTapGesture_Delete(QTapGesture* self);
 
-QTapAndHoldGesture* QTapAndHoldGesture_new();
-QTapAndHoldGesture* QTapAndHoldGesture_new2(QObject* parent);
+QTapAndHoldGesture* QTapAndHoldGesture_New();
+QTapAndHoldGesture* QTapAndHoldGesture_New2(QObject* parent);
 QMetaObject* QTapAndHoldGesture_MetaObject(const QTapAndHoldGesture* self);
 void* QTapAndHoldGesture_Metacast(QTapAndHoldGesture* self, const char* param1);
 int QTapAndHoldGesture_Metacall(QTapAndHoldGesture* self, int param1, int param2, void** param3);
@@ -355,8 +355,8 @@ void QTapAndHoldGesture_OnIsSignalConnected(const QTapAndHoldGesture* self, intp
 bool QTapAndHoldGesture_SuperIsSignalConnected(const QTapAndHoldGesture* self, const QMetaMethod* signal);
 void QTapAndHoldGesture_Delete(QTapAndHoldGesture* self);
 
-QGestureEvent* QGestureEvent_new(const libqt_list /* of QGesture* */ gestures);
-QGestureEvent* QGestureEvent_new2(const QGestureEvent* param1);
+QGestureEvent* QGestureEvent_New(const libqt_list /* of QGesture* */ gestures);
+QGestureEvent* QGestureEvent_New2(const QGestureEvent* param1);
 libqt_list /* of QGesture* */ QGestureEvent_Gestures(const QGestureEvent* self);
 QGesture* QGestureEvent_Gesture(const QGestureEvent* self, int type);
 libqt_list /* of QGesture* */ QGestureEvent_ActiveGestures(const QGestureEvent* self);

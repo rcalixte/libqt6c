@@ -21,7 +21,7 @@ typedef Poppler::PageTransition Poppler__PageTransition;
 typedef struct Poppler__PageTransition Poppler__PageTransition;
 #endif
 
-Poppler__PageTransition* Poppler__PageTransition_new(const Poppler__PageTransition* pt);
+Poppler__PageTransition* Poppler__PageTransition_New(const Poppler__PageTransition* pt);
 void Poppler__PageTransition_OperatorAssign(Poppler__PageTransition* self, const Poppler__PageTransition* other);
 int Poppler__PageTransition_Type(const Poppler__PageTransition* self);
 double Poppler__PageTransition_DurationReal(const Poppler__PageTransition* self);

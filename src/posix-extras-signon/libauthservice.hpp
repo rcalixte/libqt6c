@@ -39,8 +39,8 @@ typedef struct SignOn__Error SignOn__Error;
 typedef struct SignOn__IdentityInfo SignOn__IdentityInfo;
 #endif
 
-SignOn__AuthService* SignOn__AuthService_new();
-SignOn__AuthService* SignOn__AuthService_new2(QObject* parent);
+SignOn__AuthService* SignOn__AuthService_New();
+SignOn__AuthService* SignOn__AuthService_New2(QObject* parent);
 QMetaObject* SignOn__AuthService_MetaObject(const SignOn__AuthService* self);
 void* SignOn__AuthService_Metacast(SignOn__AuthService* self, const char* param1);
 int SignOn__AuthService_Metacall(SignOn__AuthService* self, int param1, int param2, void** param3);
@@ -99,8 +99,8 @@ void SignOn__AuthService_OnIsSignalConnected(const SignOn__AuthService* self, in
 bool SignOn__AuthService_SuperIsSignalConnected(const SignOn__AuthService* self, const QMetaMethod* signal);
 void SignOn__AuthService_Delete(SignOn__AuthService* self);
 
-SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_new(const libqt_string pattern);
-SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_new2(const SignOn__AuthService__IdentityRegExp* src);
+SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_New(const libqt_string pattern);
+SignOn__AuthService__IdentityRegExp* SignOn__AuthService__IdentityRegExp_New2(const SignOn__AuthService__IdentityRegExp* src);
 bool SignOn__AuthService__IdentityRegExp_IsValid(const SignOn__AuthService__IdentityRegExp* self);
 libqt_string SignOn__AuthService__IdentityRegExp_Pattern(const SignOn__AuthService__IdentityRegExp* self);
 void SignOn__AuthService__IdentityRegExp_Delete(SignOn__AuthService__IdentityRegExp* self);

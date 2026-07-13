@@ -5,11 +5,11 @@
 #include "libopenwith.hpp"
 #include "libopenwith.hxx"
 
-KIO__OpenWith* KIO__OpenWith_new(const KIO__OpenWith* other) {
+KIO__OpenWith* KIO__OpenWith_New(const KIO__OpenWith* other) {
     return new KIO::OpenWith(*other);
 }
 
-KIO__OpenWith* KIO__OpenWith_new2(KIO__OpenWith* other) {
+KIO__OpenWith* KIO__OpenWith_New2(KIO__OpenWith* other) {
     return new KIO::OpenWith(std::move(*other));
 }
 
@@ -25,7 +25,7 @@ void KIO__OpenWith_Delete(KIO__OpenWith* self) {
     delete self;
 }
 
-KIO__OpenWith__AcceptResult* KIO__OpenWith__AcceptResult_new(const KIO__OpenWith__AcceptResult* param1) {
+KIO__OpenWith__AcceptResult* KIO__OpenWith__AcceptResult_New(const KIO__OpenWith__AcceptResult* param1) {
     return new KIO::OpenWith::AcceptResult(*param1);
 }
 

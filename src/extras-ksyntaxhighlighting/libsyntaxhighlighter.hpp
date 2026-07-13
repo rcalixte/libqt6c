@@ -46,9 +46,9 @@ typedef struct QTextDocument QTextDocument;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_new();
-KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_new2(QTextDocument* document);
-KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_new3(QObject* parent);
+KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_New();
+KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_New2(QTextDocument* document);
+KSyntaxHighlighting__SyntaxHighlighter* KSyntaxHighlighting__SyntaxHighlighter_New3(QObject* parent);
 QMetaObject* KSyntaxHighlighting__SyntaxHighlighter_MetaObject(const KSyntaxHighlighting__SyntaxHighlighter* self);
 void* KSyntaxHighlighting__SyntaxHighlighter_Metacast(KSyntaxHighlighting__SyntaxHighlighter* self, const char* param1);
 int KSyntaxHighlighting__SyntaxHighlighter_Metacall(KSyntaxHighlighting__SyntaxHighlighter* self, int param1, int param2, void** param3);

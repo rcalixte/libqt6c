@@ -27,7 +27,7 @@ typedef struct KTextEditor__TextHintProvider KTextEditor__TextHintProvider;
 typedef struct KTextEditor__View KTextEditor__View;
 #endif
 
-KTextEditor__TextHintProvider* KTextEditor__TextHintProvider_new();
+KTextEditor__TextHintProvider* KTextEditor__TextHintProvider_New();
 libqt_string KTextEditor__TextHintProvider_TextHint(KTextEditor__TextHintProvider* self, KTextEditor__View* view, const KTextEditor__Cursor* position);
 void KTextEditor__TextHintProvider_OnTextHint(KTextEditor__TextHintProvider* self, intptr_t slot);
 libqt_string KTextEditor__TextHintProvider_SuperTextHint(KTextEditor__TextHintProvider* self, KTextEditor__View* view, const KTextEditor__Cursor* position);

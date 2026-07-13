@@ -24,8 +24,8 @@ typedef struct QObject QObject;
 typedef struct QWidget QWidget;
 #endif
 
-KDialogJobUiDelegate* KDialogJobUiDelegate_new();
-KDialogJobUiDelegate* KDialogJobUiDelegate_new2(int flags, QWidget* window);
+KDialogJobUiDelegate* KDialogJobUiDelegate_New();
+KDialogJobUiDelegate* KDialogJobUiDelegate_New2(int flags, QWidget* window);
 QMetaObject* KDialogJobUiDelegate_MetaObject(const KDialogJobUiDelegate* self);
 void* KDialogJobUiDelegate_Metacast(KDialogJobUiDelegate* self, const char* param1);
 int KDialogJobUiDelegate_Metacall(KDialogJobUiDelegate* self, int param1, int param2, void** param3);

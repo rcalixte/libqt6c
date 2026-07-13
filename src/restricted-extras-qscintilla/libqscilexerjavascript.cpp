@@ -14,11 +14,11 @@
 #include "libqscilexerjavascript.hpp"
 #include "libqscilexerjavascript.hxx"
 
-QsciLexerJavaScript* QsciLexerJavaScript_new() {
+QsciLexerJavaScript* QsciLexerJavaScript_New() {
     return new VirtualQsciLexerJavaScript();
 }
 
-QsciLexerJavaScript* QsciLexerJavaScript_new2(QObject* parent) {
+QsciLexerJavaScript* QsciLexerJavaScript_New2(QObject* parent) {
     return new VirtualQsciLexerJavaScript(parent);
 }
 

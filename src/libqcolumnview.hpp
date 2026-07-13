@@ -63,8 +63,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QColumnView* QColumnView_new(QWidget* parent);
-QColumnView* QColumnView_new2();
+QColumnView* QColumnView_New(QWidget* parent);
+QColumnView* QColumnView_New2();
 QMetaObject* QColumnView_MetaObject(const QColumnView* self);
 void* QColumnView_Metacast(QColumnView* self, const char* param1);
 int QColumnView_Metacall(QColumnView* self, int param1, int param2, void** param3);

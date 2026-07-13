@@ -6,11 +6,11 @@
 #include "libmetadata_1.hpp"
 #include "libmetadata_1.hxx"
 
-KIO__MetaData* KIO__MetaData_new() {
+KIO__MetaData* KIO__MetaData_New() {
     return new KIO::MetaData();
 }
 
-KIO__MetaData* KIO__MetaData_new2(const libqt_map /* of libqt_string to libqt_string */ metaData) {
+KIO__MetaData* KIO__MetaData_New2(const libqt_map /* of libqt_string to libqt_string */ metaData) {
     QMap<QString, QString> metaData_QMap;
     libqt_string* metaData_karr = static_cast<libqt_string*>(metaData.keys);
     libqt_string* metaData_varr = static_cast<libqt_string*>(metaData.values);
@@ -22,7 +22,7 @@ KIO__MetaData* KIO__MetaData_new2(const libqt_map /* of libqt_string to libqt_st
     return new KIO::MetaData(metaData_QMap);
 }
 
-KIO__MetaData* KIO__MetaData_new3(const libqt_map /* of libqt_string to QVariant* */ param1) {
+KIO__MetaData* KIO__MetaData_New3(const libqt_map /* of libqt_string to QVariant* */ param1) {
     QMap<QString, QVariant> param1_QMap;
     libqt_string* param1_karr = static_cast<libqt_string*>(param1.keys);
     QVariant** param1_varr = static_cast<QVariant**>(param1.values);
@@ -33,7 +33,7 @@ KIO__MetaData* KIO__MetaData_new3(const libqt_map /* of libqt_string to QVariant
     return new KIO::MetaData(param1_QMap);
 }
 
-KIO__MetaData* KIO__MetaData_new4(const KIO__MetaData* param1) {
+KIO__MetaData* KIO__MetaData_New4(const KIO__MetaData* param1) {
     return new KIO::MetaData(*param1);
 }
 

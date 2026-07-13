@@ -16,15 +16,15 @@
 #include "libqprocess.hpp"
 #include "libqprocess.hxx"
 
-QProcessEnvironment* QProcessEnvironment_new() {
+QProcessEnvironment* QProcessEnvironment_New() {
     return new QProcessEnvironment();
 }
 
-QProcessEnvironment* QProcessEnvironment_new2(int param1) {
+QProcessEnvironment* QProcessEnvironment_New2(int param1) {
     return new QProcessEnvironment(static_cast<QProcessEnvironment::Initialization>(param1));
 }
 
-QProcessEnvironment* QProcessEnvironment_new3(const QProcessEnvironment* other) {
+QProcessEnvironment* QProcessEnvironment_New3(const QProcessEnvironment* other) {
     return new QProcessEnvironment(*other);
 }
 
@@ -145,11 +145,11 @@ void QProcessEnvironment_Delete(QProcessEnvironment* self) {
     delete self;
 }
 
-QProcess* QProcess_new() {
+QProcess* QProcess_New() {
     return new VirtualQProcess();
 }
 
-QProcess* QProcess_new2(QObject* parent) {
+QProcess* QProcess_New2(QObject* parent) {
     return new VirtualQProcess(parent);
 }
 
@@ -1592,13 +1592,13 @@ void QProcess_Delete(QProcess* self) {
 }
 
 #ifndef _WIN32
-QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_new(const QProcess__UnixProcessParameters* other) {
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New(const QProcess__UnixProcessParameters* other) {
     return new QProcess::UnixProcessParameters(*other);
 }
 #endif
 
 #ifndef _WIN32
-QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_new2(QProcess__UnixProcessParameters* other) {
+QProcess__UnixProcessParameters* QProcess__UnixProcessParameters_New2(QProcess__UnixProcessParameters* other) {
     return new QProcess::UnixProcessParameters(std::move(*other));
 }
 #endif

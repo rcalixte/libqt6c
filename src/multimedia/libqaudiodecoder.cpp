@@ -14,11 +14,11 @@
 #include "libqaudiodecoder.hpp"
 #include "libqaudiodecoder.hxx"
 
-QAudioDecoder* QAudioDecoder_new() {
+QAudioDecoder* QAudioDecoder_New() {
     return new VirtualQAudioDecoder();
 }
 
-QAudioDecoder* QAudioDecoder_new2(QObject* parent) {
+QAudioDecoder* QAudioDecoder_New2(QObject* parent) {
     return new VirtualQAudioDecoder(parent);
 }
 

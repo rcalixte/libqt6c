@@ -43,19 +43,19 @@
 #include "libkselector.hpp"
 #include "libkselector.hxx"
 
-KSelector* KSelector_new(QWidget* parent) {
+KSelector* KSelector_New(QWidget* parent) {
     return new VirtualKSelector(parent);
 }
 
-KSelector* KSelector_new2() {
+KSelector* KSelector_New2() {
     return new VirtualKSelector();
 }
 
-KSelector* KSelector_new3(int o) {
+KSelector* KSelector_New3(int o) {
     return new VirtualKSelector(static_cast<Qt::Orientation>(o));
 }
 
-KSelector* KSelector_new4(int o, QWidget* parent) {
+KSelector* KSelector_New4(int o, QWidget* parent) {
     return new VirtualKSelector(static_cast<Qt::Orientation>(o), parent);
 }
 
@@ -1931,19 +1931,19 @@ void KSelector_Delete(KSelector* self) {
     delete self;
 }
 
-KGradientSelector* KGradientSelector_new(QWidget* parent) {
+KGradientSelector* KGradientSelector_New(QWidget* parent) {
     return new VirtualKGradientSelector(parent);
 }
 
-KGradientSelector* KGradientSelector_new2() {
+KGradientSelector* KGradientSelector_New2() {
     return new VirtualKGradientSelector();
 }
 
-KGradientSelector* KGradientSelector_new3(int o) {
+KGradientSelector* KGradientSelector_New3(int o) {
     return new VirtualKGradientSelector(static_cast<Qt::Orientation>(o));
 }
 
-KGradientSelector* KGradientSelector_new4(int o, QWidget* parent) {
+KGradientSelector* KGradientSelector_New4(int o, QWidget* parent) {
     return new VirtualKGradientSelector(static_cast<Qt::Orientation>(o), parent);
 }
 

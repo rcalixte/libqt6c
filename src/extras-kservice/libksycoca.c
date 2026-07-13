@@ -7,7 +7,7 @@
 #include "libksycoca.h"
 
 KSycoca* k_sycoca_new() {
-    return KSycoca_new();
+    return KSycoca_New();
 }
 
 const QMetaObject* k_sycoca_meta_object(void* self) {

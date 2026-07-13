@@ -21,9 +21,9 @@ typedef KFileMetaData::TypeInfo KFileMetaData__TypeInfo;
 typedef struct KFileMetaData__TypeInfo KFileMetaData__TypeInfo;
 #endif
 
-KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_new();
-KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_new2(int type);
-KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_new3(const KFileMetaData__TypeInfo* ti);
+KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_New();
+KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_New2(int type);
+KFileMetaData__TypeInfo* KFileMetaData__TypeInfo_New3(const KFileMetaData__TypeInfo* ti);
 void KFileMetaData__TypeInfo_OperatorAssign(KFileMetaData__TypeInfo* self, const KFileMetaData__TypeInfo* rhs);
 bool KFileMetaData__TypeInfo_OperatorEqual(const KFileMetaData__TypeInfo* self, const KFileMetaData__TypeInfo* rhs);
 int KFileMetaData__TypeInfo_Type(const KFileMetaData__TypeInfo* self);

@@ -12,11 +12,11 @@
 #include "libqscilexeroctave.h"
 
 QsciLexerOctave* q_scilexeroctave_new() {
-    return QsciLexerOctave_new();
+    return QsciLexerOctave_New();
 }
 
 QsciLexerOctave* q_scilexeroctave_new2(void* parent) {
-    return QsciLexerOctave_new2((QObject*)parent);
+    return QsciLexerOctave_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexeroctave_meta_object(void* self) {

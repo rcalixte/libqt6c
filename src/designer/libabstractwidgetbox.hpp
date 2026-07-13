@@ -59,9 +59,9 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_new(QWidget* parent);
-QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_new2();
-QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_new3(QWidget* parent, int flags);
+QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_New(QWidget* parent);
+QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_New2();
+QDesignerWidgetBoxInterface* QDesignerWidgetBoxInterface_New3(QWidget* parent, int flags);
 QMetaObject* QDesignerWidgetBoxInterface_MetaObject(const QDesignerWidgetBoxInterface* self);
 void* QDesignerWidgetBoxInterface_Metacast(QDesignerWidgetBoxInterface* self, const char* param1);
 int QDesignerWidgetBoxInterface_Metacall(QDesignerWidgetBoxInterface* self, int param1, int param2, void** param3);
@@ -284,12 +284,12 @@ void QDesignerWidgetBoxInterface_OnGetDecodedMetricF(const QDesignerWidgetBoxInt
 double QDesignerWidgetBoxInterface_SuperGetDecodedMetricF(const QDesignerWidgetBoxInterface* self, int metricA, int metricB);
 void QDesignerWidgetBoxInterface_Delete(QDesignerWidgetBoxInterface* self);
 
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new();
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new2(const QDesignerWidgetBoxInterface__Widget* w);
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new3(const libqt_string aname);
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new4(const libqt_string aname, const libqt_string xml);
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new5(const libqt_string aname, const libqt_string xml, const libqt_string icon_name);
-QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_new6(const libqt_string aname, const libqt_string xml, const libqt_string icon_name, int atype);
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New();
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New2(const QDesignerWidgetBoxInterface__Widget* w);
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New3(const libqt_string aname);
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New4(const libqt_string aname, const libqt_string xml);
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New5(const libqt_string aname, const libqt_string xml, const libqt_string icon_name);
+QDesignerWidgetBoxInterface__Widget* QDesignerWidgetBoxInterface__Widget_New6(const libqt_string aname, const libqt_string xml, const libqt_string icon_name, int atype);
 void QDesignerWidgetBoxInterface__Widget_OperatorAssign(QDesignerWidgetBoxInterface__Widget* self, const QDesignerWidgetBoxInterface__Widget* w);
 libqt_string QDesignerWidgetBoxInterface__Widget_Name(const QDesignerWidgetBoxInterface__Widget* self);
 void QDesignerWidgetBoxInterface__Widget_SetName(QDesignerWidgetBoxInterface__Widget* self, const libqt_string aname);
@@ -302,10 +302,10 @@ void QDesignerWidgetBoxInterface__Widget_SetType(QDesignerWidgetBoxInterface__Wi
 bool QDesignerWidgetBoxInterface__Widget_IsNull(const QDesignerWidgetBoxInterface__Widget* self);
 void QDesignerWidgetBoxInterface__Widget_Delete(QDesignerWidgetBoxInterface__Widget* self);
 
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new();
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new2(const QDesignerWidgetBoxInterface__Category* param1);
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new3(const libqt_string aname);
-QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_new4(const libqt_string aname, int atype);
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New();
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New2(const QDesignerWidgetBoxInterface__Category* param1);
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New3(const libqt_string aname);
+QDesignerWidgetBoxInterface__Category* QDesignerWidgetBoxInterface__Category_New4(const libqt_string aname, int atype);
 libqt_string QDesignerWidgetBoxInterface__Category_Name(const QDesignerWidgetBoxInterface__Category* self);
 void QDesignerWidgetBoxInterface__Category_SetName(QDesignerWidgetBoxInterface__Category* self, const libqt_string aname);
 int QDesignerWidgetBoxInterface__Category_WidgetCount(const QDesignerWidgetBoxInterface__Category* self);

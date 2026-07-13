@@ -61,8 +61,8 @@ typedef struct QWidget QWidget;
 typedef struct QsciScintillaBase QsciScintillaBase;
 #endif
 
-QsciScintillaBase* QsciScintillaBase_new(QWidget* parent);
-QsciScintillaBase* QsciScintillaBase_new2();
+QsciScintillaBase* QsciScintillaBase_New(QWidget* parent);
+QsciScintillaBase* QsciScintillaBase_New2();
 QMetaObject* QsciScintillaBase_MetaObject(const QsciScintillaBase* self);
 void* QsciScintillaBase_Metacast(QsciScintillaBase* self, const char* param1);
 int QsciScintillaBase_Metacall(QsciScintillaBase* self, int param1, int param2, void** param3);

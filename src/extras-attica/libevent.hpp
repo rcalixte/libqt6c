@@ -21,8 +21,8 @@ typedef struct QDate QDate;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__Event* Attica__Event_new();
-Attica__Event* Attica__Event_new2(const Attica__Event* other);
+Attica__Event* Attica__Event_New();
+Attica__Event* Attica__Event_New2(const Attica__Event* other);
 void Attica__Event_OperatorAssign(Attica__Event* self, const Attica__Event* other);
 void Attica__Event_SetId(Attica__Event* self, const libqt_string id);
 libqt_string Attica__Event_Id(const Attica__Event* self);

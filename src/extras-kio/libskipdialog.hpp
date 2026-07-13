@@ -54,7 +54,7 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KIO__SkipDialog* KIO__SkipDialog_new(QWidget* parent, int options, const libqt_string _error_text);
+KIO__SkipDialog* KIO__SkipDialog_New(QWidget* parent, int options, const libqt_string _error_text);
 QMetaObject* KIO__SkipDialog_MetaObject(const KIO__SkipDialog* self);
 void* KIO__SkipDialog_Metacast(KIO__SkipDialog* self, const char* param1);
 int KIO__SkipDialog_Metacall(KIO__SkipDialog* self, int param1, int param2, void** param3);

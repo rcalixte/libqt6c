@@ -4,15 +4,15 @@
 #include "libqplaceproposedsearchresult.h"
 
 QPlaceProposedSearchResult* q_placeproposedsearchresult_new() {
-    return QPlaceProposedSearchResult_new();
+    return QPlaceProposedSearchResult_New();
 }
 
 QPlaceProposedSearchResult* q_placeproposedsearchresult_new2(void* other) {
-    return QPlaceProposedSearchResult_new2((QPlaceSearchResult*)other);
+    return QPlaceProposedSearchResult_New2((QPlaceSearchResult*)other);
 }
 
 QPlaceProposedSearchResult* q_placeproposedsearchresult_new3(void* param1) {
-    return QPlaceProposedSearchResult_new3((QPlaceProposedSearchResult*)param1);
+    return QPlaceProposedSearchResult_New3((QPlaceProposedSearchResult*)param1);
 }
 
 QPlaceSearchRequest* q_placeproposedsearchresult_search_request(void* self) {

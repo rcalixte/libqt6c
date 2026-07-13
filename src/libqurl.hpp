@@ -20,10 +20,10 @@ typedef struct QUrl QUrl;
 typedef struct QUrlQuery QUrlQuery;
 #endif
 
-QUrl* QUrl_new();
-QUrl* QUrl_new2(const QUrl* copyVal);
-QUrl* QUrl_new3(const libqt_string url);
-QUrl* QUrl_new4(const libqt_string url, int mode);
+QUrl* QUrl_New();
+QUrl* QUrl_New2(const QUrl* copyVal);
+QUrl* QUrl_New3(const libqt_string url);
+QUrl* QUrl_New4(const libqt_string url, int mode);
 void QUrl_OperatorAssign(QUrl* self, const QUrl* copyVal);
 void QUrl_OperatorAssign2(QUrl* self, const libqt_string url);
 void QUrl_Swap(QUrl* self, QUrl* other);

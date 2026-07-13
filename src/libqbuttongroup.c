@@ -7,11 +7,11 @@
 #include "libqbuttongroup.h"
 
 QButtonGroup* q_buttongroup_new() {
-    return QButtonGroup_new();
+    return QButtonGroup_New();
 }
 
 QButtonGroup* q_buttongroup_new2(void* parent) {
-    return QButtonGroup_new2((QObject*)parent);
+    return QButtonGroup_New2((QObject*)parent);
 }
 
 const QMetaObject* q_buttongroup_meta_object(void* self) {

@@ -11,12 +11,12 @@
 #include "libKeyboardTranslator.hpp"
 #include "libKeyboardTranslator.hxx"
 
-Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_new(const libqt_string name) {
+Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_New(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new Konsole::KeyboardTranslator(name_QString);
 }
 
-Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_new2(const Konsole__KeyboardTranslator* param1) {
+Konsole__KeyboardTranslator* Konsole__KeyboardTranslator_New2(const Konsole__KeyboardTranslator* param1) {
     return new Konsole::KeyboardTranslator(*param1);
 }
 
@@ -91,7 +91,7 @@ void Konsole__KeyboardTranslator_Delete(Konsole__KeyboardTranslator* self) {
     delete self;
 }
 
-Konsole__KeyboardTranslatorReader* Konsole__KeyboardTranslatorReader_new(QIODevice* source) {
+Konsole__KeyboardTranslatorReader* Konsole__KeyboardTranslatorReader_New(QIODevice* source) {
     return new Konsole::KeyboardTranslatorReader(source);
 }
 
@@ -129,7 +129,7 @@ void Konsole__KeyboardTranslatorReader_Delete(Konsole__KeyboardTranslatorReader*
     delete self;
 }
 
-Konsole__KeyboardTranslatorWriter* Konsole__KeyboardTranslatorWriter_new(QIODevice* destination) {
+Konsole__KeyboardTranslatorWriter* Konsole__KeyboardTranslatorWriter_New(QIODevice* destination) {
     return new Konsole::KeyboardTranslatorWriter(destination);
 }
 
@@ -146,7 +146,7 @@ void Konsole__KeyboardTranslatorWriter_Delete(Konsole__KeyboardTranslatorWriter*
     delete self;
 }
 
-Konsole__KeyboardTranslatorManager* Konsole__KeyboardTranslatorManager_new() {
+Konsole__KeyboardTranslatorManager* Konsole__KeyboardTranslatorManager_New() {
     return new Konsole::KeyboardTranslatorManager();
 }
 
@@ -201,11 +201,11 @@ int Konsole_OneOrZero(int value) {
     return Konsole::oneOrZero(static_cast<int>(value));
 }
 
-Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_new() {
+Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_New() {
     return new Konsole::KeyboardTranslator::Entry();
 }
 
-Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_new2(const Konsole__KeyboardTranslator__Entry* param1) {
+Konsole__KeyboardTranslator__Entry* Konsole__KeyboardTranslator__Entry_New2(const Konsole__KeyboardTranslator__Entry* param1) {
     return new Konsole::KeyboardTranslator::Entry(*param1);
 }
 

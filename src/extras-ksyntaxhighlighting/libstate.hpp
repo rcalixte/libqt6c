@@ -20,8 +20,8 @@ typedef struct KSyntaxHighlighting KSyntaxHighlighting;
 typedef struct KSyntaxHighlighting__State KSyntaxHighlighting__State;
 #endif
 
-KSyntaxHighlighting__State* KSyntaxHighlighting__State_new();
-KSyntaxHighlighting__State* KSyntaxHighlighting__State_new2(const KSyntaxHighlighting__State* other);
+KSyntaxHighlighting__State* KSyntaxHighlighting__State_New();
+KSyntaxHighlighting__State* KSyntaxHighlighting__State_New2(const KSyntaxHighlighting__State* other);
 void KSyntaxHighlighting__State_OperatorAssign(KSyntaxHighlighting__State* self, const KSyntaxHighlighting__State* rhs);
 bool KSyntaxHighlighting__State_OperatorEqual(const KSyntaxHighlighting__State* self, const KSyntaxHighlighting__State* other);
 bool KSyntaxHighlighting__State_OperatorNotEqual(const KSyntaxHighlighting__State* self, const KSyntaxHighlighting__State* other);

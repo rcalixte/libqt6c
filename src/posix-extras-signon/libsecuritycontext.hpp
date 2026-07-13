@@ -21,9 +21,9 @@ typedef SignOn::SecurityContext SignOn__SecurityContext;
 typedef struct SignOn__SecurityContext SignOn__SecurityContext;
 #endif
 
-SignOn__SecurityContext* SignOn__SecurityContext_new();
-SignOn__SecurityContext* SignOn__SecurityContext_new2(const libqt_string systemContext, const libqt_string applicationContext);
-SignOn__SecurityContext* SignOn__SecurityContext_new3(const SignOn__SecurityContext* param1);
+SignOn__SecurityContext* SignOn__SecurityContext_New();
+SignOn__SecurityContext* SignOn__SecurityContext_New2(const libqt_string systemContext, const libqt_string applicationContext);
+SignOn__SecurityContext* SignOn__SecurityContext_New3(const SignOn__SecurityContext* param1);
 void SignOn__SecurityContext_SetSystemContext(SignOn__SecurityContext* self, const libqt_string systemContext);
 libqt_string SignOn__SecurityContext_SystemContext(const SignOn__SecurityContext* self);
 void SignOn__SecurityContext_SetApplicationContext(SignOn__SecurityContext* self, const libqt_string applicationContext);

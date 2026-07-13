@@ -3,11 +3,11 @@
 #include "libtopic.h"
 
 Attica__Topic* k_attica__topic_new() {
-    return Attica__Topic_new();
+    return Attica__Topic_New();
 }
 
 Attica__Topic* k_attica__topic_new2(void* other) {
-    return Attica__Topic_new2((Attica__Topic*)other);
+    return Attica__Topic_New2((Attica__Topic*)other);
 }
 
 void k_attica__topic_operator_assign(void* self, void* other) {

@@ -7,70 +7,70 @@
 #include "libqcolor.hpp"
 #include "libqcolor.hxx"
 
-QColor* QColor_new(const QColor* other) {
+QColor* QColor_New(const QColor* other) {
     return new QColor(*other);
 }
 
-QColor* QColor_new2(QColor* other) {
+QColor* QColor_New2(QColor* other) {
     return new QColor(std::move(*other));
 }
 
-QColor* QColor_new3() {
+QColor* QColor_New3() {
     return new QColor();
 }
 
-QColor* QColor_new4(int color) {
+QColor* QColor_New4(int color) {
     return new QColor(static_cast<Qt::GlobalColor>(color));
 }
 
-QColor* QColor_new5(int r, int g, int b) {
+QColor* QColor_New5(int r, int g, int b) {
     return new QColor(static_cast<int>(r), static_cast<int>(g), static_cast<int>(b));
 }
 
-QColor* QColor_new6(unsigned int rgb) {
+QColor* QColor_New6(unsigned int rgb) {
     return new QColor(static_cast<QRgb>(rgb));
 }
 
-QColor* QColor_new7(QRgba64* rgba64) {
+QColor* QColor_New7(QRgba64* rgba64) {
     return new QColor(*rgba64);
 }
 
-QColor* QColor_new8(const libqt_string name) {
+QColor* QColor_New8(const libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QColor(name_QString);
 }
 
-QColor* QColor_new9(libqt_string name) {
+QColor* QColor_New9(libqt_string name) {
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QColor(name_QString);
 }
 
-QColor* QColor_new10(const char* aname) {
+QColor* QColor_New10(const char* aname) {
     return new QColor(aname);
 }
 
-QColor* QColor_new11(libqt_string name) {
+QColor* QColor_New11(libqt_string name) {
     QLatin1StringView name_QLatin1StringView(name.data, name.len);
     return new QColor(name_QLatin1StringView);
 }
 
-QColor* QColor_new12(int spec) {
+QColor* QColor_New12(int spec) {
     return new QColor(static_cast<QColor::Spec>(spec));
 }
 
-QColor* QColor_new13(int spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
+QColor* QColor_New13(int spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4) {
     return new QColor(static_cast<QColor::Spec>(spec), static_cast<ushort>(a1), static_cast<ushort>(a2), static_cast<ushort>(a3), static_cast<ushort>(a4));
 }
 
-QColor* QColor_new14(const QColor* param1) {
+QColor* QColor_New14(const QColor* param1) {
     return new QColor(*param1);
 }
 
-QColor* QColor_new15(int r, int g, int b, int a) {
+QColor* QColor_New15(int r, int g, int b, int a) {
     return new QColor(static_cast<int>(r), static_cast<int>(g), static_cast<int>(b), static_cast<int>(a));
 }
 
-QColor* QColor_new16(int spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
+QColor* QColor_New16(int spec, uint16_t a1, uint16_t a2, uint16_t a3, uint16_t a4, uint16_t a5) {
     return new QColor(static_cast<QColor::Spec>(spec), static_cast<ushort>(a1), static_cast<ushort>(a2), static_cast<ushort>(a3), static_cast<ushort>(a4), static_cast<ushort>(a5));
 }
 

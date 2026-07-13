@@ -38,7 +38,7 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-KExtendableItemDelegate* KExtendableItemDelegate_new(QAbstractItemView* parent);
+KExtendableItemDelegate* KExtendableItemDelegate_New(QAbstractItemView* parent);
 QMetaObject* KExtendableItemDelegate_MetaObject(const KExtendableItemDelegate* self);
 void* KExtendableItemDelegate_Metacast(KExtendableItemDelegate* self, const char* param1);
 int KExtendableItemDelegate_Metacall(KExtendableItemDelegate* self, int param1, int param2, void** param3);

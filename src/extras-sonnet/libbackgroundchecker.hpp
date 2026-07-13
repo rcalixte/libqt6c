@@ -29,10 +29,10 @@ typedef struct Sonnet__BackgroundChecker Sonnet__BackgroundChecker;
 typedef struct Sonnet__Speller Sonnet__Speller;
 #endif
 
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new();
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new2(const Sonnet__Speller* speller);
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new3(QObject* parent);
-Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_new4(const Sonnet__Speller* speller, QObject* parent);
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New();
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New2(const Sonnet__Speller* speller);
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New3(QObject* parent);
+Sonnet__BackgroundChecker* Sonnet__BackgroundChecker_New4(const Sonnet__Speller* speller, QObject* parent);
 QMetaObject* Sonnet__BackgroundChecker_MetaObject(const Sonnet__BackgroundChecker* self);
 void* Sonnet__BackgroundChecker_Metacast(Sonnet__BackgroundChecker* self, const char* param1);
 int Sonnet__BackgroundChecker_Metacall(Sonnet__BackgroundChecker* self, int param1, int param2, void** param3);

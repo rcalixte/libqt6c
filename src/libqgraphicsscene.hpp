@@ -59,12 +59,12 @@ typedef struct QVariant QVariant;
 typedef struct QWidget QWidget;
 #endif
 
-QGraphicsScene* QGraphicsScene_new();
-QGraphicsScene* QGraphicsScene_new2(const QRectF* sceneRect);
-QGraphicsScene* QGraphicsScene_new3(double x, double y, double width, double height);
-QGraphicsScene* QGraphicsScene_new4(QObject* parent);
-QGraphicsScene* QGraphicsScene_new5(const QRectF* sceneRect, QObject* parent);
-QGraphicsScene* QGraphicsScene_new6(double x, double y, double width, double height, QObject* parent);
+QGraphicsScene* QGraphicsScene_New();
+QGraphicsScene* QGraphicsScene_New2(const QRectF* sceneRect);
+QGraphicsScene* QGraphicsScene_New3(double x, double y, double width, double height);
+QGraphicsScene* QGraphicsScene_New4(QObject* parent);
+QGraphicsScene* QGraphicsScene_New5(const QRectF* sceneRect, QObject* parent);
+QGraphicsScene* QGraphicsScene_New6(double x, double y, double width, double height, QObject* parent);
 QMetaObject* QGraphicsScene_MetaObject(const QGraphicsScene* self);
 void* QGraphicsScene_Metacast(QGraphicsScene* self, const char* param1);
 int QGraphicsScene_Metacall(QGraphicsScene* self, int param1, int param2, void** param3);

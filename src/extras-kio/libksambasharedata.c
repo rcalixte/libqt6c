@@ -2,11 +2,11 @@
 #include "libksambasharedata.h"
 
 KSambaShareData* k_sambasharedata_new() {
-    return KSambaShareData_new();
+    return KSambaShareData_New();
 }
 
 KSambaShareData* k_sambasharedata_new2(void* other) {
-    return KSambaShareData_new2((KSambaShareData*)other);
+    return KSambaShareData_New2((KSambaShareData*)other);
 }
 
 const char* k_sambasharedata_name(void* self) {

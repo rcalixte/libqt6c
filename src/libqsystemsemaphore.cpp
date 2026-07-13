@@ -5,29 +5,29 @@
 #include "libqsystemsemaphore.hpp"
 #include "libqsystemsemaphore.hxx"
 
-QSystemSemaphore* QSystemSemaphore_new(const QNativeIpcKey* key) {
+QSystemSemaphore* QSystemSemaphore_New(const QNativeIpcKey* key) {
     return new QSystemSemaphore(*key);
 }
 
-QSystemSemaphore* QSystemSemaphore_new2(const libqt_string key) {
+QSystemSemaphore* QSystemSemaphore_New2(const libqt_string key) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new QSystemSemaphore(key_QString);
 }
 
-QSystemSemaphore* QSystemSemaphore_new3(const QNativeIpcKey* key, int initialValue) {
+QSystemSemaphore* QSystemSemaphore_New3(const QNativeIpcKey* key, int initialValue) {
     return new QSystemSemaphore(*key, static_cast<int>(initialValue));
 }
 
-QSystemSemaphore* QSystemSemaphore_new4(const QNativeIpcKey* key, int initialValue, int param3) {
+QSystemSemaphore* QSystemSemaphore_New4(const QNativeIpcKey* key, int initialValue, int param3) {
     return new QSystemSemaphore(*key, static_cast<int>(initialValue), static_cast<QSystemSemaphore::AccessMode>(param3));
 }
 
-QSystemSemaphore* QSystemSemaphore_new5(const libqt_string key, int initialValue) {
+QSystemSemaphore* QSystemSemaphore_New5(const libqt_string key, int initialValue) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new QSystemSemaphore(key_QString, static_cast<int>(initialValue));
 }
 
-QSystemSemaphore* QSystemSemaphore_new6(const libqt_string key, int initialValue, int mode) {
+QSystemSemaphore* QSystemSemaphore_New6(const libqt_string key, int initialValue, int mode) {
     QString key_QString = QString::fromUtf8(key.data, key.len);
     return new QSystemSemaphore(key_QString, static_cast<int>(initialValue), static_cast<QSystemSemaphore::AccessMode>(mode));
 }

@@ -3,19 +3,19 @@
 #include "libqgeorouterequest.h"
 
 QGeoRouteRequest* q_georouterequest_new() {
-    return QGeoRouteRequest_new();
+    return QGeoRouteRequest_New();
 }
 
 QGeoRouteRequest* q_georouterequest_new2(void* origin, void* destination) {
-    return QGeoRouteRequest_new2((QGeoCoordinate*)origin, (QGeoCoordinate*)destination);
+    return QGeoRouteRequest_New2((QGeoCoordinate*)origin, (QGeoCoordinate*)destination);
 }
 
 QGeoRouteRequest* q_georouterequest_new3(void* other) {
-    return QGeoRouteRequest_new3((QGeoRouteRequest*)other);
+    return QGeoRouteRequest_New3((QGeoRouteRequest*)other);
 }
 
 QGeoRouteRequest* q_georouterequest_new4(libqt_list /* of QGeoCoordinate* */ waypoints) {
-    return QGeoRouteRequest_new4(waypoints);
+    return QGeoRouteRequest_New4(waypoints);
 }
 
 void q_georouterequest_operator_assign(void* self, void* other) {

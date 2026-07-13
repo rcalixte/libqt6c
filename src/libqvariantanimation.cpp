@@ -15,11 +15,11 @@
 #include "libqvariantanimation.hpp"
 #include "libqvariantanimation.hxx"
 
-QVariantAnimation* QVariantAnimation_new() {
+QVariantAnimation* QVariantAnimation_New() {
     return new VirtualQVariantAnimation();
 }
 
-QVariantAnimation* QVariantAnimation_new2(QObject* parent) {
+QVariantAnimation* QVariantAnimation_New2(QObject* parent) {
     return new VirtualQVariantAnimation(parent);
 }
 

@@ -14,11 +14,11 @@
 #include "libqscilexerpostscript.hpp"
 #include "libqscilexerpostscript.hxx"
 
-QsciLexerPostScript* QsciLexerPostScript_new() {
+QsciLexerPostScript* QsciLexerPostScript_New() {
     return new VirtualQsciLexerPostScript();
 }
 
-QsciLexerPostScript* QsciLexerPostScript_new2(QObject* parent) {
+QsciLexerPostScript* QsciLexerPostScript_New2(QObject* parent) {
     return new VirtualQsciLexerPostScript(parent);
 }
 

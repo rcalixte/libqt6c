@@ -8,11 +8,11 @@
 #include "libpartmanager.h"
 
 KParts__PartManager* k_parts__partmanager_new(void* parent) {
-    return KParts__PartManager_new((QWidget*)parent);
+    return KParts__PartManager_New((QWidget*)parent);
 }
 
 KParts__PartManager* k_parts__partmanager_new2(void* topLevel, void* parent) {
-    return KParts__PartManager_new2((QWidget*)topLevel, (QObject*)parent);
+    return KParts__PartManager_New2((QWidget*)topLevel, (QObject*)parent);
 }
 
 const QMetaObject* k_parts__partmanager_meta_object(void* self) {

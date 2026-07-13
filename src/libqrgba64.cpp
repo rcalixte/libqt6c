@@ -3,11 +3,11 @@
 #include "libqrgba64.hpp"
 #include "libqrgba64.hxx"
 
-QRgba64* QRgba64_new() {
+QRgba64* QRgba64_New() {
     return new QRgba64();
 }
 
-QRgba64* QRgba64_new2(const QRgba64* param1) {
+QRgba64* QRgba64_New2(const QRgba64* param1) {
     return new QRgba64(*param1);
 }
 

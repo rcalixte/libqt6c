@@ -8,11 +8,11 @@
 #include "libqcameradevice.hpp"
 #include "libqcameradevice.hxx"
 
-QCameraFormat* QCameraFormat_new() {
+QCameraFormat* QCameraFormat_New() {
     return new QCameraFormat();
 }
 
-QCameraFormat* QCameraFormat_new2(const QCameraFormat* other) {
+QCameraFormat* QCameraFormat_New2(const QCameraFormat* other) {
     return new QCameraFormat(*other);
 }
 
@@ -52,11 +52,11 @@ void QCameraFormat_Delete(QCameraFormat* self) {
     delete self;
 }
 
-QCameraDevice* QCameraDevice_new() {
+QCameraDevice* QCameraDevice_New() {
     return new QCameraDevice();
 }
 
-QCameraDevice* QCameraDevice_new2(const QCameraDevice* other) {
+QCameraDevice* QCameraDevice_New2(const QCameraDevice* other) {
     return new QCameraDevice(*other);
 }
 

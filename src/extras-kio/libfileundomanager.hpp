@@ -61,7 +61,7 @@ void KIO__FileUndoManager_Connect_JobRecordingStarted(KIO__FileUndoManager* self
 void KIO__FileUndoManager_JobRecordingFinished(KIO__FileUndoManager* self, int op);
 void KIO__FileUndoManager_Connect_JobRecordingFinished(KIO__FileUndoManager* self, intptr_t slot);
 
-KIO__FileUndoManager__UiInterface* KIO__FileUndoManager__UiInterface_new();
+KIO__FileUndoManager__UiInterface* KIO__FileUndoManager__UiInterface_New();
 void KIO__FileUndoManager__UiInterface_SetShowProgressInfo(KIO__FileUndoManager__UiInterface* self, bool b);
 bool KIO__FileUndoManager__UiInterface_ShowProgressInfo(const KIO__FileUndoManager__UiInterface* self);
 void KIO__FileUndoManager__UiInterface_SetParentWidget(KIO__FileUndoManager__UiInterface* self, QWidget* parentWidget);

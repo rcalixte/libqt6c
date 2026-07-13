@@ -48,12 +48,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWindow QWindow;
 #endif
 
-QOpenGLWindow* QOpenGLWindow_new();
-QOpenGLWindow* QOpenGLWindow_new2(QOpenGLContext* shareContext);
-QOpenGLWindow* QOpenGLWindow_new3(int updateBehavior);
-QOpenGLWindow* QOpenGLWindow_new4(int updateBehavior, QWindow* parent);
-QOpenGLWindow* QOpenGLWindow_new5(QOpenGLContext* shareContext, int updateBehavior);
-QOpenGLWindow* QOpenGLWindow_new6(QOpenGLContext* shareContext, int updateBehavior, QWindow* parent);
+QOpenGLWindow* QOpenGLWindow_New();
+QOpenGLWindow* QOpenGLWindow_New2(QOpenGLContext* shareContext);
+QOpenGLWindow* QOpenGLWindow_New3(int updateBehavior);
+QOpenGLWindow* QOpenGLWindow_New4(int updateBehavior, QWindow* parent);
+QOpenGLWindow* QOpenGLWindow_New5(QOpenGLContext* shareContext, int updateBehavior);
+QOpenGLWindow* QOpenGLWindow_New6(QOpenGLContext* shareContext, int updateBehavior, QWindow* parent);
 QMetaObject* QOpenGLWindow_MetaObject(const QOpenGLWindow* self);
 void* QOpenGLWindow_Metacast(QOpenGLWindow* self, const char* param1);
 int QOpenGLWindow_Metacall(QOpenGLWindow* self, int param1, int param2, void** param3);

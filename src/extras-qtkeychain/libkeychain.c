@@ -340,11 +340,11 @@ void q_keychain__job_delete(void* self) {
 }
 
 QKeychain__ReadPasswordJob* q_keychain__readpasswordjob_new(const char* service) {
-    return QKeychain__ReadPasswordJob_new(qstring(service));
+    return QKeychain__ReadPasswordJob_New(qstring(service));
 }
 
 QKeychain__ReadPasswordJob* q_keychain__readpasswordjob_new2(const char* service, void* parent) {
-    return QKeychain__ReadPasswordJob_new2(qstring(service), (QObject*)parent);
+    return QKeychain__ReadPasswordJob_New2(qstring(service), (QObject*)parent);
 }
 
 const QMetaObject* q_keychain__readpasswordjob_meta_object(void* self) {
@@ -855,11 +855,11 @@ void q_keychain__readpasswordjob_delete(void* self) {
 }
 
 QKeychain__WritePasswordJob* q_keychain__writepasswordjob_new(const char* service) {
-    return QKeychain__WritePasswordJob_new(qstring(service));
+    return QKeychain__WritePasswordJob_New(qstring(service));
 }
 
 QKeychain__WritePasswordJob* q_keychain__writepasswordjob_new2(const char* service, void* parent) {
-    return QKeychain__WritePasswordJob_new2(qstring(service), (QObject*)parent);
+    return QKeychain__WritePasswordJob_New2(qstring(service), (QObject*)parent);
 }
 
 const QMetaObject* q_keychain__writepasswordjob_meta_object(void* self) {
@@ -1364,11 +1364,11 @@ void q_keychain__writepasswordjob_delete(void* self) {
 }
 
 QKeychain__DeletePasswordJob* q_keychain__deletepasswordjob_new(const char* service) {
-    return QKeychain__DeletePasswordJob_new(qstring(service));
+    return QKeychain__DeletePasswordJob_New(qstring(service));
 }
 
 QKeychain__DeletePasswordJob* q_keychain__deletepasswordjob_new2(const char* service, void* parent) {
-    return QKeychain__DeletePasswordJob_new2(qstring(service), (QObject*)parent);
+    return QKeychain__DeletePasswordJob_New2(qstring(service), (QObject*)parent);
 }
 
 const QMetaObject* q_keychain__deletepasswordjob_meta_object(void* self) {

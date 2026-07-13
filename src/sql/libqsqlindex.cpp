@@ -6,20 +6,20 @@
 #include "libqsqlindex.hpp"
 #include "libqsqlindex.hxx"
 
-QSqlIndex* QSqlIndex_new() {
+QSqlIndex* QSqlIndex_New() {
     return new QSqlIndex();
 }
 
-QSqlIndex* QSqlIndex_new2(const QSqlIndex* other) {
+QSqlIndex* QSqlIndex_New2(const QSqlIndex* other) {
     return new QSqlIndex(*other);
 }
 
-QSqlIndex* QSqlIndex_new3(const libqt_string cursorName) {
+QSqlIndex* QSqlIndex_New3(const libqt_string cursorName) {
     QString cursorName_QString = QString::fromUtf8(cursorName.data, cursorName.len);
     return new QSqlIndex(cursorName_QString);
 }
 
-QSqlIndex* QSqlIndex_new4(const libqt_string cursorName, const libqt_string name) {
+QSqlIndex* QSqlIndex_New4(const libqt_string cursorName, const libqt_string name) {
     QString cursorName_QString = QString::fromUtf8(cursorName.data, cursorName.len);
     QString name_QString = QString::fromUtf8(name.data, name.len);
     return new QSqlIndex(cursorName_QString, name_QString);

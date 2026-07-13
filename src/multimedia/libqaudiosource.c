@@ -9,27 +9,27 @@
 #include "libqaudiosource.h"
 
 QAudioSource* q_audiosource_new() {
-    return QAudioSource_new();
+    return QAudioSource_New();
 }
 
 QAudioSource* q_audiosource_new2(void* audioDeviceInfo) {
-    return QAudioSource_new2((QAudioDevice*)audioDeviceInfo);
+    return QAudioSource_New2((QAudioDevice*)audioDeviceInfo);
 }
 
 QAudioSource* q_audiosource_new3(void* format) {
-    return QAudioSource_new3((QAudioFormat*)format);
+    return QAudioSource_New3((QAudioFormat*)format);
 }
 
 QAudioSource* q_audiosource_new4(void* format, void* parent) {
-    return QAudioSource_new4((QAudioFormat*)format, (QObject*)parent);
+    return QAudioSource_New4((QAudioFormat*)format, (QObject*)parent);
 }
 
 QAudioSource* q_audiosource_new5(void* audioDeviceInfo, void* format) {
-    return QAudioSource_new5((QAudioDevice*)audioDeviceInfo, (QAudioFormat*)format);
+    return QAudioSource_New5((QAudioDevice*)audioDeviceInfo, (QAudioFormat*)format);
 }
 
 QAudioSource* q_audiosource_new6(void* audioDeviceInfo, void* format, void* parent) {
-    return QAudioSource_new6((QAudioDevice*)audioDeviceInfo, (QAudioFormat*)format, (QObject*)parent);
+    return QAudioSource_New6((QAudioDevice*)audioDeviceInfo, (QAudioFormat*)format, (QObject*)parent);
 }
 
 const QMetaObject* q_audiosource_meta_object(void* self) {

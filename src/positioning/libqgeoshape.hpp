@@ -20,8 +20,8 @@ typedef struct QGeoRectangle QGeoRectangle;
 typedef struct QGeoShape QGeoShape;
 #endif
 
-QGeoShape* QGeoShape_new();
-QGeoShape* QGeoShape_new2(const QGeoShape* other);
+QGeoShape* QGeoShape_New();
+QGeoShape* QGeoShape_New2(const QGeoShape* other);
 int QGeoShape_Type(const QGeoShape* self);
 bool QGeoShape_IsValid(const QGeoShape* self);
 bool QGeoShape_IsEmpty(const QGeoShape* self);

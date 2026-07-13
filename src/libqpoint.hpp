@@ -19,11 +19,11 @@ typedef struct QPoint QPoint;
 typedef struct QPointF QPointF;
 #endif
 
-QPoint* QPoint_new(const QPoint* other);
-QPoint* QPoint_new2(QPoint* other);
-QPoint* QPoint_new3();
-QPoint* QPoint_new4(int xpos, int ypos);
-QPoint* QPoint_new5(const QPoint* param1);
+QPoint* QPoint_New(const QPoint* other);
+QPoint* QPoint_New2(QPoint* other);
+QPoint* QPoint_New3();
+QPoint* QPoint_New4(int xpos, int ypos);
+QPoint* QPoint_New5(const QPoint* param1);
 void QPoint_CopyAssign(QPoint* self, QPoint* other);
 void QPoint_MoveAssign(QPoint* self, QPoint* other);
 bool QPoint_IsNull(const QPoint* self);
@@ -45,12 +45,12 @@ int QPoint_DotProduct(const QPoint* p1, const QPoint* p2);
 QPointF* QPoint_ToPointF(const QPoint* self);
 void QPoint_Delete(QPoint* self);
 
-QPointF* QPointF_new(const QPointF* other);
-QPointF* QPointF_new2(QPointF* other);
-QPointF* QPointF_new3();
-QPointF* QPointF_new4(const QPoint* p);
-QPointF* QPointF_new5(double xpos, double ypos);
-QPointF* QPointF_new6(const QPointF* param1);
+QPointF* QPointF_New(const QPointF* other);
+QPointF* QPointF_New2(QPointF* other);
+QPointF* QPointF_New3();
+QPointF* QPointF_New4(const QPoint* p);
+QPointF* QPointF_New5(double xpos, double ypos);
+QPointF* QPointF_New6(const QPointF* param1);
 void QPointF_CopyAssign(QPointF* self, QPointF* other);
 void QPointF_MoveAssign(QPointF* self, QPointF* other);
 double QPointF_ManhattanLength(const QPointF* self);

@@ -54,7 +54,7 @@ typedef struct QWidget QWidget;
 typedef struct Sonnet__ConfigDialog Sonnet__ConfigDialog;
 #endif
 
-Sonnet__ConfigDialog* Sonnet__ConfigDialog_new(QWidget* parent);
+Sonnet__ConfigDialog* Sonnet__ConfigDialog_New(QWidget* parent);
 QMetaObject* Sonnet__ConfigDialog_MetaObject(const Sonnet__ConfigDialog* self);
 void* Sonnet__ConfigDialog_Metacast(Sonnet__ConfigDialog* self, const char* param1);
 int Sonnet__ConfigDialog_Metacall(Sonnet__ConfigDialog* self, int param1, int param2, void** param3);

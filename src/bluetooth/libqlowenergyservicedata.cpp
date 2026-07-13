@@ -7,11 +7,11 @@
 #include "libqlowenergyservicedata.hpp"
 #include "libqlowenergyservicedata.hxx"
 
-QLowEnergyServiceData* QLowEnergyServiceData_new() {
+QLowEnergyServiceData* QLowEnergyServiceData_New() {
     return new QLowEnergyServiceData();
 }
 
-QLowEnergyServiceData* QLowEnergyServiceData_new2(const QLowEnergyServiceData* other) {
+QLowEnergyServiceData* QLowEnergyServiceData_New2(const QLowEnergyServiceData* other) {
     return new QLowEnergyServiceData(*other);
 }
 

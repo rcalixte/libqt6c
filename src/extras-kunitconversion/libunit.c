@@ -4,11 +4,11 @@
 #include "libunit.h"
 
 KUnitConversion__Unit* k_unitconversion__unit_new() {
-    return KUnitConversion__Unit_new();
+    return KUnitConversion__Unit_New();
 }
 
 KUnitConversion__Unit* k_unitconversion__unit_new2(void* other) {
-    return KUnitConversion__Unit_new2((KUnitConversion__Unit*)other);
+    return KUnitConversion__Unit_New2((KUnitConversion__Unit*)other);
 }
 
 void k_unitconversion__unit_operator_assign(void* self, void* other) {

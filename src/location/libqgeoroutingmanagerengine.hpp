@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_new(const libqt_map /* of libqt_string to QVariant* */ parameters);
-QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_new2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent);
+QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_New(const libqt_map /* of libqt_string to QVariant* */ parameters);
+QGeoRoutingManagerEngine* QGeoRoutingManagerEngine_New2(const libqt_map /* of libqt_string to QVariant* */ parameters, QObject* parent);
 QMetaObject* QGeoRoutingManagerEngine_MetaObject(const QGeoRoutingManagerEngine* self);
 void* QGeoRoutingManagerEngine_Metacast(QGeoRoutingManagerEngine* self, const char* param1);
 int QGeoRoutingManagerEngine_Metacall(QGeoRoutingManagerEngine* self, int param1, int param2, void** param3);

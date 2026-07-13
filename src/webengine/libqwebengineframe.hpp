@@ -20,7 +20,7 @@ typedef struct QUrl QUrl;
 typedef struct QWebEngineFrame QWebEngineFrame;
 #endif
 
-QWebEngineFrame* QWebEngineFrame_new(const QWebEngineFrame* param1);
+QWebEngineFrame* QWebEngineFrame_New(const QWebEngineFrame* param1);
 bool QWebEngineFrame_IsValid(const QWebEngineFrame* self);
 libqt_string QWebEngineFrame_Name(const QWebEngineFrame* self);
 libqt_string QWebEngineFrame_HtmlName(const QWebEngineFrame* self);

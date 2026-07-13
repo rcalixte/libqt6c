@@ -11,11 +11,11 @@
 #include "libqfilesystemwatcher.hpp"
 #include "libqfilesystemwatcher.hxx"
 
-QFileSystemWatcher* QFileSystemWatcher_new() {
+QFileSystemWatcher* QFileSystemWatcher_New() {
     return new VirtualQFileSystemWatcher();
 }
 
-QFileSystemWatcher* QFileSystemWatcher_new2(const libqt_list /* of libqt_string */ paths) {
+QFileSystemWatcher* QFileSystemWatcher_New2(const libqt_list /* of libqt_string */ paths) {
     QList<QString> paths_QList;
     paths_QList.reserve(paths.len);
     libqt_string* paths_arr = static_cast<libqt_string*>(paths.data.ptr);
@@ -26,11 +26,11 @@ QFileSystemWatcher* QFileSystemWatcher_new2(const libqt_list /* of libqt_string 
     return new VirtualQFileSystemWatcher(paths_QList);
 }
 
-QFileSystemWatcher* QFileSystemWatcher_new3(QObject* parent) {
+QFileSystemWatcher* QFileSystemWatcher_New3(QObject* parent) {
     return new VirtualQFileSystemWatcher(parent);
 }
 
-QFileSystemWatcher* QFileSystemWatcher_new4(const libqt_list /* of libqt_string */ paths, QObject* parent) {
+QFileSystemWatcher* QFileSystemWatcher_New4(const libqt_list /* of libqt_string */ paths, QObject* parent) {
     QList<QString> paths_QList;
     paths_QList.reserve(paths.len);
     libqt_string* paths_arr = static_cast<libqt_string*>(paths.data.ptr);

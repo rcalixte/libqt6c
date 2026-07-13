@@ -31,11 +31,11 @@
 #include "libqsciscintilla.h"
 
 QsciScintilla* q_sciscintilla_new(void* parent) {
-    return QsciScintilla_new((QWidget*)parent);
+    return QsciScintilla_New((QWidget*)parent);
 }
 
 QsciScintilla* q_sciscintilla_new2() {
-    return QsciScintilla_new2();
+    return QsciScintilla_New2();
 }
 
 const QMetaObject* q_sciscintilla_meta_object(void* self) {

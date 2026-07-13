@@ -8,11 +8,11 @@
 #include "libqpermissions.hpp"
 #include "libqpermissions.hxx"
 
-QPermission* QPermission_new() {
+QPermission* QPermission_New() {
     return new QPermission();
 }
 
-QPermission* QPermission_new2(const QPermission* param1) {
+QPermission* QPermission_New2(const QPermission* param1) {
     return new QPermission(*param1);
 }
 
@@ -28,11 +28,11 @@ void QPermission_Delete(QPermission* self) {
     delete self;
 }
 
-QLocationPermission* QLocationPermission_new() {
+QLocationPermission* QLocationPermission_New() {
     return new QLocationPermission();
 }
 
-QLocationPermission* QLocationPermission_new2(const QLocationPermission* other) {
+QLocationPermission* QLocationPermission_New2(const QLocationPermission* other) {
     return new QLocationPermission(*other);
 }
 
@@ -64,11 +64,11 @@ void QLocationPermission_Delete(QLocationPermission* self) {
     delete self;
 }
 
-QCalendarPermission* QCalendarPermission_new() {
+QCalendarPermission* QCalendarPermission_New() {
     return new QCalendarPermission();
 }
 
-QCalendarPermission* QCalendarPermission_new2(const QCalendarPermission* other) {
+QCalendarPermission* QCalendarPermission_New2(const QCalendarPermission* other) {
     return new QCalendarPermission(*other);
 }
 
@@ -92,11 +92,11 @@ void QCalendarPermission_Delete(QCalendarPermission* self) {
     delete self;
 }
 
-QContactsPermission* QContactsPermission_new() {
+QContactsPermission* QContactsPermission_New() {
     return new QContactsPermission();
 }
 
-QContactsPermission* QContactsPermission_new2(const QContactsPermission* other) {
+QContactsPermission* QContactsPermission_New2(const QContactsPermission* other) {
     return new QContactsPermission(*other);
 }
 
@@ -120,11 +120,11 @@ void QContactsPermission_Delete(QContactsPermission* self) {
     delete self;
 }
 
-QBluetoothPermission* QBluetoothPermission_new() {
+QBluetoothPermission* QBluetoothPermission_New() {
     return new QBluetoothPermission();
 }
 
-QBluetoothPermission* QBluetoothPermission_new2(const QBluetoothPermission* other) {
+QBluetoothPermission* QBluetoothPermission_New2(const QBluetoothPermission* other) {
     return new QBluetoothPermission(*other);
 }
 
@@ -148,11 +148,11 @@ void QBluetoothPermission_Delete(QBluetoothPermission* self) {
     delete self;
 }
 
-QCameraPermission* QCameraPermission_new() {
+QCameraPermission* QCameraPermission_New() {
     return new QCameraPermission();
 }
 
-QCameraPermission* QCameraPermission_new2(const QCameraPermission* other) {
+QCameraPermission* QCameraPermission_New2(const QCameraPermission* other) {
     return new QCameraPermission(*other);
 }
 
@@ -168,11 +168,11 @@ void QCameraPermission_Delete(QCameraPermission* self) {
     delete self;
 }
 
-QMicrophonePermission* QMicrophonePermission_new() {
+QMicrophonePermission* QMicrophonePermission_New() {
     return new QMicrophonePermission();
 }
 
-QMicrophonePermission* QMicrophonePermission_new2(const QMicrophonePermission* other) {
+QMicrophonePermission* QMicrophonePermission_New2(const QMicrophonePermission* other) {
     return new QMicrophonePermission(*other);
 }
 

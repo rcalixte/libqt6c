@@ -54,8 +54,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KDateComboBox* KDateComboBox_new(QWidget* parent);
-KDateComboBox* KDateComboBox_new2();
+KDateComboBox* KDateComboBox_New(QWidget* parent);
+KDateComboBox* KDateComboBox_New2();
 QMetaObject* KDateComboBox_MetaObject(const KDateComboBox* self);
 void* KDateComboBox_Metacast(KDateComboBox* self, const char* param1);
 int KDateComboBox_Metacall(KDateComboBox* self, int param1, int param2, void** param3);

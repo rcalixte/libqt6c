@@ -8,7 +8,7 @@
 #include "libaction.h"
 
 KNSWidgets__Action* k_nswidgets__action_new(const char* text, const char* configFile, void* parent) {
-    return KNSWidgets__Action_new(qstring(text), qstring(configFile), (QObject*)parent);
+    return KNSWidgets__Action_New(qstring(text), qstring(configFile), (QObject*)parent);
 }
 
 const QMetaObject* k_nswidgets__action_meta_object(void* self) {

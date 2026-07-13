@@ -26,7 +26,7 @@ typedef struct TextEmoticonsCore__UnicodeEmoticon TextEmoticonsCore__UnicodeEmot
 typedef struct TextEmoticonsCore__UnicodeEmoticonParser TextEmoticonsCore__UnicodeEmoticonParser;
 #endif
 
-TextEmoticonsCore__UnicodeEmoticonParser* TextEmoticonsCore__UnicodeEmoticonParser_new();
+TextEmoticonsCore__UnicodeEmoticonParser* TextEmoticonsCore__UnicodeEmoticonParser_New();
 libqt_list /* of TextEmoticonsCore__UnicodeEmoticon* */ TextEmoticonsCore__UnicodeEmoticonParser_Parse(const TextEmoticonsCore__UnicodeEmoticonParser* self, const QJsonObject* o);
 int TextEmoticonsCore__UnicodeEmoticonParser_ChangeOrder(const libqt_string name);
 void TextEmoticonsCore__UnicodeEmoticonParser_Delete(TextEmoticonsCore__UnicodeEmoticonParser* self);

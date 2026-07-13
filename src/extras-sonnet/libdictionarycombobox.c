@@ -17,11 +17,11 @@
 #include "libdictionarycombobox.h"
 
 Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new(void* parent) {
-    return Sonnet__DictionaryComboBox_new((QWidget*)parent);
+    return Sonnet__DictionaryComboBox_New((QWidget*)parent);
 }
 
 Sonnet__DictionaryComboBox* k_sonnet__dictionarycombobox_new2() {
-    return Sonnet__DictionaryComboBox_new2();
+    return Sonnet__DictionaryComboBox_New2();
 }
 
 const QMetaObject* k_sonnet__dictionarycombobox_meta_object(void* self) {

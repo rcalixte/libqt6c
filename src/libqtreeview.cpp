@@ -52,11 +52,11 @@
 #include "libqtreeview.hpp"
 #include "libqtreeview.hxx"
 
-QTreeView* QTreeView_new(QWidget* parent) {
+QTreeView* QTreeView_New(QWidget* parent) {
     return new VirtualQTreeView(parent);
 }
 
-QTreeView* QTreeView_new2() {
+QTreeView* QTreeView_New2() {
     return new VirtualQTreeView();
 }
 

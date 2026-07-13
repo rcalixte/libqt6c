@@ -42,19 +42,19 @@
 #include "libqtermwidget.hpp"
 #include "libqtermwidget.hxx"
 
-QTermWidget* QTermWidget_new(QWidget* parent) {
+QTermWidget* QTermWidget_New(QWidget* parent) {
     return new VirtualQTermWidget(parent);
 }
 
-QTermWidget* QTermWidget_new2(int startnow) {
+QTermWidget* QTermWidget_New2(int startnow) {
     return new VirtualQTermWidget(static_cast<int>(startnow));
 }
 
-QTermWidget* QTermWidget_new3() {
+QTermWidget* QTermWidget_New3() {
     return new VirtualQTermWidget();
 }
 
-QTermWidget* QTermWidget_new4(int startnow, QWidget* parent) {
+QTermWidget* QTermWidget_New4(int startnow, QWidget* parent) {
     return new VirtualQTermWidget(static_cast<int>(startnow), parent);
 }
 

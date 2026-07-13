@@ -7,11 +7,11 @@
 #include "libkrecentdocument.hpp"
 #include "libkrecentdocument.hxx"
 
-KRecentDocument* KRecentDocument_new(const KRecentDocument* other) {
+KRecentDocument* KRecentDocument_New(const KRecentDocument* other) {
     return new KRecentDocument(*other);
 }
 
-KRecentDocument* KRecentDocument_new2(KRecentDocument* other) {
+KRecentDocument* KRecentDocument_New2(KRecentDocument* other) {
     return new KRecentDocument(std::move(*other));
 }
 

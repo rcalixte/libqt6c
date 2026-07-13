@@ -18,11 +18,11 @@
 #include "libkratingwidget.h"
 
 KRatingWidget* k_ratingwidget_new(void* parent) {
-    return KRatingWidget_new((QWidget*)parent);
+    return KRatingWidget_New((QWidget*)parent);
 }
 
 KRatingWidget* k_ratingwidget_new2() {
-    return KRatingWidget_new2();
+    return KRatingWidget_New2();
 }
 
 const QMetaObject* k_ratingwidget_meta_object(void* self) {

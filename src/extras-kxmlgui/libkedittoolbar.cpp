@@ -40,19 +40,19 @@
 #include "libkedittoolbar.hpp"
 #include "libkedittoolbar.hxx"
 
-KEditToolBar* KEditToolBar_new(KActionCollection* collection) {
+KEditToolBar* KEditToolBar_New(KActionCollection* collection) {
     return new VirtualKEditToolBar(collection);
 }
 
-KEditToolBar* KEditToolBar_new2(KXMLGUIFactory* factory) {
+KEditToolBar* KEditToolBar_New2(KXMLGUIFactory* factory) {
     return new VirtualKEditToolBar(factory);
 }
 
-KEditToolBar* KEditToolBar_new3(KActionCollection* collection, QWidget* parent) {
+KEditToolBar* KEditToolBar_New3(KActionCollection* collection, QWidget* parent) {
     return new VirtualKEditToolBar(collection, parent);
 }
 
-KEditToolBar* KEditToolBar_new4(KXMLGUIFactory* factory, QWidget* parent) {
+KEditToolBar* KEditToolBar_New4(KXMLGUIFactory* factory, QWidget* parent) {
     return new VirtualKEditToolBar(factory, parent);
 }
 

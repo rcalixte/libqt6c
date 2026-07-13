@@ -10,11 +10,11 @@
 #include "libqsignalmapper.hpp"
 #include "libqsignalmapper.hxx"
 
-QSignalMapper* QSignalMapper_new() {
+QSignalMapper* QSignalMapper_New() {
     return new VirtualQSignalMapper();
 }
 
-QSignalMapper* QSignalMapper_new2(QObject* parent) {
+QSignalMapper* QSignalMapper_New2(QObject* parent) {
     return new VirtualQSignalMapper(parent);
 }
 

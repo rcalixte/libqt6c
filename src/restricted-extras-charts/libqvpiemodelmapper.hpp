@@ -27,8 +27,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVPieModelMapper QVPieModelMapper;
 #endif
 
-QVPieModelMapper* QVPieModelMapper_new();
-QVPieModelMapper* QVPieModelMapper_new2(QObject* parent);
+QVPieModelMapper* QVPieModelMapper_New();
+QVPieModelMapper* QVPieModelMapper_New2(QObject* parent);
 QMetaObject* QVPieModelMapper_MetaObject(const QVPieModelMapper* self);
 void* QVPieModelMapper_Metacast(QVPieModelMapper* self, const char* param1);
 int QVPieModelMapper_Metacall(QVPieModelMapper* self, int param1, int param2, void** param3);

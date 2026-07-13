@@ -11,11 +11,11 @@
 #include "libkmodifierkeyinfo.hpp"
 #include "libkmodifierkeyinfo.hxx"
 
-KModifierKeyInfo* KModifierKeyInfo_new() {
+KModifierKeyInfo* KModifierKeyInfo_New() {
     return new VirtualKModifierKeyInfo();
 }
 
-KModifierKeyInfo* KModifierKeyInfo_new2(QObject* parent) {
+KModifierKeyInfo* KModifierKeyInfo_New2(QObject* parent) {
     return new VirtualKModifierKeyInfo(parent);
 }
 

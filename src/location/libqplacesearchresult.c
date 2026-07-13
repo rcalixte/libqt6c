@@ -3,11 +3,11 @@
 #include "libqplacesearchresult.h"
 
 QPlaceSearchResult* q_placesearchresult_new() {
-    return QPlaceSearchResult_new();
+    return QPlaceSearchResult_New();
 }
 
 QPlaceSearchResult* q_placesearchresult_new2(void* other) {
-    return QPlaceSearchResult_new2((QPlaceSearchResult*)other);
+    return QPlaceSearchResult_New2((QPlaceSearchResult*)other);
 }
 
 void q_placesearchresult_operator_assign(void* self, void* other) {

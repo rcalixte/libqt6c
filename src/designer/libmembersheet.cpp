@@ -6,7 +6,7 @@
 #include "libmembersheet.hpp"
 #include "libmembersheet.hxx"
 
-QDesignerMemberSheetExtension* QDesignerMemberSheetExtension_new() {
+QDesignerMemberSheetExtension* QDesignerMemberSheetExtension_New() {
     return new VirtualQDesignerMemberSheetExtension();
 }
 

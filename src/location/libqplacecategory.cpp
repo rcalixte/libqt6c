@@ -5,11 +5,11 @@
 #include "libqplacecategory.hpp"
 #include "libqplacecategory.hxx"
 
-QPlaceCategory* QPlaceCategory_new() {
+QPlaceCategory* QPlaceCategory_New() {
     return new QPlaceCategory();
 }
 
-QPlaceCategory* QPlaceCategory_new2(const QPlaceCategory* other) {
+QPlaceCategory* QPlaceCategory_New2(const QPlaceCategory* other) {
     return new QPlaceCategory(*other);
 }
 

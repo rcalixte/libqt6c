@@ -61,8 +61,8 @@ typedef struct TextGrammarCheck__GrammarError TextGrammarCheck__GrammarError;
 typedef struct TextGrammarCheck__GrammarResultWidget TextGrammarCheck__GrammarResultWidget;
 #endif
 
-TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_new(QWidget* parent);
-TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_new2();
+TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_New(QWidget* parent);
+TextGrammarCheck__GrammarResultWidget* TextGrammarCheck__GrammarResultWidget_New2();
 QMetaObject* TextGrammarCheck__GrammarResultWidget_MetaObject(const TextGrammarCheck__GrammarResultWidget* self);
 void* TextGrammarCheck__GrammarResultWidget_Metacast(TextGrammarCheck__GrammarResultWidget* self, const char* param1);
 int TextGrammarCheck__GrammarResultWidget_Metacall(TextGrammarCheck__GrammarResultWidget* self, int param1, int param2, void** param3);

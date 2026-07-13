@@ -47,9 +47,9 @@ libqt_string KProtocolInfo_ProxiedBy(const libqt_string protocol);
 bool KProtocolInfo_IsKnownProtocol22(const libqt_string protocol, bool updateCacheIfNotfound);
 void KProtocolInfo_Delete(KProtocolInfo* self);
 
-KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_new();
-KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_new2(const libqt_string _name, int _type);
-KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_new3(const KProtocolInfo__ExtraField* param1);
+KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_New();
+KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_New2(const libqt_string _name, int _type);
+KProtocolInfo__ExtraField* KProtocolInfo__ExtraField_New3(const KProtocolInfo__ExtraField* param1);
 libqt_string KProtocolInfo__ExtraField_Name(const KProtocolInfo__ExtraField* self);
 void KProtocolInfo__ExtraField_SetName(KProtocolInfo__ExtraField* self, libqt_string name);
 int KProtocolInfo__ExtraField_Type(const KProtocolInfo__ExtraField* self);

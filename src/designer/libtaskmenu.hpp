@@ -19,7 +19,7 @@ typedef struct QAction QAction;
 typedef struct QDesignerTaskMenuExtension QDesignerTaskMenuExtension;
 #endif
 
-QDesignerTaskMenuExtension* QDesignerTaskMenuExtension_new();
+QDesignerTaskMenuExtension* QDesignerTaskMenuExtension_New();
 QAction* QDesignerTaskMenuExtension_PreferredEditAction(const QDesignerTaskMenuExtension* self);
 libqt_list /* of QAction* */ QDesignerTaskMenuExtension_TaskActions(const QDesignerTaskMenuExtension* self);
 void QDesignerTaskMenuExtension_OnPreferredEditAction(const QDesignerTaskMenuExtension* self, intptr_t slot);

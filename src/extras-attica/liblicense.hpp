@@ -22,8 +22,8 @@ typedef struct Attica__License Attica__License;
 typedef struct QUrl QUrl;
 #endif
 
-Attica__License* Attica__License_new();
-Attica__License* Attica__License_new2(const Attica__License* other);
+Attica__License* Attica__License_New();
+Attica__License* Attica__License_New2(const Attica__License* other);
 void Attica__License_OperatorAssign(Attica__License* self, const Attica__License* other);
 unsigned int Attica__License_Id(const Attica__License* self);
 void Attica__License_SetId(Attica__License* self, unsigned int id);

@@ -62,20 +62,20 @@
 #include "libqplaintextedit.hpp"
 #include "libqplaintextedit.hxx"
 
-QPlainTextEdit* QPlainTextEdit_new(QWidget* parent) {
+QPlainTextEdit* QPlainTextEdit_New(QWidget* parent) {
     return new VirtualQPlainTextEdit(parent);
 }
 
-QPlainTextEdit* QPlainTextEdit_new2() {
+QPlainTextEdit* QPlainTextEdit_New2() {
     return new VirtualQPlainTextEdit();
 }
 
-QPlainTextEdit* QPlainTextEdit_new3(const libqt_string text) {
+QPlainTextEdit* QPlainTextEdit_New3(const libqt_string text) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPlainTextEdit(text_QString);
 }
 
-QPlainTextEdit* QPlainTextEdit_new4(const libqt_string text, QWidget* parent) {
+QPlainTextEdit* QPlainTextEdit_New4(const libqt_string text, QWidget* parent) {
     QString text_QString = QString::fromUtf8(text.data, text.len);
     return new VirtualQPlainTextEdit(text_QString, parent);
 }
@@ -2703,7 +2703,7 @@ void QPlainTextEdit_Delete(QPlainTextEdit* self) {
     delete self;
 }
 
-QPlainTextDocumentLayout* QPlainTextDocumentLayout_new(QTextDocument* document) {
+QPlainTextDocumentLayout* QPlainTextDocumentLayout_New(QTextDocument* document) {
     return new VirtualQPlainTextDocumentLayout(document);
 }
 

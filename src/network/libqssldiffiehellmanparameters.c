@@ -3,11 +3,11 @@
 #include "libqssldiffiehellmanparameters.h"
 
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new() {
-    return QSslDiffieHellmanParameters_new();
+    return QSslDiffieHellmanParameters_New();
 }
 
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_new2(void* other) {
-    return QSslDiffieHellmanParameters_new2((QSslDiffieHellmanParameters*)other);
+    return QSslDiffieHellmanParameters_New2((QSslDiffieHellmanParameters*)other);
 }
 
 QSslDiffieHellmanParameters* q_ssldiffiehellmanparameters_default_parameters() {

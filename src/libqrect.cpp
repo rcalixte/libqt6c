@@ -10,31 +10,31 @@
 #include "libqrect.hpp"
 #include "libqrect.hxx"
 
-QRect* QRect_new(const QRect* other) {
+QRect* QRect_New(const QRect* other) {
     return new QRect(*other);
 }
 
-QRect* QRect_new2(QRect* other) {
+QRect* QRect_New2(QRect* other) {
     return new QRect(std::move(*other));
 }
 
-QRect* QRect_new3() {
+QRect* QRect_New3() {
     return new QRect();
 }
 
-QRect* QRect_new4(const QPoint* topleft, const QPoint* bottomright) {
+QRect* QRect_New4(const QPoint* topleft, const QPoint* bottomright) {
     return new QRect(*topleft, *bottomright);
 }
 
-QRect* QRect_new5(const QPoint* topleft, const QSize* size) {
+QRect* QRect_New5(const QPoint* topleft, const QSize* size) {
     return new QRect(*topleft, *size);
 }
 
-QRect* QRect_new6(int left, int top, int width, int height) {
+QRect* QRect_New6(int left, int top, int width, int height) {
     return new QRect(static_cast<int>(left), static_cast<int>(top), static_cast<int>(width), static_cast<int>(height));
 }
 
-QRect* QRect_new7(const QRect* param1) {
+QRect* QRect_New7(const QRect* param1) {
     return new QRect(*param1);
 }
 
@@ -342,35 +342,35 @@ void QRect_Delete(QRect* self) {
     delete self;
 }
 
-QRectF* QRectF_new(const QRectF* other) {
+QRectF* QRectF_New(const QRectF* other) {
     return new QRectF(*other);
 }
 
-QRectF* QRectF_new2(QRectF* other) {
+QRectF* QRectF_New2(QRectF* other) {
     return new QRectF(std::move(*other));
 }
 
-QRectF* QRectF_new3() {
+QRectF* QRectF_New3() {
     return new QRectF();
 }
 
-QRectF* QRectF_new4(const QPointF* topleft, const QSizeF* size) {
+QRectF* QRectF_New4(const QPointF* topleft, const QSizeF* size) {
     return new QRectF(*topleft, *size);
 }
 
-QRectF* QRectF_new5(const QPointF* topleft, const QPointF* bottomRight) {
+QRectF* QRectF_New5(const QPointF* topleft, const QPointF* bottomRight) {
     return new QRectF(*topleft, *bottomRight);
 }
 
-QRectF* QRectF_new6(double left, double top, double width, double height) {
+QRectF* QRectF_New6(double left, double top, double width, double height) {
     return new QRectF(static_cast<qreal>(left), static_cast<qreal>(top), static_cast<qreal>(width), static_cast<qreal>(height));
 }
 
-QRectF* QRectF_new7(const QRect* rect) {
+QRectF* QRectF_New7(const QRect* rect) {
     return new QRectF(*rect);
 }
 
-QRectF* QRectF_new8(const QRectF* param1) {
+QRectF* QRectF_New8(const QRectF* param1) {
     return new QRectF(*param1);
 }
 

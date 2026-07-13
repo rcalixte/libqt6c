@@ -4,55 +4,55 @@
 #include "libqkeysequence.h"
 
 QKeySequence* q_keysequence_new() {
-    return QKeySequence_new();
+    return QKeySequence_New();
 }
 
 QKeySequence* q_keysequence_new2(const char* key) {
-    return QKeySequence_new2(qstring(key));
+    return QKeySequence_New2(qstring(key));
 }
 
 QKeySequence* q_keysequence_new3(int k1) {
-    return QKeySequence_new3(k1);
+    return QKeySequence_New3(k1);
 }
 
 QKeySequence* q_keysequence_new4(void* k1) {
-    return QKeySequence_new4((QKeyCombination*)k1);
+    return QKeySequence_New4((QKeyCombination*)k1);
 }
 
 QKeySequence* q_keysequence_new5(void* ks) {
-    return QKeySequence_new5((QKeySequence*)ks);
+    return QKeySequence_New5((QKeySequence*)ks);
 }
 
 QKeySequence* q_keysequence_new6(int32_t key) {
-    return QKeySequence_new6(key);
+    return QKeySequence_New6(key);
 }
 
 QKeySequence* q_keysequence_new7(const char* key, int32_t format) {
-    return QKeySequence_new7(qstring(key), format);
+    return QKeySequence_New7(qstring(key), format);
 }
 
 QKeySequence* q_keysequence_new8(int k1, int k2) {
-    return QKeySequence_new8(k1, k2);
+    return QKeySequence_New8(k1, k2);
 }
 
 QKeySequence* q_keysequence_new9(int k1, int k2, int k3) {
-    return QKeySequence_new9(k1, k2, k3);
+    return QKeySequence_New9(k1, k2, k3);
 }
 
 QKeySequence* q_keysequence_new10(int k1, int k2, int k3, int k4) {
-    return QKeySequence_new10(k1, k2, k3, k4);
+    return QKeySequence_New10(k1, k2, k3, k4);
 }
 
 QKeySequence* q_keysequence_new11(void* k1, void* k2) {
-    return QKeySequence_new11((QKeyCombination*)k1, (QKeyCombination*)k2);
+    return QKeySequence_New11((QKeyCombination*)k1, (QKeyCombination*)k2);
 }
 
 QKeySequence* q_keysequence_new12(void* k1, void* k2, void* k3) {
-    return QKeySequence_new12((QKeyCombination*)k1, (QKeyCombination*)k2, (QKeyCombination*)k3);
+    return QKeySequence_New12((QKeyCombination*)k1, (QKeyCombination*)k2, (QKeyCombination*)k3);
 }
 
 QKeySequence* q_keysequence_new13(void* k1, void* k2, void* k3, void* k4) {
-    return QKeySequence_new13((QKeyCombination*)k1, (QKeyCombination*)k2, (QKeyCombination*)k3, (QKeyCombination*)k4);
+    return QKeySequence_New13((QKeyCombination*)k1, (QKeyCombination*)k2, (QKeyCombination*)k3, (QKeyCombination*)k4);
 }
 
 int32_t q_keysequence_count(void* self) {

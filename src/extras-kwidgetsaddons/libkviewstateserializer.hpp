@@ -40,8 +40,8 @@ struct pair_int_int {
 };
 #endif
 
-KViewStateSerializer* KViewStateSerializer_new();
-KViewStateSerializer* KViewStateSerializer_new2(QObject* parent);
+KViewStateSerializer* KViewStateSerializer_New();
+KViewStateSerializer* KViewStateSerializer_New2(QObject* parent);
 QMetaObject* KViewStateSerializer_MetaObject(const KViewStateSerializer* self);
 void* KViewStateSerializer_Metacast(KViewStateSerializer* self, const char* param1);
 int KViewStateSerializer_Metacall(KViewStateSerializer* self, int param1, int param2, void** param3);

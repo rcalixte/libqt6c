@@ -19,9 +19,9 @@ typedef struct QMediaFormat QMediaFormat;
 typedef struct QMimeType QMimeType;
 #endif
 
-QMediaFormat* QMediaFormat_new();
-QMediaFormat* QMediaFormat_new2(const QMediaFormat* other);
-QMediaFormat* QMediaFormat_new3(int format);
+QMediaFormat* QMediaFormat_New();
+QMediaFormat* QMediaFormat_New2(const QMediaFormat* other);
+QMediaFormat* QMediaFormat_New3(int format);
 void QMediaFormat_OperatorAssign(QMediaFormat* self, const QMediaFormat* other);
 void QMediaFormat_Swap(QMediaFormat* self, QMediaFormat* other);
 int QMediaFormat_FileFormat(const QMediaFormat* self);

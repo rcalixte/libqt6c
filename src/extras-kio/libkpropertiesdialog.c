@@ -20,51 +20,51 @@
 #include "libkpropertiesdialog.h"
 
 KPropertiesDialog* k_propertiesdialog_new(void* item) {
-    return KPropertiesDialog_new((KFileItem*)item);
+    return KPropertiesDialog_New((KFileItem*)item);
 }
 
 KPropertiesDialog* k_propertiesdialog_new2(void* _items) {
-    return KPropertiesDialog_new2((KFileItemList*)_items);
+    return KPropertiesDialog_New2((KFileItemList*)_items);
 }
 
 KPropertiesDialog* k_propertiesdialog_new3(void* url) {
-    return KPropertiesDialog_new3((QUrl*)url);
+    return KPropertiesDialog_New3((QUrl*)url);
 }
 
 KPropertiesDialog* k_propertiesdialog_new4(libqt_list /* of QUrl* */ urls) {
-    return KPropertiesDialog_new4(urls);
+    return KPropertiesDialog_New4(urls);
 }
 
 KPropertiesDialog* k_propertiesdialog_new5(void* _tempUrl, void* _currentDir, const char* _defaultName) {
-    return KPropertiesDialog_new5((QUrl*)_tempUrl, (QUrl*)_currentDir, qstring(_defaultName));
+    return KPropertiesDialog_New5((QUrl*)_tempUrl, (QUrl*)_currentDir, qstring(_defaultName));
 }
 
 KPropertiesDialog* k_propertiesdialog_new6(const char* title) {
-    return KPropertiesDialog_new6(qstring(title));
+    return KPropertiesDialog_New6(qstring(title));
 }
 
 KPropertiesDialog* k_propertiesdialog_new7(void* item, void* parent) {
-    return KPropertiesDialog_new7((KFileItem*)item, (QWidget*)parent);
+    return KPropertiesDialog_New7((KFileItem*)item, (QWidget*)parent);
 }
 
 KPropertiesDialog* k_propertiesdialog_new8(void* _items, void* parent) {
-    return KPropertiesDialog_new8((KFileItemList*)_items, (QWidget*)parent);
+    return KPropertiesDialog_New8((KFileItemList*)_items, (QWidget*)parent);
 }
 
 KPropertiesDialog* k_propertiesdialog_new9(void* url, void* parent) {
-    return KPropertiesDialog_new9((QUrl*)url, (QWidget*)parent);
+    return KPropertiesDialog_New9((QUrl*)url, (QWidget*)parent);
 }
 
 KPropertiesDialog* k_propertiesdialog_new10(libqt_list /* of QUrl* */ urls, void* parent) {
-    return KPropertiesDialog_new10(urls, (QWidget*)parent);
+    return KPropertiesDialog_New10(urls, (QWidget*)parent);
 }
 
 KPropertiesDialog* k_propertiesdialog_new11(void* _tempUrl, void* _currentDir, const char* _defaultName, void* parent) {
-    return KPropertiesDialog_new11((QUrl*)_tempUrl, (QUrl*)_currentDir, qstring(_defaultName), (QWidget*)parent);
+    return KPropertiesDialog_New11((QUrl*)_tempUrl, (QUrl*)_currentDir, qstring(_defaultName), (QWidget*)parent);
 }
 
 KPropertiesDialog* k_propertiesdialog_new12(const char* title, void* parent) {
-    return KPropertiesDialog_new12(qstring(title), (QWidget*)parent);
+    return KPropertiesDialog_New12(qstring(title), (QWidget*)parent);
 }
 
 const QMetaObject* k_propertiesdialog_meta_object(void* self) {

@@ -3,15 +3,15 @@
 #include "libkfileitemlistproperties.h"
 
 KFileItemListProperties* k_fileitemlistproperties_new() {
-    return KFileItemListProperties_new();
+    return KFileItemListProperties_New();
 }
 
 KFileItemListProperties* k_fileitemlistproperties_new2(void* items) {
-    return KFileItemListProperties_new2((KFileItemList*)items);
+    return KFileItemListProperties_New2((KFileItemList*)items);
 }
 
 KFileItemListProperties* k_fileitemlistproperties_new3(void* param1) {
-    return KFileItemListProperties_new3((KFileItemListProperties*)param1);
+    return KFileItemListProperties_New3((KFileItemListProperties*)param1);
 }
 
 void k_fileitemlistproperties_operator_assign(void* self, void* other) {

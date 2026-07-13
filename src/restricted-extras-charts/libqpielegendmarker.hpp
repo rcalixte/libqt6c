@@ -28,8 +28,8 @@ typedef struct QPieSlice QPieSlice;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QPieLegendMarker* QPieLegendMarker_new(QPieSeries* series, QPieSlice* slice, QLegend* legend);
-QPieLegendMarker* QPieLegendMarker_new2(QPieSeries* series, QPieSlice* slice, QLegend* legend, QObject* parent);
+QPieLegendMarker* QPieLegendMarker_New(QPieSeries* series, QPieSlice* slice, QLegend* legend);
+QPieLegendMarker* QPieLegendMarker_New2(QPieSeries* series, QPieSlice* slice, QLegend* legend, QObject* parent);
 QMetaObject* QPieLegendMarker_MetaObject(const QPieLegendMarker* self);
 void* QPieLegendMarker_Metacast(QPieLegendMarker* self, const char* param1);
 int QPieLegendMarker_Metacall(QPieLegendMarker* self, int param1, int param2, void** param3);

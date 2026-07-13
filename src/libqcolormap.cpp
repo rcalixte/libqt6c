@@ -5,7 +5,7 @@
 #include "libqcolormap.hpp"
 #include "libqcolormap.hxx"
 
-QColormap* QColormap_new(const QColormap* colormap) {
+QColormap* QColormap_New(const QColormap* colormap) {
     return new QColormap(*colormap);
 }
 

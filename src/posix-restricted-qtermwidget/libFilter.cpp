@@ -22,7 +22,7 @@
 #include "libFilter.hpp"
 #include "libFilter.hxx"
 
-Konsole__Filter* Konsole__Filter_new() {
+Konsole__Filter* Konsole__Filter_New() {
     return new VirtualKonsoleFilter();
 }
 
@@ -586,7 +586,7 @@ void Konsole__Filter_Delete(Konsole__Filter* self) {
     delete self;
 }
 
-Konsole__RegExpFilter* Konsole__RegExpFilter_new() {
+Konsole__RegExpFilter* Konsole__RegExpFilter_New() {
     return new VirtualKonsoleRegExpFilter();
 }
 
@@ -1177,7 +1177,7 @@ void Konsole__RegExpFilter_Delete(Konsole__RegExpFilter* self) {
     delete self;
 }
 
-Konsole__UrlFilter* Konsole__UrlFilter_new() {
+Konsole__UrlFilter* Konsole__UrlFilter_New() {
     return new VirtualKonsoleUrlFilter();
 }
 
@@ -1763,7 +1763,7 @@ void Konsole__UrlFilter_Delete(Konsole__UrlFilter* self) {
     delete self;
 }
 
-Konsole__FilterObject* Konsole__FilterObject_new(Konsole__Filter__HotSpot* filter) {
+Konsole__FilterObject* Konsole__FilterObject_New(Konsole__Filter__HotSpot* filter) {
     return new VirtualKonsoleFilterObject(filter);
 }
 
@@ -2182,7 +2182,7 @@ void Konsole__FilterObject_Delete(Konsole__FilterObject* self) {
     delete self;
 }
 
-Konsole__FilterChain* Konsole__FilterChain_new(const Konsole__FilterChain* param1) {
+Konsole__FilterChain* Konsole__FilterChain_New(const Konsole__FilterChain* param1) {
     return new Konsole::FilterChain(*param1);
 }
 
@@ -2235,11 +2235,11 @@ void Konsole__FilterChain_Delete(Konsole__FilterChain* self) {
     delete self;
 }
 
-Konsole__TerminalImageFilterChain* Konsole__TerminalImageFilterChain_new() {
+Konsole__TerminalImageFilterChain* Konsole__TerminalImageFilterChain_New() {
     return new Konsole::TerminalImageFilterChain();
 }
 
-Konsole__TerminalImageFilterChain* Konsole__TerminalImageFilterChain_new2(const Konsole__TerminalImageFilterChain* param1) {
+Konsole__TerminalImageFilterChain* Konsole__TerminalImageFilterChain_New2(const Konsole__TerminalImageFilterChain* param1) {
     return new Konsole::TerminalImageFilterChain(*param1);
 }
 
@@ -2247,11 +2247,11 @@ void Konsole__TerminalImageFilterChain_Delete(Konsole__TerminalImageFilterChain*
     delete self;
 }
 
-Konsole__Filter__HotSpot* Konsole__Filter__HotSpot_new(int startLine, int startColumn, int endLine, int endColumn) {
+Konsole__Filter__HotSpot* Konsole__Filter__HotSpot_New(int startLine, int startColumn, int endLine, int endColumn) {
     return new VirtualKonsoleFilterHotSpot(static_cast<int>(startLine), static_cast<int>(startColumn), static_cast<int>(endLine), static_cast<int>(endColumn));
 }
 
-Konsole__Filter__HotSpot* Konsole__Filter__HotSpot_new2(const Konsole__Filter__HotSpot* param1) {
+Konsole__Filter__HotSpot* Konsole__Filter__HotSpot_New2(const Konsole__Filter__HotSpot* param1) {
     return new VirtualKonsoleFilterHotSpot(*param1);
 }
 
@@ -2383,11 +2383,11 @@ void Konsole__Filter__HotSpot_Delete(Konsole__Filter__HotSpot* self) {
     delete self;
 }
 
-Konsole__RegExpFilter__HotSpot* Konsole__RegExpFilter__HotSpot_new(int startLine, int startColumn, int endLine, int endColumn) {
+Konsole__RegExpFilter__HotSpot* Konsole__RegExpFilter__HotSpot_New(int startLine, int startColumn, int endLine, int endColumn) {
     return new VirtualKonsoleRegExpFilterHotSpot(static_cast<int>(startLine), static_cast<int>(startColumn), static_cast<int>(endLine), static_cast<int>(endColumn));
 }
 
-Konsole__RegExpFilter__HotSpot* Konsole__RegExpFilter__HotSpot_new2(const Konsole__RegExpFilter__HotSpot* param1) {
+Konsole__RegExpFilter__HotSpot* Konsole__RegExpFilter__HotSpot_New2(const Konsole__RegExpFilter__HotSpot* param1) {
     return new VirtualKonsoleRegExpFilterHotSpot(*param1);
 }
 
@@ -2546,7 +2546,7 @@ void Konsole__RegExpFilter__HotSpot_Delete(Konsole__RegExpFilter__HotSpot* self)
     delete self;
 }
 
-Konsole__UrlFilter__HotSpot* Konsole__UrlFilter__HotSpot_new(int startLine, int startColumn, int endLine, int endColumn) {
+Konsole__UrlFilter__HotSpot* Konsole__UrlFilter__HotSpot_New(int startLine, int startColumn, int endLine, int endColumn) {
     return new VirtualKonsoleUrlFilterHotSpot(static_cast<int>(startLine), static_cast<int>(startColumn), static_cast<int>(endLine), static_cast<int>(endColumn));
 }
 

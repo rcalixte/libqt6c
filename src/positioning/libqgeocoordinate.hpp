@@ -18,10 +18,10 @@ extern "C" {
 typedef struct QGeoCoordinate QGeoCoordinate;
 #endif
 
-QGeoCoordinate* QGeoCoordinate_new();
-QGeoCoordinate* QGeoCoordinate_new2(double latitude, double longitude);
-QGeoCoordinate* QGeoCoordinate_new3(double latitude, double longitude, double altitude);
-QGeoCoordinate* QGeoCoordinate_new4(const QGeoCoordinate* other);
+QGeoCoordinate* QGeoCoordinate_New();
+QGeoCoordinate* QGeoCoordinate_New2(double latitude, double longitude);
+QGeoCoordinate* QGeoCoordinate_New3(double latitude, double longitude, double altitude);
+QGeoCoordinate* QGeoCoordinate_New4(const QGeoCoordinate* other);
 void QGeoCoordinate_OperatorAssign(QGeoCoordinate* self, const QGeoCoordinate* other);
 void QGeoCoordinate_Swap(QGeoCoordinate* self, QGeoCoordinate* other);
 bool QGeoCoordinate_IsValid(const QGeoCoordinate* self);

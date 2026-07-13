@@ -6,11 +6,11 @@
 #include "libqsqlrecord.hpp"
 #include "libqsqlrecord.hxx"
 
-QSqlRecord* QSqlRecord_new() {
+QSqlRecord* QSqlRecord_New() {
     return new QSqlRecord();
 }
 
-QSqlRecord* QSqlRecord_new2(const QSqlRecord* other) {
+QSqlRecord* QSqlRecord_New2(const QSqlRecord* other) {
     return new QSqlRecord(*other);
 }
 

@@ -8,11 +8,11 @@
 #include "libqhorizontalstackedbarseries.h"
 
 QHorizontalStackedBarSeries* q_horizontalstackedbarseries_new() {
-    return QHorizontalStackedBarSeries_new();
+    return QHorizontalStackedBarSeries_New();
 }
 
 QHorizontalStackedBarSeries* q_horizontalstackedbarseries_new2(void* parent) {
-    return QHorizontalStackedBarSeries_new2((QObject*)parent);
+    return QHorizontalStackedBarSeries_New2((QObject*)parent);
 }
 
 const QMetaObject* q_horizontalstackedbarseries_meta_object(void* self) {

@@ -56,12 +56,12 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QFileDialog* QFileDialog_new(QWidget* parent);
-QFileDialog* QFileDialog_new2(QWidget* parent, int f);
-QFileDialog* QFileDialog_new3();
-QFileDialog* QFileDialog_new4(QWidget* parent, const libqt_string caption);
-QFileDialog* QFileDialog_new5(QWidget* parent, const libqt_string caption, const libqt_string directory);
-QFileDialog* QFileDialog_new6(QWidget* parent, const libqt_string caption, const libqt_string directory, const libqt_string filter);
+QFileDialog* QFileDialog_New(QWidget* parent);
+QFileDialog* QFileDialog_New2(QWidget* parent, int f);
+QFileDialog* QFileDialog_New3();
+QFileDialog* QFileDialog_New4(QWidget* parent, const libqt_string caption);
+QFileDialog* QFileDialog_New5(QWidget* parent, const libqt_string caption, const libqt_string directory);
+QFileDialog* QFileDialog_New6(QWidget* parent, const libqt_string caption, const libqt_string directory, const libqt_string filter);
 QMetaObject* QFileDialog_MetaObject(const QFileDialog* self);
 void* QFileDialog_Metacast(QFileDialog* self, const char* param1);
 int QFileDialog_Metacall(QFileDialog* self, int param1, int param2, void** param3);

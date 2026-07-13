@@ -10,11 +10,11 @@
 #include "libqplacereply.hpp"
 #include "libqplacereply.hxx"
 
-QPlaceReply* QPlaceReply_new() {
+QPlaceReply* QPlaceReply_New() {
     return new VirtualQPlaceReply();
 }
 
-QPlaceReply* QPlaceReply_new2(QObject* parent) {
+QPlaceReply* QPlaceReply_New2(QObject* parent) {
     return new VirtualQPlaceReply(parent);
 }
 

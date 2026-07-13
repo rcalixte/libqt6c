@@ -2,15 +2,15 @@
 #include "libqfloat16.hpp"
 #include "libqfloat16.hxx"
 
-qfloat16* qfloat16_new() {
+qfloat16* qfloat16_New() {
     return new qfloat16();
 }
 
-qfloat16* qfloat16_new2(int param1) {
+qfloat16* qfloat16_New2(int param1) {
     return new qfloat16(static_cast<Qt::Initialization>(param1));
 }
 
-qfloat16* qfloat16_new3(float f) {
+qfloat16* qfloat16_New3(float f) {
     return new qfloat16(static_cast<float>(f));
 }
 

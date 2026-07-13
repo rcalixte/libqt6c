@@ -4,11 +4,11 @@
 #include "libcategory.hpp"
 #include "libcategory.hxx"
 
-Attica__Category* Attica__Category_new() {
+Attica__Category* Attica__Category_New() {
     return new Attica::Category();
 }
 
-Attica__Category* Attica__Category_new2(const Attica__Category* other) {
+Attica__Category* Attica__Category_New2(const Attica__Category* other) {
     return new Attica::Category(*other);
 }
 

@@ -7,35 +7,35 @@
 #include "libquuid.hpp"
 #include "libquuid.hxx"
 
-QUuid* QUuid_new(const QUuid* other) {
+QUuid* QUuid_New(const QUuid* other) {
     return new QUuid(*other);
 }
 
-QUuid* QUuid_new2(QUuid* other) {
+QUuid* QUuid_New2(QUuid* other) {
     return new QUuid(std::move(*other));
 }
 
-QUuid* QUuid_new3() {
+QUuid* QUuid_New3() {
     return new QUuid();
 }
 
-QUuid* QUuid_new4(unsigned int l, uint16_t w1, uint16_t w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8) {
+QUuid* QUuid_New4(unsigned int l, uint16_t w1, uint16_t w2, unsigned char b1, unsigned char b2, unsigned char b3, unsigned char b4, unsigned char b5, unsigned char b6, unsigned char b7, unsigned char b8) {
     return new QUuid(static_cast<uint>(l), static_cast<ushort>(w1), static_cast<ushort>(w2), static_cast<uchar>(b1), static_cast<uchar>(b2), static_cast<uchar>(b3), static_cast<uchar>(b4), static_cast<uchar>(b5), static_cast<uchar>(b6), static_cast<uchar>(b7), static_cast<uchar>(b8));
 }
 
-QUuid* QUuid_new5(QUuid__Id128Bytes* id128) {
+QUuid* QUuid_New5(QUuid__Id128Bytes* id128) {
     return new QUuid(*id128);
 }
 
-QUuid* QUuid_new6(const char* string) {
+QUuid* QUuid_New6(const char* string) {
     return new QUuid(QAnyStringView(string));
 }
 
-QUuid* QUuid_new7(const QUuid* param1) {
+QUuid* QUuid_New7(const QUuid* param1) {
     return new QUuid(*param1);
 }
 
-QUuid* QUuid_new8(QUuid__Id128Bytes* id128, int order) {
+QUuid* QUuid_New8(QUuid__Id128Bytes* id128, int order) {
     return new QUuid(*id128, static_cast<QSysInfo::Endian>(order));
 }
 
@@ -177,11 +177,11 @@ void QUuid_Delete(QUuid* self) {
     delete self;
 }
 
-QUuid__Id128Bytes* QUuid__Id128Bytes_new() {
+QUuid__Id128Bytes* QUuid__Id128Bytes_New() {
     return new QUuid::Id128Bytes();
 }
 
-QUuid__Id128Bytes* QUuid__Id128Bytes_new2(const QUuid__Id128Bytes* param1) {
+QUuid__Id128Bytes* QUuid__Id128Bytes_New2(const QUuid__Id128Bytes* param1) {
     return new QUuid::Id128Bytes(*param1);
 }
 

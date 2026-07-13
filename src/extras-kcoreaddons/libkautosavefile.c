@@ -11,19 +11,19 @@
 #include "libkautosavefile.h"
 
 KAutoSaveFile* k_autosavefile_new(void* filename) {
-    return KAutoSaveFile_new((QUrl*)filename);
+    return KAutoSaveFile_New((QUrl*)filename);
 }
 
 KAutoSaveFile* k_autosavefile_new2() {
-    return KAutoSaveFile_new2();
+    return KAutoSaveFile_New2();
 }
 
 KAutoSaveFile* k_autosavefile_new3(void* filename, void* parent) {
-    return KAutoSaveFile_new3((QUrl*)filename, (QObject*)parent);
+    return KAutoSaveFile_New3((QUrl*)filename, (QObject*)parent);
 }
 
 KAutoSaveFile* k_autosavefile_new4(void* parent) {
-    return KAutoSaveFile_new4((QObject*)parent);
+    return KAutoSaveFile_New4((QObject*)parent);
 }
 
 const QMetaObject* k_autosavefile_meta_object(void* self) {

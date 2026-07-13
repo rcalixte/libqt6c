@@ -18,8 +18,8 @@ extern "C" {
 typedef struct KOSRelease KOSRelease;
 #endif
 
-KOSRelease* KOSRelease_new();
-KOSRelease* KOSRelease_new2(const libqt_string filePath);
+KOSRelease* KOSRelease_New();
+KOSRelease* KOSRelease_New2(const libqt_string filePath);
 libqt_string KOSRelease_Name(const KOSRelease* self);
 libqt_string KOSRelease_Version(const KOSRelease* self);
 libqt_string KOSRelease_Id(const KOSRelease* self);

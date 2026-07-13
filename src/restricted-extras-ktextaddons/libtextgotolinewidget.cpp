@@ -37,11 +37,11 @@
 #include "libtextgotolinewidget.hpp"
 #include "libtextgotolinewidget.hxx"
 
-TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_new(QWidget* parent) {
+TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_New(QWidget* parent) {
     return new VirtualTextCustomEditorTextGoToLineWidget(parent);
 }
 
-TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_new2() {
+TextCustomEditor__TextGoToLineWidget* TextCustomEditor__TextGoToLineWidget_New2() {
     return new VirtualTextCustomEditorTextGoToLineWidget();
 }
 

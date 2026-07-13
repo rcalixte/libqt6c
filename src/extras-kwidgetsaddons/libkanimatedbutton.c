@@ -17,11 +17,11 @@
 #include "libkanimatedbutton.h"
 
 KAnimatedButton* k_animatedbutton_new(void* parent) {
-    return KAnimatedButton_new((QWidget*)parent);
+    return KAnimatedButton_New((QWidget*)parent);
 }
 
 KAnimatedButton* k_animatedbutton_new2() {
-    return KAnimatedButton_new2();
+    return KAnimatedButton_New2();
 }
 
 const QMetaObject* k_animatedbutton_meta_object(void* self) {

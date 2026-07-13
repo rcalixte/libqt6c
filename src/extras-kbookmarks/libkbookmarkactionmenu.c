@@ -12,11 +12,11 @@
 #include "libkbookmarkactionmenu.h"
 
 KBookmarkActionMenu* k_bookmarkactionmenu_new(void* bm, void* parent) {
-    return KBookmarkActionMenu_new((KBookmark*)bm, (QObject*)parent);
+    return KBookmarkActionMenu_New((KBookmark*)bm, (QObject*)parent);
 }
 
 KBookmarkActionMenu* k_bookmarkactionmenu_new2(void* bm, const char* text, void* parent) {
-    return KBookmarkActionMenu_new2((KBookmark*)bm, qstring(text), (QObject*)parent);
+    return KBookmarkActionMenu_New2((KBookmark*)bm, qstring(text), (QObject*)parent);
 }
 
 const QMetaObject* k_bookmarkactionmenu_meta_object(void* self) {

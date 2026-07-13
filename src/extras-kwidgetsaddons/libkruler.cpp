@@ -38,35 +38,35 @@
 #include "libkruler.hpp"
 #include "libkruler.hxx"
 
-KRuler* KRuler_new(QWidget* parent) {
+KRuler* KRuler_New(QWidget* parent) {
     return new VirtualKRuler(parent);
 }
 
-KRuler* KRuler_new2() {
+KRuler* KRuler_New2() {
     return new VirtualKRuler();
 }
 
-KRuler* KRuler_new3(int orient) {
+KRuler* KRuler_New3(int orient) {
     return new VirtualKRuler(static_cast<Qt::Orientation>(orient));
 }
 
-KRuler* KRuler_new4(int orient, int widgetWidth) {
+KRuler* KRuler_New4(int orient, int widgetWidth) {
     return new VirtualKRuler(static_cast<Qt::Orientation>(orient), static_cast<int>(widgetWidth));
 }
 
-KRuler* KRuler_new5(int orient, QWidget* parent) {
+KRuler* KRuler_New5(int orient, QWidget* parent) {
     return new VirtualKRuler(static_cast<Qt::Orientation>(orient), parent);
 }
 
-KRuler* KRuler_new6(int orient, QWidget* parent, int f) {
+KRuler* KRuler_New6(int orient, QWidget* parent, int f) {
     return new VirtualKRuler(static_cast<Qt::Orientation>(orient), parent, static_cast<Qt::WindowFlags>(f));
 }
 
-KRuler* KRuler_new7(int orient, int widgetWidth, QWidget* parent) {
+KRuler* KRuler_New7(int orient, int widgetWidth, QWidget* parent) {
     return new VirtualKRuler(static_cast<Qt::Orientation>(orient), static_cast<int>(widgetWidth), parent);
 }
 
-KRuler* KRuler_new8(int orient, int widgetWidth, QWidget* parent, int f) {
+KRuler* KRuler_New8(int orient, int widgetWidth, QWidget* parent, int f) {
     return new VirtualKRuler(static_cast<Qt::Orientation>(orient), static_cast<int>(widgetWidth), parent, static_cast<Qt::WindowFlags>(f));
 }
 

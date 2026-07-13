@@ -17,19 +17,19 @@
 #include "libqprinter.hpp"
 #include "libqprinter.hxx"
 
-QPrinter* QPrinter_new() {
+QPrinter* QPrinter_New() {
     return new VirtualQPrinter();
 }
 
-QPrinter* QPrinter_new2(const QPrinterInfo* printer) {
+QPrinter* QPrinter_New2(const QPrinterInfo* printer) {
     return new VirtualQPrinter(*printer);
 }
 
-QPrinter* QPrinter_new3(int mode) {
+QPrinter* QPrinter_New3(int mode) {
     return new VirtualQPrinter(static_cast<QPrinter::PrinterMode>(mode));
 }
 
-QPrinter* QPrinter_new4(const QPrinterInfo* printer, int mode) {
+QPrinter* QPrinter_New4(const QPrinterInfo* printer, int mode) {
     return new VirtualQPrinter(*printer, static_cast<QPrinter::PrinterMode>(mode));
 }
 

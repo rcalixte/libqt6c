@@ -26,10 +26,10 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QBluetoothLocalDevice* QBluetoothLocalDevice_new();
-QBluetoothLocalDevice* QBluetoothLocalDevice_new2(const QBluetoothAddress* address);
-QBluetoothLocalDevice* QBluetoothLocalDevice_new3(QObject* parent);
-QBluetoothLocalDevice* QBluetoothLocalDevice_new4(const QBluetoothAddress* address, QObject* parent);
+QBluetoothLocalDevice* QBluetoothLocalDevice_New();
+QBluetoothLocalDevice* QBluetoothLocalDevice_New2(const QBluetoothAddress* address);
+QBluetoothLocalDevice* QBluetoothLocalDevice_New3(QObject* parent);
+QBluetoothLocalDevice* QBluetoothLocalDevice_New4(const QBluetoothAddress* address, QObject* parent);
 QMetaObject* QBluetoothLocalDevice_MetaObject(const QBluetoothLocalDevice* self);
 void* QBluetoothLocalDevice_Metacast(QBluetoothLocalDevice* self, const char* param1);
 int QBluetoothLocalDevice_Metacall(QBluetoothLocalDevice* self, int param1, int param2, void** param3);

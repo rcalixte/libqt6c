@@ -54,8 +54,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_new(QWidget* parent);
-KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_new2();
+KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_New(QWidget* parent);
+KPixmapRegionSelectorWidget* KPixmapRegionSelectorWidget_New2();
 QMetaObject* KPixmapRegionSelectorWidget_MetaObject(const KPixmapRegionSelectorWidget* self);
 void* KPixmapRegionSelectorWidget_Metacast(KPixmapRegionSelectorWidget* self, const char* param1);
 int KPixmapRegionSelectorWidget_Metacall(KPixmapRegionSelectorWidget* self, int param1, int param2, void** param3);

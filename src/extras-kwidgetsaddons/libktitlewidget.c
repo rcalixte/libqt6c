@@ -15,11 +15,11 @@
 #include "libktitlewidget.h"
 
 KTitleWidget* k_titlewidget_new(void* parent) {
-    return KTitleWidget_new((QWidget*)parent);
+    return KTitleWidget_New((QWidget*)parent);
 }
 
 KTitleWidget* k_titlewidget_new2() {
-    return KTitleWidget_new2();
+    return KTitleWidget_New2();
 }
 
 const QMetaObject* k_titlewidget_meta_object(void* self) {

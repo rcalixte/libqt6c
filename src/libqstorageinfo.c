@@ -3,19 +3,19 @@
 #include "libqstorageinfo.h"
 
 QStorageInfo* q_storageinfo_new() {
-    return QStorageInfo_new();
+    return QStorageInfo_New();
 }
 
 QStorageInfo* q_storageinfo_new2(const char* path) {
-    return QStorageInfo_new2(qstring(path));
+    return QStorageInfo_New2(qstring(path));
 }
 
 QStorageInfo* q_storageinfo_new3(void* dir) {
-    return QStorageInfo_new3((QDir*)dir);
+    return QStorageInfo_New3((QDir*)dir);
 }
 
 QStorageInfo* q_storageinfo_new4(void* other) {
-    return QStorageInfo_new4((QStorageInfo*)other);
+    return QStorageInfo_New4((QStorageInfo*)other);
 }
 
 void q_storageinfo_operator_assign(void* self, void* other) {

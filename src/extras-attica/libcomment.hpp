@@ -22,8 +22,8 @@ typedef struct Attica__Comment Attica__Comment;
 typedef struct QDateTime QDateTime;
 #endif
 
-Attica__Comment* Attica__Comment_new();
-Attica__Comment* Attica__Comment_new2(const Attica__Comment* other);
+Attica__Comment* Attica__Comment_New();
+Attica__Comment* Attica__Comment_New2(const Attica__Comment* other);
 libqt_string Attica__Comment_CommentTypeToString(const int type);
 void Attica__Comment_OperatorAssign(Attica__Comment* self, const Attica__Comment* other);
 void Attica__Comment_SetId(Attica__Comment* self, const libqt_string id);

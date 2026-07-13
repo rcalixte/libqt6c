@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-QScrollBar* QScrollBar_new(QWidget* parent);
-QScrollBar* QScrollBar_new2();
-QScrollBar* QScrollBar_new3(int param1);
-QScrollBar* QScrollBar_new4(int param1, QWidget* parent);
+QScrollBar* QScrollBar_New(QWidget* parent);
+QScrollBar* QScrollBar_New2();
+QScrollBar* QScrollBar_New3(int param1);
+QScrollBar* QScrollBar_New4(int param1, QWidget* parent);
 QMetaObject* QScrollBar_MetaObject(const QScrollBar* self);
 void* QScrollBar_Metacast(QScrollBar* self, const char* param1);
 int QScrollBar_Metacall(QScrollBar* self, int param1, int param2, void** param3);

@@ -6,7 +6,7 @@
 #include "libwritercollection.hpp"
 #include "libwritercollection.hxx"
 
-KFileMetaData__WriterCollection* KFileMetaData__WriterCollection_new() {
+KFileMetaData__WriterCollection* KFileMetaData__WriterCollection_New() {
     return new KFileMetaData::WriterCollection();
 }
 

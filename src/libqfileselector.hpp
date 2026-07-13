@@ -25,8 +25,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QUrl QUrl;
 #endif
 
-QFileSelector* QFileSelector_new();
-QFileSelector* QFileSelector_new2(QObject* parent);
+QFileSelector* QFileSelector_New();
+QFileSelector* QFileSelector_New2(QObject* parent);
 QMetaObject* QFileSelector_MetaObject(const QFileSelector* self);
 void* QFileSelector_Metacast(QFileSelector* self, const char* param1);
 int QFileSelector_Metacall(QFileSelector* self, int param1, int param2, void** param3);

@@ -13,11 +13,11 @@
 #include "libkdescendantsproxymodel.h"
 
 KDescendantsProxyModel* k_descendantsproxymodel_new() {
-    return KDescendantsProxyModel_new();
+    return KDescendantsProxyModel_New();
 }
 
 KDescendantsProxyModel* k_descendantsproxymodel_new2(void* parent) {
-    return KDescendantsProxyModel_new2((QObject*)parent);
+    return KDescendantsProxyModel_New2((QObject*)parent);
 }
 
 const QMetaObject* k_descendantsproxymodel_meta_object(void* self) {

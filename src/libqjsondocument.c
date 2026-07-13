@@ -6,11 +6,11 @@
 #include "libqjsondocument.h"
 
 QJsonParseError* q_jsonparseerror_new(void* other) {
-    return QJsonParseError_new((QJsonParseError*)other);
+    return QJsonParseError_New((QJsonParseError*)other);
 }
 
 QJsonParseError* q_jsonparseerror_new2(void* other) {
-    return QJsonParseError_new2((QJsonParseError*)other);
+    return QJsonParseError_New2((QJsonParseError*)other);
 }
 
 void q_jsonparseerror_copy_assign(void* self, void* other) {
@@ -49,19 +49,19 @@ void q_jsonparseerror_delete(void* self) {
 }
 
 QJsonDocument* q_jsondocument_new() {
-    return QJsonDocument_new();
+    return QJsonDocument_New();
 }
 
 QJsonDocument* q_jsondocument_new2(void* object) {
-    return QJsonDocument_new2((QJsonObject*)object);
+    return QJsonDocument_New2((QJsonObject*)object);
 }
 
 QJsonDocument* q_jsondocument_new3(void* array) {
-    return QJsonDocument_new3((QJsonArray*)array);
+    return QJsonDocument_New3((QJsonArray*)array);
 }
 
 QJsonDocument* q_jsondocument_new4(void* other) {
-    return QJsonDocument_new4((QJsonDocument*)other);
+    return QJsonDocument_New4((QJsonDocument*)other);
 }
 
 void q_jsondocument_operator_assign(void* self, void* other) {

@@ -52,10 +52,10 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KFontChooser* KFontChooser_new(QWidget* parent);
-KFontChooser* KFontChooser_new2();
-KFontChooser* KFontChooser_new3(int flags);
-KFontChooser* KFontChooser_new4(int flags, QWidget* parent);
+KFontChooser* KFontChooser_New(QWidget* parent);
+KFontChooser* KFontChooser_New2();
+KFontChooser* KFontChooser_New3(int flags);
+KFontChooser* KFontChooser_New4(int flags, QWidget* parent);
 QMetaObject* KFontChooser_MetaObject(const KFontChooser* self);
 void* KFontChooser_Metacast(KFontChooser* self, const char* param1);
 int KFontChooser_Metacall(KFontChooser* self, int param1, int param2, void** param3);

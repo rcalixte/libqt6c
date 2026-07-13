@@ -7,11 +7,11 @@
 #include "liblanguagetoolgetlistoflanguagejob.h"
 
 TextGrammarCheck__LanguageToolGetListOfLanguageJob* k_textgrammarcheck__languagetoolgetlistoflanguagejob_new() {
-    return TextGrammarCheck__LanguageToolGetListOfLanguageJob_new();
+    return TextGrammarCheck__LanguageToolGetListOfLanguageJob_New();
 }
 
 TextGrammarCheck__LanguageToolGetListOfLanguageJob* k_textgrammarcheck__languagetoolgetlistoflanguagejob_new2(void* parent) {
-    return TextGrammarCheck__LanguageToolGetListOfLanguageJob_new2((QObject*)parent);
+    return TextGrammarCheck__LanguageToolGetListOfLanguageJob_New2((QObject*)parent);
 }
 
 const QMetaObject* k_textgrammarcheck__languagetoolgetlistoflanguagejob_meta_object(void* self) {

@@ -4,35 +4,35 @@
 #include "librange.h"
 
 KTextEditor__Range* k_texteditor__range_new(void* other) {
-    return KTextEditor__Range_new((KTextEditor__Range*)other);
+    return KTextEditor__Range_New((KTextEditor__Range*)other);
 }
 
 KTextEditor__Range* k_texteditor__range_new2(void* other) {
-    return KTextEditor__Range_new2((KTextEditor__Range*)other);
+    return KTextEditor__Range_New2((KTextEditor__Range*)other);
 }
 
 KTextEditor__Range* k_texteditor__range_new3() {
-    return KTextEditor__Range_new3();
+    return KTextEditor__Range_New3();
 }
 
 KTextEditor__Range* k_texteditor__range_new4(void* start, void* end) {
-    return KTextEditor__Range_new4((KTextEditor__Cursor*)start, (KTextEditor__Cursor*)end);
+    return KTextEditor__Range_New4((KTextEditor__Cursor*)start, (KTextEditor__Cursor*)end);
 }
 
 KTextEditor__Range* k_texteditor__range_new5(void* start, int width) {
-    return KTextEditor__Range_new5((KTextEditor__Cursor*)start, width);
+    return KTextEditor__Range_New5((KTextEditor__Cursor*)start, width);
 }
 
 KTextEditor__Range* k_texteditor__range_new6(void* start, int endLine, int endColumn) {
-    return KTextEditor__Range_new6((KTextEditor__Cursor*)start, endLine, endColumn);
+    return KTextEditor__Range_New6((KTextEditor__Cursor*)start, endLine, endColumn);
 }
 
 KTextEditor__Range* k_texteditor__range_new7(int startLine, int startColumn, int endLine, int endColumn) {
-    return KTextEditor__Range_new7(startLine, startColumn, endLine, endColumn);
+    return KTextEditor__Range_New7(startLine, startColumn, endLine, endColumn);
 }
 
 KTextEditor__Range* k_texteditor__range_new8(void* param1) {
-    return KTextEditor__Range_new8((KTextEditor__Range*)param1);
+    return KTextEditor__Range_New8((KTextEditor__Range*)param1);
 }
 
 void k_texteditor__range_copy_assign(void* self, void* other) {

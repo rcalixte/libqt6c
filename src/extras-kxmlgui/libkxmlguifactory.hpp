@@ -30,8 +30,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KXMLGUIFactory* KXMLGUIFactory_new(KXMLGUIBuilder* builder);
-KXMLGUIFactory* KXMLGUIFactory_new2(KXMLGUIBuilder* builder, QObject* parent);
+KXMLGUIFactory* KXMLGUIFactory_New(KXMLGUIBuilder* builder);
+KXMLGUIFactory* KXMLGUIFactory_New2(KXMLGUIBuilder* builder, QObject* parent);
 QMetaObject* KXMLGUIFactory_MetaObject(const KXMLGUIFactory* self);
 void* KXMLGUIFactory_Metacast(KXMLGUIFactory* self, const char* param1);
 int KXMLGUIFactory_Metacall(KXMLGUIFactory* self, int param1, int param2, void** param3);

@@ -33,8 +33,8 @@ typedef struct QWebSocketCorsAuthenticator QWebSocketCorsAuthenticator;
 typedef struct QWebSocketServer QWebSocketServer;
 #endif
 
-QWebSocketServer* QWebSocketServer_new(const libqt_string serverName, int secureMode);
-QWebSocketServer* QWebSocketServer_new2(const libqt_string serverName, int secureMode, QObject* parent);
+QWebSocketServer* QWebSocketServer_New(const libqt_string serverName, int secureMode);
+QWebSocketServer* QWebSocketServer_New2(const libqt_string serverName, int secureMode, QObject* parent);
 QMetaObject* QWebSocketServer_MetaObject(const QWebSocketServer* self);
 void* QWebSocketServer_Metacast(QWebSocketServer* self, const char* param1);
 int QWebSocketServer_Metacall(QWebSocketServer* self, int param1, int param2, void** param3);

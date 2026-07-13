@@ -7,11 +7,11 @@
 #include "libqformdatabuilder.hpp"
 #include "libqformdatabuilder.hxx"
 
-QFormDataPartBuilder* QFormDataPartBuilder_new() {
+QFormDataPartBuilder* QFormDataPartBuilder_New() {
     return new QFormDataPartBuilder();
 }
 
-QFormDataPartBuilder* QFormDataPartBuilder_new2(const QFormDataPartBuilder* param1) {
+QFormDataPartBuilder* QFormDataPartBuilder_New2(const QFormDataPartBuilder* param1) {
     return new QFormDataPartBuilder(*param1);
 }
 
@@ -54,7 +54,7 @@ void QFormDataPartBuilder_Delete(QFormDataPartBuilder* self) {
     delete self;
 }
 
-QFormDataBuilder* QFormDataBuilder_new() {
+QFormDataBuilder* QFormDataBuilder_New() {
     return new QFormDataBuilder();
 }
 

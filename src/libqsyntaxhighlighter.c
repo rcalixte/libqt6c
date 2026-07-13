@@ -11,11 +11,11 @@
 #include "libqsyntaxhighlighter.h"
 
 QSyntaxHighlighter* q_syntaxhighlighter_new(void* parent) {
-    return QSyntaxHighlighter_new((QObject*)parent);
+    return QSyntaxHighlighter_New((QObject*)parent);
 }
 
 QSyntaxHighlighter* q_syntaxhighlighter_new2(void* parent) {
-    return QSyntaxHighlighter_new2((QTextDocument*)parent);
+    return QSyntaxHighlighter_New2((QTextDocument*)parent);
 }
 
 const QMetaObject* q_syntaxhighlighter_meta_object(void* self) {

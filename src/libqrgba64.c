@@ -2,11 +2,11 @@
 #include "libqrgba64.h"
 
 QRgba64* q_rgba64_new() {
-    return QRgba64_new();
+    return QRgba64_New();
 }
 
 QRgba64* q_rgba64_new2(void* param1) {
-    return QRgba64_new2((QRgba64*)param1);
+    return QRgba64_New2((QRgba64*)param1);
 }
 
 QRgba64* q_rgba64_from_rgba64(uint64_t c) {

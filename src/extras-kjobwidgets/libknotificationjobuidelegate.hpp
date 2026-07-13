@@ -23,8 +23,8 @@ typedef struct QMetaObject QMetaObject;
 typedef struct QObject QObject;
 #endif
 
-KNotificationJobUiDelegate* KNotificationJobUiDelegate_new();
-KNotificationJobUiDelegate* KNotificationJobUiDelegate_new2(int flags);
+KNotificationJobUiDelegate* KNotificationJobUiDelegate_New();
+KNotificationJobUiDelegate* KNotificationJobUiDelegate_New2(int flags);
 QMetaObject* KNotificationJobUiDelegate_MetaObject(const KNotificationJobUiDelegate* self);
 void* KNotificationJobUiDelegate_Metacast(KNotificationJobUiDelegate* self, const char* param1);
 int KNotificationJobUiDelegate_Metacall(KNotificationJobUiDelegate* self, int param1, int param2, void** param3);

@@ -6,12 +6,12 @@
 #include "libusermetadata.hpp"
 #include "libusermetadata.hxx"
 
-KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_new(const libqt_string filePath) {
+KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_New(const libqt_string filePath) {
     QString filePath_QString = QString::fromUtf8(filePath.data, filePath.len);
     return new KFileMetaData::UserMetaData(filePath_QString);
 }
 
-KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_new2(const KFileMetaData__UserMetaData* rhs) {
+KFileMetaData__UserMetaData* KFileMetaData__UserMetaData_New2(const KFileMetaData__UserMetaData* rhs) {
     return new KFileMetaData::UserMetaData(*rhs);
 }
 

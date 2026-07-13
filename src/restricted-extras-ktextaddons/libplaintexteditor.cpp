@@ -53,11 +53,11 @@
 #include "libplaintexteditor.hpp"
 #include "libplaintexteditor.hxx"
 
-TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_new(QWidget* parent) {
+TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_New(QWidget* parent) {
     return new VirtualTextCustomEditorPlainTextEditor(parent);
 }
 
-TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_new2() {
+TextCustomEditor__PlainTextEditor* TextCustomEditor__PlainTextEditor_New2() {
     return new VirtualTextCustomEditorPlainTextEditor();
 }
 

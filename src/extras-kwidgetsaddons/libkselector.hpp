@@ -66,10 +66,10 @@ struct pair_double_qcolor {
 };
 #endif
 
-KSelector* KSelector_new(QWidget* parent);
-KSelector* KSelector_new2();
-KSelector* KSelector_new3(int o);
-KSelector* KSelector_new4(int o, QWidget* parent);
+KSelector* KSelector_New(QWidget* parent);
+KSelector* KSelector_New2();
+KSelector* KSelector_New3(int o);
+KSelector* KSelector_New4(int o, QWidget* parent);
 QMetaObject* KSelector_MetaObject(const KSelector* self);
 void* KSelector_Metacast(KSelector* self, const char* param1);
 int KSelector_Metacall(KSelector* self, int param1, int param2, void** param3);
@@ -272,10 +272,10 @@ void KSelector_OnGetDecodedMetricF(const KSelector* self, intptr_t slot);
 double KSelector_SuperGetDecodedMetricF(const KSelector* self, int metricA, int metricB);
 void KSelector_Delete(KSelector* self);
 
-KGradientSelector* KGradientSelector_new(QWidget* parent);
-KGradientSelector* KGradientSelector_new2();
-KGradientSelector* KGradientSelector_new3(int o);
-KGradientSelector* KGradientSelector_new4(int o, QWidget* parent);
+KGradientSelector* KGradientSelector_New(QWidget* parent);
+KGradientSelector* KGradientSelector_New2();
+KGradientSelector* KGradientSelector_New3(int o);
+KGradientSelector* KGradientSelector_New4(int o, QWidget* parent);
 QMetaObject* KGradientSelector_MetaObject(const KGradientSelector* self);
 void* KGradientSelector_Metacast(KGradientSelector* self, const char* param1);
 int KGradientSelector_Metacall(KGradientSelector* self, int param1, int param2, void** param3);

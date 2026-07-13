@@ -11,11 +11,11 @@
 #include "libqscilexerpov.h"
 
 QsciLexerPOV* q_scilexerpov_new() {
-    return QsciLexerPOV_new();
+    return QsciLexerPOV_New();
 }
 
 QsciLexerPOV* q_scilexerpov_new2(void* parent) {
-    return QsciLexerPOV_new2((QObject*)parent);
+    return QsciLexerPOV_New2((QObject*)parent);
 }
 
 const QMetaObject* q_scilexerpov_meta_object(void* self) {

@@ -16,27 +16,27 @@
 #include "libqdockwidget.h"
 
 QDockWidget* q_dockwidget_new(void* parent) {
-    return QDockWidget_new((QWidget*)parent);
+    return QDockWidget_New((QWidget*)parent);
 }
 
 QDockWidget* q_dockwidget_new2(const char* title) {
-    return QDockWidget_new2(qstring(title));
+    return QDockWidget_New2(qstring(title));
 }
 
 QDockWidget* q_dockwidget_new3() {
-    return QDockWidget_new3();
+    return QDockWidget_New3();
 }
 
 QDockWidget* q_dockwidget_new4(const char* title, void* parent) {
-    return QDockWidget_new4(qstring(title), (QWidget*)parent);
+    return QDockWidget_New4(qstring(title), (QWidget*)parent);
 }
 
 QDockWidget* q_dockwidget_new5(const char* title, void* parent, int32_t flags) {
-    return QDockWidget_new5(qstring(title), (QWidget*)parent, flags);
+    return QDockWidget_New5(qstring(title), (QWidget*)parent, flags);
 }
 
 QDockWidget* q_dockwidget_new6(void* parent, int32_t flags) {
-    return QDockWidget_new6((QWidget*)parent, flags);
+    return QDockWidget_New6((QWidget*)parent, flags);
 }
 
 const QMetaObject* q_dockwidget_meta_object(void* self) {

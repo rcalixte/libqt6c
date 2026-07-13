@@ -10,11 +10,11 @@
 #include "libqgraphicsitemanimation.h"
 
 QGraphicsItemAnimation* q_graphicsitemanimation_new() {
-    return QGraphicsItemAnimation_new();
+    return QGraphicsItemAnimation_New();
 }
 
 QGraphicsItemAnimation* q_graphicsitemanimation_new2(void* parent) {
-    return QGraphicsItemAnimation_new2((QObject*)parent);
+    return QGraphicsItemAnimation_New2((QObject*)parent);
 }
 
 const QMetaObject* q_graphicsitemanimation_meta_object(void* self) {

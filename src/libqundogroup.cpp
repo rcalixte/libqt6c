@@ -13,11 +13,11 @@
 #include "libqundogroup.hpp"
 #include "libqundogroup.hxx"
 
-QUndoGroup* QUndoGroup_new() {
+QUndoGroup* QUndoGroup_New() {
     return new VirtualQUndoGroup();
 }
 
-QUndoGroup* QUndoGroup_new2(QObject* parent) {
+QUndoGroup* QUndoGroup_New2(QObject* parent) {
     return new VirtualQUndoGroup(parent);
 }
 

@@ -25,8 +25,8 @@ typedef struct QObject QObject;
 typedef struct QTimerEvent QTimerEvent;
 #endif
 
-QIconEnginePlugin* QIconEnginePlugin_new();
-QIconEnginePlugin* QIconEnginePlugin_new2(QObject* parent);
+QIconEnginePlugin* QIconEnginePlugin_New();
+QIconEnginePlugin* QIconEnginePlugin_New2(QObject* parent);
 QMetaObject* QIconEnginePlugin_MetaObject(const QIconEnginePlugin* self);
 void* QIconEnginePlugin_Metacast(QIconEnginePlugin* self, const char* param1);
 int QIconEnginePlugin_Metacall(QIconEnginePlugin* self, int param1, int param2, void** param3);

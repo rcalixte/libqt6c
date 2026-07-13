@@ -26,9 +26,9 @@ typedef struct QWidgetItem QWidgetItem;
 typedef struct QWidgetItemV2 QWidgetItemV2;
 #endif
 
-QLayoutItem* QLayoutItem_new();
-QLayoutItem* QLayoutItem_new2(const QLayoutItem* param1);
-QLayoutItem* QLayoutItem_new3(int alignment);
+QLayoutItem* QLayoutItem_New();
+QLayoutItem* QLayoutItem_New2(const QLayoutItem* param1);
+QLayoutItem* QLayoutItem_New3(int alignment);
 QSize* QLayoutItem_SizeHint(const QLayoutItem* self);
 QSize* QLayoutItem_MinimumSize(const QLayoutItem* self);
 QSize* QLayoutItem_MaximumSize(const QLayoutItem* self);
@@ -81,10 +81,10 @@ void QLayoutItem_OnOperatorAssign(QLayoutItem* self, intptr_t slot);
 void QLayoutItem_SuperOperatorAssign(QLayoutItem* self, const QLayoutItem* param1);
 void QLayoutItem_Delete(QLayoutItem* self);
 
-QSpacerItem* QSpacerItem_new(int w, int h);
-QSpacerItem* QSpacerItem_new2(const QSpacerItem* param1);
-QSpacerItem* QSpacerItem_new3(int w, int h, int hData);
-QSpacerItem* QSpacerItem_new4(int w, int h, int hData, int vData);
+QSpacerItem* QSpacerItem_New(int w, int h);
+QSpacerItem* QSpacerItem_New2(const QSpacerItem* param1);
+QSpacerItem* QSpacerItem_New3(int w, int h, int hData);
+QSpacerItem* QSpacerItem_New4(int w, int h, int hData, int vData);
 void QSpacerItem_ChangeSize(QSpacerItem* self, int w, int h);
 QSize* QSpacerItem_SizeHint(const QSpacerItem* self);
 QSize* QSpacerItem_MinimumSize(const QSpacerItem* self);
@@ -136,7 +136,7 @@ void QSpacerItem_OnControlTypes(const QSpacerItem* self, intptr_t slot);
 int QSpacerItem_SuperControlTypes(const QSpacerItem* self);
 void QSpacerItem_Delete(QSpacerItem* self);
 
-QWidgetItem* QWidgetItem_new(QWidget* w);
+QWidgetItem* QWidgetItem_New(QWidget* w);
 QSize* QWidgetItem_SizeHint(const QWidgetItem* self);
 QSize* QWidgetItem_MinimumSize(const QWidgetItem* self);
 QSize* QWidgetItem_MaximumSize(const QWidgetItem* self);
@@ -184,7 +184,7 @@ void QWidgetItem_OnSpacerItem(QWidgetItem* self, intptr_t slot);
 QSpacerItem* QWidgetItem_SuperSpacerItem(QWidgetItem* self);
 void QWidgetItem_Delete(QWidgetItem* self);
 
-QWidgetItemV2* QWidgetItemV2_new(QWidget* widget);
+QWidgetItemV2* QWidgetItemV2_New(QWidget* widget);
 QSize* QWidgetItemV2_SizeHint(const QWidgetItemV2* self);
 QSize* QWidgetItemV2_MinimumSize(const QWidgetItemV2* self);
 QSize* QWidgetItemV2_MaximumSize(const QWidgetItemV2* self);

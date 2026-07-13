@@ -3,7 +3,7 @@
 #include "libkcursorsaver.hpp"
 #include "libkcursorsaver.hxx"
 
-KCursorSaver* KCursorSaver_new(int shape) {
+KCursorSaver* KCursorSaver_New(int shape) {
     return new KCursorSaver(static_cast<Qt::CursorShape>(shape));
 }
 

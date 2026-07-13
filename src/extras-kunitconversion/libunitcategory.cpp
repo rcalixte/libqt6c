@@ -11,11 +11,11 @@
 #include "libunitcategory.hpp"
 #include "libunitcategory.hxx"
 
-KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_new() {
+KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_New() {
     return new KUnitConversion::UnitCategory();
 }
 
-KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_new2(const KUnitConversion__UnitCategory* other) {
+KUnitConversion__UnitCategory* KUnitConversion__UnitCategory_New2(const KUnitConversion__UnitCategory* other) {
     return new KUnitConversion::UnitCategory(*other);
 }
 

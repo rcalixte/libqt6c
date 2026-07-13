@@ -7,11 +7,11 @@
 #include "libqwebengineurlrequestinterceptor.h"
 
 QWebEngineUrlRequestInterceptor* q_webengineurlrequestinterceptor_new() {
-    return QWebEngineUrlRequestInterceptor_new();
+    return QWebEngineUrlRequestInterceptor_New();
 }
 
 QWebEngineUrlRequestInterceptor* q_webengineurlrequestinterceptor_new2(void* p) {
-    return QWebEngineUrlRequestInterceptor_new2((QObject*)p);
+    return QWebEngineUrlRequestInterceptor_New2((QObject*)p);
 }
 
 const QMetaObject* q_webengineurlrequestinterceptor_meta_object(void* self) {

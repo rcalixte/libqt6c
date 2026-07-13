@@ -21,7 +21,7 @@ typedef struct QImage QImage;
 typedef struct QPixmap QPixmap;
 #endif
 
-KIconEffect* KIconEffect_new();
+KIconEffect* KIconEffect_New();
 void KIconEffect_Init(KIconEffect* self);
 bool KIconEffect_HasEffect(const KIconEffect* self, int group, int state);
 libqt_string KIconEffect_Fingerprint(const KIconEffect* self, int group, int state);

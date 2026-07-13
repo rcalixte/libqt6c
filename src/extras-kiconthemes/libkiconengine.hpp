@@ -26,11 +26,11 @@ typedef struct QRect QRect;
 typedef struct QSize QSize;
 #endif
 
-KIconEngine* KIconEngine_new(const libqt_string iconName, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays);
-KIconEngine* KIconEngine_new2(const libqt_string iconName, KIconLoader* iconLoader);
-KIconEngine* KIconEngine_new3(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader);
-KIconEngine* KIconEngine_new4(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays);
-KIconEngine* KIconEngine_new5(const KIconEngine* param1);
+KIconEngine* KIconEngine_New(const libqt_string iconName, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays);
+KIconEngine* KIconEngine_New2(const libqt_string iconName, KIconLoader* iconLoader);
+KIconEngine* KIconEngine_New3(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader);
+KIconEngine* KIconEngine_New4(const libqt_string iconName, const KIconColors* colors, KIconLoader* iconLoader, const libqt_list /* of libqt_string */ overlays);
+KIconEngine* KIconEngine_New5(const KIconEngine* param1);
 QSize* KIconEngine_ActualSize(KIconEngine* self, const QSize* size, int mode, int state);
 void KIconEngine_Paint(KIconEngine* self, QPainter* painter, const QRect* rect, int mode, int state);
 QPixmap* KIconEngine_Pixmap(KIconEngine* self, const QSize* size, int mode, int state);

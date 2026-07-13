@@ -12,7 +12,7 @@
 #include "liblistingfilterextension.hpp"
 #include "liblistingfilterextension.hxx"
 
-KParts__ListingFilterExtension* KParts__ListingFilterExtension_new(KParts__ReadOnlyPart* parent) {
+KParts__ListingFilterExtension* KParts__ListingFilterExtension_New(KParts__ReadOnlyPart* parent) {
     return new VirtualKPartsListingFilterExtension(parent);
 }
 

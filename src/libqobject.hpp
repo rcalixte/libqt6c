@@ -31,8 +31,8 @@ typedef struct QTimerEvent QTimerEvent;
 typedef struct QVariant QVariant;
 #endif
 
-QObject* QObject_new();
-QObject* QObject_new2(QObject* parent);
+QObject* QObject_New();
+QObject* QObject_New2(QObject* parent);
 QMetaObject* QObject_MetaObject(const QObject* self);
 void* QObject_Metacast(QObject* self, const char* param1);
 int QObject_Metacall(QObject* self, int param1, int param2, void** param3);
@@ -129,8 +129,8 @@ bool QObject_SuperIsSignalConnected(const QObject* self, const QMetaMethod* sign
 void QObject_Connect_ObjectNameChanged(QObject* self, intptr_t slot);
 void QObject_Delete(QObject* self);
 
-QSignalBlocker* QSignalBlocker_new(QObject* o);
-QSignalBlocker* QSignalBlocker_new2(QObject* o);
+QSignalBlocker* QSignalBlocker_New(QObject* o);
+QSignalBlocker* QSignalBlocker_New2(QObject* o);
 void QSignalBlocker_Reblock(QSignalBlocker* self);
 void QSignalBlocker_Unblock(QSignalBlocker* self);
 void QSignalBlocker_Dismiss(QSignalBlocker* self);

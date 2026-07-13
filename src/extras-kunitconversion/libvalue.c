@@ -5,27 +5,27 @@
 #include "libvalue.h"
 
 KUnitConversion__Value* k_unitconversion__value_new() {
-    return KUnitConversion__Value_new();
+    return KUnitConversion__Value_New();
 }
 
 KUnitConversion__Value* k_unitconversion__value_new2(double number, void* unit) {
-    return KUnitConversion__Value_new2(number, (KUnitConversion__Unit*)unit);
+    return KUnitConversion__Value_New2(number, (KUnitConversion__Unit*)unit);
 }
 
 KUnitConversion__Value* k_unitconversion__value_new3(double number, const char* unitString) {
-    return KUnitConversion__Value_new3(number, qstring(unitString));
+    return KUnitConversion__Value_New3(number, qstring(unitString));
 }
 
 KUnitConversion__Value* k_unitconversion__value_new4(double number, int32_t unitId) {
-    return KUnitConversion__Value_new4(number, unitId);
+    return KUnitConversion__Value_New4(number, unitId);
 }
 
 KUnitConversion__Value* k_unitconversion__value_new5(void* number, const char* unitString) {
-    return KUnitConversion__Value_new5((QVariant*)number, qstring(unitString));
+    return KUnitConversion__Value_New5((QVariant*)number, qstring(unitString));
 }
 
 KUnitConversion__Value* k_unitconversion__value_new6(void* other) {
-    return KUnitConversion__Value_new6((KUnitConversion__Value*)other);
+    return KUnitConversion__Value_New6((KUnitConversion__Value*)other);
 }
 
 void k_unitconversion__value_operator_assign(void* self, void* other) {

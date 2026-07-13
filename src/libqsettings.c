@@ -7,63 +7,63 @@
 #include "libqsettings.h"
 
 QSettings* q_settings_new(const char* organization) {
-    return QSettings_new(qstring(organization));
+    return QSettings_New(qstring(organization));
 }
 
 QSettings* q_settings_new2(int32_t scope, const char* organization) {
-    return QSettings_new2(scope, qstring(organization));
+    return QSettings_New2(scope, qstring(organization));
 }
 
 QSettings* q_settings_new3(int32_t format, int32_t scope, const char* organization) {
-    return QSettings_new3(format, scope, qstring(organization));
+    return QSettings_New3(format, scope, qstring(organization));
 }
 
 QSettings* q_settings_new4(const char* fileName, int32_t format) {
-    return QSettings_new4(qstring(fileName), format);
+    return QSettings_New4(qstring(fileName), format);
 }
 
 QSettings* q_settings_new5() {
-    return QSettings_new5();
+    return QSettings_New5();
 }
 
 QSettings* q_settings_new6(int32_t scope) {
-    return QSettings_new6(scope);
+    return QSettings_New6(scope);
 }
 
 QSettings* q_settings_new7(const char* organization, const char* application) {
-    return QSettings_new7(qstring(organization), qstring(application));
+    return QSettings_New7(qstring(organization), qstring(application));
 }
 
 QSettings* q_settings_new8(const char* organization, const char* application, void* parent) {
-    return QSettings_new8(qstring(organization), qstring(application), (QObject*)parent);
+    return QSettings_New8(qstring(organization), qstring(application), (QObject*)parent);
 }
 
 QSettings* q_settings_new9(int32_t scope, const char* organization, const char* application) {
-    return QSettings_new9(scope, qstring(organization), qstring(application));
+    return QSettings_New9(scope, qstring(organization), qstring(application));
 }
 
 QSettings* q_settings_new10(int32_t scope, const char* organization, const char* application, void* parent) {
-    return QSettings_new10(scope, qstring(organization), qstring(application), (QObject*)parent);
+    return QSettings_New10(scope, qstring(organization), qstring(application), (QObject*)parent);
 }
 
 QSettings* q_settings_new11(int32_t format, int32_t scope, const char* organization, const char* application) {
-    return QSettings_new11(format, scope, qstring(organization), qstring(application));
+    return QSettings_New11(format, scope, qstring(organization), qstring(application));
 }
 
 QSettings* q_settings_new12(int32_t format, int32_t scope, const char* organization, const char* application, void* parent) {
-    return QSettings_new12(format, scope, qstring(organization), qstring(application), (QObject*)parent);
+    return QSettings_New12(format, scope, qstring(organization), qstring(application), (QObject*)parent);
 }
 
 QSettings* q_settings_new13(const char* fileName, int32_t format, void* parent) {
-    return QSettings_new13(qstring(fileName), format, (QObject*)parent);
+    return QSettings_New13(qstring(fileName), format, (QObject*)parent);
 }
 
 QSettings* q_settings_new14(void* parent) {
-    return QSettings_new14((QObject*)parent);
+    return QSettings_New14((QObject*)parent);
 }
 
 QSettings* q_settings_new15(int32_t scope, void* parent) {
-    return QSettings_new15(scope, (QObject*)parent);
+    return QSettings_New15(scope, (QObject*)parent);
 }
 
 const QMetaObject* q_settings_meta_object(void* self) {

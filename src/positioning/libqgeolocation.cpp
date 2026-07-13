@@ -9,11 +9,11 @@
 #include "libqgeolocation.hpp"
 #include "libqgeolocation.hxx"
 
-QGeoLocation* QGeoLocation_new() {
+QGeoLocation* QGeoLocation_New() {
     return new QGeoLocation();
 }
 
-QGeoLocation* QGeoLocation_new2(const QGeoLocation* other) {
+QGeoLocation* QGeoLocation_New2(const QGeoLocation* other) {
     return new QGeoLocation(*other);
 }
 

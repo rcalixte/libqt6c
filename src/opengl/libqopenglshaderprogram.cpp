@@ -24,11 +24,11 @@
 #include "libqopenglshaderprogram.hpp"
 #include "libqopenglshaderprogram.hxx"
 
-QOpenGLShader* QOpenGLShader_new(int type) {
+QOpenGLShader* QOpenGLShader_New(int type) {
     return new VirtualQOpenGLShader(static_cast<QOpenGLShader::ShaderType>(type));
 }
 
-QOpenGLShader* QOpenGLShader_new2(int type, QObject* parent) {
+QOpenGLShader* QOpenGLShader_New2(int type, QObject* parent) {
     return new VirtualQOpenGLShader(static_cast<QOpenGLShader::ShaderType>(type), parent);
 }
 
@@ -484,11 +484,11 @@ void QOpenGLShader_Delete(QOpenGLShader* self) {
     delete self;
 }
 
-QOpenGLShaderProgram* QOpenGLShaderProgram_new() {
+QOpenGLShaderProgram* QOpenGLShaderProgram_New() {
     return new VirtualQOpenGLShaderProgram();
 }
 
-QOpenGLShaderProgram* QOpenGLShaderProgram_new2(QObject* parent) {
+QOpenGLShaderProgram* QOpenGLShaderProgram_New2(QObject* parent) {
     return new VirtualQOpenGLShaderProgram(parent);
 }
 

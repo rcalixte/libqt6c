@@ -20,10 +20,10 @@ typedef struct QColor QColor;
 typedef struct QPalette QPalette;
 #endif
 
-KIconColors* KIconColors_new();
-KIconColors* KIconColors_new2(const QColor* color);
-KIconColors* KIconColors_new3(const QPalette* palette);
-KIconColors* KIconColors_new4(const KIconColors* other);
+KIconColors* KIconColors_New();
+KIconColors* KIconColors_New2(const QColor* color);
+KIconColors* KIconColors_New3(const QPalette* palette);
+KIconColors* KIconColors_New4(const KIconColors* other);
 void KIconColors_OperatorAssign(KIconColors* self, const KIconColors* other);
 QColor* KIconColors_Text(const KIconColors* self);
 QColor* KIconColors_Highlight(const KIconColors* self);

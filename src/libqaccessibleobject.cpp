@@ -13,7 +13,7 @@
 #include "libqaccessibleobject.hpp"
 #include "libqaccessibleobject.hxx"
 
-QAccessibleObject* QAccessibleObject_new(QObject* object) {
+QAccessibleObject* QAccessibleObject_New(QObject* object) {
     return new VirtualQAccessibleObject(object);
 }
 
@@ -628,7 +628,7 @@ void QAccessibleObject_OnInterfaceCast(QAccessibleObject* self, intptr_t slot) {
     }
 }
 
-QAccessibleApplication* QAccessibleApplication_new() {
+QAccessibleApplication* QAccessibleApplication_New() {
     return new VirtualQAccessibleApplication();
 }
 

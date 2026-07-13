@@ -13,19 +13,19 @@
 #include "libkreplace.hpp"
 #include "libkreplace.hxx"
 
-KReplace* KReplace_new(const libqt_string pattern, const libqt_string replacement, long options) {
+KReplace* KReplace_New(const libqt_string pattern, const libqt_string replacement, long options) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     QString replacement_QString = QString::fromUtf8(replacement.data, replacement.len);
     return new VirtualKReplace(pattern_QString, replacement_QString, static_cast<long>(options));
 }
 
-KReplace* KReplace_new2(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent, QWidget* replaceDialog) {
+KReplace* KReplace_New2(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent, QWidget* replaceDialog) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     QString replacement_QString = QString::fromUtf8(replacement.data, replacement.len);
     return new VirtualKReplace(pattern_QString, replacement_QString, static_cast<long>(options), parent, replaceDialog);
 }
 
-KReplace* KReplace_new3(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent) {
+KReplace* KReplace_New3(const libqt_string pattern, const libqt_string replacement, long options, QWidget* parent) {
     QString pattern_QString = QString::fromUtf8(pattern.data, pattern.len);
     QString replacement_QString = QString::fromUtf8(replacement.data, replacement.len);
     return new VirtualKReplace(pattern_QString, replacement_QString, static_cast<long>(options), parent);

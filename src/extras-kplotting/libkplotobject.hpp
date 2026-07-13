@@ -25,11 +25,11 @@ typedef struct QPen QPen;
 typedef struct QPointF QPointF;
 #endif
 
-KPlotObject* KPlotObject_new();
-KPlotObject* KPlotObject_new2(const QColor* color);
-KPlotObject* KPlotObject_new3(const QColor* color, int otype);
-KPlotObject* KPlotObject_new4(const QColor* color, int otype, double size);
-KPlotObject* KPlotObject_new5(const QColor* color, int otype, double size, int ps);
+KPlotObject* KPlotObject_New();
+KPlotObject* KPlotObject_New2(const QColor* color);
+KPlotObject* KPlotObject_New3(const QColor* color, int otype);
+KPlotObject* KPlotObject_New4(const QColor* color, int otype, double size);
+KPlotObject* KPlotObject_New5(const QColor* color, int otype, double size, int ps);
 int KPlotObject_PlotTypes(const KPlotObject* self);
 void KPlotObject_SetShowPoints(KPlotObject* self, bool b);
 void KPlotObject_SetShowLines(KPlotObject* self, bool b);

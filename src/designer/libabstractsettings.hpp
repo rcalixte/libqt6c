@@ -19,7 +19,7 @@ typedef struct QDesignerSettingsInterface QDesignerSettingsInterface;
 typedef struct QVariant QVariant;
 #endif
 
-QDesignerSettingsInterface* QDesignerSettingsInterface_new();
+QDesignerSettingsInterface* QDesignerSettingsInterface_New();
 void QDesignerSettingsInterface_BeginGroup(QDesignerSettingsInterface* self, const libqt_string prefix);
 void QDesignerSettingsInterface_EndGroup(QDesignerSettingsInterface* self);
 bool QDesignerSettingsInterface_Contains(const QDesignerSettingsInterface* self, const libqt_string key);

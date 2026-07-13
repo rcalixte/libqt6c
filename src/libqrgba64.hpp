@@ -18,8 +18,8 @@ extern "C" {
 typedef struct QRgba64 QRgba64;
 #endif
 
-QRgba64* QRgba64_new();
-QRgba64* QRgba64_new2(const QRgba64* param1);
+QRgba64* QRgba64_New();
+QRgba64* QRgba64_New2(const QRgba64* param1);
 QRgba64* QRgba64_FromRgba64(unsigned long long c);
 QRgba64* QRgba64_FromRgba642(uint16_t red, uint16_t green, uint16_t blue, uint16_t alpha);
 QRgba64* QRgba64_FromRgba(unsigned char red, unsigned char green, unsigned char blue, unsigned char alpha);

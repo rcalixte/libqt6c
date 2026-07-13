@@ -52,8 +52,8 @@ typedef struct QWheelEvent QWheelEvent;
 typedef struct QWidget QWidget;
 #endif
 
-KShortcutWidget* KShortcutWidget_new(QWidget* parent);
-KShortcutWidget* KShortcutWidget_new2();
+KShortcutWidget* KShortcutWidget_New(QWidget* parent);
+KShortcutWidget* KShortcutWidget_New2();
 QMetaObject* KShortcutWidget_MetaObject(const KShortcutWidget* self);
 void* KShortcutWidget_Metacast(KShortcutWidget* self, const char* param1);
 int KShortcutWidget_Metacall(KShortcutWidget* self, int param1, int param2, void** param3);

@@ -24,11 +24,11 @@
 #include "libqcolumnview.h"
 
 QColumnView* q_columnview_new(void* parent) {
-    return QColumnView_new((QWidget*)parent);
+    return QColumnView_New((QWidget*)parent);
 }
 
 QColumnView* q_columnview_new2() {
-    return QColumnView_new2();
+    return QColumnView_New2();
 }
 
 const QMetaObject* q_columnview_meta_object(void* self) {

@@ -40,37 +40,37 @@
 #include "librenamedialog.hpp"
 #include "librenamedialog.hxx"
 
-KIO__RenameDialog* KIO__RenameDialog_new(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options) {
+KIO__RenameDialog* KIO__RenameDialog_New(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options));
 }
 
-KIO__RenameDialog* KIO__RenameDialog_new2(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc) {
+KIO__RenameDialog* KIO__RenameDialog_New2(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options), static_cast<KIO::filesize_t>(sizeSrc));
 }
 
-KIO__RenameDialog* KIO__RenameDialog_new3(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest) {
+KIO__RenameDialog* KIO__RenameDialog_New3(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options), static_cast<KIO::filesize_t>(sizeSrc), static_cast<KIO::filesize_t>(sizeDest));
 }
 
-KIO__RenameDialog* KIO__RenameDialog_new4(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc) {
+KIO__RenameDialog* KIO__RenameDialog_New4(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options), static_cast<KIO::filesize_t>(sizeSrc), static_cast<KIO::filesize_t>(sizeDest), *ctimeSrc);
 }
 
-KIO__RenameDialog* KIO__RenameDialog_new5(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest) {
+KIO__RenameDialog* KIO__RenameDialog_New5(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options), static_cast<KIO::filesize_t>(sizeSrc), static_cast<KIO::filesize_t>(sizeDest), *ctimeSrc, *ctimeDest);
 }
 
-KIO__RenameDialog* KIO__RenameDialog_new6(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc) {
+KIO__RenameDialog* KIO__RenameDialog_New6(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options), static_cast<KIO::filesize_t>(sizeSrc), static_cast<KIO::filesize_t>(sizeDest), *ctimeSrc, *ctimeDest, *mtimeSrc);
 }
 
-KIO__RenameDialog* KIO__RenameDialog_new7(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc, const QDateTime* mtimeDest) {
+KIO__RenameDialog* KIO__RenameDialog_New7(QWidget* parent, const libqt_string title, const QUrl* src, const QUrl* dest, int options, unsigned long long sizeSrc, unsigned long long sizeDest, const QDateTime* ctimeSrc, const QDateTime* ctimeDest, const QDateTime* mtimeSrc, const QDateTime* mtimeDest) {
     QString title_QString = QString::fromUtf8(title.data, title.len);
     return new VirtualKIORenameDialog(parent, title_QString, *src, *dest, static_cast<KIO::RenameDialog_Options>(options), static_cast<KIO::filesize_t>(sizeSrc), static_cast<KIO::filesize_t>(sizeDest), *ctimeSrc, *ctimeDest, *mtimeSrc, *mtimeDest);
 }

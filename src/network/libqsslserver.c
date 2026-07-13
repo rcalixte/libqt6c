@@ -12,11 +12,11 @@
 #include "libqsslserver.h"
 
 QSslServer* q_sslserver_new() {
-    return QSslServer_new();
+    return QSslServer_New();
 }
 
 QSslServer* q_sslserver_new2(void* parent) {
-    return QSslServer_new2((QObject*)parent);
+    return QSslServer_New2((QObject*)parent);
 }
 
 const QMetaObject* q_sslserver_meta_object(void* self) {

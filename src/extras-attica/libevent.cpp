@@ -7,11 +7,11 @@
 #include "libevent.hpp"
 #include "libevent.hxx"
 
-Attica__Event* Attica__Event_new() {
+Attica__Event* Attica__Event_New() {
     return new Attica::Event();
 }
 
-Attica__Event* Attica__Event_new2(const Attica__Event* other) {
+Attica__Event* Attica__Event_New2(const Attica__Event* other) {
     return new Attica::Event(*other);
 }
 

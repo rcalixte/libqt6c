@@ -36,15 +36,15 @@
 #include "libqwindow.hpp"
 #include "libqwindow.hxx"
 
-QWindow* QWindow_new() {
+QWindow* QWindow_New() {
     return new VirtualQWindow();
 }
 
-QWindow* QWindow_new2(QWindow* parent) {
+QWindow* QWindow_New2(QWindow* parent) {
     return new VirtualQWindow(parent);
 }
 
-QWindow* QWindow_new3(QScreen* screen) {
+QWindow* QWindow_New3(QScreen* screen) {
     return new VirtualQWindow(screen);
 }
 

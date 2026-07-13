@@ -39,27 +39,27 @@
 #include "libkseparator.hpp"
 #include "libkseparator.hxx"
 
-KSeparator* KSeparator_new(QWidget* parent) {
+KSeparator* KSeparator_New(QWidget* parent) {
     return new VirtualKSeparator(parent);
 }
 
-KSeparator* KSeparator_new2() {
+KSeparator* KSeparator_New2() {
     return new VirtualKSeparator();
 }
 
-KSeparator* KSeparator_new3(int orientation) {
+KSeparator* KSeparator_New3(int orientation) {
     return new VirtualKSeparator(static_cast<Qt::Orientation>(orientation));
 }
 
-KSeparator* KSeparator_new4(QWidget* parent, int f) {
+KSeparator* KSeparator_New4(QWidget* parent, int f) {
     return new VirtualKSeparator(parent, static_cast<Qt::WindowFlags>(f));
 }
 
-KSeparator* KSeparator_new5(int orientation, QWidget* parent) {
+KSeparator* KSeparator_New5(int orientation, QWidget* parent) {
     return new VirtualKSeparator(static_cast<Qt::Orientation>(orientation), parent);
 }
 
-KSeparator* KSeparator_new6(int orientation, QWidget* parent, int f) {
+KSeparator* KSeparator_New6(int orientation, QWidget* parent, int f) {
     return new VirtualKSeparator(static_cast<Qt::Orientation>(orientation), parent, static_cast<Qt::WindowFlags>(f));
 }
 

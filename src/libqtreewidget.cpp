@@ -57,11 +57,11 @@
 #include "libqtreewidget.hpp"
 #include "libqtreewidget.hxx"
 
-QTreeWidgetItem* QTreeWidgetItem_new() {
+QTreeWidgetItem* QTreeWidgetItem_New() {
     return new VirtualQTreeWidgetItem();
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new2(const libqt_list /* of libqt_string */ strings) {
+QTreeWidgetItem* QTreeWidgetItem_New2(const libqt_list /* of libqt_string */ strings) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -72,11 +72,11 @@ QTreeWidgetItem* QTreeWidgetItem_new2(const libqt_list /* of libqt_string */ str
     return new VirtualQTreeWidgetItem(strings_QList);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new3(QTreeWidget* treeview) {
+QTreeWidgetItem* QTreeWidgetItem_New3(QTreeWidget* treeview) {
     return new VirtualQTreeWidgetItem(treeview);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new4(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings) {
+QTreeWidgetItem* QTreeWidgetItem_New4(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -87,15 +87,15 @@ QTreeWidgetItem* QTreeWidgetItem_new4(QTreeWidget* treeview, const libqt_list /*
     return new VirtualQTreeWidgetItem(treeview, strings_QList);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new5(QTreeWidget* treeview, QTreeWidgetItem* after) {
+QTreeWidgetItem* QTreeWidgetItem_New5(QTreeWidget* treeview, QTreeWidgetItem* after) {
     return new VirtualQTreeWidgetItem(treeview, after);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new6(QTreeWidgetItem* parent) {
+QTreeWidgetItem* QTreeWidgetItem_New6(QTreeWidgetItem* parent) {
     return new VirtualQTreeWidgetItem(parent);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new7(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings) {
+QTreeWidgetItem* QTreeWidgetItem_New7(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -106,19 +106,19 @@ QTreeWidgetItem* QTreeWidgetItem_new7(QTreeWidgetItem* parent, const libqt_list 
     return new VirtualQTreeWidgetItem(parent, strings_QList);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new8(QTreeWidgetItem* parent, QTreeWidgetItem* after) {
+QTreeWidgetItem* QTreeWidgetItem_New8(QTreeWidgetItem* parent, QTreeWidgetItem* after) {
     return new VirtualQTreeWidgetItem(parent, after);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new9(const QTreeWidgetItem* other) {
+QTreeWidgetItem* QTreeWidgetItem_New9(const QTreeWidgetItem* other) {
     return new VirtualQTreeWidgetItem(*other);
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new10(int type) {
+QTreeWidgetItem* QTreeWidgetItem_New10(int type) {
     return new VirtualQTreeWidgetItem(static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new11(const libqt_list /* of libqt_string */ strings, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New11(const libqt_list /* of libqt_string */ strings, int type) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -129,11 +129,11 @@ QTreeWidgetItem* QTreeWidgetItem_new11(const libqt_list /* of libqt_string */ st
     return new VirtualQTreeWidgetItem(strings_QList, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new12(QTreeWidget* treeview, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New12(QTreeWidget* treeview, int type) {
     return new VirtualQTreeWidgetItem(treeview, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New13(QTreeWidget* treeview, const libqt_list /* of libqt_string */ strings, int type) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -144,15 +144,15 @@ QTreeWidgetItem* QTreeWidgetItem_new13(QTreeWidget* treeview, const libqt_list /
     return new VirtualQTreeWidgetItem(treeview, strings_QList, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new14(QTreeWidget* treeview, QTreeWidgetItem* after, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New14(QTreeWidget* treeview, QTreeWidgetItem* after, int type) {
     return new VirtualQTreeWidgetItem(treeview, after, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new15(QTreeWidgetItem* parent, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New15(QTreeWidgetItem* parent, int type) {
     return new VirtualQTreeWidgetItem(parent, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New16(QTreeWidgetItem* parent, const libqt_list /* of libqt_string */ strings, int type) {
     QList<QString> strings_QList;
     strings_QList.reserve(strings.len);
     libqt_string* strings_arr = static_cast<libqt_string*>(strings.data.ptr);
@@ -163,7 +163,7 @@ QTreeWidgetItem* QTreeWidgetItem_new16(QTreeWidgetItem* parent, const libqt_list
     return new VirtualQTreeWidgetItem(parent, strings_QList, static_cast<int>(type));
 }
 
-QTreeWidgetItem* QTreeWidgetItem_new17(QTreeWidgetItem* parent, QTreeWidgetItem* after, int type) {
+QTreeWidgetItem* QTreeWidgetItem_New17(QTreeWidgetItem* parent, QTreeWidgetItem* after, int type) {
     return new VirtualQTreeWidgetItem(parent, after, static_cast<int>(type));
 }
 
@@ -611,11 +611,11 @@ void QTreeWidgetItem_Delete(QTreeWidgetItem* self) {
     delete self;
 }
 
-QTreeWidget* QTreeWidget_new(QWidget* parent) {
+QTreeWidget* QTreeWidget_New(QWidget* parent) {
     return new VirtualQTreeWidget(parent);
 }
 
-QTreeWidget* QTreeWidget_new2() {
+QTreeWidget* QTreeWidget_New2() {
     return new VirtualQTreeWidget();
 }
 

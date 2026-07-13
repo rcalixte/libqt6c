@@ -29,8 +29,8 @@ typedef struct QsciLexerRuby QsciLexerRuby;
 typedef struct QsciScintilla QsciScintilla;
 #endif
 
-QsciLexerRuby* QsciLexerRuby_new();
-QsciLexerRuby* QsciLexerRuby_new2(QObject* parent);
+QsciLexerRuby* QsciLexerRuby_New();
+QsciLexerRuby* QsciLexerRuby_New2(QObject* parent);
 QMetaObject* QsciLexerRuby_MetaObject(const QsciLexerRuby* self);
 void* QsciLexerRuby_Metacast(QsciLexerRuby* self, const char* param1);
 int QsciLexerRuby_Metacall(QsciLexerRuby* self, int param1, int param2, void** param3);

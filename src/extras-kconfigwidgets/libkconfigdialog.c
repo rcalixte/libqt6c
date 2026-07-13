@@ -20,7 +20,7 @@
 #include "libkconfigdialog.h"
 
 KConfigDialog* k_configdialog_new(void* parent, const char* name, void* config) {
-    return KConfigDialog_new((QWidget*)parent, qstring(name), (KCoreConfigSkeleton*)config);
+    return KConfigDialog_New((QWidget*)parent, qstring(name), (KCoreConfigSkeleton*)config);
 }
 
 const QMetaObject* k_configdialog_meta_object(void* self) {

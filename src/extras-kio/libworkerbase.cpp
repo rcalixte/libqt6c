@@ -17,7 +17,7 @@
 #include "libworkerbase.hpp"
 #include "libworkerbase.hxx"
 
-KIO__WorkerResult* KIO__WorkerResult_new(const KIO__WorkerResult* param1) {
+KIO__WorkerResult* KIO__WorkerResult_New(const KIO__WorkerResult* param1) {
     return new KIO::WorkerResult(*param1);
 }
 
@@ -66,7 +66,7 @@ void KIO__WorkerResult_Delete(KIO__WorkerResult* self) {
     delete self;
 }
 
-KIO__WorkerBase* KIO__WorkerBase_new(const libqt_string protocol, const libqt_string poolSocket, const libqt_string appSocket) {
+KIO__WorkerBase* KIO__WorkerBase_New(const libqt_string protocol, const libqt_string poolSocket, const libqt_string appSocket) {
     QByteArray protocol_QByteArray(protocol.data, protocol.len);
     QByteArray poolSocket_QByteArray(poolSocket.data, poolSocket.len);
     QByteArray appSocket_QByteArray(appSocket.data, appSocket.len);

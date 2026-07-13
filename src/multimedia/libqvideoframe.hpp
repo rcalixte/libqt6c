@@ -29,12 +29,12 @@ typedef struct QVideoFrameFormat QVideoFrameFormat;
 typedef struct QVideoFrame__PaintOptions QVideoFrame__PaintOptions;
 #endif
 
-QVideoFrame* QVideoFrame_new();
-QVideoFrame* QVideoFrame_new2(const QVideoFrameFormat* format);
-QVideoFrame* QVideoFrame_new3(const QImage* image);
-QVideoFrame* QVideoFrame_new4(QAbstractVideoBuffer* videoBuffer);
-QVideoFrame* QVideoFrame_new5(const QVideoFrame* other);
-QVideoFrame* QVideoFrame_new6(QAbstractVideoBuffer* buffer, const QVideoFrameFormat* format);
+QVideoFrame* QVideoFrame_New();
+QVideoFrame* QVideoFrame_New2(const QVideoFrameFormat* format);
+QVideoFrame* QVideoFrame_New3(const QImage* image);
+QVideoFrame* QVideoFrame_New4(QAbstractVideoBuffer* videoBuffer);
+QVideoFrame* QVideoFrame_New5(const QVideoFrame* other);
+QVideoFrame* QVideoFrame_New6(QAbstractVideoBuffer* buffer, const QVideoFrameFormat* format);
 void QVideoFrame_Swap(QVideoFrame* self, QVideoFrame* other);
 void QVideoFrame_OperatorAssign(QVideoFrame* self, const QVideoFrame* other);
 bool QVideoFrame_OperatorEqual(const QVideoFrame* self, const QVideoFrame* other);
@@ -76,8 +76,8 @@ void QVideoFrame_Paint(QVideoFrame* self, QPainter* painter, const QRectF* rect,
 QAbstractVideoBuffer* QVideoFrame_VideoBuffer(const QVideoFrame* self);
 void QVideoFrame_Delete(QVideoFrame* self);
 
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new(const QVideoFrame__PaintOptions* other);
-QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_new2(QVideoFrame__PaintOptions* other);
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New(const QVideoFrame__PaintOptions* other);
+QVideoFrame__PaintOptions* QVideoFrame__PaintOptions_New2(QVideoFrame__PaintOptions* other);
 void QVideoFrame__PaintOptions_CopyAssign(QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other);
 void QVideoFrame__PaintOptions_MoveAssign(QVideoFrame__PaintOptions* self, QVideoFrame__PaintOptions* other);
 QColor* QVideoFrame__PaintOptions_BackgroundColor(const QVideoFrame__PaintOptions* self);

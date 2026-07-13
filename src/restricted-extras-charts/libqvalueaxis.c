@@ -7,11 +7,11 @@
 #include "libqvalueaxis.h"
 
 QValueAxis* q_valueaxis_new() {
-    return QValueAxis_new();
+    return QValueAxis_New();
 }
 
 QValueAxis* q_valueaxis_new2(void* parent) {
-    return QValueAxis_new2((QObject*)parent);
+    return QValueAxis_New2((QObject*)parent);
 }
 
 const QMetaObject* q_valueaxis_meta_object(void* self) {

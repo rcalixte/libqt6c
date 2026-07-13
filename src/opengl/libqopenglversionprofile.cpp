@@ -5,15 +5,15 @@
 #include "libqopenglversionprofile.hpp"
 #include "libqopenglversionprofile.hxx"
 
-QOpenGLVersionProfile* QOpenGLVersionProfile_new() {
+QOpenGLVersionProfile* QOpenGLVersionProfile_New() {
     return new QOpenGLVersionProfile();
 }
 
-QOpenGLVersionProfile* QOpenGLVersionProfile_new2(const QSurfaceFormat* format) {
+QOpenGLVersionProfile* QOpenGLVersionProfile_New2(const QSurfaceFormat* format) {
     return new QOpenGLVersionProfile(*format);
 }
 
-QOpenGLVersionProfile* QOpenGLVersionProfile_new3(const QOpenGLVersionProfile* other) {
+QOpenGLVersionProfile* QOpenGLVersionProfile_New3(const QOpenGLVersionProfile* other) {
     return new QOpenGLVersionProfile(*other);
 }
 

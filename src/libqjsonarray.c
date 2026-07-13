@@ -4,11 +4,11 @@
 #include "libqjsonarray.h"
 
 QJsonArray* q_jsonarray_new() {
-    return QJsonArray_new();
+    return QJsonArray_New();
 }
 
 QJsonArray* q_jsonarray_new2(void* other) {
-    return QJsonArray_new2((QJsonArray*)other);
+    return QJsonArray_New2((QJsonArray*)other);
 }
 
 void q_jsonarray_operator_assign(void* self, void* other) {
@@ -189,19 +189,19 @@ void q_jsonarray_delete(void* self) {
 }
 
 QJsonArray__iterator* q_jsonarray__iterator_new(void* other) {
-    return QJsonArray__iterator_new((QJsonArray__iterator*)other);
+    return QJsonArray__iterator_New((QJsonArray__iterator*)other);
 }
 
 QJsonArray__iterator* q_jsonarray__iterator_new2() {
-    return QJsonArray__iterator_new2();
+    return QJsonArray__iterator_New2();
 }
 
 QJsonArray__iterator* q_jsonarray__iterator_new3(void* array, intptr_t index) {
-    return QJsonArray__iterator_new3((QJsonArray*)array, index);
+    return QJsonArray__iterator_New3((QJsonArray*)array, index);
 }
 
 QJsonArray__iterator* q_jsonarray__iterator_new4(void* other) {
-    return QJsonArray__iterator_new4((QJsonArray__iterator*)other);
+    return QJsonArray__iterator_New4((QJsonArray__iterator*)other);
 }
 
 void q_jsonarray__iterator_operator_assign(void* self, void* other) {
@@ -265,23 +265,23 @@ void q_jsonarray__iterator_delete(void* self) {
 }
 
 QJsonArray__const_iterator* q_jsonarray__const_iterator_new(void* other) {
-    return QJsonArray__const_iterator_new((QJsonArray__const_iterator*)other);
+    return QJsonArray__const_iterator_New((QJsonArray__const_iterator*)other);
 }
 
 QJsonArray__const_iterator* q_jsonarray__const_iterator_new2() {
-    return QJsonArray__const_iterator_new2();
+    return QJsonArray__const_iterator_New2();
 }
 
 QJsonArray__const_iterator* q_jsonarray__const_iterator_new3(void* array, intptr_t index) {
-    return QJsonArray__const_iterator_new3((QJsonArray*)array, index);
+    return QJsonArray__const_iterator_New3((QJsonArray*)array, index);
 }
 
 QJsonArray__const_iterator* q_jsonarray__const_iterator_new4(void* o) {
-    return QJsonArray__const_iterator_new4((QJsonArray__iterator*)o);
+    return QJsonArray__const_iterator_New4((QJsonArray__iterator*)o);
 }
 
 QJsonArray__const_iterator* q_jsonarray__const_iterator_new5(void* other) {
-    return QJsonArray__const_iterator_new5((QJsonArray__const_iterator*)other);
+    return QJsonArray__const_iterator_New5((QJsonArray__const_iterator*)other);
 }
 
 void q_jsonarray__const_iterator_operator_assign(void* self, void* other) {

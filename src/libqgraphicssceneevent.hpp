@@ -32,7 +32,7 @@ typedef struct QSizeF QSizeF;
 typedef struct QWidget QWidget;
 #endif
 
-QGraphicsSceneEvent* QGraphicsSceneEvent_new(int type);
+QGraphicsSceneEvent* QGraphicsSceneEvent_New(int type);
 QWidget* QGraphicsSceneEvent_Widget(const QGraphicsSceneEvent* self);
 void QGraphicsSceneEvent_SetWidget(QGraphicsSceneEvent* self, QWidget* widget);
 unsigned long long QGraphicsSceneEvent_Timestamp(const QGraphicsSceneEvent* self);
@@ -45,8 +45,8 @@ void QGraphicsSceneEvent_OnClone(const QGraphicsSceneEvent* self, intptr_t slot)
 QEvent* QGraphicsSceneEvent_SuperClone(const QGraphicsSceneEvent* self);
 void QGraphicsSceneEvent_Delete(QGraphicsSceneEvent* self);
 
-QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new();
-QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_new2(int type);
+QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_New();
+QGraphicsSceneMouseEvent* QGraphicsSceneMouseEvent_New2(int type);
 QPointF* QGraphicsSceneMouseEvent_Pos(const QGraphicsSceneMouseEvent* self);
 void QGraphicsSceneMouseEvent_SetPos(QGraphicsSceneMouseEvent* self, const QPointF* pos);
 QPointF* QGraphicsSceneMouseEvent_ScenePos(const QGraphicsSceneMouseEvent* self);
@@ -83,8 +83,8 @@ void QGraphicsSceneMouseEvent_OnClone(const QGraphicsSceneMouseEvent* self, intp
 QEvent* QGraphicsSceneMouseEvent_SuperClone(const QGraphicsSceneMouseEvent* self);
 void QGraphicsSceneMouseEvent_Delete(QGraphicsSceneMouseEvent* self);
 
-QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new();
-QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_new2(int type);
+QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_New();
+QGraphicsSceneWheelEvent* QGraphicsSceneWheelEvent_New2(int type);
 QPointF* QGraphicsSceneWheelEvent_Pos(const QGraphicsSceneWheelEvent* self);
 void QGraphicsSceneWheelEvent_SetPos(QGraphicsSceneWheelEvent* self, const QPointF* pos);
 QPointF* QGraphicsSceneWheelEvent_ScenePos(const QGraphicsSceneWheelEvent* self);
@@ -113,8 +113,8 @@ void QGraphicsSceneWheelEvent_OnClone(const QGraphicsSceneWheelEvent* self, intp
 QEvent* QGraphicsSceneWheelEvent_SuperClone(const QGraphicsSceneWheelEvent* self);
 void QGraphicsSceneWheelEvent_Delete(QGraphicsSceneWheelEvent* self);
 
-QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new();
-QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_new2(int type);
+QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_New();
+QGraphicsSceneContextMenuEvent* QGraphicsSceneContextMenuEvent_New2(int type);
 QPointF* QGraphicsSceneContextMenuEvent_Pos(const QGraphicsSceneContextMenuEvent* self);
 void QGraphicsSceneContextMenuEvent_SetPos(QGraphicsSceneContextMenuEvent* self, const QPointF* pos);
 QPointF* QGraphicsSceneContextMenuEvent_ScenePos(const QGraphicsSceneContextMenuEvent* self);
@@ -133,8 +133,8 @@ void QGraphicsSceneContextMenuEvent_OnClone(const QGraphicsSceneContextMenuEvent
 QEvent* QGraphicsSceneContextMenuEvent_SuperClone(const QGraphicsSceneContextMenuEvent* self);
 void QGraphicsSceneContextMenuEvent_Delete(QGraphicsSceneContextMenuEvent* self);
 
-QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new();
-QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_new2(int type);
+QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_New();
+QGraphicsSceneHoverEvent* QGraphicsSceneHoverEvent_New2(int type);
 QPointF* QGraphicsSceneHoverEvent_Pos(const QGraphicsSceneHoverEvent* self);
 void QGraphicsSceneHoverEvent_SetPos(QGraphicsSceneHoverEvent* self, const QPointF* pos);
 QPointF* QGraphicsSceneHoverEvent_ScenePos(const QGraphicsSceneHoverEvent* self);
@@ -157,8 +157,8 @@ void QGraphicsSceneHoverEvent_OnClone(const QGraphicsSceneHoverEvent* self, intp
 QEvent* QGraphicsSceneHoverEvent_SuperClone(const QGraphicsSceneHoverEvent* self);
 void QGraphicsSceneHoverEvent_Delete(QGraphicsSceneHoverEvent* self);
 
-QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new();
-QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_new2(int type);
+QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_New();
+QGraphicsSceneHelpEvent* QGraphicsSceneHelpEvent_New2(int type);
 QPointF* QGraphicsSceneHelpEvent_ScenePos(const QGraphicsSceneHelpEvent* self);
 void QGraphicsSceneHelpEvent_SetScenePos(QGraphicsSceneHelpEvent* self, const QPointF* pos);
 QPoint* QGraphicsSceneHelpEvent_ScreenPos(const QGraphicsSceneHelpEvent* self);
@@ -171,8 +171,8 @@ void QGraphicsSceneHelpEvent_OnClone(const QGraphicsSceneHelpEvent* self, intptr
 QEvent* QGraphicsSceneHelpEvent_SuperClone(const QGraphicsSceneHelpEvent* self);
 void QGraphicsSceneHelpEvent_Delete(QGraphicsSceneHelpEvent* self);
 
-QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new();
-QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_new2(int type);
+QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_New();
+QGraphicsSceneDragDropEvent* QGraphicsSceneDragDropEvent_New2(int type);
 QPointF* QGraphicsSceneDragDropEvent_Pos(const QGraphicsSceneDragDropEvent* self);
 void QGraphicsSceneDragDropEvent_SetPos(QGraphicsSceneDragDropEvent* self, const QPointF* pos);
 QPointF* QGraphicsSceneDragDropEvent_ScenePos(const QGraphicsSceneDragDropEvent* self);
@@ -202,7 +202,7 @@ void QGraphicsSceneDragDropEvent_OnClone(const QGraphicsSceneDragDropEvent* self
 QEvent* QGraphicsSceneDragDropEvent_SuperClone(const QGraphicsSceneDragDropEvent* self);
 void QGraphicsSceneDragDropEvent_Delete(QGraphicsSceneDragDropEvent* self);
 
-QGraphicsSceneResizeEvent* QGraphicsSceneResizeEvent_new();
+QGraphicsSceneResizeEvent* QGraphicsSceneResizeEvent_New();
 QSizeF* QGraphicsSceneResizeEvent_OldSize(const QGraphicsSceneResizeEvent* self);
 void QGraphicsSceneResizeEvent_SetOldSize(QGraphicsSceneResizeEvent* self, const QSizeF* size);
 QSizeF* QGraphicsSceneResizeEvent_NewSize(const QGraphicsSceneResizeEvent* self);
@@ -215,7 +215,7 @@ void QGraphicsSceneResizeEvent_OnClone(const QGraphicsSceneResizeEvent* self, in
 QEvent* QGraphicsSceneResizeEvent_SuperClone(const QGraphicsSceneResizeEvent* self);
 void QGraphicsSceneResizeEvent_Delete(QGraphicsSceneResizeEvent* self);
 
-QGraphicsSceneMoveEvent* QGraphicsSceneMoveEvent_new();
+QGraphicsSceneMoveEvent* QGraphicsSceneMoveEvent_New();
 QPointF* QGraphicsSceneMoveEvent_OldPos(const QGraphicsSceneMoveEvent* self);
 void QGraphicsSceneMoveEvent_SetOldPos(QGraphicsSceneMoveEvent* self, const QPointF* pos);
 QPointF* QGraphicsSceneMoveEvent_NewPos(const QGraphicsSceneMoveEvent* self);

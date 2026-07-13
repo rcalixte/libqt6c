@@ -17,23 +17,23 @@
 #include "libqtextcursor.hpp"
 #include "libqtextcursor.hxx"
 
-QTextCursor* QTextCursor_new() {
+QTextCursor* QTextCursor_New() {
     return new QTextCursor();
 }
 
-QTextCursor* QTextCursor_new2(QTextDocument* document) {
+QTextCursor* QTextCursor_New2(QTextDocument* document) {
     return new QTextCursor(document);
 }
 
-QTextCursor* QTextCursor_new3(QTextFrame* frame) {
+QTextCursor* QTextCursor_New3(QTextFrame* frame) {
     return new QTextCursor(frame);
 }
 
-QTextCursor* QTextCursor_new4(const QTextBlock* block) {
+QTextCursor* QTextCursor_New4(const QTextBlock* block) {
     return new QTextCursor(*block);
 }
 
-QTextCursor* QTextCursor_new5(const QTextCursor* cursor) {
+QTextCursor* QTextCursor_New5(const QTextCursor* cursor) {
     return new QTextCursor(*cursor);
 }
 

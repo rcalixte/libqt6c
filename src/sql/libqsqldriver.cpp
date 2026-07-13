@@ -17,11 +17,11 @@
 #include "libqsqldriver.hpp"
 #include "libqsqldriver.hxx"
 
-QSqlDriver* QSqlDriver_new() {
+QSqlDriver* QSqlDriver_New() {
     return new VirtualQSqlDriver();
 }
 
-QSqlDriver* QSqlDriver_new2(QObject* parent) {
+QSqlDriver* QSqlDriver_New2(QObject* parent) {
     return new VirtualQSqlDriver(parent);
 }
 

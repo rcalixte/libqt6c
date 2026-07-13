@@ -3,11 +3,11 @@
 #include "libqbluetoothhostinfo.h"
 
 QBluetoothHostInfo* q_bluetoothhostinfo_new() {
-    return QBluetoothHostInfo_new();
+    return QBluetoothHostInfo_New();
 }
 
 QBluetoothHostInfo* q_bluetoothhostinfo_new2(void* other) {
-    return QBluetoothHostInfo_new2((QBluetoothHostInfo*)other);
+    return QBluetoothHostInfo_New2((QBluetoothHostInfo*)other);
 }
 
 void q_bluetoothhostinfo_operator_assign(void* self, void* other) {

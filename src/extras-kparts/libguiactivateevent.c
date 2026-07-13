@@ -3,7 +3,7 @@
 #include "libguiactivateevent.h"
 
 KParts__GUIActivateEvent* k_parts__guiactivateevent_new(bool activated) {
-    return KParts__GUIActivateEvent_new(activated);
+    return KParts__GUIActivateEvent_New(activated);
 }
 
 bool k_parts__guiactivateevent_activated(void* self) {

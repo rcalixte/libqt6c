@@ -40,11 +40,11 @@
 #include "libkanimatedbutton.hpp"
 #include "libkanimatedbutton.hxx"
 
-KAnimatedButton* KAnimatedButton_new(QWidget* parent) {
+KAnimatedButton* KAnimatedButton_New(QWidget* parent) {
     return new VirtualKAnimatedButton(parent);
 }
 
-KAnimatedButton* KAnimatedButton_new2() {
+KAnimatedButton* KAnimatedButton_New2() {
     return new VirtualKAnimatedButton();
 }
 

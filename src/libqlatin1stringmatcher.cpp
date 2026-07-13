@@ -3,16 +3,16 @@
 #include "libqlatin1stringmatcher.hpp"
 #include "libqlatin1stringmatcher.hxx"
 
-QLatin1StringMatcher* QLatin1StringMatcher_new() {
+QLatin1StringMatcher* QLatin1StringMatcher_New() {
     return new QLatin1StringMatcher();
 }
 
-QLatin1StringMatcher* QLatin1StringMatcher_new2(libqt_string pattern) {
+QLatin1StringMatcher* QLatin1StringMatcher_New2(libqt_string pattern) {
     QLatin1StringView pattern_QLatin1StringView(pattern.data, pattern.len);
     return new QLatin1StringMatcher(pattern_QLatin1StringView);
 }
 
-QLatin1StringMatcher* QLatin1StringMatcher_new3(libqt_string pattern, int cs) {
+QLatin1StringMatcher* QLatin1StringMatcher_New3(libqt_string pattern, int cs) {
     QLatin1StringView pattern_QLatin1StringView(pattern.data, pattern.len);
     return new QLatin1StringMatcher(pattern_QLatin1StringView, static_cast<Qt::CaseSensitivity>(cs));
 }

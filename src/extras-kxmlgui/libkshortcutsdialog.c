@@ -17,23 +17,23 @@
 #include "libkshortcutsdialog.h"
 
 KShortcutsDialog* k_shortcutsdialog_new(void* parent) {
-    return KShortcutsDialog_new((QWidget*)parent);
+    return KShortcutsDialog_New((QWidget*)parent);
 }
 
 KShortcutsDialog* k_shortcutsdialog_new2() {
-    return KShortcutsDialog_new2();
+    return KShortcutsDialog_New2();
 }
 
 KShortcutsDialog* k_shortcutsdialog_new3(int32_t actionTypes) {
-    return KShortcutsDialog_new3(actionTypes);
+    return KShortcutsDialog_New3(actionTypes);
 }
 
 KShortcutsDialog* k_shortcutsdialog_new4(int32_t actionTypes, int32_t allowLetterShortcuts) {
-    return KShortcutsDialog_new4(actionTypes, allowLetterShortcuts);
+    return KShortcutsDialog_New4(actionTypes, allowLetterShortcuts);
 }
 
 KShortcutsDialog* k_shortcutsdialog_new5(int32_t actionTypes, int32_t allowLetterShortcuts, void* parent) {
-    return KShortcutsDialog_new5(actionTypes, allowLetterShortcuts, (QWidget*)parent);
+    return KShortcutsDialog_New5(actionTypes, allowLetterShortcuts, (QWidget*)parent);
 }
 
 const QMetaObject* k_shortcutsdialog_meta_object(void* self) {

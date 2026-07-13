@@ -19,7 +19,7 @@ typedef struct QDesignerPropertySheetExtension QDesignerPropertySheetExtension;
 typedef struct QVariant QVariant;
 #endif
 
-QDesignerPropertySheetExtension* QDesignerPropertySheetExtension_new();
+QDesignerPropertySheetExtension* QDesignerPropertySheetExtension_New();
 int QDesignerPropertySheetExtension_Count(const QDesignerPropertySheetExtension* self);
 int QDesignerPropertySheetExtension_IndexOf(const QDesignerPropertySheetExtension* self, const libqt_string name);
 libqt_string QDesignerPropertySheetExtension_PropertyName(const QDesignerPropertySheetExtension* self, int index);
