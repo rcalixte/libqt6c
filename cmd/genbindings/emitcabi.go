@@ -1907,7 +1907,7 @@ extern "C" {
 				maybeEndMacro = "#endif\n"
 			}
 
-			ret.WriteString(fmt.Sprintf("%s%s %s_new%s(%s);\n%s", maybeMacro, methodPrefixName+"*", methodPrefixName, maybeSuffix(i), emitParametersCabi(ctor, ""), maybeEndMacro))
+			ret.WriteString(fmt.Sprintf("%s%s %s_New%s(%s);\n%s", maybeMacro, methodPrefixName+"*", methodPrefixName, maybeSuffix(i), emitParametersCabi(ctor, ""), maybeEndMacro))
 		}
 
 		var maybeAMacro, maybeAEndMacro string
@@ -2188,7 +2188,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				}
 
 				ret.WriteString(fmt.Sprintf(
-					"%s* %s_new%s(%s) {\n"+
+					"%s* %s_New%s(%s) {\n"+
 						"#if defined(Q_OS_LINUX) || defined(Q_OS_BSD4)\n"+
 						"%s"+
 						"\treturn new %s(%s);\n"+
@@ -2237,7 +2237,7 @@ func emitBindingCpp(src *CppParsedHeader, filename string) (string, error) {
 				baseReturn := "new " + virtualName + cClassName + "(" + maybeMoveCtor + forwarding + maybeCloseMoveCtor + ")"
 				ctorReturn = "\t return " + baseReturn
 
-				ret.WriteString(maybeMacro + methodPrefixName + "* " + methodPrefixName + "_new" +
+				ret.WriteString(maybeMacro + methodPrefixName + "* " + methodPrefixName + "_New" +
 					maybeSuffix(i) + "(" + emitParametersCabi(ctor, "") +
 					") {\n" + preamble + ctorReturn + ";\n}\n" + maybeEndMacro + "\n\n")
 			}
